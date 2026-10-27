@@ -24,7 +24,7 @@ const LearningProgress=lazy(()=>import("./learning-progress"));
 const ParentGuide=lazy(()=>import("./parent-guide"));
 import {LearningHints,CATEGORY_HINTS} from "./learning-hints";
 import type {Difficulty} from "./progress-storage";
-import {WORLD_INDEX,WORLD_CATEGORIES,WORLD_PLACES,WORLD_ROUTES,worldEntryForPlace} from "./world-index";
+import {WORLD_INDEX,WORLD_PLACES,WORLD_ROUTES,worldEntryForPlace} from "./world-index";
 import {worldProgress} from "./world-progress";
 import GAME_INDEX from './game-index.json';
 import Playground from './playground';
@@ -35,6 +35,7 @@ import type {WorldActions} from "./world-types";
 const GlobalSearch=lazy(()=>import("./global-search"));
 import LearningNavigation from "./learning-navigation";
 import {MISSION_RESEARCH} from "./mission-research";
+import {useDiscoverySelection} from "./discovery-selection";
 import {DiscoveryIntro,DiscoveryWorlds,DiscoveryConnections,DiscoveryActivities} from "./discovery-central";
 import LearningBoundary from "./learning-boundary";
 import LearningOffline from "./learning-offline";
@@ -54,6 +55,7 @@ const ResearchLabs=lazy(()=>import("./research-labs"));
 const AdvancedGames=lazy(()=>import("./advanced-games"));
 const LearningJourneys=lazy(()=>import("./learning-journeys"));
 const LearningGames=lazy(()=>import("./learning-games"));
+const DiscoveryDaily=lazy(()=>import('./discovery-daily'));
 const KnowledgeBook=lazy(()=>import("./knowledge-book"));
 const Globe = lazy(()=>import("./globe"));
 const EXPLORE_NAV=[{id:"globe",label:"Weltkugel",icon:Globe2},{id:"layers",label:"Erdschichten",icon:Layers3},{id:"day",label:"Tag & Nacht",icon:Sun}] as const;
@@ -169,6 +171,7 @@ export default function EarthExplorer(){
     if(solve&&(MISSIONS[mission].kind===p.kind&&(MISSIONS[mission].id===p.id||(MISSIONS[mission].id===p.iso&&countries.some(c=>c.properties.id===p.id&&["Country","Sovereign country"].includes(c.properties.type)))))){setMissionDone(true);local.markMission(mission);if(!completedMissions.has(mission))celebrate();}
   }
   function pickLayer(id:string){setActiveLayer(id);discover("layer:"+id);}
+  const discovery=useDiscoverySelection();
   const goMode=useCallback((value:string,path=value)=>{if(!MODES.includes(value))return;setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);navigateHash(path);},[]);
   const voiceAction=useCallback((text:string,localOnly=false)=>actions.current.readAloud(text,localOnly),[]);
   const atlasAction=useCallback((p:Place)=>{actions.current.goMode("globe");if(p.kind==="nature")setMapLayer((p as Place&{category?:MapLayer}).category??NATURE.find(n=>n.id===p.id)?.category??(p.id.startsWith("world-")?"plain":"capitals"));else setMapLayer("plain");setKind(p.kind==="country"?"countries":p.kind==="ocean"?"oceans":"continents");actions.current.pick(p,false);},[]);
@@ -204,8 +207,9 @@ export default function EarthExplorer(){
   const badgeHints=[`${Math.max(0,12-placesDiscovered)} weitere Orte entdecken`,`${Math.max(0,4-layersDiscovered)} Erdschichten erkunden`,`${Math.max(0,4-completedJourneys.size)} weitere Lernreisen abschließen`,`${JOURNEYS.length-completedJourneys.size} Lernreisen fehlen noch`,`${Math.max(0,6-gameStamps.size)} weitere Spiele abschließen`,"Eine Welt-Quizrunde beenden",`${MISSIONS.length-completedMissions.size} Missionen fehlen noch`,"Vulkan-Lernreise und Vulkanlabor erklären","Ozean-Lernreise und Gezeitenlabor erklären","Lebensraum-Reise und ein Tierspiel abschließen","Wetter-Lernreise und Wetterlabor erklären","Weltreise-Spiel und fünf Labore abschließen"];
   const newProgress=useMemo(()=>worldProgress(local.progress),[local.progress]);
   const xp=newProgress.learned.length*3+newProgress.models*5+local.progress.games.filter(g=>g.startsWith("world:")).length*15+local.progress.discoveries.filter(d=>d.startsWith("route:")).length*20+placesDiscovered*2+layersDiscovered*5+completedJourneys.size*25+gameStamps.size*15+completedLabs.size*20+completedMissions.size*5;
-  const [dailyDay]=useState(()=>Math.floor(Date.now()/86400000));const dailyBucket=dailyDay%7,dailyPool=dailyBucket?WORLD_INDEX.filter(t=>t.category===WORLD_CATEGORIES[dailyBucket-1].id):[];
-  const dailyPlace=NATURE[Math.floor(dailyDay/7)%NATURE.length],dailyWorld=dailyPool.length?dailyPool[Math.floor(dailyDay/7)%dailyPool.length]:null;
+  const [dailyDay]=useState(()=>Math.floor(Date.now()/86400000));
+  const dailyWorld=discovery.day.target.startsWith('world:')?WORLD_INDEX.find(t=>'world:'+t.id===discovery.day.target):null;
+  const dailyPlace=NATURE.find(p=>'nature:'+p.id===discovery.day.target)??NATURE[0];
   const level=xp<100?"Neugieriger Entdecker":xp<300?"Kleiner Forscher":xp<600?"Weltreisender":xp<1000?"Erdexperte":"Super-Entdecker";
   const dueQuestions=QUESTIONS.filter(q=>local.progress.review[q.id]&&(!local.progress.review[q.id].correct||local.progress.review[q.id].due<=new Date(dailyDay*86400000).toISOString().slice(0,10)));
   const allPlaces=useMemo(()=>currentGeographyPlaces(Object.values(local.progress.favoritePlaces),[...countries.map(countryPlace),...CONTINENTS,...OCEANS,...LINES,...NATURE,...PLATE_POINTS,...CAPITALS as Place[],...WORLD_PLACES]),[countries,local.progress.favoritePlaces]);
@@ -258,7 +262,7 @@ export default function EarthExplorer(){
       {routePath==="updates"?<Suspense fallback={<LearningStatus>Die Chronik kommt gleich …</LearningStatus>}><UpdateHistoryView/></Suspense>:<>
       <Tabs value={area} activationMode="manual" className="learning-tabs">
         <LearningNavigation area={area} onNavigate={goMode}/>
-      {mode==="home"?<DiscoveryIntro onHelp={()=>setHelp(true)} onSearch={openSearch} onGlobe={()=>goMode("globe")}/>:<div className="page-heading"><div><p className="eyebrow"><Compass size={15}/> DEINE WISSENSWELT</p><h1>{PAGE_HEADINGS[mode]?.title??"Deine nächste Entdeckung"}</h1><p>{PAGE_HEADINGS[mode]?.text??"Entdecken, ausprobieren und verstehen – in deinem Tempo."}</p></div></div>}
+      {mode==="home"?<DiscoveryIntro heroId={discovery.heroId} onChange={discovery.changeHero} onHelp={()=>setHelp(true)} onSearch={openSearch} onGlobe={()=>goMode("globe")}/>:mode==="world"&&!WORLD_INDEX.some(t=>routePath==="world/topic/"+t.id)&&!WORLD_ROUTES.some(r=>routePath==="world/route/"+r.id)?null:<div className="page-heading"><div><p className="eyebrow"><Compass size={15}/> DEINE WISSENSWELT</p><h1>{PAGE_HEADINGS[mode]?.title??"Deine nächste Entdeckung"}</h1><p>{PAGE_HEADINGS[mode]?.text??"Entdecken, ausprobieren und verstehen – in deinem Tempo."}</p></div></div>}
       {!online&&<p className="offline-note" role="status">Du bist gerade offline. Geladene Inhalte kannst du weiter nutzen. Dein Entdeckerpass bleibt auf diesem Gerät.</p>}
       {!local.ready&&<p className="storage-status" role="status">Dein Entdeckerpass wird geladen …</p>}{local.ready&&lastText&&!activityIsOpen(last,{route:routePath,mode,gameFamily:gamePanel,gameId:resumeGame?.id,placeId:selected?.id})&&<div className="continue-card"><Compass size={25}/><div><strong>Weiter entdecken</strong><p>{lastText}</p></div><button className="primary-button" onClick={continueActivity}>{last?.type==="journey"?"Weiterlernen":"Fortsetzen"}</button></div>}
         <TabsContent value={area} className="learning-panel">
@@ -313,8 +317,8 @@ export default function EarthExplorer(){
           </>:null}
         </TabsContent>
       </Tabs>
-      {mode==="home"&&<DiscoveryConnections onTopic={searchTopic} onRoute={searchRoute} onGame={()=>openWorldGame('knowledge-challenge')}/>}
-      {mode==="home"&&<><DiscoveryActivities onNavigate={goMode}/><div className="daily-discovery"><Lightbulb size={24}/><div><span className="eyebrow">ENTDECKUNG DES TAGES</span><h3>{dailyWorld?.title??dailyPlace.name}</h3><p>{dailyWorld?.sensitive?"Eine ruhige historische Erklärung, freiwillig zum gemeinsamen Anschauen.":dailyWorld?.intro??dailyPlace.text}</p></div><button className="secondary-button" onClick={()=>dailyWorld?searchTopic(dailyWorld.id):atlasAction(dailyPlace)}>{dailyWorld?"Entdeckerkarte öffnen":"Auf der Erde besuchen"}</button></div></>}
+      {mode==="home"&&<DiscoveryConnections trailId={discovery.trailId} onChange={discovery.changeTrail} onTopic={searchTopic} onRoute={searchRoute} onGame={()=>openWorldGame('knowledge-challenge')}/>}
+      {mode==="home"&&<><Suspense fallback={null}><DiscoveryActivities onNavigate={goMode}/></Suspense><Suspense fallback={<div className="daily-discovery" role="status">Die Tagesentdeckung wird geladen …</div>}><DiscoveryDaily topic={dailyWorld??undefined} place={dailyPlace} day={discovery.day.key} onOpen={()=>dailyWorld?searchTopic(dailyWorld.id):atlasAction(dailyPlace)}/></Suspense></>}
       {area==="explore"&&mode!=="globe"&&mode!=="home"&&<div className="next-adventures"><button onClick={()=>goMode("journeys")}><Compass size={25}/><span><strong>Eine Lernreise starten</strong><small>16 Abenteuer von Erdinnerem bis zum Mond</small></span></button><button onClick={()=>goMode("games")}><Gamepad2 size={25}/><span><strong>Mit Wissen spielen</strong><small>Memory, Welt-Quiz und Rätsel zum Ausprobieren</small></span></button><button onClick={()=>goMode("world")}><Sparkles size={25}/><span><strong>Mehr von der Welt entdecken</strong><small>Tiere, Zeitreise, Erfindungen und große Fragen</small></span></button></div>}<LearningOffline onBeforeReload={local.flush}/><footer className="site-footer"><a className="discovery-text-link" data-route-focus="home-updates" href="#updates" onClick={e=>{e.preventDefault();navigateHash("updates");}}>Was ist neu?</a><span><Globe2 size={16}/> Wissen entdecken. Zusammenhänge verstehen.</span><button onClick={()=>setParents(true)}><BookOpen size={15}/> Für Begleitpersonen & neugierige Köpfe</button></footer>
     </>}
     </main>

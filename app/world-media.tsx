@@ -21,10 +21,10 @@ function load(){
  return pending;
 }
 /** credit=false requires full attribution on this page, e.g. WorldGateways or DiscoveryIntro. */
-export default function WorldPhoto(props:{id:string;compact?:boolean;credit?:boolean;eager?:boolean}){
+export default function WorldPhoto(props:{id:string;compact?:boolean;credit?:boolean;eager?:boolean;creditDisclosure?:boolean;historyKey?:string}){
  return ids.includes(props.id)?<PhotoContent key={props.id} {...props}/>:null;
 }
-function PhotoContent({id,compact=false,credit=true,eager=false}:{id:string;compact?:boolean;credit?:boolean;eager?:boolean}){
+function PhotoContent({id,compact=false,credit=true,eager=false,creditDisclosure=false,historyKey}:{id:string;compact?:boolean;credit?:boolean;eager?:boolean;creditDisclosure?:boolean;historyKey?:string}){
  const [loaded,setLoaded]=useState<Photo|null>(saved?.[id]??null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0),[failed,setFailed]=useState(false);
  const p=WORLD_PHOTOS[id]??loaded,root=useRef<HTMLElement|null>(null),retryFocus=useRef(false);
  useEffect(()=>{if(p&&retryFocus.current){retryFocus.current=false;if(document.activeElement===document.body){root.current?.setAttribute("tabindex","-1");root.current?.focus({preventScroll:true});}}},[p]);
@@ -35,6 +35,6 @@ function PhotoContent({id,compact=false,credit=true,eager=false}:{id:string;comp
  </figure>;
  return <figure className={'world-photo '+(compact?'compact ':'')+(p.fit==='contain'?'media-contain':'')} ref={root}>
   {failed?<p className="photo-unavailable">Das Bild konnte gerade nicht geladen werden. Die Entdeckerkarte funktioniert trotzdem.</p>:<img src={p.src} alt={compact?'':p.alt_de} width={p.width} height={p.height} loading={eager?'eager':'lazy'} decoding="async" onError={()=>setFailed(true)}/>}
-  {credit&&(compact?<figcaption className="compact-credit">{p.label==='Darstellung'&&'Spätere Darstellung · '}{p.author} · {p.license}</figcaption>:<figcaption>{p.caption&&<p className="photo-caption">{p.caption}</p>}{p.label??'Foto'}: {p.author} · <a href={p.license_url} target="_blank" rel="noreferrer">{p.license}</a><details><summary>Bildquelle & Bearbeitung</summary><a href={p.source_page_url} target="_blank" rel="noreferrer">Original und Rechte</a><p>{p.transformations_de}</p></details></figcaption>)}
+  {credit&&(creditDisclosure?<figcaption className="photo-disclosure"><details data-history-disclosure={historyKey??"photo-"+id}><summary>{p.label??"Foto"} & Quelle</summary>{p.caption&&<p className="photo-caption">{p.caption}</p>}<p>{p.alt_de}</p><p>{p.author} · <a href={p.license_url} target="_blank" rel="noreferrer">{p.license}</a> · <a href={p.source_page_url} target="_blank" rel="noreferrer">Original und Rechte</a></p><p>{p.transformations_de}</p></details></figcaption>:compact?<figcaption className="compact-credit">{p.label==='Darstellung'&&'Spätere Darstellung · '}{p.author} · {p.license}</figcaption>:<figcaption>{p.caption&&<p className="photo-caption">{p.caption}</p>}{p.label??'Foto'}: {p.author} · <a href={p.license_url} target="_blank" rel="noreferrer">{p.license}</a><details><summary>Bildquelle & Bearbeitung</summary><a href={p.source_page_url} target="_blank" rel="noreferrer">Original und Rechte</a><p>{p.transformations_de}</p></details></figcaption>)}
  </figure>;
 }

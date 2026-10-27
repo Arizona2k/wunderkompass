@@ -1,11 +1,25 @@
 [
   {
-    "id": "science-moon-phases--science-tides",
-    "fromId": "science-moon-phases",
-    "toId": "science-tides",
-    "kind": "cause",
-    "why": "Der Mond reflektiert Sonnenlicht und beeinflusst zugleich durch seine Anziehung die Gezeiten: zwei verschiedene Wirkungen.",
-    "checkedAt": "2026-10-09"
+    "id": "science-water-cycle--science-photosynthesis",
+    "fromId": "science-water-cycle",
+    "toId": "science-photosynthesis",
+    "kind": "needs",
+    "why": "Pflanzen brauchen Wasser für die Fotosynthese und geben Wasser über Blätter an die Luft ab.",
+    "checkedAt": "2026-10-09",
+    "label": "Wasser auf Weltreise & Wie Blätter Sonnenlicht nutzen",
+    "question": "Woraus besteht eine Wolke?",
+    "routeId": "moon-to-sea"
+  },
+  {
+    "id": "science-photosynthesis--science-foodweb",
+    "fromId": "science-photosynthesis",
+    "toId": "science-foodweb",
+    "kind": "energy",
+    "why": "Pflanzen und Algen speichern Lichtenergie in Stoffen, die in vielen Nahrungsnetzen weitergegeben werden.",
+    "checkedAt": "2026-10-09",
+    "label": "Wie Blätter Sonnenlicht nutzen & Wer gibt wem Energie?",
+    "question": "Welche Energie nutzt die Fotosynthese?",
+    "routeId": "living-networks"
   },
   {
     "id": "science-photosynthesis--science-fungi",
@@ -13,15 +27,10 @@
     "toId": "science-fungi",
     "kind": "partnership",
     "why": "Bei Mykorrhiza versorgt die Pflanze ihren Pilzpartner mit energiereichen Stoffen.",
-    "checkedAt": "2026-10-09"
-  },
-  {
-    "id": "science-tides--science-currents",
-    "fromId": "science-tides",
-    "toId": "science-currents",
-    "kind": "cause",
-    "why": "Gezeiten können Strömungen antreiben; Wind und Dichteunterschiede sind weitere Ursachen für Meerwasserbewegung.",
-    "checkedAt": "2026-10-09"
+    "checkedAt": "2026-10-09",
+    "label": "Wald & Leben",
+    "question": "Was tauschen Baumwurzeln und Pilze miteinander aus?",
+    "routeId": "living-networks"
   },
   {
     "id": "science-pollination--animal-honey-bee",
@@ -29,31 +38,43 @@
     "toId": "animal-honey-bee",
     "kind": "transport",
     "why": "Honigbienen können beim Blütenbesuch Pollen zu einer passenden Narbe transportieren.",
-    "checkedAt": "2026-10-09"
+    "checkedAt": "2026-10-09",
+    "label": "Biene & Blüte",
+    "question": "Was passiert, wenn eine Biene eine Blüte besucht?",
+    "routeId": "living-networks"
   },
   {
-    "id": "science-moon-phases--history-apollo11",
-    "fromId": "science-moon-phases",
-    "toId": "history-apollo11",
-    "kind": "exploration",
-    "why": "Die Apollo-11-Mission erforschte den Mond aus der Nähe; Mondphasen lassen sich von der Erde beobachten.",
-    "checkedAt": "2026-10-09"
+    "id": "science-pollination--science-photosynthesis",
+    "fromId": "science-pollination",
+    "toId": "science-photosynthesis",
+    "kind": "needs",
+    "why": "Blütenbildung und Fortpflanzung benötigen Stoffe und Energie, die grüne Pflanzen durch Fotosynthese gewinnen.",
+    "checkedAt": "2026-10-09",
+    "label": "Blüten und ihre Pollenboten & Wie Blätter Sonnenlicht nutzen",
+    "question": "Was wird bei der Bestäubung übertragen?",
+    "routeId": "living-networks"
   },
   {
-    "id": "science-water-cycle--science-atmosphere",
-    "fromId": "science-water-cycle",
-    "toId": "science-atmosphere",
-    "kind": "transport",
-    "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
-    "checkedAt": "2026-10-09"
+    "id": "science-fungi--science-foodweb",
+    "fromId": "science-fungi",
+    "toId": "science-foodweb",
+    "kind": "recycling",
+    "why": "Zersetzende Pilze machen Stoffe aus abgestorbenem Material wieder zugänglich.",
+    "checkedAt": "2026-10-09",
+    "label": "Das verborgene Reich der Pilze & Wer gibt wem Energie?",
+    "question": "Wie heißt das Geflecht vieler Pilze?",
+    "routeId": "living-networks"
   },
   {
-    "id": "science-seasons--science-solar-system",
-    "fromId": "science-seasons",
-    "toId": "science-solar-system",
-    "kind": "cause",
-    "why": "Die geneigte Erdachse und der Umlauf um die Sonne erklären die Jahreszeiten.",
-    "checkedAt": "2026-10-09"
+    "id": "science-coral-reef--science-photosynthesis",
+    "fromId": "science-coral-reef",
+    "toId": "science-photosynthesis",
+    "kind": "partnership",
+    "why": "Die Algenpartner vieler riffbildender Korallen betreiben Fotosynthese und liefern energiereiche Stoffe.",
+    "checkedAt": "2026-10-09",
+    "label": "Ein Riff voller Zusammenarbeit & Wie Blätter Sonnenlicht nutzen",
+    "question": "Zu welcher Gruppe gehören Korallenpolypen?",
+    "routeId": "moon-to-sea"
   },
   {
     "id": "science-coral-reef--animal-common-octopus",
@@ -61,6 +82,97 @@
     "toId": "animal-common-octopus",
     "kind": "habitat",
     "why": "Oktopusse können in strukturreichen Meereslebensräumen wie felsigen Küsten und Riffen Unterschlupf finden; nicht jede Art lebt in Korallenriffen.",
-    "checkedAt": "2026-10-09"
+    "checkedAt": "2026-10-09",
+    "label": "Riff & Kraken",
+    "question": "Wie bietet ein Riff Tieren Nahrung und Verstecke?",
+    "routeId": "ocean-life"
+  },
+  {
+    "id": "science-coral-reef--science-currents",
+    "fromId": "science-coral-reef",
+    "toId": "science-currents",
+    "kind": "transport",
+    "why": "Strömungen transportieren Stoffe und beeinflussen die Bedingungen in Meereslebensräumen.",
+    "checkedAt": "2026-10-09",
+    "label": "Ein Riff voller Zusammenarbeit & Warum bewegt sich Meerwasser?",
+    "question": "Zu welcher Gruppe gehören Korallenpolypen?",
+    "routeId": "moon-to-sea"
+  },
+  {
+    "id": "science-moon-phases--history-apollo11",
+    "fromId": "science-moon-phases",
+    "toId": "history-apollo11",
+    "kind": "exploration",
+    "why": "Die Apollo-11-Mission erforschte den Mond aus der Nähe; Mondphasen lassen sich von der Erde beobachten.",
+    "checkedAt": "2026-10-09",
+    "label": "Mond & Zeitreise",
+    "question": "Was lässt sich auf dem Mond beobachten und untersuchen?",
+    "routeId": "space"
+  },
+  {
+    "id": "science-moon-phases--science-tides",
+    "fromId": "science-moon-phases",
+    "toId": "science-tides",
+    "kind": "cause",
+    "why": "Der Mond reflektiert Sonnenlicht und beeinflusst zugleich durch seine Anziehung die Gezeiten: zwei verschiedene Wirkungen.",
+    "checkedAt": "2026-10-09",
+    "label": "Mond & Meer",
+    "question": "Was hat der Mond mit Ebbe und Flut zu tun?",
+    "routeId": "moon-to-sea"
+  },
+  {
+    "id": "science-seasons--science-solar-system",
+    "fromId": "science-seasons",
+    "toId": "science-solar-system",
+    "kind": "cause",
+    "why": "Die geneigte Erdachse und der Umlauf um die Sonne erklären die Jahreszeiten.",
+    "checkedAt": "2026-10-09",
+    "label": "Sonne & Jahreszeit",
+    "question": "Warum sind unsere Tage im Sommer länger?",
+    "routeId": "world-knowledge"
+  },
+  {
+    "id": "science-tides--science-currents",
+    "fromId": "science-tides",
+    "toId": "science-currents",
+    "kind": "cause",
+    "why": "Gezeiten können Strömungen antreiben; Wind und Dichteunterschiede sind weitere Ursachen für Meerwasserbewegung.",
+    "checkedAt": "2026-10-09",
+    "label": "Meer in Bewegung",
+    "question": "Warum strömt Meerwasser auch ohne Wind?",
+    "routeId": "ocean-life"
+  },
+  {
+    "id": "science-water-cycle--science-atmosphere",
+    "fromId": "science-water-cycle",
+    "toId": "science-atmosphere",
+    "kind": "transport",
+    "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
+    "checkedAt": "2026-10-09",
+    "label": "Wasser & Luft",
+    "question": "Wie kommt Wasser in die Luft und wieder zurück?",
+    "routeId": "moon-to-sea"
+  },
+  {
+    "id": "animal-inquiry-blue-whale-whale-shark",
+    "fromId": "animal-blue-whale",
+    "toId": "animal-whale-shark",
+    "kind": "context",
+    "why": "Beide sammeln kleine Nahrung aus dem Wasser. Der Blauwal ist ein luftatmendes Säugetier, der Walhai ein Fisch mit Kiemen: Nahrung und Namen reichen zur Einordnung nicht aus.",
+    "checkedAt": "2026-10-17",
+    "label": "Blauwal & Walhai",
+    "question": "Was frisst ein Blauwal überwiegend?",
+    "routeId": "ocean-life"
+  },
+  {
+    "id": "animal-inquiry-cheetah-lion",
+    "fromId": "animal-cheetah",
+    "toId": "animal-lion",
+    "kind": "context",
+    "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
+    "checkedAt": "2026-10-17",
+    "label": "Gepard & Löwe",
+    "question": "Wofür ist ein Gepard besonders bekannt?",
+    "routeId": "safari"
   }
 ]

@@ -6,11 +6,12 @@ const read=()=>window.location.hash.slice(1)||'home';
 export function replaceHash(path:string){if(read()===path)return;history.replaceState(history.state,'','#'+path);window.dispatchEvent(new Event(EVENT));}
 function subscribe(fn:()=>void){window.addEventListener('hashchange',fn);window.addEventListener('popstate',fn);window.addEventListener(EVENT,fn);return()=>{window.removeEventListener('hashchange',fn);window.removeEventListener('popstate',fn);window.removeEventListener(EVENT,fn);};}
 // Browser-entry UI state only; learning progress stays in the central pass.
-export function navigateHash(path:string){if(read()===path)return;try{
+export function navigateHash(path:string){if(path==='home')window.dispatchEvent(new Event('wunder-home'));if(read()===path)return;try{
  const active=document.activeElement as HTMLElement|null;
  const open=Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure][open]')).map(el=>el.dataset.historyDisclosure);
- const trail=document.querySelector<HTMLElement>('[data-discovery-trail][aria-pressed=true]')?.dataset.discoveryTrail;
- history.replaceState({...history.state,wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open,wunderTrail:trail},'',location.href);
+ const hero=document.querySelector<HTMLElement>('[data-discovery-hero]')?.dataset.discoveryHero;
+ const trail=document.querySelector<HTMLElement>('[data-discovery-trail-current]')?.dataset.discoveryTrailCurrent;
+ history.replaceState({...history.state,wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open,...(hero?{wunderHero:hero}:{}),...(trail?{wunderTrail:trail}:{})},'',location.href);
  history.pushState({wunderRoute:true},'','#'+path);window.dispatchEvent(new Event(EVENT));
 }catch{location.hash=path;}}
 export function focusLearningMain(){
@@ -21,7 +22,7 @@ export function focusLearningMain(){
 }
 export function restoreRouteView(path:string,focus=true){
  const state=history.state;
- if((path==='home'||path==='globe'||path==='updates'||path.startsWith('world/topic/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
+ if((path==='home'||path==='globe'||path==='updates'||path==='world'||path.startsWith('world/')||path==='book'||path.startsWith('book/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);

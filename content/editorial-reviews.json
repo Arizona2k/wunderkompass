@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "meaning": "All99 existing dossiers and every factual/source/media/age/relationship field and named history are retained. Shared current UI has complete local browser acceptance; native qualification and actual delivery remain outstanding. No new scientific or human acceptance is implied.",
+  "meaning": "All99 factual dossiers and named histories retained. Home/shared explanatory previews are in preparation on actual M68; current UI/search/back/offline evidence is explicitly pending. Prior accepted bindings are historical, not relabeled to this candidate.",
   "dossiers": [
     {
       "id": "topics-animals:animal-platypus",
@@ -76,13 +76,13 @@
         "topics-animals:animal-short-beaked-echidna"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-platypus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -533,6 +533,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-platypus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -594,13 +603,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-short-beaked-echidna",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1051,6 +1060,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-short-beaked-echidna",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -1112,13 +1130,13 @@
         "topics-animals:animal-giraffe"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-okapi",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -1620,6 +1638,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-okapi",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -1681,13 +1708,13 @@
         "topics-animals:animal-honey-bee"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-meerkat",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2138,6 +2165,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-meerkat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -2199,13 +2235,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-ring-tailed-lemur",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -2656,6 +2692,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-ring-tailed-lemur",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -2717,13 +2762,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-north-american-beaver",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3174,6 +3219,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-north-american-beaver",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -3249,13 +3303,13 @@
         "topics-animals:animal-polar-bear"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-walrus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -3706,6 +3760,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-walrus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -3768,13 +3831,13 @@
         "topics-animals:animal-raccoon"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-red-fox",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4225,6 +4288,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-red-fox",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -4286,13 +4358,13 @@
         "topics-animals:animal-red-fox"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-raccoon",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -4743,6 +4815,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-raccoon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -4805,13 +4886,13 @@
         "topics-animals:animal-garden-snail"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-hedgehog",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5262,6 +5343,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-hedgehog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -5330,13 +5420,13 @@
         "topics-animals:animal-white-tailed-eagle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-barn-owl",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -5787,6 +5877,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-barn-owl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -5855,13 +5954,13 @@
         "topics-science:science-shadows"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-kingfisher",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6312,6 +6411,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-kingfisher",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -6373,13 +6481,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-ostrich",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -6830,6 +6938,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-ostrich",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -6891,13 +7008,13 @@
         "topics-animals:animal-emperor-penguin"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-atlantic-puffin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7348,6 +7465,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-atlantic-puffin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -7409,13 +7535,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-common-chameleon",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -7866,6 +7992,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-common-chameleon",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -7935,13 +8070,13 @@
         "topics-animals:animal-common-frog"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-fire-salamander",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8392,6 +8527,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-fire-salamander",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -8453,13 +8597,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-common-frog",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -8910,6 +9054,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-common-frog",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -8978,13 +9131,13 @@
         "topics-science:science-coral-reef"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-eastern-clown-anemonefish",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9435,6 +9588,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-eastern-clown-anemonefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -9510,13 +9672,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-european-eel",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -9967,6 +10129,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-european-eel",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -10029,13 +10200,13 @@
         "topics-people:person-maria_sibylla_merian"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-monarch-butterfly",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -10492,6 +10663,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-monarch-butterfly",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -10567,13 +10747,13 @@
         "topics-animals:animal-hedgehog"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-garden-snail",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11024,6 +11204,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-garden-snail",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -11085,13 +11274,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-european-lobster",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -11542,6 +11731,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-european-lobster",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -11611,13 +11809,13 @@
         "topics-animals:animal-common-chameleon"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-common-cuttlefish",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -12068,6 +12266,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-common-cuttlefish",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -12136,13 +12343,13 @@
         "topics-science:science-foodweb"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-short-snouted-seahorse",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -12593,6 +12800,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-short-snouted-seahorse",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -12658,13 +12874,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-african-savanna-elephant",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -13096,6 +13312,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-african-savanna-elephant",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -13169,13 +13394,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-lion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -13607,6 +13832,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-lion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -13673,13 +13907,13 @@
         "topics-animals:animal-lion"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-cheetah",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14111,6 +14345,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-cheetah",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -14171,13 +14414,13 @@
         "topics-animals:animal-jaguar"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-bengal-tiger",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -14609,6 +14852,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-bengal-tiger",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -14683,13 +14935,13 @@
         "topics-animals:animal-okapi"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-giraffe",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15121,6 +15373,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-giraffe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -15187,13 +15448,13 @@
         "topics-animals:animal-koala"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-giant-panda",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -15625,6 +15886,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-giant-panda",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -15692,13 +15962,13 @@
         "topics-animals:animal-ring-tailed-lemur"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-western-lowland-gorilla",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16130,6 +16400,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-western-lowland-gorilla",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -16196,13 +16475,13 @@
         "topics-animals:animal-western-lowland-gorilla"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-bornean-orangutan",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -16634,6 +16913,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-bornean-orangutan",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -16700,13 +16988,13 @@
         "topics-animals:animal-walrus"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-polar-bear",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17138,6 +17426,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-polar-bear",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -17214,13 +17511,13 @@
         "topics-animals:animal-atlantic-puffin"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-emperor-penguin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -17652,6 +17949,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-emperor-penguin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -17718,13 +18024,13 @@
         "topics-animals:animal-whale-shark"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-blue-whale",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -18156,6 +18462,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-blue-whale",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -18238,13 +18553,13 @@
         "topics-animals:animal-green-sea-turtle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-common-bottlenose-dolphin",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -18676,6 +18991,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-common-bottlenose-dolphin",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -18742,13 +19066,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-orca",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19180,6 +19504,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-orca",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -19256,13 +19589,13 @@
         "topics-animals:animal-common-cuttlefish"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-common-octopus",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -19694,6 +20027,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-common-octopus",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -19767,13 +20109,13 @@
         "topics-animals:animal-common-bottlenose-dolphin"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-green-sea-turtle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20205,6 +20547,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-green-sea-turtle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -20271,13 +20622,13 @@
         "topics-animals:animal-platypus"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-red-kangaroo",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -20709,6 +21060,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-red-kangaroo",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -20775,13 +21135,13 @@
         "topics-animals:animal-giant-panda"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-koala",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21213,6 +21573,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-koala",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -21286,13 +21655,13 @@
         "topics-animals:animal-bengal-tiger"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-jaguar",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -21724,6 +22093,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-jaguar",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -21799,13 +22177,13 @@
         "topics-animals:animal-monarch-butterfly"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-honey-bee",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -22237,6 +22615,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-honey-bee",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -22304,13 +22691,13 @@
         "topics-animals:animal-fire-salamander"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-axolotl",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -22742,6 +23129,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-axolotl",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -22803,13 +23199,13 @@
         "topics-animals:animal-axolotl"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-whale-shark",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23241,6 +23637,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-whale-shark",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -23314,13 +23719,13 @@
         "topics-animals:animal-common-octopus"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-garden-cross-spider",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -23752,6 +24157,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-garden-cross-spider",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -23817,13 +24231,13 @@
         "topics-animals:animal-african-savanna-elephant"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-dromedary",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24255,6 +24669,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-dromedary",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -24343,13 +24766,13 @@
         "topics-animals:animal-barn-owl"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/animal-white-tailed-eagle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -24781,6 +25204,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/animal-white-tailed-eagle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -24838,13 +25270,13 @@
         "topics-history:history-web"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/history-khipu",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25310,6 +25742,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/history-khipu",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -25355,13 +25796,13 @@
         "topics-history:history-writing"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/history-mohenjo-daro",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -25827,6 +26268,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/history-mohenjo-daro",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -25868,13 +26318,13 @@
         "topics-history:history-mohenjo-daro"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/history-writing",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -26332,6 +26782,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/history-writing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -26411,13 +26870,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-camera",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -26810,6 +27269,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-camera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -26885,13 +27353,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-telescope",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27269,6 +27737,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-telescope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -27346,13 +27823,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-microscope",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -27730,6 +28207,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-microscope",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -27795,13 +28281,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/person-mary_anning",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28125,6 +28611,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/person-mary_anning",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -28190,13 +28685,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/person-ibn_al_haytham",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -28520,6 +29015,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/person-ibn_al_haytham",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -28594,13 +29098,13 @@
         "topics-inventions:invention-smartphone"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-battery",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -28848,6 +29352,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-battery",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -28922,13 +29435,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-generator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -29176,6 +29689,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-generator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -29257,13 +29779,13 @@
         "topics-science:science-circuit"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-transistor",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeMechanicalOriginals20261023": {
         "build": "1945360e83504fac",
@@ -29511,6 +30033,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-transistor",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -29573,13 +30104,13 @@
         "topics-science:science-heat-transfer"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-refrigerator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -29825,6 +30356,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-refrigerator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -29888,13 +30428,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-bicycle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -30140,6 +30680,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-bicycle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -30227,13 +30776,13 @@
         "topics-science:science-friction"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-elevator",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -30480,6 +31029,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-elevator",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -30587,13 +31145,13 @@
         "topics-people:person-inge_lehmann"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-seismograph",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -30847,6 +31405,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-seismograph",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -30930,13 +31497,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-3d-printing",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -31189,6 +31756,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-3d-printing",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -31251,13 +31827,13 @@
         "topics-inventions:invention-printing"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/invention-sewing-machine",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeWayfinderFocus20261023": {
         "build": "09ff0e92c786c038",
@@ -31496,6 +32072,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/invention-sewing-machine",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -31591,13 +32176,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-pont-du-gard",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -31809,6 +32394,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-pont-du-gard",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -31904,13 +32498,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-great-zimbabwe",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -32122,6 +32716,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-great-zimbabwe",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -32217,13 +32820,13 @@
         "topics-buildings:building-djenne-mosque"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-horyu-ji",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -32435,6 +33038,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-horyu-ji",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -32530,13 +33142,13 @@
         "topics-history:history-timbuktu"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-djenne-mosque",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -32748,6 +33360,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-djenne-mosque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -32843,13 +33464,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-lalibela",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33061,6 +33682,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-lalibela",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -33156,13 +33786,13 @@
         "topics-buildings:building-panama-canal"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-angkor-wat",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33374,6 +34004,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-angkor-wat",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -33469,13 +34108,13 @@
         "topics-buildings:building-colosseum"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-palenque",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -33687,6 +34326,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-palenque",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -33794,13 +34442,13 @@
         "topics-science:science-angle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/building-sydney-opera",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "uiBeforeChronicle58ContentCorrection20261023": {
         "build": "8a11928c4f2e800c",
@@ -34019,6 +34667,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/building-sydney-opera",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -34069,13 +34726,13 @@
         "topics-science:science-lever"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-pressure",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -34295,6 +34952,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-pressure",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -34346,13 +35012,13 @@
         "topics-inventions:invention-elevator"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-friction",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -34572,6 +35238,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-friction",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -34621,13 +35296,13 @@
         "topics-science:science-currents"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-buoyancy",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -34847,6 +35522,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-buoyancy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -34896,13 +35580,13 @@
         "topics-science:science-water-cycle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-surface-tension",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35122,6 +35806,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-surface-tension",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -35172,13 +35865,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-capillarity",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35398,6 +36091,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-capillarity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -35447,13 +36149,13 @@
         "topics-science:science-chromatography"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-diffusion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35673,6 +36375,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-diffusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -35722,13 +36433,13 @@
         "topics-science:science-diffusion"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-chromatography",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -35948,6 +36659,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-chromatography",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -35998,13 +36718,13 @@
         "topics-inventions:invention-refrigerator"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-heat-transfer",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36224,6 +36944,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-heat-transfer",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -36273,13 +37002,13 @@
         "topics-inventions:invention-bicycle"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-lever",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36507,6 +37236,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-lever",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -36556,13 +37294,13 @@
         "topics-science:science-resonance"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-elasticity",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -36782,6 +37520,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-elasticity",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -36831,13 +37578,13 @@
         "topics-inventions:invention-seismograph"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-pendulum",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37065,6 +37812,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-pendulum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -37140,13 +37896,13 @@
         "topics-inventions:invention-seismograph"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-resonance",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37366,6 +38122,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-resonance",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -37414,13 +38179,13 @@
         "topics-science:science-patterns"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-probability",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37647,6 +38412,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-probability",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -37697,13 +38471,13 @@
         "topics-science:science-fractals"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-symmetry",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -37923,6 +38697,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-symmetry",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -37971,13 +38754,13 @@
         "topics-science:science-symmetry"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-fractals",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38204,6 +38987,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-fractals",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -38255,13 +39047,13 @@
         "topics-buildings:building-sydney-opera"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-angle",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38481,6 +39273,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-angle",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -38530,13 +39331,13 @@
         "topics-science:science-checksum"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-encryption",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -38756,6 +39557,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-encryption",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -38817,13 +39627,13 @@
         "topics-science:science-encryption"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-checksum",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39051,6 +39861,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-checksum",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -39112,13 +39931,13 @@
         "topics-science:science-photosynthesis"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-cell",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39338,6 +40157,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-cell",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -39399,13 +40227,13 @@
         "topics-science:science-galaxy"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-fusion",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39625,6 +40453,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-fusion",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -39675,13 +40512,13 @@
         "topics-science:science-exoplanet"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-galaxy",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -39901,6 +40738,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-galaxy",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -39950,13 +40796,13 @@
         "topics-science:science-magnetism"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-comet",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40176,6 +41022,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-comet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -40237,13 +41092,13 @@
         "topics-science:science-solar-system"
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/science-exoplanet",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "voluntaryThinkingReview": {
         "goals": [
@@ -40463,6 +41318,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/science-exoplanet",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -40527,13 +41391,13 @@
       ],
       "mediaDecision": "Own clearly invented evidence-card comparison with AI assistance. Labels separate material from contextual evidence; not object photos, copied museum artwork, microscopic metal structure or a casting recipe. Current learning purpose is comparison of evidence; no original museum-photo pixel review claimed.",
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/history-bronze",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "independentHumanReview": false,
@@ -40678,6 +41542,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/history-bronze",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -40745,13 +41618,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/person-maria_sibylla_merian",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -40825,6 +41698,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/person-maria_sibylla_merian",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     },
     {
@@ -40892,13 +41774,13 @@
         }
       ],
       "ui": {
-        "build": "f3283eebec80e5e6",
+        "build": "pending-current-home-20261027",
         "route": "world/topic/person-inge_lehmann",
-        "visible": true,
-        "search": true,
-        "back": true,
-        "offline": true,
-        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Separate Home and shared preview preparation on actual M68. Current browser acceptance is pending. The complete accepted M68 UI binding remains in uiBeforeHomeRefinement20261027; no factual or human acceptance is changed."
       },
       "aiSelfReview": {
         "mode": "ai-self-review",
@@ -40972,6 +41854,15 @@
         "back": false,
         "offline": false,
         "report": "Bounded existing WK026/056 playground and honest observed-choice feedback preparation. All prior UI/factual/source/history remains; final full current acceptance pending."
+      },
+      "uiBeforeHomeRefinement20261027": {
+        "build": "f3283eebec80e5e6",
+        "route": "world/topic/person-inge_lehmann",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Complete existing local Chromium acceptance on code commit 020ddcd9f60fe1550f6bd811052264ada9ba8aa8 for this shared current UI/search/back/offline surface. Original evidence is retained privately; native qualification and actual delivery remain outstanding."
       }
     }
   ],
@@ -44628,5 +45519,11 @@
     "nativeQualification": "outstanding",
     "actualDelivery": "outstanding",
     "scientificApproval": false
+  },
+  "meaningBeforeHomeRefinement20261027": "All99 existing dossiers and every factual/source/media/age/relationship field and named history are retained. Shared current UI has complete local browser acceptance; native qualification and actual delivery remain outstanding. No new scientific or human acceptance is implied.",
+  "homeRefinementPreparation20261027": {
+    "actualBase": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+    "acceptedBaseHead": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
+    "scope": "Canonical photo/question selection, published graph-route projection, presentation visit/history state and shared existing explanatory figures. No central learning storage or factual claim change. Browser qualification remains pending."
   }
 }

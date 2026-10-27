@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "9e397e98378d9bc1376fd111e39d2693ed0a95b5",
+    "commit": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -61,7 +61,9 @@
       "52908ff15e3730ab6e29549e21901eb25dccd82e",
       "c9378dcb8f23becd080eba605e485b9ef7dcc701",
       "a081dbbaa91eaf9b3179db32f98f82acde3d0dfd",
-      "9e397e98378d9bc1376fd111e39d2693ed0a95b5"
+      "9e397e98378d9bc1376fd111e39d2693ed0a95b5",
+      "fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691",
+      "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1595,6 +1597,70 @@
         }
       ],
       "checkedOn": "2026-10-26"
+    },
+    {
+      "number": 67,
+      "title": "Kompakte Navigation und konkrete Lernvorschauen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/67",
+      "base": "test-live",
+      "mergedAt": "2026-10-26T23:10:34Z",
+      "mergeCommit": "fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57317919700,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-26T23:10:56Z",
+          "updatedAt": "2026-10-26T23:10:56Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H1QoXnQ9hBg2KrxCEn3Q1f9834qU"
+        },
+        {
+          "id": 57317899772,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-26T23:10:38Z",
+          "updatedAt": "2026-10-26T23:10:38Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H1QoXnQ9hBg2KrxCEn3Q1f9834qU"
+        }
+      ],
+      "checkedOn": "2026-10-27"
+    },
+    {
+      "number": 68,
+      "title": "Spielangebote früher zeigen und Auswahlfeedback passend formulieren",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/68",
+      "base": "test-live",
+      "mergedAt": "2026-10-27T01:57:06Z",
+      "mergeCommit": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57327178785,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-27T01:57:19Z",
+          "updatedAt": "2026-10-27T01:57:19Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/GKiDTygNV1xvMomGc2jd3DbSnWrj"
+        },
+        {
+          "id": 57327171316,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-27T01:57:10Z",
+          "updatedAt": "2026-10-27T01:57:10Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/GKiDTygNV1xvMomGc2jd3DbSnWrj"
+        }
+      ],
+      "checkedOn": "2026-10-27"
     }
   ]
 }

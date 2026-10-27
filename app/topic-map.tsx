@@ -2,7 +2,7 @@ import type {WorldEntry} from './world-types';
 import type {CSSProperties} from 'react';
 import {topicMapGroups} from './topic-map-layout.mjs';
 import './topic-map.css';
-export default function TopicMap({entry,onPlace,compact=false}:{entry:WorldEntry;onPlace:(index:number)=>void;compact?:boolean}){
+export default function TopicMap({entry,onPlace,compact=false}:{entry:WorldEntry|(Pick<WorldEntry,'title'|'locations'>&Partial<Pick<WorldEntry,'category'>>);onPlace:(index:number)=>void;compact?:boolean}){
  if(!entry.locations.length)return null;
  const groups=topicMapGroups(entry.locations),grouped=groups.some(g=>g.members.length>1);
  return <figure className="topic-map"><svg viewBox="0 0 800 450" role="img" aria-label={'Übersichtskarte mit ungefähren Beispielorten zu '+entry.title+'. '+groups.map(g=>(compact?'Ort':('Markierung '+g.label))+': '+g.members.map(p=>p.label).join('; ')).join('. ')}><image href="/maps/world-context.svg" width="800" height="450"/>{groups.map(g=><g key={g.label} className={'topic-map-marker'+(!compact&&g.members.length>1?' grouped':'')} transform={'translate('+g.x+' '+g.y+')'} data-map-members={g.members.map(p=>p.index).join(',')}>
