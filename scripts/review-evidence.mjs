@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
 // Review PNGs only; production and offline budgets are unchanged.
-export const REVIEW_LIMIT=155_000_000;
+export const REVIEW_LIMIT=166_000_000;
 // Capture identities are never deduplicated. Only their byte-identical payloads
 // may share a file in a completed review. Diagnostics keep standalone originals.
 export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false}={}){
