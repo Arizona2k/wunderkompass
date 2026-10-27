@@ -18,7 +18,16 @@ export async function discoveryPairMedia(page){
  const media=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
   const surface=article.querySelector(':scope > figure img[src],:scope > figure svg,:scope > figure ol,:scope > figure [role="img"],:scope > .research-preview img[src]');
   if(!surface)return false;const r=surface.getBoundingClientRect();return r.width>=80&&r.height>=50;
- }));assert.deepEqual(media,[true,true],'both connected topics have an actual visible explanatory figure; button arrows do not count');return media;
+ }));assert.deepEqual(media,[true,true],'both connected topics have an actual visible explanatory figure; button arrows do not count');
+ const photos=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
+  const image=article.querySelector(':scope > .world-photo img[src],:scope > .discovery-context-photo img[src]');
+  return image?{height:image.getBoundingClientRect().height,fit:getComputedStyle(image).objectFit}:null;
+ }));
+ if(photos.every(Boolean)){
+  assert(photos.every(photo=>photo.fit==='contain'),'paired photos retain their complete subjects');
+  assert(Math.abs(photos[0].height-photos[1].height)<=1,'paired photos share an equal frame despite different original formats');
+ }
+ return media;
 }
 
 export async function decodeHomeImages(page){
