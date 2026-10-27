@@ -1,5 +1,7 @@
 # Aktueller Arbeits- und Übergabestand
 
+Getrennte fachliche WK056-Vorbereitung: Die beiden vorhandenen Planetenmodelle verwenden jetzt gemeinsam definierte ungefähre große Halbachsen nach der NASA-Tabelle vom18.03.2025 und die genaue AE. IDs/Reihenfolge, bisherige Umlaufzeitnäherungen, Durchmesser und Speicherkennungen bleiben. Reine Daten-/Exportprüfungen bestanden; tatsächliche Vorschauaktualisierung, Modell-/Altpass-/Offline-/Zoomnachweise und vollständige Schlussqualifikation stehen aus. Der festgeschriebene Home-Kandidat2ec87b2 läuft unverändert in einem anderen Arbeitsverzeichnis weiter. Keine Behauptung einer aktuellen Himmelsposition oder vollständigen Laborabnahme.
+
 Stand: 27. Oktober 2026 · Europe/Berlin. Der Gesamtauftrag läuft weiter; Paket3.5/WK051–058 steht vor den Paketen4–8. Maßgeblich bleiben AGENTS, VISION, QUALITY, TEST-LIVE, der einzige BACKLOG und die vollständigen Originalaufträge im bestehenden Auftragsarchiv. Frühere Arbeitsstände bleiben in Git erhalten.
 
 ## Bestätigte Grundlage

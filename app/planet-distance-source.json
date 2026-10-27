@@ -1,0 +1,22 @@
+{
+  "quantity": "Ungefähre große Halbachse der Planetenbahn um die Sonne",
+  "sourceUnit": "Millionen Kilometer",
+  "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "definitionsUrl": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html",
+  "sourceUpdatedOn": "2025-03-18",
+  "consultedOn": "2026-10-27",
+  "sourceBytes": 14363,
+  "sourceSHA256": "42bdc3f1dae470b85580c6ac66c353964a05d544ad2ac970a6b7d908337a6c3c",
+  "astronomicalUnitKm": 149597870.7,
+  "unitSourceUrl": "https://ssd.jpl.nasa.gov/astro_par.html",
+  "distancesMillionKm": {
+    "mercury": 57.9,
+    "venus": 108.2,
+    "earth": 149.6,
+    "mars": 228.0,
+    "jupiter": 778.5,
+    "saturn": 1432.0,
+    "uranus": 2867.0,
+    "neptune": 4515.0
+  }
+}
