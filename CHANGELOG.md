@@ -1,3 +1,11 @@
+## Vorbereitete Desktop-Homeverfeinerung · 27.10.2026
+
+Frage und Motiv bilden einen gemeinsamen Einstieg. Größere Karten erschließen die sechs Wissenswelten; Themenpaare zeigen beide Darstellungen und vollständige Fotos in gleich hohen Rahmen. Riff, Pilze, Luftschichten und die ausgewählte Nahrungskette erhalten passende vorhandene beziehungsweise eigene Erklärungsmedien. Mitmachvorschauen und die Tagesentdeckung sind auf Desktop und Mobilgeräten klarer gewichtet. Native GitHub-Abnahme und tatsächliche neue Testbereitstellung stehen noch aus; keine veröffentlichte Desktopfassung behauptet.
+
+## Tatsächliche Fortsetzung · PR69 und PR70
+
+Die Home-/Einstiegsverbesserungen aus PR69 und die gemeinsame Quellen-, Einheiten- und Abstandserklärung der Planetenmodelle aus PR70 sind bereits in der Testversion übernommen. Gesamtpaket3.5 und die weiteren Inhalts- und Gestaltungsaufgaben bleiben offen. Aktueller Lieferstand und nächster Schritt stehen in PROJECT_STATE.md und dem einzigen BACKLOG; die nachfolgenden Abschnitte bleiben als historische Arbeitsstände erhalten.
+
 ## Anweisungen fortgeschrieben · Gestaltung und PR62-Abschluss25.10.2026
 
 ## In Vorbereitung · Beobachtungen und Erklärungen bei Merian und Lehmann
