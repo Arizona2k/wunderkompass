@@ -1,0 +1,115 @@
+{
+  "status": "source-only preparation, not implemented/qualified/published",
+  "existingTask": "WK054, seven SI terms from retained older manuscript, no claim of seven newlywritten pieces or full180wordcompletion",
+  "actualBase": "965ea4397860c3d922e0e228d20dd7521b9445c7",
+  "retainedOriginal": {
+    "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+    "bookContentGitBlob": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+    "bytes": 640032,
+    "terms": [
+      "Meter",
+      "Kilogramm",
+      "Sekunde",
+      "Ampere",
+      "Kelvin",
+      "Mol",
+      "Candela"
+    ],
+    "wordPayloadsRetained": true,
+    "individualLearningFieldsRetainedExceptUnpublishedNavigationTargets": true,
+    "measureModelGitBlob": "4f4fd2850387047e2a763d65ae666f63411c8777"
+  },
+  "primaryReadOn": "2026-10-27",
+  "actualPrimarySources": [
+    "https://www.nist.gov/si-redefinition/ampere-introduction",
+    "https://www.nist.gov/si-redefinition/candela",
+    "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+    "https://www.nist.gov/si-redefinition/kelvin-introduction",
+    "https://www.nist.gov/si-redefinition/kilogram-introduction",
+    "https://www.nist.gov/si-redefinition/meter",
+    "https://www.nist.gov/si-redefinition/redefining-mole",
+    "https://www.nist.gov/si-redefinition/second-introduction"
+  ],
+  "claimReview": {
+    "date": "2026-10-27",
+    "primary": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+    "coreClaimsActuallyRead": [
+      "m length/vacuumlightspeed with second",
+      "kg mass/fixedPlanckconstant",
+      "s fixedcaesium133groundstatetransitionfrequency9192631770Hz",
+      "A current/fixedelementarycharge;1Cpersecond",
+      "K thermodynamictemperature/fixedBoltzmannconstant;difference1K=1Celsiusdegree;absolutezero-273.15C;quantumzeropointmotion retained",
+      "mol amountofsubstance;specifyentities;exact6.02214076e23;notmassunit",
+      "cd directionalvisibleluminousintensity;humanvision;distinguishlumen/radiantpower"
+    ],
+    "noNewImageReuse": "No thirdpartyimages downloaded or rights inferred fromgovernmentdomain. Existingownmodelscope mustbe verified separately.",
+    "historicalSourceMetadata": "OriginalcheckedOn/updatedOn preserved in originalselection. Currentread date recorded separately, no blanketalteration ofoldrecords."
+  },
+  "deferredExactOriginalLinks": [
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Wellenlänge",
+        "reason": "Wellenlänge ist ein räumlicher Wiederholungsabstand. Eine Längeneinheit wie Meter macht seine Zahl vergleichbar."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Topografie",
+        "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Messwert",
+        "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Meter",
+      "kind": "relatedQuestions",
+      "link": {
+        "question": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Sekunde",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Frequenz",
+        "reason": "Hertz zählt vollständige Wiederholungen pro Sekunde. Zeitdauer und Wiederholungsrate sind verschiedene Angaben."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Kelvin",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Wärme",
+        "reason": "Wärme ist eine Energieübertragung aufgrund eines Temperaturunterschieds. Kelvin benennt eine Temperatureinheit und ist keine übertragene Energiemenge."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    },
+    {
+      "from": "Mol",
+      "kind": "relatedWords",
+      "link": {
+        "term": "Atom",
+        "reason": "Atom benennt eine Teilchenart; Mol ist eine Einheit für die Anzahl festgelegter Teilchen. Teilchenart und Stoffmenge sind verschieden."
+      },
+      "reason": "Original target not yet published in current dictionary. Retain exactoriginal privately/provenance, do not expose a brokenroute."
+    }
+  ],
+  "currentPreservation": "Allcurrent90words/30why originaldefinitions,IDs,order,sources,notes,favorites unchanged. CurrentMineralcorrection retained. No currentDesktopfiles changed.",
+  "next": "Implement currentdictionary/search/notebook entryintegration and voluntary source-backedlearning/modelstates usingexistingcontrols. Source/readiness/oldstate/actualdesktopmobile/nativezoom/full/localnative/delivery proofstillpending. No tests whileDesktopfullusesbothbrowsergroups."
+}

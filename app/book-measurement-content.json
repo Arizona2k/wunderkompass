@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "words": {
+    "Meter": [
+      "Meter",
+      "Messen",
+      "Der Meter ist eine gemeinsame Einheit für Längen. Das Zeichen m gehört immer zur Zahl: 2 m sagt, welche Länge gemeint ist. Verschieden große Hände eignen sich zum Vergleichen, sind aber kein einheitliches Längenmaß."
+    ],
+    "Kilogramm": [
+      "Kilogramm",
+      "Messen",
+      "Das Kilogramm ist die Einheit für Masse, mit dem Zeichen kg. Masse beschreibt eine Eigenschaft eines Körpers. Die Gewichtskraft entsteht durch Anziehung und hängt auch davon ab, wo sich der Körper befindet. Kilogramm und eine Kraftangabe sind deshalb verschieden."
+    ],
+    "Sekunde": [
+      "Sekunde",
+      "Messen",
+      "Die Sekunde ist eine Zeiteinheit mit dem Zeichen s. Sie beschreibt zum Beispiel, wie lange ein Vorgang dauert. Die Uhrzeit seines Beginns und seine Dauer sind unterschiedliche Angaben: Ein Versuch kann um 10 Uhr beginnen und drei Sekunden dauern."
+    ],
+    "Ampere": [
+      "Ampere",
+      "Messen",
+      "Ampere ist die Einheit der elektrischen Stromstärke; ihr Zeichen ist A. Stromstärke beschreibt, wie viel elektrische Ladung in einer bestimmten Zeit eine Stelle passiert. Elektrische Spannung ist eine andere Messgröße. Das A auf einem Schild ist keine Aussage darüber, ob ein Gerät sicher berührt werden darf."
+    ],
+    "Kelvin": [
+      "Kelvin",
+      "Messen",
+      "Kelvin ist eine Temperatureinheit mit dem Zeichen K, ohne Gradzeichen. Kelvin und Grad Celsius haben unterschiedlich festgelegte Nullpunkte. Deshalb bedeuten 20 K und 20 °C nicht dieselbe Temperatur. Ein Temperaturunterschied von 1 K ist aber genauso groß wie einer von 1 °C."
+    ],
+    "Mol": [
+      "Mol",
+      "Messen",
+      "Mol ist die Einheit für die Stoffmenge. Sie beschreibt sehr große Anzahlen festgelegter Teilchen. Du musst dazusagen, ob etwa Atome oder ganze Moleküle gezählt werden. Ein Mol ist nicht einfach ein bestimmtes Gewicht in Kilogramm."
+    ],
+    "Candela": [
+      "Candela",
+      "Messen",
+      "Candela ist die Einheit der Lichtstärke mit dem Zeichen cd. Sie beschreibt sichtbares Licht in einer bestimmten Richtung und berücksichtigt, wie das menschliche Auge auf Licht reagiert. Sie ist nicht die Einheit für die gesamte Lichtmenge einer Lampe in alle Richtungen."
+    ]
+  },
+  "learning": {
+    "Meter": {
+      "symbol": "m",
+      "quantity": "Länge",
+      "starter": "Meter sagen, wie lang etwas ist. Ein gemeinsames Maß hilft uns, Messungen zu vergleichen.",
+      "deeper": "Der Meter wird heute über die festgelegte Lichtgeschwindigkeit und die Sekunde definiert. Dadurch hängt die Einheit nicht von einem einzelnen Stab oder der Körpergröße eines Menschen ab. Das heißt nicht, dass jedes Lineal unendlich genau misst.",
+      "observe": "Miss die kurze Seite eines geschlossenen Buchs zuerst mit deinen Fingerbreiten und dann mit einem Lineal. Vergleiche mit einer anderen Person: Warum passen die Fingerzahlen manchmal nicht zusammen?",
+      "benefit": "Du kannst erklären, warum eine Zahl erst zusammen mit ihrer Einheit eine verständliche Längenangabe wird.",
+      "topic": "science-pendulum",
+      "question": {
+        "prompt": "Zwei Kinder verwenden unterschiedlich breite Hände. Was hilft beim Vergleich der Buchlänge?",
+        "answers": [
+          "Nur die größere Zahl vergleichen",
+          "Beide mit derselben Längeneinheit messen",
+          "Die Hand mit mehr Fingern verwenden"
+        ],
+        "correct": 1,
+        "hint": "Überlege, ob ein einzelner Messschritt bei beiden Kindern gleich lang ist.",
+        "why": "Mit derselben Längeneinheit beziehen sich beide Zahlen auf gleich große Schritte. Unterschiedlich breite Hände können für dieselbe Buchlänge verschiedene Zahlen liefern.",
+        "wrongReasons": [
+          "Eine größere Zahl kann auch durch kleinere Messschritte entstehen. Sie bedeutet dann nicht automatisch ein längeres Buch.",
+          "",
+          "Beide Hände haben normalerweise dieselbe Fingerzahl. Entscheidend ist die Breite des verwendeten Messschritts, nicht die Zahl der Finger."
+        ]
+      },
+      "connection": "Beim Pendel verändert die Fadenlänge die Schwingungszeit. Achte auf die Längeneinheit im Modell.",
+      "model": "length",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/meter",
+          "title": "NIST · Meter",
+          "anchor": "Length based on bodily dimensions; need for a universal standard; current definition additionally checked against Definitions of SI Base Units",
+          "updatedOn": null,
+          "checkedOn": "2026-10-13"
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "title": "NIST · Definitions of SI Base Units",
+          "anchor": "Meter – Unit of Length; fixed speed of light",
+          "updatedOn": "2025-08-13",
+          "checkedOn": "2026-10-13"
+        }
+      ],
+      "relatedWords": [],
+      "relatedQuestions": []
+    },
+    "Kilogramm": {
+      "symbol": "kg",
+      "quantity": "Masse",
+      "starter": "Mit Kilogramm beschreiben wir die Masse eines Gegenstands. Das ist nicht dasselbe wie die Kraft, mit der ein Himmelskörper ihn anzieht.",
+      "deeper": "Seit 2019 beruht die Definition des Kilogramms auf dem festgelegten Wert der Planckkonstante. Früher war ein besonderer Metallkörper die Referenz. Naturkonstanten als Grundlage ermöglichen Messvergleiche, ohne dieses eine Originalstück überallhin zu bringen.",
+      "observe": "Stell dir zwei verschlossene, gleich große Kisten vor. Auf einer steht 1 kg, auf der anderen 3 kg. Die gleiche Größe der Kisten beweist noch keine gleiche Masse. Erkläre, welche Information die Schilder ergänzen.",
+      "benefit": "Du verwechselst die Größe einer Verpackung und die Masse ihres Inhalts weniger leicht.",
+      "topic": "science-buoyancy",
+      "question": {
+        "prompt": "Zwei gleich große Kisten sind mit 1 kg und 3 kg beschriftet. Was sagen diese Angaben?",
+        "answers": [
+          "Die Kisten haben dieselbe Masse, weil sie gleich groß sind",
+          "Die Angaben beschreiben die Temperatur",
+          "Die angegebene Masse der zweiten Kiste ist dreimal so groß"
+        ],
+        "correct": 2,
+        "hint": "Lies erst das Zeichen hinter den Zahlen. Welche Messgröße gehört dazu?",
+        "why": "Beide Zahlen verwenden dieselbe Masseeinheit. 3 kg ist das Dreifache von 1 kg; gleiche Außenmaße beweisen keine gleiche Masse.",
+        "wrongReasons": [
+          "Gleich große Kisten können unterschiedlich viel Material enthalten. Aus ihren Außenmaßen allein folgt keine gleiche Masse.",
+          "kg gehört zur Masse. Eine Temperaturangabe braucht eine passende Temperatureinheit.",
+          ""
+        ]
+      },
+      "connection": "Im Auftriebsmodell vergleichst du die Masse eines Körpers mit dem von ihm verdrängten Wasser.",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/kilogram-introduction",
+          "title": "NIST · Kilogram: Introduction",
+          "anchor": "November 2018 decision; fixed Planck constant replaces the artifact-based definition",
+          "updatedOn": "2023-02-22",
+          "checkedOn": "2026-10-13"
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "title": "NIST · Definitions of SI Base Units",
+          "anchor": "Kilogram – Unit of Mass",
+          "updatedOn": "2025-08-13",
+          "checkedOn": "2026-10-13"
+        }
+      ]
+    },
+    "Sekunde": {
+      "symbol": "s",
+      "quantity": "Zeitdauer",
+      "starter": "Sekunden sagen, wie lange etwas dauert. Die Uhrzeit sagt, wann es passiert.",
+      "deeper": "Für sehr genaue Zeitmessungen nutzt die Definition eine bestimmte Frequenz von Cäsiumatomen. Eine Sekunde entspricht 9.192.631.770 Perioden dieser festgelegten Strahlung. Eine Handstoppuhr bleibt trotzdem begrenzt: Auch das Reagieren beim Starten und Stoppen braucht Zeit.",
+      "observe": "Wähle auf unserer gezeichneten Zeitlinie zuerst die Dauer, dann einen anderen Beginn. Bleibt die Dauer gleich, obwohl der Endpunkt wandert? Begründe es mit dem Abstand der Punkte.",
+      "benefit": "Du kannst in einer Beobachtung sauber zwischen Beginn, Ende und vergangener Zeit unterscheiden.",
+      "topic": "science-pendulum",
+      "question": {
+        "prompt": "Ein Vorgang beginnt bei Sekunde 20 und endet bei Sekunde 24. Wie lange dauert er?",
+        "answers": [
+          "4 Sekunden",
+          "20 Sekunden",
+          "24 Sekunden"
+        ],
+        "correct": 0,
+        "hint": "Betrachte den Abstand zwischen Beginn und Ende, nicht nur einen der beiden Zeitpunkte.",
+        "why": "24 minus 20 ergibt 4. Die beiden Zeitpunkte begrenzen die Dauer; keiner davon ist allein die vergangene Zeit.",
+        "wrongReasons": [
+          "",
+          "20 ist der Beginn auf dieser Zeitlinie. Das ist nicht die Zeit, die zwischen Beginn und Ende vergeht.",
+          "24 ist der Endpunkt. Zur Dauer gehört auch, wo der Vorgang begonnen hat."
+        ]
+      },
+      "connection": "Das Pendelmodell zeigt eine Schwingungsdauer. Diese Dauer ist keine Uhrzeit.",
+      "model": "duration",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/second-introduction",
+          "title": "NIST · Second: Introduction",
+          "anchor": "Difference between intervals and instants; 9,192,631,770 periods of cesium radiation",
+          "updatedOn": "2026-05-27",
+          "checkedOn": "2026-10-13"
+        }
+      ],
+      "relatedWords": []
+    },
+    "Ampere": {
+      "symbol": "A",
+      "quantity": "Elektrische Stromstärke",
+      "starter": "Ampere gehört zu elektrischem Strom. Stromstärke und Spannung sind verschiedene Angaben.",
+      "deeper": "Seit 2019 ist das Ampere über die festgelegte Elementarladung und die Sekunde definiert. Eine Stromstärke von 1 A entspricht einem Ladungsdurchsatz von 1 Coulomb je Sekunde. Ladungsmenge und Ladung je Zeit sind verschieden – ähnlich wie die Gesamtzahl von Karten und die Zahl pro Runde.",
+      "observe": "Ordne nur auf dem Bildschirm die Schilder 2 A, 2 kg und 2 s den passenden Messgrößen zu. Keine Steckdosen, Kabel oder echten elektrischen Anlagen untersuchen.",
+      "benefit": "Du liest eine Stromstärkeangabe, ohne sie mit Masse, Zeitdauer oder einer Sicherheitsfreigabe zu verwechseln.",
+      "topic": "science-circuit",
+      "question": {
+        "prompt": "Welches Schild beschreibt eine elektrische Stromstärke?",
+        "answers": [
+          "2 kg",
+          "2 A",
+          "2 s"
+        ],
+        "correct": 1,
+        "hint": "Die Zahlen sind hier absichtlich gleich. Entscheidend ist die Einheit dahinter.",
+        "why": "A ist das Einheitenzeichen für Ampere und damit für die Stromstärke. Gleiche Zahlen können mit verschiedenen Einheiten völlig verschiedene Größen beschreiben.",
+        "wrongReasons": [
+          "kg ist eine Masseeinheit. Die gleiche Zahl macht daraus keine Stromstärke.",
+          "",
+          "s gehört zur Zeit. Eine Dauer allein beschreibt noch keinen elektrischen Ladungsdurchsatz."
+        ]
+      },
+      "connection": "Die Stromkarte zeigt, weshalb ein geschlossener Stromweg wichtig ist. Sie ersetzt keinen echten Elektroversuch.",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/ampere-introduction",
+          "title": "NIST · Ampere: Introduction",
+          "anchor": "Definition since 20 May 2019; charge passing a point per unit time; one coulomb per second",
+          "updatedOn": "2026-05-28",
+          "checkedOn": "2026-10-13"
+        }
+      ]
+    },
+    "Kelvin": {
+      "symbol": "K",
+      "quantity": "Temperatur",
+      "starter": "Temperaturen können auf verschiedenen Skalen stehen. Lies die Zahl und die Einheit zusammen.",
+      "deeper": "0 K entspricht −273,15 °C. Die heutige Definition der thermodynamischen Temperatur verwendet die Boltzmannkonstante. Der absolute Nullpunkt bedeutet in der Quantenphysik nicht, dass jede Bewegung verschwindet. Unser Umrechner zeigt nur die Beziehung der beiden Skalen, keine echte Temperaturmessung.",
+      "observe": "Vergleiche im Bildschirmmodell 0 °C mit 10 °C. Wie verändern sich die Kelvinzahlen? Zeige getrennt auf den Nullpunkt der Skala und den Größenunterschied.",
+      "benefit": "Du erkennst, warum dieselben Ziffern mit verschiedenen Temperatureinheiten nicht denselben Zustand bedeuten.",
+      "topic": "science-heat-transfer",
+      "question": {
+        "prompt": "Was stimmt beim Vergleich von Kelvin und Grad Celsius?",
+        "answers": [
+          "20 K und 20 °C bedeuten immer dasselbe",
+          "Ein Unterschied von 1 K ist größer als einer von 1 °C",
+          "Ein Unterschied von 1 K und 1 °C ist gleich groß"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide die Stelle, an der eine Skala beginnt, von der Größe eines einzelnen Schritts.",
+        "why": "Die Schritte sind gleich groß, die Nullpunkte verschieden. Daher bleibt eine Änderung um 1 gleich groß, obwohl die Temperaturzahlen auf den beiden Skalen unterschiedlich sind.",
+        "wrongReasons": [
+          "Die Skalen haben verschiedene Nullpunkte. Gleiche Ziffern allein ergeben deshalb keine gleiche Temperatur.",
+          "Die Nullpunkte sind verschieden, nicht die Größe eines Temperaturschritts. Ein Unterschied von 1 ist auf beiden Skalen gleich groß.",
+          ""
+        ]
+      },
+      "connection": "Bei Wärmeübertragung unterscheiden wir Temperatur und übertragene Energie. Die Temperatureinheit gehört zur Angabe.",
+      "model": "temperature",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/kelvin-introduction",
+          "title": "NIST · Kelvin: Introduction",
+          "anchor": "Equal increments; 0 K = −273.15 °C; quantum zero-point motion; Boltzmann constant",
+          "updatedOn": "2026-01-05",
+          "checkedOn": "2026-10-13"
+        }
+      ],
+      "relatedWords": []
+    },
+    "Mol": {
+      "symbol": "mol",
+      "quantity": "Stoffmenge",
+      "starter": "Beim Zählen ist wichtig, was als ein Teil gilt: eine einzelne Kugel oder ein ganzes Kugelpaar.",
+      "deeper": "Ein Mol enthält genau 6,02214076 × 10²³ der angegebenen Einheiten. Das können Atome, Moleküle oder andere genau bezeichnete Einheiten sein. Weil verschiedene Teilchen unterschiedliche Massen haben können, folgt aus gleicher Stoffmenge nicht automatisch gleiche Masse.",
+      "observe": "Zeichne sechs Kugeln, immer zwei als Paar. Du kannst sechs einzelne Kugeln oder drei Paare zählen. Sage vor jeder Zahl, was du zählst. Die Zeichnung ist eine Zählhilfe, keine echte Molmenge oder maßstäbliche Teilchenaufnahme.",
+      "benefit": "Du verstehst, warum eine Teilchenzahl erst zusammen mit der bezeichneten Teilchenart eindeutig ist.",
+      "topic": "science-water-cycle",
+      "question": {
+        "prompt": "Eine Zeichnung zeigt sechs Kugeln in drei Paaren. Was ist richtig?",
+        "answers": [
+          "Sechs Kugeln und drei Paare sind zwei richtige Zählungen",
+          "Es gibt automatisch sechs Paare",
+          "Die Zeichnung enthält schon ein echtes Mol"
+        ],
+        "correct": 0,
+        "hint": "Lege zuerst fest, was bei deiner Zählung als ein Teil zählt.",
+        "why": "Eine einzelne Kugel und ein Paar sind verschiedene Zähleinheiten. Sechs Kugeln ergeben hier drei Paare. Das kleine Bild steht nicht für die riesige Teilchenzahl eines Mols.",
+        "wrongReasons": [
+          "",
+          "Ein Paar enthält zwei Kugeln. Würdest du sechs Paare zählen, wären dafür zwölf Kugeln nötig.",
+          "Ein Mol bedeutet eine genau festgelegte, sehr große Teilchenzahl. Unsere sechs gezeichneten Kugeln sind nur eine Verständnishilfe."
+        ]
+      },
+      "connection": "Beim Wasserkreislauf bleiben Wassermoleküle Wasser, auch wenn sich der Zustand ändert. Eine Teilchenzählung muss ihre Einheiten benennen.",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/redefining-mole",
+          "title": "NIST · Redefining the Mole",
+          "anchor": "Specified atoms/molecules; relation between amount of substance and mass",
+          "updatedOn": null,
+          "checkedOn": "2026-10-13"
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "title": "NIST · Definitions of SI Base Units",
+          "anchor": "Mole – Unit of Amount of Substance; exact Avogadro constant",
+          "updatedOn": "2025-08-13",
+          "checkedOn": "2026-10-13"
+        }
+      ],
+      "illustration": "entities",
+      "relatedWords": []
+    },
+    "Candela": {
+      "symbol": "cd",
+      "quantity": "Lichtstärke in einer Richtung",
+      "starter": "Für sichtbares Licht gibt es eine eigene Messgröße. Auch die Richtung gehört zur Beschreibung.",
+      "deeper": "Die Candela-Definition verbindet eine festgelegte Lichtfrequenz mit einer Lichtausbeute. Die Wahrnehmung des menschlichen Auges wird dabei berücksichtigt. Für den gesamten Lichtstrom wird dagegen Lumen verwendet. Keine dieser Angaben ist eine Aufforderung, direkt in eine helle Lichtquelle zu schauen.",
+      "observe": "Vergleiche drei erfundene Schilder: 2 cd, 2 K und 2 A. Die gleiche Zahl steht für verschiedene Messgrößen. Ordne sie den Erklärungen zu, ohne echte Lampen oder elektrische Geräte zu untersuchen.",
+      "benefit": "Du unterscheidest eine Lichtangabe von Temperatur und Stromstärke und beachtest die Richtung der Beschreibung.",
+      "topic": "science-photosynthesis",
+      "question": {
+        "prompt": "Welche Information gehört zu einer Lichtstärkeangabe in Candela?",
+        "answers": [
+          "Die Temperatur des Lampengehäuses",
+          "Das Gewicht einer Batterie",
+          "Sichtbares Licht in einer bestimmten Richtung"
+        ],
+        "correct": 2,
+        "hint": "Erinnere dich daran, welche Wahrnehmung und welche Richtung bei der Definition berücksichtigt werden.",
+        "why": "Candela gehört zur Lichtstärke in einer bestimmten Richtung. Temperatur und Masse sind andere Größen; die gesamte Lichtabgabe wird nicht einfach mit derselben Größe beschrieben.",
+        "wrongReasons": [
+          "Die Temperatur eines Gehäuses ist keine Lichtstärke. Dafür braucht man eine Temperatureinheit.",
+          "Die Masse einer Batterie ist keine Beschreibung sichtbaren Lichts. Sie wird zum Beispiel in Kilogramm angegeben.",
+          ""
+        ]
+      },
+      "connection": "Blätter nutzen Lichtenergie. Lichtenergie und die fürs menschliche Auge beschriebene Lichtstärke sind unterschiedliche Größen.",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/si-redefinition/candela",
+          "title": "NIST · Candela",
+          "anchor": "Photometry; direction; distinction from lumen and radiant power",
+          "updatedOn": null,
+          "checkedOn": "2026-10-13"
+        }
+      ]
+    }
+  }
+}
