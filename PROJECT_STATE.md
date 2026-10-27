@@ -19,7 +19,7 @@ Paket3.5/WK051–058 bleibt vor Paketen4–8. Einmalige Mindestverdopplung jedes
 | Aktuelle bestätigte Testbereitstellung | test-live · `fc42c67b5b5a6c6dc80fc9fc40634d862bb4f691` | Tatsächlich abgeschlossene PR67; kurze freigegebene Quittung oben. |
 | PR67 | codex/wunderkompass-modern-navigation-2026-10-26 · `83a0a9e2ba7e8b9f33c96fb0150a05fc6e5ec858` | Unveränderter geprüfter Head; regulär übernommen und tatsächlich nachgeprüft. |
 | Erhaltene Spielplatzvorbereitung | codex/wunderkompass-playground-2026-10-26 · `ce8f2ad78b68b04df4088b0f5fbd1bac97441e84` | Ursprünglicher fehlgeschlagener Nachweis erhalten. |
-| Aktuelle integrierte Fortsetzung | codex/wunderkompass-playground-labor-2026-10-27 · Basis M67 | Vorbereitung zunächst baumgleich integriert; alte vier Texterwartungen in zwei bestehenden Browsermodulen korrigiert, neue Qualifikation ausstehend. |
+| Aktuelle integrierte Fortsetzung | codex/wunderkompass-playground-2026-10-27 · Basis M67 | Vorbereitung zunächst baumgleich integriert; alte vier Texterwartungen in zwei bestehenden Browsermodulen korrigiert, neue Qualifikation ausstehend. |
 | Getrennte Übergabedokumentation | codex/wunderkompass-handoff-2026-10-26 | Baut auf ce8f auf; endgültiger Commit und private Wiederherstellungsquittung in der vollständigen Startnachricht und dem privaten Dateiindex. |
 | Alter Gesamtmaster | PR27 Draft · `d97dddab0a5cc67172693a235d5ab12fa32bbc64` | Erhalten, nicht vollständig mergen oder als aktuelle Basis verwenden. |
 | main | `537622796f7e1f9a886e7400f10b1f727d24f8dc` | Unverändert; keine Produktionsfreigabe. |

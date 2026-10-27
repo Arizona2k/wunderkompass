@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import {worldGameHint,worldGameWrongFeedback} from '../../app/world-game-support.mjs';
+import catalog from '../../app/world-catalog.json' with {type:'json'};
 const formerlyRevealed=['lion','cheetah','bengal-tiger','giraffe','blue-whale','orca','red-kangaroo','koala','jaguar','whale-shark','white-tailed-eagle','walrus','common-cuttlefish','eastern-clown-anemonefish','common-chameleon'].map(id=>'animal-'+id);
 const cohorts=[...Array.from({length:3},(_,i)=>({game:'animal-detective',ids:formerlyRevealed.slice(i*5,i*5+5)})),{game:'food',ids:['raccoon','monarch-butterfly','green-sea-turtle','eastern-clown-anemonefish','western-lowland-gorilla'].map(id=>'animal-'+id)},...['records','people','technology','then-now'].map(game=>({game,ids:[worldGameBank(game)[0].id]}))];
 export async function worldGameLearningCopy(browser,base,ready,monitor,report,shots){
@@ -24,8 +25,16 @@ export async function worldGameLearningCopy(browser,base,ready,monitor,report,sh
     }
     await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();const saved=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);assert.deepEqual(saved.notes,pass.progress.notes);assert.deepEqual(saved.favorites,pass.progress.favorites);assert.deepEqual(saved.gameSessions.memory,pass.progress.gameSessions.memory);assert(saved.games.includes('memory'));assert(saved.games.includes('world:'+game));assert.deepEqual(saved.settings,pass.progress.settings);await p.getByRole('button',{name:'Alle Spiele',exact:true}).click();
    }
+   const bee=catalog.find(t=>t.id==='animal-honey-bee'),q=bee.question,before=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);
+   assert.equal(q.answers[q.correct],'Pollen','the reported live case uses the actual canonical bee question');
+   await p.evaluate(()=>location.hash='world/topic/animal-honey-bee');const mini=p.locator('.world-mini-question');await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+   await mini.locator('.quiz-answer').filter({has:p.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();await mini.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await mini.getByText(q.why,{exact:true}).count(),0);
+   await mini.locator('.quiz-answer').filter({has:p.getByText('Pollen',{exact:true})}).click();await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();assert.equal(await mini.getByText('Gut erklärt!',{exact:true}).count(),0);await mini.getByText(q.why,{exact:true}).waitFor();
+   const after=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);for(const key of['notes','favorites','settings','games'])assert.deepEqual(after[key],before[key]);for(const[id,value]of Object.entries(before.gameSessions))assert.deepEqual(after.gameSessions[id],value,'unrelated saved round '+id);
+   await mini.scrollIntoViewIfNeeded();await p.screenshot({path:shots+'/bee-selected-feedback-'+width+'.png',animations:'disabled'});report.miniSelectionFeedback??=[];report.miniSelectionFeedback.push({width,large:width===320,topic:bee.id,actualWrongThenCorrectPollen:true,observedSelectionClaim:true,explanationRetained:true,unrelatedSavedStatesPreserved:true});
   }catch(error){await p.screenshot({path:shots+'/world-copy-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}finally{await context.close();}
  }
  assert.equal(report.worldGameLearningCopy.length,48);
+ assert.equal(report.miniSelectionFeedback.length,2);report.checks.push('Actual bee Pollen selection at320large/1440: wrong answer before correct choice, observable selection feedback with explanation retained, no claim of an unobserved explanation and all unrelated saved rounds/notes/favorites retained');
  report.checks.push('World-round learning copy at320large/1440: all12 former full-name leaks plus3 alias/body comparisons,5 diet cases and4 other families; voluntary hints, separate wrong/final feedback and exact selected-voice/rate text handoff; no audible claim');
 }
