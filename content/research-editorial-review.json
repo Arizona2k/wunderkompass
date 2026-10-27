@@ -970,6 +970,24 @@
           "anchor": "Selected scientific lines273–405, eight planets, sizes and orbital distinction. No source image or numerical inventory added.",
           "checkedOn": "2026-10-14",
           "updatedOn": null
+        },
+        {
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+          "anchor": "Distance from Sun row, in millionkm, eight planets only; table footer18March2025. Approximate semimajor-axis teaching inputs.",
+          "checkedOn": "2026-10-27",
+          "updatedOn": "2025-03-18"
+        },
+        {
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html",
+          "anchor": "Semimajor axis is the approximate mean center-to-center distance. Exact numerical AU is consistent with JPL; the page's inconsistent JD/calendar-date pairing is not used as a verified epoch.",
+          "checkedOn": "2026-10-27",
+          "updatedOn": null
+        },
+        {
+          "url": "https://ssd.jpl.nasa.gov/astro_par.html",
+          "anchor": "Astronomical unit149597870700m, exact. The page's resolution identifier is not copied.",
+          "checkedOn": "2026-10-27",
+          "updatedOn": null
         }
       ],
       "mediaDecision": "Existing own labelled models retained; new feedback uses readable HTML. No source photo, diagram, logo or original text copied.",
@@ -1002,7 +1020,42 @@
         "fullResearchGroupReportSHA256": "4645d9c1bf293f31f11dfc35576c3e444e2f3fafc069b9670a282a0ff0599461"
       },
       "historicalUIBeforeTransfer20261021": "All66 wrong choices checked at320/1440; actual geometry after each choice, all11 seven-width models/keyboard/touch/reload/reset/axe passed in partial local research run295.41s. Personally viewed all11 hard wrong-state element captures at320. Full newhead CI still required.",
-      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history."
+      "targeted44BeforeFullResearchGroup20261021": "Targeted Chromium154 at320large/1440: all11 old-wrong and all11 old-correct tasks,44cases total, old canonical indices/prior texts, no stamp on load, current wrong/right feedback, real reload/two pass downloads and other pass fields retained. Complete current existing66-choice research regression and final cross-engine/offline/CI/delivery still pending. Older UI claim preserved as history.",
+      "distanceSourcePreparation20261027": {
+        "status": "implemented; visual/interaction/retained-save acceptance pending",
+        "definition": "Approximate semimajor axes from the same NASA metric table, not current distances or mean elements from a different epoch.",
+        "source": "app/planet-distance-source.json",
+        "unit": "One astronomical unit is exactly149597870.7km; rounded million-km source values remain approximate. Both existing models derive their linear scale maximum from the same values.",
+        "preserved": "All eight IDs/order, existing approximate periods, facts/types/colors, diameter ratios and saved field names remain. No existing task or correct-answer position changed.",
+        "preview": "The Solar preview must be actually recaptured against this modified model source before acceptance. No stale-image hash rebinding."
+      },
+      "distanceConsistencyPreparation20261027": {
+        "reviewedBy": "AI primary-source and actual-model consistency review; no independent human acceptance",
+        "checkedOn": "2026-10-27",
+        "definition": "Approximate large semimajor axes from the NASA metric fact-sheet table updated18March2025; a rounded orbital-distance convention, not current Sun/planet separation or ephemerides.",
+        "sourceMillionKm": [
+          57.9,
+          108.2,
+          149.6,
+          228,
+          778.5,
+          1432,
+          2867,
+          4515
+        ],
+        "exactAstronomicalUnitKm": 149597870.7,
+        "conversion": "Rounded metric input divided by the exact AU; labels show up to three decimal places and both distance scales derive from the same maximum. Original size ratios remain separate.",
+        "sources": [
+          "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+          "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html",
+          "https://iau-a3.gitlab.io/NSFA/NSFA_fixed.html",
+          "https://ssd.jpl.nasa.gov/astro_par.html"
+        ],
+        "sourceLimits": "Table-update date is not an observation epoch. Different NASA/JPL orbital-element epochs and teaching approximations explain different Neptune values; neither30.05nor30.18is declared a generic typo. Contradictory calendar/Julian-date and unit-resolution labels are not copied.",
+        "preserved": "Planet IDs/order, original orbital-day approximations/diameters, saved selection/time/comparison/prediction/journal and every existing learning-task field. Source notes are explicit and responsive.",
+        "actualTargetedScope": "Both article scales and all planets, normal/large mobile/desktop, real native200 large-text source notes and an existing-key synthetic Saturn model state; actual default Solar capture remains byte-identical. No product preview replaced.",
+        "remaining": "Full current local/native/search/offline qualification and actual new Solar delivery remain required."
+      }
     }
   ],
   "rightsBasis": "Own German factual explanations and fictitious model comparisons with named sources. USGS/NOAA/NASA government information exceptions, third-party assets, marks and endorsement excluded. PTB is not assumed public domain; only own factual explanations/citation, no copied source prose/media. No News-feed rights inferred.",
@@ -1092,5 +1145,10 @@
     },
     "retainedScope": "All11 pre-existing primary relations and33 lab questions/answers/hints/feedback, model domains and stable IDs unchanged. Existing96 UI proofs deliberately not rebound before a new actual full acceptance.",
     "status": "Prepared and targeted early checked only; dependent final integration/full/nativeCI/delivery pending confirmed maintenance release."
+  },
+  "solarDistanceCurrentLocalProof20261027": {
+    "sourceRevision": "6a8b0a83f5d64257fcb41849532bedb6b5af74ee",
+    "productFingerprint": "1da0ac53c22424ec",
+    "scope": "Complete current local browser regression follows actual shared-source/unit/scale/model checks and synthetic saved-state/real200% probes. Earlier Solar source limits, task fields, previews and review histories remain original; nativeCI and actual new delivery remain required."
   }
 }

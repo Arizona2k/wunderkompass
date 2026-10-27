@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T05:33:59.804Z",
+  "generatedAt": "2026-10-27T11:42:29.775Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -248,11 +248,13 @@
     {
       "file": "planets.json",
       "sources": [
-        "app/solar-lab.tsx"
+        "app/solar-system-data.ts",
+        "app/planet-distances.ts",
+        "app/planet-distance-source.json"
       ],
       "entries": 8,
-      "bytes": 1801,
-      "sha256": "b1445a3e3d48ecc73fa488db69db3d8025e55744625873382dff4288695dcc37"
+      "bytes": 1912,
+      "sha256": "91b62f86b84ad81139e657426607e4f67b20d70ab5360a8045ff338e4f2ca771"
     },
     {
       "file": "research-feedback.json",
