@@ -1,5 +1,5 @@
 {
-  "meaning": "Derived static previews of actual existing M68 model surfaces. Refresh the affected preview if its rendering source changes. These are no independent scientific or human acceptance.",
+  "meaning": "The unchanged baseline model previews come from actual M68 surfaces. Per-image capture records identify later actual local preparation captures; these do not claim native CI or deployment. Refresh affected previews when their checked rendering sources change. No independent scientific or human acceptance.",
   "sourceCommit": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
   "actualMerge": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
   "renderingSources": {
@@ -13,7 +13,7 @@
     },
     "solar-lab.tsx": {
       "scope": "whole",
-      "sha256": "4d988c7fe8b93cef801c6fe5fb501341d6ee45c655b855341bf225113fb0c916"
+      "sha256": "4d63f7b7a7d82dcd3891cba92e0f120f67fd763ad9285cc0487675ba6a60899c"
     },
     "research-math.ts": {
       "scope": "whole",
@@ -26,6 +26,26 @@
     "research-catalog.ts": {
       "scope": "whole",
       "sha256": "e78bcf1f41aaba5569c62b2f76e62fccb4e29d2b7a8a2cb9803343dc45c6a0ae"
+    },
+    "solar-system-data.ts": {
+      "scope": "whole",
+      "sha256": "fa13ee30d24de3b7cd54ee9cbd9c0cddfd93746af37e116c1d419001a44d7dfa"
+    },
+    "planet-distances.ts": {
+      "scope": "whole",
+      "sha256": "8b281c5c695de615fa772b674de62e71d95f99c3a314a4fb002a99b1c28dedf4"
+    },
+    "planet-distance-source.json": {
+      "scope": "whole",
+      "sha256": "df23ea9a877524ab0f4beb4ae4eeeb7ad692b7a236bdabc7ade58263701f5dc0"
+    },
+    "planet-distance-notes.tsx": {
+      "scope": "whole",
+      "sha256": "ebae522c0bcb1a1df99256457448ab1a4ce104122d773b48cb4a0b755a529625"
+    },
+    "planet-distance-notes.css": {
+      "scope": "whole",
+      "sha256": "9939c756899556cec33aa2fa845a67f49119fbb88dec783a01fdae666c12fb70"
     }
   },
   "images": {
@@ -71,7 +91,22 @@
     },
     "solar": {
       "bytes": 45281,
-      "sha256": "61d8116a42dd0d8df858be15e1012073ff5755f82e36290b45db4165dd50ca17"
+      "sha256": "61d8116a42dd0d8df858be15e1012073ff5755f82e36290b45db4165dd50ca17",
+      "capture": {
+        "kind": "Actual local preparation model surface, not native CI or deployed evidence",
+        "sourceCommit": "2cbe43c57155db4c693aad7574479fb39a21a730",
+        "sourceDigest": "706d5123a6f97bf921c926e9a6407b2700898999853dee1a8135790bb559fed3",
+        "build": "f64b4aeb6c9c4285",
+        "viewportCSS": {
+          "width": 640,
+          "height": 1000
+        },
+        "surface": "svg.science-figure.solar-orbits, viewBox0 0 620 580",
+        "actualDOMLabel": "Vereinfachte Umlaufbahnen. 0 Erdtage nach dem Modellstart. Ausgewählt: Erde.",
+        "bytes": 45281,
+        "sha256": "61d8116a42dd0d8df858be15e1012073ff5755f82e36290b45db4165dd50ca17",
+        "retainedPreviewByteIdentical": true
+      }
     }
   }
 }
