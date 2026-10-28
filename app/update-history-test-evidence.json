@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "651ae08f4c7c857543e71475111c3ef1849a628d",
+    "commit": "e4424373a4ee6aeda5273a245756d3b0e91e590f",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -66,7 +66,8 @@
       "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
       "cc885f0c884d5a1ca958ddc6b5d7f76e968834c8",
       "965ea4397860c3d922e0e228d20dd7521b9445c7",
-      "651ae08f4c7c857543e71475111c3ef1849a628d"
+      "651ae08f4c7c857543e71475111c3ef1849a628d",
+      "e4424373a4ee6aeda5273a245756d3b0e91e590f"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1740,6 +1741,38 @@
         }
       ],
       "checkedOn": "2026-10-27"
+    },
+    {
+      "number": 72,
+      "title": "SI-Begriffe mit Quellen und Modellen ins Wissensbuch integrieren",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/72",
+      "base": "test-live",
+      "mergedAt": "2026-10-27T23:25:20Z",
+      "mergeCommit": "e4424373a4ee6aeda5273a245756d3b0e91e590f",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/e4424373a4ee6aeda5273a245756d3b0e91e590f/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57422978890,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-27T23:25:34Z",
+          "updatedAt": "2026-10-27T23:25:34Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/CUzSG6qZLM57HabNS6B43hcv9rqa"
+        },
+        {
+          "id": 57422967345,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-27T23:25:24Z",
+          "updatedAt": "2026-10-27T23:25:24Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/CUzSG6qZLM57HabNS6B43hcv9rqa"
+        }
+      ],
+      "checkedOn": "2026-10-28"
     }
   ]
 }

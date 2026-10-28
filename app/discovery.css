@@ -288,3 +288,62 @@
 @media(max-width:900px) and (min-width:561px){.world-choices.gateway-compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.discovery-hero-art>.world-photo img{height:230px}.discovery-feature>a{font-size:25px}.large-reading .discovery-feature>a{font-size:30px}}
 .discovery-context-photo,.discovery-concept{margin:0 0 8px;min-width:0}.discovery-context-photo img,.discovery-concept>svg{display:block;width:100%;height:200px;object-fit:contain;background:#f1f3ef;border-radius:8px}.discovery-context-photo figcaption,.discovery-concept figcaption{font-size:14px;line-height:1.6;color:var(--wk-muted)}.discovery-context-photo summary,.discovery-concept summary{min-height:44px;align-content:center;cursor:pointer}.discovery-concept ul{padding-left:20px;font-size:14px;line-height:1.6}.discovery-concept ol{list-style:none;padding:0;margin:0;display:grid;min-height:200px}.discovery-concept li{font-size:16px;line-height:1.5;color:var(--wk-ink)}.discovery-concept-air li{padding:7px 12px}.discovery-concept-food li{display:grid;justify-items:center;align-content:center;background:#f1f3ef}.discovery-concept-food li:first-child{border-radius:8px 8px 0 0}.large-reading .discovery-concept :is(li,figcaption),.large-reading .discovery-context-photo figcaption{font-size:18px}
+
+/* The composed entry keeps DOM and visual order aligned on small screens. */
+.discovery-hero.discovery-composed{grid-template-areas:"copy art" "search art" "actions art";grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:18px 56px;align-items:center;margin:12px 0 52px}
+.discovery-composed .discovery-hero-copy{grid-area:copy;align-self:end;padding:0}
+.discovery-composed .discovery-hero-search{grid-area:search;min-width:0}
+.discovery-composed .discovery-hero-actions{grid-area:actions;align-self:start;min-width:0}
+.discovery-composed .discovery-hero-art{grid-area:art}
+.discovery-composed h1{font-size:clamp(18px,1.7vw,23px);line-height:1.4;letter-spacing:-.02em;font-weight:500;margin:0 0 18px;max-width:30ch}
+.discovery-composed h1 span{color:inherit}
+.discovery-composed .discovery-feature{margin:0}
+.discovery-composed .discovery-feature>a{font-size:clamp(32px,3.7vw,51px);line-height:1.12;letter-spacing:-.045em;padding:0;align-items:center;text-wrap:balance}
+.discovery-composed .discovery-feature>a>svg{margin:0;width:24px;height:24px}
+.discovery-composed .discovery-search{background:#fff;border-color:var(--wk-line);border-radius:14px;box-shadow:0 4px 18px #19374306}
+.discovery-composed .discovery-change{min-height:44px;margin-top:6px}
+.discovery-composed .discovery-hero-art>.world-photo{max-width:100%;border-radius:14px}
+.discovery-composed .discovery-hero-art>.world-photo img{max-height:430px}
+.large-reading .discovery-composed h1{font-size:28px}.large-reading .discovery-composed .discovery-feature>a{font-size:clamp(34px,4vw,55px)}
+@media(max-width:800px){.discovery-hero.discovery-composed{grid-template-areas:"copy" "search" "art" "actions";grid-template-columns:minmax(0,1fr);gap:16px;margin:4px 0 34px}.discovery-composed h1{font-size:19px;margin-bottom:10px;max-width:none}.discovery-composed .discovery-feature>a{font-size:clamp(28px,5vw,38px);line-height:1.2}.discovery-composed .discovery-hero-art>.world-photo img{height:250px;max-height:300px;width:auto;max-width:100%}.discovery-composed .discovery-hero-art>.world-photo{margin-inline:auto}.discovery-composed .discovery-hero-actions{width:100%}.large-reading .discovery-composed h1{font-size:25px}.large-reading .discovery-composed .discovery-feature>a{font-size:34px}}
+@media(max-width:360px){.discovery-composed .discovery-hero-art>.world-photo img{height:210px}.discovery-composed .discovery-feature>a{font-size:27px}}
+
+.earth-app:is([data-mode=globe],[data-mode=layers],[data-mode=day]) .visual-heading{padding:18px 20px 12px}
+.visual-heading h1{font-size:clamp(26px,2.7vw,36px);line-height:1.2;letter-spacing:-.03em;color:var(--wk-ink);margin:0 0 12px}
+.large-reading .visual-heading h1{font-size:clamp(30px,3vw,42px)}
+
+/* Category collections stay available before the optional chronological path. */
+.world-view :is(.world-timeline,.invention-timeline){padding:0;border:0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent;margin:24px 0}
+.world-view :is(.world-timeline,.invention-timeline)>summary{min-height:56px;padding:14px 0;font-size:17px;line-height:1.6;font-weight:600;color:var(--wk-ink);cursor:pointer}
+.world-timeline>summary>svg{display:inline;vertical-align:middle;margin-inline:8px;color:var(--wk-teal)}
+.world-view :is(.world-timeline,.invention-timeline)>p{margin:12px 0 20px;line-height:1.7}
+.world-view :is(.world-timeline,.invention-timeline)[open]{padding-bottom:24px}
+.world-view .timeline-station :is(strong,small){font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+.large-reading .world-view :is(.world-timeline,.invention-timeline)>summary,.large-reading .world-view .timeline-station :is(strong,small){font-size:20px}
+
+.search-dialog.large-reading :is(input,strong,span,p,button,[cmdk-group-heading]){font-size:20px!important;line-height:1.6}.search-dialog.large-reading .search-category{font-size:18px}
+.search-dialog [data-slot=dialog-title]{font-size:clamp(24px,2.5vw,30px);font-weight:600;line-height:1.25;margin-bottom:12px}.search-dialog.large-reading [data-slot=dialog-title]{font-size:32px}
+body:has(.earth-app[data-reduced-motion]) :is([data-slot=dialog-overlay],[data-slot=dialog-content],[data-slot=alert-dialog-overlay],[data-slot=alert-dialog-content]){animation:none!important;transition:none!important}
+.search-dialog .search-header [data-slot=dialog-description]{font-size:16px;line-height:1.6;color:var(--wk-muted)}
+.search-empty-state{padding:20px 0 4px;text-align:left;color:var(--wk-ink)}
+.search-empty-state p{font-size:16px;line-height:1.65;margin:0 0 16px}
+.search-empty-state button{font-size:16px;line-height:1.5;min-height:48px;text-align:left}
+.search-dialog [data-slot=command-input-wrapper]{min-height:52px;height:auto}
+.search-dialog[data-slot=dialog-content]{display:flex;flex-direction:column;padding:0!important;gap:0;overflow:hidden}
+.search-header{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:12px;align-items:start;padding:20px;flex-shrink:0}
+.search-header [data-slot=dialog-title]{margin:0}
+.search-header [data-slot=dialog-description]{grid-column:1/-1;margin:0}
+.search-body{padding:0 20px 20px;min-height:0;overflow:auto;overscroll-behavior:contain}
+.search-body [data-slot=command]{height:auto;overflow:visible}
+.search-body [cmdk-list]{max-height:none;overflow:visible}
+
+.visual-panel>.mission-card{padding:clamp(16px,3vw,28px);background:#faf4e9;border-color:#e4d6bf;border-radius:16px;color:var(--wk-ink)}
+.mission-card #mission-heading{font-size:clamp(22px,2.5vw,30px);line-height:1.3;letter-spacing:-.025em;margin:0 0 12px;color:var(--wk-ink)}
+.mission-card .eyebrow{font-size:13px;letter-spacing:.08em;line-height:1.5}
+.mission-card :is(.mission-hint,.mission-button){font-size:16px;min-height:48px;line-height:1.5}
+.mission-card .mission-button{padding:11px 16px;max-width:100%;white-space:normal;text-align:left;color:var(--wk-ink);border-color:#c9b89e}
+.mission-card .mission-hint{color:#69491d}
+.mission-card .mission-tip p,.mission-card .mission-research p{line-height:1.65}
+.mission-card .mission-research a{display:flex;width:fit-content;gap:10px;align-items:center;min-height:48px;line-height:1.5}
+.visual-panel>.mission-complete{background:#edf6f1;border-color:#c2d9cd}
+.large-reading .mission-card :is(p,a,button){font-size:20px!important;line-height:1.7}

@@ -1,4 +1,5 @@
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
+import {bookTabNavigation} from './book-navigation.mjs';
 import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {journeyContentFlow} from './journey-content.mjs';
 import {journeyReadingFlow} from './journey-reading.mjs';
@@ -18,7 +19,7 @@ async function open(p,id,index){await p.evaluate(route=>location.hash=route,'jou
 async function reveal(p,text){const summary=p.locator('summary').filter({hasText:text});if(!await summary.evaluate(el=>el.parentElement.open))await summary.click();}
 async function geometry(p,label){
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,label+' horizontal overflow');
- const escaped=await p.locator('.journey-reader h2,.journey-reader h3,.journey-reader h4,.journey-reader p,.journey-reader button,.journey-reader summary,.journey-reader textarea,.journey-reader a').evaluateAll(elements=>elements.flatMap(el=>{
+ const escaped=await p.locator('.journey-reader h1,.journey-reader h2,.journey-reader h3,.journey-reader h4,.journey-reader p,.journey-reader button,.journey-reader summary,.journey-reader textarea,.journey-reader a').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))return [];
   const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
@@ -124,10 +125,17 @@ export async function assertMoonNavigationDiagram(visual,id){
  if(id==='navigation:4'){const hands=await visual.locator('[data-navigation-clock]').evaluateAll(es=>es.map(e=>e.querySelectorAll('path')[1].getAttribute('d')));assert.equal(hands.length,2);assert.notEqual(hands[0],hands[1]);await visual.getByText(/Zwei erfundene Orte/).waitFor();}
 }
 async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
+export async function journeyHubNavigation(p,width){
+ const previous=p.viewportSize();await p.setViewportSize({width,height:900});await p.evaluate(()=>location.hash='journeys');await p.locator('.journey-grid').waitFor();
+ const path=p.locator('.guided-path'),summary=path.locator('summary');if(await path.evaluate(el=>el.open))await summary.click();await summary.focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('.guided-path').open);assert.equal(await path.locator('ol button').count(),16);
+ const opener=path.locator('[data-route-focus="journey-path-planet"]');await opener.focus();await p.keyboard.press('Enter');await p.waitForURL('**/#journeys/planet/*');await p.locator('#journey-title').waitFor();await p.goBack();await p.locator('.journey-grid').waitFor();await p.waitForFunction(()=>document.querySelector('.guided-path')?.open&&document.activeElement?.dataset.routeFocus==='journey-path-planet');assert(await opener.evaluate(el=>el.matches(':focus-visible')),'path return keeps real keyboard focus');await summary.click();
+ const filter=p.locator('.journey-theme-filter');await filter.locator('summary').click();await filter.getByRole('button',{name:'Leben & Verantwortung',exact:true}).click();assert.equal(await p.locator('.journey-tile').count(),4);const tile=p.locator('.journey-tile').first(),key=await tile.getAttribute('data-route-focus');await tile.focus();await p.keyboard.press('Enter');await p.locator('#journey-title').waitFor();await p.goBack();await p.locator('.journey-grid').waitFor();await p.waitForFunction(key=>document.querySelector('.journey-theme-filter')?.open&&document.activeElement?.dataset.routeFocus===key,key);assert.equal(await p.locator('.journey-tile').count(),4);await filter.getByRole('button',{name:'Alle',exact:true}).click();await filter.locator('summary').click();await p.setViewportSize(previous);
+}
 export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
  await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
  report.journeySupport=await journeySupportView(p,{widths:[320,360,390,768,1024,1440,1920],shots,engine:'chromium'});
+ report.bookTabNavigation=[];for(const width of [320,1440]){report.bookTabNavigation.push(await bookTabNavigation(p,width));await journeyHubNavigation(p,width);}
  await p.locator('.journey-filters input').fill('Wolken');assert.ok(await p.locator('.journey-tile').count()<16);await p.locator('.journey-filters input').fill('');
  for(const c of data.chapters){
   await open(p,c.journeyId,c.index);await geometry(p,c.id);const inquiry=p.locator('[data-chapter-inquiry="'+c.id+'"]');

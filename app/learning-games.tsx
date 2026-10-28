@@ -1,8 +1,9 @@
 "use client";
+import GameShell from "./game-shell";
 
 import {SavedGame,useSavedGame,useGameSnapshot} from "./saved-games";
 import { memo, useEffect, useState } from "react";
-import { Check, Compass, Gamepad2, Globe2, Layers3, Leaf, Lightbulb, RotateCcw, Sparkles, Trophy, Volume2 } from "lucide-react";
+import { Check, Compass, Globe2, Layers3, Leaf, Lightbulb, Sparkles, Trophy, Volume2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { LAYERS, shuffle } from "./earth-data";
 import {MEMORY_PAIRS} from './memory-pairs';
@@ -25,7 +26,7 @@ function LearningGames({sessions,onSave,onNew,resume,onActive,onWin,onRead,onTop
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
  useEffect(()=>{if(resume&&["memory","order","habitats","detective"].includes(resume.id)){setGame(resume.id as GameId);onActive(true);}},[resume,onActive]);
  if(!game)return null;
- return <section className="game-room"><div className="reader-toolbar"><button className="secondary-button" onClick={()=>{onRead("");setGame(null);onActive(false);}}><Gamepad2 size={18}/> Alle Spiele</button><span>{GAMES.find(g=>g.id===game)?.name}</span><button className="secondary-button" onClick={()=>{onRead("");if(game)onNew(game);setRound(n=>n+1);}}><RotateCcw size={16}/> Neu mischen</button></div><div key={`${game}-${round}`} className="game-board"><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></div></section>;
+ return <GameShell title={GAMES.find(g=>g.id===game)!.name} boardKey={`${game}-${round}`} newRoundLabel="Neu mischen" onExit={()=>{onRead("");setGame(null);onActive(false);}} onNewRound={()=>{onRead("");if(game)onNew(game);setRound(n=>n+1);}}><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></GameShell>;
 }
 
 function ReasonGame(props:{game:'habitats'|'detective';onWin:()=>void;onRead:(s:string)=>void;onTopic:(id:string)=>void}){

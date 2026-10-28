@@ -1,3 +1,4 @@
+import {assertPracticalGuide} from './practical-guides.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
 import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
@@ -48,7 +49,7 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
      await p.locator('.research-levels button').nth(['easy','medium','hard'].indexOf(level)).click();const q=level==='easy'?{prompt:lab.q,...lab}:RESEARCH_QUESTIONS[lab.id][level],question=p.locator('.research-question');
      await question.locator('summary').click();assert.ok((await question.innerText()).includes(level==='easy'?'Ein Denkhinweis':q.hint));
      const answers=question.locator('.quiz-answer');assert.equal(await answers.count(),q.answers.length);for(let wrong=0;wrong<q.answers.length;wrong++)if(wrong!==q.correct){await question.getByRole('button',{name:q.answers[wrong],exact:true}).click();await question.getByText('Schau noch einmal genau hin',{exact:true}).waitFor();await question.getByText(FEEDBACK[lab.id][level][wrong],{exact:true}).waitFor();assert.equal(await question.getByText(q.why,{exact:true}).count(),0,'wrong answer does not reveal full explanation');await geometry(p,lab.id+' '+level+' wrong '+wrong+' '+width);if(level==='hard'&&wrong===q.answers.findIndex((_answer,index)=>index!==q.correct)&&width===320)await question.screenshot({path:path.join(shots,'research-'+lab.id+'-wrong-320.png'),animations:'disabled'});}
-     await question.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await question.getByText('Gut erklärt · Forscherstempel verdient',{exact:true}).waitFor();await question.getByText(q.why,{exact:true}).waitFor();
+     await question.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await question.getByText('Passende Antwort gewählt · Forscherstempel verdient',{exact:true}).waitFor();await question.getByText(q.why,{exact:true}).waitFor();
     }
     await p.locator('.research-next details').first().locator('summary').click();await p.locator('.research-mission-checks input').first().check();await p.locator('.research-next details').nth(1).locator('summary').click();await p.locator('.research-next textarea').fill('Synthetische Erklärung für die Prüfung.');
     await p.waitForFunction(([key,id])=>JSON.parse(localStorage.getItem(key))?.progress.gameSessions['lab:'+id]?.researchJournal==='Synthetische Erklärung für die Prüfung.',[saveKey,lab.id]);
@@ -66,7 +67,7 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
    await p.getByRole('button',{name:'Alle Experimente',exact:true}).click();await p.locator('.research-tile').first().waitFor();
   }
   for(let i=0;i<experiments.length;i++){
-   const item=p.locator('.experiment-card').nth(i);await item.locator('summary').click();await item.getByText('Gemeinsam und sicher:',{exact:true}).waitFor();assert.ok((await item.innerText()).includes('Vermuten:')&&(await item.innerText()).includes('Modellgrenze:'));
+   const item=p.locator('.experiment-card').nth(i);await item.locator('summary').click();await item.getByText('Gemeinsam und sicher:',{exact:true}).waitFor();await assertPracticalGuide(item);assert.ok((await item.innerText()).includes('Vermuten:')&&(await item.innerText()).includes('Modellgrenze:'));
    await item.getByRole('button',{name:'Als gemeinsam gemacht markieren',exact:true}).click();await item.getByRole('button',{name:'Markierung entfernen',exact:true}).waitFor();
    if(width===320||width===1440)await item.screenshot({path:path.join(shots,'research-experiment-'+i+'-'+width+'.png'),animations:'disabled'});
   }

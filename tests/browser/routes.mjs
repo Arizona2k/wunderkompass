@@ -19,7 +19,7 @@ await runBrowser(async browser=>{
    if(!(await p.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id))){await p.locator('.world-mini-question .quiz-answer').filter({has:p.getByText(topic.question.answers[topic.question.correct],{exact:true})}).click();await p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id);}
    await p.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
   }
-  await p.getByRole('heading',{name:'Deine Reise ist erklärt!',exact:true}).waitFor();await p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('route:'+id),route.id);report.routes.push(route.id);
+  await p.getByRole('heading',{name:'Deine Wissensroute ist geschafft!',exact:true}).waitFor();await p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('route:'+id),route.id);report.routes.push(route.id);
   await p.getByRole('button',{name:'Eine neue Welt entdecken',exact:true}).click();await p.locator('.world-choices').waitFor();console.log('ROUTE COMPLETE',route.id);
  }
  assert.equal(report.routes.length,6);assert.deepEqual(report.errors,[]);report.checks.push('All six routes completed through actual questions; every route resumes its exact third station after reload.');await fs.writeFile(shots+'/routes-report.json',JSON.stringify(report,null,2));console.log('ALL ROUTES OK');await c.close();

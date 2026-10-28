@@ -1,0 +1,21 @@
+/* Optional help keeps a short start, with voluntary detail in native disclosures. */
+.guide-dialog{display:block;width:min(740px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow-y:auto;padding:clamp(20px,3vw,32px);background:var(--wk-paper);color:var(--wk-ink);border:1px solid var(--wk-line);border-radius:20px}
+.guide-dialog .dialog-top{position:sticky;top:-1px;z-index:2;background:var(--wk-paper);display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;padding:8px 0}
+.guide-dialog .dialog-top .icon-button{flex:none;min-width:44px;min-height:44px}
+.guide-dialog :is(.help-title,[data-slot=dialog-title]){font-size:clamp(25px,3vw,32px)!important;font-weight:600;line-height:1.25;letter-spacing:-.025em;margin:0 0 16px;padding:0;color:var(--wk-ink)}
+.guide-dialog :is(p,li){font-size:16px;line-height:1.75;color:var(--wk-ink)}
+.guide-dialog [data-slot=dialog-description]{font-size:16px;line-height:1.7;color:var(--wk-muted);margin-bottom:24px}
+.guide-dialog h3{font-size:22px;line-height:1.35;margin:26px 0 14px;color:var(--wk-ink)}
+.guide-dialog>p{margin:16px 0}.guide-dialog>ol{padding-inline-start:24px;margin:16px 0}
+.help-start{list-style:decimal;padding:0 0 0 26px;margin:24px 0 32px;display:grid;gap:18px}.help-start li{padding-inline-start:6px}.help-start li::marker{font-weight:700;color:var(--wk-teal)}.help-start p{margin:4px 0}
+.guide-dialog :is(.guide-topic,.source-details){border:0;border-bottom:1px solid var(--wk-line);border-radius:0;background:transparent;padding:0;margin:0}
+.guide-dialog :is(.guide-topic,.source-details)>summary{min-height:56px;padding:16px 0;cursor:pointer;font-size:17px;font-weight:600;line-height:1.6;color:var(--wk-ink)}
+.guide-dialog summary>svg{display:inline;vertical-align:middle;margin-inline:6px;color:var(--wk-teal)}
+.guide-dialog :is(.guide-topic,.source-details)>:not(summary){margin:4px 0 20px}.guide-dialog .guide-topic>p{max-width:65ch}
+.guide-dialog .source-details ul{padding-inline-start:24px}.guide-dialog .source-details li{margin-bottom:12px;overflow-wrap:anywhere}
+.guide-dialog>.secondary-button,.guide-dialog>.primary-button{margin:20px 12px 0 0;min-height:48px;white-space:normal}
+.guide-dialog .result-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.guide-dialog .result-actions button{min-height:48px;white-space:normal}
+.guide-dialog.large-reading :is(p,li,summary,button){font-size:20px!important}.guide-dialog.large-reading :is(.help-title,[data-slot=dialog-title]){font-size:34px!important}.guide-dialog.large-reading h3{font-size:27px}
+@media(max-width:560px){.guide-dialog{padding:20px}.guide-dialog .result-actions{flex-direction:column}.guide-dialog .result-actions button{width:100%}}
+
+.guide-dialog :is(button,a){font-size:16px!important}

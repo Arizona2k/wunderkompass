@@ -1,3 +1,6 @@
+import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
+import {worldEntryNavigation} from './world-entry.mjs';
+import {assertModelLabels,worldModelTypographyView} from './model-labels.mjs';
 import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
@@ -83,11 +86,14 @@ export async function articleAtlas(page,ready,report,width,shots){
  await page.locator('.topic-illustration').screenshot({path:shots+'/moon-diagram-'+width+'.png'});
  await page.locator('.knowledge-network').filter({has:page.getByRole('heading',{name:'Warum hängt das zusammen?',exact:true})}).screenshot({path:shots+'/knowledge-network-'+width+'.png'});
  if(width===1440){
-  for(const t of topics){await page.evaluate(id=>location.hash='world/topic/'+id,t.id);await page.getByRole('heading',{name:t.title,exact:true}).waitFor();if(t.history?.sensitive)await page.getByRole('button',{name:'Die Erklärung anschauen',exact:true}).click();await page.locator('.article-atlas').waitFor();await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'catalog overflow '+t.id)}
+  for(const t of topics){await page.evaluate(id=>location.hash='world/topic/'+id,t.id);await page.getByRole('heading',{name:t.title,exact:true}).waitFor();if(t.history?.sensitive)await page.getByRole('button',{name:'Die Erklärung anschauen',exact:true}).click();await page.locator('.article-atlas').waitFor();await decode();await assertWorkshopTypography(page.locator('.article-atlas'));if(t.model)await assertModelLabels(page.locator('.world-model'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'catalog overflow '+t.id)}
   report.checks.push('All '+topics.length+' article shells opened at 1440px including voluntary sensitive entry; images decoded and no horizontal overflow');
  }
  if(width===320){
   await open('science-moon-phases');await page.locator('.earth-app').evaluate(el=>el.classList.add('large-reading'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'large reading 320');await page.locator('.article-wayfinder').getByRole('button',{name:/Mini-Frage$/}).click();await page.screenshot({path:shots+'/article-large-reading-320.png'});await page.locator('.earth-app').evaluate(el=>el.classList.remove('large-reading'));
+  report.worldModelTypography=await worldModelTypographyView(page);
+  report.blueprintTypography=await blueprintTypographyView(page);
+  report.worldEntryNavigation=await worldEntryNavigation(page);
  }
  report.peopleViews??=[];report.peopleViews.push(...await peopleSourceView(page,{width,shots,questions:true}));
  if(width===390)await peopleLegacyRound(page.context().browser(),new URL(page.url()).origin,ready,report,shots);

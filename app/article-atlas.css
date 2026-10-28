@@ -1,9 +1,9 @@
 /* Shared article system: mobile first; category accents inherit the world. */
 .article-atlas {color:var(--wk-ink);overflow-wrap:break-word;--article-space:clamp(20px,3vw,36px)}
-.article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:var(--wk-radius);overflow:hidden;margin-bottom:18px}
+.article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:transparent;border:0;border-radius:16px;overflow:hidden;margin-bottom:24px}
 .article-atlas .article-hero-copy {padding:var(--article-space);min-width:0}
 .article-atlas .world-article-heading {margin:0}
-.article-atlas .world-article-heading h2 {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
+.article-atlas .world-article-heading :is(h1,h2) {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
 .article-atlas .world-article-heading .eyebrow {color:var(--world-accent,var(--wk-teal));font-size:11px;line-height:1.7;letter-spacing:.09em}
 .article-atlas .article-context {font-size:14px;margin-top:8px}
 .article-atlas .world-intro {font-size:17px!important;line-height:1.65;max-width:52ch;color:var(--wk-muted)!important}
@@ -28,22 +28,18 @@
 .tide-comparison .tide-diagram-label {font-size:16px;line-height:1.5;text-align:center;color:#203d4c;margin:20px 0 0}
 @container(min-width:520px) { .moon-diagram {grid-template-columns:repeat(4,minmax(0,1fr))} }
 .topic-illustration.compact figcaption {font-size:11px;min-height:56px}
-.article-field-note {background:var(--world-tint,#e7f2ed);padding:var(--article-space);display:flex;flex-direction:column;justify-content:center;gap:18px}
-.article-field-note>svg {color:var(--world-accent,var(--wk-teal))}
-.article-field-note>span {font-size:25px;line-height:1.25;font-weight:700;max-width:15ch;letter-spacing:-.03em}
-.article-atlas .article-field-note>p {font-size:15px;max-width:34ch}
 .article-atlas .article-wayfinder {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin:0 0 24px}
 .article-wayfinder button {display:flex;align-items:center;gap:10px;padding:12px;min-height:50px;line-height:1.5;font-size:14px;text-align:left;border:1px solid var(--wk-line);border-radius:12px;background:#fff;color:var(--wk-ink);min-width:0}
 .article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
 .article-wayfinder button:hover {background:var(--world-tint);border-color:var(--world-accent)}
 .article-atlas .world-article-layout {grid-template-columns:minmax(0,1fr);gap:24px}
-.article-atlas .world-article-main>section,.article-atlas .article-experiment {padding:var(--article-space);border:1px solid var(--wk-line);border-radius:20px;background:var(--wk-paper);min-width:0}
+.article-atlas .world-article-main>section {padding:var(--article-space) 0;border:0;border-top:1px solid var(--wk-line);border-radius:0;background:transparent;min-width:0}
 .article-atlas .world-short>p {margin:0 0 17px;color:var(--wk-ink)}
 .article-atlas .world-facts {grid-template-columns:minmax(0,1fr);gap:12px;margin-top:26px}
 .article-atlas .world-facts>div {background:var(--world-tint);padding:18px;border-radius:12px}
 .article-atlas .world-facts dd {font-size:16px;line-height:1.75}
 .article-atlas .world-facts dt {color:var(--world-accent);font-size:12px}
-.article-atlas .article-experiment {background:#eaf3f1;border-color:#b6cec9}
+.article-atlas .article-experiment {padding:24px 0;border-block:1px solid var(--wk-line);min-width:0}
 .article-experiment>.eyebrow {margin-bottom:18px;color:var(--wk-teal)}
 .article-experiment h3 {font-size:24px;line-height:1.3;margin:0 0 14px}
 .article-experiment .model-buttons {display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
@@ -98,7 +94,7 @@
 .article-atlas .world-game-hint {padding:14px 18px;margin:16px 0;border:1px solid #b6cec9;border-radius:12px;background:#eaf3f1}
 .article-atlas .world-game-hint summary {color:var(--wk-teal);font-size:16px;font-weight:700}
 .article-atlas .world-game-hint p {font-size:16px;line-height:1.75;margin:12px 0}
-.article-atlas .world-article-heading h2 {font-weight:750}
+.article-atlas .world-article-heading :is(h1,h2) {font-weight:750}
 .article-atlas .world-surprise>div {min-width:0}
 
 .journey-topic-links a{display:flex;align-items:center;justify-content:space-between;min-height:44px}
@@ -116,3 +112,27 @@
 .article-atlas .world-more{max-width:76ch}.article-atlas .world-short h3{font-size:25px;line-height:1.3}
 .article-atlas .article-hero .article-context{font-size:15px;line-height:1.6}
 .large-reading .article-atlas .world-short>p{font-size:23px}.large-reading .article-atlas .article-wayfinder button{font-size:20px}
+
+/* The reading surface and the active question have distinct visual roles. */
+.article-atlas .article-wayfinder{display:flex;flex-wrap:wrap;gap:8px;border-block:1px solid var(--wk-line);padding-block:8px}
+.article-atlas .article-wayfinder button{background:transparent;border:0;border-radius:6px;padding-inline:12px}
+.article-atlas .world-short{border:0;border-radius:0;background:transparent;padding-inline:0}
+.article-atlas .world-short>p{max-width:68ch;line-height:1.8}
+.article-atlas .world-article-main>.world-mini-question{position:relative;background:#edf2ec;border:0;border-radius:18px;padding:clamp(20px,3vw,34px)}
+.article-atlas .world-mini-question h3{font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.025em;max-width:32ch}
+.article-atlas .world-mini-question .quiz-answer:not(.is-correct):not(.is-incorrect){background:var(--wk-paper);border-color:#b5c5bc;color:var(--wk-ink)}
+.article-atlas .world-mini-question .quiz-answer:hover:not(:disabled){border-color:var(--wk-teal)}
+.article-atlas .world-mini-question .lab-feedback{background:var(--wk-paper);border-radius:12px}
+.large-reading .article-atlas .world-mini-question h3{font-size:34px}
+
+.article-atlas .article-hero.article-hero-copy-only{grid-template-columns:minmax(0,1fr)}
+.world-route-heading{margin:20px 0 24px;color:var(--wk-ink)}.world-route-heading h1{font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.03em;margin:12px 0}.world-route-heading>p:last-child{max-width:65ch;line-height:1.7;color:var(--wk-muted)}
+.world-view details.world-route-stations{display:block;padding:0;border-block:1px solid var(--wk-line);margin:20px 0;background:transparent}
+.world-route-stations>summary{font-size:17px;font-weight:600;line-height:1.6;padding:16px 0;min-height:56px;cursor:pointer;color:var(--wk-ink)}
+.route-station-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px;list-style:none;padding:0;margin:12px 0 24px}
+.world-view .route-station-list button{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center;gap:10px;min-height:56px;font-size:16px;line-height:1.6;padding:14px;border:0;border-bottom:1px solid var(--wk-line);border-radius:0;background:transparent;color:var(--wk-ink)}
+.world-view .route-station-list button[aria-current]{background:#edf4f5;border-color:var(--wk-teal);font-weight:700}
+.world-view .route-progress-note{font-size:16px!important;line-height:1.6}
+.large-reading .world-view :is(.world-route-stations>summary,.route-station-list button,.route-progress-note){font-size:20px!important}
+
+.world-view .sensitive-intro :is(h1,h2){font-size:clamp(26px,3vw,36px);line-height:1.25;margin:18px 0}.large-reading .article-atlas .world-article-heading :is(h1,h2){font-size:clamp(34px,4vw,54px)}.large-reading .world-route-heading h1{font-size:clamp(32px,4vw,48px)}

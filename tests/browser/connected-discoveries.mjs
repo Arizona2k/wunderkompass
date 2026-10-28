@@ -123,7 +123,7 @@ export async function connectedDiscoveries(page,ready,report,width){
     if(!await answer.isDisabled())await answer.click();
     await page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
    }
-   await page.getByRole('heading',{name:'Deine Reise ist erklärt!',exact:true}).waitFor();
+   await page.getByRole('heading',{name:'Deine Wissensroute ist geschafft!',exact:true}).waitFor();
    assert.ok((await pass()).discoveries.includes('route:'+id));
   }
   report.checks.push('Both knowledge routes completed through every actual retained/appended station and real mini questions');

@@ -1,6 +1,6 @@
-## In Vorbereitung · SI im Wissensbuch
+## SI im Wissensbuch · PR72 tatsächlich bereitgestellt
 
-Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. Die abschließende nativeQualifikation und Bereitstellung dieses Abschnitts stehen noch aus.
+Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. PR72 wurde nach erfolgreicher Quality184 regulär als `e4424373a4ee6aeda5273a245756d3b0e91e590f` nach test-live übernommen; Vercel bestätigt dieselbe Bereitstellung am28.10.2026 um00:25:34MEZ. Der tatsächliche Produkt-/Pass-/Kalt-Offlinenachtest ist bestätigt. Der Gesamtauftrag bleibt offen.
 
 ## Tatsächliche Desktop-Homeverfeinerung · PR71
 

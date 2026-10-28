@@ -18,7 +18,7 @@ export async function searchAndHistory(page, report) {
   }
   await page.getByRole('button', { name: 'Lernwelt durchsuchen', exact: true }).click();
   await page.getByRole('dialog').locator('input').fill('zzzzzz');
-  await page.getByText('Dazu haben wir noch keinen passenden Treffer. Versuch ein kürzeres Wort oder suche etwa nach Mond, Vulkan oder Wasser.', { exact: true }).waitFor();
+  await page.getByText('Dazu haben wir noch keinen passenden Treffer. Probiere ein kürzeres Wort.', { exact: true }).waitFor();
   assert.equal(await page.getByRole('option').count(), 0);
   await page.keyboard.press('Escape');
   await page.getByRole('dialog').waitFor({ state: 'hidden' });
@@ -33,7 +33,7 @@ export async function searchAndHistory(page, report) {
   await geographyFacts(page, report);
 }
 
-async function geographyFacts(page, report) {
+export async function geographyFacts(page, report) {
   for (const [name, capital, note, language] of [
     ['Kanada', 'Ottawa', 'Land und Binnengewässer', null],
     ['Benin', 'Porto-Novo', 'Regierungssitz befindet sich in Cotonou', 'Französisch, Fon, Yoruba, Anii und weitere Sprachen'],
