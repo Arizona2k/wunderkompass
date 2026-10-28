@@ -37,9 +37,24 @@
 .research-prediction p{margin:12px 0}
 .lab-search{display:grid;gap:8px;max-width:640px;margin-block:20px 26px}
 .lab-search input{font:inherit;min-height:48px;padding:12px;border:1px solid #9eb6c3;border-radius:12px;background:#fff;color:inherit;width:100%}
+.research-world .experiment-grid{display:block;max-width:1000px;margin-inline:auto}
+.research-world .experiment-card{padding:0;border:0;border-bottom:1px solid var(--wk-line);border-radius:0;background:transparent}
+.research-world .experiment-card>summary{padding:18px 0;min-height:60px;font-size:clamp(19px,2.2vw,24px);line-height:1.4;color:var(--wk-ink)}
+.experiment-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,5vw,64px);padding:6px 0 28px}
+.experiment-preparation{align-self:start}
+.experiment-preparation p,.experiment-method p{margin:0 0 16px;line-height:1.7}
 .experiment-safety{background:#faf4e9;border-radius:10px;padding:14px}
-.experiment-card>p{margin-block:14px;line-height:1.75}
-.experiment-card>a{display:block;margin-block:16px}
+.experiment-card .experiment-steps{list-style:decimal;padding:0 0 0 26px;margin:0}
+.experiment-steps li{padding:0 0 16px 6px}
+.experiment-steps li::marker{color:var(--wk-muted);font-weight:700}
+.experiment-steps h3{font-size:18px;line-height:1.5;margin:0 0 6px;color:var(--wk-ink)}
+.experiment-method .fact-callout{margin:0 0 18px}
+.experiment-method .fact-callout p{margin:0}
+.experiment-card .experiment-limit{font-size:16px;color:var(--wk-muted)}
+.experiment-method>.discovery-text-link{display:flex;width:fit-content;align-items:center;min-height:48px;margin:0 0 16px;font-size:16px}
+.experiment-method>.secondary-button{font-size:16px;min-height:48px;white-space:normal;text-align:left;line-height:1.5}
+.large-reading .experiment-card :is(p,h3,li,summary,a,button){font-size:20px!important;line-height:1.7}
+@media(max-width:700px){.experiment-body{grid-template-columns:minmax(0,1fr);gap:8px}}
 .research-mission-checks{display:grid;gap:12px;margin-block:16px}.research-mission-checks label{display:flex;align-items:center;gap:12px;min-height:44px;font-weight:400}.research-mission-checks input{width:22px;height:22px;flex-shrink:0;accent-color:#276c88}.mission-research{display:grid;gap:12px;margin-block:14px;padding-block:14px;border-block:1px solid #d8e6eb}
 .large-reading .research-workbench :is(p,label,li,button,summary,textarea,small){font-size:1.25rem;line-height:1.8}.large-reading .research-workbench .research-levels button{grid-template-columns:1fr}.large-reading .research-metrics span{font-size:1.25rem}
 @media(max-width:560px){.research-model-stage .hemisphere-cards{grid-template-columns:1fr}.research-workbench{border-radius:16px;gap:20px}.research-levels,.research-metrics,.research-observations,.research-links{grid-template-columns:1fr}.research-workbench .science-figure text,.plates-lab svg text,.seasons-lab svg text{display:none}.research-levels button{grid-template-columns:70px 1fr;align-items:center}.research-workbench .quiz-answers{grid-template-columns:1fr}.research-workbench .model-buttons>button{flex:1 1 140px}.research-workbench .small-note{font-size:.95rem!important}.research-figure-legend{display:grid;gap:7px}.research-workbench .clock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.research-workbench .clock-grid article{padding:12px}.research-workbench .clock-grid h3{font-size:1.05rem}.research-workbench .clock-grid p{font-size:.95rem}}

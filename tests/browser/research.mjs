@@ -1,3 +1,4 @@
+import {assertPracticalGuide} from './practical-guides.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
 import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
@@ -66,7 +67,7 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
    await p.getByRole('button',{name:'Alle Experimente',exact:true}).click();await p.locator('.research-tile').first().waitFor();
   }
   for(let i=0;i<experiments.length;i++){
-   const item=p.locator('.experiment-card').nth(i);await item.locator('summary').click();await item.getByText('Gemeinsam und sicher:',{exact:true}).waitFor();assert.ok((await item.innerText()).includes('Vermuten:')&&(await item.innerText()).includes('Modellgrenze:'));
+   const item=p.locator('.experiment-card').nth(i);await item.locator('summary').click();await item.getByText('Gemeinsam und sicher:',{exact:true}).waitFor();await assertPracticalGuide(item);assert.ok((await item.innerText()).includes('Vermuten:')&&(await item.innerText()).includes('Modellgrenze:'));
    await item.getByRole('button',{name:'Als gemeinsam gemacht markieren',exact:true}).click();await item.getByRole('button',{name:'Markierung entfernen',exact:true}).waitFor();
    if(width===320||width===1440)await item.screenshot({path:path.join(shots,'research-experiment-'+i+'-'+width+'.png'),animations:'disabled'});
   }

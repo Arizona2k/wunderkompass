@@ -324,3 +324,14 @@
 .search-dialog.large-reading :is(input,strong,span,p,[cmdk-group-heading]){font-size:20px!important;line-height:1.6}.search-dialog.large-reading .search-category{font-size:18px}
 .search-dialog [data-slot=dialog-title]{font-size:clamp(24px,2.5vw,30px);font-weight:600;line-height:1.25;margin-bottom:12px}.search-dialog.large-reading [data-slot=dialog-title]{font-size:32px}
 body:has(.earth-app[data-reduced-motion]) :is([data-slot=dialog-overlay],[data-slot=dialog-content],[data-slot=alert-dialog-overlay],[data-slot=alert-dialog-content]){animation:none!important;transition:none!important}
+
+.visual-panel>.mission-card{padding:clamp(16px,3vw,28px);background:#faf4e9;border-color:#e4d6bf;border-radius:16px;color:var(--wk-ink)}
+.mission-card #mission-heading{font-size:clamp(22px,2.5vw,30px);line-height:1.3;letter-spacing:-.025em;margin:0 0 12px;color:var(--wk-ink)}
+.mission-card .eyebrow{font-size:13px;letter-spacing:.08em;line-height:1.5}
+.mission-card :is(.mission-hint,.mission-button){font-size:16px;min-height:48px;line-height:1.5}
+.mission-card .mission-button{padding:11px 16px;max-width:100%;white-space:normal;text-align:left;color:var(--wk-ink);border-color:#c9b89e}
+.mission-card .mission-hint{color:#69491d}
+.mission-card .mission-tip p,.mission-card .mission-research p{line-height:1.65}
+.mission-card .mission-research a{display:flex;width:fit-content;gap:10px;align-items:center;min-height:48px;line-height:1.5}
+.visual-panel>.mission-complete{background:#edf6f1;border-color:#c2d9cd}
+.large-reading .mission-card :is(p,a,button){font-size:20px!important;line-height:1.7}

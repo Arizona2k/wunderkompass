@@ -1,3 +1,4 @@
+import {globeMissionFlow} from './globe-missions.mjs';
 import assert from 'node:assert/strict';
 import {gameNumberLabelView} from './game-number-labels.mjs';
 import {retainedAnimalRounds} from './animal-game-saves.mjs';
@@ -48,6 +49,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.getByRole('switch',{name:'Größere Schrift',exact:true}).uncheck();await p.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();await back(p);
    }
    if(width===320)await gameNumberLabelView(p,report);
+   if(width===320){report.globeMissions=await globeMissionFlow(p);report.checks.push('All12 globe missions: progressive hints and revealed place/region do not earn stamps, actual selections earn all12; next focus, reload and voluntary repeat retain earned progress');}
    if(width===320||width===1440)await axe(p,'.playground');
    report.views.push({width,height,name:'Shared playground, filters, three game rooms, hints, large text'});console.log('Playground viewport',width);
   }finally{await c.close();}
