@@ -40,8 +40,8 @@ test('partial heat packs, mismatched source dates, unsafe links and incomplete w
 
 test('all97 delivered definitions,30 old Why answers and the full seven-SI payload remain byte-identical in meaning',()=>{
  const before=read('tests/fixtures/book-before-heat-97-hashes.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json');
- assert.equal(Object.keys(before.words).length,97);assert.equal(Object.keys(before.why).length,30);assert.equal(words.length,101);assert.equal(why.length,32);
- assert.equal(new Set(words.map(w=>w.term)).size,101);assert.equal(new Set(why.map(w=>w.question)).size,32);
+ assert.equal(Object.keys(before.words).length,97);assert.equal(Object.keys(before.why).length,30);assert.equal(words.length,113);assert.equal(why.length,34);
+ assert.equal(new Set(words.map(w=>w.term)).size,113);assert.equal(new Set(why.map(w=>w.question)).size,34);
  for(const [term,hash]of Object.entries(before.words))assert.equal(digest(words.find(w=>w.term===term)),hash,term);
  for(const [question,hash]of Object.entries(before.why))assert.equal(digest(why.find(w=>w.question===question)),hash,question);
  assert.equal(createHash('sha256').update(fs.readFileSync('app/book-measurement-content.json')).digest('hex'),before.sevenSIPackSHA256);

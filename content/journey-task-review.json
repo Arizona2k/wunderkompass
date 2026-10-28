@@ -1672,7 +1672,7 @@
           "Die beiden Kontinente bewegen sich voneinander weg"
         ],
         "correct": 0,
-        "hint": "Lege zwei gedachte feste Ränder aneinander und schiebe sie zusammen. Welche Bewegung passt zu gestauchtem und gehobenem Material?",
+        "hint": "Stell dir zwei Punkte am Rand der Kontinente vor. Wie ändert sich ihr Abstand, wenn Gestein dazwischen weniger Platz bekommt und sich verformen kann?",
         "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
         "wrong": [
           "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
@@ -1681,12 +1681,12 @@
         ]
       },
       "beforeHash": "49b1481c1e3ac8635b0c363638d63f170a88788e64fca4f1cb2cd943d2ab859b",
-      "afterHash": "d65d44235e70eb8f182b386d455963c0c3930ebc7e0d15a0c1f2f7ac7b8a1bfb",
-      "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Lege zwei gedachte feste Ränder aneinander und schiebe sie zusammen. Welche Bewegung passt zu gestauchtem und gehobenem Material?",
+      "afterHash": "0918ea078957fd977d8da66181017a38f047c6930e2160b7358a3da3c39cf246",
+      "decision": "Gedankenhinweis ohne vorweggenommene Bewegung; kein behauptetes Faltenbild.",
       "sourceIds": [
-        "inside-base"
+        "inside-boundary-types"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Individuelle KI-Gegenlese ausgewählter tatsächlich gelesener Belegstellen28.10.2026 und frühe tatsächliche Engine-/Altpass-/Kalt-Offline-Teilprüfung; vollständige konsolidierte Abnahme noch ausstehend.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -1701,6 +1701,50 @@
         "countercheck": "NPS drei Grenzarten, Beben bei allen; Zusammenstoßen bedeutet nicht immer Subduktion. Seitliches Vorbeigleiten hat zwei entgegengesetzte parallele Pfeile in ausdrücklich benannter Draufsicht; andere Auswahlen Querschnitt. Alle drei vorhandenen Laborarten samt Regler tatsächlich bedient; Sekundenmodell keine reale Gebirgsdauer.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "74ef5116d24a07a0efffaf323666f4ac554e8949",
+          "after": {
+            "prompt": "Welche Bewegung kann Gebirge durch Kontinentkollision bilden?",
+            "answers": [
+              "Platten stoßen zusammen",
+              "Die beiden Kontinente gleiten ohne Zusammendrücken aneinander vorbei",
+              "Die beiden Kontinente bewegen sich voneinander weg"
+            ],
+            "correct": 0,
+            "hint": "Lege zwei gedachte feste Ränder aneinander und schiebe sie zusammen. Welche Bewegung passt zu gestauchtem und gehobenem Material?",
+            "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+            "wrong": [
+              "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
+              "Diese Bewegung erklärt nicht die hier gefragte Kontinentkollision.",
+              "Auseinanderbewegen ist eine andere Grenzbewegung als die im Kapitel erklärte Kollision."
+            ]
+          },
+          "afterHash": "d65d44235e70eb8f182b386d455963c0c3930ebc7e0d15a0c1f2f7ac7b8a1bfb",
+          "decision": "Frühere gezielte Distraktoren-/Feedbackkorrektur erhalten. Freiwilligen Hinweis einzeln neu redigiert: Lege zwei gedachte feste Ränder aneinander und schiebe sie zusammen. Welche Bewegung passt zu gestauchtem und gehobenem Material?",
+          "sourceIds": [
+            "inside-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Gedankenhinweis ohne vorweggenommene Bewegung; kein behauptetes Faltenbild.",
+        "correctIndexAndCorrectAnswerRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "insideEngineProduct": "c70d1372bc347c6a",
+          "all15TasksInActualFirefoxWebKit": true,
+          "actualOriginalCompatibilityCases": 62,
+          "normalAndActualNative200ColdOldWrong0And2": true,
+          "consolidatedFullCurrentQualificationPending": true,
+          "meaning": "Originale behalten ihre tatsächlichen Quellen-/Produktbindungen; keine pauschale neue Gesamtfreigabe."
+        }
       }
     },
     {
@@ -1896,26 +1940,27 @@
       "after": {
         "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
         "answers": [
-          "Die Uhrzeit des Tages",
+          "Nur die Temperatur: Magma ist immer heißer als Lava",
           "Der Ort unter oder an der Oberfläche",
-          "Die Farbe einer Landkarte"
+          "Nur die Farbe: Magma ist immer rot und Lava immer schwarz"
         ],
         "correct": 1,
-        "hint": "Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+        "hint": "Stell dir dasselbe Material vor, das einen Vulkanschlot verlässt. Was hat sich dabei sicher geändert, auch wenn du keinen Temperaturwert und kein Farbfoto hast?",
         "why": "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
         "wrong": [
-          "Der Begriff wechselt nicht mit der Uhrzeit.",
+          "Der Namenswechsel beschreibt hier den Austritt an die Oberfläche, keine festgelegte Temperaturgrenze.",
           "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
-          "Kartenfarben sind nur Darstellungszeichen."
+          "Eine Farbe allein sagt nicht, ob das Material unter der Oberfläche liegt oder bereits ausgetreten ist. Hier geht es um den Ort."
         ]
       },
       "beforeHash": "4de10c988a7aae437b750e46585e74fc0597e376105b6345cc15e0233dbf32ce",
-      "afterHash": "27fc17a487ca1dcf328ec2c792f109a8729d2b171e470c6a2f94f0e3c7e63288",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+      "afterHash": "0099db5a378d9b2455774fddfc2e71ddc326209aefdca3ecbbc6dc04adf614bf",
+      "decision": "Zwei plausible Temperatur-/Farbfehlvorstellungen statt themenfremder Ablenkungen; korrekter Ort und Index1 erhalten, frühere Auswahl vollständig in bestehender Revision1-Kompatibilität bewahrt.",
       "sourceIds": [
-        "inside-base"
+        "volcano-detail",
+        "inside-volcanic-ash"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Individuelle KI-Gegenlese ausgewählter tatsächlich gelesener Belegstellen28.10.2026 und frühe tatsächliche Engine-/Altpass-/Kalt-Offline-Teilprüfung; vollständige konsolidierte Abnahme noch ausstehend.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -1931,6 +1976,50 @@
         "countercheck": "USGS Magma/Lava nach Lage, Asche aus Gestein/Mineralen/Glas und Hawaii-Hotspot konkret gelesen. Keine vollständige Erd-Magma-Schicht, keine Verbrennungsasche. Holz-Distraktor durch plausible falsche Kontinentrand-Regel samt passendem Feedback ersetzt; alte falsche Auswahl2 bleibt falsch.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "74ef5116d24a07a0efffaf323666f4ac554e8949",
+          "after": {
+            "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
+            "answers": [
+              "Die Uhrzeit des Tages",
+              "Der Ort unter oder an der Oberfläche",
+              "Die Farbe einer Landkarte"
+            ],
+            "correct": 1,
+            "hint": "Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+            "why": "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+            "wrong": [
+              "Der Begriff wechselt nicht mit der Uhrzeit.",
+              "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+              "Kartenfarben sind nur Darstellungszeichen."
+            ]
+          },
+          "afterHash": "27fc17a487ca1dcf328ec2c792f109a8729d2b171e470c6a2f94f0e3c7e63288",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+          "sourceIds": [
+            "inside-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Zwei plausible Temperatur-/Farbfehlvorstellungen statt themenfremder Ablenkungen; korrekter Ort und Index1 erhalten, frühere Auswahl vollständig in bestehender Revision1-Kompatibilität bewahrt.",
+        "correctIndexAndCorrectAnswerRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "insideEngineProduct": "c70d1372bc347c6a",
+          "all15TasksInActualFirefoxWebKit": true,
+          "actualOriginalCompatibilityCases": 62,
+          "normalAndActualNative200ColdOldWrong0And2": true,
+          "consolidatedFullCurrentQualificationPending": true,
+          "meaning": "Originale behalten ihre tatsächlichen Quellen-/Produktbindungen; keine pauschale neue Gesamtfreigabe."
+        }
       }
     },
     {

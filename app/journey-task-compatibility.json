@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "revision": 1,
-  "meaning": "Fourteen individually named earlier hard chapter tasks, preserving selected canonical indices and original texts; no protected reference regeneration or whole-pass migration.",
+  "meaning": "Fifteen individually named earlier chapter tasks, preserving selected canonical indices and original texts; no protected reference regeneration or whole-pass migration.",
   "entries": {
     "seasons:2:2": {
       "prompt": "Zwei Halbkugeln haben gleichzeitig gegensätzliche Jahreszeiten. Passt die Entfernung als alleinige Erklärung?",
@@ -225,6 +225,22 @@
         "Eine absolute Garantie wäre zu weitgehend.",
         "Gerade konkrete Arten und Bedingungen sind für den Zusammenhang wichtig.",
         "Vielfalt kann helfen, aber Zusammensetzung, Beziehungen und Bedingungen müssen betrachtet werden."
+      ]
+    },
+    "inside:4:1": {
+      "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
+      "answers": [
+        "Die Uhrzeit des Tages",
+        "Der Ort unter oder an der Oberfläche",
+        "Die Farbe einer Landkarte"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+      "why": "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+      "wrong": [
+        "Der Begriff wechselt nicht mit der Uhrzeit.",
+        "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
+        "Kartenfarben sind nur Darstellungszeichen."
       ]
     }
   }

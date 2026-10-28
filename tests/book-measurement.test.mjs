@@ -40,15 +40,15 @@ test('partial, corrupt or malformed measurement explanations cannot be accepted 
 
 test('all90 delivered dictionary payloads remain exact while seven unique SI terms share one canonical export and reachable relationships',()=>{
  const previous=read('tests/fixtures/book-before-measurement-90-hashes.json'),words=read('exports/content/knowledge-words.json');
- assert.equal(Object.keys(previous.words).length,90);assert.equal(words.length,101);
- assert.equal(new Set(words.map(word=>word.term)).size,101);
+ assert.equal(Object.keys(previous.words).length,90);assert.equal(words.length,113);
+ assert.equal(new Set(words.map(word=>word.term)).size,113);
  for(const [term,sha256] of Object.entries(previous.words)){
   const current=words.find(word=>word.term===term);assert.ok(current,term);
   assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),sha256,term+' retains its delivered definition');
  }
  assert.deepEqual(bookMeasurementContent(true),pack);
  const exported=read('exports/content/book-measurements.json'),topics=read('app/world-index.json'),why=read('exports/content/why-questions.json');
- assert.equal(why.length,32);assert.deepEqual(exported.map(row=>row.term),MEASUREMENT_TERMS);
+ assert.equal(why.length,34);assert.deepEqual(exported.map(row=>row.term),MEASUREMENT_TERMS);
  const links=read('app/book-measurement-topic-index.json');
  for(const term of MEASUREMENT_TERMS){
   const word=words.find(word=>word.term===term),learning=pack.learning[term];
