@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T19:25:13.485Z",
+  "generatedAt": "2026-10-28T11:42:00.318Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,8 +13,8 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 97,
-  "whyQuestions": 30,
+  "knowledgeWords": 101,
+  "whyQuestions": 32,
   "routes": 8,
   "files": [
     {
@@ -58,6 +58,20 @@
       "entries": 7,
       "bytes": 19063,
       "sha256": "eaded87c1b7fc1ead38d951af726f644a116751cca0d0e60d5b3501e32e664fa"
+    },
+    {
+      "file": "book-heat.json",
+      "sources": [
+        "app/book-heat-content.json",
+        "app/book-heat-integrity.json",
+        "app/book-heat-index.json",
+        "app/book-heat-topic-index.json",
+        "app/book-heat-validation.mjs",
+        "scripts/book-heat-index.mjs"
+      ],
+      "entries": 6,
+      "bytes": 20852,
+      "sha256": "a661fda4be7374c1238c5161591a656111b3c9fc9b0bcfbc3fbc6beb423b9b1c"
     },
     {
       "file": "continents.json",
@@ -140,21 +154,24 @@
       "file": "knowledge-words.json",
       "sources": [
         "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/expanded-learning-data.ts",
+        "app/book-measurement-word-index.json",
+        "app/book-heat-index.json"
       ],
-      "entries": 97,
-      "bytes": 17307,
-      "sha256": "3499145ef4cdcdc684cc02e0c4d527c6c3d3f757b49e60331883c49612d205a3"
+      "entries": 101,
+      "bytes": 18443,
+      "sha256": "0e353e37ddfe17d9ad412ef9e61f027869758eca5d2530f5d1e108492fb636de"
     },
     {
       "file": "why-questions.json",
       "sources": [
         "app/learning-data.ts",
-        "app/expanded-learning-data.ts"
+        "app/expanded-learning-data.ts",
+        "app/book-heat-index.json"
       ],
-      "entries": 30,
-      "bytes": 7428,
-      "sha256": "0a471fc504c3ed58e79909c6a9565749b5ba8fa496154b21741a95c823391eef"
+      "entries": 32,
+      "bytes": 8113,
+      "sha256": "c77704bc6a5df3968fe53ab6dd764312213120cf6fccfbabcf7debbeee5f029b"
     },
     {
       "file": "earth-badges.json",
@@ -306,8 +323,8 @@
         "app/world-catalog.json"
       ],
       "entries": 190,
-      "bytes": 701783,
-      "sha256": "82ea79707413845f55a28af41c3bccf0b4bfd961db61abd09b7eaace19d37850"
+      "bytes": 702672,
+      "sha256": "1b636a27adad36ecf2f01908f235ae7ef6ae11641c81b72a2f579b23acf2810a"
     },
     {
       "file": "world-index.json",
@@ -315,8 +332,8 @@
         "app/world-index.json"
       ],
       "entries": 190,
-      "bytes": 118626,
-      "sha256": "af680fb051b2382b8d9a3e1706961fcadc429c1f481e93ef7c0bf20eff7da94e"
+      "bytes": 118661,
+      "sha256": "cbb2fb91cf4ddcb9f59969d474815f45d238173b42d761c034937578737156ea"
     },
     {
       "file": "games.json",

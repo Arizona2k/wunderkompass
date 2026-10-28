@@ -32,3 +32,11 @@
 .knowledge-book .why-card>summary>svg{color:var(--wk-teal)}
 .knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px;box-shadow:none!important;border-color:transparent!important}
 @media(forced-colors:active){.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline-color:CanvasText}}
+
+.book-heat-figure{margin:20px 0}.book-heat-figure .book-model-key{padding-inline-start:24px;line-height:1.75}.book-heat-figure li+li{margin-top:8px}
+
+.knowledge-book .book-heat-figure :is(li,figcaption){font-size:16px}.large-reading .knowledge-book .book-heat-figure :is(li,figcaption){font-size:20px!important}
+
+.knowledge-book .book-study .book-topic-link{display:flex;align-items:center;min-height:48px;min-width:44px;padding-block:8px;line-height:1.6;overflow-wrap:anywhere;color:var(--wk-teal);text-decoration:underline;text-underline-offset:3px}
+
+.book-heat-figure .book-figure-limit{line-height:1.65;color:var(--wk-muted);margin-top:15px}

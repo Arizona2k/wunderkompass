@@ -1,3 +1,4 @@
+import {bookHeatView,bookHeatNetworkView} from './book-heat.mjs';
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
 import {bookTabNavigation} from './book-navigation.mjs';
 import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
@@ -256,10 +257,10 @@ export async function journeySupportView(p,{widths,shots,engine}){
    const ready=page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
    learningHelp=await journeyLearningHelpView(browser,base,ready,helpShots);
   }
-  const bookProof={checks:[]},bookNetwork=await bookMeasurementNetworkView(p,{shots,engine});
-  for(const width of [320,1440]){await p.setViewportSize({width,height:900});await bookMeasurementView(p,bookProof,width,{shots,engine});}
-  assert.equal(bookProof.bookMeasurements.length,14);
-  return {hints,diagrams,sources,widths,bookMeasurements:bookProof.bookMeasurements,bookNetwork,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
+  const bookProof={checks:[]},bookNetwork=await bookMeasurementNetworkView(p,{shots,engine}),bookHeatNetwork=await bookHeatNetworkView(p,{shots,engine});
+  for(const width of [320,1440]){await p.setViewportSize({width,height:900});await bookMeasurementView(p,bookProof,width,{shots,engine});await bookHeatView(p,bookProof,width,{shots,engine});}
+  assert.equal(bookProof.bookMeasurements.length,14);assert.equal(bookProof.bookHeat.length,12);
+  return {hints,diagrams,sources,widths,bookMeasurements:bookProof.bookMeasurements,bookNetwork,bookHeat:bookProof.bookHeat,bookHeatNetwork,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function journeyLearningHelpView(browser,base,ready,shots){

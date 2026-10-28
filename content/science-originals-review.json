@@ -541,15 +541,55 @@
           "anchor": "What?/How?, lines11–22",
           "factualReading": "Conduction, convection and radiation are distinct energy-transfer mechanisms. Insulation reduces transfer; it is not a heat source.",
           "readOn": "2026-10-23"
+        },
+        {
+          "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+          "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+          "factualReading": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+          "readOn": "2026-10-28",
+          "scope": "Fresh selected passage read for Book heat followup; no copied media or full-source/human review claim"
+        },
+        {
+          "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+          "anchor": "Abschnitte What und How: drei Wärmewege und spontaner Wärmeübergang aufgrund unterschiedlicher Temperaturen. Gebäudebeispiele allein belegen keine Hautempfindung.",
+          "factualReading": "Abschnitte What und How: drei Wärmewege und spontaner Wärmeübergang aufgrund unterschiedlicher Temperaturen. Gebäudebeispiele allein belegen keine Hautempfindung.",
+          "readOn": "2026-10-28",
+          "scope": "Fresh selected passage read for Book heat followup; no copied media or full-source/human review claim"
+        },
+        {
+          "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy",
+          "anchor": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+          "factualReading": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+          "readOn": "2026-10-28",
+          "scope": "Fresh selected passage read for Book heat followup; no copied media or full-source/human review claim"
+        },
+        {
+          "url": "https://www.aps.org/learning-resources/getting-warmer-colder",
+          "anchor": "Teacher background: gleich temperiertes Holz und Metall können sich beim Kontakt mit wärmerer Haut verschieden anfühlen. Raum- und Hauttemperaturbeispiele nicht als allgemeingültige Werte übernommen; keine physische Erprobung behauptet.",
+          "factualReading": "Teacher background: gleich temperiertes Holz und Metall können sich beim Kontakt mit wärmerer Haut verschieden anfühlen. Raum- und Hauttemperaturbeispiele nicht als allgemeingültige Werte übernommen; keine physische Erprobung behauptet.",
+          "readOn": "2026-10-28",
+          "scope": "Fresh selected passage read for Book heat followup; no copied media or full-source/human review claim"
         }
       ],
       "actualProductReview": {
-        "status": "targeted passed",
-        "scope": "Original explanations, all hint/wrong/right feedback and source links checked in actual320-large/1440 and native200%640/320 views; targeted preparation only, no full acceptance."
+        "status": "Early actual heat rendering passed; complete current offline/full qualification pending",
+        "scope": "30 Chromium heat states plus12actualFirefox157 and12actualWebKit27.2 states, real loading integrity/Retry/shared-pending passed. Existing cold run stopped naturally on stale former heat legend expectation; original preserved. No full current product acceptance."
       },
       "fullAcceptance": false,
       "mediaDecision": "Existing own concept diagram and functional models remain retained. These source reads authorize no copied photographs or illustrations. Suitable actual photography remains preferred where it helps explain the topic and motif/rights/quality/binary access are verified.",
-      "currentContentSHA256": "abdb24bc9040ab25f4e1aae13e3b2129ea81ff37ae0e8ccaa7f95a5cb9713ad1"
+      "currentContentSHA256": "50d9a3a82746412bae92707373a42925df054405eefd6051bc9dc89dd9784d84",
+      "bookHeatFollowup20261028": {
+        "status": "Scoped source re-reading and existing article followup; early heat rendering passed, complete current offline/native/full acceptance still pending",
+        "sourceCommit": "aa2764a352ae84790cef7a9084a974a3c4023e33",
+        "previousCurrentContentSHA256": "abdb24bc9040ab25f4e1aae13e3b2129ea81ff37ae0e8ccaa7f95a5cb9713ad1",
+        "previousActualProductReview": {
+          "status": "targeted passed",
+          "scope": "Original explanations, all hint/wrong/right feedback and source links checked in actual320-large/1440 and native200%640/320 views; targeted preparation only, no full acceptance."
+        },
+        "preserved": "All original question/answers/correct positions, existing three thinking stages and all unrelated record fields exact; original source reads remain. Four new words/two Why questions share the existing Book and pass.",
+        "sourceReadOn": "2026-10-28",
+        "noHumanApproval": true
+      }
     },
     {
       "id": "science-lever",

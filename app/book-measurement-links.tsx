@@ -1,5 +1,7 @@
 import {BookOpen,ArrowRight} from 'lucide-react';
-import links from './book-measurement-topic-index.json';
+import measurementLinks from './book-measurement-topic-index.json';
+import heatLinks from './book-heat-topic-index.json';
+const links=[...measurementLinks,...heatLinks];
 import {navigateHash} from './hash-route';
 
 export default function BookMeasurementLinks({topicId}:{topicId:string}){

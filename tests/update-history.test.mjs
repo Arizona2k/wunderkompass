@@ -1,4 +1,11 @@
-const CURRENT_PUBLIC_ENTRY_COUNT=68;
+const CURRENT_PUBLIC_ENTRY_COUNT=69;
+test('actual M73 design availability preserves all68 previous entries and uses its confirmed Berlin event time',()=>{
+ const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr73-hashes.json',import.meta.url),'utf8')),entry=entries.find(e=>e.id==='learning-world-common-design-3-5'),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===73);
+ assert.equal(fixture.entries.length,68);assert.equal(entries.length,69);
+ for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' retains its previous complete payload');
+ assert.equal(record.mergeCommit,'aa2764a352ae84790cef7a9084a974a3c4023e33');assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-28T11:09:50Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 12:09:50 MEZ');assert.equal(entry.evidence.pullRequest,73);assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['home','book']);
+ const pending=structuredClone(record);pending.deploymentStatuses=[];assert.equal(confirmedTestDeployment(pending),null);assert.equal(testUpdate(pending,entry).status,'prepared');
+});
 test('actual PR66 delivery preserves all61 prior full payloads and rejects untrusted deployment evidence',()=>{
  const entries=publicUpdates(),entry=entries.find(e=>e.evidence.pullRequest===66),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===66),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr66-hashes.json',import.meta.url),'utf8'));
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(fixture.entries.length,61);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' prior full payload preserved');
@@ -116,7 +123,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));

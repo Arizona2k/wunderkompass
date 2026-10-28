@@ -10,7 +10,7 @@ const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
 // Source-derived roles: OpenStax heat transfer, IOP elasticity, the geometric
 // reflection criterion, NHGRI cell structures and NASA comet-tail directions.
 const keyedLabels={
- 'heat-transfer':['Leitung: durch Material','Strömung: mit bewegter Luft','Strahlung: ohne Kontakt'],
+ 'heat-transfer':['Leitung: durch Material','Strömung: bewegte Flüssigkeit oder bewegtes Gas','Strahlung: ohne Kontakt'],
  elasticity:['Vor der Belastung','Während der Belastung','Nach dem Entlasten'],
  symmetry:['Linke Form','Spiegelachse','Gespiegelte Form'],
  cell:['Außen: Zellwand','Innen angrenzend: Membran','Runder Bereich: Zellkern'],
