@@ -321,9 +321,21 @@
 .world-view .timeline-station :is(strong,small){font-size:16px;line-height:1.6;overflow-wrap:anywhere}
 .large-reading .world-view :is(.world-timeline,.invention-timeline)>summary,.large-reading .world-view .timeline-station :is(strong,small){font-size:20px}
 
-.search-dialog.large-reading :is(input,strong,span,p,[cmdk-group-heading]){font-size:20px!important;line-height:1.6}.search-dialog.large-reading .search-category{font-size:18px}
+.search-dialog.large-reading :is(input,strong,span,p,button,[cmdk-group-heading]){font-size:20px!important;line-height:1.6}.search-dialog.large-reading .search-category{font-size:18px}
 .search-dialog [data-slot=dialog-title]{font-size:clamp(24px,2.5vw,30px);font-weight:600;line-height:1.25;margin-bottom:12px}.search-dialog.large-reading [data-slot=dialog-title]{font-size:32px}
 body:has(.earth-app[data-reduced-motion]) :is([data-slot=dialog-overlay],[data-slot=dialog-content],[data-slot=alert-dialog-overlay],[data-slot=alert-dialog-content]){animation:none!important;transition:none!important}
+.search-dialog .search-header [data-slot=dialog-description]{font-size:16px;line-height:1.6;color:var(--wk-muted)}
+.search-empty-state{padding:20px 0 4px;text-align:left;color:var(--wk-ink)}
+.search-empty-state p{font-size:16px;line-height:1.65;margin:0 0 16px}
+.search-empty-state button{font-size:16px;line-height:1.5;min-height:48px;text-align:left}
+.search-dialog [data-slot=command-input-wrapper]{min-height:52px;height:auto}
+.search-dialog[data-slot=dialog-content]{display:flex;flex-direction:column;padding:0!important;gap:0;overflow:hidden}
+.search-header{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:12px;align-items:start;padding:20px;flex-shrink:0}
+.search-header [data-slot=dialog-title]{margin:0}
+.search-header [data-slot=dialog-description]{grid-column:1/-1;margin:0}
+.search-body{padding:0 20px 20px;min-height:0;overflow:auto;overscroll-behavior:contain}
+.search-body [data-slot=command]{height:auto;overflow:visible}
+.search-body [cmdk-list]{max-height:none;overflow:visible}
 
 .visual-panel>.mission-card{padding:clamp(16px,3vw,28px);background:#faf4e9;border-color:#e4d6bf;border-radius:16px;color:var(--wk-ink)}
 .mission-card #mission-heading{font-size:clamp(22px,2.5vw,30px);line-height:1.3;letter-spacing:-.025em;margin:0 0 12px;color:var(--wk-ink)}

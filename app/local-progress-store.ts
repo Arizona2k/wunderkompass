@@ -92,7 +92,9 @@ export function createProgressStore() {
   const start = async () => {
     if(started)return;started=true;
     const primary=journal();let legacy:Save|null=null;
-    try { const raw=localStorage.getItem(LEGACY_KEY); if(raw)legacy=restoreSave(JSON.parse(raw)); } catch { emit({notice:'Ein Teil des alten Passes war nicht lesbar. Gültige Einträge bleiben erhalten.'}); }
+    let legacyRaw:string|null=null;
+    try { legacyRaw=localStorage.getItem(LEGACY_KEY); } catch { emit({notice:'Der Browser erlaubt gerade keinen Zugriff auf ältere Passdaten.'}); }
+    if(legacyRaw)try { legacy=restoreSave(JSON.parse(legacyRaw)); } catch { emit({notice:'Ein Teil des alten Passes war nicht lesbar. Gültige Einträge bleiben erhalten.'}); }
     let initial=primary??legacy??{...createSave(),epoch:'legacy-v3',epochAt:0,revision:0};
     try { const raw=await readDatabase(); if(future(raw))protect();else if(raw){const persisted=restoreSave(raw);if(!primary||persisted.updatedAt>primary.updatedAt)initial=persisted;} if(!readOnly)emit({storage:'database'}); } catch { /* local journal */ }
     base=initial;emit({save:initial,ready:true});
