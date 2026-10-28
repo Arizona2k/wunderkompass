@@ -23,7 +23,7 @@ export function focusLearningMain(){
 }
 export function restoreRouteView(path:string,focus=true){
  const state=history.state;
- if((path==='home'||path==='globe'||path==='updates'||path==='world'||path.startsWith('world/')||path==='book'||path.startsWith('book/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
+ if((path==='home'||path==='globe'||path==='updates'||path==='world'||path.startsWith('world/')||path==='book'||path.startsWith('book/')||path==='journeys'||path.startsWith('journeys/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);

@@ -44,3 +44,19 @@
 .large-reading .research-workbench :is(p,label,li,button,summary,textarea,small){font-size:1.25rem;line-height:1.8}.large-reading .research-workbench .research-levels button{grid-template-columns:1fr}.large-reading .research-metrics span{font-size:1.25rem}
 @media(max-width:560px){.research-model-stage .hemisphere-cards{grid-template-columns:1fr}.research-workbench{border-radius:16px;gap:20px}.research-levels,.research-metrics,.research-observations,.research-links{grid-template-columns:1fr}.research-workbench .science-figure text,.plates-lab svg text,.seasons-lab svg text{display:none}.research-levels button{grid-template-columns:70px 1fr;align-items:center}.research-workbench .quiz-answers{grid-template-columns:1fr}.research-workbench .model-buttons>button{flex:1 1 140px}.research-workbench .small-note{font-size:.95rem!important}.research-figure-legend{display:grid;gap:7px}.research-workbench .clock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.research-workbench .clock-grid article{padding:12px}.research-workbench .clock-grid h3{font-size:1.05rem}.research-workbench .clock-grid p{font-size:.95rem}}
 @media(prefers-reduced-motion:reduce){.research-workbench *{animation:none!important;transition:none!important}}
+
+/* Keep the research subject, figure and its existing controls together. */
+.research-world>.reader-toolbar{padding-bottom:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:20px 0 24px}
+.research-world .research-workbench{display:block;background:transparent;border:0;border-radius:0;padding:0;max-width:960px;margin:0 auto}
+.research-workbench>h1{font-size:clamp(30px,3.5vw,46px);line-height:1.18;letter-spacing:-.035em;color:var(--wk-ink);margin:0 0 14px}
+.research-workbench .learning-goal{padding:0;border:0;border-radius:0;background:transparent;line-height:1.65;margin:12px 0 18px;max-width:65ch}
+.research-workbench .research-prediction{margin:14px 0}
+.research-workbench .research-task{line-height:1.65;max-width:65ch;margin:16px 0 8px}
+.research-workbench .research-model-stage{padding:0;margin:18px 0 28px;background:transparent;border:0}
+.research-figure-legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin:10px 0 20px;padding:0;list-style:none;color:var(--wk-muted)}
+.research-figure-legend li{padding:0;border:0;border-radius:0;background:transparent;font-size:16px;line-height:1.55;max-width:100%;overflow-wrap:anywhere}
+.research-figure-legend li::before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;vertical-align:middle;background:currentColor;border-radius:50%}
+.large-reading .research-figure-legend li{font-size:20px}
+@media(max-width:560px){.research-world>.reader-toolbar{display:grid;grid-template-columns:1fr 1fr;margin:16px 0 22px}.research-world>.reader-toolbar button{width:100%;min-width:0;min-height:48px;white-space:normal;line-height:1.5;padding:10px}.research-workbench .research-model-stage{margin-top:12px}.research-world .research-workbench{padding:0}.research-workbench>h1{margin-bottom:12px}}
+
+.research-world .research-workbench .model-content{gap:12px}.research-world .model-content>:is(h3,p){margin:0}
