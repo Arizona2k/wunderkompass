@@ -4,9 +4,12 @@ import fs from 'node:fs/promises';import path from 'node:path';import assert fro
 // use the wrong clip and return a cropped/blank image. Capture the real visible
 // viewport directly. Absolute clips multiplied by DPR become invalid at deep
 // scroll offsets in Chromium headless-shell, even when an early capture works.
-export async function captureNativeViewport(page,file){
+export async function captureNativeViewport(page,file,{cdp:providedSession=null}={}){
  const dimensions=await page.evaluate(()=>({cssWidth:innerWidth,cssHeight:innerHeight,scale:devicePixelRatio,scrollY}));
- const cdp=await page.context().newCDPSession(page);
+ // A caller testing navigator.offline may retain one session until page close:
+ // Chromium resets target-wide offline emulation when a CDP client detaches.
+ // Every existing capture/size/content assertion applies to either ownership.
+ const cdp=providedSession??await page.context().newCDPSession(page);
  try{
   const r=await cdp.send('Page.captureScreenshot',{format:'png',fromSurface:true,captureBeyondViewport:false}),png=Buffer.from(r.data,'base64');
   await fs.writeFile(file,png); // Preserve the actual failed capture, too.
@@ -26,5 +29,5 @@ export async function captureNativeViewport(page,file){
   await fs.mkdir('.qa-output',{recursive:true});
   try{await fs.copyFile(file,path.join('.qa-output','quality-failure-'+path.basename(file)));}catch{/* The original protocol error still fails the job. */}
   error.message+=' '+JSON.stringify({file,...dimensions});throw error;
- }finally{await cdp.detach();}
+ }finally{if(!providedSession)await cdp.detach();}
 }

@@ -1,6 +1,10 @@
-## Wärme im Wissensbuch · zur Testübernahme vorbereitet
+## Planeten-Kapitel · aktuelle Überarbeitung
 
-Vier erhaltene Wärmebegriffe und zwei Warumfragen sind mit freiwilligen Erklärungen, konkreten Denkfragen, Quellen und fünf eigenen qualitativen Skizzen integriert. SI- und Wärmevertiefungen verwenden denselben Leserbaustein; globale Suche, Artikelrückwege, Datenintegrität und erneutes Laden sind verbunden. Die bestehende Wärme-Entdeckerkarte unterscheidet Materialleitung, Flüssigkeits-/Gasströmung und Strahlung genauer. Der lokale Bestand umfasst 101 Wörter und 32 Warumfragen; tatsächliche Bereitstellung nach regulärer aktueller Abnahme steht aus. Bisherige Definitionen, Lösungen und Passkennungen bleiben erhalten.
+Fünf vorhandene Kapitel unterscheiden Lichtquelle/Reflexion und Zeitspanne/Bewegung genauer. Vier eigene Zeichnungen mit KI-Unterstützung zeigen gerundete Flächenanteile, Luftgemisch/Windwirkung, örtlichesUnten und zwei getrennte Erdbewegungen. Hinweise nehmen die Lösung weniger vorweg; bisherige Antwortwortlaute, Lösungspositionen und Passkennungen bleiben. Frühe Drei-Engine-/native-/Kalt-Offline-Proben und die vollständige lokale Pflichtregression mit 165 Prüfeinträgen sind bestanden. Der tatsächliche M74-Wärmeabschluss ist in der Chronik nachgeführt. Native GitHub-Abnahme und Testbereitstellung dieses Abschnitts stehen aus.
+
+## Wärme im Wissensbuch · PR74 tatsächlich bereitgestellt
+
+Vier erhaltene Wärmebegriffe und zwei Warumfragen sind mit freiwilligen Erklärungen, konkreten Denkfragen, Quellen und fünf eigenen qualitativen Skizzen integriert. SI- und Wärmevertiefungen verwenden denselben Leserbaustein; globale Suche, Artikelrückwege, Datenintegrität und erneutes Laden sind verbunden. Die bestehende Wärme-Entdeckerkarte unterscheidet Materialleitung, Flüssigkeits-/Gasströmung und Strahlung genauer. Der tatsächlich bereitgestellte Bestand umfasst 101 Wörter und 32 Warumfragen. PR74 wurde regulär als b64c49abf1bcd42427adaff675ba6a68b792ac10 übernommen; Vercel bestätigt die Bereitstellung am 28.10.2026 um 16:14:41 MEZ. Tatsächlicher Produkt-/Pass-/kalter Offline-Nachtest bestanden. Bisherige Definitionen, Lösungen und Passkennungen bleiben erhalten.
 
 ## Begrenztes vollständiges Redesign · PR73 tatsächlich bereitgestellt
 

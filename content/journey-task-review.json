@@ -31,7 +31,7 @@
           "Der Mond"
         ],
         "correct": 0,
-        "hint": "Stell dir vor, du schaltest das Sonnenlicht aus. Welcher der drei Körper erzeugt dann weiterhin eigenes sichtbares Licht?",
+        "hint": "Überlege, wo das sichtbare Licht entsteht. Wie unterscheidet sich das Erzeugen von Licht vom Zurückwerfen?",
         "why": "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
         "wrong": [
           "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
@@ -40,12 +40,14 @@
         ]
       },
       "beforeHash": "62179e12db53c5e0b129608a11566f225d42b38793915b591213cb88d32a7351",
-      "afterHash": "417b6175d44ae82bb80db43db906460d0b69a3c6d30c5d02ab1f3b74d832fab3",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir vor, du schaltest das Sonnenlicht aus. Welcher der drei Körper erzeugt dann weiterhin eigenes sichtbares Licht?",
+      "afterHash": "489e020b23b237069cbb6b2f4abafc2bc2e5a955e318df10115f422431d45cf6",
+      "decision": "Widerspruch im alten Ausschaltgedanken entfernen; Lichtentstehung und Reflexion unterscheiden, ohne die richtige Option zu nennen.",
       "sourceIds": [
-        "planet-base"
+        "planet-base",
+        "planet-sun-light",
+        "planet-light-reflection"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Konkrete Quellen-/Fach-/Didaktikgegenlese durch KI und gezielte aktuelle Darstellung/Bedienung in tatsächlichem Chromium, Firefox und WebKit. Native200-/kalte Offline-Probe am selben Produkt bestanden; finale vollständige Pflichtabnahme und Lieferung dieser Revision gesondert erforderlich.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -62,6 +64,48 @@
         "countercheck": "NASA Sonnenlicht und bereits individuell geprüfte Reflexionsquelle stützen Stern/Planet und Lichtweg. Nicht vorhandenes eingebettetes Sonnensystem durch eigene sichere Papierskizze ersetzt. Falscher Bezug auf einen Sonne-Erde-Größenvergleich auf der Weltkugel eng dokumentiert korrigiert; Originalbaseline erhalten.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+          "after": {
+            "prompt": "Wer ist der Stern in unserem Sonnensystem?",
+            "answers": [
+              "Die Sonne",
+              "Die Erde",
+              "Der Mond"
+            ],
+            "correct": 0,
+            "hint": "Stell dir vor, du schaltest das Sonnenlicht aus. Welcher der drei Körper erzeugt dann weiterhin eigenes sichtbares Licht?",
+            "why": "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
+            "wrong": [
+              "Die Sonne erzeugt Licht. Erde und Mond reflektieren Sonnenlicht.",
+              "Die Erde ist ein Planet und reflektiert Licht.",
+              "Der Mond reflektiert Licht; er ist kein Stern."
+            ]
+          },
+          "afterHash": "417b6175d44ae82bb80db43db906460d0b69a3c6d30c5d02ab1f3b74d832fab3",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Stell dir vor, du schaltest das Sonnenlicht aus. Welcher der drei Körper erzeugt dann weiterhin eigenes sichtbares Licht?",
+          "sourceIds": [
+            "planet-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Widerspruch im alten Ausschaltgedanken entfernen; Lichtentstehung und Reflexion unterscheiden, ohne die richtige Option zu nennen.",
+        "correctIndexAndAllAnswerStringsRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "product": "e75d6deb1c7ce60e",
+          "threeEngineSource": "82e060e20abf4515cabe12de20f290a0585572c45bb5a988febdb66a9eff3828",
+          "nativeColdSource": "7f48c9b08a4c3c4e0c054b7a04345509a9f54bdbdad64b12b1263ef17b6298ba",
+          "scope": "Actual five existing chapter/15task/4diagram early views, native200 and true stopped-origin cold client-offline with existing actualM74 synthetic pass; original failures retained. Final current full/native delivery pending. Subsequent explicit AI-origin caption and actualM74 chronology separately need final regression."
+        }
       }
     },
     {
@@ -329,16 +373,18 @@
         "wrong": [
           "Eine Nahaufnahme kann Land überbetonen; der globale Anteil bleibt anders.",
           "Ein Ausschnitt ist keine vollständige Messung.",
-          "Durchsichtigkeit erklärt keinen globalen Flächenanteil."
+          "Ob Wasser durchsichtig ist, entscheidet nicht über seinen Flächenanteil. Vergleiche, welcher Teil der Erdoberfläche bedeckt ist, statt nur auf das sichtbare Motiv zu achten."
         ]
       },
       "beforeHash": "7c8bfc61c00a6569db4fd49a98e12adefdfdbf5e817ec3883d8f3965de0a0e98",
-      "afterHash": "99601269e0e9206030bdd5e1c0972802bd8edcd058baad37c84db1ecf02f43ae",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage zuerst: Zeigt das Bild eine ganze Erde oder nur einen ausgewählten Ort? Der Maßstab deiner Aussage muss zum Ausschnitt passen.",
+      "afterHash": "7ba52b3b78e36c78c582b5e82643a16e0eb4c400238fa1a502f14a9d2cdcf175",
+      "decision": "Fehlantwort zur Durchsichtigkeit konkret auf die Verwechslung sichtbaresMotiv/bedeckteOberfläche zurückführen. Dies ist eine didaktische Folgerung aus der Flächenbedeutung der71Prozent, keine neue optische Messbehauptung.",
       "sourceIds": [
-        "planet-base"
+        "planet-base",
+        "planet-earth-shape",
+        "continents-convention"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Konkrete Quellen-/Fach-/Didaktikgegenlese durch KI und gezielte aktuelle Darstellung/Bedienung in tatsächlichem Chromium, Firefox und WebKit. Native200-/kalte Offline-Probe am selben Produkt bestanden; finale vollständige Pflichtabnahme und Lieferung dieser Revision gesondert erforderlich.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -354,6 +400,48 @@
         "countercheck": "NASA71-Prozent-Angabe bezieht sich auf Oberfläche, nicht Wasservolumen. NOAA erklärt Kugelnäherung/Abplattung. Tatsächlich100gleich große Kästchen mit71/29Anteil; Orange kennzeichnet die Auswahl, nicht einen dritten Stoff.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+          "after": {
+            "prompt": "Eine Nahaufnahme zeigt fast nur Land. Ist die Erde überwiegend Land?",
+            "answers": [
+              "Nein, der Bildausschnitt reicht nicht",
+              "Ja, jedes Foto beweist das",
+              "Ja, Wasser ist durchsichtig"
+            ],
+            "correct": 0,
+            "hint": "Frage zuerst: Zeigt das Bild eine ganze Erde oder nur einen ausgewählten Ort? Der Maßstab deiner Aussage muss zum Ausschnitt passen.",
+            "why": "Eine Nahaufnahme kann Land überbetonen; der globale Anteil bleibt anders.",
+            "wrong": [
+              "Eine Nahaufnahme kann Land überbetonen; der globale Anteil bleibt anders.",
+              "Ein Ausschnitt ist keine vollständige Messung.",
+              "Durchsichtigkeit erklärt keinen globalen Flächenanteil."
+            ]
+          },
+          "afterHash": "99601269e0e9206030bdd5e1c0972802bd8edcd058baad37c84db1ecf02f43ae",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Frage zuerst: Zeigt das Bild eine ganze Erde oder nur einen ausgewählten Ort? Der Maßstab deiner Aussage muss zum Ausschnitt passen.",
+          "sourceIds": [
+            "planet-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Fehlantwort zur Durchsichtigkeit konkret auf die Verwechslung sichtbaresMotiv/bedeckteOberfläche zurückführen. Dies ist eine didaktische Folgerung aus der Flächenbedeutung der71Prozent, keine neue optische Messbehauptung.",
+        "correctIndexAndAllAnswerStringsRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "product": "e75d6deb1c7ce60e",
+          "threeEngineSource": "82e060e20abf4515cabe12de20f290a0585572c45bb5a988febdb66a9eff3828",
+          "nativeColdSource": "7f48c9b08a4c3c4e0c054b7a04345509a9f54bdbdad64b12b1263ef17b6298ba",
+          "scope": "Actual five existing chapter/15task/4diagram early views, native200 and true stopped-origin cold client-offline with existing actualM74 synthetic pass; original failures retained. Final current full/native delivery pending. Subsequent explicit AI-origin caption and actualM74 chronology separately need final regression."
+        }
       }
     },
     {
@@ -553,7 +641,7 @@
           "Immer zum Nordpol"
         ],
         "correct": 0,
-        "hint": "Zeichne einen Punkt für den Erdmittelpunkt und eine Person am Rand. Wohin würde ein losgelassener Gegenstand ungefähr fallen?",
+        "hint": "Beginne bei einer Person auf der Oberfläche. Überlege, welche Richtung in ihrem Alltag als Fallen zum Boden beschrieben wird.",
         "why": "Schwerkraft zieht in Richtung Erdmitte.",
         "wrong": [
           "Schwerkraft zieht in Richtung Erdmitte.",
@@ -562,12 +650,13 @@
         ]
       },
       "beforeHash": "3f373cef6bb30253b0e572f2abd8338449e3cf519a67008f918e886a393e8f2b",
-      "afterHash": "c5015ede38962aa261f16a83a1240ecaef74fb044291bbccfac0d513102f0dd7",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne einen Punkt für den Erdmittelpunkt und eine Person am Rand. Wohin würde ein losgelassener Gegenstand ungefähr fallen?",
+      "afterHash": "641b2c6557ecc3717cccc7792491d6b29c6b0c2617478b1b5c6fb56f6029fbf1",
+      "decision": "Örtliche Fallrichtung als Ausgang nehmen; den Mittelpunkt nicht bereits im Hinweis als Ziel vorzeichnen.",
       "sourceIds": [
-        "planet-base"
+        "planet-base",
+        "planet-gravity"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Konkrete Quellen-/Fach-/Didaktikgegenlese durch KI und gezielte aktuelle Darstellung/Bedienung in tatsächlichem Chromium, Firefox und WebKit. Native200-/kalte Offline-Probe am selben Produkt bestanden; finale vollständige Pflichtabnahme und Lieferung dieser Revision gesondert erforderlich.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -583,6 +672,48 @@
         "countercheck": "NASA Schwerkraft/Atmosphäre und eigenes Zentrenmodell gegengelesen. Lokal unten ungefähr zur Erdmitte; gedrehtes Papier ändert nur die Ansicht. Zwei tatsächlich gezeichnete Pfeilspitzen zeigen nach innen, nicht nur ein beschrifteter Strich.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+          "after": {
+            "prompt": "Wohin zeigt unten für Menschen auf der Erde?",
+            "answers": [
+              "Zur Erdmitte",
+              "Immer nach links",
+              "Immer zum Nordpol"
+            ],
+            "correct": 0,
+            "hint": "Zeichne einen Punkt für den Erdmittelpunkt und eine Person am Rand. Wohin würde ein losgelassener Gegenstand ungefähr fallen?",
+            "why": "Schwerkraft zieht in Richtung Erdmitte.",
+            "wrong": [
+              "Schwerkraft zieht in Richtung Erdmitte.",
+              "Links hängt von deiner Blickrichtung ab.",
+              "Der Nordpol ist keine gemeinsame Fallrichtung."
+            ]
+          },
+          "afterHash": "c5015ede38962aa261f16a83a1240ecaef74fb044291bbccfac0d513102f0dd7",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Zeichne einen Punkt für den Erdmittelpunkt und eine Person am Rand. Wohin würde ein losgelassener Gegenstand ungefähr fallen?",
+          "sourceIds": [
+            "planet-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Örtliche Fallrichtung als Ausgang nehmen; den Mittelpunkt nicht bereits im Hinweis als Ziel vorzeichnen.",
+        "correctIndexAndAllAnswerStringsRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "product": "e75d6deb1c7ce60e",
+          "threeEngineSource": "82e060e20abf4515cabe12de20f290a0585572c45bb5a988febdb66a9eff3828",
+          "nativeColdSource": "7f48c9b08a4c3c4e0c054b7a04345509a9f54bdbdad64b12b1263ef17b6298ba",
+          "scope": "Actual five existing chapter/15task/4diagram early views, native200 and true stopped-origin cold client-offline with existing actualM74 synthetic pass; original failures retained. Final current full/native delivery pending. Subsequent explicit AI-origin caption and actualM74 chronology separately need final regression."
+        }
       }
     },
     {
@@ -611,7 +742,7 @@
           "Beide zur Erdmitte"
         ],
         "correct": 2,
-        "hint": "Setze zwei Personen auf gegenüberliegende Seiten derselben Kugel. Zeichne für jede Person den Weg zur gemeinsamen Mitte ein.",
+        "hint": "Überlege zuerst für jede Person einzeln, in welcher Richtung sie ihren Boden sieht. Vergleiche danach die Pfeile, ohne die Ausrichtung des Papiers mit einem gemeinsamen Unten zu verwechseln.",
         "why": "Die Richtung ist örtlich verschieden, aber beide Pfeile zeigen zum Mittelpunkt.",
         "wrong": [
           "Die Ausrichtung des Blatts ist kein weltweites Unten.",
@@ -620,12 +751,13 @@
         ]
       },
       "beforeHash": "8a9d483da4a26ab5f17b614d40a8108cb21e0fae6e6c002c9270d6db08bbc9a9",
-      "afterHash": "f297f5fb97aabef1480e522fa7c7b521281df2f9206370075ca3815f5eabf0bc",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Setze zwei Personen auf gegenüberliegende Seiten derselben Kugel. Zeichne für jede Person den Weg zur gemeinsamen Mitte ein.",
+      "afterHash": "7fd0bdee6fa9069ca6df808e04ce18122726412680b2d7ec1d78e449d85e71fd",
+      "decision": "Beide örtlichen Bodenrichtungen erst einzeln betrachten; gemeinsame Mitte nicht im Hinweis vorgeben.",
       "sourceIds": [
-        "planet-base"
+        "planet-base",
+        "planet-gravity"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Konkrete Quellen-/Fach-/Didaktikgegenlese durch KI und gezielte aktuelle Darstellung/Bedienung in tatsächlichem Chromium, Firefox und WebKit. Native200-/kalte Offline-Probe am selben Produkt bestanden; finale vollständige Pflichtabnahme und Lieferung dieser Revision gesondert erforderlich.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -641,6 +773,48 @@
         "countercheck": "NASA Schwerkraft/Atmosphäre und eigenes Zentrenmodell gegengelesen. Lokal unten ungefähr zur Erdmitte; gedrehtes Papier ändert nur die Ansicht. Zwei tatsächlich gezeichnete Pfeilspitzen zeigen nach innen, nicht nur ein beschrifteter Strich.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+          "after": {
+            "prompt": "Zwei Menschen stehen gegenüber auf der Erde. Wie zeigen ihre Unten-Pfeile?",
+            "answers": [
+              "Beide in dieselbe Richtung auf dem Blatt",
+              "Beide vom Boden weg",
+              "Beide zur Erdmitte"
+            ],
+            "correct": 2,
+            "hint": "Setze zwei Personen auf gegenüberliegende Seiten derselben Kugel. Zeichne für jede Person den Weg zur gemeinsamen Mitte ein.",
+            "why": "Die Richtung ist örtlich verschieden, aber beide Pfeile zeigen zum Mittelpunkt.",
+            "wrong": [
+              "Die Ausrichtung des Blatts ist kein weltweites Unten.",
+              "Vom Mittelpunkt weg wäre hier oben.",
+              "Die Richtung ist örtlich verschieden, aber beide Pfeile zeigen zum Mittelpunkt."
+            ]
+          },
+          "afterHash": "f297f5fb97aabef1480e522fa7c7b521281df2f9206370075ca3815f5eabf0bc",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Setze zwei Personen auf gegenüberliegende Seiten derselben Kugel. Zeichne für jede Person den Weg zur gemeinsamen Mitte ein.",
+          "sourceIds": [
+            "planet-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Beide örtlichen Bodenrichtungen erst einzeln betrachten; gemeinsame Mitte nicht im Hinweis vorgeben.",
+        "correctIndexAndAllAnswerStringsRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "product": "e75d6deb1c7ce60e",
+          "threeEngineSource": "82e060e20abf4515cabe12de20f290a0585572c45bb5a988febdb66a9eff3828",
+          "nativeColdSource": "7f48c9b08a4c3c4e0c054b7a04345509a9f54bdbdad64b12b1263ef17b6298ba",
+          "scope": "Actual five existing chapter/15task/4diagram early views, native200 and true stopped-origin cold client-offline with existing actualM74 synthetic pass; original failures retained. Final current full/native delivery pending. Subsequent explicit AI-origin caption and actualM74 chronology separately need final regression."
+        }
       }
     },
     {
@@ -727,7 +901,7 @@
           "Drehung um die Erdachse"
         ],
         "correct": 2,
-        "hint": "Unterscheide die Drehung der Erde um ihre Achse vom Weg der Erde um die Sonne. Welchen Vorgang kannst du innerhalb eines Tages verfolgen?",
+        "hint": "Achte auf einen vollständigen Durchgang: ein Drehen am selben Ort oder ein ganzer Weg auf einer Bahn. Ordne zuerst die beiden Bewegungen im Bild zu und vergleiche danach ihre Zeitspannen.",
         "why": "Die Erde dreht sich ungefähr einmal pro Tag um ihre Achse.",
         "wrong": [
           "Der Sonnenumlauf dauert ungefähr ein Jahr.",
@@ -736,12 +910,12 @@
         ]
       },
       "beforeHash": "f99e244fe4bd1a0a43a61eea3367cf6a1fc5b71525518fc28848361f5507c52f",
-      "afterHash": "3257e117fb2bbf4a8f76dfb926e146c92ed80051b56eeb8851258234770ec0a2",
-      "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide die Drehung der Erde um ihre Achse vom Weg der Erde um die Sonne. Welchen Vorgang kannst du innerhalb eines Tages verfolgen?",
+      "afterHash": "c3d59dfaea020495a8c9fde5f8260b14773c2fb089cc1edbea1d7fab09888b2d",
+      "decision": "Vollständige Drehung/Umlauf von bloßer Beobachtung einer Bewegung innerhalb eines Tages unterscheiden.",
       "sourceIds": [
         "planet-base"
       ],
-      "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung.",
+      "sourceStatus": "Konkrete Quellen-/Fach-/Didaktikgegenlese durch KI und gezielte aktuelle Darstellung/Bedienung in tatsächlichem Chromium, Firefox und WebKit. Native200-/kalte Offline-Probe am selben Produkt bestanden; finale vollständige Pflichtabnahme und Lieferung dieser Revision gesondert erforderlich.",
       "independentReview": false,
       "aiCounterreview20261020": {
         "mode": "ai-self-review",
@@ -756,6 +930,48 @@
         "countercheck": "NASA Erdrotation und Sonnenumlauf sind verschiedene Zeiträume; ungefähr24Stunden und365¼Tage sind gerundet. Kein ausnahmsloser Vierjahres-Kalenderzwang. Zwei unabhängige Pfeilspitzen; Größen, Abstände und Perspektive sind kein Messmodell.",
         "allOptionFeedbackActuallyChecked": true,
         "technicalProof": "/workspace/work/wk-continuation/journey-planet-inside10-20261020-after-v4/report.json"
+      },
+      "revisionHistory": [
+        {
+          "retainedOn": "2026-10-28",
+          "basisCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+          "after": {
+            "prompt": "Welche Bewegung gehört ungefähr zu einem Tag?",
+            "answers": [
+              "Ein Umlauf um die Sonne",
+              "Ein Umlauf des Mondes",
+              "Drehung um die Erdachse"
+            ],
+            "correct": 2,
+            "hint": "Unterscheide die Drehung der Erde um ihre Achse vom Weg der Erde um die Sonne. Welchen Vorgang kannst du innerhalb eines Tages verfolgen?",
+            "why": "Die Erde dreht sich ungefähr einmal pro Tag um ihre Achse.",
+            "wrong": [
+              "Der Sonnenumlauf dauert ungefähr ein Jahr.",
+              "Der Mondumlauf ist nicht die tägliche Erddrehung.",
+              "Die Erde dreht sich ungefähr einmal pro Tag um ihre Achse."
+            ]
+          },
+          "afterHash": "3257e117fb2bbf4a8f76dfb926e146c92ed80051b56eeb8851258234770ec0a2",
+          "decision": "Bisherige Antwortoptionen und Rückmeldungen erhalten; keine zusätzliche wissenschaftliche Abnahme behauptet. Freiwilligen Hinweis einzeln neu redigiert: Unterscheide die Drehung der Erde um ihre Achse vom Weg der Erde um die Sonne. Welchen Vorgang kannst du innerhalb eines Tages verfolgen?",
+          "sourceIds": [
+            "planet-base"
+          ],
+          "sourceStatus": "Individuelle KI-Quellen-/Fach-/Didaktikgegenlese und aktuelle gezielte echte Browserprüfung; keine unabhängige Menschenprüfung."
+        }
+      ],
+      "aiCounterreview20261028": {
+        "mode": "ai-self-review",
+        "reviewedOn": "2026-10-28",
+        "countercheck": "Vollständige Drehung/Umlauf von bloßer Beobachtung einer Bewegung innerhalb eines Tages unterscheiden.",
+        "correctIndexAndAllAnswerStringsRetained": true,
+        "actualAllOptionFeedbackRead": true,
+        "renderedCurrentRevisionPending": false,
+        "earlyEvidence": {
+          "product": "e75d6deb1c7ce60e",
+          "threeEngineSource": "82e060e20abf4515cabe12de20f290a0585572c45bb5a988febdb66a9eff3828",
+          "nativeColdSource": "7f48c9b08a4c3c4e0c054b7a04345509a9f54bdbdad64b12b1263ef17b6298ba",
+          "scope": "Actual five existing chapter/15task/4diagram early views, native200 and true stopped-origin cold client-offline with existing actualM74 synthetic pass; original failures retained. Final current full/native delivery pending. Subsequent explicit AI-origin caption and actualM74 chronology separately need final regression."
+        }
       }
     },
     {
@@ -20409,7 +20625,15 @@
     "planet-base": {
       "title": "NASA · Earth facts",
       "url": "https://science.nasa.gov/earth/facts/",
-      "scope": "Bisherige Themenquelle; nicht allein Beleg für jede neue Aussage."
+      "scope": "Am28.10.2026 die Abschnitte Erde/Orbit and Rotation/Surface/Atmosphere gelesen: dritter Planet, ungefährer Tag/Jahresumlauf, rund71Prozent Ozeanoberfläche und Luft als Gasgemisch. Gerundete Dauerangaben, keine exakte Kalenderregel oder genaueAE aus dieser Übersicht übernommen. Mantel-/Magnetumkehrvereinfachungen nicht verwendet.",
+      "history": [
+        {
+          "retainedOn": "2026-10-28",
+          "title": "NASA · Earth facts",
+          "url": "https://science.nasa.gov/earth/facts/",
+          "scope": "Bisherige Themenquelle; nicht allein Beleg für jede neue Aussage."
+        }
+      ]
     },
     "inside-base": {
       "title": "USGS · This Dynamic Earth",
@@ -20847,6 +21071,26 @@
       "title": "NOAA · Geografische Länge und Bezugslinien",
       "url": "https://oceanservice.noaa.gov/facts/longitude.html",
       "scope": "Tatsächlich ausgewählte4–11/13–16 gelesen: Längenbezug, Zusammenlaufen und historische/moderne Meridiane; keine aktuelle GPS-Stationszahl oder universelle Smartphonegenauigkeit."
+    },
+    "planet-sun-light": {
+      "title": "NASA · Die Sonne erzeugt Licht",
+      "url": "https://science.nasa.gov/sun/facts/",
+      "scope": "Am28.10.2026 Einleitung/10things gelesen: Sonne als Stern und Energie-/Lichtquelle, sehr viel größer als die Erde. Eigene Lichtwegskizze ist kein Größenmaßstab."
+    },
+    "planet-light-reflection": {
+      "title": "NASA · Wie Licht zurückgeworfen wird",
+      "url": "https://science.nasa.gov/ems/03_behaviors/",
+      "scope": "Am28.10.2026 AbschnittReflection gelesen: einfallendes Licht wird zurückgeworfen. Zusammen mit der Lichtquelle trägt dies den eigenen qualitativen Sonne–Erde–Auge-Vergleich. Keine vollständige Reflexion jedes Materials behauptet."
+    },
+    "planet-gravity": {
+      "title": "NASA · Was Schwerkraft bewirkt",
+      "url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+      "scope": "Am28.10.2026 What Is Gravity/What else does gravity do/Gravity on Earth gelesen: Fallen/Anziehung und Festhalten der Atmosphäre. Erdmittelpunkt als Kugelnäherung nahe der Oberfläche, örtliche Variationen ausdrücklich vorhanden; keine Kraftstärke aus Pfeilen, keine pauschale Masse-Gewicht-Regel übernommen."
+    },
+    "planet-earth-shape": {
+      "title": "NOAA · Die Form der Erde",
+      "url": "https://oceanservice.noaa.gov/facts/earth-round.html",
+      "scope": "Kugelnäherung, Abplattung und unregelmäßige reale Oberfläche; keine exakten Höhenrekorde."
     }
   },
   "sectionReview": {
@@ -20949,5 +21193,20 @@
     "stoppedServerLearningCases": 8,
     "nativeStoppedServerLearningCases": 8,
     "boundaries": "Actual speech text/voice/rate handoff only, no hearing or physical-device claim. Exact final complete GitHub CI/fresh native admission/test-live/Vercel/browser still required."
+  },
+  "planetRevision20261028": {
+    "scope": "Five existing chapter contexts/all15existingtasks individually read, five task hints/feedback rows specifically revised. All240answerpositions/words unchanged, old originals and own previousAfter reviews retained. Four actual old diagrams inspected in27views before revision; newdiagrams and current UI acceptance pending. No claim15newtasks or full80/64/240completion.",
+    "independentReview": false,
+    "changedTaskIds": [
+      "planet:0:0",
+      "planet:1:2",
+      "planet:3:0",
+      "planet:3:1",
+      "planet:4:0"
+    ],
+    "all15PromptsAnswerStringsAndCorrectPositionsPreserved": true,
+    "sourcesActuallyReadOn": "2026-10-28",
+    "renderedCurrentRevisionPending": false,
+    "fullCurrentAcceptanceAndDeliveryPending": true
   }
 }

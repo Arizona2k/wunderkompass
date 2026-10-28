@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "aa2764a352ae84790cef7a9084a974a3c4023e33",
+    "commit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -68,7 +68,8 @@
       "965ea4397860c3d922e0e228d20dd7521b9445c7",
       "651ae08f4c7c857543e71475111c3ef1849a628d",
       "e4424373a4ee6aeda5273a245756d3b0e91e590f",
-      "aa2764a352ae84790cef7a9084a974a3c4023e33"
+      "aa2764a352ae84790cef7a9084a974a3c4023e33",
+      "b64c49abf1bcd42427adaff675ba6a68b792ac10"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1803,6 +1804,28 @@
           "createdAt": "2026-10-28T11:09:26Z",
           "updatedAt": "2026-10-28T11:09:26Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/H2LXhy1Zzeckye9V4ZLVJYjoNmvC"
+        }
+      ],
+      "checkedOn": "2026-10-28"
+    },
+    {
+      "number": 74,
+      "title": "Wärmebegriffe und Warumfragen im Wissensbuch vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/74",
+      "base": "test-live",
+      "mergedAt": "2026-10-28T15:14:21Z",
+      "mergeCommit": "b64c49abf1bcd42427adaff675ba6a68b792ac10",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/b64c49abf1bcd42427adaff675ba6a68b792ac10/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57481685972,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-28T15:14:41Z",
+          "updatedAt": "2026-10-28T15:14:41Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/GkRYXCUHiZ7wPTAPeANtK4EEMSLj"
         }
       ],
       "checkedOn": "2026-10-28"

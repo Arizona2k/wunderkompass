@@ -12,6 +12,7 @@ import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import http from 'node:http';import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {planetDiagramViews} from './planet-diagrams.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
 import {BROWSER_ERROR_FIELDS,browserErrorArrays,browserErrorsComplete,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
@@ -134,6 +135,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.equal(new Set(report.bookLearning.bookMeasurements.map(row=>row.term+':'+row.width)).size,native?21:14,'every cached SI term/width identity is distinct');
   assert.equal(report.bookLearning.bookHeat.length,native?18:12,'all six heat views in every cached layout including native640');
   assert.equal(new Set(report.bookLearning.bookHeat.map(row=>row.term+':'+row.width)).size,native?18:12,'every cached heat term/width identity is distinct');
+  report.planetDiagrams=[];for(const width of(native?[320,640]:[320,1440])){await page.setViewportSize({width:width*(native?2:1),height:950});report.planetDiagrams.push(...await planetDiagramViews(page,{width,large:true,native,offline:true,networkOffline:false,serverStopped:report.serverStopped,shots:shots??'.qa-output',engine:kind}));}assert.equal(report.planetDiagrams.length,18);
   report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   assertBrowserErrors('after complete cached learning matrix');
   return report;
