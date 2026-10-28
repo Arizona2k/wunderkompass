@@ -54292,6 +54292,669 @@
         "offline": false,
         "report": "Aktuelle frühe Teilprüfungen getrennt; vollständige konsolidierte Qualifikation steht aus."
       }
+    },
+    {
+      "id": "words:Kohäsion",
+      "dataHash": "6cd7d8f19a400dc439da10c6a901ba60919f39eb2ce30919b90c4c3b3b5c328d",
+      "teachingDataHash": "50b05215b26044f918ccbb6ca298e078756ca6ff34bad09be0d4d5b1da4ea259",
+      "goal": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material.",
+      "explanation": "Teilchen desselben Stoffes ziehen einander an. Bei Wasser trägt diese Wechselwirkung zu Tropfenbildung und Oberflächenspannung bei. Kohäsion ist von der Anziehung zu einem anderen Material zu unterscheiden. Kohäsion ist keine bewusst gewählte Verbindung und kein Klebstoff mit Absichten. Für eine Tropfenform sind auch Umgebung, Schwerkraft und Oberfläche wichtig; Kohäsion allein erklärt nicht jede Form.",
+      "example": "Zeichne mehrere Wassersymbole und Verbindungslinien nur zwischen ihnen. Ergänze daneben eine gedachte Gefäßwand in einer anderen Farbe. Die Linien sind Beziehungszeichen, keine Fotos oder Kräfte in gemessenen Größen.",
+      "whyItMatters": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material.",
+      "hint": "Achte auf die Stoffbezeichnungen an beiden Enden der Verbindung.",
+      "feedback": "Zwei Wasserteilchen gehören zum selben Stoff. Diese Paarung steht hier für Kohäsion. Die Linie misst keine Kraft. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Wasserteilchen wirken auf andere Wasserteilchen. So lässt sich ein Teil des Verhaltens von Tropfen erklären.",
+        "9-11": "Teilchen desselben Stoffes ziehen einander an. Bei Wasser trägt diese Wechselwirkung zu Tropfenbildung und Oberflächenspannung bei. Kohäsion ist von der Anziehung zu einem anderen Material zu unterscheiden.",
+        "12-14": "Kohäsion ist keine bewusst gewählte Verbindung und kein Klebstoff mit Absichten. Für eine Tropfenform sind auch Umgebung, Schwerkraft und Oberfläche wichtig; Kohäsion allein erklärt nicht jede Form."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+          "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#molecule-pairs",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material.",
+          "learningPurpose": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material."
+        }
+      ],
+      "links": [
+        "topics-science:science-surface-tension",
+        "words:Adhäsion",
+        "words:Oberflächenspannung"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/words/Koh%C3%A4sion",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "f57761a01d6da7697dd515f99ce117dad78c749cebcd13c61c6c515541b48a53"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "words:Adhäsion",
+      "dataHash": "6eec835b9e428cba1edbab8aba294c7b46d7477f08fd4928a5cf9afbd4cda4c6",
+      "teachingDataHash": "834cf143c358f0a5e53d8bcee3d21a1e0d30766ed4683c5c5966b63d0c22ac54",
+      "goal": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen.",
+      "explanation": "Teilchen verschiedener Materialien können sich anziehen. Wasser kann etwa eine passende Gefäßwand benetzen. Dieses Verhalten unterscheidet sich von Kohäsion zwischen Teilchen desselben Stoffes. Benetzung hängt von beiden Materialien und ihrer Oberfläche ab. Wasser muss nicht auf jedem Stoff gleich stark haften. Eine gezeichnete Verbindung zur Wand misst keine genaue Anziehung oder Steighöhe.",
+      "example": "Zeichne Wassersymbole neben einer gedachten Gefäßwand. Markiere Wasser-zu-Wand und Wasser-zu-Wasser verschieden. Die eigene Skizze stellt keine wirkliche Oberfläche dar und misst keine Kräfte.",
+      "whyItMatters": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen.",
+      "hint": "Vergleiche die Stoffnamen beider verbundener Teile. Der Ort an der Oberfläche allein benennt noch keine Paarung.",
+      "feedback": "Wasser und das Wandmaterial sind verschieden. Ihre Wechselwirkung ist die hier gemeinte Adhäsion. Wie gut Wasser benetzt, hängt von beiden Materialien ab. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Wasser und ein anderes Material können aufeinander wirken. Ein Tropfen verhält sich deshalb nicht auf jeder Fläche gleich.",
+        "9-11": "Teilchen verschiedener Materialien können sich anziehen. Wasser kann etwa eine passende Gefäßwand benetzen. Dieses Verhalten unterscheidet sich von Kohäsion zwischen Teilchen desselben Stoffes.",
+        "12-14": "Benetzung hängt von beiden Materialien und ihrer Oberfläche ab. Wasser muss nicht auf jedem Stoff gleich stark haften. Eine gezeichnete Verbindung zur Wand misst keine genaue Anziehung oder Steighöhe."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+          "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#molecule-pairs",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen.",
+          "learningPurpose": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen."
+        }
+      ],
+      "links": [
+        "topics-science:science-capillarity",
+        "words:Kohäsion",
+        "words:Kapillarwirkung"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/words/Adh%C3%A4sion",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "356ba56a51e0c192d24c0348257b4a8bc6f6dc868bc5b44462ac1bc46845ecb8"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "words:Oberflächenspannung",
+      "dataHash": "2309e2ccb59f160fdde9d2af317272f3a3230ef8bcbd2c6f9984b7876b72f3f0",
+      "teachingDataHash": "b19f1648df9871dfbe6080a1a3d4eaca90b34057c048f950d17d3c98099cfa64",
+      "goal": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut.",
+      "explanation": "Die Grenzfläche einer Flüssigkeit widersetzt sich einer Vergrößerung ihrer Fläche. Bei Wasser tragen die Wechselwirkungen der Moleküle dazu bei. Die Oberfläche ist dabei keine feste Haut aus einem anderen Stoff. Form und Verhalten hängen auch von Schwerkraft, Benetzung und Störungen ab. Dass ein kleines Objekt an der Oberfläche gehalten wird, ist kein Beweis, dass es weniger dicht als Wasser ist oder eine feste Haut darauf liegt.",
+      "example": "Vergleiche zwei eigene Tropfenskizzen mit glatter und stark vergrößerter Grenzlinie. Beschrifte sie als Formvergleich, nicht als Energiemessung. Verwende keine Nadeln oder zerbrechlichen Gefäße für dieses Papierbeispiel.",
+      "whyItMatters": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut.",
+      "hint": "Vergleiche den Kontakt mit der Oberfläche und den Zustand vollständig darunter.",
+      "feedback": "Die Grenzfläche und die Benetzung können Kräfte beitragen. Das ist keine feste Haut und kein allgemeiner Nachweis geringerer Dichte. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Ein Wassertropfen kann eine gekrümmte Oberfläche bilden. Diese Fläche verhält sich anders als eine beliebig dehnbare Papierzeichnung.",
+        "9-11": "Die Grenzfläche einer Flüssigkeit widersetzt sich einer Vergrößerung ihrer Fläche. Bei Wasser tragen die Wechselwirkungen der Moleküle dazu bei. Die Oberfläche ist dabei keine feste Haut aus einem anderen Stoff.",
+        "12-14": "Form und Verhalten hängen auch von Schwerkraft, Benetzung und Störungen ab. Dass ein kleines Objekt an der Oberfläche gehalten wird, ist kein Beweis, dass es weniger dicht als Wasser ist oder eine feste Haut darauf liegt."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+          "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#surface-support",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut.",
+          "learningPurpose": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut."
+        }
+      ],
+      "links": [
+        "topics-science:science-surface-tension",
+        "words:Kohäsion",
+        "why:35"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/words/Oberfl%C3%A4chenspannung",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "a77c32434ef723878e0b7aef01761a9ff9bcfb15c46f379cb6770944a3e86d98"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "words:Kapillarwirkung",
+      "dataHash": "0b4d17e173dabe6a28d4c5ebc921c2e97da799430699012ccac4f465b3f2f939",
+      "teachingDataHash": "795a2771ff12db3d82c661a3ec523dd8b1d3f3cc0f6f8efb5c445dd5519a0873",
+      "goal": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten.",
+      "explanation": "Eine Flüssigkeit kann in engen benetzbaren Räumen ihre Lage verändern, etwa in kleinen Zwischenräumen eines Tuchs. Anziehung zum Material, Zusammenhalt der Flüssigkeit und Schwerkraft wirken dabei zusammen. Die Wirkung hängt von Flüssigkeit, Material und Weite der Räume ab. Sie hebt Wasser nicht beliebig hoch und erklärt den Transport bis zur Spitze eines großen Baumes nicht allein.",
+      "example": "Zeichne ein gedachtes Tuch mit kleinen Zwischenräumen und eine begrenzte feuchte Zone. Kennzeichne, dass Pfeile nur eine mögliche Ausbreitung zeigen. Sie geben keine gemessene Geschwindigkeit oder unbegrenzte Steighöhe an.",
+      "whyItMatters": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten.",
+      "hint": "Vergleiche die eingezeichneten Höhen. Welche Größe wurde bei gleichem Material und derselben Flüssigkeit geändert?",
+      "feedback": "Unter denselben idealisierten Bedingungen hängt die Höhe vom Radius ab. Enger kann hier höheren, aber keinen unbegrenzten Anstieg bedeuten. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Wasser kann in kleinen Zwischenräumen wandern. Darum lässt sich eine feuchte Stelle in einem passenden Tuch ausbreiten.",
+        "9-11": "Eine Flüssigkeit kann in engen benetzbaren Räumen ihre Lage verändern, etwa in kleinen Zwischenräumen eines Tuchs. Anziehung zum Material, Zusammenhalt der Flüssigkeit und Schwerkraft wirken dabei zusammen.",
+        "12-14": "Die Wirkung hängt von Flüssigkeit, Material und Weite der Räume ab. Sie hebt Wasser nicht beliebig hoch und erklärt den Transport bis zur Spitze eines großen Baumes nicht allein."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+          "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#limited-capillary",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten.",
+          "learningPurpose": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten."
+        }
+      ],
+      "links": [
+        "topics-science:science-capillarity",
+        "words:Adhäsion",
+        "why:34"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/words/Kapillarwirkung",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "6a6a430759ece49b36348fbab947e5bbadc16d22174a68ddf68ea5083b269bab"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "words:Dichte",
+      "dataHash": "a89c241e8ea90b650691d243499eae042b4c3099bef5224e143199e0a293e0d3",
+      "teachingDataHash": "ec74af1171eca46ed4360c3191cb2b3f01fcfbcd40a7f8bb3d02e6e99369d448",
+      "goal": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe.",
+      "explanation": "Wie viel Masse in einem bestimmten Volumen steckt. Eis ist weniger dicht als flüssiges Wasser. Eine große Form ist nicht automatisch dichter. Für den Vergleich brauchst du beide Größen. Dichte allein beschreibt bei einem hohlen Gegenstand auch nicht alle Bedingungen des Schwimmens; verdrängtes Wasser und Gesamtform zählen ebenfalls.",
+      "example": "Zeichne zwei gleich große gedachte Kästchen und gib ihnen 2 beziehungsweise 4 Masseneinheiten. Vergleiche nur dieses Zahlenmodell, ohne echte Stoffeigenschaften oder ein Schwimmergebnis zu erfinden.",
+      "whyItMatters": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe.",
+      "hint": "Vergleiche, wie viel Masse jeweils auf eine einzige gedachte Volumeneinheit entfällt.",
+      "feedback": "Für A ergibt 6 geteilt durch 2 den Wert 3, für B ergibt 8 geteilt durch 4 den Wert 2. Der Körper mit der kleineren Gesamtmasse kann also die größere Dichte haben. Die Werte gehören nur zu diesem erfundenen Zahlenbeispiel. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Dichte vergleicht Masse und Volumen. Zwei gleich große gedachte Körper können verschieden viel Masse haben.",
+        "9-11": "Wie viel Masse in einem bestimmten Volumen steckt. Eis ist weniger dicht als flüssiges Wasser.",
+        "12-14": "Eine große Form ist nicht automatisch dichter. Für den Vergleich brauchst du beide Größen. Dichte allein beschreibt bei einem hohlen Gegenstand auch nicht alle Bedingungen des Schwimmens; verdrängtes Wasser und Gesamtform zählen ebenfalls."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/water-density",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "www.noaa.gov",
+          "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absatz347 und ausschließlich Dichtedefinition aus350: Masse proVolumen, gewöhnlichesEis imüblichenVergleich. Masse=Gewicht-Vereinfachung, Zahlen-/Temperaturtabellen und fremdeGrafiken nicht übernommen.",
+          "anchor": "Absatz347 und ausschließlich Dichtedefinition aus350: Masse proVolumen, gewöhnlichesEis imüblichenVergleich. Masse=Gewicht-Vereinfachung, Zahlen-/Temperaturtabellen und fremdeGrafiken nicht übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung.",
+          "anchor": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#mass-volume",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe.",
+          "learningPurpose": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe."
+        }
+      ],
+      "links": [
+        "topics-science:science-buoyancy",
+        "words:Oberflächenspannung",
+        "words:Kilogramm",
+        "why:25",
+        "why:36"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/words/Dichte",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "dcc77822e6341a7829cea5e45d4a7bf1b03e41a87b4ff57a0f6e204034b5ef10"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "why:34",
+      "dataHash": "148b5a12461f8e32641d7e9bdacc4abb9d542e5af5e2691c4044cc776d880a95",
+      "teachingDataHash": "2da27b6c74ecaf31c151537fb0955dd95b52d963ee017031b7609aa73b05fcf8",
+      "goal": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen.",
+      "explanation": "In den engen Zwischenräumen eines benetzbaren Papiers können Anziehung an den Fasern und Zusammenhalt des Wassers zusammenwirken. Die Bewegung hat Grenzen; Wasser steigt nicht von selbst beliebig hoch. Benetzung, die Wechselwirkungen im Wasser, die Form der engen Wege und die Schwerkraft wirken zusammen. Papier ist kein Motor, der Wasser ohne Grenze hebt. Ein anderer Werkstoff kann sich anders verhalten.",
+      "example": "Zeichne einen Gedankenweg zwischen zwei Papierfasern und markiere Wasser-zu-Faser und Wasser-zu-Wasser getrennt. Das Schema berechnet keine echte Steighöhe.",
+      "whyItMatters": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen.",
+      "hint": "Trenne eine beobachtete Ausbreitung von einer Aussage über alle Materialien und beliebige Höhen.",
+      "feedback": "Benetzung und enge Wege können die Ausbreitung ermöglichen. Material, Flüssigkeit, Wegform und Schwerkraft gehören zur Erklärung. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Papier besitzt sehr schmale Zwischenräume. Dort kann sich Wasser auf Wegen zwischen den Fasern verteilen.",
+        "9-11": "In den engen Zwischenräumen eines benetzbaren Papiers können Anziehung an den Fasern und Zusammenhalt des Wassers zusammenwirken. Die Bewegung hat Grenzen; Wasser steigt nicht von selbst beliebig hoch.",
+        "12-14": "Benetzung, die Wechselwirkungen im Wasser, die Form der engen Wege und die Schwerkraft wirken zusammen. Papier ist kein Motor, der Wasser ohne Grenze hebt. Ein anderer Werkstoff kann sich anders verhalten."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+          "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#limited-capillary",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen.",
+          "learningPurpose": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
+        }
+      ],
+      "links": [
+        "topics-science:science-capillarity",
+        "words:Kapillarwirkung"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/why/Warum%20zieht%20Wasser%20in%20einem%20Papiertuch%20nach%20oben%3F",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "906a3419e9cb48d93d6f05260cba2ab785269423465439e63b6edbac13e2cdca"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "why:35",
+      "dataHash": "c9a70e3d597a5727234981fc9eb9caee3efb82a0b84bf16112e6cebaafefa60a",
+      "teachingDataHash": "bdd3dec6314acc0617b16ab71c000eb2b11d21325b557f75495626b11c5a91fd",
+      "goal": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen.",
+      "explanation": "An der Wasseroberfläche können Oberflächenspannung und Benetzung wichtig sein. Das ist eine andere Frage als das Schwimmen eines vollständig umgebenen Körpers. Eine sichtbare Grenzfläche ist keine feste Haut. Gewicht, Form, Benetzung und Kontakt mit der Wasseroberfläche wirken zusammen. Ein kleines dichtes Objekt kann unter passenden Bedingungen an dieser Grenzfläche getragen werden. Vollständig unter Wasser ist diese Oberflächenbedingung anders. Die Oberfläche ist keine feste Folie.",
+      "example": "Zeichne statt eines echten Nadelversuchs eine Oberflächenlinie mit kleinem Gedankenobjekt und eine zweite Ansicht darunter. Markiere, welche Bedingungen sich unterscheiden.",
+      "whyItMatters": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen.",
+      "hint": "Welche Grenze berührt das Objekt in jeder der beiden Ansichten?",
+      "feedback": "Die beiden Ansichten ändern die Grenzflächenbedingung. Das erklärt keinen allgemeinen Wechsel von Material oder Masse. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Die Wasseroberfläche kann kleine Dinge anders tragen als das Wasser darunter. Sie ist trotzdem keine feste Folie.",
+        "9-11": "An der Wasseroberfläche können Oberflächenspannung und Benetzung wichtig sein. Das ist eine andere Frage als das Schwimmen eines vollständig umgebenen Körpers. Eine sichtbare Grenzfläche ist keine feste Haut.",
+        "12-14": "Gewicht, Form, Benetzung und Kontakt mit der Wasseroberfläche wirken zusammen. Ein kleines dichtes Objekt kann unter passenden Bedingungen an dieser Grenzfläche getragen werden. Vollständig unter Wasser ist diese Oberflächenbedingung anders. Die Oberfläche ist keine feste Folie."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.usgs.gov",
+          "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+          "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+          "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#surface-support",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen.",
+          "learningPurpose": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
+        }
+      ],
+      "links": [
+        "topics-science:science-surface-tension",
+        "words:Oberflächenspannung"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/why/Warum%20kann%20eine%20Nadel%20anders%20auf%20Wasser%20liegen%20als%20untertauchen%3F",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "295028c7db96c91f54a1058145cb2084331db4349d1e2280bbe89b16442425a2"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
+    },
+    {
+      "id": "why:36",
+      "dataHash": "e554bda18bd3598ac03d8bbfa6407dd1a67d088a82f60ce1ecfa2583218d2412",
+      "teachingDataHash": "0dbad191d8eacc5d364472d92563a7c72870848eefed038f0ce0312a7c2e8134",
+      "goal": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen.",
+      "explanation": "Für ein Schiff zählen die gesamte Form, seine Masse und das verdrängte Wasser. Ein hohler Rumpf kann viel Wasser verdrängen. Dasselbe Material als kompakter kleiner Körper kann sich anders verhalten. Auftrieb und Gewicht müssen zusammen betrachtet werden. Ein großer Innenraum allein garantiert keine sichere Tragfähigkeit: Beladung, Wassereintritt und Lage gehören ebenfalls dazu. Das Lernmodell ist keine Bau- oder Sicherheitsfreigabe.",
+      "example": "Vergleiche auf Papier zwei gedachte Körper aus demselben Material, einen kompakt und einen hohl. Schreibe Masse und verdrängtes Volumen als getrennte unbekannte Angaben dazu.",
+      "whyItMatters": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen.",
+      "hint": "Vergleiche die ganze Form mit dem Raum, den Wasser sonst einnehmen würde.",
+      "feedback": "Die verdrängte Wassermenge bestimmt den Auftrieb. Bei gleicher Masse kann die hohle Form mehr Wasser verdrängen; Stabilität und Wassereintritt bleiben weitere Bedingungen. Deine eigene Erklärung wird nicht automatisch bewertet.",
+      "modelLimits": "Eigene qualitative Zeichnung mit direkt sichtbaren HTML-Legenden und Grenzen. Keine fremden Messdaten, Fotos oder Grafiken. Keine berechnete Steighöhe, Tragfähigkeit, Kraftmessung oder realen Stoffwerte aus erfundenen Modellzahlen abgeleitet.",
+      "reviewedBy": "Codex · KI-Selbstprüfung mit kritischem Quellen-/Textgegenlesen, keine unabhängige Menschen- oder Kinderabnahme",
+      "reviewedOn": "2026-10-28",
+      "ageLevels": {
+        "6-8": "Ein Schiff besitzt einen großen Rumpf mit Innenraum. Seine Form ist wichtig, nicht nur der Name des Materials.",
+        "9-11": "Für ein Schiff zählen die gesamte Form, seine Masse und das verdrängte Wasser. Ein hohler Rumpf kann viel Wasser verdrängen. Dasselbe Material als kompakter kleiner Körper kann sich anders verhalten.",
+        "12-14": "Auftrieb und Gewicht müssen zusammen betrachtet werden. Ein großer Innenraum allein garantiert keine sichere Tragfähigkeit: Beladung, Wassereintritt und Lage gehören ebenfalls dazu. Das Lernmodell ist keine Bau- oder Sicherheitsfreigabe."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "www.noaa.gov",
+          "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        },
+        {
+          "id": "source-1",
+          "organisation": "openstax.org",
+          "url": "https://openstax.org/books/college-physics-2e/pages/11-7-archimedes-principle",
+          "checkedOn": "2026-10-28",
+          "rightsBasis": "Eigene deutsche Faktenbeschreibung und eigene programmierte Geometrie; keine fremden Texte, Medien, Tabellen, Aufgaben oder Code übernommen. OpenStax nur Faktenabgleich; aktuelle NC-SA4.0-/KI-Hinweise berücksichtigt, keine freie Medienlizenz unterstellt."
+        }
+      ],
+      "claims": [
+        {
+          "sourceId": "source-0",
+          "statement": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung.",
+          "anchor": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung."
+        },
+        {
+          "sourceId": "source-1",
+          "statement": "Absätze29–47/53–55: Auftrieb entspricht Gewicht derverdrängtenFlüssigkeit; gleicheMasse kompakt/hohl. NurFaktenabgleich, keine geschütztenText-/Grafik-/Tabellen-/Aufgabenübernahme.",
+          "anchor": "Absätze29–47/53–55: Auftrieb entspricht Gewicht derverdrängtenFlüssigkeit; gleicheMasse kompakt/hohl. NurFaktenabgleich, keine geschütztenText-/Grafik-/Tabellen-/Aufgabenübernahme."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/book-water-figure.tsx#ship-displacement",
+          "license": "Eigene WunderKompass-Geometrie und deutsche Texte",
+          "credit": "WunderKompass · eigene Zeichnung mit KI-Unterstützung, kein Foto",
+          "alt": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen.",
+          "learningPurpose": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
+        }
+      ],
+      "links": [
+        "topics-science:science-buoyancy",
+        "words:Dichte"
+      ],
+      "ui": {
+        "build": "pending-current-full-water",
+        "route": "book/why/Warum%20kann%20ein%20Schiff%20aus%20schwerem%20Material%20schwimmen%3F",
+        "visible": false,
+        "search": false,
+        "back": false,
+        "offline": false,
+        "report": "Frühe gezielte aktuelle Produktprüfung und vollständige konsolidierte Qualifikation stehen noch aus. Keine UI-Abnahme aus der getrennten Figuren-Vorbereitung übernommen."
+      },
+      "aiSelfReview": {
+        "mode": "ai-self-review",
+        "retainedOrigin": {
+          "commit": "d97dddab0a5cc67172693a235d5ab12fa32bbc64",
+          "path": "app/book-content.json",
+          "originalBlobSHA1": "9427c9d45a15a921ed6631de5e74d2b8f5aa27a9",
+          "originalFileBytes": 640032,
+          "originalFileSHA256": "a2f27e191f4428a73863b8cbb23593023be925294df7fc06dbe9e26b3a623f67",
+          "selectedLearningSHA256": "d3640dcd4f07d6cdfcc874c86484b790225b6c692ee10e8ade2444a0c3b0805f"
+        },
+        "findings": "Individuelles erhaltenes Manuskript und ausgewählte USGS-/NOAA-/OpenStax-Belegstellen tatsächlich gelesen. Masse und Gewicht getrennt, Benetzung/Radius/Steiggrenzen berücksichtigt, Oberflächenspannung von fester Haut und bloßem Dichtevergleich getrennt. Alle Optionen, Hilfen und spezifischen Rückmeldungen gegengelesen. Vier neue Wörter; bestehende Dichte-Kurzdefinition exakt erhalten, keine Doppelzählung.",
+        "currentFullQualificationPending": true
+      }
     }
   ],
   "questionCorrections": [
@@ -58249,5 +58912,15 @@
     "allPriorFactsAndHistoriesUnchanged": true,
     "finalNativeCIRequired": true,
     "originals": "Actual original full reports, source/runtime/dist seal, all worker/root PNG identities and global-search originals retained privately; no original source fingerprint relabelled."
+  },
+  "bookWaterPreparation20261029": {
+    "base": "53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8",
+    "retainedOriginalDossiers": 126,
+    "newIndividualDossiers": 8,
+    "newWords": 4,
+    "newWhy": 3,
+    "retainedWordWithNewStudy": "Dichte",
+    "sourceReadOn": "2026-10-28",
+    "meaning": "Statische Inhalts-/Beziehungsprüfung und getrennte frühe Figurenbelege, noch keine aktuelle vollständige UI-/native Abnahme. Alte126Dossiers unverändert erhalten."
   }
 }

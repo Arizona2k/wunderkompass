@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T19:39:29.698Z",
+  "generatedAt": "2026-10-28T23:36:42.117Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,8 +13,8 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 113,
-  "whyQuestions": 34,
+  "knowledgeWords": 117,
+  "whyQuestions": 37,
   "routes": 8,
   "files": [
     {
@@ -87,6 +87,21 @@
       "entries": 14,
       "bytes": 43559,
       "sha256": "2b05c5674148d9ab6b548b128438740c0424aafff3283e4cdda1d246c538a51d"
+    },
+    {
+      "file": "book-water.json",
+      "sources": [
+        "app/book-water-content.json",
+        "app/book-water-integrity.json",
+        "app/book-water-index.json",
+        "app/book-water-topic-index.json",
+        "app/book-water-word-link-index.json",
+        "app/book-water-validation.mjs",
+        "scripts/book-water-index.mjs"
+      ],
+      "entries": 8,
+      "bytes": 30066,
+      "sha256": "4c36ca3dbd2115d4dfe874a973186153935fe86a41f617eb58ef8e530e435e16"
     },
     {
       "file": "continents.json",
@@ -172,11 +187,12 @@
         "app/expanded-learning-data.ts",
         "app/book-measurement-word-index.json",
         "app/book-heat-index.json",
-        "app/book-light-index.json"
+        "app/book-light-index.json",
+        "app/book-water-index.json"
       ],
-      "entries": 113,
-      "bytes": 22055,
-      "sha256": "348317ae8c025f08ba84541705a50ad405cada2ac86a9d6b2e2f40ed106a7a33"
+      "entries": 117,
+      "bytes": 23231,
+      "sha256": "08a5d289f28f371bb5e14d1755f0bcfe0662a52837956235a4b290f02c4a1098"
     },
     {
       "file": "why-questions.json",
@@ -184,11 +200,12 @@
         "app/learning-data.ts",
         "app/expanded-learning-data.ts",
         "app/book-heat-index.json",
-        "app/book-light-index.json"
+        "app/book-light-index.json",
+        "app/book-water-index.json"
       ],
-      "entries": 34,
-      "bytes": 8763,
-      "sha256": "cd4b7fe9e5a3ccacc835f82b4b0f651fa0ec9f26c70a17227314f6a3c9664c6d"
+      "entries": 37,
+      "bytes": 9689,
+      "sha256": "b0fc060f083a740ad5be40b1bd912579b7737fea065cacd76c141ef0f67a8c31"
     },
     {
       "file": "earth-badges.json",

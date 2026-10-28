@@ -2,7 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
-const incoming=JSON.parse(await fs.readFile(new URL('../../app/book-light-word-link-index.json',import.meta.url),'utf8'));
+const incoming={};
+for(const name of ['book-light-word-link-index.json','book-water-word-link-index.json'])for(const [term,links]of Object.entries(JSON.parse(await fs.readFile(new URL('../../app/'+name,import.meta.url),'utf8'))))(incoming[term]??=[]).push(...links);
 const words=JSON.parse(await fs.readFile(new URL('../../exports/content/knowledge-words.json',import.meta.url),'utf8'));
 
 export async function bookRelatedWordView(page,report,width,{large=false,native=false,offline=false,shots=null,engine='chromium',captureSession=null}={}){
@@ -24,5 +25,5 @@ export async function bookRelatedWordView(page,report,width,{large=false,native=
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
  }
- assert.equal(rows.length,4);(report.bookRelatedWords??=[]).push(...rows);return rows;
+ assert.equal(rows.length,5);(report.bookRelatedWords??=[]).push(...rows);return rows;
 }
