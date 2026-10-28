@@ -1,0 +1,34 @@
+/* Reference pages share the learning palette, with quiet lists and readable measures. */
+.knowledge-book .book-navigation{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:5px;align-items:center;margin-bottom:24px;min-width:0}
+.book-navigation .area-scroll{display:grid;place-items:center;min-width:44px;min-height:48px;padding:0;border:1px solid var(--wk-line);border-radius:8px;background:var(--wk-paper);color:var(--wk-ink)}
+.book-navigation .area-scroll:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px}
+.knowledge-book .book-navigation[data-strip-overflow=false]{grid-template-columns:minmax(0,1fr)}
+.book-navigation[data-strip-overflow=false]>.area-scroll{display:none}
+.knowledge-book .book-navigation>.book-tabs{display:flex!important;justify-content:flex-start;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:thin;scroll-padding-inline:5px;overscroll-behavior-x:contain;width:100%!important;min-width:0;max-width:100%;margin:0;height:auto!important}
+.knowledge-book .book-navigation>.book-tabs>[data-slot=tabs-trigger]{flex:0 0 auto!important;min-height:48px!important;white-space:nowrap;font-size:16px!important;padding:10px 12px!important}
+.knowledge-book .word-grid,.knowledge-book .atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 36px}
+.knowledge-book .word-card,.knowledge-book .atlas-country{border:0;border-bottom:1px solid var(--wk-line);border-radius:0;background:transparent;box-shadow:none;padding:16px 0 24px;min-width:0}
+.knowledge-book .word-card :is(h3,h4){font-size:25px;line-height:1.3;letter-spacing:-.025em;color:var(--wk-ink);margin:12px 0}
+.knowledge-book .word-card>p,.knowledge-book .atlas-country>p{line-height:1.75;max-width:65ch;color:var(--wk-ink)}
+.knowledge-book .word-card>.category-pill{font-size:14px}
+.knowledge-book .why-card{border:0;border-bottom:1px solid var(--wk-line);border-radius:0;background:transparent;padding:0}
+.knowledge-book .why-card>summary{padding:18px 0;min-height:60px;color:var(--wk-ink);font-size:18px;line-height:1.5}
+.knowledge-book .why-card[open]>summary>svg{transform:rotate(180deg)}
+.knowledge-book .why-card>div{padding:0 0 24px;max-width:70ch;color:var(--wk-ink)}
+.knowledge-book .notebook{max-width:900px}
+.knowledge-book .notebook>h2{font-size:clamp(25px,2.5vw,32px);line-height:1.3;letter-spacing:-.03em;color:var(--wk-ink);margin:28px 0 16px}
+.knowledge-book .notebook>h2:first-child{margin-top:0}
+.knowledge-book .notebook>section>h3{font-size:22px;line-height:1.4;margin:24px 0 12px;color:var(--wk-ink)}
+.knowledge-book .notebook>label{line-height:1.6}
+.knowledge-book .notebook .note-list{margin-top:20px}
+.book-saved-empty p{line-height:1.75;max-width:65ch;color:var(--wk-muted)}
+.book-saved-empty .knowledge-link{display:flex;align-items:center;min-height:48px;text-align:left;line-height:1.6}
+.large-reading .knowledge-book .book-navigation>.book-tabs>[data-slot=tabs-trigger]{font-size:20px!important}
+.large-reading .knowledge-book .word-card :is(h3,h4){font-size:30px}
+.large-reading .knowledge-book .why-card>summary{font-size:22px}
+@media(max-width:650px){.knowledge-book .word-grid,.knowledge-book .atlas-grid{grid-template-columns:1fr}.knowledge-book .book-navigation{margin-bottom:20px}}
+@media(forced-colors:active){.book-navigation .area-scroll:focus-visible{outline-color:CanvasText}.knowledge-book :is(.word-card,.atlas-country,.why-card){border-color:CanvasText}}
+.knowledge-book .speech-button{min-height:48px;margin-inline-end:16px;margin-block-start:8px}
+.knowledge-book .why-card>summary>svg{color:var(--wk-teal)}
+.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px;box-shadow:none!important;border-color:transparent!important}
+@media(forced-colors:active){.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline-color:CanvasText}}

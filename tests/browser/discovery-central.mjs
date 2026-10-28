@@ -257,7 +257,7 @@ export async function compactAreaNavigation(page,report,{interact=false}={}){
  const data=await page.evaluate(()=>{
   const list=document.querySelector('.mode-tabs');if(!list)throw Error('Existing area navigation missing');
   const tabs=[...list.querySelectorAll('[role=tab]')];
-  return{width:innerWidth,height:list.getBoundingClientRect().height,labels:tabs.map(el=>el.textContent),tabTops:tabs.map(el=>el.getBoundingClientRect().top),fontSizes:tabs.map(el=>parseFloat(getComputedStyle(el).fontSize)),arrows:[...document.querySelectorAll('.area-scroll')].filter(el=>el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{width:r.width,height:r.height};})};
+  return{width:innerWidth,height:list.getBoundingClientRect().height,labels:tabs.map(el=>el.textContent),tabTops:tabs.map(el=>el.getBoundingClientRect().top),fontSizes:tabs.map(el=>parseFloat(getComputedStyle(el).fontSize)),arrows:[...document.querySelectorAll('.learning-navigation .area-scroll')].filter(el=>el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{width:r.width,height:r.height};})};
  });assertCompactAreaGeometry(data);
  if(interact&&data.width<=1200){
   const list=page.locator('.mode-tabs'),before=await page.evaluate(()=>({hash:location.hash,y:scrollY,left:document.querySelector('.mode-tabs').scrollLeft}));

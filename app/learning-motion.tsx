@@ -2,6 +2,10 @@
 
 import {createContext,forwardRef,useContext,type ReactNode} from 'react';
 import {AnimatePresence,LazyMotion,MotionConfig,domMax,m,useIsPresent,useReducedMotion} from 'motion/react';
+import type {Transition} from 'motion/react';
+
+// Layout changes use the same short tween instead of Motion's implicit spring.
+export const learningLayoutTransition:Transition={layout:{type:'tween',duration:.24,ease:[.2,.8,.2,1]}};
 
 // This module is imported by the existing lazy learning areas, never by Home.
 // Content is rendered immediately; optional motion does not gate navigation.

@@ -1,4 +1,5 @@
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
+import {bookTabNavigation} from './book-navigation.mjs';
 import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {journeyContentFlow} from './journey-content.mjs';
 import {journeyReadingFlow} from './journey-reading.mjs';
@@ -134,7 +135,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
  await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
  report.journeySupport=await journeySupportView(p,{widths:[320,360,390,768,1024,1440,1920],shots,engine:'chromium'});
- for(const width of [320,1440])await journeyHubNavigation(p,width);
+ report.bookTabNavigation=[];for(const width of [320,1440]){report.bookTabNavigation.push(await bookTabNavigation(p,width));await journeyHubNavigation(p,width);}
  await p.locator('.journey-filters input').fill('Wolken');assert.ok(await p.locator('.journey-tile').count()<16);await p.locator('.journey-filters input').fill('');
  for(const c of data.chapters){
   await open(p,c.journeyId,c.index);await geometry(p,c.id);const inquiry=p.locator('[data-chapter-inquiry="'+c.id+'"]');

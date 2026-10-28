@@ -30,3 +30,19 @@
 .large-reading .playground-preview{font-size:18px}.large-reading .playground :is(.playground-heading p,.playground-filter-panel>summary,.playground-active-filters){font-size:18px}.large-reading .playground-preview{min-height:242px}
 
 .playground-single-resume{margin:12px 0}.playground-single-resume>button{white-space:normal;min-height:48px;text-align:left}.playground-tools>.secondary-button{max-width:calc(100% - 92px);white-space:normal}.playground>.playground-count{font-size:16px;color:var(--wk-muted);line-height:1.6;margin:24px 0}.large-reading .playground-single-resume>button{font-size:18px}
+
+/* One shared room header; the actual task uses the full reading width. */
+.game-room .game-room-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin:24px 0 26px;padding:0}
+.game-room-header>h1{font-size:clamp(23px,2.3vw,30px);line-height:1.3;letter-spacing:-.03em;color:var(--wk-ink);margin:0;min-width:0;max-width:28ch}
+.game-room-actions{display:flex;flex-wrap:wrap;gap:12px}
+.game-room-actions .secondary-button{min-height:48px;white-space:normal;line-height:1.5}
+.game-room .game-board{background:transparent;border:0;border-radius:0;padding:0;max-width:1000px;margin:0 auto;color:var(--wk-ink)}
+.game-room .game-board h2{font-size:clamp(26px,2.6vw,34px);line-height:1.25;letter-spacing:-.025em;font-weight:650;color:var(--wk-ink)}
+@media(max-width:600px){.game-room .game-room-header{display:block;margin:18px 0 24px}.game-room-header>h1{margin-bottom:16px}.game-room-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.game-room-actions .secondary-button{width:100%;padding:10px;min-width:0}}
+.large-reading .game-room-header>h1{font-size:32px}
+.game-room .secondary-button:hover:not(:disabled,.is-correct,.is-incorrect,[aria-pressed=true]){background:#edf3f5;border-color:var(--wk-teal);color:var(--wk-ink)}
+.game-room .memory-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.game-room .memory-card>strong{max-width:100%;overflow-wrap:anywhere}
+.game-room .memory-card .country-flag{max-width:100%;height:auto}
+
+@media(max-width:600px){.game-room .game-map-marker circle{r:28px}.game-room .game-map-marker text{font-size:36px}.large-reading .game-room .game-map-marker text{font-size:45px}}
