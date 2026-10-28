@@ -1,0 +1,304 @@
+[
+  {
+    "kind": "word",
+    "term": "Wärme",
+    "definition": "Wärme bezeichnet Energie, die wegen eines Temperaturunterschieds übertragen wird. Von selbst geht dabei insgesamt Energie vom wärmeren zum kühleren Bereich. Temperatur und übertragene Energie sind verschiedene Größen.",
+    "starter": "Etwas Wärmeres und etwas Kühleres können Energie austauschen. Wärme beschreibt diese Übertragung – nicht eine zusätzliche Stoffart im Gegenstand.",
+    "deeper": "Eine Temperatur beschreibt einen Zustand. Wärme bezeichnet eine Energieübertragung aufgrund eines Temperaturunterschieds. „Insgesamt“ ist wichtig: Bei Strahlung können beide Körper Energie aussenden und aufnehmen. Für den Netto-Austausch zählt, was jeweils ankommt und abgegeben wird. Aus zwei Temperaturen allein lässt sich noch keine übertragene Energiemenge ablesen.",
+    "observe": "Denke dir zwei Körper mit 30 °C und 20 °C. Zeichne auf Papier, in welche Richtung von selbst insgesamt Energie übertragen wird. Die Zahlen sind Beispiele. Wie viel Energie übertragen wird und wie lange es dauert, sagt die Zeichnung nicht.",
+    "benefit": "Du kannst eine Temperaturangabe von einer Wärmeübertragung unterscheiden.",
+    "connection": "Die Wärmewegekarte vergleicht Leitung, Strömung und Strahlung. Mit Kelvin kannst du nachlesen, wie eine Temperatur angegeben wird; damit kennst du noch keine übertragene Energiemenge.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow",
+        "title": "U.S. Department of Energy · Heat Flow",
+        "anchor": "Abschnitte What und How: drei Wärmewege und spontaner Wärmeübergang aufgrund unterschiedlicher Temperaturen. Gebäudebeispiele allein belegen keine Hautempfindung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kelvin",
+        "reason": "Wärme ist eine Energieübertragung aufgrund eines Temperaturunterschieds. Kelvin benennt eine Temperatureinheit und ist keine übertragene Energiemenge."
+      },
+      {
+        "term": "Wärmeleitung",
+        "reason": "Leitung ist ein möglicher Wärmeweg durch Material oder Berührung. Wärme beschreibt die Energieübertragung; der Weg muss zusätzlich erklärt werden."
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt 30 Grad Celsius im Papierbeispiel?",
+      "answers": [
+        "Eine Temperatur, keine übertragene Wärmemenge",
+        "Die bis zum Temperaturausgleich übertragene Energie",
+        "Die gesamte innere Energie des Körpers"
+      ],
+      "correct": 0,
+      "hint": "Prüfe, ob die Zahl einen Zustand oder eine Übertragung beschreibt.",
+      "why": "Grad Celsius benennt hier die Temperatur eines Körpers. Die übertragene Energie ist damit nicht vollständig bestimmt.",
+      "wrongReasons": [
+        "",
+        "Die Temperatur beschreibt einen Zustand. Für die bis zum Ausgleich übertragene Energie fehlen hier weitere Angaben, etwa zu den Materialien und ihren Mengen.",
+        "Innere Energie ist nicht dieselbe Größe wie Temperatur. Die Celsiuszahl allein legt die gesamte innere Energie eines Körpers nicht fest."
+      ]
+    },
+    "figure": "net-transfer",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Wärmeleitung",
+    "definition": "Energie wird in einem Material oder zwischen berührenden Materialien weitergegeben. Dafür muss kein ganzer Stoffstrom mitwandern. Unterschiedliche Materialien leiten Wärme unterschiedlich gut.",
+    "starter": "An einer Stelle wird ein Gegenstand wärmer; Energie kann durch das Material zu anderen Stellen gelangen.",
+    "deeper": "Bei Wärmeleitung wird Energie in einem Material oder über eine Kontaktstelle weitergegeben. Das gibt es nicht nur in festen Stoffen: Auch eine ruhende Flüssigkeit oder ein ruhendes Gas kann Wärme leiten. Bei Konvektion kommt dagegen eine Strömung hinzu, die Energie mitführt. Unsere Stabskizze berechnet keine wirkliche Erwärmungszeit.",
+    "observe": "Zeichne einen gedachten festen Stab mit einem wärmeren und einem kühleren Ende. Markiere den Energiepfad im Material. Der Stab ist nur ein Papiermodell: Verwende dafür kein Feuer und erhitze keine echten Gegenstände.",
+    "benefit": "Du unterscheidest die Übertragung in einem festen Material von einem bewegten Stoffstrom.",
+    "connection": "Leitung ist einer der drei dargestellten Wärmewege. Vergleiche im Modell Materialübertragung, Strömung und Strahlung.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy",
+        "title": "NOAA · Transfer of Heat Energy",
+        "anchor": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärme",
+        "reason": "Leitung ist ein möglicher Wärmeweg durch Material oder Berührung. Wärme beschreibt die Energieübertragung; der Weg muss zusätzlich erklärt werden."
+      },
+      {
+        "term": "Konvektion",
+        "reason": "Leitung durch Material und Energie, die ein bewegtes Gas oder eine Flüssigkeit mitführt, sind verschiedene Übertragungswege."
+      }
+    ],
+    "question": {
+      "prompt": "Was gehört zur Wärmeleitung im gedachten festen Stab?",
+      "answers": [
+        "Eine warme Flüssigkeit strömt durch den festen Stab",
+        "Energieübertragung durch das Material",
+        "Kälte fließt als eigener Stoff durch den Stab"
+      ],
+      "correct": 1,
+      "hint": "Überlege bei jeder Beschreibung: Bewegt sich dabei ein ganzer Stoffstrom, oder beschreibst du eine andere Art der Weitergabe?",
+      "why": "Beim Leitungsvorgang wird Energie im Material übertragen. Ein großer bewegter Stoffstrom ist dazu nicht erforderlich.",
+      "wrongReasons": [
+        "Im gedachten festen Stab strömt keine warme Flüssigkeit zum Griff. Hier wird die Energie im Material weitergegeben.",
+        "",
+        "Kälte ist hier kein zusätzlicher Stoff, der durch den Stab wandert. Beschrieben wird eine Energieübertragung aufgrund eines Temperaturunterschieds."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum fühlen sich gleich warme Materialien manchmal verschieden an?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wärmeleitung“: Du trennst Temperatureigenschaft und Energieübertragung."
+      }
+    ],
+    "figure": "material-path",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Konvektion",
+    "definition": "Eine Strömung in einer Flüssigkeit oder einem Gas kann Energie mitführen und Wärme übertragen. Der mitbewegte Stoff unterscheidet diesen Weg von Wärmeleitung ohne einen solchen Stoffstrom.",
+    "starter": "Bewegte Luft oder bewegtes Wasser kann Energie mitnehmen. Das ist anders als Wärmeleitung durch einen festen Stab.",
+    "deeper": "Temperaturbedingte Dichteunterschiede können eine Strömung antreiben. Auch ein Lüfter oder eine Pumpe kann Stoff in Bewegung bringen. Nicht jede Luft- oder Wasserbewegung entsteht also allein durch Erwärmung. Die Pfeilskizze zeigt einen gedachten Stoffstrom; sie berechnet weder Windgeschwindigkeit noch Wetter.",
+    "observe": "Zeichne einen gedachten Raum mit Luftpfeilen und einen festen Stab mit einem Energiepfeil. Beschrifte die unterschiedlichen Vorgänge. Beide Zeichnungen sind Beispiele ohne reale Temperatur- oder Strömungsmessung.",
+    "benefit": "Du erkennst einen bewegten Stoffstrom als Wärmeweg und trennst ihn von Leitung.",
+    "connection": "Vergleiche die Strömungspfeile mit den anderen Wärmewegen. Ein schematischer Pfeil ist keine gemessene Raumluftgeschwindigkeit.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy",
+        "title": "NOAA · Transfer of Heat Energy",
+        "anchor": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärmeleitung",
+        "reason": "Leitung durch Material und Energie, die ein bewegtes Gas oder eine Flüssigkeit mitführt, sind verschiedene Übertragungswege."
+      },
+      {
+        "term": "Wärmestrahlung",
+        "reason": "Ein bewegter Stoffstrom und elektromagnetische Strahlung sind verschiedene Wärmewege. Strahlung benötigt keinen solchen Luftstrom oder direkten Kontakt."
+      }
+    ],
+    "question": {
+      "prompt": "Welches Beispiel passt zu Konvektion?",
+      "answers": [
+        "Nur ein ruhender Energiepfad im festen Stab",
+        "Ein Lichtsignal durch leeren Raum",
+        "Bewegte Luft, die Energie mitführt"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche bei jedem Beispiel, was sich bewegt: ein ganzer Stoffstrom, eine Weitergabe im Material oder ein Signal. Ordne erst diese Unterschiede, bevor du auswählst.",
+      "why": "Ein Luftstrom führt Materie und Energie mit. Leitung im Stab und Strahlung durch leeren Raum sind andere Wärmewege.",
+      "wrongReasons": [
+        "Leitung im ruhenden festen Stab ist nicht derselbe Vorgang wie ein bewegter Luftstrom.",
+        "Ein Lichtsignal braucht keine Luftströmung. Das beschreibt Strahlung, nicht diesen Konvektionsweg.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum bewegt erwärmtes Wasser manchmal weiteres Wasser mit?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Konvektion“: Du unterscheidest den Energieweg vom mitbewegten Material."
+      }
+    ],
+    "figure": "moving-fluid",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Wärmestrahlung",
+    "definition": "Gegenstände übertragen Energie auch durch elektromagnetische Strahlung. Dazu müssen sie einander nicht berühren. Dieser Wärmeweg braucht keinen bewegten Luftstrom zwischen den Gegenständen.",
+    "starter": "Energie kann als Strahlung von einem Gegenstand zu einem anderen gelangen, auch ohne Berührung.",
+    "deeper": "Körper oberhalb des absoluten Nullpunkts senden thermische Strahlung aus. Dazu müssen sie nicht sichtbar glühen. Zwei Körper können beide Strahlung aussenden und aufnehmen; der Netto-Austausch hängt unter anderem von ihren Temperaturen, Oberflächen und ihrer Anordnung ab. Die Skizze zeigt Wege, keine gemessenen Energiemengen.",
+    "observe": "Zeichne zwei getrennte gedachte Flächen und Strahlungspfeile in beide Richtungen. Vergleiche das mit einer Verbindung durch Berührung. Die Pfeile zeigen Wege, keine gemessenen Energiemengen. Die Zeichnung fordert nicht zum Anfassen heißer Gegenstände oder zum Blick in die Sonne auf.",
+    "benefit": "Du unterscheidest Strahlung von Berührung und einer Energieübertragung durch Luftstrom.",
+    "connection": "Die Wärmewegekarte trennt Strahlung von Leitung und Strömung. Sichtbares Glühen ist keine Voraussetzung für Wärmestrahlung.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy",
+        "title": "NOAA · Transfer of Heat Energy",
+        "anchor": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Konvektion",
+        "reason": "Ein bewegter Stoffstrom und elektromagnetische Strahlung sind verschiedene Wärmewege. Strahlung benötigt keinen solchen Luftstrom oder direkten Kontakt."
+      },
+      {
+        "term": "Kelvin",
+        "reason": "Kelvin beschreibt eine Temperatureinheit. Ob und wie viel Energie als Strahlung übertragen wird, ist eine andere Frage als die Einheit der Temperatur."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist für den beschriebenen Strahlungsweg nicht zwingend nötig?",
+      "answers": [
+        "Direkter Kontakt beider Gegenstände",
+        "Ein Energieaustausch",
+        "Ein Gegenstand, der Strahlung aussendet"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche getrennte Flächen mit zwei berührenden Flächen.",
+      "why": "Strahlung kann den Abstand überbrücken. Direkter Kontakt ist dafür nicht zwingend notwendig.",
+      "wrongReasons": [
+        "",
+        "Auch dieser Strahlungsweg beschreibt einen Energieaustausch. Ohne Energie würde die Erklärung nicht passen.",
+        "Für diesen ausgesandten Strahlungsweg braucht es eine Quelle. Fehlender Kontakt ersetzt sie nicht."
+      ]
+    },
+    "figure": "radiative-exchange",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "why",
+    "question": "Warum fühlen sich gleich warme Materialien manchmal verschieden an?",
+    "definition": "Das Wärmegefühl hängt auch davon ab, wie Energie zwischen Hand und Material übertragen wird. Ein kühlerer Gegenstand kann je nach Material unterschiedlich schnell Wärme aufnehmen. Gefühl und gemessene Temperatur sind nicht dasselbe.",
+    "starter": "Deine Hand tauscht Energie mit dem Material aus. Dieser Austausch beeinflusst, wie warm oder kalt es sich anfühlt.",
+    "deeper": "Stelle dir Holz und Metall vor, die dieselbe Temperatur haben und kühler als deine Hand sind. Wie schnell Energie zwischen Haut und Oberfläche ausgetauscht wird, beeinflusst das Gefühl. Unter anderem spielen Material und Kontaktbedingungen eine Rolle. Das Gefühl allein ersetzt deshalb keine Temperaturmessung. Heiße, sehr kalte oder unbekannte Oberflächen gehören nicht zu diesem Gedankenvergleich.",
+    "observe": "Zeichne eine gedachte Hand und zwei beschriftete Materialflächen mit gleicher Temperatur, aber verschieden starken Wärmefluss-Pfeilen. Die Pfeile sind qualitative Annahmen, keine Messwerte.",
+    "benefit": "Du trennst Temperatureigenschaft und Energieübertragung.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://www.aps.org/learning-resources/getting-warmer-colder",
+        "title": "American Physical Society · Getting Warmer, Getting Colder",
+        "anchor": "Teacher background: gleich temperiertes Holz und Metall können sich beim Kontakt mit wärmerer Haut verschieden anfühlen. Raum- und Hauttemperaturbeispiele nicht als allgemeingültige Werte übernommen; keine physische Erprobung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wärmeleitung",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wärmeleitung“: Du trennst Temperatureigenschaft und Energieübertragung."
+      }
+    ],
+    "connection": "Die Wärmeübertragungskarte trennt Temperatur von übertragener Energie. Überlege, wie verschieden schnell zwei Materialien deiner Hand Energie entziehen können.",
+    "figure": "equal-temperature-materials",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "why",
+    "question": "Warum bewegt erwärmtes Wasser manchmal weiteres Wasser mit?",
+    "definition": "Bewegte Flüssigkeit kann Energie mitführen. Dichteunterschiede können solche Strömungen begünstigen; die Anordnung und weitere Bedingungen sind wichtig. Das ist etwas anderes als Wärmeleitung ohne gemeinsamen Stoffstrom.",
+    "starter": "Bewegtes Wasser kann Wärme mitnehmen. So können Stoff und Energie gemeinsam einen Weg zurücklegen.",
+    "deeper": "Eine Wasserströmung kann Energie mitnehmen. Dichteunterschiede können eine solche Bewegung begünstigen; auch eine Pumpe kann Wasser antreiben. Ob und wie sich Wasser bewegt, hängt von den Bedingungen ab. „Wärme steigt immer nach oben“ ist deshalb keine allgemeine Regel für jeden Wärmeweg. Ein Pfeilbild ist keine Strömungsberechnung für einen echten Topf oder das Meer.",
+    "observe": "Markiere auf Papier einen gedachten Wasserstrom mit Stoffpfeil und einem zweiten Symbol für mitgeführte Energie. Keine heißen Gefäße oder Flüssigkeiten für diesen Vergleich verwenden.",
+    "benefit": "Du unterscheidest den Energieweg vom mitbewegten Material.",
+    "topic": "science-heat-transfer",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy",
+        "title": "NOAA · Transfer of Heat Energy",
+        "anchor": "Abschnitte Conduction und Convection: Übertragung in/zwischen Stoffen sowie Energieübertragung durch bewegte Flüssigkeiten und Gase. Keine pauschalen Farb-/Emissionsregeln übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx",
+        "title": "ASHRAE Handbook · Chapter 4 Heat Transfer",
+        "anchor": "Einleitung und Abschnitt 1 Heat Transfer Processes, Convection/Radiation: Temperaturunterschied, erzwungene/natürliche Strömung, thermische Emission oberhalb des absoluten Nullpunkts und Netto-Strahlungsaustausch beider Oberflächen. Keine Ingenieurkoeffizienten oder Wärmemengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Konvektion",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Konvektion“: Du unterscheidest den Energieweg vom mitbewegten Material."
+      }
+    ],
+    "connection": "Auf der Wärmeübertragungskarte gehört mitbewegtes Wasser zur Konvektion. Vergleiche diesen Stofftransport mit Wärmeleitung ohne eine solche Wasserströmung.",
+    "figure": "moving-fluid",
+    "sourceReadOn": "2026-10-28"
+  }
+]

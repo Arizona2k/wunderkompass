@@ -1,3 +1,4 @@
+import {bookHeatView} from './book-heat.mjs';
 import {bookMeasurementView} from './book-measurements.mjs';
 import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
@@ -128,9 +129,11 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    await bookNormalizationView(page,report.bookLearning,width,{measurement:true,shots,engine:kind,native});
   }
   assert.equal(report.bookLearning.bookNormalization.length,8);
-  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await page.setViewportSize(previousViewport);}
+  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookHeatView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await page.setViewportSize(previousViewport);}
   assert.equal(report.bookLearning.bookMeasurements.length,native?21:14,'all seven SI words in every retained cached book layout and the additional required native640 layout');
   assert.equal(new Set(report.bookLearning.bookMeasurements.map(row=>row.term+':'+row.width)).size,native?21:14,'every cached SI term/width identity is distinct');
+  assert.equal(report.bookLearning.bookHeat.length,native?18:12,'all six heat views in every cached layout including native640');
+  assert.equal(new Set(report.bookLearning.bookHeat.map(row=>row.term+':'+row.width)).size,native?18:12,'every cached heat term/width identity is distinct');
   report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   assertBrowserErrors('after complete cached learning matrix');
   return report;

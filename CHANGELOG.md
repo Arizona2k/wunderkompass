@@ -1,3 +1,11 @@
+## Wärme im Wissensbuch · zur Testübernahme vorbereitet
+
+Vier erhaltene Wärmebegriffe und zwei Warumfragen sind mit freiwilligen Erklärungen, konkreten Denkfragen, Quellen und fünf eigenen qualitativen Skizzen integriert. SI- und Wärmevertiefungen verwenden denselben Leserbaustein; globale Suche, Artikelrückwege, Datenintegrität und erneutes Laden sind verbunden. Die bestehende Wärme-Entdeckerkarte unterscheidet Materialleitung, Flüssigkeits-/Gasströmung und Strahlung genauer. Der lokale Bestand umfasst 101 Wörter und 32 Warumfragen; tatsächliche Bereitstellung nach regulärer aktueller Abnahme steht aus. Bisherige Definitionen, Lösungen und Passkennungen bleiben erhalten.
+
+## Begrenztes vollständiges Redesign · PR73 tatsächlich bereitgestellt
+
+Die sechs Lernbereiche und ihre wichtigen Leser-, Modell-, Spiel-, Buch-, Such-, Pass- und Hilfszustände verwenden ein gemeinsames lesbares Design. Native freiwillige Vertiefungen halten Einstiege kompakt; Animationen berücksichtigen reduzierte Bewegung. PR73 wurde regulär als `aa2764a352ae84790cef7a9084a974a3c4023e33` nach test-live übernommen; Vercel bestätigt dieselbe Bereitstellung am28.10.2026 um12:09:50MEZ. Tatsächliche Auslieferung und Produkt-/Pass-/Kalt-Offlinenachtest sind bestätigt. Der begrenzte Design-Meilenstein ist abgeschlossen; die individuelle Inhalts- und Paketarbeit wird darauf fortgesetzt.
+
 ## SI im Wissensbuch · PR72 tatsächlich bereitgestellt
 
 Sieben erhaltene Erklärungen zu Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela verbinden Definition, freiwillige Vertiefung, konkrete Denkfrage und passende Wissenskarten. Drei begrenzte Zahlenmodelle machen Längenangaben, Zeitdauer und Temperaturskalen vergleichbar. Genaue Wörter stehen vor passenden Textausschnitten; geöffnete Vertiefungen nutzen eine begrenzte Lesebreite. Alle90bisherigenDefinitionen bleiben erhalten. PR72 wurde nach erfolgreicher Quality184 regulär als `e4424373a4ee6aeda5273a245756d3b0e91e590f` nach test-live übernommen; Vercel bestätigt dieselbe Bereitstellung am28.10.2026 um00:25:34MEZ. Der tatsächliche Produkt-/Pass-/Kalt-Offlinenachtest ist bestätigt. Der Gesamtauftrag bleibt offen.

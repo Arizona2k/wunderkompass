@@ -1,3 +1,4 @@
+import {bookHeatView} from './book-heat.mjs';
 import {bookMeasurementView} from './book-measurements.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -44,6 +45,6 @@ export async function bookNormalizationView(page,report,width,{measurement=false
  await page.getByRole('tab',{name:'Kleiner Atlas',exact:true}).click();await page.getByRole('textbox',{name:'Länderwissen durchsuchen',exact:true}).fill('brasilia');const brazil=page.locator('.atlas-country').filter({has:page.getByRole('heading',{name:'Brasilien',exact:true})});await brazil.waitFor();assert.equal(await brazil.locator('.atlas-capital strong').innerText(),'Brasília');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);report.bookNormalization.push({width,query:'brasilia',canonicalCapital:'Brasília',commonNormalization:true});
  const saved=await state(page);for(const key of ['notes','favorites','games','journeys','review','settings'])assert.deepEqual(saved[key],original[key],'book search and link navigation preserve existing state: '+key);for(const[id,value]of Object.entries(original.gameSessions))assert.deepEqual(saved.gameSessions[id],value,'existing round retained: '+id);await page.evaluate(hash=>location.hash=hash,initial);await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));
  if(width===320)await bookPrecisionView(page,report,width,{full:false});
- if(measurement)await bookMeasurementView(page,report,width,{shots,engine,large:true,native,offline:true});
+ if(measurement){await bookMeasurementView(page,report,width,{shots,engine,large:true,native,offline:true});await bookHeatView(page,report,width,{shots,engine,large:true,native,offline:true});}
  report.checks.push('Book at'+width+': shared accent/ss normalization in words and atlas; gravity points to actual tidal attraction with explained label; real topic/journey keyboard return focus and typed word, old notes/favorites/rounds/reviews retained');
 }

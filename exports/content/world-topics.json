@@ -15758,7 +15758,7 @@
     "id": "science-heat-transfer",
     "category": "science",
     "title": "Wärmeübertragung: drei Wege der Energie",
-    "intro": "Energie kann durch Kontakt, bewegte Luft oder Strahlung weitergegeben werden.",
+    "intro": "Energie kann durch Material, mit bewegter Flüssigkeit oder bewegtem Gas und durch Strahlung übertragen werden.",
     "aliases": [
       "heat-transfer",
       "Wärmeübertragung"
@@ -15781,10 +15781,10 @@
       "Ein Metalllöffel und ein Holzlöffel können dieselbe Raumtemperatur haben und sich trotzdem verschieden anfühlen. Entscheidend ist auch, wie schnell sie Energie mit deiner Hand austauschen.",
       "Eine Dämmung verlangsamt Wärmeübertragung. Sie erzeugt nicht von allein neue Wärme und hält Energie nicht unbegrenzt fest. Keine Versuche mit Herd, Feuer oder sehr heißen Gegenständen."
     ],
-    "surprise": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
+    "surprise": "Wärmeleitung, Strömung und Strahlung können in einer Situation gleichzeitig wirken.",
     "learning": {
-      "starter": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
-      "observe": "Vergleiche ein Holzstück und einen Metalllöffel bei Raumtemperatur. Vermute vor dem Berühren, ob ein unterschiedliches Gefühl auch eine unterschiedliche Temperatur beweist.",
+      "starter": "Energie kann durch Material, mit einem Stoffstrom oder als Strahlung übertragen werden.",
+      "observe": "Denke dir Holz und Metall mit derselben Temperatur, beide kühler als deine Hand. Welche zusätzliche Erklärung brauchst du, wenn sie sich verschieden anfühlen? Das ist ein Gedankenvergleich, keine Messung und keine Aufforderung zum Berühren heißer, sehr kalter oder unbekannter Oberflächen.",
       "benefit": "Du erklärst ein Wärmegefühl vorsichtig und kannst Dämmung von Wärmeerzeugung unterscheiden."
     },
     "locations": [],
@@ -15797,9 +15797,21 @@
       {
         "label": "U.S. Department of Energy · Wärmeübertragung",
         "url": "https://bsesc.energy.gov/energy-basics/heat-flow"
+      },
+      {
+        "label": "NOAA · Drei Wege der Wärmeübertragung",
+        "url": "https://www.noaa.gov/jetstream/atmosphere/transfer-of-heat-energy"
+      },
+      {
+        "label": "ASHRAE Handbook · Heat Transfer",
+        "url": "https://handbook.ashrae.org/Handbooks/F25/SI/f25_ch04/f25_ch04_si.aspx"
+      },
+      {
+        "label": "American Physical Society · Wärmegefühl und Material",
+        "url": "https://www.aps.org/learning-resources/getting-warmer-colder"
       }
     ],
-    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Das US-Energieministerium unterscheidet Wärmeleitung, Strömung und Strahlung. Berühren von Holz und Metall bei Raumtemperatur ist eine sichere Vergleichsbeobachtung; unterschiedliches Wärmegefühl beweist keine unterschiedliche Ausgangstemperatur.",
+    "sourceNote": "Eigene WunderKompass-Erklärung und qualitative Lernbilder mit KI-Unterstützung. Codex hat am28.10.2026 ausgewählte Belegstellen abgeglichen: DOE Heat Flow und NOAA Conduction/Convection trennen Materialweitergabe, Stoffstrom und Strahlung; ASHRAE Heat Transfer erläutert Temperaturunterschied und Netto-Strahlungsaustausch; APS Teacher background erläutert gleich temperiertes Holz und Metall bei Kontakt mit wärmerer Haut. Ein Wärmegefühl ist keine Temperaturmessung. Die Quellengeber haben diese Erklärung nicht geprüft oder freigegeben.",
     "question": {
       "prompt": "Welcher Übertragungsweg braucht kein Material zwischen Quelle und Empfänger?",
       "answers": [
@@ -15811,8 +15823,8 @@
       "why": "Strahlung kann Energie auch durch weitgehend leeren Raum übertragen. Leitung und Strömung benötigen Material."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-23",
+    "revision": 2,
+    "checkedAt": "2026-10-28",
     "questionFeedback": {
       "hint": "Denke an den Raum zwischen Erde und Sonne. Welcher vorgeschlagene Weg würde dort ein durchgehendes Material oder bewegte Luft voraussetzen?",
       "wrongReasons": [

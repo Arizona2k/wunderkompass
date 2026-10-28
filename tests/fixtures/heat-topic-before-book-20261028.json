@@ -1,0 +1,72 @@
+{
+  "sourceCommit": "aa2764a352ae84790cef7a9084a974a3c4023e33",
+  "meaning": "Exact delivered M73 heat topic before the separately source-reviewed Book heat followup. Historical reference, not a new doubling baseline.",
+  "topic": {
+    "id": "science-heat-transfer",
+    "category": "science",
+    "title": "Wärmeübertragung: drei Wege der Energie",
+    "intro": "Energie kann durch Kontakt, bewegte Luft oder Strahlung weitergegeben werden.",
+    "aliases": [
+      "heat-transfer",
+      "Wärmeübertragung"
+    ],
+    "paragraphs": [
+      "Wärmeübertragung ist Energieübertragung aufgrund eines Temperaturunterschieds. Wärmeleitung geschieht durch ein Material oder an einer Kontaktstelle. Wärmeströmung transportiert Energie mit bewegter Luft oder Flüssigkeit.",
+      "Wärmestrahlung braucht keinen direkten Kontakt und kein transportierendes Luftpaket. So erreicht uns Energie von der Sonne durch den Weltraum. In einem Zimmer können mehrere Wege zugleich wirken."
+    ],
+    "facts": [
+      {
+        "label": "Drei Wege",
+        "text": "Leitung, Strömung und Strahlung."
+      },
+      {
+        "label": "Dämmung",
+        "text": "Verlangsamt Übertragung, erzeugt keine zusätzliche Wärme."
+      }
+    ],
+    "more": [
+      "Ein Metalllöffel und ein Holzlöffel können dieselbe Raumtemperatur haben und sich trotzdem verschieden anfühlen. Entscheidend ist auch, wie schnell sie Energie mit deiner Hand austauschen.",
+      "Eine Dämmung verlangsamt Wärmeübertragung. Sie erzeugt nicht von allein neue Wärme und hält Energie nicht unbegrenzt fest. Keine Versuche mit Herd, Feuer oder sehr heißen Gegenständen."
+    ],
+    "surprise": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
+    "learning": {
+      "starter": "Energie kann über Berührung, bewegte Luft und Strahlung weitergegeben werden.",
+      "observe": "Vergleiche ein Holzstück und einen Metalllöffel bei Raumtemperatur. Vermute vor dem Berühren, ob ein unterschiedliches Gefühl auch eine unterschiedliche Temperatur beweist.",
+      "benefit": "Du erklärst ein Wärmegefühl vorsichtig und kannst Dämmung von Wärmeerzeugung unterscheiden."
+    },
+    "locations": [],
+    "related": [
+      "science-energy",
+      "science-seasons",
+      "invention-refrigerator"
+    ],
+    "sources": [
+      {
+        "label": "U.S. Department of Energy · Wärmeübertragung",
+        "url": "https://bsesc.energy.gov/energy-basics/heat-flow"
+      }
+    ],
+    "sourceNote": "Eigene WunderKompass-Erklärung und Lernbilder mit KI-Unterstützung. Das US-Energieministerium unterscheidet Wärmeleitung, Strömung und Strahlung. Berühren von Holz und Metall bei Raumtemperatur ist eine sichere Vergleichsbeobachtung; unterschiedliches Wärmegefühl beweist keine unterschiedliche Ausgangstemperatur.",
+    "question": {
+      "prompt": "Welcher Übertragungsweg braucht kein Material zwischen Quelle und Empfänger?",
+      "answers": [
+        "Wärmestrahlung durch den freien Raum.",
+        "Wärmeleitung durch einen Metallstab.",
+        "Wärmeströmung in bewegter Luft."
+      ],
+      "correct": 0,
+      "why": "Strahlung kann Energie auch durch weitgehend leeren Raum übertragen. Leitung und Strömung benötigen Material."
+    },
+    "links": [],
+    "revision": 1,
+    "checkedAt": "2026-10-23",
+    "questionFeedback": {
+      "hint": "Denke an den Raum zwischen Erde und Sonne. Welcher vorgeschlagene Weg würde dort ein durchgehendes Material oder bewegte Luft voraussetzen?",
+      "wrongReasons": [
+        null,
+        "Bei Wärmeleitung wird Energie durch Material übertragen. Der Metallstab ist gerade das Material zwischen den verglichenen Stellen.",
+        "Wärmeströmung transportiert Energie mit bewegter Luft oder Flüssigkeit. Ohne dieses Material ist sie keine Strömung."
+      ]
+    }
+  }
+}

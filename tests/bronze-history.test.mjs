@@ -1,3 +1,4 @@
+import {topicBeforeBookHeatFollowup} from './book-heat-topic-reference.mjs';
 import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import mediaOriginal from './fixtures/retained-before-bronze-history-media-a967.json' with {type:'json'};
@@ -21,6 +22,6 @@ test('bronze questions separate regional dating, material identity and the reach
 });
 
 // Historical assertions retain their original release boundary; new additions are covered in people-methods.test.mjs.
-const catalog=beforePeopleMethods(currentCatalog);
+const catalog=beforePeopleMethods(currentCatalog).map(topicBeforeBookHeatFollowup);
 const CHALLENGE_BANK=beforePeopleMethodQuestions(currentChallengeBank);
 const graph=beforePeopleMethodGraph(currentGraph);
