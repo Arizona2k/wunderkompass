@@ -1,4 +1,5 @@
 import {bookHeatView,bookHeatNetworkView} from './book-heat.mjs';
+import {assertPlanetDiagram} from './planet-diagrams.mjs';
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
 import {bookTabNavigation} from './book-navigation.mjs';
 import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
@@ -26,6 +27,7 @@ async function geometry(p,label){
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){
+ await assertPlanetDiagram(visual,id,selected);
  await assertLandscapeClimateDiagram(visual,id,selected);
  await assertMoonNavigationDiagram(visual,id);
  await assertVolcanoesQuakesDiagram(visual,id);

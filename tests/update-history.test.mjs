@@ -1,7 +1,13 @@
-const CURRENT_PUBLIC_ENTRY_COUNT=69;
+const CURRENT_PUBLIC_ENTRY_COUNT=70;
+test('actual M74 heat availability preserves all69 whole earlier events and its real Berlin delivery time',()=>{
+ const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr74-hashes.json',import.meta.url),'utf8')),entry=entries.find(e=>e.id==='book-heat-transfers-3-5'),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===74);
+ assert.equal(fixture.entries.length,69);assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,'prior complete payload '+old.id);
+ assert.equal(record.mergeCommit,'b64c49abf1bcd42427adaff675ba6a68b792ac10');assert.equal(entry.evidence.pullRequest,74);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-28T15:14:41Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 16:14:41 MEZ');assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['book/words/Wärme','book']);
+ const pending=structuredClone(record);pending.deploymentStatuses=[];assert.equal(confirmedTestDeployment(pending),null);assert.equal(testUpdate(pending,entry).status,'prepared');
+});
 test('actual M73 design availability preserves all68 previous entries and uses its confirmed Berlin event time',()=>{
  const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr73-hashes.json',import.meta.url),'utf8')),entry=entries.find(e=>e.id==='learning-world-common-design-3-5'),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===73);
- assert.equal(fixture.entries.length,68);assert.equal(entries.length,69);
+ assert.equal(fixture.entries.length,68);assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);
  for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' retains its previous complete payload');
  assert.equal(record.mergeCommit,'aa2764a352ae84790cef7a9084a974a3c4023e33');assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-28T11:09:50Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 12:09:50 MEZ');assert.equal(entry.evidence.pullRequest,73);assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['home','book']);
  const pending=structuredClone(record);pending.deploymentStatuses=[];assert.equal(confirmedTestDeployment(pending),null);assert.equal(testUpdate(pending,entry).status,'prepared');
@@ -109,7 +115,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['home','globe','world','labs','games','journeys','book','world/topic/science-moon-phases','world/animals','world/science','updates','world/topic/person-mary_anning','world/topic/person-ibn_al_haytham','world/topic/person-maria_sibylla_merian','world/topic/person-inge_lehmann','world/topic/history-bronze','journeys/planet/1','journeys/inside/1','world/topic/building-golden-gate-bridge','world/topic/invention-seismograph','world/topic/animal-okapi','world/topic/invention-sewing-machine','world/topic/building-sydney-opera','book/words/Gestein','book/words/Grundwasser','world/topic/science-solar-system','labs/solar','book/words/Meter'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['home','globe','world','labs','games','journeys','book','world/topic/science-moon-phases','world/animals','world/science','updates','world/topic/person-mary_anning','world/topic/person-ibn_al_haytham','world/topic/person-maria_sibylla_merian','world/topic/person-inge_lehmann','world/topic/history-bronze','journeys/planet/1','journeys/inside/1','world/topic/building-golden-gate-bridge','world/topic/invention-seismograph','world/topic/animal-okapi','world/topic/invention-sewing-machine','world/topic/building-sydney-opera','book/words/Gestein','book/words/Grundwasser','world/topic/science-solar-system','labs/solar','book/words/Meter','book/words/Wärme'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -123,7 +129,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[74,73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
