@@ -24,7 +24,7 @@ function WorldViewContent({actions}:{actions:WorldActions}){const path=useHashRo
  const requestedPage=next==='page'?Math.max(1,Math.floor(Number(path.split('/')[3]))||1):1;
  useEffect(()=>{if(path.split('/')[0]==='world'&&topic)onVisit('topic:'+topic.id);},[path,topic,onVisit]);
  function choose(c:WorldCategory|null){actions.onRead('');navigateHash(c?'world/'+c:'world');setQuery('');setGroup('Alle');setHabitat('Alle');}
- const pool=TOPICS.filter(t=>t.category===category),term=query.trim().toLocaleLowerCase('de');const filtered=pool.filter(t=>(!term||[t.title,t.intro,...t.aliases].join(' ').toLocaleLowerCase('de').includes(term))&&(group==='Alle'||t.group===group)&&(habitat==='Alle'||t.habitat===habitat));
+ const pool=TOPICS.filter(t=>t.category===category),term=query.trim().toLocaleLowerCase('de');const filtered=pool.filter(t=>(!term||[t.title,t.intro,...t.aliases].join(' ').toLocaleLowerCase('de').includes(term))&&(category!=='animals'||((group==='Alle'||t.group===group)&&(habitat==='Alle'||t.habitat===habitat))));
  const pages=Math.max(1,Math.ceil(filtered.length/12)),visiblePage=Math.min(requestedPage,pages),shown=filtered.slice((visiblePage-1)*12,visiblePage*12);
  function changePage(n:number){navigateHash('world/'+category+'/page/'+n);}
  function resetPage(){if(category&&requestedPage!==1)navigateHash('world/'+category+'/page/1',{preserveControl:true,replace:true});}
