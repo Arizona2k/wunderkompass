@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T16:22:07.602Z",
+  "generatedAt": "2026-10-28T19:39:29.698Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,8 +13,8 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 101,
-  "whyQuestions": 32,
+  "knowledgeWords": 113,
+  "whyQuestions": 34,
   "routes": 8,
   "files": [
     {
@@ -72,6 +72,21 @@
       "entries": 6,
       "bytes": 20852,
       "sha256": "a661fda4be7374c1238c5161591a656111b3c9fc9b0bcfbc3fbc6beb423b9b1c"
+    },
+    {
+      "file": "book-light.json",
+      "sources": [
+        "app/book-light-content.json",
+        "app/book-light-integrity.json",
+        "app/book-light-index.json",
+        "app/book-light-topic-index.json",
+        "app/book-light-word-link-index.json",
+        "app/book-light-validation.mjs",
+        "scripts/book-light-index.mjs"
+      ],
+      "entries": 14,
+      "bytes": 43559,
+      "sha256": "2b05c5674148d9ab6b548b128438740c0424aafff3283e4cdda1d246c538a51d"
     },
     {
       "file": "continents.json",
@@ -134,8 +149,8 @@
         "app/journey-inquiries.json"
       ],
       "entries": 3,
-      "bytes": 228134,
-      "sha256": "e824e853782e7da12d68e48c754d8b8cc0e2b03aeb5146687418436e72f78be2"
+      "bytes": 228387,
+      "sha256": "03db6cdba4353b79dbe940191b842e0360db7ec73b3b2cc9f5acdf398ae5c78e"
     },
     {
       "file": "journeys.json",
@@ -156,22 +171,24 @@
         "app/learning-data.ts",
         "app/expanded-learning-data.ts",
         "app/book-measurement-word-index.json",
-        "app/book-heat-index.json"
+        "app/book-heat-index.json",
+        "app/book-light-index.json"
       ],
-      "entries": 101,
-      "bytes": 18443,
-      "sha256": "0e353e37ddfe17d9ad412ef9e61f027869758eca5d2530f5d1e108492fb636de"
+      "entries": 113,
+      "bytes": 22055,
+      "sha256": "348317ae8c025f08ba84541705a50ad405cada2ac86a9d6b2e2f40ed106a7a33"
     },
     {
       "file": "why-questions.json",
       "sources": [
         "app/learning-data.ts",
         "app/expanded-learning-data.ts",
-        "app/book-heat-index.json"
+        "app/book-heat-index.json",
+        "app/book-light-index.json"
       ],
-      "entries": 32,
-      "bytes": 8113,
-      "sha256": "c77704bc6a5df3968fe53ab6dd764312213120cf6fccfbabcf7debbeee5f029b"
+      "entries": 34,
+      "bytes": 8763,
+      "sha256": "cd4b7fe9e5a3ccacc835f82b4b0f651fa0ec9f26c70a17227314f6a3c9664c6d"
     },
     {
       "file": "earth-badges.json",

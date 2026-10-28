@@ -478,7 +478,7 @@
             "Die beiden Kontinente bewegen sich voneinander weg"
           ],
           "correct": 0,
-          "hint": "Lege zwei gedachte feste Ränder aneinander und schiebe sie zusammen. Welche Bewegung passt zu gestauchtem und gehobenem Material?",
+          "hint": "Stell dir zwei Punkte am Rand der Kontinente vor. Wie ändert sich ihr Abstand, wenn Gestein dazwischen weniger Platz bekommt und sich verformen kann?",
           "why": "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
           "wrong": [
             "Kontinentkollision kann Gestein falten und Gebirge aufbauen.",
@@ -546,17 +546,17 @@
         {
           "prompt": "Was unterscheidet Magma und Lava in dieser Erklärung?",
           "answers": [
-            "Die Uhrzeit des Tages",
+            "Nur die Temperatur: Magma ist immer heißer als Lava",
             "Der Ort unter oder an der Oberfläche",
-            "Die Farbe einer Landkarte"
+            "Nur die Farbe: Magma ist immer rot und Lava immer schwarz"
           ],
           "correct": 1,
-          "hint": "Vergleiche zuerst den Ort des Materials und erst danach seine anderen Eigenschaften. Welcher Unterschied erklärt hier den Namenswechsel?",
+          "hint": "Stell dir dasselbe Material vor, das einen Vulkanschlot verlässt. Was hat sich dabei sicher geändert, auch wenn du keinen Temperaturwert und kein Farbfoto hast?",
           "why": "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
           "wrong": [
-            "Der Begriff wechselt nicht mit der Uhrzeit.",
+            "Der Namenswechsel beschreibt hier den Austritt an die Oberfläche, keine festgelegte Temperaturgrenze.",
             "Die Ortsbezeichnungen helfen, den Weg des Materials zu beschreiben.",
-            "Kartenfarben sind nur Darstellungszeichen."
+            "Eine Farbe allein sagt nicht, ob das Material unter der Oberfläche liegt oder bereits ausgetreten ist. Hier geht es um den Ort."
           ]
         },
         {

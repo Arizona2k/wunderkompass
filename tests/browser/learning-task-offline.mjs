@@ -8,7 +8,7 @@ import journeyData from'../../app/journey-inquiries.json'with{type:'json'};
 import{captureNativeViewport}from'./native-screenshot.mjs';
 const snapshot=p=>p.evaluate(k=>JSON.parse(localStorage.getItem(k)),SAVE_KEY);
 async function importFile(p,file){await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.locator('input[type=file]').setInputFiles(file);await p.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await p.locator('.passport-dialog').waitFor({state:'hidden'});}
-export async function learningTaskOfflineSemantics(page,{shots,kind,native=false}){
+export async function learningTaskOfflineSemantics(page,{shots,kind,native=false,captureSession=null}){
  const original=await snapshot(page),fixture=structuredClone(original),cases=[],prefix='cached-transfer-'+kind+(native?'-native':'');
  const journeyIds=['seasons:2','countries:4','landscapes:1','climate:2'];
  for(const id of['moon','seasons']){const old=labLegacy.entries[id];fixture.progress.gameSessions['lab:'+id]={...fixture.progress.gameSessions['lab:'+id],researchLevel:'hard','researchAnswer-hard':(old.correct+1)%3,researchHardTaskRevision:0};}
@@ -24,10 +24,30 @@ export async function learningTaskOfflineSemantics(page,{shots,kind,native=false
    const[journey,index]=id.split(':'),old=journeyLegacy.entries[id+':2'],q=journeyData.chapters.find(c=>c.id===id).tasks[2],chosen=(old.correct+1)%3;await page.evaluate(({journey,index})=>location.hash='journeys/'+journey+'/'+(Number(index)+1),{journey,index});const box=page.locator('[data-chapter-inquiry="'+id+'"]');await box.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await box.getByText('Deine frühere Auswahl „'+old.answers[chosen]+'“ bleibt gespeichert.',{exact:false}).waitFor();assert.equal((await snapshot(page)).progress.gameSessions['journey:'+journey]['chapter:'+index+':answer:2'],chosen);assert.equal((await snapshot(page)).progress.gameSessions['journey:'+journey]['chapter:'+index+':taskRevision:2'],undefined);await box.getByRole('button',{name:q.answers[chosen],exact:true}).click();await box.locator('.lab-feedback').getByText(q.wrong[chosen],{exact:true}).waitFor();await box.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();await preserve();cases.push({width,kind,native,family:'journey',id,actualCachedAppAfterServerStop:true,oldChoicePreservedUntilExplicitAnswer:true,currentWrongAndCorrectFeedback:true,noRevisionOnLoad:true});
    // Preserve the original country-feedback capture while that chapter is current.
    // Additional landscape/climate cases deliberately navigate elsewhere afterward.
-   if(native&&id==='countries:4'){assert.equal(await page.evaluate(()=>location.hash),'#journeys/countries/5');await box.locator('.lab-feedback').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+width+'.png'));}
+   if(native&&id==='countries:4'){assert.equal(await page.evaluate(()=>location.hash),'#journeys/countries/5');await box.locator('.lab-feedback').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+width+'.png'),{cdp:captureSession});}
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
   if(!native)await page.screenshot({path:path.join(shots,prefix+'-'+width+'.png'),fullPage:true});
  }
- await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();await importFile(page,originalFile);const restored=(await snapshot(page)).progress;for(const key of['gameSessions','notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(restored[key],original.progress[key],'original cached synthetic pass restored through actual UI: '+key);assert.equal(cases.length,12);return{cases,originalPassRestoredThroughActualUI:true,heardSpeechOrPhysicalDeviceClaim:false};
+ const insideCases=await insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession});
+ await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();await importFile(page,originalFile);const restored=(await snapshot(page)).progress;for(const key of['gameSessions','notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(restored[key],original.progress[key],'original cached synthetic pass restored through actual UI: '+key);assert.equal(cases.length,12);return{cases,insideCases,originalPassRestoredThroughActualUI:true,heardSpeechOrPhysicalDeviceClaim:false};
+}
+
+async function insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession}){
+ const old=journeyLegacy.entries['inside:4:1'],q=journeyData.chapters.find(c=>c.id==='inside:4').tasks[1],cases=[];
+ for(const width of[320,1440])for(const chosen of[0,2]){
+  const fixture=structuredClone(original),key='journey:inside';fixture.progress.gameSessions[key]={...fixture.progress.gameSessions[key],'chapter:4:level':1,'chapter:4:answer:1':chosen};delete fixture.progress.gameSessions[key]['chapter:4:taskRevision:1'];
+  const file=path.join(shots,`${prefix}-inside-${chosen}-${width}-synthetic.json`);await fs.writeFile(file,JSON.stringify(fixture,null,2)+'\n');await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
+  await importFile(page,file);await page.evaluate(()=>location.hash='journeys/inside/5');const box=page.locator('[data-chapter-inquiry="inside:4"]');await box.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+  const prior=()=>box.getByText('Deine frühere Auswahl „'+old.answers[chosen]+'“ bleibt gespeichert.',{exact:false});await prior().waitFor();await box.locator('.lab-feedback').getByText(old.wrong[chosen],{exact:true}).waitFor();assert.equal(await box.locator('.quiz-answer.is-incorrect').count(),0);
+  await page.reload();await prior().waitFor();let saved=(await snapshot(page)).progress;assert.equal(saved.gameSessions[key]['chapter:4:answer:1'],chosen);assert.equal(saved.gameSessions[key]['chapter:4:taskRevision:1'],undefined);
+  await box.getByRole('button',{name:q.answers[chosen],exact:true}).click();await box.locator('.lab-feedback').getByText(q.wrong[chosen],{exact:true}).waitFor();assert.equal((await snapshot(page)).progress.gameSessions[key]['chapter:4:taskRevision:1'],1);
+  await box.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();await page.reload();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();assert.equal(await prior().count(),0);
+  saved=(await snapshot(page)).progress;assert.equal(saved.gameSessions[key]['chapter:4:answer:1'],q.correct);assert.equal(saved.gameSessions[key]['chapter:4:taskRevision:1'],1);
+  for(const name of['notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(saved[name],original.progress[name],name+' retained in cached inside compatibility');
+  for(const[id,value]of Object.entries(original.progress.gameSessions))if(id!==key)assert.deepEqual(saved.gameSessions[id],value,id+' untouched');
+  const fileImage=path.join(shots,`${prefix}-inside-${chosen}-${width}.png`);await box.locator('.lab-feedback').scrollIntoViewIfNeeded();if(native)await captureNativeViewport(page,fileImage,{cdp:captureSession});else await box.screenshot({path:fileImage,animations:'disabled'});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);cases.push({width,chosen,native,originalWordingBeforeExplicitChoice:true,currentRevisionAfterClickAndReload:true,existingEarnedStatePreserved:true});
+ }
+ assert.equal(cases.length,4);return cases;
 }

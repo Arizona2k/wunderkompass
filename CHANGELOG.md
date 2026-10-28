@@ -1,6 +1,12 @@
-## Planeten-Kapitel · aktuelle Überarbeitung
+## Licht und Erdinneres · lokaler Entwicklungsstand
 
-Fünf vorhandene Kapitel unterscheiden Lichtquelle/Reflexion und Zeitspanne/Bewegung genauer. Vier eigene Zeichnungen mit KI-Unterstützung zeigen gerundete Flächenanteile, Luftgemisch/Windwirkung, örtlichesUnten und zwei getrennte Erdbewegungen. Hinweise nehmen die Lösung weniger vorweg; bisherige Antwortwortlaute, Lösungspositionen und Passkennungen bleiben. Frühe Drei-Engine-/native-/Kalt-Offline-Proben und die vollständige lokale Pflichtregression mit 165 Prüfeinträgen sind bestanden. Der tatsächliche M74-Wärmeabschluss ist in der Chronik nachgeführt. Native GitHub-Abnahme und Testbereitstellung dieses Abschnitts stehen aus.
+Zwölf zusätzliche Licht-/Wellenbegriffe und zwei Warumfragen verbinden kurze Definitionen, freiwillige Tiefe, Denkfragen und zwölf eigene erklärende Modellarten. Vier bestehende Begriffe erhalten aus demselben Fachbestand erzeugte Rückverweise. Die Beispiele unterscheiden unter anderem Reflexion von Absorption, zeitliche Frequenz von räumlicher Wellenlänge und Wärmebildfarben von Messwerten. Der Entwicklungsbestand umfasst113Wörter/34Warumfragen; tatsächlich bereitgestellt bleiben bis zur bestätigten neuen Lieferung101/32.
+
+Zwei vorhandene Erdinneres-Aufgaben erhalten gezieltere Hinweise beziehungsweise plausible Fehlalternativen. Frühere Magma-/Lava-Antworttexte und gespeicherte Auswahl bleiben über die vorhandene Aufgabenrevision erhalten. Lava folgt in beiden betroffenen Zeichnungen der wirklichen Geländegrenze; Schild-/Schichtvulkan werden als qualitative Formprofile verglichen. Eigene Kapitelgrafiken tragen lesbare Legenden und eine sichtbare KI-Kennzeichnung. Der Buchrückweg stellt nach dem tatsächlichen Rendern der gefilterten Wortkarte den bestehenden Tastaturöffner wieder her. Die vollständig bestandene lokale Regression und ergänzende Drei-Engine-Suchprobe ersetzen noch keine finale native GitHub-Abnahme oder tatsächliche Bereitstellung. Paket3.5 und der Gesamtauftrag bleiben offen.
+
+## Planeten-Kapitel · PR75 tatsächlich bereitgestellt
+
+Fünf vorhandene Kapitel unterscheiden Lichtquelle/Reflexion und Zeitspanne/Bewegung genauer. Vier eigene Zeichnungen mit KI-Unterstützung zeigen gerundete Flächenanteile, Luftgemisch/Windwirkung, örtliches Unten und zwei getrennte Erdbewegungen. Hinweise nehmen die Lösung weniger vorweg; bisherige Antwortwortlaute, Lösungspositionen und Passkennungen bleiben erhalten. PR75 ist nach vollständiger Quality189 regulär als `74ef5116d24a07a0efffaf323666f4ac554e8949` übernommen und am28.10.2026 um19:04:46MEZ durch Vercel bestätigt. Tatsächliche Auslieferungsbytes und Produkt-/Pass-/kalterOffline-Nachtest bestanden. Die Chronik enthält den bereits zuvor bestätigten M74-Wärmeabschluss; Gesamtpaket3.5 bleibt offen.
 
 ## Wärme im Wissensbuch · PR74 tatsächlich bereitgestellt
 

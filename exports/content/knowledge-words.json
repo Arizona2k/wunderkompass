@@ -1,5 +1,10 @@
 [
   {
+    "term": "Absorption",
+    "short": "Physik & Licht",
+    "more": "Ein Stoff nimmt Energie aus eintreffendem Licht auf. Diese Energie kann etwa zur Erwärmung oder zu anderen Veränderungen beitragen. Absorption ist etwas anderes als Reflexion oder Durchlassen."
+  },
+  {
     "term": "Ampere",
     "short": "Messen",
     "more": "Ampere ist die Einheit der elektrischen Stromstärke; ihr Zeichen ist A. Stromstärke beschreibt, wie viel elektrische Ladung in einer bestimmten Zeit eine Stelle passiert. Elektrische Spannung ist eine andere Messgröße. Das A auf einem Schild ist keine Aussage darüber, ob ein Gerät sicher berührt werden darf."
@@ -23,6 +28,11 @@
     "term": "Biodiversität",
     "short": "Natur",
     "more": "Die Vielfalt von Lebewesen, ihren genetischen Unterschieden und Lebensräumen."
+  },
+  {
+    "term": "Brechung",
+    "short": "Physik & Licht",
+    "more": "Licht kann beim Übergang zwischen Stoffen seine Ausbreitungsrichtung ändern. Das hängt mit unterschiedlicher Ausbreitungsgeschwindigkeit zusammen. Trifft es senkrecht auf eine ebene Grenzfläche, bleibt seine Richtung im einfachen Strahlenmodell gleich."
   },
   {
     "term": "Breitengrad",
@@ -58,6 +68,11 @@
     "term": "Einzugsgebiet",
     "short": "Wasser",
     "more": "Die Fläche, aus der Wasser zu einem bestimmten Fluss oder See abfließt."
+  },
+  {
+    "term": "Energie",
+    "short": "Physik & Licht",
+    "more": "Energie hilft, Veränderungen zu beschreiben. Körper können Energie speichern und an andere Körper übertragen. Dabei können sich die Energieformen ändern, etwa elektrische Energie in Licht und eine Erwärmung der Umgebung. Energie ist kein Stoff wie Sand."
   },
   {
     "term": "Epizentrum",
@@ -105,6 +120,11 @@
     "more": "Eine lange, oft tiefe Meeresbucht in einem Tal, das ein Gletscher geformt hat."
   },
   {
+    "term": "Frequenz",
+    "short": "Bewegung & Wellen",
+    "more": "Die Frequenz zählt, wie oft sich ein wiederkehrender Vorgang in einer bestimmten Zeit wiederholt. Die Einheit Hertz bedeutet Wiederholungen pro Sekunde. Eine höhere Frequenz bedeutet nicht automatisch einen größeren Ausschlag oder einen lauteren Ton."
+  },
+  {
     "term": "Gestein",
     "short": "Erdinneres",
     "more": "Natürliches festes Material, das meist aus Mineralen besteht. Manche Gesteine enthalten auch Glas."
@@ -143,6 +163,11 @@
     "term": "Hotspot",
     "short": "Erdinneres",
     "more": "Ein heißer Bereich im Mantel, über dem Vulkane entstehen können, auch mitten auf einer Platte."
+  },
+  {
+    "term": "Infrarot",
+    "short": "Physik & Licht",
+    "more": "Infrarot ist elektromagnetische Strahlung mit längeren Wellenlängen als sichtbares rotes Licht. Unsere Augen sehen sie nicht. Warme Gegenstände senden unter anderem Infrarotstrahlung aus."
   },
   {
     "term": "Insel",
@@ -310,6 +335,11 @@
     "more": "Ein sehr großes Meer. Die fünf benannten Ozeane sind zu einem Weltmeer verbunden."
   },
   {
+    "term": "Photon",
+    "short": "Physik & Licht",
+    "more": "Ein Photon ist ein einzelnes Energiequant des elektromagnetischen Feldes. Licht zeigt sowohl Wellen- als auch Teilcheneigenschaften. Ein Photon ist keine kleine massive Kugel, die man mit einer Lupe sehen könnte."
+  },
+  {
     "term": "Planet",
     "short": "Weltall",
     "more": "Ein großer, ungefähr runder Himmelskörper, der einen Stern umkreist. Die Erde ist ein Planet."
@@ -325,9 +355,19 @@
     "more": "Die Bewegung der großen festen Platten an der Außenseite der Erde. Sie verändert die Erde über lange Zeit."
   },
   {
+    "term": "Polarisation",
+    "short": "Physik & Licht",
+    "more": "Polarisation beschreibt eine Ausrichtung der elektrischen Feldschwingung von Licht. Sie ist eine andere Eigenschaft als Farbe oder Helligkeit. Eine Pfeilzeichnung kann die Richtung veranschaulichen, aber nicht alle Lichteigenschaften."
+  },
+  {
     "term": "Recycling",
     "short": "Natur",
     "more": "Abfälle werden zu Material für neue Dinge aufbereitet. Noch besser ist oft, etwas lange zu nutzen und Abfall zu vermeiden."
+  },
+  {
+    "term": "Reflexion",
+    "short": "Physik & Licht",
+    "more": "Licht trifft auf eine Oberfläche und wird von ihr zurückgeworfen. An einer glatten Fläche kann eine geordnete Spiegelung entstehen; raue Flächen verteilen reflektiertes Licht in viele Richtungen."
   },
   {
     "term": "Regenbogen",
@@ -370,6 +410,11 @@
     "more": "Die Sekunde ist eine Zeiteinheit mit dem Zeichen s. Sie beschreibt zum Beispiel, wie lange ein Vorgang dauert. Die Uhrzeit seines Beginns und seine Dauer sind unterschiedliche Angaben: Ein Versuch kann um 10 Uhr beginnen und drei Sekunden dauern."
   },
   {
+    "term": "Spektrum",
+    "short": "Physik & Licht",
+    "more": "Ein Spektrum ordnet Strahlung nach einer Größe wie Wellenlänge oder Frequenz. Sichtbares Licht ist nur ein Teil des elektromagnetischen Spektrums; Radio- und Infrarotstrahlung gehören ebenfalls dazu."
+  },
+  {
     "term": "Springtide",
     "short": "Meere",
     "more": "Gezeiten mit oft größerem Unterschied zwischen Hoch- und Niedrigwasser bei Neu- und Vollmond."
@@ -378,6 +423,16 @@
     "term": "Stern",
     "short": "Weltall",
     "more": "Eine große heiße Gaskugel, die eigene Energie erzeugt und Licht aussendet. Unsere Sonne ist ein Stern."
+  },
+  {
+    "term": "Strahlung",
+    "short": "Physik & Licht",
+    "more": "Energie kann durch elektromagnetische Wellen übertragen werden, etwa durch sichtbares Licht oder Radiowellen. Nicht jede Strahlung ist sichtbar; der Ausdruck Strahlung umfasst in anderen Zusammenhängen auch Teilchenstrahlung."
+  },
+  {
+    "term": "Streuung",
+    "short": "Physik & Licht",
+    "more": "Licht wird durch Wechselwirkung mit Teilchen oder Strukturen in verschiedene Richtungen verteilt. Wie stark dies geschieht, hängt unter anderem von Wellenlänge und Größe der streuenden Teilchen ab."
   },
   {
     "term": "Subduktion",
@@ -483,6 +538,11 @@
     "term": "Wasserkreislauf",
     "short": "Wasser",
     "more": "Die Bewegung des Wassers zwischen Meer, Luft, Land, Boden und Eis. Es gibt viele Wege und keinen festen Anfang."
+  },
+  {
+    "term": "Wellenlänge",
+    "short": "Bewegung & Wellen",
+    "more": "Die Wellenlänge ist ein räumlicher Abstand in einem wiederkehrenden Wellenmuster: zum Beispiel von einem Wellenberg zum nächsten. Sie ist eine Länge, keine Zeit. Die Höhe eines Wellenbergs ist eine andere Angabe."
   },
   {
     "term": "Wendekreis",

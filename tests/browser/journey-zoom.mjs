@@ -1,3 +1,4 @@
+import {insideDiagramViews} from './inside-diagrams.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {historyEngineView} from './discovery-central.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
@@ -32,6 +33,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
   const blank=await context.newPage();
   try{await assert.rejects(captureNativeViewport(blank,path.join(shots,'history-native-blank-negative.png')),/Native screenshot is uniform/);report.nativeHistory.blankCaptureRejected=true;}finally{await blank.close();}
   report.nativePlanet=[];const previousViewport=p.viewportSize();for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});report.nativePlanet.push(...await planetDiagramViews(p,{width,large:true,native:true,offline:false,shots,engine:'chromium-native'}));}await p.setViewportSize(previousViewport);assert.equal(report.nativePlanet.length,18);
+  report.nativeInside=[];for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});report.nativeInside.push(...await insideDiagramViews(p,{width,large:true,native:true,shots,engine:'chromium-native'}));}assert.equal(report.nativeInside.length,16);await p.setViewportSize(previousViewport);
   report.offlineNative=await offlineResilience(null,{port:4779,shots,kind:'chromium',context,native:true});
   report.nativeZoom={percent:200,...dimensions,largeTextAlsoChecked:true};report.speechAvailability=await p.evaluate(()=>({api:'speechSynthesis' in window,germanVoices:window.speechSynthesis?.getVoices().filter(v=>v.lang.startsWith('de')).length??0,audibleTestPerformed:false}));assert.deepEqual(errors,[]);report.checks.push('Actual native Chromium 200% zoom, measured 640 CSS px / 1280 screen px / DPR 2; four journeys, large text, focus, reflow and axe');
  }finally{await context.close();}
