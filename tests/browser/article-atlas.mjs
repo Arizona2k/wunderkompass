@@ -1,3 +1,4 @@
+import {worldEntryNavigation} from './world-entry.mjs';
 import {assertModelLabels,worldModelTypographyView} from './model-labels.mjs';
 import {scienceOriginalView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
@@ -90,6 +91,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  if(width===320){
   await open('science-moon-phases');await page.locator('.earth-app').evaluate(el=>el.classList.add('large-reading'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'large reading 320');await page.locator('.article-wayfinder').getByRole('button',{name:/Mini-Frage$/}).click();await page.screenshot({path:shots+'/article-large-reading-320.png'});await page.locator('.earth-app').evaluate(el=>el.classList.remove('large-reading'));
   report.worldModelTypography=await worldModelTypographyView(page);
+  report.worldEntryNavigation=await worldEntryNavigation(page);
  }
  report.peopleViews??=[];report.peopleViews.push(...await peopleSourceView(page,{width,shots,questions:true}));
  if(width===390)await peopleLegacyRound(page.context().browser(),new URL(page.url()).origin,ready,report,shots);
