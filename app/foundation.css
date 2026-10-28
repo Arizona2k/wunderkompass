@@ -21,3 +21,14 @@
 .learning-grid :is(.research-tile,.world-trip) :is(h3,h4){font-size:clamp(18px,1.4vw,21px);line-height:1.35}
 .learning-grid :is(.research-tile,.world-trip) p{font-size:16px;line-height:1.65}
 .large-reading .learning-grid :is(.research-tile,.world-trip) p{font-size:20px}
+
+/* Learning navigation: real media and an open reading rhythm. */
+.world-view .world-card-grid{gap:clamp(18px,2vw,28px)}
+.world-view .world-topic-tile{border:0;border-bottom:1px solid var(--wk-line);border-radius:14px 14px 0 0;background:transparent;box-shadow:none;align-self:start}
+.world-view .world-topic-tile:hover{box-shadow:none;border-color:var(--world-accent)}
+.world-view .world-topic-tile .world-tile-text{padding:20px 4px 24px}
+.world-view .world-topic-tile h3{font-size:clamp(22px,2vw,27px);line-height:1.22;letter-spacing:-.03em}
+.world-view .world-topic-tile .world-tile-text>p{color:var(--wk-ink);line-height:1.65}
+.world-view .world-topic-tile .world-photo{border-radius:14px;margin:0;background:#eef1eb}
+.world-view .world-topic-tile .world-photo.compact img{height:220px;object-fit:contain}
+.large-reading .world-view .world-topic-tile h3{font-size:31px}

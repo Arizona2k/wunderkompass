@@ -1,6 +1,6 @@
 /* Shared article system: mobile first; category accents inherit the world. */
 .article-atlas {color:var(--wk-ink);overflow-wrap:break-word;--article-space:clamp(20px,3vw,36px)}
-.article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:var(--wk-radius);overflow:hidden;margin-bottom:18px}
+.article-atlas .article-hero {display:grid;grid-template-columns:minmax(0,1fr);background:transparent;border:0;border-radius:16px;overflow:hidden;margin-bottom:24px}
 .article-atlas .article-hero-copy {padding:var(--article-space);min-width:0}
 .article-atlas .world-article-heading {margin:0}
 .article-atlas .world-article-heading h2 {font-size:clamp(28px,3.6vw,46px);line-height:1.13;letter-spacing:-.045em;margin:14px 0 18px;max-width:22ch;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
@@ -116,3 +116,15 @@
 .article-atlas .world-more{max-width:76ch}.article-atlas .world-short h3{font-size:25px;line-height:1.3}
 .article-atlas .article-hero .article-context{font-size:15px;line-height:1.6}
 .large-reading .article-atlas .world-short>p{font-size:23px}.large-reading .article-atlas .article-wayfinder button{font-size:20px}
+
+/* The reading surface and the active question have distinct visual roles. */
+.article-atlas .article-wayfinder{display:flex;flex-wrap:wrap;gap:8px;border-block:1px solid var(--wk-line);padding-block:8px}
+.article-atlas .article-wayfinder button{background:transparent;border:0;border-radius:6px;padding-inline:12px}
+.article-atlas .world-short{border:0;border-radius:0;background:transparent;padding-inline:0}
+.article-atlas .world-short>p{max-width:68ch;line-height:1.8}
+.article-atlas .world-article-main>.world-mini-question{position:relative;background:#edf2ec;border:0;border-radius:18px;padding:clamp(20px,3vw,34px)}
+.article-atlas .world-mini-question h3{font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.025em;max-width:32ch}
+.article-atlas .world-mini-question .quiz-answer:not(.is-correct):not(.is-incorrect){background:var(--wk-paper);border-color:#b5c5bc;color:var(--wk-ink)}
+.article-atlas .world-mini-question .quiz-answer:hover:not(:disabled){border-color:var(--wk-teal)}
+.article-atlas .world-mini-question .lab-feedback{background:var(--wk-paper);border-radius:12px}
+.large-reading .article-atlas .world-mini-question h3{font-size:34px}
