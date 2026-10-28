@@ -37,13 +37,13 @@
 .article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
 .article-wayfinder button:hover {background:var(--world-tint);border-color:var(--world-accent)}
 .article-atlas .world-article-layout {grid-template-columns:minmax(0,1fr);gap:24px}
-.article-atlas .world-article-main>section,.article-atlas .article-experiment {padding:var(--article-space);border:1px solid var(--wk-line);border-radius:20px;background:var(--wk-paper);min-width:0}
+.article-atlas .world-article-main>section {padding:var(--article-space);border:1px solid var(--wk-line);border-radius:20px;background:var(--wk-paper);min-width:0}
 .article-atlas .world-short>p {margin:0 0 17px;color:var(--wk-ink)}
 .article-atlas .world-facts {grid-template-columns:minmax(0,1fr);gap:12px;margin-top:26px}
 .article-atlas .world-facts>div {background:var(--world-tint);padding:18px;border-radius:12px}
 .article-atlas .world-facts dd {font-size:16px;line-height:1.75}
 .article-atlas .world-facts dt {color:var(--world-accent);font-size:12px}
-.article-atlas .article-experiment {background:#eaf3f1;border-color:#b6cec9}
+.article-atlas .article-experiment {padding:24px 0;border-block:1px solid var(--wk-line);min-width:0}
 .article-experiment>.eyebrow {margin-bottom:18px;color:var(--wk-teal)}
 .article-experiment h3 {font-size:24px;line-height:1.3;margin:0 0 14px}
 .article-experiment .model-buttons {display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}

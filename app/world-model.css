@@ -1,0 +1,18 @@
+/* Research surfaces keep their drawing and controls in the article's full measure. */
+.article-atlas .article-experiment .world-model{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.world-model h3{font-size:clamp(24px,2.6vw,30px);font-weight:600;line-height:1.3;letter-spacing:-.025em;margin:12px 0 16px}
+.article-atlas .world-model .small-note{font-size:16px!important;line-height:1.65;color:var(--wk-muted)}
+.article-atlas .world-model :is(.model-range,.model-buttons button,.bit-switches small,.force){font-size:16px!important}
+.world-model .model-result{font-size:16px;line-height:1.7}
+.model-node-key{display:flex;flex-wrap:wrap;gap:10px 20px;list-style:none;padding:0;margin:12px 0 24px;font-size:16px;line-height:1.6}
+.model-node-key li{display:flex;align-items:center;gap:8px}.model-node-key strong{display:grid;place-items:center;width:28px;height:28px;flex:none;background:#edf4f5;border-radius:50%}
+.world-model .model-figure-caption{font-size:16px;line-height:1.6;margin:8px 0 24px;color:var(--wk-muted)}
+.model-two-labels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;font-size:16px;line-height:1.6;margin:0 0 24px}
+.model-two-labels span{min-width:0;overflow-wrap:anywhere}
+.world-model .model-axis-title{font-size:16px;margin:20px 0 0}.world-model>svg.model-pressure-curve{margin:0}
+.model-axis-labels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.5fr);gap:10px;font-size:16px;line-height:1.6;margin:0 0 24px}
+.model-axis-labels>span{min-width:0;overflow-wrap:anywhere}.model-axis-labels>span:nth-child(2){text-align:center}.model-axis-labels>span:last-child{text-align:right}
+.model-energy-key{display:flex;flex-wrap:wrap;gap:16px 32px;margin:12px 0 24px;font-size:16px;line-height:1.6}.model-energy-key dt{color:var(--wk-muted)}.model-energy-key dd{font-weight:700;margin:0}
+.large-reading .article-atlas .world-model :is(.small-note,.model-range,.model-buttons button,.bit-switches small,.force,.model-result,.model-node-key li,.model-figure-caption,.model-two-labels span,.model-axis-title,.model-axis-labels span,.model-energy-key dt,.model-energy-key dd){font-size:20px!important}
+.large-reading .world-model svg text{font-size:24px}
+@media(max-width:560px){.large-reading .world-model svg text{font-size:44px}.world-model.model-atmosphere svg text{font-size:32px}.large-reading .world-model.model-atmosphere svg text{font-size:36px}.model-network>svg g circle,.model-gps .model-point{r:28px}.model-gps .model-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.model-gps .model-buttons button{min-width:0}}

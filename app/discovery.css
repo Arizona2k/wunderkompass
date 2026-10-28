@@ -311,3 +311,12 @@
 .earth-app:is([data-mode=globe],[data-mode=layers],[data-mode=day]) .visual-heading{padding:18px 20px 12px}
 .visual-heading h1{font-size:clamp(26px,2.7vw,36px);line-height:1.2;letter-spacing:-.03em;color:var(--wk-ink);margin:0 0 12px}
 .large-reading .visual-heading h1{font-size:clamp(30px,3vw,42px)}
+
+/* Category collections stay available before the optional chronological path. */
+.world-view :is(.world-timeline,.invention-timeline){padding:0;border:0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent;margin:24px 0}
+.world-view :is(.world-timeline,.invention-timeline)>summary{min-height:56px;padding:14px 0;font-size:17px;line-height:1.6;font-weight:600;color:var(--wk-ink);cursor:pointer}
+.world-timeline>summary>svg{display:inline;vertical-align:middle;margin-inline:8px;color:var(--wk-teal)}
+.world-view :is(.world-timeline,.invention-timeline)>p{margin:12px 0 20px;line-height:1.7}
+.world-view :is(.world-timeline,.invention-timeline)[open]{padding-bottom:24px}
+.world-view .timeline-station :is(strong,small){font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+.large-reading .world-view :is(.world-timeline,.invention-timeline)>summary,.large-reading .world-view .timeline-station :is(strong,small){font-size:20px}
