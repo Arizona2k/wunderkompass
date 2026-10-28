@@ -37,7 +37,7 @@
 .article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
 .article-wayfinder button:hover {background:var(--world-tint);border-color:var(--world-accent)}
 .article-atlas .world-article-layout {grid-template-columns:minmax(0,1fr);gap:24px}
-.article-atlas .world-article-main>section {padding:var(--article-space);border:1px solid var(--wk-line);border-radius:20px;background:var(--wk-paper);min-width:0}
+.article-atlas .world-article-main>section {padding:var(--article-space) 0;border:0;border-top:1px solid var(--wk-line);border-radius:0;background:transparent;min-width:0}
 .article-atlas .world-short>p {margin:0 0 17px;color:var(--wk-ink)}
 .article-atlas .world-facts {grid-template-columns:minmax(0,1fr);gap:12px;margin-top:26px}
 .article-atlas .world-facts>div {background:var(--world-tint);padding:18px;border-radius:12px}

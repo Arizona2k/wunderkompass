@@ -1,11 +1,11 @@
 {
-  "meaning": "Each current image was freshly captured from the actual local redesign preparation build, not native CI or deployed evidence. Prior original captures and rendering hashes remain in captureHistory. Refresh actual previews when checked rendering sources change; no independent scientific or human acceptance.",
+  "meaning": "All eleven model surfaces were freshly captured again from the actual local preparation build after practical-guide changes in the same renderer module. Every current PNG is byte-identical to its prior actual capture; original sources, original captures and rendering hashes remain in captureHistory. These are local preparation captures, not native CI or deployed evidence. Refresh actual previews when checked rendering sources change; no independent scientific or human acceptance.",
   "sourceCommit": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
   "actualMerge": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
   "renderingSources": {
     "research-labs.tsx": {
       "scope": "fromLabWorkbench",
-      "sha256": "f1a3d955031b00ac506a4734940e634a10b66601800691690be9827dd18d2735"
+      "sha256": "75bc0a63b9a1e47ec7cf54a37aefd0e988f63e394916ad8e83da6189e8d2e483"
     },
     "learning-labs.tsx": {
       "scope": "whole",
@@ -57,9 +57,9 @@
       "bytes": 19274,
       "sha256": "288791d558ae4c311e5a422d356ddbc188f745339dc1ce50b24e99f5583322ef",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -70,7 +70,7 @@
           "viewBox": "0 0 600 300"
         },
         "actualDOMLabel": "Du bist 0 Kilometer tief in der Schicht Erdkruste.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 19274,
         "sha256": "288791d558ae4c311e5a422d356ddbc188f745339dc1ce50b24e99f5583322ef"
       }
@@ -79,9 +79,9 @@
       "bytes": 14500,
       "sha256": "6d0296420a95a2b7bf5983157de324638ec39ccffd57afbc417832745c3314c9",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -92,7 +92,7 @@
           "viewBox": "0 0 600 320"
         },
         "actualDOMLabel": "Vulkanschnitt. Noch kein Ausbruch.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 14500,
         "sha256": "6d0296420a95a2b7bf5983157de324638ec39ccffd57afbc417832745c3314c9"
       }
@@ -101,9 +101,9 @@
       "bytes": 13082,
       "sha256": "805dd84e2fdd2bd3610e0410784d71a05f229a17d95466dce4ef0304a0661a1a",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -114,7 +114,7 @@
           "viewBox": "0 0 600 320"
         },
         "actualDOMLabel": "Erdbebenherd in 15 km Tiefe, Epizentrum direkt darüber an der Oberfläche.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 13082,
         "sha256": "805dd84e2fdd2bd3610e0410784d71a05f229a17d95466dce4ef0304a0661a1a"
       }
@@ -123,9 +123,9 @@
       "bytes": 7137,
       "sha256": "3b868e693567433b928ff8ce490a000a4f2c3577d8d1861092e35815a8936476",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -136,9 +136,7 @@
           "viewBox": "0 0 600 120"
         },
         "actualDOMLabel": "Mit stärkerer Abkühlung werden mehr Tröpfchen sichtbar",
-        "state": {
-          "cool": 100
-        },
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 7137,
         "sha256": "3b868e693567433b928ff8ce490a000a4f2c3577d8d1861092e35815a8936476"
       }
@@ -147,9 +145,9 @@
       "bytes": 12976,
       "sha256": "73c8397b9735ea5a5c014c8c7f16bab323cc242407fdf2a06988f12a457c2713",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -160,7 +158,7 @@
           "viewBox": null
         },
         "actualDOMLabel": "Vier Wege im Wasserkreislauf",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 12976,
         "sha256": "73c8397b9735ea5a5c014c8c7f16bab323cc242407fdf2a06988f12a457c2713"
       }
@@ -169,9 +167,9 @@
       "bytes": 18990,
       "sha256": "50e4586dbb09ba9368cc9415cf912b87526a1b3a9a91523a5e7ce6e69322a10a",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -182,7 +180,7 @@
           "viewBox": "0 0 500 330"
         },
         "actualDOMLabel": "Umlaufbahnmodell im Juni. Erdachse geneigt.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 18990,
         "sha256": "50e4586dbb09ba9368cc9415cf912b87526a1b3a9a91523a5e7ce6e69322a10a"
       }
@@ -191,9 +189,9 @@
       "bytes": 9510,
       "sha256": "d61660b73720fbf80c0eb1e91173e74e195ff8282bcf755a57e4033b89a34b5c",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -204,7 +202,7 @@
           "viewBox": "0 0 500 230"
         },
         "actualDOMLabel": "Platten bewegen sich auseinander. Schematisches Modell.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 9510,
         "sha256": "d61660b73720fbf80c0eb1e91173e74e195ff8282bcf755a57e4033b89a34b5c"
       }
@@ -213,9 +211,9 @@
       "bytes": 16019,
       "sha256": "61d872b14f01fa0102febf6f1d24a940ef9a1f6e52e41d323e9ec964525da452",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -226,7 +224,7 @@
           "viewBox": "0 0 650 310"
         },
         "actualDOMLabel": "Neumond. 0 Prozent der sichtbaren Mondscheibe beleuchtet. Blick für die Nordhalbkugel.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 16019,
         "sha256": "61d872b14f01fa0102febf6f1d24a940ef9a1f6e52e41d323e9ec964525da452"
       }
@@ -235,9 +233,9 @@
       "bytes": 8893,
       "sha256": "0ee90a8eee4a2b77c9cb7aa3d2f3484cbbb839c923e254723b9c916f4c1a3e15",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -248,7 +246,7 @@
           "viewBox": null
         },
         "actualDOMLabel": null,
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 8893,
         "sha256": "0ee90a8eee4a2b77c9cb7aa3d2f3484cbbb839c923e254723b9c916f4c1a3e15"
       }
@@ -257,9 +255,9 @@
       "bytes": 19321,
       "sha256": "e801726fc7dc566ceb79eff8d28536b1bf39560c0a41546245419edf375a1ce3",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -270,7 +268,7 @@
           "viewBox": "0 0 540 260"
         },
         "actualDOMLabel": "Gezeitenvergleich: Linie und Halbmond. Aktuell 1.46 relative Einheiten; keine örtliche Wasserhöhe.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 19321,
         "sha256": "e801726fc7dc566ceb79eff8d28536b1bf39560c0a41546245419edf375a1ce3"
       }
@@ -279,9 +277,9 @@
       "bytes": 45596,
       "sha256": "4f9468dbef0bef4f7f364734d457c561ddb317945aa26b0ebcac8a0569ba9606",
       "capture": {
-        "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
-        "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
-        "build": "fbe35db54cd3bb44",
+        "kind": "Fresh actual local preparation recapture; all11 byte-identical to prior actual images, not nativeCI or deployment",
+        "sourceDigest": "dba8c57e0a40e6ebc5b0521a9894cd687cff8bc22c332284c2fce698ba4a52a7",
+        "build": "ce85a36e876d7039",
         "viewportCSS": {
           "width": 640,
           "height": 1000
@@ -292,7 +290,7 @@
           "viewBox": "0 0 620 580"
         },
         "actualDOMLabel": "Vereinfachte Umlaufbahnen. 0 Erdtage nach dem Modellstart. Ausgewählt: Erde.",
-        "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+        "state": "Actual initial model state at fixed7Oct2026 10:00UTC; weather explicitly cooled to100",
         "bytes": 45596,
         "sha256": "4f9468dbef0bef4f7f364734d457c561ddb317945aa26b0ebcac8a0569ba9606"
       }
@@ -405,6 +403,307 @@
             "bytes": 45281,
             "sha256": "61d8116a42dd0d8df858be15e1012073ff5755f82e36290b45db4165dd50ca17",
             "retainedPreviewByteIdentical": true
+          }
+        }
+      }
+    },
+    {
+      "meaning": "Each current image was freshly captured from the actual local redesign preparation build, not native CI or deployed evidence. Prior original captures and rendering hashes remain in captureHistory. Refresh actual previews when checked rendering sources change; no independent scientific or human acceptance.",
+      "sourceCommit": "894ff9c80e65bc66e1da4f3bbc6aee6905e9fed1",
+      "actualMerge": "752b94fa0d1fc67b80c3de388c84b41ba2fc4a3c",
+      "renderingSources": {
+        "research-labs.tsx": {
+          "scope": "fromLabWorkbench",
+          "sha256": "f1a3d955031b00ac506a4734940e634a10b66601800691690be9827dd18d2735"
+        },
+        "learning-labs.tsx": {
+          "scope": "whole",
+          "sha256": "ee8991c61ac41561bde19a5ed6d13714799a2d85184eac475a464e2099e0498e"
+        },
+        "solar-lab.tsx": {
+          "scope": "whole",
+          "sha256": "4b0fde6270de1e90b992650da3cb5a26411e7e1d8775699c43cd42eba71c32bf"
+        },
+        "research-math.ts": {
+          "scope": "whole",
+          "sha256": "2ebad8af55958aa1b45824898262b4fabf8cafcf11f1d5e2a57c5698554098f9"
+        },
+        "research-simulations.tsx": {
+          "scope": "whole",
+          "sha256": "72af5716ce0665c4fc84d8e45f218032cfeca8cdb1d0cb5a0ff96c876d286553"
+        },
+        "research-catalog.ts": {
+          "scope": "whole",
+          "sha256": "e78bcf1f41aaba5569c62b2f76e62fccb4e29d2b7a8a2cb9803343dc45c6a0ae"
+        },
+        "solar-system-data.ts": {
+          "scope": "whole",
+          "sha256": "fa13ee30d24de3b7cd54ee9cbd9c0cddfd93746af37e116c1d419001a44d7dfa"
+        },
+        "planet-distances.ts": {
+          "scope": "whole",
+          "sha256": "8b281c5c695de615fa772b674de62e71d95f99c3a314a4fb002a99b1c28dedf4"
+        },
+        "planet-distance-source.json": {
+          "scope": "whole",
+          "sha256": "df23ea9a877524ab0f4beb4ae4eeeb7ad692b7a236bdabc7ade58263701f5dc0"
+        },
+        "planet-distance-notes.tsx": {
+          "scope": "whole",
+          "sha256": "ebae522c0bcb1a1df99256457448ab1a4ce104122d773b48cb4a0b755a529625"
+        },
+        "planet-distance-notes.css": {
+          "scope": "whole",
+          "sha256": "9939c756899556cec33aa2fa845a67f49119fbb88dec783a01fdae666c12fb70"
+        },
+        "research-figure-legend.tsx": {
+          "scope": "whole",
+          "sha256": "7f571cabc2a2f192616090b0d5a97c2e2b0316d1313b781e3fa83ea121a2cae3"
+        }
+      },
+      "images": {
+        "depth": {
+          "bytes": 19274,
+          "sha256": "288791d558ae4c311e5a422d356ddbc188f745339dc1ce50b24e99f5583322ef",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "science-figure",
+              "viewBox": "0 0 600 300"
+            },
+            "actualDOMLabel": "Du bist 0 Kilometer tief in der Schicht Erdkruste.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 19274,
+            "sha256": "288791d558ae4c311e5a422d356ddbc188f745339dc1ce50b24e99f5583322ef"
+          }
+        },
+        "volcano": {
+          "bytes": 14500,
+          "sha256": "6d0296420a95a2b7bf5983157de324638ec39ccffd57afbc417832745c3314c9",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "science-figure volcano-model ",
+              "viewBox": "0 0 600 320"
+            },
+            "actualDOMLabel": "Vulkanschnitt. Noch kein Ausbruch.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 14500,
+            "sha256": "6d0296420a95a2b7bf5983157de324638ec39ccffd57afbc417832745c3314c9"
+          }
+        },
+        "quake": {
+          "bytes": 13082,
+          "sha256": "805dd84e2fdd2bd3610e0410784d71a05f229a17d95466dce4ef0304a0661a1a",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "science-figure quake-model",
+              "viewBox": "0 0 600 320"
+            },
+            "actualDOMLabel": "Erdbebenherd in 15 km Tiefe, Epizentrum direkt darüber an der Oberfläche.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 13082,
+            "sha256": "805dd84e2fdd2bd3610e0410784d71a05f229a17d95466dce4ef0304a0661a1a"
+          }
+        },
+        "weather": {
+          "bytes": 7137,
+          "sha256": "3b868e693567433b928ff8ce490a000a4f2c3577d8d1861092e35815a8936476",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "air-model",
+              "viewBox": "0 0 600 120"
+            },
+            "actualDOMLabel": "Mit stärkerer Abkühlung werden mehr Tröpfchen sichtbar",
+            "state": {
+              "cool": 100
+            },
+            "bytes": 7137,
+            "sha256": "3b868e693567433b928ff8ce490a000a4f2c3577d8d1861092e35815a8936476"
+          }
+        },
+        "water": {
+          "bytes": 12976,
+          "sha256": "73c8397b9735ea5a5c014c8c7f16bab323cc242407fdf2a06988f12a457c2713",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "DIV",
+              "class": "water-loop",
+              "viewBox": null
+            },
+            "actualDOMLabel": "Vier Wege im Wasserkreislauf",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 12976,
+            "sha256": "73c8397b9735ea5a5c014c8c7f16bab323cc242407fdf2a06988f12a457c2713"
+          }
+        },
+        "seasons": {
+          "bytes": 18990,
+          "sha256": "50e4586dbb09ba9368cc9415cf912b87526a1b3a9a91523a5e7ce6e69322a10a",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "orbit-diagram",
+              "viewBox": "0 0 500 330"
+            },
+            "actualDOMLabel": "Umlaufbahnmodell im Juni. Erdachse geneigt.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 18990,
+            "sha256": "50e4586dbb09ba9368cc9415cf912b87526a1b3a9a91523a5e7ce6e69322a10a"
+          }
+        },
+        "plates": {
+          "bytes": 9510,
+          "sha256": "d61660b73720fbf80c0eb1e91173e74e195ff8282bcf755a57e4033b89a34b5c",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "plates-diagram",
+              "viewBox": "0 0 500 230"
+            },
+            "actualDOMLabel": "Platten bewegen sich auseinander. Schematisches Modell.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 9510,
+            "sha256": "d61660b73720fbf80c0eb1e91173e74e195ff8282bcf755a57e4033b89a34b5c"
+          }
+        },
+        "moon": {
+          "bytes": 16019,
+          "sha256": "61d872b14f01fa0102febf6f1d24a940ef9a1f6e52e41d323e9ec964525da452",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "science-figure",
+              "viewBox": "0 0 650 310"
+            },
+            "actualDOMLabel": "Neumond. 0 Prozent der sichtbaren Mondscheibe beleuchtet. Blick für die Nordhalbkugel.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 16019,
+            "sha256": "61d872b14f01fa0102febf6f1d24a940ef9a1f6e52e41d323e9ec964525da452"
+          }
+        },
+        "clocks": {
+          "bytes": 8893,
+          "sha256": "0ee90a8eee4a2b77c9cb7aa3d2f3484cbbb839c923e254723b9c916f4c1a3e15",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "ARTICLE",
+              "class": null,
+              "viewBox": null
+            },
+            "actualDOMLabel": null,
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 8893,
+            "sha256": "0ee90a8eee4a2b77c9cb7aa3d2f3484cbbb839c923e254723b9c916f4c1a3e15"
+          }
+        },
+        "tides": {
+          "bytes": 19321,
+          "sha256": "e801726fc7dc566ceb79eff8d28536b1bf39560c0a41546245419edf375a1ce3",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": null,
+              "viewBox": "0 0 540 260"
+            },
+            "actualDOMLabel": "Gezeitenvergleich: Linie und Halbmond. Aktuell 1.46 relative Einheiten; keine örtliche Wasserhöhe.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 19321,
+            "sha256": "e801726fc7dc566ceb79eff8d28536b1bf39560c0a41546245419edf375a1ce3"
+          }
+        },
+        "solar": {
+          "bytes": 45596,
+          "sha256": "4f9468dbef0bef4f7f364734d457c561ddb317945aa26b0ebcac8a0569ba9606",
+          "capture": {
+            "kind": "Fresh actual local redesign preparation capture; not nativeCI or deployment",
+            "sourceDigest": "fc7d7a30bff1a6923fc948d19f86f411008e0fc8339af244d408bd0f22a31168",
+            "build": "fbe35db54cd3bb44",
+            "viewportCSS": {
+              "width": 640,
+              "height": 1000
+            },
+            "surface": {
+              "tag": "svg",
+              "class": "science-figure solar-orbits",
+              "viewBox": "0 0 620 580"
+            },
+            "actualDOMLabel": "Vereinfachte Umlaufbahnen. 0 Erdtage nach dem Modellstart. Ausgewählt: Erde.",
+            "state": "Initial actual model state, fixed7Oct2026 10:00UTC",
+            "bytes": 45596,
+            "sha256": "4f9468dbef0bef4f7f364734d457c561ddb317945aa26b0ebcac8a0569ba9606"
           }
         }
       }

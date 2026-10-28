@@ -1,4 +1,5 @@
 'use client';
+import './article-workshop.css';
 import {displayTopicTitle} from './topic-title';
 import {restoreAnswerWording} from './retained-answer-wording.mjs';
 import AnimalInquiry from './animal-inquiry';
