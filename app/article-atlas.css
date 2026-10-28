@@ -28,10 +28,6 @@
 .tide-comparison .tide-diagram-label {font-size:16px;line-height:1.5;text-align:center;color:#203d4c;margin:20px 0 0}
 @container(min-width:520px) { .moon-diagram {grid-template-columns:repeat(4,minmax(0,1fr))} }
 .topic-illustration.compact figcaption {font-size:11px;min-height:56px}
-.article-field-note {background:var(--world-tint,#e7f2ed);padding:var(--article-space);display:flex;flex-direction:column;justify-content:center;gap:18px}
-.article-field-note>svg {color:var(--world-accent,var(--wk-teal))}
-.article-field-note>span {font-size:25px;line-height:1.25;font-weight:700;max-width:15ch;letter-spacing:-.03em}
-.article-atlas .article-field-note>p {font-size:15px;max-width:34ch}
 .article-atlas .article-wayfinder {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin:0 0 24px}
 .article-wayfinder button {display:flex;align-items:center;gap:10px;padding:12px;min-height:50px;line-height:1.5;font-size:14px;text-align:left;border:1px solid var(--wk-line);border-radius:12px;background:#fff;color:var(--wk-ink);min-width:0}
 .article-wayfinder button>span {font-size:11px;color:var(--world-accent,var(--wk-teal));font-weight:800}
