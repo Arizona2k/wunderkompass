@@ -1,3 +1,4 @@
+import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -453,7 +454,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
     await p.evaluate(()=>{const save=JSON.parse(localStorage.getItem('erde-entdecken:save:v3'));save.progress.lastActivity={type:'game',id:'unknown-stale-session',family:'classic'};localStorage.setItem('erde-entdecken:save:v3',JSON.stringify(save));});await p.reload();await ready(p);assert.equal(await p.locator('.continue-card').count(),0,'stale activity without matching game never offers false resume');
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
-   if(width===320||width===1440){await worldFilterKeyboardFocus(p,ready,report,width);(report.categoryTimelineNavigation??=[]).push(await categoryTimelineNavigation(p));}
+   if(width===320||width===1440){await worldFilterKeyboardFocus(p,ready,report,width);(report.categoryTimelineNavigation??=[]).push(await categoryTimelineNavigation(p));(report.guideDialogs??=[]).push(await guideDialogView(p));}
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
    report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + independently confirmed test website updates including PR 23, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
   }finally{await c.close();}

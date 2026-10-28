@@ -320,3 +320,7 @@
 .world-view :is(.world-timeline,.invention-timeline)[open]{padding-bottom:24px}
 .world-view .timeline-station :is(strong,small){font-size:16px;line-height:1.6;overflow-wrap:anywhere}
 .large-reading .world-view :is(.world-timeline,.invention-timeline)>summary,.large-reading .world-view .timeline-station :is(strong,small){font-size:20px}
+
+.search-dialog.large-reading :is(input,strong,span,p,[cmdk-group-heading]){font-size:20px!important;line-height:1.6}.search-dialog.large-reading .search-category{font-size:18px}
+.search-dialog [data-slot=dialog-title]{font-size:clamp(24px,2.5vw,30px);font-weight:600;line-height:1.25;margin-bottom:12px}.search-dialog.large-reading [data-slot=dialog-title]{font-size:32px}
+body:has(.earth-app[data-reduced-motion]) :is([data-slot=dialog-overlay],[data-slot=dialog-content],[data-slot=alert-dialog-overlay],[data-slot=alert-dialog-content]){animation:none!important;transition:none!important}
