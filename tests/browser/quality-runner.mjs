@@ -7,6 +7,7 @@ import {createHandoff,sourceDigest} from '../../scripts/handoff.mjs';
 import {learningFingerprint} from '../../build/learning-fingerprint.mjs';
 import {fileSnapshot,coldBrowserEnvironment,sealColdOffline,restoreColdOffline,validateRestoredColdOffline} from '../../scripts/cold-offline-reuse.mjs';
 import qualityContext from '../../scripts/release/quality-context.cjs';
+import {copyWorkerEvidence} from './worker-evidence-copy.mjs';
 
 const root=fileURLToPath(new URL('../..',import.meta.url)),started=performance.now(),basePort=Number(process.env.QA_PORT??4182),children=new Set();
 // Optional local resource diagnosis/acceptance: every existing worker and gate remains.
@@ -46,13 +47,13 @@ else{
   if(earlyCold)await validateRestoredColdOffline(coldDirectory,coldSeal,path.join(root,'.qa-output/quality-early-offline'),await coldIdentity(),earlyCold.provenance.sealSHA256);
   const reports=await Promise.all(outcomes.map(async result=>({...result,report:JSON.parse(await fs.readFile(path.join(root,'.qa-output',result.name,'portable-report.json'),'utf8'))})));
   const report=aggregateQuality(reports);if(earlyCold)report.reusedEarlyColdOffline={...earlyCold.provenance,originalsAndInputIdentityRecheckedAfterWorkers:true};if(serialLocal)report.localWorkerExecution='Same existing workers executed serially, local-only; complete assertions and scopes unchanged. CI must use the unchanged default parallel mode.';report.seconds=(performance.now()-started)/1000;
-  for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await fs.copyFile(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',result.name+'-'+file));
+  for(const result of outcomes)for(const file of await fs.readdir(path.join(root,'.qa-output',result.name)))if(file.endsWith('.png'))await copyWorkerEvidence(path.join(root,'.qa-output',result.name,file),path.join(root,'.qa-output',result.name+'-'+file));
   await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,seconds:report.seconds,checks:report.checks.length,timings:report.timings}));
   await createHandoff(report);
  }catch(error){await fs.mkdir(path.join(root,'.qa-output'),{recursive:true});
   // Keep actual current worker diagnostics even when fail-closed aggregation rejects them.
   if(ciCold&&!outcomes.some(result=>result.name==='quality-early-offline'))for(const entry of await fs.readdir(coldDirectory,{withFileTypes:true}).catch(()=>[]))if(entry.isFile()&&/\.(png|json|xml)$/.test(entry.name))await fs.copyFile(path.join(coldDirectory,entry.name),path.join(root,'.qa-output','quality-early-offline-diagnostic-'+entry.name));
-  for(const result of outcomes){const dir=path.join(root,'.qa-output',result.name);for(const file of await fs.readdir(dir).catch(()=>[]))if(/\.(png|json)$/.test(file))await fs.copyFile(path.join(dir,file),path.join(root,'.qa-output',result.name+'-'+file));}
+  for(const result of outcomes){const dir=path.join(root,'.qa-output',result.name);for(const file of await fs.readdir(dir).catch(()=>[]))if(/\.(png|json)$/.test(file))await copyWorkerEvidence(path.join(dir,file),path.join(root,'.qa-output',result.name+'-'+file));}
 await fs.writeFile(path.join(root,'.qa-output/portable-report.json'),JSON.stringify({status:'failed',scope:'complete mandatory regression',seconds:(performance.now()-started)/1000,outcomes,failure:error.stack},null,2));throw error;}
  finally{for(const child of children)child.kill('SIGTERM');}
 }

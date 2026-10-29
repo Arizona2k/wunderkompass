@@ -10,6 +10,8 @@ Gezielte reale Bedienfälle bestehen im aktuellen Produkt in Chromium/Firefox/We
 
 Die vollständige Auditergänzung V2 bleibt archiviert und wirksam in AGENTS/QUALITY verankert. Eigene Entwicklungsreservierung gehalten; main/Produktion unverändert, keine Agenten oder Scheduler und derzeit keine neue Einzelfreigabe offen. Unbekannte21historische Privatstände bleiben ohne Einzelinventar unbelegt.
 
+[DraftPR79](https://github.com/Arizona2k/wunderkompass/pull/79) bleibt offen. Der vollständige [Quality194-Lauf](https://github.com/Arizona2k/wunderkompass/actions/runs/40929680290) ist natürlich an der ursprünglichen Farbbedingung des Infrarotmodells im Offlineabschnitt fehlgeschlagen. Die Ursache bleibt offen; eine erfolgreiche lokale Probe ersetzt diesen fehlgeschlagenen Pflichtlauf nicht. Die bestehende Prüfroutine erhält deshalb eine eng begrenzte Fehleraufzeichnung vor der bisherigen Rückkehr-Aufräumroutine: erste gemessene Farben, tatsächliche Auswahl, Modellansicht und Fehlerbild bleiben verfügbar. Dieselben Prüfbedingungen bleiben blockierend; kein Produktwechsel auf Verdacht, keine Wiederholung mit unverändertem Belegstand und keine Lieferung behauptet. Der ergänzte Prüfstand benötigt vollständige aktuelle Qualifikation. Ausführliche Originale und Diagnosebelege bleiben privat.
+
 ## Historische Entwicklungsstände vor der bestätigten M78-Lieferung
 
 Die folgenden früheren offenen Teilchen-/M77-Angaben sind durch die obige tatsächliche Lieferung abgelöst. Originale und Herkunft bleiben erhalten; abgeschlossene Schritte nicht erneut ausführen.

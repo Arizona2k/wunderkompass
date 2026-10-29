@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-export async function assertBookLightFigure(figure,kind,{onState=null}={}){
+export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=null}={}){
  const controls=figure.locator('.visual-choice button'),count=await controls.count(),states=[];
  for(let selected=0;selected<Math.max(1,count);selected++){
   if(count){await controls.nth(selected).focus();await figure.page().keyboard.press('Enter');assert.equal(await controls.nth(selected).getAttribute('aria-pressed'),'true');}
@@ -40,7 +40,16 @@ export async function assertBookLightFigure(figure,kind,{onState=null}={}){
   if(kind==='infrared-palette'){
    assert.deepEqual(await figure.locator('[data-light-signal]').evaluateAll(es=>es.map(e=>Number(e.dataset.lightSignal))),[10,20,30]);
    const colours=await figure.locator('[data-light-signal]>span:first-child').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor));
-   assert.equal(new Set(colours).size,3);assert(selected===0?colours.some(c=>!/^rgb\((\d+), \1, \1\)$/.test(c)):colours.every(c=>/^rgb\((\d+), \1, \1\)$/.test(c)),'palette changes presentation, never sample values');
+   assert.equal(new Set(colours).size,3);
+   const paletteMatches=selected===0?colours.some(c=>!/^rgb\((\d+), \1, \1\)$/.test(c)):colours.every(c=>/^rgb\((\d+), \1, \1\)$/.test(c));
+   if(!paletteMatches){
+    // Keep the first measurement before a caller's route-restoring finally.
+    // A later successful layout read must never replace the failing colours.
+    const diagnostic={kind,selected,coloursFirstRead:colours,context:await figure.evaluate(root=>({hash:location.hash,width:innerWidth,visibility:document.visibilityState,focus:document.activeElement?.outerHTML,mediaReduced:matchMedia('(prefers-reduced-motion:reduce)').matches,forcedColors:matchMedia('(forced-colors:active)').matches,controls:[...root.querySelectorAll('.visual-choice button')].map(e=>({text:e.textContent,pressed:e.getAttribute('aria-pressed')})),samples:[...root.querySelectorAll('[data-light-signal]>span:first-child')].map(e=>({inline:e.getAttribute('style'),computed:getComputedStyle(e).backgroundColor,transition:getComputedStyle(e).transition,animation:getComputedStyle(e).animation})),animations:root.getAnimations({subtree:true}).map(a=>({state:a.playState,time:a.currentTime}))})).catch(error=>({captureError:String(error)}))};
+    console.error('BOOK_LIGHT_PALETTE_FAILURE '+JSON.stringify(diagnostic));
+    if(onFailure)try{await onFailure(diagnostic);}catch(error){console.error('BOOK_LIGHT_PALETTE_CAPTURE_ERROR '+String(error));}
+   }
+   assert(paletteMatches,'palette changes presentation, never sample values; selected='+selected+'; first colours='+JSON.stringify(colours));
   }
   if(kind==='frequency'||kind==='wavelength'){
    const cycles=kind==='frequency'?(selected===0?4:8):(selected===0?2:4);assert.equal(geometry.peaks.length,cycles);assert(Math.abs(geometry.height-60)<.01&&Math.abs(geometry.width-260)<.01,'same amplitude and axis extent');
