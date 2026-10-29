@@ -6,7 +6,7 @@ const read=()=>window.location.hash.slice(1)||'home';
 export function replaceHash(path:string){if(read()===path)return;history.replaceState(history.state,'','#'+path);window.dispatchEvent(new Event(EVENT));}
 function subscribe(fn:()=>void){window.addEventListener('hashchange',fn);window.addEventListener('popstate',fn);window.addEventListener(EVENT,fn);return()=>{window.removeEventListener('hashchange',fn);window.removeEventListener('popstate',fn);window.removeEventListener(EVENT,fn);};}
 // Browser-entry UI state only; learning progress stays in the central pass.
-export function navigateHash(path:string,options:{preserveControl?:boolean;replace?:boolean}={}){if(path==='home')window.dispatchEvent(new Event('wunder-home'));if(read()===path)return;try{
+export function navigateHash(path:string,options:{preserveControl?:boolean;replace?:boolean}={}){if(path==='home')window.dispatchEvent(new Event('wunder-home'));if(read()===path){window.dispatchEvent(new Event(EVENT));return;}try{
  const active=document.activeElement as HTMLElement|null;
  const open=Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure][open]')).map(el=>el.dataset.historyDisclosure);
  const hero=document.querySelector<HTMLElement>('[data-discovery-hero]')?.dataset.discoveryHero;

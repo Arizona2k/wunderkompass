@@ -1,4 +1,8 @@
+import {bookCommandView} from './book-commands.mjs';
+import {bookSourceCalendarView} from './book-calendar.mjs';
+import {bookContextView,bookSearchView} from './book-context.mjs';
 import {bookWaterView,bookWaterNetworkView} from './book-water.mjs';
+import {bookParticleView,bookParticleNetworkView} from './book-particle.mjs';
 import {bookLightView,bookLightNetworkView} from './book-light.mjs';
 import {bookHeatView,bookHeatNetworkView} from './book-heat.mjs';
 import {assertInsideDiagrams} from './inside-diagrams.mjs';
@@ -265,10 +269,12 @@ export async function journeySupportView(p,{widths,shots,engine}){
    const ready=page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
    learningHelp=await journeyLearningHelpView(browser,base,ready,helpShots);
   }
-  const bookProof={checks:[]},bookNetwork=await bookMeasurementNetworkView(p,{shots,engine}),bookHeatNetwork=await bookHeatNetworkView(p,{shots,engine}),bookLightNetwork=await bookLightNetworkView(p,{shots,engine}),bookWaterNetwork=await bookWaterNetworkView(p,{shots,engine});
-  for(const width of [320,1440]){await p.setViewportSize({width,height:900});await bookMeasurementView(p,bookProof,width,{shots,engine});await bookHeatView(p,bookProof,width,{shots,engine});await bookLightView(p,bookProof,width,{shots,engine});await bookWaterView(p,bookProof,width,{shots,engine});}
-  assert.equal(bookProof.bookMeasurements.length,14);assert.equal(bookProof.bookHeat.length,12);assert.equal(bookProof.bookLight.length,28);assert.equal(bookProof.bookWater.length,16);
-  return {hints,diagrams,sources,widths,bookMeasurements:bookProof.bookMeasurements,bookNetwork,bookHeat:bookProof.bookHeat,bookHeatNetwork,bookLight:bookProof.bookLight,bookLightNetwork,bookWater:bookProof.bookWater,bookWaterNetwork,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
+  const bookProof={checks:[]},bookNetwork=await bookMeasurementNetworkView(p,{shots,engine}),bookHeatNetwork=await bookHeatNetworkView(p,{shots,engine}),bookLightNetwork=await bookLightNetworkView(p,{shots,engine}),bookWaterNetwork=await bookWaterNetworkView(p,{shots,engine}),bookParticleNetwork=await bookParticleNetworkView(p,{shots,engine});
+  for(const width of [320,1440]){await bookContextView(p,bookProof,width,{large:width===320,shots,engine});await bookSearchView(p,bookProof,width);await p.setViewportSize({width,height:900});await bookMeasurementView(p,bookProof,width,{shots,engine});await bookHeatView(p,bookProof,width,{shots,engine});await bookLightView(p,bookProof,width,{shots,engine});await bookWaterView(p,bookProof,width,{shots,engine});await bookParticleView(p,bookProof,width,{shots,engine});}
+  const bookCommands=await bookCommandView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
+  const bookSourceCalendar=await bookSourceCalendarView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
+  assert.equal(bookProof.bookMeasurements.length,14);assert.equal(bookProof.bookHeat.length,12);assert.equal(bookProof.bookLight.length,28);assert.equal(bookProof.bookWater.length,16);assert.equal(bookProof.bookParticle.length,10);
+  return {hints,diagrams,sources,widths,bookCommands,bookSourceCalendar,bookContext:bookProof.bookContext,bookSearch:bookProof.bookSearch,bookMeasurements:bookProof.bookMeasurements,bookNetwork,bookHeat:bookProof.bookHeat,bookHeatNetwork,bookLight:bookProof.bookLight,bookLightNetwork,bookWater:bookProof.bookWater,bookWaterNetwork,bookParticle:bookProof.bookParticle,bookParticleNetwork,bookRelatedWords:bookProof.bookRelatedWords,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function journeyLearningHelpView(browser,base,ready,shots){

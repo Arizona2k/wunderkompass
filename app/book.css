@@ -2,6 +2,7 @@
 .knowledge-book .book-navigation{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:5px;align-items:center;margin-bottom:24px;min-width:0}
 .book-navigation .area-scroll{display:grid;place-items:center;min-width:44px;min-height:48px;padding:0;border:1px solid var(--wk-line);border-radius:8px;background:var(--wk-paper);color:var(--wk-ink)}
 .book-navigation .area-scroll:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px}
+.knowledge-book :is(h3,summary)[data-route-focus]:focus{outline:2px solid var(--wk-focus);outline-offset:4px}
 .knowledge-book .book-navigation[data-strip-overflow=false]{grid-template-columns:minmax(0,1fr)}
 .book-navigation[data-strip-overflow=false]>.area-scroll{display:none}
 .knowledge-book .book-navigation>.book-tabs{display:flex!important;justify-content:flex-start;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:thin;scroll-padding-inline:5px;overscroll-behavior-x:contain;width:100%!important;min-width:0;max-width:100%;margin:0;height:auto!important}

@@ -13,12 +13,15 @@ function mergeValue(base: unknown, local: unknown, remote: unknown, path: string
   if (Array.isArray(local) && Array.isArray(remote) &&
       (collections.has(path.at(-1) ?? '') || path.includes('completedChapters'))) {
     const before = new Set((Array.isArray(base) ? base : []).map(identity));
+    const originals = new Map((Array.isArray(base) ? base : []).map(v => [identity(v), v]));
     const left = new Map(local.map(v => [identity(v), v]));
     const right = new Map(remote.map(v => [identity(v), v]));
     const result: unknown[] = [];
     for (const id of new Set([...right.keys(), ...left.keys()])) {
       if (before.has(id) && (!left.has(id) || !right.has(id))) continue;
-      result.push(left.get(id) ?? right.get(id));
+      result.push(path.at(-1)==='notes'&&left.has(id)&&right.has(id)
+        ?mergeValue(originals.get(id),left.get(id),right.get(id),[...path,id])
+        :left.get(id) ?? right.get(id));
     }
     return result;
   }

@@ -3,7 +3,8 @@ import measurementLinks from './book-measurement-topic-index.json';
 import heatLinks from './book-heat-topic-index.json';
 import lightLinks from './book-light-topic-index.json';
 import waterLinks from './book-water-topic-index.json';
-const links=[...measurementLinks,...heatLinks,...lightLinks,...waterLinks];
+import particleLinks from './book-particle-topic-index.json';
+const links=[...measurementLinks,...heatLinks,...lightLinks,...waterLinks,...particleLinks];
 import {navigateHash} from './hash-route';
 
 export default function BookMeasurementLinks({topicId}:{topicId:string}){

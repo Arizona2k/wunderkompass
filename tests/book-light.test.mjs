@@ -10,7 +10,7 @@ test('all14 light explanations share verified content, real published links and 
  assert.deepEqual(bookLightContent(true),pack);
  const bytes=fs.readFileSync('app/book-light-content.json'),integrity=read('app/book-light-integrity.json');assert.equal(bytes.length,integrity.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),integrity.sha256);
  const words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json'),exported=read('exports/content/book-light.json'),topics=read('app/world-index.json'),links=read('app/book-light-topic-index.json');
- assert.equal(exported.length,14);assert.equal(links.length,12);assert.equal(words.length,117);assert.equal(why.length,37);
+ assert.equal(exported.length,14);assert.equal(links.length,12);assert.equal(words.length,122);assert.equal(why.length,37);
  for(const term of LIGHT_WORDS){const row=words.find(w=>w.term===term),item=pack.learning[term];assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert.deepEqual(exported.find(e=>e.kind==='word'&&e.term===term),{kind:'word',term,definition:row.more,...item,sourceReadOn:pack.sourceReadOn});assert.deepEqual(links.find(l=>l.term===term),{term,topic:item.topic,connection:item.benefit});}
  for(const question of LIGHT_QUESTIONS){const row=why.find(w=>w.question===question);assert.deepEqual([row.question,row.answer],pack.why[question]);}
  for(const item of[...Object.values(pack.learning),...Object.values(pack.whyLearning)]){assert(topics.some(t=>t.id===item.topic));for(const link of item.relatedWords??[])assert(words.some(w=>w.term===link.term));for(const link of item.relatedQuestions??[])assert(why.some(w=>w.question===link.question));}
@@ -35,7 +35,7 @@ test('incomplete or tampered light explanations, unsupported models and unsafe r
 
 test('all101 prior word payloads,32 Why payloads and complete SI/heat content retain their actual M75 identities',()=>{
  const old=read('tests/fixtures/book-before-light-101-hashes.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json');assert.equal(old.sourceCommit,'74ef5116d24a07a0efffaf323666f4ac554e8949');assert.equal(Object.keys(old.words).length,101);assert.equal(Object.keys(old.why).length,32);
- assert.equal(new Set(words.map(w=>w.term)).size,117);assert.equal(new Set(why.map(w=>w.question)).size,37);
+ assert.equal(new Set(words.map(w=>w.term)).size,122);assert.equal(new Set(why.map(w=>w.question)).size,37);
  for(const [term,sha]of Object.entries(old.words))assert.equal(digest(words.find(w=>w.term===term)),sha,term);
  for(const [question,sha]of Object.entries(old.why))assert.equal(digest(why.find(w=>w.question===question)),sha,question);
  for(const [file,key]of[['app/book-heat-content.json','heatPackSHA256'],['app/book-measurement-content.json','measurementPackSHA256']])assert.equal(createHash('sha256').update(fs.readFileSync(file)).digest('hex'),old[key]);

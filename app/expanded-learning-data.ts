@@ -3,6 +3,8 @@ const MEASUREMENT_WORDS=measurementWords as [string,string,string][];
 import heatIndex from "./book-heat-index.json" with {type:"json"};
 import lightIndex from "./book-light-index.json" with {type:"json"};
 import waterIndex from "./book-water-index.json" with {type:"json"};
+import particleIndex from "./book-particle-index.json" with {type:"json"};
+const PARTICLE_WORDS=particleIndex.words as [string,string,string][];
 const WATER_WORDS=waterIndex.words as [string,string,string][];
 const WATER_WHY=waterIndex.why as [string,string][];
 const LIGHT_WORDS=lightIndex.words as [string,string,string][];
@@ -24,6 +26,7 @@ export const MORE_WORDS:[string,string,string][]=[
  ...HEAT_WORDS,
  ...LIGHT_WORDS,
  ...WATER_WORDS,
+ ...PARTICLE_WORDS,
 ];
 export const MORE_WHY:[string,string][]=[
  ["Warum ist die Erde rund?","Die Schwerkraft zieht Materie zur Mitte. Bei einem großen Himmelskörper formt sie daraus ungefähr eine Kugel. Die Erddrehung macht die Erde an den Polen etwas flacher."],

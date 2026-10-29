@@ -40,8 +40,8 @@ test('partial, corrupt or malformed measurement explanations cannot be accepted 
 
 test('all90 delivered dictionary payloads remain exact while seven unique SI terms share one canonical export and reachable relationships',()=>{
  const previous=read('tests/fixtures/book-before-measurement-90-hashes.json'),words=read('exports/content/knowledge-words.json');
- assert.equal(Object.keys(previous.words).length,90);assert.equal(words.length,117);
- assert.equal(new Set(words.map(word=>word.term)).size,117);
+ assert.equal(Object.keys(previous.words).length,90);assert.equal(words.length,122);
+ assert.equal(new Set(words.map(word=>word.term)).size,122);
  for(const [term,sha256] of Object.entries(previous.words)){
   const current=words.find(word=>word.term===term);assert.ok(current,term);
   assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),sha256,term+' retains its delivered definition');

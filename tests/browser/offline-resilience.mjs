@@ -1,4 +1,5 @@
 import {bookWaterView} from './book-water.mjs';
+import {bookParticleView} from './book-particle.mjs';
 import {insideDiagramViews} from './inside-diagrams.mjs';
 import {bookLightView} from './book-light.mjs';
 import {bookHeatView} from './book-heat.mjs';
@@ -133,9 +134,11 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    await bookNormalizationView(page,report.bookLearning,width,{measurement:true,shots,engine:kind,native});
   }
   assert.equal(report.bookLearning.bookNormalization.length,8);
-  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookHeatView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookLightView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookWaterView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await page.setViewportSize(previousViewport);}
+  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookHeatView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookLightView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookWaterView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookParticleView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await page.setViewportSize(previousViewport);}
   assert.equal(report.bookLearning.bookMeasurements.length,native?21:14,'all seven SI words in every retained cached book layout and the additional required native640 layout');
   assert.equal(new Set(report.bookLearning.bookMeasurements.map(row=>row.term+':'+row.width)).size,native?21:14,'every cached SI term/width identity is distinct');
+  assert.equal(report.bookLearning.bookParticle.length,native?15:10,'all five particle words in each actual cold layout including native640');
+  assert.equal(new Set(report.bookLearning.bookParticle.map(row=>row.term+':'+row.width)).size,native?15:10,'all particle cold identities distinct');
   assert.equal(report.bookLearning.bookWater.length,native?24:16,'all8 water entries in every cached layout including native640');
   assert.equal(new Set(report.bookLearning.bookWater.map(row=>row.term+':'+row.width)).size,native?24:16,'every cached water identity is distinct');
   assert.equal(report.bookLearning.bookLight.length,native?42:28,'all14 light entries in every cached layout including native640');
