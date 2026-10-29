@@ -1,0 +1,443 @@
+[
+  {
+    "kind": "word",
+    "term": "Kohäsion",
+    "definition": "Teilchen desselben Stoffes ziehen einander an. Bei Wasser trägt diese Wechselwirkung zu Tropfenbildung und Oberflächenspannung bei. Kohäsion ist von der Anziehung zu einem anderen Material zu unterscheiden.",
+    "starter": "Wasserteilchen wirken auf andere Wasserteilchen. So lässt sich ein Teil des Verhaltens von Tropfen erklären.",
+    "deeper": "Kohäsion ist keine bewusst gewählte Verbindung und kein Klebstoff mit Absichten. Für eine Tropfenform sind auch Umgebung, Schwerkraft und Oberfläche wichtig; Kohäsion allein erklärt nicht jede Form.",
+    "observe": "Zeichne mehrere Wassersymbole und Verbindungslinien nur zwischen ihnen. Ergänze daneben eine gedachte Gefäßwand in einer anderen Farbe. Die Linien sind Beziehungszeichen, keine Fotos oder Kräfte in gemessenen Größen.",
+    "benefit": "Du unterscheidest Wechselwirkungen innerhalb eines Stoffes von denen mit einem anderen Material.",
+    "connection": "Die Oberflächenspannungskarte zeigt eine Folge von Wechselwirkungen an der Wasseroberfläche. Die Oberfläche ist dabei keine echte feste Haut.",
+    "topic": "science-surface-tension",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+        "title": "USGS · Wasseroberfläche und Oberflächenspannung",
+        "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Adhäsion",
+        "reason": "Teilchen desselben Stoffes und die Wechselwirkung verschiedener Materialien sind verschiedene Paarungen. Zeichne Wasser-zu-Wasser und Wasser-zu-Wand getrennt."
+      },
+      {
+        "term": "Oberflächenspannung",
+        "reason": "Wechselwirkungen innerhalb des Wassers tragen zum Verhalten seiner Grenzfläche bei. Oberflächenspannung ist keine zusätzliche feste Haut."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Paarung gehört in dieser Wasserskizze zur Kohäsion?",
+      "answers": [
+        "Wasserteilchen und die Gefäßwand",
+        "Zwei Wasserteilchen",
+        "Ein Wasserteilchen und ein Sauerstoffmolekül"
+      ],
+      "correct": 1,
+      "hint": "Achte auf die Stoffbezeichnungen an beiden Enden der Verbindung.",
+      "why": "Zwei Wasserteilchen gehören zum selben Stoff. Diese Paarung steht hier für Kohäsion. Die Linie misst keine Kraft.",
+      "wrongReasons": [
+        "Wasser und die andersartige Wand sind hier eine Paarung verschiedener Materialien.",
+        "",
+        "Wasser und Sauerstoff sind verschiedene Stoffe. Hier wird die Paarung innerhalb desselben Stoffes gesucht."
+      ]
+    },
+    "figure": "molecule-pairs",
+    "relatedQuestions": [],
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Adhäsion",
+    "definition": "Teilchen verschiedener Materialien können sich anziehen. Wasser kann etwa eine passende Gefäßwand benetzen. Dieses Verhalten unterscheidet sich von Kohäsion zwischen Teilchen desselben Stoffes.",
+    "starter": "Wasser und ein anderes Material können aufeinander wirken. Ein Tropfen verhält sich deshalb nicht auf jeder Fläche gleich.",
+    "deeper": "Benetzung hängt von beiden Materialien und ihrer Oberfläche ab. Wasser muss nicht auf jedem Stoff gleich stark haften. Eine gezeichnete Verbindung zur Wand misst keine genaue Anziehung oder Steighöhe.",
+    "observe": "Zeichne Wassersymbole neben einer gedachten Gefäßwand. Markiere Wasser-zu-Wand und Wasser-zu-Wasser verschieden. Die eigene Skizze stellt keine wirkliche Oberfläche dar und misst keine Kräfte.",
+    "benefit": "Du kannst Wasser-zu-Material von Wasser-zu-Wasser unterscheiden, ohne überall gleiches Haften anzunehmen.",
+    "connection": "Kapillarwirkung verbindet Benetzung, Oberflächenspannung und Gewicht. Wasser-zu-Wand ist ein Teil dieser Erklärung, nicht automatisch ein unbegrenzter Aufzug.",
+    "topic": "science-capillarity",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+        "title": "USGS · Wasser in engen benetzbaren Zwischenräumen",
+        "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kohäsion",
+        "reason": "Teilchen desselben Stoffes und die Wechselwirkung verschiedener Materialien sind verschiedene Paarungen. Zeichne Wasser-zu-Wasser und Wasser-zu-Wand getrennt."
+      },
+      {
+        "term": "Kapillarwirkung",
+        "reason": "Benetzung eines passenden Materials kann zur Flüssigkeitsbewegung in engen Räumen beitragen. Sie allein erzeugt keinen unbegrenzten Wasseraufzug."
+      }
+    ],
+    "question": {
+      "prompt": "Welche eingezeichnete Verbindung zeigt in diesem Beispiel Adhäsion zwischen Wasser und Gefäß?",
+      "answers": [
+        "Zwei Wasserteilchen innerhalb des Tropfens",
+        "Zwei Wasserteilchen an der Oberfläche",
+        "Ein Wasserteilchen und die andersartige Wand"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche die Stoffnamen beider verbundener Teile. Der Ort an der Oberfläche allein benennt noch keine Paarung.",
+      "why": "Wasser und das Wandmaterial sind verschieden. Ihre Wechselwirkung ist die hier gemeinte Adhäsion. Wie gut Wasser benetzt, hängt von beiden Materialien ab.",
+      "wrongReasons": [
+        "Zwei Wasserteilchen bilden auch innerhalb des Tropfens eine Paarung desselben Stoffes.",
+        "Auch an der Oberfläche bleiben zwei Wasserteilchen dieselbe Stoffart. Die Position macht daraus keine Wasser-Wand-Paarung.",
+        ""
+      ]
+    },
+    "figure": "molecule-pairs",
+    "relatedQuestions": [],
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Oberflächenspannung",
+    "definition": "Die Grenzfläche einer Flüssigkeit widersetzt sich einer Vergrößerung ihrer Fläche. Bei Wasser tragen die Wechselwirkungen der Moleküle dazu bei. Die Oberfläche ist dabei keine feste Haut aus einem anderen Stoff.",
+    "starter": "Ein Wassertropfen kann eine gekrümmte Oberfläche bilden. Diese Fläche verhält sich anders als eine beliebig dehnbare Papierzeichnung.",
+    "deeper": "Form und Verhalten hängen auch von Schwerkraft, Benetzung und Störungen ab. Dass ein kleines Objekt an der Oberfläche gehalten wird, ist kein Beweis, dass es weniger dicht als Wasser ist oder eine feste Haut darauf liegt.",
+    "observe": "Vergleiche zwei eigene Tropfenskizzen mit glatter und stark vergrößerter Grenzlinie. Beschrifte sie als Formvergleich, nicht als Energiemessung. Verwende keine Nadeln oder zerbrechlichen Gefäße für dieses Papierbeispiel.",
+    "benefit": "Du erklärst ein Oberflächenverhalten und trennst es von Dichte und einer vermeintlichen festen Haut.",
+    "connection": "Die Karte zeigt den begrenzten Oberflächenvergleich mit gut lesbaren Erklärungen. Eine gezeichnete Grenze ist keine echte Molekülaufnahme.",
+    "topic": "science-surface-tension",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+        "title": "USGS · Wasseroberfläche und Oberflächenspannung",
+        "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kohäsion",
+        "reason": "Wechselwirkungen innerhalb des Wassers tragen zum Verhalten seiner Grenzfläche bei. Oberflächenspannung ist keine zusätzliche feste Haut."
+      }
+    ],
+    "question": {
+      "prompt": "Ein kleines dichtes Objekt wird an der Wasseroberfläche getragen. Was lässt sich daraus folgern?",
+      "answers": [
+        "Grenzflächenkräfte können zum Tragen beitragen; das Material muss nicht weniger dicht als Wasser sein",
+        "Sein Material muss weniger dicht als Wasser sein",
+        "Auch vollständig untergetaucht wird es sicher in derselben Höhe gehalten"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche den Kontakt mit der Oberfläche und den Zustand vollständig darunter.",
+      "why": "Die Grenzfläche und die Benetzung können Kräfte beitragen. Das ist keine feste Haut und kein allgemeiner Nachweis geringerer Dichte.",
+      "wrongReasons": [
+        "",
+        "Das Oberflächenverhalten allein bestimmt nicht die Dichte des Materials.",
+        "Unter Wasser fehlt dieser Kontakt mit derselben Grenzfläche. Ein gleiches Tragverhalten folgt daraus nicht."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kann eine Nadel anders auf Wasser liegen als untertauchen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Oberflächenspannung“: Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
+      }
+    ],
+    "figure": "surface-support",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Kapillarwirkung",
+    "definition": "Eine Flüssigkeit kann in engen benetzbaren Räumen ihre Lage verändern, etwa in kleinen Zwischenräumen eines Tuchs. Anziehung zum Material, Zusammenhalt der Flüssigkeit und Schwerkraft wirken dabei zusammen.",
+    "starter": "Wasser kann in kleinen Zwischenräumen wandern. Darum lässt sich eine feuchte Stelle in einem passenden Tuch ausbreiten.",
+    "deeper": "Die Wirkung hängt von Flüssigkeit, Material und Weite der Räume ab. Sie hebt Wasser nicht beliebig hoch und erklärt den Transport bis zur Spitze eines großen Baumes nicht allein.",
+    "observe": "Zeichne ein gedachtes Tuch mit kleinen Zwischenräumen und eine begrenzte feuchte Zone. Kennzeichne, dass Pfeile nur eine mögliche Ausbreitung zeigen. Sie geben keine gemessene Geschwindigkeit oder unbegrenzte Steighöhe an.",
+    "benefit": "Du erkennst enge Räume und benetzbares Material, ohne einen unbegrenzten Wasseraufzug zu behaupten.",
+    "connection": "Die Kapillarkarte zeigt einen schematischen Verlauf. Erkläre Material und Modellgrenze statt eine reale Pflanzenpumpe oder Messung daraus abzuleiten.",
+    "topic": "science-capillarity",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+        "title": "USGS · Wasser in engen benetzbaren Zwischenräumen",
+        "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Adhäsion",
+        "reason": "Benetzung eines passenden Materials kann zur Flüssigkeitsbewegung in engen Räumen beitragen. Sie allein erzeugt keinen unbegrenzten Wasseraufzug."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei benetzbare Modellröhrchen unterscheiden sich nur im Innenradius. Was passt zum begrenzten Steigmodell?",
+      "answers": [
+        "Im breiteren Röhrchen steht die Flüssigkeit immer höher",
+        "Im engeren Röhrchen kann sie höher stehen, bleibt aber begrenzt",
+        "Bei gleicher Flüssigkeit muss die Höhe unabhängig vom Radius gleich sein"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die eingezeichneten Höhen. Welche Größe wurde bei gleichem Material und derselben Flüssigkeit geändert?",
+      "why": "Unter denselben idealisierten Bedingungen hängt die Höhe vom Radius ab. Enger kann hier höheren, aber keinen unbegrenzten Anstieg bedeuten.",
+      "wrongReasons": [
+        "Das Modell zeigt bei gleichen übrigen Bedingungen den höheren Stand im engeren Röhrchen.",
+        "",
+        "Gleiche Flüssigkeit allein genügt nicht für gleiche Steighöhe; hier unterscheiden sich die Röhrchenradien."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum zieht Wasser in einem Papiertuch nach oben?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kapillarwirkung“: Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
+      }
+    ],
+    "figure": "limited-capillary",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "word",
+    "term": "Dichte",
+    "definition": "Wie viel Masse in einem bestimmten Volumen steckt. Eis ist weniger dicht als flüssiges Wasser.",
+    "starter": "Dichte vergleicht Masse und Volumen. Zwei gleich große gedachte Körper können verschieden viel Masse haben.",
+    "deeper": "Eine große Form ist nicht automatisch dichter. Für den Vergleich brauchst du beide Größen. Dichte allein beschreibt bei einem hohlen Gegenstand auch nicht alle Bedingungen des Schwimmens; verdrängtes Wasser und Gesamtform zählen ebenfalls.",
+    "observe": "Zeichne zwei gleich große gedachte Kästchen und gib ihnen 2 beziehungsweise 4 Masseneinheiten. Vergleiche nur dieses Zahlenmodell, ohne echte Stoffeigenschaften oder ein Schwimmergebnis zu erfinden.",
+    "benefit": "Du vergleichst Masse pro gleichem Volumen statt bloße Größe.",
+    "connection": "In der Auftriebskarte werden Masse, Gesamtform und verdrängtes Wasser zusammen betrachtet. Die Dichte eines Materials und die mittlere Dichte eines hohlen Gegenstands sind verschiedene Betrachtungen.",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/water-density",
+        "title": "USGS · Masse und Volumen",
+        "anchor": "Absatz347 und ausschließlich Dichtedefinition aus350: Masse proVolumen, gewöhnlichesEis imüblichenVergleich. Masse=Gewicht-Vereinfachung, Zahlen-/Temperaturtabellen und fremdeGrafiken nicht übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat",
+        "title": "NOAA · Wasserverdrängung und Form eines Schiffes",
+        "anchor": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Oberflächenspannung",
+        "reason": "Ein kleines Objekt kann an einer Wasseroberfläche getragen werden, obwohl sein Material dichter als Wasser ist. Unterscheide diesen Grenzflächenfall von einem vollständig eingetauchten Körper."
+      },
+      {
+        "term": "Kilogramm",
+        "reason": "Kilogramm gibt eine Masse an. Für einen Dichtevergleich brauchst du zusätzlich das zugehörige Volumen; eine größere Zahl für die Gesamtmasse allein bestimmt die größere Dichte nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Zwei gedachte Körper: A hat 6 Masseneinheiten in 2 Volumeneinheiten, B hat 8 in 4. Welcher Vergleich ihrer Dichte passt?",
+      "answers": [
+        "A hat mit 3 pro Volumeneinheit die größere Dichte; B hat 2",
+        "B hat die größere Dichte, weil 8 Masseneinheiten mehr als 6 sind",
+        "Beide haben dieselbe Dichte, weil bei B Masse und Volumen größer sind"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche, wie viel Masse jeweils auf eine einzige gedachte Volumeneinheit entfällt.",
+      "why": "Für A ergibt 6 geteilt durch 2 den Wert 3, für B ergibt 8 geteilt durch 4 den Wert 2. Der Körper mit der kleineren Gesamtmasse kann also die größere Dichte haben. Die Werte gehören nur zu diesem erfundenen Zahlenbeispiel.",
+      "wrongReasons": [
+        "",
+        "Die größere Gesamtmasse genügt nicht: Bei B verteilt sie sich hier auch auf mehr Volumen. Der Quotient 8 geteilt durch 4 ist kleiner als 6 geteilt durch 2.",
+        "Größere Masse und größeres Volumen bedeuten nicht automatisch dieselbe Dichte. Hier ergeben die beiden Quotienten 3 beziehungsweise 2."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum schwimmt Eis?",
+        "reason": "Das Wasserkreislauflabor zeigt Eis als Wasserspeicher. Warum gewöhnliches Eis schwimmt, ergänzt der Dichtebegriff: Vergleiche Masse und Volumen, statt nur die Temperatur zu betrachten."
+      },
+      {
+        "question": "Warum kann ein Schiff aus schwerem Material schwimmen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Dichte“: Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
+      }
+    ],
+    "figure": "mass-volume",
+    "topic": "science-buoyancy",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "why",
+    "question": {
+      "prompt": "Ein Papiertuch berührt mit einer Ecke Wasser. Welche Beobachtung passt zur begrenzten Erklärung?",
+      "answers": [
+        "Eine feuchte Zone kann sich in passenden Zwischenräumen ausbreiten; ihre Höhe und Geschwindigkeit sind nicht beliebig",
+        "Wasser muss in jedem Material gleich schnell steigen",
+        "Ein längeres Tuch hebt Wasser ohne Grenze"
+      ],
+      "correct": 0,
+      "hint": "Trenne eine beobachtete Ausbreitung von einer Aussage über alle Materialien und beliebige Höhen.",
+      "why": "Benetzung und enge Wege können die Ausbreitung ermöglichen. Material, Flüssigkeit, Wegform und Schwerkraft gehören zur Erklärung.",
+      "wrongReasons": [
+        "",
+        "Material und Zwischenräume beeinflussen die Bewegung. Ein anderes Material muss nicht gleich reagieren.",
+        "Die Länge allein liefert keine unbegrenzte Steighöhe. Die Wirkung bleibt begrenzt."
+      ]
+    },
+    "definition": "In den engen Zwischenräumen eines benetzbaren Papiers können Anziehung an den Fasern und Zusammenhalt des Wassers zusammenwirken. Die Bewegung hat Grenzen; Wasser steigt nicht von selbst beliebig hoch.",
+    "starter": "Papier besitzt sehr schmale Zwischenräume. Dort kann sich Wasser auf Wegen zwischen den Fasern verteilen.",
+    "deeper": "Benetzung, die Wechselwirkungen im Wasser, die Form der engen Wege und die Schwerkraft wirken zusammen. Papier ist kein Motor, der Wasser ohne Grenze hebt. Ein anderer Werkstoff kann sich anders verhalten.",
+    "observe": "Zeichne einen Gedankenweg zwischen zwei Papierfasern und markiere Wasser-zu-Faser und Wasser-zu-Wasser getrennt. Das Schema berechnet keine echte Steighöhe.",
+    "benefit": "Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen.",
+    "topic": "science-capillarity",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+        "title": "USGS · Wasser in engen benetzbaren Zwischenräumen",
+        "anchor": "Absätze214–216 und begrenzender Satz220: Kohäsion/Adhäsion, Papierfasern und begrenzte Steighöhe. Keine vollständige hohe-Bäume-Erklärung, Tränenanatomie oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kapillarwirkung",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Kapillarwirkung“: Du erklärst einen Alltagsweg des Wassers mit mehreren zusammenwirkenden Bedingungen."
+      }
+    ],
+    "connection": "Auf der Kapillarwirkungskarte vergleichst du Wasserwege in schmalen Zwischenräumen. Prüfe, welche Rolle Material, Benetzung und die Form des Weges spielen.",
+    "figure": "limited-capillary",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "why",
+    "question": {
+      "prompt": "Du vergleichst dasselbe gedachte kleine Objekt an der Oberfläche und vollständig darunter. Was wurde damit sicher verändert?",
+      "answers": [
+        "Seine Materialart",
+        "Sein Kontakt mit der Wasseroberfläche",
+        "Seine Masse allein durch die Zeichnung"
+      ],
+      "correct": 1,
+      "hint": "Welche Grenze berührt das Objekt in jeder der beiden Ansichten?",
+      "why": "Die beiden Ansichten ändern die Grenzflächenbedingung. Das erklärt keinen allgemeinen Wechsel von Material oder Masse.",
+      "wrongReasons": [
+        "Dasselbe gedachte Objekt bleibt aus demselben Material.",
+        "",
+        "Eine andere gezeichnete Lage verändert nicht von selbst seine Masse."
+      ]
+    },
+    "definition": "An der Wasseroberfläche können Oberflächenspannung und Benetzung wichtig sein. Das ist eine andere Frage als das Schwimmen eines vollständig umgebenen Körpers. Eine sichtbare Grenzfläche ist keine feste Haut.",
+    "starter": "Die Wasseroberfläche kann kleine Dinge anders tragen als das Wasser darunter. Sie ist trotzdem keine feste Folie.",
+    "deeper": "Gewicht, Form, Benetzung und Kontakt mit der Wasseroberfläche wirken zusammen. Ein kleines dichtes Objekt kann unter passenden Bedingungen an dieser Grenzfläche getragen werden. Vollständig unter Wasser ist diese Oberflächenbedingung anders. Die Oberfläche ist keine feste Folie.",
+    "observe": "Zeichne statt eines echten Nadelversuchs eine Oberflächenlinie mit kleinem Gedankenobjekt und eine zweite Ansicht darunter. Markiere, welche Bedingungen sich unterscheiden.",
+    "benefit": "Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen.",
+    "topic": "science-surface-tension",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water",
+        "title": "USGS · Wasseroberfläche und Oberflächenspannung",
+        "anchor": "Absätze218/221/232/238: Zusammenhalt, dichte kleine Objekte an der Oberfläche und begrenzter Vergleich; keine stärkeren kompensierenden Bindungen, größte-Spannung-Behauptung, medizinischen Aussagen oder fremden Bilder übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action",
+        "title": "OpenStax · Molekülpaarungen, Benetzung und begrenzter Anstieg",
+        "anchor": "Absätze21–34/118–130/171–177/244: gleiche und unterschiedliche Molekülarten, Benetzung, modellhaft begrenztes Steigen/Senken; keine geschützten Texte, Aktivitäten, Tabellen, Diagramme oder Fotos übernommen. Konkrete gegenwärtige Lizenz CC BY-NC-SA4.0, keine CC-BY-Annahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Oberflächenspannung",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Oberflächenspannung“: Du unterscheidest Grenzflächenwirkung von einem allgemeinen Schwimmversprechen."
+      }
+    ],
+    "connection": "Die Oberflächenspannungskarte beschreibt Kräfte an der Wassergrenze. Vergleiche diese Wirkung mit dem Auftrieb eines eingetauchten Körpers; es sind unterschiedliche Erklärungsanteile.",
+    "figure": "surface-support",
+    "sourceReadOn": "2026-10-28"
+  },
+  {
+    "kind": "why",
+    "question": {
+      "prompt": "Ein kompakter und ein hohler Körper haben dieselbe Masse. Welche zusätzliche Angabe hilft beim Vergleich ihres möglichen Schwimmens?",
+      "answers": [
+        "Nur der Name des Materials",
+        "Nur das Volumen des festen Materials, ohne die ganze Rumpfform",
+        "Wie viel Wasser die ganze Form vor dem Volllaufen verdrängen kann"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche die ganze Form mit dem Raum, den Wasser sonst einnehmen würde.",
+      "why": "Die verdrängte Wassermenge bestimmt den Auftrieb. Bei gleicher Masse kann die hohle Form mehr Wasser verdrängen; Stabilität und Wassereintritt bleiben weitere Bedingungen.",
+      "wrongReasons": [
+        "Der Materialname allein nennt weder Gesamtform noch mögliche Wasserverdrängung.",
+        "Das feste Material allein beschreibt nicht, wie viel Wasser die ganze geschlossene Rumpfform vor dem Volllaufen verdrängen kann. Innenraum und Gesamtform gehören zum Vergleich.",
+        ""
+      ]
+    },
+    "definition": "Für ein Schiff zählen die gesamte Form, seine Masse und das verdrängte Wasser. Ein hohler Rumpf kann viel Wasser verdrängen. Dasselbe Material als kompakter kleiner Körper kann sich anders verhalten.",
+    "starter": "Ein Schiff besitzt einen großen Rumpf mit Innenraum. Seine Form ist wichtig, nicht nur der Name des Materials.",
+    "deeper": "Auftrieb und Gewicht müssen zusammen betrachtet werden. Ein großer Innenraum allein garantiert keine sichere Tragfähigkeit: Beladung, Wassereintritt und Lage gehören ebenfalls dazu. Das Lernmodell ist keine Bau- oder Sicherheitsfreigabe.",
+    "observe": "Vergleiche auf Papier zwei gedachte Körper aus demselben Material, einen kompakt und einen hohl. Schreibe Masse und verdrängtes Volumen als getrennte unbekannte Angaben dazu.",
+    "benefit": "Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen.",
+    "topic": "science-buoyancy",
+    "sources": [
+      {
+        "url": "https://www.noaa.gov/office-education/outreach-communication/hands-on-science-activities/build-a-boat",
+        "title": "NOAA · Wasserverdrängung und Form eines Schiffes",
+        "anchor": "Absätze243/253–258/264–270: Gewicht, verdrängtesWasser und Form; Schwimmgleichgewicht vonAuftriebüberschuss unterscheiden, keine konkreteTragfähigkeit oder Bauzulassung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      },
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/11-7-archimedes-principle",
+        "title": "OpenStax · Auftrieb und verdrängte Flüssigkeit",
+        "anchor": "Absätze29–47/53–55: Auftrieb entspricht Gewicht derverdrängtenFlüssigkeit; gleicheMasse kompakt/hohl. NurFaktenabgleich, keine geschütztenText-/Grafik-/Tabellen-/Aufgabenübernahme.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-28"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Dichte",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Dichte“: Du prüfst Form und Größen, statt aus dem Materialnamen allein auf Schwimmen zu schließen."
+      }
+    ],
+    "connection": "Auf der Auftriebskarte vergleichst du Masse und verdrängtes Wasser. Beziehe beim Schiff seine gesamte Form mit ein, einschließlich des Innenraums.",
+    "figure": "ship-displacement",
+    "sourceReadOn": "2026-10-28"
+  }
+]

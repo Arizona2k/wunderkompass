@@ -1,5 +1,12 @@
 ## Licht und Erdinneres · lokaler Entwicklungsstand
 
+## Licht und Erdinneres · PR76 tatsächlich bereitgestellt
+
+Zwölf Licht-/Wellenbegriffe mit zwei Warumfragen, freiwilliger Tiefe und zwölf eigenen Modellarten ergänzen das Wissensbuch. Vorhandene Wörter führen über vier erzeugte Beziehungen weiter. Gezielte Erdinneres-Erklärungen und Zeichnungen unterscheiden Lavaweg und Vulkanformen genauer; vorhandene Lernstände bleiben erhalten. Vollständige Quality191 erfolgreich; PR76 regulär als `53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8` übernommen und Vercel am28.10.2026 um23:57:59MEZ bestätigt. Tatsächliche Auslieferung und Produkt-/Pass-/Kalt-Offline-Nachtest bestanden. Bereitgestellt113Wörter/34Warumfragen; Paket3.5 und Gesamtauftrag bleiben offen.
+
+Die folgenden früheren PR76-Vorbereitungsangaben bleiben als historische Entwicklung erhalten; aktuelle Lieferung wie oben bestätigt.
+
+
 Der neue Rückverweis-Browsertest verwendet vor seiner unveränderten Fokusrahmenprüfung echte Tab-/Shift+Tab-Eingaben und prüft zusätzlich das aktive Element. Damit wird nach vorausgegangener Mausbedienung tatsächlich der Tastaturweg geprüft; der ursprüngliche Firefox-Befund bleibt dokumentiert. Anwendung und Lerninhalte sind dabei unverändert. Keine vorzeitige Lieferbestätigung.
 
 Zwölf zusätzliche Licht-/Wellenbegriffe und zwei Warumfragen verbinden kurze Definitionen, freiwillige Tiefe, Denkfragen und zwölf eigene erklärende Modellarten. Vier bestehende Begriffe erhalten aus demselben Fachbestand erzeugte Rückverweise. Die Beispiele unterscheiden unter anderem Reflexion von Absorption, zeitliche Frequenz von räumlicher Wellenlänge und Wärmebildfarben von Messwerten. Der Entwicklungsbestand umfasst113Wörter/34Warumfragen; tatsächlich bereitgestellt bleiben bis zur bestätigten neuen Lieferung101/32.
