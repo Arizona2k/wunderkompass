@@ -1,5 +1,21 @@
 # Aktueller Arbeits- und Übergabestand
 
+Letzte tatsächliche Testlieferung ist [PR77](https://github.com/Arizona2k/wunderkompass/pull/77): [Quality192](https://github.com/Arizona2k/wunderkompass/actions/runs/40798857477) erfolgreich, regulärer Merge `631f54f390f8e78d650103c8c981c4547d49bf8c` nach `test-live` und passender Vercel-Erfolg am **29.10.2026 um 03:11:13 MEZ**. Die ausführlichen Liefer-, Produkt-, Pass- und Wiederherstellungsbelege bleiben privat auf der bestehenden Übergabeseite.
+
+Bereitgestellt sind **117 Wörter / 37 Warumfragen**, einschließlich des Wasserabschnitts. Die unveränderte einmalige Baseline90/30, übriges Paket3.5 und anschließend4–8 bleiben offen. Der erste vollständige begrenzte Design-Meilenstein bleibt mit PR73 geschlossen.
+
+Aktueller Abschnitt WK054/055 auf M77: **Atom, Isotop, Proton, Elektron und Neutron**, keine neue Warumfrage. Entwicklungsbestand122/37; noch nicht geliefert. Freiwillige Erklärungen und Denkfragen, vier eigene SVG-/HTML-Modellarten und kanonisch erzeugte Gegenverweise verbinden den bestehenden Buchleser mit Mol, Ampere und passenden Fachkarten. Frühere Buchpayloads und SI-/Wärme-/Licht-/Wasserpakete bleiben erhalten. Quellen- und Modellgrenzen sind individuell zugeordnet; keine Planetenbahnen, realen Größenverhältnisse oder unbelegten Stabilitätszusagen.
+
+Die Buchnavigation unterscheidet eine bewusste neue Auswahl von der Rückkehr zur gespeicherten Lesestelle. Buchbereich, freie Suche, Filter, offene Inhalte und Rückfokus werden zusammen behandelt. Erneute Auswahl derselben Adresse übernimmt das gewünschte Wort beziehungsweise öffnet die Warumfrage erneut. Verzögert geladene Vertiefungen überschreiben keine inzwischen erfolgte Bedienung. Der gemeinsame Suchweg unterstützt mehrere sinntragende Wörter und passende typografische Normalisierung. Allgemeine Notizen bieten Bearbeiten/Speichern/Abbrechen im vorhandenen Pass; Kennung und Erstellzeit bleiben. Quellenkalenderfelder verwenden ihre gespeicherten Datumswerte unabhängig von der Anzeigezeitzone.
+
+Die vollständige [Auditergänzung V2](content/auftrag-2026-10-13/WunderKompass_Audit_Ergaenzung_V2_2026-10-29.md) ist archiviert, in AGENTS/QUALITY verankert und im einzigen BACKLOG einzeln zugeordnet. Der Entwicklungsstand steht vor der vollständigen nativen GitHub-Abnahme und regulären Testübernahme. Noch keine neue Bereitstellung. Detaillierte Originale, Gegenfälle und der tatsächlich wiederhergestellte Codecheckpoint bleiben privat.
+
+Nach diesem Buchabschnitt folgen die konkret zugeordneten UI-, Aufgaben-, Filter-, Navigations- und Quellenkorrekturen im bestehenden BACKLOG, dann die weitere ursprüngliche Paketfolge. Eigene Entwicklungsreservierung gehalten; keine Agenten, Scheduler oder neue vollständige Designrunde. main/Produktion unverändert, derzeit keine neue Einzelfreigabe offen. Unbekannte21historische Privatstände bleiben ohne Einzelinventar unbelegt; keine Wiederherstellung unbekannter Arbeit behaupten.
+
+## Historische Zwischenstände bis zur inzwischen bestätigten M77-Lieferung
+
+Die folgenden früheren offenen Wasser-/M76-Angaben sind durch die obige tatsächliche Lieferung abgelöst. Originale und Herkunft bleiben erhalten; erledigte Schritte nicht erneut ausführen.
+
 Letzte tatsächliche Testlieferung ist [PR76](https://github.com/Arizona2k/wunderkompass/pull/76): vollständige [Quality191](https://github.com/Arizona2k/wunderkompass/actions/runs/40775143349) erfolgreich, regulärer Merge `53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8` nach `test-live`, identischer geprüfter Integrationsbaum und passender Vercel-Erfolg am **28.10.2026 um 23:57:59 MEZ**. Tatsächliche Auslieferung und Produkt-/Pass-/kalter Client-Offline-Nachtest sind bestätigt; ausführliche Originalbelege bleiben privat. Die öffentliche PR-Quittung wurde exakt zurückgelesen.
 
 Damit sind zwölf Licht-/Wellenbegriffe, zwei Warumfragen, zwölf eigene Modellarten und vier erzeugte Rückverweise sowie die begrenzten Erdinneres-Präzisierungen tatsächlich geliefert. Bereitgestellter Buchbestand: **113 Wörter / 34 Warumfragen**. Der erste vollständige begrenzte Design-Meilenstein bleibt seit PR73 abgeschlossen. Die unveränderte einmalige Baseline90/30, sämtliche noch offenen Fachziele von Paket3.5 und anschließend Pakete4–8 bleiben maßgeblich.

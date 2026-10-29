@@ -7,6 +7,18 @@ import { compatible, restoreQuestions, sanitizeMemorySession } from '../app/game
 
 const base=()=>({...createSave(),epoch:'legacy-v3',epochAt:0,revision:0});
 const edit=(save,patch)=>({...save,progress:{...save.progress,...patch}});
+test('edited notes preserve identity across independent two-tab edits, additions, deletion and import',()=>{
+ const first={id:'note-one',text:'Ursprüngliche Frage',at:'2026-10-17T08:00:00.000Z'},second={id:'note-two',text:'Zweite Frage',at:first.at};
+ const b=edit(base(),{notes:[first,second]}),a=edit(b,{notes:[{...first,text:'Genauere Frage'},second]});
+ const c=edit(b,{notes:[first,{...second,text:'Andere genauere Frage'},{id:'note-new',text:'Neue Beobachtung',at:first.at}]});
+ for(const result of [mergeSaves(b,a,c),mergeSaves(b,c,a),mergeDatabaseSave(b,a,{...c,revision:1})]){
+  assert.deepEqual(result.progress.notes.find(n=>n.id===first.id),{...first,text:'Genauere Frage'});
+  assert.deepEqual(result.progress.notes.find(n=>n.id===second.id),{...second,text:'Andere genauere Frage'});
+  assert.equal(result.progress.notes.length,3);
+  assert.deepEqual(restoreSave(JSON.parse(JSON.stringify(result)),true).progress.notes,result.progress.notes);
+ }
+ const removed=edit(b,{notes:[second]});assert.equal(mergeSaves(b,a,removed).progress.notes.some(n=>n.id===first.id),false,'a deliberately removed note is not resurrected');
+});
 test('rapid local settings undo and favorite removal survive their own synchronous journal before database flush',async()=>{
  const keys=['localStorage','window','document','BroadcastChannel','indexedDB'],original=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)])),data=new Map();let persisted;
  const db={objectStoreNames:{contains:()=>true},transaction:()=>{const tx={objectStore:()=>({get:()=>{const r={};queueMicrotask(()=>{r.result=persisted;r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;},put:value=>{persisted=structuredClone(value);}})};return tx;},close(){}};

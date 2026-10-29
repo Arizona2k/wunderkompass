@@ -1,0 +1,305 @@
+[
+  {
+    "kind": "word",
+    "term": "Atom",
+    "definition": "Ein Atom ist ein winziger Baustein eines chemischen Elements mit Kern und Elektronenhülle. Eine biologische Zelle gehört zu einer anderen Aufbau-Ebene.",
+    "starter": "Ein Atom ist viel kleiner als ein Sandkorn. Es hat einen kleinen Kern und eine Hülle aus Elektronen.",
+    "deeper": "Der Kern enthält positiv geladene Protonen und häufig Neutronen. Die Elektronenhülle bestimmt wichtige chemische Eigenschaften. Die Zeichnung mit einem Kern und runden Bahnen ist nur ein Modell; Elektronen laufen nicht wie kleine Planeten auf festen Kreisbahnen.",
+    "observe": "Zeichne einen kleinen Kernbereich und daneben eine größere Hüllenfläche, ohne Kreisbahnen als Fahrspuren einzuzeichnen. Beschreibe, was diese Gliederung zeigen kann und was sie über wirkliche Größen und Aufenthaltsorte nicht beweist. Du zeichnest keine maßstäbliche Atomaufnahme.",
+    "benefit": "Du unterscheidest Atom, Atomkern und Zelle und erkennst die Grenze einer einfachen Zeichnung.",
+    "topic": "science-fusion",
+    "connection": "Bei der Kernfusion verbinden sich leichte Atomkerne. Vergleiche den Kern mit dem ganzen Atom: Die Elektronenhülle und der Kern sind nicht derselbe Bereich.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsnuclei",
+        "title": "DOE · Atomkerne",
+        "anchor": "Text112/114: Kern, positive Protonen/neutrale Neutronen, negative Elektronenhülle. Keine universellen Volumen-/Massenprozente oder Mondstadionvergleiche übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "DOE · Isotope",
+        "anchor": "Text112/114–116/126: gleiche Protonenzahl, verschiedene Neutronenzahlen, Kohlenstoff12/13mit6P6N/6P7N, Wasserstoffvarianten. All-artificial-isotopes-unstable-Satz124nicht übernommen; keine aktuelle Isotopen-Gesamtzählung oder Datierung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainselectrons",
+        "title": "DOE · Elektronen",
+        "anchor": "Text117–120: negative Ladung, neutraler Ladungsausgleich, Ionen und Aufenthaltswahrscheinlichkeiten statt fester Planetenbahnen. Essentially-no-mass-Satz116nicht übernommen; Nichtnullmasse separatNIST-CODATA2022.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "title": "NIST · SI-Basiseinheiten",
+        "anchor": "Text166–168Ampere/e-Bezug und174–176Mol/Stoffmenge/genau bezeichnete Einheiten. Aktualisiert13.08.2025, tatsächlich29.10.2026abgerufen. Mol ist Einheit der Stoffmenge; Teilchenart und Stoffmenge nicht gleichgesetzt.",
+        "updatedOn": "2025-08-13",
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Cell",
+        "title": "NHGRI · Zelle als biologische Grundeinheit",
+        "anchor": "Tatsächlich gelesene DefinitionText100: biologische Grundeinheit, eukaryotische und prokaryotische Organisation. GemeinsammitDOE-Nuclei114nur Aufbau-EbenenAtom/Zelle unterschieden; keine Körperzellzahlen oder Nanobot-Metapher ausText102übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Proton",
+        "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+      },
+      {
+        "term": "Elektron",
+        "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+      },
+      {
+        "term": "Mol",
+        "reason": "Atom bezeichnet eine Teilchenart. Mol ist die Einheit der Stoffmenge; vor einer Teilchenzahl muss klar sein, ob etwa Atome, Moleküle oder andere festgelegte Einheiten gezählt werden."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist richtig an einer einfachen Atomzeichnung?",
+      "answers": [
+        "Sie zeigt jede Elektronenbahn als echten Kreis",
+        "Sie kann Kern und Hülle unterscheiden, ist aber vereinfacht",
+        "Sie zeigt eine vollständige Zelle"
+      ],
+      "correct": 1,
+      "hint": "Eine Zeichnung kann die Gliederung zeigen, ohne alles genau abzubilden.",
+      "why": "Kern und Hülle sind unterschiedliche Bereiche. Eine vereinfachte Skizze beweist keine genauen Elektronenbahnen oder Größen.",
+      "wrongReasons": [
+        "Elektronen werden nicht als kleine Planeten auf festen Kreisbahnen beschrieben.",
+        "",
+        "Atom und Zelle benennen unterschiedliche Aufbau-Ebenen. Die einfache Kern-Hüllen-Skizze zeigt einen chemischen Baustein, keine biologische Zelle."
+      ]
+    },
+    "figure": "atom-regions",
+    "sourceReadOn": "2026-10-29"
+  },
+  {
+    "kind": "word",
+    "term": "Isotop",
+    "definition": "Isotope gehören zum selben Element: gleiche Protonenzahl, verschiedene Neutronenzahl. Es gibt stabile und instabile Isotope.",
+    "starter": "Zwei Atome können zum selben Element gehören und trotzdem verschieden viele Neutronen haben. Dann gehören sie zu verschiedenen Isotopen.",
+    "deeper": "Kohlenstoff-12 hat sechs Protonen und sechs Neutronen, Kohlenstoff-13 sechs Protonen und sieben Neutronen. Die Protonenzahl bleibt gleich. Die Zahl hinter dem Namen zählt hier Protonen und Neutronen zusammen.",
+    "observe": "Zeichne zwei Kerne: jeweils sechs Kreise mit P, dazu einmal sechs und einmal sieben mit N. Welche Zahl bleibt gleich? Welche Summe ändert sich? Diese Zählskizze sagt nichts über echte Größen oder Kernformen.",
+    "benefit": "Du kannst gleiche Protonenzahl und verschiedene Neutronenzahl getrennt vergleichen.",
+    "topic": "science-fusion",
+    "connection": "Bei der Fusion sind bestimmte Atomkerne beteiligt. Isotope unterscheiden sich in ihrer Neutronenzahl; das beeinflusst, welche Kernreaktionen möglich sind.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "DOE · Isotope",
+        "anchor": "Text112/114–116/126: gleiche Protonenzahl, verschiedene Neutronenzahlen, Kohlenstoff12/13mit6P6N/6P7N, Wasserstoffvarianten. All-artificial-isotopes-unstable-Satz124nicht übernommen; keine aktuelle Isotopen-Gesamtzählung oder Datierung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Proton",
+        "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+      },
+      {
+        "term": "Neutron",
+        "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+      }
+    ],
+    "question": {
+      "prompt": "Was unterscheidet Kohlenstoff-12 von Kohlenstoff-13?",
+      "answers": [
+        "Eine andere Neutronenzahl",
+        "Eine andere Protonenzahl",
+        "Ein vollständig anderes Element"
+      ],
+      "correct": 0,
+      "hint": "Beide heißen Kohlenstoff. Zähle die N in den Beispielkernen.",
+      "why": "Beide Kerne haben sechs Protonen. Kohlenstoff-13 hat ein Neutron mehr als Kohlenstoff-12.",
+      "wrongReasons": [
+        "",
+        "Eine andere Protonenzahl würde ein anderes Element bedeuten. Hier bleiben es sechs Protonen.",
+        "Die gleiche Protonenzahl ordnet beide Varianten dem Element Kohlenstoff zu."
+      ]
+    },
+    "figure": "isotope-counts",
+    "sourceReadOn": "2026-10-29"
+  },
+  {
+    "kind": "word",
+    "term": "Proton",
+    "definition": "Protonen sind positiv geladene Teilchen im Atomkern. Ihre Zahl legt das chemische Element fest.",
+    "starter": "Protonen gehören zum Atomkern. Sie tragen eine positive elektrische Ladung.",
+    "deeper": "Wasserstoffkerne besitzen ein Proton, Kohlenstoffkerne sechs. Verändert sich die Protonenzahl, ist es ein anderer Elementkern. Protonenzahl und Summe aus Protonen und Neutronen sind verschiedene Angaben.",
+    "observe": "Lege Papierkarten mit P und N in zwei Gruppen. Ändere einmal nur die Zahl der N und dann die Zahl der P. Welcher Eingriff würde in diesem Zählmodell das Element ändern? Echte Kerne sind keine Papierkarten.",
+    "benefit": "Du verstehst, warum die Protonenzahl ein Elementmerkmal ist und nicht einfach die gesamte Teilchenzahl.",
+    "topic": "science-fusion",
+    "connection": "Die Fusionskarte erklärt Veränderungen von Atomkernen. Die Protonenzahl hilft dabei, den Elementkern vor und nach einer Reaktion zu unterscheiden.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsprotons",
+        "title": "DOE · Protonen",
+        "anchor": "Text114und erster Satz116: positive Ladung, Protonenzahl bestimmt Element. Pauschale Wasserstoffausnahme115und irreführender Massen-/Baryonenzahl-/12.011-Absatz116ausgeschlossen; Elementkern/Atom/Isotop/Massenzahl getrennt.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "DOE · Isotope",
+        "anchor": "Text112/114–116/126: gleiche Protonenzahl, verschiedene Neutronenzahlen, Kohlenstoff12/13mit6P6N/6P7N, Wasserstoffvarianten. All-artificial-isotopes-unstable-Satz124nicht übernommen; keine aktuelle Isotopen-Gesamtzählung oder Datierung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Atom",
+        "reason": "Ein Atom umfasst Kern und Hülle; ein Proton ist ein einzelnes positiv geladenes Kernteilchen."
+      },
+      {
+        "term": "Isotop",
+        "reason": "Gleiche Protonenzahl ordnet Isotope demselben Element zu. Eine veränderte Protonenzahl bedeutet ein anderes Element."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Änderung macht aus einem gezeichneten Kern einen Kern eines anderen Elements?",
+      "answers": [
+        "Nur ein zusätzliches Neutron bei gleichbleibender Protonenzahl",
+        "Ein Elektron weniger in der Hülle bei unverändertem Kern",
+        "Eine veränderte Protonenzahl"
+      ],
+      "correct": 2,
+      "hint": "Trenne Änderungen der Hülle und des Kerns. Auch nicht jede Änderung im Kern ändert die Elementzuordnung.",
+      "why": "Die Protonenzahl bestimmt das Element. Eine Neutronenänderung kann ein anderes Isotop desselben Elements ergeben; eine veränderte Elektronenzahl bei gleichem Kern ein geladenes Atom.",
+      "wrongReasons": [
+        "Die Protonenzahl bleibt hier gleich. Der Vergleich betrifft verschiedene Isotope desselben Elements.",
+        "Ein Elektron weniger verändert bei unverändertem Kern die Ladung, nicht die Elementzuordnung.",
+        ""
+      ]
+    },
+    "figure": "element-identity",
+    "sourceReadOn": "2026-10-29"
+  },
+  {
+    "kind": "word",
+    "term": "Elektron",
+    "definition": "Ein Elektron ist ein negativ elektrisch geladenes Teilchen. Elektronen gehören zur Hülle von Atomen und spielen bei chemischen Bindungen und elektrischem Strom eine wichtige Rolle. Sie sind keine kleinen Planeten auf festen Kreisbahnen.",
+    "starter": "Elektronen tragen eine negative Ladung. In einem Atom gehören sie zur Hülle um den Kern.",
+    "deeper": "In einem elektrisch neutralen Atom gleichen sich die Ladungen der Protonen und Elektronen aus. Elektronen besitzen eine kleine, aber nicht null große Masse. Für ihren Aufenthaltsort verwendet die Physik Wahrscheinlichkeiten, keine fest eingezeichneten Planetenbahnen.",
+    "observe": "Markiere in einer eigenen Zeichnung den Kern und einen Hüllenbereich, ohne Kreisbahnen als Fahrspuren einzuzeichnen. Beschreibe, warum eine Zeichnung nur ein Modell ist. Du beobachtest damit keine echten Elektronen.",
+    "benefit": "Du kannst elektrische Ladung von einer vereinfachten Bewegungsskizze unterscheiden.",
+    "topic": "science-circuit",
+    "connection": "Auf der Elektrizitätskarte geht es um bewegte Ladungen. Elektronen sind negativ geladene Teilchen; eine Stromskizze ist keine genaue Darstellung ihrer mikroskopischen Bewegung.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainselectrons",
+        "title": "DOE · Elektronen",
+        "anchor": "Text117–120: negative Ladung, neutraler Ladungsausgleich, Ionen und Aufenthaltswahrscheinlichkeiten statt fester Planetenbahnen. Essentially-no-mass-Satz116nicht übernommen; Nichtnullmasse separatNIST-CODATA2022.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+        "title": "NIST · CODATA2022-Konstanten",
+        "anchor": "Tatsächlich abgerufener Tabellenkopf2022CODATAadjustment, Zeile107electronmass9.1093837139e-31kgmitUnsicherheit. Nur positive Nichtnullmasse genutzt; keine 2026-Neumessung oder exakte Dezimalzahl in Kindertext abgeleitet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "title": "NIST · SI-Basiseinheiten",
+        "anchor": "Text166–168Ampere/e-Bezug und174–176Mol/Stoffmenge/genau bezeichnete Einheiten. Aktualisiert13.08.2025, tatsächlich29.10.2026abgerufen. Mol ist Einheit der Stoffmenge; Teilchenart und Stoffmenge nicht gleichgesetzt.",
+        "updatedOn": "2025-08-13",
+        "checkedOn": "2026-10-29"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Atom",
+        "reason": "Elektronen gehören zur Atomhülle. Vergleiche das ganze Atom mit einem negativ geladenen Teilchen."
+      },
+      {
+        "term": "Ampere",
+        "reason": "Elektronen tragen elektrische Ladung. Ampere bezeichnet eine Stromstärke, also Ladung pro Zeit; eine Zahl einzelner Elektronen ist nicht schon dieselbe Angabe wie eine Stromstärke."
+      }
+    ],
+    "question": {
+      "prompt": "Ein gedachtes Atom hat sechs Protonen und sechs Elektronen. Ein Elektron wird entfernt; der Kern bleibt unverändert. Was passt?",
+      "answers": [
+        "Die elektrische Gesamtladung wird positiv",
+        "Das Element wechselt, weil nun fünf Elektronen übrig sind",
+        "Der Kern erhält automatisch ein zusätzliches Neutron"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die Zahl positiver und negativer Ladungen vor und nach der Änderung. Der Kern bleibt laut Aufgabe gleich.",
+      "why": "Sechs positive Protonen und fünf negative Elektronen gleichen sich nicht vollständig aus. Die Gesamtladung ist positiv, die Protonenzahl und damit das Element bleiben unverändert. Dies ist ein Zählbeispiel, keine Messung oder Versuchsanleitung.",
+      "wrongReasons": [
+        "",
+        "Die Elementzuordnung hängt an der unveränderten Protonenzahl. Anders ist hier die Elektronenzahl und damit die Gesamtladung.",
+        "Das Gedankenbeispiel lässt den Kern ausdrücklich unverändert. Ein Elektron weniger fügt kein Neutron hinzu."
+      ]
+    },
+    "figure": "ion-charge",
+    "sourceReadOn": "2026-10-29"
+  },
+  {
+    "kind": "word",
+    "term": "Neutron",
+    "definition": "Ein Neutron ist ein Teilchen ohne elektrische Gesamtladung. Es gehört zu vielen Atomkernen. Das häufigste Wasserstoffisotop besitzt im Kern nur ein Proton und kein Neutron; andere Wasserstoffisotope besitzen Neutronen.",
+    "starter": "Viele Atomkerne enthalten Neutronen. Sie tragen insgesamt weder positive noch negative elektrische Ladung.",
+    "deeper": "Neutronen und Protonen sind verschiedene Kernteilchen. Bei gleichbleibender Protonenzahl kann eine andere Neutronenzahl ein anderes Isotop ergeben. Neutronen gehören zum Kern, nicht zur Elektronenhülle.",
+    "observe": "Zeichne die drei Wasserstoffkerne mit einem P und null, einem oder zwei N. Welche Zahl ist in allen Beispielen gleich? Die Skizze ist nur ein Zählmodell, keine Aussage über die Form echter Kerne.",
+    "benefit": "Du erkennst, warum „neutral“ ein Ladungsmerkmal ist und trotzdem verschiedene Isotope möglich sind.",
+    "topic": "science-fusion",
+    "connection": "Bei der Kernfusion können Neutronen eine Rolle spielen. Vergleiche Kernteilchen mit Elektronen der Hülle und lies die Grenzen der vereinfachten Fusionszeichnung.",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainsneutrons",
+        "title": "DOE · Neutronen",
+        "anchor": "Text114ausschließlich neutrale Gesamtladung und Kernteilchen; universelle Wasserstoffausnahme nicht übernommen. Wasserstoffisotope stattdessenDOE-Isotopes112/126undNIST-Zusammensetzung. Keine Forschungsaussagen/medizinischen Anwendungen/Teilchenversuche.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://www.energy.gov/science/doe-explainsisotopes",
+        "title": "DOE · Isotope",
+        "anchor": "Text112/114–116/126: gleiche Protonenzahl, verschiedene Neutronenzahlen, Kohlenstoff12/13mit6P6N/6P7N, Wasserstoffvarianten. All-artificial-isotopes-unstable-Satz124nicht übernommen; keine aktuelle Isotopen-Gesamtzählung oder Datierung behauptet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      },
+      {
+        "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=H",
+        "title": "NIST · Wasserstoffisotope",
+        "anchor": "Originaltabelle: H-1IsotopicComposition0.999885(70), D-20.000115(70), T-3getrennt. Häufigkeitsangabe nur übliche natürliche Zusammensetzung, nicht jede künstlich gewählte Wasserstoffprobe; keine exakte Häufigkeit im Kindertext nötig.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-29"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Isotop",
+        "reason": "Verschiedene Neutronenzahlen unterscheiden die Isotope eines Elements. Protonenzahl und Neutronenzahl sind verschiedene Angaben."
+      }
+    ],
+    "question": {
+      "prompt": "Welches Merkmal beschreibt ein Neutron?",
+      "answers": [
+        "Es ist ein negativ geladenes Elektron",
+        "Es besitzt keine elektrische Gesamtladung",
+        "Es ist ein ganzes Wasserstoffatom"
+      ],
+      "correct": 1,
+      "hint": "Trenne Kernteilchen, Hüllenteilchen und den gesamten Aufbau.",
+      "why": "Ein Neutron ist ein Kernteilchen ohne elektrische Gesamtladung. Ein Elektron ist etwas anderes, und ein Atom umfasst mehr als ein einzelnes Neutron.",
+      "wrongReasons": [
+        "Elektronen tragen negative Ladung und gehören in Atomen zur Hülle. Neutronen sind andere Teilchen.",
+        "",
+        "Ein Wasserstoffatom besteht aus Kern und Elektronenhülle. Ein Neutron allein ist kein Atom."
+      ]
+    },
+    "figure": "isotope-counts",
+    "sourceReadOn": "2026-10-29"
+  }
+]

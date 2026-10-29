@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T23:36:42.117Z",
+  "generatedAt": "2026-10-29T08:49:47.263Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,7 +13,7 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 117,
+  "knowledgeWords": 122,
   "whyQuestions": 37,
   "routes": 8,
   "files": [
@@ -104,6 +104,21 @@
       "sha256": "4c36ca3dbd2115d4dfe874a973186153935fe86a41f617eb58ef8e530e435e16"
     },
     {
+      "file": "book-particle.json",
+      "sources": [
+        "app/book-particle-content.json",
+        "app/book-particle-integrity.json",
+        "app/book-particle-index.json",
+        "app/book-particle-topic-index.json",
+        "app/book-particle-word-link-index.json",
+        "app/book-particle-validation.mjs",
+        "scripts/book-particle-index.mjs"
+      ],
+      "entries": 5,
+      "bytes": 18954,
+      "sha256": "4c1cb108bd6244363029218ac9872b93c317162c49d572ad8bf0d2836cff3f92"
+    },
+    {
       "file": "continents.json",
       "sources": [
         "app/earth-data.ts",
@@ -188,11 +203,12 @@
         "app/book-measurement-word-index.json",
         "app/book-heat-index.json",
         "app/book-light-index.json",
-        "app/book-water-index.json"
+        "app/book-water-index.json",
+        "app/book-particle-index.json"
       ],
-      "entries": 117,
-      "bytes": 23231,
-      "sha256": "08a5d289f28f371bb5e14d1755f0bcfe0662a52837956235a4b290f02c4a1098"
+      "entries": 122,
+      "bytes": 24463,
+      "sha256": "3012ef03343e0c909b4d843e4d64848df53b892941fea3569a1776540d3167cb"
     },
     {
       "file": "why-questions.json",

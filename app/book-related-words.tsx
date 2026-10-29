@@ -2,9 +2,10 @@ import {LearningDetails} from './learning-components';
 import {navigateHash} from './hash-route';
 import incomingLight from './book-light-word-link-index.json';
 import incomingWater from './book-water-word-link-index.json';
+import incomingParticle from './book-particle-word-link-index.json';
 
 const incoming:Record<string,{term:string;reason:string}[]>={};
-for(const pack of [incomingLight,incomingWater])for(const [term,links]of Object.entries(pack))(incoming[term]??=[]).push(...links);
+for(const pack of [incomingLight,incomingWater,incomingParticle])for(const [term,links]of Object.entries(pack))(incoming[term]??=[]).push(...links);
 
 /** Small generated incoming edges keep existing words connected as a pack grows. */
 export function BookRelatedWords({term}:{term:string}){

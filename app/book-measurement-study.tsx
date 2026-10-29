@@ -1,16 +1,16 @@
 import {useEffect,useRef,useState} from 'react';
 import {useBookMeasurement} from './book-measurement-data';
-import {restoreRouteView} from './hash-route';
 import {LearningStatus} from './learning-components';
 import {LearningDetails} from './learning-components';
 import type {MeasurementLearning} from './book-measurement-data';
 import {lengthUnits,timeInterval,temperatureUnits} from './book-measure-math.mjs';
-import {BookStudyBody} from './book-study';
+import {BookStudyBody,useBookStudyReturn} from './book-study';
 const number=(n:number)=>n.toLocaleString('de-DE',{maximumFractionDigits:2});
 export function BookMeasurement({term,onTopic}:{term:string;onTopic?:(id:string)=>void}){
  const details=useRef<HTMLDetailsElement|null>(null),retryFocus=useRef(false);
  const [active,setActive]=useState(false),{learning,error,retry,sourceReadOn}=useBookMeasurement(term,active);
- useEffect(()=>{if(!learning)return;if(retryFocus.current){retryFocus.current=false;if(document.activeElement===document.body)details.current?.querySelector('summary')?.focus({preventScroll:true});}else if(history.state?.wunderFocus)restoreRouteView(location.hash.slice(1));},[learning]);
+ useBookStudyReturn(learning!==null,active,details);
+ useEffect(()=>{if(!learning)return;if(retryFocus.current){retryFocus.current=false;if(document.activeElement===document.body)details.current?.querySelector('summary')?.focus({preventScroll:true});}},[learning,term]);
  return <LearningDetails className="book-study" summary="Weiterforschen · freiwillig" data-book-study={term} data-history-disclosure={'book-study-'+term} onToggle={e=>{details.current=e.currentTarget;if(e.currentTarget.open)setActive(true);}}>
   {learning&&sourceReadOn?<MeasurementStudy term={term} learning={learning} sourceReadOn={sourceReadOn} onTopic={onTopic}/>:<LearningStatus tone={error?'error':'loading'} action={error?<button className="secondary-button" onClick={e=>{retryFocus.current=document.activeElement===e.currentTarget;retry();}}>Wortvertiefung erneut laden</button>:undefined}>{error?'Diese Vertiefung konnte nicht sicher geladen werden. Definition, Pass und Notizen bleiben erhalten.':'Deine freiwillige Vertiefung wird geladen …'}</LearningStatus>}
  </LearningDetails>;

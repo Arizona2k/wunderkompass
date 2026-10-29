@@ -27,7 +27,7 @@ export function useLocalProgress(){
  const clearGame=useCallback((id:string)=>update(p=>{const sessions={...p.gameSessions};delete sessions[id];return {...p,gameSessions:sessions};}),[update]);
  const lab=useCallback((id:string,field:string,value:unknown)=>update(p=>({...p,gameSessions:{...p.gameSessions,[id]:{...p.gameSessions[id],[field]:value}},lastActivity:{type:'lab',id:id.replace(/^lab:/,'')}})),[update]);
  const experiment=useCallback((id:string)=>update(p=>({...p,experiments:p.experiments.includes(id)?p.experiments.filter(x=>x!==id):[...p.experiments,id]})),[update]);
- const note=useCallback((text:string)=>update(p=>({...p,notes:[...p.notes,{id:localId(),text:text.trim().slice(0,1000),at:new Date().toISOString()}].slice(-100)})),[update]);
+ const note=useCallback((text:string,id?:string)=>update(p=>!text.trim()?p:({...p,notes:id?p.notes.map(n=>n.id===id?{...n,text:text.trim().slice(0,1000)}:n):[...p.notes,{id:localId(),text:text.trim().slice(0,1000),at:new Date().toISOString()}].slice(-100)})),[update]);
  const removeNote=useCallback((id:string)=>update(p=>({...p,notes:p.notes.filter(n=>n.id!==id)})),[update]);
  return {progress:save.progress,restoreRevision,ready,available,storage,notice,reset,add,markMission,favorite,chapter,review,settings,activity,quiz,game,worldState,clearGame,lab,experiment,note,removeNote,backup,importSave,flush};
 }

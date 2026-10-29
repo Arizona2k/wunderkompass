@@ -1,3 +1,11 @@
+## Teilchen und Buchbedienung · Entwicklungsstand
+
+Fünf zusätzliche Begriffe erläutern Atom, Isotop, Proton, Elektron und Neutron mit freiwilliger Tiefe, Denkfragen und vier eigenen Modellarten. Kanonische Verbindungen führen zu bestehenden Begriffen und Fachkarten. Suchauswahl und Browser-Zurück berücksichtigen den Buchlesekontext; allgemeine Notizen lassen sich im bestehenden Pass bearbeiten und Änderungen abbrechen. Quellenangaben verwenden ihre individuellen Kalenderfelder. Noch nicht testbereitgestellt; die reguläre native Abnahme und Übernahme bleiben erforderlich.
+
+## Wasserverbindungen · PR77 tatsächlich bereitgestellt
+
+Vier neue Wasserbegriffe und drei Warumfragen, freiwillige Dichte-Vertiefung, fünf eigene Modellarten und erzeugter Kilogramm-Gegenverweis sind nach vollständiger Quality192 regulär als `631f54f390f8e78d650103c8c981c4547d49bf8c` nach test-live übernommen und am29.10.2026 um03:11:13MEZ tatsächlich bereitgestellt. Die ausführlichen Auslieferungs- und Nachtestbelege bleiben privat.117Wörter/37Warumfragen; alte113/34Payloads und bisherigeSI-/Wärme-/Lichtpakete erhalten. Ausführliche Belege privat, Paket3.5 und Gesamtauftrag offen.
+
 ## Licht und Erdinneres · lokaler Entwicklungsstand
 
 ## Licht und Erdinneres · PR76 tatsächlich bereitgestellt
