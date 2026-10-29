@@ -199,3 +199,7 @@
 .globe-stage:has(.fallback-globe) .stage-kicker{display:none}
 
 .word-card:has(.book-study[open]){grid-column:1/-1;width:100%;max-width:78ch;margin:auto}.word-card>p,.book-study{max-width:72ch}
+
+/* The flat layer cutaway has tap and button zoom, no rotation gesture. */
+.globe-stage:has(.fallback-globe[data-model-mode=layers]) .stage-toolbar :is(.touch-globe-toggle,.gesture-hint){display:none}
+.globe-stage:has(.fallback-globe[data-model-mode=layers]) .zoom-buttons{margin-inline-start:auto}

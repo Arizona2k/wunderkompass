@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "631f54f390f8e78d650103c8c981c4547d49bf8c",
+    "commit": "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -72,7 +72,8 @@
       "b64c49abf1bcd42427adaff675ba6a68b792ac10",
       "74ef5116d24a07a0efffaf323666f4ac554e8949",
       "53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8",
-      "631f54f390f8e78d650103c8c981c4547d49bf8c"
+      "631f54f390f8e78d650103c8c981c4547d49bf8c",
+      "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1895,6 +1896,28 @@
           "createdAt": "2026-10-29T02:11:13Z",
           "updatedAt": "2026-10-29T02:11:13Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/HJeiAnJziEjgvwWMkztyUsSrbuXt"
+        }
+      ],
+      "checkedOn": "2026-10-29"
+    },
+    {
+      "number": 78,
+      "title": "Teilchen verstehen und im Wissensbuch zuverlässig weiterlesen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/78",
+      "base": "test-live",
+      "mergedAt": "2026-10-29T13:51:10Z",
+      "mergeCommit": "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57576453250,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-29T13:51:28Z",
+          "updatedAt": "2026-10-29T13:51:28Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/DZxMhSRaAsfxqwA8NAUuL3mbn6vK"
         }
       ],
       "checkedOn": "2026-10-29"
