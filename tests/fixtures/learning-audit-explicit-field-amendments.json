@@ -1,0 +1,1999 @@
+{
+  "scope": "Exactly four topic source/clue amendments and four generated recognition/comparison question revisions. Historical public fixtures stay unchanged; this explicit field-only inverse is used solely in historical comparisons. Dedicated current/raw field, semantic, untouched190topic/sevenbank and mutation-countertests required. No current facts, unknown fields, old saved answers or release gates ignored.",
+  "sourceCommit": "690e97f160d51415224623912ee92ebc798694bc",
+  "sourceCatalogGitBlob": "47f0db9eda14e88e51bed3ee69909787653ced77",
+  "sourceGameBankGitBlob": "e02c1a1ec133dfbd35d41b9456cfa7a63ba3a860",
+  "publicBaseCatalogSemanticSHA256": "3990edbc8104c0c441640fc391a9efd2219a5fd60836ba699fc9d7a4c187a23f",
+  "publicBaseGameBankSemanticSHA256": {
+    "animal-detective": "4818ba471a7b464a3c6c03bd40259d1409f21851cc27d9e80384573427604fc3",
+    "people": "decd19a1a84c31b92d1cd013585246524583454e73263363752ad1cbbe77918b",
+    "technology": "ae8e2308fb3c404fecd9356953a213d3b9b9421d6ee1c718d5330eb848403f61",
+    "then-now": "619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb",
+    "food": "db31999632cda257737c9b6238147f0627e2b0485926864a8a6f7314e16de798",
+    "habitats": "1f209b6d4162cb801a1480483264d3f84f456511fb8877e29975824ab1f16f35",
+    "records": "a9e806e1b85309dcf016c9be579e2b79c72725a192641741591ac58052c70c38"
+  },
+  "topics": [
+    {
+      "id": "invention-phone",
+      "changes": [
+        {
+          "path": [
+            "sources"
+          ],
+          "beforeExists": true,
+          "before": [
+            {
+              "label": "Smithsonian – Bells Versuchstelefon",
+              "url": "https://www.si.edu/object/nmah_689864"
+            }
+          ],
+          "afterExists": true,
+          "after": [
+            {
+              "label": "National Museums Scotland · Telefonprinzip, Bells Patent und weitere Beteiligte",
+              "url": "https://www.nms.ac.uk/discover-catalogue/did-alexander-graham-bell-invent-the-telephone"
+            }
+          ]
+        },
+        {
+          "path": [
+            "sourceNote"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Bells Patent von 1876, weiteren Beteiligten und der Umwandlung von Schall in elektrische Signale und zurück gelesen am 30. Oktober 2026 bei National Museums Scotland. Die Bauteilskizze erklärt das Grundprinzip; sie ist keine genaue Rekonstruktion eines historischen Telefons."
+        }
+      ]
+    },
+    {
+      "id": "invention-compass",
+      "changes": [
+        {
+          "path": [
+            "sources"
+          ],
+          "beforeExists": true,
+          "before": [
+            {
+              "label": "Smithsonian National Air and Space Museum, Time and Navigation",
+              "url": "https://timeandnavigation.si.edu/timeline2/1000"
+            }
+          ],
+          "afterExists": true,
+          "after": [
+            {
+              "label": "Smithsonian National Air and Space Museum, Time and Navigation",
+              "url": "https://timeandnavigation.si.edu/timeline2/1000"
+            },
+            {
+              "label": "NOAA NCEI · World Magnetic Model · Kompassrichtung und Deklination",
+              "url": "https://www.ncei.noaa.gov/products/world-magnetic-model"
+            }
+          ]
+        },
+        {
+          "path": [
+            "sourceNote"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": "Das Grundprinzip der magnetischen Kompassnadel und die Unterscheidung von magnetischer Richtung und geografisch Nord wurden am 29.10.2026 mit NOAA NCEI abgeglichen. Dieser Abgleich datiert die übrigen historischen Angaben nicht neu."
+        },
+        {
+          "path": [
+            "invention",
+            "comparisonQuestion"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": {
+            "prompt": "Wann gilt dieses Kompassprinzip? Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld.",
+            "answers": [
+              "Früher und heute",
+              "Nur früher",
+              "Nur heute"
+            ],
+            "correct": 0,
+            "why": "Das ist das Grundprinzip eines magnetischen Kompasses, früher wie heute. Seine Nadel richtet sich am Erdmagnetfeld aus; magnetisch Nord ist nicht genau geografisch Nord.",
+            "hint": "Unterscheide das Aussehen des Geräts von seinem physikalischen Prinzip. Ist dieses Prinzip an eine bestimmte Zeit gebunden?",
+            "wrongReasons": [
+              null,
+              "Du ordnest das Prinzip nur der Vergangenheit zu. Auch heutige magnetische Kompasse richten ihre Nadeln am Erdmagnetfeld aus. Vergleiche Bauform und Wirkprinzip.",
+              "Du ordnest das Prinzip nur der Gegenwart zu. Auch frühe magnetische Kompasse nutzten die Ausrichtung am Erdmagnetfeld. Vergleiche Bauform und Wirkprinzip."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "building-burj-khalifa",
+      "changes": [
+        {
+          "path": [
+            "sources"
+          ],
+          "beforeExists": true,
+          "before": [
+            {
+              "label": "Offizielle Bauwerksquelle / UNESCO",
+              "url": "https://www.burjkhalifa.ae/img/fact-sheet.pdf"
+            },
+            {
+              "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+              "url": "https://www.som.com/projects/burj-khalifa/"
+            }
+          ],
+          "afterExists": true,
+          "after": [
+            {
+              "label": "Emaar · Höhe und Eröffnung des Burj Khalifa",
+              "url": "https://www.emaar.com/en/other-emaar-businesses/burj-khalifa"
+            },
+            {
+              "label": "Burj Khalifa/Emaar · Tragwerk und Stahlspitze",
+              "url": "https://www.burjkhalifa.ae/the-tower/structures/"
+            },
+            {
+              "label": "SOM · Höhe, Stahlbeton und tragender Kern",
+              "url": "https://www.som.com/projects/burj-khalifa/"
+            }
+          ]
+        },
+        {
+          "path": [
+            "sourceNote"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Höhe und Eröffnung sowie zu Stahlbeton, Stahlspitze und tragendem Kern gelesen am 30. Oktober 2026 bei Emaar und SOM. Der Höhenvergleich ist eine vereinfachte Lernhilfe und berechnet keine Gebäudestatik."
+        }
+      ]
+    },
+    {
+      "id": "invention-telescope",
+      "changes": [
+        {
+          "path": [
+            "invention",
+            "recognitionClue"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": "Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln."
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "game": "people",
+      "id": "person-karl_benz",
+      "changes": [
+        {
+          "path": [
+            "prompt"
+          ],
+          "beforeExists": true,
+          "before": "Wer passt zu diesem Hinweis? Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+          "afterExists": true,
+          "after": "Wer passt zu diesem Hinweis? Diese Person entwickelte einen Wagen mit Benzinmotor."
+        }
+      ]
+    },
+    {
+      "game": "people",
+      "id": "person-al_khwarizmi",
+      "changes": [
+        {
+          "path": [
+            "prompt"
+          ],
+          "beforeExists": true,
+          "before": "Wer passt zu diesem Hinweis? Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+          "afterExists": true,
+          "after": "Wer passt zu diesem Hinweis? Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra."
+        }
+      ]
+    },
+    {
+      "game": "technology",
+      "id": "invention-telescope",
+      "changes": [
+        {
+          "path": [
+            "prompt"
+          ],
+          "beforeExists": true,
+          "before": "Welche Erfindung passt zu dieser Forscherfrage? Wie sammelt ein Fernrohr mehr Licht als dein Auge?",
+          "afterExists": true,
+          "after": "Welche Erfindung passt zu dieser Beschreibung? Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln."
+        }
+      ]
+    },
+    {
+      "game": "then-now",
+      "id": "invention-compass-today",
+      "changes": [
+        {
+          "path": [
+            "prompt"
+          ],
+          "beforeExists": true,
+          "before": "Früher oder heute? Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld. Magnetisch Nord und geografisch Nord sind nicht genau dasselbe.",
+          "afterExists": true,
+          "after": "Wann gilt dieses Kompassprinzip? Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld."
+        },
+        {
+          "path": [
+            "answers"
+          ],
+          "beforeExists": true,
+          "before": [
+            "Heute",
+            "Früher",
+            "Nur ein Zukunftswunsch"
+          ],
+          "afterExists": true,
+          "after": [
+            "Früher und heute",
+            "Nur früher",
+            "Nur heute"
+          ]
+        },
+        {
+          "path": [
+            "why"
+          ],
+          "beforeExists": true,
+          "before": "Frühe Formen unterschieden sich vom heutigen Taschenkompass.",
+          "afterExists": true,
+          "after": "Das ist das Grundprinzip eines magnetischen Kompasses, früher wie heute. Seine Nadel richtet sich am Erdmagnetfeld aus; magnetisch Nord ist nicht genau geografisch Nord."
+        },
+        {
+          "path": [
+            "hint"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": "Unterscheide das Aussehen des Geräts von seinem physikalischen Prinzip. Ist dieses Prinzip an eine bestimmte Zeit gebunden?"
+        },
+        {
+          "path": [
+            "wrongReasons"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": [
+            null,
+            "Du ordnest das Prinzip nur der Vergangenheit zu. Auch heutige magnetische Kompasse richten ihre Nadeln am Erdmagnetfeld aus. Vergleiche Bauform und Wirkprinzip.",
+            "Du ordnest das Prinzip nur der Gegenwart zu. Auch frühe magnetische Kompasse nutzten die Ausrichtung am Erdmagnetfeld. Vergleiche Bauform und Wirkprinzip."
+          ]
+        }
+      ]
+    }
+  ],
+  "publicBaseDossiersSemanticSHA256": "f7526ec7fe88e30b88a590e7d897b451a8d93ef55c9aa7bc06f9db513091185a",
+  "dossiers": [
+    {
+      "id": "topics-inventions:invention-telescope",
+      "changes": [
+        {
+          "path": [
+            "dataHash"
+          ],
+          "beforeExists": true,
+          "afterExists": true,
+          "before": "3f0dc447df299823ea72250b3edadda542d2ee7d95342b146ce9501b17bfa9f5",
+          "after": "f8c718ee6dd17dae60fcfdac58d0cd28df17bd844fbe14d2de2eb50525c0f4ec"
+        },
+        {
+          "path": [
+            "learningAudit20261030"
+          ],
+          "beforeExists": false,
+          "afterExists": true,
+          "after": {
+            "scope": "Bounded identification-game clue maintenance only; article research question, optical claims, sources, old dates and all existing dossier fields remain. No new whole factual review or current complete UI acceptance.",
+            "previousDataHash": "3f0dc447df299823ea72250b3edadda542d2ee7d95342b146ce9501b17bfa9f5",
+            "currentDataHash": "f8c718ee6dd17dae60fcfdac58d0cd28df17bd844fbe14d2de2eb50525c0f4ec",
+            "changedField": "invention.recognitionClue",
+            "newValue": "Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln.",
+            "reason": "The article research question already names the telescope and cannot serve as an identification question. A separate canonical clue describes lens/mirror and gathering light without naming the answer.",
+            "source": "https://science.nasa.gov/universe/telescopes-101/",
+            "sourceScope": "Existing NASA mirror/lens/light gathering explanation retained; actual current source opening/read and return separately qualified. Original reviewedOn, source checkedOn and aiSelfReview remain unchanged.",
+            "affectedUses": [
+              "worldGameBank.technology identification prompt",
+              "world-topic article unchanged research question",
+              "export world-topics",
+              "existing mandatory task/current-answer/old-answer browser cases"
+            ],
+            "acceptance": "Early exact four-question/96 task cases already exercised; complete current local/native and delivery still required."
+          }
+        }
+      ]
+    }
+  ],
+  "sharedUI": {
+    "scope": "Exact shared technical UI layer after genuine full3 local pass; prior139whole M79 factual histories remain protected by unchanged original hashes and explicit telescope maintenance inverse. Not a new scientific acceptance.",
+    "historyField": "historicalUIBeforeLearningAuditCurrentFull20261030",
+    "currentTemplate": {
+      "build": "4e534227241948b5",
+      "visible": true,
+      "search": true,
+      "back": true,
+      "offline": true,
+      "report": "Gemeinsame technische versiongebundene Leser-/Such-/Rückweg-/Pass-/Offlinezuordnung nach vollständiger bestehender lokaler Abnahme. Gezielte tatsächliche Drei-Engine-Belege schützen Altantworten, einmalige Bearbeitung, fertige Routen, Kapitel-/Auswahlrückwege und die begrenzte Energieanzeige. Alle früheren Fachfelder, Quelldaten und UI-Historien bleiben erhalten. Keine neue globale Fach-, Menschen- oder physische Geräteabnahme; vollständige native GitHub-Qualifikation am endgültigen Kopf bleibt erforderlich."
+    },
+    "priorUI": [
+      {
+        "id": "topics-animals:animal-platypus",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-platypus",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-short-beaked-echidna",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-short-beaked-echidna",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-okapi",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-okapi",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-meerkat",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-meerkat",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-ring-tailed-lemur",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-ring-tailed-lemur",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-north-american-beaver",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-north-american-beaver",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-walrus",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-walrus",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-red-fox",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-red-fox",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-raccoon",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-raccoon",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-hedgehog",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-hedgehog",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-barn-owl",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-barn-owl",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-kingfisher",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-kingfisher",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-ostrich",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-ostrich",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-atlantic-puffin",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-atlantic-puffin",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-common-chameleon",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-common-chameleon",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-fire-salamander",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-fire-salamander",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-common-frog",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-common-frog",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-eastern-clown-anemonefish",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-eastern-clown-anemonefish",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-european-eel",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-european-eel",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-monarch-butterfly",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-monarch-butterfly",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-garden-snail",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-garden-snail",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-european-lobster",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-european-lobster",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-common-cuttlefish",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-common-cuttlefish",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-short-snouted-seahorse",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-short-snouted-seahorse",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-african-savanna-elephant",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-african-savanna-elephant",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-lion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-lion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-cheetah",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-cheetah",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-bengal-tiger",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-bengal-tiger",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-giraffe",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-giraffe",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-giant-panda",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-giant-panda",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-western-lowland-gorilla",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-western-lowland-gorilla",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-bornean-orangutan",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-bornean-orangutan",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-polar-bear",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-polar-bear",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-emperor-penguin",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-emperor-penguin",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-blue-whale",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-blue-whale",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-common-bottlenose-dolphin",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-common-bottlenose-dolphin",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-orca",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-orca",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-common-octopus",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-common-octopus",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-green-sea-turtle",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-green-sea-turtle",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-red-kangaroo",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-red-kangaroo",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-koala",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-koala",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-jaguar",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-jaguar",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-honey-bee",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-honey-bee",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-axolotl",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-axolotl",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-whale-shark",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-whale-shark",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-garden-cross-spider",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-garden-cross-spider",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-dromedary",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-dromedary",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-animals:animal-white-tailed-eagle",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/animal-white-tailed-eagle",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-history:history-khipu",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/history-khipu",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-history:history-mohenjo-daro",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/history-mohenjo-daro",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-history:history-writing",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/history-writing",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-camera",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-camera",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-telescope",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-telescope",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-microscope",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-microscope",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-people:person-mary_anning",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/person-mary_anning",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-people:person-ibn_al_haytham",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/person-ibn_al_haytham",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-battery",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-battery",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-generator",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-generator",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-transistor",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-transistor",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-refrigerator",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-refrigerator",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-bicycle",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-bicycle",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-elevator",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-elevator",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-seismograph",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-seismograph",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-3d-printing",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-3d-printing",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-inventions:invention-sewing-machine",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/invention-sewing-machine",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-pont-du-gard",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-pont-du-gard",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-great-zimbabwe",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-great-zimbabwe",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-horyu-ji",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-horyu-ji",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-djenne-mosque",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-djenne-mosque",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-lalibela",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-lalibela",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-angkor-wat",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-angkor-wat",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-palenque",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-palenque",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-buildings:building-sydney-opera",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/building-sydney-opera",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-pressure",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-pressure",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-friction",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-friction",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-buoyancy",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-buoyancy",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-surface-tension",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-surface-tension",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-capillarity",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-capillarity",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-diffusion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-diffusion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-chromatography",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-chromatography",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-heat-transfer",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-heat-transfer",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-lever",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-lever",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-elasticity",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-elasticity",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-pendulum",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-pendulum",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-resonance",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-resonance",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-probability",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-probability",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-symmetry",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-symmetry",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-fractals",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-fractals",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-angle",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-angle",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-encryption",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-encryption",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-checksum",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-checksum",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-cell",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-cell",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-fusion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-fusion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-galaxy",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-galaxy",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-comet",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-comet",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-science:science-exoplanet",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/science-exoplanet",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-history:history-bronze",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/history-bronze",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-people:person-maria_sibylla_merian",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/person-maria_sibylla_merian",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "topics-people:person-inge_lehmann",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "world/topic/person-inge_lehmann",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Meter",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Meter",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Kilogramm",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Kilogramm",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Sekunde",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Sekunde",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Ampere",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Ampere",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Kelvin",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Kelvin",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Mol",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Mol",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Candela",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Candela",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Wärme",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/W%C3%A4rme",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Wärmeleitung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/W%C3%A4rmeleitung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Konvektion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Konvektion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Wärmestrahlung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/W%C3%A4rmestrahlung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:30",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20f%C3%BChlen%20sich%20gleich%20warme%20Materialien%20manchmal%20verschieden%20an%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:31",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20bewegt%20erw%C3%A4rmtes%20Wasser%20manchmal%20weiteres%20Wasser%20mit%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Reflexion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Reflexion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Absorption",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Absorption",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Brechung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Brechung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Streuung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Streuung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Photon",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Photon",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Strahlung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Strahlung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Spektrum",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Spektrum",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Infrarot",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Infrarot",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Frequenz",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Frequenz",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Wellenlänge",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Wellenl%C3%A4nge",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Energie",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Energie",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Polarisation",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Polarisation",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:32",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20sind%20Photonen%20im%20Bild%20keine%20winzigen%20sichtbaren%20Murmeln%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:33",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20haben%20W%C3%A4rmebilder%20Farben%2C%20die%20wir%20am%20Gegenstand%20nicht%20sehen%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Kohäsion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Koh%C3%A4sion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Adhäsion",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Adh%C3%A4sion",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Oberflächenspannung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Oberfl%C3%A4chenspannung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Kapillarwirkung",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Kapillarwirkung",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Dichte",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Dichte",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:34",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20zieht%20Wasser%20in%20einem%20Papiertuch%20nach%20oben%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:35",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20kann%20eine%20Nadel%20anders%20auf%20Wasser%20liegen%20als%20untertauchen%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "why:36",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/why/Warum%20kann%20ein%20Schiff%20aus%20schwerem%20Material%20schwimmen%3F",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Atom",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Atom",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Isotop",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Isotop",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Proton",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Proton",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Elektron",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Elektron",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      },
+      {
+        "id": "words:Neutron",
+        "ui": {
+          "build": "090eeac00203fc37",
+          "route": "book/words/Neutron",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Bestehende vollständige versiongebundene Produktionsbrowserabnahme einschließlich Suche, Rückwegen, Altpass, tatsächlichem Browserzoom und kaltem Offlineweg. Ergänzende Bediennachweise für Dialogrückkehr, flache Erdschichten und lesbare Länderangaben in Chromium, Firefox und WebKit. Fachliche Inhalte, Datumswerte und alle früheren vollständigen UI-Historien erhalten. Technische gemeinsame UI-Bindung; keine neue globale Fach-, Menschen- oder physische Geräteabnahme. Vollständige native GitHub Quality am endgültigen Kopf bleibt erforderlich."
+        }
+      }
+    ]
+  }
+}

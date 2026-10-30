@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481",
+    "commit": "690e97f160d51415224623912ee92ebc798694bc",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -73,7 +73,8 @@
       "74ef5116d24a07a0efffaf323666f4ac554e8949",
       "53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8",
       "631f54f390f8e78d650103c8c981c4547d49bf8c",
-      "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481"
+      "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481",
+      "690e97f160d51415224623912ee92ebc798694bc"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -1921,6 +1922,38 @@
         }
       ],
       "checkedOn": "2026-10-29"
+    },
+    {
+      "number": 79,
+      "title": "Dialogrückkehr, Erdschichtenzoom und Länderangaben verbessern",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/79",
+      "base": "test-live",
+      "mergedAt": "2026-10-30T00:59:13Z",
+      "mergeCommit": "690e97f160d51415224623912ee92ebc798694bc",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/690e97f160d51415224623912ee92ebc798694bc/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57634477432,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-30T00:59:28Z",
+          "updatedAt": "2026-10-30T00:59:28Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Gtbjzvst67gJn3o8GmS1dUrDQn5p"
+        },
+        {
+          "id": 57634468108,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-30T00:59:16Z",
+          "updatedAt": "2026-10-30T00:59:16Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/Gtbjzvst67gJn3o8GmS1dUrDQn5p"
+        }
+      ],
+      "checkedOn": "2026-10-30"
     }
   ]
 }

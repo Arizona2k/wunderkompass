@@ -5991,8 +5991,8 @@
     ],
     "sources": [
       {
-        "label": "Smithsonian – Bells Versuchstelefon",
-        "url": "https://www.si.edu/object/nmah_689864"
+        "label": "National Museums Scotland · Telefonprinzip, Bells Patent und weitere Beteiligte",
+        "url": "https://www.nms.ac.uk/discover-catalogue/did-alexander-graham-bell-invent-the-telephone"
       }
     ],
     "aliases": [],
@@ -6055,7 +6055,8 @@
       "correct": 0,
       "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Bells Patent von 1876, weiteren Beteiligten und der Umwandlung von Schall in elektrische Signale und zurück gelesen am 30. Oktober 2026 bei National Museums Scotland. Die Bauteilskizze erklärt das Grundprinzip; sie ist keine genaue Rekonstruktion eines historischen Telefons."
   },
   {
     "id": "invention-computer",
@@ -6340,6 +6341,10 @@
       {
         "label": "Smithsonian National Air and Space Museum, Time and Navigation",
         "url": "https://timeandnavigation.si.edu/timeline2/1000"
+      },
+      {
+        "label": "NOAA NCEI · World Magnetic Model · Kompassrichtung und Deklination",
+        "url": "https://www.ncei.noaa.gov/products/world-magnetic-model"
       }
     ],
     "aliases": [],
@@ -6390,7 +6395,23 @@
           "name": "Gehäuse",
           "description": "Schützt die bewegliche Nadel."
         }
-      ]
+      ],
+      "comparisonQuestion": {
+        "prompt": "Wann gilt dieses Kompassprinzip? Eine Kompassnadel richtet sich ungefähr nach dem Erdmagnetfeld.",
+        "answers": [
+          "Früher und heute",
+          "Nur früher",
+          "Nur heute"
+        ],
+        "correct": 0,
+        "why": "Das ist das Grundprinzip eines magnetischen Kompasses, früher wie heute. Seine Nadel richtet sich am Erdmagnetfeld aus; magnetisch Nord ist nicht genau geografisch Nord.",
+        "hint": "Unterscheide das Aussehen des Geräts von seinem physikalischen Prinzip. Ist dieses Prinzip an eine bestimmte Zeit gebunden?",
+        "wrongReasons": [
+          null,
+          "Du ordnest das Prinzip nur der Vergangenheit zu. Auch heutige magnetische Kompasse richten ihre Nadeln am Erdmagnetfeld aus. Vergleiche Bauform und Wirkprinzip.",
+          "Du ordnest das Prinzip nur der Gegenwart zu. Auch frühe magnetische Kompasse nutzten die Ausrichtung am Erdmagnetfeld. Vergleiche Bauform und Wirkprinzip."
+        ]
+      }
     },
     "question": {
       "prompt": "Welches Problem hilft Der Kompass zu lösen?",
@@ -6402,7 +6423,8 @@
       "correct": 0,
       "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Das Grundprinzip der magnetischen Kompassnadel und die Unterscheidung von magnetischer Richtung und geografisch Nord wurden am 29.10.2026 mit NOAA NCEI abgeglichen. Dieser Abgleich datiert die übrigen historischen Angaben nicht neu."
   },
   {
     "id": "invention-printing",
@@ -7398,11 +7420,15 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Bauwerksquelle / UNESCO",
-        "url": "https://www.burjkhalifa.ae/img/fact-sheet.pdf"
+        "label": "Emaar · Höhe und Eröffnung des Burj Khalifa",
+        "url": "https://www.emaar.com/en/other-emaar-businesses/burj-khalifa"
       },
       {
-        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "label": "Burj Khalifa/Emaar · Tragwerk und Stahlspitze",
+        "url": "https://www.burjkhalifa.ae/the-tower/structures/"
+      },
+      {
+        "label": "SOM · Höhe, Stahlbeton und tragender Kern",
         "url": "https://www.som.com/projects/burj-khalifa/"
       }
     ],
@@ -7423,7 +7449,8 @@
       ],
       "correct": 0,
       "why": "Ein kräftiger Kern und stützende Gebäudeteile tragen die Konstruktion. Beton, Stahl, Aufzüge und viele Fachleute mussten zusammenarbeiten."
-    }
+    },
+    "sourceNote": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Höhe und Eröffnung sowie zu Stahlbeton, Stahlspitze und tragendem Kern gelesen am 30. Oktober 2026 bei Emaar und SOM. Der Höhenvergleich ist eine vereinfachte Lernhilfe und berechnet keine Gebäudestatik."
   },
   {
     "id": "science-circuit",
@@ -13137,7 +13164,8 @@
           "description": "Eine stärkere Vergrößerung allein verbessert weder ein unscharfes Bild noch beliebig die erkennbaren Einzelheiten."
         }
       ],
-      "model": "aperture"
+      "model": "aperture",
+      "recognitionClue": "Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln."
     },
     "sourceNote": "NASA erklärt Sammelfläche, Linsen, Spiegel und unterschiedliche Strahlungsbereiche.1608 bezeichnet einen überlieferten Patentantrag, keine sicher zugeordnete Alleinerfindung. Die gezeichneten Lichtpunkte dienen einem Flächenvergleich; sie berechnen keine Sternhelligkeit, Bildschärfe oder Sonnenbeobachtung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
   },

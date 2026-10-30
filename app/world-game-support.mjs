@@ -3,6 +3,17 @@ import catalog from './world-catalog.json' with {type:'json'};
 const detective=new Map(clues.entries.map(row=>[row.id,row]));
 /** @param {string} id */
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
+/** @param {{title:string,intro:string}} topic */
+export function personRecognitionClue(topic){
+ const variants=[topic.title],optional=topic.title.match(/^(.*?)\s*\(([^()]*)\)(.*)$/u);
+ if(optional){const[,before,alternative,after]=optional;variants.push((before+after).trim(),after.trim()?(before.replace(/\S+\s*$/u,'')+alternative+after).trim():alternative.trim());}
+ let clue=topic.intro;
+ for(const name of [...new Set(variants.filter(Boolean))].sort((a,b)=>b.length-a.length)){
+  const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  clue=clue.replace(new RegExp('(?<![\\p{L}\\p{N}])'+escaped+'(?![\\p{L}\\p{N}])','giu'),'Diese Person');
+ }
+ return clue;
+}
 /** @type {Record<string,string>} */
 const hints={
  habitats:'Denke an Nahrung, Ruheplätze und Fortbewegung. Prüfe, ob der Lebensraum zum Leben an Land, am Wasser oder im Wasser passt.',
@@ -21,12 +32,16 @@ const recordHints={
 };
 /** @param {string} game @param {{id:string}} item */
 export function worldGameHint(game,item){
+ const comparison=game==='then-now'?catalog.find(t=>t.id+'-today'===item.id)?.invention?.comparisonQuestion:undefined;
+ if(comparison)return comparison.hint;
  if(game==='animal-detective')return animalDetectiveClue(item.id).hint;
  if(game==='records')return recordHints[item.id]??'Welche Eigenschaft wird genau verglichen?';
  return hints[game]??'Vergleiche alle Hinweise, bevor du dich entscheidest.';
 }
 /** @param {string} game @param {{id:string}} item @param {string} answer */
 export function worldGameWrongFeedback(game,item,answer){
+ const comparison=game==='then-now'?catalog.find(t=>t.id+'-today'===item.id)?.invention?.comparisonQuestion:undefined;
+ if(comparison){const index=comparison.answers.indexOf(answer),reason=comparison.wrongReasons[index];if(reason)return reason;}
  if(game==='habitats'){
   if(answer==='Trockene Sandwüste fern von Gewässern')return 'Du hast eine Gegend ohne Gewässer gewählt. Überlege, welche Rolle Wasser im Leben dieses Tieres spielt.';
   if(answer==='Baumkronen im tropischen Regenwald')return 'Du hast die oberen Zweige von Bäumen gewählt. Vergleiche das mit der Fortbewegung und Nahrungssuche dieses Tieres.';

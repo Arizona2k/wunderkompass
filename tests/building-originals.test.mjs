@@ -1,3 +1,6 @@
+import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
+// Only named field revisions are projected for these historical comparisons;
+// raw current fields and all190topics/sevenbanks have separate strict guards.
 import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
@@ -12,7 +15,7 @@ test('eight preserved building originals retain every preceding156 topic field a
  for(const id of ids){const t=catalog.find(t=>t.id===id),original=baseline.originalCorrectAnswers[id];assert.equal(t.question.correct,original.correct);assert.equal(t.question.answers[t.question.correct],original.answer);assert.equal(new Set(t.question.answers).size,3);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(t.building.exploration.steps.length,3);assert.equal(t.image,undefined);}
 });
 test('all186 old challenge records and all seven saved world-game banks remain exact after the building additions',()=>{
- const retained=CHALLENGE_BANK.filter(q=>!['history-bronze',...ids,...scienceIds].includes(q.topic));assert.equal(retained.length,baseline.oldChallenges.count);assert.equal(hash(retained),baseline.oldChallenges.sha256);assert.equal(CHALLENGE_BANK.length,220);for(const [id,old]of Object.entries(baseline.oldGameBanks)){const pool=worldGameBank(id).filter(q=>!['person-maria_sibylla_merian','person-inge_lehmann'].includes(q.topic));assert.equal(pool.length,old.count);assert.equal(hash(pool),old.sha256,id+' old questions, answers and orders');}
+ const retained=CHALLENGE_BANK.filter(q=>!['history-bronze',...ids,...scienceIds].includes(q.topic));assert.equal(retained.length,baseline.oldChallenges.count);assert.equal(hash(retained),baseline.oldChallenges.sha256);assert.equal(CHALLENGE_BANK.length,220);for(const [id,old]of Object.entries(baseline.oldGameBanks)){const pool=worldGameBank(id).map(gameBeforeLearningAudit).filter(q=>!['person-maria_sibylla_merian','person-inge_lehmann'].includes(q.topic));assert.equal(pool.length,old.count);assert.equal(hash(pool),old.sha256,id+' old questions, answers and orders');}
  for(const topic of ['invention-refrigerator','invention-elevator','invention-3d-printing']){const first=retained.find(q=>q.topic===topic),other=retained.filter(q=>q.difficulty===first.difficulty&&q.id!==first.id).slice(0,5),questions=[first,...other],old={difficulty:first.difficulty,ids:questions.map(q=>q.id),orders:Object.fromEntries(questions.map(q=>[q.id,[...q.answers].reverse()])),index:0,answer:first.answers[first.correct],done:false};assert.deepEqual(restoreChallenge(structuredClone(old),{invalid:true}),old);}
 });
 

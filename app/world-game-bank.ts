@@ -1,5 +1,5 @@
 import {habitatDistractors} from './world-game-habitats.mjs';
-import {animalDetectiveClue} from './world-game-support.mjs';
+import {animalDetectiveClue,personRecognitionClue} from './world-game-support.mjs';
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
@@ -33,15 +33,15 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
  if(id==='people'){
   // Keep the actually delivered20-person clue/choice bank stable as new people join.
   const retained=PEOPLE_BASELINE.map(id=>people.find(t=>t.id===id)!);
-  return people.map((t,i)=>{const old=PEOPLE_BASELINE.indexOf(t.id),index=old<0?i:old;return q(t,question('Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'),t.title,[retained[(index+3)%retained.length].title,retained[(index+7)%retained.length].title],t.paragraphs.join(' ')));});
+  return people.map((t,i)=>{const old=PEOPLE_BASELINE.indexOf(t.id),index=old<0?i:old;return q(t,question('Wer passt zu diesem Hinweis? '+personRecognitionClue(t),t.title,[retained[(index+3)%retained.length].title,retained[(index+7)%retained.length].title],t.paragraphs.join(' ')));});
  }
  if(id==='technology')return invent.map((t,i)=>{
   // Preserve old answer banks when principle-only optical cards are added.
   const oldIndex=historicalInventions.findIndex(old=>old.id===t.id),index=oldIndex<0?i:oldIndex;
-  const prompt=(t.invention!.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+t.invention!.stages[0].text;
+  const prompt=t.invention!.recognitionClue?'Welche Erfindung passt zu dieser Beschreibung? '+t.invention!.recognitionClue:(t.invention!.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+t.invention!.stages[0].text;
   return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],t.invention!.stages[2].text));
  });
- if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute','Noch keine wirkliche Entwicklung'],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher','Nur ein Zukunftswunsch'],t.invention!.stages[3].text)),id:t.id+'-today'}]);
+ if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute','Noch keine wirkliche Entwicklung'],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,t.invention!.comparisonQuestion??question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher','Nur ein Zukunftswunsch'],t.invention!.stages[3].text)),id:t.id+'-today'}]);
  if(id==='food')return animals.map(t=>q(t,question('Welche Beschreibung passt zur Nahrung? Tier: '+t.title+'.',t.animal!.diet,foodDistractors(t.id),t.facts.find(f=>f.label==='Was frisst es?'||f.label==='Nahrung')?.text??t.animal!.diet),t.image));
  if(id==='habitats')return animals.map(t=>q(t,question('Welcher Lebensraum passt in freier Natur? Tier: '+t.title+'.',t.animal!.habitat,habitatDistractors(t.id),t.title+': '+(t.facts.find(f=>f.label==='Lebensraum')?.text??t.animal!.habitat)),t.image));
  return animals.map((t,i)=>{const clue=animalDetectiveClue(t.id).clue;return q(t,question('Wer bin ich? '+clue,t.title,[animals[(i+5)%animals.length].title,animals[(i+9)%animals.length].title],'Gesucht ist '+t.title+'. So beschreibt sich das Tier: „'+clue+'“'));});

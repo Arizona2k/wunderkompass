@@ -1,3 +1,6 @@
+import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
+// Only named field revisions are projected for these historical comparisons;
+// raw current fields and all190topics/sevenbanks have separate strict guards.
 import mechanicsBaseline from './fixtures/retained-before-invention-mechanics.json' with {type:'json'};
 const mechanicsIds=mechanicsBaseline.newIds;
 import test from 'node:test';
@@ -11,10 +14,10 @@ test('actual production bank preserves all twelve original technology questions 
  assert.equal(retained.sourceCommit,'64d45a3c0e73b5fba79e0746b91089f741aae457');assert.equal(retained.technology.length,12);
  const actual=worldGameBank('technology');assert.equal(actual.length,24);assert.deepEqual(actual.filter(q=>![...ids,...electricalIds,...mechanicsIds].includes(q.id)),retained.technology);
  for(const before of retained.technology){const now=actual.find(q=>q.id===before.id),order=[...before.answers].reverse();assert.equal(order.length,3);assert.ok(order.every(answer=>now.answers.includes(answer)));assert.equal(now.answers[now.correct],before.answers[before.correct]);}
- const added=actual.filter(q=>ids.includes(q.id));assert.equal(added.length,3);for(const q of added){assert.match(q.prompt,/^Welche Erfindung passt zu dieser Forscherfrage\?/);assert.equal(new Set(q.answers).size,3);assert.equal(q.answers[q.correct],catalog.find(t=>t.id===q.id).title);}
+ const added=actual.filter(q=>ids.includes(q.id));assert.equal(added.length,3);for(const q of added){if(q.id==='invention-telescope')assert.equal(q.prompt,'Welche Erfindung passt zu dieser Beschreibung? Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln.');else assert.match(q.prompt,/^Welche Erfindung passt zu dieser Forscherfrage\?/);assert.equal(new Set(q.answers).size,3);assert.equal(q.answers[q.correct],catalog.find(t=>t.id===q.id).title);}
 });
 test('actual chronological game retains all twenty-four original tasks and excludes principle walkthroughs',()=>{
- assert.equal(retained.thenNow.length,24);const actual=worldGameBank('then-now');assert.equal(actual.length,24);assert.deepEqual(actual,retained.thenNow);
+ assert.equal(retained.thenNow.length,24);const actual=worldGameBank('then-now');assert.equal(actual.length,24);assert.deepEqual(actual.map(gameBeforeLearningAudit),retained.thenNow);assert.equal(actual.find(q=>q.id==='invention-compass-today').answers[0],'Früher und heute');
  assert.ok(actual.every(q=>!catalog.find(t=>t.id===q.topic).invention.walkthrough));assert.ok(!actual.some(q=>ids.includes(q.topic)),'scientific questions and model limits cannot become invented earlier/today facts');
 });
 test('a pre-expansion order map preserves every old choice and unknown field while supplying only new defaults',()=>{

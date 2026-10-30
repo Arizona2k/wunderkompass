@@ -12,6 +12,15 @@ export async function assertSciencePage(page,number,count){
  assert.equal(await page.locator('.world-topic-tile').count(),count,'actual science page '+number+' contains all expected visible cards');
  return page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus.replace(/^world-topic-/,'')));
 }
+// Reuse the exact existing main-fallback contract in early affected checks.
+export async function completedRouteFocus(page,report){
+  await page.evaluate(()=>location.hash='world');await page.locator('.world-choice').first().waitFor();
+  const completed=page.locator('[data-route-focus="world-route-moon-to-sea"]');await completed.focus();await page.keyboard.press('Enter');await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
+  await page.evaluate(()=>location.hash='home');await page.locator('.continue-card').waitFor();await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
+  assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea','completed route retains its finish state when resumed');
+  report.checks.push('Completed learning route: keyboard entry/resume retains finish state and a focusable main fallback');
+}
+
 export async function connectedDiscoveries(page,ready,report,width){
  const pass=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
  for(const t of topics.filter(t=>t.checkedAt==='2026-10-09')){
@@ -128,13 +137,7 @@ export async function connectedDiscoveries(page,ready,report,width){
   }
   report.checks.push('Both knowledge routes completed through every actual retained/appended station and real mini questions');
  }
- if(width===1440){
-  await page.evaluate(()=>location.hash='world');await page.locator('.world-choice').first().waitFor();
-  const completed=page.locator('[data-route-focus="world-route-moon-to-sea"]');await completed.focus();await page.keyboard.press('Enter');await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
-  await page.evaluate(()=>location.hash='home');await page.locator('.continue-card').waitFor();await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();await page.locator('.world-route-finish').waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
-  assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea','completed route retains its finish state when resumed');
-  report.checks.push('Completed learning route: keyboard entry/resume retains finish state and a focusable main fallback');
- }
+ if(width===1440)await completedRouteFocus(page,report);
  if(width===320||width===1440)await bookNormalizationView(page,report,width);
  report.checks.push('Connected discoveries '+width+': eight articles, both models, reload, reciprocal link, search, pagination/history, three difficulties with non-revealing hints, explanation only after success, wrong/right/reload/finish and fresh follow-up rounds');
 }

@@ -1,3 +1,6 @@
+import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
+// Only named field revisions are projected for these historical comparisons;
+// raw current fields and all190topics/sevenbanks have separate strict guards.
 import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
@@ -27,7 +30,7 @@ test('six retained manuscripts keep the entire preceding150-topic source except 
  for(const id of ids){const t=catalog.find(t=>t.id===id),original=baseline.originalCorrectAnswers[id];assert.equal(t.question.correct,original.correct);assert.equal(t.question.answers[t.question.correct],original.answer);assert.equal(t.invention.walkthrough,true);assert.equal(t.invention.stages.length,6);assert.equal(t.questionFeedback.wrongReasons[t.question.correct],null);assert.equal(new Set(t.question.answers).size,3);}
 });
 test('the preceding180 challenge questions and18 technology tasks retain every old question and actual answer order',()=>{
- for(const [actual,expected]of [[CHALLENGE_BANK.filter(q=>!['history-bronze',...ids,...buildingIds,...scienceIds].includes(q.topic)),baseline.oldChallengeQuestions],[worldGameBank('technology').filter(q=>!ids.includes(q.id)),baseline.oldTechnologyTasks],[worldGameBank('then-now'),baseline.oldChronologyTasks]]){assert.equal(actual.length,expected.count);assert.equal(hash(actual),expected.sha256);}
+ for(const [actual,expected]of [[CHALLENGE_BANK.filter(q=>!['history-bronze',...ids,...buildingIds,...scienceIds].includes(q.topic)),baseline.oldChallengeQuestions],[worldGameBank('technology').map(gameBeforeLearningAudit).filter(q=>!ids.includes(q.id)),baseline.oldTechnologyTasks],[worldGameBank('then-now').map(gameBeforeLearningAudit),baseline.oldChronologyTasks]]){assert.equal(actual.length,expected.count);assert.equal(hash(actual),expected.sha256);}
  const pool=worldGameBank('technology'),before=pool.filter(q=>!ids.includes(q.id)),fallback=Object.fromEntries(pool.map(q=>[q.id,q.answers])),save=Object.fromEntries(before.map(q=>[q.id,[...q.answers].reverse()]));save.futureQuestion={opaque:'synthetic unchanged'};const restored=restoreWorldGameOrders(structuredClone(save),fallback,pool);for(const [id,value]of Object.entries(save))assert.deepEqual(restored[id],value);assert.equal(CHALLENGE_BANK.length,220);assert.equal(pool.length,24);
 });
 test('historical anchors and mechanism limits distinguish observations, object dates and invention claims',()=>{
