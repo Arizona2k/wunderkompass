@@ -18,7 +18,17 @@ async function returned(page,hash,opener,scroll){
  const first=await page.evaluate(()=>scrollY),started=performance.now();
  // Focus can precede the asynchronous history/layout scroll completion.
  // Await the original scroll predicate; a lasting wrong position still fails.
- await page.waitForFunction(expected=>Math.abs(scrollY-expected)<8,scroll);
+ try{await page.waitForFunction(expected=>Math.abs(scrollY-expected)<8,scroll);}
+ catch(error){
+  // Preserve the original 20-second/8-pixel predicate. A final screenshot alone
+  // cannot reveal the expected position, clipping, saved history or a late
+  // layout change. Record these actual values before the caller closes the page.
+  error.originalReturnPosition={hash,expectedScroll:scroll,firstMeasuredScroll:first,completionWaitMs:performance.now()-started,...await page.evaluate(opener=>{
+   const r=opener?.getBoundingClientRect();
+   return {actualHash:location.hash,actualScroll:scrollY,viewport:{width:innerWidth,height:innerHeight},bodyHeight:document.body.scrollHeight,maximumScroll:document.documentElement.scrollHeight-innerHeight,history:history.state,active:document.activeElement?.outerHTML,opener:r?{top:r.top,bottom:r.bottom,height:r.height,focused:opener===document.activeElement}:null,fontsStatus:document.fonts.status,disclosures:[...document.querySelectorAll('details[data-history-disclosure]')].map(el=>({id:el.dataset.historyDisclosure,open:el.open,height:el.getBoundingClientRect().height})),pendingImages:[...document.images].filter(img=>!img.complete).map(img=>({src:img.getAttribute('src'),width:img.width,height:img.height}))};
+  },await opener.elementHandle()).catch(observationError=>({observationFailure:String(observationError)}))};
+  throw error;
+ }
  const actual=await page.evaluate(()=>({scroll:scrollY,history:history.state,active:document.activeElement?.outerHTML,bodyHeight:document.body.scrollHeight}));assert(Math.abs(actual.scroll-scroll)<8,'original reading position is restored: '+JSON.stringify({expectedScroll:scroll,...actual}));
  assert(await opener.evaluate(element=>document.activeElement===element),'scroll completion preserves exact returned opener focus');
  return {expectedScroll:scroll,firstMeasuredScroll:first,finalMeasuredScroll:actual.scroll,completionWaitMs:performance.now()-started};
