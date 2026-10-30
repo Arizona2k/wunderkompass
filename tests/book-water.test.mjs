@@ -28,7 +28,7 @@ test('all113 prior word payloads,34 Why payloads and entire SI, heat and light p
 
 test('water additions preserve all126 earlier complete individual dossiers',()=>{
  const old=read('tests/fixtures/editorial-before-water-126-hashes.json'),current=read('content/editorial-reviews.json').dossiers;assert.equal(old.dossiers.length,126);assert.equal(current.length,139);
- for(const d of old.dossiers){const now=current.find(e=>e.id===d.id);assert(now);const unchanged={...now};
+ for(const d of old.dossiers){const now=current.find(e=>e.id===d.id);assert(now);const unchanged={...now};if(now.historicalUIBeforeAuditUiCurrentFull20261029){unchanged.ui=now.historicalUIBeforeAuditUiCurrentFull20261029;delete unchanged.historicalUIBeforeAuditUiCurrentFull20261029;}
   // Rewind the later particle UI layer before the older water layer. The
   // independent134-dossier fixture also binds that complete intermediate state.
   if(now.historicalUIBeforeParticleCurrentFull20261029){unchanged.ui=now.historicalUIBeforeParticleCurrentFull20261029;delete unchanged.historicalUIBeforeParticleCurrentFull20261029;}

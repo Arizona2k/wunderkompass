@@ -24,7 +24,7 @@ test('all117 M77word and37 Why payloads plus entire SI/heat/light/water packs re
 
 test('five particle dossiers retain every earlier134 complete dossier and factual/UI history',()=>{
  const old=read('tests/fixtures/editorial-before-particle-134-hashes.json'),current=read('content/editorial-reviews.json').dossiers;assert.equal(old.sourceCommit,'631f54f390f8e78d650103c8c981c4547d49bf8c');assert.equal(old.dossiers.length,134);assert.equal(current.length,139);
- for(const d of old.dossiers){const now=current.find(n=>n.id===d.id);assert(now);const original={...now};delete original.historicalUIBeforeParticleCurrentFull20261029;if(now.historicalUIBeforeParticleCurrentFull20261029)original.ui=now.historicalUIBeforeParticleCurrentFull20261029;assert.equal(digest(original),d.sha256,d.id+' whole prior dossier retained');}
+ for(const d of old.dossiers){const now=current.find(n=>n.id===d.id);assert(now);const original={...now};if(now.historicalUIBeforeAuditUiCurrentFull20261029){original.ui=now.historicalUIBeforeAuditUiCurrentFull20261029;delete original.historicalUIBeforeAuditUiCurrentFull20261029;}delete original.historicalUIBeforeParticleCurrentFull20261029;if(now.historicalUIBeforeParticleCurrentFull20261029)original.ui=now.historicalUIBeforeParticleCurrentFull20261029;assert.equal(digest(original),d.sha256,d.id+' whole prior dossier retained');}
 });
 
 test('incomplete, unsafe or physically misleading particle packs fail closed',()=>{

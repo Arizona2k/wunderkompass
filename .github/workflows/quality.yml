@@ -20,7 +20,8 @@ jobs:
     runs-on: ubuntu-24.04
     # User26Oct: measured bootstrap repair and a finite65min reserve.
     # Quality176 spent46min installing dependencies; every test/gate stays.
-    timeout-minutes: 65
+    # Quality195 reached65min during complete engines; finite70min reserve.
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:

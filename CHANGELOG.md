@@ -1,6 +1,10 @@
-## Teilchen und Buchbedienung · Entwicklungsstand
+## Dialoge Erdschichten und Länderanzeigen · Entwicklungsstand
 
-Fünf zusätzliche Begriffe erläutern Atom, Isotop, Proton, Elektron und Neutron mit freiwilliger Tiefe, Denkfragen und vier eigenen Modellarten. Kanonische Verbindungen führen zu bestehenden Begriffen und Fachkarten. Suchauswahl und Browser-Zurück berücksichtigen den Buchlesekontext; allgemeine Notizen lassen sich im bestehenden Pass bearbeiten und Änderungen abbrechen. Quellenangaben verwenden ihre individuellen Kalenderfelder. Noch nicht testbereitgestellt; die reguläre native Abnahme und Übernahme bleiben erforderlich.
+Hilfe, Begleitpersonenhinweise und Pass kehren beim Schließen zum tatsächlichen Öffner zurück; bewusste Wechsel aus den Dialogen erhalten ihr Lernziel auch bei bereits geöffneter Adresse. Die flache Erdschichtenansicht nutzt den vorhandenen Zoom wirksam und zeigt passende Controls. Länderporträts erläutern die betroffenen Sprach- und Währungsnamen im bestehenden unmittelbaren Ladeweg. Fachliche Daten und Bezugsjahre bleiben erhalten. Die Chronik führt die bereits bestätigte M78-Lieferung nach. Die vollständige lokale Abnahme ist bestanden; native GitHub-Abnahme und reguläre Lieferung dieses UI-Abschnitts stehen aus.
+
+## Teilchen und Buchbedienung · PR78 tatsächlich bereitgestellt
+
+Fünf zusätzliche Begriffe erläutern Atom, Isotop, Proton, Elektron und Neutron mit freiwilliger Tiefe, Denkfragen und vier eigenen Modellarten. Kanonische Verbindungen führen zu bestehenden Begriffen und Fachkarten. Suchauswahl und Browser-Zurück berücksichtigen den Buchlesekontext; allgemeine Notizen lassen sich im bestehenden Pass bearbeiten und Änderungen abbrechen. Quellenangaben verwenden ihre individuellen Kalenderfelder. Vollständige Quality193 erfolgreich; PR78 regulär als `9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481` nach test-live übernommen und am29.10.2026 um14:51:28MEZ bestätigt. Bereitgestellt122Wörter/37Warumfragen. Ausführliche Original-, Liefer- und Nachtestbelege bleiben privat; übriges Paket3.5 und Gesamtauftrag offen.
 
 ## Wasserverbindungen · PR77 tatsächlich bereitgestellt
 
