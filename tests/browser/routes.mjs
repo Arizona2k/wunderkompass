@@ -7,7 +7,7 @@ const routes=vm.runInNewContext('('+source.match(/export const WORLD_ROUTES=(\[[
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const report={routes:[],errors:[],checks:[]};
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(26000);p.on('pageerror',e=>report.errors.push(e.message));
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(20000);p.on('pageerror',e=>report.errors.push(e.message));
  const ready=()=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
  await p.goto(base+'/#world');await ready();await p.locator('.world-choices').waitFor();
  for(const route of routes){

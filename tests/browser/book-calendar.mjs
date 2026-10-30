@@ -4,7 +4,7 @@ const packs=await Promise.all([['particle','Atom'],['measurement','Mol'],['water
 // Expected calendar fields are formatted independently from the product's Date API.
 const date=value=>value.split('-').reverse().map(Number).join('.');
 export async function bookSourceCalendarView(browser,base,{shots=null,engine='chromium'}={}){
- const context=await browser.newContext({timezoneId:'Pacific/Kiritimati',viewport:{width:320,height:900},reducedMotion:'reduce'}),proof={timezone:'Pacific/Kiritimati',panels:[],...browserErrorArrays()},page=await context.newPage();page.setDefaultTimeout(26000);monitorBrowserErrors(page,base,proof,{engine});
+ const context=await browser.newContext({timezoneId:'Pacific/Kiritimati',viewport:{width:320,height:900},reducedMotion:'reduce'}),proof={timezone:'Pacific/Kiritimati',panels:[],...browserErrorArrays()},page=await context.newPage();page.setDefaultTimeout(20000);monitorBrowserErrors(page,base,proof,{engine});
  try{
   for(const {kind,term,pack} of packs){
    await page.goto(base+'/#book/words/'+encodeURIComponent(term));await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();const card=page.locator('.word-card').filter({has:page.getByRole('heading',{name:term,exact:true})}),study=card.locator(kind==='measurement'?'[data-book-study]':'[data-book-'+kind+'-study]');await study.locator(':scope>summary').click();const summary=study.getByText('Quellen und Prüfstand',{exact:true});await summary.click();const sources=summary.locator('..');await sources.getByText(new RegExp('Belegstellenabgleich: '+date(pack.sourceReadOn).replaceAll('.','\\.')+'\\.')).waitFor();

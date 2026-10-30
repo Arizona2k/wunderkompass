@@ -77,7 +77,7 @@ export async function sourceRouteInputFlow(browser,base,shots,engine,monitor){
  assert.equal(typeof monitor,'function','Actual source pages require the shared browser error monitor');
  const proof={engine,status:'running',cases:[]};
  try{for(const mode of ['settled-preparation','trusted-input-before-frame']){
-  const c=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
+  const c=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
    await p.addInitScript(()=>{const request=requestAnimationFrame.bind(window),cancel=cancelAnimationFrame.bind(window),held=new Map();let holding=false,id=0;window.__sourceFrames={trusted:false,begin:()=>{holding=true;},pending:()=>held.size,release:()=>{holding=false;const frames=[...held.values()];held.clear();for(const callback of frames)request(callback);}};window.addEventListener('keydown',event=>{if(holding&&event.isTrusted)window.__sourceFrames.trusted=true;},true);window.requestAnimationFrame=callback=>{if(!holding)return request(callback);const next=--id;held.set(next,callback);return next;};window.cancelAnimationFrame=key=>{if(key<0)held.delete(key);else cancel(key);};});
    await p.goto(base+'/#journeys/navigation/1');await p.locator('[data-chapter-inquiry="navigation:0"]').waitFor();await reveal(p,'Für Erwachsene: Quellen');await settleSourceView(p);

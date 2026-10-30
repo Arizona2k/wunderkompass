@@ -125,7 +125,7 @@ export async function assertAnimalSelectionFeedback(task){
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths,navigationReuse}={}){
  const observed=[],focusChecks=[],compactOrigins=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
-  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
+  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   let current=DATA.entries[0].id,stage='normal';
   const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage,width}));
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};

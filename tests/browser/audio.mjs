@@ -6,7 +6,7 @@ function mockSpeech(){
  window.SpeechSynthesisUtterance=Utterance;Object.defineProperty(window,'speechSynthesis',{value:new Engine(),configurable:true});
 }
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});await c.addInitScript(mockSpeech);const p=await c.newPage();p.setDefaultTimeout(23400);p.on('pageerror',e=>report.errors.push(e.message));
+ const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});await c.addInitScript(mockSpeech);const p=await c.newPage();p.setDefaultTimeout(18000);p.on('pageerror',e=>report.errors.push(e.message));
  const ready=()=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();const calls=()=>p.evaluate(()=>speechSynthesis.calls);
  await p.goto(base+'/#world/topic/animal-whale-shark');await ready();await p.locator('.world-mini-question').waitFor();assert.equal((await calls()).length,0);
  const read=p.getByRole('button',{name:'Kurzfassung vorlesen',exact:true});await read.click();assert.equal((await calls()).at(-1).voice,'qa-local-de');assert.equal((await calls()).at(-1).lang,'de-DE');assert.ok((await calls()).at(-1).text.startsWith('Walhai'));await p.locator('.speech-player').waitFor();await read.click();assert.equal(await p.locator('.speech-player').count(),0);report.checks.push('No autoplay; correct German text/local voice; same button stops.');

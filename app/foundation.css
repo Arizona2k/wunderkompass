@@ -25,6 +25,8 @@
 /* Learning navigation: real media and an open reading rhythm. */
 .world-view .world-card-grid{gap:clamp(18px,2vw,28px)}
 .world-view .world-topic-tile{border:0;border-bottom:1px solid var(--wk-line);border-radius:14px 14px 0 0;background:transparent;box-shadow:none;align-self:start}
+.world-view .world-topic-tile:focus{outline:3px solid var(--wk-focus);outline-offset:4px}
+@media(forced-colors:active){.world-view .world-topic-tile:focus{outline-color:Highlight}}
 .world-view .world-topic-tile:hover{box-shadow:none;border-color:var(--world-accent)}
 .world-view .world-topic-tile .world-tile-text{padding:20px 4px 24px}
 .world-view .world-topic-tile h3{font-size:clamp(22px,2vw,27px);line-height:1.22;letter-spacing:-.03em}

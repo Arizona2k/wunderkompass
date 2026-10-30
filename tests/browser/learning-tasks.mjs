@@ -23,7 +23,7 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
  const rows=[];let context,page,current;
  const catalogue=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
  async function load(name,width,pass){
-  await context?.close();current={name,width,...browserErrorArrays()};rows.push(current);context=await browser.newContext({viewport:{width,height:950},hasTouch:true,reducedMotion:width===320?'reduce':'no-preference',acceptDownloads:true});page=await context.newPage();page.setDefaultTimeout(26000);monitorBrowserErrors(page,base,current);
+  await context?.close();current={name,width,...browserErrorArrays()};rows.push(current);context=await browser.newContext({viewport:{width,height:950},hasTouch:true,reducedMotion:width===320?'reduce':'no-preference',acceptDownloads:true});page=await context.newPage();page.setDefaultTimeout(20000);monitorBrowserErrors(page,base,current);
   pass.progress.notes=[{id:'learning-audit-synthetic-note',text:'Nur eine synthetische Prüfnotiz.',at:'2026-10-29T00:00:00Z'}];pass.progress.settings.largeText=width===320;pass.progress.settings.reducedMotion=width===320;
   await page.goto(base+'/#home');await ready(page);const file=path.join(shots,`journey-engine-${engine}-learning-task-${name}-${width}-synthetic.json`);await fs.writeFile(file,JSON.stringify(pass,null,2)+'\n');
   await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.locator('input[type=file]').setInputFiles(file);await page.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'hidden'});current.actualSyntheticFileImported=true;

@@ -8,7 +8,7 @@ import {malformedImportRegression} from './model-import-integrity.mjs';
 export async function backupFlow(browser,base,ready,monitor,report,shots){
  await storageFeedbackFlow(browser,base,ready,monitor,report,shots);
  const c=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),a=await c.newPage(),b=await c.newPage();
- for(const p of [a,b]){p.setDefaultTimeout(32500);monitor(p);await p.goto(base);await ready(p);}
+ for(const p of [a,b]){p.setDefaultTimeout(25000);monitor(p);await p.goto(base);await ready(p);}
  await c.addInitScript(()=>{speechSynthesis.getVoices=()=>[{name:'Sehr lange deutsche Teststimme für lesbare Vorleseeinstellungen',lang:'de-DE',voiceURI:'qa-pass-de',localService:true}];});
  for(const p of [a,b]){await p.reload();await ready(p)}
  const state=async p=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')));

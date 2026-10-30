@@ -40,7 +40,11 @@ async function returned(page,hash,opener,scroll){
  await page.waitForFunction(hash=>location.hash===hash,hash);
  await opener.waitFor();
  await page.waitForFunction(element=>document.activeElement===element,await opener.elementHandle());
- assert(await opener.evaluate(element=>{const r=element.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;}),'actual returned opener is visible');
+ const openerVisibility=await opener.evaluate(element=>{const r=element.getBoundingClientRect(),oversized=r.height>innerHeight;return {height:r.height,viewportHeight:innerHeight,oversized,visible:oversized?r.bottom>0&&r.top<innerHeight:r.top>=0&&r.bottom<=innerHeight};});
+ // Keep the original complete-visibility predicate for every fitting opener.
+ // An oversized card can only intersect the viewport; exact trusted departure
+ // scroll and returned focus remain mandatory below, including at native zoom.
+ assert(openerVisibility.visible,'actual returned opener is visible');
  const first=await page.evaluate(()=>scrollY),started=performance.now();
  // Focus can precede the asynchronous history/layout scroll completion.
  // Await the original scroll predicate; a lasting wrong position still fails.
@@ -57,7 +61,9 @@ async function returned(page,hash,opener,scroll){
  }
  const actual=await page.evaluate(()=>({scroll:scrollY,history:history.state,active:document.activeElement?.outerHTML,bodyHeight:document.body.scrollHeight}));assert(Math.abs(actual.scroll-scroll)<8,'original reading position is restored: '+JSON.stringify({expectedScroll:scroll,...actual}));
  assert(await opener.evaluate(element=>document.activeElement===element),'scroll completion preserves exact returned opener focus');
- return {expectedScroll:scroll,firstMeasuredScroll:first,finalMeasuredScroll:actual.scroll,completionWaitMs:performance.now()-started};
+ const returnedFocus=await opener.evaluate(element=>{const s=getComputedStyle(element);return{readingCard:element.dataset.routeFocus?.startsWith('world-topic-')===true,outlineStyle:s.outlineStyle,outlineWidth:parseFloat(s.outlineWidth),outlineColor:s.outlineColor,focusVisible:element.matches(':focus-visible')};});
+ if(returnedFocus.readingCard)assert(returnedFocus.outlineStyle!=='none'&&returnedFocus.outlineWidth>=2&&!['transparent','rgba(0, 0, 0, 0)'].includes(returnedFocus.outlineColor),'actual returned reading card has a visible focus indicator');
+ return {expectedScroll:scroll,firstMeasuredScroll:first,finalMeasuredScroll:actual.scroll,completionWaitMs:performance.now()-started,openerVisibility,returnedFocus};
 }
 export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=null,engine='chromium'}={}){
  const rows=[];
@@ -95,7 +101,7 @@ export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=n
  return rows;
 }
 async function selectionFields(page){return page.locator('.world-filter').evaluate(root=>({query:root.querySelector('input').value,group:root.querySelector('[aria-label="Tiergruppe"]')?.value,habitat:root.querySelector('[aria-label="Lebensraum"]')?.value}));}
-export async function worldSelectionReturnPage(page,base,{touch=false,shots=null,engine='chromium'}={}){
+export async function worldSelectionReturnPage(page,base,{touch=false,shots=null,engine='chromium',capture=null}={}){
  const catalogue=JSON.parse(await fs.readFile(new URL('../../app/world-index.json',import.meta.url),'utf8')),animalCount=catalogue.filter(topic=>topic.category==='animals').length;
  await page.goto(base+'/#world/animals/page/2');await ready(page);await page.getByText(`${animalCount} passende Entdeckerkarten · Seite 2 von ${Math.ceil(animalCount/12)}`,{exact:true}).waitFor();
  const orca=page.locator('[data-route-focus="world-topic-animal-orca"]');await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));
@@ -103,6 +109,17 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  const departure=await activateWithReadingPosition(page,orca,touch),scroll=departure.scroll;await page.locator('#world-topic-title').waitFor();
  await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
  const firstReturn=await returned(page,'#world/animals/page/2',orca,scroll);assert.deepEqual(await selectionFields(page),initialFields);assert.deepEqual(preserved(await save(page)),before);
+ // Keep the original centered and filtered/reload paths. Add the actual
+ // fully-visible-at-the-bottom geometry which previously recentered239px.
+ // Two CSS pixels inside makes this a genuine fully-visible positive even
+ // when Firefox's trusted touch scroll rounds by a fraction of a pixel.
+ await orca.evaluate(element=>{element.scrollIntoView({block:'end',behavior:'instant'});const r=element.getBoundingClientRect();if(r.height<=innerHeight)window.scrollBy({top:r.bottom-innerHeight+2,behavior:'instant'});});
+ const edgeDeparture=await activateWithReadingPosition(page,orca,touch),edgeHeight=await page.evaluate(()=>innerHeight);
+ try{if(edgeDeparture.opener.height<=edgeHeight){assert(edgeDeparture.opener.top>=0&&edgeDeparture.opener.bottom<=edgeHeight,'fitting reading card is fully visible at trusted edge departure');assert(edgeHeight-edgeDeparture.opener.bottom<8,'actual edge lies inside the old eight-pixel recentering reserve, not another centered card');}}
+ catch(error){error.actualWorldCardEdgeDeparture={...edgeDeparture,viewportHeight:edgeHeight};throw error;}
+ await page.locator('#world-topic-title').waitFor();await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
+ const edgeReturn=await returned(page,'#world/animals/page/2',orca,edgeDeparture.scroll);assert.deepEqual(await selectionFields(page),initialFields);assert.deepEqual(preserved(await save(page)),before);
+ if(shots)await page.screenshot({path:path.join(shots,`journey-links-world-card-edge-return-${engine}-${page.viewportSize().width}.png`),animations:'disabled'});
  const search=page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen',exact:true});
  if(touch)await search.tap();else await search.focus();await page.keyboard.type('Orca');
  await page.waitForFunction(()=>location.hash==='#world/animals/page/1');await orca.waitFor();
@@ -115,12 +132,13 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  const filteredDeparture=await activateWithReadingPosition(page,orca,touch),filteredScroll=filteredDeparture.scroll;await page.locator('#world-topic-title').waitFor();await page.reload();await ready(page);
  await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
  const filteredReturn=await returned(page,'#world/animals/page/1',orca,filteredScroll);assert.deepEqual(await selectionFields(page),fields);assert.deepEqual(preserved(await save(page)),before);
- if(shots)await page.screenshot({path:path.join(shots,`journey-engine-${engine}-filtered-world-selection-return-${page.viewportSize().width}.png`),animations:'disabled'});
+ const actualCapture=capture?await capture():null;
+ if(shots&&!capture)await page.screenshot({path:path.join(shots,`journey-engine-${engine}-filtered-world-selection-return-${page.viewportSize().width}.png`),animations:'disabled'});
  await page.goto(base+'/#world/topic/animal-orca');await ready(page);await page.locator('#world-topic-title').waitFor();
  assert.equal(await page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}).count(),0,'direct article entry has an honest general fallback');
  await activate(page,page.getByRole('button',{name:'Die Tierwelt · alle Karten',exact:true}),touch);await page.locator('#world-results').waitFor();
  assert.deepEqual(await selectionFields(page),{query:'',group:'Alle',habitat:'Alle'});
- return {preparatoryScroll,departure,firstReturn,filteredPreparatoryScroll,filteredDeparture,filteredReturn,actualPage2OrcaSelectionReturn:true,realTypedQueryAndSelectedFiltersRetained:true,actualArticleReloadReturn:true,visibleFocusAndReadingPosition:true,directEntryGeneralFallback:true,touch,personalDataUnchanged:true};
+ return {preparatoryScroll,departure,firstReturn,edgeDeparture,edgeReturn,actualViewportEdgeReadingReturn:true,filteredPreparatoryScroll,filteredDeparture,filteredReturn,actualPage2OrcaSelectionReturn:true,realTypedQueryAndSelectedFiltersRetained:true,actualArticleReloadReturn:true,visibleFocusAndReadingPosition:true,directEntryGeneralFallback:true,touch,personalDataUnchanged:true,...(actualCapture?{actualCapture}:{})};
 }
 
 export async function equivalentAnimalHabitatsPage(page,base,{touch=false}={}){

@@ -6,6 +6,9 @@ import {isDeepStrictEqual} from 'node:util';
 import amendments from './fixtures/learning-audit-explicit-field-amendments.json' with {type:'json'};
 import technicalUi from './fixtures/editorial-before-technical-limits-139.json' with {type:'json'};
 import {technicalLimitUiReference} from './technical-limit-ui-reference.mjs';
+import nativeUi from './fixtures/editorial-before-native-short-return-139.json' with {type:'json'};
+import {nativeReturnUiReference} from './native-return-ui-reference.mjs';
+const native=nativeReturnUiReference(nativeUi,nativeUi.currentTemplate);
 const technical=technicalLimitUiReference(technicalUi,technicalUi.currentTemplate);
 const topics=new Map(amendments.topics.map(row=>[row.id,row]));
 const games=new Map(amendments.games.map(row=>[row.id,row]));
@@ -31,7 +34,7 @@ export function assertCurrentLearningAuditFields(catalogue,bank){
 
 const sharedUI=amendments.sharedUI,priorUI=new Map(sharedUI.priorUI.map(row=>[row.id,row.ui]));
 function beforeSharedLearningUI(value){
- const item=technical.beforeTechnicalLimitUi(value);
+ const item=technical.beforeTechnicalLimitUi(native.beforeNativeReturnUi(value));
  if(!Object.hasOwn(item,sharedUI.historyField))return item; // already projected historical value
  const saved=priorUI.get(item.id);assert(saved,'unknown shared UI history '+item.id);
  assert.deepEqual(item[sharedUI.historyField],saved,'unreviewed old UI history '+item.id);
@@ -40,9 +43,12 @@ function beforeSharedLearningUI(value){
 }
 export const dossierBeforeLearningAudit=item=>{const original=beforeSharedLearningUI(item);return beforeExplicitAmendment(original,dossiers.get(original.id));};
 export function assertCurrentLearningAuditSharedUI(items){
+ const currentNative=items;for(const item of items)assert(Object.hasOwn(item,nativeUi.historyField),'current native short return UI history missing '+item.id);
+ items=items.map(item=>native.beforeNativeReturnUi(item,{current:true}));
  assert.equal(sharedUI.priorUI.length,139);assert.equal(priorUI.size,139);const current=new Map(items.map(item=>[item.id,item]));assert.equal(current.size,items.length,'duplicate current dossier');
  for(const [id,saved]of priorUI){const raw=current.get(id);assert(raw);assert(Object.hasOwn(raw,technicalUi.historyField),'stale current shared UI: technical history missing '+id);const item=technical.beforeTechnicalLimitUi(raw,{current:true});assert(item);assert(Object.hasOwn(item,sharedUI.historyField),'current shared UI history missing '+id);assert.deepEqual(item[sharedUI.historyField],saved,'changed prior shared UI '+id);assert.deepEqual(item.ui,{...sharedUI.currentTemplate,route:saved.route},'stale current shared UI '+id);}
  technical.assertCurrentTechnicalLimitUi(items);
+ native.assertCurrentNativeReturnUi(currentNative);
 }
 export function assertCurrentLearningAuditDossierFields(items){
  for(const row of amendments.dossiers){const item=items.find(item=>item.id===row.id);assert(item);for(const change of row.changes)assert(matches(item,change,'after'),'current dossier amendment '+row.id+' '+change.path.join('.'));}

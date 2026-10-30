@@ -6,6 +6,6 @@ let saved:Journey[]|null=null,pending:Promise<Journey[]>|null=null;
 export const currentJourneyContent=()=>saved;
 export function loadJourneyContent():Promise<Journey[]>{
  if(saved)return Promise.resolve(saved);
- if(!pending)pending=(async()=>{const response=await fetch(dataURL,{signal:AbortSignal.timeout(15600)});if(!response.ok)throw Error('Reisetexte nicht erreichbar');const next=validateJourneyContent(await response.json(),JOURNEYS,SOURCES) as Journey[];saved=next;return next;})().catch(error=>{pending=null;throw error;});
+ if(!pending)pending=(async()=>{const response=await fetch(dataURL,{signal:AbortSignal.timeout(12000)});if(!response.ok)throw Error('Reisetexte nicht erreichbar');const next=validateJourneyContent(await response.json(),JOURNEYS,SOURCES) as Journey[];saved=next;return next;})().catch(error=>{pending=null;throw error;});
  return pending;
 }
