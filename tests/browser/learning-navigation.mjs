@@ -10,6 +10,32 @@ async function activate(page,control,touch){
  // A tap must establish its own actual opener: do not pre-focus a touch control.
  if(touch)await control.tap();else{await control.focus();await page.keyboard.press('Enter');}
 }
+async function activateWithReadingPosition(page,control,touch){
+ // Observe the real trusted activation before the application click handler.
+ // Preparatory scroll can change during actionability/focus or pending layout;
+ // product history must never supply its own expected return position.
+ const key='__wkReadingPositionCapture';
+ const expected=await control.evaluate((element,key)=>{
+  if(Object.hasOwn(window,key))throw Error('Previous reading capture was not cleared');
+  const state={hash:location.hash,focusKey:element.dataset.routeFocus??null,preparatoryScroll:scrollY,actual:null};
+  const listener=event=>{
+   const r=element.getBoundingClientRect(),bodyHeight=document.body.scrollHeight,maximumScroll=document.documentElement.scrollHeight-innerHeight;
+   state.actual={hash:location.hash,focusKey:element.dataset.routeFocus??null,scroll:scrollY,bodyHeight,maximumScroll,opener:{top:r.top,bottom:r.bottom,height:r.height},trusted:event.isTrusted,exactOpener:event.currentTarget===element&&element.contains(event.target)};
+  };
+  state.cleanup=()=>element.removeEventListener('click',listener,true);
+  window[key]=state;element.addEventListener('click',listener,{capture:true,once:true});
+  return {hash:state.hash,focusKey:state.focusKey};
+ },key);
+ let observed;
+ try{
+  await activate(page,control,touch);
+  observed=await page.evaluate(key=>{const state=window[key];return state?{preparatoryScroll:state.preparatoryScroll,...state.actual}:null;},key);
+ }finally{await page.evaluate(key=>{window[key]?.cleanup();delete window[key];},key);}
+ assert(observed?.trusted&&observed.exactOpener,'reading position comes from the actual trusted opener activation');
+ assert.equal(observed.hash,expected.hash,'reading position is measured before navigation');assert.equal(observed.focusKey,expected.focusKey);
+ assert(Number.isFinite(observed.scroll)&&observed.scroll>=0,'actual activation reading position is finite');
+ return observed;
+}
 async function returned(page,hash,opener,scroll){
  await page.waitForFunction(hash=>location.hash===hash,hash);
  await opener.waitFor();
@@ -47,8 +73,8 @@ export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=n
   await page.getByText('Die Erklärung kommt gleich …',{exact:true}).waitFor({state:'hidden'});
   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   const opener=page.locator('[data-route-focus="'+item.focus+'"]');assert.equal(await opener.innerText(),item.label);
-  await opener.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const scroll=await page.evaluate(()=>scrollY),before=preserved(await save(page));
-  await activate(page,opener,touch);await page.waitForFunction(hash=>location.hash==='#'+hash,item.path);
+  await opener.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const preparatoryScroll=await page.evaluate(()=>scrollY),before=preserved(await save(page));
+  const departure=await activateWithReadingPosition(page,opener,touch),scroll=departure.scroll;await page.waitForFunction(hash=>location.hash==='#'+hash,item.path);
   if(item.path==='labs/water'){
    await page.getByRole('heading',{name:'Wasserkreislauf',exact:true,level:1}).waitFor();
    const input=page.locator('#active-research-lab').getByRole('slider').first();
@@ -62,7 +88,7 @@ export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=n
   await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);
   const reloadedReturn=await returned(page,'#'+item.chapter,opener,scroll);assert.deepEqual(preserved(await save(page)),before);
   if(shots)await page.screenshot({path:path.join(shots,`journey-engine-${engine}-chapter-lab-return-${item.focus}-${page.viewportSize().width}.png`),animations:'disabled'});
-  rows.push({chapter:item.chapter,target:item.path,actualBackForwardReloadReturn:true,firstReturn,reloadedReturn,touch,personalDataAndChaptersUnchanged:true});
+  rows.push({chapter:item.chapter,target:item.path,actualBackForwardReloadReturn:true,preparatoryScroll,departure,firstReturn,reloadedReturn,touch,personalDataAndChaptersUnchanged:true});
  }
  await page.goto(base+'/#labs/water');await ready(page);await page.locator('#lab-heading').waitFor();
  assert.equal(await page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}).count(),0,'a direct laboratory entry has no fabricated chapter origin');
@@ -73,10 +99,10 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  const catalogue=JSON.parse(await fs.readFile(new URL('../../app/world-index.json',import.meta.url),'utf8')),animalCount=catalogue.filter(topic=>topic.category==='animals').length;
  await page.goto(base+'/#world/animals/page/2');await ready(page);await page.getByText(`${animalCount} passende Entdeckerkarten · Seite 2 von ${Math.ceil(animalCount/12)}`,{exact:true}).waitFor();
  const orca=page.locator('[data-route-focus="world-topic-animal-orca"]');await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));
- const scroll=await page.evaluate(()=>scrollY),before=preserved(await save(page)),initialFields=await selectionFields(page);
- await activate(page,orca,touch);await page.locator('#world-topic-title').waitFor();
+ const preparatoryScroll=await page.evaluate(()=>scrollY),before=preserved(await save(page)),initialFields=await selectionFields(page);
+ const departure=await activateWithReadingPosition(page,orca,touch),scroll=departure.scroll;await page.locator('#world-topic-title').waitFor();
  await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
- await returned(page,'#world/animals/page/2',orca,scroll);assert.deepEqual(await selectionFields(page),initialFields);assert.deepEqual(preserved(await save(page)),before);
+ const firstReturn=await returned(page,'#world/animals/page/2',orca,scroll);assert.deepEqual(await selectionFields(page),initialFields);assert.deepEqual(preserved(await save(page)),before);
  const search=page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen',exact:true});
  if(touch)await search.tap();else await search.focus();await page.keyboard.type('Orca');
  await page.waitForFunction(()=>location.hash==='#world/animals/page/1');await orca.waitFor();
@@ -85,16 +111,16 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  const habitat=catalogue.find(topic=>topic.id==='animal-orca').habitat;
  await page.getByRole('combobox',{name:'Lebensraum',exact:true}).selectOption(habitat);await orca.waitFor();
  const fields=await selectionFields(page);assert.deepEqual(fields,{query:'Orca',group:'Säugetiere',habitat});
- await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const filteredScroll=await page.evaluate(()=>scrollY);
- await activate(page,orca,touch);await page.locator('#world-topic-title').waitFor();await page.reload();await ready(page);
+ await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const filteredPreparatoryScroll=await page.evaluate(()=>scrollY);
+ const filteredDeparture=await activateWithReadingPosition(page,orca,touch),filteredScroll=filteredDeparture.scroll;await page.locator('#world-topic-title').waitFor();await page.reload();await ready(page);
  await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
- await returned(page,'#world/animals/page/1',orca,filteredScroll);assert.deepEqual(await selectionFields(page),fields);assert.deepEqual(preserved(await save(page)),before);
+ const filteredReturn=await returned(page,'#world/animals/page/1',orca,filteredScroll);assert.deepEqual(await selectionFields(page),fields);assert.deepEqual(preserved(await save(page)),before);
  if(shots)await page.screenshot({path:path.join(shots,`journey-engine-${engine}-filtered-world-selection-return-${page.viewportSize().width}.png`),animations:'disabled'});
  await page.goto(base+'/#world/topic/animal-orca');await ready(page);await page.locator('#world-topic-title').waitFor();
  assert.equal(await page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}).count(),0,'direct article entry has an honest general fallback');
  await activate(page,page.getByRole('button',{name:'Die Tierwelt · alle Karten',exact:true}),touch);await page.locator('#world-results').waitFor();
  assert.deepEqual(await selectionFields(page),{query:'',group:'Alle',habitat:'Alle'});
- return {actualPage2OrcaSelectionReturn:true,realTypedQueryAndSelectedFiltersRetained:true,actualArticleReloadReturn:true,visibleFocusAndReadingPosition:true,directEntryGeneralFallback:true,touch,personalDataUnchanged:true};
+ return {preparatoryScroll,departure,firstReturn,filteredPreparatoryScroll,filteredDeparture,filteredReturn,actualPage2OrcaSelectionReturn:true,realTypedQueryAndSelectedFiltersRetained:true,actualArticleReloadReturn:true,visibleFocusAndReadingPosition:true,directEntryGeneralFallback:true,touch,personalDataUnchanged:true};
 }
 
 export async function equivalentAnimalHabitatsPage(page,base,{touch=false}={}){
@@ -117,7 +143,7 @@ export async function equivalentAnimalHabitatsPage(page,base,{touch=false}={}){
 export async function volcanoChapterDestinationsPage(page,base,{touch=false}={}){
  const rows=[];for(let index=0;index<5;index++){
   const route='journeys/volcanoes/'+(index+1),target=index===3?'labs/plates':'labs/volcano';await page.goto(base+'/#'+route);await ready(page);await page.locator('[data-chapter-inquiry="volcanoes:'+index+'"]').waitFor();
-  const link=page.locator('.journey-chapter-link a');assert.equal(await link.getAttribute('href'),'#'+target,'existing canonical related destination is a relevant model, not an empty book query');await link.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const scroll=await page.evaluate(()=>scrollY),before=preserved(await save(page));
-  await activate(page,link,touch);await page.waitForFunction(hash=>location.hash===hash,'#'+target);await page.locator('#lab-heading').waitFor();await page.locator('#active-research-lab').waitFor();await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);const returnedView=await returned(page,'#'+route,link,scroll);assert.deepEqual(preserved(await save(page)),before);rows.push({route,target,actualBodyLinkAndExplicitChapterReturn:true,returnedView});
+  const link=page.locator('.journey-chapter-link a');assert.equal(await link.getAttribute('href'),'#'+target,'existing canonical related destination is a relevant model, not an empty book query');await link.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const preparatoryScroll=await page.evaluate(()=>scrollY),before=preserved(await save(page));
+  const departure=await activateWithReadingPosition(page,link,touch),scroll=departure.scroll;await page.waitForFunction(hash=>location.hash===hash,'#'+target);await page.locator('#lab-heading').waitFor();await page.locator('#active-research-lab').waitFor();await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);const returnedView=await returned(page,'#'+route,link,scroll);assert.deepEqual(preserved(await save(page)),before);rows.push({route,target,actualBodyLinkAndExplicitChapterReturn:true,preparatoryScroll,departure,returnedView});
  }return rows;
 }
