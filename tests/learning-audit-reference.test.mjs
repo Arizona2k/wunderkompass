@@ -41,3 +41,15 @@ test('exact scoped telescope dossier binding retains all139 whole M79 dossiers a
  assert.throws(()=>assertCurrentLearningAuditDossierFields(current.map(dossierBeforeLearningAudit)),/current dossier amendment/);
  assert.equal(JSON.stringify(current),raw,'inverse comparisons never modify actual dossiers');
 });
+
+test('technical resource maintenance retains every prior whole dossier, UI history and order without concealing unrelated changes',()=>{
+ const current=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const technical=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-technical-limits-139.json','utf8'));
+ assert.equal(technical.priorDossiers.length,139);assertCurrentLearningAuditSharedUI(current);
+ const missing=structuredClone(current);delete missing[0][technical.historyField];assert.throws(()=>assertCurrentLearningAuditSharedUI(missing),/technical history missing/);
+ const oldUI=structuredClone(current);oldUI[0][technical.historyField].report+=' Unreviewed.';assert.throws(()=>assertCurrentLearningAuditSharedUI(oldUI),/unreviewed old technical UI/);
+ const extra=structuredClone(current);extra[0].unreviewed=true;assert.throws(()=>assertCurrentLearningAuditSharedUI(extra),/unreviewed complete prior technical dossier/);
+ assert.throws(()=>assertCurrentLearningAuditSharedUI(current.toReversed()),/identities or order/);
+ const changed=structuredClone(current);changed[0].explanation+=' Unreviewed.';assert.throws(()=>assertCurrentLearningAuditSharedUI(changed),/unreviewed complete prior technical dossier/);
+ assert.notEqual(hash(changed.map(dossierBeforeLearningAudit)),amendments.publicBaseDossiersSemanticSHA256,'original full historical hash still exposes unrelated changes after exact UI inverse');
+});

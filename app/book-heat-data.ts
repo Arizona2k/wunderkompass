@@ -13,7 +13,7 @@ export const hasBookHeat=(term:string)=>HEAT_WORDS.includes(term)||HEAT_QUESTION
 function load(){
  if(loaded)return Promise.resolve(loaded);
  if(!pending)pending=(async()=>{
-  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(15600)});
   const pack=validateHeatPack(await verifiedContentJSON(bytes,integrity))as Pack;
   loaded=pack;return pack;
  })().catch(error=>{pending=null;throw error;});

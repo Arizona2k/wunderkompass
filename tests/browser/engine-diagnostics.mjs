@@ -3,7 +3,7 @@ import path from 'node:path';
 
 // A failed renderer may never answer evaluate. Bound only this post-failure
 // observation; the original action timeout and exception remain untouched.
-export async function readAnimalFailureView(page,{timeoutMs=1000}={}){
+export async function readAnimalFailureView(page,{timeoutMs=1300}={}){
  let timer;
  try{
   return await Promise.race([
@@ -18,7 +18,7 @@ export async function readAnimalFailureView(page,{timeoutMs=1000}={}){
 // Neither screenshot nor receipt failure may replace the original test error.
 export async function captureAnimalFailureScreenshot(page,directory,position){
  const screenshot='animal-failure-'+position.width+'.png';
- try{await page.screenshot({path:path.join(directory,screenshot),fullPage:true,timeout:5000});}
+ try{await page.screenshot({path:path.join(directory,screenshot),fullPage:true,timeout:6500});}
  catch(error){
   const failure={...position,screenshot,error:error.message};
   console.error('ANIMAL_SCREENSHOT_FAILURE',JSON.stringify(failure));

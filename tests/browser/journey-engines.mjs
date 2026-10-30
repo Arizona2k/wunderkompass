@@ -39,7 +39,7 @@ async function runEngine(name,index){
  try{
   const started=performance.now(),checked=[],historyViews=[];browser=await {chromium,firefox,webkit}[name].launch({headless:true,...(name==='chromium'&&process.env.QA_BROWSER_EXECUTABLE?{executablePath:process.env.QA_BROWSER_EXECUTABLE}:{}),args:name==='chromium'?['--enable-unsafe-swiftshader']:[]});
   const monitor=page=>monitorBrowserErrors(page,base,localErrors,{engine:name});
-  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
+  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await context.newPage();monitor(p);p.setDefaultTimeout(26000);await p.goto(base+'/#journeys');await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();
   if(searchOnly){
    const navigationProof={};const coveredAnimalIds=await phase('early-navigation',()=>animalNavigation(browser,base,page=>page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor(),monitor,shots,navigationProof));
    return {name,version:browser.version(),scope:'partial actual-engine keyboard search',keyboardNavigation:true,coveredAnimalIds,navigationProof,seconds:(performance.now()-started)/1000};
@@ -64,7 +64,7 @@ async function runEngine(name,index){
 
 
 try{
- for(let n=0;n<40&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);
+ for(let n=0;n<52&&!log.includes('WK_PREVIEW_READY');n++){if(server.exitCode!==null)throw Error(log);await new Promise(r=>setTimeout(r,100));}assert.ok(log.includes('WK_PREVIEW_READY'),log);
  if(searchOnly||serialLocal){
   for(const [index,name]of engines.entries())report.engines.push(await runEngine(name,index));
  }else{

@@ -55,7 +55,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  const worker=await fs.readFile('dist/learning-worker.js','utf8'),assets=JSON.parse(worker.match(/const ASSETS = (\[[^;]+\]);/)[1]);const guardedAsset=assets.find(p=>/^\/assets\/journey-inquiries-.*\.json$/.test(p));assert.ok(guardedAsset,'required actual journey asset');let fail=true,failedRequests=0,hold=false,releaseHold;const held=new Promise(resolve=>releaseHold=resolve);
  const photoAsset=assets.find(p=>/^\/assets\/world-photos-.*\.json$/.test(p));assert.ok(photoAsset,'actual deferred photo metadata');let releasePhoto,photoHeld=false;const photoBody=new Promise(resolve=>releasePhoto=resolve);
  const server=http.createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost'),name=decodeURIComponent(url.pathname);if(name.includes('..')||url.search)throw Error('Invalid fixture URL');if(fail&&name===guardedAsset){failedRequests++;res.writeHead(503).end('Synthetic source failure');return;}if(hold&&name===guardedAsset)await held;const file=path.resolve('dist',name==='/'?'index.html':'.'+name);if(!file.startsWith(path.resolve('dist')+path.sep))throw Error('Invalid fixture path');const data=await fs.readFile(file),type=file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':file.endsWith('.json')?'application/json':file.endsWith('.svg')?'image/svg+xml':file.endsWith('.webp')?'image/webp':'application/octet-stream';res.writeHead(200,{'Content-Type':type,'Cache-Control':'no-store','Content-Length':data.length});if(native&&!photoHeld&&name===photoAsset&&req.headers.referer===base+'/'){photoHeld=true;res.flushHeaders();await photoBody;}if(!res.destroyed)res.end(data);}catch{res.writeHead(404).end();}});
- await new Promise(resolve=>server.listen(port,'127.0.0.1',resolve));const base='http://127.0.0.1:'+port,context=providedContext??await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),page=await context.newPage();page.setDefaultTimeout(20000);let cdp;const report={kind,networkRecovery:false,quotaRecovery:null,completeAssets:false,offlineReload:false,passPreserved:false,assetCount:assets.length};
+ await new Promise(resolve=>server.listen(port,'127.0.0.1',resolve));const base='http://127.0.0.1:'+port,context=providedContext??await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),page=await context.newPage();page.setDefaultTimeout(26000);let cdp;const report={kind,networkRecovery:false,quotaRecovery:null,completeAssets:false,offlineReload:false,passPreserved:false,assetCount:assets.length};
  let verifiedWorkerURL=null;const workerURL=base+'/learning-worker.js';
  report.browserErrors=browserErrorArrays();monitorBrowserErrors(page,base,report.browserErrors,{engine:kind,expectedHTTP503:{url:base+guardedAsset,active:()=>fail,reason:'Exact required asset deliberately returns503 during the isolated initial source-failure phase.'},expectedOfflineWorkerUpdate:{url:workerURL,active:()=>report.serverStopped===true&&report.completeAssets===true&&verifiedWorkerURL===workerURL,reason:'The isolated fixture verified every cached asset and the active controller, then deliberately stopped this origin. Only the exact registered worker update connection refusal is expected.'}});
  const assertBrowserErrors=stage=>assert.equal(browserErrorsComplete(report.browserErrors),true,'actual offline-app browser errors remain blocking at '+stage+': '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,{count:report.browserErrors[key].length,first:report.browserErrors[key].slice(0,3)}]))));
@@ -84,7 +84,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    report.progressViews.push({width,...measured,largeText:true,axe:true,verified:value.verified,total:value.total,...(screenshot?{screenshot}:{})});
   }
   releaseHold();hold=false;report.realProgress=true;
-  await page.getByText('Deine Lernwelt ist offline vorbereitet.',{exact:true}).waitFor({timeout:45000});await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+  await page.getByText('Deine Lernwelt ist offline vorbereitet.',{exact:true}).waitFor({timeout:58500});await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
   const cached=await page.evaluate(async()=>{const name=(await caches.keys()).find(n=>n.startsWith('earth-learning-')),c=await caches.open(name);return{paths:(await c.keys()).map(r=>new URL(r.url).pathname),metrics:await(await c.match('/__learning_offline_metrics__')).json()};});
   for(const asset of assets)assert.ok(cached.paths.includes(asset),'every offline asset '+asset);assert.equal(cached.metrics.downloaded+cached.metrics.reused,assets.length);report.networkRecovery=true;report.completeAssets=true;report.metrics=cached.metrics;
   assert.deepEqual(await snapshot(),saved);report.passPreserved=true;
@@ -103,7 +103,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    assertBrowserErrors('after delayed native photo transport completion');
   }
   await stopTestServer(server);
-  await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2000)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
+  await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2600)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
   await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
   assertBrowserErrors('after confirmed-origin-down reload');
   report.offlineReadyView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-320.png':null,{native});
@@ -151,7 +151,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assertBrowserErrors('after complete cached learning matrix');
   return report;
  }catch(error){
-  if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:5000}).catch(()=>{});}
+  if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:6500}).catch(()=>{});}
   throw error;
  }finally{releaseHold();releasePhoto();if(cdp)await cdp.detach();if(providedContext)await page.close();else await context.close();await stopTestServer(server);}
 }

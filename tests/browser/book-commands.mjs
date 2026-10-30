@@ -20,7 +20,7 @@ async function choose(page,term,kind){
 export async function bookCommandView(browser,base,{shots=null,engine='chromium'}={}){
  const proof={cases:[],...browserErrorArrays()};
  for(const motion of ['reduce','no-preference']){
-  const context=await browser.newContext({viewport:{width:390,height:900},reducedMotion:motion}),page=await context.newPage();page.setDefaultTimeout(20000);monitorBrowserErrors(page,base,proof,{engine});
+  const context=await browser.newContext({viewport:{width:390,height:900},reducedMotion:motion}),page=await context.newPage();page.setDefaultTimeout(26000);monitorBrowserErrors(page,base,proof,{engine});
   const fresh=async hash=>{await page.goto('about:blank');await page.goto(base+'/#'+hash);await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();};
   try{
    await fresh('book/words/Atom');const query=page.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await query.fill('');await query.pressSequentially('Proton');await page.getByRole('heading',{name:'Proton',exact:true}).waitFor();

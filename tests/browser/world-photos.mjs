@@ -38,7 +38,7 @@ export async function pendingPhotoBackFocusFlow(browser,base,ready,monitor,repor
 export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled=false,context:providedContext=null,widths=[320,1440],native=false}={}){
  const engine=browser?.browserType().name()??'chromium',cases=[],prefix=engine==='chromium'?'animal-photo-opener-chromium':'journey-engine-'+engine+'-photo-opener';
  for(const width of widths)for(const suppress of controlled?[false,true]:[false]){
-  const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let category='initial';
+  const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);let category='initial';
   try{
    if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
    if(suppress)await page.addInitScript(()=>document.addEventListener('mousedown',event=>{if(event.target?.closest?.('[data-route-focus^="world-category-"]'))event.preventDefault();},true));
@@ -54,7 +54,7 @@ export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{cont
    }
   }catch(error){
    const diagnostics={engine,width,category,suppressedNativeMouseFocus:suppress,native,completedCases:cases,actual:await page.evaluate(()=>({hash:location.hash,history:history.state,active:{tag:document.activeElement?.tagName,id:document.activeElement?.id,key:document.activeElement?.dataset.routeFocus}})).catch(()=>null),failure:error.stack};
-   if(shots){await fs.writeFile(path.join(shots,prefix+'-failure-'+width+'.json'),JSON.stringify(diagnostics,null,2)+'\n');await page.screenshot({path:path.join(shots,prefix+'-failure-'+width+'.png'),animations:'disabled',timeout:5000}).catch(()=>{});}console.error('PHOTO_CARD_OPENER_FAILURE',JSON.stringify(diagnostics));throw error;
+   if(shots){await fs.writeFile(path.join(shots,prefix+'-failure-'+width+'.json'),JSON.stringify(diagnostics,null,2)+'\n');await page.screenshot({path:path.join(shots,prefix+'-failure-'+width+'.png'),animations:'disabled',timeout:6500}).catch(()=>{});}console.error('PHOTO_CARD_OPENER_FAILURE',JSON.stringify(diagnostics));throw error;
   }finally{if(providedContext)await page.close();else await context.close();}
  }
  if(shots)await fs.writeFile(path.join(shots,prefix+'-'+(controlled?'native-and-controlled':'native-only')+'.json'),JSON.stringify({engine,cases,meaning:'Original photo-card Back focus plus explicit no-native-pointer-focus cases; not a physical device or complete acceptance'},null,2)+'\n');
@@ -68,7 +68,7 @@ export async function paginatedCardBackFlow(browser,base,ready,monitor,report,sh
  const ids=['animal-okapi','history-mohenjo-daro','person-ibn_al_haytham','invention-microscope','building-sydney-opera','science-galaxy','history-bronze'];
  const cases=[];
  for(const width of [320,1440]){
-  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);
   try{
    for(const id of ids){
     const topic=topics.find(t=>t.id===id);assert.ok(topic,'declared retained or new topic');const pool=topics.filter(t=>t.category===topic.category),number=Math.floor(pool.findIndex(t=>t.id===id)/12)+1;assert.ok(number>=2,'real later-page case');
@@ -104,7 +104,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
   return figure;
  }
  for(const width of [320,1440]){
-  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
+  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);let requests=0;
   page.on('request',request=>{if(/world-photos-.*\.json/.test(request.url()))requests++;});
   try{
    await page.goto(base);await ready(page);assert.equal(requests,0,'Home has immediate complete credits without the deferred catalog');
@@ -119,7 +119,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  // A failed deferred catalog inside a clickable compact card must stay usable
  // without nesting another button. The article retains its explicit safe retry.
  {
-  const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(20000);
+  const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(26000);
   try{
    await page.route('**/world-photos-*.json',route=>route.abort('failed'));
    await page.goto(base+'/#world/animals');await ready(page);
@@ -132,7 +132,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  }
  for(const failure of ['tampered','network']){
   // Expected network errors belong to this isolated negative fixture only.
-  const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(20000);let requests=0;
+  const context=await browser.newContext({viewport:{width:320,height:900}}),page=await context.newPage();page.setDefaultTimeout(26000);let requests=0;
   try{
    await page.route('**/world-photos-*.json',async route=>{requests++;if(requests===1){if(failure==='network')await route.abort('failed');else await route.fulfill({contentType:'application/json',body:'{"untrusted":true}'});}else await route.continue();});
    await page.goto(base+'#world/topic/animal-whale-shark');await ready(page);

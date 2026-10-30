@@ -7,7 +7,7 @@ const classics=[['memory','Länder-Memory'],['order','Bring’s in die Reihenfol
 const stations=['Deutschland','Giraffe','Größte heiße Wüste','Anden','Tropischer Regenwald','Er ist der größte Ozean','Ein Kontinent'];
 const report=process.env.QA_RESUME?JSON.parse(await fs.readFile(shots+'/quality-legacy-games-report.json','utf8')):{browser:'',checks:[],errors:[],consoleErrors:[],completed:[],missing:[]};
 await runBrowser(async browser=>{
- report.browser=browser.version();const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(20000);
+ report.browser=browser.version();const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(26000);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});
  const wait=(fn,arg)=>p.waitForFunction(fn,arg,{polling:250});
  const state=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -42,7 +42,7 @@ await runBrowser(async browser=>{
    await wait(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions[id]?.items?.length>0,id);s=await snap(id);
    for(let i=0;i<s.items.length;i++){const item=s.items[i];console.log('QUESTION',id,i,item.correct,JSON.stringify(s).length);if(i===0){console.log('WRONG TAP');await p.locator('.quiz-answers button').filter({hasNot:p.getByText(item.correct,{exact:true})}).first().tap();await p.getByText('Noch einmal kombinieren.',{exact:true}).waitFor();console.log('WRONG FEEDBACK');}await p.locator('.quiz-answers').getByRole('button',{name:item.correct,exact:true}).tap();console.log('RIGHT TAP');if(i===0&&!process.env.QA_NO_RELOAD){console.log('RELOAD');const before=(await state()).gameSessions[id];await p.reload();await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await p.getByRole('button',{name:'Fortsetzen',exact:true}).tap();assert.deepEqual((await state()).gameSessions[id].items,before.items);report.checks.push(id+': exact shuffled items and answer restored after real reload');}await p.getByRole('button',{name:i===s.items.length-1?'Spiel abschließen':'Nächste Spur',exact:true}).tap();console.log('NEXT');}await saved(id);
   }
-  await p.locator('.game-board:visible').screenshot({path:shots+'/quality-played-'+id+'.png',timeout:30000});await back();
+  await p.locator('.game-board:visible').screenshot({path:shots+'/quality-played-'+id+'.png',timeout:39000});await back();
  }
  if(!process.env.QA_SKIP_FINAL){
  await open('Das große Welt-Quiz');await p.locator('.quiz-card').waitFor();await wait(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.quizSession?.ids?.length>0);

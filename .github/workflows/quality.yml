@@ -22,7 +22,8 @@ jobs:
     # Quality176 spent46min installing dependencies; every test/gate stays.
     # Quality195 reached65min during complete engines; finite70min reserve.
     # AuditV2 adds measured task/navigation/route coverage; finite80min reserve.
-    timeout-minutes: 80
+    # User30Oct: all project technical ceilings +30%, once from80 to104min.
+    timeout-minutes: 104
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:

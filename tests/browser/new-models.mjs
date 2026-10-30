@@ -4,7 +4,7 @@ import {runBrowser,base,shots} from './runtime.mjs';
 const report={models:[],routes:[],errors:[],requests:[],checks:[]};
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(15000);
+ const c=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(19500);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.status()>=400)report.requests.push(r.url());});
  const state=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
  const stamped=async id=>p.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('model:science-'+id),id);

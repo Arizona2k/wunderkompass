@@ -13,7 +13,7 @@ let saved:Record<string,Photo>|null=null,pending:Promise<Record<string,Photo>>|n
 function load(){
  if(saved)return Promise.resolve(saved);
  if(!pending)pending=(async()=>{
-  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(15600)});
   const data=await verifiedContentJSON(bytes,integrity);
   if(!data||Array.isArray(data)||Object.keys(data).length!==ids.length||!ids.every(id=>data[id]?.id===id))throw Error('Unvollständige Bildnachweise');
   saved=data;return data as Record<string,Photo>;

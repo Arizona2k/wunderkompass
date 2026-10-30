@@ -5,7 +5,7 @@ const topics=JSON.parse(await fs.readFile(project+'/app/world-catalog.json','utf
 const report={browser:'',checks:[],findings:[],errors:[],expectedErrors:[],search:[]};
 await runBrowser(async browser=>{
  report.browser=browser.version();const keep=await browser.newContext({viewport:{width:1280,height:900},acceptDownloads:true,reducedMotion:'reduce'});
- const a=await keep.newPage(),b=await keep.newPage();for(const p of [a,b]){p.setDefaultTimeout(18000);p.on('pageerror',e=>report.errors.push(e.message));await p.goto(base);await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();}
+ const a=await keep.newPage(),b=await keep.newPage();for(const p of [a,b]){p.setDefaultTimeout(23400);p.on('pageerror',e=>report.errors.push(e.message));await p.goto(base);await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();}
  const state=p=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
  async function topic(p,id){const t=topics.find(x=>x.id===id);await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await p.getByRole('dialog').locator('input').fill(t.title);await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).locator('xpath=self::*[@data-value="topic:'+id+'"]').click();await p.locator('.world-mini-question').waitFor();}
  await topic(a,'animal-polar-bear');await a.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await a.waitForTimeout(400);const aSaved=(await state(a)).favorites;

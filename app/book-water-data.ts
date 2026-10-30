@@ -13,7 +13,7 @@ export const hasBookWater=(term:string)=>WATER_WORDS.includes(term)||WATER_QUEST
 function load(){
  if(loaded)return Promise.resolve(loaded);
  if(!pending)pending=(async()=>{
-  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(15600)});
   const pack=validateWaterPack(await verifiedContentJSON(bytes,integrity))as Pack;
   loaded=pack;return pack;
  })().catch(error=>{pending=null;throw error;});

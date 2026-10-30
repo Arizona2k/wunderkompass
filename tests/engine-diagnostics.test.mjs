@@ -9,7 +9,7 @@ test('unresponsive or lost renderer cannot hold the failure view observation ope
 test('failed screenshot records capture failure, preserves the primary error and cannot overwrite evidence',async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-animal-capture-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
  const original=Error('original strict Katta guard'),position={engine:'webkit',current:'animal-ring-tailed-lemur',stage:'large',width:390},primary=Buffer.from('unchanged original workshop failure');await fs.writeFile(path.join(dir,'animal-workshop-failure-390.json'),primary);
- const page={screenshot:async options=>{assert.equal(options.timeout,5000);assert.equal(options.fullPage,true);throw Error('Target page closed');}};
+ const page={screenshot:async options=>{assert.equal(options.timeout,6500);assert.equal(options.fullPage,true);throw Error('Target page closed');}};
  await assert.rejects(async()=>{try{throw original;}catch(error){await captureAnimalFailureScreenshot(page,dir,position);throw error;}},error=>error===original);
  const receipt=path.join(dir,'animal-screenshot-failure-390.json'),bytes=await fs.readFile(receipt);assert.deepEqual(JSON.parse(bytes),{...position,screenshot:'animal-failure-390.png',error:'Target page closed'});assert.deepEqual(await fs.readFile(path.join(dir,'animal-workshop-failure-390.json')),primary);
  page.screenshot=async()=>{throw Error('different later capture failure');};await captureAnimalFailureScreenshot(page,dir,position);assert.deepEqual(await fs.readFile(receipt),bytes);

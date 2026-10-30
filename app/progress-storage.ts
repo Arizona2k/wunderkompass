@@ -121,7 +121,7 @@ export function createSave(progress=emptyProgress()):Save{const at=new Date().to
 let connection:Promise<IDBDatabase>|null=null;
 export function database():Promise<IDBDatabase>{
  if(connection)return connection;
- connection=new Promise<IDBDatabase>((resolve,reject)=>{if(typeof indexedDB==='undefined'){reject(new Error('IndexedDB unavailable'));return;}const request=indexedDB.open('earth-explorer',1);let settled=false;const timer=setTimeout(()=>{settled=true;reject(new Error('Database blocked'));},2500);
+ connection=new Promise<IDBDatabase>((resolve,reject)=>{if(typeof indexedDB==='undefined'){reject(new Error('IndexedDB unavailable'));return;}const request=indexedDB.open('earth-explorer',1);let settled=false;const timer=setTimeout(()=>{settled=true;reject(new Error('Database blocked'));},3250);
  request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains('saves'))request.result.createObjectStore('saves');};
  request.onerror=()=>{clearTimeout(timer);settled=true;reject(request.error);};
  request.onsuccess=()=>{clearTimeout(timer);if(settled){request.result.close();return;}const db=request.result;db.onversionchange=()=>{db.close();connection=null;};resolve(db);};

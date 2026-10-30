@@ -16,7 +16,7 @@ import path from "node:path";
 import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
 
-const MAX_PACKAGES = 100_000;
+const MAX_PACKAGES = 130_000;
 const CACHE_SEEDS = new Set(["seed_used", "seed_unavailable", "seed_lockfile_mismatch", "decision_unavailable", "not_applicable"]);
 const STORE_STATES = new Set(["created", "seeded", "reused", "unavailable"]);
 // The caller may use operational status only for
@@ -202,7 +202,7 @@ async function main() {
   const args = [...prefix, "install", "--prod=false", "--ignore-scripts=false",
     "--frozen-lockfile", "--prefer-offline", "--store-dir", store,
     "--cache-dir", path.join(store, "policy-cache"), "--fetch-retries=0",
-    "--fetch-timeout=30000", "--network-concurrency=1", "--reporter=ndjson",
+    "--fetch-timeout=39000", "--network-concurrency=1", "--reporter=ndjson",
     "--package-import-method=auto"];
   let result = { code: 1, signal: null };
   let receivedSignal;

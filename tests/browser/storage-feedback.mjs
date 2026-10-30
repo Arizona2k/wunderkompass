@@ -7,7 +7,7 @@ export async function storageFeedbackFlow(browser,base,ready,monitor,report,shot
  for(const mode of['denied','quota-and-idb-abort'])for(const large of[false,true]){
   const context=await browser.newContext({viewport:{width,height},hasTouch:width===320,reducedMotion:'reduce',acceptDownloads:true});
   if(mode==='denied')await context.addInitScript(()=>{Object.defineProperty(window,'localStorage',{configurable:true,get(){throw new DOMException('Synthetic browser storage denial','SecurityError');}});Object.defineProperty(window,'indexedDB',{configurable:true,value:undefined});});
-  const page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  const page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);
   const pass=async()=>{await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('button',{name:'Entdeckerpass sichern',exact:true}).waitFor();};
   const close=async()=>{await page.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'detached'});};
   const download=async label=>{const event=page.waitForEvent('download');await page.getByRole('button',{name:'Entdeckerpass sichern',exact:true}).click();const file=shots+'/synthetic-storage-'+mode+'-'+width+(large?'-large':'')+'-'+label+'.json';await(await event).saveAs(file);return JSON.parse(await fs.readFile(file,'utf8'));};

@@ -56,7 +56,7 @@ export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',s
  }complete=true;}catch(error){
   // Keep the original failed route visible for the existing outer diagnostics.
   // Restoring the starting route in a finally block would hide the actual fault.
-  try{const actual=await p.evaluate(()=>({url:location.href,history:history.state,title:document.querySelector('#world-topic-title')?.textContent??null,active:document.activeElement?.getAttribute('data-route-focus')}));const failure={current,width,state,native,error:error.message,actual};console.error('ANIMAL_COMPACT_ORIGIN_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});await p.screenshot({path:path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.png'),fullPage:true,timeout:5000}).catch(()=>{});}}catch(diagnosticError){console.error('ANIMAL_COMPACT_ORIGIN_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({current,width,state,error:diagnosticError.message}));}throw error;
+  try{const actual=await p.evaluate(()=>({url:location.href,history:history.state,title:document.querySelector('#world-topic-title')?.textContent??null,active:document.activeElement?.getAttribute('data-route-focus')}));const failure={current,width,state,native,error:error.message,actual};console.error('ANIMAL_COMPACT_ORIGIN_FAILURE',JSON.stringify(failure));if(shots){await fs.writeFile(path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.json'),JSON.stringify(failure,null,2)+'\n',{flag:'wx'});await p.screenshot({path:path.join(shots,'animal-compact-origin-failure-'+engine+'-'+state+'-'+width+'.png'),fullPage:true,timeout:6500}).catch(()=>{});}}catch(diagnosticError){console.error('ANIMAL_COMPACT_ORIGIN_DIAGNOSTIC_UNAVAILABLE',JSON.stringify({current,width,state,error:diagnosticError.message}));}throw error;
  }finally{if(complete){await p.evaluate(hash=>location.hash=hash,initial);if(initial.startsWith('#world/topic/'))await p.locator('#world-topic-title').waitFor();}}
  return observed;
 }
@@ -125,7 +125,7 @@ export async function assertAnimalSelectionFeedback(task){
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths,navigationReuse}={}){
  const observed=[],focusChecks=[],compactOrigins=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
-  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
   let current=DATA.entries[0].id,stage='normal';
   const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage,width}));
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
