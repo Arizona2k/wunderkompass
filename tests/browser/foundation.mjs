@@ -9,7 +9,7 @@ const routes=[['home','','#discovery-title'],['world','world','.world-choice'],[
 export async function performanceFlow(browser,base,ready,monitor,report){
  report.performance={method:'Production preview, fresh Chromium context, 390×844, reduced motion, no throttling. Pass ready + actual area control + 1200 ms observation. Three samples per area. Synthetic lab metrics, not field Core Web Vitals or a device guarantee.',budgets,samples:[]};
  for(let sample=0;sample<3;sample++)for(const [name,hash,selector] of routes){
-  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
   try{
    await p.addInitScript(()=>{window.__wkPerf={lcp:0,cls:0,longTaskMs:0};new PerformanceObserver(list=>{for(const e of list.getEntries())window.__wkPerf.lcp=e.startTime;}).observe({type:'largest-contentful-paint',buffered:true});new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.__wkPerf.cls+=e.value;}).observe({type:'layout-shift',buffered:true});new PerformanceObserver(list=>{for(const e of list.getEntries())window.__wkPerf.longTaskMs+=e.duration;}).observe({type:'longtask',buffered:true});});
    const started=performance.now();await p.goto(base+(hash?'#'+hash:''));await ready(p);await p.locator(selector).first().waitFor();const readyMs=performance.now()-started;
@@ -48,7 +48,7 @@ async function accessibility(p,selector){
 export async function componentFlow(browser,base,ready,monitor,report,shots){
  report.componentViews=[];
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
-  const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
   try{
    await p.goto(base+'#labs');await ready(p);await p.locator('.research-tile').first().waitFor();await contracts(p);if(width===320||width===1440)await accessibility(p,'.research-world');await p.screenshot({path:shots+'/foundation-labs-'+width+'.png'});
    await p.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await p.locator('.world-trip').first().waitFor();await contracts(p);

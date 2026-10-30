@@ -1,6 +1,10 @@
-## Dialoge Erdschichten und Länderanzeigen · Entwicklungsstand
+## Aufgaben und fachliche Rückwege · begrenzter Entwicklungsstand
 
-Hilfe, Begleitpersonenhinweise und Pass kehren beim Schließen zum tatsächlichen Öffner zurück; bewusste Wechsel aus den Dialogen erhalten ihr Lernziel auch bei bereits geöffneter Adresse. Die flache Erdschichtenansicht nutzt den vorhandenen Zoom wirksam und zeigt passende Controls. Länderporträts erläutern die betroffenen Sprach- und Währungsnamen im bestehenden unmittelbaren Ladeweg. Fachliche Daten und Bezugsjahre bleiben erhalten. Die Chronik führt die bereits bestätigte M78-Lieferung nach. Die vollständige lokale Abnahme ist bestanden; native GitHub-Abnahme und reguläre Lieferung dieses UI-Abschnitts stehen aus.
+Fragen und Hinweise, genau zwei gleichbedeutende Lebensraumfilter, einmalige Wiederholungszählung je Bearbeitung, fachliche Kapitel-/Laborziele mit Rückweg, Rückkehr zur Listenauswahl und freiwilliges Wiederansehen abgeschlossener Routen sind im bestehenden System umgesetzt. Begrenzte Telefon-/Burj-/Erdbebenquellenpflege erhält die früheren Fachprüfungen; ASHRAE-Zugriff wird von aktueller Fachlektüre unterschieden. Abgeschlossene Routen behalten den bisherigen Hauptbereich-Fokus. Fachlich passende Altantworten buchen nur beim bewussten Weitergehen; die Energieanzeige korrigiert Singular/Plural einschließlich des genau betroffenen alten Anzeigetexts ohne Passumschreibung. Die Chronik führt die bestätigte PR79-Lieferung nach. Vollständige aktuelle Pflichtabnahme und Testlieferung dieses Folgeabschnitts stehen aus; kein neuer Inhaltszählungs- oder Gesamtabschluss.
+
+## Dialoge Erdschichten und Länderanzeigen · PR79 tatsächlich bereitgestellt
+
+Hilfe, Begleitpersonenhinweise und Pass kehren beim Schließen zum tatsächlichen Öffner zurück; bewusste Wechsel aus den Dialogen erhalten ihr Lernziel auch bei bereits geöffneter Adresse. Die flache Erdschichtenansicht nutzt den vorhandenen Zoom wirksam und zeigt passende Controls. Länderporträts erläutern die betroffenen Sprach- und Währungsnamen im bestehenden unmittelbaren Ladeweg. Fachliche Daten und Bezugsjahre bleiben erhalten. Die Chronik führt die bereits bestätigte M78-Lieferung nach. Vollständige Quality196 erfolgreich; PR79 regulär als `690e97f160d51415224623912ee92ebc798694bc` übernommen und am30.10.2026 um01:59:28MEZ tatsächlich bereitgestellt. Ausführliche Nachweise bleiben privat; Paket3.5 und Gesamtauftrag offen.
 
 ## Teilchen und Buchbedienung · PR78 tatsächlich bereitgestellt
 

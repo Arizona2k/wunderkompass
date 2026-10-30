@@ -26,7 +26,7 @@ async function axe(p,selector,label){
 export async function researchFlow(browser,base,ready,monitor,report,shots){
  await researchTransferFlow(browser,base,ready,monitor,report,shots);
  for(const width of [320,360,390,768,1024,1440,1920]){
-  const context=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<768,isMobile:width<768,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);await p.clock.setFixedTime(new Date('2026-10-11T19:00:00Z'));await p.goto(base+'/#labs');await ready(p);await p.locator('.research-tile').first().waitFor();
+  const context=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<768,isMobile:width<768,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(26000);await p.clock.setFixedTime(new Date('2026-10-11T19:00:00Z'));await p.goto(base+'/#labs');await ready(p);await p.locator('.research-tile').first().waitFor();
   assert.equal(await p.locator('.research-tile').count(),11);assert.equal(await p.locator('.experiment-card').count(),6);
   await p.locator('.lab-search input').fill('vulkan');assert.equal(await p.locator('.research-tile').count(),1);assert.equal(await p.locator('.experiment-card').count(),1);await p.locator('.lab-search input').fill('not-a-real-lab');await p.getByRole('button',{name:'Alle Labore zeigen',exact:true}).click();
   await p.screenshot({path:path.join(shots,'research-overview-'+width+'.png'),fullPage:true,animations:'disabled'});

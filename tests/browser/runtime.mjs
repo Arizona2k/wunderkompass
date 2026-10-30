@@ -6,7 +6,7 @@ export const project=process.cwd();
 export const port=process.env.QA_PORT??'4173';
 export const base='http://127.0.0.1:'+port;
 export const shots=project+'/.qa-output';
-export const launchOptions={executablePath:'/workspace/scratch/42fc63e2bab5/world-browser/engine/chromium',headless:true,env:{...process.env,LD_LIBRARY_PATH:'/workspace/scratch/42fc63e2bab5/world-browser/engine',FONTCONFIG_PATH:'/workspace/scratch/42fc63e2bab5/world-browser/engine/fonts'},args:[...Chromium.args.filter(a=>a!=='--single-process'&&!a.includes('incognito')),'--enable-unsafe-swiftshader'],timeout:15000};
+export const launchOptions={executablePath:'/workspace/scratch/42fc63e2bab5/world-browser/engine/chromium',headless:true,env:{...process.env,LD_LIBRARY_PATH:'/workspace/scratch/42fc63e2bab5/world-browser/engine',FONTCONFIG_PATH:'/workspace/scratch/42fc63e2bab5/world-browser/engine/fonts'},args:[...Chromium.args.filter(a=>a!=='--single-process'&&!a.includes('incognito')),'--enable-unsafe-swiftshader'],timeout:19500};
 export async function runBrowser(task){
  await fs.mkdir(shots,{recursive:true});
  let output='';
@@ -15,9 +15,9 @@ export async function runBrowser(task){
  let browser;
  try{
   let ready=false;
-  for(let i=0;i<35;i++){
+  for(let i=0;i<46;i++){
    if(server.exitCode!==null)throw new Error('QA server exited: '+output);
-   try{const r=await fetch(base+'/world.json',{signal:AbortSignal.timeout(800)});if(r.ok){ready=true;break;}}catch{}
+   try{const r=await fetch(base+'/world.json',{signal:AbortSignal.timeout(1040)});if(r.ok){ready=true;break;}}catch{}
    await new Promise(r=>setTimeout(r,500));
   }
   if(!ready)throw new Error('QA server not ready: '+output);

@@ -4,7 +4,7 @@ import {runBrowser,base,shots} from './runtime.mjs';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8')),data=JSON.parse(await fs.readFile(new URL('../fixtures/learning.json',import.meta.url),'utf8'));
 const report={topics:[],chapters:[],images:[],errors:[],requests:[],comparisons:[]};
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(15000);p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.status()>=400)report.requests.push({status:r.status(),url:r.url()});});
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(19500);p.on('pageerror',e=>report.errors.push(e.message));p.on('response',r=>{if(r.status()>=400)report.requests.push({status:r.status(),url:r.url()});});
  await p.goto(base);await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
  for(const t of topics){
   await p.evaluate(id=>{location.hash='world/topic/'+id;},t.id);await p.getByRole('heading',{name:t.title,exact:true}).waitFor();

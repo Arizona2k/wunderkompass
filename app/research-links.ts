@@ -19,3 +19,9 @@ export function researchTopicLinks(id:string,primaryTopic:string):ResearchTopicL
  const reasons=RESEARCH_LINK_REASONS[id];
  return reasons?[{topic:primaryTopic,why:reasons.topic},...(reasons.additionalTopics??[])]:[];
 }
+
+/** Invert the authored topic relations for both articles and chapter sidebars. */
+export function researchLaboratoriesForTopic<T extends {id:string}>(topicId:string,labs:readonly T[],paths:Record<string,{topic:string}>):(T&{why:string})[]{
+ if(!topicId)return [];
+ return labs.flatMap(lab=>{const path=paths[lab.id];const link=path&&researchTopicLinks(lab.id,path.topic).find(link=>link.topic===topicId);return link?[{...lab,why:link.why}]:[];});
+}

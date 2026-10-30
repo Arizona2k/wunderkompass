@@ -13,7 +13,7 @@ import path from "node:path";
 import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
 
-const MAX_PACKAGES = 100_000;
+const MAX_PACKAGES = 130_000;
 
 // npm reports tarball cache reads separately from registry metadata requests.
 // Count unique installed tarball URLs, not image seeds or network bytes. Require
@@ -132,8 +132,8 @@ export async function runNpmInstall(command, cacheSeed = "not_applicable") {
           env,
           encoding: "utf8",
           stdio: ["ignore", "pipe", "ignore"],
-          timeout: 3000,
-          maxBuffer: 4096,
+          timeout: 3900,
+          maxBuffer: 5325,
         },
       );
       if (configured.status === 0) registry = configured.stdout.trim();

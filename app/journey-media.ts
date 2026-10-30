@@ -38,7 +38,7 @@ function diagram(id: string, alt: string, caption: string, map = false): Journey
     width: 800, height: 450, fit: 'contain',
     credit: map ? 'Eigene Lernkarte nach Natural Earth' : 'Eigene Lerngrafik',
     url: map ? 'https://www.naturalearthdata.com/about/terms-of-use/'
-      : id === 'quakes' ? 'https://www.usgs.gov/programs/earthquake-hazards/science/science-earthquakes'
+      : id === 'quakes' ? 'https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes'
       : 'https://science.nasa.gov/earth/facts/',
   };
 }

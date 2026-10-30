@@ -79,7 +79,7 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
     window.SpeechSynthesisUtterance=class {constructor(text){this.text=text;}};
     Object.defineProperty(window,'speechSynthesis',{value:{cancel(){},getVoices(){return [{lang:'de-DE',localService:true,voiceURI:'test-local'}];},addEventListener(){},removeEventListener(){},speak(u){window.__hintSpeech.push(u.text);queueMicrotask(()=>u.onend?.());}}});
    },{key:SAVE_KEY,save:createSave(progress)});
-   const page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+   const page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);
    const pass=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    try{
     await page.goto(base);await ready(page);await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();

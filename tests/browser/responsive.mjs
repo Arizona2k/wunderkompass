@@ -4,7 +4,7 @@ const sizes=[[360,780],[375,812],[390,844],[430,932],[844,390],[768,1024],[1024,
 const readers=['animal-dromedary','history-maya','person-albert_einstein','invention-car','building-colosseum','science-solar-system','science-foodweb'];
 const report=process.env.QA_RESUME?JSON.parse(await fs.readFile(shots+'/responsive-report.json','utf8')):{sizes,views:[],errors:[],consoleErrors:[],violations:[],overflow:[],images:[],smallTargets:[],checks:[]};
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(25000);
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(32500);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});
  await p.goto(base+'/#globe');await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await p.locator('#globe-observatory').scrollIntoViewIfNeeded();await p.locator('.globe-render canvas,.fallback-globe svg').waitFor();
  await p.addScriptTag({path:'/workspace/scratch/42fc63e2bab5/earth-qa/node_modules/axe-core/axe.min.js'});
@@ -13,7 +13,7 @@ await runBrowser(async browser=>{
   const layout=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,skip:{focused:document.activeElement?.classList.contains('skip-link'),top:document.querySelector('.skip-link')?.getBoundingClientRect().top},small:[...document.querySelectorAll('button,a,input,select,[role="slider"]')].filter(e=>e.getClientRects().length&&!e.disabled&&!e.matches('.sr-only,.skip-link,[aria-hidden="true"]')&&!e.closest('[hidden]')&&!(e.closest('details:not([open])')&&!e.closest('summary'))&&!(e.tagName==='A'&&getComputedStyle(e).display==='inline')).map(e=>{const b=e.getBoundingClientRect();return {name:e.getAttribute('aria-label')||e.innerText?.trim().slice(0,50)||e.tagName,width:Math.round(b.width),height:Math.round(b.height)}}).filter(e=>e.width<24||e.height<24)}));
   report.views.push({id,...layout});if(layout.scroll>layout.width+2)report.overflow.push({id,...layout});if(layout.small.length)report.smallTargets.push({id,targets:layout.small});
   if(axe){if(!(await p.evaluate(()=>typeof window.axe==='object')))await p.addScriptTag({path:'/workspace/scratch/42fc63e2bab5/earth-qa/node_modules/axe-core/axe.min.js'});const r=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}));if(r.violations.length)report.violations.push({id,rules:r.violations.map(v=>({rule:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))});}
-  if(screen){await p.evaluate(()=>window.scrollTo(0,0));await p.screenshot({path:shots+'/responsive-'+id+'.png',timeout:30000});}
+  if(screen){await p.evaluate(()=>window.scrollTo(0,0));await p.screenshot({path:shots+'/responsive-'+id+'.png',timeout:39000});}
  }
  const nav=async(name,selector)=>{await p.getByRole('tab',{name,exact:true}).click();await p.locator(selector).first().waitFor();};
  for(const [width,height] of process.env.QA_RESUME?[]:sizes){

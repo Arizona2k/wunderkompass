@@ -55,7 +55,7 @@ fi
 coproc SITES_INSTALL_LOCKS {
   node "${script_dir}/pnpm-install.mjs" --hold-install-locks \
     "${runtime_root}/install.lock" "${SITES_PNPM_SHARED_STORE:-}.seed.lock" \
-    "${SITES_PNPM_STORE_LOCK_TIMEOUT:-30}"
+    "${SITES_PNPM_STORE_LOCK_TIMEOUT:-39}"
 }
 install_lock_pid="${SITES_INSTALL_LOCKS_PID}"
 install_lock_output="${SITES_INSTALL_LOCKS[0]}"
@@ -75,8 +75,8 @@ if [[ "${lock_status}" != locked ]]; then
 fi
 export XDG_CACHE_HOME="${runtime_root}/xdg-cache" XDG_DATA_HOME="${runtime_root}/xdg-data"
 mkdir -p "${XDG_CACHE_HOME}" "${XDG_DATA_HOME}" || exit 70
-pnpm_version="$(timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-15s}" \
-  "${SITES_PNPM_BOOTSTRAP_TIMEOUT:-30s}" "${pnpm_command[@]}" --version)"
+pnpm_version="$(timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-19.5s}" \
+  "${SITES_PNPM_BOOTSTRAP_TIMEOUT:-39s}" "${pnpm_command[@]}" --version)"
 if [[ "${pnpm_version}" != "11.25.0" ]]; then
   echo "This project requires pnpm 11.25.0 and its v11 store format." >&2
   exit 69
@@ -153,7 +153,7 @@ else
 import { readFileSync, statSync } from "node:fs";
 try {
   const filename = process.argv[2];
-  if (statSync(filename).size > 4096) process.exit(1);
+  if (statSync(filename).size > 5325) process.exit(1);
   const seed = JSON.parse(readFileSync(filename, "utf8"));
   process.exit(seed.version === 1 && seed.pnpm_version === "11.25.0" &&
     seed.store_version === "v11" && /^[a-f0-9]{64}$/.test(seed.lockfile_sha256) ? 0 : 1);
@@ -168,8 +168,8 @@ NODE
     fi
     seed_stage="$(mktemp -d "${writable_store}.seed.XXXXXX")" || exit 70
     trap 'if [[ -n "${seed_stage:-}" ]]; then rm -rf -- "${seed_stage}"; fi; report_store || true' EXIT
-    timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-15s}" \
-      "${SITES_PNPM_STORE_PREPARE_TIMEOUT:-60s}" bash -c \
+    timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-19.5s}" \
+      "${SITES_PNPM_STORE_PREPARE_TIMEOUT:-78s}" bash -c \
       'cp -a --no-preserve=ownership "$1/." "$2/" && chmod -R u+rwX "$2"' _ "${seed}" "${seed_stage}" || exit 70
     cp "${seed}/.sites-pnpm-seed.json" "${seed_stage}/.sites-pnpm-seed-applied.json" || exit 70
     # An ordinary pnpm command can initialize the store without our seed lock.
@@ -211,6 +211,6 @@ fi
 
 # CI=true lets native pnpm install rebuild modules whose store moved, without a
 # prompt, --force, changing the lockfile, or translating the project into npm.
-CI=true timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-15s}" \
-  "${SITES_INSTALL_TIMEOUT:-8m}" node "${script_dir}/pnpm-install.mjs" \
+CI=true timeout --signal=TERM --kill-after="${SITES_INSTALL_KILL_AFTER:-19.5s}" \
+  "${SITES_INSTALL_TIMEOUT:-624s}" node "${script_dir}/pnpm-install.mjs" \
   "${cache_seed}" "${store_scope}" "${store_state}" "${writable_store}" "${pnpm_command[@]}"

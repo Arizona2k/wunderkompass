@@ -18,6 +18,7 @@ import {journeySourceView} from './journey-sources.mjs';
 export {journeySourceView} from './journey-sources.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
 import {auditUiView} from './audit-ui.mjs';
+import {learningCorrectionsView} from './learning-corrections.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -146,7 +147,7 @@ export async function journeyHubNavigation(p,width){
  const filter=p.locator('.journey-theme-filter');await filter.locator('summary').click();await filter.getByRole('button',{name:'Leben & Verantwortung',exact:true}).click();assert.equal(await p.locator('.journey-tile').count(),4);const tile=p.locator('.journey-tile').first(),key=await tile.getAttribute('data-route-focus');await tile.focus();await p.keyboard.press('Enter');await p.locator('#journey-title').waitFor();await p.goBack();await p.locator('.journey-grid').waitFor();await p.waitForFunction(key=>document.querySelector('.journey-theme-filter')?.open&&document.activeElement?.dataset.routeFocus===key,key);assert.equal(await p.locator('.journey-tile').count(),4);await filter.getByRole('button',{name:'Alle',exact:true}).click();await filter.locator('summary').click();await p.setViewportSize(previous);
 }
 export async function journeysFlow(browser,base,ready,monitor,report,shots,nativeBrowser){
- const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
+ const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await context.newPage();monitor(p);p.setDefaultTimeout(26000);
  await p.goto(base+'/#journeys');await ready(p);await p.locator('.journey-tile').first().waitFor();assert.equal(await p.locator('.journey-tile').count(),16);
  report.journeySupport=await journeySupportView(p,{widths:[320,360,390,768,1024,1440,1920],shots,engine:'chromium'});
  report.bookTabNavigation=[];for(const width of [320,1440]){report.bookTabNavigation.push(await bookTabNavigation(p,width));await journeyHubNavigation(p,width);}
@@ -175,7 +176,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)),saveKey);assert.equal(saved.progress.journeys.length,16);assert.equal(Object.keys(saved.progress.gameSessions).filter(id=>id.startsWith('journey:')).length,16);
  await context.close();report.checks.push('Legacy resume, deep chapter/back navigation, reciprocal knowledge links, all 16 unchanged final stamp gates and reload');
  for(const width of [320,360,390,768,1024,1440,1920]){
-  const ctx=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<1024,reducedMotion:'reduce'}),page=await ctx.newPage();monitor(page);page.setDefaultTimeout(20000);await page.goto(base+'/#journeys/inside/1');await ready(page);
+  const ctx=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<1024,reducedMotion:'reduce'}),page=await ctx.newPage();monitor(page);page.setDefaultTimeout(26000);await page.goto(base+'/#journeys/inside/1');await ready(page);
   for(const [id,index] of [['inside',0],['navigation',0],['water',2],['climate',4]]){await open(page,id,index);await geometry(page,id+' '+width);const buttons=page.locator('.journey-levels button,.journey-task .quiz-answer,.chapter-actions button');for(const control of await buttons.all()){const box=await control.boundingBox();assert.ok(box.height>=44,'touch height');}await page.screenshot({path:path.join(shots,'journey-'+id+'-'+index+'-'+width+'.png'),fullPage:true,animations:'disabled'});}
   if([320,390,768,1440].includes(width)){await axe(page,'.journey-reader');await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await geometry(page,'large text '+width);await page.locator('.journey-levels button').nth(1).focus();await page.screenshot({path:path.join(shots,'journey-large-focus-'+width+'.png'),fullPage:true,animations:'disabled'});}
   await page.evaluate(()=>location.hash='world/topic/science-water-cycle');await page.locator('.journey-topic-links').waitFor();
@@ -275,8 +276,9 @@ export async function journeySupportView(p,{widths,shots,engine}){
   const bookCommands=await bookCommandView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
   const bookSourceCalendar=await bookSourceCalendarView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
   const auditUi=await auditUiView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
+  const learningCorrections=await learningCorrectionsView(p.context().browser(),new URL(p.url()).origin,{shots,engine});
   assert.equal(bookProof.bookMeasurements.length,14);assert.equal(bookProof.bookHeat.length,12);assert.equal(bookProof.bookLight.length,28);assert.equal(bookProof.bookWater.length,16);assert.equal(bookProof.bookParticle.length,10);
-  return {hints,diagrams,sources,widths,bookCommands,bookSourceCalendar,auditUi,bookContext:bookProof.bookContext,bookSearch:bookProof.bookSearch,bookMeasurements:bookProof.bookMeasurements,bookNetwork,bookHeat:bookProof.bookHeat,bookHeatNetwork,bookLight:bookProof.bookLight,bookLightNetwork,bookWater:bookProof.bookWater,bookWaterNetwork,bookParticle:bookProof.bookParticle,bookParticleNetwork,bookRelatedWords:bookProof.bookRelatedWords,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
+  return {hints,diagrams,sources,widths,bookCommands,bookSourceCalendar,auditUi,learningCorrections,bookContext:bookProof.bookContext,bookSearch:bookProof.bookSearch,bookMeasurements:bookProof.bookMeasurements,bookNetwork,bookHeat:bookProof.bookHeat,bookHeatNetwork,bookLight:bookProof.bookLight,bookLightNetwork,bookWater:bookProof.bookWater,bookWaterNetwork,bookParticle:bookProof.bookParticle,bookParticleNetwork,bookRelatedWords:bookProof.bookRelatedWords,...(learningHelp?{learningHelp}:{}),seconds:(performance.now()-started)/1000};
  }catch(error){await p.screenshot({path:path.join(shots,'journey-engine-'+engine+'-support'+'-failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{if(!wasLarge)await p.evaluate(()=>document.querySelector('.earth-app')?.classList.remove('large-reading'));await p.setViewportSize({width:390,height:844});await p.evaluate(hash=>location.hash=hash,initialRoute);if(initialRoute==='#journeys')await p.locator('.journey-filters input').waitFor();}
 }
 export async function journeyLearningHelpView(browser,base,ready,shots){

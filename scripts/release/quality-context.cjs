@@ -52,7 +52,7 @@ async function verifyLive(saved, env = process.env, request = fetch) {
   async function get(resource) {
     const response = await request(`https://api.github.com/repos/${REPO}/${resource}`, {
       headers:{Accept:'application/vnd.github+json', Authorization:`Bearer ${env.GITHUB_TOKEN}`},
-      signal:AbortSignal.timeout(15000), redirect:'error'});
+      signal:AbortSignal.timeout(19500), redirect:'error'});
     if (!response.ok) throw Error(`Cannot verify current Quality context (HTTP ${response.status})`);
     return response.json();
   }

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=null}={}){
  const controls=figure.locator('.visual-choice button'),count=await controls.count(),states=[];
  for(let selected=0;selected<Math.max(1,count);selected++){
+  let paletteObservation=null;
   if(count){await controls.nth(selected).focus();await figure.page().keyboard.press('Enter');assert.equal(await controls.nth(selected).getAttribute('aria-pressed'),'true');}
   await figure.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
   const geometry=await figure.evaluate((root,{kind})=>{
@@ -39,16 +40,29 @@ export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=
   }
   if(kind==='infrared-palette'){
    assert.deepEqual(await figure.locator('[data-light-signal]').evaluateAll(es=>es.map(e=>Number(e.dataset.lightSignal))),[10,20,30]);
+   const coloursFirstRead=await figure.locator('[data-light-signal]>span:first-child').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor)),started=performance.now();
+   let completionFailure=null;
+   // aria-pressed and two render frames do not establish that computed CSS
+   // colours have reached their new state. Await the original palette predicate
+   // within the existing page timeout; a lasting wrong palette still fails.
+   try{await figure.page().waitForFunction(({root,selected})=>{
+    const colours=[...root.querySelectorAll('[data-light-signal]>span:first-child')].map(e=>getComputedStyle(e).backgroundColor);
+    return colours.length===3&&new Set(colours).size===3&&(selected===0?colours.some(c=>!/^rgb\((\d+), \1, \1\)$/.test(c)):colours.every(c=>/^rgb\((\d+), \1, \1\)$/.test(c)));
+   },{root:await figure.elementHandle(),selected});}catch(error){completionFailure=String(error);}
    const colours=await figure.locator('[data-light-signal]>span:first-child').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor));
+   assert.deepEqual(await figure.locator('[data-light-signal]').evaluateAll(es=>es.map(e=>Number(e.dataset.lightSignal))),[10,20,30],'the colour transition never changes sample values');
+   assert.equal(await controls.nth(selected).getAttribute('aria-pressed'),'true','style completion preserves the actual selected palette');
    assert.equal(new Set(colours).size,3);
    const paletteMatches=selected===0?colours.some(c=>!/^rgb\((\d+), \1, \1\)$/.test(c)):colours.every(c=>/^rgb\((\d+), \1, \1\)$/.test(c));
-   if(!paletteMatches){
+   paletteObservation={coloursFirstRead,coloursAfterCompletion:colours,completionWaitMs:performance.now()-started,completionFailure};
+   if(!paletteMatches||completionFailure){
     // Keep the first measurement before a caller's route-restoring finally.
     // A later successful layout read must never replace the failing colours.
-    const diagnostic={kind,selected,coloursFirstRead:colours,context:await figure.evaluate(root=>({hash:location.hash,width:innerWidth,visibility:document.visibilityState,focus:document.activeElement?.outerHTML,mediaReduced:matchMedia('(prefers-reduced-motion:reduce)').matches,forcedColors:matchMedia('(forced-colors:active)').matches,controls:[...root.querySelectorAll('.visual-choice button')].map(e=>({text:e.textContent,pressed:e.getAttribute('aria-pressed')})),samples:[...root.querySelectorAll('[data-light-signal]>span:first-child')].map(e=>({inline:e.getAttribute('style'),computed:getComputedStyle(e).backgroundColor,transition:getComputedStyle(e).transition,animation:getComputedStyle(e).animation})),animations:root.getAnimations({subtree:true}).map(a=>({state:a.playState,time:a.currentTime}))})).catch(error=>({captureError:String(error)}))};
+    const diagnostic={kind,selected,coloursFirstRead,...paletteObservation,context:await figure.evaluate(root=>({hash:location.hash,width:innerWidth,visibility:document.visibilityState,focus:document.activeElement?.outerHTML,mediaReduced:matchMedia('(prefers-reduced-motion:reduce)').matches,forcedColors:matchMedia('(forced-colors:active)').matches,controls:[...root.querySelectorAll('.visual-choice button')].map(e=>({text:e.textContent,pressed:e.getAttribute('aria-pressed')})),samples:[...root.querySelectorAll('[data-light-signal]>span:first-child')].map(e=>({inline:e.getAttribute('style'),computed:getComputedStyle(e).backgroundColor,transition:getComputedStyle(e).transition,animation:getComputedStyle(e).animation})),animations:root.getAnimations({subtree:true}).map(a=>({state:a.playState,time:a.currentTime}))})).catch(error=>({captureError:String(error)}))};
     console.error('BOOK_LIGHT_PALETTE_FAILURE '+JSON.stringify(diagnostic));
     if(onFailure)try{await onFailure(diagnostic);}catch(error){console.error('BOOK_LIGHT_PALETTE_CAPTURE_ERROR '+String(error));}
    }
+   assert.equal(completionFailure,null,'palette must reach its original computed-colour predicate within the existing page timeout');
    assert(paletteMatches,'palette changes presentation, never sample values; selected='+selected+'; first colours='+JSON.stringify(colours));
   }
   if(kind==='frequency'||kind==='wavelength'){
@@ -67,7 +81,7 @@ export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=
   const svg=figure.locator('svg');if(await svg.count()){
    const escaped=await svg.evaluate(e=>{const v=e.viewBox.baseVal;return [...e.querySelectorAll('path:not(defs path),rect,circle,polyline')].flatMap(el=>{const b=el.getBBox();return b.x<v.x-1||b.y<v.y-1||b.x+b.width>v.x+v.width+1||b.y+b.height>v.y+v.height+1?[el.outerHTML.slice(0,180)]:[];});});assert.deepEqual(escaped,[],'drawn learning objects remain inside the viewBox');
   }
-  if(onState)await onState(selected);states.push({kind,selected,keyboard:count>0,semanticGeometry:true});
+  if(onState)await onState(selected);states.push({kind,selected,keyboard:count>0,semanticGeometry:true,...(paletteObservation?{paletteObservation}:{})});
  }
  if(count){await controls.first().focus();await figure.page().keyboard.press('Enter');}
  return states;

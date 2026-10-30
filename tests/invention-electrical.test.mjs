@@ -1,3 +1,6 @@
+import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
+// Only named field revisions are projected for these historical comparisons;
+// raw current fields and all190topics/sevenbanks have separate strict guards.
 import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
 import scienceBaseline from './fixtures/retained-before-science-originals.json' with {type:'json'};
@@ -24,8 +27,8 @@ test('three retained electrical originals preserve all147 delivered articles exc
 });
 test('all177 delivered questions and all15 technology and24 historical game tasks stay byte-equivalent as data',()=>{
  const retained=CHALLENGE_BANK.filter(q=>!['history-bronze',...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(q.topic));assert.equal(retained.length,177);assert.equal(hash(retained),'e586265776b9e65af96f4b4bf5221964dd97e3c57d1823563cf1d2110cc0f478');assert.equal(CHALLENGE_BANK.length,220);
- const old=worldGameBank('technology').filter(q=>!['history-bronze',...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(q.id));assert.equal(old.length,15);assert.equal(hash(old),'2ff09a3c8ed3aa0d368cde7e48502fed1a38972e64eb59c0138cf3a5467c9ba5');assert.equal(worldGameBank('technology').length,24);
- assert.equal(worldGameBank('then-now').length,24);assert.equal(hash(worldGameBank('then-now')),'619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb');
+ const old=worldGameBank('technology').map(gameBeforeLearningAudit).filter(q=>!['history-bronze',...ids,...mechanicsIds,...buildingIds,...scienceIds].includes(q.id));assert.equal(old.length,15);assert.equal(hash(old),'2ff09a3c8ed3aa0d368cde7e48502fed1a38972e64eb59c0138cf3a5467c9ba5');assert.equal(worldGameBank('technology').length,24);
+ assert.equal(worldGameBank('then-now').length,24);assert.equal(hash(worldGameBank('then-now').map(gameBeforeLearningAudit)),'619c3f691d061b48018e73f1085878f16a026e4c2e32bef8aee338abaabc16cb');
  const pool=worldGameBank('technology'),fallback=Object.fromEntries(pool.map(q=>[q.id,q.answers])),saved=Object.fromEntries(old.map(q=>[q.id,[...q.answers].reverse()]));saved.futureQuestion={opaque:'synthetic'};const restored=restoreWorldGameOrders(saved,fallback,pool);for(const [id,value]of Object.entries(saved))assert.deepEqual(restored[id],value);
  for(const difficulty of ['easy','medium','hard']){const q=retained.filter(q=>q.difficulty===difficulty).slice(0,6),save={difficulty,ids:q.map(q=>q.id),orders:Object.fromEntries(q.map(q=>[q.id,[...q.answers].reverse()])),index:3,answer:q[3].answers[1],done:false};assert.deepEqual(restoreChallenge(structuredClone(save),{invalid:true}),save);}
 });

@@ -46,7 +46,7 @@ export async function discoveryVisitCases(browser,base,ready,monitor,report,shot
  await immediateHomePhotoCases(browser,base,ready,monitor,report,shots);
  const index=await read('../../app/world-index.json'),photos=await read('../../app/world-photos.json');
  for(const timezoneId of ['Europe/Berlin','America/Los_Angeles']){
-  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',timezoneId}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);
+  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',timezoneId}),page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);
   try{
    await homeTime(page,'2026-10-27T00:15:00Z');await page.goto(base);await ready(page);
    const selection=()=>page.evaluate(()=>({heroId:document.querySelector('[data-discovery-hero]').dataset.discoveryHero,trailId:document.querySelector('[data-discovery-trail-current]').dataset.discoveryTrailCurrent}));
@@ -199,7 +199,7 @@ export async function rapidHashReturn(page,report,width){
    const button=trigger==='route-button'?[...document.querySelectorAll('.discovery-network button')].find(b=>b.textContent.startsWith('Lernroute:')):document.querySelector('[data-route-focus="home-nav-world"]');
    if(!button)throw Error('Actual navigation control missing');button.click();location.hash='home';
   },trigger);
-  await page.waitForFunction(()=>location.hash==='#home'&&document.querySelector('.earth-app')?.dataset.mode==='home'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:20000});
+  await page.waitForFunction(()=>location.hash==='#home'&&document.querySelector('.earth-app')?.dataset.mode==='home'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:26000});
   assert.equal(await page.getByRole('tab',{name:'Entdecken',exact:true}).getAttribute('aria-selected'),'true');
   const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
   for(const key of ['gameSessions','notes','favorites','games','journeys','labs','review','settings'])assert.deepEqual(after[key],before[key],'rapid return preserves '+key);
@@ -318,7 +318,7 @@ export async function worldFilterKeyboardFocus(page,ready,report,width){
 export async function homepageOverview(browser,base,ready,monitor,report,shots){
  report.homepageViews=[];
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
-  const c=await browser.newContext({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const c=await browser.newContext({viewport:{width,height},isMobile:width<=390,hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
   try{
    await p.goto(base);await ready(p);
    for(const image of await p.locator('.discovery-worlds img').all())await image.evaluate(im=>im.decode());
@@ -498,7 +498,7 @@ export async function historyEngineView(page,width,shots,{engine='chromium',capt
 async function immediateHomePhotoCases(browser,base,ready,monitor,report,shots){
  const entries=(await read('../../app/world-index.json')).filter(t=>t.homeQuestion&&t.image),photos=await read('../../app/world-photos.json'),trail=(await read('../../app/discovery-connections.json'))[0].id,observed=[];
  for(const width of[320,1440]){
-  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
+  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(26000);let requests=0;
   try{
    await page.route('**/world-photos-*.json',route=>{requests++;return route.abort('failed');});
    await page.goto(base);await ready(page);

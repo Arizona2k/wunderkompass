@@ -1,3 +1,6 @@
+import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
+// Only named field revisions are projected for these historical comparisons;
+// raw current fields and all190topics/sevenbanks have separate strict guards.
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import inquiries from '../app/people-inquiries.json' with {type:'json'};
@@ -12,7 +15,7 @@ const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 test('the real preceding20-person topics, every clue/choice and all220 challenge records survive the two prepared additions',()=>{
  assert.equal(catalog.length,190);assert.equal(catalog.filter(t=>t.person).length,22);
  assert.deepEqual(beforePeopleMethods(catalog).filter(t=>t.person),legacy.peopleTopics);
- assert.deepEqual(worldGameBank('people').filter(t=>!PEOPLE_METHOD_IDS.includes(t.id)),legacy.peopleBank);
+ assert.deepEqual(worldGameBank('people').map(gameBeforeLearningAudit).filter(t=>!PEOPLE_METHOD_IDS.includes(t.id)),legacy.peopleBank);
  const old=beforePeopleMethodQuestions(CHALLENGE_BANK);assert.equal(old.length,220);assert.equal(hash(old),legacy.previousChallengeSHA256);assert.equal(CHALLENGE_BANK.length,226);
  for(const difficulty of ['easy','medium','hard']){const pool=old.filter(q=>q.difficulty===difficulty).slice(0,6),round={difficulty,ids:pool.map(q=>q.id),orders:Object.fromEntries(pool.map(q=>[q.id,[...q.answers].reverse()])),index:2,answer:pool[2].answers[(pool[2].correct+1)%3],done:false};assert.deepEqual(restoreChallenge(structuredClone(round),{invalid:true}),round);}
  const pool=worldGameBank('people'),orders=Object.fromEntries(legacy.peopleBank.map(q=>[q.id,[...q.answers].reverse()]));assert.deepEqual(Object.fromEntries(Object.entries(restoreWorldGameOrders(orders,{},pool,'people')).filter(([id])=>id in orders)),orders);

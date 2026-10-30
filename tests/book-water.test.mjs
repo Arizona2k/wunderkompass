@@ -1,3 +1,4 @@
+import {dossierBeforeLearningAudit} from './learning-audit-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -27,7 +28,7 @@ test('all113 prior word payloads,34 Why payloads and entire SI, heat and light p
 });
 
 test('water additions preserve all126 earlier complete individual dossiers',()=>{
- const old=read('tests/fixtures/editorial-before-water-126-hashes.json'),current=read('content/editorial-reviews.json').dossiers;assert.equal(old.dossiers.length,126);assert.equal(current.length,139);
+ const old=read('tests/fixtures/editorial-before-water-126-hashes.json'),current=read('content/editorial-reviews.json').dossiers.map(dossierBeforeLearningAudit);assert.equal(old.dossiers.length,126);assert.equal(current.length,139);
  for(const d of old.dossiers){const now=current.find(e=>e.id===d.id);assert(now);const unchanged={...now};if(now.historicalUIBeforeAuditUiCurrentFull20261029){unchanged.ui=now.historicalUIBeforeAuditUiCurrentFull20261029;delete unchanged.historicalUIBeforeAuditUiCurrentFull20261029;}
   // Rewind the later particle UI layer before the older water layer. The
   // independent134-dossier fixture also binds that complete intermediate state.

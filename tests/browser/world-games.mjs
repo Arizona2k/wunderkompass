@@ -6,7 +6,7 @@ const games=[['animal-detective','Tierdetektiv – neue Spuren'],['habitats','Ti
 const time=['history-paper','history-printing','history-railway','history-apollo11','history-web'];
 const records={'animal-blue-whale':'Blauwal','animal-african-savanna-elephant':'Afrikanischer Savannenelefant','animal-cheetah':'Gepard','animal-giraffe':'Giraffe','animal-common-octopus':'Oktopus'};
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:1280,height:900},reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(25000);
+ const c=await browser.newContext({viewport:{width:1280,height:900},reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(32500);
  const report={checks:[],errors:[],consoleErrors:[]};p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});
  const state=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
  const persisted=async(id,key)=>{await p.waitForFunction(({id,key})=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3'))?.progress.gameSessions[id]?.[key]!==undefined,{id,key});return (await state()).gameSessions[id];};
