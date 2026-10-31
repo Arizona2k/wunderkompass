@@ -1,7 +1,7 @@
 "use client";
 import {Check,Compass,Globe2} from 'lucide-react';
 import {Progress} from '@/components/ui/progress';
-import {JOURNEYS} from './learning-data';
+import {JOURNEYS} from './learning-overview';
 import {countryPlace,type Country,type Place} from './earth-data';
 import type {LocalProgress} from './progress-storage';
 export default function LearningProgress({progress,countries,onJourney,onPlace}:{progress:LocalProgress;countries:Country[];onJourney:(id:string)=>void;onPlace:(p:Place)=>void}){

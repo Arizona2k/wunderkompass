@@ -42,3 +42,12 @@
 
 .book-heat-figure .book-figure-limit{line-height:1.65;color:var(--wk-muted);margin-top:15px}
 .book-light-figure .visual-choice{display:flex;flex-wrap:wrap;gap:10px;margin-block:16px}.book-light-figure button{min-height:44px;white-space:normal;line-height:1.5}.book-light-figure [aria-pressed=true]{border-color:var(--wk-teal);background:#e5efec}.light-palette{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.light-palette li{display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}.light-palette li>span:first-child{height:64px;border:1px solid #526773;border-radius:6px}.book-light-figure .light-palette li+li{margin-top:0}
+
+/* Own mechanics controls: visible quantity labels, same readable font sizes. */
+.book-mechanics-figure .mechanics-choice-label{margin:14px 0 6px;font-weight:700;color:var(--wk-ink)}
+.book-mechanics-figure .mechanics-force-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:360px}
+.book-mechanics-figure .mechanics-force-choices button{min-width:0;padding-inline:8px}
+
+/* Keep the new figure hierarchy equal in word and Why entries. */
+.knowledge-book .book-mechanics-figure h4{font-size:20px;line-height:1.3;letter-spacing:-.02em;margin:0 0 12px}
+.large-reading .knowledge-book .book-mechanics-figure h4{font-size:24px}

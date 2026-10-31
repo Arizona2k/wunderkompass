@@ -1,4 +1,4 @@
-import { JOURNEYS } from "./learning-data";
+import { JOURNEYS } from "./learning-overview";
 import COUNTRY_META from "./country-metadata.json" with {type:"json"};
 import { EXTRA_QUESTIONS } from "./quiz-data";
 export type Mode = "home" | "globe" | "layers" | "day" | "quiz" | "journeys" | "games" | "book" | "labs" | "world";

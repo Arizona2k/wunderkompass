@@ -1,6 +1,6 @@
 import dataURL from './journey-inquiries.json?url';
 import {validateJourneyInquiries} from './journey-inquiry-validation.mjs';
-import {JOURNEYS} from './learning-data';
+import {JOURNEYS} from './learning-overview';
 export type JourneyTask={prompt:string;answers:string[];correct:number;hint:string;why:string;wrong:string[]};
 export type ChapterInquiry={id:string;journeyId:string;index:number;goal:string;scene:string;tasks:JourneyTask[];sequence?:string[]};
 let finalHints:Record<string,string>={};

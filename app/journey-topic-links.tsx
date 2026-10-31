@@ -1,6 +1,6 @@
 import type {MouseEvent} from 'react';
 import {ArrowRight} from 'lucide-react';
-import {JOURNEYS} from './learning-data';
+import {JOURNEYS} from './learning-overview';
 import {chapterLinksForTopic} from './journey-links';
 import {navigateHash} from './hash-route';
 export default function JourneyTopicLinks({topicId,onReadStop}:{topicId:string;onReadStop:()=>void}){

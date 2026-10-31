@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "sourceReadOn": "2026-10-30",
+  "words": {
+    "Kraft": [
+      "Kraft",
+      "Bewegung & Wellen",
+      "Eine Kraft beschreibt eine Wechselwirkung zwischen Körpern. Kräfte können Bewegung verändern oder Körper verformen. Mehrere Kräfte müssen gemeinsam betrachtet werden: Wenn sie sich an einem Körper ausgleichen, bedeutet das nicht, dass überhaupt keine Kräfte wirken."
+    ],
+    "Trägheit": [
+      "Trägheit",
+      "Bewegung & Wellen",
+      "Trägheit bedeutet, dass ein Körper seinen Bewegungszustand nicht von selbst ändert. Im passenden einfachen Bezugssystem bleibt er ohne resultierende Kraft in Ruhe oder bewegt sich gleichförmig geradeaus. Alltagsgegenstände werden oft durch Reibung langsamer."
+    ],
+    "Geschwindigkeit": [
+      "Geschwindigkeit",
+      "Bewegung & Wellen",
+      "Geschwindigkeit beschreibt, wie sich ein Ort mit der Zeit verändert. Zum genauen Beschreiben einer Bewegung gehören auch Richtung und Bezugssystem. Eine große zurückgelegte Strecke allein sagt noch nicht, wie schnell etwas war: Die benötigte Zeit gehört dazu."
+    ],
+    "Beschleunigung": [
+      "Beschleunigung",
+      "Bewegung & Wellen",
+      "Beschleunigung beschreibt eine Änderung der Geschwindigkeit mit der Zeit. Dazu gehört schneller oder langsamer werden, aber auch eine Änderung der Bewegungsrichtung. Ein Körper kann daher beschleunigen, obwohl seine Schnelligkeit gleich bleibt."
+    ]
+  },
+  "learning": {
+    "Kraft": {
+      "starter": "Beim Ziehen oder Schieben wirken Kräfte. Sie können etwas schneller, langsamer oder anders geformt machen.",
+      "deeper": "Für eine gleichbleibende Masse gilt im einfachen Bewegungsmodell: resultierende Kraft = Masse mal Beschleunigung. Richtung und Zusammenwirken sind wichtig. Eine Kraft allein beweist nicht, dass ein Körper sich schon bewegt.",
+      "observe": "Drücke einen weichen Papierknäuel vorsichtig zwischen beiden Händen. Beschreibe Bewegung und Verformung getrennt. Überlege, welche Kräfte wirken, auch wenn der Knäuel insgesamt an derselben Stelle bleibt.",
+      "benefit": "Du unterscheidest einzelne Kräfte, ihr Zusammenwirken und die daraus folgende Veränderung.",
+      "topic": "science-lever",
+      "connection": "Am Hebel wirken Kräfte mit unterschiedlichen Hebelarmen. Vergleiche einzelne Kräfte und ihre Drehwirkung, statt nur die größere Zahl zu wählen.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "title": "NASA · Kraft (Englisch)",
+          "anchor": "Equilibrium and net opposing force; constant-mass F=m·a; own paper observation, no flight calculation or source illustration copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/12-4-elasticity-and-plasticity",
+          "title": "OpenStax · Elastizität und plastische Verformung (Englisch)",
+          "anchor": "Abschnitt12.4, Einleitung und Absatz zur Lastentfernung: äußere Belastung verändert Form/Größe; Rückkehr und bleibende Verformung werden getrennt. Keine Werkstoffwerte oder fremden Diagramme übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Beschleunigung",
+          "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+        },
+        {
+          "term": "Trägheit",
+          "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+        },
+        {
+          "term": "Kilogramm",
+          "reason": "Die Masse gehört in das einfache Modell: Bei gleicher resultierender Kraft verändert sich die Geschwindigkeit eines massereicheren Körpers langsamer."
+        }
+      ],
+      "question": {
+        "prompt": "Im Modell wirken auf einen Körper nur zwei gleich große, entgegengesetzte Kräfte. Was gilt für ihre gemeinsame Wirkung?",
+        "answers": [
+          "Es wirken keine einzelnen Kräfte",
+          "Ihre resultierende Kraft ist null",
+          "Der Körper muss deshalb stillstehen"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide einzelne Kräfte, ihre gemeinsame Wirkung und den bisherigen Bewegungszustand.",
+        "why": "Die beiden vorhandenen Kräfte gleichen sich aus. Die resultierende Kraft ist null; ein anfangs ruhender Körper bleibt in Ruhe, ein bereits bewegter Körper kann sich im passenden einfachen Bezugssystem gleichförmig geradeaus weiterbewegen.",
+        "wrongReasons": [
+          "Kräfteausgleich bedeutet nicht, dass die einzelnen Kräfte verschwunden sind.",
+          "",
+          "Eine resultierende Kraft von null erzwingt keine Ruhe. Auch eine gleichförmige geradlinige Bewegung ist möglich."
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum helfen raue Schuhsohlen beim Gehen?",
+          "reason": "Beim Abstoßen kann Reibung relatives Rückwärtsrutschen an der Kontaktstelle verhindern. Unterscheide das vom Vorwärtsbewegen des ganzen Körpers."
+        },
+        {
+          "question": "Warum hilft ein langer Hebelarm beim Drehen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen."
+        },
+        {
+          "question": "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst den Geltungsbereich eines Materialmodells."
+        }
+      ],
+      "figure": "forces-and-net"
+    },
+    "Trägheit": {
+      "starter": "Ein Körper ändert seine Bewegung nicht einfach von selbst. Kräfte können ihn anstoßen, bremsen oder umlenken.",
+      "deeper": "Newton beschreibt den Fall ohne resultierende Kraft. Ein rollender Gegenstand auf einem Tisch ist kein reibungsfreies Modell: Kontakt und Luft können ihn bremsen. Beobachtung und idealisierte Annahme müssen unterschieden werden.",
+      "observe": "Schiebe eine Papierkarte langsam über eine glatte und eine rauere Tischunterlage. Beschreibe, warum diese Alltagsbeobachtung nicht den gedachten Fall ohne Reibung darstellt. Bleib bei einer kleinen, ungefährlichen Bewegung auf dem Tisch.",
+      "benefit": "Du erklärst, warum das Anhalten im Alltag nicht bedeutet, dass Bewegung immer eine antreibende Kraft braucht.",
+      "topic": "science-friction",
+      "connection": "Die Reibungskarte zeigt, warum Bewegung im Alltag gebremst werden kann. Vergleiche diesen Fall mit dem gedachten Modell ohne resultierende Kraft.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-motion-newtons-first-law/",
+          "title": "NASA · Trägheit (Englisch)",
+          "anchor": "First-law net-force condition, constant straight velocity; friction/drag distinction. No dated Newton biography claim used.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Trägheit beschreibt den unveränderten Bewegungszustand ohne resultierende Kraft. Kräfteausgleich und völlige Abwesenheit von Kräften sind verschieden."
+        }
+      ],
+      "question": {
+        "prompt": "Ein Körper bewegt sich bereits geradeaus. Im Gedankenmodell gleichen sich alle äußeren Kräfte aus. Was folgt?",
+        "answers": [
+          "Er bewegt sich mit unveränderter Geschwindigkeit geradeaus weiter",
+          "Seine Schnelligkeit nimmt ohne resultierende Kraft von selbst ab",
+          "Seine Schnelligkeit nimmt ohne resultierende Kraft immer weiter zu"
+        ],
+        "correct": 0,
+        "hint": "Überlege, welche Bedingung eine Änderung des Bewegungszustands bewirkt.",
+        "why": "Ohne resultierende äußere Kraft bleibt im passenden einfachen Bezugssystem die Geschwindigkeit gleich. Das schließt eine geradlinige Bewegung mit einer Schnelligkeit größer als null ein.",
+        "wrongReasons": [
+          "",
+          "Das Langsamerwerden im Alltag hat Ursachen wie Reibung. Im Gedankenmodell fehlt die resultierende bremsende Kraft.",
+          "Schnellerwerden ist eine Bewegungsänderung. Sie folgt hier nicht aus dem Kräfteausgleich."
+        ]
+      },
+      "figure": "balanced-motion"
+    },
+    "Geschwindigkeit": {
+      "starter": "Vergleiche Strecke und Zeit. Dieselbe Strecke in weniger Zeit bedeutet bei diesem Vergleich eine größere mittlere Schnelligkeit.",
+      "deeper": "Schnelligkeit ist der Betrag der Geschwindigkeit; die physikalische Geschwindigkeit hat zusätzlich eine Richtung. Zwei Bewegungen können gleich schnell sein und trotzdem in entgegengesetzte Richtungen führen.",
+      "observe": "Zeichne zwei gleich lange Pfeile, einen nach links und einen nach rechts. Welche Angabe ist gleich, welche verschieden? Das sind gedachte Bewegungen, keine Messung eines echten Fahrzeugs.",
+      "benefit": "Du berücksichtigst Zeit und Richtung statt nur die Länge einer Strecke.",
+      "topic": "science-pendulum",
+      "connection": "Beim Pendel ändern sich Schnelligkeit und Richtung während einer Schwingung. Eine Fadenlänge ist noch keine Geschwindigkeit: Zeit und Bewegung gehören dazu.",
+      "sources": [
+        {
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/equations-of-motion/",
+          "title": "NASA · Geschwindigkeit (Englisch)",
+          "anchor": "Vector velocity, location/time and initial velocity in one-dimensional constant-force model; own arrows and examples.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Beschleunigung",
+          "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+        },
+        {
+          "term": "Meter",
+          "reason": "Ort und zurückgelegte Strecke brauchen eine Längenangabe; für den Bewegungsvergleich gehört zusätzlich die Zeit dazu."
+        },
+        {
+          "term": "Sekunde",
+          "reason": "Mittlere Schnelligkeit vergleicht eine Strecke mit einer Zeitspanne, beispielsweise Meter pro Sekunde."
+        }
+      ],
+      "question": {
+        "prompt": "Zwei gleich schnelle Bewegungen führen in entgegengesetzte Richtungen. Was gilt?",
+        "answers": [
+          "Ihre Richtungen sind gleich",
+          "Sie haben automatisch dieselbe physikalische Geschwindigkeit",
+          "Ihre Schnelligkeit ist gleich, die Richtung verschieden"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide Betrag und Richtung.",
+        "why": "Gleiche Schnelligkeit beschreibt den Betrag. Entgegengesetzte Richtungen bedeuten unterschiedliche Geschwindigkeitsvektoren.",
+        "wrongReasons": [
+          "Die Pfeile zeigen ausdrücklich in unterschiedliche Richtungen.",
+          "Zur physikalischen Geschwindigkeit gehört auch die Richtung; gleiche Schnelligkeit allein reicht nicht.",
+          ""
+        ]
+      },
+      "figure": "velocity-direction"
+    },
+    "Beschleunigung": {
+      "starter": "Wenn Bewegung schneller, langsamer oder in eine andere Richtung wird, verändert sich die Geschwindigkeit.",
+      "deeper": "Beim gleich schnellen Fahren durch eine Kurve ändert sich die Richtung. Physikalisch ist das Beschleunigung. Für eine konstante Masse hängt sie im einfachen Modell von der resultierenden Kraft ab, nicht nur von einem beliebigen einzelnen Schub.",
+      "observe": "Fahre mit dem Finger langsam entlang eines gezeichneten Kreises. Beschreibe, wie sich die Richtung verändert. Das ist eine Zeichenhilfe; sie misst keine tatsächliche Beschleunigung.",
+      "benefit": "Du erkennst Richtungsänderung und Bremsen ebenfalls als Geschwindigkeitsänderung.",
+      "topic": "science-pendulum",
+      "connection": "Das Pendel wechselt seine Bewegungsrichtung. Vergleiche die Änderung seiner Geschwindigkeit mit der bloßen Zeit für eine ganze Schwingung.",
+      "sources": [
+        {
+          "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/",
+          "title": "NASA · Beschleunigung (Englisch)",
+          "anchor": "Acceleration parallel, opposite and angled to velocity; old metal-cylinder kilogram definition deliberately not adopted.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Bei konstanter Masse verändert eine resultierende Kraft die Geschwindigkeit. Beschleunigung beschreibt diese Veränderung mit der Zeit."
+        },
+        {
+          "term": "Geschwindigkeit",
+          "reason": "Geschwindigkeit umfasst Betrag und Richtung; Beschleunigung beschreibt eine Änderung davon mit der Zeit."
+        }
+      ],
+      "question": {
+        "prompt": "Eine gedachte Bewegung bleibt gleich schnell, führt aber durch eine Kurve. Was gilt?",
+        "answers": [
+          "Die Richtung und damit die Geschwindigkeit ändern sich",
+          "Nur der Ort ändert sich; die Geschwindigkeit bleibt unverändert",
+          "Beschleunigung liegt erst vor, wenn auch die Schnelligkeit zunimmt"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Schnelligkeit und Richtung der Bewegung.",
+        "why": "Der Geschwindigkeitsvektor enthält auch die Richtung. Bei gleichbleibender Schnelligkeit ist eine Richtungsänderung daher ebenfalls Beschleunigung.",
+        "wrongReasons": [
+          "",
+          "Neben dem Ort ändert sich in der Kurve auch die Richtung der Geschwindigkeit.",
+          "Auch Bremsen oder Umlenken verändern die Geschwindigkeit; eine wachsende Schnelligkeit ist keine notwendige Bedingung."
+        ]
+      },
+      "figure": "changing-velocity"
+    }
+  },
+  "why": {
+    "Warum helfen raue Schuhsohlen beim Gehen?": [
+      "Warum helfen raue Schuhsohlen beim Gehen?",
+      "Reibung zwischen Sohle und Boden kann verhindern, dass der Fuß leicht wegrutscht. Rau bedeutet aber nicht überall sicher: Material, Nässe, Belastung und Boden verändern den Kontakt."
+    ],
+    "Warum hilft ein langer Hebelarm beim Drehen?": [
+      "Warum hilft ein langer Hebelarm beim Drehen?",
+      "Bei einem Hebel sind Kraft und Abstand zum Drehpunkt wichtig. Ein längerer passender Kraftarm kann dieselbe Drehwirkung mit weniger Kraft ermöglichen. Dafür kann ein größerer Weg nötig sein."
+    ],
+    "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?": [
+      "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?",
+      "Elastische Verformung kann sich nach dem Entlasten zurückbilden. Reale Materialien besitzen aber Grenzen. Zu starke Belastung kann eine bleibende Veränderung verursachen; nicht jeder Stoff folgt demselben einfachen Modell."
+    ]
+  },
+  "whyLearning": {
+    "Warum helfen raue Schuhsohlen beim Gehen?": {
+      "starter": "Beim Gehen braucht der Fuß Halt am Boden. Reibung hilft dabei, sich abzustoßen.",
+      "deeper": "Beim Abstoßen soll der Fuß am Boden Halt haben. Reibung kann relatives Rutschen am Kontakt verhindern und so Bewegung ermöglichen. Material, Nässe und Belastung beeinflussen den Kontakt; rau bedeutet nicht unter allen Bedingungen sicher. Die Skizze ist keine Sicherheitsprüfung eines echten Bodens.",
+      "observe": "Zeichne einen Fuß im Gedankenmodell und zwei getrennte Pfeile für Abstoßbewegung und die Kontaktkraft. Probiere keine rutschigen Böden oder riskanten Laufversuche aus.",
+      "benefit": "Du unterscheidest das Verhindern relativen Wegrutschens am Kontakt von der Bewegung des ganzen Körpers. Reibung ist nicht immer nur eine Bremse.",
+      "topic": "science-friction",
+      "sources": [
+        {
+          "url": "https://spark.iop.org/friction-between-solid-surfaces",
+          "title": "Institute of Physics · Reibung zwischen festen Flächen",
+          "anchor": "Teaching Notes · normal force, static versus sliding contact and experimental limitations",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+          "title": "OpenStax · Friction (Englisch)",
+          "anchor": "Einleitung: Reibung widersetzt sich relativer Bewegung am Kontakt und ermöglicht Bewegung; einfache Kontaktmodelle nur im angegebenen Bereich. Globale Formulierung always opposite motion wird nicht als Aussage über die Bewegung des ganzen Körpers übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Beim Abstoßen kann Reibung relatives Rückwärtsrutschen an der Kontaktstelle verhindern. Unterscheide das vom Vorwärtsbewegen des ganzen Körpers."
+        }
+      ],
+      "connection": "Die Reibungskarte beschreibt Kontaktflächen und Bewegung. Übertrage den Gedanken auf die Schuhsohle: Zum Abstoßen brauchst du Halt am Boden.",
+      "figure": "friction-contact",
+      "question": {
+        "prompt": "Beim Abstoßen droht der Fuß nach hinten über den ruhenden Boden zu rutschen. Wie kann die Reibung des Bodens auf den Fuß wirken?",
+        "answers": [
+          "Nach vorn; sie kann das relative Rückwärtsrutschen verhindern",
+          "Immer nach hinten, weil sich der ganze Körper nach vorn bewegt",
+          "Gar nicht, solange der Fuß am Kontakt nicht rutscht"
+        ],
+        "correct": 0,
+        "hint": "Beziehe die Richtung auf das drohende Rutschen an der Kontaktstelle.",
+        "why": "Die Reibung kann das drohende Rückwärtsrutschen des Fußes verhindern und dabei nach vorn auf ihn wirken. Das ist ein bestimmter Abstoßfall, keine Regel für jede Phase eines Schritts.",
+        "wrongReasons": [
+          "",
+          "Entscheidend ist die relative Bewegung oder Rutschneigung am Kontakt, nicht allein die Bewegungsrichtung des ganzen Körpers.",
+          "Haftreibung kann auch ohne tatsächliches Rutschen wirken. Sie ist nicht dieselbe Situation wie Gleitreibung."
+        ]
+      }
+    },
+    "Warum hilft ein langer Hebelarm beim Drehen?": {
+      "starter": "Weiter vom Drehpunkt kann eine Kraft anders wirken. Der Abstand gehört zur Erklärung.",
+      "deeper": "Die senkrechte Wirksamkeit der Kraft und beide Hebelarme müssen zusammenpassen. Ein langer Gegenstand allein ist kein funktionierender idealer Hebel. Das Modell gewinnt keine Energie aus dem Nichts.",
+      "observe": "Zeichne einen Drehpunkt, zwei unterschiedliche Abstände und gleich gerichtete gedachte Kräfte. Der Papiervergleich ist keine Anleitung zum Anheben schwerer Gegenstände.",
+      "benefit": "Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen.",
+      "topic": "science-lever",
+      "sources": [
+        {
+          "url": "https://annex.exploratorium.edu/wsw/participants/sfusd_links99-00-math/loril/math%20and%20science%20activities/arm_model.html",
+          "title": "Exploratorium · Hebel und Kraftarme",
+          "anchor": "About Levers · fulcrum, load, effort and force-distance tradeoff",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/12-1-conditions-for-static-equilibrium",
+          "title": "OpenStax · Conditions for Static Equilibrium (Englisch)",
+          "anchor": "Equations12.9/12.10 und zugehörige Erklärung: Summe der Drehmomente, Kraft, Abstand und eingeschlossener Winkel; Kraftbilanz getrennt von Drehmomentbilanz.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du verbindest Kraft, Drehpunkt und Weg statt nur die Länge eines Stabs zu vergleichen."
+        }
+      ],
+      "connection": "Im Hebelmodell vergleichst du Kraft und Abstand zum Drehpunkt. Beobachte zugleich, welchen Weg die Hand bei einem längeren Hebelarm zurücklegt.",
+      "figure": "lever-perpendicular-arm",
+      "question": {
+        "prompt": "Eine Kraft wirkt entlang eines geraden Hebelstabs. Ihre Wirkungslinie geht durch den Drehpunkt. Welchen Drehmomentbetrag hat sie um diesen Punkt?",
+        "answers": [
+          "Null, weil der senkrechte Abstand zur Wirkungslinie null ist",
+          "Einen großen Betrag allein deshalb, weil der Stab lang ist",
+          "Den gleichen Betrag wie bei einer senkrecht zum Stab wirkenden Kraft"
+        ],
+        "correct": 0,
+        "hint": "Suche den senkrechten Abstand zwischen Drehpunkt und Wirkungslinie.",
+        "why": "Der wirksame Hebelarm ist der senkrechte Abstand zur Wirkungslinie. Geht diese durch den Drehpunkt, ist dieser Abstand und damit der Drehmomentbetrag dieser Kraft null.",
+        "wrongReasons": [
+          "",
+          "Die Stablänge allein reicht nicht: Auch die Richtung der Kraft zählt.",
+          "Bei gleicher Kraft und gleichem Abstand zum Ansatzpunkt wirkt eine senkrechte Kraft anders als eine Kraft entlang des Stabs."
+        ]
+      }
+    },
+    "Warum kehrt eine Feder nicht nach jeder Belastung ganz zurück?": {
+      "starter": "Eine Feder kann zurückgehen. Zu starkes Ziehen kann sie trotzdem dauerhaft verändern.",
+      "deeper": "Rückkehr zur alten Form und ein proportionaler Zusammenhang sind zwei unterschiedliche Eigenschaften. Ein Material kann sich schon nichtlinear und trotzdem noch elastisch verformen. Erst jenseits seiner elastischen Grenze kann eine bleibende Formänderung zurückbleiben. Eine gezeichnete Grenze ist keine Belastungsangabe für eine echte Feder.",
+      "observe": "Zeichne getrennt gedachte Rückkehr und bleibende Formänderung. Verwende keine gespannten Federn oder schleudernden Gummibänder als Versuch.",
+      "benefit": "Du erkennst den Geltungsbereich eines Materialmodells.",
+      "topic": "science-elasticity",
+      "sources": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/12-4-elasticity-and-plasticity",
+          "title": "OpenStax · Elasticity and Plasticity (Englisch)",
+          "anchor": "Einleitung und Figure12.25-Erklärung: Steifigkeit/Elastizitätsmodul, Grenze der Linearität und elastische Grenze unterscheiden; bleibende Formänderung nach Entlastung. Keine Quellgrafik oder Materialkennwerte übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Kraft",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Kraft“: Du erkennst den Geltungsbereich eines Materialmodells."
+        }
+      ],
+      "connection": "Die Elastizitätskarte beschreibt Rückverformung innerhalb eines begrenzten Bereichs. Vergleiche eine zurückkehrende Form mit einer Form, die nach der Belastung verändert bleibt.",
+      "figure": "elastic-versus-permanent",
+      "question": {
+        "prompt": "Eine gedachte Form verformt sich bei zwei gleich großen Belastungsschritten verschieden stark. Nach Entlastung kehrt sie vollständig zurück. Wie passt das zusammen?",
+        "answers": [
+          "Nichtlineares und trotzdem elastisches Verhalten ist möglich",
+          "Ungleiche Verformungsschritte müssen eine bleibende Veränderung bedeuten",
+          "Die vollständige Rückkehr beweist bereits einen linearen Zusammenhang"
+        ],
+        "correct": 0,
+        "hint": "Trenne die Frage nach der Rückkehr von der Frage nach gleich großen Verformungsschritten.",
+        "why": "Elastisch beschreibt hier die Rückkehr nach Entlastung. Linear beschreibt eine proportionale Beziehung im betrachteten Bereich. Ein Verhalten kann nichtlinear sein und trotzdem elastisch bleiben.",
+        "wrongReasons": [
+          "",
+          "Eine nicht proportionale Beziehung allein beweist keine bleibende Formänderung. Die vollständige Rückkehr ist ausdrücklich beobachtet.",
+          "Aus vollständiger Rückkehr allein folgt keine Proportionalität zwischen Belastung und Verformung."
+        ]
+      }
+    }
+  }
+}

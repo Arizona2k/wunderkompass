@@ -1,6 +1,6 @@
 import dataURL from './journey-content.json?url';
 import {validateJourneyContent} from './journey-content-validation.mjs';
-import {JOURNEYS,type Journey} from './learning-data';
+import {JOURNEYS,type Journey} from './learning-overview';
 import SOURCES from './journey-sources.json';
 let saved:Journey[]|null=null,pending:Promise<Journey[]>|null=null;
 export const currentJourneyContent=()=>saved;

@@ -23,12 +23,15 @@ export function useBookView(route:string){
  useEffect(()=>{
   const command=()=>{const path=location.hash.slice(1),lookup=bookLookup(path);if(!lookup)return;
    const open=Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure][open]')).map(el=>el.dataset.historyDisclosure);
-   history.replaceState({...history.state,wunderFocus:(lookup.tab==='words'?'book-word-target-':'book-why-target-')+lookup.term,wunderScroll:0,wunderOpen:open},'',location.href);
-   setView(initialView(path,false));setIntent(n=>n+1);
+   const next=initialView(path,false);
+   history.replaceState({...history.state,wunderBook:next,wunderFocus:(lookup.tab==='words'?'book-word-target-':'book-why-target-')+lookup.term,wunderScroll:0,wunderOpen:open},'',location.href);
+   setView(next);setIntent(n=>n+1);
   };window.addEventListener('wunder-route',command);return()=>window.removeEventListener('wunder-route',command);
  },[]);
  useLayoutEffect(()=>{
-  if(route.startsWith('book')&&view.route===route)history.replaceState({...history.state,wunderBook:view},'',location.href);
+  // Explicit selection already saved this view. Back also restores its saved
+  // entry; writing the same fields again needlessly consumes browser quota.
+  if(route.startsWith('book')&&view.route===route&&Object.entries(view).some(([key,value])=>history.state?.wunderBook?.[key]!==value))history.replaceState({...history.state,wunderBook:view},'',location.href);
  },[route,view]);
  useLayoutEffect(()=>{
   if(route.startsWith('book'))return scheduleRouteRestore(route,intent>0||!!history.state?.wunderRoute);
