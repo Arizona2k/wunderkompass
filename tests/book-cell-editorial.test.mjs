@@ -1,6 +1,8 @@
+import {genePredecessors,withCellPreGeneRuntime} from './gene-predecessor-reference.mjs';
 // Apply only with the genuine post-full156 UI fixture and exact146 fully
 // delivered corrective predecessor, including its native-short outer history.
-// Raw current156 contract; genuine current full proof must precede its binding.
+// Completed delivered M83 raw156 contract, strictly projected from the current
+// genetics layer. New166 UI remains subject to genuine full qualification.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -19,7 +21,7 @@ const pack=read('app/book-cell-content.json'),words=read('exports/content/knowle
 const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
 function assertCurrent(items){
  assert.equal(items.length,156);assert.equal(fixture.priorDossiers.length,146);assert.equal(fixture.addedDossiers.length,10);
- assert.equal(fixture.currentTemplate.build,learningFingerprint(process.cwd()),'raw156UI is bound to actual current product inputs');
+ assert.equal(fixture.currentTemplate.build,withCellPreGeneRuntime(process.cwd(),learningFingerprint),'historical raw156UI is bound to actual reconstructed delivered M83 product inputs');
  reference.assertCurrentCellSharedUI(items);
  const predecessor=items.filter(row=>oldIds.has(row.id)).map(reference.beforeCellUI);
  assert.equal(predecessor.length,146);oldReference.assertCurrentMechanicsSharedUI(predecessor);
@@ -40,11 +42,11 @@ function assertCurrent(items){
  return predecessor;
 }
 test('all ten real cell dossiers match current canonical and teaching hashes while every whole146 delivered predecessor and nested history is retained',()=>{
- const current=read('content/editorial-reviews.json').dossiers;
+ const current=genePredecessors(read('content/editorial-reviews.json').dossiers);
  const prior=assertCurrent(current);assert.deepEqual(prior.map(fingerprint),fixture.priorDossiers.map(row=>row.wholeSHA256));
 });
 test('stale new UI, mismatched teaching, changed old facts and lost nested technical history cannot pass the real156 current contract',()=>{
- const current=read('content/editorial-reviews.json').dossiers;
+ const current=genePredecessors(read('content/editorial-reviews.json').dossiers);
  for(const mutate of [
   rows=>rows[146].ui.build='stale',
   rows=>rows[146].teachingDataHash='0'.repeat(64),

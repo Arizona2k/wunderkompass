@@ -1,3 +1,5 @@
+import {genePredecessors,withCellPreGeneRuntime} from './gene-predecessor-reference.mjs';
+import geneFixture from './fixtures/gene-cell-runtime-predecessor.json' with {type:'json'};
 import {cellHistoryReference} from './cell-history-reference.mjs';
 // Preserve the complete delivered M82 contract as a historical assertion.
 // This does not qualify the new product's current UI: final verify still
@@ -10,6 +12,7 @@ import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.
 import fixture from './fixtures/cell-mechanics-runtime-predecessor.json' with {type:'json'};
 const sha=b=>createHash('sha256').update(b).digest('hex');
 export function cellPredecessors(items){
+ items=genePredecessors(items);
  if(fs.existsSync(path.join(import.meta.dirname,'fixtures/editorial-before-cell-146.json'))){
   const current=JSON.parse(fs.readFileSync(path.join(import.meta.dirname,'fixtures/editorial-before-cell-146.json'),'utf8')),reference=cellHistoryReference(current,current.currentTemplate);reference.assertCurrentCellSharedUI(items);items=items.slice(0,146).map(reference.beforeCellUI);
  }
@@ -18,6 +21,7 @@ export function cellPredecessors(items){
  return items;
 }
 export function mechanicsPreCellFingerprint(root){
+ if(learningFingerprint(root)===geneFixture.currentRuntimeBuild)return withCellPreGeneRuntime(root,mechanicsPreCellFingerprint);
  const current=new Map(learningInputs(root).map(p=>[path.relative(root,p),p]));
  const expected=new Set([...fixture.predecessorInputs,...fixture.addedInputs].map(r=>r.name));
  assert.deepEqual(new Set(current.keys()),expected,'no unenumerated new or missing runtime input');

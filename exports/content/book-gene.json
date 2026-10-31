@@ -1,0 +1,560 @@
+[
+  {
+    "kind": "word",
+    "term": "Gen",
+    "definition": "Ein Gen ist ein Abschnitt der Erbinformation. Er enthält Information für ein bestimmtes Protein oder eine funktionsfähige RNA. Ein einzelnes Gen bestimmt nicht, wie ein Mensch denkt, handelt oder leben wird.",
+    "starter": "Ein Gen ist ein bestimmter Abschnitt der DNA. Zellen können seine Information nutzen.",
+    "deeper": "Viele Gene enthalten Informationen für Proteine. Andere liefern RNA, die selbst eine Aufgabe erfüllt. Gene sind deshalb nicht einfach fertige Körperteile. Ihre Nutzung gehört zu vielen miteinander verbundenen Vorgängen in Zellen.",
+    "observe": "Schreibe eine kurze Anleitung mit drei Abschnitten und markiere einen davon. Vergleiche Abschnitt und ganze Anleitung. Diese Papierhilfe erklärt nur die Begriffe Teil und Ganzes, keine echten Gene oder Merkmale.",
+    "benefit": "Du erklärst, warum ein Gen ein Abschnitt und kein vollständiges Lebewesen ist.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt verschiedene Aufgaben in einer lebenden Einheit. Gene liefern unter anderem Informationen für Proteine, die an dieser Zellarbeit beteiligt sind.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Ein Gen ist ein bestimmter Informationsabschnitt; DNA ist der molekulare Informationsträger."
+      },
+      {
+        "term": "Genom",
+        "reason": "Ein Gen ist ein Abschnitt; zum Genom gehört die gesamte Erbinformation, auch weitere Bereiche."
+      },
+      {
+        "term": "Protein",
+        "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+      },
+      {
+        "term": "RNA",
+        "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Gene",
+        "title": "NIH/NHGRI · Gen (Englisch)",
+        "anchor": "Definition plus narration: protein-coding genes and functional RNA genes",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+        "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+        "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt ein Gen am besten?",
+      "answers": [
+        "Ein fertiges Körperteil",
+        "Einen bestimmten Informationsabschnitt",
+        "Die gesamte DNA eines Lebewesens"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche einen Abschnitt mit einer ganzen Sammlung.",
+      "why": "Ein Gen ist ein bestimmter Abschnitt mit biologischer Information. Die gesamte DNA wird als Genom bezeichnet.",
+      "wrongReasons": [
+        "Ein Körperteil besteht aus Zellen und vielen Stoffen. Ein Gen ist ein Informationsabschnitt.",
+        "",
+        "Die Gesamtheit der DNA heißt Genom. Ein Gen ist nur ein bestimmter Abschnitt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum verrät ein einzelnes Gen nicht automatisch alle Eigenschaften?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Gen“: Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen."
+      }
+    ],
+    "figure": "gene-output",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Chromosom",
+    "definition": "Ein Chromosom ist eine geordnete Struktur aus DNA und zugehörigen Proteinen. Diese Organisation hilft, Erbinformation in Zellen zu ordnen und bei Zellteilungen weiterzugeben. Chromosomen sehen nicht immer wie ein X aus.",
+    "starter": "Lange DNA wird zusammen mit Proteinen geordnet. So entsteht ein Chromosom.",
+    "deeper": "Im hier betrachteten typischen eukaryotischen Zellzyklus besteht ein Chromosom vor dem Kopieren aus einem Chromatid mit einem DNA-Molekül. Nach dem Kopieren sind zwei Schwesterchromatiden miteinander verbunden. Bei ihrer Trennung wird jede zur eigenen Tochterchromosomenstruktur. Das Gedankenbild unterscheidet diese Zustände und behauptet keine universelle X-Form für Bakterien oder andere Zellphasen.",
+    "observe": "Lege einen langen Faden locker hin und rolle ihn dann auf eine Papprolle. Welche Anordnung braucht weniger Platz? Die Rolle ist nur eine Verpackungshilfe: ein Chromosom ist viel komplizierter und kein echter Fadenknäuel.",
+    "benefit": "Du erkennst, dass eine bekannte Chromosomenzeichnung nur einen bestimmten Zustand zeigt.",
+    "topic": "science-cell",
+    "connection": "Im Zellbild wird ein Zellkern gezeigt. Die großen Kernchromosomen von Pflanzen und Tieren gehören in diesen Bereich; die grobe Zeichnung ist keine Chromosomenaufnahme.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Chromosomen ordnen lange DNA zusammen mit Proteinen. Verpackung und Informationsträger sind verschiedene Begriffe."
+      },
+      {
+        "term": "Genom",
+        "reason": "Chromosomen verpacken einen Teil der DNA. Das Genom bezeichnet die gesamte Erbinformation."
+      },
+      {
+        "term": "Zellkern",
+        "reason": "Kernchromosomen liegen im Zellkern eukaryotischer Zelltypen. Andere Organisation und etwa mitochondriale DNA begrenzen die Aussage für alle Zellen."
+      },
+      {
+        "term": "Protein",
+        "reason": "DNA und zugehörige Proteine bilden die Chromosomenstruktur. Protein ist eine Stoffgruppe mit unterschiedlichen Aufgaben, nicht ein anderer Name für ein Chromosom."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Chromosome",
+        "title": "NIH/NHGRI · Chromosom (Englisch)",
+        "anchor": "Definition: DNA and protein; narration: variable shapes/numbers and packaging; textbook X not universal",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genome",
+        "title": "NIH/NHGRI · DNA im Zellkern und in Mitochondrien (Englisch)",
+        "anchor": "Definition: genome includes nuclear chromosomes and mitochondrial DNA; no universal nuclear-only claim",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+        "title": "OpenStax Biology 2e · Zellzyklus (Englisch)",
+        "anchor": "S Phase und Anaphase: DNA-Kopie, verbundene Schwesterchromatiden und erst bei deren Trennung eigene Tochterchromosomen. Eigene Zustandssymbole statt einer übernommenen Abbildung.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Eine Zeichnung zeigt ein Chromosom als X. Was musst du beachten?",
+      "answers": [
+        "Es hat nicht zu jeder Zeit diese Form",
+        "Jede Zelle enthält genau ein X",
+        "Ein X ist ein ganzer Zellkern"
+      ],
+      "correct": 0,
+      "hint": "Eine Zeichnung kann einen einzelnen Zustand auswählen.",
+      "why": "Chromosomen verändern ihre sichtbare Form während des Zellzyklus. Ein X ist kein allgemeines Bild jedes Chromosoms.",
+      "wrongReasons": [
+        "",
+        "Zahl und Form hängen vom Lebewesen und vom Zellzustand ab. Ein einziges X ist keine allgemeine Regel.",
+        "Ein Zellkern enthält unter anderem Chromosomen. Ein gezeichnetes Chromosom ist nicht der ganze Kern."
+      ]
+    },
+    "figure": "chromosome-cycle",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Protein",
+    "definition": "Ein Protein ist ein Molekül aus einer oder mehreren Ketten von Aminosäuren. Proteine erfüllen viele Aufgaben: Manche geben Strukturen Halt, andere wirken als Enzyme bei chemischen Reaktionen. Protein bedeutet also mehr als einen Nährstoff auf einer Verpackung.",
+    "starter": "Proteine sind aus Aminosäureketten aufgebaut. Verschiedene Proteine übernehmen unterschiedliche Aufgaben in Zellen.",
+    "deeper": "Ein Protein kann aus einer oder mehreren Aminosäureketten bestehen. Reihenfolge und räumliche Faltung gehören zu seiner Struktur. Proteine erfüllen unterschiedliche Aufgaben; nicht jedes Protein ist ein Enzym.",
+    "observe": "Falte denselben Papierstreifen einmal zum Zickzack und einmal als Rolle. Beschreibe die verschiedenen Formen bei gleichem Material. Das erklärt nur die Idee einer Faltung, nicht die Chemie echter Proteine.",
+    "benefit": "Du verbindest den Aufbau eines Proteins mit seiner Form, ohne alle Proteine gleichzusetzen.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt Bereiche einer Zelle. Proteine sind Stoffe, die unterschiedliche Aufgaben darin erfüllen. Eine Zellskizze zeigt noch keine genaue Proteinfaltung.",
+    "relatedWords": [
+      {
+        "term": "Gen",
+        "reason": "Viele Gene enthalten Information für Proteine. Ein Informationsabschnitt ist nicht das daraus gebildete Molekül."
+      },
+      {
+        "term": "Enzym",
+        "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+      },
+      {
+        "term": "Chromosom",
+        "reason": "DNA und zugehörige Proteine bilden die Chromosomenstruktur. Protein ist eine Stoffgruppe mit unterschiedlichen Aufgaben, nicht ein anderer Name für ein Chromosom."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Protein",
+        "title": "NIH/NHGRI · Protein (Englisch)",
+        "anchor": "Definition: one or more folded amino-acid chains; structure, function and regulation; narration: structural proteins and enzymes",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Warum beschreibt „Protein“ nicht nur eine einzige Aufgabe?",
+      "answers": [
+        "Alle Proteine sind dasselbe Enzym",
+        "Verschiedene Proteine erfüllen verschiedene Aufgaben",
+        "Proteine kommen nur in Lebensmitteln vor"
+      ],
+      "correct": 1,
+      "hint": "Denke an Halt geben und Reaktionen unterstützen.",
+      "why": "Proteine können unterschiedliche Strukturen und Aufgaben haben. Einige sind Enzyme, andere nicht.",
+      "wrongReasons": [
+        "Enzyme sind eine besondere Gruppe. Nicht alle Proteine sind Enzyme.",
+        "",
+        "Proteine arbeiten in lebenden Zellen. Lebensmittel sind nur ein alltäglicher Ort, an dem wir ihnen begegnen."
+      ]
+    },
+    "figure": "protein-roles",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Enzym",
+    "definition": "Ein Enzym beschleunigt eine bestimmte chemische Reaktion in Lebewesen. Es wird dabei nicht wie ein Ausgangsstoff verbraucht und kann erneut helfen. Die meisten Enzyme sind Proteine; einige bestehen aus RNA.",
+    "starter": "Ein Enzym hilft einer passenden chemischen Reaktion, schneller abzulaufen. Es kann mehrmals helfen.",
+    "deeper": "Enzyme sind biologische Katalysatoren. Verschiedene Enzyme passen zu unterschiedlichen Reaktionen. „Nicht verbraucht“ heißt nicht unzerstörbar: Es beschreibt ihre Rolle bei der jeweiligen Reaktion. Enzyme senken die Aktivierungsbarriere. Sie verändern dabei nicht die freie Energiedifferenz zwischen Ausgangs- und Endzustand der Reaktion. Die qualitative Zeichnung erklärt diesen Unterschied, ohne eine Geschwindigkeit zu messen.",
+    "observe": "Stell dir eine Person vor, die nacheinander mehrere passende Kartenpaare zusammenlegt. Sie gehört nicht zu den fertigen Paaren. Wo hilft dieser Vergleich beim Wiederverwenden, und wo erklärt er noch keine echte Chemie?",
+    "benefit": "Du unterscheidest einen wiederverwendbaren Reaktionshelfer von einem verbrauchten Ausgangsstoff.",
+    "topic": "science-cell",
+    "connection": "Eine Zelle führt viele chemische Reaktionen aus. Die Zellkarte erklärt die lebende Einheit, Enzyme helfen beim Verständnis ihrer Reaktionsabläufe.",
+    "relatedWords": [
+      {
+        "term": "Protein",
+        "reason": "Viele Enzyme sind Proteine, aber nicht jedes Protein ist ein Enzym. Vergleiche Stoffgruppe und besondere Aufgabe."
+      },
+      {
+        "term": "RNA",
+        "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Enzyme",
+        "title": "NIH/NHGRI · Enzym (Englisch)",
+        "anchor": "Definition and narration: specific reusable biological catalyst; usually protein, sometimes RNA",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+        "title": "OpenStax Biology 2e · Enzyme und Aktivierungsenergie (Englisch)",
+        "anchor": "Einleitender Absatz vor Figure6.15: niedrigere Aktivierungsenergie, unveränderte freie Energie der Reaktanten/Produkte und unverändertes ΔG. Kein Bild oder Kurvenverlauf übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Was ist typisch für ein Enzym bei seiner Reaktion?",
+      "answers": [
+        "Es ist immer der verbrauchte Ausgangsstoff",
+        "Es verwandelt jede beliebige Sache",
+        "Es kann die passende Reaktion wiederholt beschleunigen"
+      ],
+      "correct": 2,
+      "hint": "Achte auf passende Reaktion und Wiederverwendung.",
+      "why": "Ein Enzym beschleunigt eine bestimmte Reaktion und kann dabei wiederverwendet werden.",
+      "wrongReasons": [
+        "Das Enzym wirkt als Katalysator. Es wird bei seiner Reaktion nicht wie ein Ausgangsstoff verbraucht.",
+        "Verschiedene Enzyme helfen unterschiedlichen Reaktionen. Sie sind keine beliebigen Zauberwerkzeuge.",
+        ""
+      ]
+    },
+    "figure": "enzyme-barrier",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Mutation",
+    "definition": "Eine Mutation ist eine Veränderung der DNA-Reihenfolge. Sie kann unterschiedliche Folgen haben oder ohne erkennbare Wirkung bleiben. Mutationen sind keine absichtlichen Wünsche und verleihen keine Superheldenkräfte.",
+    "starter": "Manchmal verändert sich ein Stück DNA. Diese Veränderung heißt Mutation.",
+    "deeper": "Mutationen können etwa beim Kopieren von DNA entstehen. Nicht jede Veränderung wird an Nachkommen weitergegeben: Veränderungen in gewöhnlichen Körperzellen und in Keimzellen sind dabei zu unterscheiden. Aus dem Wort allein folgt keine Gesundheitsvorhersage.",
+    "observe": "Schreibe ATCG ab und ändere nur ein Zeichen. Beschreibe zunächst die Veränderung. Warum kannst du ohne weitere Informationen noch nicht sagen, welche biologische Wirkung sie hätte? Papierzeichen sind kein echtes Erbmaterial.",
+    "benefit": "Du trennst eine beobachtete Veränderung von Vermutungen über ihre möglichen Folgen.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte betrachtet den Aufbau, diese Erklärung eine Veränderung der Erbinformation. Halte Struktur, Veränderung und mögliche Folgen getrennt.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Eine Mutation verändert die DNA-Reihenfolge. Die Beschreibung einer Veränderung erklärt noch nicht ihre Wirkung."
+      },
+      {
+        "term": "Nukleotid",
+        "reason": "Die DNA-Reihenfolge betrifft ihre Bausteine. Das eigene Zeichenbeispiel unterscheidet einen geänderten Buchstaben von seiner erst zu untersuchenden biologischen Wirkung."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Mutation",
+        "title": "NIH/NHGRI · Mutation (Englisch)",
+        "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Was weißt du durch die Bezeichnung Mutation allein?",
+      "answers": [
+        "Die DNA-Reihenfolge wurde verändert",
+        "Es entsteht sicher eine Superkraft",
+        "Sie wird immer an Kinder vererbt"
+      ],
+      "correct": 0,
+      "hint": "Unterscheide die Veränderung von einer garantierten Folge.",
+      "why": "Mutation bezeichnet eine DNA-Veränderung. Wirkung und Vererbung müssen gesondert untersucht werden.",
+      "wrongReasons": [
+        "",
+        "Superkräfte gehören zur Fiktion. Eine DNA-Veränderung beweist keine solche Fähigkeit.",
+        "Ob eine Veränderung vererbt werden kann, hängt unter anderem davon ab, in welchen Zellen sie auftritt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist eine Mutation nicht automatisch gut oder schlecht?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Mutation“: Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung."
+      }
+    ],
+    "figure": "sequence-change",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Nukleotid",
+    "definition": "Nukleotide sind Bausteine von DNA und RNA. Jedes enthält einen Zucker, eine Phosphatgruppe und eine Base. Ein einzelner Baustein ist noch kein ganzes Gen oder vollständiges Genom.",
+    "starter": "DNA und RNA bestehen aus vielen verbundenen Bausteinen. Ein solcher Baustein heißt Nukleotid.",
+    "deeper": "Bei DNA heißt der Zucker Desoxyribose, bei RNA Ribose. DNA verwendet die Basen A, T, C und G; RNA verwendet U anstelle von T. Viele verbundene Nukleotide bilden lange Ketten.",
+    "observe": "Zeichne drei verschieden geformte Teile in einem Rahmen und wiederhole den Rahmen als Kette. Welche drei Teile gehören zu einem Baustein? Die Zeichnung zeigt nur eine Gliederung, keine echte Molekülform oder Größen.",
+    "benefit": "Du ordnest Baustein, Kette und Informationsabschnitt auseinander.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte zeigt eine lebende Einheit, Nukleotide sind einzelne Bausteine ihrer DNA oder RNA. Vergleiche die Ebenen, ohne ihre Zeichnungsgrößen gleichzusetzen.",
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "Viele verbundene Nukleotide bilden die DNA-Kette. Vergleiche einzelnen Baustein und gesamten Aufbau."
+      },
+      {
+        "term": "RNA",
+        "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+      },
+      {
+        "term": "Mutation",
+        "reason": "Die DNA-Reihenfolge betrifft ihre Bausteine. Das eigene Zeichenbeispiel unterscheidet einen geänderten Buchstaben von seiner erst zu untersuchenden biologischen Wirkung."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Nucleotide",
+        "title": "NIH/NHGRI · Nukleotid (Englisch)",
+        "anchor": "Definition: sugar, phosphate and base; ribose/deoxyribose; RNA U versus DNA T",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage beschreibt ein Nukleotid?",
+      "answers": [
+        "Es ist das vollständige Genom",
+        "Es enthält Zucker, Phosphat und eine Base",
+        "Es ist immer eine ganze Zelle"
+      ],
+      "correct": 1,
+      "hint": "Suche die drei Bestandteile eines einzelnen Bausteins.",
+      "why": "Zucker, Phosphatgruppe und Base bilden zusammen einen Nukleotid-Baustein. Viele davon gehören zu DNA oder RNA.",
+      "wrongReasons": [
+        "Das Genom bezeichnet die ganze Erbinformation. Ein Nukleotid ist ein einzelner Baustein.",
+        "",
+        "Eine Zelle besteht aus vielen verschiedenen Stoffen und Strukturen. Ein Nukleotid ist viel kleiner als dieses Ganze."
+      ]
+    },
+    "figure": "nucleotide-parts",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "RNA",
+    "definition": "RNA ist ein Molekül, das in Zellen verschiedene Aufgaben erfüllt. Manche RNA bringt Information zur Herstellung von Proteinen, andere ist am Aufbau oder an der Arbeit dieser Herstellungsorte beteiligt. RNA ist nicht einfach eine zweite Bezeichnung für DNA.",
+    "starter": "RNA hilft bei der Arbeit in Zellen. Es gibt verschiedene Arten mit unterschiedlichen Aufgaben.",
+    "deeper": "RNA ist meistens einzelsträngig. Ihr Zucker heißt Ribose, und sie verwendet die Basen A, U, C und G. Manche RNA trägt Nachrichten, andere hat strukturelle oder regulierende Aufgaben. Nicht jede RNA ist deshalb eine bloße Kopie für ein Protein.",
+    "observe": "Zeichne drei Papierkarten für Nachricht, Arbeitsplatz und Transport. Erkläre, warum sie unterschiedliche Rollen haben können. Diese Rollenhilfe zeigt keine echte RNA-Form und sagt nicht, dass RNA kleine Menschen oder Fahrzeuge enthält.",
+    "benefit": "Du unterscheidest verschiedene RNA-Aufgaben und vermeidest die Gleichsetzung von RNA und DNA.",
+    "topic": "science-cell",
+    "connection": "Die Zellkarte erklärt die lebende Einheit. RNA hat darin unterschiedliche Aufgaben; ein grobes Zellbild zeigt diese Moleküle nicht einzeln.",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+        "title": "NIH/NHGRI · RNA (Englisch)",
+        "anchor": "Definition: usually single-stranded, ribose, A/U/C/G and several RNA types/functions; no universal messenger-only claim.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "DNA",
+        "reason": "RNA und DNA sind verwandte, aber verschiedene Moleküle. Vergleiche ihre Bausteine und Aufgaben."
+      },
+      {
+        "term": "Nukleotid",
+        "reason": "Nukleotide sind Bausteine von RNA. In RNA gehören Ribose und U statt T zu den grundlegenden Unterschieden gegenüber DNA."
+      },
+      {
+        "term": "Gen",
+        "reason": "Manche Gene enthalten Information für eine RNA, die selbst eine Aufgabe erfüllt. Nicht jede RNA dient nur als Protein-Nachricht."
+      },
+      {
+        "term": "Enzym",
+        "reason": "Die meisten Enzyme sind Proteine, einige bestehen aus RNA. Stoffart und biologische Aufgabe müssen unterschieden werden."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage passt zu RNA?",
+      "answers": [
+        "Jede RNA hat exakt dieselbe Aufgabe",
+        "RNA ist immer dasselbe wie DNA",
+        "Verschiedene RNA-Arten erfüllen verschiedene Aufgaben"
+      ],
+      "correct": 2,
+      "hint": "Vergleiche Nachricht, Struktur und Transport als unterschiedliche Rollen.",
+      "why": "Es gibt mehrere RNA-Arten mit unterschiedlichen Aufgaben. Nachrichtentragende RNA ist nur ein Beispiel.",
+      "wrongReasons": [
+        "RNA-Arten können sich in ihren Aufgaben unterscheiden; nicht jede ist eine Nachricht für ein Protein.",
+        "RNA und DNA sind verwandte, aber verschiedene Moleküle. RNA verwendet unter anderem Ribose und U statt T.",
+        ""
+      ]
+    },
+    "figure": "rna-roles",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Bakterium",
+    "definition": "Ein Bakterium ist ein einzelliges Lebewesen. Bakterien leben in vielen Umgebungen und erfüllen unterschiedliche Aufgaben. Viele sind harmlos oder hilfreich, manche können Krankheiten verursachen. „Bakterium“ bedeutet nicht automatisch „gefährlich“.",
+    "starter": "Ein Bakterium besteht aus einer Zelle. Es gibt viele verschiedene Bakterien.",
+    "deeper": "Bakterien gehören zu den Mikroorganismen. Ihre Formen und Lebensweisen unterscheiden sich. Manche spielen wichtige Rollen in Ökosystemen oder im menschlichen Körper. Aus einer Formzeichnung allein lässt sich nicht erkennen, ob eine Art schädlich ist.",
+    "observe": "Zeichne eine Kugel, einen Stab und eine Spirale. Diese Formen können an Bakterien erinnern. Warum verrät die Form allein noch keine Lebensweise? Keine unbekannten Mikroorganismen züchten oder Proben anfassen.",
+    "benefit": "Du vermeidest die falsche Gleichsetzung von Bakterien mit Krankheitserregern.",
+    "topic": "science-cell",
+    "connection": "Auch ein Bakterium ist eine Zelle. Vergleiche die Vielfalt lebender Einheiten mit der Zellkarte: Eine einzelne Zeichnung steht nicht für jede Zellform.",
+    "relatedWords": [
+      {
+        "term": "Genom",
+        "reason": "Auch Bakterien besitzen Erbinformation. Ein einzelliges Lebewesen ist nicht dasselbe wie seine Informationssammlung."
+      },
+      {
+        "term": "Prokaryot",
+        "reason": "Bakterien besitzen keinen membranumhüllten Zellkern. Prokaryot bezeichnet den Bauplan; Bakterium bezeichnet eine Gruppe einzelliger Lebewesen."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Bacteria",
+        "title": "NIH/NHGRI · Bakterium (Englisch)",
+        "anchor": "Definition: diverse single-celled organisms, ecosystem roles, most harmless/helpful; outdated ten-to-one narration deliberately excluded",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+        "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+        "anchor": "Einleitung und Components of Prokaryotic Cells: Bacteria/Archaea, DNA im Nucleoid statt membranumhülltem Kern. Die allgemeine Vier-Komponenten-Formel und universelle Zellwandbehauptung nicht auf alle Zelltypen übertragen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "question": {
+      "prompt": "Was gilt für Bakterien als ganze Gruppe?",
+      "answers": [
+        "Alle verursachen Krankheiten",
+        "Alle haben dieselbe Aufgabe",
+        "Ihre Lebensweisen und Wirkungen unterscheiden sich"
+      ],
+      "correct": 2,
+      "hint": "Eine große Gruppe kann verschiedene Arten enthalten.",
+      "why": "Bakterien sind vielfältig. Viele sind harmlos oder hilfreich, einige können Krankheiten verursachen.",
+      "wrongReasons": [
+        "Nur ein Teil der Arten verursacht Krankheiten. Der Gruppenname allein beschreibt keine Gefahr.",
+        "Verschiedene Arten können unterschiedliche Umgebungen und Aufgaben haben.",
+        ""
+      ]
+    },
+    "figure": "bacteria-forms",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum verrät ein einzelnes Gen nicht automatisch alle Eigenschaften?",
+    "definition": "Gene wirken in biologischen Zusammenhängen. Mehrere Einflüsse können an einem Merkmal beteiligt sein. Eine einzelne Buchstabenfolge ist deshalb kein zuverlässiger Schicksalsplan für einen Menschen.",
+    "starter": "Ein Merkmal braucht oft mehrere Erklärungen. Ein einzelnes Gen sagt nicht alles über einen Menschen.",
+    "deeper": "Genom, Genaktivität, weitere Gene und Umweltbedingungen sind verschiedene Ebenen. Ein einfaches Beispiel darf keine medizinische Vorhersage oder Bewertung einer Person daraus machen.",
+    "observe": "Lege auf Papier gedachte Einflusskarten nebeneinander, statt nur eine einzige Karte als vollständige Erklärung zu wählen. Nutze keine persönlichen Gesundheits- oder Familiendaten.",
+    "benefit": "Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Gene",
+        "title": "NIH/NHGRI · Gen (Englisch)",
+        "anchor": "Definition plus narration: protein-coding genes and functional RNA genes",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+        "title": "NIH/NHGRI · Gene legen deine Zukunft nicht fest (Englisch)",
+        "anchor": "Narration: neither genes nor DNA determine who you are or what you shall do",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Gen",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Gen“: Du vermeidest genetische Festlegungen und trennst verschiedene Einflussebenen."
+      }
+    ],
+    "connection": "Die Zellkarte ordnet Erbinformation in lebende Zellen ein. Ergänze die Frage nach mehreren Genen und Umweltbedingungen, bevor du eine Eigenschaft auf einen einzigen Einfluss zurückführst.",
+    "figure": "gene-context",
+    "question": {
+      "prompt": "Ein Beispiel zeigt einen einzelnen Genabschnitt. Welche Schlussfolgerung ist begründet?",
+      "answers": [
+        "Damit steht die Zukunft einer Person fest",
+        "Der Abschnitt gehört zu weiteren biologischen Zusammenhängen",
+        "Alle Menschen mit diesem Gen handeln gleich"
+      ],
+      "correct": 1,
+      "hint": "Unterscheide, was der Ausschnitt zeigt und was dabei offen bleibt.",
+      "why": "Ein einzelner Genabschnitt ist keine vollständige Erklärung eines Menschen. Genaktivität, weitere Gene und Umweltbedingungen können je nach Frage dazugehören.",
+      "wrongReasons": [
+        "Aus dem einzelnen Abschnitt lässt sich kein Lebensweg vorhersagen. Biologische Zusammenhänge sind zu unterscheiden.",
+        "",
+        "Menschen sind nicht durch einen einzelnen Genabschnitt auf dasselbe Handeln festgelegt."
+      ]
+    },
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum ist eine Mutation nicht automatisch gut oder schlecht?",
+    "definition": "Eine Änderung der Erbinformation muss im konkreten Zusammenhang betrachtet werden. Nicht jede Änderung wirkt gleich, und nicht jede hat eine erkennbare Auswirkung. Das Wort allein ist keine Gesundheitsbewertung.",
+    "starter": "Geändert bedeutet nicht automatisch besser oder schlechter. Die Wirkung muss geprüft werden.",
+    "deeper": "Ort, Art der Änderung und biologische Bedingungen sind wichtig. Ein veränderter Papierbuchstabe zeigt keine echte Krankheitsursache oder Anpassung eines Lebewesens.",
+    "observe": "Vergleiche zwei ausdrücklich erfundene Zeichenfolgen mit einer Änderung. Markiere den Unterschied und lasse die echte biologische Wirkung offen; keine persönlichen Daten verwenden.",
+    "benefit": "Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung.",
+    "topic": "science-cell",
+    "sources": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Mutation",
+        "title": "NIH/NHGRI · Mutation (Englisch)",
+        "anchor": "Definition: change in DNA sequence; germline versus somatic; narration: fictional superhero claims rejected; no individual diagnosis",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mutation",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Mutation“: Du trennst beobachtete Änderung von einer erst zu belegenden Wirkung."
+      }
+    ],
+    "connection": "Auf der Zellkarte begegnet dir Erbinformation als Teil einer Zelle. Eine veränderte Information sagt für sich allein noch nicht, welche Wirkung sie unter bestimmten Bedingungen hat.",
+    "figure": "sequence-change",
+    "question": {
+      "prompt": "Im erfundenen Beispiel wird ATCG zu ATGG. Was lässt sich daraus unmittelbar beschreiben?",
+      "answers": [
+        "An Stelle drei wurde ein Zeichen ersetzt; eine reale biologische Wirkung ist damit nicht bestimmt",
+        "Die Änderung verursacht sicher eine Krankheit",
+        "Die Änderung wird sicher an Nachkommen vererbt"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche zunächst die beiden Folgen. Welche weitere Information fehlt?",
+      "why": "Im Zeichenbeispiel wurde C durch G ersetzt. Ohne einen wirklichen biologischen Zusammenhang ist damit weder eine Wirkung noch mögliche Vererbung geklärt.",
+      "wrongReasons": [
+        "",
+        "Eine bloße Zeichenänderung beweist keine Krankheit. Eine tatsächliche Wirkung wäre gesondert zu untersuchen.",
+        "Der Papiervergleich sagt nichts über Körper- oder Keimzellen aus. Vererbung lässt sich daraus nicht ableiten."
+      ]
+    },
+    "sourceReadOn": "2026-10-31"
+  }
+]
