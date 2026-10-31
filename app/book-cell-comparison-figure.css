@@ -1,0 +1,23 @@
+.book-cell-comparison{margin:20px 0;padding:16px;border:1px solid var(--wk-line,#ccd8d6);border-radius:16px;background:var(--wk-surface,#fff);color:var(--wk-ink,#173d4b)}
+.book-cell-comparison h4{margin:8px 0;font-size:1.25rem;line-height:1.35}
+.book-cell-comparison h5{font:inherit;font-weight:700;margin:20px 0 8px}
+.book-cell-comparison p{line-height:1.6}
+.book-cell-comparison__choices{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.book-cell-comparison__choices button{flex:1 1 140px;min-height:48px;padding:10px 14px;border:1px solid var(--wk-line,#ccd8d6);border-radius:10px;background:var(--wk-surface,#fff);color:inherit;font:inherit;line-height:1.4;cursor:pointer}
+.book-cell-comparison__choices button[aria-pressed=true]{background:#e9f3ee;border-color:#22664d;color:#194b3c;box-shadow:inset 0 0 0 1px #22664d}
+.book-cell-comparison__choices button:focus-visible{outline:3px solid var(--wk-focus,#256384);outline-offset:4px}
+.book-cell-comparison svg{display:block;width:100%;max-width:360px;height:auto;margin:8px auto}
+.book-cell-comparison__membrane{fill:#eff4ee;stroke:#22664d;stroke-width:4}
+.book-cell-comparison__nucleus{fill:#e6eff7;stroke:#256384;stroke-width:2}
+.book-cell-comparison__mitochondrion{fill:#fff0df;stroke:#9b4d1d;stroke-width:2}
+.book-cell-comparison__inner-membrane{fill:none;stroke:#9b4d1d;stroke-width:1.5}
+.book-cell-comparison__dna{fill:none;stroke:#183d4b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.book-cell-comparison__facts{display:grid;gap:12px;margin:8px 0 20px}
+.book-cell-comparison__facts>div{display:grid;gap:4px}
+.book-cell-comparison__facts dt{font-weight:700}
+.book-cell-comparison__facts dd{margin:0}
+@media(forced-colors:active){.book-cell-comparison__choices button[aria-pressed=true]{outline:2px solid Highlight;box-shadow:none}.book-cell-comparison__membrane,.book-cell-comparison__nucleus,.book-cell-comparison__mitochondrion{fill:Canvas;stroke:CanvasText}.book-cell-comparison__dna,.book-cell-comparison__inner-membrane{stroke:CanvasText}}
+
+.knowledge-book [data-book-cell-figure] h4{font-size:20px;line-height:1.4}.large-reading .knowledge-book [data-book-cell-figure] h4{font-size:24px}
+
+.knowledge-book [data-book-cell-figure] :is(figcaption,li,.model-caption){font-size:16px}.large-reading .knowledge-book [data-book-cell-figure] :is(figcaption,li,.model-caption){font-size:20px!important}

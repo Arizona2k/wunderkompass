@@ -17,7 +17,7 @@ test('four mechanics concepts and three Why explanations share exact canonical t
  const raw=fs.readFileSync('app/book-mechanics-content.json'),integrity=read('app/book-mechanics-integrity.json');
  assert.equal(raw.length,integrity.bytes);assert.equal(sha(raw),integrity.sha256);
  const words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json'),teaching=read('exports/content/book-mechanics.json');
- assert.equal(words.length,126);assert.equal(why.length,40);assert.equal(teaching.length,7);
+ assert.equal(words.length,134);assert.equal(why.length,42);assert.equal(teaching.length,7);
  for(const term of MECHANICS_WORDS){
   const row=words.find(item=>item.term===term);assert(row);assert.deepEqual([row.term,row.short,row.more],pack.words[term]);
   assert.deepEqual(teaching.find(item=>item.kind==='word'&&item.term===term),{kind:'word',term,definition:row.more,...pack.learning[term],sourceReadOn:pack.sourceReadOn});
@@ -38,7 +38,7 @@ test('all122 earlier complete word payloads,37 Why payloads at stable indices an
  assert.equal(old.sourcePublicHead,'68d4dce86bed80438f9b90e92b9194bfe5973811');
  assert.equal(old.words.length,122);assert.equal(old.why.length,37);assert.equal(Object.keys(old.packs).length,5);
  const words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json');
- assert.equal(new Set(words.map(row=>row.term)).size,126);assert.equal(new Set(why.map(row=>row.question)).size,40);
+ assert.equal(new Set(words.map(row=>row.term)).size,134);assert.equal(new Set(why.map(row=>row.question)).size,42);
  for(const row of old.words)assert.equal(digest(words.find(item=>item.term===row.term)),row.sha256,row.term+' entire previous word');
  for(const [index,row]of old.why.entries()){assert.equal(why[index].question,row.question);assert.equal(digest(why[index]),row.sha256,row.question+' whole payload and saved index');}
  for(const [file,hash]of Object.entries(old.packs))assert.equal(sha(fs.readFileSync(file)),hash,file);

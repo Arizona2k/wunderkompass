@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5",
+    "commit": "dbb2ade5f373ae56587084e1dce5636939e1199c",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -76,7 +76,8 @@
       "9d09ed1773aca26a6a3cd7e42b4d1ad762bc6481",
       "690e97f160d51415224623912ee92ebc798694bc",
       "57458e91e696ad0161b1f06f624f0f28b809bef6",
-      "5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5"
+      "5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5",
+      "dbb2ade5f373ae56587084e1dce5636939e1199c"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -2017,6 +2018,36 @@
           "createdAt": "2026-10-31T01:06:41Z",
           "updatedAt": "2026-10-31T01:06:41Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/As8YySpin2Q4jtrCV1y93ckxvQkb"
+        }
+      ],
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "number": 82,
+      "base": "test-live",
+      "mergedAt": "2026-10-31T05:36:18Z",
+      "mergeCommit": "dbb2ade5f373ae56587084e1dce5636939e1199c",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/dbb2ade5f373ae56587084e1dce5636939e1199c/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57732104266,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-31T05:36:35Z",
+          "updatedAt": "2026-10-31T05:36:35Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BFtyhsy4TYPCiLJmzLxSxx4cqEZG"
+        },
+        {
+          "id": 57732099108,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-31T05:36:22Z",
+          "updatedAt": "2026-10-31T05:36:22Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BFtyhsy4TYPCiLJmzLxSxx4cqEZG"
         }
       ],
       "checkedOn": "2026-10-31"

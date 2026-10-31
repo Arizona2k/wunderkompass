@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T01:28:09.649Z",
+  "generatedAt": "2026-10-31T04:37:54.616Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,8 +13,8 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 126,
-  "whyQuestions": 40,
+  "knowledgeWords": 134,
+  "whyQuestions": 42,
   "routes": 8,
   "files": [
     {
@@ -134,6 +134,21 @@
       "sha256": "0b68c3610a0b5a3ac9ea9de83b7d05908e774c70eb2dda5c194031bb69fb4090"
     },
     {
+      "file": "book-cell.json",
+      "sources": [
+        "app/book-cell-content.json",
+        "app/book-cell-integrity.json",
+        "app/book-cell-index.json",
+        "app/book-cell-topic-index.json",
+        "app/book-cell-word-link-index.json",
+        "app/book-cell-validation.mjs",
+        "scripts/book-cell-index.mjs"
+      ],
+      "entries": 10,
+      "bytes": 41446,
+      "sha256": "36f5b469af3d5dba0a62823af17bc7cae5fee61410424864ad65cc81b183c3a1"
+    },
+    {
       "file": "continents.json",
       "sources": [
         "app/earth-data.ts",
@@ -222,9 +237,9 @@
         "app/book-particle-index.json",
         "app/book-mechanics-index.json"
       ],
-      "entries": 126,
-      "bytes": 25853,
-      "sha256": "993fcb1f9a74b4e191108cee4004d33ce105fe9dd713df4f9ae71c7f3c8014fa"
+      "entries": 134,
+      "bytes": 28177,
+      "sha256": "eb3ba1f80eb923059c2649f08e7ec2a5774c4085509211a0a531be4071638940"
     },
     {
       "file": "why-questions.json",
@@ -236,9 +251,9 @@
         "app/book-water-index.json",
         "app/book-mechanics-index.json"
       ],
-      "entries": 40,
-      "bytes": 10580,
-      "sha256": "b08038bba8072ede42b1970c27f892d9a26ef02539b447ceb87f3f9e79bca21e"
+      "entries": 42,
+      "bytes": 11194,
+      "sha256": "669ccee42f832c80b47d857906d9cacfc246f43c100a75c7094256bd452bcc15"
     },
     {
       "file": "earth-badges.json",
