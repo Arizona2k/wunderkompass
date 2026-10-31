@@ -1,3 +1,4 @@
+import {revealBookWords} from './book-pagination.mjs';
 // Shared mechanics learning checks for the existing regular and cold browser callers.
 import {assertBookMechanicsFigure} from './book-mechanics-diagrams.mjs';
 import {bookRelatedWordView,BOOK_RELATED_WORD_EDGE_COUNT} from './book-related-words.mjs';
@@ -82,7 +83,7 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   await child.goto(base+'/#book');await ready(child);await child.waitForFunction(()=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value==='');
   // These terms are beyond the first24 visible words. Reach both through
   // the actual existing pagination before exercising concurrent disclosures.
-  for(let n=0;!await cardFor(child,'Kraft').count()||!await cardFor(child,'Trägheit').count();n++){assert(n<5,'mechanics terms are reachable through existing word pagination');await child.getByRole('button',{name:/^Weitere Wörter entdecken/}).click();}
+  proof.wordPagination=await revealBookWords(child,["Kraft","Trägheit"]);
   const forceStudy=cardFor(child,'Kraft').locator('[data-book-mechanics-study]'),inertiaStudy=cardFor(child,'Trägheit').locator('[data-book-mechanics-study]');
   await forceStudy.locator(':scope>summary').click();await started;await forceStudy.locator(':scope>summary').click();await inertiaStudy.locator(':scope>summary').click();assert.equal(requests,1);release();
   await inertiaStudy.getByText(pack.learning['Trägheit'].benefit,{exact:true}).waitFor();await forceStudy.locator(':scope>summary').click();await forceStudy.getByText(pack.learning['Kraft'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;

@@ -7,6 +7,9 @@ import particleIndex from "./book-particle-index.json" with {type:"json"};
 import mechanicsIndex from "./book-mechanics-index.json" with {type:"json"};
 import cellIndex from "./book-cell-index.json" with {type:"json"};
 import geneIndex from "./book-gene-index.json" with {type:"json"};
+import statisticsIndex from "./book-statistics-index.json" with {type:"json"};
+const STATISTICS_WORDS=statisticsIndex.words as [string,string,string][];
+const STATISTICS_WHY=statisticsIndex.why as [string,string][];
 const GENE_WORDS=geneIndex.words as [string,string,string][];
 const GENE_WHY=geneIndex.why as [string,string][];
 const CELL_WORDS=cellIndex.words as [string,string,string][];
@@ -39,6 +42,7 @@ export const MORE_WORDS:[string,string,string][]=[
  ...MECHANICS_WORDS,
  ...CELL_WORDS,
  ...GENE_WORDS,
+ ...STATISTICS_WORDS,
 ];
 export const MORE_WHY:[string,string][]=[
  ["Warum ist die Erde rund?","Die Schwerkraft zieht Materie zur Mitte. Bei einem großen Himmelskörper formt sie daraus ungefähr eine Kugel. Die Erddrehung macht die Erde an den Polen etwas flacher."],
@@ -67,4 +71,5 @@ export const MORE_WHY:[string,string][]=[
  ...MECHANICS_WHY,
  ...CELL_WHY,
  ...GENE_WHY,
+ ...STATISTICS_WHY,
 ];

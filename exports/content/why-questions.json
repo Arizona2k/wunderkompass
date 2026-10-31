@@ -174,5 +174,17 @@
   {
     "question": "Warum ist eine Mutation nicht automatisch gut oder schlecht?",
     "answer": "Eine Änderung der Erbinformation muss im konkreten Zusammenhang betrachtet werden. Nicht jede Änderung wirkt gleich, und nicht jede hat eine erkennbare Auswirkung. Das Wort allein ist keine Gesundheitsbewertung."
+  },
+  {
+    "question": "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+    "answer": "Bei unabhängigen Versuchen mit gleichen Bedingungen verändert die bisherige Folge nicht automatisch die Chance des nächsten Ergebnisses. Eine kurze Reihe kann ungleich aussehen, ohne das Modell zu widerlegen."
+  },
+  {
+    "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+    "answer": "Der arithmetische Mittelwert verwendet die Summe aller Zahlen. Ein einzelner großer Wert verändert diese Summe. Die sortierte Mitte, der Median, reagiert anders auf denselben Datensatz."
+  },
+  {
+    "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+    "answer": "Ziffern können genauer aussehen, als das Messverfahren begründet. Gerät, Ablesung und weitere Einflüsse bestimmen die Verlässlichkeit mit. Eine lange Zahl ersetzt keine Angabe zur Messunsicherheit."
   }
 ]

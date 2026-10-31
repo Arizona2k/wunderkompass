@@ -1,0 +1,58 @@
+{
+  "words": [
+    [
+      "Mittelwert",
+      "Zahlen & Forschen",
+      "Der arithmetische Mittelwert verteilt die Summe mehrerer Zahlen gleichmäßig auf ihre Anzahl. Bei den Beispielzahlen 2, 4 und 9 ergibt die Summe 15, geteilt durch drei also 5. Nicht jede einzelne Zahl muss nahe am Mittelwert liegen."
+    ],
+    [
+      "Median",
+      "Zahlen & Forschen",
+      "Für den Median werden Zahlen zuerst der Größe nach sortiert. Bei einer ungeraden Anzahl ist er der mittlere Wert. Bei einer geraden Anzahl wird gewöhnlich der Mittelwert der beiden mittleren Zahlen verwendet."
+    ],
+    [
+      "Messwert",
+      "Mathematik & Messen",
+      "Ein bei einer Messung einer bestimmten Größe zugeordneter Wert, zum Beispiel eine Buchkantenlänge von etwa 12 cm. Zum vollständigen Messergebnis gehören weitere Angaben, insbesondere die Messunsicherheit."
+    ],
+    [
+      "Messunsicherheit",
+      "Mathematik & Messen",
+      "Messunsicherheit beschreibt, wie genau eine gesuchte Größe anhand einer Messung eingeschätzt werden kann. Sie ist nicht dasselbe wie ein bekannter Fehler. Auch ein sorgfältiges Ergebnis braucht Angaben zu seiner Verlässlichkeit."
+    ],
+    [
+      "Stichprobe",
+      "Mathematik & Messen",
+      "Eine Stichprobe ist eine ausgewählte Teilmenge einer größeren Gruppe, über die wir etwas lernen möchten. Wie sie ausgewählt wurde, ist wichtig. Ein bequem erreichbarer Ausschnitt vertritt nicht automatisch die ganze Gruppe."
+    ],
+    [
+      "Wahrscheinlichkeit",
+      "Mathematik & Messen",
+      "Eine Zahl beschreibt in einem Modell, wie wahrscheinlich ein Ereignis ist. In unserem fairen Gedankenmodell mit zwei gleich wahrscheinlichen Ergebnissen haben A und B in jedem unabhängigen Versuch jeweils die Wahrscheinlichkeit 1/2."
+    ],
+    [
+      "Skala",
+      "Mathematik & Messen",
+      "Eine Skala ordnet Werte durch beschriftete Zeichen oder Striche. Bei einer gleichmäßig eingeteilten Zahlenskala entsprechen gleiche Abstände gleichen Zahlenschritten. Andere Skalen können anders aufgebaut sein; lies ihre Beschriftung."
+    ],
+    [
+      "Maßstab",
+      "Mathematik & Messen",
+      "Ein Maßstab gibt an, wie Strecken einer Zeichnung zu den gemeinten Strecken passen. Bei 1:100 entspricht 1 cm auf dem Plan 100 cm in der beschriebenen Wirklichkeit. Beide Seiten des Verhältnisses müssen dieselbe Einheit verwenden."
+    ]
+  ],
+  "why": [
+    [
+      "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+      "Bei unabhängigen Versuchen mit gleichen Bedingungen verändert die bisherige Folge nicht automatisch die Chance des nächsten Ergebnisses. Eine kurze Reihe kann ungleich aussehen, ohne das Modell zu widerlegen."
+    ],
+    [
+      "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+      "Der arithmetische Mittelwert verwendet die Summe aller Zahlen. Ein einzelner großer Wert verändert diese Summe. Die sortierte Mitte, der Median, reagiert anders auf denselben Datensatz."
+    ],
+    [
+      "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+      "Ziffern können genauer aussehen, als das Messverfahren begründet. Gerät, Ablesung und weitere Einflüsse bestimmen die Verlässlichkeit mit. Eine lange Zahl ersetzt keine Angabe zur Messunsicherheit."
+    ]
+  ]
+}

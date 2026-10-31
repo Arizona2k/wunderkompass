@@ -1,0 +1,601 @@
+[
+  {
+    "kind": "word",
+    "term": "Messwert",
+    "definition": "Ein bei einer Messung einer bestimmten Größe zugeordneter Wert, zum Beispiel eine Buchkantenlänge von etwa 12 cm. Zum vollständigen Messergebnis gehören weitere Angaben, insbesondere die Messunsicherheit.",
+    "starter": "Ein gemessener Wert beschreibt mit Zahl und Einheit, was du beim Messen einer Größe zugeordnet hast. Nenne auch die gemessene Größe.",
+    "deeper": "Ein Messwert wird einer bestimmten Messgröße zugeordnet, etwa der Länge einer Buchkante. Eine Geräteanzeige muss dafür gegebenenfalls noch umgerechnet oder korrigiert werden. Zu einem vollständigen Messergebnis gehören weitere Angaben, insbesondere die Messunsicherheit und relevante Messbedingungen. Viele Nachkommastellen allein begründen keine hohe Genauigkeit.",
+    "observe": "Miss eine Buchkante dreimal mit demselben Lineal. Notiere Länge, Einheit und Startpunkt. Kleine Unterschiede sind Anlass, dein Vorgehen zu vergleichen, nicht automatisch ein Beweis für ein kaputtes Buch oder Gerät.",
+    "benefit": "Du unterscheidest eine Anzeige, einen gemessenen Wert und ein vollständig beschriebenes Messergebnis.",
+    "connection": "Beim Pendelmodell ist die Fadenlänge eine Eingabe. Ein Modellwert ist keine automatisch gemessene reale Länge; prüfe Einheit und Messweg getrennt.",
+    "topic": "science-pendulum",
+    "sources": [
+      {
+        "url": "https://jcgm.bipm.org/vim/en/2.10.html",
+        "title": "JCGM · Gemessener Größenwert (Englisch)",
+        "anchor": "Definition2.10 and notes: quantity value representing a measurement result; a measurement may yield more than one measured value. Own ruler explanation, no quoted source prose.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://jcgm.bipm.org/vim/en/1.19.html",
+        "title": "JCGM · Größenwert (Englisch)",
+        "anchor": "Definition1.19: number and reference together expressing the magnitude of a quantity. Own length example.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Messergebnis und Unsicherheit (Englisch)",
+        "anchor": "Sections2.1–2.7 and note distinguish an estimate of the measurand, uncertainty and error; own ruler example.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Messunsicherheit",
+        "reason": "Ein Ergebnis und die Einschätzung seiner Verlässlichkeit gehören zusammen. Viele Nachkommastellen allein belegen keine grenzenlose Genauigkeit."
+      },
+      {
+        "term": "Meter",
+        "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+      },
+      {
+        "term": "Skala",
+        "reason": "Die beschriftete Einteilung hilft beim Zuordnen eines Zahlenwerts. Lies Einheit und Anfangspunkt, statt nur die Striche zu zählen."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Angabe beschreibt die gemessene Länge verständlich?",
+      "answers": [
+        "Die Buchkante ist 12 lang",
+        "Die Buchkante ist etwa 12 cm lang",
+        "12 cm, ohne den Messgegenstand zu nennen"
+      ],
+      "correct": 1,
+      "hint": "Welche Informationen braucht jemand, um die Zahlenangabe einer bestimmten Länge zuzuordnen?",
+      "why": "Die Buchkante benennt die Größe; 12 cm verbindet Zahl und Längeneinheit. Das Wort etwa ersetzt keine genaue Unsicherheitsanalyse, vermeidet aber eine unbegründete Exaktheitsbehauptung.",
+      "wrongReasons": [
+        "Der Messgegenstand ist genannt, aber die Längeneinheit fehlt.",
+        "",
+        "Die Einheit ist genannt, aber ohne den Messgegenstand bleibt unklar, welche Länge gemessen wurde."
+      ]
+    },
+    "figure": "ruler-offset",
+    "relatedQuestions": [
+      {
+        "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+        "reason": "Ein Messwert benennt Größe, Zahl und Einheit; weitere Stellen allein machen daraus kein besser begründetes Ergebnis."
+      }
+    ],
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Messunsicherheit",
+    "definition": "Messunsicherheit beschreibt, wie genau eine gesuchte Größe anhand einer Messung eingeschätzt werden kann. Sie ist nicht dasselbe wie ein bekannter Fehler. Auch ein sorgfältiges Ergebnis braucht Angaben zu seiner Verlässlichkeit.",
+    "starter": "Ein Messgerät zeigt nicht jedes winzige Stück. Deshalb ist Messen nicht grenzenlos genau.",
+    "deeper": "Messunsicherheit beschreibt die Streuung der Werte, die einer Messgröße anhand der verwendeten Informationen begründet zugeordnet werden. Wiederholungen können Unterschiede zeigen, erfassen aber nicht automatisch alle Einflüsse. Eine falsch angesetzte Nullmarke kann mehrere Ergebnisse ähnlich verschieben. Unsicherheit ist nicht derselbe Begriff wie der tatsächliche Messfehler und kein frei erfundenes Versprechen einer sicheren Fehlergrenze.",
+    "observe": "Vergleiche gedachte Lineale mit Zentimeter- und Millimeterstrichen auf Papier. Welche kleineren Schritte lassen sich ablesen? Die Zeichnung ist keine Kalibrierung und liefert keinen berechneten Unsicherheitswert für ein echtes Gerät.",
+    "benefit": "Du erkennst, warum Genauigkeit begründet werden muss und nicht bloß aus vielen Ziffern folgt.",
+    "connection": "Häufigkeiten und Messunsicherheit beantworten verschiedene Fragen. Eine lange Ergebnisliste ist noch keine vollständige Begründung der Genauigkeit eines Geräts.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Messunsicherheit (Englisch)",
+        "anchor": "Actual2.1 andnote148: uncertainty accompanies result, not same as actual error; no universal95percent or guaranteed interval.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://jcgm.bipm.org/vim/en/2.26.html",
+        "title": "JCGM · Messunsicherheit (Englisch)",
+        "anchor": "Definition2.26 and notes: non-negative parameter characterizing dispersion of values attributed to a measurand on the information used. Do not identify uncertainty with known error or a universally guaranteed interval.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Messwert",
+        "reason": "Ein Ergebnis und die Einschätzung seiner Verlässlichkeit gehören zusammen. Viele Nachkommastellen allein belegen keine grenzenlose Genauigkeit."
+      }
+    ],
+    "question": {
+      "prompt": "Drei Messungen ergeben dieselbe Zahl. Was folgt daraus?",
+      "answers": [
+        "Der Mittelwert muss nun dem richtigen Wert entsprechen",
+        "Die Spannweite beschreibt damit schon die vollständige Messunsicherheit",
+        "Die Ergebnisse stimmen überein; gemeinsame Einflüsse sind damit nicht ausgeschlossen"
+      ],
+      "correct": 2,
+      "hint": "Ein gleicher Einfluss kann bei allen Wiederholungen auftreten.",
+      "why": "Gleiche Ergebnisse zeigen Übereinstimmung. Sie schließen gemeinsame Geräteeinflüsse oder ein gleichbleibendes Vorgehensproblem nicht aus.",
+      "wrongReasons": [
+        "Ein gemeinsamer Einfluss kann alle drei Ergebnisse ähnlich verschieben. Ihr Mittelwert ist dadurch nicht automatisch der richtige Wert.",
+        "Die Spannweite beschreibt hier nur den Unterschied zwischen den beobachteten Ergebnissen. Andere Einflüsse sind damit nicht vollständig erfasst.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+        "reason": "Bei der Messunsicherheit vergleichst du Zahlen mit den Bedingungen ihrer Ermittlung. Zusätzliche Stellen hinter dem Komma ersetzen keine genauere Messung."
+      }
+    ],
+    "figure": "repeat-and-offset",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Stichprobe",
+    "definition": "Eine Stichprobe ist eine ausgewählte Teilmenge einer größeren Gruppe, über die wir etwas lernen möchten. Wie sie ausgewählt wurde, ist wichtig. Ein bequem erreichbarer Ausschnitt vertritt nicht automatisch die ganze Gruppe.",
+    "starter": "Du prüfst einige Dinge statt aller. Überlege, welche Dinge bei deiner Auswahl fehlen.",
+    "deeper": "Eine große Stichprobe kann trotzdem einseitig sein, wenn bestimmte Teile der Gruppe kaum vorkommen. Die Auswahlmethode, Größe und Fragestellung gehören zusammen. Ein einzelner Ausschnitt beweist nicht jede Eigenschaft einer ganzen Bevölkerung.",
+    "observe": "Zeichne zwölf erfundene Formen in drei Reihen. Vergleiche eine Auswahl nur aus der ersten Reihe mit einer Auswahl aus mehreren Reihen. Das Gedankenbeispiel ist keine echte Befragung und keine statistische Garantie.",
+    "benefit": "Du hinterfragst, wer oder was in einer Auswertung tatsächlich berücksichtigt wurde.",
+    "connection": "Das Wahrscheinlichkeitsmodell sammelt einzelne Ergebnisse. Auswahl und Anzahl bestimmen, was eine Ergebnisliste zeigt; beobachtete Häufigkeit und vollständige Grundgesamtheit bleiben verschieden.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/glossary.htm",
+        "title": "NIST · Stichprobe (Englisch)",
+        "anchor": "Actual sample299–301 andpopulation242: subset of population, sampling choice matters. Exclude generic recommended minimum sizes and blanket95percent claims.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wahrscheinlichkeit",
+        "reason": "Die beobachtete Auswahl und theoretische Chancen im Modell sind verschieden. Eine einseitige Auswahl wird nicht allein durch größere Zahl repräsentativ."
+      },
+      {
+        "term": "Mittelwert",
+        "reason": "Ein Mittelwert fasst die ausgewählten Zahlen zusammen. Er behebt nicht automatisch fehlende oder einseitig ausgewählte Teile einer größeren Gruppe."
+      }
+    ],
+    "question": {
+      "prompt": "Du prüfst nur die erste Reihe. Was musst du bedenken?",
+      "answers": [
+        "Die erste Reihe kann anders zusammengesetzt sein als die übrigen",
+        "Vier Beobachtungen legen hier schon den Kreisanteil aller zwölf Formen fest",
+        "Die gleiche Anzahl gewählter Formen macht zwei Auswahlen gleich aussagekräftig"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche die Auswahlmethode mit der Anzahl. Was weißt du über die nicht ausgewählten Formen?",
+      "why": "Die ungeprüften Reihen fehlen. Eigenschaften des gewählten Ausschnitts dürfen deshalb nicht ungeprüft auf alle Formen übertragen werden.",
+      "wrongReasons": [
+        "",
+        "Die erste Reihe allein zeigt nicht, wie viele Kreise in den anderen Reihen liegen.",
+        "Zwei gleich große Auswahlen können verschieden zusammengesetzt sein. Die Anzahl allein gleicht eine einseitige Auswahl nicht aus."
+      ]
+    },
+    "figure": "sample-selection",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Mittelwert",
+    "definition": "Der arithmetische Mittelwert verteilt die Summe mehrerer Zahlen gleichmäßig auf ihre Anzahl. Bei den Beispielzahlen 2, 4 und 9 ergibt die Summe 15, geteilt durch drei also 5. Nicht jede einzelne Zahl muss nahe am Mittelwert liegen.",
+    "starter": "Addiere die Zahlen und teile durch ihre Anzahl. So erhältst du den arithmetischen Mittelwert.",
+    "deeper": "Ein sehr großer oder kleiner Wert kann den Mittelwert deutlich verschieben. Darum erzählt er nicht die ganze Geschichte einer Datenreihe. Verteilung, Streuung und andere Kennzahlen können zusätzlich wichtig sein. Eine andere Reihenfolge derselben Zahlen ändert den arithmetischen Mittelwert nicht.",
+    "observe": "Lege drei Zettel mit 2, 4 und 9 aus. Berechne ihren Mittelwert. Ersetze dann 9 durch 24 und rechne erneut. Was verändert sich, obwohl zwei Zettel gleich geblieben sind? Das sind erfundene Zahlen, keine echte Untersuchung.",
+    "benefit": "Du kannst einen Mittelwert berechnen und erklären, warum ein einzelner Extremwert ihn verschieben kann.",
+    "topic": "science-probability",
+    "connection": "Das Würfelmodell nennt für die Seiten 1 bis 6 ihre beobachteten Anzahlen. Ein arithmetischer Mittelwert der geworfenen Zahlen fasst diese Daten anders zusammen als der Anteil der Sechsen. Überlege zuerst, welche Frage du beantworten willst.",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "title": "NIST · Mittelwert (Englisch)",
+        "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Median",
+        "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+      },
+      {
+        "term": "Meeresspiegel",
+        "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
+      },
+      {
+        "term": "Stichprobe",
+        "reason": "Ein Mittelwert fasst die ausgewählten Zahlen zusammen. Er behebt nicht automatisch fehlende oder einseitig ausgewählte Teile einer größeren Gruppe."
+      }
+    ],
+    "question": {
+      "prompt": "Welcher arithmetische Mittelwert gehört zu 2, 4 und 9?",
+      "answers": [
+        "4",
+        "5",
+        "15"
+      ],
+      "correct": 1,
+      "hint": "Nach dem Addieren fehlt noch ein Rechenschritt.",
+      "why": "2 + 4 + 9 = 15. Drei Zahlen wurden addiert, also wird durch drei geteilt: 15 ÷ 3 = 5.",
+      "wrongReasons": [
+        "Die mittlere sortierte Zahl gehört zum Median. Beim Mittelwert wird die Summe durch die Anzahl geteilt.",
+        "",
+        "15 ist nur die Summe. Für den arithmetischen Mittelwert wird noch durch drei geteilt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+        "reason": "Beim Mittelwert kannst du dieselbe Zahlenliste mit einem veränderten großen Wert vergleichen. Prüfe, warum sich der Mittelwert anders verhalten kann als der mittlere Listenwert."
+      }
+    ],
+    "figure": "mean-and-median",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Median",
+    "definition": "Für den Median werden Zahlen zuerst der Größe nach sortiert. Bei einer ungeraden Anzahl ist er der mittlere Wert. Bei einer geraden Anzahl wird gewöhnlich der Mittelwert der beiden mittleren Zahlen verwendet.",
+    "starter": "Sortiere die Zahlen. Der Median beschreibt ihre Mitte, nicht die Summe aller Zahlen.",
+    "deeper": "Bei 1, 2 und 30 ist der Median 2, der arithmetische Mittelwert aber 11. Beide Kennzahlen beantworten verschiedene Fragen. Wiederholte gleiche Zahlen sind erlaubt; es müssen nicht genau gleich viele Werte streng kleiner und größer sein.",
+    "observe": "Sortiere Zettel mit 8, 1, 3 und 12. Finde die beiden mittleren Zahlen und bilde daraus den Mittelwert. Warum ist das Ergebnis 5,5 und nicht 8? Es geht nur um diese erfundene Reihe.",
+    "benefit": "Du unterscheidest sortierte Mitte und arithmetischen Mittelwert, auch bei einer geraden Anzahl.",
+    "topic": "science-probability",
+    "connection": "Im Würfelmodell siehst du, wie häufig jede Seite vorkommt. Eine Häufigkeitsdarstellung und die sortierte Mitte beantworten unterschiedliche Fragen. Zum Bestimmen eines Medians müsstest du die Ergebnisse nach ihrer Zahl ordnen; das Modell nennt ihn nicht automatisch.",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "title": "NIST · Median (Englisch)",
+        "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mittelwert",
+        "reason": "Mittelwert verwendet Summe und Anzahl; Median die sortierte Mitte. Dieselben Zahlen können unterschiedliche Kennzahlen ergeben."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist der Median der sortierten Beispielreihe 1, 3, 8 und 12?",
+      "answers": [
+        "3",
+        "8",
+        "5,5"
+      ],
+      "correct": 2,
+      "hint": "Bei vier Zahlen gibt es zwei mittlere Plätze.",
+      "why": "Die beiden mittleren Zahlen sind 3 und 8. Ihr Mittelwert ist (3 + 8) ÷ 2 = 5,5.",
+      "wrongReasons": [
+        "3 ist eine der beiden mittleren Zahlen. Bei einer geraden Anzahl wird auch die andere berücksichtigt.",
+        "Nur die größere mittlere Zahl auszuwählen überspringt die 3. Beide mittleren Werte gehören zur Berechnung.",
+        ""
+      ]
+    },
+    "figure": "mean-and-median",
+    "relatedQuestions": [
+      {
+        "question": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+        "reason": "Der Median bezieht sich auf die sortierte Mitte; vergleiche ihn am selben Datensatz."
+      }
+    ],
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Wahrscheinlichkeit",
+    "definition": "Eine Zahl beschreibt in einem Modell, wie wahrscheinlich ein Ereignis ist. In unserem fairen Gedankenmodell mit zwei gleich wahrscheinlichen Ergebnissen haben A und B in jedem unabhängigen Versuch jeweils die Wahrscheinlichkeit 1/2.",
+    "starter": "Manche Ergebnisse sind möglich, aber nicht sicher. Ein Modell hilft, ihre Chancen zu vergleichen.",
+    "deeper": "In unserem Gedankenmodell gibt es zwei gleich wahrscheinliche Ergebnisse A und B; jedes hat die Wahrscheinlichkeit 1/2. Die Versuche sind ausdrücklich unabhängig und ihre Bedingungen unverändert. Eine kurze Folge muss trotzdem nicht gleich viele A und B enthalten. Bei echten Vorgängen müssen diese Modellannahmen erst geprüft werden.",
+    "observe": "Schreibe A und B als die beiden Möglichkeiten eines ausdrücklich gedachten fairen Versuchs auf. Notiere eine erfundene Folge A, A, B. Vergleiche mögliche Chancen mit dieser kurzen Ergebnisliste; sie ist keine echte Zufallsmessung.",
+    "benefit": "Du trennst Chancen im Modell von Ergebnissen eines einzelnen Versuchs.",
+    "connection": "Die Wissenskarte zeigt Versuchsergebnisse und Häufigkeiten. Das eigene faire Modell erklärt, warum kurze Folgen die theoretischen Chancen nicht exakt abbilden müssen.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+        "title": "NIST · Wahrscheinlichkeit (Englisch)",
+        "anchor": "Actual NIST binomial definition8: exactly two mutually exclusive outcomes, fixed single-trial probability. Explicit independence in own hypothetical model, no assertion of real coin fairness or copied formulas/data.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/glossary.htm",
+        "title": "NIST · Unabhängige Versuche (Englisch)",
+        "anchor": "Actual glossary independent trials: outcome of a trial does not affect the outcome of another; combine with binomial fixed-probability two-outcome model, not a claim of real coin fairness.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Stichprobe",
+        "reason": "Die beobachtete Auswahl und theoretische Chancen im Modell sind verschieden. Eine einseitige Auswahl wird nicht allein durch größere Zahl repräsentativ."
+      }
+    ],
+    "question": {
+      "prompt": "Im fairen Zwei-Ergebnis-Modell kam zweimal A. Was ist für den nächsten unabhängigen Versuch richtig?",
+      "answers": [
+        "B ist nun wahrscheinlicher als A",
+        "A und B behalten jeweils die Wahrscheinlichkeit 1/2",
+        "A ist nun wahrscheinlicher als B"
+      ],
+      "correct": 1,
+      "hint": "Der gedachte neue Versuch hat dieselben Bedingungen und ist unabhängig.",
+      "why": "Unter diesen ausdrücklich gesetzten Modellbedingungen bleiben die Wahrscheinlichkeiten unverändert. Die bisherige Folge erzwingt kein Ausgleichsergebnis.",
+      "wrongReasons": [
+        "Im ausdrücklich unabhängigen Modell gleicht der nächste Versuch die frühere Folge nicht gezielt aus.",
+        "",
+        "Dass A bisher häufiger vorkam, verändert im ausdrücklich fairen unabhängigen Modell nicht die nächste Einzelchance."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wahrscheinlichkeit“: Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig."
+      }
+    ],
+    "figure": "independent-trials",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Skala",
+    "definition": "Eine Skala ordnet Werte durch beschriftete Zeichen oder Striche. Bei einer gleichmäßig eingeteilten Zahlenskala entsprechen gleiche Abstände gleichen Zahlenschritten. Andere Skalen können anders aufgebaut sein; lies ihre Beschriftung.",
+    "starter": "Striche helfen beim Ablesen. Die Zahlen sagen, wie groß ein Schritt ist.",
+    "deeper": "Zwischen 0 und 10 können fünf gleiche Abschnitte jeweils den Schritt 2 darstellen. Gleich große Striche bedeuten nicht ohne Beschriftung immer den Schritt 1. Eine feinere Zeichnung macht ein echtes Messgerät nicht automatisch genauer.",
+    "observe": "Zeichne sechs gleich weit entfernte Striche und beschrifte sie 0, 2, 4, 6, 8, 10. Zähle fünf Zwischenräume. Die Zeichnung ist eine selbst gewählte Zahlenskala, kein geprüftes Messgerät.",
+    "benefit": "Du liest Zwischenräume und Zahlenschritte, statt nur Striche zu zählen.",
+    "connection": "Im Pendelstandbild wählst du die Fadenlänge in Schritten von 0,5 Metern. Zahlenwert und Einheit erklären die Eingabe. Der Regler ist kein Messgerät; die berechnete Schwingungszeit ist eine andere Größe als die eingegebene Länge.",
+    "topic": "science-pendulum",
+    "sources": [
+      {
+        "url": "https://jcgm.bipm.org/vim/en/3.5.html",
+        "title": "JCGM · Skala eines anzeigenden Messgeräts (Englisch)",
+        "anchor": "Definition3.5: ordered set of marks with associated quantity values, forming part of a displaying measuring instrument. Own equal-interval numerical drawing, not every scale is linear.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/metric-si/metric-ruler-sp-376",
+        "title": "NIST · Metrisches Lineal SP376 (Englisch)",
+        "anchor": "Actual teaching resource centimetre/millimetre graduations; own schematic ruler has no guaranteed physical screen calibration. Actual observed updated date11August2026, no source ruler image copied.",
+        "updatedOn": "2026-08-11",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Maßstab",
+        "reason": "Eine Skala ordnet beschriftete Werte; ein Maßstab vergleicht Strecken in Darstellung und Wirklichkeit. Gleich aussehende Striche erklären nicht beide Beziehungen."
+      },
+      {
+        "term": "Meter",
+        "reason": "Eine Skala braucht passende Zahlenwerte und eine bezeichnete Größe. Bei der Fadenlängeneingabe ist Meter die Längeneinheit."
+      },
+      {
+        "term": "Messwert",
+        "reason": "Eine abgelesene Modell- oder Reglereingabe ist nicht automatisch eine echte Messung. Prüfe, woher der Zahlenwert stammt."
+      }
+    ],
+    "question": {
+      "prompt": "Fünf gleich große Abschnitte reichen von 0 bis 10. Wie groß ist ein Zahlenschritt?",
+      "answers": [
+        "1 je Abschnitt",
+        "5 je Abschnitt",
+        "2 je Abschnitt"
+      ],
+      "correct": 2,
+      "hint": "Teile den gesamten Zahlenunterschied durch die Zahl der gleich großen Abschnitte.",
+      "why": "10 ÷ 5 = 2. Sechs Randstriche begrenzen fünf Abschnitte; Strichzahl und Abschnittszahl sind verschieden.",
+      "wrongReasons": [
+        "Ein Strich legt ohne Zahlenbeschriftung keinen Schritt von 1 fest.",
+        "Fünf ist die Anzahl der Abschnitte, nicht der Zahlenunterschied pro Abschnitt.",
+        ""
+      ]
+    },
+    "figure": "numbered-intervals",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Maßstab",
+    "definition": "Ein Maßstab gibt an, wie Strecken einer Zeichnung zu den gemeinten Strecken passen. Bei 1:100 entspricht 1 cm auf dem Plan 100 cm in der beschriebenen Wirklichkeit. Beide Seiten des Verhältnisses müssen dieselbe Einheit verwenden.",
+    "starter": "Ein kleiner Plan kann eine größere Strecke darstellen. Der Maßstab erklärt den Unterschied.",
+    "deeper": "Bei 1:100 werden Längen durch 100 geteilt. Flächen ändern sich dabei anders als einzelne Strecken. Auf einer Weltkarte können Projektionen außerdem Verzerrungen erzeugen; ein Beispielplan ist kein überall genauer Ersatz für jede Erdkarte.",
+    "observe": "Zeichne eine gedachte 2 m lange Wand im Maßstab 1:100: 2 m sind 200 cm, also wird die Linie 2 cm lang. Nutze nur einen erfundenen Raum; der Plan ersetzt keine sichere Vermessung oder Bauanleitung.",
+    "benefit": "Du rechnest mit denselben Einheiten und erkennst Grenzen vereinfachter Pläne.",
+    "connection": "Richtung und Kartenmaßstab erklären verschiedene Eigenschaften eines Plans. Ein Kompass allein misst keine Entfernung; auch die Projektion begrenzt weltweite Streckenvergleiche.",
+    "topic": "invention-compass",
+    "sources": [
+      {
+        "url": "https://www.usgs.gov/educational-resources/27-ideas-teaching-topographic-maps-0",
+        "title": "USGS · Maßstab (Englisch)",
+        "anchor": "Actual MapScale paragraph: ratio1:10000 sameunits map toground. Own1:100 toy floorplan arithmetic, no source map, data, worksheet or current mapcount.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Skala",
+        "reason": "Eine Skala ordnet beschriftete Werte; ein Maßstab vergleicht Strecken in Darstellung und Wirklichkeit. Gleich aussehende Striche erklären nicht beide Beziehungen."
+      }
+    ],
+    "question": {
+      "prompt": "Wie lang ist eine gedachte 2-m-Wand im Plan mit Maßstab 1:100?",
+      "answers": [
+        "2 cm",
+        "200 cm",
+        "20 cm"
+      ],
+      "correct": 0,
+      "hint": "Wandle zuerst Meter in Zentimeter um und teile dann durch 100.",
+      "why": "2 m = 200 cm; 200 cm ÷ 100 = 2 cm. Maßstab und Einheiten werden gemeinsam benutzt.",
+      "wrongReasons": [
+        "",
+        "200 cm ist die gedachte wirkliche Länge vor der Verkleinerung.",
+        "20 cm ergäben sich bei 1:10. Hier gilt 1:100, also 200 cm geteilt durch 100."
+      ]
+    },
+    "figure": "plan-scale",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum muss nach mehreren gleichen Zufallsergebnissen kein Ausgleich kommen?",
+    "definition": "Bei unabhängigen Versuchen mit gleichen Bedingungen verändert die bisherige Folge nicht automatisch die Chance des nächsten Ergebnisses. Eine kurze Reihe kann ungleich aussehen, ohne das Modell zu widerlegen.",
+    "starter": "Ein gedachtes faires Zufallsspiel merkt sich nicht, welches Ergebnis gerade öfter kam.",
+    "deeper": "Unabhängigkeit und unveränderte Bedingungen sind Voraussetzungen, keine Eigenschaft jedes wirklichen Vorgangs. Wettertage sind zum Beispiel nicht ohne Prüfung solche unabhängigen Versuche. Erwartete Häufigkeit und nächste sichere Vorhersage sind verschieden.",
+    "observe": "Schreibe für ein ausdrücklich faires Gedankenmodell die Folge A, A, A auf und beide Möglichkeiten des nächsten Versuchs daneben. Das ist keine echte Zufallsstudie oder Wettstrategie.",
+    "benefit": "Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig.",
+    "topic": "science-probability",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+        "title": "NIST · Wahrscheinlichkeit (Englisch)",
+        "anchor": "Actual NIST binomial definition8: exactly two mutually exclusive outcomes, fixed single-trial probability. Explicit independence in own hypothetical model, no assertion of real coin fairness or copied formulas/data.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/glossary.htm",
+        "title": "NIST · Unabhängige Versuche (Englisch)",
+        "anchor": "Actual glossary independent trials: outcome of a trial does not affect the outcome of another; combine with binomial fixed-probability two-outcome model, not a claim of real coin fairness.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Wahrscheinlichkeit",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Wahrscheinlichkeit“: Du vermeidest den Fehlschluss, ein zufälliger Ausgleich sei sofort fällig."
+      }
+    ],
+    "connection": "Die Wahrscheinlichkeitskarte unterscheidet mögliche Ergebnisse von sicheren Vorhersagen. Wende das auf eine neue unabhängige Ziehung an, ohne aus der bisherigen Folge eine Pflicht zum Ausgleich abzuleiten.",
+    "figure": "independent-trials",
+    "question": {
+      "prompt": "Nach A, A, A folgt ein weiterer unabhängiger Versuch im fairen Modell. Welche Chance hat A?",
+      "answers": [
+        "1/4, weil nun häufiger B folgen muss",
+        "1/2, weil die Bedingungen gleich bleiben",
+        "3/4, weil sich die bisherige Reihe fortsetzt"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die Voraussetzungen des nächsten Versuchs mit denen der vorherigen.",
+      "why": "Im ausdrücklich fairen Modell mit zwei gleich wahrscheinlichen Ergebnissen bleiben A und B bei jedem unabhängigen Versuch jeweils bei 1/2. Eine kurze Folge verändert diese Voraussetzung nicht.",
+      "wrongReasons": [
+        "Ein sofortiger Ausgleich ist nicht fällig. Die bisherige Folge macht B im nächsten unabhängigen Versuch nicht wahrscheinlicher.",
+        "",
+        "Eine bisherige Häufung macht A im nächsten unabhängigen Versuch nicht wahrscheinlicher."
+      ]
+    },
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum kann ein einzelner sehr großer Wert einen Durchschnitt verschieben?",
+    "definition": "Der arithmetische Mittelwert verwendet die Summe aller Zahlen. Ein einzelner großer Wert verändert diese Summe. Die sortierte Mitte, der Median, reagiert anders auf denselben Datensatz.",
+    "starter": "Ein sehr großer Zahlenzettel zieht die gemeinsame Summe nach oben.",
+    "deeper": "Beide Kennzahlen beantworten unterschiedliche Fragen. Der Median ist nicht automatisch für jede Untersuchung besser. Auswahl, Verteilung und Fragestellung gehören zur Bewertung; ein Durchschnitt ist keine Beschreibung jedes Einzelwerts.",
+    "observe": "Vergleiche die erfundenen Reihen 1, 2, 3 und 1, 2, 30. Berechne Mittelwert und sortierte Mitte getrennt. Die Zahlen bewerten keine echten Personen oder Leistungen.",
+    "benefit": "Du wählst eine Kennzahl nach der Frage und erkennst den Einfluss eines Extremwerts.",
+    "sources": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "title": "NIST · Mittelwert (Englisch)",
+        "anchor": "Definition of location, mean=sum/number; extremes influence the mean. Own numerical examples, no source data or chart copied.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mittelwert",
+        "reason": "Der Mittelwert verwendet alle Werte und verändert sich hier mit dem großen Einzelwert."
+      },
+      {
+        "term": "Median",
+        "reason": "Der Median bezieht sich auf die sortierte Mitte; vergleiche ihn am selben Datensatz."
+      }
+    ],
+    "connection": "Beim Mittelwert kannst du dieselbe Zahlenliste mit einem veränderten großen Wert vergleichen. Prüfe, warum sich der Mittelwert anders verhalten kann als der mittlere Listenwert.",
+    "figure": "mean-and-median",
+    "topic": "science-probability",
+    "question": {
+      "prompt": "Die Reihe 1, 2, 3 wird zu 1, 2, 30. Welche Kennzahlen hat die neue Reihe?",
+      "answers": [
+        "Mittelwert 11 und Median 2",
+        "Mittelwert 2 und Median 2",
+        "Mittelwert 11 und Median 11"
+      ],
+      "correct": 0,
+      "hint": "Berechne die Summe getrennt vom mittleren Wert der sortierten Reihe.",
+      "why": "Die Summe ist 33. Geteilt durch drei ergibt das den arithmetischen Mittelwert 11. In der sortierten Reihe steht weiterhin 2 in der Mitte.",
+      "wrongReasons": [
+        "",
+        "2 ist die sortierte Mitte. Der Mittelwert verwendet dagegen auch den veränderten großen Wert und beträgt 33 geteilt durch 3.",
+        "Der Mittelwert ist richtig berechnet. Der Median ist jedoch der mittlere Einzelwert der sortierten Reihe: 2."
+      ]
+    },
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
+    "definition": "Ziffern können genauer aussehen, als das Messverfahren begründet. Gerät, Ablesung und weitere Einflüsse bestimmen die Verlässlichkeit mit. Eine lange Zahl ersetzt keine Angabe zur Messunsicherheit.",
+    "starter": "Mehr geschriebene Zahlenstellen machen die Striche eines Lineals nicht feiner.",
+    "deeper": "Wiederholte Übereinstimmung allein schließt gemeinsame Einflüsse nicht aus. Messfehler und Messunsicherheit sind außerdem verschiedene Begriffe. Ein frei gewählter Bereich ist keine garantierte Grenze jeder Abweichung.",
+    "observe": "Schreibe neben ein grobes Gedankenlineal 12 cm und 12,0000 cm. Prüfe, welche zusätzlichen Stellen das gezeichnete Gerät wirklich begründet; erfinde keinen echten Unsicherheitswert.",
+    "benefit": "Du fragst nach der Begründung einer Genauigkeitsangabe statt nach bloßer Ziffernzahl.",
+    "sources": [
+      {
+        "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-2-classification-components-uncertainty",
+        "title": "NIST · Messunsicherheit (Englisch)",
+        "anchor": "Actual2.1 andnote148: uncertainty accompanies result, not same as actual error; no universal95percent or guaranteed interval.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://jcgm.bipm.org/vim/en/2.26.html",
+        "title": "JCGM · Messunsicherheit (Englisch)",
+        "anchor": "Definition2.26 and notes distinguish uncertainty from a known measurement error; no invented numerical uncertainty.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Messunsicherheit",
+        "reason": "Welche Genauigkeit begründet ist, hängt von den Messinformationen ab, nicht allein von geschriebenen Nachkommastellen."
+      },
+      {
+        "term": "Messwert",
+        "reason": "Ein Messwert benennt Größe, Zahl und Einheit; weitere Stellen allein machen daraus kein besser begründetes Ergebnis."
+      }
+    ],
+    "connection": "Bei der Messunsicherheit vergleichst du Zahlen mit den Bedingungen ihrer Ermittlung. Zusätzliche Stellen hinter dem Komma ersetzen keine genauere Messung.",
+    "figure": "repeat-and-offset",
+    "topic": "science-pendulum",
+    "question": {
+      "prompt": "Zwei Geräte zeigen 12 cm und 12,0000 cm. Was hilft beim Vergleich ihrer Verlässlichkeit?",
+      "answers": [
+        "Nur die Zahl der Nachkommastellen vergleichen",
+        "Messverfahren, Bedingungen und Unsicherheit prüfen",
+        "Den Mittelwert der beiden Anzeigen als richtigen Wert nehmen"
+      ],
+      "correct": 1,
+      "hint": "Überlege, welche Informationen über den Weg vom Messgegenstand zur Anzeige noch fehlen.",
+      "why": "Die Ziffernzahl allein erklärt weder die Eigenschaften des Geräts noch die Messbedingungen. Für einen begründeten Vergleich werden das Verfahren und die Unsicherheit benötigt.",
+      "wrongReasons": [
+        "Mehr angezeigte Stellen belegen allein keine kleinere Messunsicherheit.",
+        "",
+        "Der Mittelwert zweier Anzeigen schließt gemeinsame Einflüsse nicht aus und ist dadurch nicht automatisch der richtige Wert."
+      ]
+    },
+    "sourceReadOn": "2026-10-31"
+  }
+]

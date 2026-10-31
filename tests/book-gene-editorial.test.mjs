@@ -1,3 +1,4 @@
+import {statisticsPredecessors,withGenePreStatisticsRuntime} from './statistics-predecessor-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -5,7 +6,7 @@ import {genePredecessors,withCellPreGeneRuntime} from './gene-predecessor-refere
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 import {fingerprint} from '../scripts/content-inventory.mjs';
 import fixture from './fixtures/gene-cell-runtime-predecessor.json' with {type:'json'};
-const read=()=>JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+const read=()=>statisticsPredecessors(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
 test('the genetics layer preserves every whole delivered M83 dossier and reconstructs its real runtime bytes without claiming new UI',()=>{
  const previous=genePredecessors(read());assert.equal(previous.length,156);
  assert.deepEqual(previous.map(row=>({id:row.id,sha256:fingerprint(row)})),fixture.whole156PredecessorDossiers);
@@ -30,7 +31,7 @@ import {validateDossier} from '../scripts/editorial-contract.mjs';
 import {geneHistoryReference} from './gene-history-reference.mjs';
 const geneRead=name=>JSON.parse(fs.readFileSync(name,'utf8')),currentFixture=geneRead('tests/fixtures/editorial-before-gene-156.json'),currentReference=geneHistoryReference(currentFixture,currentFixture.currentTemplate),inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys()),genePack=geneRead('app/book-gene-content.json'),geneTeaching=geneRead('exports/content/book-gene.json'),geneWords=geneRead('exports/content/knowledge-words.json'),geneWhy=geneRead('exports/content/why-questions.json');
 function assertActualCurrent166(items){
- assert.equal(items.length,166);assert.equal(currentFixture.priorDossiers.length,156);assert.equal(currentFixture.addedDossiers.length,10);assert.equal(currentFixture.currentTemplate.build,learningFingerprint(process.cwd()),'all raw166 UI bound to actual current runtime');currentReference.assertCurrentGeneSharedUI(items);
+ assert.equal(items.length,166);assert.equal(currentFixture.priorDossiers.length,156);assert.equal(currentFixture.addedDossiers.length,10);assert.equal(currentFixture.currentTemplate.build,withGenePreStatisticsRuntime(process.cwd(),learningFingerprint),'all raw166 UI bound to actual current runtime');currentReference.assertCurrentGeneSharedUI(items);
  const expectedIds=[...GENE_WORDS.map(term=>'words:'+term),...GENE_QUESTIONS.map(question=>'why:'+geneWhy.findIndex(row=>row.question===question))];assert.equal(new Set(expectedIds).size,10);assert.deepEqual(new Set(currentFixture.addedDossiers.map(row=>row.id)),new Set(expectedIds));
  for(const id of expectedIds){
   const dossier=items.find(row=>row.id===id),record=records.get(id);assert(dossier&&record);assert.equal(dossier.dataHash,record.dataHash,id+' canonical inventory hash');

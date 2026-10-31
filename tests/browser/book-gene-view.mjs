@@ -1,3 +1,4 @@
+import {revealBookWords} from './book-pagination.mjs';
 import {assertEnzymeEndpoints} from './book-gene-diagrams.mjs';
 // Shared gene learning checks for the existing regular and cold browser callers.
 import {assertBookGeneFigure} from './book-gene-diagrams.mjs';
@@ -82,7 +83,7 @@ export async function bookGeneNetworkView(page,{shots=null,engine='chromium'}={}
   await child.goto(base+'/#book');await ready(child);await child.waitForFunction(()=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value==='');
   // These terms are beyond the first24 visible words. Reach both through
   // the actual existing pagination before exercising concurrent disclosures.
-  for(let n=0;!await cardFor(child,'Gen').count()||!await cardFor(child,'RNA').count();n++){assert(n<5,'gene terms are reachable through existing word pagination');await child.getByRole('button',{name:/^Weitere Wörter entdecken/}).click();}
+  proof.wordPagination=await revealBookWords(child,["Gen","RNA"]);
   const cellStudy=cardFor(child,'Gen').locator('[data-book-gene-study]'),membraneStudy=cardFor(child,'RNA').locator('[data-book-gene-study]');
   await cellStudy.locator(':scope>summary').click();await started;await cellStudy.locator(':scope>summary').click();await membraneStudy.locator(':scope>summary').click();assert.equal(requests,1);release();
   await membraneStudy.getByText(pack.learning['RNA'].benefit,{exact:true}).waitFor();await cellStudy.locator(':scope>summary').click();await cellStudy.getByText(pack.learning['Gen'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;

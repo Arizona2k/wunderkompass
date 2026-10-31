@@ -1,3 +1,4 @@
+import {statisticsPredecessors,withGenePreStatisticsRuntime} from './statistics-predecessor-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,6 +11,7 @@ const sha=b=>createHash('sha256').update(b).digest('hex');
 // This strictly reconstructs the completed predecessor's historical contract.
 // New content without UI remains unqualified by the final editorial verifier.
 export function genePredecessors(items){
+ items=statisticsPredecessors(items);
  const qualified=path.join(import.meta.dirname,'fixtures/editorial-before-gene-156.json');
  if(fs.existsSync(qualified)){
   const current=JSON.parse(fs.readFileSync(qualified,'utf8')),reference=geneHistoryReference(current,current.currentTemplate);
@@ -24,7 +26,8 @@ export function genePredecessors(items){
  assert.deepEqual(items.map(row=>({id:row.id,sha256:sha(JSON.stringify(row))})),fixture.whole156PredecessorDossiers,'every whole delivered156 dossier and nested history retained in exact order');
  return items;
 }
-export function withCellPreGeneRuntime(root,inspect){
+export function withCellPreGeneRuntime(root,inspect){return withGenePreStatisticsRuntime(root,prior=>withCellPreGeneRuntimeAtM84(prior,inspect));}
+function withCellPreGeneRuntimeAtM84(root,inspect){
  const current=new Map(learningInputs(root).map(p=>[path.relative(root,p),p])),expected=new Set([...fixture.predecessorInputs,...fixture.addedInputs].map(r=>r.name));
  assert.deepEqual(new Set(current.keys()),expected,'no unenumerated new or missing genetics runtime input');
  assert.equal(learningFingerprint(root),fixture.currentRuntimeBuild,'actual measured genetics runtime required');

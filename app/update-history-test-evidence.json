@@ -2051,6 +2051,70 @@
         }
       ],
       "checkedOn": "2026-10-31"
+    },
+    {
+      "number": 83,
+      "title": "Zellbegriffe mit eigenen Lernmodellen und vernetzten Erklärungen vertiefen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/83",
+      "base": "test-live",
+      "mergedAt": "2026-10-31T09:17:08Z",
+      "mergeCommit": "a142a437917efd5b2f422a4eeb11224ef37f0e57",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/a142a437917efd5b2f422a4eeb11224ef37f0e57/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57737269819,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-31T09:17:29Z",
+          "updatedAt": "2026-10-31T09:17:29Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BJvcRpbPD6W1FDc5BMETyD8FRyh9"
+        },
+        {
+          "id": 57737263286,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-31T09:17:12Z",
+          "updatedAt": "2026-10-31T09:17:12Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/BJvcRpbPD6W1FDc5BMETyD8FRyh9"
+        }
+      ],
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "number": 84,
+      "title": "Genetik im Wissensbuch mit neun bedienbaren Modellen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/84",
+      "base": "test-live",
+      "mergedAt": "2026-10-31T15:43:06Z",
+      "mergeCommit": "81afa89ab2c6ce5c120be3aaec54ffca15d851c1",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/81afa89ab2c6ce5c120be3aaec54ffca15d851c1/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57747380638,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-10-31T15:43:20Z",
+          "updatedAt": "2026-10-31T15:43:20Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/B9N15hWtGeT4erSQDKNzxRRtExNN"
+        },
+        {
+          "id": 57747375228,
+          "context": "Vercel",
+          "state": "pending",
+          "creator": "vercel[bot]",
+          "description": "Vercel is deploying your app",
+          "createdAt": "2026-10-31T15:43:10Z",
+          "updatedAt": "2026-10-31T15:43:10Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/B9N15hWtGeT4erSQDKNzxRRtExNN"
+        }
+      ],
+      "checkedOn": "2026-10-31"
     }
   ]
 }

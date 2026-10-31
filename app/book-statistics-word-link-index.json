@@ -1,0 +1,18 @@
+{
+  "Meter": [
+    {
+      "term": "Messwert",
+      "reason": "Ein Zahlenwert braucht eine passende Einheit und eine bezeichnete Größe. Meter benennt Länge und ist kein vollständiger Messbericht."
+    },
+    {
+      "term": "Skala",
+      "reason": "Eine Skala braucht passende Zahlenwerte und eine bezeichnete Größe. Bei der Fadenlängeneingabe ist Meter die Längeneinheit."
+    }
+  ],
+  "Meeresspiegel": [
+    {
+      "term": "Mittelwert",
+      "reason": "Mehrere Höhenwerte lassen sich unter einem gemeinsamen Bezug mitteln. Ein einzelner Wert ist noch kein langjähriger weltweiter Trend."
+    }
+  ]
+}
