@@ -12,7 +12,7 @@ test('water studies add four concepts and three Why questions with canonical Dic
  assert.deepEqual(bookWaterContent(true),pack);assert.deepEqual(WATER_RETAINED_WORDS,['Dichte']);
  const bytes=fs.readFileSync('app/book-water-content.json'),integrity=read('app/book-water-integrity.json');assert.equal(bytes.length,integrity.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),integrity.sha256);
  const words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json'),exported=read('exports/content/book-water.json'),projection=read('app/book-water-index.json'),topics=read('app/world-index.json'),links=read('app/book-water-topic-index.json');
- assert.equal(words.length,126);assert.equal(why.length,40);assert.equal(exported.length,8);assert.equal(links.length,5);assert.equal(projection.words.length,4);assert(!projection.words.some(row=>row[0]==='Dichte'));assert.equal(words.filter(w=>w.term==='Dichte').length,1);
+ assert.equal(words.length,134);assert.equal(why.length,42);assert.equal(exported.length,8);assert.equal(links.length,5);assert.equal(projection.words.length,4);assert(!projection.words.some(row=>row[0]==='Dichte'));assert.equal(words.filter(w=>w.term==='Dichte').length,1);
  for(const term of WATER_WORDS){const row=words.find(w=>w.term===term),item=pack.learning[term];assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert.deepEqual(exported.find(e=>e.kind==='word'&&e.term===term),{kind:'word',term,definition:row.more,...item,sourceReadOn:pack.sourceReadOn});assert.deepEqual(links.find(l=>l.term===term),{term,topic:item.topic,connection:item.benefit});}
  for(const question of WATER_QUESTIONS){const row=why.find(w=>w.question===question);assert.deepEqual([row.question,row.answer],pack.why[question]);}
  for(const item of [...Object.values(pack.learning),...Object.values(pack.whyLearning)]){assert(topics.some(t=>t.id===item.topic));for(const link of item.relatedWords??[])assert(words.some(w=>w.term===link.term));for(const link of item.relatedQuestions??[])assert(why.some(w=>w.question===link.question));}
@@ -21,7 +21,7 @@ test('water studies add four concepts and three Why questions with canonical Dic
 
 test('all113 prior word payloads,34 Why payloads and entire SI, heat and light packs preserve actual M76 identities',()=>{
  const old=read('tests/fixtures/book-before-water-113-hashes.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json');assert.equal(old.sourceCommit,'53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8');assert.equal(Object.keys(old.words).length,113);assert.equal(Object.keys(old.why).length,34);
- assert.equal(new Set(words.map(w=>w.term)).size,126);assert.equal(new Set(why.map(w=>w.question)).size,40);
+ assert.equal(new Set(words.map(w=>w.term)).size,134);assert.equal(new Set(why.map(w=>w.question)).size,42);
  for(const [term,sha]of Object.entries(old.words))assert.equal(digest(words.find(w=>w.term===term)),sha,term);
  for(const [question,sha]of Object.entries(old.why))assert.equal(digest(why.find(w=>w.question===question)),sha,question);
  for(const file of ['app/book-measurement-content.json','app/book-heat-content.json','app/book-light-content.json'])assert.equal(createHash('sha256').update(fs.readFileSync(file)).digest('hex'),old.packs[file]);

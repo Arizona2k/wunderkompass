@@ -1,5 +1,13 @@
 ## Lesestelle und Fokus bei Zoom · PR81 tatsächlich abgeschlossen
 
+## Zellbegriffe und eigene Lernmodelle · lokaler Entwicklungsstand
+
+Acht Zell-/DNA-Begriffe und zwei Warumfragen ergänzen das bestehende Wissensbuch mit freiwilliger Tiefe, begründeten Aufgaben, fünf eigenen bedienbaren Modellarten und erzeugten beidseitigen Themenverbindungen. Die dargestellten Modelle unterscheiden unter anderem bekannte Zellbeispiele, DNA-Reihenfolge und Bausteinanzahl sowie Kern-DNA und mitochondriale DNA, ohne aus den vereinfachten Zeichnungen reale Größen oder persönliche Eigenschaften abzuleiten. Vollständige lokale Browserabnahme und aktuelle Bildsichtung bestanden; individuelle Inhaltsakten sind daran gebunden, alle146ganzen Vorgänger und deren Historien erhalten. Abschließende374Unit-/130Releaseprüfungen, Typ/Lint/Build und verify51/156 sind bestanden. Vollständige native GitHub-Abnahme, reguläre Bereitstellung und tatsächlicher Liefernachtest stehen aus. Bereitgestellt bleiben126Wörter/40Warumfragen; Arbeitsbestand134/42, übriges Paket3.5 und Gesamtauftrag offen.
+
+
+
+31.10.2026 · PR82 regulär nach `test-live` übernommen (06:36:18MEZ), passende Bereitstellung06:36:35MEZ und anschließender tatsächlicher Liefernachtest bestätigt. Vier Mechanikbegriffe und drei Warumfragen mit eigenen Modellen, passenden Quellen und beidseitigen Verknüpfungen sind verfügbar; bisheriger Fortschritt, Zoom-Rückwege und kalter Offline-Neustart bleiben erhalten. Der bestätigte schnelle WebKit-Buchrückweg schreibt unveränderten Kontext nicht nochmals. Weitere Zellinhalte bleiben im regulären Paket3.5-Folgeabschnitt in Arbeit; Gesamtauftrag offen.
+
 Beim Rückweg aus einem Artikel bleiben Auswahl und Lesestelle auch in kurzen200-Prozent-Ansichten erhalten. Bereits vollständig sichtbare Lesekarten werden am Fensterrand nicht neu zentriert und zeigen einen verlässlichen Fokus. Ursprüngliche Performanceziele und Bedienfristen sind gezielt wiederhergestellt; begründete Ausführungs-, Archiv-, Prüfbild- und Passreserven bleiben. Vollständige Quality201 erfolgreich; PR81 regulär als `5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5` übernommen und am31.10.2026 um02:06:49MEZ bereitgestellt. Tatsächlicher Produkt-/Altpass-/Zoom-/Kalt-Offline-Nachtest bestätigt; ausführliche Belege privat, Paket3.5 und Gesamtauftrag offen.
 
 ## Aufgaben und fachliche Rückwege · PR80 bereitgestellt, mit PR81 vollständig testbestätigt

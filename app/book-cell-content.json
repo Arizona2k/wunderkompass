@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "sourceReadOn": "2026-10-30",
+  "words": {
+    "Zelle": [
+      "Zelle",
+      "Leben & Zellen",
+      "Eine Zelle ist eine grundlegende Einheit des Lebens. Manche Lebewesen bestehen aus einer einzigen Zelle, andere aus vielen. Zellen sind nicht alle gleich aufgebaut; Bakterien besitzen keinen membranumhüllten Zellkern."
+    ],
+    "Zellmembran": [
+      "Zellmembran",
+      "Leben & Zellen",
+      "Die Zellmembran begrenzt eine Zelle gegenüber ihrer Umgebung. Sie ist am kontrollierten Austausch von Stoffen beteiligt. Sie ist nicht dasselbe wie die zusätzliche feste Zellwand mancher Zelltypen."
+    ],
+    "Zellkern": [
+      "Zellkern",
+      "Leben & Zellen",
+      "Der Zellkern ist ein membranumhüllter Bereich eukaryotischer Zellen und enthält ihre Kernchromosomen. Nicht jede Zelle hat einen solchen Kern, und nicht jede DNA einer Zelle muss darin liegen."
+    ],
+    "Mitochondrium": [
+      "Mitochondrium",
+      "Leben & Zellen",
+      "Ein Mitochondrium ist eine membranumhüllte Zellstruktur, die an der Umwandlung chemischer Energie beteiligt ist. Dabei wird Energie unter anderem in ATP verfügbar. Mitochondrien erzeugen keine Energie aus dem Nichts und enthalten eigene DNA."
+    ],
+    "Eukaryot": [
+      "Eukaryot",
+      "Leben & Zellen",
+      "Ein Eukaryot ist ein Lebewesen aus der Gruppe mit typischerweise kernhaltigen Zellen. Tiere, Pflanzen, Pilze und viele Einzeller gehören dazu. Die Gruppenzugehörigkeit bedeutet nicht, dass jede spezialisierte Einzelzelle immer einen Zellkern behalten muss."
+    ],
+    "Prokaryot": [
+      "Prokaryot",
+      "Leben & Zellen",
+      "Prokaryot bezeichnet ein Lebewesen mit Zellen ohne membranumhüllten Zellkern. Ein Beispiel sind Bakterien. Ohne diesen Kern bedeutet nicht ohne Erbinformation oder ohne geregelte Zellvorgänge."
+    ],
+    "DNA": [
+      "DNA",
+      "Leben & Zellen",
+      "DNA ist ein Molekül, das Erbinformation trägt. Die Reihenfolge ihrer Bausteine enthält Informationen, die Zellen nutzen. Sie ist kein Plan, der deine Entscheidungen oder deine ganze Zukunft festlegt."
+    ],
+    "Genom": [
+      "Genom",
+      "Leben & Zellen",
+      "Das Genom ist die Gesamtheit der Erbinformation eines Lebewesens. Bei zellulären Lebewesen liegt sie in DNA. Gene sind Teile dieser Gesamtheit; auch andere DNA-Abschnitte gehören dazu."
+    ]
+  },
+  "learning": {
+    "Zelle": {
+      "starter": "Eine Zelle kann allein leben oder mit anderen Zellen zusammenarbeiten. Ein großes Lebewesen besteht aus vielen Zellen.",
+      "deeper": "Zelltypen unterscheiden sich. Bakterien und Archaeen haben keinen membranumhüllten Zellkern. Eukaryotische Lebewesen gehören zu einer Gruppe mit typischerweise kernhaltigen Zellen; dazu zählen Tiere, Pflanzen, Pilze und viele Einzeller. Spezialisierte Zellen können davon abweichen: Reife menschliche rote Blutkörperchen verlieren ihren Zellkern. Viren sind keine Zellen.",
+      "observe": "Zeichne zwei ausdrücklich erfundene Zellschemata: mit umhülltem Kern und ohne diesen Kern. Schreibe darunter, dass Form, Zahl und Größen nicht wirklich gemessen sind. Sammle oder züchte dafür keine Mikroorganismen.",
+      "benefit": "Du erkennst unterschiedliche Zelltypen und vermeidest eine einzige vermeintlich richtige Zellform.",
+      "connection": "Die Zellkarte zeigt einen vereinfachten Bauplan. Frage immer, welchen Zelltyp ein Schema darstellt, statt es auf alle Lebewesen zu übertragen.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell",
+          "title": "NHGRI · Zellen und Zelltypen (Englisch)",
+          "anchor": "Definition und Narration: Zellen als grundlegende Einheit, Einzeller und Vielzeller, typische eukaryotische und prokaryotische Baupläne. Keine Zellzahlschätzung oder Nanobot-Metapher übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+          "anchor": "Abschnitt Components of Prokaryotic Cells: Bakterien und Archaeen, DNA im Nucleoid ohne Kernhülle, Membran und Ribosomen. Einführende Sammelsätze über alle Zellbestandteile nicht auf spezialisierte menschliche Erythrozyten übertragen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Virus",
+          "title": "NHGRI · Viren und Wirtszellen (Englisch)",
+          "anchor": "Definition: Nukleinsäure, die DNA oder RNA sein kann, mit Proteinhülle; Vermehrung nutzt Wirtszellen. Keine Viruszucht, Krankheitszählung oder Behandlungsanleitung.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+          "title": "OpenStax Anatomy and Physiology 2e · Reife Erythrozyten (Englisch)",
+          "anchor": "Abschnitt Shape and Structure of Erythrocytes, erster Absatz: Reifung mit Abgabe des Kerns und vieler Organellen; reife zirkulierende menschliche Erythrozyten ohne Mitochondrien. Keine Laborwerte, Diagnosen oder Behandlungsaussagen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zellmembran",
+          "reason": "Die Membran grenzt die Zelle ab und ist am Stoffaustausch beteiligt. Ein Ring im Schema ist keine vollständige Darstellung aller Transportvorgänge."
+        },
+        {
+          "term": "Eukaryot",
+          "reason": "Typische eukaryotische Zellen besitzen einen membranumhüllten Kern. Reife rote Blutkörperchen des Menschen sind eine spezialisierte Ausnahme: Sie haben ihren Zellkern bei der Reifung verloren."
+        },
+        {
+          "term": "Prokaryot",
+          "reason": "Prokaryotische Zellen besitzen keinen membranumhüllten Kern. Dies bedeutet nicht fehlende Erbinformation oder einen leeren Zellinhalt."
+        }
+      ],
+      "question": {
+        "prompt": "Welche Aussage passt zu den drei bekannten Zellbeispielen?",
+        "answers": [
+          "Jede Zelle hat einen membranumhüllten Kern",
+          "Alle Lebewesen bestehen aus genau einer Zelle",
+          "Zellen unterscheiden sich; nicht jede hat einen solchen Kern"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Kernhülle, DNA und die Erklärung zur spezialisierten reifen roten Blutzelle.",
+        "why": "Die bekannten Beispiele unterscheiden sich. Das Bakterium besitzt DNA ohne membranumhüllten Kern. Das reife menschliche rote Blutkörperchen ist eine spezialisierte Ausnahme; der Mensch gehört trotzdem zu den Eukaryoten.",
+        "wrongReasons": [
+          "Bakterienzellen haben keinen membranumhüllten Kern. Die Aussage würde diesen Zelltyp auslassen.",
+          "Viele Lebewesen bestehen aus zahlreichen Zellen. Einzeller sind nicht der einzige mögliche Aufbau.",
+          ""
+        ]
+      },
+      "figure": "cell-examples"
+    },
+    "Zellmembran": {
+      "starter": "Die Membran bildet eine Grenze, an der bestimmte Stoffe hinein- oder hinausgelangen können.",
+      "deeper": "Die Membran besteht aus einer Lipiddoppelschicht mit eingelagerten Proteinen. Welche Stoffe auf welchem Weg hindurchgelangen, hängt von Stoffeigenschaften und Membranvorgängen ab. Eine zusätzliche Zellwand ist eine andere Struktur. Die Membran entscheidet nicht bewusst wie eine kleine Person.",
+      "observe": "Zeichne einen gedachten Zellring mit zwei unterschiedlich beschrifteten Pfeilen hinein und hinaus. Markiere ihn als Schema. Die Pfeile stehen nicht für beliebige offene Löcher und messen keine Stoffmenge oder Transportzeit.",
+      "benefit": "Du erkennst eine Grenze mit Austausch und unterscheidest Membran, Zellwand und eine geschlossene Dose.",
+      "connection": "Die Zellkarte zeigt einen begrenzten Bauplan. Ein Membranring ist eine Hilfe für die Abgrenzung, keine maßstäbliche Aufnahme oder Zellwand.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell-Membrane",
+          "title": "NHGRI · Zellmembran (Englisch)",
+          "anchor": "Definition: Abgrenzung durch eine Lipiddoppelschicht und selektiver Stofftransport; Narration unterscheidet die zusätzliche Zellwand. Keine pauschale Cholesterinaussage oder bewusste Auswahl behauptet.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "title": "OpenStax Biology 2e · Eukaryotische Zellen (Englisch)",
+          "anchor": "Abschnitte The Plasma Membrane, The Nuclear Envelope und Mitochondria: Lipiddoppelschicht mit Proteinen, doppelte Kernhülle und Mitochondrien mit eigener DNA. Einzelne Zeichnungen und pauschale Allzellenlisten nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zelle",
+          "reason": "Die Membran grenzt die Zelle ab und ist am Stoffaustausch beteiligt. Ein Ring im Schema ist keine vollständige Darstellung aller Transportvorgänge."
+        }
+      ],
+      "question": {
+        "prompt": "Was erklärt eine Membranskizze mit Stoffpfeilen?",
+        "answers": [
+          "Abgrenzung und möglichen Stoffaustausch",
+          "Dass jeder Stoff immer ungehindert hindurchgeht",
+          "Dass Membran und Zellwand dieselbe Struktur sind"
+        ],
+        "correct": 0,
+        "hint": "Eine Grenze kann einen geregelten Austausch ermöglichen, ohne völlig offen zu sein.",
+        "why": "Die Membran grenzt ab und beteiligt sich am Austausch. Die Skizze erklärt nicht, dass alle Stoffe immer frei hindurchgehen.",
+        "wrongReasons": [
+          "",
+          "Der Austausch hängt von Stoffen und Membranvorgängen ab. Ein Pfeil ist kein Beleg für unbegrenzten Durchgang.",
+          "Eine zusätzliche Zellwand und die Zellmembran sind unterschiedliche Strukturen."
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine Zellmembran mehr als eine einfache Mauer?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Zellmembran“: Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen."
+        }
+      ],
+      "figure": "selective-membrane"
+    },
+    "Zellkern": {
+      "starter": "Bei manchen Zelltypen liegt viel Erbinformation in einem umhüllten Kern. Andere Zelltypen besitzen diesen Kern nicht.",
+      "deeper": "Die Kernhülle besteht aus zwei Membranen. Ihre Poren ermöglichen ausgewählten Austausch. Ein Kreis in der Bildmitte beweist keine immer mittige Lage. Außerdem kann DNA außerhalb des Kerns vorkommen, etwa in Mitochondrien. Reife menschliche rote Blutkörperchen besitzen keinen Zellkern.",
+      "observe": "Zeichne einen Kern innerhalb eines erfundenen Zellschemas und daneben einen anderen Zelltyp ohne umhüllten Kern. Beschrifte beide. Die Zeichnung ist ein Vergleich, kein Foto und keine Festlegung einer immer gleichen Kernposition.",
+      "benefit": "Du kannst einen Kernbereich erklären und vermeidest die falsche Behauptung, jede Zelle müsse ihn haben.",
+      "connection": "Vergleiche den gezeichneten Zelltyp mit einer Bakterienzelle ohne umhüllten Kern. Chromosomen und Kern sind nicht in jedem Zelltyp gleich organisiert.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Nucleus",
+          "title": "NHGRI · Zellkern (Englisch)",
+          "anchor": "Definition: membranumhüllte Struktur mit Kernchromosomen, Poren für ausgewählten Austausch. Die Zeichnung legt keine immer mittige Lage fest; zusätzliche DNA-Orte aus der Mitochondrienquelle.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "title": "OpenStax Biology 2e · Eukaryotische Zellen (Englisch)",
+          "anchor": "Abschnitte The Plasma Membrane, The Nuclear Envelope und Mitochondria: Lipiddoppelschicht mit Proteinen, doppelte Kernhülle und Mitochondrien mit eigener DNA. Einzelne Zeichnungen und pauschale Allzellenlisten nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria",
+          "title": "NHGRI · Mitochondrien (Englisch)",
+          "anchor": "Definition und Narration: Umwandlung chemischer Energie und ATP, eigene Chromosomen sowie unterschiedliche Ausstattung von Zelltypen. Keine Energie aus dem Nichts, medizinische Ableitung oder universelle Vererbungsbehauptung.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+          "title": "OpenStax Anatomy and Physiology 2e · Reife Erythrozyten (Englisch)",
+          "anchor": "Abschnitt Shape and Structure of Erythrocytes, erster Absatz: Reifung mit Abgabe des Kerns und vieler Organellen; reife zirkulierende menschliche Erythrozyten ohne Mitochondrien. Keine Laborwerte, Diagnosen oder Behandlungsaussagen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genome",
+          "title": "NHGRI · Genom (Englisch)",
+          "anchor": "Definition: Gesamtheit der DNA, beim Menschen Kern- und mitochondriale DNA; Narration: keine einfache Beziehung zwischen Genomgröße und biologischer Komplexität. Keine datierten Größenrekorde oder pauschalen Chromosomenzahlen übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Der Zellkern enthält Kern-DNA; der Informationsträger und sein Aufbewahrungsbereich sind verschiedene Dinge."
+        },
+        {
+          "term": "Mitochondrium",
+          "reason": "Mitochondrien besitzen eigene DNA. Deshalb liegt nicht jede DNA einer kernhaltigen Zelle im Zellkern."
+        },
+        {
+          "term": "Genom",
+          "reason": "Die Kern-DNA gehört beim Menschen zum Genom. Auch mitochondriale DNA gehört dazu; der Zellkern ist deshalb nicht die ganze Sammlung."
+        }
+      ],
+      "question": {
+        "prompt": "Was darfst du aus der gezeichneten Position des Kerns nicht schließen?",
+        "answers": [
+          "Dass ein bestimmtes Schema einen Kern darstellen soll",
+          "Dass jeder echte Zellkern immer genau an dieser Stelle liegt",
+          "Dass die Zeichnung nur ein Modell ist"
+        ],
+        "correct": 1,
+        "hint": "Trenne den gewählten Platz eines Symbols von allen wirklichen Zellformen.",
+        "why": "Die Position ist eine Zeichenentscheidung. Sie beweist keine universelle Lage in allen echten Zellen.",
+        "wrongReasons": [
+          "Ein beschriftetes Kernsymbol kann den dargestellten Bereich erklären, auch wenn es keine echte Lage misst.",
+          "",
+          "Die ausdrücklich erfundene Zeichnung darf als Modell bezeichnet werden. Das ist keine Behauptung über alle echten Zellen."
+        ]
+      },
+      "figure": "cell-examples"
+    },
+    "Mitochondrium": {
+      "starter": "Manche Zellstrukturen helfen, gespeicherte chemische Energie für andere Zellvorgänge nutzbar zu machen.",
+      "deeper": "Mitochondrien haben zwei Membranen und eigene DNA. Durch Zellvorgänge wird chemische Energie umgewandelt und unter anderem für die Bildung von ATP genutzt. Zelltypen sind verschieden ausgestattet: Reife menschliche rote Blutkörperchen enthalten keine Mitochondrien. Daraus folgt keine medizinische Diagnose.",
+      "observe": "Zeichne ein erfundenes Zellkästchen mit einem Pfeil für chemische Ausgangsstoffe und einem für nutzbar gemachte Energie. Beschrifte die Begrenzung: keine echte Mengenbilanz, keine vollständige Reaktionskette und kein medizinischer Test.",
+      "benefit": "Du erkennst Energieumwandlung in einer Zellstruktur und vermeidest die Idee einer Energiequelle aus dem Nichts.",
+      "connection": "Die Zellkarte liefert den Bauplan-Kontext. Mitochondrien sind ein Beispiel für eine besondere Zellstruktur, nicht ein Bestandteil jedes denkbaren Zelltyps.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria",
+          "title": "NHGRI · Mitochondrien (Englisch)",
+          "anchor": "Definition und Narration: Umwandlung chemischer Energie und ATP, eigene Chromosomen sowie unterschiedliche Ausstattung von Zelltypen. Keine Energie aus dem Nichts, medizinische Ableitung oder universelle Vererbungsbehauptung.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "title": "OpenStax Biology 2e · Eukaryotische Zellen (Englisch)",
+          "anchor": "Abschnitte The Plasma Membrane, The Nuclear Envelope und Mitochondria: Lipiddoppelschicht mit Proteinen, doppelte Kernhülle und Mitochondrien mit eigener DNA. Einzelne Zeichnungen und pauschale Allzellenlisten nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+          "title": "OpenStax Anatomy and Physiology 2e · Reife Erythrozyten (Englisch)",
+          "anchor": "Abschnitt Shape and Structure of Erythrocytes, erster Absatz: Reifung mit Abgabe des Kerns und vieler Organellen; reife zirkulierende menschliche Erythrozyten ohne Mitochondrien. Keine Laborwerte, Diagnosen oder Behandlungsaussagen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genome",
+          "title": "NHGRI · Genom (Englisch)",
+          "anchor": "Definition: Gesamtheit der DNA, beim Menschen Kern- und mitochondriale DNA; Narration: keine einfache Beziehung zwischen Genomgröße und biologischer Komplexität. Keine datierten Größenrekorde oder pauschalen Chromosomenzahlen übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zellkern",
+          "reason": "Der Kern ist nicht der einzige mögliche DNA-Ort einer eukaryotischen Zelle. Mitochondrien besitzen eigene DNA und dienen einer anderen Zellaufgabe."
+        },
+        {
+          "term": "Energie",
+          "reason": "Chemische Energie kann durch Zellvorgänge umgewandelt und verfügbar gemacht werden. Eine Zellstruktur erschafft keine Energie aus dem Nichts."
+        },
+        {
+          "term": "Genom",
+          "reason": "Zum menschlichen Genom gehört auch mitochondriale DNA. Ein Mitochondrium und die Gesamtheit des Erbmaterials sind verschiedene Begriffe."
+        }
+      ],
+      "question": {
+        "prompt": "Welche Aussage passt zum vereinfachten Mitochondrienbeispiel?",
+        "answers": [
+          "Energie wird aus dem Nichts erzeugt",
+          "Jede Zelle enthält gleich viele Mitochondrien",
+          "Chemische Energie wird umgewandelt und nutzbar gemacht"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche Ausgangsbedingungen, ATP-Bildung und Wärme. Woher kommt die umgewandelte Energie?",
+        "why": "Die Erklärung beschreibt eine Umwandlung chemischer Energie. Sie behauptet weder Energie aus dem Nichts noch dieselbe Zahl von Mitochondrien in jeder Zelle.",
+        "wrongReasons": [
+          "Umwandlung braucht Ausgangsbedingungen. Sie ist keine Energieerzeugung aus dem Nichts.",
+          "Zelltypen und ihr Energiebedarf unterscheiden sich. Eine gleiche Anzahl in jeder Zelle folgt daraus nicht.",
+          ""
+        ]
+      },
+      "figure": "mitochondrial-conversion"
+    },
+    "Eukaryot": {
+      "starter": "Dieser Name beschreibt eine Gruppe nach ihrem Zellaufbau. Er sagt nicht einfach groß oder klein.",
+      "deeper": "Die Gruppe wird nach ihrem Zellaufbau und ihrer Verwandtschaft beschrieben, nicht nach sichtbarer Größe. Auch einzelne kleine Lebewesen können Eukaryoten sein. Als wichtige Ausnahme innerhalb eines eukaryotischen Lebewesens verlieren reife menschliche rote Blutkörperchen ihren Zellkern. Ein einziger Punkt in einer Zeichnung bestimmt keine unbekannte Art.",
+      "observe": "Ordne auf Papier die bekannten Beispiele Pflanze und Bakterium den beschrifteten Zelltypen mit beziehungsweise ohne umhüllten Kern zu. Verwende keine unbekannten Proben. Dieses Sortieren überprüft einen Begriff und ersetzt keine biologische Bestimmung.",
+      "benefit": "Du ordnest den Begriff nach dem Zellaufbau statt nach der Größe eines Lebewesens.",
+      "connection": "Der Zellbauplan hilft beim Strukturvergleich. Große Tiere und kleine einzelne eukaryotische Lebewesen lassen sich nicht allein nach Größe in diese Gruppen sortieren.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell",
+          "title": "NHGRI · Zellen und Zelltypen (Englisch)",
+          "anchor": "Definition und Narration: Zellen als grundlegende Einheit, Einzeller und Vielzeller, typische eukaryotische und prokaryotische Baupläne. Keine Zellzahlschätzung oder Nanobot-Metapher übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+          "anchor": "Abschnitt Components of Prokaryotic Cells: Bakterien und Archaeen, DNA im Nucleoid ohne Kernhülle, Membran und Ribosomen. Einführende Sammelsätze über alle Zellbestandteile nicht auf spezialisierte menschliche Erythrozyten übertragen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "title": "OpenStax Biology 2e · Eukaryotische Zellen (Englisch)",
+          "anchor": "Abschnitte The Plasma Membrane, The Nuclear Envelope und Mitochondria: Lipiddoppelschicht mit Proteinen, doppelte Kernhülle und Mitochondrien mit eigener DNA. Einzelne Zeichnungen und pauschale Allzellenlisten nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+          "title": "OpenStax Anatomy and Physiology 2e · Reife Erythrozyten (Englisch)",
+          "anchor": "Abschnitt Shape and Structure of Erythrocytes, erster Absatz: Reifung mit Abgabe des Kerns und vieler Organellen; reife zirkulierende menschliche Erythrozyten ohne Mitochondrien. Keine Laborwerte, Diagnosen oder Behandlungsaussagen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zelle",
+          "reason": "Typische eukaryotische Zellen besitzen einen membranumhüllten Kern. Reife rote Blutkörperchen des Menschen sind eine spezialisierte Ausnahme: Sie haben ihren Zellkern bei der Reifung verloren."
+        }
+      ],
+      "question": {
+        "prompt": "Die reife rote Blutzelle des Menschen hat keinen Zellkern. Was bedeutet das für die Gruppe des Menschen?",
+        "answers": [
+          "Der Mensch gehört trotzdem zu den Eukaryoten",
+          "Der Mensch wird dadurch zu einem Bakterium",
+          "Ein fehlendes Kernsymbol bestimmt allein die Gruppe"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide das bekannte Lebewesen von einer spezialisierten Zelle, die ihren Kern bei der Reifung verloren hat.",
+        "why": "Die spezialisierte Ausnahme ändert die Gruppenzugehörigkeit des Menschen nicht. Ein fehlendes Kernsymbol allein bestimmt keine unbekannte Zelle.",
+        "wrongReasons": [
+          "",
+          "Eine spezialisierte menschliche Zelle macht den Menschen nicht zu einem Bakterium.",
+          "Die Herkunft der Beispiele ist bekannt. Aus einem einzelnen fehlenden Symbol folgt keine biologische Bestimmung."
+        ]
+      },
+      "figure": "cell-examples"
+    },
+    "Prokaryot": {
+      "starter": "Manche Zellen haben keinen umhüllten Kern. Trotzdem besitzen sie Erbinformation und können leben.",
+      "deeper": "Zu den Prokaryoten zählt man Bakterien und Archaeen. Ihre DNA liegt nicht in einem von einer Kernhülle umgebenen Zellkern. Sie besitzen dennoch einen geordneten Zellaufbau und betreiben Stoffwechsel. Die Bezeichnung ist keine Rangliste von primitiver und höher entwickelter Natur.",
+      "observe": "Zeichne ein erfundenes Zellschema ohne Kernhülle und markiere darin einen Bereich mit DNA. Schreibe darunter: nicht maßstäblich, keine echte Aufnahme. Unbekannte Mikroorganismen werden dafür weder gesammelt noch gezüchtet.",
+      "benefit": "Du unterscheidest fehlende Kernhülle von fehlender Erbinformation oder einem vermeintlich leeren Zellinneren.",
+      "connection": "Vergleiche dieses Schema mit dem anderen Zellbauplan. Eine fehlende Kernhülle lässt sich nicht als fehlende Erbinformation lesen.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell",
+          "title": "NHGRI · Zellen und Zelltypen (Englisch)",
+          "anchor": "Definition und Narration: Zellen als grundlegende Einheit, Einzeller und Vielzeller, typische eukaryotische und prokaryotische Baupläne. Keine Zellzahlschätzung oder Nanobot-Metapher übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+          "anchor": "Abschnitt Components of Prokaryotic Cells: Bakterien und Archaeen, DNA im Nucleoid ohne Kernhülle, Membran und Ribosomen. Einführende Sammelsätze über alle Zellbestandteile nicht auf spezialisierte menschliche Erythrozyten übertragen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zelle",
+          "reason": "Prokaryotische Zellen besitzen keinen membranumhüllten Kern. Dies bedeutet nicht fehlende Erbinformation oder einen leeren Zellinhalt."
+        },
+        {
+          "term": "DNA",
+          "reason": "Eine fehlende Kernhülle bedeutet nicht fehlenden Informationsträger. Prokaryotische Zellen besitzen DNA ohne einen solchen Kern."
+        }
+      ],
+      "question": {
+        "prompt": "Was bedeutet ohne membranumhüllten Zellkern in diesem Beispiel?",
+        "answers": [
+          "Es gibt überhaupt keine DNA",
+          "Die DNA liegt nicht in einem solchen umhüllten Kern",
+          "Die Zelle kann grundsätzlich nicht leben"
+        ],
+        "correct": 1,
+        "hint": "Prüfe, ob Kernhülle und Erbinformation wirklich derselbe Begriff sind.",
+        "why": "Fehlende Kernhülle bedeutet nicht fehlende DNA. Bakterien sind lebende Beispiele für diesen Zelltyp.",
+        "wrongReasons": [
+          "Erbinformation kann auch ohne membranumhüllten Kern vorliegen.",
+          "",
+          "Lebende Bakterienzellen zeigen, dass dieser Zelltyp nicht grundsätzlich lebensunfähig ist."
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prokaryot“: Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information."
+        }
+      ],
+      "figure": "cell-examples"
+    },
+    "DNA": {
+      "starter": "Zellen bewahren Informationen in einem Stoff namens DNA auf. Die Reihenfolge kleiner Bausteine macht dabei einen Unterschied.",
+      "deeper": "DNA besteht gewöhnlich aus zwei verbundenen Strängen. Ihre vier Basen heißen A, T, C und G; A passt zu T und C zu G. Die Reihenfolge enthält unter anderem Information für Proteine oder RNA.",
+      "observe": "Schreibe AATT und ATAT auf. Beide enthalten dieselben Buchstaben, aber in anderer Reihenfolge. Erkläre, warum bloßes Zählen die Anordnung nicht beschreibt. Das ist eine Zeichenhilfe, keine echte DNA.",
+      "benefit": "Du unterscheidest den Informationsträger von der Reihenfolge seiner Bausteine.",
+      "topic": "science-cell",
+      "connection": "Auf der Zellkarte erkennst du verschiedene Bereiche einer Zelle. Die DNA erklärt, wie Zellen Informationen bewahren; die grobe Zellzeichnung zeigt diese Moleküle nicht einzeln.",
+      "relatedWords": [
+        {
+          "term": "Atom",
+          "reason": "DNA ist ein großes Molekül aus verbundenen Atomen. Eine Buchstabenfolge stellt nur ausgewählte Information dar und ist kein Modell aller Atome."
+        },
+        {
+          "term": "Genom",
+          "reason": "DNA bezeichnet den molekularen Informationsträger; Genom bezeichnet die Gesamtheit der Erbinformation."
+        },
+        {
+          "term": "Zellkern",
+          "reason": "Bei typischen eukaryotischen Zellen liegt ein großer Teil der DNA im Zellkern; der Ort ist nicht dasselbe wie das Molekül."
+        },
+        {
+          "term": "Prokaryot",
+          "reason": "Bakterien besitzen DNA ohne membranumhüllten Zellkern. Der Informationsträger und seine Anordnung innerhalb einer Zelle sind verschiedene Merkmale."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+          "title": "NHGRI · DNA (Englisch)",
+          "anchor": "Definition: zwei verbundene Stränge, vier Basen und Paarung A–T/C–G; die Basenfolge trägt Informationen unter anderem für RNA oder Proteine. Keine Prozentvergleiche zwischen Menschen übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genetic-Code",
+          "title": "NHGRI · Gene bestimmen nicht die ganze Zukunft (Englisch)",
+          "anchor": "Letzter Satz der Narration: weder Gene noch DNA bestimmen allein, wer ein Mensch ist oder was er tun wird. Die Auswahlaufgabe bewertet keine persönlichen Eigenschaften.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+          "anchor": "Abschnitt Components of Prokaryotic Cells: Bakterien und Archaeen, DNA im Nucleoid ohne Kernhülle, Membran und Ribosomen. Einführende Sammelsätze über alle Zellbestandteile nicht auf spezialisierte menschliche Erythrozyten übertragen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "question": {
+        "prompt": "AATT und ATAT enthalten gleich viele A und T. Was ist trotzdem verschieden?",
+        "answers": [
+          "Die Reihenfolge",
+          "Die Gesamtzahl der Zeichen",
+          "Die verwendeten Zeichenarten"
+        ],
+        "correct": 0,
+        "hint": "Lies beide Folgen von links nach rechts.",
+        "why": "Dieselben Zeichen können verschieden angeordnet sein. Bei DNA ist die Reihenfolge wichtig für die enthaltene Information.",
+        "wrongReasons": [
+          "",
+          "Beide Folgen enthalten vier Zeichen. Die Gesamtzahl erklärt den Unterschied nicht.",
+          "Beide verwenden A und T. Unterschiedlich ist ihre Anordnung."
+        ]
+      },
+      "figure": "dna-order"
+    },
+    "Genom": {
+      "starter": "Genom heißt die ganze Sammlung der Erbinformation. Ein Gen gehört als einzelner Abschnitt dazu.",
+      "deeper": "Beim Menschen liegt DNA nicht nur in den Chromosomen des Zellkerns, sondern auch in Mitochondrien. Ein größeres Genom bedeutet nicht automatisch ein komplizierteres Lebewesen. Umfang und Aufgaben sind unterschiedliche Fragen.",
+      "observe": "Vergleiche zwei eigene Bastelanleitungen: eine lange mit vielen Wiederholungen und eine kurze mit mehreren Schritten. Warum beweist die Seitenzahl allein nicht, welche schwieriger ist? Der Vergleich bildet kein echtes Genom nach.",
+      "benefit": "Du unterscheidest gesamte Erbinformation, einzelne Gene und die bloße Größe einer Sammlung.",
+      "topic": "science-cell",
+      "connection": "Vergleiche Teil und Ganzes: Die Zellkarte erklärt den Zellaufbau, das Genom die Gesamtheit ihrer Erbinformation. Das sind unterschiedliche Beschreibungsebenen.",
+      "relatedWords": [
+        {
+          "term": "DNA",
+          "reason": "Bei zellulären Lebewesen besteht das Erbmaterial des Genoms aus DNA. Die Gesamtheit und der molekulare Träger sind verschiedene Beschreibungsebenen."
+        },
+        {
+          "term": "Zellkern",
+          "reason": "Beim Menschen gehört die Kern-DNA zum Genom, aber sie ist nicht seine einzige DNA."
+        },
+        {
+          "term": "Mitochondrium",
+          "reason": "Auch die mitochondriale DNA gehört beim Menschen zum Genom. Ein Ganzes kann auf mehrere Zellbereiche verteilt sein."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Genome",
+          "title": "NHGRI · Genom (Englisch)",
+          "anchor": "Definition: Gesamtheit der DNA, beim Menschen Kern- und mitochondriale DNA; Narration: keine einfache Beziehung zwischen Genomgröße und biologischer Komplexität. Keine datierten Größenrekorde oder pauschalen Chromosomenzahlen übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria",
+          "title": "NHGRI · Mitochondrien (Englisch)",
+          "anchor": "Definition und Narration: Umwandlung chemischer Energie und ATP, eigene Chromosomen sowie unterschiedliche Ausstattung von Zelltypen. Keine Energie aus dem Nichts, medizinische Ableitung oder universelle Vererbungsbehauptung.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "question": {
+        "prompt": "Die längere erfundene Zeichensammlung enthält mehr Zeichen. Was folgt allein daraus?",
+        "answers": [
+          "Das Lebewesen ist klüger",
+          "Das Lebewesen ist automatisch komplizierter",
+          "Das gezeichnete Beispiel enthält mehr Zeichen"
+        ],
+        "correct": 2,
+        "hint": "Trenne Menge von Fähigkeiten oder biologischer Komplexität.",
+        "why": "Die Zahl beschreibt nur die Menge der gezeichneten Zeichen. Die symbolischen Ausschnitte sind keine echten Genome und beweisen keine Klugheit oder biologische Komplexität.",
+        "wrongReasons": [
+          "Die Menge an Erbmaterial ist kein Maß für Klugheit.",
+          "Genomgröße und biologische Komplexität passen nicht in eine einfache Rangfolge.",
+          ""
+        ]
+      },
+      "figure": "genome-parts"
+    }
+  },
+  "why": {
+    "Warum ist eine Zellmembran mehr als eine einfache Mauer?": [
+      "Warum ist eine Zellmembran mehr als eine einfache Mauer?",
+      "Eine Zellmembran grenzt ab und ist am Austausch mit der Umgebung beteiligt. Abgrenzung bedeutet nicht, dass gar kein Stoff hindurchgelangt. Ein Ring im Zellbild zeigt nur einen Teil der Erklärung."
+    ],
+    "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?": [
+      "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?",
+      "Ein membranumhüllter Zellkern ist nicht die einzige mögliche Organisation von Erbinformation. Bakterielle Zelltypen besitzen keinen solchen Kern und dennoch DNA. Kein Kern bedeutet deshalb nicht kein Erbgut."
+    ]
+  },
+  "whyLearning": {
+    "Warum ist eine Zellmembran mehr als eine einfache Mauer?": {
+      "starter": "Eine Zelle braucht eine Grenze und zugleich Austausch. Beides gehört zusammen.",
+      "deeper": "Eine Lipiddoppelschicht mit Proteinen bildet die Zellmembran. Sie trennt Bereiche und ermöglicht zugleich selektiven Transport. Nicht alle Stoffe kommen auf demselben Weg hindurch. Ein Pfeil im Schema zeigt eine vereinfachte Möglichkeit, keine beliebig offene Tür, exakte Transportzeit oder unbegrenzte Stoffmenge.",
+      "observe": "Zeichne eine gedachte Zellgrenze und getrennte Pfeile für ausgewählten Austausch. Beschrifte, welche Eigenschaften das Schema offenlässt; keine Zellproben oder unbekannten Stoffe untersuchen.",
+      "benefit": "Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell-Membrane",
+          "title": "NHGRI · Zellmembran (Englisch)",
+          "anchor": "Definition: Abgrenzung durch eine Lipiddoppelschicht und selektiver Stofftransport; Narration unterscheidet die zusätzliche Zellwand. Keine pauschale Cholesterinaussage oder bewusste Auswahl behauptet.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "title": "OpenStax Biology 2e · Eukaryotische Zellen (Englisch)",
+          "anchor": "Abschnitte The Plasma Membrane, The Nuclear Envelope und Mitochondria: Lipiddoppelschicht mit Proteinen, doppelte Kernhülle und Mitochondrien mit eigener DNA. Einzelne Zeichnungen und pauschale Allzellenlisten nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zellmembran",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Zellmembran“: Du verbindest Schutz und Austausch, ohne die Bildgrenze wörtlich zu nehmen."
+        }
+      ],
+      "connection": "Die Zellkarte beschreibt Zellbestandteile und ihre Aufgaben. Vergleiche Schutz mit geregeltem Stoffaustausch; eine Membran ist keine überall gleich dichte Mauer.",
+      "question": {
+        "prompt": "Eine Membran trennt die Zelle ab. Ein bestimmter Stoff kann trotzdem über einen passenden Transportweg hinein. Was folgt daraus?",
+        "answers": [
+          "Die Membran kann Abgrenzung und ausgewählten Austausch ermöglichen",
+          "Jeder Stoff geht jetzt immer ungehindert hindurch",
+          "Die Membran und eine feste Zellwand sind dasselbe"
+        ],
+        "correct": 0,
+        "hint": "Prüfe die Aussage über diesen einen Transportweg, ohne daraus einen unbegrenzten Durchgang für alle Stoffe zu machen.",
+        "why": "Abgrenzung und ausgewählter Austausch passen zusammen. Ein passender Weg für einen Stoff beweist keinen freien Durchgang für jeden Stoff.",
+        "wrongReasons": [
+          "",
+          "Unterschiedliche Stoffe und Transportwege müssen unterschieden werden. Ein Beispiel erlaubt keine Aussage über jeden Stoff.",
+          "Eine Zellwand ist eine zusätzliche andere Struktur; der Austauschweg macht sie nicht mit der Membran identisch."
+        ]
+      },
+      "figure": "selective-membrane"
+    },
+    "Warum kann eine Zelle Erbinformation ohne Zellkern besitzen?": {
+      "starter": "Bei manchen Zellen liegt DNA nicht in einem eigenen Zellkern. Sie ist trotzdem vorhanden.",
+      "deeper": "Die Organisation der Zelle und die Existenz von Erbinformation sind verschiedene Merkmale. Ein Gedankenbild ordnet Bereiche; es bestimmt nicht allein eine tatsächliche Art oder alle Eigenschaften einer Zelle.",
+      "observe": "Zeichne zwei gedachte Zellbilder mit getrennt markierter DNA, eines mit Kernhülle, eines ohne. Die Symbole sind keine echten Mikroskopbilder und keine Probenbestimmung.",
+      "benefit": "Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information.",
+      "topic": "science-cell",
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Cell",
+          "title": "NHGRI · Zellen und Zelltypen (Englisch)",
+          "anchor": "Definition und Narration: Zellen als grundlegende Einheit, Einzeller und Vielzeller, typische eukaryotische und prokaryotische Baupläne. Keine Zellzahlschätzung oder Nanobot-Metapher übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "title": "OpenStax Biology 2e · Prokaryotische Zellen (Englisch)",
+          "anchor": "Abschnitt Components of Prokaryotic Cells: Bakterien und Archaeen, DNA im Nucleoid ohne Kernhülle, Membran und Ribosomen. Einführende Sammelsätze über alle Zellbestandteile nicht auf spezialisierte menschliche Erythrozyten übertragen.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-30"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Prokaryot",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prokaryot“: Du unterscheidest den Aufbewahrungsbereich von der enthaltenen Information."
+        }
+      ],
+      "connection": "Die Zellkarte unterscheidet Zelltypen. Vergleiche Erbinformation im Zellkern mit Bakterien, deren DNA nicht in einem von einer Membran umgebenen Zellkern liegt.",
+      "question": {
+        "prompt": "Ein beschriftetes Bakterienschema zeigt DNA und keine Kernhülle. Welche Aussage passt dazu?",
+        "answers": [
+          "Ohne Kernhülle kann überhaupt keine Erbinformation vorhanden sein",
+          "DNA kann auch ohne membranumhüllten Zellkern vorhanden sein",
+          "Das Bakterium muss deshalb eine kernhaltige Pflanzenzelle sein"
+        ],
+        "correct": 1,
+        "hint": "Trenne den Stoff mit der Information von einer bestimmten Hülle um ihn.",
+        "why": "Eine Kernhülle ist nicht die Voraussetzung für DNA. Im beschriebenen Bakterium liegt die DNA ohne membranumhüllten Zellkern vor.",
+        "wrongReasons": [
+          "Die Abwesenheit dieser Hülle sagt nicht, dass der molekulare Informationsträger fehlen muss.",
+          "",
+          "Ein Bakterium wird nicht durch das Vorhandensein von DNA zu einer Pflanzenzelle. Der beschriebene Zellaufbau bleibt verschieden."
+        ]
+      },
+      "figure": "cell-examples"
+    }
+  }
+}

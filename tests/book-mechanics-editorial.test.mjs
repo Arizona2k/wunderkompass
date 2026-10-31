@@ -1,12 +1,12 @@
 // Apply only with the genuine post-full146 UI fixture and exact139 fully
 // delivered corrective predecessor, including its native-short outer history.
-// Raw current146 contract; genuine source-bound local full proof precedes its fixture.
+// Historical delivered146 contract; the actual predecessor runtime is reconstructed and fingerprinted.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {MECHANICS_WORDS,MECHANICS_QUESTIONS} from '../app/book-mechanics-validation.mjs';
 import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';
-import {learningFingerprint} from '../build/learning-fingerprint.mjs';
+import {mechanicsPreCellFingerprint as learningFingerprint,cellPredecessors} from './cell-predecessor-reference.mjs';
 import {validateDossier} from '../scripts/editorial-contract.mjs';
 import {mechanicsHistoryReference} from './mechanics-history-reference.mjs';
 import {assertCurrentLearningAuditSharedUI} from './learning-audit-reference.mjs';
@@ -18,7 +18,7 @@ const pack=read('app/book-mechanics-content.json'),words=read('exports/content/k
 const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
 function assertCurrent(items){
  assert.equal(items.length,146);assert.equal(fixture.priorDossiers.length,139);assert.equal(fixture.addedDossiers.length,7);
- assert.equal(fixture.currentTemplate.build,learningFingerprint(process.cwd()),'raw146UI is bound to actual current product inputs');
+ assert.equal(fixture.currentTemplate.build,learningFingerprint(process.cwd()),'delivered146UI is bound to actual reconstructed M82 product inputs');
  reference.assertCurrentMechanicsSharedUI(items);
  const predecessor=items.filter(row=>oldIds.has(row.id)).map(reference.beforeMechanicsUI);
  assert.equal(predecessor.length,139);assertCurrentLearningAuditSharedUI(predecessor);
@@ -39,11 +39,11 @@ function assertCurrent(items){
  return predecessor;
 }
 test('all seven real mechanics dossiers match current canonical and teaching hashes while every whole139 delivered predecessor and nested history is retained',()=>{
- const current=read('content/editorial-reviews.json').dossiers;
+ const current=cellPredecessors(read('content/editorial-reviews.json').dossiers);
  const prior=assertCurrent(current);assert.deepEqual(prior.map(fingerprint),fixture.priorDossiers.map(row=>row.wholeSHA256));
 });
 test('stale new UI, mismatched teaching, changed old facts and lost nested technical history cannot pass the real146 current contract',()=>{
- const current=read('content/editorial-reviews.json').dossiers;
+ const current=cellPredecessors(read('content/editorial-reviews.json').dossiers);
  for(const mutate of [
   rows=>rows[139].ui.build='stale',
   rows=>rows[139].teachingDataHash='0'.repeat(64),
