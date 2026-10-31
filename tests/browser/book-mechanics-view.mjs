@@ -1,6 +1,6 @@
 // Shared mechanics learning checks for the existing regular and cold browser callers.
 import {assertBookMechanicsFigure} from './book-mechanics-diagrams.mjs';
-import {bookRelatedWordView} from './book-related-words.mjs';
+import {bookRelatedWordView,BOOK_RELATED_WORD_EDGE_COUNT} from './book-related-words.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -100,14 +100,15 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   // The original WebKit countercase exceeded its unchanged History API quota
   // during this real rapid sequence. A fresh context isolates the two widths;
   // no artificial delay, rate override or error suppression makes it pass.
-  context=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
-  child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);
   const rapid={};
   for(const width of[320,1440]){
-   await child.setViewportSize({width,height:900});await child.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),width===320);
+   context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
+   child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);
+   await child.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),width===320);
    await bookRelatedWordView(child,rapid,width,{large:width===320,engine});
+   await context.close();context=null;
   }
-  assert.equal(rapid.bookRelatedWords.length,24);proof.rapidReverseLinks=rapid.bookRelatedWords;
+  assert.equal(rapid.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.rapidReverseLinks=rapid.bookRelatedWords;
   assert(browserErrorsComplete(proof));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}

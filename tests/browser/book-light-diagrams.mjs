@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=null}={}){
  const controls=figure.locator('.visual-choice button'),count=await controls.count(),states=[];
  for(let selected=0;selected<Math.max(1,count);selected++){
-  let paletteObservation=null;
+  let paletteObservation=null,radiationObservation=null;
   if(count){await controls.nth(selected).focus();await figure.page().keyboard.press('Enter');assert.equal(await controls.nth(selected).getAttribute('aria-pressed'),'true');}
   await figure.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
   const geometry=await figure.evaluate((root,{kind})=>{
@@ -32,7 +32,29 @@ export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=
   if(kind==='absorption')assert(geometry.path.x<geometry.left&&geometry.inside,'energy comes from outside and is taken up within the actual material');
   if(kind==='photon-model')assert.equal(await figure.locator('[data-light-count-token]').count(),selected===0?3:6);
   if(kind==='radiation-medium'){
-   assert(geometry.path.x<geometry.left);assert(selected===0?geometry.path.endX>geometry.right:geometry.path.endX<geometry.left,'only electromagnetic path traverses vacuum');
+   // A selected control and two frames do not prove that SVG geometry has
+   // reached the selected state. Keep the first read, then await the same
+   // geometric predicate within the existing page timeout, as for the palette.
+   const geometryFirstRead=geometry,started=performance.now();let completionFailure=null;
+   const matches=g=>g.path.x<g.left&&(selected===0?g.path.endX>g.right:g.path.endX<g.left);
+   let drawnGeometry=geometry;
+   if(!matches(geometry)){
+    const firstContext=await figure.evaluate(root=>{const p=root.querySelector('[data-light-medium-path]');return {hash:location.hash,width:innerWidth,scale:devicePixelRatio,visibility:document.visibilityState,attribute:p.getAttribute('d'),computedPath:getComputedStyle(p).d,selectedControls:[...root.querySelectorAll('.visual-choice button')].map(e=>({text:e.textContent,pressed:e.getAttribute('aria-pressed')}))};});
+    console.log('BOOK_LIGHT_RADIATION_FIRST_READ '+JSON.stringify({selected,geometryFirstRead,context:firstContext}));
+    try{await figure.page().waitForFunction(({root,selected})=>{
+     const p=root.querySelector('[data-light-medium-path]'),b=root.querySelector('[data-light-vacuum]').getBBox(),a=p.getPointAtLength(0),end=p.getPointAtLength(p.getTotalLength());
+     return a.x<b.x&&(selected===0?end.x>b.x+b.width:end.x<b.x);
+    },{root:await figure.elementHandle(),selected});}catch(error){completionFailure=String(error);}
+    drawnGeometry=await figure.evaluate(root=>{const p=root.querySelector('[data-light-medium-path]'),b=root.querySelector('[data-light-vacuum]').getBBox(),a=p.getPointAtLength(0),end=p.getPointAtLength(p.getTotalLength());return {path:{x:a.x,y:a.y,endX:end.x,endY:end.y,dx:end.x-a.x,dy:end.y-a.y},left:b.x,right:b.x+b.width};});
+    radiationObservation={geometryFirstRead,geometryAfterCompletion:drawnGeometry,completionWaitMs:performance.now()-started,completionFailure,firstContext};
+    if(completionFailure||!matches(drawnGeometry)){
+     const diagnostic={kind,selected,...radiationObservation};console.error('BOOK_LIGHT_RADIATION_FAILURE '+JSON.stringify(diagnostic));
+     if(onFailure)try{await onFailure(diagnostic);}catch(error){console.error('BOOK_LIGHT_RADIATION_CAPTURE_ERROR '+String(error));}
+    }
+   }else radiationObservation={geometryFirstRead,geometryAfterCompletion:drawnGeometry,completionWaitMs:performance.now()-started,completionFailure};
+   assert.equal(completionFailure,null,'radiation geometry must reach its original predicate within the existing page timeout');
+   assert.equal(await controls.nth(selected).getAttribute('aria-pressed'),'true','drawn path preserves the actual selected medium');
+   assert(drawnGeometry.path.x<drawnGeometry.left);assert(selected===0?drawnGeometry.path.endX>drawnGeometry.right:drawnGeometry.path.endX<drawnGeometry.left,'only electromagnetic path traverses vacuum');
   }
   if(kind==='spectrum'){
    assert.deepEqual(await figure.locator('[data-light-spectrum-region]').evaluateAll(es=>es.map(e=>e.dataset.lightSpectrumRegion)),['Radio','Infrarot','Sichtbar']);
@@ -81,7 +103,7 @@ export async function assertBookLightFigure(figure,kind,{onState=null,onFailure=
   const svg=figure.locator('svg');if(await svg.count()){
    const escaped=await svg.evaluate(e=>{const v=e.viewBox.baseVal;return [...e.querySelectorAll('path:not(defs path),rect,circle,polyline')].flatMap(el=>{const b=el.getBBox();return b.x<v.x-1||b.y<v.y-1||b.x+b.width>v.x+v.width+1||b.y+b.height>v.y+v.height+1?[el.outerHTML.slice(0,180)]:[];});});assert.deepEqual(escaped,[],'drawn learning objects remain inside the viewBox');
   }
-  if(onState)await onState(selected);states.push({kind,selected,keyboard:count>0,semanticGeometry:true,...(paletteObservation?{paletteObservation}:{})});
+  if(onState)await onState(selected);states.push({kind,selected,keyboard:count>0,semanticGeometry:true,...(paletteObservation?{paletteObservation}:{}),...(radiationObservation?{radiationObservation}:{})});
  }
  if(count){await controls.first().focus();await figure.page().keyboard.press('Enter');}
  return states;

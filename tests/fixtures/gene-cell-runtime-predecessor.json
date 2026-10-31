@@ -1,0 +1,2780 @@
+{
+  "sourceCommit": "a142a437917efd5b2f422a4eeb11224ef37f0e57",
+  "predecessorRuntimeBuild": "1f6dfa480ec3cded",
+  "currentRuntimeBuild": "0592871075a190bb",
+  "predecessorInputs": [
+    {
+      "name": "app/activity-view.mjs",
+      "sha256": "19a34dcebe6893d40cede4fa8bdfaf059d52d08cfa8e9169742cffe2359aabe0"
+    },
+    {
+      "name": "app/advanced-games.tsx",
+      "sha256": "61dd064daff34167e9423d860344f16eea37d13fb75f4e79bbc3207a7cf8a60d"
+    },
+    {
+      "name": "app/animal-detective-clues.json",
+      "sha256": "b9221d105edcecef1ff3b85cb330ebd14e7499cb34145742f1eebbbcdf4a7159"
+    },
+    {
+      "name": "app/animal-illustration.css",
+      "sha256": "959fbe96fcc6b239af42351c013f2dee7e01a9dd3ee693022093af296f29e626"
+    },
+    {
+      "name": "app/animal-illustration.tsx",
+      "sha256": "c09219c7b3c20be0b12ad1247df64b02b75597b855ed5828d78ea6ce4dba068a"
+    },
+    {
+      "name": "app/animal-illustrations.json",
+      "sha256": "6d461fe196fa17286e96741f636d9d5d89fd0fbd74a8426ee7ea529724a61f10"
+    },
+    {
+      "name": "app/animal-inquiries.json",
+      "sha256": "b1191f4a222aa11cd648d1938d48ebad1ba30e0613ac7b7cd8911a624ed66470"
+    },
+    {
+      "name": "app/animal-inquiry.css",
+      "sha256": "5ba9763c264250de342049c993398a4634abb9b62f4041acb56018b4804150fb"
+    },
+    {
+      "name": "app/animal-inquiry.tsx",
+      "sha256": "03725ca1ecf31c8d8537c8ad9e03b757e532a52a53ae17b847af23dca772405e"
+    },
+    {
+      "name": "app/article-atlas.css",
+      "sha256": "a93e608655e86a9531c605851f12432e8b438cefa764deb386782eebabc9d0a1"
+    },
+    {
+      "name": "app/article-workshop.css",
+      "sha256": "f3ac1ab22d9217e513ea799a2ae088f84ad382455e924de8613927cd2133bc5d"
+    },
+    {
+      "name": "app/bicycle-drawing.tsx",
+      "sha256": "7c3f9092719c3451fc2ec61f2a780e5a6c49d49054502bf8c8d61ca6e5ea90c5"
+    },
+    {
+      "name": "app/book-cell-comparison-figure.css",
+      "sha256": "e798a6792f8626c9233eeb6c3a0acdab2187326c7b2f69f1f69480e3ae843910"
+    },
+    {
+      "name": "app/book-cell-comparison-figure.tsx",
+      "sha256": "264bdbbb0b26c62e999785a0000b206fdc1e7026f332e3e4b96f58b797ef43f8"
+    },
+    {
+      "name": "app/book-cell-comparison-model.ts",
+      "sha256": "f4154fb1f3a877692c2d1e50d96ec17afecb76bad84564e224ea8a4f2252fbb4"
+    },
+    {
+      "name": "app/book-cell-content.json",
+      "sha256": "ee07a91193423b49cd5c4fc8a2cea76e42e26deab0a9eb14ca4437963b4b0596"
+    },
+    {
+      "name": "app/book-cell-data.ts",
+      "sha256": "a063fcf44384e3a1465c7f9b11cd9aaa4a0832c16f497e36cc8a02a38924dc3a"
+    },
+    {
+      "name": "app/book-cell-dna-figure.css",
+      "sha256": "280e9e27855215d09a7429ccf8cab2d80062d7d34348b453d9df34edc08c5495"
+    },
+    {
+      "name": "app/book-cell-dna-figure.tsx",
+      "sha256": "ec1a6a64cdc9cec25f5ee8014872a328212cbfd4386cd9c43e6e7a079f763814"
+    },
+    {
+      "name": "app/book-cell-dna-model.ts",
+      "sha256": "cb7c6db49be0850a9126de41d2bab9775cbc986075c74a1aa51dd9bdbe2ebac9"
+    },
+    {
+      "name": "app/book-cell-figure.tsx",
+      "sha256": "dccaca14883411c3a6f731312b96c4117eaf169a37840efcdb2b2a35e5f35ee5"
+    },
+    {
+      "name": "app/book-cell-index.json",
+      "sha256": "01a7a19574023c2ac32f8d6e637eaa166ce1f07a08763ec92d50706396facbee"
+    },
+    {
+      "name": "app/book-cell-integrity.json",
+      "sha256": "e8c0f923d5b4ba2f89445d4b73c48bd9849129284b97865b55cbd34a01ee3bc4"
+    },
+    {
+      "name": "app/book-cell-process-figure.css",
+      "sha256": "a17e290ce863b51aab896b40e2573b29b7b5f57cfc001db8ffe0dc0cd911c61e"
+    },
+    {
+      "name": "app/book-cell-process-figure.tsx",
+      "sha256": "87ded42ddc0bd8402f51864ce99f6986bfc68e432e18648fbb4e67a1438bebd1"
+    },
+    {
+      "name": "app/book-cell-process-model.ts",
+      "sha256": "b44357792f0ee5d8bf7b06ffe98f2f282650913df858b9d739c60f077cb51c59"
+    },
+    {
+      "name": "app/book-cell-study.tsx",
+      "sha256": "b23759b34da6043cf560365adb8ae727a80c6b53247620c03196b381ec4968b9"
+    },
+    {
+      "name": "app/book-cell-topic-index.json",
+      "sha256": "04c342e629a704d96710c4a9f3986bb5387e288b87971bb4d687a889d88dcd4e"
+    },
+    {
+      "name": "app/book-cell-validation.mjs",
+      "sha256": "c687d34112ec65834be14a67bea30274e6baea5ff182b68c9e9524bc1b1fe422"
+    },
+    {
+      "name": "app/book-cell-word-link-index.json",
+      "sha256": "75a35115d1577bcfaef0bea2b9a5d7e5244733405a4294728b3e106738ca1290"
+    },
+    {
+      "name": "app/book-heat-content.json",
+      "sha256": "2a0bd26a559d54a21d02ad424f9b9e048cf060e57afedde03d1511133db0b487"
+    },
+    {
+      "name": "app/book-heat-data.ts",
+      "sha256": "422d96fe4a72e210a6390b86d86b958056c8b711025aa035819ea2156d49949c"
+    },
+    {
+      "name": "app/book-heat-figure.tsx",
+      "sha256": "f956f0d1e43a9383a3205a2de562fac8d34b22ea1ad023cc4f813e46279073e1"
+    },
+    {
+      "name": "app/book-heat-index.json",
+      "sha256": "8d2e358534b9ce4f356fc13884173b3938e69120ed79697547e160d22556e936"
+    },
+    {
+      "name": "app/book-heat-integrity.json",
+      "sha256": "81cc9d7ad79a7d12aedfe719eb993d248551e732efdd58a0e5c96f3bb1d3ade9"
+    },
+    {
+      "name": "app/book-heat-study.tsx",
+      "sha256": "9d4a6a74a0333f555e19bb160cc656be4053cfcb943391ca223772b3f7022bd3"
+    },
+    {
+      "name": "app/book-heat-topic-index.json",
+      "sha256": "52df3ddea300b95046a75d3d057a16cc2b92080af7526f2460086bd7645185d2"
+    },
+    {
+      "name": "app/book-heat-validation.mjs",
+      "sha256": "d26dbf9e536203829da4ab922b9ff52357d82dc8ae8c4059c4e381a931696c55"
+    },
+    {
+      "name": "app/book-light-content.json",
+      "sha256": "282718e8cb5c55fc31ba2bf5631b0b24de34490ac05b59951ce48d510927b893"
+    },
+    {
+      "name": "app/book-light-data.ts",
+      "sha256": "1cd3489329e4f7b98fdf45732c4a8895f0de4c5e5511bad682276c86d7b91d47"
+    },
+    {
+      "name": "app/book-light-figure.tsx",
+      "sha256": "4a82b19f57a6f9124ac66de23ff84b452d64a8cc4f1010daec21df60564d8d05"
+    },
+    {
+      "name": "app/book-light-index.json",
+      "sha256": "018db12ea6f1d4ca1f4111dd872f29d3abc794028c1445d2c76193a43c732b31"
+    },
+    {
+      "name": "app/book-light-integrity.json",
+      "sha256": "1b123baa0890909523f754c5c69177dde1b46ef1f2fb4f45dea47f42fa1fbaf7"
+    },
+    {
+      "name": "app/book-light-study.tsx",
+      "sha256": "b4423168d8670f80c25bc96de19b473cc6a5caea3e009b277cc585110a9ca124"
+    },
+    {
+      "name": "app/book-light-topic-index.json",
+      "sha256": "71e0744174dcf925ee6565ac91709782782ddc7d941c323a1064b5b632c70149"
+    },
+    {
+      "name": "app/book-light-validation.mjs",
+      "sha256": "e6952e664af08588bf5ab75b9765b5392e8becbb54ab9ef64e0070450449a692"
+    },
+    {
+      "name": "app/book-light-word-link-index.json",
+      "sha256": "aec2538244f70cbb3f233a5b4368f952ec33dc03f889d19b3d4a3837c92c9bbc"
+    },
+    {
+      "name": "app/book-measure-math.mjs",
+      "sha256": "005cc4ebb8600c69daf84f4ec9d650650e153c745e02de94fe61eb83e775511c"
+    },
+    {
+      "name": "app/book-measurement-content.json",
+      "sha256": "db084f7349a60d0b793467a3595979558aeeaba19447006a2a04d2fd7ea44876"
+    },
+    {
+      "name": "app/book-measurement-data.ts",
+      "sha256": "a5ab3ab91a903a3b84efab1d909125c87a0bc261ed84348408d962565845f729"
+    },
+    {
+      "name": "app/book-measurement-integrity.json",
+      "sha256": "f947f5171725076718e2d3d5b358d104594f5dc46fda0ef6adfdd10589f08554"
+    },
+    {
+      "name": "app/book-measurement-links.tsx",
+      "sha256": "5ff0844181583a5a4172db074474b1fabfb9f4ef313e5f91ad54d237e67a1a40"
+    },
+    {
+      "name": "app/book-measurement-study.tsx",
+      "sha256": "4e1f6c734901be5875a92c5732a103dabba31c19371fdc6a0d004b52e69d9c94"
+    },
+    {
+      "name": "app/book-measurement-topic-index.json",
+      "sha256": "2988bb95e53f0a44adfc8c0d270a8bc531cf53aa66be4186de0075f3692dedb7"
+    },
+    {
+      "name": "app/book-measurement-validation.mjs",
+      "sha256": "91a4c59ee7417c23c32ddf3bc5b36bd3f59f66d3d3b5819f94567f2eb6733707"
+    },
+    {
+      "name": "app/book-measurement-word-index.json",
+      "sha256": "750b4308a354381f021b539d4311bffeedd9371124730144bb5a1d43b5db016c"
+    },
+    {
+      "name": "app/book-mechanics-content.json",
+      "sha256": "052ce69bc4b0962c1a38621b46c4e9ecfc01e692c33428b685f6e7a7652a8b66"
+    },
+    {
+      "name": "app/book-mechanics-data.ts",
+      "sha256": "0c606f714820f96c5d9dd665f9a9b63456df9b806a34bd3e7b1ef8dd40ad1e06"
+    },
+    {
+      "name": "app/book-mechanics-figure.tsx",
+      "sha256": "0cd6790a1b4d7725ad9f0acf83cdf4faca96872127b7c0b7b35b70fb1ed4fad0"
+    },
+    {
+      "name": "app/book-mechanics-index.json",
+      "sha256": "a2cd8a9a8442c8c17c87cf3e52a1956df9de0918f5c40907fecdc0e1f6a5e65a"
+    },
+    {
+      "name": "app/book-mechanics-integrity.json",
+      "sha256": "1498e75cda7c492d984a499292ef4e293118f8033d92df893c2792da22bdd464"
+    },
+    {
+      "name": "app/book-mechanics-models.ts",
+      "sha256": "af473a502e47b2e7b92e81747c4160d09004c8cc6fc46eceaf8afd5e084dd4c0"
+    },
+    {
+      "name": "app/book-mechanics-study.tsx",
+      "sha256": "8525136c21e1e29043d18809fd4109b6fa64c09987fab0f3ce2d2066b356d427"
+    },
+    {
+      "name": "app/book-mechanics-topic-index.json",
+      "sha256": "58c65ddd571ab7fa44244bae1660c21ce345450db75d63462e14fb8df909a599"
+    },
+    {
+      "name": "app/book-mechanics-validation.mjs",
+      "sha256": "95ecdcf39a5c54ce7eee569c44579ec0fda7d0e2129ab55c0d7e1d2b39583429"
+    },
+    {
+      "name": "app/book-mechanics-word-link-index.json",
+      "sha256": "84dfb2f03131a94ff13eb17d022b24556fe50e89d405961e353830266f21df99"
+    },
+    {
+      "name": "app/book-note.tsx",
+      "sha256": "4f4b0fd008c1af8e618581a352fd2ff44f9aa2041059c479796565cc368a319e"
+    },
+    {
+      "name": "app/book-particle-content.json",
+      "sha256": "eeed29ee2b91ab725570ebce387e2ddb58a0ec2f3bee5c7824cc10da56573c7c"
+    },
+    {
+      "name": "app/book-particle-data.ts",
+      "sha256": "9aaca1ec44b0c1defd7ad9a44a5945d0d224402c9a1f42e95e204e1029ecffdc"
+    },
+    {
+      "name": "app/book-particle-figure.tsx",
+      "sha256": "a69cf8dec71daec792a7ac67ae72e2ad3f9ee7ecfcbe73c754468c50948e2fb7"
+    },
+    {
+      "name": "app/book-particle-index.json",
+      "sha256": "2cf7d6daf102681a3b8f5c5a199f29bec61265b56d88d5b884896cdf53cf08a4"
+    },
+    {
+      "name": "app/book-particle-integrity.json",
+      "sha256": "f62bf782cc52637e858ec2f03c029c302cdcff01f6a403e6fdff8a1e06748166"
+    },
+    {
+      "name": "app/book-particle-study.tsx",
+      "sha256": "e418a15e3b8f26233da196cc95a993000592fc70b5ae0a1dc8b66c9a4dec6f2d"
+    },
+    {
+      "name": "app/book-particle-topic-index.json",
+      "sha256": "245d49a24030923f41804506dbab90b0796f0fc0e6b612d3dccb36a4eba33a3a"
+    },
+    {
+      "name": "app/book-particle-validation.mjs",
+      "sha256": "a5707d2e8a76a5b842636cd93c8d69871317163f9e1d5ea26a8197aeeaa8c4c0"
+    },
+    {
+      "name": "app/book-particle-word-link-index.json",
+      "sha256": "9bf7b8024e634d38cc310e511c56f0856e64c5b819c25e241ce0da08e526eee6"
+    },
+    {
+      "name": "app/book-related-words.tsx",
+      "sha256": "ded9e16e59384a5cdb1642fc81b0bd326a9b7b2550e520f906c48d70dcf056f3"
+    },
+    {
+      "name": "app/book-study.tsx",
+      "sha256": "25cd0904bcc5fc95354a1cb00c790431422cb3538458ca93dc3d6ef17a723b1a"
+    },
+    {
+      "name": "app/book-view.ts",
+      "sha256": "e270ef1dc4ed1918190ae8c1a920c934f24f820b2db9c40bd30eea06c3abc7a4"
+    },
+    {
+      "name": "app/book-water-content.json",
+      "sha256": "b9dbc071996f6134b8287909cc27a4486a5923064788d40595bf568c40c9d277"
+    },
+    {
+      "name": "app/book-water-data.ts",
+      "sha256": "53786aa1dbfb1667049598c9359683a301f0478121bb73b566b95780701ac3f1"
+    },
+    {
+      "name": "app/book-water-figure.tsx",
+      "sha256": "f55998cc5fee71e6eace0b5f3b95507b45597a8367bf0ac7f4a6887e15176172"
+    },
+    {
+      "name": "app/book-water-index.json",
+      "sha256": "bb7d7a0098f9429f88a293473f1d2895de5b9c5297e90a38f93468e52e6e4090"
+    },
+    {
+      "name": "app/book-water-integrity.json",
+      "sha256": "8365af78f6c0332e7c8553565f4f0be8a2b7b9b7cdf1a18f2f4983f5d44b53ba"
+    },
+    {
+      "name": "app/book-water-study.tsx",
+      "sha256": "54e5e6798004a2e7e3d1462ba6d2d0544328f92eddb125227b9aa88407834330"
+    },
+    {
+      "name": "app/book-water-topic-index.json",
+      "sha256": "da4137766b177ea7e239fe1bfdb1eb5c917b436a267f058f9099f688cb0279a3"
+    },
+    {
+      "name": "app/book-water-validation.mjs",
+      "sha256": "b0104aa10499fb5f5d5da888afa7a962dde8bf2c55d6cc257a384aa1ccd8ef1b"
+    },
+    {
+      "name": "app/book-water-word-link-index.json",
+      "sha256": "38e43bc7d0d700c3b7f8c9de0a6e2bbfa28ceb2dd288e8f84f4b02365b5cfb50"
+    },
+    {
+      "name": "app/book.css",
+      "sha256": "ffd8f212192d7c542f6c3b74184637a0dd4b4e23510a3e2a10d33b508384faeb"
+    },
+    {
+      "name": "app/bronze-evidence.tsx",
+      "sha256": "dc60b872ead12096aa6f6bb2e5ae53abfa6a91d4e7deb6d1cac382bee65be7cf"
+    },
+    {
+      "name": "app/building-discovery.tsx",
+      "sha256": "5f2397f7e3892a9813fc104ddecfc40d1ea96ab2bd693d935bca41345f509166"
+    },
+    {
+      "name": "app/building-model.tsx",
+      "sha256": "43b79b79ee68ca73415de0c32dc5783abd619d565eaa767c6a60b92067184a4e"
+    },
+    {
+      "name": "app/building-sphere.tsx",
+      "sha256": "270748a394076100512291c77075b4a9e2c1a9b709d8aa6def1a4a0d0798f3de"
+    },
+    {
+      "name": "app/capital-points.json",
+      "sha256": "c55b105ff192e01c5e570a326dde6eeb4d47e1d49a1172d0136c9e76a3496458"
+    },
+    {
+      "name": "app/challenge-hints.json",
+      "sha256": "13b9948111ed7fa6c2ca6e58210f252a69007d3378d69225b8b0f6d6c8874e49"
+    },
+    {
+      "name": "app/chapter-visual.tsx",
+      "sha256": "f1af544351aa2606780ce8d2b2a2e3476f595ce5bc1514ec36ce2ab6ebb5c76a"
+    },
+    {
+      "name": "app/chatgpt-auth.ts",
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+    },
+    {
+      "name": "app/classic-learning.ts",
+      "sha256": "e065e69fdabf16dd848c3b3c1a88001c11348c60b0b7037a036e8a9b0ce2da95"
+    },
+    {
+      "name": "app/classic-questions.json",
+      "sha256": "8fb9df138299d67f2e34faa77b6c4bd18066c28288171c802ac5e190622c3ad5"
+    },
+    {
+      "name": "app/classic-reason-game.tsx",
+      "sha256": "a29ccd162b3f081892ed1043ad140fbc391645950605ec495afc6ff4441cad7f"
+    },
+    {
+      "name": "app/concept-math.mjs",
+      "sha256": "3302d559440cc882beda8fd828609a8d6a2e47f43f49816c3c11f5bff5f0f58c"
+    },
+    {
+      "name": "app/country-flag.tsx",
+      "sha256": "a8f4ee942be55fe800f23630d4c338f6b9bbde4ead3c93b7e70e030337a24870"
+    },
+    {
+      "name": "app/country-metadata.json",
+      "sha256": "1893fb3ea659fe86c3cd914f51875ea9cb3db3c41c08513b8147ca1d42b89291"
+    },
+    {
+      "name": "app/country-portrait.tsx",
+      "sha256": "cc064e092b49a1a97978a90db4fa70fd4983aa07d070aa732aec95fdc340cd3d"
+    },
+    {
+      "name": "app/cycle-figure.tsx",
+      "sha256": "8a377301b3ebc6e8b5608b2469d0b55bc766e62778ac638d3ef88d4f4f8e2e8a"
+    },
+    {
+      "name": "app/cycle-models.tsx",
+      "sha256": "d037c2a40c940f584c4e99aed5659ae5841a4eb25a96c7683dfa8d02cdc40c5f"
+    },
+    {
+      "name": "app/device-illustration.css",
+      "sha256": "7a5a1f15543dfbf1e7b574191d545bae0451bb4c471ebdf478a910ef4712b339"
+    },
+    {
+      "name": "app/device-illustration.tsx",
+      "sha256": "7d957290f20fe47a50af1e42a4bffb4f28a69efe0833c0e47845d02763f6bdda"
+    },
+    {
+      "name": "app/device-illustrations.json",
+      "sha256": "929476a666caa9009860c24c7f81b7cb45eda763b4d157e1e8ea3de3339f01ab"
+    },
+    {
+      "name": "app/discovery-activities.tsx",
+      "sha256": "5eb3cc4356d66b5001a08c70e114ae4656a02ea7a8a284145e0ac1c3727569ae"
+    },
+    {
+      "name": "app/discovery-activity-preview.tsx",
+      "sha256": "cd505de5c5321a899e29db7a4c61d85ac9fc607b111fbbef83141b0d0f985667"
+    },
+    {
+      "name": "app/discovery-central.tsx",
+      "sha256": "17502ea792861530601ba3bf391e41d4245068c4e9d98db5dfa047f4c8621d10"
+    },
+    {
+      "name": "app/discovery-concept-media.tsx",
+      "sha256": "31266ad0e4a555b92a49326d0272c410eaa7f76d0c8f242a45cd712171f457d8"
+    },
+    {
+      "name": "app/discovery-connections.json",
+      "sha256": "aed3a78ad1e319bbedb546fbaa875fb0513fb2d7254e4623b496d2f626a55993"
+    },
+    {
+      "name": "app/discovery-daily.tsx",
+      "sha256": "e68bd115bacbf59116e3b48defa811a8d4faba890bb9935fdd0cdbab9c123983"
+    },
+    {
+      "name": "app/discovery-data.ts",
+      "sha256": "cb6e328594a74e9faabc29f4af3f9021e26d92d20d02a1d4d150b3828964c90e"
+    },
+    {
+      "name": "app/discovery-selection.ts",
+      "sha256": "034b65bc3deed0b7b863a8deae004c7ee239263f40197f666395bf6101580000"
+    },
+    {
+      "name": "app/discovery-sequence-preview.tsx",
+      "sha256": "f99440226bf5434e4ef77b6f34e04bbf96c9515bbfb518762a84d089537be965"
+    },
+    {
+      "name": "app/discovery-topic-media.tsx",
+      "sha256": "e7ed3fffc4d5e3d287f75d0c068ca7d429656c2e3f9b7f5ef2b85278ea09c36a"
+    },
+    {
+      "name": "app/discovery-visit.mjs",
+      "sha256": "ebfdd4da716fe7c88f13ce7f1c4cbc74239d5b6d219454036bc3f41b30310610"
+    },
+    {
+      "name": "app/discovery-visual.tsx",
+      "sha256": "81898baaa4baffb21483bd13b7a0bfac5905fb5f9232c9c4b317d69507dd6672"
+    },
+    {
+      "name": "app/discovery.css",
+      "sha256": "2e4bf2e206b44067710606027e41fad79b2f914309174c22a7e9ee5aff807b0d"
+    },
+    {
+      "name": "app/earth-data.ts",
+      "sha256": "14ed88c4c5fe4288fea8aa1699e8a14b7d11d02f1dd234f00f0f8df7fb92c4d5"
+    },
+    {
+      "name": "app/earth-explorer.tsx",
+      "sha256": "7bf0069264212ef38b5e39a6739348869b26a9d4e7e9648beafbaae983647f36"
+    },
+    {
+      "name": "app/expanded-learning-data.ts",
+      "sha256": "8dd152801ef5f4a852fcca9cf3081800009382b3211de8c904cc3eddf55134f6"
+    },
+    {
+      "name": "app/foundation.css",
+      "sha256": "c521c0f95473f95d034204cd2810c1556de4f7aca100f96559721c0cea49764f"
+    },
+    {
+      "name": "app/game-index.json",
+      "sha256": "992a229952181757559f244ffaf662c3f659cc2d80ef1216ba3729fdb8fd1972"
+    },
+    {
+      "name": "app/game-shell.tsx",
+      "sha256": "b2b0040bdfa9f57d42c072ef952f1117d3fb37b579937c6e9ad30114dbef85c2"
+    },
+    {
+      "name": "app/game-state.ts",
+      "sha256": "aa4bb7e0990085b3b8b30d2dd9080d547316341626587d127987c3f07c8b8c98"
+    },
+    {
+      "name": "app/global-search.tsx",
+      "sha256": "11d1b15c5fccd0cf37b5d18211f6527be61d925c814b03b6121e9065f993fb5e"
+    },
+    {
+      "name": "app/globals.css",
+      "sha256": "c1728d4a01bcabf29bf9f32f0f8f7fda6f3e77ef0c7318b74f90db2765357a61"
+    },
+    {
+      "name": "app/globe.tsx",
+      "sha256": "738c53f292077c2ab3c3fa1d0027d27f739e107792270ce5210b9a1f4a19e9ea"
+    },
+    {
+      "name": "app/guide-dialog.css",
+      "sha256": "2123dec0ef9c723d9a4e002428d7ef8cd3af6ddd2cd60357a53e5c7bd3cf2cd7"
+    },
+    {
+      "name": "app/hash-route.ts",
+      "sha256": "cae1731c7cb4d52af71bf02c85f26c6426a583cf638324b4bd6002c73c44db3f"
+    },
+    {
+      "name": "app/help-guide.tsx",
+      "sha256": "e0f53d2b4cf4682e12eaba30a75061e4485a69998d49cc73b4af3019be4dff84"
+    },
+    {
+      "name": "app/history-context.tsx",
+      "sha256": "24625d03a6024b952a365a18d4677efcf0995f0a6e70783296b13733ddf8e4ae"
+    },
+    {
+      "name": "app/history-evidence.css",
+      "sha256": "cff7b6176727d7aeb151574da36f368bc9b7d9db2b45e0ce10ae7749e490eb04"
+    },
+    {
+      "name": "app/history-evidence.tsx",
+      "sha256": "ddc7a9c132d7da682baa031fcdac8ce3d1f96a92b824a192b361d0db4ad66f59"
+    },
+    {
+      "name": "app/inside-chapter-drawing.tsx",
+      "sha256": "ba5bbbd1a633bc9646a2f593082355878b1d0ee2f0757371f7e78687fad412ae"
+    },
+    {
+      "name": "app/invention-blueprint.tsx",
+      "sha256": "73233cd675c9bdd49b6ef00aea5e134c5ef8201ca6aceffecfb5b95d8b1fa8c9"
+    },
+    {
+      "name": "app/invention-discovery.tsx",
+      "sha256": "39bfd37ee930d6cc7f3f15f32c6a590e7c6f3c52c61f9b721c92ee674998939a"
+    },
+    {
+      "name": "app/invention-drawing-colors.ts",
+      "sha256": "1d47de71e22634b4eb80e6aae99d459a2e3da01ee3166c69871cac53706908da"
+    },
+    {
+      "name": "app/invention-optics.css",
+      "sha256": "15fded1d0c2b63deb000a27cb006088acc54d2b76d3d15456f6549132da7a178"
+    },
+    {
+      "name": "app/journey-content-data.ts",
+      "sha256": "681e29944744a36729558619d903a487cc450253e073233aba19e112703b4fab"
+    },
+    {
+      "name": "app/journey-content-validation.mjs",
+      "sha256": "ef8b44db990a4d6e7fbc04824f382e5e9f8302dd182d6c94d154894c09e1e308"
+    },
+    {
+      "name": "app/journey-content.json",
+      "sha256": "af66df64d9a2eef0bc1bcb5dc1b7974e325273a4d71feac4970320f49c8e0d59"
+    },
+    {
+      "name": "app/journey-index.json",
+      "sha256": "aa6f9bf170a2fa0d376b7b93464d76a2857909d3a86c40f2cdd788f3a5125016"
+    },
+    {
+      "name": "app/journey-inquiries.json",
+      "sha256": "03db6cdba4353b79dbe940191b842e0360db7ec73b3b2cc9f5acdf398ae5c78e"
+    },
+    {
+      "name": "app/journey-inquiry-data.ts",
+      "sha256": "4d70ccd8d60f8613e65cf35f9c27316d3628f7072f52c90f4f9228a875b677e7"
+    },
+    {
+      "name": "app/journey-inquiry-validation.mjs",
+      "sha256": "9ebffef455e42cdb99886d9984813574760707a75cfaa6c7553e772107aa4d64"
+    },
+    {
+      "name": "app/journey-inquiry.tsx",
+      "sha256": "82b805c48fcb6b58ae2d7da2d1e3d28a8d1f6c84d4e667294e286a935cc41d48"
+    },
+    {
+      "name": "app/journey-links.ts",
+      "sha256": "9130cb5b51e8f3b596a3a84675c9d063846d54bb8fd9837480387b30479b5315"
+    },
+    {
+      "name": "app/journey-media.ts",
+      "sha256": "533efa4798ac56c10f71e141be97bf5203a92ffe5b763178377bb6a9d0c7a2b0"
+    },
+    {
+      "name": "app/journey-photos.json",
+      "sha256": "812b1e5674c1af2dcfc50133a2a4ec83ea9aaf5ffe9221986bcc0cd11716fdf8"
+    },
+    {
+      "name": "app/journey-reading.mjs",
+      "sha256": "d04efee0b971223e3bd1ba6c7b74bda1dee7b89cbb6f4c96480b2cedea393c40"
+    },
+    {
+      "name": "app/journey-routing.mjs",
+      "sha256": "596325a9467ac4c51d9d9e16e0f251237ba6559e890573c400b9b048c17c65b5"
+    },
+    {
+      "name": "app/journey-sources.json",
+      "sha256": "57bcfe0cb75b9cf4b1947688db979a63e229a9e925c7acf61511b2f144fd61c6"
+    },
+    {
+      "name": "app/journey-task-answers.mjs",
+      "sha256": "c5ae03a79223d4e1dc8ec8e9b211c0e8a41a60b6101f46b7ad9af83bccc09003"
+    },
+    {
+      "name": "app/journey-task-compatibility.json",
+      "sha256": "dc79a96e31e61cf59b7a64b9a20a75c3868d3e01ae0fa423f6062770403413fb"
+    },
+    {
+      "name": "app/journey-topic-links.tsx",
+      "sha256": "b01531380f720a75f2c31aaac30c93c22430373bbf3b1bb0444bdcfd6fab8ef9"
+    },
+    {
+      "name": "app/journey-visual.tsx",
+      "sha256": "e41e79987078232bdce401213451ad9ba03b98f90aad6bfc84bd4ba34f6724d8"
+    },
+    {
+      "name": "app/journeys.css",
+      "sha256": "6b1f1da452b3f37fee8eeba25613242b8415e1e905dcff396004acf54fc6065f"
+    },
+    {
+      "name": "app/knowledge-book.tsx",
+      "sha256": "4a51d84d21f009562aa638c2948f943af77a30dae8d42145b3b4b6edc443cce9"
+    },
+    {
+      "name": "app/knowledge-challenge-game.tsx",
+      "sha256": "afda428d2bea44360ff488da227e91ee29f6fae3014d9672a52520d0c27f0e38"
+    },
+    {
+      "name": "app/knowledge-challenge.ts",
+      "sha256": "123a93a9d3b97ae29ce3d8f6f70c81903f66b04f5b54a9ea30a27592cde4b0d1"
+    },
+    {
+      "name": "app/knowledge-connections.ts",
+      "sha256": "519af3472f024d34a4be68930f6ea60eb83601af3196874ed08fca6d2b2df005"
+    },
+    {
+      "name": "app/knowledge-preview-image.json",
+      "sha256": "8dd4b93f1286edc463904c0337dbe615876cb966c38a768b52410edcb885eeb8"
+    },
+    {
+      "name": "app/layout.tsx",
+      "sha256": "a5c2675f9371ce533c369c2f28f2a326f51bd4075aef6331c091bb8bcc3734e1"
+    },
+    {
+      "name": "app/learning-boundary.tsx",
+      "sha256": "62c8965e6346096e1ea340a19541f6c4aa2649bc066ae3d58d5f2a99c6f3216e"
+    },
+    {
+      "name": "app/learning-components.tsx",
+      "sha256": "0816b3aa65d99c2d36092755d59696abda0d760310d9a0264f5605eec2e08cd9"
+    },
+    {
+      "name": "app/learning-data.ts",
+      "sha256": "867b397752f071f12ae64b0e6e30e6b62903667507c5d581e0f5dd11f3ef6eb8"
+    },
+    {
+      "name": "app/learning-games.tsx",
+      "sha256": "32501691de47fe523e484db6dfe6704fabe7cf4a9bd263c763615bdf1ead3478"
+    },
+    {
+      "name": "app/learning-hints.tsx",
+      "sha256": "f7d1f00cc8cc17c24939bbcf08f23b9efe15e8a2e46b1cc0d19fcf79d4eabf14"
+    },
+    {
+      "name": "app/learning-journeys.tsx",
+      "sha256": "0d5cc4f30a02024d39d72eb2f4c245466b28ecd30d9a26a12c8e45301e60910c"
+    },
+    {
+      "name": "app/learning-labs.tsx",
+      "sha256": "ee8991c61ac41561bde19a5ed6d13714799a2d85184eac475a464e2099e0498e"
+    },
+    {
+      "name": "app/learning-media.ts",
+      "sha256": "4e4f6a7367d40b3448ebc81c00c8dfe73122473e16b0e399e714f952c944a48e"
+    },
+    {
+      "name": "app/learning-motion.tsx",
+      "sha256": "f03b8aae9005d4b948c6a04477a0b2681c7796456cfc5a56322d71a5fde5b470"
+    },
+    {
+      "name": "app/learning-navigation.tsx",
+      "sha256": "711dae2145d10313bd86d5d49999de4bbcee7156196e5141c9da4144e527fbb3"
+    },
+    {
+      "name": "app/learning-offline.tsx",
+      "sha256": "945056ad9ce2499074707dba1d574d4fdc37ae4734162c3eccca710bb8b7eeb0"
+    },
+    {
+      "name": "app/learning-overview.ts",
+      "sha256": "26494d81069a32e54d7b5a9d9600526d92f62e171efe6d59fd5911d9de6ab349"
+    },
+    {
+      "name": "app/learning-progress.tsx",
+      "sha256": "67232efaaad934184eaa739332f75118fd9754514959f0a2f2b164219fe14a84"
+    },
+    {
+      "name": "app/learning-strip.ts",
+      "sha256": "acf315af4cdad50a26186507f3757e37d184fb0c6d7f7989d8675378eaf40a56"
+    },
+    {
+      "name": "app/local-id.ts",
+      "sha256": "c879f2764975a416eeada2989734ec41b7f22e84ea031a1a2fcd8ebd4d8f2a25"
+    },
+    {
+      "name": "app/local-progress-store.ts",
+      "sha256": "d1629e7575e81cb4a7c4be968a6624997993720681703559984caa081d972d4c"
+    },
+    {
+      "name": "app/marine.json",
+      "sha256": "0bc601df2166a95ac7f7bbdea0988172a9f5f10c367ee76664ea22082ba972ec"
+    },
+    {
+      "name": "app/marine.ts",
+      "sha256": "8de59d41a8f8584132e0456a28f359e13f2b0bf70952333a52626179f8ee3c1d"
+    },
+    {
+      "name": "app/memory-pairs.ts",
+      "sha256": "f96f2167f1705563a340a972a69d40a55ef71819441d8fab105f27b1d265fa01"
+    },
+    {
+      "name": "app/mission-research.ts",
+      "sha256": "1207326d488392ab3999b337ae3c3f0ac0a92fa7cea28277563016f921e6087c"
+    },
+    {
+      "name": "app/nature-data.ts",
+      "sha256": "92f7fcb0f8fec9a3269e5cc9fdc3ce6c67ebd1587ed066dc7b41f4039476d864"
+    },
+    {
+      "name": "app/new-world-models.tsx",
+      "sha256": "d663fe74c20b3ebb24dde6ee548eda4dbe93907f112414cf00008aa0f0462938"
+    },
+    {
+      "name": "app/page.tsx",
+      "sha256": "df5a4a428aca0da5986d0b49723ba0551ac987cf00c015b3c090969b67f49444"
+    },
+    {
+      "name": "app/parent-guide.tsx",
+      "sha256": "590a862a9adde187d5eac7f28b66b8819969f54877f1dfd32cd7c989dd10b075"
+    },
+    {
+      "name": "app/pass-atlas.css",
+      "sha256": "9c13a56382b05b363b1262f4555bb3f9dd2b9552750adb4b36bc16662e5b2aa0"
+    },
+    {
+      "name": "app/pass-saved.tsx",
+      "sha256": "056e607d0c4ae9ccc3c589bef51f3edd9e06df006bcf8c25c10511e9a1e5ab4f"
+    },
+    {
+      "name": "app/pass-shell.tsx",
+      "sha256": "12db6bfbe9a804fe0524ba6d024d4482bd3482fbaa28c635fa6886dfc3e7a74f"
+    },
+    {
+      "name": "app/people-evidence.css",
+      "sha256": "669a0efccbf358023097362eb1d74f35b723ace7ce29890eae7c70750cea232c"
+    },
+    {
+      "name": "app/people-evidence.tsx",
+      "sha256": "06347fe2391b6ca3084656bd44a04ed33e0f7a7adf49aef37e4d5fffa2c5b4ef"
+    },
+    {
+      "name": "app/people-game-baseline.json",
+      "sha256": "495cda978faca23e735da623508d3f5ef6cad70df0b93f06f6d10e7e83ba0aa5"
+    },
+    {
+      "name": "app/people-illustration.tsx",
+      "sha256": "dbc0703469039ef40db041fef16d934900c890f849eab66e1b8c4f1c27bc9e5e"
+    },
+    {
+      "name": "app/people-illustrations.json",
+      "sha256": "07b9ff6b6bdd944849bdf9e033ad3832eb0189baa6268594c9932f61cb5c65dd"
+    },
+    {
+      "name": "app/people-inquiries.json",
+      "sha256": "273dacf2f40fd79c41d0bdc04a14143d069a442940877090eb9fa5a2c3b45b21"
+    },
+    {
+      "name": "app/people-observation-drawings.tsx",
+      "sha256": "aae6a5303ce49cff782509fb2ffa05da420a937677148a4730a576e41905a389"
+    },
+    {
+      "name": "app/people-observation-figures.tsx",
+      "sha256": "8b473f20477736e7f1a61057abf6cc1b30a38a0412eefb42e8028437c1091624"
+    },
+    {
+      "name": "app/planet-chapter-drawing.tsx",
+      "sha256": "b724b5cf08369d851d0b9161ed0f865945c5a62c2cac4a4812ffd6cab41def3d"
+    },
+    {
+      "name": "app/planet-comparison.css",
+      "sha256": "5a3e02d4e713184cd6414fc6d79b009a68202b4fc82abe605e637b0e3aa0bacc"
+    },
+    {
+      "name": "app/planet-distance-notes.css",
+      "sha256": "9939c756899556cec33aa2fa845a67f49119fbb88dec783a01fdae666c12fb70"
+    },
+    {
+      "name": "app/planet-distance-notes.tsx",
+      "sha256": "ebae522c0bcb1a1df99256457448ab1a4ce104122d773b48cb4a0b755a529625"
+    },
+    {
+      "name": "app/planet-distance-source.json",
+      "sha256": "df23ea9a877524ab0f4beb4ae4eeeb7ad692b7a236bdabc7ade58263701f5dc0"
+    },
+    {
+      "name": "app/planet-distances.ts",
+      "sha256": "8b281c5c695de615fa772b674de62e71d95f99c3a314a4fb002a99b1c28dedf4"
+    },
+    {
+      "name": "app/planet-size-figure.tsx",
+      "sha256": "11331a9b38c3c7bb70bc98ad2e9c699401a2ffacf087bafff666fe23ba2894f3"
+    },
+    {
+      "name": "app/plate-points.json",
+      "sha256": "de430e5da13ca82b8b517c2f4f570dda437f73e46a8afcda1657ffc86dadc2ce"
+    },
+    {
+      "name": "app/playground-catalog.ts",
+      "sha256": "55ab696dff5c0d840a4da607e833324480e86dec55e907d2a60af3c425fb29d6"
+    },
+    {
+      "name": "app/playground-preview.tsx",
+      "sha256": "7a71aacafd6466289e8f74751846c3e6da0b96187f6730f0fb0d584594a85ab5"
+    },
+    {
+      "name": "app/playground.css",
+      "sha256": "c507e60ef9259f4b1ba315676ae11c6968a995104c835d6e8430b072591a28c2"
+    },
+    {
+      "name": "app/playground.tsx",
+      "sha256": "b3cdd2047a0b8ed69dfa807ac4295db8da02fb3c771baef0d8f057dd7b0c579f"
+    },
+    {
+      "name": "app/precision-source-notes.ts",
+      "sha256": "b39aa9b8f5b2af401ff6803f42593a415e904a46e3d042018b4dad3f75fcef0b"
+    },
+    {
+      "name": "app/progress-panel.tsx",
+      "sha256": "a32cce2aecf3474d4ce6899b5f04536504d2265d02437c6676e90ca5a43be72e"
+    },
+    {
+      "name": "app/progress-storage.ts",
+      "sha256": "a007dd5648c8f06a86fee3545969df94e9ddb4096e85c71e553c76a58b498252"
+    },
+    {
+      "name": "app/progress-sync.ts",
+      "sha256": "a9d2cf2f3786e237241c3c25941b1967c2d04683f446e356b93788ad5c2d226a"
+    },
+    {
+      "name": "app/question-hints.tsx",
+      "sha256": "708794b57d7c5f5429870518c50d2dd58f85fe979bd3c76a321e61d5f0438256"
+    },
+    {
+      "name": "app/quiz-data.ts",
+      "sha256": "26c1f5135a510e66420f5337d0300ebd14a83edeefecbe6af32416a39a1327f1"
+    },
+    {
+      "name": "app/readable-diagram.tsx",
+      "sha256": "34bef05d7fd8849a54f9cef3252f7c84c559342d558fa4f6dca3489109e24956"
+    },
+    {
+      "name": "app/research-catalog.ts",
+      "sha256": "e78bcf1f41aaba5569c62b2f76e62fccb4e29d2b7a8a2cb9803343dc45c6a0ae"
+    },
+    {
+      "name": "app/research-feedback.json",
+      "sha256": "73b1c2257863959cbeb80b538018d9d19b310bf72ed53e058ab349cda9a57bd1"
+    },
+    {
+      "name": "app/research-figure-legend.tsx",
+      "sha256": "7f571cabc2a2f192616090b0d5a97c2e2b0316d1313b781e3fa83ea121a2cae3"
+    },
+    {
+      "name": "app/research-guide.tsx",
+      "sha256": "e7e27236dff3f25ccbdd14395a7c0106c08a1e7dfea969d96e959ba2a57c3a8c"
+    },
+    {
+      "name": "app/research-knowledge-links.tsx",
+      "sha256": "0625e61c42bd35e2ce766dabd9c53c677f6ec279047df859dcb465ce7e45e5cb"
+    },
+    {
+      "name": "app/research-labs.tsx",
+      "sha256": "c8af14c1f75f13e801963ce141ac5f1ed2a2d90006c436048c38a3e4d8287072"
+    },
+    {
+      "name": "app/research-links.ts",
+      "sha256": "25b5458bb8e39689d63d7912c8001c1b5adbd9eb16c68e068b14febd27a40528"
+    },
+    {
+      "name": "app/research-math.ts",
+      "sha256": "2ebad8af55958aa1b45824898262b4fabf8cafcf11f1d5e2a57c5698554098f9"
+    },
+    {
+      "name": "app/research-preview-images.json",
+      "sha256": "fff2b402249a8127f18a40a0df4c620ebbe7345cecf2095632fc7b1e652d20e1"
+    },
+    {
+      "name": "app/research-preview-origin.json",
+      "sha256": "37ced65cd4cccadb307eeda103d4276efb34e920b6e3585e597e97152001aca0"
+    },
+    {
+      "name": "app/research-preview.tsx",
+      "sha256": "aab1c4600ba51b262a01ea5fd783a19d63998cc5b532eb22d077b26bc9bd8c18"
+    },
+    {
+      "name": "app/research-simulations.tsx",
+      "sha256": "72af5716ce0665c4fc84d8e45f218032cfeca8cdb1d0cb5a0ff96c876d286553"
+    },
+    {
+      "name": "app/research-task-answers.mjs",
+      "sha256": "77ee5a89aaf1bfcee47d9fe56fb1b013b5f13cb21c42a52e29198b44c485095a"
+    },
+    {
+      "name": "app/research-task-compatibility.json",
+      "sha256": "22cf32635f33457d9ccab5c0cc3e68ceec13b66e6b80442f2f31acec17d6f63a"
+    },
+    {
+      "name": "app/research.css",
+      "sha256": "f83827124f14053ae591385e5df43f4d205cca159b0f8a20427a06a502f8d3b0"
+    },
+    {
+      "name": "app/retained-answer-wording.mjs",
+      "sha256": "65c0c80715c37ba834bcbd1bd901e91230689a77b01071c9714af91834a10ca2"
+    },
+    {
+      "name": "app/saved-games.tsx",
+      "sha256": "2d52ff031e61927d210c1d8063c2641b88301a3cfe815fc0d88ff3e1a035b2da"
+    },
+    {
+      "name": "app/science-diagram.css",
+      "sha256": "7b2339ddffa66556becfc11df2ccbf02cd6dce152188d1bdacf8dac1bfcd9d7b"
+    },
+    {
+      "name": "app/science-diagram.tsx",
+      "sha256": "3281c33384b2a99523bf5a09e51636eefefd94747f826d96a2684a52525bf800"
+    },
+    {
+      "name": "app/science-investigation.css",
+      "sha256": "34fe27f8b989b16f1394140e952c0a7d3fcf8f839edfbd187b204c6f8a7508a8"
+    },
+    {
+      "name": "app/science-investigation.tsx",
+      "sha256": "dc806d0bc2089fa67e2ac60037b3cc1506cf34864976b683ee33910dabb636d1"
+    },
+    {
+      "name": "app/science-thinking.css",
+      "sha256": "4a8ec03198d8096c322c0119bc5fe0f32da903c6587d42cd31e6ba6ad5dd2951"
+    },
+    {
+      "name": "app/science-thinking.json",
+      "sha256": "633c35a037d3b54e8c344c5e7ea1833a7415856c6b9867dfb99f925f32c8de3f"
+    },
+    {
+      "name": "app/science-thinking.tsx",
+      "sha256": "688a8895229a02ff1504f229a2e0a20879e066e665c837e330032bc63206f76d"
+    },
+    {
+      "name": "app/search-ranking.ts",
+      "sha256": "c0f451fa8ed2e4e4b69982ed8a96740a2c0dcf0afc6ca6b841930a86be4808be"
+    },
+    {
+      "name": "app/solar-lab.tsx",
+      "sha256": "4b0fde6270de1e90b992650da3cb5a26411e7e1d8775699c43cd42eba71c32bf"
+    },
+    {
+      "name": "app/solar-system-data.ts",
+      "sha256": "fa13ee30d24de3b7cd54ee9cbd9c0cddfd93746af37e116c1d419001a44d7dfa"
+    },
+    {
+      "name": "app/technology-comparison.tsx",
+      "sha256": "bb83d35eb876c7a461c0528e8752711e7bc4573f9bc69fe53e329b8c071129f7"
+    },
+    {
+      "name": "app/tide-comparison.tsx",
+      "sha256": "351966f7572db7d7bb52e13504f5b1ceb0665edf212edf1d74e5c9a2f22a6fab"
+    },
+    {
+      "name": "app/topic-illustration.tsx",
+      "sha256": "49297cdb8260c4c7132f864fdbc3d17d2f7a4b996d3da152617c610953957152"
+    },
+    {
+      "name": "app/topic-map-layout.mjs",
+      "sha256": "8ac72b718beabee1c30dea6bad518ced14de5f3de4ea8523c5ebd4c7d922d464"
+    },
+    {
+      "name": "app/topic-map.css",
+      "sha256": "90a0a82e500ed6aff93d0b881efc62546fc799f00267217d98a5f6f7899f838f"
+    },
+    {
+      "name": "app/topic-map.tsx",
+      "sha256": "56a621c4c5ba5f99bd29e6bf505f6ef26310784f75be3a54416640fab545e7c4"
+    },
+    {
+      "name": "app/topic-title.ts",
+      "sha256": "9bced3a19e7642dd61703bcf3e03fe20f989d96c9f03c9339bc6475813aa74d4"
+    },
+    {
+      "name": "app/update-history-test-evidence.json",
+      "sha256": "359c9446e0665cf9c8fb8727f39b92fd02688dc90a12ba157e532af6af8acbd2"
+    },
+    {
+      "name": "app/update-history-view.tsx",
+      "sha256": "2f322706b8bf8d280266f54d658d94d0e55c69aca0fbcbf6779c3bda2bceb509"
+    },
+    {
+      "name": "app/update-history.ts",
+      "sha256": "b29301b9910af41b06d74634107813107ff665c44cc8fc2dabad7fc4c3ec45b9"
+    },
+    {
+      "name": "app/use-local-progress.ts",
+      "sha256": "56f5bd4891602d18a0e610eb9f9b1497f053bb5406f450d3f7a8a69598c14852"
+    },
+    {
+      "name": "app/verified-content.mjs",
+      "sha256": "68df43c8105e1c4e9fbb2c92a6ab1bbf21ca4159f539e8859ac2acc7274495fc"
+    },
+    {
+      "name": "app/voice-picker.tsx",
+      "sha256": "cea305e1d0f45137e0681b4adecd1a1d75df1b0eb1de5b7037f9f95a64f2dd00"
+    },
+    {
+      "name": "app/water-moon-drawing.tsx",
+      "sha256": "057890f16bb2c6c3b9f9c70e66c805bb65deba337e1c7f5e18537a8d4b40ccce"
+    },
+    {
+      "name": "app/world-catalog.json",
+      "sha256": "35be2c5b4708e5a279f9e60c937c5b12862bdfcb774e89992982e95e71611020"
+    },
+    {
+      "name": "app/world-connections.json",
+      "sha256": "9286eefccba79e9c96d774c7752d5c66941801ffcfee3021cd4bc4e0fb469240"
+    },
+    {
+      "name": "app/world-game-bank.ts",
+      "sha256": "388a87e3de1e34b80c60c832ef25139e5dd8deb469d1f4285a7df13f52fe0425"
+    },
+    {
+      "name": "app/world-game-food-data.json",
+      "sha256": "b43efffa0606c3f9574290e7f357d1399420e7f212c1529233d54464ed06a120"
+    },
+    {
+      "name": "app/world-game-food.mjs",
+      "sha256": "52c79da3e14a621b5b04ec8420b40e225b23285b158ee344a040fd579f43a62f"
+    },
+    {
+      "name": "app/world-game-habitat-data.json",
+      "sha256": "beb2fa0286f108814397c09c5daae59855ac804dac5b70e716be1d88d5258a36"
+    },
+    {
+      "name": "app/world-game-habitats.mjs",
+      "sha256": "ba506f1dd89f20b242b9a0b123920cc1c98aae72ae08bd0020122dc4cdc2c94a"
+    },
+    {
+      "name": "app/world-game-support.mjs",
+      "sha256": "8dff396c0c4ed0a4212b69a5cf83562801cd0de3c185a522f9fe0d20c089b3ed"
+    },
+    {
+      "name": "app/world-games.tsx",
+      "sha256": "8c5f5014871412c958dbbe10cec2b4e30d43547fbdcbb68c709316413d5fed23"
+    },
+    {
+      "name": "app/world-gateways.tsx",
+      "sha256": "63f4734771d98e40b55b51f49477c2098f0cb085d18b4b71a7c9832539f7efed"
+    },
+    {
+      "name": "app/world-icons.tsx",
+      "sha256": "69c603c603570f3e274ba86294cb24da9980505aeb17603fb625ace797d8156d"
+    },
+    {
+      "name": "app/world-index.json",
+      "sha256": "cbb2fb91cf4ddcb9f59969d474815f45d238173b42d761c034937578737156ea"
+    },
+    {
+      "name": "app/world-index.ts",
+      "sha256": "5838b371c5f1efcbf0cb31325349ff2dcdb18a46b63b9f561af622231d0929c3"
+    },
+    {
+      "name": "app/world-media.tsx",
+      "sha256": "1589bb7f4559686666485d32b091901be97e05343bf0210c204716ffb5ba075d"
+    },
+    {
+      "name": "app/world-model.css",
+      "sha256": "906997b0f3b2cafb6357c668e5968a6419d896c0f85af71c3f43f7b3fa9c1445"
+    },
+    {
+      "name": "app/world-models.tsx",
+      "sha256": "4735de3ee638ff98df544210a375bf79fff4bb41a7a571fe1e3a04d2be2c675f"
+    },
+    {
+      "name": "app/world-photo-core.json",
+      "sha256": "5b12c0e6b97519f277903fa3a827a08a48873e6ca4c1b8b213e87595f81cb53b"
+    },
+    {
+      "name": "app/world-photo-ids.json",
+      "sha256": "38b95322c758d66d20beab556e46a0ca221ba3835eb9a4ac998a0ae5e4dcec7c"
+    },
+    {
+      "name": "app/world-photo-integrity.json",
+      "sha256": "6eeca006dd29d80d21c9002e9a3b61a69c050d446d7b0be9bf401ef9694bb441"
+    },
+    {
+      "name": "app/world-photos.json",
+      "sha256": "2ee2ee920dc167a2fcb777a493a4d10635a753478f9fe6b79785250f3fb74d12"
+    },
+    {
+      "name": "app/world-progress.tsx",
+      "sha256": "9dd2b5f79f96a5adacfa8cb67bc01e6574458ce4a25b75cd05074894674a82da"
+    },
+    {
+      "name": "app/world-reader.tsx",
+      "sha256": "397549468d16abbcab84551d882af76567d78ad73dc2ede5a011297d582e7271"
+    },
+    {
+      "name": "app/world-selection-state.mjs",
+      "sha256": "5717f12bce9df64545ee6896d3b8d07f5b4f0b0832f1914755616d4cc89a8f4f"
+    },
+    {
+      "name": "app/world-topic.tsx",
+      "sha256": "8b7c7cbf0f96af239fbad240f11ef8084414c323c60011bb714544fe34040660"
+    },
+    {
+      "name": "app/world-types.ts",
+      "sha256": "24767721732c665893fd8d1c631bccc45039249892fa196a691fae17db1a5a8c"
+    },
+    {
+      "name": "app/world-view.tsx",
+      "sha256": "501a85861f2428fb2f086d2bf1a7fdd22c050ba2180e9b6eb8b5badee958c25f"
+    },
+    {
+      "name": "build/learning-fingerprint.mjs",
+      "sha256": "c6c4f9148e1f42df2df878d3519f0335e6f1cfa4b1a285083d0fb017545499c0"
+    },
+    {
+      "name": "build/learning-offline.ts",
+      "sha256": "628a540990c39b3d1b7c6c18422ae13581754234e10757c621ae2436c77df5fa"
+    },
+    {
+      "name": "build/learning-worker.js",
+      "sha256": "7032560bcbf66406f2260f50862e9f408dce48f1d07db20e324dce3262b08aa6"
+    },
+    {
+      "name": "components/connector-error.tsx",
+      "sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155"
+    },
+    {
+      "name": "components/ui/accordion.tsx",
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0"
+    },
+    {
+      "name": "components/ui/alert-dialog.tsx",
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311"
+    },
+    {
+      "name": "components/ui/alert.tsx",
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b"
+    },
+    {
+      "name": "components/ui/aspect-ratio.tsx",
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+    },
+    {
+      "name": "components/ui/attachment.tsx",
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790"
+    },
+    {
+      "name": "components/ui/avatar.tsx",
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34"
+    },
+    {
+      "name": "components/ui/badge.tsx",
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97"
+    },
+    {
+      "name": "components/ui/breadcrumb.tsx",
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5"
+    },
+    {
+      "name": "components/ui/bubble.tsx",
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b"
+    },
+    {
+      "name": "components/ui/button-group.tsx",
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0"
+    },
+    {
+      "name": "components/ui/button.tsx",
+      "sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4"
+    },
+    {
+      "name": "components/ui/calendar.tsx",
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84"
+    },
+    {
+      "name": "components/ui/card.tsx",
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c"
+    },
+    {
+      "name": "components/ui/carousel.tsx",
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3"
+    },
+    {
+      "name": "components/ui/chart.tsx",
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a"
+    },
+    {
+      "name": "components/ui/checkbox.tsx",
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27"
+    },
+    {
+      "name": "components/ui/collapsible.tsx",
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "name": "components/ui/combobox.tsx",
+      "sha256": "ab8bdfddafd875765f7bc4817bddf7cfe283ca7990b23e684b76ed3aa6c5b067"
+    },
+    {
+      "name": "components/ui/command.tsx",
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a"
+    },
+    {
+      "name": "components/ui/context-menu.tsx",
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017"
+    },
+    {
+      "name": "components/ui/dialog.tsx",
+      "sha256": "c80fe26bd16b4404b50cf28d8c19bacc41839107b90b0bb9ffe2284bd11a8217"
+    },
+    {
+      "name": "components/ui/direction.tsx",
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+    },
+    {
+      "name": "components/ui/drawer.tsx",
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f"
+    },
+    {
+      "name": "components/ui/dropdown-menu.tsx",
+      "sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a"
+    },
+    {
+      "name": "components/ui/empty.tsx",
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0"
+    },
+    {
+      "name": "components/ui/field.tsx",
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd"
+    },
+    {
+      "name": "components/ui/form.tsx",
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e"
+    },
+    {
+      "name": "components/ui/hover-card.tsx",
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8"
+    },
+    {
+      "name": "components/ui/input-group.tsx",
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0"
+    },
+    {
+      "name": "components/ui/input-otp.tsx",
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299"
+    },
+    {
+      "name": "components/ui/input.tsx",
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db"
+    },
+    {
+      "name": "components/ui/item.tsx",
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f"
+    },
+    {
+      "name": "components/ui/kbd.tsx",
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13"
+    },
+    {
+      "name": "components/ui/label.tsx",
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c"
+    },
+    {
+      "name": "components/ui/marker.tsx",
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0"
+    },
+    {
+      "name": "components/ui/menubar.tsx",
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb"
+    },
+    {
+      "name": "components/ui/message-scroller.tsx",
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf"
+    },
+    {
+      "name": "components/ui/message.tsx",
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185"
+    },
+    {
+      "name": "components/ui/native-select.tsx",
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c"
+    },
+    {
+      "name": "components/ui/navigation-menu.tsx",
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044"
+    },
+    {
+      "name": "components/ui/pagination.tsx",
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1"
+    },
+    {
+      "name": "components/ui/popover.tsx",
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447"
+    },
+    {
+      "name": "components/ui/progress.tsx",
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d"
+    },
+    {
+      "name": "components/ui/radio-group.tsx",
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce"
+    },
+    {
+      "name": "components/ui/resizable.tsx",
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c"
+    },
+    {
+      "name": "components/ui/scroll-area.tsx",
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043"
+    },
+    {
+      "name": "components/ui/select.tsx",
+      "sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3"
+    },
+    {
+      "name": "components/ui/separator.tsx",
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e"
+    },
+    {
+      "name": "components/ui/sheet.tsx",
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16"
+    },
+    {
+      "name": "components/ui/sidebar.tsx",
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e"
+    },
+    {
+      "name": "components/ui/skeleton.tsx",
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239"
+    },
+    {
+      "name": "components/ui/slider.tsx",
+      "sha256": "802026e11cacaf2828331afa672a2588daaa1025e5eb015f66c0331ae22cf47e"
+    },
+    {
+      "name": "components/ui/sonner.tsx",
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f"
+    },
+    {
+      "name": "components/ui/spinner.tsx",
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "name": "components/ui/switch.tsx",
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae"
+    },
+    {
+      "name": "components/ui/table.tsx",
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3"
+    },
+    {
+      "name": "components/ui/tabs.tsx",
+      "sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46"
+    },
+    {
+      "name": "components/ui/textarea.tsx",
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979"
+    },
+    {
+      "name": "components/ui/toggle-group.tsx",
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e"
+    },
+    {
+      "name": "components/ui/toggle.tsx",
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16"
+    },
+    {
+      "name": "components/ui/tooltip.tsx",
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
+    },
+    {
+      "name": "hooks/use-mobile.ts",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "name": "index.html",
+      "sha256": "996388ec5ed11884779c85bac5698b7d5935fb6d25651b06034ac959eaf09e05"
+    },
+    {
+      "name": "lib/connector-context.ts",
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e"
+    },
+    {
+      "name": "lib/connector-contract.mts",
+      "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e"
+    },
+    {
+      "name": "lib/connector-errors.mts",
+      "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871"
+    },
+    {
+      "name": "lib/connector-preview.d.ts",
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642"
+    },
+    {
+      "name": "lib/connectors.ts",
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
+    },
+    {
+      "name": "lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "name": "migration/link.tsx",
+      "sha256": "c33634df98a6edf7c284a015e7459fe7d9d5ae662254eaa3f1ef65c173688079"
+    },
+    {
+      "name": "migration/main.tsx",
+      "sha256": "257e56c118bb73fcb1a0a8bf00634b6f49bd1d617e2ea91ee85c6af35dfdca2a"
+    },
+    {
+      "name": "package.json",
+      "sha256": "869d83f1ef2aafa24be0664a373e78275d80cce97e66f1826c7ae88d27ae844f"
+    },
+    {
+      "name": "pnpm-lock.yaml",
+      "sha256": "a84123672276465f2e9f611129a9c81c6701f2781f60099f160e737593376811"
+    },
+    {
+      "name": "pnpm-workspace.yaml",
+      "sha256": "65a32bd0ae613891a88c4cca47aac3d75a1ec5fffda0c466745b843f2445f335"
+    },
+    {
+      "name": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "name": "public/animals/atlantic-puffin.svg",
+      "sha256": "138fd35abcd98e6701d6c057c0b743aa5ebee9afa40503e194a7de96bd291fc6"
+    },
+    {
+      "name": "public/animals/barn-owl.svg",
+      "sha256": "2bc80cc7be2893c10f7d206a962e49d88725592b45a8f27739b77fccbd1f0c30"
+    },
+    {
+      "name": "public/animals/common-chameleon.svg",
+      "sha256": "9e9a8c178107d295217c466b77a251eb13fd8976533a734f6473bd1103715483"
+    },
+    {
+      "name": "public/animals/common-cuttlefish.svg",
+      "sha256": "cd1611c31861469fc7d3bcc955f32464d6e4aae49b9c669be750605ef4658158"
+    },
+    {
+      "name": "public/animals/common-frog.svg",
+      "sha256": "28bc22670244c293512b0d5b7c41b12ed70ce39ee3427389367ebf910febeb00"
+    },
+    {
+      "name": "public/animals/eastern-clown-anemonefish.svg",
+      "sha256": "d3aaa90944d7eabe54dd5b18a29a772c3ff9cdf569f9b3b6d579ae17494109e0"
+    },
+    {
+      "name": "public/animals/european-eel.svg",
+      "sha256": "5155890a68c6a4466e08198fe55871224416e68dd6be8aebd5ad725ebabd2fe6"
+    },
+    {
+      "name": "public/animals/european-lobster.svg",
+      "sha256": "d8d631dfc167f0a5ae898f2e0eb9680aa463acc2c52eedaa8fe5445c7aeca578"
+    },
+    {
+      "name": "public/animals/fire-salamander.svg",
+      "sha256": "c40e306490fab4d6016dd625f6da55f50ef48c8659b16fac26f1c2fc120b979e"
+    },
+    {
+      "name": "public/animals/garden-snail.svg",
+      "sha256": "5c88ac050a1b5ae51fd38cbf3fa1282cf34b6bf40397d9c03dc5e920e89d4d1a"
+    },
+    {
+      "name": "public/animals/hedgehog.svg",
+      "sha256": "a9bc5b15d0bee103152e3833436f0df634ca81c5dced030e8e816de70336565d"
+    },
+    {
+      "name": "public/animals/kingfisher.svg",
+      "sha256": "ae3e26300cb2bff4638f9a683df7442d6eedd19045d9814209a0ff2daf4fecf4"
+    },
+    {
+      "name": "public/animals/meerkat.svg",
+      "sha256": "95dc28f82a3dc421ae2524e3bb1ad77bb5e4136b6fe1a9b8a735f6e3ee5a99ef"
+    },
+    {
+      "name": "public/animals/monarch-butterfly.svg",
+      "sha256": "37a5c7422f286266d40dbb635c8ab48e3ae368ae33b1ded02ba4c5d3820157c5"
+    },
+    {
+      "name": "public/animals/north-american-beaver.svg",
+      "sha256": "0e46463f0741ff4058cdc0016a26b4c2bf609ef4e980705b88a25d4283d68285"
+    },
+    {
+      "name": "public/animals/okapi-ai.webp",
+      "sha256": "830c877a9de090a684fe8f3fa788c11898b3bd18b4e4dab30ff00ed5c8d5b2b4"
+    },
+    {
+      "name": "public/animals/okapi.svg",
+      "sha256": "32bcba2e06694b47bc84e413a7913304c0679cec26e407b5e645072d96b49eb6"
+    },
+    {
+      "name": "public/animals/ostrich.svg",
+      "sha256": "997ce989f05ed94e64c65b8a9dc00f7c04eebe402cb7721c3e661b03b79a5f7f"
+    },
+    {
+      "name": "public/animals/platypus.svg",
+      "sha256": "d6eb0b97d3ef0f912e6d1e1191eb1ff5fa80e7358bd402585e82465c40369156"
+    },
+    {
+      "name": "public/animals/raccoon.svg",
+      "sha256": "040951f4fbd0f6159b74e6790f481d1b0662330665985c379cf3fa85ad857a73"
+    },
+    {
+      "name": "public/animals/red-fox.svg",
+      "sha256": "c1cfd44291725d03ced0587fbf441b4e32729e3a0bbaa8bb3e9060beeb092e21"
+    },
+    {
+      "name": "public/animals/ring-tailed-lemur.svg",
+      "sha256": "3134cab932db9198a2d550eaa52b398ab6e7a506b57e2718e2d68809e9aeafdb"
+    },
+    {
+      "name": "public/animals/short-beaked-echidna.svg",
+      "sha256": "d1d66d0f5b5607546900cc34110bef8234a85498861ffc45f3b340a58126e30b"
+    },
+    {
+      "name": "public/animals/short-snouted-seahorse.svg",
+      "sha256": "3e6148759e70b680f6f0fa27d1ab66f6cda160b9545222cba1de9cd21d644856"
+    },
+    {
+      "name": "public/animals/walrus.svg",
+      "sha256": "abf65f39f5f9599ef115b17bf5e8a65ef5fe531fefbd1286db4322b42683f0ab"
+    },
+    {
+      "name": "public/favicon.svg",
+      "sha256": "688fa05e7e426cfa00b625febc495653cebba14a94edc4aa631827bacc1cc44f"
+    },
+    {
+      "name": "public/flags/au.svg",
+      "sha256": "cbb2206c5e59a25d79228306af973666a191e163f0ae337681f447977e6edb18"
+    },
+    {
+      "name": "public/flags/br.svg",
+      "sha256": "b0a912826c3ffd7287435ebed66e18fe058e992309c00dc10b430dd41a29ba91"
+    },
+    {
+      "name": "public/flags/ca.svg",
+      "sha256": "345ec9dac057e203f1331b2d3f9f473789864edaee1182a26bc261356bcf72f1"
+    },
+    {
+      "name": "public/flags/de.svg",
+      "sha256": "efd480af5a154a7651f29da23ee0d09dbc892410fb4041898ddf8face336c575"
+    },
+    {
+      "name": "public/flags/eg.svg",
+      "sha256": "3f85d1d2bdb03692ad68f84efff36be2f5b1b5b7438b7b7be50def3837bf532f"
+    },
+    {
+      "name": "public/flags/es.svg",
+      "sha256": "f9cfaff858e95f830733ade9591037b5322dfb5827a53b70956a3d190bb49b9a"
+    },
+    {
+      "name": "public/flags/fr.svg",
+      "sha256": "a526851c372e3372b1596be71af355ea72b1650bbc4c06e6e2c226900d3de6cc"
+    },
+    {
+      "name": "public/flags/in.svg",
+      "sha256": "91185efa1a9b52cdc0e470712518efeefc4e4d6a6555bae9de997ba71885bb98"
+    },
+    {
+      "name": "public/flags/ir.svg",
+      "sha256": "cb363e09bafbff6de7c2fba6a002ca33f0563dc83a2328d34adb492cf80ca629"
+    },
+    {
+      "name": "public/flags/it.svg",
+      "sha256": "9fa88118818d9b64838f578e2babcca3d0630aed21b5c33b34aff7ac5ce506bc"
+    },
+    {
+      "name": "public/flags/jp.svg",
+      "sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022"
+    },
+    {
+      "name": "public/flags/ke.svg",
+      "sha256": "699163d87382eb969d8a26d4ce1a99a00264e8b7b95276abf585476506f46e82"
+    },
+    {
+      "name": "public/geo-nature.json",
+      "sha256": "6c7a957e2f818f91875d0bb6a8582d34c438b5c490683dff1fc5b473a5f97b53"
+    },
+    {
+      "name": "public/images/animals/dromedary.webp",
+      "sha256": "ba1aab1ef0706bdb04f7ece74a7c3d432f1f058aba2b786e0df745da96fd4fcf"
+    },
+    {
+      "name": "public/images/animals/garden-cross-spider.webp",
+      "sha256": "2f124bf25d601d7bcbcba265541f96602602ca655af364f2db36902d444b521f"
+    },
+    {
+      "name": "public/images/animals/whale-shark.webp",
+      "sha256": "1a56356d2cc4986311db48aae895533bfd030f75fbb701019fc3ad2fa2873d85"
+    },
+    {
+      "name": "public/images/animals/white-tailed-eagle.webp",
+      "sha256": "0c666eac9af9ee9bab570bbb0652471d5140362b8b959308a80ddc75644decde"
+    },
+    {
+      "name": "public/images/portraits/al-khwarizmi.webp",
+      "sha256": "a888ea0fcf73273a0e4a3057b286c4ae954cd89684df3cc1ceb22acdd86b6f81"
+    },
+    {
+      "name": "public/images/portraits/albert-einstein.webp",
+      "sha256": "a6589f5917feffcbbc77539b3697dc85f5a84790f01f80da0f96b66a96bc6ed2"
+    },
+    {
+      "name": "public/images/portraits/alexander-von-humboldt.webp",
+      "sha256": "86f12f13731f7d238aaff7fe85b6e0f995f9bf5e6e440344f04319d3616f47c5"
+    },
+    {
+      "name": "public/images/portraits/bertha-benz.webp",
+      "sha256": "e7dd25a55492f89bd570d4190597b6e779e1debf4d250d2f2687a46eefe464ea"
+    },
+    {
+      "name": "public/images/portraits/cai-lun.webp",
+      "sha256": "26ff0c6b507677b0e3c39d90d13207f18a5383625f84a9f3078dea13505cbc37"
+    },
+    {
+      "name": "public/images/portraits/charles-darwin.webp",
+      "sha256": "34162f657b20ee3a1ae22f7952be54a04995ae166b00d7e25a15e7301edb2e95"
+    },
+    {
+      "name": "public/images/portraits/grace-hopper.webp",
+      "sha256": "8ebcc276e0961b813d9dbb334d769a052125364efb0c66bcbafadd052f0ac61b"
+    },
+    {
+      "name": "public/images/portraits/jane-goodall.webp",
+      "sha256": "6132261417997fc5d719838bdaca3d6a64e28e21155b89c44f91388b1bebaa28"
+    },
+    {
+      "name": "public/images/portraits/johannes-gutenberg.webp",
+      "sha256": "d52107f02d77d622af4e6e90b6740a93458d28c5efe6df5efa537d203ad74485"
+    },
+    {
+      "name": "public/images/portraits/karl-benz.webp",
+      "sha256": "18896a60909ef62a69b4816ccb4f9ec5514900bed56f633793daa2316247f7c5"
+    },
+    {
+      "name": "public/images/portraits/neil-armstrong.webp",
+      "sha256": "7bb1789202670c4b0499bba00b0783b2e0512583ee3d32ba1f0dbdc4cfc8ffea"
+    },
+    {
+      "name": "public/images/portraits/tim-berners-lee.webp",
+      "sha256": "09b7556b557dfe6bf4b829a9bf36b6e8f516aa986933ab4919c144068e769eba"
+    },
+    {
+      "name": "public/images/portraits/tu-youyou.webp",
+      "sha256": "54556d814146c3807570f85d1a1f1b2b1a488878bb3532a6be3d43601dde2e53"
+    },
+    {
+      "name": "public/images/portraits/wangari-maathai.webp",
+      "sha256": "6aea3da924638c2b68abb51244c59a6774f9acef6b191331089358eb9ac86db6"
+    },
+    {
+      "name": "public/inventions/3d-printer-ai.webp",
+      "sha256": "434396dbf4778a0827c0666369d737ea9affb142b9e88de956b79d6c097b8189"
+    },
+    {
+      "name": "public/inventions/seismograph-ai.webp",
+      "sha256": "3306f4617e59ca4197da4354432b46cb41a20c9e627e1c3baa60d5bfae9ae54e"
+    },
+    {
+      "name": "public/inventions/sewing-machine-ai.webp",
+      "sha256": "8e4b66e6df9839ee0eb9cb83e81791ea5fff92a6a7adf3ae352a06961c985ec4"
+    },
+    {
+      "name": "public/journeys/climate.svg",
+      "sha256": "9f4d606c5c64a89f0c071654ecb59c25ad8e07bb37b23995520af726808e4e53"
+    },
+    {
+      "name": "public/journeys/continents.svg",
+      "sha256": "3c0647a516b3e464490f14075aadf2fa7d519a89b1444b824b1e1fb7a3c5e682"
+    },
+    {
+      "name": "public/journeys/countries.svg",
+      "sha256": "0cbdfd28bd6a33235a97ef9827a636433af20a5a4d802a7fc3c25ec7f3fead0d"
+    },
+    {
+      "name": "public/journeys/inside.svg",
+      "sha256": "18d64305fb6b065abcedc8245b10d1c5ab09d1cbc7c4c2658270841495ee7d78"
+    },
+    {
+      "name": "public/journeys/landscapes-preview.webp",
+      "sha256": "68e5490eb595ef2eb08695a64aacb7f658f0f5ff7999c79f170453a250a0588e"
+    },
+    {
+      "name": "public/journeys/landscapes.webp",
+      "sha256": "cc2a09cd76be5e945c2f0f3714ebd0ae4686711ff9426b4e4b2929b194ff1d60"
+    },
+    {
+      "name": "public/journeys/moon-preview.webp",
+      "sha256": "b0dd999c2d67d9dbccf59f554db183e71075a4b671ea3165b81735f5382b0f56"
+    },
+    {
+      "name": "public/journeys/moon.webp",
+      "sha256": "f96038a0d7330bfd3ccaa4ac406d663b97a9c733d28b5154684baf331e94e51f"
+    },
+    {
+      "name": "public/journeys/navigation.svg",
+      "sha256": "1f112ae37b977479e2ecb76364c25fefbd98797b676283eecad2fad2b39aacff"
+    },
+    {
+      "name": "public/journeys/quakes.svg",
+      "sha256": "c841636a43d193d28fc9fa7b68be822981d4ce44f539414ab33e445874a6d6ee"
+    },
+    {
+      "name": "public/journeys/seasons-preview.webp",
+      "sha256": "ed667abb0a04f3f46d8668b24ff2d5cac4feb81f18d387867be574002ea78df7"
+    },
+    {
+      "name": "public/journeys/seasons.webp",
+      "sha256": "e1570d0cc8c705db824efc3f08cf359ae6c8b18fc0c4aa54c27dc04c085be586"
+    },
+    {
+      "name": "public/journeys/water-preview.webp",
+      "sha256": "2d5908a19b083870934e2e38786a8918d3f6880fc0aa093e35c550c0d3f9753c"
+    },
+    {
+      "name": "public/journeys/water.webp",
+      "sha256": "ab233ea8a0ab933e58db3dae0453ce64651da7fb3319eba11fc2ffeea117fc09"
+    },
+    {
+      "name": "public/journeys/weather-preview.webp",
+      "sha256": "b3e95e538261d0f86195cd2899e6cd023a779bf52122e650c9f194e598dbabfd"
+    },
+    {
+      "name": "public/journeys/weather.webp",
+      "sha256": "c1a446ed935113af5193db7adf705d26454a2c4212a4b46003766a2f31189627"
+    },
+    {
+      "name": "public/learning-icon-192.png",
+      "sha256": "7951cfb7ce6f8297d65898c84880d0f84ec7569d07cfb4889cd278c99699cc5d"
+    },
+    {
+      "name": "public/learning-icon-512.png",
+      "sha256": "f26234ecbb275e04184d91cabbcbeeb0f409221345a33effb2452c95c4fad04b"
+    },
+    {
+      "name": "public/learning.webmanifest",
+      "sha256": "42d8832b6e9c903d09b753f8d16e7d1342eb29408d242c9342e6cf1f0dbbd6f8"
+    },
+    {
+      "name": "public/licenses/flag-icons-MIT.txt",
+      "sha256": "8f1195d55a2fd315a07d812328470ca9ba2abb78c8d317ff19619d5125e00cea"
+    },
+    {
+      "name": "public/licenses/learning-motion.json",
+      "sha256": "ffd9e8c2c7b840ca554095515d7290ce991407909d8c4717b9e60ed1eff80d9e"
+    },
+    {
+      "name": "public/licenses/plate-data.txt",
+      "sha256": "aca5f9e92e61843413b9297659af2eef552eb38fef39eae2f701566d985de36c"
+    },
+    {
+      "name": "public/licenses/unicode.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "name": "public/maps/world-context.svg",
+      "sha256": "0afae717c2380a6a7ac84dbf76f01dc962de94d722cbda16e5aa7e0572c7d523"
+    },
+    {
+      "name": "public/og.png",
+      "sha256": "cd65c252b7b7c517fb3bbe9fce302965f98968ebecc012b9a2d3920c17f941c8"
+    },
+    {
+      "name": "public/photos/earth.jpg",
+      "sha256": "92ff32d0d471a7f422b70c0effc423b2b19321992209dece3de1966a122d0ab9"
+    },
+    {
+      "name": "public/photos/reef.jpg",
+      "sha256": "1d7bb8224bd09993417b3958f60a828c1873023f18bf2976b021186c211fdc4b"
+    },
+    {
+      "name": "public/photos/volcano.jpg",
+      "sha256": "df10521c66295f78f9afd5d540d0aac35d8331ef2c7751c2daf9096bce980280"
+    },
+    {
+      "name": "public/previews/knowledge-challenge-levels.png",
+      "sha256": "b6063d3d82d121a10aeb55c5de9fa5d101e72ebdeb5639319ea23186367993a8"
+    },
+    {
+      "name": "public/previews/lab-clocks-model.png",
+      "sha256": "0ee90a8eee4a2b77c9cb7aa3d2f3484cbbb839c923e254723b9c916f4c1a3e15"
+    },
+    {
+      "name": "public/previews/lab-depth-model.png",
+      "sha256": "288791d558ae4c311e5a422d356ddbc188f745339dc1ce50b24e99f5583322ef"
+    },
+    {
+      "name": "public/previews/lab-moon-model.png",
+      "sha256": "61d872b14f01fa0102febf6f1d24a940ef9a1f6e52e41d323e9ec964525da452"
+    },
+    {
+      "name": "public/previews/lab-plates-model.png",
+      "sha256": "d61660b73720fbf80c0eb1e91173e74e195ff8282bcf755a57e4033b89a34b5c"
+    },
+    {
+      "name": "public/previews/lab-quake-model.png",
+      "sha256": "805dd84e2fdd2bd3610e0410784d71a05f229a17d95466dce4ef0304a0661a1a"
+    },
+    {
+      "name": "public/previews/lab-seasons-model.png",
+      "sha256": "50e4586dbb09ba9368cc9415cf912b87526a1b3a9a91523a5e7ce6e69322a10a"
+    },
+    {
+      "name": "public/previews/lab-solar-model.png",
+      "sha256": "4f9468dbef0bef4f7f364734d457c561ddb317945aa26b0ebcac8a0569ba9606"
+    },
+    {
+      "name": "public/previews/lab-tides-model.png",
+      "sha256": "e801726fc7dc566ceb79eff8d28536b1bf39560c0a41546245419edf375a1ce3"
+    },
+    {
+      "name": "public/previews/lab-volcano-model.png",
+      "sha256": "6d0296420a95a2b7bf5983157de324638ec39ccffd57afbc417832745c3314c9"
+    },
+    {
+      "name": "public/previews/lab-water-model.png",
+      "sha256": "73c8397b9735ea5a5c014c8c7f16bab323cc242407fdf2a06988f12a457c2713"
+    },
+    {
+      "name": "public/previews/lab-weather-model.png",
+      "sha256": "3b868e693567433b928ff8ce490a000a4f2c3577d8d1861092e35815a8936476"
+    },
+    {
+      "name": "public/previews/playground-hunt-model.jpg",
+      "sha256": "22f4c2f36152737625a05f1e766c1d733902a0d51d37ed5661a809395db86bb0"
+    },
+    {
+      "name": "public/world.json",
+      "sha256": "3f55f07fb1ef33dc887e62128e0feb9828a4b1b46f770f9d512c0a052f066f52"
+    },
+    {
+      "name": "public/world/ada-lovelace.webp",
+      "sha256": "ada64c4a961742ebd747aa546aa388c62b809c3e24e19d1feb24aa421b463bb1"
+    },
+    {
+      "name": "public/world/african-elephant.webp",
+      "sha256": "dacaa94f231bae85901a2ec7aa38e40ba864cdb087b9a6e3ee01249c865d3256"
+    },
+    {
+      "name": "public/world/axolotl.webp",
+      "sha256": "b35ee6975877bdbfb74479cf948e6a6eafc73115982b70132a2e3c2c0d033e23"
+    },
+    {
+      "name": "public/world/bengal-tiger.webp",
+      "sha256": "a6d659cb8bf88fd700c7dbba30380afe5dd93d4c5acbb070d0bdfabb8520d1aa"
+    },
+    {
+      "name": "public/world/blue-whale.webp",
+      "sha256": "69689772df3b8d20858660462f827bc9086c6710611a65d2432ad3919c9cd88d"
+    },
+    {
+      "name": "public/world/bornean-orangutan.webp",
+      "sha256": "73660372479f3889563190fabcb2029728c244626d3b731d7531a47adf8f1a4e"
+    },
+    {
+      "name": "public/world/bottlenose-dolphin.webp",
+      "sha256": "9d5e79835ce2be6b9ec662bab6ddbce6417eb96d386ba8cec07145aea168aae6"
+    },
+    {
+      "name": "public/world/cheetah.webp",
+      "sha256": "579481fd88872c396fe62670c949d988e5e0e9db8e6893df9599b6a738f7b3b9"
+    },
+    {
+      "name": "public/world/colosseum.webp",
+      "sha256": "797aa37627e97c29a73e33c2428f403a7c78a25b3d283bb0adc118641b4ac912"
+    },
+    {
+      "name": "public/world/common-octopus.webp",
+      "sha256": "014e76f52f68e52aedec2d34eee467f6de0b2467451c5819f3b86c0a4cc3a560"
+    },
+    {
+      "name": "public/world/eiffel-tower.webp",
+      "sha256": "e4276d8ff8dac1e578642536bae24810741246f4b319e7e4caa7902f313325f7"
+    },
+    {
+      "name": "public/world/emperor-penguin.webp",
+      "sha256": "05da6e4b57ef36941affb35c579094719dd6ba6c3ee0fa66787b784540d62160"
+    },
+    {
+      "name": "public/world/giant-panda.webp",
+      "sha256": "810c49dd57bbcdfd4968b43a64afeb6c75cb4988e62de17f733339d7b6a36b56"
+    },
+    {
+      "name": "public/world/giraffe.webp",
+      "sha256": "3c09d6d8c02e1269f37bdc7719576934296ad4aaa8bbe36b23ecf91c93ba78c9"
+    },
+    {
+      "name": "public/world/giza-pyramids.webp",
+      "sha256": "0371504c4e62a33016518d30e17d0bfb0caa08289603872b49853e5947fecf6d"
+    },
+    {
+      "name": "public/world/golden-gate-bridge.webp",
+      "sha256": "b3a1ec951f73459bfb5fa17c9381f71baf8140fce149a86adc2132ecc0186abf"
+    },
+    {
+      "name": "public/world/great-wall.webp",
+      "sha256": "eb62f6bbf26cb6dda71db2a6fdf3b714ccea4bb0a0ccfdc1800f4b0aae3190e1"
+    },
+    {
+      "name": "public/world/green-sea-turtle.webp",
+      "sha256": "2ec67cd00ef5b759cfc3af4894518d74774974d94327fa99fca0138991b1b712"
+    },
+    {
+      "name": "public/world/honey-bee.webp",
+      "sha256": "1fb1ee86a202affaeb94411946c8208d34bffd9df09f065051deefe332f5f3c7"
+    },
+    {
+      "name": "public/world/jaguar.webp",
+      "sha256": "906d2d9a94ebb5b8b4fbbdd5d058305551a29fe184d941cb1ba647a72df435cc"
+    },
+    {
+      "name": "public/world/katherine-johnson.webp",
+      "sha256": "c4c6d9cb5e58c7239364a661008cb406b7e5284d742bc38928693c604ecc6004"
+    },
+    {
+      "name": "public/world/koala.webp",
+      "sha256": "d35b2caf122a949266effd2e6d33f2545556d28091c4e8e506fe3e1a56583f94"
+    },
+    {
+      "name": "public/world/lion.webp",
+      "sha256": "4c6cbc021834115da2e5c7aee76503799e2db98efe42e1efeb9bd339b355dde9"
+    },
+    {
+      "name": "public/world/mae-jemison.webp",
+      "sha256": "2da14cb4a580a2b8a0d2b84819e3433423190d7f454ff6545153604b44f8488e"
+    },
+    {
+      "name": "public/world/marie-curie.webp",
+      "sha256": "4bb121859c6cf7e66c045375b3592e7d0f4ac594fec4e27cc2372a8e65ee4527"
+    },
+    {
+      "name": "public/world/orca.webp",
+      "sha256": "cc4aec240f21eb36e79ccde7efa775e12c4d5da5d7f2b04594aaa8c90b9e9630"
+    },
+    {
+      "name": "public/world/panama-canal.webp",
+      "sha256": "1ef20505cf600334b01dd90a9cf8cd74a64c2b31ae2304998ed701a0deef2c9e"
+    },
+    {
+      "name": "public/world/photo-credits.json",
+      "sha256": "c44c2881c37e206ecfacbd5a3ce54b65bdc702a625c28926f70e2ddc5da23e4b"
+    },
+    {
+      "name": "public/world/polar-bear.webp",
+      "sha256": "353d3fa202b5192e9d9666336bb34dcb45ca84e2c343afede40b73a407496545"
+    },
+    {
+      "name": "public/world/red-kangaroo.webp",
+      "sha256": "c3c599fb206e66f08fa09623d2bb52d09169ae3f0822a301aa35bfa14fc72737"
+    },
+    {
+      "name": "public/world/taj-mahal.webp",
+      "sha256": "00409e4aeb054cae7e38ffcffc14dde78cc5ce7c5612485662a06148e4b5309a"
+    },
+    {
+      "name": "public/world/western-lowland-gorilla.webp",
+      "sha256": "70008c7cb9aeca0064c36745cbf770267a6df71f3f0923ac373b9af782f5361a"
+    },
+    {
+      "name": "tsconfig.json",
+      "sha256": "c932e6b847d337629ce15f7e0d9b1df3591d56a978d33e4b5e82b7a84b28fc38"
+    },
+    {
+      "name": "vite.config.ts",
+      "sha256": "a55eb8ecd40eda40fd892ea2be2641f74e5d9ecabec0c4fd5373f30cb93488da"
+    }
+  ],
+  "replacedInputs": [
+    {
+      "name": "app/book-measurement-links.tsx",
+      "sha256": "5ff0844181583a5a4172db074474b1fabfb9f4ef313e5f91ad54d237e67a1a40",
+      "originalUTF8": "import {BookOpen,ArrowRight} from 'lucide-react';\nimport measurementLinks from './book-measurement-topic-index.json';\nimport heatLinks from './book-heat-topic-index.json';\nimport lightLinks from './book-light-topic-index.json';\nimport waterLinks from './book-water-topic-index.json';\nimport particleLinks from './book-particle-topic-index.json';\nimport mechanicsLinks from './book-mechanics-topic-index.json';\nimport cellLinks from './book-cell-topic-index.json';\ntype BookLink={kind:'word'|'why';term:string;topic:string;connection:string};\nconst links:BookLink[]=[...[...measurementLinks,...heatLinks,...lightLinks,...waterLinks,...particleLinks].map(link=>({...link,kind:'word' as const})),...[...mechanicsLinks,...cellLinks].map(link=>({...link,kind:link.kind as 'word'|'why'}))];\nimport {navigateHash} from './hash-route';\n\nexport default function BookMeasurementLinks({topicId}:{topicId:string}){\n const related=links.filter(link=>link.topic===topicId);\n if(!related.length)return null;\n return <section className=\"lab-knowledge-connections\" data-book-measurement-links={topicId}><h3><BookOpen size={20}/> {related.some(link=>link.kind==='why')?'Mit passenden Wörtern und Fragen weiterdenken':'Mit passenden Wörtern weiterdenken'}</h3>{related.map(link=><div className=\"connection-card\" key={link.kind==='word'?link.term:'why:'+link.term}><a className=\"knowledge-link\" data-route-focus={'topic-'+(link.kind==='why'?'why':'word')+'-'+topicId+'-'+link.term} href={'#book/'+(link.kind==='why'?'why':'words')+'/'+encodeURIComponent(link.term)} onClick={event=>{event.preventDefault();navigateHash('book/'+(link.kind==='why'?'why':'words')+'/'+encodeURIComponent(link.term));}}><span>{link.term}</span><ArrowRight size={17}/></a><p>{link.connection}</p></div>)}</section>;\n}\n",
+      "originalSHA256": "5ff0844181583a5a4172db074474b1fabfb9f4ef313e5f91ad54d237e67a1a40",
+      "currentSHA256": "6c5d41379cd28fde7d3710a787f2d39ac3bcadf20100540ebcef3d99ac2d8253"
+    },
+    {
+      "name": "app/book-related-words.tsx",
+      "sha256": "ded9e16e59384a5cdb1642fc81b0bd326a9b7b2550e520f906c48d70dcf056f3",
+      "originalUTF8": "import {LearningDetails} from './learning-components';\nimport {navigateHash} from './hash-route';\nimport incomingLight from './book-light-word-link-index.json';\nimport incomingWater from './book-water-word-link-index.json';\nimport incomingParticle from './book-particle-word-link-index.json';\nimport incomingMechanics from './book-mechanics-word-link-index.json';\nimport incomingCell from './book-cell-word-link-index.json';\n\nconst incoming:Record<string,{term:string;reason:string}[]>={};\nfor(const pack of [incomingLight,incomingWater,incomingParticle,incomingMechanics,incomingCell])for(const [term,links]of Object.entries(pack))(incoming[term]??=[]).push(...links);\n\n/** Small generated incoming edges keep existing words connected as a pack grows. */\nexport function BookRelatedWords({term}:{term:string}){\n const links=incoming[term];\n if(!links?.length)return null;\n return <LearningDetails className=\"book-related-words\" summary=\"Verwandte Begriffe entdecken\" data-book-related-words={term} data-history-disclosure={'book-related-words-'+term}>\n  <ul>{links.map(link=><li key={link.term}><p>{link.reason}</p><a className=\"book-topic-link\" href={'#book/words/'+encodeURIComponent(link.term)} data-route-focus={'book-word-related-'+term+'-'+link.term} onClick={event=>{event.preventDefault();navigateHash('book/words/'+encodeURIComponent(link.term));}}>Mit „{link.term}“ weiterdenken →</a></li>)}</ul>\n </LearningDetails>;\n}\n",
+      "originalSHA256": "ded9e16e59384a5cdb1642fc81b0bd326a9b7b2550e520f906c48d70dcf056f3",
+      "currentSHA256": "ced883b22cdd9c7be9b8e7e108bf54ace1301406d3aebb85a066110ff96b5e86"
+    },
+    {
+      "name": "app/expanded-learning-data.ts",
+      "sha256": "8dd152801ef5f4a852fcca9cf3081800009382b3211de8c904cc3eddf55134f6",
+      "originalUTF8": "import measurementWords from \"./book-measurement-word-index.json\" with {type:\"json\"};\nconst MEASUREMENT_WORDS=measurementWords as [string,string,string][];\nimport heatIndex from \"./book-heat-index.json\" with {type:\"json\"};\nimport lightIndex from \"./book-light-index.json\" with {type:\"json\"};\nimport waterIndex from \"./book-water-index.json\" with {type:\"json\"};\nimport particleIndex from \"./book-particle-index.json\" with {type:\"json\"};\nimport mechanicsIndex from \"./book-mechanics-index.json\" with {type:\"json\"};\nimport cellIndex from \"./book-cell-index.json\" with {type:\"json\"};\nconst CELL_WORDS=cellIndex.words as [string,string,string][];\nconst CELL_WHY=cellIndex.why as [string,string][];\nconst MECHANICS_WORDS=mechanicsIndex.words as [string,string,string][];\nconst MECHANICS_WHY=mechanicsIndex.why as [string,string][];\nconst PARTICLE_WORDS=particleIndex.words as [string,string,string][];\nconst WATER_WORDS=waterIndex.words as [string,string,string][];\nconst WATER_WHY=waterIndex.why as [string,string][];\nconst LIGHT_WORDS=lightIndex.words as [string,string,string][];\nconst LIGHT_WHY=lightIndex.why as [string,string][];\nconst HEAT_WORDS=heatIndex.words as [string,string,string][];\nconst HEAT_WHY=heatIndex.why as [string,string][];\n\nexport const MORE_WORDS:[string,string,string][]=[\n [\"Epizentrum\",\"Erdinneres\",\"Der Punkt an der Erdoberfläche direkt über dem Erdbebenherd.\"],[\"Erdbebenherd\",\"Erdinneres\",\"Der Ort im Gestein, an dem die plötzliche Bewegung eines Erdbebens beginnt.\"],[\"Seismometer\",\"Erdinneres\",\"Ein Messgerät, das Bodenbewegungen aufzeichnet.\"],[\"Magnitude\",\"Erdinneres\",\"Ein Maß für die Größe eines Erdbebens. Sie ist etwas anderes als die Wirkung an einem bestimmten Ort.\"],[\"Subduktion\",\"Erdinneres\",\"An einer Plattengrenze taucht eine Platte unter eine andere in den Mantel ab.\"],[\"Hotspot\",\"Erdinneres\",\"Ein heißer Bereich im Mantel, über dem Vulkane entstehen können, auch mitten auf einer Platte.\"],[\"Krater\",\"Erdinneres\",\"Eine Vertiefung, etwa an einem Vulkan oder durch einen Einschlag.\"],[\"Magmakammer\",\"Erdinneres\",\"Ein Bereich, in dem sich Magma sammelt; häufig ein kompliziertes Netzwerk.\"],[\"Schlot\",\"Erdinneres\",\"Ein Weg, durch den Magma und Gase zur Oberfläche gelangen können.\"],[\"Schildvulkan\",\"Erdinneres\",\"Ein meist breiter, flacher Vulkan, der oft aus vielen dünnflüssigen Lavaflüssen aufgebaut ist.\"],[\"Vulkanasche\",\"Erdinneres\",\"Winzige Gesteins-, Mineral- und Glasstücke aus einem Vulkan, keine Asche von verbranntem Holz.\"],[\"Tsunami\",\"Meere\",\"Eine Reihe langer Wasserwellen, die etwa durch plötzliche Bewegung des Meeresbodens entstehen kann.\"],[\"Nullmeridian\",\"Weltkugel\",\"Die vereinbarte Linie für 0° geografische Länge durch Greenwich in London.\"],[\"Wendekreis\",\"Weltkugel\",\"Eine Linie bei ungefähr 23,4° nördlicher oder südlicher Breite. Zwischen beiden kann die Sonne mittags im Zenit stehen.\"],[\"Breitengrad\",\"Weltkugel\",\"Ein Winkel, der zeigt, wie weit nördlich oder südlich vom Äquator ein Ort liegt.\"],[\"Längengrad\",\"Weltkugel\",\"Ein Winkel, der die Lage östlich oder westlich des Nullmeridians beschreibt.\"],[\"Zeitzone\",\"Weltkugel\",\"Ein Gebiet, in dem dieselbe vereinbarte Uhrzeit gilt. Grenzen folgen häufig Ländern statt geraden Linien.\"],[\"Hauptstadt\",\"Weltkugel\",\"Eine Stadt mit wichtigen Aufgaben für ein Land. Manche Länder haben mehrere Hauptstädte.\"],[\"Halbinsel\",\"Wasser\",\"Land, das auf vielen Seiten von Wasser umgeben ist, aber noch mit größerem Land zusammenhängt.\"],[\"Bucht\",\"Meere\",\"Ein Teil eines Meeres oder Sees, der weit ins Land hineinragt.\"],[\"Meerenge\",\"Meere\",\"Eine schmale Wasserverbindung zwischen größeren Meeresgebieten.\"],[\"Delta\",\"Wasser\",\"Eine Landschaft aus abgelagertem Material an manchen Flussmündungen. Der Fluss kann sich in mehrere Arme teilen.\"],[\"Einzugsgebiet\",\"Wasser\",\"Die Fläche, aus der Wasser zu einem bestimmten Fluss oder See abfließt.\"],[\"Grundwasser\",\"Wasser\",\"Wasser unter der Erdoberfläche in einer gesättigten Zone: Dort sind die Hohlräume mit Wasser gefüllt.\"],[\"Versickerung\",\"Wasser\",\"Wasser dringt von der Oberfläche in Boden und Gestein ein.\"],[\"Dichte\",\"Wasser\",\"Wie viel Masse in einem bestimmten Volumen steckt. Eis ist weniger dicht als flüssiges Wasser.\"],[\"Tundra\",\"Natur\",\"Eine kalte Landschaft mit kurzem Sommer und meist niedrigen Pflanzen wie Moosen und Sträuchern.\"],[\"Taiga\",\"Natur\",\"Ein ausgedehnter Gürtel von Nadelwäldern in kalten nördlichen Regionen.\"],[\"Klimazone\",\"Wetter\",\"Eine große Region mit ähnlichen langfristigen Klimabedingungen. Einfache Breitengrad-Gürtel sind nur ein Modell.\"],[\"Tropen\",\"Wetter\",\"Die Region zwischen den Wendekreisen. Im Jahreslauf erreicht sie viel Sonnenenergie.\"],[\"Subtropen\",\"Wetter\",\"Regionen zwischen Tropen und gemäßigten Gebieten. Sie enthalten trockene und feuchte Landschaften.\"],[\"Niederschlag\",\"Wetter\",\"Wasser, das aus Wolken zur Erde fällt, etwa Regen, Schnee oder Hagel.\"],[\"Luftdruck\",\"Wetter\",\"Der Druck, den die Luft ausübt. Luftdruckunterschiede helfen, Wind anzutreiben.\"],[\"Gewitter\",\"Wetter\",\"Wetter mit Blitz und Donner, häufig in hohen Wolken mit kräftiger aufsteigender Luft.\"],[\"Regenbogen\",\"Wetter\",\"Ein farbiger Bogen, der entsteht, wenn Sonnenlicht in Wassertröpfchen gebrochen und reflektiert wird.\"],[\"Mondphase\",\"Weltall\",\"Die scheinbare Form des Mondes, weil wir verschieden viel seiner beleuchteten Hälfte sehen.\"],[\"Neumond\",\"Weltall\",\"Der Mond steht ungefähr in Richtung Sonne; seine uns zugewandte Seite ist kaum beleuchtet.\"],[\"Vollmond\",\"Weltall\",\"Der Mond steht der Sonne am Himmel gegenüber. Wir sehen seine beleuchtete Scheibe fast ganz.\"],[\"Umlaufbahn\",\"Weltall\",\"Der Weg eines Himmelskörpers um einen anderen, zum Beispiel des Mondes um die Erde.\"],[\"Stern\",\"Weltall\",\"Eine große heiße Gaskugel, die eigene Energie erzeugt und Licht aussendet. Unsere Sonne ist ein Stern.\"],[\"Planet\",\"Weltall\",\"Ein großer, ungefähr runder Himmelskörper, der einen Stern umkreist. Die Erde ist ein Planet.\"],[\"Springtide\",\"Meere\",\"Gezeiten mit oft größerem Unterschied zwischen Hoch- und Niedrigwasser bei Neu- und Vollmond.\"],[\"Nipptide\",\"Meere\",\"Gezeiten mit oft kleinerem Unterschied zwischen Hoch- und Niedrigwasser nahe den Viertelmondphasen.\"],[\"Fjord\",\"Meere\",\"Eine lange, oft tiefe Meeresbucht in einem Tal, das ein Gletscher geformt hat.\"],[\"Meeresspiegel\",\"Meere\",\"Die Höhe der Meeresoberfläche. Für Höhenvergleiche nutzt man einen gemittelten Bezug.\"],[\"Biodiversität\",\"Natur\",\"Die Vielfalt von Lebewesen, ihren genetischen Unterschieden und Lebensräumen.\"],\n [\"Archipel\",\"Wasser\",\"Eine Gruppe von Inseln, zum Beispiel die vielen Inseln Japans.\"],[\"Gestein\",\"Erdinneres\",\"Natürliches festes Material, das meist aus Mineralen besteht. Manche Gesteine enthalten auch Glas.\"],[\"Mineral\",\"Erdinneres\",\"Ein natürlich vorkommender fester Stoff mit bestimmter Zusammensetzung und geordnetem innerem Aufbau, zum Beispiel Quarz.\"],[\"Verwitterung\",\"Erdinneres\",\"Gestein wird an der Oberfläche durch Wasser, Luft, Temperaturwechsel oder Lebewesen verändert und zerkleinert.\"],[\"Sediment\",\"Erdinneres\",\"Material wie Sand, Schlamm oder Kies, das abgelagert wird.\"],[\"Küste\",\"Meere\",\"Der Bereich, in dem Land und Meer aufeinandertreffen.\"],[\"Wasserdampf\",\"Wasser\",\"Wasser als unsichtbares Gas in der Luft. Sichtbare Nebeltröpfchen sind etwas anderes.\"],[\"Meeresströmung\",\"Meere\",\"Wasser, das sich über größere Strecken im Meer bewegt. Strömungen transportieren Wärme und Stoffe.\"],\n\n\n\n\n\n\n\n ...MEASUREMENT_WORDS,\n ...HEAT_WORDS,\n ...LIGHT_WORDS,\n ...WATER_WORDS,\n ...PARTICLE_WORDS,\n ...MECHANICS_WORDS,\n ...CELL_WORDS,\n];\nexport const MORE_WHY:[string,string][]=[\n [\"Warum ist die Erde rund?\",\"Die Schwerkraft zieht Materie zur Mitte. Bei einem großen Himmelskörper formt sie daraus ungefähr eine Kugel. Die Erddrehung macht die Erde an den Polen etwas flacher.\"],\n [\"Warum fallen Menschen in Australien nicht herunter?\",\"Unten zeigt überall auf der Erde zur Erdmitte. Die Schwerkraft zieht auch Menschen in Australien dorthin. Ihr Oben zeigt von der Mitte weg, genau wie unseres.\"],\n [\"Warum gibt es Tag und Nacht?\",\"Die Sonne beleuchtet eine Hälfte der Erde. Die Erde dreht sich, sodass ein Ort ins Licht und wieder aus dem Licht wandert.\"],\n [\"Warum gibt es Jahreszeiten?\",\"Die Erdachse ist geneigt. Beim Umlauf um die Sonne verändern sich Tageslänge und Sonnenstand. Im Norden und Süden sind die Jahreszeiten entgegengesetzt.\"],\n [\"Warum regnet es?\",\"In Wolken wachsen Tröpfchen oder Eiskristalle. Werden sie groß genug, fallen sie. Eis kann unterwegs schmelzen und ebenfalls als Regen am Boden ankommen.\"],\n [\"Warum bricht ein Vulkan aus?\",\"Magma kann aufsteigen. Dabei verändert sich der Druck, und gelöste Gase bilden wachsende Blasen. Magma und Gase können durch Schwachstellen an die Oberfläche gelangen.\"],\n [\"Warum gibt es Erdbeben?\",\"Gestein kann sich an Störungen verhaken und Spannung aufbauen. Beim plötzlichen Rutschen werden Wellen ausgesendet, die den Boden bewegen.\"],\n [\"Schwimmen Kontinente auf Lava?\",\"Nein. Kontinente gehören zu festen Platten, die auch Meeresboden tragen. Der Mantel darunter ist überwiegend fest, kann sich über lange Zeit aber verformen.\"],\n [\"Warum ist es an den Polen kalt?\",\"Sonnenlicht trifft dort flacher auf und verteilt seine Energie auf größere Flächen. Dazu kommen lange polare Nächte. Schnee und Eis reflektieren viel Licht.\"],\n [\"Warum gibt es Wellen im Meer?\",\"Viele Oberflächenwellen entstehen, wenn Wind Energie auf Wasser überträgt. Wasserteilchen bewegen sich dabei vor allem auf und ab oder auf kreisähnlichen Wegen, während die Welle weiterläuft.\"],\n [\"Warum leuchtet der Mond?\",\"Er reflektiert Sonnenlicht. Seine Oberfläche ist keine Lampe. Von der Erde aus sehen wir verschieden viel von seiner beleuchteten Hälfte.\"],\n [\"Warum gibt es Ebbe und Flut?\",\"Die Anziehung von Mond und Sonne wirkt unterschiedlich stark auf verschiedene Teile der Erde. Zusammen mit der Bewegung des Systems erzeugt das Gezeiten. Küsten und Meerestiefe beeinflussen sie vor Ort.\"],\n [\"Warum ist das Meer salzig?\",\"Wasser löst Stoffe aus Gestein. Flüsse und Vorgänge am Meeresboden bringen gelöste Stoffe ins Meer. Wenn Wasser verdunstet, bleibt Salz zurück.\"],\n [\"Warum haben Eisbären keine Pinguine als Nachbarn?\",\"Eisbären leben in der Arktis. Wilde Pinguine leben in anderen Regionen, überwiegend auf der Südhalbkugel. Sie sind nicht alle Bewohner der Antarktis.\"],\n [\"Warum ist eine Wüste nicht immer heiß?\",\"Wüste bedeutet sehr wenig Niederschlag. Auch eine kalte Landschaft wie Antarktika kann deshalb eine Wüste sein.\"],\n [\"Warum schwimmt Eis?\",\"Beim Gefrieren bilden Wasserteilchen eine offenere Struktur. Für dieselbe Masse braucht Eis mehr Platz. Es ist dadurch weniger dicht als flüssiges Wasser.\"],\n [\"Warum kommt der Donner nach dem Blitz?\",\"Licht erreicht uns viel schneller als Schall. Der Blitz erhitzt Luft sehr schnell; ihre Ausdehnung erzeugt den Donner.\"],\n [\"Warum hört ein Fluss nicht an einer Grenze auf?\",\"Flusswasser folgt der Schwerkraft und der Landschaft. Von Menschen festgelegte Landesgrenzen halten es nicht auf.\"],\n [\"Warum ist Canberra die Hauptstadt und nicht Sydney?\",\"Eine Hauptstadt wird von Menschen festgelegt und muss nicht die größte Stadt sein. Canberra wurde als Hauptstadt Australiens geplant.\"],\n [\"Warum gibt es so viele Sprachen?\",\"Menschen haben sich über lange Zeit in verschiedenen Gemeinschaften entwickelt. Sprachen verändern sich, beeinflussen sich gegenseitig und können über Ländergrenzen hinweg gesprochen werden.\"],\n ...HEAT_WHY,\n ...LIGHT_WHY,\n ...WATER_WHY,\n ...MECHANICS_WHY,\n ...CELL_WHY,\n];\n",
+      "originalSHA256": "8dd152801ef5f4a852fcca9cf3081800009382b3211de8c904cc3eddf55134f6",
+      "currentSHA256": "835a383a13467b6dc01eb255447d1a1c081570ff9b485a238830e489fa6d34a4"
+    },
+    {
+      "name": "app/knowledge-book.tsx",
+      "sha256": "4a51d84d21f009562aa638c2948f943af77a30dae8d42145b3b4b6edc443cce9",
+      "originalUTF8": "\"use client\";\n\nimport { memo, useEffect, useMemo, useState } from \"react\";\nimport { ChevronLeft, ChevronRight, ChevronDown, BookOpen, Compass, Globe2, HelpCircle, MapPin, Search, Volume2, Waves } from \"lucide-react\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\nimport { Textarea } from \"@/components/ui/textarea\";\nimport { Input } from \"@/components/ui/input\";\nimport { GLOSSARY, WHY_QUESTIONS } from \"./learning-data\";\nimport { CountryPortrait, ContinentPortrait, GeographyNotes } from \"./country-portrait\";\nimport {LearningDetails} from \"./learning-components\";\nimport {useLearningStrip} from \"./learning-strip\";\nimport \"./book.css\";\nimport {BookMeasurement} from \"./book-measurement-study\";\nimport {hasBookMeasurement} from \"./book-measurement-data\";\nimport {BookRelatedWords} from \"./book-related-words\";\nimport {BookLight} from \"./book-light-study\";\nimport {hasBookLight} from \"./book-light-data\";\nimport {BookParticle} from \"./book-particle-study\";\nimport {hasBookParticle} from \"./book-particle-data\";\nimport {BookCell} from './book-cell-study';\nimport {hasBookCell} from './book-cell-data';\nimport {BookMechanics} from \"./book-mechanics-study\";\nimport {hasBookMechanics} from \"./book-mechanics-data\";\nimport {BookWater} from \"./book-water-study\";\nimport {hasBookWater} from \"./book-water-data\";\nimport {BookHeat} from \"./book-heat-study\";\nimport {hasBookHeat} from \"./book-heat-data\";\nimport {WORD_SOURCE_NOTES,NATURE_SOURCE_NOTES} from \"./precision-source-notes\";\nimport WorldPhoto from \"./world-media\";\nimport TopicMap from \"./topic-map\";\nimport {WORLD_INDEX} from \"./world-index\";\nimport {useHashRoute,navigateHash} from './hash-route';\nimport {BookNote} from \"./book-note\";\nimport {bookLookup,useBookView} from './book-view';\nimport {foldSearch,searchScore} from \"./search-ranking\";\nimport type {Review} from \"./progress-storage\";\nimport { NATURE } from \"./nature-data\";\nimport { CONTINENTS, OCEANS, countryPlace, type Country, type Place } from \"./earth-data\";\n\nfunction KnowledgeBook({notes,onNote,onRemoveNote,onDiscover,favorites,allPlaces,onFavorite,countries,onPlace,onRead,onTopic,onJourney,review}:{notes:{id:string;text:string;at:string}[];onNote:(s:string,id?:string)=>void;onRemoveNote:(id:string)=>void;onDiscover:(id:string)=>void;favorites:string[];allPlaces:Place[];onFavorite:(id:string)=>void;countries:Country[];onPlace:(p:Place)=>void;onRead:(text:string,localOnly?:boolean)=>void;onTopic?:(id:string)=>void;onJourney?:(id:string)=>void;review?:Review}){\n const route=useHashRoute(false),{view,set,setView,intent}=useBookView(route),lookup=useMemo(()=>bookLookup(route),[route]),notesRoute=route===\"book/notes\";\n const {wordLimit,natureLimit,letter,query,category,limit}=view,tab=notesRoute?\"notes\":view.tab;\n const [draft,setDraft]=useState(\"\");\n // A lookup can arrive while another tab is rendered. Open its disclosure only\n // after the Why tab has committed, so its target actually exists in the DOM.\n useEffect(()=>{if(lookup?.tab!==\"why\"||tab!==\"why\")return;const frame=requestAnimationFrame(()=>{const i=WHY_QUESTIONS.findIndex(([q])=>q===lookup.term),target=document.getElementById('why-entry-'+i) as HTMLDetailsElement|null;if(target){target.open=true;target.scrollIntoView({block:'center'});}});return()=>cancelAnimationFrame(frame);},[lookup,tab,intent]);\n const {listRef,previousRef,nextRef,reveal,scroll}=useLearningStrip(tab);\n const favoriteTopics=WORLD_INDEX.filter(t=>favorites.includes(\"topic:\"+t.id));\n const reviewTopics=WORLD_INDEX.filter(t=>{const r=review?.[\"world-question:\"+t.id];return r&&(!r.correct||r.due<=new Date().toISOString().slice(0,10));});\n const favoritePlaces=favorites.map(id=>allPlaces.find(p=>p.id===id)).filter((p):p is Place=>!!p);\n const favoriteReading=[...GLOSSARY.map(([name,,text])=>({id:\"word:\"+name,name,text})),...WHY_QUESTIONS.map(([name,text])=>({id:\"why:\"+name,name,text}))].filter(p=>favorites.includes(p.id));\n const hasSaved=favoriteTopics.length+reviewTopics.length+favoritePlaces.length+favoriteReading.length>0;\n const term=foldSearch(query);\n const entries=useMemo(()=>GLOSSARY.filter(([name,group,text])=>(category===\"Alle\"||group===category)&&(letter===\"Alle\"||name.startsWith(letter))&&(!term||searchScore(term,name,text)>0)).sort(([a],[b])=>Number(foldSearch(b)===term)-Number(foldSearch(a)===term)),[term,category,letter]);\n const selectedCountries=countries.map(countryPlace).filter(p=>p.capital&&(!term||searchScore(term,p.name,p.capital)>0));\n return <section className=\"knowledge-book\"><p className=\"book-inventory\">{GLOSSARY.length} Wörter · Warumfragen · eigene Notizen · zwei Atlanten</p><Tabs value={tab} onValueChange={v=>{onRead(\"\");if(notesRoute)navigateHash(\"book\");setView(previous=>({...previous,route:notesRoute?\"book\":route,tab:v,query:\"\",limit:24}));}}><div className=\"book-navigation\"><button className=\"area-scroll\" ref={previousRef} aria-label=\"Vorherige Buchbereiche anzeigen\" onClick={()=>scroll(-1)}><ChevronLeft size={20} aria-hidden=\"true\"/></button><TabsList ref={listRef} className=\"book-tabs\" aria-label=\"Wissensbuch-Bereich\" onFocusCapture={event=>{const target=(event.target as HTMLElement).closest<HTMLElement>('[role=tab]');if(target)reveal(target);}}><TabsTrigger value=\"words\"><BookOpen size={17}/> Wörter</TabsTrigger><TabsTrigger value=\"why\"><HelpCircle size={17}/> Warum?</TabsTrigger><TabsTrigger value=\"notes\"><BookOpen size={17}/> Notizbuch</TabsTrigger><TabsTrigger value=\"nature\"><Compass size={17}/> Naturatlas</TabsTrigger><TabsTrigger value=\"atlas\"><Globe2 size={17}/> Kleiner Atlas</TabsTrigger></TabsList><button className=\"area-scroll\" ref={nextRef} aria-label=\"Weitere Buchbereiche anzeigen\" onClick={()=>scroll(1)}><ChevronRight size={20} aria-hidden=\"true\"/></button></div><TabsContent value={tab}>{![\"why\",\"notes\",\"nature\"].includes(tab)&&<div className=\"book-search\"><Search size={21}/><Input value={query} onChange={e=>{onRead(\"\");set(\"query\",e.target.value);set(\"limit\",24);}} placeholder={tab===\"words\"?\"Zum Beispiel: Wolke, Äquator, Lava …\":\"Suche ein Land oder eine Hauptstadt …\"} aria-label={tab===\"words\"?\"Wissenswörter durchsuchen\":\"Länderwissen durchsuchen\"}/></div>}{tab===\"words\"?<><Tabs value={category} onValueChange={value=>set(\"category\",value)}><details className=\"book-filter-panel\" data-history-disclosure=\"book-word-filters\"><summary>Wörter filtern{category!==\"Alle\"&&\" · \"+category}{letter!==\"Alle\"&&\" · \"+letter}</summary><TabsList className=\"word-categories\" aria-label=\"Wissenswörter nach Thema\">{[\"Alle\",...new Set(GLOSSARY.map(w=>w[1]))].map(c=><TabsTrigger value={c} key={c}>{c}</TabsTrigger>)}</TabsList><div className=\"alphabet-filter\" role=\"group\" aria-label=\"Wörter nach Anfangsbuchstaben\"><button className=\"secondary-button\" aria-pressed={letter===\"Alle\"} onClick={()=>{set(\"letter\",\"Alle\");set(\"wordLimit\",24);}}>Alle</button>{[...new Set(GLOSSARY.map(([name])=>name[0]))].sort().map(l=><button className=\"secondary-button\" key={l} aria-pressed={l===letter} onClick={()=>{set(\"letter\",l);set(\"wordLimit\",24);}}>{l}</button>)}</div></details><TabsContent value={category}><p className=\"result-count\" role=\"status\">{entries.length} {entries.length===1?\"Erklärung\":\"Erklärungen\"}</p><div className=\"word-grid\">{entries.slice(0,wordLimit).map(([name,group,text])=><article key={name} className=\"word-card\"><span className=\"category-pill\">{group}</span><h3 tabIndex={-1} data-route-focus={\"book-word-target-\"+name}>{name}</h3><p>{text}</p>{hasBookMeasurement(name)&&<BookMeasurement term={name} onTopic={onTopic}/>}{hasBookHeat(name)&&<BookHeat term={name} onTopic={onTopic}/>}{hasBookLight(name)&&<BookLight term={name} onTopic={onTopic}/>}{hasBookWater(name)&&<BookWater term={name} onTopic={onTopic}/>}{hasBookParticle(name)&&<BookParticle term={name} onTopic={onTopic}/>}\n{hasBookMechanics(name)&&<BookMechanics term={name} onTopic={onTopic}/>}{hasBookCell(name)&&<BookCell term={name} onTopic={onTopic}/>}{WORD_SOURCE_NOTES[name]&&<LearningDetails summary=\"Quellen zur Erklärung\"><GeographyNotes place={WORD_SOURCE_NOTES[name]}/></LearningDetails>}<WordConnection name={name} onJourney={onJourney} onTopic={onTopic}/><button className=\"speech-button\" onClick={()=>{onDiscover(\"knowledge:\"+name);onRead(name+\". \"+text);}} aria-label={`${name} vorlesen`}><Volume2 size={16}/> Vorlesen</button><button className=\"speech-button\" aria-pressed={favorites.includes(\"word:\"+name)} onClick={()=>onFavorite(\"word:\"+name)}>{favorites.includes(\"word:\"+name)?\"Im Notizbuch\":\"Später noch einmal lesen\"}</button></article>)}</div>{entries.length>wordLimit&&<button className=\"secondary-button\" onClick={()=>set(\"wordLimit\",n=>n+24)}>Weitere Wörter entdecken ({entries.length-wordLimit})</button>}{!entries.length&&<div className=\"empty-knowledge\"><Search size={32}/><h3>Das Wort haben wir noch nicht gefunden.</h3><p>Versuch einen kürzeren Suchbegriff oder ein anderes Thema.</p><button className=\"secondary-button\" onClick={()=>{set(\"query\",\"\");set(\"category\",\"Alle\");set(\"letter\",\"Alle\");set(\"wordLimit\",24);}}>Alle Wörter zeigen</button></div>}</TabsContent></Tabs></>:tab===\"why\"?<div className=\"why-list\">{WHY_QUESTIONS.map(([question,text],i)=><details id={\"why-entry-\"+i} data-history-disclosure={\"book-why-\"+i} key={question} className=\"why-card\" onToggle={e=>{if(e.currentTarget.open)onDiscover(\"knowledge:\"+question);}}><summary data-route-focus={\"book-why-target-\"+question}><span>{String(i+1).padStart(2,\"0\")}</span>{question}<ChevronDown size={20} aria-hidden=\"true\"/></summary><div><p>{text}</p>{hasBookHeat(question)&&<BookHeat term={question} onTopic={onTopic}/>}{hasBookLight(question)&&<BookLight term={question} onTopic={onTopic}/>}{hasBookWater(question)&&<BookWater term={question} onTopic={onTopic}/>}\n{hasBookMechanics(question)&&<BookMechanics term={question} onTopic={onTopic}/>}{hasBookCell(question)&&<BookCell term={question} onTopic={onTopic}/>}<button className=\"speech-button\" onClick={()=>onRead(question+\" \"+text)}><Volume2 size={17}/> Antwort vorlesen</button><button className=\"speech-button\" aria-pressed={favorites.includes(\"why:\"+question)} onClick={()=>onFavorite(\"why:\"+question)}>{favorites.includes(\"why:\"+question)?\"Im Notizbuch\":\"Später noch einmal lesen\"}</button></div></details>)}</div>:tab===\"notes\"?<section className=\"notebook\">\n <h2>Meine Forscher-Notizen</h2><label htmlFor=\"research-note\">Was hast du entdeckt? Was möchtest du noch wissen?</label>\n <Textarea id=\"research-note\" maxLength={1000} value={draft} onChange={e=>setDraft(e.target.value)} placeholder=\"Zum Beispiel: Warum ist der Mond manchmal am Tag zu sehen?\"/>\n <p className=\"small-note\">Deine Gedanken bleiben auf diesem Gerät. Du kannst sie zusammen mit dem Pass sichern.</p>\n <button className=\"primary-button\" disabled={!draft.trim()} onClick={()=>{onNote(draft);setDraft(\"\");}}>Notiz ins Buch schreiben</button>\n <div className=\"note-list\">{notes.map(n=><BookNote key={n.id} note={n} onSave={onNote} onRemove={onRemoveNote} onRead={onRead}/>)}</div>\n {!notes.length&&<p className=\"small-note\">Hier ist Platz für deine erste Beobachtung oder eine Frage zum Weiterforschen.</p>}\n <h2>Deine gespeicherten Entdeckungen</h2>\n {favoriteTopics.length>0&&<section><h3>Das möchtest du noch entdecken</h3><div className=\"atlas-grid\">{favoriteTopics.map(t=><article className=\"atlas-country\" key={t.id}><h4>{t.title}</h4><p>{t.sensitive?\"Ruhige Erklärung zum gemeinsamen Anschauen.\":t.intro}</p><button className=\"secondary-button\" onClick={()=>onTopic?.(t.id)}>Entdeckerkarte öffnen</button><button className=\"speech-button\" onClick={()=>onFavorite(\"topic:\"+t.id)}>Aus dem Forscherbuch nehmen</button></article>)}</div></section>}\n {reviewTopics.length>0&&<section><h3>Ein Gedanke zum Wiederholen</h3><p>Falsche und später fällige Mini-Fragen warten hier ohne Zeitdruck.</p><div className=\"atlas-grid\">{reviewTopics.map(t=><article className=\"atlas-country\" key={t.id}><h4>{t.title}</h4><button className=\"secondary-button\" onClick={()=>onTopic?.(t.id)}>Noch einmal nachdenken</button></article>)}</div></section>}\n {favoritePlaces.length>0&&<section><h3>Das fand ich spannend</h3><p>Deine Lieblingsorte bleiben auf diesem Gerät gespeichert.</p><div className=\"atlas-grid\">{favoritePlaces.map(p=><article className=\"atlas-country\" key={p.id}><h4>{p.name}</h4><p>{p.text}</p><button className=\"secondary-button\" onClick={()=>onPlace(p)}>Noch einmal besuchen</button><button className=\"speech-button\" onClick={()=>onFavorite(p.id)}>Aus dem Notizbuch nehmen</button></article>)}</div></section>}\n {favoriteReading.length>0&&<section><h3>Wörter &amp; Warumfragen</h3><div className=\"atlas-grid\">{favoriteReading.map(p=><article className=\"word-card\" key={p.id}><h4>{p.name}</h4><p>{p.text}</p><button className=\"speech-button\" onClick={()=>onRead(p.name+\". \"+p.text)}>Vorlesen</button><button className=\"speech-button\" onClick={()=>onFavorite(p.id)}>Aus dem Notizbuch nehmen</button></article>)}</div></section>}\n {!hasSaved&&<div className=\"book-saved-empty\"><p>Hier findest du deine gemerkten Karten, Orte, Wörter und Warumfragen. Mit „Das interessiert mich!“ oder „Später noch einmal lesen“ füllst du dein Buch.</p><button className=\"knowledge-link\" onClick={()=>navigateHash('world')}>Wissenswelten entdecken →</button><button className=\"knowledge-link\" onClick={()=>navigateHash('globe')}>Lieblingsort auf der Weltkugel finden →</button></div>}\n </section>:tab===\"nature\"?<section className=\"atlas\"><h3>Berge, Tiere, Wälder und Naturrekorde</h3><p>Die Punkte zeigen Beispiele. Eine Tierart oder ein Gebirge ist größer als ein einzelner Punkt.</p><div className=\"atlas-grid\">{NATURE.slice(0,natureLimit).map(p=><article className=\"atlas-country\" key={p.id}><h4>{p.name}</h4><NatureVisual place={p} onPlace={onPlace}/><p>{p.text}</p><details><summary>Noch mehr wissen</summary><p>{p.fact}</p></details>{NATURE_SOURCE_NOTES[p.id]&&<LearningDetails summary=\"Einordnung und Quellen\"><GeographyNotes place={{...p,...NATURE_SOURCE_NOTES[p.id]}}/></LearningDetails>}<button className=\"secondary-button\" onClick={()=>onPlace(p)}>Auf der Weltkugel finden</button><button className=\"speech-button\" onClick={()=>onRead(p.name+'. '+p.text+' '+p.fact)}><Volume2 size={17}/> Vorlesen</button></article>)}</div>{NATURE.length>natureLimit&&<button className=\"secondary-button\" onClick={()=>set(\"natureLimit\",n=>n+24)}>Weitere Naturorte entdecken</button>}</section>:<div className=\"atlas\"><section><h3><MapPin size={22}/> Länder & Hauptstädte</h3><p className=\"atlas-intro\">Ein genauerer Blick auf {countries.filter(c=>countryPlace(c).capital).length} Länder. Weitere Länder und Gebiete findest du auf der Weltkugel.</p><div className=\"atlas-grid\">{selectedCountries.slice(0,limit).map(p=><article className=\"atlas-country\" key={p.id}><span className=\"category-pill\">{CONTINENTS.find(c=>c.id===countries.find(c=>c.properties.id===p.id)?.properties.continent)?.name}</span><h4>{p.name}</h4><span className=\"atlas-capital\">Hauptstadt: <strong>{p.capital}</strong></span><p>{p.text}</p><div className=\"atlas-fact\">{p.fact}</div>{p.kind===\"country\"&&<CountryPortrait place={p} onRead={onRead}/>} {p.kind===\"continent\"&&<ContinentPortrait place={p}/>}<button className=\"secondary-button\" onClick={()=>onPlace(p)}><Globe2 size={17}/> Auf dem Globus finden</button></article>)}</div>{selectedCountries.length>limit&&<button className=\"secondary-button atlas-more\" onClick={()=>set(\"limit\",n=>n+24)}>Weitere Länder entdecken ({selectedCountries.length-limit})</button>}{!selectedCountries.length&&<p className=\"empty-knowledge\">Kein passendes Länderporträt. Du kannst trotzdem alle Länder und Gebiete auf der Weltkugel auswählen.</p>}</section>{!term&&<><section><h3><Compass size={22}/> Sieben Kontinente</h3><div className=\"atlas-grid\">{CONTINENTS.map(p=><article className=\"atlas-country\" key={p.id}><h4>{p.name}</h4><p>{p.text}</p><div className=\"atlas-fact\">{p.fact}</div>{p.kind===\"country\"&&<CountryPortrait place={p} onRead={onRead}/>} {p.kind===\"continent\"&&<ContinentPortrait place={p}/>}<button className=\"secondary-button\" onClick={()=>onPlace(p)}>Auf dem Globus finden</button></article>)}</div></section><section><h3><Waves size={22}/> Fünf Ozeane</h3><div className=\"atlas-grid\">{OCEANS.slice(0,5).map(p=><article className=\"atlas-country\" key={p.id}><h4>{p.name}</h4><p>{p.text}</p><div className=\"atlas-fact\">{p.fact}</div>{p.kind===\"country\"&&<CountryPortrait place={p} onRead={onRead}/>} {p.kind===\"continent\"&&<ContinentPortrait place={p}/>}<button className=\"secondary-button\" onClick={()=>onPlace(p)}>Auf dem Globus finden</button></article>)}</div></section></>}</div>}</TabsContent></Tabs></section>;\n}\n\nexport default memo(KnowledgeBook);\n\nconst WORD_ROUTES:Record<string,string>={\"Äquator\":\"navigation\",\"Breitengrad\":\"navigation\",\"Längengrad\":\"navigation\",\"Nullmeridian\":\"navigation\",\"Wendekreis\":\"navigation\",\"Zeitzone\":\"navigation\",\"Atmosphäre\":\"planet\",\"Schwerkraft\":\"planet\",\"Erdachse\":\"seasons\",\"Jahreszeiten\":\"seasons\",\"Erdkern\":\"inside\",\"Erdmantel\":\"inside\",\"Erdkruste\":\"inside\",\"Gestein\":\"inside\",\"Mineral\":\"inside\",\"Plattentektonik\":\"inside\",\"Subduktion\":\"inside\",\"Vulkan\":\"volcanoes\",\"Lava\":\"volcanoes\",\"Magma\":\"volcanoes\",\"Magmakammer\":\"volcanoes\",\"Schlot\":\"volcanoes\",\"Schildvulkan\":\"volcanoes\",\"Vulkanasche\":\"volcanoes\",\"Krater\":\"volcanoes\",\"Erdbeben\":\"quakes\",\"Erdbebenherd\":\"quakes\",\"Epizentrum\":\"quakes\",\"Magnitude\":\"quakes\",\"Seismometer\":\"quakes\",\"Tsunami\":\"quakes\",\"Wetter\":\"weather\",\"Wolke\":\"weather\",\"Luftdruck\":\"weather\",\"Niederschlag\":\"weather\",\"Gewitter\":\"weather\",\"Klima\":\"climate\",\"Klimazone\":\"climate\",\"Tropen\":\"climate\",\"Subtropen\":\"climate\",\"Tundra\":\"climate\",\"Taiga\":\"climate\",\"Wasserdampf\":\"water\",\"Wasserkreislauf\":\"water\",\"Kondensation\":\"water\",\"Verdunstung\":\"water\",\"Grundwasser\":\"water\",\"Versickerung\":\"water\",\"Süßwasser\":\"water\",\"Ozean\":\"ocean\",\"Meeresströmung\":\"ocean\",\"Korallen\":\"ocean\",\"Ebbe und Flut\":\"ocean\",\"Nipptide\":\"ocean\",\"Springtide\":\"ocean\",\"Plankton\":\"ocean\",\"Erosion\":\"landscapes\",\"Verwitterung\":\"landscapes\",\"Gletscher\":\"landscapes\",\"Wüste\":\"landscapes\",\"Sediment\":\"landscapes\",\"Delta\":\"landscapes\",\"Einzugsgebiet\":\"landscapes\",\"Kontinent\":\"continents\",\"Hauptstadt\":\"countries\",\"Biodiversität\":\"nature\",\"Lebensraum\":\"nature\",\"Nahrungsnetz\":\"nature\",\"Savanne\":\"nature\",\"Recycling\":\"protect\",\"Treibhauseffekt\":\"protect\",\"Mondphase\":\"moon\",\"Neumond\":\"moon\",\"Vollmond\":\"moon\",\"Umlaufbahn\":\"moon\",\"Planet\":\"planet\",\"Stern\":\"planet\",\"Nordpol\":\"navigation\",\"Südpol\":\"navigation\",\"Halbkugel\":\"navigation\"};\nfunction WordConnection({name,onJourney,onTopic}:{name:string;onJourney?:(id:string)=>void;onTopic?:(id:string)=>void}){const target=name==='Schwerkraft'?'science-tides':name==='Umlaufbahn'?'invention-satellite':undefined;return <div className=\"word-connections\"><BookRelatedWords term={name}/>{WORD_ROUTES[name]&&<button data-route-focus={'book-word-'+name+'-journey'} className=\"knowledge-link\" onClick={()=>onJourney?.(WORD_ROUTES[name])}>In einer Lernreise ausprobieren →</button>}{target&&<button data-route-focus={'book-word-'+name+'-topic'} className=\"knowledge-link\" onClick={()=>onTopic?.(target)}>{name==='Schwerkraft'?'Wie Anziehung das Meer bewegt →':'Eine passende Entdeckerkarte →'}</button>}</div>;}\nfunction NatureVisual({place,onPlace}:{place:Place;onPlace:(p:Place)=>void}){const ids:Record<string,string>={'polar-bear':'polar-bear','penguin':'emperor-penguin','giraffe':'giraffe','panda':'giant-panda','kangaroo':'red-kangaroo'},image=ids[place.id];return image?<WorldPhoto id={image} compact/>:<TopicMap compact entry={{id:place.id,category:'science',title:place.name,intro:place.text,aliases:[],locations:[{label:place.name,lat:place.lat,lon:place.lon}]}} onPlace={()=>onPlace(place)}/>;}\n",
+      "originalSHA256": "4a51d84d21f009562aa638c2948f943af77a30dae8d42145b3b4b6edc443cce9",
+      "currentSHA256": "9cfbfef88dc4311169a76b044ed50993b1f24ec4df1fbf4b6205c814cb206d8c"
+    }
+  ],
+  "addedInputs": [
+    {
+      "name": "app/book-gene-content.json",
+      "sha256": "d3b0b807384453b76e5a4138083021b7f53c305694e1d1f093a010ad0af36d7d"
+    },
+    {
+      "name": "app/book-gene-context-figures.tsx",
+      "sha256": "b8c8ab17e67d5bbdaf0962c40e01d6f827090961057a898c2992480cdf9ba243"
+    },
+    {
+      "name": "app/book-gene-data.ts",
+      "sha256": "ccf49b5c903048729ebc3601c727017be2cf95bb0f42576e14c9e703d855c9c8"
+    },
+    {
+      "name": "app/book-gene-figure.tsx",
+      "sha256": "69db1f71a533b8643e2ce74abbf715a74e5aa94cabfef1f8eb89c0dcf5f5f1b9"
+    },
+    {
+      "name": "app/book-gene-figures.css",
+      "sha256": "a1e63ddab1438b9d6fdc7389131351cea99d8c872d4096c80455a4cded711f0d"
+    },
+    {
+      "name": "app/book-gene-index.json",
+      "sha256": "4f9d8b9b359986a9e9476d95d8efb223c122316c256536b5448ba5c02700ba6c"
+    },
+    {
+      "name": "app/book-gene-information-figures.tsx",
+      "sha256": "4789c0031f328fc8329ff9ef60fd4bfe672cdb1f784647935e47aacdf8173af5"
+    },
+    {
+      "name": "app/book-gene-integrity.json",
+      "sha256": "849d17aaad5da61012fde2ed7a40d2c83450014cc21bd197d3158a7f0379e00a"
+    },
+    {
+      "name": "app/book-gene-models.ts",
+      "sha256": "1b4facea7f0ee20c130e733cbd87d2c48de95818e0d6ec931d194974af6fc9c8"
+    },
+    {
+      "name": "app/book-gene-process-figures.tsx",
+      "sha256": "76a968d1bf8316f2254330e7a6c8bd2e25b6fc34fb9b4d8c2039eb74448bc1ae"
+    },
+    {
+      "name": "app/book-gene-study.tsx",
+      "sha256": "87ee1f68844c17eb4132ddfc201e5747d9aa01b70b0fa63366a2d013f7fb271c"
+    },
+    {
+      "name": "app/book-gene-topic-index.json",
+      "sha256": "6801e2a1afd415e03b4b53b0fce0acc21cf52b83c29fd185d298a081225e80bf"
+    },
+    {
+      "name": "app/book-gene-validation.mjs",
+      "sha256": "2699db4f13e547571470ffb4ed22764b1d0cc08b2cdaf5a48243561010c9d567"
+    },
+    {
+      "name": "app/book-gene-word-link-index.json",
+      "sha256": "d7f3657cf6d26e36c666e21598215cca6a97fbc50cf232afb034269d57a0dc5a"
+    }
+  ],
+  "whole156PredecessorDossiers": [
+    {
+      "id": "topics-animals:animal-platypus",
+      "sha256": "6ba505f72545d77a1f78f1c13971caeedf363e30336ff0dacaa0d6b21fc1cce5"
+    },
+    {
+      "id": "topics-animals:animal-short-beaked-echidna",
+      "sha256": "28acc44cdbbf36ca1e4ee5dee4d66d653e00b60245ae8bc2dd324c411bbbfd74"
+    },
+    {
+      "id": "topics-animals:animal-okapi",
+      "sha256": "9234e9fb232caacc0715cb960b8613b0a9534814152beeeb29dcc323c6b79a76"
+    },
+    {
+      "id": "topics-animals:animal-meerkat",
+      "sha256": "fe12c24fde43bd26bc4a6ee1943868db83c78db11d47778dd2aa1371191defd2"
+    },
+    {
+      "id": "topics-animals:animal-ring-tailed-lemur",
+      "sha256": "b655bb7849f11b83f13f062288e243d8c879e93ef8a28001b90b44516b634628"
+    },
+    {
+      "id": "topics-animals:animal-north-american-beaver",
+      "sha256": "200be7c20e9796085a006c2cac3e9aea50063a95572387b6b9e23c38fb9ba286"
+    },
+    {
+      "id": "topics-animals:animal-walrus",
+      "sha256": "65a4f6108b0c1a95adb9b3f8e35a0149aea9ba6fad0242aeb12be4e9a39d2da0"
+    },
+    {
+      "id": "topics-animals:animal-red-fox",
+      "sha256": "5e1a3ec14d4530a4cc7be56bfb749c0616b4d19c22d32dfa92172a4618594b52"
+    },
+    {
+      "id": "topics-animals:animal-raccoon",
+      "sha256": "1a90502d7c8862437e5c8ecfc0be0e8b4c0e03db1b125711be0032155b0d5827"
+    },
+    {
+      "id": "topics-animals:animal-hedgehog",
+      "sha256": "90b4b6aed6edeb280f8e48b148041b771a168298836879e161d54bc8691b9c22"
+    },
+    {
+      "id": "topics-animals:animal-barn-owl",
+      "sha256": "3ac665e1051967cc573edd311bc7f1ccc27ce0f5b0bec8ebf9d371820fcd4823"
+    },
+    {
+      "id": "topics-animals:animal-kingfisher",
+      "sha256": "6d6de53f0299b0833c684c534b84392cab34b1d481d0e0a788c0e80fcd5c65d1"
+    },
+    {
+      "id": "topics-animals:animal-ostrich",
+      "sha256": "4f0d43546520968d5c609be8e5229a1852d6c5d595dca52ce5535d8243504453"
+    },
+    {
+      "id": "topics-animals:animal-atlantic-puffin",
+      "sha256": "53599bb450e0a1e23f3855e62995e882b82312b0d3c74ab953384a85e8577e28"
+    },
+    {
+      "id": "topics-animals:animal-common-chameleon",
+      "sha256": "38e960a6277811f16d8bc00b5757264a7612d8d8e4bce03df6d55d3717a9acdf"
+    },
+    {
+      "id": "topics-animals:animal-fire-salamander",
+      "sha256": "04841f6003de06d0bb3d653af88ae75121a0ce44a2910c637ab3999ce717caa6"
+    },
+    {
+      "id": "topics-animals:animal-common-frog",
+      "sha256": "b8f7bca6d525b48077674f5a538a8ecb258b1c4aae1f827fcade42f56d707f19"
+    },
+    {
+      "id": "topics-animals:animal-eastern-clown-anemonefish",
+      "sha256": "937e69d54f36257f80a8eb8af7f8e3a3403838f1df8c54ce43582ea5abab5e08"
+    },
+    {
+      "id": "topics-animals:animal-european-eel",
+      "sha256": "8643d8ae0e6b42edbce79b91b9053424ff65d381c7fae609214f3476403f8041"
+    },
+    {
+      "id": "topics-animals:animal-monarch-butterfly",
+      "sha256": "4baf99733feee7a4a72c3815af2d36ec46f1eb922d9274e779a532bf39a17b18"
+    },
+    {
+      "id": "topics-animals:animal-garden-snail",
+      "sha256": "1cae4e7dbe23d3f4baaa34d9c392c27f82ee63221df82b20d97ee779b77c15c9"
+    },
+    {
+      "id": "topics-animals:animal-european-lobster",
+      "sha256": "abb00c396bcafcc37e31c8136c037989e6492296f8cde37987407a0e9c26b0ae"
+    },
+    {
+      "id": "topics-animals:animal-common-cuttlefish",
+      "sha256": "0c02a33cdad621132b3779bd383f66c36e097364b90a6cdbe1443247889f7f7c"
+    },
+    {
+      "id": "topics-animals:animal-short-snouted-seahorse",
+      "sha256": "c904fbcad00509bf6f533f6622bb8999aece5c5002d7c4dac2b54ce658e2d3d7"
+    },
+    {
+      "id": "topics-animals:animal-african-savanna-elephant",
+      "sha256": "450fdc49e903aa2e0dce3ec5954c756ad69a131645c53169795e82a00dd5d754"
+    },
+    {
+      "id": "topics-animals:animal-lion",
+      "sha256": "73b0caf61f991f386517019f628e74b8844b148900a503c6fd27bce28ca8c1eb"
+    },
+    {
+      "id": "topics-animals:animal-cheetah",
+      "sha256": "4235a16da381831a529cb02f67fc8c08d97d2ad860c97a9d84e7cb8bd7b884e4"
+    },
+    {
+      "id": "topics-animals:animal-bengal-tiger",
+      "sha256": "d9995e796d1bb90f1daeca0b603b66ca5667b56557a57867e2a7c329ba5be2b9"
+    },
+    {
+      "id": "topics-animals:animal-giraffe",
+      "sha256": "1125d6a24c240d00080821854a354e0aff5d3ceefd2062cf0b53994a60feb2e4"
+    },
+    {
+      "id": "topics-animals:animal-giant-panda",
+      "sha256": "f48af5de7936b93d7d311e6558eb8e7d769530670d36576ef35f2523b0e8b1f7"
+    },
+    {
+      "id": "topics-animals:animal-western-lowland-gorilla",
+      "sha256": "4d8588879331021133ed1fd02894cac5342ac47347f536492bb6ce39c87b1862"
+    },
+    {
+      "id": "topics-animals:animal-bornean-orangutan",
+      "sha256": "ded7ff3e80da935526003d00c5a3b5251821fcfb472bd09a8019253077b0f487"
+    },
+    {
+      "id": "topics-animals:animal-polar-bear",
+      "sha256": "0486f3ab6a838d2dc518105265f1f571f471198124452b67e0537defc1b93835"
+    },
+    {
+      "id": "topics-animals:animal-emperor-penguin",
+      "sha256": "a6f4c35cb93908c33ddca91e769b759761b8f82b4b8c2bc6ae36458d54af371a"
+    },
+    {
+      "id": "topics-animals:animal-blue-whale",
+      "sha256": "74981844ec7e99029851df34f85761584144585eb7dbfd50b68b3833c0b3e554"
+    },
+    {
+      "id": "topics-animals:animal-common-bottlenose-dolphin",
+      "sha256": "035069456c1492afd28177f5e4f99cc7f88a96f019fd63d2307bbabf9b0fdfc7"
+    },
+    {
+      "id": "topics-animals:animal-orca",
+      "sha256": "174927976fa633873accb7e1451e50adfd25e3319251a122f08c6531c60ffaae"
+    },
+    {
+      "id": "topics-animals:animal-common-octopus",
+      "sha256": "7f2297f266e8e73c1ae36a0c14182206d2e34e166d00773b76ab638f30493ef6"
+    },
+    {
+      "id": "topics-animals:animal-green-sea-turtle",
+      "sha256": "32d1b1ee93f59d6615e5ee7597abf96ff159f5a94df20ce70776ca87232507d7"
+    },
+    {
+      "id": "topics-animals:animal-red-kangaroo",
+      "sha256": "dba0ab003dc796f01040f84cdf577f4a04992f91da98a1085d1423569f12f019"
+    },
+    {
+      "id": "topics-animals:animal-koala",
+      "sha256": "43b796eee76aae4bcb2ff4c9538088c0d323dc75e96af6b5a371bad1db7dc708"
+    },
+    {
+      "id": "topics-animals:animal-jaguar",
+      "sha256": "777eb728535217fbc08dfebd37839f75476f3fb6559e1a6e4f6835c2d065e847"
+    },
+    {
+      "id": "topics-animals:animal-honey-bee",
+      "sha256": "6ee1635c60a2c7923f2d4413d075728231232498e4320b5577b48de8c124c0da"
+    },
+    {
+      "id": "topics-animals:animal-axolotl",
+      "sha256": "6973305ebe4c37e79eadd96976a8b6c61822a4ed1aad17589095d70a1a29cf41"
+    },
+    {
+      "id": "topics-animals:animal-whale-shark",
+      "sha256": "ae8e8c6e7d7af171341eb5f0c1f814e4cf3fbebe6a53bf4fede576460a07ed92"
+    },
+    {
+      "id": "topics-animals:animal-garden-cross-spider",
+      "sha256": "28e2548a31e199a4febfc291f76c0ebc99366ee539f36252fb5d82bcfead9d6f"
+    },
+    {
+      "id": "topics-animals:animal-dromedary",
+      "sha256": "2afed522a8586fbc712fad5733d617f55f2d1a78eb6a7847d7b3784637e45514"
+    },
+    {
+      "id": "topics-animals:animal-white-tailed-eagle",
+      "sha256": "4949e84162a89c389b4549c24c035b11572d4241a8f7c479050000a7dc758f6a"
+    },
+    {
+      "id": "topics-history:history-khipu",
+      "sha256": "3b6bff3ec9a574bdc57cf5c28096c0e1366d9d1b7a3fcb2068fd11f75ee403de"
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "sha256": "766928b5cab8773fd0d510c6763e81a35ebe3db80ed6ded7899527e6b396dfae"
+    },
+    {
+      "id": "topics-history:history-writing",
+      "sha256": "021c80b3f84e875096164b6466bdca3c70a0aad8d562db69aa03d40f48c3b0d8"
+    },
+    {
+      "id": "topics-inventions:invention-camera",
+      "sha256": "91c29277413b778975a1451895f2d7e2cdad51cf0096948028130b20e68abacb"
+    },
+    {
+      "id": "topics-inventions:invention-telescope",
+      "sha256": "4c282397c7ab02f2e09acbd6d03caedb083430de1c99c2014b57c81efacf1f1e"
+    },
+    {
+      "id": "topics-inventions:invention-microscope",
+      "sha256": "0c811fb73db48a0a1178d4b28c8ab494f3a9c83aa9d1dc9769442c7bf1ae1ec7"
+    },
+    {
+      "id": "topics-people:person-mary_anning",
+      "sha256": "52036b9043120f3a6981dce92925f9a094d6544a8f3dc8b09a478ac88c9285ef"
+    },
+    {
+      "id": "topics-people:person-ibn_al_haytham",
+      "sha256": "3cbc5d2d7edf7ea91731333c70a9afea032c1c0e60d2ab21b85fbec91a496821"
+    },
+    {
+      "id": "topics-inventions:invention-battery",
+      "sha256": "d8f25c93be26a546ca57752d428f2e009889ec5eb74e932b4eea02a5dd80c5c9"
+    },
+    {
+      "id": "topics-inventions:invention-generator",
+      "sha256": "6644327e7c0fc329a6804c694209517518c1c96b6848e22d09bba0bfe94f3d17"
+    },
+    {
+      "id": "topics-inventions:invention-transistor",
+      "sha256": "3fad9414ec0e7c8edecac0798b5078fa2232070e0602e6544f609898b472a134"
+    },
+    {
+      "id": "topics-inventions:invention-refrigerator",
+      "sha256": "2658e082667a6b06630e4d06d74a1f9d2e11751aa2b85049f9b86dbfbc50100f"
+    },
+    {
+      "id": "topics-inventions:invention-bicycle",
+      "sha256": "b65e2bdaa6b8f36a17e0099c0c0c6360d4c26d195739e2a1a33b17296286b6b3"
+    },
+    {
+      "id": "topics-inventions:invention-elevator",
+      "sha256": "e64635645a3e9efac5fc05acaf63b977a447ff262e97dcc0ce71bc75f035bf6c"
+    },
+    {
+      "id": "topics-inventions:invention-seismograph",
+      "sha256": "e09941150d8e2469c214a64e7be7d23fd172c59d8ac1e950b95c75c1b67048c9"
+    },
+    {
+      "id": "topics-inventions:invention-3d-printing",
+      "sha256": "937ad6b77d52975b5721d8bedac7b368fd613c4c8e9ddae976817308794d07fe"
+    },
+    {
+      "id": "topics-inventions:invention-sewing-machine",
+      "sha256": "bd191f31cb699f5447b48592660854e8cacab41c89d798c6a786b2aafb1519ee"
+    },
+    {
+      "id": "topics-buildings:building-pont-du-gard",
+      "sha256": "a8a143e15187211d0fe340033e39e858201ce575356581e39535352240ffcae5"
+    },
+    {
+      "id": "topics-buildings:building-great-zimbabwe",
+      "sha256": "4a6f56f61d76fd3fcd3f549e7e3acff56914f543398b207f42c5434f6287ade5"
+    },
+    {
+      "id": "topics-buildings:building-horyu-ji",
+      "sha256": "5d5516fcd10a3a7bc940b0270735b713f2766a1e2a192915002ff926e343ffbc"
+    },
+    {
+      "id": "topics-buildings:building-djenne-mosque",
+      "sha256": "756a562eb3f3a93895212c0d03552613f83627713dc8871f556fcdc713ad3260"
+    },
+    {
+      "id": "topics-buildings:building-lalibela",
+      "sha256": "64f5c6a60affc516dce12e454d9e8219e36ea10223cb676816a6f45a307b5f86"
+    },
+    {
+      "id": "topics-buildings:building-angkor-wat",
+      "sha256": "5a7e9ffa7b0c0febf368fe0a06934194f8fce9c674593f5439c1acb1738cf528"
+    },
+    {
+      "id": "topics-buildings:building-palenque",
+      "sha256": "356f77031077a2d6889652a547fd6c42506c012f6a411493d906b058b0208388"
+    },
+    {
+      "id": "topics-buildings:building-sydney-opera",
+      "sha256": "b504c2f82607ed833e806077601ca30f893ff0494d8c246cfad1ca466d629260"
+    },
+    {
+      "id": "topics-science:science-pressure",
+      "sha256": "01c44164b186087d0e48a1baeac0d6711f22d9154cd4f5bdf36cac45858f30a2"
+    },
+    {
+      "id": "topics-science:science-friction",
+      "sha256": "7af9ce7941146bed97300971d1cfa721622f0ea2bdd94541988b2f4867da7a62"
+    },
+    {
+      "id": "topics-science:science-buoyancy",
+      "sha256": "0ec1a055b3e95d03e9f21aa87d5d18178738414efbe9dec763978e6b84d9764f"
+    },
+    {
+      "id": "topics-science:science-surface-tension",
+      "sha256": "368e563fb31c878d8e347cf9d170ad0f0e2d536c84c2a1a7d8fa57b27f2a80f6"
+    },
+    {
+      "id": "topics-science:science-capillarity",
+      "sha256": "3296c3b6cc19052eab5bc31335cb3b0ef7315768c460d1e9e91c5aba57a35956"
+    },
+    {
+      "id": "topics-science:science-diffusion",
+      "sha256": "2cc7eb92f0ce5b0c26cb8bd1bb1a392e8ba58a9ac96057f3088e5e8355c07cf6"
+    },
+    {
+      "id": "topics-science:science-chromatography",
+      "sha256": "fd74e1cc79ad20914ecf0c7ae0552b591a5a9ee2858a097cd6dd4215fee1395a"
+    },
+    {
+      "id": "topics-science:science-heat-transfer",
+      "sha256": "86f4ec8de82ef50b8732d0e679363d6217be906d05a25df226ff6ee56d1f54b5"
+    },
+    {
+      "id": "topics-science:science-lever",
+      "sha256": "10eea8c1a855098b48114f847e1b4c8cf51478c6e1124b9e491b2f626eab9b27"
+    },
+    {
+      "id": "topics-science:science-elasticity",
+      "sha256": "1d6ad1895f9b1e4d86142cd8097960b70cc14f12c2e7a99be3e4cc295ba98836"
+    },
+    {
+      "id": "topics-science:science-pendulum",
+      "sha256": "15f1cbbb96b34dfb9d7e34654a28513de071aee7be2ed98f2ada293918071d96"
+    },
+    {
+      "id": "topics-science:science-resonance",
+      "sha256": "4d003cb0386bf03d6f01ea65f15fa8abd4d8e8545b615a7ad9ee2615f2502f05"
+    },
+    {
+      "id": "topics-science:science-probability",
+      "sha256": "04972e9f2effdfb542f03ee591869b724f0f576ca9d5315fa6a1c8cf3355b6b9"
+    },
+    {
+      "id": "topics-science:science-symmetry",
+      "sha256": "2e187b86736c09170cd06020a5f26b49c4d40b2e2c5bc7935b56e38187d062e1"
+    },
+    {
+      "id": "topics-science:science-fractals",
+      "sha256": "43e1c5401f371bd47db3492004660964cec6497f46f4c11e56097f644285cec0"
+    },
+    {
+      "id": "topics-science:science-angle",
+      "sha256": "71adb34816bb6198d76eda3a80e5e4138c79537980e6a3e26696cd978660caef"
+    },
+    {
+      "id": "topics-science:science-encryption",
+      "sha256": "ce823ca965bb1ff6ff11540fa33fbc6bd7af41ead26d4c3fa7c4ef8f22ac574d"
+    },
+    {
+      "id": "topics-science:science-checksum",
+      "sha256": "93f82115f98d2a8461f3d34b954dafe8501e212366cee4e5f23bb8567178df2a"
+    },
+    {
+      "id": "topics-science:science-cell",
+      "sha256": "f4d9c76f723ed7dbbcfb65032288033da7952bced3016f9ce8611ce4afd69430"
+    },
+    {
+      "id": "topics-science:science-fusion",
+      "sha256": "7d278c832804160cc21ddf081d4744f0037e83705fd17bb5e8ede91357983c27"
+    },
+    {
+      "id": "topics-science:science-galaxy",
+      "sha256": "c8b16250d66fa193cdec5fb3aae87a33b56bd6d8b8cc08842f66ba4747cda54d"
+    },
+    {
+      "id": "topics-science:science-comet",
+      "sha256": "a9514ad4f4fbbfe8d2ba82785f8d38690557eb9551e6ca0cb5b633e583804688"
+    },
+    {
+      "id": "topics-science:science-exoplanet",
+      "sha256": "c0784e8bea3ec9e41b099512ba07fae3c1d4dc3d3fececc1f7d6f3ff156859e3"
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "sha256": "f0fa3f7f49f473acbf3ddf9c996a49d9b68de7e7a2a8653467a8ebe26bb07f45"
+    },
+    {
+      "id": "topics-people:person-maria_sibylla_merian",
+      "sha256": "4656197844b7f01d60b15babbd97bcd7c37f7158058b1ab12dc2eaf1a692c0d6"
+    },
+    {
+      "id": "topics-people:person-inge_lehmann",
+      "sha256": "d76f731941645c39f0e11b4d6dfd803cc11971fa637b1bebede6cb893c5a8751"
+    },
+    {
+      "id": "words:Meter",
+      "sha256": "6c0faf5ae218ca6202e32614cb285a3b4c67d1edec7f17034f7e1e6cbaeee2a7"
+    },
+    {
+      "id": "words:Kilogramm",
+      "sha256": "2d4c75cd3e9bac43cfc48ad9aa367b1798ac457f8f60bd75c17f4a6ecddd86ae"
+    },
+    {
+      "id": "words:Sekunde",
+      "sha256": "a29d0926080b7190f189ea37b19e03407dcb1494327c7958bec3ab5295b0167c"
+    },
+    {
+      "id": "words:Ampere",
+      "sha256": "98cfc1be63005befe55c6606f01245ed0d249b8fd3fcebfce0d9b775e7007eb7"
+    },
+    {
+      "id": "words:Kelvin",
+      "sha256": "133d8435ba327dbc166c41538ad1ae51f7a57bb29d34238363611dc14a32cb5f"
+    },
+    {
+      "id": "words:Mol",
+      "sha256": "c4e502608162a9797cd3a76e4064233388b1c230515e9de0e9a5a0de5aebfcb1"
+    },
+    {
+      "id": "words:Candela",
+      "sha256": "a722c8dd6f5763070d9ae62384b01e2537c19e8478d995ad22927ff056c59fdd"
+    },
+    {
+      "id": "words:Wärme",
+      "sha256": "db6a339dfce9672e60a9d774beef7358eee67455d5db00d5aee53f182d1064c7"
+    },
+    {
+      "id": "words:Wärmeleitung",
+      "sha256": "be91f69b5ef1f81da0d3ad1a2766eb9b090b7b0b0bbca6ee739704f35be65816"
+    },
+    {
+      "id": "words:Konvektion",
+      "sha256": "fcdecdafc6c9958553f720e73dcc4166648011c21b26d0ce322ef01fa12c11fa"
+    },
+    {
+      "id": "words:Wärmestrahlung",
+      "sha256": "761b7ae268a5bfcde88ab0717bf9eda22dd1f1f435ab3cf96f51baf363751e61"
+    },
+    {
+      "id": "why:30",
+      "sha256": "97ab18ea8cbb35f06a45e944c712750fa3bfb2beec6ea97cdd260d61f1966802"
+    },
+    {
+      "id": "why:31",
+      "sha256": "84f5c70716f35367da369a4f5a5c89749bbcc19031c08e521c22e515a9d40c78"
+    },
+    {
+      "id": "words:Reflexion",
+      "sha256": "e81178cd1e73021d906d3f239b0df961ae51699b7af5d5733afe4f6bba7958f9"
+    },
+    {
+      "id": "words:Absorption",
+      "sha256": "678cc178f56799a5a98807ced36a9852d57c0fa71c10ebabf972bf1969a7839e"
+    },
+    {
+      "id": "words:Brechung",
+      "sha256": "bac36f98fe6540b51cef9d9085eaa141ae9d68016fdf09e4c2fcdc3adb537074"
+    },
+    {
+      "id": "words:Streuung",
+      "sha256": "a2c7e4b122e8431319f466dc8dcac1894ca7c5e2fbbf29d2758105d6716d526e"
+    },
+    {
+      "id": "words:Photon",
+      "sha256": "e3e92d7cdefc40b163e5811442be688e5230a14d9927d9b468982ca38957bfa6"
+    },
+    {
+      "id": "words:Strahlung",
+      "sha256": "8c40ab4d618b032c76c6317ceff5d65b4ec30adce7b1b87e477dea2a3810808a"
+    },
+    {
+      "id": "words:Spektrum",
+      "sha256": "bb4ff48da44fe4bc5ff1b322b2340b31e21990b3d2fdef32fac4b3f90348fa08"
+    },
+    {
+      "id": "words:Infrarot",
+      "sha256": "eec46c337b27a0e8f02e1bf7e613ee22821ed27b862f16ffa11c030e9ad7d2c8"
+    },
+    {
+      "id": "words:Frequenz",
+      "sha256": "2208b110f24118a6655a3c118b6756d7973ba820a80cff5ac8913f05f4eb22c3"
+    },
+    {
+      "id": "words:Wellenlänge",
+      "sha256": "0ef73c92e08ad6302b124faaec50915c57678e8d86afb9b6e6d9258371ced761"
+    },
+    {
+      "id": "words:Energie",
+      "sha256": "7b83eb2a8c3265e2c8aaac8445e86efd30f1ad916d2d7ff28e6f6fb51584d693"
+    },
+    {
+      "id": "words:Polarisation",
+      "sha256": "519ceddbe5a2bd2ffb709503c8504db85f845348a79eac2550cb3be49584eb07"
+    },
+    {
+      "id": "why:32",
+      "sha256": "472c46ddcc98a697c894886c8916c69c41dc5770646bd019532e6d2832cc38dd"
+    },
+    {
+      "id": "why:33",
+      "sha256": "f33c02bbc7f4f7695c4e4a5380768540fbea5a2837236d2cbdd3caa7df0b0bdf"
+    },
+    {
+      "id": "words:Kohäsion",
+      "sha256": "14465df3c471d676dfa265c6da91698b6cd80d26d5d8703ca35ebd3fa60740d3"
+    },
+    {
+      "id": "words:Adhäsion",
+      "sha256": "7727c37c46f50bfe5ccec8c3df401968a324e2b17f7afbaa19ba62aba2af6488"
+    },
+    {
+      "id": "words:Oberflächenspannung",
+      "sha256": "5770fb33d2f448f3eed269424f0f62e3667c98b9c1cb734c89352676279ae486"
+    },
+    {
+      "id": "words:Kapillarwirkung",
+      "sha256": "4254da5d61b2deb6c06de5c73eed1251bcf52877271f3d6acf77716393b062d4"
+    },
+    {
+      "id": "words:Dichte",
+      "sha256": "8180c53bc87542c1a4b941ddbe245cbdab73600599db014f446ed30101eb574d"
+    },
+    {
+      "id": "why:34",
+      "sha256": "a309c284b6e7933a294c961de210b31b1c17f0432bdd43c90241ed22b1dc0b84"
+    },
+    {
+      "id": "why:35",
+      "sha256": "8b87c17e9024c599f85ea977d3c3473693d038bd32be3687e4be5db81874f3fe"
+    },
+    {
+      "id": "why:36",
+      "sha256": "85a02f810a93c88eecf4580ca63c9db5280c6bcbca41e07210aa06513d6c8e81"
+    },
+    {
+      "id": "words:Atom",
+      "sha256": "8b67899229e8e6b124e350c120fdde49720830256597d5bcbda30e7cb21ab163"
+    },
+    {
+      "id": "words:Isotop",
+      "sha256": "7b2fd44bf1bfce2c68f8cff70c350a7b771a920a761a20a963bba6413f1fee56"
+    },
+    {
+      "id": "words:Proton",
+      "sha256": "27faaab29511329a40f714f27f870688797abf50e452936bb83521155d183cd5"
+    },
+    {
+      "id": "words:Elektron",
+      "sha256": "2fc3f9405596fafe194fb48f881194a9470e8d37e71672389442ab660ea2617c"
+    },
+    {
+      "id": "words:Neutron",
+      "sha256": "af526916e310ae8fef10025b2c74958f5ac5bc8c8e48e0eb4a043e01e1981dda"
+    },
+    {
+      "id": "words:Kraft",
+      "sha256": "90504d89ef18b2ddb397871b6150d9c19e65c84bbc035a460176b2d959ad86f6"
+    },
+    {
+      "id": "words:Trägheit",
+      "sha256": "3051ed9c7c1c2823ac35ad3c44ea16ae145a1eb5b3d4e8afe9ae9443cdb19076"
+    },
+    {
+      "id": "words:Geschwindigkeit",
+      "sha256": "7432c4b041ef4adb9b923203963da7e32f48fb87b48c68f49fd1af03ea2b71f3"
+    },
+    {
+      "id": "words:Beschleunigung",
+      "sha256": "15566db15cbad87545a90d7babedfaab1d4f7e2572bc0a2bfbfbf05b650a9afc"
+    },
+    {
+      "id": "why:37",
+      "sha256": "dbe539d8da928ae78610ed7be603b75e1f08485311e37c17bc1657a35f157622"
+    },
+    {
+      "id": "why:38",
+      "sha256": "561e52fe1163223283c8f668d5aa527466d3d38b12cbe5c8615c879231ae6d37"
+    },
+    {
+      "id": "why:39",
+      "sha256": "948a24509b67d229e0a6d1c04c4517ab7683fe2a8a1fcc6453b0e3f3f339d4cc"
+    },
+    {
+      "id": "words:Zelle",
+      "sha256": "e88e4d679fe386e00c5530c4e0a2a0d6b149dbf195e9129d30fe3b829c1ad6bc"
+    },
+    {
+      "id": "words:Zellmembran",
+      "sha256": "892872a2de397cbd787a2d85049ba1e4f763d0c833839694256037495e3ae75e"
+    },
+    {
+      "id": "words:Zellkern",
+      "sha256": "22988e34781a5ea5aee40e0f559e46395d0e1b39bb6406e08934bb71d264446f"
+    },
+    {
+      "id": "words:Mitochondrium",
+      "sha256": "a985e839c78d975807c21aaae41b3969ee0740bf7bebc80bdb779edcebc9ba7a"
+    },
+    {
+      "id": "words:Eukaryot",
+      "sha256": "bb0b7939a6b0bd7c68dfe2b383516620b05dcebc7aa2e4aef8ee42a241f3dcee"
+    },
+    {
+      "id": "words:Prokaryot",
+      "sha256": "b0c06d6c2103ad36cb2c66d922c9f77f401b7aa08c999f09b7587188f6d4f77c"
+    },
+    {
+      "id": "words:DNA",
+      "sha256": "d31cc370340b681229157af3281a41180e4c3cae527a257ad5339aa086ae0902"
+    },
+    {
+      "id": "words:Genom",
+      "sha256": "68ea863e3c16b6d9b60263615007b926f898509f216863559771476db917fb86"
+    },
+    {
+      "id": "why:40",
+      "sha256": "18cbe220a19d871a20fcb003c3da6852333c93067d95a1e2214a75fbee797879"
+    },
+    {
+      "id": "why:41",
+      "sha256": "5440f2775db5272982721ea2eeb555593f51654d3d852daae20573d540b97177"
+    }
+  ],
+  "newTenContentOnlyBeforeActualUI": [
+    {
+      "id": "words:Gen",
+      "sha256": "7c681a303a2a653d11098a33336e978617bc4da6c5a971f168f4702a5cbe3fe8"
+    },
+    {
+      "id": "words:Chromosom",
+      "sha256": "0667f15e5ae204a4d1485e2be1d517978e55f0fd9ba6fe46ecad9ceb8cbe4cfa"
+    },
+    {
+      "id": "words:Protein",
+      "sha256": "17ad736c27494e06b2fe0eca9f2fc2b4cdb17be6556734a8726ebb5e40039708"
+    },
+    {
+      "id": "words:Enzym",
+      "sha256": "8825222b8f60233961b46c5a54f4ffd84e8bfa3054028c28bd4b1a1538276e52"
+    },
+    {
+      "id": "words:Mutation",
+      "sha256": "6e9239da816856dcb3796e4a97f3c5bab412664b323943663d336e93459ca222"
+    },
+    {
+      "id": "words:Nukleotid",
+      "sha256": "9005a786a3cd9fc9cd3443de61a37148bafb343bc3eabfa832aab224c84dda05"
+    },
+    {
+      "id": "words:RNA",
+      "sha256": "20f49f99ad691256a7e2cefd084ca0706fa829bfb30171e09fd940beabd06b6e"
+    },
+    {
+      "id": "words:Bakterium",
+      "sha256": "da56e883ef8720e961d06feb1d7303eb1b0b405964b9013916294341189258f2"
+    },
+    {
+      "id": "why:42",
+      "sha256": "41ec156d0ffcbd696a0a9237cde7898be951e67b0883ecfd1bb20faf2292a266"
+    },
+    {
+      "id": "why:43",
+      "sha256": "f26b791e97f006432ef30a09fd01f7b87bb73ebb976a1982146ecffc52390e12"
+    }
+  ],
+  "scope": "Exact delivered M83 runtime reconstructed from verified original bytes and every individual current input. Historical156 predecessor contract only; no new166 current UI qualification."
+}

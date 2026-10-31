@@ -1,0 +1,25 @@
+.book-gene-model{margin:20px 0;min-width:0;color:var(--wk-ink,#173d4e);line-height:1.65}
+.book-gene-model h4{font-size:20px;line-height:1.4;margin:8px 0}
+.book-gene-model svg{display:block;width:100%;max-width:640px;height:auto;margin:16px auto}
+.book-gene-model svg text{font:22px system-ui;fill:var(--wk-ink,#173d4e)}
+.book-gene-choices{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.book-gene-choices button{font:inherit;color:inherit;background:var(--wk-surface,#fff);line-height:1.5;min-width:44px;min-height:48px;padding:10px 14px;border:1px solid #8a9e9e;border-radius:8px;white-space:normal;text-align:left}
+.book-gene-choices button[aria-pressed=true]{background:#e3efec;border-color:#245d70;box-shadow:inset 0 0 0 1px #245d70}
+.book-gene-choices button:focus-visible{outline:3px solid #a84d19;outline-offset:3px}
+.book-gene-model .gene-form{fill:#d9eaf1;stroke:#245d70;stroke-width:2}
+.book-gene-model .gene-accent{fill:#f3dfcd;stroke:#9b4d1d;stroke-width:2}
+.book-gene-model .gene-line{fill:none;stroke:#245d70;stroke-width:3}
+.book-gene-model .gene-reference{fill:none;stroke:#566c78;stroke-width:2;stroke-dasharray:6 4}
+.book-gene-model .gene-path{fill:none;stroke:#a84d19;stroke-width:3}
+.book-gene-facts{display:grid;gap:12px;margin:16px 0}
+.book-gene-facts>div{display:grid;gap:3px}.book-gene-facts dt{font-weight:700}.book-gene-facts dd{margin:0}
+.book-gene-strip{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0}.book-gene-strip li{padding:12px 16px;border:1px solid #8a9e9e;border-radius:8px;font-weight:700}
+.book-gene-strip li[data-different=true]{border:3px double #9b4d1d;background:#fff0df}
+.book-gene-route{display:grid;grid-template-columns:1fr;gap:12px;padding:0;list-style:none}.book-gene-route>li{padding:14px;border-bottom:1px solid var(--wk-line,#ccd8d6)}
+.book-gene-model ol:not(.book-gene-route){padding-inline-start:24px}
+.large-reading .book-gene-model h4{font-size:24px}.large-reading .book-gene-model svg text{font-size:26px}
+.knowledge-book [data-book-gene-figure] :is(figcaption,li,.model-caption){font-size:16px}.large-reading .knowledge-book [data-book-gene-figure] :is(figcaption,li,.model-caption){font-size:20px!important}
+@media(min-width:768px){.book-gene-route{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(forced-colors:active){.book-gene-model svg *{stroke:CanvasText}.book-gene-model svg text{stroke:none;fill:CanvasText}.book-gene-model .gene-form,.book-gene-model .gene-accent{fill:Canvas}.book-gene-choices button[aria-pressed=true]{outline:2px solid Highlight;box-shadow:none}.book-gene-choices button:focus-visible{outline-color:Highlight}.book-gene-strip li[data-different=true]{background:Canvas;border-color:Highlight}}
+
+.knowledge-book [data-book-gene-figure] h4{font-size:20px;line-height:1.4}.large-reading .knowledge-book [data-book-gene-figure] h4{font-size:24px}

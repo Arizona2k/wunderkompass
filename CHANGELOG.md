@@ -1,8 +1,8 @@
 ## Lesestelle und Fokus bei Zoom · PR81 tatsächlich abgeschlossen
 
-## Zellbegriffe und eigene Lernmodelle · lokaler Entwicklungsstand
+## Zellbegriffe und eigene Lernmodelle · PR83 tatsächlich abgeschlossen
 
-Acht Zell-/DNA-Begriffe und zwei Warumfragen ergänzen das bestehende Wissensbuch mit freiwilliger Tiefe, begründeten Aufgaben, fünf eigenen bedienbaren Modellarten und erzeugten beidseitigen Themenverbindungen. Die dargestellten Modelle unterscheiden unter anderem bekannte Zellbeispiele, DNA-Reihenfolge und Bausteinanzahl sowie Kern-DNA und mitochondriale DNA, ohne aus den vereinfachten Zeichnungen reale Größen oder persönliche Eigenschaften abzuleiten. Vollständige lokale Browserabnahme und aktuelle Bildsichtung bestanden; individuelle Inhaltsakten sind daran gebunden, alle146ganzen Vorgänger und deren Historien erhalten. Abschließende374Unit-/130Releaseprüfungen, Typ/Lint/Build und verify51/156 sind bestanden. Vollständige native GitHub-Abnahme, reguläre Bereitstellung und tatsächlicher Liefernachtest stehen aus. Bereitgestellt bleiben126Wörter/40Warumfragen; Arbeitsbestand134/42, übriges Paket3.5 und Gesamtauftrag offen.
+31.10.2026 · PR83 ist nach erfolgreicher Quality203 regulär nach `test-live` übernommen (10:17:08MEZ); passende Bereitstellung10:17:29MEZ und anschließender tatsächlicher Liefernachtest sind bestätigt. Acht Zell-/DNA-Begriffe und zwei Warumfragen ergänzen das bestehende Wissensbuch mit freiwilliger Tiefe, begründeten Aufgaben, fünf eigenen bedienbaren Modellarten und beidseitigen Themenverbindungen. Die Modelle unterscheiden bekannte Zellbeispiele, DNA-Reihenfolge und Bausteinanzahl sowie Kern-DNA und mitochondriale DNA mit sichtbaren Modellgrenzen. Bereitgestellt134Wörter/42Warumfragen. Vorhandene Fortschritte, Notizen und Favoriten bleiben geschützt. Die folgenden Genetikinhalte sind weiterhin in Arbeit; Paket3.5 und Gesamtauftrag bleiben offen. Ausführliche Originalbelege bleiben privat.
 
 
 

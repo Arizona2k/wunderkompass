@@ -12,7 +12,7 @@ const read=name=>JSON.parse(fs.readFileSync(name,'utf8')),pack=read('app/book-ce
 test('eight independently named cell concepts and two Why studies use one complete checked canonical export',()=>{
  assert.equal(CELL_WORDS.length,8);assert.equal(CELL_QUESTIONS.length,2);assert.deepEqual(bookCellContent(true),pack);assert.deepEqual(validateCellPack(structuredClone(pack)),pack);
  const bytes=fs.readFileSync('app/book-cell-content.json');assert.deepEqual(read('app/book-cell-integrity.json'),{bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});
- assert.equal(words.length,134);assert.equal(why.length,42);const teaching=read('exports/content/book-cell.json');assert.equal(teaching.length,10);
+ assert.equal(words.length,142);assert.equal(why.length,44);const teaching=read('exports/content/book-cell.json');assert.equal(teaching.length,10);
  for(const term of CELL_WORDS){const row=words.find(w=>w.term===term);assert(row);assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert.deepEqual(teaching.find(e=>e.kind==='word'&&e.term===term),{kind:'word',term,definition:row.more,...pack.learning[term],sourceReadOn:pack.sourceReadOn});}
  for(const question of CELL_QUESTIONS){const row=why.find(w=>w.question===question);assert(row);assert.deepEqual([row.question,row.answer],pack.why[question]);assert.deepEqual(teaching.find(e=>e.kind==='why'&&e.whyQuestion===question),{kind:'why',whyQuestion:question,definition:row.answer,...pack.whyLearning[question],sourceReadOn:pack.sourceReadOn});}
 });
