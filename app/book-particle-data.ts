@@ -13,7 +13,7 @@ export const hasBookParticle=(term:string)=>PARTICLE_WORDS.includes(term)||PARTI
 function load(){
  if(loaded)return Promise.resolve(loaded);
  if(!pending)pending=(async()=>{
-  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(15600)});
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
   const pack=validateParticlePack(await verifiedContentJSON(bytes,integrity))as Pack;
   loaded=pack;return pack;
  })().catch(error=>{pending=null;throw error;});

@@ -27,7 +27,16 @@ export function restoreRouteView(path:string,focus=true){
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
- if(opener){opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)opener.scrollIntoView({block:'center',behavior:'instant'});return;}
+ if(opener){
+  opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();
+  // A tall card cannot fit inside a short/zoomed viewport. Keep its saved
+  // reading position when already visible; centering would move it again.
+  // Fully visible reading cards also keep their position at a viewport edge.
+  // Toolbar controls retain their existing eight-pixel focus reserve.
+  const margin=opener.dataset.routeFocus?.startsWith('world-topic-')?0:8;
+  const reveal=r.height>innerHeight?r.bottom<=0||r.top>=innerHeight:r.top<margin||r.bottom>innerHeight-margin;
+  if(reveal)opener.scrollIntoView({block:'center',behavior:'instant'});return;
+ }
  if(path.startsWith('labs/'))document.getElementById('lab-heading')?.focus({preventScroll:true});
  else if(path==='journeys'||path.startsWith('journeys/')){const heading=document.getElementById('journey-title')??document.getElementById('journey-hub-title');if(heading){heading.focus({preventScroll:true});const r=heading.getBoundingClientRect();if(r.top<8||r.bottom>innerHeight-8)heading.scrollIntoView({block:'center',behavior:'instant'});}}
  else if(path==='updates')document.getElementById('updates-title')?.focus({preventScroll:true});
@@ -47,7 +56,15 @@ export function scheduleRouteRestore(path:string,focus=true){
  const detach=()=>{for(const type of events)window.removeEventListener(type,interact,true);};
  const cancel=()=>{if(!pending)return;pending=false;cancelAnimationFrame(frame);detach();};
  const interact=(event:Event)=>{if(event.isTrusted)cancel();};
- const frame=requestAnimationFrame(()=>{if(!pending)return;pending=false;detach();if(read()===path)restoreRouteView(path,focus);});
+ const finish=()=>{if(!pending)return;pending=false;detach();if(read()===path)restoreRouteView(path,focus);};
+ // A short viewport's oversized opener can still move during the return
+ // layout/scroll anchoring frame. Only that case needs the following frame;
+ // fitting controls retain the original schedule. Interaction cancels either.
+ let frame=requestAnimationFrame(()=>{
+  if(!pending)return;
+  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===history.state?.wunderFocus&&el.getClientRects().length);
+  if(opener&&opener.getBoundingClientRect().height>innerHeight)frame=requestAnimationFrame(finish);else finish();
+ });
  for(const type of events)window.addEventListener(type,interact,true);
  return cancel;
 }

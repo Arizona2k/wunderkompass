@@ -1,20 +1,20 @@
 {
   "version": 1,
   "build": {
-    "entryJsBytes": 1300000,
-    "entryJsGzipBytes": 374400,
-    "entryCssBytes": 455000,
-    "entryCssGzipBytes": 78000,
-    "largestJsBytes": 2275000,
-    "worldGeometryBytes": 2340000
+    "entryJsBytes": 1000000,
+    "entryJsGzipBytes": 288000,
+    "entryCssBytes": 350000,
+    "entryCssGzipBytes": 60000,
+    "largestJsBytes": 1750000,
+    "worldGeometryBytes": 1800000
   },
   "browser": {
-    "homeJsBytes": 1365000,
-    "areaJsBytes": 1950000,
-    "homeCls": 0.13,
-    "areaCls": 0.13,
-    "readyMs": 7800,
-    "lcpMs": 7800
+    "homeJsBytes": 1050000,
+    "areaJsBytes": 1500000,
+    "homeCls": 0.1,
+    "areaCls": 0.1,
+    "readyMs": 6000,
+    "lcpMs": 6000
   },
   "observeOnly": [
     "totalJsBytes",

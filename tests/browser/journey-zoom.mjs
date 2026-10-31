@@ -3,6 +3,7 @@ import {offlineResilience} from './offline-resilience.mjs';
 import {historyEngineView} from './discovery-central.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {planetDiagramViews} from './planet-diagrams.mjs';
+import {nativeWorldSelectionReturns} from './native-world-selection-return.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
 /** Native Chromium zoom preference in a fresh QA profile, never CSS zoom or a
  * change to a user's browser. Partition key "x" is Chromium's default partition:
@@ -37,4 +38,5 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
   report.offlineNative=await offlineResilience(null,{port:4779,shots,kind:'chromium',context,native:true});
   report.nativeZoom={percent:200,...dimensions,largeTextAlsoChecked:true};report.speechAvailability=await p.evaluate(()=>({api:'speechSynthesis' in window,germanVoices:window.speechSynthesis?.getVoices().filter(v=>v.lang.startsWith('de')).length??0,audibleTestPerformed:false}));assert.deepEqual(errors,[]);report.checks.push('Actual native Chromium 200% zoom, measured 640 CSS px / 1280 screen px / DPR 2; four journeys, large text, focus, reflow and axe');
  }finally{await context.close();}
+ await nativeWorldSelectionReturns(chromium,options,base,report,shots);
 }

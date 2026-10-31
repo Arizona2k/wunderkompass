@@ -107,7 +107,7 @@ export async function auditUiView(browser,base,{shots=null,engine='chromium'}={}
  for(const {width,motion,large}of [{width:320,motion:'reduce',large:true},{width:1440,motion:'no-preference',large:false}]){
   const context=await browser.newContext({viewport:{width,height:950},reducedMotion:motion,hasTouch:width===320}),pass=createSave();pass.progress.settings.largeText=large;pass.progress.settings.reducedMotion=motion==='reduce';pass.progress.notes=[{id:'synthetic-audit-ui-note',text:'Synthetische erhaltene Bediennotiz.',at:'2026-10-28T00:00:00.000Z'}];
   await context.addInitScript(({key,pass})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(pass));const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){return String(kind).startsWith('webgl')?null:original.call(this,kind,...args);};},{key:SAVE_KEY,pass});
-  const page=await context.newPage();page.setDefaultTimeout(26000);monitorBrowserErrors(page,base,proof);const geographyRequests=[];page.on('request',r=>{if(/\/country-portrait-[^/]+\.js(?:\?|$)/.test(r.url()))geographyRequests.push(r.url());});
+  const page=await context.newPage();page.setDefaultTimeout(20000);monitorBrowserErrors(page,base,proof);const geographyRequests=[];page.on('request',r=>{if(/\/country-portrait-[^/]+\.js(?:\?|$)/.test(r.url()))geographyRequests.push(r.url());});
   try{
    await atHome(page,base);const initial=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.equal(geographyRequests.length,0,'secondary geography module is not requested by Home');
    const guide=await auditGuideReturnPage(page,base,{shots,engine,width});

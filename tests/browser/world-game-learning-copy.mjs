@@ -10,7 +10,7 @@ export async function worldGameLearningCopy(browser,base,ready,monitor,report,sh
  for(const width of [320,1440]){
   const context=await browser.newContext({viewport:{width,height:950},hasTouch:width===320,reducedMotion:'reduce',acceptDownloads:true});
   await context.addInitScript(()=>{window.__worldGameSpeech=[];window.SpeechSynthesisUtterance=class{constructor(text){this.text=text;}};Object.defineProperty(window,'speechSynthesis',{value:{cancel(){},getVoices(){return[{lang:'de-DE',localService:true,voiceURI:'test-local'}];},addEventListener(){},removeEventListener(){},speak(u){window.__worldGameSpeech.push({text:u.text,rate:u.rate,voice:u.voice.voiceURI});queueMicrotask(()=>u.onend?.());}}});});
-  const p=await context.newPage();monitor(p);p.setDefaultTimeout(26000);
+  const p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
    await p.goto(base);await ready(p);
    for(const [cohortNumber,{game,ids}]of cohorts.entries()){

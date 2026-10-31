@@ -35,7 +35,7 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
   pass.progress.gameSessions['journey:seasons']={'chapter:2:note':'Synthetischer alter Merkzettel.'};
   pass.progress.gameSessions[game]={items:old.map(q=>q.id),index:0,orders,roundAnswer:old[0].answers[2],roundDone:false};
   await context.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:pass});
-  const p=await context.newPage();monitor(p);p.setDefaultTimeout(26000);
+  const p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
   let imported;
   try{
    await p.goto(base);await ready(p);await open(p);await exactRound(p,old[0],orders,{wrong:true});
@@ -46,7 +46,7 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
    const file=shots+'/synthetic-retained-animal-'+round+'-'+width+'.json';await(await download).saveAs(file);
    const exported=JSON.parse(await fs.readFile(file,'utf8'));assert.equal(exported.schemaVersion,3);
    for(const [id,order]of Object.entries(orders))assert.deepEqual(exported.progress.gameSessions[game].orders[id],order);
-   imported=await browser.newContext(options);const restore=await imported.newPage();monitor(restore);restore.setDefaultTimeout(26000);
+   imported=await browser.newContext(options);const restore=await imported.newPage();monitor(restore);restore.setDefaultTimeout(20000);
    await restore.goto(base);await ready(restore);await restore.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
    await restore.locator('input[type=file]').setInputFiles(file);await restore.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await restore.locator('.passport-dialog').waitFor({state:'hidden'});
    await restore.getByRole('button',{name:'Fortsetzen',exact:true}).click();await exactRound(restore,old[0],orders,{wrong:true});

@@ -9,7 +9,7 @@ function isPrepared(worker: ServiceWorker): Promise<boolean> {
   return new Promise(resolve => {
     const channel = new MessageChannel();
     const finish = (ready: boolean) => { clearTimeout(timer); channel.port1.close(); channel.port2.close(); resolve(ready); };
-    const timer = setTimeout(() => finish(false), 3900);
+    const timer = setTimeout(() => finish(false), 3000);
     channel.port1.onmessage = event => finish(event.data?.ready === true);
     worker.postMessage({ type: 'LEARNING_STATUS' }, [channel.port2]);
   });
@@ -32,7 +32,7 @@ export default function LearningOffline({ onBeforeReload }: { onBeforeReload: ()
         if(!live||worker.state!=='installing')return;
         const channel=new MessageChannel();
         const close=()=>{clearTimeout(timer);channel.port1.close();channel.port2.close();channels.delete(channel);};
-        const timer=setTimeout(close,2600);channels.set(channel,close);
+        const timer=setTimeout(close,2000);channels.set(channel,close);
         channel.port1.onmessage=event=>{const p=event.data;close();if(live&&worker.state==='installing'&&Number.isInteger(p?.verified)&&Number.isInteger(p?.total)&&p.total>0&&p.verified>=0&&p.verified<=p.total&&['files','checking'].includes(p.phase))setProgress(p);};
         try{worker.postMessage({type:'LEARNING_PROGRESS'},[channel.port2]);}catch{close();}
       };

@@ -4,7 +4,7 @@ const sizes=[[360,780],[375,812],[390,844],[430,932],[844,390],[768,1024],[1024,
 const readers=['animal-dromedary','history-maya','person-albert_einstein','invention-car','building-colosseum','science-solar-system','science-foodweb'];
 const report=process.env.QA_RESUME?JSON.parse(await fs.readFile(shots+'/responsive-report.json','utf8')):{sizes,views:[],errors:[],consoleErrors:[],violations:[],overflow:[],images:[],smallTargets:[],checks:[]};
 await runBrowser(async browser=>{
- const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(32500);
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();p.setDefaultTimeout(25000);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});
  await p.goto(base+'/#globe');await p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await p.locator('#globe-observatory').scrollIntoViewIfNeeded();await p.locator('.globe-render canvas,.fallback-globe svg').waitFor();
  await p.addScriptTag({path:'/workspace/scratch/42fc63e2bab5/earth-qa/node_modules/axe-core/axe.min.js'});

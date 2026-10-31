@@ -53,3 +53,13 @@ test('technical resource maintenance retains every prior whole dossier, UI histo
  const changed=structuredClone(current);changed[0].explanation+=' Unreviewed.';assert.throws(()=>assertCurrentLearningAuditSharedUI(changed),/unreviewed complete prior technical dossier/);
  assert.notEqual(hash(changed.map(dossierBeforeLearningAudit)),amendments.publicBaseDossiersSemanticSHA256,'original full historical hash still exposes unrelated changes after exact UI inverse');
 });
+
+test('short native return UI binding retains every whole M80 dossier and all original inner error checks',()=>{
+ const current=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,prior=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-native-short-return-139.json','utf8'));
+ assert.equal(prior.priorDossiers.length,139);assertCurrentLearningAuditSharedUI(current);
+ const missing=structuredClone(current);delete missing[0][prior.historyField];assert.throws(()=>assertCurrentLearningAuditSharedUI(missing),/native short return UI history missing/);
+ const stale=structuredClone(current);stale[0].ui.build='stale';assert.throws(()=>assertCurrentLearningAuditSharedUI(stale),/stale current shared UI/);
+ const old=structuredClone(current);old[0][prior.historyField].report+=' Unreviewed.';assert.throws(()=>assertCurrentLearningAuditSharedUI(old),/unreviewed old native short return UI/);
+ const fact=structuredClone(current);fact[0].explanation+=' Unreviewed.';assert.throws(()=>assertCurrentLearningAuditSharedUI(fact),/unreviewed complete prior technical dossier/);
+ assert.notEqual(hash(fact.map(dossierBeforeLearningAudit)),amendments.publicBaseDossiersSemanticSHA256);
+});

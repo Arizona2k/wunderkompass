@@ -29,7 +29,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
  await worldGameLearningCopy(browser,base,ready,monitor,report,shots);
  await retainedAnimalRounds(browser,base,ready,monitor,report,shots);
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
-  const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
+  const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
    await p.goto(base);await ready(p);await select(p);await p.locator('.playground-grid').waitFor();assert.equal(await p.locator('[data-game-key]').count(),31);
    await geometry(p,'.playground h2,.playground h3,.playground button,.playground-goal');
@@ -54,7 +54,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    report.views.push({width,height,name:'Shared playground, filters, three game rooms, hints, large text'});console.log('Playground viewport',width);
   }finally{await c.close();}
  }
- const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(26000);
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
  try{
   await p.goto(base);await ready(p);await select(p);
   for(const game of ['habitats','detective'])for(const level of ['easy','medium','hard']){

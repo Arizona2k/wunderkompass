@@ -7,7 +7,7 @@ const classics=[['memory','Länder-Memory'],['order','Bring’s in die Reihenfol
 const stations=['Deutschland','Giraffe','Größte heiße Wüste','Anden','Tropischer Regenwald','Er ist der größte Ozean','Ein Kontinent'];
 const report=process.env.QA_RESUME?JSON.parse(await fs.readFile(shots+'/quality-legacy-games-report.json','utf8')):{browser:'',checks:[],errors:[],consoleErrors:[],completed:[],missing:[]};
 await runBrowser(async browser=>{
- report.browser=browser.version();const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(26000);
+ report.browser=browser.version();const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce',acceptDownloads:true}),p=await c.newPage();p.setDefaultTimeout(20000);
  p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});
  const wait=(fn,arg)=>p.waitForFunction(fn,arg,{polling:250});
  const state=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);

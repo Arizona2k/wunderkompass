@@ -80,7 +80,7 @@ function clientRelease(client){
   return new Promise(resolve=>{
     const channel=new MessageChannel();let done=false;
     const finish=value=>{if(done)return;done=true;clearTimeout(timer);channel.port1.close();channel.port2.close();resolve(typeof value==='string'&&/^[a-zA-Z0-9-]+$/.test(value)?value:null);};
-    const timer=setTimeout(()=>finish(null),1300);
+    const timer=setTimeout(()=>finish(null),1000);
     channel.port1.onmessage=event=>finish(event.data?.version);
     try{client.postMessage({type:'LEARNING_QUERY_VERSION'},[channel.port2]);}catch{finish(null);}
   });

@@ -17,7 +17,7 @@ export const hasBookMeasurement=(term:string)=>MEASUREMENT_TERMS.includes(term);
 function load(){
  if(loaded)return Promise.resolve(loaded);
  if(!pending)pending=(async()=>{
-  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(15600)});
+  const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
   const pack=validateMeasurementPack(await verifiedContentJSON(bytes,integrity)) as Pack;
   loaded=pack;return pack;
  })().catch(error=>{pending=null;throw error;});
