@@ -20,7 +20,7 @@ test('actual M76 retains all71 whole earlier events and uses its real deployment
  assert.equal(record.mergeCommit,'53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8');assert.equal(entry.occurredAt,'2026-10-28T22:57:59Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 23:57:59 MEZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['book/words/Reflexion','journeys/inside/1']);
  const pending=structuredClone(record);pending.deploymentStatuses=[];assert.equal(confirmedTestDeployment(pending),null);assert.equal(testUpdate(pending,entry).status,'prepared');
 });
-const CURRENT_PUBLIC_ENTRY_COUNT=75;
+const CURRENT_PUBLIC_ENTRY_COUNT=77;
 test('actual M75 retains all70 whole events and requires its real matching deployment',()=>{
  const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr75-hashes.json',import.meta.url),'utf8')),entry=entries.find(e=>e.id==='planet-local-directions-3-5'),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===75);
  assert.equal(fixture.entries.length,70);assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);for(const old of fixture.entries)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===old.id))).digest('hex'),old.sha256,old.id+' complete prior event retained');
@@ -157,7 +157,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[79,78,77,76,75,74,73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[81,80,79,78,77,76,75,74,73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
@@ -469,4 +469,26 @@ test('actual M72 SI availability keeps all67prior payloads and requires its own 
  assert.equal(record.mergeCommit,'e4424373a4ee6aeda5273a245756d3b0e91e590f');assert.equal(entry.evidence.pullRequest,72);assert.equal(entry.status,'test-available');assert.equal(entry.occurredAt,'2026-10-27T23:25:34Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 00:25:34 MEZ');assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['book/words/Meter','book']);assert.equal(PREPARED_UPDATES.some(e=>e.id===entry.id),false);
  for(const mutate of[r=>r.mergedAt=null,r=>r.deploymentStatuses=[],r=>r.deploymentStatuses[0].creator='untrusted',r=>r.deploymentStatuses[0].state='pending',r=>r.deploymentStatuses[0].targetUrl='https://vercel.com/unrelated/project/preview']){const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);const prepared=testUpdate(invalid,entry);assert.equal(prepared.status,'prepared');assert.equal(prepared.occurredAt,null);assert.equal(prepared.availableOn,null);assert.deepEqual(prepared.links,[]);}
  const unrelated={...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(sha=>sha!==record.mergeCommit)};assert.equal(confirmedTestDeployment(record,unrelated),null);
+});
+
+
+test('actual M80 and M81 retain all75 whole prior events and use their individual real Berlin deployment times',()=>{
+ const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr80-pr81-75-hashes.json',import.meta.url),'utf8'));
+ assert.equal(fixture.sourceCommit,'5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5');assert.equal(Object.keys(fixture.events).length,75);assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);
+ for(const[id,hash]of Object.entries(fixture.events))assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===id))).digest('hex'),hash,id+' whole prior event unchanged');
+ for(const[number,id,commit,instant,label]of[
+  [80,'learning-selection-return-3-5','57458e91e696ad0161b1f06f624f0f28b809bef6','2026-10-30T20:56:43Z','30. Oktober 2026 um 21:56:43 MEZ'],
+  [81,'reading-position-native-zoom-3-5','5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5','2026-10-31T01:06:49Z','31. Oktober 2026 um 02:06:49 MEZ']
+ ]){
+  const row=entries.find(e=>e.id===id),record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===number);assert(row);assert(record);assert.equal(record.mergeCommit,commit);assert.equal(row.evidence.revision,commit);assert.equal(row.occurredAt,instant);assert.equal(updateDate(row),label);assert.equal(row.status,'test-available');assert.equal(row.publishedOn,null);assert.equal(entries.filter(e=>e.id===id).length,1);assert(!PREPARED_UPDATES.some(e=>e.id===id));
+ }
+});
+test('new M80 and M81 chronicle events reject absent, untrusted, stale and newer pending deployment evidence',()=>{
+ for(const number of[80,81]){
+  const record=TEST_HISTORY_EVIDENCE.pullRequests.find(r=>r.number===number),entry=publicUpdates().find(e=>e.evidence.pullRequest===number);
+  for(const mutate of[r=>{r.mergedAt=null;},r=>{r.deploymentStatuses=[];},r=>{r.deploymentStatuses[0].creator='untrusted';},r=>{r.deploymentStatuses[0].state='pending';},r=>{r.statusesUrl=r.statusesUrl.replace(r.mergeCommit,'0'.repeat(40));},r=>{r.deploymentStatuses[0].createdAt='2000-01-01T00:00:00Z';},r=>{r.deploymentStatuses.unshift({...r.deploymentStatuses[0],id:r.deploymentStatuses[0].id+1,createdAt:new Date(Date.parse(r.deploymentStatuses[0].createdAt)+1000).toISOString(),state:'pending'});}]){
+   const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);assert.equal(testUpdate(invalid,entry).status,'prepared');assert.deepEqual(testUpdate(invalid,entry).links,[]);
+  }
+  assert.equal(confirmedTestDeployment(record,{...TEST_HISTORY_EVIDENCE.testLive,includedMergeCommits:TEST_HISTORY_EVIDENCE.testLive.includedMergeCommits.filter(s=>s!==record.mergeCommit)}),null,'another deployment cannot establish inclusion in actual test-live');
+ }
 });

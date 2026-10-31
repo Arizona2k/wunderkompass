@@ -1,3 +1,4 @@
+import {mechanicsPredecessors} from './current-mechanics-reference.mjs';
 import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -26,7 +27,7 @@ test('unrelated facts and a wrong current correct index remain visible to unchan
 });
 
 test('exact scoped telescope dossier binding retains all139 whole M79 dossiers and rejects unrelated or mixed metadata edits',()=>{
- const current=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const current=mechanicsPredecessors(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
  assertCurrentLearningAuditSharedUI(current);
  const staleUI=structuredClone(current);staleUI[0].ui.build='stale';assert.throws(()=>assertCurrentLearningAuditSharedUI(staleUI),/stale current shared UI/);assert.throws(()=>dossierBeforeLearningAudit(staleUI[0]),/unreviewed current UI/);
  const missingUI=structuredClone(current);delete missingUI[0][amendments.sharedUI.historyField];assert.throws(()=>assertCurrentLearningAuditSharedUI(missingUI),/current shared UI history missing/);
@@ -43,7 +44,7 @@ test('exact scoped telescope dossier binding retains all139 whole M79 dossiers a
 });
 
 test('technical resource maintenance retains every prior whole dossier, UI history and order without concealing unrelated changes',()=>{
- const current=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const current=mechanicsPredecessors(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
  const technical=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-technical-limits-139.json','utf8'));
  assert.equal(technical.priorDossiers.length,139);assertCurrentLearningAuditSharedUI(current);
  const missing=structuredClone(current);delete missing[0][technical.historyField];assert.throws(()=>assertCurrentLearningAuditSharedUI(missing),/technical history missing/);
@@ -55,7 +56,7 @@ test('technical resource maintenance retains every prior whole dossier, UI histo
 });
 
 test('short native return UI binding retains every whole M80 dossier and all original inner error checks',()=>{
- const current=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,prior=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-native-short-return-139.json','utf8'));
+ const current=mechanicsPredecessors(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers),prior=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-native-short-return-139.json','utf8'));
  assert.equal(prior.priorDossiers.length,139);assertCurrentLearningAuditSharedUI(current);
  const missing=structuredClone(current);delete missing[0][prior.historyField];assert.throws(()=>assertCurrentLearningAuditSharedUI(missing),/native short return UI history missing/);
  const stale=structuredClone(current);stale[0].ui.build='stale';assert.throws(()=>assertCurrentLearningAuditSharedUI(stale),/stale current shared UI/);

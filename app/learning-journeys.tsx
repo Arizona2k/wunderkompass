@@ -6,7 +6,7 @@ import {m} from 'motion/react';
 import {LearningFeedback,LearningMotion,useQuietLearningMotion,learningLayoutTransition} from './learning-motion';
 import {BookOpen,Check,Clock,Compass,Globe2,Lightbulb,Volume2,Trophy,ArrowRight} from 'lucide-react';
 import {Progress} from '@/components/ui/progress';
-import {JOURNEYS,type Journey} from './learning-data';
+import {JOURNEYS,type Journey} from './learning-overview';
 import {WaterLab,SeasonsLab,PlatesLab} from './learning-labs';
 import ChapterVisual from './chapter-visual';
 import JourneyVisual from './journey-visual';

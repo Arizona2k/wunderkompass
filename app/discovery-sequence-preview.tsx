@@ -1,4 +1,4 @@
-import {JOURNEYS} from './learning-data';
+import {JOURNEYS} from './learning-overview';
 import {WORLD_INDEX,WORLD_ROUTES} from './world-index';
 export default function DiscoverySequencePreview({journey,route,showTitle=true}:{journey?:string;route?:string;showTitle?:boolean}){
  const item=journey?JOURNEYS.find(j=>j.id===journey):WORLD_ROUTES.find(r=>r.id===route);if(!item)return null;
