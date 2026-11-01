@@ -3,10 +3,10 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {sourceDigest} from './handoff.mjs';
-// User-authorized measured resource reserve: retained native203 evidence plus
-// actual new genetics views already exceeds390MB. Only evidence PNG capacity;
-// selection, identities, exact-payload sharing and errors stay unchanged.
-export const REVIEW_LIMIT=450_000_000;
+// User-authorized measured resource reserve for retained original review PNGs
+// and added content views. Only evidence storage capacity; selection, capture
+// identities, exact-payload sharing and all error conditions stay unchanged.
+export const REVIEW_LIMIT=500_000_000;
 // Capture identities are never deduplicated. Only their byte-identical payloads
 // may share a file in a completed review. Diagnostics keep standalone originals.
 export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false}={}){

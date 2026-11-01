@@ -1,4 +1,16 @@
 import assert from 'node:assert/strict';
+export async function assertGeneNumberedLegend(figure){
+ const observed=await figure.evaluate(root=>{
+  const list=root.querySelector(':scope>ol:not(.book-gene-route):not(.book-gene-strip)'),items=list?[...list.children]:[],bounds=root.getBoundingClientRect(),canvas=document.createElement('canvas'),context=canvas.getContext('2d');
+  return {ordered:list?.tagName==='OL',start:list?.start,reversed:list?.reversed,items:items.map((item,index)=>{
+   const style=getComputedStyle(item),marker=getComputedStyle(item,'::marker'),box=item.getBoundingClientRect();context.font=marker.font||style.font;const markerWidth=context.measureText((index+1)+'. ').width;
+   return{label:item.textContent,number:String(index+1),display:style.display,type:style.listStyleType,position:style.listStylePosition,markerColor:marker.color,visible:item.getClientRects().length>0&&style.visibility==='visible'&&Number(style.opacity)>0,spaceInsideFigure:box.left-markerWidth>=bounds.left-1&&box.right<=bounds.right+1};
+  })};
+ });
+ assert.equal(observed.ordered,true,'numbered gene legend must remain an ordered HTML list');assert.equal(observed.start,1);assert.equal(observed.reversed,false);assert.equal(observed.items.length,3);
+ for(const item of observed.items){assert.equal(item.display,'list-item');assert.equal(item.type,'decimal','numbered gene legend requires visible decimal markers');assert.equal(item.position,'outside');assert.equal(item.visible,true);assert(!['transparent','rgba(0, 0, 0, 0)'].includes(item.markerColor));assert.equal(item.spaceInsideFigure,true,'numbered gene legend markers fit inside the actual figure');}
+ return {numbers:observed.items.map(item=>item.number),labels:observed.items.map(item=>item.label),visibleDecimalOutsideMarkers:true,actualMarkerSpaceInsideFigure:true};
+}
 export async function assertEnzymeEndpoints(figure){
  // A committed d attribute can precede the browser's rendered path geometry.
  // Observe the actual next paint and any finite SVG transition, then keep
@@ -31,8 +43,10 @@ export async function assertBookGeneFigure(wrapper,kind,{onState=null}={}){
    assert.equal(state.strips.length,2);assert.equal(state.strips[0].map(c=>c.text).join(''),'ATCG');assert.equal(state.strips[1].map(c=>c.text).join(''),index===0?'ATCG':'ATGG');assert.deepEqual(state.strips[1].flatMap((c,i)=>c.changed?[i]:[]),index===0?[]:[2]);assert(state.status.includes('nicht bestimmbar'));
   }else if(kind==='nucleotide-parts'){
    assert.deepEqual(state.svgTexts,['1','2','3']);assert(state.list[1].includes(index===0?'Desoxyribose':'Ribose'));assert(state.list[2].includes(index===0?'A, T, C, G':'A, U, C, G'));assert(state.status.includes('eine dieser Basen'));
+   state.numberedLegend=await assertGeneNumberedLegend(figure);
   }else if(kind==='rna-roles'){
    assert.deepEqual(state.svgTexts,['1','2','3']);assert(state.status.startsWith(['mRNA','rRNA','tRNA'][index]));
+   state.numberedLegend=await assertGeneNumberedLegend(figure);
   }else if(kind==='bacteria-forms'){
    assert.equal(state.bacteria,String(index));assert.deepEqual(state.shapes,[['circle'],['rect'],['path']][index]);assert(state.status.includes('weder die Art noch ihre mögliche Wirkung'));
   }else if(kind==='gene-context'){

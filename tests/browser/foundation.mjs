@@ -45,6 +45,24 @@ async function accessibility(p,selector){
  const violations=await p.evaluate(async scope=>(await axe.run(scope,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),selector);
  assert.deepEqual(violations,[],'shared component WCAG checks '+selector);
 }
+// Use an actual saved topic title: a narrow text box can overflow into its action
+// even when the card and the page themselves report no horizontal overflow.
+async function chooseLongContinuation(p){
+ await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
+ await p.getByRole('dialog').getByRole('combobox').fill('Wahrscheinlichkeit');
+ await p.getByRole('option').filter({hasText:'Wahrscheinlichkeit: möglich ist nicht garantiert'}).click();
+ await p.locator('#world-topic-title').waitFor();
+ await p.getByRole('tab',{name:'Spielplatz',exact:true}).click();await p.locator('.game-tile').first().waitFor();
+}
+async function continuationCardGeometry(p){
+ const card=p.locator('.continue-card');assert.equal(await card.locator('p').innerText(),'Wahrscheinlichkeit: möglich ist nicht garantiert');await card.scrollIntoViewIfNeeded();
+ const geometry=await card.evaluate(root=>{
+  const rect=e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height};},box=rect(root),action=rect(root.querySelector('button'));
+  const glyphs=[...root.querySelectorAll('strong,p')].flatMap(e=>{const range=document.createRange();range.selectNodeContents(e);return[...range.getClientRects()].map(r=>({text:e.textContent,x:r.x,y:r.y,width:r.width,height:r.height}));});
+  return{box,action,glyphs,overlaps:glyphs.filter(g=>g.x<action.x+action.width&&g.x+g.width>action.x&&g.y<action.y+action.height&&g.y+g.height>action.y),outside:glyphs.filter(g=>g.x<box.x-1||g.x+g.width>box.x+box.width+1||g.y<box.y-1||g.y+g.height>box.y+box.height+1),pageOverflow:document.documentElement.scrollWidth>innerWidth+2};
+ });
+ assert.deepEqual(geometry.overlaps,[],'actual continuation text glyphs must not paint behind the Fortsetzen action');assert.deepEqual(geometry.outside,[],'complete continuation title stays inside its card');assert.equal(geometry.pageOverflow,false);assert(geometry.action.width>=44&&geometry.action.height>=44,'continuation action remains a full touch target');return geometry;
+}
 export async function componentFlow(browser,base,ready,monitor,report,shots){
  report.componentViews=[];
  for(const [width,height] of [[320,720],[360,800],[390,844],[768,1024],[1024,768],[1440,900],[1920,1080]]){
@@ -57,6 +75,7 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
    await p.screenshot({path:shots+'/foundation-details-'+width+'.png'});assert.equal(await summary.evaluate(e=>document.activeElement===e),true,'native disclosure retains keyboard focus across rendering');await p.keyboard.press('Enter');assert.equal(await details.evaluate(e=>e.open),false);
    const filters=p.locator('.playground-filter-panel'),filterSummary=filters.locator('summary');assert.equal(await filters.getAttribute('open'),null);await filterSummary.focus();await p.keyboard.press('Enter');assert.equal(await filters.evaluate(e=>e.open),true,'filters open through their visible native keyboard control');
    await p.getByLabel('Thema',{exact:true}).selectOption('Geschichte & Ideen');await p.getByLabel('Spielart',{exact:true}).selectOption('Paare merken');await p.locator('.learning-status[data-tone=empty]').waitFor();assert.equal(await p.locator('.learning-status[data-tone=empty]').getAttribute('role'),'status');await contracts(p);await p.screenshot({path:shots+'/foundation-empty-'+width+'.png'});await p.getByRole('button',{name:'Alle Spiele zeigen',exact:true}).click();await p.locator('.game-tile').first().waitFor();
+   await chooseLongContinuation(p);const continuationNormal=await continuationCardGeometry(p);await p.locator('.continue-card').screenshot({path:shots+'/foundation-continuation-normal-'+width+'.png',animations:'disabled'});
    await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
    if(width===320||width===1440){
     const control=p.getByRole('switch',{name:'Weniger Bewegung',exact:true}),initial=await control.getAttribute('aria-checked');
@@ -66,9 +85,9 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
     await toggle(initial==='true'?'false':'true');await control.screenshot({animations:'disabled',path:shots+'/foundation-switch-changed-'+width+'.png'});assert.notDeepEqual(await visual(),before,'switch state visibly changes');
     await toggle(initial);await control.screenshot({animations:'disabled',path:shots+'/foundation-switch-restored-'+width+'.png'});assert.equal(await control.getAttribute('aria-checked'),initial);assert.deepEqual(await visual(),before,'stable switch graphic geometry and colors return without accumulated displacement');
    }
-   await p.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await p.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();const geometry=await contracts(p);await p.screenshot({path:shots+'/foundation-large-'+width+'.png'});
+   await p.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await p.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();const continuationLarge=await continuationCardGeometry(p);await p.locator('.continue-card').screenshot({path:shots+'/foundation-continuation-large-'+width+'.png',animations:'disabled'});const geometry=await contracts(p);await p.screenshot({path:shots+'/foundation-large-'+width+'.png'});
    if(width===320||width===1440){await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await summary.focus();assert.equal(await summary.evaluate(e=>getComputedStyle(e).outlineStyle==='solid'),true);await p.screenshot({path:shots+'/foundation-system-'+width+'.png'});}
-   report.componentViews.push({width,height,geometry,states:['labs','world routes','native details open/closed and keyboard focus','empty/reset','large text',...(width===320||width===1440?['system colors']:[])]});
+   report.componentViews.push({width,height,geometry,continuationNormal,continuationLarge,states:['labs','world routes','native details open/closed and keyboard focus','empty/reset','large text',...(width===320||width===1440?['system colors']:[])]});
   }catch(error){report.componentFailure={width,height,message:error.message,context:await p.evaluate(()=>({route:location.hash,activeTag:document.activeElement?.tagName,activeId:document.activeElement?.id,guideOpen:[...document.querySelectorAll('.playground-guide')].find(e=>e.querySelector('summary')?.textContent?.trim()==='Welches Spiel passt heute?')?.open})).catch(()=>null)};try{const png=await p.screenshot({path:shots+'/foundation-failure-'+width+'.png',animations:'disabled'});report.componentFailure.screenshot={bytes:png.length,sha256:createHash('sha256').update(png).digest('hex')};}catch(captureError){report.componentFailure.captureError=captureError.message;}throw error;}finally{await c.close();}
  }
  await pendingRouteFocusFlow(browser,base,ready,monitor,report,shots);

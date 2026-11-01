@@ -1,3 +1,4 @@
+import {revealBookWords} from './book-pagination.mjs';
 import {assertMitoContour} from './book-cell-geometry.mjs';
 // Shared cell learning checks for the existing regular and cold browser callers.
 import {assertBookCellFigure} from './book-cell-diagrams.mjs';
@@ -83,7 +84,7 @@ export async function bookCellNetworkView(page,{shots=null,engine='chromium'}={}
   await child.goto(base+'/#book');await ready(child);await child.waitForFunction(()=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value==='');
   // These terms are beyond the first24 visible words. Reach both through
   // the actual existing pagination before exercising concurrent disclosures.
-  for(let n=0;!await cardFor(child,'Zelle').count()||!await cardFor(child,'Zellmembran').count();n++){assert(n<5,'cell terms are reachable through existing word pagination');await child.getByRole('button',{name:/^Weitere Wörter entdecken/}).click();}
+  proof.wordPagination=await revealBookWords(child,["Zelle","Zellmembran"]);
   const cellStudy=cardFor(child,'Zelle').locator('[data-book-cell-study]'),membraneStudy=cardFor(child,'Zellmembran').locator('[data-book-cell-study]');
   await cellStudy.locator(':scope>summary').click();await started;await cellStudy.locator(':scope>summary').click();await membraneStudy.locator(':scope>summary').click();assert.equal(requests,1);release();
   await membraneStudy.getByText(pack.learning['Zellmembran'].benefit,{exact:true}).waitFor();await cellStudy.locator(':scope>summary').click();await cellStudy.getByText(pack.learning['Zelle'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;

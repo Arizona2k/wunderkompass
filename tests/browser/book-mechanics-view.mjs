@@ -1,3 +1,4 @@
+import {revealBookWords} from './book-pagination.mjs';
 // Shared mechanics learning checks for the existing regular and cold browser callers.
 import {assertBookMechanicsFigure} from './book-mechanics-diagrams.mjs';
 import {bookRelatedWordView,BOOK_RELATED_WORD_EDGE_COUNT} from './book-related-words.mjs';
@@ -82,7 +83,7 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   await child.goto(base+'/#book');await ready(child);await child.waitForFunction(()=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value==='');
   // These terms are beyond the first24 visible words. Reach both through
   // the actual existing pagination before exercising concurrent disclosures.
-  for(let n=0;!await cardFor(child,'Kraft').count()||!await cardFor(child,'Trägheit').count();n++){assert(n<5,'mechanics terms are reachable through existing word pagination');await child.getByRole('button',{name:/^Weitere Wörter entdecken/}).click();}
+  proof.wordPagination=await revealBookWords(child,["Kraft","Trägheit"]);
   const forceStudy=cardFor(child,'Kraft').locator('[data-book-mechanics-study]'),inertiaStudy=cardFor(child,'Trägheit').locator('[data-book-mechanics-study]');
   await forceStudy.locator(':scope>summary').click();await started;await forceStudy.locator(':scope>summary').click();await inertiaStudy.locator(':scope>summary').click();assert.equal(requests,1);release();
   await inertiaStudy.getByText(pack.learning['Trägheit'].benefit,{exact:true}).waitFor();await forceStudy.locator(':scope>summary').click();await forceStudy.getByText(pack.learning['Kraft'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
@@ -109,6 +110,19 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
    await context.close();context=null;
   }
   assert.equal(rapid.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.rapidReverseLinks=rapid.bookRelatedWords;
+  // Also retain one uninterrupted browser history across both widths. A
+  // following real query must work after all fast Back roundtrips; resetting
+  // the context per width alone missed the actual cached-WebKit failure.
+  context=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
+  child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);
+  const continuous={};
+  for(const width of[320,1440]){
+   await child.setViewportSize({width,height:900});await child.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),width===320);
+   await bookRelatedWordView(child,continuous,width,{large:width===320,engine});
+  }
+  assert.equal(continuous.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.continuousRapidReverseLinks=continuous.bookRelatedWords;
+  const input=child.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await input.fill('Reflexion');await child.locator('.word-card').getByRole('heading',{name:'Reflexion',exact:true}).waitFor();proof.continuousRapidFollowupSearch=true;
+  await context.close();context=null;
   assert(browserErrorsComplete(proof));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
