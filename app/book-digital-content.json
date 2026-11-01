@@ -1,0 +1,635 @@
+{
+  "words": {
+    "Algorithmus": [
+      "Algorithmus",
+      "Zahlen & Forschen",
+      "Ein Algorithmus beschreibt ausführbare Schritte, um ein bestimmtes Ergebnis zu erreichen. Für eine kleine Sortieraufgabe kann er zum Beispiel genau festlegen, welche Karten verglichen und wann vertauscht werden. Ein unklarer Wunsch wie „Mach es schön“ ist noch keine solche Anleitung."
+    ],
+    "Bit": [
+      "Bit",
+      "Computer & Denken",
+      "Ein Bit ist eine binäre Stelle mit einem von zwei Werten: 0 oder 1. Was eine Folge solcher Stellen bedeutet, hängt von vereinbarten Regeln ab."
+    ],
+    "Byte": [
+      "Byte",
+      "Computer & Denken",
+      "Ein Byte ist hier eine Gruppe aus acht Bits. Diese Gruppe kann verschieden interpretiert werden. Sie ist nicht automatisch ein bestimmter Buchstabe."
+    ],
+    "Verschlüsselung": [
+      "Verschlüsselung",
+      "Computer & Denken",
+      "Daten werden nach einem kryptografischen Verfahren mit einem Schlüssel in eine andere Form umgewandelt. Ein passender Entschlüsselungsvorgang kann sie wieder nutzbar machen. Eine einfache Buchstabenspielregel ist kein verlässlicher Schutz echter Geheimnisse."
+    ],
+    "Schlüssel": [
+      "Schlüssel",
+      "Computer & Denken",
+      "In der Kryptografie bestimmt ein Schlüssel zusammen mit einem Verfahren einen konkreten Vorgang. Je nach Verfahren gibt es geheime oder öffentliche Schlüssel. Ein Schlüssel ist deshalb nicht immer ein Passwort und nicht immer geheim."
+    ],
+    "Prüfsumme": [
+      "Prüfsumme",
+      "Computer & Denken",
+      "Eine Prüfsumme wird aus Daten berechnet und kann helfen, Veränderungen zu entdecken. Gleiche Prüfsummen beweisen bei einem einfachen Verfahren nicht automatisch gleiche Daten, einen vertrauenswürdigen Absender oder geheime Inhalte."
+    ],
+    "Hashfunktion": [
+      "Hashfunktion",
+      "Computer & Denken",
+      "Eine Hashfunktion bildet Daten auf einen Prüfwert bestimmter Länge ab. Kryptografische Hashfunktionen sollen bestimmte Angriffe sehr schwer machen. Es bleibt wichtig, eine solche Eigenschaft von einer bloßen kurzen Zahl zu unterscheiden."
+    ],
+    "Datenstruktur": [
+      "Datenstruktur",
+      "Computer & Denken",
+      "Eine Datenstruktur ordnet Informationen so, dass bestimmte Zugriffe und Veränderungen möglich werden. Eine Liste, eine Warteschlange und ein Baum können verschiedene Regeln haben. Die beste Ordnung hängt von der Aufgabe ab."
+    ],
+    "Klartext": [
+      "Klartext",
+      "Computer & Denken",
+      "Klartext nennt in der Kryptografie die ursprünglichen nutzbaren Daten vor einer Verschlüsselung beziehungsweise nach einer passenden Entschlüsselung. Der Name bedeutet nicht, dass jeder Mensch dieselbe Sprache versteht oder dass der Inhalt öffentlich sein sollte."
+    ]
+  },
+  "why": {
+    "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?": [
+      "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+      "Eine Prüfsumme kann Veränderungen erkennbar machen, aber unterschiedliche Inhalte können dieselbe Prüfsumme ergeben. Herkunft und Vertrauenswürdigkeit sind eigene Fragen. Das einfache Summenmodell ist keine digitale Signatur."
+    ],
+    "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?": [
+      "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+      "Eine Umwandlung kann ein Lernprinzip erklären und trotzdem leicht durchschaubar sein. Eine echte Sicherheitsbewertung betrachtet das Verfahren, Schlüssel und mögliche Angriffe. Geheim aussehend reicht nicht."
+    ],
+    "Warum sind acht Bits nicht dasselbe wie die Zahl acht?": [
+      "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+      "Ein Byte fasst acht Bitstellen zusammen. Die Anzahl der Stellen und der von ihnen dargestellte Wert sind verschiedene Angaben. Welche Bedeutung eine Bitfolge hat, legt die vereinbarte Darstellung fest."
+    ]
+  },
+  "learning": {
+    "Algorithmus": {
+      "starter": "Ein Algorithmus ist eine genaue Folge ausführbarer Schritte. Sie hilft, eine Aufgabe nachvollziehbar zu lösen.",
+      "deeper": "Verschiedene Algorithmen können dieselbe Aufgabe lösen und unterschiedlich viel Arbeit benötigen. Eine eindeutige Anleitung ist nicht automatisch sachlich richtig: Auch ihre Annahmen und das Ergebnis müssen geprüft werden.",
+      "observe": "Vergleiche im Modell die Startkarten „9, 2“ und „2, 9“. Führe jeweils die angegebene Vergleichsregel aus. Was bleibt an den Karten gleich, was ändert sich durch einen Tausch? Prüfe anschließend den Fall „4, 4“.",
+      "benefit": "Du kannst eine ausführbare Schrittfolge von einem unklaren Ziel unterscheiden.",
+      "topic": "science-computer",
+      "connection": "Die Computerkarte erklärt die Verarbeitung von Daten. Eine genaue Schrittfolge ergänzt, wie aus einer Eingabe nach einer festgelegten Regel ein Ergebnis entsteht.",
+      "sources": [
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/algorithm.html",
+          "title": "NIST · Algorithmus (Englisch)",
+          "anchor": "Definition: berechenbare Schritte, um ein gewünschtes Ergebnis zu erreichen. Das Zweikartenmodell ist ein eigenes Beispiel.",
+          "updatedOn": "2020-11-09",
+          "checkedOn": "2026-10-31"
+        },
+        {
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+          "title": "NIST · Median (Englisch)",
+          "anchor": "Median formulas for odd/even sorted samples; mean/median differ. Own examples and ties caveat, no source chart or data copied.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Bit",
+          "reason": "Ein Algorithmus beschreibt Schritte. Binäre Werte können Daten dieser Schritte darstellen, legen aber nicht allein den Ablauf fest."
+        },
+        {
+          "term": "Datenstruktur",
+          "reason": "Datenordnung und Verarbeitungsschritte wirken zusammen. Eine Liste benennt noch nicht jedes Verfahren, das mit ihr ausgeführt werden kann."
+        },
+        {
+          "term": "Median",
+          "reason": "Für den Median sortierst du die Zahlen und bestimmst die Mitte; in unserem Beispiel mit vier Zahlen bildest du den Mittelwert der beiden mittleren Werte. Das wendet eine genaue Schrittfolge auf eine konkrete Aufgabe an."
+        },
+        {
+          "term": "Verschlüsselung",
+          "reason": "Verschlüsselung folgt einem festgelegten Verfahren mit einem Schlüssel als Eingabe. Eine ausführbare Schrittfolge allein garantiert noch keine sichere Verschlüsselung."
+        }
+      ],
+      "question": {
+        "prompt": "Die Karten liegen als 9 und 2. Du vergleichst beide und tauschst sie nur, wenn links die größere Zahl liegt. Was liegt danach da?",
+        "answers": [
+          "9 und 2",
+          "2 und 9",
+          "2 und 2"
+        ],
+        "correct": 1,
+        "hint": "Führe die Vergleichsbedingung aus und behalte beide vorhandenen Karten.",
+        "why": "9 ist größer als 2; deshalb werden die beiden Karten vertauscht. Es entsteht keine neue oder doppelte Karte.",
+        "wrongReasons": [
+          "Die Bedingung 9 größer als 2 ist erfüllt. Ohne Tausch wäre die beschriebene Anleitung noch nicht ausgeführt.",
+          "",
+          "Ein Tausch verändert die Reihenfolge, nicht die vorhandenen Zahlen. Die 9 wird nicht durch eine zweite 2 ersetzt."
+        ]
+      },
+      "figure": "compare-and-swap"
+    },
+    "Bit": {
+      "starter": "Ein Bit ist eine binäre Stelle mit zwei möglichen Werten: 0 oder 1. Welche Bedeutung ein Wert im Beispiel hat, legt eine Vereinbarung fest.",
+      "deeper": "0 und 1 sind keine zwingenden Helligkeits- oder Sprachangaben. Mehrere Bits können gemeinsam Daten darstellen. Ein einzelnes gezeichnetes Bit ist noch kein Byte und nicht automatisch ein ganzer Buchstabe.",
+      "observe": "Vergleiche zwei Beispiele mit heller Lampe und unterschiedlichen Vereinbarungen. Welche Zuordnung ergibt den Bitwert 0, welche den Bitwert 1? Vergleiche danach die dunkle Lampe bei derselben Vereinbarung.",
+      "benefit": "Du unterscheidest eine einzelne binäre Stelle von der Bedeutung einer ganzen Zeichenfolge.",
+      "connection": "Die Computerkarte erklärt Datenverarbeitung. Ein Bit benennt eine Stelle; viele Stellen und vereinbarte Regeln erlauben unterschiedliche Darstellungen.",
+      "topic": "science-computer",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/bit",
+          "title": "NIST · Bit (Englisch)",
+          "anchor": "Definition nach NIST IR 8459: eine binäre Ziffer mit dem Wert 0 oder 1. Die Bedeutung einer längeren Folge benötigt zusätzlich eine vereinbarte Darstellung.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Byte",
+          "reason": "Bit beschreibt einen binären Wert; ein Byte fasst acht Bits zusammen. Anzahl der Einheiten und deren Größenebene sind verschieden."
+        },
+        {
+          "term": "Algorithmus",
+          "reason": "Ein Algorithmus beschreibt Schritte. Binäre Werte können Daten dieser Schritte darstellen, legen aber nicht allein den Ablauf fest."
+        }
+      ],
+      "question": {
+        "prompt": "Ein Lämpchen ist hell oder dunkel. Was musst du zusätzlich wissen, um seinen Zustand als 0 oder 1 zu lesen?",
+        "answers": [
+          "Dass hell bei jedem Computer immer 1 bedeutet",
+          "Die hier vereinbarte Zuordnung von hell und dunkel",
+          "Dass ein einzelnes Lämpchen schon einen ganzen Buchstaben enthält"
+        ],
+        "correct": 1,
+        "hint": "Trenne den beobachteten Zustand von der vereinbarten Bedeutung des Zeichens.",
+        "why": "Die Zuordnung erklärt die Bedeutung. Die beiden Zustände allein legen noch nicht fest, welches Zeichen 0 und welches 1 heißt.",
+        "wrongReasons": [
+          "Eine bestimmte Zuordnung kann vereinbart werden; aus Helligkeit allein folgt sie nicht allgemein.",
+          "",
+          "Ein binärer Zustand kann einen Bitwert darstellen. Ein vollständiger Buchstabe benötigt eine zusätzliche Kodierung und gewöhnlich mehrere Bits."
+        ]
+      },
+      "figure": "binary-choice"
+    },
+    "Byte": {
+      "starter": "Acht Bits bilden ein Byte. In unserem Zahlenbeispiel belegt jede 0 oder 1 genau eine Stelle. Welche Bedeutung die ganze Gruppe hat, erklärt eine zusätzliche Darstellungsregel.",
+      "deeper": "Die Bits können als Zahl, Zeichenbestandteil oder andere Daten interpretiert werden. Die Einheit der Datenmenge und der Inhalt sind verschiedene Angaben. Eine Papiergruppe misst noch keine wirkliche Datei.",
+      "observe": "Vergleiche die Beispiele 00000001 und 10000000. Zähle die Stellen und lies die darunter angegebenen Stellenwerte. Welche Zahlen ergeben sich in der gewählten vorzeichenlosen Deutung, und welche Angabe bleibt gleich?",
+      "benefit": "Du kannst Bits und ihre Achtergruppe auseinanderhalten, ohne jedes Byte für einen Buchstaben zu halten.",
+      "connection": "Die Computerkarte trennt Daten von ihrer Verarbeitung. Ein Byte ist eine Größenangabe der Bitgruppe, keine Aussage, was diese Gruppe in einem Programm bedeutet.",
+      "topic": "science-computer",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/Byte",
+          "title": "NIST · Byte (Englisch)",
+          "anchor": "Definition nach NIST IR 8459: eine Folge aus acht Bits. Die Anzahl der Bits legt noch keine Zuordnung zu einem Buchstaben fest.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Bit",
+          "reason": "Bit beschreibt einen binären Wert; ein Byte fasst acht Bits zusammen. Anzahl der Einheiten und deren Größenebene sind verschieden."
+        }
+      ],
+      "question": {
+        "prompt": "Du vergleichst 00000001 und 10000000. Welche Aussage über die beiden Bitfolgen stimmt?",
+        "answers": [
+          "Die zweite Folge enthält mehr Bits, weil die 1 weiter links steht",
+          "Die Nullen zählen nicht zur Größe der Gruppe",
+          "Beide Folgen haben acht Bitstellen; ihre Zahlenbedeutung kann verschieden sein"
+        ],
+        "correct": 2,
+        "hint": "Zähle zuerst die Stellen. Deute ihre Zeichen erst danach mit einer vereinbarten Regel.",
+        "why": "Beide Gruppen enthalten acht Stellen. Eine übliche Binärzahldeutung kann ihnen verschiedene Zahlen zuordnen, ohne ihre Bitanzahl zu verändern.",
+        "wrongReasons": [
+          "Die Position der 1 verändert die Stellenzahl nicht; beide gezeichneten Gruppen haben acht Stellen.",
+          "Auch eine 0 belegt eine Bitstelle. Nur die Einsen zu zählen wäre nicht die Größe der Gruppe.",
+          ""
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Byte“: Du trennst Datenumfang und die Bedeutung einer Darstellung."
+        }
+      ],
+      "figure": "byte-groups"
+    },
+    "Verschlüsselung": {
+      "starter": "Verschlüsselung wandelt Klartext mit einem Verfahren und einem Schlüssel in Geheimtext um und soll Inhalte vor unberechtigtem Mitlesen schützen. Unser Buchstabenspiel zeigt eine einfache Umwandlung; es bietet diesen Schutz nicht zuverlässig.",
+      "deeper": "Eine Verschlüsselung und eine Prüfsumme haben unterschiedliche Ziele. Die Sicherheit hängt vom tatsächlichen Verfahren und den Schlüsseln ab, nicht bloß davon, ob ein Text ungewohnt aussieht. Unser Buchstabenspiel ist absichtlich leicht zu durchschauen.",
+      "observe": "Wähle im Buchstabenspiel „Um 1 Stelle“ und verfolge HUT bis IVU. Beschreibe die Rückregel. Vergleiche dann „Um 2 Stellen“. Welche Angaben bleiben gleich, welche verändern das Ergebnis?",
+      "benefit": "Du trennst eine nachvollziehbare Spielregel von einer tatsächlich geprüften Schutzfunktion.",
+      "connection": "Die Verschlüsselungskarte lässt dich ein begrenztes Buchstabenspiel erkunden. Erkläre dabei ausdrücklich die Grenze zwischen Lernregel und echter Datensicherheit.",
+      "topic": "science-encryption",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/encryption",
+          "title": "NIST · Verschlüsselung (Englisch)",
+          "anchor": "Die Definitionen beschreiben das Umwandeln von Klartext in Chiffrat mit einem kryptografischen Verfahren und einem Schlüssel. Das eigene Buchstabenspiel ist kein Verfahren zum Schutz echter Geheimnisse.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Schlüssel",
+          "reason": "Der Schlüssel ist eine Eingabe für ein kryptografisches Verfahren. Ein beliebiger Ersatzbuchstabe ist noch kein sicheres System."
+        },
+        {
+          "term": "Klartext",
+          "reason": "Klartext ist die Eingabe vor der Verschlüsselung. Seine tatsächliche Verständlichkeit und seine Vertraulichkeit sind getrennte Fragen."
+        },
+        {
+          "term": "Algorithmus",
+          "reason": "Verschlüsselung folgt einem festgelegten Verfahren mit einem Schlüssel als Eingabe. Eine ausführbare Schrittfolge allein garantiert noch keine sichere Verschlüsselung."
+        }
+      ],
+      "question": {
+        "prompt": "Du kannst HUT mit der Verschiebung 1 zu IVU ändern und wieder zurücklesen. Was zeigt dieser Versuch?",
+        "answers": [
+          "Dass ungewohnte Buchstaben jede Nachricht zuverlässig schützen",
+          "Eine nachvollziehbare Umwandlung, deren tatsächliche Sicherheit damit noch nicht belegt ist",
+          "Dass eine bekannte Rückregel keinen Einfluss darauf hat, wer mitlesen kann"
+        ],
+        "correct": 1,
+        "hint": "Überlege, welche Angaben jemand anderes ebenfalls kennen oder ausprobieren könnte.",
+        "why": "Das Buchstabenspiel erklärt die Rollen von Regel, Angabe und Text. Eine leicht auffindbare Rückregel ist kein Nachweis verlässlichen Schutzes.",
+        "wrongReasons": [
+          "Ein ungewohntes Aussehen hindert andere nicht daran, eine einfache Verschiebung auszuprobieren.",
+          "",
+          "Wer die einfache Rückregel kennt oder herausfindet, kann das Spielbeispiel zurücklesen. Das ist für die Schutzfrage wesentlich."
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Verschlüsselung“: Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit."
+        }
+      ],
+      "figure": "alphabet-shift"
+    },
+    "Schlüssel": {
+      "starter": "Die Spielregel sagt, was zu tun ist. Eine zusätzliche Angabe kann festlegen, wie weit du verschiebst.",
+      "deeper": "Verschlüsselung, Signieren und Prüfen können unterschiedliche Schlüssel verwenden. Das Wort bezeichnet eine Rolle im Verfahren, nicht einen echten Metallgegenstand. Die einfache Verschiebezahl ist nur ein Lernvergleich.",
+      "observe": "Vergleiche „Um 1 Stelle“ und „Um 2 Stellen“. Die Ausgangsbuchstaben bleiben HUT, und die allgemeine Verschieberegel bleibt dieselbe. Erkläre, welche zusätzliche Angabe hier die Rolle des Schlüssels übernimmt.",
+      "benefit": "Du unterscheidest ein Verfahren von seiner konkreten Angabe und hältst nicht jeden Schlüssel für ein Passwort.",
+      "connection": "Die Verschlüsselungskarte zeigt Regel und Verschiebung getrennt. Der konkrete Schlüssel einer echten Anwendung braucht andere Verfahren und Prüfungen als dieses Lernspiel.",
+      "topic": "science-encryption",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/cryptographic_key",
+          "title": "NIST · Schlüssel (Englisch)",
+          "anchor": "Definitionen kryptografischer Schlüssel: Ein Parameter bestimmt zusammen mit dem Verfahren einen konkreten Vorgang. Je nach Verfahren werden öffentliche oder geheime Schlüssel verwendet.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verschlüsselung",
+          "reason": "Der Schlüssel ist eine Eingabe für ein kryptografisches Verfahren. Ein beliebiger Ersatzbuchstabe ist noch kein sicheres System."
+        },
+        {
+          "term": "Klartext",
+          "reason": "Schlüssel und zu verarbeitende Nachricht erfüllen unterschiedliche Rollen. Nicht jeder Schlüssel ist eine geheime Nachricht oder ein Passwort."
+        }
+      ],
+      "question": {
+        "prompt": "Die Regel bleibt: jeden Buchstaben im Alphabet vorwärts verschieben. Du änderst nur die Angabe von 1 auf 2. Was hast du geändert?",
+        "answers": [
+          "Die konkrete Verschiebungsangabe zur selben Regel",
+          "Den ursprünglichen Spieltext",
+          "Die ganze Art des Verfahrens, unabhängig von seinen Angaben"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide Ausgangstext, allgemeine Schritte und die zusätzliche Angabe zu diesen Schritten.",
+        "why": "Die Angabe bestimmt hier die Verschiebungsweite. HUT bleibt der Ausgangstext; die allgemeine Art der Verschieberegel bleibt dieselbe.",
+        "wrongReasons": [
+          "",
+          "Der Ausgangstext HUT wurde nicht geändert. Geändert wurde, wie weit jeder Buchstabe verschoben wird.",
+          "Eine andere Eingabe für die Verschiebung ist noch keine neue Art von Verfahren."
+        ]
+      },
+      "figure": "alphabet-shift"
+    },
+    "Prüfsumme": {
+      "starter": "Eine kleine Kontrollzahl kann auf eine Änderung hinweisen. Sie sagt aber nicht automatisch, wer etwas geschrieben hat.",
+      "deeper": "Im einfachen Summenbeispiel ergeben 1 und 2 dieselbe Summe wie 0 und 3. Unterschiedliche Inhalte können also denselben Prüfwert haben. Eine kryptografische Prüfung braucht andere Eigenschaften; eine Summe ist keine Verschlüsselung oder Signatur.",
+      "observe": "Vergleiche im Summenmodell [1, 2] und [0, 3]. Welche Eingaben sind verschieden, welches Ergebnis bleibt gleich? Vergleiche danach [1, 3] und beschreibe, welche Änderung diese einfache Regel erkennt.",
+      "benefit": "Du erkennst die Grenze einer Kontrollzahl und hältst einen gleichen Wert nicht für einen vollständigen Echtheitsbeweis.",
+      "connection": "Die Prüfsummenkarte zeigt einen begrenzten Zahlenvergleich. Erkläre gleiche Kontrollzahl, gleiche Daten und vertrauenswürdige Herkunft als verschiedene Aussagen.",
+      "topic": "science-checksum",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/checksum",
+          "title": "NIST · Prüfsumme (Englisch)",
+          "anchor": "Die Definition beschreibt einen vom Dateninhalt abhängigen Vergleichswert zur Erkennung von Veränderungen. Daraus folgt kein automatischer Nachweis eines vertrauenswürdigen Absenders.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Hashfunktion",
+          "reason": "Prüfsummen und Hashwerte können Änderungen erkennbar machen. Eine bloße Übereinstimmung beweist nicht automatisch Echtheit oder das Ausbleiben jeder Kollision."
+        }
+      ],
+      "question": {
+        "prompt": "Was beweisen die gleichen Summen der beiden verschiedenen Zahlenpaare?",
+        "answers": [
+          "Dass die Paare identisch sind",
+          "Nur dass diese einfache Prüfsumme gleich ist",
+          "Dass die Daten sicher verschlüsselt wurden"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche zuerst die Ausgangspaare, dann ihre berechneten Werte.",
+        "why": "Beide Summen sind 3, obwohl die Paare verschieden sind. Der gleiche Prüfwert dieser einfachen Regel beweist keine identischen Daten.",
+        "wrongReasons": [
+          "Die Ausgangspaare 1/2 und 0/3 sind verschieden; eine gleiche Summe macht sie nicht identisch.",
+          "",
+          "Eine Summenbildung verschlüsselt die Daten nicht. Prüfung und Verbergen sind unterschiedliche Ziele."
+        ]
+      },
+      "relatedQuestions": [
+        {
+          "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prüfsumme“: Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft."
+        }
+      ],
+      "figure": "sum-collision"
+    },
+    "Hashfunktion": {
+      "starter": "Eine Hashfunktion ordnet Daten einen Hashwert zu. Beim hier gezeigten Verfahren SHA-256 hat die Ausgabe immer 256 Bits. Bei sehr kurzen Eingaben ist dieser Wert länger als die Eingabe.",
+      "deeper": "Ein gleicher Hashwert ist kein mathematischer Beweis, dass bei jeder denkbaren Eingabe gleiche Daten vorliegen. Kryptografische Kollisionsresistenz meint praktische Schwierigkeit, nicht unmögliche Gleichheiten. Herkunft und Signatur sind weitere Fragen.",
+      "observe": "Vergleiche die vorberechneten SHA-256-Beispiele HUT, HUU und leere Bytefolge. Zähle die Reihen und Kästchen der Ausgabe und lies ihre Länge. Welche Ausgabelänge bleibt gleich, obwohl die Eingaben unterschiedlich lang sein können?",
+      "benefit": "Du unterscheidest die festgelegte Ausgabelänge von kryptografischen Eigenschaften und von einem Nachweis der Herkunft.",
+      "connection": "Die Prüfsummenkarte erklärt den ersten Vergleichsschritt. Eine kryptografische Hashfunktion und eine geprüfte Herkunft sind zusätzliche, getrennte Anforderungen.",
+      "topic": "science-checksum",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/hash_function",
+          "title": "NIST · Hashfunktion (Englisch)",
+          "anchor": "Definitionen zu einer festgelegten Ausgabelänge und zu zusätzlichen Anforderungen an kryptografische Hashfunktionen, etwa das Erschweren von Kollisionen. Eine feste Ausgabelänge bedeutet nicht, dass jede Eingabe länger sein muss.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        },
+        {
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+          "title": "NIST · Secure Hash Standard, SHA-256 (Englisch)",
+          "anchor": "Übersicht der Ausgabelängen auf der gedruckten Seite 3: SHA-256 liefert 256 Bits. Hier wird die Ausgabelänge dieses konkreten Verfahrens verwendet; daraus folgt keine aktuelle Sicherheitsbewertung aller im Dokument genannten Verfahren.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Prüfsumme",
+          "reason": "Prüfsummen und Hashwerte können Änderungen erkennbar machen. Eine bloße Übereinstimmung beweist nicht automatisch Echtheit oder das Ausbleiben jeder Kollision."
+        },
+        {
+          "term": "Datenstruktur",
+          "reason": "Ein Hashwert verarbeitet eine gewählte Darstellung von Daten. Deren Ordnung und die Eigenschaften einer Struktur sind eigene Fragen."
+        }
+      ],
+      "question": {
+        "prompt": "Ein Verfahren gibt immer 256 Bit aus. Du verarbeitest eine Eingabe mit 24 Bit. Was folgt allein aus diesen Längen?",
+        "answers": [
+          "Der Prüfwert ist länger als diese Eingabe; feste Länge bedeutet nicht immer kürzer",
+          "Der Prüfwert muss aus genau 24 Bit bestehen",
+          "Der 256 Bit-Wert beweist, wer die 24 Bit geschrieben hat"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die beiden Größenangaben und trenne sie von Aussagen über Herkunft.",
+        "why": "256 Bit sind mehr als 24 Bit. Eine feste Ausgabelänge bleibt unabhängig davon fest, ob die konkrete Eingabe kürzer oder länger ist.",
+        "wrongReasons": [
+          "",
+          "Die Ausgabelänge ist im Beispiel auf 256 Bit festgelegt und übernimmt nicht die konkrete Eingabelänge.",
+          "Eine Längenangabe benennt keinen Absender und liefert keinen Echtheitsnachweis."
+        ]
+      },
+      "figure": "fixed-digest"
+    },
+    "Datenstruktur": {
+      "starter": "Eine Warteschlange gibt zuerst das zuerst hinzugefügte Element zurück. Ein Stapel gibt zuerst das zuletzt hinzugefügte zurück. Beide können dieselben Karten enthalten und unterschiedliche Regeln benutzen.",
+      "deeper": "Eine Datenstruktur organisiert Informationen für bestimmte Zugriffe. Bei der Warteschlange kommen neue Elemente hinten dazu und werden vorne entnommen: zuerst hinein, zuerst heraus. Beim Stapel werden Elemente oben aufgelegt und oben wieder entnommen: zuletzt hinein, zuerst heraus. Eine alphabetisch sortierte Liste verfolgt ein anderes Ordnungsziel. Die Papierzeichnung misst keine Laufzeit eines Computerprogramms.",
+      "observe": "Vergleiche mit denselben drei Tierkarten „Warteschlange“, „Stapel“ und „Alphabetische Liste“. Entnimm jeweils die nächste Karte und lege die Karten wieder hin. Erkläre, warum dieselben Karten je nach Zugriffsregel in einer anderen Reihenfolge erscheinen.",
+      "benefit": "Du unterscheidest eine Sammlung von ihrer Reihenfolge und ihren Zugriffsregeln und wählst eine passende Regel für die Aufgabe.",
+      "connection": "Die Computerkarte erklärt Datenverarbeitung. Die Datenstruktur ergänzt, wie Informationen für bestimmte Vorgänge organisiert werden, ohne eine echte Laufzeit aus Papierformen abzuleiten.",
+      "topic": "science-computer",
+      "sources": [
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/dataStructure.html",
+          "title": "NIST · Datenstruktur (Englisch)",
+          "anchor": "Definition: Informationen werden so organisiert, dass bestimmte Operationen mit ihnen möglich sind. Sammlung, Reihenfolge und Zugriffsregeln sind dabei zu unterscheiden.",
+          "updatedOn": "2024-09-20",
+          "checkedOn": "2026-10-31"
+        },
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/queue.html",
+          "title": "NIST · Warteschlange (Englisch)",
+          "anchor": "Definition einer Warteschlange: hinten hinzufügen, das am frühesten hinzugefügte Element vorne entnehmen. Diese Zugriffsregel heißt first-in, first-out (FIFO).",
+          "updatedOn": "2020-12-14",
+          "checkedOn": "2026-10-31"
+        },
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/stack.html",
+          "title": "NIST · Stapel (Englisch)",
+          "anchor": "Definition eines Stapels: oben hinzufügen und das zuletzt hinzugefügte Element oben entnehmen. Diese Zugriffsregel heißt last-in, first-out (LIFO).",
+          "updatedOn": "2019-10-01",
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Hashfunktion",
+          "reason": "Ein Hashwert verarbeitet eine gewählte Darstellung von Daten. Deren Ordnung und die Eigenschaften einer Struktur sind eigene Fragen."
+        },
+        {
+          "term": "Algorithmus",
+          "reason": "Datenordnung und Verarbeitungsschritte wirken zusammen. Eine Liste benennt noch nicht jedes Verfahren, das mit ihr ausgeführt werden kann."
+        }
+      ],
+      "question": {
+        "prompt": "Die erfundenen Tierkarten treffen als Fuchs, Reh, Amsel ein. Du möchtest immer zuerst die am frühesten eingetroffene Karte bearbeiten. Welche Zugriffsregel passt?",
+        "answers": [
+          "Warteschlange: hinten hinzufügen, vorne entnehmen",
+          "Stapel: oben hinzufügen, oben entnehmen",
+          "Erst alphabetisch sortieren, dann vorne entnehmen"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den Zeitpunkt des Hinzufügens mit dem Zeitpunkt der Entnahme.",
+        "why": "Die Warteschlange bewahrt die Ankunftsfolge: Zuerst wird Fuchs entnommen, dann Reh, dann Amsel. Bestand und Zugriffsregel sind verschiedene Dinge.",
+        "wrongReasons": [
+          "",
+          "Beim Stapel wäre Amsel als zuletzt hinzugefügte Karte zuerst an der Reihe. Das passt nicht zur gewünschten Ankunftsfolge.",
+          "Die alphabetische Liste würde hier mit Amsel beginnen. Sie ordnet nach Namen und beantwortet eine andere Frage."
+        ]
+      },
+      "figure": "list-and-queue"
+    },
+    "Klartext": {
+      "starter": "Im Buchstabenspiel ist HUT der ursprüngliche Text. IVU ist die veränderte Form nach der vereinbarten Regel.",
+      "deeper": "Klartext kann auch andere Daten als eine gewöhnliche Nachricht bezeichnen. Öffentlich, privat und verschlüsselt sind verschiedene Eigenschaften. Ein unbekanntes Wort wird nicht allein dadurch verschlüsselt, dass du es nicht verstehst.",
+      "observe": "Benenne bei „Um 1 Stelle“ den Ausgangstext HUT und das Ergebnis IVU. Vergleiche danach eine andere Verschiebung. Welche Rolle behält HUT, obwohl sich das Ergebnis verändert?",
+      "benefit": "Du unterscheidest ursprüngliche Daten, Sprachverständnis und die Entscheidung über Öffentlichkeit.",
+      "connection": "Die Verschlüsselungskarte vergleicht einen Ausgangstext mit seiner umgewandelten Form. Unterscheide diese Rollen vom Sprachverständnis und davon, wer Daten veröffentlichen darf.",
+      "topic": "science-encryption",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/encryption",
+          "title": "NIST · Klartext (Englisch)",
+          "anchor": "Die Definitionen beschreiben das Umwandeln von Klartext in Chiffrat mit einem kryptografischen Verfahren und einem Schlüssel. Das eigene Buchstabenspiel ist kein Verfahren zum Schutz echter Geheimnisse.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verschlüsselung",
+          "reason": "Klartext ist die Eingabe vor der Verschlüsselung. Seine tatsächliche Verständlichkeit und seine Vertraulichkeit sind getrennte Fragen."
+        },
+        {
+          "term": "Schlüssel",
+          "reason": "Schlüssel und zu verarbeitende Nachricht erfüllen unterschiedliche Rollen. Nicht jeder Schlüssel ist eine geheime Nachricht oder ein Passwort."
+        }
+      ],
+      "question": {
+        "prompt": "Ein unverschlüsselter Text ist in einer Sprache, die du nicht verstehst. Welche Aussage passt?",
+        "answers": [
+          "Unbekannte Sprache ist automatisch eine Verschlüsselung",
+          "Er kann Klartext sein; Sprachverständnis und Verschlüsselungszustand sind verschiedene Fragen",
+          "Weil er Klartext ist, darf jeder ihn öffentlich weitergeben"
+        ],
+        "correct": 1,
+        "hint": "Frage nach der Rolle im kryptografischen Vorgang und getrennt nach deinem Sprachwissen.",
+        "why": "Klartext bezeichnet hier Daten vor der Verschlüsselung oder nach Entschlüsselung. Das garantiert weder Sprachverständnis noch eine Erlaubnis zur Veröffentlichung.",
+        "wrongReasons": [
+          "Eine Sprache nicht zu verstehen ist kein Nachweis einer kryptografischen Umwandlung.",
+          "",
+          "Die Bezeichnung erteilt keine Berechtigung, fremde oder private Daten zu veröffentlichen."
+        ]
+      },
+      "figure": "alphabet-shift"
+    }
+  },
+  "whyLearning": {
+    "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?": {
+      "starter": "Zwei verschiedene Zahlenfolgen können dieselbe Summe haben. Gleiches Ergebnis bedeutet nicht immer gleicher Inhalt.",
+      "deeper": "Das Beispiel 1 + 2 und 0 + 3 liefert jeweils 3. Kryptografische Verfahren besitzen andere Anforderungen, aber auch ein Hashwert allein benennt keinen vertrauenswürdigen Absender. Dafür ist der sichere Prüfweg wichtig.",
+      "observe": "Vergleiche [1, 2] mit [0, 3]. Beschreibe getrennt die Eingaben und ihre Summen. Überlege dann: Welche zusätzliche Information wäre nötig, um zu beurteilen, von wem eine Nachricht und ihr Prüfwert stammen?",
+      "benefit": "Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft.",
+      "topic": "science-checksum",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/checksum",
+          "title": "NIST · Prüfsumme (Englisch)",
+          "anchor": "Die Definition beschreibt einen vom Dateninhalt abhängigen Vergleichswert zur Erkennung von Veränderungen. Daraus folgt kein automatischer Nachweis eines vertrauenswürdigen Absenders.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Prüfsumme",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Prüfsumme“: Du trennst Änderungsprüfung, Eindeutigkeit und Herkunft."
+        }
+      ],
+      "connection": "Die Prüfsummenkarte zeigt, wie eine Veränderung auffallen kann. Trenne das Prüfergebnis von der Frage, wer die Nachricht geschickt hat und ob du diesem Absender vertrauen kannst.",
+      "figure": "sum-collision",
+      "question": {
+        "prompt": "Zu einer Nachricht und ihrer passenden einfachen Prüfsumme ist der Absender unbekannt. Welche Frage bleibt offen?",
+        "answers": [
+          "Wer die Nachricht erstellt hat und ob der Prüfwert aus einer vertrauenswürdigen Quelle stammt",
+          "Ob zwei gleiche Summen dieselbe Zahl sind",
+          "Ob der Nachrichteninhalt allein durch die Summenbildung geheim wird"
+        ],
+        "correct": 0,
+        "hint": "Trenne einen Vergleich von berechneten Werten von der Herkunft der verglichenen Angaben.",
+        "why": "Ein passender Prüfwert prüft zunächst den festgelegten Vergleich. Werden Nachricht und Wert zusammen ersetzt, folgt daraus kein vertrauenswürdiger Absender.",
+        "wrongReasons": [
+          "",
+          "Gleiche Zahlenwerte können aus unterschiedlichen Eingaben entstehen. Die Herkunftsfrage wird dadurch nicht beantwortet.",
+          "Summenbildung verbirgt die Nachricht nicht. Vertraulichkeit ist eine andere Aufgabe."
+        ]
+      }
+    },
+    "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?": {
+      "starter": "Ein Spielcode kann zurückgedreht werden. Er schützt echte Geheimnisse nicht zuverlässig.",
+      "deeper": "Eine bekannte Buchstabenverschiebung besitzt nur wenige Möglichkeiten. Moderne Verfahren sind nicht allein deshalb sicher, weil ihr Text seltsam aussieht. Für private Nachrichten werden geprüfte Werkzeuge verwendet.",
+      "observe": "Vergleiche die drei angebotenen Verschiebungen des Spieltextes HUT. Beschreibe, wie sich eine bekannte Verschiebung zurückdrehen lässt. Überlege, warum anders aussehende Zeichen allein noch keinen verlässlichen Schutz bedeuten.",
+      "benefit": "Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit.",
+      "topic": "science-encryption",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/encryption",
+          "title": "NIST · Verschlüsselung (Englisch)",
+          "anchor": "Die Definitionen beschreiben das Umwandeln von Klartext in Chiffrat mit einem kryptografischen Verfahren und einem Schlüssel. Das eigene Buchstabenspiel ist kein Verfahren zum Schutz echter Geheimnisse.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verschlüsselung",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Verschlüsselung“: Du erkennst den Unterschied zwischen einem anschaulichen Prinzip und geprüfter Sicherheit."
+        }
+      ],
+      "connection": "Die Verschlüsselungskarte erklärt einen Schutzgedanken und seine Modellgrenzen. Eine sichtbare Rückdrehregel kann das Prinzip zeigen, liefert aber noch keinen geprüften sicheren Schutz.",
+      "figure": "alphabet-shift",
+      "question": {
+        "prompt": "Jemand sieht IVU und weiß, dass jeder Buchstabe gleich weit verschoben wurde. Weshalb ist das kein verlässlicher Schutz?",
+        "answers": [
+          "Eine einzelne Ziffer als Verschiebung wäre immer sicher, zwei Ziffern wären unsicher",
+          "Beim Alphabet gibt es nur wenige verschiedene Verschiebungen, die sich ausprobieren lassen",
+          "Die Zeichen sehen anders aus; deshalb ist Zurücklesen grundsätzlich unmöglich"
+        ],
+        "correct": 1,
+        "hint": "Prüfe, welche Möglichkeiten eine andere Person mit Kenntnis der Art des Spiels noch durchgehen kann.",
+        "why": "Bei 26 Buchstaben wiederholen sich die Verschiebungen nach 26 Schritten. Die wenigen Möglichkeiten lassen sich ausprobieren; das Spiel ersetzt keine geprüfte Kryptografie.",
+        "wrongReasons": [
+          "Die Anzahl geschriebener Ziffern einer Spielangabe beweist keine Sicherheit. Entscheidend sind die tatsächlichen möglichen Umwandlungen.",
+          "",
+          "Anders aussehende Zeichen schließen eine einfache Rückverschiebung nicht aus."
+        ]
+      }
+    },
+    "Warum sind acht Bits nicht dasselbe wie die Zahl acht?": {
+      "starter": "Acht Kästchen zählen acht Stellen. Ihre Zeichen können unterschiedliche Inhalte darstellen.",
+      "deeper": "Ein Bit nimmt im binären Modell einen von zwei Werten an. Eine Folge ist ohne Format noch kein vollständig erklärtes Bild, Wort oder Musikstück. Stellenzahl und Informationsdeutung dürfen nicht verwechselt werden.",
+      "observe": "Vergleiche 00001000 mit 11111111. Zähle in beiden Fällen die Bitstellen und ermittle mithilfe der Stellenwerte die dargestellten Zahlen. Erkläre, warum sich der Zahlenwert ändern kann, obwohl die Anzahl der Stellen gleich bleibt.",
+      "benefit": "Du trennst Datenumfang und die Bedeutung einer Darstellung.",
+      "topic": "science-computer",
+      "sources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/Byte",
+          "title": "NIST · Byte (Englisch)",
+          "anchor": "Definition nach NIST IR 8459: eine Folge aus acht Bits. Die Anzahl der Bits legt noch keine Zuordnung zu einem Buchstaben fest.",
+          "updatedOn": null,
+          "checkedOn": "2026-10-31"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Byte",
+          "reason": "Vergleiche die Erklärung mit dem Begriff „Byte“: Du trennst Datenumfang und die Bedeutung einer Darstellung."
+        }
+      ],
+      "connection": "Die Computerkarte zeigt Darstellungen mit Nullen und Einsen. Unterscheide die Anzahl der Bitstellen von der Zahl oder Bedeutung, die eine bestimmte Folge darstellen soll.",
+      "figure": "byte-groups",
+      "question": {
+        "prompt": "00001000 und 11111111 haben jeweils acht Stellen. Warum müssen sie trotzdem nicht dieselbe Zahl darstellen?",
+        "answers": [
+          "Jede Folge mit acht Bitstellen muss die Zahl 8 bedeuten",
+          "Die acht Stellen bestimmen von selbst einen Buchstaben",
+          "Die Stellenzahl beschreibt den Umfang; die Zeichenfolge wird zusätzlich nach einer Regel gedeutet"
+        ],
+        "correct": 2,
+        "hint": "Zähle die Stellen und vergleiche danach die Muster innerhalb dieser gleich großen Gruppen.",
+        "why": "Acht Stellen können unterschiedliche Muster enthalten. Bei üblicher Binärzahldeutung sind die Beispielwerte 8 und 255; die Größe bleibt jeweils ein Byte.",
+        "wrongReasons": [
+          "Die Zahl der Stellen ist nicht automatisch die mit den Zeichen dargestellte Zahl.",
+          "Ein Buchstabe benötigt eine vereinbarte Kodierung; die Stellenzahl allein legt ihn nicht fest.",
+          ""
+        ]
+      }
+    }
+  },
+  "schemaVersion": 1,
+  "sourceReadOn": "2026-10-31"
+}

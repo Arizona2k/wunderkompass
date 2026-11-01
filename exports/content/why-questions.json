@@ -186,5 +186,17 @@
   {
     "question": "Warum machen zusätzliche Nachkommastellen eine Messung nicht automatisch genauer?",
     "answer": "Ziffern können genauer aussehen, als das Messverfahren begründet. Gerät, Ablesung und weitere Einflüsse bestimmen die Verlässlichkeit mit. Eine lange Zahl ersetzt keine Angabe zur Messunsicherheit."
+  },
+  {
+    "question": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+    "answer": "Eine Prüfsumme kann Veränderungen erkennbar machen, aber unterschiedliche Inhalte können dieselbe Prüfsumme ergeben. Herkunft und Vertrauenswürdigkeit sind eigene Fragen. Das einfache Summenmodell ist keine digitale Signatur."
+  },
+  {
+    "question": "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+    "answer": "Eine Umwandlung kann ein Lernprinzip erklären und trotzdem leicht durchschaubar sein. Eine echte Sicherheitsbewertung betrachtet das Verfahren, Schlüssel und mögliche Angriffe. Geheim aussehend reicht nicht."
+  },
+  {
+    "question": "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+    "answer": "Ein Byte fasst acht Bitstellen zusammen. Die Anzahl der Stellen und der von ihnen dargestellte Wert sind verschiedene Angaben. Welche Bedeutung eine Bitfolge hat, legt die vereinbarte Darstellung fest."
   }
 ]

@@ -11,6 +11,7 @@ import review from '../../content/animal-editorial-review.json' with {type:'json
 import DATA from '../../app/animal-inquiries.json' with {type:'json'};
 import OWN_MEDIA from '../../app/animal-illustrations.json' with {type:'json'};
 import catalog from '../../app/world-catalog.json' with {type:'json'};
+import photoMedia from '../../app/world-photos.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 await import('../../scripts/test-runtime.mjs');
@@ -164,8 +165,8 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    await captureAnimalFailureScreenshot(p,shots,{engine:browser.browserType().name(),current,stage,width});throw error;
   }finally{lifecycle.stop();await c.close();}
  }
- const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);
- report.animalCoverage={observed,focusChecks,compactOrigins,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
+ const navigationProof={};await animalNavigation(browser,base,ready,monitor,shots,navigationProof,navigationReuse);assert.equal(navigationProof.mediaBeforeReload.length,DATA.entries.length);assert(navigationProof.mediaBeforeReload.every(row=>row.complete&&row.width>0&&row.height>0));
+ report.animalCoverage={observed,decodedMediaBeforeReload:navigationProof.mediaBeforeReload,focusChecks,compactOrigins,searchFocus,photoPendingBackFocus:navigationProof.photoPendingBackFocus,seconds:(performance.now()-start)/1000,oldSessionsPreserved:true,largeText:true,axe:true,independentAcceptance:false,navigation:true};
  await worldPhotoFlow(browser,base,ready,monitor,report,shots);
  report.animalCoverage.photoMetadata=report.photoMetadata;
  await retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots);
@@ -198,7 +199,14 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();const input=p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.waitFor();
   stage='actual input focus';await p.waitForFunction(()=>document.activeElement?.matches('.search-dialog [role="combobox"]'));
   stage='type exact title with actual keyboard';await p.keyboard.type(t.title);assert.equal(await input.inputValue(),t.title,'complete title from actual keyboard, including accents and spaces');
-  stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});stage='reload';await p.reload();await ready(p);
+  stage='select exact result';await p.getByRole('option').filter({has:p.getByText(t.title,{exact:true})}).click();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});
+  // An attached inquiry can precede its actual image response. Finish the
+  // declared subject image before this intentional reload, preserving the
+  // strict request-error monitor and its existing20-second readiness timeout.
+  stage='actual subject image before reload';const expectedMedia=OWN_MEDIA.entries.find(e=>e.id===entry.id)??photoMedia[t.image];assert(expectedMedia?.src,'every actual animal has declared subject media');
+  await p.waitForFunction(src=>[...document.querySelectorAll('.world-article img')].some(image=>image.getAttribute('src')===src&&image.complete&&image.naturalWidth>0),expectedMedia.src);
+  const decoded=await p.locator('.world-article img').evaluateAll(async(images,src)=>{const image=images.find(i=>i.getAttribute('src')===src);if(!image)throw Error('Missing declared subject image');await image.decode();return{src:image.getAttribute('src'),complete:image.complete,width:image.naturalWidth,height:image.naturalHeight};},expectedMedia.src);assert.equal(decoded.src,expectedMedia.src);assert(decoded.complete&&decoded.width>0&&decoded.height>0);(navigationProof.mediaBeforeReload??=[]).push({id:entry.id,...decoded});
+  stage='reload';await p.reload();await ready(p);
   if(expansion.entries.some(e=>e.id===entry.id)){
    const quiz=p.locator('.world-mini-question');await quiz.getByRole('heading',{name:t.question.prompt,exact:true}).waitFor();
    if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
@@ -219,7 +227,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }
- navigationProof.coveredAnimalIds=topics.map(t=>t.id);navigationProof.commonSeconds=(performance.now()-commonStarted)/1000;
+ assert.equal(navigationProof.mediaBeforeReload.length,DATA.entries.length);assert.equal(new Set(navigationProof.mediaBeforeReload.map(row=>row.id)).size,DATA.entries.length);navigationProof.coveredAnimalIds=topics.map(t=>t.id);navigationProof.commonSeconds=(performance.now()-commonStarted)/1000;
  // Extend the existing early keyboard-navigation path with the changed source
  // controls. The complete later journey matrix remains unchanged.
  if(process.argv.includes('--search-only')){const sourceProof=await journeySourceView(p,{widths:[320,390,768,1440],shots,engine});navigationProof.earlySourceViews=sourceProof.views.length;navigationProof.earlySourceChapters=sourceProof.chapters;console.log('EARLY_JOURNEY_SOURCES',JSON.stringify({engine,views:sourceProof.views.length,chapters:sourceProof.chapters}));}

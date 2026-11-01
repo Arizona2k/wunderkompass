@@ -1,7 +1,9 @@
 import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import os from'node:os';import{createHash}from'node:crypto';import{learningInputs,learningFingerprint}from'../build/learning-fingerprint.mjs';import fixture from'./fixtures/statistics-gene-runtime-predecessor.json'with{type:'json'};
+import{digitalPredecessors,withStatisticsPreDigitalRuntime}from'./digital-predecessor-reference.mjs';import digitalFixture from'./fixtures/digital-statistics-runtime-predecessor.json'with{type:'json'};
 import{statisticsHistoryReference}from'./statistics-history-reference.mjs';
 const sha=b=>createHash('sha256').update(b).digest('hex'),fp=x=>sha(JSON.stringify(x)),history='historicalUIBeforeStatistics20261031';
 export function statisticsPredecessors(items){
+ if(items.length>=178)items=digitalPredecessors(items);
  if(items.length===166){assert.deepEqual(items.map(x=>({id:x.id,sha256:fp(x)})),fixture.whole166PredecessorDossiers.map(({ui,...x})=>x),'already reconstructed M84 input must still be every exact whole old dossier');return items;}
  assert.equal(items.length,177);assert.equal(new Set(items.map(x=>x.id)).size,177);assert.deepEqual(items.map(x=>x.id),[...fixture.whole166PredecessorDossiers,...fixture.newElevenContentOnlyBeforeActualUI].map(x=>x.id));
  const qualified='tests/fixtures/editorial-before-statistics-166.json',actual=fs.existsSync(qualified)?JSON.parse(fs.readFileSync(qualified,'utf8')):null;
@@ -17,6 +19,7 @@ export function statisticsPredecessors(items){
  return prior;
 }
 export function withGenePreStatisticsRuntime(root,inspect){
+ if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===fixture.predecessorRuntimeBuild){const actual=new Map(learningInputs(root).map(p=>[path.relative(root,p),p]));assert.deepEqual(new Set(actual.keys()),new Set(fixture.predecessorInputs.map(x=>x.name)));for(const x of fixture.predecessorInputs)assert.equal(sha(fs.readFileSync(actual.get(x.name))),x.sha256);return inspect(root);}
 
  const current=new Map(learningInputs(root).map(p=>[path.relative(root,p),p])),expected=new Set([...fixture.predecessorInputs,...fixture.addedInputs].map(x=>x.name));assert.deepEqual(new Set(current.keys()),expected);assert.equal(learningFingerprint(root),fixture.currentRuntimeBuild);

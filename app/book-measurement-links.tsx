@@ -8,8 +8,9 @@ import mechanicsLinks from './book-mechanics-topic-index.json';
 import cellLinks from './book-cell-topic-index.json';
 import geneLinks from './book-gene-topic-index.json';
 import statisticsLinks from './book-statistics-topic-index.json';
+import digitalLinks from './book-digital-topic-index.json';
 type BookLink={kind:'word'|'why';term:string;topic:string;connection:string};
-const links:BookLink[]=[...[...measurementLinks,...heatLinks,...lightLinks,...waterLinks,...particleLinks].map(link=>({...link,kind:'word' as const})),...[...mechanicsLinks,...cellLinks,...geneLinks,...statisticsLinks].map(link=>({...link,kind:link.kind as 'word'|'why'}))];
+const links:BookLink[]=[...[...measurementLinks,...heatLinks,...lightLinks,...waterLinks,...particleLinks].map(link=>({...link,kind:'word' as const})),...[...mechanicsLinks,...cellLinks,...geneLinks,...statisticsLinks,...digitalLinks].map(link=>({...link,kind:link.kind as 'word'|'why'}))];
 import {navigateHash} from './hash-route';
 
 export default function BookMeasurementLinks({topicId}:{topicId:string}){

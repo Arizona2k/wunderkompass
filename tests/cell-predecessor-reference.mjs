@@ -1,3 +1,5 @@
+import {withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
+import digitalFixture from './fixtures/digital-statistics-runtime-predecessor.json' with {type:'json'};
 import {withGenePreStatisticsRuntime} from './statistics-predecessor-reference.mjs';
 import statisticsFixture from './fixtures/statistics-gene-runtime-predecessor.json' with {type:'json'};
 import {genePredecessors,withCellPreGeneRuntime} from './gene-predecessor-reference.mjs';
@@ -23,6 +25,7 @@ export function cellPredecessors(items){
  return items;
 }
 export function mechanicsPreCellFingerprint(root){
+ if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===statisticsFixture.currentRuntimeBuild)return withGenePreStatisticsRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===geneFixture.currentRuntimeBuild)return withCellPreGeneRuntime(root,mechanicsPreCellFingerprint);
  const current=new Map(learningInputs(root).map(p=>[path.relative(root,p),p]));
