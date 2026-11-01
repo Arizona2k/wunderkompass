@@ -1,0 +1,405 @@
+[
+  {
+    "kind": "word",
+    "term": "Asteroid",
+    "definition": "Ein Asteroid ist ein kleiner, überwiegend felsiger Himmelskörper im Sonnensystem. Viele umlaufen die Sonne im Gürtel zwischen Mars und Jupiter. Nicht jeder Asteroid liegt dort oder besitzt dieselbe Form und Zusammensetzung.",
+    "starter": "Asteroiden sind kleine Körper aus Gestein, Metall oder beidem, die die Sonne umlaufen. Viele befinden sich im Hauptgürtel zwischen den Bahnen von Mars und Jupiter. Andere kommen an anderen Orten vor. Sie können sehr unterschiedlich geformt sein.",
+    "deeper": "Asteroiden sind Überreste aus der Entstehungszeit unseres Sonnensystems. Ihre Formen und Zusammensetzungen sind verschieden, weil sie unterschiedliche Geschichten haben. Eine Lagezeichnung ordnet Orte ein; sie ersetzt keine vermessene Bahn eines bestimmten Körpers. Auch ein schematischer Punkt außerhalb des Hauptgürtels widerspricht deshalb nicht automatisch dem Begriff Asteroid.",
+    "observe": "Wähle im Lageschema „Im Hauptgürtel“ und „Weiter innen“. Welche Aussage beschreibt eine häufige Lage, welche würde ausnahmslos alle Körper betreffen?",
+    "benefit": "Du kannst eine häufige Verteilung von einer ausnahmslosen Regel unterscheiden und Ort, Form und Zusammensetzung getrennt beschreiben.",
+    "connection": "Die Sonnensystemkarte zeigt die größeren Planeten. Asteroiden ergänzen kleine Körper auf einer anderen Ebene; ein vereinfachtes Planetenbild ist keine vollständige Inventarliste.",
+    "topic": "science-solar-system",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/asteroid/en/",
+        "title": "NASA · Asteroiden verstehen (Englisch)",
+        "anchor": "Abschnitte zur Lage im Hauptgürtel und an anderen Orten, zur Entstehung sowie zu Form und Zusammensetzung. Zeitabhängige Missions- und Gefahrenaussagen sind nicht übernommen.",
+        "updatedOn": "2021-08-26",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Komet",
+        "reason": "Eisreiche Körper mit möglicher Materialhülle und überwiegend felsige Körper sind verschiedene Einordnungen. Ein gezeichneter Schweif bestimmt kein echtes Objekt."
+      },
+      {
+        "term": "Planet",
+        "reason": "Asteroiden und Planeten sind verschiedene Gruppen von Körpern. Eine vereinfachte Planetenkarte zählt nicht jedes kleinere Objekt im Sonnensystem."
+      }
+    ],
+    "question": {
+      "prompt": "Ein gedachtes Asteroidenzeichen steht außerhalb des Hauptgürtels. Was folgt daraus?",
+      "answers": [
+        "Es kann trotzdem einen Asteroiden darstellen.",
+        "Es kann kein Asteroid sein, weil alle im Hauptgürtel liegen.",
+        "Die Zeichnung liefert damit schon seine vollständig vermessene Bahn."
+      ],
+      "correct": 0,
+      "hint": "Prüfe, ob die Erklärung eine häufige Lage oder eine Regel für ausnahmslos jeden Körper nennt.",
+      "why": "Viele Asteroiden liegen im Hauptgürtel; andere liegen anderswo. Der gezeichnete Ort allein entscheidet weder über die gesamte Einordnung noch über eine reale Bahn.",
+      "wrongReasons": [
+        "",
+        "Eine häufige Lage ist keine ausnahmslose Regel. Es gibt Asteroiden außerhalb des Hauptgürtels.",
+        "Eine Lage in einer Zeichnung ist noch keine zeitliche Messreihe, aus der eine reale Bahn bestimmt wird."
+      ]
+    },
+    "figure": "asteroid-locations",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Komet",
+    "definition": "Ein Komet ist ein kleiner Himmelskörper mit Eis und weiteren Bestandteilen wie Staub. In Sonnennähe können Gas und Staub eine Hülle und Schweife bilden. Ein Komet ist kein selbst leuchtender Stern mit langen Haaren.",
+    "starter": "Ein Komet besitzt einen kleinen festen Kern mit Eis, Staub und weiteren Bestandteilen. Nähert er sich der Sonne, kann erwärmtes Material in die Umgebung gelangen. Gas und Staub können dann eine Hülle, die Koma, und Schweife bilden.",
+    "deeper": "Kern, Koma und Schweife sind verschiedene Teile der Erklärung. Wie deutlich sie erscheinen, hängt von den Bedingungen ab; ein Komet trägt nicht immer denselben sichtbaren Schweif. Sonnenlicht und Sonnenwind wirken auf das abgegebene Material. Die Materialrichtung erklärt sich deshalb nicht allein aus der Flugrichtung des Kerns.",
+    "observe": "Wähle im Richtungsschema „Rechts von der Sonne“ und „Schräg oberhalb“. Unterscheide den Kern, seine Materialhülle und das davon weggetragene Material. Vergleiche die Richtung zum Sonnenzeichen mit dem getrennt beschrifteten Bewegungspfeil.",
+    "benefit": "Du unterscheidest den Körper selbst von abgegebenem Material und kannst erklären, warum ein Schweif keine einfache Bewegungsspur ist.",
+    "connection": "Die Kometenkarte unterscheidet Kern, Hülle und Schweife. Die eigene Skizze zeigt eine begrenzte Anordnung und keine vollständige Flug- oder Schweifvorhersage.",
+    "topic": "science-comet",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/solar-system/comets/facts/",
+        "title": "NASA · Kometenkern, Koma und Schweife (Englisch)",
+        "anchor": "Abschnitt zu Eis und Staub im Kern, Materialabgabe bei Erwärmung sowie Wirkung von Sonnenlicht und Sonnenwind auf Gas und Staub.",
+        "updatedOn": "2026-09-21",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Asteroid",
+        "reason": "Eisreiche Körper mit möglicher Materialhülle und überwiegend felsige Körper sind verschiedene Einordnungen. Ein gezeichneter Schweif bestimmt kein echtes Objekt."
+      }
+    ],
+    "question": {
+      "prompt": "Was stellt die Koma im vereinfachten Kometenschema dar?",
+      "answers": [
+        "Den ganzen festen Kern.",
+        "Abgegebenes Gas und Staub in der Umgebung des Kerns.",
+        "Eine feste Schale, deren Form bei jedem Kometen gleich bleibt."
+      ],
+      "correct": 1,
+      "hint": "Unterscheide Material, das den Körper umgibt, von Material, das noch zum festen Kern gehört.",
+      "why": "Die Koma ist eine Hülle aus abgegebenem Material um den Kern. Sie ist weder der ganze Kern noch eine überall gleichbleibende feste Schale.",
+      "wrongReasons": [
+        "Kern und Materialhülle sind unterschiedliche Bestandteile.",
+        "",
+        "Eine Hülle aus Gas und Staub ist keine feste Schale. Ihre Ausprägung hängt von den Bedingungen ab."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum zeigt ein Kometenschweif nicht einfach die Flugrichtung an?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Komet“: Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material."
+      }
+    ],
+    "figure": "comet-material-directions",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Exoplanet",
+    "definition": "Ein Exoplanet ist ein Planet außerhalb unseres Sonnensystems. Viele werden durch Auswirkungen auf das Licht oder die Bewegung eines Sterns entdeckt. Eine Entdeckung ist nicht automatisch ein Nachweis für Leben oder eine zweite Erde.",
+    "starter": "Ein Exoplanet ist ein Planet außerhalb unseres Sonnensystems. Viele umkreisen andere Sterne. Weil das Sternlicht sehr hell ist, entdecken Forschende solche Planeten oft über ihre Wirkung auf den Stern: zum Beispiel über kleine Helligkeitsänderungen oder Veränderungen seiner Bewegung.",
+    "deeper": "Bei passender Blickrichtung kann ein Planet vor seinem Stern vorbeiziehen und einen kleinen Teil des Sternlichts verdecken. Das ist ein Transit. Andere Beobachtungsverfahren untersuchen etwa die Bewegung des Sterns. Ein Helligkeitsabfall allein ist jedoch noch keine sichere Bestätigung eines Planeten: Auch andere Sternsysteme oder fremde Lichtquellen können ähnliche Signale verursachen. Eine Entdeckung beweist außerdem kein Leben.",
+    "observe": "Vergleiche im Projektionsmodell „Mittig davor“ und „Daneben“. Beschreibe zuerst, was das Schema zeigt, und trenne das von Aussagen, die erst echte Messungen und zusätzliche Prüfungen erlauben.",
+    "benefit": "Du kannst einen möglichen Hinweis von einem bestätigten Planeten und von einem unbelegten Lebensnachweis unterscheiden.",
+    "connection": "Die Exoplanetenkarte zeigt eine begrenzte Helligkeitsmessidee. Prüfe die Blickrichtung und die Aussagegrenze, statt jeden Kurvenknick sofort für einen Lebensnachweis zu halten.",
+    "topic": "science-exoplanet",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/all-about-exoplanets/en/",
+        "title": "NASA · Planeten anderer Sterne finden (Englisch)",
+        "anchor": "Definition sowie Abschnitte zu Auswirkungen auf die Sternbewegung und zur Transitmethode. Keine pauschale Beschränkung auf Riesenplaneten oder Temperatur-/Lebensbestimmung übernommen.",
+        "updatedOn": "2022-01-10",
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://spaceplace.nasa.gov/transits/en/",
+        "title": "NASA · Transit und Blickrichtung (Englisch)",
+        "anchor": "Erklärung des Vorbeiziehens eines Planeten vor seinem Stern und der kleinen Helligkeitsänderung bei passender Blickrichtung.",
+        "updatedOn": "2024-03-29",
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://exoplanetarchive.ipac.caltech.edu/docs/PurposeOfKOITable.html",
+        "title": "NASA Exoplanet Archive · Kandidaten und Fehlalarme (Englisch)",
+        "anchor": "DR25-Dokumentation zu bedeckenden Doppelsternen, fremden Lichtquellen und zusätzlichen Prüfungen; keine aktuellen Katalogmengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Transit",
+        "reason": "Ein Transit kann bei geeigneter Blickrichtung einen Hinweis auf einen Planeten geben. Nicht jeder Exoplanet wird mit genau dieser Methode gefunden."
+      }
+    ],
+    "question": {
+      "prompt": "Eine echte Messreihe zeigt einen kleinen Helligkeitsabfall. Welche Einordnung ist angemessen?",
+      "answers": [
+        "Er beweist ohne weitere Prüfung Leben auf einem Planeten.",
+        "Er bestimmt bereits eindeutig Radius und Masse des Planeten.",
+        "Er kann ein Transithinweis sein; andere Ursachen und weitere Belege müssen geprüft werden."
+      ],
+      "correct": 2,
+      "hint": "Überlege, ob ein einzelner beobachteter Effekt mehrere Ursachen haben kann.",
+      "why": "Ein Transit ist eine mögliche Ursache. Forschende prüfen etwa, ob das Signal von einem anderen Sternsystem stammt. Ein kleiner Lichtabfall allein liefert weder einen Lebensnachweis noch alle Planeteneigenschaften.",
+      "wrongReasons": [
+        "Ein Lichteffekt allein ist kein Nachweis von Leben.",
+        "Für verschiedene Eigenschaften braucht man passende Informationen und Modelle; eine Lichtabnahme allein bestimmt nicht eindeutig alle Größen.",
+        ""
+      ]
+    },
+    "figure": "transit-projection",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Transit",
+    "definition": "Bei einem astronomischen Transit zieht ein Körper aus unserer Blickrichtung vor einem anderen vorbei. Bei manchen Exoplaneten liegt die Bahn so, dass sie einen kleinen Teil des Sternlichts verdecken. Die Blickrichtung ist entscheidend.",
+    "starter": "Bei einem astronomischen Transit zieht ein Körper aus unserer Blickrichtung vor einem anderen vorbei. Ein kleiner Planet kann zum Beispiel einen Teil einer Sternscheibe verdecken. Aus einer anders gelegenen Blickrichtung muss sich diese Überdeckung nicht zeigen.",
+    "deeper": "Ein Planet kann seinen Stern umlaufen, ohne aus unserer Richtung vor ihm vorbeizuziehen. Deshalb findet die Transitmethode nicht jeden Planeten. Die Größe des verdeckten Flächenanteils und die Eigenschaften des Sterns beeinflussen den beobachteten Lichtverlauf. Unser einfaches Scheibenmodell setzt eine gleichmäßig helle Sternscheibe voraus; echte Sternmessungen brauchen weitere Prüfung.",
+    "observe": "Vergleiche im Scheibenmodell „Mittig davor“, „Seitlich davor“ und „Daneben“. Achte darauf, ob sich die Vordergrundscheibe und die Sternscheibe aus derselben Blickrichtung überdecken.",
+    "benefit": "Du kannst erklären, weshalb die Blickrichtung für einen beobachteten Transit entscheidend ist und ein Stern dabei nicht einfach ausgeschaltet wird.",
+    "connection": "Die Exoplanetenkarte verknüpft die passende Blickrichtung mit einer kleinen Lichtänderung. Ein Transit ist ein Beobachtungsvorgang und nicht dasselbe wie die ganze Planetendefinition.",
+    "topic": "science-exoplanet",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/transits/en/",
+        "title": "NASA · Transit und Blickrichtung (Englisch)",
+        "anchor": "Erklärung des Vorbeiziehens eines Planeten vor seinem Stern und der kleinen Helligkeitsänderung bei passender Blickrichtung.",
+        "updatedOn": "2024-03-29",
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://exoplanetarchive.ipac.caltech.edu/docs/PurposeOfKOITable.html",
+        "title": "NASA Exoplanet Archive · Kandidaten und Fehlalarme (Englisch)",
+        "anchor": "DR25-Dokumentation zu bedeckenden Doppelsternen, fremden Lichtquellen und zusätzlichen Prüfungen; keine aktuellen Katalogmengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Exoplanet",
+        "reason": "Ein Transit kann bei geeigneter Blickrichtung einen Hinweis auf einen Planeten geben. Nicht jeder Exoplanet wird mit genau dieser Methode gefunden."
+      }
+    ],
+    "question": {
+      "prompt": "Wähle im Modell „Daneben“. Was beschreibt die Ansicht bei dieser Auswahl?",
+      "answers": [
+        "Aus dieser Blickrichtung gibt es keine Überdeckung der Scheiben.",
+        "Damit ist bewiesen, dass es den kleinen Körper nicht gibt.",
+        "Der Stern ist vollständig verdeckt."
+      ],
+      "correct": 0,
+      "hint": "Beschreibe zunächst nur die sichtbare Lage der beiden Scheiben, bevor du eine weitergehende Schlussfolgerung ziehst.",
+      "why": "Ohne Überdeckung zeigt diese Ansicht keinen Transit. Der kleine Körper kann trotzdem vorhanden sein; seine Existenz und seine Lage aus unserer Richtung sind unterschiedliche Fragen.",
+      "wrongReasons": [
+        "",
+        "Ein Körper verschwindet nicht, nur weil er aus einer bestimmten Richtung nicht vor dem Stern liegt.",
+        "Nebeneinanderliegende Scheiben verdecken einander nicht vollständig."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum können wir nicht jeden Exoplaneten durch einen Transit finden?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Transit“: Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis."
+      }
+    ],
+    "figure": "transit-projection",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Galaxie",
+    "definition": "Eine Galaxie ist ein durch Schwerkraft verbundenes großes System aus Sternen, Gas, Staub und weiteren Bestandteilen. Unser Sonnensystem gehört zur Milchstraße. Eine Galaxie ist nicht dasselbe wie ein einzelnes Planetensystem.",
+    "starter": "Eine Galaxie ist ein großes, durch Schwerkraft verbundenes System mit vielen Sternen, Gas, Staub und weiteren Bestandteilen. Unsere Galaxie heißt Milchstraße. Die Sonne und ihr Planetensystem gehören zu ihr.",
+    "deeper": "Ein Planetensystem und eine Galaxie sind verschiedene Größenebenen. Die Erde gehört zum Sonnensystem, und dieses ist ein kleiner Teil der Milchstraße. Galaxien besitzen unterschiedliche Formen: zum Beispiel Spiralen, eher ovale Formen oder unregelmäßige Gestalten. Eine Spiralzeichnung ist deshalb kein Muster für jede Galaxie und keine maßstäbliche Karte aller Sterne.",
+    "observe": "Wähle im Ebenenschema „Erde“, „Sonnensystem“ und „Milchstraße“. Verfolge die Zugehörigkeit. Welche Umrandung bezeichnet ein Planetensystem, welche das viel größere Sternsystem?",
+    "benefit": "Du kannst Planet, Planetensystem und Galaxie sinnvoll einordnen, ohne aus einer schematischen Zeichnung reale Sternzahlen oder Maßstäbe abzulesen.",
+    "connection": "Die Galaxienkarte vergleicht System und Form. Unser einzelnes Sonnensystem und die Milchstraße sind verschiedene Ebenen derselben räumlichen Einordnung.",
+    "topic": "science-galaxy",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/galaxy/en/",
+        "title": "NASA · Galaxien und die Milchstraße (Englisch)",
+        "anchor": "Definition als durch Schwerkraft verbundenes System, Einordnung unseres Sonnensystems und unterschiedliche Galaxienformen. Keine Gesamtzahl oder Kollisionsvorhersage übernommen.",
+        "updatedOn": "2022-07-13",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Lichtjahr",
+        "reason": "Galaxien sind räumliche Systeme; ein Lichtjahr ist eine Entfernungsangabe. Ein Jahressymbol ist keine Messung ihrer Größe oder ihres Alters."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Aussage ordnet unser Sonnensystem richtig ein?",
+      "answers": [
+        "Milchstraße und Sonnensystem sind zwei Namen für genau dasselbe System.",
+        "Das Sonnensystem ist ein kleiner Teil der Milchstraße.",
+        "Die Milchstraße besteht nur aus unserer Sonne und ihren Planeten."
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die Ebenenbeschriftungen und überlege, ob sich das größere System auf einen einzigen Stern beschränkt.",
+      "why": "Unser Sonnensystem gehört zur Milchstraße. Die Galaxie umfasst viele weitere Sterne und Bestandteile; beide Begriffe bezeichnen verschiedene Ebenen.",
+      "wrongReasons": [
+        "Die beiden Begriffe bezeichnen unterschiedliche Ebenen.",
+        "",
+        "Die Sonne ist nur einer der vielen Sterne der Milchstraße."
+      ]
+    },
+    "figure": "galaxy-membership",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Lichtjahr",
+    "definition": "Ein Lichtjahr ist eine Längeneinheit für große Entfernungen. Es bezeichnet die Strecke, die Licht im Vakuum in einem dafür festgelegten Jahr zurücklegt. Trotz des Wortteils Jahr ist es keine gewöhnliche Zeitdauer.",
+    "starter": "Ein Lichtjahr ist eine Strecke: so weit kommt Licht im Vakuum in einem festgelegten Jahr. Trotz des Wortteils Jahr ist es eine Einheit für Länge und Entfernung. Ein Lichtjahr entspricht ungefähr 9,46 Billionen Kilometern.",
+    "deeper": "Für die genaue Festlegung wird ein julianisches Jahr mit 365,25 Tagen verwendet; ein Tag zählt hier 86 400 Sekunden. Multipliziert man diese Dauer mit der Lichtgeschwindigkeit im Vakuum, erhält man eine Länge. Im ruhenden Vakuummodell ergibt die doppelte Dauer auch die doppelte Lichtstrecke. Das Modell beschreibt eine feste Strecke und Lichtausbreitung im Vakuum. Es erklärt die Einheit und ist keine Messung der Entfernung eines echten Sterns.",
+    "observe": "Wähle im Einheitenmodell „1 Jahr“, „2 Jahre“ und „4 Jahre“. Vergleiche die zugehörige Lichtstrecke in Lichtjahren und die getrennt beschriftete Dauer. Welche Größe misst die Achse?",
+    "benefit": "Du unterscheidest eine Zeitdauer von der damit definierten Längeneinheit und kannst ein einfaches Zeit-Strecken-Modell richtig lesen.",
+    "connection": "Galaxienentfernungen brauchen passende große Längeneinheiten. Eine Lichtjahresangabe und eine Jahresdauer sind verschieden; bei kosmologischen Entfernungen sind weitere Erklärungen nötig.",
+    "topic": "science-galaxy",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/light-year/en/",
+        "title": "NASA · Lichtjahr als Entfernungseinheit (Englisch)",
+        "anchor": "Definition der Längeneinheit und Zusammenhang mit der Lichtlaufzeit. Alte Entfernungsrekorde und kosmologische Distanzangaben sind nicht übernommen.",
+        "updatedOn": "2020-08-27",
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://www.astronomy.ohio-state.edu/pogge.1/Ast2292/Docs/AstronomicalConstants.pdf",
+        "title": "Ohio State University · Astronomische Einheiten und Konstanten (Englisch)",
+        "anchor": "Tabelle auf Seite1: Lichtgeschwindigkeit im Vakuum, julianisches Jahr mit365,25Tagen und Tag mit86400Sekunden. Originaltabelle direkt angesehen; Lichtjahrstrecke unabhängig daraus berechnet.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Galaxie",
+        "reason": "Galaxien sind räumliche Systeme; ein Lichtjahr ist eine Entfernungsangabe. Ein Jahressymbol ist keine Messung ihrer Größe oder ihres Alters."
+      }
+    ],
+    "question": {
+      "prompt": "Was bedeutet eine Strecke von zwei Lichtjahren im ruhenden Vakuummodell?",
+      "answers": [
+        "Jedes Raumschiff braucht dafür genau zwei Jahre.",
+        "Lichtjahr ist hier eine gewöhnliche Einheit für die Zeitdauer.",
+        "Licht legt diese Strecke im Modell in zwei julianischen Jahren zurück."
+      ],
+      "correct": 2,
+      "hint": "Unterscheide die Strecke, die festgelegte Ausbreitungsgeschwindigkeit und die dafür benötigte Dauer.",
+      "why": "Das Lichtjahr ist über die Lichtstrecke im Vakuum definiert. Zwei Lichtjahre sind daher eine Länge, die Licht unter diesen Modellbedingungen in zwei julianischen Jahren zurücklegt.",
+      "wrongReasons": [
+        "Die Reisezeit eines Raumschiffs hängt von seiner Geschwindigkeit und weiteren Bedingungen ab; sie folgt nicht allein aus der Entfernungseinheit.",
+        "Die Definition ergibt eine Länge. Die verwendete Zeitdauer macht Lichtjahr nicht zur Zeiteinheit.",
+        ""
+      ]
+    },
+    "figure": "lightyear-distance-unit",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum können wir nicht jeden Exoplaneten durch einen Transit finden?",
+    "definition": "Für einen beobachtbaren Transit muss die Bahn aus unserer Blickrichtung passend liegen. Dann kann der Planet vor seinem Stern vorbeiziehen. Eine andere Ausrichtung kann diesen Blick verdecken, obwohl ein Planet vorhanden ist.",
+    "starter": "Ein wichtiger Grund ist die Blickrichtung: Ein Planet muss aus unserer Sicht vor der Sternscheibe vorbeiziehen, damit dieser Durchgang als Transit sichtbar werden kann. Eine passende Anordnung ist nicht bei jeder Bahn gegeben.",
+    "deeper": "Ein Helligkeitsabfall braucht zusätzliche Prüfung; er ist nicht automatisch ein vollständiger Planetennachweis. Umgekehrt beweist ein fehlender Transit nicht, dass es keinen Planeten gibt.",
+    "observe": "Wechsle im Scheibenmodell zwischen „Mittig davor“ und „Daneben“. Beschreibe, ob sich die projizierten Scheiben überdecken und ob der kleine Körper in beiden Ansichten weiter vorhanden ist. Das Modell zeigt gewählte Projektionen, keine ganze reale Bahn.",
+    "benefit": "Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis.",
+    "topic": "science-exoplanet",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/transits/en/",
+        "title": "NASA · Transit (Englisch)",
+        "anchor": "Ein Transit braucht eine passende Sichtgeometrie: Der Planet zieht aus der betrachteten Richtung vor seinem Stern vorbei und verdeckt einen Teil des Sternlichts. Die Methode findet deshalb nicht jeden vorhandenen Planeten.",
+        "updatedOn": "2024-03-29",
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://exoplanetarchive.ipac.caltech.edu/docs/PurposeOfKOITable.html",
+        "title": "NASA Exoplanet Archive · Kandidaten und Fehlalarme (Englisch)",
+        "anchor": "DR25-Dokumentation zu bedeckenden Doppelsternen, fremden Lichtquellen und zusätzlichen Prüfungen; keine aktuellen Katalogmengen übernommen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Transit",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Transit“: Du trennst Beobachtbarkeit, Hinweis und gesicherten Nachweis."
+      }
+    ],
+    "connection": "Im Transitschema der Exoplanetenkarte vergleichst du Blickrichtung und einen möglichen Helligkeitseinbruch. Ein Planet kann vorhanden sein, ohne aus unserer Richtung vor dem Stern vorbeizuziehen.",
+    "question": {
+      "prompt": "Bei „Daneben“ ist der kleine Körper im Scheibenmodell weiterhin vorhanden. Welche Folgerung passt?",
+      "answers": [
+        "Ohne Überdeckung gibt es den kleinen Körper nicht.",
+        "Ein fehlender Transit aus einer bestimmten Richtung schließt einen vorhandenen Planeten nicht aus.",
+        "Jeder Planet muss aus jeder Blickrichtung denselben Helligkeitsabfall erzeugen."
+      ],
+      "correct": 1,
+      "hint": "Trenne die sichtbare Lage der Scheiben von der Frage, ob der kleine Körper vorhanden ist.",
+      "why": "Ohne Überdeckung entsteht aus dieser Blickrichtung im Modell kein Transit. Der kleine Körper kann trotzdem existieren. Ein beobachtbarer Transit braucht eine passende Sichtgeometrie.",
+      "wrongReasons": [
+        "Der Körper bleibt im Modell vorhanden, obwohl er nicht vor der Sternscheibe liegt.",
+        "",
+        "Die Blickrichtung kann entscheiden, ob überhaupt eine Überdeckung sichtbar wird."
+      ]
+    },
+    "figure": "transit-projection",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum zeigt ein Kometenschweif nicht einfach die Flugrichtung an?",
+    "definition": "Abgegebenes Gas und Staub werden auch von Sonnenlicht und Sonnenwind beeinflusst. Der Schweif ist deshalb nicht bloß eine Spur wie hinter einem fahrenden Fahrzeug. Eine Bahn und abgegebenes Material sind verschiedene Dinge.",
+    "starter": "Der Komet bewegt sich, und sein abgegebenes Material reagiert auch auf die Sonne.",
+    "deeper": "Gas- und Staubschweife können unterschiedlich aussehen. Ein gezeichnetes Schweifzeichen berechnet weder die echte Bahn noch eine vollständige Form oder Sichtbarkeit.",
+    "observe": "Vergleiche im Richtungsschema „Rechts von der Sonne“ mit „Schräg oberhalb“. Der gestrichelte Pfeil bezeichnet jeweils eine gedachte Bewegung nach oben. Beschreibe getrennt die Richtung des Bewegungspfeils und die Lage des Materialbereichs zur Sonne.",
+    "benefit": "Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material.",
+    "topic": "science-comet",
+    "sources": [
+      {
+        "url": "https://science.nasa.gov/solar-system/comets/facts/",
+        "title": "NASA · Kometen (Englisch)",
+        "anchor": "Die Abschnitte zu Kern und Koma sowie Sonnenlichtdruck und Sonnenwind erklären freigesetztes Gas und Staub und Material, das von der Sonne weggetrieben werden kann. Staub- und Ionenschweif sind zu unterscheiden.",
+        "updatedOn": "2026-09-21",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Komet",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Komet“: Du unterscheidest Körperbewegung und Wirkung auf abgegebenes Material."
+      }
+    ],
+    "connection": "Die Kometenkarte trennt Kometenkörper, Staub- und Gasschweif. Vergleiche die Wirkung von Sonnenlicht und Sonnenwind mit der Bewegungsrichtung des Körpers.",
+    "question": {
+      "prompt": "Im Schema zeigen der gestrichelte Bewegungspfeil und der Materialbereich in unterschiedliche Richtungen. Welche Erklärung passt?",
+      "answers": [
+        "Der Schweif zeigt immer genau entgegen der Flugrichtung.",
+        "Sonneneinfluss kann abgegebenes Material von der Sonne wegtreiben; die Flugrichtung ist eine andere Angabe.",
+        "Der Schweif muss immer zur Sonne zeigen, weil auf das Material ausschließlich Anziehung wirkt."
+      ],
+      "correct": 1,
+      "hint": "Welcher Pfeil beschreibt den Kometenkörper, welcher eine Wirkung auf abgegebenes Material?",
+      "why": "Sonnenlicht und Sonnenwind wirken auf abgegebenes Material. Die schematische Materialrichtung darf nicht mit dem Bahnpfeil gleichgesetzt werden. Diese Unterscheidung berechnet noch keine ganze reale Schweifform.",
+      "wrongReasons": [
+        "Die Bewegungsrichtung kann quer zur von der Sonne weg gerichteten schematischen Materialrichtung liegen. Immer direkt hinter dem Körper ist keine allgemeine Schweifregel.",
+        "",
+        "Die NASA-Beschreibung nennt auch Sonnenlichtdruck und Sonnenwind, die Material von der Sonne wegtreiben können. Anziehung ist nicht die einzige Wirkung auf dieses Material."
+      ]
+    },
+    "figure": "comet-material-directions",
+    "sourceReadOn": "2026-10-31"
+  }
+]

@@ -1,4 +1,5 @@
 import {withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
+import {withDigitalPreAstronomyRuntime,ASTRONOMY_CURRENT_RUNTIME} from './astronomy-predecessor-reference.mjs';
 import digitalFixture from './fixtures/digital-statistics-runtime-predecessor.json' with {type:'json'};
 import {withGenePreStatisticsRuntime} from './statistics-predecessor-reference.mjs';
 import statisticsFixture from './fixtures/statistics-gene-runtime-predecessor.json' with {type:'json'};
@@ -25,6 +26,7 @@ export function cellPredecessors(items){
  return items;
 }
 export function mechanicsPreCellFingerprint(root){
+ if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===statisticsFixture.currentRuntimeBuild)return withGenePreStatisticsRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===geneFixture.currentRuntimeBuild)return withCellPreGeneRuntime(root,mechanicsPreCellFingerprint);
