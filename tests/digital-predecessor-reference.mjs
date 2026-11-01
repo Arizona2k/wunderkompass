@@ -5,6 +5,7 @@ import os from 'node:os';
 import {createHash} from 'node:crypto';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
 import fixture from './fixtures/digital-statistics-runtime-predecessor.json' with {type:'json'};
+import {astronomyPredecessors,withDigitalPreAstronomyRuntime,ASTRONOMY_CURRENT_RUNTIME} from './astronomy-predecessor-reference.mjs';
 
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const whole=value=>sha(JSON.stringify(value));
@@ -13,6 +14,7 @@ const history='historicalUIBeforeDigital20261101';
 // A current UI fixture can only be created after genuine integrated full and
 // visual qualification. Until then the twelve individual reviews are content-only.
 export function digitalPredecessors(items){
+ if(items.length>=190)items=astronomyPredecessors(items);
  assert.equal(items.length,189);
  const expected=[...fixture.whole177PredecessorDossiers,...fixture.newTwelveContentOnlyBeforeActualUI];
  assert.deepEqual(items.map(row=>row.id),expected.map(row=>row.id));
@@ -36,6 +38,7 @@ export function digitalPredecessors(items){
 }
 
 export function withStatisticsPreDigitalRuntime(root,inspect){
+ if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,prior=>withStatisticsPreDigitalRuntime(prior,inspect));
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const build=learningFingerprint(root);
  if(build===fixture.predecessorRuntimeBuild){

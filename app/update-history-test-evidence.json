@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "a6b27330738159841f3951f92de6c0136ff9ecf0",
+    "commit": "cf46b9ebc4f031ed35f12b263e852dc432e6243e",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -80,7 +80,8 @@
       "dbb2ade5f373ae56587084e1dce5636939e1199c",
       "a142a437917efd5b2f422a4eeb11224ef37f0e57",
       "81afa89ab2c6ce5c120be3aaec54ffca15d851c1",
-      "a6b27330738159841f3951f92de6c0136ff9ecf0"
+      "a6b27330738159841f3951f92de6c0136ff9ecf0",
+      "cf46b9ebc4f031ed35f12b263e852dc432e6243e"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -2137,6 +2138,28 @@
           "createdAt": "2026-11-01T04:18:10Z",
           "updatedAt": "2026-11-01T04:18:10Z",
           "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/AvhtAoX3Ba95N19nsDF9Yh7W244t"
+        }
+      ],
+      "checkedOn": "2026-11-01"
+    },
+    {
+      "number": 86,
+      "title": "Digitales Wissen mit sieben bedienbaren Lernmodellen vernetzen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/86",
+      "base": "test-live",
+      "mergedAt": "2026-11-01T17:15:57Z",
+      "mergeCommit": "cf46b9ebc4f031ed35f12b263e852dc432e6243e",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/cf46b9ebc4f031ed35f12b263e852dc432e6243e/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57787439023,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-01T17:16:14Z",
+          "updatedAt": "2026-11-01T17:16:14Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/6SHjdMCprZPmsmESDbcovLihB8zK"
         }
       ],
       "checkedOn": "2026-11-01"

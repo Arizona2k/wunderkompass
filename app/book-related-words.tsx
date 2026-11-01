@@ -8,9 +8,10 @@ import incomingCell from './book-cell-word-link-index.json';
 import incomingGene from './book-gene-word-link-index.json';
 import incomingStatistics from './book-statistics-word-link-index.json';
 import incomingDigital from './book-digital-word-link-index.json';
+import incomingAstronomy from './book-astronomy-word-link-index.json';
 
 const incoming:Record<string,{term:string;reason:string}[]>={};
-for(const pack of [incomingLight,incomingWater,incomingParticle,incomingMechanics,incomingCell,incomingGene,incomingStatistics,incomingDigital])for(const [term,links]of Object.entries(pack))(incoming[term]??=[]).push(...links);
+for(const pack of [incomingLight,incomingWater,incomingParticle,incomingMechanics,incomingCell,incomingGene,incomingStatistics,incomingDigital,incomingAstronomy])for(const [term,links]of Object.entries(pack))(incoming[term]??=[]).push(...links);
 
 /** Small generated incoming edges keep existing words connected as a pack grows. */
 export function BookRelatedWords({term}:{term:string}){

@@ -7,6 +7,7 @@ import {validateDigitalPack,DIGITAL_WORDS,DIGITAL_QUESTIONS} from '../app/book-d
 import {bookDigitalContent} from '../scripts/book-digital-index.mjs';
 import {digitalPredecessors,withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
+import {astronomyPredecessors,withDigitalPreAstronomyRuntime} from './astronomy-predecessor-reference.mjs';
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const sha=value=>createHash('sha256').update(value).digest('hex'),whole=value=>sha(JSON.stringify(value));
 const pack=read('app/book-digital-content.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json');
@@ -39,7 +40,7 @@ test('all displayed SHA-256 examples match independent UTF-8 cryptography and al
  for(const input of['','a'.repeat(63),'g'.repeat(64),'A'.repeat(64)])assert.throws(()=>digestBits(input));
 });
 test('twelve distinct Digital studies preserve every delivered150/47 tuple, order and nine whole old packs',()=>{
- assert.deepEqual(bookDigitalContent(true),pack);assert.equal(words.length,159);assert.equal(new Set(words.map(row=>row.term)).size,159);assert.equal(why.length,50);assert.equal(new Set(why.map(row=>row.question)).size,50);assert.equal(DIGITAL_WORDS.length,9);assert.equal(DIGITAL_QUESTIONS.length,3);assert.equal(read('exports/content/book-digital.json').length,12);
+ assert.deepEqual(bookDigitalContent(true),pack);assert.equal(words.length,165);assert.equal(new Set(words.map(row=>row.term)).size,165);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(DIGITAL_WORDS.length,9);assert.equal(DIGITAL_QUESTIONS.length,3);assert.equal(read('exports/content/book-digital.json').length,12);
  const old=read('tests/fixtures/book-before-digital-150-hashes.json');assert.equal(Object.keys(old.words).length,150);assert.equal(Object.keys(old.why).length,47);assert.equal(Object.keys(old.packs).length,9);
  for(const[term,hash]of Object.entries(old.words))assert.equal(whole(words.find(row=>row.term===term)),hash,term);
  assert.deepEqual(why.slice(0,47).map(row=>row.question),old.whyOrder);
@@ -65,11 +66,12 @@ import {validateDossier} from '../scripts/editorial-contract.mjs';
 const currentDigitalFixture=read('tests/fixtures/editorial-before-digital-177.json');
 const currentDigitalInventory=collectInventory(),currentDigitalRecords=new Map(currentDigitalInventory.records.map(row=>[row.id,row])),currentDigitalKnownIds=new Set(currentDigitalRecords.keys());
 function assertActualCurrent189(items){
- assert.equal(items.length,189);assert.equal(currentDigitalFixture.priorDossiers.length,177);assert.equal(currentDigitalFixture.addedDossiers.length,12);assert.equal(currentDigitalFixture.currentTemplate.build,learningFingerprint(process.cwd()));
+ items=astronomyPredecessors(items);
+ assert.equal(items.length,189);assert.equal(currentDigitalFixture.priorDossiers.length,177);assert.equal(currentDigitalFixture.addedDossiers.length,12);assert.equal(currentDigitalFixture.currentTemplate.build,withDigitalPreAstronomyRuntime(process.cwd(),learningFingerprint));
  const old=digitalPredecessors(items),baseline=read('tests/fixtures/book-before-digital-150-hashes.json');assert.deepEqual(old.map(row=>({id:row.id,sha256:whole(row)})),baseline.whole177PredecessorDossiers);
  const expectedIds=[...DIGITAL_WORDS.map(term=>'words:'+term),...DIGITAL_QUESTIONS.map(question=>'why:'+why.findIndex(row=>row.question===question))];assert.equal(new Set(expectedIds).size,12);assert.deepEqual(currentDigitalFixture.addedDossiers.map(row=>row.id),expectedIds);
  const teaching=read('exports/content/book-digital.json');
- for(const item of items){const record=currentDigitalRecords.get(item.id);assert(record,item.id);assert.equal(validateDossier(item,record,{build:learningFingerprint(process.cwd()),knownIds:currentDigitalKnownIds}).structurallyReady,true,item.id+' actual current technical contract');}
+ for(const item of items){const record=currentDigitalRecords.get(item.id);assert(record,item.id);assert.equal(validateDossier(item,record,{build:currentDigitalFixture.currentTemplate.build,knownIds:currentDigitalKnownIds}).structurallyReady,true,item.id+' actual current technical contract');}
  for(const id of expectedIds){const dossier=items.find(row=>row.id===id),record=currentDigitalRecords.get(id);assert(dossier&&record);assert.equal(dossier.dataHash,record.dataHash);const word=record.family==='words',key=word?record.legacyId:why[record.sourceIndex].question,canonical=word?words.find(row=>row.term===key):why[record.sourceIndex];assert.equal(record.dataHash,fingerprint(canonical));const lesson=teaching.find(row=>row.kind===(word?'word':'why')&&(word?row.term:row.whyQuestion)===key);assert(lesson);assert.equal(dossier.teachingDataHash,fingerprint(lesson));assert.deepEqual(dossier.sources.map(row=>row.url),(word?pack.learning:pack.whyLearning)[key].sources.map(row=>row.url));assert.equal(dossier.ui.route,record.route);}
 }
 test('all189 current UI contracts preserve the177 entire M85 predecessors and twelve individually authored Digital studies',()=>assertActualCurrent189(read('content/editorial-reviews.json').dossiers));
