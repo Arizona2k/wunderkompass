@@ -6,10 +6,11 @@ export function statisticsPredecessors(items){
  const qualified='tests/fixtures/editorial-before-statistics-166.json',actual=fs.existsSync(qualified)?JSON.parse(fs.readFileSync(qualified,'utf8')):null;
  const prior=items.slice(0,166).map((x,i)=>{
   const p=fixture.whole166PredecessorDossiers[i];assert.equal(x.id,p.id);const original=structuredClone(x);
+  if(actual?.uiRevision){const revision=actual.uiRevision;assert.deepEqual(x[revision.historyField],{...revision.previousTemplate,route:x.ui.route});delete original[revision.historyField];}
   if(actual){assert.deepEqual(x[history],p.ui);assert.deepEqual(x.ui,{...actual.currentTemplate,route:p.ui.route});original.ui=original[history];delete original[history];}else assert(!Object.hasOwn(x,history),'no premature statistics UI history');
   assert.equal(fp(original),p.sha256,'every entire old M84 dossier and nested history stays exact: '+p.id);return original;
  });
- for(const[x,i]of items.slice(166).map((x,i)=>[x,i])){assert(!Object.hasOwn(x,history));const original=structuredClone(x);if(actual){assert.deepEqual(x.ui,{...actual.currentTemplate,route:actual.addedDossiers[i].route});delete original.ui;}else assert(!Object.hasOwn(x,'ui'),'no invented full UI before genuine full');assert.equal(fp(original),fixture.newElevenContentOnlyBeforeActualUI[i].sha256,'whole new individual content-only dossier stays exact');}
+ for(const[x,i]of items.slice(166).map((x,i)=>[x,i])){assert(!Object.hasOwn(x,history));const original=structuredClone(x);if(actual?.uiRevision){const revision=actual.uiRevision;assert.deepEqual(x[revision.historyField],{...revision.previousTemplate,route:x.ui.route});delete original[revision.historyField];}if(actual){assert.deepEqual(x.ui,{...actual.currentTemplate,route:actual.addedDossiers[i].route});delete original.ui;}else assert(!Object.hasOwn(x,'ui'),'no invented full UI before genuine full');assert.equal(fp(original),fixture.newElevenContentOnlyBeforeActualUI[i].sha256,'whole new individual content-only dossier stays exact');}
  return prior;
 }
 export function withGenePreStatisticsRuntime(root,inspect){

@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useRef,useSyncExternalStore} from 'react';
+import {bookLookup} from './book-location';
 const EVENT='wunder-route';
 const read=()=>window.location.hash.slice(1)||'home';
 // Pin a legacy resume alias to its actual chapter without adding a history entry.
@@ -12,6 +13,10 @@ export function navigateHash(path:string,options:{preserveControl?:boolean;repla
  const hero=document.querySelector<HTMLElement>('[data-discovery-hero]')?.dataset.discoveryHero;
  const trail=document.querySelector<HTMLElement>('[data-discovery-trail-current]')?.dataset.discoveryTrailCurrent;
  history.replaceState({...history.state,wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open,...(hero?{wunderHero:hero}:{}),...(trail?{wunderTrail:trail}:{})},'',location.href);
+ // A normal fragment navigation creates its own native history entry. The
+ // untouched book lookup is fully described by that URL; only the departing
+ // entry needs its reading position and actual opener saved above.
+ if(bookLookup(path)&&!options.replace&&!options.preserveControl&&!options.returnChapter){location.hash=path;window.dispatchEvent(new CustomEvent(EVENT,{detail:{bookLookup:true}}));return;}
  const next={wunderRoute:true,...(options.returnChapter?{wunderReturnChapter:options.returnChapter}:{}),...(options.preserveControl?{wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open}:{})};
  if(options.replace)history.replaceState(next,'','#'+path);else history.pushState(next,'','#'+path);window.dispatchEvent(new Event(EVENT));
 }catch{location.hash=path;}}
@@ -26,7 +31,8 @@ export function restoreRouteView(path:string,focus=true){
  if((path==='home'||path==='globe'||path==='updates'||path==='world'||path.startsWith('world/')||path==='book'||path.startsWith('book/')||path==='journeys'||path.startsWith('journeys/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
- const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===state?.wunderFocus&&el.getClientRects().length);
+ const lookup=bookLookup(path),focusKey=state?.wunderFocus??(!state?.wunderBook&&lookup?(lookup.tab==='words'?'book-word-target-':'book-why-target-')+lookup.term:undefined);
+ const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===focusKey&&el.getClientRects().length);
  if(opener){
   opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();
   // A tall card cannot fit inside a short/zoomed viewport. Keep its saved

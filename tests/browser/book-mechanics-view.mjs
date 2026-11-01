@@ -110,6 +110,19 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
    await context.close();context=null;
   }
   assert.equal(rapid.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.rapidReverseLinks=rapid.bookRelatedWords;
+  // Also retain one uninterrupted browser history across both widths. A
+  // following real query must work after all fast Back roundtrips; resetting
+  // the context per width alone missed the actual cached-WebKit failure.
+  context=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
+  child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);
+  const continuous={};
+  for(const width of[320,1440]){
+   await child.setViewportSize({width,height:900});await child.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),width===320);
+   await bookRelatedWordView(child,continuous,width,{large:width===320,engine});
+  }
+  assert.equal(continuous.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.continuousRapidReverseLinks=continuous.bookRelatedWords;
+  const input=child.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await input.fill('Reflexion');await child.locator('.word-card').getByRole('heading',{name:'Reflexion',exact:true}).waitFor();proof.continuousRapidFollowupSearch=true;
+  await context.close();context=null;
   assert(browserErrorsComplete(proof));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}

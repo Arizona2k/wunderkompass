@@ -45,3 +45,8 @@ test('all raw177 current dossiers retain166 whole delivered predecessors and ele
 test('current177UI rejects stale binding, mismatched teaching, changed old facts, reordered IDs and lost nested histories',()=>{
  for(const mutate of[rows=>rows[166].ui.build='stale',rows=>rows[166].teachingDataHash='0'.repeat(64),rows=>rows[166].dataHash='0'.repeat(64),rows=>rows[0].explanation+=' Unreviewed.',rows=>delete rows[0].historicalUIBeforeStatistics20261031,rows=>delete rows[0].historicalUIBeforeGene20261031,rows=>delete rows[0].historicalUIBeforeCell20261031,rows=>rows.reverse(),rows=>rows.pop()]){const changed=structuredClone(read('content/editorial-reviews.json').dossiers);mutate(changed);assert.throws(()=>assertActualCurrent177(changed));}
 });
+
+test('the current177 technical history revision preserves every whole previous statistics dossier and rejects lost or changed prior UI',()=>{
+ const raw=read('content/editorial-reviews.json').dossiers,revision=currentUIFixture.uiRevision;assert(revision);assert.equal(revision.whole177Before.length,177);assert.deepEqual(raw.map(x=>({id:x.id,sha256:fingerprint(currentUIReference.beforeCurrentUIRevision(x))})),revision.whole177Before);
+ for(const mutate of[rows=>delete rows[0][revision.historyField],rows=>rows[166][revision.historyField].report+=' changed',rows=>rows[176][revision.historyField].build='unobserved',rows=>rows[0].explanation+=' changed']){const changed=structuredClone(raw);mutate(changed);assert.throws(()=>assertActualCurrent177(changed));}
+});
