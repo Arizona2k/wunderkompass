@@ -1,5 +1,5 @@
 import {revealBookWords} from './book-pagination.mjs';
-import {assertEnzymeEndpoints} from './book-gene-diagrams.mjs';
+import {assertEnzymeEndpoints,assertGeneNumberedLegend} from './book-gene-diagrams.mjs';
 // Shared gene learning checks for the existing regular and cold browser callers.
 import {assertBookGeneFigure} from './book-gene-diagrams.mjs';
 import fs from 'node:fs/promises';
@@ -94,6 +94,13 @@ export async function bookGeneNetworkView(page,{shots=null,engine='chromium'}={}
   // Deliberate meaningful negative, not a claim about a former product bug.
   try{await curve.evaluate((node,value)=>node.setAttribute('d',value),original.replace(/282 170$/,'282 145'));await assert.rejects(()=>assertEnzymeEndpoints(figure),/same start and end/);}finally{await curve.evaluate((node,value)=>node.setAttribute('d',value),original);}
   await assertEnzymeEndpoints(figure);proof.differentEnergyEndpointNegativeDetected=true;
+  const numberedTerm=Object.keys(pack.learning).find(term=>pack.learning[term].figure==='nucleotide-parts');assert(numberedTerm);
+  await child.evaluate(term=>location.hash='book/words/'+encodeURIComponent(term),numberedTerm);
+  const numberedStudy=cardFor(child,numberedTerm).locator('[data-book-gene-study]');await numberedStudy.waitFor();if(!await numberedStudy.evaluate(e=>e.open))await numberedStudy.locator(':scope>summary').click();
+  const numbered=numberedStudy.locator('[data-book-gene-figure="nucleotide-parts"]');await numbered.locator('ol').waitFor();await assertGeneNumberedLegend(numbered.locator('figure'));
+  const legend=numbered.locator('figure>ol'),originalLegendStyle=await legend.getAttribute('style');
+  try{await legend.evaluate(el=>el.style.listStyleType='none');await assert.rejects(()=>assertGeneNumberedLegend(numbered.locator('figure')),/requires visible decimal markers/);}finally{await legend.evaluate((el,style)=>{if(style===null)el.removeAttribute('style');else el.setAttribute('style',style);},originalLegendStyle);}
+  await assertGeneNumberedLegend(numbered.locator('figure'));proof.hiddenNumberedLegendNegativeDetected=true;
   assert(browserErrorsComplete(proof));return proof;
  }catch(error){
   if(shots&&child){

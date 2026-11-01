@@ -47,6 +47,12 @@ test('current177UI rejects stale binding, mismatched teaching, changed old facts
 });
 
 test('the current177 technical history revision preserves every whole previous statistics dossier and rejects lost or changed prior UI',()=>{
- const raw=read('content/editorial-reviews.json').dossiers,revision=currentUIFixture.uiRevision;assert(revision);assert.equal(revision.whole177Before.length,177);assert.deepEqual(raw.map(x=>({id:x.id,sha256:fingerprint(currentUIReference.beforeCurrentUIRevision(x))})),revision.whole177Before);
- for(const mutate of[rows=>delete rows[0][revision.historyField],rows=>rows[166][revision.historyField].report+=' changed',rows=>rows[176][revision.historyField].build='unobserved',rows=>rows[0].explanation+=' changed']){const changed=structuredClone(raw);mutate(changed);assert.throws(()=>assertActualCurrent177(changed));}
+ const raw=read('content/editorial-reviews.json').dossiers;assert(currentUIFixture.uiRevision);let previous=raw;
+ for(let revision=currentUIFixture.uiRevision;revision;revision=revision.previousRevision){
+  assert.equal(revision.whole177Before.length,177);
+  const reference=statisticsHistoryReference({...currentUIFixture,uiRevision:revision},currentUIFixture.currentTemplate);
+  previous=previous.map(reference.beforeCurrentUIRevision);
+  assert.deepEqual(previous.map(x=>({id:x.id,sha256:fingerprint(x)})),revision.whole177Before);
+  for(const mutate of[rows=>delete rows[0][revision.historyField],rows=>rows[166][revision.historyField].report+=' changed',rows=>rows[176][revision.historyField].build='unobserved',rows=>rows[0].explanation+=' changed']){const changed=structuredClone(raw);mutate(changed);assert.throws(()=>assertActualCurrent177(changed));}
+ }
 });

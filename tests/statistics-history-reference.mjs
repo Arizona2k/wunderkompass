@@ -15,20 +15,26 @@ export function statisticsHistoryReference(fixture,currentTemplate){
  assert(['visible','search','back','offline'].every(key=>currentTemplate[key]===true));
  assert.equal(typeof currentTemplate.report,'string');assert(currentTemplate.report.length>0);
  assert(!Object.hasOwn(currentTemplate,'route'));
- function beforeCurrentUIRevision(item){
-  const original=structuredClone(item),revision=fixture.uiRevision;
+ function restoreUIRevision(item,revision){
+  const original=structuredClone(item);
   if(!revision)return original;
   assert.equal(typeof revision.historyField,'string');assert(revision.historyField.startsWith('historicalUIBeforeStatistics'));
-  assert(Object.hasOwn(item,revision.historyField),'missing previous whole statistics UI '+item.id);
-  assert.deepEqual(item[revision.historyField],{...revision.previousTemplate,route:item.ui.route},'changed previous statistics UI '+item.id);
+  assert(Object.hasOwn(original,revision.historyField),'missing previous whole statistics UI '+original.id);
+  assert.deepEqual(original[revision.historyField],{...revision.previousTemplate,route:original.ui.route},'changed previous statistics UI '+original.id);
   original.ui=original[revision.historyField];delete original[revision.historyField];return original;
+ }
+ function beforeCurrentUIRevision(item){return restoreUIRevision(item,fixture.uiRevision);}
+ function beforeAllUIRevisions(item){
+  let original=structuredClone(item);
+  for(let revision=fixture.uiRevision;revision;revision=revision.previousRevision)original=restoreUIRevision(original,revision);
+  return original;
  }
  function beforeStatisticsUI(item){
   if(!Object.hasOwn(item,history))return item;
   const saved=prior.get(item.id);assert(saved,'unknown statistics UI history '+item.id);
   assert.deepEqual(item[history],saved.ui,'changed prior statistics UI '+item.id);
   assert.deepEqual(item.ui,{...currentTemplate,route:saved.ui.route},'unreviewed statistics current UI '+item.id);
-  const original=beforeCurrentUIRevision(item);original.ui=original[history];delete original[history];
+  const original=beforeAllUIRevisions(item);original.ui=original[history];delete original[history];
   // Whole prior hashes remain mandatory in assertCurrentStatisticsSharedUI.
   // Field-only historical projection lets original complete-hash countercases
   // expose unrelated mutations without concealing or rewriting them.
@@ -39,10 +45,12 @@ export function statisticsHistoryReference(fixture,currentTemplate){
   assert.equal(current.size,177);assert.equal(items.length,177);
   assert.deepEqual(new Set(current.keys()),new Set([...prior.keys(),...added.keys()]),'unreviewed statistics dossier identities');
   assert.deepEqual(items.map(item=>item.id),[...prior.keys(),...added.keys()],'changed statistics current dossier identities or order');
-  if(fixture.uiRevision){
-   assert.equal(fixture.uiRevision.whole177Before.length,177);
-   assert.deepEqual(items.map(item=>item.id),fixture.uiRevision.whole177Before.map(row=>row.id));
-   for(const[item,index]of items.map((item,index)=>[item,index]))assert.equal(digest(beforeCurrentUIRevision(item)),fixture.uiRevision.whole177Before[index].sha256,'every whole prior statistics dossier remains exact '+item.id);
+  let previous=items;
+  for(let revision=fixture.uiRevision;revision;revision=revision.previousRevision){
+   assert.equal(revision.whole177Before.length,177);
+   assert.deepEqual(previous.map(item=>item.id),revision.whole177Before.map(row=>row.id));
+   previous=previous.map(item=>restoreUIRevision(item,revision));
+   for(const[item,index]of previous.map((item,index)=>[item,index]))assert.equal(digest(item),revision.whole177Before[index].sha256,'every whole prior statistics dossier remains exact '+item.id);
   }
   for(const [id,saved]of prior){
    const item=current.get(id);assert(Object.hasOwn(item,history),'missing current statistics history '+id);
@@ -55,5 +63,5 @@ export function statisticsHistoryReference(fixture,currentTemplate){
    assert.equal(digest(item),saved.wholeSHA256,'unreviewed complete new statistics dossier '+id);
   }
  }
- return {beforeStatisticsUI,beforeCurrentUIRevision,assertCurrentStatisticsSharedUI};
+ return {beforeStatisticsUI,beforeCurrentUIRevision,beforeAllUIRevisions,assertCurrentStatisticsSharedUI};
 }

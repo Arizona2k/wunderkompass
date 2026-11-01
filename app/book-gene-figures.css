@@ -17,6 +17,7 @@
 .book-gene-strip li[data-different=true]{border:3px double #9b4d1d;background:#fff0df}
 .book-gene-route{display:grid;grid-template-columns:1fr;gap:12px;padding:0;list-style:none}.book-gene-route>li{padding:14px;border-bottom:1px solid var(--wk-line,#ccd8d6)}
 .book-gene-model ol:not(.book-gene-route){padding-inline-start:24px}
+.book-gene-model>ol:not(.book-gene-route):not(.book-gene-strip){list-style-type:decimal}
 .large-reading .book-gene-model h4{font-size:24px}.large-reading .book-gene-model svg text{font-size:26px}
 .knowledge-book [data-book-gene-figure] :is(figcaption,li,.model-caption){font-size:16px}.large-reading .knowledge-book [data-book-gene-figure] :is(figcaption,li,.model-caption){font-size:20px!important}
 @media(min-width:768px){.book-gene-route{grid-template-columns:repeat(3,minmax(0,1fr))}}
