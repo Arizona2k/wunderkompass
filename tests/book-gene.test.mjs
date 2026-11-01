@@ -7,7 +7,7 @@ import {bookGeneContent} from '../scripts/book-gene-index.mjs';
 const read=name=>JSON.parse(fs.readFileSync(name,'utf8')),pack=read('app/book-gene-content.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json'),digest=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('eight distinct genetics words and two Why studies have exact complete canonical, teaching and source-integrity payloads',()=>{
  assert.deepEqual(bookGeneContent(true),pack);assert.deepEqual(validateGenePack(structuredClone(pack)),pack);
- assert.equal(words.length,150);assert.equal(new Set(words.map(row=>row.term)).size,150);assert.equal(why.length,47);assert.equal(new Set(why.map(row=>row.question)).size,47);
+ assert.equal(words.length,159);assert.equal(new Set(words.map(row=>row.term)).size,159);assert.equal(why.length,50);assert.equal(new Set(why.map(row=>row.question)).size,50);
  const raw=fs.readFileSync('app/book-gene-content.json');assert.deepEqual(read('app/book-gene-integrity.json'),{bytes:raw.length,sha256:createHash('sha256').update(raw).digest('hex')});
  const teaching=read('exports/content/book-gene.json');assert.equal(teaching.length,10);
  for(const term of GENE_WORDS){const row=words.find(w=>w.term===term);assert(row);assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert.deepEqual(teaching.find(e=>e.kind==='word'&&e.term===term),{kind:'word',term,definition:row.more,...pack.learning[term],sourceReadOn:pack.sourceReadOn});}

@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "word",
+    "term": "Algorithmus",
+    "topic": "science-computer",
+    "connection": "Die Computerkarte erklärt die Verarbeitung von Daten. Eine genaue Schrittfolge ergänzt, wie aus einer Eingabe nach einer festgelegten Regel ein Ergebnis entsteht."
+  },
+  {
+    "kind": "word",
+    "term": "Bit",
+    "topic": "science-computer",
+    "connection": "Die Computerkarte erklärt Datenverarbeitung. Ein Bit benennt eine Stelle; viele Stellen und vereinbarte Regeln erlauben unterschiedliche Darstellungen."
+  },
+  {
+    "kind": "word",
+    "term": "Byte",
+    "topic": "science-computer",
+    "connection": "Die Computerkarte trennt Daten von ihrer Verarbeitung. Ein Byte ist eine Größenangabe der Bitgruppe, keine Aussage, was diese Gruppe in einem Programm bedeutet."
+  },
+  {
+    "kind": "word",
+    "term": "Verschlüsselung",
+    "topic": "science-encryption",
+    "connection": "Die Verschlüsselungskarte lässt dich ein begrenztes Buchstabenspiel erkunden. Erkläre dabei ausdrücklich die Grenze zwischen Lernregel und echter Datensicherheit."
+  },
+  {
+    "kind": "word",
+    "term": "Schlüssel",
+    "topic": "science-encryption",
+    "connection": "Die Verschlüsselungskarte zeigt Regel und Verschiebung getrennt. Der konkrete Schlüssel einer echten Anwendung braucht andere Verfahren und Prüfungen als dieses Lernspiel."
+  },
+  {
+    "kind": "word",
+    "term": "Prüfsumme",
+    "topic": "science-checksum",
+    "connection": "Die Prüfsummenkarte zeigt einen begrenzten Zahlenvergleich. Erkläre gleiche Kontrollzahl, gleiche Daten und vertrauenswürdige Herkunft als verschiedene Aussagen."
+  },
+  {
+    "kind": "word",
+    "term": "Hashfunktion",
+    "topic": "science-checksum",
+    "connection": "Die Prüfsummenkarte erklärt den ersten Vergleichsschritt. Eine kryptografische Hashfunktion und eine geprüfte Herkunft sind zusätzliche, getrennte Anforderungen."
+  },
+  {
+    "kind": "word",
+    "term": "Datenstruktur",
+    "topic": "science-computer",
+    "connection": "Die Computerkarte erklärt Datenverarbeitung. Die Datenstruktur ergänzt, wie Informationen für bestimmte Vorgänge organisiert werden, ohne eine echte Laufzeit aus Papierformen abzuleiten."
+  },
+  {
+    "kind": "word",
+    "term": "Klartext",
+    "topic": "science-encryption",
+    "connection": "Die Verschlüsselungskarte vergleicht einen Ausgangstext mit seiner umgewandelten Form. Unterscheide diese Rollen vom Sprachverständnis und davon, wer Daten veröffentlichen darf."
+  },
+  {
+    "kind": "why",
+    "term": "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+    "topic": "science-checksum",
+    "connection": "Die Prüfsummenkarte zeigt, wie eine Veränderung auffallen kann. Trenne das Prüfergebnis von der Frage, wer die Nachricht geschickt hat und ob du diesem Absender vertrauen kannst."
+  },
+  {
+    "kind": "why",
+    "term": "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+    "topic": "science-encryption",
+    "connection": "Die Verschlüsselungskarte erklärt einen Schutzgedanken und seine Modellgrenzen. Eine sichtbare Rückdrehregel kann das Prinzip zeigen, liefert aber noch keinen geprüften sicheren Schutz."
+  },
+  {
+    "kind": "why",
+    "term": "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+    "topic": "science-computer",
+    "connection": "Die Computerkarte zeigt Darstellungen mit Nullen und Einsen. Unterscheide die Anzahl der Bitstellen von der Zahl oder Bedeutung, die eine bestimmte Folge darstellen soll."
+  }
+]

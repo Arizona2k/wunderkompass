@@ -10,7 +10,7 @@ test('scale ratios preserve the same real length and reject invalid denominators
  assert.deepEqual([50,100,200].map(s=>ratioLength(200,s)),[4,2,1]);assert.equal(ratioLength(200,100)*100,200);for(const n of[0,-1,Infinity,NaN])assert.throws(()=>ratioLength(200,n));assert.throws(()=>ratioLength(-1,100));
 });
 test('eleven distinct canonical studies retain all delivered142/44 values and eight whole earlier teaching packs',()=>{
- assert.deepEqual(bookStatisticsContent(true),pack);assert.equal(words.length,150);assert.equal(why.length,47);assert.equal(new Set(words.map(x=>x.term)).size,150);assert.equal(new Set(why.map(x=>x.question)).size,47);assert.equal(STATISTICS_WORDS.length,8);assert.equal(STATISTICS_QUESTIONS.length,3);assert.equal(read('exports/content/book-statistics.json').length,11);
+ assert.deepEqual(bookStatisticsContent(true),pack);assert.equal(words.length,159);assert.equal(why.length,50);assert.equal(new Set(words.map(x=>x.term)).size,159);assert.equal(new Set(why.map(x=>x.question)).size,50);assert.equal(STATISTICS_WORDS.length,8);assert.equal(STATISTICS_QUESTIONS.length,3);assert.equal(read('exports/content/book-statistics.json').length,11);
  const old=read('tests/fixtures/book-before-statistics-142-hashes.json');assert.equal(Object.keys(old.words).length,142);assert.equal(Object.keys(old.why).length,44);for(const[term,hash]of Object.entries(old.words))assert.equal(fp(words.find(x=>x.term===term)),hash,term);for(const[q,hash]of Object.entries(old.why))assert.equal(fp(why.find(x=>x.question===q)),hash,q);assert.equal(Object.keys(old.packs).length,8);for(const[file,hash]of Object.entries(old.packs))assert.equal(sha(fs.readFileSync(file)),hash,file);
  const base=read('content/excellence-baseline.json');assert.equal(base.families.find(x=>x.id==='words').count,90);assert.equal(base.families.find(x=>x.id==='why').count,30);
 });
@@ -29,10 +29,12 @@ test('the statistics layer preserves every whole M84 dossier and recomputes the 
 // Added only after genuine full qualification and actual original visual review.
 import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';
 import {validateDossier} from '../scripts/editorial-contract.mjs';
+import {digitalPredecessors,withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
 import {statisticsHistoryReference} from './statistics-history-reference.mjs';
 const currentUIFixture=read('tests/fixtures/editorial-before-statistics-166.json'),currentUIReference=statisticsHistoryReference(currentUIFixture,currentUIFixture.currentTemplate),currentInventory=collectInventory(),currentRecords=new Map(currentInventory.records.map(row=>[row.id,row])),currentKnownIds=new Set(currentRecords.keys()),statisticsTeaching=read('exports/content/book-statistics.json');
 function assertActualCurrent177(items){
- assert.equal(items.length,177);assert.equal(currentUIFixture.priorDossiers.length,166);assert.equal(currentUIFixture.addedDossiers.length,11);assert.equal(currentUIFixture.currentTemplate.build,learningFingerprint(process.cwd()));currentUIReference.assertCurrentStatisticsSharedUI(items);
+ if(items.length>=178)items=digitalPredecessors(items);
+ assert.equal(items.length,177);assert.equal(currentUIFixture.priorDossiers.length,166);assert.equal(currentUIFixture.addedDossiers.length,11);assert.equal(currentUIFixture.currentTemplate.build,withStatisticsPreDigitalRuntime(process.cwd(),learningFingerprint));currentUIReference.assertCurrentStatisticsSharedUI(items);
  const expectedIds=[...STATISTICS_WORDS.map(term=>'words:'+term),...STATISTICS_QUESTIONS.map(question=>'why:'+why.findIndex(row=>row.question===question))];assert.equal(new Set(expectedIds).size,11);assert.deepEqual(new Set(currentUIFixture.addedDossiers.map(row=>row.id)),new Set(expectedIds));
  for(const id of expectedIds){
   const dossier=items.find(row=>row.id===id),record=currentRecords.get(id);assert(dossier&&record);assert.equal(dossier.dataHash,record.dataHash,id+' canonical inventory hash');
@@ -47,7 +49,7 @@ test('current177UI rejects stale binding, mismatched teaching, changed old facts
 });
 
 test('the current177 technical history revision preserves every whole previous statistics dossier and rejects lost or changed prior UI',()=>{
- const raw=read('content/editorial-reviews.json').dossiers;assert(currentUIFixture.uiRevision);let previous=raw;
+ const raw=digitalPredecessors(read('content/editorial-reviews.json').dossiers);assert(currentUIFixture.uiRevision);let previous=raw;
  for(let revision=currentUIFixture.uiRevision;revision;revision=revision.previousRevision){
   assert.equal(revision.whole177Before.length,177);
   const reference=statisticsHistoryReference({...currentUIFixture,uiRevision:revision},currentUIFixture.currentTemplate);

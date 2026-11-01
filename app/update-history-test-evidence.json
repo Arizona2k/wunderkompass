@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "dbb2ade5f373ae56587084e1dce5636939e1199c",
+    "commit": "a6b27330738159841f3951f92de6c0136ff9ecf0",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -77,7 +77,10 @@
       "690e97f160d51415224623912ee92ebc798694bc",
       "57458e91e696ad0161b1f06f624f0f28b809bef6",
       "5a635bcd9d511b69774fbd0aa6c6d28641e4f1d5",
-      "dbb2ade5f373ae56587084e1dce5636939e1199c"
+      "dbb2ade5f373ae56587084e1dce5636939e1199c",
+      "a142a437917efd5b2f422a4eeb11224ef37f0e57",
+      "81afa89ab2c6ce5c120be3aaec54ffca15d851c1",
+      "a6b27330738159841f3951f92de6c0136ff9ecf0"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -2115,6 +2118,28 @@
         }
       ],
       "checkedOn": "2026-10-31"
+    },
+    {
+      "number": 85,
+      "title": "Messung und Statistik mit vernetzten Lernmodellen erweitern",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/85",
+      "base": "test-live",
+      "mergedAt": "2026-11-01T04:17:49Z",
+      "mergeCommit": "a6b27330738159841f3951f92de6c0136ff9ecf0",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/a6b27330738159841f3951f92de6c0136ff9ecf0/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57767345810,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-01T04:18:10Z",
+          "updatedAt": "2026-11-01T04:18:10Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/AvhtAoX3Ba95N19nsDF9Yh7W244t"
+        }
+      ],
+      "checkedOn": "2026-11-01"
     }
   ]
 }

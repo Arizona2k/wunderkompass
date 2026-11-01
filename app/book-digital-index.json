@@ -1,0 +1,63 @@
+{
+  "words": [
+    [
+      "Algorithmus",
+      "Zahlen & Forschen",
+      "Ein Algorithmus beschreibt ausführbare Schritte, um ein bestimmtes Ergebnis zu erreichen. Für eine kleine Sortieraufgabe kann er zum Beispiel genau festlegen, welche Karten verglichen und wann vertauscht werden. Ein unklarer Wunsch wie „Mach es schön“ ist noch keine solche Anleitung."
+    ],
+    [
+      "Bit",
+      "Computer & Denken",
+      "Ein Bit ist eine binäre Stelle mit einem von zwei Werten: 0 oder 1. Was eine Folge solcher Stellen bedeutet, hängt von vereinbarten Regeln ab."
+    ],
+    [
+      "Byte",
+      "Computer & Denken",
+      "Ein Byte ist hier eine Gruppe aus acht Bits. Diese Gruppe kann verschieden interpretiert werden. Sie ist nicht automatisch ein bestimmter Buchstabe."
+    ],
+    [
+      "Verschlüsselung",
+      "Computer & Denken",
+      "Daten werden nach einem kryptografischen Verfahren mit einem Schlüssel in eine andere Form umgewandelt. Ein passender Entschlüsselungsvorgang kann sie wieder nutzbar machen. Eine einfache Buchstabenspielregel ist kein verlässlicher Schutz echter Geheimnisse."
+    ],
+    [
+      "Schlüssel",
+      "Computer & Denken",
+      "In der Kryptografie bestimmt ein Schlüssel zusammen mit einem Verfahren einen konkreten Vorgang. Je nach Verfahren gibt es geheime oder öffentliche Schlüssel. Ein Schlüssel ist deshalb nicht immer ein Passwort und nicht immer geheim."
+    ],
+    [
+      "Prüfsumme",
+      "Computer & Denken",
+      "Eine Prüfsumme wird aus Daten berechnet und kann helfen, Veränderungen zu entdecken. Gleiche Prüfsummen beweisen bei einem einfachen Verfahren nicht automatisch gleiche Daten, einen vertrauenswürdigen Absender oder geheime Inhalte."
+    ],
+    [
+      "Hashfunktion",
+      "Computer & Denken",
+      "Eine Hashfunktion bildet Daten auf einen Prüfwert bestimmter Länge ab. Kryptografische Hashfunktionen sollen bestimmte Angriffe sehr schwer machen. Es bleibt wichtig, eine solche Eigenschaft von einer bloßen kurzen Zahl zu unterscheiden."
+    ],
+    [
+      "Datenstruktur",
+      "Computer & Denken",
+      "Eine Datenstruktur ordnet Informationen so, dass bestimmte Zugriffe und Veränderungen möglich werden. Eine Liste, eine Warteschlange und ein Baum können verschiedene Regeln haben. Die beste Ordnung hängt von der Aufgabe ab."
+    ],
+    [
+      "Klartext",
+      "Computer & Denken",
+      "Klartext nennt in der Kryptografie die ursprünglichen nutzbaren Daten vor einer Verschlüsselung beziehungsweise nach einer passenden Entschlüsselung. Der Name bedeutet nicht, dass jeder Mensch dieselbe Sprache versteht oder dass der Inhalt öffentlich sein sollte."
+    ]
+  ],
+  "why": [
+    [
+      "Warum beweist eine passende Prüfsumme nicht automatisch Echtheit?",
+      "Eine Prüfsumme kann Veränderungen erkennbar machen, aber unterschiedliche Inhalte können dieselbe Prüfsumme ergeben. Herkunft und Vertrauenswürdigkeit sind eigene Fragen. Das einfache Summenmodell ist keine digitale Signatur."
+    ],
+    [
+      "Warum ist eine leicht lesbar zurückdrehbare Geheimregel kein sicherer Schutz?",
+      "Eine Umwandlung kann ein Lernprinzip erklären und trotzdem leicht durchschaubar sein. Eine echte Sicherheitsbewertung betrachtet das Verfahren, Schlüssel und mögliche Angriffe. Geheim aussehend reicht nicht."
+    ],
+    [
+      "Warum sind acht Bits nicht dasselbe wie die Zahl acht?",
+      "Ein Byte fasst acht Bitstellen zusammen. Die Anzahl der Stellen und der von ihnen dargestellte Wert sind verschiedene Angaben. Welche Bedeutung eine Bitfolge hat, legt die vereinbarte Darstellung fest."
+    ]
+  ]
+}
