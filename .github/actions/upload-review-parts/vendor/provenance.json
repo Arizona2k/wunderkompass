@@ -1,0 +1,71 @@
+{
+  "repository": "actions/upload-artifact",
+  "revision": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+  "version": "7.0.2",
+  "unmodified": true,
+  "files": [
+    {
+      "path": "dist/upload/index.js",
+      "size": 4452820,
+      "sha": "7b3f92ae681d6eeca5f5e5e4cf892ad0dfb254ea",
+      "sha256": "c0e58b240360573e6d6c82ea1bb22deff4f85883e00211a52bd27822c3a22617",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/dist/upload/index.js"
+    },
+    {
+      "path": "dist/upload/package.json",
+      "size": 23,
+      "sha": "3dbc1ca591c0557e35b6004aeba250e6a70b56e3",
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/dist/upload/package.json"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1097,
+      "sha": "a67dca8b4f65d6bd351f6b1e333ce2cd84d843a5",
+      "sha256": "3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/LICENSE"
+    },
+    {
+      "path": ".licenses/npm/@actions/artifact.dep.yml",
+      "size": 1231,
+      "sha": "7c4c881e41bac596d8c2f93956145c11824f26c6",
+      "sha256": "7f84909b4410e3500d21e021c77f3ae47f723d5facfe9c02c09b1f441d7c66fa",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/@actions/artifact.dep.yml"
+    },
+    {
+      "path": ".licenses/npm/@actions/core.dep.yml",
+      "size": 1227,
+      "sha": "12293f93c46a7821b1e9d97d016893efbe09b7de",
+      "sha256": "43536fa00022029f97c642a2752f16b22cd6f655fe334445c90d71827dd933ff",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/@actions/core.dep.yml"
+    },
+    {
+      "path": ".licenses/npm/@actions/github.dep.yml",
+      "size": 1229,
+      "sha": "e250d5d37a40ae1ac906aa8e9b1c5b7896468120",
+      "sha256": "585190ff307e5bd0f9b677f5cdaf287a8a5a3293d41e7100c70024e589c9ed24",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/@actions/github.dep.yml"
+    },
+    {
+      "path": ".licenses/npm/@actions/glob.dep.yml",
+      "size": 1303,
+      "sha": "ae9067396a66e06abc678a8ca071f185a02bf98a",
+      "sha256": "b7d958792dfbc03fe98cf3d0676038fc1826c2906306a29122d8d48e3cbfa66b",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/@actions/glob.dep.yml"
+    },
+    {
+      "path": ".licenses/npm/@actions/io.dep.yml",
+      "size": 1297,
+      "sha": "dadddb4ed5dd55c150cb912fb396d0e12d1534e7",
+      "sha256": "cdd67de6c960e083b48d57d53787cbeb6c240282df3da9128a04e2180f162f99",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/@actions/io.dep.yml"
+    },
+    {
+      "path": ".licenses/npm/minimatch.dep.yml",
+      "size": 1846,
+      "sha": "8ed580aa7aa5b30ce979c447d053918f1b25b51c",
+      "sha256": "38be220ab0016c8c39d47f25ecc535ffd4c3f64c46513eaa453b1832368aa889",
+      "source": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/.licenses/npm/minimatch.dep.yml"
+    }
+  ]
+}

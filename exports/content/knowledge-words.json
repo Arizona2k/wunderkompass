@@ -225,6 +225,11 @@
     "more": "Das Genom ist die Gesamtheit der Erbinformation eines Lebewesens. Bei zellulären Lebewesen liegt sie in DNA. Gene sind Teile dieser Gesamtheit; auch andere DNA-Abschnitte gehören dazu."
   },
   {
+    "term": "Geoid",
+    "short": "Geografie & Karten",
+    "more": "Das Geoid ist eine gedachte Bezugsfläche für Höhenmessungen. Sie orientiert sich am mittleren Meeresspiegel unter vereinfachten Bedingungen und wird auch unter den Kontinenten fortgesetzt. Sie folgt nicht den Bergen und Tälern des Landes und ist keine perfekte Kugel."
+  },
+  {
     "term": "Geschwindigkeit",
     "short": "Bewegung & Wellen",
     "more": "Geschwindigkeit beschreibt, wie sich ein Ort mit der Zeit verändert. Zum genauen Beschreiben einer Bewegung gehören auch Richtung und Bezugssystem. Eine große zurückgelegte Strecke allein sagt noch nicht, wie schnell etwas war: Die benötigte Zeit gehört dazu."
@@ -275,6 +280,11 @@
     "more": "Ein heißer Bereich im Mantel, über dem Vulkane entstehen können, auch mitten auf einer Platte."
   },
   {
+    "term": "Hypothese",
+    "short": "Zahlen & Forschen",
+    "more": "Eine Hypothese ist eine begründete Aussage, die sich prüfen lässt. Sie macht eine untersuchbare Erwartung, statt nur „Es fühlt sich richtig an“ zu sagen. Ein passendes Ergebnis unterstützt sie; eine einzelne passende Beobachtung beweist nicht jede allgemeine Aussage endgültig."
+  },
+  {
     "term": "Infrarot",
     "short": "Physik & Licht",
     "more": "Infrarot ist elektromagnetische Strahlung mit längeren Wellenlängen als sichtbares rotes Licht. Unsere Augen sehen sie nicht. Warme Gegenstände senden unter anderem Infrarotstrahlung aus."
@@ -300,9 +310,24 @@
     "more": "Eine Flüssigkeit kann in engen benetzbaren Räumen ihre Lage verändern, etwa in kleinen Zwischenräumen eines Tuchs. Anziehung zum Material, Zusammenhalt der Flüssigkeit und Schwerkraft wirken dabei zusammen."
   },
   {
+    "term": "Kartenprojektion",
+    "short": "Geografie & Karten",
+    "more": "Eine Kartenprojektion ist ein Verfahren, um die gekrümmte Erdoberfläche auf einer flachen Karte darzustellen. Dabei verändert sich die Darstellung bestimmter Eigenschaften. Eine flache Weltkarte kann die ganze Erdoberfläche nicht in jeder Hinsicht unverzerrt zeigen."
+  },
+  {
     "term": "Kelvin",
     "short": "Messen",
     "more": "Kelvin ist eine Temperatureinheit mit dem Zeichen K, ohne Gradzeichen. Kelvin und Grad Celsius haben unterschiedlich festgelegte Nullpunkte. Deshalb bedeuten 20 K und 20 °C nicht dieselbe Temperatur. Ein Temperaturunterschied von 1 K ist aber genauso groß wie einer von 1 °C."
+  },
+  {
+    "term": "Kernfusion",
+    "short": "Weltall & Forschung",
+    "more": "Bei Kernfusion verbinden sich Atomkerne. Unter passenden Bedingungen kann bei der Verbindung leichter Kerne Energie freiwerden. Dieser Vorgang ist nicht dasselbe wie ein gewöhnlicher chemischer Verbrennungsvorgang."
+  },
+  {
+    "term": "Kernspaltung",
+    "short": "Weltall & Forschung",
+    "more": "Bei Kernspaltung teilt sich ein Atomkern in kleinere Kerne und weitere Teilchen. Bei bestimmten schweren Kernen kann dabei Energie freiwerden. Dies unterscheidet sich sowohl von Kernfusion als auch von einem gewöhnlichen chemischen Zerlegen."
   },
   {
     "term": "Kilogramm",
@@ -353,6 +378,11 @@
     "term": "Konvektion",
     "short": "Physik & Licht",
     "more": "Eine Strömung in einer Flüssigkeit oder einem Gas kann Energie mitführen und Wärme übertragen. Der mitbewegte Stoff unterscheidet diesen Weg von Wärmeleitung ohne einen solchen Stoffstrom."
+  },
+  {
+    "term": "Koordinate",
+    "short": "Geografie & Karten",
+    "more": "Koordinaten beschreiben eine Position mit Angaben in einem festgelegten Bezugssystem. Bei einer einfachen Gitterzeichnung kann ein Zahlenpaar einen Punkt angeben. Für Orte auf der Erde verwenden wir zum Beispiel geografische Breite und Länge. Reihenfolge und Bezug gehören zur Angabe dazu."
   },
   {
     "term": "Korallen",
@@ -705,9 +735,19 @@
     "more": "Wasser mit wenig gelöstem Salz. Es ist nicht süß im Geschmack. Viel Süßwasser steckt in Eis oder unter der Erde."
   },
   {
+    "term": "Symmetrie",
+    "short": "Mathematik & Messen",
+    "more": "Symmetrie bedeutet, dass eine Form nach einer bestimmten Veränderung mit sich selbst übereinstimmt. Bei Spiegelsymmetrie passt sie beim Spiegeln an einer Achse. Verschiedene Arten von Symmetrie müssen getrennt geprüft werden."
+  },
+  {
     "term": "Taiga",
     "short": "Natur",
     "more": "Ein ausgedehnter Gürtel von Nadelwäldern in kalten nördlichen Regionen."
+  },
+  {
+    "term": "Topografie",
+    "short": "Geografie & Karten",
+    "more": "Topografie beschreibt die Gestalt und Merkmale eines Gebiets, etwa Höhen, Täler und Gewässer. Eine topografische Karte stellt ausgewählte Merkmale dar. Höhenlinien verbinden Punkte gleicher Höhe über einer angegebenen Bezugsfläche; sie sind keine wirklichen Streifen am Berg."
   },
   {
     "term": "Trägheit",
@@ -823,6 +863,11 @@
     "term": "Wetter",
     "short": "Wetter",
     "more": "Was die Luft gerade macht: Temperatur, Wind, Wolken und Niederschlag an einem Ort zu einer bestimmten Zeit."
+  },
+  {
+    "term": "Winkel",
+    "short": "Mathematik & Messen",
+    "more": "Ein Winkel beschreibt eine Öffnung zwischen Richtungen oder eine Drehung. Eine Vierteldrehung entspricht einem rechten Winkel von 90°. Die Länge gezeichneter Pfeile bestimmt nicht die Größe ihrer Richtungsänderung."
   },
   {
     "term": "Wüste",

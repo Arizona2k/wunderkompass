@@ -1,0 +1,95 @@
+{
+  "Mittelwert": [
+    {
+      "term": "Hypothese",
+      "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+    }
+  ],
+  "Algorithmus": [
+    {
+      "term": "Hypothese",
+      "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+    }
+  ],
+  "Meter": [
+    {
+      "term": "Topografie",
+      "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+    },
+    {
+      "term": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+      "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten.",
+      "kind": "why"
+    }
+  ],
+  "Meeresspiegel": [
+    {
+      "term": "Geoid",
+      "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+    }
+  ],
+  "Breitengrad": [
+    {
+      "term": "Koordinate",
+      "reason": "Geografische Breite kann ein Teil einer Positionsangabe sein. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort."
+    }
+  ],
+  "Längengrad": [
+    {
+      "term": "Koordinate",
+      "reason": "Geografische Länge ergänzt die Breite in einem vereinbarten Bezugssystem. Ein bloßes Zahlenpaar ohne Reihenfolge oder Bezug kann missverständlich sein."
+    }
+  ],
+  "Maßstab": [
+    {
+      "term": "Kartenprojektion",
+      "reason": "Ein Streckenverhältnis beschreibt einen gewählten Plan. Eine Weltkartenprojektion kann zusätzlich Verzerrungen enthalten; Maßstab allein behebt diese nicht."
+    },
+    {
+      "term": "Warum kann ein Papierplan eine echte Bauprüfung nicht ersetzen?",
+      "reason": "Bei „Maßstab“ vergleichst du gezeichnete Längen mit gedachten Originalgrößen. Daraus folgt noch keine Aussage darüber, welche Last ein echtes Bauwerk sicher tragen kann.",
+      "kind": "why"
+    }
+  ],
+  "Energie": [
+    {
+      "term": "Kernfusion",
+      "reason": "Bestimmte Kernvorgänge können Energie freisetzen. Ein Papierpfeil misst keinen realen Energieertrag und gibt keine Betriebsgarantie."
+    }
+  ],
+  "Symmetrie": [
+    {
+      "term": "Warum ist nicht jede Diagonale eine Spiegelachse?",
+      "reason": "Vergleiche die Erklärung mit dem Begriff „Symmetrie“: Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal.",
+      "kind": "why"
+    }
+  ],
+  "Winkel": [
+    {
+      "term": "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?",
+      "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge.",
+      "kind": "why"
+    }
+  ],
+  "Koordinate": [
+    {
+      "term": "Warum ist ein GPS-Punkt keine grenzenlos genaue Ortsangabe?",
+      "reason": "Vergleiche die Erklärung mit dem Begriff „Koordinate“: Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern.",
+      "kind": "why"
+    }
+  ],
+  "Frequenz": [
+    {
+      "term": "Warum kann Anschieben im passenden Takt wirksamer sein?",
+      "reason": "Vergleiche die Erklärung mit dem Begriff „Frequenz“: Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen.",
+      "kind": "why"
+    }
+  ],
+  "Kapillarwirkung": [
+    {
+      "term": "Warum kann ein schwarzer Stift mehrere Farben enthalten?",
+      "reason": "Das flüssige Trägermittel kann sich auf engen Wegen im Papier bewegen. Unterschiedliche Stoffwanderung und Stoffbestimmung brauchen darüber hinaus weitere Bedingungen; Kapillarwirkung allein identifiziert keinen Farbstoff.",
+      "kind": "why"
+    }
+  ]
+}

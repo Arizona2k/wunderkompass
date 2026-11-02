@@ -53,7 +53,7 @@ test('all five bounded models reject fractional, missing and out-of-range select
  for(const model of[asteroidLocation,cometDirections,projectedTransit,galaxyMembership,lightyearDistance])for(const input of[-1,3,.5,NaN,Infinity,undefined,'1'])assert.throws(()=>model(input));
 });
 test('eight astronomy studies preserve159 whole delivered word objects,50 Why identities and all ten older teaching packs',()=>{
- assert.deepEqual(bookAstronomyContent(true),pack);assert.equal(words.length,171);assert.equal(new Set(words.map(row=>row.term)).size,171);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(ASTRONOMY_WORDS.length,6);assert.equal(ASTRONOMY_QUESTIONS.length,2);assert.equal(read('exports/content/book-astronomy.json').length,8);
+ assert.deepEqual(bookAstronomyContent(true),pack);assert.equal(words.length,180);assert.equal(new Set(words.map(row=>row.term)).size,180);assert.equal(why.length,60);assert.equal(new Set(why.map(row=>row.question)).size,60);assert.equal(ASTRONOMY_WORDS.length,6);assert.equal(ASTRONOMY_QUESTIONS.length,2);assert.equal(read('exports/content/book-astronomy.json').length,8);
  const old=read('tests/fixtures/book-before-astronomy-159-hashes.json');assert.equal(Object.keys(old.words).length,159);assert.equal(Object.keys(old.why).length,50);assert.equal(Object.keys(old.packs).length,10);
  for(const[term,hash]of Object.entries(old.words))assert.equal(whole(words.find(row=>row.term===term)),hash,term);
  assert.deepEqual(why.slice(0,50).map(row=>row.question),old.whyOrder);

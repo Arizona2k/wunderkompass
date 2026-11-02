@@ -1,0 +1,822 @@
+[
+  {
+    "kind": "word",
+    "term": "Hypothese",
+    "definition": "Eine Hypothese ist eine begründete Aussage, die sich prüfen lässt. Sie macht eine untersuchbare Erwartung, statt nur „Es fühlt sich richtig an“ zu sagen. Ein passendes Ergebnis unterstützt sie; eine einzelne passende Beobachtung beweist nicht jede allgemeine Aussage endgültig.",
+    "starter": "Eine Hypothese ist eine Aussage, für die du eine überprüfbare Erwartung formulierst. Beobachtung und Erklärung sind verschiedene Schritte.",
+    "deeper": "Unsere erfundene Sammlung hat acht verdeckte Formen. Die Aussage „Alle haben vier Ecken“ ist überprüfbar. Drei passende Formen lassen die übrigen fünf offen. Schon eine tatsächlich aufgedeckte dreieckige Form widerlegt diese Allbehauptung über die Sammlung. Das Schema ist keine vollständige reale Untersuchung; dort müssen auch Verfahren, Bedingungen und mögliche Fehler geprüft werden.",
+    "observe": "Wähle „Drei ansehen“, „Sechs ansehen“ und „Alle acht ansehen“. Vergleiche die Zahl unbekannter Formen und die sichtbaren Gegenbeispiele. Erkläre, was sich aus jeder gezeigten Auswahl ergibt, ohne über nicht betrachtete Sammlungen zu urteilen.",
+    "benefit": "Du unterscheidest eine prüfbare Behauptung, passende Beobachtungen und ein Gegenbeispiel innerhalb eines klaren Geltungsbereichs.",
+    "topic": "science-probability",
+    "connection": "Im Wahrscheinlichkeitsmodell kannst du zunächst eine Erwartung formulieren und dann Ergebnisse sammeln. Einzelne Ergebnisse beweisen noch keine allgemeine Vermutung.",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/review/science-fair/scientific-method.html",
+        "title": "NASA Space Place · Eine mögliche wissenschaftliche Vorgehensweise (Englisch)",
+        "anchor": "Tatsächlich gelesen01.11.: Schritte1/2/4/5/6/7, insbesondere5,14–24,37–40,55,59–65: prüfbare Aussage, Variablen/Kontrollen, Beobachten und vorsichtige Auswertung. Die eigene endliche Formsammmlung prüft nur eine Allbehauptung innerhalb ihres erklärten Umfangs; keine Quellenaufgabe, Katzenversuche, Bilder oder universeller starrer Methodenablauf übernommen.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Mittelwert",
+        "reason": "Eine Kennzahl kann Beobachtungen zusammenfassen. Ob sie eine Hypothese unterstützt, hängt auch von Frage und Versuchsbedingungen ab."
+      },
+      {
+        "term": "Algorithmus",
+        "reason": "Eine Schrittfolge führt eine Aufgabe aus; eine Hypothese ist eine prüfbare Aussage. Ausführung und Begründung sind verschiedene Fragen."
+      }
+    ],
+    "question": {
+      "prompt": "Nach „Drei ansehen“ haben alle sichtbaren Formen vier Ecken. Was folgt daraus für die acht Formen der Sammlung?",
+      "answers": [
+        "Alle acht Formen haben damit schon sicher vier Ecken",
+        "Die drei Beobachtungen passen; die fünf übrigen Formen bleiben noch unbekannt",
+        "Ein sichtbares Gegenbeispiel ist damit schon nachgewiesen"
+      ],
+      "correct": 1,
+      "hint": "Trenne die betrachteten Formen vom unbekannten Rest.",
+      "why": "Die ersten drei Formen passen zur Behauptung. Die fünf noch verdeckten Formen sind nicht geprüft. Ein Gegenbeispiel wird erst in einer späteren Auswahl tatsächlich sichtbar.",
+      "wrongReasons": [
+        "Die noch verdeckten Formen wurden dabei nicht betrachtet.",
+        "",
+        "Die drei gezeigten Formen haben jeweils vier Ecken. Unter diesen drei ist kein Gegenbeispiel."
+      ]
+    },
+    "figure": "testable-collection",
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "word",
+    "term": "Topografie",
+    "definition": "Topografie beschreibt die Gestalt und Merkmale eines Gebiets, etwa Höhen, Täler und Gewässer. Eine topografische Karte stellt ausgewählte Merkmale dar. Höhenlinien verbinden Punkte gleicher Höhe über einer angegebenen Bezugsfläche; sie sind keine wirklichen Streifen am Berg.",
+    "starter": "Topografie beschreibt Merkmale des Geländes. Höhenlinien zeigen gleiche Höhen über einem ausdrücklich gemeinsamen Bezug.",
+    "deeper": "In der erfundenen Draufsicht liegen A und B auf einer 10-Meter-Linie, C auf einer 20-Meter-Linie. Die Kreisformen sind vorher gewählte Bestandteile des Beispiels. Drei einzelne Höhenwerte würden ihre Form nicht beweisen. Karten wählen Merkmale nach Zweck, Maßstab und Datenstand aus.",
+    "observe": "Markiere die 10-Meter-Linie, die 20-Meter-Linie und dann beide. Vergleiche A, B und C. Begründe, welche Punkte im Beispiel auf derselben Höhenlinie liegen; beschreibe auch, was diese Papierdarstellung über einen echten Ort offenlässt.",
+    "benefit": "Du verknüpfst gleiche Höhen mit einem gemeinsamen Bezug, ohne eine gezeichnete Linie für einen wirklichen Streifen am Berg zu halten.",
+    "topic": "invention-compass",
+    "connection": "Der Kompass hilft bei Richtungen. Eine topografische Karte ergänzt andere Angaben, etwa Höhen: Eine Richtung allein ist noch keine Geländeform.",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/common/uploads/teachers/lessonplans/LandscapesActivityGuideADA.pdf",
+        "title": "National Park Service · Gelände und Höhenlinien (Englisch)",
+        "anchor": "Tatsächlich31.10.gelesen: gedruckteSeite6/PDFindex6,392–401, sowieGlossarSeite9/PDFindex9,612–617. Höhenlinien verbinden gleiche Höhen über einem gemeinsamen Bezug. Eigene frei gewählte Kreislinien und Punkte A/B/C; kein echter Ort und keine Ableitung einer Geländeform aus nur drei Punkten. Veröffentlichung2015, neueres inhaltliches Aktualisierungsdatum nicht belegt.",
+        "checkedOn": "2026-10-31",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meter",
+        "reason": "Höhenangaben brauchen eine Einheit und einen Bezug. Eine Strecke in Metern sagt ohne diese Erklärung nicht, wie sie in einer Geländezeichnung verwendet wird."
+      }
+    ],
+    "question": {
+      "prompt": "Welche zwei Modellpunkte könnten auf derselben Höhenlinie liegen?",
+      "answers": [
+        "Die beiden mit 10 Metern über demselben Bezug",
+        "Jeder 10-Meter-Punkt mit dem 20-Meter-Punkt",
+        "Alle drei, nur weil sie auf einem Blatt stehen"
+      ],
+      "correct": 0,
+      "hint": "Die Linie verbindet gleiche Höhen über einem gemeinsamen Bezug.",
+      "why": "Die beiden gleich hohen Punkte können zu derselben Höhenlinie gehören. Ihre Zahl allein verrät noch nicht, wie die Linie zwischen ihnen verläuft.",
+      "wrongReasons": [
+        "",
+        "10 und 20 Meter sind verschiedene Höhen über demselben Bezug.",
+        "Der Ort auf dem Papier macht unterschiedliche Höhen nicht gleich."
+      ]
+    },
+    "figure": "contour-levels",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Geoid",
+    "definition": "Das Geoid ist eine gedachte Bezugsfläche für Höhenmessungen. Sie orientiert sich am mittleren Meeresspiegel unter vereinfachten Bedingungen und wird auch unter den Kontinenten fortgesetzt. Sie folgt nicht den Bergen und Tälern des Landes und ist keine perfekte Kugel.",
+    "starter": "Ein Höhenbezug ist etwas anderes als die Oberfläche mit Bergen und Tälern. Das Geoid ist eine gedachte Bezugsfläche.",
+    "deeper": "Die Form des Geoids hängt mit dem Schwerefeld zusammen und orientiert sich an einem idealisierten mittleren Meeresspiegel. Ein glattes mathematisches Erdmodell ist wiederum etwas anderes. Unser lokaler Ausschnitt überhöht die Unterschiede stark; eine gerade Linie steht darin vereinfacht für den glatten Bezug. Keine Kurve ist ein berechnetes reales Geoid.",
+    "observe": "Hebe nacheinander „Gelände“, „Geoid“ und „Glattes Erdmodell“ hervor. Ordne jede Linie ihrer Funktion zu. Erkläre, warum die Geoidlinie weder den Bergen folgen noch den aktuellen Wasserstand an einer Küste zeigen muss.",
+    "benefit": "Du trennst tatsächliche Geländeform, idealisierte Höhenbezugsfläche und mathematisches Referenzmodell.",
+    "topic": "science-tides",
+    "connection": "Die Gezeitenkarte zeigt Veränderungen von Wasserständen. Das Geoid beschreibt dagegen einen idealisierten Höhenbezug, keine aktuelle Tide an einer Küste.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/geoid.html",
+        "title": "NOAA · Geoid als Höhenbezug (Englisch)",
+        "anchor": "Tatsächlich31.10.gelesen2/16–21 sowieUpdate37–39: idealisierte mittlere Meeresbezugsfläche, durch Kontinente fortgesetzt, von Gelände und glattem mathematischem Erdmodell unterscheiden. Eigenes stark überhöhtes Richtungsschema ohne reale Höhen, Schwerefeldrechnung oder Quelldateien. Keine historischen zukünftigen Fertigstellungs- oder Genauigkeitsversprechen übernommen.",
+        "checkedOn": "2026-10-31",
+        "updatedOn": "2026-09-23"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meeresspiegel",
+        "reason": "Das Geoid beschreibt einen idealisierten Höhenbezug, während beobachtete Wasserstände örtlich und zeitlich variieren. Bezug und einzelne Messung sind verschieden."
+      }
+    ],
+    "question": {
+      "prompt": "Was beschreibt das Geoid hier?",
+      "answers": [
+        "Alle Bergspitzen und Täler der wirklichen Geländeoberfläche",
+        "Eine gedachte Bezugsfläche für Höhen",
+        "Eine Behauptung, dass die Erde überall exakt kugelförmig ist"
+      ],
+      "correct": 1,
+      "hint": "Eine Höhe wird mit einem Bezug verglichen.",
+      "why": "Das Geoid dient als Höhenbezug. Es ist weder die Geländeoberfläche mit allen Bergen noch eine perfekte Kugel.",
+      "wrongReasons": [
+        "Die wirkliche Geländeoberfläche und die gedachte Bezugsfläche sind verschieden.",
+        "",
+        "Die Geoidform berücksichtigt Unterschiede, die eine perfekte Kugel nicht beschreibt."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist die Erde rund?",
+        "reason": "Das Geoid ist ein eigenes Bezugsmodell und keine Fotografie: Vergleiche seine Aufgabe mit der einer Kugeldarstellung."
+      }
+    ],
+    "figure": "reference-versus-terrain",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "word",
+    "term": "Koordinate",
+    "definition": "Koordinaten beschreiben eine Position mit Angaben in einem festgelegten Bezugssystem. Bei einer einfachen Gitterzeichnung kann ein Zahlenpaar einen Punkt angeben. Für Orte auf der Erde verwenden wir zum Beispiel geografische Breite und Länge. Reihenfolge und Bezug gehören zur Angabe dazu.",
+    "starter": "Koordinaten brauchen eine erklärte Reihenfolge und einen Bezug. Erst dann lässt sich das Zahlenpaar als Lage lesen.",
+    "deeper": "Im eigenen Gitter zählt die erste Zahl vom Ursprung nach rechts, die zweite nach oben. Deshalb sind (2,3) und (3,2) verschiedene Punkte. Für geografische Angaben gelten jeweils erklärte Bezugssysteme und Einheiten; unser Papiergitter ist keine Karte eines echten Orts und keine heimliche Standortabfrage.",
+    "observe": "Wähle (2,3), (3,2) und (2,2). Folge vom Ursprung zuerst der waagerechten und dann der senkrechten Angabe. Erkläre den Unterschied zwischen vertauschten Angaben und dem Fall gleicher Zahlen.",
+    "benefit": "Du liest ein geordnetes Zahlenpaar im festgelegten System und fragst bei anderen Angaben nach Bezug, Reihenfolge und Einheit.",
+    "topic": "invention-satellite",
+    "connection": "Satelliten können bei der Positionsbestimmung helfen. Eine Position braucht ein erklärtes Bezugssystem; unser Papiergitter misst keine Satellitensignale.",
+    "sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/geodesy.html",
+        "title": "NOAA · Geodäsie und Bezugssysteme (Englisch)",
+        "anchor": "Tatsächlich31.10.gelesen6–10/34–36: konsistentes Bezugssystem für Positionsangaben, Geoid/Referenzellipsoid/Gelände unterscheiden. Eigenes kartesisches Gitter verwendet ausdrücklich zuerst rechts, dann oben; kein automatischer geografischer Breite-/Längebezug.",
+        "checkedOn": "2026-10-31",
+        "updatedOn": "2026-09-23"
+      },
+      {
+        "url": "https://www.cpc.ncep.noaa.gov/products/predictions/short_range/tools/ppgc.html",
+        "title": "NOAA/NCEP · Koordinaten und Kartenprojektionen (Englisch)",
+        "anchor": "Tatsächlich02.11. im normalen Browser gelesen: Maps, Absätze zu geografischer Breite/Länge und x/y auf der Kartenebene. Eigenes Gitter nennt ausdrücklich rechts, dann oben; kein allgemeiner automatischer GIS-/Bildrasterstandard. NSIDC-mapx-Fachdokumentation bei NOAA/NCEP; keine alten Ellipsoidnäherungen, Datumsversprechen, Software oder Abbildungen übernommen. Aktualisierungsdatum nicht belegt.",
+        "checkedOn": "2026-11-02",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Breitengrad",
+        "reason": "Geografische Breite kann ein Teil einer Positionsangabe sein. Ein Breitengrad allein bestimmt noch keinen einzelnen Ort."
+      },
+      {
+        "term": "Längengrad",
+        "reason": "Geografische Länge ergänzt die Breite in einem vereinbarten Bezugssystem. Ein bloßes Zahlenpaar ohne Reihenfolge oder Bezug kann missverständlich sein."
+      },
+      {
+        "term": "Kartenprojektion",
+        "reason": "Eine Position und ihre Darstellung auf einer flachen Karte sind verschiedene Schritte. Bezugssystem und Projektionsverfahren brauchen jeweils eine Erklärung."
+      }
+    ],
+    "question": {
+      "prompt": "Warum können (2, 3) und (3, 2) im vereinbarten Gitter verschiedene Punkte sein?",
+      "answers": [
+        "Weil die Zahlen immer dieselbe Position meinen",
+        "Weil Zahlen keine Positionen beschreiben können",
+        "Weil die erste und die zweite Zahl unterschiedliche Richtungen beschreiben"
+      ],
+      "correct": 2,
+      "hint": "In unserer Vereinbarung bedeutet zuerst rechts, danach oben.",
+      "why": "Mit der festgelegten Reihenfolge werden verschiedene Wege gezählt. Eine vertauschte Angabe beschreibt hier einen anderen Punkt.",
+      "wrongReasons": [
+        "Vertauschte Angaben sind in diesem Gitter nicht gleich: die Richtungen haben eine vereinbarte Reihenfolge.",
+        "Mit einem erklärten Bezugssystem können Zahlen sehr wohl Positionen beschreiben.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist ein GPS-Punkt keine grenzenlos genaue Ortsangabe?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Koordinate“: Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern."
+      }
+    ],
+    "figure": "ordered-grid-point",
+    "sourceReadOn": "2026-11-02"
+  },
+  {
+    "kind": "word",
+    "term": "Kartenprojektion",
+    "definition": "Eine Kartenprojektion ist ein Verfahren, um die gekrümmte Erdoberfläche auf einer flachen Karte darzustellen. Dabei verändert sich die Darstellung bestimmter Eigenschaften. Eine flache Weltkarte kann die ganze Erdoberfläche nicht in jeder Hinsicht unverzerrt zeigen.",
+    "starter": "Eine flache Karte der ganzen Erde kann nicht alle Eigenschaften zugleich unverändert wiedergeben. Das Darstellungsverfahren muss zur Frage passen.",
+    "deeper": "Das eigene Vertiefungsmodell vergleicht einen erfundenen Winkelausschnitt auf einer Einheitskugel bei 0, 30 und 60 Grad Breite. Seine Winkelbreite bleibt gleich, seine Kugelfläche nicht. Eine flächentreue Zylinderabbildung bewahrt jeweils diese Fläche; in der gegenübergestellten Mercatorabbildung erscheint sie vergrößert. Auch die flächentreue Abbildung bewahrt nicht jede Form, Richtung oder Entfernung.",
+    "observe": "Wähle den Ausschnitt bei 0, 30 und 60 Grad. Vergleiche die Kartenflächen jeweils mit der zugehörigen Kugelfläche, statt gleiche Winkelbreite mit gleicher wirklicher Fläche gleichzusetzen. Die eigene Darstellung enthält keine echten Länder oder gemessenen Erdflächen.",
+    "benefit": "Du prüfst eine ausgewählte Erhaltungseigenschaft einer Karte und erkennst, warum das nicht eine in jeder Hinsicht unverzerrte Weltkarte ergibt.",
+    "topic": "invention-compass",
+    "connection": "Kompassrichtung und Kartendarstellung beantworten verschiedene Fragen. Prüfe bei einer flachen Karte die Erklärung, bevor du Richtungen oder Größen vergleichst.",
+    "sources": [
+      {
+        "url": "https://www.cpc.ncep.noaa.gov/products/predictions/short_range/tools/ppgc.html",
+        "title": "NOAA/NCEP · Kartenprojektionen und Verzerrung (Englisch)",
+        "anchor": "Tatsächlich02.11. im normalen Browser gelesen: Maps und Projections, Definition einer mathematischen Abbildung auf eine Ebene, unterschiedliche Zwecke, Winkeltreue und Flächentreue. Eigenes unabhängig geprüftes Einheitskugelbeispiel; keine universell beste/verzerrungsfreie Gesamtkarte, echten Länderflächen, Quellengrafiken oder Software übernommen. Aktualisierungsdatum unbekannt.",
+        "checkedOn": "2026-11-02",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Koordinate",
+        "reason": "Eine Position und ihre Darstellung auf einer flachen Karte sind verschiedene Schritte. Bezugssystem und Projektionsverfahren brauchen jeweils eine Erklärung."
+      },
+      {
+        "term": "Maßstab",
+        "reason": "Ein Streckenverhältnis beschreibt einen gewählten Plan. Eine Weltkartenprojektion kann zusätzlich Verzerrungen enthalten; Maßstab allein behebt diese nicht."
+      }
+    ],
+    "question": {
+      "prompt": "Was ist ein sinnvoller erster Schritt beim Größenvergleich auf einer Weltkarte?",
+      "answers": [
+        "Das Darstellungsverfahren und die Kartenerklärung prüfen",
+        "Jede Papierfläche ohne Prüfung gleichsetzen mit der wirklichen Fläche",
+        "Annehmen, dass jede flache Weltkarte alles unverzerrt zeigt"
+      ],
+      "correct": 0,
+      "hint": "Die Karte ist eine Darstellung mit bestimmten Eigenschaften.",
+      "why": "Das Verfahren beeinflusst, wie Eigenschaften der Erdoberfläche auf dem Papier erscheinen. Die Kartenerklärung hilft, passende Vergleiche zu wählen.",
+      "wrongReasons": [
+        "",
+        "Nicht jede Weltkarte bewahrt die Flächenverhältnisse. Ein ungeprüfter Vergleich kann irreführen.",
+        "Die gekrümmte ganze Erdoberfläche lässt sich nicht in jeder Hinsicht unverzerrt auf eine flache Karte übertragen."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum passt eine runde Erde nicht genau auf eine flache Karte?",
+        "reason": "Die Kartenprojektion erklärt, welche Eigenschaften beim Übertragen einer Kugel auf eine Fläche verändert werden können."
+      }
+    ],
+    "figure": "projection-patch-area",
+    "sourceReadOn": "2026-11-02"
+  },
+  {
+    "kind": "word",
+    "term": "Kernfusion",
+    "definition": "Bei Kernfusion verbinden sich Atomkerne. Unter passenden Bedingungen kann bei der Verbindung leichter Kerne Energie freiwerden. Dieser Vorgang ist nicht dasselbe wie ein gewöhnlicher chemischer Verbrennungsvorgang.",
+    "starter": "Bei Fusion verbinden sich Atomkerne. Das ist ein Kernvorgang und kein gewöhnliches Verbrennen von Holz.",
+    "deeper": "Bestimmte Reaktionen leichter Kerne können Energie freisetzen. Dafür sind konkrete Kerne, weitere Teilchen und physikalische Bedingungen entscheidend. Die eigenen Kreise sind nur Symbole; ihre Größe und Anzahl berechnen weder die Nukleonenbilanz noch einen Energieertrag oder die Vollständigkeit einer Reaktionsgleichung.",
+    "observe": "Wähle „Verbinden“, „Aufteilen“ und „Beides vergleichen“. Beschreibe zuerst die Grundrichtung des jeweiligen Symbols. Benenne danach mindestens eine fehlende Angabe, die für eine konkrete wirkliche Kernreaktion erforderlich wäre.",
+    "benefit": "Du unterscheidest Fusion, Spaltung und Verbrennung und erkennst die Aussagegrenze einer einfachen Zeichenhilfe.",
+    "connection": "Die Fusionskarte erklärt ein begrenztes Kerns­chema. Lies die Modellgrenzen: Ein Bild zeigt nicht die realen Bedingungen, eine technische Anlage oder deren Wirkungsgrad.",
+    "topic": "science-fusion",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference",
+        "title": "U.S. Department of Energy · Fusion und Spaltung unterscheiden (Englisch)",
+        "anchor": "RichtigeZieladresse tatsächlich01.11.gelesen43–48: Kerne verbinden, Kernvorgänge in der Sonne, anspruchsvolle physikalische Bedingungen. Eigenes reines Symbolschema; keine konkrete vollständige Reaktion, tatsächliche Teilchenzahlen, Energiebilanz oder Betriebsanleitung. Keine allgemeine Garantie positiver Energieausbeute oder wörtliche Zweiprotonen-zu-Helium-Verkürzung übernommen. Veröffentlichung01.04.2021, neueres Aktualisierungsdatum unbekannt.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kernspaltung",
+        "reason": "Leichte Kerne zusammenführen und schwere Kerne teilen sind verschiedene Kernvorgänge. Die Begriffe erklären keine sicheren Experimente für zu Hause."
+      },
+      {
+        "term": "Energie",
+        "reason": "Bestimmte Kernvorgänge können Energie freisetzen. Ein Papierpfeil misst keinen realen Energieertrag und gibt keine Betriebsgarantie."
+      }
+    ],
+    "question": {
+      "prompt": "Was zeigen die eigenen Kernsymbole im Schema?",
+      "answers": [
+        "Nur eine begrenzte Zeichenhilfe, keinen wirklichen Kernvorgang",
+        "Eine reale Fusion mit gemessener Energie",
+        "Ein Beweis einer vollständigen Reaktionsgleichung"
+      ],
+      "correct": 0,
+      "hint": "Ein Symbol und ein physikalischer Vorgang haben unterschiedliche Aussagekraft.",
+      "why": "Die Symbole können das Verbinden veranschaulichen. Sie sind keine wirkliche Kernreaktion, keine Messung und keine vollständige Reaktionsgleichung.",
+      "wrongReasons": [
+        "",
+        "Gezeichnete Symbole verbinden keine tatsächlichen Atomkerne und messen keine freiwerdende Energie.",
+        "Teilchen, Bedingungen und Energien fehlen in der Zeichenhilfe; sie ist keine vollständige Reaktionsgleichung."
+      ]
+    },
+    "figure": "nuclear-symbol-comparison",
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "word",
+    "term": "Kernspaltung",
+    "definition": "Bei Kernspaltung teilt sich ein Atomkern in kleinere Kerne und weitere Teilchen. Bei bestimmten schweren Kernen kann dabei Energie freiwerden. Dies unterscheidet sich sowohl von Kernfusion als auch von einem gewöhnlichen chemischen Zerlegen.",
+    "starter": "Bei einer Kernspaltung entstehen aus einem Kern kleinere Kerne und weitere Teilchen. Aufteilen und Verbinden sind verschiedene Vorgänge.",
+    "deeper": "Bei geeigneten schweren Kernen kann dabei Energie freiwerden. Die Zeichnung enthält keine bestimmte vollständige Reaktionsgleichung und keine gemessenen Teilchenmengen. Sie ist keine Material- oder Betriebsanleitung. Aus den gezeichneten Kreisgrößen lässt sich keine echte Energiebilanz ableiten.",
+    "observe": "Stelle „Aufteilen“ und „Verbinden“ gegenüber. Vergleiche, auf welcher Seite ein oder mehrere Kernsymbole stehen. Erkläre anschließend, warum das Schema allein keine wirkliche Reaktion oder Energiemenge nachweist.",
+    "benefit": "Du erklärst den Unterschied zwischen zwei Kernvorgängen und hältst symbolische Darstellung und physikalischen Nachweis auseinander.",
+    "connection": "Die Fusionskarte bietet einen Vergleich zum Verbinden leichter Kerne. Stelle Spalten und Verbinden gegenüber und trenne beide Papierhilfen von tatsächlichen Kernreaktionen.",
+    "topic": "science-fusion",
+    "sources": [
+      {
+        "url": "https://www.energy.gov/ne/articles/fission-and-fusion-what-difference",
+        "title": "U.S. Department of Energy · Spaltung und Fusion unterscheiden (Englisch)",
+        "anchor": "RichtigeZieladresse tatsächlich01.11.gelesen29–36: schwererKern, kleinereKerne und weitereTeilchen, Freisetzung von Energie in passenden Reaktionen. Vereinfachtes eigenes Symbolschema ohne tatsächliche Nukleonenzahlen, Materialanweisung oder Energierechnung. Keine pauschalen Sicherheits-/Lebenszyklus-/Nullausstoßaussagen und keine Übertragung auf jede Kernspaltung. Veröffentlichung01.04.2021; neueres Aktualisierungsdatum nicht belegt.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kernfusion",
+        "reason": "Leichte Kerne zusammenführen und schwere Kerne teilen sind verschiedene Kernvorgänge. Die Begriffe erklären keine sicheren Experimente für zu Hause."
+      }
+    ],
+    "question": {
+      "prompt": "Wodurch unterscheidet sich die Spaltungs-Zeichenhilfe von der Fusions-Zeichenhilfe?",
+      "answers": [
+        "Nur durch eine anders gewählte Farbe",
+        "Sie zeigt Aufteilen statt Verbinden",
+        "Sie misst automatisch eine echte Energiemenge"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die dargestellte Grundrichtung des Vorgangs, nicht die Farbe.",
+      "why": "Spalten und Verbinden sind verschiedene dargestellte Grundvorgänge. Die Zeichenhilfe berechnet keine wirkliche Energiemenge oder vollständige Reaktion.",
+      "wrongReasons": [
+        "Die Vorgänge werden nach Aufteilen und Verbinden unterschieden, nicht bloß nach einer Zeichnungsfarbe.",
+        "",
+        "Eine schematische Zeichnung ohne konkrete Reaktionsdaten misst keine wirkliche Energie."
+      ]
+    },
+    "figure": "nuclear-symbol-comparison",
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "word",
+    "term": "Winkel",
+    "definition": "Ein Winkel beschreibt eine Öffnung zwischen Richtungen oder eine Drehung. Eine Vierteldrehung entspricht einem rechten Winkel von 90°. Die Länge gezeichneter Pfeile bestimmt nicht die Größe ihrer Richtungsänderung.",
+    "starter": "Ein Winkel beschreibt hier die Öffnung zwischen zwei Richtungen. Die Länge eines gezeichneten Pfeils ist eine andere Größe.",
+    "deeper": "Das eigene Schema hält die Richtungen fest: Ein Strahl zeigt waagerecht, der andere schließt 60 Grad mit ihm ein. Der zweite Strahl wird in den Verhältnissen 1:2:3 gezeichnet. Seine Spitze wandert, die Öffnung und der markierte Winkelbogen bleiben gleich. Die Zeichenlänge ist keine reale Strecke im Gelände.",
+    "observe": "Wähle „Kurz“, „Doppelt so lang“ und „Dreimal so lang“. Vergleiche sowohl Spitze als auch Bogen. Erkläre, warum die Spitze einen anderen Ort erreicht, obwohl die Richtungsänderung 60 Grad bleibt.",
+    "benefit": "Du unterscheidest Richtung, Winkelgröße und gezeichnete Streckenlänge.",
+    "connection": "Im Winkelmodell veränderst du eine Richtung. Die eigene Pfeilzeichnung erklärt, warum Winkelgröße und Länge einer Linie getrennt betrachtet werden.",
+    "topic": "science-angle",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/turning",
+        "title": "NRICH · University of Cambridge · Winkel und Drehung (Englisch)",
+        "anchor": "RichtigeTurning-Seite tatsächlich01.11.gelesen77–108, insbesondere108: Winkel als Maß einer Drehung. Eigenes unabhängig trigonometrisch geprüftes60-Grad-Strahlenschema mit Längen1:2:3. Keine Quellenscheiben, Papieraktivität, Arbeitsblätter, Originaltexte oder Bilder übernommen. Die zunächst angenommene/what-angle-Adresse war nicht abrufbar und gilt nicht als gelesen.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Symmetrie",
+        "reason": "Winkel vergleichen Richtungen. Eine behauptete Symmetrie muss zusätzlich prüfen, ob die gesamte Form nach einer bestimmten Veränderung passt."
+      }
+    ],
+    "question": {
+      "prompt": "Ein Pfeil wird länger gezeichnet, behält aber dieselbe Richtung. Was geschieht mit dem Winkel zur unveränderten zweiten Richtung?",
+      "answers": [
+        "Er wird allein dadurch doppelt so groß",
+        "Er bleibt gleich",
+        "Er verschwindet, weil der Pfeil länger ist"
+      ],
+      "correct": 1,
+      "hint": "Vergleiche die Richtungen, nicht die Endpunkte oder Pfeillängen.",
+      "why": "Die Winkelgröße hängt hier von den beiden Richtungen ab. Das Verlängern eines Pfeils ändert diese nicht.",
+      "wrongReasons": [
+        "Die Pfeillänge verdoppelt nicht die Richtungsänderung.",
+        "",
+        "Die zweite Richtung und die Öffnung bleiben erhalten."
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge."
+      }
+    ],
+    "figure": "fixed-angle-length",
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "word",
+    "term": "Symmetrie",
+    "definition": "Symmetrie bedeutet, dass eine Form nach einer bestimmten Veränderung mit sich selbst übereinstimmt. Bei Spiegelsymmetrie passt sie beim Spiegeln an einer Achse. Verschiedene Arten von Symmetrie müssen getrennt geprüft werden.",
+    "starter": "Eine Spiegelachse muss beim Spiegeln die ganze Form auf sich selbst abbilden. Eine passend liegende Linie allein genügt nicht.",
+    "deeper": "Das ideale Rechteck ist doppelt so breit wie hoch. Seine waagerechte und seine senkrechte Mittellinie sind Spiegelachsen. Bei Spiegelung an der gewählten Diagonale bleiben deren Eckpunkte zwar liegen, andere Ecken und Seiten passen aber nicht mehr. Drehen und Spiegeln sind verschiedene Veränderungen.",
+    "observe": "Wähle „Senkrechte Mitte“, „Waagerechte Mitte“ und „Diagonale“. Vergleiche die ursprüngliche und die gespiegelte Umrandung sowie das markierte Punktpaar. Prüfe die ganze Form, nicht nur die Ecken auf der Linie.",
+    "benefit": "Du prüfst eine konkrete Symmetrie systematisch und nutzt bei einer falschen Vermutung ein tatsächliches geometrisches Gegenbeispiel.",
+    "connection": "Die Symmetriekarte prüft Spiegelungen. Das eigene Rechteck trennt passende Mittelachsen von einer nur ähnlich aussehenden diagonalen Linie.",
+    "topic": "science-symmetry",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/symmetry-challenge",
+        "title": "NRICH · University of Cambridge · Spiegelungen prüfen (Englisch)",
+        "anchor": "Tatsächlich01.11.geleseneLehrkräfteabsätze214–227: Spiegelung, räumliches Vorstellen, systematische Prüfung und Begründung. Eigenes nichtquadratischesRechteck mit rationaler Spiegelungsmatrix; keine3×3-Aufgabe, Lösungen, Vorlagen, Grafiken oder Wortlaut übernommen. Die idealen Rechteckeigenschaften sind zusätzlich unabhängig geometrisch geprüft.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Winkel",
+        "reason": "Winkel vergleichen Richtungen. Eine behauptete Symmetrie muss zusätzlich prüfen, ob die gesamte Form nach einer bestimmten Veränderung passt."
+      }
+    ],
+    "question": {
+      "prompt": "Welche Linie ist beim Rechteck mit verschieden langen Seiten keine Spiegelachse?",
+      "answers": [
+        "Die Linie durch die Mitten der kurzen Seiten",
+        "Die Linie durch die Mitten der langen Seiten",
+        "Eine Diagonale zwischen gegenüberliegenden Ecken"
+      ],
+      "correct": 2,
+      "hint": "Beim Spiegeln müssen nicht nur Eckpunkte, sondern auch die zugehörigen Seiten passen.",
+      "why": "Die beiden Ecken auf der Diagonale bleiben beim Spiegeln liegen. Andere Ecken und Seiten treffen die ursprüngliche Umrandung nicht. Deshalb ist diese Diagonale beim nicht quadratischen Rechteck keine Spiegelachse.",
+      "wrongReasons": [
+        "Diese Mittellinie spiegelt die beiden passenden Rechteckhälften aufeinander.",
+        "Auch diese Mittellinie erhält die Form beim Spiegeln.",
+        ""
+      ]
+    },
+    "relatedQuestions": [
+      {
+        "question": "Warum ist nicht jede Diagonale eine Spiegelachse?",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Symmetrie“: Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal."
+      }
+    ],
+    "figure": "rectangle-reflection",
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum ist nicht jede Diagonale eine Spiegelachse?",
+    "definition": "Bei einer Spiegelung muss die ganze Form auf sich passen. Eine auffällige Linie allein genügt nicht. Beim Rechteck mit verschieden langen Seiten bleiben die zwei Ecken auf der Diagonale liegen; andere Ecken und Seiten passen nach dem Spiegeln jedoch nicht auf die ursprüngliche Form.",
+    "starter": "Eine Spiegelachse muss beide Seiten passend zuordnen. Eine schön schräge Linie reicht dafür nicht.",
+    "deeper": "Ein Quadrat und ein nicht quadratisches Rechteck haben unterschiedliche Symmetrien. Einzelne passende Ecken beweisen nicht, dass alle Seiten und Punkte übereinstimmen.",
+    "observe": "Wähle zuerst eine Mittellinie, danach die Diagonale. Verfolge besonders die Ecke, die nicht auf der Diagonale liegt. Begründe anhand der gespiegelten ganzen Umrandung, warum zwei festliegende Ecken noch keine Spiegelachse beweisen.",
+    "benefit": "Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal.",
+    "topic": "science-symmetry",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/symmetry-challenge",
+        "title": "NRICH · University of Cambridge · Spiegelungen prüfen (Englisch)",
+        "anchor": "Tatsächlich01.11.geleseneLehrkräfteabsätze214–227: Spiegelung, räumliches Vorstellen, systematische Prüfung und Begründung. Eigenes nichtquadratischesRechteck mit rationaler Spiegelungsmatrix; keine3×3-Aufgabe, Lösungen, Vorlagen, Grafiken oder Wortlaut übernommen. Die idealen Rechteckeigenschaften sind zusätzlich unabhängig geometrisch geprüft.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Symmetrie",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Symmetrie“: Du prüfst eine Symmetrie an der ganzen Form statt an einem einzelnen Merkmal."
+      }
+    ],
+    "connection": "Die Symmetriezeichnung zeigt Formen an einer Spiegelachse. Prüfe, ob beim Spiegeln die ganze Form auf sich passt. Eine Diagonale verbindet zunächst nur zwei Ecken und muss diese Bedingung nicht erfüllen.",
+    "figure": "rectangle-reflection",
+    "question": {
+      "prompt": "Zwei Ecken des nichtquadratischen Rechtecks bleiben bei der Diagonalspiegelung liegen. Was musst du zusätzlich prüfen?",
+      "answers": [
+        "Ob auch die übrigen Punkte und Seiten wieder zur ganzen Form passen",
+        "Nur ob die Linie lang genug gezeichnet ist",
+        "Ob die Diagonale eine auffällige Farbe hat"
+      ],
+      "correct": 0,
+      "hint": "Zwei passende Punkte sind nur ein Teil der Form.",
+      "why": "Spiegelsymmetrie verlangt, dass die gesamte Form auf sich selbst abgebildet wird. Im Modell passen bei der Diagonale weitere Punkte und Seiten nicht.",
+      "wrongReasons": [
+        "",
+        "Die Linienlänge ersetzt keine Prüfung der Spiegelung der Form.",
+        "Die Farbe erklärt die Transformation nicht."
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum ändert ein längerer gezeichneter Pfeil nicht den Winkel?",
+    "definition": "Der Winkel zwischen zwei Richtungen hängt nicht davon ab, wie lang ihre Pfeile gezeichnet sind. Das Verlängern derselben Richtung verändert ihre Öffnung nicht. Eine Drehung wäre dagegen eine andere Änderung.",
+    "starter": "Die Richtung zählt für den Winkel. Ein längerer Pfeil kann trotzdem in dieselbe Richtung zeigen.",
+    "deeper": "Ein Vergleich muss gemeinsamen Ausgangspunkt und Richtungen festlegen. Der Abstand zwischen Pfeilspitzen ist eine andere Größe und kein unmittelbares Winkelmaß.",
+    "observe": "Verdopple die Zeichenlänge des schrägen Strahls mit dem angebotenen Control. Vergleiche die neue Spitze mit dem unveränderten Bogen. Erkläre getrennt, welche Größe sich verändert und welche nicht.",
+    "benefit": "Du unterscheidest Richtungsänderung von Streckenlänge.",
+    "topic": "science-angle",
+    "sources": [
+      {
+        "url": "https://nrich.maths.org/problems/turning",
+        "title": "NRICH · University of Cambridge · Winkel und Drehung (Englisch)",
+        "anchor": "RichtigeTurning-Seite tatsächlich01.11.gelesen77–108, insbesondere108: Winkel als Maß einer Drehung. Eigenes unabhängig trigonometrisch geprüftes60-Grad-Strahlenschema mit Längen1:2:3. Keine Quellenscheiben, Papieraktivität, Arbeitsblätter, Originaltexte oder Bilder übernommen. Die zunächst angenommene/what-angle-Adresse war nicht abrufbar und gilt nicht als gelesen.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Winkel",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Winkel“: Du unterscheidest Richtungsänderung von Streckenlänge."
+      }
+    ],
+    "connection": "Im Winkelmodell vergleichst du die Richtungen zweier Schenkel. Verlängere einen gedachten Schenkel, ohne ihn zu drehen, und prüfe, welche Größe dabei gleich bleibt.",
+    "figure": "fixed-angle-length",
+    "question": {
+      "prompt": "Im Schema verdoppelt sich die Zeichenlänge des schrägen Strahls bei unveränderter Richtung. Was geschieht mit der 60-Grad-Öffnung?",
+      "answers": [
+        "Sie verdoppelt sich automatisch auf 120 Grad",
+        "Sie bleibt 60 Grad; die Spitze liegt weiter entfernt",
+        "Sie wird 0 Grad, weil der Pfeil länger ist"
+      ],
+      "correct": 1,
+      "hint": "Verfolge den Winkelbogen und die Pfeilspitze getrennt.",
+      "why": "Die Verlängerung verschiebt die Spitze entlang derselben Richtung. Die Öffnung zur unveränderten zweiten Richtung bleibt 60 Grad.",
+      "wrongReasons": [
+        "Eine doppelte Länge verdoppelt hier nicht die Richtungsänderung.",
+        "",
+        "Der längere Strahl liegt weiterhin in derselben schrägen Richtung."
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum ist ein GPS-Punkt keine grenzenlos genaue Ortsangabe?",
+    "definition": "Eine Ortsmessung braucht einen Bezug und ein Verfahren. Messungen besitzen begrenzte Genauigkeit. Viele Nachkommastellen auf einem Bildschirm sind deshalb keine automatische Zusicherung, jeden winzigen Abstand zu kennen.",
+    "starter": "Ein angezeigter Punkt ist eine Positionsschätzung. Viele Ziffern allein zeigen noch nicht, wie verlässlich diese Schätzung ist.",
+    "deeper": "Satellitenlage, Empfangsbedingungen, Abschattung, reflektierte Signale und das Empfangsgerät können die Genauigkeit beeinflussen. Die Kreise im eigenen Modell markieren nur frei gewählte Beispielgrößen um denselben geschätzten Punkt. Sie sind keine realen GPS-Messungen, Wahrscheinlichkeitsaussagen oder garantierten Fehlergrenzen.",
+    "observe": "Wähle die Beispielgrößen 1, 3 und 6 Meter. Vergleiche die Kreise um denselben Punkt und die unveränderte Mittelpunktangabe. Erkläre, welche zusätzlichen Informationen du für eine wirkliche Genauigkeitsbeurteilung brauchst. Es wird kein Standort abgefragt.",
+    "benefit": "Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern.",
+    "topic": "science-gps",
+    "sources": [
+      {
+        "url": "https://spaceplace.nasa.gov/gps/en/",
+        "title": "NASA Space Place · GPS als Signal- und Positionsverfahren (Englisch)",
+        "anchor": "Tatsächlich01.11.gelesen22–30: Satellitensignale, Empfänger und endliche Genauigkeit. TatsächlichesArtikelupdate27.06.2019; allgemeinerFooter2026 ist keinArtikelupdate. Keine aktuellen Satellitenzahlen, Genauigkeitsgarantien, Radarvereinfachung oder Animation übernommen.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": "2019-06-27"
+      },
+      {
+        "url": "https://archive.gps.gov/systems/gps/performance/accuracy/",
+        "title": "GPS.gov Archiv · Empfang und Positionsgenauigkeit (Englisch)",
+        "anchor": "Tatsächlich01.11.gelesen56,72–86: ausdrücklich seitFebruar2025nichtaktualisiertes Behördenarchiv. Hier nur zeitstabile Ursachen begrenzter Genauigkeit: Empfang, Abschattung, Geometrie und Mehrwegeausbreitung. Keine alten Zahlen/Leistungszusagen als aktuelle Gerätegarantie. Die neue/gps-accuracy-0-Adresse antwortete403; keine Sperre umgangen.",
+        "checkedOn": "2026-11-01",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Koordinate",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Koordinate“: Du fragst nach Bezug und Genauigkeit statt nur nach der Zahl der Ziffern."
+      }
+    ],
+    "connection": "Die GPS-Karte verbindet Satellitensignale mit der Bestimmung eines Orts. Prüfe zusätzlich Bezug und Unsicherheit; viele angezeigte Nachkommastellen sind noch kein Genauigkeitsnachweis.",
+    "figure": "position-example-radius",
+    "question": {
+      "prompt": "Zwei Anzeigen nennen denselben langen Koordinatenwert, aber ihre Empfangsbedingungen unterscheiden sich. Was folgt daraus?",
+      "answers": [
+        "Allein aus der Ziffernzahl steht gleiche Genauigkeit fest",
+        "Das schlechtere Signal macht jede angezeigte Ziffer automatisch richtig",
+        "Für eine Genauigkeitsbeurteilung brauchst du Informationen über Verfahren und Bedingungen"
+      ],
+      "correct": 2,
+      "hint": "Eine Schreibweise ist noch kein Fehlernachweis.",
+      "why": "Mehr angezeigte Stellen sind keine automatische Garantie kleinerer Fehler. Bezug, Empfang, Gerät und eine begründete Unsicherheitsangabe bleiben wichtig.",
+      "wrongReasons": [
+        "Die Ziffernzahl beschreibt die Schreibweise, nicht allein die wirklichen Fehler.",
+        "Die Anzeige macht Störungen nicht automatisch rückgängig.",
+        ""
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum kann ein Papierplan eine echte Bauprüfung nicht ersetzen?",
+    "definition": "Ein Plan kann mit einem Maßstab Strecken darstellen. Seine vereinfachten Zeichen enthalten aber nicht alle Eigenschaften eines echten Bauwerks oder Untergrunds. Zeichnung, Messung und Sicherheitsprüfung sind verschiedene Aufgaben.",
+    "starter": "Ein Maßstab erklärt das Verhältnis von gezeichneter und gedachter wirklicher Länge. Er berechnet keine Tragfähigkeit.",
+    "deeper": "Im vorhandenen Maßstabsmodell steht eine gedachte Strecke von 200 Zentimetern im Maßstab 1:100 für 2 Zentimeter auf dem Plan. Material, Verbindung, Belastung und Bauvorschriften werden darin nicht untersucht. Eine korrekte Längenrechnung ist deshalb kein Sicherheitsnachweis für ein echtes Bauwerk.",
+    "observe": "Nutze im vorhandenen Maßstabsmodell die Auswahl 1:50, 1:100 und 1:200. Vergleiche die gezeichneten 4, 2 und 1 Zentimeter für dieselbe gedachte 200-Zentimeter-Strecke. Benenne danach mindestens eine zusätzliche Angabe, die eine wirkliche Bauprüfung benötigen würde.",
+    "benefit": "Du erkennst Nutzen und Grenze einer maßstäblichen Darstellung.",
+    "sources": [
+      {
+        "url": "https://www.ordnancesurvey.co.uk/blog/what-is-cartography",
+        "title": "Ordnance Survey · Maßstab und gleiche Einheiten (Englisch)",
+        "anchor": "Tatsächlich02.11. im normalen Browser gelesen: What is Cartography?, Abschnitt3 Scale, Verhältnis Kartenstrecke/Grundstrecke bei gleichen Einheiten. Veröffentlichung14.11.2022, neueres Inhaltsupdate unbekannt; Footer2026 ist kein Artikelupdate. Eigene200cm/50,/100,/200-Rechnung und Grenze des bestehenden Lernmodells; keine Tragfähigkeits-/Baugenehmigungsprüfung, keine pauschale Aussage über jeden Kartentyp und keine Texte, Bilder oder Crown-Copyright-Karten übernommen.",
+        "checkedOn": "2026-11-02",
+        "updatedOn": null
+      }
+    ],
+    "relatedWords": [],
+    "connection": "Bei „Maßstab“ vergleichst du gezeichnete Längen mit gedachten Originalgrößen. Daraus folgt noch keine Aussage darüber, welche Last ein echtes Bauwerk sicher tragen kann.",
+    "word": "Maßstab",
+    "figure": "plan-scale",
+    "figureUse": {
+      "provider": "existing-statistics",
+      "kind": "plan-scale"
+    },
+    "question": {
+      "prompt": "Ein Plan zeigt eine gedachte 200-Zentimeter-Strecke richtig als 2 Zentimeter bei 1:100. Welche Aussage ist dadurch gedeckt?",
+      "answers": [
+        "Das Längenverhältnis stimmt; Material und Tragfähigkeit sind damit nicht geprüft",
+        "Jede daraus gebaute Wand trägt sicher dieselbe Last",
+        "Eine Prüfung realer Verbindungen ist dadurch überflüssig"
+      ],
+      "correct": 0,
+      "hint": "Unterscheide, welche Größen das Modell tatsächlich untersucht.",
+      "why": "Die Rechnung 200/100 = 2 prüft das Längenverhältnis. Das Modell enthält keine belastbaren Angaben zu Material, Lasten oder Verbindungen.",
+      "wrongReasons": [
+        "",
+        "Aus einer Planlänge folgt keine sichere Traglast.",
+        "Das Lernmodell ersetzt keine Untersuchung wirklicher Verbindungen."
+      ]
+    },
+    "sourceReadOn": "2026-11-02"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum beeinflusst die Länge eines Pendels seinen Takt?",
+    "definition": "Bei einem einfachen Pendelmodell beeinflusst die Fadenlänge die Schwingungszeit. Die Bedingungen des Modells gehören dazu. Eine frei gezeichnete Pendelbewegung ist noch keine echte Zeitmessung.",
+    "starter": "Unter gleichen Modellbedingungen braucht ein Pendel mit längerem Faden mehr Zeit für eine vollständige Hin-und-zurück-Bewegung. Länge und Schwingungszeit sind verschiedene Größen.",
+    "deeper": "Für ein ideales Fadenpendel bei kleinen Auslenkungen gilt näherungsweise T = 2π√(L/g). L ist die Fadenlänge bis zur Kugelmitte, g die Fallbeschleunigung. Vierfache Länge ergibt in dieser Näherung doppelte Zeit. Die Masse steht nicht in dieser Formel. Größere Auslenkungen, Luftwiderstand und reale Aufhängungen brauchen zusätzliche Betrachtung.",
+    "observe": "Stelle im vorhandenen Modell „Fadenlänge in Metern“ zunächst auf 0,5 und dann auf 2. Lies jeweils die berechnete Zeit für eine volle Schwingung. Die Pendelzeichnung ist ein Standbild in Ruhelage; sie läuft nicht als echte Uhr. Vergleiche die angezeigten Modellzeiten und ihre Einheiten.",
+    "benefit": "Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten.",
+    "topic": "science-pendulum",
+    "sources": [
+      {
+        "url": "https://www.science.clemson.edu/physics/labs/labs/223/sample/index.html",
+        "title": "Clemson University · Fadenpendel und Kleinwinkelnäherung (Englisch)",
+        "anchor": "Hintergrund und Gleichung 2 beschreiben die Schwingungszeit des idealen Fadenpendels bei kleinen Auslenkungen. Länge und Fallbeschleunigung bestimmen diese Näherung; die Masse kommt darin nicht vor.",
+        "updatedOn": "2006-01-27",
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Meter",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Meter“: Du änderst eine Modellgröße bewusst und beschreibst ihre Wirkung mit passenden Einheiten."
+      }
+    ],
+    "connection": "Das Pendelmodell lässt die Länge verändern. Vergleiche die Zeit für eine ganze Hin-und-zurück-Bewegung, statt nur die gezeichnete Pendelgröße zu betrachten.",
+    "question": {
+      "prompt": "Du vervierfachst im idealen Pendelmodell die Fadenlänge. Fallbeschleunigung und kleine Auslenkung bleiben gleich. Welche Schwingungszeit passt zur Kleinwinkelnäherung?",
+      "answers": [
+        "Viermal so lange, weil die Länge viermal so groß ist.",
+        "Doppelt so lange, weil die Zeit mit der Quadratwurzel der Länge wächst.",
+        "Halb so lange, weil ein längerer Faden automatisch schneller schwingt."
+      ],
+      "correct": 1,
+      "hint": "Halte die übrigen Bedingungen gleich und vergleiche die berechnete Zeit für eine vollständige Hin-und-zurück-Bewegung.",
+      "why": "In der angegebenen Näherung wächst die Zeit mit √L. Für vierfache Länge gilt √4 = 2: Die Modellzeit verdoppelt sich. Das ist keine Aussage für jede beliebige reale Auslenkung.",
+      "wrongReasons": [
+        "Das wäre ein linearer Zusammenhang. In dieser Pendelnäherung steht die Länge unter einer Quadratwurzel.",
+        "",
+        "Die Modellzeit nimmt hier mit der Länge zu. Länger bedeutet unter diesen gesetzten Bedingungen nicht eine halbierte Zeit."
+      ]
+    },
+    "figure": "pendulum-length-period-ratio",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum kann Anschieben im passenden Takt wirksamer sein?",
+    "definition": "Wiederholte Anregung kann bei einer passenden Frequenz eine Schwingung stärker werden lassen. Dämpfung und die Art der Anregung begrenzen die Wirkung. Resonanz ist keine unbegrenzte Vergrößerung jeder Bewegung.",
+    "starter": "Ein wiederholter Antrieb nahe einem passenden Eigentakt kann eine Schwingung besonders gut unterstützen. Die Stärke einer einzelnen Kraft ist nicht die einzige wichtige Größe.",
+    "deeper": "Anregung, Eigenfrequenz und Energieverlust sind zu unterscheiden. Im vorhandenen stationären Zahlenmodell verändert das Verhältnis der Antriebs- zur Eigenfrequenz die relative Antwort. Der Dämpfungsparameter bleibt fest. Ein genauer Höchstwert hängt vom Modell und seinen Parametern ab; die Aussage „nahe der Eigenfrequenz“ ist deshalb von einer universellen exakten Maximalstelle zu unterscheiden. Die gezeichnete Wellenlinie ist nur ein Höhenvergleich ohne Zeitachse. Ihre fest gezeichneten Bögen sind keine Messung einer Frequenz oder eines tatsächlichen zeitlichen Verlaufs.",
+    "observe": "Vergleiche auf der vorhandenen Resonanzkarte die zugelassenen Verhältnisse 0,5 und 1,0. Lies die relative stationäre Auslenkung und halte den festen Dämpfungswert im Blick. Das ist ein normiertes Zahlenmodell; die Ablesung ist keine Messung an einem echten Bauwerk.",
+    "benefit": "Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen.",
+    "topic": "science-resonance",
+    "sources": [
+      {
+        "url": "https://www.exploratorium.edu/snacks/resonant-rings",
+        "title": "Exploratorium · Eigenfrequenzen und Resonanz (Englisch)",
+        "anchor": "Die Erklärung unterscheidet Anregung und Eigenfrequenzen; Trägheit und Steifigkeit beeinflussen die möglichen Schwingungen. Die eigene Darstellung verwendet keine übernommenen Ringfotos oder Bauanleitungen.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      },
+      {
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/15-6-forced-oscillations",
+        "title": "OpenStax · Erzwungene gedämpfte Schwingungen (Englisch)",
+        "anchor": "Periodischer Antrieb führt Energie zu. Die stationäre Amplitudenbeziehung in Gleichung 15.29 hängt von Anregung und Dämpfung ab. Die verwendete eigene Modellantwort wird ausdrücklich mit ihren Annahmen beschrieben.",
+        "updatedOn": null,
+        "checkedOn": "2026-10-31"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Frequenz",
+        "reason": "Vergleiche die Erklärung mit dem Begriff „Frequenz“: Du erklärst eine Taktwirkung und benennst ihre begrenzenden Bedingungen."
+      }
+    ],
+    "connection": "Das Resonanzmodell vergleicht den Takt des Anstoßens mit der Schwingung. Achte darauf, wann Energie passend zugeführt wird und was die Bewegung begrenzt.",
+    "question": {
+      "prompt": "Im stationären Zahlenmodell vergleichst du bei gleicher Antriebsstärke und Dämpfung eine Anregung weit neben und dann nahe der Eigenfrequenz. Welche Erklärung passt?",
+      "answers": [
+        "Eine kleine Antriebskraft kann grundsätzlich keine größere Schwingungsantwort aufbauen.",
+        "Nahe einem passenden Eigentakt kann der periodische Antrieb wirksamer sein; Dämpfung bleibt eine eigene begrenzende Bedingung.",
+        "Beim Frequenzverhältnis 1 verschwindet die Dämpfung automatisch."
+      ],
+      "correct": 1,
+      "hint": "Trenne den Antriebstakt, die Eigenfrequenz und den Energieverlust voneinander.",
+      "why": "Ein passender periodischer Antrieb kann die Energiezufuhr zur Schwingung begünstigen. Dämpfung führt weiter Energie ab und ist im Modell nicht durch die Frequenzwahl abgeschaltet. Eine universelle unbegrenzte Antwort folgt daraus nicht.",
+      "wrongReasons": [
+        "Auch ein kleiner wiederholter Antrieb kann nahe einer passenden Eigenfrequenz eine deutliche Antwort erzeugen. Nicht nur eine einzelne große Kraft ist entscheidend.",
+        "",
+        "Das Frequenzverhältnis verändert den hier fest gesetzten Dämpfungsparameter nicht. Takt und Energieverlust sind verschiedene Modellgrößen."
+      ]
+    },
+    "figure": "normalized-driven-response",
+    "sourceReadOn": "2026-10-31"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum bleibt ein Farbfleck in Wasser nicht immer an derselben Stelle?",
+    "definition": "Stoffteilchen bewegen sich und können sich dadurch verteilen. Strömungen oder Rühren können zusätzlich beitragen. Ein sich ausbreitender Fleck ist deshalb nicht automatisch ein reiner Diffusionsnachweis.",
+    "starter": "Farbe kann sich durch die Bewegung kleiner Teilchen verteilen. Eine gemeinsame Bewegung des Wassers kann zusätzlich Stoffe mitnehmen.",
+    "deeper": "Unregelmäßige Einzelbewegung und eine gemeinsame Strömung sind unterschiedliche Bewegungsanteile. Sie können zugleich auftreten. Die acht Pfeile zeigen ein absichtlich ausgewähltes Muster, keine echte Zufallsstichprobe oder gemessenen Molekülwege. Dass sich die Einzelpfeile im gedachten Muster im Mittel ausgleichen, ist eine Modellwahl und kein Gesetz über jede kleine Beobachtung.",
+    "observe": "Vergleiche „Einzelbewegung“, „Strömung“ und „Beides zusammen“. Folge den Pfeilen vom Start zum Ende. Beschreibe, welcher gemeinsame Anteil hinzukommt, und benenne, welche echten Messdaten du zur Erklärung eines beobachteten Farbflecks zusätzlich brauchst.",
+    "benefit": "Du trennst zwei mögliche Ursachen einer sichtbaren Verteilung.",
+    "topic": "science-diffusion",
+    "sources": [
+      {
+        "url": "https://www.exploratorium.edu/snacks/agar-cell-diffusion",
+        "title": "Exploratorium · Diffusion und ungeordnete Teilchenbewegung (Englisch)",
+        "anchor": "Tatsächlich01.11.geleseneErklärung121–123: zufällige Molekülbewegung und Konzentrationsausgleich. Nur Sachbegriffe herangezogen; keine Agar-/Säure-/Indikatoraufgabe, Stoffmengen, Arbeitsanweisungen, Bilder oder Originaltexte übernommen. Quelle nenntCC BY-NC-SA4.0fürihrMaterial; eigene andere Gedankenzeichnung und eigene Texte sind keine Übernahme des Versuchs.",
+        "updatedOn": null,
+        "checkedOn": "2026-11-01"
+      },
+      {
+        "url": "https://oceanservice.noaa.gov/facts/current.html",
+        "title": "NOAA · Strömung als Wasserbewegung (Englisch)",
+        "anchor": "Tatsächlich01.11.gelesen1/7–11 undUpdate25–27: Wasserbewegung von Ort zu Ort, unter anderem durch Wind oder Dichteunterschiede. Nur begriffliche Abgrenzung vom ungeordneten Einzelmuster; keine echten Ozeanwerte, Vorhersagen oder Videos übernommen. Vorherige/currents.html-Adresse war404, nichtalsgelesenerSachbeleggeführt.",
+        "updatedOn": "2026-09-23",
+        "checkedOn": "2026-11-01"
+      }
+    ],
+    "relatedWords": [],
+    "connection": "Die Diffusionskarte erklärt viele zufällige Teilchenwege. Prüfe am Farbfleck zusätzlich, ob eine Strömung das Wasser als Ganzes bewegt.",
+    "figure": "individual-motion-and-flow",
+    "question": {
+      "prompt": "Die Modellpfeile zeigen unterschiedliche Einzelrichtungen und zusätzlich denselben gemeinsamen Anteil nach rechts. Welche Erklärung passt?",
+      "answers": [
+        "Beide Bewegungsanteile können zugleich vorkommen",
+        "Eine Strömung beweist, dass sich kleine Teilchen nicht mehr ungeordnet bewegen",
+        "Acht gezeichnete Pfeile messen bereits eine echte Diffusionsgeschwindigkeit"
+      ],
+      "correct": 0,
+      "hint": "Vergleiche, welche Teile des Musters in der dritten Auswahl erhalten bleiben und welche hinzukommen.",
+      "why": "Das zusammengesetzte Gedankenbild behält die verschiedenen Einzelrichtungen und ergänzt den gemeinsamen Bewegungsanteil. Es enthält keine echten Zeit-, Größen- oder Konzentrationsmessungen.",
+      "wrongReasons": [
+        "",
+        "Das Gedankenbild zeigt gerade, dass eine gemeinsame Bewegung die unterschiedlichen Einzelanteile nicht automatisch aufhebt.",
+        "Ohne tatsächliche Längen-, Zeit- und Stoffdaten ist die Zeichnung keine Geschwindigkeitsmessung."
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  {
+    "kind": "why",
+    "whyQuestion": "Warum kann ein schwarzer Stift mehrere Farben enthalten?",
+    "definition": "Eine wahrgenommene Stiftfarbe kann aus mehreren Bestandteilen bestehen. Bei einer geeigneten Trennung bewegen sich diese nicht unbedingt gleich weit. Nicht jeder schwarze Stift liefert denselben Farbverlauf.",
+    "starter": "Eine schwarze Tinte kann mehrere Farbstoffe enthalten. Unser erfundenes Beispiel besteht aus drei vorher gewählten Bestandteilen; es untersucht keinen echten Stift.",
+    "deeper": "Eine bewegte Flüssigkeit kann Bestandteile unterschiedlich weit durch ein ruhendes Material mitnehmen. Welche Trennung entsteht, hängt von Stoffen, Flüssigkeit und Trägermaterial ab. Die Formen A, B und C kennzeichnen gedachte Bestandteile, keine bekannten chemischen Stoffnamen. Aus einem einzelnen Muster allein folgt keine sichere Identifikation unbekannter Tinte.",
+    "observe": "Wähle „Start“, „Zwischenbild“ und „Weiterer Zustand“. Vergleiche die gedachte Flüssigkeitsfront und die drei unterschiedlich weit gewanderten Formen. Beschreibe den Unterschied zwischen sichtbar getrennten Bestandteilen und einem tatsächlich bestimmten Stoffnamen. Das ist kein Versuch mit echten Stiften oder Flüssigkeiten.",
+    "benefit": "Du unterscheidest sichtbare Gesamtfarbe, Trennung und tatsächliche Stoffbestimmung.",
+    "topic": "science-chromatography",
+    "sources": [
+      {
+        "url": "https://www.exploratorium.edu/snacks/separation-anxiety",
+        "title": "Exploratorium · Unterschiedliche Stoffwanderung (Englisch)",
+        "anchor": "Tatsächlich01.11.geleseneErklärung91–96: bewegteFlüssigkeit, ruhendesPapier, unterschiedlicheWanderung vonBestandteilen. Keine Aussage,dassjedeschwarzeTintegenaudreiStoffeenthältoderjedesMusterohneReferenzalleIdentitätenbeweist. QuelleCC BY-NC-SA4.0Materialnichtübernommen: keinePapier-/Stift-/Lösungsmittelanleitung, Vorlagen, Abbildungen, Originaltexte oder historischeEntdeckungsbehauptung. Eigene vorher gewählte1/4-,1/2-,3/4-Frontanteile sind nurIllustration.",
+        "updatedOn": null,
+        "checkedOn": "2026-11-01"
+      }
+    ],
+    "relatedWords": [
+      {
+        "term": "Kapillarwirkung",
+        "reason": "Das flüssige Trägermittel kann sich auf engen Wegen im Papier bewegen. Unterschiedliche Stoffwanderung und Stoffbestimmung brauchen darüber hinaus weitere Bedingungen; Kapillarwirkung allein identifiziert keinen Farbstoff."
+      }
+    ],
+    "connection": "Die Chromatografiekarte zeigt, wie Bestandteile einer Mischung verschieden weit mitwandern können. Ein getrennter Fleck liefert einen Hinweis, aber noch keinen sicheren Stoffnamen.",
+    "figure": "three-illustrative-pigments",
+    "question": {
+      "prompt": "Im erfundenen Trennbild sind die Formen A, B und C an verschiedenen Stellen sichtbar. Welche Aussage ist dadurch gedeckt?",
+      "answers": [
+        "Damit ist die vollständige Zusammensetzung jedes schwarzen Stifts bestimmt",
+        "Die drei gewählten Modellbestandteile wandern unterschiedlich weit; echte Stoffnamen bleiben offen",
+        "Drei sichtbare Formen garantieren, dass unbekannte Flüssigkeiten ungefährlich sind"
+      ],
+      "correct": 1,
+      "hint": "Unterscheide Modellbestandteil, echte Stoffbestimmung und Sicherheitsurteil.",
+      "why": "Die Zeichnung vergleicht vorher festgelegte Wanderungsanteile dreier Modellbestandteile. Für eine reale Stoffidentifikation braucht man unter anderem passende Bedingungen und Vergleichsdaten.",
+      "wrongReasons": [
+        "Eine erfundene einzelne Mischung beschreibt nicht jede wirkliche Tinte.",
+        "",
+        "Aus einer Formzeichnung folgt kein Sicherheitsurteil über echte Flüssigkeiten."
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  }
+]

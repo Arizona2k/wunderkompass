@@ -1,3 +1,4 @@
+import {withEcologyPreRetainedRuntime} from './retained-predecessor-reference.mjs';
 import {withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import os from'node:os';import{createHash}from'node:crypto';import{learningInputs,learningFingerprint}from'../build/learning-fingerprint.mjs';import fixture from'./fixtures/statistics-gene-runtime-predecessor.json'with{type:'json'};
 import{digitalPredecessors,withStatisticsPreDigitalRuntime}from'./digital-predecessor-reference.mjs';import digitalFixture from'./fixtures/digital-statistics-runtime-predecessor.json'with{type:'json'};
@@ -20,7 +21,8 @@ export function statisticsPredecessors(items){
  for(const[x,i]of items.slice(166).map((x,i)=>[x,i])){assert(!Object.hasOwn(x,history));const original=beforeRevisions(x);if(actual){assert.deepEqual(x.ui,{...actual.currentTemplate,route:actual.addedDossiers[i].route});delete original.ui;}else assert(!Object.hasOwn(x,'ui'),'no invented full UI before genuine full');assert.equal(fp(original),fixture.newElevenContentOnlyBeforeActualUI[i].sha256,'whole new individual content-only dossier stays exact');}
  return prior;
 }
-export function withGenePreStatisticsRuntime(root,inspect){
+export function withGenePreStatisticsRuntime(root,inspect){return withEcologyPreRetainedRuntime(root,prior=>originalwithGenePreStatisticsRuntime(prior,inspect));}
+function originalwithGenePreStatisticsRuntime(root,inspect){
  if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
