@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "sourceReadOn": "2026-11-02",
+  "words": {
+    "Evolution": [
+      "Evolution",
+      "Leben & Zellen",
+      "Evolution beschreibt Veränderungen vererbbarer Eigenschaften in Populationen über Generationen. Sie passiert nicht, weil ein einzelnes Tier beschließt, anders zu werden. Umweltbedingungen können beeinflussen, welche Eigenschaften sich häufiger weitervererben."
+    ],
+    "Mikroorganismus": [
+      "Mikroorganismus",
+      "Natur & Ökologie",
+      "Mikroorganismen sind sehr kleine Lebewesen, deren Einzelheiten oft erst mit einem Mikroskop erkennbar werden. Dazu gehören verschiedene Gruppen, etwa Bakterien und manche Pilze oder Algen. Klein bedeutet nicht automatisch gefährlich, und nicht jeder Mikroorganismus besteht nur aus einer Zelle."
+    ],
+    "Ökosystem": [
+      "Ökosystem",
+      "Natur & Ökologie",
+      "Ein Ökosystem umfasst Lebewesen, ihre nicht lebende Umgebung und die Beziehungen zwischen beidem. Zu einem Wald gehören deshalb nicht nur Tiere und Pflanzen, sondern auch Wasser, Boden, Luft und weitere Bedingungen. Ein Lebensraum und ein Ökosystem beschreiben verwandte, aber verschiedene Blickrichtungen."
+    ],
+    "Zersetzung": [
+      "Zersetzung",
+      "Natur & Ökologie",
+      "Bei der Zersetzung wird abgestorbenes organisches Material nach und nach abgebaut. Pilze, Bakterien und weitere Lebewesen können daran beteiligt sein. Stoffe verschwinden dabei nicht einfach: Sie werden verändert und gelangen in weitere Kreisläufe."
+    ],
+    "Kohlenstoffkreislauf": [
+      "Kohlenstoffkreislauf",
+      "Natur & Ökologie",
+      "Kohlenstoff bewegt sich zwischen verschiedenen Speichern, etwa Luft, Lebewesen, Boden, Meer und Gestein. Der Kohlenstoffkreislauf beschreibt diese Wege und Umwandlungen. Er bedeutet nicht, dass überall gleich viel gespeichert ist oder jede Bewegung gleich schnell abläuft."
+    ],
+    "Dürre": [
+      "Dürre",
+      "Geografie & Karten",
+      "Dürre bezeichnet über längere Zeit trockenere Bedingungen als für eine Gegend üblich, die zu Wasserproblemen führen. Ein trockener Tag allein ist noch keine Dürre. Auch eine normalerweise trockene Wüste und eine ungewöhnliche Trockenphase sind verschiedene Begriffe."
+    ]
+  },
+  "why": {},
+  "learning": {
+    "Evolution": {
+      "starter": "In einer Gruppe von Lebewesen können vererbbare Eigenschaften über Generationen unterschiedlich häufig werden. Ein einzelnes Tier verwandelt sich dafür nicht auf Wunsch.",
+      "deeper": "Mutationen können vererbbare Unterschiede hervorbringen. Unterschiede bei den Nachkommen können die Häufigkeiten über Generationen verändern. Das Häufigkeitsbild allein zeigt jedoch nicht, wodurch eine Veränderung verursacht wurde. Evolution hat kein vorgegebenes Ziel der Perfektion.",
+      "observe": "Wähle nacheinander die drei Generationen. Vergleiche, wie viele der jeweils acht Zeichen orange mit einem Kreuz markiert sind. Beschreibe zuerst die beobachtete Änderung und trenne sie von einer Vermutung über ihre Ursache. Die Zeichen stehen für erfundene Häufigkeiten, nicht für ein bestimmtes Tier oder einen gemessenen Stammbaum.",
+      "benefit": "Du unterscheidest die vererbbaren Eigenschaften einer Population, die Entwicklung eines Einzelwesens und die noch offene Ursache eines Häufigkeitswechsels.",
+      "topic": "science-cell",
+      "connection": "Die Zellkarte betrachtet eine lebende Einheit. Evolution untersucht vererbbare Veränderungen in Populationen über Generationen; ein einzelnes Zellbild zeigt diesen Zeitverlauf nicht.",
+      "relatedWords": [
+        {
+          "term": "Mutation",
+          "reason": "Erbliche Veränderungen können zur Vielfalt beitragen. Evolution betrachtet Populationen über Generationen."
+        },
+        {
+          "term": "Bakterium",
+          "reason": "Auch Populationen einzelliger Lebewesen können sich über Generationen verändern. Ein Einzelwesen und die Population sind verschieden."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Evolution",
+          "title": "NIH/NHGRI · Evolution (Englisch)",
+          "anchor": "NHGRI Definition, lines13–15 Genomic variation and inherited population changes across generations; mutation contributes variation, reproductive differences can change frequencies.",
+          "updatedOn": null,
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "question": {
+        "prompt": "Im Modell ändert sich die Zahl orange mit einem Kreuz markierter Zeichen von Generation zu Generation. Welche Aussage ist durch dieses Bild gedeckt?",
+        "answers": [
+          "Ein einzelnes Lebewesen hat sich auf Wunsch verändert",
+          "Die dargestellte Eigenschaft ist unterschiedlich häufig; ihre Ursache bleibt offen",
+          "Die Gruppe wird mit jeder Generation automatisch perfekter"
+        ],
+        "correct": 1,
+        "hint": "Trenne die angezeigten Anzahlen von einer Erklärung dafür.",
+        "why": "Das Bild zeigt erfundene Häufigkeiten über Generationen. Es zeigt weder Wünsche noch einen bewiesenen Grund für die Änderung oder ein festes Ziel.",
+        "wrongReasons": [
+          "Einzelne Zeichen aus verschiedenen Generationen sind hier nicht als dasselbe Lebewesen verbunden. Ein Wunsch ist kein gezeigter Vererbungsmechanismus.",
+          "",
+          "Die dritte dargestellte Häufigkeit ist nicht einmal höher als die zweite. Häufigkeitsänderung bedeutet keine allgemeine Entwicklung zur Perfektion."
+        ]
+      },
+      "figure": "generation-frequency"
+    },
+    "Mikroorganismus": {
+      "starter": "Manche Lebewesen sind so klein, dass wir für ihre Einzelheiten ein Mikroskop brauchen. Der Größenbegriff sagt allein noch nicht, aus wie vielen Zellen ein Beispiel besteht.",
+      "deeper": "Mikroorganismen bilden keine einzige Verwandtschaftsgruppe. Das Modell vergleicht ein einzelliges Bakterienbeispiel mit einem mehrzelligen, querwandigen Pilzfaden. Andere Mikroorganismen können anders aufgebaut sein. Aus einer vereinfachten Form lässt sich keine Art, Gefährlichkeit oder Wirkung bestimmen.",
+      "observe": "Wechsle zwischen dem Bakterienbeispiel, dem Pilzfaden und dem gemeinsamen Vergleich. Zähle die dargestellten Zellräume und beschreibe den Unterschied. Die Zeichnungen sind Strukturbeispiele ohne Größenmaßstab; sie sind keine Mikroskopaufnahmen.",
+      "benefit": "Du trennst kleine Größe, Zellaufbau, genaue Zugehörigkeit und ökologische Wirkung.",
+      "topic": "science-fungi",
+      "connection": "Die Pilzkarte unterscheidet sichtbare Fruchtkörper vom übrigen Pilz. Nicht jeder Pilz ist ein Mikroorganismus; die Begriffe beschreiben verschiedene Eigenschaften.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/teachers/classrooms/microorganisms-in-the-utah-desert.htm",
+          "title": "National Park Service · Mikroorganismus (Englisch)",
+          "anchor": "Operational definition line50 and77, examples selected48–49; actual update footer204. Microscope resolves details of very small organisms; size describes multiple groups, including unicellular examples and filamentous fungi.",
+          "updatedOn": "2025-04-29",
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Bakterium",
+          "reason": "Bakterien sind eine Gruppe sehr kleiner Lebewesen. Mikroorganismus ist ein weiter gefasster Größenbegriff und keine einzelne Verwandtschaftsgruppe."
+        },
+        {
+          "term": "Zersetzung",
+          "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+        }
+      ],
+      "question": {
+        "prompt": "Zwei Lebewesen werden als Mikroorganismen bezeichnet. Was weißt du dadurch allein noch nicht?",
+        "answers": [
+          "Ob beide aus genau einer Zelle bestehen",
+          "Dass für ihre Einzelheiten eine starke Vergrößerung nötig sein kann",
+          "Dass der Begriff sich auf sehr kleine Lebewesen bezieht"
+        ],
+        "correct": 0,
+        "hint": "Prüfe, welche zusätzliche Eigenschaft der Größenbegriff offenlässt.",
+        "why": "Der Größenbegriff legt die Zellzahl nicht fest. Das Modell zeigt ausdrücklich verschiedene Strukturbeispiele und erklärt ihre begrenzte Aussage.",
+        "wrongReasons": [
+          "",
+          "Die nötige Vergrößerung gehört gerade zur hier verwendeten Beschreibung sehr kleiner Lebewesen.",
+          "Sehr kleine Lebewesen sind die gemeinsame Betrachtung; daraus folgt noch keine gleiche Zellzahl."
+        ]
+      },
+      "figure": "microstructure-examples"
+    },
+    "Ökosystem": {
+      "starter": "Ein Ökosystem umfasst Lebewesen, ihre nicht lebende Umgebung und die Beziehungen zwischen ihnen. Wasser, Licht und Boden gehören deshalb zur Betrachtung eines Teichs dazu.",
+      "deeper": "Die Grenze der Betrachtung hängt von der Frage ab: Ein Teich und ein Wald können als Ökosystem betrachtet werden. Nahrungsbeziehungen bilden nur einen Teil der Verbindungen ab. Im eigenen Beispiel sind auch Licht, Wasser und der Abbau abgestorbenen Materials wichtig; es ist kein vollständiges Mess- oder Vorhersagemodell.",
+      "observe": "Vergleiche die Ansicht mit nur Lebewesen mit der Ansicht einschließlich Umweltbedingungen. Blende dann die erklärten Beziehungen ein. Betrachte einen der eingeblendeten Pfeile und beschreibe in eigenen Worten, welche Bestandteile und welcher Vorgang verbunden sind.",
+      "benefit": "Du erklärst eine konkrete Beziehung zwischen Lebewesen und Umwelt, statt nur Tiere oder Pflanzen aufzuzählen.",
+      "topic": "animal-honey-bee",
+      "connection": "Die Honigbienenkarte verbindet Nahrung, Bestäubung und Umgebung. Betrachte diese Beziehungen und die Bedingungen, statt ein Ökosystem auf eine Tierliste zu reduzieren.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/teachers/classrooms/craters-ecosystem.htm",
+          "title": "National Park Service · Ökosystem (Englisch)",
+          "anchor": "Definition52 and134–139, selected relationships58–59; update151. Living organisms, nonliving environment and interactions; decomposers transform organic matter and make material available in other pathways.",
+          "updatedOn": "2024-08-24",
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Lebensraum betrachtet passende Bedingungen für bestimmte Lebewesen; Ökosystem betrachtet zusätzlich die Beziehungen der Gemeinschaft und Umgebung."
+        },
+        {
+          "term": "Biodiversität",
+          "reason": "Vielfalt umfasst auch die Ebene unterschiedlicher Ökosysteme. Eine einzelne Tieranzahl beschreibt noch nicht diese Vielfalt."
+        },
+        {
+          "term": "Nahrungsnetz",
+          "reason": "Ein Nahrungsnetz bildet ausgewählte Nahrungsbeziehungen ab. Ein Ökosystem umfasst darüber hinaus weitere Beziehungen und nicht lebende Bedingungen."
+        },
+        {
+          "term": "Dürre",
+          "reason": "Längerfristige Wasserknappheit betrifft Bedingungen für Lebewesen und ihre Umgebung. Eine Wasserlage lässt sich nicht aus einem einzelnen trockenen Tag ableiten."
+        }
+      ],
+      "question": {
+        "prompt": "Eine Teichskizze zeigt nur Fische und Wasserpflanzen. Welche Ergänzung erklärt eine Beziehung zwischen Lebewesen und nicht lebender Umgebung?",
+        "answers": [
+          "Fische und Pflanzen nur in einer längeren Artenliste sammeln",
+          "Zeigen, wie Licht die Fotosynthese der Wasserpflanze ermöglicht",
+          "Wasser und Licht dazuschreiben, ohne ihr Zusammenwirken mit Lebewesen zu erklären"
+        ],
+        "correct": 1,
+        "hint": "Suche eine Erklärung für einen Vorgang zwischen einem Lebewesen und einer Umweltbedingung.",
+        "why": "Das Beispiel verbindet die nicht lebende Bedingung Licht mit dem Vorgang Fotosynthese bei einer Pflanze. Die beiden Listen nennen zwar Bestandteile, erklären aber noch nicht deren Zusammenwirken.",
+        "wrongReasons": [
+          "Eine Artenliste kann zeigen, welche Lebewesen vorkommen. Sie erklärt hier noch keine Beziehung zu einer nicht lebenden Umweltbedingung.",
+          "",
+          "Wasser und Licht gehören zur Betrachtung. Ihre Namen allein erklären aber noch nicht, wie eine Umweltbedingung mit einem Lebewesen zusammenwirkt."
+        ]
+      },
+      "figure": "ecosystem-relationships"
+    },
+    "Zersetzung": {
+      "starter": "Abgestorbenes organisches Material kann durch Lebewesen verändert und abgebaut werden. Seine Stoffe verschwinden dabei nicht einfach.",
+      "deeper": "Bakterien, Pilze und weitere Lebewesen können an der Zersetzung beteiligt sein. Beim Abbau gelangen Stoffanteile in andere Formen oder an andere Orte; Nährstoffe können erneut verfügbar werden. Die zwölf Modellmarken verfolgen nur ausgewählte Anteile. Sie sind keine Atome, gemessenen Massen oder vollständige Bilanz eines echten Blatts.",
+      "observe": "Vergleiche Anfang, Zwischenbild und weiteren Zustand. Zähle jeweils die Marken im Restmaterial und die weitergegebenen Marken zusammen. Erkläre, warum weniger sichtbares Restmaterial nicht bedeutet, dass die dargestellten Stoffanteile aufgehört haben zu existieren.",
+      "benefit": "Du unterscheidest weniger Restmaterial von einer Weitergabe oder Umwandlung seiner Stoffanteile.",
+      "topic": "science-fungi",
+      "connection": "Die Pilzkarte zeigt auch den Abbau abgestorbenen Materials. Vergleiche diese Aufgabe mit anderen Rollen von Pilzen: Nicht jeder Pilz wirkt gleich.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/subjects/biodiversity/services-provided-by-biodiversity.htm",
+          "title": "National Park Service · Zersetzung (Englisch)",
+          "anchor": "Decomposition66–71; footer83. Dead organic material breakdown involving bacteria/fungi/other organisms, nutrients recycled.",
+          "updatedOn": "2016-03-15",
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Mikroorganismus",
+          "reason": "Manche Mikroorganismen bauen abgestorbenes Material ab. Größe und ökologische Aufgabe sind verschiedene Eigenschaften."
+        },
+        {
+          "term": "Kohlenstoffkreislauf",
+          "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+        },
+        {
+          "term": "Nahrungsnetz",
+          "reason": "Abgestorbenes Material wird ebenfalls genutzt und abgebaut. Eine einfache Kette lebender Modelltiere zeigt nicht alle diese Wege."
+        }
+      ],
+      "question": {
+        "prompt": "Wähle im Modell „Zwischenbild“. Dort liegen acht Marken im Restmaterial und vier in anderen Formen oder an anderen Orten. Welche Folgerung passt zum Modell?",
+        "answers": [
+          "Vier dargestellte Stoffanteile wurden aus der Welt entfernt",
+          "Alle ursprünglichen Marken müssen weiterhin im Blatt liegen",
+          "Weniger Restmaterial kann mit einer Weitergabe von Stoffanteilen verbunden sein"
+        ],
+        "correct": 2,
+        "hint": "Betrachte beide Bereiche der Zeichnung gemeinsam.",
+        "why": "Die zwölf willkürlichen Modellmarken sind auf zwei Bereiche verteilt. Das Modell beschreibt eine Weitergabe, nicht das Verschwinden der Anteile. Es misst keine wirkliche Abbaumenge.",
+        "wrongReasons": [
+          "Die vier Marken sind im anderen Bereich noch vorhanden. Weniger Restmaterial bedeutet hier kein Verschwinden der dargestellten Anteile.",
+          "Eine Umwandlung oder Weitergabe kann Stoffanteile aus dem Restmaterial herausführen.",
+          ""
+        ]
+      },
+      "figure": "decomposition-transfer"
+    },
+    "Kohlenstoffkreislauf": {
+      "starter": "Kohlenstoff kann zwischen Luft, Lebewesen, Boden, Meer und Gestein wechseln. Ein Speicher und der Vorgang eines Austauschs sind verschiedene Dinge.",
+      "deeper": "Pflanzen nehmen bei der Fotosynthese Kohlenstoff aus Kohlendioxid auf. Bei der Zellatmung und beim Abbau organischen Materials kann Kohlenstoff wieder als Kohlendioxid in die Luft gelangen. Der gesamte Kreislauf enthält weitere Speicher und Wege. Die Auswahl im Modell zeigt weder echte Speichermengen noch Austauschgeschwindigkeiten.",
+      "observe": "Wähle Fotosynthese, Zellatmung und Zersetzung. Lies jeweils Start, Ziel und Vorgangsbezeichnung. Beschreibe die geänderte Pfeilrichtung und ergänze, welche Mengen- und Zeitangaben dir für eine echte Bilanz fehlen.",
+      "benefit": "Du benennst bei einem Kohlenstoffweg den Speicher am Anfang, den Vorgang und den Speicher am Ende.",
+      "topic": "science-photosynthesis",
+      "connection": "Fotosynthese verbindet Kohlenstoff aus Kohlendioxid mit Pflanzenstoffen. Ein Blatt allein zeigt nicht die Mengen oder Geschwindigkeiten des gesamten Kreislaufs.",
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/carbon-cycle.html",
+          "title": "NOAA · Kohlenstoffkreislauf (Englisch)",
+          "anchor": "Reservoirs and transfers10–17, fossil-fuel transfer21; update36–38. Carbon in different reservoirs, transfers between ocean/air/organisms/rocks, human fossil carbon redistribution.",
+          "updatedOn": "2026-09-23",
+          "checkedOn": "2026-11-02"
+        },
+        {
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-carbon-cycle/",
+          "title": "NASA Earth Observatory · Der schnelle Kohlenstoffkreislauf (Englisch)",
+          "anchor": "Tatsächlich gelesene Absätze345–356: Fotosynthese sowie Zellatmung und Zersetzung als Wege organischen Kohlenstoffs zurück in die Atmosphäre. Veröffentlichung16.06.2011, kein belegtes neueres inhaltliches Aktualisierungsdatum. Alte Mengen, Raten, Klimarekorde und fremde Grafiken nicht übernommen.",
+          "updatedOn": null,
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Zersetzung",
+          "reason": "Der Abbau abgestorbenen Materials kann Kohlenstoff zwischen Speichern bewegen. Ein Stoffkreislauf ist nicht dasselbe wie unverändert kreisende Energie."
+        }
+      ],
+      "question": {
+        "prompt": "Im Modell führt ein Pfeil bei der Fotosynthese von der Luft zur Pflanze. Was erklärt dieser Pfeil?",
+        "answers": [
+          "Einen beschrifteten Austauschweg, aber keine gemessene Menge pro Zeit",
+          "Dass Luft und Pflanze gleich viel Kohlenstoff speichern",
+          "Dass die Pflanze neue Kohlenstoffatome erschafft"
+        ],
+        "correct": 0,
+        "hint": "Unterscheide die Funktion einer Pfeilbeschriftung von einer Mengenangabe.",
+        "why": "Der Pfeil benennt den gezeigten Vorgang und seine Richtung. Ohne entsprechende Daten legt er weder die Größe der Speicher noch die ausgetauschte Menge pro Zeit fest.",
+        "wrongReasons": [
+          "",
+          "Die Felder sind zur Orientierung angeordnet. Ihre Größe vergleicht keine wirklichen Kohlenstoffmengen.",
+          "Fotosynthese verändert Stoffe unter Aufnahme von Kohlenstoff aus Kohlendioxid; sie erschafft hier keine neuen Kohlenstoffatome."
+        ]
+      },
+      "figure": "carbon-labelled-paths"
+    },
+    "Dürre": {
+      "starter": "Eine Dürre betrifft längerfristig trockenere Bedingungen als für eine Gegend üblich und damit verbundene Wasserprobleme. Ein trockener Tag allein reicht für diese Einordnung nicht.",
+      "deeper": "Für eine Dürrebewertung zählen Ort, Zeitraum und Vergleich sowie beispielsweise Bodenfeuchte, Abfluss oder Wasserstände. Eine Zahl von Regentagen sagt noch nicht, wie viel Wasser gefallen ist. Das erfundene Vier-Tage-Beispiel erlaubt keine Dürrebewertung eines echten Ortes.",
+      "observe": "Vergleiche die beiden erfundenen Reihen mit jeweils zwei Regentagen. Addiere die angegebenen Regenmengen. Überlege anschließend, welche längerfristigen und örtlichen Informationen du zusätzlich für eine Wasserlage brauchst.",
+      "benefit": "Du trennst die Zahl der Regentage, die Niederschlagsmenge und eine begründete Bewertung längerfristiger Wasserknappheit.",
+      "topic": "science-water-cycle",
+      "connection": "Die Wasserkreislaufkarte verbindet Speicher und Austausch. Vergleiche mehr als einen Regentag: Boden, Wasserstände und längere Zeiträume gehören zur Wasserlage.",
+      "sources": [
+        {
+          "url": "https://www.drought.gov/what-is-drought/drought-basics",
+          "title": "NOAA/NIDIS · Grundlagen der Dürre (Englisch)",
+          "anchor": "„Defining Drought“, „Types of Drought“ und „Challenges of Predicting and Monitoring Drought“: längere ungewöhnliche Trockenheit mit Wasserproblemen; regionaler Klima- und Zeitvergleich sowie unterschiedliche Dürrearten. „Usually a season or more“ ist keine feste Mindestdauer; die verlinkte Monitoring-Seite nennt auch schnell entstehende Flash-Dürren. Eigene erfundene Vier-Tage-Reihen sind keine örtliche Dürrediagnose.",
+          "updatedOn": null,
+          "checkedOn": "2026-11-02"
+        },
+        {
+          "url": "https://www.drought.gov/what-is-drought/monitoring-drought",
+          "title": "NOAA/NIDIS · Dürre beobachten (Englisch)",
+          "anchor": "„Drought Monitoring Indicators and Indices“: precipitation, temperature, streamflow, ground and reservoir water levels, soil moisture, snowpack; Indizes beschreiben Stärke, Ort, Zeitpunkt und Dauer. „Challenges in Monitoring Drought“ und „The Importance of Drought Monitoring“ erläutern regionalen Vergleich und auch schnell entstehende Flash-Dürren. Die20/2Millimeter-Summen sind eigene Beispielrechnungen, keine Messwerte oder behördliche Warnung.",
+          "updatedOn": null,
+          "checkedOn": "2026-11-02"
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Ökosystem",
+          "reason": "Längerfristige Wasserknappheit betrifft Bedingungen für Lebewesen und ihre Umgebung. Eine Wasserlage lässt sich nicht aus einem einzelnen trockenen Tag ableiten."
+        }
+      ],
+      "question": {
+        "prompt": "Zwei erfundene Vier-Tage-Reihen haben je zwei Regentage, aber insgesamt 20 beziehungsweise 2 Millimeter Regen. Was kannst du daraus sicher schließen?",
+        "answers": [
+          "Beide Reihen enthalten gleich viel Niederschlag",
+          "Aus vier Tagen folgt automatisch eine örtliche Dürrewarnung",
+          "Gleich viele Regentage können unterschiedliche Niederschlagsmengen enthalten"
+        ],
+        "correct": 2,
+        "hint": "Vergleiche zuerst die beiden tatsächlichen Angaben, bevor du eine größere Diagnose stellst.",
+        "why": "Die Anzahl nasser Tage und die Gesamtmenge sind verschiedene Angaben. Für eine örtliche Dürrebewertung fehlen unter anderem der längere Zeitraum, der passende Vergleich und weitere Wasserinformationen.",
+        "wrongReasons": [
+          "Die angegebenen Summen unterscheiden sich um 18 Millimeter. Gleiche Tagesanzahl bedeutet hier keine gleiche Menge.",
+          "Ein erfundenes kurzes Beispiel ist keine Wetterbeobachtung oder Dürrebewertung für einen echten Ort.",
+          ""
+        ]
+      },
+      "figure": "rain-count-versus-amount"
+    }
+  },
+  "whyLearning": {}
+}

@@ -1,3 +1,4 @@
+import {ecologyPredecessors,withAstronomyPreEcologyRuntime} from './ecology-predecessor-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -52,7 +53,7 @@ test('all five bounded models reject fractional, missing and out-of-range select
  for(const model of[asteroidLocation,cometDirections,projectedTransit,galaxyMembership,lightyearDistance])for(const input of[-1,3,.5,NaN,Infinity,undefined,'1'])assert.throws(()=>model(input));
 });
 test('eight astronomy studies preserve159 whole delivered word objects,50 Why identities and all ten older teaching packs',()=>{
- assert.deepEqual(bookAstronomyContent(true),pack);assert.equal(words.length,165);assert.equal(new Set(words.map(row=>row.term)).size,165);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(ASTRONOMY_WORDS.length,6);assert.equal(ASTRONOMY_QUESTIONS.length,2);assert.equal(read('exports/content/book-astronomy.json').length,8);
+ assert.deepEqual(bookAstronomyContent(true),pack);assert.equal(words.length,171);assert.equal(new Set(words.map(row=>row.term)).size,171);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(ASTRONOMY_WORDS.length,6);assert.equal(ASTRONOMY_QUESTIONS.length,2);assert.equal(read('exports/content/book-astronomy.json').length,8);
  const old=read('tests/fixtures/book-before-astronomy-159-hashes.json');assert.equal(Object.keys(old.words).length,159);assert.equal(Object.keys(old.why).length,50);assert.equal(Object.keys(old.packs).length,10);
  for(const[term,hash]of Object.entries(old.words))assert.equal(whole(words.find(row=>row.term===term)),hash,term);
  assert.deepEqual(why.slice(0,50).map(row=>row.question),old.whyOrder);
@@ -70,7 +71,7 @@ test('unreviewed figures, dates, references, missing feedback and duplicate answ
  for(const mutate of[data=>delete data.learning.Komet.question,data=>data.learning.Transit.figure='unknown',data=>data.learning.Galaxie.relatedWords.push({term:'unpublished',reason:'unavailable'}),data=>data.learning.Exoplanet.sources[0].checkedOn='2030-01-01',data=>data.learning.Asteroid.question.wrongReasons[data.learning.Asteroid.question.correct===0?1:0]='',data=>data.whyLearning[ASTRONOMY_QUESTIONS[0]].question.answers.push(data.whyLearning[ASTRONOMY_QUESTIONS[0]].question.answers[0])]){const changed=structuredClone(pack);mutate(changed);assert.throws(()=>validateAstronomyPack(changed));}
 });
 test('all eight individually authored astronomy contracts match the actual inventory, teaching, claims and sources',()=>{
- const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys()),items=read('content/editorial-reviews.json').dossiers,teaching=read('exports/content/book-astronomy.json');
+ const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys()),items=ecologyPredecessors(read('content/editorial-reviews.json').dossiers),teaching=read('exports/content/book-astronomy.json');
  const expected=[...ASTRONOMY_WORDS.map(term=>'words:'+term),...ASTRONOMY_QUESTIONS.map(question=>'why:'+why.findIndex(row=>row.question===question))];assert.deepEqual(items.slice(189).map(row=>row.id),expected);
  for(const dossier of items.slice(189)){
   const record=records.get(dossier.id);assert(record);assert.equal(dossier.dataHash,record.dataHash);const isWord=record.family==='words',key=isWord?record.legacyId:why[record.sourceIndex].question,lesson=teaching.find(row=>row.kind===(isWord?'word':'why')&&(isWord?row.term:row.whyQuestion)===key);assert(lesson);assert.equal(dossier.teachingDataHash,fingerprint(lesson));assert.deepEqual(dossier.sources.map(row=>row.url),(isWord?pack.learning:pack.whyLearning)[key].sources.map(row=>row.url));
@@ -93,11 +94,13 @@ test('Transit task explicitly selects the nonoverlapping projection before askin
 import {validateDossier} from '../scripts/editorial-contract.mjs';
 const astronomyCurrentUIFixture=read('tests/fixtures/editorial-before-astronomy-189.json');
 function assertActualCurrent197(items){
+ items=ecologyPredecessors(items);
+ const actualAstronomyBuild=withAstronomyPreEcologyRuntime(process.cwd(),learningFingerprint);
  const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
- assert.equal(items.length,197);assert.equal(astronomyCurrentUIFixture.priorDossiers.length,189);assert.equal(astronomyCurrentUIFixture.addedDossiers.length,8);assert.equal(astronomyCurrentUIFixture.currentTemplate.build,learningFingerprint(process.cwd()));
+ assert.equal(items.length,197);assert.equal(astronomyCurrentUIFixture.priorDossiers.length,189);assert.equal(astronomyCurrentUIFixture.addedDossiers.length,8);assert.equal(astronomyCurrentUIFixture.currentTemplate.build,actualAstronomyBuild);
  const old=astronomyPredecessors(items),baseline=read('tests/fixtures/book-before-astronomy-159-hashes.json');assert.deepEqual(old.map(row=>({id:row.id,sha256:whole(row)})),baseline.whole189PredecessorDossiers);
  const expected=[...ASTRONOMY_WORDS.map(term=>'words:'+term),...ASTRONOMY_QUESTIONS.map(question=>'why:'+why.findIndex(row=>row.question===question))];assert.deepEqual(astronomyCurrentUIFixture.addedDossiers.map(row=>row.id),expected);
- for(const item of items){const record=records.get(item.id);assert(record,item.id);assert.equal(validateDossier(item,record,{build:learningFingerprint(process.cwd()),knownIds}).structurallyReady,true,item.id+' actual current technical UI contract');}
+ for(const item of items){const record=records.get(item.id);assert(record,item.id);assert.equal(validateDossier(item,record,{build:actualAstronomyBuild,knownIds}).structurallyReady,true,item.id+' actual current technical UI contract');}
  const teaching=read('exports/content/book-astronomy.json');
  for(const id of expected){const item=items.find(row=>row.id===id),record=records.get(id),isWord=record.family==='words',key=isWord?record.legacyId:why[record.sourceIndex].question,canonical=isWord?words.find(row=>row.term===key):why[record.sourceIndex];assert.equal(item.dataHash,record.dataHash);assert.equal(record.dataHash,fingerprint(canonical));const lesson=teaching.find(row=>row.kind===(isWord?'word':'why')&&(isWord?row.term:row.whyQuestion)===key);assert(lesson);assert.equal(item.teachingDataHash,fingerprint(lesson));assert.deepEqual(item.sources.map(row=>row.url),(isWord?pack.learning:pack.whyLearning)[key].sources.map(row=>row.url));assert.equal(item.ui.route,record.route);}
 }

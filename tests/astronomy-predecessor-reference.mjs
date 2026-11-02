@@ -1,3 +1,4 @@
+import {ecologyPredecessors,withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,6 +15,7 @@ export const ASTRONOMY_CURRENT_RUNTIME=fixture.currentRuntimeBuild;
 // Restore an entire actual delivered predecessor. The optional current UI
 // fixture may only be written after genuine complete browser/visual evidence.
 export function astronomyPredecessors(items){
+ if(items.length>=198)items=ecologyPredecessors(items);
  if(items.length===189){
   assert.deepEqual(items.map(row=>({id:row.id,sha256:whole(row)})),fixture.whole189PredecessorDossiers.map(({ui,...row})=>row),'all189 whole actual M86 dossiers');
   return items;
@@ -40,6 +42,7 @@ export function astronomyPredecessors(items){
 }
 
 export function withDigitalPreAstronomyRuntime(root,inspect){
+ if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,prior=>withDigitalPreAstronomyRuntime(prior,inspect));
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const build=learningFingerprint(root);
  if(build===fixture.predecessorRuntimeBuild){

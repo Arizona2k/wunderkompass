@@ -1,3 +1,4 @@
+import {withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import os from'node:os';import{createHash}from'node:crypto';import{learningInputs,learningFingerprint}from'../build/learning-fingerprint.mjs';import fixture from'./fixtures/statistics-gene-runtime-predecessor.json'with{type:'json'};
 import{digitalPredecessors,withStatisticsPreDigitalRuntime}from'./digital-predecessor-reference.mjs';import digitalFixture from'./fixtures/digital-statistics-runtime-predecessor.json'with{type:'json'};
 import{statisticsHistoryReference}from'./statistics-history-reference.mjs';
@@ -20,6 +21,7 @@ export function statisticsPredecessors(items){
  return prior;
 }
 export function withGenePreStatisticsRuntime(root,inspect){
+ if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,prior=>withGenePreStatisticsRuntime(prior,inspect));
  if(learningFingerprint(root)===fixture.predecessorRuntimeBuild){const actual=new Map(learningInputs(root).map(p=>[path.relative(root,p),p]));assert.deepEqual(new Set(actual.keys()),new Set(fixture.predecessorInputs.map(x=>x.name)));for(const x of fixture.predecessorInputs)assert.equal(sha(fs.readFileSync(actual.get(x.name))),x.sha256);return inspect(root);}
