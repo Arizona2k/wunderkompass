@@ -1,3 +1,4 @@
+import {withEcologyPreRetainedRuntime,retainedPredecessors} from './retained-predecessor-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,6 +15,7 @@ export const ECOLOGY_CURRENT_RUNTIME=fixture.currentRuntimeBuild;
 // Restore an entire actual delivered predecessor. The optional current UI
 // fixture may only be written after genuine complete browser/visual evidence.
 export function ecologyPredecessors(items){
+ items=retainedPredecessors(items);
  if(items.length===197){
   assert.deepEqual(items.map(row=>({id:row.id,sha256:whole(row)})),fixture.whole197PredecessorDossiers.map(({ui,...row})=>row),'all197 whole actual reviewed PR87 dossiers');
   return items;
@@ -39,7 +41,8 @@ export function ecologyPredecessors(items){
  return restored.slice(0,197);
 }
 
-export function withAstronomyPreEcologyRuntime(root,inspect){
+export function withAstronomyPreEcologyRuntime(root,inspect){return withEcologyPreRetainedRuntime(root,prior=>originalwithAstronomyPreEcologyRuntime(prior,inspect));}
+function originalwithAstronomyPreEcologyRuntime(root,inspect){
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const build=learningFingerprint(root);
  if(build===fixture.predecessorRuntimeBuild){

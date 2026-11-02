@@ -1,5 +1,11 @@
 # Abhängigkeiten
 
+## Bereits vorhandener GitHub-Uploader für begrenzte Belegpakete ·02.11.2026
+
+Die Belegaufteilung ergänzt keine Browser- oder npm-Abhängigkeit. Die lokale Node24-Action unter `.github/actions/upload-review-parts` führt den bereits eingesetzten offiziellen `actions/upload-artifact`-Stand **v7.0.2 / cf430e030ddbb5b0abf93d22962f4752f3646cd9** unverändert nacheinander für die nativen Teile und das gemeinsame Dateiverzeichnis aus. Die4.452.820Byte große offizielle Uploaddatei hat Git-Blob-SHA1 `7b3f92ae681d6eeca5f5e5e4cf892ad0dfb254ea`. `vendor/provenance.json` bindet alle neun tatsächlich heruntergeladenen Dateien an ihre öffentlichen Quellen, Größen, Git-Blobs und SHA256; Laufzeit und Test prüfen diese Bindung. Kein Rootinstall oder zusätzliches Paket nötig, damit auch fehlgeschlagene Prüfläufe ihre Originale hochladen können.
+
+Die unveränderte GitHub-MIT-Lizenz und sämtliche sechs im gepinnten Repository enthaltenen Lizenznachweise sind mitgeliefert; darunter MIT für die Actions-Pakete und Blue Oak Model License1.0.0 für minimatch. Die Notices bleiben beim Code. Die Übertragung nutzt ausschließlich die vorhandene GitHub-Artifact-Verbindung, bisherigen Berechtigungen und sieben Tage Aufbewahrung; keine neuen Zugangsdaten, Dienste oder Tarifänderungen. Python3 wird nur mit seiner Standardbibliothek für die unabhängige ZIP-/CRC-/SHA256-Rücklese verwendet; Ubuntu24.04 und die aktuelle Arbeitsumgebung stellen es tatsächlich bereit. Keine pip-Pakete. Die Dateiaufteilung, Summen und Originaldaten sind lokal geprüft; der vollständige tatsächliche native Upload bleibt noch zu bestätigen. Zusatzkosten werden nicht beauftragt oder als unbekanntes Restkontingent zugesichert.
+
 Historische Originalversionen und Installationsnachweise bleiben in Git erhalten. Aktueller Abgleich27.10.2026 gegen `package.json`, `pnpm-lock.yaml` und die tatsächlich installierten Paketmetadaten; Node24.19.0/pnpm11.25.0. Die folgende Tabelle belegt deklarierte und installierte Versionen, nicht die Aufnahme aller Pakete ins Browserbundle.
 
 | Paket | Gruppe | Deklariert | Installiert |

@@ -1,3 +1,4 @@
+import {withEcologyPreRetainedRuntime} from './retained-predecessor-reference.mjs';
 import {withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import {withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
 import {withDigitalPreAstronomyRuntime,ASTRONOMY_CURRENT_RUNTIME} from './astronomy-predecessor-reference.mjs';
@@ -26,7 +27,8 @@ export function cellPredecessors(items){
  assert.deepEqual(items.map(row=>({id:row.id,sha256:sha(JSON.stringify(row))})),fixture.whole146PredecessorDossiers,'every delivered whole record and nested history retained in order');
  return items;
 }
-export function mechanicsPreCellFingerprint(root){
+export function mechanicsPreCellFingerprint(root){return withEcologyPreRetainedRuntime(root,prior=>originalMechanicsPreCellFingerprint(prior));}
+function originalMechanicsPreCellFingerprint(root){
  if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,mechanicsPreCellFingerprint);

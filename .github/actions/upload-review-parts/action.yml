@@ -1,0 +1,5 @@
+name: Upload complete review in bounded original parts
+description: Preserve every curated original using the existing pinned uploader and a common SHA256 index
+runs:
+  using: node24
+  main: index.mjs

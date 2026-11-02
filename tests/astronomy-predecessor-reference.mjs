@@ -1,3 +1,4 @@
+import {withEcologyPreRetainedRuntime} from './retained-predecessor-reference.mjs';
 import {ecologyPredecessors,withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -41,7 +42,8 @@ export function astronomyPredecessors(items){
  return restored.slice(0,189);
 }
 
-export function withDigitalPreAstronomyRuntime(root,inspect){
+export function withDigitalPreAstronomyRuntime(root,inspect){return withEcologyPreRetainedRuntime(root,prior=>originalwithDigitalPreAstronomyRuntime(prior,inspect));}
+function originalwithDigitalPreAstronomyRuntime(root,inspect){
  if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,prior=>withDigitalPreAstronomyRuntime(prior,inspect));
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const build=learningFingerprint(root);
