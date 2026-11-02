@@ -1,3 +1,4 @@
+import {withAstronomyPreEcologyRuntime,ECOLOGY_CURRENT_RUNTIME} from './ecology-predecessor-reference.mjs';
 import {withStatisticsPreDigitalRuntime} from './digital-predecessor-reference.mjs';
 import {withDigitalPreAstronomyRuntime,ASTRONOMY_CURRENT_RUNTIME} from './astronomy-predecessor-reference.mjs';
 import digitalFixture from './fixtures/digital-statistics-runtime-predecessor.json' with {type:'json'};
@@ -26,6 +27,7 @@ export function cellPredecessors(items){
  return items;
 }
 export function mechanicsPreCellFingerprint(root){
+ if(learningFingerprint(root)===ECOLOGY_CURRENT_RUNTIME)return withAstronomyPreEcologyRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===ASTRONOMY_CURRENT_RUNTIME)return withDigitalPreAstronomyRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===digitalFixture.currentRuntimeBuild)return withStatisticsPreDigitalRuntime(root,mechanicsPreCellFingerprint);
  if(learningFingerprint(root)===statisticsFixture.currentRuntimeBuild)return withGenePreStatisticsRuntime(root,mechanicsPreCellFingerprint);

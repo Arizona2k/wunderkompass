@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T19:05:00.464Z",
+  "generatedAt": "2026-11-02T00:20:15.183Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -13,7 +13,7 @@
   "journeys": 16,
   "chapters": 80,
   "quizQuestions": 76,
-  "knowledgeWords": 165,
+  "knowledgeWords": 171,
   "whyQuestions": 52,
   "routes": 8,
   "files": [
@@ -209,6 +209,21 @@
       "sha256": "e2cd22b8d0fed0fdb938992d2b80c705e0e6c8a2188970f240e612efb4a1859d"
     },
     {
+      "file": "book-ecology.json",
+      "sources": [
+        "app/book-ecology-content.json",
+        "app/book-ecology-integrity.json",
+        "app/book-ecology-index.json",
+        "app/book-ecology-topic-index.json",
+        "app/book-ecology-word-link-index.json",
+        "app/book-ecology-validation.mjs",
+        "scripts/book-ecology-index.mjs"
+      ],
+      "entries": 6,
+      "bytes": 22885,
+      "sha256": "b4d64258aed0fc70920be69472fc431f56f59782cdfbc032ed6ea58c7245a28c"
+    },
+    {
       "file": "continents.json",
       "sources": [
         "app/earth-data.ts",
@@ -300,11 +315,12 @@
         "app/book-gene-index.json",
         "app/book-statistics-index.json",
         "app/book-digital-index.json",
-        "app/book-astronomy-index.json"
+        "app/book-astronomy-index.json",
+        "app/book-ecology-index.json"
       ],
-      "entries": 165,
-      "bytes": 37786,
-      "sha256": "e6a281f0a7195e87a9b033ff21a00075f51669754135e79eb1dedd5c83bd958e"
+      "entries": 171,
+      "bytes": 39967,
+      "sha256": "23745f676f991c32b8ae7db11f21607f65ca4b89fe8e44faf4821f2a47ae1732"
     },
     {
       "file": "why-questions.json",
@@ -319,7 +335,8 @@
         "app/book-gene-index.json",
         "app/book-statistics-index.json",
         "app/book-digital-index.json",
-        "app/book-astronomy-index.json"
+        "app/book-astronomy-index.json",
+        "app/book-ecology-index.json"
       ],
       "entries": 52,
       "bytes": 14452,

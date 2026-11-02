@@ -12,6 +12,9 @@ import digitalIndex from "./book-digital-index.json" with {type:"json"};
 import astronomyIndex from "./book-astronomy-index.json" with {type:"json"};
 const ASTRONOMY_WORDS=astronomyIndex.words as [string,string,string][];
 const ASTRONOMY_WHY=astronomyIndex.why as [string,string][];
+import ecologyIndex from "./book-ecology-index.json" with {type:"json"};
+const ECOLOGY_WORDS=ecologyIndex.words as [string,string,string][];
+const ECOLOGY_WHY=ecologyIndex.why as [string,string][];
 const DIGITAL_WORDS=digitalIndex.words as [string,string,string][];
 const DIGITAL_WHY=digitalIndex.why as [string,string][];
 const STATISTICS_WORDS=statisticsIndex.words as [string,string,string][];
@@ -51,6 +54,7 @@ export const MORE_WORDS:[string,string,string][]=[
  ...STATISTICS_WORDS,
  ...DIGITAL_WORDS,
  ...ASTRONOMY_WORDS,
+ ...ECOLOGY_WORDS,
 ];
 export const MORE_WHY:[string,string][]=[
  ["Warum ist die Erde rund?","Die Schwerkraft zieht Materie zur Mitte. Bei einem großen Himmelskörper formt sie daraus ungefähr eine Kugel. Die Erddrehung macht die Erde an den Polen etwas flacher."],
@@ -82,4 +86,5 @@ export const MORE_WHY:[string,string][]=[
  ...STATISTICS_WHY,
  ...DIGITAL_WHY,
  ...ASTRONOMY_WHY,
+ ...ECOLOGY_WHY,
 ];

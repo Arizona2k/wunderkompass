@@ -40,7 +40,7 @@ test('all displayed SHA-256 examples match independent UTF-8 cryptography and al
  for(const input of['','a'.repeat(63),'g'.repeat(64),'A'.repeat(64)])assert.throws(()=>digestBits(input));
 });
 test('twelve distinct Digital studies preserve every delivered150/47 tuple, order and nine whole old packs',()=>{
- assert.deepEqual(bookDigitalContent(true),pack);assert.equal(words.length,165);assert.equal(new Set(words.map(row=>row.term)).size,165);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(DIGITAL_WORDS.length,9);assert.equal(DIGITAL_QUESTIONS.length,3);assert.equal(read('exports/content/book-digital.json').length,12);
+ assert.deepEqual(bookDigitalContent(true),pack);assert.equal(words.length,171);assert.equal(new Set(words.map(row=>row.term)).size,171);assert.equal(why.length,52);assert.equal(new Set(why.map(row=>row.question)).size,52);assert.equal(DIGITAL_WORDS.length,9);assert.equal(DIGITAL_QUESTIONS.length,3);assert.equal(read('exports/content/book-digital.json').length,12);
  const old=read('tests/fixtures/book-before-digital-150-hashes.json');assert.equal(Object.keys(old.words).length,150);assert.equal(Object.keys(old.why).length,47);assert.equal(Object.keys(old.packs).length,9);
  for(const[term,hash]of Object.entries(old.words))assert.equal(whole(words.find(row=>row.term===term)),hash,term);
  assert.deepEqual(why.slice(0,47).map(row=>row.question),old.whyOrder);

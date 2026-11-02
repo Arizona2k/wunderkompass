@@ -3,7 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const incoming={};
-for(const name of ['book-light-word-link-index.json','book-water-word-link-index.json','book-particle-word-link-index.json','book-mechanics-word-link-index.json','book-cell-word-link-index.json','book-gene-word-link-index.json','book-statistics-word-link-index.json','book-digital-word-link-index.json','book-astronomy-word-link-index.json'])for(const [term,links]of Object.entries(JSON.parse(await fs.readFile(new URL('../../app/'+name,import.meta.url),'utf8'))))(incoming[term]??=[]).push(...links);
+for(const name of ['book-light-word-link-index.json','book-water-word-link-index.json','book-particle-word-link-index.json','book-mechanics-word-link-index.json','book-cell-word-link-index.json','book-gene-word-link-index.json','book-statistics-word-link-index.json','book-digital-word-link-index.json','book-astronomy-word-link-index.json','book-ecology-word-link-index.json'])for(const [term,links]of Object.entries(JSON.parse(await fs.readFile(new URL('../../app/'+name,import.meta.url),'utf8'))))(incoming[term]??=[]).push(...links);
 export const BOOK_RELATED_WORD_EDGE_COUNT=Object.values(incoming).reduce((count,links)=>count+links.length,0);
 const words=JSON.parse(await fs.readFile(new URL('../../exports/content/knowledge-words.json',import.meta.url),'utf8'));
 

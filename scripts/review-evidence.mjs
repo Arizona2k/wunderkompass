@@ -6,7 +6,7 @@ import {sourceDigest} from './handoff.mjs';
 // User-authorized measured resource reserve for retained original review PNGs
 // and added content views. Only evidence storage capacity; selection, capture
 // identities, exact-payload sharing and all error conditions stay unchanged.
-export const REVIEW_LIMIT=560_000_000;
+export const REVIEW_LIMIT=600_000_000;
 // Capture identities are never deduplicated. Only their byte-identical payloads
 // may share a file in a completed review. Diagnostics keep standalone originals.
 export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false}={}){
