@@ -1,0 +1,19 @@
+/* Reuse the delivered book's warm surfaces, ink/accent hierarchy and readable controls. */
+.book-nature-water-model{margin:20px 0;min-width:0;overflow-wrap:anywhere}
+.book-nature-water-model :is(h3,h4,h5){margin:0 0 14px;font-size:22px;line-height:1.4}
+.book-nature-water-choices{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.book-nature-water-choices button{min-width:44px;min-height:48px;padding:10px 14px;border:1px solid #7898a2;border-radius:9px;background:#fff;color:#244f5f;font:inherit;line-height:1.6;text-align:left;white-space:normal}
+.book-nature-water-choices button[aria-pressed=true]{padding:9px 13px;border:2px solid #245d70;background:#e5f1f2}
+.book-nature-water-choices button:focus-visible{outline:3px solid #245d70;outline-offset:4px}
+.book-nature-water-model svg{display:block;width:100%;height:auto;max-width:560px;margin:20px auto}
+.book-nature-water-model svg text{font-family:inherit}
+.book-nature-water-model p,.book-nature-water-model li{font-size:16px!important;line-height:1.65}
+.book-nature-water-model p{margin:14px 0}
+.book-nature-water-model ol{padding-left:28px;list-style:decimal outside}
+.book-nature-water-model li{margin:6px 0}
+.large-reading .book-nature-water-model p,.large-reading .book-nature-water-model li{font-size:20px!important}
+.large-reading .book-nature-water-model :is(h3,h4,h5){font-size:26px}
+
+/* Keep short SVG number labels readable when cards narrow or app text enlarges. */
+.book-nature-water-model svg text{font-size:24px}
+.large-reading .book-nature-water-model svg text{font-size:28px}

@@ -34,6 +34,11 @@ function useGeographicFeatures(needed:boolean){
  useEffect(()=>{if(!needed)return;if(geometryCache){setFeatures(geometryCache);setStatus("ready");return;}const abort=new AbortController();setStatus("loading");fetch("/geo-nature.json",{signal:abort.signal}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(value=>{if(abort.signal.aborted)return;const data=value as {features:NatureFeature[]};if(!Array.isArray(data.features)||!data.features.length)throw new Error();geometryCache=data.features;setFeatures(data.features);setStatus("ready");}).catch(()=>{if(!abort.signal.aborted)setStatus("error");});return()=>abort.abort();},[attempt,needed]);
  return {features,status,retry:()=>setAttempt(n=>n+1)};
 }
+// Keep at most one idle canvas/context across route visits. GPU scene resources
+// still dispose on every unmount; reusing the context avoids WebKit's detached
+// context quota while the browser waits to collect obsolete canvases.
+let idleGlobeCanvas: HTMLCanvasElement|null = null;
+
 export default function Globe(props: Props) {
   const container = useRef<HTMLDivElement>(null);
   const refs = useRef(props); useEffect(()=>{refs.current=props;},[props]);
@@ -77,14 +82,24 @@ export default function Globe(props: Props) {
     const textureWidth=lowGraphics?1024:2048,textureHeight=textureWidth/2;
     let renderer: THREE.WebGLRenderer;
     try {
-      const canvas=document.createElement('canvas');
+      let canvas=idleGlobeCanvas??document.createElement('canvas');idleGlobeCanvas=null;
       const graphics={antialias:true,alpha:true,powerPreference:'low-power' as const};
-      const context=canvas.getContext('webgl2',graphics) as WebGL2RenderingContext|null;
+      let context=canvas.getContext('webgl2',graphics) as WebGL2RenderingContext|null;
+      if(context?.isContextLost()){canvas=document.createElement('canvas');context=canvas.getContext('webgl2',graphics) as WebGL2RenderingContext|null;}
       if(!context)throw new Error('WebGL2 unavailable');
       renderer = new THREE.WebGLRenderer({canvas,context,...graphics});
     }
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
     catch { setFailed(true);return; }
+    function releaseCanvas(){
+      const canvas=renderer.domElement,context=renderer.getContext();
+      if(!context.isContextLost())renderer.resetState();
+      renderer.dispose();canvas.remove();canvas.width=canvas.height=1;
+      if(!context.isContextLost()){
+        if(idleGlobeCanvas===null)idleGlobeCanvas=canvas;
+        else renderer.forceContextLoss();
+      }
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth<600?1.5:2));
     renderer.setClearColor(0x000000,0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -110,7 +125,7 @@ export default function Globe(props: Props) {
     sun.position.copy(isDay?latLonVector(0,-30,6):new THREE.Vector3(-3,4,5));scene.add(sun);
 
     const textureCanvas=document.createElement("canvas");textureCanvas.width=textureWidth;textureCanvas.height=textureHeight;
-    const maybeContext=textureCanvas.getContext("2d");if(!maybeContext){controls.dispose();renderer.dispose();renderer.domElement.remove();setFailed(true);return;}const context:CanvasRenderingContext2D=maybeContext;
+    const maybeContext=textureCanvas.getContext("2d");if(!maybeContext){controls.dispose();releaseCanvas();setFailed(true);return;}const context:CanvasRenderingContext2D=maybeContext;
     const texture=new THREE.CanvasTexture(textureCanvas);texture.colorSpace=THREE.SRGBColorSpace;
     texture.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),lowGraphics?2:8);
     const projection=geoEquirectangular().scale(textureWidth/(2*Math.PI)).translate([textureWidth/2,textureHeight/2]);
@@ -259,7 +274,7 @@ export default function Globe(props: Props) {
       host.removeEventListener("keydown",onKey);
       renderer.domElement.removeEventListener("pointerdown",onDown);renderer.domElement.removeEventListener("pointermove",onMove);renderer.domElement.removeEventListener("pointerup",onUp);renderer.domElement.removeEventListener("pointercancel",onCancel);renderer.domElement.removeEventListener("webglcontextlost",onContextLost);
       scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}});
-      texture.dispose();renderer.dispose();renderer.domElement.remove();
+      texture.dispose();releaseCanvas();
     }
     return cleanup;
   },[props.countries,props.mode]);

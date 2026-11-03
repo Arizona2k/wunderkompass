@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T10:43:59.877Z",
+  "generatedAt": "2026-11-03T01:32:02.166Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -43,6 +43,29 @@
       "entries": 48,
       "bytes": 117364,
       "sha256": "f6a36f02beb2ee8f0746a78a26fad76aeb88cc6dc55c1f18d6bfd2360581556e"
+    },
+    {
+      "file": "nature-learning.json",
+      "sources": [
+        "app/nature-learning-content.json",
+        "app/nature-new-places.json",
+        "app/nature-data.ts",
+        "scripts/nature-content-index.mjs",
+        "app/nature-learning-index.json",
+        "app/nature-word-links.json",
+        "app/nature-place-links.json",
+        "app/nature-place-link-ids.json",
+        "app/book-nature-water-figure.tsx",
+        "app/book-nature-geoscience-figure.tsx",
+        "app/book-nature-geology-figure.tsx",
+        "app/book-nature-habitats-figure.tsx",
+        "app/book-nature-landforms-figure.tsx",
+        "app/book-nature-coast-figure.tsx",
+        "app/book-nature-process-figure.tsx"
+      ],
+      "entries": 34,
+      "bytes": 165646,
+      "sha256": "d983b2c3fc670777c33084d4849540f3fe1bce8ae721c38325d64124dca6c2f5"
     },
     {
       "file": "book-measurements.json",
@@ -373,11 +396,12 @@
       "file": "nature-locations.json",
       "sources": [
         "app/nature-data.ts",
-        "app/plate-points.json"
+        "app/plate-points.json",
+        "app/nature-new-places.json"
       ],
-      "entries": 40,
-      "bytes": 14179,
-      "sha256": "39f5a5ed175197a75afd46ee47ee0e9147f446480eb91625c337a65287fdb9be"
+      "entries": 74,
+      "bytes": 46263,
+      "sha256": "8104609862fdfa0ac55e92bd0c18f77a0f4073cae6fc5300ac11c752bef77f24"
     },
     {
       "file": "plate-locations.json",
@@ -395,9 +419,9 @@
         "app/nature-data.ts",
         "app/plate-points.json"
       ],
-      "entries": 15,
-      "bytes": 2277,
-      "sha256": "741a10cfc257ee75291cddbe584e3bb373d6e10cbbbfe08e83e9dd030e566608"
+      "entries": 16,
+      "bytes": 2477,
+      "sha256": "921092117c9bd8f5b72316883ec0d6ffb20a4feee2fb91da9aa1ad1f3fd51888"
     },
     {
       "file": "climate-zones.json",
@@ -536,9 +560,9 @@
       "sources": [
         "app/world-photos.json"
       ],
-      "entries": 49,
-      "bytes": 33910,
-      "sha256": "2ee2ee920dc167a2fcb777a493a4d10635a753478f9fe6b79785250f3fb74d12"
+      "entries": 53,
+      "bytes": 37301,
+      "sha256": "f71f74b148d9af6927d8f74c53038e6f95899f6b5845100063b6dfc61e4a1ba4"
     },
     {
       "file": "journey-photo-metadata.json",

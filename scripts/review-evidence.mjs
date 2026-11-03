@@ -6,10 +6,12 @@ import {sourceDigest} from './handoff.mjs';
 // User-authorized measured resource reserve for retained original review PNGs
 // and added content views. Only evidence storage capacity; selection, capture
 // identities, exact-payload sharing and all error conditions stay unchanged.
-export const REVIEW_LIMIT=700_000_000;
+export const REVIEW_LIMIT=1_100_000_000;
+// Closed worker originals may back the separate review name by an exact verified
+// hardlink; this avoids a second disk allocation, never a capture or budget count.
 // Capture identities are never deduplicated. Only their byte-identical payloads
 // may share a file in a completed review. Diagnostics keep standalone originals.
-export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false}={}){
+export async function storeReviewScreenshot(directory,capture,data,payloads,{share=false,originalPath=null}={}){
  if(data.length!==capture.bytes||createHash('sha256').update(data).digest('hex')!==capture.sha256)throw Error('Changed screenshot '+capture.file);
  const previous=share?payloads.get(capture.sha256):null;
  if(previous){
@@ -17,7 +19,12 @@ export async function storeReviewScreenshot(directory,capture,data,payloads,{sha
   if(!original.equals(data))throw Error('Conflicting screenshot payload '+capture.file);
   capture.storedAs=previous;return 0;
  }
- await fs.writeFile(path.join(directory,capture.file),data);capture.storedAs=capture.file;
+ const target=path.join(directory,capture.file);
+ if(originalPath){
+  const original=await fs.lstat(originalPath);if(!original.isFile()||original.isSymbolicLink()||!(await fs.readFile(originalPath)).equals(data))throw Error('Changed or nonregular original screenshot '+capture.file);
+  try{await fs.link(originalPath,target);}catch(error){if(error.code!=='EXDEV')throw error;await fs.writeFile(target,data,{flag:'wx'});}
+ }else await fs.writeFile(target,data);
+ capture.storedAs=capture.file;
  if(share)payloads.set(capture.sha256,capture.file);
  return data.length;
 }
@@ -113,7 +120,7 @@ export async function prepareReview(directory='.qa-output'){
   const retained=!complete||retainScreenshot(name,{available:shareComplete?availableScreenshots:null}),capture={file:name,...(sourceFile?{sourceFile}:{}),bytes:data.length,width:data.readUInt32BE(16),height:data.readUInt32BE(20),sha256:createHash('sha256').update(data).digest('hex'),retained};screenshots.push(capture);generatedBytes+=data.length;
   // Required/focus/error originals keep their physical names as well. Other
   // captures retain every identity, dimension, hash and source via storedAs.
-  if(retained)retainedBytes+=await storeReviewScreenshot(destination,capture,data,payloads,{share:shareComplete&&!requiredScreenshots.includes(name)&&!/(?:focus|error|failure)/.test(name)});
+  if(retained)retainedBytes+=await storeReviewScreenshot(destination,capture,data,payloads,{share:shareComplete&&!requiredScreenshots.includes(name)&&!/(?:focus|error|failure)/.test(name),originalPath:source});
  }
 
  // Resolve every retained identity back to the exact original, including aliases.

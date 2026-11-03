@@ -1,7 +1,7 @@
 import {useEffect,useLayoutEffect,useState,type SetStateAction} from 'react';
 import {scheduleRouteRestore} from './hash-route';
 
-import {initialBookView,bookLookup,type BookView} from './book-location';
+import {initialBookView,bookLookup,bookLookupFocus,type BookView} from './book-location';
 export {bookLookup} from './book-location';
 const initialView=(route:string,restore=true)=>initialBookView(route,restore?history.state?.wunderBook:undefined);
 // Per-history-entry reading context only. No notes or learning progress live here.
@@ -13,7 +13,7 @@ export function useBookView(route:string){
   const command=(event:Event)=>{const path=location.hash.slice(1),lookup=bookLookup(path);if(!lookup)return;
    const open=Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure][open]')).map(el=>el.dataset.historyDisclosure);
    const next=initialView(path,false);
-   const selected={wunderBook:next,wunderFocus:(lookup.tab==='words'?'book-word-target-':'book-why-target-')+lookup.term,wunderScroll:0,wunderOpen:open};
+   const selected={wunderBook:next,wunderFocus:bookLookupFocus(lookup),wunderScroll:0,wunderOpen:open};
    // Native lookup navigation derives the untouched view from its URL.
    // Re-selecting the current address can still deliberately reset its view.
    if(!(event as CustomEvent<{bookLookup?:boolean}>).detail?.bookLookup&&Object.entries(selected).some(([key,value])=>JSON.stringify(history.state?.[key])!==JSON.stringify(value)))history.replaceState({...history.state,...selected},'',location.href);

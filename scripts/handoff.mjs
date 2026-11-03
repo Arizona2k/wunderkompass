@@ -1,3 +1,4 @@
+import {natureProofComplete} from './nature-learning-evidence.mjs';
 import {nativeNavigationInput,nativeNavigationReuseComplete,validateRestoredNativeNavigation} from './native-navigation-reuse.mjs';
 import {coldReuseComplete,coldBrowserEnvironment,fileSnapshot,validateRestoredColdOffline} from './cold-offline-reuse.mjs';
 import qualityContext from './release/quality-context.cjs';
@@ -13,7 +14,7 @@ export function journeySupportComplete(proof,widths){
  const hints=JOURNEY_DATA.chapters.flatMap(c=>c.tasks.map((_,level)=>c.id+':'+level));
  const diagrams=JOURNEY_DATA.chapters.filter(c=>c.index>0).flatMap(c=>widths.map(width=>c.id+':'+width));
  const exact=(observed,expected)=>Array.isArray(observed)&&observed.length===expected.length&&new Set(observed).size===expected.length&&expected.every(id=>observed.includes(id));
- return exact(proof?.hints,hints)&&exact(proof?.widths,widths)&&Array.isArray(proof?.diagrams)&&exact(proof.diagrams.map(d=>d.id+':'+d.width),diagrams)&&proof.diagrams.every(d=>d.readable===true&&d.largeText===true&&d.keyboard===true&&Number.isInteger(d.states)&&d.states>0)&&Number.isFinite(proof.seconds)&&proof.seconds>0;
+ return natureProofComplete(proof,[320,1440])&&exact(proof?.hints,hints)&&exact(proof?.widths,widths)&&Array.isArray(proof?.diagrams)&&exact(proof.diagrams.map(d=>d.id+':'+d.width),diagrams)&&proof.diagrams.every(d=>d.readable===true&&d.largeText===true&&d.keyboard===true&&Number.isInteger(d.states)&&d.states>0)&&Number.isFinite(proof.seconds)&&proof.seconds>0;
 }
 
 export async function sourceDigest(root=process.cwd()){
@@ -31,9 +32,10 @@ export const nativeHistoryComplete=z=>z?.percent===200&&z.scale===2&&z.blankCapt
 export const retentionComplete=r=>['multipleTabs','partialNeverReplacesFallback','unknownLegacyProtected','orphanCleanup','stoppedServerOldChunk','canaryPreserved'].every(k=>r?.[k]===true);
 export function offlineComplete(o,kind,{native=false}={}){
  const widths=native?[640]:[320,360,390,768,1024,1440,1920];
- return o?.kind===kind&&browserErrorsComplete(o.browserErrors)&&['realProgress','networkRecovery','completeAssets','offlineReload','serverStopped','passPreserved'].every(k=>o[k]===true)&&(kind!=='chromium'||o.quotaRecovery===true)&&Number.isInteger(o.assetCount)&&o.assetCount>0&&o.metrics?.assets===o.assetCount&&o.metrics.reused+o.metrics.downloaded===o.assetCount&&Array.isArray(o.progressViews)&&o.progressViews.length===widths.length&&new Set(o.progressViews.map(v=>v.width)).size===widths.length&&widths.every(width=>o.progressViews.some(v=>v.width===width&&v.cssWidth===width&&v.largeText===true&&v.axe===true&&v.verified>0&&v.verified<v.total&&v.total===o.assetCount&&(!native||v.scale===2&&v.screenshot?.pixelWidth===1280&&v.screenshot.sampledColors>1)));
+ return natureProofComplete(o?.bookLearning,native?[320,1440,640]:[320,1440],{native,offline:true})&&o?.kind===kind&&browserErrorsComplete(o.browserErrors)&&['realProgress','networkRecovery','completeAssets','offlineReload','serverStopped','passPreserved'].every(k=>o[k]===true)&&(kind!=='chromium'||o.quotaRecovery===true)&&Number.isInteger(o.assetCount)&&o.assetCount>0&&o.metrics?.assets===o.assetCount&&o.metrics.reused+o.metrics.downloaded===o.assetCount&&Array.isArray(o.progressViews)&&o.progressViews.length===widths.length&&new Set(o.progressViews.map(v=>v.width)).size===widths.length&&widths.every(width=>o.progressViews.some(v=>v.width===width&&v.cssWidth===width&&v.largeText===true&&v.axe===true&&v.verified>0&&v.verified<v.total&&v.total===o.assetCount&&(!native||v.scale===2&&v.screenshot?.pixelWidth===1280&&v.screenshot.sampledColors>1)));
 }
 export async function createHandoff(report,directory='.qa-output',{requiredEngines=[]}={}){
+ if(!natureProofComplete(report.nativeNature,[640,320],{native:true})||!browserErrorsComplete(report.nativeNature))throw Error('Missing complete actual native Nature evidence');
  if(!animalCoverageComplete(report.animalCoverage,[320,360,390,768,1024,1440,1920])||!animalNativeComplete(report.animalNativeZoom)||!animalOfflineComplete(report.animalOffline)||!solarCoverageComplete(report.solarCaptionCoverage,[320,360,390,402,768,1024,1440,1920])||!solarNativeComplete(report.solarNativeCoverage)||!solarOfflineComplete(report.solarOffline))throw Error('Missing complete article learning browser evidence');
  if(!journeySupportComplete(report.journeySupport,[320,360,390,768,1024,1440,1920]))throw Error('Missing complete journey hint/diagram evidence');
  if(!retentionComplete(report.offlineRetention)||!offlineComplete(report.offlineResilience,'chromium')||!offlineComplete(report.offlineNative,'chromium',{native:true}))throw Error('Missing complete current offline evidence');

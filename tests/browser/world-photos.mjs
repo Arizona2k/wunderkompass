@@ -4,6 +4,8 @@ import {captureNativeViewport} from './native-screenshot.mjs';
 import assert from 'node:assert/strict';
 import photos from '../../app/world-photos.json' with {type:'json'};
 import topics from '../../app/world-catalog.json' with {type:'json'};
+import naturePhotoCandidates from '../../app/nature-photo-candidates.json' with {type:'json'};
+import naturePlaces from '../../app/nature-new-places.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 
 // Corresponding real Back boundary: a previously requested category/page focus
@@ -88,28 +90,41 @@ export async function paginatedCardBackFlow(browser,base,ready,monitor,report,sh
  assert.equal(cases.length,14);report.paginatedCardBack=cases;report.checks.push('Actual later-page identities and real keyboard Back focus for all six worlds and new Bronze card at320large/1440');return cases;
 }
 
+// Every verified catalogue picture has one actual canonical reader target.
+// The retained49 article pictures keep their original routes and checks; new
+// Nature pictures use the real Book photo disclosure rather than a fake article.
+export async function inspectCatalogPhoto(page,id){
+ const photo=photos[id];assert.ok(photo,'known verified catalogue photo '+id);
+ const topic=topics.find(t=>t.image===id),nature=Object.hasOwn(naturePhotoCandidates,id)&&naturePlaces.some(place=>place.id===id);
+ assert.ok(topic||nature,'known actual article or Nature Book target '+id);
+ const route=topic?'world/topic/'+topic.id:'book/nature/'+encodeURIComponent(id),selector=topic?'.world-article .world-photo':'.atlas-country.nature-target .nature-real-photo .world-photo';
+ await page.evaluate(hash=>location.hash=hash,route);
+ await page.waitForFunction(({selector,src,alt})=>{const image=document.querySelector(selector+' img');return image?.getAttribute('src')===src&&image?.alt===alt;},{selector,src:photo.src,alt:photo.alt_de});
+ const figure=page.locator(selector).first();await figure.locator('img').scrollIntoViewIfNeeded();await figure.locator('img').evaluate(image=>image.decode());
+ if(!topic){const disclosure=figure.locator('figcaption details');if(!await disclosure.evaluate(e=>e.open))await disclosure.locator('summary').click();assert(await disclosure.evaluate(e=>e.open));}
+ assert.ok((await figure.innerText()).includes(photo.author),id+' author');
+ assert.equal(await figure.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'),photo.license_url);
+ if(topic){const disclosure=figure.locator('figcaption details');if(!await disclosure.evaluate(e=>e.open))await figure.getByText('Bildquelle & Bearbeitung',{exact:true}).click();assert(await disclosure.evaluate(e=>e.open));}
+ assert.equal(await figure.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);
+ await figure.getByText(photo.transformations_de,{exact:true}).waitFor();
+ if(!topic){
+  const candidate=naturePhotoCandidates[id],image=figure.locator('img');assert.equal(await image.getAttribute('srcset'),candidate.srcSet);assert.equal(await image.getAttribute('sizes'),candidate.sizes);
+  const actual=await image.evaluate(e=>({currentSrc:e.currentSrc,fit:getComputedStyle(e).objectFit,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,naturalWidth:e.naturalWidth,naturalHeight:e.naturalHeight}));assert.equal(actual.fit,'contain');assert(actual.naturalWidth>0&&actual.naturalHeight>0);assert(candidate.srcSet.split(',').some(part=>actual.currentSrc.endsWith(part.trim().split(' ')[0])));assert(Math.abs(actual.width/actual.height-actual.naturalWidth/actual.naturalHeight)<.01,'Nature photograph keeps its entire actual selected responsive source ratio');
+ }
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,id+' overflow');
+ return figure;
+}
+
 export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
  const started=performance.now(),observed=[];
- async function inspect(page,id){
-  const photo=photos[id],topic=topics.find(t=>t.image===id);assert.ok(topic,id);
-  await page.evaluate(id=>location.hash='world/topic/'+id,topic.id);
-  await page.waitForFunction(({src,alt})=>{const image=document.querySelector('.world-article .world-photo img');return image?.getAttribute('src')===src&&image?.alt===alt;},{src:photo.src,alt:photo.alt_de});
-  const figure=page.locator('.world-article .world-photo').first();await figure.locator('img').scrollIntoViewIfNeeded();await figure.locator('img').evaluate(image=>image.decode());
-  assert.ok((await figure.innerText()).includes(photo.author),id+' author');
-  assert.equal(await figure.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'),photo.license_url);
-  await figure.getByText('Bildquelle & Bearbeitung',{exact:true}).click();
-  assert.equal(await figure.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);
-  await figure.getByText(photo.transformations_de,{exact:true}).waitFor();
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,id+' overflow');
-  return figure;
- }
+ const inspect=inspectCatalogPhoto;
  for(const width of [320,1440]){
   const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
   page.on('request',request=>{if(/world-photos-.*\.json/.test(request.url()))requests++;});
   try{
    await page.goto(base);await ready(page);assert.equal(requests,0,'Home has immediate complete credits without the deferred catalog');
    for(const id of Object.keys(photos)){const figure=await inspect(page,id);observed.push({id,width});if(['jaguar','western-lowland-gorilla'].includes(id))await figure.screenshot({path:shots+'/animal-photo-retained-'+id+'-'+width+'.png'});if(id==='whale-shark')await figure.screenshot({path:shots+'/animal-photo-rights-'+width+'.png'});}
-   assert.equal(requests,1,'One verified metadata request shared by all49 pictures');
+   assert.equal(requests,1,'One verified metadata request shared by all'+Object.keys(photos).length+' pictures');
   }finally{await context.close();}
  }
  // Clicking the photograph must keep the enclosing card as the history opener.
@@ -143,18 +158,15 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    await inspect(page,'whale-shark');assert.equal(requests,2,'Failure clears the shared pending request for a safe retry');
   }finally{await context.close();}
  }
+ assert.equal(observed.length,Object.keys(photos).length*2);assert.deepEqual([...new Set(observed.map(row=>row.id))],Object.keys(photos));
  report.photoMetadata={images:Object.keys(photos),cases:observed,immediateHomeCredits:true,oneRequestPerSession:true,tamperAndNetworkRetry:true,retryFocus:true,photoCardBackFocus:true,seconds:(performance.now()-started)/1000};
- report.checks.push('All49 photos and complete rights at320/1440; bounded verified demand catalog, no home catalog request, tamper/network retry with focus');
+ report.checks.push('All'+Object.keys(photos).length+' photos and complete rights at320/1440, including real Nature Book disclosures; bounded verified demand catalog, no home catalog request, tamper/network retry with focus');
 }
 
 export async function offlineWorldPhotos(page,report){
  const observed=[];
- for(const[id,photo]of Object.entries(photos)){
-  await page.evaluate(id=>location.hash='world/topic/'+id,topics.find(t=>t.image===id).id);
-  await page.waitForFunction(({src,alt})=>{const image=document.querySelector('.world-article .world-photo img');return image?.getAttribute('src')===src&&image?.alt===alt;},{src:photo.src,alt:photo.alt_de});
-  const figure=page.locator('.world-article .world-photo').first();await figure.locator('img').scrollIntoViewIfNeeded();await figure.locator('img').evaluate(image=>image.decode());
-  assert.ok((await figure.innerText()).includes(photo.author));assert.equal(await figure.getByRole('link',{name:photo.license,exact:true}).getAttribute('href'),photo.license_url);observed.push(id);
- }
+ for(const id of Object.keys(photos)){await inspectCatalogPhoto(page,id);observed.push(id);}
+ assert.deepEqual(observed,Object.keys(photos),'every actual catalogue photo is inspected in the stopped-server cold client');
  report.photoOffline={images:observed,coldRestart:true,verifiedCatalog:true};
- report.checks.push('All49 exact pictures, alt texts and rights survive stopped-server cold offline restart');
+ report.checks.push('All'+Object.keys(photos).length+' exact pictures, alt texts, responsive Nature sources and complete rights survive stopped-server cold offline restart');
 }

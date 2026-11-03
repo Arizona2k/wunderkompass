@@ -1,7 +1,7 @@
 import {bookAnswerSentence} from './book-answer-feedback';
-import {useEffect,useRef,useState,type ReactNode} from 'react';
+import {useState,type ReactNode} from 'react';
 import {LearningDetails} from './learning-components';
-import {navigateHash,restoreRouteView} from './hash-route';
+import {navigateHash} from './hash-route';
 import {WORLD_INDEX} from './world-index';
 
 export type BookLearning={
@@ -11,25 +11,7 @@ export type BookLearning={
  relatedWords?:{term:string;reason:string}[];relatedQuestions?:{question:string;reason:string}[];
 }&({topic:string;word?:never}|{word:string;topic?:never});
 
-function restoreBookStudyView(details:HTMLDetailsElement|null){
- const path=location.hash.slice(1),state=history.state,active=document.activeElement as HTMLElement|null;
- if(!(path==='book'||path.startsWith('book/'))||!details?.open||!Array.isArray(state?.wunderOpen)||!state.wunderOpen.includes(details.dataset.historyDisclosure))return;
- if(active===document.body||active?.id==='learning-main'||(state.wunderFocus&&active?.dataset.routeFocus===state.wunderFocus))restoreRouteView(path);
-}
-// Defer only the saved reading view. Shared source fetches continue unchanged.
-// Real interaction while loading supersedes the old pending return position.
-export function useBookStudyReturn(ready:boolean,active:boolean,details:{current:HTMLDetailsElement|null}){
- const cancelled=useRef(false);
- useEffect(()=>{
-  if(!active){cancelled.current=false;return;}
-  if(ready){if(!cancelled.current)restoreBookStudyView(details.current);return;}
-  const key=details.current?.dataset.historyDisclosure;
-  if(!Array.isArray(history.state?.wunderOpen)||!history.state.wunderOpen.includes(key))return;
-  const events=['keydown','pointerdown','wheel','touchmove'],cancel=(event:Event)=>{if(event.isTrusted)cancelled.current=true;};
-  for(const type of events)window.addEventListener(type,cancel,{capture:true,passive:true});
-  return()=>{for(const type of events)window.removeEventListener(type,cancel,true);};
- },[ready,active,details]);
-}
+export {useBookStudyReturn} from './book-study-return';
 
 const sourceDate=(value:string)=>new Date(value+'T12:00:00Z').toLocaleDateString('de-DE',{timeZone:'UTC'});
 

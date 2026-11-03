@@ -1,0 +1,14 @@
+.nature-study{margin:20px 0;min-width:0}
+.nature-study-body{min-width:0;padding-top:14px;overflow-wrap:anywhere}
+.nature-study-body p,.nature-study-body li,.nature-study-body summary{font-size:16px;line-height:1.65}
+.nature-study-body p{margin:14px 0}
+.nature-study-body ul{padding-left:26px;list-style:disc outside}
+.nature-study-body li{margin:10px 0}
+.nature-study-body .book-thinking :is(h3,h5){font-size:22px;line-height:1.45;margin:22px 0 14px}
+.nature-study-body .quiz-answer{font:inherit;line-height:1.6;min-height:48px;white-space:normal;text-align:left}
+.nature-study-body .book-topic-link{display:inline-block;min-height:44px;padding:9px 0;white-space:normal;line-height:1.6;text-decoration:underline;text-underline-offset:3px}
+.nature-study-body .secondary-button{height:auto;min-height:48px;white-space:normal;text-align:left;line-height:1.6}
+.large-reading :is(.atlas-country,.info-card):has(.nature-study) :is(p,li,summary,a,button),.large-reading :is(.nature-word-links,.nature-connections) :is(p,li,summary,a,button){font-size:20px!important;line-height:1.65}
+.atlas-grid>.atlas-country:has(.nature-study[open]),.atlas-grid>.atlas-country.nature-target{grid-column:1/-1;width:100%;max-width:900px}
+.nature-study-body .book-feedback{margin-top:16px}
+@media(prefers-reduced-motion:reduce){.nature-study-body *{scroll-behavior:auto}}

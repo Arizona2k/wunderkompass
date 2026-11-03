@@ -1,0 +1,2887 @@
+{
+  "okavango-delta": {
+    "id": "okavango-delta",
+    "name": "Okavango-Delta",
+    "family": "water",
+    "learning": {
+      "learningGoal": "Ein Fluss muss nicht bis zum Meer fließen; ein von entferntem Regen gespeistes Binnendelta mit seinen Wasserwegen erklären.",
+      "starter": "Im Nordwesten Botswanas verzweigt sich der Okavango zu Wasserarmen und Feuchtgebieten. Er erreicht dort kein Meer. Ein Teil der Landschaft bleibt nass, andere Flächen werden nur zeitweise überschwemmt. Das Wasser ist nicht einfach verschwunden, wenn du keinen breiten Fluss mehr siehst.",
+      "deeper": "Ein großer Teil des zufließenden Wassers stammt aus Regen im Hochland Angolas. Er muss erst flussabwärts gelangen; örtliche Regenzeit und ankommende Flut müssen deshalb nicht zusammenfallen. Im Okavango-Delta kommt die jährliche Flut während der örtlichen Trockenzeit an. Verdunstung, Wasserabgabe der Pflanzen und Wege in den Boden gehören zum Wasserkreislauf. Die Anteile sind in unserer Zeichnung nicht gemessen.",
+      "observe": "Verfolge im Modell zuerst den Zufluss, dann seine Verzweigung und zuletzt die Wege in Boden und Luft. Erkläre, warum der letzte sichtbare Wasserarm keine Grenze des Wasserkreislaufs ist. Vergleiche anschließend das Donaudelta: Dort gibt es eine Verbindung zum Meer.",
+      "benefit": "Du kannst zwischen dem Ende eines sichtbaren Flusslaufs und dem weiteren Weg seines Wassers unterscheiden.",
+      "figure": {
+        "kind": "inland-delta-water-paths",
+        "controls": [
+          "Zufluss",
+          "Verzweigung",
+          "Boden und Luft"
+        ],
+        "limits": "Eigene topologische Lernzeichnung, keine Landkarte, Abflussmenge, Flutvorhersage oder gemessene Verteilung. Drei Ansichten derselben Wasserwege, keine Zeitraffersimulation. Wasserabgabe von Pflanzen ist kein Verschwinden von Wasser."
+      },
+      "question": {
+        "prompt": "Warum kann das Delta Wasser bekommen, obwohl es dort gerade trocken ist?",
+        "answers": [
+          "Weil es an einem anderen Ort geregnet hat und Wasser flussabwärts ankommt.",
+          "Weil Flusswasser nur während eines örtlichen Regenschauers fließen kann.",
+          "Weil jede Flut vom Meer zurückgeschoben wird."
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den Ort des Regens mit dem Ort, an dem du die Flut beobachtest.",
+        "why": "Das Einzugsgebiet reicht bis in das Hochland Angolas. Wasser kann unterwegs sein, während es am Ziel gerade nicht regnet.",
+        "wrongReasons": [
+          "",
+          "Der Fluss kann auch Wasser aus entferntem Regen transportieren; ein örtlicher Regenschauer ist keine Voraussetzung.",
+          "Dieses Binnendelta hat keinen Meeresausgang. Seine jährliche Flut ist keine Meeresflut."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1432/",
+          "title": "UNESCO · Okavango Delta",
+          "anchor": "Description; Outstanding Universal Value, Brief synthesis and criterion(ix)",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.nationalgeographic.org/explore/programs/okavango/river-system",
+          "title": "National Geographic Society · The River System",
+          "anchor": "The Angolan Highlands Water Tower; From the Water to the Delta",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.usgs.gov/water-science-school/water-cycle",
+          "title": "USGS · Water cycle",
+          "anchor": "Pools store water / Fluxes move water between pools / What drives the water cycle?",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Binnendelta in Nordwestbotswana ohne Meeresausgang; jährliche Flut während örtlicher Trockenzeit.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Zuflusswasser aus Regen im Hochland Angolas; Fluss verläuft über Namibia nach Botswana.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Verdunstung, Pflanzenwasserabgabe und Versickerung sind verschiedene Wasserkreislaufwege.",
+          "sourceIndex": 2
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "danube-delta",
+          "reason": "Binnendelta mit einem Delta am Meer vergleichen."
+        },
+        {
+          "id": "amazon",
+          "reason": "Unterschiedliche Ziele eines großen Flusswassersystems vergleichen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verdunstung",
+          "reason": "Der Weg von flüssigem Wasser in die Luft."
+        },
+        {
+          "term": "Grundwasser",
+          "reason": "Wasser im Boden von einem offenen Wasserarm unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "tanganyika": {
+    "id": "tanganyika",
+    "name": "Tanganjikasee",
+    "family": "water",
+    "learning": {
+      "learningGoal": "Ein tektonisch geprägtes Seebecken von seiner Wasseroberfläche und von politischen Grenzen unterscheiden.",
+      "starter": "Der Tanganjikasee liegt in Ostafrika im westlichen Teil des Grabenbruchsystems. An seinen Ufern liegen Burundi, die Demokratische Republik Kongo, Tansania und Sambia. Der See ist ein Gewässer; sein Becken gehört zu einer Landschaft, deren geologischer Aufbau durch Bewegungen der Erdkruste geprägt wurde.",
+      "deeper": "Die wissenschaftliche Beschreibung ordnet Tanganjika, Malawi und Baikal als Riftseen ein. Ein Riftbecken ist nicht einfach ein schmaler Strich auf einer Landkarte. Es besitzt räumliche Ausdehnung und einen gegliederten Untergrund. Eine Ansicht von oben zeigt vor allem die Wasserfläche. Ein Querschnitt kann eine andere Frage erklären: Wie liegen Wasser und Seebecken übereinander? Unsere Zeichnung liefert keine reale Tiefenkarte.",
+      "observe": "Wechsle zwischen Wasserfläche, vereinfachtem Querschnitt und markierten Störungszonen. Nenne jeweils etwas, das in dieser Ansicht erkennbar ist, und etwas, das du daraus nicht bestimmen kannst. Die sichtbare Breite eines Sees allein verrät dir nicht seine Tiefe.",
+      "benefit": "Du kannst eine geografische Lage, eine politische Grenze und eine geologische Erklärung getrennt lesen.",
+      "figure": {
+        "kind": "rift-lake-section",
+        "controls": [
+          "Wasserfläche",
+          "Querschnitt",
+          "Störungszonen"
+        ],
+        "limits": "Eigener schematischer Querschnitt; keine maßstäbliche Tiefenkarte und keine Simulation des tatsächlichen Riftverlaufs, einer Plattengrenze oder Bewegungsgeschwindigkeit. Politische Uferstaaten sind keine tektonischen Platten."
+      },
+      "question": {
+        "prompt": "Was kannst du aus einer einfachen Karte der Wasserfläche sicherer erkennen als die Tiefe?",
+        "answers": [
+          "Die ungefähre Lage des Sees.",
+          "Die genaue Tiefe an jeder Stelle.",
+          "Dass jede Staatsgrenze zugleich eine Plattengrenze ist."
+        ],
+        "correct": 0,
+        "hint": "Überlege, welche Größe die Ansicht überhaupt zeigt.",
+        "why": "Eine Karte kann eine Lage darstellen. Tiefen benötigen andere Daten; Staatsgrenzen und geologischer Aufbau sind verschiedene Informationen.",
+        "wrongReasons": [
+          "",
+          "Eine reine Umrisskarte enthält keine Tiefenmessungen. Auch eine große Wasserfläche ist kein Maß für Tiefe.",
+          "Staatsgrenzen sind politische Grenzen. Aus ihnen folgt keine tektonische Plattengrenze."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.fao.org/fishery/static/LTR/GEN.HTM",
+          "title": "FAO · Lake Tanganyika Research, General Features",
+          "anchor": "General Features, location within the Western Rift Valley and four shoreline states",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null,
+          "publishedYear": 1999
+        },
+        {
+          "url": "https://www.usgs.gov/publications/comparative-sequence-stratigraphy-low-latitude-versus-high-latitude-lacustrine-rift",
+          "title": "USGS · Comparative sequence stratigraphy of lacustrine rift basins",
+          "anchor": "Published abstract: Rift lakes and segmented half-graben basins",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null,
+          "publishedYear": 1998
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Westlicher ostafrikanischer Grabenbruch und vier benannte Uferstaaten.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Tanganjika als Riftsee; räumlich gegliederte Seebecken.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "baikal",
+          "reason": "Ein weiterer Riftsee in einem anderen Klima."
+        },
+        {
+          "id": "victoria",
+          "reason": "Einen bereits bekannten afrikanischen See vergleichen, ohne alle Seen derselben Entstehung zuzuordnen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Plattentektonik",
+          "reason": "Geologische Bewegung von politischen Grenzen trennen."
+        },
+        {
+          "term": "Maßstab",
+          "reason": "Eine schematische Erklärung ist keine maßstäbliche Messkarte."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "tonle-sap": {
+    "id": "tonle-sap",
+    "name": "Tonle-Sap-See",
+    "family": "water",
+    "learning": {
+      "learningGoal": "Die wechselnde Fließrichtung des Verbindungsflusses anhand unterschiedlicher Wasserstände verstehen.",
+      "starter": "Der Tonle-Sap-See liegt in Kambodscha. Der Tonle-Sap-Fluss verbindet ihn mit dem Mekong. In der Trockenzeit fließt Wasser aus dem See zum Mekong. In der Regenzeit kann der höhere Mekong Wasser in die andere Richtung zum See drücken.",
+      "deeper": "Die Mekong River Commission beschreibt diesen jahreszeitlichen Wechsel und die damit verbundene Ausdehnung des Sees. Ein Flussname legt keine Fließrichtung für jedes Wasserstandsverhältnis fest. Im einfachen Modell vergleichen wir nur zwei Wasseroberflächen: Wo besteht ein Höhenunterschied? Die Verbindung ist in beiden Ansichten derselbe Wasserweg.",
+      "observe": "Wähle nacheinander einen höheren Wasserstand auf jeder Seite. Sage vor dem Wechsel voraus, in welche Richtung der Pfeil zeigen müsste. Prüfe auch den gleichen Wasserstand: Unser vereinfachter Vergleich gibt dann keine Richtung vor. Das ist keine Behauptung, dass in der Natur jede Bewegung sofort stoppt.",
+      "benefit": "Du liest eine Fließrichtung aus dem dargestellten Wasserstandsvergleich statt aus einem auswendig gelernten Pfeil.",
+      "figure": {
+        "kind": "connected-water-levels",
+        "controls": [
+          "Mekong höher",
+          "See höher",
+          "Gleich hoch"
+        ],
+        "levels": [
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "limits": "Eigener Vergleich zweier schematischer Wasserstände, keine echten Pegelwerte, Abflussmengen, Kalenderprognose oder Karte. Wind, Zuflüsse, Reibung und zeitliche Verzögerungen werden nicht berechnet; gleicher Stand bedeutet nur keinen Höhenantrieb in diesem Modell."
+      },
+      "question": {
+        "prompt": "Was erklärt im Modell die andere Pfeilrichtung nach einem Wasserstandswechsel?",
+        "answers": [
+          "Ein verändertes Verhältnis der dargestellten Wasserhöhen.",
+          "Der Fluss hat einen anderen Namen bekommen.",
+          "Wasser bewegt sich grundsätzlich entgegen der Schwerkraft."
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die beiden Oberflächen vor und nach deinem Wechsel.",
+        "why": "Die Wasserhöhen ändern ihren Unterschied. Die beiden Orte und ihr Verbindungsfluss bleiben dieselben.",
+        "wrongReasons": [
+          "",
+          "Ein Name ändert das dargestellte Höhenverhältnis nicht.",
+          "Im Modell folgt der Antrieb dem Höhenunterschied; die Zeichnung zeigt kein allgemeines Fließen gegen die Schwerkraft."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.mrcmekong.org/geographic-regions/",
+          "title": "Mekong River Commission · Geographic Regions",
+          "anchor": "The Great Lake: dry-season outflow, wet-season reverse flow and end-of-wet-season drainage",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.usgs.gov/water-science-school/water-cycle",
+          "title": "USGS · Water cycle",
+          "anchor": "Pools store water / Fluxes move water between pools / What drives the water cycle?",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Tonle Sap in Kambodscha; saisonaler Richtungswechsel des Verbindungsflusses zwischen See und Mekong.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Wasserbewegung durch Höhenunterschiede im begrenzten Lernmodell knüpft an die Schwerkraft im Wasserkreislauf an.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "okavango-delta",
+          "reason": "Zwei unterschiedlich gesteuerte jahreszeitliche Wasserlandschaften vergleichen."
+        },
+        {
+          "id": "danube-delta",
+          "reason": "See-Fluss-Verbindung von einem Flussdelta am Meer unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Speicherung und Bewegung von Wasser zusammen betrachten."
+        },
+        {
+          "term": "Niederschlag",
+          "reason": "Regen und der spätere Wasserstand müssen örtlich und zeitlich unterschieden werden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "danube-delta": {
+    "id": "danube-delta",
+    "name": "Donaudelta",
+    "family": "water",
+    "learning": {
+      "learningGoal": "Ein Delta als verzweigtes Fluss-Feuchtgebiet am Meer lesen und seine Veränderlichkeit verstehen.",
+      "starter": "Am Schwarzen Meer verzweigt sich die Donau zu vielen Wasserwegen. Zum Delta gehören auch Seen, Inseln und Feuchtgebiete. Die Landschaft erstreckt sich über Teile Rumäniens und der Ukraine. Eine einzige Linie für den Fluss zeigt diese Vielfalt nicht.",
+      "deeper": "Die ESA beschreibt in ihrer Satellitenaufnahme vom April 2020 Flussarme, Schilfflächen und das Meer. Wasser transportiert auch Sedimente. Ablagerungen der Donau und Küstenströmungen haben an der Entstehung benachbarter Lagunen mitgewirkt. Daraus folgt nicht, dass jeder Teil eines Deltas gleichzeitig wächst. Wasser, bewegtes Material und menschliche Eingriffe gehören beim Verstehen einer solchen Landschaft zusammen.",
+      "observe": "Zeige im Modell einen Wasserweg vom Fluss bis zum Meer und einen benachbarten Feuchtbereich. Vergleiche mit dem Okavango: Welcher Unterschied betrifft das Ziel des Wassers? Unsere wenigen Äste erklären eine Verbindung, sie zählen nicht alle natürlichen Arme.",
+      "benefit": "Du erkennst ein Delta als zusammenhängende Wasserlandschaft und verwechselst eine Momentaufnahme nicht mit einer fertigen, unveränderlichen Form.",
+      "figure": {
+        "kind": "river-delta-to-sea",
+        "controls": [
+          "Fluss und Meer",
+          "Verzweigte Wege",
+          "Feuchtgebiete und Sedimente"
+        ],
+        "limits": "Eigene schematische Verknüpfung mit Beispielarmen, keine vollständige Karte, Messung des Sedimenttransports, aktuelle Küstenlinie oder Vorhersage. Wasserfarbe allein bestimmt keinen Stoff; die ESA beschreibt die Sedimentdeutung ihrer Aufnahme ausdrücklich als wahrscheinlich."
+      },
+      "question": {
+        "prompt": "Welche Erklärung passt zum Vergleich mit dem Okavango-Delta?",
+        "answers": [
+          "Das Donaudelta hat Wasserwege zum Schwarzen Meer; das Okavango-Delta liegt im Binnenland ohne Meeresausgang.",
+          "Jedes Delta muss unmittelbar am Meer liegen.",
+          "Ein Delta bleibt nach seiner Entstehung überall unverändert."
+        ],
+        "correct": 0,
+        "hint": "Verfolge das Wasser über die Verzweigung hinaus.",
+        "why": "Der Vergleich trennt ein Flussdelta am Meer von einem Binnendelta. Verzweigte Wasserlandschaften können verschieden mit anderen Gewässern verbunden sein.",
+        "wrongReasons": [
+          "",
+          "Das Okavango-Delta ist ein Gegenbeispiel: Es liegt ohne Meeresausgang im Binnenland.",
+          "Wasserwege, Sedimente und andere Einflüsse können eine Deltalandschaft verändern."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/588/",
+          "title": "UNESCO · Danube Delta",
+          "anchor": "Description: Danube to the Black Sea, lakes and marshes",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Earth_from_Space_Danube_Delta",
+          "title": "ESA · Earth from Space: Danube Delta",
+          "anchor": "Romania/Ukraine; channel network; April2020 image; alluvial deposits/coastal currents",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null,
+          "publishedOn": "2021-09-10"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1432/",
+          "title": "UNESCO · Okavango Delta",
+          "anchor": "Brief synthesis: endorheic inland delta",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.usgs.gov/water-science-school/water-cycle",
+          "title": "USGS · Water cycle",
+          "anchor": "Humans alter the water cycle: water/land use, dams and diverted rivers, general mechanism only",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Donau mündet ins Schwarze Meer; Delta mit Seen und Feuchtgebieten.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Deltaregion in Rumänien und Ukraine; Flussverzweigung sowie Sediment-/Küstenstrombezug.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Okavango-Binnendelta ohne Meeresausgang als begründeter Vergleich.",
+          "sourceIndex": 2
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "okavango-delta",
+          "reason": "Meeresausgang und Binnenentwässerung gezielt vergleichen."
+        },
+        {
+          "id": "rhine",
+          "reason": "Einen bekannten europäischen Fluss als anderen zusammenhängenden Wasserweg betrachten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Sediment",
+          "reason": "Transportiertes und abgelagertes Material von reinem Wasser unterscheiden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Abtragung und Ablagerung sind verschiedene Vorgänge."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "grand-canyon": {
+    "id": "grand-canyon",
+    "name": "Grand Canyon",
+    "family": "geoscience",
+    "learning": {
+      "learningGoal": "Zwischen dem Alter eines Gesteins und der später entstandenen Form einer Schlucht unterscheiden.",
+      "starter": "Der Colorado River hat sich im Norden Arizonas in eine Landschaft mit alten Gesteinen eingeschnitten. An den Wänden des Grand Canyon sind viele Schichten zu sehen. Der Fluss hat diese Schichten nicht erst hergestellt: Er hat zuvor vorhandenes Material abgetragen und dadurch Teile davon freigelegt.",
+      "deeper": "Die Entstehung und spätere Hebung der Gesteine gehören zu einer anderen Geschichte als die Formung der heutigen Schlucht. Widerstandsfähige Schichten bilden häufig steile Wände, leichter abtragbare Schichten eher Hänge. Das bedeutet nicht, dass alle Schichten gleich beschaffen sind oder nur ein einziger Vorgang die Landschaft formt. Die genaue Geschichte des Flusslaufs und seines Einschneidens ist Gegenstand geologischer Forschung. Aus unserer Zeichnung lassen sich keine exakten Alterszahlen ablesen.",
+      "observe": "Vergleiche vorhandene Schichten und späteren Einschnitt. Hebe dann die mittlere Beispielschicht hervor und suche dieselbe Farbe auf beiden Seiten. Erkläre den Unterschied zwischen Gesteinsbildung und Freilegung; aus der Skizze folgen keine Alterszahlen.",
+      "benefit": "Du kannst begründen, warum das Alter eines Materials und das Alter seiner heutigen Form verschiedene Fragen sind.",
+      "figure": {
+        "kind": "rock-layers-and-later-incision",
+        "controls": [
+          "Gesteinsschichten",
+          "Einschnitt",
+          "Schichtvergleich"
+        ],
+        "limits": "Eigene schematische Zeichnung, keine reale Schichtenkarte, Datierung oder zeitlich maßstäbliche Entstehungssimulation. Gleiche Markierung verbindet nur dieselbe beispielhafte Schicht; Farben sind eine Lernlegende, keine universelle Gesteinsfarbskala. Hebung, Seitenabtragung und wechselnder Flussverlauf werden nicht berechnet."
+      },
+      "question": {
+        "prompt": "Eine freigelegte Gesteinsschicht ist sehr alt. Was folgt daraus für die Schlucht?",
+        "answers": [
+          "Die Schlucht muss im selben Moment wie das Gestein entstanden sein.",
+          "Die Schlucht kann viel später in bereits vorhandenes Gestein eingeschnitten worden sein.",
+          "Jede freigelegte Schicht wurde gerade erst vom heutigen Fluss gebildet."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide das vorhandene Material von der Form, die später darin entstehen kann.",
+        "why": "Der Colorado hat sich in ältere Gesteine eingeschnitten. Die Entstehung des Gesteins datiert deshalb nicht automatisch die heutige Schlucht.",
+        "wrongReasons": [
+          "Das Gestein kann schon lange vorhanden sein, bevor ein Fluss eine Schlucht darin formt.",
+          "",
+          "Freilegen bedeutet, bereits vorhandenes Material sichtbar zu machen. Es ist nicht dasselbe wie die Neubildung dieser Schicht."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/grca/learn/nature/geologicformations.htm",
+          "title": "National Park Service · Geologic Formations, Grand Canyon",
+          "anchor": "The Colorado River has carved; late Cenozoic canyon; erosion-resistant cliffs and softer slopes; unresolved carving history",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2019-03-04"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Der Colorado hat die Schlucht in zuvor vorhandene, gehobene Gesteine eingeschnitten.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Unterschiedlich widerstandsfähige Schichten prägen Wände und Hänge; alte Gesteine und jüngere Schlucht sind zu unterscheiden.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Der genaue Verlauf der Einschneidungsgeschichte ist wissenschaftlich nicht abschließend geklärt.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "mammoth-cave",
+          "reason": "Zwei verschiedene Hohlformen in älterem Gestein vergleichen, ohne ihre Entstehung gleichzusetzen."
+        },
+        {
+          "id": "rhine",
+          "reason": "Ein bekannter anderer Fluss als Wasserweg; nicht jeder Fluss bildet einen Grand Canyon."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Erosion",
+          "reason": "Abtragung von der Entstehung des Gesteins unterscheiden."
+        },
+        {
+          "term": "Gestein",
+          "reason": "Material und spätere Landschaftsform getrennt benennen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "mammoth-cave": {
+    "id": "mammoth-cave",
+    "name": "Mammoth Cave",
+    "family": "geoscience",
+    "learning": {
+      "learningGoal": "Verstehen, wie mineralauflösendes Wasser vorhandene Risse im Kalkgestein erweitern kann.",
+      "starter": "Mammoth Cave liegt in Kentucky in den USA. Kleine Wasserwege in Kalkgestein wurden über lange Zeit zu größeren Hohlräumen. Dabei kann Wasser Bestandteile des Gesteins lösen. Die Gesteinsschichten waren schon lange vor den heutigen Höhlengängen vorhanden.",
+      "deeper": "Regenwasser nimmt Kohlendioxid aus Luft und Boden auf. Dadurch wird es schwach sauer und kann Mineralien im Kalkgestein lösen. Es folgt kleinen Rissen und Schichtgrenzen; mit der Zeit können sich Wasserwege erweitern. Auflösen ist dabei etwas anderes als nur große Steinstücke wegzuschieben. Heute sind viele höhere Gänge trocken, während in tieferen Bereichen weiterhin Wasser fließt. Ein trockener Gang beweist deshalb nicht, dass Wasser bei seiner Entstehung keine Rolle gespielt hat. Andere Höhlen können anders entstehen.",
+      "observe": "Wechsle vom kleinen zum erweiterten Wasserweg. Unterscheide die symbolischen gelösten Bestandteile von großen weggetragenen Felsbrocken. Vergleiche zuletzt den trockenen oberen mit dem tieferen wasserführenden Gang; Zeichenhöhe und Hohlraumbreite sind keine echten Messwerte.",
+      "benefit": "Du kannst eine chemische Veränderung des Gesteins von einem rein mechanischen Wegschieben unterscheiden.",
+      "figure": {
+        "kind": "limestone-solution-passages",
+        "controls": [
+          "Kleiner Wasserweg",
+          "Lösen und Erweitern",
+          "Trockener und wasserführender Gang"
+        ],
+        "limits": "Eigene Prozesszeichnung, kein Höhlenplan, Porenmaßstab oder Versuch mit Säuren. Symbolpunkte für gelöste Stoffe sind keine sichtbaren Felsbrocken und keine wahren Molekülgrößen. Vergleichsansichten sind kein gleichmäßig laufender Zeitraffer; nicht jede Höhle entsteht auf diese Weise."
+      },
+      "question": {
+        "prompt": "Ein höherer Höhlengang ist heute trocken. Welche Aussage ist mit der Entstehung von Mammoth Cave vereinbar?",
+        "answers": [
+          "In diesem Gang kann niemals Wasser gewesen sein.",
+          "Jeder trockene Hohlraum wurde erst heute geschaffen.",
+          "Wasser kann den Gang früher mitgeformt haben und heute auf tieferen Wegen fließen."
+        ],
+        "correct": 2,
+        "hint": "Eine Beobachtung von heute muss nicht alle früheren Zustände zeigen.",
+        "why": "Die NPS-Beschreibung unterscheidet ältere höhere Gänge und heutige tiefere Wasserwege. Trockenheit heute widerlegt eine frühere Rolle des Wassers nicht.",
+        "wrongReasons": [
+          "Aus dem heutigen Zustand allein folgt nicht, dass der Gang immer trocken war.",
+          "Ob ein Hohlraum heute trocken ist, datiert seine Entstehung nicht.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/maca/learn/nature/how-mammoth-cave-formed.htm",
+          "title": "National Park Service · How Mammoth Cave Formed",
+          "anchor": "Solution Caves; How old is Mammoth Cave?; Tube Passages",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2021-03-19"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Wasser nimmt Kohlendioxid auf, wird schwach sauer und löst Mineralien entlang kleiner Risse und Schichtgrenzen im Kalkgestein.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Die Gesteinsschichten sind älter als die Höhlengänge; höhere Gänge sind oft trocken, tiefere aktive Wasserwege existieren weiterhin.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Es gibt verschiedene Höhlenentstehungen; Mammoth Cave ist ein Beispiel einer Lösungshöhle.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "grand-canyon",
+          "reason": "Altes Gestein und eine später darin entstandene Form vergleichen; Lösung und Flusseinschnitt unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verwitterung",
+          "reason": "Die Veränderung von Gestein durch chemische Vorgänge einordnen."
+        },
+        {
+          "term": "Grundwasser",
+          "reason": "Unterirdische Wasserwege mit dem sichtbaren Höhlengang verbinden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "yellowstone-geysers": {
+    "id": "yellowstone-geysers",
+    "name": "Geysire in Yellowstone",
+    "family": "geoscience",
+    "learning": {
+      "learningGoal": "Bei einem Geysir Wärmequelle, Wasser und die Form der Wasserwege gemeinsam als Ursachen betrachten.",
+      "starter": "Unter Yellowstone erwärmt ein magmatisches System Wasser. Ein Geysir kann heißes Wasser und Wasserdampf ausstoßen. Die Wasserfontäne ist keine Lavafontäne. Für die Erklärung reicht der Satz „Dort ist es heiß“ noch nicht aus.",
+      "deeper": "Die NPS-Erklärung beschreibt Geysire als heiße Quellen mit Engstellen in ihren unterirdischen Wasserwegen. In der Tiefe hält der Druck des darüberliegenden Wassers das sehr heiße Wasser zunächst vom Sieden ab. Wenn sich Dampfblasen nahe der Oberfläche ausdehnen und Wasser anheben, sinkt der Druck im System. Dadurch kann weiteres Wasser sieden; Wasserdampf treibt Wasser hinaus. Beim Ausbruch sinken Wasservorrat, Wärme und Druck. Eine offene heiße Quelle kann Wärme dagegen durch freiere Wasserzirkulation abgeben. Nicht jeder Spritzer einer heißen Quelle beweist dieselben unterirdischen Verhältnisse.",
+      "observe": "Betrachte links den schmaleren Geysir-Wasserweg und rechts die offenere heiße Quelle. Markiere nacheinander Wärmequelle, Wasser und Engstelle. Erkläre, was die Ringe und die gegenläufigen Wasserpfeile bedeuten. Die Ansichten zeigen Rollen, keine berechnete Ausbruchsfolge.",
+      "benefit": "Du kannst erklären, warum ähnliche Wärmequellen nicht überall dieselbe sichtbare Erscheinung erzeugen.",
+      "figure": {
+        "kind": "geyser-water-heat-and-constriction",
+        "controls": [
+          "Wärmequelle",
+          "Wasser unter Druck",
+          "Engstelle und Dampf"
+        ],
+        "limits": "Eigene beschriftete Schnittzeichnung, keine genaue Karte des Untergrunds, Druckberechnung, konstante Ausbruchsuhr, Höhenvorhersage oder Anleitung zum Nachbauen. Magma und Wasserwege bleiben räumlich unterschieden. Eine weiße sichtbare Wolke wird nicht als Sichtbarkeit einzelner Wasserdampfmoleküle erklärt."
+      },
+      "question": {
+        "prompt": "Was fehlt einer Erklärung, die einen Geysir nur mit einer heißen Stelle im Boden begründet?",
+        "answers": [
+          "Das Zusammenspiel mit Wasser und den unterirdischen Wasserwegen.",
+          "Die Annahme, dass die Wasserfontäne aus Lava bestehen muss.",
+          "Eine für jeden Geysir identische feste Ausbruchszeit."
+        ],
+        "correct": 0,
+        "hint": "Überlege, was sich bewegen soll und welchen Weg es nehmen kann.",
+        "why": "Die NPS-Erklärung verbindet Wärme, Wasser, Druck und Engstellen. Wärme allein beschreibt den Ablauf noch nicht.",
+        "wrongReasons": [
+          "",
+          "Ein Geysir stößt Wasser und Wasserdampf aus. Die magmatische Wärmequelle macht die Fontäne nicht zu Lava.",
+          "Eine feste gemeinsame Uhr ist keine Voraussetzung und erklärt den Mechanismus nicht."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/yell/learn/nature/hydrothermal-features.htm",
+          "title": "National Park Service · Hydrothermal Features, Yellowstone",
+          "anchor": "Hot Springs; Geysers: constrictions, pressure, expanding steam and cessation",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2025-04-17"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Magmatische Wärme erhitzt Wasser; Engstellen und Druckveränderungen sind Bestandteile der beschriebenen Geysir-Erklärung.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Wasserdampf treibt Wasser hinaus; Wasser-, Wärme- und Druckabnahme können den Ausbruch beenden.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Offene heiße Quellen können Wärme durch Konvektion abgeben; Spritzen allein belegt nicht dieselbe Geometrie.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "kilauea",
+          "reason": "Eine vulkanisch geprägte Region mit einer besonderen Wassererscheinung in Yellowstone vergleichen; Wasser und Gestein getrennt benennen."
+        },
+        {
+          "id": "iceland",
+          "reason": "Eine weitere vulkanisch geprägte Landschaft einordnen, ohne allen Orten dieselben Wasserwege zu unterstellen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Wasserdampf",
+          "reason": "Wasser in der Gasphase von Magma unterscheiden."
+        },
+        {
+          "term": "Konvektion",
+          "reason": "Wärmetransport durch bewegtes Wasser beim Vergleich mit einer offenen Quelle betrachten."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "wadden-sea": {
+    "id": "wadden-sea",
+    "name": "Wattenmeer",
+    "family": "geoscience",
+    "learning": {
+      "learningGoal": "Das vorübergehende Sichtbarwerden von Wattboden von der längerfristigen Veränderung einer Küstenlandschaft unterscheiden.",
+      "starter": "An den Küsten der Niederlande, Deutschlands und Dänemarks liegt das Wattenmeer. Bei niedrigerem Wasserstand werden Teile des Wattbodens sichtbar. Steigt das Wasser, werden sie wieder bedeckt. Die zuvor bedeckte Fläche wird dadurch nicht in jedem Wechsel neu hergestellt.",
+      "deeper": "Rinnen, Wattflächen, Sandbänke und Salzwiesen gehören zu einem zusammenhängenden Küstensystem. Wellen, Gezeiten und Wind beeinflussen seine Gestalt. Wasser kann Material bewegen; auch Inseln und Rinnen verändern sich im Lauf der Zeit. Diese Veränderung ist eine andere Frage als die bloße Sichtbarkeit des schon vorhandenen Bodens. Zusätzlich kann Wind den Wasserstand beeinflussen. Unsere zwei Wasserlinien sind deshalb keine Vorhersage für einen bestimmten Ort oder Tag.",
+      "observe": "Vergleiche zuerst den markierten Boden bei höherem und niedrigerem Wasser. Bleibt die Bodenlinie gleich? Wähle dann die getrennte Formänderung und vergleiche gestrichelte alte mit durchgezogener neuer Form. Unterscheide Sichtbarwerden und tatsächliche Materialverlagerung; daraus folgt kein sicherer Weg oder aktueller Pegel.",
+      "benefit": "Du kannst eine Momentaufnahme der Wasserbedeckung von einer Aussage über Landschaftsentstehung trennen.",
+      "figure": {
+        "kind": "tidal-exposure-versus-sediment-change",
+        "controls": [
+          "Höherer Wasserstand",
+          "Niedrigerer Wasserstand",
+          "Beispiel einer Formänderung"
+        ],
+        "limits": "Eigene schematische Küstenzeichnung, keine echte Wasserstands-, Orts-, Gezeiten- oder Wegesicherheitsvorhersage. Erste zwei Ansichten verwenden genau dieselbe Bodenlinie; nur die dritte markiert ausdrücklich eine beispielhafte Materialverlagerung. Keine Animation einer gesamten Küste und keine Behauptung, das Watt falle bei jedem Niedrigwasser vollständig trocken."
+      },
+      "question": {
+        "prompt": "Bei niedrigerem Wasserstand wird dieselbe markierte Wattfläche sichtbar. Was zeigt dieser Vergleich?",
+        "answers": [
+          "Dass die ganze Fläche in diesem Moment neu entstanden sein muss.",
+          "Dass zuvor vorhandener Boden weniger stark von Wasser bedeckt ist.",
+          "Dass Gezeiten grundsätzlich kein Material bewegen können."
+        ],
+        "correct": 1,
+        "hint": "Vergleiche die markierte Bodenlinie und die Wasserlinie getrennt.",
+        "why": "In den beiden Vergleichsansichten bleibt die Bodenform gleich. Die Wasserbedeckung ändert sich. Echte Materialverlagerung ist möglich, wird durch dieses Sichtbarwerden allein aber nicht nachgewiesen.",
+        "wrongReasons": [
+          "Eine Fläche kann schon vorhanden und lediglich vom Wasser bedeckt gewesen sein.",
+          "",
+          "Die Quelle beschreibt auch bewegte Sedimente und veränderliche Küstenformen. Dieser konkrete Vergleich isoliert nur die Wasserbedeckung."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.waddensea-worldheritage.org/",
+          "title": "Common Wadden Sea Secretariat · Wadden Sea World Heritage",
+          "anchor": "One Wadden Sea: Denmark, Germany, Netherlands; dynamic landscape shaped by wind and tides",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.waddensea-worldheritage.org/taking-shape",
+          "title": "Common Wadden Sea Secretariat · Taking shape",
+          "anchor": "A chain of tidal basins; Choir of waves, tides and wind",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Länderbezug und dynamische Küstenlandschaft, geprägt durch Wind und Gezeiten.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Wattflächen, Rinnen, Sandbänke/Inseln und Salzwiesen als Bestandteile; Wasserstände und Wind können Freiliegen und Bedeckung beeinflussen.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Landschaftsformen sind durch Wellen, Gezeiten, Wind und bewegtes Material veränderlich; Sichtbarkeit und Materialentstehung sind unterschiedliche Aussagen.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "danube-delta",
+          "reason": "Zwei unterschiedliche Küsten-Wasserlandschaften mit bewegtem Material vergleichen, ohne ein Delta mit dem Wattenmeer gleichzusetzen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Sediment",
+          "reason": "Bewegtes und abgelagertes Material von einer bloß geänderten Wasserbedeckung unterscheiden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Abtragung als möglichen Vorgang von Sichtbarwerden unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "bryce-hoodoos": {
+    "id": "bryce-hoodoos",
+    "name": "Felstürme im Bryce Canyon",
+    "family": "geology",
+    "learning": {
+      "learningGoal": "Verwitterung und Erosion an einem Felsturm als verschiedene, zusammenwirkende Vorgänge erklären.",
+      "starter": "Im Bryce Canyon in Utah stehen schmale Felstürme, die Hoodoos heißen. Ihre Gesteine entstanden nicht gleich als fertige Türme. Wasser, Frost und Abtragung verändern eine zuvor zusammenhängende Gesteinslandschaft.",
+      "deeper": "Wasser aus Regen oder geschmolzenem Schnee kann in Risse gelangen. Gefriert es dort, kann es die Risse erweitern. Schwach saures Wasser kann außerdem kalkhaltige Bindungen lösen. Verwitterung verändert und lockert das Gestein; Erosion transportiert gelockertes Material fort. Unterschiedlich widerstandsfähige Schichten beeinflussen, wo Vorsprünge oder Einbuchtungen entstehen. Die NPS-Erklärung ordnet diese Vorgänge in eine längere Geschichte aus Ablagerung, Hebung und anschließender Landschaftsformung ein.",
+      "observe": "Vergleiche in der Darstellung einen wassergefüllten Riss, einen geweiteten Riss und fortbewegtes Material. Ordne die Beispiele Verwitterung oder Abtragung zu. Begründe anschließend, warum ein allein stehender Turm nicht wie ein Baum von unten nach oben gewachsen sein muss.",
+      "benefit": "Du kannst erklären, wie das Entfernen von Material eine auffällige Form hervorbringen kann.",
+      "figure": {
+        "kind": "hoodoos-weathering-and-transport",
+        "controls": [
+          "Wasser im Riss",
+          "Verwitterung vor Ort",
+          "Abgetragenes Material"
+        ],
+        "limits": "Eigene schematische Erklärung, keine maßstäbliche Formation, exakte Frostkraft oder gemessene Verwitterungsrate. Vergleichsansichten sind ausgewählte Ursachen, keine vollständige lineare Entstehungsuhr für jeden Hoodoo. Frost ist ein Beitrag neben weiteren Vorgängen."
+      },
+      "question": {
+        "prompt": "Was unterscheidet das Erweitern eines Risses vom anschließenden Forttragen gelockerten Materials?",
+        "answers": [
+          "Nur das Forttragen verändert überhaupt Gestein.",
+          "Der Riss verändert das Gestein vor Ort; beim Forttragen wechselt Material den Ort.",
+          "Ein geweiteter Riss beweist, dass ein Mensch den Turm gebaut hat."
+        ],
+        "correct": 1,
+        "hint": "Vergleiche, ob das Material am selben Platz verändert oder an einen anderen Ort bewegt wird.",
+        "why": "Die Unterscheidung folgt den beschriebenen Vorgängen: Verwitterung verändert Gestein, Erosion transportiert Material. Beide können bei der Formung derselben Landschaft zusammenwirken.",
+        "wrongReasons": [
+          "Auch das Weiten von Rissen oder das Lösen mineralischer Bindungen verändert Gestein.",
+          "",
+          "Risse können durch natürliche Prozesse verändert werden; die Form allein belegt keinen menschlichen Bau."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/brca/learn/nature/hoodoos.htm",
+          "title": "National Park Service · Hoodoos, Bryce Canyon",
+          "anchor": "The Three-Step Recipe; Weathering and Erosion; ice wedging and calcium carbonate cementation",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2021-09-04"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Ablagerung, Hebung sowie Verwitterung/Erosion sind unterschiedliche Teile der Landschaftsgeschichte.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Frost in Rissen, Lösung kalkhaltiger Bindungen und unterschiedliche Widerstandsfähigkeit beeinflussen die Formung.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "grand-canyon",
+          "reason": "Unterschiedliche Abtragungsformen in geschichteten Gesteinslandschaften vergleichen."
+        },
+        {
+          "id": "arches-sandstone",
+          "reason": "Felsturm und natürlicher Bogen als verschiedene vorübergehende Landschaftsformen betrachten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verwitterung",
+          "reason": "Veränderung des Gesteins vor Ort benennen."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Das Fortbewegen gelockerten Materials davon unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "arches-sandstone": {
+    "id": "arches-sandstone",
+    "name": "Sandsteinbögen im Arches-Nationalpark",
+    "family": "geology",
+    "learning": {
+      "learningGoal": "Einen natürlichen Gesteinsbogen als Ergebnis von Gesteinseigenschaften, Rissen und Veränderung verstehen.",
+      "starter": "Im Arches-Nationalpark in Utah überspannen natürliche Gesteinsbögen Öffnungen. Sie wurden nicht Stein für Stein wie ein Bauwerk zusammengesetzt. Die Öffnungen entstanden in zuvor vorhandenen Gesteinen.",
+      "deeper": "Im Sandstein sind Sandkörner durch Mineralien miteinander verbunden. Risse bieten Wasser Wege in das Gestein. Wasser kann Bindungen lösen; Wasser in Spalten kann beim Gefrieren zur weiteren Zerteilung beitragen. Abtragung kann aus Gesteinswänden schmale Rippen und daraus Bögen formen. Diese Formen bleiben nicht für immer gleich: Eine Öffnung kann größer werden und ein Bogen schließlich einstürzen. Nicht jeder Riss entwickelt sich zu einem Bogen; Gesteinsaufbau und die weiteren Bedingungen spielen mit.",
+      "observe": "Zeige in der Zeichnung zusammenhängendes Gestein, einen Wasserweg im Riss und eine Öffnung mit verbleibendem Bogen. Beschreibe jeweils das vorhandene und das entfernte Material. Die Reihenfolge ist ein mögliches Erklärungsmuster, keine Berechnung der Lebensdauer eines bestimmten Bogens.",
+      "benefit": "Du kannst eine regelmäßig wirkende Naturform erklären, ohne daraus einen menschlichen Bauplan abzuleiten.",
+      "figure": {
+        "kind": "sandstone-fin-opening-arch",
+        "controls": [
+          "Gestein und Risse",
+          "Wasserwege im Gestein",
+          "Öffnung und Bogen"
+        ],
+        "limits": "Eigene schematische Formfolge, kein realer Felsquerschnitt, Baustatikmodell, Größenrekord oder Einsturztermin. Die markierten Risse geben kein vollständiges Spaltennetz wieder. Ein Naturbogen und eine von Menschen gemauerte Brücke bleiben unterscheidbar."
+      },
+      "question": {
+        "prompt": "Was lässt sich aus einem heute sichtbaren natürlichen Gesteinsbogen sinnvoll schließen?",
+        "answers": [
+          "Der Bogen muss immer in derselben Form bestehen bleiben.",
+          "Seine regelmäßige Öffnung beweist einen menschlichen Baumeister.",
+          "In vorhandenem Gestein entstand eine Öffnung; weitere Veränderung ist möglich."
+        ],
+        "correct": 2,
+        "hint": "Unterscheide das heutige Bild von der früheren und künftigen Landschaft.",
+        "why": "Die gelesene NPS-Erklärung verbindet vorhandene Gesteine, Risse, Wasser und Abtragung. Sie beschreibt Bögen ausdrücklich als vergängliche Landschaftsformen.",
+        "wrongReasons": [
+          "Die Vorgänge, die die Form schaffen, können sie auch weiter verändern und schließlich zerstören.",
+          "Eine auffällige oder regelmäßig wirkende Form kann durch natürliche Prozesse entstehen.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/arch/learn/nature/geologicformations.htm",
+          "title": "National Park Service · Geologic Formations, Arches",
+          "anchor": "A Story in Stone; Why So Many Arches?; water, sandstone cement, fractures and impermanence",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2025-04-18"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Sandstein besteht aus mineralisch gebundenen Sandkörnern; Risse, Lösung und Frostwirkung können zur Formung beitragen.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Wände, Rippen und Bögen sind mögliche Formen fortschreitender Veränderung; Bögen können weiter erodieren und einstürzen.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "bryce-hoodoos",
+          "reason": "Zwei unterschiedlich geformte Landschaften anhand ihrer Veränderungsprozesse vergleichen."
+        },
+        {
+          "id": "mammoth-cave",
+          "reason": "Wasserwirkung an Gestein vergleichen, ohne Sandsteinbogen und Kalklösungshöhle gleichzusetzen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gestein",
+          "reason": "Das Material von seiner heutigen Form unterscheiden."
+        },
+        {
+          "term": "Verwitterung",
+          "reason": "Veränderung von Bindungen und Rissen im Gestein einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "crater-lake": {
+    "id": "crater-lake",
+    "name": "Crater Lake",
+    "family": "geology",
+    "learning": {
+      "learningGoal": "Die Entstehung eines Seebeckens von der späteren Herkunft seines Wassers unterscheiden.",
+      "starter": "Crater Lake liegt in Oregon in den USA. Nach einem großen Vulkanausbruch brach ein zentraler Teil des Mount Mazama ein. In dem entstandenen Becken sammelte sich später Wasser aus Regen und Schnee.",
+      "deeper": "Der Einsturz schuf eine Caldera, also ein großes vulkanisches Einsturzbecken. Das Becken und das darin gespeicherte Wasser müssen getrennt erklärt werden. Regen und schmelzender Schnee können Wasser liefern, auch wenn kein großer Fluss in den See mündet. Zugleich kann Wasser verdunsten oder versickern. Ein scheinbar ruhiger See ist daher kein geschlossener Behälter ohne Austausch. Die NPS-Seite beschreibt auch spätere vulkanische Vorgänge im Becken; unsere Skizze beschränkt sich auf die Unterscheidung von Form und Wasserwegen.",
+      "observe": "Vergleiche in der Zeichnung zunächst das Becken und dann seine Wasserwege. Ordne Regen und Schnee als Zuflüsse sowie Verdunstung und Versickerung als Wege aus dem See ein. Erkläre, warum „Ich sehe keinen einmündenden Fluss“ nicht dasselbe bedeutet wie „Es kommt kein Wasser hinzu“.",
+      "benefit": "Du kannst Wasserzufuhr erkennen, die nicht als großer Fluss am Ufer sichtbar ist.",
+      "figure": {
+        "kind": "caldera-basin-and-water-balance",
+        "controls": [
+          "Einsturzbecken",
+          "Regen und Schmelzwasser",
+          "Wege hinein und hinaus"
+        ],
+        "limits": "Eigene schematische Zeichnung, keine historische Eruptionssimulation oder gemessene Wasserbilanz. Pfeile zeigen verschiedene Wege, keine gleich großen Mengen. Weder konstanten Wasserstand noch genaue Tiefe, Schneemenge oder heutigen Verlustanteil aus der Skizze ableiten."
+      },
+      "question": {
+        "prompt": "Du erkennst an einem See keinen großen einmündenden Fluss. Welche Wasserzufuhr ist trotzdem möglich?",
+        "answers": [
+          "Regen und schmelzender Schnee können Wasser beitragen.",
+          "Ohne sichtbaren Fluss kann überhaupt kein Wasser hinzukommen.",
+          "Jedes Seebecken erzeugt sein Wasser allein aus dem Gestein."
+        ],
+        "correct": 0,
+        "hint": "Überlege, auf welchen Wegen Wasser die Seeoberfläche und seine Umgebung erreichen kann.",
+        "why": "Für Crater Lake beschreibt die Quelle Regen und Schnee als Wasserlieferanten. Die Herkunft des Beckens ist eine andere Frage als die Herkunft des Wassers.",
+        "wrongReasons": [
+          "",
+          "Die Beobachtung schließt nur einen sichtbaren großen Fluss aus; Niederschlag und Schmelzwasser bleiben mögliche Wege.",
+          "Der vulkanische Einsturz erklärt die Beckenform, nicht eine Erzeugung von Wasser aus dem Gestein."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/crla/learn/nature/crater-lake.htm",
+          "title": "National Park Service · Crater Lake",
+          "anchor": "First There Was a Mountain; Now There is a Lake: collapse, rain/snow, evaporation and seepage",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2023-09-08"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Ausbruch und Einbruch des Mount Mazama bildeten die Caldera; Regen und Schnee füllten sie danach teilweise.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Verdunstung und Versickerung sind Wege des Wassers aus dem See.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "tanganyika",
+          "reason": "Zwei verschieden geprägte Seebecken vergleichen; die Wasserfläche allein erklärt die Entstehung nicht."
+        },
+        {
+          "id": "fuji",
+          "reason": "Einen bekannten Vulkan zum Vergleich von Vulkanform und vulkanischer Landschaft verwenden, ohne jedem Vulkan einen See zuzuordnen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Niederschlag",
+          "reason": "Regen und Schnee als Wasserzufuhr benennen."
+        },
+        {
+          "term": "Verdunstung",
+          "reason": "Einen Weg des Wassers aus dem See erklären."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "white-sands": {
+    "id": "white-sands",
+    "name": "Gipsdünen von White Sands",
+    "family": "geology",
+    "learning": {
+      "learningGoal": "Korngröße und Mineralzusammensetzung von Sand unterscheiden und Wasser sowie Wind als verschiedene Transportwege verbinden.",
+      "starter": "In White Sands in New Mexico bestehen die hellen Dünen aus Gipskörnern. Sand muss nicht überall aus demselben Mineral bestehen. Zur Entstehung dieser Dünen gehören auch Wasser und Kristalle, bevor Wind die Körner bewegt.",
+      "deeper": "Die NPS-Erklärung beschreibt Wasser, das gelösten Gips aus der Umgebung in das Becken transportiert. Verdunstet Wasser, können Gipskristalle zurückbleiben. Wind und Wasser zerkleinern Kristalle allmählich; Wind kann kleinere Körner weitertragen und zu Dünen zusammentragen. Das ist keine Behauptung, das Wasser verwandle sich selbst in Sand. „Sand“ beschreibt hier die Korngröße, „Gips“ das Mineral. Zwei ähnlich große Körner können aus unterschiedlichem Material bestehen.",
+      "observe": "Ordne in der Zeichnung gelösten Stoff im Wasser, feste Kristalle und bewegte Körner. Beschreibe dann bei einem Beispielkorn getrennt seine Größe und sein Material. Ein heller Farbton allein genügt nicht, um ein unbekanntes Korn als Gips zu bestimmen.",
+      "benefit": "Du kannst zwei verschiedene Beschreibungsfragen stellen: Wie groß ist das Korn, und woraus besteht es?",
+      "figure": {
+        "kind": "dissolved-gypsum-crystals-and-grains",
+        "controls": [
+          "Gelöster Stoff im Wasser",
+          "Kristalle nach Verdunstung",
+          "Körner und Wind"
+        ],
+        "limits": "Eigene erklärende Zeichnung, keine Lupe mit echten Messdaten, chemische Analyse, momentane Dünenkarte oder Prognose. Symbolgrößen von gelöstem Stoff und Kristallen sind nicht maßstäblich; keine festen Konzentrationen, Kristallisationszeiten oder Windgeschwindigkeiten. Helle Farbe allein ist kein Mineralnachweis."
+      },
+      "question": {
+        "prompt": "Zwei Sandkörner sind ähnlich groß. Was weißt du dadurch über ihr Material?",
+        "answers": [
+          "Sie müssen aus demselben Mineral bestehen.",
+          "Die Korngröße allein bestimmt das Mineral noch nicht.",
+          "Sand kann grundsätzlich nur aus Gips bestehen."
+        ],
+        "correct": 1,
+        "hint": "Überlege, ob „wie groß?“ und „woraus?“ dieselbe Frage sind.",
+        "why": "Die Bezeichnung Sand beschreibt eine Korngröße. White Sands ist ein Beispiel mit Gipskörnern; daraus folgt keine einheitliche Mineralart für jeden Sand.",
+        "wrongReasons": [
+          "Ähnliche Größe ist keine chemische Bestimmung; unterschiedlich zusammengesetzte Körner können ähnlich groß sein.",
+          "",
+          "Gips ist das hier beschriebene Beispiel. Sand ist kein Name für ausschließlich dieses Mineral."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/whsa/geology.htm",
+          "title": "National Park Service · Geology, White Sands",
+          "anchor": "Sand: size-based classification; Gypsum",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2024-05-29"
+        },
+        {
+          "url": "https://www.nps.gov/whsa/learn/geology-of-white-sands.htm",
+          "title": "National Park Service · Geology of White Sands",
+          "anchor": "10,000 years ago to present; Present Day: dissolved gypsum, evaporation, crystals, wind and water",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2020-01-22"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Sand bezieht sich auf Korngröße; White Sands besitzt Gipskörner und ist kein Beweis einer einheitlichen Mineralart aller Sande.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Wasser transportiert gelösten Gips, Verdunstung ermöglicht Kristallbildung, Wind/Wasser verkleinern Kristalle und Wind bewegt Körner.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "wadden-sea",
+          "reason": "Wind und Wasser als Einfluss auf körniges Material in einer anderen Landschaft betrachten."
+        },
+        {
+          "id": "atacama",
+          "reason": "Eine andere bestehende trockene Landschaft vergleichen; Trockenheit bestimmt nicht automatisch die Mineralart des Bodens."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Mineral",
+          "reason": "Die Zusammensetzung eines Korns von seiner Größe trennen."
+        },
+        {
+          "term": "Verdunstung",
+          "reason": "Den Wasserweg von den zurückbleibenden mineralischen Stoffen unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "vatnajokull": {
+    "id": "vatnajokull",
+    "name": "Vatnajökull",
+    "family": "habitats",
+    "learning": {
+      "learningGoal": "Eine eisbedeckte Oberfläche von den Vorgängen im Untergrund unterscheiden und zwei mögliche Schmelzwasserquellen zuordnen.",
+      "starter": "Vatnajökull ist eine Eiskappe auf Island. Unter Teilen des Eises liegen Vulkane. Kaltes Eis an der Oberfläche und Wärme im Untergrund können am selben Ort vorkommen.",
+      "deeper": "Die UNESCO beschreibt, wie unterirdische Wärme und Ausbrüche unter dem Eis Schmelzwasser erzeugen können. Plötzlich freigesetztes Wasser kann Landschaften umformen. Ein solcher Gletscherlauf heißt Jökulhlaup. Der Begriff ist keine Vorhersage für einen bestimmten Tag. Im Vergleichsbild werden deshalb eine Eisoberfläche und eine gedachte Wärmequelle darunter getrennt markiert; aus dem Aussehen der Oberfläche lässt sich die Lage des Untergrunds nicht sicher ablesen.",
+      "observe": "Wähle in der Schnittzeichnung „Eisoberfläche“, „Wärme darunter“ und „Wasserweg“. Beschreibe zunächst nur die jeweils markierten Teile. Erkläre danach, warum eine kalte Oberfläche die zweite Markierung nicht ausschließt.",
+      "benefit": "Du kannst scheinbar gegensätzliche Beobachtungen räumlich einordnen, statt aus einer Oberfläche auf den ganzen Untergrund zu schließen.",
+      "figure": {
+        "kind": "ice-surface-subglacial-heat-water-path",
+        "controls": [
+          "Eisoberfläche",
+          "Wärme darunter",
+          "Wasserweg"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung mit einer gedachten Wärmequelle. Keine vermessene Eisdicke, reale Magmakammer, Temperaturverteilung, Ausbruchs- oder Hochwasservorhersage. Nicht jeder Gletscherlauf entsteht während eines Ausbruchs; die Zeichnung zeigt nur den hier beschriebenen begrenzten Zusammenhang."
+      },
+      "question": {
+        "prompt": "Eine Zeichnung zeigt Eis oben und eine mögliche Wärmequelle darunter. Welche Folgerung passt?",
+        "answers": [
+          "Wenn oben Eis liegt, kann darunter grundsätzlich kein Vulkan liegen.",
+          "Die beiden Angaben beschreiben unterschiedliche Bereiche und schließen sich nicht aus.",
+          "Jede Eiskappe muss überall auf einer aktiven Vulkanspalte liegen."
+        ],
+        "correct": 1,
+        "hint": "Vergleiche, auf welchen Teil des Schnittbilds sich jede Aussage bezieht.",
+        "why": "Vatnajökull zeigt, dass Eis und vulkanischer Untergrund zusammen vorkommen. Die Oberfläche allein belegt weder überall fehlende noch überall vorhandene vulkanische Aktivität.",
+        "wrongReasons": [
+          "Diese Aussage überträgt eine Oberflächeneigenschaft ungeprüft auf den gesamten Untergrund.",
+          "",
+          "Ein Beispiel für ein mögliches Zusammenwirken beweist keine allgemeine Regel für jede Eiskappe."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1604/",
+          "title": "UNESCO World Heritage Centre · Vatnajökull National Park",
+          "anchor": "English Description; OUV Brief synthesis; criterion(viii), geothermal heat, subglacial eruptions, meltwater and jökulhlaups",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Eiskappe und subglazialer Vulkanismus kommen im Vatnajökull-Gebiet zusammen vor.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Geothermische Wärme und subglaziale Ausbrüche können Schmelzwasser und Gletscherläufe erzeugen und zur Landschaftsformung beitragen.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "iceland",
+          "reason": "Den bereits erklärten Zusammenhang von Eis und Vulkanlandschaften an einem konkreten Gebiet vertiefen."
+        },
+        {
+          "id": "yosemite-valley",
+          "reason": "Eis als Teil einer Landschaft mit Wärme im Untergrund und Eis als abtragende Eismasse unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gletscher",
+          "reason": "Eis an Land und seine Bewegung mit einer konkreten Eiskappe verbinden."
+        },
+        {
+          "term": "Vulkan",
+          "reason": "Vulkanische Vorgänge im Untergrund von sichtbaren Oberflächenmerkmalen unterscheiden."
+        },
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Den Übergang von Eis zu fließendem Wasser in einen größeren Wasserweg einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "daintree": {
+    "id": "daintree",
+    "name": "Daintree-Regenwald",
+    "family": "habitats",
+    "learning": {
+      "learningGoal": "Eine Regenwaldlandschaft als unterschiedliche Standorte auffassen und Beobachtung von einer vereinfachten Erklärung trennen.",
+      "starter": "Im Daintree-Gebiet im Nordosten Australiens liegen Küste, Täler und steile Berge nahe beieinander. Der Wald sieht daher nicht an jeder Stelle gleich aus.",
+      "deeper": "Die Parkverwaltung beschreibt hohe dichte Wälder im Tiefland, niedrigere windgeprägte Bergwälder und offenere Wälder auf trockeneren Westhängen. Die Wet Tropics besitzen starke räumliche Umweltunterschiede und jahreszeitlich verteilten Regen. Das Gebiet ist traditionelles Land der Eastern Kuku Yalanji. Eine gezeichnete Reihe verschiedener Standorte hilft beim Vergleichen; sie bildet keine vollständige Ortskarte oder genaue Artverteilung ab.",
+      "observe": "Vergleiche im Bild einen Küstenstandort, einen Berghang und eine trockenere Westseite. Nenne zuerst sichtbare Unterschiede. Wähle dann einen möglichen Standortunterschied als Erklärung, ohne jeder gezeichneten Pflanze eine unbeobachtete Art zuzuweisen.",
+      "benefit": "Du kannst innerhalb derselben Landschaft vergleichen, statt „Regenwald“ als überall identischen Lebensraum zu behandeln.",
+      "figure": {
+        "kind": "coast-mountain-drier-west-forest-comparison",
+        "controls": [
+          "Tiefland",
+          "Bergstandort",
+          "Trockenere Westseite"
+        ],
+        "limits": "Eigene Vergleichsskizze ausgewählter Standorttypen. Keine kartierte Transsektlinie, Höhen- oder Niederschlagsmessung, Pflanzenbestimmung oder Behauptung gleichbleibenden Regens. Gezeichnete Pflanzen stehen für gedachte Beispiele; ihre Anzahl misst keine Artenvielfalt."
+      },
+      "question": {
+        "prompt": "Die Vergleichsbilder zeigen unterschiedlich hohe Wälder im selben größeren Regenwaldgebiet. Was solltest du zunächst prüfen?",
+        "answers": [
+          "Ob sich ihre Standorte und Bedingungen unterscheiden.",
+          "Ob eine Zeichnung zwingend einen ganz anderen Kontinent zeigen muss.",
+          "Ob das Wort Regenwald jede Standortabweichung ausschließt."
+        ],
+        "correct": 0,
+        "hint": "Trenne die Bezeichnung für eine große Landschaft von den Bedingungen an einer einzelnen Stelle.",
+        "why": "Die Fachtexte unterscheiden innerhalb des Gebiets verschiedene Waldstandorte. Eine unterschiedliche Zeichnung allein bestimmt aber weder die genaue Pflanzenart noch eine gemessene Regenmenge.",
+        "wrongReasons": [
+          "",
+          "Ein sichtbarer Unterschied beweist keinen Kontinentwechsel.",
+          "Eine gemeinsame Landschaftsbezeichnung verlangt keine überall gleichen lokalen Bedingungen."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://parks.qld.gov.au/parks/daintree/about",
+          "title": "Queensland Parks and Wildlife Service · About Daintree",
+          "anchor": "Park features; Mossman Gorge and Cape Tribulation; traditional country",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/486/",
+          "title": "UNESCO World Heritage Centre · Wet Tropics of Queensland",
+          "anchor": "OUV Brief synthesis; seasonal rainfall, diverse terrain and steep environmental gradients; criterion(vii) Daintree River",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Das Daintree-Gebiet umfasst verschiedene Waldstandorte, darunter Tiefland, windgeprägte Berglagen und trockenere westliche Hänge.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Die Wet Tropics besitzen räumliche Umweltgradienten und jahreszeitliche Niederschlagsunterschiede.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Der Daintree-Nationalpark liegt im traditionellen Land der Eastern Kuku Yalanji.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "amazon-forest",
+          "reason": "Regenwaldgebiete auf verschiedenen Kontinenten vergleichen, ohne überall die gleichen Arten oder Standortbedingungen anzunehmen."
+        },
+        {
+          "id": "temperate-forest",
+          "reason": "Eine größere Waldbezeichnung und konkrete örtliche Bedingungen an einem vertrauteren Waldbeispiel unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Die Bedingungen an einem Standort mit den Bedürfnissen von Lebewesen verbinden."
+        },
+        {
+          "term": "Klima",
+          "reason": "Längerfristige Bedingungen und räumliche Unterschiede von einem einzelnen Regentag unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "bialowieza": {
+    "id": "bialowieza",
+    "name": "Wald von Białowieża",
+    "family": "habitats",
+    "learning": {
+      "learningGoal": "Abgestorbenes Holz als Bestandteil eines Lebensraums erkennen, ohne aus einer einfachen Zeichnung Artenzahlen abzuleiten.",
+      "starter": "Der Wald von Białowieża liegt an der Grenze zwischen Polen und Belarus. In alten Waldbereichen gibt es stehende und liegende abgestorbene Bäume.",
+      "deeper": "Die UNESCO verbindet die Vielfalt von Pilzen und holzbewohnenden wirbellosen Tieren mit dem vorhandenen Totholz. Ein Baum kann also abgestorben sein und dennoch zu einem belebten Wald gehören. Das bedeutet nicht, dass jede gezeichnete Stammform dieselben Arten beherbergt oder dass jeder Teil des gesamten Waldgebiets ohne menschliche Einflüsse ist.",
+      "observe": "Markiere in der Zeichnung stehendes und liegendes Totholz. Blende anschließend beide Markierungen aus. Beschreibe, welche Lebensraumbestandteile du dann übersiehst; zähle aus den Symbolen keine wirklichen Tier- oder Pilzarten.",
+      "benefit": "Du kannst zwischen einem abgestorbenen Baum und seiner Bedeutung für andere Lebewesen unterscheiden.",
+      "figure": {
+        "kind": "standing-and-fallen-deadwood-habitat",
+        "controls": [
+          "Stehendes Totholz",
+          "Liegendes Totholz",
+          "Beide vergleichen"
+        ],
+        "limits": "Eigene schematische Lebensraumzeichnung; Pilz- und Tierzeichen sind symbolische Beispiele, keine Bestimmung oder Artenzählung. Keine feste Zersetzungsdauer, kein allgemeiner Pflegeauftrag für jeden Wald und keine heutige Schutz- oder Bestandsdiagnose."
+      },
+      "question": {
+        "prompt": "Ein Baum lebt nicht mehr. Welche Aussage über seine Rolle im Wald ist trotzdem möglich?",
+        "answers": [
+          "Dann kann grundsätzlich kein anderes Lebewesen ihn nutzen.",
+          "Abgestorbenes Holz kann anderen Lebewesen Lebensraum bieten.",
+          "Sein bloßes Vorhandensein beweist eine genaue Zahl verschiedener Arten."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide den Zustand des Baums von der Nutzung durch andere Lebewesen.",
+        "why": "Totholz gehört hier zu den Bedingungen, mit denen die Fachquelle Pilze und holzbewohnende wirbellose Tiere verbindet. Eine konkrete Artenzahl benötigt andere Beobachtungen als ein einzelnes gezeichnetes Holzstück.",
+        "wrongReasons": [
+          "Diese Antwort setzt den Zustand des Baums mit dem Zustand aller möglichen Mitbewohner gleich.",
+          "",
+          "Ein gezeichnetes Beispiel ersetzt keine tatsächliche Erfassung verschiedener Arten."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/33/",
+          "title": "UNESCO World Heritage Centre · Białowieża Forest",
+          "anchor": "English Description; OUV Brief synthesis; criterion(ix), standing and ground deadwood, fungi and saproxylic invertebrates",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Der grenzüberschreitende Wald enthält alte Waldbestände und stehendes sowie liegendes Totholz.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Der Fachtext verbindet das Totholzangebot mit einer Vielfalt von Pilzen und holzbewohnenden wirbellosen Tieren.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "temperate-forest",
+          "reason": "Die allgemeine gemäßigte Waldlandschaft durch einen konkreten Totholz-Lebensraumbestandteil vertiefen."
+        },
+        {
+          "id": "daintree",
+          "reason": "Unterschiedliche Waldstandorte und unterschiedliche Bestandteile innerhalb eines Waldes als zwei Vergleichsebenen auseinanderhalten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Nutzung eines abgestorbenen Holzstücks als Teil eines belebten Lebensraums einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "sundarbans": {
+    "id": "sundarbans",
+    "name": "Mangroven der Sundarbans",
+    "family": "habitats",
+    "learning": {
+      "learningGoal": "Gezeitenlandschaft und Mangrovenwurzeln verbinden, ohne die symbolische Sedimentdarstellung als Messung oder garantierten Schutz zu lesen.",
+      "starter": "Die Sundarbans liegen an der Bucht von Bengalen in Indien und Bangladesch. Gezeitenkanäle, Wattflächen und bewaldete Inseln bilden eine Mangrovenlandschaft.",
+      "deeper": "Die UNESCO beschreibt eine Landschaft, in der Flüsse Material ablagern und die Gezeiten Land und Wasserwege verändern. Die NOAA erklärt allgemein: Mangrovenwurzeln können die Bewegung des Gezeitenwassers bremsen; dadurch kann sich feines Material absetzen. Eine Mangrove wächst also weder in einer völlig unveränderlichen Landschaft noch bildet sie eine undurchdringliche Schutzwand gegen jedes Ereignis.",
+      "observe": "Verfolge in der Schnittzeichnung den Wasserweg zwischen Wurzeln. Vergleiche symbolisch bewegte und abgesetzte Körnchen. Erkläre den dargestellten Unterschied, ohne aus der Zahl der Punkte eine wirkliche Ablagerungsmenge zu berechnen.",
+      "benefit": "Du kannst Wasserbewegung, Pflanzen und Ablagerung als zusammenwirkende Teile einer Küstenlandschaft betrachten.",
+      "figure": {
+        "kind": "tidal-root-obstacles-and-sediment-settling",
+        "controls": [
+          "Wasser zwischen Wurzeln",
+          "Symbolische Ablagerung",
+          "Beide Vorgänge vergleichen"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung. Keine Strömungs- oder Sedimentsimulation, keine einheitliche Wurzelform aller Mangrovenarten, kein berechneter Sturm- oder Küstenschutz. Punktzahl und Pfeillänge sind Symbole, keine gemessenen Mengen oder Geschwindigkeiten; Erosion bleibt trotz möglicher Ablagerung möglich."
+      },
+      "question": {
+        "prompt": "Im Schema setzt sich etwas Material zwischen Wurzeln ab. Was lässt sich daraus sinnvoll ableiten?",
+        "answers": [
+          "Jede Küste mit Mangroven kann nun bei jedem Sturm sicher bleiben.",
+          "Ein Mechanismus für Ablagerung ist gezeigt; seine wirkliche Menge ist damit nicht gemessen.",
+          "Das gesamte Delta muss ab jetzt unveränderlich sein."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide einen gezeigten Vorgang von einer Messung oder einer uneingeschränkten Vorhersage.",
+        "why": "Die Zeichnung erläutert einen möglichen Zusammenhang von Wasserbewegung und Ablagerung. Sie misst weder den ganzen Sedimenthaushalt noch die Wirkung eines bestimmten Sturms.",
+        "wrongReasons": [
+          "Eine vereinfachte Darstellung begründet keine uneingeschränkte Schutzgarantie.",
+          "",
+          "Eine örtliche Ablagerung schließt Abtragung oder andere Veränderungen an anderer Stelle nicht aus."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/798/",
+          "title": "UNESCO World Heritage Centre · The Sundarbans",
+          "anchor": "English Description; OUV Brief synthesis and criterion(ix): tidal waterways, islands and sedimentary delta formation",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/452/",
+          "title": "UNESCO World Heritage Centre · Sundarbans National Park",
+          "anchor": "English Description; OUV Brief synthesis and criterion(ix): India/Bangladesh, tidal erosion and deposition",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://oceanservice.noaa.gov/facts/mangroves.html",
+          "title": "NOAA National Ocean Service · What is a mangrove forest?",
+          "anchor": "English paragraphs about intertidal growth, roots slowing tidal water and sediment settling",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2026-09-23"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Die Sundarbans umfassen Mangroveninseln und Gezeitenwasserwege an der Bucht von Bengalen; Flusssedimente und Gezeiten tragen zur Formung der Landschaft bei.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Die Sundarbans reichen über Indien und Bangladesch; örtliche Abtragung und Ablagerung wirken in der Gezeitenlandschaft zusammen.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Mangrovenwurzeln können Gezeitenwasser bremsen, sodass sich feine Sedimente absetzen. Dies ist ein allgemeiner Mechanismus, keine vor Ort gemessene Strömungsrechnung.",
+          "sourceIndex": 2
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "danube-delta",
+          "reason": "Zwei Deltalandschaften vergleichen und gemeinsame Ablagerung von den besonderen Gezeiten- und Mangrovenbedingungen unterscheiden."
+        },
+        {
+          "id": "wadden-sea",
+          "reason": "Gezeiten und frei fallende Flächen in verschiedenen Lebensräumen vergleichen, ohne das Wattenmeer als Mangrovenwald darzustellen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Delta",
+          "reason": "Die Ablagerungslandschaft an Flussmündungen mit einer konkreten Region verbinden."
+        },
+        {
+          "term": "Sediment",
+          "reason": "Die gezeichneten Körnchen als symbolisches abgelagertes Material einordnen."
+        },
+        {
+          "term": "Lebensraum",
+          "reason": "Bewaldete Inseln, Wasserwege und Wurzeln als Bedingungen für Lebewesen betrachten."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "lencois-maranhenses": {
+    "id": "lencois-maranhenses",
+    "name": "Dünen und Lagunen von Lençóis Maranhenses",
+    "family": "landforms",
+    "learning": {
+      "learningGoal": "Eine sandige Landschaft nicht allein nach ihrem Aussehen als Wüste einordnen und den saisonalen Wasserweg erklären.",
+      "starter": "Im brasilianischen Lençóis Maranhenses liegen helle Dünen und Lagunen nebeneinander. In der Regenzeit füllen sich viele Senken zwischen den Dünen mit Wasser.",
+      "deeper": "Sand bedeutet nicht automatisch Wüste. Die UNESCO beschreibt hier ein Klima mit ausgeprägter Regenzeit. Regenwasser speist die Lagunen; der Grundwasserspiegel steigt. Wind formt und verschiebt zugleich Dünen. Die Landschaft enthält zeitweilige und dauerhaftere Lagunen, daher zeigt ein einzelnes Foto weder alle Wasserstände noch den ganzen Jahresverlauf.",
+      "observe": "Vergleiche in der Schnittskizze zwei gedachte Zustände derselben Senke. Markiere den Wasserstand und den Sand getrennt. Erkläre, warum die sichtbare Sandfläche allein die Herkunft des Wassers nicht bestimmt.",
+      "benefit": "Du kannst sichtbare Landschaftsmerkmale mit Klima und Wasserwegen verbinden, statt eine Farbe oder Oberfläche als vollständige Erklärung zu nehmen.",
+      "figure": {
+        "kind": "dune-hollow-rainfall-groundwater-lagoon",
+        "controls": [
+          "Wasserärmeres Beispiel",
+          "Regen und höherer Wasserstand",
+          "Wasserstände vergleichen"
+        ],
+        "limits": "Eigene Schnittskizze, kein gemessener Jahresgang, keine exakte Versickerungsrechnung und keine Prognose, welche Lagune an einem bestimmten Datum Wasser führt. Nicht alle Lagunen trocknen zur gleichen Zeit aus; gedachte Zustände sind keine Fotografien."
+      },
+      "question": {
+        "prompt": "Eine Aufnahme zeigt viel hellen Sand und einige Wasserflächen. Welche zusätzliche Information hilft bei der Einordnung?",
+        "answers": [
+          "Nur die Sandfarbe; sie bestimmt bereits das Klima.",
+          "Wie sich Regen und Wasserstände über das Jahr verteilen.",
+          "Nur die Form einer einzelnen Düne; Wasser kann sie nicht ergänzen."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide eine Momentaufnahme von Bedingungen, die sich im Jahreslauf verändern.",
+        "why": "Für Lençóis Maranhenses beschreibt die Quelle eine Regenzeit und regenwassergespeiste Lagunen. Eine helle Sandfläche allein weist keine dauerhaft trockene Wüste nach.",
+        "wrongReasons": [
+          "Eine Oberflächenfarbe ist keine Messung der längerfristigen Niederschlagsbedingungen.",
+          "",
+          "Eine einzelne Form erklärt nicht den ganzen Wasserhaushalt der Landschaft."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1611/",
+          "title": "UNESCO World Heritage Centre · Lençóis Maranhenses National Park",
+          "anchor": "English Description; OUV Brief synthesis; criteria(vii/viii), seasonal rain, temporary/perennial lagoons and rising water table",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Die Dünenlandschaft besitzt eine ausgeprägte Regenzeit und sowohl zeitweilige als auch dauerhaftere Lagunen.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Regenwasser und ein in der Regenzeit steigender Grundwasserspiegel tragen zur Lagunenbildung bei; Wind formt die Dünen.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "namib-fog",
+          "reason": "Verschiedene Wasserwege in sandigen Landschaften vergleichen: Regenzeit und Lagunen gegenüber Nebel als zusätzlichem Wasserangebot."
+        },
+        {
+          "id": "sahara",
+          "reason": "Sandiges Aussehen und klimatische Einordnung unterscheiden, ohne alle Sandlandschaften gleichzusetzen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Grundwasser",
+          "reason": "Den Wasserstand in einer Senke mit Wasser unter der Oberfläche verbinden."
+        },
+        {
+          "term": "Klima",
+          "reason": "Eine Regenzeit über viele Jahre von einer einzelnen Aufnahme unterscheiden."
+        },
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Regen, Versickerung und sichtbare Wasserfläche als verbundene Wege einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "socotra-vegetation": {
+    "id": "socotra-vegetation",
+    "name": "Sokotras Drachenblutbaum",
+    "family": "landforms",
+    "learning": {
+      "learningGoal": "Das natürliche Verbreitungsgebiet einer Pflanzenart von einem gedachten angepflanzten Exemplar und einer genauen Bestandskarte unterscheiden.",
+      "starter": "Sokotras Drachenblutbaum heißt wissenschaftlich Dracaena cinnabari. Sein natürliches Verbreitungsgebiet liegt auf Sokotra. Die EPPO-Datenbank bezeichnet die Art dort als endemisch.",
+      "deeper": "Endemisch beschreibt die natürliche Verbreitung in einem begrenzten Gebiet. Es bedeutet weder, dass die Pflanze an jeder Stelle dieses Gebiets wächst, noch dass ein Mensch sie nirgends sonst anpflanzen könnte. Die UNESCO ordnet Sokotra als Inselgruppe mit vielen nur dort natürlich vorkommenden Arten ein. Die Begriffe „endemisch“ und „gefährdet“ beantworten unterschiedliche Fragen; aus dem einen folgt keine hier geprüfte heutige Einstufung des anderen.",
+      "observe": "Vergleiche in der Skizze die markierte Insel mit einem ausdrücklich erfundenen Pflanzort außerhalb. Begründe, warum der Gedankenort das natürliche Verbreitungsgebiet nicht vergrößert. Lies die Inselfläche nicht als Nachweis jedes einzelnen Baumstandorts.",
+      "benefit": "Du kannst eine Aussage über natürliche Verbreitung präzise lesen, ohne sie mit allen möglichen Pflanzorten oder einer Artenzählung zu verwechseln.",
+      "figure": {
+        "kind": "natural-range-versus-hypothetical-cultivation",
+        "controls": [
+          "Natürliches Verbreitungsgebiet",
+          "Gedachter angepflanzter Baum",
+          "Beides unterscheiden"
+        ],
+        "limits": "Eigene schematische Insel-/Bereichszeichnung. Kein maßstäblicher Umriss, keine Baumverteilung, kein tatsächlicher ausländischer Pflanznachweis und keine heutige Gefährdungsbewertung. Der zweite Standort ist ausdrücklich ein Gedankenbeispiel; Markierung der Insel heißt nicht flächendeckendes Vorkommen."
+      },
+      "question": {
+        "prompt": "Angenommen, jemand pflanzt ein Exemplar außerhalb Sokotras an. Was folgt allein daraus?",
+        "answers": [
+          "Das natürliche Verbreitungsgebiet muss sofort um diesen Ort wachsen.",
+          "Die Art muss auf jeder Fläche Sokotras wachsen.",
+          "Ein angepflanztes Exemplar belegt für sich noch kein natürliches Vorkommen am neuen Ort."
+        ],
+        "correct": 2,
+        "hint": "Achte darauf, welche zusätzliche Bedeutung das Wort „natürlich“ in der Aussage hat.",
+        "why": "Ein ausdrücklich angepflanztes Beispiel unterscheidet sich von einer natürlichen Verbreitungsangabe. Es zeigt auch nicht, wie viele Bäume innerhalb des natürlichen Gebiets vorkommen.",
+        "wrongReasons": [
+          "Diese Antwort setzt bewusstes Anpflanzen mit natürlicher Verbreitung gleich.",
+          "Ein Gebiet als natürliche Heimat zu nennen bedeutet keine Besiedlung jedes einzelnen Punkts.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://gd.eppo.int/taxon/DRNCI",
+          "title": "EPPO Global Database · Dracaena cinnabari",
+          "anchor": "Overview: preferred name and geographic distribution, Socotra island(endemic)",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1263/",
+          "title": "UNESCO World Heritage Centre · Socotra Archipelago",
+          "anchor": "English Description: distinct flora/fauna and species occurring nowhere else naturally",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Dracaena cinnabari ist in der EPPO-Verbreitungsangabe als endemisch auf Sokotra geführt.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Die Inselgruppe besitzt viele Pflanzen- und Tierarten mit räumlich begrenzter natürlicher Verbreitung. Keine historischen Prozentzahlen als aktuelle Erhebung übernommen.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "daintree",
+          "reason": "Natürliches Verbreitungsgebiet einer bestimmten Art von Standortunterschieden innerhalb einer Waldlandschaft unterscheiden."
+        },
+        {
+          "id": "borneo",
+          "reason": "Insel als Lebensraum und genaue natürliche Verbreitung einzelner Arten auseinanderhalten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Passende Lebensbedingungen und die tatsächliche natürliche Verbreitung als zusammenhängende, aber verschiedene Fragen betrachten."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "ha-long-bay": {
+    "id": "ha-long-bay",
+    "name": "Kalkinseln der Hạ-Long-Bucht",
+    "family": "landforms",
+    "learning": {
+      "learningGoal": "Karstformung geeigneten Gesteins von der später sichtbaren Küstenlandschaft und einer gedachten Wasserstandsänderung unterscheiden.",
+      "starter": "In der Hạ-Long-Bucht im Nordosten Vietnams ragen Kalkinseln und steile Kalktürme aus dem Meer. Sie gehören zu einer vom Meer erfassten Karstlandschaft.",
+      "deeper": "Karst umfasst Formen, bei denen geeignetes Gestein unter Mitwirkung von Wasser gelöst wird. Den allgemeinen Kalklösungsprozess erklärt auch der National Park Service an einem anderen Ort, Mammoth Cave. Für Hạ Long beschreibt die UNESCO zusätzlich den Meereseinfluss, Felsbuchten, Kerben und Höhlen. Die heutige Wasserlinie und die Entstehung einer Gesteinsform sind damit nicht dieselbe Information.",
+      "observe": "Schalte in der Zeichnung zwischen der festen Felsform und zwei gedachten Wasserlinien um. Beschreibe, welcher Teil sichtbar ist. Vergleiche danach mit einer Lösungshöhle, ohne die dortigen Entstehungsdaten oder Wasserwege auf Vietnam zu übertragen.",
+      "benefit": "Du kannst Formungsprozess, Gestein und sichtbaren Wasserstand getrennt betrachten und anschließend miteinander verbinden.",
+      "figure": {
+        "kind": "limestone-karst-relief-and-seawater-visibility",
+        "controls": [
+          "Gesteinsform betrachten",
+          "Gedachte tiefere Wasserlinie",
+          "Gedachte höhere Wasserlinie"
+        ],
+        "limits": "Eigene Reliefskizze; eine Wasserlinie blendet Teile einer unveränderten gedachten Felsform aus. Keine reale Küstenprofil-/Meeresspiegelgeschichte, keine gelöste Gesteinsmenge, keine maßstäbliche Inselkarte und keine Klimaprognose. Allgemeiner Kalklösungsvergleich übernimmt keine örtlichen Mammoth-Cave-Einzelheiten."
+      },
+      "question": {
+        "prompt": "Im Schema steigt eine gedachte Wasserlinie an einer unveränderten Felsform. Was zeigt dieser Wechsel unmittelbar?",
+        "answers": [
+          "Ein Teil desselben gedachten Reliefs liegt nun unter der Wasserlinie.",
+          "Das gesamte Gestein ist in diesem Augenblick neu entstanden.",
+          "Der Wechsel beweist, wie viel Kalk sich tatsächlich gelöst hat."
+        ],
+        "correct": 0,
+        "hint": "Vergleiche, was in der Darstellung verändert wurde und was ausdrücklich gleich geblieben ist.",
+        "why": "Der Wechsel betrifft im Schema die Sichtbarkeit gegenüber der Wasserlinie. Die wirkliche Gesteinsformung und ihre Dauer werden dadurch nicht berechnet.",
+        "wrongReasons": [
+          "",
+          "Eine veränderte Wasserlinie ist kein Nachweis einer gleichzeitigen Neubildung der ganzen Felsform.",
+          "Das Bild enthält keine Messung oder Berechnung gelösten Materials."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/672/",
+          "title": "UNESCO World Heritage Centre · Ha Long Bay – Cat Ba Archipelago",
+          "anchor": "English Description; OUV Brief synthesis; criteria(vii/viii), marine-invaded limestone tower karst and caves",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.nps.gov/maca/learn/nature/how-mammoth-cave-formed.htm",
+          "title": "National Park Service · How Mammoth Cave Formed",
+          "anchor": "Solution Caves: weak acid and dissolution along limestone cracks; general process comparison only",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2021-03-19"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Hạ Long und Cat Ba besitzen vom Meer erfassten Kalk-Turmkarst mit Inseln, Küstenformen und verschiedenen Höhlen.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Schwach saures Wasser kann Kalkminerale entlang kleiner Risse lösen; dieser allgemeine Prozessvergleich erklärt keine örtliche vietnamesische Detailgeschichte.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "mammoth-cave",
+          "reason": "Verwandte allgemeine Kalklösung und unterschiedliche oberirdische/unterirdische Landschaftsformen vergleichen."
+        },
+        {
+          "id": "sognefjord",
+          "reason": "Zwei mit dem Meer verbundene steilwandige Landschaften vergleichen, ohne Karstformung und Gletschererosion gleichzusetzen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gestein",
+          "reason": "Materialeigenschaften von der sichtbaren Küstenform unterscheiden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Verschiedene Wege der Landschaftsveränderung vergleichen."
+        },
+        {
+          "term": "Grundwasser",
+          "reason": "Unterirdische Wasserwege als möglichen Teil von Karstsystemen einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "sognefjord": {
+    "id": "sognefjord",
+    "name": "Sognefjord",
+    "family": "landforms",
+    "learning": {
+      "learningGoal": "Einen vom Meer erfüllten glazial geformten Talraum erklären und Seitenarm versus gesamtes Fjordsystem korrekt einordnen.",
+      "starter": "Der Sognefjord gehört zur westnorwegischen Fjordlandschaft. Er ist mit dem Meer verbunden und verzweigt sich in mehrere Seitenarme.",
+      "deeper": "Die UNESCO beschreibt einen Fjord als lange tiefe Meeresbucht in einem glazial geformten Tal. Gletscherformung und späteres Eindringen des Meeres sind verschiedene Teile dieser Geschichte. Der Nærøyfjord ist ein Seitenarm des Sognefjord-Systems; die regionale Fachseite nennt diese Verbindung. Der UNESCO-Eintrag behandelt Nærøyfjord und Geirangerfjord, nicht pauschal jeden Abschnitt des gesamten Sognefjords.",
+      "observe": "Vergleiche in der Skizze ein glazial geprägtes Tal mit derselben gedachten Form unter einer Wasserlinie. Wechsle danach zur Übersicht des verzweigten Systems und suche einen hervorgehobenen Seitenarm. Erkläre, weshalb ein Seitenarm nicht das gesamte System bezeichnet.",
+      "benefit": "Du kannst eine Landschaftsentstehung und den räumlichen Geltungsbereich ihrer Quelle zugleich richtig einordnen.",
+      "figure": {
+        "kind": "glacial-valley-marine-inlet-and-fjord-branch",
+        "controls": [
+          "Glazial geformtes Tal",
+          "Mit Meerwasser gefüllt",
+          "Seitenarm im System"
+        ],
+        "limits": "Eigene schematische Vergleichszeichnung, keine vermessene Talform, Tiefen-/Eisdickenangabe, vollständige Eiszeitgeschichte, echte Navigationskarte oder Schutzgebietsgrenze. Gedankenwasserlinie und vereinfachte Verzweigung dürfen nicht als reale heutige Meeresspiegel- oder Katasterdaten gelesen werden."
+      },
+      "question": {
+        "prompt": "Eine Quelle beschreibt den Nærøyfjord als Seitenarm des Sognefjords. Welche Aussage übernimmt ihre räumliche Bedeutung passend?",
+        "answers": [
+          "Alle Eigenschaften dieses Seitenarms müssen auf jeden anderen Arm zutreffen.",
+          "Der Seitenarm gehört zum größeren System; eine Aussage über ihn betrifft nicht automatisch jedes Teilgebiet.",
+          "Ein Seitenarm kann grundsätzlich nicht mit dem Meer zusammenhängen."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide eine Teilmenge von der gesamten verzweigten Landschaft.",
+        "why": "Ein Teilgebiet kann zu einem größeren Fjordsystem gehören und dennoch eigene Merkmale besitzen. Auch die Geltung einer Schutzgebietsquelle muss zum benannten Teilgebiet passen.",
+        "wrongReasons": [
+          "Eigenschaften eines einzelnen Teilgebiets gelten nicht ohne weiteren Beleg überall im größeren System.",
+          "",
+          "Die Zugehörigkeit zu einer Verzweigung schließt die Verbindung zum Meer nicht aus."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1195/",
+          "title": "UNESCO World Heritage Centre · West Norwegian Fjords",
+          "anchor": "OUV Brief synthesis: glaciated valley submerged by sea; criterion(viii) glacial and geomorphic features",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.fjordnorway.com/en/see-and-do/the-unesco-naeroyfjord",
+          "title": "Fjord Norway · The UNESCO Nærøyfjord",
+          "anchor": "Opening regional-place description: Nærøyfjord as an arm of Sognefjord",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Fjorde sind Meeresbuchten in glazial geformten Talräumen; die UNESCO beschreibt diese Einordnung an den westnorwegischen Fjorden.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Nærøyfjord gehört zum Sognefjord-System.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Der UNESCO-Eintrag behandelt die benannten Teilgebiete Nærøyfjord und Geirangerfjord; daraus folgt keine pauschale Schutzgebietsaussage über jeden Abschnitt des gesamten Sognefjords.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "yosemite-valley",
+          "reason": "Glaziale Talformung im Landesinneren mit einer vom Meer erfüllten Fjordlandschaft vergleichen."
+        },
+        {
+          "id": "ha-long-bay",
+          "reason": "Ähnlich steile Küstenformen nach unterschiedlichen geologischen Formungswegen unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gletscher",
+          "reason": "Eis als langsam bewegte und landschaftsformende Masse mit dem Talraum verbinden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Abtragung durch Eis von bloßer Sichtbarkeit unter einer Wasserlinie unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "sargasso-sea": {
+    "id": "sargasso-sea",
+    "name": "Sargassosee",
+    "family": "coast",
+    "learning": {
+      "learningGoal": "Eine durch Meeresströmungen beschriebene Meeresregion von einem ringsum durch Land begrenzten Gewässer unterscheiden.",
+      "starter": "Die Sargassosee liegt im Nordatlantik. Ihre Grenzen werden durch Meeresströmungen beschrieben, nicht durch eine geschlossene Küste. An der Oberfläche treiben Sargassum-Braunalgen, die verschiedenen Meerestieren Nahrung und Schutz bieten.",
+      "deeper": "Die NOAA beschreibt vier begrenzende Strömungen im nordatlantischen subtropischen Strömungssystem. Weil sich Strömungen verändern, sind diese Grenzen nicht wie eine feststehende Grundstückslinie. Die schwimmenden Algen wachsen und vermehren sich auf dem offenen Meer. Zwischen ihren Zweigen finden beispielsweise junge Meeresschildkröten und andere Tiere Lebensraum. Diese größeren Braunalgen sind nicht dieselben Algen wie die winzigen Partner vieler riffbildender Korallen.",
+      "observe": "Untersuche die vier gedachten Strömungsbögen und die offenen Bereiche dazwischen. Ist hier überhaupt eine Landküste gezeichnet? Betrachte den schwimmenden Algenlebensraum. Vergleiche beim Great Barrier Reef, welche andere Rolle Algen dort spielen können; setze die Organismen nicht gleich.",
+      "benefit": "Du kannst erklären, warum ein benanntes Meer nicht an jeder Seite eine Küste haben muss.",
+      "figure": {
+        "kind": "current-defined-open-sea-and-floating-habitat",
+        "controls": [
+          "Strömungsgrenzen",
+          "Offenes Meer",
+          "Schwimmender Lebensraum"
+        ],
+        "limits": "Eigene schematische Übersicht, keine maßstäbliche Karte, aktuelle Strömungsmessung oder Navigationshilfe. Begrenzende Kurven sind keine festen Wände. Keine geschlossene Wasserzelle und keine vollständige Karte der Sargassumverbreitung behaupten; die gezeigten Tiere sind Beispiele, keine Bestandszählung."
+      },
+      "question": {
+        "prompt": "Eine Meeresregion wird durch veränderliche Strömungen begrenzt. Welche Aussage passt dazu?",
+        "answers": [
+          "An jeder Grenze muss eine feste Küstenmauer liegen.",
+          "Ihre beschriebene Grenze kann sich verändern, ohne dass dort Land wandert.",
+          "Jede Alge in dieser Region muss am Meeresboden festgewachsen sein."
+        ],
+        "correct": 1,
+        "hint": "Überlege, welche Art von Grenze hier beschrieben wird.",
+        "why": "Für die Sargassosee nennt NOAA Strömungen als Grenzen. Ein veränderlicher Strömungsverlauf ist keine wandernde Landküste.",
+        "wrongReasons": [
+          "Eine Strömungsgrenze ist keine Landküste und keine Mauer.",
+          "",
+          "Die beschriebenen Sargassumarten können auf dem offenen Meer frei schwimmen und sich dort vermehren."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/sargassosea.html",
+          "title": "NOAA National Ocean Service · What is the Sargasso Sea?",
+          "anchor": "Free-floating holopelagic Sargassum; habitat; four boundary currents and dynamic borders",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2021-01-04"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Sargassosee im Nordatlantik durch Strömungen statt Landküsten begrenzt; Grenzen sind dynamisch.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Frei schwimmende Sargassum-Braunalgen vermehren sich im offenen Meer und bieten Tieren Nahrung/Schutz.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "reef",
+          "reason": "Schwimmende große Braunalgen als Lebensraum mit winzigen Algenpartnern vieler riffbildender Korallen vergleichen; bestehender ganzer Riffeintrag bleibt erhalten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Meeresströmung",
+          "reason": "Bewegtes Wasser als geografische Begrenzung verstehen."
+        },
+        {
+          "term": "Lebensraum",
+          "reason": "Ein schwimmender Lebensraum benötigt keine feste Insel."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "ross-ice-shelf": {
+    "id": "ross-ice-shelf",
+    "name": "Ross-Schelfeis",
+    "family": "coast",
+    "learning": {
+      "learningGoal": "Bei einem Schelfeis schwimmendes Gletschereis, fest aufliegenden Untergrund und Wasser unter dem Eis auseinanderhalten.",
+      "starter": "Das Ross-Schelfeis liegt an der antarktischen Küste und schwimmt auf Meerwasser. Es ist mit dem Eis an Land verbunden. Eine weiße Oberfläche allein zeigt noch nicht, ob Eis auf festem Grund liegt oder auf Wasser schwimmt.",
+      "deeper": "Große Schelfeise werden vor allem von Gletschern gespeist, die vom Land zum Meer fließen. An der Aufsetzlinie geht aufliegendes Eis in schwimmendes über. Wasser kann unter die schwimmende Eisplatte gelangen und dort Wärme übertragen. Eine 2019 veröffentlichte Untersuchung am Ross-Schelfeis beschreibt örtliche Schmelzvorgänge durch saisonal einströmendes, zuvor erwärmtes Meerwasser. Das ist kein einheitlicher heutiger Schmelzwert für die ganze Eisplatte. Meereis aus gefrierendem Meerwasser ist eine andere Eisform; manche Schelfeise haben allerdings mehrere Eisquellen. Unser Vergleich zeigt den von Gletschern gespeisten Typ, keine allgemeine Behauptung über die Entstehung jedes Schelfeises.",
+      "observe": "Verfolge in der Schnittzeichnung das Eis vom Land bis zum schwimmenden Teil. Zeige, wo Meerwasser darunter liegt. Vergleiche im Text die Entstehung von Meereis aus gefrierendem Meerwasser mit dem dargestellten Gletscherzufluss. Beschreibe einen Unterschied, den ein bloßes Bild von oben nicht sicher verrät.",
+      "benefit": "Du kannst Herkunft und Lage von Eis getrennt erklären und den Einfluss des Wassers unter einer Eisplatte berücksichtigen.",
+      "figure": {
+        "kind": "grounded-to-floating-ice-and-ocean-underneath",
+        "controls": [
+          "Aufliegendes Eis",
+          "Schwimmender Teil",
+          "Meerwasser darunter"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung, kein maßstäbliches Profil des Ross-Schelfeises, momentaner Zustand, Messung von Schmelzraten oder Meeresspiegelprognose. Wasserpfeile zeigen einen möglichen Wärmetransportweg, keine überall gleich große Strömung. Verschiedene Herkunftsarten von Schelfeis nicht zu einer universellen Regel vereinfachen."
+      },
+      "question": {
+        "prompt": "Was muss eine Erklärung für das Schmelzen an der Unterseite einer schwimmenden Eisplatte berücksichtigen?",
+        "answers": [
+          "Nur die Farbe ihrer Oberfläche.",
+          "Die Annahme, dass unter jedem Eis immer trockener Fels liegt.",
+          "Das Meerwasser und seinen Wärmeaustausch mit dem Eis."
+        ],
+        "correct": 2,
+        "hint": "Überlege, womit die Unterseite in Kontakt steht.",
+        "why": "Das Ross-Beispiel untersucht Eis-Ozean-Wechselwirkungen unter dem Schelfeis. Die Temperatur der Luft allein beschreibt diesen Kontakt nicht.",
+        "wrongReasons": [
+          "Die Oberflächenfarbe zeigt nicht den Wärmeaustausch mit dem Meerwasser unter der Eisplatte.",
+          "Der schwimmende Teil liegt auf Wasser; aufliegendes Eis und schwimmendes Eis sind zu unterscheiden.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://nsidc.org/learn/parts-cryosphere/ice-shelves",
+          "title": "NSIDC · Ice Shelves",
+          "anchor": "What is an ice shelf?; source categories; glacier outflow for larger shelves",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://nsidc.org/learn/parts-cryosphere/ice-shelves/science-ice-shelves",
+          "title": "NSIDC · The Science of Ice Shelves",
+          "anchor": "How do ice shelves form?; Warmer ocean temperatures; grounding line",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.bas.ac.uk/data/our-data/publication/basal-melting-of-ross-ice-shelf-from-solar-heat-absorption-in-an-ice-front-polynya/",
+          "title": "Stewart et al., BAS · Basal melting of Ross Ice Shelf from solar heat absorption in an ice-front polynya",
+          "anchor": "Actual primary publication abstract: in-situ Ross observations, seasonal warmed-water inflow and local basal melting",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null,
+          "publishedYear": 2019
+        },
+        {
+          "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice",
+          "title": "NSIDC · Sea Ice",
+          "anchor": "Overview: What is sea ice? Frozen seawater floating on the ocean surface",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Große Schelfeise werden überwiegend durch Gletscherzufluss gespeist; andere Quellen und Mischformen existieren.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Aufsetzlinie trennt aufliegendes von schwimmendem Eis; Wasser kann unter dem schwimmenden Eis Wärme übertragen.",
+          "sourceIndex": 1
+        },
+        {
+          "claim": "Primäre Ross-Beobachtungen zeigen lokal bedeutsames basales Schmelzen durch saisonalen Zufluss erwärmten Meerwassers, nicht eine gleichförmige heutige Rate.",
+          "sourceIndex": 2
+        },
+        {
+          "claim": "Meereis entsteht als gefrorenes Meerwasser an der Meeresoberfläche; das ist von der dargestellten gletschergespeisten Schelfeisform zu unterscheiden.",
+          "sourceIndex": 3
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "antarctic-desert",
+          "reason": "Trockenen kontinentalen Innenraum und schwimmendes Küstenschelfeis als unterschiedliche Teile der Antarktis betrachten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gletscher",
+          "reason": "Langsam fließendes Eis kann einen schwimmenden Küstenabschnitt speisen."
+        },
+        {
+          "term": "Wärme",
+          "reason": "Wärmetransport unter dem Eis von einer bloßen weißen Oberfläche unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "namib-fog": {
+    "id": "namib-fog",
+    "name": "Nebel in der Namib",
+    "family": "coast",
+    "learning": {
+      "learningGoal": "Sehr wenig Regen und zeitweilige Feuchtigkeit durch Nebel als miteinander vereinbare Beobachtungen erkennen.",
+      "starter": "Die Namib liegt an der Atlantikküste im südwestlichen Afrika. Im Namib-Sandmeer, einem Teil dieser Wüstenlandschaft in Namibia, spielt Küstennebel eine wichtige Rolle als Wasserquelle. Trockenheit bedeutet nicht, dass Feuchtigkeit nur als örtlicher Regenschauer ankommen könnte.",
+      "deeper": "UNESCO beschreibt das Namib-Sandmeer als Küstennebelwüste mit großflächigen Dünen und stark angepassten Lebensgemeinschaften. In diesem Gebiet ist Nebel die wichtigste Wasserquelle. Das ist eine Aussage über den beschriebenen Teilraum, nicht über jeden Ort in der gesamten Namib. Eine Regenbeobachtung und eine Nebelbeobachtung beantworten verschiedene Fragen. „Hier wurde kein Regen beobachtet“ bedeutet noch nicht „Hier kann keinerlei Feuchtigkeit ankommen“. Unsere Darstellung misst keine Wassermenge und entscheidet nicht allein anhand eines Fotos, wie trocken das Klima ist.",
+      "observe": "Vergleiche in der Darstellung die Angaben zur Regenbeobachtung und zur Nebelbeobachtung getrennt. Suche eine Kombination, in der beides zusammenpasst: kein örtlicher Regenschauer, aber sichtbarer Nebel. Beschreibe danach, welche zusätzliche Messung du für die tatsächliche Wassermenge bräuchtest.",
+      "benefit": "Du vermeidest den Schluss, dass eine nicht beobachtete Wasserquelle alle anderen Wasserwege ausschließt.",
+      "figure": {
+        "kind": "coastal-fog-and-separate-rain-observation",
+        "controls": [
+          "Regenbeobachtung",
+          "Nebelbeobachtung",
+          "Beides zusammen betrachten"
+        ],
+        "limits": "Eigene Beobachtungsskizze, keine tatsächliche Wetterstation, Regenstatistik, Nebelvorhersage oder gemessene Wasserbilanz. Die Zustände sind Vergleichsmöglichkeiten, keine Tagesfolge für einen konkreten Ort. Nicht die gesamte Namib als überall nebelgleich und nicht jedes Wüstenklima als regenfrei darstellen."
+      },
+      "question": {
+        "prompt": "An einem Beobachtungspunkt wurde kein Regenschauer bemerkt, aber Küstennebel ist vorhanden. Welche Aussage passt?",
+        "answers": [
+          "Feuchtigkeit kann auch ohne den beobachteten örtlichen Regenschauer vorhanden sein.",
+          "Ohne Regenschauer ist Nebel in einer Wüste unmöglich.",
+          "Eine Nebelbeobachtung beweist täglich dieselbe Wassermenge in der ganzen Namib."
+        ],
+        "correct": 0,
+        "hint": "Trenne die beiden Beobachtungen und vermeide einen Schluss über alle Orte und Tage.",
+        "why": "Das Namib-Sandmeer ist ein belegtes Beispiel für eine sehr trockene Küstenlandschaft, in der Nebel eine wichtige Wasserquelle ist.",
+        "wrongReasons": [
+          "",
+          "Die beschriebene Küstennebelwüste zeigt, dass Trockenheit und Nebel zusammen auftreten können.",
+          "Eine einzelne Beobachtung ist weder eine Mengenmessung noch eine Aussage über die ganze Region oder jeden Tag."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1430/",
+          "title": "UNESCO · Namib Sand Sea",
+          "anchor": "English Description; Brief Synthesis; criteria(ix) and(x): coastal fog desert and water source",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Namib-Sandmeer liegt an Namibias trockener Südatlantikküste und umfasst eine Küstennebelwüste.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Nebel ist dort eine primäre Wasserquelle; örtliche Anpassungen und Mikrohabitate sind relevant.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "atacama",
+          "reason": "Zwei bestehende trockene Landschaften vergleichen, ohne aus einer einzigen Wetterbeobachtung ihr gesamtes Klima abzuleiten."
+        },
+        {
+          "id": "white-sands",
+          "reason": "Zwei Dünenlandschaften mit unterschiedlichen Wasser- und Materialgeschichten auseinanderhalten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Verschiedene Wasserwege statt ausschließlich eines sichtbaren Regenschauers betrachten."
+        },
+        {
+          "term": "Niederschlag",
+          "reason": "Eine Regenbeobachtung von weiteren Formen vorhandener Feuchtigkeit trennen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "giants-causeway": {
+    "id": "giants-causeway",
+    "name": "Basaltsäulen am Giant’s Causeway",
+    "family": "coast",
+    "learning": {
+      "learningGoal": "Regelmäßige mehrseitige Gesteinsformen als mögliche Folge natürlicher Abkühlungsrisse verstehen.",
+      "starter": "Am Giant’s Causeway an der nordirischen Küste stehen auffällige Basaltsäulen. Von oben erscheinen viele Querschnitte regelmäßig und mehrseitig. Das Muster ist kein Beweis dafür, dass Menschen die Säulen wie Pflastersteine zusammengesetzt haben.",
+      "deeper": "Die UNESCO beschreibt dort säulenförmig geklüftete Basaltlaven aus vulkanischer Aktivität. Beim Abkühlen eines Lavakörpers können durch Zusammenziehen Spannungen und Risse entstehen. Eine ausführliche NPS-Erklärung zeigt denselben Grundprozess am anderen Ort Devils Postpile: Risse wachsen von kühleren Randbereichen in den Gesteinskörper hinein; unter passenden Bedingungen entstehen Säulen. Dieser Vergleich überträgt den Prozess, nicht das Alter oder die örtliche Geschichte. Nicht jede Säule muss genau dieselbe Seitenzahl besitzen.",
+      "observe": "Vergleiche in der Zeichnung die Ansicht von oben mit einer Säulen-Seitenansicht. Zeige Rissgrenzen und die zugehörigen Gesteinsstücke. Erkläre, weshalb eine regelmäßige Form allein keine Aussage über einen Baumeister oder eine exakte Entstehungszeit erlaubt.",
+      "benefit": "Du kannst eine Naturform mit einem Prozess erklären und Formähnlichkeit von einem Herkunftsnachweis unterscheiden.",
+      "figure": {
+        "kind": "cooling-joints-and-polygonal-basalt-columns",
+        "controls": [
+          "Ansicht von oben",
+          "Rissgrenzen hervorheben",
+          "Säulenansicht"
+        ],
+        "limits": "Eigene vereinfachte Zeichnung, kein tatsächlicher Lageplan, vollständiges Rissnetz, exakter Polygonbestand oder Rechenmodell der Abkühlung. Unterschiedliche Mehrseitenformen zulassen; keine universelle Sechseckpflicht, keinen menschlichen Bau und keine lokalen Alterswerte aus dem Vergleich ableiten."
+      },
+      "question": {
+        "prompt": "Welche Erklärung passt zu einem regelmäßigen Muster von Basaltsäulen?",
+        "answers": [
+          "Regelmäßigkeit kann ausschließlich durch menschliche Maschinen entstehen.",
+          "Abkühlungsrisse können natürliche mehrseitige Muster erzeugen.",
+          "Jede einzelne Basaltsäule muss überall genau dieselbe Seitenzahl besitzen."
+        ],
+        "correct": 1,
+        "hint": "Frage nach einem möglichen Entstehungsprozess, nicht nur nach der Ähnlichkeit mit einem Pflaster.",
+        "why": "Säulenklüftung ist ein natürlicher geologischer Vorgang. Mehrseitige Querschnitte sind mit ihm vereinbar; das Muster allein beweist keinen menschlichen Bau.",
+        "wrongReasons": [
+          "Die gelesenen Fachbeschreibungen zeigen natürlich entstandene Säulenklüftung in vulkanischem Gestein.",
+          "",
+          "Die Belege beschreiben polygonale beziehungsweise mehrseitige Säulen; daraus folgt keine identische Seitenzahl jeder Säule."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/369/",
+          "title": "UNESCO · Giant’s Causeway and Causeway Coast",
+          "anchor": "English Description; Brief synthesis; criterion(viii): polygonal columns and jointing in basalt lavas",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.nps.gov/depo/naturescience/geology.htm",
+          "title": "National Park Service · Geology at Devils Postpile",
+          "anchor": "The lava cools and cracks reach deep into the formation",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2021-08-05"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Giant’s Causeway an Nordirlands Antrimküste mit polygonaler Säulenklüftung in Basaltlaven.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Abkühlung und Zusammenziehen eines Lavakörpers können Spannungen, Risse und Säulenklüftung erzeugen; ausführlich am DevilsPostpile-Vergleich erklärt.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "bryce-hoodoos",
+          "reason": "Verschiedene Ursachen auffälliger Felsformen vergleichen: Abkühlungsrisse und spätere Verwitterung nicht gleichsetzen."
+        },
+        {
+          "id": "iceland",
+          "reason": "Vulkanische Gesteinsbildung in einer anderen Landschaft einordnen, ohne überall dieselbe Säulenform zu erwarten."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gestein",
+          "reason": "Basalt als Material von einer später sichtbaren regelmäßigen Form unterscheiden."
+        },
+        {
+          "term": "Wärme",
+          "reason": "Abgabe von Wärme beim Abkühlen mit der Entstehung von Spannungen verbinden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "yosemite-valley": {
+    "id": "yosemite-valley",
+    "name": "Yosemite Valley",
+    "family": "process",
+    "learning": {
+      "learningGoal": "Die Bildung eines Gesteins von der späteren Formung eines Tales unterscheiden und Fluss- sowie Gletschererosion verbinden.",
+      "starter": "Im Yosemite Valley in Kalifornien liegen ein breiter Talboden und steile Felswände zwischen hohen Bergen. Flüsse schnitten zunächst Täler in das Gestein. Später bewegten sich wiederholt Gletscher durch die Landschaft und verbreiterten und vertieften diese Täler.",
+      "deeper": "Viele Felsen bestehen aus granitischen Gesteinen. Ihr Material erstarrte lange vor der heutigen Talform in der Erdkruste. Die Freilegung und das spätere Ausschürfen sind andere Vorgänge als die Entstehung des Gesteins. Ein Gletscher besteht aus festem Eis und kann sich trotzdem langsam bewegen. Im Eis mitgeführtes Gesteinsmaterial kann am Untergrund schleifen und Kratzspuren hinterlassen. Der National Park Service erklärt, wie aus zuvor flussgeprägten Tälern breitere U-förmige Täler wurden. Auch nach dem Rückzug großer Eismassen verändern etwa Steinschläge und Ablagerungen die Landschaft weiter.",
+      "observe": "Vergleiche zuerst den schmaleren und den breiteren Talumriss. Wähle dann die Eisansicht und suche die kleinen Gesteinspunkte und kurzen Schleifstriche nahe der Sohle. Der Punkt im Kreis bezeichnet Bewegung längs des Tals aus der Zeichenebene heraus. Trenne die ältere Bildung des Gesteins von seiner späteren Bearbeitung; aus der Skizze folgt keine genaue Dauer.",
+      "benefit": "Du kannst erklären, warum das Alter eines Gesteins nicht automatisch das Alter der heutigen Landschaftsform ist.",
+      "figure": {
+        "kind": "river-valley-and-later-glacial-widening",
+        "controls": [
+          "Flussgeprägtes Tal",
+          "Bewegtes Eis und Material",
+          "Breiteres Tal nach Eisrückzug"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung, kein vermessenes Profil oder maßstäblicher Zeitablauf. U- und V-Form sind vereinfachte Vergleichsformen; ein einzelner Umriss beweist nicht alle geologischen Einzelheiten. Keine heutige Gletscherzahl, Bewegungsrate oder Klimaprognose aus dem Modell ableiten."
+      },
+      "question": {
+        "prompt": "Eine Felswand besteht aus sehr altem Gestein. Was folgt daraus für die heutige Talform?",
+        "answers": [
+          "Gestein und Talform müssen im selben Augenblick entstanden sein.",
+          "Das Gestein kann älter sein als seine spätere Formung durch Flüsse und Gletscher.",
+          "Festes Eis kann keine Spuren an einem Tal hinterlassen."
+        ],
+        "correct": 1,
+        "hint": "Ordne die Bildung des Materials und seine spätere Bearbeitung als zwei Vorgänge ein.",
+        "why": "Die gelesene NPS-Erklärung unterscheidet die Bildung granitischer Gesteine von späterer Hebung, Freilegung, Fluss- und Gletschererosion. Bewegtes Eis und mitgeführtes Material konnten vorhandene Täler umformen.",
+        "wrongReasons": [
+          "Das Alter des Materials legt nicht fest, wann daraus die heute sichtbare Form entstand.",
+          "",
+          "Ein Gletscher kann sich als feste Eismasse bewegen und mitgeführtes Material am Gestein entlangführen."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/yose/learn/nature/geology.htm",
+          "title": "National Park Service · Geology, Yosemite",
+          "anchor": "The Making of the Landscape; Subduction and Granite Formation; Uplift and Landscape Evolution; Glaciers Enter the Picture",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2024-11-22"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Granitische Gesteinsbildung ist älter als die spätere Formung vorhandener Täler; Flüsse und wiederholte Vergletscherung wirkten nacheinander.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Gletscher verbreitern und vertiefen Täler; mitgeführtes Material kann polieren und Schleifspuren erzeugen; weitere Landschaftsveränderung bleibt möglich.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "grand-canyon",
+          "reason": "Flussgeprägte und zusätzlich stark glazial überformte Täler vergleichen, ohne beide Entstehungsgeschichten gleichzusetzen."
+        },
+        {
+          "id": "iceland",
+          "reason": "Vorhandene Erklärung zu Eis und Vulkanlandschaften als anderen geologischen Zusammenhang nutzen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gletscher",
+          "reason": "Langsam bewegtes festes Eis von einem flüssigen Fluss unterscheiden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Das Abtragen und Fortbewegen vorhandenen Materials benennen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "lake-superior": {
+    "id": "lake-superior",
+    "name": "Uferspuren am Oberen See · Apostle Islands",
+    "family": "process",
+    "learning": {
+      "learningGoal": "Gesteinsablagerung, Eisprägung und veränderte relative Seepegel an verschiedenen Landschaftsspuren auseinanderhalten.",
+      "starter": "Am Oberen See liegen vor der Bayfield-Halbinsel die Apostle Islands. Ihre Sandsteinfelsen und die von Eis und Wasser geprägten Ufer erzählen unterschiedliche Teile der Landschaftsgeschichte. Ein alter Strand kann heute höher liegen als das Seeufer.",
+      "deeper": "Die NPS-Erklärung beschreibt zunächst alte Sandablagerungen, aus denen Sandstein entstand. Wiederholte Eisvorstöße formten später die Inseln und hinterließen Lockermaterial. Nach dem Eisrückzug änderten Schmelzwasser, neue Abflusswege und das Wiederanheben zuvor vom Eis belasteten Landes die Lage der Ufer. Terrassen und hoch liegende alte Strände können deshalb frühere höhere relative Seestände anzeigen. Sie beweisen nicht für sich allein, dass nur die Wassermenge und niemals die Landhöhe verändert wurde. Heute können Wellen Material an Ufern abtragen und andernorts als Strand oder Sandhaken ablagern.",
+      "observe": "Wähle „Alte Strandspur“ und vergleiche ihren Absatz mit dem heutigen gedachten Wasser. Betrachte dann die zwei Vergleichsfelder: Was verändert sich links, was rechts, und welcher relative Höhenunterschied bleibt am Ende gleich? Unterscheide in der Uferansicht die Sandsteinschichten und die kleinen Zeichen jüngeren Lockermaterials. Eine genaue Datierung braucht weitere Belege.",
+      "benefit": "Du kannst eine Landschaftsspur als Hinweis nutzen, ohne aus einem einzelnen Bild eine vollständige Vergangenheit abzuleiten.",
+      "figure": {
+        "kind": "raised-lake-shore-and-relative-level",
+        "controls": [
+          "Heutiges Ufer",
+          "Alte Strandspur",
+          "Wasserstand und Landhöhe vergleichen"
+        ],
+        "limits": "Eigene schematische Uferzeichnung, kein tatsächliches Höhenprofil, Pegeldiagramm oder aktueller Wasserstandsbericht. Eine alte Strandspur zeigt eine frühere relative Uferlage; die Skizze berechnet weder alleinige Ursache noch Alter oder genaue Höhenänderung. Der erhaltene Kartenpunkt steht für den Oberen See, nicht für einen belegten Zugang zu den Apostle Islands."
+      },
+      "question": {
+        "prompt": "Du findest eine als alt bestimmte Strandspur deutlich über dem heutigen Ufer. Was lässt sich daraus vorsichtig folgern?",
+        "answers": [
+          "Der See muss diesen Strand erst morgen erreichen.",
+          "Die Spur beweist allein, dass sich die Höhe des Landes nie geändert hat.",
+          "Das frühere Ufer lag relativ zum Land anders; Wasserstand und Landbewegung sind zu berücksichtigen."
+        ],
+        "correct": 2,
+        "hint": "Vergleiche die Höhe des Wassers mit der Höhe des Landes und trenne Beobachtung und Ursache.",
+        "why": "Die Quelle nennt erhöhte Strände als Hinweise auf frühere höhere Seepegel und beschreibt zugleich das Wiederanheben des entlasteten Landes sowie veränderte Abflüsse nach der Vergletscherung. Ein einzelner Strandrest löst diese Ursachen nicht vollständig auf.",
+        "wrongReasons": [
+          "Eine alte Strandspur beschreibt Vergangenes; sie ist keine Vorhersage des morgigen Pegels.",
+          "Die NPS-Erklärung beschreibt ausdrücklich Landhebung nach Entlastung durch schmelzendes Eis.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.nps.gov/apis/learn/nature/index.htm",
+          "title": "National Park Service · Nature, Apostle Islands",
+          "anchor": "Bayfield Peninsula, Lake Superior; sandstone cliffs, beaches and sandscapes",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2022-03-28"
+        },
+        {
+          "url": "https://www.nps.gov/apis/learn/nature/geologicformations.htm",
+          "title": "National Park Service · Geology, Apostle Islands",
+          "anchor": "Ancient Sands, Ice, and Water: sandstone, glaciation, elevated beaches, deglaciation, land rebound and changed drainage",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2022-03-07"
+        },
+        {
+          "url": "https://npgallery.nps.gov/AssetDetail/3be53558-ad38-8afe-1356-eb8ded7b21cc",
+          "title": "National Park Service · Lage der Apostle-Islands-Region",
+          "anchor": "Locations: Apostle Islands National Lakeshore, Wisconsin; separate generic park coordinate from the named Devils Island photo location. Only park-region location used, no photograph copied.",
+          "checkedOn": "2026-11-02",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Die Apostle Islands liegen vor der Bayfield-Halbinsel im Oberen See; Sandstein und heutige Uferformen sind unterscheidbar.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Erhöhte alte Strände, Eisablagerungen, spätere Landhebung und veränderte Abflüsse tragen unterschiedliche Hinweise zur Landschaftsgeschichte bei.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "crater-lake",
+          "reason": "Herkunft eines Seebeckens und Wasserwege mit einem anders entstandenen See vergleichen."
+        },
+        {
+          "id": "tanganyika",
+          "reason": "Eine andere Seelandschaft betrachten, ohne vom Wasser allein auf gleiche Beckenentstehung zu schließen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gestein",
+          "reason": "Sandstein von jüngeren lockeren Ablagerungen unterscheiden."
+        },
+        {
+          "term": "Gletscher",
+          "reason": "Eisprägung und Entlastung des Untergrundes verbinden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "jeju-lava-tube": {
+    "id": "jeju-lava-tube",
+    "name": "Manjanggul · Lavaröhren auf Jeju",
+    "family": "process",
+    "learning": {
+      "learningGoal": "Die Entstehung eines Hohlraums durch einen überkrusteten Lavastrom von einer Lösungshöhle unterscheiden.",
+      "starter": "Zur südkoreanischen Vulkaninsel Jeju gehört das Geomunoreum-Lavaröhrensystem. In einer Lavaröhre blieb nach dem Abfließen von Lava ein Hohlraum zurück. Das ist eine andere Entstehungsweise als das langsame Lösen von Kalkgestein durch Wasser.",
+      "deeper": "Die NPS-Erklärung an einem anderen Vulkanstandort beschreibt den grundlegenden Vorgang: An der Oberfläche eines Lavastroms kann Lava abkühlen und zu festem Gestein erstarren. Darunter fließt noch heiße Lava weiter. Endet die Zufuhr und fließt Lava aus dem überkrusteten Abschnitt ab, kann eine röhrenartige Höhle zurückbleiben. Die UNESCO beschreibt auf Jeju dunkle Lavawände und zusätzlich spätere Karbonatablagerungen im Geomunoreum-System. Solche späteren Verzierungen sind von der Entstehung des Hohlraums zu unterscheiden. Nicht jede Höhle mit einer Ablagerung an der Decke entstand deshalb als Kalklösungshöhle.",
+      "observe": "Wechsle zwischen fließender Lava, fester Kruste mit weiterem Fluss darunter und dem Hohlraum nach Abfluss. Vergleiche den festen Außenumriss in den letzten beiden Ansichten. Beschreibe den Unterschied zur vorbereiteten Mammoth-Cave-Erklärung: Abfluss von Lava oder Lösen von Kalkgestein durch Wasser.",
+      "benefit": "Du kannst ähnlich wirkende unterirdische Räume anhand ihres Entstehungsprozesses unterscheiden.",
+      "figure": {
+        "kind": "lava-surface-crust-draining-tube",
+        "controls": [
+          "Fließende Lava",
+          "Feste Kruste und Fluss darunter",
+          "Hohlraum nach Abfluss"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung, keine Vermessung einer bestimmten Jeju-Höhle, Eruptionssimulation, heutige Temperaturmessung oder Aussage über einen sicheren Höhlenzugang. Die NPS-Seite erklärt den Prozess an Lava Beds; deren lokale Datierungen, Tektonik und Aussagen zur Dachstabilität werden nicht auf Jeju übertragen. Nicht jeder Lavastrom bildet eine offene, begehbare Röhre."
+      },
+      "question": {
+        "prompt": "Welcher Vorgang kann einen Hohlraum unter der bereits festen Oberfläche eines Lavastroms hinterlassen?",
+        "answers": [
+          "Lava darunter fließt weiter und später aus dem überkrusteten Abschnitt ab.",
+          "Die Oberfläche bleibt vollständig flüssig und trägt dadurch ein festes Dach.",
+          "Jede Höhle muss zuerst durch das Auflösen von Kalk entstehen."
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den Zustand der Oberfläche mit dem Material, das sich darunter noch bewegen kann.",
+        "why": "Der gelesene NPS-Fachtext beschreibt eine abgekühlte Kruste über weiterfließender Lava und den Hohlraum nach ihrem Abfluss. Der UNESCO-Beleg ordnet die Jeju-Röhren als vulkanisches Höhlensystem ein; spätere Karbonatablagerungen erklären nicht allein dessen Hohlraum.",
+        "wrongReasons": [
+          "",
+          "Ein festes Dach setzt an dieser Stelle erstarrtes Material voraus; vollständig flüssiges Material bildet selbst keine solche Kruste.",
+          "Lösungshöhlen sind eine Entstehungsweise; überkrustete und entleerte Lavastromabschnitte eine andere."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/1264/",
+          "title": "UNESCO World Heritage Centre · Jeju Volcanic Island and Lava Tubes",
+          "anchor": "English Description; Outstanding Universal Value, criteria(vii) and(viii): Geomunoreum lava walls and secondary carbonate decorations",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.nps.gov/labe/learn/nature/geology.htm",
+          "title": "National Park Service · Geology, Lava Beds",
+          "anchor": "Lava Tube Caves: cooling and hardening surface, insulated continuing flow and drainage",
+          "checkedOn": "2026-11-01",
+          "updatedOn": "2024-04-12"
+        },
+        {
+          "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=111165",
+          "title": "Korea Tourism Organization · Manjanggul und das Lavaröhrensystem",
+          "anchor": "Introduction: Manjanggul in Gimnyeong-ri, Jeju, is part of the Geomunoreum Lava Tube system. Only named-site association adopted, no visitor hours, size/rank or routes.",
+          "checkedOn": "2026-11-02",
+          "updatedOn": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Manjanggul",
+          "title": "Manjanggul · ergänzender Lageabgleich",
+          "anchor": "Coordinates33.5282N126.7701E, compared with the retained approximate point33.5283N126.7701E. No article text, dimensions, species counts or photos adopted.",
+          "checkedOn": "2026-11-02",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Geomunoreum auf Jeju ist ein vulkanisches Lavaröhrensystem mit Lavawänden und teilweise sekundären Karbonatablagerungen.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Über einem Lavastrom kann eine feste Kruste entstehen; darunter weiterfließende und später abfließende Lava kann einen Hohlraum hinterlassen.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "mammoth-cave",
+          "reason": "Lavaröhre und Kalklösungshöhle nach ihren Entstehungsprozessen unterscheiden."
+        },
+        {
+          "id": "iceland",
+          "reason": "Vorhandene Vulkanlandschaft als weiteren Zusammenhang von Lava und erstarrtem Gestein einbeziehen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Gestein",
+          "reason": "Feste Kruste und flüssige Lava unterscheiden."
+        },
+        {
+          "term": "Wärme",
+          "reason": "Unterschiedliche Abkühlung an Oberfläche und im geschützten Inneren einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "pamukkale": {
+    "id": "pamukkale",
+    "name": "Kalkterrassen von Pamukkale",
+    "family": "process",
+    "learning": {
+      "learningGoal": "Die Bildung mineralischer Ablagerungen aus Quellwasser von der Abtragung oder dem Gefrieren von Wasser unterscheiden.",
+      "starter": "Bei Pamukkale im Südwesten der Türkei bilden helle Kalkablagerungen stufenartige Terrassen. Mineralhaltiges Wasser aus warmen Quellen trägt zu ihrer Entstehung bei. Die weiße Farbe ist kein Beweis für Schnee oder Eis.",
+      "deeper": "Die UNESCO beschreibt calciumcarbonathaltige Ablagerungen, die aus dem Quellwasser entstehen und den Terrassen einen weißen Überzug geben. Das Wasser bringt gelöste mineralische Bestandteile an die Oberfläche; unter passenden Bedingungen bilden sich daraus feste Ablagerungen. So kann Material aufgebaut werden, statt nur einen vorhandenen Felsen abzutragen. Die Kalkterrassen heißen auch Travertinterrassen. „Weiß“ beschreibt dabei zunächst eine sichtbare Eigenschaft und bestimmt weder Temperatur noch Stoffart allein. Die Skizze zeigt Stofftransport und Ablagerung, ohne eine vollständige chemische Reaktionsfolge oder heutige Wachstumsrate zu berechnen.",
+      "observe": "Verfolge den Wasserweg über die gedachten Stufen. Blende die Symbole gelöster Bestandteile und dann die festen Ablagerungsbänder ein. Prüfe, ob Wasser auch danach weiterfließt. Erkläre den Unterschied zwischen Stofftransport und fester Ablagerung; gleiche weiße Farbe bedeutet nicht Eis oder dass alle Wässer Kalk ablagern.",
+      "benefit": "Du kannst erklären, dass Wasser sowohl Material fortführen als auch zur Bildung fester Ablagerungen beitragen kann.",
+      "figure": {
+        "kind": "spring-water-mineral-transport-and-terrace-deposit",
+        "controls": [
+          "Quellwasser",
+          "Gelöste Bestandteile unterwegs",
+          "Feste Ablagerung an der Stufe"
+        ],
+        "limits": "Eigene schematische Erklärung, keine maßstäbliche Terrassenkarte, chemische Gleichgewichtsrechnung, Wasseranalyse, Temperatur- oder Wachstumsprognose. Punkte im Wasser kennzeichnen gelöste Bestandteile symbolisch, keine mit bloßem Auge sichtbaren einzelnen gelösten Teilchen. Die Illustration behauptet weder, jedes Wasser bilde Kalk, noch, alles Wasser werde zu Gestein."
+      },
+      "question": {
+        "prompt": "Was passt zur Entstehung der hellen Terrassen von Pamukkale?",
+        "answers": [
+          "Ihre weiße Farbe beweist, dass die Stufen aus gefrorenem Wasser bestehen.",
+          "Mineralhaltiges Quellwasser kann zur Bildung fester Kalkablagerungen beitragen.",
+          "Wasser kann grundsätzlich nur Gestein wegtragen und niemals Ablagerungen ermöglichen."
+        ],
+        "correct": 1,
+        "hint": "Trenne die sichtbare Farbe von der Herkunft des festen Materials.",
+        "why": "Der UNESCO-Fachtext nennt warmes mineralhaltiges Quellwasser und neue Calciumcarbonatablagerungen. Damit erklärt er einen Aufbau fester mineralischer Formen, keine Vereisung der Landschaft.",
+        "wrongReasons": [
+          "Ein weißer Eindruck allein bestimmt weder Stoff noch Temperatur; die beschriebenen Quellen und Ablagerungen sind keine Schneedecke.",
+          "",
+          "Wasser kann gelöste Stoffe transportieren, aus denen unter passenden Bedingungen feste Ablagerungen entstehen."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/485/",
+          "title": "UNESCO World Heritage Centre · Hierapolis-Pamukkale",
+          "anchor": "English Description; Outstanding Universal Value, Brief synthesis and criterion(vii): thermal spring waters, calcite, fresh calcium carbonate deposits and stepped terraces",
+          "checkedOn": "2026-11-01",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Thermale mineralhaltige Quellwässer haben die stufenartigen Travertinterrassen bei Pamukkale mitgeformt.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Neue Calciumcarbonatablagerungen geben den Terrassen einen weißen Überzug; die Farbe ist kein Beleg für Eis.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "mammoth-cave",
+          "reason": "Kalklösung und Aufbau mineralischer Ablagerungen als unterschiedliche Wasser-Gesteins-Vorgänge vergleichen."
+        },
+        {
+          "id": "white-sands",
+          "reason": "Gipskristalle und Kalkablagerungen unterscheiden; ähnliche helle Farbe bedeutet keine gleiche Mineralart oder Landschaftsentstehung."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Mineral",
+          "reason": "Das Material hinter einer auffälligen Farbe fachlich benennen."
+        },
+        {
+          "term": "Grundwasser",
+          "reason": "Die unterirdische Herkunft von Quellwasser mit dem oberirdischen Wasserweg verbinden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "salar-uyuni": {
+    "id": "salar-uyuni",
+    "name": "Salar de Uyuni",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Die Geschichte einer Salzfläche mit Wasser im Becken, Verdunstung und zurückbleibender Ablagerung verbinden.",
+      "starter": "Der Salar de Uyuni ist eine weite Salzfläche im bolivianischen Hochland. Früher sammelte sich dort Wasser; beim Eintrocknen blieben salzige Ablagerungen zurück.",
+      "deeper": "Die NASA beschreibt die Salzkruste als Teil der Geschichte eines ausgetrockneten Sees. Das Becken besitzt keinen gewöhnlichen Abfluss zum Meer. Es kann trotzdem zeitweise wieder Wasser erhalten: Regen und Schmelzwasser aus der Umgebung gelangen hinein. Eine nasse spiegelnde Fläche und eine trockenere Salzkruste sind daher mögliche unterschiedliche Zustände derselben Landschaft, keine sich ausschließenden Ortsbeschreibungen.",
+      "observe": "Verfolge in der Skizze Wasser hinein und Wasserdampf hinaus. Vergleiche einen wasserreicheren mit einem eingetrockneten Gedankenbeispiel. Beschreibe, warum die verbleibende feste Ablagerung nicht die gesamte frühere Wassermenge angibt.",
+      "benefit": "Du kannst eine auffällige Salzfläche als Ergebnis eines Wasser- und Stoffwegs erklären, ohne ein einzelnes Foto als dauerhaften Zustand zu lesen.",
+      "figure": {
+        "kind": "closed-basin-water-evaporation-salt-residue",
+        "controls": [
+          "Wasser im Becken",
+          "Verdunstung und Rückstand",
+          "Wasserreicherer Vergleichszustand"
+        ],
+        "limits": "Eigene Schnittskizze mit symbolischem Wasser- und Stoffweg; keine chemische Zusammensetzung, Salzmenge, Verdunstungsrate, aktuelle Überflutungs- oder Rohstoffprognose. Salzzeichen sind Symbole, keine frei sichtbaren gelösten Teilchen. Nicht mit einer industriellen Verdunstungsanlage gleichsetzen."
+      },
+      "question": {
+        "prompt": "Eine Salzfläche ist auf einer Aufnahme trocken und auf einer anderen von Wasser bedeckt. Was sollte man daraus zunächst folgern?",
+        "answers": [
+          "Mindestens eine Aufnahme muss einen anderen Ort zeigen.",
+          "Der Ort kann zu verschiedenen Zeiten unterschiedlich viel Wasser enthalten.",
+          "Eine trockene Aufnahme beweist, dass dort nie ein See existiert haben kann."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide die Identität einer Landschaft von ihrem Zustand zum Aufnahmezeitpunkt.",
+        "why": "Die NASA beschreibt sowohl den trockenen Salzrückstand früheren Wassers als auch zeitweiliges erneutes Wasser im geschlossenen Becken. Daraus folgt kein bestimmter Wasserstand für jeden künftigen Tag.",
+        "wrongReasons": [
+          "Ein veränderlicher Zustand allein beweist keinen Ortswechsel.",
+          "",
+          "Eine heutige Trockenphase widerlegt nicht die Geschichte eines früher wasserreicheren Beckens."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://science.nasa.gov/earth/earth-observatory/lithium-harvesting-at-salar-de-uyuni-144976/",
+          "title": "NASA Earth Observatory · Lithium Harvesting at Salar de Uyuni",
+          "anchor": "Opening geology paragraph: a former lake dried, leaving salt-encrusted landscape",
+          "checkedOn": "2026-11-01",
+          "publishedOn": "2019-04-27",
+          "updatedOn": null
+        },
+        {
+          "url": "https://science.nasa.gov/earth/earth-observatory/a-salt-bath-in-bolivia-149502/",
+          "title": "NASA Earth Observatory · A Salt Bath in Bolivia",
+          "anchor": "Closed-basin precipitation and wet/dry salt-flat appearance; observations explicitly refer to2021/2022",
+          "checkedOn": "2026-11-01",
+          "publishedOn": null,
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Die Salzkruste ist mit dem Eintrocknen eines früheren Sees verbunden.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Im geschlossenen Becken können Regen und Schnee aus der Umgebung erneut Wasserflächen bilden; Nass- und Trockenphasen werden unterschieden.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "lencois-maranhenses",
+          "reason": "Zwei auffällige helle Landschaften mit zeitweiligem Wasser vergleichen, ohne Salzkruste und Sanddünen gleichzusetzen."
+        },
+        {
+          "id": "caspian",
+          "reason": "Geschlossene Becken und ihre unterschiedlichen Wasser- und Stoffbedingungen vergleichen, ohne dieselbe Salzkonzentration anzunehmen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verdunstung",
+          "reason": "Wasserverlust als Übergang in die Luft von einem Abfluss im Fluss unterscheiden."
+        },
+        {
+          "term": "Mineral",
+          "reason": "Die feste Ablagerung als stofflichen Bestandteil der Landschaft betrachten."
+        },
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Wasserzufluss und Wasserabgabe auch bei fehlendem Abfluss zum Meer einordnen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "titicaca": {
+    "id": "titicaca",
+    "name": "Titicacasee",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Wasserzuflüsse, Flussabfluss und Verdunstung als verschiedene Wege im Wasserhaushalt eines Sees unterscheiden.",
+      "starter": "Der Titicacasee liegt im Andenhochland zwischen Peru und Bolivien. Mehrere Flüsse bringen Wasser hinein; der Desaguadero führt im Süden Wasser hinaus.",
+      "deeper": "Ein See kann Wasser auch durch Verdunstung an die Luft abgeben. Die ESA beschreibt diesen Weg neben dem Flussabfluss. Deshalb lässt sich aus der Zahl oder Breite sichtbarer Abflussflüsse allein nicht der gesamte Wasserverlust bestimmen. Der Quellenbericht ist von 2021; er ist keine hier gemessene aktuelle Wasserbilanz oder Vorhersage des nächsten Wasserstands.",
+      "observe": "Markiere in der Übersicht nacheinander Zuflüsse, Desaguadero und Verdunstung. Ordne die Pfeile nach ihrer Bedeutung, ohne aus ihrer Anzahl oder Breite Mengen zu berechnen. Erkläre, welcher Wasserweg auf einer gewöhnlichen Karte leicht übersehen wird.",
+      "benefit": "Du kannst einen See als Teil mehrerer Wasserwege betrachten, statt einen einzigen sichtbaren Abfluss für die ganze Bilanz zu halten.",
+      "figure": {
+        "kind": "lake-water-paths-inflow-outlet-evaporation",
+        "controls": [
+          "Zuflüsse",
+          "Desaguadero",
+          "Verdunstung und Vergleich"
+        ],
+        "limits": "Eigene schematische Wasserwegübersicht, keine aktuelle Wassermengenbilanz, maßstäbliche Einzugsgebietskarte oder Prognose. Pfeile kennzeichnen Richtungen/Wege, keine gemessenen Anteile; historische Prozentangaben aus Bildtexten werden nicht als heutige Werte übernommen."
+      },
+      "question": {
+        "prompt": "Du siehst auf einer Karte einen Abflussfluss aus einem See. Welche zusätzliche Wasserabgabe kann die Karte leicht unauffällig lassen?",
+        "answers": [
+          "Wasser kann durch Verdunstung in die Luft gelangen.",
+          "Ohne einen zweiten Abflussfluss kann der See überhaupt kein weiteres Wasser verlieren.",
+          "Die Anzahl eingezeichneter Pfeile bestimmt schon die genaue Wassermenge."
+        ],
+        "correct": 0,
+        "hint": "Denke außer an Wege am Boden auch an einen Übergang zwischen Wasser und Luft.",
+        "why": "Verdunstung ist ein weiterer Wasserweg. Für eine Mengenbilanz müssten die einzelnen Zuflüsse und Verluste gemessen werden; Kartensymbole reichen dafür nicht.",
+        "wrongReasons": [
+          "",
+          "Diese Aussage setzt den gesamten Wasserverlust mit sichtbaren Flusswegen gleich.",
+          "Symbole zeigen hier verschiedene Wege, keine gemessenen Mengen."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.esa.int/Applications/Observing_the_Earth/Earth_from_Space_Lake_Titicaca",
+          "title": "ESA · Earth from Space: Lake Titicaca",
+          "anchor": "Border location; inflowing rivers, southern Desaguadero and evaporation paragraph",
+          "checkedOn": "2026-11-01",
+          "publishedOn": "2021-01-29",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Der See liegt zwischen Peru und Bolivien und besitzt Zuflüsse sowie den Desaguadero als südlichen Abfluss.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Verdunstung ist neben dem Flussabfluss ein wichtiger Wasserweg; keine historischen Prozentanteile als aktuelle Messung übernommen.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "salar-uyuni",
+          "reason": "Wasserwege eines Sees mit einem anderen Hochlandbecken vergleichen, ohne einen vorhandenen Flussabfluss mit einem geschlossenen Becken zu verwechseln."
+        },
+        {
+          "id": "baikal",
+          "reason": "Verschiedene Seen anhand ihrer Wasserwege vergleichen, ohne gleiche Form oder Wasserbilanz anzunehmen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Verdunstung",
+          "reason": "Den Wasserweg in die Luft gezielt erkennen."
+        },
+        {
+          "term": "Wasserkreislauf",
+          "reason": "Zufluss, Abfluss und atmosphärischen Übergang zusammen betrachten."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "victoria-falls": {
+    "id": "victoria-falls",
+    "name": "Victoriafälle am Sambesi",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Einen Wasserfall als veränderlichen Teil einer Flusslandschaft und nicht als für immer feste Kante verstehen.",
+      "starter": "An den Victoriafällen stürzt der Sambesi an der Grenze von Sambia und Simbabwe durch eine Landschaft aus Basaltgestein und Schluchten.",
+      "deeper": "Die UNESCO beschreibt verschiedene frühere Wasserfallpositionen und die fortwirkende Abtragung des Basalts. Eine Fallkante kann sich über geologische Zeit flussaufwärts verlagern. Eine Abfolge alter Schluchten bewahrt dadurch Hinweise auf frühere Zustände. Aus einer vereinfachten Zeichnung folgt aber nicht, wo oder wann die nächste Kante entstehen wird.",
+      "observe": "Ordne in der Zeichnung eine frühere und eine spätere gedachte Kante entlang derselben Flussrichtung. Verfolge, welcher Schluchtabschnitt zurückbleibt. Erkläre die Reihenfolge, ohne jedem Bild eine erfundene Jahreszahl zu geben.",
+      "benefit": "Du kannst heutige Landschaftsformen als Hinweise auf Prozesse lesen, statt sichtbare Grenzen automatisch für unveränderlich zu halten.",
+      "figure": {
+        "kind": "river-fall-retreat-and-left-behind-gorge",
+        "controls": [
+          "Frühere gedachte Kante",
+          "Spätere gedachte Kante",
+          "Reihenfolge vergleichen"
+        ],
+        "limits": "Eigene Schemafolge zur flussaufwärtigen Verlagerung, kein reales Schluchtprofil, Zeitmaßstab, Erosionsrate oder künftiger Verlauf. Keine aktuelle Durchfluss-, Besuchs-, Wagnis- oder Sicherheitsinformation."
+      },
+      "question": {
+        "prompt": "Eine ältere Wasserfallkante liegt im Schema weiter flussabwärts als eine spätere. Welche Deutung passt?",
+        "answers": [
+          "Eine Fallkante muss immer am selben Ort bleiben.",
+          "Eine Landschaft kann nur verändert werden, wenn die Flussrichtung vollständig umkehrt.",
+          "Abtragung kann die Fallkante flussaufwärts verlagern und einen Schluchtabschnitt zurücklassen."
+        ],
+        "correct": 2,
+        "hint": "Verfolge getrennt die Richtung des fließenden Wassers und die Veränderung der Fallkantenposition.",
+        "why": "Die beschriebenen früheren Fallpositionen zeigen eine Veränderung der Landschaft über Zeit. Das erfordert keine Umkehr des gesamten Flusses und liefert allein keine genaue Geschwindigkeit.",
+        "wrongReasons": [
+          "Diese Antwort setzt den heutigen sichtbaren Zustand mit allen vergangenen Zuständen gleich.",
+          "Die Verlagerung einer Kante und die Fließrichtung sind verschiedene Angaben.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/509/",
+          "title": "UNESCO World Heritage Centre · Mosi-oa-Tunya / Victoria Falls",
+          "anchor": "English Description; OUV criterion(viii), changing positions, former gorges and erosion of hard basalt",
+          "checkedOn": "2026-11-01",
+          "publishedOn": null,
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Der Sambesi durchschneidet an den Fällen eine Basalt- und Schluchtlandschaft an der Grenze der beiden benannten Staaten.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Frühere Wasserfallpositionen und fortwirkende Erosion belegen landschaftliche Veränderung; keine Rate oder nächste Position vorausberechnet.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "iguazu-falls",
+          "reason": "Eine Wasserfallgeschichte mit einem räumlich verzweigten Wasserfallsystem vergleichen."
+        },
+        {
+          "id": "grand-canyon",
+          "reason": "Flussabtragung und zurückbleibende Landschaftsformen an unterschiedlichen Beispielen unterscheiden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Erosion",
+          "reason": "Abtragung mit einer sich verändernden Kante verbinden."
+        },
+        {
+          "term": "Gestein",
+          "reason": "Das Material der Landschaft von der Wasserbewegung unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "iguazu-falls": {
+    "id": "iguazu-falls",
+    "name": "Iguazúfälle",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Eine breite Wasserfalllandschaft als gegliedertes System aus mehreren Kaskaden und Inseln lesen.",
+      "starter": "Die Iguazúfälle liegen zwischen Argentinien und Brasilien. Der Fluss stürzt über viele Abschnitte; Inseln und bewaldete Ufer gliedern die Landschaft.",
+      "deeper": "Die UNESCO beschreibt ein System aus zahlreichen Kaskaden und Stromschnellen. Sprühwasser erreicht Inseln und Ufer und trägt dort zu feuchten Bedingungen bei. Deshalb ist die Landschaft mehr als eine einzige durchgehende Fallkante. Die beiden angrenzenden Nationalparks heißen auf Spanisch Iguazú und auf Portugiesisch Iguaçu; sie beschreiben zwei Seiten derselben grenzüberschreitenden Umgebung.",
+      "observe": "Verfolge in der Übersicht zwei gedachte Wasserwege an einer Insel vorbei. Blende danach die Fallabschnitte und die Sprühwasserzone nacheinander ein. Beschreibe die räumliche Gliederung, ohne die Symbolzahl als wirkliche Wasserfallzählung zu lesen.",
+      "benefit": "Du kannst gemeinsame Landschaften über mehrere Teilformen und Staatsgrenzen hinweg einordnen.",
+      "figure": {
+        "kind": "branching-waterfall-cascades-island-spray",
+        "controls": [
+          "Wasserwege und Insel",
+          "Mehrere Fallabschnitte",
+          "Sprühwasserzone"
+        ],
+        "limits": "Eigene Aufsicht/Seitenansicht ohne echte Flusskarte, exakte Kaskadenzahl, Durchflussmenge, Verteilung zwischen Armen oder Besuchsroute. Symbole sind gedachte Beispiele; kein ganzjährig gleichbleibender Wasserstand oder momentaner Zustand behauptet."
+      },
+      "question": {
+        "prompt": "Ein breites Wasserfallsystem wird von Inseln und getrennten Fallabschnitten gegliedert. Welche Beschreibung passt?",
+        "answers": [
+          "Die ganze Breite muss aus einer einzigen überall gleichen Kante bestehen.",
+          "Mehrere Teilformen können gemeinsam eine Wasserfalllandschaft bilden.",
+          "Zwei verschiedene Parknamen beweisen zwei voneinander unabhängige Flüsse."
+        ],
+        "correct": 1,
+        "hint": "Unterscheide einen Namen für die gesamte Landschaft von ihren sichtbaren Teilformen.",
+        "why": "Die Fachtexte beschreiben Kaskaden, Inseln und zwei benachbarte Parks am gemeinsamen Fluss. Räumliche Gliederung und verschiedene Sprachformen sind kein Beleg für unabhängige Flusssysteme.",
+        "wrongReasons": [
+          "Eine breite Gesamterscheinung bedeutet nicht überall identischen Aufbau.",
+          "",
+          "Verschiedene Benennungen benachbarter Teilgebiete bestimmen nicht die Anzahl der Flüsse."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://whc.unesco.org/en/list/303/",
+          "title": "UNESCO World Heritage Centre · Iguazú National Park, Argentina",
+          "anchor": "OUV Brief synthesis and criterion(vii), shared border river, cascades, river islands and spray",
+          "checkedOn": "2026-11-01",
+          "publishedOn": null,
+          "updatedOn": null
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/355/",
+          "title": "UNESCO World Heritage Centre · Iguaçu National Park, Brazil",
+          "anchor": "English Description: shared waterfalls with Argentine sister park and spray supporting vegetation",
+          "checkedOn": "2026-11-01",
+          "publishedOn": null,
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Eine gegliederte Folge von Kaskaden und Inseln gehört zur gemeinsamen argentinisch-brasilianischen Wasserfalllandschaft.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Sprühwasser beeinflusst die feuchten Bedingungen für die Vegetation an der Wasserfalllandschaft.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "victoria-falls",
+          "reason": "Räumliche Aufteilung eines Wasserfallsystems und zeitliche Veränderung einer Fallkante als unterschiedliche Vergleichsfragen erkennen."
+        },
+        {
+          "id": "amazon-forest",
+          "reason": "Feuchte Waldlebensräume vergleichen, ohne Atlantischen Wald und Amazonaswald als denselben Naturraum zu behandeln."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Lebensraum",
+          "reason": "Sprühwasser und Uferbedingungen mit dem umgebenden Lebensraum verbinden."
+        },
+        {
+          "term": "Erosion",
+          "reason": "Wasserfallformen mit längerfristiger Landschaftsveränderung verknüpfen."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "great-blue-hole": {
+    "id": "great-blue-hole",
+    "name": "Great Blue Hole",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Die heutige Lage eines überfluteten Hohlraums von den Bedingungen seiner früheren Formung unterscheiden.",
+      "starter": "Das Great Blue Hole liegt im Lighthouse Reef vor Belize. Die tiefe Senke ist heute vom Meer überflutet; ihre Geschichte reicht zu Zeiten mit niedrigerem Meeresspiegel zurück.",
+      "deeper": "Die ESA erklärt, dass Regen und chemische Verwitterung damals freiliegendes Gestein veränderten, bevor höheres Meer die Senke überflutete. Das WHOI beschreibt allgemein, wie Grundwasser Kalkhöhlen erweitern kann und einbrechende Dächer offene Schächte hinterlassen. Eine heute unter Wasser liegende Form muss daher nicht vollständig unter den heutigen Bedingungen entstanden sein.",
+      "observe": "Vergleiche in der Schnittfolge eine gedachte freiliegende Senke und dieselbe Form bei höherer Wasserlinie. Trenne Aussagen über Gesteinsformung von Aussagen über die spätere Überflutung. Leite aus der Skizze weder eine genaue Tiefe noch ein Entstehungsjahr ab.",
+      "benefit": "Du kannst Veränderungen des Meeresspiegels als Teil einer geologischen Geschichte berücksichtigen.",
+      "figure": {
+        "kind": "limestone-hollow-lower-sea-and-later-flooding",
+        "controls": [
+          "Freiliegende gedachte Form",
+          "Spätere Überflutung",
+          "Beide Zustände vergleichen"
+        ],
+        "limits": "Eigene schematische Schnittzeichnung, keine echte Höhlenvermessung, Tauchkarte, vollständige Mehrphasenrekonstruktion oder Klimaprognose. Allgemeiner WHOI-Entstehungsmechanismus ist ein Vergleich und keine detaillierte persönliche Untersuchung des Belize-Hohlraums. Keine Schutzstatusangabe aus der historischen2013ESA-Seite übernehmen."
+      },
+      "question": {
+        "prompt": "Welche Deutung passt zur Geschichte des Great Blue Hole?",
+        "answers": [
+          "Die heutige Überflutung beweist, dass der Hohlraum immer unter Wasser entstand.",
+          "Gestein konnte bei niedrigerem Meeresspiegel freiliegen und später überflutet werden.",
+          "Durch eine spätere Überflutung verschwindet jede Spur früherer Bedingungen."
+        ],
+        "correct": 1,
+        "hint": "Trenne die heutige Lage von den Bedingungen zu anderen Zeiten.",
+        "why": "Die geologische Erklärung unterscheidet niedrigeren Meeresspiegel, Formung freiliegenden Gesteins und spätere Überflutung. Der heutige Zustand allein legt nicht die Bedingungen jeder früheren Phase fest.",
+        "wrongReasons": [
+          "Die heutige Lage beweist nicht dieselben Bedingungen in jeder früheren Phase.",
+          "",
+          "Frühere Formen können Hinweise auf andere Entstehungsbedingungen bewahren."
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.esa.int/Applications/Observing_the_Earth/Earth_from_Space_Great_Blue_Hole",
+          "title": "ESA · Earth from Space: Great Blue Hole",
+          "anchor": "Lighthouse Atoll; sinkhole form under lower sea level; later flooding",
+          "checkedOn": "2026-11-01",
+          "publishedOn": "2013-04-26",
+          "updatedOn": null
+        },
+        {
+          "url": "https://www.whoi.edu/ocean-learning-hub/multimedia/how-blue-holes-are-formed/",
+          "title": "Woods Hole Oceanographic Institution · How blue holes are formed",
+          "anchor": "General explanatory paragraphs on limestone, groundwater, roof collapse and later sea flooding",
+          "checkedOn": "2026-11-01",
+          "publishedOn": null,
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Das Great Blue Hole liegt im Lighthouse-Reef-Gebiet; eine frühere niedrige Meereslage und spätere Überflutung sind Teil der geologischen Erklärung.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Grundwasserlösung in Kalk und Dacheinsturz sind allgemeine Entstehungsmechanismen entsprechender Senken; keine vollständige ortsspezifische Rekonstruktion behauptet.",
+          "sourceIndex": 1
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "mammoth-cave",
+          "reason": "Heutige offene beziehungsweise überflutete Senken mit einer begehbaren Lösungshöhle vergleichen, ohne gleiche lokale Geschichte zu behaupten."
+        },
+        {
+          "id": "ha-long-bay",
+          "reason": "Kalklandschaft und Meereseinfluss als verbundene, aber verschiedene Teile einer geologischen Erklärung lesen."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Meeresspiegel",
+          "reason": "Die Lage einer Form gegenüber verschiedenen gedachten Wasserständen einordnen."
+        },
+        {
+          "term": "Grundwasser",
+          "reason": "Unterirdische Wasserwege als möglichen Teil der Gesteinsformung erkennen."
+        },
+        {
+          "term": "Gestein",
+          "reason": "Die feste Form von ihrer heutigen Wasserbedeckung unterscheiden."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  },
+  "galapagos-upwelling": {
+    "id": "galapagos-upwelling",
+    "name": "Auftriebswasser westlich von Galápagos",
+    "family": "final-six",
+    "learning": {
+      "learningGoal": "Aufsteigendes Tiefenwasser als möglichen Nährstoffweg erkennen und eine begrenzte Schemaerklärung von einer realen Meeresvorhersage unterscheiden.",
+      "starter": "Bei Galápagos kann kühleres Wasser aus tieferen Meeresschichten nach oben gelangen. Es kann Nährstoffe in die lichtreichere Oberflächenschicht bringen.",
+      "deeper": "Eine Studie von 2021 beschreibt saisonalen Auftrieb besonders westlich der Inseln. In ihrer regionalen Modelluntersuchung wirken lokale Winde und Fronten im oberen Meer zusammen. Die mitgebrachten Nährstoffe können das Wachstum von Phytoplankton unterstützen. Das ist keine Regel, nach der kaltes Wasser allein eine bestimmte Zahl von Tieren oder an jedem Ort dieselbe Nahrungssituation erzeugt.",
+      "observe": "Verfolge in der Skizze einen Pfeil aus einer tieferen in eine obere Wasserschicht. Unterscheide die Bewegung des Wassers von den symbolisch mitgeführten Stoffen. Erkläre anschließend, welche realen Messwerte das Schema gerade nicht liefert.",
+      "benefit": "Du kannst einen Zusammenhang zwischen Wasserbewegung und Lebensbedingungen erklären, ohne aus einem einzigen Merkmal den ganzen Zustand eines Nahrungsnetzes abzuleiten.",
+      "figure": {
+        "kind": "deeper-water-upwelling-nutrients-sunlit-layer",
+        "controls": [
+          "Tieferes Wasser",
+          "Aufsteigender Wasserweg",
+          "Obere lichtreichere Schicht"
+        ],
+        "limits": "Eigene schematische Wasserwegdarstellung, keine Strömungssimulation, Nährstoffmessung, Artenzählung oder Wetter-/ElNiño-Prognose. Pfeile und Nährstoffsymbole sind keine Mengen- oder Geschwindigkeitsskalen. Die Markierung zeigt einen gewählten Orientierungspunkt im westlichen Studienbereich, keine Messstation."
+      },
+      "question": {
+        "prompt": "Ein Schema zeigt kühleres Wasser mit Nährstoffsymbolen, das nach oben gelangt. Welche Aussage bleibt angemessen begrenzt?",
+        "answers": [
+          "Aus kalter Wasserfarbe lässt sich die genaue Zahl aller Tiere ablesen.",
+          "Jeder Ort bei Galápagos muss zu jeder Zeit denselben Auftrieb besitzen.",
+          "Das Schema erklärt einen möglichen Nährstoffweg, misst aber keine aktuelle Tier- oder Nährstoffmenge."
+        ],
+        "correct": 2,
+        "hint": "Unterscheide einen gezeigten Zusammenhang von Messungen und Aussagen über alle Orte und Zeiten.",
+        "why": "Das Auftriebsbeispiel verbindet Wasserbewegung mit einem möglichen Nährstoffangebot. Die echte Wirkung hängt von räumlichen und zeitlichen Bedingungen ab; Symbolzahl und Farbe liefern keine aktuelle Bestandsmessung.",
+        "wrongReasons": [
+          "Eine Farbdarstellung ist keine Artenzählung oder Nährstoffmessung.",
+          "Die Studie beschreibt räumliche und saisonale Unterschiede, keine überall gleichbleibende Situation.",
+          ""
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33446722/",
+          "title": "Forryan et al. · Galápagos-Auftrieb, Abstract und Bildunterschriften",
+          "anchor": "Abstract and Figure5caption: seasonal cool nutrient-rich upwelling west of the islands, analysis area0–1S93–91W. An orientation point inside this stated area is chosen, not an observed station.",
+          "checkedOn": "2026-11-02",
+          "publishedOn": "2021-01-14",
+          "updatedOn": null
+        },
+        {
+          "url": "https://nora.nerc.ac.uk/id/eprint/529741/",
+          "title": "NERC Open Research Archive · zugänglicher Original-Abstract",
+          "anchor": "Authors and2021original abstract: strongly seasonal cool nutrient-rich upwelling and local wind-front interactions west of the islands. Same original article, no independent replication claim.",
+          "checkedOn": "2026-11-02",
+          "updatedOn": null
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Die Studie beschreibt saisonalen Auftrieb kühleren nährstoffreichen Tiefenwassers und seine Bedeutung für Phytoplankton.",
+          "sourceIndex": 0
+        },
+        {
+          "claim": "Die regionale Modellstudie findet einen Einfluss lokaler nordwärts gerichteter Winde und oberflächennaher Fronten westlich der Inseln. Keine vollständige aktuelle Ursachen- oder Zustandsmessung übernommen.",
+          "sourceIndex": 0
+        }
+      ],
+      "relatedNature": [
+        {
+          "id": "sargasso-sea",
+          "reason": "Meeresströmungen und Lebensbedingungen in verschiedenen Regionen vergleichen, ohne die Sargassosee als gleiches Auftriebsgebiet darzustellen."
+        },
+        {
+          "id": "reef",
+          "reason": "Nährstoffwege und Lebensgemeinschaften als verschiedene Aspekte eines Meereslebensraums verbinden."
+        }
+      ],
+      "relatedWords": [
+        {
+          "term": "Meeresströmung",
+          "reason": "Wasserbewegungen und ihren Transport von Stoffen mit einem konkreten regionalen Prozess verbinden."
+        },
+        {
+          "term": "Lebensraum",
+          "reason": "Nährstoffangebot als einen Teil der Bedingungen für Lebewesen betrachten."
+        }
+      ]
+    },
+    "sourceReadOn": "2026-11-01"
+  }
+}

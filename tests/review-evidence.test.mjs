@@ -69,10 +69,10 @@ test('interrupted known native journey-help files retain exact originals and sou
  await fs.writeFile(path.join(dir,'journey-engine-work','webkit','journey-help-webkit','damaged.png'),'unfinished image');await assert.rejects(prepareReview(dir),/Invalid screenshot journey-engine-webkit-partial-journey-help-webkit-damaged.png/);assert.equal(JSON.parse(await fs.readFile(path.join(dir,'review','journey-engine-webkit-partial-journey-help-webkit-transfer.json'),'utf8')).synthetic,'webkit');
 });
 
- test('review budget is exactly 700 decimal MB and storage accounting never deletes identical evidence',()=>{
- assert.equal(REVIEW_LIMIT,700_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
- const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,699_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
- assert.equal(reviewStorage([],700_000_000).withinBudget,true);assert.equal(reviewStorage([],700_000_001).withinBudget,false);
+ test('review resource budget is exactly1100 decimal MB and storage accounting never deletes identical evidence',()=>{
+ assert.equal(REVIEW_LIMIT,1_100_000_000);const a={file:'focus-320.png',bytes:100,sha256:'same',retained:true},b={...a,file:'focus-390.png'},c={...a,file:'already-omitted.png',retained:false};
+ const r=reviewStorage([a,b,c],200);assert.equal(r.retainedImages,2);assert.equal(r.reserveBytes,1_099_999_800);assert.equal(r.exactDuplicates.retainedExtraBytes,100);assert.equal(r.exactDuplicates.alreadyOmittedCopiesWithRetainedOriginal,1);assert.equal(r.exactDuplicates.automaticDuplicateRemovals,0);
+ assert.equal(reviewStorage([],1_100_000_000).withinBudget,true);assert.equal(reviewStorage([],1_100_000_001).withinBudget,false);
  for(const invalid of [-1,NaN,Infinity,0.1])assert.equal(reviewStorage([],invalid).withinBudget,false);
  });
 
@@ -122,4 +122,13 @@ test('sharing rejects changed payloads, missing targets and unsafe aliases; diag
  await fs.rm(path.join(dir,capture.file));await fs.symlink(path.join(dir,other.file),path.join(dir,capture.file));await assert.rejects(readReviewScreenshot(dir,other),/Nonregular stored screenshot/);await fs.rm(path.join(dir,capture.file));
  for(const name of [capture.file,other.file])await fs.writeFile(path.join(dir,name),png);
  const diagnostic=await prepareReview(dir);assert.equal(diagnostic.status,'diagnostic');assert.equal(diagnostic.storage.sharedPayloadCopies,0);assert.equal(diagnostic.retainedBytes,2*png.length);assert.ok(diagnostic.screenshots.every(c=>c.storedAs===c.file));
+});
+
+test('review keeps exact separate names and full byte accounting while linking only a closed verified original',async()=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wk-review-source-link-')),dir=path.join(root,'review'),source=path.join(root,'closed-original.png');await fs.mkdir(dir);const png=Buffer.alloc(24);png.write('89504e470d0a1a0a',0,'hex');png.writeUInt32BE(1,16);png.writeUInt32BE(1,20);await fs.writeFile(source,png);const before=await fs.stat(source),capture={file:'quality-focus-original-320.png',bytes:png.length,width:1,height:1,sha256:createHash('sha256').update(png).digest('hex'),retained:true};
+ try{
+  assert.equal(await storeReviewScreenshot(dir,capture,png,new Map(),{originalPath:source}),png.length,'one full review payload still counts against the unchanged selection semantics');const stored=await fs.stat(path.join(dir,capture.file)),after=await fs.stat(source);assert.equal(stored.ino,after.ino);assert.equal(stored.dev,after.dev);assert.equal(after.mtimeMs,before.mtimeMs);assert.deepEqual(await fs.readFile(source),png);assert.equal(capture.storedAs,capture.file);assert.deepEqual(await readReviewScreenshot(dir,capture),png);
+  const wrong=path.join(root,'wrong.png');await fs.writeFile(wrong,Buffer.alloc(24));await assert.rejects(storeReviewScreenshot(dir,{...capture,file:'quality-wrong-320.png'},png,new Map(),{originalPath:wrong}),/Changed or nonregular original/);await assert.rejects(fs.access(path.join(dir,'quality-wrong-320.png')));
+  const alias=path.join(root,'source-symlink.png');await fs.symlink(source,alias);await assert.rejects(storeReviewScreenshot(dir,{...capture,file:'quality-link-320.png'},png,new Map(),{originalPath:alias}),/nonregular original/);assert.deepEqual(await fs.readFile(source),png);
+ }finally{await fs.rm(root,{recursive:true,force:true});}
 });

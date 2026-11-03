@@ -1,7 +1,9 @@
 import PLATES from "./plate-points.json";
 import type { Place } from "./earth-data";
-export type MapLayer="plain"|"capitals"|"mountains"|"rivers"|"lakes"|"deserts"|"forests"|"volcanoes"|"animals"|"records"|"climate"|"vegetation"|"plates"|"orientation"|"timezones";
+import additions from "./nature-new-places.json";
+export type MapLayer="landscapes"|"plain"|"capitals"|"mountains"|"rivers"|"lakes"|"deserts"|"forests"|"volcanoes"|"animals"|"records"|"climate"|"vegetation"|"plates"|"orientation"|"timezones";
 export const MAP_LAYERS:[MapLayer,string,string][]=[
+ ["landscapes","Landschaften verstehen","Ausgewählte Landschaften: Wasser, Gestein, Eis und Lebensräume gemeinsam erklären. Die Punkte zeigen Beispiele, keine Gebietsumrisse."],
  ["plain","Länder & Meere","Dreh die Welt und entdecke Länder, Kontinente und Meere."],
  ["capitals","Städte & Hauptstädte","Ausgewählte Hauptstädte und weitere Städte mit wichtigen Aufgaben. Die Stadtkarte erklärt den Unterschied. Manche Länder haben mehrere Hauptstädte."],
  ["orientation","Linien & Orientierung","Äquator, Wendekreise, Nullmeridian und ein Gradnetz. Diese Linien sind auf der Erde unsichtbar."],
@@ -63,7 +65,8 @@ const entries:Entry[]=[
 
 ];
 export const PLATE_POINTS=PLATES as (Place & {category:MapLayer})[];
-export const NATURE: (Place & {category:MapLayer})[]=entries.map(([id,name,category,lat,lon,text,fact])=>({id,name,kind:"nature",category,lat,lon,text,fact}));
+export const NATURE: (Place & {category:MapLayer})[]=[...entries.map(([id,name,category,lat,lon,text,fact])=>({id,name,kind:"nature" as const,category,lat,lon,text,fact})),...additions as (Place & {category:MapLayer})[]];
+export function hasNatureLearning(id:string){return additions.some(place=>place.id===id);}
 export function layerPlaces(layer:MapLayer){if(layer==="plates")return PLATE_POINTS; if(layer==="records")return NATURE.filter(p=>["everest","mariana","sahara","antarctic-desert","amazon-forest","amazon","baikal","reef","russia-size","vatican-size","vostok","furnace-creek"].includes(p.id));if(layer==="vegetation")return NATURE.filter(p=>["tundra","temperate-forest","amazon-forest","sahara","giraffe"].includes(p.id));return NATURE.filter(p=>p.category===layer);}
 export const CLIMATE_ZONES=[{name:"Tropen",color:"#d6aa53",text:"Rund um den Äquator: viel Sonnenenergie im ganzen Jahr. Regenwald und Savanne sind unterschiedliche tropische Lebensräume."},{name:"Subtropen",color:"#e3cc8b",text:"Zwischen Tropen und gemäßigten Gebieten: oft heiße Sommer. Hier liegen viele heiße Wüsten, aber auch feuchte Landschaften."},{name:"Gemäßigte Zone",color:"#82bd9a",text:"Mittlere Breiten: die Jahreszeiten unterscheiden sich deutlich. Deutschland liegt in dieser Zone."},{name:"Polarzone",color:"#c7e7ec",text:"Nahe den Polen: niedriger Sonnenstand und lange kalte Zeiten. Im Sommer kann die Sonne sehr lange über dem Horizont bleiben."}];
 export const CONTINENT_WORLDS:Record<string,{animal:string;landscape:string;river:string;challenge:string}>={

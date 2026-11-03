@@ -1,10 +1,12 @@
+import {fingerprint} from '../scripts/content-inventory.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import http from 'node:http';import {createHash}from'node:crypto';
 import {worldPhotoIndex,corePhotoIds} from '../scripts/world-photo-index.mjs';import {verifiedContentJSON,fetchLimitedBytes} from '../app/verified-content.mjs';
 const bytes=fs.readFileSync('app/world-photos.json'),photos=JSON.parse(bytes),integrity=JSON.parse(fs.readFileSync('app/world-photo-integrity.json'));
-test('photo projections preserve every canonical immediate credit and all49 identities',()=>{
+test('photo projections preserve every canonical immediate credit and all49 whole original identities and four individually licensed NPS additions',()=>{
  worldPhotoIndex(true);const core=JSON.parse(fs.readFileSync('app/world-photo-core.json'));
  assert.deepEqual(Object.keys(core),corePhotoIds);for(const id of corePhotoIds)assert.deepEqual(core[id],photos[id]);
- assert.deepEqual(JSON.parse(fs.readFileSync('app/world-photo-ids.json')),Object.keys(photos));assert.equal(Object.keys(photos).length,49);
+ assert.deepEqual(JSON.parse(fs.readFileSync('app/world-photo-ids.json')),Object.keys(photos));assert.equal(Object.keys(photos).length,53);
+ const prior=JSON.parse(fs.readFileSync('tests/fixtures/world-photos-before-Nature34-M89-hashes.json'));assert.equal(prior.whole49OriginalPhotos.length,49);for(const row of prior.whole49OriginalPhotos)assert.equal(fingerprint(photos[row.id]),row.sha256,'whole existing rights/source/caption preserved: '+row.id);assert.deepEqual(Object.keys(photos).filter(id=>!prior.whole49OriginalPhotos.some(row=>row.id===id)),prior.addedFourPhotoIds);assert.deepEqual(prior.addedFourPhotoIds,['bryce-hoodoos','arches-sandstone','crater-lake','white-sands']);
  assert.equal(integrity.bytes,bytes.length);assert.equal(integrity.sha256,createHash('sha256').update(bytes).digest('hex'));
 });
 test('exact photo integrity rejects changed and incomplete bytes',async()=>{
