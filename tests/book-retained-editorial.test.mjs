@@ -1,3 +1,4 @@
+import {naturePredecessors,withNaturePreRetainedRuntime} from './nature-predecessor-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -32,7 +33,7 @@ test('nine additional words and eight Why preserve all171 whole previous words,5
 });
 
 test('all203 entire delivered dossiers survive and the17 new content-only dossiers match actual lessons, sources, tasks and existing targets', () => {
-  const registry = read('content/editorial-reviews.json').dossiers;
+  const registry = naturePredecessors(read('content/editorial-reviews.json').dossiers);
   const prior = retainedPredecessors(registry);
   assert.deepEqual(prior.map(row => ({id: row.id, sha256: whole(row)})), before.whole203PredecessorDossiers);
   const inventory = collectInventory(), records = new Map(inventory.records.map(row => [row.id, row])), knownIds = new Set(records.keys());
@@ -55,18 +56,18 @@ test('all203 entire delivered dossiers survive and the17 new content-only dossie
 });
 
 test('lost whole prior history, changed old explanations, wrong new teaching, missing or reordered dossiers and invented new UI fail', () => {
-  const registry = read('content/editorial-reviews.json').dossiers;
+  const registry = naturePredecessors(read('content/editorial-reviews.json').dossiers);
   for (const mutate of [rows => rows.pop(), rows => rows.reverse(), rows => rows[0].explanation += ' unreviewed', rows => delete rows[0].historicalUIBeforeEcology20261101, rows => rows[203].teachingDataHash = '0'.repeat(64), rows => rows[219].id = 'why:invented', rows => rows[203].ui = {build: 'invented'}]) {
     const bad = structuredClone(registry); mutate(bad); assert.throws(() => retainedPredecessors(bad));
   }
 });
 
-test('all220 actual current technical UI retains all203 whole delivered histories and rejects lost or invented UI', async () => {
+test('all220 delivered predecessor technical UI retains all203 whole histories and rejects lost or invented UI', async () => {
   const {validateDossier}=await import('../scripts/editorial-contract.mjs');
-  const registry=read('content/editorial-reviews.json').dossiers,fixture=read('tests/fixtures/editorial-before-retained-203.json');
+  const registry=naturePredecessors(read('content/editorial-reviews.json').dossiers),fixture=read('tests/fixtures/editorial-before-retained-203.json');
   assert.equal(fixture.sourceCommit,'7d56bc792b7ef0bb4296ae0a323589260a3b25bf');assert.equal(fixture.priorDossiers.length,203);assert.equal(fixture.addedDossiers.length,17);
   const previous=retainedPredecessors(registry);assert.deepEqual(previous.map(row=>({id:row.id,wholeSHA256:fingerprint(row)})),fixture.priorDossiers);
   const records=new Map(collectInventory().records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
-  assert.equal(registry.length,220);for(const row of registry)assert.equal(validateDossier(row,records.get(row.id),{build:learningFingerprint(process.cwd()),knownIds}).structurallyReady,true,row.id);
+  assert.equal(registry.length,220);for(const row of registry)assert.equal(validateDossier(row,records.get(row.id),{build:withNaturePreRetainedRuntime(process.cwd(),learningFingerprint),knownIds}).structurallyReady,true,row.id);
   for(const mutate of [rows=>delete rows[0].historicalUIBeforeRetained20261102,rows=>rows[0].historicalUIBeforeRetained20261102.build='invented',rows=>rows[219].ui.offline=false,rows=>delete rows[203].ui]){const bad=structuredClone(registry);mutate(bad);assert.throws(()=>retainedPredecessors(bad));}
 });

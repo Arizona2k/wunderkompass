@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef,useSyncExternalStore} from 'react';
-import {bookLookup} from './book-location';
+import {bookLookup,bookLookupFocus} from './book-location';
 const EVENT='wunder-route';
 const read=()=>window.location.hash.slice(1)||'home';
 // Pin a legacy resume alias to its actual chapter without adding a history entry.
@@ -31,7 +31,7 @@ export function restoreRouteView(path:string,focus=true){
  if((path==='home'||path==='globe'||path==='updates'||path==='world'||path.startsWith('world/')||path==='book'||path.startsWith('book/')||path==='journeys'||path.startsWith('journeys/'))&&Array.isArray(state?.wunderOpen))for(const el of document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure]'))el.open=state.wunderOpen.includes(el.dataset.historyDisclosure);
  window.scrollTo({top:typeof state?.wunderScroll==='number'?state.wunderScroll:0,behavior:'instant'});
  if(!focus)return;
- const lookup=bookLookup(path),focusKey=state?.wunderFocus??(!state?.wunderBook&&lookup?(lookup.tab==='words'?'book-word-target-':'book-why-target-')+lookup.term:undefined);
+ const lookup=bookLookup(path),focusKey=state?.wunderFocus??(!state?.wunderBook&&lookup?bookLookupFocus(lookup):undefined);
  const opener=Array.from(document.querySelectorAll<HTMLElement>('[data-route-focus]')).find(el=>el.dataset.routeFocus===focusKey&&el.getClientRects().length);
  if(opener){
   opener.focus({preventScroll:true});const r=opener.getBoundingClientRect();

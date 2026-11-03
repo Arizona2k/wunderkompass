@@ -1,3 +1,4 @@
+import {naturePredecessors,withNaturePreRetainedRuntime} from './nature-predecessor-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,6 +13,7 @@ const history = 'historicalUIBeforeRetained20261102';
 export const RETAINED_CURRENT_RUNTIME = fixture.currentRuntimeBuild;
 
 export function retainedPredecessors(items) {
+  items=naturePredecessors(items);
   if (items.length < 203) return items; // Older exact layers verify their own input.
   const expected = [...fixture.whole203PredecessorDossiers, ...fixture.new17ContentOnlyBeforeActualUI];
   if (items.length === 203) {
@@ -39,7 +41,8 @@ export function retainedPredecessors(items) {
   return restored.slice(0, 203);
 }
 
-export function withEcologyPreRetainedRuntime(root, inspect) {
+export function withEcologyPreRetainedRuntime(root, inspect) {return withNaturePreRetainedRuntime(root,prior=>originalWithEcologyPreRetainedRuntime(prior,inspect));}
+function originalWithEcologyPreRetainedRuntime(root, inspect) {
   const actual = learningFingerprint(root);
   if (actual !== fixture.currentRuntimeBuild) return inspect(root); // Original inner predicates still reject unknown older builds.
   const current = new Map(learningInputs(root).map(file => [path.relative(root, file), file]));
