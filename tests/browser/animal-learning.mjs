@@ -19,8 +19,10 @@ const {createSave,SAVE_KEY}=await import('../../app/progress-storage.ts');
 const widths=[320,360,390,768,1024,1440,1920];
 const topics=catalog.filter(t=>DATA.entries.some(e=>e.id===t.id));
 
+async function waitForSelectedImageRequest(image){const element=await image.elementHandle();assert(element,'actual image element required');await image.page().waitForFunction(i=>i.isConnected&&i.currentSrc!==''&&i.currentSrc===i.src,element);}
 export async function assertOwnAnimalMedia(visual,id){
  const expected=OWN_MEDIA.entries.find(e=>e.id===id);assert.ok(expected,'declared subject image exists');
+ await waitForSelectedImageRequest(visual.locator('img'));
  const actual=await visual.evaluate(async el=>{const image=el.querySelector('img');if(!image)throw Error('Missing own topic image');await image.decode();if(!image.complete||!image.naturalWidth)throw Error('Missing decoded own topic image');return{src:image.getAttribute('src'),alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,caption:el.querySelector('figcaption')?.textContent};});
  assert.equal(actual.src,expected.src,'reviewed subject image, not a generic substitute');
  assert.equal(actual.caption,expected.caption,'actual visible image disclosure and limits');
@@ -48,7 +50,7 @@ export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',s
  let complete=false,current=entries[0].id;
  try{for(const entry of entries){current=entry.id;
   const ordered=catalog.filter(t=>t.category==='animals'),page=Math.floor(ordered.findIndex(t=>t.id===entry.id)/12)+1;assert.ok(page>0);
-  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.scrollIntoViewIfNeeded();await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
+  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.scrollIntoViewIfNeeded();await waitForSelectedImageRequest(figure.locator('img'));await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
   const origin=await assertAnimalCompactOrigin(figure,entry.kind,{width});
   if(shots&&[320,1440].includes(width)&&!native)await tile.screenshot({path:path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-'+width+'.png'),animations:'disabled'});
   if(shots&&native){await figure.getByText(origin.label,{exact:true}).evaluate(e=>e.scrollIntoView({block:'center'}));await captureNativeViewport(p,path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-200-'+width+'.png'));}

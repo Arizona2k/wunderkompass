@@ -24,7 +24,8 @@ jobs:
     # AuditV2 adds measured task/navigation/route coverage; finite80min reserve.
     # User30Oct: all project technical ceilings +30%, once from80 to104min.
     # Nature34: measured added normal/cold/native coverage; finite130min reserve.
-    timeout-minutes: 130
+    # Nature34: complete current phase timing refines the finite reserve to140min.
+    timeout-minutes: 140
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:
