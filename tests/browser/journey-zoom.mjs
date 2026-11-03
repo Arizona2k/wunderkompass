@@ -1,3 +1,7 @@
+import {natureLearningView} from './nature-learning-view.mjs';
+import {natureNavigationView} from './nature-navigation-view.mjs';
+import {natureProofComplete} from '../../scripts/nature-learning-evidence.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {insideDiagramViews} from './inside-diagrams.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
 import {historyEngineView} from './discovery-central.mjs';
@@ -35,6 +39,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
   try{await assert.rejects(captureNativeViewport(blank,path.join(shots,'history-native-blank-negative.png')),/Native screenshot is uniform/);report.nativeHistory.blankCaptureRejected=true;}finally{await blank.close();}
   report.nativePlanet=[];const previousViewport=p.viewportSize();for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});report.nativePlanet.push(...await planetDiagramViews(p,{width,large:true,native:true,offline:false,shots,engine:'chromium-native'}));}await p.setViewportSize(previousViewport);assert.equal(report.nativePlanet.length,18);
   report.nativeInside=[];for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});report.nativeInside.push(...await insideDiagramViews(p,{width,large:true,native:true,shots,engine:'chromium-native'}));}assert.equal(report.nativeInside.length,16);await p.setViewportSize(previousViewport);
+  report.nativeNature={...browserErrorArrays()};monitorBrowserErrors(p,base,report.nativeNature,{engine:'chromium-native'});for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});assert.equal(await p.evaluate(()=>innerWidth),width);assert.equal(await p.evaluate(()=>devicePixelRatio),2);await natureLearningView(p,report.nativeNature,width,{shots,engine:'chromium',large:true,native:true,captureSession:cdp});await natureNavigationView(p,report.nativeNature,width,{shots,engine:'chromium',native:true,captureSession:cdp});}assert(natureProofComplete(report.nativeNature,[640,320],{native:true}));assert(browserErrorsComplete(report.nativeNature));await p.setViewportSize(previousViewport);
   report.offlineNative=await offlineResilience(null,{port:4779,shots,kind:'chromium',context,native:true});
   report.nativeZoom={percent:200,...dimensions,largeTextAlsoChecked:true};report.speechAvailability=await p.evaluate(()=>({api:'speechSynthesis' in window,germanVoices:window.speechSynthesis?.getVoices().filter(v=>v.lang.startsWith('de')).length??0,audibleTestPerformed:false}));assert.deepEqual(errors,[]);report.checks.push('Actual native Chromium 200% zoom, measured 640 CSS px / 1280 screen px / DPR 2; four journeys, large text, focus, reflow and axe');
  }finally{await context.close();}

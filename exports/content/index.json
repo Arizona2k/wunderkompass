@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T23:18:25.972Z",
+  "generatedAt": "2026-11-03T01:32:02.166Z",
   "personalProgressIncluded": false,
   "topics": 190,
   "categories": {
@@ -49,7 +49,19 @@
       "sources": [
         "app/nature-learning-content.json",
         "app/nature-new-places.json",
-        "app/nature-data.ts"
+        "app/nature-data.ts",
+        "scripts/nature-content-index.mjs",
+        "app/nature-learning-index.json",
+        "app/nature-word-links.json",
+        "app/nature-place-links.json",
+        "app/nature-place-link-ids.json",
+        "app/book-nature-water-figure.tsx",
+        "app/book-nature-geoscience-figure.tsx",
+        "app/book-nature-geology-figure.tsx",
+        "app/book-nature-habitats-figure.tsx",
+        "app/book-nature-landforms-figure.tsx",
+        "app/book-nature-coast-figure.tsx",
+        "app/book-nature-process-figure.tsx"
       ],
       "entries": 34,
       "bytes": 165646,
