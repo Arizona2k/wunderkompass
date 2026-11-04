@@ -1,12 +1,14 @@
+import {beforeFourteenPeople} from './people-fourteen-reference.mjs';
 import {mechanicsPredecessors} from './current-mechanics-reference.mjs';
 import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import catalogue from '../app/world-catalog.json' with {type:'json'};
+import rawCatalogue from '../app/world-catalog.json' with {type:'json'};
 import amendments from './fixtures/learning-audit-explicit-field-amendments.json' with {type:'json'};
-import {worldGameBank} from '../app/world-game-bank.ts';
+import {worldGameBank as rawWorldGameBank} from '../app/world-game-bank.ts';
 import {dossierBeforeLearningAudit,assertCurrentLearningAuditDossierFields,assertCurrentLearningAuditSharedUI,topicBeforeLearningAudit,gameBeforeLearningAudit,assertCurrentLearningAuditFields} from './learning-audit-reference.mjs';
+const catalogue=beforeFourteenPeople(rawCatalogue),worldGameBank=id=>beforeFourteenPeople(rawWorldGameBank(id));
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('four explicit current article and generated-question amendments preserve every other M79 topic/bank value and order',()=>{
  assert.equal(amendments.sourceCommit,'690e97f160d51415224623912ee92ebc798694bc');assert.equal(amendments.topics.length,4);assert.equal(amendments.games.length,4);assert.equal(catalogue.length,190);

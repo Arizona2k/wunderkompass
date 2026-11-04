@@ -4,7 +4,7 @@
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
-    "commit": "7d56bc792b7ef0bb4296ae0a323589260a3b25bf",
+    "commit": "66ad580d7ade865a4986b19340c7bb0b581a65b1",
     "includedMergeCommits": [
       "9f2328ab73c9a142bd023668046310f1661958e9",
       "acaad0f49b1edf65219a7092bb9852feb3bdb718",
@@ -83,7 +83,10 @@
       "a6b27330738159841f3951f92de6c0136ff9ecf0",
       "cf46b9ebc4f031ed35f12b263e852dc432e6243e",
       "c4ac0da20c65cc84176e8835a5b29e05859d7c1a",
-      "7d56bc792b7ef0bb4296ae0a323589260a3b25bf"
+      "7d56bc792b7ef0bb4296ae0a323589260a3b25bf",
+      "d7c1bb56be36f740323066da66f80cfc7ef43c7f",
+      "278b858ca0817efd4474a9fc8e75b08ff5092e12",
+      "66ad580d7ade865a4986b19340c7bb0b581a65b1"
     ]
   },
   "timestampMeaning": "Vercel[bot] success status confirms a completed deployment. Its createdAt is the confirmation time; the Vercel-internal readyAt and a production publication time are not asserted.",
@@ -2209,6 +2212,72 @@
         }
       ],
       "checkedOn": "2026-11-02"
+    },
+    {
+      "number": 89,
+      "title": "Wissensbuch vernetzen und vollständige Prüfbelege automatisch aufteilen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/89",
+      "base": "test-live",
+      "mergedAt": "2026-11-02T20:09:38Z",
+      "mergeCommit": "d7c1bb56be36f740323066da66f80cfc7ef43c7f",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/d7c1bb56be36f740323066da66f80cfc7ef43c7f/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57876960145,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-02T20:09:57Z",
+          "updatedAt": "2026-11-02T20:09:57Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/dX7MoevFKprJNUfJS7d51YNaFvQ9"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
+      "number": 90,
+      "title": "34 Naturerklärungen mit Modellen, Fotos und Buch-/Globus-Rückwegen vernetzen",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/90",
+      "base": "test-live",
+      "mergedAt": "2026-11-03T21:17:10Z",
+      "mergeCommit": "278b858ca0817efd4474a9fc8e75b08ff5092e12",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/278b858ca0817efd4474a9fc8e75b08ff5092e12/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 57986340559,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-03T21:17:46Z",
+          "updatedAt": "2026-11-03T21:17:46Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/JBtqmNERTg4iRVzVR8tDGtQcyrXT"
+        }
+      ],
+      "checkedOn": "2026-11-04"
+    },
+    {
+      "number": 91,
+      "title": "Ausgewählten Naturort in der einfachen Weltkarte im Blick behalten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/91",
+      "base": "test-live",
+      "mergedAt": "2026-11-04T09:49:06Z",
+      "mergeCommit": "66ad580d7ade865a4986b19340c7bb0b581a65b1",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/66ad580d7ade865a4986b19340c7bb0b581a65b1/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 58030383339,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-04T09:49:24Z",
+          "updatedAt": "2026-11-04T09:49:24Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/2sg2VdAYS64CoBLWPrAHAFvRwJuZ"
+        }
+      ],
+      "checkedOn": "2026-11-04"
     }
   ]
 }

@@ -1,8 +1,9 @@
+import {beforeFourteenDossiers} from './people-fourteen-dossier-reference.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';import {validateDossierContent} from '../scripts/editorial-contract.mjs';import {learningFingerprint} from '../build/learning-fingerprint.mjs';import {naturePredecessors,withNaturePreRetainedRuntime} from './nature-predecessor-reference.mjs';
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8')),pack=read('app/nature-learning-content.json'),fixture=read('tests/fixtures/nature-retained-runtime-predecessor.json');
 
 test('34 actual Nature editorial dossiers retain all220 whole delivered histories and match the concrete teaching, source claims and routes',()=>{
- const registry=read('content/editorial-reviews.json').dossiers,inventory=collectInventory(),records=new Map(inventory.records.map(r=>[r.id,r])),knownIds=new Set(records.keys());
+ const registry=beforeFourteenDossiers(read('content/editorial-reviews.json').dossiers),inventory=collectInventory(),records=new Map(inventory.records.map(r=>[r.id,r])),knownIds=new Set(records.keys());
  assert.equal(registry.length,254);assert.deepEqual(naturePredecessors(registry).map(row=>({id:row.id,sha256:fingerprint(row)})),fixture.whole220PredecessorDossiers.map(({ui,...row})=>row));
  assert.deepEqual(registry.slice(220).map(row=>row.id),Object.keys(pack).map(id=>'nature-topics:'+id));
  for(const d of registry.slice(220)){

@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
+import {capturePeopleFigureTree,assertPeopleFigureSemanticPair,rejectFourActualDOMCountercases} from './fourteen-actual-dom-semantic-laws.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const entries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries;
+assert.deepEqual(entries.map(e=>e.id),["person-mary_anning","person-ibn_al_haytham","person-maria_sibylla_merian","person-inge_lehmann","person-henrietta_swan_leavitt","person-cecilia_payne_gaposchkin","person-rosalind_franklin","person-jocelyn_bell_burnell","person-katsushika_hokusai","person-murasaki_shikibu","person-rachel_carson","person-octavia_butler","person-nelson_mandela","person-chien_shiung_wu","person-lise_meitner","person-zaha_hadid","person-rabindranath_tagore","person-ibn_sina"],'all four retained and fourteen added biographies must be visited individually');
+const newKinds=new Set(entries.slice(4).map(e=>e.figure));assert.equal(newKinds.size,14);
 const legacy=JSON.parse(await fs.readFile(new URL('../fixtures/legacy-people18-before-two-biographies.json',import.meta.url),'utf8'));
 const saveKey='erde-entdecken:save:v3';
 const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope > summary').click();};
@@ -14,13 +17,13 @@ async function geometry(page,box){
  for(const button of await box.getByRole('button').all()){const b=await button.boundingBox();if(b)assert(b.width>=43.9&&b.height>=43.9,'biography control has an actual44px touch target');}
 }
 export async function peopleSourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){
- const initial=await page.evaluate(()=>location.hash),observed=[];let complete=false;
+ const initial=await page.evaluate(()=>location.hash),observed=[],actualSemanticPairs={};let complete=false;
  try{for(const entry of entries){
   const topic=catalog.find(t=>t.id===entry.id);await page.evaluate(id=>location.hash='world/topic/'+id,entry.id);
   const article=page.locator('.world-article');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();const box=article.locator('[data-person-evidence="'+entry.id+'"]');await box.waitFor();
   const learnedBefore=await page.evaluate(({id,key})=>JSON.parse(localStorage.getItem(key)).progress.discoveries.includes('learned:'+id),{id:entry.id,key:saveKey});
   await article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/}).focus();await page.keyboard.press('Enter');assert.equal(await box.evaluate(e=>e===document.activeElement),true,'wayfinder focuses the actual research activity');
-  const figure=box.locator('.people-evidence-figure');
+  const figure=box.locator('.people-evidence-figure'),actualFigureStates=[];
   const coreObservation=entry.figure==='inner-core-evidence-comparison'?await figure.locator('[data-core-observation]').textContent():null;
   for(const scene of[0,1]){
    const button=figure.locator('.visual-choice button').nth(scene);await button.focus();await page.keyboard.press('Enter');assert.equal(await figure.getAttribute('data-evidence-scene'),String(scene));
@@ -43,12 +46,14 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
     await figure.getByText('Kein Foto, originales Seismogramm oder berechneter Wellenverlauf',{exact:false}).waitFor();
     assert.equal(await figure.locator('[data-core-observation]').textContent(),coreObservation,'the observed signal stays the same when the explanation changes');
     assert.equal(await figure.locator('svg path').count(),0,'no invented measured wave ray or seismogram');
-   }else assert.fail('Unreviewed people figure '+entry.figure);
+   }else assert(newKinds.has(entry.figure),'Unreviewed people figure '+entry.figure);
+   if(newKinds.has(entry.figure))actualFigureStates.push(await figure.evaluate(capturePeopleFigureTree));
    if(entry.figure==='insect-observation-series'||entry.figure==='inner-core-evidence-comparison'){
     assert.equal(await figure.locator('svg text').count(),0,'labels are readable wrapping HTML, not tiny SVG text');
     await figure.getByText('mit KI-Unterstützung',{exact:false}).waitFor();
    }
   }
+  const actualSemanticLaw=newKinds.has(entry.figure)?assertPeopleFigureSemanticPair(entry.figure,actualFigureStates):null;if(actualSemanticLaw)actualSemanticPairs[entry.figure]=actualFigureStates;
   for(let level=0;level<3;level++){
    const task=entry.tasks[level],button=box.locator('.people-evidence-levels button').nth(level);if(touch)await button.tap();else{await button.focus();await page.keyboard.press('Enter');}
    assert.equal(await button.getAttribute('aria-pressed'),'true');const activity=box.locator('[data-person-evidence-task="'+task.age+'"]');await activity.getByText(task.example,{exact:true}).waitFor();await activity.getByRole('heading',{name:task.prompt,exact:true}).waitFor();await reveal(activity.locator('details'));await activity.getByText(task.hint,{exact:true}).waitFor();
@@ -60,7 +65,8 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
   if(questions){const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});if(!await right.isDisabled()){await reveal(q.locator('.world-game-hint'));await q.getByText(topic.questionFeedback.hint,{exact:true}).waitFor();for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback.wrongReasons[i],{exact:true}).waitFor();}await right.click();}await q.getByText(topic.question.why,{exact:true}).waitFor();}
   if(questions&&width===390){await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();await box.waitFor();}
   if(await page.evaluate(()=>typeof window.axe?.run==='function')){const violations=await page.evaluate(async()=>{const r=await window.axe.run('.people-evidence',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}));});assert.deepEqual(violations,[],'biography activity WCAG A/AA');}
-  const large=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));assert((await article.locator('.people-illustration figcaption').evaluate(e=>parseFloat(getComputedStyle(e).fontSize)))>=(large?18.3:16),'own biography media caption respects normal and larger text');
+  const large=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));const actualCaptionFont=await article.locator(topic.image?'.world-photo figcaption':'.people-illustration figcaption').first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));assert(actualCaptionFont>=(large?18.3:16),'biography media caption respects normal and larger text');
+  const actualSVGFonts=await figure.locator('svg text').evaluateAll(es=>es.map(e=>({text:e.textContent,font:parseFloat(getComputedStyle(e).fontSize)*e.ownerSVGElement.getBoundingClientRect().width/e.ownerSVGElement.viewBox.baseVal.width})));assert(actualSVGFonts.every(row=>row.font>=(large?20:16)),'actual drawn label reading size');
   await geometry(page,box);
   for(const id of topic.related){const focus='world-connection-'+topic.id+'-'+id,button=page.locator('[data-route-focus="'+focus+'"]');await button.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').filter({hasText:catalog.find(t=>t.id===id).title}).waitFor();await page.locator('[data-route-focus="world-connection-'+id+'-'+topic.id+'"]').waitFor();await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));await page.goBack();await box.waitFor();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,focus);}
   if(shots&&[320,1440].includes(width))await box.screenshot({path:path.join(shots,'people-evidence-'+engine+'-'+entry.id+'-'+width+'.png'),animations:'disabled'});
@@ -71,8 +77,8 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
    for(const [i,drawing]of(await figure.locator('svg').all()).entries()){await drawing.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});assert.equal(await drawing.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=-2&&r.bottom<=innerHeight+2;}),true,'actual native drawing is fully in the viewport before capture');await captureNativeViewport(page,path.join(shots,prefix+'-diagram'+i+'.png'));}
    for(const [suffix,part]of[['controls',figure.locator('.visual-choice')],['limits',figure.locator('.small-note')]]){await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}
   }
-  observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,reciprocalTargetAndBack:true});
- }assert.deepEqual(observed.map(e=>e.id),entries.map(e=>e.id),'every registered biography activity was actually checked');complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
+  observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,actualCaptionFont,large,actualSemanticLaw,actualFigureStates,actualSVGFonts,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,reciprocalTargetAndBack:true});
+ }assert.deepEqual(observed.map(e=>e.id),entries.map(e=>e.id),'every registered biography activity was actually checked');observed[0].fourActualDOMCountercasesRejected=rejectFourActualDOMCountercases(actualSemanticPairs);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }
 export async function peopleLegacyRound(browser,base,ready,report,shots){
  const context=await browser.newContext({viewport:{width:390,height:950},reducedMotion:'reduce',acceptDownloads:true,serviceWorkers:'block'}),page=await context.newPage(),errors=[],http=[];

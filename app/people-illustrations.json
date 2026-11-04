@@ -66,6 +66,144 @@
         "https://www.amnh.org/learn-teach/curriculum-collections/earth-inside-and-out/inge-lehmann-discoverer-of-the-earth-s-inner-core"
       ],
       "sourceUse": "Fachlicher Zusammenhang aus tatsächlich gelesenen Quellen; keine fremde Abbildung übernommen."
+    },
+    {
+      "id": "person-murasaki_shikibu",
+      "kind": "narrative-transmission",
+      "src": "/world/people/murasaki-shikibu.svg",
+      "width": 300,
+      "height": 170,
+      "alt": "Eigene erfundene Leseszene mit zwei neutralen Figuren und einer Nachricht. Keine Darstellung Murasaki Shikibus oder einer bestimmten historischen Romanfigur.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: erfundene Leseszene, kein historisches Porträt oder Manuskriptbild.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Die erfundene Nachrichtenszene erklärt verschiedene Wissensstände. Sie ist kein Originaltext, keine Szene aus der Genji-Erzählung und kein Wissen über Gedanken historischer Personen.",
+      "sources": [
+        "https://www.kyohaku.go.jp/eng/exhibitions/special/2026_genji/",
+        "https://art.seattleartmuseum.org/en/objects/8029/illustrations-of-genji-monogatari--vol-1-the-tale-of-genj",
+        "https://www.metmuseum.org/exhibitions/listings/2019/tale-of-genji"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-nelson_mandela",
+      "kind": "equal-participation-rule-reading",
+      "src": "/world/people/nelson-mandela.svg",
+      "width": 320,
+      "height": 215,
+      "alt": "Vier eigene nummerierte Stimmzettelsymbole: Nur die ersten beiden Stimmen werden in der dargestellten erfundenen Regel berücksichtigt. Keine historische Wahlaufnahme.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: erfundenes Regelbeispiel, keine Nachstellung der Apartheid.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Die vier Nummern stehen für dieselben vier vorgegebenen stimmberechtigten Mitglieder, nicht für rassistische Gruppen. Keine historische Opfer-/Täterrolle oder moralische Bewertung.",
+      "sources": [
+        "https://www.nelsonmandela.org/biography",
+        "https://www.nelsonmandela.org/democracy",
+        "https://sahistory.org.za/article/united-nations-and-apartheid-timeline-1946-1994",
+        "https://www.apartheidmuseum.org/mandela-exhibition"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-octavia_butler",
+      "kind": "narrative-information-evidence",
+      "src": "/world/people/octavia-butler.svg",
+      "width": 320,
+      "height": 205,
+      "alt": "Eigene erfundene Szene: zwei neutrale Figuren mit verschiedenen Informationen über einen platten Reifen und ein leeres Bücherregal. Kein Porträt Butlers und keine Romanszene.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: erfundene Leseszene, keine Illustration eines Butler-Romans.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Nur die vorgegebenen Informationen im eigenen Beispiel vergleichen. Sichtbare Symbole beweisen keine inneren Motive oder Gefühle. Keine Übernahme von Figuren oder Romantexten Butlers.",
+      "sources": [
+        "https://researchguides.huntington.org/oeb",
+        "https://www.huntington.org/collections/lib-mssoeb",
+        "https://www.macfound.org/fellows/class-of-1995/octavia-butler"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-lise_meitner",
+      "kind": "finding-explanation-evidence",
+      "src": "/world/people/lise-meitner.svg",
+      "width": 320,
+      "height": 205,
+      "alt": "Eigene nicht maßstäbliche Erklärungsskizze: Ein schwerer Kern links wird durch einen Pfeil mit zwei kleineren Kernen rechts verbunden. Keine realen Isotopen- oder Massenangaben.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: Kernteilung schematisch, keine Originalmessung.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Die gleich groß gezeichneten kleinen Kreise belegen keine gleiche reale Masse. Keine bestimmte Reaktion, Apparatur, Nukleonenzahl oder ganze Energiebilanz; historischer Befund und Erklärung bleiben getrennt.",
+      "sources": [
+        "https://www.mpic.de/3549655/die-entdeckung-der-kernspaltung",
+        "https://www.mpg.de/11718069/lise-meitner-im-portraet"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-rabindranath_tagore",
+      "kind": "invented-line-evidence",
+      "src": "/world/people/rabindranath-tagore.svg",
+      "width": 320,
+      "height": 230,
+      "alt": "Eigene blaue freie Grundlinie mit einem ergänzten orangefarbenen Punkt und einer Schnabellinie. Eine mögliche Vogelidee, keine Zeichnung Tagores.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: freie Linie mit Ergänzungen, kein Werk Tagores.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Alle Zeichen sind eigens für dieses Lernbeispiel erfunden. Andere begründete Bilddeutungen bleiben möglich; keine Manuskriptseite, historische Signatur oder allein richtige Fantasie.",
+      "sources": [
+        "https://www.vam.ac.uk/articles/rabindranath-tagore-poet-and-painter",
+        "https://ngmaindia.gov.in/virtual-tour-of-rabindranath-tagore.asp"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-ibn_sina",
+      "kind": "text-transmission-evidence",
+      "src": "/world/people/ibn-sina.svg",
+      "width": 320,
+      "height": 190,
+      "alt": "Drei eigene Buchsymbole in zeitlicher Ordnung: 1 arabischer Ausgangstext, 2 lateinische Übersetzung, 3 spätere Winchester-Abschrift. Keine originalen Buchseiten.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: Text, Übersetzung und Abschrift unterscheiden.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Früher Text im 11., Übersetzung im 12., konkrete Winchester-Abschrift im 15. Jahrhundert. Abstände nicht zeitlich maßstäblich. Keine medizinische Empfehlung und kein Autograf; das andere QDL-Exemplar von 1659 bleibt getrennt.",
+      "sources": [
+        "https://winchestercollections.co.uk/collection/canon-of-medicine/",
+        "https://searcharchives.bl.uk/catalog/032-002753248"
+      ],
+      "sourceUse": "Fachlicher Zusammenhang nach tatsächlich gelesenen Belegen. Keine fremde Bildübernahme. Dieselben eigenen Formen wie im bedienbaren Modell."
+    },
+    {
+      "id": "person-rosalind_franklin",
+      "kind": "diffraction-evidence",
+      "src": "/world/people/rosalind-franklin.svg",
+      "width": 500,
+      "height": 200,
+      "alt": "Eigene begriffliche Gegenüberstellung: links ein frei erfundenes Punktfeld als Symbol für Messinformation, rechts eine gedachte Doppelhelix. Die Struktur wurde nicht aus diesen Punkten berechnet; keine Photo51-Reproduktion.",
+      "caption": "Eigene Erklärzeichnung mit KI-Unterstützung: links erfundene Messzeichen, rechts eine gedachte Struktur; keine Photo51-Reproduktion.",
+      "author": "WunderKompass · eigenes SVG-Schema mit KI-Unterstützung",
+      "rightsState": "own",
+      "notPhotograph": true,
+      "renderer": "app/people-illustration.tsx",
+      "modelLimits": "Das Punktfeld ist frei erfunden und trägt keine reale Beugungsinformation. Die rechts gezeichnete Form wurde nicht daraus berechnet. Beide Darstellungsarten unterscheiden, keinen wissenschaftlichen Rekonstruktionsbeweis behaupten.",
+      "sources": [
+        "https://www.kcl.ac.uk/the-story-behind-photograph-51",
+        "https://www.kcl.ac.uk/news/rosalind-franklin-deliberately-created-photo-51-after-earlier-photograph-revealed-dnas-structure",
+        "https://www.kcl.ac.uk/people/rosalind-franklin"
+      ],
+      "sourceUse": "Historische Einordnung nach tatsächlich gelesenen Quellen; alle Formen neu erfunden, kein historisches Messbild oder Porträt."
     }
   ]
 }

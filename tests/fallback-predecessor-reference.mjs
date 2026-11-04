@@ -1,3 +1,5 @@
+import {beforeFourteenDossiers} from './people-fourteen-dossier-reference.mjs';
+import {withFourteenPredecessorRuntime} from './people-fourteen-runtime-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,6 +13,9 @@ const whole = row => sha(JSON.stringify(row));
 
 // A technical renderer qualification must preserve each entire earlier dossier.
 export function fallbackPredecessors(items) {
+  const peopleUIFile=new URL('./fixtures/editorial-before-people-fourteen-254.json',import.meta.url);
+  const peopleUI=fs.existsSync(peopleUIFile)?JSON.parse(fs.readFileSync(peopleUIFile,'utf8')).currentTemplate:null;
+  items=beforeFourteenDossiers(items,peopleUI);
   if (items.length < 254) return items;
   const previous = fixture.whole254PreviousDossiers;
   assert.equal(items.length, 254);
@@ -34,7 +39,10 @@ export function fallbackPredecessors(items) {
 
 // Only this exact, fully enumerated renderer correction has this predecessor.
 // Unknown sources still reach (and fail) the unchanged inner historical checks.
-export function withFallbackPredecessorRuntime(root, inspect) {
+export function withFallbackPredecessorRuntime(root,inspect) {
+  return withFourteenPredecessorRuntime(root,prior=>originalWithFallbackPredecessorRuntime(prior,inspect));
+}
+function originalWithFallbackPredecessorRuntime(root, inspect) {
   if (learningFingerprint(root) !== fixture.currentRuntimeBuild) return inspect(root);
   const current = new Map(learningInputs(root).map(file => [path.relative(root, file), file]));
   const changes = new Map(fixture.replacedInputs.map(row => [row.name, row]));

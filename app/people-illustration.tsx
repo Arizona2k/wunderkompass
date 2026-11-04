@@ -9,7 +9,7 @@ export default function PeopleIllustration({id,compact=false}:{id:string;compact
  const media=MEDIA.entries.find(e=>e.id===id);
  if(!media)return null;
  return <figure className={'topic-illustration people-illustration '+(compact?'compact':'')}>
-  {media.kind==='fossil-evidence'?<FossilDrawing label={media.alt}/>:media.kind==='light-to-eye'?<><LightDrawing label={media.alt}/>{!compact&&<div className="people-evidence-legend"><span>Lichtquelle</span><span>Gegenstand</span><span>Auge</span></div>}</>:media.kind==='insect-observation-series'?<InsectSequenceDrawing label={media.alt}/>:media.kind==='inner-core-evidence-comparison'?<CoreHypothesisDrawing label={media.alt}/>:null}
+  {'src' in media&&media.src?<img src={media.src} width={media.width} height={media.height} alt={media.alt}/>:media.kind==='fossil-evidence'?<FossilDrawing label={media.alt}/>:media.kind==='light-to-eye'?<><LightDrawing label={media.alt}/>{!compact&&<div className="people-evidence-legend"><span>Lichtquelle</span><span>Gegenstand</span><span>Auge</span></div>}</>:media.kind==='insect-observation-series'?<InsectSequenceDrawing label={media.alt}/>:media.kind==='inner-core-evidence-comparison'?<CoreHypothesisDrawing label={media.alt}/>:null}
   <figcaption>{media.caption}</figcaption>
  </figure>;
 }

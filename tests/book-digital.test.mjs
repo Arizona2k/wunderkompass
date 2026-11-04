@@ -61,7 +61,9 @@ test('all177 whole M85 dossiers and the actual runtime survive; unknown or chang
 });
 
 // Apply only after actual complete current product/browser observations and current original visual review.
-import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {collectInventory as collectCurrentInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {inventoryBeforeFourteenBacklinks} from './people-fourteen-reference.mjs';
+const collectInventory=(...args)=>inventoryBeforeFourteenBacklinks(collectCurrentInventory(...args));
 import {validateDossier} from '../scripts/editorial-contract.mjs';
 const currentDigitalFixture=read('tests/fixtures/editorial-before-digital-177.json');
 const currentDigitalInventory=collectInventory(),currentDigitalRecords=new Map(currentDigitalInventory.records.map(row=>[row.id,row])),currentDigitalKnownIds=new Set(currentDigitalRecords.keys());

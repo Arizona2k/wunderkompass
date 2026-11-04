@@ -1,5 +1,6 @@
 'use client';
 import {useId} from 'react';
+import {additionalPeopleFigures} from './people-new-evidence-figures';
 import {Volume2} from 'lucide-react';
 import DATA from './people-inquiries.json';
 import {LearningDetails} from './learning-components';
@@ -42,6 +43,7 @@ function EvidenceTask({task,onRead}:{task:Task;onRead:(text:string)=>void}){
 }
 function EvidenceFigure({kind}:{kind:string}){
  const [selected,setSelected]=useSavedModel<number>('peopleEvidenceFigure',0,{min:0,max:1});
+ const AdditionalFigure=additionalPeopleFigures[kind];if(AdditionalFigure)return <div className="people-evidence-figure" data-evidence-figure={kind} data-evidence-scene={selected}><AdditionalFigure selected={selected} onSelect={setSelected}/></div>;
  if(kind==='insect-observation-series'||kind==='inner-core-evidence-comparison')return <div className="people-evidence-figure" data-evidence-figure={kind} data-evidence-scene={selected}>{kind==='insect-observation-series'?<InsectObservationFigure selected={selected} onSelect={setSelected}/>:<InnerCoreEvidenceFigure selected={selected} onSelect={setSelected}/>}</div>;
  if(!['fossil-evidence','light-to-eye'].includes(kind))return null;
  const fossil=kind==='fossil-evidence';

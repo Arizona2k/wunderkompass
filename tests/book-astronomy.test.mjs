@@ -8,7 +8,9 @@ import {validateAstronomyPack,ASTRONOMY_WORDS,ASTRONOMY_QUESTIONS} from '../app/
 import {bookAstronomyContent} from '../scripts/book-astronomy-index.mjs';
 import {astronomyPredecessors,withDigitalPreAstronomyRuntime} from './astronomy-predecessor-reference.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
-import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {collectInventory as collectCurrentInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {inventoryBeforeFourteenBacklinks} from './people-fourteen-reference.mjs';
+const collectInventory=(...args)=>inventoryBeforeFourteenBacklinks(collectCurrentInventory(...args));
 import {validateDossierContent} from '../scripts/editorial-contract.mjs';
 const read=name=>JSON.parse(fs.readFileSync(name,'utf8'));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
