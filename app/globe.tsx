@@ -290,11 +290,11 @@ export default function Globe(props: Props) {
 
 function FallbackGlobe(props:Props&{features:NatureFeature[]}){
   const [center,setCenter]=useState({lat:22,lon:16});const features=props.features;
+  const previousReset=useRef(props.reset);
   const drag=useRef<{x:number;y:number;lat:number;lon:number;id:number;moved:boolean}|null>(null);const canceled=useRef(false);const pointers=useRef(new Map<number,{x:number;y:number}>());const pinch=useRef<{distance:number;zoom:number}|null>(null);const svgRef=useRef<SVGSVGElement>(null);const latest=useRef(props);useEffect(()=>{latest.current=props;},[props]);
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
   useEffect(()=>{if(props.focus)setCenter({lat:props.focus.lat,lon:props.focus.lon});},[props.focus]);
-// eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
-  useEffect(()=>setCenter({lat:22,lon:16}),[props.reset]);
+  useEffect(()=>{if(previousReset.current===props.reset)return;previousReset.current=props.reset;setCenter({lat:22,lon:16});},[props.reset]);
   useEffect(()=>{if(!props.spin||props.mode!=="globe")return;const timer=setInterval(()=>{if(!document.hidden)setCenter(c=>({...c,lon:c.lon+.6}));},50);return()=>clearInterval(timer);},[props.spin,props.mode]);
   useEffect(()=>{const svg=svgRef.current;if(!svg)return;const wheel=(e:WheelEvent)=>{if(latest.current.mode!=="globe")return;e.preventDefault();latest.current.onZoom(Math.max(0,Math.min(100,latest.current.zoom-e.deltaY*.06)));};svg.addEventListener("wheel",wheel,{passive:false});return()=>svg.removeEventListener("wheel",wheel);},[]);
   function down(e:React.PointerEvent<SVGSVGElement>){if(e.pointerType==="touch"&&!props.touchActive)return;pointers.current.set(e.pointerId,{x:e.clientX,y:e.clientY});if(props.mode!=="globe")return;e.currentTarget.setPointerCapture(e.pointerId);if(pointers.current.size>1){canceled.current=true;drag.current=null;const [a,b]=[...pointers.current.values()];pinch.current={distance:Math.hypot(a.x-b.x,a.y-b.y),zoom:props.zoom};return;}canceled.current=false;pinch.current=null;drag.current={x:e.clientX,y:e.clientY,...center,id:e.pointerId,moved:false};}

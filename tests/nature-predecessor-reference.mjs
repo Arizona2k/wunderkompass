@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
 import fixture from './fixtures/nature-retained-runtime-predecessor.json' with {type:'json'};
+import {fallbackPredecessors,withFallbackPredecessorRuntime} from './fallback-predecessor-reference.mjs';
 const sha=b=>createHash('sha256').update(b).digest('hex'),whole=row=>sha(JSON.stringify(row)),history=fixture.historyField;
 export function naturePredecessors(items){
+ items=fallbackPredecessors(items);
  if(items.length<220)return items; // Older exact layers keep all their predicates.
  const expected=[...fixture.whole220PredecessorDossiers,...fixture.new34ContentOnlyBeforeActualUI];
  if(items.length===220){assert.deepEqual(items.map(row=>({id:row.id,sha256:whole(row)})),fixture.whole220PredecessorDossiers.map(({ui,...row})=>row));return items;}
@@ -16,6 +18,9 @@ export function naturePredecessors(items){
  });return restored.slice(0,220);
 }
 export function withNaturePreRetainedRuntime(root,inspect){
+ return withFallbackPredecessorRuntime(root,prior=>originalWithNaturePreRetainedRuntime(prior,inspect));
+}
+function originalWithNaturePreRetainedRuntime(root,inspect){
  const actual=learningFingerprint(root);if(actual!==fixture.currentRuntimeBuild)return inspect(root);
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file])),expected=[...fixture.predecessorInputs,...fixture.addedInputs],replaced=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  assert.deepEqual(new Set(current.keys()),new Set(expected.map(row=>row.name)),'all623 runtime inputs enumerated, no selective inverse');
