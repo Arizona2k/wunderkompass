@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const settle=page=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))));
@@ -56,11 +57,18 @@ export async function auditFallbackLayerPage(page,base,{shots=null,engine='chrom
  if(await page.evaluate(()=>location.hash)!=='#globe')await page.goto(base+'/#globe');await ready(page);const normal=page.locator('.fallback-globe[data-model-mode="globe"]');await normal.waitFor();
  const coarse=await page.evaluate(()=>matchMedia('(pointer:coarse)').matches);assert(await (coarse?page.getByRole('button',{name:'Drehen & zoomen',exact:true}):page.locator('.stage-toolbar .gesture-hint')).isVisible(),'normal2D retains its actual pointer-appropriate control or gesture hint');
  const before=Number(await normal.locator('svg>circle').first().getAttribute('r'));await page.getByRole('button',{name:'Weltkugel vergrößern',exact:true}).click();const after=Number(await normal.locator('svg>circle').first().getAttribute('r'));assert(after>before,'normal2D positive zoom control remains effective');
- return {width,threePlusChangesActualGeometry:true,minimum:minimum[0],maximum:maximum[0],allLayerRatiosPreserved:true,reset49Preserved:true,allFourLayersKeyboardActivated:true,onlyFlatLayerRotationHidden:true,normal2DZoomStillEffective:true};
+ const selectedFocus=await fallbackSelectedFocusAndBookReturn(page,base,{shots,engine,width});
+ return {width,threePlusChangesActualGeometry:true,minimum:minimum[0],maximum:maximum[0],allLayerRatiosPreserved:true,reset49Preserved:true,allFourLayersKeyboardActivated:true,onlyFlatLayerRotationHidden:true,normal2DZoomStillEffective:true,selectedFocus};
 }
 
 export async function auditCountryNamesPage(page,base,{shots=null,engine='chromium',width=page.viewportSize().width}={}){
- if(await page.evaluate(()=>location.hash)!=='#globe')await page.goto(base+'/#globe');await ready(page);await page.getByRole('button',{name:'Länder',exact:true}).click();const rows=[];
+ if(await page.evaluate(()=>location.hash)!=='#globe')await page.goto(base+'/#globe');await ready(page);
+ // The country labeling tab does not change an intentionally retained nature
+ // layer. Establish this caller's country/sea picker through the actual UI.
+ const layer=page.locator('.map-layer-picker [role="combobox"]');
+ if(await layer.innerText()!=='Länder & Meere'){await layer.click();await page.getByRole('option',{name:'Länder & Meere',exact:true}).click();}
+ await page.waitForFunction(()=>document.querySelector('.map-layer-picker [role="combobox"]')?.textContent==='Länder & Meere');
+ await page.getByRole('button',{name:'Länder',exact:true}).click();const rows=[];
  for(const [name,expected]of [['Simbabwe',['Nord-Ndebele','Manyika','Simbabwe-Gold']],['Sierra Leone',['Mende','Temne','Sierra-leonischer Leone']],['Benin',['Fon','Anii']],['Burundi',['Rundi']]]){
   const combo=page.getByRole('combobox',{name:'Wohin möchtest du reisen?',exact:true});await combo.focus();await combo.press('ControlOrMeta+A');await combo.pressSequentially(name);await page.waitForFunction(name=>{const options=[...document.querySelectorAll('[role=option]')].filter(e=>e.getClientRects().length);return options.length===1&&options[0].textContent.trim()===name;},name);await page.locator('[data-slot=combobox-content]').evaluate(e=>Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{}))));await settle(page);await combo.press('ArrowDown');await page.waitForFunction(({label,name})=>{const input=document.querySelector('[role=combobox][aria-labelledby="'+label+'"]'),active=document.getElementById(input?.getAttribute('aria-activedescendant')??'');return active?.textContent.trim()===name;},{label:'place-picker-label',name});await combo.press('Enter');await page.getByRole('heading',{name,exact:true}).waitFor();
   const portrait=page.locator('.portrait-details').filter({has:page.getByText('Mehr über '+name,{exact:true})});if(!await portrait.evaluate(e=>e.open)){await portrait.locator(':scope>summary').focus();await page.keyboard.press('Enter');}await portrait.locator('dl').waitFor();const text=await portrait.innerText();for(const label of expected)assert(text.includes(label),name+' readable '+label);

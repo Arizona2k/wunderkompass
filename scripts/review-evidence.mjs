@@ -60,6 +60,7 @@ requiredScreenshots.push('quality-navigation-solar-caption-negative-320.png');
 requiredScreenshots.push(...[320,360,390,402,768,1024,1440,1920].flatMap(w=>['normal','large'].flatMap(state=>['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-'+state+'-'+w+'.png'))),...['diameters','distances'].map(mode=>'quality-navigation-solar-caption-'+mode+'-large-640.png'));
 requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1,2].flatMap(level=>['normal','large'].map(state=>'quality-navigation-animal-workshop-'+state+'-'+level+'-'+w+'.png')),'quality-navigation-animal-workshop-focus-'+w+'.png']),'quality-navigation-animal-native-200-large-640.png');
 requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
+requiredScreenshots.push(...['chromium','firefox','webkit'].flatMap(engine=>[320,1440].map(width=>(engine==='chromium'?'quality-learning-':'')+'journey-engine-'+engine+'-fallback-selected-Daintree-return-'+width+'.png')),...[640,320].map(width=>'quality-learning-journey-engine-chromium-fallback-selected-Daintree-return-native200-'+width+'.png'));
 export function retainScreenshot(name,{available=null}={}){
  if(requiredScreenshots.includes(name))return true;
  // Only a fully bound completed review supplies this actual capture set.

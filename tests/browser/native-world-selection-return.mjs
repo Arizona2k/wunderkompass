@@ -3,6 +3,7 @@ import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {worldSelectionReturnPage} from './learning-navigation.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
 
 // The ordinary native journey context has closed before this touch context is
 // opened. Keep the existing at-most-two-browser-groups execution bound.
@@ -27,6 +28,13 @@ export async function nativeWorldSelectionReturns(chromium,options,base,report,s
    const capture=result.actualCapture;assert(capture);assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);
    proof.views.push({dimensions,actualTouch:true,largeReading:true,result,capture,actualOversizedOpener:true});
   }
+  await context.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){return String(kind).startsWith('webgl')?null:original.call(this,kind,...args);};});
+  // Init scripts run on a new document, not on a same-document hash change.
+  // Enter the deliberately unavailable-WebGL case before opening its real route.
+  await page.goto(base+'/#book');await page.reload();
+  proof.fallbackSelectedFocus=[];
+  for(const width of[640,320]){await page.setViewportSize({width:width*2,height:950});proof.fallbackSelectedFocus.push(await fallbackSelectedFocusAndBookReturn(page,base,{shots,engine:'chromium',width,native:true}));}
+  assert.equal(proof.fallbackSelectedFocus.length,2);assert(proof.fallbackSelectedFocus.every(row=>row.actualDirectSelectedPlaceCamera&&row.actualBrowserBackSelectedCamera&&row.actualLaterResetStillWorks&&row.actualKeyboardRotationThenReset&&row.entirePriorCriticalPassFieldsPreserved&&row.actualCapture));
   assert.equal(proof.views.length,2);assert(browserErrorsComplete(proof));proof.status='passed';report.nativeWorldSelection=proof;report.checks.push('Actual native200% touch640/320CSS x475CSS return to oversized cards preserves trusted reading position, exact focus, page/filter/reload context and synthetic personal data');
  }catch(error){proof.status='failed';proof.failure=error.stack;report.nativeWorldSelection=proof;await captureNativeViewport(page,path.join(shots,'journey-native-world-selection-original-failure.png')).catch(()=>{});throw error;}
  finally{await context.close();}
