@@ -556,7 +556,7 @@
         {
           "age": "9-11",
           "goal": "Beiträge von Entwurf und Druckarbeit unterscheiden.",
-          "example": "Hokusai lieferte den Bildentwurf. Untersuchungen am Museumsabzug JP1847 zeigen, dass die Drucker durch Farbstoffe und Übereinanderdrucken das Blau gestalteten.",
+          "example": "Hokusai lieferte den Bildentwurf. Zur Herstellung gehörten außerdem das Schneiden der Holzblöcke und das Drucken der Farben auf Papier. Forschende vergleichen heute die gedruckten Linien und Farbflächen verschiedener Abzüge.",
           "prompt": "Welche Beschreibung berücksichtigt beide Beiträge?",
           "answers": [
             "Der Entwurf macht die Farbentscheidungen der Drucker bedeutungslos",
@@ -567,7 +567,7 @@
           "hint": "Ordne jedem beschriebenen Arbeitsschritt seinen Beitrag zu.",
           "why": "Den Entwurf und die Druckarbeit zu unterscheiden macht beide Beiträge sichtbar. Keiner muss dafür dem jeweils anderen zugeschrieben werden.",
           "wrongReasons": [
-            "Die Untersuchung beschreibt gerade einen sichtbaren Beitrag der Drucker.",
+            "Die gedruckten Linien und Farbflächen gehören zum sichtbaren Ergebnis. Der Entwurf ersetzt die Ausführung dieser Arbeitsschritte nicht.",
             null,
             "Eine wichtige Druckleistung macht die Drucker nicht automatisch zu den Entwerfern desselben Bildes."
           ]
@@ -575,7 +575,7 @@
         {
           "age": "12-14",
           "goal": "Eine objektbezogene Untersuchung von einer allgemeinen Bildbehauptung trennen.",
-          "example": "Ein Museum untersucht Farbstoffe und Druckspuren am Abzug JP1847. Ein anderer erhaltener Abzug desselben Bildentwurfs trägt die Nummer JP2972.",
+          "example": "Angenommen, eine Untersuchung beschreibt Druckspuren am Abzug JP1847. Ein anderer erhaltener Abzug desselben Bildentwurfs trägt die Nummer JP2972.",
           "prompt": "Was ist bei einer Aussage über den zweiten Abzug sorgfältig?",
           "answers": [
             "Alle Ergebnisse ohne Prüfung allein wegen des gleichen Motivs übertragen",

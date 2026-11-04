@@ -2,12 +2,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import fixture from './fixtures/people-fourteen-dossier-predecessor.json' with {type:'json'};
+import {beforeAccessiblePeopleSourceDossiers} from './people-accessible-sources-reference.mjs';
 const whole=row=>createHash('sha256').update(JSON.stringify(row)).digest('hex');
 
 // Exact whole-object outer boundary; existing inner predecessor checks remain.
 // The bound template file is created only after actual full qualification.
 function actualQualifiedTemplate(){const p=new URL('./fixtures/editorial-before-people-fourteen-254.json',import.meta.url);return fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')).currentTemplate:null;}
 export function beforeFourteenDossiers(items,qualifiedTemplate=actualQualifiedTemplate()){
+ items=beforeAccessiblePeopleSourceDossiers(items);
  if(items.length<254)return items;
  const expected=[...fixture.prior254,...fixture.new14];
  if(items.length===254){
