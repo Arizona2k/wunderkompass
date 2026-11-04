@@ -8,6 +8,9 @@ import {closedSaltBasin,lakeWaterRoutes,retreatingFall,islandCascades,hollowAndF
 const originalBasin=new Map();
 
 async function drawnWater(figure,kind,selected){
+ // SVG geometry APIs can retain the previous rendered path immediately after
+ // a DOM mutation. Read the committed geometry, including negative probes.
+ await figure.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  const buttons=figure.locator('.book-nature-water-choices button');assert.equal(await buttons.count(),3);assert.deepEqual(await buttons.evaluateAll(es=>es.map(e=>e.getAttribute('aria-pressed')==='true')),[0,1,2].map(n=>n===selected));
  const geometry=await figure.locator('svg').evaluate(svg=>({viewBox:{width:svg.viewBox.baseVal.width,height:svg.viewBox.baseVal.height},labels:[...svg.querySelectorAll('text')].map(el=>{const b=el.getBBox();return{text:el.textContent,x:b.x,y:b.y,width:b.width,height:b.height};})}));
  assert.deepEqual(geometry.viewBox,{width:400,height:260});for(const b of geometry.labels){assert(b.width>0&&b.height>0);assert(b.x>=0&&b.y>=0&&b.x+b.width<=400&&b.y+b.height<=260);}
