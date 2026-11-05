@@ -6,7 +6,7 @@ import {sourceDigest} from './handoff.mjs';
 // User-authorized measured resource reserve for retained original review PNGs
 // and added content views. Only evidence storage capacity; selection, capture
 // identities, exact-payload sharing and all error conditions stay unchanged.
-export const REVIEW_LIMIT=1_100_000_000;
+export const REVIEW_LIMIT=1_300_000_000;
 // Closed worker originals may back the separate review name by an exact verified
 // hardlink; this avoids a second disk allocation, never a capture or budget count.
 // Capture identities are never deduplicated. Only their byte-identical payloads
