@@ -1,16 +1,19 @@
+import {beforeFourteenPeople,beforeFourteenPeopleQuestions,beforeFourteenPeopleGraph} from './people-fourteen-reference.mjs';
 import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
 // Only named field revisions are projected for these historical comparisons;
 // raw current fields and all190topics/sevenbanks have separate strict guards.
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
-import catalog from '../app/world-catalog.json' with {type:'json'};
-import inquiries from '../app/people-inquiries.json' with {type:'json'};
-import media from '../app/people-illustrations.json' with {type:'json'};
-import graph from '../app/world-connections.json' with {type:'json'};
+import rawCatalog from '../app/world-catalog.json' with {type:'json'};
+import rawInquiries from '../app/people-inquiries.json' with {type:'json'};
+import rawMedia from '../app/people-illustrations.json' with {type:'json'};
+import rawGraph from '../app/world-connections.json' with {type:'json'};
 import hints from '../app/challenge-hints.json' with {type:'json'};
 import legacy from './fixtures/legacy-people20-before-merian-lehmann.json' with {type:'json'};
-import {CHALLENGE_BANK,restoreChallenge} from '../app/knowledge-challenge.ts';
-import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
+import {CHALLENGE_BANK as rawChallengeBank,restoreChallenge} from '../app/knowledge-challenge.ts';
+import {worldGameBank as rawWorldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 import {PEOPLE_METHOD_IDS,beforePeopleMethods,beforePeopleMethodQuestions} from './people-methods-reference.mjs';
+const catalog=beforeFourteenPeople(rawCatalog),inquiries={...rawInquiries,entries:beforeFourteenPeople(rawInquiries.entries)},media={...rawMedia,entries:beforeFourteenPeople(rawMedia.entries)},graph=beforeFourteenPeopleGraph(rawGraph),CHALLENGE_BANK=beforeFourteenPeopleQuestions(rawChallengeBank);
+const worldGameBank=id=>beforeFourteenPeople(rawWorldGameBank(id));
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 test('the real preceding20-person topics, every clue/choice and all220 challenge records survive the two prepared additions',()=>{
  assert.equal(catalog.length,190);assert.equal(catalog.filter(t=>t.person).length,22);

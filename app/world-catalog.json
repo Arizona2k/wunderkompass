@@ -2661,7 +2661,9 @@
     "related": [
       "history-web",
       "history-khipu",
-      "history-mohenjo-daro"
+      "history-mohenjo-daro",
+      "person-murasaki_shikibu",
+      "person-ibn_sina"
     ],
     "sources": [
       {
@@ -3059,7 +3061,8 @@
     ],
     "related": [
       "person-johannes_gutenberg",
-      "invention-printing"
+      "invention-printing",
+      "person-rabindranath_tagore"
     ],
     "sources": [
       {
@@ -3672,7 +3675,8 @@
       }
     ],
     "related": [
-      "history-ww2"
+      "history-ww2",
+      "person-nelson_mandela"
     ],
     "sources": [
       {
@@ -4291,7 +4295,9 @@
     ],
     "related": [
       "person-tu_youyou",
-      "science-computer"
+      "science-computer",
+      "person-chien_shiung_wu",
+      "person-lise_meitner"
     ],
     "sources": [
       {
@@ -4862,7 +4868,8 @@
     ],
     "related": [
       "science-gps",
-      "science-shadows"
+      "science-shadows",
+      "person-lise_meitner"
     ],
     "sources": [
       {
@@ -4933,7 +4940,8 @@
     ],
     "related": [
       "history-zero",
-      "science-computer"
+      "science-computer",
+      "person-ibn_sina"
     ],
     "sources": [
       {
@@ -5000,7 +5008,8 @@
     ],
     "related": [
       "person-marie_curie",
-      "person-wangari_maathai"
+      "person-wangari_maathai",
+      "person-ibn_sina"
     ],
     "sources": [
       {
@@ -5071,7 +5080,8 @@
     ],
     "related": [
       "history-paper",
-      "invention-printing"
+      "invention-printing",
+      "person-katsushika_hokusai"
     ],
     "sources": [
       {
@@ -5217,7 +5227,10 @@
     ],
     "related": [
       "invention-printing",
-      "history-paper"
+      "history-paper",
+      "person-murasaki_shikibu",
+      "person-octavia_butler",
+      "person-ibn_sina"
     ],
     "sources": [
       {
@@ -5292,7 +5305,9 @@
     ],
     "related": [
       "animal-african-savanna-elephant",
-      "person-jane_goodall"
+      "person-jane_goodall",
+      "person-nelson_mandela",
+      "person-rachel_carson"
     ],
     "sources": [
       {
@@ -6474,7 +6489,9 @@
       "history-paper",
       "person-cai_lun",
       "invention-3d-printing",
-      "invention-sewing-machine"
+      "invention-sewing-machine",
+      "person-katsushika_hokusai",
+      "person-ibn_sina"
     ],
     "sources": [
       {
@@ -8769,7 +8786,8 @@
       "animal-honey-bee",
       "science-photosynthesis",
       "science-fungi",
-      "animal-short-snouted-seahorse"
+      "animal-short-snouted-seahorse",
+      "person-rachel_carson"
     ],
     "sources": [
       {
@@ -9295,7 +9313,8 @@
     "locations": [],
     "related": [
       "animal-honey-bee",
-      "science-photosynthesis"
+      "science-photosynthesis",
+      "person-rachel_carson"
     ],
     "sources": [
       {
@@ -13793,7 +13812,8 @@
       ]
     },
     "related": [
-      "invention-camera"
+      "invention-camera",
+      "person-ibn_sina"
     ],
     "aliases": [
       "Ibn al-Haytham",
@@ -15300,7 +15320,8 @@
     ],
     "related": [
       "science-sound",
-      "science-angle"
+      "science-angle",
+      "person-zaha_hadid"
     ],
     "links": [],
     "revision": 1,
@@ -16255,7 +16276,8 @@
     "related": [
       "science-angle",
       "science-patterns",
-      "science-fractals"
+      "science-fractals",
+      "person-chien_shiung_wu"
     ],
     "sources": [
       {
@@ -16391,7 +16413,8 @@
       "science-shadows",
       "science-symmetry",
       "invention-3d-printing",
-      "building-sydney-opera"
+      "building-sydney-opera",
+      "person-zaha_hadid"
     ],
     "sources": [
       {
@@ -16603,7 +16626,8 @@
     "locations": [],
     "related": [
       "science-diffusion",
-      "science-photosynthesis"
+      "science-photosynthesis",
+      "person-rosalind_franklin"
     ],
     "sources": [
       {
@@ -16674,7 +16698,9 @@
     "locations": [],
     "related": [
       "science-energy",
-      "science-galaxy"
+      "science-galaxy",
+      "person-cecilia_payne_gaposchkin",
+      "person-lise_meitner"
     ],
     "sources": [
       {
@@ -16746,7 +16772,8 @@
     "related": [
       "science-solar-system",
       "science-fusion",
-      "science-exoplanet"
+      "science-exoplanet",
+      "person-henrietta_swan_leavitt"
     ],
     "sources": [
       {
@@ -16888,7 +16915,8 @@
     "locations": [],
     "related": [
       "science-galaxy",
-      "science-solar-system"
+      "science-solar-system",
+      "person-jocelyn_bell_burnell"
     ],
     "sources": [
       {
@@ -17191,7 +17219,8 @@
       ]
     },
     "related": [
-      "invention-seismograph"
+      "invention-seismograph",
+      "person-rosalind_franklin"
     ],
     "aliases": [
       "Inge Lehmann",
@@ -17245,5 +17274,1213 @@
         "why": "Eine Erklärung kann bestimmte Messungen gut erfassen. Genaue Temperaturen, Stoffe oder weitere Grenzen werden nicht allein durch diesen einen Vergleich bestimmt."
       }
     ]
+  },
+  {
+    "id": "person-henrietta_swan_leavitt",
+    "paragraphs": [
+      "Wie weit ist ein Stern entfernt? Ein heller Punkt allein verrät das nicht: Er kann viel Licht aussenden oder uns vergleichsweise nahe sein. Henrietta Swan Leavitt suchte nach einer weiteren Information. Sie verglich fotografische Glasplatten des Himmels am Harvard College Observatory.",
+      "Bei bestimmten veränderlichen Sternen, den Cepheiden, schwankt die Helligkeit regelmäßig. Leavitt untersuchte Sterne in den Magellanschen Wolken. 1912 veröffentlichte sie die Perioden von 25 Sternen in der Kleinen Magellanschen Wolke. Zwischen der Wiederholungsdauer und der Helligkeit erkannte sie einen Zusammenhang.",
+      "Aus dieser Arbeit entwickelte sich eine wichtige Hilfe für Entfernungsmessungen. Die Leuchtkraft beschreibt die vom Stern abgegebene Lichtleistung; die scheinbare Helligkeit beschreibt, wie hell er bei uns erscheint. Zum Bestimmen einer Entfernung braucht man zusätzlich eine passende Kalibrierung. Nicht jedes blinkende Licht ist ein Cepheid."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1868–1921"
+      },
+      {
+        "label": "Forschungsfrage",
+        "text": "Wie hängen Helligkeitsrhythmus und Leuchtkraft bestimmter Sterne zusammen?"
+      }
+    ],
+    "more": [
+      "Ein erfundenes Lernbeispiel: Die höchsten Stellen einer Lichtkurve liegen an Tag 2, Tag 5 und Tag 8. Der Abstand beträgt jeweils drei Tage. Drei Markierungen sind also nicht eine Periode von acht Tagen. Die Zahlen sind keine historischen Messwerte Leavitts.",
+      "Entfernung verändert in unserem vereinfachten Vergleich das ankommende Licht, nicht von selbst den Rhythmus desselben Sterns. Bei realen Beobachtungen müssen Forschende etwa die Sternart und die Abschwächung des Lichts berücksichtigen. Die Beziehung ist ein begrenztes Messwerkzeug und keine Formel für jede Lichtquelle."
+    ],
+    "learning": {
+      "starter": "Leavitt verglich wiederkehrende Helligkeitswechsel, statt Sterne nur nach einem einzelnen Bild zu beurteilen.",
+      "observe": "Vergleiche im gedachten Verlauf zwei aufeinanderfolgende gleichartige Stellen. Trenne die Zeit bis zur Wiederholung vom ankommenden Licht.",
+      "benefit": "Du kannst Beobachtung, Zeitabstand und Eigenschaft einer Lichtquelle auseinanderhalten."
+    },
+    "aliases": [
+      "Henrietta Swan Leavitt",
+      "Henrietta Leavitt",
+      "Leavitt",
+      "Cepheiden",
+      "Perioden-Leuchtkraft-Beziehung"
+    ],
+    "surprise": "Ein zeitlicher Rhythmus kann mehr verraten als ein einzelner heller Punkt.",
+    "related": [
+      "science-galaxy",
+      "person-cecilia_payne_gaposchkin",
+      "person-jocelyn_bell_burnell"
+    ],
+    "question": {
+      "prompt": "Die höchsten Stellen einer erfundenen Sternlichtkurve liegen an Tag 2, 5 und 8. Welche Angabe beschreibt die Wiederholung?",
+      "answers": [
+        "Drei Tage zwischen aufeinanderfolgenden höchsten Stellen",
+        "Acht Tage, weil die letzte Markierung Tag 8 heißt",
+        "Drei Sterne, weil drei höchste Stellen gezeichnet sind"
+      ],
+      "correct": 0,
+      "why": "Eine Periode ist ein Zeitabstand zwischen gleichen Stellen: 5 minus 2 und 8 minus 5 ergeben jeweils drei Tage."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche zwei aufeinanderfolgende gleichartige Stellen und ihre Zeitangaben.",
+      "wrongReasons": [
+        null,
+        "Tag 8 bezeichnet eine Stelle der Zeitachse. Für den Abstand brauchst du noch eine zweite gleichartige Stelle.",
+        "Die Kurve beschreibt zeitliche Veränderungen eines gedachten Sterns. Die Anzahl der Markierungen ist keine Anzahl von Sternen."
+      ]
+    },
+    "sourceNote": "Eigene Erklärung nach dem wissenschaftshistorischen Beitrag der Library of Congress. Lernzahlen sind ausdrücklich erfunden. Die gesamte Originalpublikation von 1912 wird nicht als vollständig ausgewertet behauptet; keine kalibrierte Entfernungsberechnung.",
+    "category": "people",
+    "title": "Henrietta Swan Leavitt",
+    "intro": "Henrietta Swan Leavitt verglich Sternaufnahmen auf Glasplatten. Bei bestimmten veränderlichen Sternen hängen die Dauer eines Helligkeitswechsels und die Leuchtkraft zusammen. Das hilft, Entfernungen im Weltall zu bestimmen.",
+    "person": {
+      "lifespan": "1868–1921",
+      "field": "Astronomin",
+      "method": "Fotografische Helligkeiten über längere Zeit vergleichen und wiederkehrende Veränderungen messen."
+    },
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Library of Congress · Henrietta Leavitt und ihre Sternvergleiche",
+        "url": "https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/"
+      }
+    ],
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "image": "henrietta-swan-leavitt"
+  },
+  {
+    "id": "person-cecilia_payne_gaposchkin",
+    "paragraphs": [
+      "Woraus bestehen Sterne, wenn wir keine Probe holen können? Cecilia Payne-Gaposchkin untersuchte ihr Licht. Ein Spektrum ordnet Licht nach Wellenlängen. Helle oder dunkle Linien darin enthalten Hinweise auf die beteiligten Atome.",
+      "Ihre Doktorarbeit von 1925 verband Sternspektren mit physikalischen Rechnungen. Wasserstoff und Helium erwiesen sich als besonders häufige Elemente in Sternen. Das widersprach verbreiteten Erwartungen. In der damaligen Veröffentlichung wurde dieses Ergebnis zunächst sehr vorsichtig dargestellt.",
+      "Der entscheidende Gedanke: Eine starke Linie bedeutet nicht einfach, dass genau entsprechend viele Atome vorhanden sind. Auch Temperatur, Anregung und Ionisation beeinflussen das Muster. Ionisation bedeutet, dass sich die Zahl gebundener Elektronen eines Atoms verändert. Erst mit einem passenden Modell lassen sich aus dem Licht weitergehende Schlüsse ziehen."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1900–1979"
+      },
+      {
+        "label": "Doktorarbeit",
+        "text": "1925: Sternatmosphären und ihre Zusammensetzung"
+      }
+    ],
+    "more": [
+      "In einem erfundenen Vergleich enthalten zwei Proben dieselben Stoffe. Ihre physikalischen Bedingungen unterscheiden sich; deshalb dürfen Linien unterschiedlich stark erscheinen. Die Zeichnung wäre keine Messung wirklicher Sternanteile. Sie hilft, mehrere mögliche Ursachen eines Beobachtungszeichens zu unterscheiden.",
+      "Die Frage nach vorhandenen Stoffen ist außerdem eine andere als die Frage nach der Energiequelle eines Sterns. Der verknüpfte Artikel zur Kernfusion erklärt einen Energieprozess. Ein Spektrum und eine Erklärung der Kernfusion ersetzen einander nicht."
+    ],
+    "learning": {
+      "starter": "Payne-Gaposchkin verband sichtbare Lichtmuster mit einer Erklärung ihrer Entstehung.",
+      "observe": "Vergleiche zuerst die Lage der Linien. Frage anschließend, welche Bedingungen ihre Stärke beeinflussen können.",
+      "benefit": "Du lernst, aus einem auffälligen Messzeichen nicht vorschnell eine genaue Mengenangabe abzuleiten."
+    },
+    "aliases": [
+      "Cecilia Payne-Gaposchkin",
+      "Cecilia Payne",
+      "Payne-Gaposchkin",
+      "Sternspektren",
+      "Sternatmosphären"
+    ],
+    "surprise": "Eine besonders kräftige Linie ist noch keine direkte Anzeige eines Stoffanteils.",
+    "related": [
+      "science-fusion",
+      "person-henrietta_swan_leavitt",
+      "person-katsushika_hokusai"
+    ],
+    "question": {
+      "prompt": "Eine Linie im Sternspektrum ist besonders stark. Was ist vor einer Aussage über den Stoffanteil zusätzlich zu prüfen?",
+      "answers": [
+        "Nur die Zahl der übrigen gezeichneten Linien",
+        "Die physikalischen Bedingungen wie Temperatur und Ionisation",
+        "Nur die Entfernung der gedruckten Linien voneinander"
+      ],
+      "correct": 1,
+      "why": "Linienstärke hängt außer von der Menge auch von den physikalischen Bedingungen ab. Eine reine Zählung oder Zeichnungsabstand liefert deshalb keinen genauen Stoffanteil."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welche Einflüsse verändern können, wie das Lichtmuster entsteht.",
+      "wrongReasons": [
+        "Die Zahl anderer Linien erklärt die Stärke dieser Linie nicht ausreichend und ist keine Mengenmessung.",
+        null,
+        "Linienpositionen tragen Information, aber ihr Abstand allein klärt nicht den Einfluss von Temperatur oder Ionisation auf die Stärke."
+      ]
+    },
+    "sourceNote": "Eigene Erklärung nach Science History Institute, UCAR/NCAR High Altitude Observatory und OpenStax. Die vorsichtige Darstellung des Wasserstoff-/Heliumergebnisses folgt der differenzierten Institutsgeschichte; verkürzte Erfolgserzählungen werden nicht übernommen. Erfundene Vergleichsmodelle sind keine Saha-Rechnung oder Konzentrationsmessung. Keine fremden Texte oder Spektrengrafiken übernommen.",
+    "category": "people",
+    "title": "Cecilia Payne-Gaposchkin",
+    "intro": "Cecilia Payne-Gaposchkin untersuchte das Licht von Sternen. Ihre Doktorarbeit von 1925 erklärte, dass Sterne überwiegend aus Wasserstoff und Helium bestehen. Dafür verband sie Spektren mit physikalischen Rechnungen.",
+    "person": {
+      "lifespan": "1900–1979",
+      "field": "Astrophysikerin",
+      "method": "Sternspektren mit physikalischen Modellen vergleichen und die Bedingungen ihrer Entstehung berücksichtigen."
+    },
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Science History Institute · Cecilia Payne-Gaposchkin und die Zusammensetzung der Sterne",
+        "url": "https://www.sciencehistory.org/education/scientific-biographies/cecilia-payne-gaposchkin/"
+      },
+      {
+        "label": "OpenStax Astronomy · Entstehung von Spektrallinien, Anregung und Ionisation",
+        "url": "https://openstax.org/books/astronomy-2e/pages/5-5-formation-of-spectral-lines"
+      },
+      {
+        "label": "UCAR/NCAR High Altitude Observatory · Sternspektren, Temperatur und Ionisation",
+        "url": "https://www2.hao.ucar.edu/education/scientists/cecilia-payne-1900-1979"
+      }
+    ],
+    "checkedAt": "2026-11-05",
+    "revision": 3,
+    "image": "cecilia-payne-gaposchkin"
+  },
+  {
+    "id": "person-rosalind_franklin",
+    "paragraphs": [
+      "Wie erforscht man einen Aufbau, den man nicht wie einen Gegenstand auf dem Tisch ansehen kann? Rosalind Franklin untersuchte Stoffe mit Röntgenstrahlen. Die dabei aufgezeichneten Beugungsmuster enthalten Hinweise auf räumliche Strukturen. Sie sind keine gewöhnlichen Nahfotos einzelner Atome.",
+      "Franklin und ihr Doktorand Raymond Gosling erzeugten 1952 am King’s College London die später berühmt gewordene Aufnahme Photo 51. Untersucht wurden ausgerichtete DNA-Moleküle. Das Muster war ein wichtiger Beleg für eine schraubenförmige Struktur. Ein Strukturmodell musste trotzdem verschiedene Messinformationen zusammenführen.",
+      "Eine 2026 veröffentlichte Archivauswertung betont Franklins gezielte Arbeit: Schon eine frühere Aufnahme, Photo 49, hatte ihr Hinweise auf die helikale Struktur geliefert. Photo 51 war eine verbesserte Wiederholung. Wie viele Stränge beteiligt waren, hatte sie in diesem früheren Schritt noch nicht geklärt. Franklin als ahnungslose Bilderlieferantin darzustellen, würde ihren eigenen Beitrag verfehlen."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1920–1958"
+      },
+      {
+        "label": "Messarbeit",
+        "text": "1952: DNA-Beugungsaufnahmen mit Raymond Gosling"
+      }
+    ],
+    "more": [
+      "Beobachtung und Schlussfolgerung gehören zusammen, sind aber verschiedene Schritte: Ein Muster wird aufgezeichnet; ein Modell soll erklären, weshalb es entsteht. Zusätzliche Daten können zwischen mehreren Vorstellungen unterscheiden. Eine schematische Zeichnung auf dieser Lernseite ist kein historisches Original und kein vollständiger Beugungsrechner.",
+      "Aus Photo 51 lässt sich keine Folge von DNA-Buchstaben wie aus einem gedruckten Text ablesen. Strukturuntersuchung und Sequenzbestimmung beantworten unterschiedliche Fragen. Franklins Forschungsarbeit beschränkte sich zudem nicht auf DNA: Nach ihrem Wechsel an das Birkbeck College untersuchte ihr Team Virusstrukturen."
+    ],
+    "learning": {
+      "starter": "Franklin gewann und deutete präzise Messmuster, um den Aufbau von Stoffen zu untersuchen.",
+      "observe": "Trenne das aufgezeichnete Muster, ein erklärendes Strukturmodell und eine Frage, die diese Messung offenlässt.",
+      "benefit": "Du begründest Aussagen mit passenden Belegen und benennst die Beiträge der tatsächlich Beteiligten."
+    },
+    "aliases": [
+      "Rosalind Franklin",
+      "Franklin",
+      "Photo 51",
+      "Photograph 51",
+      "Röntgenbeugung"
+    ],
+    "surprise": "Ein Messmuster kann Hinweise auf eine Form geben, ohne deren Einzelheiten wie ein gewöhnliches Foto abzubilden.",
+    "related": [
+      "science-cell",
+      "person-inge_lehmann"
+    ],
+    "question": {
+      "prompt": "Was ist eine angemessene Aussage über Photo 51?",
+      "answers": [
+        "Ein gewöhnliches Kamerafoto einer einzelnen DNA-Doppelhelix",
+        "Eine Aufnahme mit direkt lesbarer Reihenfolge der DNA-Bausteine",
+        "Ein Beugungsmuster mit Hinweisen auf die räumliche Struktur der untersuchten DNA"
+      ],
+      "correct": 2,
+      "why": "Bei der Aufnahme wurden ausgerichtete DNA-Moleküle mit Röntgenstrahlen untersucht. Das Beugungsmuster liefert Strukturinformation, kein gewöhnliches Nahfoto eines einzelnen Moleküls und keine direkt lesbare Basenfolge."
+    },
+    "questionFeedback": {
+      "hint": "Unterscheide, welche Art Information aufgezeichnet wurde und welche Frage du damit beantworten willst.",
+      "wrongReasons": [
+        "Das Muster entsteht durch Röntgenbeugung an ausgerichteten DNA-Molekülen. Es ist kein gewöhnliches Foto eines einzelnen Moleküls.",
+        "Strukturuntersuchung und Bestimmung der DNA-Buchstabenfolge sind verschiedene Aufgaben. Die genaue Reihenfolge ist auf Photo51 nicht direkt lesbar.",
+        null
+      ]
+    },
+    "sourceNote": "Eigene Erklärung anhand tatsächlich gelesener King’s-Texte von 2023 und der Archivmeldung vom 09.10.2026, zusätzlich Biografie. Die Meldung ist gelesen, der gesamte historische Journalartikel nicht. Photo 51 wird wegen des konkret festgestellten Rechtevorbehalts nicht als Bild übernommen; eine eigene Schematik bleibt als solche bezeichnet.",
+    "category": "people",
+    "title": "Rosalind Franklin",
+    "intro": "Rosalind Franklin untersuchte mit Röntgenstrahlen, wie Stoffe aufgebaut sind. Mit Raymond Gosling gewann sie wichtige Beugungsaufnahmen von DNA. Solche Muster halfen, die räumliche Struktur der DNA zu verstehen.",
+    "person": {
+      "lifespan": "1920–1958",
+      "field": "Chemikerin und Strukturforscherin",
+      "method": "Röntgenbeugungsmuster sorgfältig erzeugen, Messbedingungen vergleichen und daraus Strukturmerkmale erschließen."
+    },
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "King's College London: The story behind Photograph51",
+        "url": "https://www.kcl.ac.uk/the-story-behind-photograph-51"
+      },
+      {
+        "label": "King's College London: Archivforschung zu Photo49 und Photo51,09.10.2026",
+        "url": "https://www.kcl.ac.uk/news/rosalind-franklin-deliberately-created-photo-51-after-earlier-photograph-revealed-dnas-structure"
+      },
+      {
+        "label": "King’s College London · Rosalind Franklin: Biografie",
+        "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+      }
+    ],
+    "checkedAt": "2026-11-03",
+    "revision": 1
+  },
+  {
+    "id": "person-jocelyn_bell_burnell",
+    "paragraphs": [
+      "In langen Papieraufzeichnungen entdeckte Jocelyn Bell Burnell eine auffällige Spur: Ähnliche Radiosignale kehrten sehr regelmäßig wieder. Sie arbeitete als Doktorandin in Cambridge am Aufbau und Betrieb eines Radioteleskops sowie an der Auswertung seiner Daten.",
+      "Die ersten ungewöhnlichen Pulse beobachtete sie 1967; die Entdeckung wurde 1968 veröffentlicht. Weitere Untersuchungen verbanden solche Pulsare mit schnell rotierenden Neutronensternen. Die wiederkehrende Spur war der Anfang einer Untersuchung, nicht schon die vollständige Erklärung ihres Ursprungs.",
+      "Ein regelmäßiger Ausschlag allein verrät noch nicht, ob ein Signal aus dem Weltall oder von einer irdischen Störung stammt. Forschende vergleichen weitere Beobachtungen und prüfen andere Ursachen. Radio bezeichnet hier elektromagnetische Strahlung; die Messspur ist keine direkt im Weltraum gehörte Tonfolge."
+    ],
+    "facts": [
+      {
+        "label": "Geboren",
+        "text": "1943"
+      },
+      {
+        "label": "Entdeckungsarbeit",
+        "text": "1967 beobachtet, 1968 veröffentlicht: die ersten Pulsarsignale"
+      }
+    ],
+    "more": [
+      "Ein erfundenes Lernbeispiel zeigt Spitzen bei 1, 3, 5 und 7 Zeiteinheiten. Der Abstand beträgt jeweils zwei Einheiten. Das sind keine historischen Messwerte. Eine zweite passende Beobachtung stärkt die Beschreibung der Regelmäßigkeit; sie beseitigt nicht automatisch jede Frage nach der Ursache.",
+      "Eine periodische Helligkeitsänderung bei Leavitts Sternen und ein wiederkehrender Puls sind verschiedene physikalische Fälle. Gemeinsam ist das sorgfältige Vergleichen über Zeit. Auch beim verknüpften Exoplanetenthema spielt ein zeitliches Muster eine Rolle, dort etwa die Abschwächung von Sternlicht bei einem Transit. Ähnliche Kurven bedeuten nicht dieselbe Ursache."
+    ],
+    "learning": {
+      "starter": "Bell Burnell bemerkte einen kleinen auffälligen Teil vieler Aufzeichnungen und untersuchte ihn weiter.",
+      "observe": "Vergleiche gleiche Stellen einer gedachten Messspur. Prüfe mit weiteren Beobachtungen, ob dein vermuteter Abstand bestehen bleibt.",
+      "benefit": "Du trennst ein erkanntes Muster von einer voreiligen Behauptung über seinen Ursprung."
+    },
+    "aliases": [
+      "Jocelyn Bell Burnell",
+      "Jocelyn Bell",
+      "Bell Burnell",
+      "Pulsare",
+      "Radioastronomie"
+    ],
+    "surprise": "Ein kleiner auffälliger Teil einer langen Aufzeichnung kann eine neue Forschungsfrage eröffnen.",
+    "related": [
+      "person-henrietta_swan_leavitt",
+      "science-exoplanet"
+    ],
+    "question": {
+      "prompt": "In einer Radioaufzeichnung kehren Spitzen regelmäßig wieder. Welcher nächste Schritt hilft, die Herkunft sorgfältig zu untersuchen?",
+      "answers": [
+        "Weitere Beobachtungen vergleichen und mögliche Störquellen prüfen",
+        "Nur die passendsten Spitzen behalten und alle anderen Werte streichen",
+        "Aus dem regelmäßigen Abstand allein schon die Quelle sicher benennen"
+      ],
+      "correct": 0,
+      "why": "Wiederholte Beobachtungen und die Prüfung anderer Ursachen liefern zusätzliche Belege. Regelmäßigkeit allein bestimmt die Herkunft noch nicht."
+    },
+    "questionFeedback": {
+      "hint": "Suche einen Schritt, der eine Erklärung überprüfen oder auch infrage stellen kann.",
+      "wrongReasons": [
+        null,
+        "Eine Auswahl nur passender Werte kann ein scheinbares Muster erzeugen und wichtige Hinweise auf Störungen verbergen.",
+        "Verschiedene Ursachen können wiederkehrende Signale erzeugen. Der Zeitabstand allein reicht für eine sichere Herkunftsangabe nicht."
+      ]
+    },
+    "sourceNote": "Eigene Erklärung nach tatsächlich gelesenem NASA-StarChild-Text und dem Bericht der CSIRO-Forschenden George Hobbs, Dick Manchester und Simon Johnston vom 28. November 2017. Entdeckung 1967 und Veröffentlichung 1968 bleiben verschiedene Ereignisse. Die erfundene Zeichnung zeigt keine historische Radioaufzeichnung, gehörte Originalaufnahme oder reale Pulsarperiode. Keine damals genannten Gesamtzahlen heute als aktuellen Bestand ausgegeben.",
+    "category": "people",
+    "title": "Jocelyn Bell Burnell",
+    "intro": "Jocelyn Bell Burnell bemerkte 1967 ungewöhnlich regelmäßige Signale in Radioaufzeichnungen. Weitere Untersuchungen verbanden die Pulsare mit schnell rotierenden Neutronensternen. Genaues Hinsehen und erneutes Prüfen waren entscheidend.",
+    "person": {
+      "lifespan": "geboren 1943",
+      "field": "Radioastronomin",
+      "method": "Lange Messaufzeichnungen aufmerksam vergleichen, wiederkehrende Signale prüfen und mögliche Störungen untersuchen."
+    },
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "NASA StarChild: Jocelyn Bell Burnell",
+        "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level2/bell.html"
+      },
+      {
+        "label": "CSIRO · Entdeckung und Prüfung der Pulsarsignale",
+        "url": "https://www.csiro.au/en/news/all/articles/2017/november/pulsar"
+      }
+    ],
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "image": "jocelyn-bell-burnell"
+  },
+  {
+    "id": "person-katsushika_hokusai",
+    "category": "people",
+    "title": "Katsushika Hokusai",
+    "intro": "Katsushika Hokusai entwarf Bilder, die als Holzschnitte gedruckt wurden. Seine Große Welle zeigt, wie Linien, Farben und Blickwinkel ein Bild prägen. An der Herstellung wirkten mehrere Menschen mit.",
+    "aliases": [
+      "Hokusai",
+      "Katsushika Hokusai",
+      "Große Welle",
+      "Farbholzschnitt"
+    ],
+    "paragraphs": [
+      "Eine große Welle steht im Vordergrund, der Berg Fuji wirkt dahinter klein. So ist Hokusais berühmter Farbholzschnitt gestaltet. Das Bild aus der Zeit um 1830–1832 gehört zur Serie mit Ansichten des Fuji. Es ist eine künstlerische Darstellung und kein Foto oder Messprotokoll des Meeres.",
+      "Hokusai lebte von 1760 bis 1849 und lieferte Bildentwürfe. Für solche Drucke brauchte es auch Menschen, die Holzblöcke schnitten und die Farben auf Papier druckten, sowie eine Druck- und Verlagswerkstatt. Ein bekannter Künstlername bedeutet also nicht, dass diese Person jeden Herstellungsschritt selbst ausgeführt hat.",
+      "Der Getty-Eintrag beschreibt Hokusais Palette mit Indigo und Preußischblau. Forschende untersuchen auch, wie sich erhaltene Abzüge unterscheiden. Ein Bericht von 2024 über die Arbeit der Wissenschaftlerin Capucine Korenberg beschreibt den Vergleich von zunächst 111 erfassten Abzügen; später kamen weitere hinzu. Kleine Unterschiede in Linien, Farbauftrag und Ausrichtung helfen, die Druckgeschichte und die Abnutzung der Holzblöcke zu untersuchen. Gleicher Bildentwurf bedeutet deshalb nicht, dass jedes erhaltene Blatt dieselben Merkmale hat."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1760–1849"
+      },
+      {
+        "label": "Betrachtetes Werk",
+        "text": "Die Große Welle, etwa 1830–1832; hier der Museumsabzug JP1847"
+      }
+    ],
+    "more": [
+      "Ein erfundenes Druckmodell zeigt einen Umriss und eine dazu passende Farbfläche. Wird eine Schicht seitlich versetzt, passen beide nicht mehr genau zusammen. Das Beispiel erklärt die Bedeutung der Ausrichtung. Es ist kein historischer Druckblock und berechnet weder Farbstoffmischung noch Papierverformung.",
+      "Von einem Holzschnitt können mehrere Abzüge existieren. Das Museumsobjekt JP1847 und das andere Objekt JP2972 zeigen denselben Entwurf, sind aber verschiedene erhaltene Drucke mit eigenen Sammlungsangaben. Bildquelle, Objekt und Untersuchung dürfen deshalb nicht miteinander verwechselt werden."
+    ],
+    "learning": {
+      "starter": "Hokusais Bild entsteht aus einem Entwurf und vielen weiteren Arbeitsschritten. Mehrere Hände tragen zum fertigen Druck bei.",
+      "observe": "Vergleiche den großen Wellenbogen mit dem kleinen Fuji im Hintergrund. Beschreibe zuerst, was das Bild zeigt; eine genaue Wellenhöhe lässt sich daraus nicht ablesen.",
+      "benefit": "Du unterscheidest Bildgestaltung, Herstellungsarbeit und eine wissenschaftliche Untersuchung an einem konkreten Kunstobjekt."
+    },
+    "person": {
+      "lifespan": "1760–1849",
+      "field": "Künstler und Bildentwerfer",
+      "method": "Bildentwürfe mit Linien, Farbflächen und Perspektive gestalten."
+    },
+    "question": {
+      "prompt": "Welche Aussage über die Herstellung von Hokusais Farbholzschnitten ist sorgfältig?",
+      "answers": [
+        "Hokusai entwarf Bilder; auch Holzschneider und Drucker leisteten wichtige Arbeit",
+        "Hokusais Name beweist, dass er jeden Abzug persönlich druckte",
+        "Die Drucker verpackten fertige Bilder, hatten aber keinen Einfluss auf deren Farben"
+      ],
+      "correct": 0,
+      "why": "Bildentwurf, Schneiden und Drucken sind verschiedene Beiträge. Forschende können an den gedruckten Linien und Farbflächen Unterschiede zwischen erhaltenen Abzügen untersuchen. Ein Künstlername belegt nicht, wer jeden einzelnen Arbeitsschritt ausgeführt hat."
+    },
+    "questionFeedback": {
+      "hint": "Ordne die beschriebenen Arbeitsschritte zu, statt aus einem bekannten Namen auf alle Tätigkeiten zu schließen.",
+      "wrongReasons": [
+        null,
+        "Ein Künstlername nennt den Entwerfer, belegt aber nicht seine persönliche Ausführung jedes einzelnen Druckvorgangs.",
+        "Die Farben werden beim Drucken auf das Papier gebracht. Farbauftrag und Ausrichtung tragen zum sichtbaren Ergebnis bei. Die Druckarbeit war mehr als Verpacken."
+      ]
+    },
+    "related": [
+      "invention-printing",
+      "person-cecilia_payne_gaposchkin",
+      "person-rabindranath_tagore",
+      "person-cai_lun"
+    ],
+    "surprise": "Im dunklen Blau des untersuchten Abzugs steckt auch gezieltes Übereinanderdrucken.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Getty Research Institute · Konkreter Abzug JP1847",
+        "url": "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700000091"
+      },
+      {
+        "label": "Colossal · Bericht über Korenbergs Vergleich erhaltener Abzüge",
+        "url": "https://www.thisiscolossal.com/2024/05/the-great-wave-chronology/"
+      }
+    ],
+    "checkedAt": "2026-11-05",
+    "revision": 3,
+    "sourceNote": "Die Angaben zu Künstler, Datierung und Abzug JP1847 folgen dem Getty Research Institute. Der Kunstjournalismus-Beitrag von Kate Mothes bei Colossal berichtet über Korenbergs Forschung, den anfangs betrachteten Bestand von 111 Abzügen und zwei später hinzugekommene. Diese Zahl wird nicht als heutiger Gesamtbestand ausgegeben. Der früher tatsächlich gelesene institutionelle Forschungsbericht bleibt als Herkunftsnachweis erhalten; eine vollständige Lektüre der nicht abrufbaren Originalfacharbeit oder ein angesehenes beziehungsweise gehörtes Video wird nicht behauptet. Das Museumsbild zeigt JP1847; JP2972 bezeichnet einen anderen Abzug. Eine Aussage über ein bestimmtes Blatt braucht eine dazu passende Untersuchung. Das eigene Ausrichtungsmodell zeigt nur die Lage zweier gedachter Druckschichten, keine historische Wellenhöhe oder Farbstoffanalyse. Herkunft und Bildrechte stehen direkt beim Bild.",
+    "image": "hokusai-great-wave-jp1847"
+  },
+  {
+    "id": "person-murasaki_shikibu",
+    "category": "people",
+    "title": "Murasaki Shikibu",
+    "intro": "Murasaki Shikibu schrieb am japanischen Kaiserhof im frühen 11. Jahrhundert die Erzählung vom Prinzen Genji. Ihr Werk wurde über viele Generationen abgeschrieben, gelesen und in Bildern neu gedeutet.",
+    "aliases": [
+      "Murasaki Shikibu",
+      "Murasaki",
+      "Genji Monogatari",
+      "Die Geschichte vom Prinzen Genji"
+    ],
+    "paragraphs": [
+      "Eine Erzählung kann zeigen, wie Menschen denken, fühlen und miteinander umgehen. Murasaki Shikibu arbeitete am japanischen Kaiserhof und schrieb im frühen 11. Jahrhundert das Genji Monogatari. In dieser umfangreichen literarischen Geschichte begegnen uns Figuren, Beziehungen und Vorstellungen der höfischen Welt.",
+      "Ein von der Autorin selbst geschriebenes Originalmanuskript ist nicht erhalten. Der Text wurde über Jahrhunderte von Hand weiterkopiert. Dabei entstanden unterschiedliche Fassungen, etwa durch Auslassungen, Änderungen und Abschreibfehler. Um die Überlieferung zu untersuchen, vergleichen Forschende erhaltene Abschriften und Kommentare.",
+      "Auch Bilder erzählen weiter. Das Metropolitan Museum of Art bewahrt beispielsweise illustrierte Genji-Handrollen aus dem 17. Jahrhundert auf. Das Kyoto National Museum beschreibt eine weitere frühe Darstellung des Aoi-Kapitels aus demselben Jahrhundert. Diese Bilder entstanden viele Jahrhunderte nach dem Text. Sie zeigen spätere Deutungen und sind kein zeitgenössisches Porträt der Autorin oder fotografischer Bericht aus ihrer Lebenszeit."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "Lebte um 1000; genaue Lebensdaten sind unbekannt"
+      },
+      {
+        "label": "Werk",
+        "text": "Genji Monogatari, eine bedeutende frühe literarische Erzählung"
+      }
+    ],
+    "more": [
+      "In einem erfundenen Beispiel kommt eine Nachricht spät an. Eine wartende Figur empfindet die Zeit anders als die Figur, die sie bringt. Eine Erzählperspektive lenkt, was wir erfahren. Unsere Beispielsätze sind keine Übersetzung oder verlorenen Stellen aus dem Genji Monogatari.",
+      "Text, Abschrift und spätere Illustration sind verschiedene Zeugnisse. Ein schönes Bild kann die Wirkung eines Werkes zeigen, ohne jedes historische Detail zu belegen. Auch die älteste erhaltene Abschrift ist nicht automatisch die eigene Handschrift der Autorin. Genaue Datierungen und Beiträge müssen jeweils am konkreten Objekt geprüft werden."
+    ],
+    "learning": {
+      "starter": "Murasaki Shikibu schrieb Geschichten über Menschen. Spätere Leserinnen, Leser und Kunstschaffende gaben ihr Werk weiter.",
+      "observe": "Vergleiche bei einem alten Text und einem dazugehörigen Bild die jeweiligen Datumsangaben. Was entstand früher, und was ist eine spätere Darstellung?",
+      "benefit": "Du unterscheidest eine Erzählung, ihre Überlieferung und eine spätere Interpretation."
+    },
+    "person": {
+      "lifespan": "Lebte um 1000; genaue Lebensdaten unbekannt",
+      "field": "Schriftstellerin",
+      "method": "Literarische Figuren, Beziehungen und unterschiedliche Blickwinkel gestalten."
+    },
+    "question": {
+      "prompt": "Ein Text entstand im frühen 11. Jahrhundert, ein Bild dazu im 17. Jahrhundert. Welche Einordnung passt?",
+      "answers": [
+        "Das Bild ist damit eine zeitgenössische Aufnahme aus dem 11. Jahrhundert",
+        "Das Bild ist eine spätere Deutung und braucht eine eigene zeitliche Einordnung",
+        "Das Bild allein beweist, dass alle gezeigten Einzelheiten um 1000 genauso aussahen"
+      ],
+      "correct": 1,
+      "why": "Die beiden Zeugnisse entstanden in verschiedenen Jahrhunderten. Eine spätere Illustration zeigt eine Deutung des Werkes und ist nicht automatisch ein unmittelbarer Beleg für alle Einzelheiten der früheren Zeit."
+    },
+    "questionFeedback": {
+      "hint": "Betrachte die Datierung jedes Zeugnisses einzeln, bevor du daraus etwas über eine frühere Zeit schließt.",
+      "wrongReasons": [
+        "Das 17. Jahrhundert liegt viele Jahrhunderte nach dem frühen 11. Jahrhundert. Beide Entstehungszeiten sind nicht gleich.",
+        null,
+        "Spätere Kunst kann eigene Entscheidungen und Vorstellungen enthalten. Für genaue historische Einzelheiten sind zusätzliche passende Belege nötig."
+      ]
+    },
+    "related": [
+      "person-johannes_gutenberg",
+      "person-octavia_butler",
+      "history-writing",
+      "person-rabindranath_tagore",
+      "person-ibn_sina"
+    ],
+    "surprise": "Auch ohne erhaltene eigene Handschrift kann ein Werk durch viele Abschriften weiterleben.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Kyoto National Museum · Überlieferung und Autorin des Genji Monogatari",
+        "url": "https://www.kyohaku.go.jp/eng/exhibitions/special/2026_genji/"
+      },
+      {
+        "label": "Metropolitan Museum of Art · Objektdaten zu Genji-Handrollen (JSON)",
+        "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/76463"
+      },
+      {
+        "label": "Kyoto National Museum · Spätere Bildüberlieferung im Aoi-Kapitel",
+        "url": "https://www.kyohaku.go.jp/old/eng/theme/floor2_1/past/ih_20150210.html"
+      }
+    ],
+    "checkedAt": "2026-11-05",
+    "revision": 4,
+    "sourceNote": "Eigene Erklärung nach tatsächlich gelesenen institutionellen Abschnitten. Kyoto bezeichnet genaue Lebensdaten als unbekannt und unterscheidet fehlendes Autograph, Abschriften und spätere Darstellungen. Keine sicheren Geburts-/Todesjahre und kein pauschaler Weltrekord als erster Roman behauptet. Genji-Beispielsätze sind selbst erfunden; der vollständige Roman, Ausstellungskataloge und Audio wurden nicht als gelesen beziehungsweise gehört ausgegeben. Das Met-Objekt 76463 und Kyotos frühere Ausstellung zum Aoi-Kapitel belegen konkrete spätere Bildüberlieferungen aus dem 17. Jahrhundert; diese Werke werden nicht mit einem Autograph oder zeitgenössischen Porträt gleichgesetzt."
+  },
+  {
+    "id": "person-rachel_carson",
+    "category": "people",
+    "title": "Rachel Carson",
+    "intro": "Rachel Carson verband Biologie mit verständlichem Schreiben. Sie fragte, wie der unbedachte Einsatz von Pflanzenschutzmitteln auch Lebewesen treffen kann, gegen die diese Mittel gar nicht eingesetzt werden.",
+    "aliases": [
+      "Rachel Carson",
+      "Rachel Louise Carson",
+      "Der stumme Frühling",
+      "Silent Spring"
+    ],
+    "paragraphs": [
+      "Rachel Carson lebte von 1907 bis 1964. Die Biologin schrieb über das Meer und erklärte wissenschaftliche Erkenntnisse für die Öffentlichkeit. Bei der amerikanischen Fischereibehörde verband sie Forschungsthemen mit Radioarbeit und Veröffentlichungen.",
+      "1962 erschien ihr Buch Silent Spring, auf Deutsch Der stumme Frühling. Carson sammelte und erklärte Belege für Umweltfolgen des unbedachten Pestizideinsatzes. Dabei betrachtete sie auch Verbindungen zwischen Lebewesen: Ein Stoff kann mit Nahrung weitergegeben werden und andere Tiere erreichen.",
+      "Ein wichtiges Beispiel ist DDT. Es bleibt lange in der Umwelt und kann sich im Fettgewebe anreichern. Daraus folgt nicht, dass jeder Stoff gleich wirkt. Für eine Beurteilung braucht man Angaben zum Stoff, zur aufgenommenen Menge, zum Lebewesen und zur Dauer der Belastung. Carsons Buch verstärkte die öffentliche Debatte; sie allein beschloss kein weltweites Verbot."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1907–1964"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Meeresbiologie und wissenschaftliches Schreiben"
+      },
+      {
+        "label": "Wichtiges Werk",
+        "text": "Silent Spring, 1962"
+      }
+    ],
+    "more": [
+      "Unser erfundenes Zählmodell verfolgt vier Stoffmarkierungen. Vor einer Futteraufnahme tragen zwei gedachte Beutetiere je zwei Markierungen. Danach trägt das gedachte größere Tier alle vier. Das Beispiel nimmt ausdrücklich an, dass dabei keine Markierung ausgeschieden oder abgebaut wird. Es zeigt einen möglichen Weitergabeweg, keine echten DDT-Messwerte.",
+      "Eine größere Stoffmenge ist nicht automatisch eine größere Konzentration. Im erfundenen Gegenbeispiel entsprechen zwei Markierungen in zehn Gramm Gewebe 0,2 Markierungen je Gramm. Vier Markierungen in vierzig Gramm entsprechen 0,1 je Gramm. Für einen Konzentrationsvergleich braucht man also auch die Bezugsmenge. Bei realen Nahrungsketten kann die Konzentration bestimmter langlebiger Stoffe zunehmen; unser bloßes Zählbild beweist das nicht.",
+      "Die US-Umweltbehörde EPA erließ 1972 eine Aufhebungsanordnung für DDT-Anwendungen. Carson war bereits 1964 gestorben. Die Geschichte umfasst Untersuchungen, öffentliche Diskussion und behördliche Entscheidungen mehrerer Beteiligter. Aus der damaligen US-Entscheidung darf man weder ein sofortiges weltweites Verbot noch eine heutige Zulassungsempfehlung ableiten."
+    ],
+    "surprise": "Wer Umweltfolgen untersucht, muss häufig über den Ort der unmittelbaren Anwendung hinausblicken.",
+    "person": {
+      "lifespan": "1907–1964",
+      "field": "Biologin und Sachbuchautorin",
+      "method": "Wissenschaftliche Befunde zusammenführen und Zusammenhänge für die Öffentlichkeit erklären."
+    },
+    "learning": {
+      "starter": "Verfolge im eigenen Beispiel einen Stoffweg durch Nahrung.",
+      "observe": "Halte Stoffmenge und Konzentration auseinander und benenne die Annahmen des Zählbilds.",
+      "benefit": "Du kannst prüfen, welche Aussage eine Zeichnung tatsächlich trägt und welche zusätzlichen Messgrößen fehlen."
+    },
+    "question": {
+      "prompt": "Ein langlebiger Stoff befindet sich in Beutetieren. Warum lohnt es sich, auch deren Fressfeinde zu untersuchen?",
+      "answers": [
+        "Nur der Ort des direkten Kontakts kann betroffen sein",
+        "Ein aufgenommener Stoff kann mit der Nahrung weitergegeben werden",
+        "Ohne sichtbare Sprühwolke ist jede Belastung ausgeschlossen"
+      ],
+      "correct": 1,
+      "why": "Die Nahrung verbindet Beute und Fressfeind. Eine mögliche Weitergabe muss untersucht werden; wie stark sie ist, hängt vom Stoff und den beteiligten Lebewesen ab."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe, welche Verbindungen zwischen den Tieren in der Zeichnung vorkommen.",
+      "wrongReasons": [
+        "Direkter Kontakt ist nicht der einzige mögliche Aufnahmeweg. Die Beutetiere werden selbst zur Nahrung anderer Tiere.",
+        null,
+        "Ob ein Stoff sichtbar ist, entscheidet nicht darüber, ob Tiere ihn mit Nahrung aufnehmen können."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "science-foodweb",
+      "person-wangari_maathai",
+      "science-pollination",
+      "person-octavia_butler"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "National Park Service: Rachel Carson",
+        "url": "https://www.nps.gov/people/rachel-carson.htm"
+      },
+      {
+        "label": "US EPA: DDT – Geschichte und Regelung",
+        "url": "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status"
+      },
+      {
+        "label": "Michigan DNR: DDT und Nahrungsketten",
+        "url": "https://www.michigan.gov/dnr/managing-resources/wildlife/wildlife-disease/wdm/ddt-and-other-chlorinated-hydrocarbon-pesticides"
+      }
+    ],
+    "sourceNote": "Biografische Einordnung nach NPS; fachliche Erklärung nach EPA und Michigan DNR. Zahlen und Markierungen sind eigene erfundene Lehrbeispiele. Das Zählbild zeigt einen möglichen Stoffweg; für einen realen Konzentrationsvergleich braucht man zusätzliche Messgrößen.",
+    "checkedAt": "2026-11-03",
+    "revision": 1,
+    "image": "rachel-carson"
+  },
+  {
+    "id": "person-octavia_butler",
+    "category": "people",
+    "title": "Octavia E. Butler",
+    "intro": "Octavia E. Butler schrieb Science-Fiction. Mit erfundenen Welten stellte sie Fragen an die Gegenwart: Wer hat Einfluss, wer kennt welche Informationen und wie handeln Menschen miteinander?",
+    "aliases": [
+      "Octavia Butler",
+      "Octavia E. Butler",
+      "Octavia Estelle Butler",
+      "Science-Fiction"
+    ],
+    "paragraphs": [
+      "Octavia E. Butler lebte von 1947 bis 2006 und stammte aus Pasadena in Kalifornien. Ihre Romane und Erzählungen verbinden erfundene Situationen mit Fragen zu Gemeinschaft, Macht und Umwelt. Eine Zukunftsgeschichte ist dabei kein Beweis, dass die dargestellte Zukunft eintreten wird.",
+      "Schreiben bestand für Butler auch aus Recherchieren und Überarbeiten. Ihr Archiv in der Huntington Library enthält Entwürfe, Notizen und Arbeitsmaterialien. Eine ausgearbeitete Geschichte entsteht aus Entscheidungen: Was gilt in dieser Welt, was erlebt eine Figur und was erfahren die Lesenden?",
+      "Wir untersuchen dazu eine eigene, harmlose Erfindung: Ein Bücherfahrrad erreicht seine Abholstelle nicht rechtzeitig. Lina weiß, dass sein Reifen platt ist. Noor sieht nur die leere Abholstelle. Dasselbe Ereignis steht fest, doch die Figuren kennen unterschiedliche Teile davon. Aus einer Beobachtung lässt sich nicht automatisch ein fremder Gedanke oder eine Ursache ablesen."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1947–2006"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Science-Fiction und Erzählen"
+      },
+      {
+        "label": "Archiv",
+        "text": "Entwürfe und Arbeitsmaterialien in der Huntington Library"
+      },
+      {
+        "label": "Zwei Werke",
+        "text": "Kindred (1979) und Parable of the Sower (1993)"
+      }
+    ],
+    "more": [
+      "In Kindred (1979) verbindet Butler eine erfundene Zeitreise mit der Geschichte der Versklavung in den USA. Parable of the Sower (1993) greift unter anderem Fragen nach Umwelt und Gesellschaft auf. Diese Werkbeispiele zeigen konkrete Themen ihres Schreibens; unsere kleine Buchlieferszene ist eine davon unabhängige eigene Erfindung.",
+      "Unser Bücherfahrrad, Lina und Noor sind eigene erfundene Beispiele. Sie stammen weder aus Butlers Büchern noch aus ihrem Leben. Das Umschalten zeigt, welche Information eine Figur im vorgegebenen Beispiel hat. Es legt nicht fest, wie diese Figur sich fühlen oder was sie als Nächstes tun muss.",
+      "Eine Weltregel kann eine Erzählung verändern. In unserem weiteren eigenen Beispiel fährt eine Fähre zunächst einmal täglich, nach einer bewussten Überarbeitung zweimal. Nun muss die Autorin oder der Autor prüfen, welche Wartezeiten und Handlungen noch passen. Die neue Regel schreibt nicht von selbst jeden Satz oder ein einziges richtiges Ende vor.",
+      "Butlers Themen umfassen auch schwierige historische und gesellschaftliche Erfahrungen. Der leichte Einstieg hier ist keine Zusammenfassung sämtlicher Bücher und keine Behauptung, jedes Werk sei für jedes Alter geeignet. Eigene begründete Deutungen bleiben möglich; eine Auswahlaufgabe bewertet nur ihre ausdrücklich vorgegebenen Textinformationen."
+    ],
+    "surprise": "Ein erfundener Blick in die Zukunft kann helfen, Fragen an die Gegenwart genauer zu stellen.",
+    "person": {
+      "lifespan": "1947–2006",
+      "field": "Schriftstellerin",
+      "method": "Recherchieren, erfundene Welten entwickeln und Entwürfe überarbeiten."
+    },
+    "learning": {
+      "starter": "Unterscheide ein vorgegebenes Ereignis von dem Wissen einer einzelnen Figur.",
+      "observe": "Wechsle den Blickwinkel und überprüfe, welche Aussagen der jeweilige Text wirklich stützt.",
+      "benefit": "Du kannst Beobachtung, Vermutung und erfundene Weltregel auseinanderhalten und eigene Deutungen begründen."
+    },
+    "question": {
+      "prompt": "Noor sieht nur die leere Abholstelle. Welche Aussage ist durch diese Information gedeckt?",
+      "answers": [
+        "Noor weiß sicher, dass ein Reifen platt ist",
+        "An der Abholstelle liegen jetzt keine Bücher bereit",
+        "Die andere Figur will die Bücher absichtlich zurückhalten"
+      ],
+      "correct": 1,
+      "why": "Die leere Abholstelle ist vorgegeben. Die Ursache und die Absicht einer anderen Figur sind aus dieser Beobachtung allein nicht sicher bekannt."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die sichtbare Situation von einer Erklärung, für die der Figur noch Informationen fehlen.",
+      "wrongReasons": [
+        "Diese Ursache ist nur Lina mitgeteilt worden. Der Text gibt Noor dieses Wissen noch nicht.",
+        null,
+        "Eine fehlende Lieferung belegt keine Absicht. Für diese Deutung wären weitere Informationen nötig."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "person-murasaki_shikibu",
+      "person-johannes_gutenberg",
+      "person-rachel_carson"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "Huntington Library: Octavia E. Butler Papers – Überblick",
+        "url": "https://researchguides.huntington.org/oeb"
+      },
+      {
+        "label": "Huntington Library · Manuskripte, Notizen und Arbeitsmaterialien",
+        "url": "https://researchguides.huntington.org/oeb/navigate"
+      },
+      {
+        "label": "MacArthur Foundation: Octavia Butler",
+        "url": "https://www.macfound.org/fellows/class-of-1995/octavia-butler"
+      }
+    ],
+    "sourceNote": "Biografische Einordnung nach Huntington Library und MacArthur Foundation. Die Lehrszenen und Figuren sind eigens erfunden. Sie erklären begrenzte Erzählentscheidungen und geben keine Handlung aus Butlers Büchern wieder.",
+    "checkedAt": "2026-11-04",
+    "revision": 2
+  },
+  {
+    "id": "person-nelson_mandela",
+    "category": "people",
+    "title": "Nelson Mandela",
+    "intro": "Nelson Mandela setzte sich in Südafrika gegen die Apartheid ein. Dieses staatliche System benachteiligte Menschen durch rassistische Gesetze. Er war an einem langen politischen Wandel beteiligt und wurde 1994 Präsident.",
+    "aliases": [
+      "Nelson Mandela",
+      "Nelson Rolihlahla Mandela",
+      "Rolihlahla Mandela",
+      "Mandela",
+      "Apartheid"
+    ],
+    "paragraphs": [
+      "Wer darf mitentscheiden, und welche Rechte stehen Menschen zu? Die Apartheid in Südafrika teilte Menschen nach rassistischen staatlichen Kategorien ein und gab ihnen ungleiche Rechte. Nelson Mandela arbeitete als Anwalt und politisch im African National Congress, kurz ANC, gegen dieses System.",
+      "Mandela wurde 1962 verhaftet und verbrachte viele Jahre in Haft. 1990 wurde er freigelassen. Danach folgten weitere Verhandlungen. Die ersten demokratischen Wahlen fanden 1994 statt; im Mai übernahm eine demokratisch gewählte Regierung ihr Amt, mit Mandela als Präsidenten.",
+      "Dieser Wandel war nicht die Leistung eines Einzelnen. Menschen und Organisationen in Südafrika sowie internationale Unterstützung wirkten daran mit. Neue politische Rechte und die weitere Überwindung von Benachteiligung sind unterschiedliche Aufgaben: Eine Wahl beseitigt nicht an einem Tag alle Folgen einer langen Geschichte."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1918–2013"
+      },
+      {
+        "label": "Präsidentschaft",
+        "text": "1994–1999"
+      },
+      {
+        "label": "Zwei verschiedene Schritte",
+        "text": "1990 freigelassen; 1994 erste demokratische Wahlen"
+      }
+    ],
+    "more": [
+      "Der Widerstand hatte unterschiedliche Formen. Mandela war auch am Aufbau bewaffneten Widerstands beteiligt; später spielte er eine wichtige Rolle bei Verhandlungen. Seine Lebensgeschichte lässt sich deshalb weder auf einen einzigen Weg noch auf eine einzige Heldentat verkürzen. Die Menschen, Organisationen und historischen Umstände gehören zur Erklärung dazu.",
+      "Ein erfundenes Lesebeispiel vergleicht zwei Regeln für dieselben vier stimmberechtigten Mitglieder einer kleinen Gruppe: Eine Regel lässt nur zwei mitentscheiden, die andere berücksichtigt alle vier. Das Beispiel hilft beim Lesen von Regeln. Es bildet weder das Leben unter Apartheid noch die damalige Gewalt, die Gesetze und den Widerstand nach. Niemand übernimmt im Beispiel eine historische Opfer- oder Täterrolle."
+    ],
+    "learning": {
+      "starter": "Mandela und viele andere wollten, dass rassistische Gesetze nicht länger über die Rechte von Menschen bestimmen.",
+      "observe": "Unterscheide bei einer Regel ihren Wortlaut und ihre Wirkung: Wer darf mitentscheiden, wer bleibt ausgeschlossen? Trenne das kleine erfundene Beispiel von der Geschichte eines ganzen Landes.",
+      "benefit": "Du unterscheidest gleiche politische Rechte, historische Veränderungen und die langfristige Aufgabe, Benachteiligung zu überwinden."
+    },
+    "person": {
+      "lifespan": "1918–2013",
+      "field": "Politiker und Gegner der Apartheid",
+      "method": "Politischen Widerstand mitorganisieren und später an Verhandlungen über demokratischen Wandel mitwirken."
+    },
+    "question": {
+      "prompt": "Mandela wurde 1990 freigelassen; 1994 fanden die ersten demokratischen Wahlen statt. Welche Erklärung passt zu dieser Abfolge?",
+      "answers": [
+        "Die Freilassung und die Wahlen waren dieselbe Veranstaltung",
+        "Nach der Freilassung waren weitere Verhandlungen und politische Schritte nötig",
+        "Mit der Freilassung war Mandela automatisch bereits Präsident"
+      ],
+      "correct": 1,
+      "why": "Freilassung, Verhandlungen, Wahlen und Amtsübernahme waren verschiedene Schritte. Mandela wurde 1994 Präsident; der politische Wandel wurde von vielen Menschen mitgetragen."
+    },
+    "questionFeedback": {
+      "hint": "Ordne die genannten Ereignisse ihren verschiedenen Jahren zu und frage nach den Schritten dazwischen.",
+      "wrongReasons": [
+        "Die Freilassung 1990 und die Wahlen 1994 liegen in verschiedenen Jahren und bezeichnen unterschiedliche Ereignisse.",
+        null,
+        "Eine Freilassung ist keine Wahl oder Amtsübernahme. Mandela wurde erst 1994 Präsident."
+      ]
+    },
+    "related": [
+      "history-un",
+      "person-wangari_maathai"
+    ],
+    "surprise": "Ein wichtiger Wandel kann viele Jahre und die Beiträge vieler Menschen brauchen.",
+    "locations": [],
+    "links": [],
+    "sources": [
+      {
+        "label": "Nelson Mandela Foundation · Biografie mit Korrekturhinweisen",
+        "url": "https://www.nelsonmandela.org/biography"
+      },
+      {
+        "label": "Nelson Mandela Foundation · Demokratie und Verhandlungen",
+        "url": "https://www.nelsonmandela.org/democracy"
+      },
+      {
+        "label": "Anti-Apartheid Movement Archives · Internationale Freilassungskampagne",
+        "url": "https://www.aamarchives.org/archive/campaigns/free-mandela.html"
+      },
+      {
+        "label": "Apartheid Museum · Mandela-Ausstellung",
+        "url": "https://www.apartheidmuseum.org/mandela-exhibition"
+      }
+    ],
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "sourceNote": "Eigene Erklärung nach institutionellen Biografie-, Demokratie- und Museumsabschnitten sowie den historischen Kampagnenbelegen des Anti-Apartheid Movement Archives. Freilassung, demokratische Wahlen und Amtsübernahme getrennt; keine Alleinleistung, ausschließlich gewaltfreie Lebensgeschichte oder sofortige Beseitigung aller Ungleichheit behauptet. Unstimmige Erstkanzlei-/Kindheitsjahresangaben nicht übernommen. Das Gruppenbeispiel ist erfunden, keine historische Apartheidsimulation oder Bewertung der eigenen moralischen Haltung. Die internationalen Freilassungsaufrufe belegen Unterstützung; daraus wird keine einzelne gesicherte Ursache des gesamten politischen Wandels abgeleitet."
+  },
+  {
+    "id": "person-chien_shiung_wu",
+    "category": "people",
+    "title": "Chien-Shiung Wu",
+    "intro": "Chien-Shiung Wu entwickelte sehr genaue Experimente. Gemeinsam mit einem Forschungsteam prüfte sie, ob eine vertraute Vorstellung über die Spiegelung physikalischer Vorgänge auch beim Betazerfall gilt.",
+    "aliases": [
+      "Chien-Shiung Wu",
+      "Wu Chien-shiung",
+      "Wu Jianxiong",
+      "Wu-Experiment",
+      "Parität"
+    ],
+    "paragraphs": [
+      "Chien-Shiung Wu lebte von 1912 bis 1997. Die in China geborene Experimentalphysikerin arbeitete später an der Columbia University in den USA. Sie untersuchte, wie sich Teilchen bei bestimmten radioaktiven Zerfällen verhalten.",
+      "1956 arbeitete Wu mit Ernest Ambler, Raymond Hayward, Dale Hoppes und Ralph Hudson am damaligen National Bureau of Standards. Das Team untersuchte Elektronen, die beim Betazerfall von Cobalt-60 entstehen. Entscheidend war ihre Richtung im Verhältnis zur kontrollierten Ausrichtung der Atomkerne. Das Ergebnis zeigte: Für diesen Vorgang gilt die zuvor angenommene Spiegelsymmetrie nicht.",
+      "Das bedeutet nicht, dass jeder sichtbare Unterschied zweier Bilder ein neues Naturgesetz widerlegt. Die wirkliche Untersuchung brauchte einen sorgfältigen Aufbau und Kontrollen. Auch Kernspin ist eine quantenphysikalische Eigenschaft; ein Atomkern ist nicht einfach eine kleine, sichtbar rotierende Spielzeugkugel."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1912–1997"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Experimentelle Kern- und Teilchenphysik"
+      },
+      {
+        "label": "Gemeinsames Experiment",
+        "text": "Richtungsverteilung beim Betazerfall, 1956"
+      }
+    ],
+    "more": [
+      "Unser frei erfundenes Zählbild vergleicht zwei Verteilungen von jeweils acht Markierungen. Einmal sind es vier links und vier rechts, einmal sechs links und zwei rechts. Der Unterschied ist sichtbar; die Zahlen sind aber keine Originalmesswerte aus Wus Experiment und keine Nachbildung seiner Geometrie.",
+      "Ein ungleiches Zählergebnis allein beweist keine Verletzung einer physikalischen Symmetrie. Man muss unter anderem wissen, welche Bedingungen verglichen wurden, ob das Messgerät eine Richtung bevorzugt und wie groß zufällige Schwankungen sein können. Das Zählbild erklärt die Frage nach einer Verteilung, nicht den ganzen Paritätsnachweis."
+    ],
+    "surprise": "Eine lange akzeptierte Annahme muss sich an einem passenden Experiment bewähren.",
+    "person": {
+      "lifespan": "1912–1997",
+      "field": "Experimentalphysikerin",
+      "method": "Messanordnungen entwickeln, Richtungen kontrollieren und die Vorhersage einer Annahme mit Beobachtungen vergleichen."
+    },
+    "learning": {
+      "starter": "Vergleiche zwei gleich große Mengen mit unterschiedlicher Verteilung.",
+      "observe": "Trenne den sichtbaren Unterschied eines Lernbilds von der Aussagekraft eines echten Experiments.",
+      "benefit": "Du kannst nach Kontrollbedingungen fragen, statt eine auffällige Zeichnung schon für einen Naturbeweis zu halten."
+    },
+    "question": {
+      "prompt": "Das erfundene Zählbild zeigt einmal 4 und 4, einmal 6 und 2 Markierungen. Was lässt sich daran unmittelbar feststellen?",
+      "answers": [
+        "Die gleiche Gesamtzahl ist unterschiedlich auf die beiden Seiten verteilt",
+        "Die acht Markierungen beweisen Wus ursprüngliche Messwerte",
+        "Jeder beliebige Unterschied zwischen zwei Bildern verletzt Parität"
+      ],
+      "correct": 0,
+      "why": "Beide Darstellungen enthalten acht Markierungen. Ihre Verteilung unterscheidet sich; eine weitergehende physikalische Schlussfolgerung braucht mehr als dieses erfundene Zählbild."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche sowohl die Summe als auch die Verteilung auf die beiden Seiten.",
+      "wrongReasons": [
+        null,
+        "Die Zahlen sind ausdrücklich für dieses Lehrbeispiel erfunden. Sie sind kein historisches Messprotokoll.",
+        "Ein physikalischer Symmetrietest braucht festgelegte Vergleichsbedingungen und Kontrollen. Ein beliebiger Bildunterschied genügt nicht."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "science-symmetry",
+      "person-marie_curie",
+      "person-lise_meitner"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "NIST: Das tatsächliche Paritätsexperiment",
+        "url": "https://www.nist.gov/pml/fall-parity/reversal-parity-law-nuclear-physics"
+      },
+      {
+        "label": "NIST: The Fall of Parity",
+        "url": "https://www.nist.gov/pml/fall-parity"
+      },
+      {
+        "label": "Oxford University Museum: Chien-Shiung Wu",
+        "url": "https://oumnh.ox.ac.uk/learn-chien-shiung-wu"
+      }
+    ],
+    "sourceNote": "Historische Einordnung nach NIST und Oxford University Museum. Die Zählmarkierungen sind eigene erfundene Beispiele ohne Originalmesswerte. Eine gewöhnliche Bilder- oder Handspiegelübung stellt Wus Kernexperiment nicht nach.",
+    "checkedAt": "2026-11-03",
+    "revision": 1,
+    "image": "chien-shiung-wu"
+  },
+  {
+    "id": "person-lise_meitner",
+    "category": "people",
+    "title": "Lise Meitner",
+    "intro": "Lise Meitner verband experimentelle Kernphysik mit theoretischem Denken. Mit Otto Frisch erklärte sie, wie die unerwarteten Befunde von Otto Hahn und Fritz Straßmann durch eine Spaltung des Atomkerns verständlich werden.",
+    "aliases": [
+      "Lise Meitner",
+      "Meitner",
+      "Kernspaltung",
+      "Otto Frisch"
+    ],
+    "paragraphs": [
+      "Lise Meitner lebte von 1878 bis 1968 und arbeitete als Physikerin viele Jahre in Berlin. 1938 musste sie aus dem nationalsozialistischen Deutschland fliehen. Aus ihrem schwedischen Exil blieb sie mit dem Chemiker Otto Hahn in wissenschaftlichem Austausch.",
+      "Im Dezember 1938 fanden Hahn und Fritz Straßmann bei ihren Untersuchungen mit Uran Hinweise auf Barium. Meitner und ihr Neffe Otto Frisch lieferten Anfang 1939 die physikalische Erklärung: Ein schwerer Atomkern kann sich in zwei kleinere Kerne teilen. Dabei kann Energie frei werden. Chemischer Befund und physikalische Erklärung waren verschiedene, zusammenwirkende Beiträge.",
+      "Kernspaltung verändert den Atomkern. Bei einer gewöhnlichen chemischen Reaktion werden dagegen vor allem Elektronen und Bindungen zwischen Atomen neu geordnet; ihre Atomkerne werden dabei nicht auf dieselbe Weise geteilt. Kernspaltung und Kernfusion sind ebenfalls verschieden: Bei der Fusion verbinden sich leichte Kerne, bei der Spaltung entstehen aus einem schweren Kern kleinere."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1878–1968"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Kernphysik"
+      },
+      {
+        "label": "Beitrag",
+        "text": "Physikalische Erklärung der Kernspaltung gemeinsam mit Otto Frisch, 1939"
+      }
+    ],
+    "more": [
+      "Unser eigenes Schema stellt zwei Fragen nebeneinander: Was wurde bei einer Untersuchung gefunden, und welche Erklärung soll diesen Befund verständlich machen? Es zeigt keine echte Apparatur und kein ursprüngliches Messbild. Das Blatt, die Lupe und die gezeichneten Kerne sind Symbole, keine zählbaren realen Isotope oder Anleitung zur Durchführung.",
+      "Eine Erklärung muss zu den Befunden passen. Daraus folgt nicht, dass jede denkbare Erklärung genauso gut wäre. Weitere Beobachtungen und überprüfbare Folgerungen helfen, zwischen ihnen zu unterscheiden. Im historischen Fall trugen verschiedene Menschen und Methoden zur gemeinsamen Aufklärung bei."
+    ],
+    "surprise": "Eine unerwartete Beobachtung wird oft erst durch eine neue, passende Erklärung verständlich.",
+    "person": {
+      "lifespan": "1878–1968",
+      "field": "Physikerin",
+      "method": "Beobachtungen, theoretische Modelle und wissenschaftlichen Austausch zusammenführen."
+    },
+    "learning": {
+      "starter": "Unterscheide einen chemischen Befund von seiner physikalischen Erklärung.",
+      "observe": "Vergleiche die Änderung eines Atomkerns mit einer Änderung von Bindungen zwischen Atomen.",
+      "benefit": "Du kannst Beiträge verschiedener Methoden benennen und Kernspaltung von Fusion unterscheiden."
+    },
+    "question": {
+      "prompt": "Welche Aussage beschreibt im behandelten Beispiel die physikalische Erklärung und nicht nur den chemischen Befund?",
+      "answers": [
+        "Bei der Untersuchung wurde Barium gefunden",
+        "Ein schwerer Atomkern kann sich in kleinere Kerne teilen",
+        "Hahn und Straßmann untersuchten Reaktionsprodukte"
+      ],
+      "correct": 1,
+      "why": "Das Teilen des schweren Kerns erklärt, wie kleinere Kerne entstehen können. Das gefundene Barium gehört zu den Befunden, die diese Erklärung verständlich machen soll."
+    },
+    "questionFeedback": {
+      "hint": "Frage, welcher Satz einen möglichen Vorgang beschreibt, der das Ergebnis erklärt.",
+      "wrongReasons": [
+        "Das ist der wichtige Befund. Er benennt noch nicht den erklärenden Vorgang im Atomkern.",
+        null,
+        "Dieser Satz beschreibt eine Untersuchungstätigkeit, noch nicht die physikalische Erklärung ihres Ergebnisses."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "science-fusion",
+      "person-marie_curie",
+      "person-albert_einstein",
+      "person-chien_shiung_wu"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "Max-Planck-Institut für Chemie: Entdeckung der Kernspaltung",
+        "url": "https://www.mpic.de/3549655/die-entdeckung-der-kernspaltung"
+      },
+      {
+        "label": "Max-Planck-Gesellschaft: Lise Meitner im Porträt",
+        "url": "https://www.mpg.de/11718069/lise-meitner-im-portraet"
+      }
+    ],
+    "sourceNote": "Eigene Einordnung nach den Max-Planck-Belegen. Historische chemische Befunde und anschließende physikalische Erklärung werden getrennt zugerechnet. Die eigenen Symbole sind keine Originalapparatur, gemessene Kernaufnahmen oder Berechnung einer bestimmten Spaltreaktion.",
+    "checkedAt": "2026-11-03",
+    "revision": 1
+  },
+  {
+    "id": "person-zaha_hadid",
+    "category": "people",
+    "title": "Zaha Hadid",
+    "intro": "Zaha Hadid entwarf Gebäude und Räume mit ungewöhnlichen Geometrien. Zeichnungen halfen ihr, räumliche Ideen zu untersuchen. Ein Entwurf muss dabei mehr beantworten als die Frage, wie seine Außenform aussieht.",
+    "aliases": [
+      "Zaha Hadid",
+      "Hadid",
+      "Architektur",
+      "Vitra Feuerwehrhaus"
+    ],
+    "paragraphs": [
+      "Zaha Hadid lebte von 1950 bis 2016. Sie wurde in Bagdad geboren und studierte später Architektur in London. Zu ihren gebauten Arbeiten gehört das Vitra-Feuerwehrhaus in Weil am Rhein von 1993. 2004 erhielt sie als erste Frau den Pritzker-Architekturpreis.",
+      "Hadid nutzte Zeichnung und Malerei auch, um räumliche Ideen zu entwickeln. Ein Gebäude kann je nach Blickrichtung anders erscheinen. Gleichzeitig bewegen sich Menschen durch seine Räume: Eingänge, Wege, Aufenthaltsorte und die Verbindung zur Umgebung gehören zum Entwurf.",
+      "Unser eigener kleiner Ausstellungsplan enthält zwei Stationen. In beiden Varianten bleiben ihre Positionen gleich; nur die Reihenfolge des Rundgangs wechselt. Das zeigt eine räumliche Entscheidung. Es ist kein Grundriss eines Hadid-Gebäudes und kein Nachweis, dass ein tatsächliches Gebäude tragfähig oder barrierefrei ist."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1950–2016"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Architektur und räumlicher Entwurf"
+      },
+      {
+        "label": "Beispiel",
+        "text": "Vitra-Feuerwehrhaus, 1993"
+      }
+    ],
+    "more": [
+      "Für einen wirklichen Entwurf müssen viele Beteiligte zusammenarbeiten: etwa Architektur, Tragwerksplanung, Bauausführung und spätere Nutzende. Eine anschauliche Formzeichnung ersetzt keine Prüfung von Material, Lasten, Zugänglichkeit, Brandschutz oder Gebrauch. Unser Rundgangsbeispiel isoliert absichtlich nur die Reihenfolge zweier Stationen.",
+      "Vergleiche bei einer Ausstellung: Was möchtest du zuerst sehen, und welche Verbindung würde dir helfen? Mehrere begründete Rundgänge können sinnvoll sein. Ein gerader Weg ist nicht automatisch der beste Entwurf, eine ungewöhnliche Form nicht automatisch ein funktionierendes Gebäude."
+    ],
+    "surprise": "Ein räumlicher Entwurf lenkt nicht nur Blicke, sondern auch mögliche Wege.",
+    "person": {
+      "lifespan": "1950–2016",
+      "field": "Architektin",
+      "method": "Räumliche Ideen zeichnen, vergleichen und gemeinsam in konkrete Entwürfe überführen."
+    },
+    "learning": {
+      "starter": "Verfolge zwei Rundgänge durch denselben erfundenen Ausstellungsplan.",
+      "observe": "Unterscheide die Lage einer Station von der Reihenfolge ihrer Besuche.",
+      "benefit": "Du kannst einen begrenzten Entwurfsvergleich begründen und erkennen, welche Fragen ein bloßer Plan noch nicht beantwortet."
+    },
+    "question": {
+      "prompt": "Im eigenen Plan stehen beide Stationen in beiden Ansichten am gleichen Ort. Was ändert der Schalter?",
+      "answers": [
+        "Die Stationen werden in ein anderes Gebäude versetzt",
+        "Die Reihenfolge des gezeichneten Rundgangs",
+        "Die nachgewiesene Tragfähigkeit aller Wände"
+      ],
+      "correct": 1,
+      "why": "Die Orte bleiben fest. Der hervorgehobene Weg besucht die Stationen in einer anderen Reihenfolge. Eine tragfähige Baukonstruktion wird damit nicht berechnet."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche die festen Stationszeichen und den hervorgehobenen Weg getrennt.",
+      "wrongReasons": [
+        "Die Positionen sind ausdrücklich festgehalten. Ein anderer Rundgang versetzt die Stationen nicht.",
+        null,
+        "Das Schema enthält keine Material- oder Lastberechnung. Ein gezeichneter Weg ist kein Tragfähigkeitsnachweis."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "building-sydney-opera",
+      "science-angle"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "Pritzker Architecture Prize: Zaha Hadid",
+        "url": "https://www.pritzkerprize.com/laureates/2004"
+      },
+      {
+        "label": "Design Museum: Zaha Hadid",
+        "url": "https://designmuseum.org/designers/zaha-hadid"
+      }
+    ],
+    "sourceNote": "Biografische und gestalterische Einordnung nach Pritzker Prize und Design Museum. Der Ausstellungsplan ist eine eigene Erfindung; er kopiert keinen veröffentlichten Bauplan und simuliert kein echtes Bauwerk.",
+    "checkedAt": "2026-11-03",
+    "revision": 1,
+    "image": "zaha-hadid"
+  },
+  {
+    "id": "person-rabindranath_tagore",
+    "category": "people",
+    "title": "Rabindranath Tagore",
+    "intro": "Rabindranath Tagore schrieb Gedichte, Geschichten und Lieder und arbeitete auch als Künstler und Pädagoge. In seinen Bildern konnten aus frei gezogenen Linien neue Formen entstehen.",
+    "aliases": [
+      "Rabindranath Tagore",
+      "Tagore",
+      "Rabīndranāth Ṭhākur",
+      "Gitanjali",
+      "Geetanjali"
+    ],
+    "paragraphs": [
+      "Rabindranath Tagore lebte von 1861 bis 1941. Der bengalische Dichter wurde 1913 mit dem Literaturnobelpreis ausgezeichnet. Sein Werk umfasst weit mehr als eine Textsorte; außerdem beschäftigte er sich mit Musik, Bildung und bildender Kunst.",
+      "Eine Schule in Santiniketan gründete er 1901. Die später entstandene Visva-Bharati wurde 1921 feierlich eröffnet. Das sind unterschiedliche Ereignisse. In der bildenden Kunst entwickelte Tagore unter anderem Zeichnungen aus Spuren, die zunächst beim Überarbeiten von Texten entstanden waren.",
+      "Wir erproben eine eigene, unabhängige Idee: Eine freie Linie bleibt stehen, dann ergänzen wir einen Punkt und einen Schnabel. Plötzlich erinnert die Form vielleicht an einen Vogel. Eine andere Person könnte noch etwas anderes darin erkennen. Die Ergänzung ist sichtbar; die Bedeutung muss man begründen und nicht als einzig zulässige Fantasie festlegen."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "1861–1941"
+      },
+      {
+        "label": "Arbeitsgebiete",
+        "text": "Dichtung, Musik, Bildung und bildende Kunst"
+      },
+      {
+        "label": "Auszeichnung",
+        "text": "Literaturnobelpreis, 1913"
+      }
+    ],
+    "more": [
+      "Die National Gallery of Modern Art beschreibt, wie aus Korrekturlinien und Ausstreichungen auf Manuskriptseiten Bildformen hervorgingen. Das Victoria and Albert Museum ordnet ebenfalls solche frei entwickelten Formen ein. Unser eigener Linienversuch übernimmt kein Werk, keine Manuskriptseite und keinen Gedichttext Tagores.",
+      "Eine bildgestützte Erklärung könnte lauten: Die ergänzte kurze Linie erinnert mich an einen Schnabel. Das ist eine begründete Deutung unseres Beispiels. Daraus folgt nicht, dass die ursprüngliche freie Linie nur diesen einen Zweck hatte oder dass jede andere Deutung falsch ist."
+    ],
+    "surprise": "Eine zunächst beiläufige Spur kann zum Ausgangspunkt einer bewussten Bildidee werden.",
+    "person": {
+      "lifespan": "1861–1941",
+      "field": "Dichter, Künstler und Pädagoge",
+      "method": "Mit Sprache, Klang und Bildformen arbeiten und Entwürfe weiterentwickeln."
+    },
+    "learning": {
+      "starter": "Vergleiche eine eigene freie Linie mit einer bewusst ergänzten Form.",
+      "observe": "Benenne, welche sichtbaren Ergänzungen deine Deutung stützen, ohne eine fremde Bildabsicht zu erfinden.",
+      "benefit": "Du kannst Beobachtung und Deutung auseinanderhalten und eine eigene Gestaltung begründen."
+    },
+    "question": {
+      "prompt": "Unser eigenes Linienbild erhält einen Punkt und eine Schnabellinie. Welche Aussage bleibt durch dieses Beispiel gedeckt?",
+      "answers": [
+        "Die neuen Zeichen können eine Vogeldeutung unterstützen; andere begründete Deutungen bleiben möglich",
+        "Das Bild ist deshalb eine echte Zeichnung Tagores",
+        "Alle Menschen müssen darin denselben Vogel erkennen"
+      ],
+      "correct": 0,
+      "why": "Die sichtbaren Ergänzungen bieten Anhaltspunkte für eine Deutung. Das Bild ist eigens für dieses Beispiel gestaltet und gibt keine einzige verbindliche Fantasie vor."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die sichtbaren Ergänzungen von einer Behauptung über Urheberschaft oder jede denkbare Deutung.",
+      "wrongReasons": [
+        null,
+        "Unser Bild ist eine eigene Erfindung. Eine Anregung durch ein beschriebenes Arbeitsprinzip macht es nicht zum historischen Werk.",
+        "Menschen können sichtbare Formen unterschiedlich deuten. Eine nachvollziehbare eigene Begründung ist hier wichtiger als eine vorgeschriebene Fantasie."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "person-murasaki_shikibu",
+      "person-katsushika_hokusai",
+      "history-printing"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "Victoria and Albert Museum: Tagore als Dichter und Maler",
+        "url": "https://www.vam.ac.uk/articles/rabindranath-tagore-poet-and-painter"
+      },
+      {
+        "label": "National Gallery of Modern Art: Tagore-Werk und Chronologie",
+        "url": "https://ngmaindia.gov.in/virtual-tour-of-rabindranath-tagore.asp"
+      }
+    ],
+    "sourceNote": "Einordnung nach den tatsächlichen Museumsbeschreibungen und der NGMA-Chronologie. Alle Linien und Zeichen des Lernbeispiels sind neu erfunden; keine Tagore-Zitate, Übersetzungen, Originalzeichnungen oder frei behaupteten Museumsbildrechte.",
+    "checkedAt": "2026-11-03",
+    "revision": 1
+  },
+  {
+    "id": "person-ibn_sina",
+    "category": "people",
+    "title": "Ibn Sina",
+    "intro": "Ibn Sina ordnete medizinisches Wissen seiner Zeit. Sein Kanon der Medizin wurde übersetzt und über Jahrhunderte abgeschrieben. Die Entstehung eines Werks und das Alter eines erhaltenen Exemplars sind verschiedene Angaben.",
+    "aliases": [
+      "Ibn Sina",
+      "Ibn Sīnā",
+      "Avicenna",
+      "al-Qanun fi al-tibb",
+      "Kanon der Medizin"
+    ],
+    "paragraphs": [
+      "Ibn Sina lebte von 980 bis 1037. In lateinischen Texten wird er Avicenna genannt. Der persische Gelehrte beschäftigte sich mit Medizin und weiteren Wissensgebieten. Sein ursprünglich arabisch geschriebener Kanon der Medizin entstand im frühen 11. Jahrhundert und fasste medizinisches Wissen seiner Zeit zusammen.",
+      "Das Werk nahm auch ältere griechisch-römische Überlieferungen auf, die in arabischen und syrischen Übersetzungen weitergegeben worden waren. Im 12. Jahrhundert übersetzte Gerard von Cremona den Kanon ins Lateinische. Eine im Winchester College erhaltene lateinische Handschrift wurde erst im 15. Jahrhundert abgeschrieben.",
+      "Die drei Angaben beziehen sich auf unterschiedliche Vorgänge: Textentstehung, Übersetzung und Herstellung eines bestimmten Exemplars. Eine spätere Abschrift macht Ibn Sina nicht zu einem Menschen des 15. Jahrhunderts. Eine lange Wirkungsgeschichte bedeutet außerdem nicht, dass jede historische medizinische Vorstellung heute als bestätigt gilt."
+    ],
+    "facts": [
+      {
+        "label": "Lebenszeit",
+        "text": "980–1037"
+      },
+      {
+        "label": "Arbeitsgebiet",
+        "text": "Medizin und Gelehrsamkeit"
+      },
+      {
+        "label": "Werk",
+        "text": "Kanon der Medizin, früher Teil des 11. Jahrhunderts"
+      }
+    ],
+    "more": [
+      "Unser eigenes Zeitbild hält drei Stationen fest: arabischer Ausgangstext im frühen 11. Jahrhundert, lateinische Übersetzung im 12. Jahrhundert und die konkrete Winchester-Abschrift im 15. Jahrhundert. Es bildet keine originale Buchseite ab. Die Abstände sind eine übersichtliche Ordnung, kein maßstäblicher Kalender.",
+      "Die British Library beschreibt unter der Signatur Or 5033 ein anderes vollständiges arabisches Exemplar, fertiggestellt 1659. Dieses Datum gehört wiederum zu jener Abschrift. Die beiden Bibliotheksexemplare werden nicht zu einem einzigen Objekt oder vermeintlichen Autografen vermischt.",
+      "Historische Bücher zeigen, wie Wissen gesammelt, geordnet und weitergegeben wurde. Bei der Beurteilung medizinischer Aussagen gehören ihre Zeit, ihre Belege und der heutige Forschungsstand dazu. Das Zeitbild untersucht Überlieferung und Datierung; es macht aus einem historischen Text keine heutige Behandlungsempfehlung."
+    ],
+    "surprise": "Ein sehr altes Werk kann in einem viel später hergestellten Buch überliefert sein.",
+    "person": {
+      "lifespan": "980–1037",
+      "field": "Arzt und Gelehrter",
+      "method": "Wissen seiner Zeit sammeln, ordnen und in einem systematischen Werk zusammenführen."
+    },
+    "learning": {
+      "starter": "Verfolge Text, Übersetzung und erhaltene Abschrift als verschiedene Stationen.",
+      "observe": "Prüfe bei jeder Zeitangabe, welches Ereignis und welches konkrete Exemplar damit gemeint sind.",
+      "benefit": "Du kannst die Lebenszeit eines Autors von der Überlieferung seines Werks unterscheiden und historische Quellen zeitlich einordnen."
+    },
+    "question": {
+      "prompt": "Die lateinische Winchester-Handschrift wird ins 15. Jahrhundert datiert. Was bezeichnet diese Angabe?",
+      "answers": [
+        "Die Lebenszeit Ibn Sinas",
+        "Die Herstellung dieser konkreten Abschrift",
+        "Die erste Entstehung des arabischen Kanons"
+      ],
+      "correct": 1,
+      "why": "Die Zeitangabe gehört zu dem erhaltenen Exemplar. Ibn Sina lebte 980–1037; Textentstehung und lateinische Übersetzung liegen vor dieser späteren Abschrift."
+    },
+    "questionFeedback": {
+      "hint": "Prüfe, ob die Datierung eine Person, eine Textfassung oder ein bestimmtes Buchobjekt beschreibt.",
+      "wrongReasons": [
+        "Ibn Sina lebte 980–1037. Ein später abgeschriebenes Werk verändert die Lebenszeit seines Autors nicht.",
+        null,
+        "Der arabische Ausgangstext entstand im frühen 11. Jahrhundert. Ein späteres lateinisches Exemplar ist nicht dessen erste Textentstehung."
+      ]
+    },
+    "locations": [],
+    "related": [
+      "person-al_khwarizmi",
+      "person-ibn_al_haytham",
+      "person-johannes_gutenberg",
+      "person-murasaki_shikibu",
+      "history-writing",
+      "person-tu_youyou",
+      "invention-printing"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "Winchester College: Kanon der Medizin, Handschrift MS43",
+        "url": "https://winchestercollections.co.uk/collection/canon-of-medicine/"
+      },
+      {
+        "label": "British Library: arabische Abschrift Or 5033 von 1659",
+        "url": "https://searcharchives.bl.uk/catalog/032-002753248"
+      }
+    ],
+    "sourceNote": "Historische Einordnung nach den konkreten Bibliotheksbeschreibungen. Die lateinische Winchester-Handschrift und das arabische British-Library-Exemplar sind unterschiedliche Objekte. Die eigene Zeitleiste zeigt ihre Einordnung; kein Faksimile und keine medizinische Anleitung.",
+    "checkedAt": "2026-11-04",
+    "revision": 1
   }
 ]

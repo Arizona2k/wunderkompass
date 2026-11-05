@@ -1,3 +1,5 @@
+import {fourteenConnectedRoutes} from './people-fourteen-connected-routes.mjs';
+import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
 import {worldEntryNavigation} from './world-entry.mjs';
 import {assertModelLabels,worldModelTypographyView} from './model-labels.mjs';
@@ -96,6 +98,18 @@ export async function articleAtlas(page,ready,report,width,shots){
   report.worldEntryNavigation=await worldEntryNavigation(page);
  }
  report.peopleViews??=[];report.peopleViews.push(...await peopleSourceView(page,{width,shots,questions:true}));
+ if(width===320){
+  const initialPeopleRoute=await page.evaluate(()=>location.hash);
+  try{
+   report.fourteenPersonConnectedRoutes=await fourteenConnectedRoutes(page,new URL(page.url()).origin);
+   assert.equal(report.fourteenPersonConnectedRoutes.global.length,14);
+   assert.equal(report.fourteenPersonConnectedRoutes.book.length,25);
+   report.fourteenPersonActualSources=await actualPeopleSourceActivation(page);
+   assert.equal(report.fourteenPersonActualSources.observations.length,35);
+   assert.equal(report.fourteenPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
+  }finally{await page.evaluate(hash=>location.hash=hash,initialPeopleRoute);}
+ }
+
  if(width===390)await peopleLegacyRound(page.context().browser(),new URL(page.url()).origin,ready,report,shots);
  report.buildingOriginalViews??=[];report.buildingOriginalViews.push(...await buildingOriginalSourceView(page,{width,shots,questions:true}));
  report.mechanicsViews??=[];report.mechanicsViews.push(...await mechanicsSourceView(page,{width,shots,questions:true}));
@@ -116,7 +130,7 @@ export async function articleAtlas(page,ready,report,width,shots){
 export async function offlineArticleAtlas(page,report){
  await page.evaluate(()=>location.hash='world/topic/science-tides');await page.locator('.tide-comparison').waitFor();await page.locator('.article-wayfinder').getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await page.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);await page.locator('.tide-comparison').getByRole('button',{name:'Hochwasser',exact:true}).click();await page.getByText('Der hohe Wasserstand bedeckt hier mehr Küstenfläche.',{exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await page.locator('.world-mini-question .world-game-hint').waitFor();await page.locator('.world-mini-question .world-game-hint summary').click();assert.ok(await page.locator('.world-mini-question .world-game-hint p').innerText());await page.getByRole('img',{name:drawingAlts['science-moon-phases'],exact:true}).waitFor();assert.equal(await page.locator('.topic-illustration svg').count(),4);await readableLabels(page.locator('.topic-diagram-label'));
- report.peopleCold=await peopleSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.peopleCold.length,4);
+ report.peopleCold=await peopleSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.peopleCold.length,18);
  report.mechanicsCold=await mechanicsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.mechanicsCold.length,6);
  report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);

@@ -1,7 +1,7 @@
 import type {Mode,Place} from './earth-data';
 import type {Activity,LocalProgress} from './progress-storage';
 export type WorldCategory='animals'|'history'|'people'|'inventions'|'buildings'|'science';
-export type WorldPhotoData={id:string;src:string;author:string;license:string;license_url:string;source_page_url:string;alt_de:string;width:number;height:number;transformations_de:string;fit?:string;caption?:string;label?:string};
+export type WorldPhotoData={variants?:{src:string;width:number}[];id:string;src:string;author:string;license:string;license_url:string;source_page_url:string;alt_de:string;width:number;height:number;transformations_de:string;fit?:string;caption?:string;label?:string};
 export type WorldLocation={label:string;lat:number;lon:number;iso?:string};
 export type NewWorldModel='atmosphere'|'magnetism'|'currents'|'motor'|'foodweb'|'sound'|'solar-system'|'energy'|'patterns';
 export type WorldModel='water-cycle'|'moon-phases'|'circuit'|'network'|'flight'|'gps'|'computer'|'shadows'|'lock'|'bridge'|'heights'|NewWorldModel;

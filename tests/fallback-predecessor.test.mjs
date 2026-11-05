@@ -1,3 +1,4 @@
+import {withFourteenPredecessorRuntime} from './people-fourteen-runtime-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -9,7 +10,7 @@ const root = process.cwd();
 const dossiers = JSON.parse(fs.readFileSync('content/editorial-reviews.json', 'utf8')).dossiers;
 
 test('fallback correction preserves all623 original runtime files and all254 whole dossiers', () => {
-  assert.equal(learningFingerprint(root), fixture.currentRuntimeBuild);
+  assert.equal(withFourteenPredecessorRuntime(root,learningFingerprint), fixture.currentRuntimeBuild);
   withFallbackPredecessorRuntime(root, previous => {
     assert.equal(learningInputs(previous).length, 623);
     assert.equal(learningFingerprint(previous), fixture.previousRuntimeBuild);

@@ -8,7 +8,9 @@ import {validateEcologyPack,ECOLOGY_WORDS} from '../app/book-ecology-validation.
 import {bookEcologyContent} from '../scripts/book-ecology-index.mjs';
 import {ecologyPredecessors,withAstronomyPreEcologyRuntime} from './ecology-predecessor-reference.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
-import {collectInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {collectInventory as collectCurrentInventory,fingerprint} from '../scripts/content-inventory.mjs';
+import {inventoryBeforeFourteenBacklinks} from './people-fourteen-reference.mjs';
+const collectInventory=(...args)=>inventoryBeforeFourteenBacklinks(collectCurrentInventory(...args));
 import {validateDossierContent} from '../scripts/editorial-contract.mjs';
 
 const read=name=>JSON.parse(fs.readFileSync(name,'utf8'));

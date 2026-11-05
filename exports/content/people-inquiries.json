@@ -254,5 +254,948 @@
         ]
       }
     ]
+  },
+  {
+    "id": "person-henrietta_swan_leavitt",
+    "figure": "cepheid-evidence",
+    "ownMediaConcept": "Eigene klar als erfunden bezeichnete Lichtkurve mit wiederkehrenden gleichen Stellen. Zeitabstand und beobachtete Helligkeit getrennt zeigen; Entfernung verändert nicht automatisch die dargestellte Periode. Keine echte Messkurve oder kalibrierte Cepheiden-Entfernung vortäuschen.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Die Wiederholungsdauer aus gleichen Stellen eines Verlaufs bestimmen.",
+        "example": "In einer erfundenen Lichtkurve sind die hellsten Stellen an Tag2, Tag5 und Tag8 markiert. Die Zahlen sind ein Lernbeispiel, keine Messdaten Leavitts.",
+        "prompt": "Wie groß ist hier der Zeitabstand von einer hellsten Stelle zur nächsten?",
+        "answers": [
+          "Drei Tage",
+          "Acht Tage",
+          "Drei Sterne"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche zwei aufeinanderfolgende gleiche Stellen und ihre Zeitangaben.",
+        "why": "Von Tag2 bis Tag5 und von Tag5 bis Tag8 vergehen jeweils drei Tage. Dieser Zeitabstand beschreibt die Wiederholung in diesem Beispiel.",
+        "wrongReasons": [
+          null,
+          "Tag8 ist eine Zeitangabe für eine Stelle. Die Wiederholungsdauer ist der Abstand zwischen zwei gleichen Stellen.",
+          "Die Kurve beschreibt einen zeitlichen Verlauf. Drei Markierungen sind kein Nachweis für drei Sterne."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Beobachtete Helligkeit von einer Eigenschaft des Sterns unterscheiden.",
+        "example": "In beiden gedanklichen Beobachtungen gibt derselbe Stern in derselben Phase gleich viel Licht ab. Sein Helligkeitsrhythmus bleibt gleich; nur die Beobachtungsentfernung ist größer. Weitere Abschwächung wird hier nicht betrachtet.",
+        "prompt": "Welche Änderung passt zu diesem Vergleich?",
+        "answers": [
+          "Die größere Beobachtungsentfernung macht den Stern im Modell von selbst leuchtkräftiger",
+          "Er erscheint schwächer, obwohl seine abgegebene Lichtleistung im Beispiel gleich bleibt",
+          "Der Abstand zwischen seinen Helligkeitswechseln muss im Modell verschwinden"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide die festgehaltene Eigenschaft des Sterns vom Licht, das bei dir ankommt.",
+        "why": "Scheinbare Helligkeit und Leuchtkraft sind verschiedene Angaben. Bei größerer Entfernung kommt in diesem vereinfachten Vergleich weniger Licht an; die festgehaltene Leuchtkraft wird dadurch nicht kleiner.",
+        "wrongReasons": [
+          "Die Beschreibung hält die abgegebene Lichtleistung ausdrücklich gleich. Ein anderer Beobachtungsort verändert diese Vorgabe nicht.",
+          null,
+          "Die Beschreibung hält den Rhythmus gleich. Schwächeres ankommendes Licht ist nicht dasselbe wie fehlende Wiederholung."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Den Geltungsbereich einer Perioden-Leuchtkraft-Beziehung begrenzen.",
+        "example": "Leavitts Vergleich betraf bestimmte veränderliche Sterne. Ein erfundener Kurztext behauptet: Miss bei irgendeinem blinkenden Licht eine Periode und lies ohne weitere Angaben seine Entfernung ab.",
+        "prompt": "Welche Ergänzung macht diesen Kurztext fachlich tragfähiger?",
+        "answers": [
+          "Jede blinkende Lichtquelle folgt derselben Sternbeziehung",
+          "Die beobachtete Helligkeit ohne Kalibrierung direkt als Leuchtkraft verwenden",
+          "Passende Sternart, kalibrierte Beziehung und mögliche Abschwächung des Lichts müssen berücksichtigt werden"
+        ],
+        "correct": 2,
+        "hint": "Frage zuerst, für welche Objekte die Beziehung gilt und welche weiteren Angaben ein Entfernungsvergleich braucht.",
+        "why": "Eine untersuchte Beziehung hat einen Geltungsbereich. Cepheiden, eine passende Kalibrierung und die Behandlung von Abschwächung lassen sich nicht durch die bloße Wiederholung irgendeines Signals ersetzen.",
+        "wrongReasons": [
+          "Eine Taschenlampe oder ein anderes periodisches Signal ist dadurch kein Cepheid. Die untersuchte Objektgruppe ist wesentlich.",
+          "Scheinbare Helligkeit hängt auch von der Beobachtungsentfernung und möglicher Abschwächung ab. Sie ist nicht schon dieselbe Größe wie die abgegebene Lichtleistung.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://platestacks.cfa.harvard.edu/women-at-hco/henrietta-swan-leavitt"
+    ]
+  },
+  {
+    "id": "person-cecilia_payne_gaposchkin",
+    "figure": "spectral-evidence",
+    "ownMediaConcept": "Eigener Spektrenvergleich mit gleich gehaltener gedachter Zusammensetzung und drei ausdrücklich qualitativen Temperaturbedingungen. Dunklere oder schwächere Linien als Symbole, keine echten Sternspektren oder berechnete Temperatur-/Häufigkeitskalibrierung.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Eine Beobachtung im Spektrum von einer zusätzlichen Erklärung unterscheiden.",
+        "example": "Ein gezeichneter Spektrenstreifen zeigt helle Bereiche und eine dunklere Linie. Unter der Zeichnung steht: Dies ist ein vereinfachtes Beispiel, kein gemessenes Sternspektrum.",
+        "prompt": "Was kannst du an der Zeichnung unmittelbar vergleichen?",
+        "answers": [
+          "Wo eine Linie liegt und wie dunkel sie gezeichnet ist",
+          "Die genaue Anzahl aller Atome des Sterns",
+          "Die vollständige Entfernung des Sterns"
+        ],
+        "correct": 0,
+        "hint": "Bleibe zunächst bei dem, was der Streifen tatsächlich zeigt.",
+        "why": "Die Zeichnung zeigt die Position und dargestellte Stärke einer Linie. Eine genaue Atomzahl oder die Entfernung eines Sterns lässt sich daraus allein nicht bestimmen.",
+        "wrongReasons": [
+          null,
+          "Eine dunkle gezeichnete Linie zählt keine einzelnen Atome. Für eine Zusammensetzungsbestimmung braucht man mehr als dieses Bild.",
+          "Die Zeichnung stellt keine Entfernungsbestimmung dar. Die sichtbare Linienposition und Linienstärke liefern in diesem Beispiel nicht von allein die Entfernung."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Linienstärke nicht automatisch mit größerem Stoffanteil gleichsetzen.",
+        "example": "Im eigenen Lernmodell bleibt die Zusammensetzung gleich. Du wechselst nur zwischen gedachten Temperaturbedingungen. Dabei wird eine Linie stärker oder schwächer dargestellt.",
+        "prompt": "Was zeigt dieser ausdrücklich vereinfachte Vergleich?",
+        "answers": [
+          "Eine stärkere Linie beweist immer einen größeren Stoffanteil",
+          "Auch andere Bedingungen können eine Linienstärke beeinflussen",
+          "Ein Temperaturwechsel erzeugt im Modell jedes Mal neue chemische Elemente"
+        ],
+        "correct": 1,
+        "hint": "Beachte, welche Größe in der Beschreibung festgehalten und welche verändert wird.",
+        "why": "Wenn bei gleich gehaltener Zusammensetzung eine andere Bedingung die Linie verändert, ist Linienstärke allein kein allgemeiner Stoffanteilszähler. Für Sterne müssen die physikalischen Bedingungen mit untersucht werden.",
+        "wrongReasons": [
+          "Die Zusammensetzung bleibt im Beispiel gleich. Die stärkere Linie kann daher hier keine Zunahme dieses Stoffanteils belegen.",
+          null,
+          "Temperaturbedingung und chemische Elementart sind verschiedene Angaben. Der Vergleich behauptet keine Kernumwandlung."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Physikalische Bedingungen und Häufigkeiten bei der Spektrendeutung gemeinsam berücksichtigen.",
+        "example": "Eine erfundene Auswertung ordnet allen Sternen mit besonders starken Wasserstofflinien automatisch den größten Wasserstoffanteil zu. Temperatur und Zustand der Atome werden nicht untersucht.",
+        "prompt": "Welche methodische Korrektur passt zu Paynes Forschungsweg?",
+        "answers": [
+          "Die Wasserstoffhäufigkeit allein aus der Dunkelheit einer Linie bestimmen",
+          "Schwächere Linien als Beweis nehmen, dass das Element überhaupt nicht vorkommt",
+          "Die Entstehungsbedingungen der Linien untersuchen, bevor daraus Häufigkeiten abgeleitet werden"
+        ],
+        "correct": 2,
+        "hint": "Überlege, was eine Linie außer der Menge eines Elements noch verändern kann.",
+        "why": "Anregung und Ionisation hängen von physikalischen Bedingungen ab und beeinflussen, welche Linien sichtbar werden. Die Deutung von Sternspektren braucht deshalb ein physikalisches Modell; die Zeichnung selbst berechnet keine Häufigkeiten.",
+        "wrongReasons": [
+          "Die Dunkelheit einer Linie ersetzt die Untersuchung ihrer Entstehungsbedingungen nicht.",
+          "Ein Element kann vorhanden sein, ohne unter jeder Bedingung dieselbe starke Linie zu erzeugen.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://platestacks.cfa.harvard.edu/cecilia-payne-gaposchkin/education-and-doctoral-thesis",
+      "https://platestacks.cfa.harvard.edu/cecilia-payne-gaposchkin/stellar-spectra-and-quantum-mechanics"
+    ]
+  },
+  {
+    "id": "person-rosalind_franklin",
+    "figure": "diffraction-evidence",
+    "ownMediaConcept": "Eigener ausdrücklich schematischer Zusammenhang von geordneter Probe, Röntgenbeugungsmuster und überprüfbarer Strukturidee. Kein Abzug, Nachbau oder als echt ausgegebenes Photo51; keine gezeichnete DNA-Struktur als vollständige historische Erkenntnis aus einem Bild behaupten.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Messmuster und direktes Bild eines Gegenstands unterscheiden.",
+        "example": "Eine eigene Zeichnung zeigt eine Probe, Röntgenstrahlen und ein vereinfachtes Muster auf einem Schirm. Es ist kein historisches Foto und keine echte Messung.",
+        "prompt": "Was soll das gezeichnete Muster hier veranschaulichen?",
+        "answers": [
+          "Eine Spur aus einer Untersuchung, die bei Strukturfragen helfen kann",
+          "Ein gewöhnliches Farbfoto jedes einzelnen Atoms",
+          "Die ausgeschriebene Erbinformation einer Person"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den Aufbau der Untersuchung mit einem gewöhnlichen Porträtfoto.",
+        "why": "Ein Beugungsmuster ist eine Untersuchungsspur, die mit geeigneten Modellen ausgewertet werden kann. Es zeigt weder einen farbig fotografierten Satz einzelner Atome noch eine ausgeschriebene persönliche DNA-Folge.",
+        "wrongReasons": [
+          null,
+          "Das Lernbild erklärt ein Beugungsmuster und kein gewöhnliches Farbfoto der einzelnen Atome.",
+          "Die Zeichnung enthält keine abgelesene Basenfolge und keine Daten einer Person."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Zusammengehörige Forschungsbeiträge korrekt benennen.",
+        "example": "Franklin arbeitete am King’s College London an DNA mit Röntgenmethoden. Raymond Gosling führte als ihr Doktorand entsprechende Aufnahmen aus. Ein erfundenes Schild schreibt diese Bildarbeit allein Watson zu.",
+        "prompt": "Welche Änderung macht dieses Schild genauer?",
+        "answers": [
+          "Franklin und Gosling ganz weglassen",
+          "Franklins Untersuchungsarbeit und Goslings Aufnahmebeitrag benennen",
+          "So tun, als hätte die Kamera ohne Forschung von allein die ganze Struktur erklärt"
+        ],
+        "correct": 1,
+        "hint": "Ordne die beschriebenen Untersuchungsschritte den tatsächlich genannten Forschenden zu.",
+        "why": "Beobachtung, Versuchsplanung, Aufnahme und Auswertung sind konkrete Arbeitsschritte. Franklins Forschung und Goslings Beitrag dürfen nicht einer anderen Person zugeschrieben oder zu bloßem Zufall verkürzt werden.",
+        "wrongReasons": [
+          "Das würde gerade die im Text beschriebenen Beiträge auslassen.",
+          null,
+          "Die Aufnahmen entstanden durch gezielte Forschungsarbeit. Ein Bild ersetzt nicht automatisch die Auswertung und Strukturprüfung."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Den Erkenntniswert eines Messmusters von unbelegten Einzelheiten abgrenzen.",
+        "example": "Ein eigenes schematisches Muster erinnert an eine geordnete Struktur. Der Begleittext sagt ausdrücklich: keine echte Messung und keine quantitative Auswertung. Jemand möchte daraus die vollständige DNA-Struktur und eine konkrete Basenfolge ablesen.",
+        "prompt": "Welche Einordnung passt zu diesem Lernbild?",
+        "answers": [
+          "Jede kreuzförmige Zeichnung beweist dieselbe vollständige Molekülstruktur",
+          "Die attraktivste Strukturzeichnung ist dadurch die einzig mögliche",
+          "Das Schema erklärt einen Untersuchungsweg; reale Strukturbehauptungen brauchen passende Messdaten und weitere fachliche Prüfung"
+        ],
+        "correct": 2,
+        "hint": "Prüfe für jede behauptete Einzelheit, ob das Schema sie überhaupt misst.",
+        "why": "Ein Schema kann eine Methode verständlich machen, ohne selbst ihr Messergebnis zu sein. Reale Beugungsdaten, physikalische Auswertung und weitere Erkenntnisse gehören zur Strukturprüfung. Das setzt Franklins tatsächliche Auswertungskompetenz nicht herab.",
+        "wrongReasons": [
+          "Die gezeichnete Form ist hier ein Symbol. Ein ähnliches Aussehen bestimmt keine vollständige Molekülstruktur.",
+          "Gestaltung entscheidet nicht, welches Strukturmodell zu realen Messdaten passt.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.kcl.ac.uk/the-story-behind-photograph-51",
+      "https://www.kcl.ac.uk/news/rosalind-franklin-deliberately-created-photo-51-after-earlier-photograph-revealed-dnas-structure",
+      "https://digital.sciencehistory.org/works/mjir8wn"
+    ]
+  },
+  {
+    "id": "person-jocelyn_bell_burnell",
+    "figure": "pulse-evidence",
+    "ownMediaConcept": "Eigene erfundene Pulsfolge und begrenztes Leuchtturm-Gedankenmodell. Zeitabstände, Beobachtungsrichtung und wiederkehrendes Signal trennen; keine echte historische Radiokurve, kein Aliennachweis und kein Modell jedes Neutronensternzustands.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Wiederkehrende Signale an gleichen Zeitabständen erkennen.",
+        "example": "In einer erfundenen Signalzeichnung liegen vier schmale Ausschläge bei Zeit1, Zeit3, Zeit5 und Zeit7. Die Zeiteinheit ist nur für dieses Beispiel gewählt.",
+        "prompt": "Welcher Abstand liegt hier jeweils zwischen zwei benachbarten Ausschlägen?",
+        "answers": [
+          "Zwei Zeiteinheiten",
+          "Vier Zeiteinheiten",
+          "Sechs Zeiteinheiten"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche aufeinanderfolgende Signalstellen auf derselben Zeitachse.",
+        "why": "Zwischen benachbarten Ausschlägen liegen im Beispiel jeweils zwei Zeiteinheiten. Von der ersten bis zur letzten Spitze vergehen sechs Einheiten; dieser längere Abschnitt umfasst drei Wiederholungsabstände.",
+        "wrongReasons": [
+          null,
+          "Von Zeit1 bis Zeit5 liegen vier Einheiten, aber dazwischen liegt bereits der Ausschlag bei Zeit3. Gesucht sind benachbarte Ausschläge.",
+          "Von Zeit1 bis Zeit7 liegen sechs Einheiten und mehrere Ausschläge. Das ist nicht der Abstand von einer Signalstelle zur nächsten."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Ein regelmäßiges Signal nicht vorschnell einer Ursache zuschreiben.",
+        "example": "Ein gedachtes Radiogerät zeigt wiederkehrende Ausschläge. Zur Auswahl stehen unter anderem eine irdische Störung und eine astronomische Quelle. Nur die Regelmäßigkeit ist bislang beschrieben.",
+        "prompt": "Was ist ein sinnvoller nächster Untersuchungsschritt?",
+        "answers": [
+          "Die Regelmäßigkeit sofort als Beweis für außerirdische Technik ausgeben",
+          "Mit weiteren Beobachtungen prüfen, woher das Signal kommt und ob die Erklärungen dazu passen",
+          "Nur besonders gleichmäßige Ausschläge auswählen und die übrigen Werte ohne Begründung weglassen"
+        ],
+        "correct": 1,
+        "hint": "Überlege, welche zusätzlichen Beobachtungen verschiedene Erklärungen unterscheiden können.",
+        "why": "Regelmäßigkeit ist eine wichtige Spur, legt die Ursache aber nicht allein fest. Wiederholte Beobachtungen, die Himmelsrichtung und Vergleiche können helfen, astronomische Signale und örtliche Störungen auseinanderzuhalten.",
+        "wrongReasons": [
+          "Eine wiederkehrende Form allein belegt keine außerirdische Technik. Andere Ursachen müssen geprüft werden.",
+          null,
+          "Eine Auswahl nach gewünschter Regelmäßigkeit kann wichtige Abweichungen verdecken. Sie prüft die Signalquelle nicht und ersetzt keine begründete, dokumentierte Behandlung von Messfehlern."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Signalfolge und begrenztes Strahlungsmodell unterscheiden.",
+        "example": "Ein eigenes Leuchtturm-Gedankenmodell besitzt genau einen gebündelten Strahl. Bei der Drehung erreicht er eine feste Beobachtungsrichtung wiederholt. Die Zeichnung berechnet weder echte Pulsstärken noch den Innenaufbau eines Neutronensterns.",
+        "prompt": "Welche Aussage erklärt dieses begrenzte Modell?",
+        "answers": [
+          "Der Stern muss zwischen den beobachteten Pulsen vollständig aufhören zu strahlen",
+          "Der einzelne gezeichnete Strahl beweist den Aufbau jedes realen Pulsars",
+          "Wiederkehrende Pulse können durch die wechselnde Ausrichtung eines Strahls zur Beobachtungsrichtung entstehen"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide das Aussenden eines Strahls davon, wann er eine bestimmte Richtung erreicht.",
+        "why": "Eine gerichtete Strahlung kann wiederholt in eine Beobachtungsrichtung gelangen, obwohl das Objekt nicht jedes Mal vollständig an- und ausgeschaltet wird. Das ist eine begrenzte Erklärungsidee, keine vollständige Beschreibung aller Pulsargeometrien.",
+        "wrongReasons": [
+          "Aus der fehlenden Ausrichtung zu einem Beobachter folgt nicht, dass das Objekt insgesamt nicht strahlt.",
+          "Ein einzelnes Gedankenmodell legt die reale Geometrie und Physik aller Pulsare nicht fest.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level2/bell.html",
+      "https://www.phy.cam.ac.uk/news/journeys-of-discovery-jocelyn-bell-burnell-and-pulsars/"
+    ]
+  },
+  {
+    "id": "person-katsushika_hokusai",
+    "figure": "print-registration-evidence",
+    "ownMediaConcept": "Eigene erfundene Kontur und Farbfläche mit genauer beziehungsweise seitlich verschobener Ausrichtung. Kein historischer Block oder Wellenhöhenmodell; nur die Ausrichtung wird verändert.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Die Ausrichtung zweier gedachter Druckschichten vergleichen.",
+        "example": "Eine erfundene Bildkontur und ihre Farbfläche passen im ersten Bild zusammen. Im zweiten Bild ist dieselbe Farbfläche seitlich verschoben.",
+        "prompt": "Was wurde in diesem Beispiel verändert?",
+        "answers": [
+          "Die Lage der Farbfläche gegenüber der Kontur",
+          "Die historische Höhe einer wirklichen Meereswelle",
+          "Die Lebenszeit des Künstlers"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche, wo die beiden gezeichneten Schichten aufeinanderliegen.",
+        "why": "Das Beispiel verändert die relative Lage der Schichten. Es misst weder das Meer noch eine historische Zeitangabe.",
+        "wrongReasons": [
+          null,
+          "Das Bild ist ein erfundenes Druckschema und keine Wellenmessung.",
+          "Die Schichten wurden verschoben. Lebensdaten werden dabei nicht verändert."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Beiträge von Entwurf und Druckarbeit unterscheiden.",
+        "example": "Hokusai lieferte den Bildentwurf. Zur Herstellung gehörten außerdem das Schneiden der Holzblöcke und das Drucken der Farben auf Papier. Forschende vergleichen heute die gedruckten Linien und Farbflächen verschiedener Abzüge.",
+        "prompt": "Welche Beschreibung berücksichtigt beide Beiträge?",
+        "answers": [
+          "Der Entwurf macht die Farbentscheidungen der Drucker bedeutungslos",
+          "Entwurf und Druckarbeit tragen auf unterschiedliche Weise zum Ergebnis bei",
+          "Die Drucker müssen deshalb die Urheber aller Bildentwürfe gewesen sein"
+        ],
+        "correct": 1,
+        "hint": "Ordne jedem beschriebenen Arbeitsschritt seinen Beitrag zu.",
+        "why": "Den Entwurf und die Druckarbeit zu unterscheiden macht beide Beiträge sichtbar. Keiner muss dafür dem jeweils anderen zugeschrieben werden.",
+        "wrongReasons": [
+          "Die gedruckten Linien und Farbflächen gehören zum sichtbaren Ergebnis. Der Entwurf ersetzt die Ausführung dieser Arbeitsschritte nicht.",
+          null,
+          "Eine wichtige Druckleistung macht die Drucker nicht automatisch zu den Entwerfern desselben Bildes."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Eine objektbezogene Untersuchung von einer allgemeinen Bildbehauptung trennen.",
+        "example": "Angenommen, eine Untersuchung beschreibt Druckspuren am Abzug JP1847. Ein anderer erhaltener Abzug desselben Bildentwurfs trägt die Nummer JP2972.",
+        "prompt": "Was ist bei einer Aussage über den zweiten Abzug sorgfältig?",
+        "answers": [
+          "Alle Ergebnisse ohne Prüfung allein wegen des gleichen Motivs übertragen",
+          "Beide Nummern als Namen desselben Papierblatts behandeln",
+          "Den konkreten Abzug und die Reichweite der Untersuchung benennen"
+        ],
+        "correct": 2,
+        "hint": "Gleicher Bildentwurf und identisches untersuchtes Objekt sind unterschiedliche Angaben.",
+        "why": "Verschiedene erhaltene Abzüge können eigene Merkmale haben. Ein Untersuchungsergebnis braucht eine passende Objektzuordnung.",
+        "wrongReasons": [
+          "Ein gleiches Motiv belegt nicht, dass jedes materielle Detail identisch ist.",
+          "Die beiden Museumsnummern bezeichnen verschiedene erhaltene Drucke.",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": "person-murasaki_shikibu",
+    "figure": "narrative-and-transmission-evidence",
+    "ownMediaConcept": "Zwei selbst erfundene Blickwinkel auf dieselbe verspätete Nachricht, zusätzlich klare Text-/Bilddatierung. Keine historischen Szenen, Genji-Zitate, automatische Freitextbewertung oder angeblich authentischen Porträts.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Gemeinsames Ereignis und unterschiedliche Erzählperspektive erkennen.",
+        "example": "Erfunden: A wartet auf eine Nachricht. B bringt sie später als erwartet. Version A erzählt vom langen Warten; Version B vom beschwerlichen Weg. Das sind keine Stellen aus einem alten Roman.",
+        "prompt": "Welches Ereignis ist in beiden Versionen dasselbe?",
+        "answers": [
+          "Beide Figuren haben nachweislich genau dieselben Gedanken",
+          "Die Nachricht kommt später als erwartet an",
+          "Die Versionen müssen von derselben historischen Autorin stammen"
+        ],
+        "correct": 1,
+        "hint": "Trenne das beschriebene Geschehen von den Gedanken und der Herkunft der Texte.",
+        "why": "Die späte Ankunft gehört zu beiden Beispielen. Welcher Blickwinkel ausführlicher erzählt wird, ist eine andere Frage.",
+        "wrongReasons": [
+          "Die Texte berichten unterschiedliche Erfahrungen. Gleiche Gedanken sind nicht vorgegeben.",
+          null,
+          "Es sind ausdrücklich heute erfundene Beispielsätze, keine historischen Textstellen."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Entstehungszeiten von Text und späterem Bild getrennt beurteilen.",
+        "example": "Das Genji Monogatari entstand im frühen 11. Jahrhundert. Die beschriebenen Illustrationen im Seattle Art Museum stammen aus dem 17. Jahrhundert.",
+        "prompt": "Welche Beschriftung hilft beim Vergleichen?",
+        "answers": [
+          "Text und spätere Illustration mit ihren verschiedenen Entstehungszeiten nennen",
+          "Das Bild ohne Datierung als Aufnahme aus der Lebenszeit der Autorin beschriften",
+          "Das Datum des Bildes als neues Geburtsjahr der Autorin einsetzen"
+        ],
+        "correct": 0,
+        "hint": "Ordne jede Zeitangabe dem Gegenstand zu, zu dem sie gehört.",
+        "why": "Die getrennten Datierungen machen die zeitliche Distanz sichtbar. Eine spätere Illustration ist kein automatisch zeitgenössisches Zeugnis jedes dargestellten Details.",
+        "wrongReasons": [
+          null,
+          "Das würde die spätere Entstehung des Bildes ausblenden.",
+          "Ein Bilddatum ist kein Geburtsdatum der Person, deren Werk illustriert wird."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Den Wert und die Grenzen einer Textüberlieferung begründen.",
+        "example": "Nach dem Kyoto National Museum ist kein Autograph der Autorin erhalten. Über Jahrhunderte entstanden Abschriften, darunter unterschiedliche Textfassungen.",
+        "prompt": "Welches Vorgehen ist für die Untersuchung sinnvoll?",
+        "answers": [
+          "Die erste gefundene Abschrift ohne weitere Prüfung zur eigenen Handschrift der Autorin erklären",
+          "Alle Fassungen für bedeutungslos halten, weil das Autograph fehlt",
+          "Erhaltene Fassungen, Datierungen und Unterschiede vergleichen, ohne ein fehlendes Original zu erfinden"
+        ],
+        "correct": 2,
+        "hint": "Überlege, welche vorhandenen Zeugnisse verglichen werden können und welche Behauptung zusätzliche Belege bräuchte.",
+        "why": "Überlieferte Abschriften sind untersuchbare Zeugnisse. Ihre Unterschiede erlauben Fragen zur Weitergabe, ersetzen aber keinen Nachweis eines Autographs.",
+        "wrongReasons": [
+          "Ein überliefertes Exemplar ist nicht allein durch sein Auffinden ein Autograph.",
+          "Das Fehlen eines Autographs macht die erhaltenen Überlieferungszeugnisse nicht wertlos.",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": "person-rachel_carson",
+    "figure": "food-transfer-evidence",
+    "ownMediaConcept": "Eigene ausdrücklich erfundene Stoffmarkierungen: vor dem Fressen zwei Beutetiere mit je zwei Punkten und Fressfeind ohne Punkt; nach dem Fressen vier Punkte beim Fressfeind. Gesamtzahl bleibt 4. Keine echten Tiere, Konzentrationskurve oder Simulation der tatsächlichen DDT-Aufnahme. Die Annahme ohne Abbau/Ausscheidung im Beispiel direkt benennen.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Eine Stoffweitergabe im genau begrenzten Zählbeispiel nachvollziehen.",
+        "example": "Zwei erfundene Beutetiere tragen je zwei Stoffmarkierungen. Ein anderes Tier frisst beide. Nur für dieses Beispiel nehmen wir an: Alle vier Markierungen bleiben erhalten und werden weitergegeben.",
+        "prompt": "Wie viele Markierungen trägt das größere Tier danach in unserem Beispiel?",
+        "answers": [
+          "Vier Markierungen",
+          "Zwei Markierungen",
+          "Acht Markierungen"
+        ],
+        "correct": 0,
+        "hint": "Zähle die Markierungen beider vorgegebenen Beutetiere zusammen.",
+        "why": "Zwei plus zwei ergeben vier. Die Zeichnung verfolgt dieselben Markierungen vor und nach der Futteraufnahme; sie erzeugt keine zusätzlichen.",
+        "wrongReasons": [
+          null,
+          "Zwei Markierungen stammen nur aus einem der beiden Beutetiere. Das Beispiel beschreibt zwei Beutetiere.",
+          "Die Weitergabe verdoppelt die vorhandenen Markierungen nicht. Im ganzen Beispiel sind vier vorgegeben."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Die Tragweite eines vereinfachten Stoffwegmodells begrenzen.",
+        "example": "Das eigene Punktbild zeigt einen möglichen Weitergabeweg mit Nahrung. Es nimmt vollständige Weitergabe an und berücksichtigt weder Abbau noch Ausscheidung oder verschiedene Stoffeigenschaften.",
+        "prompt": "Welche Aussage passt zur Reichweite dieses Punktbilds?",
+        "answers": [
+          "Alle echten Umweltstoffe werden immer vollständig weitergegeben",
+          "Das Bild zeigt einen möglichen Weg; die wirkliche Aufnahme muss zusätzlich untersucht werden",
+          "Vier Punkte beweisen schon die genaue DDT-Konzentration in einem echten Tier"
+        ],
+        "correct": 1,
+        "hint": "Unterscheide die ausdrücklich gewählten Modellannahmen von Messungen an wirklichen Lebewesen.",
+        "why": "Eine erklärte Annahme macht den gezeichneten Weg verständlich. Sie ist noch kein Nachweis dafür, wie stark ein bestimmter Stoff in der Natur aufgenommen, umgewandelt oder ausgeschieden wird.",
+        "wrongReasons": [
+          "Das Bild enthält keine vergleichenden Messungen verschiedener Stoffe. Seine vereinfachte Annahme gilt nicht automatisch für alle echten Fälle.",
+          null,
+          "Für eine Konzentration fehlen Stoffeinheit und Gewebemenge. Die frei erfundenen Punkte sind keine gemessene DDT-Dosis."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Menge und Konzentration mithilfe der Bezugsgröße unterscheiden.",
+        "example": "Erfundene Vergleichszahlen: Tier A hat zwei Markierungen in zehn Gramm betrachteten Gewebes. Tier B hat vier Markierungen in vierzig Gramm. Die Zahlen sind keine Daten echter Tiere.",
+        "prompt": "Welcher Vergleich der Markierungen je Gramm ist richtig?",
+        "answers": [
+          "Tier B hat wegen vier statt zwei Markierungen die höhere Konzentration",
+          "Beide haben dieselbe Konzentration, weil beide Wertepaare größer werden",
+          "Tier A hat 0,2 und Tier B 0,1 Markierungen je Gramm; die größere Menge bei B bedeutet hier keine größere Konzentration"
+        ],
+        "correct": 2,
+        "hint": "Beziehe bei jedem Tier die Markierungszahl auf genau ein Gramm.",
+        "why": "Zwei geteilt durch zehn sind 0,2; vier geteilt durch vierzig sind 0,1. Menge und Konzentration beantworten verschiedene Fragen. Das Gegenbeispiel sagt nichts über die reale Belastung einer Art aus.",
+        "wrongReasons": [
+          "Vier ist zwar die größere Gesamtmenge. Die zugehörige Gewebemenge ist aber ebenfalls anders und muss in den Vergleich eingehen.",
+          "Die Verhältnisse sind nicht gleich: Die Markierungen werden verdoppelt, die Gewebemenge vervierfacht.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.nps.gov/people/rachel-carson.htm",
+      "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status",
+      "https://www.michigan.gov/dnr/managing-resources/wildlife/wildlife-disease/wdm/ddt-and-other-chlorinated-hydrocarbon-pesticides"
+    ]
+  },
+  {
+    "id": "person-octavia_butler",
+    "figure": "narrative-information-evidence",
+    "ownMediaConcept": "Eigene erfundene Buchlieferung: Lina weiß vom platten Fahrradreifen, Noor sieht nur die leere Abholstelle. Derselbe vorgegebene Sachverhalt bleibt in beiden Zuständen. Umschalten verändert nur den dargestellten Informationsstand; keine Gedanken oder Gefühle als gemessene Tatsachen bewerten. Kein Butler-Text und keine Nachstellung ihres Lebens.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Das Wissen einer Figur aus einer kurzen eigenen Erzählung bestimmen.",
+        "example": "Die Buchlieferung fehlt. Lina weiß: Der Fahrradreifen ist platt. Noor sieht nur die leere Abholstelle; die Ursache wurde Noor nicht mitgeteilt.",
+        "prompt": "Was ist Noor durch die beschriebene Beobachtung sicher bekannt?",
+        "answers": [
+          "Das Fahrrad hat einen platten Reifen",
+          "An der Abholstelle liegen jetzt keine Bücher bereit",
+          "Die Bücher werden absichtlich zurückgehalten"
+        ],
+        "correct": 1,
+        "hint": "Schau nur auf die Information, die der Text Noor ausdrücklich gibt.",
+        "why": "Die leere Abholstelle ist Noors Beobachtung. Ursache und Absicht sind damit noch nicht bekannt. Unterschiedliche Figuren können in derselben Situation Verschiedenes wissen.",
+        "wrongReasons": [
+          "Den platten Reifen kennt in der Vorgabe Lina. Der Text sagt nicht, dass Noor diese Ursache schon kennt.",
+          null,
+          "Das Ausbleiben einer Lieferung beweist keine Absicht einer anderen Figur."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Eine geänderte erfundene Weltregel auf ein konkretes Ereignis anwenden.",
+        "example": "Eine andere eigene Erzählung enthält eine Fähre, die jeden Tag um 12 Uhr fährt. Eine Figur kommt um 17 Uhr zur Anlegestelle. Bei der Überarbeitung kommt eine zweite tägliche Abfahrt um 18 Uhr hinzu. Die Fähre fährt planmäßig und ein Platz ist frei.",
+        "prompt": "Welche Änderung muss für diese Figur in der überarbeiteten Fassung berücksichtigt werden?",
+        "answers": [
+          "Sie kann unter den neuen Vorgaben noch am selben Tag um 18 Uhr mitfahren",
+          "Die neue Abfahrt beweist, dass jede wirkliche Fähre immer zweimal täglich fährt",
+          "Alle früheren und späteren Sätze der Geschichte müssen unverändert stimmen"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche Ankunft und die ausdrücklich hinzugefügte Abfahrt. Bleibe bei den Regeln dieser erfundenen Welt.",
+        "why": "Die Ankunft um 17 Uhr liegt vor der zusätzlichen Abfahrt um 18 Uhr. Die bewusste Regeländerung kann deshalb Wartezeit und Handlung verändern. Sie ist keine Aussage über alle wirklichen Fähren.",
+        "wrongReasons": [
+          null,
+          "Die Autorin oder der Autor hat eine Regel für das eigene Beispiel geändert. Daraus entsteht kein allgemeiner Fahrplan wirklicher Fähren.",
+          "Eine geänderte Weltregel kann Folgen für die Handlung haben. Die betroffenen Stellen müssen auf Stimmigkeit geprüft werden."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Literarisches Gedankenexperiment, begründete Deutung und überprüfbare Vorhersage unterscheiden.",
+        "example": "Ein eigener Kurzkommentar behauptet: Eine Science-Fiction-Erzählung zeigt eine zukünftige Gesellschaft, also ist damit bewiesen, dass Menschen später genau so leben werden.",
+        "prompt": "Welche Antwort beurteilt den Schluss angemessen?",
+        "answers": [
+          "Die Zukunftsdarstellung ist schon durch ihre Veröffentlichung ein Messbericht",
+          "Eine erfundene Welt erlaubt überhaupt keine Fragen an die Gegenwart",
+          "Die Erzählung kann Fragen und Deutungen anregen; eine überprüfbare Vorhersage braucht zusätzliche Belege und klare Bedingungen"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide die Funktion einer erfundenen Geschichte von der Begründung einer überprüfbaren Behauptung.",
+        "why": "Ein literarischer Entwurf kann zum Nachdenken über Möglichkeiten und Gegenwart anregen. Daraus folgt nicht, dass eine dargestellte Zukunft eintreten muss. Die Aufgabe prüft diesen Schluss, nicht die einzig richtige Deutung eines Romans.",
+        "wrongReasons": [
+          "Eine Veröffentlichung macht erfundene Ereignisse nicht zu gemessenen Tatsachen.",
+          "Gerade erfundene Situationen können Fragen sichtbar machen. Dass sie keine Vorhersage beweisen, nimmt ihnen diesen Nutzen nicht.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://researchguides.huntington.org/oeb",
+      "https://www.huntington.org/collections/lib-mssoeb",
+      "https://www.macfound.org/fellows/class-of-1995/octavia-butler"
+    ]
+  },
+  {
+    "id": "person-nelson_mandela",
+    "figure": "equal-participation-rule-reading",
+    "ownMediaConcept": "Zwei ausdrücklich erfundene schriftliche Regeln für dieselben vier bereits stimmberechtigten Mitglieder vergleichen. Keine Zuordnung des Kindes zu einer benachteiligten Gruppe, rassistische Rollenverteilung, historische Gefängnis-/Gewaltsimulation oder Spielpunkte für eine behauptete moralische Haltung.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Die Wirkung einer geschriebenen Beteiligungsregel benennen.",
+        "example": "Erfunden: Vier Mitglieder dürfen in einer kleinen Gruppe mitentscheiden. Regel A berücksichtigt nur die Stimmen von zweien, Regel B die Stimmen aller vier. Das ist ein Lesebeispiel und keine Nachstellung Südafrikas.",
+        "prompt": "Welche Regel berücksichtigt in diesem Beispiel alle vier stimmberechtigten Mitglieder?",
+        "answers": [
+          "Regel B",
+          "Regel A, weil die zwei übrigen Stimmen dann automatisch mitgezählt werden",
+          "Beide Regeln berücksichtigen gleich viele Mitglieder"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche den Wortlaut jeder Regel mit der Zahl der Mitglieder, die mitentscheiden dürfen.",
+        "why": "Regel B berücksichtigt alle vier. Regel A lässt zwei der vorgegebenen stimmberechtigten Mitglieder unberücksichtigt. Diese Beobachtung am Beispiel ersetzt keine historische Untersuchung.",
+        "wrongReasons": [
+          null,
+          "Die Beschreibung von Regel A nennt nur zwei berücksichtigte Stimmen. Die anderen werden nicht automatisch dazugerechnet.",
+          "Zwei und vier berücksichtigte Mitglieder sind unterschiedliche Zahlen."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Eine historische Entwicklung als Folge unterschiedlicher Schritte erklären.",
+        "example": "1990 wurde Mandela freigelassen. Danach führten politische Verhandlungen zu den ersten demokratischen Wahlen 1994. Am 10. Mai 1994 übernahm die demokratisch gewählte Regierung ihr Amt.",
+        "prompt": "Welche Anordnung bewahrt diese Unterschiede?",
+        "answers": [
+          "Wahlen, Amtsübernahme und Freilassung zu einem einzigen Ereignis 1990 zusammenfassen",
+          "Freilassung, weitere Verhandlungen, Wahlen und Amtsübernahme getrennt einordnen",
+          "Den Regierungswechsel 1994 als Ursache seiner bereits 1990 erfolgten Freilassung beschreiben"
+        ],
+        "correct": 1,
+        "hint": "Prüfe die Reihenfolge der Jahre und welches Ereignis jeweils gemeint ist.",
+        "why": "Die Freilassung lag vor den Wahlen. Die spätere Amtsübernahme ist wieder ein eigener Schritt; eine zeitliche Reihenfolge ist keine automatische Erklärung sämtlicher Ursachen.",
+        "wrongReasons": [
+          "Das würde mehrere Jahre und unterschiedliche politische Vorgänge vermischen.",
+          null,
+          "Eine spätere Amtsübernahme kann hier nicht als früherer Auslöser einer bereits geschehenen Freilassung gelten."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Eine vereinfachte Erfolgserzählung und die Reichweite eines politischen Ereignisses kritisch beurteilen.",
+        "example": "Ein erfundener Kurztext behauptet: Mandela schaffte die Apartheid ganz allein ab, und nach den Wahlen 1994 verschwanden alle Benachteiligungen sofort. Die gelesenen Institutionstexte beschreiben viele Beteiligte und einen längeren Wandel.",
+        "prompt": "Welche Korrektur macht den erfundenen Kurztext tragfähiger?",
+        "answers": [
+          "Den Namen einer einzigen anderen Person einsetzen und die übrige Aussage unverändert lassen",
+          "Den politischen Wandel ganz bestreiten, weil weitere Probleme bestanden",
+          "Viele Beiträge anerkennen und politische Rechte von der langfristigen Überwindung von Benachteiligung unterscheiden"
+        ],
+        "correct": 2,
+        "hint": "Prüfe getrennt, wer beteiligt war und was ein einzelnes Ereignis tatsächlich bewirkte.",
+        "why": "Die Wahlen und die neuen politischen Verhältnisse waren wichtig. Sie sind weder eine Alleinleistung noch der Nachweis, dass sämtliche Folgen der bisherigen Ordnung sofort verschwanden.",
+        "wrongReasons": [
+          "Ein anderer einzelner Name behebt die unbelegte Alleinleistung und die Behauptung sofortiger vollständiger Gleichheit nicht.",
+          "Fortbestehende Aufgaben machen einen tatsächlichen politischen Wandel nicht bedeutungslos.",
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": "person-chien_shiung_wu",
+    "figure": "direction-count-evidence",
+    "ownMediaConcept": "Zwei eigene Balkenbilder vergleichen ausdrücklich erfundene Zählwerte 4/4 und 6/2, jeweils Summe 8. Keine Wudaten, kein Spinaufbau, keine mathematische Paritätstransformation und kein bloß aus Ungleichheit abgeleiteter Naturbeweis.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Gesamtzahl und Verteilung unterscheiden.",
+        "example": "Zwei erfundene Seitenverteilungen enthalten einmal vier links und vier rechts, einmal sechs links und zwei rechts.",
+        "prompt": "Was bleibt in beiden Verteilungen gleich?",
+        "answers": [
+          "Die Gesamtzahl acht",
+          "Die Anzahl auf jeder einzelnen Seite",
+          "Die jeweils kleinere Seitenzahl"
+        ],
+        "correct": 0,
+        "hint": "Zähle für jede Verteilung beide Seiten zusammen.",
+        "why": "Vier plus vier und sechs plus zwei ergeben jeweils acht. Gleiche Gesamtzahlen können unterschiedlich verteilt sein.",
+        "wrongReasons": [
+          null,
+          "Die Seitenzahlen ändern sich von vier/vier zu sechs/zwei.",
+          "Die kleinere Seitenzahl ist zuerst vier und danach zwei."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Erfundenes Zählbild und historische Messung trennen.",
+        "example": "Ein Begleittext nennt unsere acht Markierungen ausdrücklich ein erfundenes Lernbeispiel. Er enthält kein ursprüngliches Messprotokoll.",
+        "prompt": "Welche Aussage über diese Zahlen ist angemessen?",
+        "answers": [
+          "Sie sind automatisch die Originalwerte aus Wus Experiment",
+          "Sie zeigen den beschriebenen Unterschied, belegen aber keine historischen Messwerte",
+          "Sie beweisen ohne weitere Angaben jede physikalische Erklärung"
+        ],
+        "correct": 1,
+        "hint": "Achte darauf, welche Herkunft für die Zahlen wirklich angegeben ist.",
+        "why": "Ein eigener Vergleich kann eine Frage veranschaulichen. Er darf dadurch nicht nachträglich als tatsächlich gemessener historischer Datensatz bezeichnet werden.",
+        "wrongReasons": [
+          "Der Text bezeichnet die Werte ausdrücklich als erfunden. Die historische Messherkunft ist damit nicht gegeben.",
+          null,
+          "Eine Verteilung allein enthält weder den ganzen Versuchsaufbau noch die Kontrollen für eine physikalische Schlussfolgerung."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Bei einem auffälligen Messmuster nach Kontrollbedingungen fragen.",
+        "example": "In einem gedachten Richtungsversuch werden auf zwei Seiten unterschiedlich viele Ereignisse gezählt. Noch ist unbekannt, ob die beiden Zähler gleich empfindlich sind.",
+        "prompt": "Welche Untersuchung ist vor einer weitreichenden Schlussfolgerung besonders sinnvoll?",
+        "answers": [
+          "Jeden Unterschied sofort als Verletzung eines Naturgesetzes veröffentlichen",
+          "Nur den größeren Balken zeigen und den Vergleich weglassen",
+          "Prüfen, ob Messgeräte oder Aufbau eine Richtung bevorzugen, und Unsicherheiten berücksichtigen"
+        ],
+        "correct": 2,
+        "hint": "Frage, ob neben dem untersuchten Vorgang auch das Messverfahren zum Unterschied beitragen könnte.",
+        "why": "Ein Befund muss von möglichen Geräte- und Aufbauwirkungen sowie zufälligen Schwankungen unterschieden werden. Das eigene Gedankenbeispiel ersetzt nicht den tatsächlichen Paritätsnachweis.",
+        "wrongReasons": [
+          "Ein auffälliges Muster ist Anlass zur Prüfung. Ohne Kontrollen ist seine Ursache noch nicht ausreichend geklärt.",
+          "Ohne den vollständigen Vergleich wird die Frage nach dem Richtungsunterschied schlechter beurteilbar.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.nist.gov/pml/fall-parity/reversal-parity-law-nuclear-physics",
+      "https://www.nist.gov/pml/fall-parity",
+      "https://oumnh.ox.ac.uk/learn-chien-shiung-wu"
+    ]
+  },
+  {
+    "id": "person-lise_meitner",
+    "figure": "finding-explanation-evidence",
+    "ownMediaConcept": "Eigenes zweistufiges Schema: benannter chemischer Befund Barium gegenüber einem ausdrücklich schematischen Gedankenbild der Kernteilung. Keine historischen Messbilder, tatsächlichen Isotopenzahlen, Apparatur oder Berechnung einer bestimmten Kernreaktion.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Einen gefundenen Befund von einem erklärenden Gedanken unterscheiden.",
+        "example": "Im behandelten historischen Zusammenhang wurde Barium nachgewiesen. Die physikalische Erklärung beschreibt, dass ein schwerer Atomkern in kleinere Kerne geteilt werden kann.",
+        "prompt": "Welcher Satz nennt den gefundenen Befund?",
+        "answers": [
+          "Ein schwerer Kern kann sich teilen",
+          "Barium wurde nachgewiesen",
+          "Der Befund soll durch einen Vorgang erklärt werden"
+        ],
+        "correct": 1,
+        "hint": "Suche den Satz, der beschreibt, was bei der Untersuchung gefunden wurde.",
+        "why": "Der Nachweis von Barium ist der Befund. Das Teilen des Kerns gehört zu der Erklärung, die ihn verständlich macht.",
+        "wrongReasons": [
+          "Dieser Satz beschreibt den erklärenden Vorgang, nicht nur das gefundene Produkt.",
+          null,
+          "Dieser Satz benennt eine allgemeine Aufgabe von Erklärungen, noch kein konkretes gefundenes Produkt."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Kernspaltung, Kernfusion und chemische Bindungsänderung unterscheiden.",
+        "example": "Drei Aussagen beschreiben unterschiedliche Vorgänge: Ein schwerer Kern teilt sich; leichte Kerne verbinden sich; Bindungen zwischen Atomen werden neu geordnet.",
+        "prompt": "Welche Aussage passt zur Kernspaltung?",
+        "answers": [
+          "Ein schwerer Atomkern teilt sich in kleinere Kerne",
+          "Leichte Kerne verbinden sich zu einem schwereren",
+          "Nur die Bindungen zwischen unverändert bleibenden Atomkernen werden neu geordnet"
+        ],
+        "correct": 0,
+        "hint": "Achte darauf, was sich verändert und ob Kerne zusammenkommen oder geteilt werden.",
+        "why": "Spaltung betrifft die Teilung des schweren Kerns. Das Zusammenkommen leichter Kerne gehört zur Fusion; die dritte Aussage beschreibt den hier unterschiedenen chemischen Fall.",
+        "wrongReasons": [
+          null,
+          "Das beschreibt die Richtung einer Kernfusion, nicht einer Kernspaltung.",
+          "Eine gewöhnliche chemische Bindungsänderung ist nicht dasselbe wie die Teilung eines Atomkerns."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Die Reichweite der eigenen Kernzeichnung anhand fehlender Angaben beurteilen.",
+        "example": "Unsere nicht maßstäbliche Kernzeichnung zeigt einen Kreis links und zwei gleich groß gezeichnete Kreise rechts. Sie enthält keine Isotopenangaben oder gemessenen Massen. Ein Kommentar behauptet deshalb, im wirklichen Vorgang entstünden immer zwei genau gleich schwere Kerne.",
+        "prompt": "Welche Beurteilung passt zu diesen Angaben?",
+        "answers": [
+          "Die beiden gleich gezeichneten Kreise beweisen eine genaue Verteilung der realen Masse zu gleichen Teilen",
+          "Die Kreise zeigen bereits, welche beiden realen Isotope bei jeder Kernspaltung entstehen",
+          "Das Schema zeigt den erklärenden Teilungsgedanken; für bestimmte reale Spaltprodukte und Massen braucht man weitere Angaben und Messdaten"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide die Größe eines gezeichneten Symbols von einer gemessenen Eigenschaft. Welche Angaben fehlen im Schema?",
+        "why": "Die Zeichnung isoliert einen erklärenden Gedanken. Ohne Maßstab, Isotopenangaben und Messdaten trägt sie weder eine genaue Massenverteilung noch eine Festlegung aller realen Spaltprodukte. Gleich große Symbole bedeuten nicht automatisch gleich schwere reale Kerne.",
+        "wrongReasons": [
+          "Eine gleiche Symbolgröße ist in dieser ausdrücklich nicht maßstäblichen Zeichnung kein Messwert der Kernmasse.",
+          "Die eigenen Kreise haben keine Isotopenangaben. Verschiedene mögliche Spaltprodukte werden dadurch nicht zu einem einzigen festgelegten Paar.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.mpic.de/3549655/die-entdeckung-der-kernspaltung",
+      "https://www.mpg.de/11718069/lise-meitner-im-portraet"
+    ]
+  },
+  {
+    "id": "person-zaha_hadid",
+    "figure": "exhibition-route-evidence",
+    "ownMediaConcept": "Eigener Ausstellungsplan mit festem Eingang, festem Ausgang und zwei festen Stationen. Schalter ändert allein die Reihenfolge 1→2 beziehungsweise 2→1; Symbole, Nummern und Text ergänzen Farben. Kein Hadid-Bauplan, keine maßstäbliche Zugänglichkeits- oder Tragwerksprüfung.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Eine vorgegebene Wegreihenfolge lesen.",
+        "example": "Unser erster eigener Rundgang führt vom Eingang zur Station 1, danach zur Station 2 und zum Ausgang. Die Nummern bezeichnen feste Orte.",
+        "prompt": "Welche Station wird in diesem beschriebenen Rundgang zuerst besucht?",
+        "answers": [
+          "Station 2",
+          "Beide erst nach dem Ausgang",
+          "Station 1"
+        ],
+        "correct": 2,
+        "hint": "Beginne am Eingang und verfolge die ausdrücklich beschriebene Reihenfolge.",
+        "why": "In der Vorgabe folgt auf den Eingang Station 1. Die Frage bezieht sich auf diesen beschriebenen Rundgang, nicht auf jede mögliche Reihenfolge.",
+        "wrongReasons": [
+          "Station 2 folgt in dieser Vorgabe auf Station 1.",
+          "Der Ausgang steht am Ende. Die beiden Stationen werden vorher besucht.",
+          null
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Wegreihenfolge und Stationsposition unterscheiden.",
+        "example": "Die zweite Variante besucht Station 2 vor Station 1. Beide Stationszeichen stehen weiterhin genau an ihren bisherigen Orten.",
+        "prompt": "Was bleibt beim Wechsel zwischen diesen Varianten erhalten?",
+        "answers": [
+          "Die Orte beider Stationen",
+          "Die zuerst besuchte Station",
+          "Die Reihenfolge aller Wegstücke"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche, was fest eingezeichnet ist und was der Schalter verändert.",
+        "why": "Der Schalter ändert den Rundgang. Die Stationen werden dabei nicht verschoben.",
+        "wrongReasons": [
+          null,
+          "In den beiden Varianten wird ausdrücklich eine andere Station zuerst besucht.",
+          "Die Wegreihenfolge verändert sich; gerade das soll verglichen werden."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Eine begrenzte Planskizze von einer tatsächlichen Nutzungsprüfung unterscheiden.",
+        "example": "Der eigene Plan zeigt nur eine Weglinie und zwei Stationen. Maße von Durchgängen, mögliche Stufen und Höhenunterschiede fehlen.",
+        "prompt": "Welche Aussage über eine tatsächliche barrierefreie Nutzung ist damit tragfähig?",
+        "answers": [
+          "Jede eingezeichnete Linie beweist bereits einen stufenlosen Weg",
+          "Ein ungewöhnlicher Gebäudeumriss genügt als Zugänglichkeitsnachweis",
+          "Für eine Nutzungsprüfung fehlen konkrete Angaben, etwa zu Durchgängen und Höhenunterschieden"
+        ],
+        "correct": 2,
+        "hint": "Prüfe, welche für die Benutzung wichtigen Eigenschaften in dieser Skizze gar nicht angegeben sind.",
+        "why": "Eine Wegidee zeigt eine Verbindung. Ob Menschen sie tatsächlich ohne Barrieren benutzen können, erfordert weitere konkrete Angaben und Prüfung. Das Beispiel erhebt keinen Bauprüfungsanspruch.",
+        "wrongReasons": [
+          "Eine Linie enthält keine Information darüber, ob auf dem realen Weg etwa eine Stufe liegt.",
+          "Die äußere Form beantwortet die fehlenden Benutzungsfragen nicht.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.pritzkerprize.com/laureates/2004",
+      "https://designmuseum.org/designers/zaha-hadid"
+    ]
+  },
+  {
+    "id": "person-rabindranath_tagore",
+    "figure": "invented-line-evidence",
+    "ownMediaConcept": "Eine eigene freie Grundlinie bleibt in beiden Zuständen bytegleich im SVG-Pfad. Der zweite Zustand ergänzt einen Punkt und eine kurze Schnabellinie als eine mögliche Vogelidee. Keine Tagore-Zeichnung, kein kopiertes Gedicht und keine behauptete einzig richtige Bilddeutung.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Eine sichtbare Ergänzung von einer erhaltenen Grundform unterscheiden.",
+        "example": "Unsere eigene freie Linie bleibt stehen. In der zweiten Ansicht ergänzen wir einen Punkt und eine kurze Schnabellinie.",
+        "prompt": "Was wurde in diesem Beispiel ergänzt?",
+        "answers": [
+          "Ein zweiter geschlossener Umriss neben der bisherigen Linie",
+          "Ein Punkt und eine Schnabellinie",
+          "Eine historische Unterschrift Tagores"
+        ],
+        "correct": 1,
+        "hint": "Vergleiche nur die sichtbaren Zeichen der beiden vorgegebenen Ansichten.",
+        "why": "Punkt und Schnabellinie kommen hinzu. Die Grundlinie bleibt erhalten; eine historische Signatur wird nicht hinzugefügt.",
+        "wrongReasons": [
+          "Die Grundlinie bleibt an ihrem Ort. Ein zweiter geschlossener Umriss kommt nicht hinzu; vergleiche die einzelnen ergänzten Zeichen.",
+          null,
+          "Unser Beispiel enthält keine echte Signatur oder historische Zeichnung Tagores."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Eine eigene Bilddeutung mit einem sichtbaren Merkmal begründen.",
+        "example": "Zwei Personen deuten unser erfundenes Linienbild unterschiedlich. Eine sieht wegen der kurzen Schnabellinie einen Vogel; die andere nennt eine andere begründete Formidee.",
+        "prompt": "Welche Aussage behandelt diese Deutungen angemessen?",
+        "answers": [
+          "Eine Deutung kann durch sichtbare Merkmale begründet werden, ohne jede andere begründete Idee auszuschließen",
+          "Alle müssen automatisch denselben Vogel erkennen",
+          "Die sichtbaren Ergänzungen sagen sicher, was Tagore beim Malen dieses Bildes dachte"
+        ],
+        "correct": 0,
+        "hint": "Trenne eine nachvollziehbare Begründung am eigenen Bild von einer Behauptung über jede Person oder einen historischen Künstler.",
+        "why": "Sichtbare Merkmale können eine Deutung stützen. Das eigene Beispiel legt weder eine einzige Fantasie fest noch verrät es Gedanken Tagores.",
+        "wrongReasons": [
+          null,
+          "Unsere Aufgabe gibt keine verbindliche Fantasie vor. Unterschiedliche begründete Deutungen bleiben möglich.",
+          "Dieses Bild wurde für das Lernbeispiel erfunden und nicht von Tagore gemalt. Seine Gedanken lassen sich daraus nicht erschließen."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Künstlerisches Werk, Reproduktion und Nutzungsrecht unterscheiden.",
+        "example": "Eine Museumskarte bezeichnet ein anderes Objekt als Reproduktion einer historischen Zeichnung. Sie nennt eine Objektbeschreibung und einen Copyrightvermerk, aber keine ausdrückliche freie Lizenz.",
+        "prompt": "Welche Vorgehensweise trennt die Angaben sachgerecht?",
+        "answers": [
+          "Die Museumskarte als pauschale freie Bildlizenz für jedes Werk behandeln",
+          "Das Alter der Zeichnung automatisch mit dem Herstellungsdatum jeder Reproduktion gleichsetzen",
+          "Werkentstehung, konkretes Reproduktionsobjekt und dessen Nachnutzungsbedingungen gesondert prüfen"
+        ],
+        "correct": 2,
+        "hint": "Frage bei jeder Angabe, ob sie das Werk, dieses Objekt oder eine erlaubte Nutzung beschreibt.",
+        "why": "Diese Angaben beantworten verschiedene Fragen. Ein Bild einer alten Zeichnung ist nicht schon durch seine Anzeige auf einer Museumsseite ausdrücklich frei zur Nachnutzung freigegeben.",
+        "wrongReasons": [
+          "Eine Beschreibung erklärt ein Objekt; sie ist ohne entsprechende Aussage keine allgemeine freie Nutzungserlaubnis.",
+          "Eine spätere Reproduktion kann nach dem ursprünglichen Werk hergestellt worden sein. Beide Daten müssen ihrem Gegenstand zugeordnet werden.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://www.vam.ac.uk/articles/rabindranath-tagore-poet-and-painter",
+      "https://ngmaindia.gov.in/virtual-tour-of-rabindranath-tagore.asp"
+    ]
+  },
+  {
+    "id": "person-ibn_sina",
+    "figure": "text-transmission-evidence",
+    "ownMediaConcept": "Drei feste Stationen für den arabischen Text im frühen 11. Jahrhundert, die lateinische Übersetzung im 12. Jahrhundert und das konkrete Winchester-Exemplar im 15. Jahrhundert. Auswahl hebt Textentstehung oder Abschrift hervor; keine Buchseite oder behauptetes Autograf. Das separate British-Library-Exemplar von 1659 bleibt ein anderes Objekt.",
+    "tasks": [
+      {
+        "age": "6-8",
+        "goal": "Eine Reihenfolge verschiedener Überlieferungsereignisse lesen.",
+        "example": "Das eigene Zeitbild enthält drei Stationen: arabischer Ausgangstext im frühen 11. Jahrhundert, lateinische Übersetzung im 12. Jahrhundert, Winchester-Abschrift im 15. Jahrhundert.",
+        "prompt": "Welches dieser drei Ereignisse liegt zuerst?",
+        "answers": [
+          "Der arabische Ausgangstext",
+          "Die lateinische Winchester-Abschrift",
+          "Alle drei entstehen gleichzeitig"
+        ],
+        "correct": 0,
+        "hint": "Vergleiche die Jahrhundertangaben und die benannten Ereignisse.",
+        "why": "Das frühe 11. Jahrhundert liegt vor dem 12. und 15. Jahrhundert. Die Frage vergleicht die drei Textstationen, nicht sämtliche Ereignisse aus Ibn Sinas Leben.",
+        "wrongReasons": [
+          null,
+          "Die konkrete Winchester-Abschrift ist später als der Ausgangstext und die Übersetzung.",
+          "Die drei Stationen sind ausdrücklich unterschiedlichen Zeiten zugeordnet."
+        ]
+      },
+      {
+        "age": "9-11",
+        "goal": "Das Datum einer konkreten Abschrift ihrem Objekt zuordnen.",
+        "example": "Ein Kommentar sieht das im Winchester College erhaltene Exemplar aus dem 15. Jahrhundert und schreibt deshalb: Ibn Sina muss im 15. Jahrhundert gelebt haben. Seine Lebensdaten sind jedoch 980–1037.",
+        "prompt": "Welche Korrektur passt zu den vorgegebenen Angaben?",
+        "answers": [
+          "Die bekannte Lebenszeit durch das Datum jedes späteren Buchs ersetzen",
+          "Die Datierung gehört zu dieser Abschrift, nicht zur Lebenszeit des Autors",
+          "Das lateinische Exemplar sei deshalb sicher sein arabisches Autograf"
+        ],
+        "correct": 1,
+        "hint": "Ordne jede Zeitangabe dem Gegenstand zu, den sie tatsächlich beschreibt.",
+        "why": "Die spätere Abschrift überliefert einen älteren Text. Ihr Herstellungsdatum verändert nicht die Lebenszeit des Autors und macht sie nicht zu dessen eigener Handschrift.",
+        "wrongReasons": [
+          "Ein Text kann nach dem Tod seines Autors weiter abgeschrieben werden. Die spätere Buchherstellung ist kein neues Lebensdatum.",
+          null,
+          "Das konkrete Exemplar ist eine spätere lateinische Abschrift. Aus seiner Datierung folgt kein arabisches Autograf."
+        ]
+      },
+      {
+        "age": "12-14",
+        "goal": "Historische Wirkungsgeschichte von heutiger medizinischer Gültigkeit unterscheiden.",
+        "example": "Ein historisches medizinisches Werk war über Jahrhunderte verbreitet. Ein Kurzkommentar folgert allein daraus, jede einzelne darin enthaltene Behandlungsvorstellung sei heute nachgewiesen wirksam.",
+        "prompt": "Welche Antwort beurteilt diesen Schluss angemessen?",
+        "answers": [
+          "Lange Verbreitung beweist ohne weitere Prüfung jede heutige Wirksamkeit",
+          "Ein altes Werk kann deshalb gar keinen historischen Erkenntniswert haben",
+          "Historische Bedeutung und heutiger Wirksamkeitsnachweis sind verschiedene Fragen und brauchen jeweils passende Belege"
+        ],
+        "correct": 2,
+        "hint": "Unterscheide, was eine Quelle über die Wissensgeschichte zeigt und welche Aussage mit heutigen medizinischen Belegen geprüft werden müsste.",
+        "why": "Ein verbreitetes Werk kann für die Geschichte des Wissens sehr wichtig sein. Daraus folgt nicht automatisch die heutige Bestätigung jeder medizinischen Einzelbehauptung. Die Aufgabe beurteilt den Schluss und gibt keine Behandlungsempfehlung.",
+        "wrongReasons": [
+          "Die Verbreitung belegt eine Wirkungsgeschichte, nicht die heutige Wirksamkeit jeder Einzelvorstellung.",
+          "Gerade historische Texte können zeigen, wie Wissen gesammelt und weitergegeben wurde. Ihre historische Bedeutung bleibt auch bei später korrigierten Vorstellungen.",
+          null
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "https://winchestercollections.co.uk/collection/canon-of-medicine/",
+      "https://www.qdl.qa/en/archive/81055/vdc_100022857141.0x000001"
+    ]
   }
 ]

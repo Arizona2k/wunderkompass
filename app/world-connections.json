@@ -1144,6 +1144,310 @@
       "kind": "evidence",
       "why": "Ein Seismograf liefert Aufzeichnungen von Bodenbewegungen. Lehmanns Arbeit zeigt den weiteren Schritt: Solche Messungen vergleichen und daraus Hinweise auf das Erdinnere erschließen.",
       "checkedAt": "2026-10-25"
+    },
+    {
+      "id": "person-henrietta_swan_leavitt--person-cecilia_payne_gaposchkin",
+      "fromId": "person-henrietta_swan_leavitt",
+      "toId": "person-cecilia_payne_gaposchkin",
+      "kind": "compare",
+      "why": "Leavitt verglich Helligkeitsänderungen über die Zeit; Payne-Gaposchkin deutete Sternspektren. Das sind verschiedene Messinformationen über Sterne.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-henrietta_swan_leavitt--person-jocelyn_bell_burnell",
+      "fromId": "person-henrietta_swan_leavitt",
+      "toId": "person-jocelyn_bell_burnell",
+      "kind": "compare",
+      "why": "Beide untersuchten wiederkehrende Signale. Cepheiden und Pulsare sind aber verschiedene Sternfälle; ein ähnlicher Zeitverlauf beweist keine gleiche Ursache.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-cecilia_payne_gaposchkin--science-fusion",
+      "fromId": "person-cecilia_payne_gaposchkin",
+      "toId": "science-fusion",
+      "kind": "context",
+      "why": "Sternspektren helfen bei der Frage nach den vorhandenen Stoffen. Kernfusion erklärt einen Energieprozess im Stern. Zusammensetzung und Energiequelle sind verschiedene Fragen.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rosalind_franklin--science-cell",
+      "fromId": "person-rosalind_franklin",
+      "toId": "science-cell",
+      "kind": "context",
+      "why": "DNA gehört zum verknüpften Zellthema. Franklins Beugungsarbeit untersuchte Molekülstrukturen; eine Strukturaufnahme ist keine direkt lesbare DNA-Buchstabenfolge.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rosalind_franklin--person-inge_lehmann",
+      "fromId": "person-rosalind_franklin",
+      "toId": "person-inge_lehmann",
+      "kind": "compare",
+      "why": "Franklin untersuchte Röntgenbeugung, Lehmann deutete Erdbebenwellen. Beide Beispiele trennen Messinformation und Strukturvorstellung, ohne die Methoden oder untersuchten Gegenstände gleichzusetzen.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-jocelyn_bell_burnell--science-exoplanet",
+      "fromId": "person-jocelyn_bell_burnell",
+      "toId": "science-exoplanet",
+      "kind": "compare",
+      "why": "Wiederkehrende Radiopulse und die Abschwächung von Sternlicht bei einem Transit sind unterschiedliche Beobachtungen. In beiden Fällen braucht eine Erklärung mehr als bloße Regelmäßigkeit.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-katsushika_hokusai--invention-printing",
+      "fromId": "person-katsushika_hokusai",
+      "toId": "invention-printing",
+      "kind": "compare",
+      "why": "Hokusais Farbholzschnitt und der hier erklärte Buchdruck bringen vorbereitete Formen auf Papier. Ein mehrfarbiges Bild aus mehreren Druckstöcken ist aber kein Satz aus beweglichen Buchstaben.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-katsushika_hokusai--person-rabindranath_tagore",
+      "fromId": "person-katsushika_hokusai",
+      "toId": "person-rabindranath_tagore",
+      "kind": "compare",
+      "why": "Hokusais Druckgrafik und Tagores Zeichnungen zeigen unterschiedliche Arbeitsweisen mit Linien und Formen. Der Vergleich behauptet weder dasselbe Verfahren noch einen belegten persönlichen Einfluss.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-murasaki_shikibu--person-octavia_butler",
+      "fromId": "person-murasaki_shikibu",
+      "toId": "person-octavia_butler",
+      "kind": "compare",
+      "why": "Die beiden Autorinnen schrieben in verschiedenen Zeiten und kulturellen Zusammenhängen. Bei beiden hilft die Frage, was eine Figur in einer Szene wissen kann; das macht ihre Werke weder zur gleichen Gattung noch zu Berichten tatsächlich geschehener Ereignisse.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-murasaki_shikibu--history-writing",
+      "fromId": "person-murasaki_shikibu",
+      "toId": "history-writing",
+      "kind": "context",
+      "why": "Schrift kann Texte über die Lebenszeit ihrer Verfasserin hinaus bewahren. Die frühe Geschichte von Schrift und die viel spätere Überlieferung der Genji-Erzählung sind verschiedene Themen; eine spätere Abschrift ist nicht automatisch das Original der Autorin.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-nelson_mandela--history-un",
+      "fromId": "person-nelson_mandela",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Die Vereinten Nationen unterstützten den internationalen Kampf gegen die Apartheid. Ihre Gründung 1945 und die demokratischen Wahlen in Südafrika 1994 sind verschiedene Schritte; der Wandel war keine Alleinleistung der UN oder Mandelas.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-nelson_mandela--person-wangari_maathai",
+      "fromId": "person-nelson_mandela",
+      "toId": "person-wangari_maathai",
+      "kind": "compare",
+      "why": "Beide Beispiele verbinden politisches Handeln mit den Beiträgen vieler Menschen. Maathai arbeitete in Kenia für Umwelt, Menschenrechte und Beteiligung; Mandela kämpfte gegen die Apartheid in Südafrika. Unterschiedliche Länder, Ziele und Wege bleiben erkennbar.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rachel_carson--science-foodweb",
+      "fromId": "person-rachel_carson",
+      "toId": "science-foodweb",
+      "kind": "context",
+      "why": "Ein Nahrungsnetz hilft zu untersuchen, über welche Fressbeziehungen Stoffe weitergegeben werden können. Der eigene Marker-Vergleich bei Carson zeigt einen vereinfachten Stoffweg; die Energiemenge und die Konzentration eines Schadstoffs sind dadurch noch nicht bestimmt.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rachel_carson--person-octavia_butler",
+      "fromId": "person-rachel_carson",
+      "toId": "person-octavia_butler",
+      "kind": "compare",
+      "why": "Carson erklärte Umweltzusammenhänge anhand von Forschung; Butler gestaltete erfundene Geschichten, unter anderem mit Umweltfragen. Ein Sachbeleg und eine mögliche Romanwelt haben unterschiedliche Aufgaben. Der Vergleich behauptet keinen nachgewiesenen persönlichen Einfluss.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-chien_shiung_wu--science-symmetry",
+      "fromId": "person-chien_shiung_wu",
+      "toId": "science-symmetry",
+      "kind": "compare",
+      "why": "Die Symmetriekarte erklärt Spiegelung an geometrischen Figuren. Wus Team prüfte dagegen eine präzise physikalische Symmetrie bei einem Kernprozess. Ein ungleiches eigenes Balkenbild oder eine beliebige unsymmetrische Figur ist kein Nachweis dieser Paritätsverletzung.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-chien_shiung_wu--person-lise_meitner",
+      "fromId": "person-chien_shiung_wu",
+      "toId": "person-lise_meitner",
+      "kind": "compare",
+      "why": "Beide arbeiteten zu Atomkernen, aber an verschiedenen Fragen: Wus Team untersuchte Richtungen bei einem Betazerfall; Meitner und Frisch erklärten Kernspaltung. Betazerfall und Spaltung sind unterschiedliche Vorgänge.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-lise_meitner--science-fusion",
+      "fromId": "person-lise_meitner",
+      "toId": "science-fusion",
+      "kind": "compare",
+      "why": "Bei einer Kernspaltung wird ein schwerer Kern geteilt; bei einer Kernfusion verbinden sich leichtere Kerne. Die beiden Begriffe und die Beiträge Meitners und Frischs zur Spaltung dürfen nicht vertauscht werden.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-zaha_hadid--building-sydney-opera",
+      "fromId": "person-zaha_hadid",
+      "toId": "building-sydney-opera",
+      "kind": "compare",
+      "why": "Architektur verbindet räumliche Gestaltung mit der Zusammenarbeit vieler Fachleute. Das Opernhaus von Sydney wurde von Jørn Utzon entworfen, nicht von Hadid. Ein Formvergleich zeigt noch keine gleiche Konstruktion oder Tragfähigkeit.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-zaha_hadid--science-angle",
+      "fromId": "person-zaha_hadid",
+      "toId": "science-angle",
+      "kind": "context",
+      "why": "Bei einem gezeichneten Rundgang lassen sich Richtungswechsel beschreiben. Winkel und eine Wegreihenfolge sind verschiedene Angaben; ohne Maße und weitere Prüfungen ist unser eigener Plan keine Bau- oder Sicherheitsplanung.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rabindranath_tagore--person-murasaki_shikibu",
+      "fromId": "person-rabindranath_tagore",
+      "toId": "person-murasaki_shikibu",
+      "kind": "compare",
+      "why": "Beide schufen literarische Werke, aber in verschiedenen Zeiten und Zusammenhängen. Tagores eigene späte Bildarbeit und spätere Illustrationen zur Genji-Erzählung sind nicht dasselbe: Eine nachträgliche Illustration darf nicht Murasaki als eigene Zeichnung zugeschrieben werden.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--history-writing",
+      "fromId": "person-ibn_sina",
+      "toId": "history-writing",
+      "kind": "context",
+      "why": "Schrift erlaubt, Wissen zu notieren, abzuschreiben und zu übersetzen. Ibn Sinas arabischer Text und ein viel späteres lateinisches Buchobjekt müssen jeweils datiert werden. Das Alter eines Textes allein belegt keine heutige medizinische Wirksamkeit.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--person-tu_youyou",
+      "fromId": "person-ibn_sina",
+      "toId": "person-tu_youyou",
+      "kind": "compare",
+      "why": "Ibn Sina sammelte und ordnete medizinisches Wissen seiner Zeit; Tu Youyou arbeitete viele Jahrhunderte später an einem Wirkstoff gegen Malaria. Ein historischer Text und der Nachweis einer wirksamen Behandlung sind verschiedene Dinge. Keine dieser Biografien ersetzt medizinischen Rat.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--invention-printing",
+      "fromId": "person-ibn_sina",
+      "toId": "invention-printing",
+      "kind": "compare",
+      "why": "Eine handgeschriebene Abschrift und ein gedrucktes Buch können ältere Texte bewahren. Das konkrete Winchester-Exemplar ist eine Handschrift aus dem 15. Jahrhundert, keine von Ibn Sina selbst gedruckte Ausgabe.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-katsushika_hokusai--person-cai_lun",
+      "fromId": "person-katsushika_hokusai",
+      "toId": "person-cai_lun",
+      "kind": "compare",
+      "why": "Papierherstellung und das Drucken eines Farbholzschnitts sind verschiedene Arbeitsschritte. Das Papier im Druck macht Hokusai nicht zum Erfinder des Papiers; die frühere chinesische Papiergeschichte wird nicht zu seiner eigenen Biografie.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-henrietta_swan_leavitt--science-galaxy",
+      "fromId": "person-henrietta_swan_leavitt",
+      "toId": "science-galaxy",
+      "kind": "compare",
+      "why": "Leavitts Vergleich bestimmter veränderlicher Sterne wurde zu einer Hilfe für Entfernungsmessungen im Weltall. Eine Galaxie enthält sehr viele Sterne; die scheinbare Helligkeit eines einzelnen Sterns ist noch keine Entfernung der ganzen Galaxie.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-katsushika_hokusai--person-cecilia_payne_gaposchkin",
+      "fromId": "person-katsushika_hokusai",
+      "toId": "person-cecilia_payne_gaposchkin",
+      "kind": "compare",
+      "why": "Bei einem Farbholzschnitt wird Farbe mit ausgewählten Druckfarben gestaltet. Bei einem Sternspektrum werden Lichtmuster untersucht. Der Vergleich hilft, eine bewusst gestaltete Bildfarbe von einem physikalischen Messzeichen zu unterscheiden.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-murasaki_shikibu--person-johannes_gutenberg",
+      "fromId": "person-murasaki_shikibu",
+      "toId": "person-johannes_gutenberg",
+      "kind": "compare",
+      "why": "Die Genji-Erzählung wurde lange von Hand abgeschrieben; Gutenbergs Drucksystem steht für eine andere Form der Vervielfältigung. Eine spätere Kopie oder Druckfassung ist nicht automatisch das ursprüngliche Werk oder die Handschrift seiner Autorin.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rachel_carson--person-wangari_maathai",
+      "fromId": "person-rachel_carson",
+      "toId": "person-wangari_maathai",
+      "kind": "compare",
+      "why": "Carson untersuchte und erklärte ökologische Folgen bestimmter Eingriffe; Maathai verband Baumpflanzungen mit gemeinschaftlichem Handeln. Beide Themen zeigen unterschiedliche Wege, Lebensräume zu verstehen und zu schützen, ohne eine Zusammenarbeit der beiden Frauen zu behaupten.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rachel_carson--science-pollination",
+      "fromId": "person-rachel_carson",
+      "toId": "science-pollination",
+      "kind": "compare",
+      "why": "Bestäubende Tiere können von Veränderungen ihres Lebensraums und bestimmten Pflanzenschutzmitteln betroffen sein. Carsons Frage nach unbeabsichtigten Folgen ergänzt den Blick auf Pollenboten; Wirkung und Risiko hängen vom jeweiligen Mittel und seiner Anwendung ab.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-octavia_butler--person-johannes_gutenberg",
+      "fromId": "person-octavia_butler",
+      "toId": "person-johannes_gutenberg",
+      "kind": "compare",
+      "why": "Butlers Geschichten richten den Blick auf Figuren, Wissen und Entscheidungen. Druckverfahren erklären dagegen, wie Texte vervielfältigt werden können. Die Herstellung vieler Exemplare bestimmt nicht, was eine erzählte Figur weiß oder ob ein Text eine Tatsachenquelle ist.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-chien_shiung_wu--person-marie_curie",
+      "fromId": "person-chien_shiung_wu",
+      "toId": "person-marie_curie",
+      "kind": "compare",
+      "why": "Curie untersuchte radioaktive Stoffe; Wu und ihr Team prüften bei einem bestimmten Betazerfall eine Symmetrievorstellung. Die gemeinsame Verbindung zur Radioaktivität macht die verschiedenen Forschungsfragen sichtbar, ohne ihre Arbeiten gleichzusetzen.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-lise_meitner--person-marie_curie",
+      "fromId": "person-lise_meitner",
+      "toId": "person-marie_curie",
+      "kind": "compare",
+      "why": "Die Erforschung radioaktiver Stoffe und die Erklärung der Kernspaltung gehören zur Geschichte der Kernphysik. Meitners und Frischs Deutung chemischer Befunde ist ein anderer Forschungsschritt als die Arbeiten Curies.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-lise_meitner--person-albert_einstein",
+      "fromId": "person-lise_meitner",
+      "toId": "person-albert_einstein",
+      "kind": "compare",
+      "why": "Der Zusammenhang zwischen Masse und Energie hilft, die bei Kernprozessen frei werdende Energie zu verstehen. Meitner und Frisch nutzten physikalische Überlegungen für ihre Erklärung der Kernspaltung; daraus folgt nicht, Einstein habe diese Spaltung entdeckt.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-rabindranath_tagore--history-printing",
+      "fromId": "person-rabindranath_tagore",
+      "toId": "history-printing",
+      "kind": "compare",
+      "why": "Texte können durch Druck vielen Menschen zugänglich werden. Tagores Arbeit als Autor und Künstler betrifft die Gestaltung von Inhalten; die Druckwerkstatt erklärt einen Weg ihrer Vervielfältigung. Die beiden Aufgaben sind verschieden.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--person-al_khwarizmi",
+      "fromId": "person-ibn_sina",
+      "toId": "person-al_khwarizmi",
+      "kind": "compare",
+      "why": "Ibn Sina ordnete medizinisches Wissen, al-Chwarizmi erklärte unter anderem mathematische Verfahren. Beide Beispiele zeigen schriftliche Wissensvermittlung in unterschiedlichen Gebieten und Zeiten; al-Chwarizmi lebte früher und wird hier nicht als direkter Lehrer Ibn Sinas dargestellt.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--person-ibn_al_haytham",
+      "fromId": "person-ibn_sina",
+      "toId": "person-ibn_al_haytham",
+      "kind": "compare",
+      "why": "Medizinische Wissenssammlung und die Untersuchung von Licht und Sehen sind verschiedene Arbeitsgebiete. Der Vergleich zeigt, wie überlieferte Beschreibungen, eigene Überlegungen und gezielte Versuche unterschiedliche Rollen spielen; eine persönliche Zusammenarbeit wird nicht behauptet.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--person-johannes_gutenberg",
+      "fromId": "person-ibn_sina",
+      "toId": "person-johannes_gutenberg",
+      "kind": "compare",
+      "why": "Ibn Sinas medizinisches Werk wurde über Jahrhunderte kopiert und übersetzt. Die Druckkarte erklärt eine weitere Technik der Textvervielfältigung. Das Datum einer einzelnen Abschrift oder eines Drucks ist nicht das Entstehungsdatum des Werks.",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "person-ibn_sina--person-murasaki_shikibu",
+      "fromId": "person-ibn_sina",
+      "toId": "person-murasaki_shikibu",
+      "kind": "compare",
+      "why": "Beim Kanon der Medizin und bei der Genji-Erzählung muss zwischen dem ursprünglichen Werk und späteren erhaltenen Exemplaren unterschieden werden. Es handelt sich um verschiedene Textarten und Überlieferungswege; ein Einfluss des einen Werks auf das andere wird nicht abgeleitet.",
+      "checkedAt": "2026-11-03"
     }
   ]
 }
