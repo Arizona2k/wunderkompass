@@ -14,6 +14,7 @@ import {assertTextInsideControls} from './text-geometry.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
+const peopleActivities=new Set(JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.map(entry=>entry.id));
 const examples=['animal-polar-bear','history-maya','person-grace_hopper','invention-car','building-taj-mahal','science-moon-phases','science-tides','science-currents'];
 const drawingAlts={
  'science-moon-phases':'Vier ausgewählte Mondphasen: Neumond, zunehmender Halbmond, Vollmond und abnehmender Halbmond.',
@@ -45,7 +46,8 @@ export async function articleAtlas(page,ready,report,width,shots){
    assert.equal(new URL(page.url()).hash,'#world/topic/'+id,'jump preserves direct link');
   }
   if(await nav.getByRole('button',{name:/Ausprobieren$/}).count()){
-   await nav.getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await art.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);
+   const activity=peopleActivities.has(id)?art.locator('[data-person-evidence="'+id+'"]'):art.locator('.article-experiment');assert.equal(await activity.count(),1,id+' has one specifically declared research target');
+   await nav.getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await activity.evaluate(el=>el===document.activeElement),true,id+' research jump focuses its declared activity');
   }
   const violations=await page.evaluate(async()=>{const r=await window.axe.run('.article-atlas',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))});
   assert.deepEqual(violations,[],id+' axe '+width);

@@ -107,7 +107,7 @@ export function assertExisting18ActualDOMStates(kind,states) {
     case 'measurement-and-hypothesis-evidence': {
       const ss=states.map(svg);eq(ss[0],ss[1],'a hypothesis creates no new measured data');
       states.forEach(r=>{const bars=by(svg(r),'data-observation-bar');eq(bars.length,2);
-        eq(bars.map(g=>nums(one(child(g,'rect')),['height','y'])),[[60,170],[150,80]]);eq(bars.map(g=>child(g,'circle').length),[2,5]);
+        eq(bars.map(g=>nums(one(child(g,'rect')),['height','y'])),[[60,160],[150,70]]);eq(bars.map(g=>child(g,'circle').length),[2,5]);
         eq(bars.map(g=>child(g,'text').map(text)),[['2','A'],['5','B']]);});assert(status(states[1]).startsWith('Vermutung:'));break;
     }
     case 'apollo11-roles-snapshots': {
