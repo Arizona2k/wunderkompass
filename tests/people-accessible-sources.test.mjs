@@ -17,7 +17,7 @@ test('eight reviewed alternatives retain all35 public source actions and exact p
  // Arbitrary new data or stale current source/body claims cannot hide behind
  // reconstruction of a known historically reviewed object.
  for(const change of correction.dossiers){
-  for(const mutate of [row=>row.sources[0].url='https://invalid.example/unreviewed',row=>row.explanation+=' unreviewed',row=>row.claims[0].anchor='unreviewed',row=>row.ui.build='invented',row=>row.ui.route='world/topic/unreviewed-route',row=>row.mediaDecision='unreviewed']){
+  for(const mutate of [row=>row.sources[0].url='https://invalid.example/unreviewed',row=>row.explanation+=' unreviewed',row=>row.claims[0].anchor='unreviewed',row=>row.ui.build='invented',row=>row.ui.route='world/topic/unreviewed-route',row=>row[correction.native218SourceUIQualification.historyField].build='invented',row=>row[correction.native218SourceUIQualification.historyField].route='world/topic/unreviewed-route',row=>row[correction.native218SourceUIQualification.historyField].report+=' unreviewed',row=>delete row[correction.native218SourceUIQualification.historyField],row=>row.mediaDecision='unreviewed']){
    const bad=structuredClone(rows);mutate(bad.find(row=>row.id===change.id));
    assert.throws(()=>beforeFourteenDossiers(bad),change.id);
   }
