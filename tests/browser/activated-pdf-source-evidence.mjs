@@ -10,5 +10,17 @@ export function activatedPDFEvidence({requested,actualURL,httpStatus,contentType
  const encoding=(contentEncoding??'identity').toLowerCase();assert(['identity','gzip','br','deflate','zstd'].includes(encoding),'known actual HTTP content encoding');
  let actualDeclaredLengthChecked=false;
  if(contentLength!==undefined&&contentLength!==null){const length=Number(contentLength);assert(Number.isSafeInteger(length)&&length>0);if(encoding==='identity'){assert.equal(body.length,length,'whole original PDF matches actual unencoded Content-Length');actualDeclaredLengthChecked=true;}}
- return{kind:'actual PDF viewer and explicit same-anchor original download',bytes:body.length,sha256:createHash('sha256').update(body).digest('hex'),PDFHeader:body.subarray(0,8).toString('latin1'),PDFEOF:true,actualDeclaredLengthChecked,contentEncoding:encoding,scientificApproval:false};
+ // The existing report transport retains JSON. Carry the complete original
+ // alongside its digest so the native evidence bundle can restore the PDF;
+ // a local download path or checksum alone cannot preserve its bytes.
+ return{kind:'actual PDF viewer and explicit same-anchor original download',bytes:body.length,sha256:createHash('sha256').update(body).digest('hex'),originalBase64:body.toString('base64'),PDFHeader:body.subarray(0,8).toString('latin1'),PDFEOF:true,actualDeclaredLengthChecked,contentEncoding:encoding,scientificApproval:false};
+}
+
+export function decodeActivatedPDFOriginal(record){
+ assert.equal(record?.kind,'actual PDF viewer and explicit same-anchor original download');
+ assert.equal(typeof record.originalBase64,'string');assert(record.originalBase64.length>0);
+ const body=Buffer.from(record.originalBase64,'base64');assert.equal(body.toString('base64'),record.originalBase64,'canonical complete PDF encoding');
+ assert(Number.isSafeInteger(record.bytes)&&record.bytes>200);assert.equal(body.length,record.bytes);
+ assert.match(record.sha256,/^[a-f0-9]{64}$/);assert.equal(createHash('sha256').update(body).digest('hex'),record.sha256,'whole original PDF');
+ assert.match(body.subarray(0,8).toString('latin1'),/^%PDF-(?:1\.\d|2\.0)/);assert(body.subarray(-4096).includes(Buffer.from('%%EOF')));return body;
 }
