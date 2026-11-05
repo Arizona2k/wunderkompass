@@ -4256,9 +4256,12 @@
     "id": "person-marie_curie",
     "category": "people",
     "title": "Marie Curie",
-    "intro": "Marie Curie erforschte die Radioaktivität.",
+    "intro": "Marie Curie machte unsichtbare Strahlung messbar. Auffällige Vergleiche führten sie und ihr Forschungsteam zu neuen Fragen über Stoffe.",
     "paragraphs": [
-      "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium."
+      "Marie Curie lebte von 1867 bis 1934. Nach Henri Becquerels Entdeckung der Uranstrahlung verglich sie die Wirkung unterschiedlicher Stoffe mit empfindlichen Messgeräten. Sie untersuchte unter anderem, wie Strahlung die elektrische Leitfähigkeit von Luft verändert.",
+      "Einige untersuchte Mineralien waren stärker aktiv, als Curie vom enthaltenen Uran erwartet hatte. Daraus entwickelte sie eine prüfbare Vermutung: Weitere aktive Bestandteile könnten beteiligt sein. Ein auffälliger Messwert allein gab ihnen aber noch keinen Namen. Weitere Untersuchungen und Stofftrennungen gehörten zum Forschungsweg.",
+      "1898 entdeckten Marie und Pierre Curie die Elemente Polonium und Radium. Am veröffentlichten Radiumbericht war auch Gustave Bémont beteiligt. Die Forschung war Teamarbeit; die Namen eines Preises und die Beiträge zu einer Untersuchung sind unterschiedliche Angaben.",
+      "Den Nobelpreis für Physik erhielt Marie Curie 1903 gemeinsam mit Pierre Curie und Henri Becquerel. 1911 erhielt sie den Nobelpreis für Chemie. Heute lässt sich ihre Geschichte als Beispiel dafür lesen, wie Beobachtungen, begründete Vermutungen und weitere Prüfungen zusammenwirken."
     ],
     "facts": [
       {
@@ -4275,8 +4278,10 @@
       }
     ],
     "more": [
-      "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren.",
-      "Radioaktivität bedeutet, dass bestimmte Atomkerne von selbst Strahlung abgeben. Curie untersuchte diese Vorgänge mit Messgeräten. Strahlung kann schaden; heute braucht solche Forschung besonders sorgfältigen Schutz."
+      "Eine Beobachtung beschreibt hier zunächst einen Messbefund. Eine Hypothese versucht ihn zu erklären und muss an weiteren geeigneten Untersuchungen geprüft werden. Eine passende Beobachtung beweist nicht automatisch jede weitergehende Erklärung.",
+      "Unser eigenes Zahlenbild zeigt nur zwei erfundene Vergleichswerte. Beim Umschalten kommen Worte für eine Vermutung hinzu; die gezeichneten Daten bleiben unverändert. Das Bild zeigt weder historische Messzahlen noch eine Strahlendosis, einen Stoffgehalt oder die Identifizierung eines Elements.",
+      "Bei Radioaktivität geben instabile Atomkerne von selbst Strahlung ab, die für uns unsichtbar sein kann. Curie untersuchte solche Vorgänge mit Messgeräten. Die heutige Erklärung des Atomkerns entstand über weitere Forschungsschritte; 1898 verfügte sie noch nicht über dieses spätere vollständige Modell. Historische Fachtexte werden deshalb nicht einfach als heutige Fachbeschreibung übernommen.",
+      "Strahlung kann schaden. Für radioaktive Stoffe braucht Forschung geeignete Fachlabore und besonders sorgfältige Schutzverfahren. Unsere Aufgabe verwendet ausschließlich erfundene Zahlen und Zeichnungen. Sie ist keine Anleitung, unbekannte Materialien zu sammeln, zu öffnen oder zu untersuchen."
     ],
     "surprise": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
     "locations": [
@@ -4301,17 +4306,27 @@
     ],
     "sources": [
       {
-        "label": "Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/"
+        "label": "American Institute of Physics: Curies eigener Bericht von 1904",
+        "url": "https://history.aip.org/exhibits/curie/article_text.htm"
       },
       {
-        "label": "Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/questions-and-answers/?print=1"
+        "label": "American Institute of Physics: Radiumveröffentlichung von 1898, übersetzte Fassung",
+        "url": "https://history.aip.org/exhibits/curie/discover.htm"
+      },
+      {
+        "label": "Bibliothèque nationale de France: Leben und Forschungsweg Marie Curies",
+        "url": "https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934"
+      },
+      {
+        "label": "American Institute of Physics: spätere Erklärung von Atomkern und Radioaktivität",
+        "url": "https://history.aip.org/exhibits/curie/unstable.htm"
       }
     ],
     "aliases": [
       "Marie Curie",
-      "marie_curie"
+      "marie_curie",
+      "Marie Skłodowska-Curie",
+      "Maria Sklodowska-Curie"
     ],
     "links": [],
     "person": {
@@ -4329,15 +4344,34 @@
       ],
       "correct": 0,
       "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+    },
+    "learning": {
+      "starter": "Vergleiche zwei erfundene Messbefunde und trenne Beobachtung von Erklärung.",
+      "observe": "Achte darauf, welche Daten beim Wechsel gleich bleiben und welche Deutung erst hinzukommt.",
+      "benefit": "Du kannst eine auffällige Messung zum Anlass für eine prüfbare Frage nehmen, ohne daraus schon einen vollständigen Nachweis zu machen."
+    },
+    "sourceNote": "Eigene deutsche Erklärung anhand der tatsächlich gelesenen Forschungsberichte und institutionellen Lebensdaten. Historische Messverfahren und heutiges Kernmodell werden zeitlich getrennt. Alte Aussagen über scheinbare Energieerzeugung, pauschale Schutzdicken, medizinische Wirkungen oder das angeblich langlebigste Poloniumisotop werden nicht übernommen. Vorhandenes Porträt und dessen Rechte bleiben gesondert erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Was könnte man durch Messungen an verschiedenen Proben untersuchen, auch wenn die Ursache unsichtbar ist?",
+      "wrongReasons": [
+        null,
+        "Eine Rechenanleitung für eine geplante Maschine ist von der hier behandelten Messung an strahlenden Stoffen zu unterscheiden.",
+        "Programmieren zu vereinfachen ist ein anderer Fachbeitrag als Curies Untersuchungen an radioaktiven Stoffen."
+      ]
     }
   },
   {
     "id": "person-ada_lovelace",
     "category": "people",
     "title": "Ada Lovelace",
-    "intro": "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+    "intro": "Ada Lovelace beschrieb 1843, wie eine geplante Rechenmaschine genaue Schrittfolgen ausführen könnte. Sie dachte dabei über bloße Zahlenrechnungen hinaus.",
     "paragraphs": [
-      "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten."
+      "Ada Lovelace lebte von 1815 bis 1852. Sie beschäftigte sich intensiv mit Mathematik und mit Charles Babbages Entwürfen für Rechenmaschinen. Seine frühere Difference Engine und die vielseitiger geplante Analytical Engine waren verschiedene Projekte.",
+      "1843 veröffentlichte Lovelace eine englische Übersetzung eines Artikels von Luigi Menabrea und ergänzte sie durch umfangreiche eigene Anmerkungen. Eine davon beschreibt die Berechnung von Bernoulli-Zahlen. Dieser veröffentlichte Ablauf ist eine wichtige frühe Arbeit zur Programmierung; auch Babbage hatte zuvor bereits Rechenabläufe entworfen.",
+      "Lovelace unterschied zwischen den auszuführenden Operationen und den Werten, auf die sie angewendet werden. Ihre Anmerkungen zeigen auch, wie Gruppen von Rechenschritten wiederholt werden können. Dabei kann dieselbe Operation mit inzwischen veränderten Werten arbeiten.",
+      "Sie überlegte außerdem: Wenn sich Beziehungen beispielsweise zwischen musikalischen Tönen passend darstellen lassen, könnte eine solche Maschine auch damit umgehen. Das war eine bedingte Vorstellung über ihre Möglichkeiten. Es ist kein Beleg, dass die geplante Analytical Engine damals Musik spielte oder vollständig gebaut war."
     ],
     "facts": [
       {
@@ -4354,8 +4388,10 @@
       }
     ],
     "more": [
-      "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut.",
-      "Ein Algorithmus ist eine genaue Folge von Schritten. Lovelaces Anleitung bezog sich auf eine geplante Rechenmaschine. Sie konnte nicht einfach einen heutigen Computer einschalten und ihr Programm ausprobieren."
+      "Ein Algorithmus beschreibt, welche Schritte in welcher Reihenfolge ausgeführt werden. Bei unserem eigenen Lehrbeispiel beginnt man mit zwei, addiert drei und verdoppelt dann das Ergebnis: zwei, fünf, zehn. Vertauscht man diese beiden Schritte, entstehen zwei, vier, sieben.",
+      "Das Beispiel zeigt nur diese zwei einfachen Abläufe. Es ist nicht Lovelaces ursprüngliche Berechnung der Bernoulli-Zahlen und keine Nachbildung der vollständigen Maschine. Ihre Anleitung bezog sich auf einen geplanten Rechner; sie konnte sie nicht auf einem heutigen Computer ausprobieren. Dass unser eigener Rechenweg aufgeht, beweist für sich allein keinen historischen Bauzustand.",
+      "Eine Wiederholung verwendet eine festgelegte Schrittgruppe erneut. Die Werte können sich dabei verändern. Darum sind eine Anweisung und ihr aktueller Zahlenwert unterschiedliche Dinge. Genaues Aufschreiben macht einen Ablauf nachvollziehbar und prüfbar.",
+      "Die Bezeichnung erste Programmiererin hängt davon ab, was mit einem Programm und mit seiner Veröffentlichung gemeint ist. Hier bleiben der veröffentlichte Ablauf von 1843, Babbages frühere Entwürfe und ihre Zusammenarbeit unterscheidbar. Die vollständige Analytical Engine wurde zu ihren Lebzeiten nicht gebaut."
     ],
     "surprise": "Veröffentlichter Algorithmus für die Analytical Engine; Vorstellung allgemein nutzbarer Informationsverarbeitung.",
     "locations": [
@@ -4372,17 +4408,32 @@
     ],
     "sources": [
       {
-        "label": "Science Museum",
+        "label": "Science Museum: Lovelaces veröffentlichter Ablauf und Babbages frühere Entwürfe",
         "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/"
       },
       {
-        "label": "University of St Andrews, MacTutor",
+        "label": "University of St Andrews: mathematische Arbeit und Veröffentlichung von 1843",
         "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/"
+      },
+      {
+        "label": "York University: Lovelaces eigene Anmerkungen A bis G von 1843, Transkription",
+        "url": "https://psychclassics.yorku.ca/Lovelace/lovelace.htm"
+      },
+      {
+        "label": "University of Oxford, History of Science Museum: Babbage und Lovelace",
+        "url": "https://www.hsm.ox.ac.uk/imagining-ai"
+      },
+      {
+        "label": "Science Museum Library: konkretes gedrucktes Buch von 1843",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8652385/book-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq"
       }
     ],
     "aliases": [
       "Ada Lovelace",
-      "ada_lovelace"
+      "ada_lovelace",
+      "Augusta Ada King",
+      "Ada Byron",
+      "Analytical Engine"
     ],
     "links": [],
     "person": {
@@ -4400,6 +4451,22 @@
       ],
       "correct": 0,
       "why": "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut."
+    },
+    "learning": {
+      "starter": "Vergleiche dieselben zwei Rechenschritte in verschiedener Reihenfolge.",
+      "observe": "Notiere den Zwischenwert nach jedem Schritt und vergleiche die beiden Endwerte.",
+      "benefit": "Du kannst zwischen einer Anweisung, ihren Eingabewerten und einem tatsächlichen Ausführungsergebnis unterscheiden."
+    },
+    "sourceNote": "Eigene deutsche Erklärung anhand der tatsächlich gelesenen institutionellen Darstellungen und der historischen Anmerkungen. Ein veröffentlichter Algorithmus wird nicht mit der allerersten privaten Rechenplanung oder mit einer damals fertig gebauten Maschine gleichgesetzt. Bedingte Überlegungen zur Musik werden nicht als tatsächliche Aufführung dargestellt. Historische Aussagen über die Grenzen einer Maschine sind kein pauschaler Nachweis heutiger KI-Eigenschaften. Das vorhandene Porträt und seine ursprünglichen Rechtebelege bleiben gesondert erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Denke an eine geplante Maschine: Was muss vorliegen, bevor sie eine Aufgabe Schritt für Schritt ausführen könnte?",
+      "wrongReasons": [
+        null,
+        "Hier geht es um eine veröffentlichte Rechenanleitung. Die Untersuchung von Strahlung ist ein anderer Fachbeitrag.",
+        "Das spätere Vereinfachen von Programmiersprachen ist von einer Anleitung für Babbages geplante Maschine zu unterscheiden."
+      ]
     }
   },
   {
@@ -4408,7 +4475,8 @@
     "title": "Grace Hopper",
     "intro": "Grace Hopper half, das Programmieren von Computern einfacher zu machen.",
     "paragraphs": [
-      "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL."
+      "Grace Hopper arbeitete daran, Programme verständlicher aufzuschreiben. Mit ihrem Team entwickelte sie frühe Übersetzungsprogramme und FLOW-MATIC, das Wörter für Anweisungen nutzte. Ihre Arbeit trug zur Entwicklung von COBOL bei.",
+      "Ein Compiler überträgt ein Programm in eine andere, zur weiteren Verarbeitung geeignete Darstellung. Dabei soll die Bedeutung erhalten bleiben. Das ist etwas anderes, als für jede Aufgabe automatisch einen guten Plan zu erfinden."
     ],
     "facts": [
       {
@@ -4425,8 +4493,9 @@
       }
     ],
     "more": [
-      "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann.",
-      "Ein Compiler übersetzt ein Programm in eine Form, die ein Computer verarbeiten kann. Das hilft Menschen, Anweisungen verständlicher aufzuschreiben. Trotzdem müssen Programme sorgfältig geprüft werden."
+      "Schon vor dem Übersetzen muss eine Aufgabe in passende Schritte zerlegt werden. Soll ein Programm zwei Zahlen multiplizieren, führt eine korrekt übersetzte Addition trotzdem zur falschen Lösung dieser Aufgabe. Deshalb sind Beispiele und Gegenproben wichtig.",
+      "Hopper arbeitete mit vielen anderen Menschen an Computern, Sprachen und gemeinsamen Regeln. Frühe Systeme entsprachen noch nicht in jeder Hinsicht heutigen Compilern. Die Geschichte ist keine einzelne Erfindung ohne Vorgänger oder Mitwirkende.",
+      "Ein Compiler übersetzt ein Computerprogramm in eine Form, die ein Computer verarbeiten kann. Das hilft Menschen, Anweisungen verständlicher aufzuschreiben. Trotzdem müssen Programme sorgfältig geprüft werden."
     ],
     "surprise": "Frühe automatische Programmierübersetzung/Compiler, FLOW-MATIC, wichtige Beiträge zur Entstehung und Nutzung von COBOL.",
     "locations": [
@@ -4443,12 +4512,12 @@
     ],
     "sources": [
       {
-        "label": "Smithsonian National Museum of American History",
-        "url": "https://americanhistory.si.edu/explore/stories/grace-under-pressure"
+        "label": "Computer History Museum · Interview mit Grace Hopper, Dezember 1980 (PDF)",
+        "url": "https://archive.computerhistory.org/resources/text/Oral_History/Hopper_Grace/102702026.05.01.pdf"
       },
       {
-        "label": "Naval History and Heritage Command",
-        "url": "https://www.history.navy.mil/research/library/biographical-files/modern-biographical-files-ndl/modern-bios-h/hopper-grace-murray-text.html"
+        "label": "Computer History Museum · Grace Murray Hopper",
+        "url": "https://computerhistory.org/profile/grace-murray-hopper/"
       }
     ],
     "aliases": [
@@ -4459,7 +4528,7 @@
     "person": {
       "lifespan": "1906–1992",
       "field": "Mathematikerin, Informatikpionierin und Marineoffizierin",
-      "method": "Anleitungen von Menschen in Anweisungen für Computer übersetzen."
+      "method": "Anweisungen verständlich darstellen, ihre Übersetzung entwickeln und die Bedeutung mit Proben prüfen."
     },
     "question": {
       "prompt": "Wofür ist Grace Hopper besonders bekannt?",
@@ -4471,7 +4540,23 @@
       "correct": 0,
       "why": "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann."
     },
-    "image": "grace-hopper"
+    "image": "grace-hopper",
+    "questionFeedback": {
+      "hint": "Warum könnte eine Übersetzung zwischen gut lesbaren Anweisungen und einer weiteren Computerverarbeitung hilfreich sein?",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen von Strahlung ist nicht die hier beschriebene Arbeit an Programmen und ihrer Übersetzung.",
+        "Eine Anleitung für Babbages geplante Maschine und Hoppers spätere Übersetzungsprogramme sind verschiedene Beiträge zur Informatik."
+      ]
+    },
+    "checkedAt": "2026-11-04",
+    "sourceNote": "Die Museumsbiografie und ausgewählte Abschnitte aus Hoppers Interview erklären die Arbeit an Programmiersprachen und Übersetzungsprogrammen. Unsere zwei Anweisungen und ihre Zwischenschreibweise sind erfunden; sie zeigen weder einen vollständigen Compiler noch tatsächlichen Maschinencode.",
+    "revision": 1,
+    "learning": {
+      "starter": "Vergleiche zwei Schreibweisen für dieselbe Addition.",
+      "observe": "Achte auf die Rechenart und die Zahlen. Eine kürzere Anweisung soll die Bedeutung erhalten.",
+      "benefit": "Du unterscheidest einen Fehler im Plan von einem Fehler bei seiner Übersetzung."
+    }
   },
   {
     "id": "person-katherine_johnson",
@@ -4479,7 +4564,8 @@
     "title": "Katherine Johnson",
     "intro": "Katherine Johnson berechnete Flugbahnen für die Raumfahrt.",
     "paragraphs": [
-      "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer."
+      "Katherine Johnson arbeitete an mathematischen Aufgaben für die Luft- und Raumfahrt. 1953 kam sie nach Langley zur NACA, der Vorgängerorganisation der NASA. Als Schwarze Frau musste sie Bildungs- und Berufsbarrieren überwinden. Ihre Berechnungen waren Teil der Zusammenarbeit vieler Fachleute.",
+      "1962 prüfte sie vor John Glenns Erdumrundung elektronische Ergebnisse nach: dieselben Eingabewerte und Gleichungen, aber mit einer Tischrechenmaschine. So konnten Rechen- oder Übertragungsfehler auffallen. Das war sorgfältige Gegenprüfung, keine alleinige Freigabe einer ganzen Mission."
     ],
     "facts": [
       {
@@ -4496,8 +4582,9 @@
       }
     ],
     "more": [
-      "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt.",
-      "Eine Flugbahn beschreibt, wo ein Raumfahrzeug zu verschiedenen Zeiten sein soll. Schon ein kleiner Rechenfehler kann große Folgen haben. Deshalb wurden Rechnungen unabhängig überprüft."
+      "Eine Flugbahn beschreibt den Weg eines Raumfahrzeugs und seine Lage zu verschiedenen Zeiten. Ihre Berechnung verbindet Annahmen, Eingabedaten und Rechenregeln. Schon ein kleiner Rechenfehler kann große Folgen haben; deshalb wurden Rechnungen unabhängig überprüft. Zwei unterschiedliche Ergebnisse geben Anlass, den Unterschied zu untersuchen. Gleiche Ergebnisse allein beweisen noch nicht, dass die Annahmen die Wirklichkeit richtig beschreiben.",
+      "1960 veröffentlichten Johnson und Ted Skopinski gemeinsam einen technischen Bericht. Er untersucht, wie ein Satellit nach vorgegebenen Umläufen über eine ausgewählte Stelle der rotierenden Erde gelangen kann. Der Bericht unterscheidet eine zunächst vereinfachte Erdkugel und spätere Korrekturen für die Abplattung.",
+      "Johnson arbeitete auch an Alan Shepards Flug 1961 und an Rechnungen für das Zusammenführen von Apollo-Raumfahrzeugen. Eine bekannte Einzelprüfung ist deshalb nur ein Teil ihrer langjährigen Forschungsarbeit."
     ],
     "surprise": "Flugbahnberechnungen für Shepard und Glenn, Beiträge zu Apollo und weiteren Raumfahrtprogrammen.",
     "locations": [
@@ -4514,8 +4601,12 @@
     ],
     "sources": [
       {
-        "label": "NASA",
+        "label": "NASA · Katherine Johnson: Biografie von Margot Lee Shetterly",
         "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+      },
+      {
+        "label": "Skopinski und Johnson · NASA TN D-233,1960",
+        "url": "https://ntrs.nasa.gov/citations/19980227091"
       }
     ],
     "aliases": [
@@ -4526,7 +4617,7 @@
     "person": {
       "lifespan": "1918–2020",
       "field": "Mathematikerin",
-      "method": "Mathematik anwenden und die Ergebnisse sorgfältig überprüfen."
+      "method": "Dieselben Eingaben und Rechenregeln nachvollziehbar nachrechnen, Unterschiede untersuchen und Modellannahmen von bestätigten Ergebnissen trennen."
     },
     "image": "katherine-johnson",
     "question": {
@@ -4538,7 +4629,23 @@
       ],
       "correct": 0,
       "why": "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt."
-    }
+    },
+    "learning": {
+      "starter": "Du vergleichst zwei Rechenwege für dieselben Eingaben.",
+      "observe": "Achte darauf, ob nur ein einzelner Wert übereinstimmt oder auch die übrigen ausgewählten Werte. Ein Zahlenvergleich ist noch kein Beleg für eine echte Raumflugbahn.",
+      "benefit": "Du kannst die Aussagekraft einer Gegenrechnung beurteilen und erkennst, welche zusätzlichen Belege eine wirkliche Flugbahn braucht."
+    },
+    "questionFeedback": {
+      "hint": "Warum sind Rechnungen und unabhängige Gegenprüfungen nötig, wenn ein Raumfahrzeug einen bestimmten Weg nehmen soll?",
+      "wrongReasons": [
+        null,
+        "Die Untersuchung radioaktiver Stoffe erklärt nicht ihre hier beschriebenen Berechnungen für die Raumfahrt.",
+        "Eine Rechenanleitung für Babbages geplante Maschine ist von Johnsons späteren Flugbahnberechnungen zu unterscheiden."
+      ]
+    },
+    "checkedAt": "2026-11-04",
+    "sourceNote": "Die NASA-Biografie ordnet Johnsons Berechnungen und Gegenprüfungen in die gemeinsame Raumfahrtarbeit ein. Katalog, Zusammenfassung und Einleitung des technischen Berichts erläutern eine konkrete Flugbahnaufgabe. Die Zahlen und Kurven unseres Modells sind eigene Rechenbeispiele und keine NASA-Flugbahndaten.",
+    "revision": 1
   },
   {
     "id": "person-tim_berners_lee",
@@ -4546,7 +4653,9 @@
     "title": "Tim Berners-Lee",
     "intro": "Tim Berners-Lee entwickelte am CERN die Idee für das World Wide Web.",
     "paragraphs": [
-      "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln."
+      "Am CERN arbeiten Forschende aus vielen Orten zusammen. Wie konnten sie ihre Informationen leichter miteinander verbinden? Tim Berners-Lee schlug 1989 ein vernetztes Informationssystem vor. Ende 1990 liefen dort sein erster Webserver und sein erster Webbrowser. Andere Menschen trugen zur Ausarbeitung und Verbreitung bei, darunter Robert Cailliau und Nicola Pellow.",
+      "Im Web verbindet ein Link Informationen miteinander. Der Browser zeigt die gewählte Seite; ein Webserver kann angeforderte Inhalte bereitstellen. Gemeinsame Regeln helfen unterschiedlichen Programmen beim Austausch. Ein Link ist dabei keine Datenleitung und auch nicht selbst die ganze Zielseite.",
+      "Das Internet und das Web sind verschiedene Dinge. Das Internet verbindet Netze und transportiert Daten. Das Web nutzt diese Verbindung für Informationen und ihre Verweise; andere Dienste nutzen das Internet ebenfalls. Berners-Lee entwickelte das Web, während das Internet schon bestand. Die freie Bereitstellung von Websoftware durch CERN 1993 unterstützte die weitere Verbreitung."
     ],
     "facts": [
       {
@@ -4563,8 +4672,9 @@
       }
     ],
     "more": [
-      "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes.",
-      "Ein Link verbindet eine Webseite mit einer anderen. Gemeinsame Regeln machen das Web auf unterschiedlichen Computern nutzbar. Berners-Lee entwickelte das Web; das Internet gab es bereits vorher."
+      "Einfach erklärt: Ein Verweis zeigt dir ein Ziel. Du kannst auf eine andere Notiz wechseln, ohne die erste zu löschen. Ein Link verbindet beispielsweise eine Webseite mit einer anderen.",
+      "Genauer betrachtet: Die Adresse bezeichnet ein Ziel; Browser und Server übernehmen andere Aufgaben. Ein Link kann bestehen, obwohl die Zielseite nicht mehr erreichbar ist. Ein solches Fehlen wird in unserem Zweizielmodell nicht nachgestellt.",
+      "Das Web ist ein Informationssystem, das die Verbindungen des Internets nutzt. Das Internet verbindet Netze und war schon vorhanden, als Berners-Lee das Web entwickelte. Gemeinsame Regeln machen das Web auf unterschiedlichen Computern nutzbar. Vorschlag, lauffähige Programme und spätere Verbreitung sind verschiedene Schritte und können in verschiedenen Jahren liegen."
     ],
     "surprise": "WWW-Vorschlag 1989; frühe Websoftware 1990/1991; Förderung offener Standards.",
     "locations": [
@@ -4580,12 +4690,24 @@
     ],
     "sources": [
       {
-        "label": "Tim Berners-Lee / W3C",
-        "url": "https://www.w3.org/People/Berners-Lee/Longer.html"
+        "label": "CERN · A short history of the Web",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
       },
       {
-        "label": "CERN",
-        "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+        "label": "Tim Berners-Lee · W3C-Biografie",
+        "url": "https://www.w3.org/People/Berners-Lee/"
+      },
+      {
+        "label": "Tim Berners-Lee · Unterschied zwischen Internet und Web",
+        "url": "https://www.w3.org/People/Berners-Lee/FAQ.html"
+      },
+      {
+        "label": "CERN · The birth of the Web",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/"
+      },
+      {
+        "label": "Tim Berners-Lee · ausführliche W3C-Biografie",
+        "url": "https://www.w3.org/People/Berners-Lee/Longer.html"
       }
     ],
     "aliases": [
@@ -4608,15 +4730,32 @@
       "correct": 0,
       "why": "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes."
     },
-    "image": "tim-berners-lee"
+    "image": "tim-berners-lee",
+    "checkedAt": "2026-11-04",
+    "sourceNote": "Die CERN-Texte ordnen Vorschlag, erste Programme und die spätere freie Bereitstellung ein. Berners-Lees W3C-Texte unterscheiden Internet und Web. Die Notizen unseres Modells sind erfunden; die Pfeile zeigen Verweise und keine Datenkabel.",
+    "questionFeedback": {
+      "hint": "Was wird möglich, wenn ein Dokument auf weitere Dokumente verweist, die sich direkt öffnen lassen?",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen von Strahlung ist von der hier beschriebenen Arbeit an Webseiten und ihren Verbindungen zu unterscheiden.",
+        "Eine Rechenanleitung für eine geplante Maschine erklärt nicht das Verknüpfen und Aufrufen von Dokumenten im Web."
+      ]
+    },
+    "revision": 1,
+    "learning": {
+      "starter": "Wähle einen Verweis und lies die damit verbundene Notiz.",
+      "observe": "Vergleiche das gewählte Ziel mit der angezeigten Notiz. Die anderen Notizen bleiben erhalten.",
+      "benefit": "Du unterscheidest ein verlinktes Informationssystem von dem Datennetz, das es nutzt."
+    }
   },
   {
     "id": "person-karl_benz",
     "category": "people",
     "title": "Karl (Carl) Benz",
-    "intro": "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+    "intro": "Karl, auch Carl geschrieben, Benz entwickelte einen Motorwagen. Dafür mussten Motor, Fahrzeug und die Übertragung des Antriebs zusammenpassen.",
     "paragraphs": [
-      "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld."
+      "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.",
+      "Bei einem brauchbaren Motorwagen mussten Motor, Übertragung, Fahrwerk, Lenkung und Bremsen zusammenpassen. Unser eigenes Schema verändert nur eine Verbindung. Es berechnet nicht, wie sich ein wirklicher Wagen bewegt."
     ],
     "facts": [
       {
@@ -4633,8 +4772,12 @@
       }
     ],
     "more": [
-      "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge.",
-      "Ein Fahrzeug braucht ein ganzes System: Antrieb, Räder, Lenkung und Bremsen. Andere Menschen arbeiteten ebenfalls an Fahrzeugen, auch mit Dampf oder elektrischer Energie. Automobilgeschichte hat viele Beteiligte."
+      "Karl Benz lebte von 1844 bis 1929. Er arbeitete in Mannheim an Motoren und an einem dafür ausgelegten Fahrzeug. Die Patentanmeldung von 1886 trug die Nummer 37435. Ein solches historisches Dokument ist etwas anderes als eine heutige Leistungs- oder Sicherheitsprüfung.",
+      "Ein brauchbarer Motorwagen brauchte mehr als einen Motor. Ein Antriebsweg musste die Bewegung zu den Rädern übertragen; auch Lenkung, Fahrwerk und Bremsen gehörten zum Fahrzeug. Das Deutsche Museum beschreibt, wie Benz bei der Konstruktion auch auf Bauteile aus dem Fahrradbau zurückgriff. Finanzierung und praktische Arbeit, unter anderem von Bertha Benz, gehörten zur Entwicklung dazu.",
+      "Auch andere Menschen entwickelten Fahrzeuge, darunter Dampf- und Elektrofahrzeuge. Automobilgeschichte hat viele Beteiligte; Benz’ Patent von 1886 ist ein wichtiger Schritt in dieser gemeinsamen Geschichte.",
+      "Unser eigenes Schema zeigt nur eine Verbindung zwischen Motor, Übertragung und Rad. Beim Umschalten wird diese Verbindung geöffnet oder geschlossen. Daraus lässt sich nicht die ganze Bewegung eines wirklichen Wagens ablesen: Ein schon rollendes Fahrzeug kann auch ohne Motorantrieb weiterrollen.",
+      "Ein laufender Motor und ein bewegtes Rad sind verschiedene Beobachtungen. Ist eine Verbindung unterbrochen, kann der Motor über diesen Weg keinen Antrieb weitergeben. Das Rad kann trotzdem noch rollen, etwa aufgrund seiner vorherigen Bewegung oder an einem Gefälle. Reibung und Bremsen verändern die Bewegung ebenfalls.",
+      "Im vorhandenen Buchbegriff Trägheit geht es darum, dass ein Körper seinen Bewegungszustand nicht von selbst ändert. Unser Verbindungsschema berechnet aber keine Kräfte, keine Reibung und keine Geschwindigkeit. Es hilft, Bauteile und mögliche Zusammenhänge zu unterscheiden; es ist keine Rekonstruktion des gesamten Patent-Motorwagens."
     ],
     "surprise": "Benz Patent-Motorwagen, Patent 1886; frühe Automobilentwicklung und Produktion.",
     "locations": [
@@ -4651,12 +4794,20 @@
     ],
     "sources": [
       {
-        "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+        "label": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
         "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
       },
       {
-        "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+        "label": "Mercedes-Benz-Unternehmensarchiv · Berthas Mitarbeit",
         "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+      },
+      {
+        "label": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+        "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140"
+      },
+      {
+        "label": "OpenStax Physics · Trägheit und Reibung",
+        "url": "https://openstax.org/books/physics/pages/4-2-newtons-first-law-of-motion-inertia"
       }
     ],
     "aliases": [
@@ -4679,15 +4830,32 @@
       "correct": 0,
       "why": "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge."
     },
-    "image": "karl-benz"
+    "image": "karl-benz",
+    "learning": {
+      "starter": "Bei einem Fahrzeug müssen mehrere Bauteile zusammenarbeiten.",
+      "observe": "Verändere nur die Verbindung im eigenen Schema. Trenne den möglichen Antriebsweg von der tatsächlichen Bewegung eines Wagens.",
+      "benefit": "Du erkennst, was eine Bauteilzeichnung erklärt und welche weiteren Beobachtungen für eine Aussage über Bewegung fehlen."
+    },
+    "sourceNote": "Eigene Erklärung nach institutionellen Biografie- und Museumsabschnitten sowie OpenStax zum Trägheitsprinzip. Benz’ Motorwagen und Patent werden konkret eingeordnet; die gesamte Fahrzeuggeschichte wird nicht einer einzigen Person zugeschrieben. Das eigene Verbindungsschema ist kein historischer Bauplan, keine Bewegungsrechnung und kein Beleg dafür, dass ein Rad bei einer Unterbrechung sofort stillsteht.",
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Welche Bauteile müssen zusammenspielen, damit eine neue Art von Fahrzeug angetrieben werden kann?",
+      "wrongReasons": [
+        null,
+        "Radioaktive Stoffe zu untersuchen ist kein Beleg für die hier beschriebene Konstruktion des Motorwagens.",
+        "Eine Rechenanleitung für eine geplante Maschine ist etwas anderes als die hier behandelte Verbindung von Motor und Fahrzeug."
+      ]
+    }
   },
   {
     "id": "person-bertha_benz",
     "category": "people",
     "title": "Bertha Benz",
-    "intro": "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+    "intro": "Bertha Benz finanzierte und unterstützte die Entwicklung des Motorwagens und erprobte ihn auf einer längeren Reise. Dabei wurden Bedingungen sichtbar, die ein Test am selben Platz nicht erfasst.",
     "paragraphs": [
-      "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte."
+      "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.",
+      "Zusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis."
     ],
     "facts": [
       {
@@ -4704,10 +4872,13 @@
       }
     ],
     "more": [
-      "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
-      "Eine Erfindung muss im Alltag bestehen. Unterwegs merkt man andere Schwierigkeiten als in einer Werkstatt. Bertha Benz machte mit ihrer Reise sichtbar, wo das Fahrzeug und seine Versorgung verbessert werden mussten."
+      "Bertha Benz lebte von 1849 bis 1944. Zum gemeinsamen Vorhaben gehörten finanzielle Unterstützung und technische Mitarbeit. Das Unternehmensarchiv beschreibt auch praktische Arbeiten am Zündungsmechanismus. Die Fahrt von 1888 war ein weiterer Beitrag zur Entwicklung.",
+      "Die bekannte Fernfahrt von 1888 folgte auf das Patentjahr 1886. Der dabei benutzte weiterentwickelte Motorwagen Nr. 3 ist von der frühen Nr. 1 zu unterscheiden. Die längere Strecke stellte auch Fragen nach Steigungen und der Versorgung unterwegs. Einzelne Reparaturgeschichten werden hier nicht als Anleitung nachgestellt. Unterwegs wurden Schwierigkeiten sichtbar, die ein Test in einer Werkstatt nicht erfasst, etwa bei Steigungen und der Versorgung.",
+      "Mit zwei eigenen Testnotizen vergleichen wir, welche Bedingungen untersucht wurden. Eine Notiz beschreibt eine Untersuchung am selben Platz, die andere zusätzlich eine Strecke. Die Angabe „untersucht“ ist noch keine Angabe „bestanden“. Ein einzelner Test belegt außerdem nicht alle denkbaren späteren Einsatzbedingungen.",
+      "Die konkreten Beiträge von Finanzierung, technischer Arbeit, Fahrt und Rückmeldung gehören zusammen. Bertha Benz’ Rolle wird deshalb nicht auf einen einzigen Moment verkürzt. Auch die mitreisenden Söhne und Menschen, die unterwegs unterstützten, gehörten zur Geschichte der Fahrt. Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
+      "Unsere erfundenen Notizen sind keine erhaltenen Protokolle der Reise von 1888. Sie helfen, eine Behauptung auf passende Beobachtungen zu beziehen: Eine zusätzliche Teststrecke untersucht weitere Bedingungen. Für Aussagen über andere Strecken, Wetterlagen oder Belastungen können weitere Untersuchungen nötig sein."
     ],
-    "surprise": "Finanzielle und technische Mitarbeit; bekannte erste Automobilfernfahrt im August 1888, über 100 km.",
+    "surprise": "Die bekannte Erprobungsfahrt von 1888 gehörte zu einer längeren gemeinsamen Entwicklungsarbeit. Welche Bedingungen ließen sich erst unterwegs beobachten?",
     "locations": [
       {
         "label": "Mannheim – Beginn der bekannten Fahrt",
@@ -4728,12 +4899,16 @@
     ],
     "sources": [
       {
-        "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+        "label": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
         "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
       },
       {
-        "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+        "label": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
         "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
+      },
+      {
+        "label": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+        "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html"
       }
     ],
     "aliases": [
@@ -4756,15 +4931,34 @@
       "correct": 0,
       "why": "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern."
     },
-    "image": "bertha-benz"
+    "image": "bertha-benz",
+    "learning": {
+      "starter": "Eine Erfindung muss auch unter passenden wirklichen Bedingungen untersucht werden.",
+      "observe": "Wechsle die Testnotiz. Unterscheide „nicht untersucht“, „untersucht“ und ein tatsächlich festgestelltes Ergebnis.",
+      "benefit": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen."
+    },
+    "sourceNote": "Eigene Erklärung nach institutionellen Biografie- und Patentamtsabschnitten. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung.",
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Welche Beiträge werden sichtbar, wenn aus einer technischen Idee ein im Alltag benutztes Fahrzeug werden soll?",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen radioaktiver Stoffe ist kein Beitrag zu der hier beschriebenen Entwicklung und Erprobung des Motorwagens.",
+        "Eine Rechenanleitung für eine geplante Maschine beschreibt nicht Berthas finanzielle, technische und praktische Mitarbeit."
+      ]
+    }
   },
   {
     "id": "person-jane_goodall",
     "category": "people",
     "title": "Jane Goodall",
-    "intro": "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+    "intro": "Jane Goodall untersuchte das Leben wilder Schimpansen in Gombe. Ihre Beobachtungen machten Werkzeuggebrauch und Werkzeugvorbereitung dieser Tiere für die Forschung sichtbar.",
     "paragraphs": [
-      "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein."
+      "Jane Goodall wurde 1934 in London geboren und starb 2025. Ab 1960 beobachtete sie wilde Schimpansen in der Region Gombe im heutigen Tansania. Für die Forschung war wichtig, einzelne Tiere über längere Zeit wiederzuerkennen und ihr Verhalten genau zu beschreiben.",
+      "Goodall sah Schimpansen mit Pflanzenstängeln und Zweigen Termiten aus ihren Bauten holen. In ihrem späteren eigenen Bericht beschreibt sie, wie Tiere manchmal auch Blätter von einem Zweig entfernten, bevor sie ihn benutzten. Damit beobachtete sie nicht nur den Gebrauch eines Gegenstands, sondern auch dessen Vorbereitung.",
+      "Langfristige Beobachtungen brauchen viele Menschen. Forschende und örtliche Mitarbeiterinnen und Mitarbeiter führten die Arbeit in Gombe weiter. Wiederholtes Beobachten kann zeigen, in welchen Situationen Verhalten auftritt und wie es sich zwischen Tieren oder Zeiten unterscheidet. Eine einzelne Szene allein beantwortet nicht alle diese Fragen.",
+      "Goodall setzte sich außerdem für Tiere und ihre Lebensräume ein. Das Jane Goodall Institute verbindet Forschung mit Naturschutz und Zusammenarbeit mit örtlichen Gemeinschaften. Das Jugendprogramm Roots & Shoots entstand 1991 in Tansania; die Beteiligten entwickeln eigene Vorhaben für Menschen, Tiere und Umwelt."
     ],
     "facts": [
       {
@@ -4781,7 +4975,10 @@
       }
     ],
     "more": [
-      "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten.",
+      "Werkzeuggebrauch und Werkzeugvorbereitung sind verschiedene beobachtbare Handlungen. Ein Tier kann einen vorhandenen Gegenstand benutzen oder ihn vorher verändern. Ob und wie etwas geschieht, muss an der konkreten Handlung erkannt werden, nicht allein daran, wie menschenähnlich uns das Tier erscheint. Goodalls Beobachtungen zeigten, dass Schimpansen Werkzeuge nicht nur benutzen, sondern auch passend vorbereiten können.",
+      "Unsere Zeichnung isoliert eine Veränderung: Vier erfundene Blätter verschwinden, während der Zweig erhalten bleibt. Die Zeichnung enthält kein Tier und keinen Termitenbau. Sie ersetzt deshalb nicht die tatsächliche Beobachtung, dass ein Schimpanse den Gegenstand anschließend benutzt.",
+      "Eine Beobachtungsnotiz sollte beschreiben, was zu sehen war und in welcher Situation. Daraus abgeleitete Vermutungen bleiben davon unterscheidbar. Eine Szene beweist weder, dass jedes Tier immer so handelt, noch welche genauen Gedanken ein Tier hatte. Fehlende Sicht ist außerdem kein Nachweis, dass ein Verhalten nicht stattgefunden hat.",
+      "Naturschutz betrifft Lebensräume und die Menschen vor Ort gemeinsam. Die örtlichen Gemeinschaften sind Beteiligte, nicht bloß eine Kulisse für Forschung. Wildtiere werden mit Abstand und nach den geltenden Schutzregeln beobachtet; Füttern, Berühren oder Hervorrufen einer Handlung gehört nicht zu unserem Lernangebot.",
       "Geduldige Beobachtung kann eine erste Vermutung verändern. Goodall dokumentierte Verhalten einzelner Schimpansen über lange Zeit. Tiere in freier Natur lassen sich nicht wie Maschinen an- und ausschalten."
     ],
     "surprise": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
@@ -4799,8 +4996,24 @@
     ],
     "sources": [
       {
-        "label": "Jane Goodall Institute",
-        "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/"
+        "label": "Jane Goodall Institute: Lebensweg und Forschung in Gombe",
+        "url": "https://janegoodall.org/jane-goodalls-story/"
+      },
+      {
+        "label": "Jane Goodall im eigenen Rückblick2015: Zweige als Werkzeuge vorbereiten",
+        "url": "https://janegoodall.org/news/55-years-at-gombe-qa-with-jane-on-origins-of-life-work/"
+      },
+      {
+        "label": "Gombe Stream Research Center: langfristige Beobachtung und Teamarbeit",
+        "url": "https://janegoodall.org/programs/gombe-stream-research-center/"
+      },
+      {
+        "label": "Jane Goodall Institute: Zeitlinie von Forschung und Naturschutz",
+        "url": "https://janegoodall.org/jgi-timeline/"
+      },
+      {
+        "label": "Jane Goodall Institute: Erinnerung1934–2025",
+        "url": "https://janegoodall.org/remembering-jane/"
       }
     ],
     "aliases": [
@@ -4823,15 +5036,34 @@
       "correct": 0,
       "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
     },
-    "image": "jane-goodall"
+    "image": "jane-goodall",
+    "learning": {
+      "starter": "Vergleiche den gezeichneten Zweig vor und nach dem Entfernen der Blätter.",
+      "observe": "Unterscheide eine sichtbare Veränderung von einer noch nicht gezeigten Benutzung oder einer Vermutung über Gedanken.",
+      "benefit": "Du kannst Werkzeugvorbereitung beschreiben und die Grenze einer einzelnen Darstellung benennen."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen institutionellen Abschnitten und Goodalls konkretem eigenem Rückblick auf Werkzeugvorbereitung. Lebensdaten1934–2025 sind bestätigt. Die Quellen nennen das Promotionsjahr unterschiedlich; es wird hier nicht festgelegt. Eine frei gewählte Zweigzeichnung ist kein Forschungsdatensatz und keine Absichtsmessung. Lokale Mitarbeit und Naturschutz mit Gemeinschaften werden berücksichtigt. Die vorhandenen historischen Quellen- und Bildnachweise bleiben erhalten; das Foto wurde schon in der Commons-Vorlage aus einem Gruppenbild ausgeschnitten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Welche Art von Arbeit braucht wiederholte sorgfältige Beobachtungen in Gombe statt nur einen Blick auf ein einzelnes Verhalten?",
+      "wrongReasons": [
+        null,
+        "Die Untersuchung radioaktiver Stoffe ist von den hier beschriebenen Beobachtungen zum Verhalten von Primaten zu unterscheiden.",
+        "Eine Rechenanleitung für eine geplante Maschine erklärt keine Beobachtung von Werkzeuggebrauch bei wilden Primaten."
+      ]
+    }
   },
   {
     "id": "person-albert_einstein",
     "category": "people",
     "title": "Albert Einstein",
-    "intro": "Albert Einstein erforschte Licht, Raum und Zeit.",
+    "intro": "Albert Einstein untersuchte Licht, Raum und Zeit. Seine Erklärung des photoelektrischen Effekts hilft zu verstehen, warum die Anzahl von Lichtquanten und ihre einzelne Energie verschieden sind.",
     "paragraphs": [
-      "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann."
+      "Albert Einstein lebte von 1879 bis 1955. Er wurde in Ulm geboren, studierte in der Schweiz und arbeitete unter anderem in Bern, Zürich und Berlin. Ab 1933 gehörte er dem Institute for Advanced Study in Princeton in den USA an. Das Institut ist eine eigene Forschungseinrichtung und nicht die Universität Princeton.",
+      "1905 entwickelte Einstein mehrere wichtige Arbeiten. Dazu gehörten die spezielle Relativitätstheorie und eine Erklärung zum Verhalten von Licht. Für den Physiknobelpreis des Jahres 1921 wurde besonders seine Arbeit zum Gesetz des photoelektrischen Effekts hervorgehoben.",
+      "Beim photoelektrischen Effekt kann Licht Elektronen aus einem Material lösen. Einstein beschrieb Licht dabei mit Energiequanten, die wir heute Photonen nennen. Die Energie eines Photons hängt von seiner Frequenz ab: Höhere Frequenz bedeutet höhere Energie pro Photon. Mehr Photonen derselben Frequenz bedeuten mehr Gesamtenergie, aber keine größere Energie jedes einzelnen Photons.",
+      "Unser eigener Vergleich zeigt diese Unterscheidung mit Balken. Ihre Anzahl steht für die Zahl der Quanten in derselben gedachten Fläche und Zeitspanne. Ihre Höhe zeigt die jeweilige Energie. Zuerst ändern wir nur die Anzahl; danach verdoppeln wir bei gleicher Anzahl die Energie pro Quant."
     ],
     "facts": [
       {
@@ -4848,8 +5080,10 @@
       }
     ],
     "more": [
-      "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt.",
-      "Bei einem Gedankenexperiment stellt man sich eine Situation genau vor. Dann fragt man, welche Folgen die bekannten Regeln hätten. Eine spannende Idee genügt aber nicht: Ihre Vorhersagen müssen zu Messungen passen."
+      "Im einfachen Einphoton-Modell des äußeren photoelektrischen Effekts überträgt ein Photon seine Energie auf ein Elektron. Zum Verlassen des Materials ist eine Mindestenergie nötig, die zum Material gehört. Liegt die Energie eines einzelnen Photons darunter, reicht eine höhere Anzahl solcher Photonen in diesem Modell nicht aus.",
+      "Bei gleicher Frequenz erhöht mehr einfallendes Licht nicht die maximale Energie der ausgelösten Elektronen. Eine höhere Frequenz kann dagegen mehr Energie pro Photon liefern. Eine genaue Rechnung benötigt Angaben zum Material und seiner Austrittsarbeit; unser Balkenbild enthält diese Größen nicht.",
+      "Die Balken sind eine eigene Vergleichszeichnung. Sie zeigen keine Lichtwellen, räumliche Photonengröße oder mikroskopische Aufnahme. Die Zahlen 1 und 2 sind frei gewählte Energieeinheiten. Die Summe ergibt sich aus Anzahl mal Energie pro Quant, nicht aus einer Messung an einer echten Lampe.",
+      "Bei einem Gedankenexperiment stellt man sich eine Situation genau vor und fragt, welche Folgen die bekannten Regeln hätten. Ein Modell muss seine Annahmen und prüfbaren Vorhersagen deutlich machen. Eine spannende Idee oder ein überzeugendes Bild genügt nicht: Die Vorhersagen müssen zu Messungen passen. Die vorhandenen Querverweise lassen dich andere Darstellungen von Licht, Physik und genauer Ortsbestimmung vergleichen."
     ],
     "surprise": "Spezielle und allgemeine Relativitätstheorie; Erklärung des photoelektrischen Effekts, Nobelpreis Physik 1921.",
     "locations": [
@@ -4873,12 +5107,24 @@
     ],
     "sources": [
       {
-        "label": "Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+        "label": "Universität Zürich: Einsteins Lebensweg und Nobelpreisarbeit",
+        "url": "https://www.uzh.ch/en/researchinnovation/excellence/nobelprize/einstein.html"
       },
       {
-        "label": "Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/"
+        "label": "Institute for Advanced Study: Einstein am Institut1933–1955",
+        "url": "https://www.ias.edu/scholars/albert-einstein"
+      },
+      {
+        "label": "Institute for Advanced Study / AIP: Einsteins Arbeiten von1905",
+        "url": "https://www.ias.edu/albert-einstein-great-works"
+      },
+      {
+        "label": "OpenStax Physics: Photonenenergie und photoelektrischer Effekt",
+        "url": "https://openstax.org/books/physics/pages/21-2-einstein-and-the-photoelectric-effect"
+      },
+      {
+        "label": "NIST: Relativität und GPS-Uhren",
+        "url": "https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test"
       }
     ],
     "aliases": [
@@ -4901,15 +5147,32 @@
       "correct": 0,
       "why": "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt."
     },
-    "image": "albert-einstein"
+    "image": "albert-einstein",
+    "learning": {
+      "starter": "Verändere zuerst die Anzahl und danach die Energie der Lichtquanten.",
+      "observe": "Zähle Balken und vergleiche ihre Höhe getrennt.",
+      "benefit": "Du kannst Gesamtenergie von der Energie eines einzelnen Lichtquants unterscheiden."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen institutionellen Abschnitten von Universität Zürich und Institute for Advanced Study sowie dem konkreten Photonen-/Schwellenabschnitt bei OpenStax. Keine vollständige Auswertung von Einsteins Originalpublikation von 1905 behauptet. Die frei gewählten Balkeneinheiten stellen keine Lichtteilchengröße oder Messdaten dar. Aussagen zur Elektronenauslösung beziehen sich auf das beschriebene einfache Einphoton-Modell, nicht auf eine Berechnung aller möglichen Licht-Materie-Prozesse. Die Solarzelle wird nicht mit der äußeren Elektronenauslösung gleichgesetzt. Das vorhandene Foto und seine Herkunft bleiben erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Denke an die Fragen hinter dem Lichtmodell und an seine Gedankenexperimente.",
+      "wrongReasons": [
+        null,
+        "Die Untersuchung radioaktiver Stoffe ist von Einsteins beschriebenen Beiträgen zu Licht und Relativität zu unterscheiden.",
+        "Eine Anleitung für eine geplante Rechenmaschine erklärt nicht die hier behandelten physikalischen Fragen."
+      ]
+    }
   },
   {
     "id": "person-al_khwarizmi",
     "category": "people",
     "title": "al-Chwarizmi (al-Khwarizmi)",
-    "intro": "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+    "intro": "Al-Chwarizmi erklärte in Bagdad, wie sich Rechenaufgaben systematisch lösen lassen. Seine Bücher halfen, Wissen über Algebra und Zahlen weiterzugeben.",
     "paragraphs": [
-      "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück."
+      "Seine Algebra behandelte unbekannte Größen und Regeln zum Lösen von Aufgaben. Er beschrieb Rechnungen in Worten; heutige Buchstaben und Gleichheitszeichen waren nicht seine Schreibweise. Die Aufgaben hatten auch praktische Bezüge, etwa zum Handel und zur Aufteilung von Besitz.",
+      "„Algorithmus“ hängt mit einer lateinischen Form seines Namens zusammen. Das bedeutet nicht, dass er jede Schrittfolge oder die Mathematik erfunden hätte. Wissen aus verschiedenen Regionen wurde übersetzt, geprüft und weiterentwickelt."
     ],
     "facts": [
       {
@@ -4926,8 +5189,9 @@
       }
     ],
     "more": [
-      "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt.",
-      "Algebra hilft, eine unbekannte Zahl zu finden. „Eine Zahl plus drei ist acht“ lässt sich Schritt für Schritt lösen. Gelehrte übernahmen und verbesserten Wissen aus verschiedenen Regionen; Mathematik ist eine gemeinsame Geschichte."
+      "Wie kann eine unbekannte Zahl trotzdem bestimmt werden? In unserem eigenen Beispiel gilt: Eine Zahl plus drei ist acht. Ziehen wir auf beiden Seiten drei ab, bleibt die Zahl gleich fünf. Zur Probe setzen wir fünf wieder ein: fünf plus drei ist acht.",
+      "Seine genaue Herkunft ist nicht sicher bekannt; auch die Lebensdaten sind nur ungefähr angegeben. Die spätere Briefmarke zeigt keine beobachtete historische Gesichtsgestalt.",
+      "Algebra hilft, mit unbekannten Zahlen zu rechnen. Gelehrte übernahmen Wissen aus Indien und anderen Regionen, gaben es weiter und entwickelten es fort. Mathematik ist eine gemeinsame Geschichte."
     ],
     "surprise": "Systematische Algebra, Vermittlung des Rechnens mit indischen/hindu-arabischen Zahlen; Wortgeschichte von Algebra und Algorithmus.",
     "locations": [
@@ -4945,7 +5209,7 @@
     ],
     "sources": [
       {
-        "label": "University of St Andrews, MacTutor",
+        "label": "J. J. O’Connor / E. F. Robertson · Al-Khwarizmi",
         "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
       }
     ],
@@ -4957,7 +5221,7 @@
     "person": {
       "lifespan": "etwa 780–850",
       "field": "Mathematiker und Astronom",
-      "method": "Rechenaufgaben mit klaren Regeln und Schritten lösen."
+      "method": "Eine Rechenaufgabe ordnen, begründete Schritte ausführen und das Ergebnis am Ausgangsbeispiel prüfen."
     },
     "question": {
       "prompt": "Wofür ist al-Chwarizmi (al-Khwarizmi) besonders bekannt?",
@@ -4969,15 +5233,34 @@
       "correct": 0,
       "why": "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt."
     },
-    "image": "al-khwarizmi"
+    "image": "al-khwarizmi",
+    "questionFeedback": {
+      "hint": "Welche Art von Wissen lässt sich mit beschriebenen Verfahren und unbekannten Zahlen weitergeben?",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen von Strahlung erklärt nicht seine beschriebenen mathematischen Verfahren.",
+        "Die Anleitung für eine geplante Rechenmaschine gehört zu einem späteren technischen Zusammenhang; hier geht es um mathematische Bücher."
+      ]
+    },
+    "checkedAt": "2026-11-04",
+    "sourceNote": "Die Universitätsbiografie ordnet Al-Chwarizmis mathematische Bücher, ihre praktische Verwendung und die Wortgeschichte ein. Lebensdaten und Herkunft sind nur ungefähr beziehungsweise unsicher bekannt. Unsere Kästchen, Zahlen und Gleichheitszeichen sind eine heutige eigene Erklärung und keine historische Handschrift.",
+    "revision": 1,
+    "learning": {
+      "starter": "Eine unbekannte Zahl plus drei ist acht. Verändere beide Seiten gleich.",
+      "observe": "Prüfe nach dem Rechenschritt den Wert des Kästchens und setze ihn in die Ausgangsaufgabe ein.",
+      "benefit": "Du kannst einen Rechenschritt begründen und das Ergebnis mit einer Probe kontrollieren."
+    }
   },
   {
     "id": "person-tu_youyou",
     "category": "people",
     "title": "Tu Youyou",
-    "intro": "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+    "intro": "Tu Youyou suchte mit einem Forschungsteam nach Mitteln gegen Malaria. Ihre Arbeit an Artemisinin zeigt, wie historische Hinweise und moderne Untersuchungen zusammenwirken können.",
     "paragraphs": [
-      "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln."
+      "Tu Youyou wurde 1930 in Ningbo in China geboren. Sie studierte Pharmazie und arbeitete in der Arzneimittelforschung. Ab Ende der 1960er-Jahre leitete sie ein Team, das nach Wirkstoffen gegen Malaria suchte. Malaria wird durch einzellige Parasiten verursacht und durch bestimmte Stechmücken übertragen.",
+      "Das Team untersuchte Pflanzen und ältere medizinische Texte. Ein historischer Hinweis half dabei, eine Untersuchung neu zu durchdenken. Ein Hinweis war aber noch kein fertiger Wirkstoff: Die Forschenden mussten Stoffe gewinnen, voneinander trennen und ihre Eigenschaften untersuchen.",
+      "In den 1970er-Jahren wurde Artemisinin aus dem Einjährigen Beifuß gewonnen und weiter erforscht. Bis daraus geeignete Medikamente entstehen konnten, waren zusätzliche Arbeiten vieler Forschender und Untersuchungen zur Behandlung nötig. Tu Youyou erhielt 2015 die Hälfte des Nobelpreises für Physiologie oder Medizin für ihre Entdeckungen zu einer neuen Malariatherapie; die andere Hälfte ging an zwei Forschende für andere Parasitenkrankheiten.",
+      "Ein alter Text, ein chemisch untersuchter Stoff und klinische Daten beantworten verschiedene Fragen. Eine Stoffanalyse allein beweist keine wirksame und sichere Behandlung bei Menschen. Auch eine lange Verwendung ersetzt die dafür nötigen wissenschaftlichen Untersuchungen nicht."
     ],
     "facts": [
       {
@@ -4994,8 +5277,11 @@
       }
     ],
     "more": [
-      "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum.",
-      "Ein Hinweis aus einem alten Text ist noch kein fertiges Medikament. Stoffe müssen untersucht, dosiert und in wissenschaftlichen Studien geprüft werden. Pflanzen oder Arzneien probiert man deshalb nicht selbst als Experiment aus."
+      "Ein historischer Text kann eine Forschungsfrage anregen. Ob eine darin beschriebene Anwendung tatsächlich wirkt, lässt sich nicht allein aus dem Alter oder dem Ansehen des Textes ableiten. Forschung verbindet Anregungen mit überprüfbaren Fragen und passenden Methoden.",
+      "Die Quellen erzählen die frühen Entdeckungsschritte unterschiedlich genau und nennen für einzelne Vorgänge verschiedene Jahre. Unsere Erklärung ordnet diese Arbeit deshalb in die 1970er-Jahre ein. Gewinnung eines Stoffes, seine weitere Untersuchung und spätere Behandlungsergebnisse sind verschiedene Ereignisse.",
+      "In der eigenen Darstellung kannst du zwei erfundene Forschungsnotizen vergleichen. Eine enthält nur einen historischen Hinweis. Bei der anderen kommt eine Stoffuntersuchung hinzu. Klinische Behandlungsergebnisse fehlen in beiden. Das ist eine Übung zum Einordnen von Belegen, keine Rekonstruktion von Tu Youyous Laborunterlagen.",
+      "Pflanzenmaterial ist nicht dasselbe wie ein geprüftes Medikament. Stoffe müssen unter anderem untersucht, dosiert und in wissenschaftlichen Studien geprüft werden. Die Weltgesundheitsorganisation unterstützt die Verwendung von Artemisia-Pflanzenmaterial zur Vorbeugung oder Behandlung von Malaria nicht. Pflanzen oder Arzneien selbst als Experiment auszuprobieren wäre gefährlich; medizinische Entscheidungen gehören in fachkundige Hände.",
+      "Die vorhandenen Verbindungen führen zu Marie Curies Untersuchung von Stoffen, Wangari Maathais Arbeit mit Pflanzen und Ibn Sinas medizinischen Schriften. Sie zeigen unterschiedliche Fragen und Arbeitsweisen. Aus einer gemeinsamen Verbindung zu Pflanzen oder Medizin folgt nicht, dass jede historische Anwendung wirksam ist."
     ],
     "surprise": "Entdeckung von Artemisinin für die Malariabehandlung; Nobelpreis Medizin 2015.",
     "locations": [
@@ -5013,12 +5299,24 @@
     ],
     "sources": [
       {
-        "label": "Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+        "label": "Nobelversammlung: offizieller Medizinpreis2015 und Tu Youyous Forschung (PDF)",
+        "url": "https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf"
       },
       {
-        "label": "Tu Youyou / Nobel Prize",
-        "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/"
+        "label": "Lasker Foundation: Tu Youyou und die Erforschung von Artemisinin",
+        "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/"
+      },
+      {
+        "label": "Journal of Clinical Investigation: Tu Youyous Herkunft und Forschungsweg",
+        "url": "https://www.jci.org/articles/view/60887"
+      },
+      {
+        "label": "WHO: wissenschaftliche Prüfung traditioneller Medizin",
+        "url": "https://www.who.int/news-room/questions-and-answers/item/traditional-medicine"
+      },
+      {
+        "label": "WHO: Pflanzenmaterial ist keine Malariabehandlung",
+        "url": "https://www.who.int/news/item/10-10-2019-the-use-of-non-pharmaceutical-forms-of-artemisia"
       }
     ],
     "aliases": [
@@ -5041,15 +5339,34 @@
       "correct": 0,
       "why": "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum."
     },
-    "image": "tu-youyou"
+    "image": "tu-youyou",
+    "learning": {
+      "starter": "Vergleiche einen historischen Hinweis mit einer zusätzlichen Stoffuntersuchung.",
+      "observe": "Prüfe für jede Aussage, welche Belegart sie tatsächlich braucht.",
+      "benefit": "Du kannst einen Forschungsanstoß von einem Nachweis für eine Behandlung unterscheiden."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen Abschnitten der offiziellen Nobelversammlung, der Lasker Foundation, dem JCI-Beitrag und den genannten WHO-Seiten. Historische Einzeljahre für Gewinnung und Isolierung werden wegen unterschiedlicher Zuordnung nicht gleichgesetzt. Alte Krankheitszahlen und frühere Behandlungsempfehlungen werden nicht als aktueller Stand ausgegeben. Die erfundenen Notizen veranschaulichen Belegarten und enthalten keine echten Forschungs- oder Patientendaten. Bestehendes Foto und Rechtebelege bleiben erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Wie kann aus einer historischen Anregung durch Laborarbeit und viele weitere Prüfungen medizinisches Wissen entstehen?",
+      "wrongReasons": [
+        null,
+        "Radioaktivität zu erforschen ist von der hier behandelten Suche nach einem Wirkstoff gegen Malaria zu unterscheiden.",
+        "Eine Rechenanleitung für eine geplante Maschine ist kein fachlicher Nachweis zur Untersuchung eines Wirkstoffs."
+      ]
+    }
   },
   {
     "id": "person-cai_lun",
     "category": "people",
     "title": "Cai Lun",
-    "intro": "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+    "intro": "Cai Lun verbesserte und förderte die Papierherstellung im China der Han-Zeit. Seine Geschichte zeigt, wie vorhandenes Wissen weiterentwickelt und eine Verbesserung überliefert wird.",
     "paragraphs": [
-      "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher."
+      "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.",
+      "Für das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.",
+      "Papier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.",
+      "Die gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen."
     ],
     "facts": [
       {
@@ -5066,7 +5383,10 @@
       }
     ],
     "more": [
-      "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee.",
+      "Ein erhaltener Gegenstand und ein schriftlicher Bericht beantworten verschiedene Fragen. Eine Papierprobe kann früher sein als ein Bericht über eine spätere Verbesserung. Beide Belege können zusammengehören, ohne dieselbe Erfindung an genau einem Tag zu dokumentieren.",
+      "Viele Verfahren entstehen durch die Arbeit mehrerer Menschen über lange Zeit. Eine namentlich überlieferte Verbesserung ist wichtig, ohne dass daraus ein einziger Ursprung aller früheren Erfahrungen folgt. Nicht alle beteiligten Papiermacher sind heute namentlich bekannt. Eine Verbesserung kann deshalb genauso wichtig sein wie eine völlig neue Idee.",
+      "In unserem Bild bleiben acht Linien mit gleicher Länge erhalten. Beim Umschalten liegen sie in einem oder in vier Feldern. Mehr belegte Felder bedeuten hier nicht mehr Linien; der Vergleich zeigt Anordnung und nicht eine Materialprüfung.",
+      "Das vorhandene Bild Cai Luns ist eine Druckgrafik aus dem 18. Jahrhundert und zeigt ihn als später verehrte Gestalt. Es entstand weit nach seiner Lebenszeit. Das Bild ist kein Foto, keine Augenzeugenaufnahme und kein sicherer Nachweis seines tatsächlichen Aussehens.",
       "Papier entsteht aus Fasern, die in Wasser verteilt, zu einer dünnen Schicht gesammelt und getrocknet werden. Verfahren wurden über lange Zeit verbessert. Cai Lun gilt als wichtiger Verbesserer, nicht als einziger Ursprung des Papiers."
     ],
     "surprise": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
@@ -5085,16 +5405,20 @@
     ],
     "sources": [
       {
-        "label": "Hunan Provincial Department of Culture & Tourism",
+        "label": "Hunan: Cai Lun als Verbesserer der Papierherstellung",
         "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
       },
       {
-        "label": "University of Oxford, Cabinet",
-        "url": "https://www.cabinet.ox.ac.uk/origins-paper"
+        "label": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+        "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
       },
       {
-        "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
-        "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+        "label": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+        "url": "https://paper.gatech.edu/fiber-pulp"
+      },
+      {
+        "label": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+        "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf"
       }
     ],
     "aliases": [
@@ -5117,15 +5441,34 @@
       "correct": 0,
       "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
     },
-    "image": "cai-lun"
+    "image": "cai-lun",
+    "learning": {
+      "starter": "Vergleiche dieselben acht Faserlinien in zwei Anordnungen.",
+      "observe": "Zähle die Linien getrennt von den Feldern, in denen sie liegen. Unterscheide außerdem ein berichtetes Datum von älteren erhaltenen Funden.",
+      "benefit": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesener regionaler Darstellung aus Hunan, dem konkreten historischen Vergleich bei T. H. Barrett und den Faser-/Beobachtungsabschnitten des Robert C. Williams Museum of Papermaking. Das Jahr 105 bezeichnet eine überlieferte Vorstellung einer Verbesserung, nicht den ersten Papierfund. Unsichere Geburtsjahre und das genaue früheste Funddatum bleiben offen. Die schematische Linienverteilung ist weder Mikroskopie noch Berechnung von Festigkeit. Die spätere Darstellung und ihre bestehenden Rechtebelege bleiben erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Denke an das Material, auf dem Menschen Zeichen und Texte festhalten können.",
+      "wrongReasons": [
+        null,
+        "Die Untersuchung radioaktiver Stoffe ist von der hier beschriebenen Verarbeitung von Fasern zu unterscheiden.",
+        "Eine Rechenanleitung beschreibt Schritte für eine Aufgabe; sie ist kein Verfahren zur Herstellung eines Schreibmaterials."
+      ]
+    }
   },
   {
     "id": "person-mae_jemison",
     "category": "people",
     "title": "Mae Jemison",
-    "intro": "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+    "intro": "Mae Jemison verband Medizin, Technik und Raumfahrt. 1992 forschte sie als Wissenschafts-Missionsspezialistin im Weltraumlabor der Endeavour.",
     "paragraphs": [
-      "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum."
+      "Mae Jemison wurde 1956 in Decatur im US-Bundesstaat Alabama geboren und wuchs in Chicago auf. Sie studierte Chemieingenieurwesen und Medizin. Bevor sie Astronautin wurde, arbeitete sie als Ärztin, unter anderem für den Peace Corps in Sierra Leone und Liberia. 1987 wählte die NASA sie für die Astronautenausbildung aus.",
+      "Am 12. September 1992 startete Jemison mit sechs weiteren Besatzungsmitgliedern zur Mission STS-47. Als erste Schwarze Frau flog sie in den Weltraum. Im Raumlabor Spacelab-J arbeiteten die USA und Japan zusammen. Jemison war an Untersuchungen von Knochenzellen beteiligt; die Mission umfasste Forschung zu Lebewesen und Materialien.",
+      "Die Forschung nutzte Bedingungen, unter denen Dinge nahezu schwerelos erscheinen. Das liegt in einer Erdumlaufbahn nicht daran, dass es dort keine Erdanziehung mehr gäbe. Raumfahrzeug, Menschen und freie Gegenstände darin fallen gemeinsam um die Erde und bewegen sich zugleich schnell seitwärts.",
+      "Unser eigenes Gedankenbild isoliert einen Teil dieser Erklärung: Eine Kabine und ein freier Ball verschieben sich beim gemeinsamen freien Fall gleich weit. Der Abstand des Balls zum Boden bleibt gleich. Eine solche Ansicht kann erklären, warum der Ball im Inneren schwebend wirkt; sie berechnet noch keine ganze Umlaufbahn."
     ],
     "facts": [
       {
@@ -5142,8 +5485,10 @@
       }
     ],
     "more": [
-      "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere.",
-      "Für Raumfahrt braucht es viele Fachrichtungen: Medizin, Technik, Mathematik und Naturwissenschaften. Jemisons verschiedene Ausbildungen zeigen, dass Fragen oft über die Grenzen eines einzelnen Faches hinausgehen."
+      "Eine Mission ist Teamarbeit. Pilotieren, Medizin, technische Vorbereitung, mathematische Rechnungen, naturwissenschaftliche Fragen und Auswertung sind verschiedene Aufgaben. Jemisons unterschiedliche Ausbildungen zeigen, wie Fragen über die Grenzen eines einzelnen Faches hinausgehen. Ihre Verbindung mehrerer Fachrichtungen hilft, die Zusammenarbeit zu verstehen; nicht jede beteiligte Person hat dieselbe Rolle.",
+      "Nahezu schwerelos bedeutet nicht masselos. Ein Gegenstand behält seine Masse. Auch beim Schweben muss seine Bewegung verändert werden, wenn man ihn beschleunigen oder abbremsen möchte. Unser Gedankenbild zeigt nur seine Lage zur Kabine und keine Kräfte beim Anstoßen.",
+      "Der Ball und die Kabine haben im Gedankenvergleich die gleiche Anfangsbewegung und erfahren dieselbe Beschleunigung durch die Schwerkraft. Andere Einflüsse werden weggelassen. In einer wirklichen Forschungsumgebung können kleine Restbeschleunigungen und Bewegungen auftreten; das Modell ersetzt keine Messung.",
+      "Die vorhandene Verbindung zur ISS führt zu einem späteren Weltraumlabor. Jemisons Flug1992 fand im Space Shuttle mit Spacelab-J statt, nicht auf der ISS. Katherine Johnsons Thema zeigt ergänzend, wie mathematische Rechnungen und Kontrollen Raumfahrt unterstützen."
     ],
     "surprise": "STS-47, Start 12. September 1992; Wissenschafts-Missionsspezialistin; erste afroamerikanische Frau im Weltraum.",
     "locations": [
@@ -5160,12 +5505,24 @@
     ],
     "sources": [
       {
-        "label": "NASA StarChild",
-        "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html"
+        "label": "NASA: Mae Jemisons institutionelle Biografie",
+        "url": "https://www.nasa.gov/former-astronaut-mae-c-jemison/"
       },
       {
-        "label": "NASA",
+        "label": "NASA: ursprüngliche Biografiedaten von1993 (PDF)",
+        "url": "https://www.nasa.gov/wp-content/uploads/2019/09/jemison_mae.pdf"
+      },
+      {
+        "label": "NASA: STS-47 und Spacelab-J",
         "url": "https://www.nasa.gov/mission/sts-47/"
+      },
+      {
+        "label": "NASA: gemeinsamer freier Fall und Mikrogravitation",
+        "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-microgravity-grades-5-8/"
+      },
+      {
+        "label": "NASA Glenn: freier Fall und erhaltene Masse",
+        "url": "https://www.nasa.gov/centers-and-facilities/glenn/what-is-microgravity/"
       }
     ],
     "aliases": [
@@ -5188,15 +5545,34 @@
       ],
       "correct": 0,
       "why": "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere."
+    },
+    "learning": {
+      "starter": "Vergleiche Ball und Kabine zu zwei Zeitpunkten.",
+      "observe": "Unterscheide die Bewegung im äußeren Bild vom Abstand innerhalb der Kabine.",
+      "benefit": "Du kannst das scheinbare Schweben im gemeinsamen freien Fall erklären und von fehlender Schwerkraft unterscheiden."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen NASA-Biografie-, Missions- und Freifallabschnitten. Die ursprüngliche Biografie wurde in beiden Seiten gelesen; zeitgebundene Angaben werden als historische Angaben eingeordnet. Widersprüchliche Umlaufzahlen und die verkürzte Studienabschlussangabe der Profil-Kurzübersicht werden nicht übernommen. Kein Ergebnis der Knochenzelluntersuchung erfunden. Die eigene Zeichnung ist eine lokale idealisierte Freifallansicht, keine Missions-, Bahn- oder Gesundheitsberechnung. Das vorhandene NASA-Porträt und seine Rechtebelege bleiben erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Welche verschiedenen beruflichen Kenntnisse können bei Untersuchungen während eines Raumflugs zusammenkommen?",
+      "wrongReasons": [
+        null,
+        "Radioaktive Stoffe zu erforschen beschreibt nicht Jemisons hier behandelte medizinische und astronautische Arbeit.",
+        "Eine Rechenanleitung für eine geplante Maschine ist kein Raumflug mit wissenschaftlichen Untersuchungen."
+      ]
     }
   },
   {
     "id": "person-johannes_gutenberg",
     "category": "people",
     "title": "Johannes Gutenberg",
-    "intro": "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+    "intro": "Johannes Gutenberg entwickelte in Mainz ein wirkungsvolles europäisches Drucksystem mit beweglichen Metallzeichen. Sein Beitrag verbindet viele Werkzeuge und die Arbeit einer Werkstatt.",
     "paragraphs": [
-      "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher."
+      "Johannes Gutenberg wurde um 1400 in Mainz geboren und starb 1468. Er war auch in Straßburg tätig. Nicht jede Lebensstation ist sicher überliefert; ein genaues Geburtsdatum wird hier nicht behauptet.",
+      "Sein Drucksystem zerlegte Texte in einzelne Zeichen. Mit geeigneten Formen konnten viele Metalllettern gegossen und zu Wörtern, Zeilen und Seiten zusammengesetzt werden. Die Werkstatt verband sie mit passender Farbe, Papier oder Pergament und einer Presse. Ein gedruckter Text konnte erneut abgezogen werden; für einen anderen Text ließen sich Zeichen neu ordnen.",
+      "Die Gutenberg-Bibel entstand in den frühen bis mittleren 1450er-Jahren. An Finanzierung und Herstellung waren weitere Menschen beteiligt. Gedruckter Text bedeutete noch kein vollständig fertiges Buch: Farbige Anfangsbuchstaben und andere Ergänzungen wurden in vielen Exemplaren von Hand ausgeführt.",
+      "Gutenberg erfand das Drucken nicht weltweit als erster Mensch. Druckverfahren und bewegliche Zeichen waren in Ostasien schon früher bekannt. Die UNESCO beschreibt den koreanischen Jikji-Druck von 1377 als ältesten erhaltenen Beleg des Druckens mit beweglichen Metalltypen. Das ist ein früheres erhaltenes Zeugnis, kein genauer Beginn aller Druckgeschichte."
     ],
     "facts": [
       {
@@ -5213,7 +5589,10 @@
       }
     ],
     "more": [
-      "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten.",
+      "Beweglich heißt: Die einzelnen Zeichen einer Druckform können nach dem Druck wieder verwendet und neu angeordnet werden. In unserem eigenen Kartenbild werden aus T–O–R die Buchstaben O–R–T. Vorrat und Zeichen bleiben gleich, ihre Reihenfolge verändert sich. So können aus denselben Zeichen verschiedene Buchseiten entstehen.",
+      "Für eine gleichzeitig gesetzte Zeile braucht man jedes vorkommende Zeichen in ausreichender Stückzahl. Ein einziges T kann nicht zugleich zwei Positionen in derselben fertigen Form besetzen. Wiederholte Abzüge derselben Form sind von ihrer späteren neuen Zusammenstellung zu unterscheiden.",
+      "Drucke, Handschriften und Handarbeit existierten nebeneinander. Eine farbige Verzierung allein entscheidet deshalb nicht, ob der Text eines konkreten Buches gedruckt oder geschrieben wurde. Dafür sind passende Angaben und Untersuchungen am jeweiligen Exemplar nötig.",
+      "Das vorhandene Gutenberg-Bild ist ein späterer Kupferstich von 1584. Er entstand lange nach Gutenbergs Tod. Die Darstellung ist ein historisches Bildobjekt und kein zeitgenössisch gesichertes Porträt seines wirklichen Aussehens.",
       "Ein Drucksystem muss viele Teile zusammenbringen: passende Metallzeichen, Farbe, Papier und eine Presse. In Ostasien gab es bereits früher Druck und bewegliche Zeichen. Gutenbergs Beitrag war eine besondere Weiterentwicklung in Europa."
     ],
     "surprise": "Europäisches System aus gegossenen Metalltypen, geeignetem Farbauftrag und Presse; Gutenberg-Bibel in den frühen 1450ern.",
@@ -5234,20 +5613,24 @@
     ],
     "sources": [
       {
-        "label": "Stadt Mainz / Gutenberg.de",
-        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
-      },
-      {
-        "label": "Stadt Mainz / Gutenberg.de",
+        "label": "Stadt Mainz: einzelne Zeichen und das gemeinsame Drucksystem",
         "url": "https://www.gutenberg.de/erfindung/"
       },
       {
-        "label": "Stadt Mainz / Gutenberg.de",
-        "url": "https://www.gutenberg.de/erfindung/vor_gutenberg"
+        "label": "Stadt Mainz: Gutenbergs Lebensdaten und ihre Unsicherheiten",
+        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
       },
       {
-        "label": "UNESCO, Memory of the World",
+        "label": "Stadt Mainz: gedruckte Bibel und nachträgliche Handarbeit",
+        "url": "https://www.gutenberg.de/bibel/"
+      },
+      {
+        "label": "UNESCO: der erhaltene Jikji-Metalltypendruck von 1377",
         "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+      },
+      {
+        "label": "Library of Congress: konkretes Gutenberg-Bibelexemplar",
+        "url": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html"
       }
     ],
     "aliases": [
@@ -5270,7 +5653,23 @@
       "correct": 0,
       "why": "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten."
     },
-    "image": "johannes-gutenberg"
+    "image": "johannes-gutenberg",
+    "learning": {
+      "starter": "Ordne dieselben drei Buchstabenkarten neu und lies die beiden Folgen.",
+      "observe": "Unterscheide die Zahl der vorhandenen Karten von ihrer Reihenfolge und vom mehrfachen Drucken derselben Form.",
+      "benefit": "Du kannst Wiederverwendung erklären und einen historischen Druck nach Technik, Zeitpunkt und konkretem Exemplar einordnen."
+    },
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen Mainzer Technik-/Lebensabschnitten, UNESCO-Jikji-Eintrag und konkreter Library-of-Congress-Bibelbeschreibung. Regionale Weiterentwicklung und ältere ostasiatische Zeugnisse bleiben unterscheidbar. Unterschiedliche Eingrenzungen der Bibeldruckjahre werden nicht zu einem erfundenen exakten Fertigstellungstag vereinheitlicht. Keine festen aktuellen Bestandszahlen, weltweite Alleinerfinderbehauptung, pauschale asiatische Technikbewertung oder freie Lizenz für Museumsbilder abgeleitet. Der vorhandene spätere Kupferstich von 1584 und seine konkret geprüften Rechtebelege bleiben erhalten.",
+    "checkedAt": "2026-11-04",
+    "revision": 2,
+    "questionFeedback": {
+      "hint": "Welchen Nutzen haben einzelne Zeichen, die für verschiedene Seiten erneut angeordnet werden können?",
+      "wrongReasons": [
+        null,
+        "Das Untersuchen von Strahlung ist von der hier beschriebenen Herstellung gedruckter Seiten zu unterscheiden.",
+        "Eine Rechenanleitung betrifft die Reihenfolge von Rechenschritten; hier geht es um ein Verfahren zur Vervielfältigung von Texten."
+      ]
+    }
   },
   {
     "id": "person-wangari_maathai",
@@ -5278,7 +5677,9 @@
     "title": "Wangari Maathai",
     "intro": "Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
     "paragraphs": [
-      "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
+      "Wangari Maathai war eine kenianische Biologin und gründete die Green-Belt-Bewegung. Zusammen mit örtlichen Gruppen, besonders mit Frauen, verband sie Umweltarbeit mit der Möglichkeit, die eigene Umgebung mitzugestalten. Sie lebte 1940–2011 und erhielt 2004 den Friedensnobelpreis.",
+      "Ein Bäumchen zu setzen ist ein Anfang. Die Arbeit der Bewegung umfasst auch Absprachen vor Ort, die Wahl eines geeigneten Standorts, Pflege und weitere Kontrollen. Ihr beschriebenes Verfahren sieht vor, später die noch lebenden Bäume zu zählen und Schwierigkeiten festzuhalten. Eine hohe Pflanzzahl allein erzählt deshalb noch nicht die ganze Geschichte.",
+      "Warum gehörte zu dieser Umweltarbeit auch gemeinsames Entscheiden? Menschen vor Ort kennen ihre Bedürfnisse und tragen die weitere Arbeit mit. Maathais Friedenspreis würdigte einen Zusammenhang zwischen nachhaltiger Entwicklung, Demokratie und Frieden. Eine einzelne Zählung kann weder diesen ganzen Zusammenhang erklären noch die Wirkung eines wirklichen Projekts beweisen."
     ],
     "facts": [
       {
@@ -5291,6 +5692,9 @@
       }
     ],
     "more": [
+      "Einfach erklärt: Gepflanzt beschreibt den Anfang. Eine spätere Kontrollliste beschreibt einen späteren Zustand. Dazwischen braucht ein Bäumchen passende Bedingungen.",
+      "Genauer betrachtet: Ein Anteil braucht eine Bezugsgruppe. Acht von zehn und zehn von zwanzig sind verschiedene Verhältnisse, obwohl zehn die größere Einzelzahl ist. Die Zahlen sind frei erfunden.",
+      "Weitergedacht: Eine kleinere Zahl in der Kontrollrunde verrät noch nicht die Ursache. Für eine Erklärung bräuchtest du geeignete zusätzliche Beobachtungen. Der Schutz und die Wiederherstellung eines Lebensraums lassen sich nicht auf eine einzelne Baumzahl reduzieren.",
       "Mit dem Green Belt Movement verband Maathai das Pflanzen von Bäumen mit gemeinsamer Arbeit und besseren Lebensbedingungen. Bäume schützen Boden und bieten Lebensräume. Die Pflege nach dem Pflanzen ist genauso wichtig wie das Setzen des Baumes.",
       "2004 erhielt sie den Friedensnobelpreis. Ihre Arbeit verband Umweltschutz mit Rechten, friedlichem Zusammenleben und der Beteiligung vieler Menschen."
     ],
@@ -5311,8 +5715,16 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Biografie / Forschungsinstitution",
-        "url": "https://www.nobelprize.org/prizes/peace/2004/maathai/facts/"
+        "label": "Green Belt Movement · Wangari Maathai",
+        "url": "https://www.greenbeltmovement.org/wangari-maathai/"
+      },
+      {
+        "label": "Green Belt Movement · Zehn Schritte der Pflanzarbeit",
+        "url": "https://www.greenbeltmovement.org/gbm-ten-10-step-procedure/"
+      },
+      {
+        "label": "Green Belt Movement · Einordnung des Friedensnobelpreises",
+        "url": "https://www.greenbeltmovement.org/the-nobel-peace-prize/"
       }
     ],
     "aliases": [],
@@ -5320,7 +5732,7 @@
     "person": {
       "lifespan": "1940–2011",
       "field": "Natur- und Friedensarbeit",
-      "method": "Gemeinsam handeln und die Umgebung pflegen."
+      "method": "Gemeinsam planen, pflanzen, pflegen und später wieder überprüfen."
     },
     "question": {
       "prompt": "Welcher Beitrag gehört zu Wangari Maathai?",
@@ -5332,15 +5744,32 @@
       "correct": 0,
       "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
     },
-    "image": "wangari-maathai"
+    "image": "wangari-maathai",
+    "checkedAt": "2026-11-04",
+    "sourceNote": "Die Green-Belt-Bewegung beschreibt gemeinsames Planen, Pflanzen, Pflegen und spätere Kontrollen. Die Zahlen unseres Lernmodells sind erfunden und keine Messdaten eines wirklichen Projekts. Eine einzelne Zählung erklärt weder die Ursache eines Ausfalls noch alle Wirkungen der Umweltarbeit.",
+    "questionFeedback": {
+      "hint": "Was müssen örtliche Gruppen nach dem Setzen von Bäumchen gemeinsam organisieren und weiter beobachten?",
+      "wrongReasons": [
+        null,
+        "Ein Drucksystem zu entwickeln beschreibt nicht die hier behandelte Verbindung von Umweltarbeit und örtlichen Gemeinschaften.",
+        "Webbrowser zu entwickeln ist von Maathais gemeinschaftlicher Umweltarbeit zu unterscheiden."
+      ]
+    },
+    "revision": 1,
+    "learning": {
+      "starter": "Vergleiche die Pflanzzahl mit einer späteren Kontrolle.",
+      "observe": "Beachte bei jedem Anteil die zugehörige Ausgangsgruppe und den Zeitpunkt.",
+      "benefit": "Du unterscheidest eine gezählte Veränderung von einer noch ungeklärten Ursache."
+    }
   },
   {
     "id": "person-charles_darwin",
     "category": "people",
     "title": "Charles Darwin",
-    "intro": "Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+    "intro": "Charles Darwin verglich Lebewesen, Fossilien und viele Beobachtungen. Natürliche Selektion erklärt, wie vererbbare Unterschiede über Generationen häufiger oder seltener werden können.",
     "paragraphs": [
-      "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+      "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.",
+      "Bei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch."
     ],
     "facts": [
       {
@@ -5353,10 +5782,13 @@
       }
     ],
     "more": [
-      "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
-      "Lebewesen einer Art unterscheiden sich. Wenn einige Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch."
+      "Charles Darwin lebte von 1809 bis 1882. Auf der Beagle-Reise sammelte er Tiere, Pflanzen, Fossilien und Notizen. Nach der Rückkehr verglich und untersuchte er seine Beobachtungen noch viele Jahre. Die Erklärung entstand nicht durch einen einzigen plötzlichen Einfall auf den Galápagosinseln. Die Reise führte durch Gebiete, in denen bereits Menschen und Kulturen lebten; auch örtliches Wissen war wichtig.",
+      "Lebewesen einer Art unterscheiden sich. Wenn Unterschiede vererbbar sind und unter bestimmten Bedingungen mit unterschiedlichem Überleben und unterschiedlicher Fortpflanzung zusammenhängen, können sich ihre Anteile über Generationen verändern. Diesen Zusammenhang erklärt natürliche Selektion. Ein einzelnes Tier verwandelt sich dabei nicht, weil es etwas braucht oder möchte.",
+      "Auch andere Menschen trugen zur Forschung bei. John Edmonstone brachte Darwin vor der Reise das Präparieren von Tieren bei. Alfred Russel Wallace entwickelte unabhängig Gedanken zur natürlichen Selektion. 1858 wurden Beiträge von Wallace und Darwin gemeinsam bei der Linnean Society vorgestellt; Darwins Buch über die Entstehung der Arten folgte 1859.",
+      "Unser eigenes Gedankenmodell gibt vererbbare Varianten und unterschiedliche Nachkommenzahlen ausdrücklich vor. Vier A- und vier B-Lebewesen bilden die Elterngeneration. Wenn jedes A drei und jedes B einen Nachkommen mit derselben Variante hat, umfasst die neue Generation zwölf A und vier B. Der A-Anteil steigt von der Hälfte auf drei Viertel. Die Nachkommen sind andere Individuen.",
+      "Das Modell erklärt weder die Entstehung von Varianten noch Gene, Paarung oder wirkliche Populationsgrößen. In der Natur können auch Zufall und Zu- oder Abwanderung Häufigkeiten verändern. Eine Zählung allein beweist deshalb noch keine natürliche Selektion. Häufiger bedeutet außerdem nicht unter allen Bedingungen besser; Evolution hat kein vorgegebenes Ziel."
     ],
-    "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+    "surprise": "Darwin arbeitete nach seiner Reise noch lange an Vergleichen. Welche Beobachtungen und welche anderen Menschen waren dafür wichtig?",
     "locations": [
       {
         "label": "Galápagos – eine Station seiner Reise",
@@ -5372,8 +5804,20 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Biografie / Forschungsinstitution",
+        "label": "Natural History Museum · Reise, Vergleiche und Edmonstone",
         "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+      },
+      {
+        "label": "Linnean Society · Darwin und das Buch von 1859",
+        "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin"
+      },
+      {
+        "label": "Linnean Society · Wallaces eigener Beitrag und 1858",
+        "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace"
+      },
+      {
+        "label": "UC Berkeley Understanding Evolution · natürliche Selektion",
+        "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/"
       }
     ],
     "aliases": [],
@@ -5393,15 +5837,34 @@
       "correct": 0,
       "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
     },
-    "image": "charles-darwin"
+    "image": "charles-darwin",
+    "learning": {
+      "starter": "Unterschiede zwischen Lebewesen können über Generationen häufiger werden.",
+      "observe": "Vergleiche die Anteile in zwei Generationen unseres ausdrücklich erfundenen Beispiels. Beachte die vorgegebene Vererbung und die Nachkommenzahlen.",
+      "benefit": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache."
+    },
+    "sourceNote": "Die Museums- und Gesellschaftsquellen ordnen Reisebeobachtungen, spätere Auswertung und Wallaces Beitrag ein. Die Universitätsdarstellung erklärt Variation, Vererbung und unterschiedliche Fortpflanzung. Kreise, Varianten und Zahlen des eigenen Modells sind erfunden und keine historischen Messdaten.",
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Was lässt sich durch den Vergleich von Lebewesen, Fossilien und vielen Generationen untersuchen?",
+      "wrongReasons": [
+        null,
+        "Ein Drucksystem erklärt nicht die hier behandelten Unterschiede zwischen Lebewesen und Generationen.",
+        "Webbrowser dienen dem Aufrufen von Webseiten. Darwins hier beschriebene Arbeit betrifft Lebewesen und Naturbeobachtungen."
+      ]
+    }
   },
   {
     "id": "person-alexander_humboldt",
     "category": "people",
     "title": "Alexander von Humboldt",
-    "intro": "Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+    "intro": "Alexander von Humboldt verglich Pflanzen, Höhen und weitere Naturbedingungen miteinander. Dabei verband er Beobachtungen von Reisen mit der Auswertung vieler Aufzeichnungen und der Arbeit anderer Menschen.",
     "paragraphs": [
-      "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
+      "Humboldt lebte von 1769 bis 1859. Von 1799 bis 1804 reiste er mit dem Naturforscher Aimé Bonpland durch Teile Amerikas. Die beiden sammelten Pflanzen und notierten Beobachtungen. Messgeräte halfen dabei, Bedingungen an unterschiedlichen Orten zu vergleichen.",
+      "Wo wachsen welche Pflanzen? Humboldt wollte Pflanzen nicht nur benennen, sondern auch ihre Verteilung verstehen. Im Naturgemälde der Anden ordnete er Pflanzen verschiedenen Höhenzonen zu. Das 1807 veröffentlichte Buch zur Pflanzengeographie nennt Humboldt und Bonpland; später arbeitete auch der Botaniker Carl Sigismund Kunth an der Auswertung der Sammlung mit.",
+      "Die Reise führte durch bewohnte und unter europäischer Kolonialherrschaft stehende Gebiete. Örtliche Menschen unterstützten die Expedition. Die Stiftung Preußische Schlösser und Gärten erläutert am Beispiel von José de la Cruz, wie solche Beiträge in europäischen Darstellungen oft übersehen wurden. Ein berühmter Name steht nicht für die Arbeit eines Menschen allein.",
+      "Wir vergleichen zwei erfundene Höhennotizen. An jeder der drei vorgegebenen Höhen steht eine Temperatur. Ein Vergleich kann Unterschiede sichtbar machen. Er erklärt aber noch nicht jede Ursache: Für wirkliche Orte müssten Zeitpunkt, Wetter und weitere Bedingungen berücksichtigt werden. Unsere Zahlen sind keine Messungen von Humboldts Reise."
     ],
     "facts": [
       {
@@ -5414,10 +5877,12 @@
       }
     ],
     "more": [
-      "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
-      "Temperatur, Höhe, Pflanzen und Boden hängen zusammen. Humboldt verglich Messungen an verschiedenen Orten. Forschungsreisen trafen auf bereits vorhandenes Wissen; lokale Menschen halfen wesentlich beim Reisen und Verstehen."
+      "Humboldts Pflanzengeographie entstand nicht allein beim Reisen. Er sammelte und verglich später in Paris und Berlin auch Aufzeichnungen aus vielen Regionen. Die BBAW beschreibt, wie der Austausch mit Kollegen und die Arbeit häufig übersehener Assistenten dazugehörten. Dieses Beispiel hilft, eine Forschungsleistung als gemeinsame Arbeit zu betrachten.",
+      "Das historische Naturgemälde und unsere kleine Zeichnung haben verschiedene Aufgaben. Das Naturgemälde ordnet zahlreiche Beobachtungen und Pflanzen. Unser Modell enthält nur sechs frei erfundene Temperaturwerte an drei Höhen. Es sagt weder voraus, wo eine bestimmte Pflanze wächst, noch ersetzt es historische Quellen.",
+      "Eine einzelne Temperaturnotiz beschreibt noch kein Klima. Im vorhandenen Buchbegriff Klima geht es um typische Wetterbedingungen über viele Jahre. Um solche Bedingungen zu untersuchen, reichen die drei Beispielpunkte und ein einzelner Zeitpunkt nicht aus.",
+      "Temperatur, Höhe, Pflanzen und Boden hängen zusammen. Humboldt verglich Messungen an verschiedenen Orten. Bei den Reisen trafen er und seine Begleiter auf Orte, an denen bereits Menschen und Kulturen lebten. Wissen und Unterstützung örtlicher Menschen halfen wesentlich beim Reisen und Verstehen."
     ],
-    "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+    "surprise": "Auch die spätere Auswertung, örtliche Unterstützung und der Austausch von Aufzeichnungen gehörten zur Forschung.",
     "locations": [
       {
         "label": "Anden – Beispielregion seiner Forschung",
@@ -5432,8 +5897,24 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Biografie / Forschungsinstitution",
+        "label": "Alexander von Humboldt-Stiftung · Amerika-Reise1799–1804",
         "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
+      },
+      {
+        "label": "BBAW-Archiv · Alexander von Humboldt",
+        "url": "https://archiv.bbaw.de/nachlaesse/nachlaesse/humboldt-alexander-von"
+      },
+      {
+        "label": "BBAW · Pflanzengeographie als gemeinsame Forschungsarbeit (PDF)",
+        "url": "https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf"
+      },
+      {
+        "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von1807",
+        "url": "https://www.sammlungen.hu-berlin.de/objekte/-/16678/"
+      },
+      {
+        "label": "SPSG · José de la Cruz und örtliche Unterstützung der Forschungsreise",
+        "url": "https://www.spsg.de/forschung-sammlungen/forschung/koloniale-kontexte/friedrich-georg-weitsch-alexander-von-humboldt-und-aime-bonpland-am-fuss-des-chimborazo"
       }
     ],
     "aliases": [],
@@ -5453,15 +5934,32 @@
       "correct": 0,
       "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
     },
-    "image": "alexander-von-humboldt"
+    "image": "alexander-von-humboldt",
+    "learning": {
+      "starter": "Humboldt und viele andere Menschen verglichen Beobachtungen, um Zusammenhänge in der Natur zu verstehen.",
+      "observe": "Wechsle zwischen den beiden erfundenen Notizen. Vergleiche jeweils dieselbe Höhe und trenne die Zahlen vom möglichen Grund eines Unterschieds.",
+      "benefit": "Du vergleichst Angaben mit gleichen Einheiten und erkennst, welche weitergehende Erklärung zusätzliche Belege braucht."
+    },
+    "sourceNote": "Eigene Erklärung nach den benannten institutionellen Biografie-, Sammlungs- und Forschungsabschnitten. Die Katalogbeschreibung des Buches von 1807 ist keine behauptete vollständige Lektüre des historischen Werkes. José de la Cruz ist ein konkret benannter Beteiligter; die Darstellung wird nicht als menschenleere Entdeckungsreise erzählt. Das eigene Temperaturbeispiel ist erfunden und keine Rekonstruktion des Naturgemäldes oder historischer Daten.",
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Warum könnte jemand auf einer Reise mehrere Messgeräte benutzen und Beobachtungen verschiedener Orte vergleichen?",
+      "wrongReasons": [
+        null,
+        "Ein Drucksystem herzustellen ist etwas anderes als Zusammenhänge zwischen beobachteten Naturbedingungen zu untersuchen.",
+        "Webbrowser entstanden lange nach Humboldts Forschungsreisen. Die hier beschriebenen Vergleiche betreffen die Natur."
+      ]
+    }
   },
   {
     "id": "person-neil_armstrong",
     "category": "people",
     "title": "Neil Armstrong",
-    "intro": "Er war der erste Mensch, der die Mondoberfläche betrat.",
+    "intro": "Neil Armstrong war Ingenieur, Testpilot und Astronaut. Bei Apollo 11 landete er zusammen mit Buzz Aldrin auf dem Mond; Michael Collins arbeitete in der Mondumlaufbahn.",
     "paragraphs": [
-      "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
+      "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich.",
+      "Die Mission brauchte unterschiedliche Aufgaben und viele weitere Beteiligte. Unsere eigene Rollenübersicht zeigt nur den gemeinsamen Start und den Mondaufenthalt. Sie berechnet keine Flugbahn und zeigt keine maßstäblichen Abstände."
     ],
     "facts": [
       {
@@ -5474,10 +5972,13 @@
       }
     ],
     "more": [
-      "Neil Armstrong und Buzz Aldrin gingen auf dem Mond umher, während Michael Collins in der Mondumlaufbahn blieb. Eine Mission braucht unterschiedliche Aufgaben. Der erste Schritt eines Menschen war das Ergebnis der Arbeit eines großen Teams.",
-      "Armstrong war Ingenieur und Testpilot. Berühmt wurde er durch einen ersten Schritt; das Gelingen einer Raumfahrtmission hing jedoch von sehr vielen Beteiligten ab."
+      "Neil Armstrong lebte von 1930 bis 2012. Vor seiner berühmten Mondlandung arbeitete er als Ingenieur und Test- beziehungsweise Forschungspilot. Sein erster Schritt auf dem Mond war das Ergebnis der Arbeit eines großen Teams. Zur Raumfahrt gehören genaue Vorbereitung, technische Systeme und Menschen mit unterschiedlichen Aufgaben.",
+      "Apollo 11 startete 1969 mit drei Astronauten. Armstrong war Kommandant, Aldrin Pilot der Landefähre Eagle und Collins Pilot der Kommandokapsel Columbia. Während Armstrong und Aldrin mit Eagle zum Mond hinabflogen, blieb Collins mit Columbia in der Mondumlaufbahn. Die beiden kehrten nach ihrem Mondaufenthalt zu ihm zurück.",
+      "Unsere eigene Rollenübersicht vergleicht nur den gemeinsamen Start mit dem Mondaufenthalt. Sie zeigt keine maßstäblichen Abstände und berechnet keine Flugbahnen. Die Menschen am Boden und viele andere wichtige Beiträge fehlen in der kleinen Übersicht; die Mission lässt sich deshalb nicht auf nur drei Personen oder einen ersten Schritt verkürzen.",
+      "Die beiden Raumfahrzeuge hatten verschiedene Aufgaben. Columbia war die Kommandokapsel; Eagle diente dem Landeteam. Die Astronauten wechselten während der Mission zwischen Raumfahrzeugen. Die Startansicht ist deshalb eine Momentaufnahme und keine Aussage, dass während der gesamten Hinreise niemand Eagle betrat.",
+      "Eine Umlaufbahn ist kein Stillstand neben dem Mond. Collins umkreiste ihn mit Columbia. Unsere Übersicht benennt diesen Aufenthaltsbereich, beschreibt aber weder Kräfte noch Geschwindigkeit oder die genaue Umlaufbahn. Für solche Fragen braucht man ein anderes passendes Modell und weitere Daten."
     ],
-    "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+    "surprise": "Nicht alle drei Astronauten landeten auf dem Mond. Warum war die Aufgabe des Menschen in Columbia trotzdem wichtig?",
     "locations": [
       {
         "label": "Florida – Startregion von Apollo 11",
@@ -5492,8 +5993,16 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Biografie / Forschungsinstitution",
+        "label": "NASA · Armstrongs technische Laufbahn und Lebensdaten",
         "url": "https://www.nasa.gov/people/neil-a-armstrong/"
+      },
+      {
+        "label": "NASA · Apollo 11, Besatzung und Raumfahrzeuge",
+        "url": "https://www.nasa.gov/mission/apollo-11/"
+      },
+      {
+        "label": "NASA · Missionsüberblick mit Wechseln und Rückkehr",
+        "url": "https://www.nasa.gov/missions/apollo/apollo-11/apollo-11-mission-overview/"
       }
     ],
     "aliases": [],
@@ -5513,7 +6022,23 @@
       "correct": 0,
       "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
     },
-    "image": "neil-armstrong"
+    "image": "neil-armstrong",
+    "learning": {
+      "starter": "Eine gemeinsame Mission verteilt unterschiedliche Aufgaben.",
+      "observe": "Vergleiche die Namen und Aufenthaltsbereiche beim Start und beim Mondaufenthalt.",
+      "benefit": "Du kannst die drei Aufgaben auseinanderhalten und erklären, was eine einfache Rollenübersicht zeigt und was sie auslässt."
+    },
+    "sourceNote": "Die NASA-Quellen ordnen Armstrongs technische Laufbahn, die Besatzungsrollen und den Missionsablauf ein. Unsere eigene Übersicht zeigt ausgewählte Situationen und ist keine maßstäbliche Flugbahndarstellung. Start, Wechsel in Eagle, Mondaufenthalt und Rückkehr sind unterschiedliche Missionsschritte.",
+    "checkedAt": "2026-11-04",
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Denke an die verschiedenen Aufenthaltsorte der drei Astronauten und an die Aufgabe des Landeteams.",
+      "wrongReasons": [
+        null,
+        "Ein Drucksystem erklärt nicht Armstrongs Rolle als Ingenieur, Pilot und Astronaut bei der Mondmission.",
+        "Webbrowser und die hier beschriebene Raumfahrtmission haben unterschiedliche technische Aufgaben."
+      ]
+    }
   },
   {
     "id": "invention-light",

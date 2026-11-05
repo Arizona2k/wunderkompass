@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-21",
+  "checkedOn": "2026-11-05",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
@@ -2278,6 +2278,28 @@
         }
       ],
       "checkedOn": "2026-11-04"
+    },
+    {
+      "number": 92,
+      "title": "Vierzehn Lebenswege mit Erklärmodellen und Wissensbuch verbinden",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/92",
+      "base": "test-live",
+      "mergedAt": "2026-11-05T18:06:07Z",
+      "mergeCommit": "40698293cc7fbc3ce9751b0620eebb164ea031cb",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/40698293cc7fbc3ce9751b0620eebb164ea031cb/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 58180345990,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-05T18:34:08Z",
+          "updatedAt": "2026-11-05T18:34:08Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/ZsKfSGu6AXTWG48smzt9nnR47p91"
+        }
+      ],
+      "checkedOn": "2026-11-05"
     }
   ]
 }

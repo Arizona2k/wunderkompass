@@ -104805,6 +104805,1724 @@
         "report": "Technische gemeinsame UI-Zuordnung nach vier einzeln abgeglichenen Quellenkorrekturen in drei Personenthemen: vollständige aktuelle Chromium-, Firefox- und WebKit-Prüfungen,35tatsächliche Quellenöffnungen, Suche, Buchverbindungen, Rückwege, nativeVergrößerung und kalterOfflinebetrieb. Alle432ausgewählten Originalbildidentitäten sind gesondert qualifiziert; sämtliche268ganzen bisherigen Inhaltsakten einschließlich Fach-, Quellen- und verschachtelter UI-Historien bleiben erhalten. Keine neue globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme; nativeGitHub-Qualifikation und regulärer Liefernachtest bleiben gesondert erforderlich.",
         "route": "world/topic/person-ibn_sina"
       }
+    },
+    {
+      "id": "topics-people:person-ada_lovelace",
+      "dataHash": "3f68085735bc08129697b4e28b95741537163d88534507dfe80b2f65b7734b17",
+      "teachingDataHash": "19df31313a9ddc43cf552775f3f0ca6cb90dfba5b014e3365dcaaf88d3d19afb",
+      "goal": "Zwei festgelegte Rechenschritte nacheinander ausführen.",
+      "explanation": "Ada Lovelace lebte von 1815 bis 1852. Sie beschäftigte sich intensiv mit Mathematik und mit Charles Babbages Entwürfen für Rechenmaschinen. Seine frühere Difference Engine und die vielseitiger geplante Analytical Engine waren verschiedene Projekte.\n\n1843 veröffentlichte Lovelace eine englische Übersetzung eines Artikels von Luigi Menabrea und ergänzte sie durch umfangreiche eigene Anmerkungen. Eine davon beschreibt die Berechnung von Bernoulli-Zahlen. Dieser veröffentlichte Ablauf ist eine wichtige frühe Arbeit zur Programmierung; auch Babbage hatte zuvor bereits Rechenabläufe entworfen.\n\nLovelace unterschied zwischen den auszuführenden Operationen und den Werten, auf die sie angewendet werden. Ihre Anmerkungen zeigen auch, wie Gruppen von Rechenschritten wiederholt werden können. Dabei kann dieselbe Operation mit inzwischen veränderten Werten arbeiten.\n\nSie überlegte außerdem: Wenn sich Beziehungen beispielsweise zwischen musikalischen Tönen passend darstellen lassen, könnte eine solche Maschine auch damit umgehen. Das war eine bedingte Vorstellung über ihre Möglichkeiten. Es ist kein Beleg, dass die geplante Analytical Engine damals Musik spielte oder vollständig gebaut war.",
+      "example": "Beginne in unserem eigenen Zahlenbild mit zwei. Addiere zuerst drei. Verdopple danach den entstandenen Wert.",
+      "whyItMatters": "Du kannst zwischen einer Anweisung, ihren Eingabewerten und einem tatsächlichen Ausführungsergebnis unterscheiden.",
+      "hint": "Vergleiche den Wert unmittelbar nach dem ersten Schritt in beiden Abläufen.",
+      "feedback": "Aus zwei wird durch plus drei zunächst fünf. Das Verdoppeln dieser fünf ergibt zehn. Beide vorgegebenen Schritte gehören zum Ablauf.\n\nNach dem ersten Schritt steht einmal fünf und einmal vier. Der jeweils nächste Schritt arbeitet mit diesem Zwischenwert. Darum entstehen in diesem Beispiel unterschiedliche Endwerte.\n\nEin genauer Ablauf kann untersucht werden, bevor eine Maschine fertig gebaut ist. Unser eigenes Zweischritt-Beispiel ersetzt weder den historischen Bauzustand noch Lovelaces viel umfangreichere Originalrechnung.",
+      "modelLimits": "Eigenes Zweischrittmodell mit Startwert2 und den frei gewählten Operationen plus3 und mal2; keine Bernoulli-Originalrechnung, historische Maschine oder aufgeführte Musik. Ein bedingt gedachter Einsatz wird nicht als damalige Ausführung dargestellt.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Zwei festgelegte Rechenschritte nacheinander ausführen.",
+        "9-11": "Bei denselben Rechenschritten die Wirkung einer geänderten Reihenfolge erklären.",
+        "12-14": "Einen nachvollziehbaren Rechenplan von einer historischen Ausführungsbehauptung unterscheiden."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Science Museum: Lovelaces veröffentlichter Ablauf und Babbages frühere Entwürfe",
+          "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "University of St Andrews: mathematische Arbeit und Veröffentlichung von 1843",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "York University: Lovelaces eigene Anmerkungen A bis G von 1843, Transkription",
+          "url": "https://psychclassics.yorku.ca/Lovelace/lovelace.htm",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "University of Oxford, History of Science Museum: Babbage und Lovelace",
+          "url": "https://www.hsm.ox.ac.uk/imagining-ai",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "Science Museum Library: konkretes gedrucktes Buch von 1843",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8652385/book-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "1843 wurden Übersetzung und eigene Notes veröffentlicht; vorherige Babbage-Abläufe und Zusammenarbeit gesondert berücksichtigen.",
+          "sourceId": "source-0",
+          "anchor": "ScienceMuseum2015 tatsächlich gelesene Zeilen25–28; MacTutor52–64; konkreter Buchkatalog35–38. Oxford186–195 ordnet erste-Programm-Formel ausdrücklich vorsichtig ein."
+        },
+        {
+          "statement": "1843 wurden Übersetzung und eigene Notes veröffentlicht; vorherige Babbage-Abläufe und Zusammenarbeit gesondert berücksichtigen.",
+          "sourceId": "source-1",
+          "anchor": "ScienceMuseum2015 tatsächlich gelesene Zeilen25–28; MacTutor52–64; konkreter Buchkatalog35–38. Oxford186–195 ordnet erste-Programm-Formel ausdrücklich vorsichtig ein."
+        },
+        {
+          "statement": "1843 wurden Übersetzung und eigene Notes veröffentlicht; vorherige Babbage-Abläufe und Zusammenarbeit gesondert berücksichtigen.",
+          "sourceId": "source-4",
+          "anchor": "ScienceMuseum2015 tatsächlich gelesene Zeilen25–28; MacTutor52–64; konkreter Buchkatalog35–38. Oxford186–195 ordnet erste-Programm-Formel ausdrücklich vorsichtig ein."
+        },
+        {
+          "statement": "Anweisungen und konkrete Zahlenwerte sind unterschieden; wiederholte Operationen können mit veränderten Werten arbeiten.",
+          "sourceId": "source-2",
+          "anchor": "Lovelace NotesA36–56, NoteC200–205; NoteG551–570, besonders553; tatsächliche Transkription gelesen. Keine Behauptung, die gesamte Bernoulli-Rechnung hier nachgerechnet zu haben."
+        },
+        {
+          "statement": "Die Idee zur Musik ist an eine geeignete Darstellbarkeit der Beziehungen gebunden, kein damaliger Musiklauf.",
+          "sourceId": "source-2",
+          "anchor": "Lovelace NoteA70–72; ScienceMuseum28/49–51. Bedingte Formulierung nicht zu fertiger Tonerzeugung verkürzen."
+        },
+        {
+          "statement": "Die Idee zur Musik ist an eine geeignete Darstellbarkeit der Beziehungen gebunden, kein damaliger Musiklauf.",
+          "sourceId": "source-0",
+          "anchor": "Lovelace NoteA70–72; ScienceMuseum28/49–51. Bedingte Formulierung nicht zu fertiger Tonerzeugung verkürzen."
+        },
+        {
+          "statement": "Die vollständige Analytical Engine wurde zu ihren Lebzeiten nicht gebaut.",
+          "sourceId": "source-3",
+          "anchor": "Oxford169 und186–195: unbuilt Analytical Engine; nicht die1991 gebaute DifferenceEngine aus Zeile162 damit verwechseln."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/ada-lovelace.tsx",
+          "license": "Eigene WunderKompass-Erklärzeichnung mit KI-Unterstützung; kein übernommenes fremdes Bild oder Layout.",
+          "credit": "WunderKompass · eigene SVG-Erklärzeichnung mit KI-Unterstützung",
+          "alt": "Eigene Rechenfolge: Startwert zwei, plus drei und mal zwei in wählbarer Reihenfolge; Endwerte zehn beziehungsweise sieben. Kein historischer Maschinenlauf.",
+          "learningPurpose": "Eigene ausdrücklich erfundene Rechenfolge mit festem Startwert2 und drei festen Stationen. Zwei auswählbare Reihenfolgen: plus3 dann mal2 zeigt die tatsächlichen Zwischen-/Endwerte2,5,10; mal2 dann plus3 zeigt2,4,7. Operationsbeschriftungen und dargestellte Zahlen ändern sich gemeinsam. Keine historische Lochkarte, keine Bernoulli-Zahlen, kein vollständiger Maschinensimulator, keine Musikaufnahme."
+        },
+        {
+          "path": "public/world/ada-lovelace.webp",
+          "license": "Public domain — expired copyright",
+          "credit": "Antoine Claudet (1797–1867)",
+          "alt": "Historisches Foto von Ada Lovelace in einem ovalen goldfarbenen Rahmen; sie sitzt seitlich und hält ihre Hände vor sich.",
+          "learningPurpose": "Historisches Porträt zur Einordnung der Person; kein Beleg für einen Versuchsaufbau, Messergebnis oder die dargestellte Modellrechnung."
+        }
+      ],
+      "links": [
+        "topics-inventions:invention-computer",
+        "topics-people:person-grace_hopper",
+        "words:Algorithmus"
+      ],
+      "sourceLimits": [
+        "MacTutor is an older secondary biography; its final age37 conflicts with its own1815/1852 dates, not adopted. Other biographical speculation is outside this teaching scope.",
+        "Oxford201–213 is not adopted as a blanket modern AI claim. Its historical quotations are distinguished from present-day observations.",
+        "No external images, long quotations, museum logos, sound or protected layout copied. Source reading is not a license to reuse an image."
+      ],
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-al_khwarizmi",
+      "dataHash": "d4fc397a745cafb1c68378edf08c1069362416f062e1efaabf3b0d4a1c471544",
+      "teachingDataHash": "e73f6472a2318fcaf0f442e2678a51751f85ed9126f4513aa1951604e14b482c",
+      "goal": "Einen gleichen Rechenschritt auf beiden Seiten begründen.",
+      "explanation": "Seine Algebra behandelte unbekannte Größen und Regeln zum Lösen von Aufgaben. Er beschrieb Rechnungen in Worten; heutige Buchstaben und Gleichheitszeichen waren nicht seine Schreibweise. Die Aufgaben hatten auch praktische Bezüge, etwa zum Handel und zur Aufteilung von Besitz.\n\n„Algorithmus“ hängt mit einer lateinischen Form seines Namens zusammen. Das bedeutet nicht, dass er jede Schrittfolge oder die Mathematik erfunden hätte. Wissen aus verschiedenen Regionen wurde übersetzt, geprüft und weiterentwickelt.",
+      "example": "Unser eigenes Beispiel lautet: Eine unbekannte Zahl plus drei ist acht. Auf beiden Seiten werden drei abgezogen.",
+      "whyItMatters": "Du kannst einen Rechenschritt begründen und das Ergebnis mit einer Probe kontrollieren.",
+      "hint": "Unterscheide den Wert des Kästchens von der gesamten linken Seite.",
+      "feedback": "Links verschwinden die drei zusätzlichen Einheiten, rechts bleiben fünf. Beide Seiten wurden gleich verändert.\n\nDas Kästchen steht vorher und nachher für fünf. Verändert werden die beiden gesamten Seiten, von jeweils acht auf jeweils fünf.\n\nNach dem Abziehen von drei bleiben zwei gleiche Zahlen mit der Summe acht. Jede ist vier. Probe: vier plus vier plus drei ist elf.",
+      "modelLimits": "Das heutige einfache Gleichungsbeispiel verwendet moderne Schreibweise. Es rekonstruiert weder eine historische Seite noch die vollständig gelesene Originalausgabe; die genaue Edition des zusätzlich gesichteten englischen Scans ist ungeklärt.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Einen gleichen Rechenschritt auf beiden Seiten begründen.",
+        "9-11": "Den Wert der unbekannten Zahl von den Werten der gesamten Seiten unterscheiden.",
+        "12-14": "Ein neues Zahlenbeispiel lösen und durch Einsetzen prüfen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "J. J. O’Connor / E. F. Robertson · Al-Khwarizmi",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Al-Chwarizmi arbeitete im9.Jahrhundert in Bagdad; seine Algebra erläutert praktische Rechenprobleme überwiegend in Worten. Genaue Herkunft und Lebensdaten bleiben unsicher.",
+          "sourceId": "source-0",
+          "anchor": "Biografischer Haupttext und Referenzen gelesen: ungefähre Lebensdaten, unsichere Herkunft, Bagdader Arbeit, praktische Algebra, ursprüngliche Darstellung in Worten und Wortgeschichte. Nicht benötigte Prioritätsbehauptungen zur Null werden nicht übernommen."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/al-khwarizmi.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eigene Gleichungsdarstellung: derselbe Rechenschritt wird auf beiden Seiten gezeigt; keine historische Buchseite oder geometrische Originalrechnung.",
+          "learningPurpose": "Prüfe nach dem Rechenschritt den Wert des Kästchens und setze ihn in die Ausgangsaufgabe ein. Das heutige einfache Gleichungsbeispiel verwendet moderne Schreibweise. Es rekonstruiert weder eine historische Seite noch die vollständig gelesene Originalausgabe; die genaue Edition des zusätzlich gesichteten englischen Scans ist ungeklärt."
+        },
+        {
+          "path": "public/images/portraits/al-khwarizmi.webp",
+          "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
+          "credit": "А. Адашев (A. Adaschew), laut Commons",
+          "alt": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi.",
+          "learningPurpose": "Briefmarke von1983mit späterer Fantasiedarstellung; erinnert an die Person, kein zeitgenössisches Porträt oder Beleg für einen historischen Rechenaufbau."
+        }
+      ],
+      "links": [
+        "topics-history:history-zero",
+        "topics-science:science-computer",
+        "topics-people:person-ibn_sina",
+        "words:Algorithmus"
+      ],
+      "preparedSourceLimits": [
+        "Webleser kann GIF nicht darstellen; beide regulär per HTTPS mit 200 heruntergeladen und danach tatsächlich vollständig angesehen.",
+        "Arabisches Titelblatt visuell angesehen, aber keine eigenständige arabische Übersetzung oder genaue Editionsdatierung behauptet.",
+        "Unzugängliche Bodleian-IIIF-/MAA-Seiten nicht als gelesen übernommen; verwendete wissenschaftliche Quelle erreichbar."
+      ],
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-albert_einstein",
+      "dataHash": "ec7fa9b4653548c83c731976a194f04b770cd534b00f74fdcf18c418a5f1d98b",
+      "teachingDataHash": "d97648f748d5054e9f200dcda323676d23989b19e3b8028a44702d9f6c87c6d5",
+      "goal": "Anzahl und Höhe getrennt vergleichen.",
+      "explanation": "Albert Einstein lebte von 1879 bis 1955. Er wurde in Ulm geboren, studierte in der Schweiz und arbeitete unter anderem in Bern, Zürich und Berlin. Ab 1933 gehörte er dem Institute for Advanced Study in Princeton in den USA an. Das Institut ist eine eigene Forschungseinrichtung und nicht die Universität Princeton.\n\n1905 entwickelte Einstein mehrere wichtige Arbeiten. Dazu gehörten die spezielle Relativitätstheorie und eine Erklärung zum Verhalten von Licht. Für den Physiknobelpreis des Jahres 1921 wurde besonders seine Arbeit zum Gesetz des photoelektrischen Effekts hervorgehoben.\n\nBeim photoelektrischen Effekt kann Licht Elektronen aus einem Material lösen. Einstein beschrieb Licht dabei mit Energiequanten, die wir heute Photonen nennen. Die Energie eines Photons hängt von seiner Frequenz ab: Höhere Frequenz bedeutet höhere Energie pro Photon. Mehr Photonen derselben Frequenz bedeuten mehr Gesamtenergie, aber keine größere Energie jedes einzelnen Photons.\n\nUnser eigener Vergleich zeigt diese Unterscheidung mit Balken. Ihre Anzahl steht für die Zahl der Quanten in derselben gedachten Fläche und Zeitspanne. Ihre Höhe zeigt die jeweilige Energie. Zuerst ändern wir nur die Anzahl; danach verdoppeln wir bei gleicher Anzahl die Energie pro Quant.",
+      "example": "Wähle zuerst einen Balken mit einfacher Energie, dann vier Balken mit einfacher Energie.",
+      "whyItMatters": "Du kannst Gesamtenergie von der Energie eines einzelnen Lichtquants unterscheiden.",
+      "hint": "Rechne für jedes Quant seine Energie dazu und unterscheide Einzelwert und Summe.",
+      "feedback": "Die Zahl steigt von einem auf vier Balken, ihre einzelne Höhe bleibt aber gleich. Die Gesamtenergie im Beispiel steigt von einer auf vier Vergleichseinheiten.\n\nJedes der vier Quanten trägt zwei Einheiten bei. Zusammen sind es 2 + 2 + 2 + 2 = 8 Einheiten.\n\nDas Modell beschreibt die Übertragung eines Photons auf ein Elektron. Mehr Photonen derselben Frequenz erhöhen die Gesamtenergie, aber nicht die Energie pro Photon. Die Mindestenergie für den beschriebenen Vorgang wird dadurch nicht erreicht.",
+      "modelLimits": "Frei gewählte Vergleichseinheiten und drei feste Zustände. Keine Photonenform, Größenmessung, komplette Wellenbeschreibung oder reale Messung des photoelektrischen Effekts.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Anzahl und Höhe getrennt vergleichen.",
+        "9-11": "Die Summe aus Anzahl und Einzelenergie bestimmen.",
+        "12-14": "Eine Aussage über Gesamtenergie von einer Einphoton-Schwelle abgrenzen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Universität Zürich: Einsteins Lebensweg und Nobelpreisarbeit",
+          "url": "https://www.uzh.ch/en/researchinnovation/excellence/nobelprize/einstein.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Institute for Advanced Study: Einstein am Institut1933–1955",
+          "url": "https://www.ias.edu/scholars/albert-einstein",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Institute for Advanced Study / AIP: Einsteins Arbeiten von1905",
+          "url": "https://www.ias.edu/albert-einstein-great-works",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "OpenStax Physics: Photonenenergie und photoelektrischer Effekt",
+          "url": "https://openstax.org/books/physics/pages/21-2-einstein-and-the-photoelectric-effect",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-nist-gps",
+          "organisation": "NIST: Relativität und GPS-Uhren",
+          "url": "https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test",
+          "checkedOn": "2026-11-05",
+          "rightsBasis": "Tatsächlich gelesene öffentliche NIST-Fachseite verlinkt; eigene knappe deutsche Erklärung, keine fremden Bilder oder Textpassagen übernommen."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Einstein lebte1879–1955; seine Arbeit zu Lichtquanten und der Nobelpreis für1921 bleiben von anderen Arbeiten und dem Zeitpunkt der Preisübergabe unterscheidbar.",
+          "sourceId": "source-0",
+          "anchor": "UZH73–79/86–91 birthdeath/Swissstudy/Bern/Zuerich/Berlin/1905specialrelativity/lightquanta/Nobelprizeyear1921. Do not adopt twentyyearproof simplification or anecdotal grades."
+        },
+        {
+          "statement": "Einstein arbeitete1933–1955 am Institute for Advanced Study in Princeton.",
+          "sourceId": "source-1",
+          "anchor": "IAS95–100 faculty1933–1955/Princetonaddress146–149; no unsupported modernstringtheoryconsensus."
+        },
+        {
+          "statement": "Zu Einsteins Arbeiten von1905 gehören der Lichtquantenansatz und die spezielle Relativitätstheorie; sie sind verschiedene Beiträge.",
+          "sourceId": "source-2",
+          "anchor": "IAS/AIP93–111 lightquanta/photoeffect and specialrelativity1905. No precise paperpublicationmonth vs submission conflation."
+        },
+        {
+          "statement": "Die Energie eines Photons hängt über E=hf von seiner Frequenz ab. Mehr Photonen derselben Frequenz verändern die Gesamtenergie, nicht die Energie jedes einzelnen Photons.",
+          "sourceId": "source-3",
+          "anchor": "OpenStax62–91 E=hf/samefrequencyenergy/numbervssingleenergy/workfunction/singlephotonmodel. Exclude solarcellconflation48–49/215 and biology183/irrelevantworkedexamples. Own1/4/8values not empirical."
+        },
+        {
+          "statement": "Für die genaue Zeitübertragung von GPS werden relativistische Effekte berücksichtigt; das eigene Photonenmodell ist keine Berechnung dieser Korrekturen.",
+          "sourceId": "source-nist-gps",
+          "anchor": "NIST, Putting Einstein to the Test, Absätze zu GPS-Atomuhren und notwendigen Relativitätskorrekturen (Webansicht tatsächlich gelesen am05.11.2026, Zeilen155–157)."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/albert-einstein.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eigene Balken-Zählgrafik vergleicht Anzahl und Energie je Lichtquant in drei festgelegten Zuständen; Zahlen und Balken sind keine Abbildung wirklicher Photonen.",
+          "learningPurpose": "Three own abstract bar comparisons:1x1,4x1,4x2energies for same thoughtarea/time. Balkenheight only energy, no physical photonshape, materialthreshold/emission/calibrated intensity simulation."
+        },
+        {
+          "path": "public/images/portraits/albert-einstein.webp",
+          "license": "Public Domain",
+          "credit": "Ferdinand Schmutzer",
+          "alt": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-science:science-gps",
+        "topics-science:science-shadows",
+        "topics-people:person-lise_meitner",
+        "words:Photon",
+        "words:Frequenz"
+      ],
+      "preparedSourceLimits": [
+        "MaxPlanckactualpagebody only trackingimage1line; not counted as factual full read. Suitable accessibleUZH/IAS/OpenStax adopted. No currentNobelpage200claim."
+      ],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Einstein-actually-read-institutional-history-photon-energy-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-alexander_humboldt",
+      "dataHash": "b0762072d38f93f300e3ab2c55982adb3819a584994037be27c384616a67d1f5",
+      "teachingDataHash": "c70b277ef1de44cc478302249827938f50ef1e813148bfdf01091a7fffe9dca0",
+      "goal": "Zwei Werte derselben Notiz vergleichen.",
+      "explanation": "Humboldt lebte von 1769 bis 1859. Von 1799 bis 1804 reiste er mit dem Naturforscher Aimé Bonpland durch Teile Amerikas. Die beiden sammelten Pflanzen und notierten Beobachtungen. Messgeräte halfen dabei, Bedingungen an unterschiedlichen Orten zu vergleichen.\n\nWo wachsen welche Pflanzen? Humboldt wollte Pflanzen nicht nur benennen, sondern auch ihre Verteilung verstehen. Im Naturgemälde der Anden ordnete er Pflanzen verschiedenen Höhenzonen zu. Das 1807 veröffentlichte Buch zur Pflanzengeographie nennt Humboldt und Bonpland; später arbeitete auch der Botaniker Carl Sigismund Kunth an der Auswertung der Sammlung mit.\n\nDie Reise führte durch bewohnte und unter europäischer Kolonialherrschaft stehende Gebiete. Örtliche Menschen unterstützten die Expedition. Die Stiftung Preußische Schlösser und Gärten erläutert am Beispiel von José de la Cruz, wie solche Beiträge in europäischen Darstellungen oft übersehen wurden. Ein berühmter Name steht nicht für die Arbeit eines Menschen allein.\n\nWir vergleichen zwei erfundene Höhennotizen. An jeder der drei vorgegebenen Höhen steht eine Temperatur. Ein Vergleich kann Unterschiede sichtbar machen. Er erklärt aber noch nicht jede Ursache: Für wirkliche Orte müssten Zeitpunkt, Wetter und weitere Bedingungen berücksichtigt werden. Unsere Zahlen sind keine Messungen von Humboldts Reise.",
+      "example": "In der erfundenen Notiz A stehen bei 500 Metern 18 Grad Celsius und bei 1500 Metern 12 Grad Celsius.",
+      "whyItMatters": "Du vergleichst Angaben mit gleichen Einheiten und erkennst, welche weitergehende Erklärung zusätzliche Belege braucht.",
+      "hint": "Prüfe die Höhen und Temperaturen getrennt; eine gleiche Angabe macht nicht automatisch alle anderen gleich.",
+      "feedback": "1500 Meter liegen höher als500 Meter;12 Grad sind weniger als18 Grad. Das beschreibt die zwei vorgegebenen Beispielwerte, keine allgemeine Wetterregel.\n\nBeide Notizen nennen1500 Meter, aber verschiedene Temperaturen. Über einen wirklichen Ort und die Ursache des Unterschieds sagen die frei gewählten Zahlen nichts aus.\n\nEin Unterschied kann mehrere Ursachen haben. Vergleichbare Bedingungen und zusätzliche Beobachtungen helfen, die Vermutung zu prüfen; sie machen aus einem ersten Vergleich noch keinen automatischen Beweis.",
+      "modelLimits": "Zwei frei erfundene Momentaufnahmen sind keine Klimareihe, Höhenformel oder Rekonstruktion von Humboldts Messinstrumenten. Gleiche Höhe erzwingt keine gleiche Temperatur.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Zwei Werte derselben Notiz vergleichen.",
+        "9-11": "Gleiche Höhe von gleicher Temperatur unterscheiden.",
+        "12-14": "Einen Vergleich von einer begründeten Ursache trennen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Alexander von Humboldt-Stiftung · Amerika-Reise1799–1804",
+          "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "BBAW-Archiv · Alexander von Humboldt",
+          "url": "https://archiv.bbaw.de/nachlaesse/nachlaesse/humboldt-alexander-von",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "BBAW · Pflanzengeographie als gemeinsame Forschungsarbeit (PDF)",
+          "url": "https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von1807",
+          "url": "https://www.sammlungen.hu-berlin.de/objekte/-/16678/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "SPSG · José de la Cruz und örtliche Unterstützung der Forschungsreise",
+          "url": "https://www.spsg.de/forschung-sammlungen/forschung/koloniale-kontexte/friedrich-georg-weitsch-alexander-von-humboldt-und-aime-bonpland-am-fuss-des-chimborazo",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Humboldt und Bonpland unternahmen1799–1804 eine Forschungsreise und verwendeten unterschiedliche Beobachtungs- und Messinstrumente.",
+          "sourceId": "source-0",
+          "anchor": "Foundationactual70–86:1799–1804journey/instruments; anecdotesandcoloniallabels notadopted."
+        },
+        {
+          "statement": "Humboldt lebte1769–1859; wissenschaftliche Aufzeichnungen und Zusammenarbeit gehören zu seiner Arbeit.",
+          "sourceId": "source-1",
+          "anchor": "BBAWarchive52–57:1769–1859,Bonnpland1799–1804,scientificrecords. Do notadoptinaccurateFreibergHandelsakademieeducationwording."
+        },
+        {
+          "statement": "Pflanzengeographie verbindet Pflanzenvorkommen mit Höhenlagen und weiteren Bedingungen; ihre Ausarbeitung beruht auf Aufzeichnungen und Zusammenarbeit.",
+          "sourceId": "source-2",
+          "anchor": "BBAW2021PDF actualpages0–1/lines5–33:Andesvegetationheightzones,globalrecords/colleagues/KunthandDarwininfluence. Notall4pages/fullneweditionread."
+        },
+        {
+          "statement": "Das katalogisierte Werk zur Pflanzengeographie von1807 nennt Humboldt und Bonpland; das konkrete Objekt ist von einer vollständig gelesenen Gesamtausgabe zu unterscheiden.",
+          "sourceId": "source-3",
+          "anchor": "HUobject16678 actual9–14:1807title,coauthorsHumboldt/Bonpland,bookandtableau metadata. Notfull182pagesorimagecopied."
+        },
+        {
+          "statement": "Die Reise führte durch bewohnte koloniale Räume; José de la Cruz und weitere örtliche Unterstützung gehören zur Einordnung, keine Alleinleistung Humboldts.",
+          "sourceId": "source-4",
+          "anchor": "SPSGactual2–6:inhabitedcolonialcontext,Bonpland,Joséde laCruzandlocallyassistedexpedition,criticalreception. Paintingnotadoptedaswebsiteasset."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/alexander-humboldt.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gedachte Notizen vergleichen an denselben drei Höhen500,1500und2500Metern unterschiedliche Temperaturwerte; keine historischen Reisedaten.",
+          "learningPurpose": "Two freely invented temperature triplets18/12/6and22/16/10at500/1500/2500m; fixedaxes0–24°C and500–2500m; no historical data, universal lapse rate, realweather, plantdistribution or climatic forecast."
+        },
+        {
+          "path": "public/images/portraits/alexander-von-humboldt.webp",
+          "license": "Public Domain",
+          "credit": "Verlag von L. Haase & Co., Berlin; Fotograf nicht benannt",
+          "alt": "Historisches Porträtfoto von Alexander von Humboldt in einem dunklen Mantel.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-animals:animal-jaguar",
+        "topics-people:person-charles_darwin",
+        "words:Klima",
+        "words:Wetter"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-bertha_benz",
+      "dataHash": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75",
+      "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+      "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+      "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+      "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+      "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+      "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+      "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+      "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+        "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+          "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Bertha Benz leistete praktische und finanzielle Beiträge;1888 fuhr sie mit ihren Söhnen von Mannheim nach Pforzheim.",
+          "sourceId": "source-0",
+          "anchor": "294–320 birth3May1849/practicaltechnicalandfinancialcontribution/August1888sonsMannheim→Pforzheim/death1944. No improvisedfuel/repairrecipe or precisehours/distance adopted."
+        },
+        {
+          "statement": "Carl Benz meldete1886das Motorwagenpatent an; die gemeinsame technische Entwicklung wird nicht als Berthas alleinige Patentanmeldung dargestellt.",
+          "sourceId": "source-1",
+          "anchor": "294–307 birth1844Karlsruhe/Mannheim work1886patent37435/death1929Ladenburg. Promotionalfirst-only/worldlargest claims excluded."
+        },
+        {
+          "statement": "Das DPMA unterscheidet Anmeldung am29.Januar und Erteilung am2.November1886; Berthas Fahrt erfolgte mit MotorwagenNr.3 und zeigte praktische Anforderungen.",
+          "sourceId": "source-2",
+          "anchor": "27–61 patentapplication29Jan/grant2Nov1886;model3/sons/practicalneeds. Exclude firstevervehicle and exactthirdgear/roundtrip13hour assertions, which are not needed and conflict in scope with other accounts."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/bertha-benz.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+          "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+        },
+        {
+          "path": "public/images/portraits/bertha-benz.webp",
+          "license": "Public Domain",
+          "credit": "Bühler, Mannheim",
+          "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-karl_benz",
+        "topics-inventions:invention-car",
+        "words:Hypothese"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-cai_lun",
+      "dataHash": "b1dbfd05f762695882f81d7d3d842b7cf738a9999d13d0f84debf51007a2ec3d",
+      "teachingDataHash": "12302d8e668738d542eb21110b47126d14dbf2ff10e89ff52d4e15669c70523f",
+      "goal": "Anzahl und Verteilung unterscheiden.",
+      "explanation": "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.\n\nFür das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.\n\nPapier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.\n\nDie gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen.",
+      "example": "Im eigenen Linienbild sind acht Linien zuerst in einem Feld. Danach liegen je zwei Linien in vier Feldern.",
+      "whyItMatters": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen.",
+      "hint": "Prüfe, welche Eigenschaft tatsächlich dargestellt ist und welche überhaupt nicht gemessen wurde.",
+      "feedback": "Auch nach dem Verteilen sind es acht Linien: viermal zwei. Ihre Anordnung und die belegten Felder verändern sich.\n\nDie Zeichnung vergleicht die Anordnung ihrer Linien. Eine Aussage über die Reißfestigkeit echter Blätter braucht passende Materialdaten und Untersuchungen.\n\nEin älterer Fund und ein späterer Verbesserungsbericht können beide richtig eingeordnet werden. Der Bericht nennt nicht automatisch den ersten Beginn aller Papierherstellung.",
+      "modelLimits": "Reine Verteilungsskizze, keine Mikroskopaufnahme, Dicken- oder Festigkeitsmessung. Die spätere Darstellung Cai Luns ist kein zeitgenössisches Porträt.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Anzahl und Verteilung unterscheiden.",
+        "9-11": "Von einem gezeichneten Muster nicht auf eine ungemessene Materialeigenschaft schließen.",
+        "12-14": "Überlieferte Verbesserung und frühere Sachfunde zusammen beurteilen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Hunan: Cai Lun als Verbesserer der Papierherstellung",
+          "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+          "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+          "url": "https://paper.gatech.edu/fiber-pulp",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+          "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Cai Lun wird als kaiserlicher Beamter mit einer Verbesserung der Papierherstellung verbunden; genaue Geburtsjahre werden nicht ungeprüft übernommen.",
+          "sourceId": "source-0",
+          "anchor": "Hunan88: imperialofficial/earlierexperience/improvedprocess; exact61or63birthnotadopted."
+        },
+        {
+          "statement": "Archäologische Papierfunde sind älter als der Bericht für105; dieser Bericht belegt keine voraussetzungslose Erfindung sämtlichen Papiers.",
+          "sourceId": "source-1",
+          "anchor": "BarrettJRAS2011actual481: archaeologicalpaperpredates105; recordedimprovement105. Onlyboundedpassagesread, nofullarticleororiginalexcavationclaimed."
+        },
+        {
+          "statement": "Papier kann aus pflanzlichen Cellulosefasern hergestellt werden, die im Herstellungsprozess zusammenfinden.",
+          "sourceId": "source-2",
+          "anchor": "Museum103/130–168: plantcellulose/fibresjoininpaperprocess; no erroneousgenus/species186–187orunrelatedindustrialchemistryadopted."
+        },
+        {
+          "statement": "Das Museumsmaterial regt die Beobachtung von Fasern und der Papierstruktur an; das eigene Modell übernimmt weder Arbeitsblatt noch Mikroskopaufnahme.",
+          "sourceId": "source-3",
+          "anchor": "TeacherPDF25–27/48–85: cellulosefibres and actualobservationquestions, noworksheet/images/SEMphotonexplanationcopied."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/cai-lun.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Acht gleich lange eigene Faserlinien liegen wahlweise in einem oder in vier Feldern; ihre Anzahl bleibt gleich.",
+          "learningPurpose": "Exactly8segments each80SVGunits, firstallwithinupperleftquadrant then2per4quadrants; count/lengthconstant, distributiononly, norealstrengthclaim."
+        },
+        {
+          "path": "public/images/portraits/cai-lun.webp",
+          "license": "Public Domain (PD-old-100-expired / PD-Art)",
+          "credit": "Unbekannter Künstler",
+          "alt": "Spätere Druckgrafik aus dem 18. Jahrhundert, die Cai Lun als Schutzpatron der Papierherstellung zeigt.",
+          "learningPurpose": "Spätere Druckgrafik aus dem18.Jahrhundert; Darstellung als Schutzpatron, kein zeitgenössisches Porträt und kein Beleg für einen historischen Produktionsversuch."
+        }
+      ],
+      "links": [
+        "topics-history:history-paper",
+        "topics-inventions:invention-printing",
+        "topics-people:person-katsushika_hokusai"
+      ],
+      "preparedSourceLimits": [
+        "OxfordCabinet502notactualcontent; RSC405notactualcontent. Appropriate accessiblemuseumandactualpeer-reviewedhistorypassagessubstitute."
+      ],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Cai-Lun-actually-read-historical-improvement-fibre-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-charles_darwin",
+      "dataHash": "da7bab4901859031c9054f06515355e5814991f9a0acea76966c0ee8cfa13208",
+      "teachingDataHash": "c174f9848b213c043e4b6ba5a415db34bf49b21e3ea94e42730359ac6dcee374",
+      "goal": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+      "explanation": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.\n\nBei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch.",
+      "example": "Schalte von der Elterngeneration zur neuen Generation unseres Beispiels.",
+      "whyItMatters": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache.",
+      "hint": "Beziehe A jeweils auf alle Lebewesen derselben Generation.",
+      "feedback": "Die neue Generation besteht aus Nachkommen, also anderen Individuen. Die Kreise zeigen keine Verwandlung derselben Tiere.\n\nVier von acht ist die Hälfte. Zwölf von sechzehn ist drei Viertel. Eine gleichbleibende Anzahl von B bedeutet hier keinen gleichbleibenden Anteil von A.\n\nDas Beispiel setzt Vererbung und unterschiedliche Fortpflanzung voraus. Bei einer wirklichen Population müssen passende Belege hinzukommen und andere Ursachen berücksichtigt werden.",
+      "modelLimits": "Erfundene Häufigkeiten ohne populationsgenetische Simulation oder universelle Vorhersage. Zählen allein beweist keine Ursache, und ein Individuum verändert nicht nach Bedarf sein erbliches Merkmal.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+        "9-11": "Anteile statt nur die absolute Anzahl vergleichen.",
+        "12-14": "Eine mögliche Ursache von einer bloßen Häufigkeitsbeobachtung unterscheiden."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Natural History Museum · Reise, Vergleiche und Edmonstone",
+          "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Linnean Society · Darwin und das Buch von 1859",
+          "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Linnean Society · Wallaces eigener Beitrag und 1858",
+          "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "UC Berkeley Understanding Evolution · natürliche Selektion",
+          "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Darwins Reise1831–1836 und spätere Vergleiche gehören zur Entwicklung seiner Überlegungen; John Edmonstone vermittelte ihm Präparationstechniken.",
+          "sourceId": "source-0",
+          "anchor": "Tatsächlich gelesene Stellen 79,84–106,123–131; selected actual returned passages. John Edmonstone taught taxidermy; voyage1831–1836, collection and years of subsequent comparisons; variation/reproduction; pigeon-breeding example. Grenzen: No instant Galapagos revelation; dated exact finchspecies count excluded; desirable/strongest as universal fitness excluded; no copied source images."
+        },
+        {
+          "statement": "Darwins Buch erschien1859; die spätere Veröffentlichung wird von der1858ausgetauschten und vorgestellten Arbeit unterschieden.",
+          "sourceId": "source-1",
+          "anchor": "Tatsächlich gelesene Stellen 29–37. Voyage collections and later work; book1859; Wallace1858 correspondence. Grenzen: Full1859 book not read; no whole primary paper claim."
+        },
+        {
+          "statement": "Wallace entwickelte einen eigenen ähnlichen Erklärungsansatz; Beiträge beider wurden am1.Juli1858vorgestellt, ohne gemeinsame Anwesenheit der Autoren zu behaupten.",
+          "sourceId": "source-2",
+          "anchor": "Tatsächlich gelesene Stellen 28–31. Independent Wallace contribution, similar not identical proposals, joint paper presented1July1858. Grenzen: No assertion that both authors attended together; no full original1858 paper read."
+        },
+        {
+          "statement": "Erbliche Variation und unterschiedliche Fortpflanzungsbeiträge können Merkmalsanteile über Generationen verändern; natürliche Selektion ist nicht der einzige Evolutionsmechanismus.",
+          "sourceId": "source-3",
+          "anchor": "Tatsächlich gelesene Stellen 63–73. Variation, different reproductive contribution and heredity can change trait frequency; other evolution mechanisms named. Grenzen: No borrowed beetle pictures; no universal prediction that eventually all real individuals have one trait; no causal inference from counts alone."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/charles-darwin.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei erfundene Generationen zeigen A-Kreise mit Streifen und B-Kreise mit Kreuz in unterschiedlichen Anzahlen; kein einzelnes Lebewesen wird verwandelt.",
+          "learningPurpose": "Own invented inherited A/B variants; 4A+4B parents, 12A+4B distinct offspring from assumed3vs1offspring perparent. Stripe/cross redundancy; no real species, copied beetles, individualmorph, gene/sex or universalfinality simulation."
+        },
+        {
+          "path": "public/images/portraits/charles-darwin.webp",
+          "license": "Public Domain",
+          "credit": "Herbert Rose Barraud",
+          "alt": "Charles Darwin mit langem weißem Bart auf einem historischen Porträtfoto.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-jane_goodall",
+        "topics-animals:animal-green-sea-turtle",
+        "topics-people:person-mary_anning",
+        "words:Evolution"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Darwin-Armstrong-actually-read-institutional-passages-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-grace_hopper",
+      "dataHash": "39bab7ca7ea2de9b6fbd7e935b0f9b7d98b308dd4407898459c4e52fa791b626",
+      "teachingDataHash": "7158434ddb56d5112c2cb11e94f5b2c17f05afee8a29b1f761cc95383c4063e6",
+      "goal": "Wort und Rechenart unterscheiden.",
+      "explanation": "Grace Hopper arbeitete daran, Programme verständlicher aufzuschreiben. Mit ihrem Team entwickelte sie frühe Übersetzungsprogramme und FLOW-MATIC, das Wörter für Anweisungen nutzte. Ihre Arbeit trug zur Entwicklung von COBOL bei.\n\nEin Compiler überträgt ein Programm in eine andere, zur weiteren Verarbeitung geeignete Darstellung. Dabei soll die Bedeutung erhalten bleiben. Das ist etwas anderes, als für jede Aufgabe automatisch einen guten Plan zu erfinden.",
+      "example": "Du schaltest zwischen den beiden eigenen Eingaben ADDIERE 2 3 und ADD 2 3 um.",
+      "whyItMatters": "Du unterscheidest einen Fehler im Plan von einem Fehler bei seiner Übersetzung.",
+      "hint": "Eine Übersetzung soll die angegebene Rechenanweisung erhalten, nicht nur die gleichen Zahlen zeigen.",
+      "feedback": "Beide Wörter werden hier derselben Addition zugeordnet: zwei plus drei ist fünf. Die Wortlänge ist keine Rechenoperation.\n\nDas Wort gibt Addition vor. Aus zwei plus drei wird bei der falschen Zuordnung zwei mal drei: fünf und sechs unterscheiden sich.\n\nEine Übersetzung kann eine falsch gewählte Anweisung treu übertragen. Für das gesuchte Produkt muss schon der Ausgangsplan die Multiplikation fordern; anschließend braucht es passende Proben.",
+      "modelLimits": "Heutige erfundene Schreibweisen, kein echter FLOW-MATIC-/COBOL-Compiler, keine historische Programmausführung oder automatische Erstellung einer vollständigen Problemlösung. Historische Selbstauskünfte und spätere Einordnung bleiben unterscheidbar.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Wort und Rechenart unterscheiden.",
+        "9-11": "Übersetzung an ihrer Bedeutung prüfen.",
+        "12-14": "Fehler im Plan von Fehlern der Übersetzung trennen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Computer History Museum · Interview mit Grace Hopper, Dezember 1980 (PDF)",
+          "url": "https://archive.computerhistory.org/resources/text/Oral_History/Hopper_Grace/102702026.05.01.pdf",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Computer History Museum · Grace Murray Hopper",
+          "url": "https://computerhistory.org/profile/grace-murray-hopper/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Hoppers Rückblick beschreibt wiederverwendbare Teilprogramme, wortorientierte Anweisungen und Teamarbeit an Sprachen und Standards. Automatisches Übersetzen ersetzt nicht den menschlichen Programmentwurf.",
+          "sourceId": "source-0",
+          "anchor": "Seite7–10: Wiederverwendung von Teilprogrammen, Wunsch nach verständlicheren Anweisungen und Wortorientierung von FLOW-MATIC. Seite34: automatisches Übersetzen ersetzt nicht den Entwurf des Programms. Seite37–38: Beteiligung an CODASYL, Teams, Sprachstandards und Übersetzungstests."
+        },
+        {
+          "statement": "Hopper arbeitete an frühen Compilern und trug zu COBOL bei. Ihre Lebensdaten1906–1992 werden ohne die widersprüchliche Alterszahl des Profils übernommen.",
+          "sourceId": "source-1",
+          "anchor": "New York1906, Mathematikstudium, Lehrtätigkeit, Navy/Harvard, Eckert-Mauchly, frühe Compiler und Beitrag zu COBOL. Tod am1.Januar1992; alte Jahresangaben1906–1992 bleiben."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/grace-hopper.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gleichbedeutende Schreibweisen zeigen dieselbe einfache Rechenanweisung und dasselbe Ergebnis.",
+          "learningPurpose": "Achte auf die Rechenart und die Zahlen. Eine kürzere Anweisung soll die Bedeutung erhalten. Heutige erfundene Schreibweisen, kein echter FLOW-MATIC-/COBOL-Compiler, keine historische Programmausführung oder automatische Erstellung einer vollständigen Problemlösung. Historische Selbstauskünfte und spätere Einordnung bleiben unterscheidbar."
+        },
+        {
+          "path": "public/images/portraits/grace-hopper.webp",
+          "license": "Public Domain (U.S. Navy)",
+          "credit": "James S. Davis / U.S. Navy",
+          "alt": "Grace Hopper in Marineuniform neben der Flagge der USA.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-ada_lovelace",
+        "topics-science:science-computer",
+        "words:Algorithmus"
+      ],
+      "preparedSourceLimits": {
+        "oldSmithsonian": "Erst500überWebleser, www-Varianteebenfalls500; nicht als weltweit defekt oder404 bezeichnet.",
+        "oldNavy": "Leseversuch Timeout; frühere Belege erhalten, keine Zugriffssperre umgangen.",
+        "replacement": "Aktuell lesbare CHM-Primärquelle+Museumsbiografie für die neue Fachredaktion vorgesehen."
+      },
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-jane_goodall",
+      "dataHash": "0b0e7a07df9baf30dcf9c3e35e7a80039fa470715bc94e90d93412c170752ea5",
+      "teachingDataHash": "1c5496856cf1595be64d0a563c47f88d0bff33f15838447f566f4f5dd4e27089",
+      "goal": "Eine sichtbare Veränderung genau beschreiben.",
+      "explanation": "Jane Goodall wurde 1934 in London geboren und starb 2025. Ab 1960 beobachtete sie wilde Schimpansen in der Region Gombe im heutigen Tansania. Für die Forschung war wichtig, einzelne Tiere über längere Zeit wiederzuerkennen und ihr Verhalten genau zu beschreiben.\n\nGoodall sah Schimpansen mit Pflanzenstängeln und Zweigen Termiten aus ihren Bauten holen. In ihrem späteren eigenen Bericht beschreibt sie, wie Tiere manchmal auch Blätter von einem Zweig entfernten, bevor sie ihn benutzten. Damit beobachtete sie nicht nur den Gebrauch eines Gegenstands, sondern auch dessen Vorbereitung.\n\nLangfristige Beobachtungen brauchen viele Menschen. Forschende und örtliche Mitarbeiterinnen und Mitarbeiter führten die Arbeit in Gombe weiter. Wiederholtes Beobachten kann zeigen, in welchen Situationen Verhalten auftritt und wie es sich zwischen Tieren oder Zeiten unterscheidet. Eine einzelne Szene allein beantwortet nicht alle diese Fragen.\n\nGoodall setzte sich außerdem für Tiere und ihre Lebensräume ein. Das Jane Goodall Institute verbindet Forschung mit Naturschutz und Zusammenarbeit mit örtlichen Gemeinschaften. Das Jugendprogramm Roots & Shoots entstand 1991 in Tansania; die Beteiligten entwickeln eigene Vorhaben für Menschen, Tiere und Umwelt.",
+      "example": "Schalte zwischen den beiden Zweigansichten um und vergleiche den braunen Zweig mit den grünen Blättern.",
+      "whyItMatters": "Du kannst Werkzeugvorbereitung beschreiben und die Grenze einer einzelnen Darstellung benennen.",
+      "hint": "Ordne die Veränderung am Gegenstand und seine anschließende Verwendung zeitlich getrennt ein.",
+      "feedback": "Die grün gezeichneten Blätter fehlen in der zweiten Ansicht. Der braune Zweig ist unverändert an seiner Stelle.\n\nDas Entfernen der Blätter verändert den Gegenstand. Sein folgender Einsatz ist die Benutzung. Eine Vorbereitung allein zeigt noch nicht jeden späteren Erfolg.\n\nDie konkrete Szene kann Werkzeugvorbereitung und Benutzung dokumentieren. Für Verallgemeinerungen oder Aussagen über Häufigkeit sind weitere passende Beobachtungen nötig.",
+      "modelLimits": "Schematische Zweigzustände, keine Originalaufnahme, Verhaltensmessung, Behauptung über jedes Tier oder Bewertung menschlicher Moral. Das Bild belegt keine erstmalige weltweite Werkzeugnutzung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Eine sichtbare Veränderung genau beschreiben.",
+        "9-11": "Werkzeugvorbereitung und Benutzung getrennt erkennen.",
+        "12-14": "Eine Beobachtung nicht pauschal auf alle Tiere und Situationen übertragen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Jane Goodall Institute: Lebensweg und Forschung in Gombe",
+          "url": "https://janegoodall.org/jane-goodalls-story/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Jane Goodall im eigenen Rückblick2015: Zweige als Werkzeuge vorbereiten",
+          "url": "https://janegoodall.org/news/55-years-at-gombe-qa-with-jane-on-origins-of-life-work/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Gombe Stream Research Center: langfristige Beobachtung und Teamarbeit",
+          "url": "https://janegoodall.org/programs/gombe-stream-research-center/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "Jane Goodall Institute: Zeitlinie von Forschung und Naturschutz",
+          "url": "https://janegoodall.org/jgi-timeline/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "Jane Goodall Institute: Erinnerung1934–2025",
+          "url": "https://janegoodall.org/remembering-jane/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Goodall begann1960in Gombe mit Beobachtungen wildlebender Schimpansen; sie wurde1934in London geboren.",
+          "sourceId": "source-0",
+          "anchor": "JGIstory105/146/159 wildchimp1960/Gombe,bornLondon1934;173Roots1991/174community1994. ExactPhD1965timelinevs1966story notadopted."
+        },
+        {
+          "statement": "Goodall beschreibt in ihrem eigenen Rückblick, wie Schimpansen Stängel beziehungsweise Zweige vorbereiten, unter anderem durch Entfernen von Blättern.",
+          "sourceId": "source-1",
+          "anchor": "OwnQ&A2015actual133–134 grassstems/leafytwigs/stripbeforeuse. Exclude colonial/medical/safetyanecdotes108–110, graphicviolence/mental-moralassertions119–131."
+        },
+        {
+          "statement": "Das Forschungszentrum beschreibt langfristige kontinuierliche Beobachtung, einzelne Tierverfolgungen und Teamarbeit.",
+          "sourceId": "source-2",
+          "anchor": "Gombe138continuousobservation/team/169–180focalfollows and noninvasivetechnology. Animated0counts/oldannualtotals notadopted."
+        },
+        {
+          "statement": "Die Zeitlinie unterscheidet Beginn der Gombe-Arbeit1960, Institutsgründung1977, Roots&Shoots1991 und spätere gemeindebezogene Naturschutzarbeit.",
+          "sourceId": "source-3",
+          "anchor": "Timeline108/115/129 birth/1960Gombe/tooluse;173institute1977/186Roots1991/199community1994. No inaccuratefirst-everallworld claim."
+        },
+        {
+          "statement": "Das Institut nennt Goodalls Tod am1.Oktober2025; ihre Lebenszeit wird nicht als gegenwärtige aktive Laufbahn fortgeschrieben.",
+          "sourceId": "source-4",
+          "anchor": "Remembering102 actualdeath1October2025/104lateradvocacy; old1934–2025factwholepreserved."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/jane-goodall.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Derselbe eigene gezeichnete Zweig bleibt gleich lang und am selben Ort; vier gezeichnete Blätter sind vor beziehungsweise nach der Vorbereitung sichtbar oder entfernt.",
+          "learningPurpose": "Same brown twig fixedwholeSVGpath in bothstates;fourfreelychosen greenleaves present/absent. No depictedchimpanzee/termites/mindreading/reconstructedfielddata; distinguishpreparation/use/claimscope."
+        },
+        {
+          "path": "public/images/portraits/jane-goodall.webp",
+          "license": "Public Domain (U.S. Department of State)",
+          "credit": "U.S. Department of State; Ausschnitt von Commons-Nutzer Stemoc",
+          "alt": "Jane Goodall mit zurückgebundenen grauen Haaren im Porträt.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-animals:animal-western-lowland-gorilla",
+        "topics-people:person-charles_darwin",
+        "words:Lebensraum"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Goodall-actually-read-own-toolmaking-account-history-community-and-existing-photo-rights.json"
+    },
+    {
+      "id": "topics-people:person-johannes_gutenberg",
+      "dataHash": "e2ab2f29bb32a35293414915cea45245c29aad7a72a21da6fe2983593a634eb1",
+      "teachingDataHash": "50f76b1be885a32764846e3b9c4ea8700ca0e89e0e2860121803c5362cb26356",
+      "goal": "Die vorgegebene Reihenfolge lesen.",
+      "explanation": "Johannes Gutenberg wurde um 1400 in Mainz geboren und starb 1468. Er war auch in Straßburg tätig. Nicht jede Lebensstation ist sicher überliefert; ein genaues Geburtsdatum wird hier nicht behauptet.\n\nSein Drucksystem zerlegte Texte in einzelne Zeichen. Mit geeigneten Formen konnten viele Metalllettern gegossen und zu Wörtern, Zeilen und Seiten zusammengesetzt werden. Die Werkstatt verband sie mit passender Farbe, Papier oder Pergament und einer Presse. Ein gedruckter Text konnte erneut abgezogen werden; für einen anderen Text ließen sich Zeichen neu ordnen.\n\nDie Gutenberg-Bibel entstand in den frühen bis mittleren 1450er-Jahren. An Finanzierung und Herstellung waren weitere Menschen beteiligt. Gedruckter Text bedeutete noch kein vollständig fertiges Buch: Farbige Anfangsbuchstaben und andere Ergänzungen wurden in vielen Exemplaren von Hand ausgeführt.\n\nGutenberg erfand das Drucken nicht weltweit als erster Mensch. Druckverfahren und bewegliche Zeichen waren in Ostasien schon früher bekannt. Die UNESCO beschreibt den koreanischen Jikji-Druck von 1377 als ältesten erhaltenen Beleg des Druckens mit beweglichen Metalltypen. Das ist ein früheres erhaltenes Zeugnis, kein genauer Beginn aller Druckgeschichte.",
+      "example": "In unserem eigenen Kartenbild liegt links O, in der Mitte R und rechts T. Lies von links nach rechts.",
+      "whyItMatters": "Du kannst Wiederverwendung erklären und einen historischen Druck nach Technik, Zeitpunkt und konkretem Exemplar einordnen.",
+      "hint": "Zähle für jedes Zeichen getrennt die gleichzeitig benötigten Positionen und die vorhandenen Stücke.",
+      "feedback": "Die vorgegebenen Positionen ergeben O–R–T, also ORT. Dieselben Buchstaben in einer anderen Reihenfolge ergeben einen anderen Text.\n\nOTTO braucht zwei O und zwei T zugleich. Vorhanden ist jeweils eines; ein zweites O und ein zweites T fehlen. Späteres Wiederverwenden einer Letter ist von zwei gleichzeitigen Positionen verschieden.\n\nEin früheres erhaltenes Zeugnis widerspricht einer weltweiten Erstbehauptung für Gutenberg. Dennoch kann seine Werkstatt einen wichtigen eigenen Beitrag geleistet haben. Der älteste erhaltene Beleg ist keine vollständige Chronik aller früheren Versuche.",
+      "modelLimits": "Buchstabenkarten zeigen nur Reihenfolge und Wiederverwendung. Keine Typengieß-, Pressen- oder Tintenanleitung, keine originalgetreue Metalltype und keine Rekonstruktion eines bestimmten historischen Druckvorgangs. Der spätere Kupferstich ist kein Lebenszeitfoto.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Die vorgegebene Reihenfolge lesen.",
+        "9-11": "Gleichzeitigen Zeichenbedarf von späterer Wiederverwendung unterscheiden.",
+        "12-14": "Einen erhaltenen älteren Technikbeleg und regionale Innovation sachgerecht einordnen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Stadt Mainz: einzelne Zeichen und das gemeinsame Drucksystem",
+          "url": "https://www.gutenberg.de/erfindung/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Stadt Mainz: Gutenbergs Lebensdaten und ihre Unsicherheiten",
+          "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Stadt Mainz: gedruckte Bibel und nachträgliche Handarbeit",
+          "url": "https://www.gutenberg.de/bibel/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "UNESCO: der erhaltene Jikji-Metalltypendruck von 1377",
+          "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "Library of Congress: konkretes Gutenberg-Bibelexemplar",
+          "url": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Gutenbergs Drucksystem verband einzelne wiederverwendbare Typen mit weiteren Arbeitsschritten und einer Presse.",
+          "sourceId": "source-0",
+          "anchor": "Mainz31–41: separate reversible types/assembly/casting/press; no dangerous manufacturing instructions copied."
+        },
+        {
+          "statement": "Lebensdaten und frühe Werkstattgeschichte enthalten Unsicherheiten; ungefähr1400und der Tod1468werden von präzisen ungesicherten Tagesangaben unterschieden.",
+          "sourceId": "source-1",
+          "anchor": "timeline32/43/59–60/68/73: approx1400,Strasbourg,workshop/backers/dateduncertainties,1468death,laterportrait."
+        },
+        {
+          "statement": "Die Bibelherstellung war Werkstattarbeit; gedruckte Blätter konnten anschließend von Hand ergänzt und koloriert werden.",
+          "sourceId": "source-2",
+          "anchor": "MainzBible36: workshop and later hand-colour, no hard exact workforce/survivor total adopted."
+        },
+        {
+          "statement": "Der erhaltene Jikji-Metalltypendruck von1377belegt früheren Druck in Korea; ältestes erhaltenes Objekt ist nicht gleichbedeutend mit allererster Erfindung.",
+          "sourceId": "source-3",
+          "anchor": "UNESCO24–25: CheongjuJul1377and oldest currentlysurvivingmetaltype evidence, not firsteverinvention."
+        },
+        {
+          "statement": "Das konkrete Gutenberg-Bibelexemplar wird im Zusammenhang mit frühem Druck in Westeuropa beschrieben; daraus folgt keine weltweite erstmalige Erfindung des Druckens.",
+          "sourceId": "source-4",
+          "anchor": "LOCexhibition24–27: WesternEurope/likely1455/handcolouredinitials/specificvellumcopy; no claim allcopiesvellum."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/johannes-gutenberg.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Dieselben drei eigenen Buchstabenkarten T, O und R bilden wahlweise TOR oder ORT; keine historische Druckform.",
+          "learningPurpose": "Exactly3readableinventedcardsT/O/R rearrange TOR→ORT; multiset unchanged, no mirroring/printing/production simulation."
+        },
+        {
+          "path": "public/images/portraits/johannes-gutenberg.webp",
+          "license": "Public Domain",
+          "credit": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
+          "alt": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt.",
+          "learningPurpose": "Späterer Kupferstich von1584; Erinnerung an die Person, kein Lebenszeitfoto oder direktes Bild seiner Werkstatt."
+        }
+      ],
+      "links": [
+        "topics-inventions:invention-printing",
+        "topics-history:history-paper",
+        "topics-people:person-murasaki_shikibu",
+        "topics-people:person-octavia_butler",
+        "topics-people:person-ibn_sina"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-karl_benz",
+      "dataHash": "6a49d8217eebf1b63c7c3ead1df05d68a8764de361e9bf3245c5ecbb67c19549",
+      "teachingDataHash": "9b730fb07308e74f035d6ef4151aafebe873fe40ae67bf5ae7afca3584d9b3b9",
+      "goal": "Die veränderte Verbindung beschreiben.",
+      "explanation": "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.\n\nBei einem brauchbaren Motorwagen mussten Motor, Übertragung, Fahrwerk, Lenkung und Bremsen zusammenpassen. Unser eigenes Schema verändert nur eine Verbindung. Es berechnet nicht, wie sich ein wirklicher Wagen bewegt.",
+      "example": "Schalte zwischen den beiden eigenen Skizzen um. Motor und Rad bleiben gleich gezeichnet.",
+      "whyItMatters": "Du erkennst, was eine Bauteilzeichnung erklärt und welche weiteren Beobachtungen für eine Aussage über Bewegung fehlen.",
+      "hint": "Trenne den dargestellten Übertragungsweg von anderen möglichen Gründen für eine Bewegung.",
+      "feedback": "Nur die markierte Verbindung verändert sich. Die gezeichneten Bauteile bleiben an ihren Stellen.\n\nDer unterbrochene Weg kann den Motorantrieb nicht weitergeben. Das Modell erklärt weder jeden Zustand des Motors noch alle Gründe, weshalb ein Wagen rollen könnte.\n\nWeiterrollen allein beweist keinen weitergegebenen Motorantrieb. Für eine Erklärung müssen auch Kräfte, Gefälle, Reibung und der vorherige Bewegungszustand berücksichtigt werden.",
+      "modelLimits": "Gedachter Antriebsweg, keine Fahrzeugkonstruktion oder Geschwindigkeitsrechnung. Eine unterbrochene Verbindung beweist kein sofortiges Stillstehen des Rades. Keine Kraftstoff-, Reparatur- oder Bauanleitung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Die veränderte Verbindung beschreiben.",
+        "9-11": "Eine Verbindung von ihrer möglichen Wirkung unterscheiden.",
+        "12-14": "Bewegung nicht allein mit Motorantrieb gleichsetzen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Berthas Mitarbeit",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+          "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "OpenStax Physics · Trägheit und Reibung",
+          "url": "https://openstax.org/books/physics/pages/4-2-newtons-first-law-of-motion-inertia",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Carl Benz lebte1844–1929 und meldete1886das Motorwagenpatent an; genaue technische Erstprioritäten werden nicht pauschal übernommen.",
+          "sourceId": "source-0",
+          "anchor": "294–307 birth1844Karlsruhe/Mannheim work1886patent37435/death1929Ladenburg. Promotionalfirst-only/worldlargest claims excluded."
+        },
+        {
+          "statement": "Bertha Benz trug finanziell und praktisch bei und unternahm1888die Fahrt mit ihren Söhnen.",
+          "sourceId": "source-1",
+          "anchor": "294–320 birth3May1849/practicaltechnicalandfinancialcontribution/August1888sonsMannheim→Pforzheim/death1944. No improvisedfuel/repairrecipe or precisehours/distance adopted."
+        },
+        {
+          "statement": "Das Museum beschreibt den zusammengefügten Motorwagen einschließlich vorhandener beziehungsweise zugelieferter Bauteile; keine Alleinherstellung sämtlicher Teile wird behauptet.",
+          "sourceId": "source-2",
+          "anchor": "18–24 actual1886patent1844–1929,integratedcar-specificmotor andsuppliedcycleparts; no freshpreciseconsumption/speed/power/weight/range claims adopted."
+        },
+        {
+          "statement": "Trägheit beschreibt den Erhalt eines Bewegungszustands bei fehlender resultierender Kraft. Reibung und weitere Kräfte sind vom bloßen Unterbrechen einer Verbindung zu unterscheiden.",
+          "sourceId": "source-3",
+          "anchor": "60–64 inertia/netforce/friction. Exclude incorrectteacherline43 no-gravity-in-outerspace generalization. Ownconnectiondiagram must not imply a rollingwheel stopsinstantaneously ondisconnection."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/karl-benz.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eigene Verbindungsskizze Motor–Übertragung–Rad zeigt eine geschlossene oder unterbrochene Verbindung; die tatsächliche Radbewegung wird nicht berechnet.",
+          "learningPurpose": "Same motor/wheel/positions, one connection bridge changes joined/open. No calculatedrotation, realtransmission, force, inertia or speed; broken drive must not visually imply immediate wheelstop."
+        },
+        {
+          "path": "public/images/portraits/karl-benz.webp",
+          "license": "Public Domain (laut Commons: USA und Deutschland)",
+          "credit": "Unbekannter Fotograf",
+          "alt": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-bertha_benz",
+        "topics-inventions:invention-car",
+        "words:Trägheit"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-katherine_johnson",
+      "dataHash": "7f111241868ded512f43727df7ef89066d8f2a2469cb54e4071203f0dd9b240d",
+      "teachingDataHash": "457499dc0958c3ccf97f84107d9911b8917d43047f2157d595c930294699b480",
+      "goal": "Zwei Rechenwege für dieselbe Eingabe vergleichen.",
+      "explanation": "Katherine Johnson arbeitete an mathematischen Aufgaben für die Luft- und Raumfahrt. 1953 kam sie nach Langley zur NACA, der Vorgängerorganisation der NASA. Als Schwarze Frau musste sie Bildungs- und Berufsbarrieren überwinden. Ihre Berechnungen waren Teil der Zusammenarbeit vieler Fachleute.\n\n1962 prüfte sie vor John Glenns Erdumrundung elektronische Ergebnisse nach: dieselben Eingabewerte und Gleichungen, aber mit einer Tischrechenmaschine. So konnten Rechen- oder Übertragungsfehler auffallen. Das war sorgfältige Gegenprüfung, keine alleinige Freigabe einer ganzen Mission.",
+      "example": "In unserem erfundenen Beispiel ist t gleich 2. Rechnung A ergibt 2·(4−2)=4. In Rechnung B fehlt der zweite Term; dort steht 4·2=8.",
+      "whyItMatters": "Du kannst die Aussagekraft einer Gegenrechnung beurteilen und erkennst, welche zusätzlichen Belege eine wirkliche Flugbahn braucht.",
+      "hint": "Trenne eine einzelne geprüfte Stelle von einer Aussage über alle Eingaben.",
+      "feedback": "Vier und acht sind verschieden. Dieselbe Eingabe reicht nicht: Auch die Regel muss passen. Hier fehlt bei B der abzuziehende Term.\n\nDie Übereinstimmung bei 0 gilt für diesen Wert. Schon t = 2 liefert ein Gegenbeispiel zur behaupteten Gleichheit beider Regeln.\n\nEin Rechenvergleich kann Fehler entdecken und Vertrauen in die Ausführung stärken. Ob das Modell und seine Ausgangsdaten zur realen Situation passen, braucht zusätzliche Belege.",
+      "modelLimits": "Erfundene einfache Zahlenrechnungen statt Raumflugmodell. Übereinstimmung ist ein Prüfhinweis, kein Beweis aller zugrunde liegenden Annahmen; Einheiten, Eingaben und Modellgrenzen brauchen gesonderte Prüfung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Zwei Rechenwege für dieselbe Eingabe vergleichen.",
+        "9-11": "Eine einzelne Übereinstimmung von einer allgemeinen Gleichheit unterscheiden.",
+        "12-14": "Rechenprüfung und Prüfung der Modellannahmen auseinanderhalten."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "NASA · Katherine Johnson: Biografie von Margot Lee Shetterly",
+          "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Skopinski und Johnson · NASA TN D-233,1960",
+          "url": "https://ntrs.nasa.gov/citations/19980227091",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Johnson arbeitete ab1953in Langley, zunächst bei der NACA, unter rassistischer Ausgrenzung. Sie analysierte Flugbahnen und überprüfte1962für Glenn Berechnungen mit denselben Eingaben und Gleichungen.",
+          "sourceId": "source-0",
+          "anchor": "Lebensdaten1918–2020; Langley ab1953, zunächst NACA; Zugang zu Ausbildung und Arbeit unter rassistischer Ausgrenzung. Bahnanalyse für Shepard1961; zusammen mit Ted Skopinski1960 Fachbericht. Glenn1962: gleiche Zahlen und Gleichungen der elektronischen Berechnung auf Tischrechenmaschine nachgerechnet; Apollo-Zusammenführung und weitere Programme."
+        },
+        {
+          "statement": "Der Bericht von Skopinski und Johnson aus1960untersucht eine gewünschte Überflugposition auf rotierender Erde und benennt Modellannahmen und Korrekturen. Gelesene Einleitung und Zusammenfassung sind keine vollständige Prüfung sämtlicher36Seiten.",
+          "sourceId": "source-1",
+          "anchor": "Titelblatt benennt T.H.Skopinski und KatherineG.Johnson; September1960. PDF-Seite2 Zusammenfassung/Einleitung: gewünschte Überflugposition auf rotierender Erde, Richtung am Antriebsende und gewählte Umläufe. Anfangsvereinfachung kugelförmige rotierende Erde und anschließende Korrektur für Abplattung ausdrücklich genannt."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/katherine-johnson.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eigener Zahlenvergleich mit zwei Rechenwegen auf gemeinsamer Skala von null bis16 und fünf anwählbaren Schritten t=0bis4; kein Raumflugmodell.",
+          "learningPurpose": "Achte darauf, ob nur ein einzelner Wert übereinstimmt oder auch die übrigen ausgewählten Werte. Ein Zahlenvergleich ist noch kein Beleg für eine echte Raumflugbahn. Erfundene einfache Zahlenrechnungen statt Raumflugmodell. Übereinstimmung ist ein Prüfhinweis, kein Beweis aller zugrunde liegenden Annahmen; Einheiten, Eingaben und Modellgrenzen brauchen gesonderte Prüfung."
+        },
+        {
+          "path": "public/world/katherine-johnson.webp",
+          "license": "Public domain — NASA",
+          "credit": "NASA",
+          "alt": "Katherine Johnson sitzt mit Brille an einem Schreibtisch mit Rechenmaschine und Papieren und schaut lächelnd zur Kamera.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-history:history-apollo11",
+        "topics-people:person-mae_jemison",
+        "words:Algorithmus"
+      ],
+      "preparedSourceLimits": "NASA-Biografie und konkreter NTRS-Katalog/PDF tatsächlich über Webleser erreichbar. Gerenderte Produktquellenöffnung und Rückwege erst nach späterer Integration prüfen.",
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-mae_jemison",
+      "dataHash": "20e5180eed3751361cc18d9b2eb29de3f7590401d4c62d9d79e52132a7db2637",
+      "teachingDataHash": "bafb3376005500f353c735162c423fbe5ce8f5a1f53f1de656e10240dc9bb71c",
+      "goal": "Eine relative Lage vergleichen.",
+      "explanation": "Mae Jemison wurde 1956 in Decatur im US-Bundesstaat Alabama geboren und wuchs in Chicago auf. Sie studierte Chemieingenieurwesen und Medizin. Bevor sie Astronautin wurde, arbeitete sie als Ärztin, unter anderem für den Peace Corps in Sierra Leone und Liberia. 1987 wählte die NASA sie für die Astronautenausbildung aus.\n\nAm 12. September 1992 startete Jemison mit sechs weiteren Besatzungsmitgliedern zur Mission STS-47. Als erste Schwarze Frau flog sie in den Weltraum. Im Raumlabor Spacelab-J arbeiteten die USA und Japan zusammen. Jemison war an Untersuchungen von Knochenzellen beteiligt; die Mission umfasste Forschung zu Lebewesen und Materialien.\n\nDie Forschung nutzte Bedingungen, unter denen Dinge nahezu schwerelos erscheinen. Das liegt in einer Erdumlaufbahn nicht daran, dass es dort keine Erdanziehung mehr gäbe. Raumfahrzeug, Menschen und freie Gegenstände darin fallen gemeinsam um die Erde und bewegen sich zugleich schnell seitwärts.\n\nUnser eigenes Gedankenbild isoliert einen Teil dieser Erklärung: Eine Kabine und ein freier Ball verschieben sich beim gemeinsamen freien Fall gleich weit. Der Abstand des Balls zum Boden bleibt gleich. Eine solche Ansicht kann erklären, warum der Ball im Inneren schwebend wirkt; sie berechnet noch keine ganze Umlaufbahn.",
+      "example": "Im Gedankenbild kannst du dieselbe Kabine und denselben Ball zu zwei Zeitpunkten ansehen. Die gestrichelten äußeren Hilfslinien bleiben an ihrem Platz.",
+      "whyItMatters": "Du kannst das scheinbare Schweben im gemeinsamen freien Fall erklären und von fehlender Schwerkraft unterscheiden.",
+      "hint": "Denke darüber nach, wie sich der Gegenstand und seine ganze Umgebung gemeinsam bewegen.",
+      "feedback": "Beide verschieben sich gleich weit. Deshalb verändert sich ihr Abstand zueinander nicht, obwohl sie im äußeren Bild tiefer liegen.\n\nDie Erdanziehung wirkt auch in der Umlaufbahn. Weil Raumfahrzeug und Inhalt gemeinsam fallen, erscheint ein freier Gegenstand gegenüber seiner Umgebung schwebend.\n\nFür die Umlaufbahn gehören seitliche Bewegung und die fortlaufende Wirkung der Erdanziehung zusammen. Der lokale Vergleich der Abstände allein berechnet keine Bahn.",
+      "modelLimits": "Zwei Gedankenbilder, keine numerische Umlaufbahn oder Rekonstruktion eines STS-47-Experiments. Zeichnung zeigt nicht, dass im All keine Gravitation wirkt; Masse und Gewicht werden nicht gleichgesetzt.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Eine relative Lage vergleichen.",
+        "9-11": "Schweben in einer Umlaufbahn von fehlender Gravitation unterscheiden.",
+        "12-14": "Die Grenze einer lokalen Zeichnung für eine ganze Umlaufbahn bestimmen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "NASA: Mae Jemisons institutionelle Biografie",
+          "url": "https://www.nasa.gov/former-astronaut-mae-c-jemison/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "NASA: ursprüngliche Biografiedaten von1993 (PDF)",
+          "url": "https://www.nasa.gov/wp-content/uploads/2019/09/jemison_mae.pdf",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "NASA: STS-47 und Spacelab-J",
+          "url": "https://www.nasa.gov/mission/sts-47/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "NASA: gemeinsamer freier Fall und Mikrogravitation",
+          "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-microgravity-grades-5-8/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "NASA Glenn: freier Fall und erhaltene Masse",
+          "url": "https://www.nasa.gov/centers-and-facilities/glenn/what-is-microgravity/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Jemisons Laufbahn verbindet Technik, Medizin und Forschung im Team; bei der Raumfahrt gehörte sie unter anderem zur Untersuchung von Knochenzellen.",
+          "sourceId": "source-0",
+          "anchor": "NASAprofile244–250 team/research/bonecellco-investigator;280 educationBSvsquickfact253inconsistentBA;294 cooperation. No currentpostNASAjobclaim."
+        },
+        {
+          "statement": "Die NASA-Biografie nennt Geburt1956in Decatur, Aufwachsen in Chicago, medizinische Arbeit und die Astronautenauswahl1987; widersprüchliche Umlaufzahlen werden nicht übernommen.",
+          "sourceId": "source-1",
+          "anchor": "OriginalNASA2-pagebiography0–11born1956Decatur/Chicago/engineering/medicine;28–38actualdoctor/PeaceCorps1983–1985;44–53 astronaut1987/STS47dates/bonecell. All56linesread; no126vs127orbits adopted."
+        },
+        {
+          "statement": "STS-47flog vom12.bis20.September1992mit sieben Besatzungsmitgliedern als US-japanische Spacelab-J-Mission; Jemison war die erste Schwarze Frau im All.",
+          "sourceId": "source-2",
+          "anchor": "NASAmission248/259–264/291/294–297 firstBlackwoman,12–20Sept1992,7crew,USJapanSpacelabJ/material+lifescience. No fabricatedexperimentoutcome."
+        },
+        {
+          "statement": "Mikrogravitation im Orbit bedeutet gemeinsamen freien Fall bei weiter wirkender Erdanziehung, nicht Abwesenheit der Schwerkraft.",
+          "sourceId": "source-3",
+          "anchor": "NASA5–8microgravity264–285 continuinggravity/commonfreefall/sidewaysorbit. Exclude misleadingwithoutgravitywording288 and outdatedISSaltitude/statistics; nohistoricalorbitprecision."
+        },
+        {
+          "statement": "Beim gemeinsamen freien Fall bleibt die Masse eines Körpers erhalten; Schweben ist keine Umwandlung in einen masselosen Gegenstand.",
+          "sourceId": "source-4",
+          "anchor": "NASA Glenn253–265 actually read:262 mass remains,257commonfall/261sidewaysorbit. No1e-6gprecision/altitude/oldaircraftoperationalfacts adopted."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/mae-jemison.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eigene schematische Kabine und Ball werden zu zwei Zeitpunkten im gemeinsamen freien Fall gezeigt; der Abstand zum Kabinenboden bleibt gleich.",
+          "learningPurpose": "Two static local idealized freefall snapshots: cabin and free ball both translate45SVGunits, ballcentre-to-floor80units constant, Earthward arrow remains. No numerical orbit or medical result."
+        },
+        {
+          "path": "public/world/mae-jemison.webp",
+          "license": "Public domain — NASA",
+          "credit": "NASA / Johnson Space Center",
+          "alt": "Mae Jemison lächelt im blauen NASA-Fluganzug und hält ein Space-Shuttle-Modell; neben ihr steht die US-Flagge.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-katherine_johnson",
+        "topics-history:history-iss",
+        "words:Schwerkraft",
+        "words:Umlaufbahn"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Mae-Jemison-actually-read-NASA-biography-mission-freefall-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-marie_curie",
+      "dataHash": "94b5b66a876ec619c674a43d48fb91c44d1909e0fb9edd9a1ee7591c440f2004",
+      "teachingDataHash": "cf5350c509ff4ecf7055a650fe673089ab0f512a6d90e205cfbea00e6462f3d3",
+      "goal": "In einer gezeichneten Vergleichsskala den größeren erfundenen Wert erkennen.",
+      "explanation": "Marie Curie lebte von 1867 bis 1934. Nach Henri Becquerels Entdeckung der Uranstrahlung verglich sie die Wirkung unterschiedlicher Stoffe mit empfindlichen Messgeräten. Sie untersuchte unter anderem, wie Strahlung die elektrische Leitfähigkeit von Luft verändert.\n\nEinige untersuchte Mineralien waren stärker aktiv, als Curie vom enthaltenen Uran erwartet hatte. Daraus entwickelte sie eine prüfbare Vermutung: Weitere aktive Bestandteile könnten beteiligt sein. Ein auffälliger Messwert allein gab ihnen aber noch keinen Namen. Weitere Untersuchungen und Stofftrennungen gehörten zum Forschungsweg.\n\n1898 entdeckten Marie und Pierre Curie die Elemente Polonium und Radium. Am veröffentlichten Radiumbericht war auch Gustave Bémont beteiligt. Die Forschung war Teamarbeit; die Namen eines Preises und die Beiträge zu einer Untersuchung sind unterschiedliche Angaben.\n\nDen Nobelpreis für Physik erhielt Marie Curie 1903 gemeinsam mit Pierre Curie und Henri Becquerel. 1911 erhielt sie den Nobelpreis für Chemie. Heute lässt sich ihre Geschichte als Beispiel dafür lesen, wie Beobachtungen, begründete Vermutungen und weitere Prüfungen zusammenwirken.",
+      "example": "Unser eigenes Zahlenbild zeigt Reihe A mit zwei und Reihe B mit fünf Markierungen. Beide verwenden dieselbe Skala. Es sind keine Messdaten echter Stoffe.",
+      "whyItMatters": "Du kannst eine auffällige Messung zum Anlass für eine prüfbare Frage nehmen, ohne daraus schon einen vollständigen Nachweis zu machen.",
+      "hint": "Suche die Aussage, die eine mögliche Erklärung anbietet und erst weiter geprüft werden soll.",
+      "feedback": "Fünf ist größer als zwei. Das beantwortet den Zahlenvergleich; welcher reale Stoff vorliegt, erfährt man dadurch nicht.\n\nEin zusätzlicher Einfluss ist zunächst eine mögliche Erklärung. Der vorgegebene Zahlenvergleich ist davon zu unterscheiden; ein Elementname folgt daraus nicht.\n\nEin auffälliger Befund kann eine Forschungsfrage begründen. Für die Erklärung sind passende weitere Belege nötig; die gezeichnete Höhe benennt weder ein Element noch eine gesundheitliche Wirkung.",
+      "modelLimits": "Eigenes ausdrücklich erfundenes Vergleichsbild; Balken sind keine historischen Messwerte, Atomkerne oder Strahlensymbole mit Dosisbedeutung. Ein auffälliger Mineralvergleich begründet eine weiter zu prüfende Vermutung, keine sofortige reine Stoffidentifikation. Keine chemische Anleitung oder gesundheitliche Empfehlung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "In einer gezeichneten Vergleichsskala den größeren erfundenen Wert erkennen.",
+        "9-11": "Eine beobachtete Abweichung von einer prüfbaren Vermutung unterscheiden.",
+        "12-14": "Die Reichweite eines gezeichneten Vergleichs beurteilen und eine begründete nächste Prüfung benennen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "American Institute of Physics: Curies eigener Bericht von 1904",
+          "url": "https://history.aip.org/exhibits/curie/article_text.htm",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "American Institute of Physics: Radiumveröffentlichung von 1898, übersetzte Fassung",
+          "url": "https://history.aip.org/exhibits/curie/discover.htm",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Bibliothèque nationale de France: Leben und Forschungsweg Marie Curies",
+          "url": "https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "American Institute of Physics: spätere Erklärung von Atomkern und Radioaktivität",
+          "url": "https://history.aip.org/exhibits/curie/unstable.htm",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Fachbeleg verlinkt; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Texte, Archivseiten, Diagramme oder Medien übernommen. Bereits verwendete Porträtrechte separat unverändert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Curie maß die elektrische Leitfähigkeit bestrahlter Luft und entwickelte aus auffälligen Mineralvergleichen eine weiter zu prüfende Vermutung.",
+          "sourceId": "source-0",
+          "anchor": "AIP1904, tatsächlich gelesene Zeilen18–27: Vergleichsmethode, Urananteile, stärkere Mineralbefunde, Hypothese und weitere Stofftrennung. Nicht den historischen Wortlaut ohne Energiezufuhr als heutige Erklärung übernehmen."
+        },
+        {
+          "statement": "Radiumveröffentlichung1898 nennt PierreCurie,MarieCurie,GustaveBémont; Polonium und Radium werden als verschiedene Ergebnisse besprochen.",
+          "sourceId": "source-1",
+          "anchor": "AIPübersetzter Originalbericht, tatsächlich vollständig gelesene44Zeilen; Autor-/Publikationszeile23, Befund/Deutung24/27–34. Übersetzung1970nicht als frei übernehmbaren Website-Text behandeln; keine chemische Verfahrensanleitung übernehmen."
+        },
+        {
+          "statement": "1867Warschau unter russischer Herrschaft; StudiumParis; Entdeckungsjahr1898; Physikpreis1903mitPierre/Becquerel und Chemiepreis1911.",
+          "sourceId": "source-2",
+          "anchor": "BnFFrancePologne, tatsächlich gelesene Zeilen10–17/21; Titel1867–1934. Artikel ist2017erschienen, nicht2026. Die dortige Todesursache wird nicht übernommen oder frisch bestätigt."
+        },
+        {
+          "statement": "Heutige Kernerklärung ist später als Curie1898; Radioaktivität aus Atomkern.",
+          "sourceId": "source-3",
+          "anchor": "AIPUnstableNucleus, tatsächlich gelesene Zeilen22/31–41, insbesondere36–40. Ausschließlich diese eng begrenzten Angaben: nicht pauschale Abschirmdicken, Polonium210alslanglebigstesIsotop oder medizinische Überlegenheitsbehauptungen der älteren Darstellung übernehmen."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/marie-curie.tsx",
+          "license": "Eigene WunderKompass-Erklärzeichnung mit KI-Unterstützung; kein übernommenes fremdes Bild oder Layout.",
+          "credit": "WunderKompass · eigene SVG-Erklärzeichnung mit KI-Unterstützung",
+          "alt": "Eigene erfundene Vergleichswerte A gleich zwei und B gleich fünf auf gemeinsamer Skala von null bis sechs. Keine realen Strahlungsmessungen.",
+          "learningPurpose": "Zwei vollständige Balken A=2 und B=5 auf gemeinsamer erfundener0–6Skala bleiben an gleichen Stellen und gleich hoch. Auswahl nur Daten oder zusätzliche Hypothese blendet eine ausdrücklich als Vermutung bezeichnete Textzeile ein, keinen neuen Messwert. Kein realer Strahlungsmesswert, keine Einheit/Dosis/Materialprobe, kein Laboraufbau."
+        },
+        {
+          "path": "public/world/marie-curie.webp",
+          "license": "Public domain — expired copyright",
+          "credit": "Henri Manuel (1874–1947)",
+          "alt": "Historisches Schwarz-Weiß-Porträt von Marie Curie mit zurückgebundenem Haar und dunkler Jacke.",
+          "learningPurpose": "Historisches Porträt zur Einordnung der Person; kein Beleg für einen Versuchsaufbau, Messergebnis oder die dargestellte Modellrechnung."
+        }
+      ],
+      "links": [
+        "topics-people:person-tu_youyou",
+        "topics-science:science-computer",
+        "topics-people:person-chien_shiung_wu",
+        "topics-people:person-lise_meitner",
+        "words:Messwert",
+        "words:Hypothese",
+        "words:Messunsicherheit"
+      ],
+      "sourceLimits": "ThreeNobelpages returned403; CurieCuriotheque currently serves a shutdown notice; NRCmodern glossary403. No bypass or false full-source qualification. AIPactualtext and BnFactualpassages read; actual browser destination/embeddedlink tests still required before integration.",
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-neil_armstrong",
+      "dataHash": "32b24454e4f505fa134c3cc8a04366f89cea90da06e54ead8fe1dccf7a769204",
+      "teachingDataHash": "f4636532fab0663433df9928ba8644e8b1719bf4ce951ea8174695f42cc29464",
+      "goal": "Die Person in der Mondumlaufbahn finden.",
+      "explanation": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich.\n\nDie Mission brauchte unterschiedliche Aufgaben und viele weitere Beteiligte. Unsere eigene Rollenübersicht zeigt nur den gemeinsamen Start und den Mondaufenthalt. Sie berechnet keine Flugbahn und zeigt keine maßstäblichen Abstände.",
+      "example": "Öffne in der eigenen Übersicht den Mondaufenthalt.",
+      "whyItMatters": "Du kannst die drei Aufgaben auseinanderhalten und erklären, was eine einfache Rollenübersicht zeigt und was sie auslässt.",
+      "hint": "Prüfe zuerst den ausdrücklich gewählten Zeitpunkt der Ansicht.",
+      "feedback": "Michael Collins blieb mit Columbia in der Mondumlaufbahn. Armstrong und Aldrin gehörten zum Landeteam.\n\nDie Startansicht beschreibt eine ausgewählte Situation. Später wechselten Armstrong und Aldrin in Eagle; eine Momentaufnahme ersetzt keinen vollständigen Ablauf.\n\nNamen und Aufenthaltsbereiche bestimmen keine Geschwindigkeit. Dafür sind passende physikalische Größen und ein Modell nötig.",
+      "modelLimits": "Rollen- und Ortszuordnung statt Flugphysik oder Echtzeitmissionssimulation. Keine Originalfunkaufnahme, genaue Flugzeiten, Publikumszahlen oder ungeklärte lokale Datum-/UTC-Gleichsetzung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Die Person in der Mondumlaufbahn finden.",
+        "9-11": "Eine Momentaufnahme auf den richtigen Zeitpunkt beziehen.",
+        "12-14": "Die Grenze einer Rollenübersicht auf neue Fragen übertragen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "NASA · Armstrongs technische Laufbahn und Lebensdaten",
+          "url": "https://www.nasa.gov/people/neil-a-armstrong/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "NASA · Apollo 11, Besatzung und Raumfahrzeuge",
+          "url": "https://www.nasa.gov/mission/apollo-11/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "NASA · Missionsüberblick mit Wechseln und Rückkehr",
+          "url": "https://www.nasa.gov/missions/apollo/apollo-11/apollo-11-mission-overview/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Armstrongs Laufbahn umfasste Ingenieurarbeit und Forschungsflüge; er wurde1962als Astronaut ausgewählt und lebte1930–2012.",
+          "sourceId": "source-0",
+          "anchor": "Tatsächlich gelesene Stellen 247–257,267. Engineering/research-pilot background, astronaut selection1962; life1930–2012. Grenzen: No military mission counts, medical death details, exactflight durations, ambiguous year reference or video/audio viewing claim."
+        },
+        {
+          "statement": "Apollo11hatte unterschiedliche Besatzungsrollen: Armstrong als Kommandant, Aldrin als Pilot der Landefähre und Collins als Pilot des Kommandomoduls.",
+          "sourceId": "source-1",
+          "anchor": "Tatsächlich gelesene Stellen 319–336,373,403–414. Armstrong commander, Aldrin LMpilot, Collins CMpilot; return of lunar crew to Collins. Grenzen: No precise flighttime or live lunar audio/video viewing claim."
+        },
+        {
+          "statement": "Die Mission von1969verband Columbia und Eagle mit gezielten Wechseln und der Rückkehr der Mondbesatzung zur Kommandokapsel; Collins blieb während des Mondaufenthalts in Columbia.",
+          "sourceId": "source-2",
+          "anchor": "Tatsächlich gelesene Stellen 273–286,294–295,302–315. July1969 launch, Columbia/Eagle roles, later transfer to Eagle, landcrew returns to Columbia. Grenzen: Do not mislabel local-calendar July20 firststep as UTCdate; no precise distances/seconds/estimated global audience; no full original mission report read."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/neil-armstrong.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Drei Personenmarkierungen werden in festgelegten Missionssituationen der Kommandokapsel Columbia und der Landefähre beziehungsweise dem Mondaufenthalt zugeordnet.",
+          "learningPurpose": "Own HTML two-compartment rolemap: launchall3Columbia/Eagleempty; MoonstayCollinsColumbia/Armstrong+Aldrinlandteam. Two snapshots, notwholeoutboundflight, simultaneousEVAreconstruction, orbit/scale/physics or completegroundteam."
+        },
+        {
+          "path": "public/images/portraits/neil-armstrong.webp",
+          "license": "Public Domain (NASA)",
+          "credit": "NASA; Fotograf nicht benannt",
+          "alt": "Neil Armstrong im Raumanzug mit seinem Helm auf dem Tisch vor ihm.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-history:history-apollo11",
+        "topics-inventions:invention-rocket",
+        "words:Umlaufbahn"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Darwin-Armstrong-actually-read-institutional-passages-and-existing-portrait-rights.json"
+    },
+    {
+      "id": "topics-people:person-tim_berners_lee",
+      "dataHash": "a24d45a06c5d828989f0e1eed0c96824733d0d46e289f3f46453021058d3847a",
+      "teachingDataHash": "e262a8a26444367ec77746edd81b65d91cf69687a1710f69ad24d3d1862cf301",
+      "goal": "Einen Verweis und das ausgewählte Ziel unterscheiden.",
+      "explanation": "Am CERN arbeiten Forschende aus vielen Orten zusammen. Wie konnten sie ihre Informationen leichter miteinander verbinden? Tim Berners-Lee schlug 1989 ein vernetztes Informationssystem vor. Ende 1990 liefen dort sein erster Webserver und sein erster Webbrowser. Andere Menschen trugen zur Ausarbeitung und Verbreitung bei, darunter Robert Cailliau und Nicola Pellow.\n\nIm Web verbindet ein Link Informationen miteinander. Der Browser zeigt die gewählte Seite; ein Webserver kann angeforderte Inhalte bereitstellen. Gemeinsame Regeln helfen unterschiedlichen Programmen beim Austausch. Ein Link ist dabei keine Datenleitung und auch nicht selbst die ganze Zielseite.\n\nDas Internet und das Web sind verschiedene Dinge. Das Internet verbindet Netze und transportiert Daten. Das Web nutzt diese Verbindung für Informationen und ihre Verweise; andere Dienste nutzen das Internet ebenfalls. Berners-Lee entwickelte das Web, während das Internet schon bestand. Die freie Bereitstellung von Websoftware durch CERN 1993 unterstützte die weitere Verbreitung.",
+      "example": "Unsere Ausgangsnotiz A verweist auf B und C. Für das Beispiel wählen wir C.",
+      "whyItMatters": "Du unterscheidest ein verlinktes Informationssystem von dem Datennetz, das es nutzt.",
+      "hint": "Prüfe zuerst, wofür die gezeichneten Kästchen und die Legende ausdrücklich stehen.",
+      "feedback": "Ein Verweis zeigt auf sein festgelegtes Ziel. Bei der Wahl von C zeigt das Modell C; A und B bleiben vorhanden.\n\nDie Kästchen sind unsere erfundenen Notizen und die Pfeile ihre Verweise. Das Bild zeigt keine Verkabelung und enthält keine elektrische Messung.\n\nDer Vorschlag beschrieb die Idee; die ersten Programme setzten sie um. Die spätere freie Bereitstellung erleichterte ihre Verbreitung. Das Internet bestand zuvor, und weitere Menschen wirkten mit.",
+      "modelLimits": "Lokales Verknüpfungsbeispiel statt Internet-Datenübertragung, realer Serververnetzung oder Erfindung sämtlicher Computerkommunikation. Inhalte werden beim Wechsel eines Verweises nicht automatisch neu geschrieben.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Einen Verweis und das ausgewählte Ziel unterscheiden.",
+        "9-11": "Die logischen Verknüpfungen des Webs vom Datennetz unterscheiden.",
+        "12-14": "Vorschlag, lauffähige Programme und spätere Verbreitung zeitlich unterscheiden."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "CERN · A short history of the Web",
+          "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Tim Berners-Lee · W3C-Biografie",
+          "url": "https://www.w3.org/People/Berners-Lee/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Tim Berners-Lee · Unterschied zwischen Internet und Web",
+          "url": "https://www.w3.org/People/Berners-Lee/FAQ.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "CERN · The birth of the Web",
+          "url": "https://home.cern/science/computing/the-birth-of-the-web/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "Tim Berners-Lee · ausführliche W3C-Biografie",
+          "url": "https://www.w3.org/People/Berners-Lee/Longer.html",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Berners-Lee schlug1989am CERN ein verknüpftes Informationssystem vor;1990entstanden erste Programme und weitere Beteiligte wirkten mit.",
+          "sourceId": "source-0",
+          "anchor": "Zeilen79–106: Bedarf wissenschaftlichen Informationsaustauschs, Vorschlag März1989, formalisierter Vorschlag mit RobertCailliau November1990; erster Server/Browser Ende1990; weitere Beiträge NicolaPellow, spätere Softwareverbreitung."
+        },
+        {
+          "statement": "Die W3C-Biografie unterscheidet Webidee1989, Programme1990 sowie URI/HTTP/HTML und die spätere Gründung des W3C.",
+          "sourceId": "source-1",
+          "anchor": "Zeilen16–19: Web1989, erste Programme1990, Weiterentwicklung von URIs/HTTP/HTML, W3C-Gründung1994. Aktuelle Rollen werden nicht ungeprüft aus historischen FAQ übernommen."
+        },
+        {
+          "statement": "Internet und Web sind unterschiedliche Ebenen: Datenübertragung über bestehende Netze ist nicht dasselbe wie das Verknüpfen von Informationsressourcen.",
+          "sourceId": "source-2",
+          "anchor": "Zeilen84–102 tatsächlich gelesen: Internet bestand schon, Dienste auf dem Netz, Datenübertragung vs Verknüpfung von Informationsressourcen. Keine alten Geschwindigkeitsangaben oder Gleichsetzung sämtlicher Netze mit Kabeln übernehmen."
+        },
+        {
+          "statement": "CERN gab Websoftware am30.April1993frei; dieses Ereignis ist nicht der Zeitpunkt einer Erfindung des Internets.",
+          "sourceId": "source-3",
+          "anchor": "Zeilen74–81: ursprünglicher wissenschaftlicher Zweck und Freigabe der Websoftware am30.April1993; spätere offene Lizenz getrennt genannt."
+        },
+        {
+          "statement": "Die ausführliche Biografie nennt Berners-Lees Geburt am8.Juni1955in London; aktuelle Ämter werden nicht aus alten FAQ ungeprüft fortgeschrieben.",
+          "sourceId": "source-4",
+          "anchor": "Zeilen6–18 zur Umsetzung und MIT;191: geboren8.Juni1955 in London. Tatsächlich gelesen; bestehende Lebens- und Ortsfakten damit individuell bestätigt."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/tim-berners-lee.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Eine eigene erfundene Notiz verweist wahlweise auf eine von zwei anderen Notizen; die Inhalte bleiben bestehen.",
+          "learningPurpose": "Eigene zweizuständige Notizenzeichnung mit unveränderten dreiKästchen/zweiVerweisen und tatsächlichem Wechsel zweier hinterlegter eigener Notiztexte."
+        },
+        {
+          "path": "public/images/portraits/tim-berners-lee.webp",
+          "license": "CC BY-SA 4.0",
+          "credit": "Paul Clarke",
+          "alt": "Tim Berners-Lee in dunklem Anzug mit blauer Krawatte vor einem Torbogen.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-history:history-web",
+        "topics-inventions:invention-internet"
+      ],
+      "preparedSourceLimits": {
+        "twoGuessedPaths404": [
+          "https://home.cern/science/computing/birth-web",
+          "https://home.cern/science/computing/birth-web/short-history-web"
+        ],
+        "actualCorrectedPrimaryPaths": "Vorhandene kanonische the-birth-of-the-web-Pfade danach tatsächlich lesbar. Kein pauschaler CERN-Defekt.",
+        "lineModeDateNuance": "KurzeGeschichte nennt Verfügbarkeit1991, Überblick nennt launch1992. Ohne weitere Originalauswertung nicht gleichsetzen; diese konkrete Tages-/Launchbehauptung wird im Entwurf nicht benötigt.",
+        "noQuotedFAQ": "Eigene Erklärung; keine direkten Zitate oder Übernahme von Fotos, Skripten oder Layouts aus den W3C-Texten."
+      },
+      "preparedHistoricalReadingReceipt": null
+    },
+    {
+      "id": "topics-people:person-tu_youyou",
+      "dataHash": "e5397cd7db4f949ba46cdb24829f3584596680b66a0a31ff62381e1f8c3ab5d2",
+      "teachingDataHash": "930520f08efc7f510bf05f7c545b0cb6d83095a62b80fda755b0cacd296e6da2",
+      "goal": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
+      "explanation": "Tu Youyou wurde 1930 in Ningbo in China geboren. Sie studierte Pharmazie und arbeitete in der Arzneimittelforschung. Ab Ende der 1960er-Jahre leitete sie ein Team, das nach Wirkstoffen gegen Malaria suchte. Malaria wird durch einzellige Parasiten verursacht und durch bestimmte Stechmücken übertragen.\n\nDas Team untersuchte Pflanzen und ältere medizinische Texte. Ein historischer Hinweis half dabei, eine Untersuchung neu zu durchdenken. Ein Hinweis war aber noch kein fertiger Wirkstoff: Die Forschenden mussten Stoffe gewinnen, voneinander trennen und ihre Eigenschaften untersuchen.\n\nIn den 1970er-Jahren wurde Artemisinin aus dem Einjährigen Beifuß gewonnen und weiter erforscht. Bis daraus geeignete Medikamente entstehen konnten, waren zusätzliche Arbeiten vieler Forschender und Untersuchungen zur Behandlung nötig. Tu Youyou erhielt 2015 die Hälfte des Nobelpreises für Physiologie oder Medizin für ihre Entdeckungen zu einer neuen Malariatherapie; die andere Hälfte ging an zwei Forschende für andere Parasitenkrankheiten.\n\nEin alter Text, ein chemisch untersuchter Stoff und klinische Daten beantworten verschiedene Fragen. Eine Stoffanalyse allein beweist keine wirksame und sichere Behandlung bei Menschen. Auch eine lange Verwendung ersetzt die dafür nötigen wissenschaftlichen Untersuchungen nicht.",
+      "example": "In einer alten Schrift steht, dass eine Pflanze bei einer Krankheit verwendet wurde. Welche einzelnen Stoffe in ihr enthalten sind, wurde in dieser Notiz nicht untersucht.",
+      "whyItMatters": "Du kannst einen Forschungsanstoß von einem Nachweis für eine Behandlung unterscheiden.",
+      "hint": "Unterscheide eine Frage über den Stoff von einer Frage über seine Wirkung und Sicherheit bei Menschen.",
+      "feedback": "Der Text beschreibt eine frühere Verwendung. Daraus kann eine Forschungsfrage entstehen; einzelne Stoffe und Behandlungsergebnisse sind damit noch nicht untersucht.\n\nDie chemische Untersuchung liefert zusätzliche Informationen über den Stoff. Für Wirksamkeit und Sicherheit einer Behandlung braucht es weitere geeignete Belege.\n\nEin Untersuchungsergebnis hat einen bestimmten Gegenstand und Geltungsbereich. Es lässt sich nicht allein wegen eines gemeinsamen Pflanzennamens oder eines alten Textes auf andere Anwendungen übertragen.",
+      "modelLimits": "Evidenzvergleich ohne Heilversprechen, Pflanzenrezept, Stoffgewinnung, Dosierung, Selbstversuch oder Arzneimittelberatung. Modellstufen ersetzen keine klinische Forschung oder individuelle medizinische Entscheidung.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
+        "9-11": "Den Erkenntnisgewinn einer Stoffanalyse begrenzen.",
+        "12-14": "Lange Verwendung und behandlungsbezogene Evidenz unterscheiden."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Nobelversammlung: offizieller Medizinpreis2015 und Tu Youyous Forschung (PDF)",
+          "url": "https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Lasker Foundation: Tu Youyou und die Erforschung von Artemisinin",
+          "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Journal of Clinical Investigation: Tu Youyous Herkunft und Forschungsweg",
+          "url": "https://www.jci.org/articles/view/60887",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-3",
+          "organisation": "WHO: wissenschaftliche Prüfung traditioneller Medizin",
+          "url": "https://www.who.int/news-room/questions-and-answers/item/traditional-medicine",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-4",
+          "organisation": "WHO: Pflanzenmaterial ist keine Malariabehandlung",
+          "url": "https://www.who.int/news/item/10-10-2019-the-use-of-non-pharmaceutical-forms-of-artemisia",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Die Nobelversammlung zeichnete2015unter anderem Tu Youyous Beitrag zur Erforschung von Artemisinin aus und ordnet die Arbeit in ein größeres Forschungsumfeld ein.",
+          "sourceId": "source-0",
+          "anchor": "OfficialNobelAssemblyPDF0–15 prizeallocation;30–33parasites/mosquitoes;75–94team/historicalclue/purification/clinicalwork;126–131born1930education. No2015statistics/currenttreatmentrecommendation."
+        },
+        {
+          "statement": "Die Lasker-Darstellung beschreibt ein Team, historische Hinweise und weitere Untersuchungen zur Entwicklung der Therapie; ein Textfund ist noch kein Wirksamkeits- oder Sicherheitsbeweis.",
+          "sourceId": "source-1",
+          "anchor": "Lasker49–95 team/1969lead/ancienttext/1970s discovery; no extraction recipe, dose, selfexperiment or blanket safety claim adopted."
+        },
+        {
+          "statement": "Tu Youyou wurde1930in Ningbo geboren und absolvierte eine pharmazeutische Ausbildung; veraltete Inzidenzzahlen werden nicht übernommen.",
+          "sourceId": "source-2",
+          "anchor": "JCI164–166 Ningbo1930/1951–1955pharmacytraining and institute; outdatedincidence/lifecycleintro not adopted."
+        },
+        {
+          "statement": "Die WHO betont2025die wissenschaftliche Prüfung von Wirksamkeit und Sicherheit auch bei lange traditionell verwendeten Mitteln.",
+          "sourceId": "source-3",
+          "anchor": "WHO2025QA101–104 rigorous scientific validation of efficacy/safety even after long use; unrelated claims excluded."
+        },
+        {
+          "statement": "Die WHO-Position von2019unterscheidet nichtpharmazeutisches Artemisia-Pflanzenmaterial von einer belegten Malariabehandlung; sie ist keine aktuelle individuelle Therapieanweisung.",
+          "sourceId": "source-4",
+          "anchor": "WHO2019position88–98 distinguishes plantmaterial and clinicalevidence/quality, doesnot support Artemisiaplantmaterial for malaria prevention/treatment. No2019globaldrugcoverage claim as2026fact."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/tu-youyou.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene erfundene Forschungsnotizen vergleichen drei Belegarten: historischer Hinweis, Stoffuntersuchung und klinische Daten. Klinische Ergebnisse fehlen in beiden.",
+          "learningPurpose": "Two explicitly invented research notes; historical clue present in both, chemical study only in second, clinical evidence absent in both. Three semantic HTML evidence entries, no medical-effect simulation or recipe."
+        },
+        {
+          "path": "public/images/portraits/tu-youyou.webp",
+          "license": "CC BY-SA 4.0",
+          "credit": "Bengt Nyman",
+          "alt": "Tu Youyou mit Brille bei einem Termin in Stockholm 2015.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-marie_curie",
+        "topics-people:person-wangari_maathai",
+        "topics-people:person-ibn_sina",
+        "words:Hypothese"
+      ],
+      "preparedSourceLimits": [
+        "Nobelprize.org facts/bio/lecture actual403; PubMed actualbody footer only. Appropriate accessible official issuing NobelAssemblyPDF, WHO and Lasker used instead; no search snippet counted as a full source read."
+      ],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Tu-Youyou-actually-read-institutional-history-evidence-boundaries-and-existing-photo-rights.json"
+    },
+    {
+      "id": "topics-people:person-wangari_maathai",
+      "dataHash": "2467fc3e5b5358aeaba160467df37b8c18594efb8489281c587c0bcdac80e6a7",
+      "teachingDataHash": "ac30785514aa42b84f89a0190e959e98cbb67e735cea46fb30e4800d59c7886c",
+      "goal": "Ausgangszahl und später gezählte lebende Bäumchen unterscheiden.",
+      "explanation": "Wangari Maathai war eine kenianische Biologin und gründete die Green-Belt-Bewegung. Zusammen mit örtlichen Gruppen, besonders mit Frauen, verband sie Umweltarbeit mit der Möglichkeit, die eigene Umgebung mitzugestalten. Sie lebte 1940–2011 und erhielt 2004 den Friedensnobelpreis.\n\nEin Bäumchen zu setzen ist ein Anfang. Die Arbeit der Bewegung umfasst auch Absprachen vor Ort, die Wahl eines geeigneten Standorts, Pflege und weitere Kontrollen. Ihr beschriebenes Verfahren sieht vor, später die noch lebenden Bäume zu zählen und Schwierigkeiten festzuhalten. Eine hohe Pflanzzahl allein erzählt deshalb noch nicht die ganze Geschichte.\n\nWarum gehörte zu dieser Umweltarbeit auch gemeinsames Entscheiden? Menschen vor Ort kennen ihre Bedürfnisse und tragen die weitere Arbeit mit. Maathais Friedenspreis würdigte einen Zusammenhang zwischen nachhaltiger Entwicklung, Demokratie und Frieden. Eine einzelne Zählung kann weder diesen ganzen Zusammenhang erklären noch die Wirkung eines wirklichen Projekts beweisen.",
+      "example": "Unser erfundenes Beispiel: A beginnt mit zehn Bäumchen. Vier gedachte Monate später verzeichnet die Liste acht lebende.",
+      "whyItMatters": "Du unterscheidest eine gezählte Veränderung von einer noch ungeklärten Ursache.",
+      "hint": "Ein Anteil setzt eine Teilmenge in Beziehung zu ihrer eigenen Grundmenge.",
+      "feedback": "Acht ist der spätere Eintrag. Zehn bezeichnet den Anfang; zwei ist die Differenz und nicht die spätere Zahl lebender Bäumchen.\n\nDu vergleichst acht mit As ursprünglichen zehn und zehn mit Bs ursprünglichen zwanzig. Die spätere Differenz und eine gemeinsame Gesamtzahl ersetzen diese beiden Bezugsgruppen nicht.\n\nA erreicht acht Zehntel, B zehn Zwanzigstel: 80 Prozent und 50 Prozent. B hat dennoch zehn statt acht lebende Bäumchen. Eine Ursache oder die gesamte ökologische Wirkung folgt daraus nicht.",
+      "modelLimits": "Erfundene Gruppen und feste Zustände, keine realen Erfolgsquoten, Kohlenstoffrechnung, automatische Baumempfehlung oder Simulation eines ganzen Waldökosystems. Pflanzen allein belegt noch keinen langfristigen Bestand.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-04",
+      "ageLevels": {
+        "6-8": "Ausgangszahl und später gezählte lebende Bäumchen unterscheiden.",
+        "9-11": "Beim Vergleich eines Anteils die zugehörige Ausgangsgruppe beachten.",
+        "12-14": "Absolute Anzahl, Anteil und unbelegte Ursache voneinander trennen."
+      },
+      "sources": [
+        {
+          "id": "source-0",
+          "organisation": "Green Belt Movement · Wangari Maathai",
+          "url": "https://www.greenbeltmovement.org/wangari-maathai/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-1",
+          "organisation": "Green Belt Movement · Zehn Schritte der Pflanzarbeit",
+          "url": "https://www.greenbeltmovement.org/gbm-ten-10-step-procedure/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-2",
+          "organisation": "Green Belt Movement · Einordnung des Friedensnobelpreises",
+          "url": "https://www.greenbeltmovement.org/the-nobel-peace-prize/",
+          "checkedOn": "2026-11-04",
+          "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Maathai lebte1940–2011, gründete das Green Belt Movement und erhielt2004den Friedensnobelpreis.",
+          "sourceId": "source-0",
+          "anchor": "Biografie: Lebenszeit1940–2011, Gründerin und Friedensnobelpreis2004; Ausbildung und Arbeit an der University of Nairobi."
+        },
+        {
+          "statement": "Örtliche Gruppen, Standortbewertung, geeignete Arten, Pflege und spätere Zählung gehören zum beschriebenen Verfahren des Green Belt Movement.",
+          "sourceId": "source-1",
+          "anchor": "Schritt2: örtliche Gruppe/Absprachen;6: Standort, vorhandene Vegetation, geeignete Arten, Risiken;9/10: Überleben zählen, Probleme notieren, Pflege/Nachpflanzung, Kontrolle nach3–6Monaten."
+        },
+        {
+          "statement": "Die Organisation ordnet den Friedensnobelpreis im Zusammenhang von nachhaltiger Entwicklung, Demokratie und Frieden ein; das ist kein unabhängiger gemessener Wirkungsnachweis.",
+          "sourceId": "source-2",
+          "anchor": "Auszeichnung2004; Zusammenhang von nachhaltiger Entwicklung, demokratischer Beteiligung und Frieden."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/wangari-maathai.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei erfundene Pflanzgruppen werden zu Beginn und bei einer späteren Kontrolle verglichen; gepflanzte und noch lebende Bäume werden getrennt gezählt.",
+          "learningPurpose": "Eigene Zweizustands-Zählgrafik mit unveränderten Gruppen und Skala. VorgabenA10→8,B20→10 nach vier gedachten Monaten; keine Originaldaten oder simulierte Kausalwirkung."
+        },
+        {
+          "path": "public/images/portraits/wangari-maathai.webp",
+          "license": "CC BY 2.0",
+          "credit": "Demosh",
+          "alt": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-animals:animal-african-savanna-elephant",
+        "topics-people:person-jane_goodall",
+        "topics-people:person-nelson_mandela",
+        "topics-people:person-rachel_carson",
+        "words:Lebensraum"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": null
     }
   ],
   "questionCorrections": [

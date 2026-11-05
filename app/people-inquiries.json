@@ -1199,6 +1199,1188 @@
         "https://winchestercollections.co.uk/collection/canon-of-medicine/",
         "https://www.qdl.qa/en/archive/81055/vdc_100022857141.0x000001"
       ]
+    },
+    {
+      "id": "person-ada_lovelace",
+      "figure": "ordered-operations-evidence",
+      "ownMediaConcept": "Eigene ausdrücklich erfundene Rechenfolge mit festem Startwert2 und drei festen Stationen. Zwei auswählbare Reihenfolgen: plus3 dann mal2 zeigt die tatsächlichen Zwischen-/Endwerte2,5,10; mal2 dann plus3 zeigt2,4,7. Operationsbeschriftungen und dargestellte Zahlen ändern sich gemeinsam. Keine historische Lochkarte, keine Bernoulli-Zahlen, kein vollständiger Maschinensimulator, keine Musikaufnahme.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Zwei festgelegte Rechenschritte nacheinander ausführen.",
+          "example": "Beginne in unserem eigenen Zahlenbild mit zwei. Addiere zuerst drei. Verdopple danach den entstandenen Wert.",
+          "prompt": "Bei welchem Endwert kommst du mit dieser Reihenfolge an?",
+          "answers": [
+            "Bei zehn",
+            "Bei sieben",
+            "Bei fünf"
+          ],
+          "correct": 0,
+          "hint": "Halte nach dem ersten Schritt den Zwischenwert fest und führe auch den zweiten Schritt aus.",
+          "why": "Aus zwei wird durch plus drei zunächst fünf. Das Verdoppeln dieser fünf ergibt zehn. Beide vorgegebenen Schritte gehören zum Ablauf.",
+          "wrongReasons": [
+            null,
+            "Sieben entsteht hier, wenn man zuerst verdoppelt und danach drei addiert. Diese Reihenfolge war anders vorgegeben.",
+            "Fünf ist der Zwischenwert nach dem Addieren. Der zweite Schritt fehlt noch."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Bei denselben Rechenschritten die Wirkung einer geänderten Reihenfolge erklären.",
+          "example": "Vergleiche zwei Abläufe mit Startwert zwei: plus drei, dann mal zwei; und mal zwei, dann plus drei. Der erste endet bei zehn, der zweite bei sieben.",
+          "prompt": "Welche Erklärung passt zu diesem Vergleich?",
+          "answers": [
+            "Die Reihenfolge ist unwichtig, weil dieselben zwei Rechenzeichen vorkommen",
+            "Die Reihenfolge verändert hier die Zwischenwerte und dadurch das Ergebnis",
+            "Die beiden Endwerte müssen gleich sein, weil beide Abläufe bei zwei beginnen"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche den Wert unmittelbar nach dem ersten Schritt in beiden Abläufen.",
+          "why": "Nach dem ersten Schritt steht einmal fünf und einmal vier. Der jeweils nächste Schritt arbeitet mit diesem Zwischenwert. Darum entstehen in diesem Beispiel unterschiedliche Endwerte.",
+          "wrongReasons": [
+            "Dieselben Rechenzeichen genügen hier nicht für denselben Ablauf. Auf welchen Zwischenwert sie angewendet werden, hängt von ihrer Reihenfolge ab.",
+            null,
+            "Der gleiche Startwert legt das Ergebnis noch nicht fest. Die anschließend geordneten Schritte gehören ebenfalls zur Rechenvorschrift."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Einen nachvollziehbaren Rechenplan von einer historischen Ausführungsbehauptung unterscheiden.",
+          "example": "Ein Kommentar behauptet: Weil unser heutiges einfaches Zahlenbild korrekt rechnet, muss Babbages vollständige Analytical Engine bereits 1843 gebaut gewesen sein. Die gelesenen historischen Quellen beschreiben jedoch eine unvollendete Maschine.",
+          "prompt": "Welche Einordnung ist durch diese Angaben gedeckt?",
+          "answers": [
+            "Das richtige Ergebnis unseres Lehrbilds beweist die damalige Fertigstellung der Maschine",
+            "Ohne fertig gebaute Maschine konnte ein genauer Rechenplan keinerlei Bedeutung haben",
+            "Ein Rechenplan kann nachvollziehbar sein; ob und wann eine historische Maschine gebaut wurde, braucht eigene historische Belege"
+          ],
+          "correct": 2,
+          "hint": "Prüfe getrennt, was das eigene Zahlenbild zeigt und was die historische Quelle über den Bau berichtet.",
+          "why": "Ein genauer Ablauf kann untersucht werden, bevor eine Maschine fertig gebaut ist. Unser eigenes Zweischritt-Beispiel ersetzt weder den historischen Bauzustand noch Lovelaces viel umfangreichere Originalrechnung.",
+          "wrongReasons": [
+            "Das eigene heutige Zahlenbild enthält keinen historischen Baunachweis. Ein passender Rechenwert kann diesen zusätzlichen Beleg nicht ersetzen.",
+            "Ein nachvollziehbarer Plan kann Konstruktion und Programmierung vorbereiten. Fehlende Fertigstellung macht seine beschriebenen Zusammenhänge nicht automatisch wertlos.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-al_khwarizmi",
+      "figure": "equal-steps-evidence",
+      "question": "Warum dürfen wir auf beiden Seiten dieselbe Zahl abziehen?",
+      "tasks": [
+        {
+          "id": "observe",
+          "level": "6–8",
+          "title": "Beide Seiten ansehen",
+          "question": "Welche Veränderung erhält die Gleichheit und stellt das Kästchen allein?",
+          "answers": [
+            "Auf beiden Seiten drei abziehen.",
+            "Nur rechts drei abziehen.",
+            "Auf beiden Seiten drei hinzufügen."
+          ],
+          "correct": 0,
+          "hint": "Vergleiche, was links und rechts verändert wird und ob das Kästchen danach allein steht.",
+          "why": "Links verschwinden die drei zusätzlichen Einheiten, rechts bleiben fünf. Beide Seiten wurden gleich verändert.",
+          "wrongFeedback": [
+            "",
+            "Nur rechts zu verändern erhält die bisherige Gleichheit nicht: Die linke Seite bleibt unverändert acht wert, rechts wären es fünf.",
+            "Gleich viel hinzuzufügen erhält zwar die Gleichheit, macht das Kästchen aber nicht allein. Im gezeigten Löseschritt werden die drei zusätzlichen Einheiten entfernt."
+          ],
+          "voluntary": true,
+          "age": "6-8",
+          "goal": "Einen gleichen Rechenschritt auf beiden Seiten begründen.",
+          "example": "Unser eigenes Beispiel lautet: Eine unbekannte Zahl plus drei ist acht. Auf beiden Seiten werden drei abgezogen.",
+          "prompt": "Welche Veränderung erhält die Gleichheit und stellt das Kästchen allein?",
+          "wrongReasons": [
+            null,
+            "Nur rechts zu verändern erhält die bisherige Gleichheit nicht: Die linke Seite bleibt unverändert acht wert, rechts wären es fünf.",
+            "Gleich viel hinzuzufügen erhält zwar die Gleichheit, macht das Kästchen aber nicht allein. Im gezeigten Löseschritt werden die drei zusätzlichen Einheiten entfernt."
+          ]
+        },
+        {
+          "id": "explain",
+          "level": "9–11",
+          "title": "Gleicher Wert, andere Schreibweise",
+          "question": "Was bleibt bei diesem richtigen Rechenschritt unverändert?",
+          "answers": [
+            "Die unbekannte Zahl hat noch denselben Wert.",
+            "Die rechte Seite bleibt acht.",
+            "Das Kästchen muss jetzt drei weniger wert sein."
+          ],
+          "correct": 0,
+          "hint": "Unterscheide den Wert des Kästchens von der gesamten linken Seite.",
+          "why": "Das Kästchen steht vorher und nachher für fünf. Verändert werden die beiden gesamten Seiten, von jeweils acht auf jeweils fünf.",
+          "wrongFeedback": [
+            "",
+            "Die rechte Seite wird von acht auf fünf verändert. Die Gleichheit bleibt erhalten, weil links dieselben drei Einheiten entfernt werden.",
+            "Entfernt werden die drei zusätzlichen Einheiten außerhalb des Kästchens. Sein eigener Wert bleibt fünf."
+          ],
+          "voluntary": true,
+          "age": "9-11",
+          "goal": "Den Wert der unbekannten Zahl von den Werten der gesamten Seiten unterscheiden.",
+          "example": "Vorher gilt: Kästchen plus drei ist acht. Nach demselben Abzug auf beiden Seiten gilt: Kästchen ist fünf.",
+          "prompt": "Was bleibt bei diesem richtigen Rechenschritt unverändert?",
+          "wrongReasons": [
+            null,
+            "Die rechte Seite wird von acht auf fünf verändert. Die Gleichheit bleibt erhalten, weil links dieselben drei Einheiten entfernt werden.",
+            "Entfernt werden die drei zusätzlichen Einheiten außerhalb des Kästchens. Sein eigener Wert bleibt fünf."
+          ]
+        },
+        {
+          "id": "transfer",
+          "level": "12–14",
+          "title": "Ein neues Gedankenbeispiel",
+          "question": "Jetzt gilt: Zwei gleiche unbekannte Zahlen plus drei ergeben elf. Wie groß ist eine der Zahlen?",
+          "answers": [
+            "Vier.",
+            "Acht.",
+            "Sieben."
+          ],
+          "correct": 0,
+          "hint": "Entferne zuerst dieselben zusätzlichen Einheiten auf beiden Seiten. Beachte danach die zwei gleichen unbekannten Zahlen.",
+          "why": "Nach dem Abziehen von drei bleiben zwei gleiche Zahlen mit der Summe acht. Jede ist vier. Probe: vier plus vier plus drei ist elf.",
+          "wrongFeedback": [
+            "",
+            "Acht ist die Summe beider unbekannten Zahlen nach dem ersten Schritt. Gesucht ist eine der beiden gleichen Zahlen.",
+            "Sieben würde zweimal sieben plus drei ergeben, also siebzehn. Hier müssen erst die zusätzlichen drei entfernt und danach die verbleibenden acht gleich auf zwei Zahlen verteilt werden."
+          ],
+          "voluntary": true,
+          "age": "12-14",
+          "goal": "Ein neues Zahlenbeispiel lösen und durch Einsetzen prüfen.",
+          "example": "Ein neues eigenes Beispiel enthält zwei gleiche unbekannte Zahlen: Zusammen mit drei ergeben sie elf.",
+          "prompt": "Jetzt gilt: Zwei gleiche unbekannte Zahlen plus drei ergeben elf. Wie groß ist eine der Zahlen?",
+          "wrongReasons": [
+            null,
+            "Acht ist die Summe beider unbekannten Zahlen nach dem ersten Schritt. Gesucht ist eine der beiden gleichen Zahlen.",
+            "Sieben würde zweimal sieben plus drei ergeben, also siebzehn. Hier müssen erst die zusätzlichen drei entfernt und danach die verbleibenden acht gleich auf zwei Zahlen verteilt werden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-albert_einstein",
+      "figure": "photon-number-vs-single-energy",
+      "ownMediaConcept": "Three own abstract bar comparisons:1x1,4x1,4x2energies for same thoughtarea/time. Balkenheight only energy, no physical photonshape, materialthreshold/emission/calibrated intensity simulation.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Anzahl und Höhe getrennt vergleichen.",
+          "example": "Wähle zuerst einen Balken mit einfacher Energie, dann vier Balken mit einfacher Energie.",
+          "prompt": "Welche Eigenschaft des einzelnen Balkens bleibt gleich?",
+          "answers": [
+            "Seine Höhe für eine Energieeinheit",
+            "Die Gesamtzahl der Balken",
+            "Die Summe der dargestellten Energien"
+          ],
+          "correct": 0,
+          "hint": "Betrachte einen einzelnen Balken, bevor du alle zusammenzählst.",
+          "why": "Die Zahl steigt von einem auf vier Balken, ihre einzelne Höhe bleibt aber gleich. Die Gesamtenergie im Beispiel steigt von einer auf vier Vergleichseinheiten.",
+          "wrongReasons": [
+            null,
+            "Die Anzahl ändert sich von einem auf vier.",
+            "Viermal eine Einheit ergibt vier statt einer. Die Summe bleibt nicht gleich."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Die Summe aus Anzahl und Einzelenergie bestimmen.",
+          "example": "Vier Lichtquanten haben im letzten Zustand jeweils zwei frei gewählte Energieeinheiten.",
+          "prompt": "Welche Gesamtenergie zeigt dieser Zustand?",
+          "answers": [
+            "Zwei Einheiten, weil die Quanten dieselbe Energie haben",
+            "Acht Einheiten: viermal zwei",
+            "Vier Einheiten, weil nur die Zahl der Quanten zählt"
+          ],
+          "correct": 1,
+          "hint": "Rechne für jedes Quant seine Energie dazu und unterscheide Einzelwert und Summe.",
+          "why": "Jedes der vier Quanten trägt zwei Einheiten bei. Zusammen sind es 2 + 2 + 2 + 2 = 8 Einheiten.",
+          "wrongReasons": [
+            "Zwei ist hier der Wert eines einzelnen Quants, nicht die Summe aller vier.",
+            null,
+            "Die Anzahl allein reicht nicht: Jedes Quant hat im letzten Zustand zwei Einheiten."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Eine Aussage über Gesamtenergie von einer Einphoton-Schwelle abgrenzen.",
+          "example": "Im beschriebenen einfachen Einphoton-Modell reicht die Energie eines einzelnen Photons nicht aus, um ein Elektron aus einem bestimmten Material zu lösen. Die Frequenz bleibt gleich.",
+          "prompt": "Welche Aussage passt zu diesem Modell?",
+          "answers": [
+            "Mehr solcher Photonen vergrößern automatisch die Energie jedes einzelnen Photons",
+            "Die Energien aller Photonen werden in diesem Modell immer in einem einzigen Elektron gesammelt",
+            "Eine höhere Zahl ändert die Energie pro Photon nicht; die einzelne Mindestenergie bleibt damit unterschritten"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, was bei unveränderter Frequenz gleich bleibt und welcher einzelne Energieübertrag beschrieben wird.",
+          "why": "Das Modell beschreibt die Übertragung eines Photons auf ein Elektron. Mehr Photonen derselben Frequenz erhöhen die Gesamtenergie, aber nicht die Energie pro Photon. Die Mindestenergie für den beschriebenen Vorgang wird dadurch nicht erreicht.",
+          "wrongReasons": [
+            "Die Energie pro Photon hängt von der Frequenz ab. Eine höhere Anzahl bei gleicher Frequenz erhöht sie nicht.",
+            "Das ist nicht die beschriebene einzelne Photon-Elektron-Übertragung. Die Gesamtsumme des Lichtes ersetzt dort nicht die Energie eines einzelnen Photons.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-alexander_humboldt",
+      "figure": "height-temperature-note-comparison",
+      "ownMediaConcept": "Two freely invented temperature triplets18/12/6and22/16/10at500/1500/2500m; fixedaxes0–24°C and500–2500m; no historical data, universal lapse rate, realweather, plantdistribution or climatic forecast.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Zwei Werte derselben Notiz vergleichen.",
+          "example": "In der erfundenen Notiz A stehen bei 500 Metern 18 Grad Celsius und bei 1500 Metern 12 Grad Celsius.",
+          "prompt": "Was beschreibt diese beiden Beispielwerte?",
+          "answers": [
+            "Der höher gelegene Beispielpunkt hat die niedrigere Temperatur",
+            "Beide Beispielpunkte haben dieselbe Temperatur",
+            "Der niedriger gelegene Beispielpunkt hat die niedrigere Temperatur"
+          ],
+          "correct": 0,
+          "hint": "Ordne jede Temperatur ihrer Höhenangabe zu und vergleiche beide Zahlen.",
+          "why": "1500 Meter liegen höher als500 Meter;12 Grad sind weniger als18 Grad. Das beschreibt die zwei vorgegebenen Beispielwerte, keine allgemeine Wetterregel.",
+          "wrongReasons": [
+            null,
+            "Die Temperaturen18 Grad und12 Grad sind verschieden.",
+            "Am niedrigeren Beispielpunkt stehen18 Grad, am höheren12 Grad."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Gleiche Höhe von gleicher Temperatur unterscheiden.",
+          "example": "Bei 1500 Metern stehen in Notiz A 12 Grad Celsius, in Notiz B 16 Grad Celsius. Die Zahlen sind erfunden.",
+          "prompt": "Welche Aussage passt zu diesem Vergleich?",
+          "answers": [
+            "Die gleiche Höhe erzwingt in beiden Notizen dieselbe Temperatur",
+            "Die gleiche Höhenangabe kann in den Notizen mit verschiedenen Temperaturen verbunden sein",
+            "Verschiedene Temperaturen beweisen hier bereits einen Fehler in der Höhenangabe"
+          ],
+          "correct": 1,
+          "hint": "Prüfe die Höhen und Temperaturen getrennt; eine gleiche Angabe macht nicht automatisch alle anderen gleich.",
+          "why": "Beide Notizen nennen1500 Meter, aber verschiedene Temperaturen. Über einen wirklichen Ort und die Ursache des Unterschieds sagen die frei gewählten Zahlen nichts aus.",
+          "wrongReasons": [
+            "Die vorgegebenen Temperaturen sind verschieden. Gleiche Höhe bedeutet in diesen Notizen keine gleiche Temperatur.",
+            null,
+            "Die Zahlen wurden frei gewählt. Ein wirklicher Höhenmessfehler lässt sich daraus nicht nachweisen."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Einen Vergleich von einer begründeten Ursache trennen.",
+          "example": "An zwei wirklichen Orten wurden unterschiedliche Temperaturen gemessen. Man vermutet, dass der Boden die Ursache ist. Auch Wetter und Zeitpunkt könnten sich unterscheiden.",
+          "prompt": "Welcher nächste Schritt hilft bei der Prüfung dieser Vermutung?",
+          "answers": [
+            "Den Unterschied allein bereits als Beweis für die Bodenursache behandeln",
+            "Nur einen weiteren Temperaturwert an einem der beiden Orte notieren und alle anderen Bedingungen weglassen",
+            "Boden, Zeit und weitere Bedingungen vergleichbar erfassen und zusätzliche passende Beobachtungen vergleichen"
+          ],
+          "correct": 2,
+          "hint": "Überlege, welche weiteren Unterschiede dieselbe Beobachtung erklären könnten.",
+          "why": "Ein Unterschied kann mehrere Ursachen haben. Vergleichbare Bedingungen und zusätzliche Beobachtungen helfen, die Vermutung zu prüfen; sie machen aus einem ersten Vergleich noch keinen automatischen Beweis.",
+          "wrongReasons": [
+            "Die Beobachtung zeigt zunächst den Temperaturunterschied. Andere mögliche Ursachen sind damit noch nicht geprüft.",
+            "Eine einzelne zusätzliche Zahl ohne Angaben zu anderen Bedingungen trennt die möglichen Ursachen noch nicht.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-bertha_benz",
+      "figure": "test-conditions-evidence",
+      "ownMediaConcept": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+          "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+          "prompt": "Was lässt sich aus dieser Angabe entnehmen?",
+          "answers": [
+            "Die Notiz enthält hierzu noch kein Untersuchungsergebnis",
+            "Die Steigung wurde bereits erfolgreich geprüft",
+            "Die Steigung wurde bereits geprüft und nicht geschafft"
+          ],
+          "correct": 0,
+          "hint": "Lies zuerst, ob überhaupt eine Untersuchung beschrieben wird.",
+          "why": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.",
+          "wrongReasons": [
+            null,
+            "Ein Erfolg ist damit noch nicht beobachtet oder mitgeteilt.",
+            "Auch ein Misserfolg ist damit noch nicht beobachtet oder mitgeteilt."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine passende zusätzliche Beobachtung auswählen.",
+          "example": "Die erste Notiz betrachtet nur den Antrieb am selben Platz. Die zweite ergänzt eine Teststrecke.",
+          "prompt": "Welche Frage lässt sich besonders mit der zusätzlichen Strecke untersuchen?",
+          "answers": [
+            "Ob der Antrieb am selben Platz betrachtet werden kann",
+            "Wie sich das Fahrzeug an einer Steigung unterwegs verhält",
+            "Ob nach einem einzigen Test bereits jede Wetterlage sicher geprüft ist"
+          ],
+          "correct": 1,
+          "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+          "why": "Eine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.",
+          "wrongReasons": [
+            "Die Betrachtung am selben Platz war bereits Gegenstand der ersten Notiz.",
+            null,
+            "Eine einzelne Strecke deckt nicht automatisch jede Wetterlage ab."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen.",
+          "example": "Angenommen, ein Fahrzeug hat eine Teststrecke bei trockenem Wetter geschafft. Über Regenfahrten gibt es in dieser Notiz keine Beobachtung.",
+          "prompt": "Welche Aussage über Regenfahrten ist begründet?",
+          "answers": [
+            "Der Erfolg beweist bereits den Erfolg unter allen Regenbedingungen",
+            "Der Trockenversuch beweist, dass Regenfahrten misslingen müssen",
+            "Dafür fehlen passende Beobachtungen; zusätzliche Bedingungen müssten untersucht werden"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, welche Bedingungen tatsächlich beschrieben wurden und welche noch fehlen.",
+          "why": "Der angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+          "wrongReasons": [
+            "Die Beobachtung bei trockenem Wetter erfasst nicht jede andere Bedingung.",
+            "Ein fehlender Regentest ist kein Beleg für ein Misslingen.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-cai_lun",
+      "figure": "fibre-distribution-evidence",
+      "ownMediaConcept": "Exactly8segments each80SVGunits, firstallwithinupperleftquadrant then2per4quadrants; count/lengthconstant, distributiononly, norealstrengthclaim.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Anzahl und Verteilung unterscheiden.",
+          "example": "Im eigenen Linienbild sind acht Linien zuerst in einem Feld. Danach liegen je zwei Linien in vier Feldern.",
+          "prompt": "Was bleibt bei diesem Wechsel gleich?",
+          "answers": [
+            "Die Gesamtzahl von acht Linien",
+            "Die Zahl der Felder mit Linien",
+            "Die Lage jeder einzelnen Linie"
+          ],
+          "correct": 0,
+          "hint": "Zähle die Linien in der ganzen Zeichnung, nicht nur in einem Feld.",
+          "why": "Auch nach dem Verteilen sind es acht Linien: viermal zwei. Ihre Anordnung und die belegten Felder verändern sich.",
+          "wrongReasons": [
+            null,
+            "Vorher war nur ein Feld belegt; danach sind es vier. Die Anzahl belegter Felder bleibt also nicht gleich.",
+            "Die Linien werden auf andere Stellen verteilt. Gerade ihre Lage ändert sich."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Von einem gezeichneten Muster nicht auf eine ungemessene Materialeigenschaft schließen.",
+          "example": "Zwei wirkliche Papierblätter sehen unterschiedlich gleichmäßig aus. Unser Linienbild zeigt aber nur acht gedachte Linien und enthält keine Reißprüfung oder Angaben zu Faserart und Bindungen.",
+          "prompt": "Welche Aussage erlaubt die Zeichnung allein?",
+          "answers": [
+            "Das zweite wirkliche Blatt hält sicher das doppelte Gewicht",
+            "Sie zeigt eine andere Verteilung; die wirkliche Reißfestigkeit braucht zusätzliche Angaben und Prüfungen",
+            "Beide wirklichen Blätter müssen gleich fest sein, weil in der Zeichnung acht Linien stehen"
+          ],
+          "correct": 1,
+          "hint": "Prüfe, welche Eigenschaft tatsächlich dargestellt ist und welche überhaupt nicht gemessen wurde.",
+          "why": "Die Zeichnung vergleicht die Anordnung ihrer Linien. Eine Aussage über die Reißfestigkeit echter Blätter braucht passende Materialdaten und Untersuchungen.",
+          "wrongReasons": [
+            "Eine gezeichnete Verteilung enthält weder eine Belastung noch eine gemessene Tragfähigkeit. Der genaue Faktor zwei ist nicht belegt.",
+            null,
+            "Gleiche gezeichnete Linienzahl legt die tatsächlichen Fasern, Bindungen und Eigenschaften zweier wirklicher Blätter nicht fest."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Überlieferte Verbesserung und frühere Sachfunde zusammen beurteilen.",
+          "example": "Ein gelesener historischer Fachbeitrag nennt Papierfunde aus der Zeit vor 105. Für 105 beschreibt er die überlieferte Vorstellung einer verbesserten Form von Schreibpapier durch Cai Lun.",
+          "prompt": "Welche Einordnung wird beiden Angaben gerecht?",
+          "answers": [
+            "Der Hofbericht beweist, dass es vorher nirgendwo Papier gegeben haben kann",
+            "Ein früherer Papierfund macht jede spätere Verbesserung unmöglich",
+            "Frühere Papierherstellung und die später berichtete Verbesserung unterscheiden und jeweils mit passenden Belegen untersuchen"
+          ],
+          "correct": 2,
+          "hint": "Frage getrennt nach dem Alter eines Gegenstands und nach dem Ereignis, das ein Bericht beschreibt.",
+          "why": "Ein älterer Fund und ein späterer Verbesserungsbericht können beide richtig eingeordnet werden. Der Bericht nennt nicht automatisch den ersten Beginn aller Papierherstellung.",
+          "wrongReasons": [
+            "Ein Bericht über eine Verbesserung widerlegt keinen älteren Papierfund. Er beschreibt ein anderes Ereignis.",
+            "Etwas bereits Vorhandenes kann weiterentwickelt werden. Ein Vorläufer schließt eine spätere Verbesserung nicht aus.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-charles_darwin",
+      "figure": "inherited-variants-generations",
+      "ownMediaConcept": "Own invented inherited A/B variants; 4A+4B parents, 12A+4B distinct offspring from assumed3vs1offspring perparent. Stripe/cross redundancy; no real species, copied beetles, individualmorph, gene/sex or universalfinality simulation.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+          "example": "Schalte von der Elterngeneration zur neuen Generation unseres Beispiels.",
+          "prompt": "Was stellen die Kreise in der neuen Generation dar?",
+          "answers": [
+            "Andere Lebewesen: die Nachkommen",
+            "Dieselben acht Lebewesen, die sich alle verwandelt haben",
+            "Darwins eigene Sammlung auf der Beagle"
+          ],
+          "correct": 0,
+          "hint": "Lies, was ein Kreis und was eine Generation in der Legende bedeuten.",
+          "why": "Die neue Generation besteht aus Nachkommen, also anderen Individuen. Die Kreise zeigen keine Verwandlung derselben Tiere.",
+          "wrongReasons": [
+            null,
+            "Das Modell vergleicht verschiedene Generationen. Ein einzelnes Lebewesen wechselt nicht seine Variante.",
+            "Die Zahlen und Kreise sind erfunden und stellen keine historische Sammlung dar."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Anteile statt nur die absolute Anzahl vergleichen.",
+          "example": "In der Elterngeneration stehen vier A neben vier B. In der neuen Generation stehen zwölf A neben vier B.",
+          "prompt": "Wie verändert sich der Anteil von A?",
+          "answers": [
+            "Er bleibt gleich, weil B weiterhin viermal vorkommt",
+            "Er steigt von der Hälfte auf drei Viertel",
+            "Er sinkt, weil es insgesamt mehr Lebewesen gibt"
+          ],
+          "correct": 1,
+          "hint": "Beziehe A jeweils auf alle Lebewesen derselben Generation.",
+          "why": "Vier von acht ist die Hälfte. Zwölf von sechzehn ist drei Viertel. Eine gleichbleibende Anzahl von B bedeutet hier keinen gleichbleibenden Anteil von A.",
+          "wrongReasons": [
+            "Für den Anteil zählt die Anzahl von A im Verhältnis zur Gesamtzahl.",
+            null,
+            "Zwölf von sechzehn ist ein größerer Anteil als vier von acht."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Eine mögliche Ursache von einer bloßen Häufigkeitsbeobachtung unterscheiden.",
+          "example": "Bei einer wirklichen Population wird eine Variante in einer späteren Generation häufiger. Über Vererbung, Fortpflanzung, Zu- und Abwanderung liegen noch keine Daten vor.",
+          "prompt": "Welche Schlussfolgerung ist sorgfältig?",
+          "answers": [
+            "Die Häufigkeitsänderung beweist allein bereits natürliche Selektion",
+            "Die Variante muss von allen Tieren bewusst gewählt worden sein",
+            "Für die Ursache braucht es weitere Beobachtungen; mehrere Mechanismen kommen infrage"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide die ausdrücklich gesetzten Annahmen unseres Beispiels von den noch unbekannten Bedingungen in der Natur.",
+          "why": "Das Beispiel setzt Vererbung und unterschiedliche Fortpflanzung voraus. Bei einer wirklichen Population müssen passende Belege hinzukommen und andere Ursachen berücksichtigt werden.",
+          "wrongReasons": [
+            "Eine Häufigkeitsänderung kann auch durch andere Mechanismen zustande kommen.",
+            "Ein Wunsch eines Tieres erklärt nicht die Vererbung von Varianten über Generationen.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "instruction-meaning-evidence",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Wort und Rechenart unterscheiden.",
+          "example": "Du schaltest zwischen den beiden eigenen Eingaben ADDIERE 2 3 und ADD 2 3 um.",
+          "prompt": "Was bleibt in beiden Fällen gleich?",
+          "answers": [
+            "Die beiden Zahlen werden addiert und ergeben fünf.",
+            "Die zweite Eingabe ergibt sechs, weil sie kürzer ist.",
+            "Die Zahl drei wird beim Sprachwechsel zu vier."
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die Zahlen, die Zwischenbeschreibung und die kleine Probe.",
+          "why": "Beide Wörter werden hier derselben Addition zugeordnet: zwei plus drei ist fünf. Die Wortlänge ist keine Rechenoperation.",
+          "wrongReasons": [
+            null,
+            "Die Anzahl der Buchstaben verändert die vorgegebene Rechenart nicht. Sechs wäre das Produkt von zwei und drei.",
+            "In beiden Eingaben stehen dieselben Zahlen zwei und drei. Es gibt hier keine Regel, die eine Zahl beim Wortwechsel erhöht."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Übersetzung an ihrer Bedeutung prüfen.",
+          "example": "Eine falsch vorbereitete Zuordnung macht aus ADDIERE 2 3 die Beschreibung mal(2, 3).",
+          "prompt": "Warum wäre diese Zuordnung falsch?",
+          "answers": [
+            "Sie vertauscht Addition mit Multiplikation.",
+            "Jede kürzere Beschreibung ist eine richtige Übersetzung.",
+            "Eine Beschreibung in Klammern darf jede Rechenart bedeuten."
+          ],
+          "correct": 0,
+          "hint": "Eine Übersetzung soll die angegebene Rechenanweisung erhalten, nicht nur die gleichen Zahlen zeigen.",
+          "why": "Das Wort gibt Addition vor. Aus zwei plus drei wird bei der falschen Zuordnung zwei mal drei: fünf und sechs unterscheiden sich.",
+          "wrongReasons": [
+            null,
+            "Kürze allein sagt nichts über die erhaltene Bedeutung. Der Wechsel von plus zu mal würde die Rechenanweisung verändern.",
+            "Klammern bestimmen nicht beliebig die Operation. Hier benennt plus die Addition; mal wäre eine andere Anweisung."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Fehler im Plan von Fehlern der Übersetzung trennen.",
+          "example": "Gesucht ist das Produkt von zwei und drei. Jemand schreibt versehentlich eine Addition auf. Eine gedachte Übersetzung erhält diese Addition korrekt und das Programm liefert fünf.",
+          "prompt": "Was ist trotz korrekter Übersetzung zu verbessern?",
+          "answers": [
+            "Der ursprüngliche Plan muss Multiplikation statt Addition verlangen.",
+            "Jede korrekte Übersetzung muss ohne Änderung des Plans sechs liefern.",
+            "Fünf beweist, dass die Zahlen zwei und drei nicht verarbeitet werden können."
+          ],
+          "correct": 0,
+          "hint": "Unterscheide die gewünschte Aufgabe von der tatsächlich aufgeschriebenen Anweisung.",
+          "why": "Eine Übersetzung kann eine falsch gewählte Anweisung treu übertragen. Für das gesuchte Produkt muss schon der Ausgangsplan die Multiplikation fordern; anschließend braucht es passende Proben.",
+          "wrongReasons": [
+            null,
+            "Eine bedeutungserhaltende Übersetzung darf die angegebene Addition nicht heimlich durch Multiplikation ersetzen. Die Aufgabe muss im Ausgangsplan richtig beschrieben werden.",
+            "Zwei und drei wurden verarbeitet und addiert. Das Problem ist die gewählte Rechenart und kein Beweis für unbrauchbare Zahlen."
+          ]
+        }
+      ],
+      "id": "person-grace_hopper"
+    },
+    {
+      "id": "person-jane_goodall",
+      "figure": "tool-preparation-observation",
+      "ownMediaConcept": "Same brown twig fixedwholeSVGpath in bothstates;fourfreelychosen greenleaves present/absent. No depictedchimpanzee/termites/mindreading/reconstructedfielddata; distinguishpreparation/use/claimscope.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine sichtbare Veränderung genau beschreiben.",
+          "example": "Schalte zwischen den beiden Zweigansichten um und vergleiche den braunen Zweig mit den grünen Blättern.",
+          "prompt": "Was verändert sich in unserer Zeichnung?",
+          "answers": [
+            "Die vier gezeichneten Blätter werden entfernt, der Zweig bleibt",
+            "Der Zweig und seine Blätter verschwinden gemeinsam",
+            "Nur die Lage des ganzen Zweigs ändert sich"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche dieselben farbigen Teile an denselben Stellen vor und nach dem Wechsel.",
+          "why": "Die grün gezeichneten Blätter fehlen in der zweiten Ansicht. Der braune Zweig ist unverändert an seiner Stelle.",
+          "wrongReasons": [
+            null,
+            "Der braune Zweig bleibt weiterhin sichtbar. Nur die gezeichneten Blätter fehlen.",
+            "Der Zweig liegt in beiden Ansichten an derselben Stelle. Die Blätter verändern sich."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Werkzeugvorbereitung und Benutzung getrennt erkennen.",
+          "example": "In einem beschriebenen Beobachtungsablauf entfernt ein Schimpanse Blätter von einem Zweig und benutzt den Zweig anschließend, um Termiten aus einem Bau zu holen.",
+          "prompt": "Welche Beschreibung unterscheidet die beiden Handlungen?",
+          "answers": [
+            "Der Zweig wird nur benutzt; das Entfernen der Blätter zählt nicht als Veränderung",
+            "Zuerst verändert das Tier den Gegenstand, danach setzt es ihn als Werkzeug ein",
+            "Die Vorbereitung beweist bereits ohne die folgende Beobachtung jeden erfolgreichen Termitenfang"
+          ],
+          "correct": 1,
+          "hint": "Ordne die Veränderung am Gegenstand und seine anschließende Verwendung zeitlich getrennt ein.",
+          "why": "Das Entfernen der Blätter verändert den Gegenstand. Sein folgender Einsatz ist die Benutzung. Eine Vorbereitung allein zeigt noch nicht jeden späteren Erfolg.",
+          "wrongReasons": [
+            "Das Entfernen der Blätter ist gerade eine erkennbare Veränderung des Gegenstands.",
+            null,
+            "Vorbereitung und tatsächlicher Fang sind verschiedene Beobachtungen. Ein vorausgesetzter Erfolg ersetzt den Nachweis nicht."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Eine Beobachtung nicht pauschal auf alle Tiere und Situationen übertragen.",
+          "example": "Du liest die Notiz über einen einzelnen Schimpansen, der einen Zweig vorbereitet und benutzt. Über andere Tiere und andere Zeiten enthält die Notiz keine Daten.",
+          "prompt": "Welche Schlussfolgerung ist durch diese Notiz gedeckt?",
+          "answers": [
+            "Bei anderen Schimpansen muss diese Werkzeugbenutzung genauso häufig auftreten",
+            "Jeder ähnlich geformte blattfreie Zweig im Wald muss von einem Schimpansen so vorbereitet worden sein",
+            "Der beschriebene Vorgang wurde bei diesem Tier beobachtet; Aussagen über Häufigkeit und weitere Tiere brauchen zusätzliche Beobachtungen"
+          ],
+          "correct": 2,
+          "hint": "Achte darauf, auf welches Tier und welchen beobachteten Vorgang sich die Angaben beziehen.",
+          "why": "Die konkrete Szene kann Werkzeugvorbereitung und Benutzung dokumentieren. Für Verallgemeinerungen oder Aussagen über Häufigkeit sind weitere passende Beobachtungen nötig.",
+          "wrongReasons": [
+            "Die Notiz enthält keine Beobachtungszahlen oder Vergleichsdaten zu anderen Tieren. Ihre Häufigkeit bleibt damit offen.",
+            "Eine ähnliche Form allein weist nicht nach, wie ein anderer Zweig entstanden ist. Dazu fehlen passende Beobachtungen.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-johannes_gutenberg",
+      "figure": "reusable-letter-order-evidence",
+      "ownMediaConcept": "Exactly3readableinventedcardsT/O/R rearrange TOR→ORT; multiset unchanged, no mirroring/printing/production simulation.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Die vorgegebene Reihenfolge lesen.",
+          "example": "In unserem eigenen Kartenbild liegt links O, in der Mitte R und rechts T. Lies von links nach rechts.",
+          "prompt": "Welche Folge ergibt diese Anordnung?",
+          "answers": [
+            "TOR",
+            "ORT",
+            "ROT"
+          ],
+          "correct": 1,
+          "hint": "Beginne an der ausdrücklich genannten linken Karte und folge den drei Positionen.",
+          "why": "Die vorgegebenen Positionen ergeben O–R–T, also ORT. Dieselben Buchstaben in einer anderen Reihenfolge ergeben einen anderen Text.",
+          "wrongReasons": [
+            "TOR wäre die andere Anordnung mit T am Anfang. Hier steht links ausdrücklich O.",
+            null,
+            "ROT würde mit R beginnen. In unserem vorgegebenen Bild steht R jedoch in der Mitte."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Gleichzeitigen Zeichenbedarf von späterer Wiederverwendung unterscheiden.",
+          "example": "Eine gedachte Werkstatt besitzt genau je ein O, T und R. Sie möchte die vier Positionen OTTO gleichzeitig als eine feste Form zusammensetzen.",
+          "prompt": "Was fehlt für diese gleichzeitig vollständige Form?",
+          "answers": [
+            "Keine zusätzliche Letter: dasselbe eine T und O können zugleich mehrfach darin stehen",
+            "Nur ein zusätzliches T; ein einziges O reicht für beide Enden",
+            "Ein zusätzliches T und ein zusätzliches O; das vorhandene R ersetzt keines davon"
+          ],
+          "correct": 2,
+          "hint": "Zähle für jedes Zeichen getrennt die gleichzeitig benötigten Positionen und die vorhandenen Stücke.",
+          "why": "OTTO braucht zwei O und zwei T zugleich. Vorhanden ist jeweils eines; ein zweites O und ein zweites T fehlen. Späteres Wiederverwenden einer Letter ist von zwei gleichzeitigen Positionen verschieden.",
+          "wrongReasons": [
+            "Ein einzelnes Stück kann nicht zugleich an zwei Positionen derselben fertigen Form liegen. Erst nach dem Auflösen könnte es anders verwendet werden.",
+            "Das Wort benötigt nicht nur zwei T, sondern auch zwei O. Ein zusätzliches T löst den fehlenden zweiten O-Platz nicht.",
+            null
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Einen erhaltenen älteren Technikbeleg und regionale Innovation sachgerecht einordnen.",
+          "example": "Die UNESCO beschreibt einen erhaltenen koreanischen Metalltypendruck von 1377. Gutenbergs europäische Bibeldrucke stammen aus den 1450er-Jahren. Ein Kommentar nennt Gutenberg deshalb trotzdem den weltweiten Erfinder jedes Druckverfahrens.",
+          "prompt": "Welche Einordnung tragen diese Angaben?",
+          "answers": [
+            "Frühere ostasiatische Zeugnisse und Gutenbergs europäische Weiterentwicklung unterscheiden; ein ältester erhaltener Beleg datiert nicht automatisch die allererste Erfindung",
+            "Der frühere erhaltene Druck macht jede spätere technische Entwicklung bedeutungslos",
+            "Das Datum 1377 beweist den genauen Beginn sämtlicher Druckverfahren weltweit"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche Region, Technik, erhaltenes Objekt und die viel weiter gehende Erfindungsbehauptung getrennt.",
+          "why": "Ein früheres erhaltenes Zeugnis widerspricht einer weltweiten Erstbehauptung für Gutenberg. Dennoch kann seine Werkstatt einen wichtigen eigenen Beitrag geleistet haben. Der älteste erhaltene Beleg ist keine vollständige Chronik aller früheren Versuche.",
+          "wrongReasons": [
+            null,
+            "Eine spätere Entwicklung kann andere Werkzeuge, Anwendungen und Verbreitungsbedingungen verbinden. Ein Vorläufer macht diese Beiträge nicht automatisch wertlos.",
+            "Der Eintrag datiert ein erhaltenes Objekt mit einer bestimmten Technik. Er beweist weder den Beginn aller Druckverfahren noch das Fehlen jedes früheren Versuchs."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-karl_benz",
+      "figure": "drive-connection-scope",
+      "ownMediaConcept": "Same motor/wheel/positions, one connection bridge changes joined/open. No calculatedrotation, realtransmission, force, inertia or speed; broken drive must not visually imply immediate wheelstop.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Die veränderte Verbindung beschreiben.",
+          "example": "Schalte zwischen den beiden eigenen Skizzen um. Motor und Rad bleiben gleich gezeichnet.",
+          "prompt": "Was verändert der Schalter im Schema?",
+          "answers": [
+            "Die Verbindung in der Mitte wird geschlossen oder unterbrochen",
+            "Das Rad wird durch ein anderes Rad ersetzt",
+            "Der Motor bekommt eine andere Größe"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche dieselben Bauteile und die Stelle zwischen ihnen.",
+          "why": "Nur die markierte Verbindung verändert sich. Die gezeichneten Bauteile bleiben an ihren Stellen.",
+          "wrongReasons": [
+            null,
+            "Dasselbe Rad bleibt in beiden Ansichten zu sehen.",
+            "Die Größe des Motors bleibt gleich."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine Verbindung von ihrer möglichen Wirkung unterscheiden.",
+          "example": "Im erfundenen Schema ist die Verbindung zwischen Motor und Rad unterbrochen.",
+          "prompt": "Welche Aussage ist damit für diesen Antriebsweg gedeckt?",
+          "answers": [
+            "Der Wagen kann unter keinen Umständen mehr rollen",
+            "Über die markierte unterbrochene Verbindung wird kein Antrieb weitergegeben",
+            "Die Unterbrechung beweist einen Fehler im Motor selbst"
+          ],
+          "correct": 1,
+          "hint": "Trenne den dargestellten Übertragungsweg von anderen möglichen Gründen für eine Bewegung.",
+          "why": "Der unterbrochene Weg kann den Motorantrieb nicht weitergeben. Das Modell erklärt weder jeden Zustand des Motors noch alle Gründe, weshalb ein Wagen rollen könnte.",
+          "wrongReasons": [
+            "Ein Wagen kann zum Beispiel aufgrund vorheriger Bewegung weiterrollen oder an einem Gefälle rollen.",
+            null,
+            "Gezeigt wird die Verbindung. Über den inneren Zustand des Motors enthält die Zeichnung keine Untersuchung."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Bewegung nicht allein mit Motorantrieb gleichsetzen.",
+          "example": "Ein Wagen rollt weiter, obwohl die Verbindung zum Motor unterbrochen ist.",
+          "prompt": "Welche Erklärung ist sorgfältig?",
+          "answers": [
+            "Das Weiterrollen beweist, dass der Motor ihn weiterhin antreibt",
+            "Die Beobachtung ist unmöglich, weil jede Bewegung dauernden Motorantrieb braucht",
+            "Vorherige Bewegung oder ein Gefälle kommen ebenfalls infrage; weitere Bedingungen müssen geprüft werden"
+          ],
+          "correct": 2,
+          "hint": "Frage nach weiteren Ursachen und danach, was die Verbindungsskizze überhaupt berechnet.",
+          "why": "Weiterrollen allein beweist keinen weitergegebenen Motorantrieb. Für eine Erklärung müssen auch Kräfte, Gefälle, Reibung und der vorherige Bewegungszustand berücksichtigt werden.",
+          "wrongReasons": [
+            "Eine Bewegung ist nicht schon ein Beleg für eine bestimmte antreibende Ursache.",
+            "Ohne resultierende Kraft bleibt ein Körper im passenden einfachen Bezugssystem gleichförmig geradlinig in Bewegung. Reibung und andere Kräfte müssen gesondert betrachtet werden.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-katherine_johnson",
+      "figure": "calculation-check-evidence",
+      "tasks": [
+        {
+          "age": "6-8",
+          "example": "In unserem erfundenen Beispiel ist t gleich 2. Rechnung A ergibt 2·(4−2)=4. In Rechnung B fehlt der zweite Term; dort steht 4·2=8.",
+          "prompt": "Was zeigt dieser Vergleich?",
+          "answers": [
+            "Die Ergebnisse sind verschieden und der Rechenweg muss untersucht werden",
+            "Die größere Zahl muss automatisch richtig sein",
+            "Beide Ergebnisse sind gleich, weil dieselbe2 eingesetzt wurde"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die beiden Ergebnisse und dann die verwendeten Rechenregeln.",
+          "why": "Vier und acht sind verschieden. Dieselbe Eingabe reicht nicht: Auch die Regel muss passen. Hier fehlt bei B der abzuziehende Term.",
+          "wrongReasons": [
+            null,
+            "Größer bedeutet nicht richtiger. Entscheidend ist, welche Rechenregel zur Aufgabe gehört.",
+            "Die Eingabe ist dieselbe, die Regeln sind es nicht. Deshalb können verschiedene Ergebnisse entstehen."
+          ],
+          "goal": "Zwei Rechenwege für dieselbe Eingabe vergleichen."
+        },
+        {
+          "age": "9-11",
+          "example": "Bei t=0 ergeben sowohl t·(4−t) als auch die absichtlich unvollständige Regel 4t die 0. Bei t=2 sind die Ergebnisse 4 und 8.",
+          "prompt": "Was lässt sich aus der Übereinstimmung bei 0 schließen?",
+          "answers": [
+            "Die beiden Regeln sind dadurch für alle Eingaben bewiesen gleich",
+            "Nur für diesen geprüften Wert stimmen die Ergebnisse überein",
+            "Alle späteren Unterschiede dürfen ignoriert werden"
+          ],
+          "correct": 1,
+          "hint": "Trenne eine einzelne geprüfte Stelle von einer Aussage über alle Eingaben.",
+          "why": "Die Übereinstimmung bei 0 gilt für diesen Wert. Schon t = 2 liefert ein Gegenbeispiel zur behaupteten Gleichheit beider Regeln.",
+          "wrongReasons": [
+            "Ein passender Wert ist kein Beweis für alle Werte. Bei2 werden4 und8 erhalten.",
+            null,
+            "Die späteren Unterschiede zeigen gerade, dass die beiden Regeln nicht allgemein gleich sind."
+          ],
+          "goal": "Eine einzelne Übereinstimmung von einer allgemeinen Gleichheit unterscheiden."
+        },
+        {
+          "age": "12-14",
+          "example": "Zwei Rechnungen liefern mit denselben Eingabewerten dieselben Ergebnisse. Ein Kommentar erklärt damit schon jede reale Flugbahn und sämtliche Sicherheitsfragen für nachgewiesen.",
+          "prompt": "Welche Einordnung ist tragfähig?",
+          "answers": [
+            "Übereinstimmung ersetzt automatisch die Prüfung aller Ausgangsdaten",
+            "Sorgfältiges Nachrechnen hat deshalb überhaupt keinen Nutzen",
+            "Der Rechenvergleich ist wertvoll; passende Eingabedaten, Modellannahmen und weitere Prüfungen bleiben nötig"
+          ],
+          "correct": 2,
+          "hint": "Unterscheide die korrekte Ausführung einer Rechnung von der Eignung ihrer Annahmen für die Wirklichkeit.",
+          "why": "Ein Rechenvergleich kann Fehler entdecken und Vertrauen in die Ausführung stärken. Ob das Modell und seine Ausgangsdaten zur realen Situation passen, braucht zusätzliche Belege.",
+          "wrongReasons": [
+            "Beide Rechnungen könnten dieselben ungeeigneten Ausgangsdaten oder Modellannahmen verwenden.",
+            "Nachrechnen kann Rechen- oder Übertragungsfehler aufdecken. Seine Grenzen machen es nicht nutzlos.",
+            null
+          ],
+          "goal": "Rechenprüfung und Prüfung der Modellannahmen auseinanderhalten."
+        }
+      ]
+    },
+    {
+      "id": "person-mae_jemison",
+      "figure": "shared-freefall-relative-distance",
+      "ownMediaConcept": "Two static local idealized freefall snapshots: cabin and free ball both translate45SVGunits, ballcentre-to-floor80units constant, Earthward arrow remains. No numerical orbit or medical result.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Eine relative Lage vergleichen.",
+          "example": "Im Gedankenbild kannst du dieselbe Kabine und denselben Ball zu zwei Zeitpunkten ansehen. Die gestrichelten äußeren Hilfslinien bleiben an ihrem Platz.",
+          "prompt": "Was bleibt in diesem Vergleich gleich?",
+          "answers": [
+            "Der Abstand zwischen Ballmitte und Kabinenboden",
+            "Die Höhe der Kabine an den äußeren Hilfslinien",
+            "Die Höhe des Balls an den äußeren Hilfslinien"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die Lage zur Kabine getrennt von den gestrichelten äußeren Hilfslinien.",
+          "why": "Beide verschieben sich gleich weit. Deshalb verändert sich ihr Abstand zueinander nicht, obwohl sie im äußeren Bild tiefer liegen.",
+          "wrongReasons": [
+            null,
+            "Die Kabine verschiebt sich an den äußeren Hilfslinien nach unten. Ihre äußere Höhe bleibt nicht gleich.",
+            "Auch der Ball liegt im späteren äußeren Bild tiefer. Gleich bleibt seine Lage zur Kabine."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Schweben in einer Umlaufbahn von fehlender Gravitation unterscheiden.",
+          "example": "Ein freier Gegenstand schwebt scheinbar neben einer Astronautin in einem Raumfahrzeug, das die Erde umkreist.",
+          "prompt": "Welche Erklärung passt dazu?",
+          "answers": [
+            "Jeder Gegenstand verliert im Weltraum seine Masse",
+            "Raumfahrzeug, Astronautin und Gegenstand befinden sich gemeinsam im freien Fall um die Erde",
+            "Die Erdanziehung endet genau an der Außenwand des Raumfahrzeugs"
+          ],
+          "correct": 1,
+          "hint": "Denke darüber nach, wie sich der Gegenstand und seine ganze Umgebung gemeinsam bewegen.",
+          "why": "Die Erdanziehung wirkt auch in der Umlaufbahn. Weil Raumfahrzeug und Inhalt gemeinsam fallen, erscheint ein freier Gegenstand gegenüber seiner Umgebung schwebend.",
+          "wrongReasons": [
+            "Die Masse verschwindet nicht beim Flug ins All. Das scheinbare Schweben hat mit der gemeinsamen Bewegung zu tun.",
+            null,
+            "Eine Außenwand schaltet die Erdanziehung nicht ab. Sie wirkt auch auf den Inhalt."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Die Grenze einer lokalen Zeichnung für eine ganze Umlaufbahn bestimmen.",
+          "example": "Unsere beiden Bilder zeigen Kabine und Ball nur beim gemeinsamen Verschieben nach unten. Die Erde, seitliche Bewegung und eine vollständige Bahn sind nicht eingezeichnet.",
+          "prompt": "Welche zusätzliche Beschreibung braucht eine Erklärung der Erdumlaufbahn?",
+          "answers": [
+            "Eine anfänglich seitliche Bewegung, die ohne weitere Ablenkung immer geradeaus weitergeht",
+            "Eine feste Höhe über der Erde, weil der Abstand zwischen Ball und Kabine gleich bleibt",
+            "Die schnelle seitliche Bewegung zusammen mit der fortlaufenden Ablenkung durch die Erdanziehung"
+          ],
+          "correct": 2,
+          "hint": "Frage, welche Bewegung außerhalb des dargestellten geraden Bildausschnitts fehlt.",
+          "why": "Für die Umlaufbahn gehören seitliche Bewegung und die fortlaufende Wirkung der Erdanziehung zusammen. Der lokale Vergleich der Abstände allein berechnet keine Bahn.",
+          "wrongReasons": [
+            "Eine gerade Bewegung ohne weitere Ablenkung beschreibt keine gekrümmte Erdumlaufbahn. Die Erdanziehung verändert die Bewegungsrichtung fortlaufend.",
+            "Ein gleicher Abstand innerhalb der Kabine legt ihre Höhe über der Erde nicht fest. Die beiden Bezugsgrößen sind verschieden.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-marie_curie",
+      "figure": "measurement-and-hypothesis-evidence",
+      "ownMediaConcept": "Zwei vollständige Balken A=2 und B=5 auf gemeinsamer erfundener0–6Skala bleiben an gleichen Stellen und gleich hoch. Auswahl nur Daten oder zusätzliche Hypothese blendet eine ausdrücklich als Vermutung bezeichnete Textzeile ein, keinen neuen Messwert. Kein realer Strahlungsmesswert, keine Einheit/Dosis/Materialprobe, kein Laboraufbau.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "In einer gezeichneten Vergleichsskala den größeren erfundenen Wert erkennen.",
+          "example": "Unser eigenes Zahlenbild zeigt Reihe A mit zwei und Reihe B mit fünf Markierungen. Beide verwenden dieselbe Skala. Es sind keine Messdaten echter Stoffe.",
+          "prompt": "Welchen Vergleich zeigt das Bild?",
+          "answers": [
+            "Der gezeichnete Wert B ist größer als A",
+            "A und B sind gleich groß, weil zwei Balken zu sehen sind",
+            "A ist größer, weil es zuerst genannt wird"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die markierten Werte auf derselben Skala.",
+          "why": "Fünf ist größer als zwei. Das beantwortet den Zahlenvergleich; welcher reale Stoff vorliegt, erfährt man dadurch nicht.",
+          "wrongReasons": [
+            null,
+            "Die Zahl der Balken ist nicht ihr jeweiliger Wert. Einer steht für zwei, der andere für fünf.",
+            "Die Reihenfolge der Namen verändert die Werte zwei und fünf nicht."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine beobachtete Abweichung von einer prüfbaren Vermutung unterscheiden.",
+          "example": "Eine erfundene Notiz lautet: Der zweite Vergleichswert ist höher. Vielleicht gibt es einen zusätzlichen Einfluss. Wir müssen das mit weiteren geeigneten Vergleichen prüfen.",
+          "prompt": "Was ist in dieser Notiz eine Vermutung?",
+          "answers": [
+            "Dass im vorgegebenen Zahlenbild fünf größer als zwei ist",
+            "Dass ein zusätzlicher Einfluss den Unterschied erklären könnte",
+            "Dass ein beliebiges neu entdecktes Element bereits eindeutig benannt ist"
+          ],
+          "correct": 1,
+          "hint": "Suche die Aussage, die eine mögliche Erklärung anbietet und erst weiter geprüft werden soll.",
+          "why": "Ein zusätzlicher Einfluss ist zunächst eine mögliche Erklärung. Der vorgegebene Zahlenvergleich ist davon zu unterscheiden; ein Elementname folgt daraus nicht.",
+          "wrongReasons": [
+            "Der Vergleich der vorgegebenen Werte beschreibt die Beobachtung im Lehrbild. Er ist nicht schon ihre Ursache.",
+            null,
+            "Die Notiz nennt kein identifiziertes Element. Aus der Abweichung allein darf kein Elementname erfunden werden."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Die Reichweite eines gezeichneten Vergleichs beurteilen und eine begründete nächste Prüfung benennen.",
+          "example": "Ein Kommentar zu unserem erfundenen Zweibalkenbild behauptet: Der höhere Balken beweist ohne jede weitere Angabe ein neues Element. Beobachtungsbedingungen, Wiederholungen und weitere Stoffuntersuchungen fehlen.",
+          "prompt": "Welche Reaktion geht mit diesen Angaben sachgerecht um?",
+          "answers": [
+            "Den Elementnamen allein aus der Balkenhöhe festlegen",
+            "Die gesamte Beobachtung verwerfen, weil noch Fragen offen sind",
+            "Den Unterschied als Befund festhalten und Vergleichsbedingungen sowie die Vermutung mit geeigneten weiteren Untersuchungen prüfen"
+          ],
+          "correct": 2,
+          "hint": "Trenne das, was die vorgegebenen Daten zeigen, von den zusätzlich benötigten Belegen für eine Erklärung.",
+          "why": "Ein auffälliger Befund kann eine Forschungsfrage begründen. Für die Erklärung sind passende weitere Belege nötig; die gezeichnete Höhe benennt weder ein Element noch eine gesundheitliche Wirkung.",
+          "wrongReasons": [
+            "Der Balken enthält keinen Elementnamen und keinen eindeutigen chemischen Nachweis. Die weitergehende Behauptung braucht zusätzliche Belege.",
+            "Eine noch offene Erklärung macht den festgehaltenen Befund nicht automatisch wertlos. Man kann ihn prüfen und seine Bedeutung eingrenzen.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person-neil_armstrong",
+      "figure": "apollo11-roles-snapshots",
+      "ownMediaConcept": "Own HTML two-compartment rolemap: launchall3Columbia/Eagleempty; MoonstayCollinsColumbia/Armstrong+Aldrinlandteam. Two snapshots, notwholeoutboundflight, simultaneousEVAreconstruction, orbit/scale/physics or completegroundteam.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Die Person in der Mondumlaufbahn finden.",
+          "example": "Öffne in der eigenen Übersicht den Mondaufenthalt.",
+          "prompt": "Wer blieb mit Columbia in der Mondumlaufbahn?",
+          "answers": [
+            "Michael Collins",
+            "Buzz Aldrin",
+            "Alle drei Astronauten zusammen"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die Namen in den beiden Aufenthaltsbereichen.",
+          "why": "Michael Collins blieb mit Columbia in der Mondumlaufbahn. Armstrong und Aldrin gehörten zum Landeteam.",
+          "wrongReasons": [
+            null,
+            "Buzz Aldrin gehörte mit Armstrong zum Landeteam.",
+            "Die Astronauten waren beim Mondaufenthalt auf unterschiedliche Bereiche verteilt."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Eine Momentaufnahme auf den richtigen Zeitpunkt beziehen.",
+          "example": "Die Startansicht zeigt alle drei Astronauten in Columbia.",
+          "prompt": "Welche Aussage passt dazu?",
+          "answers": [
+            "Die Ansicht beweist, dass während der gesamten Reise nie jemand Eagle betrat",
+            "Sie zeigt ihre Verteilung beim Start, nicht jeden späteren Missionsschritt",
+            "Sie zeigt, dass auch Collins auf dem Mond landete"
+          ],
+          "correct": 1,
+          "hint": "Prüfe zuerst den ausdrücklich gewählten Zeitpunkt der Ansicht.",
+          "why": "Die Startansicht beschreibt eine ausgewählte Situation. Später wechselten Armstrong und Aldrin in Eagle; eine Momentaufnahme ersetzt keinen vollständigen Ablauf.",
+          "wrongReasons": [
+            "NASA beschreibt spätere Wechsel in die Landefähre. Die Startansicht gilt nicht für jeden Zeitpunkt.",
+            null,
+            "Die Startansicht enthält keinen Beleg für eine Mondlandung von Collins; er blieb beim Mondaufenthalt in Columbia."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Die Grenze einer Rollenübersicht auf neue Fragen übertragen.",
+          "example": "Jemand möchte aus der Übersicht die nötige Geschwindigkeit für die Mondumlaufbahn berechnen.",
+          "prompt": "Was ist dafür zusätzlich nötig?",
+          "answers": [
+            "Weitere physikalische Daten und ein passendes Bewegungsmodell",
+            "Nur die drei Namen; daraus folgt bereits die Geschwindigkeit",
+            "Der Abstand der beiden gezeichneten Bereiche auf dem Bildschirm"
+          ],
+          "correct": 0,
+          "hint": "Vergleiche die neue Frage mit dem, was unsere Übersicht ausdrücklich abbildet.",
+          "why": "Namen und Aufenthaltsbereiche bestimmen keine Geschwindigkeit. Dafür sind passende physikalische Größen und ein Modell nötig.",
+          "wrongReasons": [
+            null,
+            "Die Namen sind keine physikalischen Messdaten für eine Geschwindigkeit.",
+            "Die Bildschirmabstände sind frei gestaltet und nicht maßstäblich."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "web-note-links",
+      "goal": "Verweis, gewählten Inhalt und darunterliegendes Datennetz unterscheiden.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Einen Verweis und das ausgewählte Ziel unterscheiden.",
+          "example": "Unsere Ausgangsnotiz A verweist auf B und C. Für das Beispiel wählen wir C.",
+          "prompt": "Welche Notiz soll nach dieser Auswahl im Modell angezeigt werden?",
+          "answers": [
+            "Notiz A muss deshalb gelöscht werden",
+            "Nur Notiz B, weil B im Alphabet zuerst kommt",
+            "Die festgelegte Zielnotiz C"
+          ],
+          "correct": 2,
+          "hint": "Folge dem gewählten Ziel. Die Reihenfolge der Buchstaben bestimmt den Verweis nicht.",
+          "why": "Ein Verweis zeigt auf sein festgelegtes Ziel. Bei der Wahl von C zeigt das Modell C; A und B bleiben vorhanden.",
+          "wrongReasons": [
+            "Das Anzeigen einer Zielnotiz löscht die Ausgangsnotiz nicht.",
+            "Die alphabetische Reihenfolge ist keine Regel für das Ziel eines Verweises.",
+            null
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Die logischen Verknüpfungen des Webs vom Datennetz unterscheiden.",
+          "example": "Die Pfeile in unserer Zeichnung verbinden drei Notizen. Eine Zeichnung von Computern und deren Datenübertragung wäre ein anderes Modell.",
+          "prompt": "Was beschreiben die Pfeile in diesem Notizenmodell?",
+          "answers": [
+            "Verweise zwischen Informationsinhalten",
+            "Die verlegten Kabel zwischen drei bestimmten Computern",
+            "Die elektrische Leistung eines Webservers"
+          ],
+          "correct": 0,
+          "hint": "Prüfe zuerst, wofür die gezeichneten Kästchen und die Legende ausdrücklich stehen.",
+          "why": "Die Kästchen sind unsere erfundenen Notizen und die Pfeile ihre Verweise. Das Bild zeigt keine Verkabelung und enthält keine elektrische Messung.",
+          "wrongReasons": [
+            null,
+            "Computer und Kabel sind hier nicht als Kästchen beziehungsweise Pfeile dargestellt. Die Legende benennt Notizen und Verweise.",
+            "Eine Leistung müsste mit einer passenden Größe und Einheit beschrieben werden. Diese Zeichnung enthält keine solche Messung."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Vorschlag, lauffähige Programme und spätere Verbreitung zeitlich unterscheiden.",
+          "example": "Belegte Stationen: Vorschlag 1989, erster Browser und Server Ende 1990, freie Bereitstellung durch CERN 1993.",
+          "prompt": "Welche historische Schlussfolgerung ist dadurch gedeckt?",
+          "answers": [
+            "Das gesamte Internet entstand erst mit der Freigabe1993",
+            "Vorschlag, funktionierende Umsetzung und freie Bereitstellung waren verschiedene Schritte",
+            "Berners-Lee arbeitete ohne Beiträge anderer Menschen"
+          ],
+          "correct": 1,
+          "hint": "Ordne jeder genannten Station ihre eigene Aufgabe zu. Verschiedene Stationen sind keine austauschbaren Erfindungstage.",
+          "why": "Der Vorschlag beschrieb die Idee; die ersten Programme setzten sie um. Die spätere freie Bereitstellung erleichterte ihre Verbreitung. Das Internet bestand zuvor, und weitere Menschen wirkten mit.",
+          "wrongReasons": [
+            "Das Internet bestand vor dem Web. Die Freigabe von Websoftware ist nicht die Entstehung des gesamten Internets.",
+            null,
+            "CERN nennt unter anderem die Beiträge von Robert Cailliau und Nicola Pellow. Die Erzählung eines vollständig allein arbeitenden Erfinders wäre unzutreffend."
+          ]
+        }
+      ],
+      "ownMediaConcept": "Eigene zweizuständige Notizenzeichnung mit unveränderten dreiKästchen/zweiVerweisen und tatsächlichem Wechsel zweier hinterlegter eigener Notiztexte.",
+      "id": "person-tim_berners_lee"
+    },
+    {
+      "id": "person-tu_youyou",
+      "figure": "evidence-scope-comparison",
+      "ownMediaConcept": "Two explicitly invented research notes; historical clue present in both, chemical study only in second, clinical evidence absent in both. Three semantic HTML evidence entries, no medical-effect simulation or recipe.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
+          "example": "In einer alten Schrift steht, dass eine Pflanze bei einer Krankheit verwendet wurde. Welche einzelnen Stoffe in ihr enthalten sind, wurde in dieser Notiz nicht untersucht.",
+          "prompt": "Was zeigt dieser Textfund zunächst?",
+          "answers": [
+            "Eine Spur, der Forschende nachgehen können",
+            "Den eindeutigen Nachweis eines bestimmten Wirkstoffs",
+            "Eine vollständig geprüfte Behandlung für alle Menschen"
+          ],
+          "correct": 0,
+          "hint": "Überlege, was man durch das Lesen einer Beschreibung erfährt und welche Untersuchungen darin fehlen.",
+          "why": "Der Text beschreibt eine frühere Verwendung. Daraus kann eine Forschungsfrage entstehen; einzelne Stoffe und Behandlungsergebnisse sind damit noch nicht untersucht.",
+          "wrongReasons": [
+            null,
+            "Eine Verwendung zu beschreiben bestimmt nicht automatisch einen einzelnen chemischen Stoff.",
+            "Die Notiz enthält keine passenden klinischen Untersuchungen zu Wirksamkeit und Sicherheit."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Den Erkenntnisgewinn einer Stoffanalyse begrenzen.",
+          "example": "Die zweite erfundene Notiz enthält zusätzlich die chemische Untersuchung eines abgetrennten Stoffes. Klinische Behandlungsergebnisse enthält sie nicht.",
+          "prompt": "Welche Schlussfolgerung passt zu diesen Angaben?",
+          "answers": [
+            "Weil ein Stoff untersucht wurde, ist jede Menge davon ungefährlich",
+            "Über den Stoff liegt mehr Wissen vor; seine Eignung als Behandlung ist damit allein nicht nachgewiesen",
+            "Eine Stoffanalyse kann überhaupt nichts zur Forschung beitragen"
+          ],
+          "correct": 1,
+          "hint": "Unterscheide eine Frage über den Stoff von einer Frage über seine Wirkung und Sicherheit bei Menschen.",
+          "why": "Die chemische Untersuchung liefert zusätzliche Informationen über den Stoff. Für Wirksamkeit und Sicherheit einer Behandlung braucht es weitere geeignete Belege.",
+          "wrongReasons": [
+            "Eine Stoffanalyse weist weder Ungefährlichkeit jeder Menge noch Sicherheit einer Behandlung nach.",
+            null,
+            "Zusätzliche Informationen über einen Stoff können sehr wichtig sein. Sie beantworten nur nicht bereits jede medizinische Frage."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Lange Verwendung und behandlungsbezogene Evidenz unterscheiden.",
+          "example": "Zwei historische Pflanzenanwendungen sind seit langer Zeit beschrieben. Nur für eine bestimmte daraus entwickelte Arznei liegen passende wissenschaftliche Untersuchungen zur Behandlung einer bestimmten Krankheit vor.",
+          "prompt": "Welche Aussage geht sorgfältig mit den verschiedenen Belegen um?",
+          "answers": [
+            "Das Alter der Texte beweist die gleiche Wirksamkeit beider Pflanzenanwendungen",
+            "Ein positives Ergebnis einer Arznei gilt ohne weitere Untersuchung für jede Zubereitung der Pflanze",
+            "Die Belege auf die jeweils untersuchte Arznei und Anwendung beziehen; andere Anwendungen gesondert untersuchen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe, ob derselbe Stoff, dieselbe Anwendung und dieselben Bedingungen untersucht wurden.",
+          "why": "Ein Untersuchungsergebnis hat einen bestimmten Gegenstand und Geltungsbereich. Es lässt sich nicht allein wegen eines gemeinsamen Pflanzennamens oder eines alten Textes auf andere Anwendungen übertragen.",
+          "wrongReasons": [
+            "Die lange Beschreibung einer Anwendung ersetzt keine passenden Untersuchungen ihrer Wirkung und Sicherheit.",
+            "Andere Zubereitungen können andere Stoffe und Mengen enthalten. Das Ergebnis gilt nicht automatisch für alle.",
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "tree-follow-up",
+      "goal": "Pflanzzahl, spätere lebende Anzahl, Bezugsgruppe und mögliche Ursache unterscheiden.",
+      "ownMediaConcept": "Eigene Zweizustands-Zählgrafik mit unveränderten Gruppen und Skala. VorgabenA10→8,B20→10 nach vier gedachten Monaten; keine Originaldaten oder simulierte Kausalwirkung.",
+      "tasks": [
+        {
+          "age": "6-8",
+          "goal": "Ausgangszahl und später gezählte lebende Bäumchen unterscheiden.",
+          "example": "Unser erfundenes Beispiel: A beginnt mit zehn Bäumchen. Vier gedachte Monate später verzeichnet die Liste acht lebende.",
+          "prompt": "Welche Zahl gehört zu den bei der Kontrollrunde als lebend vermerkten Bäumchen in A?",
+          "answers": [
+            "Zehn",
+            "Acht",
+            "Zwei"
+          ],
+          "correct": 1,
+          "hint": "Trenne die ursprüngliche Pflanzzahl von dem späteren Eintrag in der Kontrollliste.",
+          "why": "Acht ist der spätere Eintrag. Zehn bezeichnet den Anfang; zwei ist die Differenz und nicht die spätere Zahl lebender Bäumchen.",
+          "wrongReasons": [
+            "Zehn gehört zum Anfang. Die Frage sucht den späteren Eintrag.",
+            null,
+            "Zwei ist der Unterschied zwischen Anfang und Kontrollrunde. Danach wurde nicht gefragt."
+          ]
+        },
+        {
+          "age": "9-11",
+          "goal": "Beim Vergleich eines Anteils die zugehörige Ausgangsgruppe beachten.",
+          "example": "In unserem eigenen Beispiel leben bei der Kontrolle in B zehn Bäumchen und in A acht. Für einen Anteil reicht dieser Vergleich allein noch nicht.",
+          "prompt": "Welche weitere Angabe brauchst du, um die jeweiligen Anteile an der Ausgangsgruppe zu vergleichen?",
+          "answers": [
+            "Die ursprüngliche Pflanzzahl jeder Gruppe",
+            "Nur den Unterschied zwischen den späteren Zahlen acht und zehn",
+            "Nur die gemeinsame Zahl aller bei der Kontrolle lebenden Bäumchen"
+          ],
+          "correct": 0,
+          "hint": "Ein Anteil setzt eine Teilmenge in Beziehung zu ihrer eigenen Grundmenge.",
+          "why": "Du vergleichst acht mit As ursprünglichen zehn und zehn mit Bs ursprünglichen zwanzig. Die spätere Differenz und eine gemeinsame Gesamtzahl ersetzen diese beiden Bezugsgruppen nicht.",
+          "wrongReasons": [
+            null,
+            "Zehn minus acht beschreibt den Unterschied der späteren absoluten Zahlen. Für die jeweiligen Anteile fehlen damit noch die beiden Ausgangsgruppen.",
+            "Eine gemeinsame Gesamtzahl vermischt beide Gruppen. Die Frage vergleicht den Anteil innerhalb jeder ursprünglichen Gruppe."
+          ]
+        },
+        {
+          "age": "12-14",
+          "goal": "Absolute Anzahl, Anteil und unbelegte Ursache voneinander trennen.",
+          "example": "Erfundene Daten: A acht von zehn; B zehn von zwanzig. Andere Bedingungen und Ausfallursachen sind unbekannt.",
+          "prompt": "Welche Aussage ist durch diese Daten gedeckt?",
+          "answers": [
+            "A ist damit bei allen Umweltwirkungen sicher überlegen",
+            "Die Daten beweisen, dass in B zu wenig gegossen wurde",
+            "A hat den höheren Anteil, B die größere absolute Zahl lebender Bäumchen"
+          ],
+          "correct": 2,
+          "hint": "Prüfe Zahl und Anteil getrennt. Frage anschließend, ob über Ursache oder Gesamtwirkung überhaupt etwas vorgegeben ist.",
+          "why": "A erreicht acht Zehntel, B zehn Zwanzigstel: 80 Prozent und 50 Prozent. B hat dennoch zehn statt acht lebende Bäumchen. Eine Ursache oder die gesamte ökologische Wirkung folgt daraus nicht.",
+          "wrongReasons": [
+            "Die Daten beschreiben nur Anfangs- und Kontrollzahlen. Über andere Umweltwirkungen sagen sie nichts aus.",
+            "Ein möglicher Grund ist keine festgestellte Ursache. Angaben zu Wasser, Arten und Standort fehlen.",
+            null
+          ]
+        }
+      ],
+      "id": "person-wangari_maathai"
     }
   ]
 }
