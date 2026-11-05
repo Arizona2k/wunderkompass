@@ -26,7 +26,19 @@ test('actual M76 retains all71 whole earlier events and uses its real deployment
  assert.equal(record.mergeCommit,'53418c2a3d527f8ccfcee1bfac01d03b9cc4aff8');assert.equal(entry.occurredAt,'2026-10-28T22:57:59Z');assert.equal(updateDate(entry),'28. Oktober 2026 um 23:57:59 MEZ');assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.deepEqual(entry.links.map(l=>l.hash),['book/words/Reflexion','journeys/inside/1']);
  const pending=structuredClone(record);pending.deploymentStatuses=[];assert.equal(confirmedTestDeployment(pending),null);assert.equal(testUpdate(pending,entry).status,'prepared');
 });
-const CURRENT_PUBLIC_ENTRY_COUNT=87;
+const CURRENT_PUBLIC_ENTRY_COUNT=88;
+test('actual M92 note adds one88th event while all87 historical entries and their original confirmation dates remain whole',()=>{
+ const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr92-87-hashes.json',import.meta.url),'utf8'));
+ assert.equal(fixture.sourceCommit,'40698293cc7fbc3ce9751b0620eebb164ea031cb');assert.equal(fixture.events.length,87);assert.equal(entries.length,88);
+ for(const old of fixture.events)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(row=>row.id===old.id))).digest('hex'),old.sha256,old.id+' whole historical event including confirmedOn');
+ const entry=entries.find(row=>row.evidence.pullRequest===92),record=TEST_HISTORY_EVIDENCE.pullRequests.find(row=>row.number===92);
+ assert.equal(entries.filter(row=>row.evidence.pullRequest===92).length,1);assert.equal(record.mergeCommit,fixture.sourceCommit);assert.equal(entry.evidence.revision,fixture.sourceCommit);
+ assert.equal(entry.status,'test-available');assert.equal(entry.publishedOn,null);assert.equal(entry.occurredAt,'2026-11-05T18:34:08Z');assert.equal(updateDate(entry),'5. November 2026 um 19:34:08 MEZ');assert.equal(entry.confirmedOn,'2026-11-05');assert.equal(TEST_HISTORY_EVIDENCE.checkedOn,'2026-10-21');
+ assert.deepEqual(entry.links.map(row=>row.hash),['world/topic/person-henrietta_swan_leavitt','world/topic/person-octavia_butler','world/topic/person-ibn_sina']);
+ for(const mutate of[row=>row.mergedAt=null,row=>row.deploymentStatuses=[],row=>row.deploymentStatuses[0].creator='untrusted',row=>row.deploymentStatuses[0].state='pending',row=>row.statusesUrl=row.statusesUrl.replace(row.mergeCommit,'0'.repeat(40)),row=>row.deploymentStatuses.unshift({...row.deploymentStatuses[0],id:row.deploymentStatuses[0].id+1,state:'pending',createdAt:'2026-11-05T18:34:09Z'})]){
+  const invalid=structuredClone(record);mutate(invalid);assert.equal(confirmedTestDeployment(invalid),null);const pending=testUpdate(invalid,entry);assert.equal(pending.status,'prepared');assert.equal(pending.occurredAt,null);assert.deepEqual(pending.links,[]);
+ }
+});
 test('actual M87 preserves all82 complete events and rejects missing, untrusted or superseded deployment evidence',()=>{
  const entries=publicUpdates(),fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr87-82-hashes.json',import.meta.url),'utf8')),entry=entries.find(row=>row.id==='book-astronomy-connections-3-5'),record=TEST_HISTORY_EVIDENCE.pullRequests.find(row=>row.number===87);
  assert.equal(Object.keys(fixture.events).length,82);assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);
@@ -172,7 +184,7 @@ test('publication entries match successful deployments, source provenance and Be
   if(entry.evidence.publicationVersion!==undefined){
    const source=HISTORY_EVIDENCE.versions.find(v=>v.number===entry.evidence.publicationVersion);assert.equal(source.publication.status,'succeeded');assert.equal(source.publication.type,'publish');assert.equal(source.sourceCommit,entry.evidence.revision);assert.equal(entry.publishedOn,berlinDay(source.publication.completedAt));
   }
-  for(const link of entry.links)assert.ok(['home','globe','layers','world','labs','games','journeys','book','world/topic/science-moon-phases','world/animals','world/science','updates','world/topic/person-mary_anning','world/topic/person-ibn_al_haytham','world/topic/person-maria_sibylla_merian','world/topic/person-inge_lehmann','world/topic/history-bronze','journeys/planet/1','journeys/inside/1','world/topic/building-golden-gate-bridge','world/topic/invention-seismograph','world/topic/animal-okapi','world/topic/invention-sewing-machine','world/topic/building-sydney-opera','book/words/Gestein','book/words/Grundwasser','world/topic/science-solar-system','labs/solar','book/words/Meter','book/words/Wärme','book/words/Reflexion','book/words/Dichte','book/words/Kapillarwirkung','book/words/Atom','book/words/Elektron','book/words/Kraft','book/words/Beschleunigung','book/words/Zellmembran','book/words/DNA','book/words/Gen','book/words/Enzym','book/words/Median','book/words/Maßstab','book/words/Byte','book/words/Prüfsumme','book/words/Exoplanet','book/words/Lichtjahr','book/words/Ökosystem','book/words/Kohlenstoffkreislauf','book/words/Hypothese','book/words/Kartenprojektion','book/nature/crater-lake','book/nature/daintree'].includes(link.hash));
+  for(const link of entry.links)assert.ok(['home','globe','layers','world','labs','games','journeys','book','world/topic/science-moon-phases','world/animals','world/science','updates','world/topic/person-mary_anning','world/topic/person-ibn_al_haytham','world/topic/person-maria_sibylla_merian','world/topic/person-inge_lehmann','world/topic/history-bronze','journeys/planet/1','journeys/inside/1','world/topic/building-golden-gate-bridge','world/topic/invention-seismograph','world/topic/animal-okapi','world/topic/invention-sewing-machine','world/topic/building-sydney-opera','book/words/Gestein','book/words/Grundwasser','world/topic/science-solar-system','labs/solar','book/words/Meter','book/words/Wärme','book/words/Reflexion','book/words/Dichte','book/words/Kapillarwirkung','book/words/Atom','book/words/Elektron','book/words/Kraft','book/words/Beschleunigung','book/words/Zellmembran','book/words/DNA','book/words/Gen','book/words/Enzym','book/words/Median','book/words/Maßstab','book/words/Byte','book/words/Prüfsumme','book/words/Exoplanet','book/words/Lichtjahr','book/words/Ökosystem','book/words/Kohlenstoffkreislauf','book/words/Hypothese','book/words/Kartenprojektion','book/nature/crater-lake','book/nature/daintree','world/topic/person-henrietta_swan_leavitt','world/topic/person-octavia_butler','world/topic/person-ibn_sina'].includes(link.hash));
  }
  assert.equal(HISTORY_EVIDENCE.versions.find(v=>v.number===6).publication,null);
  assert.equal(berlinDay(HISTORY_EVIDENCE.site.createdAt),'2026-10-06','project began after Berlin midnight');
@@ -186,7 +198,7 @@ test('publication entries match successful deployments, source provenance and Be
 
 test('test website chronology retains the merged and deployed product rounds, with truthful channel dates',()=>{
  const entries=publicUpdates(),testEntries=entries.filter(e=>e.channel==='vercel-test');
- assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[91,90,89,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
+ assert.deepEqual(testEntries.map(e=>e.evidence.pullRequest),[92,91,90,89,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,73,72,71,70,69,68,67,66,65,64,62,62,63,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,39,38,36,35,33,32,30,29,26,25,23,22,21,20,19,18,17,16,15,14,12,11,10,9,3]);
  assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(entries.filter(e=>e.channel==='sites').length,13);
  assert.ok(testEntries.every(e=>e.status==='test-available'&&e.publishedOn===null&&e.availableOn));
  assert.ok(!PREPARED_UPDATES.some(e=>e.id==='foundation-2a'));
@@ -529,7 +541,7 @@ test('confirmed83/84/85 chronology requires exact trusted deployment and retains
 
 test('three actual89/90/91 deliveries retain all84whole older events and reject missing, untrusted and superseded public deployment evidence',()=>{
  const entries=publicUpdates(),old=JSON.parse(fs.readFileSync(new URL('./fixtures/chronicle-before-pr89-pr90-pr91-84.json',import.meta.url),'utf8'));
- assert.equal(entries.length,87);assert.equal(old.events.length,84);
+ assert.equal(entries.length,CURRENT_PUBLIC_ENTRY_COUNT);assert.equal(old.events.length,84);
  for(const prior of old.events)assert.equal(createHash('sha256').update(JSON.stringify(entries.find(e=>e.id===prior.id))).digest('hex'),prior.sha256,prior.id+' entire previous event');
  const expected=[[89,'book-retained-connections-3-5','2026-11-02T20:09:57Z'],[90,'nature-landscape-models-3-5','2026-11-03T21:17:46Z'],[91,'fallback-selected-place-camera-return-3-5','2026-11-04T09:49:24Z']];
  for(const[number,id,at]of expected){

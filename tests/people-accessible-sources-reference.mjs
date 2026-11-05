@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import correction from './fixtures/people-accessible-sources-correction.json' with {type:'json'};
+import {beforeRetainedPeopleDossiers} from './retained-people-reference.mjs';
 const whole=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 // New technical UI evidence may be bound only after the corrected full run.
 // Until then every previous receipt continues to identify its actual a415 build.
 export function beforeMetRecordSourceUIDossiers(items){
+ items=beforeRetainedPeopleDossiers(items);
  const latest=correction.native219MetRecordCorrection;
  if(!latest||items.length!==268)return items;
  assert.equal(latest.currentBuild,correction.currentBuild);

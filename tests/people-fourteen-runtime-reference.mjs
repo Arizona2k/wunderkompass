@@ -6,9 +6,13 @@ import {createHash} from 'node:crypto';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
 import fixture from './fixtures/people-fourteen-runtime-predecessor.json' with {type:'json'};
 import {accessiblePeopleSourceCorrection as correction} from './people-accessible-sources-reference.mjs';
+import {withRetainedPeoplePredecessorRuntime} from './retained-people-runtime-reference.mjs';
 const sha=body=>createHash('sha256').update(body).digest('hex');
 
 export function assertCurrentFourteenRuntime(root){
+ return withRetainedPeoplePredecessorRuntime(root,prior=>originalAssertCurrentFourteenRuntime(prior));
+}
+function originalAssertCurrentFourteenRuntime(root){
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const replacements=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  const sourceChanges=new Map(correction.runtimeChanges.map(row=>[row.name,row]));
@@ -34,6 +38,9 @@ export function assertCurrentFourteenRuntime(root){
 // corrected623-input runtime must match the independently pinned fixture.
 // Unknown sources are never rewritten into a known historical source.
 export function withFourteenPredecessorRuntime(root,inspect){
+ return withRetainedPeoplePredecessorRuntime(root,prior=>originalWithFourteenPredecessorRuntime(prior,inspect));
+}
+function originalWithFourteenPredecessorRuntime(root,inspect){
  if(learningFingerprint(root)!==correction.currentBuild)return inspect(root);
  const current=assertCurrentFourteenRuntime(root),changes=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),'wk-next14-whole-corrective-predecessor-'));

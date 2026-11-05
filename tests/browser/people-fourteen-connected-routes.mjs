@@ -1,10 +1,18 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
-const entries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4);
-const links=JSON.parse(await fs.readFile(new URL('../../app/people-book-links.json',import.meta.url),'utf8'));
+const allEntries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries;
+const entries=allEntries.slice(4,18),retainedEntries=allEntries.slice(18);
+const allLinks=JSON.parse(await fs.readFile(new URL('../../app/people-book-links.json',import.meta.url),'utf8'));
+const links=allLinks.slice(0,25),retainedLinks=allLinks.slice(25);
 export async function fourteenConnectedRoutes(page,base,progress={global:[],book:[]}){
- assert.equal(entries.length,14);assert.equal(links.length,25);assert.equal(new Set(links.map(row=>[row.kind,row.term,row.topic].join('|'))).size,links.length,'one distinct reciprocal pair creates one focus identity');
+ assert.equal(entries.length,14);assert.equal(links.length,25);return actualConnectedRoutes(page,base,progress,entries,links);
+}
+export async function retainedConnectedRoutes(page,base,progress={global:[],book:[]}){
+ assert.equal(retainedEntries.length,18);assert.equal(retainedLinks.length,20);return actualConnectedRoutes(page,base,progress,retainedEntries,retainedLinks);
+}
+async function actualConnectedRoutes(page,base,progress,entries,links){
+ assert.equal(new Set(links.map(row=>[row.kind,row.term,row.topic].join('|'))).size,links.length,'one distinct reciprocal pair creates one focus identity');
  const {global,book}=progress;
  for(const entry of entries){
   const topic=catalog.find(row=>row.id===entry.id);await page.goto(base+'/#home');

@@ -5,6 +5,7 @@ import {animalDetectiveClue,personRecognitionClue,worldGameHint,worldGameWrongFe
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
+import {beforeRetainedPeople} from './retained-people-reference.mjs';
 const animals=catalog.filter(t=>t.animal),normalize=s=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('de').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 test('plain Node resolves the changed banks and production browser regression modules without a loader hook',()=>{
  const env={...process.env};delete env.NODE_OPTIONS;
@@ -42,11 +43,13 @@ test('Benz and al-Chwarizmi recognition prompts conceal real name variants while
   ['person-al_khwarizmi',['al-Chwarizmi','al-Khwarizmi'],'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.']
  ]){
   const t=catalog.find(t=>t.id===id),q=pool.find(q=>q.id===id);
-  const oldClue=t.intro.replace(t.title,'Diese Person');
+  const historical=beforeRetainedPeople(catalog).find(row=>row.id===id);
+  const oldClue=historical.intro.replace(historical.title,'Diese Person');
   assert(variants.some(name=>oldClue.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de'))),'original full-title-only replacement is a real counterexample');
   assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+expected);
   assert.equal(q.answers[q.correct],t.title);assert.equal(q.why,t.paragraphs.join(' '));
   for(const name of variants)assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')));
+  if(id==='person-karl_benz')for(const part of ['Karl','Carl','Benz'])assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
  }
  for(const t of catalog.filter(t=>t.person&&!['person-karl_benz','person-al_khwarizmi'].includes(t.id))){
   assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'));

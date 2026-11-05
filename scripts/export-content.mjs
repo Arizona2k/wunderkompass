@@ -57,6 +57,10 @@ const photoMetadata=JSON.parse(fs.readFileSync(path.join(root,'app/world-photos.
 const homeIndex=worldIndex.map(previous=>{
  const entry={...previous};delete entry.homeQuestion;delete entry.homePhoto;
  const topic=canonicalTopics.find(t=>t.id===entry.id);if(!topic)throw Error('Unknown canonical discovery topic '+entry.id);
+ // The small overview/search projection follows the same canonical article.
+ // Keep only metadata here; no duplicate paragraph or question collection.
+ const metadata={id:topic.id,category:topic.category,title:topic.title,intro:topic.intro,aliases:topic.aliases,locations:topic.locations,image:topic.image,model:topic.model,group:topic.animal?.group,habitat:topic.animal?.habitat,date:topic.history?.date??topic.invention?.date,year:topic.history?.year??topic.invention?.year,field:topic.person?.field,lifespan:topic.person?.lifespan,sensitive:topic.history?.sensitive};
+ for(const [field,value]of Object.entries(metadata)){if(value===undefined)delete entry[field];else entry[field]=value;}
  if(entry.image&&photoMetadata[entry.image]&&!entry.sensitive&&!topic.history?.sensitive){
   if(topic.image!==entry.image||typeof topic.question?.prompt!=='string'||!topic.question.prompt.trim())throw Error('Stale photo/question discovery metadata '+entry.id);
   return {...entry,homeQuestion:topic.question.prompt,homePhoto:corePhotoIds.includes(entry.image)?undefined:photoMetadata[entry.image]};

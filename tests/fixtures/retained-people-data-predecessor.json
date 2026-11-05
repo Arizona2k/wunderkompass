@@ -1,0 +1,3094 @@
+{
+  "scope": "Whole accepted M92 predecessor and individually reviewed retained18 delta. Current technical UI remains unqualified until the real full run.",
+  "acceptedMerge": "40698293cc7fbc3ce9751b0620eebb164ea031cb",
+  "currentRuntimeBuild": "8fea395f2d0432ae",
+  "ids": [
+    "person-ada_lovelace",
+    "person-al_khwarizmi",
+    "person-albert_einstein",
+    "person-alexander_humboldt",
+    "person-bertha_benz",
+    "person-cai_lun",
+    "person-charles_darwin",
+    "person-grace_hopper",
+    "person-jane_goodall",
+    "person-johannes_gutenberg",
+    "person-karl_benz",
+    "person-katherine_johnson",
+    "person-mae_jemison",
+    "person-marie_curie",
+    "person-neil_armstrong",
+    "person-tim_berners_lee",
+    "person-tu_youyou",
+    "person-wangari_maathai"
+  ],
+  "catalogChanges": [
+    {
+      "id": "person-marie_curie",
+      "original": {
+        "id": "person-marie_curie",
+        "category": "people",
+        "title": "Marie Curie",
+        "intro": "Marie Curie erforschte die Radioaktivität.",
+        "paragraphs": [
+          "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1867–1934"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Physikerin und Chemikerin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Polen: geboren in Warschau, damals im Russischen Reich; Frankreich: Studium und Forschung"
+          }
+        ],
+        "more": [
+          "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren.",
+          "Radioaktivität bedeutet, dass bestimmte Atomkerne von selbst Strahlung abgeben. Curie untersuchte diese Vorgänge mit Messgeräten. Strahlung kann schaden; heute braucht solche Forschung besonders sorgfältigen Schutz."
+        ],
+        "surprise": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
+        "locations": [
+          {
+            "label": "Paris – Forschungsort",
+            "lat": 48.85,
+            "lon": 2.35,
+            "iso": "FR"
+          },
+          {
+            "label": "Warschau – Geburtsort, heute Polen",
+            "lat": 52.23,
+            "lon": 21.01,
+            "iso": "PL"
+          }
+        ],
+        "related": [
+          "person-tu_youyou",
+          "science-computer",
+          "person-chien_shiung_wu",
+          "person-lise_meitner"
+        ],
+        "sources": [
+          {
+            "label": "Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/"
+          },
+          {
+            "label": "Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/questions-and-answers/?print=1"
+          }
+        ],
+        "aliases": [
+          "Marie Curie",
+          "marie_curie"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1867–1934",
+          "field": "Physikerin und Chemikerin",
+          "method": "Messen und untersuchen, welche Strahlung Stoffe abgeben."
+        },
+        "image": "marie-curie",
+        "question": {
+          "prompt": "Wofür ist Marie Curie besonders bekannt?",
+          "answers": [
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+            "Das Programmieren einfacher machen"
+          ],
+          "correct": 0,
+          "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+        }
+      },
+      "currentSHA256": "94b5b66a876ec619c674a43d48fb91c44d1909e0fb9edd9a1ee7591c440f2004"
+    },
+    {
+      "id": "person-ada_lovelace",
+      "original": {
+        "id": "person-ada_lovelace",
+        "category": "people",
+        "title": "Ada Lovelace",
+        "intro": "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+        "paragraphs": [
+          "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1815–1852"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Mathematikerin und Autorin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Vereinigtes Königreich: geboren und tätig in England"
+          }
+        ],
+        "more": [
+          "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut.",
+          "Ein Algorithmus ist eine genaue Folge von Schritten. Lovelaces Anleitung bezog sich auf eine geplante Rechenmaschine. Sie konnte nicht einfach einen heutigen Computer einschalten und ihr Programm ausprobieren."
+        ],
+        "surprise": "Veröffentlichter Algorithmus für die Analytical Engine; Vorstellung allgemein nutzbarer Informationsverarbeitung.",
+        "locations": [
+          {
+            "label": "England – Beispielregion ihrer Arbeit",
+            "lat": 51.5,
+            "lon": -0.13,
+            "iso": "GB"
+          }
+        ],
+        "related": [
+          "invention-computer",
+          "person-grace_hopper"
+        ],
+        "sources": [
+          {
+            "label": "Science Museum",
+            "url": "https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/"
+          },
+          {
+            "label": "University of St Andrews, MacTutor",
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/"
+          }
+        ],
+        "aliases": [
+          "Ada Lovelace",
+          "ada_lovelace"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1815–1852",
+          "field": "Mathematikerin und Autorin",
+          "method": "Rechenschritte so genau aufschreiben, dass eine Maschine sie ausführen könnte."
+        },
+        "image": "ada-lovelace",
+        "question": {
+          "prompt": "Wofür ist Ada Lovelace besonders bekannt?",
+          "answers": [
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+            "Radioaktivität erforschen",
+            "Das Programmieren einfacher machen"
+          ],
+          "correct": 0,
+          "why": "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut."
+        }
+      },
+      "currentSHA256": "3f68085735bc08129697b4e28b95741537163d88534507dfe80b2f65b7734b17"
+    },
+    {
+      "id": "person-grace_hopper",
+      "original": {
+        "id": "person-grace_hopper",
+        "category": "people",
+        "title": "Grace Hopper",
+        "intro": "Grace Hopper half, das Programmieren von Computern einfacher zu machen.",
+        "paragraphs": [
+          "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1906–1992"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Mathematikerin, Informatikpionierin und Marineoffizierin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "USA: geboren und tätig"
+          }
+        ],
+        "more": [
+          "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann.",
+          "Ein Compiler übersetzt ein Programm in eine Form, die ein Computer verarbeiten kann. Das hilft Menschen, Anweisungen verständlicher aufzuschreiben. Trotzdem müssen Programme sorgfältig geprüft werden."
+        ],
+        "surprise": "Frühe automatische Programmierübersetzung/Compiler, FLOW-MATIC, wichtige Beiträge zur Entstehung und Nutzung von COBOL.",
+        "locations": [
+          {
+            "label": "USA – Beispielregion ihrer Computerarbeit",
+            "lat": 42.38,
+            "lon": -71.12,
+            "iso": "US"
+          }
+        ],
+        "related": [
+          "person-ada_lovelace",
+          "science-computer"
+        ],
+        "sources": [
+          {
+            "label": "Smithsonian National Museum of American History",
+            "url": "https://americanhistory.si.edu/explore/stories/grace-under-pressure"
+          },
+          {
+            "label": "Naval History and Heritage Command",
+            "url": "https://www.history.navy.mil/research/library/biographical-files/modern-biographical-files-ndl/modern-bios-h/hopper-grace-murray-text.html"
+          }
+        ],
+        "aliases": [
+          "Grace Hopper",
+          "grace_hopper"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1906–1992",
+          "field": "Mathematikerin, Informatikpionierin und Marineoffizierin",
+          "method": "Anleitungen von Menschen in Anweisungen für Computer übersetzen."
+        },
+        "question": {
+          "prompt": "Wofür ist Grace Hopper besonders bekannt?",
+          "answers": [
+            "Das Programmieren einfacher machen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Ein Compiler übersetzt ein Computerprogramm in eine Form, mit der ein Computer arbeiten kann."
+        },
+        "image": "grace-hopper"
+      },
+      "currentSHA256": "39bab7ca7ea2de9b6fbd7e935b0f9b7d98b308dd4407898459c4e52fa791b626"
+    },
+    {
+      "id": "person-katherine_johnson",
+      "original": {
+        "id": "person-katherine_johnson",
+        "category": "people",
+        "title": "Katherine Johnson",
+        "intro": "Katherine Johnson berechnete Flugbahnen für die Raumfahrt.",
+        "paragraphs": [
+          "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1918–2020"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Mathematikerin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "USA: geboren in West Virginia; Arbeit bei NACA und NASA"
+          }
+        ],
+        "more": [
+          "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt.",
+          "Eine Flugbahn beschreibt, wo ein Raumfahrzeug zu verschiedenen Zeiten sein soll. Schon ein kleiner Rechenfehler kann große Folgen haben. Deshalb wurden Rechnungen unabhängig überprüft."
+        ],
+        "surprise": "Flugbahnberechnungen für Shepard und Glenn, Beiträge zu Apollo und weiteren Raumfahrtprogrammen.",
+        "locations": [
+          {
+            "label": "Langley, Virginia – NASA-Forschungsort",
+            "lat": 37.1,
+            "lon": -76.4,
+            "iso": "US"
+          }
+        ],
+        "related": [
+          "history-apollo11",
+          "person-mae_jemison"
+        ],
+        "sources": [
+          {
+            "label": "NASA",
+            "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+          }
+        ],
+        "aliases": [
+          "Katherine Johnson",
+          "katherine_johnson"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1918–2020",
+          "field": "Mathematikerin",
+          "method": "Mathematik anwenden und die Ergebnisse sorgfältig überprüfen."
+        },
+        "image": "katherine-johnson",
+        "question": {
+          "prompt": "Wofür ist Katherine Johnson besonders bekannt?",
+          "answers": [
+            "Flugbahnen für die Raumfahrt berechnen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt."
+        }
+      },
+      "currentSHA256": "7f111241868ded512f43727df7ef89066d8f2a2469cb54e4071203f0dd9b240d"
+    },
+    {
+      "id": "person-tim_berners_lee",
+      "original": {
+        "id": "person-tim_berners_lee",
+        "category": "people",
+        "title": "Tim Berners-Lee",
+        "intro": "Tim Berners-Lee entwickelte am CERN die Idee für das World Wide Web.",
+        "paragraphs": [
+          "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "geboren 1955"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Informatiker"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Vereinigtes Königreich: geboren in London, britischer Wissenschaftler; Schweiz: entwickelte das WWW am CERN bei Genf; USA: spätere Arbeit am MIT"
+          }
+        ],
+        "more": [
+          "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes.",
+          "Ein Link verbindet eine Webseite mit einer anderen. Gemeinsame Regeln machen das Web auf unterschiedlichen Computern nutzbar. Berners-Lee entwickelte das Web; das Internet gab es bereits vorher."
+        ],
+        "surprise": "WWW-Vorschlag 1989; frühe Websoftware 1990/1991; Förderung offener Standards.",
+        "locations": [
+          {
+            "label": "CERN – Schweiz und Frankreich",
+            "lat": 46.23,
+            "lon": 6.05
+          }
+        ],
+        "related": [
+          "history-web",
+          "invention-internet"
+        ],
+        "sources": [
+          {
+            "label": "Tim Berners-Lee / W3C",
+            "url": "https://www.w3.org/People/Berners-Lee/Longer.html"
+          },
+          {
+            "label": "CERN",
+            "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+          }
+        ],
+        "aliases": [
+          "Tim Berners-Lee",
+          "tim_berners_lee"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "geboren 1955",
+          "field": "Informatiker",
+          "method": "Informationen so verbinden, dass andere sie finden können."
+        },
+        "question": {
+          "prompt": "Wofür ist Tim Berners-Lee besonders bekannt?",
+          "answers": [
+            "Verlinkte Webseiten entwickeln",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Das Web und das Internet sind verwandt: Das Web ist eine Anwendung des viel größeren Internet-Netzes."
+        },
+        "image": "tim-berners-lee"
+      },
+      "currentSHA256": "a24d45a06c5d828989f0e1eed0c96824733d0d46e289f3f46453021058d3847a"
+    },
+    {
+      "id": "person-karl_benz",
+      "original": {
+        "id": "person-karl_benz",
+        "category": "people",
+        "title": "Karl (Carl) Benz",
+        "intro": "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+        "paragraphs": [
+          "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1844–1929"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Ingenieur und Automobilpionier"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Deutschland: geboren in Karlsruhe; tätig in Mannheim und Ladenburg"
+          }
+        ],
+        "more": [
+          "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge.",
+          "Ein Fahrzeug braucht ein ganzes System: Antrieb, Räder, Lenkung und Bremsen. Andere Menschen arbeiteten ebenfalls an Fahrzeugen, auch mit Dampf oder elektrischer Energie. Automobilgeschichte hat viele Beteiligte."
+        ],
+        "surprise": "Benz Patent-Motorwagen, Patent 1886; frühe Automobilentwicklung und Produktion.",
+        "locations": [
+          {
+            "label": "Mannheim – Entwicklung des Motorwagens",
+            "lat": 49.49,
+            "lon": 8.47,
+            "iso": "DE"
+          }
+        ],
+        "related": [
+          "person-bertha_benz",
+          "invention-car"
+        ],
+        "sources": [
+          {
+            "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
+          },
+          {
+            "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+          }
+        ],
+        "aliases": [
+          "Karl (Carl) Benz",
+          "karl_benz"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1844–1929",
+          "field": "Ingenieur und Automobilpionier",
+          "method": "Bauteile zu einem funktionierenden Fahrzeug verbinden."
+        },
+        "question": {
+          "prompt": "Wofür ist Karl (Carl) Benz besonders bekannt?",
+          "answers": [
+            "Einen frühen Wagen mit Benzinmotor entwickeln",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Das Patent von 1886 war ein wichtiger Schritt. Andere Menschen entwickelten ebenfalls Fahrzeuge, darunter Dampf- und Elektrofahrzeuge."
+        },
+        "image": "karl-benz"
+      },
+      "currentSHA256": "6a49d8217eebf1b63c7c3ead1df05d68a8764de361e9bf3245c5ecbb67c19549"
+    },
+    {
+      "id": "person-bertha_benz",
+      "original": {
+        "id": "person-bertha_benz",
+        "category": "people",
+        "title": "Bertha Benz",
+        "intro": "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+        "paragraphs": [
+          "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1849–1944"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Automobilpionierin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Deutschland: Leben und Tätigkeit in Baden; Fahrt Mannheim–Pforzheim"
+          }
+        ],
+        "more": [
+          "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
+          "Eine Erfindung muss im Alltag bestehen. Unterwegs merkt man andere Schwierigkeiten als in einer Werkstatt. Bertha Benz machte mit ihrer Reise sichtbar, wo das Fahrzeug und seine Versorgung verbessert werden mussten."
+        ],
+        "surprise": "Finanzielle und technische Mitarbeit; bekannte erste Automobilfernfahrt im August 1888, über 100 km.",
+        "locations": [
+          {
+            "label": "Mannheim – Beginn der bekannten Fahrt",
+            "lat": 49.49,
+            "lon": 8.47,
+            "iso": "DE"
+          },
+          {
+            "label": "Pforzheim – Ziel der Fahrt 1888",
+            "lat": 48.89,
+            "lon": 8.7,
+            "iso": "DE"
+          }
+        ],
+        "related": [
+          "person-karl_benz",
+          "invention-car"
+        ],
+        "sources": [
+          {
+            "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+          },
+          {
+            "label": "Mercedes-Benz Group, Unternehmensarchiv/Tradition",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
+          }
+        ],
+        "aliases": [
+          "Bertha Benz",
+          "bertha_benz"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1849–1944",
+          "field": "Automobilpionierin",
+          "method": "Eine wirkliche Reise machen und Verbesserungsmöglichkeiten erkennen."
+        },
+        "question": {
+          "prompt": "Wofür ist Bertha Benz besonders bekannt?",
+          "answers": [
+            "Einen Motorwagen praktisch erproben und seine Entwicklung unterstützen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern."
+        },
+        "image": "bertha-benz"
+      },
+      "currentSHA256": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75"
+    },
+    {
+      "id": "person-jane_goodall",
+      "original": {
+        "id": "person-jane_goodall",
+        "category": "people",
+        "title": "Jane Goodall",
+        "intro": "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+        "paragraphs": [
+          "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1934–2025"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Verhaltensforscherin und Naturschützerin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Vereinigtes Königreich: geboren in London; Tansania: Schimpansenforschung in Gombe"
+          }
+        ],
+        "more": [
+          "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten.",
+          "Geduldige Beobachtung kann eine erste Vermutung verändern. Goodall dokumentierte Verhalten einzelner Schimpansen über lange Zeit. Tiere in freier Natur lassen sich nicht wie Maschinen an- und ausschalten."
+        ],
+        "surprise": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
+        "locations": [
+          {
+            "label": "Gombe, Tansania – Forschungsregion",
+            "lat": -4.68,
+            "lon": 29.63,
+            "iso": "TZ"
+          }
+        ],
+        "related": [
+          "animal-western-lowland-gorilla",
+          "person-charles_darwin"
+        ],
+        "sources": [
+          {
+            "label": "Jane Goodall Institute",
+            "url": "https://janegoodall.org/press-room-item/jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/"
+          }
+        ],
+        "aliases": [
+          "Jane Goodall",
+          "jane_goodall"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1934–2025",
+          "field": "Verhaltensforscherin und Naturschützerin",
+          "method": "Lange und geduldig beobachten, ohne die Antworten vorher festzulegen."
+        },
+        "question": {
+          "prompt": "Wofür ist Jane Goodall besonders bekannt?",
+          "answers": [
+            "Wilde Schimpansen beobachten",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
+        },
+        "image": "jane-goodall"
+      },
+      "currentSHA256": "0b0e7a07df9baf30dcf9c3e35e7a80039fa470715bc94e90d93412c170752ea5"
+    },
+    {
+      "id": "person-albert_einstein",
+      "original": {
+        "id": "person-albert_einstein",
+        "category": "people",
+        "title": "Albert Einstein",
+        "intro": "Albert Einstein erforschte Licht, Raum und Zeit.",
+        "paragraphs": [
+          "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1879–1955"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Physiker"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "Deutschland: geboren in Ulm; spätere Forschung in Berlin; Schweiz: Ausbildung und Forschung; USA: nach Emigration Arbeit in Princeton"
+          }
+        ],
+        "more": [
+          "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt.",
+          "Bei einem Gedankenexperiment stellt man sich eine Situation genau vor. Dann fragt man, welche Folgen die bekannten Regeln hätten. Eine spannende Idee genügt aber nicht: Ihre Vorhersagen müssen zu Messungen passen."
+        ],
+        "surprise": "Spezielle und allgemeine Relativitätstheorie; Erklärung des photoelektrischen Effekts, Nobelpreis Physik 1921.",
+        "locations": [
+          {
+            "label": "Bern – ein Ort seiner Arbeit",
+            "lat": 46.95,
+            "lon": 7.45,
+            "iso": "CH"
+          },
+          {
+            "label": "Princeton – späterer Forschungsort",
+            "lat": 40.36,
+            "lon": -74.67,
+            "iso": "US"
+          }
+        ],
+        "related": [
+          "science-gps",
+          "science-shadows",
+          "person-lise_meitner"
+        ],
+        "sources": [
+          {
+            "label": "Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+          },
+          {
+            "label": "Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/"
+          }
+        ],
+        "aliases": [
+          "Albert Einstein",
+          "albert_einstein"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1879–1955",
+          "field": "Physiker",
+          "method": "Gedankenexperimente mit Mathematik und überprüfbaren Vorhersagen verbinden."
+        },
+        "question": {
+          "prompt": "Wofür ist Albert Einstein besonders bekannt?",
+          "answers": [
+            "Licht, Raum und Zeit erforschen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Ein Gedankenexperiment bedeutet: Du stellst dir eine Situation genau vor und überlegst, was daraus folgt."
+        },
+        "image": "albert-einstein"
+      },
+      "currentSHA256": "ec7fa9b4653548c83c731976a194f04b770cd534b00f74fdcf18c418a5f1d98b"
+    },
+    {
+      "id": "person-al_khwarizmi",
+      "original": {
+        "id": "person-al_khwarizmi",
+        "category": "people",
+        "title": "al-Chwarizmi (al-Khwarizmi)",
+        "intro": "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+        "paragraphs": [
+          "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "etwa 780–850"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Mathematiker und Astronom"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "heutiger Irak: wirkte in Bagdad im Abbasidenreich; Region Choresmien: mögliche familiäre Herkunft; heute vor allem Usbekistan/Turkmenistan, unsicher"
+          }
+        ],
+        "more": [
+          "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt.",
+          "Algebra hilft, eine unbekannte Zahl zu finden. „Eine Zahl plus drei ist acht“ lässt sich Schritt für Schritt lösen. Gelehrte übernahmen und verbesserten Wissen aus verschiedenen Regionen; Mathematik ist eine gemeinsame Geschichte."
+        ],
+        "surprise": "Systematische Algebra, Vermittlung des Rechnens mit indischen/hindu-arabischen Zahlen; Wortgeschichte von Algebra und Algorithmus.",
+        "locations": [
+          {
+            "label": "Bagdad – Wirkungsort im Abbasidenreich",
+            "lat": 33.32,
+            "lon": 44.37,
+            "iso": "IQ"
+          }
+        ],
+        "related": [
+          "history-zero",
+          "science-computer",
+          "person-ibn_sina"
+        ],
+        "sources": [
+          {
+            "label": "University of St Andrews, MacTutor",
+            "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
+          }
+        ],
+        "aliases": [
+          "al-Chwarizmi (al-Khwarizmi)",
+          "al_khwarizmi"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "etwa 780–850",
+          "field": "Mathematiker und Astronom",
+          "method": "Rechenaufgaben mit klaren Regeln und Schritten lösen."
+        },
+        "question": {
+          "prompt": "Wofür ist al-Chwarizmi (al-Khwarizmi) besonders bekannt?",
+          "answers": [
+            "Bücher über Rechnen und Algebra schreiben",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Algebra hilft, mit unbekannten Zahlen zu rechnen. Wissen aus Indien und anderen Regionen wurde weitergegeben und weiterentwickelt."
+        },
+        "image": "al-khwarizmi"
+      },
+      "currentSHA256": "d4fc397a745cafb1c68378edf08c1069362416f062e1efaabf3b0d4a1c471544"
+    },
+    {
+      "id": "person-tu_youyou",
+      "original": {
+        "id": "person-tu_youyou",
+        "category": "people",
+        "title": "Tu Youyou",
+        "intro": "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+        "paragraphs": [
+          "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "geboren 1930"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Pharmawissenschaftlerin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "China: geboren in Ningbo; Ausbildung und Forschung in China"
+          }
+        ],
+        "more": [
+          "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum.",
+          "Ein Hinweis aus einem alten Text ist noch kein fertiges Medikament. Stoffe müssen untersucht, dosiert und in wissenschaftlichen Studien geprüft werden. Pflanzen oder Arzneien probiert man deshalb nicht selbst als Experiment aus."
+        ],
+        "surprise": "Entdeckung von Artemisinin für die Malariabehandlung; Nobelpreis Medizin 2015.",
+        "locations": [
+          {
+            "label": "China – Beispielregion ihrer Forschung",
+            "lat": 39.9,
+            "lon": 116.4,
+            "iso": "CN"
+          }
+        ],
+        "related": [
+          "person-marie_curie",
+          "person-wangari_maathai",
+          "person-ibn_sina"
+        ],
+        "sources": [
+          {
+            "label": "Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+          },
+          {
+            "label": "Tu Youyou / Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/"
+          }
+        ],
+        "aliases": [
+          "Tu Youyou",
+          "tu_youyou"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "geboren 1930",
+          "field": "Pharmawissenschaftlerin",
+          "method": "Alte Hinweise prüfen und Stoffe wissenschaftlich untersuchen."
+        },
+        "question": {
+          "prompt": "Wofür ist Tu Youyou besonders bekannt?",
+          "answers": [
+            "Mit einem Team Artemisinin erforschen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Medikamente entstehen durch viele Prüfungen. Pflanzen oder Medikamente selbst zu testen wäre gefährlich; Erwachsene und Fachleute kümmern sich darum."
+        },
+        "image": "tu-youyou"
+      },
+      "currentSHA256": "e5397cd7db4f949ba46cdb24829f3584596680b66a0a31ff62381e1f8c3ab5d2"
+    },
+    {
+      "id": "person-cai_lun",
+      "original": {
+        "id": "person-cai_lun",
+        "category": "people",
+        "title": "Cai Lun",
+        "intro": "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+        "paragraphs": [
+          "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Hofbeamter und Verbesserer der Papierherstellung"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "China: Han-Reich; Herkunft Guiyang in der Region des heutigen Hunan"
+          }
+        ],
+        "more": [
+          "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee.",
+          "Papier entsteht aus Fasern, die in Wasser verteilt, zu einer dünnen Schicht gesammelt und getrocknet werden. Verfahren wurden über lange Zeit verbessert. Cai Lun gilt als wichtiger Verbesserer, nicht als einziger Ursprung des Papiers."
+        ],
+        "surprise": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
+        "locations": [
+          {
+            "label": "China – Region der Han-Hauptstadt Luoyang",
+            "lat": 34.6,
+            "lon": 112.5,
+            "iso": "CN"
+          }
+        ],
+        "related": [
+          "history-paper",
+          "invention-printing",
+          "person-katsushika_hokusai"
+        ],
+        "sources": [
+          {
+            "label": "Hunan Provincial Department of Culture & Tourism",
+            "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+          },
+          {
+            "label": "University of Oxford, Cabinet",
+            "url": "https://www.cabinet.ox.ac.uk/origins-paper"
+          },
+          {
+            "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
+            "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+          }
+        ],
+        "aliases": [
+          "Cai Lun",
+          "cai_lun"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+          "field": "Hofbeamter und Verbesserer der Papierherstellung",
+          "method": "Erfahrungen von Papiermachern sammeln und ein Verfahren verbessern."
+        },
+        "question": {
+          "prompt": "Wofür ist Cai Lun besonders bekannt?",
+          "answers": [
+            "Die Papierherstellung verbessern",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
+        },
+        "image": "cai-lun"
+      },
+      "currentSHA256": "b1dbfd05f762695882f81d7d3d842b7cf738a9999d13d0f84debf51007a2ec3d"
+    },
+    {
+      "id": "person-mae_jemison",
+      "original": {
+        "id": "person-mae_jemison",
+        "category": "people",
+        "title": "Mae Jemison",
+        "intro": "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+        "paragraphs": [
+          "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "geboren 1956"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Ärztin, Ingenieurin und Astronautin"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "USA: geboren in Alabama; aufgewachsen in Chicago; NASA-Astronautin"
+          }
+        ],
+        "more": [
+          "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere.",
+          "Für Raumfahrt braucht es viele Fachrichtungen: Medizin, Technik, Mathematik und Naturwissenschaften. Jemisons verschiedene Ausbildungen zeigen, dass Fragen oft über die Grenzen eines einzelnen Faches hinausgehen."
+        ],
+        "surprise": "STS-47, Start 12. September 1992; Wissenschafts-Missionsspezialistin; erste afroamerikanische Frau im Weltraum.",
+        "locations": [
+          {
+            "label": "Florida – Startregion ihrer Raumfahrtmission",
+            "lat": 28.57,
+            "lon": -80.65,
+            "iso": "US"
+          }
+        ],
+        "related": [
+          "person-katherine_johnson",
+          "history-iss"
+        ],
+        "sources": [
+          {
+            "label": "NASA StarChild",
+            "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level1/jemison.html"
+          },
+          {
+            "label": "NASA",
+            "url": "https://www.nasa.gov/mission/sts-47/"
+          }
+        ],
+        "aliases": [
+          "Mae Jemison",
+          "mae_jemison"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "geboren 1956",
+          "field": "Ärztin, Ingenieurin und Astronautin",
+          "method": "Mit einem Team wissenschaftliche Versuche vorbereiten und durchführen."
+        },
+        "image": "mae-jemison",
+        "question": {
+          "prompt": "Wofür ist Mae Jemison besonders bekannt?",
+          "answers": [
+            "Als Ärztin und Astronautin im Weltraum forschen",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Raumfahrt braucht viele Berufe: Mathematik, Medizin, Technik und zahlreiche weitere."
+        }
+      },
+      "currentSHA256": "20e5180eed3751361cc18d9b2eb29de3f7590401d4c62d9d79e52132a7db2637"
+    },
+    {
+      "id": "person-johannes_gutenberg",
+      "original": {
+        "id": "person-johannes_gutenberg",
+        "category": "people",
+        "title": "Johannes Gutenberg",
+        "intro": "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+        "paragraphs": [
+          "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "um 1400–1468"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Handwerker, Erfinder und Druckpionier"
+          },
+          {
+            "label": "Verbunden mit",
+            "text": "heutiges Deutschland: Mainz; damals Heiliges Römisches Reich; heutiges Frankreich: Tätigkeit in Straßburg; damals andere staatliche Zuordnung"
+          }
+        ],
+        "more": [
+          "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten.",
+          "Ein Drucksystem muss viele Teile zusammenbringen: passende Metallzeichen, Farbe, Papier und eine Presse. In Ostasien gab es bereits früher Druck und bewegliche Zeichen. Gutenbergs Beitrag war eine besondere Weiterentwicklung in Europa."
+        ],
+        "surprise": "Europäisches System aus gegossenen Metalltypen, geeignetem Farbauftrag und Presse; Gutenberg-Bibel in den frühen 1450ern.",
+        "locations": [
+          {
+            "label": "Mainz – Druckwerkstatt",
+            "lat": 50,
+            "lon": 8.27,
+            "iso": "DE"
+          }
+        ],
+        "related": [
+          "invention-printing",
+          "history-paper",
+          "person-murasaki_shikibu",
+          "person-octavia_butler",
+          "person-ibn_sina"
+        ],
+        "sources": [
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+          },
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/erfindung/"
+          },
+          {
+            "label": "Stadt Mainz / Gutenberg.de",
+            "url": "https://www.gutenberg.de/erfindung/vor_gutenberg"
+          },
+          {
+            "label": "UNESCO, Memory of the World",
+            "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+          }
+        ],
+        "aliases": [
+          "Johannes Gutenberg",
+          "johannes_gutenberg"
+        ],
+        "links": [],
+        "person": {
+          "lifespan": "um 1400–1468",
+          "field": "Handwerker, Erfinder und Druckpionier",
+          "method": "Metallbuchstaben, Druckfarbe und eine Presse gemeinsam verbessern."
+        },
+        "question": {
+          "prompt": "Wofür ist Johannes Gutenberg besonders bekannt?",
+          "answers": [
+            "Ein praktisches europäisches Drucksystem entwickeln",
+            "Radioaktivität erforschen",
+            "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+          ],
+          "correct": 0,
+          "why": "Bewegliche Zeichen können neu angeordnet werden. So entstehen viele verschiedene Buchseiten."
+        },
+        "image": "johannes-gutenberg"
+      },
+      "currentSHA256": "e2ab2f29bb32a35293414915cea45245c29aad7a72a21da6fe2983593a634eb1"
+    },
+    {
+      "id": "person-wangari_maathai",
+      "original": {
+        "id": "person-wangari_maathai",
+        "category": "people",
+        "title": "Wangari Maathai",
+        "intro": "Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
+        "paragraphs": [
+          "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1940–2011"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Natur- und Friedensarbeit"
+          }
+        ],
+        "more": [
+          "Mit dem Green Belt Movement verband Maathai das Pflanzen von Bäumen mit gemeinsamer Arbeit und besseren Lebensbedingungen. Bäume schützen Boden und bieten Lebensräume. Die Pflege nach dem Pflanzen ist genauso wichtig wie das Setzen des Baumes.",
+          "2004 erhielt sie den Friedensnobelpreis. Ihre Arbeit verband Umweltschutz mit Rechten, friedlichem Zusammenleben und der Beteiligung vieler Menschen."
+        ],
+        "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+        "locations": [
+          {
+            "label": "Kenia – Land ihrer Umweltarbeit",
+            "lat": -1.29,
+            "lon": 36.82,
+            "iso": "KE"
+          }
+        ],
+        "related": [
+          "animal-african-savanna-elephant",
+          "person-jane_goodall",
+          "person-nelson_mandela",
+          "person-rachel_carson"
+        ],
+        "sources": [
+          {
+            "label": "Offizielle Biografie / Forschungsinstitution",
+            "url": "https://www.nobelprize.org/prizes/peace/2004/maathai/facts/"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1940–2011",
+          "field": "Natur- und Friedensarbeit",
+          "method": "Gemeinsam handeln und die Umgebung pflegen."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Wangari Maathai?",
+          "answers": [
+            "Bäume pflanzen und Gemeinschaften stärken",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis."
+        },
+        "image": "wangari-maathai"
+      },
+      "currentSHA256": "2467fc3e5b5358aeaba160467df37b8c18594efb8489281c587c0bcdac80e6a7"
+    },
+    {
+      "id": "person-charles_darwin",
+      "original": {
+        "id": "person-charles_darwin",
+        "category": "people",
+        "title": "Charles Darwin",
+        "intro": "Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+        "paragraphs": [
+          "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1809–1882"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Naturforschung"
+          }
+        ],
+        "more": [
+          "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
+          "Lebewesen einer Art unterscheiden sich. Wenn einige Unterschiede beim Überleben und bei der Fortpflanzung helfen, können sie über viele Generationen häufiger werden. Das heißt natürliche Selektion; ein einzelnes Tier verändert sich dabei nicht auf Wunsch."
+        ],
+        "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+        "locations": [
+          {
+            "label": "Galápagos – eine Station seiner Reise",
+            "lat": -0.6,
+            "lon": -90.5,
+            "iso": "EC"
+          }
+        ],
+        "related": [
+          "person-jane_goodall",
+          "animal-green-sea-turtle",
+          "person-mary_anning"
+        ],
+        "sources": [
+          {
+            "label": "Offizielle Biografie / Forschungsinstitution",
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1809–1882",
+          "field": "Naturforschung",
+          "method": "Beobachtungen aus verschiedenen Orten vergleichen."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Charles Darwin?",
+          "answers": [
+            "Die Entwicklung und Vielfalt von Lebewesen untersuchen",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+        },
+        "image": "charles-darwin"
+      },
+      "currentSHA256": "da7bab4901859031c9054f06515355e5814991f9a0acea76966c0ee8cfa13208"
+    },
+    {
+      "id": "person-alexander_humboldt",
+      "original": {
+        "id": "person-alexander_humboldt",
+        "category": "people",
+        "title": "Alexander von Humboldt",
+        "intro": "Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+        "paragraphs": [
+          "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1769–1859"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Naturforschung und Forschungsreisen"
+          }
+        ],
+        "more": [
+          "Bei Forschungsreisen wurden Orte besucht, an denen bereits Menschen und Kulturen lebten. Auch das Wissen örtlicher Menschen ist wichtig.",
+          "Temperatur, Höhe, Pflanzen und Boden hängen zusammen. Humboldt verglich Messungen an verschiedenen Orten. Forschungsreisen trafen auf bereits vorhandenes Wissen; lokale Menschen halfen wesentlich beim Reisen und Verstehen."
+        ],
+        "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+        "locations": [
+          {
+            "label": "Anden – Beispielregion seiner Forschung",
+            "lat": -1.47,
+            "lon": -78.82,
+            "iso": "EC"
+          }
+        ],
+        "related": [
+          "animal-jaguar",
+          "person-charles_darwin"
+        ],
+        "sources": [
+          {
+            "label": "Offizielle Biografie / Forschungsinstitution",
+            "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1769–1859",
+          "field": "Naturforschung und Forschungsreisen",
+          "method": "Messen, vergleichen und Zusammenhänge suchen."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Alexander von Humboldt?",
+          "answers": [
+            "Natur und Klima zusammen untersuchen",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen."
+        },
+        "image": "alexander-von-humboldt"
+      },
+      "currentSHA256": "b0762072d38f93f300e3ab2c55982adb3819a584994037be27c384616a67d1f5"
+    },
+    {
+      "id": "person-neil_armstrong",
+      "original": {
+        "id": "person-neil_armstrong",
+        "category": "people",
+        "title": "Neil Armstrong",
+        "intro": "Er war der erste Mensch, der die Mondoberfläche betrat.",
+        "paragraphs": [
+          "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1930–2012"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Flugtechnik und Raumfahrt"
+          }
+        ],
+        "more": [
+          "Neil Armstrong und Buzz Aldrin gingen auf dem Mond umher, während Michael Collins in der Mondumlaufbahn blieb. Eine Mission braucht unterschiedliche Aufgaben. Der erste Schritt eines Menschen war das Ergebnis der Arbeit eines großen Teams.",
+          "Armstrong war Ingenieur und Testpilot. Berühmt wurde er durch einen ersten Schritt; das Gelingen einer Raumfahrtmission hing jedoch von sehr vielen Beteiligten ab."
+        ],
+        "surprise": "Eine wichtige Leistung hat oft viele Beteiligte. Frage auch: Wer half mit?",
+        "locations": [
+          {
+            "label": "Florida – Startregion von Apollo 11",
+            "lat": 28.57,
+            "lon": -80.65,
+            "iso": "US"
+          }
+        ],
+        "related": [
+          "history-apollo11",
+          "invention-rocket"
+        ],
+        "sources": [
+          {
+            "label": "Offizielle Biografie / Forschungsinstitution",
+            "url": "https://www.nasa.gov/people/neil-a-armstrong/"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1930–2012",
+          "field": "Flugtechnik und Raumfahrt",
+          "method": "Trainieren, rechnen und im Team arbeiten."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Neil Armstrong?",
+          "answers": [
+            "Als Teil von Apollo 11 auf dem Mond landen",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich."
+        },
+        "image": "neil-armstrong"
+      },
+      "currentSHA256": "32b24454e4f505fa134c3cc8a04366f89cea90da06e54ead8fe1dccf7a769204"
+    }
+  ],
+  "currentCatalogSHA256": "b85634e7df869bd0f60bc14a6d31a3886794a0da4080577f5d60dfa40029da96",
+  "priorCatalogSHA256": "b67c6ea766f1030a46a088d48bbd81e06c43d9e45a97ddcb129cfa9d773fa0d1",
+  "bankChanges": [
+    {
+      "id": "person-marie_curie",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person erforschte die Radioaktivität.",
+        "answers": [
+          "Marie Curie",
+          "Katherine Johnson",
+          "Jane Goodall"
+        ],
+        "correct": 0,
+        "why": "Gemeinsam mit Pierre Curie entdeckte sie 1898 die Elemente Polonium und Radium.",
+        "id": "person-marie_curie",
+        "topic": "person-marie_curie"
+      },
+      "currentSHA256": "ac1b4b3c5626ac995e4d26be1cd6690223e028e9f5cafbde742ae952f70a69d2"
+    },
+    {
+      "id": "person-ada_lovelace",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+        "answers": [
+          "Ada Lovelace",
+          "Tim Berners-Lee",
+          "Albert Einstein"
+        ],
+        "correct": 0,
+        "why": "Sie erkannte, dass solche Maschinen eines Tages auch mit Zeichen oder Musik arbeiten könnten.",
+        "id": "person-ada_lovelace",
+        "topic": "person-ada_lovelace"
+      },
+      "currentSHA256": "2534a79cf8abfe50e92bef180fac344e121918d6c9b29588f06a2ef2f28a9218"
+    },
+    {
+      "id": "person-grace_hopper",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person half, das Programmieren von Computern einfacher zu machen.",
+        "answers": [
+          "Grace Hopper",
+          "Karl (Carl) Benz",
+          "al-Chwarizmi (al-Khwarizmi)"
+        ],
+        "correct": 0,
+        "why": "Sie entwickelte frühe Compiler und FLOW-MATIC; ihre Arbeit beeinflusste die Computersprache COBOL.",
+        "id": "person-grace_hopper",
+        "topic": "person-grace_hopper"
+      },
+      "currentSHA256": "c6821ece7306e1f235f3f8878d06557f625d28c45b5b4871455c672d8921e745"
+    },
+    {
+      "id": "person-katherine_johnson",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person berechnete Flugbahnen für die Raumfahrt.",
+        "answers": [
+          "Katherine Johnson",
+          "Bertha Benz",
+          "Tu Youyou"
+        ],
+        "correct": 0,
+        "why": "Vor John Glenns Weltraumflug 1962 überprüfte sie die Ergebnisse der elektronischen Computer.",
+        "id": "person-katherine_johnson",
+        "topic": "person-katherine_johnson"
+      },
+      "currentSHA256": "5f48781d43149be398d00ca73f567ca88eb6df98759f376fb7304c00f69d5f74"
+    },
+    {
+      "id": "person-tim_berners_lee",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person entwickelte am CERN die Idee für das World Wide Web.",
+        "answers": [
+          "Tim Berners-Lee",
+          "Jane Goodall",
+          "Cai Lun"
+        ],
+        "correct": 0,
+        "why": "Er baute den ersten Webbrowser und Webserver; andere Menschen halfen, das Web weiterzuentwickeln.",
+        "id": "person-tim_berners_lee",
+        "topic": "person-tim_berners_lee"
+      },
+      "currentSHA256": "0707dbd4602af8c0a1824cf4d5b150e51f9f8a298307227a20d35d2622bf59e9"
+    },
+    {
+      "id": "person-karl_benz",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person entwickelte einen Wagen mit Benzinmotor.",
+        "answers": [
+          "Karl (Carl) Benz",
+          "Albert Einstein",
+          "Mae Jemison"
+        ],
+        "correct": 0,
+        "why": "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.",
+        "id": "person-karl_benz",
+        "topic": "person-karl_benz"
+      },
+      "currentSHA256": "0d8d9e401cacba1b935310721f17222748cf23826da09c19293e90537c464a0a"
+    },
+    {
+      "id": "person-bertha_benz",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+        "answers": [
+          "Bertha Benz",
+          "al-Chwarizmi (al-Khwarizmi)",
+          "Johannes Gutenberg"
+        ],
+        "correct": 0,
+        "why": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.",
+        "id": "person-bertha_benz",
+        "topic": "person-bertha_benz"
+      },
+      "currentSHA256": "e1acb8337252dfb4de797dde2a1c14f928c14d6ce87be101466b6d6da8bbe66f"
+    },
+    {
+      "id": "person-jane_goodall",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person beobachtete wilde Schimpansen in Tansania.",
+        "answers": [
+          "Jane Goodall",
+          "Tu Youyou",
+          "Wangari Maathai"
+        ],
+        "correct": 0,
+        "why": "1960 sah sie, dass diese Tiere Werkzeuge herstellen und benutzen; später setzte sie sich weltweit für Tiere und Natur ein.",
+        "id": "person-jane_goodall",
+        "topic": "person-jane_goodall"
+      },
+      "currentSHA256": "417309b48b17d79d13d06557df5ac4d999a8aa7f5b4cb626af52efa891c42ae1"
+    },
+    {
+      "id": "person-albert_einstein",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person erforschte Licht, Raum und Zeit.",
+        "answers": [
+          "Albert Einstein",
+          "Cai Lun",
+          "Charles Darwin"
+        ],
+        "correct": 0,
+        "why": "Seine Relativitätstheorien veränderten die Physik; seinen Nobelpreis bekam er für seine Erklärung, wie Licht Elektronen aus einem Stoff lösen kann.",
+        "id": "person-albert_einstein",
+        "topic": "person-albert_einstein"
+      },
+      "currentSHA256": "4fea4eea1417c2a10f04f9b33dfeea0d444ec9add60a3c08fee0dc19a0569825"
+    },
+    {
+      "id": "person-al_khwarizmi",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+        "answers": [
+          "al-Chwarizmi (al-Khwarizmi)",
+          "Mae Jemison",
+          "Alexander von Humboldt"
+        ],
+        "correct": 0,
+        "why": "Das Wort Algorithmus, also eine genaue Schrittfolge, geht auf seinen Namen zurück.",
+        "id": "person-al_khwarizmi",
+        "topic": "person-al_khwarizmi"
+      },
+      "currentSHA256": "6d436a333eecd153719400ca5d42175131fe2051441c679e2965dbc9ce95fa3a"
+    },
+    {
+      "id": "person-tu_youyou",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+        "answers": [
+          "Tu Youyou",
+          "Johannes Gutenberg",
+          "Neil Armstrong"
+        ],
+        "correct": 0,
+        "why": "In den 1970er-Jahren gewann sie Artemisinin aus einer Pflanze; die Forschung half, wirksame Medikamente zu entwickeln.",
+        "id": "person-tu_youyou",
+        "topic": "person-tu_youyou"
+      },
+      "currentSHA256": "5dcd5ef1cfc73b51c75958951258bee508000788635b61fb90b6ac36c3cc1b86"
+    },
+    {
+      "id": "person-cai_lun",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+        "answers": [
+          "Cai Lun",
+          "Wangari Maathai",
+          "Mary Anning"
+        ],
+        "correct": 0,
+        "why": "Für 105 ist überliefert, dass er sein Verfahren dem Kaiser vorstellte; Papier gab es schon vorher.",
+        "id": "person-cai_lun",
+        "topic": "person-cai_lun"
+      },
+      "currentSHA256": "7454d57c83420f09a839f98f7279e7bcfcfdbb75199a0747ccc244839f9be2b7"
+    },
+    {
+      "id": "person-mae_jemison",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person ist Ärztin und war NASA-Astronautin.",
+        "answers": [
+          "Mae Jemison",
+          "Charles Darwin",
+          "Ibn al-Haytham"
+        ],
+        "correct": 0,
+        "why": "1992 flog sie mit der Raumfähre Endeavour als erste Schwarze Frau in den Weltraum.",
+        "id": "person-mae_jemison",
+        "topic": "person-mae_jemison"
+      },
+      "currentSHA256": "96cb2786c9fd96fc2f7c770aebce358d84f20064e2e755d9dde695aaa4d03815"
+    },
+    {
+      "id": "person-johannes_gutenberg",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Diese Person entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+        "answers": [
+          "Johannes Gutenberg",
+          "Alexander von Humboldt",
+          "Marie Curie"
+        ],
+        "correct": 0,
+        "why": "So konnte eine Werkstatt viele Buchseiten herstellen; ähnliche Druckideen gab es in Ostasien schon viel früher.",
+        "id": "person-johannes_gutenberg",
+        "topic": "person-johannes_gutenberg"
+      },
+      "currentSHA256": "b6f12c633930c746d82793fb93885ec03cc1e54cbee5a2ff60947c4a32287a25"
+    },
+    {
+      "id": "person-wangari_maathai",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Sie setzte sich in Kenia gemeinsam mit vielen Frauen für Bäume und eine gesunde Umwelt ein.",
+        "answers": [
+          "Wangari Maathai",
+          "Neil Armstrong",
+          "Ada Lovelace"
+        ],
+        "correct": 0,
+        "why": "Die Green-Belt-Bewegung verband Umweltschutz mit der Arbeit örtlicher Gemeinschaften. 2004 erhielt sie den Friedensnobelpreis.",
+        "id": "person-wangari_maathai",
+        "topic": "person-wangari_maathai"
+      },
+      "currentSHA256": "8f1d1737d774fdaa0b1b787264f315e7ff82d5ae918d77c4e5f8de95b542c78c"
+    },
+    {
+      "id": "person-charles_darwin",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+        "answers": [
+          "Charles Darwin",
+          "Mary Anning",
+          "Grace Hopper"
+        ],
+        "correct": 0,
+        "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.",
+        "id": "person-charles_darwin",
+        "topic": "person-charles_darwin"
+      },
+      "currentSHA256": "ed52c31af7cd5aa4d3230e1b76e3581a1ee6238b43a25e463959d3f8aac06dc0"
+    },
+    {
+      "id": "person-alexander_humboldt",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+        "answers": [
+          "Alexander von Humboldt",
+          "Ibn al-Haytham",
+          "Katherine Johnson"
+        ],
+        "correct": 0,
+        "why": "Von 1799 bis 1804 reiste er mit Aimé Bonpland durch Teile Amerikas. Er wollte verstehen, wie verschiedene Teile der Natur zusammenhängen.",
+        "id": "person-alexander_humboldt",
+        "topic": "person-alexander_humboldt"
+      },
+      "currentSHA256": "1c7581972f24202e28adc4a64b7483eb51edc7f8443bdea22ce6ca843978a438"
+    },
+    {
+      "id": "person-neil_armstrong",
+      "original": {
+        "prompt": "Wer passt zu diesem Hinweis? Er war der erste Mensch, der die Mondoberfläche betrat.",
+        "answers": [
+          "Neil Armstrong",
+          "Marie Curie",
+          "Tim Berners-Lee"
+        ],
+        "correct": 0,
+        "why": "Apollo 11 landete am 20. Juli 1969. Armstrong und Buzz Aldrin gingen auf dem Mond, während Michael Collins ihn im Raumschiff umkreiste. Das ganze Team machte die Reise möglich.",
+        "id": "person-neil_armstrong",
+        "topic": "person-neil_armstrong"
+      },
+      "currentSHA256": "1a006130a565c96cceb540c72bc293fb63d15f4f12643c632047a3a8b664e0a8"
+    }
+  ],
+  "priorInquiriesSHA256": "75bae30ac05b807afe361fab4374fcaa1817b0c32ad3a0d986a061675e893455",
+  "currentInquiriesSHA256": "8f78cd28dc85b6aa106136edab27a1ffc4da7fe5c44a6d7ae158c5967db056c9",
+  "priorGraphSHA256": "c92d2159d1cb633059a7e66636afe780708a94c60e9011fc71fe429911cdba83",
+  "currentGraphSHA256": "759b66c6f61c7524a5c7416197b860f89906e7515746167ccc4c2bb9e1f6c606",
+  "priorBookLinksSHA256": "ad510466f786be5c71669b5beba0d7ca53b2fcbec722c22e1d268fe7fedd961c",
+  "currentBookLinksSHA256": "d542e5fa1b504fc7957802d2d41703a6f3a84bc58ba8d4d0d83cbad0eee79427",
+  "prior268": [
+    {
+      "id": "topics-animals:animal-platypus",
+      "sha256": "96baf0320909da22b51bfbe37163c922b4af1eb420b7153ed3270fd7d4493bcf",
+      "route": "world/topic/animal-platypus"
+    },
+    {
+      "id": "topics-animals:animal-short-beaked-echidna",
+      "sha256": "4058d3ab0cd96adb75248f5b741baec6a18e186ad5f13cf9aad3cbcbbed022ae",
+      "route": "world/topic/animal-short-beaked-echidna"
+    },
+    {
+      "id": "topics-animals:animal-okapi",
+      "sha256": "9f1e56ea9a6fe0739d38914e244ec27b7cb918f796f3390d218f0213edc89706",
+      "route": "world/topic/animal-okapi"
+    },
+    {
+      "id": "topics-animals:animal-meerkat",
+      "sha256": "c41b83f3b5fe6d7bcd7e5e582b888e88d76f7e1c2542e83b2cb15d5d3354ace8",
+      "route": "world/topic/animal-meerkat"
+    },
+    {
+      "id": "topics-animals:animal-ring-tailed-lemur",
+      "sha256": "22cc2cc4353751857850ee7aa93d9d90f299eaadd7d3b8cfc6dbfd89fc2215a7",
+      "route": "world/topic/animal-ring-tailed-lemur"
+    },
+    {
+      "id": "topics-animals:animal-north-american-beaver",
+      "sha256": "e5f3926ec62b49f18ebd945e100fa4e8b1a11cff8680ec578adb6580275096b8",
+      "route": "world/topic/animal-north-american-beaver"
+    },
+    {
+      "id": "topics-animals:animal-walrus",
+      "sha256": "f6532f04ed629aed3a38510c42e3317573f1f37cb89d41071fdec6f52579d6cc",
+      "route": "world/topic/animal-walrus"
+    },
+    {
+      "id": "topics-animals:animal-red-fox",
+      "sha256": "96c06a66c1229144c5210693b4372f3a75e5ea610530d728f1de187e400f3194",
+      "route": "world/topic/animal-red-fox"
+    },
+    {
+      "id": "topics-animals:animal-raccoon",
+      "sha256": "ca8bd2aeae6a0c612a92a9e7a36435f9c3007a7e8c423ab5f00139a0bb822091",
+      "route": "world/topic/animal-raccoon"
+    },
+    {
+      "id": "topics-animals:animal-hedgehog",
+      "sha256": "e81b0907ec009b3329c14b1974b2d9262725a79234fd7ce561468b667b13f61b",
+      "route": "world/topic/animal-hedgehog"
+    },
+    {
+      "id": "topics-animals:animal-barn-owl",
+      "sha256": "81143473227afd9684910be955002d892c5cf8d34077cd8a3e94530e68c26979",
+      "route": "world/topic/animal-barn-owl"
+    },
+    {
+      "id": "topics-animals:animal-kingfisher",
+      "sha256": "19751d63b4c016320ea06e269d0dbddd8fe66563eec134bc16f2c9ad06b9c0e5",
+      "route": "world/topic/animal-kingfisher"
+    },
+    {
+      "id": "topics-animals:animal-ostrich",
+      "sha256": "43693b5f4cddc3b544557f878d503e943f9d6c4c5d19db7b34dc87d83818f067",
+      "route": "world/topic/animal-ostrich"
+    },
+    {
+      "id": "topics-animals:animal-atlantic-puffin",
+      "sha256": "53d5af746c53f834fda567b3e20a7e5d3eebccd58677cf6058cdf844928b3a6a",
+      "route": "world/topic/animal-atlantic-puffin"
+    },
+    {
+      "id": "topics-animals:animal-common-chameleon",
+      "sha256": "343b525d114bc53b3eaa0d48e27bee47ec63e09ea23b99fc30c69fa0b81f12ae",
+      "route": "world/topic/animal-common-chameleon"
+    },
+    {
+      "id": "topics-animals:animal-fire-salamander",
+      "sha256": "84ed5c349db25b7be5d5bb0df76d56438d4f1b6d6a90113839866a1a9c9e4db3",
+      "route": "world/topic/animal-fire-salamander"
+    },
+    {
+      "id": "topics-animals:animal-common-frog",
+      "sha256": "18e2591bb7076fceff4e3a983e7a3e27528147fa48799b082aff7857eadd0166",
+      "route": "world/topic/animal-common-frog"
+    },
+    {
+      "id": "topics-animals:animal-eastern-clown-anemonefish",
+      "sha256": "8467f4c4bf79e67b2a3aa1f94cd9bce75b3b2506912417154193ea48cd891722",
+      "route": "world/topic/animal-eastern-clown-anemonefish"
+    },
+    {
+      "id": "topics-animals:animal-european-eel",
+      "sha256": "4e2f300d675ca3b7bd30e8a703c54e7d4b2c43c3a4568d3f558e0a0df14145c5",
+      "route": "world/topic/animal-european-eel"
+    },
+    {
+      "id": "topics-animals:animal-monarch-butterfly",
+      "sha256": "fe6958477c0f11eddbbbb864d773b622e551eb1123237fae9d3edf50ca825e2e",
+      "route": "world/topic/animal-monarch-butterfly"
+    },
+    {
+      "id": "topics-animals:animal-garden-snail",
+      "sha256": "7d1e3990088f4da80fd75a91f8864afcc169c69b6913982ae63f2140088e6318",
+      "route": "world/topic/animal-garden-snail"
+    },
+    {
+      "id": "topics-animals:animal-european-lobster",
+      "sha256": "76670b1d57c4670205769f3b7808ae81286f9a2b6de05df28effe45c649b37e4",
+      "route": "world/topic/animal-european-lobster"
+    },
+    {
+      "id": "topics-animals:animal-common-cuttlefish",
+      "sha256": "7ac9067c8cef037efb41ea92c134a8d8a91944a4357827f5da52656d85f36152",
+      "route": "world/topic/animal-common-cuttlefish"
+    },
+    {
+      "id": "topics-animals:animal-short-snouted-seahorse",
+      "sha256": "bf38781a19651fe0433179207d95f7b280a164ef4c73f5c54628e38b0909686e",
+      "route": "world/topic/animal-short-snouted-seahorse"
+    },
+    {
+      "id": "topics-animals:animal-african-savanna-elephant",
+      "sha256": "0a6fe1156d3ca2cc23b485e1e86c30f5e9927f894bcfccaee2521763da86eb0d",
+      "route": "world/topic/animal-african-savanna-elephant"
+    },
+    {
+      "id": "topics-animals:animal-lion",
+      "sha256": "af275ef34c58b07d46b758d58b5375daf9109677c6006ad0b31c66fbbda99dc4",
+      "route": "world/topic/animal-lion"
+    },
+    {
+      "id": "topics-animals:animal-cheetah",
+      "sha256": "28314087ccd27020b4c2dbf52986c14ba1246260f6fe5b80de75fa9a32fdbf70",
+      "route": "world/topic/animal-cheetah"
+    },
+    {
+      "id": "topics-animals:animal-bengal-tiger",
+      "sha256": "fa5132389d5bc606e23c0f24e339f9c6474a127646513526655a396d11359eeb",
+      "route": "world/topic/animal-bengal-tiger"
+    },
+    {
+      "id": "topics-animals:animal-giraffe",
+      "sha256": "14143c577dd6520086da86434067de7b6c3ffd4ec12a1e9f06603ae50febc5ad",
+      "route": "world/topic/animal-giraffe"
+    },
+    {
+      "id": "topics-animals:animal-giant-panda",
+      "sha256": "baa58f5cb9943b425882711adca94fd259d8d2beb409d8d6dc5a5bbd5766eeb9",
+      "route": "world/topic/animal-giant-panda"
+    },
+    {
+      "id": "topics-animals:animal-western-lowland-gorilla",
+      "sha256": "159300d9bcb0376dd648a92cdb67b23b3f07391f935b56fae8e05e0a794b45b2",
+      "route": "world/topic/animal-western-lowland-gorilla"
+    },
+    {
+      "id": "topics-animals:animal-bornean-orangutan",
+      "sha256": "5de228a7cd8ba36dc8633917e788b393f36872547c70db0c697cc35b84acc7aa",
+      "route": "world/topic/animal-bornean-orangutan"
+    },
+    {
+      "id": "topics-animals:animal-polar-bear",
+      "sha256": "1b92e15eb51ea9122aa92f988d162e10214d8d6c8deb204c47c704ac1bd4c44e",
+      "route": "world/topic/animal-polar-bear"
+    },
+    {
+      "id": "topics-animals:animal-emperor-penguin",
+      "sha256": "d58b5d87fe4600dc7de8dfdb52c1297401e3031a571d0af5b609f04ce41c23e9",
+      "route": "world/topic/animal-emperor-penguin"
+    },
+    {
+      "id": "topics-animals:animal-blue-whale",
+      "sha256": "9a55648854744eecf56f4c4d432faa212314fc7507e10ea5c6f98f1d93677057",
+      "route": "world/topic/animal-blue-whale"
+    },
+    {
+      "id": "topics-animals:animal-common-bottlenose-dolphin",
+      "sha256": "5915ae7da01290c1cd350f06783a4280f1c6712e97652635c8fa5031242395d6",
+      "route": "world/topic/animal-common-bottlenose-dolphin"
+    },
+    {
+      "id": "topics-animals:animal-orca",
+      "sha256": "df7ab6c5308913546776dc31c51c30520cd20a87d94b92e328c3e9a904333f38",
+      "route": "world/topic/animal-orca"
+    },
+    {
+      "id": "topics-animals:animal-common-octopus",
+      "sha256": "76c7cbccbd7cc04518f91fadb8e7fc0b3c5e86c6bbb737cc164ea1144c86e41b",
+      "route": "world/topic/animal-common-octopus"
+    },
+    {
+      "id": "topics-animals:animal-green-sea-turtle",
+      "sha256": "de2e91b4c1e011ff31429fd815b919b196666e957de844dff11cbfb4f523662b",
+      "route": "world/topic/animal-green-sea-turtle"
+    },
+    {
+      "id": "topics-animals:animal-red-kangaroo",
+      "sha256": "9bb13897a542edb90b439b9c19a69b6470ccac77ef99f2846577e23e292de579",
+      "route": "world/topic/animal-red-kangaroo"
+    },
+    {
+      "id": "topics-animals:animal-koala",
+      "sha256": "dc53e4da2a677930d2074b980e92eb969986483aadf09e670def0c04c7054a97",
+      "route": "world/topic/animal-koala"
+    },
+    {
+      "id": "topics-animals:animal-jaguar",
+      "sha256": "2f3493f9c68cb336e39c8e1c416a28d0dfbb997cbde81d395b058fbec4b65007",
+      "route": "world/topic/animal-jaguar"
+    },
+    {
+      "id": "topics-animals:animal-honey-bee",
+      "sha256": "b277b5231a71b524ba9520dfca9f3d5b930261b675e0bf47abf45a5c41b14e88",
+      "route": "world/topic/animal-honey-bee"
+    },
+    {
+      "id": "topics-animals:animal-axolotl",
+      "sha256": "21c02b2b9fe51965591123b2f3aa990d9a7602db9e5bf0a5e90818c1017f12e2",
+      "route": "world/topic/animal-axolotl"
+    },
+    {
+      "id": "topics-animals:animal-whale-shark",
+      "sha256": "fc76bbe4ec6425f0e04b2497214340d4b8f8db08ebb0af089e8913eb5fc9014e",
+      "route": "world/topic/animal-whale-shark"
+    },
+    {
+      "id": "topics-animals:animal-garden-cross-spider",
+      "sha256": "ab4bc0a469e1f9cdf278dfab0ceb6862eb30009bcdb4e3bf8ea08a40d063fc32",
+      "route": "world/topic/animal-garden-cross-spider"
+    },
+    {
+      "id": "topics-animals:animal-dromedary",
+      "sha256": "424a27bddeb6e02d6acfbd959853212ea249678ca1bd8e42e7f95912feb24292",
+      "route": "world/topic/animal-dromedary"
+    },
+    {
+      "id": "topics-animals:animal-white-tailed-eagle",
+      "sha256": "ed64af530efbb95bf9cbc35352f7337d90918e9e6700baaebe15be0f1cac19ec",
+      "route": "world/topic/animal-white-tailed-eagle"
+    },
+    {
+      "id": "topics-history:history-khipu",
+      "sha256": "6a69ca6bade51faa0868aeb83215baa2f8ef4d2d7eed6bca76ed660e7ffee766",
+      "route": "world/topic/history-khipu"
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "sha256": "bfd6850182309d87220f2b554ca060c2cce1cc52bbe0f5ae1073e2d35498fdc6",
+      "route": "world/topic/history-mohenjo-daro"
+    },
+    {
+      "id": "topics-history:history-writing",
+      "sha256": "97feb2b8593ef8e481e581a8d0889ba4ee9318acc5e461058b6afb20e4b09e37",
+      "route": "world/topic/history-writing"
+    },
+    {
+      "id": "topics-inventions:invention-camera",
+      "sha256": "4652a5f65444b541046fb7b41022e4bd5dcf1da46b107b0e2c8b1dab87806029",
+      "route": "world/topic/invention-camera"
+    },
+    {
+      "id": "topics-inventions:invention-telescope",
+      "sha256": "9a268681457665921d56d4eca97f6c9e40fe3c7de05cdff9fdfc8bdfaa1576b2",
+      "route": "world/topic/invention-telescope"
+    },
+    {
+      "id": "topics-inventions:invention-microscope",
+      "sha256": "4f519b0a569ea8b68d4c6e4bad53c7e0656891625d9b3d0135c9d38010b6a449",
+      "route": "world/topic/invention-microscope"
+    },
+    {
+      "id": "topics-people:person-mary_anning",
+      "sha256": "bd91f9b6148b65814096b5a513262d59f85225757d9bab384eec20c5a612bab9",
+      "route": "world/topic/person-mary_anning"
+    },
+    {
+      "id": "topics-people:person-ibn_al_haytham",
+      "sha256": "681566439f8f46f9a612ec695deebc0d7400e5deb33d73b3b40eae424f2c8e7f",
+      "route": "world/topic/person-ibn_al_haytham"
+    },
+    {
+      "id": "topics-inventions:invention-battery",
+      "sha256": "ed3b042e9d55bb11918c01e64e8ccd2c3d3c9387ffa3dcb6bfc9f36b0f84244b",
+      "route": "world/topic/invention-battery"
+    },
+    {
+      "id": "topics-inventions:invention-generator",
+      "sha256": "6e82749d69997871e4ebb40d1552922bc4b341ef60b665a3eaa12d0638356cbc",
+      "route": "world/topic/invention-generator"
+    },
+    {
+      "id": "topics-inventions:invention-transistor",
+      "sha256": "3b4ed24312ea406a95bbe56d5bf9d299521e5f8865834dbcfe91c01e86ac01ed",
+      "route": "world/topic/invention-transistor"
+    },
+    {
+      "id": "topics-inventions:invention-refrigerator",
+      "sha256": "6ee1979e55e2e1e72673acae2eaf17ac892de12a9a2a2213b9e795e8385df365",
+      "route": "world/topic/invention-refrigerator"
+    },
+    {
+      "id": "topics-inventions:invention-bicycle",
+      "sha256": "c53cf7c66ef3352536fd61ee9e23427eaa02fcb25ca90dbffc9eeb7d7babd24f",
+      "route": "world/topic/invention-bicycle"
+    },
+    {
+      "id": "topics-inventions:invention-elevator",
+      "sha256": "40aed9e87492143bcaca150d239d45784a816e7b4b838488a86e145ffa0ca677",
+      "route": "world/topic/invention-elevator"
+    },
+    {
+      "id": "topics-inventions:invention-seismograph",
+      "sha256": "830ad96fc32bfbb421ff3db2381a385631f8bf231c8c721b682dc2666d7ccf81",
+      "route": "world/topic/invention-seismograph"
+    },
+    {
+      "id": "topics-inventions:invention-3d-printing",
+      "sha256": "698d0f330f763b8eb777b794c201553cc6db281847f98cff10e00cf2d2d2b938",
+      "route": "world/topic/invention-3d-printing"
+    },
+    {
+      "id": "topics-inventions:invention-sewing-machine",
+      "sha256": "0b59507ef82c7181494a9955c63120a504fbc59cec09de9a18a625e91957ee7f",
+      "route": "world/topic/invention-sewing-machine"
+    },
+    {
+      "id": "topics-buildings:building-pont-du-gard",
+      "sha256": "c9281fffa32f8bbb99b71f2dfe46df8437344ed66f189493cfdd6114e80806ea",
+      "route": "world/topic/building-pont-du-gard"
+    },
+    {
+      "id": "topics-buildings:building-great-zimbabwe",
+      "sha256": "6d191593ebabfb79de37e8413765ac9d296cf0dfb65b735a3a9bc17be32b3dd1",
+      "route": "world/topic/building-great-zimbabwe"
+    },
+    {
+      "id": "topics-buildings:building-horyu-ji",
+      "sha256": "7a46c84d77e95cbacc2664f371c7ee88aa459ba626ece81da03f233e04273f75",
+      "route": "world/topic/building-horyu-ji"
+    },
+    {
+      "id": "topics-buildings:building-djenne-mosque",
+      "sha256": "af710d72126c940657cd962582eaada4dfc2714214061b1bd75cf1861a4ba379",
+      "route": "world/topic/building-djenne-mosque"
+    },
+    {
+      "id": "topics-buildings:building-lalibela",
+      "sha256": "e0db593aed14f46dffc92733c4f87330fde09bf7095fa008537ec319f234bc19",
+      "route": "world/topic/building-lalibela"
+    },
+    {
+      "id": "topics-buildings:building-angkor-wat",
+      "sha256": "ffaa03d05b8e12305398c45c17c82b44b932927d1ce4fce9f81204afe8432da4",
+      "route": "world/topic/building-angkor-wat"
+    },
+    {
+      "id": "topics-buildings:building-palenque",
+      "sha256": "663b701a5ec9c2bc5b30757dd9abb4648e86711d5bb5ec0d0e350f70ede7c7ee",
+      "route": "world/topic/building-palenque"
+    },
+    {
+      "id": "topics-buildings:building-sydney-opera",
+      "sha256": "242e3eccb6eb688f364afbedf41b8c15b98770e34008264be4414a4caa4f32ee",
+      "route": "world/topic/building-sydney-opera"
+    },
+    {
+      "id": "topics-science:science-pressure",
+      "sha256": "670acd241543d884cdeb93fb2398fe7889f2a2e55467159b4a998bc24b98e160",
+      "route": "world/topic/science-pressure"
+    },
+    {
+      "id": "topics-science:science-friction",
+      "sha256": "e7ab81d0f15c075611d50fd37839757845a91414ee5a018f893178aadb0802a0",
+      "route": "world/topic/science-friction"
+    },
+    {
+      "id": "topics-science:science-buoyancy",
+      "sha256": "1718debcfe736c73df2e8555c9c4698656d188fbcf117861f706adb9e0f6caef",
+      "route": "world/topic/science-buoyancy"
+    },
+    {
+      "id": "topics-science:science-surface-tension",
+      "sha256": "99acd38f8de0bc1cc78fb9ea296340376852e6bea0fbfff684864c4d0c215a51",
+      "route": "world/topic/science-surface-tension"
+    },
+    {
+      "id": "topics-science:science-capillarity",
+      "sha256": "586a878a737c87207163a8da012f558d329ebf33cd01b941ec23ce062e750a2f",
+      "route": "world/topic/science-capillarity"
+    },
+    {
+      "id": "topics-science:science-diffusion",
+      "sha256": "b74817459b4e99c765877c0badae6082eaddb6411ccb3f52b7163e0c20e33ede",
+      "route": "world/topic/science-diffusion"
+    },
+    {
+      "id": "topics-science:science-chromatography",
+      "sha256": "695ef04d18bca9931e8307edd34ac4b2f223fa845663dd051cdaa8973e861651",
+      "route": "world/topic/science-chromatography"
+    },
+    {
+      "id": "topics-science:science-heat-transfer",
+      "sha256": "c6ab0e2e096c087d2289a62bc1e5d8d47bb47b5eeddad8becfe91151471896ea",
+      "route": "world/topic/science-heat-transfer"
+    },
+    {
+      "id": "topics-science:science-lever",
+      "sha256": "5ad6f3e3c05ade5338ce3424d1408d0e1a0e535ae1cb73ec24072865db3eb94f",
+      "route": "world/topic/science-lever"
+    },
+    {
+      "id": "topics-science:science-elasticity",
+      "sha256": "8d9b491b373316326920db3b4af53e8fcc8f2c8e3ed059e8bf38296e9405c2c8",
+      "route": "world/topic/science-elasticity"
+    },
+    {
+      "id": "topics-science:science-pendulum",
+      "sha256": "69393edeb63125e27cee7a686c56fbcd1ce646743e64e9bd48a4523d618e855e",
+      "route": "world/topic/science-pendulum"
+    },
+    {
+      "id": "topics-science:science-resonance",
+      "sha256": "d54a08e03c53e10adcaa862d50c74499b1d881796ffa0853196b5b0aca554616",
+      "route": "world/topic/science-resonance"
+    },
+    {
+      "id": "topics-science:science-probability",
+      "sha256": "cd47005379d25487e52ce7520c80f7c5ccfb5de5a60621f677b98986481f2e66",
+      "route": "world/topic/science-probability"
+    },
+    {
+      "id": "topics-science:science-symmetry",
+      "sha256": "553c2a93dfeda74f3f3a910840dee0d3a2144d62fbcb9e15689baf3cab4013db",
+      "route": "world/topic/science-symmetry"
+    },
+    {
+      "id": "topics-science:science-fractals",
+      "sha256": "e5c5bb84963513705e20bad5afb67b9ac2b90a42aed66369dc2cf27226e64eaf",
+      "route": "world/topic/science-fractals"
+    },
+    {
+      "id": "topics-science:science-angle",
+      "sha256": "715a374d40fc6a39dcffeda32206bd6ab1f04b239b27d18fd89419dd167c461f",
+      "route": "world/topic/science-angle"
+    },
+    {
+      "id": "topics-science:science-encryption",
+      "sha256": "62a19717f365123f7bb8c4d6abf1e92bf4a881adb03628fa90e73b74bad809c7",
+      "route": "world/topic/science-encryption"
+    },
+    {
+      "id": "topics-science:science-checksum",
+      "sha256": "63d478d1d1c26d61e3de0e4d8adba0dbb0192c7e25198d11437579ad8ae6853d",
+      "route": "world/topic/science-checksum"
+    },
+    {
+      "id": "topics-science:science-cell",
+      "sha256": "16ce8bc07047324af77e2d717a60c8680e1821ccb86ba13f76937083331e55d7",
+      "route": "world/topic/science-cell"
+    },
+    {
+      "id": "topics-science:science-fusion",
+      "sha256": "4b80aa78b6de51f704dc366b900b1566b0e15a843ecee2687d14db197aaf7826",
+      "route": "world/topic/science-fusion"
+    },
+    {
+      "id": "topics-science:science-galaxy",
+      "sha256": "03973706775dc061b335ebb85445978ab778ef9075c932b5840adabc3406ed5d",
+      "route": "world/topic/science-galaxy"
+    },
+    {
+      "id": "topics-science:science-comet",
+      "sha256": "8b8a1363aaf55cdc8ced73645081ed90df99aeed88a9a9bc9fd3636814eb76a0",
+      "route": "world/topic/science-comet"
+    },
+    {
+      "id": "topics-science:science-exoplanet",
+      "sha256": "e0a1dd30cc93542305d8b4787ec424917d963917c392c1d99bfa8cf712cabcdb",
+      "route": "world/topic/science-exoplanet"
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "sha256": "2e44fd425dd845dbc65a8ba985f26fea3d0c2d70a0db560f9f9b36c82839c631",
+      "route": "world/topic/history-bronze"
+    },
+    {
+      "id": "topics-people:person-maria_sibylla_merian",
+      "sha256": "a7c6c86e667025d1ed23cc52df02515e9d0179faeb4b9b1dbdecb89cff080317",
+      "route": "world/topic/person-maria_sibylla_merian"
+    },
+    {
+      "id": "topics-people:person-inge_lehmann",
+      "sha256": "686832555b2de7f664c4762a4598707b9f565268fdc106a1de6ae42d1b4859bb",
+      "route": "world/topic/person-inge_lehmann"
+    },
+    {
+      "id": "words:Meter",
+      "sha256": "a84193a9c8df22a00da7a06f117b165f2207defd35607a42d0faff39c52422c8",
+      "route": "book/words/Meter"
+    },
+    {
+      "id": "words:Kilogramm",
+      "sha256": "f6e2bb527004122dff180cb2961f37661a2f18c0c745cd8739111cdc862471dc",
+      "route": "book/words/Kilogramm"
+    },
+    {
+      "id": "words:Sekunde",
+      "sha256": "5fbb8754f2ebb3dc73858a5a398f69bdca8fcb41ede29f28211b7121e42aad28",
+      "route": "book/words/Sekunde"
+    },
+    {
+      "id": "words:Ampere",
+      "sha256": "e8782da4ca5a6560b562483970537e39f451c6b796b9b0d32525157134575dd0",
+      "route": "book/words/Ampere"
+    },
+    {
+      "id": "words:Kelvin",
+      "sha256": "492eb54531ed889c4ea3ce155235e63532a3b285d667639cc67595d52853530d",
+      "route": "book/words/Kelvin"
+    },
+    {
+      "id": "words:Mol",
+      "sha256": "3a983d81264f9656f436a7ab0fdaf4303d2663ea08541af82291f96fe2791bd5",
+      "route": "book/words/Mol"
+    },
+    {
+      "id": "words:Candela",
+      "sha256": "a751f93c0573e053db808c354fab8299c40aacb43dbcbb119b08f7b8b035dd70",
+      "route": "book/words/Candela"
+    },
+    {
+      "id": "words:Wärme",
+      "sha256": "5d51a3809839613adfc5caca6d92178bc5a07feb53c664cead4936ba2cc00a6c",
+      "route": "book/words/W%C3%A4rme"
+    },
+    {
+      "id": "words:Wärmeleitung",
+      "sha256": "4c438bb8684afa0c1191699b85af4542e56b6ad33f20521d38fe42f16cccb0bc",
+      "route": "book/words/W%C3%A4rmeleitung"
+    },
+    {
+      "id": "words:Konvektion",
+      "sha256": "06c634f9ffdcc610a9400d45f15888d7f795b67b8c5fe7f83a3898f99f196b73",
+      "route": "book/words/Konvektion"
+    },
+    {
+      "id": "words:Wärmestrahlung",
+      "sha256": "49986fa495945cf223f08db540439cff4e570842d7c353475947ba3b45fc9f5f",
+      "route": "book/words/W%C3%A4rmestrahlung"
+    },
+    {
+      "id": "why:30",
+      "sha256": "d02a215b41941e9e66ac12eb210281856fd74a447fb8e7e80ff6559cb4353773",
+      "route": "book/why/Warum%20f%C3%BChlen%20sich%20gleich%20warme%20Materialien%20manchmal%20verschieden%20an%3F"
+    },
+    {
+      "id": "why:31",
+      "sha256": "027dce93133395ff5297a853b0fe06b9a69f1d802846127bf4bf82488bfa16e2",
+      "route": "book/why/Warum%20bewegt%20erw%C3%A4rmtes%20Wasser%20manchmal%20weiteres%20Wasser%20mit%3F"
+    },
+    {
+      "id": "words:Reflexion",
+      "sha256": "bcda17d1281f2d2def7153bf1184bd9cd3cf40e90685b796ae4f4c634890de3b",
+      "route": "book/words/Reflexion"
+    },
+    {
+      "id": "words:Absorption",
+      "sha256": "31019b3a825afbf0b3fc8c460cca1cabe4ea2d8626fba6349728d65ae2a585dc",
+      "route": "book/words/Absorption"
+    },
+    {
+      "id": "words:Brechung",
+      "sha256": "780a160dc3e34cb1ce1ccb958f1b18f860a786d7df41e376566bc3094fbd2b97",
+      "route": "book/words/Brechung"
+    },
+    {
+      "id": "words:Streuung",
+      "sha256": "519357004ab039b35b763a50a55918154b81f66b135f82ac112158f4cc9a6d1a",
+      "route": "book/words/Streuung"
+    },
+    {
+      "id": "words:Photon",
+      "sha256": "c76a9ca78f736d8a4e8fe8aa53124baf6a78244e44d316eb4c350980a8c65cbe",
+      "route": "book/words/Photon"
+    },
+    {
+      "id": "words:Strahlung",
+      "sha256": "98187ee7db55637949bd8907a56010af5133be69b40599fc3b46067afe05fe4a",
+      "route": "book/words/Strahlung"
+    },
+    {
+      "id": "words:Spektrum",
+      "sha256": "cfbcff4a3c05905469cc3594a09f6ff73524a2211dd4c660ab25bbeabc8c2d69",
+      "route": "book/words/Spektrum"
+    },
+    {
+      "id": "words:Infrarot",
+      "sha256": "437a6c9f7cabe451e48fb85c9a21b36778df14f765fc63670051d6e8d0d1d28e",
+      "route": "book/words/Infrarot"
+    },
+    {
+      "id": "words:Frequenz",
+      "sha256": "d1f0691e8787a932f63e5254362b3b394824f313ec9cba683bdd529dd52b74b4",
+      "route": "book/words/Frequenz"
+    },
+    {
+      "id": "words:Wellenlänge",
+      "sha256": "5f21c0c9a662769620a44bf6fc70f6f2ccec30e26ca4f6e07208db8e2254fbf3",
+      "route": "book/words/Wellenl%C3%A4nge"
+    },
+    {
+      "id": "words:Energie",
+      "sha256": "e6daaa2a1be9f2e5f9819a7295439138447713ff4cab70d30de5f6bc9333b274",
+      "route": "book/words/Energie"
+    },
+    {
+      "id": "words:Polarisation",
+      "sha256": "33cf556e9f7210e87f5bda0fdecf7714e41f2cd28b966e49943328a767614e4c",
+      "route": "book/words/Polarisation"
+    },
+    {
+      "id": "why:32",
+      "sha256": "daa4fae7ac8036633ae225d2659ac23cf432e4e00b50d69f50c4e83b20a70f8c",
+      "route": "book/why/Warum%20sind%20Photonen%20im%20Bild%20keine%20winzigen%20sichtbaren%20Murmeln%3F"
+    },
+    {
+      "id": "why:33",
+      "sha256": "59bd5d7a9d14335cfaf0bdd5a1556ff10e57899fa5ba403f1e0ee16e990b5d4e",
+      "route": "book/why/Warum%20haben%20W%C3%A4rmebilder%20Farben%2C%20die%20wir%20am%20Gegenstand%20nicht%20sehen%3F"
+    },
+    {
+      "id": "words:Kohäsion",
+      "sha256": "2f372c1206d5436c481eda1262bac4661e03155a5b5b2787cf32b23812dfc05b",
+      "route": "book/words/Koh%C3%A4sion"
+    },
+    {
+      "id": "words:Adhäsion",
+      "sha256": "5e88d55cb59a2a8a0ed769489c0a30e9564a74d4e46108f4e48e07981038c762",
+      "route": "book/words/Adh%C3%A4sion"
+    },
+    {
+      "id": "words:Oberflächenspannung",
+      "sha256": "bfcd3ca5eafb3389c361f605a51f0374f67f3bca9b95acaece8d61fd54456570",
+      "route": "book/words/Oberfl%C3%A4chenspannung"
+    },
+    {
+      "id": "words:Kapillarwirkung",
+      "sha256": "cf32a6f388da208ba494ac7432d74c803c0244e9f84f6690159f45a96860f5a8",
+      "route": "book/words/Kapillarwirkung"
+    },
+    {
+      "id": "words:Dichte",
+      "sha256": "a928624e25131fc33276ba0f025cdbfbe2e6665684e8c3e5ab797fa217845c01",
+      "route": "book/words/Dichte"
+    },
+    {
+      "id": "why:34",
+      "sha256": "5d4e1ad028b44a721d3ebc77467a7b2d5b09a38907267e2dc31537f267ce76d3",
+      "route": "book/why/Warum%20zieht%20Wasser%20in%20einem%20Papiertuch%20nach%20oben%3F"
+    },
+    {
+      "id": "why:35",
+      "sha256": "7e695c6b5c66902c759f4db0bf952ff9a40fdd29be3f59441cc4c6086a67f363",
+      "route": "book/why/Warum%20kann%20eine%20Nadel%20anders%20auf%20Wasser%20liegen%20als%20untertauchen%3F"
+    },
+    {
+      "id": "why:36",
+      "sha256": "faa4fd0848ec86391f737f1d1363b2bccd297243bb4011042c992ff845ed67cd",
+      "route": "book/why/Warum%20kann%20ein%20Schiff%20aus%20schwerem%20Material%20schwimmen%3F"
+    },
+    {
+      "id": "words:Atom",
+      "sha256": "5a29cc82b9db8c9027ee8eb60d5ecd39cbe64ae62dd1824a5dd6b1e06e4e1927",
+      "route": "book/words/Atom"
+    },
+    {
+      "id": "words:Isotop",
+      "sha256": "839f7dfd0d32667ccbbcba43b7f836591794ef732ba441285789b04d4548f762",
+      "route": "book/words/Isotop"
+    },
+    {
+      "id": "words:Proton",
+      "sha256": "d16d1f027a99e75cb70931709d8aa0d021f71748d2f2f341688729df75516d5d",
+      "route": "book/words/Proton"
+    },
+    {
+      "id": "words:Elektron",
+      "sha256": "6452b83dbdb55956c004ad505dca29eb257c75b59b1d26aa7c79b694ebb1ed68",
+      "route": "book/words/Elektron"
+    },
+    {
+      "id": "words:Neutron",
+      "sha256": "282b370b8d59beee146598d0039eb6389a6ac19e0be5d7f586cf0b0588cdfbe6",
+      "route": "book/words/Neutron"
+    },
+    {
+      "id": "words:Kraft",
+      "sha256": "0d1e343fc3c452bc2145e72eba6fd5423975836dbe929ae5db3494d64011201f",
+      "route": "book/words/Kraft"
+    },
+    {
+      "id": "words:Trägheit",
+      "sha256": "6769ec60333e114792ea6c777f777863bffc2f07eaece147e47313edef39a4c2",
+      "route": "book/words/Tr%C3%A4gheit"
+    },
+    {
+      "id": "words:Geschwindigkeit",
+      "sha256": "6c4d71005e4a5f747955f1215f329e9ed92a5af7b250322462219e15d9b780ee",
+      "route": "book/words/Geschwindigkeit"
+    },
+    {
+      "id": "words:Beschleunigung",
+      "sha256": "d60ddb83a79443cf9d33fcbf26453cfabe27f4f8f2609d7c7141f590b8624cf2",
+      "route": "book/words/Beschleunigung"
+    },
+    {
+      "id": "why:37",
+      "sha256": "af515711d5ce7e5b1446b6d46809325778aaf30323522dc2c8c5854f92fca668",
+      "route": "book/why/Warum%20helfen%20raue%20Schuhsohlen%20beim%20Gehen%3F"
+    },
+    {
+      "id": "why:38",
+      "sha256": "ef2d3e5897982bdf2984414b006bc34c84ef4e9b0905c3b870b05d75d26c5f2d",
+      "route": "book/why/Warum%20hilft%20ein%20langer%20Hebelarm%20beim%20Drehen%3F"
+    },
+    {
+      "id": "why:39",
+      "sha256": "f4bc6c53127e28d9164658d55ae5ca5392dc9361590f5588955348a19daa015b",
+      "route": "book/why/Warum%20kehrt%20eine%20Feder%20nicht%20nach%20jeder%20Belastung%20ganz%20zur%C3%BCck%3F"
+    },
+    {
+      "id": "words:Zelle",
+      "sha256": "05fbdf84e03765d59d841fdd79f3605c2d0d3a8b727c83cd589f59a0dd3859cc",
+      "route": "book/words/Zelle"
+    },
+    {
+      "id": "words:Zellmembran",
+      "sha256": "bcdd6b64d8d12bf8224a950cda35bc19335afb4374543927c97b4d7794a43c66",
+      "route": "book/words/Zellmembran"
+    },
+    {
+      "id": "words:Zellkern",
+      "sha256": "35607e401e8c8b5167d29b6881943f8328f231999422b20c51d76c5f6a5456b4",
+      "route": "book/words/Zellkern"
+    },
+    {
+      "id": "words:Mitochondrium",
+      "sha256": "e5318c9500d967d7f269a1d8d8b5fa6f123a2c22592a29b43992c5b84102761d",
+      "route": "book/words/Mitochondrium"
+    },
+    {
+      "id": "words:Eukaryot",
+      "sha256": "64a3c5ec3b310f76bc62569b329f8e3f2d5ecc96cdda233952e128e9eab33cd0",
+      "route": "book/words/Eukaryot"
+    },
+    {
+      "id": "words:Prokaryot",
+      "sha256": "c5c5d955819cf421b9e488321dc5d21b945c897ebb6771c97e97f59a247c4b01",
+      "route": "book/words/Prokaryot"
+    },
+    {
+      "id": "words:DNA",
+      "sha256": "7320cd215bca9400262e465b5f1d99821032853109195574ea4315be8c5f957b",
+      "route": "book/words/DNA"
+    },
+    {
+      "id": "words:Genom",
+      "sha256": "fcf4c3e149748130d72e8af57a0adefcb4cea2dac482906439bbf9ef94d7b57a",
+      "route": "book/words/Genom"
+    },
+    {
+      "id": "why:40",
+      "sha256": "62dffb84671655b3f3a7e150f8757cdb14ebabfdb014650695f080849495e19b",
+      "route": "book/why/Warum%20ist%20eine%20Zellmembran%20mehr%20als%20eine%20einfache%20Mauer%3F"
+    },
+    {
+      "id": "why:41",
+      "sha256": "4633170d0a2b52d4c8699318ec423ddf6e91e01d1c203912de7f0ef4638d601e",
+      "route": "book/why/Warum%20kann%20eine%20Zelle%20Erbinformation%20ohne%20Zellkern%20besitzen%3F"
+    },
+    {
+      "id": "words:Gen",
+      "sha256": "e27637fd95d15af96963da9495f183edfe489ba1c67881e652a38c3652134cee",
+      "route": "book/words/Gen"
+    },
+    {
+      "id": "words:Chromosom",
+      "sha256": "eb20d8fafb430b7741d1247b4ad7908a07178c45ef7382856332b2a238ed2c17",
+      "route": "book/words/Chromosom"
+    },
+    {
+      "id": "words:Protein",
+      "sha256": "4ed6e119021ac3af5cb6053117a0b54697a504989f136304b82ec42d45f91159",
+      "route": "book/words/Protein"
+    },
+    {
+      "id": "words:Enzym",
+      "sha256": "81b9f678c414e9172d50a79b135942534f5921d30c4c5d06fce692f194887d34",
+      "route": "book/words/Enzym"
+    },
+    {
+      "id": "words:Mutation",
+      "sha256": "4a3429081f90688292103d89c849588ec627fdf7205327a0723b53bfa9c0df25",
+      "route": "book/words/Mutation"
+    },
+    {
+      "id": "words:Nukleotid",
+      "sha256": "0fcfcd6b2686fa3321f9f62fe249b69c5b80ae90fc32af1a78dab725c0f710fa",
+      "route": "book/words/Nukleotid"
+    },
+    {
+      "id": "words:RNA",
+      "sha256": "cc61576f1ee7424202d4c06c5cbdc46a40ffc7f9de8a85d4a78be2a538fb8a0e",
+      "route": "book/words/RNA"
+    },
+    {
+      "id": "words:Bakterium",
+      "sha256": "606f63e0662f81bd2ae47bce2701a7077d15349ce43db169df423a5a94dc76e9",
+      "route": "book/words/Bakterium"
+    },
+    {
+      "id": "why:42",
+      "sha256": "c8ab4c7d4f4b98e154a6c76207ed98c4f45c504eb44b46c159f047e2be5f7441",
+      "route": "book/why/Warum%20verr%C3%A4t%20ein%20einzelnes%20Gen%20nicht%20automatisch%20alle%20Eigenschaften%3F"
+    },
+    {
+      "id": "why:43",
+      "sha256": "8cb1400d9d3d2ea2268888509c6b194fce3c304f001e043502f715ee463b6471",
+      "route": "book/why/Warum%20ist%20eine%20Mutation%20nicht%20automatisch%20gut%20oder%20schlecht%3F"
+    },
+    {
+      "id": "words:Messwert",
+      "sha256": "70ed257ab6a663aa0dd21b5dfaad614a4639b3907f8e3dac392b74a6cddb9e46",
+      "route": "book/words/Messwert"
+    },
+    {
+      "id": "words:Messunsicherheit",
+      "sha256": "f7811cc755cb567187b2797be22ca65ab19c075423dd6cad5fe0ec2899c285cc",
+      "route": "book/words/Messunsicherheit"
+    },
+    {
+      "id": "words:Stichprobe",
+      "sha256": "342ab3204bd028e6a5f5144b760679ab1982cb7272c1d9821dcd15fb0948975b",
+      "route": "book/words/Stichprobe"
+    },
+    {
+      "id": "words:Mittelwert",
+      "sha256": "813a2fb031b9cc93773e55371cb3c71617d607b196a9dc3b093cfa3d5f4ab9ea",
+      "route": "book/words/Mittelwert"
+    },
+    {
+      "id": "words:Median",
+      "sha256": "5ddb97f1dd8026b062e1eda11333591ee7290eb13ccc9c95d927e10122b8fe7f",
+      "route": "book/words/Median"
+    },
+    {
+      "id": "words:Wahrscheinlichkeit",
+      "sha256": "14380c46f68e296f7fa7979c5caeb4e0d78d1fc328bd54e3915362577f544d61",
+      "route": "book/words/Wahrscheinlichkeit"
+    },
+    {
+      "id": "words:Skala",
+      "sha256": "1b1a2b2a03c9d75f1b45335079ebcf9aef416a6ecf262c3a9d5e14a32a01afe8",
+      "route": "book/words/Skala"
+    },
+    {
+      "id": "words:Maßstab",
+      "sha256": "b3540c82447aa9522faf6c7b808a894f60d98c428587a534b587eeddb82b04fa",
+      "route": "book/words/Ma%C3%9Fstab"
+    },
+    {
+      "id": "why:44",
+      "sha256": "5c9177bc135cbb8703de71d44ff365aa43eaa02dd790d63afbc2cead4c1c0c7a",
+      "route": "book/why/Warum%20muss%20nach%20mehreren%20gleichen%20Zufallsergebnissen%20kein%20Ausgleich%20kommen%3F"
+    },
+    {
+      "id": "why:45",
+      "sha256": "c95ef849ec0376cbd904bb704fb62aae57db45f675709e94acbc284e8d8b1e6e",
+      "route": "book/why/Warum%20kann%20ein%20einzelner%20sehr%20gro%C3%9Fer%20Wert%20einen%20Durchschnitt%20verschieben%3F"
+    },
+    {
+      "id": "why:46",
+      "sha256": "3e826eb2519bd36d01ac9cd581ff812132182097b20a98b7babdf450c0ce5525",
+      "route": "book/why/Warum%20machen%20zus%C3%A4tzliche%20Nachkommastellen%20eine%20Messung%20nicht%20automatisch%20genauer%3F"
+    },
+    {
+      "id": "words:Algorithmus",
+      "sha256": "3c8ea94ca486601c5f1a3a6be095f3369e4b6436516e93eb4a3ca6656df17ea0",
+      "route": "book/words/Algorithmus"
+    },
+    {
+      "id": "words:Bit",
+      "sha256": "7a64ca71561f7feb74ccacef1d9871e4b6f291fea40c6317a54832405b64d2de",
+      "route": "book/words/Bit"
+    },
+    {
+      "id": "words:Byte",
+      "sha256": "16100151a19fa77f5737414c0a8a713d9859379b418c0431f222b71396626560",
+      "route": "book/words/Byte"
+    },
+    {
+      "id": "words:Verschlüsselung",
+      "sha256": "105ea10cd97af4620fab352da7ae9bc0bad4d4b8e0d0cf48cd19c25d0e8e7f4c",
+      "route": "book/words/Verschl%C3%BCsselung"
+    },
+    {
+      "id": "words:Schlüssel",
+      "sha256": "5e730ce5d7fd6bba8e41172254ccb6b58a344c1a5e0efd4bc692deb46906c42c",
+      "route": "book/words/Schl%C3%BCssel"
+    },
+    {
+      "id": "words:Prüfsumme",
+      "sha256": "1c5bebbf7c78598230e7767599ae40833d453feea9469079f7777d7b9c0a948d",
+      "route": "book/words/Pr%C3%BCfsumme"
+    },
+    {
+      "id": "words:Hashfunktion",
+      "sha256": "d2d185f98ac6745ed807a9a6d24d65c96f9370bc5515feaf5e2edb97eaf53901",
+      "route": "book/words/Hashfunktion"
+    },
+    {
+      "id": "words:Datenstruktur",
+      "sha256": "69efcc26222520020879818a61f99f39b6254d4e8503b3e9f12a2bb8cd5d1a2d",
+      "route": "book/words/Datenstruktur"
+    },
+    {
+      "id": "words:Klartext",
+      "sha256": "ff42bf6ed079d24589cebf6bd5015828fcb1daeb7b5e8590732bcb92e7698c7a",
+      "route": "book/words/Klartext"
+    },
+    {
+      "id": "why:47",
+      "sha256": "829ab8e86dab4342cfa0272f349e987aac79c72e827cd9c168cd238c06e53c53",
+      "route": "book/why/Warum%20beweist%20eine%20passende%20Pr%C3%BCfsumme%20nicht%20automatisch%20Echtheit%3F"
+    },
+    {
+      "id": "why:48",
+      "sha256": "e71ed6dfbc5db77855afb49b849ce812e54d30063554724a72a8a903bad2ed42",
+      "route": "book/why/Warum%20ist%20eine%20leicht%20lesbar%20zur%C3%BCckdrehbare%20Geheimregel%20kein%20sicherer%20Schutz%3F"
+    },
+    {
+      "id": "why:49",
+      "sha256": "ad784338124538d1a437158adfbc4ac3d1f1f8d6c27cf47484e0eb7b2e2f707d",
+      "route": "book/why/Warum%20sind%20acht%20Bits%20nicht%20dasselbe%20wie%20die%20Zahl%20acht%3F"
+    },
+    {
+      "id": "words:Asteroid",
+      "sha256": "90ebd0fc5d478b095cf25e3a27e1ec98065c66145c404c8e93f99ace3d99a29c",
+      "route": "book/words/Asteroid"
+    },
+    {
+      "id": "words:Komet",
+      "sha256": "d76c5552972380154eace708f03c8f55092ef298b7e2f6f10652a3d656466e7d",
+      "route": "book/words/Komet"
+    },
+    {
+      "id": "words:Exoplanet",
+      "sha256": "9da23452f27109b8e0b2e98ca24c0178fbf50bf2eaa0057dd2d5b2bbcc6ba11d",
+      "route": "book/words/Exoplanet"
+    },
+    {
+      "id": "words:Transit",
+      "sha256": "c002562664d3ff1d16215ecc686564a8c7dda6c2ae8844b0b40cdedddc58c109",
+      "route": "book/words/Transit"
+    },
+    {
+      "id": "words:Galaxie",
+      "sha256": "b1f0d4563aba900918b8055eec5d5df28f008bc4c59cb77774c2a52998f64043",
+      "route": "book/words/Galaxie"
+    },
+    {
+      "id": "words:Lichtjahr",
+      "sha256": "f0cc3c4815aa96e41c5e7180f3f7d61f4c3a3c1120d2b68762a1b8f987faeed6",
+      "route": "book/words/Lichtjahr"
+    },
+    {
+      "id": "why:51",
+      "sha256": "5566c330ad02f167afdf2ebe55e44e33a995955ef517d44a47be479e38586a04",
+      "route": "book/why/Warum%20k%C3%B6nnen%20wir%20nicht%20jeden%20Exoplaneten%20durch%20einen%20Transit%20finden%3F"
+    },
+    {
+      "id": "why:50",
+      "sha256": "efb5e0d7f98b9bdb45feb080aff278afc887f6aca0d0d78c4f026aff99e5c63e",
+      "route": "book/why/Warum%20zeigt%20ein%20Kometenschweif%20nicht%20einfach%20die%20Flugrichtung%20an%3F"
+    },
+    {
+      "id": "words:Evolution",
+      "sha256": "b80038ae3a5b6b01dc37e553b47b1b692d5581f735e94e2adaea4189ad4c66a3",
+      "route": "book/words/Evolution"
+    },
+    {
+      "id": "words:Mikroorganismus",
+      "sha256": "21e95689a4ad9274db96f8ded11961d288dad2a78fb3727abfe21533dd1084ce",
+      "route": "book/words/Mikroorganismus"
+    },
+    {
+      "id": "words:Ökosystem",
+      "sha256": "903228b33cd1abb140c4994fc542bbfb1ec6286af1448fc4a92476846744d4a4",
+      "route": "book/words/%C3%96kosystem"
+    },
+    {
+      "id": "words:Zersetzung",
+      "sha256": "3843eae8bc837e4533a32619278a5d783e4ca2279a735b38b4de3432ffbc19a5",
+      "route": "book/words/Zersetzung"
+    },
+    {
+      "id": "words:Kohlenstoffkreislauf",
+      "sha256": "280bd54b6233a78791f773cc05608fcc73c6f44412e776aa7e1eefe91e02a386",
+      "route": "book/words/Kohlenstoffkreislauf"
+    },
+    {
+      "id": "words:Dürre",
+      "sha256": "c9d5fa503663ac821e3d8cb99bde53b5bac1bc6a0e5da58542b1b4c2fc5d6d43",
+      "route": "book/words/D%C3%BCrre"
+    },
+    {
+      "id": "words:Hypothese",
+      "sha256": "e956fb3d40898604f89703ec15f4da39261d9e43103ca02892839fb00df2388f",
+      "route": "book/words/Hypothese"
+    },
+    {
+      "id": "words:Topografie",
+      "sha256": "dca5120c91cb87d706aeb7e44a47c1bcf77759a04514206fc1785a232314825d",
+      "route": "book/words/Topografie"
+    },
+    {
+      "id": "words:Geoid",
+      "sha256": "004c8c1a5d0a21fcaefff37cfba5be7936c4bb425d984f5f0057db35576ee93e",
+      "route": "book/words/Geoid"
+    },
+    {
+      "id": "words:Koordinate",
+      "sha256": "7ec5218369feff7516fe71cea96eaccf6cf486bb9f496e8ed39a31266010211b",
+      "route": "book/words/Koordinate"
+    },
+    {
+      "id": "words:Kartenprojektion",
+      "sha256": "2c546afc50acadceec6439268b3c861e0714f3e78aa244999f09ca2954aaa603",
+      "route": "book/words/Kartenprojektion"
+    },
+    {
+      "id": "words:Kernfusion",
+      "sha256": "fbe52b0bb35377a33721613f7055c04a156b4359a274b4586eea972dab71bb5a",
+      "route": "book/words/Kernfusion"
+    },
+    {
+      "id": "words:Kernspaltung",
+      "sha256": "bfecb3e6de7e44ee382e308a7ba3382b4e0db1c6c81c997e963b1ef20cf9d1d2",
+      "route": "book/words/Kernspaltung"
+    },
+    {
+      "id": "words:Winkel",
+      "sha256": "c3e0be174281258ce906f32baf492dfd2d5ea343387705031f6304fb005afa06",
+      "route": "book/words/Winkel"
+    },
+    {
+      "id": "words:Symmetrie",
+      "sha256": "a7c6e849276d8cd8d4605e69fea1f467cbd300a3116dfe4faed03e46e54d1a11",
+      "route": "book/words/Symmetrie"
+    },
+    {
+      "id": "why:52",
+      "sha256": "055638fb5bc8c7e967a8572c7c6525745c0b5fb90ab3352a1e3cbb3f01828f34",
+      "route": "book/why/Warum%20ist%20nicht%20jede%20Diagonale%20eine%20Spiegelachse%3F"
+    },
+    {
+      "id": "why:53",
+      "sha256": "70258d2f05a37f94b45b686cf400ca824b2208206a04f1905e21a1519d5e87a4",
+      "route": "book/why/Warum%20%C3%A4ndert%20ein%20l%C3%A4ngerer%20gezeichneter%20Pfeil%20nicht%20den%20Winkel%3F"
+    },
+    {
+      "id": "why:54",
+      "sha256": "3af4e6f19a7f7d2ed6012eba895cc7d6a17e43dc7dcb0d953691da2fab8f5236",
+      "route": "book/why/Warum%20ist%20ein%20GPS-Punkt%20keine%20grenzenlos%20genaue%20Ortsangabe%3F"
+    },
+    {
+      "id": "why:55",
+      "sha256": "f37c1d9c017a4d70ee48f6101289fafcbdfc0d59b665c178e699f9aef0bfec97",
+      "route": "book/why/Warum%20kann%20ein%20Papierplan%20eine%20echte%20Baupr%C3%BCfung%20nicht%20ersetzen%3F"
+    },
+    {
+      "id": "why:56",
+      "sha256": "7113babef71ec78e59d9cc56b1e50f63b26a8c18f7bd611d4375cdac2bf5d5fa",
+      "route": "book/why/Warum%20beeinflusst%20die%20L%C3%A4nge%20eines%20Pendels%20seinen%20Takt%3F"
+    },
+    {
+      "id": "why:57",
+      "sha256": "39759be3fa94bc0a3498849f287ab44646ade2ee1dc54e5ddeb3eccecda8789b",
+      "route": "book/why/Warum%20kann%20Anschieben%20im%20passenden%20Takt%20wirksamer%20sein%3F"
+    },
+    {
+      "id": "why:58",
+      "sha256": "529f457d5ea081661e8eb2b7969383ceb929d4c706b888f6964ed11e4a413019",
+      "route": "book/why/Warum%20bleibt%20ein%20Farbfleck%20in%20Wasser%20nicht%20immer%20an%20derselben%20Stelle%3F"
+    },
+    {
+      "id": "why:59",
+      "sha256": "468be6a3f267165941519ff4e24f932adad4525f0dbccc4102030f85fa03ba83",
+      "route": "book/why/Warum%20kann%20ein%20schwarzer%20Stift%20mehrere%20Farben%20enthalten%3F"
+    },
+    {
+      "id": "nature-topics:okavango-delta",
+      "sha256": "11196e507425031b7d525190bb63548e1e9b0b611e0467dcfa194209c76be7bd",
+      "route": "book/nature/okavango-delta"
+    },
+    {
+      "id": "nature-topics:tanganyika",
+      "sha256": "5811f86b19ffb80ab0641e480fad8bdae35061ece325c9652e08cfd30454e523",
+      "route": "book/nature/tanganyika"
+    },
+    {
+      "id": "nature-topics:tonle-sap",
+      "sha256": "3ef5550aaf33a40381bf95dd50304d914578d4e556c4363694bfd4b8522ff0b9",
+      "route": "book/nature/tonle-sap"
+    },
+    {
+      "id": "nature-topics:danube-delta",
+      "sha256": "60a6dbb61334d436bd41ea68b70fa6da04b6ff1e20c41a2a4cd4de6a213c0b30",
+      "route": "book/nature/danube-delta"
+    },
+    {
+      "id": "nature-topics:grand-canyon",
+      "sha256": "4175836c925010585ec0b2a406fcc5f3f1a6a720fba3983832b79a9ef170cc78",
+      "route": "book/nature/grand-canyon"
+    },
+    {
+      "id": "nature-topics:mammoth-cave",
+      "sha256": "ffcd91c05a7ae40df27f4ab700f32cd289a8b57d019cc974e4f0f584ea9b28a7",
+      "route": "book/nature/mammoth-cave"
+    },
+    {
+      "id": "nature-topics:yellowstone-geysers",
+      "sha256": "281fd8456d77f464633d78abdd3358e9243923707b89d1b48aab8442e5b17794",
+      "route": "book/nature/yellowstone-geysers"
+    },
+    {
+      "id": "nature-topics:wadden-sea",
+      "sha256": "14199869585d1b02cc815483ec13a4427c78dfec8f7fce59514af8203fa913d8",
+      "route": "book/nature/wadden-sea"
+    },
+    {
+      "id": "nature-topics:bryce-hoodoos",
+      "sha256": "c2230e270ac1efc5607275a32392c6013d8e9a4dc59155ca19044cee77719468",
+      "route": "book/nature/bryce-hoodoos"
+    },
+    {
+      "id": "nature-topics:arches-sandstone",
+      "sha256": "691bf628dd02155685ade6247717d3b63433828f494e317fe044f0f7986d6581",
+      "route": "book/nature/arches-sandstone"
+    },
+    {
+      "id": "nature-topics:crater-lake",
+      "sha256": "1aa65f70e617efd2feb26c7c9b78bae28d2f318f950a30887486cded3c03a097",
+      "route": "book/nature/crater-lake"
+    },
+    {
+      "id": "nature-topics:white-sands",
+      "sha256": "9df7c4bde2fd2ee0b6cf1ca6efe1df2eeeeafca251797d4f2a2211e393cce5b3",
+      "route": "book/nature/white-sands"
+    },
+    {
+      "id": "nature-topics:vatnajokull",
+      "sha256": "552dd37a785495994fa01e6a72cac9713d33f0ca582ebff7c7deff643bb617f6",
+      "route": "book/nature/vatnajokull"
+    },
+    {
+      "id": "nature-topics:daintree",
+      "sha256": "541be98208ee627b41981264c67dde90a7ed37fff3fb8300b6bdba82c89cd7d2",
+      "route": "book/nature/daintree"
+    },
+    {
+      "id": "nature-topics:bialowieza",
+      "sha256": "20697f35c09da6604fd16d635340e09e27b223b0dd00cbb64531681373649685",
+      "route": "book/nature/bialowieza"
+    },
+    {
+      "id": "nature-topics:sundarbans",
+      "sha256": "7a5440fbf8ed45068790562b8bb5a6c012b4453fa7e0875bbcb1ec7d78d6d8af",
+      "route": "book/nature/sundarbans"
+    },
+    {
+      "id": "nature-topics:lencois-maranhenses",
+      "sha256": "3690330b4214ef54086ef171f304e45fa9a2553fae2b4a33fc01f8872871df42",
+      "route": "book/nature/lencois-maranhenses"
+    },
+    {
+      "id": "nature-topics:socotra-vegetation",
+      "sha256": "719396736ba32c4d8039c7ecd2ed57d238d3d24e921e5f3e43ca3567b16eff68",
+      "route": "book/nature/socotra-vegetation"
+    },
+    {
+      "id": "nature-topics:ha-long-bay",
+      "sha256": "7115a7be74f4e63f851eb6c85ebb05af947b74b0e95c51eb9e60583ae86e70f5",
+      "route": "book/nature/ha-long-bay"
+    },
+    {
+      "id": "nature-topics:sognefjord",
+      "sha256": "a34b806925d3d3f9a0f69461730b2a903f49ee839afbef84fab4dcf7470cc7c5",
+      "route": "book/nature/sognefjord"
+    },
+    {
+      "id": "nature-topics:sargasso-sea",
+      "sha256": "cf4ce6c045a0881f16b2ddae653a079229f2bfcf1944dd02e0a54006337764ff",
+      "route": "book/nature/sargasso-sea"
+    },
+    {
+      "id": "nature-topics:ross-ice-shelf",
+      "sha256": "444becd5b484b7981c0211ce4adaa4c0a256726f775d3165daa0cc479326ec45",
+      "route": "book/nature/ross-ice-shelf"
+    },
+    {
+      "id": "nature-topics:namib-fog",
+      "sha256": "40f276bfc05d6a2bbf340e8ee6ec376c6b7bf15a40bbccc54a371e1a51a6d450",
+      "route": "book/nature/namib-fog"
+    },
+    {
+      "id": "nature-topics:giants-causeway",
+      "sha256": "73960bd6db6c86db6bd6af4e47ed331bf1f4924b33119eba7fe2c5074811bef8",
+      "route": "book/nature/giants-causeway"
+    },
+    {
+      "id": "nature-topics:yosemite-valley",
+      "sha256": "e336db7028aa2194d37268751ab60ac7514d3ea54b405ddaf2565bc7bd2ff8a1",
+      "route": "book/nature/yosemite-valley"
+    },
+    {
+      "id": "nature-topics:lake-superior",
+      "sha256": "d15b827f3b1b602e76c0d4ecf62b0492157fb9fe02c6c28bb33e22b9fcb7da0d",
+      "route": "book/nature/lake-superior"
+    },
+    {
+      "id": "nature-topics:jeju-lava-tube",
+      "sha256": "b3ad362a726a430f27ce294ebd59b8e080a17839698ea7f21c46f78d82ffc3c6",
+      "route": "book/nature/jeju-lava-tube"
+    },
+    {
+      "id": "nature-topics:pamukkale",
+      "sha256": "b5f0884dcdeea351f6c1835e5a79c080d3bd60297130f9a78c05fcc9b2ead6dd",
+      "route": "book/nature/pamukkale"
+    },
+    {
+      "id": "nature-topics:salar-uyuni",
+      "sha256": "8f0ca13a4ec8b89296e6c93bcde7ea961b052b4537419201b3465444a1fa73b0",
+      "route": "book/nature/salar-uyuni"
+    },
+    {
+      "id": "nature-topics:titicaca",
+      "sha256": "f3f142a13065f5bf3826e5dc7bb40ccf946e2b204af1698a7efc7193fe2c4442",
+      "route": "book/nature/titicaca"
+    },
+    {
+      "id": "nature-topics:victoria-falls",
+      "sha256": "ab1d9e79484d86cc1c967f8ffed2d8e9d1dbb8fd496e76585117443faa10e5bc",
+      "route": "book/nature/victoria-falls"
+    },
+    {
+      "id": "nature-topics:iguazu-falls",
+      "sha256": "43d81778d7b5d884be88c5a4f830c57f2943d183cb604508bdb1360ba05c9689",
+      "route": "book/nature/iguazu-falls"
+    },
+    {
+      "id": "nature-topics:great-blue-hole",
+      "sha256": "cfa451b592b908cd8f7e5ae13df0e204232539d57cd91d1726bc5beaf7630568",
+      "route": "book/nature/great-blue-hole"
+    },
+    {
+      "id": "nature-topics:galapagos-upwelling",
+      "sha256": "9fde2e1c83c76ab0a17c29b69fecb7cd023d16b3fedaac144963820003172ebd",
+      "route": "book/nature/galapagos-upwelling"
+    },
+    {
+      "id": "topics-people:person-henrietta_swan_leavitt",
+      "sha256": "f353c49e2c1be0ec446dafa0acc7076a41301f8938261d8b8b72a59703d57196",
+      "route": "world/topic/person-henrietta_swan_leavitt"
+    },
+    {
+      "id": "topics-people:person-cecilia_payne_gaposchkin",
+      "sha256": "d9a2f5f1e213b6c57496d6e4b7bd4c2d164a6fe661cfd524c957b961ce74d114",
+      "route": "world/topic/person-cecilia_payne_gaposchkin"
+    },
+    {
+      "id": "topics-people:person-rosalind_franklin",
+      "sha256": "0db652229d507b66d7a0426bdb4ab3772731656a8d56d9ce3e0180265147538c",
+      "route": "world/topic/person-rosalind_franklin"
+    },
+    {
+      "id": "topics-people:person-jocelyn_bell_burnell",
+      "sha256": "04f1b9eb9443a3363cabd1c02c07aedc7e2dbbad43672ad912791d2201c6ee9d",
+      "route": "world/topic/person-jocelyn_bell_burnell"
+    },
+    {
+      "id": "topics-people:person-katsushika_hokusai",
+      "sha256": "cec3945e483d524e8f61fe67fead35c41aa863e6771f43551062c20bfd187042",
+      "route": "world/topic/person-katsushika_hokusai"
+    },
+    {
+      "id": "topics-people:person-murasaki_shikibu",
+      "sha256": "fbe27acd15c77d8b8f3381955bc1aecd5e93a745f6aa6dff0598239c978625c8",
+      "route": "world/topic/person-murasaki_shikibu"
+    },
+    {
+      "id": "topics-people:person-rachel_carson",
+      "sha256": "cac6a7da6a3b42cf6250b421cb4842d6384936ef13d8bfdef8c77d5526637c5c",
+      "route": "world/topic/person-rachel_carson"
+    },
+    {
+      "id": "topics-people:person-octavia_butler",
+      "sha256": "031c54f69a9ea95b0479f65dea4b0a14e39e252ef25db1354aa3cc3853e58801",
+      "route": "world/topic/person-octavia_butler"
+    },
+    {
+      "id": "topics-people:person-nelson_mandela",
+      "sha256": "41d9c739148866f9e9e5b7c86c170705af7dc3add904a18aab6f3c84d795ee1d",
+      "route": "world/topic/person-nelson_mandela"
+    },
+    {
+      "id": "topics-people:person-chien_shiung_wu",
+      "sha256": "4a34fc71426495a2ad5f109a7dd6781491ae44893a32ba60e85cfe18d76c8377",
+      "route": "world/topic/person-chien_shiung_wu"
+    },
+    {
+      "id": "topics-people:person-lise_meitner",
+      "sha256": "14739ee535b0ffc174c67eb8a4c17309a1466d7525ed92cbe9b40a1a12a327cb",
+      "route": "world/topic/person-lise_meitner"
+    },
+    {
+      "id": "topics-people:person-zaha_hadid",
+      "sha256": "f360c189b96e52433a2e86e3989f42949677835849f43abab7138301e9afe652",
+      "route": "world/topic/person-zaha_hadid"
+    },
+    {
+      "id": "topics-people:person-rabindranath_tagore",
+      "sha256": "3d0ce4d25c17a12f2edb2c958afc38d275f4047280ecfc07a6343c966656dd38",
+      "route": "world/topic/person-rabindranath_tagore"
+    },
+    {
+      "id": "topics-people:person-ibn_sina",
+      "sha256": "96377b0246f4bdc028e547cdc3935007fbe30362f2981f913fd58c8a3bdef040",
+      "route": "world/topic/person-ibn_sina"
+    }
+  ],
+  "new18": [
+    {
+      "id": "topics-people:person-ada_lovelace",
+      "sha256": "74896b63ee093be01f90a0332509258c8a31fe94dedb830c02623a2cc6b6c7ea",
+      "route": "world/topic/person-ada_lovelace"
+    },
+    {
+      "id": "topics-people:person-al_khwarizmi",
+      "sha256": "5af2ee65d81e2d6777071e943d9daca9385f6aaf15ac2f3b6f06d93081d73af3",
+      "route": "world/topic/person-al_khwarizmi"
+    },
+    {
+      "id": "topics-people:person-albert_einstein",
+      "sha256": "6abe7c4536f2d9ff68bb0367fee67aa30ee0a6ba4d2e607a56b91f81f8950465",
+      "route": "world/topic/person-albert_einstein"
+    },
+    {
+      "id": "topics-people:person-alexander_humboldt",
+      "sha256": "923c4112b4e1fba7aea2b9a50c0bedebe26315f4b32113cd87e2fe47b734d76a",
+      "route": "world/topic/person-alexander_humboldt"
+    },
+    {
+      "id": "topics-people:person-bertha_benz",
+      "sha256": "127d60d56dba023629eb82b5da30eabf629a795558c367a00342d0958cc7e1bd",
+      "route": "world/topic/person-bertha_benz"
+    },
+    {
+      "id": "topics-people:person-cai_lun",
+      "sha256": "fa27fec68466a52367b288ffaf514e5c2e308113c507b6f8cb32184ca1421d81",
+      "route": "world/topic/person-cai_lun"
+    },
+    {
+      "id": "topics-people:person-charles_darwin",
+      "sha256": "cc15d8820174494c3c256f128e279f6f97e2c9cec360c055f9335febc913d733",
+      "route": "world/topic/person-charles_darwin"
+    },
+    {
+      "id": "topics-people:person-grace_hopper",
+      "sha256": "7877d9182519f98fe35ddf3c01be5249e5b76999d0557a6090565823134dce6a",
+      "route": "world/topic/person-grace_hopper"
+    },
+    {
+      "id": "topics-people:person-jane_goodall",
+      "sha256": "0e42aacb2b50cfd22d40e68c9b26f94c2368aedfb03ea08f4acce2564506e73c",
+      "route": "world/topic/person-jane_goodall"
+    },
+    {
+      "id": "topics-people:person-johannes_gutenberg",
+      "sha256": "58039588328d1ceec0e1d53345c8370ce00b194131668461d9c01ee76d2096d7",
+      "route": "world/topic/person-johannes_gutenberg"
+    },
+    {
+      "id": "topics-people:person-karl_benz",
+      "sha256": "27aa940eb2fae54a1fd0e3d4a5a5680a68f95c2230c2b7d6b554ce6c6f5a0b09",
+      "route": "world/topic/person-karl_benz"
+    },
+    {
+      "id": "topics-people:person-katherine_johnson",
+      "sha256": "58f98f2a50aa1e07301130c03fe4b8c7d603ad4ba6f735321de85c8a18dc4b06",
+      "route": "world/topic/person-katherine_johnson"
+    },
+    {
+      "id": "topics-people:person-mae_jemison",
+      "sha256": "0c75dd9fc5c67a7b39d98ad69a7c97a15e225a3de34166fa40d79290efd1e5a5",
+      "route": "world/topic/person-mae_jemison"
+    },
+    {
+      "id": "topics-people:person-marie_curie",
+      "sha256": "eeec2f4db5c7ee7741f67b10dc4a5232fcc190415fc8999df618331b200ebe74",
+      "route": "world/topic/person-marie_curie"
+    },
+    {
+      "id": "topics-people:person-neil_armstrong",
+      "sha256": "5b8272229a9e86910acada20775cd3f51508171bb82acdde86b8029f7a1b083e",
+      "route": "world/topic/person-neil_armstrong"
+    },
+    {
+      "id": "topics-people:person-tim_berners_lee",
+      "sha256": "ae741de5c1f5213bd1c29f206a18f2c3049e4b20028b5b8a787b8cb39b5b1441",
+      "route": "world/topic/person-tim_berners_lee"
+    },
+    {
+      "id": "topics-people:person-tu_youyou",
+      "sha256": "66dd55a46be8dea4ca84b1b77b0096a7b196d7ba15346fac763ece8b04efe600",
+      "route": "world/topic/person-tu_youyou"
+    },
+    {
+      "id": "topics-people:person-wangari_maathai",
+      "sha256": "2c6cc8419835d4c17297bd74867befb5e1d2ff52ffe92fc7643b9f5608e74f73",
+      "route": "world/topic/person-wangari_maathai"
+    }
+  ]
+}

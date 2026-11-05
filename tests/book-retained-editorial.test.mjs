@@ -70,6 +70,7 @@ test('all220 delivered predecessor technical UI retains all203 whole histories a
   assert.equal(fixture.sourceCommit,'7d56bc792b7ef0bb4296ae0a323589260a3b25bf');assert.equal(fixture.priorDossiers.length,203);assert.equal(fixture.addedDossiers.length,17);
   const previous=retainedPredecessors(registry);assert.deepEqual(previous.map(row=>({id:row.id,wholeSHA256:fingerprint(row)})),fixture.priorDossiers);
   const records=new Map(collectInventory().records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
-  assert.equal(registry.length,220);for(const row of registry)assert.equal(validateDossier(row,records.get(row.id),{build:withNaturePreRetainedRuntime(process.cwd(),learningFingerprint),knownIds}).structurallyReady,true,row.id);
+  const actualUnchangedPredecessorBuild=withNaturePreRetainedRuntime(process.cwd(),learningFingerprint);
+  assert.equal(registry.length,220);for(const row of registry)assert.equal(validateDossier(row,records.get(row.id),{build:actualUnchangedPredecessorBuild,knownIds}).structurallyReady,true,row.id);
   for(const mutate of [rows=>delete rows[0].historicalUIBeforeRetained20261102,rows=>rows[0].historicalUIBeforeRetained20261102.build='invented',rows=>rows[219].ui.offline=false,rows=>delete rows[203].ui]){const bad=structuredClone(registry);mutate(bad);assert.throws(()=>retainedPredecessors(bad));}
 });

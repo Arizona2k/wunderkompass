@@ -1,4 +1,4 @@
-import {fourteenConnectedRoutes} from './people-fourteen-connected-routes.mjs';
+import {fourteenConnectedRoutes,retainedConnectedRoutes} from './people-fourteen-connected-routes.mjs';
 import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
 import {worldEntryNavigation} from './world-entry.mjs';
@@ -107,6 +107,14 @@ export async function articleAtlas(page,ready,report,width,shots){
    report.fourteenPersonActualSources=await actualPeopleSourceActivation(page);
    assert.equal(report.fourteenPersonActualSources.observations.length,35);
    assert.equal(report.fourteenPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
+   report.retainedPersonConnectedRoutes=await retainedConnectedRoutes(page,new URL(page.url()).origin);
+   assert.equal(report.retainedPersonConnectedRoutes.global.length,18);
+   assert.equal(report.retainedPersonConnectedRoutes.book.length,20);
+   const retainedIDs=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(18).map(row=>row.id);
+   report.retainedPersonActualSources=await actualPeopleSourceActivation(page,{ids:retainedIDs,pdfOutputDirectory:shots+'/retained-person-source-PDF-originals'});
+   assert.equal(report.retainedPersonActualSources.observations.length,70);
+   assert.equal(report.retainedPersonActualSources.observations.filter(row=>row.actualPDF).length,5);
+   assert.equal(report.retainedPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
   }finally{await page.evaluate(hash=>location.hash=hash,initialPeopleRoute);}
  }
 

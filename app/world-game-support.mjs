@@ -5,6 +5,13 @@ const detective=new Map(clues.entries.map(row=>[row.id,row]));
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
 /** @param {{title:string,intro:string}} topic */
 export function personRecognitionClue(topic){
+ // These delivered riddles stay independent of a richer biography opening.
+ // Reordered/parenthetical name parts must not reveal the requested person.
+ const retained={
+  'person-karl_benz':'Diese Person entwickelte einen Wagen mit Benzinmotor.',
+  'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.'
+ };
+ if(Object.hasOwn(retained,topic.id))return retained[topic.id];
  const variants=[topic.title],optional=topic.title.match(/^(.*?)\s*\(([^()]*)\)(.*)$/u);
  if(optional){const[,before,alternative,after]=optional;variants.push((before+after).trim(),after.trim()?(before.replace(/\S+\s*$/u,'')+alternative+after).trim():alternative.trim());}
  let clue=topic.intro;

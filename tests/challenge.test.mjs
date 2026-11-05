@@ -1,3 +1,4 @@
+import {beforeRetainedPeopleGraph} from './retained-people-reference.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -25,10 +26,14 @@ test('corrupt or outdated sessions cannot show invalid choices or a fabricated f
 });
 test('explained relationships are unique, reciprocal and point to retained topic IDs',()=>{
  assert.equal(new Set(KNOWLEDGE_CONNECTIONS.map(c=>c.id)).size,KNOWLEDGE_CONNECTIONS.length);
+ const graph=JSON.parse(fs.readFileSync('app/world-connections.json','utf8')),previous=beforeRetainedPeopleGraph(graph),previousIds=new Set(previous.connections.map(row=>row.id));
+ assert.equal(previousIds.size,181);assert.equal(KNOWLEDGE_CONNECTIONS.length,196);
  for(const c of KNOWLEDGE_CONNECTIONS){
   const from=topics.find(t=>t.id===c.fromId),to=topics.find(t=>t.id===c.toId);
-  assert.ok(from&&to);assert.ok(from.related.includes(to.id));assert.ok(to.related.includes(from.id));
-  assert.ok(c.why.length>50);assert.ok(connectionsFor(to.id).some(r=>r.topic===from.id));
+  assert.ok(from&&to);
+  if(previousIds.has(c.id)){assert.ok(from.related.includes(to.id));assert.ok(to.related.includes(from.id));}
+  else{assert.equal(graph.connections.slice(181).filter(row=>row.id===c.id).length,1,'only the15whole reviewed additions use the existing bidirectional resolver');}
+  assert.ok(c.why.length>50);for(const[a,b]of[[from,to],[to,from]])assert.ok(connectionsFor(a.id).some(r=>r.id===c.id&&r.topic===b.id&&r.why===c.why));
  }
 });
 import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';

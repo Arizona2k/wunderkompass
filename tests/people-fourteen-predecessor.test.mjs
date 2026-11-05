@@ -8,10 +8,11 @@ import {beforeFourteenDossiers} from './people-fourteen-dossier-reference.mjs';
 import {assertCurrentFourteenRuntime,withFourteenPredecessorRuntime} from './people-fourteen-runtime-reference.mjs';
 import {withNaturePreRetainedRuntime,naturePredecessors} from './nature-predecessor-reference.mjs';
 import runtime from './fixtures/people-fourteen-runtime-predecessor.json' with {type:'json'};
+import {beforeRetainedPeopleDossiers} from './retained-people-reference.mjs';
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 
 test('fourteen-person release boundary preserves all268 whole dossiers and rejects source, fact, history, missing, duplicate and premature UI changes',()=>{
- const rows=read('content/editorial-reviews.json').dossiers,body=JSON.stringify(rows);
+ const rows=beforeRetainedPeopleDossiers(read('content/editorial-reviews.json').dossiers),body=JSON.stringify(rows);
  assert.equal(rows.length,268);const prior=beforeFourteenDossiers(rows);
  assert.equal(prior.length,254);assert.equal(naturePredecessors(prior).length,220);
  for(const [name,mutate] of [
