@@ -21,11 +21,12 @@ async function geometry(page,box){
 }
 export let latestRetainedPeopleObservations=[];
 export async function retainedPeopleSourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){
- const initial=await page.evaluate(()=>location.hash),observed=[],retainedSemanticPairs={};let complete=false;
+ const initial=await page.evaluate(()=>location.hash),requestedLarge=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),observed=[],retainedSemanticPairs={};let complete=false;
  latestRetainedPeopleObservations=observed;
  try{for(const entry of entries.filter(e=>retainedKinds.has(e.figure))){
   const topic=catalog.find(t=>t.id===entry.id);await page.evaluate(id=>location.hash='world/topic/'+id,entry.id);
   const article=page.locator('.world-article');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();const box=article.locator('[data-person-evidence="'+entry.id+'"]');await box.waitFor();
+  assert.equal(await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),requestedLarge,'each retained biography keeps the caller-selected text size');
   const learnedBefore=await page.evaluate(({id,key})=>JSON.parse(localStorage.getItem(key)).progress.discoveries.includes('learned:'+id),{id:entry.id,key:saveKey});
   await article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/}).focus();await page.keyboard.press('Enter');assert.equal(await box.evaluate(e=>e===document.activeElement),true,'wayfinder focuses the actual research activity');
   const figure=box.locator('.people-evidence-figure'),actualFigureStates=[],actualCalculationSteps=[];
@@ -57,6 +58,10 @@ export async function retainedPeopleSourceView(page,{width,shots,engine='chromiu
    await page.waitForFunction(({key,id})=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['topic:'+id]?.peopleEvidenceCalculationStep===4,{key:saveKey,id:entry.id});
    const axeWasAvailable=await page.evaluate(()=>typeof window.axe?.run==='function');
    await page.reload();await box.waitFor();
+   // The caller's enlarged-layout condition may be a transient DOM probe, not a saved preference.
+   // Reapply precisely that condition after the real storage/reload check; never drop later large-text cases.
+   await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),requestedLarge);
+   assert.equal(await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),requestedLarge,'calculation reload preserves requested layout coverage');
    if(axeWasAvailable){await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.equal(await page.evaluate(()=>typeof window.axe?.run==='function'),true,'reload retains actual accessibility-check availability');}
    assert.equal(await figure.getAttribute('data-evidence-scene'),'1');
    assert.equal(await figure.getByRole('group',{name:'Vergleichsschritt wählen',exact:true}).getByRole('button',{name:'Schritt 4',exact:true}).getAttribute('aria-pressed'),'true');
