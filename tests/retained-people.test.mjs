@@ -54,7 +54,7 @@ test('all45 word pairs and196 world connections retain their complete M92 prefix
  const wrongTask=structuredClone(inquiries.entries);wrongTask[18].tasks[0].why='unreviewed';assert.throws(()=>beforeRetainedPeople(wrongTask));
 });
 
-test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown content, histories, ordering and premature current UI',()=>{
+test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown content, histories, ordering and incomplete or invented current UI',()=>{
  const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,original=JSON.stringify(rows);
  assert.equal(rows.length,286);assert.equal(beforeRetainedPeopleDossiers(rows).length,268);
  const tu=rows.find(r=>r.id==='topics-people:person-tu_youyou'),beforeTu=tu.historicalSourceBeforeTuBiographical20261106;
@@ -73,6 +73,10 @@ test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown c
   ['missing preserved Tu source',r=>delete r.find(x=>x.id==='topics-people:person-tu_youyou').historicalSourceBeforeTuBiographical20261106],
   ['premature current UI',r=>r[268].ui={build:boundary.currentRuntimeBuild,visible:true}],
   ['premature old UI history',r=>r[0].historicalUIBeforeRetainedPeople20261105={build:'invented'}],
+  ['wrong bound current UI route',r=>r[268].ui.route='world/topic/invented'],
+  ['missing whole previous UI',r=>delete r[0].historicalUIBeforeRetainedPeople20261105],
+  ['altered whole previous UI',r=>r[0].historicalUIBeforeRetainedPeople20261105.offline=false],
+  ['invented new-person old UI',r=>r[268].historicalUIBeforeRetainedPeople20261105=structuredClone(r[0].ui)],
  ]){const bad=structuredClone(rows);mutate(bad);assert.throws(()=>beforeRetainedPeopleDossiers(bad),name);}
  assert.equal(JSON.stringify(rows),original);
 });
