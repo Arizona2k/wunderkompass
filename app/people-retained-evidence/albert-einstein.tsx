@@ -6,7 +6,7 @@ export function PeoplePhotonEnergyFigure({selected,onSelect}:{selected:number;on
   <p>Vergleiche für dieselbe gedachte Fläche und Zeitspanne die Anzahl und die Energie pro Lichtquant. Ein Balken steht für ein Quant; seine Höhe zeigt dessen Energie in frei gewählten Vergleichseinheiten.</p>
   <svg viewBox="0 0 320 240" role="img" aria-label={`Eigene Vergleichsgrafik: ${count} Lichtquant${count===1?'':'en'}, je ${energy} Energieeinheit${energy===1?'':'en'}; zusammen ${count*energy} Vergleichseinheiten. Keine Aufnahme von Lichtteilchen.`}>
    <path d="M25 205H295" stroke="#245762" strokeWidth="2"/>
-   <path d="M25 145H295M25 85H295" stroke="#a4bebf" strokeDasharray="5 4"/>
+   <path d="M25 145H295M25 85H295" stroke="#567579" strokeDasharray="5 4"/>
    {Array.from({length:count},(_,index)=><rect key={index} data-photon-bar={index} x={40+index*65} y={205-60*energy} width="34" height={60*energy} rx="3" fill="#467889" stroke="#245762" strokeWidth="2"/>)}
   </svg>
   <div className="people-evidence-legend"><span>Untere Hilfslinie: eine Energieeinheit pro Quant.</span><span>Obere Hilfslinie: zwei Energieeinheiten pro Quant.</span></div>

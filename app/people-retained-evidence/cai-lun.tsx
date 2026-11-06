@@ -7,8 +7,8 @@ export function PeopleFibreDistributionFigure({selected,onSelect}:{selected:numb
   <h4>Gleiche Fasermenge im Bild – anders verteilt</h4>
   <p>Acht gleich lange, erfundene Faserlinien bleiben erhalten. Vergleiche, ob sie nur in einem Feld liegen oder auf vier Felder verteilt sind. Das Bild untersucht zunächst nur die Anordnung.</p>
   <svg viewBox="0 0 320 260" role="img" aria-label={`Eigene schematische Zeichnung: acht gleich lange Faserlinien ${selected===0?'in einem':'auf vier'} Feldern. Keine Mikroskopaufnahme oder Festigkeitsmessung.`}>
-   <rect x="20" y="20" width="280" height="220" rx="5" fill="#fff" stroke="#8baaad" strokeWidth="2"/>
-   <path d="M160 20V240M20 130H300" fill="none" stroke="#bdced0" strokeWidth="2" strokeDasharray="5 5"/>
+   <rect x="20" y="20" width="280" height="220" rx="5" fill="#fff" stroke="#567579" strokeWidth="2"/>
+   <path d="M160 20V240M20 130H300" fill="none" stroke="#567579" strokeWidth="2" strokeDasharray="5 5"/>
    {fibres.map((fibre,index)=><line key={index} data-paper-fibre={index} {...fibre} stroke="#467889" strokeWidth="5" strokeLinecap="round"/>)}
   </svg>
   <div className="people-evidence-legend"><span>Immer acht Linien mit gleicher Länge.</span><span>{selected===0?'Linien nur im oberen linken Feld.':'Linien in allen vier Feldern.'}</span></div>

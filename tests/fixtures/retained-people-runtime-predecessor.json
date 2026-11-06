@@ -2,7 +2,7 @@
   "scope": "Exact outer boundary to actually accepted M92; all659 original Git blobs independently compared. No unknown input removal.",
   "acceptedMerge": "40698293cc7fbc3ce9751b0620eebb164ea031cb",
   "previousRuntimeBuild": "2288b4d5027887bf",
-  "currentRuntimeBuild": "0a7f27e02ee1b2d7",
+  "currentRuntimeBuild": "68f1dd8435a598c3",
   "previousInputs": [
     {
       "name": "app/activity-view.mjs",
@@ -3376,7 +3376,7 @@
     {
       "name": "app/discovery-concept-media.tsx",
       "currentBytes": 3799,
-      "currentSHA256": "ae5fa80a9868147245fbfccd51e4f51f6643ea8dd7652b20cb663233876bff2c",
+      "currentSHA256": "f9d5cb11940799bdb99f8c8608b0cc7b84c7e53601f6df7a8cc6f4206a28fa3d",
       "originalUTF8": "/** Small explanatory views of the existing article's concepts; never interactive-model captures. */\nexport const hasDiscoveryConceptMedia=(id:string)=>['science-fungi','science-foodweb','science-atmosphere'].includes(id);\nexport default function DiscoveryConceptMedia({id,historyKey}:{id:string;historyKey:string}){\n if(!hasDiscoveryConceptMedia(id))return null;\n const fungi=id==='science-fungi',air=id==='science-atmosphere';\n const labels=fungi?['Fruchtkörper über dem Boden','Pilzfäden bilden das Myzel']:air?['Exosphäre','Thermosphäre','Mesosphäre','Stratosphäre','Troposphäre']:['Sonne','Phytoplankton','Krill','Blauwal'];\n const limit=fungi?'Schema eines hutbildenden Pilzes, kein Größenmaßstab. Nicht alle Pilze bilden Hüte.':air?'Reihenfolge nach oben: von der Troposphäre zur Exosphäre. Schichtdicken sind nicht maßstabsgetreu; die Atmosphäre hat keine feste Decke.':'Eine ausgewählte Nahrungskette im Meer. Die Pfeile zeigen den Weg der Energie, kein vollständiges Nahrungsnetz.';\n return <figure className={'discovery-concept discovery-concept-'+(fungi?'fungi':air?'air':'food')}>\n  {fungi?<><svg viewBox=\"0 0 400 220\" role=\"img\" aria-label=\"Ein Fruchtkörper über dem Boden und verzweigte Pilzfäden darunter\"><path d=\"M18 105H382\" stroke=\"#8d9e8b\" strokeWidth=\"2\"/><path d=\"M190 100V67H210V100\" fill=\"#d2c2a8\" stroke=\"#705c43\" strokeWidth=\"3\"/><path d=\"M155 68Q200 5 245 68Z\" fill=\"#b77850\" stroke=\"#705c43\" strokeWidth=\"3\"/><g stroke=\"#5a7766\" strokeWidth=\"3\" fill=\"none\"><path d=\"M200 104V143L135 178L76 184M200 143L265 176L325 188M200 125L125 137L64 120M200 125L277 139L340 120M135 178L132 211M135 178L89 158M265 176L267 211M265 176L313 157M125 137L91 148M277 139L309 150M200 143V205\"/></g></svg><ul>{labels.map(t=><li key={t}>{t}</li>)}</ul></>:air?<ol aria-label=\"Luftschichten, oben außen und unten am Boden\">{labels.map((t,i)=><li key={t} style={{background:['#dbe8ee','#d3e6ee','#c8e1ec','#bad9e6','#a9cfdc'][i]}}>{t}</li>)}</ol>:<ol aria-label=\"Weg der Energie in einer ausgewählten Nahrungskette\">{labels.map((t,i)=><li key={t}>{i>0&&<span aria-hidden=\"true\">↓</span>}<strong>{t}</strong></li>)}</ol>}\n  <figcaption><details data-history-disclosure={historyKey}><summary>Darstellung & Modellgrenzen</summary><p>{limit} Eigene Erklärungsgrafik mit KI-Unterstützung; Fachquellen auf der Entdeckerkarte.</p></details></figcaption>\n </figure>;\n}\n"
     }
   ],
@@ -3394,12 +3394,12 @@
     {
       "name": "app/people-retained-evidence/albert-einstein.tsx",
       "bytes": 2648,
-      "sha256": "f73f7c56733ea73cc8197b4cc9410768e23ba4af48b74be0c2931e49c3e7157e"
+      "sha256": "a80a1b02b1160aa1a0c5929763b07cd47cf2eeaeea06d8c51e1b75d63b62a3fa"
     },
     {
       "name": "app/people-retained-evidence/alexander-humboldt.tsx",
       "bytes": 2730,
-      "sha256": "286b905dd3f29c620dca290f3e15ea71dfedc98c1db79c5be7884d8fb2d01ceb"
+      "sha256": "925cffeb1a0e6b41c5ab22c52594e470cb68c60c7cdf18555e07931797a1b9ce"
     },
     {
       "name": "app/people-retained-evidence/bertha-benz.tsx",
@@ -3409,7 +3409,7 @@
     {
       "name": "app/people-retained-evidence/cai-lun.tsx",
       "bytes": 2641,
-      "sha256": "243a9a44eed519301bb246830de5f1a6b59a96143628ef7e324b2cd864b73405"
+      "sha256": "17782c4f469ec50e0a0919d44d4bd3d15d653f01b6ac194a1071274e50187a91"
     },
     {
       "name": "app/people-retained-evidence/charles-darwin.tsx",
@@ -3434,7 +3434,7 @@
     {
       "name": "app/people-retained-evidence/karl-benz.tsx",
       "bytes": 3086,
-      "sha256": "5d49af266cb6b2b5dfaf73ee71ae298435c032d0d081a214520bbcc68c92e0d4"
+      "sha256": "f209851e5b9a221a94726d667d7aab2907382536ee46d5b26aa9425b7e9bb731"
     },
     {
       "name": "app/people-retained-evidence/katherine-johnson.tsx",
@@ -3444,7 +3444,7 @@
     {
       "name": "app/people-retained-evidence/mae-jemison.tsx",
       "bytes": 2779,
-      "sha256": "89a7a29d952a366d887f280d612795a9bca9574e43009d3acfc3de2eba2aff64"
+      "sha256": "75cac675aa78aa4d9f1afaa3663fe33250a11be4453698b8c4a47512561bc454"
     },
     {
       "name": "app/people-retained-evidence/marie-curie.tsx",

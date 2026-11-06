@@ -1,3 +1,4 @@
+import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
 import assert from 'node:assert/strict';
@@ -16,6 +17,11 @@ async function homeTime(page,instant){await page.addInitScript(instant=>{
  },instant);}
 async function setHomeTime(page,instant){await page.evaluate(instant=>{window.__homeTestTime=Date.parse(instant);sessionStorage.setItem('__home-test-clock',String(window.__homeTestTime));},instant);}
 
+// Meaningful parts of the ISS explanation use the same actual painted-color guard.
+export async function assertStationContextContrast(figure){
+ return assertMeaningfulGraphicContrast(figure,[{selector:'[data-station-context-earth]',name:'Earth',paint:'fill'},{selector:'[data-station-context-orbit]',name:'orbit',paint:'stroke'},{selector:'[data-station-context-laboratory]',name:'station',paint:'fill'}],'ISS');
+}
+
 export async function discoveryPairMedia(page){
  const media=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
   const surface=article.querySelector(':scope > figure img[src],:scope > figure svg,:scope > figure ol,:scope > figure [role="img"],:scope > .research-preview img[src]');
@@ -27,6 +33,7 @@ export async function discoveryPairMedia(page){
   return {complete:!!earth&&!!orbit&&!!station,earth:{x:num(earth,'cx'),y:num(earth,'cy'),r:num(earth,'r')},orbit:{x:num(orbit,'cx'),y:num(orbit,'cy'),r:num(orbit,'r')},station:{x:num(station,'x')+num(station,'width')/2,y:num(station,'y')+num(station,'height')/2,width:num(station,'width'),height:num(station,'height')},labels:[...(figure?.querySelectorAll('ul>li')??[])].map(el=>el.textContent)};
  }));assert(stationViews.length<=1,'one actual ISS context per paired endpoint');
  for(const view of stationViews){assert(view.complete,'ISS context contains actual Earth, orbit and station');assert(view.earth.r>0&&view.orbit.r>view.earth.r);assert.deepEqual([view.orbit.x,view.orbit.y],[view.earth.x,view.earth.y],'one common centre');assert(view.station.width>0&&view.station.height>0);assert.equal((view.station.x-view.earth.x)**2+(view.station.y-view.earth.y)**2,view.orbit.r**2,'the station symbol lies on the declared schematic orbit');assert.deepEqual(view.labels,['Gefüllter Kreis: Erde.','Rechteck auf der Linie: Raumstation.']);}
+ for(const figure of await page.locator('figure[data-station-context="orbital-laboratory"]').all())await assertStationContextContrast(figure);
  const photos=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
   const image=article.querySelector(':scope > .world-photo img[src],:scope > .discovery-context-photo img[src]');
   return image?{height:image.getBoundingClientRect().height,fit:getComputedStyle(image).objectFit}:null;

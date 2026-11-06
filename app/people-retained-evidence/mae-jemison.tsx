@@ -5,7 +5,7 @@ export function PeopleSharedFallFigure({selected,onSelect}:{selected:number;onSe
   <h4>Gemeinsam fallen – der Abstand bleibt</h4>
   <p>Ein Gedankenbild zeigt eine frei fallende Kabine und einen freien Ball darin. Vergleiche zwei Zeitpunkte von außen: Beide verschieben sich gleich weit erdwärts. Ihr Abstand zueinander bleibt im vereinfachten Bild gleich.</p>
   <svg viewBox="0 0 320 270" role="img" aria-label={`Eigene schematische Zeichnung: ${selected===0?'erster':'späterer'} Zeitpunkt. Kabine und Ball im gemeinsamen freien Fall. Gleicher Abstand zum Kabinenboden, Erdanziehung wirkt weiter.`}>
-   <path d="M30 30H290M30 75H290M30 120H290M30 165H290M30 210H290M30 255H290" stroke="#d8e3e1" strokeDasharray="4 4" fill="none"/>
+   <path d="M30 30H290M30 75H290M30 120H290M30 165H290M30 210H290M30 255H290" stroke="#567579" strokeDasharray="4 4" fill="none"/>
    <rect data-freefall-cabin="true" x="65" y={30+shift} width="160" height="140" rx="7" fill="#f3f9f7" stroke="#467889" strokeWidth="3"/>
    <path data-freefall-floor="true" d={`M65 ${170+shift}H225`} stroke="#245762" strokeWidth="6" fill="none"/>
    <circle data-freefall-ball="true" cx="145" cy={90+shift} r="16" fill="#b65d32" stroke="#773c25" strokeWidth="2"/>

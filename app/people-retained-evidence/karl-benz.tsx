@@ -11,7 +11,7 @@ export function PeopleDriveConnectionFigure({selected,onSelect}:{selected:number
    <path d="M134 90L142 96L134 102" fill="none" stroke="#286a7b" strokeWidth="3"/>
    <path d="M146 74V118M176 74V118" fill="none" stroke="#66838b" strokeWidth="4"/>
    <path data-drive-link-state={joined?'joined':'open'} d={joined?'M146 96H176':'M146 96H151M171 96H176'} fill="none" stroke={joined?'#286a7b':'#b9552b'} strokeWidth="5"/>
-   <path d="M176 96H232" fill="none" stroke={joined?'#286a7b':'#96a8ad'} strokeWidth="4" strokeDasharray={joined?undefined:'5 5'}/>
+   <path d="M176 96H232" fill="none" stroke={joined?'#286a7b':'#567579'} strokeWidth="4" strokeDasharray={joined?undefined:'5 5'}/>
    {joined&&<path d="M226 90L234 96L226 102" fill="none" stroke="#286a7b" strokeWidth="3"/>}
    <g data-drive-wheel="fixed-schematic"><circle cx="270" cy="96" r="34" fill="#f7faf9" stroke="#284b57" strokeWidth="5"/><path d="M270 62V130M236 96H304M246 72L294 120M246 120L294 72" fill="none" stroke="#557985" strokeWidth="3"/></g>
   </svg>

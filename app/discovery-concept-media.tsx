@@ -4,7 +4,7 @@ export default function DiscoveryConceptMedia({id,historyKey}:{id:string;history
  if(!hasDiscoveryConceptMedia(id))return null;
  if(id==='history-iss')return <figure className="discovery-concept discovery-concept-station" data-station-context="orbital-laboratory">
   <svg viewBox="0 0 320 220" role="img" aria-label="Schema: Die Erde steht im gefüllten Kreis, ein Rechteck auf der umgebenden Linie für die Raumstation ISS. Größen und Abstände sind nicht maßstabsgetreu.">
-   <circle data-station-context-orbit="true" cx="145" cy="110" r="80" fill="none" stroke="#789396" strokeWidth="2" strokeDasharray="6 5"/>
+   <circle data-station-context-orbit="true" cx="145" cy="110" r="80" fill="none" stroke="#567579" strokeWidth="2" strokeDasharray="6 5"/>
    <circle data-station-context-earth="true" cx="145" cy="110" r="42" fill="#286171"/>
    <path d="M103 110H187M145 68C120 88 120 132 145 152M145 68C170 88 170 132 145 152" fill="none" stroke="#e3f1ee" strokeWidth="2"/>
    <rect data-station-context-laboratory="true" x="209" y="102" width="32" height="16" rx="4" fill="#b65d32" stroke="#6d432e" strokeWidth="2"/>

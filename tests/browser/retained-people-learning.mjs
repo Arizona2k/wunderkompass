@@ -1,3 +1,4 @@
+import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 // Additive current canonical older18 coverage; the existing four+fourteen proof remains separate and unchanged.
 import assert from 'node:assert/strict';
 import {retainedPeopleMiniQuestion} from './retained-people-miniquestions.mjs';
@@ -19,6 +20,14 @@ async function geometry(page,box){
  assert.deepEqual(bad,[],'actual biography text and model labels fit the viewport');
  for(const button of await box.getByRole('button').all()){const b=await button.boundingBox();if(b)assert(b.width>=43.9&&b.height>=43.9,'biography control has an actual44px touch target');}
 }
+
+// These five newly authored figures use guide lines to carry their explanation.
+export async function assertRetainedPeopleGuideContrast(figure,kind){
+ const guide={selector:'svg > path[stroke-dasharray]',name:'comparison guides',paint:'stroke'};
+ const parts=kind==='drive-connection-scope'?[{selector:'svg > path[d="M176 96H232"]',name:'wheel-side connection',paint:'stroke'}]:kind==='fibre-distribution-evidence'?[{selector:'svg > rect',name:'four-field frame',paint:'stroke'},{...guide,backdropSelector:':scope > rect'}]:['photon-number-vs-single-energy','height-temperature-note-comparison','shared-freefall-relative-distance'].includes(kind)?[guide]:[];
+ return assertMeaningfulGraphicContrast(figure,parts,'Retained '+kind);
+}
+
 export let latestRetainedPeopleObservations=[];
 export async function retainedPeopleSourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){
  const initial=await page.evaluate(()=>location.hash),requestedLarge=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),observed=[],retainedSemanticPairs={};let complete=false;
@@ -29,10 +38,11 @@ export async function retainedPeopleSourceView(page,{width,shots,engine='chromiu
   assert.equal(await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),requestedLarge,'each retained biography keeps the caller-selected text size');
   const learnedBefore=await page.evaluate(({id,key})=>JSON.parse(localStorage.getItem(key)).progress.discoveries.includes('learned:'+id),{id:entry.id,key:saveKey});
   await article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/}).focus();await page.keyboard.press('Enter');assert.equal(await box.evaluate(e=>e===document.activeElement),true,'wayfinder focuses the actual research activity');
-  const figure=box.locator('.people-evidence-figure'),actualFigureStates=[],actualCalculationSteps=[];
+  const figure=box.locator('.people-evidence-figure'),actualFigureStates=[],actualCalculationSteps=[],actualGuideContrasts=[];
   for(const scene of(entry.figure==='photon-number-vs-single-energy'?[0,1,2]:[0,1])){
    const button=figure.locator('.visual-choice').first().getByRole('button').nth(scene);await button.focus();await page.keyboard.press('Enter');assert.equal(await figure.getAttribute('data-evidence-scene'),String(scene));
    assert(retainedKinds.has(entry.figure),'Unreviewed retained-person figure '+entry.figure);
+   await figure.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));actualGuideContrasts.push({scene,parts:await assertRetainedPeopleGuideContrast(figure,entry.figure)});
    if(entry.figure==='calculation-check-evidence'){
     const steps=figure.getByRole('group',{name:'Vergleichsschritt wählen',exact:true}),values=[0,3,4,3,0];
     for(let step=0;step<5;step++){
@@ -96,6 +106,6 @@ export async function retainedPeopleSourceView(page,{width,shots,engine='chromiu
    for(const [i,drawing]of(await actualDrawings.all()).entries()){await drawing.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});assert.equal(await drawing.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=-2&&r.bottom<=innerHeight+2;}),true,'actual native drawing is fully in the viewport before capture');await captureNativeViewport(page,path.join(shots,prefix+(htmlDrawing?'-html-part':'-diagram')+i+'.png'));}
    for(const [suffix,part]of[['controls',figure.locator('.visual-choice').first()],...(entry.figure==='calculation-check-evidence'?[['steps',figure.getByRole('group',{name:'Vergleichsschritt wählen',exact:true})]]:[]),['limits',figure.locator('.small-note')]]){await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}
   }
-  observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,actualCaptionFont,large,actualSemanticLaw,actualFigureStates,actualCalculationSteps,actualCalculationStepReload,actualSVGFonts,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,actualCanonicalMiniQuestion,reciprocalTargetAndBack:true});
+  observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,actualCaptionFont,large,actualSemanticLaw,actualFigureStates,actualCalculationSteps,actualCalculationStepReload,actualGuideContrasts,actualSVGFonts,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,actualCanonicalMiniQuestion,reciprocalTargetAndBack:true});
  }assert.deepEqual(observed.map(e=>e.id),entries.filter(e=>retainedKinds.has(e.figure)).map(e=>e.id),'every registered biography activity was actually checked');observed[0].retained18ActualDOMCountercasesRejected=rejectExisting18ActualDOMCountercases(retainedSemanticPairs);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }

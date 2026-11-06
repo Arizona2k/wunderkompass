@@ -8,7 +8,7 @@ export function PeopleHeightTemperatureFigure({selected,onSelect}:{selected:numb
   <p>Unsere frei erfundenen Notizen ordnen drei Höhen jeweils eine Temperatur zu. Wechsle die Notiz und vergleiche dieselben Höhen. Die Achsen und ihre Einteilung bleiben gleich.</p>
   <svg viewBox="0 0 320 240" role="img" aria-label={`Eigene erfundene Notiz ${name}: ${points.map(p=>`${p.height} Meter Höhe, ${p.temperature} Grad Celsius`).join('; ')}. Gleiche Achsen in beiden Ansichten. Keine historischen Messdaten oder Wettervorhersage.`}>
    <path d="M48 26V206H286" fill="none" stroke="#6e8b93" strokeWidth="2"/>
-   <path d="M48 26H286M48 116H286" fill="none" stroke="#cad7d9" strokeWidth="1.5" strokeDasharray="4 5"/>
+   <path d="M48 26H286M48 116H286" fill="none" stroke="#567579" strokeWidth="1.5" strokeDasharray="4 5"/>
    <path data-humboldt-series="true" d={points.map((p,i)=>`${i===0?'M':'L'}${p.x} ${p.y}`).join('')} fill="none" stroke={colour} strokeWidth="3"/>
    {points.map(p=><circle key={p.height} data-humboldt-height={p.height} data-humboldt-temperature={p.temperature} cx={p.x} cy={p.y} r="7" fill={colour} stroke="white" strokeWidth="2"/>)}
   </svg>
