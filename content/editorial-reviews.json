@@ -106333,7 +106333,7 @@
     },
     {
       "id": "topics-people:person-tu_youyou",
-      "dataHash": "e5397cd7db4f949ba46cdb24829f3584596680b66a0a31ff62381e1f8c3ab5d2",
+      "dataHash": "ffba751bec9d141fbb3a7a8c9cd266037bcc02402418a6684bb4d1c7353d5a9e",
       "teachingDataHash": "930520f08efc7f510bf05f7c545b0cb6d83095a62b80fda755b0cacd296e6da2",
       "goal": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
       "explanation": "Tu Youyou wurde 1930 in Ningbo in China geboren. Sie studierte Pharmazie und arbeitete in der Arzneimittelforschung. Ab Ende der 1960er-Jahre leitete sie ein Team, das nach Wirkstoffen gegen Malaria suchte. Malaria wird durch einzellige Parasiten verursacht und durch bestimmte Stechmücken übertragen.\n\nDas Team untersuchte Pflanzen und ältere medizinische Texte. Ein historischer Hinweis half dabei, eine Untersuchung neu zu durchdenken. Ein Hinweis war aber noch kein fertiger Wirkstoff: Die Forschenden mussten Stoffe gewinnen, voneinander trennen und ihre Eigenschaften untersuchen.\n\nIn den 1970er-Jahren wurde Artemisinin aus dem Einjährigen Beifuß gewonnen und weiter erforscht. Bis daraus geeignete Medikamente entstehen konnten, waren zusätzliche Arbeiten vieler Forschender und Untersuchungen zur Behandlung nötig. Tu Youyou erhielt 2015 die Hälfte des Nobelpreises für Physiologie oder Medizin für ihre Entdeckungen zu einer neuen Malariatherapie; die andere Hälfte ging an zwei Forschende für andere Parasitenkrankheiten.\n\nEin alter Text, ein chemisch untersuchter Stoff und klinische Daten beantworten verschiedene Fragen. Eine Stoffanalyse allein beweist keine wirksame und sichere Behandlung bei Menschen. Auch eine lange Verwendung ersetzt die dafür nötigen wissenschaftlichen Untersuchungen nicht.",
@@ -106343,7 +106343,7 @@
       "feedback": "Der Text beschreibt eine frühere Verwendung. Daraus kann eine Forschungsfrage entstehen; einzelne Stoffe und Behandlungsergebnisse sind damit noch nicht untersucht.\n\nDie chemische Untersuchung liefert zusätzliche Informationen über den Stoff. Für Wirksamkeit und Sicherheit einer Behandlung braucht es weitere geeignete Belege.\n\nEin Untersuchungsergebnis hat einen bestimmten Gegenstand und Geltungsbereich. Es lässt sich nicht allein wegen eines gemeinsamen Pflanzennamens oder eines alten Textes auf andere Anwendungen übertragen.",
       "modelLimits": "Evidenzvergleich ohne Heilversprechen, Pflanzenrezept, Stoffgewinnung, Dosierung, Selbstversuch oder Arzneimittelberatung. Modellstufen ersetzen keine klinische Forschung oder individuelle medizinische Entscheidung.",
       "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
-      "reviewedOn": "2026-11-04",
+      "reviewedOn": "2026-11-06",
       "ageLevels": {
         "6-8": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
         "9-11": "Den Erkenntnisgewinn einer Stoffanalyse begrenzen.",
@@ -106366,9 +106366,9 @@
         },
         {
           "id": "source-2",
-          "organisation": "Journal of Clinical Investigation: Tu Youyous Herkunft und Forschungsweg",
-          "url": "https://www.jci.org/articles/view/60887",
-          "checkedOn": "2026-11-04",
+          "organisation": "NobelPrize.org: Tu Youyou über Herkunft, Ausbildung und Forschung",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/",
+          "checkedOn": "2026-11-06",
           "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
         },
         {
@@ -106400,7 +106400,7 @@
         {
           "statement": "Tu Youyou wurde1930in Ningbo geboren und absolvierte eine pharmazeutische Ausbildung; veraltete Inzidenzzahlen werden nicht übernommen.",
           "sourceId": "source-2",
-          "anchor": "JCI164–166 Ningbo1930/1951–1955pharmacytraining and institute; outdatedincidence/lifecycleintro not adopted."
+          "anchor": "NobelPrize.org, TuYouyou autobiographical2015: MyChildhood first paragraph Ningbo/30December1930; MyUniversityLife DepartmentofPharmacy/MedicalSchoolPekingUniversity and1952institutionaltransition; Assignmentoftheantimalarialresearchtask1969andteamleadership. Actual complete source read on06Nov2026 and actual keyboard anchor200at320large/1440normal. No extraction instruction, selfexperiment, blanket clinical-safety claim or conflicting1955/1965employment year adopted."
         },
         {
           "statement": "Die WHO betont2025die wissenschaftliche Prüfung von Wirksamkeit und Sicherheit auch bei lange traditionell verwendeten Mitteln.",
@@ -106436,9 +106436,119 @@
         "words:Hypothese"
       ],
       "preparedSourceLimits": [
-        "Nobelprize.org facts/bio/lecture actual403; PubMed actualbody footer only. Appropriate accessible official issuing NobelAssemblyPDF, WHO and Lasker used instead; no search snippet counted as a full source read."
+        "Nobelprize.org facts/bio/lecture actual403; PubMed actualbody footer only. Appropriate accessible official issuing NobelAssemblyPDF, WHO and Lasker used instead; no search snippet counted as a full source read.",
+        "Gezielter Quellenanschluss06.11.2026: frühere Nobel-Zugriffsgrenzen bleiben historisch; die autobiografischen Abschnitte zu Herkunft/Ausbildung/Forschungsauftrag wurden jetzt tatsächlich gelesen. Nur dieser Beleg und die dazugehörige einzelne Quellenakte sind nachgeführt; frühere fachliche Prüfungen, Bildrechte und alle Aufgaben bleiben erhalten."
       ],
-      "preparedHistoricalReadingReceipt": "old-people-read-sources/Tu-Youyou-actually-read-institutional-history-evidence-boundaries-and-existing-photo-rights.json"
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Tu-Youyou-actually-read-institutional-history-evidence-boundaries-and-existing-photo-rights.json",
+      "historicalSourceBeforeTuBiographical20261106": {
+        "id": "topics-people:person-tu_youyou",
+        "dataHash": "e5397cd7db4f949ba46cdb24829f3584596680b66a0a31ff62381e1f8c3ab5d2",
+        "teachingDataHash": "930520f08efc7f510bf05f7c545b0cb6d83095a62b80fda755b0cacd296e6da2",
+        "goal": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
+        "explanation": "Tu Youyou wurde 1930 in Ningbo in China geboren. Sie studierte Pharmazie und arbeitete in der Arzneimittelforschung. Ab Ende der 1960er-Jahre leitete sie ein Team, das nach Wirkstoffen gegen Malaria suchte. Malaria wird durch einzellige Parasiten verursacht und durch bestimmte Stechmücken übertragen.\n\nDas Team untersuchte Pflanzen und ältere medizinische Texte. Ein historischer Hinweis half dabei, eine Untersuchung neu zu durchdenken. Ein Hinweis war aber noch kein fertiger Wirkstoff: Die Forschenden mussten Stoffe gewinnen, voneinander trennen und ihre Eigenschaften untersuchen.\n\nIn den 1970er-Jahren wurde Artemisinin aus dem Einjährigen Beifuß gewonnen und weiter erforscht. Bis daraus geeignete Medikamente entstehen konnten, waren zusätzliche Arbeiten vieler Forschender und Untersuchungen zur Behandlung nötig. Tu Youyou erhielt 2015 die Hälfte des Nobelpreises für Physiologie oder Medizin für ihre Entdeckungen zu einer neuen Malariatherapie; die andere Hälfte ging an zwei Forschende für andere Parasitenkrankheiten.\n\nEin alter Text, ein chemisch untersuchter Stoff und klinische Daten beantworten verschiedene Fragen. Eine Stoffanalyse allein beweist keine wirksame und sichere Behandlung bei Menschen. Auch eine lange Verwendung ersetzt die dafür nötigen wissenschaftlichen Untersuchungen nicht.",
+        "example": "In einer alten Schrift steht, dass eine Pflanze bei einer Krankheit verwendet wurde. Welche einzelnen Stoffe in ihr enthalten sind, wurde in dieser Notiz nicht untersucht.",
+        "whyItMatters": "Du kannst einen Forschungsanstoß von einem Nachweis für eine Behandlung unterscheiden.",
+        "hint": "Unterscheide eine Frage über den Stoff von einer Frage über seine Wirkung und Sicherheit bei Menschen.",
+        "feedback": "Der Text beschreibt eine frühere Verwendung. Daraus kann eine Forschungsfrage entstehen; einzelne Stoffe und Behandlungsergebnisse sind damit noch nicht untersucht.\n\nDie chemische Untersuchung liefert zusätzliche Informationen über den Stoff. Für Wirksamkeit und Sicherheit einer Behandlung braucht es weitere geeignete Belege.\n\nEin Untersuchungsergebnis hat einen bestimmten Gegenstand und Geltungsbereich. Es lässt sich nicht allein wegen eines gemeinsamen Pflanzennamens oder eines alten Textes auf andere Anwendungen übertragen.",
+        "modelLimits": "Evidenzvergleich ohne Heilversprechen, Pflanzenrezept, Stoffgewinnung, Dosierung, Selbstversuch oder Arzneimittelberatung. Modellstufen ersetzen keine klinische Forschung oder individuelle medizinische Entscheidung.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-04",
+        "ageLevels": {
+          "6-8": "Einen Hinweis und ein Untersuchungsergebnis unterscheiden.",
+          "9-11": "Den Erkenntnisgewinn einer Stoffanalyse begrenzen.",
+          "12-14": "Lange Verwendung und behandlungsbezogene Evidenz unterscheiden."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Nobelversammlung: offizieller Medizinpreis2015 und Tu Youyous Forschung (PDF)",
+            "url": "https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Lasker Foundation: Tu Youyou und die Erforschung von Artemisinin",
+            "url": "https://laskerfoundation.org/winners/artemisinin-therapy-for-malaria/",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Journal of Clinical Investigation: Tu Youyous Herkunft und Forschungsweg",
+            "url": "https://www.jci.org/articles/view/60887",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-3",
+            "organisation": "WHO: wissenschaftliche Prüfung traditioneller Medizin",
+            "url": "https://www.who.int/news-room/questions-and-answers/item/traditional-medicine",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-4",
+            "organisation": "WHO: Pflanzenmaterial ist keine Malariabehandlung",
+            "url": "https://www.who.int/news/item/10-10-2019-the-use-of-non-pharmaceutical-forms-of-artemisia",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Die Nobelversammlung zeichnete2015unter anderem Tu Youyous Beitrag zur Erforschung von Artemisinin aus und ordnet die Arbeit in ein größeres Forschungsumfeld ein.",
+            "sourceId": "source-0",
+            "anchor": "OfficialNobelAssemblyPDF0–15 prizeallocation;30–33parasites/mosquitoes;75–94team/historicalclue/purification/clinicalwork;126–131born1930education. No2015statistics/currenttreatmentrecommendation."
+          },
+          {
+            "statement": "Die Lasker-Darstellung beschreibt ein Team, historische Hinweise und weitere Untersuchungen zur Entwicklung der Therapie; ein Textfund ist noch kein Wirksamkeits- oder Sicherheitsbeweis.",
+            "sourceId": "source-1",
+            "anchor": "Lasker49–95 team/1969lead/ancienttext/1970s discovery; no extraction recipe, dose, selfexperiment or blanket safety claim adopted."
+          },
+          {
+            "statement": "Tu Youyou wurde1930in Ningbo geboren und absolvierte eine pharmazeutische Ausbildung; veraltete Inzidenzzahlen werden nicht übernommen.",
+            "sourceId": "source-2",
+            "anchor": "JCI164–166 Ningbo1930/1951–1955pharmacytraining and institute; outdatedincidence/lifecycleintro not adopted."
+          },
+          {
+            "statement": "Die WHO betont2025die wissenschaftliche Prüfung von Wirksamkeit und Sicherheit auch bei lange traditionell verwendeten Mitteln.",
+            "sourceId": "source-3",
+            "anchor": "WHO2025QA101–104 rigorous scientific validation of efficacy/safety even after long use; unrelated claims excluded."
+          },
+          {
+            "statement": "Die WHO-Position von2019unterscheidet nichtpharmazeutisches Artemisia-Pflanzenmaterial von einer belegten Malariabehandlung; sie ist keine aktuelle individuelle Therapieanweisung.",
+            "sourceId": "source-4",
+            "anchor": "WHO2019position88–98 distinguishes plantmaterial and clinicalevidence/quality, doesnot support Artemisiaplantmaterial for malaria prevention/treatment. No2019globaldrugcoverage claim as2026fact."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/tu-youyou.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei eigene erfundene Forschungsnotizen vergleichen drei Belegarten: historischer Hinweis, Stoffuntersuchung und klinische Daten. Klinische Ergebnisse fehlen in beiden.",
+            "learningPurpose": "Two explicitly invented research notes; historical clue present in both, chemical study only in second, clinical evidence absent in both. Three semantic HTML evidence entries, no medical-effect simulation or recipe."
+          },
+          {
+            "path": "public/images/portraits/tu-youyou.webp",
+            "license": "CC BY-SA 4.0",
+            "credit": "Bengt Nyman",
+            "alt": "Tu Youyou mit Brille bei einem Termin in Stockholm 2015.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-marie_curie",
+          "topics-people:person-wangari_maathai",
+          "topics-people:person-ibn_sina",
+          "words:Hypothese"
+        ],
+        "preparedSourceLimits": [
+          "Nobelprize.org facts/bio/lecture actual403; PubMed actualbody footer only. Appropriate accessible official issuing NobelAssemblyPDF, WHO and Lasker used instead; no search snippet counted as a full source read."
+        ],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Tu-Youyou-actually-read-institutional-history-evidence-boundaries-and-existing-photo-rights.json"
+      }
     },
     {
       "id": "topics-people:person-wangari_maathai",

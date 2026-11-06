@@ -1,3 +1,4 @@
+import {assertMeaningfulGraphicContrast} from './text-geometry.mjs';
 import assert from 'node:assert/strict';
 
 // Prepared for the next integrated content wave. Not wired into or used as
@@ -6,6 +7,17 @@ const close=(actual,expected,label)=>assert(Math.abs(actual-expected)<1e-7,label
 const signed=n=>n>0?'+'+n:String(n);
 const direction=n=>n===0?'keine Bewegung':n>0?'nach rechts':'nach links';
 const segment=d=>{const m=/^M(-?[\d.e+-]+) (-?[\d.e+-]+)L(-?[\d.e+-]+) (-?[\d.e+-]+)/i.exec(d);assert(m,'actual SVG arrow segment '+d);return {x:Number(m[1]),y:Number(m[2]),dx:Number(m[3])-Number(m[1]),dy:Number(m[4])-Number(m[2])};};
+
+
+// Essential fixed paths carry the position, path, working-line or rest reference.
+export async function assertBookMechanicsReferenceContrast(figure,kind){
+ let selector=null;
+ if(kind==='balanced-motion')selector='svg > path[d="M25 100H295"]';
+ else if(kind==='changing-velocity')selector=await figure.locator('svg > circle[fill="none"]').count()?'svg > circle[fill="none"]':'svg > path[d="M25 100H295"]';
+ else if(kind==='lever-perpendicular-arm')selector='svg > path[stroke-dasharray]';
+ else if(kind==='elastic-versus-permanent')selector='[data-elastic-case] > path[stroke-dasharray]';
+ return assertMeaningfulGraphicContrast(figure,selector?[{selector,name:kind+' fixed reference',paint:'stroke'}]:[],'Mechanics');
+}
 
 async function actualGeometry(figure,kind){
  const state=await figure.evaluate(root=>{
@@ -87,6 +99,7 @@ async function actualGeometry(figure,kind){
  }else assert.fail('unknown mechanics figure '+kind);
  const clipped=await figure.locator('svg').evaluate(svg=>{const v=svg.viewBox.baseVal;return [...svg.querySelectorAll('path,circle,rect')].flatMap(shape=>{const b=shape.getBBox();return b.x<v.x-1||b.y<v.y-1||b.x+b.width>v.x+v.width+1||b.y+b.height>v.y+v.height+1?[shape.outerHTML.slice(0,160)]:[];});});
  assert.deepEqual(clipped,[],'actual mechanics drawing remains inside its viewBox');
+ state.actualReferenceContrasts=await assertBookMechanicsReferenceContrast(figure,kind);
  return state;
 }
 

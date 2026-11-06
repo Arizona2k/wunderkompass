@@ -57,6 +57,10 @@ test('all45 word pairs and196 world connections retain their complete M92 prefix
 test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown content, histories, ordering and premature current UI',()=>{
  const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,original=JSON.stringify(rows);
  assert.equal(rows.length,286);assert.equal(beforeRetainedPeopleDossiers(rows).length,268);
+ const tu=rows.find(r=>r.id==='topics-people:person-tu_youyou'),beforeTu=tu.historicalSourceBeforeTuBiographical20261106;
+ assert.equal(tu.sources[2].url,'https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/');
+ assert.equal(beforeTu.sources[2].url,'https://www.jci.org/articles/view/60887');
+ assert.equal(tu.teachingDataHash,beforeTu.teachingDataHash,'source replacement retains the actual lesson, model and old answer identities');
  for(const[name,mutate]of[
   ['missing old record',r=>r.splice(0,1)],['missing new record',r=>r.pop()],
   ['unknown new record',r=>r.push({...r[285],id:'topics-people:invented'})],
@@ -65,6 +69,8 @@ test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown c
   ['altered nested history',r=>r[0].historicalUIBeforeMetRecordSourceCorrection20261105.report+=' unreviewed'],
   ['altered new source',r=>r[268].sources[0].url='https://invalid.example/unreviewed'],
   ['altered new explanation',r=>r[285].explanation+=' unreviewed'],
+  ['altered preserved Tu source',r=>r.find(x=>x.id==='topics-people:person-tu_youyou').historicalSourceBeforeTuBiographical20261106.sources[2].url='https://invalid.example/unreviewed'],
+  ['missing preserved Tu source',r=>delete r.find(x=>x.id==='topics-people:person-tu_youyou').historicalSourceBeforeTuBiographical20261106],
   ['premature current UI',r=>r[268].ui={build:boundary.currentRuntimeBuild,visible:true}],
   ['premature old UI history',r=>r[0].historicalUIBeforeRetainedPeople20261105={build:'invented'}],
  ]){const bad=structuredClone(rows);mutate(bad);assert.throws(()=>beforeRetainedPeopleDossiers(bad),name);}
