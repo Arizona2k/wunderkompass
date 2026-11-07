@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import dossierBoundary from './fixtures/people-fourteen-dossier-predecessor.json' with {type:'json'};
+import {beforeRetainedPeople,beforeRetainedPeopleGraph} from './retained-people-reference.mjs';
 
 // Only the fourteen named additions are removed for older release comparisons.
 // Current204/36/18 inventories require their own full raw-data checks. Unknown
@@ -15,6 +16,7 @@ export const NEXT_FOURTEEN_PEOPLE_IDS=Object.freeze([
 ]);
 const additions=new Set(NEXT_FOURTEEN_PEOPLE_IDS);
 export function beforeFourteenPeople(items){
+ items=beforeRetainedPeople(items);
  const seen=new Set();
  for(const item of items)if(additions.has(item.id)){
   assert(!seen.has(item.id),'duplicate named person addition: '+item.id);
@@ -23,7 +25,7 @@ export function beforeFourteenPeople(items){
  return items.filter(item=>!additions.has(item.id)).map(item=>Array.isArray(item.related)?{...item,related:item.related.filter(id=>!additions.has(id))}:item);
 }
 export const beforeFourteenPeopleQuestions=items=>items.filter(item=>!additions.has(item.topic));
-export const beforeFourteenPeopleGraph=graph=>({...graph,connections:graph.connections.filter(edge=>!additions.has(edge.fromId)&&!additions.has(edge.toId))});
+export const beforeFourteenPeopleGraph=graph=>{const prior=beforeRetainedPeopleGraph(graph);return {...prior,connections:prior.connections.filter(edge=>!additions.has(edge.fromId)&&!additions.has(edge.toId))};};
 
 // Seven explicitly reviewed additions only. Unknown future photo identities
 // remain visible to all unchanged old photo predicates and the raw current guard.

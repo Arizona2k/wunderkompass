@@ -26,7 +26,8 @@ jobs:
     # Nature34: measured added normal/cold/native coverage; finite130min reserve.
     # Nature34: complete current phase timing refines the finite reserve to140min.
     # Nature34: completed concurrent full engines require a finite155min reserve.
-    timeout-minutes: 155
+    # Retained18: measured current phases plus native setup/transport and finite reserve.
+    timeout-minutes: 175
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:

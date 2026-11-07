@@ -9,7 +9,7 @@ assert(routeMatch,'actual canonical route list is required');
 const WORLD_ROUTES=vm.runInNewContext('('+routeMatch[1]+')');
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {learningTaskCorrectionsView} from './learning-tasks.mjs';
-import {chapterLaboratoryReturnPage,worldSelectionReturnPage,equivalentAnimalHabitatsPage,volcanoChapterDestinationsPage} from './learning-navigation.mjs';
+import {chapterLaboratoryReturnPage,worldSelectionReturnPage,equivalentAnimalHabitatsPage,volcanoChapterDestinationsPage,chapterImageSingleRequestPage} from './learning-navigation.mjs';
 import {completeFreshRoutesPage,revisitCompletedRoutesPage} from './route-revisit.mjs';
 
 export async function learningCorrectionsView(browser,base,{shots,engine='chromium'}={}){
@@ -24,10 +24,10 @@ export async function learningCorrectionsView(browser,base,{shots,engine='chromi
  }
  try{
   proof.tasks=await learningTaskCorrectionsView(browser,base,{shots,engine,widths:[320,1440]});
-  for(const width of [320,1440]){await load('navigation',width);current.chapter=await chapterLaboratoryReturnPage(page,base,{touch:width===320,shots,engine});current.selection=await worldSelectionReturnPage(page,base,{touch:width===320,shots,engine});current.habitats=await equivalentAnimalHabitatsPage(page,base,{touch:width===320});current.volcanoChapterDestinations=await volcanoChapterDestinationsPage(page,base,{touch:width===320});assert(browserErrorsComplete(current));current.status='passed';proof.navigation.push(current);}
+  for(const width of [320,1440]){await load('navigation',width);current.chapterPhotoSingleRequest=await chapterImageSingleRequestPage(page,base);current.chapter=await chapterLaboratoryReturnPage(page,base,{touch:width===320,shots,engine});current.selection=await worldSelectionReturnPage(page,base,{touch:width===320,shots,engine});current.habitats=await equivalentAnimalHabitatsPage(page,base,{touch:width===320});current.volcanoChapterDestinations=await volcanoChapterDestinationsPage(page,base,{touch:width===320});assert(browserErrorsComplete(current));current.status='passed';proof.navigation.push(current);}
   await load('fresh-routes',320);current.fresh=await completeFreshRoutesPage(page,base,{touch:true});current.revisit=await revisitCompletedRoutesPage(page,base,{touch:true});assert.equal(current.fresh.routeCount,8);assert.equal(current.fresh.stationActivations,45);assert.equal(current.fresh.noSeededSuccess,true);assert.equal(current.revisit.stationActivations,45);assert(browserErrorsComplete(current));current.status='passed';proof.routesFresh=current;
   for(const width of[320,1440]){await load('historical-completed-routes',width,true);if(width===1440){const legacy={checks:[]};await completedRouteFocus(page,legacy);current.existingCompletedRouteFocus=legacy;}current.revisit=await revisitCompletedRoutesPage(page,base,{touch:width===320});assert.equal(current.revisit.routeCount,8);assert.equal(current.revisit.stationActivations,45);assert(browserErrorsComplete(current));current.status='passed';proof.routesCompleted.push(current);}
   return proof;
- }catch(error){await page?.screenshot({path:path.join(shots,`journey-engine-${engine}-learning-corrections-original-failure.png`),fullPage:true}).catch(()=>{});await fs.writeFile(path.join(shots,`journey-engine-${engine}-learning-corrections-original-failure.json`),JSON.stringify({failure:error.stack,...(error.originalReturnPosition?{originalReturnPosition:error.originalReturnPosition}:{}),current,proof},null,2)+'\n');throw error;}
+ }catch(error){await page?.screenshot({path:path.join(shots,`journey-engine-${engine}-learning-corrections-original-failure.png`),fullPage:true}).catch(()=>{});await fs.writeFile(path.join(shots,`journey-engine-${engine}-learning-corrections-original-failure.json`),JSON.stringify({failure:error.stack,...(error.originalReturnPosition?{originalReturnPosition:error.originalReturnPosition}:{}),...(error.originalChapterPhotoMount?{originalChapterPhotoMount:error.originalChapterPhotoMount}:{}),current,proof},null,2)+'\n');throw error;}
  finally{await context?.close();}
 }

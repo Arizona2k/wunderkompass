@@ -1,3 +1,4 @@
+import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
 import assert from 'node:assert/strict';
@@ -16,11 +17,23 @@ async function homeTime(page,instant){await page.addInitScript(instant=>{
  },instant);}
 async function setHomeTime(page,instant){await page.evaluate(instant=>{window.__homeTestTime=Date.parse(instant);sessionStorage.setItem('__home-test-clock',String(window.__homeTestTime));},instant);}
 
+// Meaningful parts of the ISS explanation use the same actual painted-color guard.
+export async function assertStationContextContrast(figure){
+ return assertMeaningfulGraphicContrast(figure,[{selector:'[data-station-context-earth]',name:'Earth',paint:'fill'},{selector:'[data-station-context-orbit]',name:'orbit',paint:'stroke'},{selector:'[data-station-context-laboratory]',name:'station',paint:'fill'}],'ISS');
+}
+
 export async function discoveryPairMedia(page){
  const media=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
   const surface=article.querySelector(':scope > figure img[src],:scope > figure svg,:scope > figure ol,:scope > figure [role="img"],:scope > .research-preview img[src]');
   if(!surface)return false;const r=surface.getBoundingClientRect();return r.width>=80&&r.height>=50;
  }));assert.deepEqual(media,[true,true],'both connected topics have an actual visible explanatory figure; button arrows do not count');
+ // A real context drawing must still show the actual station and its relation to Earth.
+ const stationViews=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.filter(article=>article.querySelector('[data-route-focus="home-topic-history-iss"]')).map(article=>{
+  const figure=article.querySelector('figure[data-station-context="orbital-laboratory"]'),earth=figure?.querySelector('[data-station-context-earth]'),orbit=figure?.querySelector('[data-station-context-orbit]'),station=figure?.querySelector('[data-station-context-laboratory]'),num=(element,key)=>Number(element?.getAttribute(key));
+  return {complete:!!earth&&!!orbit&&!!station,earth:{x:num(earth,'cx'),y:num(earth,'cy'),r:num(earth,'r')},orbit:{x:num(orbit,'cx'),y:num(orbit,'cy'),r:num(orbit,'r')},station:{x:num(station,'x')+num(station,'width')/2,y:num(station,'y')+num(station,'height')/2,width:num(station,'width'),height:num(station,'height')},labels:[...(figure?.querySelectorAll('ul>li')??[])].map(el=>el.textContent)};
+ }));assert(stationViews.length<=1,'one actual ISS context per paired endpoint');
+ for(const view of stationViews){assert(view.complete,'ISS context contains actual Earth, orbit and station');assert(view.earth.r>0&&view.orbit.r>view.earth.r);assert.deepEqual([view.orbit.x,view.orbit.y],[view.earth.x,view.earth.y],'one common centre');assert(view.station.width>0&&view.station.height>0);assert.equal((view.station.x-view.earth.x)**2+(view.station.y-view.earth.y)**2,view.orbit.r**2,'the station symbol lies on the declared schematic orbit');assert.deepEqual(view.labels,['Gefüllter Kreis: Erde.','Rechteck auf der Linie: Raumstation.']);}
+ for(const figure of await page.locator('figure[data-station-context="orbital-laboratory"]').all())await assertStationContextContrast(figure);
  const photos=await page.locator('.discovery-pair>article').evaluateAll(articles=>articles.map(article=>{
   const image=article.querySelector(':scope > .world-photo img[src],:scope > .discovery-context-photo img[src]');
   return image?{height:image.getBoundingClientRect().height,fit:getComputedStyle(image).objectFit}:null;
@@ -168,7 +181,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  if(width===390||width===1440){
   const trails=await read('../../app/discovery-connections.json');await home();await openTrailPicker(page);
   for(const trail of trails){await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(trail.id);await page.locator('.discovery-pair>article').first().locator(':scope > figure,:scope > .research-preview').waitFor();await decodeHomeImages(page);await discoveryPairMedia(page);}
-  report.checks.push('All16 canonical Home connections show both real topic figures at'+width+'; action icons excluded');
+  report.checks.push('All'+trails.length+' canonical Home connections show both real topic figures at'+width+'; action icons excluded');
  }
  await home();await rapidHashReturn(page,report,width);await decodeHomeImages(page);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
@@ -215,6 +228,7 @@ export async function offlineDiscoveryCentral(page,report){
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
  await page.evaluate(()=>location.hash='updates');await page.locator('.updates-timeline').first().waitFor();assert.equal(await page.locator('.updates-timeline>li').count(),publicUpdates().length);await page.getByRole('link',{name:'Zur Startseite',exact:true}).click();await page.locator('.discovery-hero').waitFor();
  await page.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal(await page.locator('.mode-tabs [data-state=active]').innerText(),'Wissenswelten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.locator('.discovery-hero').waitFor();
+ await openTrailPicker(page);const previousTrail=await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).inputValue();await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption('person-mae_jemison--history-iss');await page.locator('[data-route-focus="home-topic-history-iss"]').waitFor();for(const image of await page.locator('.discovery-pair img[src]').all())await image.evaluate(im=>im.decode());await discoveryPairMedia(page);report.checks.push('Actual cold offline Mae Jemison and ISS pair: cached portrait and real orbital-laboratory diagram remain complete');await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(previousTrail);
  report.checks.push('Cold offline discovery: all gateway photos decode, knowledge trail switches, challenge opens, local history, six-world main navigation/category and home work');
 }
 

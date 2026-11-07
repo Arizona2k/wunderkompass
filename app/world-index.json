@@ -1192,10 +1192,12 @@
     "id": "person-marie_curie",
     "category": "people",
     "title": "Marie Curie",
-    "intro": "Marie Curie erforschte die Radioaktivität.",
+    "intro": "Marie Curie machte unsichtbare Strahlung messbar. Auffällige Vergleiche führten sie und ihr Forschungsteam zu neuen Fragen über Stoffe.",
     "aliases": [
       "Marie Curie",
-      "marie_curie"
+      "marie_curie",
+      "Marie Skłodowska-Curie",
+      "Maria Sklodowska-Curie"
     ],
     "locations": [
       {
@@ -1220,10 +1222,13 @@
     "id": "person-ada_lovelace",
     "category": "people",
     "title": "Ada Lovelace",
-    "intro": "Ada Lovelace schrieb 1843 eine Rechenanleitung für Charles Babbages geplante Maschine auf.",
+    "intro": "Ada Lovelace beschrieb 1843, wie eine geplante Rechenmaschine genaue Schrittfolgen ausführen könnte. Sie dachte dabei über bloße Zahlenrechnungen hinaus.",
     "aliases": [
       "Ada Lovelace",
-      "ada_lovelace"
+      "ada_lovelace",
+      "Augusta Ada King",
+      "Ada Byron",
+      "Analytical Engine"
     ],
     "locations": [
       {
@@ -1363,7 +1368,7 @@
     "id": "person-karl_benz",
     "category": "people",
     "title": "Karl (Carl) Benz",
-    "intro": "Karl Benz entwickelte einen Wagen mit Benzinmotor.",
+    "intro": "Karl, auch Carl geschrieben, Benz entwickelte einen Motorwagen. Dafür mussten Motor, Fahrzeug und die Übertragung des Antriebs zusammenpassen.",
     "aliases": [
       "Karl (Carl) Benz",
       "karl_benz"
@@ -1400,7 +1405,7 @@
     "id": "person-bertha_benz",
     "category": "people",
     "title": "Bertha Benz",
-    "intro": "Bertha Benz unterstützte die Entwicklung des Motorwagens mit Geld, Ideen und praktischer Arbeit.",
+    "intro": "Bertha Benz finanzierte und unterstützte die Entwicklung des Motorwagens und erprobte ihn auf einer längeren Reise. Dabei wurden Bedingungen sichtbar, die ein Test am selben Platz nicht erfasst.",
     "aliases": [
       "Bertha Benz",
       "bertha_benz"
@@ -1443,7 +1448,7 @@
     "id": "person-jane_goodall",
     "category": "people",
     "title": "Jane Goodall",
-    "intro": "Jane Goodall beobachtete wilde Schimpansen in Tansania.",
+    "intro": "Jane Goodall untersuchte das Leben wilder Schimpansen in Gombe. Ihre Beobachtungen machten Werkzeuggebrauch und Werkzeugvorbereitung dieser Tiere für die Forschung sichtbar.",
     "aliases": [
       "Jane Goodall",
       "jane_goodall"
@@ -1480,7 +1485,7 @@
     "id": "person-albert_einstein",
     "category": "people",
     "title": "Albert Einstein",
-    "intro": "Albert Einstein erforschte Licht, Raum und Zeit.",
+    "intro": "Albert Einstein untersuchte Licht, Raum und Zeit. Seine Erklärung des photoelektrischen Effekts hilft zu verstehen, warum die Anzahl von Lichtquanten und ihre einzelne Energie verschieden sind.",
     "aliases": [
       "Albert Einstein",
       "albert_einstein"
@@ -1523,7 +1528,7 @@
     "id": "person-al_khwarizmi",
     "category": "people",
     "title": "al-Chwarizmi (al-Khwarizmi)",
-    "intro": "Al-Chwarizmi schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.",
+    "intro": "Al-Chwarizmi erklärte in Bagdad, wie sich Rechenaufgaben systematisch lösen lassen. Seine Bücher halfen, Wissen über Algebra und Zahlen weiterzugeben.",
     "aliases": [
       "al-Chwarizmi (al-Khwarizmi)",
       "al_khwarizmi"
@@ -1560,7 +1565,7 @@
     "id": "person-tu_youyou",
     "category": "people",
     "title": "Tu Youyou",
-    "intro": "Tu Youyou suchte mit einem Team nach besseren Mitteln gegen Malaria.",
+    "intro": "Tu Youyou suchte mit einem Forschungsteam nach Mitteln gegen Malaria. Ihre Arbeit an Artemisinin zeigt, wie historische Hinweise und moderne Untersuchungen zusammenwirken können.",
     "aliases": [
       "Tu Youyou",
       "tu_youyou"
@@ -1597,7 +1602,7 @@
     "id": "person-cai_lun",
     "category": "people",
     "title": "Cai Lun",
-    "intro": "Cai Lun sammelte Erfahrungen früherer Papiermacher und verbesserte die Herstellung.",
+    "intro": "Cai Lun verbesserte und förderte die Papierherstellung im China der Han-Zeit. Seine Geschichte zeigt, wie vorhandenes Wissen weiterentwickelt und eine Verbesserung überliefert wird.",
     "aliases": [
       "Cai Lun",
       "cai_lun"
@@ -1634,7 +1639,7 @@
     "id": "person-mae_jemison",
     "category": "people",
     "title": "Mae Jemison",
-    "intro": "Mae Jemison ist Ärztin und war NASA-Astronautin.",
+    "intro": "Mae Jemison verband Medizin, Technik und Raumfahrt. 1992 forschte sie als Wissenschafts-Missionsspezialistin im Weltraumlabor der Endeavour.",
     "aliases": [
       "Mae Jemison",
       "mae_jemison"
@@ -1669,7 +1674,7 @@
     "id": "person-johannes_gutenberg",
     "category": "people",
     "title": "Johannes Gutenberg",
-    "intro": "Johannes Gutenberg entwickelte in Mainz ein wirksames System zum Drucken mit beweglichen Metallbuchstaben.",
+    "intro": "Johannes Gutenberg entwickelte in Mainz ein wirkungsvolles europäisches Drucksystem mit beweglichen Metallzeichen. Sein Beitrag verbindet viele Werkzeuge und die Arbeit einer Werkstatt.",
     "aliases": [
       "Johannes Gutenberg",
       "johannes_gutenberg"
@@ -1740,7 +1745,7 @@
     "id": "person-charles_darwin",
     "category": "people",
     "title": "Charles Darwin",
-    "intro": "Er beobachtete Tiere, Pflanzen und Gesteine auf einer langen Forschungsreise.",
+    "intro": "Charles Darwin verglich Lebewesen, Fossilien und viele Beobachtungen. Natürliche Selektion erklärt, wie vererbbare Unterschiede über Generationen häufiger oder seltener werden können.",
     "aliases": [],
     "locations": [
       {
@@ -1774,7 +1779,7 @@
     "id": "person-alexander_humboldt",
     "category": "people",
     "title": "Alexander von Humboldt",
-    "intro": "Er verglich auf Reisen Pflanzen, Berge und Klima miteinander.",
+    "intro": "Alexander von Humboldt verglich Pflanzen, Höhen und weitere Naturbedingungen miteinander. Dabei verband er Beobachtungen von Reisen mit der Auswertung vieler Aufzeichnungen und der Arbeit anderer Menschen.",
     "aliases": [],
     "locations": [
       {
@@ -1808,7 +1813,7 @@
     "id": "person-neil_armstrong",
     "category": "people",
     "title": "Neil Armstrong",
-    "intro": "Er war der erste Mensch, der die Mondoberfläche betrat.",
+    "intro": "Neil Armstrong war Ingenieur, Testpilot und Astronaut. Bei Apollo 11 landete er zusammen mit Buzz Aldrin auf dem Mond; Michael Collins arbeitete in der Mondumlaufbahn.",
     "aliases": [],
     "locations": [
       {

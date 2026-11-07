@@ -1,0 +1,15 @@
+// Own retained-topic teaching figure; invented examples and limits are explicit.
+export function PeopleMissionRolesFigure({selected,onSelect}:{selected:number;onSelect:(value:number)=>void}){
+ const moon=selected===1,command=moon?['Michael Collins']:['Neil Armstrong','Buzz Aldrin','Michael Collins'],surface=moon?['Neil Armstrong','Buzz Aldrin']:[];
+ return <>
+  <h4>Drei Menschen, unterschiedliche Aufgaben</h4>
+  <p>Vergleiche zwei ausgewählte Situationen von Apollo 11: den gemeinsamen Start und den Mondaufenthalt. Die schematischen Bereiche zeigen Aufgaben und Aufenthaltsorte, keine Entfernungen oder Flugbahnen.</p>
+  <div className="people-mission-role-map" data-mission-scene={moon?'moon-stay':'launch'} style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,15rem),1fr))',gap:'1rem'}}>
+   <section aria-label="Kommandokapsel Columbia" style={{padding:'1rem',border:'2px solid #66838b',borderRadius:'2.5rem 2.5rem .75rem .75rem',background:'#f2f7f7'}}><h5 style={{fontFamily:'inherit',fontSize:'1.25rem',fontWeight:700,lineHeight:1.4,margin:'0 0 .5rem'}}>Columbia</h5><p>{moon?'Kommandokapsel in der Mondumlaufbahn':'Kommandokapsel beim Start'}</p><ul data-crew-place="columbia" style={{paddingLeft:'1.25rem'}}>{command.map(name=><li key={name}>{name}</li>)}</ul></section>
+   <section aria-label="Landefähre und Mondaufenthalt" style={{padding:'1rem',border:'2px solid #a78568',borderRadius:'.75rem',background:'#faf5ee'}}><h5 style={{fontFamily:'inherit',fontSize:'1.25rem',fontWeight:700,lineHeight:1.4,margin:'0 0 .5rem'}}>{moon?'Eagle und Mondoberfläche':'Landefähre Eagle'}</h5><p>{moon?'Die beiden Astronauten des Landeteams':'Beim Start ist noch niemand in der Landefähre.'}</p>{surface.length>0&&<ul data-crew-place="moon" style={{paddingLeft:'1.25rem'}}>{surface.map(name=><li key={name}>{name}</li>)}</ul>}</section>
+  </div>
+  <div className="visual-choice" role="group" aria-label="Ausgewählte Missionssituation wählen"><button aria-pressed={!moon} onClick={()=>onSelect(0)}>Gemeinsamer Start</button><button aria-pressed={moon} onClick={()=>onSelect(1)}>Mondaufenthalt</button></div>
+  <p className="people-evidence-observation" role="status">{moon?'Armstrong und Aldrin gehörten zum Landeteam. Collins blieb mit Columbia in der Mondumlaufbahn. Nach dem Mondaufenthalt kehrten die beiden zu ihm zurück.':'Beim Start waren alle drei in Columbia. Die Ansicht beschreibt genau diesen Zeitpunkt; sie sagt nicht, dass während der gesamten Hinreise niemand die Landefähre betrat.'}</p>
+  <p className="small-note">Eigene schematische Rollenübersicht mit KI-Unterstützung. Sie bildet weder die Größe der Raumfahrzeuge noch ihre Entfernung, Geschwindigkeit oder genaue Position ab. „Mondaufenthalt“ fasst mehrere Situationen zusammen: Die beiden Astronauten waren nicht ständig beide in Eagle oder beide außerhalb. Auch die vielen Menschen am Boden, technische Systeme und sämtliche Missionsschritte sind hier nicht dargestellt. Diese Übersicht kann allein weder den Flugablauf noch die Bedeutung des gesamten Teams erklären.</p>
+ </>;
+}

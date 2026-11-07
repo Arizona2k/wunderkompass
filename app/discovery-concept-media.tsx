@@ -1,7 +1,17 @@
 /** Small explanatory views of the existing article's concepts; never interactive-model captures. */
-export const hasDiscoveryConceptMedia=(id:string)=>['science-fungi','science-foodweb','science-atmosphere'].includes(id);
+export const hasDiscoveryConceptMedia=(id:string)=>['science-fungi','science-foodweb','science-atmosphere','history-iss'].includes(id);
 export default function DiscoveryConceptMedia({id,historyKey}:{id:string;historyKey:string}){
  if(!hasDiscoveryConceptMedia(id))return null;
+ if(id==='history-iss')return <figure className="discovery-concept discovery-concept-station" data-station-context="orbital-laboratory">
+  <svg viewBox="0 0 320 220" role="img" aria-label="Schema: Die Erde steht im gefüllten Kreis, ein Rechteck auf der umgebenden Linie für die Raumstation ISS. Größen und Abstände sind nicht maßstabsgetreu.">
+   <circle data-station-context-orbit="true" cx="145" cy="110" r="80" fill="none" stroke="#567579" strokeWidth="2" strokeDasharray="6 5"/>
+   <circle data-station-context-earth="true" cx="145" cy="110" r="42" fill="#286171"/>
+   <path d="M103 110H187M145 68C120 88 120 132 145 152M145 68C170 88 170 132 145 152" fill="none" stroke="#e3f1ee" strokeWidth="2"/>
+   <rect data-station-context-laboratory="true" x="209" y="102" width="32" height="16" rx="4" fill="#b65d32" stroke="#6d432e" strokeWidth="2"/>
+  </svg>
+  <ul><li>Gefüllter Kreis: Erde.</li><li>Rechteck auf der Linie: Raumstation.</li></ul>
+  <figcaption><details data-history-disclosure={historyKey}><summary>Darstellung &amp; Modellgrenzen</summary><p>Eigene Erklärungsgrafik mit KI-Unterstützung: ein Forschungslabor in der Erdumlaufbahn. Größen und Abstände sind frei gewählt; kein Maßstab, Bauplan oder historisches Stationsfoto. Die Linie ist eine schematische Einordnung, keine Bahnberechnung. Fachquellen auf der Entdeckerkarte.</p></details></figcaption>
+ </figure>;
  const fungi=id==='science-fungi',air=id==='science-atmosphere';
  const labels=fungi?['Fruchtkörper über dem Boden','Pilzfäden bilden das Myzel']:air?['Exosphäre','Thermosphäre','Mesosphäre','Stratosphäre','Troposphäre']:['Sonne','Phytoplankton','Krill','Blauwal'];
  const limit=fungi?'Schema eines hutbildenden Pilzes, kein Größenmaßstab. Nicht alle Pilze bilden Hüte.':air?'Reihenfolge nach oben: von der Troposphäre zur Exosphäre. Schichtdicken sind nicht maßstabsgetreu; die Atmosphäre hat keine feste Decke.':'Eine ausgewählte Nahrungskette im Meer. Die Pfeile zeigen den Weg der Energie, kein vollständiges Nahrungsnetz.';

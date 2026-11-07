@@ -4,14 +4,15 @@ import fs from 'node:fs';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import {beforeAccessiblePeopleSourceDossiers,beforeMetRecordSourceUIDossiers,accessiblePeopleSourceCorrection as correction} from './people-accessible-sources-reference.mjs';
 import {beforeFourteenDossiers} from './people-fourteen-dossier-reference.mjs';
+import {beforeRetainedPeopleDossiers,beforeRetainedPeople} from './retained-people-reference.mjs';
 
 test('eight reviewed alternatives retain all35 public source actions and exact prior dossier facts, media and histories',()=>{
- const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const rows=beforeRetainedPeopleDossiers(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
  assert.equal(rows.length,268);assert.equal(correction.dossiers.length,6);
  const restored=beforeAccessiblePeopleSourceDossiers(rows);
  for(const change of correction.dossiers)assert.deepEqual(restored.find(row=>row.id===change.id),change.original);
  assert.equal(beforeFourteenDossiers(rows).length,254);
- const inquiries=JSON.parse(fs.readFileSync('app/people-inquiries.json','utf8')).entries;
+ const inquiries=beforeRetainedPeople(JSON.parse(fs.readFileSync('app/people-inquiries.json','utf8')).entries);
  const next=new Set(inquiries.slice(4).map(row=>row.id));
  assert.equal(catalog.filter(row=>next.has(row.id)).reduce((sum,row)=>sum+row.sources.length,0),35);
  // Arbitrary new data or stale current source/body claims cannot hide behind

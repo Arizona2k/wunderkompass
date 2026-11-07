@@ -174,5 +174,38 @@
     "label": "Gepard & Löwe",
     "question": "Wofür ist ein Gepard besonders bekannt?",
     "routeId": "safari"
+  },
+  {
+    "id": "person-johannes_gutenberg--history-paper",
+    "fromId": "person-johannes_gutenberg",
+    "toId": "history-paper",
+    "kind": "needs",
+    "why": "Gutenbergs Werkstatt verband Lettern, Farbe, eine Presse und einen Schriftträger wie Papier oder Pergament. Die Papierseite zeigt die viel ältere Geschichte eines solchen Materials. Papierherstellung und Buchdruck sind verschiedene Entwicklungen.",
+    "checkedAt": "2026-11-05",
+    "label": "Johannes Gutenberg & Papier aus China",
+    "question": "Wofür ist Johannes Gutenberg besonders bekannt?",
+    "routeId": "ideas"
+  },
+  {
+    "id": "person-katherine_johnson--history-apollo11",
+    "fromId": "person-katherine_johnson",
+    "toId": "history-apollo11",
+    "kind": "context",
+    "why": "Johnsons Seite erklärt Gegenrechnungen für die Raumfahrt; Apollo 11 zeigt die Zusammenarbeit bei einer Mondmission. Ihre bekannte Prüfung für John Glenn 1962 gehört zu einer anderen Mission als Apollo 11 im Jahr 1969.",
+    "checkedAt": "2026-11-05",
+    "label": "Katherine Johnson & Menschen landen auf dem Mond",
+    "question": "Wofür ist Katherine Johnson besonders bekannt?",
+    "routeId": "space"
+  },
+  {
+    "id": "person-mae_jemison--history-iss",
+    "fromId": "person-mae_jemison",
+    "toId": "history-iss",
+    "kind": "compare",
+    "why": "Jemison forschte 1992 im Spacelab-J während der Shuttle-Mission STS-47. Die ISS wurde später ein dauerhaft bewohntes Labor. Beide Seiten behandeln Forschung in der Erdumlaufbahn; Jemisons hier beschriebener Flug führte nicht zur ISS.",
+    "checkedAt": "2026-11-05",
+    "label": "Mae Jemison & Ein gemeinsames Labor im Weltraum",
+    "question": "Wofür ist Mae Jemison besonders bekannt?",
+    "routeId": "space"
   }
 ]

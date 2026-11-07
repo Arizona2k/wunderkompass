@@ -2,7 +2,7 @@
 import {useId,useState,type ReactNode} from 'react';
 import {forceStep,straightSamples,torqueMagnitude,elasticSketch,type ElasticCase,type LoadStep} from './book-mechanics-models';
 export type MechanicsFigureKind='forces-and-net'|'balanced-motion'|'velocity-direction'|'changing-velocity'|'friction-contact'|'lever-perpendicular-arm'|'elastic-versus-permanent';
-const ink='#245d70',accent='#b6541f',pale='#d9eaf1',neutral='#c9d3d3';
+const ink='#245d70',accent='#b6541f',pale='#d9eaf1',neutral='#567579';
 function Arrow({x,y,dx,dy,color=ink,dashed=false}:{x:number;y:number;dx:number;dy:number;color?:string;dashed?:boolean}){
  const length=Math.hypot(dx,dy);if(length===0)return null;
  const ux=dx/length,uy=dy/length,ex=x+dx,ey=y+dy;

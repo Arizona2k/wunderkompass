@@ -1,10 +1,11 @@
+import {retainedPeopleSourceView} from './retained-people-learning.mjs';
 import assert from 'node:assert/strict';
 import {capturePeopleFigureTree,assertPeopleFigureSemanticPair,rejectFourActualDOMCountercases} from './fourteen-actual-dom-semantic-laws.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
-const entries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries;
+const entries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(0,18);
 assert.deepEqual(entries.map(e=>e.id),["person-mary_anning","person-ibn_al_haytham","person-maria_sibylla_merian","person-inge_lehmann","person-henrietta_swan_leavitt","person-cecilia_payne_gaposchkin","person-rosalind_franklin","person-jocelyn_bell_burnell","person-katsushika_hokusai","person-murasaki_shikibu","person-rachel_carson","person-octavia_butler","person-nelson_mandela","person-chien_shiung_wu","person-lise_meitner","person-zaha_hadid","person-rabindranath_tagore","person-ibn_sina"],'all four retained and fourteen added biographies must be visited individually');
 const newKinds=new Set(entries.slice(4).map(e=>e.figure));assert.equal(newKinds.size,14);
 const legacy=JSON.parse(await fs.readFile(new URL('../fixtures/legacy-people18-before-two-biographies.json',import.meta.url),'utf8'));
@@ -78,7 +79,7 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
    for(const [suffix,part]of[['controls',figure.locator('.visual-choice')],['limits',figure.locator('.small-note')]]){await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}
   }
   observed.push({id:entry.id,width,native,threeVoluntaryLevels:true,allSixWrongFeedbacks:true,actualModelSemantics:true,actualCaptionFont,large,actualSemanticLaw,actualFigureStates,actualSVGFonts,sourceLinks:true,noExplorationStamp:true,questionsChecked:questions,reciprocalTargetAndBack:true});
- }assert.deepEqual(observed.map(e=>e.id),entries.map(e=>e.id),'every registered biography activity was actually checked');observed[0].fourActualDOMCountercasesRejected=rejectFourActualDOMCountercases(actualSemanticPairs);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
+ }assert.deepEqual(observed.map(e=>e.id),entries.map(e=>e.id),'every registered biography activity was actually checked');observed[0].fourActualDOMCountercasesRejected=rejectFourActualDOMCountercases(actualSemanticPairs);observed[0].retainedOlderPeople=await retainedPeopleSourceView(page,{width,shots,engine,native,questions,touch});assert.equal(observed[0].retainedOlderPeople.length,18);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }
 export async function peopleLegacyRound(browser,base,ready,report,shots){
  const context=await browser.newContext({viewport:{width:390,height:950},reducedMotion:'reduce',acceptDownloads:true,serviceWorkers:'block'}),page=await context.newPage(),errors=[],http=[];

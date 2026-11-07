@@ -1,0 +1,122 @@
+[
+  {
+    "id": "person-albert_einstein--science-gps",
+    "fromId": "person-albert_einstein",
+    "toId": "science-gps",
+    "kind": "uses",
+    "why": "GPS braucht sehr genaue Uhren. Bei ihren Zeitsignalen werden Effekte aus Einsteins Relativitätstheorien berücksichtigt. Das Photonenmodell auf der Einstein-Seite behandelt eine andere Frage und berechnet keine GPS-Zeitkorrektur.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-albert_einstein--science-shadows",
+    "fromId": "person-albert_einstein",
+    "toId": "science-shadows",
+    "kind": "compare",
+    "why": "Wie prüft man eine Erklärung? Die Schattenseite vergleicht Winkel an verschiedenen Orten; bei Einstein unterscheiden wir Lichtmenge und Energie pro Photon. Die Beispiele brauchen jeweils passende Beobachtungen und Regeln. Die Erdkrümmung wurde schon lange vor Einstein untersucht.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-alexander_humboldt--animal-jaguar",
+    "fromId": "person-alexander_humboldt",
+    "toId": "animal-jaguar",
+    "kind": "habitat",
+    "why": "Humboldt verglich Umweltbedingungen an verschiedenen Orten. Der Jaguar zeigt ein konkretes Tier mit Lebensräumen in Mittel- und Südamerika. Vergleiche die beschriebenen Lebensräume mit den Fragen nach Pflanzen und Standortbedingungen; daraus folgt keine bestimmte Jaguarbeobachtung Humboldts.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-alexander_humboldt--person-charles_darwin",
+    "fromId": "person-alexander_humboldt",
+    "toId": "person-charles_darwin",
+    "kind": "compare",
+    "why": "Humboldt verglich Pflanzen und Umweltbedingungen; Darwin untersuchte unter anderem die Veränderung von Lebewesen über Generationen. Beide Beispiele verbinden Beobachtungen mit Erklärungsfragen, behandeln aber unterschiedliche Zusammenhänge.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-charles_darwin--animal-green-sea-turtle",
+    "fromId": "person-charles_darwin",
+    "toId": "animal-green-sea-turtle",
+    "kind": "compare",
+    "why": "Darwins Modell vergleicht vererbbare Unterschiede über Generationen. Die Meeresschildkröte führt dagegen zu Lebensraum und Wanderungen einer Art. Eine Wanderung oder das Lernen eines einzelnen Tieres ist noch keine evolutionäre Veränderung.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-grace_hopper--science-computer",
+    "fromId": "person-grace_hopper",
+    "toId": "science-computer",
+    "kind": "context",
+    "why": "Hoppers Beispiel übersetzt eine Anweisung und erhält ihre Bedeutung. Die Computerseite zeigt, wie Zahlen mit Bits dargestellt werden. Programmanweisung und Darstellung einer Zahl sind verschiedene Ebenen des Rechnens.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-jane_goodall--animal-western-lowland-gorilla",
+    "fromId": "person-jane_goodall",
+    "toId": "animal-western-lowland-gorilla",
+    "kind": "compare",
+    "why": "Goodall beobachtete Schimpansen in Gombe. Der westliche Flachlandgorilla ist ein anderer Menschenaffe mit einem anderen Lebensraum. Vergleiche die Beschreibungen, ohne Goodalls Schimpansenbeobachtungen einfach auf Gorillas zu übertragen.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-johannes_gutenberg--history-paper",
+    "fromId": "person-johannes_gutenberg",
+    "toId": "history-paper",
+    "kind": "needs",
+    "why": "Gutenbergs Werkstatt verband Lettern, Farbe, eine Presse und einen Schriftträger wie Papier oder Pergament. Die Papierseite zeigt die viel ältere Geschichte eines solchen Materials. Papierherstellung und Buchdruck sind verschiedene Entwicklungen.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-katherine_johnson--history-apollo11",
+    "fromId": "person-katherine_johnson",
+    "toId": "history-apollo11",
+    "kind": "context",
+    "why": "Johnsons Seite erklärt Gegenrechnungen für die Raumfahrt; Apollo 11 zeigt die Zusammenarbeit bei einer Mondmission. Ihre bekannte Prüfung für John Glenn 1962 gehört zu einer anderen Mission als Apollo 11 im Jahr 1969.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-mae_jemison--history-iss",
+    "fromId": "person-mae_jemison",
+    "toId": "history-iss",
+    "kind": "compare",
+    "why": "Jemison forschte 1992 im Spacelab-J während der Shuttle-Mission STS-47. Die ISS wurde später ein dauerhaft bewohntes Labor. Beide Seiten behandeln Forschung in der Erdumlaufbahn; Jemisons hier beschriebener Flug führte nicht zur ISS.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-marie_curie--science-computer",
+    "fromId": "person-marie_curie",
+    "toId": "science-computer",
+    "kind": "compare",
+    "why": "Curies Beispiel trennt einen Messwert von einer Erklärung. Die Computerseite zeigt, wie Zahlen als Bitfolgen dargestellt werden. Eine Zahl zu speichern oder umzurechnen erklärt noch nicht, weshalb ein Stoff Strahlung abgibt.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-neil_armstrong--invention-rocket",
+    "fromId": "person-neil_armstrong",
+    "toId": "invention-rocket",
+    "kind": "transport",
+    "why": "Die Apollo-Mission brauchte eine Rakete für den Start. Die Raketenseite erklärt das Rückstoßprinzip; Armstrongs Rollenübersicht zeigt Aufgaben der Besatzung. Antrieb, Flugbahn und Arbeitsteilung sind verschiedene Teile einer Raumfahrtmission.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-tu_youyou--person-wangari_maathai",
+    "fromId": "person-tu_youyou",
+    "toId": "person-wangari_maathai",
+    "kind": "compare",
+    "why": "Bei Tu Youyou führen Pflanzen zu Fragen der Wirkstoffforschung; bei Wangari Maathai geht es um Bäume, Pflege und gemeinsame Umweltarbeit. Ein Zusammenhang mit Pflanzen macht diese Fragen und ihre Belege nicht gleich. Naturschutz ist kein Wirksamkeitsnachweis für ein Medikament.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-wangari_maathai--animal-african-savanna-elephant",
+    "fromId": "person-wangari_maathai",
+    "toId": "animal-african-savanna-elephant",
+    "kind": "habitat",
+    "why": "Maathais Beispiel fragt nach Bäumen und ihrer weiteren Pflege. Savannenelefanten leben unter anderem in Savannen und offenen Wäldern Afrikas. Daraus entsteht eine Frage nach passenden Lebensräumen; möglichst viele Bäume zu setzen ist nicht automatisch für jeden Lebensraum richtig.",
+    "checkedAt": "2026-11-05"
+  },
+  {
+    "id": "person-wangari_maathai--person-jane_goodall",
+    "fromId": "person-wangari_maathai",
+    "toId": "person-jane_goodall",
+    "kind": "compare",
+    "why": "Maathais gemeinschaftliche Umweltarbeit und Goodalls Forschung und Naturschutz verbinden Menschen mit ihrer Umgebung. Vergleiche die unterschiedlichen Fragen: Wie entwickeln sich gepflanzte Bäume, und was lässt sich an Tieren beobachten? Eine einzelne Zählung erklärt nicht alle Folgen eines Naturschutzprojekts.",
+    "checkedAt": "2026-11-05"
+  }
+]

@@ -1,4 +1,4 @@
-import {fourteenConnectedRoutes} from './people-fourteen-connected-routes.mjs';
+import {fourteenConnectedRoutes,retainedConnectedRoutes} from './people-fourteen-connected-routes.mjs';
 import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
 import {worldEntryNavigation} from './world-entry.mjs';
@@ -14,6 +14,7 @@ import {assertTextInsideControls} from './text-geometry.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
+const peopleActivities=new Set(JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.map(entry=>entry.id));
 const examples=['animal-polar-bear','history-maya','person-grace_hopper','invention-car','building-taj-mahal','science-moon-phases','science-tides','science-currents'];
 const drawingAlts={
  'science-moon-phases':'Vier ausgewählte Mondphasen: Neumond, zunehmender Halbmond, Vollmond und abnehmender Halbmond.',
@@ -45,7 +46,8 @@ export async function articleAtlas(page,ready,report,width,shots){
    assert.equal(new URL(page.url()).hash,'#world/topic/'+id,'jump preserves direct link');
   }
   if(await nav.getByRole('button',{name:/Ausprobieren$/}).count()){
-   await nav.getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await art.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);
+   const activity=peopleActivities.has(id)?art.locator('[data-person-evidence="'+id+'"]'):art.locator('.article-experiment');assert.equal(await activity.count(),1,id+' has one specifically declared research target');
+   await nav.getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await activity.evaluate(el=>el===document.activeElement),true,id+' research jump focuses its declared activity');
   }
   const violations=await page.evaluate(async()=>{const r=await window.axe.run('.article-atlas',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))});
   assert.deepEqual(violations,[],id+' axe '+width);
@@ -107,6 +109,16 @@ export async function articleAtlas(page,ready,report,width,shots){
    report.fourteenPersonActualSources=await actualPeopleSourceActivation(page);
    assert.equal(report.fourteenPersonActualSources.observations.length,35);
    assert.equal(report.fourteenPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
+   report.retainedPersonConnectedRoutes=await retainedConnectedRoutes(page,new URL(page.url()).origin);
+   assert.equal(report.retainedPersonConnectedRoutes.global.length,18);
+   assert.equal(report.retainedPersonConnectedRoutes.book.length,20);
+   const retainedIDs=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(18).map(row=>row.id);
+   report.retainedPersonActualSources=await actualPeopleSourceActivation(page,{ids:retainedIDs,pdfOutputDirectory:shots+'/retained-person-source-PDF-originals'});
+   const retainedSources=retainedIDs.flatMap(id=>topics.find(t=>t.id===id).sources.map(source=>({id,requested:source.url})));
+   assert.deepEqual(report.retainedPersonActualSources.observations.map(({id,requested})=>({id,requested})),retainedSources,'every ordered declared source, including all five unchanged original PDFs and the same-report NASA primary PDF');
+   assert.equal(report.retainedPersonActualSources.observations.length,68);
+   assert.equal(report.retainedPersonActualSources.observations.filter(row=>row.actualPDF).length,6);
+   assert.equal(report.retainedPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
   }finally{await page.evaluate(hash=>location.hash=hash,initialPeopleRoute);}
  }
 
