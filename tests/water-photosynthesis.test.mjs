@@ -35,9 +35,9 @@ test('all679 whole runtime inputs reconstruct exact accepted M93 while unknown, 
  assertCurrentWaterPhotosynthesisRuntime(root);
 });
 
-test('two individually sourced content dossiers preserve all286 whole M93 dossiers and cannot promote pending UI to actual acceptance',()=>{
+test('two individually sourced qualified UI dossiers preserve all286 whole M93 source and UI dossiers with exact inverse',()=>{
  const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,inventory=collectInventory(),knownIds=new Set(inventory.records.map(r=>r.id));assert.equal(rows.length,288);assert.equal(dossiersBeforeWaterPhotosynthesis(rows).length,286);
- for(const row of rows.slice(286)){const record=inventory.records.find(r=>r.id===row.id);assert.equal(validateDossierContent(row,record,{knownIds}).contentReady,true);assert.equal(validateDossier(row,record,{knownIds,build:learningFingerprint(process.cwd())}).structurallyReady,false);assert.equal(Object.hasOwn(row,'ui'),false,'actual full current UI binding still awaits qualification');}
+ for(const row of rows.slice(286)){const record=inventory.records.find(r=>r.id===row.id);assert.equal(validateDossierContent(row,record,{knownIds}).contentReady,true);assert.equal(validateDossier(row,record,{knownIds,build:learningFingerprint(process.cwd())}).structurallyReady,true);assert.deepEqual(row.ui,{...boundary.qualifiedUILayer.currentTemplate,route:record.route});}
  for(const mutate of[r=>r[0].goal+=' unreviewed',r=>r[286].claims[0].statement+=' unreviewed',r=>r[287].ui={build:'invented',visible:true,search:true,back:true,offline:true},r=>r.push(structuredClone(r[287]))]){const bad=structuredClone(rows);mutate(bad);assert.throws(()=>dossiersBeforeWaterPhotosynthesis(bad));}
 });
 function round(row,order,{done=false,answer=order[0]}={}){
@@ -103,3 +103,54 @@ test('retained choice interpretation rejects unknown, duplicate and mixed answer
   for(const wrong of row.before.answers.filter((_,i)=>i!==row.before.correct)){const session=round(row,row.before.answers,{answer:wrong}),actual=restoreChallenge(session,emptyChallenge());assert.equal(actual.answer,wrong);assert.notEqual(actual.answer,row.after.answers[row.after.correct]);assert.equal(actual.done,false);}
  }
 });
+
+// Meaningful qualified-UI inverse positive and failure cases; synthetic values are never product acceptance.
+function synthetic(run){
+ const keys=['previousDossiers','newContentDossiers','qualifiedUILayer'];
+ const original=Object.fromEntries(keys.map(key=>[key,{present:Object.hasOwn(boundary,key),value:boundary[key]}]));
+ const previousTemplate={build:'synthetic-old',visible:true,report:'synthetic previous metadata only'},currentTemplate={build:'synthetic-current',visible:true,report:'synthetic proposed metadata only'};
+ const old=Array.from({length:286},(_,i)=>({id:'synthetic-old-'+i,goal:'retained source fact '+i,history:{unchanged:true},ui:{...previousTemplate,route:'#synthetic/'+i}}));
+ const added=[{id:'synthetic-new-A',goal:'new content only'},{id:'synthetic-new-B',goal:'new content only'}];
+ const pending=[...old,...added],routes=pending.map((row,i)=>({id:row.id,route:'#synthetic/'+i}));
+ const layer={build:currentTemplate.build,previousTemplate,currentTemplate,routes,meaning:'explicit synthetic unit fixture; no executed product acceptance'};
+ boundary.previousDossiers=old.map(row=>({id:row.id,sha256:wholeWaterReference(row)}));
+ boundary.newContentDossiers=added.map(row=>({id:row.id,sha256:wholeWaterReference(row)}));
+ delete boundary.qualifiedUILayer;
+ const current=pending.map((row,i)=>({...structuredClone(row),ui:{...currentTemplate,route:routes[i].route}}));
+ try{return run({old,pending,current,layer});}
+ finally{for(const key of keys){if(original[key].present)boundary[key]=original[key].value;else delete boundary[key];}}
+}
+
+test('exact pending dossiers remain valid while a complete UI layer needs an explicit known inverse',()=>synthetic(({old,pending,current,layer})=>{
+ assert.deepEqual(dossiersBeforeWaterPhotosynthesis(pending),old);
+ assert.throws(()=>dossiersBeforeWaterPhotosynthesis(current));
+ boundary.qualifiedUILayer=layer;
+ assert.deepEqual(dossiersBeforeWaterPhotosynthesis(current),old);
+ assert.deepEqual(dossiersBeforeWaterPhotosynthesis(pending),old);
+ assert.equal(Object.hasOwn(pending[286],'ui'),false);
+ assert.equal(current[286].ui.build,'synthetic-current');
+}));
+
+test('partial UI, wrong routes, wrong builds and changed qualification fields remain rejected',()=>synthetic(({pending,current,layer})=>{
+ boundary.qualifiedUILayer=layer;
+ for(const mutate of [
+  rows=>rows[0].ui=structuredClone(pending[0].ui),
+  rows=>delete rows[287].ui,
+  rows=>rows[287].ui.route='#invented-route',
+  rows=>rows[0].ui.build='invented-build',
+  rows=>rows[0].ui.visible=false,
+  rows=>rows[286].ui.report='unreviewed replacement',
+ ]){const bad=structuredClone(current);mutate(bad);assert.throws(()=>dossiersBeforeWaterPhotosynthesis(bad));}
+}));
+
+test('restoration cannot hide changed source facts, nested history, reordered identities or extra dossiers',()=>synthetic(({current,layer})=>{
+ boundary.qualifiedUILayer=layer;
+ for(const mutate of [
+  rows=>rows[0].goal+=' unreviewed',
+  rows=>rows[0].history.unchanged=false,
+  rows=>rows[286].goal+=' unreviewed',
+  rows=>[rows[0],rows[1]]=[rows[1],rows[0]],
+  rows=>[rows[286],rows[287]]=[rows[287],rows[286]],
+  rows=>rows.push(structuredClone(rows[287])),
+ ]){const bad=structuredClone(current);mutate(bad);assert.throws(()=>dossiersBeforeWaterPhotosynthesis(bad));}
+}));

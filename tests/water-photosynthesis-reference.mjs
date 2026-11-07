@@ -1,3 +1,4 @@
+// Exact historical source/UI inverse; actual qualification is recorded in the named boundary.
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import boundary from './fixtures/water-photosynthesis-M93-data-predecessor.json' with {type:'json'};
@@ -28,7 +29,22 @@ export function dossiersBeforeWaterPhotosynthesis(items){
  if(items.length<=286)return items;
  assert.equal(items.length,288,'only two named individual dossiers were added');
  const expected=[...boundary.previousDossiers,...boundary.newContentDossiers];
- assert.deepEqual(items.map(row=>({id:row.id,sha256:wholeWaterReference(row)})),expected,'all286 whole M93 dossiers and the two exact new content-only dossiers, without invented current UI');
- return items.slice(0,286);
+ const signature=rows=>rows.map(row=>({id:row.id,sha256:wholeWaterReference(row)}));
+ if(JSON.stringify(signature(items))===JSON.stringify(expected))return items.slice(0,286);
+ const layer=boundary.qualifiedUILayer;
+ assert(layer,'an unqualified UI change has no historical inverse');
+ assert.equal(layer.routes.length,288);assert.equal(new Set(layer.routes.map(row=>row.id)).size,288);
+ assert.equal(layer.currentTemplate.build,layer.build);
+ const routes=new Map(layer.routes.map(row=>[row.id,row.route]));
+ const restored=items.map((row,index)=>{
+  assert(routes.has(row.id),'every route belongs to the exact qualified UI layer');
+  assert.deepEqual(row.ui,{...layer.currentTemplate,route:routes.get(row.id)},'only the whole explicitly qualified current UI object can be projected');
+  const prior=structuredClone(row);
+  if(index<286)prior.ui={...layer.previousTemplate,route:routes.get(row.id)};
+  else delete prior.ui;
+  return prior;
+ });
+ assert.deepEqual(signature(restored),expected,'all286 whole prior dossiers and two exact new content-only dossiers must be recovered; no factual, route, order or partial UI change hidden');
+ return restored.slice(0,286);
 }
 export const waterPhotosynthesisBoundary=boundary;
