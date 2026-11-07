@@ -10,7 +10,8 @@ const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
 
 // Extend the existing canonical views without changing the historical23-topic
 // matrix, its original assertions or the single quality runner.
-export async function waterPhotosynthesisView(page,{width,shots,questions=true,native=false}={}){
+export async function waterPhotosynthesisView(page,{width,shots,questions=true,native=false,capturePrefix=''}={}){
+ assert.match(capturePrefix,/^[a-z0-9-]*$/,'capture prefix is a flat state/engine filename prefix');
  const observed=[];
  for(const id of ['science-water-cycle','science-photosynthesis']){
   const topic=catalog.find(t=>t.id===id);assert(topic);
@@ -37,11 +38,11 @@ export async function waterPhotosynthesisView(page,{width,shots,questions=true,n
    for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback?.wrongReasons[i]??'Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await q.getByText(topic.question.why,{exact:true}).count(),0);}
    await right.click();await q.getByText(topic.question.why,{exact:true}).waitFor();
   }
-  const inquiry=await scienceThinkingView(page,topic,{width,shots,native});await geometry(page,article,id+' '+width);
-  if(shots&&!native)await figure.screenshot({path:path.join(shots,id+'-current-authored-model-'+width+'.png'),animations:'disabled'});
+  const inquiry=await scienceThinkingView(page,topic,{width,shots,native,capturePrefix});await geometry(page,article,id+' '+width);
+  if(shots&&!native)await figure.screenshot({path:path.join(shots,capturePrefix+id+'-current-authored-model-'+width+'.png'),animations:'disabled'});
   const captures=[];
   if(shots&&native)for(const [index,selector]of (id==='science-water-cycle'?['h3','svg','.model-buttons','[role=status]','.small-note']:['h4','svg','.photosynthesis-concept-roles','.photosynthesis-concept-key','figcaption']).entries()){
-   await figure.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,id+'-current-authored-native200-'+width+'-'+index+'.png')));
+   await figure.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,capturePrefix+id+'-current-authored-native200-'+width+'-'+index+'.png')));
   }
   const paths=questions&&width===320?await scienceSourcePaths(page,topic):null;
   observed.push({id,width,native,states,inquiry,completeTextAndAllDeclaredSources:true,questions,paths,captures});
@@ -88,7 +89,8 @@ export async function assertScienceModelTypography(model){
  assert.ok(actual.fonts.every(e=>e.font>=(actual.large?18.3:16)),'model controls and limits respect normal/large reading '+JSON.stringify(actual));return actual;
 }
 
-export async function scienceThinkingView(page,topic,{width,shots,native=false}={}){
+export async function scienceThinkingView(page,topic,{width,shots,native=false,capturePrefix=''}={}){
+ assert.match(capturePrefix,/^[a-z0-9-]*$/,'capture prefix is a flat state/engine filename prefix');
  const entry=thinking.entries.find(entry=>entry.id===topic.id);assert.ok(entry);
  const root=page.locator('[data-science-thinking="'+topic.id+'"]');await root.getByRole('heading',{name:'Vermuten, prüfen und weiterdenken',exact:true}).waitFor();await page.bringToFront();
  const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),protectedFields=['discoveries','journeys','games','missions','labs','experiments','favorites','favoritePlaces','chapters','completedChapters','review','notes','settings','quizResults','quizSession'];
@@ -100,8 +102,8 @@ export async function scienceThinkingView(page,topic,{width,shots,native=false}=
   const right=task.answers.find(a=>a.id===task.correct);for(const wrong of task.answers.filter(a=>a.id!==task.correct)){const choice=section.getByRole('button',{name:wrong.text,exact:true});await choice.click();await section.getByRole('status').getByText(wrong.feedback,{exact:true}).waitFor();assert.equal(await choice.getAttribute('aria-pressed'),'true');assert.equal(await section.getByText(right.feedback,{exact:true}).count(),0,'wrong feedback never inserts the separate right explanation');}
   await section.getByRole('button',{name:right.text,exact:true}).click();await section.getByRole('status').getByText(right.feedback,{exact:true}).waitFor();await geometry(page,root,topic.id+' thinking '+task.id+' '+width);
   const typography=await assertScienceThinkingTypography(root);
-  const captures=[];if(shots&&!native)await root.screenshot({path:path.join(shots,topic.id+'-thinking-'+task.id+'-'+width+'.png'),animations:'disabled'});
-  if(shots&&native)for(const [n,selector]of ['h4','[role=status]'].entries()){await section.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,topic.id+'-thinking-'+task.id+'-native200-'+width+'-'+n+'.png')));}
+  const captures=[];if(shots&&!native)await root.screenshot({path:path.join(shots,capturePrefix+topic.id+'-thinking-'+task.id+'-'+width+'.png'),animations:'disabled'});
+  if(shots&&native)for(const [n,selector]of ['h4','[role=status]'].entries()){await section.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,capturePrefix+topic.id+'-thinking-'+task.id+'-native200-'+width+'-'+n+'.png')));}
   stages.push({id:task.id,hint:true,specificWrongFeedbacks:2,rightFeedback:true,typography,captures});
  }
  const sources=root.locator('details').filter({has:page.getByText('Quellen zum Forscherblick',{exact:true})});if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();assert.deepEqual(await sources.locator('a').evaluateAll(as=>as.map(a=>a.href)),entry.sources);await geometry(page,root,topic.id+' inquiry sources '+width);
