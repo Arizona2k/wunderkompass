@@ -38,13 +38,28 @@ function mergeValue(base: unknown, local: unknown, remote: unknown, path: string
   return local;
 }
 
+// These two model fields record completed visits, not the ordering of a round.
+// Preserve their known finite visit sets within one pass epoch. Whole-session
+// deletion and explicit pass replacement still follow the existing merge rules.
+function withCycleVisits(local:Save,remote:Save,progress:Save['progress']){
+ const valid=(v:unknown):v is number[]=>Array.isArray(v)&&v.length<=4&&v.every(n=>Number.isInteger(n)&&n>=0&&n<=3)&&new Set(v).size===v.length;
+ let sessions=progress.gameSessions;
+ for(const id of ['topic:science-water-cycle','topic:science-moon-phases']){
+  const left=local.progress.gameSessions[id]?.cycleSeen,right=remote.progress.gameSessions[id]?.cycleSeen,scene=sessions[id];
+  if(!scene||!valid(left)||!valid(right))continue;
+  const cycleSeen=[...new Set([...right,...left])];
+  if(!equal(cycleSeen,scene.cycleSeen))sessions={...sessions,[id]:{...scene,cycleSeen}};
+ }
+ return sessions===progress.gameSessions?progress:{...progress,gameSessions:sessions};
+}
+
 export function mergeSaves(base: Save, local: Save, remote: Save): Save {
   const epoch = (s: Save) => s.epoch ?? 'legacy-v3';
   if (epoch(local) !== epoch(remote)) {
     if ((local.epochAt ?? 0) !== (remote.epochAt ?? 0)) return (local.epochAt ?? 0) > (remote.epochAt ?? 0) ? local : remote;
     return epoch(local) !== epoch(base) ? local : remote;
   }
-  return { ...remote, progress: mergeValue(base.progress, local.progress, remote.progress, []) as Save['progress'],
+  return { ...remote, progress: withCycleVisits(local, remote, mergeValue(base.progress, local.progress, remote.progress, []) as Save['progress']),
     updatedAt: local.updatedAt > remote.updatedAt ? local.updatedAt : remote.updatedAt,
     revision: Math.max(local.revision ?? 0, remote.revision ?? 0) };
 }

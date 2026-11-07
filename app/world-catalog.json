@@ -9575,9 +9575,12 @@
       "Regen"
     ],
     "paragraphs": [
-      "Sonnenwärme lässt Wasser verdunsten. Der unsichtbare Wasserdampf gelangt in die Luft. Beim Abkühlen kann er zu kleinen Tropfen werden: Das heißt Kondensation.",
-      "Wolken bestehen aus winzigen Wassertröpfchen oder Eiskristallen. Werden Niederschlagsteilchen groß genug, fallen sie als Regen oder Schnee. Wasser fließt ab, versickert oder bleibt als Eis gespeichert.",
-      "Auch Pflanzen geben Wasser über ihre Blätter ab. Der Kreislauf hat viele Wege und keinen vorgeschriebenen Startpunkt."
+      "Eine Pfütze wird kleiner, obwohl kein Abfluss zu sehen ist. Ein Teil ihres flüssigen Wassers kann als unsichtbarer Wasserdampf in die Luft gelangen. Dieser Zustandswechsel heißt Verdunstung. Das Wasser ist damit an einem anderen Ort und nicht vernichtet.",
+      "Wasserdampf ist ein Gas. Kühlt feuchte Luft passend ab, kann daraus flüssiges Wasser werden: Kondensation. Sichtbare Wolken bestehen aus winzigen Tröpfchen oder Eiskristallen. Eine Wolke ist also nicht einfach eine sichtbare Ansammlung gasförmigen Wassers.",
+      "Wachsen Tropfen oder Eisteilchen, können sie als Niederschlag zur Erde fallen. Dort verzweigen sich die Wege: Wasser fließt oberflächlich ab, gelangt in den Boden oder bleibt beispielsweise als Eis gespeichert. Nicht jeder Weg führt sofort ins Meer.",
+      "Sonnenenergie ermöglicht Verdunstung. Schwerkraft lässt Niederschlag fallen und Wasser bergab fließen. Das sind unterschiedliche Vorgänge: Beim Verdunsten ändert sich der Zustand, beim Abfließen muss er sich nicht ändern.",
+      "Auch Pflanzen verbinden Boden und Luft: Sie nehmen Wasser über ihre Wurzeln auf und geben Wasserdampf über ihre Blätter ab. Diese Abgabe heißt Transpiration. Zusammen mit Verdunstung wird sie Evapotranspiration genannt.",
+      "Der Kreislauf hat viele Wege und keinen vorgeschriebenen Startpunkt. Meer, Atmosphäre, Eis, Flüsse und Untergrund sind unterschiedliche Speicher. Wie schnell Wasser sie verlässt, hängt vom jeweiligen Speicher und den Bedingungen ab."
     ],
     "facts": [
       {
@@ -9590,8 +9593,10 @@
       }
     ],
     "more": [
-      "Grundwasser bewegt sich oft langsam durch Poren und Spalten. Ein Tropfen kann sehr unterschiedlich lange in einem Speicher bleiben.",
-      "Verdunstung verändert den Zustand des Wassers. Das Wasser wird dabei nicht vernichtet."
+      "Versickern bedeutet zunächst: Wasser dringt in Boden oder Gestein ein. Ein Teil bleibt als Bodenwasser nahe der Oberfläche, ein anderer Teil kann tiefer gelangen und Grundwasser ergänzen. Nicht jeder versickerte Tropfen wird sofort Grundwasser.",
+      "Oberhalb der vollständig wassergesättigten Zone enthalten viele Poren sowohl Luft als auch Wasser. In der gesättigten Zone sind die miteinander verbundenen Hohlräume mit Wasser gefüllt. Grundwasser ist deshalb nicht allgemein ein unterirdischer See.",
+      "Eine Straße oder andere undurchlässige Fläche erschwert das Versickern. Wie viel Wasser abfließt, hängt zusätzlich etwa vom Regen, der Bodenfeuchte und dem Gefälle ab. Aus der Flächenart allein lässt sich keine genaue Abflussmenge berechnen.",
+      "Die vier Stationen im Modell zeigen einen möglichen Weg und lassen weitere Verzweigungen aus. Die Tasten wechseln Erklärungen; sie steuern weder eine Wettersimulation noch die Menge oder Geschwindigkeit des Wassers. Vergleiche den Beispielweg mit den zusätzlichen Speichern im Text."
     ],
     "surprise": "Eine Pflanze ist ein Teil des Wasserkreislaufs.",
     "locations": [],
@@ -9606,15 +9611,27 @@
     ],
     "sources": [
       {
-        "label": "USGS: Water cycle",
-        "url": "https://www.usgs.gov/special-topics/water-science-school/water-cycle"
+        "label": "NASA Earth Observatory: Wasserwege und Speicher",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
       },
       {
-        "label": "USGS: Evapotranspiration",
-        "url": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle?page=0"
+        "label": "British Geological Survey: Grundwasserspiegel und gesättigte Zone",
+        "url": "https://www.bgs.ac.uk/groundwater/data/groundwater-levels/groundwater-level-terminology/"
+      },
+      {
+        "label": "NASA GPM: Begriffe und Evapotranspiration",
+        "url": "https://gpm.nasa.gov/education/glossary"
+      },
+      {
+        "label": "NOAA: Wasserspeicher, Zustandswechsel und Versickern",
+        "url": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle"
+      },
+      {
+        "label": "NASA für junge Entdecker: unsichtbarer Dampf und sichtbare Wolken",
+        "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Ausgewählte Fachpassagen von NASA, NOAA und British Geological Survey am 6. November 2026 einzeln gelesen und mit diesen Erklärungen abgeglichen. Die ältere NASA-Grundlagenseite dient nur den grundlegenden Wasserwegen, nicht aktuellen Mengen- oder Missionsangaben. Eigene vereinfachte Erklärungen und gedachte Aufgaben; das Schema ist keine Wetter- oder Grundwasserprognose.",
     "question": {
       "prompt": "Woraus besteht eine Wolke?",
       "answers": [
@@ -9626,8 +9643,8 @@
       "why": "Wolken sind sichtbar, weil kleine Tropfen oder Eiskristalle Licht streuen."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-11-06",
     "challenges": [
       {
         "id": "science-water-cycle-1",
@@ -9635,8 +9652,8 @@
         "prompt": "Warum verschwinden Pfützen auch ohne Abfluss?",
         "answers": [
           "Wasser verdunstet",
-          "Wasser wird zu Stein",
-          "Wasser verliert seine Masse"
+          "Das Wasser kondensiert",
+          "Die Sonne vernichtet das Wasser"
         ],
         "correct": 0,
         "why": "Flüssiges Wasser kann als Wasserdampf in die Luft gelangen."
@@ -9647,8 +9664,8 @@
         "prompt": "Was heißt Kondensation?",
         "answers": [
           "Gasförmiges Wasser wird flüssig",
-          "Wasser fließt bergab",
-          "Eis wird zu Dampf"
+          "Flüssiges Wasser wird gasförmig",
+          "Eis wird flüssig"
         ],
         "correct": 0,
         "why": "Beim Kondensieren entstehen aus Wasserdampf Tröpfchen."
@@ -9659,8 +9676,8 @@
         "prompt": "Eine Stadt versiegelt viele Böden. Was wird unmittelbar erschwert?",
         "answers": [
           "Das Versickern von Regenwasser",
-          "Die Erdrotation",
-          "Die Anziehung des Mondes"
+          "Das oberflächliche Abfließen von Regenwasser",
+          "Die Verdunstung aus offenen Gewässern"
         ],
         "correct": 0,
         "why": "Undurchlässige Oberflächen erschweren den Weg in den Boden; mehr Wasser kann oberflächlich abfließen."
@@ -9671,8 +9688,8 @@
         "prompt": "Warum gibt es keine feste Rundreisezeit für jeden Tropfen?",
         "answers": [
           "Wasser bleibt verschieden lange in Speichern",
-          "Jeder Tropfen hat dieselbe Geschwindigkeit",
-          "Der Kreislauf stoppt nachts überall"
+          "Jeder Tropfen durchläuft immer dieselben vier Stationen",
+          "Die Zahl der Modellstationen legt die Reisedauer fest"
         ],
         "correct": 0,
         "why": "Eis, Grundwasser und Atmosphäre speichern Wasser unterschiedlich lange."
@@ -9692,9 +9709,12 @@
       "Zucker"
     ],
     "paragraphs": [
-      "Ein grünes Blatt ist eine kleine Werkstatt. In seinen Zellen fängt der Farbstoff Chlorophyll Licht auf. Mit dieser Energie entstehen aus Wasser und Kohlendioxid energiereiche Stoffe.",
-      "Die Pflanze nutzt Zucker zum Wachsen und als Energiequelle. Bei der Fotosynthese entsteht außerdem Sauerstoff. Wurzeln liefern Wasser; Kohlendioxid gelangt durch kleine Blattöffnungen hinein.",
-      "Viele Nahrungsketten beginnen bei Pflanzen oder Algen. Ein Pflanzenfresser bekommt gespeicherte Energie aus seiner Nahrung."
+      "Ein Blatt bekommt Licht und Wasser. Trotzdem baut es Zucker nicht aus Licht allein. Grüne Pflanzen nutzen Lichtenergie, um aus Wasser und Kohlendioxid energiereiche Stoffe aufzubauen. Diesen Vorgang nennen wir Fotosynthese.",
+      "In grünen Pflanzenzellen läuft Fotosynthese in Chloroplasten ab. Dort nimmt der Farbstoff Chlorophyll Licht auf. Licht liefert Energie; Wasser und Kohlendioxid liefern Stoffbausteine. Der Kohlenstoff, der Teil des Zuckers wird, stammt aus dem Kohlendioxid.",
+      "Zucker ist für die Pflanze mehr als ein süßer Vorrat: Aus solchen Stoffen können weitere Pflanzenstoffe entstehen. Zucker kann transportiert oder gespeichert werden. So hängen auch wachsende Wurzeln oder Früchte mit der Arbeit grüner Pflanzenteile zusammen.",
+      "Bei der Fotosynthese grüner Pflanzen entsteht Sauerstoff. Bei der üblichen Zellatmung nutzen ihre Zellen Zucker und Sauerstoff; dabei entstehen Kohlendioxid und Wasser und chemische Energie wird verfügbar. Zellatmung ist ein anderer Vorgang und nicht auf Licht angewiesen. Sie kann tagsüber und nachts stattfinden.",
+      "Über kleine Öffnungen im Blatt, die Spaltöffnungen, werden Gase ausgetauscht. Dabei kann auch Wasser als Dampf verloren gehen. Der Wasserhaushalt und die Aufnahme von Kohlendioxid hängen deshalb zusammen; eine Pflanze kann ihre Öffnungen regulieren.",
+      "Fotosynthese verbindet die Welten des Wissens: Pflanzen und Algen liefern energiereiche Stoffe für viele Nahrungsnetze. Auch im Meer nutzen viele winzige Lebewesen Licht. Tiere bekommen die gespeicherte chemische Energie über Nahrung, nicht durch bloßes Sonnenbaden."
     ],
     "facts": [
       {
@@ -9707,8 +9727,10 @@
       }
     ],
     "more": [
-      "Pflanzen betreiben auch Zellatmung: Sie nutzen energiereiche Stoffe und verbrauchen dabei Sauerstoff. Fotosynthese und Zellatmung sind verschiedene Vorgänge.",
-      "Algen und bestimmte Bakterien können ebenfalls Fotosynthese betreiben. Nicht jede Nahrungskette beginnt mit Sonnenlicht: Es gibt auch chemisch angetriebene Lebensgemeinschaften."
+      "Eine Pflanze braucht auch Mineralstoffe. Trotzdem ist Erde keine fertige Pflanzennahrung, die unverändert zu einem Baum wird. Kohlendioxid aus der Umgebung ist eine wichtige stoffliche Quelle für den Aufbau organischer Pflanzenstoffe; Wasser und Mineralstoffe bleiben ebenfalls nötig.",
+      "Zuckeraufbau und Zellatmung laufen in verschiedenen Reaktionsfolgen ab. Die einfache Übersicht lässt Zwischenschritte, beteiligte Stoffe und Mengenverhältnisse aus. Sie berechnet weder die Zuckerproduktion eines Blattes noch dessen momentanen Gasaustausch.",
+      "Wasserdampf, der über Blätter abgegeben wird, gehört zum Wasserkreislauf. Diese Transpiration ist nicht dasselbe wie Fotosynthese. Bei Trockenheit kann das Schließen von Spaltöffnungen Wasserverlust begrenzen und zugleich den Gasaustausch erschweren.",
+      "Auch Algen und bestimmte Bakterien betreiben Fotosynthese. Die Erklärung der Chloroplasten bezieht sich hier auf Pflanzenzellen und wird nicht auf jede Bakterienzelle übertragen. Manche Nahrungsnetze beginnen bei Mikroorganismen, die Energie aus chemischen Reaktionen gewinnen. Sonnenlicht ist deshalb nicht in jeder Lebensgemeinschaft der Anfang."
     ],
     "surprise": "Ein Teil der Stoffe in einem Baum stammt ursprünglich aus der Luft.",
     "locations": [],
@@ -9729,22 +9751,30 @@
       {
         "label": "OpenStax: Overview of Photosynthesis",
         "url": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
+      },
+      {
+        "label": "Royal Horticultural Society: Gasaustausch, Zellatmung und Wasserverlust",
+        "url": "https://www.rhs.org.uk/advice/understanding-plants/how-plants-breathe"
+      },
+      {
+        "label": "NASA Earth Observatory: Fotosynthese und Nahrungsnetze im Meer",
+        "url": "https://science.nasa.gov/earth/earth-observatory/what-are-phytoplankton/"
       }
     ],
-    "sourceNote": "Kernaussagen und Aufgaben am 9. Oktober 2026 mit den aufgeführten Fachquellen abgeglichen. Eigene vereinfachte Erklärungen; keine Wetter-, Gezeiten- oder Artenbestimmungsprognose.",
+    "sourceNote": "Ausgewählte Fachpassagen von Kew, OpenStax, Royal Horticultural Society und NASA am 6. November 2026 einzeln gelesen. Eigene begrenzte Erklärung; keine fremden Texte oder Abbildungen übernommen. Die Darstellung beschreibt Stoff- und Energierollen, keine gemessene Fotosyntheserate oder Gartenempfehlung.",
     "question": {
       "prompt": "Welche Energie nutzt die Fotosynthese?",
       "answers": [
         "Lichtenergie",
-        "Schallenergie",
-        "Nur Erdwärme"
+        "Energie aus dem Abbau von Zucker",
+        "Chemische Energie aus Mineralstoffen"
       ],
       "correct": 0,
       "why": "Licht liefert Energie für den Aufbau energiereicher Stoffe."
     },
     "links": [],
-    "revision": 1,
-    "checkedAt": "2026-10-09",
+    "revision": 2,
+    "checkedAt": "2026-11-06",
     "challenges": [
       {
         "id": "science-photosynthesis-1",
@@ -9752,8 +9782,8 @@
         "prompt": "Welche Stoffe braucht die Pflanze dafür?",
         "answers": [
           "Wasser und Kohlendioxid",
-          "Nur Erde und Salz",
-          "Nur Sauerstoff"
+          "Wasser und Sauerstoff",
+          "Kohlendioxid und Mineralstoffe, ohne Wasser"
         ],
         "correct": 0,
         "why": "Wasser und Kohlendioxid liefern die Ausgangsstoffe; Licht liefert Energie."
@@ -9764,8 +9794,8 @@
         "prompt": "Was wird bei der Fotosynthese frei?",
         "answers": [
           "Sauerstoff",
-          "Eisen",
-          "Plastik"
+          "Kohlendioxid",
+          "Nur Wasserdampf"
         ],
         "correct": 0,
         "why": "Bei der Fotosynthese von Pflanzen entsteht Sauerstoff."
@@ -9776,8 +9806,8 @@
         "prompt": "Warum kann ein Löwe indirekt von Fotosynthese abhängen?",
         "answers": [
           "Seine Beute frisst Pflanzen mit gespeicherter Energie",
-          "Er betreibt Fotosynthese im Fell",
-          "Sonnenlicht ersetzt seine Nahrung"
+          "Der Löwe nutzt Licht direkt zum Aufbau seiner Nahrung",
+          "Die Sonnenwärme ersetzt die Energie aus seiner Nahrung"
         ],
         "correct": 0,
         "why": "Energie gelangt über Pflanzenfresser zu Fleischfressern."
@@ -9788,13 +9818,21 @@
         "prompt": "Welche Aussage über Pflanzen ist richtig?",
         "answers": [
           "Sie betreiben auch Zellatmung",
-          "Sie brauchen niemals Sauerstoff",
-          "Sie stellen Zucker aus Schall her"
+          "Ihre Zellatmung findet nur ohne Licht statt",
+          "Fotosynthese und Zellatmung sind derselbe Vorgang"
         ],
         "correct": 0,
         "why": "Pflanzen nutzen Zellatmung, um Energie aus energiereichen Stoffen verfügbar zu machen."
       }
-    ]
+    ],
+    "questionFeedback": {
+      "hint": "Unterscheide die Energie für den Stoffaufbau von der Energie, die eine Zelle aus vorhandenen Stoffen nutzen kann.",
+      "wrongReasons": [
+        null,
+        "Der Abbau von Zucker gehört zur Nutzung gespeicherter chemischer Energie, etwa bei der Zellatmung. Hier wird nach der Energiezufuhr für Fotosynthese gefragt.",
+        "Mineralstoffe werden für viele Aufgaben benötigt. Sie sind bei grünen Pflanzen aber kein Ersatz für Licht als Energiezufuhr der Fotosynthese."
+      ]
+    }
   },
   {
     "id": "science-pollination",

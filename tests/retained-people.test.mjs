@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {dossiersBeforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,7 +20,7 @@ const whole=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const named=new Set(boundary.ids);
 
 test('source replacements retain whole earlier dossiers and all five original PDFs; stale UI cannot become current acceptance',()=>{
- const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const rows=dossiersBeforeWaterPhotosynthesis(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
  for(const id of ['person-ada_lovelace','person-albert_einstein','person-bertha_benz','person-karl_benz','person-johannes_gutenberg']){
   const row=rows.find(r=>r.id==='topics-people:'+id),old=row.historicalSourceBeforeNative221Replacement20261106;
   assert(old?.sources?.length);assert.equal(old.teachingDataHash,row.teachingDataHash);
@@ -56,7 +57,7 @@ test('retained eighteen add54 individually scoped voluntary tasks without changi
  const additions=inquiries.entries.slice(18);assert.equal(additions.flatMap(e=>e.tasks).length,54);
  for(const entry of additions){
   assert(named.has(entry.id));const topic=catalog.find(t=>t.id===entry.id);assert(topic.person);assert(topic.sources.length>0);
-  const dossier=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers.find(row=>row.id==='topics-people:'+entry.id);
+  const dossier=dossiersBeforeWaterPhotosynthesis(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers).find(row=>row.id==='topics-people:'+entry.id);
   assert(dossier.modelLimits.trim());const media=dossier.media.find(row=>row.path.startsWith('app/people-retained-evidence/'));assert(media&&fs.existsSync(media.path));for(const field of ['license','credit','alt','learningPurpose'])assert(media[field].trim());
   if(Object.hasOwn(entry,'ownMediaConcept'))assert(entry.ownMediaConcept.trim());
   assert.deepEqual(entry.tasks.map(t=>t.age),['6-8','9-11','12-14']);
@@ -87,7 +88,7 @@ test('all45 word pairs and196 world connections retain their complete M92 prefix
 });
 
 test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown content, histories, ordering and incomplete or invented current UI',()=>{
- const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,original=JSON.stringify(rows);
+ const rows=dossiersBeforeWaterPhotosynthesis(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers),original=JSON.stringify(rows);
  assert.equal(rows.length,286);assert.equal(beforeRetainedPeopleDossiers(rows).length,268);
  const tu=rows.find(r=>r.id==='topics-people:person-tu_youyou'),beforeTu=tu.historicalSourceBeforeTuBiographical20261106;
  assert.equal(tu.sources[2].url,'https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/');
@@ -139,7 +140,7 @@ test('all677 actual runtime inputs reconstruct exact accepted659 M92 inputs and 
 });
 
 test('whole prior286 source and UI dossiers remain recoverable after native221 source correction and reject damaged historical layers',()=>{
- const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const rows=dossiersBeforeWaterPhotosynthesis(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
  const qualified=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-retained-people-268.json','utf8'));
  const restored=beforeNative221PeopleSourceDossiers(rows,qualified);
  assert.equal(restored.length,286);

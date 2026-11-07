@@ -1,5 +1,6 @@
 import {beforePeopleMethods,beforePeopleMethodQuestions,beforePeopleMethodGraph} from './people-methods-reference.mjs';
 import {topicAtHistoricalMediaReference} from './retained-topic-reference.mjs';
+import {thinkingBeforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 import currentCatalog from '../app/world-catalog.json' with {type:'json'};
 import currentGraph from '../app/world-connections.json' with {type:'json'};
@@ -40,7 +41,8 @@ test('source-derived finite model limits distinguish damped continuous resonance
 });
 
 test('each retained science original has three distinct authored inquiry paths with complete answer-specific feedback and known source references',async()=>{
- const {default:thinking}=await import('../app/science-thinking.json',{with:{type:'json'}});
+ const {default:currentThinking}=await import('../app/science-thinking.json',{with:{type:'json'}});
+ const thinking=thinkingBeforeWaterPhotosynthesis(currentThinking);
  assert.deepEqual(new Set(thinking.entries.map(e=>e.id)),new Set(review.topics.map(e=>e.id)));
  assert.equal(thinking.entries.length,23);assert.equal(thinking.entries.filter(e=>e.interactive).length,10);
  for(const entry of thinking.entries){

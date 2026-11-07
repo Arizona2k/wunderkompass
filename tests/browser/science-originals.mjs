@@ -7,6 +7,47 @@ import review from '../../content/science-originals-review.json' with {type:'jso
 import thinking from '../../app/science-thinking.json' with {type:'json'};
 import connections from '../../app/world-connections.json' with {type:'json'};
 const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
+
+// Extend the existing canonical views without changing the historical23-topic
+// matrix, its original assertions or the single quality runner.
+export async function waterPhotosynthesisView(page,{width,shots,questions=true,native=false}={}){
+ const observed=[];
+ for(const id of ['science-water-cycle','science-photosynthesis']){
+  const topic=catalog.find(t=>t.id===id);assert(topic);
+  await page.evaluate(id=>location.hash='world/topic/'+id,id);
+  const article=page.locator('.world-article');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();
+  for(const detail of await article.locator('.world-short details,.world-more,.world-sources').all())if(!await detail.evaluate(e=>e.open))await detail.locator(':scope>summary').click();
+  for(const text of [...topic.paragraphs,...topic.more])assert((await article.innerText()).includes(text),id+' complete actual authored explanation');
+  for(const source of topic.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
+  const states=[];
+  const figure=article.locator(id==='science-water-cycle'?'.cycle-model':'.photosynthesis-concept-section');
+  if(id==='science-water-cycle'){
+   const choices=figure.getByRole('group',{name:'Wasserstation wählen',exact:true}).getByRole('button');assert.equal(await choices.count(),4);
+   for(let i=0;i<4;i++){await choices.nth(i).focus();await page.keyboard.press('Enter');assert.equal(await choices.nth(i).getAttribute('aria-pressed'),'true');const alt=await figure.locator('svg').getAttribute('aria-label');assert(alt.includes(['Verdunsten','Kondensieren','Niederschlag','Abfließen und Versickern'][i]));states.push({index:i,alt,result:await figure.getByRole('status').innerText()});}
+   await figure.getByText('4/4 Stationen selbst erkundet',{exact:true}).waitFor();
+  }else{
+   assert.deepEqual(await figure.locator('svg text').allTextContents(),['Licht','H₂O','CO₂','Zucker','O₂']);
+   const actual=await figure.evaluate(root=>{const svg=root.querySelector('svg'),r=svg.getBoundingClientRect();return{large:!!root.closest('.large-reading'),labels:[...svg.querySelectorAll('text')].map(e=>{const b=e.getBoundingClientRect(),m=e.getScreenCTM();return{font:parseFloat(getComputedStyle(e).fontSize)*Math.hypot(m.a,m.b),inside:b.left>=r.left-1&&b.right<=r.right+1&&b.top>=r.top-1&&b.bottom<=r.bottom+1};})};});
+   assert(actual.labels.every(label=>label.inside&&label.font>=(actual.large?18.3:16)),'all five actual SVG labels remain readable and inside the drawing');states.push(actual);
+   assert.deepEqual(await figure.locator('dt').allTextContents(),['Energie','Ausgangsstoffe','Produkte']);
+  }
+  if(questions){
+   const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
+   if(await right.isDisabled())await q.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback?.wrongReasons[i]??'Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await q.getByText(topic.question.why,{exact:true}).count(),0);}
+   await right.click();await q.getByText(topic.question.why,{exact:true}).waitFor();
+  }
+  const inquiry=await scienceThinkingView(page,topic,{width,shots,native});await geometry(page,article,id+' '+width);
+  if(shots&&!native)await figure.screenshot({path:path.join(shots,id+'-current-authored-model-'+width+'.png'),animations:'disabled'});
+  const captures=[];
+  if(shots&&native)for(const [index,selector]of (id==='science-water-cycle'?['h3','svg','.model-buttons','[role=status]','.small-note']:['h4','svg','.photosynthesis-concept-roles','.photosynthesis-concept-key','figcaption']).entries()){
+   await figure.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,id+'-current-authored-native200-'+width+'-'+index+'.png')));
+  }
+  const paths=questions&&width===320?await scienceSourcePaths(page,topic):null;
+  observed.push({id,width,native,states,inquiry,completeTextAndAllDeclaredSources:true,questions,paths,captures});
+ }
+ return observed;
+}
 // Source-derived roles: OpenStax heat transfer, IOP elasticity, the geometric
 // reflection criterion, NHGRI cell structures and NASA comet-tail directions.
 const keyedLabels={

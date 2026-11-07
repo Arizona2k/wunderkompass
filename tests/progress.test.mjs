@@ -78,3 +78,50 @@ test('invalid memory selection is removed while valid cards and pairs survive',(
 test('invalid pair composition resets only that round',()=>{
  const cards=Array.from({length:12},(_,id)=>({id,pair:0,label:'Karte'+id}));assert.deepEqual(sanitizeMemorySession({cards,open:[0]}).snapshot,{});
 });
+test('water and moon retain every actually visited station across independent tab orders',()=>{
+ const permutations=a=>a.length?a.flatMap((x,i)=>permutations(a.filter((_,j)=>i!==j)).map(rest=>[x,...rest])):[[]];
+ for(const id of ['topic:science-water-cycle','topic:science-moon-phases'])for(const order of permutations([0,1,2,3]))for(const cut of [1,2,3]){
+  const b=edit(base(),{gameSessions:{[id]:{cycleStep:0,cycleSeen:[]},memory:{items:[2,0,1],index:1}},notes:[{id:'cycle-note',text:'Eigene Beobachtung',at:'2026-11-06T10:00:00.000Z'}]});
+  const left=edit(b,{gameSessions:{...b.progress.gameSessions,[id]:{cycleStep:order[cut-1],cycleSeen:order.slice(0,cut)}}}),right=edit(b,{gameSessions:{...b.progress.gameSessions,[id]:{cycleStep:order.at(-1),cycleSeen:order.slice(cut)}}});
+  const inputs=JSON.stringify([b,left,right]);
+  for(const result of [mergeSaves(b,left,right),mergeSaves(b,right,left),mergeDatabaseSave(b,left,{...right,revision:1})]){
+   assert.deepEqual(new Set(result.progress.gameSessions[id].cycleSeen),new Set([0,1,2,3]));
+   assert.deepEqual(result.progress.gameSessions.memory,b.progress.gameSessions.memory);
+   assert.deepEqual(result.progress.notes,b.progress.notes);
+   assert.deepEqual(restoreSave(JSON.parse(JSON.stringify(result)),true).progress.gameSessions[id],result.progress.gameSessions[id]);
+  }
+  assert.equal(JSON.stringify([b,left,right]),inputs,'merge never mutates any original pass input');
+ }
+});
+test('a stale mounted cycle view cannot drop a newer journal visit at the root fast path',()=>{
+ for(const id of ['topic:science-water-cycle','topic:science-moon-phases']){
+  const b=edit(base(),{gameSessions:{[id]:{cycleStep:2,cycleSeen:[1,2],topicAnswer:null}}});
+  const stale=edit(b,{gameSessions:{[id]:{...b.progress.gameSessions[id],cycleStep:3,cycleSeen:[1,3]}}});
+  for(const result of [mergeSaves(b,stale,b),mergeDatabaseSave(b,stale,b)]){
+   assert.deepEqual(new Set(result.progress.gameSessions[id].cycleSeen),new Set([1,2,3]));
+   assert.equal(result.progress.gameSessions[id].cycleStep,3);
+   assert.equal(result.progress.gameSessions[id].topicAnswer,null);
+  }
+ }
+});
+test('cycle visit conservation respects whole-session deletion and explicit reset or import epochs',()=>{
+ for(const id of ['topic:science-water-cycle','topic:science-moon-phases']){
+  const b=edit(base(),{gameSessions:{[id]:{cycleStep:1,cycleSeen:[0,1]}}});
+  const removed=edit(b,{gameSessions:{}}),other=edit(b,{favorites:['topic:science-energy']});
+  for(const result of [mergeSaves(b,removed,other),mergeSaves(b,other,removed),mergeDatabaseSave(b,other,{...removed,revision:2})])assert.equal(Object.hasOwn(result.progress.gameSessions,id),false,'a deliberately removed whole session is never recreated');
+  const reset={...base(),epoch:'cycle-reset',epochAt:100};assert.deepEqual(mergeSaves(b,other,reset).progress.gameSessions,{});
+  const imported={...edit(base(),{gameSessions:{[id]:{cycleStep:2,cycleSeen:[2]}}}),epoch:'cycle-import',epochAt:101};
+  assert.deepEqual(mergeSaves(b,other,imported).progress.gameSessions[id],{cycleStep:2,cycleSeen:[2]},'explicitly imported visits are not combined with the replaced pass');
+ }
+});
+test('cycle conservation never unions round order arrays, unknown models or malformed station values',()=>{
+ const id='topic:science-water-cycle',b=edit(base(),{gameSessions:{[id]:{cycleSeen:[]},'topic:science-pressure':{cycleSeen:[]},memory:{items:[0,1,2]}}});
+ for(const malformed of [['1'],[-1],[4],[0,0],[0,1,2,3,4],null]){
+  const local=edit(b,{gameSessions:{...b.progress.gameSessions,[id]:{cycleSeen:[0]},'topic:science-pressure':{cycleSeen:[1]},memory:{items:[2,0,1]}}});
+  const remote=edit(b,{gameSessions:{...b.progress.gameSessions,[id]:{cycleSeen:malformed},'topic:science-pressure':{cycleSeen:[2]},memory:{items:[1,2,0]}}});
+  const result=mergeSaves(b,local,remote).progress;
+  assert.deepEqual(result.gameSessions[id].cycleSeen,[0]);
+  assert.deepEqual(result.gameSessions['topic:science-pressure'].cycleSeen,[1]);
+  assert.deepEqual(result.gameSessions.memory.items,[2,0,1]);
+ }
+});
