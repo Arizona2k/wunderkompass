@@ -3,7 +3,7 @@ import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
 import {worldEntryNavigation} from './world-entry.mjs';
 import {assertModelLabels,worldModelTypographyView} from './model-labels.mjs';
-import {scienceOriginalView} from './science-originals.mjs';
+import {scienceOriginalView,waterPhotosynthesisView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
 import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
@@ -135,6 +135,7 @@ export async function articleAtlas(page,ready,report,width,shots){
   const science=await scienceOriginalView(page,{width,shots:width===320?shots:undefined,questions:true});
   assert.equal(science.length,23,'all retained science originals and 69 inquiries at the atlas endpoints');
   report.scienceOriginalViews??=[];report.scienceOriginalViews.push(...science);
+  const water=await waterPhotosynthesisView(page,{width,shots:width===320?shots:undefined});assert.equal(water.length,2);report.waterPhotosynthesisViews??=[];report.waterPhotosynthesisViews.push(...water);
  }
  report.checks.push('Article atlas '+width+': six categories and three scientific drawings with readable 16px HTML labels and original alternative texts, mobile two-column phases, clipped unfocused skip link and keyboard activation, keyboard/touch jumps and focus, unchanged hash, axe A/AA, wrong/right/reload mini question, coastal comparison, direct learning route and embedded focus');
 }
@@ -148,5 +149,6 @@ export async function offlineArticleAtlas(page,report){
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
  report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,3,'all three historical activities survive the actual cold browser restart');
  report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
+ report.waterPhotosynthesisCold=await waterPhotosynthesisView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.waterPhotosynthesisCold.length,2,'both individually revised articles and all six authored inquiries survive the same cold restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');
 }

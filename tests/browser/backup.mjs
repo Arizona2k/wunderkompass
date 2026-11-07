@@ -4,6 +4,31 @@ import fs from 'node:fs/promises';import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 import {malformedImportRegression} from './model-import-integrity.mjs';
 
+// Real mounted tabs share one existing pass. This supplements the pure
+// three-way-merge countercases without introducing a second storage or runner.
+export async function cycleVisitConvergence(a,b){
+ const read=p=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before=await read(a),views=[];
+ for(const [id,group] of [['science-water-cycle','Wasserstation wählen'],['science-moon-phases','Mondphase wählen']]){
+  for(const page of [a,b]){await page.evaluate(id=>location.hash='world/topic/'+id,id);await page.getByRole('group',{name:group,exact:true}).waitFor();}
+  for(const [page,index] of [[a,0],[b,1],[a,2],[b,3]]){await page.bringToFront();await page.getByRole('group',{name:group,exact:true}).getByRole('button').nth(index).click();}
+  for(const page of [a,b]){
+   await page.waitForFunction(id=>{const p=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress,s=p.gameSessions['topic:'+id];return s?.cycleSeen?.length===4&&new Set(s.cycleSeen).size===4&&p.discoveries.filter(v=>v==='model:'+id).length===1;},id);
+   await page.locator('.cycle-model').getByText('4/4 Stationen selbst erkundet',{exact:true}).waitFor();
+  }
+  await a.bringToFront();await a.reload();await a.locator('.cycle-model').getByText('4/4 Stationen selbst erkundet',{exact:true}).waitFor();
+  const fresh=await a.context().newPage();try{await fresh.goto(new URL('/#world/topic/'+id,a.url()).href);await fresh.locator('.cycle-model').getByText('4/4 Stationen selbst erkundet',{exact:true}).waitFor();const saved=await read(fresh);assert.deepEqual(new Set(saved.gameSessions['topic:'+id].cycleSeen),new Set([0,1,2,3]));assert.equal(saved.discoveries.filter(v=>v==='model:'+id).length,1);}finally{await fresh.close();}
+  views.push({id,alternatingRealTabs:[0,1,2,3],inactiveTabConverged:true,reloadAndFreshPageRetained:true,exactlyOneModelStamp:true});
+ }
+ const after=await read(a);
+ for(const field of ['notes','favorites','favoritePlaces','settings','games','missions','labs','experiments','quizSession','quizResults','journeys','chapters','completedChapters','review'])assert.deepEqual(after[field],before[field],field+' retained across both actual cycle tabs');
+ for(const [id,session] of Object.entries(before.gameSessions))for(const [field,value] of Object.entries(session)){
+  if(['topic:science-water-cycle','topic:science-moon-phases'].includes(id)&&['cycleSeen','cycleStep'].includes(field))continue;
+  assert.deepEqual(after.gameSessions[id][field],value,'unchanged original session field '+id+' '+field);
+ }
+ for(const discovery of before.discoveries)assert(after.discoveries.includes(discovery));
+ return {views,allOtherOriginalFieldsPreserved:true};
+}
+
 // Activate only the page receiving real input; inactive-tab propagation checks stay before activation.
 export async function backupFlow(browser,base,ready,monitor,report,shots){
  await storageFeedbackFlow(browser,base,ready,monitor,report,shots);
@@ -12,6 +37,7 @@ export async function backupFlow(browser,base,ready,monitor,report,shots){
  await c.addInitScript(()=>{speechSynthesis.getVoices=()=>[{name:'Sehr lange deutsche Teststimme für lesbare Vorleseeinstellungen',lang:'de-DE',voiceURI:'qa-pass-de',localService:true}];});
  for(const p of [a,b]){await p.reload();await ready(p)}
  const state=async p=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')));
+ report.cycleVisitConvergence=await cycleVisitConvergence(a,b);
  async function favorite(p,id){await p.bringToFront();await p.evaluate(id=>location.hash='world/topic/'+id,id);await p.locator('.world-mini-question').waitFor();await p.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();}
  await favorite(a,'animal-whale-shark');await favorite(b,'history-maya');await a.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.length===2);
  await a.bringToFront();await a.evaluate(()=>location.hash='journeys/water/3');await a.locator('[data-chapter-inquiry="water:2"]').waitFor();await a.locator('.journey-levels button').nth(2).click();await a.locator('.journey-inquiry summary').filter({hasText:'Dein Forschermerkzettel'}).click();await a.locator('.journey-inquiry textarea').fill('Synthetischer Reise-Merkzettel: Wasser verändert seinen Zustand.');

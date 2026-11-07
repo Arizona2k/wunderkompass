@@ -15,7 +15,7 @@ import {insideDiagramViews} from './inside-diagrams.mjs';
 import {bookLightView} from './book-light.mjs';
 import {bookHeatView} from './book-heat.mjs';
 import {bookMeasurementView} from './book-measurements.mjs';
-import {scienceOriginalView} from './science-originals.mjs';
+import {scienceOriginalView,waterPhotosynthesisView} from './science-originals.mjs';
 import {buildingOriginalSourceView} from './building-originals.mjs';
 import {mechanicsSourceView} from './invention-mechanics.mjs';
 import {peopleSourceView} from './people-learning.mjs';
@@ -131,8 +131,10 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    if(native)assert.equal(await page.evaluate(()=>devicePixelRatio),2);
    await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
    report.scienceOriginalDiscovery.push(...await scienceOriginalView(page,{width,native,questions:false}));
+   report.waterPhotosynthesisDiscovery??=[];report.waterPhotosynthesisDiscovery.push(...await waterPhotosynthesisView(page,{width,shots,native,questions:false,capturePrefix:kind+'-cold-'}));
   }
   assert.equal(report.scienceOriginalDiscovery.length,native?46:23,'all science originals and voluntary inquiries in the complete cached app');
+  assert.equal(report.waterPhotosynthesisDiscovery.length,native?4:2,'both revised topics and six authored inquiries in every existing cached normal/native view');
   assert.equal(report.electricalDiscovery.length,native?6:12,'all three electrical activities at every required cached-app width');
   assert.equal(report.mechanicsDiscovery.length,native?12:24,'all six mechanical activities at every required cached-app width');
   assert.equal(report.opticsDiscovery.length,native?6:12,'all three optical activities at every required cached-app width');

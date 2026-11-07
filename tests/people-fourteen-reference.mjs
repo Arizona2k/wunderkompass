@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {beforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import {createHash} from 'node:crypto';
 import dossierBoundary from './fixtures/people-fourteen-dossier-predecessor.json' with {type:'json'};
 import {beforeRetainedPeople,beforeRetainedPeopleGraph} from './retained-people-reference.mjs';
@@ -24,7 +25,7 @@ export function beforeFourteenPeople(items){
  }
  return items.filter(item=>!additions.has(item.id)).map(item=>Array.isArray(item.related)?{...item,related:item.related.filter(id=>!additions.has(id))}:item);
 }
-export const beforeFourteenPeopleQuestions=items=>items.filter(item=>!additions.has(item.topic));
+export const beforeFourteenPeopleQuestions=items=>beforeWaterPhotosynthesis(items).filter(item=>!additions.has(item.topic));
 export const beforeFourteenPeopleGraph=graph=>{const prior=beforeRetainedPeopleGraph(graph);return {...prior,connections:prior.connections.filter(edge=>!additions.has(edge.fromId)&&!additions.has(edge.toId))};};
 
 // Seven explicitly reviewed additions only. Unknown future photo identities

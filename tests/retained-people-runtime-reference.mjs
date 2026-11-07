@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {withWaterPhotosynthesisPredecessorRuntime} from './water-photosynthesis-runtime-reference.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -6,7 +7,7 @@ import {createHash} from 'node:crypto';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
 import fixture from './fixtures/retained-people-runtime-predecessor.json' with {type:'json'};
 const sha=b=>createHash('sha256').update(b).digest('hex');
-export function assertCurrentRetainedPeopleRuntime(root){
+function assertRetainedPeopleAtM93(root){
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const changes=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  assert.equal(fixture.acceptedMerge,'40698293cc7fbc3ce9751b0620eebb164ea031cb');
@@ -23,11 +24,11 @@ export function assertCurrentRetainedPeopleRuntime(root){
  }
  assert.equal(learningFingerprint(root),fixture.currentRuntimeBuild);return current;
 }
-export function withRetainedPeoplePredecessorRuntime(root,inspect){
+function withRetainedPeopleAtM93(root,inspect){
  // Historical runtimes still reach their original strict predicates unchanged.
  // Unknown current bodies are not selectively normalised into a known source.
  if(learningFingerprint(root)!==fixture.currentRuntimeBuild)return inspect(root);
- const current=assertCurrentRetainedPeopleRuntime(root),changes=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
+ const current=assertRetainedPeopleAtM93(root),changes=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'wk-retained18-whole-M92-'));
  try{
   for(const row of fixture.previousInputs){const target=path.join(temporary,row.name);fs.mkdirSync(path.dirname(target),{recursive:true});const change=changes.get(row.name);
@@ -38,3 +39,7 @@ export function withRetainedPeoplePredecessorRuntime(root,inspect){
   return inspect(temporary);
  }finally{fs.rmSync(temporary,{recursive:true,force:false});}
 }
+export function assertCurrentRetainedPeopleRuntime(root){
+ return withWaterPhotosynthesisPredecessorRuntime(root,prior=>{assertRetainedPeopleAtM93(prior);return new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));});
+}
+export const withRetainedPeoplePredecessorRuntime=(root,inspect)=>withWaterPhotosynthesisPredecessorRuntime(root,prior=>withRetainedPeopleAtM93(prior,inspect));
