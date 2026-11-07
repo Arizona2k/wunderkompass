@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const save=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -164,4 +165,38 @@ export async function volcanoChapterDestinationsPage(page,base,{touch=false}={})
   const link=page.locator('.journey-chapter-link a');assert.equal(await link.getAttribute('href'),'#'+target,'existing canonical related destination is a relevant model, not an empty book query');await link.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const preparatoryScroll=await page.evaluate(()=>scrollY),before=preserved(await save(page));
   const departure=await activateWithReadingPosition(page,link,touch),scroll=departure.scroll;await page.waitForFunction(hash=>location.hash===hash,'#'+target);await page.locator('#lab-heading').waitFor();await page.locator('#active-research-lab').waitFor();await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);const returnedView=await returned(page,'#'+route,link,scroll);assert.deepEqual(preserved(await save(page)),before);rows.push({route,target,actualBodyLinkAndExplicitChapterReturn:true,preparatoryScroll,departure,returnedView});
  }return rows;
+}
+
+export async function chapterImageSingleRequestPage(page,base){
+ // Hold the actual chapter photo through mount. Reassigning the same src on
+ // attachment used to abort Firefox's first request before any route change.
+ const url=base+'/photos/volcano.jpg',body=await fs.readFile(path.resolve(process.env.QA_DIST??'dist','photos/volcano.jpg'));
+ const requests=[],failures=[],responses=[],deliveries=[];let mountAssignments=[];
+ const observeChapterPhotoMount=()=>{
+  window.__wkChapterPhotoMountObserver?.disconnect();
+  window.__wkChapterPhotoMount=[];
+  const observer=new MutationObserver(rows=>{for(const row of rows)if(row.target.matches('figure.chapter-photo img'))window.__wkChapterPhotoMount.push({old:row.oldValue,src:row.target.getAttribute('src'),connected:row.target.isConnected});});
+  window.__wkChapterPhotoMountObserver=observer;
+  observer.observe(document,{subtree:true,attributes:true,attributeOldValue:true,attributeFilter:['src']});
+ };
+ // Hash navigation can keep the current document. Observe it as well as any
+ // later new document; never rely on a future init script having already run.
+ await page.addInitScript(observeChapterPhotoMount);
+ await page.evaluate(observeChapterPhotoMount);
+ const request=value=>{if(value.url()===url)requests.push(value);};
+ const failed=value=>{if(value.url()===url)failures.push(value.failure()?.errorText);};
+ const response=value=>{if(value.url()===url)responses.push(value);};
+ const held=route=>{const delivery=(async()=>{await new Promise(resolve=>setTimeout(resolve,3000));await route.fulfill({status:200,contentType:'image/jpeg',body});})();deliveries.push(delivery);return delivery;};
+ page.on('request',request);page.on('requestfailed',failed);page.on('response',response);await page.route(url,held);
+ try{
+  await page.goto(base+'/#journeys/volcanoes/1');await ready(page);await page.locator('[data-chapter-inquiry="volcanoes:0"]').waitFor();
+  const image=page.locator('.chapter-photo img');await image.waitFor();
+  const decoded=await image.evaluate(async node=>{await node.decode();return{complete:node.complete,width:node.naturalWidth,height:node.naturalHeight,src:node.getAttribute('src')};});
+  await Promise.all(deliveries);assert(decoded.complete&&decoded.width>0&&decoded.height>0);assert.equal(decoded.src,'/photos/volcano.jpg');
+  mountAssignments=await page.evaluate(()=>window.__wkChapterPhotoMount);assert.equal(mountAssignments.length,1);assert(mountAssignments.every(row=>row.connected&&row.old===null&&row.src==='/photos/volcano.jpg'),'chapter photo source is assigned once after attachment, without a same-source restart');
+  assert.equal(deliveries.length,1,'the actual chapter JPEG passes through the controlled held delivery');assert.equal(requests.length,1,'a chapter photo has one uninterrupted request through attachment');assert.deepEqual(failures,[]);assert.equal(responses.length,1);assert.equal(responses[0].status(),200);assert.match(responses[0].headers()['content-type'],/^image\/jpeg/);
+  const actual=await responses[0].body();assert(actual.equals(body),'whole actual chapter JPEG, not a placeholder');
+  return{route:'journeys/volcanoes/1',requests:requests.length,actualControlledDeliveries:deliveries.length,mountAssignments,controlledDelayMS:3000,decoded,bytes:actual.length,sha256:createHash('sha256').update(actual).digest('hex'),uninterrupted:true};
+ }catch(error){error.originalChapterPhotoMount={requests:requests.length,failures,mountAssignments};throw error;
+ }finally{await Promise.allSettled(deliveries);await page.unroute(url,held);page.off('request',request);page.off('requestfailed',failed);page.off('response',response);}
 }

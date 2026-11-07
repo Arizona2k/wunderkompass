@@ -62,8 +62,15 @@ function LearningJourneysContent({countries,savedChapters,completedChapters,sess
 }
 
 function JourneyPicture({ picture }: { picture: JourneyImage }) {
+ const image=useRef<HTMLImageElement>(null);
+ useLayoutEffect(()=>{
+  // Set the source once after attachment: React's img mount otherwise restarts
+  // an in-flight Firefox request by assigning the same source again.
+  const node=image.current;
+  if(node&&node.getAttribute('src')!==picture.src)node.src=picture.src;
+ },[picture.src]);
  return <figure className={`chapter-photo journey-image-${picture.kind}${picture.fit === "contain" && picture.kind === "photo" ? " journey-image-space" : ""}`}>
-  <img src={picture.src} alt={picture.alt} width={picture.width} height={picture.height}
+  <img ref={image} alt={picture.alt} width={picture.width} height={picture.height}
    decoding="async" style={{ objectFit: picture.fit as "cover" | "contain" | undefined, objectPosition: picture.position }}/>
   <figcaption>
    <p>{picture.caption}</p>

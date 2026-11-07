@@ -17,3 +17,9 @@ test('complete PDF originals survive the existing JSON evidence transport and re
  const proof=JSON.parse(JSON.stringify(activatedPDFEvidence(original)));assert(decodeActivatedPDFOriginal(proof).equals(body));
  for(const change of [{originalBase64:undefined},{originalBase64:proof.originalBase64+'\n'},{originalBase64:proof.originalBase64.slice(0,-4)},{bytes:proof.bytes+1},{sha256:'0'.repeat(64)}])assert.throws(()=>decodeActivatedPDFOriginal({...proof,...change}));
 });
+test('headless PDF activation requires a real same-anchor download and its actual complete navigation response',()=>{
+ const native={...original,activationMode:'native-download',actualAnchorDownloadObserved:true,activationHTTPResponseURL:original.downloadURL};
+ const proof=activatedPDFEvidence(native);assert.equal(proof.normalPDFViewerReturnChecked,false);assert(decodeActivatedPDFOriginal(JSON.parse(JSON.stringify(proof))).equals(body));
+ for(const change of [{actualAnchorDownloadObserved:false},{actualAnchorDownloadObserved:undefined},{activationHTTPResponseURL:'https://example.org/unrelated.pdf'},{activationHTTPResponseURL:undefined},{activationMode:'imaginary'},{httpStatus:403},{httpStatus:206},{contentType:'text/html'},{downloadFailure:'interrupted'},{downloadURL:'https://example.org/other.pdf'},{contentLength:String(body.length+1)},{body:Buffer.from('%PDF-1.7\n'+'.'.repeat(400))}])assert.throws(()=>activatedPDFEvidence({...native,...change}));
+ for(const change of [{actualAnchorDownloadObserved:false},{normalPDFViewerReturnChecked:true},{activationHTTPResponseURL:'http://example.org/paper.pdf'},{originalBase64:proof.originalBase64.slice(0,-4)},{sha256:'0'.repeat(64)}])assert.throws(()=>decodeActivatedPDFOriginal({...proof,...change}));
+});

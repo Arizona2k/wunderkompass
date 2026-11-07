@@ -4424,8 +4424,8 @@
         "url": "https://www.hsm.ox.ac.uk/imagining-ai"
       },
       {
-        "label": "Science Museum Library: konkretes gedrucktes Buch von 1843",
-        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8652385/book-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq"
+        "label": "Computer History Museum: Lovelaces Anmerkungen von 1843 und Babbages Entwürfe",
+        "url": "https://www.computerhistory.org/babbage/adalovelace/"
       }
     ],
     "aliases": [
@@ -4457,9 +4457,9 @@
       "observe": "Notiere den Zwischenwert nach jedem Schritt und vergleiche die beiden Endwerte.",
       "benefit": "Du kannst zwischen einer Anweisung, ihren Eingabewerten und einem tatsächlichen Ausführungsergebnis unterscheiden."
     },
-    "sourceNote": "Eigene deutsche Erklärung anhand der tatsächlich gelesenen institutionellen Darstellungen und der historischen Anmerkungen. Ein veröffentlichter Algorithmus wird nicht mit der allerersten privaten Rechenplanung oder mit einer damals fertig gebauten Maschine gleichgesetzt. Bedingte Überlegungen zur Musik werden nicht als tatsächliche Aufführung dargestellt. Historische Aussagen über die Grenzen einer Maschine sind kein pauschaler Nachweis heutiger KI-Eigenschaften. Das vorhandene Porträt und seine ursprünglichen Rechtebelege bleiben gesondert erhalten.",
-    "checkedAt": "2026-11-04",
-    "revision": 2,
+    "sourceNote": "Eigene deutsche Erklärung anhand der tatsächlich gelesenen institutionellen Darstellungen und der historischen Anmerkungen. Ein veröffentlichter Algorithmus wird nicht mit der allerersten privaten Rechenplanung oder mit einer damals fertig gebauten Maschine gleichgesetzt. Bedingte Überlegungen zur Musik werden nicht als tatsächliche Aufführung dargestellt. Historische Aussagen über die Grenzen einer Maschine sind kein pauschaler Nachweis heutiger KI-Eigenschaften. Das vorhandene Porträt und seine ursprünglichen Rechtebelege bleiben gesondert erhalten. Der am 6.11.2026 gezielt gelesene Ersatzbeleg des Computer History Museum erläutert die veröffentlichten Anmerkungen; er ist kein Nachweis für das frühere konkrete Bibliotheksexemplar.",
+    "checkedAt": "2026-11-06",
+    "revision": 3,
     "questionFeedback": {
       "hint": "Denke an eine geplante Maschine: Was muss vorliegen, bevor sie eine Aufgabe Schritt für Schritt ausführen könnte?",
       "wrongReasons": [
@@ -4605,8 +4605,8 @@
         "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
       },
       {
-        "label": "Skopinski und Johnson · NASA TN D-233,1960",
-        "url": "https://ntrs.nasa.gov/citations/19980227091"
+        "label": "Skopinski und Johnson · NASA TN D-233,1960 (Original-PDF)",
+        "url": "https://ntrs.nasa.gov/api/citations/19980227091/downloads/19980227091.pdf"
       }
     ],
     "aliases": [
@@ -4644,7 +4644,7 @@
       ]
     },
     "checkedAt": "2026-11-04",
-    "sourceNote": "Die NASA-Biografie ordnet Johnsons Berechnungen und Gegenprüfungen in die gemeinsame Raumfahrtarbeit ein. Katalog, Zusammenfassung und Einleitung des technischen Berichts erläutern eine konkrete Flugbahnaufgabe. Die Zahlen und Kurven unseres Modells sind eigene Rechenbeispiele und keine NASA-Flugbahndaten.",
+    "sourceNote": "Die NASA-Biografie ordnet Johnsons Berechnungen und Gegenprüfungen in die gemeinsame Raumfahrtarbeit ein. Zusammenfassung und Einleitung des technischen Berichts erläutern eine konkrete Flugbahnaufgabe. Die Zahlen und Kurven unseres Modells sind eigene Rechenbeispiele und keine NASA-Flugbahndaten.",
     "revision": 1
   },
   {
@@ -4794,12 +4794,8 @@
     ],
     "sources": [
       {
-        "label": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
-        "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
-      },
-      {
-        "label": "Mercedes-Benz-Unternehmensarchiv · Berthas Mitarbeit",
-        "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
+        "label": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+        "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html"
       },
       {
         "label": "Deutsches Museum · Motorwagen, Patent und Bauteile",
@@ -4836,9 +4832,9 @@
       "observe": "Verändere nur die Verbindung im eigenen Schema. Trenne den möglichen Antriebsweg von der tatsächlichen Bewegung eines Wagens.",
       "benefit": "Du erkennst, was eine Bauteilzeichnung erklärt und welche weiteren Beobachtungen für eine Aussage über Bewegung fehlen."
     },
-    "sourceNote": "Eigene Erklärung nach institutionellen Biografie- und Museumsabschnitten sowie OpenStax zum Trägheitsprinzip. Benz’ Motorwagen und Patent werden konkret eingeordnet; die gesamte Fahrzeuggeschichte wird nicht einer einzigen Person zugeschrieben. Das eigene Verbindungsschema ist kein historischer Bauplan, keine Bewegungsrechnung und kein Beleg dafür, dass ein Rad bei einer Unterbrechung sofort stillsteht.",
-    "checkedAt": "2026-11-04",
-    "revision": 1,
+    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 gelesenen Patentamts- und Museumsabschnitten sowie OpenStax zum Trägheitsprinzip. Benz’ Motorwagen und Patent werden konkret eingeordnet; die gesamte Fahrzeuggeschichte wird nicht einer einzigen Person zugeschrieben. Das eigene Verbindungsschema ist kein historischer Bauplan, keine Bewegungsrechnung und kein Beleg dafür, dass ein Rad bei einer Unterbrechung sofort stillsteht.",
+    "checkedAt": "2026-11-06",
+    "revision": 2,
     "questionFeedback": {
       "hint": "Welche Bauteile müssen zusammenspielen, damit eine neue Art von Fahrzeug angetrieben werden kann?",
       "wrongReasons": [
@@ -4872,7 +4868,7 @@
       }
     ],
     "more": [
-      "Bertha Benz lebte von 1849 bis 1944. Zum gemeinsamen Vorhaben gehörten finanzielle Unterstützung und technische Mitarbeit. Das Unternehmensarchiv beschreibt auch praktische Arbeiten am Zündungsmechanismus. Die Fahrt von 1888 war ein weiterer Beitrag zur Entwicklung.",
+      "Bertha Benz lebte von 1849 bis 1944. Das Patentamt beschreibt ihre finanzielle Unterstützung und die praktische Erprobung des Motorwagens. Die Fahrt von 1888 war ein wichtiger Beitrag zur Entwicklung.",
       "Die bekannte Fernfahrt von 1888 folgte auf das Patentjahr 1886. Der dabei benutzte weiterentwickelte Motorwagen Nr. 3 ist von der frühen Nr. 1 zu unterscheiden. Die längere Strecke stellte auch Fragen nach Steigungen und der Versorgung unterwegs. Einzelne Reparaturgeschichten werden hier nicht als Anleitung nachgestellt. Unterwegs wurden Schwierigkeiten sichtbar, die ein Test in einer Werkstatt nicht erfasst, etwa bei Steigungen und der Versorgung.",
       "Mit zwei eigenen Testnotizen vergleichen wir, welche Bedingungen untersucht wurden. Eine Notiz beschreibt eine Untersuchung am selben Platz, die andere zusätzlich eine Strecke. Die Angabe „untersucht“ ist noch keine Angabe „bestanden“. Ein einzelner Test belegt außerdem nicht alle denkbaren späteren Einsatzbedingungen.",
       "Die konkreten Beiträge von Finanzierung, technischer Arbeit, Fahrt und Rückmeldung gehören zusammen. Bertha Benz’ Rolle wird deshalb nicht auf einen einzigen Moment verkürzt. Auch die mitreisenden Söhne und Menschen, die unterwegs unterstützten, gehörten zur Geschichte der Fahrt. Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
@@ -4899,16 +4895,12 @@
     ],
     "sources": [
       {
-        "label": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
-        "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html"
-      },
-      {
-        "label": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
-        "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html"
-      },
-      {
         "label": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
         "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html"
+      },
+      {
+        "label": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+        "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140"
       }
     ],
     "aliases": [
@@ -4937,9 +4929,9 @@
       "observe": "Wechsle die Testnotiz. Unterscheide „nicht untersucht“, „untersucht“ und ein tatsächlich festgestelltes Ergebnis.",
       "benefit": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen."
     },
-    "sourceNote": "Eigene Erklärung nach institutionellen Biografie- und Patentamtsabschnitten. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung.",
-    "checkedAt": "2026-11-04",
-    "revision": 1,
+    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 tatsächlich gelesenen Abschnitten des Deutschen Patent- und Markenamts und des Deutschen Museums. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung.",
+    "checkedAt": "2026-11-06",
+    "revision": 2,
     "questionFeedback": {
       "hint": "Welche Beiträge werden sichtbar, wenn aus einer technischen Idee ein im Alltag benutztes Fahrzeug werden soll?",
       "wrongReasons": [
@@ -5111,12 +5103,12 @@
         "url": "https://www.uzh.ch/en/researchinnovation/excellence/nobelprize/einstein.html"
       },
       {
-        "label": "Institute for Advanced Study: Einstein am Institut1933–1955",
-        "url": "https://www.ias.edu/scholars/albert-einstein"
+        "label": "Nobel Prize: Einsteins Lebensweg und Verbindung zum Institute for Advanced Study",
+        "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/"
       },
       {
-        "label": "Institute for Advanced Study / AIP: Einsteins Arbeiten von1905",
-        "url": "https://www.ias.edu/albert-einstein-great-works"
+        "label": "American Institute of Physics: die Arbeiten von 1905",
+        "url": "https://history.aip.org/exhibits/einstein/great1.htm"
       },
       {
         "label": "OpenStax Physics: Photonenenergie und photoelektrischer Effekt",
@@ -5153,9 +5145,9 @@
       "observe": "Zähle Balken und vergleiche ihre Höhe getrennt.",
       "benefit": "Du kannst Gesamtenergie von der Energie eines einzelnen Lichtquants unterscheiden."
     },
-    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen institutionellen Abschnitten von Universität Zürich und Institute for Advanced Study sowie dem konkreten Photonen-/Schwellenabschnitt bei OpenStax. Keine vollständige Auswertung von Einsteins Originalpublikation von 1905 behauptet. Die frei gewählten Balkeneinheiten stellen keine Lichtteilchengröße oder Messdaten dar. Aussagen zur Elektronenauslösung beziehen sich auf das beschriebene einfache Einphoton-Modell, nicht auf eine Berechnung aller möglichen Licht-Materie-Prozesse. Die Solarzelle wird nicht mit der äußeren Elektronenauslösung gleichgesetzt. Das vorhandene Foto und seine Herkunft bleiben erhalten.",
-    "checkedAt": "2026-11-04",
-    "revision": 2,
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen institutionellen Abschnitten von Universität Zürich, Nobel Prize und American Institute of Physics sowie dem konkreten Photonen-/Schwellenabschnitt bei OpenStax. Keine vollständige Auswertung von Einsteins Originalpublikation von 1905 behauptet. Die frei gewählten Balkeneinheiten stellen keine Lichtteilchengröße oder Messdaten dar. Aussagen zur Elektronenauslösung beziehen sich auf das beschriebene einfache Einphoton-Modell, nicht auf eine Berechnung aller möglichen Licht-Materie-Prozesse. Die Solarzelle wird nicht mit der äußeren Elektronenauslösung gleichgesetzt. Das vorhandene Foto und seine Herkunft bleiben erhalten. Am 6.11.2026 wurden gezielt die beiden Ersatzbelege gelesen. Die Nobel-Biografie nennt das Institute for Advanced Study in ihrer Fußnote; die historische AIP-Ausstellung erläutert die Arbeiten von 1905.",
+    "checkedAt": "2026-11-06",
+    "revision": 3,
     "questionFeedback": {
       "hint": "Denke an die Fragen hinter dem Lichtmodell und an seine Gedankenexperimente.",
       "wrongReasons": [
@@ -5629,8 +5621,8 @@
         "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
       },
       {
-        "label": "Library of Congress: konkretes Gutenberg-Bibelexemplar",
-        "url": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html"
+        "label": "UNESCO: Göttinger Gutenberg-Bibel und zeitgenössische Dokumente",
+        "url": "https://www.unesco.org/en/memory-world/42-line-gutenberg-bible-printed-vellum-and-its-contemporary-documentary-background"
       }
     ],
     "aliases": [
@@ -5659,9 +5651,9 @@
       "observe": "Unterscheide die Zahl der vorhandenen Karten von ihrer Reihenfolge und vom mehrfachen Drucken derselben Form.",
       "benefit": "Du kannst Wiederverwendung erklären und einen historischen Druck nach Technik, Zeitpunkt und konkretem Exemplar einordnen."
     },
-    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen Mainzer Technik-/Lebensabschnitten, UNESCO-Jikji-Eintrag und konkreter Library-of-Congress-Bibelbeschreibung. Regionale Weiterentwicklung und ältere ostasiatische Zeugnisse bleiben unterscheidbar. Unterschiedliche Eingrenzungen der Bibeldruckjahre werden nicht zu einem erfundenen exakten Fertigstellungstag vereinheitlicht. Keine festen aktuellen Bestandszahlen, weltweite Alleinerfinderbehauptung, pauschale asiatische Technikbewertung oder freie Lizenz für Museumsbilder abgeleitet. Der vorhandene spätere Kupferstich von 1584 und seine konkret geprüften Rechtebelege bleiben erhalten.",
-    "checkedAt": "2026-11-04",
-    "revision": 2,
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen Mainzer Technik-/Lebensabschnitten, UNESCO-Jikji-Eintrag sowie dem am 6.11.2026 gelesenen UNESCO-Eintrag zur Göttinger Pergamentbibel mit zeitgenössischen Dokumenten. Regionale Weiterentwicklung und ältere ostasiatische Zeugnisse bleiben unterscheidbar. Unterschiedliche Eingrenzungen der Bibeldruckjahre werden nicht zu einem erfundenen exakten Fertigstellungstag vereinheitlicht. Keine festen aktuellen Bestandszahlen, weltweite Alleinerfinderbehauptung, pauschale asiatische Technikbewertung oder freie Lizenz für Museumsbilder abgeleitet. Der vorhandene spätere Kupferstich von 1584 und seine konkret geprüften Rechtebelege bleiben erhalten.",
+    "checkedAt": "2026-11-06",
+    "revision": 3,
     "questionFeedback": {
       "hint": "Welchen Nutzen haben einzelne Zeichen, die für verschiedene Seiten erneut angeordnet werden können?",
       "wrongReasons": [

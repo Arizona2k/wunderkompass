@@ -1,7 +1,7 @@
 {
   "scope": "Whole accepted M92 predecessor and individually reviewed retained18 delta. Current technical UI remains unqualified until the real full run.",
   "acceptedMerge": "40698293cc7fbc3ce9751b0620eebb164ea031cb",
-  "currentRuntimeBuild": "9cdd986160a92e7a",
+  "currentRuntimeBuild": "3f74b9133f70e0af",
   "ids": [
     "person-ada_lovelace",
     "person-al_khwarizmi",
@@ -179,7 +179,7 @@
           "why": "Ein Algorithmus ist eine genaue Schrittfolge. Babbages große Maschine wurde zu ihren Lebzeiten nicht fertig gebaut."
         }
       },
-      "currentSHA256": "3f68085735bc08129697b4e28b95741537163d88534507dfe80b2f65b7734b17"
+      "currentSHA256": "45ab3f8e9956ad5112ea9dde0f8c5398f38c84380475b6e65268e8ef223b224d"
     },
     {
       "id": "person-grace_hopper",
@@ -325,7 +325,7 @@
           "why": "Eine Flugbahn beschreibt, welchen Weg ein Raumschiff durch den Raum nimmt."
         }
       },
-      "currentSHA256": "7f111241868ded512f43727df7ef89066d8f2a2469cb54e4071203f0dd9b240d"
+      "currentSHA256": "26485881cd392026abd63b68eb617917a6501f0aa10c662b8cfc97e60e060393"
     },
     {
       "id": "person-tim_berners_lee",
@@ -474,7 +474,7 @@
         },
         "image": "karl-benz"
       },
-      "currentSHA256": "6a49d8217eebf1b63c7c3ead1df05d68a8764de361e9bf3245c5ecbb67c19549"
+      "currentSHA256": "91541d65443e5f6bde98d630e6d16da5a8d92ffac05761357dea92dfb261400d"
     },
     {
       "id": "person-bertha_benz",
@@ -555,7 +555,7 @@
         },
         "image": "bertha-benz"
       },
-      "currentSHA256": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75"
+      "currentSHA256": "7a6fde640fe4b9bd4279c1a9d9cd480216bafd8b3e2cee01217c4c6d9d5f47ba"
     },
     {
       "id": "person-jane_goodall",
@@ -708,7 +708,7 @@
         },
         "image": "albert-einstein"
       },
-      "currentSHA256": "ec7fa9b4653548c83c731976a194f04b770cd534b00f74fdcf18c418a5f1d98b"
+      "currentSHA256": "5028ca4bb81855c0a4e16903c7c45f39485a741712d35b6f09025f1202e59c8b"
     },
     {
       "id": "person-al_khwarizmi",
@@ -1097,7 +1097,7 @@
         },
         "image": "johannes-gutenberg"
       },
-      "currentSHA256": "e2ab2f29bb32a35293414915cea45245c29aad7a72a21da6fe2983593a634eb1"
+      "currentSHA256": "aad900789a394de77b1c17aa4cf5c533957ed0573f6eaf0fb224dad6318c9a7b"
     },
     {
       "id": "person-wangari_maathai",
@@ -1359,7 +1359,7 @@
       "currentSHA256": "32b24454e4f505fa134c3cc8a04366f89cea90da06e54ead8fe1dccf7a769204"
     }
   ],
-  "currentCatalogSHA256": "36398b5384cdb31cce10a8f8a03ad4466a17179e89e1e8db3814741e45d731ec",
+  "currentCatalogSHA256": "203ff78f287696c7b6862dea4595f861b38757129299b5348209269fbecbc2fa",
   "priorCatalogSHA256": "b67c6ea766f1030a46a088d48bbd81e06c43d9e45a97ddcb129cfa9d773fa0d1",
   "bankChanges": [
     {
@@ -3002,7 +3002,7 @@
   "new18": [
     {
       "id": "topics-people:person-ada_lovelace",
-      "sha256": "74896b63ee093be01f90a0332509258c8a31fe94dedb830c02623a2cc6b6c7ea",
+      "sha256": "fdcd4abca5718860f41c5e4eda06259205aea7722aef2fd873093cd2f710e965",
       "route": "world/topic/person-ada_lovelace"
     },
     {
@@ -3012,7 +3012,7 @@
     },
     {
       "id": "topics-people:person-albert_einstein",
-      "sha256": "6abe7c4536f2d9ff68bb0367fee67aa30ee0a6ba4d2e607a56b91f81f8950465",
+      "sha256": "d09107b6cfd401d76f8ad662530942b1c692c6cad37b3b632c135f6df6823be2",
       "route": "world/topic/person-albert_einstein"
     },
     {
@@ -3022,7 +3022,7 @@
     },
     {
       "id": "topics-people:person-bertha_benz",
-      "sha256": "127d60d56dba023629eb82b5da30eabf629a795558c367a00342d0958cc7e1bd",
+      "sha256": "ef748e68bc986e033d907c2811543f4eab8457895b88ae79bd29205713246f6e",
       "route": "world/topic/person-bertha_benz"
     },
     {
@@ -3047,17 +3047,17 @@
     },
     {
       "id": "topics-people:person-johannes_gutenberg",
-      "sha256": "58039588328d1ceec0e1d53345c8370ce00b194131668461d9c01ee76d2096d7",
+      "sha256": "13458b8e302bcb4d16304a265ccfd7a6c7a2a78eba8cd84eece927859556a9e0",
       "route": "world/topic/person-johannes_gutenberg"
     },
     {
       "id": "topics-people:person-karl_benz",
-      "sha256": "27aa940eb2fae54a1fd0e3d4a5a5680a68f95c2230c2b7d6b554ce6c6f5a0b09",
+      "sha256": "e83c13d0b5aaf3c8b4faf109afe0b439a1e6e53ec4a09b7be248fdbf91874dd3",
       "route": "world/topic/person-karl_benz"
     },
     {
       "id": "topics-people:person-katherine_johnson",
-      "sha256": "58f98f2a50aa1e07301130c03fe4b8c7d603ad4ba6f735321de85c8a18dc4b06",
+      "sha256": "79b0ffbdea9b0ebfb061e089f35867c2b224f5ded7659a2e01cbb9849f6e9591",
       "route": "world/topic/person-katherine_johnson"
     },
     {

@@ -52,7 +52,10 @@ export function beforeRetainedPeopleDossiers(items){
  return items.map((row,index)=>{
   const restored=structuredClone(row);
   if(qualified){
-   assert.equal(qualified.currentTemplate.build,fixture.currentRuntimeBuild);
+   // Reconstruct the whole actually qualified older UI layer during a source
+   // correction. This is preservation, never current readiness: the editorial
+   // contract separately requires the real current runtime build.
+   assert.equal(qualified.currentTemplate.build,fixture.qualifiedUIBuild??fixture.currentRuntimeBuild);
    for(const field of ['visible','search','back','offline'])assert.equal(qualified.currentTemplate[field],true);
    assert.equal(typeof qualified.currentTemplate.report,'string');assert(qualified.currentTemplate.report.trim());
    assert.deepEqual(row.ui,{...qualified.currentTemplate,route:expected[index].route});
@@ -67,3 +70,23 @@ export function beforeRetainedPeopleDossiers(items){
  }).slice(0,268);
 }
 export const retainedPeopleBoundary=fixture;
+
+// Reconstruct every whole previously qualified dossier, including all older
+// source histories. The old UI template is historical evidence, never current
+// readiness. The normal full current-object predicates remain mandatory.
+export function beforeNative221PeopleSourceDossiers(items,qualified=JSON.parse(fs.readFileSync(new URL('./fixtures/editorial-before-retained-people-268.json',import.meta.url),'utf8'))){
+ beforeRetainedPeopleDossiers(items);
+ const previous=qualified.previousQualifiedUIBeforeNative221SourceCorrection;
+ assert.equal(previous.wholeOriginalDossiers,286);assert.equal(items.length,286);
+ assert.deepEqual(previous.keyOrder,['build','visible','search','back','offline','report','route']);
+ assert.equal(previous.sourceHistoryField,'historicalSourceBeforeNative221Replacement20261106');
+ assert.equal(previous.samePrimarySourceHistoryField,'historicalSourceBeforeNASADirectPDF20261106');
+ const restored=items.map(row=>{
+  if(Object.hasOwn(row,previous.sourceHistoryField))return structuredClone(row[previous.sourceHistoryField]);
+  if(Object.hasOwn(row,previous.samePrimarySourceHistoryField))return structuredClone(row[previous.samePrimarySourceHistoryField]);
+  assert.deepEqual(Object.keys(row.ui),previous.keyOrder);
+  return {...structuredClone(row),ui:{...previous.template,route:row.ui.route}};
+ });
+ assert.equal(whole(restored),previous.wholeDossiersSHA256,'whole original286 source and UI dossiers, not merely known IDs');
+ return restored;
+}

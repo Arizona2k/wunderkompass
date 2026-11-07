@@ -11,11 +11,43 @@ import links from '../app/people-book-links.json' with {type:'json'};
 import {worldGameBank} from '../app/world-game-bank.ts';
 import {connectionsFor} from '../app/knowledge-connections.ts';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
-import {beforeRetainedPeople,beforeRetainedPeopleGraph,beforeRetainedPeopleBookLinks,beforeRetainedPeopleDossiers,retainedPeopleBoundary as boundary} from './retained-people-reference.mjs';
+import {beforeRetainedPeople,beforeRetainedPeopleGraph,beforeRetainedPeopleBookLinks,beforeRetainedPeopleDossiers,beforeNative221PeopleSourceDossiers,retainedPeopleBoundary as boundary} from './retained-people-reference.mjs';
 import {assertCurrentRetainedPeopleRuntime,withRetainedPeoplePredecessorRuntime} from './retained-people-runtime-reference.mjs';
 import {assertCurrentFourteenRuntime} from './people-fourteen-runtime-reference.mjs';
+import {validateDossier} from '../scripts/editorial-contract.mjs';
 const whole=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const named=new Set(boundary.ids);
+
+test('source replacements retain whole earlier dossiers and all five original PDFs; stale UI cannot become current acceptance',()=>{
+ const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ for(const id of ['person-ada_lovelace','person-albert_einstein','person-bertha_benz','person-karl_benz','person-johannes_gutenberg']){
+  const row=rows.find(r=>r.id==='topics-people:'+id),old=row.historicalSourceBeforeNative221Replacement20261106;
+  assert(old?.sources?.length);assert.equal(old.teachingDataHash,row.teachingDataHash);
+  assert.notEqual(old.dataHash,row.dataHash);assert.equal(old.ui.build,'9cdd986160a92e7a');
+  const record={id:row.id,dataHash:row.dataHash,route:row.ui.route};
+  const result=validateDossier({...row,ui:old.ui},record,{build:boundary.currentRuntimeBuild,knownIds:new Set(rows.map(r=>r.id))});
+  assert.equal(result.structurallyReady,false);assert(result.errors.includes('current built UI/search/back/offline proof required'));
+ }
+ const johnson=rows.find(r=>r.id==='topics-people:person-katherine_johnson'),old=johnson.historicalSourceBeforeNASADirectPDF20261106;
+ assert.equal(old.sources[1].url,'https://ntrs.nasa.gov/citations/19980227091');
+ assert.equal(johnson.sources[1].url,'https://ntrs.nasa.gov/api/citations/19980227091/downloads/19980227091.pdf');
+ assert.equal(old.teachingDataHash,johnson.teachingDataHash);if(johnson.ui.build===old.ui.build)assert.deepEqual(old.ui,johnson.ui);else assert.equal(johnson.ui.build,boundary.currentRuntimeBuild);
+ assert.notEqual(old.dataHash,johnson.dataHash);assert.equal(old.ui.build,'9cdd986160a92e7a');
+ const proof=validateDossier({...johnson,ui:old.ui},{id:johnson.id,dataHash:johnson.dataHash,route:johnson.ui.route},{build:boundary.currentRuntimeBuild,knownIds:new Set(rows.map(r=>r.id))});
+ assert.equal(proof.structurallyReady,false);assert(proof.errors.includes('current built UI/search/back/offline proof required'));
+ const pdfs=items=>items.filter(t=>t.person).flatMap(t=>t.sources.filter(s=>new URL(s.url).pathname.endsWith('.pdf')).map(s=>s.url));
+ // These five originals belong to the retained18 revision before this NASA
+ // link correction. The delivered M92 predecessor predates that revision.
+ const previousPDFs=[
+  'https://archive.computerhistory.org/resources/text/Oral_History/Hopper_Grace/102702026.05.01.pdf',
+  'https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf',
+  'https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf',
+  'https://www.nasa.gov/wp-content/uploads/2019/09/jemison_mae.pdf',
+  'https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf',
+ ],currentPDFs=pdfs(catalog);
+ assert.equal(previousPDFs.length,5);assert.equal(currentPDFs.length,6);
+ for(const url of previousPDFs)assert(currentPDFs.includes(url),'unchanged original primary PDF remains mandatory: '+url);
+});
 
 test('retained eighteen add54 individually scoped voluntary tasks without changing previous18 activities or counting new biographies',()=>{
  assert.equal(catalog.length,204);assert.equal(catalog.filter(t=>t.person).length,36);
@@ -71,6 +103,8 @@ test('whole286 dossier boundary keeps all268 M92 originals and rejects unknown c
   ['altered new explanation',r=>r[285].explanation+=' unreviewed'],
   ['altered preserved Tu source',r=>r.find(x=>x.id==='topics-people:person-tu_youyou').historicalSourceBeforeTuBiographical20261106.sources[2].url='https://invalid.example/unreviewed'],
   ['missing preserved Tu source',r=>delete r.find(x=>x.id==='topics-people:person-tu_youyou').historicalSourceBeforeTuBiographical20261106],
+  ['missing preserved NASA citation',r=>delete r.find(x=>x.id==='topics-people:person-katherine_johnson').historicalSourceBeforeNASADirectPDF20261106],
+  ['altered preserved NASA citation',r=>r.find(x=>x.id==='topics-people:person-katherine_johnson').historicalSourceBeforeNASADirectPDF20261106.sources[1].url='https://invalid.example/unreviewed'],
   ['premature current UI',r=>r[268].ui={build:boundary.currentRuntimeBuild,visible:true}],
   ['premature old UI history',r=>r[0].historicalUIBeforeRetainedPeople20261105={build:'invented'}],
   ['wrong bound current UI route',r=>r[268].ui.route='world/topic/invented'],
@@ -91,6 +125,7 @@ test('all677 actual runtime inputs reconstruct exact accepted659 M92 inputs and 
   ['missing existing input',p=>fs.unlinkSync(path.join(p,'app/globe.tsx'))],
   ['changed new actual model',p=>rewrite(path.join(p,'app/people-retained-evidence/albert-einstein.tsx'),b=>Buffer.concat([b,Buffer.from('\n// unreviewed\n')]))],
   ['unreviewed old source',p=>rewrite(path.join(p,'app/world-catalog.json'),b=>Buffer.concat([b,Buffer.from('\n')]))],
+  ['unreviewed chapter-photo correction',p=>rewrite(path.join(p,'app/learning-journeys.tsx'),b=>Buffer.concat([b,Buffer.from('\n')]))],
  ]){
   const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'wk-retained18-runtime-countercase-'));
   try{
@@ -101,4 +136,33 @@ test('all677 actual runtime inputs reconstruct exact accepted659 M92 inputs and 
   }finally{fs.rmSync(temporary,{recursive:true,force:false});}
  }
  assert.equal(learningFingerprint(root),original);
+});
+
+test('whole prior286 source and UI dossiers remain recoverable after native221 source correction and reject damaged historical layers',()=>{
+ const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+ const qualified=JSON.parse(fs.readFileSync('tests/fixtures/editorial-before-retained-people-268.json','utf8'));
+ const restored=beforeNative221PeopleSourceDossiers(rows,qualified);
+ assert.equal(restored.length,286);
+ assert.equal(whole(restored),'94f62eff7e7458c82fdeee08afb500942f91e6ae3fa5aa08003b1d7741f06a19');
+ for(const id of ['person-ada_lovelace','person-albert_einstein','person-bertha_benz','person-karl_benz','person-johannes_gutenberg']){
+  const current=rows.find(row=>row.id==='topics-people:'+id);
+  assert.deepEqual(restored.find(row=>row.id===current.id),current.historicalSourceBeforeNative221Replacement20261106);
+ }
+ const johnson=rows.find(row=>row.id==='topics-people:person-katherine_johnson');
+ assert.deepEqual(restored.find(row=>row.id===johnson.id),johnson.historicalSourceBeforeNASADirectPDF20261106);
+ assert.equal(restored.find(row=>row.id===johnson.id).sources[1].url,'https://ntrs.nasa.gov/citations/19980227091');
+ for(const[name,change]of[
+  ['changed old UI report',q=>q.previousQualifiedUIBeforeNative221SourceCorrection.template.report+=' unreviewed'],
+  ['changed old UI build',q=>q.previousQualifiedUIBeforeNative221SourceCorrection.template.build='invented'],
+  ['missing whole previous UI field',q=>delete q.previousQualifiedUIBeforeNative221SourceCorrection.template.offline],
+  ['changed original ordering',q=>q.previousQualifiedUIBeforeNative221SourceCorrection.keyOrder.reverse()],
+  ['missing same-primary source history field',q=>delete q.previousQualifiedUIBeforeNative221SourceCorrection.samePrimarySourceHistoryField],
+  ['unknown same-primary source history field',q=>q.previousQualifiedUIBeforeNative221SourceCorrection.samePrimarySourceHistoryField='invented'],
+ ]){const bad=structuredClone(qualified);change(bad);assert.throws(()=>beforeNative221PeopleSourceDossiers(rows,bad),name);}
+ const altered=structuredClone(rows);
+ altered.find(row=>row.id==='topics-people:person-ada_lovelace').historicalSourceBeforeNative221Replacement20261106.explanation+=' unreviewed';
+ assert.throws(()=>beforeNative221PeopleSourceDossiers(altered,qualified),'changed whole nested predecessor');
+ const changedNASA=structuredClone(rows);
+ changedNASA.find(row=>row.id==='topics-people:person-katherine_johnson').historicalSourceBeforeNASADirectPDF20261106.sources[1].url='https://invalid.example/unreviewed';
+ assert.throws(()=>beforeNative221PeopleSourceDossiers(changedNASA,qualified),'changed whole original NASA predecessor');
 });

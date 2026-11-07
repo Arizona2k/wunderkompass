@@ -10,8 +10,9 @@ export function assertCurrentRetainedPeopleRuntime(root){
  const current=new Map(learningInputs(root).map(file=>[path.relative(root,file),file]));
  const changes=new Map(fixture.replacedInputs.map(row=>[row.name,row]));
  assert.equal(fixture.acceptedMerge,'40698293cc7fbc3ce9751b0620eebb164ea031cb');
- assert.equal(fixture.previousInputs.length,659);assert.equal(fixture.addedInputs.length,18);assert.equal(changes.size,14);
+ assert.equal(fixture.previousInputs.length,659);assert.equal(fixture.addedInputs.length,18);assert.equal(changes.size,15);
  assert(changes.has('app/book-mechanics-figure.tsx'),'the independently verified M92 renderer has one explicitly named reference-color replacement');
+ assert(changes.has('app/learning-journeys.tsx'),'the confirmed Firefox chapter-photo mount correction has one explicitly named whole M92 predecessor');
  const all=[...fixture.previousInputs,...fixture.addedInputs];assert.equal(new Set(all.map(row=>row.name)).size,677);
  assert.deepEqual(new Set(current.keys()),new Set(all.map(row=>row.name)),'every677 runtime input enumerated, unknown and missing inputs rejected');
  for(const row of all){
