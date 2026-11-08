@@ -1,0 +1,7 @@
+.nalanda-evidence-figure svg{display:block;width:100%;height:auto;max-height:18rem}
+.nalanda-evidence-periods{display:grid;gap:1.1rem;list-style:none;padding:0;margin-block:1rem}
+.nalanda-evidence-periods li{border-top:1px solid #b7c8c6;padding-top:.9rem}
+.nalanda-evidence-periods p{margin-block:.35rem 0}
+
+.nalanda-learning-evidence .nalanda-evidence-figure{background:linear-gradient(145deg,#fbfbf8,#eff6f5);color:var(--foreground);border-radius:1rem;padding:1rem;}
+.nalanda-learning-evidence .nalanda-evidence-figure figcaption{background:transparent;color:var(--foreground);font:inherit;line-height:1.65;padding:0;margin-top:.75rem;}

@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';
-import catalog from '../app/world-catalog.json' with {type:'json'};
+import actualHistoryCatalog from '../app/world-catalog.json' with {type:'json'};
+import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+const catalog=beforeHistoryEvidence(actualHistoryCatalog);
 import thinking from '../app/science-thinking.json' with {type:'json'};
-import {CHALLENGE_BANK,challengeQuestionForOrder,restoreChallenge,emptyChallenge} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK as actualHistoryBank,challengeQuestionForOrder,restoreChallenge,emptyChallenge} from '../app/knowledge-challenge.ts';
 import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';
 import {retainedChallengeChoiceVariant} from '../app/retained-answer-wording.mjs';
 import {beforeWaterPhotosynthesis,thinkingBeforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis,wholeWaterReference,waterPhotosynthesisBoundary as boundary} from './water-photosynthesis-reference.mjs';
@@ -13,6 +15,8 @@ import {collectInventory} from '../scripts/content-inventory.mjs';
 import {validateDossierContent,validateDossier} from '../scripts/editorial-contract.mjs';
 import {beforeRetainedPeople,retainedPeopleBoundary} from './retained-people-reference.mjs';
 
+const CHALLENGE_BANK=beforeHistoryEvidence(actualHistoryBank);
+import {withHistoryEvidencePredecessorRuntime} from './history-evidence-runtime-reference.mjs';
 const permutations=([a,b,c])=>[[a,b,c],[a,c,b],[b,a,c],[b,c,a],[c,a,b],[c,b,a]];
 
 test('composed historical inverses retain the exact whole M92 result while changed or reordered M92 objects remain rejected',()=>{
@@ -21,7 +25,8 @@ test('composed historical inverses retain the exact whole M92 result while chang
 });
 
 test('all679 whole runtime inputs reconstruct exact accepted M93 while unknown, missing and altered media or semantic inputs fail closed',()=>{
- const root=process.cwd(),current=assertCurrentWaterPhotosynthesisRuntime(root);assert.equal(current.size,679);assert.equal(withWaterPhotosynthesisPredecessorRuntime(root,learningFingerprint),'3f74b9133f70e0af');
+ return withHistoryEvidencePredecessorRuntime(process.cwd(),historicalRoot=>{
+ const root=historicalRoot,current=assertCurrentWaterPhotosynthesisRuntime(root);assert.equal(current.size,679);assert.equal(withWaterPhotosynthesisPredecessorRuntime(root,learningFingerprint),'3f74b9133f70e0af');
  for(const [name,mutate]of[
   ['unknown input',p=>fs.writeFileSync(path.join(p,'app/unknown-water-input.ts'),'export const unreviewed=true;\n')],
   ['missing old input',p=>fs.unlinkSync(path.join(p,'app/progress-sync.ts'))],
@@ -33,11 +38,12 @@ test('all679 whole runtime inputs reconstruct exact accepted M93 while unknown, 
   finally{fs.rmSync(temporary,{recursive:true,force:false});}
  }
  assertCurrentWaterPhotosynthesisRuntime(root);
+ });
 });
 
 test('two individually sourced qualified UI dossiers preserve all286 whole M93 source and UI dossiers with exact inverse',()=>{
  const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,inventory=collectInventory(),knownIds=new Set(inventory.records.map(r=>r.id));assert.equal(rows.length,288);assert.equal(dossiersBeforeWaterPhotosynthesis(rows).length,286);
- for(const row of rows.slice(286)){const record=inventory.records.find(r=>r.id===row.id);assert.equal(validateDossierContent(row,record,{knownIds}).contentReady,true);const actualUILayer=boundary.sourceEndpointCorrection.qualifiedUILayer??boundary.qualifiedUILayer;const currentBuild=learningFingerprint(process.cwd()),ready=validateDossier(row,record,{knownIds,build:currentBuild}).structurallyReady;if(currentBuild===actualUILayer.build)assert.equal(ready,true);else{assert.equal(currentBuild,boundary.sourceEndpointCorrection.pendingCurrentUIBuild);assert.equal(ready,false,'earlier valid UI must not count as current source-corrected acceptance');}assert.deepEqual(row.ui,{...actualUILayer.currentTemplate,route:record.route});}
+ for(const row of rows.slice(286)){const currentRecord=inventory.records.find(r=>r.id===row.id),record={...currentRecord,dataHash:wholeWaterReference(catalog.find(t=>'topics-'+t.category+':'+t.id===row.id))};assert.equal(validateDossierContent(row,record,{knownIds}).contentReady,true);const actualUILayer=boundary.sourceEndpointCorrection.qualifiedUILayer??boundary.qualifiedUILayer;const currentBuild=withHistoryEvidencePredecessorRuntime(process.cwd(),learningFingerprint),ready=validateDossier(row,record,{knownIds,build:currentBuild}).structurallyReady;if(currentBuild===actualUILayer.build)assert.equal(ready,true);else{assert.equal(currentBuild,boundary.sourceEndpointCorrection.pendingCurrentUIBuild);assert.equal(ready,false,'earlier valid UI must not count as current source-corrected acceptance');}assert.deepEqual(row.ui,{...actualUILayer.currentTemplate,route:record.route});}
  for(const mutate of[r=>r[0].goal+=' unreviewed',r=>r[286].claims[0].statement+=' unreviewed',r=>r[287].ui={build:'invented',visible:true,search:true,back:true,offline:true},r=>r.push(structuredClone(r[287]))]){const bad=structuredClone(rows);mutate(bad);assert.throws(()=>dossiersBeforeWaterPhotosynthesis(bad));}
 });
 function round(row,order,{done=false,answer=order[0]}={}){

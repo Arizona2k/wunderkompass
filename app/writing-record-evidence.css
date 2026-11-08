@@ -1,0 +1,13 @@
+.writing-record-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.writing-record-evidence :is(p,figcaption,.small-note){font-size:16px;line-height:1.7}
+.writing-record-evidence :is(button,select){font:inherit;font-size:16px;line-height:1.6;min-height:48px;max-width:100%;white-space:normal}
+.writing-record-evidence :is(figure,.writing-source-case){margin:20px 0;min-width:0}
+.writing-marks svg{display:block;width:100%;max-width:320px;height:auto;margin:0 auto 14px}
+.writing-rebus-parts{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px;padding:16px;background:#f5f7f3;border-radius:16px}
+.writing-rebus-parts>span{font-size:40px;line-height:1.2;color:#203d4c;font-weight:700}
+.writing-rebus-parts>svg{width:72px;height:99px;flex:0 0 72px}
+.writing-current-rule{padding:14px 0;border-top:1px solid var(--border);margin:16px 0}
+.writing-source-case h4{font-size:20px;line-height:1.5;margin:0 0 12px}
+.writing-source-case>button,.writing-record-evidence>.secondary-button{margin-top:16px}
+.large-reading .writing-record-evidence :is(p,figcaption,button,.small-note){font-size:20px!important;line-height:1.7}
+@media(prefers-reduced-motion:reduce){.writing-record-evidence{scroll-behavior:auto}}

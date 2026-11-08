@@ -1,0 +1,11 @@
+.kilwa-trade-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.kilwa-trade-evidence .kilwa-evidence-route{list-style:none;margin:16px 0;padding:0;display:grid;grid-template-columns:1fr;gap:0}
+.kilwa-trade-evidence .kilwa-evidence-route li{min-width:0;padding:12px 0;border:0;border-top:1px solid var(--border);border-radius:0;background:transparent}
+.kilwa-evidence-route li+li::before{content:'↓';display:block;margin-bottom:8px;color:var(--foreground);font-size:1.5rem;line-height:1.2}
+.kilwa-evidence-route strong{display:block}
+.kilwa-evidence-route p{margin:8px 0 0}
+.kilwa-evidence-hypothesis strong::after{content:' · Vermutung';font-weight:400}
+.kilwa-evidence-note{margin:16px 0;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.kilwa-trade-evidence .model-result{display:block;font-size:inherit}
+.kilwa-trade-evidence .model-result>strong{display:block;margin-bottom:8px}
+.kilwa-trade-evidence h3{font-size:1.35em;line-height:1.4}

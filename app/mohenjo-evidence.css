@@ -1,0 +1,14 @@
+.mohenjo-evidence .mohenjo-path{margin:20px 0;background:transparent;padding:0}
+.mohenjo-path>svg{display:block;width:100%;height:auto;max-width:540px;margin:0 auto}
+.mohenjo-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.mohenjo-sample{border-top:1px solid var(--border);padding-top:20px;margin-top:20px}
+.mohenjo-sample h4{font-size:1.15rem;line-height:1.5}
+.mohenjo-sample-grid{list-style:none;padding:0;margin:16px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:560px}
+.mohenjo-sample-grid>li{min-width:0;border-top:2px solid #536870;padding:10px 0;display:flex;flex-direction:column;gap:8px}
+.mohenjo-sample-grid svg{display:block;width:100%;height:auto;max-width:140px}
+.mohenjo-sample-grid strong,.mohenjo-sample-grid span{font-size:1rem;line-height:1.6}
+.large-reading .mohenjo-sample-grid strong,.large-reading .mohenjo-sample-grid span{font-size:1.15rem}
+.mohenjo-sample>button{font:inherit;white-space:normal;max-width:100%;min-height:48px;min-width:48px}
+.mohenjo-evidence .model-result{display:block}
+.mohenjo-evidence .model-result>strong{display:block;margin-bottom:8px}
+@media(forced-colors:active){.mohenjo-sample-grid>li{border-color:CanvasText}.mohenjo-evidence svg :is(path,rect){stroke:CanvasText;fill:Canvas}.mohenjo-evidence svg path{fill:none}}

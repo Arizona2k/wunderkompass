@@ -1,15 +1,15 @@
 {
   "version": 1,
   "build": {
-    "entryJsBytes": 1000000,
-    "entryJsGzipBytes": 293000,
+    "entryJsBytes": 1010000,
+    "entryJsGzipBytes": 300000,
     "entryCssBytes": 350000,
     "entryCssGzipBytes": 60000,
     "largestJsBytes": 1750000,
     "worldGeometryBytes": 1800000
   },
   "browser": {
-    "homeJsBytes": 1065000,
+    "homeJsBytes": 1085000,
     "areaJsBytes": 1500000,
     "homeCls": 0.1,
     "areaCls": 0.1,

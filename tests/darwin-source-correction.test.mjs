@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import catalog from '../app/world-catalog.json' with {type:'json'};
+import actualHistoryCatalog from '../app/world-catalog.json' with {type:'json'};
+import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+const catalog=beforeHistoryEvidence(actualHistoryCatalog);
 import {beforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis,wholeWaterReference,topicBeforeWaterPhotosynthesis,waterPhotosynthesisBoundary as boundary} from './water-photosynthesis-reference.mjs';
 import {collectInventory} from '../scripts/content-inventory.mjs';
 import {validateDossier} from '../scripts/editorial-contract.mjs';

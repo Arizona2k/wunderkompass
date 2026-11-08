@@ -1,0 +1,8 @@
+.angkor-evidence .angkor-water-figure,.angkor-evidence .angkor-trace-figure{margin:1.25rem 0;background:linear-gradient(150deg,#f8faf7,#edf5f4);border-radius:1rem;padding:1rem;}
+.angkor-evidence figure svg{display:block;width:100%;height:auto;max-width:32rem;margin-inline:auto;}
+.angkor-evidence figcaption{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;line-height:1.6;margin-top:.75rem;color:var(--text,#163e4c);}
+.angkor-evidence .angkor-water-select{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;font:inherit;}
+.angkor-evidence .angkor-water-select select{font:inherit;min-width:5rem;}
+.angkor-evidence .model-buttons button{white-space:normal;overflow-wrap:anywhere;}
+.angkor-evidence .model-result{margin-block:1rem;}
+@media(forced-colors:active){.angkor-evidence figure svg path{stroke:CanvasText;}.angkor-evidence figure svg circle{fill:Highlight;}.angkor-evidence figure svg rect{fill:Canvas;stroke:CanvasText;}}

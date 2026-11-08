@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-21",
+  "checkedOn": "2026-11-08",
   "timezone": "Europe/Berlin",
   "repository": "Arizona2k/wunderkompass",
   "testLive": {
@@ -2324,6 +2324,28 @@
         }
       ],
       "checkedOn": "2026-11-07"
+    },
+    {
+      "number": 94,
+      "title": "Wasser und Fotosynthese anschaulich vertiefen und Mehrtab-Fortschritt erhalten",
+      "url": "https://github.com/Arizona2k/wunderkompass/pull/94",
+      "base": "test-live",
+      "mergedAt": "2026-11-08T16:41:04Z",
+      "mergeCommit": "b53f75f72f1be726b03ec602016931c41f4cfda4",
+      "statusesUrl": "https://api.github.com/repos/Arizona2k/wunderkompass/commits/b53f75f72f1be726b03ec602016931c41f4cfda4/statuses",
+      "deploymentStatuses": [
+        {
+          "id": 58370566390,
+          "context": "Vercel",
+          "state": "success",
+          "creator": "vercel[bot]",
+          "description": "Deployment has completed",
+          "createdAt": "2026-11-08T16:41:25Z",
+          "updatedAt": "2026-11-08T16:41:25Z",
+          "targetUrl": "https://vercel.com/interaktive-wissens-und-lernplattform/wunderkompass/5xpUbhUs1pdmqJqX7HkiaaUGbe6E"
+        }
+      ],
+      "checkedOn": "2026-11-08"
     }
   ]
 }

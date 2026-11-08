@@ -6,7 +6,7 @@
 .large-reading .bronze-material-examples figcaption{font-size:1.15rem}
 .bronze-material-examples{background:transparent;padding:0;margin:16px 0}
 .bronze-material-examples figcaption{color:var(--foreground);background:transparent;padding:0;margin-top:8px}
-.bronze-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.history-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
 .bronze-evidence .model-result{display:block}
 .bronze-evidence .model-result>strong{display:block;margin-bottom:8px}
 .bronze-evidence-cards{display:grid;gap:16px;margin:16px 0}
@@ -14,3 +14,6 @@
 .bronze-evidence-card h4{margin:0 0 8px}
 .bronze-evidence-card p+p{margin-top:8px}
 @media(min-width:640px){.bronze-evidence-cards{grid-template-columns:1fr 1fr}}
+
+.article-atlas .history-evidence .model-result{display:block;font-size:16px;line-height:1.7}
+.history-evidence .model-result>strong{display:block;margin-bottom:8px}

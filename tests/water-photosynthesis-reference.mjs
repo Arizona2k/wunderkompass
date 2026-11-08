@@ -1,3 +1,4 @@
+import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
 // Exact historical source/UI inverse; qualification requires named actual whole-input evidence.
 // Exact historical source/UI inverse; actual qualification is recorded in the named boundary.
 import assert from 'node:assert/strict';
@@ -26,6 +27,7 @@ export const topicBeforeWaterPhotosynthesis=topic=>{
  return previous(previous(topic,correction?.topic),topics.get(topic.id));
 };
 export function beforeWaterPhotosynthesis(items){
+ items=beforeHistoryEvidence(items);
  if(items.some(row=>Object.hasOwn(row,'category')&&Object.hasOwn(row,'paragraphs'))){
   if(items.some(row=>topics.has(row.id)&&wholeWaterReference(row)===wholeWaterReference(topics.get(row.id).after)))assert.equal(items.length,204,'a current water/photosynthesis catalog must retain all204 identities');
   if(items.length===204){const hash=wholeWaterReference(items);assert([boundary.previousCatalogSHA256,boundary.currentCatalogSHA256,...sourceCorrections().map(row=>row.previousCurrentCatalogSHA256)].includes(hash),'all204 whole topics, including every unrelated field, must match the reviewed boundary');}

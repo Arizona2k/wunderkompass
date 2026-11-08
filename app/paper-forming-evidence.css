@@ -1,0 +1,16 @@
+.paper-forming-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.paper-forming-steps{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.paper-forming-steps>button{flex:1 1 160px}
+.paper-forming-stage{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin:16px 0 24px}
+.paper-forming-figure{min-width:0;margin:0}
+.paper-forming-figure svg{display:block;width:100%;height:auto;max-width:520px}
+.paper-forming-figure figcaption{font-size:16px;line-height:1.7;margin-top:12px;overflow-wrap:anywhere}
+.paper-forming-explanation{min-width:0}
+.paper-forming-explanation h4,.paper-forming-source-case h4{font-size:20px;line-height:1.5;margin:0 0 12px}
+.paper-forming-evidence .small-note{font-size:16px;line-height:1.7}
+.paper-forming-evidence :is(button,select){font:inherit;font-size:16px;line-height:1.6;min-height:48px;max-width:100%;white-space:normal}
+.paper-forming-source-case{border-top:1px solid var(--border);padding:20px 0;margin:16px 0}
+.paper-forming-evidence>.secondary-button{margin:8px 0}
+.large-reading .paper-forming-evidence :is(button,select,p,figcaption,.small-note){font-size:max(20px,1rem)!important;line-height:1.7}
+.large-reading .paper-forming-explanation h4,.large-reading .paper-forming-source-case h4{font-size:max(24px,1.2rem)}
+@media(min-width:760px){.paper-forming-stage{grid-template-columns:minmax(0,1.15fr) minmax(180px,.85fr);align-items:center}}

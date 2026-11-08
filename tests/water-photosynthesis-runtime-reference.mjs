@@ -1,3 +1,4 @@
+import {withHistoryEvidencePredecessorRuntime} from './history-evidence-runtime-reference.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';
 import {learningInputs,learningFingerprint} from '../build/learning-fingerprint.mjs';
 import fixture from './fixtures/water-photosynthesis-M93-runtime-predecessor.json' with {type:'json'};
@@ -9,7 +10,7 @@ export function assertCurrentWaterPhotosynthesisRuntime(root){
  for(const row of all){const change=changed.get(row.name),body=fs.readFileSync(current.get(row.name));assert.equal(body.length,change?.currentBytes??row.bytes,row.name+' whole current size');assert.equal(sha(body),change?.currentSHA256??row.sha256,row.name+' whole current body');if(change){assert.equal(Buffer.byteLength(change.originalUTF8),row.bytes);assert.equal(sha(change.originalUTF8),row.sha256,'whole actually confirmed M93 predecessor: '+row.name);}}
  assert.equal(learningFingerprint(root),fixture.currentRuntimeBuild);return current;
 }
-export function withWaterPhotosynthesisPredecessorRuntime(root,inspect){
+function withWaterPhotosynthesisAtM94(root,inspect){
  if(learningFingerprint(root)!==fixture.currentRuntimeBuild)return inspect(root);
  const current=assertCurrentWaterPhotosynthesisRuntime(root),changed=new Map(fixture.replacedInputs.map(row=>[row.name,row])),temporary=fs.mkdtempSync(path.join(os.tmpdir(),'wk-water-photo-whole-M93-'));
  try{
@@ -17,3 +18,5 @@ export function withWaterPhotosynthesisPredecessorRuntime(root,inspect){
   assert.equal(learningInputs(temporary).length,677);assert.equal(learningFingerprint(temporary),fixture.previousRuntimeBuild,'entire actually accepted M93 runtime, not selected old predicates');return inspect(temporary);
  }finally{fs.rmSync(temporary,{recursive:true,force:false});}
 }
+
+export const withWaterPhotosynthesisPredecessorRuntime=(root,inspect)=>withHistoryEvidencePredecessorRuntime(root,prior=>withWaterPhotosynthesisAtM94(prior,inspect));

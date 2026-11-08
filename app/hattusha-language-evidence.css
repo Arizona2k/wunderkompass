@@ -1,0 +1,18 @@
+.hattusha-language-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.hattusha-language-choice{display:grid;gap:8px;margin:16px 0}
+.hattusha-language-board{margin:16px 0;border:1px solid var(--border);border-radius:14px;padding:16px;color:#183b46}
+.hattusha-language-board.is-paper{background:#fbf7ef;box-shadow:0 3px 0 #e5dccb}
+.hattusha-language-board.is-screen{background:#edf5f7;border:4px solid #285463}
+.hattusha-language-medium{font-size:16px;margin:0 0 12px}
+.hattusha-language-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hattusha-language-example{min-width:0;border-top:1px solid #aabfbe;padding-top:12px}
+.hattusha-language-example p{color:inherit;overflow-wrap:anywhere}
+.hattusha-language-word{font-size:clamp(24px,4vw,36px);font-weight:700;line-height:1.4;margin:0 0 12px}
+.hattusha-language-evidence :is(button,select){max-width:100%;font:inherit;font-size:16px;line-height:1.6;min-height:48px;white-space:normal}
+.large-reading .hattusha-language-evidence :is(button,select,label,.small-note,.hattusha-language-medium){font-size:max(20px,1rem);line-height:1.7}
+.large-reading .hattusha-language-word{font-size:max(28px,1.4rem)}
+@media(max-width:480px){.hattusha-language-examples{grid-template-columns:minmax(0,1fr)}}
+
+
+.large-reading .hattusha-language-example p{font-size:max(20px,1rem);line-height:1.7}
+.large-reading .hattusha-language-example .hattusha-language-word{font-size:max(28px,1.4rem)}

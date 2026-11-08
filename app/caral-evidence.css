@@ -1,0 +1,11 @@
+.caral-evidence-form svg{display:block;width:100%;height:auto;max-height:18rem}
+.caral-evidence-areas{display:grid;gap:1.4rem;margin-block:1rem}
+.caral-evidence-areas figure{margin:0;min-width:0}
+.caral-evidence-areas figcaption{display:grid;gap:.35rem;margin-bottom:.6rem}
+.caral-evidence-bar{height:1.5rem;background:#eef3f2;border:1px solid #708b8b;border-radius:.25rem}
+.caral-evidence-bar span{display:block;height:100%;background:#246778;border-radius:.2rem}
+.caral-evidence-questions{display:grid;gap:.75rem;margin-block:1rem}
+.caral-evidence-questions button{white-space:normal;text-align:left;min-height:44px;line-height:1.55}
+
+.caral-evidence .caral-evidence-form{background:linear-gradient(145deg,#fbfbf8,#eff6f5);color:var(--foreground);border-radius:1rem;padding:1rem;}
+.caral-evidence .caral-evidence-form figcaption{background:transparent;color:var(--foreground);font:inherit;line-height:1.65;padding:0;margin-top:.75rem;}
