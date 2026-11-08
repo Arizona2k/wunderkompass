@@ -38,10 +38,22 @@ async function explore(p,t,{touch=false,width,shots,engine='chromium',native=fal
    const before=await assertBronzeEvidence(activity),toggle=activity.getByRole('button',{name:/Fundzusammenhang (?:ausblenden|einblenden)/});await toggle.click();assert.equal((await assertBronzeEvidence(activity)).contextVisible,!before.contextVisible);
   }
   if(legacy.has(t.id)){await activity.getByRole('button',{name:'Meine Überlegung vergleichen',exact:true}).click();await activity.getByRole('status').waitFor();}await checkGeometry(p);for(const control of await activity.locator('button,select').all()){const box=await control.boundingBox();const witness=await control.evaluate(el=>{const css=getComputedStyle(el);return {tag:el.tagName,label:el.getAttribute('aria-label')??el.textContent,fontSize:css.fontSize,minWidth:css.minWidth,minHeight:css.minHeight,appearance:css.appearance};});assert.ok(box&&box.width>=44&&box.height>=44,'history control has a real44px touch target: '+JSON.stringify({topic:t.id,level,box,...witness}));}
-  if(shots){const prefix='history-source-'+engine+'-'+t.id+'-'+width+'-level-'+level;if(native){for(const [suffix,part]of[['heading',activity.locator('h3')],['model',modelPanel(activity,t.id,level)],['control',activity.locator('button,select').last()]]){await part.scrollIntoViewIfNeeded();await captureNativeViewport(p,path.join(shots,prefix+'-'+suffix+'.png'));}}else if([320,1440].includes(width))await activity.screenshot({path:path.join(shots,prefix+'.png'),animations:'disabled'});}
+  if(shots){const prefix='history-source-'+engine+'-'+t.id+'-'+width+'-level-'+level;if(native){for(const [suffix,part]of[['heading',activity.locator('h3')],['model',modelPanel(activity,t.id,level)],['control',activity.locator('button,select').last()]]){assert.equal(await part.count(),1,'exact actual native capture target: '+t.id+' level'+level+' '+suffix);await part.scrollIntoViewIfNeeded();await captureNativeViewport(p,path.join(shots,prefix+'-'+suffix+'.png'));}}else if([320,1440].includes(width))await activity.screenshot({path:path.join(shots,prefix+'.png'),animations:'disabled'});}
  }
 }
-function modelPanel(activity,id,level){if(id==='history-timbuktu')return activity.locator('.timbuktu-copy-cards');if(id==='history-hattusha')return activity.locator('.hattusha-language-board');if(level===2&&id==='history-writing')return activity.locator('.writing-source-case');if(level===2&&id==='history-caral')return activity.locator('.caral-evidence-dating');if(level===2&&id==='history-polynesia')return activity.locator(':scope > .model-result').first();return activity.locator('figure').first();}
+function modelPanel(activity,id,level){
+ if(id==='history-timbuktu')return activity.locator('.timbuktu-copy-cards');
+ if(id==='history-hattusha')return activity.locator('.hattusha-language-board');
+ if(id==='history-kilwa')return activity.locator('.kilwa-evidence-route');
+ if(id==='history-rosetta')return activity.locator('.rosetta-text-comparison');
+ if(level===2&&id==='history-writing')return activity.locator('.writing-source-case');
+ if(level===2&&id==='history-paper')return activity.locator('.paper-forming-source-case');
+ if(level===1&&id==='history-caral')return activity.locator('.caral-evidence-areas');
+ if(level===2&&id==='history-caral')return activity.locator('.caral-evidence-dating');
+ if(level===1&&id==='history-nalanda')return activity.locator('.nalanda-evidence-periods');
+ if(level>0&&id==='history-polynesia')return activity.locator(':scope > .model-result').first();
+ return activity.locator('figure').first();
+}
 export async function historySourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){
  if(native)await page.bringToFront();const initial=await page.evaluate(()=>location.hash),observed=[];let completed=false;
  try{for(const topic of topics){
