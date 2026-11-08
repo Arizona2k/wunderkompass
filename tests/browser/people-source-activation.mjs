@@ -8,6 +8,21 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 const next=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4,18);
 const saveKey='erde-entdecken:save:v3';
 
+// Recover only the two actually observed Cloud-proxy HTML transport messages. This function does not qualify
+// a source: the caller still checks real final HTTP, body, opener and progress.
+export async function recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,activationStarted,recordedNavigationResponses,now=()=>performance.now()}){
+  let text=await popup.locator('body').innerText();
+  const initial=row.mainResponses.at(-1),remainingActivationMs=Math.floor(30000-(now()-activationStarted));
+  const sameDocument=initial&&new URL(initial.url).href.split('#')[0]===new URL(popup.url()).href.split('#')[0];
+  if(initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
+    row.transientNavigationRecovery={initialHTTP:503,initialURL:row.actualURL,initialBody:text,initialBodySHA256:createHash('sha256').update(text).digest('hex'),additionalRequestsMaximum:1,remainingActivationMs,originalActivationBudgetMs:30000,noTimeoutExtension:true};
+    await popup.reload({waitUntil:'domcontentloaded',timeout:remainingActivationMs});
+    row.mainResponses=recordedNavigationResponses();row.actualURL=popup.url();row.actualTitle=await popup.title();
+    text=await popup.locator('body').innerText();row.transientNavigationRecovery.finalHTTP=row.mainResponses.at(-1)?.status;
+  }
+  return text;
+}
+
 // Actual public source tab and close/return, not an href-only source check.
 // A blocked external destination is retained as an access deficit, never green.
 export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),pdfOutputDirectory}={}) {
@@ -55,6 +70,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
         // creation; retain the same30s bound and the ordinary viewer path.
         const downloaded=normalDownload.then(download=>({download}));
         const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened}))]))]);
+        const activationStarted=performance.now();
         await page.keyboard.press('Enter');
         const activated=await Promise.race([destination,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Actual source popup or native download did not complete in30s')),30000);})]);clearTimeout(timer);
         row.mainResponses=recordedNavigationResponses();row.actualURL=activated.download?activated.download.url():popup.url();row.actualTitle=activated.download?activated.download.suggestedFilename():await popup.title();
@@ -71,7 +87,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
           const body=await fs.readFile(file);row.actualPDF={...activatedPDFEvidence({requested:source.url,actualURL:row.actualURL,httpStatus:sourceResponse.status,contentType:sourceResponse.contentType,contentLength:sourceResponse.contentLength,contentEncoding:sourceResponse.contentEncoding,downloadURL:download.url(),downloadFailure:await download.failure(),body,activationMode:activated.download?'native-download':'viewer',actualAnchorDownloadObserved:!!activated.download,activationHTTPResponseURL:sourceResponse.url}),file,downloadURL:download.url(),suggestedFilename:download.suggestedFilename(),normalPDFViewerReturnChecked:!activated.download};
           row.status='actual source destination loaded; passage review remains separate';
         }else{
-        let text=await popup.locator('body').innerText();
+        let text=await recoverKnownHTMLConnectionTimeout({popup,row,sourceURL:source.url,activationStarted,recordedNavigationResponses});
         const initialHTTP=row.mainResponses.at(-1)?.status;
         if(text.length<=200&&initialHTTP>=200&&initialHTTP<300){
           await popup.waitForFunction(()=>document.body?.innerText.length>200);

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {beforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import fixture from './fixtures/retained-people-data-predecessor.json' with {type:'json'};
@@ -8,6 +9,10 @@ const named=new Set(fixture.ids);
 // Reconstruct only the named, whole reviewed objects. Unknown or modified
 // objects cannot be turned into a known historical object by an ID match.
 export function beforeRetainedPeople(items){
+ // Existing historical tests compose this inverse more than once. Accept only
+ // its exact whole already-restored M92 catalog before the newer water layer.
+ if(items.length===204&&whole(items)===fixture.priorCatalogSHA256)return items;
+ items=beforeWaterPhotosynthesis(items);
  if(items.some(row=>Object.hasOwn(row,'category')&&Object.hasOwn(row,'paragraphs'))){
   if(items.length!==204)return items; // Earlier subsets reach their original predicates unchanged.
   if(whole(items)===fixture.priorCatalogSHA256)return items;
@@ -43,6 +48,7 @@ export function beforeRetainedPeopleBookLinks(links){
  const restored=links.slice(0,25);assert.equal(whole(restored),fixture.priorBookLinksSHA256);return restored;
 }
 export function beforeRetainedPeopleDossiers(items){
+ items=dossiersBeforeWaterPhotosynthesis(items);
  if(items.length<268)return items;
  if(items.length===268){assert.deepEqual(items.map(row=>({id:row.id,sha256:whole(row)})),fixture.prior268.map(({route,...row})=>row));return items;}
  assert.equal(items.length,286);const expected=[...fixture.prior268,...fixture.new18];
@@ -75,6 +81,7 @@ export const retainedPeopleBoundary=fixture;
 // source histories. The old UI template is historical evidence, never current
 // readiness. The normal full current-object predicates remain mandatory.
 export function beforeNative221PeopleSourceDossiers(items,qualified=JSON.parse(fs.readFileSync(new URL('./fixtures/editorial-before-retained-people-268.json',import.meta.url),'utf8'))){
+ items=dossiersBeforeWaterPhotosynthesis(items);
  beforeRetainedPeopleDossiers(items);
  const previous=qualified.previousQualifiedUIBeforeNative221SourceCorrection;
  assert.equal(previous.wholeOriginalDossiers,286);assert.equal(items.length,286);

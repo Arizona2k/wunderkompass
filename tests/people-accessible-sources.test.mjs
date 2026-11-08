@@ -40,3 +40,74 @@ test('one public museum object record replaces a blocked presentation link while
   const bad=structuredClone(rows);mutate(bad.find(r=>r.id===current.id));assert.throws(()=>beforeFourteenDossiers(bad),'unknown source, claim, rights or evidence mutation is rejected');
  }
 });
+
+// Regression for the observed transport failure; actual popup contexts are checked separately.
+import {createHash} from 'node:crypto';
+import {recoverKnownHTMLConnectionTimeout} from './browser/people-source-activation.mjs';
+
+const connectionTimeoutBody='upstream connect error or disconnect/reset before headers. reset reason: connection timeout';
+function sourceTab({status=503,body=connectionTimeoutBody,afterStatus=200,afterBody='A real destination body still requires the caller to qualify its HTTP response and content.',elapsed=5000,sourceURL='https://source.example/article',responseURL=sourceURL,reloadError}={}){
+ const row={status:'external access not yet qualified',actualURL:sourceURL,mainResponses:[{url:responseURL,status}]},calls=[];
+ let currentBody=body;
+ const popup={url:()=>sourceURL,title:async()=>'Destination',locator:selector=>{
+  assert.equal(selector,'body');return {innerText:async()=>currentBody};
+ },reload:async options=>{
+  calls.push(options);if(reloadError)throw reloadError;
+  row.mainResponses.push({url:sourceURL,status:afterStatus});currentBody=afterBody;
+ }};
+ return {row,calls,run:()=>recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,activationStarted:1000,now:()=>1000+elapsed,recordedNavigationResponses:()=>row.mainResponses})};
+}
+
+test('one observed HTML connection timeout can reload within the original budget without qualifying the source',async()=>{
+ const actual=sourceTab();const body=await actual.run();
+ assert.equal(body,'A real destination body still requires the caller to qualify its HTTP response and content.');
+ assert.deepEqual(actual.calls,[{waitUntil:'domcontentloaded',timeout:25000}]);
+ assert.deepEqual(actual.row.mainResponses.map(r=>r.status),[503,200]);
+ assert.equal(actual.row.transientNavigationRecovery.initialBody,connectionTimeoutBody);
+ assert.equal(actual.row.transientNavigationRecovery.initialBodySHA256,createHash('sha256').update(connectionTimeoutBody).digest('hex'));
+ assert.equal(actual.row.transientNavigationRecovery.finalHTTP,200);
+ assert.equal(actual.row.status,'external access not yet qualified','Only the actual source caller can qualify HTTP/body/opener/progress');
+});
+
+test('a persistent transport failure remains a failure after one request and preserves its initial response',async()=>{
+ const actual=sourceTab({afterStatus:503,afterBody:connectionTimeoutBody});
+ assert.equal(await actual.run(),connectionTimeoutBody);assert.equal(actual.calls.length,1);
+ assert.deepEqual(actual.row.mainResponses.map(r=>r.status),[503,503]);
+ assert.equal(actual.row.transientNavigationRecovery.finalHTTP,503);
+ assert.equal(actual.row.status,'external access not yet qualified');
+});
+
+test('forbidden, missing, maintenance and already successful destinations are not transport-retried',async()=>{
+ for(const options of [{status:403},{status:404},{status:200},{body:'Service temporarily unavailable for maintenance'}]){
+  const actual=sourceTab(options);await actual.run();assert.deepEqual(actual.calls,[],JSON.stringify(options));
+  assert.equal(actual.row.transientNavigationRecovery,undefined);assert.equal(actual.row.status,'external access not yet qualified');
+ }
+});
+
+test('expired budgets, PDF originals and unassociated response URLs cannot trigger HTML recovery',async()=>{
+ for(const options of [{elapsed:30000},{elapsed:30001},{sourceURL:'https://source.example/complete.PDF'},{responseURL:'https://unrelated.example/article'}]){
+  const actual=sourceTab(options);await actual.run();assert.deepEqual(actual.calls,[],JSON.stringify(options));
+  assert.equal(actual.row.transientNavigationRecovery,undefined);
+ }
+});
+
+test('a failed ordinary reload propagates its error while retaining the original timeout and unqualified status',async()=>{
+ const failure=new Error('reload connection failed'),actual=sourceTab({reloadError:failure});
+ await assert.rejects(actual.run(),error=>error===failure);assert.equal(actual.calls.length,1);
+ assert.equal(actual.row.transientNavigationRecovery.initialBody,connectionTimeoutBody);
+ assert.equal(actual.row.transientNavigationRecovery.finalHTTP,undefined);
+ assert.equal(actual.row.status,'external access not yet qualified');
+});
+
+const remoteConnectionFailureBody='upstream connect error or disconnect/reset before headers. reset reason: remote connection failure';
+test('the observed exact HTML remote connection failure gets one ordinary reload within the unchanged30s budget',async()=>{
+ const actual=sourceTab({body:remoteConnectionFailureBody,elapsed:7000});await actual.run();assert.deepEqual(actual.calls,[{waitUntil:'domcontentloaded',timeout:23000}]);assert.deepEqual(actual.row.mainResponses.map(r=>r.status),[503,200]);assert.equal(actual.row.transientNavigationRecovery.initialBody,remoteConnectionFailureBody);assert.equal(actual.row.transientNavigationRecovery.initialBodySHA256,createHash('sha256').update(remoteConnectionFailureBody).digest('hex'));assert.equal(actual.row.transientNavigationRecovery.additionalRequestsMaximum,1);assert.equal(actual.row.transientNavigationRecovery.originalActivationBudgetMs,30000);assert.equal(actual.row.transientNavigationRecovery.noTimeoutExtension,true);assert.equal(actual.row.status,'external access not yet qualified');
+});
+test('the exact remote reset still stays unqualified and limited to one reload when it persists',async()=>{
+ const actual=sourceTab({body:remoteConnectionFailureBody,afterStatus:503,afterBody:remoteConnectionFailureBody});assert.equal(await actual.run(),remoteConnectionFailureBody);assert.equal(actual.calls.length,1);assert.equal(actual.row.transientNavigationRecovery.finalHTTP,503);assert.equal(actual.row.status,'external access not yet qualified');
+});
+test('recognising the reset message cannot retry forbidden or partial responses, expired budgets, PDF originals or another document',async()=>{
+ for(const options of [{status:403},{status:404},{status:200},{status:206},{elapsed:30000},{elapsed:30001},{sourceURL:'https://source.example/complete.PDF'},{responseURL:'https://unrelated.example/article'},{body:'remote connection failure without the observed proxy envelope'},{body:'upstream connect error or disconnect/reset before headers. reset reason: maintenance'}]){
+  const actual=sourceTab({body:remoteConnectionFailureBody,...options});await actual.run();assert.deepEqual(actual.calls,[],JSON.stringify(options));assert.equal(actual.row.transientNavigationRecovery,undefined);assert.equal(actual.row.status,'external access not yet qualified');
+ }
+});

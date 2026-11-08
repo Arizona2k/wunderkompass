@@ -522,7 +522,12 @@
   },
   "science-photosynthesis:mini": {
     "steps": [
-      "Was erreicht ein Blatt, wenn es im Sonnenlicht steht? Vergleiche das mit Geräuschen und Wärme aus dem Erdinneren."
+      "Unterscheide die Energie für den Stoffaufbau von der Energie, die eine Zelle aus vorhandenen Stoffen nutzen kann."
+    ],
+    "wrongReasons": [
+      null,
+      "Der Abbau von Zucker gehört zur Nutzung gespeicherter chemischer Energie, etwa bei der Zellatmung. Hier wird nach der Energiezufuhr für Fotosynthese gefragt.",
+      "Mineralstoffe werden für viele Aufgaben benötigt. Sie sind bei grünen Pflanzen aber kein Ersatz für Licht als Energiezufuhr der Fotosynthese."
     ]
   },
   "science-pollination:mini": {
@@ -559,48 +564,88 @@
     "steps": [
       "Stell dir dieselbe Pfütze an einem kühlen und an einem warmen Tag vor. Muss Wasser einen sichtbaren Kanal haben, um den Ort zu verlassen?",
       "Überlege, ob das Wasser nur an einem anderen Ort oder auch in einer anderen Form sein könnte. Es kann vorhanden sein, obwohl du es nicht mehr siehst."
+    ],
+    "wrongReasons": [
+      null,
+      "Kondensation macht aus Wasserdampf flüssiges Wasser. Der Übergang aus der Pfütze in die Luft heißt Verdunstung.",
+      "Beim Verdunsten bleibt Wasser erhalten. Es gelangt in gasförmigem Zustand an einen anderen Ort."
     ]
   },
   "science-water-cycle-2": {
     "steps": [
       "Gesucht ist eine Änderung des Zustands von Wasser. Vergleiche die Form vor und nach dem Vorgang, statt nur den Ort zu betrachten.",
       "Denk an Tröpfchen außen auf einem kalten Glas. Sie können aus Feuchtigkeit der umgebenden Luft entstehen. Welche Antwort beschreibt diese Zustandsänderung?"
+    ],
+    "wrongReasons": [
+      null,
+      "Der Übergang von flüssigem zu gasförmigem Wasser heißt Verdunstung. Kondensation verläuft in die andere Richtung.",
+      "Wenn Eis flüssig wird, schmilzt es. Bei Kondensation wird dagegen aus gasförmigem Wasser flüssiges Wasser."
     ]
   },
   "science-water-cycle-3": {
     "steps": [
       "Vergleiche einen Gartenboden und eine asphaltierte Fläche nach Regen. Welcher Weg des Wassers hängt unmittelbar von der Oberfläche ab?",
       "Verfolge den Weg eines Regentropfens, wenn der Boden abgedeckt wird. Prüfe, welcher Teil des Wasserkreislaufs davon zuerst betroffen ist."
+    ],
+    "wrongReasons": [
+      null,
+      "Wasser kann über undurchlässige Oberflächen abfließen. Erschwert wird hier zunächst der Eintritt in den Boden.",
+      "Offene Gewässer können weiterhin Wasser an die Luft abgeben. Die Frage betrifft zunächst den Weg des Regenwassers durch die versiegelte Fläche in den Boden."
     ]
   },
   "science-water-cycle-4": {
     "steps": [
       "Vergleiche Wasser in einer Wolke mit Wasser tief im Boden oder in Eis. Müssen alle diese Vorräte gleich schnell weiterreisen?",
       "Eine Stoppuhr müsste auch die Aufenthalte zwischen den Wegen mitzählen. Überlege, warum ein einziger Zeitwert für alle Wege unpassend wäre."
+    ],
+    "wrongReasons": [
+      null,
+      "Das Schema zeigt nur einen möglichen Weg. Wirkliche Wasserwege können sich verzweigen und andere Speicher einschließen.",
+      "Die vier Stationen sind Erklärschritte, keine Zeiteinheiten. Das Modell enthält weder Aufenthaltszeiten noch eine berechnete Reisedauer."
     ]
   },
   "science-photosynthesis-1": {
     "steps": [
       "Unterscheide Stoffe von Energie. Gesucht sind die Ausgangsstoffe, aus denen eine Pflanze bei der Fotosynthese etwas aufbauen kann.",
       "Überlege, was eine Pflanze aus der Luft und was sie über ihre Wurzeln aufnehmen kann. Welche Antwort verbindet diese beiden Herkunftswege?"
+    ],
+    "wrongReasons": [
+      null,
+      "Sauerstoff entsteht bei der Fotosynthese grüner Pflanzen. Kohlendioxid liefert Kohlenstoff für den Aufbau; beide Gase haben hier verschiedene Rollen.",
+      "Mineralstoffe sind für Pflanzen wichtig. Sie ersetzen jedoch das Wasser nicht, das zu den Ausgangsstoffen der Fotosynthese gehört."
     ]
   },
   "science-photosynthesis-2": {
     "steps": [
       "Frage nach einem Stoff, der während der Fotosynthese entsteht und an die Umgebung abgegeben werden kann.",
       "Denke an einen Stoffaustausch zwischen Blatt und Luft. Vergleiche damit die Antworten: Welche Art Stoff passt zu diesem Austausch?"
+    ],
+    "wrongReasons": [
+      null,
+      "Hier hast du ein Gas gewählt, das die Pflanze für den Zuckeraufbau nutzt. Die Frage sucht ein bei der Fotosynthese entstehendes Gas.",
+      "Wasserdampf kann bei der Transpiration austreten. Das ist ein anderer Vorgang; Fotosynthese grüner Pflanzen erzeugt außerdem Sauerstoff."
     ]
   },
   "science-photosynthesis-3": {
     "steps": [
       "Beginne beim Futter des Löwen und verfolge dann, was seine Beute gefressen haben könnte.",
-      "Zeichne gedanklich eine Kette vom Blatt über ein pflanzenfressendes Tier zum Löwen. Überlege bei jedem Schritt, wohin die Energie gelangt."
+      "Trenne, was bei der Beute schon vor der Mahlzeit passiert, von dem, was der Löwe selbst tun müsste."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein Löwe betreibt keine Fotosynthese. Er erhält chemisch gespeicherte Energie über seine Nahrung.",
+      "Sonnenwärme kann einen Körper erwärmen. Sie ersetzt beim Löwen jedoch nicht die chemische Energie aus Nahrung."
     ]
   },
   "science-photosynthesis-4": {
     "steps": [
       "Der Aufbau energiereicher Stoffe und das Nutzen dieser Stoffe sind zwei verschiedene Aufgaben einer Zelle.",
-      "Vergleiche die Energiegewinnung einer Pflanzenzelle mit der einer Tierzelle. Prüfe besonders Antworten mit „niemals“: Schließen sie einen nötigen Zellvorgang aus?"
+      "Vergleiche, ob die Antworten Aufbau oder Nutzung energiereicher Stoffe beschreiben. Überlege, wofür Licht gebraucht wird."
+    ],
+    "wrongReasons": [
+      null,
+      "Zellatmung braucht nicht erst Dunkelheit. Lebende Pflanzenzellen können gespeicherte Energie auch tagsüber verfügbar machen.",
+      "Beim Zuckeraufbau wird Lichtenergie genutzt; bei der Zellatmung wird gespeicherte chemische Energie verfügbar. Das sind verschiedene Reaktionsfolgen."
     ]
   },
   "science-pollination-1": {

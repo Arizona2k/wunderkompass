@@ -1942,6 +1942,181 @@
         "https://science.nasa.gov/exoplanets/whats-a-transit/"
       ],
       "interactive": false
+    },
+    {
+      "id": "science-water-cycle",
+      "interactive": true,
+      "sources": [
+        "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/",
+        "https://www.bgs.ac.uk/groundwater/data/groundwater-levels/groundwater-level-terminology/",
+        "https://gpm.nasa.gov/education/glossary",
+        "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle",
+        "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      ],
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Einen Zustandswechsel von einer Ortsänderung unterscheiden.",
+          "example": "Wähle im Modell zuerst „Kondensieren“ und danach „Abfließen & versickern“. Vergleiche die Erklärungen beider Stationen.",
+          "prompt": "Welche Unterscheidung passt?",
+          "hint": "Frage bei jedem Vorgang getrennt: Wo ist das Wasser, und ist es gasförmig oder flüssig?",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Kondensieren macht aus Wasserdampf flüssiges Wasser; flüssiges Wasser kann ohne Zustandswechsel abfließen.",
+              "feedback": "Kondensation ist der Wechsel vom Gas zur Flüssigkeit. Beim oberflächlichen Abfließen kann flüssiges Wasser flüssig bleiben und nur den Ort wechseln."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Beim Abfließen muss flüssiges Wasser zuerst gasförmig werden.",
+              "feedback": "Wasser kann flüssig bergab fließen. Der Ortswechsel verlangt keinen Übergang in den gasförmigen Zustand."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Beim Kondensieren bleibt das Wasser ein Gas und wird nur sichtbar.",
+              "feedback": "Kondensation ändert den Zustand: Aus gasförmigem Wasser werden flüssige Tröpfchen. Gasförmiger Wasserdampf selbst ist unsichtbar."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Versickern und Grundwasserneubildung unterscheiden.",
+          "example": "Nach einem Regenschauer gelangt Wasser in einen Gartenboden. Der Text unterscheidet Bodenwasser nahe der Oberfläche und tieferes Grundwasser.",
+          "prompt": "Welche Erklärung vermeidet eine zu schnelle Schlussfolgerung?",
+          "hint": "Unterscheide den Eintritt in den Boden von dem Weg und Speicher danach.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Jeder Tropfen wird beim Eintritt in den Boden sofort Grundwasser.",
+              "feedback": "Ein Teil des Wassers bleibt zunächst im oberflächennahen Boden. Erst ein weiterer Weg nach unten kann Grundwasser ergänzen."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Nur ein großer Hohlraum unter der Erde kann Wasser speichern.",
+              "feedback": "Auch kleine Poren und Spalten speichern Wasser. Es ist kein großer unterirdischer See nötig."
+            },
+            {
+              "id": "reasoned",
+              "text": "Ein Teil kann im Boden bleiben; ein anderer kann tiefer gelangen und Grundwasser ergänzen.",
+              "feedback": "Versickern bezeichnet den Eintritt in den Untergrund. Bodenwasser und Grundwasser sind verschiedene Speicher; der weitere Weg hängt von den Bedingungen ab."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Grenze einer schematischen Darstellung erkennen.",
+          "example": "Zwei Regentropfen gelangen an unterschiedliche Orte: einer auf einen Hang, einer in einen Boden. Im Modell stehen vier Stationen zur Auswahl.",
+          "prompt": "Was kannst du aus diesem Modell begründet folgern?",
+          "hint": "Prüfe, welche Informationen die Zeichnung tatsächlich zeigt und welche Messgrößen fehlen.",
+          "answers": [
+            {
+              "id": "confusion-b",
+              "text": "Beide Tropfen brauchen genau vier gleich lange Zeitabschnitte bis ins Meer.",
+              "feedback": "Die Stationsnummern sind keine Uhr. Das Modell zeigt keine Aufenthaltszeiten und die wirklichen Wasserwege können sich verzweigen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Es zeigt einen möglichen Weg, aber weder die genaue Route noch die Reisedauer dieser Tropfen.",
+              "feedback": "Verschiedene Speicher und Wege sind möglich. Vier Erklärstationen liefern weder eine Ortsvorhersage noch eine berechnete Reisedauer."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Die zuletzt gewählte Taste bestimmt, wie viel Regen am Hang fällt.",
+              "feedback": "Die Taste wechselt die ausgewählte Erklärung. Sie stellt keine Regenmenge ein und verändert kein echtes Wetter."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ]
+    },
+    {
+      "id": "science-photosynthesis",
+      "interactive": false,
+      "sources": [
+        "https://endeavour.kew.org/taster-resources/what-is-photosynthesis",
+        "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis",
+        "https://www.rhs.org.uk/advice/understanding-plants/how-plants-breathe",
+        "https://science.nasa.gov/earth/earth-observatory/what-are-phytoplankton/"
+      ],
+      "stages": [
+        {
+          "id": "observe",
+          "goal": "Energiezufuhr und stoffliche Ausgangsstoffe unterscheiden.",
+          "example": "Die Übersicht nennt Lichtenergie, Wasser und Kohlendioxid als Beiträge zur Fotosynthese.",
+          "prompt": "Welchen Beitrag musst du als Energiezufuhr kennzeichnen?",
+          "hint": "Vergleiche, ob ein Begriff eine Substanz oder eine Form von Energie bezeichnet.",
+          "answers": [
+            {
+              "id": "reasoned",
+              "text": "Lichtenergie.",
+              "feedback": "Licht liefert Energie. Wasser und Kohlendioxid sind Stoffe mit verschiedenen Rollen beim Aufbau."
+            },
+            {
+              "id": "confusion-a",
+              "text": "Das Wasser allein.",
+              "feedback": "Wasser ist ein Ausgangsstoff. Es ersetzt die benötigte Lichtenergie für die Fotosynthese nicht."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Das Kohlendioxid allein.",
+              "feedback": "Kohlendioxid liefert unter anderem Kohlenstoff. Das ist eine Stoffrolle und nicht die Lichtenergie."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "explain",
+          "goal": "Eine typische Fehlvorstellung mit einer Stoffquelle prüfen.",
+          "example": "Jemand behauptet: Licht wird im Blatt direkt zu den Kohlenstoffbausteinen des Zuckers.",
+          "prompt": "Welche Begründung passt zur Fotosynthese?",
+          "hint": "Verfolge den Stoffweg aus der Luft und trenne ihn vom Energieweg.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Wasser liefert den gesamten Kohlenstoff.",
+              "feedback": "Wasser enthält keinen Kohlenstoff. Es gehört zu den Ausgangsstoffen, übernimmt aber nicht diese Rolle."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Je heller das Licht, desto mehr Kohlenstoff enthält es.",
+              "feedback": "Lichtenergie ist kein Kohlendioxidvorrat. Aus der Helligkeit allein lässt sich weder eine Stoffmenge noch eine Zuckerproduktion bestimmen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Kohlendioxid liefert Kohlenstoff; Licht liefert Energie.",
+              "feedback": "Die beiden Beiträge sind verschieden. Der Kohlenstoff im Zucker stammt beim beschriebenen Aufbau aus Kohlendioxid, während Lichtenergie den Vorgang antreibt."
+            }
+          ],
+          "correct": "reasoned"
+        },
+        {
+          "id": "transfer",
+          "goal": "Die Bedeutung von Licht auf zwei verschiedene Zellvorgänge übertragen.",
+          "example": "Ein grünes Blatt steht im Dunkeln. Betrachte die grundsätzlichen Bedingungen, nicht einen berechneten Sekundenverlauf.",
+          "prompt": "Welche Unterscheidung ist richtig?",
+          "hint": "Vergleiche den Aufbau energiereicher Stoffe mit der Nutzung bereits vorhandener Stoffe.",
+          "answers": [
+            {
+              "id": "confusion-a",
+              "text": "Ohne Licht müssen beide Vorgänge grundsätzlich unmöglich sein.",
+              "feedback": "Zellatmung ist nicht auf Licht als Energiezufuhr angewiesen. Beide Vorgänge haben unterschiedliche Bedingungen."
+            },
+            {
+              "id": "reasoned",
+              "text": "Die Lichtzufuhr fehlt; Zellatmung ist trotzdem möglich.",
+              "feedback": "Fotosynthese nutzt Lichtenergie. Zellatmung kann vorhandene energiereiche Stoffe auch ohne Licht nutzen; sie ist kein reiner Nachtvorgang."
+            },
+            {
+              "id": "confusion-b",
+              "text": "Im Dunkeln wird Licht durch Sauerstoff als Energiequelle ersetzt.",
+              "feedback": "Sauerstoff ist bei der üblichen pflanzlichen Zellatmung ein beteiligter Stoff. Er ist keine Ersatzlampe für Fotosynthese."
+            }
+          ],
+          "correct": "reasoned"
+        }
+      ]
     }
   ]
 }
