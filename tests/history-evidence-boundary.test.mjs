@@ -1,8 +1,19 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';
 import catalog from '../app/world-catalog.json' with {type:'json'};import graph from '../app/world-connections.json' with {type:'json'};import {CHALLENGE_BANK} from '../app/knowledge-challenge.ts';
 import {beforeHistoryEvidence,graphBeforeHistoryEvidence,topicBeforeHistoryEvidence,wholeHistoryEvidence,historyEvidenceBoundary as boundary} from './history-evidence-reference.mjs';
+import {inventoryBeforeHistoryEvidence,photosBeforeHistoryEvidence,photoIdsBeforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {collectInventory} from '../scripts/content-inventory.mjs';
 import {assertCurrentHistoryEvidenceRuntime,withHistoryEvidencePredecessorRuntime} from './history-evidence-runtime-reference.mjs';import {learningFingerprint} from '../build/learning-fingerprint.mjs';
-test('all212 current topics/274 questions/224 edges reconstruct the exact whole accepted M94 predecessor without hiding unrelated, reordered or mixed changes',()=>{
+test('current212-topic inventory and all74 complete rights records project only the exact named204/60 predecessors',()=>{
+ const inventory=collectInventory(),old=inventoryBeforeHistoryEvidence(inventory);assert.equal(old.records.filter(row=>row.family?.startsWith('topics-')).length,204);assert.equal(old.families.find(f=>f.id==='topics-history').count,34);
+ for(const mutate of[x=>x.records.find(r=>r.id==='topics-history:history-writing').dataHash='unknown',x=>x.records.find(r=>r.id==='topics-animals:animal-lion').dataHash='unknown',x=>x.records.find(r=>r.id==='topics-history:history-rosetta').id='unknown',x=>x.records.splice(x.records.findIndex(r=>r.id==='topics-history:history-rosetta'),1),x=>x.records.push(x.records.find(r=>r.id==='topics-history:history-rosetta'))]){
+  const bad=structuredClone(inventory);mutate(bad);assert.throws(()=>inventoryBeforeHistoryEvidence(bad));
+ }
+ const photos=JSON.parse(fs.readFileSync('app/world-photos.json','utf8'));assert.equal(Object.keys(photos).length,74);assert.equal(Object.keys(photosBeforeHistoryEvidence(photos)).length,60);assert.equal(boundary.newPhotoIds.length,14);
+ for(const mutate of[x=>delete x[boundary.newPhotoIds[0]],x=>x[boundary.newPhotoIds[0]].author='unknown',x=>x['honey-bee'].license='unknown',x=>x.unknown=structuredClone(x['honey-bee'])]){const bad=structuredClone(photos);mutate(bad);assert.throws(()=>photosBeforeHistoryEvidence(bad));}
+ assert(photoIdsBeforeHistoryEvidence([...Object.keys(photos),'unreviewed-future-photo']).includes('unreviewed-future-photo'),'unknown future identities remain visible');
+});
+test('all212 current topics/274 questions/226 edges reconstruct the exact whole accepted M94 predecessor without hiding unrelated, reordered or mixed changes',()=>{
  assert.equal(catalog.length,212);assert.equal(CHALLENGE_BANK.length,274);assert.equal(beforeHistoryEvidence(catalog).length,204);assert.equal(beforeHistoryEvidence(CHALLENGE_BANK).length,240);assert.equal(graphBeforeHistoryEvidence(graph).connections.length,196);
  assert.equal(wholeHistoryEvidence(beforeHistoryEvidence(catalog)),boundary.previousCatalogSHA256);
  for(const change of[rows=>rows[0].intro+=' unreviewed',rows=>rows.pop(),rows=>[rows[0],rows[1]]=[rows[1],rows[0]],rows=>rows.find(r=>r.id==='history-paper').sources.reverse(),rows=>rows.find(r=>r.id==='science-water-cycle').paragraphs[0]+=' unknown']){const bad=structuredClone(catalog);change(bad);assert.throws(()=>beforeHistoryEvidence(bad));}

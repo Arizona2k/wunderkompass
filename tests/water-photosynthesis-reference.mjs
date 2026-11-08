@@ -1,4 +1,5 @@
 import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 // Exact historical source/UI inverse; qualification requires named actual whole-input evidence.
 // Exact historical source/UI inverse; actual qualification is recorded in the named boundary.
 import assert from 'node:assert/strict';
@@ -41,6 +42,7 @@ export function thinkingBeforeWaterPhotosynthesis(thinking){
  return structuredClone(boundary.previousThinking);
 }
 export function dossiersBeforeWaterPhotosynthesis(items){
+ items=dossiersBeforeHistoryEvidence(items);
  if(items.length<=286)return items;
  assert.equal(items.length,288,'only two named individual dossiers were added');
  // Preparation only: this inverse does not qualify a product UI or manufacture a passed run.

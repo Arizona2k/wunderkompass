@@ -1,0 +1,2384 @@
+{
+  "schemaVersion": 1,
+  "status": "individual content only; current whole UI acceptance still pending",
+  "historyField": "historicalContentBeforeHistory20261108",
+  "previousWholeSHA256": "91d0802972b994d1406740df65dd9a3797c98a09f14fc6525406e1b9da053eb5",
+  "previous": [
+    {
+      "id": "topics-animals:animal-platypus",
+      "sha256": "ba4e0cbda46cf37305c73938968182a489d4924c2ec23f913c26d46cb0d3b38c"
+    },
+    {
+      "id": "topics-animals:animal-short-beaked-echidna",
+      "sha256": "612ab10dc02a45744810e406293dbfeb21fb18671244c10dfc64d32ad117e1fe"
+    },
+    {
+      "id": "topics-animals:animal-okapi",
+      "sha256": "f60905ba111f556a6e7bff4ab9e88ef38139c1a28bde9d26c4106bdf79edeffe"
+    },
+    {
+      "id": "topics-animals:animal-meerkat",
+      "sha256": "4fcc412d5ef94ca09a461c91902b6e41cae64bdb8443b6053a59bb1ab5f818ea"
+    },
+    {
+      "id": "topics-animals:animal-ring-tailed-lemur",
+      "sha256": "95f95d8ab395106f977317ec506a277a14902bd5ac2c0bd806cc3b40fc03bcb7"
+    },
+    {
+      "id": "topics-animals:animal-north-american-beaver",
+      "sha256": "db5dc4140433eb41aa4d34bd1ca014fa629f37d2c34e769a645859c056930040"
+    },
+    {
+      "id": "topics-animals:animal-walrus",
+      "sha256": "ca19c0d854e4d8ca5d6033106fdc17942cebf3827da580097126c5de1e3695c1"
+    },
+    {
+      "id": "topics-animals:animal-red-fox",
+      "sha256": "5e04efe808969a6e6fddde19e02c28b6e207507ae5cedb1d080cd7ab0708f4f7"
+    },
+    {
+      "id": "topics-animals:animal-raccoon",
+      "sha256": "b8cb16b8e2f478f0739d3d3b2e341a587d2492693e2075813302a88ed8cc2dd6"
+    },
+    {
+      "id": "topics-animals:animal-hedgehog",
+      "sha256": "d9cb35e94292eba2f49997f32cc643c72561596f7561c4b4dc290e3c2e81d506"
+    },
+    {
+      "id": "topics-animals:animal-barn-owl",
+      "sha256": "c43b1c0c04637c7962255580d2e8c5644e7bf7caeb270efff7b3255d447ec3ed"
+    },
+    {
+      "id": "topics-animals:animal-kingfisher",
+      "sha256": "e7ae81fa613aa9c17efd193e391e74ce403653ec54a4ba00d439ddcf3af4b85c"
+    },
+    {
+      "id": "topics-animals:animal-ostrich",
+      "sha256": "8720bd13cdce9611169b4279b53b90e831a799933061641595355243a69eba3b"
+    },
+    {
+      "id": "topics-animals:animal-atlantic-puffin",
+      "sha256": "5cac3289a215edcedb3d037e5031787761c2dd07c6a7fc5a9c5a98c571c50757"
+    },
+    {
+      "id": "topics-animals:animal-common-chameleon",
+      "sha256": "43e07020193c63a689b075614f4b3abaf67cf5fe1275871cb7a1bc84f63efad8"
+    },
+    {
+      "id": "topics-animals:animal-fire-salamander",
+      "sha256": "cb7a6d1806653642d9394b476cbbc9499090922698a7fbf45810decd6f92ee03"
+    },
+    {
+      "id": "topics-animals:animal-common-frog",
+      "sha256": "a5ec2093df1e56249317461353766acd3b4d83f59b70905d1a15c5cd820ac898"
+    },
+    {
+      "id": "topics-animals:animal-eastern-clown-anemonefish",
+      "sha256": "28b8d7167e0a176d4f5f2bfee0dabddca72650c480ff2535ae67b6e405542393"
+    },
+    {
+      "id": "topics-animals:animal-european-eel",
+      "sha256": "4e4d44d3171654760c2b7768d9e1b0d466043da733e7be3097e452381b9b6cf9"
+    },
+    {
+      "id": "topics-animals:animal-monarch-butterfly",
+      "sha256": "d1897f223312af17aa543043b03ffb578092ba7c207d2c5a583005119ca2b8c6"
+    },
+    {
+      "id": "topics-animals:animal-garden-snail",
+      "sha256": "c7660e0f256cfce675bb2ae4e73883a35bc011945c0ff521083221b89259f793"
+    },
+    {
+      "id": "topics-animals:animal-european-lobster",
+      "sha256": "ec9081ad65af09d0193a8a40b137e5b3f4765d001ecbdce44f9c0d8374a4a4d8"
+    },
+    {
+      "id": "topics-animals:animal-common-cuttlefish",
+      "sha256": "9923d86c90420ec79d113da100fdf4d287403e59457fb4605309c52b522b7377"
+    },
+    {
+      "id": "topics-animals:animal-short-snouted-seahorse",
+      "sha256": "a0b38bd25f05e9ff2e75515b2a845721d0cbb4e2b477d482d22fa056af59628d"
+    },
+    {
+      "id": "topics-animals:animal-african-savanna-elephant",
+      "sha256": "ca1543d571d4a91bb03d0d26e25dcf0f2cde1ef438cdff68950d723a0fa4ba6d"
+    },
+    {
+      "id": "topics-animals:animal-lion",
+      "sha256": "e37b1ecf913336e98d9fe788d1584fd1ec26ecc53852dc29fe46b40c6f2c07a9"
+    },
+    {
+      "id": "topics-animals:animal-cheetah",
+      "sha256": "2065959747af9e3c40ec30a04fb05cbde0f33de36b7d077e72b5b6ae667cabb0"
+    },
+    {
+      "id": "topics-animals:animal-bengal-tiger",
+      "sha256": "ab68765c74d131389a49e2e710643e2b80cfea99c4499543412efd0a5a868c48"
+    },
+    {
+      "id": "topics-animals:animal-giraffe",
+      "sha256": "b0421b44079102c8d8601d836ccb356c1500e53b4abd531682586166b9b348a6"
+    },
+    {
+      "id": "topics-animals:animal-giant-panda",
+      "sha256": "2d5ade2471bc79b41f3dd6f5268e7a1143f531fccbd27d206fc68c77450caa21"
+    },
+    {
+      "id": "topics-animals:animal-western-lowland-gorilla",
+      "sha256": "40aa6a05385b7953fb02314a91f1d940871400bb808bb3e913e7992dfb0045fd"
+    },
+    {
+      "id": "topics-animals:animal-bornean-orangutan",
+      "sha256": "08728e2acfaa8abd4c9b6a620b85ad1064dddf4cbedf6129965deb840d46fa12"
+    },
+    {
+      "id": "topics-animals:animal-polar-bear",
+      "sha256": "6e5e0ba2eca513da219c0328ea2a0a18322432cad3df853c2725b9e0b8616cc2"
+    },
+    {
+      "id": "topics-animals:animal-emperor-penguin",
+      "sha256": "721c7aab8146b65e00ea7a5e86af8ffeeae373f801c88f22cf84b4b24a164f90"
+    },
+    {
+      "id": "topics-animals:animal-blue-whale",
+      "sha256": "e53785e6c8a8570130af58fde2a8e9774cfaaee36f8faf4045c5ead258b6884c"
+    },
+    {
+      "id": "topics-animals:animal-common-bottlenose-dolphin",
+      "sha256": "80a2f52a7482fdfbb87376312da7e995fb65fad7be879dd853873eccec112bec"
+    },
+    {
+      "id": "topics-animals:animal-orca",
+      "sha256": "0d129a82f3ac4ae2522022c49a2ef6525c77f24a3353d59a473d51fd4f0e9636"
+    },
+    {
+      "id": "topics-animals:animal-common-octopus",
+      "sha256": "30a8f98a564c6cc9f631e0a306837da4001b8424dd7b3420cc47304a7df89a63"
+    },
+    {
+      "id": "topics-animals:animal-green-sea-turtle",
+      "sha256": "045babaa497e709c377a780a33a95bfb1f0a9b49e55ffc0b4f6fe607deeeda27"
+    },
+    {
+      "id": "topics-animals:animal-red-kangaroo",
+      "sha256": "855805fe18426514549909b9aecf64188f503590563778488fa67d7f4a87d497"
+    },
+    {
+      "id": "topics-animals:animal-koala",
+      "sha256": "00e2631923f0c47eea17e3ccfbdd49defa88d252b03d11aea6cbd58c6f6afd93"
+    },
+    {
+      "id": "topics-animals:animal-jaguar",
+      "sha256": "af6b8e05e3174d1d8aae92c3e5d5d76ae7f9faf66d5c81989d7a2e96c6cc48e2"
+    },
+    {
+      "id": "topics-animals:animal-honey-bee",
+      "sha256": "ff66344086dccfcc9fff0bd5221065f9ebc246175596a3b4a48f8d7f728a6331"
+    },
+    {
+      "id": "topics-animals:animal-axolotl",
+      "sha256": "ff4d470d26480c3848651028f520a3c6e794e7ce83ecb822692368ca1a1d4e94"
+    },
+    {
+      "id": "topics-animals:animal-whale-shark",
+      "sha256": "97d31160b6d3c9d6e99034f641235eb794b2f40a87227046d4f029620a07d4b0"
+    },
+    {
+      "id": "topics-animals:animal-garden-cross-spider",
+      "sha256": "fdef60e8a3feea4ecefb63b0269d8be21bcabf67d3ddedf6c2576c4e02a7f404"
+    },
+    {
+      "id": "topics-animals:animal-dromedary",
+      "sha256": "7c82aa92ec936e9dbdd88f5d18f87bd3a181f4e8305cb276a30850149ed90bae"
+    },
+    {
+      "id": "topics-animals:animal-white-tailed-eagle",
+      "sha256": "46f5fb9e6f23a41333b0f7f09aba52eede15464eea0a27163631edd566a1c318"
+    },
+    {
+      "id": "topics-history:history-khipu",
+      "sha256": "cc4251d34f349c1a6cf157af7d2cd12fb144ddd5bee32c26364a6f5a7448c963"
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "sha256": "126e1862db9c0d42a00152929cce73c072ad6a8dfe1b767783d1769f485c5131"
+    },
+    {
+      "id": "topics-history:history-writing",
+      "sha256": "eeffbb2e4e3f7def2276789183246fbcc9a17d9be5a8fd933bf05d7da7ae7c2b"
+    },
+    {
+      "id": "topics-inventions:invention-camera",
+      "sha256": "e93329db4d43f6a26e2026c6ba02f52259eba59bbc644c903e261ccb4a38938c"
+    },
+    {
+      "id": "topics-inventions:invention-telescope",
+      "sha256": "f5300c5a6ee246a92df19dd80e054133582592ca6a6a52299b1a3166c8b3bc1b"
+    },
+    {
+      "id": "topics-inventions:invention-microscope",
+      "sha256": "67880f8d26caa580cde569a5b6176fc513b5d4d2d9b660e8248208a4ed2fc896"
+    },
+    {
+      "id": "topics-people:person-mary_anning",
+      "sha256": "fb250c18337e29540a922ad7822e77c1e3a7fce6ad5b9454152212e3de9d2db4"
+    },
+    {
+      "id": "topics-people:person-ibn_al_haytham",
+      "sha256": "bc6bdf228f884d2f912f207a2ba7096941f24996cf88c52d820e43af75c2346d"
+    },
+    {
+      "id": "topics-inventions:invention-battery",
+      "sha256": "7c5fc7fe8892ca9140eefeb4305291b879cc0da239bb16db956759633e839be2"
+    },
+    {
+      "id": "topics-inventions:invention-generator",
+      "sha256": "f87fae0b54f6b6fec0a6af81904f369595333c7a5ada330a4688bf762f8700f4"
+    },
+    {
+      "id": "topics-inventions:invention-transistor",
+      "sha256": "9ccbf0ff27e6b57ef0f00d88e71bbf6ae1973c5496f2561b313f26acf7db6b8a"
+    },
+    {
+      "id": "topics-inventions:invention-refrigerator",
+      "sha256": "508df262a2ebc2db859f8d30d3196f0044c7e4cb1f844e4ec3505aa4b8862266"
+    },
+    {
+      "id": "topics-inventions:invention-bicycle",
+      "sha256": "305c32cdc65ff9a75e2c567161e379019a82017a59f6b2b2673deeac8d081c82"
+    },
+    {
+      "id": "topics-inventions:invention-elevator",
+      "sha256": "d59abf2bf838785f8bc6299877513a9d40d83b5e156fff30a71887e1f1913e49"
+    },
+    {
+      "id": "topics-inventions:invention-seismograph",
+      "sha256": "7ebfab9dbf7014921c1abc9d961b9d9290db7d97b3f2dec037c3646db289235d"
+    },
+    {
+      "id": "topics-inventions:invention-3d-printing",
+      "sha256": "161f8c2d3e0d00a54c456f4adcc13fa0c3bf065bd131d4e31da8c2906342e55c"
+    },
+    {
+      "id": "topics-inventions:invention-sewing-machine",
+      "sha256": "66de06e5c2ae2f309463eec8481135dcf73e08321ee277cc9848d5ea9bb20f9c"
+    },
+    {
+      "id": "topics-buildings:building-pont-du-gard",
+      "sha256": "4041c4a0078867ea06db6a0e6c7cf1f0ad6f787cdb16ba31bf687d6ee4013198"
+    },
+    {
+      "id": "topics-buildings:building-great-zimbabwe",
+      "sha256": "8b9b7163ac61442f6dd460adc92660ef3761c7f2981f4b12ed73b2e9b21dbce8"
+    },
+    {
+      "id": "topics-buildings:building-horyu-ji",
+      "sha256": "f055ca674bf1cb0a9f03745bd0e348252f98f66c8fb57bd1bfbab7f0d1e6b264"
+    },
+    {
+      "id": "topics-buildings:building-djenne-mosque",
+      "sha256": "c66ca227d8f5483967b5659864eda42477d50472b2855dccc0ee1675d2c1e3a1"
+    },
+    {
+      "id": "topics-buildings:building-lalibela",
+      "sha256": "fbb2282685e5205dda9544d86a37bb102b459a9b8a87a062776e0ce981c4ac27"
+    },
+    {
+      "id": "topics-buildings:building-angkor-wat",
+      "sha256": "5e6545c4803087adef3a149328f03b7dbb20ac598b61c098a767667ad8b9910a"
+    },
+    {
+      "id": "topics-buildings:building-palenque",
+      "sha256": "97d1aca65aa7c6b92224c4119621877bacc636742a209818176f51aa8aa5a482"
+    },
+    {
+      "id": "topics-buildings:building-sydney-opera",
+      "sha256": "6682cd96cea77589d132489702e033c2d0e3d9a237c429bd88c7673fd4c866d7"
+    },
+    {
+      "id": "topics-science:science-pressure",
+      "sha256": "4cbab612486d3e2caabd484cb50cfff71849036a4a0cb2ba28dae431875e92fa"
+    },
+    {
+      "id": "topics-science:science-friction",
+      "sha256": "4d57ffd8de3941889a6dd282249124be54b2ffaf58e8dc62deec6e33e6e6ecda"
+    },
+    {
+      "id": "topics-science:science-buoyancy",
+      "sha256": "f5f33ce0d13f326a8101f0c5527799eb7ec7f99cc68cd837dc05f5fd40a76743"
+    },
+    {
+      "id": "topics-science:science-surface-tension",
+      "sha256": "def588e2fca58cc4f1ad134c74b9c158b19daf8138811764adc0d0dc25a98297"
+    },
+    {
+      "id": "topics-science:science-capillarity",
+      "sha256": "4ba12aafa6419fe1cecec5fbcf0eddfdfadb75b91b6fc8be695e43061f845f04"
+    },
+    {
+      "id": "topics-science:science-diffusion",
+      "sha256": "810839ea58f084716305681b37b74542fd674d6f89350b6ff6ec7769dff12c96"
+    },
+    {
+      "id": "topics-science:science-chromatography",
+      "sha256": "6e9def6966c5575f58f077e28c067e76bc94b817ccd0ff8ee79316cabee5d5b8"
+    },
+    {
+      "id": "topics-science:science-heat-transfer",
+      "sha256": "131d3316053d35dac586502c01714ab97254be07e01baa3c4c6abcd6709c2ed9"
+    },
+    {
+      "id": "topics-science:science-lever",
+      "sha256": "3e8b341a9dd3bcc6e1c60c69ccf62728945b7b96646751baf030f8610ac5debd"
+    },
+    {
+      "id": "topics-science:science-elasticity",
+      "sha256": "49808a8e67d6f778b015065a7eb0939c8031287b4e6e021abe2b6b12c97b0be9"
+    },
+    {
+      "id": "topics-science:science-pendulum",
+      "sha256": "83c58930b66a410ac9820f7982d81d6d72fa519a0e3a29c8d73ab66ca3ec8ebb"
+    },
+    {
+      "id": "topics-science:science-resonance",
+      "sha256": "c8473d2b0948cdfec399d8ffccf1c6c2f5c9653c25aedcbc233f2b1548718b47"
+    },
+    {
+      "id": "topics-science:science-probability",
+      "sha256": "69f1417a346d94b000a2fca63bff349700510136bb657e803eb7fb4faeeb19a9"
+    },
+    {
+      "id": "topics-science:science-symmetry",
+      "sha256": "602bd54b54671ebdef264fc595274b69eaf66a4da30e95ff17f61cddec18e9de"
+    },
+    {
+      "id": "topics-science:science-fractals",
+      "sha256": "a6c78e29acc920b8cf3b585f5c4ac81447c0cddac5b2a9eac06c0d95e8af8806"
+    },
+    {
+      "id": "topics-science:science-angle",
+      "sha256": "2787565e001bf7c10b5819642723caef73637d1de292b3d6f243ab45b51c7606"
+    },
+    {
+      "id": "topics-science:science-encryption",
+      "sha256": "8dbffed42cad3e41600fdaab9c3bf6487e3cdd031846bbcb5a84910b3a15453d"
+    },
+    {
+      "id": "topics-science:science-checksum",
+      "sha256": "4390744076a1aae5561e7d5d8d250cedaed3f8bdf502c183d324091c580a7904"
+    },
+    {
+      "id": "topics-science:science-cell",
+      "sha256": "34d5cfe6ecc097b98c4d0afee6c4c7f5946ef1753ac59ba033ada79e076e8c0f"
+    },
+    {
+      "id": "topics-science:science-fusion",
+      "sha256": "c243326c45f7f7c0e9ff608c5a3c8d669f688baec03eb72c64c8b2ca02fe4edf"
+    },
+    {
+      "id": "topics-science:science-galaxy",
+      "sha256": "9adac61aebf5f88005d57de713912298828ef41e7d11fbde7887fd81e779421d"
+    },
+    {
+      "id": "topics-science:science-comet",
+      "sha256": "a5c8b26da9df3f9b5394b1fe8942d9e90ddb0ab4c6f61c4ba28bd7ad40c38581"
+    },
+    {
+      "id": "topics-science:science-exoplanet",
+      "sha256": "6fe183d2a760fac275c7b841ea2f01675d8377052ff9939d5acb4c3c3ee47ac8"
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "sha256": "78c01ef208c161e4aa8cbebd58595add355a5ee2fc7648d2948db8386f54441c"
+    },
+    {
+      "id": "topics-people:person-maria_sibylla_merian",
+      "sha256": "30f5cd21729d23f21d9cbda20804961b4515b058f1a3c5b2beaa63247dd61c16"
+    },
+    {
+      "id": "topics-people:person-inge_lehmann",
+      "sha256": "d8590e0480364cacf007143475917ac59a4ec6c04254b71da97d55d995a886c3"
+    },
+    {
+      "id": "words:Meter",
+      "sha256": "831731a8161fe8a3cfdadba5aeb3603fd4c42e21c3fc69d27609b987b44f031c"
+    },
+    {
+      "id": "words:Kilogramm",
+      "sha256": "ddc2c52e7f6a985a6dd2626ecf0f1479d7795d629aa0e56ba8c24e67a244f96e"
+    },
+    {
+      "id": "words:Sekunde",
+      "sha256": "88a68de47ca86f253da34d8412d38218108b72cf92269ce28a0cf54dd06123ea"
+    },
+    {
+      "id": "words:Ampere",
+      "sha256": "26164e9b67a8567dd87e07e58806ec0ea8bf70f7942f18da86c59ae1d9b32d81"
+    },
+    {
+      "id": "words:Kelvin",
+      "sha256": "6d85ac3e28416d5a972bbf725b85de4152824e3571a73aa57a7a81b63e9e59f5"
+    },
+    {
+      "id": "words:Mol",
+      "sha256": "f40d6e653b256f42c08bab39e0637abb65b9a86d4c1abe6bce72f1802a02a4fb"
+    },
+    {
+      "id": "words:Candela",
+      "sha256": "81ade1f21e24482b48c749af244d36e22bd3fb1942b36461ff325c15cba5b7aa"
+    },
+    {
+      "id": "words:Wärme",
+      "sha256": "2cb0160851fe04fc1ff678d92bf532273abe99d3dc39328acd917931fa2fc1cc"
+    },
+    {
+      "id": "words:Wärmeleitung",
+      "sha256": "817b8c61c73fc4df9e32107f4b2c8e301be1f8c06ed8ce8c5a2fad7cd175bb24"
+    },
+    {
+      "id": "words:Konvektion",
+      "sha256": "eda451a270b0b96547f31d2455dd467e7c010809f2c9bec1a848de02d97e0c10"
+    },
+    {
+      "id": "words:Wärmestrahlung",
+      "sha256": "c18e97b7fdf18a5a1e2aec9a90b923cdd1438132f25e59d48742e94fa32859b9"
+    },
+    {
+      "id": "why:30",
+      "sha256": "8fe133f65c3813a8f3df4cfafc6939fdf61376e99d257adf5fdc514dbda83423"
+    },
+    {
+      "id": "why:31",
+      "sha256": "768025a3b6ccf0d2da1d350c5575f9db1aaa33ecdf67eebe7b1e312436461136"
+    },
+    {
+      "id": "words:Reflexion",
+      "sha256": "c8ae8eacb2aa27008329e4184a483ff73c5b880f62b290b36827f6b3f0f24557"
+    },
+    {
+      "id": "words:Absorption",
+      "sha256": "3ac8e6f94a84d6e4709b88dd530c7e4b728eac928bfb8b9a91ccccb6f33a71da"
+    },
+    {
+      "id": "words:Brechung",
+      "sha256": "f748bc7e442d6e5e4211ffeb139929af740aa352f430e8ce01fa000106b383a0"
+    },
+    {
+      "id": "words:Streuung",
+      "sha256": "7f83ef88d6369bcc9a17e61844e38ddeca49c7c2e15c825d4e53780fe7fef007"
+    },
+    {
+      "id": "words:Photon",
+      "sha256": "f2b3067b0b100966a994e82fe6f8febd4b7a4b2ec93a8dbd34303cfff30a198a"
+    },
+    {
+      "id": "words:Strahlung",
+      "sha256": "51a030f6b4f8bc2891cef20b82b315ea4c97ee95ff018ea808d000a5d1ba401b"
+    },
+    {
+      "id": "words:Spektrum",
+      "sha256": "13f2b647020ca46882f323f21673af628b9f7ca4f3b141b009b189ace8772f74"
+    },
+    {
+      "id": "words:Infrarot",
+      "sha256": "f9711d0a9f81927be8e2b8865391d5a2fba7e8a1e2df78827d30d3d21a9e7cee"
+    },
+    {
+      "id": "words:Frequenz",
+      "sha256": "8baf8386b501b7d828f16e9ffcd458fcbee485cde294fdae555de39e46644af8"
+    },
+    {
+      "id": "words:Wellenlänge",
+      "sha256": "5ff287305b5ea81c44f60e1a34d8eac29886705831cb2f294d63562d36b706b9"
+    },
+    {
+      "id": "words:Energie",
+      "sha256": "25459250cc8d3fffd52c5b53da9f18db252c30503faf060812772fe0b250bd36"
+    },
+    {
+      "id": "words:Polarisation",
+      "sha256": "53cd00b3c4d7d1f09aeb67f907c27bf8d2d7d4b8b1b03927af3ee7132b9bab44"
+    },
+    {
+      "id": "why:32",
+      "sha256": "be610af60e55aa20db29e9dcb9fd5a71dafd56f04104569089a2e6dfb4e53aef"
+    },
+    {
+      "id": "why:33",
+      "sha256": "31e1b4978fa85ed9067168d624eba1ff1dab76040d039ac64d5368b4eec0b38a"
+    },
+    {
+      "id": "words:Kohäsion",
+      "sha256": "f4ff99f544265cde5efdb39f20d9bfc536e19b297a6ee9115f8446a6151d6cd5"
+    },
+    {
+      "id": "words:Adhäsion",
+      "sha256": "acf5c4858fbe020e33a02acdbf168db4e6de3314abc04aa701189ca11e2ab0d1"
+    },
+    {
+      "id": "words:Oberflächenspannung",
+      "sha256": "7bef754efb33afbbf935608af27f63b6e563afaf0a637b23a0c985d8b84a6051"
+    },
+    {
+      "id": "words:Kapillarwirkung",
+      "sha256": "ab04accc5668a5e96970d4215eac30bb89ef77137b8feebf2e2b0d684bf7c165"
+    },
+    {
+      "id": "words:Dichte",
+      "sha256": "a4bad143bd2727737ec474b00ea713cb80148dc1593a7d1bd3efae7628d35f9a"
+    },
+    {
+      "id": "why:34",
+      "sha256": "307c5a80067faef0935639d7904389bc29bdfbba3973ee449a0add797c1ce48d"
+    },
+    {
+      "id": "why:35",
+      "sha256": "9c7b3021ea6f28737d5260fcdc8415267010e2ab2789deab1c969582044101d0"
+    },
+    {
+      "id": "why:36",
+      "sha256": "2a7dd1a77c15f4c84528306c2b469bcd3cb76e7ef46864ec9d7eb8baf225d471"
+    },
+    {
+      "id": "words:Atom",
+      "sha256": "cf4e6465e6128f03c3438347ea9ae218f987ebc6f3724f435ab214fa351e029c"
+    },
+    {
+      "id": "words:Isotop",
+      "sha256": "6895d3f7415ae4c7e4912015464dd66014a3fe8a4a46b68d92e02288698c0960"
+    },
+    {
+      "id": "words:Proton",
+      "sha256": "ce49119ffd98142470b92b881f9f9e1af5369de7efd82499a2a80b433d8610a5"
+    },
+    {
+      "id": "words:Elektron",
+      "sha256": "f10d7155d22b0880d99fd2e1bb9cdacb4537aacec548220ba9efc7d7b8414f57"
+    },
+    {
+      "id": "words:Neutron",
+      "sha256": "08151ffca40d4034a7e1a85ad7d44773cc98bf2a94db6c475bae5aba3f1b2306"
+    },
+    {
+      "id": "words:Kraft",
+      "sha256": "795e6b0f7a1292b333ce427772a300dcdb76c5215d1f078035572116392d8c2b"
+    },
+    {
+      "id": "words:Trägheit",
+      "sha256": "78f1a551630de5411ecf0f410bd324f7cee813d7c1e19971b4f6b021d6e5eb83"
+    },
+    {
+      "id": "words:Geschwindigkeit",
+      "sha256": "9c5970e0c995e6e6396d408e59b7b58b8a7e6abb7cdf82dca8004589e26662b4"
+    },
+    {
+      "id": "words:Beschleunigung",
+      "sha256": "0f522d97f553b1385e4ddc879a9af9a4a56c60f12fc8a280fef7adf26c25ef31"
+    },
+    {
+      "id": "why:37",
+      "sha256": "bd8555f0a21d1861b03d72bb069695b93a9f4a224e8d1e72691c5c4efa1112f0"
+    },
+    {
+      "id": "why:38",
+      "sha256": "7764a6993b623638bbca2342bef984e899b3bcc0c2fcef6c80996ce073429177"
+    },
+    {
+      "id": "why:39",
+      "sha256": "9dd9045721b25bda3cb6606f8fd9d78e67249253ae71ccd9195b21ac8a9e9c5d"
+    },
+    {
+      "id": "words:Zelle",
+      "sha256": "fa108c195ed85b1e15675161e867f59e1c379ab17cbbf38e740dcc2ca0d99e16"
+    },
+    {
+      "id": "words:Zellmembran",
+      "sha256": "5b571aaf76b6e27d58817a5f370fd2a854415f5a351041f8a041d702414ebdf3"
+    },
+    {
+      "id": "words:Zellkern",
+      "sha256": "6d86c41d510dd0a89790e2830078ddfc705b88aa526c85c47f7660a55b6b624d"
+    },
+    {
+      "id": "words:Mitochondrium",
+      "sha256": "76af335034b6090e1aaee5f4277e52a5c23d506ee3d9ff235512ba1b2d6e9a16"
+    },
+    {
+      "id": "words:Eukaryot",
+      "sha256": "f4325afc7ddb1f5cc3bafbea781c858f28ade767c84ce6a30c674e3dbe94c131"
+    },
+    {
+      "id": "words:Prokaryot",
+      "sha256": "23fc3a8bd2504231a268d5bb2e598efbe05a84c5eca5789e6e83c112a0507740"
+    },
+    {
+      "id": "words:DNA",
+      "sha256": "0b0e8f298c08c646deb224312ff33bffad5f2fdc2efd4cb0b6c0c4c3aee0168c"
+    },
+    {
+      "id": "words:Genom",
+      "sha256": "1b987c96511c71b26a7ffc797b71c410213971c910be10a6a4768c62f6c22305"
+    },
+    {
+      "id": "why:40",
+      "sha256": "97b46b26b1fdf6c5114111a6a1fb9b8d5c8e81b436cb008cf1201e3de3f85786"
+    },
+    {
+      "id": "why:41",
+      "sha256": "8065b1eb566ee77075fd4a839833bef4d4d56e5024146f6fa9c1b7378fd7065a"
+    },
+    {
+      "id": "words:Gen",
+      "sha256": "b1378c6d8dd650dd84dbbd2cd01076473b0284fadcd6c3ef454ac7dfaef9d42a"
+    },
+    {
+      "id": "words:Chromosom",
+      "sha256": "7aa6f1e8bded61010c92bf9ef4312ba4c27bcb92829d037c4550fe848086fc00"
+    },
+    {
+      "id": "words:Protein",
+      "sha256": "7da11321b1bb976ef0ad1378781b2527256d27e8c7fb940ddd70ad8ef8d67340"
+    },
+    {
+      "id": "words:Enzym",
+      "sha256": "d8505d7b2ae71b68ed2673301cabef2d24e561256a5fddb48b5c86a6c384d194"
+    },
+    {
+      "id": "words:Mutation",
+      "sha256": "e970cd96372f0f2a21b4e014c6478830ea60bed6c2670b1b72262fdd29da29ee"
+    },
+    {
+      "id": "words:Nukleotid",
+      "sha256": "9c7904732f1570df2cf141bffdf1887cda0fc6822a5a6bf38ce5d484bd4d2ee8"
+    },
+    {
+      "id": "words:RNA",
+      "sha256": "49661bee44536c91bd9f036eed0f3a4f97ce5eced1a67e349c12d24c63b54142"
+    },
+    {
+      "id": "words:Bakterium",
+      "sha256": "07e0333967a25052e4ae05611c8f1440700cc9c16a0b207b731cf41cf31cc074"
+    },
+    {
+      "id": "why:42",
+      "sha256": "5b08ca2e925750c2462f15d766f5971ffe67b7d3a8e4a9bb30ac2899e5e86a03"
+    },
+    {
+      "id": "why:43",
+      "sha256": "2da8483db4555120dc614a6a6f8289c8d734a34da8ae399e723596057f04d7d9"
+    },
+    {
+      "id": "words:Messwert",
+      "sha256": "7d30db1b127ab18a0e6a903c6d4deecfe3cf27eee337b7af1cb05fb04cdf367c"
+    },
+    {
+      "id": "words:Messunsicherheit",
+      "sha256": "5427e023d8b194609306a95f968ccc301f3ed2b7bd3091857c8297516705d563"
+    },
+    {
+      "id": "words:Stichprobe",
+      "sha256": "54b046d1b87022ff71839d6d303d2017ff3fdde3ecd9d03bc43a2b4f7b3825a5"
+    },
+    {
+      "id": "words:Mittelwert",
+      "sha256": "a46801dc9dfa706b6760ced24694dd207e2ca4957b67a2e000a03be468b254ee"
+    },
+    {
+      "id": "words:Median",
+      "sha256": "d10719288f6d8677cb8d9955ca71c9373c0b584d9b0d73eb1e3f8b8f43dde759"
+    },
+    {
+      "id": "words:Wahrscheinlichkeit",
+      "sha256": "43a4aff321fafc773ad61ed4836c4b3542e080bc1859260e69744cedeb49a4a6"
+    },
+    {
+      "id": "words:Skala",
+      "sha256": "d59b136dc26e03366e83b466069dc195034fc27f7f4dda0e6fd2ab5b7eb84a05"
+    },
+    {
+      "id": "words:Maßstab",
+      "sha256": "cca7c2bbe643206afcfef00a4b70b1b9fc0778e7c7efa3eb9f9a5fbf4185008f"
+    },
+    {
+      "id": "why:44",
+      "sha256": "66f45b45754c84c2d1c476089323b4248104092ba83201669a8cfcfd3d01f760"
+    },
+    {
+      "id": "why:45",
+      "sha256": "bc38a51c9f292c8c540165acd71af0d91f2dc8c738da9951a20f49e108f2e101"
+    },
+    {
+      "id": "why:46",
+      "sha256": "3e6ecff6d28a71892a9842c67ad635c730a25a80723010a09e5cda9c23de8c72"
+    },
+    {
+      "id": "words:Algorithmus",
+      "sha256": "9efa5f29499fbac2ea28969b1c14cd17e57a3f050f549aad8365127764156dae"
+    },
+    {
+      "id": "words:Bit",
+      "sha256": "88d5e6d13879f8cec7eb4e48477dc1eb3c31b84ccc61708158c25091832b8512"
+    },
+    {
+      "id": "words:Byte",
+      "sha256": "a7fc4482134372e2886ab3e31db472e9b1f23b48439cfb6e18303535387dd571"
+    },
+    {
+      "id": "words:Verschlüsselung",
+      "sha256": "7aa91cfbd830732433714c5d4659701bbc40462773c8e17e8ef82eae92c2d8a2"
+    },
+    {
+      "id": "words:Schlüssel",
+      "sha256": "46caa4c2fbed105fd23bb4dea1bd79bbd1b63e2d5b72943abbe3e4863309c6cc"
+    },
+    {
+      "id": "words:Prüfsumme",
+      "sha256": "0b411d86870c493c43d415f2457e0876fbc0abadfae7f433930c34780d0a5175"
+    },
+    {
+      "id": "words:Hashfunktion",
+      "sha256": "964160b0bf73b7b068360327cb3b36fc99d3d556313e8dc7c5b7b6a27391e4d6"
+    },
+    {
+      "id": "words:Datenstruktur",
+      "sha256": "675656af4102958f832c2f6295375a8cf149bdec79495c24133e4df2db61ed9a"
+    },
+    {
+      "id": "words:Klartext",
+      "sha256": "2ecaed877b47926764e02062d80fb53433b88b0866198945402291d95d11eba8"
+    },
+    {
+      "id": "why:47",
+      "sha256": "edd14aa86e7d889d7a18ebbe53ce3a7c0bbc55fab3e343b9f157073063884a14"
+    },
+    {
+      "id": "why:48",
+      "sha256": "3cf3d3644bc3838e4dcb0db53d97ecd8405047e0ec8d9fe86c8ffdf573013d45"
+    },
+    {
+      "id": "why:49",
+      "sha256": "122d1778e79476338828d3310c9dbe9c31b6b39019cc03a3f4df21ed4fc75f7e"
+    },
+    {
+      "id": "words:Asteroid",
+      "sha256": "27939b1d41fd19bce6e9cb857298cd27689c9c8a33e006c656a8e8e5d0ba7bb0"
+    },
+    {
+      "id": "words:Komet",
+      "sha256": "2cf163e42c62b614afc865882b81293304f57f628c3aa9c2cdc7a1c38af612e7"
+    },
+    {
+      "id": "words:Exoplanet",
+      "sha256": "5d6a67328ecb60e9bc8b2cc00dccda3e009dfd6c1bf6256ceabcf0bcc181d483"
+    },
+    {
+      "id": "words:Transit",
+      "sha256": "7586977031ab115d8691cf743ebcd9608aa1afdb78d2e13993983c1a5315821c"
+    },
+    {
+      "id": "words:Galaxie",
+      "sha256": "0dd9a862a887c1e6684a031a9d220dce5d5dc4f5944f110cf6f8624ebfa3c285"
+    },
+    {
+      "id": "words:Lichtjahr",
+      "sha256": "d3aa9188348c9466c57e0b2bf65f1480d1aa67c04c1a76d76f3cb5f4c035e755"
+    },
+    {
+      "id": "why:51",
+      "sha256": "74d909fcde49cbad3c3c61f5ba750badf84fb78405f4f0dfd5558e584aa8f66d"
+    },
+    {
+      "id": "why:50",
+      "sha256": "fcc1e54f2c5d023af6415cdae89aae56decad4764f966fce4424aa944da96e26"
+    },
+    {
+      "id": "words:Evolution",
+      "sha256": "33a36180f108ba17cd1ffa66f3a65fe52fd889ab901cfaf6cc88c34ba54f9e0d"
+    },
+    {
+      "id": "words:Mikroorganismus",
+      "sha256": "122c945d597eda30e6df67e9f002706a4106167a2172de8ee6f3046e64addc92"
+    },
+    {
+      "id": "words:Ökosystem",
+      "sha256": "eec509bad2ec38f65994c4d4d04660897eeeb114b2d0be52fe24f377cfef6ea9"
+    },
+    {
+      "id": "words:Zersetzung",
+      "sha256": "194421ddde32de9cf5e3c24b00aeed50d35d218364ae95e8b32bb20f84680f26"
+    },
+    {
+      "id": "words:Kohlenstoffkreislauf",
+      "sha256": "ecdac1636d3cac7b7b05374c158217640d8c38cdf7b9002eb6a0e3d1ab03a7fd"
+    },
+    {
+      "id": "words:Dürre",
+      "sha256": "daf68eb49450c575229ee39df78573c320211b9d1bfbd6d04db0b917b25a85f5"
+    },
+    {
+      "id": "words:Hypothese",
+      "sha256": "788060f47300d95b0f299443500ef8e1441676479a960dbe79ecd10d8df8fe84"
+    },
+    {
+      "id": "words:Topografie",
+      "sha256": "222da64130d838333f6d89ac75052ebc3466c6db1435609c83d08d757c619279"
+    },
+    {
+      "id": "words:Geoid",
+      "sha256": "12bb82e7555c15745ccaedac397f1dc1a4e8c23d82f3b7529e0c5a2ef8d4fbc4"
+    },
+    {
+      "id": "words:Koordinate",
+      "sha256": "ee132570dbc62404c0a5d85b814e5c98e718c54e1fd4017d5f7094240418af5b"
+    },
+    {
+      "id": "words:Kartenprojektion",
+      "sha256": "7224d01ea9dfac21c668e7147bbf6126bb872361ea399811b3cf448e90bd2da6"
+    },
+    {
+      "id": "words:Kernfusion",
+      "sha256": "cc2dbd2d8652b952410ddfeec3690f02e08d9ad3156127706ebcc53c6e4c4618"
+    },
+    {
+      "id": "words:Kernspaltung",
+      "sha256": "6e650ff24df2ae4eb23c4a4e97988f12c3db9443370f053555688428e5d97971"
+    },
+    {
+      "id": "words:Winkel",
+      "sha256": "5edef4a22e0bd4c0bc1170e7b0569f82f3be9eefaa53f4cc3b84b5166b0a1684"
+    },
+    {
+      "id": "words:Symmetrie",
+      "sha256": "ade20c3d05f03d1dc314e55548d1408b8593314064134cb49c3568ecdadae82f"
+    },
+    {
+      "id": "why:52",
+      "sha256": "20f513a973d5180057b6076c078ad2c94f2ec351c9f683ea72d95915a509ec2e"
+    },
+    {
+      "id": "why:53",
+      "sha256": "d2d9115072bc518d92257fa8b1d6e432e863e76a559b2c39d964584ce5706e18"
+    },
+    {
+      "id": "why:54",
+      "sha256": "05ada0c47c8739b21ffe619fc4f399e2e41088b87709bb0cce1523bcb4e7c511"
+    },
+    {
+      "id": "why:55",
+      "sha256": "3caf309dd069aa1e78d4563b7174f31c3609606e4ed7c112c2e7942cd3ef2bf4"
+    },
+    {
+      "id": "why:56",
+      "sha256": "d6b9410824e9d009ce8d6f13e7b8f96e93b46a25f10af5c38f5ac1e132e2371a"
+    },
+    {
+      "id": "why:57",
+      "sha256": "c7aac6f59e5ddbcb0c1d7358561083bd618910376851d5864f3e0c25a89284f5"
+    },
+    {
+      "id": "why:58",
+      "sha256": "02ca2c885b92f5d0c22b7c4498019a6c9a4352c30761f49e0fee0d4637d09e1c"
+    },
+    {
+      "id": "why:59",
+      "sha256": "ec0365919d50816b90b1e6c15d1e672351dc4a22ae4545a1286e60dd3f90937f"
+    },
+    {
+      "id": "nature-topics:okavango-delta",
+      "sha256": "1b008eb417b102992e49eb2006601abe327bb283299b6d4f5a20f06e51f24cd4"
+    },
+    {
+      "id": "nature-topics:tanganyika",
+      "sha256": "99067ae7a808f674c81a7fe2fc923034ec7e0d50ff67f92a76dcee28b91f56b5"
+    },
+    {
+      "id": "nature-topics:tonle-sap",
+      "sha256": "8c123e0fe91f55198c4319a4b6702f6340bd8affa35b2659f704016e538e7140"
+    },
+    {
+      "id": "nature-topics:danube-delta",
+      "sha256": "385ce9dd27ada76e48ec4e7a7d7b455bce63683708f0485a1a9f7edaf4e61c85"
+    },
+    {
+      "id": "nature-topics:grand-canyon",
+      "sha256": "0deaa20d41e98dd81b8c8a19532f328fe9ac8c6d60b0d801912bc352aff2e71a"
+    },
+    {
+      "id": "nature-topics:mammoth-cave",
+      "sha256": "5aae8cffe5e2e3e72746d7a2ebf29ea2c749507952cc0cae5edc98df32d79e8b"
+    },
+    {
+      "id": "nature-topics:yellowstone-geysers",
+      "sha256": "b26c946ba92a9ebeb1f451e430cd958793adc4fc360711410ebbb1fd89be8ed1"
+    },
+    {
+      "id": "nature-topics:wadden-sea",
+      "sha256": "41967f9aad3125dfcf7fac06399f822221e7ec3007ddc9d164f568f4d054cc66"
+    },
+    {
+      "id": "nature-topics:bryce-hoodoos",
+      "sha256": "003b84fd89812148ea100b754e733b8b3d7ba51afdf1fed8b00b458ee2711f77"
+    },
+    {
+      "id": "nature-topics:arches-sandstone",
+      "sha256": "1498e2f9ad7074d01e36eec9be24086f4037cd33594daf56f4acbf2580d9450c"
+    },
+    {
+      "id": "nature-topics:crater-lake",
+      "sha256": "52fa2261b4fb283918a081e948a9119e246e150715f85d21cc17800dca99aa92"
+    },
+    {
+      "id": "nature-topics:white-sands",
+      "sha256": "55d0596dceb7d34e2432e13b34b50b2cc17180e86b2644bb553328579bd1d363"
+    },
+    {
+      "id": "nature-topics:vatnajokull",
+      "sha256": "8561c60091b0de41336b5a8c912ba23951e6354b8ef5bec2b2b5727ec36aff99"
+    },
+    {
+      "id": "nature-topics:daintree",
+      "sha256": "86124b62f443796d973342767174022e7b59d68f23d3b2b3d290ce6b347d80fc"
+    },
+    {
+      "id": "nature-topics:bialowieza",
+      "sha256": "3750772071288349878ce463d51a89e2296b8eb646e23a20a8791426e4bb0356"
+    },
+    {
+      "id": "nature-topics:sundarbans",
+      "sha256": "d261cc2a4109048d8966a7d9133289535ad364063611fff249cac4b420f1c08f"
+    },
+    {
+      "id": "nature-topics:lencois-maranhenses",
+      "sha256": "aa02052572411d9e3e49b78bf9e653d4c0737e2a89cce81add57e5475c80741d"
+    },
+    {
+      "id": "nature-topics:socotra-vegetation",
+      "sha256": "b2d7dbf057d226b4b536b2d4184e93e9f7309dc22dfbad0bc4fc8966d8f682ee"
+    },
+    {
+      "id": "nature-topics:ha-long-bay",
+      "sha256": "7261df86a37274ea587cf7cc2a318f0acf2a0e38a334904a64c3916e98454342"
+    },
+    {
+      "id": "nature-topics:sognefjord",
+      "sha256": "aa53d7879ac194f6c1981b230ed4b55ea2bd3309d65ae963a829aa0a0233681c"
+    },
+    {
+      "id": "nature-topics:sargasso-sea",
+      "sha256": "afceaa09f61ac1c14260b24c84a50b2f14af9d38e4422d750778a480a6443ece"
+    },
+    {
+      "id": "nature-topics:ross-ice-shelf",
+      "sha256": "0e80c92c12570470dfa385178dd424a4061a4fdb265395b37de3cdcbb6cc10d3"
+    },
+    {
+      "id": "nature-topics:namib-fog",
+      "sha256": "769a0fd4e11262c272998809bdc7eba9f9fdabf79853b82fac216fd38a840378"
+    },
+    {
+      "id": "nature-topics:giants-causeway",
+      "sha256": "d56be9e294e064c32e4bf22e5c6fd2468434129c41a5068032b819166da0e3d4"
+    },
+    {
+      "id": "nature-topics:yosemite-valley",
+      "sha256": "8473a819626d980cc9a9561400a3213ec37dc4192316f05f153890e182ca5c85"
+    },
+    {
+      "id": "nature-topics:lake-superior",
+      "sha256": "7089ed19e3e6a0cdda874ab62ce3fda25578b20bb315935fd847642319de036a"
+    },
+    {
+      "id": "nature-topics:jeju-lava-tube",
+      "sha256": "1c7464cc1bdfbe645311bf1b2dea1c109cdfb962200c7907d99b60362d083bfc"
+    },
+    {
+      "id": "nature-topics:pamukkale",
+      "sha256": "e174b2eb0d4a7faad76a6dd1861fd4615c324b883ae6df58d2de13886d09adf9"
+    },
+    {
+      "id": "nature-topics:salar-uyuni",
+      "sha256": "52e76905e806c5d8fba0a9ca2d22196bfb2735cee7917b34fda70accebd68b88"
+    },
+    {
+      "id": "nature-topics:titicaca",
+      "sha256": "ed6aae3ef81b7cbdc357bbe2a549fd48a65e6933303e1d3493903aa35ac3d331"
+    },
+    {
+      "id": "nature-topics:victoria-falls",
+      "sha256": "7b6073e231d8c084fdcafdba0fa40c454d702ef57922965c5bc30bff633fcf5e"
+    },
+    {
+      "id": "nature-topics:iguazu-falls",
+      "sha256": "773f2d97858fa1513c81de80f1f9901171ffdadc0f7efdd988526b7763d71766"
+    },
+    {
+      "id": "nature-topics:great-blue-hole",
+      "sha256": "7db9c1739f872162a916f2b11dea5079888fecfbbc52bd22810b06ae81e6ca95"
+    },
+    {
+      "id": "nature-topics:galapagos-upwelling",
+      "sha256": "31c7e86c0c21512487a92bdb0322794285adc693171c47861ad4f072b9b28320"
+    },
+    {
+      "id": "topics-people:person-henrietta_swan_leavitt",
+      "sha256": "10b6af4869d9f9da718765703e3cb2d8def146f8edfbcbe55cef30d8b59344d7"
+    },
+    {
+      "id": "topics-people:person-cecilia_payne_gaposchkin",
+      "sha256": "d89f70770ff54678f4fb49f04a53d2db48f6fc2c22eb73c8298b5ead622bd2bb"
+    },
+    {
+      "id": "topics-people:person-rosalind_franklin",
+      "sha256": "bf64839b6804429d2f2683960c4d538c4a3575d2eb06206319fcff94dc3e21ad"
+    },
+    {
+      "id": "topics-people:person-jocelyn_bell_burnell",
+      "sha256": "0309af5178ffce8264467d0eca8bb9f315a0614c3b3b800b343467e5fd711d82"
+    },
+    {
+      "id": "topics-people:person-katsushika_hokusai",
+      "sha256": "9c9e1e472015c25d6520be21ddb35a7c6729c2950368415e618366dd8edeabcf"
+    },
+    {
+      "id": "topics-people:person-murasaki_shikibu",
+      "sha256": "93e9c37296d1bc71c48dcb14a3b4533c4003e886d94792207ba5d338de559415"
+    },
+    {
+      "id": "topics-people:person-rachel_carson",
+      "sha256": "60d99a3d1eaeb588e28ce51b5c10e46a1a1b409aaf6b4812405dd586e6a5078e"
+    },
+    {
+      "id": "topics-people:person-octavia_butler",
+      "sha256": "fc66914a70ffa50e2295de579152a9e355043950711732bd923a18eddbee987b"
+    },
+    {
+      "id": "topics-people:person-nelson_mandela",
+      "sha256": "2317424be76198554f5d778308050ee3eb4906f7d1b0b5670f0532b79e86e8e5"
+    },
+    {
+      "id": "topics-people:person-chien_shiung_wu",
+      "sha256": "79692f58533fa523ccb341dcbe1e06388f72f5aabf0dba57c7c9b863bf778a4b"
+    },
+    {
+      "id": "topics-people:person-lise_meitner",
+      "sha256": "32f0e024a3153c9b1cb4af0be6d14cddeb5de1cd79f103a03adc3519ecad2a1b"
+    },
+    {
+      "id": "topics-people:person-zaha_hadid",
+      "sha256": "f7301aae1cb6a74bcfe091063cb1075655e831c2ea992f37f314937e4103e35a"
+    },
+    {
+      "id": "topics-people:person-rabindranath_tagore",
+      "sha256": "369e378473cc8f8ec47512db73d5e8ede1d09314bccc7c0739696257e26c9429"
+    },
+    {
+      "id": "topics-people:person-ibn_sina",
+      "sha256": "0f740197ba1ae644a8baa0bf965533d919957814d9dfeb3f9c0364695e7ee1ba"
+    },
+    {
+      "id": "topics-people:person-ada_lovelace",
+      "sha256": "496b3972a5c2d0d4c445d8cb21ff2787e1f6d033c8c9eb80647d0d2968abef0e"
+    },
+    {
+      "id": "topics-people:person-al_khwarizmi",
+      "sha256": "378b2e422bb6b2afaf8d96b30149452b2146f528693a9a4cd9252faac7fab6f8"
+    },
+    {
+      "id": "topics-people:person-albert_einstein",
+      "sha256": "5116c037af36dbfdd04915799ccd819daec4db170eb3f99d8941bb2f333918e3"
+    },
+    {
+      "id": "topics-people:person-alexander_humboldt",
+      "sha256": "60cf196dddfc2e5b59a89cbae7f805d809a9cbbf7ab2c74ab28b8f9a4819ad9d"
+    },
+    {
+      "id": "topics-people:person-bertha_benz",
+      "sha256": "4a47e578abd3841cb6a6b9afa526b14f530dd9dd0e906d31e6768e8c17e5dbec"
+    },
+    {
+      "id": "topics-people:person-cai_lun",
+      "sha256": "901ec03ba1f68c0a3408d18776cdd3e5619dce759039e989704f1b8386cb13ae"
+    },
+    {
+      "id": "topics-people:person-charles_darwin",
+      "sha256": "57cdb2579d2b419b50914a42371a17ed38bc77a7bcf09bf5a556370984817ce6"
+    },
+    {
+      "id": "topics-people:person-grace_hopper",
+      "sha256": "bba2d833cc56375012936a323cdc2674ffe4390d854b3ac1b16b986f72cc0357"
+    },
+    {
+      "id": "topics-people:person-jane_goodall",
+      "sha256": "8a6db8e195ba70bae973d089e3ab6c000a8510af7f7d6f63db3b65ca440df566"
+    },
+    {
+      "id": "topics-people:person-johannes_gutenberg",
+      "sha256": "284d366e1390dfcd40635dbdc8d059e4196155fd43ff308757df50831500ec6e"
+    },
+    {
+      "id": "topics-people:person-karl_benz",
+      "sha256": "96766b64f677c96e87642f2bdfeab2743f38b9b4381f24203088f55fe3436c2a"
+    },
+    {
+      "id": "topics-people:person-katherine_johnson",
+      "sha256": "d77a186a747004edae904353a70a5cfaad16f7eba4cb0eb9c8ec2e20797c7f00"
+    },
+    {
+      "id": "topics-people:person-mae_jemison",
+      "sha256": "6c97a7b8feef0f6e64826e689b9aefeba038fe5dec76570631be4806b83d2717"
+    },
+    {
+      "id": "topics-people:person-marie_curie",
+      "sha256": "dcfbf0220e828e31cce44bbb6b3d28567c4808ab044b4e03b42f580829c5b181"
+    },
+    {
+      "id": "topics-people:person-neil_armstrong",
+      "sha256": "74b1e7b521c08b1cb30de0580da04bc2e92fc3c5a38373f570eb02fda2c02a20"
+    },
+    {
+      "id": "topics-people:person-tim_berners_lee",
+      "sha256": "03f2f8e606233ed699a21743768b20ef092af300067cf43095465ca62a07858a"
+    },
+    {
+      "id": "topics-people:person-tu_youyou",
+      "sha256": "a521ed155d2149b634918733f1d51eb0a606ebdd9ce3d284068e1af688becaed"
+    },
+    {
+      "id": "topics-people:person-wangari_maathai",
+      "sha256": "a017b13a92c96980de4150bc794db547b96bf1bade5b6fde5ac1e20acf6e1287"
+    },
+    {
+      "id": "topics-science:science-water-cycle",
+      "sha256": "a0b1a0f6d86ab9c312eefdf6554ebffd27f3ab418eec3ac26d8ba77348f1e75f"
+    },
+    {
+      "id": "topics-science:science-photosynthesis",
+      "sha256": "83f82869cb8a93665f07f298105948226a204aefc1a1c3c14db92504f7f87750"
+    }
+  ],
+  "currentContentOnly": [
+    {
+      "id": "topics-animals:animal-platypus",
+      "sha256": "ba4e0cbda46cf37305c73938968182a489d4924c2ec23f913c26d46cb0d3b38c"
+    },
+    {
+      "id": "topics-animals:animal-short-beaked-echidna",
+      "sha256": "612ab10dc02a45744810e406293dbfeb21fb18671244c10dfc64d32ad117e1fe"
+    },
+    {
+      "id": "topics-animals:animal-okapi",
+      "sha256": "f60905ba111f556a6e7bff4ab9e88ef38139c1a28bde9d26c4106bdf79edeffe"
+    },
+    {
+      "id": "topics-animals:animal-meerkat",
+      "sha256": "4fcc412d5ef94ca09a461c91902b6e41cae64bdb8443b6053a59bb1ab5f818ea"
+    },
+    {
+      "id": "topics-animals:animal-ring-tailed-lemur",
+      "sha256": "95f95d8ab395106f977317ec506a277a14902bd5ac2c0bd806cc3b40fc03bcb7"
+    },
+    {
+      "id": "topics-animals:animal-north-american-beaver",
+      "sha256": "db5dc4140433eb41aa4d34bd1ca014fa629f37d2c34e769a645859c056930040"
+    },
+    {
+      "id": "topics-animals:animal-walrus",
+      "sha256": "ca19c0d854e4d8ca5d6033106fdc17942cebf3827da580097126c5de1e3695c1"
+    },
+    {
+      "id": "topics-animals:animal-red-fox",
+      "sha256": "5e04efe808969a6e6fddde19e02c28b6e207507ae5cedb1d080cd7ab0708f4f7"
+    },
+    {
+      "id": "topics-animals:animal-raccoon",
+      "sha256": "b8cb16b8e2f478f0739d3d3b2e341a587d2492693e2075813302a88ed8cc2dd6"
+    },
+    {
+      "id": "topics-animals:animal-hedgehog",
+      "sha256": "d9cb35e94292eba2f49997f32cc643c72561596f7561c4b4dc290e3c2e81d506"
+    },
+    {
+      "id": "topics-animals:animal-barn-owl",
+      "sha256": "c43b1c0c04637c7962255580d2e8c5644e7bf7caeb270efff7b3255d447ec3ed"
+    },
+    {
+      "id": "topics-animals:animal-kingfisher",
+      "sha256": "e7ae81fa613aa9c17efd193e391e74ce403653ec54a4ba00d439ddcf3af4b85c"
+    },
+    {
+      "id": "topics-animals:animal-ostrich",
+      "sha256": "8720bd13cdce9611169b4279b53b90e831a799933061641595355243a69eba3b"
+    },
+    {
+      "id": "topics-animals:animal-atlantic-puffin",
+      "sha256": "5cac3289a215edcedb3d037e5031787761c2dd07c6a7fc5a9c5a98c571c50757"
+    },
+    {
+      "id": "topics-animals:animal-common-chameleon",
+      "sha256": "43e07020193c63a689b075614f4b3abaf67cf5fe1275871cb7a1bc84f63efad8"
+    },
+    {
+      "id": "topics-animals:animal-fire-salamander",
+      "sha256": "cb7a6d1806653642d9394b476cbbc9499090922698a7fbf45810decd6f92ee03"
+    },
+    {
+      "id": "topics-animals:animal-common-frog",
+      "sha256": "a5ec2093df1e56249317461353766acd3b4d83f59b70905d1a15c5cd820ac898"
+    },
+    {
+      "id": "topics-animals:animal-eastern-clown-anemonefish",
+      "sha256": "28b8d7167e0a176d4f5f2bfee0dabddca72650c480ff2535ae67b6e405542393"
+    },
+    {
+      "id": "topics-animals:animal-european-eel",
+      "sha256": "4e4d44d3171654760c2b7768d9e1b0d466043da733e7be3097e452381b9b6cf9"
+    },
+    {
+      "id": "topics-animals:animal-monarch-butterfly",
+      "sha256": "d1897f223312af17aa543043b03ffb578092ba7c207d2c5a583005119ca2b8c6"
+    },
+    {
+      "id": "topics-animals:animal-garden-snail",
+      "sha256": "c7660e0f256cfce675bb2ae4e73883a35bc011945c0ff521083221b89259f793"
+    },
+    {
+      "id": "topics-animals:animal-european-lobster",
+      "sha256": "ec9081ad65af09d0193a8a40b137e5b3f4765d001ecbdce44f9c0d8374a4a4d8"
+    },
+    {
+      "id": "topics-animals:animal-common-cuttlefish",
+      "sha256": "9923d86c90420ec79d113da100fdf4d287403e59457fb4605309c52b522b7377"
+    },
+    {
+      "id": "topics-animals:animal-short-snouted-seahorse",
+      "sha256": "a0b38bd25f05e9ff2e75515b2a845721d0cbb4e2b477d482d22fa056af59628d"
+    },
+    {
+      "id": "topics-animals:animal-african-savanna-elephant",
+      "sha256": "ca1543d571d4a91bb03d0d26e25dcf0f2cde1ef438cdff68950d723a0fa4ba6d"
+    },
+    {
+      "id": "topics-animals:animal-lion",
+      "sha256": "e37b1ecf913336e98d9fe788d1584fd1ec26ecc53852dc29fe46b40c6f2c07a9"
+    },
+    {
+      "id": "topics-animals:animal-cheetah",
+      "sha256": "2065959747af9e3c40ec30a04fb05cbde0f33de36b7d077e72b5b6ae667cabb0"
+    },
+    {
+      "id": "topics-animals:animal-bengal-tiger",
+      "sha256": "ab68765c74d131389a49e2e710643e2b80cfea99c4499543412efd0a5a868c48"
+    },
+    {
+      "id": "topics-animals:animal-giraffe",
+      "sha256": "b0421b44079102c8d8601d836ccb356c1500e53b4abd531682586166b9b348a6"
+    },
+    {
+      "id": "topics-animals:animal-giant-panda",
+      "sha256": "2d5ade2471bc79b41f3dd6f5268e7a1143f531fccbd27d206fc68c77450caa21"
+    },
+    {
+      "id": "topics-animals:animal-western-lowland-gorilla",
+      "sha256": "40aa6a05385b7953fb02314a91f1d940871400bb808bb3e913e7992dfb0045fd"
+    },
+    {
+      "id": "topics-animals:animal-bornean-orangutan",
+      "sha256": "08728e2acfaa8abd4c9b6a620b85ad1064dddf4cbedf6129965deb840d46fa12"
+    },
+    {
+      "id": "topics-animals:animal-polar-bear",
+      "sha256": "6e5e0ba2eca513da219c0328ea2a0a18322432cad3df853c2725b9e0b8616cc2"
+    },
+    {
+      "id": "topics-animals:animal-emperor-penguin",
+      "sha256": "721c7aab8146b65e00ea7a5e86af8ffeeae373f801c88f22cf84b4b24a164f90"
+    },
+    {
+      "id": "topics-animals:animal-blue-whale",
+      "sha256": "e53785e6c8a8570130af58fde2a8e9774cfaaee36f8faf4045c5ead258b6884c"
+    },
+    {
+      "id": "topics-animals:animal-common-bottlenose-dolphin",
+      "sha256": "80a2f52a7482fdfbb87376312da7e995fb65fad7be879dd853873eccec112bec"
+    },
+    {
+      "id": "topics-animals:animal-orca",
+      "sha256": "0d129a82f3ac4ae2522022c49a2ef6525c77f24a3353d59a473d51fd4f0e9636"
+    },
+    {
+      "id": "topics-animals:animal-common-octopus",
+      "sha256": "30a8f98a564c6cc9f631e0a306837da4001b8424dd7b3420cc47304a7df89a63"
+    },
+    {
+      "id": "topics-animals:animal-green-sea-turtle",
+      "sha256": "045babaa497e709c377a780a33a95bfb1f0a9b49e55ffc0b4f6fe607deeeda27"
+    },
+    {
+      "id": "topics-animals:animal-red-kangaroo",
+      "sha256": "855805fe18426514549909b9aecf64188f503590563778488fa67d7f4a87d497"
+    },
+    {
+      "id": "topics-animals:animal-koala",
+      "sha256": "00e2631923f0c47eea17e3ccfbdd49defa88d252b03d11aea6cbd58c6f6afd93"
+    },
+    {
+      "id": "topics-animals:animal-jaguar",
+      "sha256": "af6b8e05e3174d1d8aae92c3e5d5d76ae7f9faf66d5c81989d7a2e96c6cc48e2"
+    },
+    {
+      "id": "topics-animals:animal-honey-bee",
+      "sha256": "ff66344086dccfcc9fff0bd5221065f9ebc246175596a3b4a48f8d7f728a6331"
+    },
+    {
+      "id": "topics-animals:animal-axolotl",
+      "sha256": "ff4d470d26480c3848651028f520a3c6e794e7ce83ecb822692368ca1a1d4e94"
+    },
+    {
+      "id": "topics-animals:animal-whale-shark",
+      "sha256": "97d31160b6d3c9d6e99034f641235eb794b2f40a87227046d4f029620a07d4b0"
+    },
+    {
+      "id": "topics-animals:animal-garden-cross-spider",
+      "sha256": "fdef60e8a3feea4ecefb63b0269d8be21bcabf67d3ddedf6c2576c4e02a7f404"
+    },
+    {
+      "id": "topics-animals:animal-dromedary",
+      "sha256": "7c82aa92ec936e9dbdd88f5d18f87bd3a181f4e8305cb276a30850149ed90bae"
+    },
+    {
+      "id": "topics-animals:animal-white-tailed-eagle",
+      "sha256": "46f5fb9e6f23a41333b0f7f09aba52eede15464eea0a27163631edd566a1c318"
+    },
+    {
+      "id": "topics-history:history-khipu",
+      "sha256": "dee7b9459ac78718b764ff2356a9a3144f3be9c1065dda964f5ba618e2f64edb"
+    },
+    {
+      "id": "topics-history:history-mohenjo-daro",
+      "sha256": "899815fba589682fe6f0b26ca6cbc3082d07d5efdbcac8f373003b2a2580103c"
+    },
+    {
+      "id": "topics-history:history-writing",
+      "sha256": "898801268ecbcb4f2c164e77dea80f4781d9c053d7d8d26a4aa5bd4ba3949d45"
+    },
+    {
+      "id": "topics-inventions:invention-camera",
+      "sha256": "e93329db4d43f6a26e2026c6ba02f52259eba59bbc644c903e261ccb4a38938c"
+    },
+    {
+      "id": "topics-inventions:invention-telescope",
+      "sha256": "f5300c5a6ee246a92df19dd80e054133582592ca6a6a52299b1a3166c8b3bc1b"
+    },
+    {
+      "id": "topics-inventions:invention-microscope",
+      "sha256": "67880f8d26caa580cde569a5b6176fc513b5d4d2d9b660e8248208a4ed2fc896"
+    },
+    {
+      "id": "topics-people:person-mary_anning",
+      "sha256": "fb250c18337e29540a922ad7822e77c1e3a7fce6ad5b9454152212e3de9d2db4"
+    },
+    {
+      "id": "topics-people:person-ibn_al_haytham",
+      "sha256": "bc6bdf228f884d2f912f207a2ba7096941f24996cf88c52d820e43af75c2346d"
+    },
+    {
+      "id": "topics-inventions:invention-battery",
+      "sha256": "7c5fc7fe8892ca9140eefeb4305291b879cc0da239bb16db956759633e839be2"
+    },
+    {
+      "id": "topics-inventions:invention-generator",
+      "sha256": "f87fae0b54f6b6fec0a6af81904f369595333c7a5ada330a4688bf762f8700f4"
+    },
+    {
+      "id": "topics-inventions:invention-transistor",
+      "sha256": "9ccbf0ff27e6b57ef0f00d88e71bbf6ae1973c5496f2561b313f26acf7db6b8a"
+    },
+    {
+      "id": "topics-inventions:invention-refrigerator",
+      "sha256": "508df262a2ebc2db859f8d30d3196f0044c7e4cb1f844e4ec3505aa4b8862266"
+    },
+    {
+      "id": "topics-inventions:invention-bicycle",
+      "sha256": "305c32cdc65ff9a75e2c567161e379019a82017a59f6b2b2673deeac8d081c82"
+    },
+    {
+      "id": "topics-inventions:invention-elevator",
+      "sha256": "d59abf2bf838785f8bc6299877513a9d40d83b5e156fff30a71887e1f1913e49"
+    },
+    {
+      "id": "topics-inventions:invention-seismograph",
+      "sha256": "7ebfab9dbf7014921c1abc9d961b9d9290db7d97b3f2dec037c3646db289235d"
+    },
+    {
+      "id": "topics-inventions:invention-3d-printing",
+      "sha256": "161f8c2d3e0d00a54c456f4adcc13fa0c3bf065bd131d4e31da8c2906342e55c"
+    },
+    {
+      "id": "topics-inventions:invention-sewing-machine",
+      "sha256": "66de06e5c2ae2f309463eec8481135dcf73e08321ee277cc9848d5ea9bb20f9c"
+    },
+    {
+      "id": "topics-buildings:building-pont-du-gard",
+      "sha256": "4041c4a0078867ea06db6a0e6c7cf1f0ad6f787cdb16ba31bf687d6ee4013198"
+    },
+    {
+      "id": "topics-buildings:building-great-zimbabwe",
+      "sha256": "8b9b7163ac61442f6dd460adc92660ef3761c7f2981f4b12ed73b2e9b21dbce8"
+    },
+    {
+      "id": "topics-buildings:building-horyu-ji",
+      "sha256": "f055ca674bf1cb0a9f03745bd0e348252f98f66c8fb57bd1bfbab7f0d1e6b264"
+    },
+    {
+      "id": "topics-buildings:building-djenne-mosque",
+      "sha256": "c66ca227d8f5483967b5659864eda42477d50472b2855dccc0ee1675d2c1e3a1"
+    },
+    {
+      "id": "topics-buildings:building-lalibela",
+      "sha256": "fbb2282685e5205dda9544d86a37bb102b459a9b8a87a062776e0ce981c4ac27"
+    },
+    {
+      "id": "topics-buildings:building-angkor-wat",
+      "sha256": "025f955a1f6725628af6cec97f7b5292b47f94d6bca2fe186e1c739dc4673d9a"
+    },
+    {
+      "id": "topics-buildings:building-palenque",
+      "sha256": "97d1aca65aa7c6b92224c4119621877bacc636742a209818176f51aa8aa5a482"
+    },
+    {
+      "id": "topics-buildings:building-sydney-opera",
+      "sha256": "6682cd96cea77589d132489702e033c2d0e3d9a237c429bd88c7673fd4c866d7"
+    },
+    {
+      "id": "topics-science:science-pressure",
+      "sha256": "4cbab612486d3e2caabd484cb50cfff71849036a4a0cb2ba28dae431875e92fa"
+    },
+    {
+      "id": "topics-science:science-friction",
+      "sha256": "4d57ffd8de3941889a6dd282249124be54b2ffaf58e8dc62deec6e33e6e6ecda"
+    },
+    {
+      "id": "topics-science:science-buoyancy",
+      "sha256": "f5f33ce0d13f326a8101f0c5527799eb7ec7f99cc68cd837dc05f5fd40a76743"
+    },
+    {
+      "id": "topics-science:science-surface-tension",
+      "sha256": "def588e2fca58cc4f1ad134c74b9c158b19daf8138811764adc0d0dc25a98297"
+    },
+    {
+      "id": "topics-science:science-capillarity",
+      "sha256": "4ba12aafa6419fe1cecec5fbcf0eddfdfadb75b91b6fc8be695e43061f845f04"
+    },
+    {
+      "id": "topics-science:science-diffusion",
+      "sha256": "810839ea58f084716305681b37b74542fd674d6f89350b6ff6ec7769dff12c96"
+    },
+    {
+      "id": "topics-science:science-chromatography",
+      "sha256": "6e9def6966c5575f58f077e28c067e76bc94b817ccd0ff8ee79316cabee5d5b8"
+    },
+    {
+      "id": "topics-science:science-heat-transfer",
+      "sha256": "131d3316053d35dac586502c01714ab97254be07e01baa3c4c6abcd6709c2ed9"
+    },
+    {
+      "id": "topics-science:science-lever",
+      "sha256": "3e8b341a9dd3bcc6e1c60c69ccf62728945b7b96646751baf030f8610ac5debd"
+    },
+    {
+      "id": "topics-science:science-elasticity",
+      "sha256": "49808a8e67d6f778b015065a7eb0939c8031287b4e6e021abe2b6b12c97b0be9"
+    },
+    {
+      "id": "topics-science:science-pendulum",
+      "sha256": "83c58930b66a410ac9820f7982d81d6d72fa519a0e3a29c8d73ab66ca3ec8ebb"
+    },
+    {
+      "id": "topics-science:science-resonance",
+      "sha256": "c8473d2b0948cdfec399d8ffccf1c6c2f5c9653c25aedcbc233f2b1548718b47"
+    },
+    {
+      "id": "topics-science:science-probability",
+      "sha256": "69f1417a346d94b000a2fca63bff349700510136bb657e803eb7fb4faeeb19a9"
+    },
+    {
+      "id": "topics-science:science-symmetry",
+      "sha256": "602bd54b54671ebdef264fc595274b69eaf66a4da30e95ff17f61cddec18e9de"
+    },
+    {
+      "id": "topics-science:science-fractals",
+      "sha256": "a6c78e29acc920b8cf3b585f5c4ac81447c0cddac5b2a9eac06c0d95e8af8806"
+    },
+    {
+      "id": "topics-science:science-angle",
+      "sha256": "2787565e001bf7c10b5819642723caef73637d1de292b3d6f243ab45b51c7606"
+    },
+    {
+      "id": "topics-science:science-encryption",
+      "sha256": "8dbffed42cad3e41600fdaab9c3bf6487e3cdd031846bbcb5a84910b3a15453d"
+    },
+    {
+      "id": "topics-science:science-checksum",
+      "sha256": "4390744076a1aae5561e7d5d8d250cedaed3f8bdf502c183d324091c580a7904"
+    },
+    {
+      "id": "topics-science:science-cell",
+      "sha256": "34d5cfe6ecc097b98c4d0afee6c4c7f5946ef1753ac59ba033ada79e076e8c0f"
+    },
+    {
+      "id": "topics-science:science-fusion",
+      "sha256": "c243326c45f7f7c0e9ff608c5a3c8d669f688baec03eb72c64c8b2ca02fe4edf"
+    },
+    {
+      "id": "topics-science:science-galaxy",
+      "sha256": "9adac61aebf5f88005d57de713912298828ef41e7d11fbde7887fd81e779421d"
+    },
+    {
+      "id": "topics-science:science-comet",
+      "sha256": "a5c8b26da9df3f9b5394b1fe8942d9e90ddb0ab4c6f61c4ba28bd7ad40c38581"
+    },
+    {
+      "id": "topics-science:science-exoplanet",
+      "sha256": "6fe183d2a760fac275c7b841ea2f01675d8377052ff9939d5acb4c3c3ee47ac8"
+    },
+    {
+      "id": "topics-history:history-bronze",
+      "sha256": "10666d68487e50ce7c3dcf9176d00f0693600afbc4d8f11363483a84826d0b01"
+    },
+    {
+      "id": "topics-people:person-maria_sibylla_merian",
+      "sha256": "30f5cd21729d23f21d9cbda20804961b4515b058f1a3c5b2beaa63247dd61c16"
+    },
+    {
+      "id": "topics-people:person-inge_lehmann",
+      "sha256": "d8590e0480364cacf007143475917ac59a4ec6c04254b71da97d55d995a886c3"
+    },
+    {
+      "id": "words:Meter",
+      "sha256": "831731a8161fe8a3cfdadba5aeb3603fd4c42e21c3fc69d27609b987b44f031c"
+    },
+    {
+      "id": "words:Kilogramm",
+      "sha256": "ddc2c52e7f6a985a6dd2626ecf0f1479d7795d629aa0e56ba8c24e67a244f96e"
+    },
+    {
+      "id": "words:Sekunde",
+      "sha256": "88a68de47ca86f253da34d8412d38218108b72cf92269ce28a0cf54dd06123ea"
+    },
+    {
+      "id": "words:Ampere",
+      "sha256": "26164e9b67a8567dd87e07e58806ec0ea8bf70f7942f18da86c59ae1d9b32d81"
+    },
+    {
+      "id": "words:Kelvin",
+      "sha256": "6d85ac3e28416d5a972bbf725b85de4152824e3571a73aa57a7a81b63e9e59f5"
+    },
+    {
+      "id": "words:Mol",
+      "sha256": "f40d6e653b256f42c08bab39e0637abb65b9a86d4c1abe6bce72f1802a02a4fb"
+    },
+    {
+      "id": "words:Candela",
+      "sha256": "81ade1f21e24482b48c749af244d36e22bd3fb1942b36461ff325c15cba5b7aa"
+    },
+    {
+      "id": "words:Wärme",
+      "sha256": "2cb0160851fe04fc1ff678d92bf532273abe99d3dc39328acd917931fa2fc1cc"
+    },
+    {
+      "id": "words:Wärmeleitung",
+      "sha256": "817b8c61c73fc4df9e32107f4b2c8e301be1f8c06ed8ce8c5a2fad7cd175bb24"
+    },
+    {
+      "id": "words:Konvektion",
+      "sha256": "eda451a270b0b96547f31d2455dd467e7c010809f2c9bec1a848de02d97e0c10"
+    },
+    {
+      "id": "words:Wärmestrahlung",
+      "sha256": "c18e97b7fdf18a5a1e2aec9a90b923cdd1438132f25e59d48742e94fa32859b9"
+    },
+    {
+      "id": "why:30",
+      "sha256": "8fe133f65c3813a8f3df4cfafc6939fdf61376e99d257adf5fdc514dbda83423"
+    },
+    {
+      "id": "why:31",
+      "sha256": "768025a3b6ccf0d2da1d350c5575f9db1aaa33ecdf67eebe7b1e312436461136"
+    },
+    {
+      "id": "words:Reflexion",
+      "sha256": "c8ae8eacb2aa27008329e4184a483ff73c5b880f62b290b36827f6b3f0f24557"
+    },
+    {
+      "id": "words:Absorption",
+      "sha256": "3ac8e6f94a84d6e4709b88dd530c7e4b728eac928bfb8b9a91ccccb6f33a71da"
+    },
+    {
+      "id": "words:Brechung",
+      "sha256": "f748bc7e442d6e5e4211ffeb139929af740aa352f430e8ce01fa000106b383a0"
+    },
+    {
+      "id": "words:Streuung",
+      "sha256": "7f83ef88d6369bcc9a17e61844e38ddeca49c7c2e15c825d4e53780fe7fef007"
+    },
+    {
+      "id": "words:Photon",
+      "sha256": "f2b3067b0b100966a994e82fe6f8febd4b7a4b2ec93a8dbd34303cfff30a198a"
+    },
+    {
+      "id": "words:Strahlung",
+      "sha256": "51a030f6b4f8bc2891cef20b82b315ea4c97ee95ff018ea808d000a5d1ba401b"
+    },
+    {
+      "id": "words:Spektrum",
+      "sha256": "13f2b647020ca46882f323f21673af628b9f7ca4f3b141b009b189ace8772f74"
+    },
+    {
+      "id": "words:Infrarot",
+      "sha256": "f9711d0a9f81927be8e2b8865391d5a2fba7e8a1e2df78827d30d3d21a9e7cee"
+    },
+    {
+      "id": "words:Frequenz",
+      "sha256": "8baf8386b501b7d828f16e9ffcd458fcbee485cde294fdae555de39e46644af8"
+    },
+    {
+      "id": "words:Wellenlänge",
+      "sha256": "5ff287305b5ea81c44f60e1a34d8eac29886705831cb2f294d63562d36b706b9"
+    },
+    {
+      "id": "words:Energie",
+      "sha256": "25459250cc8d3fffd52c5b53da9f18db252c30503faf060812772fe0b250bd36"
+    },
+    {
+      "id": "words:Polarisation",
+      "sha256": "53cd00b3c4d7d1f09aeb67f907c27bf8d2d7d4b8b1b03927af3ee7132b9bab44"
+    },
+    {
+      "id": "why:32",
+      "sha256": "be610af60e55aa20db29e9dcb9fd5a71dafd56f04104569089a2e6dfb4e53aef"
+    },
+    {
+      "id": "why:33",
+      "sha256": "31e1b4978fa85ed9067168d624eba1ff1dab76040d039ac64d5368b4eec0b38a"
+    },
+    {
+      "id": "words:Kohäsion",
+      "sha256": "f4ff99f544265cde5efdb39f20d9bfc536e19b297a6ee9115f8446a6151d6cd5"
+    },
+    {
+      "id": "words:Adhäsion",
+      "sha256": "acf5c4858fbe020e33a02acdbf168db4e6de3314abc04aa701189ca11e2ab0d1"
+    },
+    {
+      "id": "words:Oberflächenspannung",
+      "sha256": "7bef754efb33afbbf935608af27f63b6e563afaf0a637b23a0c985d8b84a6051"
+    },
+    {
+      "id": "words:Kapillarwirkung",
+      "sha256": "ab04accc5668a5e96970d4215eac30bb89ef77137b8feebf2e2b0d684bf7c165"
+    },
+    {
+      "id": "words:Dichte",
+      "sha256": "a4bad143bd2727737ec474b00ea713cb80148dc1593a7d1bd3efae7628d35f9a"
+    },
+    {
+      "id": "why:34",
+      "sha256": "307c5a80067faef0935639d7904389bc29bdfbba3973ee449a0add797c1ce48d"
+    },
+    {
+      "id": "why:35",
+      "sha256": "9c7b3021ea6f28737d5260fcdc8415267010e2ab2789deab1c969582044101d0"
+    },
+    {
+      "id": "why:36",
+      "sha256": "2a7dd1a77c15f4c84528306c2b469bcd3cb76e7ef46864ec9d7eb8baf225d471"
+    },
+    {
+      "id": "words:Atom",
+      "sha256": "cf4e6465e6128f03c3438347ea9ae218f987ebc6f3724f435ab214fa351e029c"
+    },
+    {
+      "id": "words:Isotop",
+      "sha256": "6895d3f7415ae4c7e4912015464dd66014a3fe8a4a46b68d92e02288698c0960"
+    },
+    {
+      "id": "words:Proton",
+      "sha256": "ce49119ffd98142470b92b881f9f9e1af5369de7efd82499a2a80b433d8610a5"
+    },
+    {
+      "id": "words:Elektron",
+      "sha256": "f10d7155d22b0880d99fd2e1bb9cdacb4537aacec548220ba9efc7d7b8414f57"
+    },
+    {
+      "id": "words:Neutron",
+      "sha256": "08151ffca40d4034a7e1a85ad7d44773cc98bf2a94db6c475bae5aba3f1b2306"
+    },
+    {
+      "id": "words:Kraft",
+      "sha256": "795e6b0f7a1292b333ce427772a300dcdb76c5215d1f078035572116392d8c2b"
+    },
+    {
+      "id": "words:Trägheit",
+      "sha256": "78f1a551630de5411ecf0f410bd324f7cee813d7c1e19971b4f6b021d6e5eb83"
+    },
+    {
+      "id": "words:Geschwindigkeit",
+      "sha256": "9c5970e0c995e6e6396d408e59b7b58b8a7e6abb7cdf82dca8004589e26662b4"
+    },
+    {
+      "id": "words:Beschleunigung",
+      "sha256": "0f522d97f553b1385e4ddc879a9af9a4a56c60f12fc8a280fef7adf26c25ef31"
+    },
+    {
+      "id": "why:37",
+      "sha256": "bd8555f0a21d1861b03d72bb069695b93a9f4a224e8d1e72691c5c4efa1112f0"
+    },
+    {
+      "id": "why:38",
+      "sha256": "7764a6993b623638bbca2342bef984e899b3bcc0c2fcef6c80996ce073429177"
+    },
+    {
+      "id": "why:39",
+      "sha256": "9dd9045721b25bda3cb6606f8fd9d78e67249253ae71ccd9195b21ac8a9e9c5d"
+    },
+    {
+      "id": "words:Zelle",
+      "sha256": "fa108c195ed85b1e15675161e867f59e1c379ab17cbbf38e740dcc2ca0d99e16"
+    },
+    {
+      "id": "words:Zellmembran",
+      "sha256": "5b571aaf76b6e27d58817a5f370fd2a854415f5a351041f8a041d702414ebdf3"
+    },
+    {
+      "id": "words:Zellkern",
+      "sha256": "6d86c41d510dd0a89790e2830078ddfc705b88aa526c85c47f7660a55b6b624d"
+    },
+    {
+      "id": "words:Mitochondrium",
+      "sha256": "76af335034b6090e1aaee5f4277e52a5c23d506ee3d9ff235512ba1b2d6e9a16"
+    },
+    {
+      "id": "words:Eukaryot",
+      "sha256": "f4325afc7ddb1f5cc3bafbea781c858f28ade767c84ce6a30c674e3dbe94c131"
+    },
+    {
+      "id": "words:Prokaryot",
+      "sha256": "23fc3a8bd2504231a268d5bb2e598efbe05a84c5eca5789e6e83c112a0507740"
+    },
+    {
+      "id": "words:DNA",
+      "sha256": "0b0e8f298c08c646deb224312ff33bffad5f2fdc2efd4cb0b6c0c4c3aee0168c"
+    },
+    {
+      "id": "words:Genom",
+      "sha256": "1b987c96511c71b26a7ffc797b71c410213971c910be10a6a4768c62f6c22305"
+    },
+    {
+      "id": "why:40",
+      "sha256": "97b46b26b1fdf6c5114111a6a1fb9b8d5c8e81b436cb008cf1201e3de3f85786"
+    },
+    {
+      "id": "why:41",
+      "sha256": "8065b1eb566ee77075fd4a839833bef4d4d56e5024146f6fa9c1b7378fd7065a"
+    },
+    {
+      "id": "words:Gen",
+      "sha256": "b1378c6d8dd650dd84dbbd2cd01076473b0284fadcd6c3ef454ac7dfaef9d42a"
+    },
+    {
+      "id": "words:Chromosom",
+      "sha256": "7aa6f1e8bded61010c92bf9ef4312ba4c27bcb92829d037c4550fe848086fc00"
+    },
+    {
+      "id": "words:Protein",
+      "sha256": "7da11321b1bb976ef0ad1378781b2527256d27e8c7fb940ddd70ad8ef8d67340"
+    },
+    {
+      "id": "words:Enzym",
+      "sha256": "d8505d7b2ae71b68ed2673301cabef2d24e561256a5fddb48b5c86a6c384d194"
+    },
+    {
+      "id": "words:Mutation",
+      "sha256": "e970cd96372f0f2a21b4e014c6478830ea60bed6c2670b1b72262fdd29da29ee"
+    },
+    {
+      "id": "words:Nukleotid",
+      "sha256": "9c7904732f1570df2cf141bffdf1887cda0fc6822a5a6bf38ce5d484bd4d2ee8"
+    },
+    {
+      "id": "words:RNA",
+      "sha256": "49661bee44536c91bd9f036eed0f3a4f97ce5eced1a67e349c12d24c63b54142"
+    },
+    {
+      "id": "words:Bakterium",
+      "sha256": "07e0333967a25052e4ae05611c8f1440700cc9c16a0b207b731cf41cf31cc074"
+    },
+    {
+      "id": "why:42",
+      "sha256": "5b08ca2e925750c2462f15d766f5971ffe67b7d3a8e4a9bb30ac2899e5e86a03"
+    },
+    {
+      "id": "why:43",
+      "sha256": "2da8483db4555120dc614a6a6f8289c8d734a34da8ae399e723596057f04d7d9"
+    },
+    {
+      "id": "words:Messwert",
+      "sha256": "7d30db1b127ab18a0e6a903c6d4deecfe3cf27eee337b7af1cb05fb04cdf367c"
+    },
+    {
+      "id": "words:Messunsicherheit",
+      "sha256": "5427e023d8b194609306a95f968ccc301f3ed2b7bd3091857c8297516705d563"
+    },
+    {
+      "id": "words:Stichprobe",
+      "sha256": "54b046d1b87022ff71839d6d303d2017ff3fdde3ecd9d03bc43a2b4f7b3825a5"
+    },
+    {
+      "id": "words:Mittelwert",
+      "sha256": "a46801dc9dfa706b6760ced24694dd207e2ca4957b67a2e000a03be468b254ee"
+    },
+    {
+      "id": "words:Median",
+      "sha256": "d10719288f6d8677cb8d9955ca71c9373c0b584d9b0d73eb1e3f8b8f43dde759"
+    },
+    {
+      "id": "words:Wahrscheinlichkeit",
+      "sha256": "43a4aff321fafc773ad61ed4836c4b3542e080bc1859260e69744cedeb49a4a6"
+    },
+    {
+      "id": "words:Skala",
+      "sha256": "d59b136dc26e03366e83b466069dc195034fc27f7f4dda0e6fd2ab5b7eb84a05"
+    },
+    {
+      "id": "words:Maßstab",
+      "sha256": "cca7c2bbe643206afcfef00a4b70b1b9fc0778e7c7efa3eb9f9a5fbf4185008f"
+    },
+    {
+      "id": "why:44",
+      "sha256": "66f45b45754c84c2d1c476089323b4248104092ba83201669a8cfcfd3d01f760"
+    },
+    {
+      "id": "why:45",
+      "sha256": "bc38a51c9f292c8c540165acd71af0d91f2dc8c738da9951a20f49e108f2e101"
+    },
+    {
+      "id": "why:46",
+      "sha256": "3e6ecff6d28a71892a9842c67ad635c730a25a80723010a09e5cda9c23de8c72"
+    },
+    {
+      "id": "words:Algorithmus",
+      "sha256": "9efa5f29499fbac2ea28969b1c14cd17e57a3f050f549aad8365127764156dae"
+    },
+    {
+      "id": "words:Bit",
+      "sha256": "88d5e6d13879f8cec7eb4e48477dc1eb3c31b84ccc61708158c25091832b8512"
+    },
+    {
+      "id": "words:Byte",
+      "sha256": "a7fc4482134372e2886ab3e31db472e9b1f23b48439cfb6e18303535387dd571"
+    },
+    {
+      "id": "words:Verschlüsselung",
+      "sha256": "7aa91cfbd830732433714c5d4659701bbc40462773c8e17e8ef82eae92c2d8a2"
+    },
+    {
+      "id": "words:Schlüssel",
+      "sha256": "46caa4c2fbed105fd23bb4dea1bd79bbd1b63e2d5b72943abbe3e4863309c6cc"
+    },
+    {
+      "id": "words:Prüfsumme",
+      "sha256": "0b411d86870c493c43d415f2457e0876fbc0abadfae7f433930c34780d0a5175"
+    },
+    {
+      "id": "words:Hashfunktion",
+      "sha256": "964160b0bf73b7b068360327cb3b36fc99d3d556313e8dc7c5b7b6a27391e4d6"
+    },
+    {
+      "id": "words:Datenstruktur",
+      "sha256": "675656af4102958f832c2f6295375a8cf149bdec79495c24133e4df2db61ed9a"
+    },
+    {
+      "id": "words:Klartext",
+      "sha256": "2ecaed877b47926764e02062d80fb53433b88b0866198945402291d95d11eba8"
+    },
+    {
+      "id": "why:47",
+      "sha256": "edd14aa86e7d889d7a18ebbe53ce3a7c0bbc55fab3e343b9f157073063884a14"
+    },
+    {
+      "id": "why:48",
+      "sha256": "3cf3d3644bc3838e4dcb0db53d97ecd8405047e0ec8d9fe86c8ffdf573013d45"
+    },
+    {
+      "id": "why:49",
+      "sha256": "122d1778e79476338828d3310c9dbe9c31b6b39019cc03a3f4df21ed4fc75f7e"
+    },
+    {
+      "id": "words:Asteroid",
+      "sha256": "27939b1d41fd19bce6e9cb857298cd27689c9c8a33e006c656a8e8e5d0ba7bb0"
+    },
+    {
+      "id": "words:Komet",
+      "sha256": "2cf163e42c62b614afc865882b81293304f57f628c3aa9c2cdc7a1c38af612e7"
+    },
+    {
+      "id": "words:Exoplanet",
+      "sha256": "5d6a67328ecb60e9bc8b2cc00dccda3e009dfd6c1bf6256ceabcf0bcc181d483"
+    },
+    {
+      "id": "words:Transit",
+      "sha256": "7586977031ab115d8691cf743ebcd9608aa1afdb78d2e13993983c1a5315821c"
+    },
+    {
+      "id": "words:Galaxie",
+      "sha256": "0dd9a862a887c1e6684a031a9d220dce5d5dc4f5944f110cf6f8624ebfa3c285"
+    },
+    {
+      "id": "words:Lichtjahr",
+      "sha256": "d3aa9188348c9466c57e0b2bf65f1480d1aa67c04c1a76d76f3cb5f4c035e755"
+    },
+    {
+      "id": "why:51",
+      "sha256": "74d909fcde49cbad3c3c61f5ba750badf84fb78405f4f0dfd5558e584aa8f66d"
+    },
+    {
+      "id": "why:50",
+      "sha256": "fcc1e54f2c5d023af6415cdae89aae56decad4764f966fce4424aa944da96e26"
+    },
+    {
+      "id": "words:Evolution",
+      "sha256": "33a36180f108ba17cd1ffa66f3a65fe52fd889ab901cfaf6cc88c34ba54f9e0d"
+    },
+    {
+      "id": "words:Mikroorganismus",
+      "sha256": "122c945d597eda30e6df67e9f002706a4106167a2172de8ee6f3046e64addc92"
+    },
+    {
+      "id": "words:Ökosystem",
+      "sha256": "eec509bad2ec38f65994c4d4d04660897eeeb114b2d0be52fe24f377cfef6ea9"
+    },
+    {
+      "id": "words:Zersetzung",
+      "sha256": "194421ddde32de9cf5e3c24b00aeed50d35d218364ae95e8b32bb20f84680f26"
+    },
+    {
+      "id": "words:Kohlenstoffkreislauf",
+      "sha256": "ecdac1636d3cac7b7b05374c158217640d8c38cdf7b9002eb6a0e3d1ab03a7fd"
+    },
+    {
+      "id": "words:Dürre",
+      "sha256": "daf68eb49450c575229ee39df78573c320211b9d1bfbd6d04db0b917b25a85f5"
+    },
+    {
+      "id": "words:Hypothese",
+      "sha256": "788060f47300d95b0f299443500ef8e1441676479a960dbe79ecd10d8df8fe84"
+    },
+    {
+      "id": "words:Topografie",
+      "sha256": "222da64130d838333f6d89ac75052ebc3466c6db1435609c83d08d757c619279"
+    },
+    {
+      "id": "words:Geoid",
+      "sha256": "12bb82e7555c15745ccaedac397f1dc1a4e8c23d82f3b7529e0c5a2ef8d4fbc4"
+    },
+    {
+      "id": "words:Koordinate",
+      "sha256": "ee132570dbc62404c0a5d85b814e5c98e718c54e1fd4017d5f7094240418af5b"
+    },
+    {
+      "id": "words:Kartenprojektion",
+      "sha256": "7224d01ea9dfac21c668e7147bbf6126bb872361ea399811b3cf448e90bd2da6"
+    },
+    {
+      "id": "words:Kernfusion",
+      "sha256": "cc2dbd2d8652b952410ddfeec3690f02e08d9ad3156127706ebcc53c6e4c4618"
+    },
+    {
+      "id": "words:Kernspaltung",
+      "sha256": "6e650ff24df2ae4eb23c4a4e97988f12c3db9443370f053555688428e5d97971"
+    },
+    {
+      "id": "words:Winkel",
+      "sha256": "5edef4a22e0bd4c0bc1170e7b0569f82f3be9eefaa53f4cc3b84b5166b0a1684"
+    },
+    {
+      "id": "words:Symmetrie",
+      "sha256": "ade20c3d05f03d1dc314e55548d1408b8593314064134cb49c3568ecdadae82f"
+    },
+    {
+      "id": "why:52",
+      "sha256": "20f513a973d5180057b6076c078ad2c94f2ec351c9f683ea72d95915a509ec2e"
+    },
+    {
+      "id": "why:53",
+      "sha256": "d2d9115072bc518d92257fa8b1d6e432e863e76a559b2c39d964584ce5706e18"
+    },
+    {
+      "id": "why:54",
+      "sha256": "05ada0c47c8739b21ffe619fc4f399e2e41088b87709bb0cce1523bcb4e7c511"
+    },
+    {
+      "id": "why:55",
+      "sha256": "3caf309dd069aa1e78d4563b7174f31c3609606e4ed7c112c2e7942cd3ef2bf4"
+    },
+    {
+      "id": "why:56",
+      "sha256": "d6b9410824e9d009ce8d6f13e7b8f96e93b46a25f10af5c38f5ac1e132e2371a"
+    },
+    {
+      "id": "why:57",
+      "sha256": "c7aac6f59e5ddbcb0c1d7358561083bd618910376851d5864f3e0c25a89284f5"
+    },
+    {
+      "id": "why:58",
+      "sha256": "02ca2c885b92f5d0c22b7c4498019a6c9a4352c30761f49e0fee0d4637d09e1c"
+    },
+    {
+      "id": "why:59",
+      "sha256": "ec0365919d50816b90b1e6c15d1e672351dc4a22ae4545a1286e60dd3f90937f"
+    },
+    {
+      "id": "nature-topics:okavango-delta",
+      "sha256": "1b008eb417b102992e49eb2006601abe327bb283299b6d4f5a20f06e51f24cd4"
+    },
+    {
+      "id": "nature-topics:tanganyika",
+      "sha256": "99067ae7a808f674c81a7fe2fc923034ec7e0d50ff67f92a76dcee28b91f56b5"
+    },
+    {
+      "id": "nature-topics:tonle-sap",
+      "sha256": "8c123e0fe91f55198c4319a4b6702f6340bd8affa35b2659f704016e538e7140"
+    },
+    {
+      "id": "nature-topics:danube-delta",
+      "sha256": "385ce9dd27ada76e48ec4e7a7d7b455bce63683708f0485a1a9f7edaf4e61c85"
+    },
+    {
+      "id": "nature-topics:grand-canyon",
+      "sha256": "0deaa20d41e98dd81b8c8a19532f328fe9ac8c6d60b0d801912bc352aff2e71a"
+    },
+    {
+      "id": "nature-topics:mammoth-cave",
+      "sha256": "5aae8cffe5e2e3e72746d7a2ebf29ea2c749507952cc0cae5edc98df32d79e8b"
+    },
+    {
+      "id": "nature-topics:yellowstone-geysers",
+      "sha256": "b26c946ba92a9ebeb1f451e430cd958793adc4fc360711410ebbb1fd89be8ed1"
+    },
+    {
+      "id": "nature-topics:wadden-sea",
+      "sha256": "41967f9aad3125dfcf7fac06399f822221e7ec3007ddc9d164f568f4d054cc66"
+    },
+    {
+      "id": "nature-topics:bryce-hoodoos",
+      "sha256": "003b84fd89812148ea100b754e733b8b3d7ba51afdf1fed8b00b458ee2711f77"
+    },
+    {
+      "id": "nature-topics:arches-sandstone",
+      "sha256": "1498e2f9ad7074d01e36eec9be24086f4037cd33594daf56f4acbf2580d9450c"
+    },
+    {
+      "id": "nature-topics:crater-lake",
+      "sha256": "52fa2261b4fb283918a081e948a9119e246e150715f85d21cc17800dca99aa92"
+    },
+    {
+      "id": "nature-topics:white-sands",
+      "sha256": "55d0596dceb7d34e2432e13b34b50b2cc17180e86b2644bb553328579bd1d363"
+    },
+    {
+      "id": "nature-topics:vatnajokull",
+      "sha256": "8561c60091b0de41336b5a8c912ba23951e6354b8ef5bec2b2b5727ec36aff99"
+    },
+    {
+      "id": "nature-topics:daintree",
+      "sha256": "86124b62f443796d973342767174022e7b59d68f23d3b2b3d290ce6b347d80fc"
+    },
+    {
+      "id": "nature-topics:bialowieza",
+      "sha256": "3750772071288349878ce463d51a89e2296b8eb646e23a20a8791426e4bb0356"
+    },
+    {
+      "id": "nature-topics:sundarbans",
+      "sha256": "d261cc2a4109048d8966a7d9133289535ad364063611fff249cac4b420f1c08f"
+    },
+    {
+      "id": "nature-topics:lencois-maranhenses",
+      "sha256": "aa02052572411d9e3e49b78bf9e653d4c0737e2a89cce81add57e5475c80741d"
+    },
+    {
+      "id": "nature-topics:socotra-vegetation",
+      "sha256": "b2d7dbf057d226b4b536b2d4184e93e9f7309dc22dfbad0bc4fc8966d8f682ee"
+    },
+    {
+      "id": "nature-topics:ha-long-bay",
+      "sha256": "7261df86a37274ea587cf7cc2a318f0acf2a0e38a334904a64c3916e98454342"
+    },
+    {
+      "id": "nature-topics:sognefjord",
+      "sha256": "aa53d7879ac194f6c1981b230ed4b55ea2bd3309d65ae963a829aa0a0233681c"
+    },
+    {
+      "id": "nature-topics:sargasso-sea",
+      "sha256": "afceaa09f61ac1c14260b24c84a50b2f14af9d38e4422d750778a480a6443ece"
+    },
+    {
+      "id": "nature-topics:ross-ice-shelf",
+      "sha256": "0e80c92c12570470dfa385178dd424a4061a4fdb265395b37de3cdcbb6cc10d3"
+    },
+    {
+      "id": "nature-topics:namib-fog",
+      "sha256": "769a0fd4e11262c272998809bdc7eba9f9fdabf79853b82fac216fd38a840378"
+    },
+    {
+      "id": "nature-topics:giants-causeway",
+      "sha256": "d56be9e294e064c32e4bf22e5c6fd2468434129c41a5068032b819166da0e3d4"
+    },
+    {
+      "id": "nature-topics:yosemite-valley",
+      "sha256": "8473a819626d980cc9a9561400a3213ec37dc4192316f05f153890e182ca5c85"
+    },
+    {
+      "id": "nature-topics:lake-superior",
+      "sha256": "7089ed19e3e6a0cdda874ab62ce3fda25578b20bb315935fd847642319de036a"
+    },
+    {
+      "id": "nature-topics:jeju-lava-tube",
+      "sha256": "1c7464cc1bdfbe645311bf1b2dea1c109cdfb962200c7907d99b60362d083bfc"
+    },
+    {
+      "id": "nature-topics:pamukkale",
+      "sha256": "e174b2eb0d4a7faad76a6dd1861fd4615c324b883ae6df58d2de13886d09adf9"
+    },
+    {
+      "id": "nature-topics:salar-uyuni",
+      "sha256": "52e76905e806c5d8fba0a9ca2d22196bfb2735cee7917b34fda70accebd68b88"
+    },
+    {
+      "id": "nature-topics:titicaca",
+      "sha256": "ed6aae3ef81b7cbdc357bbe2a549fd48a65e6933303e1d3493903aa35ac3d331"
+    },
+    {
+      "id": "nature-topics:victoria-falls",
+      "sha256": "7b6073e231d8c084fdcafdba0fa40c454d702ef57922965c5bc30bff633fcf5e"
+    },
+    {
+      "id": "nature-topics:iguazu-falls",
+      "sha256": "773f2d97858fa1513c81de80f1f9901171ffdadc0f7efdd988526b7763d71766"
+    },
+    {
+      "id": "nature-topics:great-blue-hole",
+      "sha256": "7db9c1739f872162a916f2b11dea5079888fecfbbc52bd22810b06ae81e6ca95"
+    },
+    {
+      "id": "nature-topics:galapagos-upwelling",
+      "sha256": "31c7e86c0c21512487a92bdb0322794285adc693171c47861ad4f072b9b28320"
+    },
+    {
+      "id": "topics-people:person-henrietta_swan_leavitt",
+      "sha256": "10b6af4869d9f9da718765703e3cb2d8def146f8edfbcbe55cef30d8b59344d7"
+    },
+    {
+      "id": "topics-people:person-cecilia_payne_gaposchkin",
+      "sha256": "d89f70770ff54678f4fb49f04a53d2db48f6fc2c22eb73c8298b5ead622bd2bb"
+    },
+    {
+      "id": "topics-people:person-rosalind_franklin",
+      "sha256": "bf64839b6804429d2f2683960c4d538c4a3575d2eb06206319fcff94dc3e21ad"
+    },
+    {
+      "id": "topics-people:person-jocelyn_bell_burnell",
+      "sha256": "0309af5178ffce8264467d0eca8bb9f315a0614c3b3b800b343467e5fd711d82"
+    },
+    {
+      "id": "topics-people:person-katsushika_hokusai",
+      "sha256": "9c9e1e472015c25d6520be21ddb35a7c6729c2950368415e618366dd8edeabcf"
+    },
+    {
+      "id": "topics-people:person-murasaki_shikibu",
+      "sha256": "93e9c37296d1bc71c48dcb14a3b4533c4003e886d94792207ba5d338de559415"
+    },
+    {
+      "id": "topics-people:person-rachel_carson",
+      "sha256": "60d99a3d1eaeb588e28ce51b5c10e46a1a1b409aaf6b4812405dd586e6a5078e"
+    },
+    {
+      "id": "topics-people:person-octavia_butler",
+      "sha256": "fc66914a70ffa50e2295de579152a9e355043950711732bd923a18eddbee987b"
+    },
+    {
+      "id": "topics-people:person-nelson_mandela",
+      "sha256": "2317424be76198554f5d778308050ee3eb4906f7d1b0b5670f0532b79e86e8e5"
+    },
+    {
+      "id": "topics-people:person-chien_shiung_wu",
+      "sha256": "79692f58533fa523ccb341dcbe1e06388f72f5aabf0dba57c7c9b863bf778a4b"
+    },
+    {
+      "id": "topics-people:person-lise_meitner",
+      "sha256": "32f0e024a3153c9b1cb4af0be6d14cddeb5de1cd79f103a03adc3519ecad2a1b"
+    },
+    {
+      "id": "topics-people:person-zaha_hadid",
+      "sha256": "f7301aae1cb6a74bcfe091063cb1075655e831c2ea992f37f314937e4103e35a"
+    },
+    {
+      "id": "topics-people:person-rabindranath_tagore",
+      "sha256": "369e378473cc8f8ec47512db73d5e8ede1d09314bccc7c0739696257e26c9429"
+    },
+    {
+      "id": "topics-people:person-ibn_sina",
+      "sha256": "0f740197ba1ae644a8baa0bf965533d919957814d9dfeb3f9c0364695e7ee1ba"
+    },
+    {
+      "id": "topics-people:person-ada_lovelace",
+      "sha256": "496b3972a5c2d0d4c445d8cb21ff2787e1f6d033c8c9eb80647d0d2968abef0e"
+    },
+    {
+      "id": "topics-people:person-al_khwarizmi",
+      "sha256": "378b2e422bb6b2afaf8d96b30149452b2146f528693a9a4cd9252faac7fab6f8"
+    },
+    {
+      "id": "topics-people:person-albert_einstein",
+      "sha256": "5116c037af36dbfdd04915799ccd819daec4db170eb3f99d8941bb2f333918e3"
+    },
+    {
+      "id": "topics-people:person-alexander_humboldt",
+      "sha256": "60cf196dddfc2e5b59a89cbae7f805d809a9cbbf7ab2c74ab28b8f9a4819ad9d"
+    },
+    {
+      "id": "topics-people:person-bertha_benz",
+      "sha256": "4a47e578abd3841cb6a6b9afa526b14f530dd9dd0e906d31e6768e8c17e5dbec"
+    },
+    {
+      "id": "topics-people:person-cai_lun",
+      "sha256": "901ec03ba1f68c0a3408d18776cdd3e5619dce759039e989704f1b8386cb13ae"
+    },
+    {
+      "id": "topics-people:person-charles_darwin",
+      "sha256": "57cdb2579d2b419b50914a42371a17ed38bc77a7bcf09bf5a556370984817ce6"
+    },
+    {
+      "id": "topics-people:person-grace_hopper",
+      "sha256": "bba2d833cc56375012936a323cdc2674ffe4390d854b3ac1b16b986f72cc0357"
+    },
+    {
+      "id": "topics-people:person-jane_goodall",
+      "sha256": "8a6db8e195ba70bae973d089e3ab6c000a8510af7f7d6f63db3b65ca440df566"
+    },
+    {
+      "id": "topics-people:person-johannes_gutenberg",
+      "sha256": "284d366e1390dfcd40635dbdc8d059e4196155fd43ff308757df50831500ec6e"
+    },
+    {
+      "id": "topics-people:person-karl_benz",
+      "sha256": "96766b64f677c96e87642f2bdfeab2743f38b9b4381f24203088f55fe3436c2a"
+    },
+    {
+      "id": "topics-people:person-katherine_johnson",
+      "sha256": "d77a186a747004edae904353a70a5cfaad16f7eba4cb0eb9c8ec2e20797c7f00"
+    },
+    {
+      "id": "topics-people:person-mae_jemison",
+      "sha256": "6c97a7b8feef0f6e64826e689b9aefeba038fe5dec76570631be4806b83d2717"
+    },
+    {
+      "id": "topics-people:person-marie_curie",
+      "sha256": "dcfbf0220e828e31cce44bbb6b3d28567c4808ab044b4e03b42f580829c5b181"
+    },
+    {
+      "id": "topics-people:person-neil_armstrong",
+      "sha256": "74b1e7b521c08b1cb30de0580da04bc2e92fc3c5a38373f570eb02fda2c02a20"
+    },
+    {
+      "id": "topics-people:person-tim_berners_lee",
+      "sha256": "03f2f8e606233ed699a21743768b20ef092af300067cf43095465ca62a07858a"
+    },
+    {
+      "id": "topics-people:person-tu_youyou",
+      "sha256": "a521ed155d2149b634918733f1d51eb0a606ebdd9ce3d284068e1af688becaed"
+    },
+    {
+      "id": "topics-people:person-wangari_maathai",
+      "sha256": "a017b13a92c96980de4150bc794db547b96bf1bade5b6fde5ac1e20acf6e1287"
+    },
+    {
+      "id": "topics-science:science-water-cycle",
+      "sha256": "3d6f68851634a4d0904f80cdeeecbf5ba95933d1c3e7ad56219d30ccab3c4f20"
+    },
+    {
+      "id": "topics-science:science-photosynthesis",
+      "sha256": "83f82869cb8a93665f07f298105948226a204aefc1a1c3c14db92504f7f87750"
+    },
+    {
+      "id": "topics-history:history-kilwa",
+      "sha256": "574565c57c1749483758faedd5093179f821c58e85b838567c9240dfec065e38"
+    },
+    {
+      "id": "topics-history:history-timbuktu",
+      "sha256": "0de339d8f711baa0c9e43dc2692c951a28fadbab02345efb5c964449fff81ac4"
+    },
+    {
+      "id": "topics-history:history-angkor",
+      "sha256": "8140510d2468fcf22cc40e6dca4b2953d46ace7c217adc2f23fd25cdcb1c91f8"
+    },
+    {
+      "id": "topics-history:history-polynesia",
+      "sha256": "33a362345eadfc268eab70068d235a48d42afd92660731f7c49279cb2302daf1"
+    },
+    {
+      "id": "topics-history:history-caral",
+      "sha256": "fda20cfcc3cf0e66b20edc67353bb9ba0870acc9ca45956e06fb03ce25139992"
+    },
+    {
+      "id": "topics-history:history-nalanda",
+      "sha256": "59d9841da85b9a6c05ded54b2a7228fb4fdc7dd908fc3cac5f430be7360d56d8"
+    },
+    {
+      "id": "topics-history:history-hattusha",
+      "sha256": "43c802edf655aa1cbc4aed7f2a5797e6dd9bd975e0d5927c1e640dc42360391b"
+    },
+    {
+      "id": "topics-history:history-paper",
+      "sha256": "9aff8c97cfbf4d3978dcd6cb2bd8215164425cf7f4479237c28a1625fa244890"
+    },
+    {
+      "id": "topics-history:history-printing",
+      "sha256": "37fe88f909ab427157f7742017c48b1f789e4507a6c0e92dd411a549cdfbca5f"
+    },
+    {
+      "id": "topics-history:history-rosetta",
+      "sha256": "08f937a32e9ad820aa92b05a950191a076e9a929cf1213ab9fa7a5fd0440fc86"
+    },
+    {
+      "id": "topics-history:history-catalhoyuk",
+      "sha256": "4813a4844d5759ecd7c053f603efd2e8bff8e92a65d2b86199c3d8a02dc888ac"
+    },
+    {
+      "id": "topics-history:history-cahokia",
+      "sha256": "ab2e6c75796c0a920ec4bf96afef13619f71955110168efeccb97bb03cba0bc4"
+    }
+  ],
+  "addedIds": [
+    "topics-history:history-kilwa",
+    "topics-history:history-timbuktu",
+    "topics-history:history-angkor",
+    "topics-history:history-polynesia",
+    "topics-history:history-caral",
+    "topics-history:history-nalanda",
+    "topics-history:history-hattusha",
+    "topics-history:history-paper",
+    "topics-history:history-printing",
+    "topics-history:history-rosetta",
+    "topics-history:history-catalhoyuk",
+    "topics-history:history-cahokia"
+  ],
+  "changedPriorIds": [
+    "topics-history:history-khipu",
+    "topics-history:history-mohenjo-daro",
+    "topics-history:history-writing",
+    "topics-buildings:building-angkor-wat",
+    "topics-history:history-bronze",
+    "topics-science:science-water-cycle"
+  ]
+}

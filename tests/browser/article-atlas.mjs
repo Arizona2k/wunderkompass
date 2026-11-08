@@ -10,6 +10,7 @@ import {peopleSourceView,peopleLegacyRound} from './people-learning.mjs';
 import {electricalSourceView} from './invention-electrical.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
+import {HISTORY_REGION_NAMES} from './history-evidence-actions.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -128,6 +129,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  report.electricalViews??=[];report.electricalViews.push(...await electricalSourceView(page,{width,shots,questions:true}));
  report.opticsViews??=[];report.opticsViews.push(...await opticsSourceView(page,{width,shots,questions:true}));
  report.historySourceViews??=[];report.historySourceViews.push(...await historySourceView(page,{width,shots,questions:true}));
+ if(width===320){const ids=Object.keys(HISTORY_REGION_NAMES),expected=ids.flatMap(id=>topics.find(t=>t.id===id).sources.map(source=>({id,requested:source.url})));assert.equal(expected.length,47);report.historyActualSources=await actualPeopleSourceActivation(page,{ids,pdfOutputDirectory:shots+'/history-source-PDF-originals'});assert.deepEqual(report.historyActualSources.observations.map(({id,requested})=>({id,requested})),expected,'all47 exact current declared source anchors, with no filtering');assert.equal(report.historyActualSources.status,'actual destinations loaded, separate factual passages retained');}
  // New science coverage uses both endpoint layouts; all existing atlas widths
  // and activities above remain. Keep one complete mobile image set, rather than
  // duplicating every new image at every width in the bounded review artifact.
@@ -147,7 +149,7 @@ export async function offlineArticleAtlas(page,report){
  report.mechanicsCold=await mechanicsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.mechanicsCold.length,6);
  report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
  report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
- report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,3,'all three historical activities survive the actual cold browser restart');
+ report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,16,'all16 individually selected historical activities survive the actual cold browser restart');
  report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
  report.waterPhotosynthesisCold=await waterPhotosynthesisView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.waterPhotosynthesisCold.length,2,'both individually revised articles and all six authored inquiries survive the same cold restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');

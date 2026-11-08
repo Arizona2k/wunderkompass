@@ -1792,6 +1792,22 @@
       "kind": "compare",
       "why": "Ein Erdhügel und eine Steinpyramide können grob ähnliche Umrisse haben. Prüfe Material, Bauweise und Funktion getrennt; die Form beweist keinen identischen Bauplan oder Kontakt.",
       "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-rosetta--history-hattusha",
+      "fromId": "history-rosetta",
+      "toId": "history-hattusha",
+      "kind": "compare",
+      "why": "Ein Vergleichstext kann beim Entziffern helfen; die Unterscheidung von Schrift und Sprache bleibt dabei nötig. Vergleiche die verschiedenen Fragen an dieselben Zeichen und an mehrere Fassungen. Die Verbindung behauptet keine identische Sprache der Texte.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-catalhoyuk--history-stone_tools",
+      "fromId": "history-catalhoyuk",
+      "toId": "history-stone_tools",
+      "kind": "compare",
+      "why": "In einer neolithischen Siedlung wurden verschiedene Werkstoffe und Werkzeuge verwendet. Vergleiche materielle Spuren und ihre Herstellungs-/Nutzungsfragen; die Bezeichnung Steinzeit rekonstruiert weder jedes Haus noch den Alltag aller Menschen.",
+      "checkedAt": "2026-11-08"
     }
   ]
 }

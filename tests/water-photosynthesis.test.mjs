@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';
 import actualHistoryCatalog from '../app/world-catalog.json' with {type:'json'};
 import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 const catalog=beforeHistoryEvidence(actualHistoryCatalog);
 import thinking from '../app/science-thinking.json' with {type:'json'};
 import {CHALLENGE_BANK as actualHistoryBank,challengeQuestionForOrder,restoreChallenge,emptyChallenge} from '../app/knowledge-challenge.ts';
@@ -42,7 +43,7 @@ test('all679 whole runtime inputs reconstruct exact accepted M93 while unknown, 
 });
 
 test('two individually sourced qualified UI dossiers preserve all286 whole M93 source and UI dossiers with exact inverse',()=>{
- const rows=JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers,inventory=collectInventory(),knownIds=new Set(inventory.records.map(r=>r.id));assert.equal(rows.length,288);assert.equal(dossiersBeforeWaterPhotosynthesis(rows).length,286);
+ const rows=dossiersBeforeHistoryEvidence(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers),inventory=collectInventory(),knownIds=new Set(inventory.records.map(r=>r.id));assert.equal(rows.length,288);assert.equal(dossiersBeforeWaterPhotosynthesis(rows).length,286);
  for(const row of rows.slice(286)){const currentRecord=inventory.records.find(r=>r.id===row.id),record={...currentRecord,dataHash:wholeWaterReference(catalog.find(t=>'topics-'+t.category+':'+t.id===row.id))};assert.equal(validateDossierContent(row,record,{knownIds}).contentReady,true);const actualUILayer=boundary.sourceEndpointCorrection.qualifiedUILayer??boundary.qualifiedUILayer;const currentBuild=withHistoryEvidencePredecessorRuntime(process.cwd(),learningFingerprint),ready=validateDossier(row,record,{knownIds,build:currentBuild}).structurallyReady;if(currentBuild===actualUILayer.build)assert.equal(ready,true);else{assert.equal(currentBuild,boundary.sourceEndpointCorrection.pendingCurrentUIBuild);assert.equal(ready,false,'earlier valid UI must not count as current source-corrected acceptance');}assert.deepEqual(row.ui,{...actualUILayer.currentTemplate,route:record.route});}
  for(const mutate of[r=>r[0].goal+=' unreviewed',r=>r[286].claims[0].statement+=' unreviewed',r=>r[287].ui={build:'invented',visible:true,search:true,back:true,offline:true},r=>r.push(structuredClone(r[287]))]){const bad=structuredClone(rows);mutate(bad);assert.throws(()=>dossiersBeforeWaterPhotosynthesis(bad));}
 });
