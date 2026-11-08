@@ -98,3 +98,16 @@ test('a failed ordinary reload propagates its error while retaining the original
  assert.equal(actual.row.transientNavigationRecovery.finalHTTP,undefined);
  assert.equal(actual.row.status,'external access not yet qualified');
 });
+
+const remoteConnectionFailureBody='upstream connect error or disconnect/reset before headers. reset reason: remote connection failure';
+test('the observed exact HTML remote connection failure gets one ordinary reload within the unchanged30s budget',async()=>{
+ const actual=sourceTab({body:remoteConnectionFailureBody,elapsed:7000});await actual.run();assert.deepEqual(actual.calls,[{waitUntil:'domcontentloaded',timeout:23000}]);assert.deepEqual(actual.row.mainResponses.map(r=>r.status),[503,200]);assert.equal(actual.row.transientNavigationRecovery.initialBody,remoteConnectionFailureBody);assert.equal(actual.row.transientNavigationRecovery.initialBodySHA256,createHash('sha256').update(remoteConnectionFailureBody).digest('hex'));assert.equal(actual.row.transientNavigationRecovery.additionalRequestsMaximum,1);assert.equal(actual.row.transientNavigationRecovery.originalActivationBudgetMs,30000);assert.equal(actual.row.transientNavigationRecovery.noTimeoutExtension,true);assert.equal(actual.row.status,'external access not yet qualified');
+});
+test('the exact remote reset still stays unqualified and limited to one reload when it persists',async()=>{
+ const actual=sourceTab({body:remoteConnectionFailureBody,afterStatus:503,afterBody:remoteConnectionFailureBody});assert.equal(await actual.run(),remoteConnectionFailureBody);assert.equal(actual.calls.length,1);assert.equal(actual.row.transientNavigationRecovery.finalHTTP,503);assert.equal(actual.row.status,'external access not yet qualified');
+});
+test('recognising the reset message cannot retry forbidden or partial responses, expired budgets, PDF originals or another document',async()=>{
+ for(const options of [{status:403},{status:404},{status:200},{status:206},{elapsed:30000},{elapsed:30001},{sourceURL:'https://source.example/complete.PDF'},{responseURL:'https://unrelated.example/article'},{body:'remote connection failure without the observed proxy envelope'},{body:'upstream connect error or disconnect/reset before headers. reset reason: maintenance'}]){
+  const actual=sourceTab({body:remoteConnectionFailureBody,...options});await actual.run();assert.deepEqual(actual.calls,[],JSON.stringify(options));assert.equal(actual.row.transientNavigationRecovery,undefined);assert.equal(actual.row.status,'external access not yet qualified');
+ }
+});

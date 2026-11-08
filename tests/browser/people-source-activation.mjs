@@ -8,13 +8,13 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 const next=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4,18);
 const saveKey='erde-entdecken:save:v3';
 
-// Recover only the observed transport failure. This function does not qualify
+// Recover only the two actually observed Cloud-proxy HTML transport messages. This function does not qualify
 // a source: the caller still checks real final HTTP, body, opener and progress.
 export async function recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,activationStarted,recordedNavigationResponses,now=()=>performance.now()}){
   let text=await popup.locator('body').innerText();
   const initial=row.mainResponses.at(-1),remainingActivationMs=Math.floor(30000-(now()-activationStarted));
   const sameDocument=initial&&new URL(initial.url).href.split('#')[0]===new URL(popup.url()).href.split('#')[0];
-  if(initial?.status===503&&sameDocument&&text.trim()==='upstream connect error or disconnect/reset before headers. reset reason: connection timeout'&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
+  if(initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
     row.transientNavigationRecovery={initialHTTP:503,initialURL:row.actualURL,initialBody:text,initialBodySHA256:createHash('sha256').update(text).digest('hex'),additionalRequestsMaximum:1,remainingActivationMs,originalActivationBudgetMs:30000,noTimeoutExtension:true};
     await popup.reload({waitUntil:'domcontentloaded',timeout:remainingActivationMs});
     row.mainResponses=recordedNavigationResponses();row.actualURL=popup.url();row.actualTitle=await popup.title();

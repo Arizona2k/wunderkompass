@@ -3,7 +3,7 @@
   "base": "0bd0af71aa558a475122cc2fa6e56ab27da4bc03",
   "meaning": "Exact whole M93 predecessor objects for historical tests only; current raw whole objects and compatibility are checked independently.",
   "previousCatalogSHA256": "203ff78f287696c7b6862dea4595f861b38757129299b5348209269fbecbc2fa",
-  "currentCatalogSHA256": "6cd0ee1c8c5a911d334ee1a8a394d4f8e2c819e911a99ef738e6db605c89c808",
+  "currentCatalogSHA256": "935bb121e528cbc3dc1955ce48a6ab4ea906300665f62d14e5837b3f5360e7b4",
   "topics": [
     {
       "id": "science-water-cycle",
@@ -5144,5 +5144,2142 @@
       }
     ],
     "meaning": "Exact actual qualified local technical UI layer; all286 whole M93 dossiers and two exact individually prepared content dossiers reconstructable. NativeCI and regular actual delivery remain open."
-  }
+  },
+  "sourceEndpointCorrection": {
+    "meaning": "Exact one-source forward correction; preserve complete earlier article and dossier content, never normalize unknown changes or promote prior UI to current acceptance.",
+    "topic": {
+      "id": "person-charles_darwin",
+      "before": {
+        "id": "person-charles_darwin",
+        "category": "people",
+        "title": "Charles Darwin",
+        "intro": "Charles Darwin verglich Lebewesen, Fossilien und viele Beobachtungen. Natürliche Selektion erklärt, wie vererbbare Unterschiede über Generationen häufiger oder seltener werden können.",
+        "paragraphs": [
+          "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.",
+          "Bei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1809–1882"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Naturforschung"
+          }
+        ],
+        "more": [
+          "Charles Darwin lebte von 1809 bis 1882. Auf der Beagle-Reise sammelte er Tiere, Pflanzen, Fossilien und Notizen. Nach der Rückkehr verglich und untersuchte er seine Beobachtungen noch viele Jahre. Die Erklärung entstand nicht durch einen einzigen plötzlichen Einfall auf den Galápagosinseln. Die Reise führte durch Gebiete, in denen bereits Menschen und Kulturen lebten; auch örtliches Wissen war wichtig.",
+          "Lebewesen einer Art unterscheiden sich. Wenn Unterschiede vererbbar sind und unter bestimmten Bedingungen mit unterschiedlichem Überleben und unterschiedlicher Fortpflanzung zusammenhängen, können sich ihre Anteile über Generationen verändern. Diesen Zusammenhang erklärt natürliche Selektion. Ein einzelnes Tier verwandelt sich dabei nicht, weil es etwas braucht oder möchte.",
+          "Auch andere Menschen trugen zur Forschung bei. John Edmonstone brachte Darwin vor der Reise das Präparieren von Tieren bei. Alfred Russel Wallace entwickelte unabhängig Gedanken zur natürlichen Selektion. 1858 wurden Beiträge von Wallace und Darwin gemeinsam bei der Linnean Society vorgestellt; Darwins Buch über die Entstehung der Arten folgte 1859.",
+          "Unser eigenes Gedankenmodell gibt vererbbare Varianten und unterschiedliche Nachkommenzahlen ausdrücklich vor. Vier A- und vier B-Lebewesen bilden die Elterngeneration. Wenn jedes A drei und jedes B einen Nachkommen mit derselben Variante hat, umfasst die neue Generation zwölf A und vier B. Der A-Anteil steigt von der Hälfte auf drei Viertel. Die Nachkommen sind andere Individuen.",
+          "Das Modell erklärt weder die Entstehung von Varianten noch Gene, Paarung oder wirkliche Populationsgrößen. In der Natur können auch Zufall und Zu- oder Abwanderung Häufigkeiten verändern. Eine Zählung allein beweist deshalb noch keine natürliche Selektion. Häufiger bedeutet außerdem nicht unter allen Bedingungen besser; Evolution hat kein vorgegebenes Ziel."
+        ],
+        "surprise": "Darwin arbeitete nach seiner Reise noch lange an Vergleichen. Welche Beobachtungen und welche anderen Menschen waren dafür wichtig?",
+        "locations": [
+          {
+            "label": "Galápagos – eine Station seiner Reise",
+            "lat": -0.6,
+            "lon": -90.5,
+            "iso": "EC"
+          }
+        ],
+        "related": [
+          "person-jane_goodall",
+          "animal-green-sea-turtle",
+          "person-mary_anning"
+        ],
+        "sources": [
+          {
+            "label": "Natural History Museum · Reise, Vergleiche und Edmonstone",
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+          },
+          {
+            "label": "Linnean Society · Darwin und das Buch von 1859",
+            "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin"
+          },
+          {
+            "label": "Linnean Society · Wallaces eigener Beitrag und 1858",
+            "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace"
+          },
+          {
+            "label": "UC Berkeley Understanding Evolution · natürliche Selektion",
+            "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1809–1882",
+          "field": "Naturforschung",
+          "method": "Beobachtungen aus verschiedenen Orten vergleichen."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Charles Darwin?",
+          "answers": [
+            "Die Entwicklung und Vielfalt von Lebewesen untersuchen",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+        },
+        "image": "charles-darwin",
+        "learning": {
+          "starter": "Unterschiede zwischen Lebewesen können über Generationen häufiger werden.",
+          "observe": "Vergleiche die Anteile in zwei Generationen unseres ausdrücklich erfundenen Beispiels. Beachte die vorgegebene Vererbung und die Nachkommenzahlen.",
+          "benefit": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache."
+        },
+        "sourceNote": "Die Museums- und Gesellschaftsquellen ordnen Reisebeobachtungen, spätere Auswertung und Wallaces Beitrag ein. Die Universitätsdarstellung erklärt Variation, Vererbung und unterschiedliche Fortpflanzung. Kreise, Varianten und Zahlen des eigenen Modells sind erfunden und keine historischen Messdaten.",
+        "checkedAt": "2026-11-04",
+        "revision": 1,
+        "questionFeedback": {
+          "hint": "Was lässt sich durch den Vergleich von Lebewesen, Fossilien und vielen Generationen untersuchen?",
+          "wrongReasons": [
+            null,
+            "Ein Drucksystem erklärt nicht die hier behandelten Unterschiede zwischen Lebewesen und Generationen.",
+            "Webbrowser dienen dem Aufrufen von Webseiten. Darwins hier beschriebene Arbeit betrifft Lebewesen und Naturbeobachtungen."
+          ]
+        }
+      },
+      "after": {
+        "id": "person-charles_darwin",
+        "category": "people",
+        "title": "Charles Darwin",
+        "intro": "Charles Darwin verglich Lebewesen, Fossilien und viele Beobachtungen. Natürliche Selektion erklärt, wie vererbbare Unterschiede über Generationen häufiger oder seltener werden können.",
+        "paragraphs": [
+          "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.",
+          "Bei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch."
+        ],
+        "facts": [
+          {
+            "label": "Lebenszeit",
+            "text": "1809–1882"
+          },
+          {
+            "label": "Arbeitsgebiet",
+            "text": "Naturforschung"
+          }
+        ],
+        "more": [
+          "Charles Darwin lebte von 1809 bis 1882. Auf der Beagle-Reise sammelte er Tiere, Pflanzen, Fossilien und Notizen. Nach der Rückkehr verglich und untersuchte er seine Beobachtungen noch viele Jahre. Die Erklärung entstand nicht durch einen einzigen plötzlichen Einfall auf den Galápagosinseln. Die Reise führte durch Gebiete, in denen bereits Menschen und Kulturen lebten; auch örtliches Wissen war wichtig.",
+          "Lebewesen einer Art unterscheiden sich. Wenn Unterschiede vererbbar sind und unter bestimmten Bedingungen mit unterschiedlichem Überleben und unterschiedlicher Fortpflanzung zusammenhängen, können sich ihre Anteile über Generationen verändern. Diesen Zusammenhang erklärt natürliche Selektion. Ein einzelnes Tier verwandelt sich dabei nicht, weil es etwas braucht oder möchte.",
+          "Auch andere Menschen trugen zur Forschung bei. John Edmonstone brachte Darwin vor der Reise das Präparieren von Tieren bei. Alfred Russel Wallace entwickelte unabhängig Gedanken zur natürlichen Selektion. 1858 wurden Beiträge von Wallace und Darwin gemeinsam bei der Linnean Society vorgestellt; Darwins Buch über die Entstehung der Arten folgte 1859.",
+          "Unser eigenes Gedankenmodell gibt vererbbare Varianten und unterschiedliche Nachkommenzahlen ausdrücklich vor. Vier A- und vier B-Lebewesen bilden die Elterngeneration. Wenn jedes A drei und jedes B einen Nachkommen mit derselben Variante hat, umfasst die neue Generation zwölf A und vier B. Der A-Anteil steigt von der Hälfte auf drei Viertel. Die Nachkommen sind andere Individuen.",
+          "Das Modell erklärt weder die Entstehung von Varianten noch Gene, Paarung oder wirkliche Populationsgrößen. In der Natur können auch Zufall und Zu- oder Abwanderung Häufigkeiten verändern. Eine Zählung allein beweist deshalb noch keine natürliche Selektion. Häufiger bedeutet außerdem nicht unter allen Bedingungen besser; Evolution hat kein vorgegebenes Ziel."
+        ],
+        "surprise": "Darwin arbeitete nach seiner Reise noch lange an Vergleichen. Welche Beobachtungen und welche anderen Menschen waren dafür wichtig?",
+        "locations": [
+          {
+            "label": "Galápagos – eine Station seiner Reise",
+            "lat": -0.6,
+            "lon": -90.5,
+            "iso": "EC"
+          }
+        ],
+        "related": [
+          "person-jane_goodall",
+          "animal-green-sea-turtle",
+          "person-mary_anning"
+        ],
+        "sources": [
+          {
+            "label": "Natural History Museum · Reise, Vergleiche und Edmonstone",
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html"
+          },
+          {
+            "label": "Linnean Society · Darwin und das Buch von 1859",
+            "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin"
+          },
+          {
+            "label": "Linnean Society · Wallaces eigener Beitrag und 1858",
+            "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace"
+          },
+          {
+            "label": "Australian Museum · natürliche Selektion und andere Evolutionsmechanismen",
+            "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-is-natural-selection/"
+          }
+        ],
+        "aliases": [],
+        "links": [],
+        "person": {
+          "lifespan": "1809–1882",
+          "field": "Naturforschung",
+          "method": "Beobachtungen aus verschiedenen Orten vergleichen."
+        },
+        "question": {
+          "prompt": "Welcher Beitrag gehört zu Charles Darwin?",
+          "answers": [
+            "Die Entwicklung und Vielfalt von Lebewesen untersuchen",
+            "Das europäische Drucksystem verbessern",
+            "Den ersten Webbrowser entwickeln"
+          ],
+          "correct": 0,
+          "why": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären."
+        },
+        "image": "charles-darwin",
+        "learning": {
+          "starter": "Unterschiede zwischen Lebewesen können über Generationen häufiger werden.",
+          "observe": "Vergleiche die Anteile in zwei Generationen unseres ausdrücklich erfundenen Beispiels. Beachte die vorgegebene Vererbung und die Nachkommenzahlen.",
+          "benefit": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache."
+        },
+        "sourceNote": "Die Museums- und Gesellschaftsquellen ordnen Reisebeobachtungen, spätere Auswertung und Wallaces Beitrag ein. Der am07.11.2026 neu geprüfte Australian-Museum-Beleg erklärt erbliche Variation, unterschiedliche Fortpflanzung sowie weitere Evolutionsmechanismen; die übrigen Quellenprüfungen vom04.11.2026 bleiben erhalten. Kreise, Varianten und Zahlen des eigenen Modells sind erfunden und keine historischen Messdaten. Eine vereinfachende Formulierung über die „Fittesten“ wird nicht als ausnahmslose Überlebensgarantie oder vorgegebenes Evolutionsziel übernommen.",
+        "checkedAt": "2026-11-07",
+        "revision": 1,
+        "questionFeedback": {
+          "hint": "Was lässt sich durch den Vergleich von Lebewesen, Fossilien und vielen Generationen untersuchen?",
+          "wrongReasons": [
+            null,
+            "Ein Drucksystem erklärt nicht die hier behandelten Unterschiede zwischen Lebewesen und Generationen.",
+            "Webbrowser dienen dem Aufrufen von Webseiten. Darwins hier beschriebene Arbeit betrifft Lebewesen und Naturbeobachtungen."
+          ]
+        }
+      }
+    },
+    "dossier": {
+      "id": "topics-people:person-charles_darwin",
+      "before": {
+        "id": "topics-people:person-charles_darwin",
+        "dataHash": "da7bab4901859031c9054f06515355e5814991f9a0acea76966c0ee8cfa13208",
+        "teachingDataHash": "c174f9848b213c043e4b6ba5a415db34bf49b21e3ea94e42730359ac6dcee374",
+        "goal": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+        "explanation": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.\n\nBei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch.",
+        "example": "Schalte von der Elterngeneration zur neuen Generation unseres Beispiels.",
+        "whyItMatters": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache.",
+        "hint": "Beziehe A jeweils auf alle Lebewesen derselben Generation.",
+        "feedback": "Die neue Generation besteht aus Nachkommen, also anderen Individuen. Die Kreise zeigen keine Verwandlung derselben Tiere.\n\nVier von acht ist die Hälfte. Zwölf von sechzehn ist drei Viertel. Eine gleichbleibende Anzahl von B bedeutet hier keinen gleichbleibenden Anteil von A.\n\nDas Beispiel setzt Vererbung und unterschiedliche Fortpflanzung voraus. Bei einer wirklichen Population müssen passende Belege hinzukommen und andere Ursachen berücksichtigt werden.",
+        "modelLimits": "Erfundene Häufigkeiten ohne populationsgenetische Simulation oder universelle Vorhersage. Zählen allein beweist keine Ursache, und ein Individuum verändert nicht nach Bedarf sein erbliches Merkmal.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-04",
+        "ageLevels": {
+          "6-8": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+          "9-11": "Anteile statt nur die absolute Anzahl vergleichen.",
+          "12-14": "Eine mögliche Ursache von einer bloßen Häufigkeitsbeobachtung unterscheiden."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Natural History Museum · Reise, Vergleiche und Edmonstone",
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Linnean Society · Darwin und das Buch von 1859",
+            "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Linnean Society · Wallaces eigener Beitrag und 1858",
+            "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-3",
+            "organisation": "UC Berkeley Understanding Evolution · natürliche Selektion",
+            "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Darwins Reise1831–1836 und spätere Vergleiche gehören zur Entwicklung seiner Überlegungen; John Edmonstone vermittelte ihm Präparationstechniken.",
+            "sourceId": "source-0",
+            "anchor": "Tatsächlich gelesene Stellen 79,84–106,123–131; selected actual returned passages. John Edmonstone taught taxidermy; voyage1831–1836, collection and years of subsequent comparisons; variation/reproduction; pigeon-breeding example. Grenzen: No instant Galapagos revelation; dated exact finchspecies count excluded; desirable/strongest as universal fitness excluded; no copied source images."
+          },
+          {
+            "statement": "Darwins Buch erschien1859; die spätere Veröffentlichung wird von der1858ausgetauschten und vorgestellten Arbeit unterschieden.",
+            "sourceId": "source-1",
+            "anchor": "Tatsächlich gelesene Stellen 29–37. Voyage collections and later work; book1859; Wallace1858 correspondence. Grenzen: Full1859 book not read; no whole primary paper claim."
+          },
+          {
+            "statement": "Wallace entwickelte einen eigenen ähnlichen Erklärungsansatz; Beiträge beider wurden am1.Juli1858vorgestellt, ohne gemeinsame Anwesenheit der Autoren zu behaupten.",
+            "sourceId": "source-2",
+            "anchor": "Tatsächlich gelesene Stellen 28–31. Independent Wallace contribution, similar not identical proposals, joint paper presented1July1858. Grenzen: No assertion that both authors attended together; no full original1858 paper read."
+          },
+          {
+            "statement": "Erbliche Variation und unterschiedliche Fortpflanzungsbeiträge können Merkmalsanteile über Generationen verändern; natürliche Selektion ist nicht der einzige Evolutionsmechanismus.",
+            "sourceId": "source-3",
+            "anchor": "Tatsächlich gelesene Stellen 63–73. Variation, different reproductive contribution and heredity can change trait frequency; other evolution mechanisms named. Grenzen: No borrowed beetle pictures; no universal prediction that eventually all real individuals have one trait; no causal inference from counts alone."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/charles-darwin.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei erfundene Generationen zeigen A-Kreise mit Streifen und B-Kreise mit Kreuz in unterschiedlichen Anzahlen; kein einzelnes Lebewesen wird verwandelt.",
+            "learningPurpose": "Own invented inherited A/B variants; 4A+4B parents, 12A+4B distinct offspring from assumed3vs1offspring perparent. Stripe/cross redundancy; no real species, copied beetles, individualmorph, gene/sex or universalfinality simulation."
+          },
+          {
+            "path": "public/images/portraits/charles-darwin.webp",
+            "license": "Public Domain",
+            "credit": "Herbert Rose Barraud",
+            "alt": "Charles Darwin mit langem weißem Bart auf einem historischen Porträtfoto.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-jane_goodall",
+          "topics-animals:animal-green-sea-turtle",
+          "topics-people:person-mary_anning",
+          "words:Evolution"
+        ],
+        "preparedSourceLimits": [],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Darwin-Armstrong-actually-read-institutional-passages-and-existing-portrait-rights.json"
+      },
+      "after": {
+        "id": "topics-people:person-charles_darwin",
+        "dataHash": "6934ab7790815c684f8d0b6ac8d02a03681173ba6960d08b15f75b30818d2bf1",
+        "teachingDataHash": "c174f9848b213c043e4b6ba5a415db34bf49b21e3ea94e42730359ac6dcee374",
+        "goal": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+        "explanation": "Die Reise mit der Beagle dauerte von 1831 bis 1836. Seine Beobachtungen halfen ihm später, die Entwicklung von Lebewesen zu erklären.\n\nBei natürlicher Selektion können vererbbare Unterschiede mit unterschiedlicher Fortpflanzung zusammenhängen. Dadurch können sich ihre Anteile über Generationen verändern. Ein einzelnes Tier verwandelt sich dabei nicht auf Wunsch.",
+        "example": "Schalte von der Elterngeneration zur neuen Generation unseres Beispiels.",
+        "whyItMatters": "Du unterscheidest die Veränderung einer Population von der Veränderung eines einzelnen Tieres und fragst nach passenden Belegen für eine Ursache.",
+        "hint": "Beziehe A jeweils auf alle Lebewesen derselben Generation.",
+        "feedback": "Die neue Generation besteht aus Nachkommen, also anderen Individuen. Die Kreise zeigen keine Verwandlung derselben Tiere.\n\nVier von acht ist die Hälfte. Zwölf von sechzehn ist drei Viertel. Eine gleichbleibende Anzahl von B bedeutet hier keinen gleichbleibenden Anteil von A.\n\nDas Beispiel setzt Vererbung und unterschiedliche Fortpflanzung voraus. Bei einer wirklichen Population müssen passende Belege hinzukommen und andere Ursachen berücksichtigt werden.",
+        "modelLimits": "Erfundene Häufigkeiten ohne populationsgenetische Simulation oder universelle Vorhersage. Zählen allein beweist keine Ursache, und ein Individuum verändert nicht nach Bedarf sein erbliches Merkmal.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-07",
+        "ageLevels": {
+          "6-8": "Eine neue Generation von der Verwandlung eines Tieres unterscheiden.",
+          "9-11": "Anteile statt nur die absolute Anzahl vergleichen.",
+          "12-14": "Eine mögliche Ursache von einer bloßen Häufigkeitsbeobachtung unterscheiden."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Natural History Museum · Reise, Vergleiche und Edmonstone",
+            "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Linnean Society · Darwin und das Buch von 1859",
+            "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Linnean Society · Wallaces eigener Beitrag und 1858",
+            "url": "https://www.linnean.org/the-society/history-of-science/alfred-russel-wallace",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-3",
+            "organisation": "Australian Museum · natürliche Selektion und andere Evolutionsmechanismen",
+            "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-is-natural-selection/",
+            "checkedOn": "2026-11-07",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Darwins Reise1831–1836 und spätere Vergleiche gehören zur Entwicklung seiner Überlegungen; John Edmonstone vermittelte ihm Präparationstechniken.",
+            "sourceId": "source-0",
+            "anchor": "Tatsächlich gelesene Stellen 79,84–106,123–131; selected actual returned passages. John Edmonstone taught taxidermy; voyage1831–1836, collection and years of subsequent comparisons; variation/reproduction; pigeon-breeding example. Grenzen: No instant Galapagos revelation; dated exact finchspecies count excluded; desirable/strongest as universal fitness excluded; no copied source images."
+          },
+          {
+            "statement": "Darwins Buch erschien1859; die spätere Veröffentlichung wird von der1858ausgetauschten und vorgestellten Arbeit unterschieden.",
+            "sourceId": "source-1",
+            "anchor": "Tatsächlich gelesene Stellen 29–37. Voyage collections and later work; book1859; Wallace1858 correspondence. Grenzen: Full1859 book not read; no whole primary paper claim."
+          },
+          {
+            "statement": "Wallace entwickelte einen eigenen ähnlichen Erklärungsansatz; Beiträge beider wurden am1.Juli1858vorgestellt, ohne gemeinsame Anwesenheit der Autoren zu behaupten.",
+            "sourceId": "source-2",
+            "anchor": "Tatsächlich gelesene Stellen 28–31. Independent Wallace contribution, similar not identical proposals, joint paper presented1July1858. Grenzen: No assertion that both authors attended together; no full original1858 paper read."
+          },
+          {
+            "statement": "Erbliche Variation und unterschiedliche Fortpflanzungsbeiträge können Merkmalsanteile über Generationen verändern; natürliche Selektion ist nicht der einzige Evolutionsmechanismus.",
+            "sourceId": "source-3",
+            "anchor": "Am07.11.2026 tatsächlich gelesener Australian-Museum-Abschnitt unter dem Titel What is natural selection?, in der Weblesefassung32–39: Variation, unterschiedliche Fortpflanzung und Vererbung; Mutation, Migration und genetische Drift als weitere Mechanismen. Eigenerklärungen bleiben bedingte Aussagen über Generationen. Die vereinfachende Formulierung only the fittest wird nicht als Garantie oder Evolutionsziel übernommen. Eigene Zahlen und Kreise sind ausdrücklich erfunden; keine fremden Abbildungen oder Textpassagen übernommen."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/charles-darwin.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei erfundene Generationen zeigen A-Kreise mit Streifen und B-Kreise mit Kreuz in unterschiedlichen Anzahlen; kein einzelnes Lebewesen wird verwandelt.",
+            "learningPurpose": "Own invented inherited A/B variants; 4A+4B parents, 12A+4B distinct offspring from assumed3vs1offspring perparent. Stripe/cross redundancy; no real species, copied beetles, individualmorph, gene/sex or universalfinality simulation."
+          },
+          {
+            "path": "public/images/portraits/charles-darwin.webp",
+            "license": "Public Domain",
+            "credit": "Herbert Rose Barraud",
+            "alt": "Charles Darwin mit langem weißem Bart auf einem historischen Porträtfoto.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-jane_goodall",
+          "topics-animals:animal-green-sea-turtle",
+          "topics-people:person-mary_anning",
+          "words:Evolution"
+        ],
+        "preparedSourceLimits": [],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Darwin-Armstrong-actually-read-institutional-passages-and-existing-portrait-rights.json",
+        "sourceEndpointReview": {
+          "reviewedOn": "2026-11-07",
+          "scope": "Nur der vierte Quellenbeleg und seine konkrete Zuordnung neu geprüft; drei unveränderte historische Fachprüfungen behalten04.11.2026. Lehrtext, Modell, Fragen, Medienrechte und gespeicherte Antworten unverändert.",
+          "technicalCurrentUI": "Die bisherige UI-Quittung gehört ausschließlich zum darin genannten früheren Build. Neue vollständige aktuelle Qualifikation bleibt erforderlich."
+        }
+      }
+    },
+    "previousCurrentCatalogSHA256": "6cd0ee1c8c5a911d334ee1a8a394d4f8e2c819e911a99ef738e6db605c89c808",
+    "pendingCurrentUIBuild": "68f3b45724224e9f",
+    "previousPendingCurrentUIBuildBeforeAdditionalSourceCorrection": "63b611b752753453",
+    "pendingCurrentUIBuildBeforeLegacyPaperCorrection": "39cfdf1ae5b4d5eb",
+    "qualifiedUILayer": {
+      "build": "68f3b45724224e9f",
+      "previousTemplate": {
+        "build": "7483c6fa2774d7ff",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Wasser-/Fotosynthese-Überarbeitung: vollständige aktuelle Chromium-/Firefox-/WebKitläufe, Suche/Rückwege, nativeVergrößerung und kalterOfflinebetrieb sowie gesondert qualifizierte Originalbilder. Ganze unveränderte frühere persönliche Bildbeurteilungen behalten ihre tatsächliche Herkunft; keine neue direkte Sichtung daraus abgeleitet. Alle286ganzen bisherigen Quellen-/UI-Akten und beide neuen Inhaltsakten bleiben exakt rekonstruierbar. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, nativeGitHub-Qualifikation und tatsächlicher Liefernachtest bleiben gesondert erforderlich."
+      },
+      "currentTemplate": {
+        "build": "68f3b45724224e9f",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technische gemeinsame UI-Zuordnung nach gezielter Korrektur der Darwin-/Cai-/Papierquellen: vollständige aktuelle Chromium-/Firefox-/WebKitläufe mit Suche, Rückwegen, nativer Vergrößerung und kaltem Offlinebetrieb sowie gesondert qualifizierten ganzen Originalbildern. Frühere ganze bytegleiche Bildbeurteilungen behalten ihre tatsächliche Herkunft. Alle288ganzen vorherigen sourcekorrigierten Akten einschließlich aller286historischen Fach-/UI-Akten bleiben exakt rekonstruierbar. Keine neue globale Fach-, Rechte-, Menschen-, physische Geräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, native GitHub-Qualifikation und tatsächlicher Liefernachtest bleiben gesondert erforderlich."
+      },
+      "routes": [
+        {
+          "id": "topics-animals:animal-platypus",
+          "route": "world/topic/animal-platypus"
+        },
+        {
+          "id": "topics-animals:animal-short-beaked-echidna",
+          "route": "world/topic/animal-short-beaked-echidna"
+        },
+        {
+          "id": "topics-animals:animal-okapi",
+          "route": "world/topic/animal-okapi"
+        },
+        {
+          "id": "topics-animals:animal-meerkat",
+          "route": "world/topic/animal-meerkat"
+        },
+        {
+          "id": "topics-animals:animal-ring-tailed-lemur",
+          "route": "world/topic/animal-ring-tailed-lemur"
+        },
+        {
+          "id": "topics-animals:animal-north-american-beaver",
+          "route": "world/topic/animal-north-american-beaver"
+        },
+        {
+          "id": "topics-animals:animal-walrus",
+          "route": "world/topic/animal-walrus"
+        },
+        {
+          "id": "topics-animals:animal-red-fox",
+          "route": "world/topic/animal-red-fox"
+        },
+        {
+          "id": "topics-animals:animal-raccoon",
+          "route": "world/topic/animal-raccoon"
+        },
+        {
+          "id": "topics-animals:animal-hedgehog",
+          "route": "world/topic/animal-hedgehog"
+        },
+        {
+          "id": "topics-animals:animal-barn-owl",
+          "route": "world/topic/animal-barn-owl"
+        },
+        {
+          "id": "topics-animals:animal-kingfisher",
+          "route": "world/topic/animal-kingfisher"
+        },
+        {
+          "id": "topics-animals:animal-ostrich",
+          "route": "world/topic/animal-ostrich"
+        },
+        {
+          "id": "topics-animals:animal-atlantic-puffin",
+          "route": "world/topic/animal-atlantic-puffin"
+        },
+        {
+          "id": "topics-animals:animal-common-chameleon",
+          "route": "world/topic/animal-common-chameleon"
+        },
+        {
+          "id": "topics-animals:animal-fire-salamander",
+          "route": "world/topic/animal-fire-salamander"
+        },
+        {
+          "id": "topics-animals:animal-common-frog",
+          "route": "world/topic/animal-common-frog"
+        },
+        {
+          "id": "topics-animals:animal-eastern-clown-anemonefish",
+          "route": "world/topic/animal-eastern-clown-anemonefish"
+        },
+        {
+          "id": "topics-animals:animal-european-eel",
+          "route": "world/topic/animal-european-eel"
+        },
+        {
+          "id": "topics-animals:animal-monarch-butterfly",
+          "route": "world/topic/animal-monarch-butterfly"
+        },
+        {
+          "id": "topics-animals:animal-garden-snail",
+          "route": "world/topic/animal-garden-snail"
+        },
+        {
+          "id": "topics-animals:animal-european-lobster",
+          "route": "world/topic/animal-european-lobster"
+        },
+        {
+          "id": "topics-animals:animal-common-cuttlefish",
+          "route": "world/topic/animal-common-cuttlefish"
+        },
+        {
+          "id": "topics-animals:animal-short-snouted-seahorse",
+          "route": "world/topic/animal-short-snouted-seahorse"
+        },
+        {
+          "id": "topics-animals:animal-african-savanna-elephant",
+          "route": "world/topic/animal-african-savanna-elephant"
+        },
+        {
+          "id": "topics-animals:animal-lion",
+          "route": "world/topic/animal-lion"
+        },
+        {
+          "id": "topics-animals:animal-cheetah",
+          "route": "world/topic/animal-cheetah"
+        },
+        {
+          "id": "topics-animals:animal-bengal-tiger",
+          "route": "world/topic/animal-bengal-tiger"
+        },
+        {
+          "id": "topics-animals:animal-giraffe",
+          "route": "world/topic/animal-giraffe"
+        },
+        {
+          "id": "topics-animals:animal-giant-panda",
+          "route": "world/topic/animal-giant-panda"
+        },
+        {
+          "id": "topics-animals:animal-western-lowland-gorilla",
+          "route": "world/topic/animal-western-lowland-gorilla"
+        },
+        {
+          "id": "topics-animals:animal-bornean-orangutan",
+          "route": "world/topic/animal-bornean-orangutan"
+        },
+        {
+          "id": "topics-animals:animal-polar-bear",
+          "route": "world/topic/animal-polar-bear"
+        },
+        {
+          "id": "topics-animals:animal-emperor-penguin",
+          "route": "world/topic/animal-emperor-penguin"
+        },
+        {
+          "id": "topics-animals:animal-blue-whale",
+          "route": "world/topic/animal-blue-whale"
+        },
+        {
+          "id": "topics-animals:animal-common-bottlenose-dolphin",
+          "route": "world/topic/animal-common-bottlenose-dolphin"
+        },
+        {
+          "id": "topics-animals:animal-orca",
+          "route": "world/topic/animal-orca"
+        },
+        {
+          "id": "topics-animals:animal-common-octopus",
+          "route": "world/topic/animal-common-octopus"
+        },
+        {
+          "id": "topics-animals:animal-green-sea-turtle",
+          "route": "world/topic/animal-green-sea-turtle"
+        },
+        {
+          "id": "topics-animals:animal-red-kangaroo",
+          "route": "world/topic/animal-red-kangaroo"
+        },
+        {
+          "id": "topics-animals:animal-koala",
+          "route": "world/topic/animal-koala"
+        },
+        {
+          "id": "topics-animals:animal-jaguar",
+          "route": "world/topic/animal-jaguar"
+        },
+        {
+          "id": "topics-animals:animal-honey-bee",
+          "route": "world/topic/animal-honey-bee"
+        },
+        {
+          "id": "topics-animals:animal-axolotl",
+          "route": "world/topic/animal-axolotl"
+        },
+        {
+          "id": "topics-animals:animal-whale-shark",
+          "route": "world/topic/animal-whale-shark"
+        },
+        {
+          "id": "topics-animals:animal-garden-cross-spider",
+          "route": "world/topic/animal-garden-cross-spider"
+        },
+        {
+          "id": "topics-animals:animal-dromedary",
+          "route": "world/topic/animal-dromedary"
+        },
+        {
+          "id": "topics-animals:animal-white-tailed-eagle",
+          "route": "world/topic/animal-white-tailed-eagle"
+        },
+        {
+          "id": "topics-history:history-khipu",
+          "route": "world/topic/history-khipu"
+        },
+        {
+          "id": "topics-history:history-mohenjo-daro",
+          "route": "world/topic/history-mohenjo-daro"
+        },
+        {
+          "id": "topics-history:history-writing",
+          "route": "world/topic/history-writing"
+        },
+        {
+          "id": "topics-inventions:invention-camera",
+          "route": "world/topic/invention-camera"
+        },
+        {
+          "id": "topics-inventions:invention-telescope",
+          "route": "world/topic/invention-telescope"
+        },
+        {
+          "id": "topics-inventions:invention-microscope",
+          "route": "world/topic/invention-microscope"
+        },
+        {
+          "id": "topics-people:person-mary_anning",
+          "route": "world/topic/person-mary_anning"
+        },
+        {
+          "id": "topics-people:person-ibn_al_haytham",
+          "route": "world/topic/person-ibn_al_haytham"
+        },
+        {
+          "id": "topics-inventions:invention-battery",
+          "route": "world/topic/invention-battery"
+        },
+        {
+          "id": "topics-inventions:invention-generator",
+          "route": "world/topic/invention-generator"
+        },
+        {
+          "id": "topics-inventions:invention-transistor",
+          "route": "world/topic/invention-transistor"
+        },
+        {
+          "id": "topics-inventions:invention-refrigerator",
+          "route": "world/topic/invention-refrigerator"
+        },
+        {
+          "id": "topics-inventions:invention-bicycle",
+          "route": "world/topic/invention-bicycle"
+        },
+        {
+          "id": "topics-inventions:invention-elevator",
+          "route": "world/topic/invention-elevator"
+        },
+        {
+          "id": "topics-inventions:invention-seismograph",
+          "route": "world/topic/invention-seismograph"
+        },
+        {
+          "id": "topics-inventions:invention-3d-printing",
+          "route": "world/topic/invention-3d-printing"
+        },
+        {
+          "id": "topics-inventions:invention-sewing-machine",
+          "route": "world/topic/invention-sewing-machine"
+        },
+        {
+          "id": "topics-buildings:building-pont-du-gard",
+          "route": "world/topic/building-pont-du-gard"
+        },
+        {
+          "id": "topics-buildings:building-great-zimbabwe",
+          "route": "world/topic/building-great-zimbabwe"
+        },
+        {
+          "id": "topics-buildings:building-horyu-ji",
+          "route": "world/topic/building-horyu-ji"
+        },
+        {
+          "id": "topics-buildings:building-djenne-mosque",
+          "route": "world/topic/building-djenne-mosque"
+        },
+        {
+          "id": "topics-buildings:building-lalibela",
+          "route": "world/topic/building-lalibela"
+        },
+        {
+          "id": "topics-buildings:building-angkor-wat",
+          "route": "world/topic/building-angkor-wat"
+        },
+        {
+          "id": "topics-buildings:building-palenque",
+          "route": "world/topic/building-palenque"
+        },
+        {
+          "id": "topics-buildings:building-sydney-opera",
+          "route": "world/topic/building-sydney-opera"
+        },
+        {
+          "id": "topics-science:science-pressure",
+          "route": "world/topic/science-pressure"
+        },
+        {
+          "id": "topics-science:science-friction",
+          "route": "world/topic/science-friction"
+        },
+        {
+          "id": "topics-science:science-buoyancy",
+          "route": "world/topic/science-buoyancy"
+        },
+        {
+          "id": "topics-science:science-surface-tension",
+          "route": "world/topic/science-surface-tension"
+        },
+        {
+          "id": "topics-science:science-capillarity",
+          "route": "world/topic/science-capillarity"
+        },
+        {
+          "id": "topics-science:science-diffusion",
+          "route": "world/topic/science-diffusion"
+        },
+        {
+          "id": "topics-science:science-chromatography",
+          "route": "world/topic/science-chromatography"
+        },
+        {
+          "id": "topics-science:science-heat-transfer",
+          "route": "world/topic/science-heat-transfer"
+        },
+        {
+          "id": "topics-science:science-lever",
+          "route": "world/topic/science-lever"
+        },
+        {
+          "id": "topics-science:science-elasticity",
+          "route": "world/topic/science-elasticity"
+        },
+        {
+          "id": "topics-science:science-pendulum",
+          "route": "world/topic/science-pendulum"
+        },
+        {
+          "id": "topics-science:science-resonance",
+          "route": "world/topic/science-resonance"
+        },
+        {
+          "id": "topics-science:science-probability",
+          "route": "world/topic/science-probability"
+        },
+        {
+          "id": "topics-science:science-symmetry",
+          "route": "world/topic/science-symmetry"
+        },
+        {
+          "id": "topics-science:science-fractals",
+          "route": "world/topic/science-fractals"
+        },
+        {
+          "id": "topics-science:science-angle",
+          "route": "world/topic/science-angle"
+        },
+        {
+          "id": "topics-science:science-encryption",
+          "route": "world/topic/science-encryption"
+        },
+        {
+          "id": "topics-science:science-checksum",
+          "route": "world/topic/science-checksum"
+        },
+        {
+          "id": "topics-science:science-cell",
+          "route": "world/topic/science-cell"
+        },
+        {
+          "id": "topics-science:science-fusion",
+          "route": "world/topic/science-fusion"
+        },
+        {
+          "id": "topics-science:science-galaxy",
+          "route": "world/topic/science-galaxy"
+        },
+        {
+          "id": "topics-science:science-comet",
+          "route": "world/topic/science-comet"
+        },
+        {
+          "id": "topics-science:science-exoplanet",
+          "route": "world/topic/science-exoplanet"
+        },
+        {
+          "id": "topics-history:history-bronze",
+          "route": "world/topic/history-bronze"
+        },
+        {
+          "id": "topics-people:person-maria_sibylla_merian",
+          "route": "world/topic/person-maria_sibylla_merian"
+        },
+        {
+          "id": "topics-people:person-inge_lehmann",
+          "route": "world/topic/person-inge_lehmann"
+        },
+        {
+          "id": "words:Meter",
+          "route": "book/words/Meter"
+        },
+        {
+          "id": "words:Kilogramm",
+          "route": "book/words/Kilogramm"
+        },
+        {
+          "id": "words:Sekunde",
+          "route": "book/words/Sekunde"
+        },
+        {
+          "id": "words:Ampere",
+          "route": "book/words/Ampere"
+        },
+        {
+          "id": "words:Kelvin",
+          "route": "book/words/Kelvin"
+        },
+        {
+          "id": "words:Mol",
+          "route": "book/words/Mol"
+        },
+        {
+          "id": "words:Candela",
+          "route": "book/words/Candela"
+        },
+        {
+          "id": "words:Wärme",
+          "route": "book/words/W%C3%A4rme"
+        },
+        {
+          "id": "words:Wärmeleitung",
+          "route": "book/words/W%C3%A4rmeleitung"
+        },
+        {
+          "id": "words:Konvektion",
+          "route": "book/words/Konvektion"
+        },
+        {
+          "id": "words:Wärmestrahlung",
+          "route": "book/words/W%C3%A4rmestrahlung"
+        },
+        {
+          "id": "why:30",
+          "route": "book/why/Warum%20f%C3%BChlen%20sich%20gleich%20warme%20Materialien%20manchmal%20verschieden%20an%3F"
+        },
+        {
+          "id": "why:31",
+          "route": "book/why/Warum%20bewegt%20erw%C3%A4rmtes%20Wasser%20manchmal%20weiteres%20Wasser%20mit%3F"
+        },
+        {
+          "id": "words:Reflexion",
+          "route": "book/words/Reflexion"
+        },
+        {
+          "id": "words:Absorption",
+          "route": "book/words/Absorption"
+        },
+        {
+          "id": "words:Brechung",
+          "route": "book/words/Brechung"
+        },
+        {
+          "id": "words:Streuung",
+          "route": "book/words/Streuung"
+        },
+        {
+          "id": "words:Photon",
+          "route": "book/words/Photon"
+        },
+        {
+          "id": "words:Strahlung",
+          "route": "book/words/Strahlung"
+        },
+        {
+          "id": "words:Spektrum",
+          "route": "book/words/Spektrum"
+        },
+        {
+          "id": "words:Infrarot",
+          "route": "book/words/Infrarot"
+        },
+        {
+          "id": "words:Frequenz",
+          "route": "book/words/Frequenz"
+        },
+        {
+          "id": "words:Wellenlänge",
+          "route": "book/words/Wellenl%C3%A4nge"
+        },
+        {
+          "id": "words:Energie",
+          "route": "book/words/Energie"
+        },
+        {
+          "id": "words:Polarisation",
+          "route": "book/words/Polarisation"
+        },
+        {
+          "id": "why:32",
+          "route": "book/why/Warum%20sind%20Photonen%20im%20Bild%20keine%20winzigen%20sichtbaren%20Murmeln%3F"
+        },
+        {
+          "id": "why:33",
+          "route": "book/why/Warum%20haben%20W%C3%A4rmebilder%20Farben%2C%20die%20wir%20am%20Gegenstand%20nicht%20sehen%3F"
+        },
+        {
+          "id": "words:Kohäsion",
+          "route": "book/words/Koh%C3%A4sion"
+        },
+        {
+          "id": "words:Adhäsion",
+          "route": "book/words/Adh%C3%A4sion"
+        },
+        {
+          "id": "words:Oberflächenspannung",
+          "route": "book/words/Oberfl%C3%A4chenspannung"
+        },
+        {
+          "id": "words:Kapillarwirkung",
+          "route": "book/words/Kapillarwirkung"
+        },
+        {
+          "id": "words:Dichte",
+          "route": "book/words/Dichte"
+        },
+        {
+          "id": "why:34",
+          "route": "book/why/Warum%20zieht%20Wasser%20in%20einem%20Papiertuch%20nach%20oben%3F"
+        },
+        {
+          "id": "why:35",
+          "route": "book/why/Warum%20kann%20eine%20Nadel%20anders%20auf%20Wasser%20liegen%20als%20untertauchen%3F"
+        },
+        {
+          "id": "why:36",
+          "route": "book/why/Warum%20kann%20ein%20Schiff%20aus%20schwerem%20Material%20schwimmen%3F"
+        },
+        {
+          "id": "words:Atom",
+          "route": "book/words/Atom"
+        },
+        {
+          "id": "words:Isotop",
+          "route": "book/words/Isotop"
+        },
+        {
+          "id": "words:Proton",
+          "route": "book/words/Proton"
+        },
+        {
+          "id": "words:Elektron",
+          "route": "book/words/Elektron"
+        },
+        {
+          "id": "words:Neutron",
+          "route": "book/words/Neutron"
+        },
+        {
+          "id": "words:Kraft",
+          "route": "book/words/Kraft"
+        },
+        {
+          "id": "words:Trägheit",
+          "route": "book/words/Tr%C3%A4gheit"
+        },
+        {
+          "id": "words:Geschwindigkeit",
+          "route": "book/words/Geschwindigkeit"
+        },
+        {
+          "id": "words:Beschleunigung",
+          "route": "book/words/Beschleunigung"
+        },
+        {
+          "id": "why:37",
+          "route": "book/why/Warum%20helfen%20raue%20Schuhsohlen%20beim%20Gehen%3F"
+        },
+        {
+          "id": "why:38",
+          "route": "book/why/Warum%20hilft%20ein%20langer%20Hebelarm%20beim%20Drehen%3F"
+        },
+        {
+          "id": "why:39",
+          "route": "book/why/Warum%20kehrt%20eine%20Feder%20nicht%20nach%20jeder%20Belastung%20ganz%20zur%C3%BCck%3F"
+        },
+        {
+          "id": "words:Zelle",
+          "route": "book/words/Zelle"
+        },
+        {
+          "id": "words:Zellmembran",
+          "route": "book/words/Zellmembran"
+        },
+        {
+          "id": "words:Zellkern",
+          "route": "book/words/Zellkern"
+        },
+        {
+          "id": "words:Mitochondrium",
+          "route": "book/words/Mitochondrium"
+        },
+        {
+          "id": "words:Eukaryot",
+          "route": "book/words/Eukaryot"
+        },
+        {
+          "id": "words:Prokaryot",
+          "route": "book/words/Prokaryot"
+        },
+        {
+          "id": "words:DNA",
+          "route": "book/words/DNA"
+        },
+        {
+          "id": "words:Genom",
+          "route": "book/words/Genom"
+        },
+        {
+          "id": "why:40",
+          "route": "book/why/Warum%20ist%20eine%20Zellmembran%20mehr%20als%20eine%20einfache%20Mauer%3F"
+        },
+        {
+          "id": "why:41",
+          "route": "book/why/Warum%20kann%20eine%20Zelle%20Erbinformation%20ohne%20Zellkern%20besitzen%3F"
+        },
+        {
+          "id": "words:Gen",
+          "route": "book/words/Gen"
+        },
+        {
+          "id": "words:Chromosom",
+          "route": "book/words/Chromosom"
+        },
+        {
+          "id": "words:Protein",
+          "route": "book/words/Protein"
+        },
+        {
+          "id": "words:Enzym",
+          "route": "book/words/Enzym"
+        },
+        {
+          "id": "words:Mutation",
+          "route": "book/words/Mutation"
+        },
+        {
+          "id": "words:Nukleotid",
+          "route": "book/words/Nukleotid"
+        },
+        {
+          "id": "words:RNA",
+          "route": "book/words/RNA"
+        },
+        {
+          "id": "words:Bakterium",
+          "route": "book/words/Bakterium"
+        },
+        {
+          "id": "why:42",
+          "route": "book/why/Warum%20verr%C3%A4t%20ein%20einzelnes%20Gen%20nicht%20automatisch%20alle%20Eigenschaften%3F"
+        },
+        {
+          "id": "why:43",
+          "route": "book/why/Warum%20ist%20eine%20Mutation%20nicht%20automatisch%20gut%20oder%20schlecht%3F"
+        },
+        {
+          "id": "words:Messwert",
+          "route": "book/words/Messwert"
+        },
+        {
+          "id": "words:Messunsicherheit",
+          "route": "book/words/Messunsicherheit"
+        },
+        {
+          "id": "words:Stichprobe",
+          "route": "book/words/Stichprobe"
+        },
+        {
+          "id": "words:Mittelwert",
+          "route": "book/words/Mittelwert"
+        },
+        {
+          "id": "words:Median",
+          "route": "book/words/Median"
+        },
+        {
+          "id": "words:Wahrscheinlichkeit",
+          "route": "book/words/Wahrscheinlichkeit"
+        },
+        {
+          "id": "words:Skala",
+          "route": "book/words/Skala"
+        },
+        {
+          "id": "words:Maßstab",
+          "route": "book/words/Ma%C3%9Fstab"
+        },
+        {
+          "id": "why:44",
+          "route": "book/why/Warum%20muss%20nach%20mehreren%20gleichen%20Zufallsergebnissen%20kein%20Ausgleich%20kommen%3F"
+        },
+        {
+          "id": "why:45",
+          "route": "book/why/Warum%20kann%20ein%20einzelner%20sehr%20gro%C3%9Fer%20Wert%20einen%20Durchschnitt%20verschieben%3F"
+        },
+        {
+          "id": "why:46",
+          "route": "book/why/Warum%20machen%20zus%C3%A4tzliche%20Nachkommastellen%20eine%20Messung%20nicht%20automatisch%20genauer%3F"
+        },
+        {
+          "id": "words:Algorithmus",
+          "route": "book/words/Algorithmus"
+        },
+        {
+          "id": "words:Bit",
+          "route": "book/words/Bit"
+        },
+        {
+          "id": "words:Byte",
+          "route": "book/words/Byte"
+        },
+        {
+          "id": "words:Verschlüsselung",
+          "route": "book/words/Verschl%C3%BCsselung"
+        },
+        {
+          "id": "words:Schlüssel",
+          "route": "book/words/Schl%C3%BCssel"
+        },
+        {
+          "id": "words:Prüfsumme",
+          "route": "book/words/Pr%C3%BCfsumme"
+        },
+        {
+          "id": "words:Hashfunktion",
+          "route": "book/words/Hashfunktion"
+        },
+        {
+          "id": "words:Datenstruktur",
+          "route": "book/words/Datenstruktur"
+        },
+        {
+          "id": "words:Klartext",
+          "route": "book/words/Klartext"
+        },
+        {
+          "id": "why:47",
+          "route": "book/why/Warum%20beweist%20eine%20passende%20Pr%C3%BCfsumme%20nicht%20automatisch%20Echtheit%3F"
+        },
+        {
+          "id": "why:48",
+          "route": "book/why/Warum%20ist%20eine%20leicht%20lesbar%20zur%C3%BCckdrehbare%20Geheimregel%20kein%20sicherer%20Schutz%3F"
+        },
+        {
+          "id": "why:49",
+          "route": "book/why/Warum%20sind%20acht%20Bits%20nicht%20dasselbe%20wie%20die%20Zahl%20acht%3F"
+        },
+        {
+          "id": "words:Asteroid",
+          "route": "book/words/Asteroid"
+        },
+        {
+          "id": "words:Komet",
+          "route": "book/words/Komet"
+        },
+        {
+          "id": "words:Exoplanet",
+          "route": "book/words/Exoplanet"
+        },
+        {
+          "id": "words:Transit",
+          "route": "book/words/Transit"
+        },
+        {
+          "id": "words:Galaxie",
+          "route": "book/words/Galaxie"
+        },
+        {
+          "id": "words:Lichtjahr",
+          "route": "book/words/Lichtjahr"
+        },
+        {
+          "id": "why:51",
+          "route": "book/why/Warum%20k%C3%B6nnen%20wir%20nicht%20jeden%20Exoplaneten%20durch%20einen%20Transit%20finden%3F"
+        },
+        {
+          "id": "why:50",
+          "route": "book/why/Warum%20zeigt%20ein%20Kometenschweif%20nicht%20einfach%20die%20Flugrichtung%20an%3F"
+        },
+        {
+          "id": "words:Evolution",
+          "route": "book/words/Evolution"
+        },
+        {
+          "id": "words:Mikroorganismus",
+          "route": "book/words/Mikroorganismus"
+        },
+        {
+          "id": "words:Ökosystem",
+          "route": "book/words/%C3%96kosystem"
+        },
+        {
+          "id": "words:Zersetzung",
+          "route": "book/words/Zersetzung"
+        },
+        {
+          "id": "words:Kohlenstoffkreislauf",
+          "route": "book/words/Kohlenstoffkreislauf"
+        },
+        {
+          "id": "words:Dürre",
+          "route": "book/words/D%C3%BCrre"
+        },
+        {
+          "id": "words:Hypothese",
+          "route": "book/words/Hypothese"
+        },
+        {
+          "id": "words:Topografie",
+          "route": "book/words/Topografie"
+        },
+        {
+          "id": "words:Geoid",
+          "route": "book/words/Geoid"
+        },
+        {
+          "id": "words:Koordinate",
+          "route": "book/words/Koordinate"
+        },
+        {
+          "id": "words:Kartenprojektion",
+          "route": "book/words/Kartenprojektion"
+        },
+        {
+          "id": "words:Kernfusion",
+          "route": "book/words/Kernfusion"
+        },
+        {
+          "id": "words:Kernspaltung",
+          "route": "book/words/Kernspaltung"
+        },
+        {
+          "id": "words:Winkel",
+          "route": "book/words/Winkel"
+        },
+        {
+          "id": "words:Symmetrie",
+          "route": "book/words/Symmetrie"
+        },
+        {
+          "id": "why:52",
+          "route": "book/why/Warum%20ist%20nicht%20jede%20Diagonale%20eine%20Spiegelachse%3F"
+        },
+        {
+          "id": "why:53",
+          "route": "book/why/Warum%20%C3%A4ndert%20ein%20l%C3%A4ngerer%20gezeichneter%20Pfeil%20nicht%20den%20Winkel%3F"
+        },
+        {
+          "id": "why:54",
+          "route": "book/why/Warum%20ist%20ein%20GPS-Punkt%20keine%20grenzenlos%20genaue%20Ortsangabe%3F"
+        },
+        {
+          "id": "why:55",
+          "route": "book/why/Warum%20kann%20ein%20Papierplan%20eine%20echte%20Baupr%C3%BCfung%20nicht%20ersetzen%3F"
+        },
+        {
+          "id": "why:56",
+          "route": "book/why/Warum%20beeinflusst%20die%20L%C3%A4nge%20eines%20Pendels%20seinen%20Takt%3F"
+        },
+        {
+          "id": "why:57",
+          "route": "book/why/Warum%20kann%20Anschieben%20im%20passenden%20Takt%20wirksamer%20sein%3F"
+        },
+        {
+          "id": "why:58",
+          "route": "book/why/Warum%20bleibt%20ein%20Farbfleck%20in%20Wasser%20nicht%20immer%20an%20derselben%20Stelle%3F"
+        },
+        {
+          "id": "why:59",
+          "route": "book/why/Warum%20kann%20ein%20schwarzer%20Stift%20mehrere%20Farben%20enthalten%3F"
+        },
+        {
+          "id": "nature-topics:okavango-delta",
+          "route": "book/nature/okavango-delta"
+        },
+        {
+          "id": "nature-topics:tanganyika",
+          "route": "book/nature/tanganyika"
+        },
+        {
+          "id": "nature-topics:tonle-sap",
+          "route": "book/nature/tonle-sap"
+        },
+        {
+          "id": "nature-topics:danube-delta",
+          "route": "book/nature/danube-delta"
+        },
+        {
+          "id": "nature-topics:grand-canyon",
+          "route": "book/nature/grand-canyon"
+        },
+        {
+          "id": "nature-topics:mammoth-cave",
+          "route": "book/nature/mammoth-cave"
+        },
+        {
+          "id": "nature-topics:yellowstone-geysers",
+          "route": "book/nature/yellowstone-geysers"
+        },
+        {
+          "id": "nature-topics:wadden-sea",
+          "route": "book/nature/wadden-sea"
+        },
+        {
+          "id": "nature-topics:bryce-hoodoos",
+          "route": "book/nature/bryce-hoodoos"
+        },
+        {
+          "id": "nature-topics:arches-sandstone",
+          "route": "book/nature/arches-sandstone"
+        },
+        {
+          "id": "nature-topics:crater-lake",
+          "route": "book/nature/crater-lake"
+        },
+        {
+          "id": "nature-topics:white-sands",
+          "route": "book/nature/white-sands"
+        },
+        {
+          "id": "nature-topics:vatnajokull",
+          "route": "book/nature/vatnajokull"
+        },
+        {
+          "id": "nature-topics:daintree",
+          "route": "book/nature/daintree"
+        },
+        {
+          "id": "nature-topics:bialowieza",
+          "route": "book/nature/bialowieza"
+        },
+        {
+          "id": "nature-topics:sundarbans",
+          "route": "book/nature/sundarbans"
+        },
+        {
+          "id": "nature-topics:lencois-maranhenses",
+          "route": "book/nature/lencois-maranhenses"
+        },
+        {
+          "id": "nature-topics:socotra-vegetation",
+          "route": "book/nature/socotra-vegetation"
+        },
+        {
+          "id": "nature-topics:ha-long-bay",
+          "route": "book/nature/ha-long-bay"
+        },
+        {
+          "id": "nature-topics:sognefjord",
+          "route": "book/nature/sognefjord"
+        },
+        {
+          "id": "nature-topics:sargasso-sea",
+          "route": "book/nature/sargasso-sea"
+        },
+        {
+          "id": "nature-topics:ross-ice-shelf",
+          "route": "book/nature/ross-ice-shelf"
+        },
+        {
+          "id": "nature-topics:namib-fog",
+          "route": "book/nature/namib-fog"
+        },
+        {
+          "id": "nature-topics:giants-causeway",
+          "route": "book/nature/giants-causeway"
+        },
+        {
+          "id": "nature-topics:yosemite-valley",
+          "route": "book/nature/yosemite-valley"
+        },
+        {
+          "id": "nature-topics:lake-superior",
+          "route": "book/nature/lake-superior"
+        },
+        {
+          "id": "nature-topics:jeju-lava-tube",
+          "route": "book/nature/jeju-lava-tube"
+        },
+        {
+          "id": "nature-topics:pamukkale",
+          "route": "book/nature/pamukkale"
+        },
+        {
+          "id": "nature-topics:salar-uyuni",
+          "route": "book/nature/salar-uyuni"
+        },
+        {
+          "id": "nature-topics:titicaca",
+          "route": "book/nature/titicaca"
+        },
+        {
+          "id": "nature-topics:victoria-falls",
+          "route": "book/nature/victoria-falls"
+        },
+        {
+          "id": "nature-topics:iguazu-falls",
+          "route": "book/nature/iguazu-falls"
+        },
+        {
+          "id": "nature-topics:great-blue-hole",
+          "route": "book/nature/great-blue-hole"
+        },
+        {
+          "id": "nature-topics:galapagos-upwelling",
+          "route": "book/nature/galapagos-upwelling"
+        },
+        {
+          "id": "topics-people:person-henrietta_swan_leavitt",
+          "route": "world/topic/person-henrietta_swan_leavitt"
+        },
+        {
+          "id": "topics-people:person-cecilia_payne_gaposchkin",
+          "route": "world/topic/person-cecilia_payne_gaposchkin"
+        },
+        {
+          "id": "topics-people:person-rosalind_franklin",
+          "route": "world/topic/person-rosalind_franklin"
+        },
+        {
+          "id": "topics-people:person-jocelyn_bell_burnell",
+          "route": "world/topic/person-jocelyn_bell_burnell"
+        },
+        {
+          "id": "topics-people:person-katsushika_hokusai",
+          "route": "world/topic/person-katsushika_hokusai"
+        },
+        {
+          "id": "topics-people:person-murasaki_shikibu",
+          "route": "world/topic/person-murasaki_shikibu"
+        },
+        {
+          "id": "topics-people:person-rachel_carson",
+          "route": "world/topic/person-rachel_carson"
+        },
+        {
+          "id": "topics-people:person-octavia_butler",
+          "route": "world/topic/person-octavia_butler"
+        },
+        {
+          "id": "topics-people:person-nelson_mandela",
+          "route": "world/topic/person-nelson_mandela"
+        },
+        {
+          "id": "topics-people:person-chien_shiung_wu",
+          "route": "world/topic/person-chien_shiung_wu"
+        },
+        {
+          "id": "topics-people:person-lise_meitner",
+          "route": "world/topic/person-lise_meitner"
+        },
+        {
+          "id": "topics-people:person-zaha_hadid",
+          "route": "world/topic/person-zaha_hadid"
+        },
+        {
+          "id": "topics-people:person-rabindranath_tagore",
+          "route": "world/topic/person-rabindranath_tagore"
+        },
+        {
+          "id": "topics-people:person-ibn_sina",
+          "route": "world/topic/person-ibn_sina"
+        },
+        {
+          "id": "topics-people:person-ada_lovelace",
+          "route": "world/topic/person-ada_lovelace"
+        },
+        {
+          "id": "topics-people:person-al_khwarizmi",
+          "route": "world/topic/person-al_khwarizmi"
+        },
+        {
+          "id": "topics-people:person-albert_einstein",
+          "route": "world/topic/person-albert_einstein"
+        },
+        {
+          "id": "topics-people:person-alexander_humboldt",
+          "route": "world/topic/person-alexander_humboldt"
+        },
+        {
+          "id": "topics-people:person-bertha_benz",
+          "route": "world/topic/person-bertha_benz"
+        },
+        {
+          "id": "topics-people:person-cai_lun",
+          "route": "world/topic/person-cai_lun"
+        },
+        {
+          "id": "topics-people:person-charles_darwin",
+          "route": "world/topic/person-charles_darwin"
+        },
+        {
+          "id": "topics-people:person-grace_hopper",
+          "route": "world/topic/person-grace_hopper"
+        },
+        {
+          "id": "topics-people:person-jane_goodall",
+          "route": "world/topic/person-jane_goodall"
+        },
+        {
+          "id": "topics-people:person-johannes_gutenberg",
+          "route": "world/topic/person-johannes_gutenberg"
+        },
+        {
+          "id": "topics-people:person-karl_benz",
+          "route": "world/topic/person-karl_benz"
+        },
+        {
+          "id": "topics-people:person-katherine_johnson",
+          "route": "world/topic/person-katherine_johnson"
+        },
+        {
+          "id": "topics-people:person-mae_jemison",
+          "route": "world/topic/person-mae_jemison"
+        },
+        {
+          "id": "topics-people:person-marie_curie",
+          "route": "world/topic/person-marie_curie"
+        },
+        {
+          "id": "topics-people:person-neil_armstrong",
+          "route": "world/topic/person-neil_armstrong"
+        },
+        {
+          "id": "topics-people:person-tim_berners_lee",
+          "route": "world/topic/person-tim_berners_lee"
+        },
+        {
+          "id": "topics-people:person-tu_youyou",
+          "route": "world/topic/person-tu_youyou"
+        },
+        {
+          "id": "topics-people:person-wangari_maathai",
+          "route": "world/topic/person-wangari_maathai"
+        },
+        {
+          "id": "topics-science:science-water-cycle",
+          "route": "world/topic/science-water-cycle"
+        },
+        {
+          "id": "topics-science:science-photosynthesis",
+          "route": "world/topic/science-photosynthesis"
+        }
+      ],
+      "previousSourceCorrectedWholeDossiersSHA256": "bcc0c80ce3f78d4a934216f815c9bfdd77dba0a2e88c4fa82f425d7e1b38a87d",
+      "meaning": "Exact second qualified technical UI inverse only; all288whole source-corrected predecessor dossiers and earlier286factual/UI layers retained."
+    }
+  },
+  "additionalSourceEndpointCorrections": [
+    {
+      "meaning": "Second independently reviewed exact source-only correction after natural C005 failure; no unrelated factual normalization or current UI claim.",
+      "topic": {
+        "id": "person-cai_lun",
+        "before": {
+          "id": "person-cai_lun",
+          "category": "people",
+          "title": "Cai Lun",
+          "intro": "Cai Lun verbesserte und förderte die Papierherstellung im China der Han-Zeit. Seine Geschichte zeigt, wie vorhandenes Wissen weiterentwickelt und eine Verbesserung überliefert wird.",
+          "paragraphs": [
+            "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.",
+            "Für das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.",
+            "Papier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.",
+            "Die gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen."
+          ],
+          "facts": [
+            {
+              "label": "Lebenszeit",
+              "text": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)"
+            },
+            {
+              "label": "Arbeitsgebiet",
+              "text": "Hofbeamter und Verbesserer der Papierherstellung"
+            },
+            {
+              "label": "Verbunden mit",
+              "text": "China: Han-Reich; Herkunft Guiyang in der Region des heutigen Hunan"
+            }
+          ],
+          "more": [
+            "Ein erhaltener Gegenstand und ein schriftlicher Bericht beantworten verschiedene Fragen. Eine Papierprobe kann früher sein als ein Bericht über eine spätere Verbesserung. Beide Belege können zusammengehören, ohne dieselbe Erfindung an genau einem Tag zu dokumentieren.",
+            "Viele Verfahren entstehen durch die Arbeit mehrerer Menschen über lange Zeit. Eine namentlich überlieferte Verbesserung ist wichtig, ohne dass daraus ein einziger Ursprung aller früheren Erfahrungen folgt. Nicht alle beteiligten Papiermacher sind heute namentlich bekannt. Eine Verbesserung kann deshalb genauso wichtig sein wie eine völlig neue Idee.",
+            "In unserem Bild bleiben acht Linien mit gleicher Länge erhalten. Beim Umschalten liegen sie in einem oder in vier Feldern. Mehr belegte Felder bedeuten hier nicht mehr Linien; der Vergleich zeigt Anordnung und nicht eine Materialprüfung.",
+            "Das vorhandene Bild Cai Luns ist eine Druckgrafik aus dem 18. Jahrhundert und zeigt ihn als später verehrte Gestalt. Es entstand weit nach seiner Lebenszeit. Das Bild ist kein Foto, keine Augenzeugenaufnahme und kein sicherer Nachweis seines tatsächlichen Aussehens.",
+            "Papier entsteht aus Fasern, die in Wasser verteilt, zu einer dünnen Schicht gesammelt und getrocknet werden. Verfahren wurden über lange Zeit verbessert. Cai Lun gilt als wichtiger Verbesserer, nicht als einziger Ursprung des Papiers."
+          ],
+          "surprise": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
+          "locations": [
+            {
+              "label": "China – Region der Han-Hauptstadt Luoyang",
+              "lat": 34.6,
+              "lon": 112.5,
+              "iso": "CN"
+            }
+          ],
+          "related": [
+            "history-paper",
+            "invention-printing",
+            "person-katsushika_hokusai"
+          ],
+          "sources": [
+            {
+              "label": "Hunan: Cai Lun als Verbesserer der Papierherstellung",
+              "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+            },
+            {
+              "label": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+            },
+            {
+              "label": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+              "url": "https://paper.gatech.edu/fiber-pulp"
+            },
+            {
+              "label": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+              "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf"
+            }
+          ],
+          "aliases": [
+            "Cai Lun",
+            "cai_lun"
+          ],
+          "links": [],
+          "person": {
+            "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+            "field": "Hofbeamter und Verbesserer der Papierherstellung",
+            "method": "Erfahrungen von Papiermachern sammeln und ein Verfahren verbessern."
+          },
+          "question": {
+            "prompt": "Wofür ist Cai Lun besonders bekannt?",
+            "answers": [
+              "Die Papierherstellung verbessern",
+              "Radioaktivität erforschen",
+              "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+            ],
+            "correct": 0,
+            "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
+          },
+          "image": "cai-lun",
+          "learning": {
+            "starter": "Vergleiche dieselben acht Faserlinien in zwei Anordnungen.",
+            "observe": "Zähle die Linien getrennt von den Feldern, in denen sie liegen. Unterscheide außerdem ein berichtetes Datum von älteren erhaltenen Funden.",
+            "benefit": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen."
+          },
+          "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesener regionaler Darstellung aus Hunan, dem konkreten historischen Vergleich bei T. H. Barrett und den Faser-/Beobachtungsabschnitten des Robert C. Williams Museum of Papermaking. Das Jahr 105 bezeichnet eine überlieferte Vorstellung einer Verbesserung, nicht den ersten Papierfund. Unsichere Geburtsjahre und das genaue früheste Funddatum bleiben offen. Die schematische Linienverteilung ist weder Mikroskopie noch Berechnung von Festigkeit. Die spätere Darstellung und ihre bestehenden Rechtebelege bleiben erhalten.",
+          "checkedAt": "2026-11-04",
+          "revision": 2,
+          "questionFeedback": {
+            "hint": "Denke an das Material, auf dem Menschen Zeichen und Texte festhalten können.",
+            "wrongReasons": [
+              null,
+              "Die Untersuchung radioaktiver Stoffe ist von der hier beschriebenen Verarbeitung von Fasern zu unterscheiden.",
+              "Eine Rechenanleitung beschreibt Schritte für eine Aufgabe; sie ist kein Verfahren zur Herstellung eines Schreibmaterials."
+            ]
+          }
+        },
+        "after": {
+          "id": "person-cai_lun",
+          "category": "people",
+          "title": "Cai Lun",
+          "intro": "Cai Lun verbesserte und förderte die Papierherstellung im China der Han-Zeit. Seine Geschichte zeigt, wie vorhandenes Wissen weiterentwickelt und eine Verbesserung überliefert wird.",
+          "paragraphs": [
+            "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.",
+            "Für das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.",
+            "Papier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.",
+            "Die gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen."
+          ],
+          "facts": [
+            {
+              "label": "Lebenszeit",
+              "text": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)"
+            },
+            {
+              "label": "Arbeitsgebiet",
+              "text": "Hofbeamter und Verbesserer der Papierherstellung"
+            },
+            {
+              "label": "Verbunden mit",
+              "text": "China: Han-Reich; Herkunft Guiyang in der Region des heutigen Hunan"
+            }
+          ],
+          "more": [
+            "Ein erhaltener Gegenstand und ein schriftlicher Bericht beantworten verschiedene Fragen. Eine Papierprobe kann früher sein als ein Bericht über eine spätere Verbesserung. Beide Belege können zusammengehören, ohne dieselbe Erfindung an genau einem Tag zu dokumentieren.",
+            "Viele Verfahren entstehen durch die Arbeit mehrerer Menschen über lange Zeit. Eine namentlich überlieferte Verbesserung ist wichtig, ohne dass daraus ein einziger Ursprung aller früheren Erfahrungen folgt. Nicht alle beteiligten Papiermacher sind heute namentlich bekannt. Eine Verbesserung kann deshalb genauso wichtig sein wie eine völlig neue Idee.",
+            "In unserem Bild bleiben acht Linien mit gleicher Länge erhalten. Beim Umschalten liegen sie in einem oder in vier Feldern. Mehr belegte Felder bedeuten hier nicht mehr Linien; der Vergleich zeigt Anordnung und nicht eine Materialprüfung.",
+            "Das vorhandene Bild Cai Luns ist eine Druckgrafik aus dem 18. Jahrhundert und zeigt ihn als später verehrte Gestalt. Es entstand weit nach seiner Lebenszeit. Das Bild ist kein Foto, keine Augenzeugenaufnahme und kein sicherer Nachweis seines tatsächlichen Aussehens.",
+            "Papier entsteht aus Fasern, die in Wasser verteilt, zu einer dünnen Schicht gesammelt und getrocknet werden. Verfahren wurden über lange Zeit verbessert. Cai Lun gilt als wichtiger Verbesserer, nicht als einziger Ursprung des Papiers."
+          ],
+          "surprise": "Wichtige Verbesserung und Förderung der chinesischen Papierherstellung.",
+          "locations": [
+            {
+              "label": "China – Region der Han-Hauptstadt Luoyang",
+              "lat": 34.6,
+              "lon": 112.5,
+              "iso": "CN"
+            }
+          ],
+          "related": [
+            "history-paper",
+            "invention-printing",
+            "person-katsushika_hokusai"
+          ],
+          "sources": [
+            {
+              "label": "Berkshire China Encyclopedia · Cai Lun und die Weiterentwicklung der Papierherstellung",
+              "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/27/cai-lun-121-ce/"
+            },
+            {
+              "label": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+            },
+            {
+              "label": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+              "url": "https://paper.gatech.edu/fiber-pulp"
+            },
+            {
+              "label": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+              "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf"
+            }
+          ],
+          "aliases": [
+            "Cai Lun",
+            "cai_lun"
+          ],
+          "links": [],
+          "person": {
+            "lifespan": "1. Jahrhundert–121 n. Chr. (Geburtsjahr unsicher)",
+            "field": "Hofbeamter und Verbesserer der Papierherstellung",
+            "method": "Erfahrungen von Papiermachern sammeln und ein Verfahren verbessern."
+          },
+          "question": {
+            "prompt": "Wofür ist Cai Lun besonders bekannt?",
+            "answers": [
+              "Die Papierherstellung verbessern",
+              "Radioaktivität erforschen",
+              "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+            ],
+            "correct": 0,
+            "why": "Eine Verbesserung kann genauso wichtig sein wie eine völlig neue Idee."
+          },
+          "image": "cai-lun",
+          "learning": {
+            "starter": "Vergleiche dieselben acht Faserlinien in zwei Anordnungen.",
+            "observe": "Zähle die Linien getrennt von den Feldern, in denen sie liegen. Unterscheide außerdem ein berichtetes Datum von älteren erhaltenen Funden.",
+            "benefit": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen."
+          },
+          "sourceNote": "Eigene deutsche Erklärung nach der erhaltenen, tatsächlich gelesenen regionalen Darstellung aus Hunan, dem am07.11.2026 gelesenen frei zugänglichen Eintrag der Berkshire China Encyclopedia, dem konkreten historischen Vergleich bei T. H. Barrett und den Faser-/Beobachtungsabschnitten des Robert C. Williams Museum of Papermaking. Der aktuelle Enzyklopädiebeleg trägt Lebenszeit, Hofamt, Herkunft und Weiterentwicklung vorhandener Verfahren; genaue Geburtsjahre bleiben offen. Der historische Vergleich bei Barrett unterscheidet frühere Papierfunde von der überlieferten Vorstellung einer Verbesserung im Jahr105. Die übrigen konkreten Quellenprüfungen vom04.11.2026 bleiben erhalten. Die schematische Linienverteilung ist weder Mikroskopie noch Berechnung von Festigkeit. Die spätere Darstellung und ihre bestehenden Rechtebelege bleiben erhalten.",
+          "checkedAt": "2026-11-07",
+          "revision": 2,
+          "questionFeedback": {
+            "hint": "Denke an das Material, auf dem Menschen Zeichen und Texte festhalten können.",
+            "wrongReasons": [
+              null,
+              "Die Untersuchung radioaktiver Stoffe ist von der hier beschriebenen Verarbeitung von Fasern zu unterscheiden.",
+              "Eine Rechenanleitung beschreibt Schritte für eine Aufgabe; sie ist kein Verfahren zur Herstellung eines Schreibmaterials."
+            ]
+          }
+        }
+      },
+      "dossier": {
+        "id": "topics-people:person-cai_lun",
+        "before": {
+          "id": "topics-people:person-cai_lun",
+          "dataHash": "b1dbfd05f762695882f81d7d3d842b7cf738a9999d13d0f84debf51007a2ec3d",
+          "teachingDataHash": "12302d8e668738d542eb21110b47126d14dbf2ff10e89ff52d4e15669c70523f",
+          "goal": "Anzahl und Verteilung unterscheiden.",
+          "explanation": "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.\n\nFür das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.\n\nPapier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.\n\nDie gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen.",
+          "example": "Im eigenen Linienbild sind acht Linien zuerst in einem Feld. Danach liegen je zwei Linien in vier Feldern.",
+          "whyItMatters": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen.",
+          "hint": "Prüfe, welche Eigenschaft tatsächlich dargestellt ist und welche überhaupt nicht gemessen wurde.",
+          "feedback": "Auch nach dem Verteilen sind es acht Linien: viermal zwei. Ihre Anordnung und die belegten Felder verändern sich.\n\nDie Zeichnung vergleicht die Anordnung ihrer Linien. Eine Aussage über die Reißfestigkeit echter Blätter braucht passende Materialdaten und Untersuchungen.\n\nEin älterer Fund und ein späterer Verbesserungsbericht können beide richtig eingeordnet werden. Der Bericht nennt nicht automatisch den ersten Beginn aller Papierherstellung.",
+          "modelLimits": "Reine Verteilungsskizze, keine Mikroskopaufnahme, Dicken- oder Festigkeitsmessung. Die spätere Darstellung Cai Luns ist kein zeitgenössisches Porträt.",
+          "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+          "reviewedOn": "2026-11-04",
+          "ageLevels": {
+            "6-8": "Anzahl und Verteilung unterscheiden.",
+            "9-11": "Von einem gezeichneten Muster nicht auf eine ungemessene Materialeigenschaft schließen.",
+            "12-14": "Überlieferte Verbesserung und frühere Sachfunde zusammen beurteilen."
+          },
+          "sources": [
+            {
+              "id": "source-0",
+              "organisation": "Hunan: Cai Lun als Verbesserer der Papierherstellung",
+              "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-1",
+              "organisation": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-2",
+              "organisation": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+              "url": "https://paper.gatech.edu/fiber-pulp",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-3",
+              "organisation": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+              "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            }
+          ],
+          "claims": [
+            {
+              "statement": "Cai Lun wird als kaiserlicher Beamter mit einer Verbesserung der Papierherstellung verbunden; genaue Geburtsjahre werden nicht ungeprüft übernommen.",
+              "sourceId": "source-0",
+              "anchor": "Hunan88: imperialofficial/earlierexperience/improvedprocess; exact61or63birthnotadopted."
+            },
+            {
+              "statement": "Archäologische Papierfunde sind älter als der Bericht für105; dieser Bericht belegt keine voraussetzungslose Erfindung sämtlichen Papiers.",
+              "sourceId": "source-1",
+              "anchor": "BarrettJRAS2011actual481: archaeologicalpaperpredates105; recordedimprovement105. Onlyboundedpassagesread, nofullarticleororiginalexcavationclaimed."
+            },
+            {
+              "statement": "Papier kann aus pflanzlichen Cellulosefasern hergestellt werden, die im Herstellungsprozess zusammenfinden.",
+              "sourceId": "source-2",
+              "anchor": "Museum103/130–168: plantcellulose/fibresjoininpaperprocess; no erroneousgenus/species186–187orunrelatedindustrialchemistryadopted."
+            },
+            {
+              "statement": "Das Museumsmaterial regt die Beobachtung von Fasern und der Papierstruktur an; das eigene Modell übernimmt weder Arbeitsblatt noch Mikroskopaufnahme.",
+              "sourceId": "source-3",
+              "anchor": "TeacherPDF25–27/48–85: cellulosefibres and actualobservationquestions, noworksheet/images/SEMphotonexplanationcopied."
+            }
+          ],
+          "media": [
+            {
+              "path": "app/people-retained-evidence/cai-lun.tsx",
+              "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+              "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+              "alt": "Acht gleich lange eigene Faserlinien liegen wahlweise in einem oder in vier Feldern; ihre Anzahl bleibt gleich.",
+              "learningPurpose": "Exactly8segments each80SVGunits, firstallwithinupperleftquadrant then2per4quadrants; count/lengthconstant, distributiononly, norealstrengthclaim."
+            },
+            {
+              "path": "public/images/portraits/cai-lun.webp",
+              "license": "Public Domain (PD-old-100-expired / PD-Art)",
+              "credit": "Unbekannter Künstler",
+              "alt": "Spätere Druckgrafik aus dem 18. Jahrhundert, die Cai Lun als Schutzpatron der Papierherstellung zeigt.",
+              "learningPurpose": "Spätere Druckgrafik aus dem18.Jahrhundert; Darstellung als Schutzpatron, kein zeitgenössisches Porträt und kein Beleg für einen historischen Produktionsversuch."
+            }
+          ],
+          "links": [
+            "topics-history:history-paper",
+            "topics-inventions:invention-printing",
+            "topics-people:person-katsushika_hokusai"
+          ],
+          "preparedSourceLimits": [
+            "OxfordCabinet502notactualcontent; RSC405notactualcontent. Appropriate accessiblemuseumandactualpeer-reviewedhistorypassagessubstitute."
+          ],
+          "preparedHistoricalReadingReceipt": "old-people-read-sources/Cai-Lun-actually-read-historical-improvement-fibre-and-existing-portrait-rights.json"
+        },
+        "after": {
+          "id": "topics-people:person-cai_lun",
+          "dataHash": "e2dd8f82359888a168c3fa9ce9dfb54c5572409ad2a7594599d965c37f23ae18",
+          "teachingDataHash": "12302d8e668738d542eb21110b47126d14dbf2ff10e89ff52d4e15669c70523f",
+          "goal": "Anzahl und Verteilung unterscheiden.",
+          "explanation": "Cai Lun war ein Beamter am chinesischen Kaiserhof. Sein Geburtsjahr ist unsicher; er lebte im ersten und frühen zweiten Jahrhundert nach Christus und starb 121. Die regionale Darstellung aus Hunan beschreibt, dass er Erfahrungen früherer Papiermacher aufgriff und Verfahren verbesserte.\n\nFür das Jahr 105 ist überliefert, dass Cai Lun dem Hof eine verbesserte Form von Schreibpapier vorstellte. Archäologische Funde weisen jedoch auf Papier vor dieser Zeit hin. Das überlieferte Vorstellungsjahr ist deshalb nicht mit dem allerersten Entstehen von Papier gleichzusetzen.\n\nPapier besteht aus vielen pflanzlichen Fasern, vor allem aus Zellulose. Bei der Papierherstellung werden Fasern aufbereitet, in Wasser verteilt und zu einer Schicht zusammengebracht. Wasser wird entfernt und die Fasern verbinden sich zu einem Blatt. Material und Verarbeitung beeinflussen seine Eigenschaften.\n\nDie gleiche Menge an Fasern kann unterschiedlich verteilt sein. Unser eigenes Linienbild macht diese einzelne Frage sichtbar. Es berechnet keine echte Papierqualität. Für ein wirkliches Blatt müsste man seine Fasern, Herstellung und Eigenschaften untersuchen.",
+          "example": "Im eigenen Linienbild sind acht Linien zuerst in einem Feld. Danach liegen je zwei Linien in vier Feldern.",
+          "whyItMatters": "Du kannst eine technische Verbesserung einordnen und die Grenzen einer vereinfachten Materialzeichnung benennen.",
+          "hint": "Prüfe, welche Eigenschaft tatsächlich dargestellt ist und welche überhaupt nicht gemessen wurde.",
+          "feedback": "Auch nach dem Verteilen sind es acht Linien: viermal zwei. Ihre Anordnung und die belegten Felder verändern sich.\n\nDie Zeichnung vergleicht die Anordnung ihrer Linien. Eine Aussage über die Reißfestigkeit echter Blätter braucht passende Materialdaten und Untersuchungen.\n\nEin älterer Fund und ein späterer Verbesserungsbericht können beide richtig eingeordnet werden. Der Bericht nennt nicht automatisch den ersten Beginn aller Papierherstellung.",
+          "modelLimits": "Reine Verteilungsskizze, keine Mikroskopaufnahme, Dicken- oder Festigkeitsmessung. Die spätere Darstellung Cai Luns ist kein zeitgenössisches Porträt.",
+          "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+          "reviewedOn": "2026-11-07",
+          "ageLevels": {
+            "6-8": "Anzahl und Verteilung unterscheiden.",
+            "9-11": "Von einem gezeichneten Muster nicht auf eine ungemessene Materialeigenschaft schließen.",
+            "12-14": "Überlieferte Verbesserung und frühere Sachfunde zusammen beurteilen."
+          },
+          "sources": [
+            {
+              "id": "source-0",
+              "organisation": "Berkshire China Encyclopedia · Cai Lun und die Weiterentwicklung der Papierherstellung",
+              "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/27/cai-lun-121-ce/",
+              "checkedOn": "2026-11-07",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-1",
+              "organisation": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-2",
+              "organisation": "Robert C. Williams Museum of Papermaking: pflanzliche Fasern und Papier",
+              "url": "https://paper.gatech.edu/fiber-pulp",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            },
+            {
+              "id": "source-3",
+              "organisation": "Robert C. Williams Museum of Papermaking: Papierfasern beobachten (PDF)",
+              "url": "https://paper.gatech.edu/sites/default/files/2021-04/The%20Technology%20of%20Paper.pdf",
+              "checkedOn": "2026-11-04",
+              "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+            }
+          ],
+          "claims": [
+            {
+              "statement": "Cai Lun wird als kaiserlicher Beamter mit einer Verbesserung der Papierherstellung verbunden; genaue Geburtsjahre werden nicht ungeprüft übernommen.",
+              "sourceId": "source-0",
+              "anchor": "Berkshire China Encyclopedia, Cai Lun (?–121 CE), am07.11.2026 vollständig gelesener frei zugänglicher Eintrag: Eastern Han official, Guiyang/Hunan, previous knowledge und improving/refining. Der Geburtszeitpunkt bleibt ausdrücklich unsicher; die vereinfachende Erfindungszuschreibung wird durch den erhaltenen konkreten Barrett-Beleg zu früherem Papier und berichtetem105 eingeordnet. Keine neuen historischen Produktionsdaten oder fremden Text-/Bildübernahmen."
+            },
+            {
+              "statement": "Archäologische Papierfunde sind älter als der Bericht für105; dieser Bericht belegt keine voraussetzungslose Erfindung sämtlichen Papiers.",
+              "sourceId": "source-1",
+              "anchor": "BarrettJRAS2011actual481: archaeologicalpaperpredates105; recordedimprovement105. Onlyboundedpassagesread, nofullarticleororiginalexcavationclaimed."
+            },
+            {
+              "statement": "Papier kann aus pflanzlichen Cellulosefasern hergestellt werden, die im Herstellungsprozess zusammenfinden.",
+              "sourceId": "source-2",
+              "anchor": "Museum103/130–168: plantcellulose/fibresjoininpaperprocess; no erroneousgenus/species186–187orunrelatedindustrialchemistryadopted."
+            },
+            {
+              "statement": "Das Museumsmaterial regt die Beobachtung von Fasern und der Papierstruktur an; das eigene Modell übernimmt weder Arbeitsblatt noch Mikroskopaufnahme.",
+              "sourceId": "source-3",
+              "anchor": "TeacherPDF25–27/48–85: cellulosefibres and actualobservationquestions, noworksheet/images/SEMphotonexplanationcopied."
+            }
+          ],
+          "media": [
+            {
+              "path": "app/people-retained-evidence/cai-lun.tsx",
+              "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+              "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+              "alt": "Acht gleich lange eigene Faserlinien liegen wahlweise in einem oder in vier Feldern; ihre Anzahl bleibt gleich.",
+              "learningPurpose": "Exactly8segments each80SVGunits, firstallwithinupperleftquadrant then2per4quadrants; count/lengthconstant, distributiononly, norealstrengthclaim."
+            },
+            {
+              "path": "public/images/portraits/cai-lun.webp",
+              "license": "Public Domain (PD-old-100-expired / PD-Art)",
+              "credit": "Unbekannter Künstler",
+              "alt": "Spätere Druckgrafik aus dem 18. Jahrhundert, die Cai Lun als Schutzpatron der Papierherstellung zeigt.",
+              "learningPurpose": "Spätere Druckgrafik aus dem18.Jahrhundert; Darstellung als Schutzpatron, kein zeitgenössisches Porträt und kein Beleg für einen historischen Produktionsversuch."
+            }
+          ],
+          "links": [
+            "topics-history:history-paper",
+            "topics-inventions:invention-printing",
+            "topics-people:person-katsushika_hokusai"
+          ],
+          "preparedSourceLimits": [
+            "OxfordCabinet502notactualcontent; RSC405notactualcontent. Appropriate accessiblemuseumandactualpeer-reviewedhistorypassagessubstitute."
+          ],
+          "preparedHistoricalReadingReceipt": "old-people-read-sources/Cai-Lun-actually-read-historical-improvement-fibre-and-existing-portrait-rights.json",
+          "sourceEndpointReview": {
+            "reviewedOn": "2026-11-07",
+            "scope": "Nur erster Fachbeleg, seine Zuordnung und Quellenhinweis neu geprüft. Der frühere Hunan-Beleg und seine tatsächliche frühere Lektüre bleiben im ganzen Vorgänger erhalten; die derzeit nicht zuverlässig erreichbare Adresse wird durch einen passend eingeordneten frei zugänglichen Fachbeleg ersetzt. Drei übrige Quellenprüfungen behalten04.11.2026. Alle Lehr-/Modell-/Frage-/Medien-/Fortschrittsfelder bleiben unverändert.",
+            "technicalCurrentUI": "Frühere UI bleibt ausschließlich ihrem ursprünglichen Build zugeordnet. Neue vollständige aktuelle Qualifikation erforderlich."
+          }
+        }
+      },
+      "previousCurrentCatalogSHA256": "84618195a1bbd85ef4bc3293380767b0004a10300eba0ec93be82a05b7ab9188",
+      "pendingCurrentUIBuild": "68f3b45724224e9f",
+      "pendingCurrentUIBuildBeforeLegacyPaperCorrection": "39cfdf1ae5b4d5eb"
+    },
+    {
+      "meaning": "Exact third source boundary for the same failed Hunan endpoint remaining in legacy history-paper and its separately confirmed Oxford403; source fields only, still no existing individual paper dossier or UI acceptance.",
+      "legacyTopicWithoutExistingDossier": true,
+      "topic": {
+        "id": "history-paper",
+        "before": {
+          "id": "history-paper",
+          "category": "history",
+          "title": "Papier aus China",
+          "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+          "paragraphs": [
+            "Für das Jahr 105 ist überliefert, dass Cai Lun die Herstellung verbesserte und sein Verfahren am Kaiserhof vorstellte.",
+            "Auf Papier ließen sich Texte leichter aufschreiben und weitergeben."
+          ],
+          "facts": [
+            {
+              "label": "Wann?",
+              "text": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)"
+            },
+            {
+              "label": "Wo?",
+              "text": "China, Kaiserhof der Han-Zeit"
+            }
+          ],
+          "more": [
+            "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
+            "Dünne Papierblätter lassen sich zusammenlegen, beschriften und zu Büchern verbinden. Papierherstellung, Schrift und Druck ergänzen einander; jede Entwicklung hatte ihre eigene Geschichte."
+          ],
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "locations": [
+            {
+              "label": "China – Ursprungsregion",
+              "lat": 34.6,
+              "lon": 112.5,
+              "iso": "CN"
+            }
+          ],
+          "related": [
+            "person-cai_lun",
+            "history-writing"
+          ],
+          "sources": [
+            {
+              "label": "University of Oxford, Cabinet",
+              "url": "https://www.cabinet.ox.ac.uk/origins-paper"
+            },
+            {
+              "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+            },
+            {
+              "label": "Hunan Provincial Department of Culture & Tourism",
+              "url": "https://whhlyt.hunan.gov.cn/whhlyt/english/Culture/CulturalFigures/202207/t20220729_27570604.html"
+            }
+          ],
+          "aliases": [
+            "paper"
+          ],
+          "links": [],
+          "history": {
+            "year": 105,
+            "date": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)",
+            "era": "Wissen & Städte",
+            "sensitive": false
+          },
+          "question": {
+            "prompt": "Was passt zu Cai Lun?",
+            "answers": [
+              "Er verbesserte ein bereits bekanntes Verfahren",
+              "Er erfand allein jede Art von Papier",
+              "Er erfand das Internet"
+            ],
+            "correct": 0,
+            "why": "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer."
+          }
+        },
+        "after": {
+          "id": "history-paper",
+          "category": "history",
+          "title": "Papier aus China",
+          "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+          "paragraphs": [
+            "Für das Jahr 105 ist überliefert, dass Cai Lun die Herstellung verbesserte und sein Verfahren am Kaiserhof vorstellte.",
+            "Auf Papier ließen sich Texte leichter aufschreiben und weitergeben."
+          ],
+          "facts": [
+            {
+              "label": "Wann?",
+              "text": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)"
+            },
+            {
+              "label": "Wo?",
+              "text": "China, Kaiserhof der Han-Zeit"
+            }
+          ],
+          "more": [
+            "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
+            "Dünne Papierblätter lassen sich zusammenlegen, beschriften und zu Büchern verbinden. Papierherstellung, Schrift und Druck ergänzen einander; jede Entwicklung hatte ihre eigene Geschichte."
+          ],
+          "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+          "locations": [
+            {
+              "label": "China – Ursprungsregion",
+              "lat": 34.6,
+              "lon": 112.5,
+              "iso": "CN"
+            }
+          ],
+          "related": [
+            "person-cai_lun",
+            "history-writing"
+          ],
+          "sources": [
+            {
+              "label": "Robert C. Williams Museum of Papermaking · Frühe Papierherstellung in China",
+              "url": "https://paper.gatech.edu/early-papermaking"
+            },
+            {
+              "label": "Journal of the Royal Asiatic Society / Cambridge University Press",
+              "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
+            },
+            {
+              "label": "Berkshire China Encyclopedia · Cai Lun und die Weiterentwicklung der Papierherstellung",
+              "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/27/cai-lun-121-ce/"
+            }
+          ],
+          "aliases": [
+            "paper"
+          ],
+          "links": [],
+          "history": {
+            "year": 105,
+            "date": "105 n. Chr. (überlieferte Verbesserung; Papier ist älter)",
+            "era": "Wissen & Städte",
+            "sensitive": false
+          },
+          "question": {
+            "prompt": "Was passt zu Cai Lun?",
+            "answers": [
+              "Er verbesserte ein bereits bekanntes Verfahren",
+              "Er erfand allein jede Art von Papier",
+              "Er erfand das Internet"
+            ],
+            "correct": 0,
+            "why": "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer."
+          },
+          "sourceNote": "Die Fachbelege unterscheiden ältere archäologische Papierfunde von der für105 überlieferten Vorstellung eines verbesserten Verfahrens am Han-Hof. Das Museum beschreibt frühere Papierfunde in China; der konkrete Vergleich bei T.H.Barrett ordnet den Verbesserungsbericht ein. Der Enzyklopädieeintrag beschreibt Cai Luns Hofamt und die Weiterentwicklung vorhandener Verfahren. Daraus wird weder ein genauer erster Erfindungstag noch die voraussetzungslose Erfindung sämtlichen Papiers durch einen einzigen Menschen abgeleitet. Schrift, Papierherstellung und Druck haben jeweils ihre eigene Geschichte.",
+          "checkedAt": "2026-11-07"
+        }
+      },
+      "previousCurrentCatalogSHA256": "8bd293d65a205ff1fc701a61d327d9f1179f240e1b494a6361448e5e08e73c52",
+      "pendingCurrentUIBuild": "68f3b45724224e9f"
+    }
+  ]
 }

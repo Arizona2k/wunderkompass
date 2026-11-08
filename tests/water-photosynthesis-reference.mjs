@@ -1,7 +1,10 @@
+// Exact historical source/UI inverse; qualification requires named actual whole-input evidence.
 // Exact historical source/UI inverse; actual qualification is recorded in the named boundary.
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import boundary from './fixtures/water-photosynthesis-M93-data-predecessor.json' with {type:'json'};
+import retainedPeople from './fixtures/retained-people-data-predecessor.json' with {type:'json'};
+import legacyPeople from './fixtures/legacy-people20-before-merian-lehmann.json' with {type:'json'};
 
 export const wholeWaterReference=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const topics=new Map(boundary.topics.map(row=>[row.id,row]));
@@ -11,11 +14,21 @@ function previous(value,row){
  assert.deepEqual(value,row.after,'only the entire reviewed water/photosynthesis object has a historical predecessor: '+value.id);
  return structuredClone(row.before);
 }
-export const topicBeforeWaterPhotosynthesis=topic=>previous(topic,topics.get(topic.id));
+const sourceCorrection=boundary.sourceEndpointCorrection;
+// Each additional correction is an exact named boundary, not a permissive normalization.
+const sourceCorrections=()=>[...(boundary.additionalSourceEndpointCorrections??[]),sourceCorrection].filter(Boolean);
+export const topicBeforeWaterPhotosynthesis=topic=>{
+ const correction=sourceCorrections().find(row=>row.topic.id===topic.id);
+ // Earlier release tests may have already removed the fourteen-person backlinks.
+ // Admit only whole originals from either preserved boundary, never a partial-looking object.
+ const historical=correction?[retainedPeople.catalogChanges.find(row=>row.id===topic.id)?.original,legacyPeople.peopleTopics.find(row=>row.id===topic.id)].filter(Boolean):[];
+ if(historical.some(original=>wholeWaterReference(topic)===wholeWaterReference(original)))return topic;
+ return previous(previous(topic,correction?.topic),topics.get(topic.id));
+};
 export function beforeWaterPhotosynthesis(items){
  if(items.some(row=>Object.hasOwn(row,'category')&&Object.hasOwn(row,'paragraphs'))){
   if(items.some(row=>topics.has(row.id)&&wholeWaterReference(row)===wholeWaterReference(topics.get(row.id).after)))assert.equal(items.length,204,'a current water/photosynthesis catalog must retain all204 identities');
-  if(items.length===204){const hash=wholeWaterReference(items);assert([boundary.previousCatalogSHA256,boundary.currentCatalogSHA256].includes(hash),'all204 whole topics, including every unrelated field, must match the reviewed boundary');}
+  if(items.length===204){const hash=wholeWaterReference(items);assert([boundary.previousCatalogSHA256,boundary.currentCatalogSHA256,...sourceCorrections().map(row=>row.previousCurrentCatalogSHA256)].includes(hash),'all204 whole topics, including every unrelated field, must match the reviewed boundary');}
   return items.map(topicBeforeWaterPhotosynthesis);
  }
  return items.map(row=>previous(row,questions.get(row.id)));
@@ -28,6 +41,31 @@ export function thinkingBeforeWaterPhotosynthesis(thinking){
 export function dossiersBeforeWaterPhotosynthesis(items){
  if(items.length<=286)return items;
  assert.equal(items.length,288,'only two named individual dossiers were added');
+ // Preparation only: this inverse does not qualify a product UI or manufacture a passed run.
+ const sourceUI=sourceCorrection?.qualifiedUILayer;
+ if(sourceUI&&items.some(row=>row.ui?.build===sourceUI.build)){
+  assert.equal(sourceUI.build,sourceCorrection.pendingCurrentUIBuild,'only the named source-corrected build can have this additional inverse');
+  assert.deepEqual(sourceUI.previousTemplate,boundary.qualifiedUILayer.currentTemplate,'the whole actual preceding UI layer remains unchanged');
+  assert.deepEqual(sourceUI.routes,boundary.qualifiedUILayer.routes,'all288 actual route identities and their order remain unchanged');
+  assert.equal(sourceUI.currentTemplate.build,sourceUI.build);
+  const restored=items.map((row,index)=>{
+   const route=sourceUI.routes[index];assert.equal(row.id,route.id,'the qualified current source/UI layer retains dossier order');
+   assert.deepEqual(row.ui,{...sourceUI.currentTemplate,route:route.route},'only the whole qualified source-corrected UI object may be projected');
+   return {...row,ui:{...sourceUI.previousTemplate,route:route.route}};
+  });
+  assert.equal(wholeWaterReference(restored),sourceUI.previousSourceCorrectedWholeDossiersSHA256,'all288 whole source-corrected predecessor dossiers must be recovered before the factual-source inverse');
+  items=restored;
+ }
+ for(const correction of sourceCorrections()){
+  if(correction.legacyTopicWithoutExistingDossier===true){
+   assert.equal(correction.topic.id,'history-paper','only the named still-unreviewed legacy paper source boundary lacks an individual dossier');
+   assert.equal(correction.dossier,undefined,'source-only legacy correction cannot replace or invent a factual dossier');
+   assert(!items.some(row=>row.id==='topics-history:history-paper'),'this bounded source correction cannot qualify an added legacy paper dossier');
+   continue;
+  }
+  assert(correction.dossier,'every other named source correction retains its exact existing individual dossier boundary');
+  items=items.map(row=>{if(row.id!==correction.dossier.id)return row;const {ui,...content}=row;const prior=previous(content,correction.dossier);return {...prior,...(ui?{ui}: {})};});
+ }
  const expected=[...boundary.previousDossiers,...boundary.newContentDossiers];
  const signature=rows=>rows.map(row=>({id:row.id,sha256:wholeWaterReference(row)}));
  if(JSON.stringify(signature(items))===JSON.stringify(expected))return items.slice(0,286);
