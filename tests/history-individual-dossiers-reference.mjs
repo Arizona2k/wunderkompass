@@ -15,10 +15,17 @@ export function dossiersBeforeHistoryEvidence(rows){
   rows=rows.map((row,index)=>{
    const saved=layer.routes[index];assert.equal(row.id,saved.id);
    assert.deepEqual(row.ui,{...layer.currentTemplate,route:saved.route},'whole named actual UI layer only');
-   const restored=structuredClone(row);delete restored.ui;
+   const restored=structuredClone(row);
    if(Object.hasOwn(saved,'previousUI'))restored.ui=structuredClone(saved.previousUI);
+   else delete restored.ui;
    return restored;
   });
+ }
+ const sources=boundary.sourceEndpointCorrection20261109;
+ if(sources){
+  assert.deepEqual(signature(rows),sources.currentContentOnly,'all300 whole source-corrected records, including unchanged facts and UI histories');
+  const changes=new Map(sources.changes.map(row=>[row.id,row]));
+  rows=rows.map(row=>{const change=changes.get(row.id);if(!change)return row;assert.deepEqual(row,change.after,'only the two entire named source replacements');return structuredClone(change.before);});
  }
  assert.deepEqual(signature(rows),boundary.currentContentOnly,'all300 whole individual content records and unchanged predecessors');
  const restored=rows.filter(row=>!boundary.addedIds.includes(row.id)).map(row=>{

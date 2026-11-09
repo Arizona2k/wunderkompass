@@ -117,7 +117,8 @@ export async function articleAtlas(page,ready,report,width,shots){
    report.retainedPersonActualSources=await actualPeopleSourceActivation(page,{ids:retainedIDs,pdfOutputDirectory:shots+'/retained-person-source-PDF-originals'});
    const retainedSources=retainedIDs.flatMap(id=>topics.find(t=>t.id===id).sources.map(source=>({id,requested:source.url})));
    assert.deepEqual(report.retainedPersonActualSources.observations.map(({id,requested})=>({id,requested})),retainedSources,'every ordered declared source, including all five unchanged original PDFs and the same-report NASA primary PDF');
-   assert.equal(report.retainedPersonActualSources.observations.length,68);
+   assert.equal(retainedSources.length,69);
+   assert.equal(report.retainedPersonActualSources.observations.length,69);
    assert.equal(report.retainedPersonActualSources.observations.filter(row=>row.actualPDF).length,6);
    assert.equal(report.retainedPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
   }finally{await page.evaluate(hash=>location.hash=hash,initialPeopleRoute);}

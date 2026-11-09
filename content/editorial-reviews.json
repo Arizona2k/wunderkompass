@@ -108951,7 +108951,7 @@
     },
     {
       "id": "topics-people:person-bertha_benz",
-      "dataHash": "7a6fde640fe4b9bd4279c1a9d9cd480216bafd8b3e2cee01217c4c6d9d5f47ba",
+      "dataHash": "bc672c59f3651a2c66198c6de296c918f3ab3a2c19697f8333c9f652a304f1ef",
       "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
       "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
       "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
@@ -108969,35 +108969,42 @@
       },
       "sources": [
         {
-          "id": "source-2",
-          "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
-          "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
-          "checkedOn": "2026-11-06",
-          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+          "id": "source-qatar-20261109",
+          "organisation": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+          "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
         },
         {
           "id": "source-museum-20261106",
           "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
           "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
-          "checkedOn": "2026-11-06",
+          "checkedOn": "2026-11-09",
           "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-mercedes-20261109",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz: Leben und Mitarbeit",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
         }
       ],
       "claims": [
         {
-          "statement": "Bertha Benz leistete praktische und finanzielle Beiträge;1888 fuhr sie mit ihren Söhnen von Mannheim nach Pforzheim.",
-          "sourceId": "source-2",
-          "anchor": "DPMA BerthaBenz article02Mar2026, whole actual text read06Nov2026:1849–1944, investment/dowry and company finance,1888 Mannheim→Pforzheim with sons using Model3. Retain distinction from patent1886/Model1; omit exact13hour return, thirdgear and folkrepair recipes."
+          "statement": "Bertha Benz lebte von1849bis1944 und unterstützte die Entwicklung finanziell und praktisch.",
+          "sourceId": "source-mercedes-20261109",
+          "anchor": "Mercedes-Benz-Unternehmensarchiv, Abschnitt Bertha Benz, tatsächlich erneut gelesen09Nov2026: Geburt3Mai1849, Mitgift und praktische technische Mitarbeit, Tod5Mai1944. Herstellerbiografie; keine pauschale Erstpriorität oder genaue Reise-/Reparaturangabe übernommen."
         },
         {
-          "statement": "Carl Benz meldete1886das Motorwagenpatent an; die gemeinsame technische Entwicklung wird nicht als Berthas alleinige Patentanmeldung dargestellt.",
+          "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
           "sourceId": "source-museum-20261106",
-          "anchor": "Deutsches Museum27Jan2026, whole actual text read06Nov2026:29January1886 patent,1844–1929, Mannheim, integrated motor/transmission/brakes/bicycle components,1888 Bertha and sons. No sole-inventor-of-all-vehicles or all-original-parts claim."
+          "anchor": "Deutsches Museum27Jan2026, ganze einschlägige Darstellung erneut gelesen09Nov2026: Anmeldung29Jan1886/37435, Bertha und Söhne1888Mannheim–Pforzheim, eigener MuseumswagenNr.1. Keine Zuschreibung von Carls Patentanmeldung an Bertha."
         },
         {
-          "statement": "Das DPMA unterscheidet Anmeldung am29.Januar und Erteilung am2.November1886; Berthas Fahrt erfolgte mit MotorwagenNr.3 und zeigte praktische Anforderungen.",
-          "sourceId": "source-2",
-          "anchor": "27–61 patentapplication29Jan/grant2Nov1886;model3/sons/practicalneeds. Exclude firstevervehicle and exactthirdgear/roundtrip13hour assertions, which are not needed and conflict in scope with other accounts."
+          "statement": "Qatar Museums ordnet die Fahrt von1888dem weiterentwickelten Patent-MotorwagenNr.3zu und beschreibt Berthas Unterstützung und Rückmeldungen.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida,07May2026, tatsächlich gelesen09Nov2026: Abschnitte zur Mitgift, Fahrt5Aug1888Mannheim–Pforzheim im Patent-MotorwagenNo.3 und Rückmeldungen. Text einer Mitarbeiterin des künftigen QatarAutoMuseum; dortiges Sammlungsfahrzeug ausdrücklich Nachbau, kein Originalfoto von1888. Keine genauen Strecken-/Fahrtdauern oder volkstümlichen Reparaturen übernommen."
         }
       ],
       "media": [
@@ -109124,7 +109131,8 @@
         }
       },
       "sourceLimits": [
-        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich."
+        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
       ]
     },
     {
@@ -109783,7 +109791,7 @@
     },
     {
       "id": "topics-people:person-karl_benz",
-      "dataHash": "91541d65443e5f6bde98d630e6d16da5a8d92ffac05761357dea92dfb261400d",
+      "dataHash": "81edae4392b26e0c75cd3d97ede639d279ba37886a60f5d2754fd7f2a926ccd8",
       "teachingDataHash": "9b730fb07308e74f035d6ef4151aafebe873fe40ae67bf5ae7afca3584d9b3b9",
       "goal": "Die veränderte Verbindung beschreiben.",
       "explanation": "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.\n\nBei einem brauchbaren Motorwagen mussten Motor, Übertragung, Fahrwerk, Lenkung und Bremsen zusammenpassen. Unser eigenes Schema verändert nur eine Verbindung. Es berechnet nicht, wie sich ein wirklicher Wagen bewegt.",
@@ -109801,17 +109809,17 @@
       },
       "sources": [
         {
-          "id": "source-dpma-20261106",
-          "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
-          "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
-          "checkedOn": "2026-11-06",
-          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+          "id": "source-qatar-20261109",
+          "organisation": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+          "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
         },
         {
           "id": "source-2",
           "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
           "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
-          "checkedOn": "2026-11-06",
+          "checkedOn": "2026-11-09",
           "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
         },
         {
@@ -109829,9 +109837,14 @@
           "anchor": "Deutsches Museum27Jan2026, whole actual text read06Nov2026:1844–1929,29Jan1886 patent number37435, integrated car and1906 museum acquisition. Avoid blanket technical first-priority and precise performance claims."
         },
         {
-          "statement": "Bertha Benz trug finanziell und praktisch bei und unternahm1888die Fahrt mit ihren Söhnen.",
-          "sourceId": "source-dpma-20261106",
-          "anchor": "DPMA BerthaBenz article02Mar2026, whole actual text read06Nov2026: financial investment and practical1888 Model3 journey with sons. Application29Jan1886 and grant2Nov1886 distinguished. No timed roundtrip/gear/repair instructions adopted."
+          "statement": "Bertha Benz unterstützte die Entwicklung finanziell und praktisch; Qatar Museums beschreibt ihren Beitrag und die Fahrt von1888.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida,07May2026, tatsächlich gelesen09Nov2026: Mitgift/finanzielle Unterstützung,5Aug1888Mannheim–Pforzheim im Patent-MotorwagenNo.3, Rückmeldungen. Institutionelle Sammlungsdarstellung, keine unabhängige technische Abnahme. Keine genaue Fahrtdauer oder Reparaturanleitung übernommen."
+        },
+        {
+          "statement": "Die Fahrt von1888führte Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim.",
+          "sourceId": "source-2",
+          "anchor": "Deutsches Museum27Jan2026, Abschnitt zu den Patent-Motorwagen, tatsächlich erneut gelesen09Nov2026: Bertha und ihre Söhne1888Mannheim–Pforzheim. Das eigene Verbindungsschema ist weder Fahrprotokoll noch Rekonstruktion des ganzen Motorwagens."
         },
         {
           "statement": "Das Museum beschreibt den zusammengefügten Motorwagen einschließlich vorhandener beziehungsweise zugelieferter Bauteile; keine Alleinherstellung sämtlicher Teile wird behauptet.",
@@ -109980,7 +109993,8 @@
         }
       },
       "sourceLimits": [
-        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich."
+        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
       ]
     },
     {

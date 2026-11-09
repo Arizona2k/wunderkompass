@@ -50,3 +50,53 @@ test('missing, mixed, reordered, unknown, altered sources, media and nested hist
   rows=>{rows[299].id='unknown';},
  ]){const changed=structuredClone(registry);mutate(changed);assert.throws(()=>dossiersBeforeHistoryEvidence(changed));}
 });
+test('the two Benz source replacements preserve original teaching, complete source histories and actual dates while every current declared claim has a source',()=>{
+ const layer=boundary.sourceEndpointCorrection20261109;
+ assert.equal(layer.changes.length,2);assert.equal(layer.currentContentOnly.length,300);
+ const catalog=read('app/world-catalog.json'),inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
+ for(const change of layer.changes){
+  const current=registry.find(row=>row.id===change.id),topic=catalog.find(row=>'topics-people:'+row.id===change.id);
+  const content=structuredClone(current),uiLayer=boundary.qualifiedUILayer;if(uiLayer){const saved=uiLayer.routes.find(row=>row.id===current.id);assert.deepEqual(content.ui,{...uiLayer.currentTemplate,route:saved.route});if(Object.hasOwn(saved,'previousUI'))content.ui=structuredClone(saved.previousUI);else delete content.ui;}
+  assert.deepEqual(content,change.after);
+  assert.deepEqual(current.sources.map(row=>row.url),topic.sources.map(row=>row.url));
+  assert.deepEqual(validateDossierContent(current,records.get(current.id),{knownIds}).errors,[]);
+  for(const key of ['teachingDataHash','goal','explanation','example','hint','feedback','modelLimits','ageLevels','media','ui','reviewedOn','historicalSourceBeforeNative221Replacement20261106'])assert.deepEqual(content[key],change.before[key],key);
+  assert(!current.sources.some(row=>row.url.includes('/patentefrauen/berthabenz/')));
+  assert(change.before.sources.some(row=>row.url.includes('/patentefrauen/berthabenz/')),'the original DPMA source remains historical, never silently removed');
+  assert.equal(current.sources.find(row=>row.url.includes('qm.org.qa/')).checkedOn,'2026-11-09');
+ }
+ assert.equal(catalog.find(row=>row.id==='person-karl_benz').sources.length,3);
+ assert.equal(catalog.find(row=>row.id==='person-bertha_benz').sources.length,3);
+ assert.equal(wholeHistoryDossier(dossiersBeforeHistoryEvidence(registry)),boundary.previousWholeSHA256);
+});
+test('the exact Benz inverse rejects mixed sources, altered old claims, old UI order, missing rows and unrelated changes',()=>{
+ const changes=boundary.sourceEndpointCorrection20261109.changes;
+ for(const mutate of [
+  rows=>{rows[rows.findIndex(row=>row.id===changes[0].id)]=structuredClone(changes[0].before);},
+  rows=>{rows.find(row=>row.id===changes[0].id).claims[1].anchor+=' unreviewed';},
+  rows=>{rows.find(row=>row.id===changes[1].id).sources.reverse();},
+  rows=>{rows.find(row=>row.id===changes[1].id).historicalSourceBeforeNative221Replacement20261106.claims[0].anchor+=' altered';},
+  rows=>{const row=rows.find(row=>row.id===changes[0].id),ui=row.ui;delete row.ui;row.ui=ui;},
+  rows=>rows.splice(rows.findIndex(row=>row.id===changes[1].id),1),
+  rows=>{rows[0].example+=' unknown';},
+ ]){const altered=structuredClone(registry);mutate(altered);assert.throws(()=>dossiersBeforeHistoryEvidence(altered));}
+});
+
+test('a common UI binding reverses whole key order before the two source corrections and rejects incomplete or invented bindings',()=>{
+ const originalLayer=boundary.qualifiedUILayer;
+ const sourceOnly=registry.map((row,i)=>{
+  const copy=structuredClone(row);
+  if(originalLayer){const saved=originalLayer.routes[i];assert.equal(copy.id,saved.id);assert.deepEqual(copy.ui,{...originalLayer.currentTemplate,route:saved.route});if(Object.hasOwn(saved,'previousUI'))copy.ui=structuredClone(saved.previousUI);else delete copy.ui;}
+  return copy;
+ });
+ const template={build:'synthetic-exact-inverse-only',visible:true,search:true,back:true,offline:true,report:'Only an inverse regression, never actual UI acceptance.'};
+ const routes=sourceOnly.map(row=>({id:row.id,route:'synthetic/'+row.id,...(Object.hasOwn(row,'ui')?{previousUI:structuredClone(row.ui)}:{})}));
+ const bound=sourceOnly.map((row,i)=>({...structuredClone(row),ui:{...template,route:routes[i].route}}));
+ try{
+  boundary.qualifiedUILayer={currentTemplate:template,routes};
+  assert.deepEqual(sourceOnly.map(row=>({id:row.id,sha256:wholeHistoryDossier(row)})),boundary.sourceEndpointCorrection20261109.currentContentOnly);
+  assert.equal(wholeHistoryDossier(dossiersBeforeHistoryEvidence(bound)),boundary.previousWholeSHA256);
+  for(const mutate of [rows=>delete rows[299].ui,rows=>{rows[0].ui.route+=' unknown';},rows=>{rows[0].ui.report+=' invented';},rows=>{rows[0].ui=structuredClone(routes[0].previousUI);},rows=>{rows[299].ui.offline=false;},rows=>{rows.find(row=>row.id===boundary.sourceEndpointCorrection20261109.changes[0].id).claims[1].anchor+=' invented';}]){const altered=structuredClone(bound);mutate(altered);assert.throws(()=>dossiersBeforeHistoryEvidence(altered));}
+  const saved=routes[0].previousUI;try{routes[0].previousUI={...saved,report:saved.report+' unknown'};assert.throws(()=>dossiersBeforeHistoryEvidence(bound));}finally{routes[0].previousUI=saved;}
+ }finally{if(originalLayer)boundary.qualifiedUILayer=originalLayer;else delete boundary.qualifiedUILayer;}
+});
