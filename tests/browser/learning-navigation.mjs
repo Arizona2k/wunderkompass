@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {captureNativeViewport} from './native-screenshot.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const save=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -65,6 +66,42 @@ async function returned(page,hash,opener,scroll){
  const returnedFocus=await opener.evaluate(element=>{const s=getComputedStyle(element);return{readingCard:element.dataset.routeFocus?.startsWith('world-topic-')===true,outlineStyle:s.outlineStyle,outlineWidth:parseFloat(s.outlineWidth),outlineColor:s.outlineColor,focusVisible:element.matches(':focus-visible')};});
  if(returnedFocus.readingCard)assert(returnedFocus.outlineStyle!=='none'&&returnedFocus.outlineWidth>=2&&!['transparent','rgba(0, 0, 0, 0)'].includes(returnedFocus.outlineColor),'actual returned reading card has a visible focus indicator');
  return {expectedScroll:scroll,firstMeasuredScroll:first,finalMeasuredScroll:actual.scroll,completionWaitMs:performance.now()-started,openerVisibility,returnedFocus};
+}
+// The same trusted-departure and exact reading-return checks cover article
+// map controls, including the second destination of a multi-place biography.
+export async function articleMapReturnPage(page,base,{topics,touch=false,width,shots=null,engine='chromium',suffix='',native=false}={}){
+ const rows=[],fields=['notes','favorites','favoritePlaces','settings','review','games','missions','labs','experiments','quizSession','quizResults','journeys','chapters','completedChapters','gameSessions'];
+ if(width===320){
+  await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
+  await page.getByRole('switch',{name:'Größere Schrift',exact:true}).setChecked(true);
+  await page.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'hidden'});
+ }
+ for(const [id,index]of [['history-cahokia',0],['person-marie_curie',1]]){
+  const topic=topics.find(t=>t.id===id);assert(topic?.locations[index],'actual declared article destination');
+  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill(topic.title);await page.locator('[role="option"][data-value="topic:'+id+'"]').click();await ready(page);await page.locator('#world-topic-title').getByText(topic.title,{exact:true}).waitFor();
+  let articlePhotoReadiness=null;
+  if(topic.image){
+   // The first article can still be receiving its actual photo metadata and
+   // caption. A cached return already has both. Measure a loaded reading view
+   // on each side, preserving the exact trusted-scroll assertion below.
+   const image=page.locator('.world-article .article-hero .world-photo img[src]');await image.waitFor();await image.scrollIntoViewIfNeeded();
+   articlePhotoReadiness=await image.evaluate(async e=>{await e.decode();return{complete:e.complete,naturalWidth:e.naturalWidth,naturalHeight:e.naturalHeight,src:e.currentSrc};});assert(articlePhotoReadiness.complete&&articlePhotoReadiness.naturalWidth>0&&articlePhotoReadiness.naturalHeight>0);
+  }
+  const opener=page.locator('.world-article .map-legend button').nth(index);await opener.waitFor();
+  const key='world-map-'+id+'-'+index;assert.equal(await opener.getAttribute('data-route-focus'),key);
+  await page.evaluate(()=>document.fonts.ready.then(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)))));
+  const layoutBefore=await page.evaluate(()=>({body:document.body.scrollHeight,appClass:document.querySelector('.earth-app')?.className,blocks:[...document.querySelectorAll('.earth-app>*,.learning-main>*,.world-article>*,.world-article-main>*,.world-article-side>*')].map(e=>({tag:e.tagName,cls:e.className,height:e.getBoundingClientRect().height,top:e.getBoundingClientRect().top+scrollY,text:e.textContent?.slice(0,90)}))}));
+  const before=await save(page),departure=await activateWithReadingPosition(page,opener,touch);
+  await page.waitForFunction(()=>location.hash==='#globe');const info=page.locator('.info-card');await info.getByRole('heading',{name:topic.title,exact:true}).waitFor();assert((await info.innerText()).includes(topic.locations[index].label),'the selected map button opens its own declared destination');
+  await page.goBack();let returnView;try{returnView=await returned(page,'#world/topic/'+id,opener,departure.scroll);}catch(error){error.actualMapDeparture={id,index,width,touch,departure,layoutBefore,layoutAfter:await page.evaluate(()=>({body:document.body.scrollHeight,appClass:document.querySelector('.earth-app')?.className,blocks:[...document.querySelectorAll('.earth-app>*,.learning-main>*,.world-article>*,.world-article-main>*,.world-article-side>*')].map(e=>({tag:e.tagName,cls:e.className,height:e.getBoundingClientRect().height,top:e.getBoundingClientRect().top+scrollY,text:e.textContent?.slice(0,90)}))}))};throw error;}const after=await save(page);
+  for(const field of fields)assert.deepEqual(after[field],before[field],field+' preserved through article-map return');
+  assert.equal(after.lastActivity?.type,'place');assert.equal(after.lastActivity.id,'world-'+id+'-'+index,'the chosen place remains the real saved resume target');
+  assert.equal(await page.locator('.continue-card').count(),0,'the already available exact selected article point has no duplicate resume card');
+  if(!touch){const focus=returnView.returnedFocus;assert(focus.outlineStyle!=='none'&&focus.outlineWidth>=2&&!['transparent','rgba(0, 0, 0, 0)'].includes(focus.outlineColor),'keyboard map return retains a visible focus outline even when the engine does not retain its focus-visible modality after browser Back');}
+  rows.push({id,index,width,touch,savedLargeReading:width===320,articlePhotoReadiness,departure,returnView,allCriticalProgressPreserved:true});
+  if(shots){const file=path.join(shots,'article-map-'+engine+'-'+id+'-'+index+'-'+width+suffix+'.png');if(native){const capture=await captureNativeViewport(page,file);assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);}else await page.screenshot({path:file,animations:'disabled'});}
+ }
+ return rows;
 }
 export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=null,engine='chromium'}={}){
  const rows=[];

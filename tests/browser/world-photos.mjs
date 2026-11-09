@@ -7,6 +7,7 @@ import topics from '../../app/world-catalog.json' with {type:'json'};
 import naturePhotoCandidates from '../../app/nature-photo-candidates.json' with {type:'json'};
 import naturePlaces from '../../app/nature-new-places.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
+import {articleMapReturnPage} from './learning-navigation.mjs';
 
 // Corresponding real Back boundary: a previously requested category/page focus
 // frame is released only after browser history has returned to its source.
@@ -38,12 +39,12 @@ export async function pendingPhotoBackFocusFlow(browser,base,ready,monitor,repor
 // A photo click is a real route opener even where native pointer behaviour
 // does not focus buttons. Keep the original Back wait and focus assertion.
 export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{controlled=false,context:providedContext=null,widths=[320,1440],native=false}={}){
- const engine=browser?.browserType().name()??'chromium',cases=[],prefix=engine==='chromium'?'animal-photo-opener-chromium':'journey-engine-'+engine+'-photo-opener';
+ const engine=browser?.browserType().name()??'chromium',cases=[],mapReturns=[],prefix=engine==='chromium'?'animal-photo-opener-chromium':'journey-engine-'+engine+'-photo-opener';
  for(const width of widths)for(const suppress of controlled?[false,true]:[false]){
   const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let category='initial';
   try{
    if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
-   if(suppress)await page.addInitScript(()=>document.addEventListener('mousedown',event=>{if(event.target?.closest?.('[data-route-focus^="world-category-"]'))event.preventDefault();},true));
+   if(suppress)await page.addInitScript(()=>document.addEventListener('mousedown',event=>{if(event.target?.closest?.('[data-route-focus^="world-category-"],.map-legend button'))event.preventDefault();},true));
    await page.goto(base+'/#world');await ready(page);
    for(category of ['animals','history','people','buildings']){
     const key='world-category-'+category,card=page.locator('.world-view [data-route-focus="'+key+'"]');
@@ -54,12 +55,13 @@ export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{cont
     const state=await page.evaluate(()=>({recordedOpener:history.state?.wunderFocus,actual:document.activeElement?.dataset.routeFocus}));assert.equal(state.recordedOpener,key,'the actual clicked card was saved before leaving');cases.push({width,category,suppressedNativeMouseFocus:suppress,native,...state});
     if(shots&&native&&category==='buildings')await captureNativeViewport(page,path.join(shots,prefix+'-native200-'+width+'-'+(suppress?'controlled':'ordinary')+'.png'));
    }
+   mapReturns.push(...await articleMapReturnPage(page,base,{topics,touch:width===320,width,shots,engine,native,suffix:(suppress?'-controlled':'-ordinary')+(native?'-native200':'')}));
   }catch(error){
-   const diagnostics={engine,width,category,suppressedNativeMouseFocus:suppress,native,completedCases:cases,actual:await page.evaluate(()=>({hash:location.hash,history:history.state,active:{tag:document.activeElement?.tagName,id:document.activeElement?.id,key:document.activeElement?.dataset.routeFocus}})).catch(()=>null),failure:error.stack};
+   const diagnostics={engine,width,category,suppressedNativeMouseFocus:suppress,native,completedCases:cases,originalReturnPosition:error.originalReturnPosition??null,actualMapDeparture:error.actualMapDeparture??null,actual:await page.evaluate(()=>({hash:location.hash,history:history.state,active:{tag:document.activeElement?.tagName,id:document.activeElement?.id,key:document.activeElement?.dataset.routeFocus}})).catch(()=>null),failure:error.stack};
    if(shots){await fs.writeFile(path.join(shots,prefix+'-failure-'+width+'.json'),JSON.stringify(diagnostics,null,2)+'\n');await page.screenshot({path:path.join(shots,prefix+'-failure-'+width+'.png'),animations:'disabled',timeout:6500}).catch(()=>{});}console.error('PHOTO_CARD_OPENER_FAILURE',JSON.stringify(diagnostics));throw error;
   }finally{if(providedContext)await page.close();else await context.close();}
  }
- if(shots)await fs.writeFile(path.join(shots,prefix+'-'+(controlled?'native-and-controlled':'native-only')+'.json'),JSON.stringify({engine,cases,meaning:'Original photo-card Back focus plus explicit no-native-pointer-focus cases; not a physical device or complete acceptance'},null,2)+'\n');
+ if(shots){await fs.writeFile(path.join(shots,prefix+'-'+(controlled?'native-and-controlled':'native-only')+'.json'),JSON.stringify({engine,cases,meaning:'Original photo-card Back focus plus explicit no-native-pointer-focus cases; not a physical device or complete acceptance'},null,2)+'\n');await fs.writeFile(path.join(shots,prefix+'-map-reading-return-'+(controlled?'native-and-controlled':'native-only')+'.json'),JSON.stringify({engine,status:'passed',cases:mapReturns,meaning:'Actual article map keyboard/touch destinations, exact returned opener and trusted departure reading position, persisted large reading at320 and unchanged critical pass fields.'},null,2)+'\n');}
  return cases;
 }
 

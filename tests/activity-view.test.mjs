@@ -26,3 +26,12 @@ test('resume stays available on Home, another target and the selection; only an 
   [null,{route:'home'}],
  ])assert.equal(activityIsOpen(activity,current),false);
 });
+test('only the exact selected article-map point is redundant in its own article; Home, other places and stored activity remain unchanged',()=>{
+ for(const id of ['world-history-cahokia-0','world-person-marie_curie-1']){
+  const article=id.slice(6,id.lastIndexOf('-')),activity={type:'place',id},before=structuredClone(activity);
+  assert.equal(activityIsOpen(activity,{route:'world/topic/'+article,mode:'world',placeId:id}),true);
+  for(const current of [{route:'home',mode:'home',placeId:id},{route:'world/topic/'+article+'-other',mode:'world',placeId:id},{route:'world/topic/'+article,mode:'world',placeId:'different'},{route:'world/topic/'+article,mode:'world'}])assert.equal(activityIsOpen(activity,current),false);
+  assert.deepEqual(activity,before,'visibility never edits the saved place or its resume identity');
+ }
+ for(const id of ['world-history-cahokia-00','world-history-cahokia--1','world-history-cahokia-1.5','world-history-cahokia','history-cahokia-0'])assert.equal(activityIsOpen({type:'place',id},{route:'world/topic/history-cahokia',mode:'world',placeId:id}),false);
+});

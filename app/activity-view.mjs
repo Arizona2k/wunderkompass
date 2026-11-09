@@ -9,7 +9,15 @@ export function activityIsOpen(activity,{route,mode,gameFamily,gameId,placeId}={
   case 'route':return route==='world/route/'+id;
   case 'game':return mode==='games'&&!!activity.family&&gameFamily===activity.family&&gameId===id;
   case 'quiz':return mode==='quiz';
-  case 'place':return mode==='globe'&&placeId===id;
+  case 'place':{
+   if(placeId!==id)return false;
+   if(mode==='globe')return true;
+   // The exact selected article-map point is already available in its parent
+   // article. A duplicate resume card appearing on Back would move the reader.
+   // Keep the saved place unchanged and keep resume available everywhere else.
+   const articlePoint=/^world-(.+)-(0|[1-9]\d*)$/.exec(id);
+   return !!articlePoint&&route==='world/topic/'+articlePoint[1];
+  }
   default:return false;
  }
 }

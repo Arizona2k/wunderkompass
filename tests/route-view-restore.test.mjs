@@ -36,6 +36,16 @@ test('fully visible world reading cards keep the saved position at viewport edge
  for(const rect of[{top:0,bottom:300,height:300},{top:175,bottom:475,height:300}])assert.deepEqual(observe(rect,475,card),[]);
  for(const rect of[{top:-.1,bottom:299.9,height:300},{top:175.1,bottom:475.1,height:300}])assert.deepEqual(observe(rect,475,card),[{block:'center',behavior:'instant'}],'reading card still requires complete visibility when it fits');
 });
+test('fully visible article-map reading controls preserve native-zoom edge position without relaxing clipped-control visibility',()=>{
+ const map='world-map-history-cahokia-0';
+ // Derived from the actual native640 failure: the84.703125px opener was
+ // centered by194.5px even though it fitted inside the475px viewport.
+ assert.deepEqual(observe({top:389.5625,bottom:474.265625,height:84.703125},475,map),[]);
+ for(const rect of[{top:0,bottom:85,height:85},{top:390,bottom:475,height:85}])assert.deepEqual(observe(rect,475,map),[]);
+ for(const rect of[{top:-.1,bottom:84.9,height:85},{top:390.1,bottom:475.1,height:85}])assert.deepEqual(observe(rect,475,map),[{block:'center',behavior:'instant'}]);
+ // These are still ordinary toolbar controls, with the original8px reserve.
+ assert.deepEqual(observe({top:390,bottom:475,height:85},475,'small-control'),[{block:'center',behavior:'instant'}]);
+});
 
 function scheduled(observe,{oversized=true}={}){
  const originals=new Map(['window','document','history','innerHeight','requestAnimationFrame','cancelAnimationFrame'].map(key=>[key,Object.getOwnPropertyDescriptor(globalThis,key)])),frames=new Map(),listeners=new Map(),calls=[];let id=0;
