@@ -100,3 +100,11 @@ test('a common UI binding reverses whole key order before the two source correct
   const saved=routes[0].previousUI;try{routes[0].previousUI={...saved,report:saved.report+' unknown'};assert.throws(()=>dossiersBeforeHistoryEvidence(bound));}finally{routes[0].previousUI=saved;}
  }finally{if(originalLayer)boundary.qualifiedUILayer=originalLayer;else delete boundary.qualifiedUILayer;}
 });
+
+test('qualified history UI is exactly reversible and partial mixed missing routes or altered previous UI cannot borrow it',()=>{
+ const layer=boundary.qualifiedUILayer;assert(layer);assert.equal(layer.routes.length,300);
+ const contentOnly=registry.map((row,i)=>{const x=structuredClone(row);if(Object.hasOwn(layer.routes[i],'previousUI'))x.ui=structuredClone(layer.routes[i].previousUI);else delete x.ui;return x;});
+ assert.deepEqual(contentOnly.map(row=>({id:row.id,sha256:wholeHistoryDossier(row)})),boundary.sourceEndpointCorrection20261109?.currentContentOnly??boundary.currentContentOnly);assert.equal(wholeHistoryDossier(dossiersBeforeHistoryEvidence(structuredClone(registry))),boundary.previousWholeSHA256);
+ for(const mutate of[rows=>{delete rows[299].ui;},rows=>{rows[0].ui=structuredClone(layer.routes[0].previousUI);},rows=>{rows[0].ui.route+='unknown';},rows=>{rows[0].ui.report+='unqualified';},rows=>{rows[0].ui.build='unknown';},rows=>{rows[299].ui.offline=false;}]){const bad=structuredClone(registry);mutate(bad);assert.throws(()=>dossiersBeforeHistoryEvidence(bad));}
+ const saved=layer.routes[0];try{layer.routes[0]={...saved,previousUI:{...saved.previousUI,report:saved.previousUI.report+' altered previous'}};assert.throws(()=>dossiersBeforeHistoryEvidence(structuredClone(registry)));}finally{layer.routes[0]=saved;}
+});
