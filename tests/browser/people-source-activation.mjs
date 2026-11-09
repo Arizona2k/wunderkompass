@@ -8,13 +8,13 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 const next=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4,18);
 const saveKey='erde-entdecken:save:v3';
 
-// Recover only the two actually observed Cloud-proxy HTML transport messages. This function does not qualify
+// Recover only the three actually observed Cloud-proxy HTML transport messages. This function does not qualify
 // a source: the caller still checks real final HTTP, body, opener and progress.
 export async function recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,activationStarted,recordedNavigationResponses,now=()=>performance.now()}){
   let text=await popup.locator('body').innerText();
   const initial=row.mainResponses.at(-1),remainingActivationMs=Math.floor(30000-(now()-activationStarted));
   const sameDocument=initial&&new URL(initial.url).href.split('#')[0]===new URL(popup.url()).href.split('#')[0];
-  if(initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
+  if(initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure','upstream connect error or disconnect/reset before headers. reset reason: connection termination'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
     row.transientNavigationRecovery={initialHTTP:503,initialURL:row.actualURL,initialBody:text,initialBodySHA256:createHash('sha256').update(text).digest('hex'),additionalRequestsMaximum:1,remainingActivationMs,originalActivationBudgetMs:30000,noTimeoutExtension:true};
     await popup.reload({waitUntil:'domcontentloaded',timeout:remainingActivationMs});
     row.mainResponses=recordedNavigationResponses();row.actualURL=popup.url();row.actualTitle=await popup.title();
@@ -35,9 +35,19 @@ export function observedLeavittMaterialReady(x){
   typeof x.body==='string'&&x.body.length>1000&&normalize(x.body).includes("Henrietta Leavitt, How She Loved the 'Clouds'")&&
   ['Magellanic Clouds','period-luminosity relationship','Periods of 25 Variable Stars','1912'].every(part=>x.body.includes(part));
 }
-async function observedLeavittMaterialBeforeDOMContentLoaded({opened,row,sourceURL,activationStarted,recordedNavigationResponses}){
+// Exact observed complete BnF Curie article only, not a generic readiness shortcut.
+export function observedCurieBnFMaterialReady(x){
+ if(!x||typeof x!=='object')return false;
+ const source='https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934';
+ return x.sourceURL===source&&x.actualURL===source&&x.responseURL===source&&x.httpStatus===200&&x.readyState==='loading'&&
+  Number.isFinite(x.elapsedMs)&&x.elapsedMs>=0&&x.elapsedMs<30000&&
+  x.title==='Maria Skłodowska-Curie (1867-1934) | Patrimoines Partagés - France Pologne'&&
+  typeof x.body==='string'&&x.body.length>5000&&
+  ['Maria Skłodowska-Curie (1867-1934)','Janine Trotereau, journaliste','Un parcours scientifique','1903','1911','La Pologne au cœur','Publié en août 2017'].every(part=>x.body.includes(part));
+}
+async function observedKnownMaterialBeforeDOMContentLoaded({opened,row,sourceURL,activationStarted,recordedNavigationResponses}){
  const pending=()=>new Promise(()=>{});
- if(sourceURL!=='https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/')return pending();
+ if(!['https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/','https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934'].includes(sourceURL))return pending();
  try{
   const remaining=Math.floor(30000-(performance.now()-activationStarted));if(remaining<=0)return pending();
   await opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'commit',timeout:remaining});
@@ -45,8 +55,8 @@ async function observedLeavittMaterialBeforeDOMContentLoaded({opened,row,sourceU
    const sample=await opened.evaluate(()=>({actualURL:location.href,readyState:document.readyState,title:document.title,body:document.body?.innerText??''}));
    const last=recordedNavigationResponses().at(-1),elapsedMs=performance.now()-activationStarted;
    const actual={...sample,sourceURL,responseURL:last?.url,httpStatus:last?.status,elapsedMs};
-   if(observedLeavittMaterialReady(actual)){
-    row.observedMaterialReadiness={kind:'exact known visible LOC article material before DOMContentLoaded',actualURL:actual.actualURL,responseURL:actual.responseURL,httpStatus:actual.httpStatus,title:actual.title,documentReadyState:actual.readyState,elapsedMs,actualBodyLength:actual.body.length,actualBodySHA256:createHash('sha256').update(actual.body).digest('hex'),allFourActualFactualAnchorsPresent:true,domContentLoadedNotClaimed:true,originalActivationBudgetMs:30000,noTimeoutExtension:true,noAdditionalRequests:true};
+   if(observedLeavittMaterialReady(actual)||observedCurieBnFMaterialReady(actual)){
+    row.observedMaterialReadiness={kind:observedLeavittMaterialReady(actual)?'exact known visible LOC article material before DOMContentLoaded':'exact known visible BnF Curie article material before DOMContentLoaded',actualURL:actual.actualURL,responseURL:actual.responseURL,httpStatus:actual.httpStatus,title:actual.title,documentReadyState:actual.readyState,elapsedMs,actualBodyLength:actual.body.length,actualBodySHA256:createHash('sha256').update(actual.body).digest('hex'),...(observedLeavittMaterialReady(actual)?{allFourActualFactualAnchorsPresent:true}:{allSevenActualBnFArticleAnchorsPresent:true}),domContentLoadedNotClaimed:true,originalActivationBudgetMs:30000,noTimeoutExtension:true,noAdditionalRequests:true};
     return {popup:opened};
    }
    await new Promise(resolve=>setTimeout(resolve,200));
@@ -102,7 +112,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
         // creation; retain the same30s bound and the ordinary viewer path.
         const downloaded=normalDownload.then(download=>({download}));
         const activationStarted=performance.now();
-        const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened})),observedLeavittMaterialBeforeDOMContentLoaded({opened,row,sourceURL:source.url,activationStarted,recordedNavigationResponses})]))]);
+        const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened})),observedKnownMaterialBeforeDOMContentLoaded({opened,row,sourceURL:source.url,activationStarted,recordedNavigationResponses})]))]);
         await page.keyboard.press('Enter');
         const activated=await Promise.race([destination,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Actual source popup or native download did not complete in30s')),30000);})]);clearTimeout(timer);
         row.mainResponses=recordedNavigationResponses();row.actualURL=activated.download?activated.download.url():popup.url();row.actualTitle=activated.download?activated.download.suggestedFilename():await popup.title();

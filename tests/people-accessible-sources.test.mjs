@@ -43,7 +43,7 @@ test('one public museum object record replaces a blocked presentation link while
 
 // Regression for the observed transport failure; actual popup contexts are checked separately.
 import {createHash} from 'node:crypto';
-import {recoverKnownHTMLConnectionTimeout,observedLeavittMaterialReady} from './browser/people-source-activation.mjs';
+import {recoverKnownHTMLConnectionTimeout,observedLeavittMaterialReady,observedCurieBnFMaterialReady} from './browser/people-source-activation.mjs';
 
 const connectionTimeoutBody='upstream connect error or disconnect/reset before headers. reset reason: connection timeout';
 function sourceTab({status=503,body=connectionTimeoutBody,afterStatus=200,afterBody='A real destination body still requires the caller to qualify its HTTP response and content.',elapsed=5000,sourceURL='https://source.example/article',responseURL=sourceURL,reloadError}={}){
@@ -119,4 +119,23 @@ test('only the observed complete visible LOC article material can precede DOMCon
  const actual={sourceURL:source,actualURL:source,responseURL:source,httpStatus:200,readyState:'loading',elapsedMs:25000,title:"Henrietta Leavitt, How She Loved the 'Clouds' | Inside Adams",body};
  assert.equal(observedLeavittMaterialReady(actual),true);
  for(const value of[null,undefined,{},...[-1,30000,Infinity,NaN].map(elapsedMs=>({...actual,elapsedMs})),...[206,304,403,429,503].map(httpStatus=>({...actual,httpStatus})),...['sourceURL','actualURL','responseURL'].map(key=>({...actual,[key]:'https://unrelated.example/'})),{...actual,readyState:'complete'},{...actual,title:'Just a moment'},{...actual,body:'Access denied'},{...actual,body:'Access denied '.repeat(150)},...['Magellanic Clouds','period-luminosity relationship','Periods of 25 Variable Stars','1912'].map(part=>({...actual,body:body.split(part).join('omitted')}))])assert.equal(observedLeavittMaterialReady(value),false);
+});
+
+
+test('the exact observed proxy connection termination gets one bounded ordinary reload and cannot certify a destination',async()=>{
+ const body='upstream connect error or disconnect/reset before headers. reset reason: connection termination';
+ const current=sourceTab({body,elapsed:9000});await current.run();assert.deepEqual(current.calls,[{waitUntil:'domcontentloaded',timeout:21000}]);assert.deepEqual(current.row.mainResponses.map(r=>r.status),[503,200]);assert.equal(current.row.transientNavigationRecovery.initialBodySHA256,createHash('sha256').update(body).digest('hex'));assert.equal(current.row.status,'external access not yet qualified');
+ const persistent=sourceTab({body,afterStatus:503,afterBody:body});assert.equal(await persistent.run(),body);assert.equal(persistent.calls.length,1);assert.equal(persistent.row.status,'external access not yet qualified');
+ for(const options of [{status:403},{status:200},{status:206},{elapsed:30000},{elapsed:30001},{sourceURL:'https://source.example/original.PDF'},{responseURL:'https://unrelated.example/article'},{body:'connection termination'},{body:'upstream connect error or disconnect/reset before headers. reset reason: maintenance'}]){
+  const bad=sourceTab({body,...options});await bad.run();assert.deepEqual(bad.calls,[]);assert.equal(bad.row.transientNavigationRecovery,undefined);
+ }
+});
+
+test('only the observed complete BnF Curie article may be read before its delayed load event within the unchanged30s',()=>{
+ const source='https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934';
+ const anchors=['Maria Skłodowska-Curie (1867-1934)','Janine Trotereau, journaliste','Un parcours scientifique','1903','1911','La Pologne au cœur','Publié en août 2017'];
+ const body=[...anchors,...Array(65).fill('Eigener synthetischer Gegenfalltext; weder fremder Fachartikel noch tatsächlicher Browsernachweis.')].join('\n');
+ const actual={sourceURL:source,actualURL:source,responseURL:source,httpStatus:200,readyState:'loading',elapsedMs:20000,title:'Maria Skłodowska-Curie (1867-1934) | Patrimoines Partagés - France Pologne',body};assert.equal(observedCurieBnFMaterialReady(actual),true);
+ for(const value of [null,undefined,{},...[-1,30000,Infinity,NaN].map(elapsedMs=>({...actual,elapsedMs})),...[206,304,403,429,503].map(httpStatus=>({...actual,httpStatus})),...['sourceURL','actualURL','responseURL'].map(key=>({...actual,[key]:'https://unrelated.example/'})),{...actual,readyState:'complete'},{...actual,title:'Just a moment'},{...actual,body:'Access denied '.repeat(600)},...anchors.map(part=>({...actual,body:body.split(part).join('omitted')}))])assert.equal(observedCurieBnFMaterialReady(value),false);
+ assert.equal(observedLeavittMaterialReady(actual),false,'BnF is not relabelled as prior LOC observation');
 });
