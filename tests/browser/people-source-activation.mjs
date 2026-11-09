@@ -23,6 +23,38 @@ export async function recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,act
   return text;
 }
 
+// Exact observed LOC document only: full visible article material may precede DOMContentLoaded.
+// This does not accept HTTP alone, arbitrary HTML, other sources, PDFs or extra time/requests.
+export function observedLeavittMaterialReady(x){
+ if(!x||typeof x!=='object')return false;
+ const source='https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/';
+ const normalize=s=>typeof s==='string'?s.replace(/[‘’]/g,"'"):'';
+ return x.sourceURL===source&&x.actualURL===source&&x.responseURL===source&&x.httpStatus===200&&x.readyState==='loading'&&
+  Number.isFinite(x.elapsedMs)&&x.elapsedMs>=0&&x.elapsedMs<30000&&
+  normalize(x.title)==="Henrietta Leavitt, How She Loved the 'Clouds' | Inside Adams"&&
+  typeof x.body==='string'&&x.body.length>1000&&normalize(x.body).includes("Henrietta Leavitt, How She Loved the 'Clouds'")&&
+  ['Magellanic Clouds','period-luminosity relationship','Periods of 25 Variable Stars','1912'].every(part=>x.body.includes(part));
+}
+async function observedLeavittMaterialBeforeDOMContentLoaded({opened,row,sourceURL,activationStarted,recordedNavigationResponses}){
+ const pending=()=>new Promise(()=>{});
+ if(sourceURL!=='https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/')return pending();
+ try{
+  const remaining=Math.floor(30000-(performance.now()-activationStarted));if(remaining<=0)return pending();
+  await opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'commit',timeout:remaining});
+  while(!opened.isClosed()&&performance.now()-activationStarted<30000){
+   const sample=await opened.evaluate(()=>({actualURL:location.href,readyState:document.readyState,title:document.title,body:document.body?.innerText??''}));
+   const last=recordedNavigationResponses().at(-1),elapsedMs=performance.now()-activationStarted;
+   const actual={...sample,sourceURL,responseURL:last?.url,httpStatus:last?.status,elapsedMs};
+   if(observedLeavittMaterialReady(actual)){
+    row.observedMaterialReadiness={kind:'exact known visible LOC article material before DOMContentLoaded',actualURL:actual.actualURL,responseURL:actual.responseURL,httpStatus:actual.httpStatus,title:actual.title,documentReadyState:actual.readyState,elapsedMs,actualBodyLength:actual.body.length,actualBodySHA256:createHash('sha256').update(actual.body).digest('hex'),allFourActualFactualAnchorsPresent:true,domContentLoadedNotClaimed:true,originalActivationBudgetMs:30000,noTimeoutExtension:true,noAdditionalRequests:true};
+    return {popup:opened};
+   }
+   await new Promise(resolve=>setTimeout(resolve,200));
+  }
+ }catch(error){if(!opened.isClosed())row.observedMaterialReadinessDeficit=error.message;}
+ return pending();
+}
+
 // Actual public source tab and close/return, not an href-only source check.
 // A blocked external destination is retained as an access deficit, never green.
 export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),pdfOutputDirectory}={}) {
@@ -69,8 +101,8 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
         // Observe the real Enter action's download before it can precede popup
         // creation; retain the same30s bound and the ordinary viewer path.
         const downloaded=normalDownload.then(download=>({download}));
-        const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened}))]))]);
         const activationStarted=performance.now();
+        const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened})),observedLeavittMaterialBeforeDOMContentLoaded({opened,row,sourceURL:source.url,activationStarted,recordedNavigationResponses})]))]);
         await page.keyboard.press('Enter');
         const activated=await Promise.race([destination,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Actual source popup or native download did not complete in30s')),30000);})]);clearTimeout(timer);
         row.mainResponses=recordedNavigationResponses();row.actualURL=activated.download?activated.download.url():popup.url();row.actualTitle=activated.download?activated.download.suggestedFilename():await popup.title();

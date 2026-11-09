@@ -43,7 +43,7 @@ test('one public museum object record replaces a blocked presentation link while
 
 // Regression for the observed transport failure; actual popup contexts are checked separately.
 import {createHash} from 'node:crypto';
-import {recoverKnownHTMLConnectionTimeout} from './browser/people-source-activation.mjs';
+import {recoverKnownHTMLConnectionTimeout,observedLeavittMaterialReady} from './browser/people-source-activation.mjs';
 
 const connectionTimeoutBody='upstream connect error or disconnect/reset before headers. reset reason: connection timeout';
 function sourceTab({status=503,body=connectionTimeoutBody,afterStatus=200,afterBody='A real destination body still requires the caller to qualify its HTTP response and content.',elapsed=5000,sourceURL='https://source.example/article',responseURL=sourceURL,reloadError}={}){
@@ -110,4 +110,13 @@ test('recognising the reset message cannot retry forbidden or partial responses,
  for(const options of [{status:403},{status:404},{status:200},{status:206},{elapsed:30000},{elapsed:30001},{sourceURL:'https://source.example/complete.PDF'},{responseURL:'https://unrelated.example/article'},{body:'remote connection failure without the observed proxy envelope'},{body:'upstream connect error or disconnect/reset before headers. reset reason: maintenance'}]){
   const actual=sourceTab({body:remoteConnectionFailureBody,...options});await actual.run();assert.deepEqual(actual.calls,[],JSON.stringify(options));assert.equal(actual.row.transientNavigationRecovery,undefined);assert.equal(actual.row.status,'external access not yet qualified');
  }
+});
+
+
+test('only the observed complete visible LOC article material can precede DOMContentLoaded within the unchanged activation budget',()=>{
+ const source='https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/';
+ const body=["Henrietta Leavitt, How She Loved the 'Clouds'",'Magellanic Clouds','period-luminosity relationship','Periods of 25 Variable Stars','1912',...Array(30).fill('Eigener synthetischer Testtext, kein kopierter Fachartikel und kein tatsächlicher Browsernachweis.')].join('\n');
+ const actual={sourceURL:source,actualURL:source,responseURL:source,httpStatus:200,readyState:'loading',elapsedMs:25000,title:"Henrietta Leavitt, How She Loved the 'Clouds' | Inside Adams",body};
+ assert.equal(observedLeavittMaterialReady(actual),true);
+ for(const value of[null,undefined,{},...[-1,30000,Infinity,NaN].map(elapsedMs=>({...actual,elapsedMs})),...[206,304,403,429,503].map(httpStatus=>({...actual,httpStatus})),...['sourceURL','actualURL','responseURL'].map(key=>({...actual,[key]:'https://unrelated.example/'})),{...actual,readyState:'complete'},{...actual,title:'Just a moment'},{...actual,body:'Access denied'},{...actual,body:'Access denied '.repeat(150)},...['Magellanic Clouds','period-luminosity relationship','Periods of 25 Variable Stars','1912'].map(part=>({...actual,body:body.split(part).join('omitted')}))])assert.equal(observedLeavittMaterialReady(value),false);
 });
