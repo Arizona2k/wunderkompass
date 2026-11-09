@@ -108996,7 +108996,7 @@
     },
     {
       "id": "topics-people:person-bertha_benz",
-      "dataHash": "bc672c59f3651a2c66198c6de296c918f3ab3a2c19697f8333c9f652a304f1ef",
+      "dataHash": "c991c6b6dc00213c777a2bc6648b2a39550573786a240d5bd8976a875d0657b3",
       "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
       "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
       "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
@@ -109028,18 +109028,23 @@
           "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
         },
         {
-          "id": "source-mercedes-20261109",
-          "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz: Leben und Mitarbeit",
-          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "id": "source-pforzheim-20261109",
+          "organisation": "Stadt Pforzheim · Bertha Benz: Lebensdaten und Fernfahrt",
+          "url": "https://www.pforzheim.de/stadt/ehrenbuerger-persoenlichkeiten/beruehmte-persoenlichkeiten/bertha-benz.html",
           "checkedOn": "2026-11-09",
-          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+          "rightsBasis": "Tatsächlich gelesene öffentliche städtische Biografie, eigene deutsche Erklärung; keine fremden Texte, Bilder oder Logos übernommen. Vorhandene Medienrechte bleiben unverändert."
         }
       ],
       "claims": [
         {
-          "statement": "Bertha Benz lebte von1849bis1944 und unterstützte die Entwicklung finanziell und praktisch.",
-          "sourceId": "source-mercedes-20261109",
-          "anchor": "Mercedes-Benz-Unternehmensarchiv, Abschnitt Bertha Benz, tatsächlich erneut gelesen09Nov2026: Geburt3Mai1849, Mitgift und praktische technische Mitarbeit, Tod5Mai1944. Herstellerbiografie; keine pauschale Erstpriorität oder genaue Reise-/Reparaturangabe übernommen."
+          "statement": "Bertha Benz lebte von1849bis1944; die Stadt Pforzheim nennt außerdem die Fernfahrt von1888mit ihren Söhnen.",
+          "sourceId": "source-pforzheim-20261109",
+          "anchor": "Stadt Pforzheim, öffentliche Biografie Bertha Benz, tatsächlicher vollständiger sichtbarer Text09Nov2026: Überschrift1849–1944 und Absatz zur FernfahrtAugust1888mitdenSöhnen. Kurze eigene sachliche Zusammenfassung; keine Finanzierungsaussage aus diesem kurzen Stadteintrag abgeleitet."
+        },
+        {
+          "statement": "Bertha Benz unterstützte die Entwicklung finanziell und praktisch; Qatar Museums beschreibt ihre Finanzierung und die spätere Erprobung.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida07May2026, erneut tatsächlich gelesen09Nov2026: Abschnitt Bertha Benz und Abschnitt zur Fahrt/zu Rückmeldungen. Lebensdaten werden gesondert durch die Stadt Pforzheim getragen; keine genaue Fahrtdauer oder Reparaturanleitung übernommen."
         },
         {
           "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
@@ -109177,7 +109182,8 @@
       },
       "sourceLimits": [
         "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
-        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich.",
+        "Gezielter Ersatz des in nativerQuality225mitHTTP403gesperrten Herstellerlinks durch die tatsächlich gelesene städtische Biografie. Finanzierungs-/Erprobungsaussage bleibt dem erhaltenen Museumsbeleg zugeordnet. Ganze vorherige qualifizierte Themen-/Quellen-/UI-Akte und alle übrigen299Akten bleiben exakt rekonstruierbar. Bisherige Fach-, Aufgaben-, Medien- und UI-Prüfdaten werden nicht neu datiert; vollständige aktuelle Abnahme bleibt erforderlich."
       ]
     },
     {

@@ -3474,7 +3474,7 @@
       },
       {
         "id": "topics-people:person-bertha_benz",
-        "sha256": "b6b46c149ce87e19d7df6aacab106eda16879869f564a344f4cd6da6d9bcd65c"
+        "sha256": "c1792e122f965dd9d9b24874bab51db8e076fffde24554f547f232d177d65fbf"
       },
       {
         "id": "topics-people:person-cai_lun",
@@ -4181,7 +4181,7 @@
         },
         "after": {
           "id": "topics-people:person-bertha_benz",
-          "dataHash": "bc672c59f3651a2c66198c6de296c918f3ab3a2c19697f8333c9f652a304f1ef",
+          "dataHash": "c991c6b6dc00213c777a2bc6648b2a39550573786a240d5bd8976a875d0657b3",
           "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
           "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
           "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
@@ -4213,18 +4213,23 @@
               "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
             },
             {
-              "id": "source-mercedes-20261109",
-              "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz: Leben und Mitarbeit",
-              "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+              "id": "source-pforzheim-20261109",
+              "organisation": "Stadt Pforzheim · Bertha Benz: Lebensdaten und Fernfahrt",
+              "url": "https://www.pforzheim.de/stadt/ehrenbuerger-persoenlichkeiten/beruehmte-persoenlichkeiten/bertha-benz.html",
               "checkedOn": "2026-11-09",
-              "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+              "rightsBasis": "Tatsächlich gelesene öffentliche städtische Biografie, eigene deutsche Erklärung; keine fremden Texte, Bilder oder Logos übernommen. Vorhandene Medienrechte bleiben unverändert."
             }
           ],
           "claims": [
             {
-              "statement": "Bertha Benz lebte von1849bis1944 und unterstützte die Entwicklung finanziell und praktisch.",
-              "sourceId": "source-mercedes-20261109",
-              "anchor": "Mercedes-Benz-Unternehmensarchiv, Abschnitt Bertha Benz, tatsächlich erneut gelesen09Nov2026: Geburt3Mai1849, Mitgift und praktische technische Mitarbeit, Tod5Mai1944. Herstellerbiografie; keine pauschale Erstpriorität oder genaue Reise-/Reparaturangabe übernommen."
+              "statement": "Bertha Benz lebte von1849bis1944; die Stadt Pforzheim nennt außerdem die Fernfahrt von1888mit ihren Söhnen.",
+              "sourceId": "source-pforzheim-20261109",
+              "anchor": "Stadt Pforzheim, öffentliche Biografie Bertha Benz, tatsächlicher vollständiger sichtbarer Text09Nov2026: Überschrift1849–1944 und Absatz zur FernfahrtAugust1888mitdenSöhnen. Kurze eigene sachliche Zusammenfassung; keine Finanzierungsaussage aus diesem kurzen Stadteintrag abgeleitet."
+            },
+            {
+              "statement": "Bertha Benz unterstützte die Entwicklung finanziell und praktisch; Qatar Museums beschreibt ihre Finanzierung und die spätere Erprobung.",
+              "sourceId": "source-qatar-20261109",
+              "anchor": "Qatar Museums, AmeniAbida07May2026, erneut tatsächlich gelesen09Nov2026: Abschnitt Bertha Benz und Abschnitt zur Fahrt/zu Rückmeldungen. Lebensdaten werden gesondert durch die Stadt Pforzheim getragen; keine genaue Fahrtdauer oder Reparaturanleitung übernommen."
             },
             {
               "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
@@ -4362,7 +4367,8 @@
           },
           "sourceLimits": [
             "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
-            "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
+            "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich.",
+            "Gezielter Ersatz des in nativerQuality225mitHTTP403gesperrten Herstellerlinks durch die tatsächlich gelesene städtische Biografie. Finanzierungs-/Erprobungsaussage bleibt dem erhaltenen Museumsbeleg zugeordnet. Ganze vorherige qualifizierte Themen-/Quellen-/UI-Akte und alle übrigen299Akten bleiben exakt rekonstruierbar. Bisherige Fach-, Aufgaben-, Medien- und UI-Prüfdaten werden nicht neu datiert; vollständige aktuelle Abnahme bleibt erforderlich."
           ]
         }
       }
@@ -8119,5 +8125,583 @@
       }
     ],
     "meaning": "Exact actual qualified common technical UI only; whole300 content-only records and whole288 historical predecessors remain recoverable."
+  },
+  "sourceAvailabilityAfterNative22520261109": {
+    "scope": "Exact one current source replacement only; recover every whole previous300 qualified dossier including previousUI by using the explicitly preserved old template and unchanged routes, then the whole original Bertha dossier.",
+    "id": "topics-people:person-bertha_benz",
+    "beforeQualifiedDossier": {
+      "id": "topics-people:person-bertha_benz",
+      "dataHash": "bc672c59f3651a2c66198c6de296c918f3ab3a2c19697f8333c9f652a304f1ef",
+      "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+      "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+      "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+      "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+      "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+      "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+      "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+      "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-06",
+      "ageLevels": {
+        "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+        "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+      },
+      "sources": [
+        {
+          "id": "source-qatar-20261109",
+          "organisation": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+          "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-museum-20261106",
+          "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+          "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-mercedes-20261109",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz: Leben und Mitarbeit",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Bertha Benz lebte von1849bis1944 und unterstützte die Entwicklung finanziell und praktisch.",
+          "sourceId": "source-mercedes-20261109",
+          "anchor": "Mercedes-Benz-Unternehmensarchiv, Abschnitt Bertha Benz, tatsächlich erneut gelesen09Nov2026: Geburt3Mai1849, Mitgift und praktische technische Mitarbeit, Tod5Mai1944. Herstellerbiografie; keine pauschale Erstpriorität oder genaue Reise-/Reparaturangabe übernommen."
+        },
+        {
+          "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
+          "sourceId": "source-museum-20261106",
+          "anchor": "Deutsches Museum27Jan2026, ganze einschlägige Darstellung erneut gelesen09Nov2026: Anmeldung29Jan1886/37435, Bertha und Söhne1888Mannheim–Pforzheim, eigener MuseumswagenNr.1. Keine Zuschreibung von Carls Patentanmeldung an Bertha."
+        },
+        {
+          "statement": "Qatar Museums ordnet die Fahrt von1888dem weiterentwickelten Patent-MotorwagenNr.3zu und beschreibt Berthas Unterstützung und Rückmeldungen.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida,07May2026, tatsächlich gelesen09Nov2026: Abschnitte zur Mitgift, Fahrt5Aug1888Mannheim–Pforzheim im Patent-MotorwagenNo.3 und Rückmeldungen. Text einer Mitarbeiterin des künftigen QatarAutoMuseum; dortiges Sammlungsfahrzeug ausdrücklich Nachbau, kein Originalfoto von1888. Keine genauen Strecken-/Fahrtdauern oder volkstümlichen Reparaturen übernommen."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/bertha-benz.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+          "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+        },
+        {
+          "path": "public/images/portraits/bertha-benz.webp",
+          "license": "Public Domain",
+          "credit": "Bühler, Mannheim",
+          "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-karl_benz",
+        "topics-inventions:invention-car",
+        "words:Hypothese"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+      "ui": {
+        "build": "218265c24fb36c25",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Geschichtswelle: vollständige aktuelle Chromium-/Firefox-/WebKitprüfungen mit Quellenöffnungen, Suche, Rückwegen, Großschrift, nativer200-Prozent-Ansicht und kaltemOfflinebetrieb sowie gesondert qualifizierten ganzen Originalbildern. Frühere byteidentische positive Bildbeurteilungen behalten ihre tatsächliche Herkunft. Alle300ganzen Inhaltsakten und288ganzen historischen Fach-/UI-Akten einschließlich verschachtelter Historien bleiben exakt rekonstruierbar. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, nativeGitHub-Abnahme und tatsächlicher Liefernachtest bleiben gesondert erforderlich.",
+        "route": "world/topic/person-bertha_benz"
+      },
+      "historicalSourceBeforeNative221Replacement20261106": {
+        "id": "topics-people:person-bertha_benz",
+        "dataHash": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75",
+        "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+        "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+        "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+        "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+        "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+        "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+        "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-04",
+        "ageLevels": {
+          "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+          "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+          "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+            "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Bertha Benz leistete praktische und finanzielle Beiträge;1888 fuhr sie mit ihren Söhnen von Mannheim nach Pforzheim.",
+            "sourceId": "source-0",
+            "anchor": "294–320 birth3May1849/practicaltechnicalandfinancialcontribution/August1888sonsMannheim→Pforzheim/death1944. No improvisedfuel/repairrecipe or precisehours/distance adopted."
+          },
+          {
+            "statement": "Carl Benz meldete1886das Motorwagenpatent an; die gemeinsame technische Entwicklung wird nicht als Berthas alleinige Patentanmeldung dargestellt.",
+            "sourceId": "source-1",
+            "anchor": "294–307 birth1844Karlsruhe/Mannheim work1886patent37435/death1929Ladenburg. Promotionalfirst-only/worldlargest claims excluded."
+          },
+          {
+            "statement": "Das DPMA unterscheidet Anmeldung am29.Januar und Erteilung am2.November1886; Berthas Fahrt erfolgte mit MotorwagenNr.3 und zeigte praktische Anforderungen.",
+            "sourceId": "source-2",
+            "anchor": "27–61 patentapplication29Jan/grant2Nov1886;model3/sons/practicalneeds. Exclude firstevervehicle and exactthirdgear/roundtrip13hour assertions, which are not needed and conflict in scope with other accounts."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/bertha-benz.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+            "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+          },
+          {
+            "path": "public/images/portraits/bertha-benz.webp",
+            "license": "Public Domain",
+            "credit": "Bühler, Mannheim",
+            "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-karl_benz",
+          "topics-inventions:invention-car",
+          "words:Hypothese"
+        ],
+        "preparedSourceLimits": [],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+        "ui": {
+          "build": "9cdd986160a92e7a",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Überarbeitung der18bestehenden Personen: vollständige aktuelle Chromium-, Firefox- und WebKit-Prüfungen,105tatsächlich geöffnete Quellen einschließlich fünf ganzerPDFs, Suche,45Buchverbindungen, Rückwege, nativeVergrößerung und kalterOfflinebetrieb. Alle726ausgewählten Originalbildidentitäten gesondert beurteilt; bytegenau übernommene positive Bildbeurteilungen behalten ihre tatsächliche vorherige Quelle und sind keine behauptete neue direkte Sichtung. Sämtliche268ganzen bisherigen Inhaltsakten sowie18einzeln vorbereiteten Akten behalten Fach-, Quellen- und verschachtelte Historien. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme; nativeGitHub-Qualifikation und regulärer Liefernachtest bleiben gesondert erforderlich.",
+          "route": "world/topic/person-bertha_benz"
+        }
+      },
+      "sourceLimits": [
+        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
+      ]
+    },
+    "beforeContentOnlyDossier": {
+      "id": "topics-people:person-bertha_benz",
+      "dataHash": "bc672c59f3651a2c66198c6de296c918f3ab3a2c19697f8333c9f652a304f1ef",
+      "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+      "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+      "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+      "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+      "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+      "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+      "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+      "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-06",
+      "ageLevels": {
+        "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+        "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+      },
+      "sources": [
+        {
+          "id": "source-qatar-20261109",
+          "organisation": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+          "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-museum-20261106",
+          "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+          "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-mercedes-20261109",
+          "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz: Leben und Mitarbeit",
+          "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Bertha Benz lebte von1849bis1944 und unterstützte die Entwicklung finanziell und praktisch.",
+          "sourceId": "source-mercedes-20261109",
+          "anchor": "Mercedes-Benz-Unternehmensarchiv, Abschnitt Bertha Benz, tatsächlich erneut gelesen09Nov2026: Geburt3Mai1849, Mitgift und praktische technische Mitarbeit, Tod5Mai1944. Herstellerbiografie; keine pauschale Erstpriorität oder genaue Reise-/Reparaturangabe übernommen."
+        },
+        {
+          "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
+          "sourceId": "source-museum-20261106",
+          "anchor": "Deutsches Museum27Jan2026, ganze einschlägige Darstellung erneut gelesen09Nov2026: Anmeldung29Jan1886/37435, Bertha und Söhne1888Mannheim–Pforzheim, eigener MuseumswagenNr.1. Keine Zuschreibung von Carls Patentanmeldung an Bertha."
+        },
+        {
+          "statement": "Qatar Museums ordnet die Fahrt von1888dem weiterentwickelten Patent-MotorwagenNr.3zu und beschreibt Berthas Unterstützung und Rückmeldungen.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida,07May2026, tatsächlich gelesen09Nov2026: Abschnitte zur Mitgift, Fahrt5Aug1888Mannheim–Pforzheim im Patent-MotorwagenNo.3 und Rückmeldungen. Text einer Mitarbeiterin des künftigen QatarAutoMuseum; dortiges Sammlungsfahrzeug ausdrücklich Nachbau, kein Originalfoto von1888. Keine genauen Strecken-/Fahrtdauern oder volkstümlichen Reparaturen übernommen."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/bertha-benz.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+          "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+        },
+        {
+          "path": "public/images/portraits/bertha-benz.webp",
+          "license": "Public Domain",
+          "credit": "Bühler, Mannheim",
+          "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-karl_benz",
+        "topics-inventions:invention-car",
+        "words:Hypothese"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+      "ui": {
+        "build": "68f3b45724224e9f",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technische gemeinsame UI-Zuordnung nach gezielter Korrektur der Darwin-/Cai-/Papierquellen: vollständige aktuelle Chromium-/Firefox-/WebKitläufe mit Suche, Rückwegen, nativer Vergrößerung und kaltem Offlinebetrieb sowie gesondert qualifizierten ganzen Originalbildern. Frühere ganze bytegleiche Bildbeurteilungen behalten ihre tatsächliche Herkunft. Alle288ganzen vorherigen sourcekorrigierten Akten einschließlich aller286historischen Fach-/UI-Akten bleiben exakt rekonstruierbar. Keine neue globale Fach-, Rechte-, Menschen-, physische Geräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, native GitHub-Qualifikation und tatsächlicher Liefernachtest bleiben gesondert erforderlich.",
+        "route": "world/topic/person-bertha_benz"
+      },
+      "historicalSourceBeforeNative221Replacement20261106": {
+        "id": "topics-people:person-bertha_benz",
+        "dataHash": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75",
+        "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+        "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+        "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+        "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+        "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+        "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+        "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-04",
+        "ageLevels": {
+          "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+          "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+          "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+            "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Bertha Benz leistete praktische und finanzielle Beiträge;1888 fuhr sie mit ihren Söhnen von Mannheim nach Pforzheim.",
+            "sourceId": "source-0",
+            "anchor": "294–320 birth3May1849/practicaltechnicalandfinancialcontribution/August1888sonsMannheim→Pforzheim/death1944. No improvisedfuel/repairrecipe or precisehours/distance adopted."
+          },
+          {
+            "statement": "Carl Benz meldete1886das Motorwagenpatent an; die gemeinsame technische Entwicklung wird nicht als Berthas alleinige Patentanmeldung dargestellt.",
+            "sourceId": "source-1",
+            "anchor": "294–307 birth1844Karlsruhe/Mannheim work1886patent37435/death1929Ladenburg. Promotionalfirst-only/worldlargest claims excluded."
+          },
+          {
+            "statement": "Das DPMA unterscheidet Anmeldung am29.Januar und Erteilung am2.November1886; Berthas Fahrt erfolgte mit MotorwagenNr.3 und zeigte praktische Anforderungen.",
+            "sourceId": "source-2",
+            "anchor": "27–61 patentapplication29Jan/grant2Nov1886;model3/sons/practicalneeds. Exclude firstevervehicle and exactthirdgear/roundtrip13hour assertions, which are not needed and conflict in scope with other accounts."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/bertha-benz.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+            "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+          },
+          {
+            "path": "public/images/portraits/bertha-benz.webp",
+            "license": "Public Domain",
+            "credit": "Bühler, Mannheim",
+            "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-karl_benz",
+          "topics-inventions:invention-car",
+          "words:Hypothese"
+        ],
+        "preparedSourceLimits": [],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+        "ui": {
+          "build": "9cdd986160a92e7a",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Überarbeitung der18bestehenden Personen: vollständige aktuelle Chromium-, Firefox- und WebKit-Prüfungen,105tatsächlich geöffnete Quellen einschließlich fünf ganzerPDFs, Suche,45Buchverbindungen, Rückwege, nativeVergrößerung und kalterOfflinebetrieb. Alle726ausgewählten Originalbildidentitäten gesondert beurteilt; bytegenau übernommene positive Bildbeurteilungen behalten ihre tatsächliche vorherige Quelle und sind keine behauptete neue direkte Sichtung. Sämtliche268ganzen bisherigen Inhaltsakten sowie18einzeln vorbereiteten Akten behalten Fach-, Quellen- und verschachtelte Historien. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme; nativeGitHub-Qualifikation und regulärer Liefernachtest bleiben gesondert erforderlich.",
+          "route": "world/topic/person-bertha_benz"
+        }
+      },
+      "sourceLimits": [
+        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich."
+      ]
+    },
+    "previousQualifiedUITemplate": {
+      "build": "218265c24fb36c25",
+      "visible": true,
+      "search": true,
+      "back": true,
+      "offline": true,
+      "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Geschichtswelle: vollständige aktuelle Chromium-/Firefox-/WebKitprüfungen mit Quellenöffnungen, Suche, Rückwegen, Großschrift, nativer200-Prozent-Ansicht und kaltemOfflinebetrieb sowie gesondert qualifizierten ganzen Originalbildern. Frühere byteidentische positive Bildbeurteilungen behalten ihre tatsächliche Herkunft. Alle300ganzen Inhaltsakten und288ganzen historischen Fach-/UI-Akten einschließlich verschachtelter Historien bleiben exakt rekonstruierbar. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, nativeGitHub-Abnahme und tatsächlicher Liefernachtest bleiben gesondert erforderlich."
+    },
+    "unchangedQualifiedRoutesSHA256": "c49e345e6e5b286d5c416209fb5ca985fa1ed79e0d50a239e0d111ff21262c28",
+    "previousWholeQualifiedDossiersSHA256": "5d8e43f9ac142e2b8d62054f18fb571422a3e5b954a66d35ec846541b2d64ecc",
+    "currentContentOnlyDossier": {
+      "id": "topics-people:person-bertha_benz",
+      "dataHash": "c991c6b6dc00213c777a2bc6648b2a39550573786a240d5bd8976a875d0657b3",
+      "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+      "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+      "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+      "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+      "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+      "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+      "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+      "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+      "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+      "reviewedOn": "2026-11-06",
+      "ageLevels": {
+        "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+        "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+      },
+      "sources": [
+        {
+          "id": "source-qatar-20261109",
+          "organisation": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+          "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Texte, Bilder, Scans oder Logos übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-museum-20261106",
+          "organisation": "Deutsches Museum · Motorwagen, Patent und Bauteile",
+          "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Verlinkter tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung. Keine fremden Bilder, Scans oder Textpassagen übernommen. Vorhandene konkrete Medienrechte bleiben gesondert erhalten."
+        },
+        {
+          "id": "source-pforzheim-20261109",
+          "organisation": "Stadt Pforzheim · Bertha Benz: Lebensdaten und Fernfahrt",
+          "url": "https://www.pforzheim.de/stadt/ehrenbuerger-persoenlichkeiten/beruehmte-persoenlichkeiten/bertha-benz.html",
+          "checkedOn": "2026-11-09",
+          "rightsBasis": "Tatsächlich gelesene öffentliche städtische Biografie, eigene deutsche Erklärung; keine fremden Texte, Bilder oder Logos übernommen. Vorhandene Medienrechte bleiben unverändert."
+        }
+      ],
+      "claims": [
+        {
+          "statement": "Bertha Benz lebte von1849bis1944; die Stadt Pforzheim nennt außerdem die Fernfahrt von1888mit ihren Söhnen.",
+          "sourceId": "source-pforzheim-20261109",
+          "anchor": "Stadt Pforzheim, öffentliche Biografie Bertha Benz, tatsächlicher vollständiger sichtbarer Text09Nov2026: Überschrift1849–1944 und Absatz zur FernfahrtAugust1888mitdenSöhnen. Kurze eigene sachliche Zusammenfassung; keine Finanzierungsaussage aus diesem kurzen Stadteintrag abgeleitet."
+        },
+        {
+          "statement": "Bertha Benz unterstützte die Entwicklung finanziell und praktisch; Qatar Museums beschreibt ihre Finanzierung und die spätere Erprobung.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida07May2026, erneut tatsächlich gelesen09Nov2026: Abschnitt Bertha Benz und Abschnitt zur Fahrt/zu Rückmeldungen. Lebensdaten werden gesondert durch die Stadt Pforzheim getragen; keine genaue Fahrtdauer oder Reparaturanleitung übernommen."
+        },
+        {
+          "statement": "1888 fuhr Bertha Benz mit ihren Söhnen von Mannheim nach Pforzheim; Carl Benz hatte1886das Motorwagenpatent angemeldet.",
+          "sourceId": "source-museum-20261106",
+          "anchor": "Deutsches Museum27Jan2026, ganze einschlägige Darstellung erneut gelesen09Nov2026: Anmeldung29Jan1886/37435, Bertha und Söhne1888Mannheim–Pforzheim, eigener MuseumswagenNr.1. Keine Zuschreibung von Carls Patentanmeldung an Bertha."
+        },
+        {
+          "statement": "Qatar Museums ordnet die Fahrt von1888dem weiterentwickelten Patent-MotorwagenNr.3zu und beschreibt Berthas Unterstützung und Rückmeldungen.",
+          "sourceId": "source-qatar-20261109",
+          "anchor": "Qatar Museums, AmeniAbida,07May2026, tatsächlich gelesen09Nov2026: Abschnitte zur Mitgift, Fahrt5Aug1888Mannheim–Pforzheim im Patent-MotorwagenNo.3 und Rückmeldungen. Text einer Mitarbeiterin des künftigen QatarAutoMuseum; dortiges Sammlungsfahrzeug ausdrücklich Nachbau, kein Originalfoto von1888. Keine genauen Strecken-/Fahrtdauern oder volkstümlichen Reparaturen übernommen."
+        }
+      ],
+      "media": [
+        {
+          "path": "app/people-retained-evidence/bertha-benz.tsx",
+          "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+          "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+          "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+          "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+        },
+        {
+          "path": "public/images/portraits/bertha-benz.webp",
+          "license": "Public Domain",
+          "credit": "Bühler, Mannheim",
+          "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+          "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+        }
+      ],
+      "links": [
+        "topics-people:person-karl_benz",
+        "topics-inventions:invention-car",
+        "words:Hypothese"
+      ],
+      "preparedSourceLimits": [],
+      "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+      "ui": {
+        "build": "68f3b45724224e9f",
+        "visible": true,
+        "search": true,
+        "back": true,
+        "offline": true,
+        "report": "Technische gemeinsame UI-Zuordnung nach gezielter Korrektur der Darwin-/Cai-/Papierquellen: vollständige aktuelle Chromium-/Firefox-/WebKitläufe mit Suche, Rückwegen, nativer Vergrößerung und kaltem Offlinebetrieb sowie gesondert qualifizierten ganzen Originalbildern. Frühere ganze bytegleiche Bildbeurteilungen behalten ihre tatsächliche Herkunft. Alle288ganzen vorherigen sourcekorrigierten Akten einschließlich aller286historischen Fach-/UI-Akten bleiben exakt rekonstruierbar. Keine neue globale Fach-, Rechte-, Menschen-, physische Geräte-, Screenreader-, Hör- oder Lieferabnahme. Finale Standards, native GitHub-Qualifikation und tatsächlicher Liefernachtest bleiben gesondert erforderlich.",
+        "route": "world/topic/person-bertha_benz"
+      },
+      "historicalSourceBeforeNative221Replacement20261106": {
+        "id": "topics-people:person-bertha_benz",
+        "dataHash": "839fa3b2d84659b38968f818a558daf4812d5e355fcc8a8db861373e67b2fd75",
+        "teachingDataHash": "6e890cdb297294cef9f8d6d90cf39fc20e2e64e33a5bbffbd10e8844d277dd5d",
+        "goal": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+        "explanation": "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.\n\nZusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
+        "example": "Bei der Steigung steht in der ersten erfundenen Notiz: „noch nicht untersucht“.",
+        "whyItMatters": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen.",
+        "hint": "Vergleiche, welche Bedingungen nur in der zusätzlichen Notiz vorkommen.",
+        "feedback": "„Noch nicht untersucht“ ist weder ein erfolgreiches noch ein erfolgloses Ergebnis.\n\nEine Steigung unterwegs gehört zu den zusätzlichen Bedingungen der Teststrecke. Daraus folgt noch keine Aussage über alle Wetterlagen.\n\nDer angenommene Erfolg gilt zunächst für die beschriebene Untersuchung. Ohne passende Beobachtungen lässt sich daraus weder ein sicherer Erfolg noch ein sicherer Misserfolg bei Regen ableiten.",
+        "modelLimits": "Erfundene Testnotizen, keine historischen Fahrprotokolle, Strecke-Zeit-Rechnung, Reparatur- oder Kraftstoffanleitung. Ein erfolgreicher Versuch belegt nur seine tatsächlich geprüften Bedingungen.",
+        "reviewedBy": "Codex · individuelle Quellen-/Unterrichtsvorbereitung, keine unabhängige menschliche Freigabe",
+        "reviewedOn": "2026-11-04",
+        "ageLevels": {
+          "6-8": "Eine fehlende Untersuchung von einem Ergebnis unterscheiden.",
+          "9-11": "Eine passende zusätzliche Beobachtung auswählen.",
+          "12-14": "Ein Testergebnis auf seinen untersuchten Bereich begrenzen."
+        },
+        "sources": [
+          {
+            "id": "source-0",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Bertha Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/bertha-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-1",
+            "organisation": "Mercedes-Benz-Unternehmensarchiv · Carl Benz",
+            "url": "https://group.mercedes-benz.com/unternehmen/tradition/gruender-wegbereiter/carl-benz.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          },
+          {
+            "id": "source-2",
+            "organisation": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
+            "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html",
+            "checkedOn": "2026-11-04",
+            "rightsBasis": "Verlinkter bereits tatsächlich gelesener Fachbeleg; eigene deutsche Erklärung und eigenes Lehrbeispiel. Keine fremden Textpassagen, Webseitenbilder, Scans, Logos oder Originalmedien übernommen. Vorhandene konkrete Bildrechte bleiben gesondert erhalten."
+          }
+        ],
+        "claims": [
+          {
+            "statement": "Bertha Benz leistete praktische und finanzielle Beiträge;1888 fuhr sie mit ihren Söhnen von Mannheim nach Pforzheim.",
+            "sourceId": "source-0",
+            "anchor": "294–320 birth3May1849/practicaltechnicalandfinancialcontribution/August1888sonsMannheim→Pforzheim/death1944. No improvisedfuel/repairrecipe or precisehours/distance adopted."
+          },
+          {
+            "statement": "Carl Benz meldete1886das Motorwagenpatent an; die gemeinsame technische Entwicklung wird nicht als Berthas alleinige Patentanmeldung dargestellt.",
+            "sourceId": "source-1",
+            "anchor": "294–307 birth1844Karlsruhe/Mannheim work1886patent37435/death1929Ladenburg. Promotionalfirst-only/worldlargest claims excluded."
+          },
+          {
+            "statement": "Das DPMA unterscheidet Anmeldung am29.Januar und Erteilung am2.November1886; Berthas Fahrt erfolgte mit MotorwagenNr.3 und zeigte praktische Anforderungen.",
+            "sourceId": "source-2",
+            "anchor": "27–61 patentapplication29Jan/grant2Nov1886;model3/sons/practicalneeds. Exclude firstevervehicle and exactthirdgear/roundtrip13hour assertions, which are not needed and conflict in scope with other accounts."
+          }
+        ],
+        "media": [
+          {
+            "path": "app/people-retained-evidence/bertha-benz.tsx",
+            "license": "Eigene interaktive WunderKompass-Erklärdarstellung mit KI-Unterstützung; keine übernommene fremde Darstellung.",
+            "credit": "WunderKompass · eigene Erklärdarstellung mit KI-Unterstützung",
+            "alt": "Zwei eigene gedachte Testnotizen vergleichen drei Bedingungen: Antrieb am selben Platz, Steigung und Versorgung unterwegs. Untersuchte Bedingungen sind keine Erfolgsnachweise.",
+            "learningPurpose": "Own3conditionHTMLlist: same-place drive observed in bothnotes, slope and on-route supply only in additionaltestnote. No historicaltripdata, passedtestclaims, safetyassessment, route or repairing instructions."
+          },
+          {
+            "path": "public/images/portraits/bertha-benz.webp",
+            "license": "Public Domain",
+            "credit": "Bühler, Mannheim",
+            "alt": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
+            "learningPurpose": "Vorhandenes konkretes Porträt zur Einordnung der Person; keine Darstellung oder Bestätigung des eigenen Modellzustands, Messergebnisses oder einer Alleinleistung."
+          }
+        ],
+        "links": [
+          "topics-people:person-karl_benz",
+          "topics-inventions:invention-car",
+          "words:Hypothese"
+        ],
+        "preparedSourceLimits": [],
+        "preparedHistoricalReadingReceipt": "old-people-read-sources/Benz-two-actually-read-biographies-institutional-history-inertia-and-existing-portrait-rights.json",
+        "ui": {
+          "build": "9cdd986160a92e7a",
+          "visible": true,
+          "search": true,
+          "back": true,
+          "offline": true,
+          "report": "Technische gemeinsame UI-Zuordnung nach der individuellen Überarbeitung der18bestehenden Personen: vollständige aktuelle Chromium-, Firefox- und WebKit-Prüfungen,105tatsächlich geöffnete Quellen einschließlich fünf ganzerPDFs, Suche,45Buchverbindungen, Rückwege, nativeVergrößerung und kalterOfflinebetrieb. Alle726ausgewählten Originalbildidentitäten gesondert beurteilt; bytegenau übernommene positive Bildbeurteilungen behalten ihre tatsächliche vorherige Quelle und sind keine behauptete neue direkte Sichtung. Sämtliche268ganzen bisherigen Inhaltsakten sowie18einzeln vorbereiteten Akten behalten Fach-, Quellen- und verschachtelte Historien. Keine globale Fach-, Rechte-, Menschen-, physischeGeräte-, Screenreader-, Hör- oder Lieferabnahme; nativeGitHub-Qualifikation und regulärer Liefernachtest bleiben gesondert erforderlich.",
+          "route": "world/topic/person-bertha_benz"
+        }
+      },
+      "sourceLimits": [
+        "Gezielter Ersatz nach tatsächlichem nativen Zugriffsausfall221. Vorherige ganze Quellen-/UI-Akte bleibt im historischen Feld erhalten; neue Quellen einzeln tatsächlich gelesen, übrige Fach-, Aufgaben-, Modell- und Medienprüfungen nicht pauschal neu datiert. Aktueller vollständiger UI-/Quellen-/Offline- und nativer Nachweis bleibt erforderlich.",
+        "Gezielter Quellenersatz09.11.2026 nach wechselhaftem tatsächlichem DPMA-Artikelzugriff. Nur zwei Quellen-/Themenakten geändert; vollständige vorherige Akten bleiben exakt im bestehenden historischen Grenznachweis erhalten. Aufgaben, Modell, Medien, ursprüngliche Prüf-/UI-Daten und historische Quellen bleiben unverändert. Neue tatsächliche App-Quellenöffnung und vollständige Abnahme bleiben erforderlich.",
+        "Gezielter Ersatz des in nativerQuality225mitHTTP403gesperrten Herstellerlinks durch die tatsächlich gelesene städtische Biografie. Finanzierungs-/Erprobungsaussage bleibt dem erhaltenen Museumsbeleg zugeordnet. Ganze vorherige qualifizierte Themen-/Quellen-/UI-Akte und alle übrigen299Akten bleiben exakt rekonstruierbar. Bisherige Fach-, Aufgaben-, Medien- und UI-Prüfdaten werden nicht neu datiert; vollständige aktuelle Abnahme bleibt erforderlich."
+      ]
+    }
   }
 }
