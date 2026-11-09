@@ -9,3 +9,5 @@
 .khipu-evidence .model-result{display:block}
 .khipu-evidence .model-result>strong{display:block;margin-bottom:8px}
 .large-reading .khipu-evidence :is(button,select,label,.small-note,figcaption){font-size:max(20px,1rem);line-height:1.7}
+
+.khipu-evidence-schematic figcaption.topic-diagram-label{color:#183b46}
