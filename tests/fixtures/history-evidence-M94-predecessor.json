@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "acceptedMerge": "b53f75f72f1be726b03ec602016931c41f4cfda4",
   "previousRuntimeBuild": "68f3b45724224e9f",
-  "currentRuntimeBuild": "5ae35b40a1e179e5",
+  "currentRuntimeBuild": "5e26a0c0a402484d",
   "previousInputs": [
     {
       "file": "app/activity-view.mjs",
@@ -4743,8 +4743,8 @@
     },
     {
       "file": "app/khipu-evidence.css",
-      "bytes": 1108,
-      "sha256": "613e050d408de9ed9c3742caa49663e94652d44a3694c055ce10cd7913f65d64"
+      "bytes": 1181,
+      "sha256": "065e59e48fecab93d230aff03faeb061265dd54400f204631f4071527aba0fd9"
     },
     {
       "file": "app/khipu-evidence.tsx",
@@ -7308,8 +7308,8 @@
     },
     {
       "file": "app/khipu-evidence.css",
-      "bytes": 1108,
-      "sha256": "613e050d408de9ed9c3742caa49663e94652d44a3694c055ce10cd7913f65d64"
+      "bytes": 1181,
+      "sha256": "065e59e48fecab93d230aff03faeb061265dd54400f204631f4071527aba0fd9"
     },
     {
       "file": "app/khipu-evidence.tsx",
@@ -13707,5 +13707,21 @@
     "history-cahokia-monks-mound"
   ],
   "currentPhotosSHA256": "d2df9a86c97dc00e3ab957146ae017418cbc5fa4f56567a1e3c90c057fe09307",
-  "previousPhotosSHA256": "e6617bd4432ce5f2be3bb2395610705e61737707ce8121a25000af0ab2e77c6a"
+  "previousPhotosSHA256": "e6617bd4432ce5f2be3bb2395610705e61737707ce8121a25000af0ab2e77c6a",
+  "captionColorCorrection20261109": {
+    "previousCurrentRuntimeBuild": "5ae35b40a1e179e5",
+    "previousCurrentInput": {
+      "file": "app/khipu-evidence.css",
+      "bytes": 1108,
+      "sha256": "613e050d408de9ed9c3742caa49663e94652d44a3694c055ce10cd7913f65d64"
+    },
+    "currentInput": {
+      "file": "app/khipu-evidence.css",
+      "bytes": 1181,
+      "sha256": "065e59e48fecab93d230aff03faeb061265dd54400f204631f4071527aba0fd9"
+    },
+    "previousCSSUTF8": ".khipu-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}\n.khipu-evidence-schematic{margin:16px 0;padding:12px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(135deg,#fbf7ef,#edf5f2);color:#183b46}\n.khipu-evidence-schematic svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}\n.khipu-evidence-schematic figcaption{display:block;background:transparent;color:#183b46;padding:12px 0 0;font-size:16px;line-height:1.65}\n.khipu-evidence-schematic figcaption :is(strong,span){display:block}\n.khipu-evidence-schematic figcaption strong{margin-bottom:6px}\n.khipu-evidence-meaning{display:grid;gap:8px;margin:16px 0;max-width:100%}\n.khipu-evidence :is(button,select){max-width:100%;font:inherit;font-size:16px;line-height:1.6;min-height:48px;white-space:normal}\n.khipu-evidence .model-result{display:block}\n.khipu-evidence .model-result>strong{display:block;margin-bottom:8px}\n.large-reading .khipu-evidence :is(button,select,label,.small-note,figcaption){font-size:max(20px,1rem);line-height:1.7}\n",
+    "exactAppendedCSSUTF8": "\n.khipu-evidence-schematic figcaption.topic-diagram-label{color:#183b46}\n",
+    "scope": "Only the reviewed actual Khipu caption color correction. All740 other runtimeinputs and every679 whole accepted M94 predecessor input remain exact. The old lowcontrast source is retained and must not pass as the current corrected runtime."
+  }
 }
