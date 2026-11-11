@@ -1,3 +1,4 @@
+import {thinkingBeforeKewSourceReplacement} from './history-native226-source-reference.mjs';
 import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
 import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 // Exact historical source/UI inverse; qualification requires named actual whole-input evidence.
@@ -38,6 +39,7 @@ export function beforeWaterPhotosynthesis(items){
 }
 export function thinkingBeforeWaterPhotosynthesis(thinking){
  if(wholeWaterReference(thinking)===wholeWaterReference(boundary.previousThinking))return thinking;
+ thinking=thinkingBeforeKewSourceReplacement(thinking);
  assert.equal(wholeWaterReference(thinking),boundary.currentThinkingSHA256,'all25 whole authored inquiry entries must match before historical projection');
  return structuredClone(boundary.previousThinking);
 }

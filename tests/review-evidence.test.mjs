@@ -2,6 +2,33 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {createHash} from 'node:crypto';
 import {sourceDigest} from '../scripts/handoff.mjs';
 import {REVIEW_LIMIT,reviewStorage,retainScreenshot,requiredScreenshots,prepareReview,storeReviewScreenshot,readReviewScreenshot} from '../scripts/review-evidence.mjs';
+test('unique early history source reports retain both failed and successful whole originals without traversing profiles or unknown namespaces',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-early-history-originals-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const originals=[];
+ for(const [name,status]of[['history-source-precondition-Ab3xY9','failed'],['history-source-precondition-Zy8aQ2','passed']]){
+  const folder=path.join(dir,name);await fs.mkdir(path.join(folder,'Default'),{recursive:true});
+  const body=Buffer.from('{\n "status": "'+status+'", "originalHTTP": '+(status==='failed'?403:200)+', "ownSyntheticText": "unverändert"\n}\n');await fs.writeFile(path.join(folder,'report.json'),body);await fs.writeFile(path.join(folder,'Default','private.json'),'synthetic profile, never collect');await fs.writeFile(path.join(folder,'other.json'),'unknown nested helper data');originals.push({name,body,folder});
+ }
+ await fs.mkdir(path.join(dir,'unknown-worker'));await fs.writeFile(path.join(dir,'unknown-worker','report.json'),'unknown unrelated data');
+ const result=await prepareReview(dir);assert.equal(result.status,'diagnostic');assert.deepEqual(result.errors,[]);
+ for(const {name,body,folder}of originals){assert(result.reports.includes(name+'-original-report.json'));assert.deepEqual(await fs.readFile(path.join(dir,'review',name+'-original-report.json')),body);assert.deepEqual(await fs.readFile(path.join(folder,'report.json')),body);}
+ assert.equal(result.reports.length,2);assert(!(await fs.readdir(path.join(dir,'review'))).some(name=>name.includes('private')||name.includes('other')||name.includes('unknown')));
+ assert(requiredScreenshots.includes('quality-no-news-news-removed-bronze-large-320.png'));assert.equal(retainScreenshot('quality-no-news-news-removed-bronze-large-320.png'),true);
+});
+test('missing or nonregular early source originals block honestly after other original reports and diagnostic gaps are retained',async t=>{
+ const parent=await fs.mkdtemp(path.join(os.tmpdir(),'wk-early-source-gaps-'));t.after(()=>fs.rm(parent,{recursive:true,force:true}));
+ for(const kind of['missing','directory-symlink','report-symlink']){
+  const dir=path.join(parent,kind),folder=path.join(dir,'history-source-precondition-Ab3xY9');await fs.mkdir(dir);const unit=Buffer.from('{"status":"failed","meaning":"original unrelated unit report"}\n');await fs.writeFile(path.join(dir,'unit-proof.json'),unit);
+  if(kind==='directory-symlink'){const privateDir=path.join(dir,'private-profile');await fs.mkdir(privateDir);await fs.writeFile(path.join(privateDir,'report.json'),'synthetic private profile');await fs.symlink(privateDir,folder,'dir');}
+  else{await fs.mkdir(folder);if(kind==='report-symlink'){await fs.writeFile(path.join(folder,'private.txt'),'synthetic private data');await fs.symlink(path.join(folder,'private.txt'),path.join(folder,'report.json'));}}
+  await assert.rejects(prepareReview(dir),kind==='missing'?/Missing early history source original/:/Nonregular early history source/);
+  assert.deepEqual(await fs.readFile(path.join(dir,'review','unit-proof.json')),unit);const manifest=JSON.parse(await fs.readFile(path.join(dir,'review','review-manifest.json'),'utf8'));assert.equal(manifest.status,'diagnostic');assert.equal(manifest.errors.length,1);assert(!manifest.reports.includes('history-source-precondition-Ab3xY9-original-report.json'));
+ }
+});
+test('early original names cannot overwrite an existing root report or borrow an unknown output namespace',async t=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wk-early-source-collision-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));const name='history-source-precondition-Ab3xY9',folder=path.join(dir,name);await fs.mkdir(folder);await fs.writeFile(path.join(folder,'report.json'),'new exact original');const prior=Buffer.from('existing unrelated original');await fs.writeFile(path.join(dir,name+'-original-report.json'),prior);
+ await assert.rejects(prepareReview(dir),/Conflicting review evidence names/);assert.deepEqual(await fs.readFile(path.join(dir,name+'-original-report.json')),prior);assert.equal(await fs.readFile(path.join(folder,'report.json'),'utf8'),'new exact original');
+});
 test('critical states are always retained while interchangeable intermediate binaries can be reproduced',()=>{
  assert.ok(requiredScreenshots.every(retainScreenshot));
  for(const f of ['journey-engine-webkit-390.png','quality-learning-journey-native-zoom-200.png','quality-navigation-offline-start.png','quality-navigation-updates-archive-320-full.png','quality-learning-journey-water-390.png'])assert.equal(retainScreenshot(f),true,f);

@@ -3,6 +3,7 @@ import {topicMapGroups} from '../app/topic-map-layout.mjs';
 import React from 'react';import * as jsx from 'react/jsx-runtime';import {renderToStaticMarkup} from 'react-dom/server';import ts from 'typescript';
 import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
+import {catalogBeforeNative226,runtimeBodyBeforeNative226} from './history-native226-source-reference.mjs';
 import {assertCurrentHistoryEvidenceRuntime,withHistoryEvidencePredecessorRuntime} from './history-evidence-runtime-reference.mjs';
 const catalog=JSON.parse(fs.readFileSync('app/world-catalog.json','utf8'));
 test('the existing world-map family retains every named location exactly once without modifying its coordinates or order',()=>{
@@ -46,7 +47,11 @@ test('the exact map/reading/resume originals recover all741 previous runtime bod
    fs.unlinkSync(file);link(current.get(row.file),file);
   }
   for(const row of layer.replacedInputs){const file=path.join(temporary,row.file);fs.unlinkSync(file);fs.writeFileSync(file,row.originalUTF8);}
+  const catalogFile=path.join(temporary,'app/world-catalog.json'),previousCatalog=catalogBeforeNative226(JSON.parse(fs.readFileSync(catalogFile,'utf8')));fs.unlinkSync(catalogFile);fs.writeFileSync(catalogFile,JSON.stringify(previousCatalog,null,2)+'\n');
+  const cssFile=path.join(temporary,'app/discovery.css'),cssBefore=runtimeBodyBeforeNative226('app/discovery.css',fs.readFileSync(cssFile));fs.unlinkSync(cssFile);fs.writeFileSync(cssFile,cssBefore);
+  const inquiryFile=path.join(temporary,'app/science-thinking.json'),inquiryBefore=runtimeBodyBeforeNative226('app/science-thinking.json',fs.readFileSync(inquiryFile));fs.unlinkSync(inquiryFile);fs.writeFileSync(inquiryFile,inquiryBefore);
   for(const row of layer.previousCurrentInputs){const body=fs.readFileSync(path.join(temporary,row.file));assert.equal(body.length,row.bytes);assert.equal(sha(body),row.sha256,row.file+' exact whole prior input');}
   assert.equal(learningFingerprint(temporary),layer.previousCurrentRuntimeBuild,'the actual full741-file prior build, not a relabelled current result');
+  fs.unlinkSync(inquiryFile);fs.writeFileSync(inquiryFile,fs.readFileSync(current.get('app/science-thinking.json')));assert.notEqual(learningFingerprint(temporary),layer.previousCurrentRuntimeBuild,'current inquiry source mixed into the old map runtime cannot borrow its historical identity');
  }finally{fs.rmSync(temporary,{recursive:true,force:false});}
 });

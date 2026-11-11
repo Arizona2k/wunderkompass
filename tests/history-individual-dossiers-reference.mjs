@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import boundary from './fixtures/history-individual-dossiers-M94-predecessor.json' with {type:'json'};
+import {dossiersBeforeNative226} from './history-native226-source-reference.mjs';
 export const historyDossierBoundary=boundary;
 export const wholeHistoryDossier=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const signature=rows=>rows.map(row=>({id:row.id,sha256:wholeHistoryDossier(row)}));
 export function dossiersBeforeHistoryEvidence(rows){
+ rows=dossiersBeforeNative226(rows);
  const isHistory=rows.length>288||rows.some(row=>boundary.addedIds.includes(row.id)||Object.hasOwn(row,boundary.historyField));
  if(!isHistory)return rows;
  assert.equal(rows.length,300,'only the twelve named new individual history dossiers');

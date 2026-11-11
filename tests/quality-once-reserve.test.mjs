@@ -1,6 +1,12 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
 import {critical} from '../scripts/release/test-live-readiness.cjs';
 const file='.github/workflows/quality.yml',source=fs.readFileSync(file,'utf8'),before=fs.readFileSync('tests/fixtures/quality-combined-before-one-reserve.yml','utf8');
+const earlyHistory="      - name: Early actual history source access precondition\n        run: node tests/browser/history-source-precondition.mjs\n",integrity="      - name: Content integrity\n        run: pnpm run verify\n",build="      - name: Production build\n        run: pnpm run build\n";
+function beforeEarlyHistory(actual){
+ assert.equal(actual.split(earlyHistory).length,2);assert.equal(actual.split(integrity).length,2);assert.equal(actual.split(build).length,2);
+ assert(actual.includes(earlyHistory+integrity+'      - name: Early actual-engine search and cold offline precondition\n'),'unconditional actual source check before unchanged content gate and expensive complete stages');
+ return actual.replace(earlyHistory+integrity,'').replace(build,build+integrity);
+}
 const originalTimeout="    # Existing combined browser job: user-authorised 55-minute ceiling, all steps retained.\n    timeout-minutes: 55";
 const approvedTimeout="    # User26Oct: measured bootstrap repair and a finite65min reserve.\n    # Quality176 spent46min installing dependencies; every test/gate stays.\n    # Quality195 reached65min during complete engines; finite70min reserve.\n    # AuditV2 adds measured task/navigation/route coverage; finite80min reserve.\n    # User30Oct: all project technical ceilings +30%, once from80 to104min.\n    # Nature34: measured added normal/cold/native coverage; finite130min reserve.\n    # Nature34: complete current phase timing refines the finite reserve to140min.\n    # Nature34: completed concurrent full engines require a finite155min reserve.\n    # Retained18: measured current phases plus native setup/transport and finite reserve.\n    timeout-minutes: 175";
 const originalInstaller="      - name: Install Chromium and system dependencies\n        run: pnpm --dir qa exec playwright install --with-deps chromium\n      - name: Install additional browser engines\n        run: pnpm --dir qa exec playwright install --with-deps firefox webkit\n";
@@ -10,10 +16,14 @@ const previousOriginalTransport="      - name: Upload browser evidence\n        
 test('user-authorised finite175min and causal installer repair preserve the entire original workflow and native release guards',()=>{
  assert.equal(source.split(approvedOriginalTransport).length,2);
  assert.equal(source.split(approvedTimeout).length,2);assert.equal(source.split(approvedInstaller).length,2);
- assert.equal(source.replace(approvedOriginalTransport,previousOriginalTransport).replace(approvedTimeout,originalTimeout).replace(approvedInstaller,originalInstaller),before,'entire original workflow except exactly the authorised time/mirror/shared-install changes');
+ assert.equal(beforeEarlyHistory(source).replace(approvedOriginalTransport,previousOriginalTransport).replace(approvedTimeout,originalTimeout).replace(approvedInstaller,originalInstaller),before,'entire original workflow except exactly the named source precondition, content step order and authorised time/mirror/shared-install changes');
  assert.equal(critical(file),true,'workflow remains protected and requires concrete manual review');
  assert.equal(createHash('sha256').update(before).digest('hex'),'fa0c0d6b54997a490572b18e0f164bfd28d07c16f8e007f379dfa25287f7ce5d','unchanged actual92f3591 workflow baseline');
  assert.deepEqual([...source.matchAll(/^    timeout-minutes: (.+)$/gm)].map(m=>m[1]),['175'],'one finite ceiling, no hidden unbounded or context-specific exception');
+});
+test('early source failure remains fatal and all original native gates survive exact inverse with no exceptions or filters',()=>{
+ assert(beforeEarlyHistory(source).includes(build+integrity));
+ for(const bad of[source.replace(earlyHistory,''),source.replace(earlyHistory,earlyHistory+'        continue-on-error: true\n'),source.replace(earlyHistory,earlyHistory+'        if: false\n'),source.replace(integrity,''),source.replace(integrity,integrity+integrity)])assert.throws(()=>beforeEarlyHistory(bad));
 });
 test('actual installer shell reprioritises existing official Ubuntu mirrors without changing repositories, security fallback or package trust',()=>{
  // Exact stock file from the actually used runner image ubuntu24/20261012.334:

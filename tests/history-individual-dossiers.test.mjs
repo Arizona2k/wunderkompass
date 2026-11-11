@@ -6,15 +6,16 @@ import {collectInventory} from '../scripts/content-inventory.mjs';
 import {validateDossierContent,validateDossier} from '../scripts/editorial-contract.mjs';
 import {dossiersBeforeHistoryEvidence,historyDossierBoundary as boundary,wholeHistoryDossier} from './history-individual-dossiers-reference.mjs';
 import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {dossiersBeforeNative226} from './history-native226-source-reference.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
-const registry=read('content/editorial-reviews.json').dossiers;
+const currentRegistry=read('content/editorial-reviews.json').dossiers,registry=dossiersBeforeNative226(currentRegistry);
 const ids=['khipu','mohenjo-daro','bronze','kilwa','timbuktu','angkor','polynesia','caral','nalanda','hattusha','writing','paper','printing','rosetta','catalhoyuk','cahokia'].map(id=>'topics-history:history-'+id);
 test('sixteen current individual history studies have actual content identities, meaningful sources, rights and existing reciprocal links',()=>{
  const inventory=collectInventory(),records=new Map(inventory.records.map(row=>[row.id,row])),knownIds=new Set(records.keys());
  const catalog=read('app/world-catalog.json'),previous=beforeHistoryEvidence(catalog),priorById=new Map(previous.map(t=>[t.id,t]));
  assert.equal(registry.length,300);assert.equal(boundary.addedIds.length,12);
  for(const id of ids){
-  const dossier=registry.find(row=>row.id===id),record=records.get(id),topic=catalog.find(t=>'topics-history:'+t.id===id);
+  const dossier=currentRegistry.find(row=>row.id===id),record=records.get(id),topic=catalog.find(t=>'topics-history:'+t.id===id);
   assert(dossier&&record&&topic,id);assert.deepEqual(validateDossierContent(dossier,record,{knownIds}).errors,[],id);
   assert.deepEqual(dossier.sources.map(source=>source.url).sort(),topic.sources.map(source=>source.url).sort(),id+' exact actually linked source set');
   assert.equal(dossier.aiSelfReview.dataHash,record.dataHash);
