@@ -1,3 +1,6 @@
+import {thinkingBeforeKewSourceReplacement} from './history-native226-source-reference.mjs';
+import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 // Exact historical source/UI inverse; qualification requires named actual whole-input evidence.
 // Exact historical source/UI inverse; actual qualification is recorded in the named boundary.
 import assert from 'node:assert/strict';
@@ -26,6 +29,7 @@ export const topicBeforeWaterPhotosynthesis=topic=>{
  return previous(previous(topic,correction?.topic),topics.get(topic.id));
 };
 export function beforeWaterPhotosynthesis(items){
+ items=beforeHistoryEvidence(items);
  if(items.some(row=>Object.hasOwn(row,'category')&&Object.hasOwn(row,'paragraphs'))){
   if(items.some(row=>topics.has(row.id)&&wholeWaterReference(row)===wholeWaterReference(topics.get(row.id).after)))assert.equal(items.length,204,'a current water/photosynthesis catalog must retain all204 identities');
   if(items.length===204){const hash=wholeWaterReference(items);assert([boundary.previousCatalogSHA256,boundary.currentCatalogSHA256,...sourceCorrections().map(row=>row.previousCurrentCatalogSHA256)].includes(hash),'all204 whole topics, including every unrelated field, must match the reviewed boundary');}
@@ -35,10 +39,12 @@ export function beforeWaterPhotosynthesis(items){
 }
 export function thinkingBeforeWaterPhotosynthesis(thinking){
  if(wholeWaterReference(thinking)===wholeWaterReference(boundary.previousThinking))return thinking;
+ thinking=thinkingBeforeKewSourceReplacement(thinking);
  assert.equal(wholeWaterReference(thinking),boundary.currentThinkingSHA256,'all25 whole authored inquiry entries must match before historical projection');
  return structuredClone(boundary.previousThinking);
 }
 export function dossiersBeforeWaterPhotosynthesis(items){
+ items=dossiersBeforeHistoryEvidence(items);
  if(items.length<=286)return items;
  assert.equal(items.length,288,'only two named individual dossiers were added');
  // Preparation only: this inverse does not qualify a product UI or manufacture a passed run.

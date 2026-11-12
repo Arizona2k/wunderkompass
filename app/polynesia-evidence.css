@@ -1,0 +1,6 @@
+.polynesia-evidence .polynesia-bearing-figure{margin:1.25rem 0;background:linear-gradient(145deg,#fbfbf8,#eff6f5);border-radius:1rem;padding:1rem;}
+.polynesia-evidence .polynesia-bearing-figure svg{display:block;width:100%;max-width:26rem;height:auto;margin-inline:auto;}
+.polynesia-evidence figcaption{margin-top:.75rem;font:inherit;line-height:1.65;color:var(--text,#163e4c);}
+.polynesia-evidence .model-buttons button{white-space:normal;overflow-wrap:anywhere;}
+.polynesia-evidence .model-result{margin-block:1rem;}
+@media(forced-colors:active){.polynesia-evidence svg path,.polynesia-evidence svg circle{stroke:CanvasText;}.polynesia-evidence svg circle{fill:Canvas;}.polynesia-evidence svg g path{fill:Highlight;}.polynesia-evidence svg g path[fill="none"]{fill:none;}}

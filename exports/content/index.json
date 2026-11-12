@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-08T13:29:24.377Z",
+  "generatedAt": "2026-11-12T14:23:17.246Z",
   "personalProgressIncluded": false,
-  "topics": 204,
+  "topics": 212,
   "categories": {
     "animals": 48,
-    "history": 34,
+    "history": 42,
     "people": 36,
     "inventions": 24,
     "buildings": 16,
@@ -513,9 +513,9 @@
       "sources": [
         "app/challenge-hints.json"
       ],
-      "entries": 240,
-      "bytes": 67599,
-      "sha256": "b8ea0f253ada5404ef85b2941492c75cdfed25cfa899b02af287c84a3a19f130"
+      "entries": 274,
+      "bytes": 89060,
+      "sha256": "3524fc676ea5890b4033ef0318a940cbd2e5c228b53b5f7ad38615f476f614b3"
     },
     {
       "file": "world-connections.json",
@@ -525,26 +525,26 @@
         "app/discovery-connections.json"
       ],
       "entries": 2,
-      "bytes": 75459,
-      "sha256": "ea51be8bbde50023027cac3f6bb297349c824b3cdcc8d73e9fddcae2c0d4eaa5"
+      "bytes": 87519,
+      "sha256": "7aa8f1ed77a66d7654287d441096f93a8ec4e18bd2d958d3cec3370b86930ae1"
     },
     {
       "file": "world-topics.json",
       "sources": [
         "app/world-catalog.json"
       ],
-      "entries": 204,
-      "bytes": 856222,
-      "sha256": "6cbbc814709bd91670cae94abf93c84cf8512b4ee4e0264c4bc70d66fadfd85a"
+      "entries": 212,
+      "bytes": 977009,
+      "sha256": "c758c9117dc9a8d7d26858591fcf0427403a35046341ca6d9a316a86ca6c6b5b"
     },
     {
       "file": "world-index.json",
       "sources": [
         "app/world-index.json"
       ],
-      "entries": 204,
-      "bytes": 137979,
-      "sha256": "f98b0380221b31ad4c6f473edca1d690b15a7b982660931b88bfc04159e77f20"
+      "entries": 212,
+      "bytes": 162445,
+      "sha256": "0c2f7f49fdfc6ab4336b06efd307a292cc6ca296b41a5c13ded37d0a1aef2666"
     },
     {
       "file": "games.json",
@@ -560,9 +560,9 @@
       "sources": [
         "app/world-photos.json"
       ],
-      "entries": 60,
-      "bytes": 45687,
-      "sha256": "e3f9718e21991b9502083b0d5c3fba29ed1aae2f6c5f70c126f498405a7c5239"
+      "entries": 74,
+      "bytes": 62048,
+      "sha256": "223e63aee4f6636290154448d254afc601bebd5c475580f1aeb9baa0c82b5147"
     },
     {
       "file": "journey-photo-metadata.json",
@@ -624,8 +624,8 @@
         "public/world/photo-credits.json"
       ],
       "entries": 2,
-      "bytes": 43434,
-      "sha256": "cd19007c4627bfbbb15c35c0cbfcacd3c4001e00f4df7cb9847be5cceb6c3cb6"
+      "bytes": 60157,
+      "sha256": "69a927a5759047f5140829ccd6763503847be71537b3fb30952da81ec937d470"
     },
     {
       "file": "research-questions.json",

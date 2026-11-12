@@ -61,8 +61,6 @@ jobs:
         run: pnpm test
       - name: Production build
         run: pnpm run build
-      - name: Content integrity
-        run: pnpm run verify
       - name: Install browser tools with frozen lockfile
         run: pnpm --dir qa install --frozen-lockfile
       - name: Install all browsers and shared system dependencies
@@ -75,6 +73,10 @@ jobs:
             /etc/apt/apt-mirrors.txt
           cat /etc/apt/apt-mirrors.txt
           pnpm --dir qa exec playwright install --with-deps chromium firefox webkit
+      - name: Early actual history source access precondition
+        run: node tests/browser/history-source-precondition.mjs
+      - name: Content integrity
+        run: pnpm run verify
       - name: Early actual-engine search and cold offline precondition
         run: |
           node tests/browser/journey-engines.mjs --search-only

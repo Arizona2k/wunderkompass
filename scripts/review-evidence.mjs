@@ -61,6 +61,7 @@ requiredScreenshots.push(...[320,360,390,402,768,1024,1440,1920].flatMap(w=>['no
 requiredScreenshots.push(...[320,360,390,768,1024,1440,1920].flatMap(w=>[...[0,1,2].flatMap(level=>['normal','large'].map(state=>'quality-navigation-animal-workshop-'+state+'-'+level+'-'+w+'.png')),'quality-navigation-animal-workshop-focus-'+w+'.png']),'quality-navigation-animal-native-200-large-640.png');
 requiredScreenshots.push('quality-navigation-animal-search-delayed-390.png');
 requiredScreenshots.push(...['chromium','firefox','webkit'].flatMap(engine=>[320,1440].map(width=>(engine==='chromium'?'quality-learning-':'')+'journey-engine-'+engine+'-fallback-selected-Daintree-return-'+width+'.png')),...[640,320].map(width=>'quality-learning-journey-engine-chromium-fallback-selected-Daintree-return-native200-'+width+'.png'));
+requiredScreenshots.push('quality-no-news-news-removed-bronze-large-320.png');
 export function retainScreenshot(name,{available=null}={}){
  if(requiredScreenshots.includes(name))return true;
  // Only a fully bound completed review supplies this actual capture set.
@@ -77,6 +78,19 @@ export function retainScreenshot(name,{available=null}={}){
 }
 export async function prepareReview(directory='.qa-output'){
  const files=(await fs.readdir(directory)).sort().map(name=>({name,source:path.join(directory,name)})),destination=path.join(directory,'review');await fs.rm(destination,{recursive:true,force:true});await fs.mkdir(destination,{recursive:true});
+ const earlySourceCollectionErrors=[];
+ // Only the new helper's exact unique namespace and original report. Never
+ // traverse its profiles, downloads or unknown directories; preserve bytes.
+ for(const entry of await fs.readdir(directory,{withFileTypes:true})){
+  if(!/^history-source-precondition-[A-Za-z0-9]{6}$/.test(entry.name))continue;
+  if(!entry.isDirectory()||entry.isSymbolicLink()){earlySourceCollectionErrors.push('Nonregular early history source directory '+entry.name);continue;}
+  const source=path.join(directory,entry.name,'report.json');
+  try{
+   const original=await fs.lstat(source);
+   if(!original.isFile()||original.isSymbolicLink()){earlySourceCollectionErrors.push('Nonregular early history source original '+entry.name+'/report.json');continue;}
+   files.push({name:entry.name+'-original-report.json',source,sourceFile:path.relative(directory,source)});
+  }catch(error){if(error.code!=='ENOENT')throw error;earlySourceCollectionErrors.push('Missing early history source original '+entry.name+'/report.json');}
+ }
  // A runner timeout can interrupt an isolated engine before normal collection.
  // Preserve those actual partial files in the same review, clearly distinguished
  // from completed root evidence. No browser profile or recursive cache traversal.
@@ -128,7 +142,7 @@ export async function prepareReview(directory='.qa-output'){
  // Missing, altered or nonregular shared payloads fail before upload acceptance.
  for(const capture of screenshots.filter(capture=>capture.retained))await readReviewScreenshot(destination,capture);
 
- const storage=reviewStorage(screenshots,retainedBytes),errors=[];
+ const storage=reviewStorage(screenshots,retainedBytes),errors=[...earlySourceCollectionErrors];
  if(complete){
   if(!handoff||handoff.sourceDigest!==currentSource||handoff.build!==report.build)errors.push('Current handoff/code/build proof required');
   for(const name of requiredScreenshots)if(!screenshots.some(s=>s.file===name&&s.retained))errors.push('Missing required critical image '+name);

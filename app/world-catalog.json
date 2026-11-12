@@ -2541,7 +2541,8 @@
     "related": [
       "history-writing",
       "history-web",
-      "history-bronze"
+      "history-bronze",
+      "history-catalhoyuk"
     ],
     "sources": [
       {
@@ -2630,10 +2631,14 @@
     "id": "history-writing",
     "category": "history",
     "title": "Zeichen bewahren Nachrichten",
-    "intro": "In Mesopotamien, im heutigen Irak, schrieben Menschen Zeichen auf Tontafeln.",
+    "intro": "Eine kleine Tontafel kann Nachrichten für später bewahren. Was ihre Zeichen bedeuten, erschließt sich jedoch nicht allein aus einem Foto.",
     "paragraphs": [
-      "Zuerst hielten sie damit zum Beispiel fest, wie viel Getreide es gab.",
-      "Frühe Zeichen waren nicht nur Bilder, sondern auch abstrakte Markierungen. Später wurden keilförmige Zeichen mit einem Schreibgriffel in Ton gedrückt."
+      "In Uruk in Mesopotamien, im heutigen Irak, bewahrten Menschen gegen Ende des vierten Jahrtausends vor Christus Angaben auf Tontafeln. Einige der frühen erhaltenen Aufzeichnungen betreffen Güter und Mengen, etwa Getreide. Unser ungefährer Zeitanker bezeichnet eine Entwicklung, keinen festgestellten ersten Erfindungstag.",
+      "Zeichen konnten in feuchten Ton gezeichnet oder gedrückt werden. Zu frühen Formen gehörten erkennbare Bilder und abstrakte Markierungen. Keilförmige Eindrücke entstanden durch die Spitze eines Griffels; die Form der Zeichen änderte sich mit den Schreibtechniken.",
+      "Eine Aufzeichnung kann Informationen erhalten, wenn die Person, die sie notiert hat, gerade nicht anwesend ist. Damit andere sie verstehen, müssen sie aber die vereinbarten Zeichen und den Zusammenhang kennen. Drei Striche in unserem eigenen Lernbild sind ohne Schlüssel noch keine sicher gelesene Getreidelieferung.",
+      "Das Museumsfoto zeigt eine echte kleine Tontafel, Met1988.433.1, ungefähr3100–2900v.Chr. Das Museum gibt Uruk als wahrscheinlichen Herkunftsort an und deutet die Tafel vermutlich als Aufzeichnung einer Getreideverteilung. Runden Vertiefungen und anderen sichtbaren Zeichen eine genaue Nachricht zuzuordnen, braucht mehr als das bloße Anschauen des Fotos.",
+      "Im Lauf der Entwicklung konnten Zeichen nicht nur für Dinge, sondern auch für Laute und Silben stehen. Ein eigenes heutiges deutsches Wortspiel macht die Grundidee sichtbar: B, ein Bild von einem Ei und N können zusammen BEIN ergeben. Dieses Lernbild ist weder eine Übersetzung der Tafel noch eine Rekonstruktion des Schreibens in Uruk.",
+      "Ein Beschreibstoff, eine Schrift und eine Nachricht sind verschiedene Dinge: Ton oder Papier ist Material; vereinbarte Zeichen können Informationen tragen. Die Papierseite, die Khipus und die Texte aus Hattuscha laden zum Vergleichen ein. Ähnliche Aufgaben begründen noch keine direkte historische Übertragung zwischen allen Orten."
     ],
     "facts": [
       {
@@ -2646,10 +2651,12 @@
       }
     ],
     "more": [
-      "Schrift konnte Informationen bewahren, auch wenn die Person, die sie wusste, gerade nicht da war.",
-      "Nicht jedes frühe Zeichen lässt sich als Gegenstand erkennen. Später konnten Zeichen auch Laute und Silben bezeichnen. Schrift entstand nicht auf einmal als fertiges Alphabet."
+      "Die frühesten erhaltenen Aufzeichnungen und eine später ausgebaute Schrift sind nicht derselbe Entwicklungsstand. Der Met-Überblick unterscheidet erste vereinzelte Lautverwendungen im späten vierten Jahrtausend von einer regelmäßiger erkennbaren Lautschreibung nach etwa2600v.Chr. Diese Angaben beschreiben die besprochene mesopotamische Entwicklung, nicht sämtliche Schrifterfindungen der Welt.",
+      "Eine Liste hält ausgewählte Angaben fest. Sie erzählt nicht automatisch, wer alle beteiligten Menschen waren, was sie dachten oder wie ihr gesamter Tag verlief. Eine wirtschaftliche Deutung ist eine begründete Erklärung bestimmter Spuren, keine vollständige Lebensgeschichte.",
+      "Der Museumstext zur abgebildeten Tafel betont die Schwierigkeit der Deutung früher Texte, denen Verbformen fehlen. Deshalb steht hier „vermutlich“. Unsicherheit bedeutet weder, dass das Museum gar keine begründete Deutung anbieten kann, noch, dass ein Foto jede Frage sicher beantwortet.",
+      "Das eigene Zeichen- und Wortspiel verwendet heutige deutsche Wörter und absichtlich einfache Platzhalter. Es zeigt, warum ein gemeinsamer Schlüssel und der Zusammenhang wichtig sind. Es berechnet keine historische Lesung und setzt Keilschrift nicht mit einer einzelnen Sprache oder einem fertigen Alphabet gleich."
     ],
-    "surprise": "Eine Mengenliste erzählt nicht den gesamten Alltag ihrer Verfasser. Überlege, was sie festhält und welche Fragen sie offenlässt.",
+    "surprise": "Ein erhaltenes Zeichen ist ein sichtbarer Befund. Seine Bedeutung und die Geschichte der Person dahinter sind weitere Fragen, die zusätzliche Belege brauchen.",
     "locations": [
       {
         "label": "Uruk – im heutigen Irak",
@@ -2663,16 +2670,28 @@
       "history-khipu",
       "history-mohenjo-daro",
       "person-murasaki_shikibu",
-      "person-ibn_sina"
+      "person-ibn_sina",
+      "history-hattusha",
+      "history-paper",
+      "history-printing",
+      "history-rosetta"
     ],
     "sources": [
       {
-        "label": "The Metropolitan Museum of Art · The Origins of Writing",
-        "url": "https://www.metmuseum.org/essays/the-origins-of-writing"
+        "label": "The Metropolitan Museum of Art · The Origins of Writing · Archivfassung vom 11.03.2026",
+        "url": "https://web.archive.org/web/20260311040022/https://www.metmuseum.org/essays/the-origins-of-writing"
+      },
+      {
+        "label": "The Metropolitan Museum of Art · Tontafel1988.433.1 und Grenzen ihrer Deutung · Archivfassung vom 21.04.2026",
+        "url": "https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081"
       }
     ],
     "aliases": [
-      "writing"
+      "writing",
+      "Schrift",
+      "Keilschrift",
+      "Uruk",
+      "Schriftträger"
     ],
     "links": [],
     "history": {
@@ -2685,26 +2704,55 @@
       "prompt": "Wofür nutzten Menschen in Uruk frühe Schrift?",
       "answers": [
         "Um Dinge wie Getreidemengen festzuhalten",
-        "Zum Versenden von E-Mails",
-        "Zum Bauen von Satelliten"
+        "Um aus einer Mengenliste den gesamten Alltag einer Stadt abzulesen",
+        "Um von Beginn an jeden gesprochenen Satz mit einem fertigen Alphabet aufzuschreiben"
       ],
       "correct": 0,
-      "why": "Auf frühen Tontafeln hielten Menschen wirtschaftliche Angaben fest, zum Beispiel Mengen von Getreide. Die Aufzeichnung bewahrte diese Information auch für später."
+      "why": "Einige der frühen erhaltenen Tafeln bewahrten wirtschaftliche Angaben, etwa über Güter und Mengen. Eine Mengenliste erzählt nicht den gesamten Alltag, und die besprochene Schrift entwickelte sich über längere Zeit; sie begann nicht als fertiges Alphabet."
     },
     "learning": {
-      "starter": "Eine Nachricht kann bleiben, auch wenn niemand sie gerade erzählt. Zeichen auf Ton halfen dabei.",
-      "observe": "Stell dir drei abgegebene Körbe vor. Welche Information könntest du zählen, und welche gemeinsame Regel brauchst du zum Verstehen deiner Zeichen?",
-      "benefit": "Du erkennst, warum eine gespeicherte Menge und eine verständliche Nachricht nicht dasselbe sind."
+      "starter": "Zeichen können eine Nachricht für später bewahren. Zum Verstehen braucht es gemeinsame Regeln.",
+      "observe": "Vergleiche drei Markierungen mit und ohne Schlüssel. Probiere danach das heutige deutsche Bildwort B–Ei–N aus und trenne das Wortspiel von der alten Tafel.",
+      "benefit": "Du unterscheidest sichtbare Spuren, vereinbarte Bedeutung und eine begründete, aber nicht allwissende historische Deutung."
     },
     "questionFeedback": {
-      "hint": "Stell dir einen Händler vor, der sich viele Lieferungen merken muss. Wofür könnten aufgeschriebene Zeichen nützlich sein?",
+      "hint": "Überlege, welche ausgewählten Angaben für jemanden wichtig sein können, der viele Lieferungen verwaltet.",
       "wrongReasons": [
         null,
-        "E-Mails brauchen elektronische Geräte und ein Datennetz. Frühe Tontafeln bewahrten Zeichen direkt im Material.",
-        "Eine Tontafel ist keine Bauanleitung für Satelliten. Die Quelle beschreibt frühe Aufzeichnungen etwa über Güter und Mengen."
+        "Eine wirtschaftliche Liste hält ausgewählte Angaben fest. Für den gesamten Alltag und die Gedanken aller Menschen wären weitere Belege nötig.",
+        "Der Met-Überblick beschreibt eine längere Entwicklung von Bildzeichen und abstrakten Markierungen zu zusätzlichen Lautverwendungen. Ein fertiges Alphabet am Anfang folgt daraus nicht."
       ]
     },
-    "sourceNote": "Der Met-Artikel erklärt frühe Bildzeichen und abstrakte Markierungen sowie spätere Lautverwendungen. Der Zeitanker ist ungefähr und bezeichnet keinen einzelnen Erfindungstag. Khipus zeigen eine andere Form von Aufzeichnung; ihre Verbindung hier ist ein Vergleich, keine behauptete direkte historische Übertragung."
+    "sourceNote": "Den vollständigen Met-Überblick „The Origins of Writing“ von Ira Spar,2004, und den konkreten Objekttext zu1988.433.1 am07.11.2026 gelesen. Die Zeitleiste bleibt ungefähr und wird nicht als weltweit einziger Erfindungstag ausgegeben. Das konkrete Foto ist ungefähr3100–2900v.Chr. datiert; Herkunft aus Uruk und wirtschaftliche Deutung werden vom Museum qualifiziert. Sichtbare Vertiefungen sind keine von uns neu entzifferte Nachricht. Zeichenform, Sprache, Beschreibstoff und Lautverwendung bleiben unterscheidbar. B–Ei–N und die Strichgruppe sind eigene heutige Lernvergleiche, keine nachgeahmten antiken Inschriften. Das Foto ist laut tatsächlichem Objektstatus und Met-Open-Access-Regel CC0; Rechte und erlaubte technische Bildfassungen separat belegt. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "challenges": [
+      {
+        "id": "history-writing:shared-key",
+        "difficulty": "medium",
+        "prompt": "Du siehst in unserem Lernbild drei Striche ohne Zeichenschlüssel. Welche Aussage ist am besten begründet?",
+        "answers": [
+          "Es sind drei Markierungen; ihre Bedeutung muss noch geklärt werden",
+          "Damit sind sicher drei Getreidesäcke dokumentiert",
+          "Die Markierungen verraten zugleich sicher, wem die Ware gehörte"
+        ],
+        "correct": 0,
+        "why": "Die Zahl der sichtbaren Striche ist beobachtbar. Ob sie Säcke, Personen oder etwas anderes bezeichnen, braucht einen gemeinsamen Schlüssel. Auch Namen und Besitzverhältnisse stehen nicht automatisch in drei Strichen."
+      },
+      {
+        "id": "history-writing:photo-and-context",
+        "difficulty": "hard",
+        "prompt": "Das Museum deutet die abgebildete Tafel vermutlich als Aufzeichnung einer Getreideverteilung. Wie gehst du mit dieser Deutung um?",
+        "answers": [
+          "Ich unterscheide sichtbare Spuren von der begründeten, aber nicht völlig sicheren Museumsdeutung",
+          "Das Foto allein liefert bereits eine sichere vollständige Übersetzung",
+          "Weil die Lesung unsicher ist, ist jede wirtschaftliche Deutung ausgeschlossen"
+        ],
+        "correct": 0,
+        "why": "Fachwissen und Kontext können eine Deutung stützen. Die Quelle benennt zugleich Grenzen der Lesung. Daraus folgt weder eine vollständig sichere Fotoübersetzung noch die Unmöglichkeit jeder begründeten Deutung."
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "image": "history-writing-tablet",
+    "revision": 1
   },
   {
     "id": "history-pyramids",
@@ -2739,7 +2787,8 @@
       }
     ],
     "related": [
-      "building-giza-pyramids"
+      "building-giza-pyramids",
+      "history-cahokia"
     ],
     "sources": [
       {
@@ -2772,10 +2821,14 @@
     "id": "history-paper",
     "category": "history",
     "title": "Papier aus China",
-    "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+    "intro": "Aus losen Pflanzenfasern kann ein zusammenhängendes Blatt werden. Papier wurde in China schon vor dem bekannten Bericht über Cai Lun im Jahr 105 hergestellt.",
     "paragraphs": [
-      "Für das Jahr 105 ist überliefert, dass Cai Lun die Herstellung verbesserte und sein Verfahren am Kaiserhof vorstellte.",
-      "Auf Papier ließen sich Texte leichter aufschreiben und weitergeben."
+      "Papier ist ein Material aus Fasern. Die Darstellung des Papiermuseums geht für frühe chinesische Verfahren unter anderem von aufbereiteten Hanffasern aus: Die Fasern wurden in Wasser verteilt und zu einem Faserbrei verarbeitet.",
+      "Ein Sieb hält beim Schöpfen Fasern zurück, während ein Teil des Wassers ablaufen kann. So entsteht eine dünne, noch feuchte Faserschicht. Das Sieb macht die Fasern nicht erst aus dem Wasser.",
+      "Ein geformtes Blatt ist noch nicht automatisch ein trockenes Schreibblatt. Es muss Wasser abgeben und trocknen. Die Vorbereitung der Fasern, das Formen und das Trocknen sind verschiedene Arbeitsschritte; unser Lernbild zeigt nur diese Grundidee.",
+      "Für das Jahr 105 ist überliefert, dass Cai Lun ein verbessertes Verfahren am Han-Hof vorstellte. Archäologische Papierfunde sind älter. Der Bericht über eine Verbesserung ist deshalb kein Beleg dafür, dass vor diesem Jahr niemand Papier herstellen konnte.",
+      "Das Robert C. Williams Museum ordnet frühe Papierreste aus Xuanquanzhi bei Dunhuang der Regierungszeit von Kaiser Wu zu, etwa 140 bis 86 v. Chr. Das ist eine zeitliche Einordnung bestimmter Funde, kein ermittelter Tag der ersten Papierherstellung.",
+      "Papierherstellung, Schrift und Druck sind unterschiedliche Entwicklungen. Papier kann eine Nachricht tragen; welche Schrift und Sprache jemand verwendet und wie viele Kopien hergestellt werden, sind andere Fragen. Die Verbindungen zu Cai Lun, zur Schrift und zum Buchdruck helfen beim Vergleichen. Das Wasserthema erklärt zusätzlich den Unterschied zwischen Abfließen und Verdunsten beim Trocknen."
     ],
     "facts": [
       {
@@ -2788,10 +2841,12 @@
       }
     ],
     "more": [
-      "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
-      "Dünne Papierblätter lassen sich zusammenlegen, beschriften und zu Büchern verbinden. Papierherstellung, Schrift und Druck ergänzen einander; jede Entwicklung hatte ihre eigene Geschichte."
+      "Ein Fundstück und ein späterer Text sind verschiedene Arten von Quellen. Ein altes Papierstück kann frühere Materialnutzung belegen. Ein Bericht über Cai Luns Handeln beantwortet eine andere Frage. Beide Belege müssen mit ihrer Datierung und ihrem Zusammenhang gelesen werden.",
+      "Der Museumstext beschreibt einen späteren Fortschritt bei der Formdecke des Schöpfrahmens: Eine glatte Oberfläche erleichterte es, das feuchte Blatt abzulösen und den Rahmen wiederzuverwenden. Diese Verbesserung ist nicht dasselbe wie die allererste Herstellung von Papier und wird hier nicht auf einen erfundenen Tag datiert.",
+      "In einem Sieb kann Wasser durch Öffnungen ablaufen. Auf einer geschlossenen Platte passiert dieser Abfluss nicht auf demselben Weg; Wasser könnte trotzdem verdunsten. Daraus folgt weder „auf einer Platte verschwindet Wasser niemals“ noch eine bestimmte Trocknungsdauer.",
+      "Das eigene Bild zeigt vergrößerte gezeichnete Fasern und vereinfachte Wasserzeichen. Es ist keine Mikroskopaufnahme, keine Festigkeitsberechnung und keine vollständige Rekonstruktion einer Werkstatt in China im Jahr 105. Ein nützliches Prinzip und eine konkrete historische Arbeitsweise bleiben unterscheidbar."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Ein alter Papierfund und ein Bericht über eine spätere Verbesserung müssen sich nicht widersprechen: Sie können unterschiedliche Schritte einer langen Entwicklung sichtbar machen.",
     "locations": [
       {
         "label": "China – Ursprungsregion",
@@ -2802,7 +2857,10 @@
     ],
     "related": [
       "person-cai_lun",
-      "history-writing"
+      "history-writing",
+      "history-nalanda",
+      "history-printing",
+      "science-water-cycle"
     ],
     "sources": [
       {
@@ -2832,14 +2890,54 @@
       "prompt": "Was passt zu Cai Lun?",
       "answers": [
         "Er verbesserte ein bereits bekanntes Verfahren",
-        "Er erfand allein jede Art von Papier",
-        "Er erfand das Internet"
+        "Er entwickelte Schrift und Papier als dieselbe Erfindung",
+        "Vor seinem Bericht gab es noch keine Papierblätter"
       ],
       "correct": 0,
-      "why": "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer."
+      "why": "Ältere Papierfunde weisen auf eine frühere Nutzung des Materials hin. Für 105 ist die Vorstellung eines verbesserten Verfahrens durch Cai Lun überliefert. Eine Weiterentwicklung bekannter Verfahren ist etwas anderes als der voraussetzungslose Beginn sämtlichen Papiers."
     },
-    "sourceNote": "Die Fachbelege unterscheiden ältere archäologische Papierfunde von der für105 überlieferten Vorstellung eines verbesserten Verfahrens am Han-Hof. Das Museum beschreibt frühere Papierfunde in China; der konkrete Vergleich bei T.H.Barrett ordnet den Verbesserungsbericht ein. Der Enzyklopädieeintrag beschreibt Cai Luns Hofamt und die Weiterentwicklung vorhandener Verfahren. Daraus wird weder ein genauer erster Erfindungstag noch die voraussetzungslose Erfindung sämtlichen Papiers durch einen einzigen Menschen abgeleitet. Schrift, Papierherstellung und Druck haben jeweils ihre eigene Geschichte.",
-    "checkedAt": "2026-11-07"
+    "sourceNote": "Fachabgleich mit dem tatsächlich gelesenen Abschnitt „Early Papermaking in China“ des Robert C. Williams Museum of Papermaking: vorhandene Pflanzenfasern in Wasser, Schöpfrahmen, Formen und Trocknen sowie spätere Verbesserungen der Formdecke. Die Einordnung bestimmter Funde bei Xuanquanzhi in die Regierungszeit von Kaiser Wu ist keine Feststellung des ersten Erfindungstags. Die Darstellung des Museums, der konkrete historische Vergleich bei T. H. Barrett und der Berkshire-Eintrag unterscheiden ältere Papierfunde vom für 105 überlieferten Verbesserungsbericht. Das eigene Sieb-/Plattenbild erklärt einen möglichen Wasserweg; es berechnet weder Wasseranteil noch Festigkeit oder Dauer. Die spätere europäische Werkstattbeschreibung auf der Museumsseite wird nicht als chinesische Werkstatt des Jahres 105 ausgegeben. Schrift, Papierherstellung und Druck bleiben getrennte Entwicklungen.",
+    "checkedAt": "2026-11-07",
+    "learning": {
+      "starter": "Ein Blatt beginnt im Lernbild mit bereits vorhandenen Pflanzenfasern und Wasser.",
+      "observe": "Wechsle zwischen Faserbrei, Schöpfrahmen und trockenem Blatt. Vergleiche den Wasserweg bei einem Sieb und einer geschlossenen Platte.",
+      "benefit": "Du trennst Fasern, Wasser und Arbeitsschritte und unterscheidest einen älteren Fund von einem späteren Verbesserungsbericht."
+    },
+    "revision": 1,
+    "questionFeedback": {
+      "hint": "Überlege, welche verschiedenen Arten von Belegen es über eine frühe Technik geben kann.",
+      "wrongReasons": [
+        null,
+        "Schrift ist ein Zeichensystem, Papier ein Material. Die Quellen ordnen Cai Lun einer Weiterentwicklung der Papierherstellung zu, nicht einer gleichzeitigen Erfindung beider Entwicklungen.",
+        "Die im Artikel besprochenen archäologischen Papierfunde sind älter als der Bericht für 105. Der Bericht kann daher nicht das Fehlen jedes früheren Papierblatts beweisen."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-paper:forming",
+        "difficulty": "medium",
+        "prompt": "Nach dem Schöpfen liegt ein feuchtes Fasernetz auf einem Sieb. Welche Aussage passt?",
+        "answers": [
+          "Ein Blatt ist geformt, muss aber noch Wasser abgeben",
+          "Das Blatt ist bereits für jede Schreibflüssigkeit fertig",
+          "Das Wasser hat die Pflanzenfasern erst hergestellt"
+        ],
+        "correct": 0,
+        "why": "Das Sieb hält vorhandene Fasern zurück. Die geformte Schicht kann noch viel Wasser enthalten und muss weiter entwässern und trocknen. Form, Feuchtigkeit und Eignung für eine bestimmte Schreibflüssigkeit sind verschiedene Eigenschaften."
+      },
+      {
+        "id": "history-paper:old-find",
+        "difficulty": "hard",
+        "prompt": "Ein Papierfund ist älter als 105. Ein Text berichtet für 105 von Cai Luns Verbesserung. Was lässt sich daraus begründet schließen?",
+        "answers": [
+          "Frühere Papiernutzung und eine spätere Verbesserung können zusammenpassen",
+          "Der spätere Bericht macht jedes ältere Papierstück unmöglich",
+          "Ein älteres Papierstück beweist, dass Cai Lun nichts weiterentwickelte"
+        ],
+        "correct": 0,
+        "why": "Der Fund und der Bericht tragen unterschiedliche Aussagen. Ein älteres Papierstück widerspricht der Vorstellung eines absoluten Anfangs im Jahr 105; es schließt eine spätere Verbesserung vorhandener Verfahren nicht aus."
+      }
+    ]
   },
   {
     "id": "history-zero",
@@ -2937,7 +3035,9 @@
       }
     ],
     "related": [
-      "invention-compass"
+      "invention-compass",
+      "history-polynesia",
+      "history-kilwa"
     ],
     "sources": [
       {
@@ -3033,26 +3133,32 @@
     "id": "history-printing",
     "category": "history",
     "title": "Viele Bücher aus einer Druckwerkstatt",
-    "intro": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+    "intro": "Eine zusammengesetzte Druckform kann mehrere Abzüge liefern. Bewegliche Zeichen lassen sich danach für einen anderen Text neu anordnen.",
     "paragraphs": [
-      "Damit konnten viele ähnliche Buchseiten schneller hergestellt werden.",
-      "In China und Korea hatte man schon früher mit beweglichen Zeichen gedruckt."
+      "Bei den hier beschriebenen Hochdruckverfahren bekommen erhabene Teile einer Druckform Farbe. Der Druck überträgt ihr Bild auf einen Bogen. Mit derselben vorbereiteten Form lassen sich mehrere Abzüge herstellen. Das ist etwas anderes, als jede Seite neu von Hand abzuschreiben.",
+      "Eine ganze Seite kann in einen Holzstock geschnitten sein. Sie kann aber auch aus einzelnen beweglichen Zeichen, den Lettern, zusammengesetzt werden. Bei solchen Lettern bleiben die Teile nach dem Drucken verwendbar: Für einen anderen Text kann man sie neu ordnen. Auch ein Holzstock kann mehrfach drucken; der Unterschied liegt also nicht darin, dass nur Lettern mehrere Abzüge erlauben.",
+      "Bewegliche Druckzeichen gab es in China und Korea schon vor Gutenbergs Mainzer Drucksystem. Ein besonderer erhaltener Beleg ist ein Band des koreanischen Jikji. Laut der französischen Nationalbibliothek BnF wurde er 1377 in Cheongju mit beweglichen Metalltypen gedruckt. Das ist ein Beleg für eine frühere Druckpraxis und nicht der Tag, an dem weltweit erstmals jemand das Drucken erfand.",
+      "Johannes Gutenberg entwickelte um 1450 in Mainz ein aufeinander abgestimmtes Drucksystem. Dazu gehörten gegossene Metalllettern, eine passende Druckfarbe und eine geeignete Presse. Nicht ein einzelner Buchstabe allein erklärt, warum dieses System arbeitete. Die Teile und die Arbeitsschritte mussten zusammenpassen.",
+      "Das Foto zeigt eine im Gutenberg-Museum aufgenommene Druckform. Du kannst erhabene, seitenverkehrte Zeichen und einzelne aneinander gesetzte Teile sehen. Die heutige Museumsaufnahme ist von der historischen Entstehung des Druckverfahrens zu unterscheiden. Unser Lernbild benutzt eigene heutige Zeichen und zeigt nur einen vereinfachten Ausschnitt.",
+      "Mehrere Abzüge können dieselbe Zeichenfolge bewahren. Steckt eine Vertauschung in der Vorlage, kann sie sich in mehreren Abzügen wiederfinden. Gleich aussehende Drucke sind deshalb noch kein Beweis, dass jede darin enthaltene Aussage richtig ist. Dafür muss man den Text selbst und seine Belege prüfen."
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "um 1450 (europäisches Drucksystem)"
+        "label": "Zeitanker",
+        "text": "Um 1450: Gutenbergs europäisches Drucksystem in Mainz; frühere bewegliche Druckzeichen in Ostasien."
       },
       {
-        "label": "Wo?",
-        "text": "Mainz, heute Deutschland; ältere Vorbilder in China und Korea"
+        "label": "Material und Verfahren",
+        "text": "Schriftträger, gesetzte Zeichen, Farbe und Presse sind verschiedene Teile der Erklärung."
       }
     ],
     "more": [
-      "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen.",
-      "Bewegliche Zeichen werden nach dem Drucken wieder auseinandergenommen. Für die nächste Seite können dieselben Zeichen in einer anderen Reihenfolge benutzt werden. Das spart Arbeit gegenüber einer komplett neu geschnitzten Seite."
+      "Für eine Seite braucht man oft mehrere Exemplare desselben Zeichens. Ein einzelnes A kann nicht gleichzeitig zwei verschiedene Plätze derselben gesetzten Form besetzen. Ein heutiger Wortvergleich mit nur drei Zeichen zeigt deshalb eine Grundidee und nicht den gesamten Vorrat einer historischen Werkstatt.",
+      "Gutenbergs Lettern umfassten mehr als ein vereinfachtes Alphabet mit nur 26 Teilen. Es gab etwa Groß- und Kleinbuchstaben, Satzzeichen, Verbindungen von Buchstaben und Abkürzungen. Im Lernbild halten wir den Zeichenvorrat absichtlich klein. Daraus folgt keine Anzahl der tatsächlich benötigten historischen Lettern.",
+      "Die Presse und die Farbe gehören zur Erklärung dazu. Die Universitätsbibliothek Heidelberg beschreibt eine für den Druck angepasste Handpresse und eine zähflüssige Druckfarbe. Gutenberg druckte nicht ausschließlich auf Papier: Auch Pergament konnte als Träger dienen. Material, Schrift und Druckverfahren sind verschiedene Merkmale.",
+      "„Ältester erhaltener Beleg“ und „erste Erfindung überhaupt“ sind unterschiedliche Aussagen. Die französische Nationalbibliothek BnF bewahrt den erhaltenen zweiten Jikji-Band auf und nennt ihn als ältestes bekanntes Dokument, das mit beweglichen Metalltypen gedruckt wurde. Daraus lässt sich kein weltweit erster Erfindungstag ableiten. Vergleiche mit dem Papier- und dem Schriftartikel: Ein Fund oder ein einzelner Text muss genau zu der Frage passen, die du mit ihm beantworten willst."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Auch ein Holzstock kann viele Abzüge erzeugen. Bewegliche Lettern helfen zusätzlich dabei, die Zeichen für einen anderen Text neu zusammenzusetzen.",
     "locations": [
       {
         "label": "Mainz, Deutschland",
@@ -3064,24 +3170,30 @@
     "related": [
       "person-johannes_gutenberg",
       "invention-printing",
-      "person-rabindranath_tagore"
+      "person-rabindranath_tagore",
+      "history-paper",
+      "history-writing"
     ],
     "sources": [
       {
-        "label": "Stadt Mainz / Gutenberg.de",
-        "url": "https://www.gutenberg.de/zeit/zeitleiste_gutenberg"
+        "label": "Gutenberg-Museum Mainz · Ostasiatische Drucktraditionen",
+        "url": "https://www.mainz.de/microsite/gutenberg-museum/Forschung_Sammlung_/Ostasien_und_Islam"
       },
       {
-        "label": "Stadt Mainz / Gutenberg.de",
+        "label": "Stadt Mainz · Die Erfindung Gutenbergs",
         "url": "https://www.gutenberg.de/erfindung/"
       },
       {
-        "label": "Stadt Mainz / Gutenberg.de",
-        "url": "https://www.gutenberg.de/erfindung/vor_gutenberg"
+        "label": "Universitätsbibliothek Heidelberg · Bewegliche Lettern",
+        "url": "https://www.ub.uni-heidelberg.de/ausstellungen/buchkunst2014/sektion3/III_20.html"
       },
       {
-        "label": "UNESCO, Memory of the World",
-        "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915"
+        "label": "Universitätsbibliothek Heidelberg · Presse und Druckfarbe",
+        "url": "https://www.ub.uni-heidelberg.de/ausstellungen/buchkunst2014/sektion3/III_25.html"
+      },
+      {
+        "label": "Bibliothèque nationale de France · Jikji, erhaltener Band und Druck von 1377",
+        "url": "https://www.bnf.fr/en/jikji-treasure-world-printing"
       }
     ],
     "aliases": [
@@ -3098,12 +3210,55 @@
       "prompt": "Wo gab es schon vor Gutenberg bewegliche Druckzeichen?",
       "answers": [
         "In China und Korea",
-        "Nirgends auf der Welt",
-        "Auf dem Mond"
+        "Nur in europäischen Schreibstuben",
+        "In keiner Region: vorher gab es ausschließlich ganze Druckplatten"
       ],
       "correct": 0,
-      "why": "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen."
-    }
+      "why": "Das Gutenberg-Museum beschreibt frühere bewegliche Druckzeichen in China und Korea. Der erhaltene koreanische Jikji-Band von 1377 belegt einen Druck mit beweglichen Metalltypen vor Gutenbergs Mainzer System um 1450."
+    },
+    "questionFeedback": {
+      "hint": "Suche im Artikel nach Belegen, die zeitlich vor dem Mainzer Drucksystem liegen.",
+      "wrongReasons": [
+        null,
+        "Schreibstuben und beweglicher Druck sind unterschiedliche Verfahren. Die Fachbelege nennen frühere bewegliche Druckzeichen in Ostasien.",
+        "Ganze Druckplatten und einzelne bewegliche Zeichen sind verschiedene Möglichkeiten. Die genannten ostasiatischen Belege widersprechen der Annahme, zuvor habe es nur ganze Platten gegeben."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-printing:reorder",
+        "difficulty": "medium",
+        "prompt": "Im heutigen Lernbild werden dieselben drei Modellzeichen B, A und D anders angeordnet. Was zeigt dieser Vergleich?",
+        "answers": [
+          "Dieselben einzelnen Zeichen können für eine andere Reihenfolge wiederverwendet werden",
+          "Allein der Wechsel der Papierfarbe vertauscht die Zeichen",
+          "Für jede neue Reihenfolge müssen die bisherigen Zeichen vollständig zerstört werden"
+        ],
+        "correct": 0,
+        "why": "Der Vorrat aus B, A und D bleibt derselbe; ihre Plätze wechseln. Das erklärt einen Nutzen beweglicher Teile. Es sagt nicht, dass eine historische Seite nur drei Lettern brauchte."
+      },
+      {
+        "id": "history-printing:repeated-error",
+        "difficulty": "hard",
+        "prompt": "Drei Modellabzüge übernehmen dieselbe Vertauschung aus einer vorbereiteten Vorlage. Was folgt daraus?",
+        "answers": [
+          "Das gleiche Druckbild kann auch denselben vorbereiteten Fehler wiederholen",
+          "Drei gleiche Abzüge beweisen automatisch, dass der Text sachlich richtig ist",
+          "Die Zahl der Abzüge bestimmt, in welcher Sprache der Text geschrieben ist"
+        ],
+        "correct": 0,
+        "why": "Die Vervielfältigung bewahrt hier die vorbereitete Zeichenfolge einschließlich der Vertauschung. Sachliche Richtigkeit muss getrennt am Inhalt und seinen Belegen geprüft werden."
+      }
+    ],
+    "learning": {
+      "starter": "Eine vorbereitete Form kann mehrmals ein Bild übertragen. Einzelne bewegliche Zeichen können außerdem neue Plätze bekommen.",
+      "observe": "Vergleiche den Zeichenvorrat, die gesetzte Reihenfolge und die Abzüge. Was bleibt gleich, was ändert sich, und welche Aussage über die Vergangenheit braucht zusätzliche Belege?",
+      "benefit": "Du unterscheidest Vervielfältigen, Umordnen und inhaltliche Richtigkeit und ordnest Gutenbergs Mainzer System neben älteren Drucktraditionen ein."
+    },
+    "sourceNote": "Das Thema behandelt ausgewählte historische Hochdruckverfahren. Ganze Druckstöcke können ebenso wie gesetzte Formen mehrfach verwendet werden; Druckgeschichte wird deshalb nicht auf die Erfindung eines einzelnen Menschen verkürzt. „Ältester erhaltener Nachweis“ wird von einem unbekannten ersten Erfindungstag unterschieden. Die Modelle verwenden eigene heutige Zeichen, keine Originalseite des Jikji oder der Gutenberg-Bibel; sie messen keine Werkstattkosten oder historische Auflage. Die Stadtmarkierung bleibt ein ungefährer Bezugspunkt für Mainz, keine Koordinate einer nachgewiesenen Werkbank.",
+    "checkedAt": "2026-11-08",
+    "revision": 1,
+    "image": "history-printing-forme"
   },
   {
     "id": "history-voyages1492",
@@ -4796,8 +4951,8 @@
     ],
     "sources": [
       {
-        "label": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
-        "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html"
+        "label": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+        "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/"
       },
       {
         "label": "Deutsches Museum · Motorwagen, Patent und Bauteile",
@@ -4834,9 +4989,9 @@
       "observe": "Verändere nur die Verbindung im eigenen Schema. Trenne den möglichen Antriebsweg von der tatsächlichen Bewegung eines Wagens.",
       "benefit": "Du erkennst, was eine Bauteilzeichnung erklärt und welche weiteren Beobachtungen für eine Aussage über Bewegung fehlen."
     },
-    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 gelesenen Patentamts- und Museumsabschnitten sowie OpenStax zum Trägheitsprinzip. Benz’ Motorwagen und Patent werden konkret eingeordnet; die gesamte Fahrzeuggeschichte wird nicht einer einzigen Person zugeschrieben. Das eigene Verbindungsschema ist kein historischer Bauplan, keine Bewegungsrechnung und kein Beleg dafür, dass ein Rad bei einer Unterbrechung sofort stillsteht.",
-    "checkedAt": "2026-11-06",
-    "revision": 2,
+    "sourceNote": "Eigene Erklärung nach den am 9.11.2026 tatsächlich gelesenen Abschnitten von Qatar Museums und dem Deutschen Museum sowie dem am 6.11.2026 gelesenen OpenStax-Abschnitt zum Trägheitsprinzip. Benz’ Motorwagen und Patent werden konkret eingeordnet; die gesamte Fahrzeuggeschichte wird nicht einer einzigen Person zugeschrieben. Das eigene Verbindungsschema ist kein historischer Bauplan, keine Bewegungsrechnung und kein Beleg dafür, dass ein Rad bei einer Unterbrechung sofort stillsteht.",
+    "checkedAt": "2026-11-09",
+    "revision": 3,
     "questionFeedback": {
       "hint": "Welche Bauteile müssen zusammenspielen, damit eine neue Art von Fahrzeug angetrieben werden kann?",
       "wrongReasons": [
@@ -4870,7 +5025,7 @@
       }
     ],
     "more": [
-      "Bertha Benz lebte von 1849 bis 1944. Das Patentamt beschreibt ihre finanzielle Unterstützung und die praktische Erprobung des Motorwagens. Die Fahrt von 1888 war ein wichtiger Beitrag zur Entwicklung.",
+      "Bertha Benz lebte von 1849 bis 1944. Die Stadt Pforzheim nennt ihre Lebensdaten und die Fernfahrt; Qatar Museums beschreibt ihre finanzielle Unterstützung und ordnet die Fahrt mit dem Motorwagen Nr. 3 ein. Die Fahrt von 1888 war ein wichtiger Beitrag zur Entwicklung.",
       "Die bekannte Fernfahrt von 1888 folgte auf das Patentjahr 1886. Der dabei benutzte weiterentwickelte Motorwagen Nr. 3 ist von der frühen Nr. 1 zu unterscheiden. Die längere Strecke stellte auch Fragen nach Steigungen und der Versorgung unterwegs. Einzelne Reparaturgeschichten werden hier nicht als Anleitung nachgestellt. Unterwegs wurden Schwierigkeiten sichtbar, die ein Test in einer Werkstatt nicht erfasst, etwa bei Steigungen und der Versorgung.",
       "Mit zwei eigenen Testnotizen vergleichen wir, welche Bedingungen untersucht wurden. Eine Notiz beschreibt eine Untersuchung am selben Platz, die andere zusätzlich eine Strecke. Die Angabe „untersucht“ ist noch keine Angabe „bestanden“. Ein einzelner Test belegt außerdem nicht alle denkbaren späteren Einsatzbedingungen.",
       "Die konkreten Beiträge von Finanzierung, technischer Arbeit, Fahrt und Rückmeldung gehören zusammen. Bertha Benz’ Rolle wird deshalb nicht auf einen einzigen Moment verkürzt. Auch die mitreisenden Söhne und Menschen, die unterwegs unterstützten, gehörten zur Geschichte der Fahrt. Erfindungen brauchen Menschen, die sie testen, finanzieren und im Alltag verbessern.",
@@ -4897,12 +5052,16 @@
     ],
     "sources": [
       {
-        "label": "Deutsches Patent- und Markenamt · Berthas Fahrt und Motorwagen Nr. 3",
-        "url": "https://www.dpma.de/dpma/veroeffentlichungen/patentefrauen/berthabenz/index.html"
+        "label": "Qatar Museums · Bertha Benz und Motorwagen Nr. 3",
+        "url": "https://qm.org.qa/en/stories/all-stories/bertha-benz-and-the-patent-motorwagen/"
       },
       {
         "label": "Deutsches Museum · Motorwagen, Patent und Bauteile",
         "url": "https://www.deutsches-museum.de/museum/presse/meldung/eine-ikone-der-automobilgeschichte-wird-140"
+      },
+      {
+        "label": "Stadt Pforzheim · Bertha Benz: Lebensdaten und Fernfahrt",
+        "url": "https://www.pforzheim.de/stadt/ehrenbuerger-persoenlichkeiten/beruehmte-persoenlichkeiten/bertha-benz.html"
       }
     ],
     "aliases": [
@@ -4931,9 +5090,9 @@
       "observe": "Wechsle die Testnotiz. Unterscheide „nicht untersucht“, „untersucht“ und ein tatsächlich festgestelltes Ergebnis.",
       "benefit": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen."
     },
-    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 tatsächlich gelesenen Abschnitten des Deutschen Patent- und Markenamts und des Deutschen Museums. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung.",
-    "checkedAt": "2026-11-06",
-    "revision": 2,
+    "sourceNote": "Eigene Erklärung nach den am 9.11.2026 tatsächlich gelesenen Abschnitten von Qatar Museums, dem Deutschen Museum und der Stadt Pforzheim. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Die städtische Biografie trägt die Lebensdaten und die Fernfahrt; die Museumsdarstellungen tragen die Einordnung von Finanzierung, Fahrzeug und Erprobung. Genaue Fahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder historische Messergebnisse noch eine heutige Zulassung.",
+    "checkedAt": "2026-11-09",
+    "revision": 4,
     "questionFeedback": {
       "hint": "Welche Beiträge werden sichtbar, wenn aus einer technischen Idee ein im Alltag benutztes Fahrzeug werden soll?",
       "wrongReasons": [
@@ -5895,12 +6054,12 @@
         "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
       },
       {
-        "label": "BBAW-Archiv · Alexander von Humboldt",
-        "url": "https://archiv.bbaw.de/nachlaesse/nachlaesse/humboldt-alexander-von"
+        "label": "Humboldt-Stiftung · Lebensdaten und Forschungsgebiet",
+        "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt"
       },
       {
-        "label": "BBAW · Pflanzengeographie als gemeinsame Forschungsarbeit (PDF)",
-        "url": "https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf"
+        "label": "BBAW bei idw · Pflanzengeographie und Zusammenarbeit (englisches Original-PDF)",
+        "url": "https://idw-online.de/de/attachmentdata85663"
       },
       {
         "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von1807",
@@ -5934,9 +6093,9 @@
       "observe": "Wechsle zwischen den beiden erfundenen Notizen. Vergleiche jeweils dieselbe Höhe und trenne die Zahlen vom möglichen Grund eines Unterschieds.",
       "benefit": "Du vergleichst Angaben mit gleichen Einheiten und erkennst, welche weitergehende Erklärung zusätzliche Belege braucht."
     },
-    "sourceNote": "Eigene Erklärung nach den benannten institutionellen Biografie-, Sammlungs- und Forschungsabschnitten. Die Katalogbeschreibung des Buches von 1807 ist keine behauptete vollständige Lektüre des historischen Werkes. José de la Cruz ist ein konkret benannter Beteiligter; die Darstellung wird nicht als menschenleere Entdeckungsreise erzählt. Das eigene Temperaturbeispiel ist erfunden und keine Rekonstruktion des Naturgemäldes oder historischer Daten.",
+    "sourceNote": "Eigene Erklärung nach institutionellen Fachbelegen. Die Lebensdaten bei der Humboldt-Stiftung und die englische Originalmitteilung der BBAW vom28.01.2021 bei idw wurden am11.11.2026 ergänzend gelesen; frühere Quellenakten bleiben erhalten. Die Katalogbeschreibung des Buches von 1807 ist keine behauptete vollständige Lektüre des historischen Werkes. José de la Cruz ist ein konkret benannter Beteiligter; die Darstellung wird nicht als menschenleere Entdeckungsreise erzählt. Das eigene Temperaturbeispiel ist erfunden und keine Rekonstruktion des Naturgemäldes oder historischer Daten.",
     "checkedAt": "2026-11-04",
-    "revision": 1,
+    "revision": 2,
     "questionFeedback": {
       "hint": "Warum könnte jemand auf einer Reise mehrere Messgeräte benutzen und Beobachtungen verschiedener Orte vergleichen?",
       "wrongReasons": [
@@ -8146,7 +8305,8 @@
     "locations": [],
     "related": [
       "invention-satellite",
-      "invention-compass"
+      "invention-compass",
+      "history-polynesia"
     ],
     "sources": [
       {
@@ -8779,7 +8939,11 @@
     "intro": "Polynesische Seefahrerinnen und Seefahrer nutzten genaue Naturbeobachtung für weite Reisen.",
     "paragraphs": [
       "Sterne, Sonne und gleichmäßige Wellen helfen bei der Orientierung. Dieses Wissen wurde über Generationen gelernt und weitergegeben.",
-      "Doppelrumpfkanus konnten Menschen und Vorräte über große Entfernungen tragen. Verschiedene Inselgruppen wurden zu unterschiedlichen Zeiten besiedelt."
+      "Doppelrumpfkanus konnten Menschen und Vorräte über große Entfernungen tragen. Verschiedene Inselgruppen wurden zu unterschiedlichen Zeiten besiedelt.",
+      "Eine Dünung kann auch weit weg von dem Windgebiet unterwegs sein, das sie erzeugt hat. Solche regelmäßigen Wellen sind oft brauchbare Richtungshinweise. Sie bleiben aber nicht unter allen Bedingungen unverändert: Mehrere Dünungen und örtlicher Wind können das Muster verwirren.",
+      "Am Himmel hilft nicht einfach irgendein heller Punkt. Navigatorinnen und Navigatoren kennen Himmelszeichen und ihre Beziehung zum Horizont. Steigt ein benutzter Stern zu hoch oder verschwindet, können andere bekannte Hinweise übernehmen.",
+      "Dabei muss die Richtung des Hinweises zur eigenen Fahrtrichtung passen. Derselbe Punkt kann vor dem Boot, seitlich oder dahinter liegen. Eine Richtung ist außerdem noch keine vollständige Ortsbestimmung; Wind und Strömung können eine Fahrt beeinflussen.",
+      "Eine moderne Fahrt macht das Lernen anschaulich: Die Hōkūleʻa fuhr 1976 unter der Führung von Mau Piailug nach Tahiti und zurück. Er kam von Satawal in Mikronesien. Sein Wissen gab er an Lernende weiter, darunter den Hawaiianer Nainoa Thompson. Verschiedene pazifische Gemeinschaften haben ihre eigenen Traditionen."
     ],
     "facts": [
       {
@@ -8797,31 +8961,51 @@
     ],
     "more": [
       "Ein Stern bleibt nicht die ganze Nacht an derselben Stelle. Erfahrene Navigatoren wechseln deshalb den Orientierungspunkt.",
-      "Traditionelle Navigation wird auch heute gelehrt. Europäische Ankünfte waren nicht der Beginn der Geschichte dieser Inseln."
+      "Traditionelle Navigation wird auch heute gelehrt. Europäische Ankünfte waren nicht der Beginn der Geschichte dieser Inseln.",
+      "Ein Sternkompass ordnet bekannte Richtungen am Horizont im Gedächtnis. Die Polynesian Voyaging Society erklärt einen von Nainoa Thompson entwickelten hawaiianischen Sternkompass. Er ist kein universelles Schema aller pazifischen Kulturen. Die hier gezeichneten vier Richtungen kopieren diese besondere Darstellung nicht.",
+      "Unser Richtungsspiel friert eine gedachte Situation ein. Ein erfundener Referenzpunkt liegt darin östlich; nur das Bootssymbol dreht sich. Es ist kein wirklicher Sternplan, keine Kursvorhersage und keine Rekonstruktion eines historischen Navigationsinstruments. Wechselnde Himmelssicht und schwierige Wellenmuster werden getrennt als Fragen an Hinweise behandelt."
     ],
     "surprise": "Eine Landkarte kann auch als Wissen im Kopf und in Erzählungen weitergegeben werden.",
     "related": [
       "history-compass",
       "science-gps",
-      "science-currents"
+      "science-currents",
+      "history-khipu"
     ],
     "sources": [
       {
-        "label": "Te Ara · Traditionelle Navigation",
-        "url": "https://teara.govt.nz/en/canoe-navigation/page-2"
+        "label": "Te Ara · Traditionelle Navigation · Archivfassung vom 31.05.2026",
+        "url": "https://web.archive.org/web/20260531093552/https://teara.govt.nz/en/canoe-navigation/page-2"
+      },
+      {
+        "label": "Polynesian Voyaging Society · Holding a Course, Horizontbezug und Grenzen von Wellenhinweisen",
+        "url": "https://worldwidevoyage.hokulea.com/education-at-sea/polynesian-navigation/polynesian-non-instrument-wayfinding/holding-a-course/"
+      },
+      {
+        "label": "Te Ara · Decline and renaissance of canoe voyaging, Hōkūleʻa 1976 und Wissensweitergabe · Archivfassung vom 31.05.2026",
+        "url": "https://web.archive.org/web/20260531093753/https://teara.govt.nz/en/canoe-navigation/page-4"
+      },
+      {
+        "label": "Te Ara · The direction and timing of settlement, unterschiedliche Inselgruppen und Zeiträume · Archivfassung vom 12.08.2024",
+        "url": "https://web.archive.org/web/20240812235110/https://teara.govt.nz/en/map/1772/the-direction-and-timing-of-settlement"
       }
     ],
     "question": {
       "prompt": "Was half bei der traditionellen Navigation?",
       "answers": [
         "Sterne und Meereswellen beobachten",
-        "Nur auf Zufall vertrauen",
-        "Ein Smartphone benutzen"
+        "Jede Welle zeigt unmittelbar zur gesuchten Insel",
+        "Sterne stehen die ganze Nacht unbewegt am selben Ort"
       ],
       "correct": 0,
       "why": "Die Orientierung beruhte auf sorgfältig gelerntem Wissen über Himmel und Meer."
     },
-    "aliases": [],
+    "aliases": [
+      "Polynesische Navigation",
+      "Hōkūleʻa",
+      "Hokulea",
+      "Sternkompass und Dünung"
+    ],
     "locations": [
       {
         "label": "Samoa – eine Inselgruppe Polynesiens",
@@ -8836,7 +9020,49 @@
       "era": "Forschungsreisen",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen. TeAra und die eigene Navigationserklärung der Polynesian Voyaging Society am 07.11.2026 tatsächlich gelesen; eigene deutsche Erklärung. Gleichmäßige Dünung wird nicht als immer unveränderlich behandelt. Mau Piailug wird als mikronesischer Lehrer eingeordnet, nicht als Vertreter einer einzigen einheitlichen polynesischen Tradition. Besondere historische/hawaiianische Sternkompassgrafiken werden nicht kopiert; die eigene Draufsicht zeigt nur vier Richtungen und ein erfundenes Bootssymbol. Das gesondert lizenzgeprüfte Foto zeigt die moderne Hōkūleʻa bei ihrer Rückkehr nach Honolulu 1976, kein Boot aus dem Zeitanker 1000. Alte Auswahlwortlaute werden über den vorhandenen Mechanismus getrennt erhalten; keine Fehlantwort wird umbenannt oder neu als richtig gewertet. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "questionFeedback": {
+      "hint": "Vergleiche die Hinweise über die Zeit. Was verändert sich?",
+      "wrongReasons": [
+        null,
+        "Eine Wellenrichtung zeigt nicht von selbst auf die gesuchte Insel. Auch Dünung kann sich verändern oder von anderen Wellen überlagert sein.",
+        "Sterne erscheinen im Lauf der Nacht an anderen Stellen. Ein brauchbarer Horizonthinweis muss erkannt und passend weiterverwendet oder gewechselt werden."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-polynesia:star-reference",
+        "difficulty": "medium",
+        "prompt": "Ein bisher benutzter Stern steht inzwischen zu hoch für die bekannte Orientierung am Horizont. Welches Vorgehen passt zur beschriebenen Methode?",
+        "answers": [
+          "Seine Richtung für den Rest der Nacht unverändert annehmen",
+          "Die genaue Position allein aus irgendeinem hellen Punkt ablesen",
+          "Einen anderen bekannten und passenden Horizonthinweis verwenden"
+        ],
+        "correct": 2,
+        "why": "Die Sterne erscheinen im Lauf der Nacht an anderen Stellen. Erfahrene Navigation verbindet erkannte Himmelszeichen und nutzt passende weitere Hinweise; ein heller Punkt ist nicht automatisch ein genauer Ort."
+      },
+      {
+        "id": "history-polynesia:swell-limit",
+        "difficulty": "hard",
+        "prompt": "Das Boot bewegt sich plötzlich anders in den Wellen. Warum reicht das allein nicht, um sicher eine Kursänderung zu behaupten?",
+        "answers": [
+          "Weil Dünungen grundsätzlich keinerlei Richtungshinweise liefern",
+          "Weil sich auch das Wellenmuster geändert haben könnte",
+          "Weil das Boot aus jeder Lage automatisch zur Zielinsel fährt"
+        ],
+        "correct": 1,
+        "why": "Eine veränderte Bootsbewegung kann mit dem Kurs zusammenhängen. Wenn sich Dünung oder örtliche Windwellen ändern, gibt es aber auch eine andere Erklärung. Die Annahme eines gleichbleibenden Wellenhinweises muss geprüft werden."
+      }
+    ],
+    "learning": {
+      "starter": "Menschen lernen, Himmel und Meer genau zu beobachten. Mehrere bekannte Hinweise helfen dabei, eine Fahrtrichtung einzuschätzen.",
+      "observe": "Drehe das erfundene Bootssymbol und vergleiche den gleichen Richtungshinweis aus verschiedenen Blickrichtungen. Prüfe dann die Annahmen hinter einem Wellenhinweis.",
+      "benefit": "Du unterscheidest einen Richtungshinweis, den eigenen Blick und eine begründete Aussage über eine Fahrt."
+    },
+    "checkedAt": "2026-11-07",
+    "image": "history-polynesia",
+    "revision": 1
   },
   {
     "id": "history-timbuktu",
@@ -8844,8 +9070,12 @@
     "title": "Timbuktu: eine Stadt des Wissens",
     "intro": "In Westafrika trafen Handel, Bücher und gelehrte Menschen aufeinander.",
     "paragraphs": [
-      "Timbuktu liegt im heutigen Mali. Reisende brachten Waren, Nachrichten und Wissen über Handelswege dorthin.",
-      "In Schulen und an religiösen Lernorten wurden Texte gelesen und besprochen. Handschriften bewahrten Wissen."
+      "Timbuktu liegt im heutigen Mali, am Rand der Sahara. Die Stadt war ein wichtiger Ort für Handel und Lernen. Ihre wirtschaftliche und kulturelle Blüte im 15. und 16. Jahrhundert erklärt den Zeitanker um 1500; er ist kein Gründungsdatum.",
+      "Über die Handelswege südlich der Sahara gelangten unterschiedliche Waren nach Timbuktu. Die UNESCO nennt Salz aus dem Norden sowie Gold, Vieh und Getreide. Auch Handschriften wurden gehandelt. Gegenstände und Texte konnten weitergegeben werden; Lernen erforderte außerdem Menschen, die lasen, erklärten und miteinander arbeiteten.",
+      "Zur Gelehrsamkeit der Stadt gehörten islamische Schulen und Lernorte wie Sankore. Nach dem Überblick der Library of Congress wurden spätestens im 14. Jahrhundert wichtige Bücher in Timbuktu geschrieben und abgeschrieben. Die Stadt gehört damit zu einer langen schriftlichen Wissenskultur Westafrikas.",
+      "Die überlieferten Texte behandelten verschiedene Fragen. Ein in der Ausstellung beschriebenes Rechenlehrwerk erklärt Addition, Subtraktion, Multiplikation und Division mit Beispielen und Übersichten. Es ist ein Kommentar eines Gelehrten des 18. Jahrhunderts zu einem älteren Werk. Dieses Beispiel stammt also aus einer anderen Zeit als der Zeitanker um 1500.",
+      "Eine Abschrift ist eine von Hand hergestellte Kopie eines Textes. Ihr Datum ist nicht automatisch das Datum, an dem der Text zuerst entstand. Vergleiche im Lernbild zwei ausdrücklich erfundene Abschriften: Welche Angaben betreffen den Inhalt, welche den Zeitpunkt des Kopierens?",
+      "Auch Bauwerke gehören zu den Quellen der Stadtgeschichte. Die UNESCO beschreibt die großen Moscheen als Beispiele für Erdbau und traditionelle Pflege. Eine Handschrift, ein Gebäude und ein Bericht zeigen unterschiedliche Ausschnitte. Sie belegen nicht von allein, wie alle Menschen der Stadt lebten oder wer lesen konnte."
     ],
     "facts": [
       {
@@ -8862,34 +9092,51 @@
       }
     ],
     "more": [
-      "Eine Handschrift wird von Hand geschrieben. Kopieren und Bewahren brauchten viel Arbeit und sorgfältige Aufbewahrung.",
-      "Wissen entwickelte sich gleichzeitig an vielen Orten der Welt. Handelswege waren auch Wege für Ideen."
+      "Handelsplatz und Lernort sind verschiedene Funktionen einer Stadt, die einander begegnen können. Ein verkaufter Text zeigt, dass ein Schriftstück weitergegeben wurde. Er beweist noch nicht, dass jede kaufende Person den Inhalt verstand.",
+      "Wenn eine Handschrift als Abschrift datiert ist, betrifft diese Angabe zunächst das vorliegende Stück. Für die Entstehung des darin kopierten Werks braucht man weitere Angaben. Datum des Gegenstands und Geschichte des Textes sind zwei Fragen.",
+      "Historische Quellen müssen im Zusammenhang gelesen werden. Wer hat einen Text geschrieben oder kopiert, für wen war er gedacht, und welche Frage kann er beantworten? Eine ausgewählte Überlieferung vertritt nicht automatisch die ganze Bevölkerung.",
+      "Timbuktu und Kilwa stehen für unterschiedliche afrikanische Stadtgeschichten: Timbuktu lag an Handelswegen südlich der Sahara, Kilwa am Indischen Ozean. Ein Vergleich zeigt verschiedene Verbindungen von Städten und Wissen; daraus folgt keine hier nachgewiesene direkte Handelsroute zwischen beiden."
     ],
-    "surprise": "Alte Gebäude aus Erde bleiben erhalten, wenn Menschen sie regelmäßig pflegen und reparieren.",
+    "surprise": "In der beschriebenen Handschrift gehören die vier Grundrechenarten zum Lernstoff. Solche Texte machen konkrete Lehrinhalte sichtbar, statt nur einen berühmten Stadtnamen zu nennen.",
     "related": [
       "history-paper",
       "person-al_khwarizmi",
       "history-printing",
       "building-great-zimbabwe",
-      "building-djenne-mosque"
+      "building-djenne-mosque",
+      "history-kilwa",
+      "history-nalanda",
+      "history-mohenjo-daro"
     ],
     "sources": [
       {
-        "label": "UNESCO · Timbuktu",
-        "url": "https://whc.unesco.org/en/list/119/"
+        "label": "UNESCO World Heritage Centre · Timbuktu, Brief synthesis und Criterion (v) · Archivfassung vom 01.11.2026",
+        "url": "https://web.archive.org/web/20261101192622/https://whc.unesco.org/en/list/119/"
+      },
+      {
+        "label": "Library of Congress · Überblick zur schriftlichen Wissenskultur · Archivfassung vom 22.09.2026",
+        "url": "https://web.archive.org/web/20260922171926/https://www.loc.gov/exhibits/mali/mali-overview.html"
+      },
+      {
+        "label": "Library of Congress · Arithmetic Primer, konkretes Rechenlehrwerk · Archivfassung vom 14.08.2026",
+        "url": "https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11"
       }
     ],
     "question": {
       "prompt": "Warum ist Timbuktu für die Wissensgeschichte wichtig?",
       "answers": [
         "Die Stadt war ein Zentrum des Lernens und Handels.",
-        "Hier begann die erste Mondreise.",
-        "Dort gab es nie Bücher."
+        "Die Stadt war ausschließlich ein Warenlager ohne gelehrten Austausch.",
+        "Die Bedeutung der Stadt begann erst mit dem Druck europäischer Bücher."
       ],
       "correct": 0,
       "why": "Handel, Handschriften und gelehrte Menschen verbanden unterschiedliche Orte."
     },
-    "aliases": [],
+    "aliases": [
+      "Tombouctou",
+      "Timbuktu Mali",
+      "Handschriften Timbuktu"
+    ],
     "locations": [
       {
         "label": "Timbuktu, Mali",
@@ -8904,7 +9151,48 @@
       "era": "Frühe Neuzeit",
       "sensitive": false
     },
-    "sourceNote": "Der Zeitanker ordnet das Thema ein. Er ist weder ein genauer Beginn noch ein Ende einer ganzen Kultur. Heutige Küsten auf der Karte zeigen keine historischen Grenzen."
+    "sourceNote": "UNESCO-Abschnitte Brief synthesis und Criterion (v) sowie den Überblick und das konkrete Rechenlehrwerk der Library of Congress am 07.11.2026 gelesen. Der unveränderte Zeitanker bezeichnet die Blüte im15./16.Jahrhundert, kein Gründungsjahr. Das Rechenbeispiel der Ausstellung stammt aus dem18.Jahrhundert; nicht alle überlieferten Texte stammen aus derselben Zeit. Eigene deutsche Erklärung und mit KI-Unterstützung erstellte, ausdrücklich erfundene Abschriftkarten; keine Originalhandschrift, Schriftprobe, Vollerhebung der Bevölkerung oder kopierte Ausstellungsabbildung. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten. Quellenzugang am12.11.2026 nach den konkreten Zugriffsbefunden gezielt berichtigt: Die tatsächlich gelesene Herausgeberfassung des Arithmetic Primer vom14.08.2026 trägt dieselben drei Sachbelege zum Kommentar al-Rasmukis und den vier Grundrechenarten. Das Archivdatum ist kein Entstehungsdatum der Handschrift und kein neues globales Fachprüfdatum.",
+    "checkedAt": "2026-11-07",
+    "learning": {
+      "starter": "In Timbuktu trafen Reisende, Handel und Lernen zusammen. Handschriften konnten Wissen bewahren und weitergeben.",
+      "observe": "Vergleiche Inhalt und Datumsangaben der zwei erfundenen Abschriften. Was ändert sich beim Kopieren, und was lässt sich aus einer Abschrift allein noch nicht über eine ganze Stadt sagen?",
+      "benefit": "Du erklärst den Zusammenhang zwischen Wissensspeicherung, Transport und Lernen."
+    },
+    "questionFeedback": {
+      "hint": "Welche Rolle könnten Bücher, gelehrte Menschen und Handelswege für eine Stadt spielen? Prüfe den Bezug zur Wissensgeschichte.",
+      "wrongReasons": [
+        null,
+        "Warenhandel war wichtig, aber Bücher, Schulen und gelehrte Menschen gehören ebenfalls zu den beschriebenen Quellen. Die Einschränkung auf ein Warenlager lässt diesen Teil aus.",
+        "Die belegte handschriftliche Wissenskultur braucht keinen europäischen Buchdruck als Anfang. In Timbuktu wurden Bücher schon zuvor geschrieben und kopiert."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-timbuktu:copy-date",
+        "difficulty": "medium",
+        "prompt": "Auf einer Handschrift steht das Datum ihrer Abschrift. Welche Aussage lässt sich daraus allein noch nicht ableiten?",
+        "answers": [
+          "Wann die vorliegende Abschrift nach dieser Angabe hergestellt wurde.",
+          "Wann das darin kopierte Werk zum ersten Mal entstand.",
+          "Dass das Datum die vorliegende Handschrift betrifft."
+        ],
+        "correct": 1,
+        "why": "Das Datum der Abschrift beschreibt zunächst dieses Stück. Die erste Fassung des Textes kann älter sein; dafür braucht man einen eigenen Beleg."
+      },
+      {
+        "id": "history-timbuktu:source-scope",
+        "difficulty": "hard",
+        "prompt": "Ein erhaltenes Rechenlehrwerk enthält Beispiele für die vier Grundrechenarten. Welche Schlussfolgerung ist durch dieses Stück am besten gestützt?",
+        "answers": [
+          "Alle Menschen der Stadt konnten sämtliche Rechnungen fehlerfrei lösen.",
+          "Alle Handschriften der Stadt behandelten ausschließlich Mathematik.",
+          "Diese Rechenverfahren gehören zum beschriebenen Lehrstoff; über die Kenntnisse aller Menschen braucht man weitere Belege."
+        ],
+        "correct": 2,
+        "why": "Das Werk zeigt seinen Lehrinhalt. Es ist weder eine Prüfung aller Einwohner noch eine vollständige Liste aller Texte der Stadt."
+      }
+    ],
+    "revision": 3
   },
   {
     "id": "history-greece",
@@ -9004,7 +9292,8 @@
       "building-colosseum",
       "history-greece",
       "building-golden-gate-bridge",
-      "history-mohenjo-daro"
+      "history-mohenjo-daro",
+      "history-angkor"
     ],
     "sources": [
       {
@@ -9189,7 +9478,8 @@
       "science-coral-reef",
       "science-tides",
       "animal-european-eel",
-      "science-buoyancy"
+      "science-buoyancy",
+      "history-polynesia"
     ],
     "sourceNote": "Fachlich geprüft am 9. Oktober 2026. Die Interaktion vereinfacht den Sachverhalt. Ihre Grenzen stehen direkt am Modell; sie ist keine Messung oder Vorhersage.",
     "sources": [
@@ -9609,7 +9899,10 @@
       "building-pont-du-gard",
       "building-lalibela",
       "building-angkor-wat",
-      "science-surface-tension"
+      "science-surface-tension",
+      "history-mohenjo-daro",
+      "history-angkor",
+      "history-paper"
     ],
     "sources": [
       {
@@ -9747,8 +10040,8 @@
     ],
     "sources": [
       {
-        "label": "Kew: What is photosynthesis?",
-        "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
+        "label": "Royal Horticultural Society: Licht und Fotosynthese",
+        "url": "https://www.rhs.org.uk/advice/understanding-plants/how-plants-use-light-to-grow"
       },
       {
         "label": "OpenStax: Overview of Photosynthesis",
@@ -9763,7 +10056,7 @@
         "url": "https://science.nasa.gov/earth/earth-observatory/what-are-phytoplankton/"
       }
     ],
-    "sourceNote": "Ausgewählte Fachpassagen von Kew, OpenStax, Royal Horticultural Society und NASA am 6. November 2026 einzeln gelesen. Eigene begrenzte Erklärung; keine fremden Texte oder Abbildungen übernommen. Die Darstellung beschreibt Stoff- und Energierollen, keine gemessene Fotosyntheserate oder Gartenempfehlung.",
+    "sourceNote": "Die ergänzende RHS-Erklärung zu Licht und Fotosynthese wurde am 11. November 2026 gelesen. Die bisherigen gelesenen Fachpassagen von OpenStax, Royal Horticultural Society zum Gasaustausch und NASA vom 6. November 2026 bleiben Grundlage. Eigene begrenzte Erklärung; keine fremden Texte oder Abbildungen übernommen. Die Darstellung beschreibt Stoff- und Energierollen, keine gemessene Fotosyntheserate oder Gartenempfehlung.",
     "question": {
       "prompt": "Welche Energie nutzt die Fotosynthese?",
       "answers": [
@@ -9775,7 +10068,7 @@
       "why": "Licht liefert Energie für den Aufbau energiereicher Stoffe."
     },
     "links": [],
-    "revision": 2,
+    "revision": 3,
     "checkedAt": "2026-11-06",
     "challenges": [
       {
@@ -13304,12 +13597,16 @@
     ],
     "paragraphs": [
       "Ein Khipu besitzt eine Hauptschnur und weitere daran befestigte Schnüre. Knoten, Farben und die Anordnung konnten Informationen tragen. Fachkundige Menschen stellten solche Aufzeichnungen her und lasen sie.",
-      "Damit ließen sich zum Beispiel Vorräte und Arbeitsleistungen festhalten. Die Schnüre waren ein Werkzeug zur Verwaltung eines großen Reiches, keine bloße Verzierung."
+      "Damit ließen sich zum Beispiel Vorräte und Arbeitsleistungen festhalten. Die Schnüre waren ein Werkzeug zur Verwaltung eines großen Reiches, keine bloße Verzierung.",
+      "Das Smithsonian-Museum beschreibt ein einzelnes Khipu aus Chulpaca im heutigen Peru: Baumwolle und Farbstoffe. Die ältere verlinkte Ausstellung nennt 1425–1532. Der Sammlungseintrag zum selben Objekt 14/3866 nennt dagegen etwa 1450–1532 und ordnet es wahrscheinlich den Inka zu. Die Angaben werden hier getrennt ausgewiesen. Beide betreffen dieses Museumsstück, nicht das Erfindungsdatum aller Knotenschnüre.",
+      "Spezialisierte Menschen konnten Khipus herstellen und auswerten. Nicht nur die Anzahl der Knoten war wichtig: Auch ihre Lage, die Schnüre und weitere Merkmale gehörten zur Aufzeichnung. Ohne die passenden Regeln ist ein sichtbarer Knoten noch keine vollständig verstandene Nachricht.",
+      "Unser eigenes Übungsbild ist absichtlich viel einfacher. Drei Zeichen auf einer Schnur und fünf auf der anderen lassen sich zählen und vergleichen. Vereinbaren wir „ein Zeichen bedeutet einen Korb“, stehen die Mengen für Körbe. Mit einer anderen Vereinbarung könnten dieselben Zeichen etwas anderes zählen.",
+      "Das Ausblenden einer Beschriftung ändert die gezeichneten Mengen nicht. Es nimmt uns jedoch die Information darüber, was sie bedeuten sollen. Diese Lücke zeigt, warum beim Untersuchen historischer Aufzeichnungen Zahl, vereinbarte Bedeutung und weitere Belege zusammengehören."
     ],
     "facts": [
       {
         "label": "Zeitanker",
-        "text": "Inka-Zeit, etwa 15.–16. Jahrhundert; das verlinkte Museumsstück wird auf 1425–1532 datiert."
+        "text": "Inka-Zeit, etwa 15.–16. Jahrhundert. Zum einzelnen Museumsstück: ältere Ausstellung 1425–1532; Sammlungseintrag etwa 1450–1532."
       },
       {
         "label": "Material",
@@ -13318,25 +13615,34 @@
     ],
     "more": [
       "Bei vielen zahlenbezogenen Khipus ordneten Stellenwerte Mengen im Zehnersystem. Ein Lernbild mit einem Zeichen pro Korb zeigt nur das Grundproblem des Aufzeichnens und ersetzt dieses historische Verfahren nicht.",
-      "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht."
+      "Welche weiteren Inhalte Khipus bewahren konnten, ist eine Forschungsfrage. Eine sichtbare Menge ist nicht automatisch eine vollständig verstandene Nachricht.",
+      "Ein Stellenwertbeispiel: In unserem heutigen Zahlensystem bedeutet 132 ein Hundert, drei Zehner und zwei Einer. Die Ziffer 3 steht hier deshalb für dreißig. Viele zahlenbezogene Khipus nutzten ebenfalls Zehnerstellen. Unser gezeichnetes Zählschnurmodell zeigt weder die historischen Knotenformen noch eine solche Stellenwertaufzeichnung; es darf nicht als Anleitung zum Lesen eines Museumsstücks verwendet werden.",
+      "Die NIST-Ausstellung trennt historische Khipus von einem modernen Kunst- und Vermittlungsobjekt, das SI-Einheiten darstellt. Dessen zusätzliche Zeichen und Vereinbarungen dürfen nicht als Merkmale jedes alten Khipus ausgegeben werden. Auch heutige Forschungsfragen nach weiteren Bedeutungen sind keine Bestätigung, dass jedes Khipu bereits vollständig gelesen werden kann."
     ],
     "surprise": "Eine Aufzeichnung muss nicht wie ein Buch aussehen. Zum Verstehen gehören Material, gemeinsame Regeln und der Zusammenhang.",
     "locations": [],
     "related": [
       "history-writing",
-      "history-web"
+      "history-web",
+      "history-polynesia",
+      "history-caral",
+      "history-hattusha"
     ],
     "sources": [
       {
-        "label": "Smithsonian NMAI · Inka khipu, Museumsobjekt und Erklärung",
-        "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html"
+        "label": "Smithsonian NMAI · Inka khipu, Museumsobjekt und Erklärung · Archivfassung vom 28.08.2025",
+        "url": "https://web.archive.org/web/20250828091213/https://americanindian.si.edu/exhibitions/infinityofnations/andes/143866.html"
       },
       {
         "label": "NIST Museum · Standardizing an Empire",
         "url": "https://www.nist.gov/nist-museum/standardizing-empire"
+      },
+      {
+        "label": "Smithsonian NMAI · Sammlungseintrag 14/3866, Datierung und Herkunft · Archivfassung vom 02.07.2024",
+        "url": "https://web.archive.org/web/20240702222737/https://www.si.edu/object/quipucounting-record%3ANMAI_154591"
       }
     ],
-    "sourceNote": "Quellenpassagen zu Aufbau, Mengen, Stellenwerten und Verwaltung am 17.10.2026 selbst gelesen. Eigene Texte und ein ausdrücklich erfundenes Zählschnur-Lernbild; keine kopierten Museumsmedien. Keine gemeinsame Fundkoordinate für alle Khipus erfunden.",
+    "sourceNote": "Die erhaltenen Aufbau-/Mengen-/Stellenwert-/Verwaltungsbelege wurden ursprünglich am17.10.2026 gelesen. Am07.11.2026 sind dieselben zwei Smithsonian-/NIST-Fachseiten erneut inhaltlich gelesen: einzelnes Objekt1425–1532 aus Chulpaca; Material und Trägerschnüre, Zahl und Stellenwert, Fachkundige sowie moderne SI-Neuschöpfung getrennt. Eigene Texte und ausdrücklich erfundene Zählschnur-Zeichen, kein historisches Knotenalphabet und keine erfundene Fundkoordinate. Das gesondert lizenzgeprüfte neuzeitliche Foto von bobistraveling zeigt Knotenschnüre im Museo Larco in Lima und ist nicht das Smithsonian-Objekt. Urheber, Originalquelle, CC-BY-2.0-Lizenz und Verkleinerung sind beim Foto angegeben. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten. Zum selben Chulpaca-Objekt14/3866 nennt der Sammlungseintrag etwa1450–1532 und wahrscheinlich Inka; die ältere Ausstellung1425–1532 bleibt als abweichende Quellenangabe ausdrücklich zugeordnet. Das Museo-Larco-Foto ist weiterhin nicht dieses Smithsonian-Objekt.",
     "links": [],
     "history": {
       "year": 1500,
@@ -13392,7 +13698,10 @@
         "correct": 0,
         "why": "Erkennbare Zahlen beweisen keine vollständige Entschlüsselung aller weiteren Merkmale oder Bedeutungen."
       }
-    ]
+    ],
+    "checkedAt": "2026-11-07",
+    "revision": 2,
+    "image": "history-khipu"
   },
   {
     "id": "history-mohenjo-daro",
@@ -13407,7 +13716,11 @@
     ],
     "paragraphs": [
       "Mohenjo-Daro liegt im Indusgebiet. Die Stadt bestand im dritten Jahrtausend vor Christus. In ausgegrabenen Bereichen verlaufen Straßen rechtwinklig zueinander; Brunnen, Bäder und Abläufe gehören zu den erhaltenen Spuren.",
-      "Aus solchen Funden lässt sich etwas über Planung und Wassernutzung lernen. Ein Grundriss erzählt aber nicht von allein, wie jeder Mensch lebte. Forschende müssen Beobachtung und Deutung unterscheiden."
+      "Aus solchen Funden lässt sich etwas über Planung und Wassernutzung lernen. Ein Grundriss erzählt aber nicht von allein, wie jeder Mensch lebte. Forschende müssen Beobachtung und Deutung unterscheiden.",
+      "Brunnen und Abläufe haben unterschiedliche Aufgaben: Ein Brunnen erschließt Wasser; ein Ablauf führt benutztes Wasser weiter. Bei ausgegrabenen Häusern und Straßen können Forschende untersuchen, wo solche Anlagen liegen und ob ihre Wege verbunden sind. Ein sichtbarer Wasserweg zeigt zunächst eine bauliche Lösung, keine gemessene Wasserqualität.",
+      "Das Große Bad ist ein erhaltenes rechteckiges Becken mit Treppen. Die Bauform lässt sich beschreiben und vermessen. Welche Bedeutung das Becken für die damaligen Menschen hatte, ist eine weitere Frage. Eine heutige Fotografie zeigt die erhaltenen und gepflegten Reste; sie beobachtet keine antike Benutzung.",
+      "Ein einzelner Fundort ist ein Ausschnitt. Vergleiche mehrere untersuchte Häuser: Liegen die Wasseranlagen ähnlich? Wo unterscheiden sie sich? Unterscheide dabei „hier wurde kein Ablauf beobachtet“ von „hier gab es nie einen Ablauf“. Fehlende oder noch nicht untersuchte Spuren lassen verschiedene Erklärungen zu.",
+      "Auch das Bewahren der Reste braucht Forschung. Salze, Feuchtigkeit und Regen können das Mauerwerk schädigen. In einem UNESCO/Japan-Projekt von 1992 bis 1997 wurden unter anderem Salz- und Feuchtigkeitsdaten für Schutzmaßnahmen genutzt. Eine schützende Schicht aus Lehmmörtel kann selbst verwittern, während sie das darunterliegende historische Material schützen soll."
     ],
     "facts": [
       {
@@ -13421,7 +13734,9 @@
     ],
     "more": [
       "Nur ein Teil des Ortes ist ausgegraben. Aussagen über einen untersuchten Bereich gelten deshalb nicht automatisch für jedes Haus der damaligen Stadt.",
-      "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren."
+      "Die Erhaltung ist selbst eine Forschungsaufgabe: Feuchtigkeit und Salze können die alten Reste schädigen. Schutzarbeit soll die noch vorhandenen Spuren bewahren.",
+      "Ein Grundriss verbindet Beobachtungen mit einer zeichnerischen Auswahl. Er kann Wände und Wasserwege aus einer untersuchten Stelle zeigen; fehlende Teile werden dadurch nicht automatisch bekannt. Maßstab, Fundort und Zeitpunkt der Untersuchung helfen, seine Aussage einzugrenzen. Unser Lernplan ist ausdrücklich erfunden und besitzt keinen archäologischen Maßstab.",
+      "Beschreiben und Deuten sind verschiedene Schritte. „Das Becken hat Treppen“ beschreibt einen Befund. „Bestimmte Menschen nutzten es für eine bestimmte Zeremonie“ ist eine weitergehende Deutung, die zusätzliche Begründungen braucht. Auch ein nachvollziehbarer Deutungsversuch muss nicht für jede Einzelheit gesichert sein."
     ],
     "surprise": "Ein Wasserweg ist ein wichtiger Fund. Dass alle Bewohner gesund waren oder gleich lebten, lässt sich daraus allein nicht ablesen.",
     "locations": [
@@ -13434,15 +13749,35 @@
     ],
     "related": [
       "history-rome",
-      "history-writing"
+      "history-writing",
+      "science-water-cycle",
+      "history-angkor",
+      "history-caral",
+      "history-nalanda",
+      "history-hattusha",
+      "history-kilwa",
+      "history-timbuktu",
+      "history-catalhoyuk"
     ],
     "sources": [
       {
-        "label": "UNESCO World Heritage Centre · Archaeological Ruins at Moenjodaro",
-        "url": "https://whc.unesco.org/en/list/138/"
+        "label": "UNESCO World Heritage Centre · Archaeological Ruins at Moenjodaro · Archivfassung vom 31.10.2026",
+        "url": "https://web.archive.org/web/20261031082834/https://whc.unesco.org/en/list/138"
+      },
+      {
+        "label": "Harappa · The Great Bath of Mohenjo-daro C · Archivfassung vom 02.10.2026",
+        "url": "https://web.archive.org/web/20261002121501/https://www.harappa.com/content/great-bath-mohenjo-daro-c"
+      },
+      {
+        "label": "Harappa · Mohenjo-daro Street with Drains · Archivfassung vom 17.06.2026",
+        "url": "https://web.archive.org/web/20260617210410/https://www.harappa.com/blog/mohenjo-daro-street-drains"
+      },
+      {
+        "label": "Japanische UNESCO-Vertretung · Moenjodaro-Projekt 1992–1997 · Archivfassung vom 14.07.2026",
+        "url": "https://web.archive.org/web/20260714103216/https://www.unesco.emb-japan.go.jp/htm/moenjodaro.htm"
       }
     ],
-    "sourceNote": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos.",
+    "sourceNote": "UNESCO-Abschnitte Brief synthesis, Integrity und Protection am 17.10.2026 selbst gelesen. Die Kurzbeschreibung und die ausführliche Beschreibung verwenden unterschiedliche Ziegelangaben; daraus wird hier keine pauschale Materialbehauptung übernommen. Eigenes ausdrücklich erfundenes Planmodell, kein originaler Ausgrabungsplan, keine kopierten UNESCO-Fotos. Ergänzungen am 07.11.2026 anhand derselben UNESCO-Abschnitte, der zwei tatsächlich gelesenen Harappa-Beiträge zum Großen Bad und zu Abläufen sowie des historischen UNESCO/Japan-Projektberichts geprüft. Der Bericht belegt das Projekt 1992–1997 und beschreibt keinen aktuellen Projektstand. Starke Deutungsnamen wie „Priesterschule“ oder „Kornspeicher“, ein ältestes Bad weltweit, genaue Bevölkerungszahlen, Gleichheit und Gesundheit aller Bewohner werden nicht übernommen. Das Foto zeigt den modernen Erhaltungszustand laut Commons 2014. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
     "links": [],
     "history": {
       "year": -2500,
@@ -13459,8 +13794,8 @@
       "prompt": "Welche Spur nennt die UNESCO für die Stadtplanung von Mohenjo-Daro?",
       "answers": [
         "Straßen und ein System von Abläufen",
-        "Ein modernes elektrisches U-Bahn-Netz",
-        "Satellitenaufnahmen aus der Bauzeit"
+        "Ein Nachweis, dass jedes Haus genau gleich gebaut war",
+        "Ein Nachweis, dass alle Bewohner immer gesund waren"
       ],
       "correct": 0,
       "why": "Ausgegrabene Straßen und Wasseranlagen sind materielle Spuren. Ihre Untersuchung erlaubt begrenzte Aussagen über die Stadtplanung."
@@ -13469,8 +13804,8 @@
       "hint": "Suche nach Spuren, die als Baureste erhalten sein können.",
       "wrongReasons": [
         null,
-        "Eine moderne elektrische U-Bahn gehört nicht zu den beschriebenen antiken Bauresten.",
-        "Satelliten gab es in der Bauzeit nicht. Heutige Aufnahmen sind keine damaligen Augenzeugenbilder."
+        "Ein rechtwinkliger Straßenverlauf belegt nicht, dass jedes Haus dieselbe Bauform hatte. Dafür müssten die einzelnen Gebäude verglichen werden.",
+        "Ein Ablauf zeigt eine bauliche Einrichtung. Gesundheit aller Bewohner lässt sich daraus allein nicht feststellen; dazu wären andere Belege nötig."
       ]
     },
     "challenges": [
@@ -13498,7 +13833,9 @@
         "correct": 0,
         "why": "Materielle Quellen sind wertvoll, aber ihr räumlicher und zeitlicher Ausschnitt begrenzt die Schlüsse. Weitere Funde können sie ergänzen."
       }
-    ]
+    ],
+    "image": "history-mohenjo-daro",
+    "revision": 1
   },
   {
     "id": "invention-camera",
@@ -15691,7 +16028,8 @@
     ],
     "related": [
       "science-water-cycle",
-      "building-panama-canal"
+      "building-panama-canal",
+      "history-angkor"
     ],
     "links": [],
     "revision": 1,
@@ -17522,7 +17860,10 @@
     "paragraphs": [
       "Bronze ist ein Metallgemisch auf Kupferbasis. Hier betrachten wir die historisch wichtige Zinnbronze aus Kupfer und Zinn. Ihre Eigenschaften unterscheiden sich von denen des reinen Kupfers.",
       "Handwerksleute konnten geeignete Bronze zum Beispiel in Formen gießen oder mit Werkzeugen bearbeiten. Bronzegefäße aus dem antiken Griechenland zeigen auch beides zusammen: gehämmerte Gefäßkörper und gegossene Einzelteile.",
-      "Neue Werkstoffe ersetzten ältere nicht auf einen Schlag. Das Ashmolean Museum beschreibt: Im bronzezeitlichen Britannien wurden weiterhin viele Gegenstände aus Stein und Feuerstein benutzt. Bronzezeit heißt also nicht, dass jeder Gegenstand aus Bronze bestand."
+      "Neue Werkstoffe ersetzten ältere nicht auf einen Schlag. Das Ashmolean Museum beschreibt: Im bronzezeitlichen Britannien wurden weiterhin viele Gegenstände aus Stein und Feuerstein benutzt. Bronzezeit heißt also nicht, dass jeder Gegenstand aus Bronze bestand.",
+      "Für Gegenstände aus Metall brauchte man nicht nur eine Form, sondern auch Rohstoffe und Können. Das Ashmolean Museum beschreibt für die Bronzezeit Britanniens Handel über große Entfernungen. An einem fertig geformten Gegenstand allein lässt sich jedoch nicht ablesen, woher jedes Stück seines Rohmaterials kam.",
+      "Das Museumsfoto zeigt eine griechische Hydria, ein Wassergefäß. The Met datiert dieses einzelne Stück in das späte 7. bis frühe 6. Jahrhundert vor Christus und nennt gegossene Griffe sowie einen gehämmerten Gefäßkörper. Teile des Körpers sind modern ergänzt. Es ist kein Fund aus dem britannischen Lernbeispiel.",
+      "Vergleiche nun die beiden erfundenen Fundkarten im Geschichtsdetektiv. Beide nennen denselben zeitlichen Zusammenhang, aber unterschiedliche Werkstoffe. Der Zusammenhang ergänzt die Materialangabe. Blendest du ihn aus, bleibt das Material lesbar, ohne dass damit schon ein Herstellungsjahr feststeht."
     ],
     "facts": [
       {
@@ -17536,7 +17877,9 @@
     ],
     "more": [
       "Eine Gefäßform allein beweist nicht, aus welchem Metallgemisch ein Fund besteht. Fachleute untersuchen unter anderem die Zusammensetzung. Auch eine grüne Oberfläche ersetzt keine Materialanalyse.",
-      "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten."
+      "Eigenschaften, Verarbeitung und Verwendung gehören zusammen. Bronze bedeutet kein einziges Mischungsverhältnis. Ein Fund sagt außerdem nicht, wie oft alle Menschen einer Region einen Werkstoff benutzten.",
+      "Der Name Bronze wird in Sammlungen nicht immer gleich eng verwendet. Die Getty-Fachrichtlinien empfehlen, bei einer genauen Untersuchung die tatsächlich festgestellten Bestandteile zu nennen. Hier meinen wir mit Zinnbronze die Verbindung von Kupfer und Zinn; aus einem bloßen Namen lesen wir kein festes Mischungsverhältnis ab.",
+      "Was erhalten bleibt, beeinflusst auch unser Bild der Vergangenheit. Der Met-Beitrag beschreibt, dass dünne gehämmerte Gefäßkörper im Boden teilweise stärker verloren gingen als massive Griffe und Füße. Deshalb ist die heutige Zahl erhaltener Einzelteile keine einfache Zählung aller früher hergestellten Gegenstände."
     ],
     "surprise": "Ein Steinwerkzeug und ein Gegenstand aus Bronze können aus demselben Zeitabschnitt stammen.",
     "locations": [],
@@ -17549,15 +17892,19 @@
         "url": "https://britisharchaeology.ashmus.ox.ac.uk/collections/bronze-age.html"
       },
       {
-        "label": "The Met · Kupfer, Zinn und verschiedene Bearbeitungen",
-        "url": "https://www.metmuseum.org/essays/ancient-greek-bronze-vessels"
+        "label": "The Met · Kupfer, Zinn und verschiedene Bearbeitungen · Archivfassung vom 14.06.2026",
+        "url": "https://web.archive.org/web/20260614192055/https://www.metmuseum.org/essays/ancient-greek-bronze-vessels"
       },
       {
         "label": "Getty Conservation Institute · Zusammensetzung und Untersuchung von Bronze",
         "url": "https://www.getty.edu/publications/bronze-guidelines/vol-1/2/"
+      },
+      {
+        "label": "The Met · Griechische Hydria, Inv.1995.92, Bearbeitung und moderne Ergänzungen · Archivfassung vom 16.02.2026",
+        "url": "https://web.archive.org/web/20260216121652/https://www.metmuseum.org/art/collection/search/256220"
       }
     ],
-    "sourceNote": "Museumstexte zu regionaler Datierung, Werkstoffen und Verarbeitung am 25.10.2026 tatsächlich gelesen. Britannien ist ein konkretes Beispiel, keine weltweite Einheitszeit. Die Gefäßbearbeitung im späteren antiken Griechenland ist ein weiteres Beispiel, keine Datierung des Bronzezeitbeginns. Die Fundkarten sind erfunden, keine Museumsobjekte oder originalen Grabungsnotizen.",
+    "sourceNote": "Museumstexte zu regionaler Datierung, Werkstoffen und Verarbeitung am 25.10.2026 tatsächlich gelesen. Britannien ist ein konkretes Beispiel, keine weltweite Einheitszeit. Die Gefäßbearbeitung im späteren antiken Griechenland ist ein weiteres Beispiel, keine Datierung des Bronzezeitbeginns. Die Fundkarten sind erfunden, keine Museumsobjekte oder originalen Grabungsnotizen. Die drei vorhandenen Fachseiten wurden am07.11.2026 erneut inhaltlich gelesen: Ashmolean zu weiterhin genutztem Stein und Fernhandel, Met zu Bearbeitung und unterschiedlichen Erhaltungschancen, Getty zur Unterscheidung von Werkstoffbezeichnung und gemessener Zusammensetzung. Das am selben Tag gelesene Met-Objektblatt256220/Inv.1995.92 belegt die gesonderte griechische Hydria und die modernen Ergänzungen; seine Datierung wird nicht auf Britannien übertragen. Das konkrete Bild ist dort als Public Domain ausgewiesen, die Met-Open-Access-Regel ordnet es CC0 zu. Original und zwei vollständige proportionale WebP-Bilder wurden tatsächlich betrachtet. Keine neue Datierung anderer Themen. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
     "links": [],
     "history": {
       "year": -2300,
@@ -17613,7 +17960,10 @@
         "correct": 0,
         "why": "Ein einzelner Gegenstand zeigt keine ausschließliche Nutzung in einer ganzen Region. Weitere Funde und ihre Zusammenhänge können auch die Nutzung anderer Werkstoffe belegen."
       }
-    ]
+    ],
+    "checkedAt": "2026-11-07",
+    "image": "history-bronze",
+    "revision": 1
   },
   {
     "id": "person-maria_sibylla_merian",
@@ -19039,5 +19389,978 @@
     "sourceNote": "Historische Einordnung nach den konkreten Bibliotheksbeschreibungen. Die lateinische Winchester-Handschrift und das arabische British-Library-Exemplar sind unterschiedliche Objekte. Die eigene Zeitleiste zeigt ihre Einordnung; kein Faksimile und keine medizinische Anleitung.",
     "checkedAt": "2026-11-04",
     "revision": 1
+  },
+  {
+    "id": "history-kilwa",
+    "category": "history",
+    "title": "Kilwa: Handel am Indischen Ozean",
+    "intro": "Was verraten Kilwas Spuren über den Handel?",
+    "aliases": [
+      "Kilwa Kisiwani",
+      "Swahili Handelsstadt",
+      "Ostafrika Seehandel"
+    ],
+    "paragraphs": [
+      "Kilwa Kisiwani liegt auf einer Insel vor der Küste des heutigen Tansania. Die Stadt gehörte zur Swahili-Kultur Ostafrikas. Sie war besonders im 13. und 14. Jahrhundert wohlhabend. Das ist eine Blütezeit, kein genaues Gründungsdatum.",
+      "Die Swahili-Handelsstädte an der ostafrikanischen Küste waren über den Indischen Ozean mit Arabien, Indien und China verbunden. Kilwa war ein wichtiger Ort in diesem Handel. Die Menschen an der Küste gestalteten diese Verbindungen mit; sie waren keine bloßen Zuschauer ferner Handelsmächte.",
+      "Zu den gehandelten Waren gehörten Gold und Elfenbein aus dem afrikanischen Binnenland sowie Silber, Schmucksteine, Duftstoffe und Keramik aus anderen Regionen. Die UNESCO nennt unter anderem chinesisches Porzellan. Eine Ware konnte auf ihrem Weg durch mehrere Hände gehen.",
+      "Erhaltene Gebäude zeigen einen anderen Teil der Stadtgeschichte. Für zahlreiche Bauten verwendeten Menschen Korallenstein und Kalkmörtel. Die Große Moschee entstand im 11. Jahrhundert und wurde im 13. Jahrhundert stark erweitert. Das Foto zeigt erhaltene Baureste, keine vollständig erhaltene mittelalterliche Stadt.",
+      "Auch Münzen gehören zu den Spuren: Kilwa prägte vom 11. bis zum 14. Jahrhundert eigenes Geld. Baureste, Gegenstände und schriftliche Berichte beantworten unterschiedliche Fragen. Forschende vergleichen solche Quellen, statt aus einer einzigen Spur die ganze Geschichte abzuleiten.",
+      "Ein Gegenstand aus einer fernen Herstellungsregion kann auf Verbindungen hinweisen. Sein Herstellungsort und sein Fundort nennen aber noch nicht jeden Zwischenhalt oder jede beteiligte Person. Vergleiche deshalb im Lernbeispiel zwei mögliche Wege mit demselben Anfang und Ende. Die Karten sind ausdrücklich erfunden; sie beschreiben keinen echten Fund aus Kilwa."
+    ],
+    "facts": [
+      {
+        "label": "Ort",
+        "text": "Insel vor der Küste des heutigen Tansania in Ostafrika."
+      },
+      {
+        "label": "Zeitanker",
+        "text": "13.–14. Jahrhundert · Blütezeit, kein Gründungsjahr."
+      },
+      {
+        "label": "Spuren",
+        "text": "Baureste, Münzen und Berichte helfen beim Untersuchen der Stadtgeschichte."
+      }
+    ],
+    "more": [
+      "Swahili bezeichnet hier die Kultur an der ostafrikanischen Küste. Die UNESCO beschreibt Kilwa Kisiwani und das benachbarte Songo Mnara gemeinsam als Swahili-Handelsstädte. Zwei Orte im selben Welterbe sind trotzdem nicht derselbe Ort.",
+      "Die Überreste Kilwas reichen nach der UNESCO vom 9. bis zum 19. Jahrhundert. Ein Zeitanker um 1300 wählt einen Abschnitt daraus aus; er behauptet weder, dass die Stadt damals erst entstand, noch, dass danach niemand mehr dort lebte.",
+      "Noch nicht alle Bereiche der alten Stadt sind ausgegraben. Ein untersuchter Ausschnitt liefert wertvolle Hinweise, aber keine vollständige Liste aller früheren Menschen, Waren oder Wege.",
+      "Unser Wegvergleich ist ein Gedankenexperiment: Ein direkter Weg und ein Weg mit Zwischenstation passen beide zu denselben zwei Endpunkten. Zusätzliche, zeitlich passende Belege können Möglichkeiten eingrenzen. Eine einzelne weitere Notiz beweist jedoch nicht automatisch jede Etappe einer Reise."
+    ],
+    "surprise": "Kilwa prägte eigenes Geld. Die Stadt war in weite Verbindungen eingebunden und hatte zugleich eigene örtliche Einrichtungen.",
+    "locations": [],
+    "related": [
+      "history-timbuktu",
+      "history-mohenjo-daro",
+      "history-compass"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Kilwa Kisiwani und Songo Mnara, Brief synthesis und Criterion (iii) · Archivfassung vom 01.11.2026",
+        "url": "https://web.archive.org/web/20261101130950/https://whc.unesco.org/en/list/144"
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "sourceNote": "Die UNESCO-Abschnitte Brief synthesis und Criterion (iii) am 07.11.2026 gelesen. Sie tragen die Angaben zu Ort, Swahili-Kultur, Blütezeit, Handel, Baumaterial, Moschee, Münzen und den unterschiedlichen Spuren. Keine heutige Gefährdungs- oder Verwaltungsangabe aus älteren Textabschnitten übernommen. Eigene Erklärung und ausdrücklich erfundene Wegkarten; keine Ausgrabungsdaten, Originalobjekte, exakten Handelsrouten oder historischen Grenzen simuliert. Der Zeitanker um 1300 bezeichnet eine Blütezeit. Mangels gesondert geprüfter Ortskoordinate wird kein neuer Globusmarker erfunden. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "history": {
+      "year": 1300,
+      "date": "13.–14. Jahrhundert · Blütezeit, Zeitanker um 1300",
+      "era": "Handelsstädte am Indischen Ozean",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "In einer Hafenstadt treffen Waren und Menschen von verschiedenen Orten aufeinander. Spuren helfen uns, diese Verbindungen zu untersuchen.",
+      "observe": "Vergleiche zwei mögliche Wege zwischen Herstellungsort und Fundort. Welche Angaben bleiben gleich, obwohl du den Zwischenhalt änderst?",
+      "benefit": "Du lernst Kilwa als ostafrikanische Handelsstadt kennen und unterscheidest einen Hinweis auf Verbindung vom Beweis einer genauen Reise."
+    },
+    "question": {
+      "prompt": "Was verraten Herstellungsort und Fundort allein noch nicht?",
+      "answers": [
+        "Dass der Gegenstand an dem angegebenen Ort gefunden wurde.",
+        "Über welche Zwischenorte und Personen er dorthin gelangte.",
+        "Welche Herstellungsregion in der Fundbeschreibung angegeben ist."
+      ],
+      "correct": 1,
+      "why": "Anfang und Ende geben noch keinen vollständigen Weg an. Ein Gegenstand kann auch über Zwischenorte und mehrere Menschen weitergegeben worden sein."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche, was ausdrücklich auf den beiden Karten steht und welche Angaben zwischen diesen Orten fehlen.",
+      "wrongReasons": [
+        "Der Fundort ist in der Frage bereits angegeben. Offen bleibt, wie der Gegenstand dorthin gelangte.",
+        null,
+        "Die Herstellungsregion ist als Angabe vorausgesetzt. Daraus ergibt sich noch keine vollständige Reiseroute."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-kilwa:time-anchor",
+        "difficulty": "medium",
+        "prompt": "Die Zeitleiste ordnet Kilwas Blütezeit um 1300 ein. Welche Aussage passt dazu?",
+        "answers": [
+          "Die Stadt wurde nachweislich am 1. Januar 1300 gegründet.",
+          "Menschen lebten nur im Jahr 1300 an diesem Ort.",
+          "Der Eintrag wählt einen wichtigen Abschnitt aus einer längeren Stadtgeschichte."
+        ],
+        "correct": 2,
+        "why": "Eine Blütezeit ist ein Zeitraum besonderer Bedeutung. Der gewählte Zeitanker ist weder ein genaues Gründungsdatum noch die gesamte Lebensdauer der Stadt."
+      },
+      {
+        "id": "history-kilwa:route-evidence",
+        "difficulty": "hard",
+        "prompt": "Zwei mögliche Wege passen zu Herstellungsort und Fundort einer gedachten Schale. Wie gehst du mit einer zusätzlich gefundenen, datierten Notiz zu einer Zwischenstation um?",
+        "answers": [
+          "Ich prüfe, ob die Notiz wirklich zu diesem Gegenstand und Zeitraum gehört; sie könnte einen Teil des Weges stützen.",
+          "Ich behandle jede Notiz als Beweis für sämtliche Etappen und alle beteiligten Personen.",
+          "Ich ignoriere die Notiz, weil nur Gegenstände und niemals Texte historische Quellen sein können."
+        ],
+        "correct": 0,
+        "why": "Zusammenhang und Datierung sind wichtig. Ein passender Beleg kann eine Möglichkeit stützen, ohne automatisch den gesamten Weg zu beweisen."
+      }
+    ],
+    "image": "history-kilwa",
+    "revision": 1
+  },
+  {
+    "id": "history-angkor",
+    "category": "history",
+    "title": "Angkor: Wasser für eine Stadtlandschaft",
+    "intro": "Tempel, Wege, Kanäle und große Wasserbecken gehören in Angkor zusammen. Wie lassen sich ihre Spuren untersuchen?",
+    "aliases": [
+      "Angkor Wat",
+      "Khmer und Wasser",
+      "Westlicher Baray",
+      "Angkor Thom"
+    ],
+    "paragraphs": [
+      "Angkor liegt im heutigen Kambodscha. Die UNESCO beschreibt dort Überreste verschiedener Hauptstädte des Khmer-Reiches aus dem 9. bis 15. Jahrhundert. Es geht um eine über Jahrhunderte gewachsene Landschaft, nicht um einen einzigen Tempel.",
+      "Neben Tempeln gehören Becken, Dämme, Speicher und Kanäle sowie Verkehrswege zum Gebiet. Ein Wassergraben um einen Tempel und ein großer Speicher sind dabei unterschiedliche Teile einer vielgestaltigen Anlage.",
+      "Westlich von Angkor Thom liegt der Westliche Baray, ein großer Speicher aus dem 11. Jahrhundert. Die NASA-Erläuterung nennt Wasserversorgung, Bewässerung und die Regelung von Flusswasser als vermutete Aufgaben solcher Becken. Nicht jede Nutzung lässt sich allein aus der Form ablesen.",
+      "Forschende vergleichen Luft- und Satellitendaten mit Karten und Beobachtungen am Boden. Der NASA-Bericht über eine Untersuchung von 2007 erklärt: In die vorgestellte Karte kamen Merkmale erst mit zusätzlichen Belegen. Eine einzelne auffällige Linie genügte nicht.",
+      "Angkor hat auch religiöse und kulturelle Bedeutung. Die UNESCO beschreibt außerdem bewohnte Dörfer und Landwirtschaft im Gebiet. Die Geschichte endet also nicht bei unbewohnten Tempelruinen.",
+      "Probiere im Lernbild aus, was Speichern bedeutet: Sechs erfundene Wassermarken sind zunächst im Becken. Leitest du zwei weiter, bleiben vier dort. Das Becken erzeugt kein neues Wasser. Dieses einfache Mengenbild erklärt eine Idee; es berechnet keine historische Wasserversorgung."
+    ],
+    "facts": [
+      {
+        "label": "Region",
+        "text": "Angkor im heutigen Kambodscha."
+      },
+      {
+        "label": "Zeit",
+        "text": "Verschiedene Hauptstädte vom 9. bis 15. Jahrhundert; nicht das Baujahr aller Anlagen."
+      },
+      {
+        "label": "Ein Bauteil",
+        "text": "Der Westliche Baray ist ein großer Wasserspeicher aus dem 11. Jahrhundert."
+      }
+    ],
+    "more": [
+      "Ein Zeitanker um 1200 liegt innerhalb des langen Zeitraums der beschriebenen Hauptstädte. Er ist kein Gründungsdatum ganz Angkors. Einzelne Tempel, Speicher und Wege haben ihre eigene Geschichte.",
+      "Im Bericht von 2007 musste ein Kartenmerkmal entweder in mindestens zwei Datenquellen vorkommen oder am Boden beziehungsweise aus niedriger Flughöhe überprüft sein. Die Forschenden bezeichneten die Karte ausdrücklich als vorsichtig angelegt. Diese Aufnahmebedingung ist kein Beweis für jede mögliche Nutzung einer Struktur.",
+      "Eine Luftaufnahme kann Lage und Formen von Anlagen zeigen. Daraus folgen nicht automatisch die frühere Wassertiefe, die Trinkwasserqualität oder die genaue Versorgung aller Menschen. Dafür braucht man jeweils passende weitere Belege.",
+      "Unser Beckenbild hat absichtlich nur einen Speicher und eine Weiterleitung. Verdunstung, Versickerung, wechselnder Zufluss und viele verbundene Anlagen fehlen. Die sechs Marken sind keine Liter, historischen Messwerte oder Vorhersage für eine Regenzeit."
+    ],
+    "surprise": "Eine gerade Linie in einem Radarbild kann eine wichtige Spur sein. Für ihre Einordnung braucht es mehr als nur ihre auffällige Form.",
+    "locations": [],
+    "related": [
+      "science-water-cycle",
+      "history-mohenjo-daro",
+      "history-rome",
+      "building-angkor-wat"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Angkor, Beschreibung und Einordnung · Archivfassung vom 07.11.2026",
+        "url": "https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668"
+      },
+      {
+        "label": "NASA Earth Observatory (2004) · Angkor Ruins, Wasseranlagen und Bildbeschreibung",
+        "url": "https://science.nasa.gov/earth/earth-observatory/angkor-ruins-4995/"
+      },
+      {
+        "label": "NASA Earth Observatory (2007) · Angkor, Cambodia, Kartierung und Beleggrenzen",
+        "url": "https://science.nasa.gov/earth/earth-observatory/angkor-cambodia-8170/"
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "sourceNote": "UNESCO und die NASA-Erläuterungen von2004/2007 am07.11.2026 tatsächlich gelesen. Eigene deutsche Erklärung. Die angeführte Studie von2007 wird hier über den gelesenen NASA-Bericht eingeordnet; ihr Volltext wird nicht als gelesen ausgegeben. Keine pauschale Bevölkerungszahl, Weltrangliste oder einzelne Ursache eines historischen Wandels behauptet. Das eigene Beckenbild zeigt erfundene Mengen, keine Originalkarte oder historische Wasserrechnung. Das gesondert lizenzgeprüfte Foto zeigt den östlichen Wassergraben von Angkor Wat im Juli2018, nicht den Westlichen Baray. Kein ungeprüfter neuer Globusmarker. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "history": {
+      "year": 1200,
+      "date": "9.–15. Jahrhundert · ungefährer Zeitanker um 1200 innerhalb dieses Zeitraums",
+      "era": "Wissen & Städte",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Ein Becken kann Wasser sammeln. Über einen Weg kann ein Teil später weiterfließen. In Angkor gehören solche Wasseranlagen zu einer großen Stadtlandschaft.",
+      "observe": "Verteile sechs erfundene Wassermarken zwischen Becken und Weiterleitung. Prüfe danach, was eine einzelne Bildspur tatsächlich belegen kann.",
+      "benefit": "Du unterscheidest Wasserspeicherung, sichtbare Fundspuren und die Grenzen eines Modells."
+    },
+    "question": {
+      "prompt": "Im Lernbild liegen sechs Wassermarken im Becken. Zwei werden weitergeleitet; sonst kommt nichts dazu oder weg. Was ist danach dargestellt?",
+      "answers": [
+        "Sechs Marken im Becken und zwei zusätzlich außerhalb.",
+        "Vier Marken insgesamt; die anderen zwei sind verschwunden.",
+        "Vier Marken im Becken und zwei weitergeleitete Marken."
+      ],
+      "correct": 2,
+      "why": "Die dargestellte Menge wird verteilt: vier bleiben im Becken, zwei befinden sich in der Weiterleitung. Zusammen bleiben es sechs. Das gilt für dieses bewusst vereinfachte Mengenbild."
+    },
+    "questionFeedback": {
+      "hint": "Verfolge jede der sechs Marken. Welche wechselt ihren Ort?",
+      "wrongReasons": [
+        "Das Becken erzeugt beim Weiterleiten keine zusätzlichen Marken.",
+        "Die weitergeleiteten Marken sind weiterhin Teil der dargestellten Gesamtmenge.",
+        null
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-angkor:map-evidence",
+        "difficulty": "medium",
+        "prompt": "Ein Radarbild zeigt eine gerade Linie. Was wäre ein sinnvoller nächster Forschungsschritt?",
+        "answers": [
+          "Die Spur mit weiteren Daten oder einer Untersuchung vor Ort prüfen.",
+          "Allein aus der Geradheit schon einen historischen Kanal beweisen.",
+          "Ohne weitere Prüfung das genaue Baujahr der Linie festlegen."
+        ],
+        "correct": 0,
+        "why": "Eine auffällige Form liefert einen Anlass zum Untersuchen. Zusätzliche Belege helfen bei der Einordnung; ein genaues Baujahr ergibt sich nicht allein aus der Geradheit."
+      },
+      {
+        "id": "history-angkor:storage-limit",
+        "difficulty": "hard",
+        "prompt": "Das Lernbild erhält die Summe von sechs Wassermarken. Warum ist es trotzdem keine vollständige Rechnung für Angkors Wasserhaushalt?",
+        "answers": [
+          "Eine richtige Summe macht jede weitere Beobachtung überflüssig.",
+          "Wichtige Vorgänge wie Verdunstung und wechselnder Zufluss fehlen.",
+          "Die Form eines Beckens legt seine historische Versorgung exakt fest."
+        ],
+        "correct": 1,
+        "why": "Die Mengenverteilung stimmt innerhalb der Modellregeln. Für einen wirklichen Wasserhaushalt müssten weitere Zu- und Abflüsse, zeitliche Veränderungen und die tatsächlichen Anlagen untersucht werden."
+      }
+    ],
+    "image": "history-angkor",
+    "revision": 1
+  },
+  {
+    "id": "history-caral",
+    "category": "history",
+    "title": "Caral: Was verraten die Spuren einer frühen Stadt?",
+    "intro": "Im heutigen Peru stehen die Reste einer sehr frühen Stadtanlage. Große Plattformbauten und runde, vertiefte Plätze helfen beim Fragenstellen – sie erzählen aber nicht von selbst die ganze Geschichte.",
+    "aliases": [
+      "Caral Supe",
+      "Supe Tal Peru",
+      "Frühe Stadt in den Anden"
+    ],
+    "paragraphs": [
+      "Caral liegt im Supe-Tal im heutigen Peru. Die archäologische Anlage befindet sich auf einer trockenen Terrasse oberhalb des grünen Flusstals. Ihre Geschichte gehört zu einer sehr frühen Entwicklungsphase von Siedlungen in den zentralen Anden.",
+      "Große Plattformbauten aus Stein und Erde sind erhöhte Anlagen. Zu den Bauformen gehören auch runde, abgesenkte Plätze. Die UNESCO beschreibt sechs große pyramidenförmige Strukturen. Ähnliche Formen an verschiedenen Orten bedeuten nicht automatisch die gleiche Nutzung oder eine direkte Verbindung zwischen ihren Bewohnern.",
+      "Caral war kein einzelner, für sich stehender Fundort: Die UNESCO ordnet es einer Gruppe früher Siedlungen im selben Tal zu. Anordnung und Bauformen werden unter anderem als Hinweise auf gemeinschaftliche und zeremonielle Funktionen – etwa feierliche Handlungen – gedeutet. Was einzelne Menschen dabei genau dachten, lässt sich daraus nicht einfach ablesen.",
+      "Eine 2001 veröffentlichte Untersuchung zum Alter von Fundspuren verbindet die frühe Einordnung Carals mit großen gemeinschaftlichen Bauten, städtischer Besiedlung und Bewässerungslandwirtschaft. Solche Befunde müssen zusammen betrachtet werden. Ein großes Bauwerk allein erklärt noch nicht, wie eine ganze Gesellschaft organisiert war.",
+      "Für die Entwicklung des Fundortes nennt die UNESCO ungefähr 3000 bis 1800 vor Christus. Das ist ein langer Zeitraum und kein genaues Gründungsjahr für jedes Gebäude. Ein Datierungsergebnis muss immer mit dem untersuchten Fund und seinem Zusammenhang gelesen werden.",
+      "Historische Forschung verbindet daher mehrere Spuren: Bauformen, ihre Lage und Datierungen. Manche Aussagen sind gut belegt, andere bleiben vorsichtige Deutungen. Vergleiche beim Weiterlesen immer: Was wurde tatsächlich untersucht, und wie weit reicht die Schlussfolgerung?"
+    ],
+    "facts": [
+      {
+        "label": "Ort",
+        "text": "Supe-Tal im heutigen Peru."
+      },
+      {
+        "label": "Zeit",
+        "text": "Ungefähr 3000–1800 v. Chr.: Entwicklung des Fundortes, kein genaues Baujahr jedes Gebäudes."
+      },
+      {
+        "label": "Bauformen",
+        "text": "Erhöhte Plattformbauten und runde, vertiefte Plätze."
+      }
+    ],
+    "more": [
+      "Die öffentliche Kurzfassung der Untersuchung von 2001 nennt kalibrierte Datierungen von 2627 bis 1977 vor Christus. Diese Einordnung gilt nicht automatisch für jedes Gebäude der Stadt. Entscheidend bleibt, welche Spur untersucht wurde und wie sie mit einem bestimmten Bau zusammenhängt. Ein Zeitraum ist kein genaues Baujahr für alle Baureste.",
+      "In der Studienkurzfassung umfasst eine zentrale Zone mit großen Bauten und Wohnbereichen 65 Hektar. Die UNESCO beschreibt dagegen die größere archäologische Stätte mit rund 626 Hektar. Wer die Bezugsflächen weglässt, macht aus zwei verschiedenen Angaben scheinbar einen Widerspruch.",
+      "Die Vergleichsbalken stellen die beiden genannten Bezugsflächen nebeneinander. Sie zeigen keine maßstäbliche Karte von Caral, keine genauen Grenzen und keine Rekonstruktion aller Gebäude. Auch die Ursache eines historischen Wandels lässt sich nicht aus einem einzelnen Messwert ablesen.",
+      "Vergleiche die Fragen an Fundspuren mit Mohenjo-Daro und den Fragen an Aufzeichnungen bei Khipus. Das verbindet Methoden des Nachfragens; daraus folgt keine behauptete Reise, gemeinsame Sprache oder direkte Begegnung zwischen diesen Orten und Zeiten."
+    ],
+    "surprise": "65 Hektar und rund 626 Hektar beschreiben hier verschiedene Bezugsflächen. Eine Zahl wird erst mit dem passenden Bezug verständlich.",
+    "locations": [],
+    "related": [
+      "history-mohenjo-daro",
+      "history-khipu",
+      "history-cahokia"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Sacred City of Caral-Supe, Beschreibung und Einordnung der Fundstätte · Archivfassung vom 31.10.2026",
+        "url": "https://web.archive.org/web/20261031082835/https://whc.unesco.org/en/list/1269"
+      },
+      {
+        "label": "Shady Solís, Haas und Creamer (2001) · Dating Caral, Studienkurzfassung bei BibBase",
+        "url": "https://bibbase.org/network/publication/shadysolis-haas-creamer-datingcaralapreceramicsiteinthesupevalleyonthecentralcoastofperu-2001"
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "sourceNote": "UNESCO-Beschreibung und Einordnung sowie die frei öffentliche Kurzfassung der Studie von2001 am07.11.2026 gelesen. 3000–1800v.Chr. bezeichnet die UNESCO-Einordnung des Fundortes,2627–1977v.Chr. die in der Kurzfassung genannten kalibrierten Datierungen; kein gemeinsames genaues Baujahr aller Gebäude.65ha zentrale Architekturzone und rund626ha größere archäologische Stätte sind verschiedene Bezugsflächen. Volltext der Studie nicht als gelesen ausgegeben. Eigene deutsche Erklärung, eigene ausdrücklich schematische Bauformdarstellung und gedachter Datierungsfall; keine Originalfundzeichnung, exakten Stadtgrenzen oder rekonstruierten Rituale. Das Foto ist eine gesondert lizenzgeprüfte Aufnahme aus2016. Kein ungeprüfter neuer Globusmarker. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten. Die verlinkte bibliografische Seite bei BibBase gibt die öffentliche Kurzfassung derselben Science-Studie von2001 wieder (DOI10.1126/science.1059519); sie ersetzt keinen gelesenen Studienvolltext.",
+    "history": {
+      "year": -2500,
+      "date": "Ca. 3000–1800 v. Chr. · ungefährer Zeitanker um 2500 v. Chr. innerhalb dieses Zeitraums",
+      "era": "Frühe Städte",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Eine erhöhte Plattform und ein vertiefter Platz sehen verschieden aus. Solche Bauformen sind Spuren von Menschen, die früher hier lebten.",
+      "observe": "Wechsle die beiden schematischen Bauformen, vergleiche die Bezugsflächen und prüfe, was eine Datierung über ein Bauwerk aussagen kann.",
+      "benefit": "Du unterscheidest Beobachtungen, Bezugsgrößen und weitergehende Deutungen historischer Spuren."
+    },
+    "question": {
+      "prompt": "Warum reicht eine Datierung nicht aus, um jedem Bauwerk Carals ein genaues Baujahr zuzuweisen?",
+      "answers": [
+        "Ein grober Zeitraum nennt schon das genaue Baujahr jedes Gebäudes.",
+        "Die Datierung muss zum untersuchten Fund und seinem Zusammenhang passen.",
+        "Eine Datierung eines Fundes gilt ohne Prüfung für die gesamte Stadt."
+      ],
+      "correct": 1,
+      "why": "Eine Zeitangabe gehört zu bestimmten untersuchten Spuren und hat einen begrenzten Aussageumfang. Sie setzt nicht alle Gebäude mit demselben Baujahr gleich."
+    },
+    "questionFeedback": {
+      "hint": "Frage zuerst, wozu die jeweilige Zeitangabe gehört.",
+      "wrongReasons": [
+        "Ein Zeitraum begrenzt eine Einordnung; er ist kein einzelnes Baujahr für alle Gebäude.",
+        null,
+        "Ein einzelner Fund darf nicht ohne weitere Belege auf alle Gebäude übertragen werden."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-caral:source-area",
+        "difficulty": "medium",
+        "prompt": "Eine Kurzfassung nennt65 Hektar zentrale Architekturzone, die UNESCO rund626 Hektar für die größere Stätte. Wie vergleichst du die Angaben sinnvoll?",
+        "answers": [
+          "Ich nehme an, dass die kleinere Zahl ein Druckfehler sein muss.",
+          "Ich vergleiche nur, wie viele Ziffern die Zahlen besitzen.",
+          "Ich prüfe, auf welche Bezugsfläche sich jede Zahl bezieht."
+        ],
+        "correct": 2,
+        "why": "Die Quellen beschreiben verschiedene Ausschnitte. Erst die Bezugsfläche macht verständlich, was die jeweilige Zahl angibt."
+      },
+      {
+        "id": "history-caral:dating-scope",
+        "difficulty": "hard",
+        "prompt": "In einem gedachten Fall ist eine Fundspur einem bestimmten Mauerbau zugeordnet und datiert. Für ein zweites Gebäude gibt es diese Zuordnung nicht. Welche Schlussfolgerung ist angemessen?",
+        "answers": [
+          "Die belegte Zuordnung stützt die Einordnung des ersten Baus; für den zweiten bleiben weitere Zeitfragen offen.",
+          "Beide Gebäude erhalten allein wegen ihrer Nähe dasselbe genaue Baujahr.",
+          "Ohne Datierung des zweiten Gebäudes ist auch die erste belegte Zuordnung wertlos."
+        ],
+        "correct": 0,
+        "why": "Eine passende Fundzuordnung kann einen bestimmten Bau zeitlich einordnen. Sie wird weder automatisch auf andere Gebäude übertragen, noch verliert sie allein wegen einer offenen Nachbarfrage ihren Wert."
+      }
+    ],
+    "image": "history-caral",
+    "revision": 2
+  },
+  {
+    "id": "history-nalanda",
+    "category": "history",
+    "title": "Nalanda: Wohnen und Lernen im Kloster",
+    "intro": "In Nalanda im heutigen Indien gehörten Wohnen und Lernen zusammen. Die erhaltenen Mauern zeigen einen Teil der Geschichte dieser buddhistischen Kloster- und Lehranstalt.",
+    "aliases": [
+      "Nalanda Mahavihara",
+      "Nalanda Klosteruniversität",
+      "Nalanda Bihar Indien"
+    ],
+    "paragraphs": [
+      "Nalanda liegt im heutigen Bundesstaat Bihar im Nordosten Indiens. Dort entwickelte sich ab dem 5. Jahrhundert nach Christus eine buddhistische Kloster- und Lehranstalt. Ein Kloster war hier ein Ort religiösen Lebens, an dem auch gelehrt und gelernt wurde.",
+      "Zu den Gebäuden gehörten Viharas: Sie dienten dem Wohnen und der Lehre. Auf dem archäologischen Gelände sind außerdem Heiligtümer und weitere Bauformen erhalten. Die Anlage veränderte sich über lange Zeit; sie entstand nicht an einem einzigen Tag nach einem unveränderten Plan.",
+      "Menschen kamen auch aus anderen Teilen Asiens zum Lernen nach Nalanda. Die Verwaltung des heutigen Distrikts nennt unter anderem China, Tibet und Korea. Neben buddhistischen Lehren gab es weitere Wissensgebiete. Eine solche Verbindung zeigt Austausch; sie macht die damalige Lehranstalt aber nicht zu einer heutigen Schule mit denselben Klassen.",
+      "Ein Grundriss kann zeigen, wie Räume und Wege angeordnet sind. Für die Frage, was dort gelernt wurde, braucht man zusätzliche historische Belege. Eine erhaltene Mauer verrät nicht von selbst den Inhalt eines Unterrichts oder die Fähigkeiten aller Lernenden.",
+      "Die UNESCO unterscheidet ältere archäologische Spuren auf dem Gelände vom späteren Kloster- und Lehrbetrieb. Ältere Spuren reichen bis ungefähr ins 3. Jahrhundert vor Christus. Daraus folgt nicht, dass die Lehranstalt schon seit diesem frühen Zeitpunkt bestand. Alter eines Fundes und Beginn einer Nutzung sind verschiedene Fragen.",
+      "Die erhaltenen Baureste müssen auch geschützt werden. Die UNESCO beschreibt systematische Ausgrabungen und Erhaltungsarbeiten durch die Archaeological Survey of India im frühen 20. Jahrhundert. Spätere Ergänzungen, etwa Schutzlagen auf Mauern, sollen dokumentiert sein. So bleibt nachvollziehbar, welche Teile alt sind und was zum Schutz hinzugefügt wurde."
+    ],
+    "facts": [
+      {
+        "label": "Ort",
+        "text": "Bihar im Nordosten des heutigen Indien."
+      },
+      {
+        "label": "Lehranstalt",
+        "text": "Ab dem 5. Jahrhundert nach Christus; kein genaues Gründungsjahr angegeben."
+      },
+      {
+        "label": "Viharas",
+        "text": "Gebäude zum Wohnen und Lernen."
+      }
+    ],
+    "more": [
+      "Der Name Mahavihara bezeichnet hier eine große buddhistische Klosteranlage mit Lehre. Wohnen, religiöses Leben und Lernen waren miteinander verbunden. Die heutige Bedeutung des Wortes Universität lässt sich nicht in allen Einzelheiten auf diese frühere Einrichtung übertragen.",
+      "In der UNESCO-Einordnung reichen archäologische Spuren bis ungefähr ins 3. Jahrhundert vor Christus zurück; den Kloster- und Lehrbetrieb beschreibt sie vom 5. bis ins 13. Jahrhundert nach Christus. Die Regierungsseiten betonen eine Blüte vom 5. bis 12. Jahrhundert beziehungsweise einen Lehrbetrieb bis um 1200. Diese Angaben dürfen nicht zu einem einzigen genauen Gründungs- oder Endtag vermischt werden.",
+      "Beim Erhalten eines alten Bauwerks können zusätzliche Schutzlagen notwendig sein. Eine gut dokumentierte Ergänzung soll ältere Bausubstanz schützen und als spätere Arbeit nachvollziehbar bleiben. Unsere Lernskizze verwendet dafür erfundene Farben und Markierungen. Sie bestimmt nicht, welcher einzelne Stein auf dem Foto antik oder später ergänzt ist.",
+      "Nalanda und Timbuktu waren unterschiedliche Wissensorte in verschiedenen Regionen und Zeiten. Vergleiche, welche Rolle Räume, Texte und Menschen beim Lernen spielten. Daraus folgt weder eine hier belegte direkte Reiseroute zwischen den Städten noch, dass überall gleich unterrichtet wurde."
+    ],
+    "surprise": "Die älteste Spur auf einem Gelände kann viel älter sein als eine später dort entstandene Lehranstalt. Die Datierung braucht ihren passenden Bezug.",
+    "locations": [],
+    "related": [
+      "history-timbuktu",
+      "history-paper",
+      "history-mohenjo-daro"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Nalanda, Beschreibung, Brief synthesis und Authenticity · Archivfassung vom 31.10.2026",
+        "url": "https://web.archive.org/web/20261031082818/https://whc.unesco.org/en/list/1502"
+      },
+      {
+        "label": "District Nalanda, Government of Bihar · History of Nalanda",
+        "url": "https://nalanda.nic.in/en/history/"
+      },
+      {
+        "label": "District Nalanda, Government of Bihar · Ancient Nalanda University’s Ruins",
+        "url": "https://nalanda.nic.in/en/tourist-place/ancient-nalanda-universitys-ruins/"
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "sourceNote": "UNESCO-Beschreibung, Brief synthesis, Kriterien und Authenticity sowie die historischen Erklärungsabschnitte der beiden Distriktseiten am 07.11.2026 gelesen. Ältere Geländespuren ab ungefähr dem 3. Jahrhundert v. Chr. und Lehrbetrieb ab dem 5. Jahrhundert n. Chr. sind unterschiedliche Aussagen. UNESCO beschreibt den Lehrbetrieb bis ins 13. Jahrhundert, die Distriktseiten betonen die Blüte bis ins 12. Jahrhundert beziehungsweise eine Nutzung bis um 1200. Keine genaue Gründung, globale Universitätsrangfolge, vollständige Lehrplanrekonstruktion, Personenzahl oder aktuelle Hochschuleröffnung daraus abgeleitet. Eigene deutsche Erklärung und erfundene Funktions-/Erhaltungsschemata; kein historischer Originalplan und keine Datierung einzelner Fotosteine. Aufnahme von AmritasyaPutra aus 2016 gesondert unter CC BY-SA 4.0 geprüft. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "history": {
+      "year": 450,
+      "date": "5. Jahrhundert n. Chr. · ungefährer Zeitanker, kein genaues Gründungsjahr",
+      "era": "Wissen bewahren",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Menschen können an einem Ort wohnen und gemeinsam lernen. In Nalanda waren Klosterleben und Lehre miteinander verbunden.",
+      "observe": "Vergleiche Funktionen eines Gebäudes, zwei zeitliche Einordnungen und eine später ergänzte Schutzlage im Lernschema.",
+      "benefit": "Du erklärst die Verbindung von Wohnen und Lernen, unterscheidest ältere Spuren von einer späteren Einrichtung und erkennst, warum Ergänzungen eine nachvollziehbare Dokumentation brauchen."
+    },
+    "question": {
+      "prompt": "Was war das historische Nalanda in diesem Artikel?",
+      "answers": [
+        "Eine heutige Schule mit genau denselben Klassen und Abläufen wie jetzt.",
+        "Ein Gelände, auf dem wegen der heutigen Ruinen niemals Menschen gelernt haben.",
+        "Eine buddhistische Kloster- und Lehranstalt, in der Menschen auch wohnten."
+      ],
+      "correct": 2,
+      "why": "Wohnen, religiöses Leben und Lehre gehörten in Nalanda zusammen. Die erhaltenen Ruinen zeigen einen heutigen Zustand der Anlage; sie bedeuten nicht, dass der Ort früher immer leer war."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche die beschriebenen Aufgaben der Anlage mit dem, was heute davon sichtbar ist.",
+      "wrongReasons": [
+        "Der Vergleich mit heute darf Unterschiede der damaligen Einrichtung nicht verdecken.",
+        "Die heutigen Baureste sind Spuren früherer Nutzung, kein Beleg für dauernde Leere.",
+        null
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-nalanda:trace-and-use",
+        "difficulty": "medium",
+        "prompt": "Eine ältere Spur auf dem Gelände ist mehrere Jahrhunderte älter als die beschriebene Lehranstalt. Wie gehst du mit beiden Angaben um?",
+        "answers": [
+          "Ich unterscheide die Geschichte der älteren Spur vom Beginn dieser bestimmten Nutzung.",
+          "Ich behandle das Alter jeder Spur als gemeinsames genaues Gründungsjahr.",
+          "Ich verwerfe alle Angaben, weil ein Ort niemals mehrere Nutzungsphasen haben kann."
+        ],
+        "correct": 0,
+        "why": "Ein Ort kann verschiedene Nutzungsphasen und ältere Spuren besitzen. Eine Zeitangabe bezieht sich zunächst auf das, was tatsächlich untersucht oder beschrieben wurde."
+      },
+      {
+        "id": "history-nalanda:conservation-record",
+        "difficulty": "hard",
+        "prompt": "Unsere Lernskizze markiert eine spätere Schutzlage auf einer älteren Mauer. Was brauchst du zur Unterscheidung bei einem wirklichen Bauwerk?",
+        "answers": [
+          "Nur den Farbton eines einzelnen Fotos; jede helle Stelle muss alt sein.",
+          "Dokumentierte Erhaltungsarbeiten und Angaben zur ursprünglichen Bausubstanz.",
+          "Keine weiteren Angaben, weil jede Ergänzung automatisch alle älteren Spuren beseitigt."
+        ],
+        "correct": 1,
+        "why": "Eine Erhaltungsdokumentation macht Eingriffe nachvollziehbar. Farbe allein bestimmt das Alter nicht; eine Schutzlage kann ältere Substanz bewahren."
+      }
+    ],
+    "image": "history-nalanda",
+    "revision": 1
+  },
+  {
+    "id": "history-hattusha",
+    "category": "history",
+    "title": "Hattuscha: Eine Stadt hinterlässt Texte",
+    "intro": "In der hethitischen Hauptstadt bewahren Gebäude und beschriebene Tontafeln unterschiedliche Spuren der Vergangenheit.",
+    "aliases": [
+      "Hattusa",
+      "Hattusha",
+      "Hattuša",
+      "Hethiter",
+      "Boğazköy",
+      "Bogazkoy"
+    ],
+    "paragraphs": [
+      "Hattuscha war eine Hauptstadt des hethitischen Reiches im zweiten Jahrtausend vor Christus. Ihre Reste liegen bei Boğazkale in der heutigen Türkei. Der Ort verbindet Spuren einer Stadt mit zahlreichen Schriftfunden.",
+      "Erhaltene Mauern, Tore und Gebäude zeigen, wie Teile der Stadt angelegt waren. Das Foto zeigt das Löwentor in einem neuzeitlichen Erhaltungszustand. Eine solche Aufnahme hilft beim Beschreiben von Formen; sie beobachtet keinen Alltag der damaligen Bewohner.",
+      "In Hattuscha wurden viele Tontafeln mit Keilschrift gefunden. Die UNESCO nennt unter anderem Verträge sowie religiöse und literarische Texte. Solche Schriftquellen können andere Fragen beantworten als ein Mauerrest. Sie müssen gelesen und in ihren Zusammenhang eingeordnet werden.",
+      "Keilschrift ist eine Schriftform und nicht der Name einer einzigen Sprache. Die Grabungsforschung beschreibt in den Texten aus Hattuscha neben Hethitisch auch andere Sprachen, beispielsweise Luwisch und Hattisch. Ähnliche Zeichen bedeuten deshalb nicht automatisch, dass zwei Texte dieselbe Sprache verwenden.",
+      "Das lässt sich an einem heutigen Vergleich üben: „Guten Tag“ und „Good day“ verwenden lateinische Buchstaben, gehören aber zu unterschiedlichen Sprachen. Unser Lernvergleich zeigt diese beiden heutigen Ausdrücke. Er enthält keine hethitischen Originalzeichen und keine Übersetzung einer ausgegrabenen Tafel.",
+      "Ein erhaltener Brief ist ein bestimmter Text mit einem bestimmten Zweck. Er erzählt nicht automatisch von jedem Menschen der Stadt. Frage deshalb: Was steht in dieser Quelle? Wer schrieb sie für wen? Und welche weitergehende Aussage braucht zusätzliche Belege?"
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Hethitische Hauptstadt im 2. Jahrtausend v. Chr.; kein einzelner Gründungstag."
+      },
+      {
+        "label": "Zwei Arten von Spuren",
+        "text": "Baureste und beschriebene Tontafeln beantworten unterschiedliche Fragen."
+      }
+    ],
+    "more": [
+      "Schrift, Sprache und Trägermaterial sind verschiedene Dinge. Bei unserem heutigen Vergleich ist die Schrift lateinisch. Die Wörter sind deutsch beziehungsweise englisch. Ob dieselben Wörter auf Papier oder auf einem Bildschirm stehen, macht daraus keine neue Sprache.",
+      "Eine lesbare Quelle ist nicht automatisch ein vollständiges Bild der Vergangenheit. Ein Brief kann eine Vereinbarung betreffen, ein religiöser Text eine rituelle Handlung. Art, Anlass und Überlieferung des einzelnen Dokuments begrenzen, wofür man ihn als Beleg verwenden kann.",
+      "Die archäologische Stätte steht seit 1986 auf der Welterbeliste. Das Tontafelarchiv wurde 2001 in das UNESCO-Weltdokumentenerbe aufgenommen. Diese neuzeitlichen Schutzdaten sind keine Daten der Entstehung der Stadt oder der antiken Texte.",
+      "Vergleiche mit den anderen Geschichtsthemen: In Mohenjo-Daro untersuchst du die Aussage eines Wasserwegs, bei Khipus Zahl und vereinbarte Bedeutung. Hier trennst du Schrift und Sprache. Gemeinsam ist die Frage, was eine konkrete Quelle tatsächlich zeigt und wo ihre Aussage endet."
+    ],
+    "surprise": "Dieselbe Schrift kann für unterschiedliche Sprachen verwendet werden. Ein sichtbares Zeichen verrät noch nicht alles über einen Text.",
+    "locations": [
+      {
+        "label": "Archäologische Stätte Hattuscha",
+        "lat": 40.014,
+        "lon": 34.621,
+        "iso": "TR"
+      }
+    ],
+    "related": [
+      "history-writing",
+      "history-khipu",
+      "history-mohenjo-daro",
+      "history-rosetta"
+    ],
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Centre · Hattusha: the Hittite Capital · Archivfassung vom 31.10.2026",
+        "url": "https://web.archive.org/web/20261031082851/https://whc.unesco.org/en/list/377"
+      },
+      {
+        "label": "UNESCO Memory of the World · Das Tontafelarchiv von Boğazköy",
+        "url": "https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy"
+      },
+      {
+        "label": "Universität Würzburg · Keilschrifttexte in mehreren Sprachen",
+        "url": "https://www.uni-wuerzburg.de/aktuelles/pressemitteilungen/single/news/neue-indogermanische-sprache/"
+      }
+    ],
+    "sourceNote": "Die drei Fachseiten wurden am07.11.2026 inhaltlich gelesen: UNESCO Brief synthesis/Authenticity zu Stadt und erhaltenen Bauten; UNESCO-Archivbeschreibung zu unterschiedlichen Textarten und Eintragung2001; DAI-Bericht25.09.2023 zu hethitischen, luwischen und hattischen Textpassagen. Unterschiedliche historische Bestandszahlen werden nicht als heutige exakte Tafelzahl vereinheitlicht. Der im DAI-Bericht2023 beschriebene damalige Forschungsstand einer neu erkannten Sprache wird nicht als ungeprüfter Stand2026 fortgeschrieben. Eigene moderne Deutsch-/Englischbeispiele erklären nur die Unterscheidung von Schrift und Sprache; keine erfundenen historischen Zeichen oder Übersetzungen. Stättenmarkierung40.014/34.621 nach geografischer Tabelle des UNESCO-Periodenberichts2014, Seite1, https://whc.unesco.org/document/164432, keine Fundkoordinate einer einzelnen Tafel oder des fotografierten Tors. Fotoherkunft, CC-BY-SA-4.0-Lizenz, Verkleinerung und ergänzte Bauteile gesondert beim Bild. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten. Ergänzender Quellenabgleich am11.11.2026: Die Originalmitteilung der Universität Würzburg vom21.09.2023 belegt die genannten hethitischen, luwischen und hattischen Textpassagen. Der damalige Bericht zur neu erkannten Sprache wird nicht als aktueller Entzifferungsstand2026 ausgegeben. Frühere Fach- und Medienprüfdaten bleiben erhalten.",
+    "links": [],
+    "history": {
+      "year": -1400,
+      "date": "2. Jahrtausend v. Chr. · ungefährer Zeitanker",
+      "era": "Wissen bewahren",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Von einer alten Stadt bleiben verschiedene Spuren: Baureste und Texte auf Tontafeln.",
+      "observe": "Vergleiche die heutigen Wörter im Lernbild. Welche Schrift siehst du, welche Sprache erkennst du, und was ist damit über einen historischen Text noch nicht gesagt?",
+      "benefit": "Du unterscheidest Schrift und Sprache und prüfst, welche Aussage eine konkrete Quelle tragen kann."
+    },
+    "question": {
+      "prompt": "Warum bestimmt die Angabe „Keilschrift“ noch nicht allein die Sprache eines Textes?",
+      "answers": [
+        "Weil mit Keilschrift verschiedene Sprachen geschrieben wurden",
+        "Weil der Ton jeder Tafel genau eine Sprache vorgibt",
+        "Weil alle Menschen mit derselben Schrift dieselbe Sprache sprechen"
+      ],
+      "correct": 0,
+      "why": "Schriftform und Sprache sind verschiedene Merkmale. Die Forschung nennt in den Funden aus Hattuscha Texte beziehungsweise Passagen in mehreren Sprachen."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche heutige deutsche und englische Wörter: Können sie dieselbe Art von Buchstaben verwenden?",
+      "wrongReasons": [
+        null,
+        "Ton ist das Trägermaterial. Daraus allein folgt nicht, in welcher Sprache ein Text verfasst wurde.",
+        "Eine Schrift kann in mehreren Sprachen verwendet werden. Gemeinsame Buchstaben bedeuten nicht automatisch gemeinsame Wörter oder dieselbe Sprache."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-hattusha:compare",
+        "difficulty": "medium",
+        "prompt": "„Guten Tag“ und „Good day“ stehen beide mit lateinischen Buchstaben da. Welche Unterscheidung passt?",
+        "answers": [
+          "Verschiedene Sprachen können dieselbe Schrift verwenden",
+          "Andere Wörter müssen immer eine andere Schrift besitzen",
+          "Das Trägermaterial bestimmt die Bedeutung der Wörter"
+        ],
+        "correct": 0,
+        "why": "Deutsch und Englisch verwenden hier lateinische Buchstaben. Die Wörter gehören trotzdem zu verschiedenen Sprachen; Papier oder Bildschirm bestimmen diese Zuordnung nicht."
+      },
+      {
+        "id": "history-hattusha:limits",
+        "difficulty": "hard",
+        "prompt": "Du kannst einen erhaltenen Verwaltungsbrief aus einer alten Stadt lesen. Welche Schlussfolgerung braucht weitere Belege?",
+        "answers": [
+          "Dass er den Alltag sämtlicher Bewohner vollständig beschreibt",
+          "Dass du den Inhalt dieses einzelnen erhaltenen Textes untersuchen kannst",
+          "Dass die Frage nach Anlass und Verfasser für die Einordnung wichtig ist"
+        ],
+        "correct": 0,
+        "why": "Auch ein verständlicher Text ist eine Auswahl mit Anlass und Zweck. Für den Alltag sämtlicher Menschen reicht dieser einzelne Beleg nicht aus."
+      }
+    ],
+    "checkedAt": "2026-11-07",
+    "revision": 3,
+    "image": "history-hattusha"
+  },
+  {
+    "id": "history-rosetta",
+    "category": "history",
+    "title": "Der Stein von Rosette: Texte als Schlüssel",
+    "intro": "Drei Schriftfassungen auf einem beschädigten Stein halfen beim Entziffern. Entscheidend war der Vergleich – zusammen mit weiteren Inschriften und Sprachwissen.",
+    "paragraphs": [
+      "Auf dem Stein von Rosette stehen drei Textblöcke untereinander. Oben siehst du Hieroglyphen, darunter die demotische Schrift und unten griechische Schrift. Die ersten beiden Fassungen geben unterschiedliche Formen des Ägyptischen wieder, die dritte ist altgriechisch. Schrift und Sprache sind also nicht dasselbe: Drei Schriftfassungen bedeuten nicht einfach drei völlig voneinander unabhängige Sprachen.",
+      "Die Inschrift gehört zu einem Beschluss von Priestern über König Ptolemaios V. aus dem Jahr 196 vor unserer Zeitrechnung. Der Stein ist nur ein Teil einer größeren Steintafel. Vor allem oben fehlt viel Text. Was heute nicht erhalten ist, dürfen wir auf dem Foto nicht einfach als sicher bekannte Zeichen ergänzen.",
+      "Als der Stein 1799 bei Raschid, auch Rosette genannt, in Ägypten gefunden wurde, konnten Gelehrte bereits Altgriechisch lesen. Die griechische Fassung bot deshalb Hinweise auf den Inhalt der anderen Fassungen. Vergleichbare Textstellen und wiederkehrende Namen halfen dabei, Vermutungen über unbekannte Schriftzeichen zu prüfen.",
+      "Ein Name kann ein Hinweis auf Laute sein. Thomas Young zeigte, dass einige Hieroglyphen auf dem Stein die Laute des Königsnamens Ptolemaios wiedergaben. Hieroglyphen sind deshalb nicht einfach eine Sammlung von Bildern, bei denen jedes Bild für eine ganze Sache steht. Aus einer solchen Beobachtung folgt aber noch kein vollständiges Alphabet für alle Zeichen.",
+      "Jean-François Champollion arbeitete ebenfalls an der Entzifferung. Er verglich weitere Inschriften und nutzte Sprachwissen, darunter Koptisch. 1822 stellte er wichtige Ergebnisse vor. Der Stein von Rosette war ein bedeutender Beleg, aber nicht das einzige Hilfsmittel. Mehrere Menschen und viele Vergleiche gehören zur Geschichte der Entzifferung.",
+      "Auch die drei Fassungen auf dem Stein sind keine wortgleichen Kopien. Wörter, Satzbau und einzelne Inhalte können sich unterscheiden. Eine passende Stelle hilft beim Vergleichen, ersetzt aber nicht die Prüfung weiterer Belege. In unserem eigenen heutigen Lernvergleich kannst du ausprobieren, was übereinstimmende Aussagen stützen – und was eine Lücke offenlässt."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "196 v. u. Z.: die Inschrift; 1799: der Fund; 1822: wichtige veröffentlichte Entzifferungsergebnisse."
+      },
+      {
+        "label": "Drei Schriftfassungen",
+        "text": "Hieroglyphisch, demotisch und griechisch; unterschiedliche Schrift und Sprachformen genau unterscheiden."
+      }
+    ],
+    "more": [
+      "Beim Vergleichen helfen Vermutungen, die sich an weiteren Stellen prüfen lassen. Passt ein erschlossener Lautwert nur zu einem Namen, bleibt die Erklärung schwächer, als wenn er auch in anderen Inschriften sinnvoll verwendet werden kann. Das ist eine Grundidee des Prüfens, keine Anleitung, mit einem einzigen kurzen Text eine ganze Sprache zu entziffern.",
+      "Die demotische Fassung und die hieroglyphische Fassung verwenden unterschiedliche ägyptische Sprachformen. Die griechische Fassung ist noch einmal anders aufgebaut. Ein Wort der einen Fassung muss deshalb nicht genau einem Zeichen oder einem Wort der anderen entsprechen. Die wissenschaftliche Ausstellung der Deutschen Digitalen Bibliothek nennt sogar Ergänzungen, Auslassungen und widersprüchliche Stellen.",
+      "Der Stein besteht aus Granodiorit. Das Foto zeigt die erhaltene beschriftete Vorderseite und ihren unregelmäßigen oberen Bruchrand. Du kannst die drei Bereiche vergleichen; in einer kleinen Bildschirmansicht lässt sich daraus nicht zuverlässig jedes einzelne Zeichen lesen. Die bearbeitete Museumsfotografie ist kein Scan eines vollständigen ursprünglichen Textes.",
+      "Mehrere Daten beantworten verschiedene Fragen: 196 vor unserer Zeitrechnung betrifft den Beschluss, 1799 den neuzeitlichen Fund und 1822 eine wichtige Veröffentlichung zur Entzifferung. Keines dieser Daten bezeichnet die Erfindung der ägyptischen Schrift. Vergleiche mit dem Schriftartikel und den Textfunden von Hattuscha: Ein erhaltenes Schriftstück muss zu der Frage passen, die du mit ihm untersuchen willst."
+    ],
+    "surprise": "Eine lesbare Vergleichsfassung kann beim Entziffern helfen, obwohl die Fassungen nicht Wort für Wort übereinstimmen.",
+    "locations": [
+      {
+        "label": "Raschid / Rosette, Ägypten · ungefährer Fundraum",
+        "lat": 31.4,
+        "lon": 30.42,
+        "iso": "EG"
+      }
+    ],
+    "related": [
+      "history-writing",
+      "history-hattusha"
+    ],
+    "sources": [
+      {
+        "label": "Deutsche Digitale Bibliothek · Wissenschaftliche Ausstellung zum Stein von Rosette",
+        "url": "https://ausstellungen.deutsche-digitale-bibliothek.de/rosetta-stone"
+      },
+      {
+        "label": "Gresham College · Richard Parkinson über Schriftfassungen und Entzifferung",
+        "url": "https://www.gresham.ac.uk/watch-now/rosetta-stone"
+      },
+      {
+        "label": "Museum With No Frontiers / British Museum · Objekt EA 24",
+        "url": "https://sharinghistory.museumwnf.org/database_item.php?id=object%3BAWE%3Buk%3B107%3Ben"
+      }
+    ],
+    "aliases": [
+      "Rosetta Stone",
+      "Stein von Rosetta",
+      "Raschid",
+      "Entzifferung",
+      "Ptolemaios"
+    ],
+    "links": [],
+    "history": {
+      "year": -196,
+      "date": "196 v. u. Z. (Inschrift)",
+      "era": "Antike",
+      "sensitive": false
+    },
+    "question": {
+      "prompt": "Warum half die griechische Fassung beim Entziffern der anderen Schriftfassungen?",
+      "answers": [
+        "Weil jedes griechische Wort sicher an genau derselben Stelle wie ein einzelnes Hieroglyphenzeichen steht",
+        "Weil Gelehrte Altgriechisch lesen und damit inhaltliche Anhaltspunkte für den Vergleich gewinnen konnten",
+        "Weil eine lesbare Fassung den genauen Wortlaut aller fehlenden Stellen sicher festlegt"
+      ],
+      "correct": 1,
+      "why": "Die lesbare griechische Fassung gab Hinweise auf den Inhalt. Vergleichbare Stellen und Namen ließen sich untersuchen. Die Fassungen sind aber keine wortgleichen Kopien, und weitere Inschriften sowie Sprachwissen blieben nötig."
+    },
+    "questionFeedback": {
+      "hint": "Überlege, welche zusätzliche Information eine bereits lesbare Fassung liefert und welche Unterschiede trotzdem bestehen bleiben.",
+      "wrongReasons": [
+        "Die Fassungen können andere Wörter, Satzstellungen und sogar zusätzliche oder fehlende Inhalte haben. Ein fester Wort-für-Zeichen-Platztausch wäre deshalb keine verlässliche Regel.",
+        null,
+        "Eine lesbare Vergleichsfassung kann Hinweise geben. Wegen abweichender Formulierungen und beschädigter Teile ist sie aber kein sicherer Abdruck des fehlenden Wortlauts der anderen Fassungen. Erschlossene Ergänzungen müssen als solche erkennbar bleiben."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-rosetta:dates",
+        "difficulty": "medium",
+        "prompt": "Eine Zeitleiste nennt 196 v. u. Z. für die Inschrift und 1799 für den Fund. Welche Erklärung passt?",
+        "answers": [
+          "Der Text entstand viel früher als sein neuzeitlicher Fund",
+          "Die ägyptische Schrift wurde erst beim Fund 1799 erfunden",
+          "Beide Angaben müssen dasselbe Ereignis meinen"
+        ],
+        "correct": 0,
+        "why": "Entstehung der Inschrift und neuzeitlicher Fund sind verschiedene Ereignisse. Ein Funddatum ist kein Erfindungsdatum der Schrift."
+      },
+      {
+        "id": "history-rosetta:limits",
+        "difficulty": "hard",
+        "prompt": "Zwei Fassungen eines Textes stimmen in wichtigen Aussagen überein, doch eine dritte ist beschädigt. Was ist ein begründeter nächster Schritt?",
+        "answers": [
+          "Jede Lücke ohne Kennzeichnung mit dem Wort an derselben Stelle auffüllen",
+          "Aus einer passenden Stelle folgern, dass alle unbekannten Zeichen vollständig erklärt sind",
+          "Vermutungen an weiteren Textstellen prüfen und Unsicherheit bei fehlenden Teilen sichtbar lassen"
+        ],
+        "correct": 2,
+        "why": "Weitere Vergleiche können eine Vermutung stützen oder widerlegen. Unterschiedliche Formulierungen und beschädigte Stellen erlauben keine automatische wortgleiche Ergänzung und keinen vollständigen Entzifferungsabschluss."
+      }
+    ],
+    "learning": {
+      "starter": "Lesbare Vergleichstexte geben Hinweise auf unbekannte Schrift. Unterschiedliche Fassungen und Lücken bleiben zu beachten.",
+      "observe": "Vergleiche, welche Aussage mehrere Fassungen stützen, welche Namen wiederkehren und welche Information trotz Vergleich offenbleibt.",
+      "benefit": "Du unterscheidest einen hilfreichen Hinweis von einer vollständigen Entzifferung und ordnest Inschrift, Fund und Forschung zeitlich getrennt ein."
+    },
+    "sourceNote": "Die drei Schriftfassungen werden von einer starren Quizbehauptung über zwei oder drei Sprachen unterschieden: Die beiden ägyptischen Fassungen verwenden unterschiedliche Sprachformen. Nicht wortgleiche Versionen, Beschädigungen und weitere Inschriften begrenzen den Vergleich. Die neuzeitliche Entzifferung ist kein Werk eines einzigen Augenblicks. Das Lernmodell verwendet ausschließlich eigene heutige deutsche Beispielsätze, keine ägyptischen Originalzeichen oder Übersetzungen der Inschrift. Die Karte markiert ungefähr den Fundraum bei Raschid und keinen vermessenen einzelnen Fundpunkt.",
+    "checkedAt": "2026-11-08",
+    "revision": 1,
+    "image": "history-rosetta-front"
+  },
+  {
+    "id": "history-catalhoyuk",
+    "category": "history",
+    "title": "Çatalhöyük: Wohnen mit dem Eingang im Dach",
+    "intro": "Dicht aneinandergebaute Häuser und Wege über die Dächer: Die Siedlung Çatalhöyük zeigt, wie anders Wohnen in der Jungsteinzeit aussehen konnte.",
+    "paragraphs": [
+      "Çatalhöyük liegt in der heutigen Türkei, in der Ebene von Konya. Zur Fundstätte gehören zwei Siedlungshügel. Die UNESCO ordnet die jungsteinzeitlichen Schichten des Osthügels ungefähr der Zeit zwischen 7400 und 6200 vor unserer Zeitrechnung zu. Das ist eine lange Besiedlungszeit und nicht das Baujahr jedes einzelnen Hauses.",
+      "Die Häuser standen dicht beieinander. Zwischen den aneinandergebauten Häusern verliefen keine gewöhnlichen Straßen wie in vielen heutigen Wohnvierteln. Menschen bewegten sich über die Dächer und gelangten durch eine Dachöffnung mit einer hölzernen Leiter ins Haus. Die erhaltenen niedrigen Mauerreste auf einem Ausgrabungsfoto zeigen deshalb nicht einfach vollständige Häuser mit ihren ursprünglichen Zugängen.",
+      "Lehm war ein wichtiger Baustoff. Die Bezeichnung Jungsteinzeit bedeutet also nicht, dass alles aus Stein war: Zu Lehmwänden kamen beispielsweise hölzerne Leitern. Im Inneren gab es einen Hauptraum mit einem Ofen, erhöhte Bereiche und Nebenräume. Das Forschungsteam beschreibt unter anderem Kochen, Schlafen und Aufbewahren als Tätigkeiten im Haus. Seine Rekonstruktionen verbinden erhaltene Spuren mit einer begründeten Vorstellung des fehlenden Aufbaus; sie sind keine Fotografien des damaligen Lebens.",
+      "Häuser wurden gepflegt, aufgefüllt und wieder aufgebaut. Wiederholtes Bauen am selben Ort trug dazu bei, dass ein Siedlungshügel entstand. Was bei einer Ausgrabung nebeneinander sichtbar ist, muss deshalb nicht alles gleichzeitig benutzt worden sein. Mauern und Böden gehören zu unterschiedlichen Bau- und Nutzungsphasen.",
+      "Im eigenen Lernbild kannst du einen Dachzugang verfolgen und anschließend zwei nacheinander gezeichnete Hausphasen vergleichen. Die wenigen Linien sind ein erfundenes Schema, kein vermessener Grabungsplan. Es zeigt eine räumliche und eine zeitliche Beziehung. Eine genaue Datierung oder die Lebensgeschichte einer bestimmten Familie lässt sich daraus nicht ablesen.",
+      "Gebäude geben Hinweise auf das Zusammenleben. Ob Menschen gleich viel besaßen oder die gleichen Möglichkeiten hatten, ist damit noch nicht entschieden. Eine Forschungsarbeit von 2024 verglich dafür verschiedene Fundgruppen. Sie fand unterschiedliche Muster, etwa bei Grundnahrungsmitteln und bei anderen Gütern. Ein einzelner ähnlich großer Raum beweist deshalb weder vollständige Gleichheit noch eine bestimmte soziale Rangordnung."
+    ],
+    "facts": [
+      {
+        "label": "Zeitanker",
+        "text": "Osthügel: ungefähr 7400–6200 v. u. Z.; viele aufeinanderfolgende Bau- und Nutzungsphasen."
+      },
+      {
+        "label": "Baumaterial und Zugang",
+        "text": "Lehmwände, dicht benachbarte Häuser und Dachöffnungen mit Leitern statt gewöhnlicher Haustüren an einer Straße."
+      }
+    ],
+    "more": [
+      "Die beiden Hügel erzählen nicht genau dieselbe Zeitgeschichte. Die UNESCO ordnet die kupferzeitlichen Schichten des Westhügels überwiegend der späteren Zeit zwischen ungefähr 6200 und 5200 vor unserer Zeitrechnung zu. Werden Bilder verschiedener Bereiche verglichen, müssen deshalb Ort und Zeit der gezeigten Spuren mitbedacht werden.",
+      "Im Haus fanden mehrere Tätigkeiten statt. Eine erhöhte Plattform konnte etwa zum Schlafen und für andere häusliche Arbeiten dienen; Nebenräume boten Stauraum. Eine einzelne Form ist aber keine sichere Bedienungsanleitung. Forschende verbinden Grundrisse und Einbauten mit weiteren Funden, statt jeder gezeichneten Ecke allein eine vollständige Lebensgeschichte zuzuweisen.",
+      "In unserem ungestörten Zwei-Phasen-Schema liegt der später gezeichnete Aufbau über dem älteren Rest. Wirkliche Fundzusammenhänge sind komplizierter als dieses Bild: Entscheidend sind die dokumentierten Beziehungen zwischen Böden, Mauern und Auffüllungen. Die Höhe einer einzelnen sichtbaren Linie ist noch keine Jahreszahl.",
+      "Ähnlicher Zugang zu Grundnahrung und gleicher Besitz aller Dinge sind verschiedene Aussagen. Die Studie von Katheryn C. Twiss und ihrem Team untersucht mehrere Arten von Unterschieden und Veränderungen über die Zeit. Ihr Ergebnis wird hier nicht zu „alle waren immer gleich“ oder „Landwirtschaft erzeugt zwangsläufig eine feste Rangordnung“ vereinfacht. Vergleiche mit Mohenjo-Daro: Ein Siedlungsplan und Aussagen über die Lebensbedingungen seiner Bewohner brauchen jeweils passende Belege."
+    ],
+    "surprise": "Ein Siedlungshügel kann durch viele aufeinanderfolgende Häuser entstehen. Nicht jede freigelegte Mauer gehörte zu derselben Zeit an die Oberfläche.",
+    "locations": [
+      {
+        "label": "Çatalhöyük bei Konya, Türkei · ungefährer Ortsanker",
+        "lat": 37.667,
+        "lon": 32.828,
+        "iso": "TR"
+      }
+    ],
+    "related": [
+      "history-mohenjo-daro",
+      "history-stone_tools"
+    ],
+    "sources": [
+      {
+        "label": "Çatalhöyük Research Project · Architektur und Hausphasen · Archivfassung vom 02.11.2026",
+        "url": "https://web.archive.org/web/20261102144915/https://catalhoyuk.com/site/architecture"
+      },
+      {
+        "label": "UNESCO-Welterbezentrum · Siedlungshügel und Zeiträume · Archivfassung vom 02.11.2026",
+        "url": "https://web.archive.org/web/20261102180447/https://whc.unesco.org/en/list/1405"
+      },
+      {
+        "label": "Twiss und Team · Unterschiede im Zusammenleben, PLOS ONE 2024",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379307/"
+      }
+    ],
+    "aliases": [
+      "Catalhoyuk",
+      "Çatal Höyük",
+      "Catal Hüyük",
+      "Jungsteinzeitliche Häuser",
+      "Dachzugang"
+    ],
+    "links": [],
+    "history": {
+      "year": -7000,
+      "date": "um 7000 v. u. Z. · innerhalb der langen Besiedlung des Osthügels",
+      "era": "Frühe Siedlungen",
+      "sensitive": false
+    },
+    "question": {
+      "prompt": "Wie gelangten Menschen in die dicht aneinandergebauten Häuser von Çatalhöyük?",
+      "answers": [
+        "Durch eine Dachöffnung über eine Leiter",
+        "Durch Haustüren an Straßen zwischen jeder Hausreihe",
+        "Durch seitliche Verbindungstüren von einem Nachbarhaus zum nächsten"
+      ],
+      "correct": 0,
+      "why": "Das Forschungsteam beschreibt den Zugang über die Dächer: Durch eine Öffnung führte eine hölzerne Leiter ins Innere. Die dicht bebauten Bereiche hatten keine gewöhnlichen Straßen zwischen den Häusern."
+    },
+    "questionFeedback": {
+      "hint": "Vergleiche den dicht bebauten Außenraum mit dem Weg in das Haus. An welcher Gebäudefläche setzt der beschriebene Zugang an?",
+      "wrongReasons": [
+        null,
+        "Die beschriebenen Häuser standen eng zusammen; gewöhnliche Straßen mit solchen Eingängen sind hier nicht der belegte Zugang. Die Fachquelle nennt Dachöffnungen und Leitern.",
+        "Nebenräume innerhalb eines Hauses sind nicht dasselbe wie eine Kette seitlicher Eingänge zwischen Nachbarhäusern. Der hier beschriebene Zugang führt vom Dach mit einer Leiter ins Haus."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-catalhoyuk:phases",
+        "difficulty": "medium",
+        "prompt": "Eine spätere Hausphase wurde über einem aufgefüllten älteren Haus angelegt. Was zeigt unser ungestörtes Schema?",
+        "answers": [
+          "Beide gezeichneten Hausphasen müssen gleichzeitig bewohnt gewesen sein",
+          "Der obere Aufbau gehört im Schema zur späteren Phase",
+          "Die Höhe der oberen Linie verrät das genaue Baujahr"
+        ],
+        "correct": 1,
+        "why": "Im ausdrücklich nacheinander aufgebauten Schema folgt die obere Phase auf den älteren Rest. Das ergibt eine Reihenfolge, aber noch kein genaues Baujahr und keine gleichzeitige Nutzung beider Häuser."
+      },
+      {
+        "id": "history-catalhoyuk:inference",
+        "difficulty": "hard",
+        "prompt": "Zwei ausgegrabene Räume sind ungefähr gleich groß. Welche Aussage ist allein dadurch gut gestützt?",
+        "answers": [
+          "Die Bewohner hatten zu allen Zeiten ähnlich viel Besitz",
+          "In beiden Räumen lebten ähnlich viele Menschen",
+          "Die beobachteten Raumgrößen sind ähnlich"
+        ],
+        "correct": 2,
+        "why": "Die Größenähnlichkeit ist die unmittelbare Beobachtung. Besitz, Bewohnerzahl und soziale Unterschiede müssen mit passenden weiteren Funden und ihren Zeitbezügen untersucht werden."
+      }
+    ],
+    "learning": {
+      "starter": "Menschen betraten hier Häuser vom Dach aus. Viele erneuerte Häuser hinterließen aufeinanderfolgende Siedlungsschichten.",
+      "observe": "Verfolge den Dachzugang, unterscheide ältere und spätere Hausphasen und frage, welche Aussagen ein erhaltener Grundriss tatsächlich trägt.",
+      "benefit": "Du kannst räumliche Wege und zeitliche Abfolgen auseinanderhalten und einen schematischen Aufbau von erhaltenen Fundspuren unterscheiden."
+    },
+    "sourceNote": "Die Zeiträume betreffen untersuchte Siedlungsschichten, nicht das genaue Baujahr jedes Hauses oder den weltweiten Beginn des Wohnens. Das Lernbild zeigt ausdrücklich erfundene einfache Schnitte, keinen Originalgrundriss, keine Statik und keine gemessenen Raumhöhen. Die Fotografie ist eine neuzeitliche Ausgrabungsaufnahme; ein vollständiger ursprünglicher Dachaufbau ist nicht erhalten dargestellt. Die Website-Illustrationen des Forschungsteams sind nicht übernommen. Ähnliche Häuser oder ähnliche Grundnahrungszugänge werden nicht mit vollständiger sozialer Gleichheit gleichgesetzt. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten. Quellenzugang am12.11.2026 gezielt berichtigt: Die tatsächlich gelesene Architektur-Herausgeberfassung vom02.11.2026 belegt denselben Dachzugang, Lehmwände, häusliche Nutzung und wiederholte Hausphasen. Das Archivdatum datiert weder einzelne Häuser noch eine neue globale Fachprüfung. Die NC-Projektillustrationen werden weiterhin nicht übernommen.",
+    "checkedAt": "2026-11-08",
+    "revision": 3,
+    "image": "history-catalhoyuk-excavation"
+  },
+  {
+    "id": "history-cahokia",
+    "category": "history",
+    "title": "Cahokia: Eine Stadt mit Erdhügeln",
+    "intro": "Nahe dem Mississippi bauten Menschen eine große indigene Stadt mit Plätzen und aufgeschütteten Hügeln. Was verraten diese Spuren – und wie genau lässt sich die frühere Einwohnerzahl kennen?",
+    "aliases": [
+      "Cahokia Mounds",
+      "Monks Mound",
+      "Mississippian",
+      "Erdhügel",
+      "Collinsville"
+    ],
+    "paragraphs": [
+      "Cahokia liegt im heutigen US-Bundesstaat Illinois, nahe St. Louis und dem Mississippi. Um 1100 war es ein großes Zentrum der Mississippian-Kulturtradition. Die Menschen gehörten zur indigenen Bevölkerung Nordamerikas. Hier entstand eine Stadt lange vor den europäischen Kolonialstädten in dieser Region; die Geschichte Nordamerikas beginnt nicht erst mit deren Gründung.",
+      "Zur damaligen Siedlung gehörten Wohnbereiche, öffentliche Flächen und ungefähr 120 Hügel. Nicht alle hatten dieselbe Form oder Aufgabe. Die UNESCO beschreibt unter anderem erhöhte Grundlagen für öffentliche Gebäude und Hügel für Bestattungen. Eine große Anlage ist deshalb mehr als ein einzelnes berühmtes Bauwerk: Ihre verschiedenen Bereiche helfen, das Zusammenleben zu untersuchen.",
+      "Der besonders große Monks Mound besteht aus aufgeschütteter Erde. Er steigt in vier Terrassen ungefähr 30 Meter hoch an. Nach der UNESCO entstand er in vierzehn Bauabschnitten. Ein grasbewachsener Hügel kann also ein von Menschen gebautes Werk sein. Die heutige Oberfläche verrät allein noch nicht, wie sein Inneres aufgebaut wurde.",
+      "Solche Bauvorhaben erforderten organisierte Arbeit. Landwirtschaft und Handel gehörten ebenfalls zu diesem Zentrum. Größe und Anordnung der Anlage geben Hinweise auf eine Gesellschaft, in der Gruppen unterschiedlich viel Einfluss hatten. Daraus lässt sich aber nicht die Lebensgeschichte jedes einzelnen Menschen oder ein vollständiger Arbeitsplan ablesen.",
+      "Für die Blütezeit um 1100 nennen die beiden Fachseiten ungefähr 10.000 bis 20.000 Menschen. Das ist eine Schätzung, keine dort angegebene genaue Volkszählung. Die Bandbreite bedeutet nicht, dass die Stadt auf Knopfdruck zwischen zwei Einwohnerzahlen wechselte. Sie zeigt, dass die frühere Größe nur mit Unsicherheit beschrieben werden kann.",
+      "Heute sind Erdhügel und weitere archäologische Spuren erhalten. Manche sichtbaren Anlagen wurden später rekonstruiert; die Landesverwaltung nennt zum Beispiel eine wiederaufgebaute Palisade. Auf unserem Foto siehst du den heutigen Monks Mound mit Treppe und Wegen. Foto, erhaltener Befund und wissenschaftlich erschlossene frühere Stadt sind verschiedene Arten von Informationen."
+    ],
+    "facts": [
+      {
+        "label": "Wo?",
+        "text": "Im heutigen Illinois, nahe St. Louis und dem Mississippi."
+      },
+      {
+        "label": "Blütezeit",
+        "text": "Um 1100; kein genaues Gründungsdatum der gesamten Stadt."
+      },
+      {
+        "label": "Monks Mound",
+        "text": "Ein Erdhügel mit vier Terrassen und ungefähr 30 Metern Höhe; in mehreren Bauabschnitten errichtet."
+      },
+      {
+        "label": "Geschätzte Bevölkerung",
+        "text": "Ungefähr 10.000–20.000 Menschen zur Blütezeit. Die Fachseiten nennen eine Bandbreite, keine exakte Zählung."
+      }
+    ],
+    "more": [
+      "Ein Bauabschnitt ist kein Kalenderjahr. Die Angabe von vierzehn Abschnitten bedeutet deshalb nicht, dass der Hügel genau vierzehn Jahre lang gebaut wurde. In unserem Lernbild sind nur drei frei gewählte Erdschichten zu sehen. Sie helfen, eine Reihenfolge zu untersuchen, und bilden weder die tatsächlichen vierzehn Abschnitte noch ihre Dicke oder Dauer ab.",
+      "Ähnliche Umrisse können aus unterschiedlichen Materialien entstehen. Ein abgestufter Erdhügel in Cahokia ist nicht dasselbe wie eine ägyptische Pyramide aus Stein. Für einen Vergleich gehören Material, Bauweise, Zeit und Funktion dazu. Eine ähnliche Silhouette beweist weder denselben Bauplan noch einen direkten Kontakt zwischen zwei weit entfernten Gesellschaften.",
+      "Zählungen brauchen einen räumlichen Bezug. Die UNESCO beschreibt 51 Hügel innerhalb ihres Welterbegrundstücks; die Landesverwaltung nennt 70 erhaltene Hügel an der historischen Stätte. Diese Angaben übernehmen wir nicht als eine einzige genaue aktuelle Gesamtzahl. Für die frühere Siedlung nennen beide ungefähr 120 Hügel. Ein heutiges Foto zeigt außerdem nur einen Ausschnitt der Landschaft.",
+      "Die Quelle und die Stärke einer Aussage gehören zusammen. Dass Menschen Monks Mound in Bauabschnitten aufschütteten, wird durch die archäologische Untersuchung gestützt. Die genaue Form eines verschwundenen Gebäudes oder die exakte Zahl seiner Bewohner folgt daraus nicht automatisch. Ein Lernmodell darf diese Lücken sichtbar machen; es darf sie nicht unbemerkt mit erfundenen historischen Einzelheiten füllen."
+    ],
+    "surprise": "Unter einer grünen Oberfläche kann ein über viele Bauabschnitte gewachsenes menschliches Bauwerk liegen.",
+    "history": {
+      "year": 1100,
+      "date": "um 1100 · Blütezeit des Zentrums",
+      "era": "Mississippian-Kultur",
+      "sensitive": false
+    },
+    "learning": {
+      "starter": "Unterscheide einen gebauten Erdhügel von seiner heutigen grünen Oberfläche.",
+      "observe": "Vergleiche die gedachten Bauschichten und unterscheide anschließend eine geschätzte Bandbreite von einer genauen Zählung.",
+      "benefit": "Du kannst angeben, was ein Foto, ein archäologischer Befund und eine Schätzung jeweils zeigen – und wo weitere Belege nötig sind."
+    },
+    "question": {
+      "prompt": "Welche Erklärung zu Monks Mound passt zu den Fachbelegen?",
+      "answers": [
+        "Menschen schütteten Erde in mehreren Bauabschnitten zu einem großen Hügel auf.",
+        "Die grasbewachsene Oberfläche beweist, dass der Hügel ohne menschlichen Aufbau entstand.",
+        "Die sichtbaren Terrassen entstanden alle durch ein einziges großes Hochwasser."
+      ],
+      "correct": 0,
+      "why": "Die archäologische Beschreibung nennt einen gebauten Erdhügel und mehrere Bauabschnitte. Gras auf der heutigen Oberfläche ist kein Beweis für eine rein natürliche Entstehung; die Terrassen werden hier auch nicht als Ergebnis eines einzigen Hochwassers beschrieben."
+    },
+    "questionFeedback": {
+      "hint": "Trenne die heutige Oberfläche von den untersuchten Hinweisen auf den Aufbau.",
+      "wrongReasons": [
+        null,
+        "Gras kann auch auf einem menschlichen Bauwerk wachsen. Die Fachbeschreibung nennt aufgeschüttete Erde und untersuchte Bauabschnitte.",
+        "Die Quellen beschreiben einen von Menschen aufgeschütteten Hügel mit mehreren Bauabschnitten. Das lässt sich nicht durch die bloße Nähe zum Fluss in ein einziges Hochwasser umdeuten."
+      ]
+    },
+    "challenges": [
+      {
+        "id": "history-cahokia:estimate",
+        "prompt": "Eine Fachseite schätzt 10.000–20.000 Menschen zur Blütezeit. Was bedeutet diese Angabe?",
+        "answers": [
+          "Es lebten nachweislich genau 20.000 Menschen dort; die kleinere Zahl ist falsch.",
+          "Die frühere Einwohnerzahl wird mit Unsicherheit als ungefähre Bandbreite angegeben.",
+          "Die Stadt hatte jedes Jahr abwechselnd genau 10.000 und genau 20.000 Einwohner."
+        ],
+        "correct": 1,
+        "why": "Die beiden Zahlen begrenzen hier eine ungefähre Schätzung. Sie sind weder eine genaue Volkszählung noch eine Folge jährlich abwechselnder Einwohnerzahlen.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "history-cahokia:form",
+        "prompt": "Ein Erdhügel und eine Steinpyramide haben beide abgestufte Umrisse. Welche Schlussfolgerung bleibt tragfähig?",
+        "answers": [
+          "Die ähnliche Form beweist, dass beide aus demselben Baumaterial bestehen.",
+          "Die ähnliche Form beweist, dass beide dieselbe Aufgabe für ihre Gesellschaft hatten.",
+          "Material, Bauweise und Funktion müssen zusätzlich untersucht werden."
+        ],
+        "correct": 2,
+        "why": "Ein Umriss allein legt weder das Material noch die Funktion fest. Monks Mound wird als aufgeschüttetes Erdwerk beschrieben; der Vergleich verlangt weitere konkrete Belege.",
+        "difficulty": "hard"
+      }
+    ],
+    "locations": [
+      {
+        "label": "Cahokia Mounds bei Collinsville, Illinois · ungefährer UNESCO-Kartenpunkt",
+        "lat": 38.658611,
+        "lon": -90.061389,
+        "iso": "US"
+      }
+    ],
+    "related": [
+      "history-caral",
+      "history-pyramids"
+    ],
+    "links": [],
+    "sources": [
+      {
+        "label": "UNESCO-Welterbezentrum · Cahokia, Erdhügel und Bevölkerungsschätzung · Archivfassung vom 31.10.2026",
+        "url": "https://web.archive.org/web/20261031082859/https://whc.unesco.org/en/list/198"
+      },
+      {
+        "label": "Illinois Department of Natural Resources · Cahokia Mounds und heutige Stätte",
+        "url": "https://dnrhistoric.illinois.gov/experience/sites/site.cahokia-mounds.html"
+      }
+    ],
+    "sourceNote": "Eigene deutsche Erklärung nach tatsächlich gelesenen institutionellen Beschreibungen. Die UNESCO nennt 800–1350 für den Mississippian-Zeitraum an dieser Stätte; Illinois beschreibt eine Besiedlung 700–1400. Diese unterschiedlichen Zeitbezüge werden nicht zu einem exakten Gründungsdatum verrechnet; um 1100 bezeichnet hier die Blütezeit. 51 Hügel im UNESCO-Grundstück und 70 an der vom Land beschriebenen Stätte werden nicht als identische aktuelle Zählung ausgegeben; für die frühere Siedlung nennen beide ungefähr 120. Die Schätzung 10.000–20.000 ist keine genaue Volkszählung. Der Kartenpunkt ist aus der tatsächlich angegebenen UNESCO-Position N38 39 31 W90 3 41 umgerechnet. Das Foto zeigt 2024, die drei gedachten Lernschichten sind keine vermessene Rekonstruktion der vierzehn Bauabschnitte. Quellenzugang am10.11.2026 gezielt nachgeprüft: ausdrücklich datierte öffentliche Archivfassungen der ursprünglichen Herausgeber tragen dieselben genannten Sachbelege; das Archivdatum ist kein neues Veröffentlichungsdatum. Die frühere inhaltliche Prüfung bleibt historisch erhalten.",
+    "checkedAt": "2026-11-08",
+    "revision": 2,
+    "image": "history-cahokia-monks-mound"
   }
 ]

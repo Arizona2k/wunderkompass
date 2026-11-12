@@ -2,9 +2,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 import {beforeWaterPhotosynthesis,topicBeforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis,wholeWaterReference,waterPhotosynthesisBoundary as boundary} from './water-photosynthesis-reference.mjs';
 
-const raw=JSON.parse(fs.readFileSync(new URL('../content/editorial-reviews.json',import.meta.url),'utf8')).dossiers;
+const raw=dossiersBeforeHistoryEvidence(JSON.parse(fs.readFileSync(new URL('../content/editorial-reviews.json',import.meta.url),'utf8')).dossiers);
 const actualLayer=boundary.sourceEndpointCorrection.qualifiedUILayer;
 const pending=actualLayer&&raw.some(row=>row.ui?.build===actualLayer.build)?raw.map((row,index)=>({...structuredClone(row),ui:{...actualLayer.previousTemplate,route:actualLayer.routes[index].route}})):structuredClone(raw);
 if(actualLayer)assert.equal(wholeWaterReference(pending),actualLayer.previousSourceCorrectedWholeDossiersSHA256);

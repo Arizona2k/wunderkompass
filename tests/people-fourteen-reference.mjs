@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {inventoryBeforeHistoryEvidence,photoIdsBeforeHistoryEvidence} from './history-evidence-reference.mjs';
 import {beforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import {createHash} from 'node:crypto';
 import dossierBoundary from './fixtures/people-fourteen-dossier-predecessor.json' with {type:'json'};
@@ -34,13 +35,14 @@ export const FOURTEEN_PEOPLE_ADDED_PHOTO_IDS=Object.freeze([
  'henrietta-swan-leavitt','cecilia-payne-gaposchkin','jocelyn-bell-burnell',
  'rachel-carson','chien-shiung-wu','zaha-hadid','hokusai-great-wave-jp1847',
 ]);
-export const beforeFourteenPhotoIds=ids=>ids.filter(id=>!FOURTEEN_PEOPLE_ADDED_PHOTO_IDS.includes(id));
+export const beforeFourteenPhotoIds=ids=>photoIdsBeforeHistoryEvidence(ids).filter(id=>!FOURTEEN_PEOPLE_ADDED_PHOTO_IDS.includes(id));
 
 // Historical dossier predicates consume historical content identities. Current
 // production inventory and every new/raw dossier remain checked without this
 // inverse. Only the ten named related-list additions can change these hashes;
 // the runtime boundary and raw190 field guard independently enforce that scope.
 export function inventoryBeforeFourteenBacklinks(inventory){
+ inventory=inventoryBeforeHistoryEvidence(inventory);
  const records=inventory.records.map(row=>{
   const change=dossierBoundary.relatedDataHashChanges?.[row.id];
   if(!change)return row;

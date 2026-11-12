@@ -1568,6 +1568,246 @@
       "kind": "compare",
       "why": "Maathais gemeinschaftliche Umweltarbeit und Goodalls Forschung und Naturschutz verbinden Menschen mit ihrer Umgebung. Vergleiche die unterschiedlichen Fragen: Wie entwickeln sich gepflanzte Bäume, und was lässt sich an Tieren beobachten? Eine einzelne Zählung erklärt nicht alle Folgen eines Naturschutzprojekts.",
       "checkedAt": "2026-11-05"
+    },
+    {
+      "id": "history-kilwa--history-timbuktu",
+      "fromId": "history-kilwa",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Timbuktu und Kilwa zeigen unterschiedliche afrikanische Stadtgeschichten und weiträumigen Austausch: Handelswege südlich der Sahara beziehungsweise am Indischen Ozean. Der Vergleich behauptet keine direkte Route zwischen beiden.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-kilwa--history-mohenjo-daro",
+      "fromId": "history-kilwa",
+      "toId": "history-mohenjo-daro",
+      "kind": "evidence",
+      "why": "Baureste und Funde geben Einblick in unterschiedliche Städte. Ein untersuchter Ausschnitt erzählt nicht automatisch, wie alle Menschen der gesamten Stadt lebten.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-compass--history-kilwa",
+      "fromId": "history-compass",
+      "toId": "history-kilwa",
+      "kind": "exploration",
+      "why": "Orientierung auf See und das Untersuchen früherer Handelsverbindungen sind verschiedene Fragen. Ein Fund allein zeigt weder die genaue Route noch, welches Navigationsgerät verwendet wurde.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-mohenjo-daro--history-timbuktu",
+      "fromId": "history-mohenjo-daro",
+      "toId": "history-timbuktu",
+      "kind": "evidence",
+      "why": "Ein Stadtplan und eine Handschrift beantworten unterschiedliche Fragen. Beide brauchen einen Fund- oder Überlieferungszusammenhang; ein einzelnes Beispiel beschreibt nicht automatisch die ganze Bevölkerung.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-mohenjo-daro--science-water-cycle",
+      "fromId": "history-mohenjo-daro",
+      "toId": "science-water-cycle",
+      "kind": "context",
+      "why": "Ein gebauter Ablauf und natürliche Wasserwege sind verschiedene Dinge. Beide lassen nach dem Weg des Wassers fragen; die bauliche Verbindung allein sagt nichts über Keimfreiheit aus.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-angkor--science-water-cycle",
+      "fromId": "history-angkor",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Ein gebauter Speicher verändert, wo Wasser bleibt und weiterfließt. Vergleiche das mit den natürlichen Wasserwegen; das einfache Lernbecken bildet den gesamten Kreislauf nicht ab.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-angkor--history-mohenjo-daro",
+      "fromId": "history-angkor",
+      "toId": "history-mohenjo-daro",
+      "kind": "compare",
+      "why": "Wasserwege sind an beiden Orten wichtige Spuren geplanter Anlagen. Zeiten und Bauformen bleiben verschieden; eine ähnliche Forschungsfrage beweist keine direkte historische Verbindung.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-angkor--history-rome",
+      "fromId": "history-angkor",
+      "toId": "history-rome",
+      "kind": "compare",
+      "why": "Vergleiche Fragen an gebaute Wasserwege in unterschiedlichen Gesellschaften. Die Verbindung behauptet weder dieselbe Technik noch eine Übertragung von Rom nach Angkor.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-polynesia--history-compass",
+      "fromId": "history-polynesia",
+      "toId": "history-compass",
+      "kind": "compare",
+      "why": "Vergleiche gelernte Naturhinweise mit einer magnetischen Richtungsanzeige. Beide brauchen einen sinnvollen Bezug; sie arbeiten nicht nach demselben Prinzip.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-polynesia--science-gps",
+      "fromId": "history-polynesia",
+      "toId": "science-gps",
+      "kind": "compare",
+      "why": "Eine Richtung und eine Position sind verschiedene Informationen. Vergleiche beobachtete Himmels- und Meereshinweise mit einem Verfahren, das Signale von Satelliten auswertet.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-polynesia--science-currents",
+      "fromId": "history-polynesia",
+      "toId": "science-currents",
+      "kind": "context",
+      "why": "Die Ausrichtung eines Boots allein bestimmt seine Bewegung gegenüber dem Meeresboden nicht. Bewegtes Wasser kann die Fahrt beeinflussen; eine erkennbare Dünung ist noch keine vollständige Strömungskarte.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-polynesia--history-khipu",
+      "fromId": "history-polynesia",
+      "toId": "history-khipu",
+      "kind": "compare",
+      "why": "Frage, wie Wissen bewahrt und geteilt wird: gelernte Routen und Beobachtungen einerseits, Informationen in Schnüren andererseits. Daraus folgt weder dieselbe Schrift noch eine direkte historische Verbindung.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-angkor--building-angkor-wat",
+      "fromId": "history-angkor",
+      "toId": "building-angkor-wat",
+      "kind": "context",
+      "why": "Angkor Wat ist ein einzelner Tempel innerhalb der größeren historischen Landschaft Angkor. Vergleiche beide räumlichen Bezüge, ohne Datierung, Fläche oder Wasseranlage des einen auf das Ganze zu übertragen.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-caral--history-mohenjo-daro",
+      "fromId": "history-caral",
+      "toId": "history-mohenjo-daro",
+      "kind": "compare",
+      "why": "Baureste helfen an beiden Orten beim Fragenstellen. Vergleiche einen sichtbaren Befund mit seiner Deutung; daraus folgt keine direkte historische Verbindung der Städte.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-caral--history-khipu",
+      "fromId": "history-caral",
+      "toId": "history-khipu",
+      "kind": "compare",
+      "why": "Bei Bau- und Schnurspuren muss die Aussage zur untersuchten Spur passen. Die Orte und Zeiträume bleiben verschieden; die Verbindung behauptet keine entzifferte Khipu-Nachricht aus Caral.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-nalanda--history-timbuktu",
+      "fromId": "history-nalanda",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Vergleiche unterschiedliche Wissensorte und die Rolle von Räumen, Texten und Menschen; die Verbindung behauptet keine direkte Reiseroute.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-nalanda--history-paper",
+      "fromId": "history-nalanda",
+      "toId": "history-paper",
+      "kind": "compare",
+      "why": "Ein Beschreibstoff und eine Lehranstalt unterstützen Wissensweitergabe auf unterschiedliche Weise. Daraus wird kein ungeprüftes Material eines bestimmten Nalanda-Textes abgeleitet.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-nalanda--history-mohenjo-daro",
+      "fromId": "history-nalanda",
+      "toId": "history-mohenjo-daro",
+      "kind": "compare",
+      "why": "Baureste zeigen räumliche Anordnungen; die tatsächliche Nutzung muss mit passenden Belegen erklärt werden. Die beiden Orte und Zeiträume bleiben verschieden.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-hattusha--history-writing",
+      "fromId": "history-hattusha",
+      "toId": "history-writing",
+      "kind": "compare",
+      "why": "Schrift kann Informationen bewahren. Hattuscha zeigt zusätzlich, warum Schriftform und Sprache getrennt untersucht werden müssen.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-hattusha--history-khipu",
+      "fromId": "history-hattusha",
+      "toId": "history-khipu",
+      "kind": "compare",
+      "why": "Tontafeln und Knotenschnüre sind unterschiedliche Informationsträger. Material oder sichtbare Zeichen allein erklären noch nicht jede Bedeutung.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-hattusha--history-mohenjo-daro",
+      "fromId": "history-hattusha",
+      "toId": "history-mohenjo-daro",
+      "kind": "evidence",
+      "why": "Baureste und schriftliche Quellen beantworten unterschiedliche Fragen. Bei beiden muss eine konkrete Beobachtung von einer weitergehenden Deutung getrennt werden.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-paper--history-printing",
+      "fromId": "history-paper",
+      "toId": "history-printing",
+      "kind": "compare",
+      "why": "Papier ist ein möglicher Schriftträger. Druck stellt Abzüge mit einer Druckform her. Die ältere Materialgeschichte ist vom späteren Werkstattverfahren und von der Entstehung einer Schrift zu unterscheiden.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-paper--science-water-cycle",
+      "fromId": "history-paper",
+      "toId": "science-water-cycle",
+      "kind": "compare",
+      "why": "Beim Formen kann Wasser durch ein Sieb ablaufen; beim Trocknen kann es verdunsten. Das Wasserthema erklärt den Unterschied zwischen einem Ortswechsel und einem Zustandswechsel. Das Fasermodell zeigt einen technischen Ausschnitt, nicht den gesamten Wasserkreislauf.",
+      "checkedAt": "2026-11-07"
+    },
+    {
+      "id": "history-printing--history-writing",
+      "fromId": "history-printing",
+      "toId": "history-writing",
+      "kind": "compare",
+      "why": "Schrift ordnet Zeichen einer Bedeutung oder einem Klang zu. Druck überträgt eine vorbereitete Zeichenfolge auf mehrere Abzüge. Die Vervielfältigung allein erklärt weder eine Sprache noch die sachliche Richtigkeit des Textes.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-writing--history-rosetta",
+      "fromId": "history-writing",
+      "toId": "history-rosetta",
+      "kind": "compare",
+      "why": "Eine erhaltene Zeichenfolge ist noch keine sicher gelesene Nachricht. Vergleiche, was ein vereinbarter Zeichenschlüssel, ähnliche Textfassungen und weitere Belege jeweils zur Deutung beitragen; fehlende Textteile bleiben davon unterschieden.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-catalhoyuk--history-mohenjo-daro",
+      "fromId": "history-catalhoyuk",
+      "toId": "history-mohenjo-daro",
+      "kind": "compare",
+      "why": "Vergleiche die erhaltenen Raum- und Zugangsspuren zweier verschiedener Siedlungen und Zeiten. Unterscheide beobachtete Baureste von ergänzten Alltagsvorstellungen; der Vergleich behauptet weder eine direkte Verbindung noch eine einzige Entwicklungsfolge.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-cahokia--history-caral",
+      "fromId": "history-cahokia",
+      "toId": "history-caral",
+      "kind": "compare",
+      "why": "Vergleiche verschiedene Stadtbereiche und große Bauvorhaben zweier unabhängiger Siedlungen. Erhaltene Bauten sind konkrete Hinweise; sie erklären nicht automatisch die Lebensgeschichte aller Bewohner oder denselben politischen Aufbau.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-cahokia--history-pyramids",
+      "fromId": "history-cahokia",
+      "toId": "history-pyramids",
+      "kind": "compare",
+      "why": "Ein Erdhügel und eine Steinpyramide können grob ähnliche Umrisse haben. Prüfe Material, Bauweise und Funktion getrennt; die Form beweist keinen identischen Bauplan oder Kontakt.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-rosetta--history-hattusha",
+      "fromId": "history-rosetta",
+      "toId": "history-hattusha",
+      "kind": "compare",
+      "why": "Ein Vergleichstext kann beim Entziffern helfen; die Unterscheidung von Schrift und Sprache bleibt dabei nötig. Vergleiche die verschiedenen Fragen an dieselben Zeichen und an mehrere Fassungen. Die Verbindung behauptet keine identische Sprache der Texte.",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "id": "history-catalhoyuk--history-stone_tools",
+      "fromId": "history-catalhoyuk",
+      "toId": "history-stone_tools",
+      "kind": "compare",
+      "why": "In einer neolithischen Siedlung wurden verschiedene Werkstoffe und Werkzeuge verwendet. Vergleiche materielle Spuren und ihre Herstellungs-/Nutzungsfragen; die Bezeichnung Steinzeit rekonstruiert weder jedes Haus noch den Alltag aller Menschen.",
+      "checkedAt": "2026-11-08"
     }
   ]
 }

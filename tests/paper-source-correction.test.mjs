@@ -1,11 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import catalog from '../app/world-catalog.json' with {type:'json'};
+import actualHistoryCatalog from '../app/world-catalog.json' with {type:'json'};
+import {beforeHistoryEvidence} from './history-evidence-reference.mjs';
+import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
+const catalog=beforeHistoryEvidence(actualHistoryCatalog);
 import {beforeWaterPhotosynthesis,topicBeforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis,wholeWaterReference,waterPhotosynthesisBoundary as boundary} from './water-photosynthesis-reference.mjs';
 
 const correction=()=>boundary.additionalSourceEndpointCorrections.find(row=>row.topic.id==='history-paper');
-const dossiers=()=>JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers;
+const dossiers=()=>dossiersBeforeHistoryEvidence(JSON.parse(fs.readFileSync('content/editorial-reviews.json','utf8')).dossiers);
 function changeTemporarily(row,run){const saved=structuredClone(row);try{run(row);}finally{for(const key of Object.keys(row))delete row[key];Object.assign(row,saved);}}
 
 test('legacy paper source-only correction preserves all203 other whole current articles, all teaching and answers, and the exact earlier M93 inverse without creating a dossier',()=>{

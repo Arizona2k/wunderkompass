@@ -38,8 +38,11 @@ export function restoreRouteView(path:string,focus=true){
   // A tall card cannot fit inside a short/zoomed viewport. Keep its saved
   // reading position when already visible; centering would move it again.
   // Fully visible reading cards also keep their position at a viewport edge.
+  // Article map openers are reading controls too: a fully visible button at
+  // a viewport edge must not replace its saved reading position by centering.
   // Toolbar controls retain their existing eight-pixel focus reserve.
-  const margin=opener.dataset.routeFocus?.startsWith('world-topic-')?0:8;
+  const readingOpener=opener.dataset.routeFocus?.startsWith('world-topic-')||opener.dataset.routeFocus?.startsWith('world-map-');
+  const margin=readingOpener?0:8;
   const reveal=r.height>innerHeight?r.bottom<=0||r.top>=innerHeight:r.top<margin||r.bottom>innerHeight-margin;
   if(reveal)opener.scrollIntoView({block:'center',behavior:'instant'});return;
  }

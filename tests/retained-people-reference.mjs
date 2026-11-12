@@ -1,3 +1,4 @@
+import {graphBeforeHistoryEvidence} from './history-evidence-reference.mjs';
 import assert from 'node:assert/strict';
 import {beforeWaterPhotosynthesis,dossiersBeforeWaterPhotosynthesis} from './water-photosynthesis-reference.mjs';
 import fs from 'node:fs';
@@ -37,6 +38,7 @@ export function beforeRetainedPeople(items){
  });
 }
 export function beforeRetainedPeopleGraph(graph){
+ graph=graphBeforeHistoryEvidence(graph);
  if(graph.connections.length<181)return graph;
  if(whole(graph)===fixture.priorGraphSHA256)return graph;
  assert.equal(whole(graph),fixture.currentGraphSHA256,'whole current196 explained links');

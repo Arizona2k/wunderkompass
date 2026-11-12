@@ -1,7 +1,24 @@
 'use client';
+import CahokiaEarthEvidence from './cahokia-earth-evidence';
+import PrintingReuseEvidence from './printing-reuse-evidence';
+import RosettaComparisonEvidence from './rosetta-comparison-evidence';
+import CatalhoyukHouseEvidence from './catalhoyuk-house-evidence';
+import WritingRecordEvidence from './writing-record-evidence';
 import './history-evidence.css';
+import KhipuEvidence from './khipu-evidence';
+import HattushaLanguageEvidence from './hattusha-language-evidence';
+import PaperFormingEvidence from './paper-forming-evidence';
+import NalandaLearningEvidence from './nalanda-learning-evidence';
+import CaralEvidence from './caral-evidence';
 import {useState} from 'react';
 import BronzeEvidence from './bronze-evidence';
+import KilwaTradeEvidence from './kilwa-trade-evidence';
+import TimbuktuManuscriptEvidence from './timbuktu-manuscript-evidence';
+import MohenjoEvidence from './mohenjo-evidence';
+import AngkorEvidence from './angkor-evidence';
+import PolynesiaEvidence from './polynesia-evidence';
+import './kilwa-trade-evidence.css';
+import './timbuktu-manuscript-evidence.css';
 
 const ACTIVITIES={
  'history-khipu':{
@@ -17,9 +34,9 @@ const ACTIVITIES={
   explanations:['Der blaue Weg zeigt einen eingezeichneten Ablauf. Das ist eine Beobachtung am Lernbild.','Im zweiten Plan endet der Weg vor dem Kanal. Du vergleichst einen sichtbaren Unterschied; die Bilder sind keine rekonstruierten Ausgrabungspläne.','Ein Ablauf ist ein Hinweis auf einen geplanten Wasserweg. Er allein beweist weder sauberes Wasser noch Gesundheit oder gleiche Lebensbedingungen aller Bewohner.'],
  },
 };
-export const hasHistoryEvidence=(id:string)=>id==='history-bronze'||Object.hasOwn(ACTIVITIES,id);
+export const hasHistoryEvidence=(id:string)=>id==='history-writing'||id==='history-paper'||id==='history-hattusha'||id==='history-bronze'||id==='history-kilwa'||id==='history-timbuktu'||id==='history-angkor'||id==='history-caral'||id==='history-nalanda'||id==='history-polynesia'||id==='history-printing'||id==='history-rosetta'||id==='history-catalhoyuk'||id==='history-cahokia'||Object.hasOwn(ACTIVITIES,id);
 export default function HistoryEvidence({id}:{id:string}){
- return id==='history-bronze'?<BronzeEvidence/>:<LegacyHistoryEvidence id={id}/>;
+ return id==='history-writing'?<WritingRecordEvidence/>:id==='history-paper'?<PaperFormingEvidence/>:id==='history-hattusha'?<HattushaLanguageEvidence/>:id==='history-khipu'?<KhipuEvidence/>:id==='history-bronze'?<BronzeEvidence/>:id==='history-kilwa'?<KilwaTradeEvidence/>:id==='history-timbuktu'?<TimbuktuManuscriptEvidence/>:id==='history-mohenjo-daro'?<MohenjoEvidence/>:id==='history-angkor'?<AngkorEvidence/>:id==='history-polynesia'?<PolynesiaEvidence/>:id==='history-caral'?<CaralEvidence/>:id==='history-nalanda'?<NalandaLearningEvidence/>:id==='history-printing'?<PrintingReuseEvidence/>:id==='history-rosetta'?<RosettaComparisonEvidence/>:id==='history-catalhoyuk'?<CatalhoyukHouseEvidence/>:id==='history-cahokia'?<CahokiaEarthEvidence/>:<LegacyHistoryEvidence id={id}/>;
 }
 function LegacyHistoryEvidence({id}:{id:string}){
  const [level,setLevel]=useState(0),[first,setFirst]=useState(3),[second,setSecond]=useState(5),[legend,setLegend]=useState(true),[connected,setConnected]=useState(true),[explain,setExplain]=useState(false);

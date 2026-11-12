@@ -1,0 +1,8 @@
+.rosetta-comparison-evidence .rosetta-text-comparison{display:grid;gap:1rem;margin:1rem 0;max-width:44rem}
+.rosetta-comparison-evidence figure{margin:0;padding:1rem 0;border-block:1px solid var(--border,#cedbdc)}
+.rosetta-comparison-evidence figcaption{font-size:1rem;line-height:1.5;margin-bottom:.65rem}
+.rosetta-comparison-evidence blockquote{margin:0;font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.65;font-weight:600;overflow-wrap:anywhere}
+.rosetta-comparison-evidence .rosetta-gap{display:inline-block;padding-inline:.35em;border:1px dashed currentColor;font-weight:400}
+.rosetta-comparison-evidence .secondary-button{min-height:48px;white-space:normal;text-align:start}
+.rosetta-comparison-evidence .rosetta-name-clue{flex-basis:100%;margin-block:.5rem}
+@media(prefers-reduced-motion:reduce){.rosetta-comparison-evidence *{scroll-behavior:auto}}

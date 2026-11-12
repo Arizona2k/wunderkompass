@@ -1,0 +1,9 @@
+.cahokia-earth-evidence .cahokia-earth-figure{margin:1rem 0;max-width:36rem}
+.cahokia-earth-evidence svg{display:block;width:100%;height:auto;max-height:25rem}
+.cahokia-earth-evidence figcaption{font-size:1rem;line-height:1.6;max-width:42rem;margin-top:.75rem}
+.cahokia-earth-evidence .secondary-button{min-height:48px;white-space:normal;text-align:start}
+.cahokia-earth-evidence .cahokia-estimate-figure{margin:1rem 0;max-width:38rem}
+.cahokia-estimate-labels{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;flex-wrap:wrap;font-size:1.25rem;line-height:1.5}
+.cahokia-estimate-labels strong{border-bottom:3px solid transparent;padding-bottom:.2rem}
+.cahokia-estimate-labels strong[data-current]{border-color:var(--primary,#256573)}
+.cahokia-estimate-band{height:.65rem;background:#a5c6c7;border-radius:.325rem;margin-top:.6rem}

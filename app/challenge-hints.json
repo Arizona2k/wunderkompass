@@ -111,7 +111,13 @@
   },
   "history-writing:mini": {
     "steps": [
-      "Stell dir einen Händler vor, der sich viele Lieferungen merken muss. Wofür könnten aufgeschriebene Zeichen nützlich sein?"
+      "Unterscheide eine ausgewählte gespeicherte Angabe von einer vollständigen Geschichte.",
+      "Achte darauf, welche Verwendung die Quelle für frühe Tafeln beschreibt."
+    ],
+    "wrongReasons": [
+      null,
+      "Eine wirtschaftliche Liste hält ausgewählte Angaben fest. Für den gesamten Alltag und die Gedanken aller Menschen wären weitere Belege nötig.",
+      "Der Met-Überblick beschreibt eine längere Entwicklung von Bildzeichen und abstrakten Markierungen zu zusätzlichen Lautverwendungen. Ein fertiges Alphabet am Anfang folgt daraus nicht."
     ]
   },
   "history-pyramids:mini": {
@@ -121,7 +127,13 @@
   },
   "history-paper:mini": {
     "steps": [
-      "Unterscheide „etwas verbessern“ von „als Erster überhaupt erfinden“. Welche Formulierung lässt auch frühere Entwicklungen zu?"
+      "Überlege, welche verschiedenen Arten von Belegen es über eine frühe Technik geben kann.",
+      "Vergleiche, was du aus einem erhaltenen Gegenstand und aus einem Bericht über eine spätere Handlung schließen kannst."
+    ],
+    "wrongReasons": [
+      null,
+      "Schrift ist ein Zeichensystem, Papier ein Material. Die Quellen ordnen Cai Lun einer Weiterentwicklung der Papierherstellung zu, nicht einer gleichzeitigen Erfindung beider Entwicklungen.",
+      "Die im Artikel besprochenen archäologischen Papierfunde sind älter als der Bericht für 105. Der Bericht kann daher nicht das Fehlen jedes früheren Papierblatts beweisen."
     ]
   },
   "history-zero:mini": {
@@ -142,7 +154,13 @@
   },
   "history-printing:mini": {
     "steps": [
-      "Gutenbergs Werkstatt war nicht der Anfang jeder Drucktechnik. Suche nach einer Region mit älteren Drucktraditionen."
+      "Unterscheide die Geschichte eines Druckverfahrens von einer einzelnen berühmten Person.",
+      "Vergleiche die Zeitanker der im Artikel genannten Druckbelege: Welche liegen vor etwa 1450?"
+    ],
+    "wrongReasons": [
+      null,
+      "Schreibstuben und beweglicher Druck sind unterschiedliche Verfahren. Die Fachbelege nennen frühere bewegliche Druckzeichen in Ostasien.",
+      "Ganze Druckplatten und einzelne bewegliche Zeichen sind verschiedene Möglichkeiten. Die genannten ostasiatischen Belege widersprechen der Annahme, zuvor habe es nur ganze Platten gegeben."
     ]
   },
   "history-steam:mini": {
@@ -450,12 +468,24 @@
   },
   "history-polynesia:mini": {
     "steps": [
-      "Stell dir eine Fahrt ohne elektronische Geräte vor. Welche beobachtbaren Hinweise könnten Himmel und Meer liefern?"
+      "Vergleiche die Hinweise über die Zeit. Was verändert sich?",
+      "Prüfe, welche Aussage auf erlernter Beobachtung beruht."
+    ],
+    "wrongReasons": [
+      null,
+      "Eine Wellenrichtung zeigt nicht von selbst auf die gesuchte Insel. Auch Dünung kann sich verändern oder von anderen Wellen überlagert sein.",
+      "Sterne erscheinen im Lauf der Nacht an anderen Stellen. Ein brauchbarer Horizonthinweis muss erkannt und passend weiterverwendet oder gewechselt werden."
     ]
   },
   "history-timbuktu:mini": {
     "steps": [
-      "Welche Rolle könnten Bücher, gelehrte Menschen und Handelswege für eine Stadt spielen? Prüfe den Bezug zur Wissensgeschichte."
+      "Welche Rolle könnten Bücher, gelehrte Menschen und Handelswege für eine Stadt spielen? Prüfe den Bezug zur Wissensgeschichte.",
+      "Prüfe, welche Aussage zu den unterschiedlichen im Artikel beschriebenen Tätigkeiten passt."
+    ],
+    "wrongReasons": [
+      null,
+      "Warenhandel war wichtig, aber Bücher, Schulen und gelehrte Menschen gehören ebenfalls zu den beschriebenen Quellen. Die Einschränkung auf ein Warenlager lässt diesen Teil aus.",
+      "Die belegte handschriftliche Wissenskultur braucht keinen europäischen Buchdruck als Anfang. In Timbuktu wurden Bücher schon zuvor geschrieben und kopiert."
     ]
   },
   "history-greece:mini": {
@@ -929,7 +959,13 @@
   },
   "history-mohenjo-daro:mini": {
     "steps": [
-      "Suche nach Spuren, die als Baureste erhalten sein können."
+      "Suche nach Spuren, die als Baureste erhalten sein können.",
+      "Welche Aussagen gehen über eine bauliche Beobachtung hinaus?"
+    ],
+    "wrongReasons": [
+      null,
+      "Ein rechtwinkliger Straßenverlauf belegt nicht, dass jedes Haus dieselbe Bauform hatte. Dafür müssten die einzelnen Gebäude verglichen werden.",
+      "Ein Ablauf zeigt eine bauliche Einrichtung. Gesundheit aller Bewohner lässt sich daraus allein nicht feststellen; dazu wären andere Belege nötig."
     ]
   },
   "history-mohenjo-daro:compare": {
@@ -1446,6 +1482,380 @@
       "Ibn Sina lebte 980–1037. Ein später abgeschriebenes Werk verändert die Lebenszeit seines Autors nicht.",
       null,
       "Der arabische Ausgangstext entstand im frühen 11. Jahrhundert. Ein späteres lateinisches Exemplar ist nicht dessen erste Textentstehung."
+    ]
+  },
+  "history-kilwa:mini": {
+    "steps": [
+      "Vergleiche, was ausdrücklich auf den beiden Karten steht und welche Angaben zwischen diesen Orten fehlen.",
+      "Stelle dir zwei mögliche Wege zwischen denselben Endpunkten vor. Reichen die gegebenen Angaben, um einen davon sicher auszuwählen?"
+    ],
+    "wrongReasons": [
+      "Der Fundort ist in der Frage bereits angegeben. Offen bleibt, wie der Gegenstand dorthin gelangte.",
+      null,
+      "Die Herstellungsregion ist als Angabe vorausgesetzt. Daraus ergibt sich noch keine vollständige Reiseroute."
+    ]
+  },
+  "history-kilwa:time-anchor": {
+    "steps": [
+      "Unterscheide einen längeren Zeitraum besonderer Bedeutung von einem einzelnen Gründungstag.",
+      "Welche zusätzlichen Angaben würdest du brauchen, um Anfang und Ende der Stadtgeschichte einzugrenzen?"
+    ],
+    "wrongReasons": [
+      "Der Zeitanker um1300 bezeichnet eine Blütezeit; ein bestimmter Gründungstag ist damit nicht belegt.",
+      "Eine Blütezeit begrenzt nicht die gesamte Lebensdauer der Stadt auf dieses eine Jahr.",
+      null
+    ]
+  },
+  "history-kilwa:route-evidence": {
+    "steps": [
+      "Prüfe zuerst, ob Quelle, Gegenstand und Zeitpunkt tatsächlich zusammenpassen. Unterscheide eine Etappe vom ganzen Weg.",
+      "Welche Reichweite hätte ein passender Beleg zu einer einzelnen Etappe?"
+    ],
+    "wrongReasons": [
+      null,
+      "Eine Notiz zu einem Ort belegt nicht automatisch alle übrigen Zwischenorte und Beteiligten.",
+      "Schriftliche Quellen können ebenso wichtig sein wie Gegenstände. Ihr Zusammenhang muss geprüft werden."
+    ]
+  },
+  "history-timbuktu:copy-date": {
+    "steps": [
+      "Auf welches konkrete Stück bezieht sich die Datumsangabe? Trenne das Abschreiben von einer möglichen älteren Textfassung.",
+      "Welche zusätzliche Information bräuchtest du, um die Entstehungszeit des ursprünglichen Werks einzugrenzen?"
+    ],
+    "wrongReasons": [
+      "Das Herstellungsdatum der vorliegenden Abschrift ist gerade die gegebene Angabe. Gefragt ist nach einer weiteren Information, die daraus nicht folgt.",
+      null,
+      "Dass das Datum dieses Stück betrifft, ist bereits vorausgesetzt. Das erste Entstehen des Textes braucht einen anderen Beleg."
+    ]
+  },
+  "history-timbuktu:source-scope": {
+    "steps": [
+      "Unterscheide den Inhalt eines ausgewählten Lehrwerks von einer Untersuchung aller Menschen oder aller Texte.",
+      "Welche Behauptung verlangt mehr als das eine erhaltene Stück?"
+    ],
+    "wrongReasons": [
+      "Der Inhalt eines Lehrwerks ist keine Prüfung der Fähigkeiten jedes einzelnen Menschen.",
+      "Ein Beispiel zeigt einen Teil der überlieferten Texte. Es belegt nicht, dass es keine anderen Themen gab.",
+      null
+    ]
+  },
+  "history-polynesia:star-reference": {
+    "steps": [
+      "Vergleiche den Stern mit dem Horizont zu verschiedenen Zeitpunkten.",
+      "Die Methode nutzt erkannte Hinweise; welche Annahme müsste weiter gelten?"
+    ],
+    "wrongReasons": [
+      "Die Richtung eines bisher benutzten Sterns bleibt im Lauf der Nacht nicht einfach unverändert. Prüfe den Bezug zum Horizont.",
+      "Ein beliebiger heller Punkt liefert ohne Erkennen und Einordnung keine genaue Position.",
+      null
+    ]
+  },
+  "history-polynesia:swell-limit": {
+    "steps": [
+      "Welche Bedingung wurde beim Vergleichen der Bootsbewegung vorausgesetzt?",
+      "Prüfe, ob nur das Boot oder auch sein Bezugsmuster verändert sein könnte."
+    ],
+    "wrongReasons": [
+      "Dünung kann gelernte Richtungshinweise liefern. Ihre Veränderungen und weitere Wellen müssen dabei berücksichtigt werden.",
+      null,
+      "Die Lage in den Wellen steuert ein Boot nicht automatisch zu einer bestimmten Insel. Dafür braucht es Navigation und Steuerung."
+    ]
+  },
+  "history-caral:mini": {
+    "steps": [
+      "Frage zuerst, wozu die jeweilige Zeitangabe gehört.",
+      "Vergleiche den untersuchten Fund mit den Gebäuden, über die du eine Aussage machen möchtest."
+    ],
+    "wrongReasons": [
+      "Ein Zeitraum begrenzt eine Einordnung; er ist kein einzelnes Baujahr für alle Gebäude.",
+      null,
+      "Ein einzelner Fund darf nicht ohne weitere Belege auf alle Gebäude übertragen werden."
+    ]
+  },
+  "history-caral:source-area": {
+    "steps": [
+      "Was wird in der jeweiligen Quellenangabe als Fläche bezeichnet?",
+      "Prüfe, ob beide Beschreibungen denselben Ausschnitt umfassen."
+    ],
+    "wrongReasons": [
+      "Verschiedene Zahlen können unterschiedliche Ausschnitte beschreiben; ein Druckfehler ist damit noch nicht belegt.",
+      "Die Anzahl der Ziffern erklärt nicht, welche Fläche jeweils gemeint ist.",
+      null
+    ]
+  },
+  "history-caral:dating-scope": {
+    "steps": [
+      "Welche Zuordnung ist im gedachten Fall tatsächlich untersucht?",
+      "Unterscheide die belegte Aussage über einen Bau von der offenen Frage zum Nachbargebäude."
+    ],
+    "wrongReasons": [
+      null,
+      "Räumliche Nähe belegt kein gemeinsames genaues Baujahr.",
+      "Eine offene Frage beim zweiten Gebäude widerlegt nicht die belegte Zuordnung beim ersten."
+    ]
+  },
+  "history-nalanda:mini": {
+    "steps": [
+      "Vergleiche die beschriebenen Aufgaben der Anlage mit dem, was heute davon sichtbar ist.",
+      "Unterscheide damalige Nutzung, heutige Baureste und einen Vergleich mit heutigen Einrichtungen."
+    ],
+    "wrongReasons": [
+      "Der Vergleich mit heute darf Unterschiede der damaligen Einrichtung nicht verdecken.",
+      "Die heutigen Baureste sind Spuren früherer Nutzung, kein Beleg für dauernde Leere.",
+      null
+    ]
+  },
+  "history-nalanda:trace-and-use": {
+    "steps": [
+      "Frage beim Vergleichen zuerst, welche Spur oder Nutzung mit der jeweiligen Zeitangabe beschrieben wird.",
+      "Kann sich die Nutzung eines Ortes über mehrere Zeitabschnitte verändern?"
+    ],
+    "wrongReasons": [
+      null,
+      "Das Alter einer Spur ist kein gemeinsamer genauer Gründungstag aller späteren Nutzungen.",
+      "Ein Ort kann verschiedene Nutzungsphasen haben; das ist kein Grund, alle Angaben zu verwerfen."
+    ]
+  },
+  "history-nalanda:conservation-record": {
+    "steps": [
+      "Welche Information liefert unsere Lernskizze zusätzlich zur Farbe?",
+      "Überlege, welche Angaben einen späteren Eingriff bei einer wirklichen Mauer nachvollziehbar machen."
+    ],
+    "wrongReasons": [
+      "Ein Foto-Farbton bestimmt nicht zuverlässig, welcher Teil alt oder ergänzt ist.",
+      null,
+      "Eine dokumentierte Schutzlage kann ältere Bausubstanz erhalten; sie beseitigt diese nicht automatisch."
+    ]
+  },
+  "history-paper:forming": {
+    "steps": [
+      "Unterscheide, welche Materialien vorher schon vorhanden sind und was das Sieb verändert.",
+      "Form und Feuchtigkeit sind verschiedene Eigenschaften. Prüfe die Behauptungen einzeln."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein geformtes Fasernetz kann noch nass sein. Ob sich eine bestimmte Schreibflüssigkeit eignet, ist damit ebenfalls nicht belegt.",
+      "Die Fasern waren schon vorher in der Mischung vorhanden. Wasser verteilt sie; ein Sieb kann sie zurückhalten."
+    ]
+  },
+  "history-paper:old-find": {
+    "steps": [
+      "Achte darauf, worauf sich jede Datumsangabe und jeder Beleg bezieht.",
+      "Prüfe, ob ein Beleg für einen früheren Zustand eine spätere Handlung ausschließen muss."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein Bericht über eine spätere Verbesserung hebt einen älteren Fund nicht auf. Die Quellen müssen jeweils auf die von ihnen getragene Aussage geprüft werden.",
+      "Das Vorhandensein älteren Papiers schließt spätere Verbesserungen nicht aus. Der Fund allein beschreibt nicht Cai Luns gesamte Tätigkeit."
+    ]
+  },
+  "history-writing:shared-key": {
+    "steps": [
+      "Trenne das, was du unmittelbar siehst, von dem, was du daraus deuten möchtest.",
+      "Welche zusätzliche Vereinbarung würde zwei Personen helfen, dieselben Zeichen gleich zu verstehen?"
+    ],
+    "wrongReasons": [
+      null,
+      "Ohne Schlüssel ist die Deutung als Getreidesäcke nur eine Vermutung. Die sichtbare Markierung legt diesen Gegenstand allein nicht fest.",
+      "Drei Markierungen allein nennen keine Person und klären keinen Besitz. Dafür wären weitere Zeichen oder Informationen nötig."
+    ]
+  },
+  "history-writing:photo-and-context": {
+    "steps": [
+      "Überlege, welche Rolle Bild, Fachwissen und Zusammenhang jeweils spielen.",
+      "Prüfe, ob eine benannte Unsicherheit wirklich jede begründete Aussage verbietet."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein Foto bewahrt sichtbare Formen. Die Quelle erklärt gerade, dass deren vollständige Lesung schwierig ist.",
+      "Unsicherheit begrenzt die Stärke einer Aussage. Sie hebt begründete fachliche Hinweise auf eine wirtschaftliche Verwendung nicht automatisch auf."
+    ]
+  },
+  "history-angkor:mini": {
+    "steps": [
+      "Verfolge dieselben sechs Marken vor und nach der Weiterleitung.",
+      "Zähle Becken und Weiterleitung getrennt. Prüfe danach, ob ihre Summe zur Ausgangsmenge passt."
+    ],
+    "wrongReasons": [
+      "Das Becken erzeugt beim Weiterleiten keine zusätzlichen Marken.",
+      "Die weitergeleiteten Marken sind weiterhin Teil der dargestellten Gesamtmenge.",
+      null
+    ]
+  },
+  "history-angkor:map-evidence": {
+    "steps": [
+      "Unterscheide eine sichtbare Form von ihrer historischen Deutung.",
+      "Welche weitere Beobachtung könnte helfen, die Vermutung zu bestätigen oder zu widerlegen?"
+    ],
+    "wrongReasons": [
+      null,
+      "Eine gerade Form ist eine Beobachtung. Für die Deutung als historischer Kanal braucht es weitere passende Belege.",
+      "Aus der Geradheit allein folgt kein genaues Baujahr. Dafür wären geeignete zeitliche Belege nötig."
+    ]
+  },
+  "history-angkor:storage-limit": {
+    "steps": [
+      "Unterscheide die Regeln des vereinfachten Lernbilds von einem wirklichen Wasserhaushalt.",
+      "Überlege, welche Zu- und Abflüsse oder zeitlichen Änderungen das Bild gar nicht darstellt."
+    ],
+    "wrongReasons": [
+      "Eine stimmige Summe gilt innerhalb der Modellregeln. Daraus folgt nicht, dass das Modell alle Vorgänge der wirklichen Anlagen enthält.",
+      null,
+      "Die Form eines Beckens allein legt weder den tatsächlichen Zufluss noch den Wasserbedarf oder alle Abflüsse fest."
+    ]
+  },
+  "history-hattusha:mini": {
+    "steps": [
+      "Unterscheide die Form von Zeichen von der Bedeutung und dem Klang der Wörter.",
+      "Vergleiche heutige deutsche und englische Wörter: Welche zusätzliche Information brauchst du außer der Art ihrer Buchstaben?"
+    ],
+    "wrongReasons": [
+      null,
+      "Ton ist das Trägermaterial. Daraus allein folgt nicht, in welcher Sprache ein Text verfasst wurde.",
+      "Eine Schrift kann in mehreren Sprachen verwendet werden. Gemeinsame Buchstaben bedeuten nicht automatisch gemeinsame Wörter oder dieselbe Sprache."
+    ]
+  },
+  "history-hattusha:compare": {
+    "steps": [
+      "Betrachte zuerst die Zeichenformen und dann den Wortlaut der beiden Ausdrücke.",
+      "Ordne die Angaben „lateinische Buchstaben“, „Deutsch“ und „Englisch“ den Begriffen Schrift und Sprache zu."
+    ],
+    "wrongReasons": [
+      null,
+      "Unterschiedliche Wörter müssen nicht zu unterschiedlichen Schriften gehören. Beide gezeigten Ausdrücke verwenden lateinische Buchstaben.",
+      "Papier oder Bildschirm ist der Träger des Textes. Daraus allein folgt weder die Sprache noch die Bedeutung seiner Wörter."
+    ]
+  },
+  "history-hattusha:limits": {
+    "steps": [
+      "Beachte, auf welchen Ausschnitt sich der einzelne erhaltene Text bezieht.",
+      "Für welche Aussage müssten zusätzlich weitere Menschen oder Dokumente untersucht werden?"
+    ],
+    "wrongReasons": [
+      null,
+      "Den Inhalt dieses lesbaren einzelnen Textes kannst du untersuchen. Gesucht ist hier die weiterreichende Folgerung, für die dieser eine Text nicht genügt.",
+      "Nach Anlass und Verfasser zu fragen hilft gerade bei der Einordnung. Der Brief allein beschreibt dadurch noch nicht das Leben aller Bewohner."
+    ]
+  },
+  "history-printing:reorder": {
+    "steps": [
+      "Zähle zuerst, welche Modellzeichen vorhanden sind. Betrachte dann ihre Plätze.",
+      "Was müsste geschehen, damit aus demselben Vorrat eine andere Zeichenfolge entsteht?"
+    ],
+    "wrongReasons": [
+      null,
+      "Eine andere Papierfarbe verändert den Träger, nicht die Anordnung der gesetzten Zeichen.",
+      "Bewegliche Teile können gerade deshalb für eine neue Anordnung dienen. Ihre Zerstörung wäre dafür nicht nötig."
+    ]
+  },
+  "history-printing:repeated-error": {
+    "steps": [
+      "Trenne das Übertragen einer vorbereiteten Zeichenfolge vom Prüfen ihres Inhalts.",
+      "Welche Eigenschaft wurde im Beispiel tatsächlich wiederholt, und welche wurde gar nicht untersucht?"
+    ],
+    "wrongReasons": [
+      null,
+      "Übereinstimmende Abzüge zeigen hier die wiederholte Zeichenfolge. Eine falsche oder vertauschte Vorlage wird durch die Anzahl ihrer Kopien nicht sachlich richtig.",
+      "Die Zahl der Abzüge benennt keine Sprache. Untersuche die Wörter und ihren Zusammenhang getrennt vom Druckvorgang."
+    ]
+  },
+  "history-rosetta:mini": {
+    "steps": [
+      "Vergleiche, welche Fassung Forschende bereits lesen konnten.",
+      "Überlege, welche Information ein lesbarer Vergleich liefert und welche Unterschiede oder Lücken trotzdem geprüft werden müssen."
+    ],
+    "wrongReasons": [
+      "Die Fassungen können andere Wörter, Satzstellungen und sogar zusätzliche oder fehlende Inhalte haben. Ein fester Wort-für-Zeichen-Platztausch wäre deshalb keine verlässliche Regel.",
+      null,
+      "Eine lesbare Vergleichsfassung kann Hinweise geben. Wegen abweichender Formulierungen und beschädigter Teile ist sie aber kein sicherer Abdruck des fehlenden Wortlauts der anderen Fassungen. Erschlossene Ergänzungen müssen als solche erkennbar bleiben."
+    ]
+  },
+  "history-rosetta:dates": {
+    "steps": [
+      "Ordne jedem Datum das im Artikel genannte Ereignis zu.",
+      "Vergleiche, ob die Entstehung einer Inschrift und ihr späterer Fund dasselbe Ereignis bezeichnen."
+    ],
+    "wrongReasons": [
+      null,
+      "Ein neuzeitlicher Fund zeigt nicht den Beginn einer viele Jahrhunderte älteren Schrift. Das Datum196v.u.Z. bezieht sich bereits auf eine vorhandene Inschrift.",
+      "Entstehung eines beschrifteten Gegenstands und sein späterer Fund sind verschiedene Ereignisse. Die unterschiedlichen Angaben widersprechen sich deshalb hier nicht."
+    ]
+  },
+  "history-rosetta:limits": {
+    "steps": [
+      "Trenne erhaltene Textstellen von beschädigten Teilen.",
+      "Prüfe, ob eine ähnliche Fassung den fehlenden Wortlaut direkt zeigt oder nur eine Vermutung dazu ermöglicht."
+    ],
+    "wrongReasons": [
+      "Andere Fassungen können anders formuliert sein. Eine Stelle ohne Kennzeichnung zu füllen würde einen erschlossenen Text als sicher erhalten ausgeben.",
+      "Eine passende Stelle ist ein Hinweis. Für eine vollständige Erklärung aller Zeichen braucht es weitere geprüfte Zusammenhänge und Belege.",
+      null
+    ]
+  },
+  "history-catalhoyuk:mini": {
+    "steps": [
+      "Verfolge im Artikel und Lernbild den Weg vom Außenraum ins Haus.",
+      "Vergleiche, wofür die Leiter gebraucht wird und welche Gebäudefläche dabei mit dem Eingang zusammenhängt."
+    ],
+    "wrongReasons": [
+      null,
+      "Die beschriebenen Häuser standen eng zusammen; gewöhnliche Straßen mit solchen Eingängen sind hier nicht der belegte Zugang. Die Fachquelle nennt Dachöffnungen und Leitern.",
+      "Nebenräume innerhalb eines Hauses sind nicht dasselbe wie eine Kette seitlicher Eingänge zwischen Nachbarhäusern. Der hier beschriebene Zugang führt vom Dach mit einer Leiter ins Haus."
+    ]
+  },
+  "history-catalhoyuk:phases": {
+    "steps": [
+      "Prüfe, ob die Hausphasen im Beispiel nebeneinander oder nacheinander entstehen.",
+      "Unterscheide eine Reihenfolge von einer genauen Jahreszahl und vom gleichzeitigen Bewohnen."
+    ],
+    "wrongReasons": [
+      "Die Zeichnung entsteht ausdrücklich nacheinander. Zwei sichtbare Phasen müssen deshalb keine gleichzeitig genutzten Stockwerke sein.",
+      null,
+      "Eine gezeichnete Höhe ist keine absolute Datierung. Die Reihenfolge kann im Beispiel bekannt sein, ohne dass daraus ein genaues Baujahr folgt."
+    ]
+  },
+  "history-catalhoyuk:inference": {
+    "steps": [
+      "Welche Information wurde in der Frage tatsächlich beobachtet?",
+      "Überlege, was eine Raummessung direkt zeigt und welche Aussagen über Menschen zusätzliche Funde benötigen."
+    ],
+    "wrongReasons": [
+      "Ähnliche Raumgrößen messen keinen gesamten Besitz. Dafür müssen passende weitere Fundgruppen und ihre Zeitbezüge betrachtet werden.",
+      "Aus derselben Raumgröße folgt keine bestimmte Bewohnerzahl. Diese Aussage benötigt zusätzliche Hinweise über die tatsächliche Nutzung.",
+      null
+    ]
+  },
+  "history-cahokia:mini": {
+    "steps": [
+      "Trenne die heutige Oberfläche von den untersuchten Hinweisen auf den Aufbau.",
+      "Welche Information stammt nur von der grünen Oberfläche, und welche erklärt den Aufbau im Boden?"
+    ],
+    "wrongReasons": [
+      null,
+      "Gras kann auch auf einem menschlichen Bauwerk wachsen. Die Fachbeschreibung nennt aufgeschüttete Erde und untersuchte Bauabschnitte.",
+      "Die Quellen beschreiben einen von Menschen aufgeschütteten Hügel mit mehreren Bauabschnitten. Das lässt sich nicht durch die bloße Nähe zum Fluss in ein einziges Hochwasser umdeuten."
+    ]
+  },
+  "history-cahokia:estimate": {
+    "steps": [
+      "Prüfe, ob die Quelle eine genaue Zählung oder eine ungefähre Bandbreite nennt.",
+      "Unterscheide eine einzelne gemessene Zahl von mehreren noch möglichen Werten für dieselbe frühere Größe."
+    ],
+    "wrongReasons": [
+      "Die obere Grenze einer Schätzung ist keine bewiesene exakte Einwohnerzahl.",
+      null,
+      "Die Bandbreite beschreibt keine jährliche Abfolge. Sie steht für Unsicherheit über eine frühere Größe."
+    ]
+  },
+  "history-cahokia:form": {
+    "steps": [
+      "Überlege, welche zusätzlichen Informationen ein Umriss noch nicht zeigt.",
+      "Trenne sichtbaren Umriss, verwendeten Stoff und Aufgabe des Bauwerks voneinander."
+    ],
+    "wrongReasons": [
+      "Eine ähnliche Form legt das Material nicht fest. Monks Mound wird als Erdwerk beschrieben.",
+      "Form und Aufgabe sind verschiedene Eigenschaften. Für die Funktion braucht es eigene Belege.",
+      null
     ]
   }
 }

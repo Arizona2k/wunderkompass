@@ -1,0 +1,13 @@
+.printing-reuse-evidence :is(p,figcaption,li,.small-note){font-size:16px;line-height:1.7}
+.printing-reuse-evidence :is(button,select){font:inherit;font-size:16px;line-height:1.6;min-height:48px;max-width:100%;white-space:normal}
+.printing-reuse-evidence .learning-goal{border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;padding:12px 0}
+.printing-reuse-evidence figure{margin:20px 0;min-width:0}
+.printing-model-form svg{display:block;width:100%;max-width:440px;height:auto;margin:0 auto 12px}
+.printing-type-pool{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:16px 0}
+.printing-type-pool li{display:grid;place-items:center;min-width:52px;min-height:58px;border:1px solid var(--border);border-radius:8px;background:#f5ecdc;color:#173c48;font-size:28px;font-weight:700}
+.printing-impressions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:20px 0}
+.printing-impressions li{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0;padding:12px 6px;border:1px solid var(--border);border-radius:8px;background:#fffdf8}
+.printing-word{font-size:24px;font-weight:700;letter-spacing:.03em}
+.printing-reuse-evidence button[aria-disabled=true]{opacity:.65}
+.large-reading .printing-reuse-evidence :is(p,figcaption,li,button,select,.small-note){font-size:20px!important}
+.large-reading .printing-type-pool li,.large-reading .printing-word{font-size:28px!important}

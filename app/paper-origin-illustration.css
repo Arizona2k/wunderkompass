@@ -1,0 +1,5 @@
+.topic-illustration.paper-origin-illustration{background:#edf6f7;color:#203d4c}
+.topic-illustration.paper-origin-illustration svg{width:100%;max-width:560px;align-self:center}
+.topic-illustration.paper-origin-illustration .paper-origin-label{font-size:16px;line-height:1.6;padding:0 18px 16px;text-align:center;color:#203d4c}
+.topic-illustration.paper-origin-illustration figcaption{font-size:16px;line-height:1.7;background:#f7f4eb;color:#203d4c;padding:14px 18px}
+.large-reading .topic-illustration.paper-origin-illustration :is(.paper-origin-label,figcaption){font-size:20px!important;line-height:1.7}
