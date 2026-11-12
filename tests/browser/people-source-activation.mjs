@@ -87,9 +87,32 @@ export function observedWHOMaterialReady(x){
   typeof x.body==='string'&&x.body.length>expected.minimumBodyLength&&expected.anchors.every(part=>x.body.includes(part));
 }
 
+// Exact two actually observed UNESCO Gutenberg/Jikji documents only. Their
+// complete main HTML and all visible factual material were observed while the
+// document remained loading. A DOM event alone is not the source-reading goal.
+const GUTENBERG_UNESCO_MATERIAL={
+ 'https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915':{
+  title:`Baegun hwasang chorok buljo jikji simche yojeol (vol.II), the second volume of "Anthology of Great Buddhist Priests' Zen Teachings" - Memory of the World`,minimumBodyLength:1400,submissionYear:'2000',
+  anchors:['Also known as Jikji','essentials of Zen Buddhism','Heungdeok-sa temple in Cheongju city','using movable metal types in July 1377','some earlier metal type printings were mentioned',"world's oldest movable metal type printing evidence available",'Submitted by: Republic of Korea']
+ },
+ 'https://www.unesco.org/en/memory-world/42-line-gutenberg-bible-printed-vellum-and-its-contemporary-documentary-background':{
+  title:'42-line Gutenberg Bible, printed on vellum, and its contemporary documentary background - Memory of the World',minimumBodyLength:1800,submissionYear:'2001',
+  anchors:['first book printed in Europe with movable types','From Mainz','unique contemporary documentary context','Goettingen Model Book','Notarial Instrument of Ulrich Helmasperger','Goettingen vellum copy of the Gutenberg Bible','Submitted by: Germany']
+ }
+};
+export function observedGutenbergUNESCOMaterialReady(x){
+ if(!x||typeof x!=='object'||!Object.hasOwn(GUTENBERG_UNESCO_MATERIAL,x.sourceURL))return false;
+ const expected=GUTENBERG_UNESCO_MATERIAL[x.sourceURL];
+ return x.actualURL===x.sourceURL&&x.responseURL===x.sourceURL&&x.httpStatus===200&&x.mainBodyComplete===true&&x.readyState==='loading'&&
+  typeof x.contentType==='string'&&x.contentType.split(';')[0].trim().toLowerCase()==='text/html'&&
+  Number.isFinite(x.elapsedMs)&&x.elapsedMs>=0&&x.elapsedMs<30000&&x.title===expected.title&&
+  typeof x.body==='string'&&x.body.length>expected.minimumBodyLength&&expected.anchors.every(part=>x.body.includes(part))&&
+  /Registration Year:\s*2001/.test(x.body)&&new RegExp('Submission Year:\\s*'+expected.submissionYear).test(x.body);
+}
+
 async function observedKnownMaterialBeforeDOMContentLoaded({opened,row,sourceURL,activationStarted,recordedNavigationResponses}){
  const pending=()=>new Promise(()=>{});
- if(!['https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/','https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934','https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy',...Object.keys(WHO_MATERIAL)].includes(sourceURL))return pending();
+ if(!['https://blogs.loc.gov/inside_adams/2019/12/henriettaleavitt/','https://heritage.bnf.fr/france-pologne/maria-sklodowska-curie-1867-1934','https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy',...Object.keys(WHO_MATERIAL),...Object.keys(GUTENBERG_UNESCO_MATERIAL)].includes(sourceURL))return pending();
  try{
   const remaining=Math.floor(30000-(performance.now()-activationStarted));if(remaining<=0)return pending();
   await opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'commit',timeout:remaining});
@@ -97,9 +120,9 @@ async function observedKnownMaterialBeforeDOMContentLoaded({opened,row,sourceURL
    const sample=await opened.evaluate(()=>({actualURL:location.href,readyState:document.readyState,title:document.title,body:document.body?.innerText??''}));
    const last=recordedNavigationResponses().at(-1),elapsedMs=performance.now()-activationStarted;
    const actual={...sample,sourceURL,responseURL:last?.url,httpStatus:last?.status,mainBodyComplete:last?.actualMainHTMLResponseCompleted===true,contentType:last?.contentType,elapsedMs};
-   if(observedLeavittMaterialReady(actual)||observedCurieBnFMaterialReady(actual)||observedHattushaUNESCOMaterialReady(actual)||observedWHOMaterialReady(actual)){
-    const unesco=observedHattushaUNESCOMaterialReady(actual),who=observedWHOMaterialReady(actual);
-    row.observedMaterialReadiness={kind:observedLeavittMaterialReady(actual)?'exact known visible LOC article material before DOMContentLoaded':unesco?'exact known visible UNESCO Hattusha archive material before DOMContentLoaded':who?'exact known visible WHO article material before DOMContentLoaded':'exact known visible BnF Curie article material before DOMContentLoaded',actualURL:actual.actualURL,responseURL:actual.responseURL,httpStatus:actual.httpStatus,title:actual.title,documentReadyState:actual.readyState,elapsedMs,actualBodyLength:actual.body.length,actualBodySHA256:createHash('sha256').update(actual.body).digest('hex'),...(observedLeavittMaterialReady(actual)?{allFourActualFactualAnchorsPresent:true}:unesco?{allSixActualUNESCOFactualAnchorsPresent:true,actualMainHTMLResponseCompleted:true}:who?{allEightActualWHOFactualAnchorsPresent:true,actualMainHTMLResponseCompleted:true}:{allSevenActualBnFArticleAnchorsPresent:true}),domContentLoadedNotClaimed:true,originalActivationBudgetMs:30000,noTimeoutExtension:true,noAdditionalRequests:true};
+   if(observedLeavittMaterialReady(actual)||observedCurieBnFMaterialReady(actual)||observedHattushaUNESCOMaterialReady(actual)||observedWHOMaterialReady(actual)||observedGutenbergUNESCOMaterialReady(actual)){
+    const unesco=observedHattushaUNESCOMaterialReady(actual),who=observedWHOMaterialReady(actual),gutenberg=observedGutenbergUNESCOMaterialReady(actual);
+    row.observedMaterialReadiness={kind:gutenberg?'exact known complete visible UNESCO Gutenberg/Jikji material before DOMContentLoaded':observedLeavittMaterialReady(actual)?'exact known visible LOC article material before DOMContentLoaded':unesco?'exact known visible UNESCO Hattusha archive material before DOMContentLoaded':who?'exact known visible WHO article material before DOMContentLoaded':'exact known visible BnF Curie article material before DOMContentLoaded',actualURL:actual.actualURL,responseURL:actual.responseURL,httpStatus:actual.httpStatus,title:actual.title,documentReadyState:actual.readyState,elapsedMs,actualBodyLength:actual.body.length,actualBodySHA256:createHash('sha256').update(actual.body).digest('hex'),...(gutenberg?{allActualGutenbergUNESCOFactualAnchorsPresent:true,actualMainHTMLResponseCompleted:true,sourceApprovalClaimed:false}:observedLeavittMaterialReady(actual)?{allFourActualFactualAnchorsPresent:true}:unesco?{allSixActualUNESCOFactualAnchorsPresent:true,actualMainHTMLResponseCompleted:true}:who?{allEightActualWHOFactualAnchorsPresent:true,actualMainHTMLResponseCompleted:true}:{allSevenActualBnFArticleAnchorsPresent:true}),domContentLoadedNotClaimed:true,originalActivationBudgetMs:30000,noTimeoutExtension:true,noAdditionalRequests:true};
     return {popup:opened};
    }
    await new Promise(resolve=>setTimeout(resolve,200));
@@ -127,7 +150,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
       // The first popup response can precede creation of its Frame. Retain the
       // actual navigation Response/Request first, then associate it with the
       // opened tab through its frame or exact activated redirect-chain root.
-      const navigationResponses=[],observe=response=>{const request=response.request();if(request.isNavigationRequest()){const item={response,request,url:response.url(),status:response.status()};navigationResponses.push(item);if(item.url==='https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy'||Object.hasOwn(WHO_MATERIAL,item.url))response.finished().then(error=>{item.actualMainHTMLResponseCompleted=error==null;},()=>{item.actualMainHTMLResponseCompleted=false;});}};
+      const navigationResponses=[],observe=response=>{const request=response.request();if(request.isNavigationRequest()){const item={response,request,url:response.url(),status:response.status()};navigationResponses.push(item);if(item.url==='https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy'||Object.hasOwn(WHO_MATERIAL,item.url)||Object.hasOwn(GUTENBERG_UNESCO_MATERIAL,item.url))response.finished().then(error=>{item.actualMainHTMLResponseCompleted=error==null;},()=>{item.actualMainHTMLResponseCompleted=false;});}};
       const row={id,label:source.label,requested:source.url,status:'external access not yet qualified',mainResponses:[]};observations.push(row);
       let popup,timer;
       const withoutFragment=value=>{const u=new URL(value);u.hash='';return u.href;};

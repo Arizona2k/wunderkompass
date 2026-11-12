@@ -5,7 +5,7 @@ import catalog from '../app/world-catalog.json' with {type:'json'};
 import {beforeAccessiblePeopleSourceDossiers,beforeMetRecordSourceUIDossiers,accessiblePeopleSourceCorrection as correction} from './people-accessible-sources-reference.mjs';
 import {beforeFourteenDossiers} from './people-fourteen-dossier-reference.mjs';
 import {beforeRetainedPeopleDossiers,beforeRetainedPeople} from './retained-people-reference.mjs';
-import {observedHattushaUNESCOMaterialReady,observedWHOMaterialReady} from './browser/people-source-activation.mjs';
+import {observedHattushaUNESCOMaterialReady,observedWHOMaterialReady,observedGutenbergUNESCOMaterialReady} from './browser/people-source-activation.mjs';
 
 test('only the exact complete visible UNESCO archive description and inscription year may precede its delayed DOM event inside the original budget',()=>{
  const url='https://www.unesco.org/en/memory-world/hittite-cuneiform-tablets-bogazkoy';
@@ -169,4 +169,45 @@ for(const sample of whoReadinessCases)test('only the exact complete WHO article 
  assert.equal(observedWHOMaterialReady(good),true);
  for(const bad of [null,undefined,{},...['sourceURL','actualURL','responseURL'].map(key=>({...good,[key]:'https://example.org/unrelated'})),...[206,304,403,429,503].map(httpStatus=>({...good,httpStatus})),...[false,undefined].map(mainBodyComplete=>({...good,mainBodyComplete})),...['application/pdf','application/json',undefined].map(contentType=>({...good,contentType})),...['interactive','complete'].map(readyState=>({...good,readyState})),...[-1,30000,Infinity,NaN].map(elapsedMs=>({...good,elapsedMs})),{...good,title:'Just a moment...'},{...good,body:'Access denied '.repeat(1000)},...sample.anchors.map(part=>({...good,body:good.body.replace(part,'absent')}))])assert.equal(observedWHOMaterialReady(bad),false);
  assert.equal(observedHattushaUNESCOMaterialReady(good),false,'WHO is never relabelled as UNESCO');
+});
+
+// Actual complete-HTML/loading observations are private original evidence.
+// These synthetic countercases retain HTTP, complete body, visible facts and30s.
+const gutenbergUNESCOCases=[
+  {
+    "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests?hub=915",
+    "title": "Baegun hwasang chorok buljo jikji simche yojeol (vol.II), the second volume of \"Anthology of Great Buddhist Priests' Zen Teachings\" - Memory of the World",
+    "padding": 1500,
+    "anchors": [
+      "Also known as Jikji",
+      "essentials of Zen Buddhism",
+      "Heungdeok-sa temple in Cheongju city",
+      "using movable metal types in July 1377",
+      "some earlier metal type printings were mentioned",
+      "world's oldest movable metal type printing evidence available",
+      "Submitted by: Republic of Korea"
+    ],
+    "submissionYear": "2000"
+  },
+  {
+    "url": "https://www.unesco.org/en/memory-world/42-line-gutenberg-bible-printed-vellum-and-its-contemporary-documentary-background",
+    "title": "42-line Gutenberg Bible, printed on vellum, and its contemporary documentary background - Memory of the World",
+    "padding": 1900,
+    "anchors": [
+      "first book printed in Europe with movable types",
+      "From Mainz",
+      "unique contemporary documentary context",
+      "Goettingen Model Book",
+      "Notarial Instrument of Ulrich Helmasperger",
+      "Goettingen vellum copy of the Gutenberg Bible",
+      "Submitted by: Germany"
+    ],
+    "submissionYear": "2001"
+  }
+];
+for(const sample of gutenbergUNESCOCases)test('only the exact complete UNESCO document '+sample.title+' may precede its DOM event inside the unchanged30seconds',()=>{
+ const good={sourceURL:sample.url,actualURL:sample.url,responseURL:sample.url,httpStatus:200,contentType:'text/html; charset=utf-8',mainBodyComplete:true,readyState:'loading',elapsedMs:900,title:sample.title,body:sample.anchors.join(' ')+' Registration Year: 2001 Submission Year: '+sample.submissionYear+' '.repeat(sample.padding)};
+ assert.equal(observedGutenbergUNESCOMaterialReady(good),true);
+ for(const bad of [null,undefined,{},...['sourceURL','actualURL','responseURL'].map(key=>({...good,[key]:'https://example.org/unrelated'})),...['__proto__','toString'].map(sourceURL=>({...good,sourceURL})),...[206,304,403,429,503].map(httpStatus=>({...good,httpStatus})),...[false,undefined].map(mainBodyComplete=>({...good,mainBodyComplete})),...['application/pdf','application/json',undefined].map(contentType=>({...good,contentType})),...['interactive','complete'].map(readyState=>({...good,readyState})),...[-1,30000,Infinity,NaN].map(elapsedMs=>({...good,elapsedMs})),{...good,title:'Just a moment...'},{...good,body:'Access denied '.repeat(1000)},...sample.anchors.map(part=>({...good,body:good.body.replace(part,'absent')})),{...good,body:good.body.replace('Registration Year: 2001','Registration Year: 2002')},{...good,body:good.body.replace('Submission Year: '+sample.submissionYear,'Submission Year: 1999')}])assert.equal(observedGutenbergUNESCOMaterialReady(bad),false);
+ assert.equal(observedHattushaUNESCOMaterialReady(good),false,'Gutenberg/Jikji never relabelled as Hattusha');assert.equal(observedWHOMaterialReady(good),false);
 });
