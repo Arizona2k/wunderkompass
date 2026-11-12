@@ -154,6 +154,14 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
       const row={id,label:source.label,requested:source.url,status:'external access not yet qualified',mainResponses:[]};observations.push(row);
       let popup,timer;
       const withoutFragment=value=>{const u=new URL(value);u.hash='';return u.href;};
+      // Keep the original transport reason when a failed source navigation
+      // reaches chrome-error before any HTTP response exists. Recording does
+      // not qualify a failed load or alter its existing deadline/assertions.
+      const navigationFailures=[],observeNavigationFailure=request=>{
+        if(!request.isNavigationRequest())return;
+        let root=request;while(root.redirectedFrom())root=root.redirectedFrom();
+        if(withoutFragment(root.url())===withoutFragment(source.url))navigationFailures.push({url:request.url(),activatedSourceRoot:root.url(),errorText:request.failure()?.errorText??null});
+      };
       // Preserve already observed HTTP responses even if DOM readiness later
       // times out. A response alone never establishes a successful source load.
       const recordedNavigationResponses=()=>navigationResponses.flatMap(({response,request,url,status,actualMainHTMLResponseCompleted})=>{
@@ -172,6 +180,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
       const observePopup=opened=>{popup=opened;resolvePopup(opened);};
       watchDownload(page);page.context().on('page',observePage);page.on('popup',observePopup);
       page.context().on('response',observe);
+      page.context().on('requestfailed',observeNavigationFailure);
       try {
         // Headless Chromium normally downloads PDFs and leaves a blank popup.
         // Observe the real Enter action's download before it can precede popup
@@ -205,9 +214,9 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
         const last=row.mainResponses.at(-1);row.status=!last||withoutFragment(last.url)!==withoutFragment(row.actualURL)?'final source HTTP response not established':last.status>=400?'blocked external HTTP '+last.status:last.status<200||last.status>=300?'unexpected final source HTTP '+last.status:/^(?:access denied|forbidden|just a moment|attention required)/i.test(row.actualTitle.trim())?'external challenge page':text.length>200?'actual source destination loaded; passage review remains separate':'insufficient source body';
         row.actualNamedHistoryMaterial=assertHistorySourceMaterial({requested:source.url,actualURL:row.actualURL,responseURL:last?.url,httpStatus:last?.status,contentType:last?.contentType,title:row.actualTitle,body:text});
         }
-      } catch(error) {row.mainResponses=recordedNavigationResponses();row.actualURL=popup?.url()??row.actualURL??null;row.status='external navigation/load deficit';row.failure=error.message;}
+      } catch(error) {row.mainResponses=recordedNavigationResponses();row.actualURL=popup?.url()??row.actualURL??null;row.status='external navigation/load deficit';row.failure=error.message;row.originalNavigationFailures=[...navigationFailures];}
       finally {
-        clearTimeout(timer);page.context().off('response',observe);page.context().off('page',observePage);page.off('popup',observePopup);for(const opened of downloadPages)opened.off('download',observeDownload);
+        clearTimeout(timer);page.context().off('response',observe);page.context().off('requestfailed',observeNavigationFailure);page.context().off('page',observePage);page.off('popup',observePopup);for(const opened of downloadPages)opened.off('download',observeDownload);
         for(const opened of new Set([...openedPages,...(popup?[popup]:[])]))if(!opened.isClosed())await opened.close();await page.bringToFront();await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();
         const actual=await page.evaluate(()=>({hash:location.hash,scrollY}));assert.equal(actual.hash,parentBefore.hash);assert(Math.abs(actual.scrollY-parentBefore.scrollY)<=2,'closing source preserves actual reading position');
         assert.equal(await link.evaluate(e=>e===document.activeElement),true,'closing actual source returns to its exact opener');row.actualSourceOpenerAndReadingPositionPreserved=true;
