@@ -52,7 +52,58 @@ test('one public museum object record replaces a blocked presentation link while
 
 // Regression for the observed transport failure; actual popup contexts are checked separately.
 import {createHash} from 'node:crypto';
-import {recoverKnownHTMLConnectionTimeout,observedLeavittMaterialReady,observedCurieBnFMaterialReady} from './browser/people-source-activation.mjs';
+import {recoverKnownHTMLConnectionTimeout,recoverObservedHTTP2RefusedStream,observedLeavittMaterialReady,observedCurieBnFMaterialReady} from './browser/people-source-activation.mjs';
+
+const observedArchive='https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11';
+function refusedStreamTab({sourceURL=observedArchive,failureURL=sourceURL.split('#')[0],rootURL=failureURL,errorText='net::ERR_HTTP2_SERVER_REFUSED_STREAM',failures=1,elapsed=5000,currentURL='chrome-error://chromewebdata/',responses=[],afterStatus=200,afterBody='Actual source body still requires normal HTTP and factual qualification.',gotoError,pauseElapsed=2000}={}){
+ const row={status:'external access not yet qualified',mainResponses:[...responses]},calls=[],delays=[],navigationFailures=Array.from({length:failures},()=>({url:failureURL,activatedSourceRoot:rootURL,errorText}));
+ let text='';
+ const popup={url:()=>currentURL,title:async()=>'Actual destination',locator:()=>({innerText:async()=>text}),goto:async(url,options)=>{
+  calls.push({url,options});if(gotoError)throw gotoError;
+  currentURL=url;row.mainResponses.push({url,status:afterStatus});text=afterBody;
+ },reload:async()=>{throw new Error('A second recovery request is forbidden');}};
+ const args={popup,row,sourceURL,navigationFailures,activationStarted:1000,now:()=>1000+elapsed,pause:async ms=>{delays.push(ms);elapsed+=pauseElapsed;},recordedNavigationResponses:()=>row.mainResponses};
+ return {args,row,calls,delays,navigationFailures,run:()=>recoverObservedHTTP2RefusedStream(args)};
+}
+
+test('the observed HTTP2 refusal permits one same-source GET inside the original deadline, retaining its failed original without qualification',async()=>{
+ for(const sourceURL of[observedArchive,'https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668','https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081']){
+  const x=refusedStreamTab({sourceURL});await x.run();
+  assert.deepEqual(x.calls,[{url:sourceURL,options:{waitUntil:'domcontentloaded',timeout:23000}}]);assert.deepEqual(x.delays,[2000]);
+  assert.deepEqual(x.row.originalNavigationFailures,x.navigationFailures);assert.notEqual(x.row.originalNavigationFailures,x.navigationFailures);
+  assert.equal(x.row.transientNavigationRecovery.initialError,'net::ERR_HTTP2_SERVER_REFUSED_STREAM');assert.equal(x.row.transientNavigationRecovery.initialHTTP,null);
+  assert.equal(x.row.transientNavigationRecovery.additionalRequestsMaximum,1);assert.equal(x.row.transientNavigationRecovery.noTimeoutExtension,true);assert.equal(x.row.transientNavigationRecovery.finalHTTP,200);
+  assert.equal(x.row.status,'external access not yet qualified');await x.run();assert.equal(x.calls.length,1);
+ }
+});
+
+test('unknown failures, other documents, any HTTP response, PDF and expired or invalid budgets cannot trigger refused-stream recovery',async()=>{
+ for(const options of[{sourceURL:'https://unrelated.example/article'},{sourceURL:'https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/other.html'},{sourceURL:'https://source.example/whole.pdf'},...['net::ERR_CONNECTION_RESET','net::ERR_CERT_AUTHORITY_INVALID','net::ERR_HTTP2_PROTOCOL_ERROR',null,'net::ERR_HTTP2_SERVER_REFUSED_STREAM unknown'].map(errorText=>({errorText})),{failureURL:'https://unrelated.example/'},{rootURL:'https://unrelated.example/'},{failures:0},{failures:2},{currentURL:observedArchive},...[200,206,403,429,503].map(status=>({responses:[{url:observedArchive,status}]})),...[30000,30001,-1,NaN,Infinity].map(elapsed=>({elapsed}))]){
+  const x=refusedStreamTab(options);await x.run();assert.deepEqual(x.calls,[],JSON.stringify(options));assert.deepEqual(x.delays,[]);assert.equal(x.row.transientNavigationRecovery,undefined);
+ }
+});
+
+test('refused-stream backoff cannot extend an exhausted original budget or start a request without its reserve',async()=>{
+ for(const options of[{elapsed:29000},{elapsed:28000},{elapsed:27000,pauseElapsed:3000}]){
+  const x=refusedStreamTab(options);await x.run();assert.deepEqual(x.calls,[]);assert.equal(x.row.transientNavigationRecovery.noTimeoutExtension,true);assert.equal(x.row.status,'external access not yet qualified');
+  assert.match(x.row.transientNavigationRecovery.recoveryNotStarted,/insufficient original budget|original activation budget exhausted/);
+ }
+});
+
+test('a refused-stream recovery that fails preserves the original error and cannot start a second request',async()=>{
+ const error=new Error('second ordinary navigation failed'),x=refusedStreamTab({gotoError:error});
+ await assert.rejects(x.run(),e=>e===error);assert.deepEqual(x.row.originalNavigationFailures,x.navigationFailures);assert.equal(x.calls.length,1);assert.equal(x.row.status,'external access not yet qualified');
+ await x.run();assert.equal(x.calls.length,1);
+});
+
+test('refused-stream and existing503recovery share one total additional request; subsequent HTTP failures remain unqualified',async()=>{
+ const body='upstream connect error or disconnect/reset before headers. reset reason: connection timeout';
+ for(const afterStatus of[200,403,429,503]){
+  const x=refusedStreamTab({afterStatus,afterBody:body});await x.run();
+  assert.equal(await recoverKnownHTMLConnectionTimeout(x.args),body);assert.equal(x.calls.length,1);assert.equal(x.row.status,'external access not yet qualified');assert.equal(x.row.transientNavigationRecovery.finalHTTP,afterStatus);
+ }
+ const x=refusedStreamTab();x.row.transientNavigationRecovery={initialHTTP:503,additionalRequestsMaximum:1};await x.run();assert.deepEqual(x.calls,[]);
+});
 
 const connectionTimeoutBody='upstream connect error or disconnect/reset before headers. reset reason: connection timeout';
 function sourceTab({status=503,body=connectionTimeoutBody,afterStatus=200,afterBody='A real destination body still requires the caller to qualify its HTTP response and content.',elapsed=5000,sourceURL='https://source.example/article',responseURL=sourceURL,reloadError}={}){

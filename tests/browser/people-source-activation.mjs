@@ -9,13 +9,40 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 const next=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4,18);
 const saveKey='erde-entdecken:save:v3';
 
+// Native230 recorded these exact archive navigations failing before any HTTP
+// response with HTTP2 REFUSED_STREAM. Permit one ordinary same-tab GET only;
+// the normal caller still requires the complete real source and its anchors.
+const observedRefusedStreamSources=new Set([
+ 'https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/mali-exhibit.html',
+ 'https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668',
+ 'https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081'
+]);
+export async function recoverObservedHTTP2RefusedStream({popup,row,sourceURL,navigationFailures,activationStarted,recordedNavigationResponses,now=()=>performance.now(),pause=ms=>new Promise(resolve=>setTimeout(resolve,ms))}){
+ const withoutFragment=value=>{const u=new URL(value);u.hash='';return u.href;};
+ const failure=navigationFailures[0],remainingActivationMs=Math.floor(30000-(now()-activationStarted));
+ if(row.transientNavigationRecovery||!observedRefusedStreamSources.has(withoutFragment(sourceURL))||navigationFailures.length!==1||
+  failure.errorText!=='net::ERR_HTTP2_SERVER_REFUSED_STREAM'||withoutFragment(failure.url)!==withoutFragment(sourceURL)||
+  withoutFragment(failure.activatedSourceRoot)!==withoutFragment(sourceURL)||recordedNavigationResponses().length!==0||
+  popup.url()!=='chrome-error://chromewebdata/'||!Number.isFinite(remainingActivationMs)||remainingActivationMs<=0||remainingActivationMs>30000)return;
+ row.originalNavigationFailures=navigationFailures.map(item=>({...item}));
+ row.transientNavigationRecovery={initialURL:popup.url(),initialHTTP:null,initialError:failure.errorText,additionalRequestsMaximum:1,remainingActivationMs,originalActivationBudgetMs:30000,noTimeoutExtension:true,normalBackoffMs:2000};
+ if(remainingActivationMs<=2000){row.transientNavigationRecovery.recoveryNotStarted='insufficient original budget for normal backoff';return;}
+ await pause(2000);
+ const afterBackoff=Math.floor(30000-(now()-activationStarted));
+ row.transientNavigationRecovery.remainingActivationMsAfterBackoff=afterBackoff;
+ if(afterBackoff<=0){row.transientNavigationRecovery.recoveryNotStarted='original activation budget exhausted';return;}
+ await popup.goto(sourceURL,{waitUntil:'domcontentloaded',timeout:afterBackoff});
+ row.mainResponses=recordedNavigationResponses();row.actualURL=popup.url();row.actualTitle=await popup.title();
+ row.transientNavigationRecovery.finalHTTP=row.mainResponses.at(-1)?.status;
+}
+
 // Recover only the four actually observed Cloud-proxy HTML transport messages. This function does not qualify
 // a source: the caller still checks real final HTTP, body, opener and progress.
 export async function recoverKnownHTMLConnectionTimeout({popup,row,sourceURL,activationStarted,recordedNavigationResponses,now=()=>performance.now(),pause=ms=>new Promise(resolve=>setTimeout(resolve,ms))}){
   let text=await popup.locator('body').innerText();
   const initial=row.mainResponses.at(-1),remainingActivationMs=Math.floor(30000-(now()-activationStarted));
   const sameDocument=initial&&new URL(initial.url).href.split('#')[0]===new URL(popup.url()).href.split('#')[0];
-  if(initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure','upstream connect error or disconnect/reset before headers. reset reason: connection termination','upstream connect error or disconnect/reset before headers. reset reason: remote refused stream reset'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
+  if(!row.transientNavigationRecovery&&initial?.status===503&&sameDocument&&['upstream connect error or disconnect/reset before headers. reset reason: connection timeout','upstream connect error or disconnect/reset before headers. reset reason: remote connection failure','upstream connect error or disconnect/reset before headers. reset reason: connection termination','upstream connect error or disconnect/reset before headers. reset reason: remote refused stream reset'].includes(text.trim())&&!new URL(sourceURL).pathname.toLowerCase().endsWith('.pdf')&&remainingActivationMs>0){
     row.transientNavigationRecovery={initialHTTP:503,initialURL:row.actualURL,initialBody:text,initialBodySHA256:createHash('sha256').update(text).digest('hex'),additionalRequestsMaximum:1,remainingActivationMs,originalActivationBudgetMs:30000,noTimeoutExtension:true};
     // The observed refused-stream response can persist on an immediate reload.
     // Spend a short normal backoff inside the same original activation budget;
@@ -190,6 +217,7 @@ export async function actualPeopleSourceActivation(page,{ids=next.map(e=>e.id),p
         const destination=Promise.race([downloaded,firstPopup.then(opened=>Promise.race([downloaded,opened.waitForURL(url=>url.href!==''&&url.href!=='about:blank',{waitUntil:'domcontentloaded'}).then(()=>({popup:opened})),observedKnownMaterialBeforeDOMContentLoaded({opened,row,sourceURL:source.url,activationStarted,recordedNavigationResponses})]))]);
         await page.keyboard.press('Enter');
         const activated=await Promise.race([destination,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Actual source popup or native download did not complete in30s')),30000);})]);clearTimeout(timer);
+        if(!activated.download)await recoverObservedHTTP2RefusedStream({popup,row,sourceURL:source.url,navigationFailures,activationStarted,recordedNavigationResponses});
         row.mainResponses=recordedNavigationResponses();row.actualURL=activated.download?activated.download.url():popup.url();row.actualTitle=activated.download?activated.download.suggestedFilename():await popup.title();
         const sourceResponse=row.mainResponses.at(-1);
         if(activated.download)assert.equal(sourceResponse?.contentType?.split(';')[0].trim().toLowerCase(),'application/pdf','native download requires its actual PDF navigation response');
