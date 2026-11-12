@@ -9,14 +9,13 @@ const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json
 const next=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(4,18);
 const saveKey='erde-entdecken:save:v3';
 
-// Native230 recorded these exact archive navigations failing before any HTTP
-// response with HTTP2 REFUSED_STREAM. Permit one ordinary same-tab GET only;
-// the normal caller still requires the complete real source and its anchors.
-const observedRefusedStreamSources=new Set([
- 'https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/mali-exhibit.html',
- 'https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668',
- 'https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081'
-]);
+// Native230/231 recorded the same HTTP2 REFUSED_STREAM across configured
+// archive HTML sources, before any HTTP response. One ordinary same-tab GET
+// may recover it; complete real HTTP/body/anchors remain the caller's duty.
+const observedRefusedStreamSources=new Set(catalog.flatMap(topic=>topic.sources??[])
+ .map(source=>{const u=new URL(source.url);u.hash='';return u;})
+ .filter(u=>u.origin==='https://web.archive.org'&&u.pathname.startsWith('/web/')&&!u.pathname.toLowerCase().endsWith('.pdf'))
+ .map(u=>u.href));
 export async function recoverObservedHTTP2RefusedStream({popup,row,sourceURL,navigationFailures,activationStarted,recordedNavigationResponses,now=()=>performance.now(),pause=ms=>new Promise(resolve=>setTimeout(resolve,ms))}){
  const withoutFragment=value=>{const u=new URL(value);u.hash='';return u.href;};
  const failure=navigationFailures[0],remainingActivationMs=Math.floor(30000-(now()-activationStarted));

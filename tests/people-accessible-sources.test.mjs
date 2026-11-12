@@ -67,7 +67,10 @@ function refusedStreamTab({sourceURL=observedArchive,failureURL=sourceURL.split(
 }
 
 test('the observed HTTP2 refusal permits one same-source GET inside the original deadline, retaining its failed original without qualification',async()=>{
- for(const sourceURL of[observedArchive,'https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668','https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081']){
+ for(const sourceURL of[observedArchive,'https://web.archive.org/web/20261107000304/https://whc.unesco.org/en/list/668','https://web.archive.org/web/20260421020316/https://www.metmuseum.org/art/collection/search/329081',
+ 'https://web.archive.org/web/20261101130950/https://whc.unesco.org/en/list/144',
+ 'https://web.archive.org/web/20240812235110/https://teara.govt.nz/en/map/1772/the-direction-and-timing-of-settlement',
+ 'https://web.archive.org/web/20261102180447/https://whc.unesco.org/en/list/1405']){
   const x=refusedStreamTab({sourceURL});await x.run();
   assert.deepEqual(x.calls,[{url:sourceURL,options:{waitUntil:'domcontentloaded',timeout:23000}}]);assert.deepEqual(x.delays,[2000]);
   assert.deepEqual(x.row.originalNavigationFailures,x.navigationFailures);assert.notEqual(x.row.originalNavigationFailures,x.navigationFailures);
