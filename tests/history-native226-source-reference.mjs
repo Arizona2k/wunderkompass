@@ -2,7 +2,9 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import boundary from './fixtures/history-native226-source-predecessor.json' with {type:'json'};
-export const native226SourceBoundary=boundary;
+import {native227ProjectedBoundary,projectNative227Catalog,projectNative227Dossiers,projectNative227Runtime} from './history-native227-timbuktu-source-reference.mjs';
+export const native226SourceBoundary=native227ProjectedBoundary(boundary);
+const native227PreviousCatalogSHA256=boundary.currentCatalogSHA256;
 export const wholeNative226=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const signature=rows=>rows.map(row=>({id:row.id,sha256:wholeNative226(row)}));
 export function runtimeBodyBeforeNative226(file,body){
@@ -14,6 +16,7 @@ export function runtimeBodyBeforeNative226(file,body){
  return before;
 }
 export function catalogBeforeNative226(rows){
+ rows=projectNative227Catalog(rows);
  assert.equal(rows.length,212,'all212 whole topics before source-repair inversion');
  const hash=wholeNative226(rows);
  if(hash===boundary.previousCatalogSHA256)return rows;
@@ -23,6 +26,7 @@ export function catalogBeforeNative226(rows){
  assert.equal(wholeNative226(old),boundary.previousCatalogSHA256,'whole original212 before source repair');return old;
 }
 export function dossiersBeforeNative226(rows){
+ rows=projectNative227Dossiers(rows);
  const containsRepair=rows.some(row=>Object.hasOwn(row,boundary.historyField)||row.ui?.build===boundary.currentBuild);
  if(rows.length<=288&&!containsRepair)return rows;
  assert.equal(rows.length,300,'all300 whole records before source-repair inversion');
@@ -73,7 +77,7 @@ export function boundaryBeforeCaralSourceReplacement(){
  const old=restoreCaralValues(boundary,layer.previousValues);delete old.caralSourceRepair20261111;assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousBoundarySHA256);return old;
 }
 export function catalogBeforeCaralSourceReplacement(rows){
- rows=[native226SourceBoundary.currentCatalogSHA256,boundaryBeforeHumboldtSourceReplacement().currentCatalogSHA256].includes(wholeNative226(rows))?catalogBeforeKewSourceReplacement(rows):rows;const boundary=boundaryBeforeKewSourceReplacement();
+ rows=[native226SourceBoundary.currentCatalogSHA256,native227PreviousCatalogSHA256,boundaryBeforeHumboldtSourceReplacement().currentCatalogSHA256].includes(wholeNative226(rows))?catalogBeforeKewSourceReplacement(rows):rows;const boundary=boundaryBeforeKewSourceReplacement();
  const prior=boundaryBeforeCaralSourceReplacement();if(wholeNative226(rows)===prior.currentCatalogSHA256)return rows;assert.equal(wholeNative226(rows),boundary.currentCatalogSHA256);const before=prior.topicChanges.find(x=>x.id==='history-caral').after,after=boundary.topicChanges.find(x=>x.id==='history-caral').after;const old=rows.map(r=>{if(r.id!=='history-caral')return r;assert.deepEqual(r,after);return structuredClone(before);});assert.equal(wholeNative226(old),prior.currentCatalogSHA256);return old;
 }
 export function dossiersBeforeCaralSourceReplacement(rows){
@@ -81,7 +85,8 @@ export function dossiersBeforeCaralSourceReplacement(rows){
  const prior=boundaryBeforeCaralSourceReplacement(),layer=boundary.qualifiedUILayer;assert.equal(rows.length,300);if(layer&&rows.some(r=>r.ui?.build===layer.currentTemplate.build)){assert.equal(layer.routes.length,300);rows=rows.map((r,i)=>{const route=layer.routes[i];assert.equal(r.id,route.id);assert.deepEqual(r.ui,{...layer.currentTemplate,route:route.route});const copy=structuredClone(r);assert(Object.hasOwn(route,'previousUI'));copy.ui=structuredClone(route.previousUI);return copy;});}
  if(JSON.stringify(signature(rows))===JSON.stringify(prior.currentContentDossiers))return rows;assert.deepEqual(signature(rows),boundary.currentContentDossiers);const before=prior.dossierChanges.find(x=>x.id==='topics-history:history-caral').after;const old=rows.map(r=>{if(r.id!=='topics-history:history-caral')return r;assert.deepEqual(r[boundary.caralSourceRepair20261111.previousDossierField],before);return structuredClone(before);});assert.deepEqual(signature(old),prior.currentContentDossiers);return old;
 }
-export function runtimeBoundaryBeforeCaralSourceReplacement(value){value=wholeNative226(value)===native226SourceBoundary.humboldtSourceRepair20261111.currentRuntimeBoundarySignature?runtimeBoundaryBeforeHumboldtSourceReplacement(value):value;value=wholeNative226(value)===native226SourceBoundary.kewSourceRepair20261111.currentRuntimeBoundarySignature?runtimeBoundaryBeforeKewSourceReplacement(value):value;const layer=boundaryBeforeKewSourceReplacement().caralSourceRepair20261111;const observed=wholeNative226(value);if(observed===layer.previousRuntimeBoundarySignature)return value;assert.equal(observed,layer.currentRuntimeBoundarySignature,'only the whole known current or previous runtime boundary');assert.deepEqual(layer.previousRuntimeValues.map(v=>v.path),[["currentRuntimeBuild"],["currentInputs"],["currentCatalogSHA256"],["newTopics",2],["replacedInputs",14,"currentBytes"],["replacedInputs",14,"currentSHA256"]]);const old=restoreCaralValues(value,layer.previousRuntimeValues);assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousRuntimeBoundarySHA256);return old;}
+export function runtimeBoundaryBeforeCaralSourceReplacement(value){
+ value=projectNative227Runtime(value);value=wholeNative226(value)===native226SourceBoundary.humboldtSourceRepair20261111.currentRuntimeBoundarySignature?runtimeBoundaryBeforeHumboldtSourceReplacement(value):value;value=wholeNative226(value)===native226SourceBoundary.kewSourceRepair20261111.currentRuntimeBoundarySignature?runtimeBoundaryBeforeKewSourceReplacement(value):value;const layer=boundaryBeforeKewSourceReplacement().caralSourceRepair20261111;const observed=wholeNative226(value);if(observed===layer.previousRuntimeBoundarySignature)return value;assert.equal(observed,layer.currentRuntimeBoundarySignature,'only the whole known current or previous runtime boundary');assert.deepEqual(layer.previousRuntimeValues.map(v=>v.path),[["currentRuntimeBuild"],["currentInputs"],["currentCatalogSHA256"],["newTopics",2],["replacedInputs",14,"currentBytes"],["replacedInputs",14,"currentSHA256"]]);const old=restoreCaralValues(value,layer.previousRuntimeValues);assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousRuntimeBoundarySHA256);return old;}
 
 // Exact whole prior Caral6615 candidate before the single Kew source replacement.
 export function boundaryBeforeKewSourceReplacement(){
@@ -91,7 +96,7 @@ export function boundaryBeforeKewSourceReplacement(){
  assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousBoundarySHA256);return old;
 }
 export function catalogBeforeKewSourceReplacement(rows){
- rows=wholeNative226(rows)===native226SourceBoundary.currentCatalogSHA256?catalogBeforeHumboldtSourceReplacement(rows):rows;const boundary=boundaryBeforeHumboldtSourceReplacement();
+ rows=[native226SourceBoundary.currentCatalogSHA256,native227PreviousCatalogSHA256].includes(wholeNative226(rows))?catalogBeforeHumboldtSourceReplacement(rows):rows;const boundary=boundaryBeforeHumboldtSourceReplacement();
  const before=boundaryBeforeKewSourceReplacement();if(wholeNative226(rows)===before.currentCatalogSHA256)return rows;assert.equal(wholeNative226(rows),boundary.currentCatalogSHA256);const change=boundary.topicChanges.at(-1);assert.equal(change.id,'science-photosynthesis');const old=rows.map(r=>{if(r.id!==change.id)return r;assert.deepEqual(r,change.after);return structuredClone(change.before);});assert.equal(wholeNative226(old),before.currentCatalogSHA256);return old;
 }
 export function dossiersBeforeKewSourceReplacement(rows){
@@ -100,6 +105,7 @@ export function dossiersBeforeKewSourceReplacement(rows){
  if(JSON.stringify(signature(rows))===JSON.stringify(before.currentContentDossiers))return rows;assert.deepEqual(signature(rows),boundary.currentContentDossiers);const change=boundary.dossierChanges.at(-1);assert.equal(change.id,'topics-science:science-photosynthesis');const old=rows.map(r=>{if(r.id!==change.id)return r;assert.deepEqual(r[change.historyField],change.before);return structuredClone(change.before);});assert.deepEqual(signature(old),before.currentContentDossiers);return old;
 }
 export function runtimeBoundaryBeforeKewSourceReplacement(value){
+ value=projectNative227Runtime(value);
  value=wholeNative226(value)===native226SourceBoundary.humboldtSourceRepair20261111.currentRuntimeBoundarySignature?runtimeBoundaryBeforeHumboldtSourceReplacement(value):value;const boundary=boundaryBeforeHumboldtSourceReplacement();
  const layer=boundary.kewSourceRepair20261111,observed=wholeNative226(value);if(observed===layer.previousRuntimeBoundarySignature)return value;assert.equal(observed,layer.currentRuntimeBoundarySignature,'only the entire actual current or previous runtime boundary');assert.deepEqual(layer.previousRuntimeValues.map(v=>v.path),[["currentRuntimeBuild"],["currentInputs"],["currentCatalogSHA256"],["replacedInputs",14,"currentBytes"],["replacedInputs",14,"currentSHA256"]]);const old=restoreCaralValues(value,layer.previousRuntimeValues);assert.equal(old.changedTopics.length,layer.previousCounts.runtimeTopics+1);assert.equal(old.changedTopics.at(-1).id,'science-photosynthesis');old.changedTopics.pop();assert.equal(old.replacedInputs.length,layer.previousCounts.runtimeInputs+1);assert.equal(old.replacedInputs.at(-1).file,'app/science-thinking.json');old.replacedInputs.pop();assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousRuntimeBoundarySHA256);return old;
 }
@@ -114,11 +120,14 @@ export function boundaryBeforeHumboldtSourceReplacement(){
  const layer=boundary.humboldtSourceRepair20261111;assert(layer);assert.equal(layer.previousBoundarySHA256,'86c49cbf870edd004d4052d09781c34a7d6b742e088d271de30cd4d907f102c6');assert.deepEqual(layer.previousValues.map(v=>v.path),[["currentBuild"],["currentCatalogSHA256"],["currentInputs"],["currentContentDossiers"],["qualifiedUILayer"]]);const old=restoreCaralValues(boundary,layer.previousValues);delete old.humboldtSourceRepair20261111;for(const [key,n,id]of[['topicChanges',layer.previousCounts.topicChanges,'person-alexander_humboldt'],['dossierChanges',layer.previousCounts.dossierChanges,'topics-people:person-alexander_humboldt']]){assert.equal(old[key].length,n+1);assert.equal(old[key].at(-1).id,id);old[key].pop();}assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousBoundarySHA256);return old;
 }
 export function catalogBeforeHumboldtSourceReplacement(rows){
+ rows=projectNative227Catalog(rows);
  const before=boundaryBeforeHumboldtSourceReplacement();if(wholeNative226(rows)===before.currentCatalogSHA256)return rows;assert.equal(wholeNative226(rows),boundary.currentCatalogSHA256);const change=boundary.topicChanges.at(-1);assert.equal(change.id,'person-alexander_humboldt');const old=rows.map(r=>{if(r.id!==change.id)return r;assert.deepEqual(r,change.after);return structuredClone(change.before);});assert.equal(wholeNative226(old),before.currentCatalogSHA256);return old;
 }
 export function dossiersBeforeHumboldtSourceReplacement(rows){
+ rows=projectNative227Dossiers(rows);
  const before=boundaryBeforeHumboldtSourceReplacement(),layer=boundary.qualifiedUILayer;assert.equal(rows.length,300);if(layer&&rows.some(r=>r.ui?.build===layer.currentTemplate.build)){assert.equal(layer.routes.length,300);rows=rows.map((r,i)=>{const route=layer.routes[i];assert.equal(r.id,route.id);assert.deepEqual(r.ui,{...layer.currentTemplate,route:route.route});const copy=structuredClone(r);assert(Object.hasOwn(route,'previousUI'));copy.ui=structuredClone(route.previousUI);return copy;});}if(JSON.stringify(signature(rows))===JSON.stringify(before.currentContentDossiers))return rows;assert.deepEqual(signature(rows),boundary.currentContentDossiers);const change=boundary.dossierChanges.at(-1);assert.equal(change.id,'topics-people:person-alexander_humboldt');const old=rows.map(r=>{if(r.id!==change.id)return r;assert.deepEqual(r,change.after);assert.deepEqual(r[change.historyField],change.before);return structuredClone(change.before);});assert.deepEqual(signature(old),before.currentContentDossiers);return old;
 }
 export function runtimeBoundaryBeforeHumboldtSourceReplacement(value){
+ value=projectNative227Runtime(value);
  const layer=boundary.humboldtSourceRepair20261111,observed=wholeNative226(value);if(observed===layer.previousRuntimeBoundarySignature)return value;assert.equal(observed,layer.currentRuntimeBoundarySignature,'only the whole actual new or previous578c runtime boundary');assert.deepEqual(layer.previousRuntimeValues.map(v=>v.path),[["currentRuntimeBuild"],["currentInputs"],["currentCatalogSHA256"],["replacedInputs",14,"currentBytes"],["replacedInputs",14,"currentSHA256"]]);const old=restoreCaralValues(value,layer.previousRuntimeValues);assert.equal(old.changedTopics.length,layer.previousCounts.runtimeTopics+1);assert.equal(old.changedTopics.at(-1).id,'person-alexander_humboldt');old.changedTopics.pop();assert.equal(old.replacedInputs.length,layer.previousCounts.runtimeInputs);assert.equal(createHash('sha256').update(JSON.stringify(old,null,2)+'\n').digest('hex'),layer.previousRuntimeBoundarySHA256);return old;
 }

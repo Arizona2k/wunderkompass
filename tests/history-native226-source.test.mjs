@@ -10,17 +10,15 @@ import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-refer
 import {native226SourceBoundary as boundary,catalogBeforeNative226,dossiersBeforeNative226,wholeNative226,runtimeBodyBeforeNative226,boundaryBeforeHattushaSourceReplacement,catalogBeforeHattushaSourceReplacement,dossiersBeforeHattushaSourceReplacement,boundaryBeforeCaralSourceReplacement,catalogBeforeCaralSourceReplacement,dossiersBeforeCaralSourceReplacement,runtimeBoundaryBeforeCaralSourceReplacement,boundaryBeforeKewSourceReplacement,catalogBeforeKewSourceReplacement,dossiersBeforeKewSourceReplacement,runtimeBoundaryBeforeKewSourceReplacement,thinkingBeforeKewSourceReplacement,boundaryBeforeHumboldtSourceReplacement,catalogBeforeHumboldtSourceReplacement,dossiersBeforeHumboldtSourceReplacement,runtimeBoundaryBeforeHumboldtSourceReplacement} from './history-native226-source-reference.mjs';
 import {assertHistorySourceMaterial} from './browser/history-source-material.mjs';
 import material from './fixtures/history-native226-source-material.json' with {type:'json'};
+import priorQualifiedNative226 from './fixtures/history-native226-source-predecessor.json' with {type:'json'};
+import {assertNative227SourceUI,materialBeforeNative227Timbuktu} from './history-native227-timbuktu-source-reference.mjs';
 const read=name=>JSON.parse(fs.readFileSync(name,'utf8'));
 const catalog=read('app/world-catalog.json'),registry=read('content/editorial-reviews.json').dossiers;
 
 // Source checks keep the exact previous UI; only the separately admitted technical
 // layer may replace it, with its whole prior route/UI still checked explicitly.
 function assertSourceUI(actual,previous,layer=boundary.qualifiedUILayer){
- if(!layer){assert.deepEqual(actual.ui,previous.ui);return;}
- assert.equal(layer.currentTemplate.build,boundary.currentBuild);
- const route=layer.routes.find(r=>r.id===actual.id);assert(route);
- assert.deepEqual(route.previousUI,previous.ui);
- assert.deepEqual(actual.ui,{...layer.currentTemplate,route:route.route});
+ assertNative227SourceUI(actual,previous,layer,priorQualifiedNative226.qualifiedUILayer,boundary.currentBuild);
 }
 
 test('the named23 access repairs and attributed Khipu dates preserve every old whole topic and300/288 dossiers',()=>{
@@ -33,7 +31,7 @@ test('the named23 access repairs and attributed Khipu dates preserve every old w
   for(const key of Object.keys(change.before))if(!['sources','sourceNote','revision',...(change.id==='history-khipu'?['paragraphs','facts']:[])].includes(key))assert.deepEqual(current[key],change.before[key],change.id+' '+key);
   const dossier=registry.find(r=>r.id==='topics-history:'+change.id),previous=prior.find(r=>r.id===dossier.id);
   assert.equal(dossier.dataHash,wholeNative226(current));assert.equal(dossier.aiSelfReview.dataHash,dossier.dataHash);
-  assert.equal(dossier.reviewedOn,previous.reviewedOn);if(boundary.qualifiedUILayer){const layer=boundary.qualifiedUILayer,route=layer.routes.find(r=>r.id===dossier.id);assert.equal(layer.currentTemplate.build,boundary.currentBuild);assert.deepEqual(dossier.ui,{...layer.currentTemplate,route:route.route},'only separately admitted exact current technical UI');assert.deepEqual(route.previousUI,previous.ui,'source access never changes the entire previous UI');}else assert.deepEqual(dossier.ui,previous.ui,'no new UI acceptance from source access');
+  assert.equal(dossier.reviewedOn,previous.reviewedOn);assertSourceUI(dossier,previous);
   assert.deepEqual(dossier.sources.map(s=>s.url),current.sources.map(s=>s.url));assert.deepEqual(dossier.media,previous.media);
  }
  const khipu=catalog.find(t=>t.id==='history-khipu');assert(khipu.paragraphs[2].includes('1425–1532'));assert(khipu.paragraphs[2].includes('1450–1532'));assert(khipu.paragraphs[2].includes('14/3866'));
@@ -98,7 +96,7 @@ test('the readable Caral abstract retains the entire preceding JMU boundary, ori
 });
 
 test('all25 previous source-material records and strict legacyJSON evidence remain exactly recoverable after the human-readable Caral replacement',()=>{
- assert.equal(material.sources.length,25);const prior=structuredClone(material);delete prior.previousCaralJSONSource20261111;prior.sources[16]=structuredClone(material.previousCaralJSONSource20261111);assert.equal(createHash('sha256').update(JSON.stringify(prior,null,2)+'\n').digest('hex'),boundary.caralSourceRepair20261111.previousMaterialSHA256);
+ assert.equal(material.sources.length,25);const prior=structuredClone(materialBeforeNative227Timbuktu(material));delete prior.previousCaralJSONSource20261111;prior.sources[16]=structuredClone(material.previousCaralJSONSource20261111);assert.equal(createHash('sha256').update(JSON.stringify(prior,null,2)+'\n').digest('hex'),boundary.caralSourceRepair20261111.previousMaterialSHA256);
  const source=material.sources.find(s=>s.case===17),body=source.bodyAnchors.join(' ')+' '.repeat(250),sample={requested:source.url,actualURL:source.url,responseURL:source.url,httpStatus:200,contentType:'text/html',title:source.titleTerms.join(' '),body};assert.equal(assertHistorySourceMaterial(sample).case,17);assert.throws(()=>assertHistorySourceMaterial({...sample,body:body.replace('10.1126/science.1059519','10.0000/unrelated')}));
 });
 
