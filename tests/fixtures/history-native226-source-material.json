@@ -187,8 +187,8 @@
       "case": 11,
       "topicId": "history-timbuktu",
       "originalURL": "https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11",
-      "url": "https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11",
-      "kind": "official-html",
+      "url": "https://web.archive.org/web/20260814065154/https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11",
+      "kind": "archived-html",
       "titleTerms": [
         "Exhibition"
       ],
@@ -197,8 +197,9 @@
         "eighteenth-century",
         "addition, subtraction, multiplication, and division"
       ],
-      "publisherResponseSHA256": "c8248899cc7b333f86859a02100c35926ca067c9f12d7a03d476273c950766d5",
-      "checkedOn": "2026-11-12"
+      "publisherResponseSHA256": "1566f840d80495994ca7e691afe6a420201c14966f08166153ddf5fe3c45a7ec",
+      "checkedOn": "2026-11-12",
+      "archiveTimestamp": "20260814065154"
     },
     {
       "case": 12,
@@ -465,6 +466,28 @@
       ],
       "publisherResponseSHA256": "0d6bdc02a59bc6c4ea1936965da55f786d8848467de197594c3befeec45eb3c1",
       "checkedOn": "2026-11-11"
+    },
+    {
+      "case": 26,
+      "topicId": "history-catalhoyuk",
+      "originalURL": "https://catalhoyuk.com/site/architecture",
+      "url": "https://web.archive.org/web/20261102144915/https://catalhoyuk.com/site/architecture",
+      "kind": "archived-html",
+      "archiveTimestamp": "20261102144915",
+      "titleTerms": [
+        "Architecture",
+        "Çatalhöyük Research Project"
+      ],
+      "bodyAnchors": [
+        "continuous building and rebuilding of their houses",
+        "closely built together with no streets in-between",
+        "people moved around on roofs and accessed their homes down a wooden ladder via an opening in the ceiling.",
+        "The walls were constructed of mud bricks.",
+        "houses were continually infilled, often burnt and rebuilt",
+        "Beneath these platforms inhabitants buried their dead."
+      ],
+      "publisherResponseSHA256": "c9b3aefc98459c818a6db5b2b84cbbe06565cf6daee9b0a1030f35e0380f5b8b",
+      "checkedOn": "2026-11-12"
     }
   ],
   "previousCaralJSONSource20261111": {
@@ -502,5 +525,22 @@
     ],
     "publisherResponseSHA256": "d177191eff1f9bab0914e5a3dd18cb9e6062d52d75619fe59e20561dd4daaad6",
     "checkedOn": "2026-11-10"
+  },
+  "previousTimbuktuDirectSource20261112": {
+    "case": 11,
+    "topicId": "history-timbuktu",
+    "originalURL": "https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11",
+    "url": "https://www.loc.gov/exhibits/mali/mali-exhibit.html#obj11",
+    "kind": "official-html",
+    "titleTerms": [
+      "Exhibition"
+    ],
+    "bodyAnchors": [
+      "al-Rasmuki",
+      "eighteenth-century",
+      "addition, subtraction, multiplication, and division"
+    ],
+    "publisherResponseSHA256": "c8248899cc7b333f86859a02100c35926ca067c9f12d7a03d476273c950766d5",
+    "checkedOn": "2026-11-12"
   }
 }

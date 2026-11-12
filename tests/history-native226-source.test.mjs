@@ -9,7 +9,9 @@ import {assertCurrentHistoryEvidenceRuntime} from './history-evidence-runtime-re
 import {dossiersBeforeHistoryEvidence} from './history-individual-dossiers-reference.mjs';
 import {native226SourceBoundary as boundary,catalogBeforeNative226,dossiersBeforeNative226,wholeNative226,runtimeBodyBeforeNative226,boundaryBeforeHattushaSourceReplacement,catalogBeforeHattushaSourceReplacement,dossiersBeforeHattushaSourceReplacement,boundaryBeforeCaralSourceReplacement,catalogBeforeCaralSourceReplacement,dossiersBeforeCaralSourceReplacement,runtimeBoundaryBeforeCaralSourceReplacement,boundaryBeforeKewSourceReplacement,catalogBeforeKewSourceReplacement,dossiersBeforeKewSourceReplacement,runtimeBoundaryBeforeKewSourceReplacement,thinkingBeforeKewSourceReplacement,boundaryBeforeHumboldtSourceReplacement,catalogBeforeHumboldtSourceReplacement,dossiersBeforeHumboldtSourceReplacement,runtimeBoundaryBeforeHumboldtSourceReplacement} from './history-native226-source-reference.mjs';
 import {assertHistorySourceMaterial} from './browser/history-source-material.mjs';
-import material from './fixtures/history-native226-source-material.json' with {type:'json'};
+import currentMaterial from './fixtures/history-native226-source-material.json' with {type:'json'};
+import {materialBeforeNative228} from './history-native228-two-source-reference.mjs';
+const material=materialBeforeNative228(currentMaterial);
 import priorQualifiedNative226 from './fixtures/history-native226-source-predecessor.json' with {type:'json'};
 import {assertNative227SourceUI,materialBeforeNative227Timbuktu} from './history-native227-timbuktu-source-reference.mjs';
 const read=name=>JSON.parse(fs.readFileSync(name,'utf8'));

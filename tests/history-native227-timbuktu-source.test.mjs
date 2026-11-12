@@ -4,9 +4,10 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {native227TimbuktuRepair as repair,catalogBeforeNative227Timbuktu,dossiersBeforeNative227Timbuktu,runtimeBeforeNative227Timbuktu,materialBeforeNative227Timbuktu} from './history-native227-timbuktu-source-reference.mjs';
 import {assertHistorySourceMaterial} from './browser/history-source-material.mjs';
+import {catalogBeforeNative228,registryBeforeNative228} from './history-native228-two-source-reference.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),sha=b=>createHash('sha256').update(b).digest('hex');
-test('one direct LOC source preserves the entire published12b catalog, qualified300 registry and runtime boundary',()=>{
- const catalog=read('app/world-catalog.json'),registry=read('content/editorial-reviews.json'),prior=catalogBeforeNative227Timbuktu(catalog),dossiers=dossiersBeforeNative227Timbuktu(registry.dossiers);
+test('the exact earlier direct LOC boundary preserves the entire published12b catalog, qualified300 registry and runtime boundary',()=>{
+ const catalog=catalogBeforeNative228(read('app/world-catalog.json')),registry=registryBeforeNative228(read('content/editorial-reviews.json')),prior=catalogBeforeNative227Timbuktu(catalog),dossiers=dossiersBeforeNative227Timbuktu(registry.dossiers);
  assert.equal(sha(fs.readFileSync('tests/fixtures/history-native226-source-predecessor.json')),repair.previousNative226BoundarySHA256);
  assert.equal(sha(JSON.stringify(prior,null,2)+'\n'),repair.previousCatalogBytesSHA256);
  const inverse=structuredClone(registry);inverse.dossiers=dossiers;if(repair.qualifiedUILayer)delete inverse.historyEvidenceAfterNative227TechnicalUIProof20261112;
