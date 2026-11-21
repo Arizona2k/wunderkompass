@@ -318,7 +318,7 @@ Damit nach jeder Aufgabe alle Tests grün sind, stellen wir die Tests zuerst auf
 - [ ] **Schritt 3: Befunde beheben.**
   - Die Regeln kommen in den Abschnitt „Anpassung alter Bereiche“ in `kern.css` oder direkt in die alte Datei.
   - Die Schrift wird nie als Notlösung kleiner.
-  - Was in Teilschritt 2 bis 4 ohnehin ersetzt wird (Startseite, Karte, Weltenseiten), bekommt nur Korrekturen, die Kinder sonst stören würden. Der Rest kommt mit Grund ins BACKLOG.
+  - Was in Teilschritt 2 bis 5 ohnehin ersetzt wird (Startseite, Karte, Weltenseiten), bekommt nur Korrekturen, die Kinder sonst stören würden. Der Rest kommt mit Grund ins BACKLOG.
 - [ ] **Schritt 4: Budgets.** `pnpm run build`. Einstiegs-CSS, Einstiegs-CSS gzip, Einstiegs-JS und Einstiegs-JS gzip liegen höchstens auf den Werten aus Schritt 0. Wenn nicht: tote alte Regeln weiter abbauen, nie das Budget erhöhen.
 - [ ] **Schritt 5: `kinder-redaktion`** prüft alle neuen Wörter:
   - Leiste: Start, Welten, Spielen, Labor, Reisen, Buch
@@ -346,31 +346,38 @@ Damit nach jeder Aufgabe alle Tests grün sind, stellen wir die Tests zuerst auf
 
 ## Nicht in Teilschritt 1
 
-- Glanz-Schimmer auf Kacheln: kommt mit den Kacheln in Teilschritt 3.
-- Der Pass-Dialog selbst (Punkte, Stufen, Abzeichen darin): Teilschritt 4. In Teilschritt 1 fällt nur der Zähler am Pass-Knopf weg.
-- Startseite, Karte, Weltenseiten: Teilschritte 2 bis 4. Hier bekommen sie nur Schrift, Farben und nötige Korrekturen.
-- Der Rauchtest (`smoke.mjs`) zieht mit der neuen Startseite in Teilschritt 4 um.
+- Glanz-Schimmer auf Kacheln: kommt mit den Kacheln in Teilschritt 4.
+- Der Pass-Dialog selbst (Punkte, Stufen, Abzeichen darin): Teilschritt 5. In Teilschritt 1 fällt nur der Zähler am Pass-Knopf weg.
+- Startseite, Karte, Weltenseiten: Teilschritte 2, 4 und 5. Hier bekommen sie nur Schrift, Farben und nötige Korrekturen.
+- Der Rauchtest (`smoke.mjs`) zieht mit der neuen Startseite in Teilschritt 5 um.
 
-## Ausblick auf die Teilschritte 2 bis 5
+## Ausblick auf die Teilschritte 2 bis 6
 
-Die Pläne dafür entstehen jeweils, wenn der Teilschritt ansteht, weil sie auf der Hülle aus Teilschritt 1 aufbauen.
+Die Pläne dafür entstehen jeweils, wenn der Teilschritt ansteht, weil sie auf der Hülle aus Teilschritt 1 aufbauen. Seit der freigegebenen Ergänzung `2026-11-21-phase-1-ergaenzung-spannung.md` (21.11.2026) gibt es einen neuen Teilschritt 3 „Kniffliger spielen“; die alten Teilschritte 3 bis 5 heißen jetzt 4 bis 6.
 
 - **Teilschritt 2 „Wissenskarte“:**
   - neue Karte nach 6.3 in `app/kern/`: Foto, „Rate mal!“, kurze Abschnitte, „Dazu passt“
   - Verbindungen nach 6.8: 35 Karten ohne Verbindung, Prüfung der 196 Sätze durch `fakten-pruefer` und `kinder-redaktion`
   - `article-atlas.mjs` zieht um
   - `bild-recherche` beginnt parallel mit den rund 55 Bildern
-- **Teilschritt 3 „Weltenseiten und Bilder“:**
+  - aus der Ergänzung A1 bis A5: Längen-Budget, Aufräumen über alle Karten, Häppchen für etwa 12 Pilot-Karten, „Stimmt das?“, Reisen einfach zuerst
+- **Teilschritt 3 „Kniffliger spielen“ (neu):**
+  - „Entdecker“ und „Profi“ in jedem Frage-Spiel, Wahl in `gameSessions` (B1)
+  - mehr Aufgaben und Zufall, bessere falsche Antworten (B3)
+  - Ratemuster abstellen, Reise-Antworten mischen (B4)
+  - Labor-Stempel erst nach dem Ausprobieren (B5)
+- **Teilschritt 4 „Weltenseiten und Bilder“:**
   - Übersicht und Weltenseite nach 6.4
   - Motivkacheln mit Kennzeichnung, Glanz-Schimmer
   - Block „Bildnachweise auf dieser Seite“ (6.11)
   - Bilder für Zeitreise und Erfindungen einbauen (6.10)
-- **Teilschritt 4 „Startseite und Sammlung“:**
+- **Teilschritt 5 „Startseite und Sammlung“:**
   - „Rate mal!“ auf der Startseite (6.5)
   - Sammlung im Pass ohne Zahlen (6.6), Punkte, Stufen und Abzeichen aus der Ansicht
   - Rauchtest umstellen
   - alte `discovery-*`-Bausteine löschen
-- **Teilschritt 5 „Feinschliff und Abschluss“:**
+  - goldenes Bild für „Profi“ in der Sammlung (B2)
+- **Teilschritt 6 „Feinschliff und Abschluss“:**
   - `design-pruefer` in allen Breiten
   - `test:full` in drei Browsern
   - große Schlussprüfung (mit `fable`, sofern die Ausnahme vorbei ist)

@@ -308,7 +308,7 @@ Aufbau von oben nach unten:
 
 ### 6.9 Texte der neuen Oberfläche
 
-Alle neuen Wörter (Knöpfe, Überschriften, Weltfragen, leere Zustände, Fehlermeldungen) prüft `kinder-redaktion`. Kartentexte bleiben bis auf die Startfragen (6.5) und die Sätze „warum“ (6.8) unverändert.
+Alle neuen Wörter (Knöpfe, Überschriften, Weltfragen, leere Zustände, Fehlermeldungen) prüft `kinder-redaktion`. Kartentexte bleiben bis auf die Startfragen (6.5) und die Sätze „warum“ (6.8) unverändert. **Geändert am 21.11.2026:** Nach der Ergänzung `2026-11-21-phase-1-ergaenzung-spannung.md` (vom Nutzer freigegeben) dürfen Kartentexte gekürzt und umgebaut werden; was nicht in den offenen Teil passt, wandert nach „Für Große“ oder „Für Erwachsene“.
 
 ### 6.10 Bilder für die Karten ohne Bild
 
@@ -356,10 +356,11 @@ Jeder Teilschritt läuft durch Bauen → `pnpm run check` → passende Helfer �
 | Nr. | Teilschritt | Inhalt |
 |---|---|---|
 | 1 | Aussehen und Hülle | Schrift, Farben, Fokus, Knöpfe; Kopfzeile, untere Leiste (Handy), obere Navigation (ab Tablet), Fuß; alte Bereiche an die Grundlage anpassen; neue „Was ist neu?“-Ansicht mit dem ersten Eintrag |
-| 2 | Wissenskarte | neue Karte (6.3), „Dazu passt“, Verbindungen bereinigen (6.8) |
-| 3 | Weltenseiten und Bilder | Übersicht und Seite einer Welt (6.4), Motivkacheln, Bildnachweise je Seite (6.11), etwa 55 Bilder für Zeitreise und Erfindungen (6.10, Suche läuft schon ab Teilschritt 2), optional zwei Welt-Fotos |
-| 4 | Startseite und Sammlung | „Rate mal!“ mit Fragenliste (6.5), Sammlung im Pass, Punkte und Abzeichen aus der Ansicht (6.6) |
-| 5 | Feinschliff und Abschluss | `design-pruefer` in 320/390/768/1280/1440 px, Befunde beheben, `test:full` in Chromium, Firefox und WebKit, große Schlussprüfung (mit `fable`, sofern die Ausnahme vorbei ist; sie prüft auch die Strecke ab `b53f75f`), Frage an den Nutzer zum Veröffentlichen für Freunde |
+| 2 | Wissenskarte | neue Karte (6.3), „Dazu passt“, Verbindungen bereinigen (6.8); dazu A1 bis A5 aus der Ergänzung (kürzere Texte, Häppchen, „Stimmt das?“, Reisen einfach zuerst) |
+| 3 | Kniffliger spielen (neu, Ergänzung vom 21.11.2026) | B1, B3, B4, B5 aus der Ergänzung: „Entdecker“ und „Profi“, mehr Aufgaben und Zufall, keine Ratemuster, Labor-Stempel erst nach dem Ausprobieren |
+| 4 | Weltenseiten und Bilder | Übersicht und Seite einer Welt (6.4), Motivkacheln, Bildnachweise je Seite (6.11), etwa 55 Bilder für Zeitreise und Erfindungen (6.10, Suche läuft schon ab Teilschritt 2), optional zwei Welt-Fotos |
+| 5 | Startseite und Sammlung | „Rate mal!“ mit Fragenliste (6.5), Sammlung im Pass, Punkte und Abzeichen aus der Ansicht (6.6); goldenes Bild für „Profi“ (B2 der Ergänzung) |
+| 6 | Feinschliff und Abschluss | `design-pruefer` in 320/390/768/1280/1440 px, Befunde beheben, `test:full` in Chromium, Firefox und WebKit, große Schlussprüfung (mit `fable`, sofern die Ausnahme vorbei ist; sie prüft auch die Strecke ab `b53f75f`), Frage an den Nutzer zum Veröffentlichen für Freunde |
 
 Die Reihenfolge Karte vor Startseite ist Absicht: Die Startseite nutzt die „Rate mal“-Logik und die Kacheln der Karte und der Welten.
 

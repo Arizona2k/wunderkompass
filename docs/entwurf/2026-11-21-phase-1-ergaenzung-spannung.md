@@ -1,6 +1,6 @@
 # Ergänzung zu Phase 1: Weniger lesen, mehr knobeln
 
-Stand: 21.11.2026. Entwurf, wartet auf Freigabe durch den Nutzer. Ergänzt `2026-11-21-phase-1-entwurf.md`.
+Stand: 21.11.2026. Vom Nutzer freigegeben am 21.11.2026 („Ja zu allen drei“). Ergänzt `2026-11-21-phase-1-entwurf.md`.
 
 ## 1. Anlass
 
@@ -186,8 +186,10 @@ Vier Helfer haben am 21.11.2026 nachgesehen: `kinder-redaktion` (zweimal), ein L
   - Pass-Tests für die gespeicherte Wahl.
 - **Ehrlich:** Ob Kinder dadurch länger bleiben oder mehr lernen, wissen wir erst, wenn sie es ausprobieren. Wir wiederholen keinen Kindertest und erfinden keinen. Der Nutzer kann das Kind nach Teilschritt 2 und 3 noch einmal fragen.
 
-## 7. Entscheidungen des Nutzers (offen)
+## 7. Entscheidungen des Nutzers
 
-1. Dürfen die Spiele nach vorn geholt werden (neuer Teilschritt 3)? Empfehlung: ja.
-2. Dürfen die Kartentexte gekürzt und umgebaut werden? Das Wissen wandert nach „Für Große“ und wird nicht gelöscht. Der Phase-1-Entwurf sagte in 6.3 noch „Texte bleiben unverändert“. Empfehlung: ja.
-3. Soll „Profi“ in der Sammlung ein goldenes Bild bekommen? Empfehlung: ja.
+Am 21.11.2026 hat der Nutzer alle drei Fragen mit Ja beantwortet:
+
+1. Die Spiele kommen nach vorn, als neuer Teilschritt 3 in Phase 1.
+2. Die Kartentexte dürfen gekürzt und umgebaut werden. Das Wissen wandert nach „Für Große“ und wird nicht gelöscht. Damit gilt 6.3 im Phase-1-Entwurf („Texte bleiben unverändert“) nicht mehr.
+3. Ein Spiel, das auf „Profi“ geschafft wurde, bekommt in der Sammlung ein goldenes Bild.
