@@ -8,7 +8,8 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 - Prüfungen, nur in Chromium: `pnpm run check` grün (350 Unit-Tests, 13 Browser-Suiten, 2 min 39 s). Große Prüfung: 28 von 28 Suiten grün (zwei im Nachlauf, weil das Werkzeug Läufe nach 2 Stunden abbricht). Der neue Build gleicht dem alten bis auf die Kennung (270 Dateien). Offline-Update vom alten Stand behält Pass und Favoriten. Repository: 1284 → 1021 Dateien, 73,9 → 42,2 MB.
 - Entfernt: Nachweis-, Bericht- und Release-Maschinerie, Vergleichsdateien, alte Datenbank- und Sites-Reste. Neu: schlanke Prüfkette (`pnpm run check`), Browser-Runner, kurze Unterlagen, sechs Helfer, Kurzbefehle `/weiter` und `/pruefen`.
 - Der alte Stand liegt vollständig in Commit `b53f75f` (Historie von `test-live`). Archiv-Tags auf GitHub braucht es nicht: Die Sitzung kann keine anlegen, und beide Stände sind über ihre Commits erreichbar.
-- **Alter Katalog „WunderKompass 2027“** ist eingeordnet: [docs/entwurf/2026-11-21-katalog-2027-einordnung.md](docs/entwurf/2026-11-21-katalog-2027-einordnung.md) (übernommen, angepasst, weggelassen, mit Gründen). Audit V2 ist am heutigen Code nachgeprüft: 18 von 19 Befunden behoben, der Rest steht im BACKLOG. Noch nicht in `test-live`.
+- **Alter Katalog „WunderKompass 2027“** ist eingeordnet: [docs/entwurf/2026-11-21-katalog-2027-einordnung.md](docs/entwurf/2026-11-21-katalog-2027-einordnung.md) (übernommen, angepasst, weggelassen, mit Gründen). Audit V2 ist am heutigen Code nachgeprüft: 18 von 19 Befunden behoben, der Rest steht im BACKLOG. Seit 21.11.2026 in `test-live` (PR #97, Merge-Commit `5cf70fa`).
+- **Neue feste Regel „Kein Bestandsschutz“** (CLAUDE.md): Was nicht gut ist, wird geändert oder gestrichen. Geschützt bleiben nur Pass-Fortschritt und alte Links. Der ID-Wächter wird zusammen mit dem ersten gestrichenen Inhalt auf „ausgemustert mit Ziel“ umgebaut (BACKLOG, Technik).
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
 
 ## Adressen
@@ -22,7 +23,7 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 
 ## Offene Fragen an den Nutzer
 
-- Merge der Katalog-Einordnung nach `test-live` (nach Ansicht des PR, „ok“ im Chat).
+- Keine.
 
 ## Vorübergehende Modell-Ausnahmen
 

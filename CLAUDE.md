@@ -24,7 +24,7 @@ Daraus folgt: kurze Sätze, große Bilder, große Tippflächen, schnell etwas tu
   - Zuerst freie Originale: Fotos und historische Abbildungen (z. B. Wikimedia Commons) nach Prüfung von Lizenz und Namensnennung.
   - Nur wenn es kein passendes Original gibt: gekennzeichnete eigene Illustration oder kostenloses KI-Bild, sichtbar als solches benannt.
   - Echte Menschen nie als foto-ähnliches KI-Bild. Rekonstruktionen (z. B. Dinosaurier) heißen auch so.
-- **Git.** `main` nie direkt ändern. Kein Force-Push. Arbeit auf `claude/...`, PR nur nach `test-live`. Gemergt wird regulär nach grüner CI und erst nach „ok“ des Nutzers im Chat.
+- **Git.** `main` nie direkt ändern. Kein Force-Push. Arbeit auf `claude/...`, PR nur nach `test-live`. Gemergt wird regulär nach grüner CI und erst nach „ok“ des Nutzers im Chat. Auto-Merge ist auf GitHub aktiv (seit 21.11.2026): Nach dem „ok“ darf Claude ihn für den PR einschalten; GitHub merged dann erst bei grüner CI.
 - **Zwei Adressen.** `wunderkompass.vercel.app` (aus `main`) bekommen Freunde; sie wird nur nach einer fertigen Phase und OK erneuert (PR `test-live` → `main`). Die Test-Adresse (aus `test-live`) ist die Arbeitsfläche.
 - **Ehrlichkeit.** Keine Prüfung behaupten, die nicht stattfand. Keine erfundenen Studien, Kindertests oder Lernwirkungen. Teilprüfungen heißen Teilprüfungen.
 - **Datenschutz.** Name und E-Mail des Nutzers gehen nie an externe Dienste, auch nicht in Anfragen oder Commits.
