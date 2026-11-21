@@ -134,4 +134,4 @@ Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test
 
 ## Neue Sitzung
 
-Der Standardbranch auf GitHub ist noch `main` und veraltet. Die Startnachricht zum Kopieren steht in `STATUS.md` („Neuer Chat: Startnachricht“).
+Der Standardbranch auf GitHub ist seit 21.11.2026 `test-live`; neue Sitzungen starten damit auf dem aktuellen Stand. `main` bleibt der ältere Stand für Freunde. Die Startnachricht zum Kopieren steht in `STATUS.md` („Neuer Chat: Startnachricht“); ihre Branch-Zeilen sind nur noch eine Sicherung.

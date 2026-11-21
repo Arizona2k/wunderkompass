@@ -22,7 +22,6 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 ## Offene Fragen an den Nutzer
 
 - Merge von Schritt 0 nach `test-live` (nach Ansicht von Vorschau und PR, „ok“ im Chat).
-- Vorschlag: Standardbranch auf GitHub von `main` auf `test-live` umstellen (Einstellungen → Branches); dann starten neue Sitzungen gleich auf dem aktuellen Stand.
 - Optional: die zwei Archiv-Tags auf GitHub selbst anlegen (`archiv/vor-neuausrichtung-2026-11-21` → `b53f75f`, `archiv/pr95-geschichte-2026-11-21` → `7e00bd0`).
 
 ## Vorübergehende Modell-Ausnahmen
@@ -44,8 +43,8 @@ Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
 
 ```text
 Wir arbeiten weiter an WunderKompass (Repository Arizona2k/wunderkompass).
-Der Standardbranch main ist veraltet, der aktuelle Stand liegt auf test-live.
-Setze zuerst deinen Arbeitsbranch (claude/...) auf test-live, mit genau diesen Zeilen:
+Der aktuelle Stand liegt auf test-live (Standardbranch), main ist der ältere Stand für Freunde.
+Prüfe zuerst, ob dein Arbeitsbranch (claude/...) den test-live-Stand hat, mit genau diesen Zeilen:
 
 git fetch origin main test-live
 B=$(git branch --show-current)
