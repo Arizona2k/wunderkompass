@@ -52,8 +52,8 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 
 Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [suitenamen]`.
 `--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build.
-Lokal ist nur Chromium installiert. Firefox und WebKit laufen in der CI (Job „Vollprüfung“, bei PRs nach `main` oder von Hand).
-Nie `playwright install` im Container ausführen.
+**Playwright** (das Browser-Testwerkzeug) ist immer auf der neuesten Version, die mindestens 7 Tage alt ist (Wunsch des Nutzers, 21.11.2026). `/weiter` prüft das bei jedem Einstieg; ein Update ist ein eigener kleiner Commit mit `pnpm run check`.
+Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand).
 
 CI (`.github/workflows/quality.yml`): Job **„Required quality checks“** (Name nicht ändern, die Branch-Regel verlangt ihn) läuft bei jedem PR.
 
