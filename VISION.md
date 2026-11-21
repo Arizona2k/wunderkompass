@@ -1,112 +1,68 @@
-# Produktvision WunderKompass
+# VISION – Wofür es WunderKompass gibt
 
-Der [vollständige Redesign- und Fortsetzungsauftrag27.10.](content/auftrag-2026-10-13/WunderKompass_Redesign_und_Fortsetzungsauftrag_2026-10-27.md) mit [Werkzeugpräzisierung](content/auftrag-2026-10-13/WunderKompass_Werkzeugauswahl_Praezisierung_2026-10-27.md) führt denselben Gesamtauftrag fort: zuerst den laufenden SI-Buchabschnitt abschließen und sichern, danach die begrenzte vollständige Gestaltungsgrundlage aller aktiven Bereiche nach WK057, anschließend offene Paket3.5-Inhalte und Pakete4–8 auf dem neuesten Designstand. Der repräsentative Ausschnitt ist Entwicklungsstufe, kein Vollabschluss. Motion for React ist bevorzugter Prüfkandidat; sichtbarer Nutzen, mobile Bedienung, ruhige Alternative, Ladezeit/Offline, Wartbarkeit und konkrete kostenlose Lizenz entscheiden. Eine tragfähige Lösung weiterverwenden und nach erfüllten Kriterien schließen; zusätzliche Stilideen eröffnen keine Vollrunde.
+Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht in [docs/entwurf/2026-11-21-neuausrichtung-design.md](docs/entwurf/2026-11-21-neuausrichtung-design.md).
 
-Sämtliche benannten Stilreferenzen bleiben erhalten: https://www.apple.com/, https://store.google.com/, https://coalatree.com/, https://www.razer.com/, https://www.nzxt.com/, https://www.oculus.com/ sowie die früheren https://nzxt.com/ und https://www.meta.com/quest/. Prinzipien eigenständig für Lernen und Entdecken übersetzen.
+## Die sechs Ziele
 
-## Dauerhafter Vertrag · Gestaltung fortgeschrieben26.10.2026
+1. Kinder finden in wenigen Sekunden etwas Spannendes und können sofort etwas tun: schauen, tippen, raten, ausprobieren. Wer mehr wissen will, findet freiwillige Vertiefung („Mehr erfahren“), auch für Eltern.
+2. Inhalte stimmen fachlich und sind kindgerecht. Jede wichtige Aussage hat eine geprüfte Quelle.
+3. Die Seite funktioniert gut auf Handy (ab 320 px), Tablet und Rechner, auch offline.
+4. Weiterentwickeln ist billig: kleine Schritte, schnelle Prüfungen, eine Vorschau für jeden Schritt.
+5. Der Nutzer versteht jederzeit, was passiert, und entscheidet bei wichtigen Punkten mit.
+6. Alles hängt zusammen (eigener Abschnitt unten).
 
-Die [moderne Gestaltungspräzisierung26.10.](content/auftrag-2026-10-13/WunderKompass_Moderne_Gestaltung_2026-10-26.md), die [Gestaltungspräzisierung25.10.](content/auftrag-2026-10-13/WunderKompass_Gestaltungspraezisierung_2026-10-25.md), die [PR62-Abschlussklarstellung](content/auftrag-2026-10-13/WunderKompass_PR62_Abschlussklarstellung_2026-10-25.md), der [Auftrag24.10.](content/auftrag-2026-10-13/WunderKompass_Umsetzungsauftrag_2026-10-24.md), die [Präzisierung23.10.](content/auftrag-2026-10-13/WunderKompass_Praezisierung_2026-10-23.md) und AGENTS gelten auch für zukünftige gestartete Durchläufe. Alle alten, bereits überarbeiteten und neuen Inhalte sowie Technik bleiben auch ohne Fehler verbesserbar. Lernziel, Erklärung, Medien, aktive Lernhandlung, Denkanspruch, Hilfen/Feedback und fachlich begründete Beziehungen gemeinsam pflegen. Hochwertige Arbeit erhalten; Nutzen, Aufwand, Risiken und Abhängigkeiten bestimmen Priorität. Fachliche KI-Gegenprüfung anhand gelesener Quellen, keine erfundenen Menschenabnahmen oder empirischen Wirkungen. Persönliche Daten/Notizen/verdiente Fortschritte und geprüfte Fortsetzung schützen; falsche Bewertungen nicht aus Kompatibilitätsgründen fortschreiben.
+## Für wen
 
-Geeignete echte Fotos nach überprüfter Motiv-/Rechte-/Qualitätszuordnung bevorzugen; Wikipedia und Wikimedia Commons sind nach der [ausdrücklichen Fortsetzung26.10.](content/auftrag-2026-10-13/WunderKompass_Fortsetzung_Wikimedia_Technikgrenzen_2026-10-26.md) wieder zulässige Quellen. Jede Medienübernahme benötigt konkrete fachliche Eignung, Herkunft, Qualität und geklärte Nutzungsrechte einschließlich Urheber, Quelle, Lizenz und Änderungen; erforderliche Namensnennungs-/Lizenz-/Weitergabepflichten erfüllen. Historische Belege behalten. Bei fehlender geeigneter rechtssicher verfügbarer Aufnahme eigene hochwertige korrekt bezeichnete Illustration und hilfreiche Modelle erhalten. Keine eigene/KI-Grafik als Foto ausgeben.
+- Kinder von **5 bis 10 Jahren**, selten 12 bis 14.
+- Meistens **zusammen mit einem Elternteil**, ab etwa 8 auch allein.
+- Altersangaben sind nur Orientierung. Es gibt keine Altersabfrage und keine getrennten Seiten nach Alter.
 
-Zusammenhängende begrenzte Abschnitte tatsächlich umsetzen und früh im dargestellten Produkt einschließlich Mobile/Vergrößerung prüfen. Sinnvolle größere Fach-/Gestaltungs-/Technikverbesserungen sind beauftragt; Vorher-/Nachhernutzen und Grenzen belegen. Normale vollständig geprüfte test-live-Teilabschnitte dürfen nach TEST-LIVE regulär übernommen werden; keine neue Grundsatzfrage. Native Schutz-/Kosten-/Datenschutz-/Betriebsgrenzen bleiben. Kein main/Produktion/neuer Dienst oder unbeaufsichtigter Prozess. Nach Meilensteinen im aktiven Durchlauf eigenständig fortsetzen, bei tatsächlichem Ende gesicherte Übergabe.
+## Ton
 
-Historische Originalentscheidungen bleiben im bestehenden Auftragsarchiv und im [vorherigen Visionsstand5529a4c](https://github.com/Arizona2k/wunderkompass/blob/5529a4c11273e24950fed5565a0393ccf61e7646/VISION.md); widersprüchliche frühere aktive Freigabe-/News-Formulierungen sind ersetzt. BACKLOG ist die einzige Aufgabenliste, PROJECT_STATE der aktuelle Übergabestand.
+- Kurze Sätze, bekannte Wörter. Fachwörter nur, wenn sie erklärt werden.
+- Warm, neugierig, ehrlich. Eine Abenteuerwelt, die wissenschaftlich stimmt.
+- Keine erfundenen Fakten, keine Übertreibung. Unsicheres wird als unsicher benannt.
+- Religionen neutral und respektvoll, Medizin erklärt den Körper ohne Gesundheitsratschläge, aktuelle Technik zeitlos statt als Nachricht.
 
-Fortgeschriebene Vision25.10.2026: WunderKompass ist eine warme, hochwertige und neugierig machende Wissenswelt für Kinder, Jugendliche und Erwachsene. Verständliche Einstiege für jüngere Nutzer bleiben; respektvolle Ansprache, freiwillige Erklärungstiefe und anspruchsvolles Vergleichen, Anwenden, Begründen und Übertragen passen zur jeweils tatsächlich angebotenen Tiefe. Die frühere ausschließliche6–14-Ansprache ist erweitert. Keine Altersabfrage oder getrennten Alterswebsites. Begleitpersonen und Lehrkräfte erhalten verständliche Orientierung.
+## Gestaltung
 
-## Verbindliche Erlebnisidentität
+- **Modern, hell, bildstark.** Helle neutrale Flächen, dunkle gut lesbare Schrift.
+- **Kompass-Identität** bleibt: Name, Kompasszeichen, sparsame Akzente in **Orange und Petrol**.
+- **Die Inhalte tragen die Farbe:** echte Fotos, Karten, Diagramme und Modelle statt Dekoration.
+- **Schön, schick, ansprechend, modern.** Die Gestaltung im Einzelnen entscheidet Claude (Nutzer, 21.11.2026).
+- **Spaß und Glanz** als eine Möglichkeit: ein moderner „Glossy Look“, zum Beispiel ein Lichtschimmer über einer Kachel beim Zeigen. Auf Handy und Tablet erscheint er beim Antippen. Bei „Bewegung reduzieren“ bleibt alles ruhig. Der Effekt unterstützt die Inhalte, er überdeckt sie nie.
+- **Klare Reihenfolge auf jeder Seite:** Frage oder Überschrift, kurze Einordnung, der Lerngegenstand, die nächste Handlung.
+- **Handy zuerst** (ab 320 px), dann Tablet und Rechner. Große Tippflächen, keine kleinere Schrift als Notlösung, nichts abgeschnitten.
+- Ruhige Listen und Trennlinien statt vieler gleicher Kästen. Keine Belohnungsökonomie mit Sternen oder Punkten.
+- Sanfte Bewegung, immer mit sichtbarer Steuerung, Wischen und Tastatur. Wichtiges ist ohne Warten da.
 
-**Hochwertige Wissenschaftswelt + fantasievolle Abenteuerwelt.** WunderKompass verbindet die verständliche, fachlich sorgfältige Vermittlung eines Wissenschaftsmuseums mit der Atmosphäre einer interaktiven Entdeckungswelt. Modern und altersübergreifend, auch auf kleinen Smartphones: klare Hierarchie, lesbare Texte, anschauliche Modelle, freiwillige Vertiefung. Keine beliebige Ansammlung austauschbarer Karten, keine Effekte zulasten von Inhalt oder Bedienung.
+**Stil-Anregungen** (nur Prinzipien übernehmen, nichts kopieren): Apple, Google Store, Coalatree, Razer, NZXT und Meta Quest für ruhige, bildstarke Produktseiten. Die vollständigen Adressen und Bildbeispiele stehen in der alten VISION im Archiv-Tag (`git show b53f75f:VISION.md`).
 
-Die Startseite entwickelt sich zur Entdeckerzentrale für den tatsächlichen Gesamtbestand: Themenwelten, globale Suche, Spiele, Wissensverbindungen, Entdeckerpass und Wiederaufnahme ohne Pflichtkonto. Der interaktive Globus bleibt ein wichtiges, direkt erreichbares Produktmerkmal; das Gesamtprodukt umfasst weit mehr als die Erde. Einheitliche Bedienung, unterschiedliche atmosphärische Themenidentitäten. Bestehende Welten, Bilder und Inhalte ausdrücklich weiterentwickeln; neue Welten nur als zusammenhängende Pakete nach Lernwert und geprüfter Machbarkeit. Produktname WunderKompass, bestehende Domain und Kompassidentität bleiben erhalten. Zeichen, Wortmarke und Proportionen innerhalb dieser Identität stimmig und auch klein erkennbar verfeinern. Grundlegende Logo-/Markenänderungen nur als erkennbaren Vorschlag vorbereiten und vor Übernahme ausdrücklich freigeben lassen.
+## Bilder
 
-Die Startseite begrüßt kurz und stellt die sichtbare Suche, eine tatsächlich vorhandene Fortsetzung sowie früh bildstarke Zugänge zu allen sechs Themenwelten heraus. Eine konkrete spannende Frage führt zu vorhandenen Erklärungen, Modellen oder Aufgaben. Spiele, Forschen, Lernreisen und die Weltkugel sind verständlich direkt erreichbar. Die volle Globusbedienung erhält eine eigene klar erreichbare Ansicht; bestehende Globus-Links und Rückwege bleiben zuverlässig. Die sechs Hauptbereiche bleiben eigenständig. Tagesangebote, Wissensverbindungen und Überraschungen werden darin geordnet, ohne zweite Übersicht oder konkurrierende Empfehlungsebene; ruhige Services für Hilfe, Offline, Quellen und Begleitpersonen schließen an. Mobile Begrüßung und Navigation bleiben kompakt.
+1. Zuerst **echte Fotos und Originalabbildungen** mit geklärter freier Lizenz (z. B. Wikimedia Commons), mit Urheber, Lizenz und Quelle.
+2. Gibt es kein passendes Original: eine **gekennzeichnete eigene Illustration** oder ein **kostenloses KI-Bild**, sichtbar als solches benannt.
+3. Echte Menschen nie als KI-Bild, das wie ein Foto wirkt. Rekonstruktionen (z. B. Dinosaurier) heißen auch so.
 
-## Eigenständige Gestaltung
+## Die sechs Hauptbereiche
 
-Verbindliche Richtung: modern, minimalistisch, bildbetont und zeitlos. Präzise Komposition, hochwertige konkrete Motive, klare Typografie und sorgfältige Bewegung tragen die Qualität. Eine helle überwiegend neutrale Grundgestaltung mit dunkler gut lesbarer Schrift bildet den gemeinsamen Rahmen; Orange und Petrol bleiben sparsame erkennbare Markenakzente. Fotos, Diagramme und Modelle bringen die thematische Farbigkeit; einzelne dunkle Abschnitte dürfen Weltraum oder Nacht unterstützen.
+| Bereich | Was dort passiert |
+|---|---|
+| **Entdecken** | Startseite: eine spannende Frage mit Bild, Weiter-machen, Entdeckung des Tages |
+| **Wissenswelten** | Themen nach Welten (Tiere, Natur, Erde, Weltall, Menschen, Erfindungen, Geschichte) |
+| **Spielplatz** | Kleine Spiele mit Ziel, Stufen, Hinweisen und erklärender Rückmeldung |
+| **Forscherlabor** | Mitmach-Modelle mit Forschungsfrage, Reglern, Wirkung und ehrlichen Modellgrenzen |
+| **Lernreisen** | Geführte Wege in Kapiteln, mit Weiter-machen |
+| **Wissensbuch** | Eigene Wörter, Warum-Fragen, Atlas, Notizen und Favoriten |
 
-Überschrift, kurze Einordnung, tatsächlicher Lerngegenstand und nächste Handlung bilden die Hierarchie. Gleichartige Kästen, verschachtelte Rundungskarten, dekorative Symbolflächen und wiederholte Vorworte reduzieren. Großzügige Abstände ordnen Inhalte; den nachgewiesenen Desktop-Leerraum zwischen Themenwelten und Wissensverbindungen an der unnötigen Mindesthöhenreserve ursächlich entfernen, notwendige Lade-/Globusreserven anderer Ansichten erhalten. Mobil Kopfbereich, Einleitungen und Bereichswechsel verdichten: frühes Motiv oder konkrete Lernhandlung, kompakter zuverlässiger Zugang zu allen sechs Hauptbereichen, Suche, Pass und Weltkugel. Touchziele/Orientierung erhalten; weder kleinere Schrift noch abgeschnittene Inhalte/versteckte Funktionen als Platzlösung.
+Dazu: Suche, Entdeckerpass (Fortschritt und Sicherung) und der 3D-Globus mit Rückwegen.
 
-[Apple](https://www.apple.com/) und [Google Store](https://store.google.com/) orientieren Klarheit, Gewichtung und konzentrierte Präsentation; [Coalatree](https://coalatree.com/), [Razer](https://www.razer.com/), [NZXT](https://nzxt.com/) und [Meta Quest](https://www.meta.com/quest/) ergänzen authentische Motive und Themeninszenierung. Prinzipien eigenständig auf Lernen/Entdecken übertragen; keine geschützten Inhalte oder Gestaltung kopieren.
+## Ziel 6: Alles hängt zusammen
 
-Sanfte Übergänge, manuell steuerbare Bildfolgen und fachlich passende räumliche Modellbewegungen unterstützen Orientierung, Erkenntnis und ruhige Inszenierung. Slides mit Wischen, sichtbaren Bedienelementen und Tastatur bedienen; wichtige Informationen ohne Warten erreichen, normales Scrollen erhalten, keine erzwungenen Scrollabläufe. Reduzierte Bewegung bietet eine gleichwertige Darstellung. Vorschauen/Animationen zeigen tatsächliche Inhalte und korrekte Modellzustände; bestehende Lade-/Bedien-/Qualitätsbudgets bleiben.
+Jedes Thema führt zu fachlich echten Nachbarn: verwandte Themen, Orte auf dem Globus, Spiele und Experimente.
+Beispiel: Elefant → Savanne → Ort auf dem Globus → Wasser und Trockenzeit → kleines Spiel.
+Keine Zufallsempfehlungen. Jede Verbindung muss man einem Kind in einem Satz erklären können.
 
-Vorhandene hochwertige Arbeit weiterverwenden; kein gestalterischer oder inhaltlicher Bestandsschutz für alte, bereits überarbeitete, laufende oder zukünftige Teile. Gemeinsame Komponenten und ihre tatsächlichen Verwendungen verbessern; individuelle Bild-/Modell-/Inhalts-/Layoutlücken bleiben im einzigen BACKLOG. Fachliche Tiefe, sinnvolle Lernhandlungen, Quellen und persönliche Daten/verdiente Fortschritte gehen durch die Vereinfachung nicht verloren. Eine neue Startseite und gemeinsames CSS sind keine Vollmodernisierung aller Bereiche.
+## Was wir nicht bauen
 
-Wissensverknüpfungen und vergleichbare erklärende Listen ruhig gliedern: passende Abstände, klare Typografie und dezente horizontale Trennlinien statt dekorativer farbiger Balken links. Diese Nutzerentscheidung vom 10. Oktober 2026 gilt auch für künftige vergleichbare Elemente. Links bleiben klar erkennbar, gut erreichbar und mit sichtbarem Tastaturfokus bedienbar; fachlich bedeutende Markierungen und Status-/Warnhinweise gesondert nach ihrem Zweck gestalten.
-
-Bei nachweislichem Qualitätsgewinn darf der Entwicklungsagent Design, Überschriften und Texte verbessern; Wissenswelten und Themen ergänzen; weitere Tiere, Erfindungen, historische Ereignisse, Naturphänomene und andere Wissensinhalte recherchieren; Spiele und interaktive Erlebnisse entwickeln; Inhalte intelligent verbinden; Suche, Filter, Kategorien, Navigation und Pagination verbessern oder ergänzen; Smartphone-, Tablet- und Desktop-Bedienung optimieren; Fehler beheben und bestehende Funktionen verbessern. Bereits vorhandene Lösungen zuerst prüfen, um Doppelarbeit zu vermeiden.
-
-Jede größere Idee wird zu einem überprüfbaren Arbeitspaket mit Ausgangsproblem, Lern-/Nutzervorteil und Akzeptanzkriterien. Umfang folgt Qualität, nicht bloßer Menge. Gestaltungsänderungen ändern keine Speicherkennung oder Inhalts-IDs. Gestaltung darf sich entwickeln; Globus, Lernwege und bestehender Fortschritt bleiben nutzbar.
-
-## Leitlinien
-
-- Kurzer, verständlicher Einstieg mit optionaler fachlicher Vertiefung und passenden Begriffserklärungen.
-- Vermuten, ausprobieren, beobachten und erklären; Stempel für tatsächliche Leistungen statt bloßes Öffnen.
-- Wissensnetz zwischen Karten, Menschen, Ereignissen, Erfindungen, Orten, Reisen, Modellen und Spielen.
-- Fachquellen, Messregeln, Datenjahre, Unsicherheiten und Modellgrenzen sichtbar und möglichst verifiziert halten.
-- Sensible Geschichte respektvoll, freiwillig und ohne Schockbilder vermitteln; Beiträge im Zusammenhang erklären.
-- Verständliche Listen und Wege auch bei wachsendem Umfang; gute Suche, Filter und bei Bedarf Pagination.
-- Zugängliche Bedienung mit Tastatur, Touch und reduzierter Bewegung; verlässliche Wiederaufnahme und Offline-Vorbereitung.
-- Keine manipulative Motivation, Werbung, Ranglisten oder Pflichtkonten; persönliche Pässe und Notizen schützen.
-
-Neue Dienste, Kosten, Hosting, Domainwechsel und Veröffentlichung brauchen einen passenden späteren Auftrag. Dauerhaft gespeichert sind die Projektdateien und Git-Commits; autonome Arbeit geschieht nur während eines tatsächlich gestarteten Durchlaufs. Qualität und Tests regelt QUALITY.md, die aktuelle Reihenfolge BACKLOG.md.
-
-## Langfristige Vielfalt und Schwierigkeit
-
-Kinder, Jugendliche und Erwachsene wählen verständliche Einstiege und freiwillige zunehmende Tiefe. Vorhandene Orientierungen wie6–8,9–11und12–14 sind keine Zielgruppengrenze oder Zugangssperre. Anspruch entsteht durch passende Denkhandlungen und Quellen-/Modellkritik. Vertiefung mit der vorhandenen Inhaltsarbeit entwickeln; die neue Gestaltung verlangt keine erneute Komplettredaktion aller Artikel als Vorbedingung. Wissensdaten besitzen keine feste Mengenobergrenze; portionierte Ansichten sind Navigationshilfen. Breite über Natur, Geografie, Urzeit, Weltall, Geschichte, Technik, Wissenschaft, Sport, Kultur und Gesellschaft schrittweise entwickeln. Jede Runde liefert ein überprüfbares Produktpaket; neue oder wesentlich veränderte Fakten werden geprüft, passende Beziehungen und echte Interaktion erhalten oder erweitert. Beliebige Themenmengen ersetzen keine Tiefe. Keine manipulativen Serien, Ranglisten, Pflichtkonten, künstlichen Wartezeiten oder neuen Kosten.
-
-Der belegte erste zusammenhängende Gestaltungsabschnitt für Startseite, Themenübersicht, Artikel mit Modell und Pass wird in begrenzten zusammenhängenden Abschnitten weiterentwickelt. Er liefert tatsächlich bedienbare Veränderungen und frühe reale Browser-/Mobil-/Tablet-/Desktop-/Großschrift-/Zoom-/Tastaturbelege. Alle Bereiche und Unterzustände folgen im bestehenden BACKLOG: konkrete Motive/Modellvorschauen in Wissenswelten und Artikeln, echte Spielvorschauen mit Ziel/Bedienung/Denkstufen und früherem Mobileinstieg, Laborfrage/Modell/nahe Eingaben/beobachtete Wirkung, Reisen mit aktueller Station/nächster Handlung/freier Wahl, kompakte passende Nachschlageformen für Wörter/Warum/Notizen/Atlas, früh sichtbare Weltkugel mit nahen Eingaben und geordneter Vertiefung, ruhiger funktionaler Pass mit Fortsetzung/gespeicherten Inhalten/Notizen/Sicherung. Dazu bleiben: Artikel mit verständlicher Erklärung und Quellen; nahe Modellbedienung/Beobachtung; Spiele mit klaren Zielen/Stufen/spezifischem Feedback; nachvollziehbare Reisen; ruhiges durchsuchbares Wissensbuch; Pass mit lokaler Speicherung, Sicherung und Fortsetzung; Suche/Dialoge/Hilfe/Chronik und Lade-/Leer-/Fehler-/Speicher-/Offlinezustände. Vier Musteransichten und zentrales CSS gelten nicht als Vollmodernisierung. Pakete4–8 und alle offenen3.5-Ziele bleiben erhalten. Produktname/Domain und bestehende Schutz-, Daten-, Kosten-, Betriebs- und Veröffentlichungsgrenzen bleiben.
-
-## Kontinuierliche Produktpflege
-
-Alle vorhandenen Bereiche bleiben Verbesserungsobjekt; abgeschlossene Themen sind nicht automatisch endgültig fertig. Nach belegtem Nutzen verbessern, statt hochwertige Inhalte routinemäßig umzuschreiben. Der Entwicklungszyklus berücksichtigt bestehende Inhalte, neue Inhalte, Design/Medien, Spiele/Lernen und Vernetzung; kein Feld langfristig vernachlässigen. Eine eigene, konsistente visuelle Identität mit verständlicher Typografie, Themenwelten und hilfreichen Animationen entwickeln. Produktname und Domain bleiben erhalten. Grundlegende Logo-/Markenänderungen nur als begründeten Vorschlag zur Nutzerfreigabe vorlegen.
-
-Schwierigkeit beschreibt Denkanspruch: leicht = erkennen/erinnern/verstehen, mittel = anwenden/vergleichen/Ursachen erklären, schwer = analysieren/kombinieren/übertragen/kritisch prüfen. Unbekannte Namen oder unverständliche Texte sind keine sinnvolle Schwierigkeit. Alle bestehenden Spieltypen schrittweise nachrüsten. Adaptive Empfehlungen beruhen auf mehreren vergleichbaren Aufgaben und datensparsamen Signalen; keine heimliche Stufenänderung, die bewusste Wahl des Kindes bleibt maßgeblich. Hinweise unterstützen Denken, ohne vorab die vollständige Lösung zu verraten.
-
-## Entwicklungsfelder und Reihenfolge
-
-Paket3.5 vor den bestehenden Paketen4–8 fertigstellen; aktueller Umfang und Status ausschließlich im BACKLOG. Einmalige Mindestverdopplung je geeignetem eigenständigem Fachbestand gegen historische Baseline, keine blinde Verdopplung fester geografischer Listen oder künftiger GO-Runden. Alle80ursprünglichen Reisebasistexte/64Grafiken/240Aufgaben individuell vertiefen. Erhaltene Master-/Nachtarbeit zuerst vergleichen und weiterverwenden. WK038 Länder-/Flaggen-Memory bleibt nachgeordnet.
-
-Die fünf dauerhaften Felder sind **Design**, **bestehende Inhalte**, **neue Inhalte**, **Spiele und Lernsystem**, **Wissensvernetzung**. Aktuell hat die vollständige Designmodernisierung erhöhte Priorität; neue Inhalte und Spiele werden dabei weiterentwickelt. Nach nachweislich abgeschlossener Modernisierung wieder stärker Wachstum, neue Mechaniken und intelligente Lernfunktionen priorisieren. Ein GO bleibt eine begrenzte Runde mit tatsächlicher Implementierung, Prüfung, Dokumentation und prüfbereitem PR gegen test-live.
-
-Die gesamte Oberfläche einschließlich Unteransichten und Zuständen schrittweise modernisieren: Einstieg, Übersichten, Karten/Artikel, Welten, Globus/Geografie, Spiele/Challenges, Labor/Experimente/Simulationen, Modelle/Animationen, Reisen/Routen, Buch/Glossar, Pass/Fortschritt, Suche/Filter/Navigation, Dialoge/Hilfe/Einstellungen sowie Laden/Fehler/Offline. Der einzige BACKLOG enthält den priorisierten Designbestand mit vier belegten Zuständen. Modernisierung verbessert Informationshierarchie, Nutzerwege, Interaktionen und Lernwert, nicht allein Farben. Repräsentative Karten stehen nicht für die Abnahme des gesamten Bestands.
-
-Branding, Kompass, Wortmarke, Favicon/App-Icon, Palette/Themenfarben, Schriften, Überschriften/Beschriftungen, Buttons, Abstände/Raster/Karten, Bilder/Infografiken, Animationen/Mikrointeraktionen und Spielgrafiken anhand belegter Qualitätsgewinne prüfen. Ein wiederverwendbares Designsystem ermöglicht verschiedene Themenatmosphären ohne überladene, austauschbare oder übertrieben kindliche Gestaltung. Produktname und Domain erhalten; grundlegende Logo-/Markenänderungen bleiben freigabepflichtige Vorschläge.
-
-**Mobile First – Desktop Premium:** iPhone/iOS Safari/WebKit und Android Chrome sind zentrale Zielgeräte. Zuerst hervorragende Smartphone-Bedienung ab 320 CSS-Pixeln, dann Tablet und Desktop, einschließlich Zwischenbreiten, entwickeln. Freies Entdecken und freiwillige Lernpfade mit Grundlagen, Zusammenhängen, Vertiefung, Anwendung und Wiederholung verbinden. Leicht bedeutet Erkennen/Verstehen, mittel Vergleichen/Anwenden/Erklären, schwer Analysieren/Kombinieren/Übertragen. Optionale aufgabenspezifische Hilfen ohne vorzeitige Auflösung; bewusst gewählte Stufe erhalten. Adaptive Empfehlungen erst nach mehreren vergleichbaren Aufgaben, datensparsam und transparent.
-
-Bilder und eigene SVGs sollen faszinieren und Zusammenhänge erklären; geeignete Bildgenerierung nur bei tatsächlicher Verfügbarkeit und Mehrwert. Quellen, Rechte, Alternativtexte, Modellgrenzen, Bildgrößen und Ladeverhalten belegen. Neue Inhalte benötigen Lernziel, geprüfte Angaben mit Prüfdatum/Grenzen, altersgerechte Erklärung, geeignete Visualisierung, sinnvolle Interaktion, Wissensverbindungen und Auffindbarkeit. Bestehende Karten, Spiele und Erklärungen fortlaufend anhand konkreter Befunde verbessern. Neue Mechaniken über Forschung, Expeditionen, Logik, Zuordnung, Karten/Bilder, Zeitachsen, Experimente, Simulationen und Konstruktion entwickeln; verschieden benannte identische Mechaniken sind keine Vielfalt. Qualität vor Menge, keine künstliche Inhaltsobergrenze.
-
-Die Hauptnavigation unterscheidet sechs direkte Bereiche: Entdecken (Weltkugel, Geografie und Erdmodelle), Wissenswelten (bestehende Übersicht der sechs Welten, Karten, Themen und Lernrouten), Spielplatz (Spiele, Rätsel und Quiz), Forscherlabor (Experimente und Forschungsmodelle), Lernreisen (geführte Kapitel) und Wissensbuch (Begriffe, Nachschlagewissen und bestehende Buchfunktionen). Wissenswelten dauerhaft eigenständig erreichbar halten; keine zweite Übersicht erstellen. Verknüpfungen zwischen Bereichen bleiben sinnvoll, ohne ihre Zuständigkeiten zu vermischen. Smartphone, Tablet und Desktop bilden ein gemeinsames System mit lesbaren Namen, klarer Auswahl und sichtbarem Fokus.
-
-Die Startseite erklärt Erstbesuchern in wenigen Worten den Lernwert und bietet einen klaren freiwilligen ersten Schritt. Entdecken, Spielen und Ausprobieren erhalten eine erkennbare Rangfolge; weiterführende Lernreisen, Wissensbuch und Welten/Routen bleiben leicht auffindbar. Passende Fortsetzung nur für tatsächlich vorhandene Aktivität. Desktop und Tablet eigenständig gestalten, gleiche Funktionen auf kleinen Smartphones angenehm portionieren. Wiederholte Werbekarten zu ruhigen, nützlichen Wegen zusammenfassen; rechtlich belegte Bilder und erreichbare Nachweise erhalten.
-
-„Was ist neu?“ erzählt die belegte Entwicklung in einer ruhigen Zeitleiste mit klaren Daten, zurückhaltenden Symbolen und kurzen sichtbaren Zusammenfassungen. Konkrete Änderungen und ihr Nutzen für Kinder und Eltern stehen in freiwilligen Details; möglichst drei bis fünf belegte Punkte, bei engerer Quelllage bewusst weniger. Keine allgemeinen Designbehauptungen, künstlichen Textmengen oder überladenen Karten. Passende Einstiege bleiben erreichbar. Frühere Sites-Veröffentlichungen, nach belegter Übernahme tatsächlich bereitgestellte Vercel-Testupdates und noch unbestätigte Entwicklungsarbeit klar unterscheiden. Testwebsite-Verfügbarkeit bedeutet keine Veröffentlichung auf der Hauptwebsite. Historische Einträge und Lücken erhalten; Zeitpunkte nur aus belegten Ereignissen, reine Beobachtungsdaten als solche nennen. Künftige GO-Runden führen ausstehende Bereitstellungsnachweise im vorhandenen PR-Ablauf nach und erfüllen denselben redaktionellen Standard, unter der begrenzten bestehenden Testübernahme nach TEST-LIVE; main/Produktion bleiben getrennt. Die fünf langfristigen Entwicklungsfelder bleiben unverändert.
-
-## Vollständige Produktphase 2B (Nutzerauftrag 11. Oktober 2026)
-
-Alle elf digitalen Labore, sechs praktische Experimente und passende Globusmissionen entwickeln: Vermuten→Experimentieren→Beobachten→Erklären→Weiterforschen; mindestens drei Labore mit substanziell besseren Modellen, Vergleichen, Aufgaben und Erklärungen. Freiwillige Stufen/Hilfen, Modellgrenzen/Sicherheit, zentrale datensparsame Journalintegration und Altfortsetzung/Offline. Der ganze bearbeitete Bereich verdient gleichzeitig gutes Design, Texte, Fachlichkeit, Lernen, Vernetzung, Navigation, Responsive/Performance/Zugänglichkeit und reale Prüfung.
-
-Gesamte Startseite vom Header/Hero über sechs Welten und Globus bis Service prüfen; breite Wissensüberschrift, konkrete Aktionen, Fortsetzung, bestehende Überraschungsaktion/Tagesfunktionen erhalten, Informationsdichte/Scrollhöhe verbessern, Eltern/Offline ruhiger anbieten. Genau sechs Hauptbereiche. Bestehende Wissensverbindungen abwechslungsreich, sitzungsstabil und auswählbar; Heute ausprobieren ersetzt die generische nächste-Schritt-Fläche mit tatsächlich vorhandenen konkreten Aktivitäten. Keine zusätzliche redundante Empfehlungsebene oder Profile.
-
-Chronik erhält alle belegten Einträge, Berliner Ereigniszeiten mit DST und ehrliche Vorbereitung/Test-/Sites-Kanäle. News ist dauerhaft entfernt, einschließlich Oberfläche/Suche/Routen/Laufzeit und ausschließlich News betreffender Betriebspläne. Historische Quellen-/Rechte-/Prüfbelege bleiben erhalten; keine stillschweigende Wiederaufnahme.
-
-## Bewährtes verbessern, sinnvolle eigene Innovation schaffen
-
-Vor großen Modernisierungen belegbare passende Wettbewerbsfunktionen prüfen und Stärken/Bestand/Lücken/eigene Verbesserungen/Lernwert nachvollziehbar vergleichen. Keine Kopien geschützter Medien oder Designs; keine unbelegte objektive Überlegenheit. Neue Mechaniken müssen Kindern tatsächlich beim Verstehen, selbstständigen Denken und freien Erkunden helfen; freiwillige Fehlerkorrektur und Erklären statt Nutzungsdruck.
-
-Verbindliche weitere Pakete:4 Wissensbuch2.0;5 Weltkugel2.0;6 Wissenswelten;7 intelligente freiwillige datensparsame Lernwege;8 umfassende Gesamtproduktabnahme. WK038 Memory bleibt spätere offene Aufgabe.
-
-
-## Ergänzende Bildreferenzen28.10.2026 · reine Gestaltungssichtung
-
-Alle vier vom Nutzer gelieferten Bilder wurden tatsächlich heruntergeladen und visuell angesehen. Sie ergänzen die vorhandene Gestaltungslinie als Inspiration; keine Kopiervorlagen, öffentlichen Website-Assets, Fachquellen oder zusätzlichen Pflichtfunktionen. Der laufende Prüfkandidat wird dafür nicht geändert und keine neue vollständige Designrunde eröffnet. Passende Anregungen können bei später ohnehin betroffener Arbeit innerhalb desselben Systems berücksichtigt werden.
-
-- [Themenwelten](https://app.sparklingstarsacademy.com/assets/world-map-hero-CqSl2srn.jpg): Räumlich getrennte Themeninseln machen Lernangebote als zusammengehörige Welt erkennbar. Für WunderKompass nur als Kompositionsanregung: klare eigene Themenmotive, eindeutige HTML-Beschriftungen und bestehende sechs Hauptbereiche; keine Übernahme der Fantasiekarte, Texte oder Menüfunktionen.
-- [Lernoberfläche und räumliche Illustrationen](https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/7c3d0b247273693.69d73018784a9.png): Warme neutrale Flächen, ein dominantes räumliches Motiv und klar gewichtete nächste Handlung. Anregung für eigene themengerechte Illustrationen und begrenzte Hervorhebungen im vorhandenen Design; Figuren/Profile/Prozentwerte und zusätzliche soziale Funktionen werden daraus nicht abgeleitet.
-- [Fortschrittsdarstellung](https://cdn.prod.website-files.com/64dc434f1bb0399ff8f238e0/6527b69eb6eaff22e7b5cd97_star-rewards-01.jpg): Erreichte Zustände und ein nächster Schritt sind visuell gut unterscheidbar. Auf vorhandenen Entdeckerpass und Abzeichen als verständliche Zustandsdarstellung beziehen; keine Pflicht für Belohnungsshop, externe Belohnungen, Sterneökonomie, Avatare oder tägliche Pflichten.
-- [Wissenschaftliche Themeninszenierung](https://vitotechnology.com/gallery/images/swk-feature-2/ja/1920x1080.jpg): Ein dominanter Lerngegenstand, wenige klar zugeordnete Kennwerte und passende thematische Tiefe. Für eigene Wissenschafts-/Weltraumthemen Bezugsgrößen, Einheiten, Maßstab und Modellgrenzen ausdrücklich angeben; abgebildete Werte oder Illustrationen sind keine Fachquelle und werden nicht übernommen.
+Kein Konto und keine Cloud für Kinderdaten. Kein Chatbot für Kinder. Keine Nachrichten. Keine Kosten.

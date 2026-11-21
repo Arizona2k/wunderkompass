@@ -96,7 +96,7 @@ Der Nutzer hat am 21.11.2026 entschieden: Claude übernimmt die Entwicklung, ist
   - Drei-Browser-Vollpipeline vor jedem Schritt
   - Release-Sperren und -Genehmigungen, Prüfung der Auslieferungsbytes
   - Pflicht-Prüfberichte als JSON
-- Die Originalaufträge des Nutzers (`content/auftrag-2026-10-13/`) bleiben zum Nachlesen erhalten (siehe Schritt 0). Gute Ideen daraus übernehmen wir ins neue BACKLOG.
+- Die Originalaufträge des Nutzers (jetzt `docs/archiv/auftrag-2026-10-13/`) bleiben zum Nachlesen erhalten (siehe Schritt 0). Gute Ideen daraus übernehmen wir ins neue BACKLOG.
 
 ---
 
