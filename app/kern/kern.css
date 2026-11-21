@@ -331,8 +331,9 @@
 /* ---------- Anpassung alter Bereiche ---------- */
 /* Die alten Zeichnungen sind Pixel für Pixel auf die bisherige Schrift abgestimmt.
    Mit der breiteren Nunito ragten Zahlen aus dem Bild. Ihre Beschriftungen behalten
-   die alte Schrift, bis die Zeichnungen in ihrer Phase neu entstehen (BACKLOG). */
-svg text { font-family: "Trebuchet MS", Arial, sans-serif; }
+   die alte Schrift, bis die Zeichnungen in ihrer Phase neu entstehen (BACKLOG).
+   Am svg selbst, weil mehrere alte Regeln „svg text{font-family:inherit}“ setzen. */
+svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 
 @media (forced-colors: active) {
   .kern-leiste a[aria-current="page"] { outline: 2px solid CanvasText; outline-offset: -2px; }
