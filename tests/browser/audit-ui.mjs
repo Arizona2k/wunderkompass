@@ -18,9 +18,9 @@ async function closeAndFocus(page,dialog,opener,close=null){
 
 export async function auditGuideReturnPage(page,base,{shots=null,engine='chromium',width=page.viewportSize().width}={}){
  await atHome(page,base);
- const footer=page.locator('.site-footer').getByRole('button',{name:'Für Begleitpersonen & neugierige Köpfe',exact:true});
- const header=page.getByRole('button',{name:'Hilfe öffnen',exact:true});
- const helpOpener=await header.count()?header:page.getByRole('button',{name:'So geht’s',exact:true});
+ const footer=page.getByRole('contentinfo').getByRole('button',{name:'Für Eltern',exact:true});
+ // Der Kopf hat keinen Hilfe-Knopf mehr; die Hilfe öffnet „So geht’s“ auf der Startseite.
+ const helpOpener=page.getByRole('button',{name:'So geht’s',exact:true});
  const parents=page.locator('.parent-guide'),help=page.locator('.help-dialog'),passport=page.locator('.passport-dialog');
  await footer.focus();await page.keyboard.press('Enter');await parents.waitFor();
  await parents.getByRole('button',{name:'So funktioniert die Lernwelt',exact:true}).click();await help.waitFor();
@@ -85,7 +85,7 @@ export async function auditPassNavigationPage(page,{width=page.viewportSize().wi
  const cases=[],coarse=await page.evaluate(()=>matchMedia('(pointer:coarse)').matches);
  const activate=async control=>{if(coarse)await control.tap();else{await control.focus();await page.keyboard.press('Enter');}};
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}),pass=page.locator('.passport-dialog');
- const home=async()=>{if(await page.evaluate(()=>location.hash)!=='#home')await activate(page.locator('.brand'));await page.locator('.discovery-hero').waitFor();};
+ const home=async()=>{if(await page.evaluate(()=>location.hash)!=='#home')await activate(page.getByRole('link',{name:'WunderKompass – Startseite',exact:true}));await page.locator('.discovery-hero').waitFor();};
  const open=async()=>{await activate(opener);await pass.waitFor();await pass.evaluate(e=>Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{}))));};
  const result=async(name,expected)=>{
   await pass.waitFor({state:'detached'});await settle(page);

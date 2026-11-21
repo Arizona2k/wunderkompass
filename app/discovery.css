@@ -45,7 +45,7 @@
 .gateway-credits a{color:var(--wk-teal);text-decoration:underline;text-underline-offset:3px;display:inline-flex;min-height:44px;align-items:center}
 .discovery-pathways{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;margin:24px 0;color:var(--wk-ink);border-top:1px solid var(--wk-line);padding-top:24px}
 .discovery-network,.discovery-play{padding:4px 0;min-width:0}
-.discovery-pathways h2{font-size:25px;line-height:1.25;font-weight:750;letter-spacing:-.025em;margin:9px 0 10px}
+.discovery-pathways h2{font-size:25px;line-height:1.3;font-weight:750;letter-spacing:-.025em;margin:9px 0 10px}
 .discovery-intro{font-size:15px;color:var(--wk-muted);line-height:1.6}
 .discovery-trail-options{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
 .discovery-trail-options button{min-height:44px;border:1px solid var(--wk-line);border-radius:24px;background:#fff;padding:9px 12px;font-size:14px;color:var(--wk-muted);line-height:1.5}
@@ -70,28 +70,21 @@
 .earth-app[data-mode=globe] .continue-card p{font-size:14px;line-height:1.5;margin:4px 0 0}
 .earth-app[data-mode=globe] .continue-card .primary-button{background:var(--wk-teal);color:#fff;min-height:44px}
 .earth-app[data-mode=globe] .continue-card .primary-button:hover{background:#1d5143}
-.learning-navigation{min-width:0;margin-bottom:20px}
-.learning-navigation .area-scroll{display:none}
-.earth-app .mode-tabs{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px!important;background:var(--wk-paper)!important;border:1px solid var(--wk-line);width:100%!important;height:auto!important;margin-bottom:0;padding:5px!important;border-radius:14px!important}
-.earth-app .mode-tabs .nav-tab{display:flex!important;flex-direction:row!important;justify-content:center;min-width:0!important;min-height:52px!important;padding:9px 10px!important;gap:8px!important;font-size:15px!important;line-height:1.35!important;font-weight:700!important;height:auto!important;border-radius:8px!important;white-space:normal!important;color:var(--wk-ink)!important;border:1px solid transparent;box-shadow:none!important}
-.earth-app .mode-tabs .nav-tab>span{overflow-wrap:normal;word-break:normal;white-space:normal;line-height:1.35}
-.earth-app .mode-tabs .nav-tab svg{flex-shrink:0;color:var(--wk-muted);width:19px!important;height:19px!important}
-.earth-app .mode-tabs .nav-tab[data-state=active]{background:#fff!important;border-color:#618b9b;color:#193f52!important;box-shadow:0 2px 5px #193f520a!important}
-.earth-app .mode-tabs .nav-tab[data-state=active] svg{color:#193f52}
-.earth-app .mode-tabs .nav-tab:hover{background:#e2edf1!important}
-.earth-app .mode-tabs .nav-tab:focus-visible{outline:2px solid #256384!important;outline-offset:1px;z-index:1}
-.earth-app.large-reading .mode-tabs .nav-tab{font-size:18px!important}
+
+
+
+
+
+
+
+
+
+
+
 #world-category-title{width:fit-content;max-width:100%}
-@media(max-width:1200px){
- .learning-navigation{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:4px;align-items:center;margin-bottom:16px}
- .learning-navigation .area-scroll{display:grid;place-items:center;min-width:44px;min-height:48px;padding:0;border:1px solid var(--wk-line);border-radius:8px;background:var(--wk-paper);color:var(--wk-ink)}
- .earth-app .mode-tabs{display:flex!important;justify-content:flex-start!important;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;overscroll-behavior-x:contain;border-radius:8px!important;scroll-padding-inline:5px}
- .earth-app .mode-tabs .nav-tab{flex:0 0 auto!important;min-height:48px!important;padding:9px 12px!important;white-space:nowrap!important;font-size:16px!important}
- .earth-app .mode-tabs .nav-tab>span{white-space:nowrap}
- .earth-app.large-reading .mode-tabs .nav-tab{font-size:20px!important;min-height:54px!important}
-}
-@media(max-width:560px){.earth-app .mode-tabs .nav-tab svg{display:none}}
-@media(forced-colors:active){.earth-app .mode-tabs .nav-tab[data-state=active]{border-color:CanvasText;color:CanvasText!important;text-decoration:underline}.earth-app .mode-tabs .nav-tab:focus-visible{outline-color:CanvasText!important}}
+
+
+
 .earth-app[data-mode=globe] .visual-heading{padding:20px 20px 14px}
 .earth-app[data-mode=globe] .learning-sidebar .info-card{padding:20px}
 .earth-app[data-mode=globe] .welcome-info .welcome-task{display:none}
@@ -167,7 +160,7 @@
 .discovery-question{font-size:clamp(21px,2.2vw,28px);line-height:1.35;max-width:32ch;color:var(--wk-ink);margin:22px 0 18px;letter-spacing:-.025em}
 .discovery-activities{margin:32px 0}
 .large-reading .discovery-search small{font-size:18px}.large-reading .discovery-question{font-size:28px}
-@media(max-width:800px){}
+
 @media(max-width:560px){.discovery-hero .discovery-quiet-links :is(a,button){font-size:14px}.discovery-hero .discovery-mobile-help{margin-left:0}.discovery-hero .discovery-quiet-links{gap:0 18px}.discovery-section-heading h2{font-size:22px}.large-reading .discovery-search{font-size:20px}.large-reading .discovery-hero .discovery-quiet-links :is(a,button){font-size:18px}}
 
 .gateway-compact .gateway-question{font-size:14px;line-height:1.5;color:var(--wk-muted);margin:8px 0 12px}.large-reading .gateway-compact .gateway-question{font-size:18px}.discovery-activities .next-adventures{margin-top:0}.discovery-activities .next-adventures small{font-size:16px;line-height:1.7}
@@ -294,14 +287,14 @@
 .discovery-composed h1{font-size:clamp(18px,1.7vw,23px);line-height:1.4;letter-spacing:-.02em;font-weight:500;margin:0 0 18px;max-width:30ch}
 .discovery-composed h1 span{color:inherit}
 .discovery-composed .discovery-feature{margin:0}
-.discovery-composed .discovery-feature>a{font-size:clamp(32px,3.7vw,51px);line-height:1.12;letter-spacing:-.045em;padding:0;align-items:center;text-wrap:balance}
+.discovery-composed .discovery-feature>a{font-size:clamp(32px,3.7vw,51px);line-height:1.36;letter-spacing:-.045em;padding:0;align-items:center;text-wrap:balance}
 .discovery-composed .discovery-feature>a>svg{margin:0;width:24px;height:24px}
 .discovery-composed .discovery-search{background:#fff;border-color:var(--wk-line);border-radius:14px;box-shadow:0 4px 18px #19374306}
 .discovery-composed .discovery-change{min-height:44px;margin-top:6px}
 .discovery-composed .discovery-hero-art>.world-photo{max-width:100%;border-radius:14px}
 .discovery-composed .discovery-hero-art>.world-photo img{max-height:430px}
 .large-reading .discovery-composed h1{font-size:28px}.large-reading .discovery-composed .discovery-feature>a{font-size:clamp(34px,4vw,55px)}
-@media(max-width:800px){.discovery-hero.discovery-composed{grid-template-areas:"copy" "search" "art" "actions";grid-template-columns:minmax(0,1fr);gap:16px;margin:4px 0 34px}.discovery-composed h1{font-size:19px;margin-bottom:10px;max-width:none}.discovery-composed .discovery-feature>a{font-size:clamp(28px,5vw,38px);line-height:1.2}.discovery-composed .discovery-hero-art>.world-photo img{height:250px;max-height:300px;width:auto;max-width:100%}.discovery-composed .discovery-hero-art>.world-photo{margin-inline:auto}.discovery-composed .discovery-hero-actions{width:100%}.large-reading .discovery-composed h1{font-size:25px}.large-reading .discovery-composed .discovery-feature>a{font-size:34px}}
+@media(max-width:800px){.discovery-hero.discovery-composed{grid-template-areas:"copy" "search" "art" "actions";grid-template-columns:minmax(0,1fr);gap:16px;margin:4px 0 34px}.discovery-composed h1{font-size:19px;margin-bottom:10px;max-width:none}.discovery-composed .discovery-feature>a{font-size:clamp(28px,5vw,38px);line-height:1.33}.discovery-composed .discovery-hero-art>.world-photo img{height:250px;max-height:300px;width:auto;max-width:100%}.discovery-composed .discovery-hero-art>.world-photo{margin-inline:auto}.discovery-composed .discovery-hero-actions{width:100%}.large-reading .discovery-composed h1{font-size:25px}.large-reading .discovery-composed .discovery-feature>a{font-size:34px}}
 @media(max-width:360px){.discovery-composed .discovery-hero-art>.world-photo img{height:210px}.discovery-composed .discovery-feature>a{font-size:27px}}
 
 .earth-app:is([data-mode=globe],[data-mode=layers],[data-mode=day]) .visual-heading{padding:18px 20px 12px}

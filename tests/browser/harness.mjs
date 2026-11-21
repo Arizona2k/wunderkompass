@@ -5,6 +5,7 @@ import net from 'node:net';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {browserErrorArrays} from '../../scripts/browser-errors.mjs';
+import {BEREICHE} from '../../app/kern/bereiche.ts';
 
 export const PROJECT = fileURLToPath(new URL('../..', import.meta.url));
 
@@ -19,12 +20,11 @@ export function ready(page) {
 }
 
 // Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.
-// Gibt den Playwright-Locator auf das Bedienelement des Bereichs zurück.
-const BEREICH_NAMEN = {explore: 'Entdecken', world: 'Wissenswelten', games: 'Spielplatz', labs: 'Forscherlabor', journeys: 'Lernreisen', book: 'Wissensbuch'};
+// Gibt den Playwright-Locator auf den Link in der Bereichsleiste zurück.
 export function bereich(page, id) {
-  const name = BEREICH_NAMEN[id];
-  if (!name) throw Error('Unbekannter Bereich: ' + id);
-  return page.getByRole('tab', {name, exact: true});
+  const eintrag = BEREICHE.find(b => b.id === id);
+  if (!eintrag) throw Error('Unbekannter Bereich: ' + id);
+  return page.getByRole('navigation', {name: 'Bereiche', exact: true}).getByRole('link', {name: eintrag.wort, exact: true});
 }
 
 // Startet `vite preview` für einen gebauten Stand auf einem freien Port.

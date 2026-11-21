@@ -38,7 +38,7 @@ async function contracts(p){
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'responsive shell overflow');
  const data=await p.locator('[data-learning-component=grid]:visible').evaluateAll(grids=>grids.map(g=>{const style=getComputedStyle(g),cards=[...g.children].filter(c=>c.getClientRects().length).map(c=>{const r=c.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,overflow:c.scrollWidth>c.clientWidth+2};});return {gap:parseFloat(style.gap),display:style.display,cards};}));
  for(const grid of data){assert.equal(grid.display,'grid');assert.ok(grid.gap>=12,'shared spacing contract');for(const card of grid.cards){assert.ok(card.w>=44&&card.h>=44);assert.equal(card.overflow,false);}for(let i=0;i<grid.cards.length;i++)for(let j=i+1;j<grid.cards.length;j++){const a=grid.cards[i],b=grid.cards[j];assert.ok(a.x+a.w<=b.x+1||b.x+b.w<=a.x+1||a.y+a.h<=b.y+1||b.y+b.h<=a.y+1,'cards must not overlap');}}
- const small=await p.locator('.mode-tabs button:visible,[data-learning-component=details] summary:visible,.learning-status button:visible').evaluateAll(nodes=>nodes.filter(n=>{const r=n.getBoundingClientRect();return r.width<44||r.height<44;}).map(n=>n.textContent));assert.deepEqual(small,[],'shared 44px touch contract');
+ const small=await p.locator('nav[aria-label="Bereiche"] a:visible,[data-learning-component=details] summary:visible,.learning-status button:visible').evaluateAll(nodes=>nodes.filter(n=>{const r=n.getBoundingClientRect();return r.width<44||r.height<44;}).map(n=>n.textContent));assert.deepEqual(small,[],'shared 44px touch contract');
  return data;
 }
 async function accessibility(p,selector){

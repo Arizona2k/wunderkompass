@@ -1,12 +1,39 @@
 // Neuer Kern: Grundlage (Schrift, Farben, Fokus) und Hülle (Kopf, Leiste, Fuß).
-// Läuft schmal mit Touch (320 × 568) und breit (1440 × 900).
+// Die Grundlage läuft schmal mit Touch (320 × 568) und breit (1440 × 900),
+// die Hülle bei 320 und 390 px mit Touch sowie bei 768 und 1440 px.
 import assert from 'node:assert/strict';
-import {withPage} from './harness.mjs';
+import {withPage, ready} from './harness.mjs';
+import {homeContrast} from './discovery-central.mjs';
+import {BEREICHE} from '../../app/kern/bereiche.ts';
+import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
 
 const SCHMAL = {width: 320, height: 568, touch: true};
 const BREIT = {width: 1440, height: 900};
+const ANSICHTEN = [SCHMAL, {width: 390, height: 844, touch: true}, {width: 768, height: 1024}, BREIT];
+const LEISTE = 'nav[aria-label="Bereiche"]';
+const WARTEN = {timeout: 5000};
+
+const leisteVon = page => page.getByRole('navigation', {name: 'Bereiche', exact: true});
+const tippe = (ziel, touch) => (touch ? ziel.tap() : ziel.click());
 
 export async function kernHuelle(ctx) {
+  for (const view of ANSICHTEN) {
+    const width = view.width;
+    await withPage(ctx, view, async page => {
+      await leiste(page, width);
+      await kopfOhneZaehler(page, width);
+      await fuss(page, width);
+      if (width < 768) await leisteVerdecktNichts(page, width);
+      if (width === 320) await dialogUeberLeiste(page);
+      await updatesOhneMarkierung(page, width);
+    });
+    await withPage(ctx, view, page => leisteNavigiert(page, view));
+    await withPage(ctx, view, page => zurueckNachLeiste(page, view, ctx.engine));
+    ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her`
+      + (width < 768 ? ', Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
+  }
+  await grosseSchrift320(ctx);
+  ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Pass unverändert');
   for (const view of [SCHMAL, BREIT]) {
     await withPage(ctx, view, async page => {
       const width = view.width;
@@ -42,7 +69,7 @@ async function grundlage(page, width) {
 // Springt das Programm auf eine Überschrift, zeigt sie keinen Rahmen –
 // auch wenn der Link per Tastatur geöffnet wurde (dann gilt sonst :focus-visible).
 async function ruhigerFokus(page, width) {
-  const link = page.locator('footer').getByRole('link', {name: 'Was ist neu?', exact: true});
+  const link = page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true});
   await link.focus();
   await page.keyboard.press('Enter');
   const title = page.locator('#updates-title');
@@ -68,4 +95,230 @@ async function tastaturFokus(page) {
   assert.equal(ring.style, 'solid', 'tastaturFokus: Rahmenart');
   assert.ok(ring.width >= 2, `tastaturFokus: Rahmen zu dünn (${ring.width} px)`);
   assert.equal(ring.color, 'rgb(14, 110, 114)', 'tastaturFokus: Rahmenfarbe');
+}
+
+// Eine Leiste mit sechs Wörtern: groß genug, nicht abgeschnitten, gut lesbar, am richtigen Platz.
+async function leiste(page, width, name = String(width)) {
+  const nav = leisteVon(page);
+  assert.equal(await nav.count(), 1, `leiste ${name}: genau eine Leiste „Bereiche“`);
+  const daten = await nav.evaluate(el => {
+    const box = el.getBoundingClientRect();
+    return {
+      oben: box.top,
+      unten: box.bottom,
+      mainOben: document.getElementById('learning-main').getBoundingClientRect().top,
+      fensterHoehe: innerHeight,
+      ueberlauf: document.documentElement.scrollWidth - innerWidth,
+      links: [...el.querySelectorAll('a')].map(a => {
+        const link = a.getBoundingClientRect(), span = a.querySelector('span');
+        const wort = span ? span.getBoundingClientRect() : {width: Infinity, left: -Infinity, right: Infinity};
+        return {
+          wort: a.textContent.trim(),
+          breite: link.width,
+          hoehe: link.height,
+          innen: a.clientWidth,
+          wortScroll: span ? span.scrollWidth : Infinity,
+          passt: wort.width <= a.clientWidth + 0.5 && wort.left >= link.left - 0.5 && wort.right <= link.right + 0.5,
+          schrift: span ? parseFloat(getComputedStyle(span).fontSize) : 0,
+        };
+      }),
+    };
+  });
+  assert.deepEqual(daten.links.map(link => link.wort), BEREICHE.map(b => b.wort), `leiste ${name}: Wörter und Reihenfolge`);
+  for (const link of daten.links) {
+    assert.ok(link.breite >= 48 && link.hoehe >= 48, `leiste ${name}: „${link.wort}“ ist kleiner als 48 × 48 px (${link.breite} × ${link.hoehe})`);
+    assert.ok(link.wortScroll <= link.innen && link.passt, `leiste ${name}: „${link.wort}“ ist abgeschnitten`);
+    assert.ok(link.schrift >= 14, `leiste ${name}: „${link.wort}“ hat nur ${link.schrift} px Schrift`);
+  }
+  assert.ok(daten.ueberlauf <= 0, `leiste ${name}: Seite läuft ${daten.ueberlauf} px waagerecht über`);
+  assert.equal(await nav.locator('[aria-current="page"]').count(), 1, `leiste ${name}: genau ein aktiver Bereich`);
+  for (const link of await nav.getByRole('link').all()) await homeContrast(link);
+  if (width < 768) {
+    assert.ok(Math.abs(daten.unten - daten.fensterHoehe) <= 1, `leiste ${name}: Leiste liegt nicht unten (${daten.unten} von ${daten.fensterHoehe})`);
+  } else {
+    assert.ok(daten.unten <= daten.mainOben + 0.5, `leiste ${name}: Leiste liegt nicht über dem Inhalt`);
+  }
+}
+
+// Jeder Bereich öffnet sich, und genau sein Wort ist markiert. Start kommt zuletzt,
+// weil die frische Seite schon auf dem Start steht.
+async function leisteNavigiert(page, {width, touch}) {
+  const nav = leisteVon(page);
+  for (const {id, ziel, wort} of [...BEREICHE.slice(1), BEREICHE[0]]) {
+    await tippe(nav.getByRole('link', {name: wort, exact: true}), touch);
+    await page.waitForFunction(hash => location.hash === '#' + hash, ziel, WARTEN).catch(() => {});
+    assert.equal(new URL(page.url()).hash, '#' + ziel, `leisteNavigiert ${width}: „${wort}“ führt nicht nach #${ziel}`);
+    await page.waitForFunction(([auswahl, gesucht]) => {
+      const aktiv = [...document.querySelectorAll(auswahl + ' [aria-current]')];
+      return aktiv.length === 1 && aktiv[0].textContent.trim() === gesucht;
+    }, [LEISTE, wort], WARTEN).catch(() => {});
+    const aktiv = await nav.locator('[aria-current]').evaluateAll(els => els.map(el => [el.textContent.trim(), el.getAttribute('aria-current')]));
+    assert.deepEqual(aktiv, [[wort, 'page']], `leisteNavigiert ${width}: Markierung nach „${wort}“`);
+    if (id === 'world') {
+      await page.waitForFunction(() => document.activeElement?.id === 'world-category-title', null, WARTEN).catch(() => {});
+      const fokus = await page.evaluate(() => ({id: document.activeElement?.id, rahmen: getComputedStyle(document.activeElement).outlineStyle}));
+      assert.deepEqual(fokus, {id: 'world-category-title', rahmen: 'none'}, `leisteNavigiert ${width}: Fokus nach „Welten“`);
+    }
+  }
+}
+
+// Der Kopf zeigt keine Zahlen und keinen Hilfe-Knopf; die Suche öffnet sich.
+async function kopfOhneZaehler(page, width) {
+  const pass = page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true});
+  assert.doesNotMatch(await pass.innerText(), /\d/, `kopfOhneZaehler ${width}: Pass-Knopf zeigt einen Zähler`);
+  assert.equal(await page.getByRole('button', {name: 'Hilfe öffnen', exact: true}).count(), 0, `kopfOhneZaehler ${width}: Kopf hat noch einen Hilfe-Knopf`);
+  await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
+  const suche = page.getByRole('dialog', {name: 'Lernwelt durchsuchen', exact: true});
+  await suche.waitFor();
+  await page.keyboard.press('Escape');
+  await suche.waitFor({state: 'hidden'});
+}
+
+// Der Fuß ist ein echter Seitenfuß mit „Was ist neu?“ und „Für Eltern“.
+async function fuss(page, width) {
+  const fussZeile = page.getByRole('contentinfo');
+  assert.equal(await fussZeile.count(), 1, `fuss ${width}: genau ein Seitenfuß`);
+  assert.equal(await fussZeile.getByRole('link', {name: 'Was ist neu?', exact: true}).count(), 1, `fuss ${width}: Link „Was ist neu?“ fehlt`);
+  const eltern = fussZeile.getByRole('button', {name: 'Für Eltern', exact: true});
+  assert.equal(await eltern.count(), 1, `fuss ${width}: Knopf „Für Eltern“ fehlt`);
+  await eltern.click();
+  const dialog = page.locator('.parent-guide');
+  await dialog.waitFor();
+  await page.keyboard.press('Escape');
+  await dialog.waitFor({state: 'hidden'});
+}
+
+// Auf dem Handy liegt die Leiste fest unten. Sie darf das Seitenende und den
+// zurückgegebenen Fokus nicht verdecken.
+async function leisteVerdecktNichts(page, width) {
+  await page.evaluate(() => scrollTo({top: document.documentElement.scrollHeight, behavior: 'instant'}));
+  await page.waitForFunction(() => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    if (Math.abs(scrollY - max) > 1) scrollTo({top: max, behavior: 'instant'});
+    return Math.abs(scrollY - max) <= 1;
+  }, null, WARTEN).catch(() => {});
+  const fussZeile = page.getByRole('contentinfo');
+  const ende = await fussZeile.evaluate((el, auswahl) => {
+    const teile = [...el.querySelectorAll('*')].filter(teil => {
+      const box = teil.getBoundingClientRect();
+      return box.width > 0 && box.height > 0 && getComputedStyle(teil).visibility !== 'hidden';
+    });
+    return {unten: Math.max(...teile.map(teil => teil.getBoundingClientRect().bottom)), leisteOben: document.querySelector(auswahl).getBoundingClientRect().top};
+  }, LEISTE);
+  assert.ok(ende.unten <= ende.leisteOben + 0.5, `leisteVerdecktNichts ${width}: Fußende (${ende.unten}) liegt unter der Leiste (${ende.leisteOben})`);
+
+  const eltern = fussZeile.getByRole('button', {name: 'Für Eltern', exact: true});
+  await eltern.focus();
+  await page.keyboard.press('Enter');
+  const dialog = page.locator('.parent-guide');
+  await dialog.waitFor();
+  await page.keyboard.press('Escape');
+  await dialog.waitFor({state: 'hidden'});
+  await page.waitForFunction(() => document.activeElement?.textContent?.trim() === 'Für Eltern', null, WARTEN).catch(() => {});
+  const lage = await eltern.evaluate((el, auswahl) => ({
+    fokus: el === document.activeElement,
+    unten: el.getBoundingClientRect().bottom,
+    leisteOben: document.querySelector(auswahl).getBoundingClientRect().top,
+  }), LEISTE);
+  assert.ok(lage.fokus, `leisteVerdecktNichts ${width}: „Für Eltern“ hat nach dem Schließen keinen Fokus`);
+  assert.ok(lage.unten <= lage.leisteOben + 0.5, `leisteVerdecktNichts ${width}: „Für Eltern“ (${lage.unten}) liegt unter der Leiste (${lage.leisteOben})`);
+}
+
+// Suche, Pass und Eltern-Dialog liegen auf dem Handy über der Leiste.
+async function dialogUeberLeiste(page) {
+  const dialoge = [
+    ['Suche', page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}), '.search-dialog'],
+    ['Pass', page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}), '.passport-dialog'],
+    ['Eltern-Dialog', page.getByRole('contentinfo').getByRole('button', {name: 'Für Eltern', exact: true}), '.parent-guide'],
+  ];
+  for (const [name, knopf, auswahl] of dialoge) {
+    await knopf.click();
+    const dialog = page.locator(auswahl);
+    await dialog.waitFor();
+    const treffer = await page.evaluate(leisteAuswahl => {
+      const box = document.querySelector(leisteAuswahl).getBoundingClientRect();
+      const el = document.elementFromPoint(box.left + box.width / 2, box.top + box.height / 2);
+      if (!el) return 'nichts';
+      return el.closest(leisteAuswahl) ? 'leiste' : 'darüber';
+    }, LEISTE);
+    assert.equal(treffer, 'darüber', `dialogUeberLeiste: ${name} liegt nicht über der Leiste (${treffer})`);
+    await page.keyboard.press('Escape');
+    await dialog.waitFor({state: 'hidden'});
+  }
+}
+
+// Mit „Größere Schrift“ im Pass bleibt die Leiste bei 320 px lesbar, und der Pass bleibt, wie er war.
+async function grosseSchrift320(ctx) {
+  const pass = createSave();
+  pass.progress.settings.largeText = true;
+  pass.progress.favorites = ['topic:animal-koala'];
+  const context = await ctx.browser.newContext({
+    viewport: {width: 320, height: 568},
+    reducedMotion: 'reduce',
+    hasTouch: true,
+    ...(ctx.engine === 'chromium' ? {isMobile: true} : {}),
+  });
+  try {
+    await context.addInitScript(({key, save}) => {
+      if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
+    }, {key: SAVE_KEY, save: pass});
+    const page = await context.newPage();
+    ctx.monitor(page);
+    await page.goto(ctx.base);
+    await ready(page);
+    await page.locator('.earth-app.large-reading').waitFor();
+    await leiste(page, 320, '320 große Schrift');
+    const gespeichert = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY);
+    for (const [schluessel, wert] of Object.entries(pass.progress.settings)) {
+      assert.deepEqual(gespeichert.settings[schluessel], wert, `grosseSchrift320: Einstellung „${schluessel}“ hat sich verändert`);
+    }
+    assert.deepEqual(gespeichert.favorites, pass.progress.favorites, 'grosseSchrift320: Merkliste hat sich verändert');
+  } finally {
+    await context.close();
+  }
+}
+
+// Nach einem Tipp in der Leiste bringt „Zurück“ die Lesestelle und die Markierung zurück.
+async function zurueckNachLeiste(page, {width, touch}, engine) {
+  const nav = leisteVon(page);
+  await tippe(nav.getByRole('link', {name: 'Welten', exact: true}), touch);
+  await page.locator('.world-view').waitFor();
+  await page.waitForFunction(() => document.activeElement?.id === 'world-category-title', null, WARTEN).catch(() => {});
+  // Handy: Leiste klebt unten, also mitten im Lesen tippen. Ab 768 px scrollt der Kopf mit;
+  // dort liegt die Lesestelle so tief, dass „Spielen“ noch 16 px unter dem oberen Rand sichtbar ist
+  // (die App rückt Fokus mit weniger als 8 px Abstand absichtlich zur Mitte).
+  const ziel = await page.evaluate(breit => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    if (breit) {
+      const spielen = [...document.querySelectorAll('nav[aria-label="Bereiche"] a')].find(a => a.textContent.trim() === 'Spielen');
+      return Math.max(0, Math.min(max, Math.floor(spielen.getBoundingClientRect().top + scrollY - 16)));
+    }
+    return max >= 600 ? 600 : Math.floor(max / 2);
+  }, width >= 768);
+  await page.evaluate(y => scrollTo({top: y, behavior: 'instant'}), ziel);
+  await page.waitForFunction(y => Math.abs(scrollY - y) <= 1, ziel, WARTEN);
+  const gemerkt = await page.evaluate(() => scrollY);
+
+  await tippe(nav.getByRole('link', {name: 'Spielen', exact: true}), touch);
+  await page.waitForFunction(() => location.hash === '#games', null, WARTEN);
+  await page.locator('.game-tile').first().waitFor();
+  await page.goBack();
+  await page.waitForFunction(() => location.hash === '#world', null, WARTEN);
+  await page.locator('.world-view').waitFor();
+  await page.waitForFunction(y => Math.abs(scrollY - y) <= 2, gemerkt, WARTEN).catch(() => {});
+  const y = await page.evaluate(() => scrollY);
+  assert.ok(Math.abs(y - gemerkt) <= 2, `zurueckNachLeiste ${width}: Lesestelle war ${gemerkt}, nach „Zurück“ ${y}`);
+  const aktiv = await nav.locator('[aria-current="page"]').allTextContents();
+  assert.deepEqual(aktiv.map(text => text.trim()), ['Welten'], `zurueckNachLeiste ${width}: Markierung nach „Zurück“`);
+  if (engine === 'chromium') {
+    await page.waitForFunction(() => document.activeElement?.dataset.routeFocus === 'home-nav-games', null, WARTEN).catch(() => {});
+    assert.equal(await page.evaluate(() => document.activeElement?.dataset.routeFocus), 'home-nav-games', `zurueckNachLeiste ${width}: „Spielen“ hat nach „Zurück“ keinen Fokus`);
+  }
+}
+
+// Auf „Was ist neu?“ ist kein Bereich markiert.
+async function updatesOhneMarkierung(page, width) {
+  await page.evaluate(() => { location.hash = 'updates'; });
+  await page.locator('#updates-title').waitFor();
+  assert.equal(await leisteVon(page).locator('[aria-current]').count(), 0, `updatesOhneMarkierung ${width}: ein Bereich ist markiert`);
 }
