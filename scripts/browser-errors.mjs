@@ -2,6 +2,8 @@ import {zaehleNavigationen} from './navigation-tempo.mjs';
 export const BROWSER_ERROR_FIELDS=['errors','consoleErrors','failedRequests','ownHttpErrors','externalRequests'];
 export const browserErrorArrays=()=>Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,[]]));
 export const browserErrorsComplete=proof=>BROWSER_ERROR_FIELDS.every(key=>Array.isArray(proof?.[key])&&proof[key].length===0);
+// Für Zusicherungen: nennt die gesammelten Fehler, damit ein Fehlschlag in der CI die Ursache zeigt.
+export const browserErrorText=proof=>'Browserfehler: '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.filter(key=>proof?.[key]?.length).map(key=>[key,proof[key].slice(0,5)])));
 
 // Shared by actual Chromium/Firefox/WebKit pages. Controlled fixtures may name
 // an exact initial asset503, or the confirmed stopped origin's registered worker

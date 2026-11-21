@@ -25,15 +25,26 @@ export function ready(page) {
 // Bildanfragen der Seite fertig sind. Jede echte Fehlanfrage bleibt in der Überwachung sichtbar.
 // Gleich nach newPage aufrufen: const bilderFertig = bildanfragen(page); … await bilderFertig(); await page.reload();
 export function bildanfragen(page, {timeout = 20000} = {}) {
+  return offeneAnfragen(page, request => request.resourceType() === 'image', 'Bilder laden', timeout);
+}
+
+// Wie bildanfragen, aber für alle Ladeanfragen außer Seitenaufrufen: auch Programmteile, Stile und Daten,
+// die die App erst beim Öffnen eines Bereichs nachlädt. Ein Neuladen direkt danach bricht sie ab
+// (net::ERR_ABORTED). So schlug die CI-Vollprüfung im November 2026 in `research` an.
+export function ladeanfragen(page, {timeout = 20000} = {}) {
+  return offeneAnfragen(page, request => !request.isNavigationRequest(), 'Anfragen laufen', timeout);
+}
+
+function offeneAnfragen(page, passt, was, timeout) {
   const offen = new Set();
   const fertig = request => offen.delete(request);
-  page.on('request', request => { if (request.resourceType() === 'image') offen.add(request); });
+  page.on('request', request => { if (passt(request)) offen.add(request); });
   page.on('requestfinished', fertig);
   page.on('requestfailed', fertig);
   return async () => {
     const ende = Date.now() + timeout;
     while (offen.size) {
-      if (Date.now() > ende) throw Error('Bilder laden noch vor dem gewollten Seitenwechsel: ' + [...offen].map(r => r.url()).join(', '));
+      if (Date.now() > ende) throw Error(was + ' noch vor dem gewollten Seitenwechsel: ' + [...offen].map(r => r.url()).join(', '));
       await page.waitForTimeout(50);
     }
   };
