@@ -7,7 +7,7 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 - **Schritt 0 „Großputz & Arbeitsweise“** ist seit 21.11.2026 in `test-live` (PR #96, `a0ec975`): schlanke Prüfkette, Browser-Runner, kurze Unterlagen, sechs Helfer, `/weiter` und `/pruefen`. Plan und Entscheidungen in `docs/entwurf/2026-11-21-schritt-0-*.md`. Der alte Stand liegt vollständig in Commit `b53f75f`.
 - **Katalog „WunderKompass 2027“** eingeordnet ([Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md)), Audit V2 nachgeprüft (18 von 19 behoben); in `test-live` (PR #97, `5cf70fa`).
 - **Feste Regeln seit 21.11.2026:** „Kein Bestandsschutz“ und „Wachsen lassen“ (CLAUDE.md). Der ID-Wächter wird mit dem ersten gestrichenen Inhalt auf „ausgemustert mit Ziel“ umgebaut (BACKLOG, Technik).
-- **Phase 1, Teilschritt 1 „Aussehen und Hülle“** ist gebaut (Branch `claude/sweet-ramanujan-gl9yhc`, siehe CHANGELOG). `pnpm run check` grün (314 Unit-Tests, 14 Browser-Suiten). Startdateien kleiner als vorher (JS 975 650 statt 985 613 Byte, CSS 344 563 statt 348 485).
+- **Phase 1, Teilschritt 1 „Aussehen und Hülle“** ist gebaut (Branch `claude/sweet-ramanujan-gl9yhc`, siehe CHANGELOG). Schlussprüfung (`code-pruefer`) eingearbeitet: Lesestelle auf dem iPhone, Wörter auf „Was ist neu?“, kein Springen beim Laden (Tempo-Prüfung). `pnpm run check` grün (314 Unit-Tests, 14 Browser-Suiten). Startdateien kleiner als vorher (JS 975 734 statt 985 613 Byte, CSS 344 657 statt 348 485). Große Prüfung (Chromium, 29 Suiten) läuft auf dem Endstand.
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
 
 ## Adressen
