@@ -1,3 +1,4 @@
+import {zaehleNavigationen} from './navigation-tempo.mjs';
 export const BROWSER_ERROR_FIELDS=['errors','consoleErrors','failedRequests','ownHttpErrors','externalRequests'];
 export const browserErrorArrays=()=>Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,[]]));
 export const browserErrorsComplete=proof=>BROWSER_ERROR_FIELDS.every(key=>Array.isArray(proof?.[key])&&proof[key].length===0);
@@ -17,7 +18,10 @@ export function monitorBrowserErrors(page,base,proof,{engine,expectedHTTP503,exp
  const expected=(url,status)=>expectedHTTP503&&url===expectedHTTP503.url&&status===503&&expectedHTTP503.active()===true;
  const recordExpected=(kind,url)=>{(proof.expectedSyntheticErrors??=[]).push({kind,url,status:503,phase:'source-failure',reason:expectedHTTP503.reason});};
  const own=url=>{try{return new URL(url).origin===origin;}catch{return false;}};
- page.on('console',message=>{if(message.type()!=='error')return;const url=message.location?.().url,text=message.text();if(url&&expected(url,503)&&/(?:status of 503|503 \(Service Unavailable\))/.test(text)){recordExpected('consoleErrors',url);return;}if(url===workerURL&&text==='Failed to load resource: '+refused&&expectedWorker()&&workerFailures.length){const paired=workerFailures.shift();recordWorker('consoleErrors',{url,message:text,pair:paired});return;}proof.consoleErrors.push(tag+text);});
+ // WebKit blockiert nach 200 schnellen Navigationen weitere und meldet das nur als Warnung (navigation-tempo.mjs).
+ // Als Fehler zählen, damit eine Suite die Ursache nennt statt in einem Zeitlimit zu enden.
+ zaehleNavigationen(page);
+ page.on('console',message=>{if(message.type()==='warning'&&/Excessive navigation attempts blocked/.test(message.text())){proof.consoleErrors.push(tag+message.text());return;}if(message.type()!=='error')return;const url=message.location?.().url,text=message.text();if(url&&expected(url,503)&&/(?:status of 503|503 \(Service Unavailable\))/.test(text)){recordExpected('consoleErrors',url);return;}if(url===workerURL&&text==='Failed to load resource: '+refused&&expectedWorker()&&workerFailures.length){const paired=workerFailures.shift();recordWorker('consoleErrors',{url,message:text,pair:paired});return;}proof.consoleErrors.push(tag+text);});
  page.on('requestfailed',request=>{const url=request.url(),error=request.failure()?.errorText;if(url===workerURL&&error===refused&&expectedWorker()&&request.resourceType?.()==='xhr'&&request.isNavigationRequest?.()===false){const pair=++workerSequence;workerFailures.push(pair);recordWorker('failedRequests',{url,error,pair,resourceType:'xhr',isNavigationRequest:false});return;}proof.failedRequests.push({url,error,...(engine?{engine}:{})});});
  page.on('pageerror',error=>proof.errors.push(tag+error.message));
  page.on('response',response=>{const url=response.url(),status=response.status();if(!own(url)||status<400)return;if(expected(url,status)){recordExpected('ownHttpErrors',url);return;}const parsed=new URL(url);proof.ownHttpErrors.push({path:parsed.pathname+parsed.search,status,...(engine?{engine}:{})});});
