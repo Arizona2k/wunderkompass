@@ -83,6 +83,8 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 - Was musst du entscheiden?
 - Was kommt als Nächstes?
 
+**Neuer Chat:** Am Ende jedes Teilschritts (nach dem Merge) und sobald ein Chat einmal automatisch zusammengefasst wurde, sagt Claude ausdrücklich, ob jetzt ein neuer Chat sinnvoll ist, und nennt die Startnachricht aus `STATUS.md`. Nie mitten in laufenden Prüfungen wechseln: Sie laufen im Container dieses Chats (Wunsch des Nutzers, 21.11.2026).
+
 **Commits:** `git -c user.name=Claude -c user.email=noreply@anthropic.com commit …`, deutsche Betreffzeile. Vor jedem Push `git diff --check` und Autor/Committer prüfen.
 
 ## Helfer (`.claude/agents/`)
