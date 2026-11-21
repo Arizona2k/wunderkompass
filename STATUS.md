@@ -25,9 +25,13 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 - Vorschlag: Standardbranch auf GitHub von `main` auf `test-live` umstellen (Einstellungen → Branches); dann starten neue Sitzungen gleich auf dem aktuellen Stand.
 - Optional: die zwei Archiv-Tags auf GitHub selbst anlegen (`archiv/vor-neuausrichtung-2026-11-21` → `b53f75f`, `archiv/pr95-geschichte-2026-11-21` → `7e00bd0`).
 
+## Vorübergehende Modell-Ausnahmen
+
+- **Bis 23.11.2026, 02:00 UTC (03:00 Uhr deutscher Zeit):** `fable` ist ausgeschöpft, große Abschlussprüfungen laufen bis dahin mit `opus`. Danach wieder `fable` nehmen und diesen Eintrag löschen. Weil die Schlussprüfung von Schritt 0 nur mit `opus` lief, prüft `fable` am Ende von Phase 1 die Strecke ab `b53f75f` mit.
+
 ## Bekannte Grenzen
 
-- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. Kurz vor dem PR erschienen `/weiter` und `/pruefen` in der Liste der Kurzbefehle. In der nächsten Sitzung zuerst prüfen, ob Helfer und Kurzbefehle per Name klappen.
+- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. Kurz vor dem PR erschienen Kurzbefehle und Helfer dann doch per Name in der Sitzung. In der nächsten Sitzung zuerst prüfen, ob beides gleich zu Beginn per Name klappt.
 - Lokal läuft nur Chromium. Firefox und WebKit prüft der CI-Job „Vollprüfung“.
 
 ## Archivierte Browser-Tests

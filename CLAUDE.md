@@ -72,6 +72,8 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 **Tests.** Ein Test bleibt, wenn er schützt: (a) Pass und Speicher, (b) IDs, Hash-Links und alte Links, (c) Inhaltsintegrität, die Kinder merken (IDs, Verweise, Bilder, Bildnachweise), (d) genutzte App-Logik. Tests auf Nachweise, Berichte, alte Bytes oder wörtliche Alttexte gibt es nicht mehr. Keine Prüfung abschwächen, überspringen oder blind wiederholen.
 
+**Im Chat immer Deutsch**, auch kurze Zwischenmeldungen und Beschreibungen von Befehlen (Wunsch des Nutzers, 21.11.2026).
+
 **Berichte an den Nutzer** immer in dieser Form, kurz und ohne Fachjargon:
 
 - Was ist fertig?
@@ -96,6 +98,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 
 - `fable` (stärkstes Modell) nur gezielt für große Abschlussprüfungen am Phasenende.
 - `haiku` für einfache Massenprüfungen, z. B. alle Karten auf kaputte Verweise.
+- **Vorübergehende Modell-Ausnahmen** (z. B. Kontingent eines Modells erschöpft) stehen mit Enddatum in `STATUS.md`. Ist das Datum vorbei: wieder das Modell aus dieser Liste nehmen, den Eintrag löschen, dem Nutzer kurz Bescheid sagen. `/weiter` prüft das bei jedem Einstieg.
 
 **Modell-Stand** (für den Vergleich in `/weiter`): 21.11.2026: Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5.
 

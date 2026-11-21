@@ -21,6 +21,7 @@ Führe diese Schritte der Reihe nach aus. Ändere dabei nichts außer dem Branch
 3. **Git-Stand:** `git status --short`, `git log --oneline -5`, `git fetch origin` und Abstand zu `origin/test-live`. Gibt es offene PRs nach `test-live` (GitHub-Werkzeuge)? Gibt es unfertige eigene Arbeit (nicht committete Dateien, ungepushte Commits)? Die kommt zuerst.
 4. **Werkzeuge:** Im Cloud-Container `export PATH=/opt/node24/bin:$PATH`, dann `node -v` (24) und `pnpm -v` (11.25.0). Nur wenn `node_modules` fehlt: `pnpm install --frozen-lockfile`.
 5. **Modell-Check:** Vergleiche die heute verfügbaren Claude-Modelle mit dem „Modell-Stand“ in `CLAUDE.md`. Gibt es ein neueres oder stärkeres Modell, schlage dem Nutzer kurz vor, ob ein Wechsel lohnt, und trage nach seiner Antwort den neuen Stand in `CLAUDE.md` ein.
+   - Lies in `STATUS.md` den Abschnitt „Vorübergehende Modell-Ausnahmen“. Ist ein Enddatum vorbei: wieder das Modell aus `CLAUDE.md` nehmen, den Eintrag löschen und es dem Nutzer im Bericht sagen. Läuft eine Ausnahme noch, die Helfer so lange mit dem Ersatzmodell beauftragen.
 6. **Bericht an den Nutzer** in der festen Form, kurz und ohne Fachjargon:
    - Was ist fertig?
    - Was kannst du dir ansehen?
