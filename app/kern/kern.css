@@ -328,6 +328,12 @@
   .kern-neuigkeiten li { gap: 12px; padding: 16px; }
 }
 
+/* ---------- Anpassung alter Bereiche ---------- */
+/* Die alten Zeichnungen sind Pixel für Pixel auf die bisherige Schrift abgestimmt.
+   Mit der breiteren Nunito ragten Zahlen aus dem Bild. Ihre Beschriftungen behalten
+   die alte Schrift, bis die Zeichnungen in ihrer Phase neu entstehen (BACKLOG). */
+svg text { font-family: "Trebuchet MS", Arial, sans-serif; }
+
 @media (forced-colors: active) {
   .kern-leiste a[aria-current="page"] { outline: 2px solid CanvasText; outline-offset: -2px; }
 }
