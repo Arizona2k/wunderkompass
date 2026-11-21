@@ -35,6 +35,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - **Befund der `bild-recherche` (Eisbär):** Nachweis korrekt (Commons „Polar_Bear.jpg“, gemeinfrei, USFWS), aber nur 700 px breit. Breiteres freies Foto suchen.
 - Tier-Spiele (Tierdetektiv, Lebensraum-Sortierer, Tier & Lebensraum, Wer frisst was?, Tierrekorde) mit echten Stufen und Fehlerbegründungen.
 - Fehlende Medien: Pilze, Bestäubung, Nahrungsnetze (WK-056).
+- Feld `related` aufräumen (ab hier Welt für Welt): 144 einseitige Einträge, viele Füller (Elefant und Honigbiene bei fast allen Tieren). Seit Phase 1 zeigt die Karte nur noch erklärte Verbindungen aus `world-connections.json`; `related` wird entweder zu erklärten Verbindungen ausgebaut oder ganz ersetzt (IDs bleiben).
 - Lebensraum-Daten vereinheitlichen: „Wiesen & Gärten“ / „Wiesen und Gärten“ und „Flüsse & Seen“ / „Flüsse und Seen“ stehen beide in den Daten; die Anzeige fasst sie schon zusammen (`app/world-selection-state.mjs`), die Daten nicht (Audit V2, E).
 
 ## Phase 3 – Weitere Welten (grob)
@@ -42,6 +43,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Welt für Welt nach dem Tierwelt-Muster: Natur, Erde, Weltall, Menschen, Erfindungen, Geschichte.
 - **PR #95 übernehmen:** acht Geschichtsthemen mit acht Vertiefungen, kindgerecht umgeschrieben nach `kinder-redaktion` und `fakten-pruefer`. Stand: Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`.
 - Alter Artikel „Papier aus China“ neu (WK-053).
+- Echte Bilder für die Karten ohne Bild in Bauwerke (9) und Wissenschaft (etwa 30); in Phase 1 haben sie Motivkacheln, Zeitreise und Erfindungen bekommen dort schon Bilder (Entwurf Phase 1, 6.10).
 - 16 Lernreisen mit 80 Kapiteln und 240 Aufgaben kindgerecht nacharbeiten: mehr Tun als Ankreuzen, Hinweise, erklärende Rückmeldung (WK-055, WK-048).
 - Planetenwerte vereinheitlichen: Neptun 30,05 AE (Orbitlabor) gegen 30,18 AE (Größenvergleich), ebenso Saturn und Uranus; eine Definition, Quelle und Erklärung (WK-056).
 - Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen. Verweise wie „Mit ‚Reflexion‘ weiterdenken“ nicht in zwei verschachtelten Klappen verstecken (Audit V2, A1). „Stationen erneut ansehen“, Notizen bearbeiten und die Zählung der Wiederholungen dabei einmal im Browser bedienen; bisher nur am Code geprüft (Audit V2, H1–H3).
@@ -94,6 +96,13 @@ Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer
 - Religionen der Welt (neutral und respektvoll).
 - Aktuelle Technik wie das Elektroauto (zeitlos erklärt, keine Nachrichten).
 - Mehr Erdkunde und Geschichte (auf vorhandenen 31 Geschichtsthemen und dem Globus aufbauen).
+
+**Weitere Themenwünsche des Nutzers (21.11.2026, nur Ideen; vor dem Einplanen durch `ideen-scout`, dann `kinder-redaktion` und `fakten-pruefer`, spätestens bei der Planung von Phase 3):**
+- Naturgewalten: Vulkane und Vulkanausbrüche, Erdbeben, Tsunamis, Tornados (erklären, wie sie entstehen und wie Menschen sich schützen; keine Angstbilder, keine Nachrichten über echte Opfer).
+- Geheimnisse der Tiefsee: unbekannte Lebewesen, Tiefseegräben, Unterwasserwelten (passt zur Idee „Tiefsee“ unten).
+- Mythen und Legenden: Drachen, griechische Sagen, Atlantis, geheimnisvolle Geschichten (immer klar als Sage gekennzeichnet; dazu, was man wirklich weiß und woher die Geschichte vielleicht kommt).
+- Erfindungen und Zukunft: fliegende Autos, Hologramme, Zeitreisen (zeitlos erklärt: was es schon gibt, was Forschende probieren, was nur Gedankenspiel ist).
+- Detektive und Rätsel: Geheimschriften, Codes knacken, Spurensuche (Fingerabdrücke und Ähnliches, ohne Gewalt), spannende Forschungsrätsel (passt zu „Detektiv- und Geheimschrift-Rätsel“ unten).
 
 **Aus dem alten Bestand:**
 - Welten als Themeninseln mit eigenem Motiv auf einer Übersichtskarte.
