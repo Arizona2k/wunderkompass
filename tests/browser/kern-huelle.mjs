@@ -70,16 +70,19 @@ async function grundlage(page, width) {
   assert.equal(info.fontSize, '18px', `grundlage ${width}: Fließtext`);
   assert.equal(info.background, 'rgb(250, 248, 243)', `grundlage ${width}: Seitenhintergrund`);
   assert.match(info.fontFamily, /^"?Nunito Variable"?/, `grundlage ${width}: Schriftliste`);
-  // Namen wie „Hōryū-ji“ bleiben in einer Schrift: Nunito bringt die erweiterten lateinischen Buchstaben mit.
-  await page.evaluate(() => { location.hash = 'world/topic/building-horyu-ji'; });
-  await page.locator('h1', {hasText: 'Hōryū-ji'}).first().waitFor();
+  // Namen wie „Białowieża“ oder „Chișinău“ bleiben in einer Schrift: Nunito bringt den erweiterten lateinischen Satz mit.
+  // („ō“ in „Hōryū-ji“ setzt schon der Grundsatz aus „o“ und Strich zusammen; „ł“, „ż“, „ș“ gehen nicht so.)
   const erweitert = await page.evaluate(async () => {
+    const probe = document.createElement('p');
+    probe.textContent = 'Wald von Białowieża, Chișinău';
+    document.querySelector('main')?.append(probe);
+    probe.getBoundingClientRect();
     await document.fonts.ready;
-    return [...document.fonts].some(face => face.family.replace(/["']/g, '') === 'Nunito Variable' && /U\+0*100\b/i.test(face.unicodeRange) && face.status === 'loaded');
+    const geladen = [...document.fonts].some(face => face.family.replace(/["']/g, '') === 'Nunito Variable' && /U\+0*100\b/i.test(face.unicodeRange) && face.status === 'loaded');
+    probe.remove();
+    return geladen;
   });
-  assert.ok(erweitert, `grundlage ${width}: „Hōryū-ji“ nutzt nicht die Nunito mit erweiterten Buchstaben`);
-  await page.evaluate(() => { location.hash = 'home'; });
-  await page.locator('.discovery-hero').waitFor();
+  assert.ok(erweitert, `grundlage ${width}: „Białowieża“ nutzt nicht die Nunito mit erweiterten Buchstaben`);
 }
 
 // Springt das Programm auf eine Überschrift, zeigt sie keinen Rahmen –
