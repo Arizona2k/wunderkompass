@@ -304,6 +304,12 @@ async function grosseSchrift320(ctx) {
     await leiste(page, 320, '320 große Schrift');
     await platzhalterPassen(page, '320 große Schrift');
     await suchfeldRahmen(page, '320 große Schrift');
+    // „Was ist neu?“ mit großer Schrift: der engste Fall für ganze Wörter.
+    await page.evaluate(() => { location.hash = 'updates'; });
+    await page.locator('#updates-title').waitFor();
+    await kurzeWoerterGanz(page, 'neuigkeiten 320 große Schrift');
+    await page.locator('details[data-history-disclosure="neuigkeiten-frueher"] > summary').click();
+    await kurzeWoerterGanz(page, 'neuigkeiten 320 große Schrift (Früher offen)');
     const gespeichert = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY);
     for (const [schluessel, wert] of Object.entries(pass.progress.settings)) {
       assert.deepEqual(gespeichert.settings[schluessel], wert, `grosseSchrift320: Einstellung „${schluessel}“ hat sich verändert`);
@@ -498,8 +504,9 @@ async function neuigkeiten(page, width) {
   await kurzeWoerterGanz(page, `neuigkeiten ${width} (Früher offen)`);
 }
 
-// Leseanfänger stolpern über getrennte kurze Wörter („ei-ner“). Kein Wort unter
-// 10 Buchstaben darf über zwei Zeilen laufen; gemessen an der Lage jedes Buchstabens.
+// Leseanfänger stolpern über getrennte Wörter („ei-ner“). Im Fließtext gibt es keine Silbentrennung,
+// ein Bruch hätte dort nicht einmal einen Bindestrich: kein Wort darf über zwei Zeilen laufen.
+// Überschriften trennen lange Wörter, aber keins unter 10 Buchstaben. Gemessen an jedem Buchstaben.
 async function kurzeWoerterGanz(page, wo) {
   const geteilt = await page.evaluate(() => {
     const funde = [];
@@ -508,7 +515,7 @@ async function kurzeWoerterGanz(page, wo) {
       const gang = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       for (let knoten = gang.nextNode(); knoten; knoten = gang.nextNode()) {
         for (const wort of knoten.textContent.matchAll(/\p{L}+/gu)) {
-          if (wort[0].length >= 10) continue;
+          if (el.tagName === 'H2' && wort[0].length >= 10) continue;
           const zeilen = new Set(), bereich = document.createRange();
           for (let i = 0; i < wort[0].length; i++) {
             bereich.setStart(knoten, wort.index + i);
@@ -522,7 +529,7 @@ async function kurzeWoerterGanz(page, wo) {
     }
     return funde;
   });
-  assert.deepEqual(geteilt, [], `${wo}: kurze Wörter über zwei Zeilen getrennt`);
+  assert.deepEqual(geteilt, [], `${wo}: Wörter über zwei Zeilen getrennt`);
 }
 
 async function axeOhneVerstoss(page, wo) {
