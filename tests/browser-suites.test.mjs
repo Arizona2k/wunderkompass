@@ -12,7 +12,7 @@ const SETS = ['smoke', 'ci', 'full'];
 const CI = [
   'offline-cold', 'no-news', 'backup', 'animal-game-saves', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
-  'pass-atlas', 'portable-flows', 'people-learning',
+  'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning',
 ];
 // Die große Prüfung: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
 const FULL = [

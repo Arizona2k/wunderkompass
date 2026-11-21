@@ -4,12 +4,10 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Wo wir stehen
 
-- **Schritt 0 „Großputz & Arbeitsweise“** ist fertig und seit 21.11.2026 in `test-live` (PR #96, Merge-Commit `a0ec975`). Die Testseite zeigt den neuen Stand (Build-Kennung `cd33868b5f4034b8`, Rauchtest gegen die Testseite grün). Die Kinderseite sieht unverändert aus. Plan: [docs/entwurf/2026-11-21-schritt-0-plan.md](docs/entwurf/2026-11-21-schritt-0-plan.md), alle Entscheidungen: [docs/entwurf/2026-11-21-schritt-0-entscheidungen.md](docs/entwurf/2026-11-21-schritt-0-entscheidungen.md).
-- Prüfungen, nur in Chromium: `pnpm run check` grün (350 Unit-Tests, 13 Browser-Suiten, 2 min 39 s). Große Prüfung: 28 von 28 Suiten grün (zwei im Nachlauf, weil das Werkzeug Läufe nach 2 Stunden abbricht). Der neue Build gleicht dem alten bis auf die Kennung (270 Dateien). Offline-Update vom alten Stand behält Pass und Favoriten. Repository: 1284 → 1021 Dateien, 73,9 → 42,2 MB.
-- Entfernt: Nachweis-, Bericht- und Release-Maschinerie, Vergleichsdateien, alte Datenbank- und Sites-Reste. Neu: schlanke Prüfkette (`pnpm run check`), Browser-Runner, kurze Unterlagen, sechs Helfer, Kurzbefehle `/weiter` und `/pruefen`.
-- Der alte Stand liegt vollständig in Commit `b53f75f` (Historie von `test-live`). Archiv-Tags auf GitHub braucht es nicht: Die Sitzung kann keine anlegen, und beide Stände sind über ihre Commits erreichbar.
-- **Alter Katalog „WunderKompass 2027“** ist eingeordnet: [docs/entwurf/2026-11-21-katalog-2027-einordnung.md](docs/entwurf/2026-11-21-katalog-2027-einordnung.md) (übernommen, angepasst, weggelassen, mit Gründen). Audit V2 ist am heutigen Code nachgeprüft: 18 von 19 Befunden behoben, der Rest steht im BACKLOG. Seit 21.11.2026 in `test-live` (PR #97, Merge-Commit `5cf70fa`).
-- **Neue feste Regel „Kein Bestandsschutz“** (CLAUDE.md): Was nicht gut ist, wird geändert oder gestrichen. Geschützt bleiben nur Pass-Fortschritt und alte Links. Der ID-Wächter wird zusammen mit dem ersten gestrichenen Inhalt auf „ausgemustert mit Ziel“ umgebaut (BACKLOG, Technik).
+- **Schritt 0 „Großputz & Arbeitsweise“** ist seit 21.11.2026 in `test-live` (PR #96, `a0ec975`): schlanke Prüfkette, Browser-Runner, kurze Unterlagen, sechs Helfer, `/weiter` und `/pruefen`. Plan und Entscheidungen in `docs/entwurf/2026-11-21-schritt-0-*.md`. Der alte Stand liegt vollständig in Commit `b53f75f`.
+- **Katalog „WunderKompass 2027“** eingeordnet ([Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md)), Audit V2 nachgeprüft (18 von 19 behoben); in `test-live` (PR #97, `5cf70fa`).
+- **Feste Regeln seit 21.11.2026:** „Kein Bestandsschutz“ und „Wachsen lassen“ (CLAUDE.md). Der ID-Wächter wird mit dem ersten gestrichenen Inhalt auf „ausgemustert mit Ziel“ umgebaut (BACKLOG, Technik).
+- **Phase 1, Teilschritt 1 „Aussehen und Hülle“** ist gebaut (Branch `claude/sweet-ramanujan-gl9yhc`, siehe CHANGELOG). Schlussprüfung (`code-pruefer`) eingearbeitet: Lesestelle auf dem iPhone, Wörter auf „Was ist neu?“, kein Springen beim Laden (Tempo-Prüfung). Erste Vollprüfung in drei Browsern (CI): Firefox-Testrennen und WebKit-Fehler der Buchleiste behoben; drei WebKit-Fehler gab es schon vorher (BACKLOG, vor der Freunde-Veröffentlichung). Playwright 1.65.1, alle drei Browser laufen im Container. `pnpm run check` grün (314 Unit-Tests, 14 Browser-Suiten). Startdateien kleiner als vorher (JS 975 734 statt 985 613 Byte, CSS 344 657 statt 348 485). Vollprüfung in drei Browsern auf dem Endstand läuft in der CI.
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
 
 ## Adressen
@@ -19,7 +17,13 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Nächster Schritt
 
-Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Themenwelt-Seite, neue Wissenskarte, zuerst für das Handy (Entwurf in `docs/entwurf/`, dann Freigabe).
+Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md)), sechs Teilschritte:
+
+1. **Aussehen und Hülle** – gebaut auf `claude/sweet-ramanujan-gl9yhc` ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-1.md)): Schrift Nunito, Farben, eine Leiste mit sechs Bereichen, ruhiger Kopf, neuer Fuß, „Was ist neu?“ für Kinder. Wartet auf „ok“ des Nutzers für den PR nach `test-live`.
+2. **Wissenskarte** – als Nächstes: Plan schreiben, dann bauen.
+3. Kniffliger spielen · 4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
+
+Rückmeldung eines 10-jährigen Kindes (zu viel Text, zu leicht) steckt in der Ergänzung; weitere Rückmeldungen fließen in den laufenden Teilschritt ein.
 
 ## Offene Fragen an den Nutzer
 
@@ -29,18 +33,13 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 
 - **Bis 23.11.2026, 02:00 UTC (03:00 Uhr deutscher Zeit):** `fable` ist ausgeschöpft, große Abschlussprüfungen laufen bis dahin mit `opus`. Danach wieder `fable` nehmen und diesen Eintrag löschen. Weil die Schlussprüfung von Schritt 0 nur mit `opus` lief, prüft `fable` am Ende von Phase 1 die Strecke ab `b53f75f` mit.
 
-## Bekannte Grenzen
-
-- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. Kurz vor dem PR erschienen Kurzbefehle und Helfer dann doch per Name in der Sitzung. In der nächsten Sitzung zuerst prüfen, ob beides gleich zu Beginn per Name klappt.
-- Lokal läuft nur Chromium. Firefox und WebKit prüft der CI-Job „Vollprüfung“.
-
 ## Archivierte Browser-Tests
 
-Diese Dateien liefen schon vorher nirgends mehr und liegen nur im alten Stand (`git show b53f75f:tests/browser/<name>.mjs`): `audio`, `globe`, `legacy-games`, `responsive`, `usability`, `world-games` (heutige Suiten decken die Abläufe ab: Globus, Spiele, Breiten in `core`, `animals`, `playground`) und `critical` (der einzige fehlende Fall „beschädigter Speicherstand“ steht im BACKLOG). Ebenfalls tot und gelöscht: `content`, `journeys-labs`, `models-existing`, `new-models`, `offline`, `routes`, `search-links`. Aus dem großen Prüflauf kam kein weiterer Test ins Archiv.
+Liefen schon vor Schritt 0 nirgends mehr und liegen nur im alten Stand (`git show b53f75f:tests/browser/<name>.mjs`): `audio`, `globe`, `legacy-games`, `responsive`, `usability`, `world-games`, `critical` (der Fall „beschädigter Speicherstand“ steht im BACKLOG). Gelöscht: `content`, `journeys-labs`, `models-existing`, `new-models`, `offline`, `routes`, `search-links`.
 
 ## Neuer Chat: Startnachricht
 
-Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
+Neue Chats in der Cloud-Umgebung **„wunderkompass“** starten (beim Start des Chats auswählen). Ihr Start-Skript holt Pakete und die passenden Browser; angelegt am 21.11.2026, in einem frischen Chat noch nicht erprobt. Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
 
 ```text
 Wir arbeiten weiter an WunderKompass (Repository Arizona2k/wunderkompass).

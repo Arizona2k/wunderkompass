@@ -3,11 +3,12 @@ import fs from 'node:fs/promises';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import legacy from '../fixtures/legacy-habitat-three-actual-questions.json' with {type:'json'};
+import {bereich} from './harness.mjs';
 
 const game='world:habitats',pool=worldGameBank('habitats');
 const ids=['animal-walrus','animal-orca','animal-blue-whale','animal-koala','animal-lion'];
 const state=p=>p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);
-async function open(p){await p.getByRole('tab',{name:'Spielplatz',exact:true}).click();await p.locator('[data-game-key="'+game+'"]').click();await p.locator('.world-game-room').waitFor();}
+async function open(p){await bereich(p,'games').click();await p.locator('[data-game-key="'+game+'"]').click();await p.locator('.world-game-room').waitFor();}
 async function importPass(p,file){await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.locator('input[type=file]').setInputFiles(file);await p.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await p.locator('.passport-dialog').waitFor({state:'hidden'});await open(p);}
 function unchanged(progress,pass){
  for(const key of ['notes','favorites'])assert.deepEqual(progress[key],pass.progress[key]);

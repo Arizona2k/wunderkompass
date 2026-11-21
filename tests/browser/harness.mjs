@@ -5,6 +5,7 @@ import net from 'node:net';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {browserErrorArrays} from '../../scripts/browser-errors.mjs';
+import {BEREICHE} from '../../app/kern/bereiche.ts';
 
 export const PROJECT = fileURLToPath(new URL('../..', import.meta.url));
 
@@ -16,6 +17,31 @@ export function newReport() {
 // Die Seite ist bedienbar, sobald der Entdeckerpass-Knopf aktiv ist.
 export function ready(page) {
   return page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor({timeout: 26000});
+}
+
+// Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.
+// Gibt den Playwright-Locator auf den Link in der Bereichsleiste zurück.
+export function bereich(page, id) {
+  const eintrag = BEREICHE.find(b => b.id === id);
+  if (!eintrag) throw Error('Unbekannter Bereich: ' + id);
+  return page.getByRole('navigation', {name: 'Bereiche', exact: true}).getByRole('link', {name: eintrag.wort, exact: true});
+}
+
+// Öffnet die Hilfe so, wie ein Kind sie findet. Der Kopf hat keinen Hilfe-Knopf mehr (Entwurf Phase 1):
+// Am Handy steht „So geht’s“ auf der Startseite, sonst führt der Fuß hin („Für Eltern“, dann
+// „So funktioniert die Lernwelt“). Gibt den Knopf zurück, der nach dem Schließen den Fokus bekommt.
+export async function hilfeOeffnen(page) {
+  const kurz = page.getByRole('button', {name: 'So geht’s', exact: true});
+  if (await kurz.isVisible()) {
+    await kurz.focus();
+    await page.keyboard.press('Enter');
+    return kurz;
+  }
+  const eltern = page.getByRole('contentinfo').getByRole('button', {name: 'Für Eltern', exact: true});
+  await eltern.focus();
+  await page.keyboard.press('Enter');
+  await page.locator('.parent-guide').getByRole('button', {name: 'So funktioniert die Lernwelt', exact: true}).click();
+  return eltern;
 }
 
 // Startet `vite preview` für einen gebauten Stand auf einem freien Port.

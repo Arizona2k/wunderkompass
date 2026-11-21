@@ -9,10 +9,11 @@ import {connectedDiscoveries} from './connected-discoveries.mjs';
 import {discoveryCentral} from './discovery-central.mjs';
 import {passDesign} from './pass-atlas.mjs';
 import {memoryRound, searchAndHistory} from './portable-flows.mjs';
+import {bereich} from './harness.mjs';
 
 const VIEWS = [[1440, 900], [768, 1024], [390, 844], [360, 800]];
 const TOPICS = ['animal-polar-bear', 'history-maya', 'person-grace_hopper', 'invention-car', 'building-taj-mahal', 'science-energy'];
-const HUBS = [['Lernreisen', '.journey-tile'], ['Spielplatz', '.game-tile'], ['Forscherlabor', '.research-grid'], ['Wissensbuch', '.word-card']];
+const HUBS = [['journeys', '.journey-tile'], ['games', '.game-tile'], ['labs', '.research-grid'], ['book', '.word-card']];
 const SAVE_KEY = 'erde-entdecken:save:v3';
 
 export async function core({browser, base, ready, monitor, report, shots}) {
@@ -57,8 +58,8 @@ export async function core({browser, base, ready, monitor, report, shots}) {
         await ready(p);
         assert.ok(await p.evaluate(key => JSON.parse(localStorage.getItem(key)).progress.favorites.includes('topic:animal-polar-bear'), SAVE_KEY));
         report.checks.push('Favorite survives reload');
-        for (const [name, selector] of HUBS) {
-          await p.getByRole('tab', {name, exact: true}).click();
+        for (const [id, selector] of HUBS) {
+          await bereich(p, id).click();
           await p.locator(selector).first().waitFor();
         }
         report.checks.push('Four original learning hubs open');

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {bereich} from './harness.mjs';
 
 export async function searchAndHistory(page, report) {
   for (const [query, id] of [
@@ -70,7 +71,7 @@ export async function geographyFacts(page, report) {
 }
 
 export async function memoryRound(page, ready, report) {
-  await page.getByRole('tab', { name: 'Spielplatz', exact: true }).click();
+  await bereich(page,'games').click();
   await page.locator('.game-tile').filter({
     has: page.getByRole('heading', { name: 'Länder-Memory', exact: true }),
   }).click();

@@ -7,7 +7,7 @@ import path from 'node:path';
 import DATA from '../../app/journey-inquiries.json' with {type: 'json'};
 import {JOURNEYS} from '../../app/learning-data.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {historyEngineView} from './discovery-central.mjs';
+import {neuigkeitenAnsicht} from './discovery-central.mjs';
 import {journeySupportView} from './journeys.mjs';
 
 const WIDTHS = [320, 390, 768, 1440];
@@ -63,7 +63,7 @@ export async function engineJourneys({browser, base, ready, monitor, report, sho
     report.historyViews = [];
     for (const width of WIDTHS) {
       await p.setViewportSize({width, height: 900});
-      report.historyViews.push(await historyEngineView(p, width, shots, {engine}));
+      report.historyViews.push(await neuigkeitenAnsicht(p, width, shots, {engine}));
     }
   } finally {
     await context.close();

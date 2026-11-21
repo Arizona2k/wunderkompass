@@ -1,12 +1,13 @@
-import {AXE_FILE} from './axe-loader.mjs';
+import {AXE_FILE,prepareAxe} from './axe-loader.mjs';
 import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {publicUpdates,PREPARED_UPDATES,updateLabel,formatHistoryDay} from '../../app/update-history.ts';
+import {NEUIGKEITEN} from '../../app/kern/neuigkeiten.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
+import {bereich} from './harness.mjs';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
 
@@ -71,9 +72,9 @@ export async function discoveryVisitCases(browser,base,ready,monitor,report,shot
    const entry=index.find(t=>t.id===manual.heroId),photo=photos[entry.image];await page.locator('.discovery-feature>a').getByText(entry.homeQuestion,{exact:true}).waitFor();assert.equal(await page.locator('.discovery-feature>a').getAttribute('href'),'#world/topic/'+entry.id);const motif=page.locator('.discovery-hero-art img[src]');await motif.waitFor();await motif.evaluate(im=>im.decode());assert.equal(await motif.getAttribute('src'),photo.src);assert.equal(await motif.getAttribute('alt'),photo.alt_de);
    const credit=page.locator('.discovery-hero-art .photo-disclosure');await credit.locator('summary').click();await credit.getByRole('link',{name:photo.license,exact:true}).waitFor();assert.equal(await credit.getByRole('link',{name:'Original und Rechte',exact:true}).getAttribute('href'),photo.source_page_url);
    await page.locator('.discovery-feature>a').focus();await page.keyboard.press('Enter');await page.getByRole('heading',{name:entry.title,exact:true}).waitFor();await page.goBack();await page.locator('.discovery-hero').waitFor();assert.deepEqual(await selection(),manual);await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===(id==='animal-honey-bee'?'home-bee':'home-motif-'+id),entry.id);assert.equal(await credit.locator('details').getAttribute('open')!==null,true,'Back restores the actual motif attribution disclosure');
-   await setHomeTime(page,'2026-10-27T00:44:59.999Z');await page.getByRole('tab',{name:'Entdecken',exact:true}).click();assert.deepEqual(await selection(),manual,'less than30 idle minutes keeps selection');
+   await setHomeTime(page,'2026-10-27T00:44:59.999Z');await bereich(page,'explore').click();assert.deepEqual(await selection(),manual,'less than30 idle minutes keeps selection');
    await setHomeTime(page,'2026-10-27T01:14:59.999Z');await page.keyboard.press('Shift');assert.deepEqual(await selection(),manual,'idle reading and renewed input do not rotate');await page.reload();await ready(page);assert.deepEqual(await selection(),manual,'idle reload restores selection and pending visit');
-   await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]').dataset.discoveryHero!==id,manual.heroId);const next=await selection();assert.notEqual(next.trailId,manual.trailId);assert.deepEqual(await daily(),day);
+   await bereich(page,'explore').click();await page.waitForFunction(id=>document.querySelector('[data-discovery-hero]').dataset.discoveryHero!==id,manual.heroId);const next=await selection();assert.notEqual(next.trailId,manual.trailId);assert.deepEqual(await daily(),day);
    const reopened=await context.newPage();monitor(reopened);await homeTime(reopened,'2026-10-27T01:15:00Z');await reopened.goto(base);await ready(reopened);assert.notEqual(await reopened.locator('[data-discovery-hero]').getAttribute('data-discovery-hero'),next.heroId,'new opening avoids the previous suitable motif');assert.notEqual(await reopened.locator('[data-discovery-trail-current]').getAttribute('data-discovery-trail-current'),next.trailId);await reopened.close();
    const tomorrow=timezoneId==='Europe/Berlin'?'2026-10-27T23:00:00Z':'2026-10-27T07:00:00Z';await setHomeTime(page,tomorrow);await page.keyboard.press('Shift');await page.waitForFunction(day=>document.querySelector('[data-discovery-day]').dataset.discoveryDay!==day,day.day);const changedDay=await daily();assert.equal(changedDay.day,timezoneId==='Europe/Berlin'?'2026-10-28':'2026-10-27');assert.notEqual(changedDay.target,day.target);assert.deepEqual(await selection(),next,'local date change does not rotate the reading motif');
    await page.screenshot({path:shots+'/home-visit-'+timezoneId.replace('/','-')+'.png',fullPage:true,animations:'disabled'});
@@ -214,7 +215,7 @@ export async function rapidHashReturn(page,report,width){
    if(!button)throw Error('Actual navigation control missing');button.click();location.hash='home';
   },trigger);
   await page.waitForFunction(()=>location.hash==='#home'&&document.querySelector('.earth-app')?.dataset.mode==='home'&&!!document.querySelector('.discovery-hero')?.getClientRects().length,undefined,{timeout:20000});
-  assert.equal(await page.getByRole('tab',{name:'Entdecken',exact:true}).getAttribute('aria-selected'),'true');
+  assert.deepEqual((await page.getByRole('navigation',{name:'Bereiche',exact:true}).locator('[aria-current=page]').allTextContents()).map(t=>t.trim()),['Start']);
   const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
   for(const key of ['gameSessions','notes','favorites','games','journeys','labs','review','settings'])assert.deepEqual(after[key],before[key],'rapid return preserves '+key);
   report.rapidHashReturns.push({width,trigger,controlledSameTurnInput:true,hashAndVisibleAreaAgree:true,storedProgressPreserved:true});
@@ -227,8 +228,8 @@ export async function offlineDiscoveryCentral(page,report){
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(/Gezeiten können Strömungen antreiben/).waitFor();
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
- await page.evaluate(()=>location.hash='updates');await page.locator('.updates-timeline').first().waitFor();assert.equal(await page.locator('.updates-timeline>li').count(),publicUpdates().length);await page.getByRole('link',{name:'Zur Startseite',exact:true}).click();await page.locator('.discovery-hero').waitFor();
- await page.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal(await page.locator('.mode-tabs [data-state=active]').innerText(),'Wissenswelten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await page.getByRole('tab',{name:'Entdecken',exact:true}).click();await page.locator('.discovery-hero').waitFor();
+ await page.evaluate(()=>location.hash='updates');await page.locator('.kern-neuigkeiten').waitFor();assert.equal(await page.locator('.kern-neuigkeiten li[data-neuigkeit]').count(),NEUIGKEITEN.length,'offline: alle Neuigkeiten da');await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
+ await bereich(page,'world').click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal((await page.locator('nav[aria-label="Bereiche"] [aria-current=page]').innerText()).trim(),'Welten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
  await openTrailPicker(page);const previousTrail=await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).inputValue();await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption('person-mae_jemison--history-iss');await page.locator('[data-route-focus="home-topic-history-iss"]').waitFor();for(const image of await page.locator('.discovery-pair img[src]').all())await image.evaluate(im=>im.decode());await discoveryPairMedia(page);report.checks.push('Actual cold offline Mae Jemison and ISS pair: cached portrait and real orbital-laboratory diagram remain complete');await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(previousTrail);
  report.checks.push('Cold offline discovery: all gateway photos decode, knowledge trail switches, challenge opens, local history, six-world main navigation/category and home work');
 }
@@ -236,7 +237,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-hero button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-concept li,.discovery-concept figcaption,.discovery-context-photo figcaption,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-hero button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-concept li,.discovery-concept figcaption,.discovery-context-photo figcaption,.discovery-pair button,.continue-card,.kern-neuigkeiten h1,.kern-neuigkeiten-einleitung,.kern-neuigkeiten li h2,.kern-neuigkeiten li p,.kern-neuigkeiten time,.kern-neuigkeiten summary').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -250,74 +251,47 @@ export async function homeTextGeometry(page){
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home/history horizontal overflow');
 }
 export async function homeTouchTargets(page){
- for(const control of await page.locator('.discovery-hero-copy button,.discovery-hero button,.discovery-feature>a,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.mode-tabs button,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.discovery-activities summary,.discovery-activities a,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.update-history a,.update-history summary').all()){
+ for(const control of await page.locator('.discovery-hero-copy button,.discovery-hero button,.discovery-feature>a,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.discovery-activities summary,.discovery-activities a,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.kern-neuigkeiten summary').all()){
   if(!await control.isVisible())continue;
   assert.equal(await control.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44}),true,'home/history touch target at least 44px: '+await control.innerText());
  }
 }
-async function homeContrast(control){
+export async function homeContrast(control){
  const colors=await control.evaluate(el=>{let bg=el;while(bg.parentElement&&['transparent','rgba(0, 0, 0, 0)'].includes(getComputedStyle(bg).backgroundColor))bg=bg.parentElement;return [getComputedStyle(el).color,getComputedStyle(bg).backgroundColor];});
  const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{const v=n/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]};
  const [a,b]=colors.map(luminance);assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,'homepage primary normal/hover text contrast');
 }
-export function assertCompactAreaGeometry(data){
- assert.equal(data.labels.length,6,'six existing main areas');
- if(data.width<=1200){
-  assert.ok(data.height<=88,'compact one-row area switch, not three repeated rows: '+JSON.stringify(data));
-  assert.equal(new Set(data.tabTops.map(top=>Math.round(top))).size,1,'main areas share one horizontal row');
-  assert.ok(data.fontSizes.every(size=>size>=16),'compact navigation retains readable type');
-  assert.equal(data.arrows.length,2,'both visible scroll directions');
-  assert.ok(data.arrows.every(box=>box.width>=44&&box.height>=44),'44px scroll controls');
- }
-}
-export async function compactAreaNavigation(page,report,{interact=false}={}){
- const data=await page.evaluate(()=>{
-  const list=document.querySelector('.mode-tabs');if(!list)throw Error('Existing area navigation missing');
-  const tabs=[...list.querySelectorAll('[role=tab]')];
-  return{width:innerWidth,height:list.getBoundingClientRect().height,labels:tabs.map(el=>el.textContent),tabTops:tabs.map(el=>el.getBoundingClientRect().top),fontSizes:tabs.map(el=>parseFloat(getComputedStyle(el).fontSize)),arrows:[...document.querySelectorAll('.learning-navigation .area-scroll')].filter(el=>el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{width:r.width,height:r.height};})};
- });assertCompactAreaGeometry(data);
- if(interact&&data.width<=1200){
-  const list=page.locator('.mode-tabs'),before=await page.evaluate(()=>({hash:location.hash,y:scrollY,left:document.querySelector('.mode-tabs').scrollLeft}));
-  await page.getByRole('button',{name:'Weitere Lernbereiche anzeigen',exact:true}).click();
-  await page.waitForFunction(left=>document.querySelector('.mode-tabs').scrollLeft>left,before.left);
-  assert.equal(new URL(page.url()).hash,before.hash,'scrolling area choices does not navigate');
-  assert.ok(Math.abs(await page.evaluate(()=>scrollY)-before.y)<=1,'area scroll does not move the document');
-  await list.getByRole('tab',{name:'Entdecken',exact:true}).focus();
-  assert.ok(await list.evaluate(el=>el.scrollLeft)<=1,'keyboard focus reveals the complete first choice');
- }
- (report.compactAreaNavigation??=[]).push(data);return data;
-}
 // Main navigation uses the existing production page and pass; no second runner.
 export async function mainNavigation(page,ready,report,width,shots){
- await compactAreaNavigation(page,report,{interact:true});
- const nav=page.locator('.mode-tabs');
- const selected=async name=>{await page.waitForFunction(name=>document.querySelector('.mode-tabs [data-state=active]')?.textContent===name,name);assert.equal(await nav.locator('[data-state=active]').count(),1);};
- const inspect=async()=>{await homeTextGeometry(page);for(const tab of await nav.getByRole('tab').all()){assert.equal(await tab.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44&&parseFloat(getComputedStyle(el).fontSize)>=14}),true,'readable 44px navigation: '+await tab.innerText());}};
- assert.deepEqual(await nav.getByRole('tab').allTextContents(),['Entdecken','Wissenswelten','Spielplatz','Forscherlabor','Lernreisen','Wissensbuch']);
- const enter=async(name,hash,selector)=>{const tab=nav.getByRole('tab',{name,exact:true});if(width<=390)await tab.tap();else await tab.click();try{await page.waitForFunction(hash=>location.hash==='#'+hash,hash);}catch(error){report.navigationDestinationFailure={name,expectedHash:'#'+hash,...await page.evaluate(()=>({actualHash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,activeTabs:[...document.querySelectorAll('.mode-tabs [data-state=active]')].map(e=>e.textContent)}))};await page.screenshot({path:shots+'/navigation-destination-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}if(hash==='globe')await page.locator('#globe-observatory').scrollIntoViewIfNeeded();await page.locator(selector).first().waitFor();await selected(name);await inspect();};
- const world=nav.getByRole('tab',{name:'Wissenswelten',exact:true});
- await nav.getByRole('tab',{name:'Entdecken',exact:true}).focus();await page.keyboard.press('ArrowRight');await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-world');assert.equal(await world.evaluate(el=>el===document.activeElement),true,'arrow keys reach new world tab');assert.equal(new URL(page.url()).hash,'','arrow focus alone does not change the first view');
- await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Wissenswelten');assert.equal(new URL(page.url()).hash,'#world','actual existing world hub, not home scroll');await inspect();
- await page.screenshot({path:shots+'/navigation-worlds-'+width+'.png',animations:'disabled'});await page.locator('.world-trips .section-heading').screenshot({path:shots+'/navigation-knowledge-routes-'+width+'.png',animations:'disabled'});await nav.screenshot({path:shots+'/navigation-six-'+width+'.png',animations:'disabled'});for(const tab of await nav.getByRole('tab').all())await homeContrast(tab);await world.hover();await homeContrast(world);await page.mouse.move(0,0);
- await page.goBack();await page.locator('.discovery-hero').waitFor();await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-world');assert.equal(await world.evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'Back restores visible keyboard world opener');await nav.screenshot({path:shots+'/navigation-keyboard-'+width+'.png',animations:'disabled'});if(width===320||width===1440){await page.emulateMedia({forcedColors:'active'});assert.equal(await world.evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'system-color keyboard focus');await homeContrast(nav.locator('[data-state=active]'));await nav.screenshot({path:shots+'/navigation-system-colors-'+width+'.png',animations:'disabled'});await page.emulateMedia({forcedColors:'none'});}await page.goForward();await page.locator('.world-view').waitFor();await selected('Wissenswelten');
- for(const [name,hash,selector] of [['Spielplatz','games','.game-tile'],['Forscherlabor','labs','.research-tile'],['Lernreisen','journeys','.journey-tile'],['Wissensbuch','book','.word-card'],['Entdecken','home','.discovery-hero'],['Wissenswelten','world','.world-view']])await enter(name,hash,selector);
- for(const [hash,name] of [['layers','Entdecken'],['day','Entdecken'],['quiz','Spielplatz']]){await page.evaluate(hash=>location.hash=hash,hash);await selected(name);await inspect();}await enter('Wissenswelten','world','.world-view');
- const category=page.locator('.world-view .world-choice').first();const categoryName=await category.getAttribute('aria-label');await category.click();await page.getByRole('heading',{name:categoryName,exact:true}).waitFor();await selected('Wissenswelten');
- const topic=page.locator('.world-topic-tile').first();const topicName=await topic.getAttribute('aria-label'),topicFocus=await topic.getAttribute('data-route-focus');await topic.click();await page.locator('#world-topic-title').waitFor();await selected('Wissenswelten');await page.goBack();await page.getByRole('heading',{name:categoryName,exact:true}).waitFor();
+ const nav=page.getByRole('navigation',{name:'Bereiche',exact:true}),link=name=>nav.getByRole('link',{name,exact:true});
+ // Nach einem Suchtreffer steht die neue Seite schon da, während der Suchdialog noch zugeht und die Leiste kurz aria-hidden ist: warten, bis sie wieder erreichbar ist.
+ const selected=async name=>{await page.waitForFunction(name=>{const leiste=document.querySelector('nav[aria-label="Bereiche"]'),aktiv=leiste?.querySelectorAll('[aria-current=page]')??[];return aktiv.length===1&&aktiv[0].textContent.trim()===name&&!leiste.closest('[aria-hidden=true],[inert]');},name);assert.equal(await nav.locator('[aria-current=page]').count(),1);};
+ const inspect=async()=>{await homeTextGeometry(page);for(const tab of await nav.getByRole('link').all()){assert.equal(await tab.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44&&parseFloat(getComputedStyle(el).fontSize)>=14}),true,'readable 44px navigation: '+await tab.innerText());}};
+ assert.deepEqual((await nav.getByRole('link').allTextContents()).map(t=>t.trim()),['Start','Welten','Spielen','Labor','Reisen','Buch']);
+ const enter=async(name,hash,selector)=>{const tab=link(name);if(width<=390)await tab.tap();else await tab.click();try{await page.waitForFunction(hash=>location.hash==='#'+hash,hash);}catch(error){report.navigationDestinationFailure={name,expectedHash:'#'+hash,...await page.evaluate(()=>({actualHash:location.hash,mode:document.querySelector('.earth-app')?.dataset.mode,activeTabs:[...document.querySelectorAll('nav[aria-label="Bereiche"] [aria-current=page]')].map(e=>e.textContent)}))};await page.screenshot({path:shots+'/navigation-destination-failure-'+width+'.png',fullPage:true}).catch(()=>{});throw error;}if(hash==='globe')await page.locator('#globe-observatory').scrollIntoViewIfNeeded();await page.locator(selector).first().waitFor();await selected(name);await inspect();};
+ const world=link('Welten');
+ await link('Start').focus();await page.keyboard.press('Tab');await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-world');assert.equal(await world.evaluate(el=>el===document.activeElement),true,'Tab reaches the Welten link');assert.equal(new URL(page.url()).hash,'','focus alone does not change the first view');
+ await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Welten');assert.equal(new URL(page.url()).hash,'#world','actual existing world hub, not home scroll');await inspect();
+ await page.screenshot({path:shots+'/navigation-worlds-'+width+'.png',animations:'disabled'});await page.locator('.world-trips .section-heading').screenshot({path:shots+'/navigation-knowledge-routes-'+width+'.png',animations:'disabled'});await nav.screenshot({path:shots+'/navigation-six-'+width+'.png',animations:'disabled'});for(const tab of await nav.getByRole('link').all())await homeContrast(tab);await world.hover();await homeContrast(world);await page.mouse.move(0,0);
+ await page.goBack();await page.locator('.discovery-hero').waitFor();await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-world');assert.equal(await world.evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'Back restores visible keyboard world opener');await nav.screenshot({path:shots+'/navigation-keyboard-'+width+'.png',animations:'disabled'});if(width===320||width===1440){await page.emulateMedia({forcedColors:'active'});assert.equal(await world.evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'system-color keyboard focus');await homeContrast(nav.locator('[aria-current=page]'));await nav.screenshot({path:shots+'/navigation-system-colors-'+width+'.png',animations:'disabled'});await page.emulateMedia({forcedColors:'none'});}await page.goForward();await page.locator('.world-view').waitFor();await selected('Welten');
+ for(const [name,hash,selector] of [['Spielen','games','.game-tile'],['Labor','labs','.research-tile'],['Reisen','journeys','.journey-tile'],['Buch','book','.word-card'],['Start','home','.discovery-hero'],['Welten','world','.world-view']])await enter(name,hash,selector);
+ for(const [hash,name] of [['layers','Start'],['day','Start'],['quiz','Spielen']]){await page.evaluate(hash=>location.hash=hash,hash);await selected(name);await inspect();}await enter('Welten','world','.world-view');
+ const category=page.locator('.world-view .world-choice').first();const categoryName=await category.getAttribute('aria-label');await category.click();await page.getByRole('heading',{name:categoryName,exact:true}).waitFor();await selected('Welten');
+ const topic=page.locator('.world-topic-tile').first();const topicName=await topic.getAttribute('aria-label'),topicFocus=await topic.getAttribute('data-route-focus');await topic.click();await page.locator('#world-topic-title').waitFor();await selected('Welten');await page.goBack();await page.getByRole('heading',{name:categoryName,exact:true}).waitFor();
  await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,topicFocus);assert.equal(await page.getByRole('button',{name:topicName,exact:true}).evaluate(el=>el===document.activeElement),true,'category Back restores the actual card opener');
  await page.goBack();await page.locator('.world-view .world-choice').first().waitFor();await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='world-category-animals');assert.equal(await page.locator('.world-view .world-choice').first().evaluate(el=>el===document.activeElement),true,'world hub Back restores category opener');
- await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await page.locator('.world-mini-question').waitFor();await selected('Wissenswelten');await page.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:science-moon-phases'));
+ await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await page.locator('.world-mini-question').waitFor();await selected('Welten');await page.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:science-moon-phases'));
  const connected=page.locator('.connection-card .knowledge-link').first(),connectionFocus=await connected.getAttribute('data-route-focus');await connected.click();await page.locator('.world-mini-question').waitFor();await page.goBack();await page.waitForFunction(()=>location.hash==='#world/topic/science-moon-phases');await page.locator('.world-mini-question').waitFor();
  await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,connectionFocus);assert.equal(await page.locator('.connection-card .knowledge-link').first().evaluate(el=>el===document.activeElement),true,'article Back restores its knowledge link');
- const routeFocus=await page.locator('.article-routes .knowledge-link').first().getAttribute('data-route-focus');await page.locator('.article-routes .knowledge-link').first().click();await page.locator('.world-route-stations').waitFor();await selected('Wissenswelten');const station=await page.locator('.world-route-stations [aria-current=step]').innerText(),routeHash=new URL(page.url()).hash;const stationLink=page.locator('.embedded .connection-card .knowledge-link').first(),stationFocus=await stationLink.getAttribute('data-route-focus');await stationLink.click();await page.waitForFunction(()=>location.hash.startsWith('#world/topic/'));await page.locator('.world-mini-question').waitFor();await page.goBack();await page.waitForFunction(hash=>location.hash===hash,routeHash);await page.locator('.world-route-stations').waitFor();await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,stationFocus);assert.equal(await page.locator('.world-route-stations [aria-current=step]').innerText(),station,'station is retained when returning from linked knowledge');await page.goBack();await page.locator('.world-mini-question').waitFor();await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,routeFocus);assert.equal(await page.locator('.article-routes .knowledge-link').first().evaluate(el=>el===document.activeElement),true,'route Back restores its article link');
+ const routeFocus=await page.locator('.article-routes .knowledge-link').first().getAttribute('data-route-focus');await page.locator('.article-routes .knowledge-link').first().click();await page.locator('.world-route-stations').waitFor();await selected('Welten');const station=await page.locator('.world-route-stations [aria-current=step]').innerText(),routeHash=new URL(page.url()).hash;const stationLink=page.locator('.embedded .connection-card .knowledge-link').first(),stationFocus=await stationLink.getAttribute('data-route-focus');await stationLink.click();await page.waitForFunction(()=>location.hash.startsWith('#world/topic/'));await page.locator('.world-mini-question').waitFor();await page.goBack();await page.waitForFunction(hash=>location.hash===hash,routeHash);await page.locator('.world-route-stations').waitFor();await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,stationFocus);assert.equal(await page.locator('.world-route-stations [aria-current=step]').innerText(),station,'station is retained when returning from linked knowledge');await page.goBack();await page.locator('.world-mini-question').waitFor();await page.waitForFunction(id=>document.activeElement?.dataset.routeFocus===id,routeFocus);assert.equal(await page.locator('.article-routes .knowledge-link').first().evaluate(el=>el===document.activeElement),true,'route Back restores its article link');
  const save=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
- await page.reload();await ready(page);await page.locator('.world-mini-question').waitFor();await selected('Wissenswelten');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites),save.favorites);assert.equal(await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).getAttribute('aria-pressed'),'true','actual favorite UI survives navigation and reload');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.notes),save.notes);
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenswelten');await page.locator('[role=option][data-value="area:world"]').click();await page.locator('.world-view .world-choice').first().waitFor();await selected('Wissenswelten');assert.equal(new URL(page.url()).hash,'#world');
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenschaft');await page.locator('[role=option][data-value="world:science"]').click();await page.getByRole('heading',{name:'Wissenschaft & Weltall',exact:true}).waitFor();await selected('Wissenswelten');
- await enter('Entdecken','home','.discovery-hero');
- await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await inspect();await nav.screenshot({path:shots+'/navigation-large-'+width+'.png',animations:'disabled'});await page.keyboard.press('Tab');await nav.getByRole('tab',{name:'Wissenswelten',exact:true}).focus();assert.equal(await world.evaluate(el=>el.matches(':focus-visible')),true,'large-font route starts from a real keyboard focus');await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Wissenswelten');await page.waitForFunction(()=>{const el=document.getElementById('world-category-title'),r=el?.getBoundingClientRect();return document.activeElement===el&&el.matches(':focus-visible')&&r.top>=8&&r.bottom<=innerHeight-8;}).catch(async e=>{console.log('Large-font focus diagnostic',await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return {active:el===document.activeElement,visibleFocus:el.matches(':focus-visible'),top:r.top,bottom:r.bottom,viewport:innerHeight,scrollY,font:getComputedStyle(el).fontSize};}));throw e;});assert.equal(await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=8&&r.bottom<=innerHeight-8&&el.matches(':focus-visible')}),true,'large-text destination heading remains visibly focused');await page.screenshot({path:shots+'/navigation-large-destination-'+width+'.png',animations:'disabled'});await enter('Entdecken','home','.discovery-hero');
+ await page.reload();await ready(page);await page.locator('.world-mini-question').waitFor();await selected('Welten');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites),save.favorites);assert.equal(await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).getAttribute('aria-pressed'),'true','actual favorite UI survives navigation and reload');assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.notes),save.notes);
+ await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenswelten');await page.locator('[role=option][data-value="area:world"]').click();await page.locator('.world-view .world-choice').first().waitFor();await selected('Welten');assert.equal(new URL(page.url()).hash,'#world');
+ await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissenschaft');await page.locator('[role=option][data-value="world:science"]').click();await page.getByRole('heading',{name:'Wissenschaft & Weltall',exact:true}).waitFor();await selected('Welten');
+ await enter('Start','home','.discovery-hero');
+ await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});await inspect();await nav.screenshot({path:shots+'/navigation-large-'+width+'.png',animations:'disabled'});await page.keyboard.press('Tab');await world.focus();assert.equal(await world.evaluate(el=>el.matches(':focus-visible')),true,'large-font route starts from a real keyboard focus');await page.keyboard.press('Enter');await page.locator('.world-view').waitFor();await selected('Welten');await page.waitForFunction(()=>{const el=document.getElementById('world-category-title'),r=el?.getBoundingClientRect();return document.activeElement===el&&el.matches(':focus-visible')&&r.top>=8&&r.bottom<=innerHeight-8;}).catch(async e=>{console.log('Large-font focus diagnostic',await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return {active:el===document.activeElement,visibleFocus:el.matches(':focus-visible'),top:r.top,bottom:r.bottom,viewport:innerHeight,scrollY,font:getComputedStyle(el).fontSize};}));throw e;});assert.equal(await page.locator('#world-category-title').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=8&&r.bottom<=innerHeight-8&&el.matches(':focus-visible')}),true,'large-text destination heading remains visibly focused');await page.screenshot({path:shots+'/navigation-large-destination-'+width+'.png',animations:'disabled'});await enter('Start','home','.discovery-hero');
  await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('button',{name:'Pass sichern',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).click();await page.keyboard.press('Escape');
- report.checks.push('Main navigation '+width+': six destinations, active world/card/route, manual arrow/Enter, Touch/Back/Forward/opener focus, deep-link reload, search hub/categories, retained route station, large text and actual saved favorite/notes'+(width===320||width===1440?', system-color focus':''));
+ report.checks.push('Main navigation '+width+': six destinations, active world/card/route, Tab/Enter, Touch/Back/Forward/opener focus, deep-link reload, search hub/categories, retained route station, large text and actual saved favorite/notes'+(width===320||width===1440?', system-color focus':''));
 }
 
 export async function worldFilterKeyboardFocus(page,ready,report,width){
@@ -338,7 +312,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.goto(base);await ready(p);
    for(const image of await p.locator('.discovery-worlds img').all())await image.evaluate(im=>im.decode());
    assert.equal(await p.locator('.continue-card').count(),0,'empty visitor has no false resume');
-   assert.equal(await p.locator('.mode-tabs [role=tab]').count(),6,'six distinct learning hubs');
+   assert.equal(await p.getByRole('navigation',{name:'Bereiche',exact:true}).getByRole('link').count(),6,'six distinct learning hubs');
    assert.equal(await p.locator('.discovery-worlds .world-choice').count(),6);
    assert.equal(await p.locator('#globe-observatory').count(),0,'first home view leaves the full globe in its direct view');
    const start=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});
@@ -374,77 +348,16 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.evaluate(()=>scrollTo(0,0));await p.locator('.skip-link').focus();await p.keyboard.press('Enter');
    assert.equal(await p.locator('#learning-main').evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'keyboard skip navigation remains usable');
    assert.equal(await p.locator('#discovery-title').evaluate(el=>parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'calm heading focus remains visible');
-   // Publication history neither fabricates dates nor exposes prepared changes.
+   // „Was ist neu?“ über den Fuß: Titel fokussiert, alle Einträge, Zurück/Vor, axe; der Pass bleibt gleich.
    const readProgress=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
-   const before=await readProgress();await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
-   assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
-   assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
-   assert.deepEqual(await p.locator('.updates-timeline>li .updates-category').allTextContents(),publicUpdates().map(e=>e.category),'every historical and current update has its own readable category');
-   assert.deepEqual(await p.locator('.updates-timeline>li time').allTextContents(),publicUpdates().map(e=>formatHistoryDay(e.availableOn??e.publishedOn??e.confirmedOn)),'concise dates retain the precise evidence in datetime');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),publicUpdates().filter(e=>e.channel==='vercel-test').length,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),publicUpdates()[0].id,'latest confirmed package keeps its ID and comes first');
-   assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),publicUpdates()[0].occurredAt,'actual latest Vercel confirmation timestamp');
-   assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
-   assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
-   assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
-   await homeTextGeometry(p);await homeTouchTargets(p);
-   await p.screenshot({path:shots+'/updates-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.evaluate(()=>scrollTo(0,0));assert.equal(await p.locator('.updates-timeline>li').first().getByRole('heading').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'first actual update heading stays visible beneath compact channel explanation');await p.screenshot({path:shots+'/updates-test-top-'+width+'.png',animations:'disabled'});
-   if(PREPARED_UPDATES.length){await p.locator('.updates-prepared>summary').click();await homeTextGeometry(p);await homeTouchTargets(p);
-   assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),PREPARED_UPDATES.length);assert.deepEqual(await p.locator('.updates-prepared-entry').evaluateAll(entries=>entries.map(e=>e.getAttribute('data-update-id'))),PREPARED_UPDATES.map(entry=>entry.id),'every prepared entry retains its exact identity and order');
-   assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
-   await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();}
-   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
-   // Real disclosure controls expose bounded changes and the family benefit.
-   for(const entry of publicUpdates()){
-    const item=p.locator('.updates-timeline>li[data-update-id="'+entry.id+'"]');
-    assert.equal(await item.locator('.updates-category').evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14),true,'category remains readable '+entry.id);
-    const disclosure=item.locator('.updates-details');
-    await disclosure.locator('summary').click();
-    assert.equal(await disclosure.evaluate(el=>el.open),true,'native disclosure opens '+entry.id);
-    assert.equal(await disclosure.locator('ul>li').count(),entry.details.length,'all concrete changes readable');
-    assert.equal(await disclosure.locator('.updates-benefit').innerText(),'Das bringt es euch\n'+entry.benefit);
-    assert.equal(await disclosure.locator('summary').evaluate(el=>{
-     const text=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim()),range=document.createRange();range.selectNodeContents(text);
-     const line=[...range.getClientRects()].at(-1),count=el.querySelector('.updates-count').getBoundingClientRect();
-     return count.top<line.bottom&&count.bottom>line.top;
-    }),true,'detail count stays with its label, without an orphan line '+entry.id);
-   }
-   await homeTextGeometry(p);await homeTouchTargets(p);
-   for(const id of ['first-visit-home','science-articles','site-v14','site-v12','site-v8','site-v1']){
-    const item=p.locator('.updates-timeline>li[data-update-id="'+id+'"]');
-    console.log('CHRONICLE_CAPTURE_START',JSON.stringify({width,id}));
-    try{await item.screenshot({path:shots+'/updates-details-'+id+'-'+width+'.png',animations:'disabled'});}
-    catch(error){
-     // Preserve the failed assertion and its original timeout. Diagnose the
-     // actual failing width/entry without retrying or replacing its capture.
-     const diagnostic=await item.evaluate(el=>{const r=el.getBoundingClientRect();return {rect:{x:r.x,y:r.y,width:r.width,height:r.height},scrollY,viewport:{width:innerWidth,height:innerHeight},documentHeight:document.documentElement.scrollHeight,visibility:document.visibilityState,open:el.querySelector('details')?.open};}).catch(e=>({diagnosticError:e.message}));
-     report.chronicleCaptureFailure={width,id,...diagnostic};console.log('CHRONICLE_CAPTURE_FAILURE',JSON.stringify(report.chronicleCaptureFailure));
-     await p.screenshot({path:shots+'/updates-details-failure-'+id+'-'+width+'.png',animations:'disabled'}).catch(e=>console.log('CHRONICLE_DIAGNOSTIC_CAPTURE_FAILURE',e.message));
-     throw error;
-    }
-    console.log('CHRONICLE_CAPTURE_DONE',JSON.stringify({width,id}));
-   }
-   assert.deepEqual(await readProgress(),before,'reading all historical changes and benefits leaves learning progress untouched');
-   await p.screenshot({path:shots+'/updates-all-details-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.addScriptTag({path:AXE_FILE});
-   const expandedAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(expandedAxe,[],'all expanded history WCAG axe '+width);
-   const olderLink=p.locator('.updates-timeline>li').last().locator('.updates-links a').first();
-   await olderLink.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await olderLink.focus();const olderId=await olderLink.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('#globe-observatory').waitFor();assert.equal(new URL(p.url()).hash,'#globe','historical globe links retain the full globe destination');
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.waitForFunction(id=>{const el=document.activeElement;if(el?.getAttribute('data-route-focus')!==id)return false;const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.matches(':focus-visible');},olderId);
-   assert.equal(await p.locator('.updates-archive').evaluate(el=>el.open),true,'Back restores expanded history archive');
-   assert.equal(await p.locator('.updates-details[open]').count(),publicUpdates().length,'Back also restores every expanded entry');
-   const olderFocus=await olderLink.evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:innerHeight,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)};});if(!(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2)){await p.screenshot({path:shots+'/updates-back-failure-'+width+'.png'});console.log('Older entry focus geometry',width,JSON.stringify(olderFocus));}assert.equal(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2,true,'Back restores visible older-entry keyboard focus');
-   await p.screenshot({path:shots+'/updates-back-focus-'+width+'.png',animations:'disabled'});
-   await p.locator('.updates-links a[href="#world"]').first().click();await p.locator('.world-view').waitFor();assert.equal(new URL(p.url()).hash,'#world');
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.goForward();await p.locator('.discovery-hero').waitFor();
-   await p.getByRole('button',{name:'Alle Welten & Lernrouten',exact:true}).click();await p.locator('.world-view').waitFor();await p.getByRole('tab',{name:'Entdecken',exact:true}).click();await p.locator('.discovery-hero').waitFor();assert.equal(new URL(p.url()).hash,'#home','active exploration tab still returns from world hub');
+   const before=await readProgress();await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy updates title focus');
+   await p.screenshot({path:shots+'/updates-'+width+'.png',animations:'disabled'});
+   (report.historyViews??=[]).push(await neuigkeitenAnsicht(p,width,shots));
+   assert.deepEqual(await readProgress(),before,'„Was ist neu?“ lässt den Pass unverändert');
+   await p.getByRole('button',{name:'Alle Welten & Lernrouten',exact:true}).click();await p.locator('.world-view').waitFor();await bereich(p,'explore').click();await p.locator('.discovery-hero').waitFor();assert.equal(new URL(p.url()).hash,'#home','active exploration tab still returns from world hub');
    // A real synthetic chapter choice creates a valid, resumable pass activity.
-   await p.getByRole('tab',{name:'Lernreisen',exact:true}).click();await p.locator('.journey-tile').first().click();await p.locator('.journey-reader').waitFor();
+   await bereich(p,'journeys').click();await p.locator('.journey-tile').first().click();await p.locator('.journey-reader').waitFor();
    const next=p.getByRole('button',{name:'Weiter entdecken',exact:true});await next.click();
    const chapter=await p.locator('.chapter-count').innerText();assert.match(chapter,/Kapitel 2/);
    await p.evaluate(()=>location.hash='home');await p.locator('.continue-card').waitFor();await capture('return');await homeTextGeometry(p);
@@ -455,59 +368,63 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});
    assert.equal(await p.locator('.gateway-compact .world-choice').first().evaluate(el=>getComputedStyle(el).transitionDuration==='0s'),true,'saved reduced motion applies');
-   await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
-   await p.locator('.updates-details').first().locator('summary').click();
+   await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   const frueher=p.locator('.kern-neuigkeiten details[data-history-disclosure="neuigkeiten-frueher"]');if(!await frueher.evaluate(el=>el.open))await frueher.locator(':scope > summary').click();
    await homeTextGeometry(p);await homeTouchTargets(p);
-   await p.locator('.updates-timeline>li').first().screenshot({path:shots+'/updates-details-large-'+width+'.png',animations:'disabled'});
    await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});
    // The resumable-journey path above reloads the page and clears the axe script.
-   await p.addScriptTag({path:AXE_FILE});
-   const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'history WCAG axe '+width);
-   await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
-   const homeAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.discovery-hero'],['.mode-tabs'],['.discovery-worlds'],['.discovery-pathways'],['.continue-card']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(homeAxe,[],'home WCAG axe '+width);
+   await prepareAxe(p);
+   const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.kern-neuigkeiten']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'updates WCAG axe '+width);
+   await bereich(p,'explore').click();await p.locator('.discovery-hero').waitFor();
+   const homeAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.discovery-hero'],['.kern-leiste'],['.discovery-worlds'],['.discovery-pathways'],['.continue-card']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(homeAxe,[],'home WCAG axe '+width);
    if(width===320){
     await p.evaluate(()=>{const save=JSON.parse(localStorage.getItem('erde-entdecken:save:v3'));save.progress.lastActivity={type:'game',id:'unknown-stale-session',family:'classic'};localStorage.setItem('erde-entdecken:save:v3',JSON.stringify(save));});await p.reload();await ready(p);assert.equal(await p.locator('.continue-card').count(),0,'stale activity without matching game never offers false resume');
     await p.emulateMedia({forcedColors:'active'});await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&getComputedStyle(el).outlineStyle==='solid'),true,'system colors retain focus');await p.screenshot({path:shots+'/home-system-colors-320.png',animations:'disabled'});
    }
    if(width===320||width===1440){await worldFilterKeyboardFocus(p,ready,report,width);(report.categoryTimelineNavigation??=[]).push(await categoryTimelineNavigation(p));(report.guideDialogs??=[]).push(await guideDialogView(p));}
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + independently confirmed test website updates including PR 23, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, „Was ist neu?“ with all entries, Früher, back/forward and large font, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }
 
-// Reuse the real chronicle, native disclosures and shared text-geometry checks.
-// Chromium's complete home suite still exercises every link, state and Back path.
-export async function historyEngineView(page,width,shots,{engine='chromium',capture}={}){
+// „Was ist neu?“ in jedem Browser: alle Einträge in Reihenfolge, große Schrift, Tastatur auf „Früher“,
+// Zurück/Vor über die Leiste, axe, Pass bleibt unverändert. Aufrufe: home, engine-journeys, journey-zoom.
+export async function neuigkeitenAnsicht(page,width,shots,{engine='chromium',capture}={}){
  await page.evaluate(()=>location.hash='updates');await page.locator('#updates-title').waitFor();
- await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
- const entries=publicUpdates(),before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
- assert.deepEqual(await page.locator('.updates-timeline>li').evaluateAll(es=>es.map(e=>e.dataset.updateId)),entries.map(e=>e.id));
- const archive=page.locator('.updates-archive');if(!await archive.evaluate(el=>el.open))await archive.locator(':scope > summary').click();
- for(const entry of entries){
-  const item=page.locator('[data-update-id="'+entry.id+'"]'),d=item.locator('.updates-details');
-  if(!await d.evaluate(el=>el.open))await d.locator('summary').click();
-  assert.equal(await item.locator('.updates-category').innerText(),entry.category);
-  assert.equal(await item.locator('.updates-summary').innerText(),entry.summary);
-  assert.equal(await d.locator('li').count(),entry.details.length);
- }
- await homeTextGeometry(page);
- const first=page.locator('.updates-timeline>li').first(),last=page.locator('.updates-timeline>li').last();
- const summary=first.locator('.updates-details>summary');
+ await page.waitForFunction(()=>document.activeElement?.id==='updates-title');
+ assert.equal(await page.locator('#updates-title').evaluate(el=>getComputedStyle(el).outlineStyle),'none','Neuigkeiten '+width+': Titel ohne Fokusrahmen');
+ // Große Schrift nur für diese Prüfung; danach wie vorher.
+ const grossGesetzt=await page.evaluate(()=>{const app=document.querySelector('.earth-app');if(app.classList.contains('large-reading'))return false;app.classList.add('large-reading');return true;});
+ const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+ const ansicht=page.locator('.kern-neuigkeiten');
+ assert.deepEqual(await ansicht.locator('li[data-neuigkeit]').evaluateAll(es=>es.map(e=>e.dataset.neuigkeit)),NEUIGKEITEN.map(e=>e.id),'Neuigkeiten '+width+': Einträge und Reihenfolge');
+ const frueher=ansicht.locator('details[data-history-disclosure="neuigkeiten-frueher"]'),summary=frueher.locator(':scope > summary');
+ if(!await frueher.evaluate(el=>el.open))await summary.click();
+ await homeTextGeometry(page);await homeTouchTargets(page);
  await summary.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
  const focus=await summary.evaluate(el=>({active:el===document.activeElement,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)}));
- if(!focus.active||!focus.visible||focus.outline<2)await page.screenshot({path:shots+'/journey-engine-'+engine+'-history-focus-failure-'+width+'.png',animations:'disabled'});
- assert.equal(focus.active&&focus.visible&&focus.outline>=2,true,'real Tab navigation gives visible keyboard focus '+JSON.stringify(focus));
- await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),false);await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),true);
- assert.equal(await summary.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'visible keyboard focus persists when reopening the chronicle');
+ if(!focus.active||!focus.visible||focus.outline<2)await page.screenshot({path:shots+'/updates-'+engine+'-focus-failure-'+width+'.png',animations:'disabled'});
+ assert.equal(focus.active&&focus.visible&&focus.outline>=2,true,'Neuigkeiten '+width+': sichtbarer Tastaturfokus auf „Früher“ '+JSON.stringify(focus));
+ await page.keyboard.press('Enter');assert.equal(await frueher.evaluate(el=>el.open),false,'Enter klappt „Früher“ zu');
+ await page.keyboard.press('Enter');assert.equal(await frueher.evaluate(el=>el.open),true,'Enter klappt „Früher“ wieder auf');
  const captures=[];
  const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)captures.push(await capture(name));else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
- await take('journey-engine-'+engine+'-history-first-'+width+'.png',first);
- await take('journey-engine-'+engine+'-history-oldest-'+width+'.png',last);
- await page.addScriptTag({path:AXE_FILE});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
- assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
+ await take('updates-'+engine+'-'+width+'.png',ansicht.locator('li[data-neuigkeit]').first());
+ await take('updates-'+engine+'-oldest-'+width+'.png',ansicht.locator('li[data-neuigkeit]').last());
+ await prepareAxe(page);
+ assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.kern-neuigkeiten',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'Neuigkeiten '+width+': axe');
+ assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'„Was ist neu?“ ändert den Pass nicht');
  if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
- return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
+ if(grossGesetzt)await page.evaluate(()=>document.querySelector('.earth-app').classList.remove('large-reading'));
+ // Zurück/Vor: per Tastatur über die Leiste zum Start, dann zurück. „Früher“ bleibt offen, der Fokus liegt auf „Start“.
+ const start=bereich(page,'explore');await start.focus();await page.keyboard.press('Enter');await page.locator('.discovery-hero').waitFor();
+ await page.goBack();await ansicht.waitFor();
+ assert.equal(new URL(page.url()).hash,'#updates','Zurück führt zu „Was ist neu?“');
+ await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-explore');
+ assert.equal(await frueher.evaluate(el=>el.open),true,'Zurück stellt „Früher“ offen wieder her');
+ await page.goForward();await page.locator('.discovery-hero').waitFor();
+ return {width,entries:NEUIGKEITEN.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,backForward:true,...(capture?{captures}:{})};
 }
 
 async function immediateHomePhotoCases(browser,base,ready,monitor,report,shots){

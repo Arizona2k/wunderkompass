@@ -14,7 +14,7 @@ export default function ParentGuide({open,onOpenChange,onPass,onJourney,onHelp,l
   <details className="guide-topic"><summary>Versuche zu Hause</summary><p>Die sechs Versuche bitte mit einem Erwachsenen planen und durchführen. Markierungen dokumentieren, was gemeinsam ausprobiert wurde. Beobachtungen können im Forscher-Notizbuch festgehalten werden.</p>
   </details>
   <details className="guide-topic"><summary>Ohne Internet</summary><p>Bereits geladene Inhalte lassen sich oft weiter benutzen. Ungeöffnete Modelle, Kartendaten oder Bilder können eine Verbindung benötigen. Über „Für offline vorbereiten“ wird die Lernwelt einschließlich ihrer Bilder einmal auf dieses Gerät geladen. Danach lassen sich die vorbereiteten Inhalte auch nach einem Neustart ohne Internet öffnen. Externe Quellenlinks brauchen eine Verbindung. Updates werden als „Neue Version laden“ angeboten; der Pass bleibt lokal erhalten.</p></details>
-  <p><a className="knowledge-link" href="/licenses/learning-motion.json" download="WunderKompass-Software-Lizenzen.json">Software-Lizenzen herunterladen</a></p>
+  <p><a className="knowledge-link" href="/licenses/learning-motion.json" download="WunderKompass-Software-Lizenzen.json">Software-Lizenzen herunterladen</a> · <a className="knowledge-link" href="/licenses/nunito-OFL.txt">Schrift-Lizenz (Nunito)</a></p>
   <div className="result-actions"><button className="primary-button" onClick={onJourney}>Gemeinsame Lernreise starten</button><button className="secondary-button" onClick={onPass}>Pass und Einstellungen öffnen</button><button className="secondary-button" onClick={onHelp}>So funktioniert die Lernwelt</button><DialogClose className="secondary-button">Zurück zur Lernwelt</DialogClose></div>
  </DialogContent></Dialog>;
 }

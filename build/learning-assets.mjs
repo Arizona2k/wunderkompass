@@ -3,7 +3,7 @@ import {join,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 export function finalLearningAssets(directory){
  const files=[];
- function walk(dir){for(const entry of readdirSync(dir,{withFileTypes:true})){const p=join(dir,entry.name);if(entry.isSymbolicLink())throw Error('Unexpected offline asset symlink');if(entry.isDirectory())walk(p);else if(/\.(js|css|woff2?|svg|png|jpe?g|webp|json|webmanifest)$/.test(entry.name)&&entry.name!=='learning-worker.js'&&!relative(directory,p).startsWith('.vite/'))files.push('/'+relative(directory,p).split('\\').join('/'));}}
+ function walk(dir){for(const entry of readdirSync(dir,{withFileTypes:true})){const p=join(dir,entry.name);if(entry.isSymbolicLink())throw Error('Unexpected offline asset symlink');if(entry.isDirectory())walk(p);else if(/\.(js|css|woff2?|svg|png|jpe?g|webp|json|webmanifest|txt)$/.test(entry.name)&&entry.name!=='learning-worker.js'&&!relative(directory,p).startsWith('.vite/'))files.push('/'+relative(directory,p).split('\\').join('/'));}}
  walk(directory);return files.sort();
 }
 export function offlineAssetMetrics(directory){

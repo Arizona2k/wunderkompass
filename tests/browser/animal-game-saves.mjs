@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import retained from '../fixtures/retained-animal-game-before-expansion.json' with {type:'json'};
+import {bereich} from './harness.mjs';
 
 const pool=worldGameBank('animal-detective');
 const affected=retained.animalDetective.filter(old=>!old.answers.every(a=>pool.find(q=>q.id===old.id).answers.includes(a)));
@@ -10,7 +11,7 @@ assert.equal(affected.length,9);
 const groups=[affected.slice(0,5),[...affected.slice(5),retained.animalDetective[0]]];
 const game='world:animal-detective';
 const state=p=>p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
-const open=async p=>{await p.getByRole('tab',{name:'Spielplatz',exact:true}).click();await p.locator('[data-game-key="'+game+'"]').click();await p.locator('.world-game-room').waitFor();};
+const open=async p=>{await bereich(p,'games').click();await p.locator('[data-game-key="'+game+'"]').click();await p.locator('.world-game-room').waitFor();};
 async function exactRound(p,old,orders,{wrong=false}={}){
  const current=pool.find(q=>q.id===old.id),room=p.locator('.world-game-room');
  await room.getByRole('heading',{name:current.prompt,exact:true}).waitFor();

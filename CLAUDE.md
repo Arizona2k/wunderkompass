@@ -17,6 +17,7 @@ Daraus folgt: kurze Sätze, große Bilder, große Tippflächen, schnell etwas tu
 
 - **Kostenlos.** Keine bezahlten Dienste, Abos, Testzugänge oder Upgrades, auch nicht für Hosting, Builds, Bilder oder Audio. Kostenlose Konten nur nach Erklärung und OK des Nutzers.
 - **Kein Bestandsschutz** (Nutzer, 21.11.2026). Nichts bleibt, nur weil es es schon gibt. Inhalte, Spiele, Labore, Reisen, Design und Code werden geändert, ersetzt oder gestrichen, wenn es für Kinder besser ist. Geschützt ist nur, was Kindern sonst verloren ginge: ihr Fortschritt im Pass und ihre Links (nächster Punkt).
+- **Wachsen lassen** (Nutzer, 21.11.2026). Claude erweitert, verbessert und verknüpft die Seite von sich aus immer weiter, in Teilabschnitten. Ein Pilot ist der Anfang, nicht das Ende: Was sich bewährt, wird Schritt für Schritt auf alle Karten, Welten, Spiele, Labore und Reisen ausgedehnt, und der nächste Schritt wird ohne Aufforderung vorgeschlagen und angegangen. Claude bleibt dabei kritisch, auch gegenüber eigenen Ideen und denen des Nutzers, nennt Schwächen offen und empfiehlt eine Lösung. Qualität geht vor Menge: Quellen, Prüfung, Entwurf und Freigabe je Phase gelten weiter.
 - **Kompatibilität.** Karten-, Fragen-, Kapitel-, Spiel-, Labor-, Missions- und Reise-IDs werden nie umbenannt und nie für etwas anderes wiederverwendet. Fällt ein Inhalt weg, führen seine alten Links an einen sinnvollen Ort, und Pass-Einträge dazu gehen nicht verloren. Hash-Links (`#world/...`, `#journeys/...`) funktionieren weiter. Alte Links (auch `#news/...`) werden aufgefangen.
 - **Ein Lernspeicher.** Der Pass ist der einzige Speicher: Schema 3, App-ID `earth-explorer`, Schlüssel `erde-entdecken:save:v3`, Altpass `erde-entdecken:forscherpass:v2`, IndexedDB `earth-explorer`. Wer daran etwas ändert, belegt mit Altpass, Import/Export, Reload und Fehlerfall, dass nichts verloren geht.
 - **Daten.** Keine echten Pass-Dateien, Notizen, persönlichen Daten oder Zugangsdaten ins Repository. Nur ausgedachte Testpässe.
@@ -51,8 +52,8 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 
 Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [suitenamen]`.
 `--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build.
-Lokal ist nur Chromium installiert. Firefox und WebKit laufen in der CI (Job „Vollprüfung“, bei PRs nach `main` oder von Hand).
-Nie `playwright install` im Container ausführen.
+**Playwright** (das Browser-Testwerkzeug) ist immer auf der neuesten Version, die mindestens 7 Tage alt ist (Wunsch des Nutzers, 21.11.2026). `/weiter` prüft das bei jedem Einstieg; ein Update ist ein eigener kleiner Commit mit `pnpm run check`.
+Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand).
 
 CI (`.github/workflows/quality.yml`): Job **„Required quality checks“** (Name nicht ändern, die Branch-Regel verlangt ihn) läuft bei jedem PR.
 
@@ -81,6 +82,8 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 - Was kannst du dir ansehen (Link, Bild)?
 - Was musst du entscheiden?
 - Was kommt als Nächstes?
+
+**Neuer Chat:** Am Ende jedes Teilschritts (nach dem Merge) und sobald ein Chat einmal automatisch zusammengefasst wurde, sagt Claude ausdrücklich, ob jetzt ein neuer Chat sinnvoll ist, und nennt die Startnachricht aus `STATUS.md`. Nie mitten in laufenden Prüfungen wechseln: Sie laufen im Container dieses Chats (Wunsch des Nutzers, 21.11.2026).
 
 **Commits:** `git -c user.name=Claude -c user.email=noreply@anthropic.com commit …`, deutsche Betreffzeile. Vor jedem Push `git diff --check` und Autor/Committer prüfen.
 
@@ -120,7 +123,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `scripts/` | `export-content.mjs` (Exporte und Inhaltsprüfung), Größenbudget, Test-Laufzeit |
 | `tests/*.test.mjs` | Unit-Tests; `tests/fixtures/` feste Altstände für Kompatibilität (z. B. `stable-ids.json`) |
 | `tests/browser/` | Browser-Runner (`run.mjs`, `suites.mjs`, `harness.mjs`) und Suiten |
-| `content/research/`, `content/update-history-evidence.json` | Quellen und Daten, die die App liest |
+| `content/research/` | Quellen und Daten, die die App liest |
 | `docs/entwurf/` | Entwürfe und Pläne je Phase |
 | `docs/archiv/` | Originalaufträge des Nutzers und die alte AGENTS.md |
 | `STATUS.md`, `BACKLOG.md`, `VISION.md`, `CHANGELOG.md` | Stand, Aufgaben, Produktziele, Verlauf |
