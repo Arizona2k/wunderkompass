@@ -3,6 +3,19 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 21.11.2026 – Phase 1, Teilschritt 1 „Aussehen und Hülle“
+
+Die Seite bekommt ihre neue Grundlage. Startseite, Wissenskarte und Weltenseiten werden in den nächsten Teilschritten neu gebaut; hier bekommen sie nur Schrift, Farben und nötige Korrekturen.
+
+- **Neue Schrift und Farben:** Nunito (rund, gut lesbar, freie Lizenz, offline dabei), helle Flächen mit Orange und Petrol. Auch Buchstaben wie in „Białowieża“ kommen jetzt aus einer Schrift.
+- **Eine Leiste für alles:** Start, Welten, Spielen, Labor, Reisen, Buch. Am Handy steht sie unten, ab dem Tablet oben. Früher schnitt die Leiste am Handy Wörter ab.
+- **Ruhiger Kopf:** nur noch Name, Suche und Entdeckerpass. Der Punkte-Zähler am Pass-Knopf ist weg.
+- **Neuer Fuß:** „Was ist neu?“, „Für Eltern“ und der Kasten für das Offline-Lernen.
+- **„Was ist neu?“ für Kinder:** kurze Einträge mit Symbol, neueste oben. Die alte Chronik steht in Kindersprache unter „Früher“ (Texte von Kinder-Redaktion und Faktenprüfer geprüft).
+- **Kein großer Rahmen mehr** nach einem Seitenwechsel. Wer mit der Tastatur arbeitet, sieht den Fokus weiter deutlich.
+- **Kleine Korrekturen aus der Design-Prüfung:** Das Suchfeld bleibt bei großer Schrift am kleinen Handy ganz sichtbar. Beispieltexte in Suchfeldern passen in die Felder. „So geht’s“ steht auf der Startseite in jeder Breite. Weitere Befunde stehen mit Grund im BACKLOG (Punkt 15).
+- **Hinter den Kulissen:** Tests öffnen Bereiche über einen eigenen Helfer statt über die alte Leiste. Viele alte Stilregeln sind gelöscht; die Startdateien sind kleiner als vorher. Zeichnungen behalten vorerst ihre bisherige Schrift, damit keine Beschriftung aus dem Bild rutscht.
+
 ## 21.11.2026 – Alter Katalog „WunderKompass 2027“ eingeordnet
 
 An der Seite selbst ändert sich nichts. Es geht um die Pläne.

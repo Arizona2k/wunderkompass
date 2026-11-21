@@ -11,18 +11,18 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 1. **Entwurf** in `docs/entwurf/` mit Skizzen für Handy und Rechner, Freigabe durch den Nutzer.
 2. **Design-System:** Schrift, Farben (hell, Orange und Petrol als Akzente), Abstände, Tippflächen, Kacheln mit „Glossy“-Schimmer (Antippen auf Touch, ruhig bei „Bewegung reduzieren“), Bild- und Fotorahmen, Bewegung. Einheitlich für alle Bereiche; jeder Baustein mit Tastatur bedienbar und mit sichtbarem Fokus (Katalog 2027, Abschnitt 5).
 3. **Startseite „Entdecken“:** eine Frage mit großem Bild, Weiter-machen, Entdeckung des Tages, frühe Themen, Suche. Doppelte Titel und Einleitungen weg; das erste Motiv im ersten Bildschirm (WK-053, WK-057).
-4. **Navigation:** kompakter Wechsel der sechs Bereiche auf dem Handy; heute schneidet die Leiste bei 360 px „Entdecken“ links an (Befund Schritt 0).
+4. ~~**Navigation**~~ erledigt in Teilschritt 1: eine Leiste mit sechs Bereichen, am Handy unten, nichts abgeschnitten.
 5. **Themenwelt-Seite:** Themen als große Bildkacheln, Filter ohne langen Vorlauf (WK-053: mobile Tierübersicht).
 6. **Neue Wissenskarte:** kurz und kindgerecht oben, Vertiefung („Mehr erfahren“, später „Für Große“) freiwillig, Bild mit Nachweis, ein kleines Tun (raten, tippen), Verbindungen zu echten Nachbarn (Ziel 6).
 7. **Bildwirkung:** Bilder laden ohne graue Platzhalter im ersten Bildschirm (Löwe/Gepard bei 1440 px), Fotos füllen die Kartenbreite (Elefant).
 8. **Verbindungen (Ziel 6):** 15 von 196 erklärten Verbindungen haben keine Rückrichtung im `related`-Feld; zufällig wirkende Nachbarn (Elefant → Honigbiene, Großer Panda) durch fachlich echte ersetzen.
 9. **Befunde des `design-pruefer` aus Schritt 0** (Startseite, Tierwelt, Eisbär-Karte bei 360 und 1280 px):
-   - Nach einem Seitenwechsel zeigt der programmgesteuerte Fokus einen großen Petrol-Rahmen um Überschrift und Inhalt. Fokusrahmen nur bei Tastaturbedienung (`:focus-visible`), Sprungziel trotzdem für Bildschirmleser erhalten.
+   - ~~Großer Petrol-Rahmen nach einem Seitenwechsel~~ erledigt in Teilschritt 1 (Rahmen nur bei Tastaturbedienung, Sprungziel bleibt).
    - Tippflächen teils unter 44 px; sehr kleine, blasse Meta-Texte und Bildnachweise (Kontrast nach WCAG AA prüfen).
    - Fotos auf Welt- und Startkacheln mit Rand statt formatfüllend (`object-fit: cover` mit sinnvollem Bildausschnitt).
    - Feinschliff: Texteinzug in Karten ungleich, auf 360 px kommt das Motiv spät, einzelner Pfeil ohne Beschriftung, uneinheitliche Bedienelemente, abstrakte Einstiegsfragen.
 10. **Prüfen:** `design-pruefer` in 320, 390, 768, 1280 und 1440 px, Rauchtest-Bilder vorher/nachher, Pass und alte Links unverändert.
-11. **„Was ist neu?“ in der App** (Produktchronik): Nutzerwunsch 21.11.2026 – hier stehen künftig die Änderungen, Gestaltung frei. Neu gestalten: kurz, kindgerecht, mit Bild oder Motiv je Eintrag, neueste oben; ab Phase 1 bekommt jede sichtbare Änderung einen Eintrag. Dabei die verwaisten `evidence.file`-Texte in `app/update-history.ts` bereinigen (zeigen auf entfernte Berichtsdateien).
+11. ~~**„Was ist neu?“ in der App**~~ erledigt in Teilschritt 1: eigene Seite, kurze Einträge mit Symbol, neueste oben, alte Chronik unter „Früher“; `app/update-history.ts` mit den verwaisten Verweisen ist gelöscht. Ab jetzt bekommt jede sichtbare Änderung einen Eintrag (`app/kern/neuigkeiten.ts`).
 
 12. **Rückmeldung eines 10-jährigen Kindes (21.11.2026):** schnell gelangweilt, zu viel Text, Spiele und Aufgaben zu leicht. Eine einzelne Rückmeldung, keine Studie; sie passt aber zu den Befunden der Helfer. Daraus die freigegebene Ergänzung `docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md` („Weniger lesen, mehr knobeln“). Phase 1 hat seitdem sechs Teilschritte:
     - **Teilschritt 2 „Wissenskarte“** zusätzlich: A1 Längen-Budget (etwa 120 Wörter offen, Rest nach „Für Große“/„Für Erwachsene“), A2 Aufräumen über alle 204 Karten (Skript-Doppelungen aus `content/enrich_world.py`, gleicher Geschichtssatz auf 25 Karten, Lernziele und Erwachsenensätze, sechs Mini-Fragen mit Textverweis), A3 Häppchen (`chapters`) für etwa 12 Pilot-Karten, A4 Baustein „Stimmt das?“, A5 Reisen zeigen `starter` offen und `text` unter „Für Große“; B7 Stufe 2: je zwei bis drei neue Fragen für die Pilot-Karten.
@@ -34,6 +34,14 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - Tab-Reihenfolge im Kopf: Unter 768 px und zwischen 768 und 1199 px springt der Tastaturfokus von der Leiste zurück zu Suche und Pass, weil die Leiste im HTML zwischen Marke und Knöpfen steht. Trifft nur Tastatur-Nutzer. Mit der neuen Startseite in Teilschritt 5 lösen, ohne die Reihenfolge am breiten Rechner zu verderben.
     - Schutzrand unten: `env(safe-area-inset-bottom)` wirkt in Safari erst mit `viewport-fit=cover`. Am iPhone des Nutzers ansehen (besonders als Startbildschirm-App), ob die Wörter der Leiste frei vom Home-Balken stehen; erst dann entscheiden, ob `viewport-fit=cover` nötig ist (dann auch seitliche Ränder im Querformat).
     - Zurück aus der festen Leiste in Firefox und WebKit: In Chromium bleibt die Lesestelle erhalten (gemessen). Firefox und WebKit prüft `zurueckNachLeiste` erst im CI-Job „Vollprüfung“; spätestens am Phasenende beobachten.
+15. **Befunde des `design-pruefer` zu Teilschritt 1, bewusst verschoben** (behoben wurden: Suchfeld bei großer Schrift, „So geht’s“ auf der Startseite in jeder Breite, „Was ist neu?“ als aktuelle Seite markiert, zu lange Beispieltexte in Suchfeldern; gemessen und kein Fehler: Tippflächen ab 44 px, Offline-Kasten 14 px):
+    - Hilfe-Knopf „?“ im Kopf ab 768 px, damit die Hilfe am Rechner nur einen Schritt braucht (heute: Startseite „So geht’s“ oder Fuß „Für Eltern“). Mit der neuen Startseite in Teilschritt 5.
+    - Startseite: einzelner Pfeil ohne Wort, lange Einstiegsfragen, Kasten „Weiter entdecken“ und zwei verschiedene Knopffarben. Teilschritt 5 baut die Startseite neu.
+    - Wissenskarte: Abstände, Textlänge, Bildgröße. Teilschritt 2 baut die Karte neu.
+    - Fotos mit Rand statt formatfüllend, graue Flächen beim Laden: siehe Punkte 7 und 9; die grauen Flächen könnten auch nur am Bildschirmfoto liegen, vorher nachmessen. Teilschritt 4.
+    - Gleiche Buch-Symbole für verschiedene Dinge; Pass-Symbole bei 320 px eng; Entdeckerpunkte und Pokal passen nicht zu VISION (Sammeln ohne Zahlen). Teilschritt 5 (Sammlung).
+    - Labor: erster Bildschirm zeigt wenig zum Tun, Knöpfe unterschiedlich hoch. Lernreisen: Fortschrittsbalken kaum zu sehen. Mit Phase 4, kleine Störungen vorher in Teilschritt 6.
+    - Beschriftungen in Zeichnungen (SVG) nur 9–11 px groß und noch in der alten Schrift (Regel `svg{font-family:…}` in `kern.css`). Je Zeichnung mit ihrer Phase vergrößern und auf Nunito umstellen.
 
 ## Phase 2 – Tierwelt (grob)
 
@@ -74,6 +82,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Ozean-Navigator mit zugänglicher Karte; Weltreise-Suche modernisieren.
 - **Länderansicht: rohe Sprach- und Währungscodes** (Audit V2, G2, für Kinder spürbar): Rund 100 Codes erscheinen ohne Namen, z. B. „bem“, „toi“ (Sambia), „ff“, „srr“ (Senegal), Währung „XCG“. `app/country-portrait.tsx` ergänzt bisher nur sechs Namen. Lösung: deutsche Namen ergänzen oder unbekannte Codes nicht roh zeigen; mit Test über alle Länder. Darf als kleine Korrektur vorgezogen werden.
 - Zoom-Knöpfe heißen auch in der 2D-Schichtenansicht „Weltkugel vergrößern“ (Audit V2, B): passend benennen.
+- **Schatzsuche markiert „Start“ statt „Spielen“** (Befund `design-pruefer`, Teilschritt 1): Die Schatzsuche läuft auf dem Globus (`#globe`), und der Globus gehört in der Leiste zu „Start“. Welche Ansicht offen ist, steht nicht in der Adresse. Lösung mit dem Globus-Umbau: eigener Hash für die Schatzsuche (alte Links bleiben) oder Markierung nach Herkunft.
 - Labore: Modelle, Legenden und Modellgrenzen einzeln verbessern.
 
 ## Technik und Prüfung
