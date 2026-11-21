@@ -5,6 +5,7 @@ import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import {CHALLENGE_BANK,createChallenge} from '../../app/knowledge-challenge.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {bereich} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const saved=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
@@ -29,7 +30,7 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
   await page.goto(base+'/#book/notes');await ready(page);const file=path.join(shots,`journey-engine-${engine}-learning-task-${name}-${width}-synthetic.json`);await fs.writeFile(file,JSON.stringify(pass,null,2)+'\n');
   await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.locator('input[type=file]').setInputFiles(file);await page.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'hidden'});current.initialFixtureRoute=await page.evaluate(()=>location.hash);assert.equal(current.initialFixtureRoute,'#book/notes');current.actualSyntheticFileImported=true;
  }
- async function game(name,width){await activate(page,page.getByRole('tab',{name:'Spielplatz',exact:true}),width===320);await activate(page,page.locator('[data-game-key="'+name+'"]'),width===320);return page.locator('.game-room:visible');}
+ async function game(name,width){await activate(page,bereich(page,'games'),width===320);await activate(page,page.locator('[data-game-key="'+name+'"]'),width===320);return page.locator('.game-room:visible');}
  function complete(){assert(browserErrorsComplete(current));current.status='passed';}
  try{
   for(const width of widths){const touch=width===320;

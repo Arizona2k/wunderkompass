@@ -9,9 +9,10 @@ await import('../../scripts/test-runtime.mjs');
 const {PLAYGROUND_GAMES}=await import('../../app/playground-catalog.ts');
 const {CLASSIC_QUESTIONS,createReasonRound}=await import('../../app/classic-learning.ts');
 import {createSave,emptyProgress,SAVE_KEY} from '../../app/progress-storage.ts';
+import {bereich} from './harness.mjs';
 const {LAYERS}=await import('../../app/earth-data.ts');
 const state=p=>p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
-const select=p=>p.getByRole('tab',{name:'Spielplatz',exact:true}).click();
+const select=p=>bereich(p,'games').click();
 const open=(p,id)=>p.locator('[data-game-key="classic:'+id+'"]').click();
 const back=p=>p.getByRole('button',{name:'Alle Spiele',exact:true}).click();
 async function geometry(p,selector){

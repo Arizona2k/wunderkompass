@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {pendingRouteFocusFlow} from './route-focus.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import {bereich} from './harness.mjs';
 const budgets=JSON.parse(await fs.readFile(new URL('../../performance-budgets.json',import.meta.url),'utf8')).browser;
 const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title']];
 
@@ -52,7 +53,7 @@ async function chooseLongContinuation(p){
  await p.getByRole('dialog').getByRole('combobox').fill('Wahrscheinlichkeit');
  await p.getByRole('option').filter({hasText:'Wahrscheinlichkeit: möglich ist nicht garantiert'}).click();
  await p.locator('#world-topic-title').waitFor();
- await p.getByRole('tab',{name:'Spielplatz',exact:true}).click();await p.locator('.game-tile').first().waitFor();
+ await bereich(p,'games').click();await p.locator('.game-tile').first().waitFor();
 }
 async function continuationCardGeometry(p){
  const card=p.locator('.continue-card');assert.equal(await card.locator('p').innerText(),'Wahrscheinlichkeit: möglich ist nicht garantiert');await card.scrollIntoViewIfNeeded();
@@ -69,8 +70,8 @@ export async function componentFlow(browser,base,ready,monitor,report,shots){
   const c=await browser.newContext({viewport:{width,height},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
   try{
    await p.goto(base+'#labs');await ready(p);await p.locator('.research-tile').first().waitFor();await contracts(p);if(width===320||width===1440)await accessibility(p,'.research-world');await p.screenshot({path:shots+'/foundation-labs-'+width+'.png'});
-   await p.getByRole('tab',{name:'Wissenswelten',exact:true}).click();await p.locator('.world-trip').first().waitFor();await contracts(p);
-   await p.getByRole('tab',{name:'Spielplatz',exact:true}).click();await p.locator('.game-tile').first().waitFor();
+   await bereich(p,'world').click();await p.locator('.world-trip').first().waitFor();await contracts(p);
+   await bereich(p,'games').click();await p.locator('.game-tile').first().waitFor();
    const details=p.locator('.playground-guide').filter({has:p.getByText('Welches Spiel passt heute?',{exact:true})}),summary=details.locator('summary');assert.equal(await details.count(),1,'specific existing game guidance remains uniquely accessible');assert.equal(await details.getAttribute('open'),null);await p.keyboard.press('Tab');await summary.focus();await p.keyboard.press('Enter');assert.equal(await details.evaluate(e=>e.open),true);assert.equal(await summary.evaluate(e=>getComputedStyle(e).outlineStyle==='solid'&&parseFloat(getComputedStyle(e).outlineWidth)>=2),true,'native disclosure visible keyboard focus');
    await p.screenshot({path:shots+'/foundation-details-'+width+'.png'});assert.equal(await summary.evaluate(e=>document.activeElement===e),true,'native disclosure retains keyboard focus across rendering');await p.keyboard.press('Enter');assert.equal(await details.evaluate(e=>e.open),false);
    const filters=p.locator('.playground-filter-panel'),filterSummary=filters.locator('summary');assert.equal(await filters.getAttribute('open'),null);await filterSummary.focus();await p.keyboard.press('Enter');assert.equal(await filters.evaluate(e=>e.open),true,'filters open through their visible native keyboard control');

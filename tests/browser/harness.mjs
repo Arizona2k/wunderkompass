@@ -18,6 +18,15 @@ export function ready(page) {
   return page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor({timeout: 26000});
 }
 
+// Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.
+// Gibt den Playwright-Locator auf das Bedienelement des Bereichs zurück.
+const BEREICH_NAMEN = {explore: 'Entdecken', world: 'Wissenswelten', games: 'Spielplatz', labs: 'Forscherlabor', journeys: 'Lernreisen', book: 'Wissensbuch'};
+export function bereich(page, id) {
+  const name = BEREICH_NAMEN[id];
+  if (!name) throw Error('Unbekannter Bereich: ' + id);
+  return page.getByRole('tab', {name, exact: true});
+}
+
 // Startet `vite preview` für einen gebauten Stand auf einem freien Port.
 // Fertig ist der Server erst, wenn er sein eigenes Startsignal schreibt UND /world.json liefert.
 // So kann ein alter Server auf demselben Port die Bereitschaft nicht vortäuschen.
