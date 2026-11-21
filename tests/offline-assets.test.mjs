@@ -6,3 +6,8 @@ test('offline uses the complete final output and rejects phantom, omitted, dupli
  for(const bad of [assets.slice(1),[...assets,assets[0]],['/../outside.json'],[...assets,'/assets/eliminated.js']]){set(bad);assert.throws(()=>offlineAssetMetrics(dir));}
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+test('offline keeps the license texts so the parent links work without network',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'wk-offline-licenses-'));try{fs.mkdirSync(path.join(dir,'licenses'));fs.writeFileSync(path.join(dir,'licenses/nunito-OFL.txt'),'OFL');fs.writeFileSync(path.join(dir,'data.json'),'{}');
+ assert.deepEqual(finalLearningAssets(dir),['/data.json','/licenses/nunito-OFL.txt']);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});

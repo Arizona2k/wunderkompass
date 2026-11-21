@@ -70,6 +70,16 @@ async function grundlage(page, width) {
   assert.equal(info.fontSize, '18px', `grundlage ${width}: Fließtext`);
   assert.equal(info.background, 'rgb(250, 248, 243)', `grundlage ${width}: Seitenhintergrund`);
   assert.match(info.fontFamily, /^"?Nunito Variable"?/, `grundlage ${width}: Schriftliste`);
+  // Namen wie „Hōryū-ji“ bleiben in einer Schrift: Nunito bringt die erweiterten lateinischen Buchstaben mit.
+  await page.evaluate(() => { location.hash = 'world/topic/building-horyu-ji'; });
+  await page.locator('h1', {hasText: 'Hōryū-ji'}).first().waitFor();
+  const erweitert = await page.evaluate(async () => {
+    await document.fonts.ready;
+    return [...document.fonts].some(face => face.family.replace(/["']/g, '') === 'Nunito Variable' && /U\+0*100\b/i.test(face.unicodeRange) && face.status === 'loaded');
+  });
+  assert.ok(erweitert, `grundlage ${width}: „Hōryū-ji“ nutzt nicht die Nunito mit erweiterten Buchstaben`);
+  await page.evaluate(() => { location.hash = 'home'; });
+  await page.locator('.discovery-hero').waitFor();
 }
 
 // Springt das Programm auf eine Überschrift, zeigt sie keinen Rahmen –
@@ -83,6 +93,14 @@ async function ruhigerFokus(page, width) {
   await page.waitForFunction(() => document.activeElement?.id === 'updates-title', null, {polling: 100});
   const outline = await title.evaluate(el => getComputedStyle(el).outlineStyle);
   assert.equal(outline, 'none', `ruhigerFokus ${width}: Überschrift zeigt einen Fokusrahmen`);
+  // Kopf des Spielplatzes: Sprungziel nach „Alle Spiele“, auch nach Tastaturbedienung ohne Rahmen.
+  await page.evaluate(() => { location.hash = 'games'; });
+  const kopf = page.locator('#playground-title');
+  await kopf.waitFor();
+  await page.keyboard.press('Tab');
+  await kopf.evaluate(el => el.focus());
+  const kopfRahmen = await kopf.evaluate(el => ({fokus: el === document.activeElement, rahmen: getComputedStyle(el).outlineStyle}));
+  assert.deepEqual(kopfRahmen, {fokus: true, rahmen: 'none'}, `ruhigerFokus ${width}: Kopf des Spielplatzes zeigt einen Fokusrahmen`);
 }
 
 // Wer mit der Tastatur arbeitet, sieht einen deutlichen Rahmen.

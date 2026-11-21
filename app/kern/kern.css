@@ -1,6 +1,16 @@
 /* Neuer Kern: Schrift, Farben, Fokus. Wird als letzte Datei in globals.css eingebunden. */
 
-/* Nunito (OFL-1.1, Lizenz in public/licenses/nunito-OFL.txt), nur lateinischer Zeichensatz. */
+/* Nunito (OFL-1.1, Lizenz in public/licenses/nunito-OFL.txt): lateinischer Zeichensatz und, nur bei Bedarf geladen,
+   der erweiterte für Namen wie „Hōryū-ji“ oder „Białowieża“. Zeichenbereiche wie im Paket. */
+@font-face {
+  font-family: 'Nunito Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 1000;
+  src: url('@/node_modules/@fontsource-variable/nunito/files/nunito-latin-ext-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @font-face {
   font-family: 'Nunito Variable';
   font-style: normal;
@@ -35,7 +45,7 @@
 }
 
 /* Ziele, die nur das Programm fokussiert (Überschriften, Hauptbereich), bleiben ruhig. */
-:is(h1, h2, h3, h4, main, section, article, aside, div, p)[tabindex="-1"]:is(:focus, :focus-visible) {
+:is(h1, h2, h3, h4, main, header, section, article, aside, div, p)[tabindex="-1"]:is(:focus, :focus-visible) {
   outline: none;
 }
 
@@ -294,6 +304,8 @@
   line-height: 1.36;
   color: var(--kern-text);
 }
+/* Lange Wörter wie „Lebensgeschichten“ passen bei großer Schrift nicht in schmale Karten. */
+.kern-neuigkeiten :is(h1, h2, li p) { overflow-wrap: break-word; hyphens: auto; }
 .kern-neuigkeiten li p { font-size: 17px; color: var(--kern-text); }
 .kern-neuigkeiten-frueher { margin-top: 24px; }
 .kern-neuigkeiten-frueher > summary {
