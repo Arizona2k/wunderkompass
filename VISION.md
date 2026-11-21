@@ -1,6 +1,6 @@
 # VISION – Wofür es WunderKompass gibt
 
-Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht in [docs/entwurf/2026-11-21-neuausrichtung-design.md](docs/entwurf/2026-11-21-neuausrichtung-design.md).
+Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht in [docs/entwurf/2026-11-21-neuausrichtung-design.md](docs/entwurf/2026-11-21-neuausrichtung-design.md). Was wir aus dem alten Katalog „WunderKompass 2027“ übernehmen, steht in [docs/entwurf/2026-11-21-katalog-2027-einordnung.md](docs/entwurf/2026-11-21-katalog-2027-einordnung.md).
 
 ## Die sechs Ziele
 
@@ -16,6 +16,7 @@ Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht
 - Kinder von **5 bis 10 Jahren**, selten 12 bis 14.
 - Meistens **zusammen mit einem Elternteil**, ab etwa 8 auch allein.
 - Altersangaben sind nur Orientierung. Es gibt keine Altersabfrage und keine getrennten Seiten nach Alter.
+- Jedes Thema hat **drei Tiefen**: kurz für alle, „Mehr erfahren“ für Neugierige und Eltern, „Für Große“ (12–14) freiwillig.
 
 ## Ton
 
@@ -62,7 +63,15 @@ Dazu: Suche, Entdeckerpass (Fortschritt und Sicherung) und der 3D-Globus mit Rü
 Jedes Thema führt zu fachlich echten Nachbarn: verwandte Themen, Orte auf dem Globus, Spiele und Experimente.
 Beispiel: Elefant → Savanne → Ort auf dem Globus → Wasser und Trockenzeit → kleines Spiel.
 Keine Zufallsempfehlungen. Jede Verbindung muss man einem Kind in einem Satz erklären können.
+Neue Inhalte bekommen beim Einbauen gleich ihre Verbindungen. Die Suche versteht auch Fragen aus mehreren Wörtern. Antworten auf Warum-Fragen kommen aus geprüften Texten. Jeder Weg führt zurück zum Ausgangspunkt.
+
+## Mitmachen, 3D und Globus
+
+- **Mitmachen mit Lernnutzen.** Jede Interaktion hilft, eine Frage zu beantworten. Ein Regler, der nichts erklärt, kommt weg. Spiele haben Stufen und erklären Fehler.
+- **3D nur, wo es erklärt.** Zum Beispiel Sonnensystem, Tag und Nacht, Jahreszeiten, Mondphasen, ein Vulkan im Schnitt. Jede 3D-Ansicht hat eine 2D-Fassung und lässt sich mit der Tastatur bedienen. Sie läuft offline und auf einfachen Handys und bleibt im Größenbudget. Wir nutzen das vorhandene Three.js.
+- **Der Globus als Herzstück** (Phase 4): Themenebenen wie Klimazonen, Tierwelten, Ozeane und Orte aus den Wissenskarten. Jede Ebene führt zu Karten, Spielen und Laboren und wieder zurück.
+- **Neue Themen** (zum Beispiel Körper, Geld, Religionen, Urzeit, Roboter) ziehen in die sieben Welten, Welt für Welt geprüft. Die Sorgfaltsregeln je Thema stehen in der Katalog-Einordnung.
 
 ## Was wir nicht bauen
 
-Kein Konto und keine Cloud für Kinderdaten. Kein Chatbot für Kinder. Keine Nachrichten. Keine Kosten.
+Kein Konto und keine Cloud für Kinderdaten. Kein Chatbot für Kinder. Keine Nachrichten. Keine Kosten. Kein 3D als Schmuck. Keine Tagespolitik.

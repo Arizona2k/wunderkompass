@@ -9,11 +9,11 @@ Der alte Aufgabenbestand (498 Zeilen, Pakete und WK-Nummern) liegt im alten Stan
 Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Zuerst das Handy (320–390 px), dann Tablet und Rechner.
 
 1. **Entwurf** in `docs/entwurf/` mit Skizzen für Handy und Rechner, Freigabe durch den Nutzer.
-2. **Design-System:** Schrift, Farben (hell, Orange und Petrol als Akzente), Abstände, Tippflächen, Kacheln mit „Glossy“-Schimmer (Antippen auf Touch, ruhig bei „Bewegung reduzieren“), Bild- und Fotorahmen, Bewegung.
+2. **Design-System:** Schrift, Farben (hell, Orange und Petrol als Akzente), Abstände, Tippflächen, Kacheln mit „Glossy“-Schimmer (Antippen auf Touch, ruhig bei „Bewegung reduzieren“), Bild- und Fotorahmen, Bewegung. Einheitlich für alle Bereiche; jeder Baustein mit Tastatur bedienbar und mit sichtbarem Fokus (Katalog 2027, Abschnitt 5).
 3. **Startseite „Entdecken“:** eine Frage mit großem Bild, Weiter-machen, Entdeckung des Tages, frühe Themen, Suche. Doppelte Titel und Einleitungen weg; das erste Motiv im ersten Bildschirm (WK-053, WK-057).
 4. **Navigation:** kompakter Wechsel der sechs Bereiche auf dem Handy; heute schneidet die Leiste bei 360 px „Entdecken“ links an (Befund Schritt 0).
 5. **Themenwelt-Seite:** Themen als große Bildkacheln, Filter ohne langen Vorlauf (WK-053: mobile Tierübersicht).
-6. **Neue Wissenskarte:** kurz und kindgerecht oben, Vertiefung („Mehr erfahren“) freiwillig, Bild mit Nachweis, ein kleines Tun (raten, tippen), Verbindungen zu echten Nachbarn (Ziel 6).
+6. **Neue Wissenskarte:** kurz und kindgerecht oben, Vertiefung („Mehr erfahren“, später „Für Große“) freiwillig, Bild mit Nachweis, ein kleines Tun (raten, tippen), Verbindungen zu echten Nachbarn (Ziel 6).
 7. **Bildwirkung:** Bilder laden ohne graue Platzhalter im ersten Bildschirm (Löwe/Gepard bei 1440 px), Fotos füllen die Kartenbreite (Elefant).
 8. **Verbindungen (Ziel 6):** 15 von 196 erklärten Verbindungen haben keine Rückrichtung im `related`-Feld; zufällig wirkende Nachbarn (Elefant → Honigbiene, Großer Panda) durch fachlich echte ersetzen.
 9. **Befunde des `design-pruefer` aus Schritt 0** (Startseite, Tierwelt, Eisbär-Karte bei 360 und 1280 px):
@@ -44,10 +44,13 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - 16 Lernreisen mit 80 Kapiteln und 240 Aufgaben kindgerecht nacharbeiten: mehr Tun als Ankreuzen, Hinweise, erklärende Rückmeldung (WK-055, WK-048).
 - Planetenwerte vereinheitlichen: Neptun 30,05 AE (Orbitlabor) gegen 30,18 AE (Größenvergleich), ebenso Saturn und Uranus; eine Definition, Quelle und Erklärung (WK-056).
 - Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen.
+- **Neue Themenfelder aus dem Katalog 2027** (Körper, Geld und Zinsen, Religionen, Robotik, Physik und Chemie, Sport, Urzeit): nach den Sorgfaltsregeln in `docs/entwurf/2026-11-21-katalog-2027-einordnung.md` in die passenden Welten, jedes Thema in drei Tiefen. Eigene Welt „Urzeit“ (Dinosaurier, Fossilien, Erdzeitalter) beim Entwurf von Phase 3 prüfen.
 
 ## Phase 4 – Globus, Spiele, Labore (grob)
 
 - Einzeln in den neuen Kern übernehmen und dabei verbessern.
+- **Globus als Herzstück** (Katalog 2027, Abschnitt 3): Themenebenen (Klimazonen, Tierwelten, Ozeane, Orte aus den Wissenskarten), von jeder Ebene zu Karten, Spielen und Laboren und zurück. Die vorhandene 2D-Ersatzansicht (`FallbackGlobe` in `app/globe.tsx`) bleibt und wird mit verbessert.
+- **3D-Modelle** (Katalog 2027, Abschnitt 2): zuerst den Bestand sichten (welche Modelle erklären etwas, welche sind nur Schmuck, wo hilft echtes 3D). Dann ein erstes neues 3D-Modell mit klarem Lernwert (Vorschlag: Tag und Nacht oder Jahreszeiten), mit 2D-Fassung, Tastatur, Offline und Größenbudget. React Three Fiber dabei prüfen (Lizenz, Größe, Nutzen); nur exakt gepinnt aufnehmen.
 - Frage-Spiele (Flaggen, Hauptstädte, Silhouetten, Klima, Foto-Forscher, Schatzsuche): der dritte Hinweis verrät nicht mehr die Lösung, echte Stufen, Fehlantworten erklärt (WK-021, WK-056; Stand 11.10., vor der Arbeit neu prüfen).
 - Rückmeldungen ehrlich formulieren: nach einer Auswahl nicht „Richtig erklärt!“ bescheinigen (WK-056; teils erledigt, vorher prüfen).
 - Länder- und Flaggen-Memory mit drei Stufen und Erklärungen (WK-038). Wissens-Challenge: falsche Antworten begründen, neue Themen (WK-017).
@@ -80,7 +83,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
 
-**Themenwünsche des Nutzers (21.11.2026):**
+**Themenwünsche des Nutzers (21.11.2026)** (Sorgfaltsregeln je Feld: `docs/entwurf/2026-11-21-katalog-2027-einordnung.md`):
 - Medizin und Körper, zum Beispiel Knochen (den Körper erklären, keine Gesundheitsratschläge).
 - Wirtschaft, Geld und Zinsen (gut als Mitmach-Modell im Forscherlabor).
 - Religionen der Welt (neutral und respektvoll).
