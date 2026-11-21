@@ -29,11 +29,12 @@ export async function kernHuelle(ctx) {
       if (width < 768) await leisteVerdecktNichts(page, width);
       if (width === 320) await dialogUeberLeiste(page);
       await updatesOhneMarkierung(page, width);
+      await buchLeisteBleibtRuhig(page, width);
     });
     await withPage(ctx, view, page => leisteNavigiert(page, view));
     await withPage(ctx, view, page => zurueckNachLeiste(page, view, ctx.engine));
     if (width < 768) await withPage(ctx, view, page => zurueckOhneFokus(page, view));
-    ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her`
+    ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her, Buchleiste springt nach Zurück nicht um`
       + (width < 768 ? ', auch nach einem Tipp ohne Fokus wie in Safari, Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
   await grosseSchrift320(ctx);
@@ -399,6 +400,29 @@ async function updatesOhneMarkierung(page, width) {
   // Der Fuß-Link führt dorthin, wo man schon ist: Er zeigt das, statt wie ein Ziel auszusehen.
   const neu = page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true});
   assert.equal(await neu.getAttribute('aria-current'), 'page', `updatesOhneMarkierung ${width}: „Was ist neu?“ im Fuß ist nicht als aktuelle Seite markiert`);
+}
+
+// Das Buch bleibt versteckt geladen, während ein Kind eine Karte liest. Kommt es zurück,
+// darf die Bereichsleiste im Buch nicht umspringen. Sonst meldet der Browser eine
+// ResizeObserver-Schleife (WebKit wertet sie als Seitenfehler, Chromium nur leise).
+async function buchLeisteBleibtRuhig(page, width) {
+  await page.evaluate(() => {
+    window.__roSchleifen = [];
+    addEventListener('error', event => { if (/ResizeObserver loop/.test(event.message)) window.__roSchleifen.push(location.hash); });
+  });
+  await page.evaluate(() => { location.hash = 'book/words/Schwerkraft'; });
+  const buchLeiste = page.locator('.book-navigation');
+  await buchLeiste.waitFor(WARTEN);
+  const vorher = await buchLeiste.getAttribute('data-strip-overflow');
+  for (let runde = 0; runde < 2; runde++) {
+    await page.evaluate(() => { location.hash = 'world/topic/science-tides'; });
+    await page.locator('.world-article').first().waitFor(WARTEN);
+    await page.goBack();
+    await buchLeiste.waitFor({state: 'visible', ...WARTEN});
+    await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(ok, 100)))));
+  }
+  assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], `buchLeisteBleibtRuhig ${width}: ResizeObserver-Schleife nach Zurück ins Buch`);
+  assert.equal(await buchLeiste.getAttribute('data-strip-overflow'), vorher, `buchLeisteBleibtRuhig ${width}: Bereichsleiste im Buch hat ihre Form gewechselt`);
 }
 
 // Die Hilfe „So geht’s“ steht auf der Startseite in jeder Breite (der alte Hilfe-Knopf im Kopf ist weg).

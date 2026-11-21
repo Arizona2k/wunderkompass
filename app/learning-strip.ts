@@ -14,6 +14,9 @@ export function useLearningStrip(value:string){
  useEffect(()=>{
   const list=listRef.current;if(!list)return;
   const update=()=>{
+   // A hidden strip (its area stays mounted but hidden) measures 0 × 0 and says nothing about space.
+   // Keeping the last state avoids a layout flip inside the ResizeObserver when the area returns.
+   if(!list.clientWidth)return;
    if(previousRef.current)previousRef.current.disabled=list.scrollLeft<=1;
    if(nextRef.current)nextRef.current.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-1;
    if(list.parentElement)list.parentElement.dataset.stripOverflow=String(list.scrollWidth>list.clientWidth+1);
