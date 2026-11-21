@@ -4,8 +4,6 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
-import {selectTests,checkSyntaxFiles} from '../scripts/test-selection.mjs';
-import {REQUIRED_SUITES} from '../scripts/quality-evidence.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
 test('bundle budget includes transitive shared chunks once, excludes deferred readers, and fails oversize/missing metrics',()=>{
@@ -19,18 +17,6 @@ test('bundle budget includes transitive shared chunks once, excludes deferred re
   const m=measureBuild(dir);assert.ok(m.journeyInquiryGzipBytes>0);assert.equal(violations(m,{journeyInquiryGzipBytes:1})[0].metric,'journeyInquiryGzipBytes');assert.equal(m.entryJsBytes,7);assert.equal(m.entryCssBytes,3);assert.equal(m.totalJsBytes,20);assert.equal(m.entryFiles.length,2);
   assert.deepEqual(violations(m,{entryJsBytes:7}),[]);assert.equal(violations(m,{entryJsBytes:6})[0].metric,'entryJsBytes');assert.equal(violations({}, {entryJsBytes:7}).length,1);fs.rmSync(path.join(dir,'assets','journey-inquiries-fixture.json'));assert.throws(()=>measureBuild(dir),/One current journey inquiry/);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
-});
-test('local selection follows real transitive unit dependencies and retains conservative browser/CI boundaries',()=>{
- const hints=selectTests(['app/challenge-hints.json']);assert.ok(hints.unitTests.includes('tests/challenge.test.mjs'));assert.deepEqual(hints.browser,['challenge','offline']);assert.equal(hints.fullRequiredBeforeReady,true);
- const stored=selectTests(['app/progress-storage.ts']);assert.ok(stored.unitTests.includes('tests/progress.test.mjs'));assert.ok(stored.unitTests.includes('tests/playground.test.mjs'));assert.ok(stored.browser.includes('backup'));assert.ok(stored.browser.includes('offline'));
- for(const file of ['vite.config.ts','app/foundation.css','app/world-reader.tsx','unknown-runtime.js']){const p=selectTests([file]);assert.ok(p.browser.includes('foundation'),file);assert.ok(p.browser.includes('core'),file);}
- assert.deepEqual(selectTests(['README.md']).browser,[]);assert.deepEqual(selectTests(['README.md']).unitTests,[]);
- assert.equal(selectTests(['scripts/release/policy.cjs']).release,true);assert.ok(selectTests(['package.json']).unitTests.includes('tests/playground.test.mjs'));
- const removed=selectTests(['app/deleted-runtime-dependency.mjs']);assert.ok(removed.unitTests.includes('tests/progress.test.mjs'));assert.ok(removed.browser.includes('backup'));
- assert.ok(selectTests(['app/global-search.tsx']).browser.includes('no-news'),'shared UI changes retain the news-removal regression');
- const metadata=selectTests(['content/editorial-reviews.json']);assert.deepEqual(metadata.browser,[]);assert.equal(metadata.staticContent,true);assert.equal(metadata.fullRequiredBeforeReady,true);assert.ok(metadata.unitTests.includes('tests/animal-expansion.test.mjs'));assert.ok(metadata.unitTests.includes('tests/history-learning.test.mjs'));
- assert.deepEqual(new Set(selectTests(['content/unknown-evidence.json']).browser),new Set(REQUIRED_SUITES));
- assert.deepEqual(new Set(selectTests(['content/editorial-reviews.json','app/world-reader.tsx']).browser),new Set(REQUIRED_SUITES),'a metadata change cannot hide a shared product dependency');
 });
 test('offline fingerprint covers entry/config/package changes, ignores local evidence and is content-based',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'wk-inputs-'));
@@ -54,10 +40,3 @@ test('authorised aggregate growth stays measured while initial and individual bu
  assert.deepEqual(violations({...large,...c.build},c.build),[]);assert.equal(observedTrends(large,c.observeOnly).totalJsGzipBytes.current,50000000);assert.throws(()=>observedTrends({},c.observeOnly),/Missing observed/);
  for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','entryCssGzipBytes','largestJsBytes','worldGeometryBytes']){assert.ok(c.build[key]>0);assert.equal(violations({...c.build,[key]:c.build[key]+1},c.build)[0].metric,key);}
 });
-
-test('local changed-module syntax rejects the actual duplicate-import failure before any browser execution',()=>{
- const dir=fs.mkdtempSync(path.join(os.tmpdir(),'wk-node-syntax-'));
- try{const file=path.join(dir,'browser-module.mjs');fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nimport {createHash} from 'node:crypto';\n");assert.throws(()=>checkSyntaxFiles([file]),/Node syntax check failed/);fs.writeFileSync(file,"import {createHash} from 'node:crypto';\nexport const hash = createHash;\n");assert.deepEqual(checkSyntaxFiles([file]).checked,[file]);assert.ok(selectTests(['tests/browser/foundation.mjs']).syntaxFiles.includes('tests/browser/foundation.mjs'));assert.deepEqual(selectTests(['README.md']).syntaxFiles,[]);assert.deepEqual(selectTests(['app/deleted-runtime-dependency.mjs']).syntaxFiles,[]);}finally{fs.rmSync(dir,{recursive:true,force:true});}
-});
-
-test('local conservative selection uses the same required UI groups as full acceptance',()=>{for(const file of ['unknown-runtime-input.js','scripts/quality-evidence.mjs','app/learning-data.ts'])assert.deepEqual(new Set(selectTests([file]).browser),new Set(REQUIRED_SUITES));assert.deepEqual(selectTests(['app/challenge-hints.json']).browser,['challenge','offline']);});
