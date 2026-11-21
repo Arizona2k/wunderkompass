@@ -9,7 +9,12 @@ type Props = {onEltern: (e: MouseEvent<HTMLButtonElement>) => void; neuAktiv?: b
 export default function Fusszeile({onEltern, neuAktiv = false, children}: Props) {
   return <footer className="kern-fuss">
     <div className="kern-fuss-links">
-      <a href="#updates" data-route-focus="home-updates" aria-current={neuAktiv ? 'page' : undefined} onClick={event => { event.preventDefault(); navigateHash('updates'); }}>Was ist neu?</a>
+      <a href="#updates" data-route-focus="home-updates" aria-current={neuAktiv ? 'page' : undefined} onClick={event => {
+        event.preventDefault();
+        // Wie in der Bereichsleiste: Safari fokussiert den Link nicht, „Zurück“ braucht ihn.
+        event.currentTarget.focus({preventScroll: true});
+        navigateHash('updates');
+      }}>Was ist neu?</a>
       <button type="button" onClick={onEltern}>Für Eltern</button>
     </div>
     {children}

@@ -32,8 +32,9 @@ export async function kernHuelle(ctx) {
     });
     await withPage(ctx, view, page => leisteNavigiert(page, view));
     await withPage(ctx, view, page => zurueckNachLeiste(page, view, ctx.engine));
+    if (width < 768) await withPage(ctx, view, page => zurueckOhneFokus(page, view));
     ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her`
-      + (width < 768 ? ', Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
+      + (width < 768 ? ', auch nach einem Tipp ohne Fokus wie in Safari, Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
   await grosseSchrift320(ctx);
   ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Beispieltexte passen, Suchfeld ganz sichtbar, Pass unverändert');
@@ -348,6 +349,39 @@ async function zurueckNachLeiste(page, {width, touch}, engine) {
   if (engine === 'chromium') {
     await page.waitForFunction(() => document.activeElement?.dataset.routeFocus === 'home-nav-games', null, WARTEN).catch(() => {});
     assert.equal(await page.evaluate(() => document.activeElement?.dataset.routeFocus), 'home-nav-games', `zurueckNachLeiste ${width}: „Spielen“ hat nach „Zurück“ keinen Fokus`);
+  }
+}
+
+// Safari (auch jeder Browser auf dem iPhone) fokussiert einen Link beim Antippen nicht.
+// Auch dann bringt „Zurück“ die Lesestelle zurück: nach „Spielen“ in der Leiste mitten im Lesen
+// und nach „Was ist neu?“ ganz unten im Fuß. HTMLElement.click() klickt wie Safari, ohne Fokus.
+async function zurueckOhneFokus(page, {width, touch}) {
+  const nav = leisteVon(page);
+  await tippe(nav.getByRole('link', {name: 'Welten', exact: true}), touch);
+  await page.locator('.world-view').waitFor();
+  await page.waitForFunction(() => document.activeElement?.id === 'world-category-title', null, WARTEN).catch(() => {});
+  const faelle = [
+    ['Spielen', nav.getByRole('link', {name: 'Spielen', exact: true}), '#games', false],
+    ['Was ist neu?', page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true}), '#updates', true],
+  ];
+  for (const [name, link, hash, ganzUnten] of faelle) {
+    // Wie nach dem Ankommen: Der Fokus liegt auf der Überschrift, nicht auf dem Link.
+    await page.evaluate(() => document.getElementById('world-category-title')?.focus({preventScroll: true}));
+    const stelle = await page.evaluate(unten => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      return unten ? max : Math.min(600, Math.floor(max / 2));
+    }, ganzUnten);
+    await page.evaluate(y => scrollTo({top: y, behavior: 'instant'}), stelle);
+    await page.waitForFunction(y => Math.abs(scrollY - y) <= 1, stelle, WARTEN);
+    const gemerkt = await page.evaluate(() => scrollY);
+    await link.evaluate(element => element.click());
+    await page.waitForFunction(ziel => location.hash === ziel, hash, WARTEN);
+    await page.goBack();
+    await page.waitForFunction(() => location.hash === '#world', null, WARTEN);
+    await page.locator('.world-view').waitFor();
+    await page.waitForFunction(y => Math.abs(scrollY - y) <= 2, gemerkt, WARTEN).catch(() => {});
+    const y = await page.evaluate(() => scrollY);
+    assert.ok(Math.abs(y - gemerkt) <= 2, `zurueckOhneFokus ${width} (${name}): Lesestelle war ${gemerkt}, nach „Zurück“ ${y}`);
   }
 }
 

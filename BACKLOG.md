@@ -43,6 +43,15 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - Gleiche Buch-Symbole für verschiedene Dinge; Pass-Symbole bei 320 px eng; Entdeckerpunkte und Pokal passen nicht zu VISION (Sammeln ohne Zahlen). Teilschritt 5 (Sammlung).
     - Labor: erster Bildschirm zeigt wenig zum Tun, Knöpfe unterschiedlich hoch. Lernreisen: Fortschrittsbalken kaum zu sehen. Mit Phase 4, kleine Störungen vorher in Teilschritt 6.
     - Beschriftungen in Zeichnungen (SVG) nur 9–11 px groß und noch in der alten Schrift (Regel `svg{font-family:…}` in `kern.css`). Je Zeichnung mit ihrer Phase vergrößern und auf Nunito umstellen.
+16. **Kleine Befunde der Schlussprüfung (`code-pruefer`) zu Teilschritt 1**, für Teilschritt 6 „Feinschliff“, falls nicht vorher erledigt. Behoben wurde schon: Auf dem iPhone ging nach einem Tipp in Leiste oder Fuß und „Zurück“ die Lesestelle verloren (Test `zurueckOhneFokus`).
+    - Rückkehr-Sichtprüfungen rechnen ohne die feste Leiste (`app/hash-route.ts`, `returnGuideFocus` in `app/earth-explorer.tsx`): Ein Ziel kann fokussiert, aber hinter der Leiste verdeckt sein. Betrifft vor allem Tastatur und Bildschirmleser. Lösung: sichtbare Unterkante = Fensterhöhe minus `scroll-padding-bottom`.
+    - Tab-Reihenfolge am Handy springt oben → unten → oben, weil die Leiste im Code zwischen Marke und Knöpfen steht.
+    - Totes CSS: `.brand-word`, `.brand-period`, Abstand `.learning-tabs` wirkt nicht mehr (Abstände zwischen Seitenkopf, Offline-Hinweis und „Weiter entdecken“ im Design-Abgleich ansehen), `data-focus-at-heading` liest niemand mehr.
+    - Zwei Fokus-Prüfungen in `tests/browser/discovery-central.mjs` messen nur die Rahmenbreite; Rahmenart mitprüfen und die Meldung „calm heading focus remains visible“ klären.
+    - `env(safe-area-inset-bottom)` in `kern.css` wirkt erst mit `viewport-fit=cover`; heute harmlos.
+    - Fuß-Link „Was ist neu?“ und Marke öffnen bei Strg- oder Mittelklick keinen neuen Tab (die Leiste kann das schon).
+    - „Spielen“ in der Leiste führt bei offenem Spiel nicht zur Übersicht (Altverhalten). Mit Teilschritt 3 klären.
+    - Prüfen, ob Safari auch auf anderen Rückwegen die Lesestelle verliert (angetippte Karten, Kapitel), weil es Links beim Antippen nicht fokussiert. Die WebKit-Vollprüfung in der CI zeigt es.
 
 ## Phase 2 – Tierwelt (grob)
 

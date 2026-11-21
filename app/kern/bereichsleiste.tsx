@@ -13,6 +13,8 @@ export default function Bereichsleiste({bereich, onBereich}: Props) {
     // Mit Strg, Cmd, Umschalt oder Mittelklick öffnet der Browser den Link selbst.
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
+    // Safari fokussiert angetippte Links nicht; „Zurück“ findet die Lesestelle über den fokussierten Link.
+    event.currentTarget.focus({preventScroll: true});
     onBereich(ziel);
   }
   return <nav className="kern-leiste" aria-label="Bereiche">
