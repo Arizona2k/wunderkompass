@@ -39,7 +39,7 @@ Liefen schon vor Schritt 0 nirgends mehr und liegen nur im alten Stand (`git sho
 
 ## Neuer Chat: Startnachricht
 
-Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
+Neue Chats in der Cloud-Umgebung **„wunderkompass“** starten (beim Start des Chats auswählen). Ihr Start-Skript holt Pakete und die passenden Browser; angelegt am 21.11.2026, in einem frischen Chat noch nicht erprobt. Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
 
 ```text
 Wir arbeiten weiter an WunderKompass (Repository Arizona2k/wunderkompass).
