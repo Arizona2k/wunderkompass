@@ -99,8 +99,11 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   await assertBookMechanicsFigure(figure,'forces-and-net');proof.missingDrawnForceNegative=true;
   await context.close();context=null;
   // The original WebKit countercase exceeded its unchanged History API quota
-  // during this real rapid sequence. A fresh context isolates the two widths;
-  // no artificial delay, rate override or error suppression makes it pass.
+  // during this real rapid sequence. A fresh context isolates the two widths.
+  // bookRelatedWordView limits the app's own history writes per step, so no
+  // rate override or error suppression makes it pass. In WebKit it only slows
+  // the test's own navigations below WebKit's separate limit of 200 per 10 s
+  // (scripts/navigation-tempo.mjs); a child never comes near that.
   const rapid={};
   for(const width of[320,1440]){
    context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
