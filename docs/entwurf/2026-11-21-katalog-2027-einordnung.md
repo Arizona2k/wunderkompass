@@ -5,7 +5,7 @@ Der Katalog liegt unverändert in [docs/archiv/WunderKompass_2027_Anforderungen.
 
 ## Kurzfazit
 
-Der Katalog will im Kern dasselbe wie wir: **besser statt größer**. Er fordert echte und geprüfte Inhalte, gute 3D-Modelle und einen starken Globus. Alles soll verknüpft sein, und nichts darf verloren gehen. Das übernehmen wir.
+Der Katalog will im Kern dasselbe wie wir: **besser statt größer**. Er fordert echte und geprüfte Inhalte, gute 3D-Modelle und einen starken Globus. Alles soll verknüpft sein. Das übernehmen wir. Seinen Bestandsschutz („nichts darf verloren gehen“) übernehmen wir nur für den Fortschritt der Kinder und ihre Links (Abschnitt 8).
 
 Zwei Dinge passen nicht mehr:
 
@@ -26,7 +26,7 @@ Der Katalog sagt selbst: Er ist keine Freigabe, laufende Arbeit abzubrechen. Wir
 | 5 Design und Barrierefreiheit | übernommen | Einheitliches Design-System, klare Startseite, gute Lesbarkeit, Tastatur und 2D-Ersatz für 3D. | BACKLOG Phase 1 |
 | 6 Interaktivität | übernommen | Mitmachen statt Ankreuzen, Stufen, Warum-Fragen. Regel: Jede Interaktion hat einen erkennbaren Lernnutzen. | VISION (Mitmachen) |
 | 7 Verknüpfung, Suche, Rückwege | übernommen | Ziel 6. Suche versteht auch Fragen aus mehreren Wörtern. Antworten auf Warum-Fragen kommen aus geprüften Texten, nicht von einer KI. Jeder Weg führt zurück. | VISION (Ziel 6), BACKLOG |
-| 8 Bestandsschutz | gilt schon | Karten, Reisen, Spiele, Labore, Pass, Suche und Links bleiben. | CLAUDE.md (Feste Regeln), Tests |
+| 8 Bestandsschutz | angepasst (Nutzer, 21.11.2026) | Kein Bestandsschutz für Inhalte und Funktionen: Was nicht gut ist, wird geändert, ersetzt oder gestrichen. Geschützt bleiben nur der Fortschritt im Pass und alte Links (IDs nie umbenennen, weggefallene Inhalte sinnvoll umleiten). | CLAUDE.md (Feste Regeln), Tests |
 | 9 Qualität | Kern übernommen | Geprüfte Quellen, richtige Bilder und Modelle, Tests für Handy und Rechner. Dazu immer echtes Ansehen, nicht nur grüne Tests. Kein Nachweis-Apparat. | CLAUDE.md (Arbeitsablauf, Helfer) |
 | 10 Reihenfolge | nicht übernommen | Ersetzt durch Weg C. Audit V2 ist nachgeprüft: 18 von 19 Befunden behoben, der Rest steht im BACKLOG (unten). | BACKLOG |
 | 11 Eigene Qualitätskontrolle | übernommen | Erst verstehen, Doppeltes vermeiden, Folgen prüfen, Schwächen offen sagen, keine unnötigen Schleifen. | CLAUDE.md |

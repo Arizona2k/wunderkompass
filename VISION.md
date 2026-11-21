@@ -7,7 +7,7 @@ Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht
 1. Kinder finden in wenigen Sekunden etwas Spannendes und können sofort etwas tun: schauen, tippen, raten, ausprobieren. Wer mehr wissen will, findet freiwillige Vertiefung („Mehr erfahren“), auch für Eltern.
 2. Inhalte stimmen fachlich und sind kindgerecht. Jede wichtige Aussage hat eine geprüfte Quelle.
 3. Die Seite funktioniert gut auf Handy (ab 320 px), Tablet und Rechner, auch offline.
-4. Weiterentwickeln ist billig: kleine Schritte, schnelle Prüfungen, eine Vorschau für jeden Schritt.
+4. Weiterentwickeln ist billig: kleine Schritte, schnelle Prüfungen, eine Vorschau für jeden Schritt. Kein Bestandsschutz: Was nicht gut ist, wird geändert oder gestrichen, auch wenn es es schon gibt. Nur der Fortschritt der Kinder und ihre Links bleiben erhalten.
 5. Der Nutzer versteht jederzeit, was passiert, und entscheidet bei wichtigen Punkten mit.
 6. Alles hängt zusammen (eigener Abschnitt unten).
 
