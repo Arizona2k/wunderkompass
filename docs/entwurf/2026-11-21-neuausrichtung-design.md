@@ -51,6 +51,9 @@ Die Reihenfolge ab Phase 2 kann sich ändern, wenn der Nutzer das möchte oder I
 3. Die Seite funktioniert gut auf dem Handy (ab 320 px Breite), auf dem Tablet und am Rechner, auch offline.
 4. Weiterentwickeln ist billig. Kleine Schritte, schnelle Prüfungen und eine Vorschau für jeden Schritt.
 5. Der Nutzer versteht jederzeit, was passiert, und entscheidet bei wichtigen Punkten mit.
+6. **Alles hängt zusammen** (Wunsch des Nutzers, 21.11.2026). Jedes Thema führt zu sinnvoll verwandten Themen, Orten, Spielen und Experimenten, damit Kinder Zusammenhänge entdecken. Ein Beispiel für so einen Weg: Elefant → Savanne → Ort auf dem Globus → Wasser und Trockenzeit → kleines Spiel. Die Verbindungen müssen fachlich echt sein, keine Zufallsempfehlungen. Heute wirken viele Verknüpfungen zufällig, zum Beispiel Elefant → Honigbiene oder Großer Panda.
+
+Neue Welten, Themen, Spiele und andere Ideen sind ausdrücklich erwünscht. Claude entscheidet darüber, sammelt sie im BACKLOG (mit Hilfe des `ideen-scout`) und baut sie in passende Phasen ein. Wichtige Richtungswechsel zeigt Claude vorher dem Nutzer.
 
 ### Nicht-Ziele (jetzt nicht)
 
