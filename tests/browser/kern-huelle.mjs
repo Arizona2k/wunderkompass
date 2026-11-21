@@ -445,6 +445,7 @@ async function neuigkeiten(page, width) {
   const zeit = erster.locator('time');
   assert.equal(await zeit.getAttribute('datetime'), NEUIGKEITEN[0].datum, `neuigkeiten ${width}: datetime`);
   assert.equal((await zeit.innerText()).trim(), datumLesbar(NEUIGKEITEN[0].datum), `neuigkeiten ${width}: lesbares Datum`);
+  await kurzeWoerterGanz(page, `neuigkeiten ${width}`);
   // Ohne Scrollen sichtbar, auch über der Leiste unten am Handy.
   const sichtbar = await ueberschrift.evaluate((el, leiste) => {
     const r = el.getBoundingClientRect(), nav = document.querySelector(leiste).getBoundingClientRect();
@@ -460,6 +461,34 @@ async function neuigkeiten(page, width) {
   await frueherBox.locator(':scope > summary').click();
   assert.equal(await frueherBox.evaluate(el => el.open), true, `neuigkeiten ${width}: „Früher“ öffnet nicht`);
   await axeOhneVerstoss(page, `neuigkeiten ${width} (Früher offen)`);
+  await kurzeWoerterGanz(page, `neuigkeiten ${width} (Früher offen)`);
+}
+
+// Leseanfänger stolpern über getrennte kurze Wörter („ei-ner“). Kein Wort unter
+// 10 Buchstaben darf über zwei Zeilen laufen; gemessen an der Lage jedes Buchstabens.
+async function kurzeWoerterGanz(page, wo) {
+  const geteilt = await page.evaluate(() => {
+    const funde = [];
+    for (const el of document.querySelectorAll('.kern-neuigkeiten li :is(h2, p)')) {
+      if (!el.getClientRects().length) continue;
+      const gang = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      for (let knoten = gang.nextNode(); knoten; knoten = gang.nextNode()) {
+        for (const wort of knoten.textContent.matchAll(/\p{L}+/gu)) {
+          if (wort[0].length >= 10) continue;
+          const zeilen = new Set(), bereich = document.createRange();
+          for (let i = 0; i < wort[0].length; i++) {
+            bereich.setStart(knoten, wort.index + i);
+            bereich.setEnd(knoten, wort.index + i + 1);
+            const r = bereich.getBoundingClientRect();
+            if (r.width) zeilen.add(Math.round(r.top));
+          }
+          if (zeilen.size > 1) funde.push(wort[0]);
+        }
+      }
+    }
+    return funde;
+  });
+  assert.deepEqual(geteilt, [], `${wo}: kurze Wörter über zwei Zeilen getrennt`);
 }
 
 async function axeOhneVerstoss(page, wo) {

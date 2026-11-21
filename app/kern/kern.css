@@ -306,7 +306,10 @@
   color: var(--kern-text);
 }
 /* Lange Wörter wie „Lebensgeschichten“ passen bei großer Schrift nicht in schmale Karten. */
-.kern-neuigkeiten :is(h1, h2, li p) { overflow-wrap: break-word; hyphens: auto; }
+/* Lange Wörter dürfen nicht überlaufen. Kurze Wörter bleiben ganz, weil Leseanfänger
+   über „ei-ner“ stolpern: Fließtext ohne Silbentrennung, Überschriften trennen erst ab 10 Buchstaben. */
+.kern-neuigkeiten :is(h1, h2, li p) { overflow-wrap: break-word; }
+.kern-neuigkeiten :is(h1, h2) { hyphens: auto; hyphenate-limit-chars: 10 4 4; }
 .kern-neuigkeiten li p { font-size: 17px; color: var(--kern-text); }
 .kern-neuigkeiten-frueher { margin-top: 24px; }
 .kern-neuigkeiten-frueher > summary {
