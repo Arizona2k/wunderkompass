@@ -3,6 +3,15 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 21.11.2026 – Teilschritt 2, Schritt 0: Prüfungen in drei Browsern repariert
+
+Für Kinder ändert sich fast nichts. Es geht vor allem um die Prüfungen vor dem Umbau der Wissenskarte.
+
+- **Drei neue Fehler der großen Prüfung geklärt:** Keiner lag an der Seite selbst. Ein Chromium-Test wechselte die Seite, während noch Bilder luden; er wartet jetzt. Ein Firefox-Test stürzte wegen eines Fehlers im Testwerkzeug Playwright ab; er umgeht ihn. In WebKit (Safari) sprang ein Buch-Test so schnell zwischen Seiten hin und her, dass Safari weitere Sprünge sperrte. Ein Kind kommt nie so schnell. Der Test bremst jetzt in Safari, und die Sperre zählt künftig als Fehler.
+- **Alter Safari-Fehler mitbehoben:** `engine-journeys` scheiterte in WebKit schon vor Teilschritt 1, aus demselben Grund.
+- **Wissensbuch am Handy:** Beim Drehen des Handys meldete Safari einen Fehler in der Leiste oben im Buch. Die Leiste misst jetzt ihren Rahmen statt sich selbst. Ein neuer Test dreht das Handy hin und her.
+- **Vorbereitung:** Größe der Startdateien gemessen (Obergrenze für den Umbau). Für die 58 Karten von Zeitreise und Erfindungen gibt es eine Liste freier Bildkandidaten mit Lizenz und Urheber; eingebaut wird später.
+
 ## 21.11.2026 – Phase 1, Teilschritt 1 „Aussehen und Hülle“
 
 Die Seite bekommt ihre neue Grundlage. Startseite, Wissenskarte und Weltenseiten werden in den nächsten Teilschritten neu gebaut; hier bekommen sie nur Schrift, Farben und nötige Korrekturen.
