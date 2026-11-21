@@ -49,7 +49,13 @@ export async function passDesign(page,report,width,shots){
  if(delayed)await page.route('**/progress-panel-*.js',holdBackup);
  try{
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true});await opener.click();
- const pass=page.getByRole('dialog',{name:'Entdeckerpass',exact:true}),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
+ // Firefox 159 mit Playwright 1.65.1 stürzt ab („Page crashed“), wenn an einem Rollen-Locator, dessen Name aus
+ // aria-labelledby kommt, nach einer ersten Abfrage evaluateAll oder allTextContents hängt (auf einer leeren
+ // Testseite nachgestellt, 21.11.2026). Den Namen deshalb einmal über die Rolle prüfen und danach denselben
+ // Dialog über seine Klasse ansprechen.
+ const named=page.getByRole('dialog',{name:'Entdeckerpass',exact:true});await named.waitFor();
+ assert.equal(await named.evaluate(el=>el.matches('.passport-atlas')),true,'the named Entdeckerpass dialog is the pass atlas');
+ const pass=page.locator('.passport-atlas[role=dialog]'),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
  await pass.waitFor();await pass.evaluate(el=>Promise.all(el.getAnimations({subtree:true}).map(a=>a.finished.catch(()=>{}))));const hash=new URL(page.url()).hash,activate=control=>width<=390?control.tap():control.click();
  const frame=async()=>{
   assert.equal(await pass.evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.scrollTop===0),true,'pass frame does not overflow or scroll away');
