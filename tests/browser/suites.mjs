@@ -26,6 +26,7 @@ import {researchFlow} from './research.mjs';
 import {researchTransferFlow} from './research-transfer.mjs';
 import {retainedAnswerWordingFlow} from './retained-answer-wording.mjs';
 import {solarFlow} from './solar-comparison.mjs';
+import {kernHuelle} from './kern-huelle.mjs';
 
 // Ältere Abläufe erwarten (browser, base, ready, monitor, report, shots).
 const flow = fn => ({browser, base, ready, monitor, report, shots}) => fn(browser, base, ready, monitor, report, shots);
@@ -57,6 +58,7 @@ export const SUITES = [
       await memoryRound(page, ctx.ready, ctx.report);
     });
   }},
+  {name: 'kern-huelle', set: 'ci', run: kernHuelle},
   {name: 'people-learning', set: 'ci', run: ({browser, base, ready, report, shots}) => peopleLegacyRound(browser, base, ready, report, shots)},
 
   // FULL: alles, was die alten Läufe portable-smoke und journey-engines erreichten.

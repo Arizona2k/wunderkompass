@@ -70,7 +70,6 @@
 .article-atlas .world-mini-question .quiz-answer {min-height:54px;font-size:16px}
 .article-atlas :is(.world-short,.article-experiment,.world-mini-question,.article-network) {scroll-margin-top:24px}
 .article-atlas button:focus-visible,.article-atlas summary:focus-visible,.article-atlas a:focus-visible {outline:3px solid var(--wk-focus);outline-offset:4px}
-.article-atlas [tabindex="-1"]:focus {outline:2px solid var(--wk-teal);outline-offset:4px}
 .world-topic-tile:has(.topic-illustration) {display:flex;flex-direction:column}
 .world-topic-tile:has(.topic-illustration) .world-tile-text {flex:1}
 @media(min-width:700px) {

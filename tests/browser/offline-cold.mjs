@@ -72,6 +72,12 @@ export async function offlineCold(ctx, {full = false} = {}) {
       await page.screenshot({path: path.join(shots, 'offline-start.png')});
       await ready(page);
       assert.equal(await page.evaluate(() => navigator.onLine), false, 'Cold context must report offline before any learning exercise');
+      const nunitoOffline = await page.evaluate(async () => {
+        await document.fonts.ready;
+        return [...document.fonts].some(face => face.family.replace(/["']/g, '') === 'Nunito Variable' && face.status === 'loaded');
+      });
+      assert.ok(nunitoOffline, 'Schrift Nunito kommt beim Offline-Kaltstart aus dem Vorrat');
+      report.checks.push('Schrift Nunito nach Offline-Kaltstart geladen');
 
       await page.evaluate(() => { location.hash = 'world/topic/animal-whale-shark'; });
       const photo = page.locator('.world-photo img').first();
