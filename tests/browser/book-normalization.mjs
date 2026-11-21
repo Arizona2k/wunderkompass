@@ -14,9 +14,16 @@ import {bookLightView} from './book-light.mjs';
 import {bookHeatView} from './book-heat.mjs';
 import {bookMeasurementView} from './book-measurements.mjs';
 import assert from 'node:assert/strict';
-import fs from 'node:fs/promises';
 import {geoEqualEarth} from 'd3-geo';
-const precision=JSON.parse(await fs.readFile(new URL('../../content/book-nature-precision-review.json',import.meta.url),'utf8')).claims;
+import {WORD_SOURCE_NOTES,NATURE_SOURCE_NOTES} from '../../app/precision-source-notes.ts';
+import {GLOSSARY} from '../../app/learning-data.ts';
+import {NATURE} from '../../app/nature-data.ts';
+// Geprüfte Wörter und Naturorte mit Quellenhinweisen, direkt aus den App-Daten.
+const precision=[
+ ...Object.entries(WORD_SOURCE_NOTES).map(([id,notes])=>({id,scope:'word',after:GLOSSARY.find(word=>word[0]===id),sources:notes.geographySources})),
+ ...Object.entries(NATURE_SOURCE_NOTES).map(([id,notes])=>({id,scope:'nature',after:NATURE.find(place=>place.id===id),sources:notes.geographySources})),
+];
+for(const claim of precision)if(!claim.after)throw Error('Quellenhinweis ohne App-Eintrag: '+claim.id);
 const state=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
 export async function bookPrecisionView(page,report,width,{full=true,shots=null}={}){
  const original=await state(page),initial=await page.evaluate(()=>location.hash),proof={width,words:[],nature:[]};

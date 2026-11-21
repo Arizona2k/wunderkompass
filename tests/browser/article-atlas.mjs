@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {fourteenConnectedRoutes,retainedConnectedRoutes} from './people-fourteen-connected-routes.mjs';
 import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
@@ -30,7 +31,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  const open=async id=>{await page.evaluate(id=>location.hash='world/topic/'+id,id);await page.locator('#world-topic-title').filter({hasText:topics.find(t=>t.id===id).title}).waitFor();await page.locator('.article-wayfinder').waitFor();await page.waitForTimeout(100);};
  // This function is serialized in the page; do not rely on Node helpers there.
  const decode=async()=>{for(const image of await page.locator('.article-atlas img').all())await image.evaluate(async el=>{await el.decode();if(!el.naturalWidth)throw Error('Image not decoded')});};
- await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await page.addScriptTag({path:AXE_FILE});
  for(const id of examples){
   await open(id);await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'article overflow '+id+' / '+width);
   const art=page.locator('.article-atlas'),nav=art.getByRole('navigation',{name:'In dieser Entdeckerkarte'});await assertTextInsideControls(page,'.article-wayfinder button','article orientation');

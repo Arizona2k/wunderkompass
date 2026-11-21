@@ -1,8 +1,8 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {createHash} from 'node:crypto';
 import {pendingRouteFocusFlow} from './route-focus.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {fileURLToPath} from 'node:url';
 const budgets=JSON.parse(await fs.readFile(new URL('../../performance-budgets.json',import.meta.url),'utf8')).browser;
 const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title']];
 
@@ -41,7 +41,7 @@ async function contracts(p){
  return data;
 }
 async function accessibility(p,selector){
- if(!await p.evaluate(()=>!!window.axe))await p.addScriptTag({path:fileURLToPath(new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url))});
+ if(!await p.evaluate(()=>!!window.axe))await p.addScriptTag({path:AXE_FILE});
  const violations=await p.evaluate(async scope=>(await axe.run(scope,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),selector);
  assert.deepEqual(violations,[],'shared component WCAG checks '+selector);
 }

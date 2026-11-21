@@ -6,12 +6,15 @@ import {exerciseSolar} from './solar-comparison.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import expansion from '../../content/animal-expansion-review.json' with {type:'json'};
-import review from '../../content/animal-editorial-review.json' with {type:'json'};
+import worldConnections from '../../app/world-connections.json' with {type:'json'};
 import DATA from '../../app/animal-inquiries.json' with {type:'json'};
 import OWN_MEDIA from '../../app/animal-illustrations.json' with {type:'json'};
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import photoMedia from '../../app/world-photos.json' with {type:'json'};
+// Die 24 Tiere der Erweiterung bekommen zusätzlich eine eigene Mini-Frage mit Hinweis.
+const EXPANSION_IDS=new Set(['animal-platypus','animal-short-beaked-echidna','animal-okapi','animal-meerkat','animal-ring-tailed-lemur','animal-north-american-beaver','animal-walrus','animal-red-fox','animal-raccoon','animal-hedgehog','animal-barn-owl','animal-kingfisher','animal-ostrich','animal-atlantic-puffin','animal-common-chameleon','animal-fire-salamander','animal-common-frog','animal-eastern-clown-anemonefish','animal-european-eel','animal-monarch-butterfly','animal-garden-snail','animal-european-lobster','animal-common-cuttlefish','animal-short-snouted-seahorse']);
+// Erklärte Verbindungen der Tierkarten (Fragen-Tiere und Erweiterung) aus den App-Daten.
+const ANIMAL_EDGES=worldConnections.connections.filter(e=>/^animal-(inquiry|expansion)-/.test(e.id));
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 await import('../../scripts/test-runtime.mjs');
@@ -77,7 +80,7 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  const root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.waitFor({state:'attached'});
  if(!await root.evaluate(e=>e.open))await root.locator(':scope > summary').click();
  await root.getByRole('heading',{name:data.goal,exact:true}).waitFor();
- if(expansion.entries.some(e=>e.id===data.id)){
+ if(EXPANSION_IDS.has(data.id)){
   const visual=p.locator('[data-animal-illustration="'+data.id+'"]:not(.compact)');await visual.waitFor();
   await visual.locator('img').scrollIntoViewIfNeeded();
   await assertOwnAnimalMedia(visual,data.id);
@@ -209,7 +212,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   await p.waitForFunction(src=>[...document.querySelectorAll('.world-article img')].some(image=>image.getAttribute('src')===src&&image.complete&&image.naturalWidth>0),expectedMedia.src);
   const decoded=await p.locator('.world-article img').evaluateAll(async(images,src)=>{const image=images.find(i=>i.getAttribute('src')===src);if(!image)throw Error('Missing declared subject image');await image.decode();return{src:image.getAttribute('src'),complete:image.complete,width:image.naturalWidth,height:image.naturalHeight};},expectedMedia.src);assert.equal(decoded.src,expectedMedia.src);assert(decoded.complete&&decoded.width>0&&decoded.height>0);(navigationProof.mediaBeforeReload??=[]).push({id:entry.id,...decoded});
   stage='reload';await p.reload();await ready(p);
-  if(expansion.entries.some(e=>e.id===entry.id)){
+  if(EXPANSION_IDS.has(entry.id)){
    const quiz=p.locator('.world-mini-question');await quiz.getByRole('heading',{name:t.question.prompt,exact:true}).waitFor();
    if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
    const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
@@ -225,7 +228,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
    assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
    await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
   }
-  const edge=[...review.newConnections,...expansion.newConnections].find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
+  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await p.locator('[data-animal-inquiry="'+entry.id+'"]').waitFor({state:'attached'});await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }

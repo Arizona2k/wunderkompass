@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {natureLearningView} from './nature-learning-view.mjs';
 import {natureNavigationView} from './nature-navigation-view.mjs';
 import {natureProofComplete} from '../../scripts/nature-learning-evidence.mjs';
@@ -33,7 +34,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
    await p.locator('.journey-task').scrollIntoViewIfNeeded();await p.locator('.journey-levels button').nth(2).focus();const hint=p.locator('.journey-task summary');if(!await hint.evaluate(e=>e.parentElement.open))await hint.click();await p.locator('.journey-task details[open]').waitFor();await capture('journey-native-200-'+id+'.png');
   }
   await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await p.waitForFunction(()=>{const e=document.querySelector('a.journey-source');return e&&parseFloat(getComputedStyle(e).fontSize)>=18.3;});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native zoom plus large app text');await p.locator('.journey-task').scrollIntoViewIfNeeded();await capture('journey-native-200-large.png');
-  await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+  await p.addScriptTag({path:AXE_FILE});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
   report.nativeHistory={percent:200,scale:dimensions.scale,...await historyEngineView(p,640,shots,{engine:'chromium-native',capture:name=>captureNativeViewport(p,path.join(shots,name))})};
   const blank=await context.newPage();
   try{await assert.rejects(captureNativeViewport(blank,path.join(shots,'history-native-blank-negative.png')),/Native screenshot is uniform/);report.nativeHistory.blankCaptureRejected=true;}finally{await blank.close();}

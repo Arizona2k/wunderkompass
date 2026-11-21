@@ -67,7 +67,8 @@ export async function withPage(ctx, {width, height, touch = false}, fn) {
 const running = new Set();
 process.once('exit', () => { for (const child of running) child.kill('SIGTERM'); });
 
-function freePort() {
+// Ein freier Port für Suiten, die einen eigenen Testserver starten.
+export function freePort() {
   return new Promise((resolve, reject) => {
     const probe = net.createServer();
     probe.once('error', reject);

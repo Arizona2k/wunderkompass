@@ -15,6 +15,9 @@ const fs = await import('node:fs/promises');
 const {existsSync} = await import('node:fs');
 const path = await import('node:path');
 
+// Ältere Testmodule lesen dist/ und build/ relativ zum Arbeitsordner.
+process.chdir(PROJECT);
+
 const LEVELS = {smoke: ['smoke'], ci: ['smoke', 'ci'], full: ['smoke', 'ci', 'full']};
 const ENGINES = ['chromium', 'firefox', 'webkit'];
 
@@ -44,6 +47,9 @@ async function runEngine(engine) {
   const launchOptions = {
     headless: true,
     timeout: 26000,
+    // Ohne UTF-8-Gebietsschema (z. B. LANG leer im Container) verwirft Chromium Dateipfade mit Umlauten
+    // beim Hochladen still; Testdateien wie „…-Früher-…json“ kämen dann nie in der App an.
+    env: {...process.env, LANG: process.env.LANG || 'C.UTF-8'},
     ...(engine === 'chromium' ? {args: ['--enable-unsafe-swiftshader']} : {}),
     ...(engine === 'chromium' && process.env.QA_BROWSER_EXECUTABLE ? {executablePath: process.env.QA_BROWSER_EXECUTABLE} : {}),
   };
