@@ -304,7 +304,7 @@ Die 31 FIX-Dateien aus **Anhang A** werden so geändert, dass sie keine Vergleic
 **Pflichtinhalte:**
 - **CLAUDE.md:**
   - Projekt in 5 Sätzen und Zielgruppe
-  - feste Regeln (aus dem Entwurf) und Pass-Kennungen
+  - feste Regeln (aus dem Entwurf) und Pass-Kennungen, dazu die Bildregel: zuerst freie Originale, KI-Bild nur als gekennzeichneter, kostenloser Ersatz
   - Befehle (Prüfkette, `check`, `test:smoke`, `test:full`; Node 24 im Container)
   - Arbeitsablauf 0.5 und Berichtsform
   - Helfer-Tabelle 0.6 und Modell-Stand „21.11.2026: Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5“
@@ -319,8 +319,8 @@ Die 31 FIX-Dateien aus **Anhang A** werden so geändert, dass sie keine Vergleic
   - Eintrag zu PR #95: acht Themen und acht Vertiefungen, Übernahme in Phase 3 nach `kinder-redaktion` und `fakten-pruefer`, Tag `archiv/pr95-geschichte-2026-11-21`
   - übernommene produktrelevante offene Punkte aus dem alten BACKLOG und aus PROJECT_STATE (das Lesen darf ein Explore-Helfer übernehmen)
   - Befunde aus Schritt 0: Wortlaut-Sperre `retainedChallengeChoices` in `app/retained-answer-wording.mjs`, verwaiste `evidence.file`-Texte in `app/update-history.ts`, Fall „beschädigter Speicherstand“ neu als Browser-Test (Vorlage `critical.mjs` im Archiv-Tag), `KNOWN_GAPS`, Firefox/WebKit für `test:full` beim ersten Veröffentlichungs-PR
-  - Ideen-Sammlung
-- **VISION.md:** Zielgruppe, Ton, Gestaltungslinie, die sechs Hauptbereiche, Ziel 6 „Alles hängt zusammen“. Stil-Referenzen aus der alten VISION kompakt übernehmen oder auf `docs/archiv/` verweisen.
+  - Ideen-Sammlung, darin die Themenideen des Nutzers (Entwurf, Abschnitt „Wünsche des Nutzers nach der Freigabe“)
+- **VISION.md:** Zielgruppe, Ton, Gestaltungslinie, Gestaltungswunsch „modern, mit Spaß, Glossy Look“ und Bildregel (beides aus dem Abschnitt „Wünsche des Nutzers nach der Freigabe“), die sechs Hauptbereiche, Ziel 6 „Alles hängt zusammen“. Stil-Referenzen aus der alten VISION kompakt übernehmen oder auf `docs/archiv/` verweisen.
 - **README.md:** Was ist WunderKompass, lokal starten, Prüfkette, wo was liegt.
 - **CHANGELOG.md:** neu ab „21.11.2026 Neuausrichtung“, in einfachen Worten. Der alte Verlauf liegt im Archiv-Tag.
 - Aus `MIGRATION.md`, `QUALITY.md`, `DEPENDENCIES.md` und `TEST-LIVE.md` kommt nur noch Gültiges knapp in `CLAUDE.md` oder `README.md`, zum Beispiel Werkzeuge mit Lizenz.
@@ -346,6 +346,7 @@ Die 31 FIX-Dateien aus **Anhang A** werden so geändert, dass sie keine Vergleic
   - bild-recherche: Read, WebFetch, WebSearch, Bash
   - ideen-scout: Read, WebFetch, WebSearch
 - Inhalt jeder Datei: Aufgabe, Prüfliste, Antwortformat.
+- `bild-recherche` folgt der Bildregel: zuerst ein freies Original (Foto oder historische Abbildung) mit Lizenz und Namensnennung. Nur wenn es keines gibt, schlägt der Helfer eine gekennzeichnete Illustration oder ein kostenloses KI-Bild vor. Echte Menschen nie als foto-ähnliches KI-Bild.
 - `ideen-scout` liefert Vorschläge. Ins BACKLOG schreibt Claude sie selbst.
 - Skills: `weiter` und `pruefen` wie in Entwurf 0.7. `/weiter` prüft zusätzlich, ob der Branch `main` ist, und wechselt dann auf `test-live`.
 

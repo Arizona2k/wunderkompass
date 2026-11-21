@@ -320,3 +320,24 @@ Ein Prüf-Helfer hat den Entwurf gelesen, als müsste er ihn bauen. Seine offene
 - Build-Kennung beim `dist/`-Vergleich durch einen Platzhalter ersetzen. Das einmalige „Neue Version laden“ wird in Kauf genommen (siehe 0.3).
 - Alte Branches auf GitHub und PR #27 bleiben in Schritt 0 unberührt. Aufräumen lohnt sich später und braucht dann eine eigene Rückfrage.
 - Die 10 alten Commits auf `main` werden erst beim ersten Veröffentlichen behandelt, nicht in Schritt 0.
+
+### Wünsche des Nutzers nach der Freigabe (21.11.2026)
+
+**Gestaltung.** Claude darf das Design frei anpassen. Es soll sehr modern sein und Spaß machen, zum Beispiel mit einem glänzenden „Glossy Look“: Ein Lichtschimmer läuft über eine Kachel, wenn man darauf zeigt. Umsetzung in Phase 1 (Claudes Entscheidungen):
+- Auf Handy und Tablet gibt es kein „Darüberfahren“. Dort erscheint der Effekt beim Antippen.
+- Mit der Einstellung „Bewegung reduzieren“ bleibt er ruhig.
+- Kompass, helle Flächen und die Akzente Orange und Petrol bleiben. Der Effekt unterstützt die Inhalte und überdeckt sie nicht.
+
+**Bilder.**
+- Zuerst echte Fotos und Originalabbildungen mit geklärter Lizenz, etwa von Menschen, Gegenständen und Orten.
+- KI-Bilder nur, wenn es kein passendes freies Original gibt. Sie müssen kostenlos sein und werden sichtbar gekennzeichnet.
+- Claudes Ergänzung: Echte Menschen werden nie als KI-Bild gezeigt, das wie ein Foto wirkt. Rekonstruktionen, etwa von Dinosauriern, werden als solche benannt.
+
+**Themenideen.** Medizin und Körper (zum Beispiel Knochen), Wirtschaft, Geld und Zinsen, Religionen der Welt, aktuelle Technik wie das Elektroauto, mehr Erdkunde und Geschichte.
+- Sie kommen ins BACKLOG. `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` sehen sie durch, bevor sie eingeplant werden.
+- Claudes Hinweise:
+  - Aktuelle Themen werden zeitlos erklärt, zum Beispiel „Wie fährt ein Elektroauto?“. Nachrichten gibt es nicht, der News-Bereich bleibt entfernt.
+  - Religionen werden neutral und respektvoll vorgestellt.
+  - Medizin erklärt den Körper, gibt aber keine Gesundheitsratschläge.
+  - Geld und Zinsen passen gut als Mitmach-Modell im Forscherlabor.
+  - Geschichte (31 Themen) und Erdkunde (Globus, Länder) gibt es schon. Sie werden ausgebaut.
