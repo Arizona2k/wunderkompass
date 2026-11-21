@@ -16,7 +16,8 @@ Daraus folgt: kurze Sätze, große Bilder, große Tippflächen, schnell etwas tu
 ## Feste Regeln
 
 - **Kostenlos.** Keine bezahlten Dienste, Abos, Testzugänge oder Upgrades, auch nicht für Hosting, Builds, Bilder oder Audio. Kostenlose Konten nur nach Erklärung und OK des Nutzers.
-- **Kompatibilität.** Karten-, Fragen-, Kapitel-, Spiel-, Labor-, Missions- und Reise-IDs bleiben gleich. Hash-Links (`#world/...`, `#journeys/...`) funktionieren weiter. Alte Links (auch `#news/...`) werden aufgefangen.
+- **Kein Bestandsschutz** (Nutzer, 21.11.2026). Nichts bleibt, nur weil es es schon gibt. Inhalte, Spiele, Labore, Reisen, Design und Code werden geändert, ersetzt oder gestrichen, wenn es für Kinder besser ist. Geschützt ist nur, was Kindern sonst verloren ginge: ihr Fortschritt im Pass und ihre Links (nächster Punkt).
+- **Kompatibilität.** Karten-, Fragen-, Kapitel-, Spiel-, Labor-, Missions- und Reise-IDs werden nie umbenannt und nie für etwas anderes wiederverwendet. Fällt ein Inhalt weg, führen seine alten Links an einen sinnvollen Ort, und Pass-Einträge dazu gehen nicht verloren. Hash-Links (`#world/...`, `#journeys/...`) funktionieren weiter. Alte Links (auch `#news/...`) werden aufgefangen.
 - **Ein Lernspeicher.** Der Pass ist der einzige Speicher: Schema 3, App-ID `earth-explorer`, Schlüssel `erde-entdecken:save:v3`, Altpass `erde-entdecken:forscherpass:v2`, IndexedDB `earth-explorer`. Wer daran etwas ändert, belegt mit Altpass, Import/Export, Reload und Fehlerfall, dass nichts verloren geht.
 - **Daten.** Keine echten Pass-Dateien, Notizen, persönlichen Daten oder Zugangsdaten ins Repository. Nur ausgedachte Testpässe.
 - **Bilder.** Nur mit geklärten Rechten und vollständigem Bildnachweis (Urheber, Lizenz, Quelle). Vorhandene Nachweise bleiben.
@@ -124,7 +125,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `docs/archiv/` | Originalaufträge des Nutzers und die alte AGENTS.md |
 | `STATUS.md`, `BACKLOG.md`, `VISION.md`, `CHANGELOG.md` | Stand, Aufgaben, Produktziele, Verlauf |
 
-Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test-live`; lokaler Tag `archiv/vor-neuausrichtung-2026-11-21`).
+Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test-live`).
 
 ## Vercel
 

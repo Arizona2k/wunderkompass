@@ -3,6 +3,17 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 21.11.2026 – Alter Katalog „WunderKompass 2027“ eingeordnet
+
+An der Seite selbst ändert sich nichts. Es geht um die Pläne.
+
+- **Geprüft:** der Anforderungskatalog aus der ChatGPT-Zeit (jetzt in `docs/archiv/`). Die Einordnung mit Gründen steht in `docs/entwurf/2026-11-21-katalog-2027-einordnung.md`.
+- **Übernommen:** einheitliches Design mit Tastaturbedienung, Mitmachen mit echtem Lernnutzen, Verknüpfung und Rückwege, hohe Qualität mit echtem Ansehen statt nur Tests.
+- **Kein Bestandsschutz** (Wunsch des Nutzers): Was nicht gut ist, wird geändert oder gestrichen, auch wenn es es schon gibt. Erhalten bleiben nur der Fortschritt der Kinder im Pass und ihre Links.
+- **Angepasst:** Inhalte kurz zuerst, mit drei Tiefen bis „Für Große“. 3D nur, wo es etwas erklärt, immer mit 2D-Fassung. Der Globus wird in Phase 4 das Herzstück. Neue Themen wie Körper, Geld oder Religionen ziehen Welt für Welt ein, mit Sorgfaltsregeln.
+- **Nicht übernommen:** Spline (Logo im kostenlosen Plan), die alte Paket-Reihenfolge, Nachweis-Dateien, Inhalte von einer KI, Tagespolitik.
+- **Audit V2 nachgeprüft:** 18 von 19 alten Befunden sind behoben. Offen sind vor allem rohe Sprachkürzel in Länderansichten (BACKLOG).
+
 ## 21.11.2026 – Neuausrichtung, Schritt 0 „Großputz & Arbeitsweise“
 
 Claude entwickelt WunderKompass ab jetzt weiter. Für Kinder sieht die Seite noch genauso aus wie vorher.

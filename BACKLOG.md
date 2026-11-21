@@ -9,11 +9,11 @@ Der alte Aufgabenbestand (498 Zeilen, Pakete und WK-Nummern) liegt im alten Stan
 Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Zuerst das Handy (320–390 px), dann Tablet und Rechner.
 
 1. **Entwurf** in `docs/entwurf/` mit Skizzen für Handy und Rechner, Freigabe durch den Nutzer.
-2. **Design-System:** Schrift, Farben (hell, Orange und Petrol als Akzente), Abstände, Tippflächen, Kacheln mit „Glossy“-Schimmer (Antippen auf Touch, ruhig bei „Bewegung reduzieren“), Bild- und Fotorahmen, Bewegung.
+2. **Design-System:** Schrift, Farben (hell, Orange und Petrol als Akzente), Abstände, Tippflächen, Kacheln mit „Glossy“-Schimmer (Antippen auf Touch, ruhig bei „Bewegung reduzieren“), Bild- und Fotorahmen, Bewegung. Einheitlich für alle Bereiche; jeder Baustein mit Tastatur bedienbar und mit sichtbarem Fokus (Katalog 2027, Abschnitt 5).
 3. **Startseite „Entdecken“:** eine Frage mit großem Bild, Weiter-machen, Entdeckung des Tages, frühe Themen, Suche. Doppelte Titel und Einleitungen weg; das erste Motiv im ersten Bildschirm (WK-053, WK-057).
 4. **Navigation:** kompakter Wechsel der sechs Bereiche auf dem Handy; heute schneidet die Leiste bei 360 px „Entdecken“ links an (Befund Schritt 0).
 5. **Themenwelt-Seite:** Themen als große Bildkacheln, Filter ohne langen Vorlauf (WK-053: mobile Tierübersicht).
-6. **Neue Wissenskarte:** kurz und kindgerecht oben, Vertiefung („Mehr erfahren“) freiwillig, Bild mit Nachweis, ein kleines Tun (raten, tippen), Verbindungen zu echten Nachbarn (Ziel 6).
+6. **Neue Wissenskarte:** kurz und kindgerecht oben, Vertiefung („Mehr erfahren“, später „Für Große“) freiwillig, Bild mit Nachweis, ein kleines Tun (raten, tippen), Verbindungen zu echten Nachbarn (Ziel 6).
 7. **Bildwirkung:** Bilder laden ohne graue Platzhalter im ersten Bildschirm (Löwe/Gepard bei 1440 px), Fotos füllen die Kartenbreite (Elefant).
 8. **Verbindungen (Ziel 6):** 15 von 196 erklärten Verbindungen haben keine Rückrichtung im `related`-Feld; zufällig wirkende Nachbarn (Elefant → Honigbiene, Großer Panda) durch fachlich echte ersetzen.
 9. **Befunde des `design-pruefer` aus Schritt 0** (Startseite, Tierwelt, Eisbär-Karte bei 360 und 1280 px):
@@ -35,40 +35,48 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - **Befund der `bild-recherche` (Eisbär):** Nachweis korrekt (Commons „Polar_Bear.jpg“, gemeinfrei, USFWS), aber nur 700 px breit. Breiteres freies Foto suchen.
 - Tier-Spiele (Tierdetektiv, Lebensraum-Sortierer, Tier & Lebensraum, Wer frisst was?, Tierrekorde) mit echten Stufen und Fehlerbegründungen.
 - Fehlende Medien: Pilze, Bestäubung, Nahrungsnetze (WK-056).
+- Lebensraum-Daten vereinheitlichen: „Wiesen & Gärten“ / „Wiesen und Gärten“ und „Flüsse & Seen“ / „Flüsse und Seen“ stehen beide in den Daten; die Anzeige fasst sie schon zusammen (`app/world-selection-state.mjs`), die Daten nicht (Audit V2, E).
 
 ## Phase 3 – Weitere Welten (grob)
 
 - Welt für Welt nach dem Tierwelt-Muster: Natur, Erde, Weltall, Menschen, Erfindungen, Geschichte.
-- **PR #95 übernehmen:** acht Geschichtsthemen mit acht Vertiefungen, kindgerecht umgeschrieben nach `kinder-redaktion` und `fakten-pruefer`. Stand: Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0` (lokaler Tag `archiv/pr95-geschichte-2026-11-21`).
+- **PR #95 übernehmen:** acht Geschichtsthemen mit acht Vertiefungen, kindgerecht umgeschrieben nach `kinder-redaktion` und `fakten-pruefer`. Stand: Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`.
 - Alter Artikel „Papier aus China“ neu (WK-053).
 - 16 Lernreisen mit 80 Kapiteln und 240 Aufgaben kindgerecht nacharbeiten: mehr Tun als Ankreuzen, Hinweise, erklärende Rückmeldung (WK-055, WK-048).
 - Planetenwerte vereinheitlichen: Neptun 30,05 AE (Orbitlabor) gegen 30,18 AE (Größenvergleich), ebenso Saturn und Uranus; eine Definition, Quelle und Erklärung (WK-056).
-- Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen.
+- Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen. Verweise wie „Mit ‚Reflexion‘ weiterdenken“ nicht in zwei verschachtelten Klappen verstecken (Audit V2, A1). „Stationen erneut ansehen“, Notizen bearbeiten und die Zählung der Wiederholungen dabei einmal im Browser bedienen; bisher nur am Code geprüft (Audit V2, H1–H3).
+- Quellen der Bauwerk- und Erfindungsthemen: `burjkhalifa.ae/the-tower/structures/` und die NMS-Seite zum Telefon sperren automatische Abrufe (403); beim Überarbeiten mit `fakten-pruefer` klären. Die drei alten kaputten Adressen stehen noch im Erzeugungsskript `content/author-world-content.py` (Zeilen 126, 161) und nur dort (Audit V2, G1).
+- **Neue Themenfelder aus dem Katalog 2027** (Körper, Geld und Zinsen, Religionen, Robotik, Physik und Chemie, Sport, Urzeit): nach den Sorgfaltsregeln in `docs/entwurf/2026-11-21-katalog-2027-einordnung.md` in die passenden Welten, jedes Thema in drei Tiefen. Eigene Welt „Urzeit“ (Dinosaurier, Fossilien, Erdzeitalter) beim Entwurf von Phase 3 prüfen.
 
 ## Phase 4 – Globus, Spiele, Labore (grob)
 
 - Einzeln in den neuen Kern übernehmen und dabei verbessern.
+- **Globus als Herzstück** (Katalog 2027, Abschnitt 3): Themenebenen (Klimazonen, Tierwelten, Ozeane, Orte aus den Wissenskarten), von jeder Ebene zu Karten, Spielen und Laboren und zurück. Die vorhandene 2D-Ersatzansicht (`FallbackGlobe` in `app/globe.tsx`) bleibt und wird mit verbessert.
+- **3D-Modelle** (Katalog 2027, Abschnitt 2): zuerst den Bestand sichten (welche Modelle erklären etwas, welche sind nur Schmuck, wo hilft echtes 3D). Dann ein erstes neues 3D-Modell mit klarem Lernwert (Vorschlag: Tag und Nacht oder Jahreszeiten), mit 2D-Fassung, Tastatur, Offline und Größenbudget. React Three Fiber dabei prüfen (Lizenz, Größe, Nutzen); nur exakt gepinnt aufnehmen.
 - Frage-Spiele (Flaggen, Hauptstädte, Silhouetten, Klima, Foto-Forscher, Schatzsuche): der dritte Hinweis verrät nicht mehr die Lösung, echte Stufen, Fehlantworten erklärt (WK-021, WK-056; Stand 11.10., vor der Arbeit neu prüfen).
 - Rückmeldungen ehrlich formulieren: nach einer Auswahl nicht „Richtig erklärt!“ bescheinigen (WK-056; teils erledigt, vorher prüfen).
 - Länder- und Flaggen-Memory mit drei Stufen und Erklärungen (WK-038). Wissens-Challenge: falsche Antworten begründen, neue Themen (WK-017).
 - Ozean-Navigator mit zugänglicher Karte; Weltreise-Suche modernisieren.
+- **Länderansicht: rohe Sprach- und Währungscodes** (Audit V2, G2, für Kinder spürbar): Rund 100 Codes erscheinen ohne Namen, z. B. „bem“, „toi“ (Sambia), „ff“, „srr“ (Senegal), Währung „XCG“. `app/country-portrait.tsx` ergänzt bisher nur sechs Namen. Lösung: deutsche Namen ergänzen oder unbekannte Codes nicht roh zeigen; mit Test über alle Länder. Darf als kleine Korrektur vorgezogen werden.
+- Zoom-Knöpfe heißen auch in der 2D-Schichtenansicht „Weltkugel vergrößern“ (Audit V2, B): passend benennen.
 - Labore: Modelle, Legenden und Modellgrenzen einzeln verbessern.
 
 ## Technik und Prüfung
 
+- **Streichen möglich machen** (vor dem ersten Inhalt, der wegfällt; Regel „Kein Bestandsschutz“ in CLAUDE.md): Der Test „alle stabilen IDs … gibt es noch“ in `tests/content-integrity.test.mjs` verbietet heute jedes Entfernen. Umbauen auf eine Liste ausgemusterter IDs mit Ziel für alte Links: Eine ID darf fehlen, wenn sie dort steht und ihr Ziel existiert. Dazu belegen, dass alte Links umleiten und Pass-Einträge erhalten bleiben (Altpass, Import/Export, Reload).
 - **Neuer Browser-Test „beschädigter Speicherstand“:** Pass mit kaputtem Inhalt laden, nichts geht still verloren. Vorlage: `critical.mjs` im alten Stand (`git show b53f75f:tests/browser/critical.mjs`).
 - **`main` hat eigene Alt-Commits:** Zehn Codex-Probe-Commits vom 9.10.2026 (PRs #5–#8: Workflows `vercel-e2e.yml` und `write-permission-probe.yml`, Änderungen an `quality.yml`, `vercel.json` mit `deploymentEnabled` für drei `codex/`-Branches, BACKLOG/CHANGELOG) stehen nur in `main`, nicht in `test-live`. Beim ersten Veröffentlichungs-PR `test-live` → `main` gibt es deshalb Konflikte: Probes nicht übernehmen, Konflikte zugunsten von `test-live` lösen. (`test-live` ist seit 21.11.2026 Standardbranch auf GitHub.)
-- **Firefox und WebKit:** `test:full` läuft lokal nur in Chromium. Beim ersten Veröffentlichungs-PR (`test-live` → `main`) den CI-Job „Vollprüfung“ in allen drei Engines beobachten und Befunde beheben.
+- **Firefox und WebKit:** `test:full` läuft lokal nur in Chromium. Beim ersten Veröffentlichungs-PR (`test-live` → `main`) den CI-Job „Vollprüfung“ in allen drei Engines beobachten und Befunde beheben. WebKit ist besonders wichtig, weil iPhone und iPad des Nutzers Safari nutzen (WebKit). In Phase 1 prüfen, ob ein kurzer WebKit-Rauchtest bei jedem PR lohnt (CI-Zeit gegen Nutzen).
 - **Wortlaut-Sperre** `retainedChallengeChoices` in `app/retained-answer-wording.mjs`: hält alte Antworttexte wörtlich fest, damit gespeicherte Antworten passen. Beim Umschreiben der Challenge-Fragen gezielt lösen (Pass-Kompatibilität zuerst).
 - Speicher voll oder Worker-Fehler: Verhalten prüfen und kindgerecht erklären.
-- Echte Geräte und Bildschirmleser (VoiceOver, TalkBack) wurden nie getestet. Nur mit echtem Nachweis behaupten; mit dem Nutzer klären, ob ein Gerätetest möglich ist.
+- Echte Geräte und Bildschirmleser (VoiceOver, TalkBack) wurden nie getestet. Nur mit echtem Nachweis behaupten. Der Nutzer sieht die Seite auf iPhone, iPad, einem Android-Gerät und dem PC an (21.11.2026): ab Phase 1 bei jeder Vorschau um einen kurzen Blick auf seinen Geräten bitten, mit zwei, drei konkreten Punkten zum Ansehen. Seine Rückmeldung ist ein echter Gerätetest, aber kein Test mit Bildschirmleser.
 - Schwer wartbaren Code (Zeilen mit bis zu 6.000 Zeichen) dort lesbar machen, wo eine Phase ohnehin arbeitet.
 - **Inhaltsprüfung** `tests/content-integrity.test.mjs` (stabile IDs, Bildnachweise, Export) kam in Schritt 0 ohne `KNOWN_GAPS`-Liste aus: Der heutige Stand erfüllt alle Regeln. Neue Lücken nur mit BACKLOG-Verweis eintragen; die Liste darf nur kürzer werden.
 - **`exports/content/` ablösen:** 30 Browser-Testmodule lesen die exportierten Inhaltsdateien (Befund Schritt 0, deshalb noch im Repository). Tests nach und nach direkt auf die Quellen in `app/` umstellen, dann `exports/` und den Export-Schritt in `test:full` entfernen. Bis dahin schreibt jeder `test:full`-Lauf einen neuen Zeitstempel in `exports/content/index.json`: vor dem Commit zurücksetzen.
 - **Inhaltswächter erweitern** (Befunde code-pruefer, Schritt 0): (1) eigene Illustrationen tragen ihre KI-Kennzeichnung, und SVGs enthalten kein `<script>`, `<foreignObject>` und keine fremden Adressen (Vorlage: Test „24 local own images …“ in `git show b53f75f:tests/animal-expansion.test.mjs`); (2) Fragen-IDs der Spielbanken „Technik“ und „Früher oder heute?“ in `stable-ids.json`; (3) Orts-IDs, die als Entdeckung oder Favorit im Pass stehen (Länder, Hauptstädte, Meere, Kontinente, Plattenorte, Meeresorte).
 - **Browser-Runner:** `stop()` in `tests/browser/harness.mjs` nach etwa 5 s mit SIGKILL beenden; `people-learning`, `offline-retention` und `animal-native-zoom` sammeln noch keine Konsolenfehler über `monitor`.
 - **Rauchtest-Bilder:** Der Rauchtest fotografiert, bevor alle Fotos geladen sind (Befund Schritt 0: leere Bildflächen bei Löwe, Gepard, Curie, mal so, mal so). Vor dem Screenshot auf sichtbare Bilder warten, damit Vorher/Nachher-Vergleiche ruhig bleiben.
-- **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen.
+- **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen. Nicht löschen, solange PR #95 nicht übernommen ist: `codex/wunderkompass-history-evidence-2026-11-08` (Commit `7e00bd0`).
 - **Vollprüfung dauert lange:** `test:full` braucht in Chromium nacheinander rund zwei Stunden (Messung Schritt 0; CI-Grenze deshalb 180 Minuten). Suiten beschleunigen oder sinnvoll aufteilen, statt die Zeitgrenze im CI-Job weiter zu erhöhen.
 
 ## Medien mit offenen Rechten
@@ -80,7 +88,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
 
-**Themenwünsche des Nutzers (21.11.2026):**
+**Themenwünsche des Nutzers (21.11.2026)** (Sorgfaltsregeln je Feld: `docs/entwurf/2026-11-21-katalog-2027-einordnung.md`):
 - Medizin und Körper, zum Beispiel Knochen (den Körper erklären, keine Gesundheitsratschläge).
 - Wirtschaft, Geld und Zinsen (gut als Mitmach-Modell im Forscherlabor).
 - Religionen der Welt (neutral und respektvoll).
