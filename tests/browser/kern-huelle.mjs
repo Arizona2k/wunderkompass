@@ -38,7 +38,11 @@ export async function kernHuelle(ctx) {
       + (width < 768 ? ', auch nach einem Tipp ohne Fokus wie in Safari, Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
   await withPage(ctx, {width: 390, height: 844, touch: true}, page => buchLeisteDrehen(page));
-  ctx.report.checks.push('Buch am Handy gedreht (390 ↔ 844 px): Bereichsleiste wechselt ohne ResizeObserver-Schleife, Pfeile passen zur Leiste');
+  if (ctx.engine === 'chromium') {
+    await buchLeisteZiehen(ctx);
+    ctx.report.checks.push('Buch am Rechner mit sichtbaren Scrollbalken (Chromium): Fenster von 900 auf 300 px und zurück gezogen, Bereichsleiste wechselt ohne ResizeObserver-Schleife');
+  }
+  ctx.report.checks.push('Buch am Handy gedreht (390 ↔ 844 px): Bereichsleiste wechselt ohne ResizeObserver-Schleife, Pfeile passen zur Leiste, gewählter Bereich (auch „Kleiner Atlas“) bleibt ganz sichtbar');
   await grosseSchrift320(ctx);
   ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Beispieltexte passen, Suchfeld ganz sichtbar, Pass unverändert');
   for (const view of [SCHMAL, BREIT]) {
@@ -429,7 +433,8 @@ async function buchLeisteBleibtRuhig(page, width) {
 
 // Dreht ein Kind das Handy, wechselt die Bereichsleiste im Buch zwischen „mit Pfeilen“ (390 px) und
 // „ohne Pfeile“ (844 px). Das darf keine ResizeObserver-Schleife auslösen (WebKit wertet sie als
-// Seitenfehler), und die Pfeile passen danach zur Leiste: „zurück“ ist nur ganz links aus, „weiter“ nur ganz rechts.
+// Seitenfehler). Danach passen die Pfeile zur Leiste („zurück“ ist nur ganz links aus, „weiter“ nur
+// ganz rechts), und der gewählte Bereich steht ganz in der Leiste, auch der letzte („Kleiner Atlas“).
 async function buchLeisteDrehen(page) {
   await page.evaluate(() => {
     window.__roSchleifen = [];
@@ -438,19 +443,73 @@ async function buchLeisteDrehen(page) {
   await page.evaluate(() => { location.hash = 'book/words/Meter'; });
   const buchLeiste = page.locator('.book-navigation');
   await buchLeiste.waitFor(WARTEN);
-  for (const [width, height, pfeile] of [[844, 390, 'false'], [390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) {
+  const drehen = async (width, height, pfeile) => {
     await page.setViewportSize({width, height});
-    await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(ok, 100)))));
-    assert.equal(await buchLeiste.getAttribute('data-strip-overflow'), pfeile, `buchLeisteDrehen ${width}: Pfeile ${pfeile === 'true' ? 'fehlen' : 'stehen da'}, obwohl die Leiste ${pfeile === 'true' ? 'nicht ' : ''}hineinpasst`);
-    if (pfeile === 'true') {
-      const stand = await buchLeiste.evaluate(nav => {
-        const liste = nav.querySelector('.book-tabs'), [zurueck, weiter] = nav.querySelectorAll(':scope > .area-scroll');
-        return {zurueck: zurueck.disabled, weiter: weiter.disabled, ganzLinks: liste.scrollLeft <= 1, ganzRechts: liste.scrollLeft + liste.clientWidth >= liste.scrollWidth - 1};
-      });
-      assert.deepEqual([stand.zurueck, stand.weiter], [stand.ganzLinks, stand.ganzRechts], `buchLeisteDrehen ${width}: Pfeile passen nicht zur Leiste ${JSON.stringify(stand)}`);
-    }
-  }
+    // Warten, bis die Leiste umgestellt hat; danach zwei Bilder Zeit für eine mögliche Schleifenmeldung.
+    // Stellt sie nicht um, meldet das die Prüfung darunter.
+    await page.waitForFunction(erwartet => document.querySelector('.book-navigation')?.dataset.stripOverflow === erwartet, pfeile, {timeout: 5000}).catch(() => {});
+    await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(ok))));
+    const stand = await buchLeiste.evaluate(nav => {
+      const liste = nav.querySelector('.book-tabs'), [zurueck, weiter] = nav.querySelectorAll(':scope > .area-scroll');
+      const aktiv = liste.querySelector('[data-state=active]'), l = liste.getBoundingClientRect(), a = aktiv.getBoundingClientRect();
+      return {
+        pfeile: nav.dataset.stripOverflow, zurueck: zurueck.disabled, weiter: weiter.disabled,
+        ganzLinks: liste.scrollLeft <= 1, ganzRechts: liste.scrollLeft + liste.clientWidth >= liste.scrollWidth - 1,
+        aktiv: aktiv.textContent.trim(), aktivLinks: Math.round(a.left - l.left), aktivRechts: Math.round(l.right - a.right),
+      };
+    });
+    const wo = `buchLeisteDrehen ${width} („${stand.aktiv}“)`;
+    assert.equal(stand.pfeile, pfeile, `${wo}: Pfeile ${pfeile === 'true' ? 'fehlen' : 'stehen da'}, obwohl die Leiste ${pfeile === 'true' ? 'nicht ' : ''}hineinpasst`);
+    if (pfeile === 'true') assert.deepEqual([stand.zurueck, stand.weiter], [stand.ganzLinks, stand.ganzRechts], `${wo}: Pfeile passen nicht zur Leiste ${JSON.stringify(stand)}`);
+    assert(stand.aktivLinks >= -1 && stand.aktivRechts >= -1, `${wo}: gewählter Bereich ragt aus der Leiste ${JSON.stringify(stand)}`);
+  };
+  for (const [width, height, pfeile] of [[844, 390, 'false'], [390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) await drehen(width, height, pfeile);
+  await drehen(844, 390, 'false');
+  await buchLeiste.getByRole('tab', {name: 'Kleiner Atlas', exact: true}).click();
+  await buchLeiste.locator('.book-tabs [data-state=active]', {hasText: 'Kleiner Atlas'}).waitFor(WARTEN);
+  for (const [width, height, pfeile] of [[390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) await drehen(width, height, pfeile);
   assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], 'buchLeisteDrehen: ResizeObserver-Schleife beim Drehen');
+}
+
+// Am Rechner mit klassischen Scrollbalken ändert die Bereichsleiste beim Umschalten der Pfeile auch ihre Höhe.
+// Stellte die App die Pfeile im ResizeObserver um, meldete Chromium beim Fensterziehen eine Schleife.
+// Playwright versteckt Scrollbalken in Chromium (--hide-scrollbars); dieser Fall startet deshalb einen eigenen
+// Browser ohne den Schalter. Firefox und WebKit zeigen im Test keine klassischen Scrollbalken.
+async function buchLeisteZiehen(ctx) {
+  const browser = await ctx.browserType.launch({...ctx.launchOptions, ignoreDefaultArgs: ['--hide-scrollbars']});
+  try {
+    const page = await (await browser.newContext({viewport: {width: 900, height: 800}, reducedMotion: 'reduce'})).newPage();
+    ctx.monitor(page);
+    await page.goto(ctx.base + '/#book/words/Meter');
+    await ready(page);
+    const buchLeiste = page.locator('.book-navigation');
+    await buchLeiste.waitFor(WARTEN);
+    await page.evaluate(() => {
+      window.__roSchleifen = [];
+      addEventListener('error', event => { if (/ResizeObserver loop/.test(event.message)) window.__roSchleifen.push(innerWidth); });
+    });
+    const breiten = [];
+    for (let width = 900; width >= 300; width -= 8) breiten.push(width);
+    for (let width = 300; width <= 900; width += 8) breiten.push(width);
+    const zustaende = new Set();
+    let balken = 0;
+    for (const width of breiten) {
+      await page.setViewportSize({width, height: 800});
+      await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(ok))));
+      const stand = await buchLeiste.evaluate(nav => {
+        const liste = nav.querySelector('.book-tabs');
+        return {pfeile: nav.dataset.stripOverflow, balken: liste.offsetHeight - liste.clientHeight};
+      });
+      zustaende.add(stand.pfeile);
+      balken = Math.max(balken, stand.balken);
+    }
+    // Ohne Pfeilwechsel prüft der Fall nichts; ohne Scrollbalken ist es der falsche Fall.
+    assert.deepEqual([...zustaende].sort(), ['false', 'true'], 'buchLeisteZiehen: Die Pfeile wechseln beim Ziehen nicht');
+    assert(balken > 0, `buchLeisteZiehen: Die Leiste zeigt nie einen Scrollbalken, der Fall prüft so nichts`);
+    assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], 'buchLeisteZiehen: ResizeObserver-Schleife beim Fensterziehen');
+  } finally {
+    await browser.close();
+  }
 }
 
 // Die Hilfe „So geht’s“ steht auf der Startseite in jeder Breite (der alte Hilfe-Knopf im Kopf ist weg).

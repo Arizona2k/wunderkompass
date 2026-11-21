@@ -22,15 +22,17 @@ export function useLearningStrip(value:string){
    if(nextRef.current)nextRef.current.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-1;
    const overflow=String(list.scrollWidth>list.clientWidth+1);
    if(frame&&frame.dataset.stripOverflow!==overflow){
-    // Showing or hiding the arrows changes the strip's width. Set the arrows again in the next frame,
-    // not inside the same ResizeObserver pass.
-    frame.dataset.stripOverflow=overflow;cancelAnimationFrame(pending);pending=requestAnimationFrame(update);
+    // Showing or hiding the arrows changes the strip's width: reveal the active tab again next frame.
+    frame.dataset.stripOverflow=overflow;schedule();
    }
   };
   const align=()=>{const active=list.querySelector<HTMLElement>('[data-state=active]');if(active)reveal(active);update();};
-  // Observe the frame around strip and arrows: its size does not depend on whether the arrows show.
-  // Observing the strip itself made every arrow toggle (e.g. turning a phone) a ResizeObserver loop.
-  const observer=new ResizeObserver(align);observer.observe(frame??list);list.addEventListener('scroll',update,{passive:true});align();
+  // Change the layout only in an animation frame, never inside the ResizeObserver callback. The arrows
+  // change the strip's width and, with classic scrollbars, the frame's height; changing them inside the
+  // callback made turning a phone a ResizeObserver loop.
+  const schedule=()=>{cancelAnimationFrame(pending);pending=requestAnimationFrame(align);};
+  // Observe the frame around strip and arrows: its width does not depend on whether the arrows show.
+  const observer=new ResizeObserver(schedule);observer.observe(frame??list);list.addEventListener('scroll',update,{passive:true});align();
   return()=>{observer.disconnect();cancelAnimationFrame(pending);list.removeEventListener('scroll',update);};
  },[value]);
  const scroll=(direction:number)=>{const list=listRef.current;if(list)list.scrollBy({left:direction*Math.max(100,list.clientWidth*.8),behavior:'instant'});};
