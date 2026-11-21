@@ -114,8 +114,10 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  // fully-visible-at-the-bottom geometry which previously recentered239px.
  // Two CSS pixels inside makes this a genuine fully-visible positive even
  // when Firefox's trusted touch scroll rounds by a fraction of a pixel.
- await orca.evaluate(element=>{element.scrollIntoView({block:'end',behavior:'instant'});const r=element.getBoundingClientRect();if(r.height<=innerHeight)window.scrollBy({top:r.bottom-innerHeight+2,behavior:'instant'});});
- const edgeDeparture=await activateWithReadingPosition(page,orca,touch),edgeHeight=await page.evaluate(()=>innerHeight);
+ // Seit Teilschritt 1 deckt am Handy die feste Leiste den unteren Rand ab; die sichtbare
+ // Kante ist ihre Oberkante (scroll-padding-bottom), nicht der Fensterrand.
+ await orca.evaluate(element=>{const edge=innerHeight-(parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom)||0);element.scrollIntoView({block:'end',behavior:'instant'});const r=element.getBoundingClientRect();if(r.height<=edge)window.scrollBy({top:r.bottom-edge+2,behavior:'instant'});});
+ const edgeDeparture=await activateWithReadingPosition(page,orca,touch),edgeHeight=await page.evaluate(()=>innerHeight-(parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom)||0));
  try{if(edgeDeparture.opener.height<=edgeHeight){assert(edgeDeparture.opener.top>=0&&edgeDeparture.opener.bottom<=edgeHeight,'fitting reading card is fully visible at trusted edge departure');assert(edgeHeight-edgeDeparture.opener.bottom<8,'actual edge lies inside the old eight-pixel recentering reserve, not another centered card');}}
  catch(error){error.actualWorldCardEdgeDeparture={...edgeDeparture,viewportHeight:edgeHeight};throw error;}
  await page.locator('#world-topic-title').waitFor();await activate(page,page.getByRole('button',{name:'Zurück zu deiner Auswahl',exact:true}),touch);
