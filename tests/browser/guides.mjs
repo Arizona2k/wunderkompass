@@ -1,12 +1,12 @@
 import words from '../../exports/content/knowledge-words.json' with {type:'json'};
 import why from '../../exports/content/why-questions.json' with {type:'json'};
 import assert from'node:assert/strict';
+import {hilfeOeffnen} from './harness.mjs';
 
 export async function guideDialogView(page,{shots=null}={}){
  const width=page.viewportSize().width,prior=await page.locator('.earth-app').evaluate(el=>({large:el.classList.contains('large-reading'),quiet:el.hasAttribute('data-reduced-motion')}));
  const settings=async(large,quiet)=>{await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.getByRole('switch',{name:'Größere Schrift',exact:true}).setChecked(large);await page.getByRole('switch',{name:'Weniger Bewegung',exact:true}).setChecked(quiet);await page.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'detached'});};
- const openHelp=async()=>{const opener=page.getByRole('button',{name:'So geht’s',exact:true}); // Der Kopf hat keinen Hilfe-Knopf mehr
- await opener.focus();await page.keyboard.press('Enter');await page.locator('.help-start').waitFor();return page.locator('.help-dialog');};
+ const openHelp=async()=>{await hilfeOeffnen(page);await page.locator('.help-start').waitFor();return page.locator('.help-dialog');};
  const geometry=async(dialog,minimum)=>{const bad=await dialog.locator('p,summary').evaluateAll((es,minimum)=>es.filter(e=>e.checkVisibility()).flatMap(e=>{const r=e.getBoundingClientRect(),root=e.closest('[role=dialog]').getBoundingClientRect();return parseFloat(getComputedStyle(e).fontSize)<minimum-.1||r.left<root.left-1||r.right>root.right+1?[e.textContent.slice(0,100)]:[];}),minimum);assert.deepEqual(bad,[],'guide paragraphs and native summaries retain readable type and own modal width');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);};
  await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();
  try{await settings(false,false);let help=await openHelp();await geometry(help,16);assert.equal(await help.locator('.help-start>li').count(),3);assert.equal(await help.locator('.guide-topic').count(),8);assert.equal(await help.locator('.source-details a').count(),20,'all existing primary source links retained');

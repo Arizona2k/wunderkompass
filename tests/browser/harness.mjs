@@ -27,6 +27,23 @@ export function bereich(page, id) {
   return page.getByRole('navigation', {name: 'Bereiche', exact: true}).getByRole('link', {name: eintrag.wort, exact: true});
 }
 
+// Öffnet die Hilfe so, wie ein Kind sie findet. Der Kopf hat keinen Hilfe-Knopf mehr (Entwurf Phase 1):
+// Am Handy steht „So geht’s“ auf der Startseite, sonst führt der Fuß hin („Für Eltern“, dann
+// „So funktioniert die Lernwelt“). Gibt den Knopf zurück, der nach dem Schließen den Fokus bekommt.
+export async function hilfeOeffnen(page) {
+  const kurz = page.getByRole('button', {name: 'So geht’s', exact: true});
+  if (await kurz.isVisible()) {
+    await kurz.focus();
+    await page.keyboard.press('Enter');
+    return kurz;
+  }
+  const eltern = page.getByRole('contentinfo').getByRole('button', {name: 'Für Eltern', exact: true});
+  await eltern.focus();
+  await page.keyboard.press('Enter');
+  await page.locator('.parent-guide').getByRole('button', {name: 'So funktioniert die Lernwelt', exact: true}).click();
+  return eltern;
+}
+
 // Startet `vite preview` für einen gebauten Stand auf einem freien Port.
 // Fertig ist der Server erst, wenn er sein eigenes Startsignal schreibt UND /world.json liefert.
 // So kann ein alter Server auf demselben Port die Bereitschaft nicht vortäuschen.

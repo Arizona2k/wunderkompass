@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
+import {hilfeOeffnen} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const settle=page=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))));
@@ -19,14 +20,13 @@ async function closeAndFocus(page,dialog,opener,close=null){
 export async function auditGuideReturnPage(page,base,{shots=null,engine='chromium',width=page.viewportSize().width}={}){
  await atHome(page,base);
  const footer=page.getByRole('contentinfo').getByRole('button',{name:'Für Eltern',exact:true});
- // Der Kopf hat keinen Hilfe-Knopf mehr; die Hilfe öffnet „So geht’s“ auf der Startseite.
- const helpOpener=page.getByRole('button',{name:'So geht’s',exact:true});
  const parents=page.locator('.parent-guide'),help=page.locator('.help-dialog'),passport=page.locator('.passport-dialog');
  await footer.focus();await page.keyboard.press('Enter');await parents.waitFor();
  await parents.getByRole('button',{name:'So funktioniert die Lernwelt',exact:true}).click();await help.waitFor();
  await closeAndFocus(page,help,footer);
  if(shots)await footer.screenshot({path:path.join(shots,`journey-engine-${engine}-audit-guide-return-${width}.png`),animations:'disabled'});
- await helpOpener.focus();await page.keyboard.press('Enter');await help.waitFor();
+ // Am Handy „So geht’s“, sonst der Weg über den Fuß; der Fokus kehrt zu diesem Knopf zurück.
+ const helpOpener=await hilfeOeffnen(page);await help.waitFor();
  await help.getByRole('button',{name:'Für Eltern & Lehrkräfte',exact:true}).click();await parents.waitFor();
  await parents.getByRole('button',{name:'So funktioniert die Lernwelt',exact:true}).click();await help.waitFor();
  await closeAndFocus(page,help,helpOpener,'Los geht’s');
