@@ -142,6 +142,25 @@ Vier Helfer haben am 21.11.2026 nachgesehen: `kinder-redaktion` (zweimal), ein L
 - Schätzfragen mit Regler, zum Beispiel „Wie lang ist ein Eisbär? Schieb!“. Die Auflösung zeigt „fast genau“ oder „knapp daneben“ als Bild.
 - Beides passt zu den geplanten Tierrekorden und kommt in Phase 2 als erste Probe.
 
+**B7. Jedes Mal etwas Neues statt Auswendiglernen** (Nachtrag, vom Nutzer freigegeben am 21.11.2026).
+
+Heute hat jede der 204 Karten genau eine „Rate mal“-Frage, und viele Spiele haben nur wenige feste Aufgaben. Nach zwei, drei Besuchen kennt ein Kind die Antworten auswendig. Der Pass merkt sich zwar, was geschafft ist, ändert aber nicht, welche Fragen kommen.
+
+Mehr Fragen heißt viel neuer Inhalt: Drei Fragen für jede Karte wären über 400 neue Fragen, jede mit Prüfung durch `fakten-pruefer` und `kinder-redaktion`. Darum wächst der Vorrat in drei Stufen:
+
+1. **Sofort, ohne neuen Inhalt** (Teilschritt 3):
+   - **Nie zweimal dieselbe Runde** hintereinander, in keinem Spiel.
+   - **Wiederholen mit Abstand:** Der Pass weiß schon, welche Fragen beantwortet wurden. Fragen, die länger zurückliegen, kommen gezielt wieder, wenn möglich in anderer Form (z. B. als „Stimmt das?“).
+   - **Vorhandene Fragen besser nutzen:** 13 Karten haben schon 42 Zusatzfragen (21 auf „Mittel“, 21 auf „Schwer“), die heute nur in der Wissens-Challenge vorkommen. Sie erscheinen künftig auch auf der Karte als zweite und dritte Frage.
+2. **Klein anfangen** (Teilschritt 2): Die etwa 12 Pilot-Karten bekommen je zwei bis drei neue Fragen, zusammen etwa 25 bis 35. Erst wenn das gut funktioniert, wird es größer.
+3. **Mit den Welten wachsen** (Phase 2 und 3): Die Karten werden dort Welt für Welt neu geschrieben, zuerst die Tierwelt. Ihre neuen Fragen entstehen gleich mit und werden zusammen mit den neuen Texten geprüft.
+
+Regeln:
+- Beim nächsten Besuch kommt zuerst eine Frage, die das Kind noch nicht hatte.
+- Für den Pass zählt eine Karte weiter als gelernt, sobald eine ihrer Fragen richtig beantwortet ist. Alte Einträge (`learned:<id>`) bleiben gültig.
+- Bestehende Fragen-IDs bleiben, neue Fragen bekommen neue IDs.
+- Der Fortschritt bleibt ohne Zahlen. Es gibt kein „100 % geschafft“, damit nie der Eindruck entsteht, es gäbe nichts mehr zu tun.
+
 ## 4. Wo es hinkommt
 
 **Vorschlag:** Die Spiele werden aus Phase 4 nach vorn geholt, weil das Kind sie als Erstes bemerkt hat.
@@ -149,14 +168,15 @@ Vier Helfer haben am 21.11.2026 nachgesehen: `kinder-redaktion` (zweimal), ein L
 | Nr. | Teilschritt | Was dazukommt |
 |---|---|---|
 | 1 | Aussehen und Hülle | nichts, ist fast fertig |
-| 2 | Wissenskarte | A1 bis A5 |
-| 3 | **neu: Kniffliger spielen** | B1, B3, B4, B5 für die vorhandenen Spiele, Labore und Reise-Aufgaben; das Aussehen der Spiele bleibt vorerst |
+| 2 | Wissenskarte | A1 bis A5; B7 Stufe 2: neue Fragen für die Pilot-Karten |
+| 3 | **neu: Kniffliger spielen** | B1, B3, B4, B5 für die vorhandenen Spiele, Labore und Reise-Aufgaben; B7 Stufe 1 (nie dieselbe Runde, Wiederholen mit Abstand, Zusatzfragen auf der Karte); das Aussehen der Spiele bleibt vorerst |
 | 4 | Weltenseiten und Bilder | wie geplant (bisher 3) |
 | 5 | Startseite und Sammlung | wie geplant (bisher 4), dazu B2: goldene Bilder für „Profi“ |
 | 6 | Feinschliff und Abschluss | wie geplant (bisher 5) |
 
 - Phase 4 behält Globus, 3D-Modelle und das neue Aussehen der Spiele.
 - B6 kommt mit der Tierwelt in Phase 2.
+- B7 Stufe 3 (neue Fragen für alle Karten) wächst Welt für Welt in Phase 2 und 3.
 
 ## 5. Grenzen
 
@@ -184,6 +204,7 @@ Vier Helfer haben am 21.11.2026 nachgesehen: `kinder-redaktion` (zweimal), ein L
   - die Ratemuster (längste Antwort, feste Ablenker),
   - Profi-Runden mit vier Antworten,
   - Pass-Tests für die gespeicherte Wahl.
+  - Abwechslung: keine Runde gleicht der vorigen, ungesehene Fragen kommen zuerst, `learned:<id>` gilt nach jeder richtig beantworteten Frage der Karte.
 - **Ehrlich:** Ob Kinder dadurch länger bleiben oder mehr lernen, wissen wir erst, wenn sie es ausprobieren. Wir wiederholen keinen Kindertest und erfinden keinen. Der Nutzer kann das Kind nach Teilschritt 2 und 3 noch einmal fragen.
 
 ## 7. Entscheidungen des Nutzers
@@ -193,3 +214,5 @@ Am 21.11.2026 hat der Nutzer alle drei Fragen mit Ja beantwortet:
 1. Die Spiele kommen nach vorn, als neuer Teilschritt 3 in Phase 1.
 2. Die Kartentexte dürfen gekürzt und umgebaut werden. Das Wissen wandert nach „Für Große“ und wird nicht gelöscht. Damit gilt 6.3 im Phase-1-Entwurf („Texte bleiben unverändert“) nicht mehr.
 3. Ein Spiel, das auf „Profi“ geschafft wurde, bekommt in der Sammlung ein goldenes Bild.
+
+Nachtrag am 21.11.2026: Der Nutzer hat außerdem B7 freigegeben („Ja, so machen“), also die Aufteilung in drei Stufen: sofort ohne neuen Inhalt, klein mit den Pilot-Karten, dann mit den Welten wachsen.

@@ -361,11 +361,13 @@ Die Pläne dafür entstehen jeweils, wenn der Teilschritt ansteht, weil sie auf 
   - `article-atlas.mjs` zieht um
   - `bild-recherche` beginnt parallel mit den rund 55 Bildern
   - aus der Ergänzung A1 bis A5: Längen-Budget, Aufräumen über alle Karten, Häppchen für etwa 12 Pilot-Karten, „Stimmt das?“, Reisen einfach zuerst
+  - B7 Stufe 2: je zwei bis drei neue Fragen für die Pilot-Karten
 - **Teilschritt 3 „Kniffliger spielen“ (neu):**
   - „Entdecker“ und „Profi“ in jedem Frage-Spiel, Wahl in `gameSessions` (B1)
   - mehr Aufgaben und Zufall, bessere falsche Antworten (B3)
   - Ratemuster abstellen, Reise-Antworten mischen (B4)
   - Labor-Stempel erst nach dem Ausprobieren (B5)
+  - B7 Stufe 1: nie dieselbe Runde, Wiederholen mit Abstand, die 42 Zusatzfragen auch auf der Karte
 - **Teilschritt 4 „Weltenseiten und Bilder“:**
   - Übersicht und Weltenseite nach 6.4
   - Motivkacheln mit Kennzeichnung, Glanz-Schimmer
