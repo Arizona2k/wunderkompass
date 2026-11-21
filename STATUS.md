@@ -19,11 +19,11 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Nächster Schritt
 
-Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Themenwelt-Seite, neue Wissenskarte, zuerst für das Handy (Entwurf in `docs/entwurf/`, dann Freigabe).
+Phase 1 „Neuer Kern“: Der Entwurf liegt in [docs/entwurf/2026-11-21-phase-1-entwurf.md](docs/entwurf/2026-11-21-phase-1-entwurf.md) und wartet auf die Freigabe des Nutzers. Danach: Plan in kleinen Schritten, dann Teilschritt 1 „Aussehen und Hülle“.
 
 ## Offene Fragen an den Nutzer
 
-- Keine.
+- Freigabe des Phase-1-Entwurfs.
 
 ## Vorübergehende Modell-Ausnahmen
 
@@ -31,7 +31,6 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 
 ## Bekannte Grenzen
 
-- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. Kurz vor dem PR erschienen Kurzbefehle und Helfer dann doch per Name in der Sitzung. In der nächsten Sitzung zuerst prüfen, ob beides gleich zu Beginn per Name klappt.
 - Lokal läuft nur Chromium. Firefox und WebKit prüft der CI-Job „Vollprüfung“.
 
 ## Archivierte Browser-Tests

@@ -110,3 +110,4 @@ Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer
 - Tier-Detektiv mit Bildausschnitt: ein Ausschnitt eines echten Fotos, das Kind rät, wer es ist; der Ausschnitt wächst.
 - Nahrungsnetz-Labor: Wer frisst wen? Ein Tier herausnehmen und sehen, was sich ändert.
 - „Mein Tierpfad“: selbst gewählte Folge von Tierkarten im Pass, als Weg dargestellt.
+- Eine Begleitfigur (Maskottchen), die durch die Seite führt und vorliest. Bewusst nicht in Phase 1 (Entwurf Phase 1, Nicht-Ziele); erst nach dem neuen Kern prüfen, ob sie Kindern hilft oder nur ablenkt.
