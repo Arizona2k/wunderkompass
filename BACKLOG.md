@@ -43,7 +43,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - Gleiche Buch-Symbole für verschiedene Dinge; Pass-Symbole bei 320 px eng; Entdeckerpunkte und Pokal passen nicht zu VISION (Sammeln ohne Zahlen). Teilschritt 5 (Sammlung).
     - Labor: erster Bildschirm zeigt wenig zum Tun, Knöpfe unterschiedlich hoch. Lernreisen: Fortschrittsbalken kaum zu sehen. Mit Phase 4, kleine Störungen vorher in Teilschritt 6.
     - Beschriftungen in Zeichnungen (SVG) nur 9–11 px groß und noch in der alten Schrift (Regel `svg{font-family:…}` in `kern.css`). Je Zeichnung mit ihrer Phase vergrößern und auf Nunito umstellen.
-16. **Kleine Befunde der Schlussprüfung (`code-pruefer`) zu Teilschritt 1**, für Teilschritt 6 „Feinschliff“, falls nicht vorher erledigt. Behoben wurde schon: Auf dem iPhone ging nach einem Tipp in Leiste oder Fuß und „Zurück“ die Lesestelle verloren (Test `zurueckOhneFokus`).
+16. **Kleine Befunde der Schlussprüfung (`code-pruefer`) zu Teilschritt 1**, für Teilschritt 6 „Feinschliff“, falls nicht vorher erledigt. Behoben wurde schon: Auf dem iPhone ging nach einem Tipp in Leiste oder Fuß und „Zurück“ die Lesestelle verloren (Test `zurueckOhneFokus`). Außerdem rutschten die Bereiche beim Laden stark, weil der Fuß unter dem neuen, schlanken Kopf im Bild stand (Tempo-Prüfung: Weltenseite 0,96 statt höchstens 0,1; jetzt etwa 0,03).
     - Rückkehr-Sichtprüfungen rechnen ohne die feste Leiste (`app/hash-route.ts`, `returnGuideFocus` in `app/earth-explorer.tsx`): Ein Ziel kann fokussiert, aber hinter der Leiste verdeckt sein. Betrifft vor allem Tastatur und Bildschirmleser. Lösung: sichtbare Unterkante = Fensterhöhe minus `scroll-padding-bottom`.
     - Tab-Reihenfolge am Handy springt oben → unten → oben, weil die Leiste im Code zwischen Marke und Knöpfen steht.
     - Totes CSS: `.brand-word`, `.brand-period`, Abstand `.learning-tabs` wirkt nicht mehr (Abstände zwischen Seitenkopf, Offline-Hinweis und „Weiter entdecken“ im Design-Abgleich ansehen), `data-focus-at-heading` liest niemand mehr.
@@ -51,6 +51,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - `env(safe-area-inset-bottom)` in `kern.css` wirkt erst mit `viewport-fit=cover`; heute harmlos.
     - Fuß-Link „Was ist neu?“ und Marke öffnen bei Strg- oder Mittelklick keinen neuen Tab (die Leiste kann das schon).
     - „Spielen“ in der Leiste führt bei offenem Spiel nicht zur Übersicht (Altverhalten). Mit Teilschritt 3 klären.
+    - Restliches Rutschen beim Laden (etwa 0,02 bis 0,04, schon vor Teilschritt 1 so): Die Zeile „Dein Entdeckerpass wird geladen …“ verschwindet über dem Inhalt, und der obere Abstand der Ladeanzeige (`.learning-status`, `margin: 16px 0`) wandert nach außen und zurück. `display: flow-root` an `.learning-panel` hilft nicht (Abstand wandert eine Ebene tiefer). Besser: Ladezeile ohne Platzbedarf zeigen und Ladeanzeigen ohne oberen Außenabstand.
     - Prüfen, ob Safari auch auf anderen Rückwegen die Lesestelle verliert (angetippte Karten, Kapitel), weil es Links beim Antippen nicht fokussiert. Die WebKit-Vollprüfung in der CI zeigt es.
 
 ## Phase 2 – Tierwelt (grob)

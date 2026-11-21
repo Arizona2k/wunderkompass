@@ -51,6 +51,11 @@
 
 /* ---------- Hülle: Kopf, Bereichsleiste, Fuß ---------- */
 
+/* Der Hauptbereich ist mindestens so hoch wie der Bildschirm. So steht der Fuß beim Laden
+   eines Bereichs unter dem sichtbaren Teil und springt nicht weg, wenn der Inhalt kommt
+   (Tempo-Prüfung: Verrutschen beim Laden). */
+.learning-main { min-block-size: 100vh; }
+
 .kern-kopf {
   display: grid;
   grid-template-columns: auto 1fr auto;
