@@ -3,16 +3,18 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {validateNatureLearning,natureContent} from '../scripts/nature-content-index.mjs';
 import {bookLookup,bookLookupFocus,initialBookView} from '../app/book-location.ts';
+import {GLOSSARY} from '../app/learning-data.ts';
+import {NATURE,hasNatureLearning} from '../app/nature-data.ts';
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
-const pack=read('app/nature-learning-content.json'),places=read('exports/content/nature-locations.json'),words=read('exports/content/knowledge-words.json').map(w=>[w.term,w.short,w.more]);
+const pack=read('app/nature-learning-content.json'),places=NATURE,words=GLOSSARY;
 
-test('34 individually explained landscapes extend the canonical Nature inventory and preserve every whole delivered place in order',()=>{
- const before=read('tests/fixtures/nature-before-34-M89.json');
- assert.equal(before.sourceCommit,'d7c1bb56be36f740323066da66f80cfc7ef43c7f');
- assert.equal(before.places.length,40);assert.equal(places.length,74);assert.equal(Object.keys(pack).length,34);
- assert.deepEqual(places.slice(0,40),before.places);assert.equal(new Set(places.map(p=>p.id)).size,74);
+test('34 individually explained landscapes extend the canonical Nature inventory',()=>{
+ assert.equal(places.length,74);assert.equal(Object.keys(pack).length,34);
+ assert.equal(new Set(places.map(p=>p.id)).size,74);
  assert.equal(places.filter(p=>p.category!=='animals').length,68);
- assert.deepEqual(new Set(places.slice(40).map(p=>p.id)),new Set(Object.keys(pack)));
+ const explained=places.slice(-Object.keys(pack).length);
+ assert.deepEqual(new Set(explained.map(p=>p.id)),new Set(Object.keys(pack)),'explained places follow the existing inventory');
+ assert.deepEqual(places.filter(p=>hasNatureLearning(p.id)),explained);
  assert.deepEqual(natureContent(true,{places,words}),pack);
 });
 

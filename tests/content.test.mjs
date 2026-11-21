@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
+import {NATURE} from '../app/nature-data.ts';
 const read=path=>JSON.parse(fs.readFileSync(new URL(path,import.meta.url),'utf8'));
 const topics=read('../app/world-catalog.json'),index=read('../app/world-index.json'),photos=read('../app/world-photos.json'),baseline=read('./fixtures/baseline-topics.json');
 test('all original topics and categories survive editorial expansion',()=>{
@@ -16,8 +17,12 @@ test('every retained animal/person photo or individually authored registered own
  for(const p of Object.values(photos)){assert.ok(p.width>0&&p.height>0);assert.ok(fs.existsSync(new URL('../public'+p.src,import.meta.url)),p.src);}
 });
 test('the geographical overview used by cards exists',()=>assert.ok(fs.existsSync(new URL('../public/journeys/continents.svg',import.meta.url))));
+test('every device illustration named by the app exists as a local public image',()=>{
+ const devices=read('../app/device-illustrations.json').entries;assert.ok(devices.length>0);
+ for(const entry of devices){assert.ok(topics.some(t=>t.id===entry.id),entry.id+' topic');assert.match(entry.src,/^\/[^?#]+\.(?:webp|png|jpe?g|svg)$/,entry.id);const file=new URL('../public'+entry.src,import.meta.url);assert.ok(fs.existsSync(file),entry.src);assert.ok(fs.statSync(file).size>0,entry.src);}
+});
 test('the Vostok station marker is near the registered station, rather than a lake or the inconsistent record-table coordinate',()=>{
- const station=read('../exports/content/nature-locations.json').find(place=>place.id==='vostok');assert.ok(station);
+ const station=NATURE.find(place=>place.id==='vostok');assert.ok(station);
  // SCAR Composite Gazetteer/AADC gaz_id136400: station -78.46667,106.80000;
  // its precision is unspecified. Two kilometres accommodates a rounded marker.
  const radians=value=>value*Math.PI/180,distance=({lat,lon})=>{const dLat=radians(lat+78.46667),dLon=radians(lon-106.8),a=Math.sin(dLat/2)**2+Math.cos(radians(lat))*Math.cos(radians(-78.46667))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));};

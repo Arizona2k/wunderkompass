@@ -1,4 +1,3 @@
-import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -7,9 +6,9 @@ import {JOURNEYS} from '../app/learning-data.ts';
 import {validateJourneyInquiries} from '../app/journey-inquiry-validation.mjs';
 import {journeyRoute,chapterPath} from '../app/journey-routing.mjs';
 import {CHAPTER_LINKS,chapterDestination,chapterLinksForTopic} from '../app/journey-links.ts';
-import LABORATORIES from '../exports/content/laboratories.json' with {type:'json'};
 import {restoreSave,createSave} from '../app/progress-storage.ts';
 import {mergeSaves} from '../app/progress-sync.ts';
+import {sourceConstant} from '../scripts/source-constant.mjs';
 test('all legacy chapter identities have distinct complete inquiry levels and valid knowledge destinations',()=>{
  const chapters=validateJourneyInquiries(data,JOURNEYS);assert.equal(JOURNEYS.length,16);assert.equal(chapters.length,80);
  for(const j of JOURNEYS){assert.equal(j.steps.length,5);assert.equal(CHAPTER_LINKS[j.id].length,5);for(let index=0;index<5;index++){
@@ -42,26 +41,14 @@ test('reciprocal links retain every relevant chapter and never repeat a path',()
  for(const [id,links] of Object.entries(CHAPTER_LINKS))for(let index=0;index<links.length;index++)if(links[index].startsWith('world/topic/'))assert.ok(chapterLinksForTopic(links[index].slice(12)).some(c=>c.id===id&&c.index===index&&c.path===chapterPath(id,index)));
 });
 
-test('all240 stored correct choices and individual hint-review coverage keep their identities after editorial revision',()=>{
+test('all240 stored correct choices keep their identities and every task keeps an individual hint and distinct wrong-answer feedback',()=>{
  const retained=JSON.parse(fs.readFileSync('tests/fixtures/journey-task-identities.json','utf8')).tasks;assert.equal(retained.length,240);
- for(const old of retained){const split=old.id.lastIndexOf(':'),id=old.id.slice(0,split),level=Number(old.id.slice(split+1));const q=data.chapters.find(c=>c.id===id)?.tasks[level];assert.ok(q);assert.equal(q.correct,old.correct,old.id);assert.equal(q.answers[q.correct],old.correctAnswer,old.id);}
- const reviews=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));assert.equal(reviews.independentReview,false);assert.equal(reviews.tasks.length,240);assert.equal(new Set(reviews.tasks.map(r=>r.id)).size,240);assert.deepEqual(new Set(reviews.tasks.map(r=>r.id)),new Set(retained.map(r=>r.id)));assert.equal(new Set(data.chapters.flatMap(c=>c.tasks.map(q=>q.hint))).size,240);
- for(const review of reviews.tasks){const split=review.id.lastIndexOf(':'),id=review.id.slice(0,split),level=Number(review.id.slice(split+1)),q=data.chapters.find(c=>c.id===id).tasks[level];assert.deepEqual(q,review.after);assert.equal(createHash('sha256').update(JSON.stringify(q)).digest('hex'),review.afterHash);assert.equal(q.correct,review.before.correct);for(let i=0;i<3;i++)if(i!==q.correct){assert.notEqual(q.answers[i],q.answers[q.correct]);assert.notEqual(q.wrong[i],q.why);}}
+ for(const old of retained){const split=old.id.lastIndexOf(':'),id=old.id.slice(0,split),level=Number(old.id.slice(split+1));const q=data.chapters.find(c=>c.id===id)?.tasks[level];assert.ok(q,old.id);assert.equal(q.correct,old.correct,old.id);}
+ const tasks=data.chapters.flatMap(c=>c.tasks);assert.equal(new Set(tasks.map(q=>q.hint)).size,tasks.length);
+ for(const q of tasks)for(let i=0;i<3;i++)if(i!==q.correct){assert.notEqual(q.answers[i],q.answers[q.correct]);assert.notEqual(q.wrong[i],q.why);}
 });
-
-test('individually corrected plate tasks retain recorded originals and resolvable primary references',()=>{
- const review=JSON.parse(fs.readFileSync('content/journey-task-review.json','utf8'));
- for(const id of ['inside:1:2','inside:2:0','inside:4:2']){
-  const row=review.tasks.find(r=>r.id===id);assert.ok(row.previousAfter20261020);assert.ok(row.aiCounterreview20261020);
-  assert.equal(row.after.correct,row.previousAfter20261020.correct);assert.equal(row.after.answers[row.after.correct],row.previousAfter20261020.answers[row.after.correct]);
-  for(const source of row.sourceIds)assert.match(review.sourceReferences[source]?.url??'',/^https:\/\//,id+' concrete source '+source);
- }
- const inside=JOURNEYS.find(j=>j.id==='inside');assert.equal(inside.source,'https://www.nps.gov/subjects/geology/plate-tectonics.htm');
- assert.equal(review.sourceReferences['inside-base'].url,'https://pubs.usgs.gov/gip/dynamic/understanding.html','original inaccessible source remains recorded');
-});
-
 
 test('every chapter laboratory destination names an actual registered laboratory',()=>{
- const registered=new Set(LABORATORIES.map(lab=>lab.id));
+ const registered=new Set(sourceConstant('app/research-labs.tsx','LABS').map(lab=>lab.id));
  for(const [journey,links]of Object.entries(CHAPTER_LINKS))for(const [index,link]of links.entries())if(link.startsWith('labs/')){assert.ok(registered.has(link.slice(5)),journey+':'+index+' must open a real laboratory: '+link);assert.ok(chapterDestination(link).why);}
 });

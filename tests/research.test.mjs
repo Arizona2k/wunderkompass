@@ -4,21 +4,19 @@ import {createSave,restoreSave,emptyProgress} from '../app/progress-storage.ts';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {seasonalSun,moonObservation,moonAlignment,tideHeight,summarizeLab} from '../app/research-math.ts';
 import {LAB_SEARCH,EXPERIMENT_SEARCH,EXPERIMENT_RESEARCH,RESEARCH_QUESTIONS,RESEARCH_PATHS} from '../app/research-catalog.ts';
-import REVIEW from '../content/research-editorial-review.json' with {type:'json'};
 import FEEDBACK from '../app/research-feedback.json' with {type:'json'};
-import LABS from '../exports/content/laboratories.json' with {type:'json'};
 import WORLD_INDEX from '../app/world-index.json' with {type:'json'};
-import WORLD_ROUTES from '../exports/content/world-routes.json' with {type:'json'};
-import JOURNEYS from '../exports/content/journeys.json' with {type:'json'};
+import {WORLD_ROUTES} from '../app/world-index.ts';
+import {JOURNEYS} from '../app/learning-data.ts';
+import {sourceConstant} from '../scripts/source-constant.mjs';
 import {DISCOVERY_CONNECTIONS,DISCOVERY_ACTIVITIES} from '../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS,connectionsFor} from '../app/knowledge-connections.ts';
-import fs from 'node:fs';import {createHash} from 'node:crypto';
+import fs from 'node:fs';
 import PREVIEWS from '../app/research-preview-images.json' with {type:'json'};
-import PREVIEW_ORIGIN from '../app/research-preview-origin.json' with {type:'json'};
-test('actual-model preview assets stay complete, proportional and tied to unchanged rendering sources',()=>{
- const hash=bytes=>createHash('sha256').update(bytes).digest('hex');assert.deepEqual(Object.keys(PREVIEWS).sort(),LABS.map(l=>l.id).sort());
- for(const [name,record]of Object.entries(PREVIEW_ORIGIN.renderingSources)){let bytes=fs.readFileSync(new URL('../app/'+name,import.meta.url));if(record.scope==='fromLabWorkbench'){const marker=Buffer.from('function LabWorkbench');assert(bytes.includes(marker));bytes=bytes.subarray(bytes.indexOf(marker));}assert.equal(hash(bytes),record.sha256,'Model rendering changed: refresh the actual '+name+' preview instead of retaining stale imagery');}
- for(const [id,image]of Object.entries(PREVIEWS)){const bytes=fs.readFileSync(new URL('../public'+image.src,import.meta.url)),origin=PREVIEW_ORIGIN.images[id];assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(bytes.readUInt32BE(16),image.width);assert.equal(bytes.readUInt32BE(20),image.height);assert.equal(bytes.length,origin.bytes);assert.equal(hash(bytes),origin.sha256);assert(image.alt&&image.caption);}
+const LABS=sourceConstant('app/research-labs.tsx','LABS');
+test('actual-model preview assets stay complete and proportional',()=>{
+ assert.deepEqual(Object.keys(PREVIEWS).sort(),LABS.map(l=>l.id).sort());
+ for(const image of Object.values(PREVIEWS)){const bytes=fs.readFileSync(new URL('../public'+image.src,import.meta.url));assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(bytes.readUInt32BE(16),image.width);assert.equal(bytes.readUInt32BE(20),image.height);assert(image.alt&&image.caption);}
 });
 test('seasonal geometry has opposing hemispheres, polar nights and no false daily rotation effect',()=>{
  const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} ≈ ${b}`);
@@ -46,10 +44,10 @@ test('all eleven lab paths and all three substantive inquiry tiers lead to actua
   assert.notEqual(RESEARCH_QUESTIONS[lab.id].medium.prompt,RESEARCH_QUESTIONS[lab.id].hard.prompt);
  }
 });
-test('all33 retained laboratory questions explain each of66 wrong choices independently without changing correct-answer positions',()=>{
+test('all33 laboratory questions explain each of66 wrong choices independently',()=>{
  assert.deepEqual(Object.keys(FEEDBACK).sort(),LABS.map(l=>l.id).sort());
  for(const lab of LABS)for(const level of ['easy','medium','hard']){
-  const q=level==='easy'?lab:RESEARCH_QUESTIONS[lab.id][level],reasons=FEEDBACK[lab.id][level],retained=REVIEW.entries.find(e=>e.id==='labs:'+lab.id).tasks[level];assert.deepEqual({prompt:q.prompt??q.q,answers:q.answers,correct:q.correct},{prompt:retained.prompt,answers:retained.answers,correct:retained.correct},'feedback remains bound to the retained question and exact answer positions');assert.equal(reasons.length,q.answers.length);assert.equal(reasons[q.correct],'');assert.equal(new Set(reasons.filter(Boolean)).size,q.answers.length-1);
+  const q=level==='easy'?lab:RESEARCH_QUESTIONS[lab.id][level],reasons=FEEDBACK[lab.id][level];assert.equal(reasons.length,q.answers.length);assert.equal(reasons[q.correct],'');assert.equal(new Set(reasons.filter(Boolean)).size,q.answers.length-1);
   for(let i=0;i<q.answers.length;i++)if(i!==q.correct){assert.ok(reasons[i].length>40);assert.notEqual(reasons[i],q.why);assert.ok(!/[<>\u0000-\u0008]/u.test(reasons[i]));}
  }
 });

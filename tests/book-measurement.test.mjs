@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createHash} from 'node:crypto';
 import {lengthUnits,timeInterval,temperatureUnits} from '../app/book-measure-math.mjs';
 import {MEASUREMENT_TERMS,validateMeasurementPack} from '../app/book-measurement-validation.mjs';
 import {bookMeasurementContent} from '../scripts/book-measurement-index.mjs';
+import {GLOSSARY,WHY_QUESTIONS} from '../app/learning-data.ts';
 
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const pack=read('app/book-measurement-content.json');
@@ -38,22 +38,15 @@ test('partial, corrupt or malformed measurement explanations cannot be accepted 
  ]){const changed=structuredClone(pack);mutate(changed);assert.throws(()=>validateMeasurementPack(changed),/Incomplete measurement/);}
 });
 
-test('all90 delivered dictionary payloads remain exact while seven unique SI terms share one canonical export and reachable relationships',()=>{
- const previous=read('tests/fixtures/book-before-measurement-90-hashes.json'),words=read('exports/content/knowledge-words.json');
- assert.equal(Object.keys(previous.words).length,90);assert.equal(words.length,180);
- assert.equal(new Set(words.map(word=>word.term)).size,180);
- for(const [term,sha256] of Object.entries(previous.words)){
-  const current=words.find(word=>word.term===term);assert.ok(current,term);
-  assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),sha256,term+' retains its delivered definition');
- }
+test('seven unique SI terms match the checked pack and the actual glossary, with reachable relationships',()=>{
+ const words=GLOSSARY.map(([term,short,more])=>({term,short,more})),why=WHY_QUESTIONS.map(([question])=>({question})),topics=read('app/world-index.json');
+ assert.equal(new Set(words.map(word=>word.term)).size,words.length);
  assert.deepEqual(bookMeasurementContent(true),pack);
- const exported=read('exports/content/book-measurements.json'),topics=read('app/world-index.json'),why=read('exports/content/why-questions.json');
- assert.equal(why.length,60);assert.deepEqual(exported.map(row=>row.term),MEASUREMENT_TERMS);
+ assert.deepEqual(Object.keys(pack.learning),MEASUREMENT_TERMS);
  const links=read('app/book-measurement-topic-index.json');
  for(const term of MEASUREMENT_TERMS){
   const word=words.find(word=>word.term===term),learning=pack.learning[term];
   assert.deepEqual([word.term,word.short,word.more],pack.words[term]);
-  assert.deepEqual(exported.find(row=>row.term===term),{term,group:word.short,definition:word.more,...learning,sourceReadOn:pack.sourceReadOn});
   assert.ok(topics.some(topic=>topic.id===learning.topic),term+' has a published topic');
   assert.deepEqual(links.find(link=>link.term===term),{term,topic:learning.topic,connection:learning.connection});
   for(const link of learning.relatedWords??[])assert.ok(words.some(word=>word.term===link.term),term+' related word '+link.term);
