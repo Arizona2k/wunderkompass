@@ -1,5 +1,6 @@
 // Inhaltswächter (ersetzt das frühere `pnpm run verify`):
 // 1. Der Export-Prüflauf ist grün: abgeleitete Dateien in app/ sind aktuell, die Validatoren bestehen.
+//    Die eingecheckten Exporte in exports/content passen zum frischen Export.
 // 2. Jedes Thema mit Foto verweist auf einen vorhandenen Bildnachweis und eine vorhandene Datei.
 // 3. Das Spiel „Früher oder heute?“ enthält keine Forscherfragen-Erfindungen (walkthrough).
 // 4. Stabile IDs: Jede ID, die im Entdeckerpass oder in Links vorkommt, gibt es noch.
@@ -9,8 +10,10 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
+import {isDeepStrictEqual} from 'node:util';
 import {worldGameBank} from '../app/world-game-bank.ts';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -29,6 +32,47 @@ const exported = name => readJson(path.join(CHECK_DIR, name + '.json'));
 
 test('der Export-Prüflauf ist grün (abgeleitete Dateien aktuell, Validatoren bestanden)', () => {
   assert.equal(exportError, undefined, String(exportError?.stderr ?? exportError));
+});
+
+// exports/content bleibt in Git, weil Browser-Tests es lesen (BACKLOG). Weicht es vom frischen Export ab,
+// prüfen diese Tests still alte Daten. Verglichen wird Byte für Byte, in index.json ohne den Zeitstempel.
+const EXPORT_DIR = path.join(ROOT, 'exports/content');
+function staleExportFiles(freshDir, savedDir) {
+  const withoutStamp = file => {
+    const data = readJson(file);
+    delete data.generatedAt;
+    return data;
+  };
+  const names = [...new Set([...fs.readdirSync(freshDir), ...fs.readdirSync(savedDir)])].sort();
+  return names.filter(name => {
+    const fresh = path.join(freshDir, name);
+    const saved = path.join(savedDir, name);
+    if (!fs.existsSync(fresh) || !fs.existsSync(saved)) return true;
+    if (name === 'index.json') return !isDeepStrictEqual(withoutStamp(fresh), withoutStamp(saved));
+    return !fs.readFileSync(fresh).equals(fs.readFileSync(saved));
+  });
+}
+
+test('exports/content passt zum frischen Export', () => {
+  assert.deepEqual(staleExportFiles(CHECK_DIR, EXPORT_DIR), [], 'Veraltete Exporte: pnpm run export:data ausführen und mit committen.');
+});
+
+test('Mutationsprobe: veraltete, fehlende und zusätzliche Exporte werden erkannt, ein neuer Zeitstempel nicht', () => {
+  const copy = fs.mkdtempSync(path.join(os.tmpdir(), 'wk-exports-'));
+  try {
+    for (const name of fs.readdirSync(CHECK_DIR)) fs.copyFileSync(path.join(CHECK_DIR, name), path.join(copy, name));
+    const index = readJson(path.join(copy, 'index.json'));
+    fs.writeFileSync(path.join(copy, 'index.json'), JSON.stringify({...index, generatedAt: '2000-01-01T00:00:00.000Z'}, null, 2));
+    assert.deepEqual(staleExportFiles(CHECK_DIR, copy), []);
+    const why = readJson(path.join(copy, 'why-questions.json'));
+    why[0].answer += ' (alt)';
+    fs.writeFileSync(path.join(copy, 'why-questions.json'), JSON.stringify(why));
+    fs.rmSync(path.join(copy, 'earth-badges.json'));
+    fs.writeFileSync(path.join(copy, 'zz-alt.json'), '[]');
+    assert.deepEqual(staleExportFiles(CHECK_DIR, copy), ['earth-badges.json', 'why-questions.json', 'zz-alt.json']);
+  } finally {
+    fs.rmSync(copy, {recursive: true, force: true});
+  }
 });
 
 // Fehlende Fotos oder Bildnachweise eines Themas, sortiert nach Thema.

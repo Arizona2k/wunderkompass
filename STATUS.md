@@ -47,8 +47,15 @@ Wenn eine neue Sitzung nötig ist, diesen Text in den neuen Chat kopieren:
 
 ```text
 Wir arbeiten weiter an WunderKompass (Repository Arizona2k/wunderkompass).
-Der Standardbranch main ist veraltet. Zuerst:
-git fetch origin test-live && git checkout test-live
+Der Standardbranch main ist veraltet, der aktuelle Stand liegt auf test-live.
+Setze zuerst deinen Arbeitsbranch (claude/...) auf test-live, mit genau diesen Zeilen:
+
+git fetch origin main test-live
+B=$(git branch --show-current)
+if git merge-base --is-ancestor origin/test-live HEAD; then echo "Branch hat schon den test-live-Stand."
+elif [ "$B" != main ] && { [ -z "$(git log --oneline origin/main..HEAD)" ] || [ -z "$(git log --oneline origin/test-live..HEAD)" ]; }; then git checkout --no-track -B "$B" origin/test-live
+else echo "STOPP: Branch nicht automatisch umstellbar. Erst nachfragen."; fi
+
 Dann CLAUDE.md und STATUS.md lesen und /weiter ausführen.
-Arbeitsbranch: der Branch, den die Sitzung vorgibt (claude/...).
+Fehlt /weiter (Kurzbefehle laden beim Sitzungsstart vom alten Stand), lies .claude/skills/weiter/SKILL.md und führe die Schritte von Hand aus.
 ```

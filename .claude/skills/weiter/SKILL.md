@@ -7,9 +7,16 @@ description: Wiedereinstieg in WunderKompass in einer neuen Sitzung – Branch u
 
 Führe diese Schritte der Reihe nach aus. Ändere dabei nichts außer dem Branch-Wechsel in Schritt 1.
 
-1. **Branch prüfen.**
-   - `git branch --show-current`. Steht dort `main`: `git fetch origin test-live && git checkout test-live`, denn `main` ist der veraltete Standardbranch.
-   - Gibt die Sitzung einen eigenen Arbeitsbranch vor (`claude/...`), arbeite dort und hole vorher `test-live`, falls der Branch neu ist.
+1. **Branch prüfen.** `main` ist der veraltete Standardbranch; gearbeitet wird auf dem Arbeitsbranch der Sitzung (`claude/...`) mit dem Stand von `test-live`. Diese Zeilen (wie in der Startnachricht in `STATUS.md`) stellen das sicher:
+   ```bash
+   git fetch origin main test-live
+   B=$(git branch --show-current)
+   if git merge-base --is-ancestor origin/test-live HEAD; then echo "Branch hat schon den test-live-Stand."
+   elif [ "$B" != main ] && { [ -z "$(git log --oneline origin/main..HEAD)" ] || [ -z "$(git log --oneline origin/test-live..HEAD)" ]; }; then git checkout --no-track -B "$B" origin/test-live
+   else echo "STOPP: Branch nicht automatisch umstellbar. Erst nachfragen."; fi
+   ```
+   - Umgestellt wird nur ein Branch ohne eigene Commits, es geht also nichts verloren.
+   - Bei „STOPP“ (eigene Commits ohne `test-live`-Stand oder Sitzung direkt auf `main`) nichts erzwingen, sondern den Nutzer fragen.
 2. **Lesen:** `CLAUDE.md` ganz, dann `STATUS.md` ganz. Bei Bedarf `BACKLOG.md` (nur den Abschnitt der aktuellen Phase).
 3. **Git-Stand:** `git status --short`, `git log --oneline -5`, `git fetch origin` und Abstand zu `origin/test-live`. Gibt es offene PRs nach `test-live` (GitHub-Werkzeuge)? Gibt es unfertige eigene Arbeit (nicht committete Dateien, ungepushte Commits)? Die kommt zuerst.
 4. **Werkzeuge:** Im Cloud-Container `export PATH=/opt/node24/bin:$PATH`, dann `node -v` (24) und `pnpm -v` (11.25.0). Nur wenn `node_modules` fehlt: `pnpm install --frozen-lockfile`.
