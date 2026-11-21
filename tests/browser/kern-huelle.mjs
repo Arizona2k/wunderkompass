@@ -6,6 +6,8 @@ import {withPage, ready} from './harness.mjs';
 import {homeContrast} from './discovery-central.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
+import {NEUIGKEITEN, aufteilen, datumLesbar} from '../../app/kern/neuigkeiten.ts';
+import {prepareAxe} from './axe-loader.mjs';
 
 const SCHMAL = {width: 320, height: 568, touch: true};
 const BREIT = {width: 1440, height: 900};
@@ -40,6 +42,10 @@ export async function kernHuelle(ctx) {
       await grundlage(page, width);
       await ruhigerFokus(page, width);
       ctx.report.checks.push(`Kern ${width}: Schrift Nunito, Grundfarbe, ruhiger Fokus auf Überschriften`);
+    });
+    await withPage(ctx, view, async page => {
+      await neuigkeiten(page, view.width);
+      ctx.report.checks.push(`Was ist neu? ${view.width}: Titel ruhig fokussiert, neueste Einträge oben, „Früher“ eingeklappt, axe ohne Verstöße`);
     });
   }
   await withPage(ctx, BREIT, async page => {
@@ -321,4 +327,47 @@ async function updatesOhneMarkierung(page, width) {
   await page.evaluate(() => { location.hash = 'updates'; });
   await page.locator('#updates-title').waitFor();
   assert.equal(await leisteVon(page).locator('[aria-current]').count(), 0, `updatesOhneMarkierung ${width}: ein Bereich ist markiert`);
+}
+
+// „Was ist neu?“: Titel ruhig fokussiert, neueste Einträge oben, ältere unter „Früher“ eingeklappt.
+async function neuigkeiten(page, width) {
+  await page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true}).click();
+  const titel = page.locator('#updates-title');
+  await titel.waitFor();
+  await page.waitForFunction(() => document.activeElement?.id === 'updates-title', null, {polling: 100});
+  assert.equal(await titel.evaluate(el => getComputedStyle(el).outlineStyle), 'none', `neuigkeiten ${width}: Titel zeigt einen Fokusrahmen`);
+  assert.equal((await titel.innerText()).trim(), 'Was ist neu?', `neuigkeiten ${width}: Titel`);
+  const ansicht = page.locator('.kern-neuigkeiten');
+  assert.deepEqual(await ansicht.locator('li[data-neuigkeit]').evaluateAll(eintraege => eintraege.map(e => e.dataset.neuigkeit)),
+    NEUIGKEITEN.map(e => e.id), `neuigkeiten ${width}: Einträge oder Reihenfolge stimmen nicht`);
+  const {neu, frueher} = aufteilen();
+  assert.equal(await ansicht.locator(':scope > ol > li').count(), neu.length, `neuigkeiten ${width}: Zahl der Einträge oben`);
+  const erster = ansicht.locator('li[data-neuigkeit]').first();
+  const ueberschrift = erster.getByRole('heading', {level: 2});
+  assert.equal((await ueberschrift.innerText()).trim(), NEUIGKEITEN[0].titel, `neuigkeiten ${width}: Titel des ersten Eintrags`);
+  const zeit = erster.locator('time');
+  assert.equal(await zeit.getAttribute('datetime'), NEUIGKEITEN[0].datum, `neuigkeiten ${width}: datetime`);
+  assert.equal((await zeit.innerText()).trim(), datumLesbar(NEUIGKEITEN[0].datum), `neuigkeiten ${width}: lesbares Datum`);
+  // Ohne Scrollen sichtbar, auch über der Leiste unten am Handy.
+  const sichtbar = await ueberschrift.evaluate((el, leiste) => {
+    const r = el.getBoundingClientRect(), nav = document.querySelector(leiste).getBoundingClientRect();
+    const unten = nav.top > innerHeight / 2 ? nav.top : innerHeight;
+    return r.top >= 0 && r.bottom <= unten;
+  }, LEISTE);
+  assert.ok(sichtbar, `neuigkeiten ${width}: erster Eintrag ist ohne Scrollen nicht zu sehen`);
+  const frueherBox = ansicht.locator('details[data-history-disclosure="neuigkeiten-frueher"]');
+  assert.equal((await frueherBox.locator(':scope > summary').innerText()).trim(), 'Früher', `neuigkeiten ${width}: Knopf „Früher“`);
+  assert.equal(await frueherBox.evaluate(el => el.open), false, `neuigkeiten ${width}: „Früher“ ist zu Beginn offen`);
+  assert.equal(await frueherBox.locator('li[data-neuigkeit]').count(), frueher.length, `neuigkeiten ${width}: Zahl der Einträge unter „Früher“`);
+  await axeOhneVerstoss(page, `neuigkeiten ${width}`);
+  await frueherBox.locator(':scope > summary').click();
+  assert.equal(await frueherBox.evaluate(el => el.open), true, `neuigkeiten ${width}: „Früher“ öffnet nicht`);
+  await axeOhneVerstoss(page, `neuigkeiten ${width} (Früher offen)`);
+}
+
+async function axeOhneVerstoss(page, wo) {
+  await prepareAxe(page);
+  const verstoesse = await page.evaluate(async () => (await window.axe.run('.kern-neuigkeiten', {runOnly: {type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']}}))
+    .violations.map(v => ({id: v.id, ziele: v.nodes.map(n => n.target)})));
+  assert.deepEqual(verstoesse, [], `${wo}: axe meldet Verstöße`);
 }
