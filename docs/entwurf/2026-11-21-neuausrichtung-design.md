@@ -1,6 +1,6 @@
 # WunderKompass – Neuausrichtung (Weg C) und Schritt 0 „Großputz & Arbeitsweise“
 
-Stand: 21.11.2026 · Status: **Entwurf, wartet auf Freigabe**
+Stand: 21.11.2026 · Status: **Freigegeben vom Nutzer am 21.11.2026** · Bauplan: [`2026-11-21-schritt-0-plan.md`](2026-11-21-schritt-0-plan.md)
 
 Dieser Entwurf hat zwei Teile. Teil 1 beschreibt die Gesamtrichtung, auf die wir uns geeinigt haben. Teil 2 beschreibt Schritt 0 so genau, dass man ihn ohne Rückfragen planen und bauen kann. Jede spätere Phase bekommt ihren eigenen Entwurf und ihre eigene Freigabe.
 
