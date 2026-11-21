@@ -1,6 +1,7 @@
 // Wächter für die Browser-Suiten: Lädt alle Browser-Module (ein kaputter Import fällt so schon
 // in `pnpm test` auf) und prüft, dass die Liste vollständig und eindeutig ist.
 import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import test from 'node:test';
 import {SUITES} from './browser/suites.mjs';
@@ -50,6 +51,17 @@ test('Suiten mit eigenem Server oder Persistenzprofil laufen allein', () => {
   for (const name of ['offline-cold', 'offline-resilience', 'offline-cold-full', 'performance']) {
     assert.equal(SUITES.find(suite => suite.name === name)?.solo, true, name + ' muss solo laufen');
   }
+});
+
+// Läuft in keiner gewählten Engine eine Suite (z. B. nur Chromium-Suiten mit --browser firefox),
+// darf der Runner nicht „Alle Suiten bestanden.“ melden.
+test('der Runner bricht ab, wenn in keiner Engine eine Suite laufen würde', () => {
+  const result = spawnSync(process.execPath, ['tests/browser/run.mjs', '--suite', 'full', '--browser', 'firefox', 'performance'], {
+    cwd: new URL('..', import.meta.url), encoding: 'utf8', timeout: 60000,
+  });
+  assert.equal(result.status, 2, result.stdout + result.stderr);
+  assert.match(result.stderr, /Keine der gewählten Suiten läuft in firefox/);
+  assert.doesNotMatch(result.stdout, /Alle Suiten bestanden/);
 });
 
 // Ältere Abläufe schreiben in report.<feld>.push(…). Fehlt das Feld, bricht die Suite mitten im Lauf ab

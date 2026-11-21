@@ -37,6 +37,8 @@ Diese Testdateien liefen schon vorher nirgends mehr („tote Waisen“) und lieg
 | `audio.mjs`, `globe.mjs`, `legacy-games.mjs`, `responsive.mjs`, `usability.mjs`, `world-games.mjs` | Von keinem Lauf mehr aufgerufen; die Abläufe decken heutige Suiten ab (Globus, Spiele, Breiten in `core`, `animals`, `playground`) |
 | `critical.mjs` | Von keinem Lauf aufgerufen; einziger noch fehlender Fall „beschädigter Speicherstand“ steht im BACKLOG als neuer Test |
 
+Ebenfalls schon vorher tot und gelöscht (laut Plan): `content`, `journeys-labs`, `models-existing`, `new-models`, `offline`, `routes`, `search-links`.
+
 Aus dem großen Prüflauf in Schritt 0 kam kein weiterer Test ins Archiv: Alle umgezogenen Suiten laufen grün (Chromium).
 
 ## Neuer Chat: Startnachricht

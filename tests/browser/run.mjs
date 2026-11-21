@@ -24,6 +24,9 @@ const ENGINES = ['chromium', 'firefox', 'webkit'];
 const options = parseArguments(process.argv.slice(2));
 const suites = selectSuites(options);
 const engines = options.browser === 'all' ? ENGINES : [options.browser];
+if (!engines.some(engine => suites.some(suite => engine === 'chromium' || !suite.chromiumOnly))) {
+  stop(`Keine der gewählten Suiten läuft in ${engines.join(', ')} (nur Chromium).`);
+}
 
 if (!options.base) {
   const dist = path.resolve(PROJECT, process.env.QA_DIST ?? 'dist');

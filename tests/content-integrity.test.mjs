@@ -3,7 +3,8 @@
 // 2. Jedes Thema mit Foto verweist auf einen vorhandenen Bildnachweis und eine vorhandene Datei.
 // 3. Das Spiel „Früher oder heute?“ enthält keine Forscherfragen-Erfindungen (walkthrough).
 // 4. Stabile IDs: Jede ID, die im Entdeckerpass oder in Links vorkommt, gibt es noch.
-//    fixtures/stable-ids.json: das alte Inventar (Commit d0dc9a3) plus alle am 21.11.2026 vorhandenen IDs.
+//    fixtures/stable-ids.json: aus dem alten Inventar (Commit d0dc9a3) die Familien, deren IDs im Pass oder in
+//    Hash-Links stehen, plus alle am 21.11.2026 vorhandenen IDs dieser Familien.
 //    Die Liste darf nur wachsen; wer eine ID bewusst aufgibt, braucht eine Umleitung und einen BACKLOG-Eintrag.
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
@@ -85,10 +86,15 @@ function currentIds() {
   ids.missions = exported('globe-missions').map((_mission, index) => String(index));
   ids.quiz = exported('quiz-questions').map(q => q.id);
   ids['nature-topics'] = exported('nature-locations').filter(t => t.category !== 'animals').map(t => t.id);
+  // Wörter und Warum-Fragen stecken als `word:…`/`why:…` in Favoriten und in Links #book/words/… bzw. #book/why/….
+  ids.words = exported('knowledge-words').map(w => w.term);
+  ids.why = exported('why-questions').map(w => w.question);
+  // Lernrouten: Links #world/route/<id>, abgeschlossene Routen als `route:<id>` in den Entdeckungen.
+  ids.routes = exported('world-routes').map(r => r.id);
   return ids;
 }
 
-test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte) gibt es noch', () => {
+test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte, Wörter, Warum-Fragen, Routen) gibt es noch', () => {
   assert.equal(exportError, undefined, 'Export-Prüflauf fehlgeschlagen');
   const current = currentIds();
   assert.deepEqual(Object.keys(STABLE).filter(family => !current[family]), [], 'Familie ohne heutige Quelle');
