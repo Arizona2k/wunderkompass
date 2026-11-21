@@ -19,11 +19,11 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Nächster Schritt
 
-Phase 1 „Neuer Kern“: Der Entwurf liegt in [docs/entwurf/2026-11-21-phase-1-entwurf.md](docs/entwurf/2026-11-21-phase-1-entwurf.md) und wartet auf die Freigabe des Nutzers. Danach: Plan in kleinen Schritten, dann Teilschritt 1 „Aussehen und Hülle“.
+Phase 1 „Neuer Kern“: Entwurf am 21.11.2026 freigegeben ([docs/entwurf/2026-11-21-phase-1-entwurf.md](docs/entwurf/2026-11-21-phase-1-entwurf.md)). Jetzt: Plan in kleinen Schritten, dann Teilschritt 1 „Aussehen und Hülle“.
 
 ## Offene Fragen an den Nutzer
 
-- Freigabe des Phase-1-Entwurfs.
+- Keine.
 
 ## Vorübergehende Modell-Ausnahmen
 

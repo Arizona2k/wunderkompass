@@ -1,6 +1,6 @@
 # Phase 1 „Neuer Kern“ – Entwurf
 
-Stand: 21.11.2026 · Status: **Entwurf, wartet auf Freigabe durch den Nutzer**
+Stand: 21.11.2026 · Status: **vom Nutzer freigegeben am 21.11.2026**
 Grundlage: [VISION.md](../../VISION.md), [Neuausrichtung](2026-11-21-neuausrichtung-design.md), [Katalog-Einordnung](2026-11-21-katalog-2027-einordnung.md), BACKLOG „Phase 1“.
 
 ## 1. Worum es geht
@@ -417,6 +417,7 @@ Die Reihenfolge Karte vor Startseite ist Absicht: Die Startseite nutzt die „Ra
 - Belohnung: „Sammeln ohne Zahlen“ statt Punkte, Stufen und Abzeichen.
 - Bilder: Zeitreise und Erfindungen bekommen schon in Phase 1 echte, freie Bilder (6.10); die übrigen Karten ohne Bild bekommen vorerst Motivkacheln.
 - Technik und Gestaltung im Einzelnen entscheidet Claude; bei Richtungsfragen fragt Claude mit Auswahl.
+- Freigabe des Entwurfs (21.11.2026). Dazu: Auch beim Aussehen und bei der Startseite ist Claude frei in der Gestaltung und nimmt den Nutzer mit, wie sonst auch.
 
 **Von Claude entschieden (der Nutzer kann widersprechen):**
 - Sechs Welten bleiben in Phase 1; sieben Welten erst mit dem Umzug der Inhalte.
