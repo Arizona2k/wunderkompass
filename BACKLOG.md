@@ -113,6 +113,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - **Browser-Runner:** `stop()` in `tests/browser/harness.mjs` nach etwa 5 s mit SIGKILL beenden; `people-learning`, `offline-retention` und `animal-native-zoom` sammeln noch keine Konsolenfehler über `monitor`.
 - **Rauchtest-Bilder:** Der Rauchtest fotografiert, bevor alle Fotos geladen sind (Befund Schritt 0: leere Bildflächen bei Löwe, Gepard, Curie, mal so, mal so). Vor dem Screenshot auf sichtbare Bilder warten, damit Vorher/Nachher-Vergleiche ruhig bleiben.
 - **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen. Nicht löschen, solange PR #95 nicht übernommen ist: `codex/wunderkompass-history-evidence-2026-11-08` (Commit `7e00bd0`).
+- **Tempo-Prüfung in `pnpm run check`** (Teilschritt 2, Befund 21.11.2026): Die Suite `performance` (Verrutschen beim Laden, Ladezeit, Startgröße; etwa 35 s) steckt nur in der großen Prüfung. Deshalb fiel das Springen beim Laden aus Teilschritt 1 erst am Ende auf. In den CI-Satz aufnehmen; sie läuft allein (`solo`), also prüfen, wie sich die CI-Laufzeit ändert.
 - **Vollprüfung dauert lange:** `test:full` braucht in Chromium nacheinander rund zwei Stunden (Messung Schritt 0; CI-Grenze deshalb 180 Minuten). Suiten beschleunigen oder sinnvoll aufteilen, statt die Zeitgrenze im CI-Job weiter zu erhöhen.
 
 ## Medien mit offenen Rechten
