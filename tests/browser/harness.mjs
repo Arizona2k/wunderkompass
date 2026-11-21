@@ -19,6 +19,26 @@ export function ready(page) {
   return page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor({timeout: 26000});
 }
 
+// Ein gewolltes Neuladen, Schließen oder Weiterblättern bricht Bilder ab, die noch laden
+// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED), und die Fehlerüberwachung schlägt an.
+// Auf einem langsamen Rechner wie der CI ist dieses Zeitfenster groß. Deshalb vorher warten, bis alle
+// Bildanfragen der Seite fertig sind. Jede echte Fehlanfrage bleibt in der Überwachung sichtbar.
+// Gleich nach newPage aufrufen: const bilderFertig = bildanfragen(page); … await bilderFertig(); await page.reload();
+export function bildanfragen(page, {timeout = 20000} = {}) {
+  const offen = new Set();
+  const fertig = request => offen.delete(request);
+  page.on('request', request => { if (request.resourceType() === 'image') offen.add(request); });
+  page.on('requestfinished', fertig);
+  page.on('requestfailed', fertig);
+  return async () => {
+    const ende = Date.now() + timeout;
+    while (offen.size) {
+      if (Date.now() > ende) throw Error('Bilder laden noch vor dem gewollten Seitenwechsel: ' + [...offen].map(r => r.url()).join(', '));
+      await page.waitForTimeout(50);
+    }
+  };
+}
+
 // Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.
 // Gibt den Playwright-Locator auf den Link in der Bereichsleiste zurück.
 export function bereich(page, id) {
