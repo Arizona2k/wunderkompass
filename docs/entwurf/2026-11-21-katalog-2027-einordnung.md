@@ -28,7 +28,7 @@ Der Katalog sagt selbst: Er ist keine Freigabe, laufende Arbeit abzubrechen. Wir
 | 7 Verknüpfung, Suche, Rückwege | übernommen | Ziel 6. Suche versteht auch Fragen aus mehreren Wörtern. Antworten auf Warum-Fragen kommen aus geprüften Texten, nicht von einer KI. Jeder Weg führt zurück. | VISION (Ziel 6), BACKLOG |
 | 8 Bestandsschutz | gilt schon | Karten, Reisen, Spiele, Labore, Pass, Suche und Links bleiben. | CLAUDE.md (Feste Regeln), Tests |
 | 9 Qualität | Kern übernommen | Geprüfte Quellen, richtige Bilder und Modelle, Tests für Handy und Rechner. Dazu immer echtes Ansehen, nicht nur grüne Tests. Kein Nachweis-Apparat. | CLAUDE.md (Arbeitsablauf, Helfer) |
-| 10 Reihenfolge | nicht übernommen | Ersetzt durch Weg C. Offene Fehler aus Paket 3.5 und Audit V2 stehen im BACKLOG. | BACKLOG |
+| 10 Reihenfolge | nicht übernommen | Ersetzt durch Weg C. Audit V2 ist nachgeprüft: 18 von 19 Befunden behoben, der Rest steht im BACKLOG (unten). | BACKLOG |
 | 11 Eigene Qualitätskontrolle | übernommen | Erst verstehen, Doppeltes vermeiden, Folgen prüfen, Schwächen offen sagen, keine unnötigen Schleifen. | CLAUDE.md |
 
 ## Was wir bewusst nicht machen, und warum
@@ -60,7 +60,18 @@ Der Katalog sagt selbst: Er ist keine Freigabe, laufende Arbeit abzubrechen. Wir
 
 ## Was aus Audit V2 noch offen ist
 
-<!-- AUDIT-V2 -->
+Abschnitt 10 verlangt, Audit V2 abzuschließen. Darum hat ein Helfer am 21.11.2026 alle 19 Befunde aus [Audit V2 vom 29.10.2026](../archiv/auftrag-2026-10-13/WunderKompass_Audit_Ergaenzung_V2_2026-10-29.md) am heutigen Code nachgeprüft. Das ist eine Teilprüfung: Code gelesen, Spielfragen in Node erzeugt, im Browser nur Chromium bei 1280 px.
+
+**Ergebnis:** 18 von 19 Befunden sind behoben, einer nur teilweise.
+- Behoben und im Browser bestätigt: Rückwege im Wissensbuch (A1, A2), Plus und Minus bei den Erdschichten (B), Mehrwortsuche und weicher Trennstrich (D1, D2), doppelte Filter (E), Laborknopf, Tierwelt Seite 2 und Vulkan-Kapitel (F1–F3).
+- Behoben, am Code und an den erzeugten Fragen geprüft: Hinweise verraten die Lösung nicht mehr (C1–C5).
+- Behoben, nur am Code geprüft: „Stationen erneut ansehen“, Notizen bearbeiten, Zählung der Wiederholungen (H1–H3).
+- Kaputte Quellenadressen werden nicht mehr ausgeliefert (G1). Zwei Ersatzquellen sperren automatische Abrufe (Antwort 403); ob sie tragen, prüft der `fakten-pruefer`, wenn das Thema dran ist.
+- **Teilweise behoben:** In Länderansichten stehen die sechs gemeldeten Sprach- und Währungscodes jetzt als Namen da. Rund 100 weitere Codes erscheinen aber weiter roh, zum Beispiel „bem“ und „toi“ bei Sambia, „ff“ und „srr“ beim Senegal, die Währung „XCG“ (G2). Das merken Kinder; es steht im BACKLOG.
+
+Kleine Reste aus der Nachprüfung stehen ebenfalls im BACKLOG: Der Verweis „Mit ‚Reflexion‘ weiterdenken“ steckt in zwei Klappen (Phase 3). Die Zoom-Knöpfe heißen auch in der Schichtenansicht „Weltkugel vergrößern“ (Phase 4). In den Tierdaten stehen weiter beide Schreibweisen „Wiesen & Gärten“ und „Wiesen und Gärten“ (Phase 2).
+
+Paket 3.5 (WK-051 bis WK-058) bestand vor allem aus Bestandslisten und Nachweisen. Die inhaltlichen Punkte daraus stehen schon seit Schritt 0 im BACKLOG (WK-Nummern in Klammern).
 
 ## Rückfragen
 

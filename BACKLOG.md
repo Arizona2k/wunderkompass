@@ -35,6 +35,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - **Befund der `bild-recherche` (Eisbär):** Nachweis korrekt (Commons „Polar_Bear.jpg“, gemeinfrei, USFWS), aber nur 700 px breit. Breiteres freies Foto suchen.
 - Tier-Spiele (Tierdetektiv, Lebensraum-Sortierer, Tier & Lebensraum, Wer frisst was?, Tierrekorde) mit echten Stufen und Fehlerbegründungen.
 - Fehlende Medien: Pilze, Bestäubung, Nahrungsnetze (WK-056).
+- Lebensraum-Daten vereinheitlichen: „Wiesen & Gärten“ / „Wiesen und Gärten“ und „Flüsse & Seen“ / „Flüsse und Seen“ stehen beide in den Daten; die Anzeige fasst sie schon zusammen (`app/world-selection-state.mjs`), die Daten nicht (Audit V2, E).
 
 ## Phase 3 – Weitere Welten (grob)
 
@@ -43,7 +44,8 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Alter Artikel „Papier aus China“ neu (WK-053).
 - 16 Lernreisen mit 80 Kapiteln und 240 Aufgaben kindgerecht nacharbeiten: mehr Tun als Ankreuzen, Hinweise, erklärende Rückmeldung (WK-055, WK-048).
 - Planetenwerte vereinheitlichen: Neptun 30,05 AE (Orbitlabor) gegen 30,18 AE (Größenvergleich), ebenso Saturn und Uranus; eine Definition, Quelle und Erklärung (WK-056).
-- Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen.
+- Wissensbuch: gemeinsame Ansicht aller Notizen; sparsame Begriffshilfe beim Lesen. Verweise wie „Mit ‚Reflexion‘ weiterdenken“ nicht in zwei verschachtelten Klappen verstecken (Audit V2, A1). „Stationen erneut ansehen“, Notizen bearbeiten und die Zählung der Wiederholungen dabei einmal im Browser bedienen; bisher nur am Code geprüft (Audit V2, H1–H3).
+- Quellen der Bauwerk- und Erfindungsthemen: `burjkhalifa.ae/the-tower/structures/` und die NMS-Seite zum Telefon sperren automatische Abrufe (403); beim Überarbeiten mit `fakten-pruefer` klären. Die drei alten kaputten Adressen stehen noch im Erzeugungsskript `content/author-world-content.py` (Zeilen 126, 161) und nur dort (Audit V2, G1).
 - **Neue Themenfelder aus dem Katalog 2027** (Körper, Geld und Zinsen, Religionen, Robotik, Physik und Chemie, Sport, Urzeit): nach den Sorgfaltsregeln in `docs/entwurf/2026-11-21-katalog-2027-einordnung.md` in die passenden Welten, jedes Thema in drei Tiefen. Eigene Welt „Urzeit“ (Dinosaurier, Fossilien, Erdzeitalter) beim Entwurf von Phase 3 prüfen.
 
 ## Phase 4 – Globus, Spiele, Labore (grob)
@@ -55,6 +57,8 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Rückmeldungen ehrlich formulieren: nach einer Auswahl nicht „Richtig erklärt!“ bescheinigen (WK-056; teils erledigt, vorher prüfen).
 - Länder- und Flaggen-Memory mit drei Stufen und Erklärungen (WK-038). Wissens-Challenge: falsche Antworten begründen, neue Themen (WK-017).
 - Ozean-Navigator mit zugänglicher Karte; Weltreise-Suche modernisieren.
+- **Länderansicht: rohe Sprach- und Währungscodes** (Audit V2, G2, für Kinder spürbar): Rund 100 Codes erscheinen ohne Namen, z. B. „bem“, „toi“ (Sambia), „ff“, „srr“ (Senegal), Währung „XCG“. `app/country-portrait.tsx` ergänzt bisher nur sechs Namen. Lösung: deutsche Namen ergänzen oder unbekannte Codes nicht roh zeigen; mit Test über alle Länder. Darf als kleine Korrektur vorgezogen werden.
+- Zoom-Knöpfe heißen auch in der 2D-Schichtenansicht „Weltkugel vergrößern“ (Audit V2, B): passend benennen.
 - Labore: Modelle, Legenden und Modellgrenzen einzeln verbessern.
 
 ## Technik und Prüfung
