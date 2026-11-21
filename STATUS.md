@@ -25,7 +25,7 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 
 ## Bekannte Grenzen
 
-- Die sechs Helfer in `.claude/agents/` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest. Beim nächsten `/weiter` prüfen, ob der Aufruf per Name klappt.
+- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. In der nächsten Sitzung zuerst prüfen, ob beides per Name klappt.
 - Lokal läuft nur Chromium. Firefox und WebKit prüft der CI-Job „Vollprüfung“.
 
 ## Archivierte Browser-Tests

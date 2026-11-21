@@ -64,6 +64,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Schwer wartbaren Code (Zeilen mit bis zu 6.000 Zeichen) dort lesbar machen, wo eine Phase ohnehin arbeitet.
 - **Inhaltsprüfung** `tests/content-integrity.test.mjs` (stabile IDs, Bildnachweise, Export) kam in Schritt 0 ohne `KNOWN_GAPS`-Liste aus: Der heutige Stand erfüllt alle Regeln. Neue Lücken nur mit BACKLOG-Verweis eintragen; die Liste darf nur kürzer werden.
 - **`exports/content/` ablösen:** 30 Browser-Testmodule lesen die exportierten Inhaltsdateien (Befund Schritt 0, deshalb noch im Repository). Tests nach und nach direkt auf die Quellen in `app/` umstellen, dann `exports/` und den Export-Schritt in `test:full` entfernen.
+- **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen.
 - **Vollprüfung dauert lange:** `test:full` braucht in Chromium nacheinander rund zwei Stunden (Messung Schritt 0; CI-Grenze deshalb 180 Minuten). Suiten beschleunigen oder sinnvoll aufteilen, statt die Zeitgrenze im CI-Job weiter zu erhöhen.
 
 ## Medien mit offenen Rechten
