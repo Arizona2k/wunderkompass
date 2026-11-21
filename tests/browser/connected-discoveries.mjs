@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import assert from 'node:assert/strict';
 import {bookNormalizationView} from './book-normalization.mjs';
@@ -117,7 +118,7 @@ export async function connectedDiscoveries(page,ready,report,width){
  }
  await page.screenshot({path:new URL('../../.qa-output/challenge-'+width+'.png',import.meta.url).pathname});
  if(width===1440){
-  await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+  await page.addScriptTag({path:AXE_FILE});
   const result=await page.evaluate(async()=>window.axe.run('.knowledge-challenge',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}));
   assert.deepEqual(result.violations.map(v=>({id:v.id,nodes:v.nodes.length})),[]);
   report.checks.push('New challenge: axe WCAG A/AA scope has no violations');

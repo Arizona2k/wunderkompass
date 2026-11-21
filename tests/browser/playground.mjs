@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {globeMissionFlow} from './globe-missions.mjs';
 import assert from 'node:assert/strict';
 import {gameNumberLabelView} from './game-number-labels.mjs';
@@ -20,7 +21,7 @@ async function geometry(p,selector){
  assert.deepEqual(bad,[],'game text must wrap');
 }
 async function axe(p,selector){
- await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await p.addScriptTag({path:AXE_FILE});
  const result=await p.evaluate(async s=>(await window.axe.run(s,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),selector);
  assert.deepEqual(result,[],'playground WCAG checks');
 }

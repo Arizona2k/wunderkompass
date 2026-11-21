@@ -1,7 +1,8 @@
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import {NEWS_REMOVAL_WIDTHS,REMOVED_NEWS_ROUTES,newsRemovalComplete} from '../../scripts/news-removal-evidence.mjs';
+const NEWS_REMOVAL_WIDTHS=[320,360,390,768,1024,1440,1920];
+const REMOVED_NEWS_ROUTES=['news','news/girl-day-2026','news/unknown'];
 const absent=async p=>{
  assert.equal(await p.locator('.news-preview,.news-page,[data-news-id],a[href^="#news"]').count(),0,'removed news has no active view, article or link');
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
@@ -34,6 +35,6 @@ export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
    observed.push({width,large,home:true,search:true,updates:true,routes,reload:true,passPreserved:true});
   }finally{await context.close();}
  }
- assert.deepEqual(requests,[]);report.newsRemoval={observed,noNewsRequests:true};assert(newsRemovalComplete(report.newsRemoval));
+ assert.deepEqual(requests,[]);report.newsRemoval={observed,noNewsRequests:true};assert.equal(new Set(observed.map(c=>c.width+':'+c.large)).size,NEWS_REMOVAL_WIDTHS.length*2,'every width checked normal and large');
  report.checks.push('News removed: all seven widths normal/large, no homepage/news/search entry or news request; legacy routes and reload return home while preserving the pass');
 }

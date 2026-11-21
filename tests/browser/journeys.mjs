@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {natureLearningView} from './nature-learning-view.mjs';
 import {natureNavigationView} from './nature-navigation-view.mjs';
 import {natureProofComplete} from '../../scripts/nature-learning-evidence.mjs';
@@ -150,7 +151,7 @@ export async function assertMoonNavigationDiagram(visual,id){
  if(id==='navigation:3'){const y=await visual.locator('[data-navigation-tropic]').evaluateAll(es=>es.map(e=>e.getPointAtLength(0).y));assert.equal(y.length,3);assert.ok(y[0]<y[1]&&y[1]<y[2]);for(const value of [y[0],y[2]])assert.ok(Math.abs(Math.asin(Math.abs(value-145)/112)*180/Math.PI-23.4)<.0001,'actual spherical section agrees with stated approximate latitude');}
  if(id==='navigation:4'){const hands=await visual.locator('[data-navigation-clock]').evaluateAll(es=>es.map(e=>e.querySelectorAll('path')[1].getAttribute('d')));assert.equal(hands.length,2);assert.notEqual(hands[0],hands[1]);await visual.getByText(/Zwei erfundene Orte/).waitFor();}
 }
-async function axe(p,selector){await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
+async function axe(p,selector){await p.addScriptTag({path:AXE_FILE});const violations=await p.evaluate(async selector=>(await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),selector);assert.deepEqual(violations,[],'journey accessibility');}
 export async function journeyHubNavigation(p,width){
  const previous=p.viewportSize();await p.setViewportSize({width,height:900});await p.evaluate(()=>location.hash='journeys');await p.locator('.journey-grid').waitFor();
  const path=p.locator('.guided-path'),summary=path.locator('summary');if(await path.evaluate(el=>el.open))await summary.click();await summary.focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('.guided-path').open);assert.equal(await path.locator('ol button').count(),16);

@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {assertPracticalGuide} from './practical-guides.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
 import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
@@ -20,7 +21,7 @@ async function geometry(p,label){
  }));assert.deepEqual(clipped,[],label+' visible text stays within viewport');
 }
 async function axe(p,selector,label){
- await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await p.addScriptTag({path:AXE_FILE});
  const errors=await p.evaluate(async selector=>{const result=await window.axe.run({include:[[selector]]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));},selector);assert.deepEqual(errors,[],label+' WCAG axe');
 }
 export async function researchFlow(browser,base,ready,monitor,report,shots){

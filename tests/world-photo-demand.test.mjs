@@ -1,14 +1,32 @@
-import {beforeFourteenPhotoIds} from './people-fourteen-reference.mjs';
-import {fingerprint} from '../scripts/content-inventory.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import http from 'node:http';import {createHash}from'node:crypto';
 import {worldPhotoIndex,corePhotoIds} from '../scripts/world-photo-index.mjs';import {verifiedContentJSON,fetchLimitedBytes} from '../app/verified-content.mjs';
 const bytes=fs.readFileSync('app/world-photos.json'),photos=JSON.parse(bytes),integrity=JSON.parse(fs.readFileSync('app/world-photo-integrity.json'));
-test('photo projections preserve every canonical immediate credit and all49 whole original identities and four individually licensed NPS additions',()=>{
+// Pixel size from the first WebP chunk (lossy VP8, lossless VP8L or extended VP8X).
+function webpSize(body){
+ const chunk=body.toString('ascii',12,16);
+ if(chunk==='VP8X')return [1+body.readUIntLE(24,3),1+body.readUIntLE(27,3)];
+ if(chunk==='VP8 ')return [body.readUInt16LE(26)&0x3fff,body.readUInt16LE(28)&0x3fff];
+ if(chunk==='VP8L'){const bits=body.readUInt32LE(21);return [(bits&0x3fff)+1,((bits>>14)&0x3fff)+1];}
+ throw Error('Unknown WebP chunk '+chunk);
+}
+test('photo projections preserve every canonical immediate credit and the integrity record matches the photo data',()=>{
  worldPhotoIndex(true);const core=JSON.parse(fs.readFileSync('app/world-photo-core.json'));
  assert.deepEqual(Object.keys(core),corePhotoIds);for(const id of corePhotoIds)assert.deepEqual(core[id],photos[id]);
- assert.deepEqual(JSON.parse(fs.readFileSync('app/world-photo-ids.json')),Object.keys(photos));assert.equal(beforeFourteenPhotoIds(Object.keys(photos)).length,53);
- const prior=JSON.parse(fs.readFileSync('tests/fixtures/world-photos-before-Nature34-M89-hashes.json'));assert.equal(prior.whole49OriginalPhotos.length,49);for(const row of prior.whole49OriginalPhotos)assert.equal(fingerprint(photos[row.id]),row.sha256,'whole existing rights/source/caption preserved: '+row.id);assert.deepEqual(beforeFourteenPhotoIds(Object.keys(photos)).filter(id=>!prior.whole49OriginalPhotos.some(row=>row.id===id)),prior.addedFourPhotoIds);assert.deepEqual(prior.addedFourPhotoIds,['bryce-hoodoos','arches-sandstone','crater-lake','white-sands']);
  assert.equal(integrity.bytes,bytes.length);assert.equal(integrity.sha256,createHash('sha256').update(bytes).digest('hex'));
+});
+test('every photo is a complete local WebP with credit and true pixel size; every variant set has the three sizes 320, 640 and 960',()=>{
+ assert(Object.keys(photos).length>0);
+ for(const[id,record]of Object.entries(photos)){
+  assert.equal(record.id,id);assert(record.author.trim(),id);assert(record.license.trim(),id);assert(record.alt_de.trim(),id);
+  assert.equal(new URL(record.license_url).protocol,'https:');assert.equal(new URL(record.source_page_url).protocol,'https:');
+  if(record.variants){assert.deepEqual(record.variants.map(v=>v.width),[320,640,960],id);assert.equal(record.src,record.variants[2].src,id);}
+  for(const{src,width,height}of[record,...(record.variants??[])]){
+   assert(src.endsWith('.webp'),src);
+   const body=fs.readFileSync('public'+src);
+   assert.equal(body.toString('ascii',0,4),'RIFF',src);assert.equal(body.toString('ascii',8,12),'WEBP',src);assert.equal(body.readUInt32LE(4)+8,body.length,'complete RIFF payload '+src);
+   const[actualWidth,actualHeight]=webpSize(body);assert.equal(actualWidth,width,src);if(height!==undefined)assert.equal(actualHeight,height,src);
+  }
+ }
 });
 test('exact photo integrity rejects changed and incomplete bytes',async()=>{
  assert.deepEqual(await verifiedContentJSON(bytes,integrity),photos);

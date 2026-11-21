@@ -1,7 +1,6 @@
 import {generalNoteEditingFlow} from './book-notes.mjs';
 import {storageFeedbackFlow} from './storage-feedback.mjs';
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';
-import {fileURLToPath} from 'node:url';
 import {malformedImportRegression} from './model-import-integrity.mjs';
 
 // Real mounted tabs share one existing pass. This supplements the pure
@@ -67,8 +66,4 @@ export async function backupFlow(browser,base,ready,monitor,report,shots){
  await a.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await a.getByRole('button',{name:'Pass neu beginnen',exact:true}).click();await a.getByRole('button',{name:'Pass zurücksetzen',exact:true}).click();await a.getByRole('alertdialog').waitFor({state:'hidden'});await a.getByRole('button',{name:'Entdeckerpass schließen',exact:true}).click();await a.locator('.passport-dialog').waitFor({state:'hidden'});await a.locator('.journey-hub').waitFor();assert.deepEqual((await state(a)).progress.chapters,{});assert.equal((await state(a)).progress.gameSessions['journey:water'],undefined);assert.deepEqual((await state(a)).progress.journeys,[]);report.checks.push('Import while reading retains the imported chapter instead of overwriting it; reset leaves the old chapter and creates no false progress');
  report.checks.push('Journey notebook and sequence survive actual two-tab edits, download/reset/import and reload');
  report.checks.push('Pass lifecycle: real synthetic download with notes/settings/model/shuffled memory round, reset/import cancel and confirm, malformed/future/oversized rejection, two-tab convergence without resurrection, visible second-tab favorite/settings update, restored model and shuffled memory resume after reload; long voice-name display checked with voice stub, no audible claim');await c.close();
-}
-
-if(process.argv[1]===fileURLToPath(import.meta.url)){
- const {runBrowser,base,shots}=await import('./runtime.mjs');const report={checks:[],errors:[]};await runBrowser(async browser=>{await backupFlow(browser,base,p=>p.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor(),p=>p.on('pageerror',e=>report.errors.push(e.message)),report,shots);assert.deepEqual(report.errors,[]);await fs.writeFile(shots+'/backup-report.json',JSON.stringify(report,null,2));console.log('BACKUP OK',report.checks.length)});
 }

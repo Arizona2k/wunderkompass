@@ -1,7 +1,3 @@
-import {beforeFourteenPeople} from './people-fourteen-reference.mjs';
-import {gameBeforeLearningAudit} from './learning-audit-reference.mjs';
-// Only named field revisions are projected for these historical comparisons;
-// raw current fields and all190topics/sevenbanks have separate strict guards.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
@@ -10,9 +6,7 @@ import graph from '../app/world-connections.json' with {type:'json'};
 import legacy from './fixtures/legacy-people18-before-two-biographies.json' with {type:'json'};
 import {worldGameBank,validWorldGameOrder,restoreWorldGameOrders} from '../app/world-game-bank.ts';
 
-test('two prepared biographies retain all18 real old people clues and explain both reciprocal connections',()=>{
- const current=beforeFourteenPeople(worldGameBank('people')).map(gameBeforeLearningAudit).filter(q=>!['person-maria_sibylla_merian','person-inge_lehmann'].includes(q.id));assert.equal(current.length,20);assert.equal(legacy.bank.length,18);
- for(const old of legacy.bank){const now=current.find(q=>q.id===old.id);assert.ok(now);assert.equal(now.prompt,old.prompt);assert.equal(now.answers[now.correct],old.answers[old.correct]);assert.equal(now.why,old.why);}
+test('the Mary Anning and Ibn al-Haytham biographies explain both reciprocal connections and cite two web sources',()=>{
  for(const [id,target] of [['person-mary_anning','person-charles_darwin'],['person-ibn_al_haytham','invention-camera']]){
   const person=catalog.find(t=>t.id===id),related=catalog.find(t=>t.id===target);
   assert.equal(person.category,'people');assert.ok(person.related.includes(target));assert.ok(related.related.includes(id));

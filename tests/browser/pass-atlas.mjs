@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
 
 // Check the usable scroll area, not just the outer dialog rectangle: fixed
@@ -88,7 +89,7 @@ export async function passDesign(page,report,width,shots){
   const expected=Number((await details.locator('summary').innerText()).match(/von (\d+)/)[1]);await details.locator('summary').click();assert.equal(await details.locator('.passport-badge').count(),expected,'all badges retained');
  }
  await frame();
- await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await page.addScriptTag({path:AXE_FILE});
  const axe=async(selector='.passport-atlas')=>assert.deepEqual(await page.evaluate(async selector=>{const r=await window.axe.run(selector,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))},selector),[],'pass axe '+width);
  await axe();
  await activate(nav.getByRole('button',{name:'Pass sichern',exact:true}));

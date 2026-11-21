@@ -8,7 +8,6 @@ allowBuilds:
   fsevents: true
   sharp: true
   unrs-resolver: true
-  workerd: true
 storeDir: ${SITES_PNPM_SHARED_STORE:-.sites-runtime/pnpm-store}
 cacheDir: ${SITES_PNPM_SHARED_STORE:-.sites-runtime/pnpm-store}/policy-cache
 enableGlobalVirtualStore: false

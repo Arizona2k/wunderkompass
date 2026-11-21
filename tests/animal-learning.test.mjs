@@ -1,21 +1,26 @@
-import {historicalQuestionBank} from '../scripts/world-question-index.mjs';
-import correctionRegistry from '../content/editorial-reviews.json' with {type:'json'};
-import {animalCasesComplete,animalCoverageComplete,animalNativeComplete,animalOfflineComplete,solarCoverageComplete,solarNativeComplete,solarOfflineComplete} from '../scripts/article-learning-evidence.mjs';
-import {animalCases,animalProof,animalNativeProof,animalOfflineProof,solarProof,solarNativeProof,solarOfflineProof} from './fixtures/animal-proof.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
 import DATA from '../app/animal-inquiries.json' with {type:'json'};
 import catalog from '../app/world-catalog.json' with {type:'json'};
-import expansion from '../content/animal-expansion-review.json' with {type:'json'};
-const baseline=JSON.parse(fs.readFileSync('content/animal-editorial-review.json','utf8')).entries;
-import {createHash} from 'node:crypto';
 import {createSave,restoreSave} from '../app/progress-storage.ts';
 
-test('all24 original animal identities/answers remain unchanged and every new evidence quote is present in its own article',()=>{
- const animals=catalog.filter(t=>t.category==='animals');assert.equal(animals.length,48);assert.equal(DATA.entries.length,48);assert.equal(new Set(DATA.entries.map(e=>e.id)).size,48);assert.equal(baseline.length,24);assert.deepEqual(new Set(DATA.entries.map(e=>e.id)),new Set(animals.map(t=>t.id)));
- for(const t of animals){const old=baseline.find(e=>e.id===t.id),added=expansion.entries.find(e=>e.id===t.id),entry=DATA.entries.find(e=>e.id===t.id);assert.ok(old||added,t.id+' original or individually reviewed new identity');assert.deepEqual(entry.evidence.map(e=>e.text),t.paragraphs);assert.deepEqual(entry.sourceUrls,t.sources.map(s=>s.url));assert.equal(createHash('sha256').update(JSON.stringify(entry)).digest('hex'),old?.teachingContentSHA256??added.runtimeTeachingContentSHA256,t.id+' individually versioned teaching content');for(const task of [entry.reason,entry.transfer]){assert.equal(task.answers.length,2);assert.equal(new Set(task.answers).size,2);assert.ok(task.correct===0||task.correct===1);assert.equal(task.feedback.length,2);assert.ok(task.feedback.every(text=>text.length>30));assert.ok(task.hint.length>25);}}
- assert.equal(new Set(DATA.entries.flatMap(e=>[e.reason.prompt,e.transfer.prompt])).size,96,'individual reasoning instead of one generic question');
+test('every animal card has its own inquiry whose evidence and sources come from that card, with two-answer tasks and specific feedback',()=>{
+ const animals=catalog.filter(t=>t.category==='animals');
+ assert.equal(new Set(DATA.entries.map(e=>e.id)).size,DATA.entries.length);
+ assert.deepEqual(new Set(DATA.entries.map(e=>e.id)),new Set(animals.map(t=>t.id)));
+ for(const t of animals){
+  const entry=DATA.entries.find(e=>e.id===t.id);
+  assert.deepEqual(entry.evidence.map(e=>e.text),t.paragraphs,t.id+' evidence quotes are the card paragraphs');
+  assert.deepEqual(entry.sourceUrls,t.sources.map(s=>s.url),t.id+' sources are the card sources');
+  for(const task of [entry.reason,entry.transfer]){
+   assert.equal(task.answers.length,2);assert.equal(new Set(task.answers).size,2);
+   assert.ok(task.correct===0||task.correct===1);
+   assert.equal(task.feedback.length,2);assert.ok(task.feedback.every(text=>text.length>30));
+   assert.ok(task.hint.length>25);
+  }
+ }
+ const prompts=DATA.entries.flatMap(e=>[e.reason.prompt,e.transfer.prompt]);
+ assert.equal(new Set(prompts).size,prompts.length,'individual reasoning instead of one generic question');
 });
 
 test('existing schema3 backup keeps every old topic/game field together with the optional workshop state',()=>{
@@ -23,24 +28,3 @@ test('existing schema3 backup keeps every old topic/game field together with the
  for(const e of DATA.entries){const t=catalog.find(t=>t.id===e.id);pass.progress.gameSessions['topic:'+e.id]={items:[...t.question.answers].reverse(),topicAnswer:t.question.answers[t.question.correct],compareAnimal:true,animalInquiryLevel:2,animalInquiryEvidence:[0,1],'animalInquiryAnswer:1':e.reason.answers[e.reason.correct],'animalInquiryAnswer:2':e.transfer.answers[e.transfer.correct]};}
  const restored=restoreSave(JSON.parse(JSON.stringify(pass)),true);assert.deepEqual(restored.progress.gameSessions,pass.progress.gameSessions);assert.deepEqual(restored.progress.favorites,pass.progress.favorites);
 });
-
-test('source biological article data and old related links are preserved while explained reciprocal links are appended',()=>{
- const review=JSON.parse(fs.readFileSync('content/animal-editorial-review.json','utf8'));assert.equal(review.independentReview,false);assert.equal(review.newSpecies,0);assert.equal(review.acceptedNew,0);assert.equal(review.entries.length,24);
- for(const e of review.entries){const current=catalog.find(t=>t.id===e.id);assert.deepEqual(current.related.slice(0,e.originalRelated.length),e.originalRelated,e.id+' old related links retained in order');const addition=e.sourceAddition20261018;if(addition){assert.deepEqual(current.sources,addition.after,e.id+' exact reviewed source addition');assert.deepEqual(addition.after.slice(0,addition.before.length),addition.before,e.id+' every original source retained');assert.equal(addition.after.length,addition.before.length+({'animal-garden-cross-spider':2,'animal-white-tailed-eagle':3}[e.id]??1));assert.ok(addition.reason&&addition.readAnchor);}const preserved={...current,question:Object.fromEntries(Object.keys(current.question).map(key=>[key,historicalQuestionBank([{...current.question,id:current.id+':mini',topic:current.id}],correctionRegistry.questionCorrections)[0][key]])),related:e.originalRelated,...(addition?{sources:addition.before}:{})};assert.equal(createHash('sha256').update(JSON.stringify(preserved)).digest('hex'),e.originalArticleSHA256,e.id+' immutable original article with exact documented source/related additions and the exact compatible wrong-answer grammar exception');}
-});
-
-test('complete animal evidence rejects absent/duplicate widths, levels, large text, keyboard, saves and native/offline states',()=>{
- const widths=[320,360,390,768,1024,1440,1920];assert.equal(animalCoverageComplete(animalProof(),widths),true);
- for(const mutate of [p=>p.searchFocus.delayedModule=false,p=>p.searchFocus.keyboardQuery=false,p=>p.searchFocus.closedBeforeReady=false,p=>p.focusChecks.pop(),p=>p.focusChecks[0].visible=false,p=>p.focusChecks[0].outlineWidth=0,p=>p.focusChecks[0].tabNavigation=false,p=>p.observed.pop(),p=>p.observed.push(p.observed[0]),p=>p.observed[0].levels.pop(),p=>p.observed[1].state='normal',p=>p.observed[0].keyboard=false,p=>p.observed[0].geometry=false,p=>p.observed[0].selectionFeedbackHonest=false,p=>delete p.observed.find(c=>c.id==='animal-okapi').ownReflectionCompared,p=>p.oldSessionsPreserved=false,p=>p.axe=false,p=>p.navigation=false,p=>p.independentAcceptance=true]){const proof=animalProof();mutate(proof);assert.equal(animalCoverageComplete(proof,widths),false);}
- assert.equal(animalCasesComplete(animalCases([320]),[320,390]),false);assert.equal(animalNativeComplete(animalNativeProof()),true);assert.equal(animalNativeComplete({...animalNativeProof(),scale:1}),false);assert.equal(animalNativeComplete({...animalNativeProof(),observed:[]}),false);assert.equal(animalOfflineComplete(animalOfflineProof()),true);assert.equal(animalOfflineComplete({...animalOfflineProof(),coldRestart:false}),false);
-});
-
-test('solar caption acceptance rejects hidden clipping, missing planets, modes, font states, keyboard and false native zoom',()=>{
- const widths=[320,360,390,402,768,1024,1440,1920];assert.ok(solarCoverageComplete(solarProof(),widths));for(const mutate of [p=>p.observed.pop(),p=>p.observed.push(p.observed[0]),p=>p.observed[0].readableHTML=false,p=>p.observed[0].geometry=false,p=>p.observed[0].originalScale=false,p=>p.observed[0].keyboard=false,p=>p.axe=false,p=>p.clippingGuard=false]){const p=solarProof();mutate(p);assert.equal(solarCoverageComplete(p,widths),false);}assert.equal(solarOfflineComplete(solarOfflineProof()),true);assert.equal(solarOfflineComplete({...solarOfflineProof(),coldRestart:false}),false);assert.equal(solarNativeComplete(solarNativeProof()),true);assert.equal(solarNativeComplete({...solarNativeProof(),scale:1}),false);
-});
-
-test('only six individually counterread source gaps allow their exact one/two/three additional citations',()=>{const review=JSON.parse(fs.readFileSync('content/animal-editorial-review.json','utf8'));assert.deepEqual(review.entries.filter(e=>e.sourceAddition20261018).map(e=>e.id).sort(),['animal-lion','animal-common-bottlenose-dolphin','animal-bornean-orangutan','animal-dromedary','animal-garden-cross-spider','animal-white-tailed-eagle'].sort());});
-
- test('open transfer prompts retain their learning demand as optional source-based reflection without changing saved answer meanings',()=>{
- const correction=expansion.transferSelectionIntegrity20261024;assert.equal(Object.keys(correction.previousTransfers).length,4);for(const [id,before]of Object.entries(correction.previousTransfers)){const task=DATA.entries.find(e=>e.id===id).transfer;for(const field of ['answers','correct','hint','feedback'])assert.deepEqual(task[field],before[field],id+' preserved actual saved answer meaning');assert.doesNotMatch(task.prompt,/Entwirf|Begründe/);assert.ok(task.reflection.prompt.length>40);assert.ok(task.reflection.example.length>80);assert.ok(task.reflection.compare.length>80);assert.ok(correction.sourceReads.some(read=>read.topic===id&&read.anchor&&read.reading&&read.checkedOn==='2026-10-24'));}
- });

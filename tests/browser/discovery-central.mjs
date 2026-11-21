@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
@@ -184,7 +185,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
   report.checks.push('All'+trails.length+' canonical Home connections show both real topic figures at'+width+'; action icons excluded');
  }
  await home();await rapidHashReturn(page,report,width);await decodeHomeImages(page);await page.locator('.discovery-pathways').screenshot({path:shots+'/discovery-pathways-'+width+'.png'});
- await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await page.addScriptTag({path:AXE_FILE});
  const axe=await page.evaluate(async()=>{
   const result=await window.axe.run({include:[['.discovery-hero'],['.discovery-worlds'],['.discovery-pathways']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});
   return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));
@@ -429,7 +430,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    }
    assert.deepEqual(await readProgress(),before,'reading all historical changes and benefits leaves learning progress untouched');
    await p.screenshot({path:shots+'/updates-all-details-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+   await p.addScriptTag({path:AXE_FILE});
    const expandedAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(expandedAxe,[],'all expanded history WCAG axe '+width);
    const olderLink=p.locator('.updates-timeline>li').last().locator('.updates-links a').first();
    await olderLink.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await olderLink.focus();const olderId=await olderLink.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('#globe-observatory').waitFor();assert.equal(new URL(p.url()).hash,'#globe','historical globe links retain the full globe destination');
@@ -460,7 +461,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.locator('.updates-timeline>li').first().screenshot({path:shots+'/updates-details-large-'+width+'.png',animations:'disabled'});
    await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});
    // The resumable-journey path above reloads the page and clears the axe script.
-   await p.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+   await p.addScriptTag({path:AXE_FILE});
    const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'history WCAG axe '+width);
    await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
    const homeAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.discovery-hero'],['.mode-tabs'],['.discovery-worlds'],['.discovery-pathways'],['.continue-card']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(homeAxe,[],'home WCAG axe '+width);
@@ -503,7 +504,7 @@ export async function historyEngineView(page,width,shots,{engine='chromium',capt
  const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)captures.push(await capture(name));else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
  await take('journey-engine-'+engine+'-history-first-'+width+'.png',first);
  await take('journey-engine-'+engine+'-history-oldest-'+width+'.png',last);
- await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+ await page.addScriptTag({path:AXE_FILE});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
  if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
  return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};

@@ -3,10 +3,12 @@ import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
-import review from '../../content/science-originals-review.json' with {type:'json'};
 import thinking from '../../app/science-thinking.json' with {type:'json'};
 import connections from '../../app/world-connections.json' with {type:'json'};
-const topics=review.topics.map(entry=>catalog.find(t=>t.id===entry.id));
+// Die 23 eigenen Forscherlabor-Themen.
+const TOPIC_IDS=['science-pressure','science-friction','science-buoyancy','science-surface-tension','science-capillarity','science-diffusion','science-chromatography','science-heat-transfer','science-lever','science-elasticity','science-pendulum','science-resonance','science-probability','science-symmetry','science-fractals','science-angle','science-encryption','science-checksum','science-cell','science-fusion','science-galaxy','science-comet','science-exoplanet'];
+const topics=TOPIC_IDS.map(id=>catalog.find(t=>t.id===id));
+if(topics.some(t=>!t))throw Error('Forscherlabor-Thema fehlt im Katalog');
 
 // Extend the existing canonical views without changing the historical23-topic
 // matrix, its original assertions or the single quality runner.

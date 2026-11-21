@@ -4,9 +4,10 @@ import fs from 'node:fs';
 import {DISCOVERY_CONNECTIONS} from '../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS,connectionsFor} from '../app/knowledge-connections.ts';
 import {dailyDiscovery,differentDiscovery,discoveryVisit,localDiscoveryDay,DISCOVERY_IDLE_MS} from '../app/discovery-visit.mjs';
+import {WORLD_ROUTES as routes} from '../app/world-index.ts';
 import {execFileSync} from 'node:child_process';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
-const topics=read('../app/world-catalog.json'),routes=read('../exports/content/world-routes.json');
+const topics=read('../app/world-catalog.json');
 
 test('discovery trails have live, reciprocal knowledge edges and relevant existing routes',()=>{
  assert.equal(new Set(DISCOVERY_CONNECTIONS.map(c=>c.id)).size,DISCOVERY_CONNECTIONS.length);

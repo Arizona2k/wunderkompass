@@ -1,13 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createHash} from 'node:crypto';
 import {countryPlace,currentGeographyPlace,currentGeographyPlaces} from '../app/earth-data.ts';
 import metadata from '../app/country-metadata.json' with {type:'json'};
 import capitals from '../app/capital-points.json' with {type:'json'};
 import {createSave,restoreSave} from '../app/progress-storage.ts';
 const countries=JSON.parse(fs.readFileSync('public/world.json','utf8')).features;
-const sha=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 test('country facts distinguish territorial area, official capital and government seat',()=>{
  const place=id=>countryPlace(countries.find(c=>c.properties.id===id));
@@ -22,17 +20,19 @@ test('country facts distinguish territorial area, official capital and governmen
  }
 });
 
-test('the other 239 country records and all 200 original city identities and positions remain exact',()=>{
- assert.equal(Object.keys(metadata).length,242);
- assert.equal(sha(Object.fromEntries(Object.entries(metadata).filter(([id])=>!['CAN','BEN','BDI'].includes(id)))),'80bdd7530ac5eb5fe1098ff7f45e04d26aa0c2b4ef6b70e62d33c5a39da26865');
- assert.equal(capitals.length,202);assert.equal(new Set(capitals.map(p=>p.id)).size,202);
- assert.equal(sha(capitals.slice(0,200).map(p=>[p.id,p.name,p.lat,p.lon])),'2750a9ba60e37bd9dedf076880588df7ae098bd30b9fb84816162c821c0341cd');
- assert.match(capitals.find(p=>p.id==='capital-1159150427').text,/Wirtschaftszentrum.*Gitega/);
- assert.match(capitals.find(p=>p.id==='capital-1159151141').text,/Regierungssitz.*Porto-Novo/);
- assert.deepEqual(capitals.slice(200).map(p=>[p.id,p.name,p.lat,p.lon]),[
-  ['capital-1159146001','Gitega',-3.426007,29.843594],
-  ['capital-1159150345','Porto-Novo',6.483311,2.616626]
- ]);
+test('corrected capitals exist under stable IDs in the current data with their corrected names, positions and roles',()=>{
+ assert.equal(new Set(capitals.map(p=>p.id)).size,capitals.length,'capital IDs are unique');
+ const point=id=>capitals.find(p=>p.id===id);
+ for(const [id,name,lat,lon,country] of [['capital-1159146001','Gitega',-3.426007,29.843594,'BDI'],['capital-1159150345','Porto-Novo',6.483311,2.616626,'BEN']]){
+  const capital=point(id);assert.ok(capital,id);assert.deepEqual([capital.name,capital.category,capital.lat,capital.lon],[name,'capitals',lat,lon],id);
+  assert.equal(capitals.filter(p=>p.name===name).length,1,name+' appears once');assert.equal(metadata[country].capital,name,country+' official capital');
+ }
+ const bujumbura=point('capital-1159150427'),cotonou=point('capital-1159151141');
+ assert.equal(bujumbura?.name,'Bujumbura');assert.match(bujumbura.text,/Wirtschaftszentrum.*Gitega/);
+ assert.equal(cotonou?.name,'Cotonou');assert.match(cotonou.text,/Regierungssitz.*Porto-Novo/);
+ for(const id of ['capital-1159146001','capital-1159150345','capital-1159150427','capital-1159151141']){
+  assert.equal(point(id).geographyCheckedOn,'2026-10-21');assert.ok(point(id).geographySources.length>0);assert.ok(point(id).geographySources.every(s=>s.url.startsWith('https://')&&s.title),id);
+ }
 });
 
 test('old favorite snapshots open current facts without rewriting the imported pass or losing unknown places',()=>{

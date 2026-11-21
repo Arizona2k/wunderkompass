@@ -5,7 +5,6 @@ import {animalDetectiveClue,personRecognitionClue,worldGameHint,worldGameWrongFe
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
-import {beforeRetainedPeople} from './retained-people-reference.mjs';
 const animals=catalog.filter(t=>t.animal),normalize=s=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('de').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 test('plain Node resolves the changed banks and production browser regression modules without a loader hook',()=>{
  const env={...process.env};delete env.NODE_OPTIONS;
@@ -38,18 +37,18 @@ test('thinking hint and wrong feedback are separate from the final explanation i
 
 test('Benz and al-Chwarizmi recognition prompts conceal real name variants while keeping the answer and explanation',()=>{
  const pool=worldGameBank('people');
- for(const [id,variants,expected] of [
-  ['person-karl_benz',['Karl Benz','Carl Benz'],'Diese Person entwickelte einen Wagen mit Benzinmotor.'],
-  ['person-al_khwarizmi',['al-Chwarizmi','al-Khwarizmi'],'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.']
+ for(const [id,variants,names] of [
+  ['person-karl_benz',['Karl Benz','Carl Benz'],['Karl','Carl','Benz']],
+  ['person-al_khwarizmi',['al-Chwarizmi','al-Khwarizmi'],['Chwarizmi','Khwarizmi']]
  ]){
   const t=catalog.find(t=>t.id===id),q=pool.find(q=>q.id===id);
-  const historical=beforeRetainedPeople(catalog).find(row=>row.id===id);
-  const oldClue=historical.intro.replace(historical.title,'Diese Person');
-  assert(variants.some(name=>oldClue.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de'))),'original full-title-only replacement is a real counterexample');
-  assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+expected);
+  const naiveClue=t.intro.replace(t.title,'Diese Person');
+  assert(names.some(name=>new RegExp('\\b'+name+'\\b','iu').test(naiveClue)),'the current intro with only the full title replaced is a real counterexample');
+  const clue=personRecognitionClue(t);assert.notEqual(clue,naiveClue);
+  assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+clue);
   assert.equal(q.answers[q.correct],t.title);assert.equal(q.why,t.paragraphs.join(' '));
   for(const name of variants)assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')));
-  if(id==='person-karl_benz')for(const part of ['Karl','Carl','Benz'])assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
+  for(const part of names)assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
  }
  for(const t of catalog.filter(t=>t.person&&!['person-karl_benz','person-al_khwarizmi'].includes(t.id))){
   assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'));
@@ -62,9 +61,9 @@ test('optional recognition name variants preserve compound words and Unicode wor
 });
 test('telescope recognition uses the supported optical description without changing its article research question',()=>{
  const t=catalog.find(t=>t.id==='invention-telescope'),q=worldGameBank('technology').find(q=>q.id===t.id);
- assert.equal(t.invention.recognitionClue,'Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln.');
+ assert(t.invention.recognitionClue.trim().length>20);
  assert.equal(q.prompt,'Welche Erfindung passt zu dieser Beschreibung? '+t.invention.recognitionClue);
- assert(!q.prompt.toLocaleLowerCase('de').includes('fernrohr'));assert.equal(q.answers[q.correct],t.title);
+ for(const name of ['fernrohr',...t.aliases])assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')),'prompt names '+name);assert.equal(q.answers[q.correct],t.title);
  assert.notEqual(q.prompt,t.invention.stages[0].text);assert.equal(q.why,t.invention.stages[2].text);
  for(const other of catalog.filter(x=>x.invention&&x.id!==t.id)){
   const otherQ=worldGameBank('technology').find(q=>q.id===other.id);

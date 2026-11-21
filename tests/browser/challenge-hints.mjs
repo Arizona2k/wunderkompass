@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
 import {CHALLENGE_BANK, emptyChallenge, restoreChallenge} from '../../app/knowledge-challenge.ts';
 import {createSave, emptyProgress, SAVE_KEY} from '../../app/progress-storage.ts';
@@ -112,7 +113,7 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,q.id+' overflow');
      if(q.id==='science-gps:mini'){
       await page.screenshot({path:shots+'/challenge-hints-360.png',fullPage:true});
-      await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+      await page.addScriptTag({path:AXE_FILE});
       assert.deepEqual((await page.evaluate(async()=>window.axe.run('.knowledge-challenge',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}))).violations,[]);
       await page.setViewportSize({width:1440,height:900});
       await page.screenshot({path:shots+'/challenge-hints-1440.png',fullPage:true});

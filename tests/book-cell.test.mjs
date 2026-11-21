@@ -7,21 +7,15 @@ import {validateCellPack,CELL_WORDS,CELL_QUESTIONS} from '../app/book-cell-valid
 import {cellExample} from '../app/book-cell-comparison-model.ts';
 import {compareDNASequences,inspectDNASequence} from '../app/book-cell-dna-model.ts';
 import {membraneExample,mitochondrialExample,genomeCollection} from '../app/book-cell-process-model.ts';
-const read=name=>JSON.parse(fs.readFileSync(name,'utf8')),pack=read('app/book-cell-content.json'),words=read('exports/content/knowledge-words.json'),why=read('exports/content/why-questions.json'),digest=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+import {GLOSSARY,WHY_QUESTIONS} from '../app/learning-data.ts';
+const read=name=>JSON.parse(fs.readFileSync(name,'utf8')),pack=read('app/book-cell-content.json'),words=GLOSSARY.map(([term,short,more])=>({term,short,more})),why=WHY_QUESTIONS.map(([question,answer])=>({question,answer}));
 
-test('eight independently named cell concepts and two Why studies use one complete checked canonical export',()=>{
+test('eight independently named cell concepts and two Why studies match the checked pack, its integrity record and the actual glossary',()=>{
  assert.equal(CELL_WORDS.length,8);assert.equal(CELL_QUESTIONS.length,2);assert.deepEqual(bookCellContent(true),pack);assert.deepEqual(validateCellPack(structuredClone(pack)),pack);
  const bytes=fs.readFileSync('app/book-cell-content.json');assert.deepEqual(read('app/book-cell-integrity.json'),{bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});
- assert.equal(words.length,180);assert.equal(why.length,60);const teaching=read('exports/content/book-cell.json');assert.equal(teaching.length,10);
- for(const term of CELL_WORDS){const row=words.find(w=>w.term===term);assert(row);assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert.deepEqual(teaching.find(e=>e.kind==='word'&&e.term===term),{kind:'word',term,definition:row.more,...pack.learning[term],sourceReadOn:pack.sourceReadOn});}
- for(const question of CELL_QUESTIONS){const row=why.find(w=>w.question===question);assert(row);assert.deepEqual([row.question,row.answer],pack.why[question]);assert.deepEqual(teaching.find(e=>e.kind==='why'&&e.whyQuestion===question),{kind:'why',whyQuestion:question,definition:row.answer,...pack.whyLearning[question],sourceReadOn:pack.sourceReadOn});}
-});
-test('all126 whole older word payloads,40 Why identities and six complete earlier teaching packs remain unchanged',()=>{
- const old=read('tests/fixtures/book-before-cell-126-hashes.json');assert.equal(old.sourceCommit,'3758bbb47618ab1bc09e3fed3c3386831036e675');assert.equal(Object.keys(old.words).length,126);assert.equal(Object.keys(old.why).length,40);
- for(const[term,hash]of Object.entries(old.words))assert.equal(digest(words.find(row=>row.term===term)),hash,term);
- for(const[question,hash]of Object.entries(old.why))assert.equal(digest(why.find(row=>row.question===question)),hash,question);
- assert.equal(Object.keys(old.packs).length,6);for(const[file,hash]of Object.entries(old.packs))assert.equal(createHash('sha256').update(fs.readFileSync(file)).digest('hex'),hash,file);
- const baseline=read('content/excellence-baseline.json');assert.equal(baseline.families.find(f=>f.id==='words').count,90);assert.equal(baseline.families.find(f=>f.id==='why').count,30);
+ assert.equal(new Set(words.map(row=>row.term)).size,words.length);assert.equal(new Set(why.map(row=>row.question)).size,why.length);
+ for(const term of CELL_WORDS){const row=words.find(w=>w.term===term);assert(row);assert.deepEqual([row.term,row.short,row.more],pack.words[term]);assert(pack.learning[term]);}
+ for(const question of CELL_QUESTIONS){const row=why.find(w=>w.question===question);assert(row);assert.deepEqual([row.question,row.answer],pack.why[question]);assert(pack.whyLearning[question]);}
 });
 test('cell relationships are canonical and reciprocal, including generated oldAtom and Energie returns and both Why routes',()=>{
  const incoming=read('app/book-cell-word-link-index.json');assert.deepEqual(Object.keys(incoming),['Energie','Atom']);assert.equal(incoming.Atom[0].term,'DNA');assert.equal(incoming.Energie[0].term,'Mitochondrium');

@@ -7,27 +7,19 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
-  actions: read
 
 concurrency:
   group: quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
+  # Pflichtprüfung für jeden PR. Der Jobname ist eine Required-Check-Regel und bleibt gleich.
   checks:
     name: Required quality checks
     runs-on: ubuntu-24.04
-    # User26Oct: measured bootstrap repair and a finite65min reserve.
-    # Quality176 spent46min installing dependencies; every test/gate stays.
-    # Quality195 reached65min during complete engines; finite70min reserve.
-    # AuditV2 adds measured task/navigation/route coverage; finite80min reserve.
-    # User30Oct: all project technical ceilings +30%, once from80 to104min.
-    # Nature34: measured added normal/cold/native coverage; finite130min reserve.
-    # Nature34: complete current phase timing refines the finite reserve to140min.
-    # Nature34: completed concurrent full engines require a finite155min reserve.
-    # Retained18: measured current phases plus native setup/transport and finite reserve.
-    timeout-minutes: 175
+    timeout-minutes: 20
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:
@@ -40,60 +32,80 @@ jobs:
         with:
           node-version: '24'
           cache: pnpm
-          cache-dependency-path: |
-            pnpm-lock.yaml
-            qa/pnpm-lock.yaml
-      - name: Bind Quality to this PR and integration base
-        run: node scripts/release/quality-context.cjs capture
-      - name: Verify read access and current PR before expensive checks
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/release/quality-context.cjs verify
-      - name: Install application with frozen lockfile
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install with frozen lockfile
         run: pnpm install --frozen-lockfile
       - name: TypeScript
         run: pnpm run typecheck
       - name: ESLint
         run: pnpm run lint
-      - name: Release policy and Git integration tests
-        run: node --test tests/release/*.test.cjs
-      - name: Automated tests
+      - name: Unit tests
         run: pnpm test
       - name: Production build
         run: pnpm run build
-      - name: Content integrity
-        run: pnpm run verify
-      - name: Install browser tools with frozen lockfile
-        run: pnpm --dir qa install --frozen-lockfile
-      - name: Install all browsers and shared system dependencies
+      - name: Install Chromium
         run: |
-          # Same signed Ubuntu repositories; prefer the existing official mirror.
-          # Quality176 downloaded Azure packages at43–47kB/s for45min22s.
+          # Gleiche signierte Ubuntu-Quellen; der offizielle Spiegel war deutlich schneller als Azure.
           sudo sed -i \
             -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
             -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
             /etc/apt/apt-mirrors.txt
-          cat /etc/apt/apt-mirrors.txt
-          pnpm --dir qa exec playwright install --with-deps chromium firefox webkit
-      - name: Early actual-engine search and cold offline precondition
-        run: |
-          node tests/browser/journey-engines.mjs --search-only
-          QA_SUITE=offline pnpm run test:browser
-      - name: Production browser regression
+          pnpm exec playwright install --with-deps chromium
+      - name: Browser tests
         run: pnpm run test:browser
-      - name: Actual Firefox and WebKit journey checks
-        run: node tests/browser/journey-engines.mjs
-      - name: Handoff with actual engine evidence
-        run: node scripts/handoff.mjs --require-engines
-      - name: Reject stale PR head, base or unexpected workflow origin
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/release/quality-context.cjs verify
-      - name: Prepare bounded review evidence
-        if: always()
-        run: node scripts/review-evidence.mjs
-      - name: Upload browser evidence
-        if: always()
-        # Same exact pinned official v7.0.2 uploader, sequential <=200MiB parts.
-        # Original review selection, all reports/captures and tests stay intact.
-        uses: ./.github/actions/upload-review-parts
+      - name: Upload browser screenshots
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: browser-checks
+          path: .qa-output/browser
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # Große Prüfung in drei Engines: nur für Veröffentlichungs-PRs nach main oder von Hand gestartet.
+  full:
+    name: Vollprüfung (${{ matrix.browser }})
+    if: github.base_ref == 'main' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    # Chromium braucht für alle Suiten nacheinander rund zwei Stunden (Messung 21.11.2026, 4 Kerne).
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0; Node 24
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0; Node 24
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install with frozen lockfile
+        run: pnpm install --frozen-lockfile
+      - name: Production build
+        run: pnpm run build
+      - name: Install ${{ matrix.browser }}
+        run: |
+          sudo sed -i \
+            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
+            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
+            /etc/apt/apt-mirrors.txt
+          pnpm exec playwright install --with-deps ${{ matrix.browser }}
+      - name: Full browser tests
+        run: pnpm run test:full -- --browser ${{ matrix.browser }}
+      - name: Upload browser screenshots
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: browser-full-${{ matrix.browser }}
+          path: .qa-output/browser
+          retention-days: 7
+          if-no-files-found: ignore

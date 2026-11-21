@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
 const saveKey='erde-entdecken:save:v3';
 export async function retainedPeopleMiniQuestion(page,topic){
@@ -21,7 +22,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  assert(geometry.pageWidth<=geometry.width+2);assert(geometry.buttons.every(b=>b.left>=-1&&b.right<=geometry.width+1&&b.width>=43.9&&b.height>=43.9));
  const axeWasAvailable=await page.evaluate(()=>typeof window.axe?.run==='function');
  await page.reload();await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
- if(axeWasAvailable)await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ if(axeWasAvailable)await page.addScriptTag({path:AXE_FILE});
  const after=await saved();assert.equal(after.review[reviewKey].seen,priorSeen+1);assert.equal(after.gameSessions['topic:'+id].topicAnswer,q.answers[q.correct]);
  for(const field of ['notes','favorites','favoritePlaces','settings','games','missions','labs','experiments','quizSession','quizResults','journeys','chapters','completedChapters'])assert.deepEqual(after[field],original[field],field+' whole preserved during intentional mini-question');
  for(const[key,session]of Object.entries(original.gameSessions))for(const[field,value]of Object.entries(session))if(!(key==='topic:'+id&&field==='topicAnswer'))assert.deepEqual(after.gameSessions[key]?.[field],value,'unrelated saved session leaf '+key+'/'+field);

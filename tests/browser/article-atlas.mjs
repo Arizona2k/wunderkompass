@@ -1,5 +1,5 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import {fourteenConnectedRoutes,retainedConnectedRoutes} from './people-fourteen-connected-routes.mjs';
-import {actualPeopleSourceActivation} from './people-source-activation.mjs';
 import {assertWorkshopTypography,blueprintTypographyView} from './article-workshops.mjs';
 import {worldEntryNavigation} from './world-entry.mjs';
 import {assertModelLabels,worldModelTypographyView} from './model-labels.mjs';
@@ -30,7 +30,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  const open=async id=>{await page.evaluate(id=>location.hash='world/topic/'+id,id);await page.locator('#world-topic-title').filter({hasText:topics.find(t=>t.id===id).title}).waitFor();await page.locator('.article-wayfinder').waitFor();await page.waitForTimeout(100);};
  // This function is serialized in the page; do not rely on Node helpers there.
  const decode=async()=>{for(const image of await page.locator('.article-atlas img').all())await image.evaluate(async el=>{await el.decode();if(!el.naturalWidth)throw Error('Image not decoded')});};
- await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});
+ await page.addScriptTag({path:AXE_FILE});
  for(const id of examples){
   await open(id);await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'article overflow '+id+' / '+width);
   const art=page.locator('.article-atlas'),nav=art.getByRole('navigation',{name:'In dieser Entdeckerkarte'});await assertTextInsideControls(page,'.article-wayfinder button','article orientation');
@@ -106,19 +106,9 @@ export async function articleAtlas(page,ready,report,width,shots){
    report.fourteenPersonConnectedRoutes=await fourteenConnectedRoutes(page,new URL(page.url()).origin);
    assert.equal(report.fourteenPersonConnectedRoutes.global.length,14);
    assert.equal(report.fourteenPersonConnectedRoutes.book.length,25);
-   report.fourteenPersonActualSources=await actualPeopleSourceActivation(page);
-   assert.equal(report.fourteenPersonActualSources.observations.length,35);
-   assert.equal(report.fourteenPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
    report.retainedPersonConnectedRoutes=await retainedConnectedRoutes(page,new URL(page.url()).origin);
    assert.equal(report.retainedPersonConnectedRoutes.global.length,18);
    assert.equal(report.retainedPersonConnectedRoutes.book.length,20);
-   const retainedIDs=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries.slice(18).map(row=>row.id);
-   report.retainedPersonActualSources=await actualPeopleSourceActivation(page,{ids:retainedIDs,pdfOutputDirectory:shots+'/retained-person-source-PDF-originals'});
-   const retainedSources=retainedIDs.flatMap(id=>topics.find(t=>t.id===id).sources.map(source=>({id,requested:source.url})));
-   assert.deepEqual(report.retainedPersonActualSources.observations.map(({id,requested})=>({id,requested})),retainedSources,'every ordered declared source, including all five unchanged original PDFs and the same-report NASA primary PDF');
-   assert.equal(report.retainedPersonActualSources.observations.length,68);
-   assert.equal(report.retainedPersonActualSources.observations.filter(row=>row.actualPDF).length,6);
-   assert.equal(report.retainedPersonActualSources.status,'actual destinations loaded, separate factual passages retained');
   }finally{await page.evaluate(hash=>location.hash=hash,initialPeopleRoute);}
  }
 

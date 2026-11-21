@@ -1,3 +1,4 @@
+import {AXE_FILE} from './axe-loader.mjs';
 import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 // Additive current canonical older18 coverage; the existing four+fourteen proof remains separate and unchanged.
 import assert from 'node:assert/strict';
@@ -72,7 +73,7 @@ export async function retainedPeopleSourceView(page,{width,shots,engine='chromiu
    // Reapply precisely that condition after the real storage/reload check; never drop later large-text cases.
    await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),requestedLarge);
    assert.equal(await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading')),requestedLarge,'calculation reload preserves requested layout coverage');
-   if(axeWasAvailable){await page.addScriptTag({path:new URL('../../qa/node_modules/axe-core/axe.min.js',import.meta.url).pathname});assert.equal(await page.evaluate(()=>typeof window.axe?.run==='function'),true,'reload retains actual accessibility-check availability');}
+   if(axeWasAvailable){await page.addScriptTag({path:AXE_FILE});assert.equal(await page.evaluate(()=>typeof window.axe?.run==='function'),true,'reload retains actual accessibility-check availability');}
    assert.equal(await figure.getAttribute('data-evidence-scene'),'1');
    assert.equal(await figure.getByRole('group',{name:'Vergleichsschritt wählen',exact:true}).getByRole('button',{name:'Schritt 4',exact:true}).getAttribute('aria-pressed'),'true');
    await figure.getByRole('status').filter({hasText:'Schritt 4: A = 0; B = 16.'}).waitFor();
