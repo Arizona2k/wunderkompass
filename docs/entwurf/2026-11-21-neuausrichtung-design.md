@@ -76,7 +76,11 @@ Neue Welten, Themen, Spiele und andere Ideen sind ausdrücklich erwünscht. Clau
 - **Kompatibilität.** Karten-, Fragen-, Kapitel-, Spiel- und Reise-IDs bleiben gleich. Die Hash-Links (`#world/...`) funktionieren weiter. Der Pass (Schema 3, `earth-explorer`, Schlüssel `erde-entdecken:save:v3`, IndexedDB `earth-explorer`) bleibt der einzige Lernspeicher. Wer den Speicher ändert, muss mit Altdaten, Import/Export und Reload zeigen, dass nichts verloren geht.
 - **Daten.** Keine echten Pass-Dateien, Notizen, persönlichen Daten oder Zugangsdaten ins Repository. Nur ausgedachte Testpässe.
 - **Bilder.** Nur mit geklärten Rechten und korrektem Bildnachweis. Vorhandene Nachweise bleiben erhalten.
-- **Git.** `main` wird nie direkt geändert. Kein Force-Push auf `test-live` oder `main`. Gemergt wird nur über einen PR, nach grüner Prüfung und nach Freigabe des Nutzers.
+- **Git.** `main` wird nie direkt geändert. Kein Force-Push auf `test-live` oder `main`. Gemergt wird nur über einen PR, nach grüner Prüfung und nach Freigabe des Nutzers. Claude darf PRs nach `test-live` selbst öffnen, gemergt wird aber erst nach einem „ok“ des Nutzers im Chat (Nutzerentscheidung 21.11.2026).
+- **Zwei Adressen** (Nutzerentscheidung 21.11.2026):
+  - **Hauptadresse `wunderkompass.vercel.app`** (aus `main`): Diesen Link bekommen Freunde und Kinder. Er wird nur nach einer fertigen Phase und nach OK des Nutzers erneuert, über einen PR von `test-live` nach `main`. Kinder sehen so nie halbfertige Zwischenstände.
+  - **Test-Adresse** (aus `test-live`): Unsere Arbeitsfläche. Dort darf zwischen zwei Phasen auch Unfertiges stehen.
+  - Alte Links von Freunden müssen auf beiden Adressen funktionieren.
 - **Ehrlichkeit.** Keine Prüfung behaupten, die nicht stattgefunden hat. Keine erfundenen Studien, Kindertests oder Lernwirkungen.
 - **Datenschutz.** Name und E-Mail des Nutzers gehen nie an externe Dienste.
 
@@ -125,11 +129,18 @@ Am Ende von Schritt 0:
 
 - 131 Unit-Testdateien und 130 Browser-Testdateien, viele davon prüfen Nachweise statt Verhalten.
 - Vercel baut Vorschauen für alle Branches außer `codex/**`. `claude/**`-Branches sollten also schon Vorschau-Links bekommen. Das wird beim ersten Push geprüft.
+- **Offener Codex-PR #95** („WK-053“, Branch `codex/wunderkompass-history-evidence-2026-11-08`, Head `7e00bd0`): acht neue Geschichtsthemen (Kilwa, Angkor, Caral, Nalanda, Hattuscha, Rosetta, Çatalhöyük, Cahokia) und acht vertiefte Artikel. Basis ist genau `b53f75f`. Er umfasst 150 Dateien und +168.000 Zeilen, größtenteils Nachweisdateien. Die letzte Pflichtprüfung vom 12.11. ist rot, weil ein Browser-Test in eine Zeitüberschreitung lief.
+- Auf GitHub liegen außerdem viele alte Branches (107 bereits gemergte, 122 `codex/*`) und der alte Entwurfs-PR #27.
 
 ### 0.1 Sicherung vor dem Aufräumen
 
 - Ein Git-Tag `archiv/vor-neuausrichtung-2026-11-21` auf `b53f75f` wird angelegt und gepusht. Damit bleibt der komplette alte Stand mit allen Berichten und Tests jederzeit abrufbar, ohne dass er im Arbeitsbaum liegt.
 - Der Tag gilt als Sicherungsbasis. Er wird nicht gelöscht.
+- **PR #95** (Nutzerentscheidung 21.11.2026: „Sichern, später kindgerecht übernehmen“):
+  - Ein zweiter Tag `archiv/pr95-geschichte-2026-11-21` kommt auf den PR-Head `7e00bd0`.
+  - Ins BACKLOG kommt ein eigener Eintrag: Die acht Themen und die acht Vertiefungen werden übernommen, wenn die Geschichtswelt umzieht (Phase 3). Vorher prüfen `kinder-redaktion` und `fakten-pruefer` sie. Geklärte Fotos und Bildnachweise aus dem PR werden weiterverwendet.
+  - Der PR wird nicht gemergt. Er bleibt offen, bis der Nutzer ihn schließen möchte. Sein Branch wird nicht gelöscht.
+  - Die Arbeitslinie bleibt bei 204 Themen.
 
 ### 0.2 Was entfernt wird
 
@@ -176,15 +187,24 @@ Neue schlanke Prüfkette (lokal und in der CI gleich):
    - ein Eintrag im Pass wird gespeichert und übersteht einen Reload
    - ein alter Link wird korrekt aufgefangen
 
+**Die 130 vorhandenen Browser-Tests** (meine Entscheidung nach der Gegenlese). Heute laufen sie über `tests/browser/quality-runner.mjs`. Dieser Runner hängt an Skripten, die entfernt werden (`handoff.mjs`, `quality-evidence.mjs`, `scripts/release/*`). Deshalb gilt:
+
+- **Pass, Sicherung, Altpass, Offline und alte Links** (Regeln a und b): Diese Browser-Tests ziehen auf einen schlanken neuen Runner um und laufen bei jedem PR in Chromium mit. Heute sind das etwa zehn Dateien, zum Beispiel `backup`, `legacy-games`, `offline*`, `storage-feedback`, `animal-game-saves` und `pass-atlas`. Dazu kommen die vorhandenen Unit-Tests zum Speicher, etwa `progress.test.mjs` und die `*-transfer-compatibility`-Tests. Sie bleiben ohnehin.
+- **Übrige Browser-Tests mit noch genutzter App-Logik** (Regel d): Sie kommen in die Sammlung `pnpm run test:full`. Diese läuft am Ende jeder Phase, und dann auch in Firefox und WebKit.
+- **Aufwendige Fälle:** Tests, die sich nur mit großem Aufwand vom alten Runner lösen lassen, bleiben im Archiv-Tag. Sie werden im STATUS aufgelistet. Wenn die betroffene Welt umzieht, entsteht für sie ein neuer, passender Test.
+- **Alter Runner:** Er wird mit seinen Prozess-Abhängigkeiten entfernt.
+- **Zeitgrenze:** Kommt die CI damit über 10 Minuten, wandern die langsamsten Tests aus Regel d in `test:full`. Die Pass-Tests bleiben immer in der CI.
+
 CI (`quality.yml`):
 
 - Der Job-Name **„Required quality checks“ bleibt exakt gleich**, weil die GitHub-Regel für `test-live` ihn verlangt.
 - Nur Chromium, Ziel unter 10 Minuten.
-- Firefox und WebKit prüfen wir gezielt vor großen Übergaben (Ende einer Phase), nicht bei jedem Schritt.
+- Firefox und WebKit prüfen wir gezielt vor großen Übergaben (Ende einer Phase, `test:full`), nicht bei jedem Schritt.
 
 **Nachweis, dass sich für Kinder nichts ändert:**
 
-- Die App-Dateien in `dist/` (JS, CSS, HTML, `public/`-Kopien) werden vor und nach dem Aufräumen gebaut und verglichen. Erlaubte Unterschiede gibt es nur bei der Build-Kennung.
+- Die App-Dateien in `dist/` (JS, CSS, HTML, `public/`-Kopien) werden vor und nach dem Aufräumen gebaut und verglichen. Erlaubte Unterschiede gibt es nur bei der Build-Kennung. Für den Vergleich wird sie vorher in beiden Ständen durch einen Platzhalter ersetzt.
+- Die Build-Kennung ändert sich zwangsläufig, denn `build/learning-fingerprint.mjs` rechnet `package.json` und `pnpm-lock.yaml` mit ein. Folge: Wer die Seite offline gespeichert hat, sieht nach dem Merge einmal „Neue Version laden“. Das ist gewollt und harmlos, der Pass bleibt erhalten. Der Nutzer erfährt das im Bericht.
 - Zusätzlich gibt es Screenshots von Startseite, Themenwelt und Wissenskarte (Handy und Desktop), vorher und nachher.
 
 ### 0.4 Neue Unterlagen
@@ -214,8 +234,9 @@ Jede Phase und jeder größere Schritt läuft so:
 3. **Bauen** auf dem Branch `claude/...`
 4. **Prüfen**: Prüfkette grün, dazu passende Helfer (siehe 0.6)
 5. **Zeigen**: Vercel-Vorschau-Link und Screenshots an den Nutzer, in einfachen Worten
-6. **Freigabe** durch den Nutzer, dann PR nach `test-live` und regulärer Merge nach grüner CI
+6. **Freigabe:** Claude öffnet den PR nach `test-live` und schickt Vorschau-Link und PR-Link. Gemergt wird regulär nach grüner CI und erst nach einem „ok“ des Nutzers im Chat.
 7. STATUS, BACKLOG und CHANGELOG nachführen
+8. **Für Freunde veröffentlichen** (nur am Ende einer Phase): Claude fragt den Nutzer. Nach seinem OK geht ein PR von `test-live` nach `main`, erst dann ändert sich die Hauptadresse. Vorher wird die Phase einmal komplett geprüft, mit `test:full` in Chromium, Firefox und WebKit. Beim ersten Mal kommen die 10 alten Probe-Commits auf `main` regulär mit herein. Sie enthalten nur Vercel- und Rechte-Proben, Release-Tests und 7 Zeilen in `vercel.json`, keine App-Inhalte. Wie genau, wird vor dem ersten Mal geplant, ohne Force-Push.
 
 Kleine Korrekturen (Tippfehler, eindeutige Fehler) brauchen keinen eigenen Entwurf, laufen aber durch Prüfen, Zeigen und Freigabe.
 
@@ -265,7 +286,8 @@ Jeder Helfer ist eine kurze Datei mit Aufgabe, Prüfliste und Antwortformat. Die
 
 ### 0.9 Fertig, wenn
 
-- [ ] Archiv-Tag existiert auf GitHub
+- [ ] Beide Archiv-Tags existieren auf GitHub (`archiv/vor-neuausrichtung-2026-11-21`, `archiv/pr95-geschichte-2026-11-21`)
+- [ ] BACKLOG-Eintrag für die acht Geschichtsthemen aus PR #95 vorhanden
 - [ ] Ballast entfernt, nichts davon wird von App oder Build gebraucht
 - [ ] Neue Prüfkette lokal und in der CI grün, Job-Name unverändert
 - [ ] `dist/`-Vergleich zeigt keine Änderung außer der Build-Kennung, Screenshots gleich
@@ -279,3 +301,22 @@ Jeder Helfer ist eine kurze Datei mit Aufgabe, Prüfliste und Antwortformat. Die
 - Genaue Formulierung von CLAUDE.md, Helfern und Kurzbefehlen
 - Ob das Größenbudget-Skript bleibt oder vereinfacht wird
 - Reihenfolge der Aufräum-Commits (kleine, nachvollziehbare Commits je Bereich)
+- Ob Playwright aus `qa/` ins Hauptpaket wandert, damit `qa/` entfallen kann
+- Welche Dateien unter `exports/content` außer `verify` noch gelesen werden (wird vor dem Löschen geprüft)
+
+### Entscheidungen nach der Gegenlese (21.11.2026)
+
+Ein Prüf-Helfer hat den Entwurf gelesen, als müsste er ihn bauen. Seine offenen Fragen sind so geklärt:
+
+**Vom Nutzer entschieden:**
+
+1. PRs nach `test-live` darf Claude öffnen. Gemergt wird nach „ok“ im Chat (siehe Feste Regeln, 0.5).
+2. PR #95 wird gesichert und später kindgerecht übernommen (siehe 0.1).
+3. Freunde bekommen die Hauptadresse. Sie wird nur nach einer fertigen Phase und nach OK erneuert (siehe Feste Regeln, 0.5 Punkt 8).
+
+**Von Claude entschieden** (der Nutzer kann widersprechen):
+
+- Umgang mit den 130 Browser-Tests (siehe 0.3)
+- Build-Kennung beim `dist/`-Vergleich durch einen Platzhalter ersetzen. Das einmalige „Neue Version laden“ wird in Kauf genommen (siehe 0.3).
+- Alte Branches auf GitHub und PR #27 bleiben in Schritt 0 unberührt. Aufräumen lohnt sich später und braucht dann eine eigene Rückfrage.
+- Die 10 alten Commits auf `main` werden erst beim ersten Veröffentlichen behandelt, nicht in Schritt 0.
