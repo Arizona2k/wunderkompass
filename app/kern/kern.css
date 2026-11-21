@@ -244,6 +244,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+.kern-fuss-links a[aria-current="page"] { background: var(--kern-petrol-zart); border-color: var(--kern-petrol); cursor: default; }
 .kern-fuss .offline-learning { width: min(100%, 760px); margin-top: 0; text-align: left; }
 .kern-fuss-satz { margin: 0; font-size: 16px; }
 
@@ -346,6 +347,32 @@
    die alte Schrift, bis die Zeichnungen in ihrer Phase neu entstehen (BACKLOG).
    Am svg selbst, weil mehrere alte Regeln „svg text{font-family:inherit}“ setzen. */
 svg { font-family: "Trebuchet MS", Arial, sans-serif; }
+
+/* Suchdialog: Das Feld bleibt oben stehen, auch wenn die Treffer rollen (bei großer
+   Schrift rollte die Liste beim Öffnen und schob das Feld halb hinaus). Der Rahmen
+   umschließt das ganze Feld samt Lupe und liegt innen, weil der Dialog oben abschneidet. */
+.search-body [data-slot=command-input-wrapper] {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--kern-flaeche);
+}
+.search-body [data-slot=command-input-wrapper]:focus-within {
+  outline: 3px solid var(--kern-petrol);
+  outline-offset: -3px;
+  border-radius: 12px;
+}
+.search-body [data-slot=command-input]:focus-visible { outline: none; }
+
+/* „So geht’s“ auf der Startseite in jeder Breite. Früher gab es ab 431 px einen
+   Hilfe-Knopf im Kopf; der neue Kopf hat keinen mehr. */
+.discovery-hero .discovery-quiet-links .discovery-mobile-help {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 @media (forced-colors: active) {
   .kern-leiste a[aria-current="page"] { outline: 2px solid CanvasText; outline-offset: -2px; }

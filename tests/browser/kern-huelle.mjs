@@ -25,6 +25,7 @@ export async function kernHuelle(ctx) {
       await leiste(page, width);
       await kopfOhneZaehler(page, width);
       await fuss(page, width);
+      await hilfeAufStart(page, width);
       if (width < 768) await leisteVerdecktNichts(page, width);
       if (width === 320) await dialogUeberLeiste(page);
       await updatesOhneMarkierung(page, width);
@@ -35,13 +36,16 @@ export async function kernHuelle(ctx) {
       + (width < 768 ? ', Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
   await grosseSchrift320(ctx);
-  ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Pass unverändert');
+  ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Beispieltexte passen, Suchfeld ganz sichtbar, Pass unverändert');
   for (const view of [SCHMAL, BREIT]) {
     await withPage(ctx, view, async page => {
       const width = view.width;
       await grundlage(page, width);
       await ruhigerFokus(page, width);
-      ctx.report.checks.push(`Kern ${width}: Schrift Nunito, Grundfarbe, ruhiger Fokus auf Überschriften`);
+      await suchfeldRahmen(page, width);
+      if (width === 320) await platzhalterPassen(page, '320');
+      ctx.report.checks.push(`Kern ${width}: Schrift Nunito, Grundfarbe, ruhiger Fokus auf Überschriften, Suchfeld-Rahmen frei`
+        + (width === 320 ? ', Beispieltexte passen in die Felder' : ''));
     });
     await withPage(ctx, view, async page => {
       await neuigkeiten(page, view.width);
@@ -205,7 +209,9 @@ async function kopfOhneZaehler(page, width) {
 async function fuss(page, width) {
   const fussZeile = page.getByRole('contentinfo');
   assert.equal(await fussZeile.count(), 1, `fuss ${width}: genau ein Seitenfuß`);
-  assert.equal(await fussZeile.getByRole('link', {name: 'Was ist neu?', exact: true}).count(), 1, `fuss ${width}: Link „Was ist neu?“ fehlt`);
+  const neu = fussZeile.getByRole('link', {name: 'Was ist neu?', exact: true});
+  assert.equal(await neu.count(), 1, `fuss ${width}: Link „Was ist neu?“ fehlt`);
+  assert.equal(await neu.getAttribute('aria-current'), null, `fuss ${width}: „Was ist neu?“ ist außerhalb der Seite als aktuell markiert`);
   const eltern = fussZeile.getByRole('button', {name: 'Für Eltern', exact: true});
   assert.equal(await eltern.count(), 1, `fuss ${width}: Knopf „Für Eltern“ fehlt`);
   await eltern.click();
@@ -295,6 +301,8 @@ async function grosseSchrift320(ctx) {
     await ready(page);
     await page.locator('.earth-app.large-reading').waitFor();
     await leiste(page, 320, '320 große Schrift');
+    await platzhalterPassen(page, '320 große Schrift');
+    await suchfeldRahmen(page, '320 große Schrift');
     const gespeichert = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY);
     for (const [schluessel, wert] of Object.entries(pass.progress.settings)) {
       assert.deepEqual(gespeichert.settings[schluessel], wert, `grosseSchrift320: Einstellung „${schluessel}“ hat sich verändert`);
@@ -348,6 +356,74 @@ async function updatesOhneMarkierung(page, width) {
   await page.evaluate(() => { location.hash = 'updates'; });
   await page.locator('#updates-title').waitFor();
   assert.equal(await leisteVon(page).locator('[aria-current]').count(), 0, `updatesOhneMarkierung ${width}: ein Bereich ist markiert`);
+  // Der Fuß-Link führt dorthin, wo man schon ist: Er zeigt das, statt wie ein Ziel auszusehen.
+  const neu = page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true});
+  assert.equal(await neu.getAttribute('aria-current'), 'page', `updatesOhneMarkierung ${width}: „Was ist neu?“ im Fuß ist nicht als aktuelle Seite markiert`);
+}
+
+// Die Hilfe „So geht’s“ steht auf der Startseite in jeder Breite (der alte Hilfe-Knopf im Kopf ist weg).
+async function hilfeAufStart(page, width) {
+  await page.evaluate(() => { location.hash = 'home'; });
+  await page.locator('.discovery-hero').waitFor();
+  const hilfe = page.getByRole('button', {name: 'So geht’s', exact: true});
+  assert.equal(await hilfe.isVisible(), true, `hilfeAufStart ${width}: „So geht’s“ ist auf der Startseite nicht zu sehen`);
+  const box = await hilfe.boundingBox();
+  assert.ok(box.height >= 44, `hilfeAufStart ${width}: „So geht’s“ ist nur ${box.height} px hoch`);
+  await hilfe.click();
+  await page.locator('.help-start').waitFor();
+  await page.keyboard.press('Escape');
+  await page.locator('.help-dialog').waitFor({state: 'hidden'});
+}
+
+// Der Fokusrahmen des Suchfelds im Suchdialog liegt ganz frei, nichts schneidet ihn ab.
+async function suchfeldRahmen(page, width) {
+  await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
+  const feld = page.getByRole('dialog').locator('input');
+  await feld.waitFor();
+  await page.waitForFunction(() => document.activeElement?.tagName === 'INPUT');
+  // Die Trefferliste kann nach dem Öffnen noch rollen; erst danach messen.
+  await page.evaluate(() => new Promise(fertig => requestAnimationFrame(() => requestAnimationFrame(fertig))));
+  const rahmen = await page.evaluate(() => {
+    const input = document.activeElement;
+    const traeger = [input, input.parentElement].find(e => getComputedStyle(e).outlineStyle !== 'none');
+    if (!traeger) return {rahmen: false, abgeschnitten: null};
+    const s = getComputedStyle(traeger), rand = parseFloat(s.outlineWidth) + parseFloat(s.outlineOffset);
+    const r = traeger.getBoundingClientRect();
+    for (let a = traeger.parentElement; a; a = a.parentElement) {
+      const o = getComputedStyle(a);
+      if (o.overflowX === 'visible' && o.overflowY === 'visible') continue;
+      const q = a.getBoundingClientRect();
+      if (r.top - rand < q.top - .5 || r.left - rand < q.left - .5 || r.right + rand > q.right + .5 || r.bottom + rand > q.bottom + .5)
+        return {rahmen: true, abgeschnitten: a.className || a.tagName};
+    }
+    return {rahmen: true, abgeschnitten: null};
+  });
+  assert.deepEqual(rahmen, {rahmen: true, abgeschnitten: null}, `suchfeldRahmen ${width}: Fokusrahmen des Suchfelds fehlt oder ist abgeschnitten`);
+  await page.keyboard.press('Escape');
+  await page.getByRole('dialog').waitFor({state: 'detached'});
+}
+
+// Beispieltexte in Suchfeldern enden nicht mitten im Wort: Suchdialog, Labore, Reisen, Wissensbuch.
+async function platzhalterPassen(page, wo) {
+  const zuLang = () => page.evaluate(() => [...document.querySelectorAll('input[placeholder]')].filter(i => i.offsetParent).flatMap(i => {
+    const alt = i.value;
+    i.value = i.placeholder;
+    const ueber = i.scrollWidth > i.clientWidth;
+    i.value = alt;
+    return ueber ? [i.placeholder] : [];
+  }));
+  const gefunden = [];
+  await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
+  await page.getByRole('dialog').locator('input').waitFor();
+  gefunden.push(...await zuLang());
+  await page.keyboard.press('Escape');
+  await page.getByRole('dialog').waitFor({state: 'detached'});
+  for (const [ziel, feld] of [['labs', '.lab-search input'], ['journeys', '.journey-filters input'], ['book', '.book-search input']]) {
+    await page.evaluate(hash => { location.hash = hash; }, ziel);
+    await page.locator(feld).waitFor();
+    gefunden.push(...await zuLang());
+  }
+  assert.deepEqual(gefunden, [], `platzhalterPassen ${wo}: Beispieltexte passen nicht ins Feld`);
 }
 
 // „Was ist neu?“: Titel ruhig fokussiert, neueste Einträge oben, ältere unter „Früher“ eingeklappt.
