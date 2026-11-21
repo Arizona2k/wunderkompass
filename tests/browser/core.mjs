@@ -16,7 +16,6 @@ const HUBS = [['Lernreisen', '.journey-tile'], ['Spielplatz', '.game-tile'], ['F
 const SAVE_KEY = 'erde-entdecken:save:v3';
 
 export async function core({browser, base, ready, monitor, report, shots}) {
-  report.views ??= [];
   for (const [width, height] of VIEWS) {
     const mobile = width <= 390;
     const context = await browser.newContext({viewport: {width, height}, isMobile: mobile, hasTouch: mobile, reducedMotion: 'reduce', acceptDownloads: true});

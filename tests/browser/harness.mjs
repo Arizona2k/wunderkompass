@@ -4,8 +4,14 @@ import {spawn} from 'node:child_process';
 import net from 'node:net';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {browserErrorArrays} from '../../scripts/browser-errors.mjs';
 
 export const PROJECT = fileURLToPath(new URL('../..', import.meta.url));
+
+// Leerer Bericht für eine Suite. Ältere Abläufe schreiben in checks und views.
+export function newReport() {
+  return {checks: [], views: [], ...browserErrorArrays()};
+}
 
 // Die Seite ist bedienbar, sobald der Entdeckerpass-Knopf aktiv ist.
 export function ready(page) {

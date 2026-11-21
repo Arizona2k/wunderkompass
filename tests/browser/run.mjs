@@ -9,8 +9,8 @@
 // Zuerst die Lade-Hooks: Browser-Module importieren App-Dateien mit endungslosen .ts-Importen.
 await import('../../scripts/test-runtime.mjs');
 const {SUITES} = await import('./suites.mjs');
-const {PROJECT, ready, startPreview} = await import('./harness.mjs');
-const {browserErrorArrays, browserErrorsComplete, BROWSER_ERROR_FIELDS, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
+const {PROJECT, newReport, ready, startPreview} = await import('./harness.mjs');
+const {browserErrorsComplete, BROWSER_ERROR_FIELDS, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
 const fs = await import('node:fs/promises');
 const {existsSync} = await import('node:fs');
 const path = await import('node:path');
@@ -81,7 +81,7 @@ async function runEngine(engine) {
 }
 
 async function runSuite(suite, {engine, browser, browserType, launchOptions}) {
-  const report = {checks: [], ...browserErrorArrays()};
+  const report = newReport();
   const shots = path.join(PROJECT, '.qa-output', 'browser', engine, suite.name);
   await fs.rm(shots, {recursive: true, force: true});
   await fs.mkdir(shots, {recursive: true});
