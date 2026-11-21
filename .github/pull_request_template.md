@@ -4,7 +4,7 @@ Aufgaben-ID aus BACKLOG.md, konkreter Anlass und resultierendes Verhalten:
 
 ## Prüfung
 
-Bei Technikpaketen: aktuelle vergleichbare Basis, Methode/Stichprobe, Vorher/Nachher und Runner-Minuten nennen; erfolglose Optimierungen und unveränderte Prüfdeckung erklären. Vollständiger Browserbericht und `.qa-output/handoff.json` verknüpfen Anforderungen aus dem bestehenden BACKLOG mit Code/Test/Quellbelegen, genauem Build/SHA und tatsächlichen Screenshots. Datei-/Testnachweise ersetzen keine Kinder-/Fachabnahme.
+Was wurde geprüft (Befehle, Ergebnis), welche Screenshots wurden angesehen, was wurde nicht geprüft?
 
 Getesteter Head-/Basisstand, tatsächlich ausgeführte lokale Pflichtprüfungen und Ergebnisse; GitHub-Quality-Lauf mit Link und tatsächlichem Status (grün/rot/laufend/fehlend); relevante Browserwege/Größen, Warnungen und nicht verfügbare Abnahmen. Frühere grüne Läufe bestätigen keinen späteren PR-Stand:
 
