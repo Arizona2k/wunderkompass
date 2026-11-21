@@ -52,6 +52,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - Fuß-Link „Was ist neu?“ und Marke öffnen bei Strg- oder Mittelklick keinen neuen Tab (die Leiste kann das schon).
     - „Spielen“ in der Leiste führt bei offenem Spiel nicht zur Übersicht (Altverhalten). Mit Teilschritt 3 klären.
     - Restliches Rutschen beim Laden (etwa 0,02 bis 0,04, schon vor Teilschritt 1 so): Die Zeile „Dein Entdeckerpass wird geladen …“ verschwindet über dem Inhalt, und der obere Abstand der Ladeanzeige (`.learning-status`, `margin: 16px 0`) wandert nach außen und zurück. `display: flow-root` an `.learning-panel` hilft nicht (Abstand wandert eine Ebene tiefer). Besser: Ladezeile ohne Platzbedarf zeigen und Ladeanzeigen ohne oberen Außenabstand.
+    - Kurze Seiten wie „Was ist neu?“ haben am Handy viel leere Fläche vor dem Fuß, weil der Hauptbereich mindestens bildschirmhoch ist (`.learning-main` in `kern.css`). Ohne diese Höhe rutscht „Was ist neu?“ bei 390 px um 0,13 bis 0,15 (Grenze 0,1). Die Fläche schrumpft mit jedem neuen Eintrag. Wenn das Rutschen anders gelöst ist (Punkt darüber), die Mindesthöhe nur noch beim Laden setzen.
     - Prüfen, ob Safari auch auf anderen Rückwegen die Lesestelle verliert (angetippte Karten, Kapitel), weil es Links beim Antippen nicht fokussiert. Die WebKit-Vollprüfung in der CI zeigt es.
 
 ## Phase 2 – Tierwelt (grob)
