@@ -37,7 +37,7 @@ Stand: 21.11.2026. Kurzfassung der Produktziele. Der ausführliche Entwurf steht
 - Ruhige Listen und Trennlinien statt vieler gleicher Kästen. Keine Belohnungsökonomie mit Sternen oder Punkten.
 - Sanfte Bewegung, immer mit sichtbarer Steuerung, Wischen und Tastatur. Wichtiges ist ohne Warten da.
 
-**Stil-Anregungen** (nur Prinzipien übernehmen, nichts kopieren): Apple, Google Store, Coalatree, Razer, NZXT und Meta Quest für ruhige, bildstarke Produktseiten. Die vollständigen Adressen und Bildbeispiele stehen in der alten VISION im Archiv-Tag (`git show b53f75f:VISION.md`).
+**Stil-Anregungen** (nur Prinzipien übernehmen, nichts kopieren): Apple, Google Store, Coalatree, Razer, NZXT und Meta Quest für ruhige, bildstarke Produktseiten. Die vollständigen Adressen und Bildbeispiele stehen in der alten VISION im alten Stand (`git show b53f75f:VISION.md`).
 
 ## Bilder
 

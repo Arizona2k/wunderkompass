@@ -124,7 +124,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `docs/archiv/` | Originalaufträge des Nutzers und die alte AGENTS.md |
 | `STATUS.md`, `BACKLOG.md`, `VISION.md`, `CHANGELOG.md` | Stand, Aufgaben, Produktziele, Verlauf |
 
-Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test-live`; lokaler Tag `archiv/vor-neuausrichtung-2026-11-21`).
+Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test-live`).
 
 ## Vercel
 

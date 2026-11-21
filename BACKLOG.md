@@ -39,7 +39,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 ## Phase 3 – Weitere Welten (grob)
 
 - Welt für Welt nach dem Tierwelt-Muster: Natur, Erde, Weltall, Menschen, Erfindungen, Geschichte.
-- **PR #95 übernehmen:** acht Geschichtsthemen mit acht Vertiefungen, kindgerecht umgeschrieben nach `kinder-redaktion` und `fakten-pruefer`. Stand: Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0` (lokaler Tag `archiv/pr95-geschichte-2026-11-21`).
+- **PR #95 übernehmen:** acht Geschichtsthemen mit acht Vertiefungen, kindgerecht umgeschrieben nach `kinder-redaktion` und `fakten-pruefer`. Stand: Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`.
 - Alter Artikel „Papier aus China“ neu (WK-053).
 - 16 Lernreisen mit 80 Kapiteln und 240 Aufgaben kindgerecht nacharbeiten: mehr Tun als Ankreuzen, Hinweise, erklärende Rückmeldung (WK-055, WK-048).
 - Planetenwerte vereinheitlichen: Neptun 30,05 AE (Orbitlabor) gegen 30,18 AE (Größenvergleich), ebenso Saturn und Uranus; eine Definition, Quelle und Erklärung (WK-056).
@@ -71,7 +71,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - **Inhaltswächter erweitern** (Befunde code-pruefer, Schritt 0): (1) eigene Illustrationen tragen ihre KI-Kennzeichnung, und SVGs enthalten kein `<script>`, `<foreignObject>` und keine fremden Adressen (Vorlage: Test „24 local own images …“ in `git show b53f75f:tests/animal-expansion.test.mjs`); (2) Fragen-IDs der Spielbanken „Technik“ und „Früher oder heute?“ in `stable-ids.json`; (3) Orts-IDs, die als Entdeckung oder Favorit im Pass stehen (Länder, Hauptstädte, Meere, Kontinente, Plattenorte, Meeresorte).
 - **Browser-Runner:** `stop()` in `tests/browser/harness.mjs` nach etwa 5 s mit SIGKILL beenden; `people-learning`, `offline-retention` und `animal-native-zoom` sammeln noch keine Konsolenfehler über `monitor`.
 - **Rauchtest-Bilder:** Der Rauchtest fotografiert, bevor alle Fotos geladen sind (Befund Schritt 0: leere Bildflächen bei Löwe, Gepard, Curie, mal so, mal so). Vor dem Screenshot auf sichtbare Bilder warten, damit Vorher/Nachher-Vergleiche ruhig bleiben.
-- **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen.
+- **Alte Branches und Entwurfs-PR #27 aufräumen** (nur nach eigener Rückfrage): 107 gemergte und 122 `codex/*`-Branches auf GitHub; Entwurfs-PR #27 „Paket 3.5“ (Codex, alte Basis) vorher auf Brauchbares für spätere Phasen durchsehen. Nicht löschen, solange PR #95 nicht übernommen ist: `codex/wunderkompass-history-evidence-2026-11-08` (Commit `7e00bd0`).
 - **Vollprüfung dauert lange:** `test:full` braucht in Chromium nacheinander rund zwei Stunden (Messung Schritt 0; CI-Grenze deshalb 180 Minuten). Suiten beschleunigen oder sinnvoll aufteilen, statt die Zeitgrenze im CI-Job weiter zu erhöhen.
 
 ## Medien mit offenen Rechten
