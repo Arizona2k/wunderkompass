@@ -98,7 +98,7 @@ Zwei weitere Fälle haben eigene Tests: heikle Geschichtskarten (Aufgabe 4, `hei
 
 ## Schritt 0: Ausgangslage
 
-- [x] Der PR von Teilschritt 1 ist gemergt (PR #99, `6f43eb5`). Der Branch `claude/sweet-ramanujan-gl9yhc` ist neu von `test-live` aufgesetzt, dieser Plan liegt in `docs/entwurf/` (wartet auf Freigabe). Ein neuer Chat arbeitet auf seinem eigenen `claude/...`-Branch vom Stand `test-live`.
+- [x] Der PR von Teilschritt 1 ist gemergt (PR #99, `6f43eb5`). Der Branch `claude/sweet-ramanujan-gl9yhc` ist neu von `test-live` aufgesetzt, dieser Plan liegt in `docs/entwurf/` und ist vom Nutzer freigegeben (21.11.2026). Ein neuer Chat arbeitet auf seinem eigenen `claude/...`-Branch vom Stand `test-live`.
 - [ ] `pnpm install --frozen-lockfile && pnpm run build`. Einstiegs-JS, Einstiegs-JS gzip, Einstiegs-CSS und Einstiegs-CSS gzip im Notizblock festhalten. Das sind die Obergrenzen.
 - [ ] Bildsuche starten (Aufgabe 12, läuft im Hintergrund).
 

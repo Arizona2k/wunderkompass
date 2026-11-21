@@ -20,14 +20,14 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md)), sechs Teilschritte:
 
 1. **Aussehen und Hülle** – fertig, in `test-live` ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-1.md)): Schrift Nunito, Farben, eine Leiste mit sechs Bereichen, ruhiger Kopf, neuer Fuß, „Was ist neu?“ für Kinder.
-2. **Wissenskarte** – als Nächstes. [Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-2.md) wartet auf Freigabe; danach bauen in zwei Teilen (A „Neue Karte“, B „Kürzer und verbunden“), Ausführung durch Claude selbst (executing-plans).
+2. **Wissenskarte** – als Nächstes. [Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-2.md) freigegeben (21.11.2026); bauen in zwei Teilen (A „Neue Karte“, B „Kürzer und verbunden“), Ausführung durch Claude selbst (executing-plans).
 3. Kniffliger spielen · 4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
 
 Rückmeldung eines 10-jährigen Kindes (zu viel Text, zu leicht) steckt in der Ergänzung; weitere Rückmeldungen fließen in den laufenden Teilschritt ein.
 
 ## Offene Fragen an den Nutzer
 
-- Plan für Teilschritt 2 „Wissenskarte“ freigeben?
+- Keine.
 
 ## Vorübergehende Modell-Ausnahmen
 
