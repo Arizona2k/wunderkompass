@@ -4,7 +4,8 @@ Stand: 21.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Wo wir stehen
 
-- **Schritt 0 „Großputz & Arbeitsweise“** ist gebaut und geprüft (Plan: [docs/entwurf/2026-11-21-schritt-0-plan.md](docs/entwurf/2026-11-21-schritt-0-plan.md)). Die Kinderseite sieht unverändert aus.
+- **Schritt 0 „Großputz & Arbeitsweise“** ist fertig und geprüft, aber noch nicht in `test-live` übernommen (Plan: [docs/entwurf/2026-11-21-schritt-0-plan.md](docs/entwurf/2026-11-21-schritt-0-plan.md)). Die Kinderseite sieht unverändert aus.
+- Prüfungen, nur in Chromium: `pnpm run check` grün (350 Unit-Tests, 13 Browser-Suiten, 2 min 39 s). Große Prüfung: 28 von 28 Suiten grün (zwei im Nachlauf, weil das Werkzeug Läufe nach 2 Stunden abbricht). Der neue Build gleicht dem alten bis auf die Kennung (270 Dateien). Offline-Update vom alten Stand behält Pass und Favoriten. Repository: 1284 → 1021 Dateien, 73,9 → 42,2 MB.
 - Entfernt: Nachweis-, Bericht- und Release-Maschinerie, Vergleichsdateien, alte Datenbank- und Sites-Reste. Neu: schlanke Prüfkette (`pnpm run check`), Browser-Runner, kurze Unterlagen, sechs Helfer, Kurzbefehle `/weiter` und `/pruefen`.
 - Der alte Stand liegt vollständig in Commit `b53f75f` (Historie von `test-live`). Die Archiv-Tags gibt es nur lokal, weil die Sitzung keine Tags hochladen darf.
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
@@ -21,25 +22,17 @@ Phase 1 „Neuer Kern“ entwerfen: Design-System, Startseite, Navigation, Theme
 ## Offene Fragen an den Nutzer
 
 - Merge von Schritt 0 nach `test-live` (nach Ansicht von Vorschau und PR, „ok“ im Chat).
+- Vorschlag: Standardbranch auf GitHub von `main` auf `test-live` umstellen (Einstellungen → Branches); dann starten neue Sitzungen gleich auf dem aktuellen Stand.
 - Optional: die zwei Archiv-Tags auf GitHub selbst anlegen (`archiv/vor-neuausrichtung-2026-11-21` → `b53f75f`, `archiv/pr95-geschichte-2026-11-21` → `7e00bd0`).
 
 ## Bekannte Grenzen
 
-- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. In der nächsten Sitzung zuerst prüfen, ob beides per Name klappt.
+- Die sechs Helfer in `.claude/agents/` und die Kurzbefehle `/weiter` und `/pruefen` entstanden erst während der Sitzung und ließen sich dort noch nicht per Namen aufrufen. Ersatz: ein allgemeiner Helfer mit gleichem Modell und gleicher Denkstufe, der die Rollendatei liest; die Schritte der Kurzbefehle liefen von Hand. Kurz vor dem PR erschienen `/weiter` und `/pruefen` in der Liste der Kurzbefehle. In der nächsten Sitzung zuerst prüfen, ob Helfer und Kurzbefehle per Name klappen.
 - Lokal läuft nur Chromium. Firefox und WebKit prüft der CI-Job „Vollprüfung“.
 
 ## Archivierte Browser-Tests
 
-Diese Testdateien liefen schon vorher nirgends mehr („tote Waisen“) und liegen nur noch im alten Stand (`git show b53f75f:tests/browser/<name>.mjs`):
-
-| Datei | Grund |
-|---|---|
-| `audio.mjs`, `globe.mjs`, `legacy-games.mjs`, `responsive.mjs`, `usability.mjs`, `world-games.mjs` | Von keinem Lauf mehr aufgerufen; die Abläufe decken heutige Suiten ab (Globus, Spiele, Breiten in `core`, `animals`, `playground`) |
-| `critical.mjs` | Von keinem Lauf aufgerufen; einziger noch fehlender Fall „beschädigter Speicherstand“ steht im BACKLOG als neuer Test |
-
-Ebenfalls schon vorher tot und gelöscht (laut Plan): `content`, `journeys-labs`, `models-existing`, `new-models`, `offline`, `routes`, `search-links`.
-
-Aus dem großen Prüflauf in Schritt 0 kam kein weiterer Test ins Archiv: Alle umgezogenen Suiten laufen grün (Chromium).
+Diese Dateien liefen schon vorher nirgends mehr und liegen nur im alten Stand (`git show b53f75f:tests/browser/<name>.mjs`): `audio`, `globe`, `legacy-games`, `responsive`, `usability`, `world-games` (heutige Suiten decken die Abläufe ab: Globus, Spiele, Breiten in `core`, `animals`, `playground`) und `critical` (der einzige fehlende Fall „beschädigter Speicherstand“ steht im BACKLOG). Ebenfalls tot und gelöscht: `content`, `journeys-labs`, `models-existing`, `new-models`, `offline`, `routes`, `search-links`. Aus dem großen Prüflauf kam kein weiterer Test ins Archiv.
 
 ## Neuer Chat: Startnachricht
 
