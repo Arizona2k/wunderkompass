@@ -37,6 +37,8 @@ export async function kernHuelle(ctx) {
     ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her, Buchleiste springt nach Zurück nicht um`
       + (width < 768 ? ', auch nach einem Tipp ohne Fokus wie in Safari, Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
+  await withPage(ctx, {width: 390, height: 844, touch: true}, page => buchLeisteDrehen(page));
+  ctx.report.checks.push('Buch am Handy gedreht (390 ↔ 844 px): Bereichsleiste wechselt ohne ResizeObserver-Schleife, Pfeile passen zur Leiste');
   await grosseSchrift320(ctx);
   ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Beispieltexte passen, Suchfeld ganz sichtbar, Pass unverändert');
   for (const view of [SCHMAL, BREIT]) {
@@ -423,6 +425,32 @@ async function buchLeisteBleibtRuhig(page, width) {
   }
   assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], `buchLeisteBleibtRuhig ${width}: ResizeObserver-Schleife nach Zurück ins Buch`);
   assert.equal(await buchLeiste.getAttribute('data-strip-overflow'), vorher, `buchLeisteBleibtRuhig ${width}: Bereichsleiste im Buch hat ihre Form gewechselt`);
+}
+
+// Dreht ein Kind das Handy, wechselt die Bereichsleiste im Buch zwischen „mit Pfeilen“ (390 px) und
+// „ohne Pfeile“ (844 px). Das darf keine ResizeObserver-Schleife auslösen (WebKit wertet sie als
+// Seitenfehler), und die Pfeile passen danach zur Leiste: „zurück“ ist nur ganz links aus, „weiter“ nur ganz rechts.
+async function buchLeisteDrehen(page) {
+  await page.evaluate(() => {
+    window.__roSchleifen = [];
+    addEventListener('error', event => { if (/ResizeObserver loop/.test(event.message)) window.__roSchleifen.push(innerWidth); });
+  });
+  await page.evaluate(() => { location.hash = 'book/words/Meter'; });
+  const buchLeiste = page.locator('.book-navigation');
+  await buchLeiste.waitFor(WARTEN);
+  for (const [width, height, pfeile] of [[844, 390, 'false'], [390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) {
+    await page.setViewportSize({width, height});
+    await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(ok, 100)))));
+    assert.equal(await buchLeiste.getAttribute('data-strip-overflow'), pfeile, `buchLeisteDrehen ${width}: Pfeile ${pfeile === 'true' ? 'fehlen' : 'stehen da'}, obwohl die Leiste ${pfeile === 'true' ? 'nicht ' : ''}hineinpasst`);
+    if (pfeile === 'true') {
+      const stand = await buchLeiste.evaluate(nav => {
+        const liste = nav.querySelector('.book-tabs'), [zurueck, weiter] = nav.querySelectorAll(':scope > .area-scroll');
+        return {zurueck: zurueck.disabled, weiter: weiter.disabled, ganzLinks: liste.scrollLeft <= 1, ganzRechts: liste.scrollLeft + liste.clientWidth >= liste.scrollWidth - 1};
+      });
+      assert.deepEqual([stand.zurueck, stand.weiter], [stand.ganzLinks, stand.ganzRechts], `buchLeisteDrehen ${width}: Pfeile passen nicht zur Leiste ${JSON.stringify(stand)}`);
+    }
+  }
+  assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], 'buchLeisteDrehen: ResizeObserver-Schleife beim Drehen');
 }
 
 // Die Hilfe „So geht’s“ steht auf der Startseite in jeder Breite (der alte Hilfe-Knopf im Kopf ist weg).

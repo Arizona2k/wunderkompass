@@ -13,17 +13,25 @@ export function useLearningStrip(value:string){
  };
  useEffect(()=>{
   const list=listRef.current;if(!list)return;
+  const frame=list.parentElement;let pending=0;
   const update=()=>{
    // A hidden strip (its area stays mounted but hidden) measures 0 × 0 and says nothing about space.
    // Keeping the last state avoids a layout flip inside the ResizeObserver when the area returns.
    if(!list.clientWidth)return;
    if(previousRef.current)previousRef.current.disabled=list.scrollLeft<=1;
    if(nextRef.current)nextRef.current.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-1;
-   if(list.parentElement)list.parentElement.dataset.stripOverflow=String(list.scrollWidth>list.clientWidth+1);
+   const overflow=String(list.scrollWidth>list.clientWidth+1);
+   if(frame&&frame.dataset.stripOverflow!==overflow){
+    // Showing or hiding the arrows changes the strip's width. Set the arrows again in the next frame,
+    // not inside the same ResizeObserver pass.
+    frame.dataset.stripOverflow=overflow;cancelAnimationFrame(pending);pending=requestAnimationFrame(update);
+   }
   };
   const align=()=>{const active=list.querySelector<HTMLElement>('[data-state=active]');if(active)reveal(active);update();};
-  const observer=new ResizeObserver(align);observer.observe(list);list.addEventListener('scroll',update,{passive:true});align();
-  return()=>{observer.disconnect();list.removeEventListener('scroll',update);};
+  // Observe the frame around strip and arrows: its size does not depend on whether the arrows show.
+  // Observing the strip itself made every arrow toggle (e.g. turning a phone) a ResizeObserver loop.
+  const observer=new ResizeObserver(align);observer.observe(frame??list);list.addEventListener('scroll',update,{passive:true});align();
+  return()=>{observer.disconnect();cancelAnimationFrame(pending);list.removeEventListener('scroll',update);};
  },[value]);
  const scroll=(direction:number)=>{const list=listRef.current;if(list)list.scrollBy({left:direction*Math.max(100,list.clientWidth*.8),behavior:'instant'});};
  return {listRef,previousRef,nextRef,reveal,scroll};
