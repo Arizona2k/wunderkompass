@@ -67,7 +67,8 @@ jobs:
     name: Vollprüfung (${{ matrix.browser }})
     if: github.base_ref == 'main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    # Chromium braucht für alle Suiten nacheinander rund zwei Stunden (Messung 21.11.2026, 4 Kerne).
+    timeout-minutes: 180
     permissions:
       contents: read
     strategy:
