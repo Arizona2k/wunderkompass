@@ -5,7 +5,7 @@ import {natureProofComplete} from '../../scripts/nature-learning-evidence.mjs';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {insideDiagramViews} from './inside-diagrams.mjs';
 import {offlineResilience} from './offline-resilience.mjs';
-import {historyEngineView} from './discovery-central.mjs';
+import {neuigkeitenAnsicht} from './discovery-central.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {planetDiagramViews} from './planet-diagrams.mjs';
 import {nativeWorldSelectionReturns} from './native-world-selection-return.mjs';
@@ -35,7 +35,7 @@ export async function nativeJourneyZoom(chromium,options,base,report,shots){
   }
   await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await p.waitForFunction(()=>{const e=document.querySelector('a.journey-source');return e&&parseFloat(getComputedStyle(e).fontSize)>=18.3;});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'native zoom plus large app text');await p.locator('.journey-task').scrollIntoViewIfNeeded();await capture('journey-native-200-large.png');
   await p.addScriptTag({path:AXE_FILE});assert.deepEqual(await p.evaluate(async()=>(await window.axe.run('.journey-reader',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
-  report.nativeHistory={percent:200,scale:dimensions.scale,...await historyEngineView(p,640,shots,{engine:'chromium-native',capture:name=>captureNativeViewport(p,path.join(shots,name))})};
+  report.nativeHistory={percent:200,scale:dimensions.scale,...await neuigkeitenAnsicht(p,640,shots,{engine:'chromium-native',capture:name=>captureNativeViewport(p,path.join(shots,name))})};
   const blank=await context.newPage();
   try{await assert.rejects(captureNativeViewport(blank,path.join(shots,'history-native-blank-negative.png')),/Native screenshot is uniform/);report.nativeHistory.blankCaptureRejected=true;}finally{await blank.close();}
   report.nativePlanet=[];const previousViewport=p.viewportSize();for(const width of[640,320]){await p.setViewportSize({width:width*2,height:950});report.nativePlanet.push(...await planetDiagramViews(p,{width,large:true,native:true,offline:false,shots,engine:'chromium-native'}));}await p.setViewportSize(previousViewport);assert.equal(report.nativePlanet.length,18);

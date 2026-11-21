@@ -23,7 +23,7 @@ export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
    await input.fill('Ein Wort für absichtliches Wütendmachen');await p.waitForFunction(()=>document.querySelectorAll('[role=option]').length===0);assert.equal(await p.getByRole('option').count(),0,'former news article cannot be found');
    await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});
    const passBefore=await p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);assert.deepEqual(passBefore.notes,pass.progress.notes);assert.deepEqual(passBefore.favorites,pass.progress.favorites);assert.deepEqual(passBefore.gameSessions.memory,pass.progress.gameSessions.memory);
-   await p.goto(base+'#updates');await ready(p);await p.locator('.update-history').waitFor();await absent(p);assert.doesNotMatch(await p.locator('.update-history').textContent(),/Nachrichten|Kindernachrichten|Neue signierte Ausgaben/,'removed feature is not still advertised in visible or expandable history rows');
+   await p.goto(base+'#updates');await ready(p);await p.locator('.kern-neuigkeiten').waitFor();await absent(p);assert.doesNotMatch(await p.locator('.kern-neuigkeiten').textContent(),/Nachrichten|Kindernachrichten|Neue signierte Ausgaben/,'removed feature is not still advertised in visible or expandable history rows');
    const routes=[];
    for(const route of REMOVED_NEWS_ROUTES){
     await p.goto(base+'#'+route);await ready(p);await p.locator('.discovery-hero').waitFor();

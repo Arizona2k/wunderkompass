@@ -1,10 +1,10 @@
-import {AXE_FILE} from './axe-loader.mjs';
+import {AXE_FILE,prepareAxe} from './axe-loader.mjs';
 import{assertMeaningfulGraphicContrast}from'./text-geometry.mjs';
 import{guideDialogView}from'./guides.mjs';
 import{categoryTimelineNavigation}from'./category-timelines.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {publicUpdates,PREPARED_UPDATES,updateLabel,formatHistoryDay} from '../../app/update-history.ts';
+import {NEUIGKEITEN} from '../../app/kern/neuigkeiten.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
 import {bereich} from './harness.mjs';
@@ -228,7 +228,7 @@ export async function offlineDiscoveryCentral(page,report){
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(/Gezeiten können Strömungen antreiben/).waitFor();
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
- await page.evaluate(()=>location.hash='updates');await page.locator('.updates-timeline').first().waitFor();assert.equal(await page.locator('.updates-timeline>li').count(),publicUpdates().length);await page.getByRole('link',{name:'Zur Startseite',exact:true}).click();await page.locator('.discovery-hero').waitFor();
+ await page.evaluate(()=>location.hash='updates');await page.locator('.kern-neuigkeiten').waitFor();assert.equal(await page.locator('.kern-neuigkeiten li[data-neuigkeit]').count(),NEUIGKEITEN.length,'offline: alle Neuigkeiten da');await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
  await bereich(page,'world').click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal((await page.locator('nav[aria-label="Bereiche"] [aria-current=page]').innerText()).trim(),'Welten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
  await openTrailPicker(page);const previousTrail=await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).inputValue();await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption('person-mae_jemison--history-iss');await page.locator('[data-route-focus="home-topic-history-iss"]').waitFor();for(const image of await page.locator('.discovery-pair img[src]').all())await image.evaluate(im=>im.decode());await discoveryPairMedia(page);report.checks.push('Actual cold offline Mae Jemison and ISS pair: cached portrait and real orbital-laboratory diagram remain complete');await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(previousTrail);
  report.checks.push('Cold offline discovery: all gateway photos decode, knowledge trail switches, challenge opens, local history, six-world main navigation/category and home work');
@@ -237,7 +237,7 @@ export async function offlineDiscoveryCentral(page,report){
 // First visits must be tested in fresh contexts; accumulated regression state
 // otherwise hides empty/resume mistakes. Uses the same production preview.
 export async function homeTextGeometry(page){
- const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-hero button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-concept li,.discovery-concept figcaption,.discovery-context-photo figcaption,.discovery-pair button,.continue-card,.updates-entry,.updates-detail-body,.updates-details>summary,.updates-archive>summary,.updates-archive-intro,.updates-note,.updates-heading,.updates-provenance,.updates-prepared>p,.updates-prepared-entry').evaluateAll(elements=>elements.flatMap(el=>{
+ const bad=await page.locator('.discovery-hero-copy h1,.discovery-feature>a,.discovery-hero button,.discovery-hero .photo-disclosure,.discovery-hero-copy>p,.discovery-hero-copy button,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds .world-choice,.discovery-text-link,.discovery-pathways h2,.discovery-concept li,.discovery-concept figcaption,.discovery-context-photo figcaption,.discovery-pair button,.continue-card,.kern-neuigkeiten h1,.kern-neuigkeiten-einleitung,.kern-neuigkeiten li h2,.kern-neuigkeiten li p,.kern-neuigkeiten time,.kern-neuigkeiten summary').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length)return [];
   const box=el.getBoundingClientRect(),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),errors=[];
   while(walker.nextNode()){
@@ -251,7 +251,7 @@ export async function homeTextGeometry(page){
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home/history horizontal overflow');
 }
 export async function homeTouchTargets(page){
- for(const control of await page.locator('.discovery-hero-copy button,.discovery-hero button,.discovery-feature>a,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.discovery-activities summary,.discovery-activities a,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.update-history a,.update-history summary').all()){
+ for(const control of await page.locator('.discovery-hero-copy button,.discovery-hero button,.discovery-feature>a,.discovery-hero .photo-disclosure summary,.discovery-hero .photo-disclosure a,.discovery-quiet-links a,.discovery-mobile-help,.kern-leiste a,.discovery-worlds button,.gateway-credits summary,.discovery-pathways button,.discovery-pathways a,.discovery-pathways summary,.discovery-pathways select,.discovery-activities button,.discovery-activities summary,.discovery-activities a,.daily-discovery button,.daily-discovery summary,.daily-discovery a,.kern-neuigkeiten summary').all()){
   if(!await control.isVisible())continue;
   assert.equal(await control.evaluate(el=>{const r=el.getBoundingClientRect();return r.width>=44&&r.height>=44}),true,'home/history touch target at least 44px: '+await control.innerText());
  }
@@ -348,74 +348,13 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.evaluate(()=>scrollTo(0,0));await p.locator('.skip-link').focus();await p.keyboard.press('Enter');
    assert.equal(await p.locator('#learning-main').evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'keyboard skip navigation remains usable');
    assert.equal(await p.locator('#discovery-title').evaluate(el=>parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'calm heading focus remains visible');
-   // Publication history neither fabricates dates nor exposes prepared changes.
+   // „Was ist neu?“ über den Fuß: Titel fokussiert, alle Einträge, Zurück/Vor, axe; der Pass bleibt gleich.
    const readProgress=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
-   const before=await readProgress();await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
-   assert.equal(await p.locator('.updates-timeline>li').count(),publicUpdates().length);
-   assert.deepEqual(await p.locator('.updates-meta>span:first-child').allTextContents(),publicUpdates().map(updateLabel));
-   assert.deepEqual(await p.locator('.updates-timeline>li .updates-category').allTextContents(),publicUpdates().map(e=>e.category),'every historical and current update has its own readable category');
-   assert.deepEqual(await p.locator('.updates-timeline>li time').allTextContents(),publicUpdates().map(e=>formatHistoryDay(e.availableOn??e.publishedOn??e.confirmedOn)),'concise dates retain the precise evidence in datetime');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=sites]').count(),13,'retain every historical Sites publication');
-   assert.equal(await p.locator('.updates-timeline>li[data-update-channel=vercel-test]').count(),publicUpdates().filter(e=>e.channel==='vercel-test').length,'include independently confirmed test website rounds');
-   assert.equal(await p.locator('.updates-timeline>li').first().getAttribute('data-update-id'),publicUpdates()[0].id,'latest confirmed package keeps its ID and comes first');
-   assert.equal(await p.locator('.updates-timeline [data-update-id=history-polish]').count(),1,'merged and deployed PR 19 is an available update');
-   assert.equal(await p.locator('.updates-timeline>li').first().locator('time').getAttribute('datetime'),publicUpdates()[0].occurredAt,'actual latest Vercel confirmation timestamp');
-   assert.equal(await p.locator('.updates-details[open]').count(),0,'optional changes start collapsed');
-   assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy history title focus');
-   assert.deepEqual(await readProgress(),before,'history is read-only for central pass');
-   await homeTextGeometry(p);await homeTouchTargets(p);
-   await p.screenshot({path:shots+'/updates-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.evaluate(()=>scrollTo(0,0));assert.equal(await p.locator('.updates-timeline>li').first().getByRole('heading').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight}),true,'first actual update heading stays visible beneath compact channel explanation');await p.screenshot({path:shots+'/updates-test-top-'+width+'.png',animations:'disabled'});
-   if(PREPARED_UPDATES.length){await p.locator('.updates-prepared>summary').click();await homeTextGeometry(p);await homeTouchTargets(p);
-   assert.equal(await p.locator('.updates-prepared-entry[data-update-status=prepared]').count(),PREPARED_UPDATES.length);assert.deepEqual(await p.locator('.updates-prepared-entry').evaluateAll(entries=>entries.map(e=>e.getAttribute('data-update-id'))),PREPARED_UPDATES.map(entry=>entry.id),'every prepared entry retains its exact identity and order');
-   assert.equal(await p.locator('.updates-prepared-entry time,.updates-prepared-entry a').count(),0,'unavailable work has no invented date or feature launch link');
-   await p.locator('.updates-prepared').screenshot({path:shots+'/updates-prepared-'+width+'.png',animations:'disabled'});await p.locator('.updates-prepared>summary').click();}
-   await p.locator('.updates-archive>summary').click();await homeTextGeometry(p);await p.locator('.updates-timeline>li').last().getByText('6. Oktober 2026',{exact:true}).waitFor();await p.locator('.updates-timeline>li').last().screenshot({path:shots+'/updates-first-release-'+width+'.png',animations:'disabled'});await p.screenshot({path:shots+'/updates-archive-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.locator('.updates-provenance>summary').click();await homeTextGeometry(p);
-   // Real disclosure controls expose bounded changes and the family benefit.
-   for(const entry of publicUpdates()){
-    const item=p.locator('.updates-timeline>li[data-update-id="'+entry.id+'"]');
-    assert.equal(await item.locator('.updates-category').evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=14),true,'category remains readable '+entry.id);
-    const disclosure=item.locator('.updates-details');
-    await disclosure.locator('summary').click();
-    assert.equal(await disclosure.evaluate(el=>el.open),true,'native disclosure opens '+entry.id);
-    assert.equal(await disclosure.locator('ul>li').count(),entry.details.length,'all concrete changes readable');
-    assert.equal(await disclosure.locator('.updates-benefit').innerText(),'Das bringt es euch\n'+entry.benefit);
-    assert.equal(await disclosure.locator('summary').evaluate(el=>{
-     const text=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim()),range=document.createRange();range.selectNodeContents(text);
-     const line=[...range.getClientRects()].at(-1),count=el.querySelector('.updates-count').getBoundingClientRect();
-     return count.top<line.bottom&&count.bottom>line.top;
-    }),true,'detail count stays with its label, without an orphan line '+entry.id);
-   }
-   await homeTextGeometry(p);await homeTouchTargets(p);
-   for(const id of ['first-visit-home','science-articles','site-v14','site-v12','site-v8','site-v1']){
-    const item=p.locator('.updates-timeline>li[data-update-id="'+id+'"]');
-    console.log('CHRONICLE_CAPTURE_START',JSON.stringify({width,id}));
-    try{await item.screenshot({path:shots+'/updates-details-'+id+'-'+width+'.png',animations:'disabled'});}
-    catch(error){
-     // Preserve the failed assertion and its original timeout. Diagnose the
-     // actual failing width/entry without retrying or replacing its capture.
-     const diagnostic=await item.evaluate(el=>{const r=el.getBoundingClientRect();return {rect:{x:r.x,y:r.y,width:r.width,height:r.height},scrollY,viewport:{width:innerWidth,height:innerHeight},documentHeight:document.documentElement.scrollHeight,visibility:document.visibilityState,open:el.querySelector('details')?.open};}).catch(e=>({diagnosticError:e.message}));
-     report.chronicleCaptureFailure={width,id,...diagnostic};console.log('CHRONICLE_CAPTURE_FAILURE',JSON.stringify(report.chronicleCaptureFailure));
-     await p.screenshot({path:shots+'/updates-details-failure-'+id+'-'+width+'.png',animations:'disabled'}).catch(e=>console.log('CHRONICLE_DIAGNOSTIC_CAPTURE_FAILURE',e.message));
-     throw error;
-    }
-    console.log('CHRONICLE_CAPTURE_DONE',JSON.stringify({width,id}));
-   }
-   assert.deepEqual(await readProgress(),before,'reading all historical changes and benefits leaves learning progress untouched');
-   await p.screenshot({path:shots+'/updates-all-details-'+width+'-full.png',fullPage:true,animations:'disabled'});
-   await p.addScriptTag({path:AXE_FILE});
-   const expandedAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(expandedAxe,[],'all expanded history WCAG axe '+width);
-   const olderLink=p.locator('.updates-timeline>li').last().locator('.updates-links a').first();
-   await olderLink.scrollIntoViewIfNeeded();await p.keyboard.press('Tab');await olderLink.focus();const olderId=await olderLink.getAttribute('data-route-focus');await p.keyboard.press('Enter');await p.locator('#globe-observatory').waitFor();assert.equal(new URL(p.url()).hash,'#globe','historical globe links retain the full globe destination');
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.waitForFunction(id=>{const el=document.activeElement;if(el?.getAttribute('data-route-focus')!==id)return false;const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.matches(':focus-visible');},olderId);
-   assert.equal(await p.locator('.updates-archive').evaluate(el=>el.open),true,'Back restores expanded history archive');
-   assert.equal(await p.locator('.updates-details[open]').count(),publicUpdates().length,'Back also restores every expanded entry');
-   const olderFocus=await olderLink.evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:innerHeight,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)};});if(!(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2)){await p.screenshot({path:shots+'/updates-back-failure-'+width+'.png'});console.log('Older entry focus geometry',width,JSON.stringify(olderFocus));}assert.equal(olderFocus.top>=0&&olderFocus.bottom<=olderFocus.height&&olderFocus.visible&&olderFocus.outline>=2,true,'Back restores visible older-entry keyboard focus');
-   await p.screenshot({path:shots+'/updates-back-focus-'+width+'.png',animations:'disabled'});
-   await p.locator('.updates-links a[href="#world"]').first().click();await p.locator('.world-view').waitFor();assert.equal(new URL(p.url()).hash,'#world');
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
-   await p.goBack();await p.locator('.updates-timeline').first().waitFor();await p.goForward();await p.locator('.discovery-hero').waitFor();
+   const before=await readProgress();await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy updates title focus');
+   await p.screenshot({path:shots+'/updates-'+width+'.png',animations:'disabled'});
+   (report.historyViews??=[]).push(await neuigkeitenAnsicht(p,width,shots));
+   assert.deepEqual(await readProgress(),before,'„Was ist neu?“ lässt den Pass unverändert');
    await p.getByRole('button',{name:'Alle Welten & Lernrouten',exact:true}).click();await p.locator('.world-view').waitFor();await bereich(p,'explore').click();await p.locator('.discovery-hero').waitFor();assert.equal(new URL(p.url()).hash,'#home','active exploration tab still returns from world hub');
    // A real synthetic chapter choice creates a valid, resumable pass activity.
    await bereich(p,'journeys').click();await p.locator('.journey-tile').first().click();await p.locator('.journey-reader').waitFor();
@@ -429,15 +368,14 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});
    assert.equal(await p.locator('.gateway-compact .world-choice').first().evaluate(el=>getComputedStyle(el).transitionDuration==='0s'),true,'saved reduced motion applies');
-   await p.getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.updates-timeline').first().waitFor();
-   await p.locator('.updates-details').first().locator('summary').click();
+   await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   const frueher=p.locator('.kern-neuigkeiten details[data-history-disclosure="neuigkeiten-frueher"]');if(!await frueher.evaluate(el=>el.open))await frueher.locator(':scope > summary').click();
    await homeTextGeometry(p);await homeTouchTargets(p);
-   await p.locator('.updates-timeline>li').first().screenshot({path:shots+'/updates-details-large-'+width+'.png',animations:'disabled'});
    await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});
    // The resumable-journey path above reloads the page and clears the axe script.
-   await p.addScriptTag({path:AXE_FILE});
-   const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.update-history']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'history WCAG axe '+width);
-   await p.getByRole('link',{name:'Zur Startseite',exact:true}).click();await p.locator('.discovery-hero').waitFor();
+   await prepareAxe(p);
+   const axe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.kern-neuigkeiten']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(axe,[],'updates WCAG axe '+width);
+   await bereich(p,'explore').click();await p.locator('.discovery-hero').waitFor();
    const homeAxe=await p.evaluate(async()=>{const r=await window.axe.run({include:[['.discovery-hero'],['.kern-leiste'],['.discovery-worlds'],['.discovery-pathways'],['.continue-card']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));});assert.deepEqual(homeAxe,[],'home WCAG axe '+width);
    if(width===320){
     await p.evaluate(()=>{const save=JSON.parse(localStorage.getItem('erde-entdecken:save:v3'));save.progress.lastActivity={type:'game',id:'unknown-stale-session',family:'classic'};localStorage.setItem('erde-entdecken:save:v3',JSON.stringify(save));});await p.reload();await ready(p);assert.equal(await p.locator('.continue-card').count(),0,'stale activity without matching game never offers false resume');
@@ -445,43 +383,48 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    }
    if(width===320||width===1440){await worldFilterKeyboardFocus(p,ready,report,width);(report.categoryTimelineNavigation??=[]).push(await categoryTimelineNavigation(p));(report.guideDialogs??=[]).push(await guideDialogView(p));}
    console.log('Homepage/history viewport',width,height,'first/return/large passed');
-   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, history/back/forward, 13 Sites + independently confirmed test website updates including PR 23, separate undated prepared work, all concrete-change disclosures and family benefits, expanded long history and large-font details, read-only pass, WCAG axe');
+   report.checks.push('Homepage/history '+width+': first/return/large, exact chapter and reload, clear visible first step, touch/text geometry, focus, credits, preserved earth facts, „Was ist neu?“ with all entries, Früher, back/forward and large font, read-only pass, WCAG axe');
   }finally{await c.close();}
  }
 }
 
-// Reuse the real chronicle, native disclosures and shared text-geometry checks.
-// Chromium's complete home suite still exercises every link, state and Back path.
-export async function historyEngineView(page,width,shots,{engine='chromium',capture}={}){
+// „Was ist neu?“ in jedem Browser: alle Einträge in Reihenfolge, große Schrift, Tastatur auf „Früher“,
+// Zurück/Vor über die Leiste, axe, Pass bleibt unverändert. Aufrufe: home, engine-journeys, journey-zoom.
+export async function neuigkeitenAnsicht(page,width,shots,{engine='chromium',capture}={}){
  await page.evaluate(()=>location.hash='updates');await page.locator('#updates-title').waitFor();
- await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
- const entries=publicUpdates(),before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
- assert.deepEqual(await page.locator('.updates-timeline>li').evaluateAll(es=>es.map(e=>e.dataset.updateId)),entries.map(e=>e.id));
- const archive=page.locator('.updates-archive');if(!await archive.evaluate(el=>el.open))await archive.locator(':scope > summary').click();
- for(const entry of entries){
-  const item=page.locator('[data-update-id="'+entry.id+'"]'),d=item.locator('.updates-details');
-  if(!await d.evaluate(el=>el.open))await d.locator('summary').click();
-  assert.equal(await item.locator('.updates-category').innerText(),entry.category);
-  assert.equal(await item.locator('.updates-summary').innerText(),entry.summary);
-  assert.equal(await d.locator('li').count(),entry.details.length);
- }
- await homeTextGeometry(page);
- const first=page.locator('.updates-timeline>li').first(),last=page.locator('.updates-timeline>li').last();
- const summary=first.locator('.updates-details>summary');
+ await page.waitForFunction(()=>document.activeElement?.id==='updates-title');
+ assert.equal(await page.locator('#updates-title').evaluate(el=>getComputedStyle(el).outlineStyle),'none','Neuigkeiten '+width+': Titel ohne Fokusrahmen');
+ // Große Schrift nur für diese Prüfung; danach wie vorher.
+ const grossGesetzt=await page.evaluate(()=>{const app=document.querySelector('.earth-app');if(app.classList.contains('large-reading'))return false;app.classList.add('large-reading');return true;});
+ const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
+ const ansicht=page.locator('.kern-neuigkeiten');
+ assert.deepEqual(await ansicht.locator('li[data-neuigkeit]').evaluateAll(es=>es.map(e=>e.dataset.neuigkeit)),NEUIGKEITEN.map(e=>e.id),'Neuigkeiten '+width+': Einträge und Reihenfolge');
+ const frueher=ansicht.locator('details[data-history-disclosure="neuigkeiten-frueher"]'),summary=frueher.locator(':scope > summary');
+ if(!await frueher.evaluate(el=>el.open))await summary.click();
+ await homeTextGeometry(page);await homeTouchTargets(page);
  await summary.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
  const focus=await summary.evaluate(el=>({active:el===document.activeElement,visible:el.matches(':focus-visible'),outline:parseFloat(getComputedStyle(el).outlineWidth)}));
- if(!focus.active||!focus.visible||focus.outline<2)await page.screenshot({path:shots+'/journey-engine-'+engine+'-history-focus-failure-'+width+'.png',animations:'disabled'});
- assert.equal(focus.active&&focus.visible&&focus.outline>=2,true,'real Tab navigation gives visible keyboard focus '+JSON.stringify(focus));
- await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),false);await page.keyboard.press('Enter');assert.equal(await first.locator('.updates-details').evaluate(el=>el.open),true);
- assert.equal(await summary.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'visible keyboard focus persists when reopening the chronicle');
+ if(!focus.active||!focus.visible||focus.outline<2)await page.screenshot({path:shots+'/updates-'+engine+'-focus-failure-'+width+'.png',animations:'disabled'});
+ assert.equal(focus.active&&focus.visible&&focus.outline>=2,true,'Neuigkeiten '+width+': sichtbarer Tastaturfokus auf „Früher“ '+JSON.stringify(focus));
+ await page.keyboard.press('Enter');assert.equal(await frueher.evaluate(el=>el.open),false,'Enter klappt „Früher“ zu');
+ await page.keyboard.press('Enter');assert.equal(await frueher.evaluate(el=>el.open),true,'Enter klappt „Früher“ wieder auf');
  const captures=[];
  const take=async(name,item)=>{await item.scrollIntoViewIfNeeded();if(capture)captures.push(await capture(name));else await page.screenshot({path:shots+'/'+name,animations:'disabled'});};
- await take('journey-engine-'+engine+'-history-first-'+width+'.png',first);
- await take('journey-engine-'+engine+'-history-oldest-'+width+'.png',last);
- await page.addScriptTag({path:AXE_FILE});assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.update-history',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
- assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'chronicle does not write learning progress');
+ await take('updates-'+engine+'-'+width+'.png',ansicht.locator('li[data-neuigkeit]').first());
+ await take('updates-'+engine+'-oldest-'+width+'.png',ansicht.locator('li[data-neuigkeit]').last());
+ await prepareAxe(page);
+ assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.kern-neuigkeiten',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[],'Neuigkeiten '+width+': axe');
+ assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress),before,'„Was ist neu?“ ändert den Pass nicht');
  if(capture)assert.ok(captures[1].scrollY>captures[0].scrollY+1000,'native capture really reaches the far end of the long history');
- return {width,entries:entries.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,...(capture?{captures}:{})};
+ if(grossGesetzt)await page.evaluate(()=>document.querySelector('.earth-app').classList.remove('large-reading'));
+ // Zurück/Vor: per Tastatur über die Leiste zum Start, dann zurück. „Früher“ bleibt offen, der Fokus liegt auf „Start“.
+ const start=bereich(page,'explore');await start.focus();await page.keyboard.press('Enter');await page.locator('.discovery-hero').waitFor();
+ await page.goBack();await ansicht.waitFor();
+ assert.equal(new URL(page.url()).hash,'#updates','Zurück führt zu „Was ist neu?“');
+ await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-nav-explore');
+ assert.equal(await frueher.evaluate(el=>el.open),true,'Zurück stellt „Früher“ offen wieder her');
+ await page.goForward();await page.locator('.discovery-hero').waitFor();
+ return {width,entries:NEUIGKEITEN.map(e=>e.id),expanded:true,largeText:true,keyboard:true,axe:true,passPreserved:true,backForward:true,...(capture?{captures}:{})};
 }
 
 async function immediateHomePhotoCases(browser,base,ready,monitor,report,shots){

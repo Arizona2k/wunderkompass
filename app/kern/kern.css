@@ -237,6 +237,97 @@
 .kern-fuss .offline-learning { width: min(100%, 760px); margin-top: 0; text-align: left; }
 .kern-fuss-satz { margin: 0; font-size: 16px; }
 
+/* ---------- „Was ist neu?“ ---------- */
+/* Nunito ist höher als ihr Zeilenabstand von 1,18: Überschriften brauchen 1,36, sonst ragt die Schrift aus dem Kasten. */
+.kern-neuigkeiten {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+.kern-neuigkeiten h1 {
+  max-width: none;
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.36;
+  color: var(--kern-text);
+}
+.kern-neuigkeiten-einleitung {
+  margin: 4px 0 20px;
+  font-size: 18px;
+  color: var(--kern-text-leise);
+}
+.kern-neuigkeiten ol {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kern-neuigkeiten li {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 20px;
+  border-radius: var(--kern-rund-gross);
+  background: var(--kern-flaeche);
+  box-shadow: var(--kern-schatten);
+}
+.kern-neuigkeiten-symbol {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FDEBDD;
+  color: var(--kern-orange-text);
+}
+.kern-neuigkeiten time {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--kern-text-leise);
+}
+.kern-neuigkeiten h2 {
+  margin: 2px 0 4px;
+  font-size: 22px;
+  line-height: 1.36;
+  color: var(--kern-text);
+}
+.kern-neuigkeiten li p { font-size: 17px; color: var(--kern-text); }
+.kern-neuigkeiten-frueher { margin-top: 24px; }
+.kern-neuigkeiten-frueher > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 20px;
+  border: 2px solid var(--kern-linie);
+  border-radius: var(--kern-rund-gross);
+  background: var(--kern-flaeche);
+  color: var(--kern-petrol-dunkel);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.36;
+  list-style: none;
+  cursor: pointer;
+}
+.kern-neuigkeiten-frueher > summary::-webkit-details-marker { display: none; }
+.kern-neuigkeiten-frueher > summary:hover { border-color: var(--kern-petrol); }
+.kern-neuigkeiten-frueher[open] > summary { margin-bottom: 16px; }
+.kern-neuigkeiten-frueher[open] .kern-neuigkeiten-pfeil { transform: rotate(180deg); }
+/* Ältere Einträge sind etwas ruhiger als das Neueste oben. */
+.kern-neuigkeiten-frueher li { border: 1px solid var(--kern-linie); box-shadow: none; }
+.large-reading .kern-neuigkeiten-einleitung,
+.large-reading .kern-neuigkeiten li p { font-size: 20px; }
+.large-reading .kern-neuigkeiten time { font-size: 16px; }
+.large-reading .kern-neuigkeiten h2 { font-size: 25px; }
+.large-reading .kern-neuigkeiten-frueher > summary { font-size: 21px; }
+@media (max-width: 430px) {
+  .kern-neuigkeiten li { gap: 12px; padding: 16px; }
+}
+
 @media (forced-colors: active) {
   .kern-leiste a[aria-current="page"] { outline: 2px solid CanvasText; outline-offset: -2px; }
 }

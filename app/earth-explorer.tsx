@@ -50,7 +50,7 @@ import type { FocusTarget } from "./globe";
 import { TOPIC_ICONS } from "./learning-media";
 import { BADGES, JOURNEYS } from "./learning-overview";
 
-const UpdateHistoryView=lazy(()=>import("./update-history-view"));
+const NeuigkeitenAnsicht=lazy(()=>import("./kern/neuigkeiten-ansicht"));
 const WorldView=lazy(()=>import("./world-view"));
 const WorldGames=lazy(()=>import("./world-games"));
 const ResearchLabs=lazy(()=>import("./research-labs"));
@@ -262,7 +262,7 @@ export default function EarthExplorer(){
     <a className="skip-link" href="#learning-main" onClick={e=>{e.preventDefault();focusLearningMain();}}>Zum Entdecken</a>
     <Kopfzeile passBereit={local.ready} bereich={bereichFuerRoute(mode,routePath)} onStart={()=>navigateHash("home")} onSuche={openSearch} onPass={event=>openGuide(event,setPassport)} onBereich={goMode}/>
     <main id="learning-main" tabIndex={-1} className="learning-main">
-      {routePath==="updates"?<Suspense fallback={<LearningStatus>Die Chronik kommt gleich …</LearningStatus>}><UpdateHistoryView/></Suspense>:<>
+      {routePath==="updates"?<Suspense fallback={<LearningStatus>Die Neuigkeiten kommen gleich …</LearningStatus>}><NeuigkeitenAnsicht/></Suspense>:<>
       <div className="learning-tabs">
       {mode==="home"?<DiscoveryIntro heroId={discovery.heroId} onChange={discovery.changeHero} onHelp={openGuide} onSearch={openSearch} onGlobe={()=>goMode("globe")}/>:mode==="journeys"||(mode==="games"&&gamePanel!==null)||["globe","layers","day"].includes(mode)||(mode==="labs"&&routePath.startsWith("labs/")&&!routePath.startsWith("labs/experiment/"))?null:mode==="world"?null:<div className="page-heading"><div><p className="eyebrow"><Compass size={15}/> DEINE WISSENSWELT</p><h1>{PAGE_HEADINGS[mode]?.title??"Deine nächste Entdeckung"}</h1><p>{PAGE_HEADINGS[mode]?.text??"Entdecken, ausprobieren und verstehen – in deinem Tempo."}</p></div></div>}
       {!online&&<p className="offline-note" role="status">Du bist gerade offline. Geladene Inhalte kannst du weiter nutzen. Dein Entdeckerpass bleibt auf diesem Gerät.</p>}

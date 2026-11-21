@@ -120,7 +120,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `scripts/` | `export-content.mjs` (Exporte und Inhaltsprüfung), Größenbudget, Test-Laufzeit |
 | `tests/*.test.mjs` | Unit-Tests; `tests/fixtures/` feste Altstände für Kompatibilität (z. B. `stable-ids.json`) |
 | `tests/browser/` | Browser-Runner (`run.mjs`, `suites.mjs`, `harness.mjs`) und Suiten |
-| `content/research/`, `content/update-history-evidence.json` | Quellen und Daten, die die App liest |
+| `content/research/` | Quellen und Daten, die die App liest |
 | `docs/entwurf/` | Entwürfe und Pläne je Phase |
 | `docs/archiv/` | Originalaufträge des Nutzers und die alte AGENTS.md |
 | `STATUS.md`, `BACKLOG.md`, `VISION.md`, `CHANGELOG.md` | Stand, Aufgaben, Produktziele, Verlauf |
