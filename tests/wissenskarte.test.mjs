@@ -4,8 +4,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import hintBank from '../app/challenge-hints.json' with {type: 'json'};
+import fotos from '../app/world-photos.json' with {type: 'json'};
+import fotoIds from '../app/world-photo-ids.json' with {type: 'json'};
+import fotoKennwoerter from '../app/kern/karte/foto-kennwoerter.json' with {type: 'json'};
 import {connectionsFor} from '../app/knowledge-connections.ts';
-import {kartenFragen, ersteFrage, dazuPasst, weitereVerbindungen, hatBaustein} from '../app/kern/karte/karten-daten.ts';
+import {kartenFragen, ersteFrage, dazuPasst, weitereVerbindungen, hatBaustein, bildArt, fotoKennwort, bildnachweisListe} from '../app/kern/karte/karten-daten.ts';
 
 const karte = id => {
   const topic = catalog.find(t => t.id === id);
@@ -130,4 +133,57 @@ test('hatBaustein erkennt Tier, Erfindung, Bauwerk und Karten ohne Baustein', ()
     const alt = !!(t.animal || t.invention || t.building || t.model || t.investigation || t.id === 'science-tides');
     assert.equal(hatBaustein(t), alt, t.id);
   }
+});
+
+// Bildregel 6.3: zuerst ein freies Foto, sonst die eigene Zeichnung, sonst die Motivkachel.
+test('bildArt nimmt zuerst das Foto', () => {
+  const elefant = karte('animal-african-savanna-elephant');
+  assert.deepEqual(bildArt(elefant, true), {art: 'foto', photoId: elefant.image});
+});
+
+test('bildArt nimmt die Zeichnung vor der Motivkachel', () => {
+  assert.deepEqual(bildArt({id: 'x'}, true), {art: 'zeichnung', kennwort: 'Zeichnung'});
+  // Eine Bild-ID ohne freigegebenes Foto zählt nicht als Foto.
+  assert.deepEqual(bildArt({id: 'x', image: 'gibt-es-nicht'}, true), {art: 'zeichnung', kennwort: 'Zeichnung'});
+});
+
+test('bildArt nimmt die Motivkachel ohne Foto und Zeichnung', () => {
+  assert.deepEqual(bildArt({id: 'x'}, false), {art: 'motiv'});
+  assert.deepEqual(bildArt({id: 'x', image: 'gibt-es-nicht'}, false), {art: 'motiv'});
+});
+
+test('Jede Bild-ID im Katalog ist ein freigegebenes Foto', () => {
+  const ohneFoto = catalog.filter(t => t.image && bildArt(t, false).art !== 'foto').map(t => t.id + ' → ' + t.image);
+  assert.deepEqual(ohneFoto, []);
+});
+
+test('bildArt nennt das Kennwort des Fotos', () => {
+  // Kein Foto im Katalog heißt „KI-Bild“; spätere Bildnisse heißen dort „Darstellung“.
+  assert.equal(fotos['johannes-gutenberg'].label, 'Darstellung');
+  assert.deepEqual(bildArt({id: 'x', image: 'johannes-gutenberg'}, true), {art: 'foto', photoId: 'johannes-gutenberg', kennwort: 'Spätere Darstellung'});
+  assert.deepEqual(bildArt({id: 'x', image: 'hokusai-great-wave-jp1847'}, false), {art: 'foto', photoId: 'hokusai-great-wave-jp1847', kennwort: 'Historischer Druck'});
+  for (const label of ['KI-Bild', 'Rekonstruktion', 'Spätere Darstellung', 'Historischer Druck']) assert.equal(fotoKennwort(label), label);
+  assert.equal(fotoKennwort('Darstellung'), 'Spätere Darstellung');
+  // Gewöhnliche Fotos brauchen kein Kennwort.
+  assert.equal(fotoKennwort('Foto'), undefined);
+  assert.equal(fotoKennwort(undefined), undefined);
+});
+
+test('Kennwörter der Karte passen genau zu den Fotodaten', () => {
+  const erwartet = Object.fromEntries(Object.values(fotos).filter(f => fotoKennwort(f.label)).map(f => [f.id, fotoKennwort(f.label)]));
+  assert.deepEqual(fotoKennwoerter, erwartet, 'app/kern/karte/foto-kennwoerter.json an world-photos.json angleichen');
+});
+
+test('bildnachweisListe liefert für jedes Foto Urheber, Lizenz, Lizenz-Link und Quelle', () => {
+  assert.equal(fotoIds.length, 60);
+  const liste = bildnachweisListe(fotoIds, fotos);
+  assert.deepEqual(liste.map(n => n.photoId), fotoIds);
+  for (const n of liste) {
+    for (const feld of ['alt', 'author', 'license', 'licenseUrl', 'sourceUrl']) assert.ok(n[feld]?.trim(), n.photoId + ': ' + feld + ' fehlt');
+    assert.match(n.licenseUrl, /^https:\/\//, n.photoId);
+    assert.match(n.sourceUrl, /^https:\/\//, n.photoId);
+  }
+  // Doppelte und unbekannte IDs fallen weg; jedes Foto steht nur einmal im Block.
+  assert.deepEqual(bildnachweisListe(['lion', 'lion', 'gibt-es-nicht'], fotos).map(n => n.photoId), ['lion']);
+  assert.equal(bildnachweisListe(['lion'], fotos)[0].changes, fotos.lion.transformations_de);
 });

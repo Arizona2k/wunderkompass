@@ -1,0 +1,53 @@
+/* Neue Wissenskarte: Kartenbild, Motivkachel, Kennwort und Bildnachweis-Block.
+   Wird von den Karten-Bausteinen selbst eingebunden und liegt damit im Karten-Skript, nicht im Einstieg. */
+
+/* Weltfarben der Motivkachel: Grund, kräftiger Grund, Symbol, Titel.
+   Kontrast (WCAG): Symbol auf kräftigem Grund mindestens 4,2:1, Titel auf kräftigem Grund mindestens 6:1. */
+.kartenbild { --motiv-grund: #eaf5ef; --motiv-stark: #d3ebdd; --motiv-symbol: #286950; --motiv-text: #1f5640; }
+.kartenbild-welt-history { --motiv-grund: #fbf1e2; --motiv-stark: #f3dfc0; --motiv-symbol: #8d5928; --motiv-text: #6e4520; }
+.kartenbild-welt-people { --motiv-grund: #efedf9; --motiv-stark: #dcd7f1; --motiv-symbol: #61518a; --motiv-text: #4d4070; }
+.kartenbild-welt-inventions { --motiv-grund: #fff2df; --motiv-stark: #fbdfb5; --motiv-symbol: #935d22; --motiv-text: #74481a; }
+.kartenbild-welt-buildings { --motiv-grund: #e9f2fa; --motiv-stark: #d0e2f3; --motiv-symbol: #315e87; --motiv-text: #264b6c; }
+.kartenbild-welt-science { --motiv-grund: #e6f3f5; --motiv-stark: #cce6ea; --motiv-symbol: #286872; --motiv-text: #1f545c; }
+
+.kartenbild { position: relative; min-width: 0; border-radius: 18px; overflow: hidden; }
+.kartenbild-kachel { border-radius: 0; }
+.kartenbild > .world-photo { margin: 0; max-width: none; }
+
+.kartenbild-motiv {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
+  min-height: 260px; padding: 20px 22px;
+  background: linear-gradient(150deg, var(--motiv-stark) 0%, var(--motiv-grund) 72%);
+  color: var(--motiv-text);
+}
+.kartenbild-symbol { align-self: flex-end; width: 112px; height: 112px; color: var(--motiv-symbol); }
+.kartenbild-motiv-titel {
+  max-width: 18ch; font-size: 26px; font-weight: 800; line-height: 1.2;
+  overflow-wrap: anywhere; hyphens: auto;
+}
+.kartenbild-kachel .kartenbild-motiv { min-height: 180px; padding: 14px 16px; }
+.kartenbild-kachel .kartenbild-symbol { width: 72px; height: 72px; }
+.kartenbild-kachel .kartenbild-motiv-titel { font-size: 19px; }
+
+/* Kennwort: Kinder sollen sehen, wenn ein Bild kein Foto von heute ist. Auch auf kleinen Kacheln lesbar. */
+.kartenbild-kennwort {
+  position: absolute; top: 10px; left: 10px; max-width: calc(100% - 20px);
+  padding: 4px 11px; border-radius: 999px;
+  background: rgb(21 48 58 / 0.9); color: #fff;
+  font-size: 13px; font-weight: 700; line-height: 1.4;
+}
+
+/* Bildnachweise auf dieser Seite */
+.bildnachweise { margin: 24px 0 0; border-top: 1px solid #dae5e8; color: var(--kern-text-leise, #4a626b); font-size: 14px; line-height: 1.55; }
+.bildnachweise summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-weight: 700; color: var(--kern-text, #15303a); }
+.bildnachweise ul { display: grid; gap: 14px; margin: 4px 0 0; padding: 0; list-style: none; }
+.bildnachweise li p { margin: 0; }
+.bildnachweise .bildnachweis-motiv { color: var(--kern-text, #15303a); font-weight: 600; }
+.bildnachweise a { display: inline-block; padding: 6px 0; color: #365e73; text-decoration: underline; text-underline-offset: 3px; }
+.bildnachweise [role="status"] { padding: 6px 0 2px; }
+
+@media (max-width: 560px) {
+  .kartenbild-motiv { min-height: 200px; }
+  .kartenbild-symbol { width: 88px; height: 88px; }
+  .kartenbild-motiv-titel { font-size: 22px; }
+}

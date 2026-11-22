@@ -3,7 +3,9 @@
 // Darunter stehen schon Antworten von Kindern im Pass.
 import type {Mode} from '../../earth-data';
 import type {LocalProgress} from '../../progress-storage';
-import type {WorldQuestion, WorldTopic} from '../../world-types';
+import type {WorldPhotoData, WorldQuestion, WorldTopic} from '../../world-types';
+import FOTO_IDS from '../../world-photo-ids.json';
+import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 
 export type KartenFrage = {
   id: string;
@@ -116,4 +118,54 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
     });
   }
   return fehler;
+}
+
+// Bildregel 6.3: zuerst ein freies Foto, sonst die eigene Zeichnung, sonst die Motivkachel.
+// Die vollen Fotodaten lädt world-media.tsx erst bei Bedarf und geprüft. Für die Wahl genügen die kleine
+// ID-Liste und die Kennwörter (foto-kennwoerter.json; ein Test hält sie gleich mit world-photos.json).
+export type BildArt = {art: 'foto'; photoId: string; kennwort?: string} | {art: 'zeichnung'; kennwort: 'Zeichnung'} | {art: 'motiv'};
+
+const KENNWORT_JE_FOTO: Record<string, string> = FOTO_KENNWOERTER;
+
+export function bildArt(topic: Pick<WorldTopic, 'id' | 'image'>, hatZeichnung: boolean): BildArt {
+  if (topic.image && FOTO_IDS.includes(topic.image)) {
+    const kennwort = Object.hasOwn(KENNWORT_JE_FOTO, topic.image) ? KENNWORT_JE_FOTO[topic.image] : undefined;
+    return kennwort ? {art: 'foto', photoId: topic.image, kennwort} : {art: 'foto', photoId: topic.image};
+  }
+  if (hatZeichnung) return {art: 'zeichnung', kennwort: 'Zeichnung'};
+  return {art: 'motiv'};
+}
+
+// Was auf dem Bild stehen muss, damit Kinder es nicht für ein Foto von heute halten (Feld label in world-photos.json).
+// Im Katalog heißt ein späteres Bildnis nur „Darstellung“ (world-media.tsx zeigt es als „Spätere Darstellung“).
+const KENNWOERTER: Record<string, string> = {
+  'KI-Bild': 'KI-Bild',
+  'Rekonstruktion': 'Rekonstruktion',
+  'Spätere Darstellung': 'Spätere Darstellung',
+  'Darstellung': 'Spätere Darstellung',
+  'Historischer Druck': 'Historischer Druck',
+};
+
+export function fotoKennwort(label: string | undefined): string | undefined {
+  return label && Object.hasOwn(KENNWOERTER, label) ? KENNWOERTER[label] : undefined;
+}
+
+// alt beschreibt das Bild, damit man im Block erkennt, zu welchem Foto ein Eintrag gehört.
+export type Bildnachweis = {photoId: string; alt: string; author: string; license: string; licenseUrl: string; sourceUrl: string; changes?: string};
+
+// Ein Eintrag je Foto für „Bildnachweise auf dieser Seite“, in der Reihenfolge der Seite, ohne Doppel.
+// `fotos` sind die geladenen Fotodaten (world-media.tsx, ladeFotoDaten).
+export function bildnachweisListe(photoIds: readonly string[], fotos: Record<string, WorldPhotoData>): Bildnachweis[] {
+  return [...new Set(photoIds)].filter(id => Object.hasOwn(fotos, id)).map(id => {
+    const foto = fotos[id];
+    return {
+      photoId: id,
+      alt: foto.alt_de,
+      author: foto.author,
+      license: foto.license,
+      licenseUrl: foto.license_url,
+      sourceUrl: foto.source_page_url,
+      ...(foto.transformations_de?.trim() ? {changes: foto.transformations_de} : {}),
+    };
+  });
 }
