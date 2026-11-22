@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 const questions=JSON.parse(await fs.readFile(new URL('../../exports/content/why-questions.json',import.meta.url),'utf8'));
 const ship='Warum kann ein Schiff aus schwerem Material schwimmen?';
 const settle=page=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))));
@@ -45,5 +45,5 @@ export async function bookCommandView(browser,base,{shots=null,engine='chromium'
    }finally{release();await page.unroute('**/book-measurement-content-*.json',intercept);}
   }catch(error){error.bookCommandProof=proof;if(shots)await page.screenshot({path:shots+'/book-command-'+engine+'-'+motion+'-original-failure.png',fullPage:true}).catch(()=>{});throw error;}finally{await context.close();}
  }
- assert.equal(proof.cases.length,8);assert(browserErrorsComplete(proof));return proof;
+ assert.equal(proof.cases.length,8);assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
 }

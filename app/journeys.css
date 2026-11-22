@@ -51,3 +51,19 @@
 .large-reading .journey-reader .chapter-card>h1{font-size:clamp(34px,4vw,50px)}
 
 .journey-reader .reader-toolbar{padding-bottom:0}.journey-reader .journey-progress{margin-bottom:10px}.journey-reader .journey-mobile-outline{margin:0 0 20px}
+/* Einfach zuerst: die einfache Fassung groß, „Für Große“ und „Für Erwachsene“ als ruhige Aufklapper darunter. */
+/* Spezifischer als .chapter-card>p:not(.eyebrow) (globals.css, 1rem), sonst bliebe die einfache Fassung so klein wie der übrige Text;
+   „Größere Schrift“ setzt jeden Absatz mit !important auf 1.15rem, die einfache Fassung bleibt darüber. */
+.journey-reader .chapter-card>.chapter-starter{font-size:1.2rem;line-height:1.6;font-weight:700;max-width:60ch;margin:18px 0}
+.large-reading .journey-reader .chapter-card>.chapter-starter{font-size:1.4rem!important}
+.journey-reader .chapter-observe{max-width:70ch;margin:18px 0;padding:14px 18px;background:#f0f6f9;border-radius:12px}
+.journey-reader .chapter-observe p{margin:6px 0}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene){margin:18px 0;max-width:70ch;border-top:1px solid #d8e5e9;padding-top:6px}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene)>summary{font-weight:700;display:flex;align-items:center;list-style:none}
+/* Zeichen zum Aufklappen: Pfeil rechts, offen nach oben (die flex-Zeile hat kein eingebautes Dreieck). */
+.journey-reader :is(.chapter-gross,.chapter-erwachsene)>summary::-webkit-details-marker{display:none}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene)>summary::after{content:"";flex-shrink:0;width:10px;height:10px;margin:0 6px 5px auto;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg)}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene)[open]>summary::after{margin-bottom:-5px;transform:rotate(-135deg)}
+/* Vorlese-Knöpfe im Kapitel: Tippflächen mindestens 48 px. */
+.journey-reader .speech-button{min-height:48px}
+.journey-reader .chapter-gross>p{line-height:1.75}

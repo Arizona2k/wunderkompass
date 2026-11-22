@@ -16,6 +16,7 @@ import {offlineJourneys, prepareOfflineJourneys} from './journeys.mjs';
 import {offlinePlayground, prepareOfflinePlayground} from './playground.mjs';
 import {offlineResearch} from './research.mjs';
 import {offlineSolar} from './solar-comparison.mjs';
+import {ausprobierenAuf} from './karte-hilfen.mjs';
 import {learningTaskOfflineSemantics} from './learning-task-offline.mjs';
 import {worldGameOfflineSemantics} from './world-game-offline-semantics.mjs';
 
@@ -83,10 +84,15 @@ export async function offlineCold(ctx, {full = false} = {}) {
       const photo = page.locator('.world-photo img').first();
       await photo.waitFor();
       await photo.evaluate(async image => { await image.decode(); if (!image.naturalWidth) throw Error('Offline image missing'); });
+      // „Ausprobieren“ lädt seinen Baustein erst beim Aufklappen nach; offline muss er aus dem Vorrat kommen.
+      await page.evaluate(() => { location.hash = 'world/topic/animal-african-savanna-elephant'; });
+      await ausprobierenAuf(page, 'animal-african-savanna-elephant');
+      await page.locator('details.wissenskarte-ausprobieren .animal-measure').waitFor();
       await page.evaluate(() => { location.hash = 'world/topic/science-energy'; });
+      await ausprobierenAuf(page, 'science-energy');
       await page.locator('.model-energy').waitFor();
       await page.getByRole('button', {name: 'Einen Zeitschritt testen', exact: true}).click();
-      report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo and energy model work');
+      report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo, „Ausprobieren“ on two cards and energy model work');
 
       if (full) {
         await offlineSolar(page, report);

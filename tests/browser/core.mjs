@@ -10,11 +10,14 @@ import {discoveryCentral} from './discovery-central.mjs';
 import {passDesign} from './pass-atlas.mjs';
 import {memoryRound, searchAndHistory} from './portable-flows.mjs';
 import {bereich} from './harness.mjs';
+import {ausprobieren} from './karte-hilfen.mjs';
+import KATALOG from '../../app/world-catalog.json' with {type: 'json'};
 
 const VIEWS = [[1440, 900], [768, 1024], [390, 844], [360, 800]];
 const TOPICS = ['animal-polar-bear', 'history-maya', 'person-grace_hopper', 'invention-car', 'building-taj-mahal', 'science-energy'];
 const HUBS = [['journeys', '.journey-tile'], ['games', '.game-tile'], ['labs', '.research-grid'], ['book', '.word-card']];
 const SAVE_KEY = 'erde-entdecken:save:v3';
+const ENERGIE_TITEL = KATALOG.find(t => t.id === 'science-energy').title;
 
 export async function core({browser, base, ready, monitor, report, shots}) {
   for (const [width, height] of VIEWS) {
@@ -31,10 +34,12 @@ export async function core({browser, base, ready, monitor, report, shots}) {
       assert.equal(await p.title(), 'WunderKompass · Die große Abenteuerwelt des Wissens');
 
       const inspect = async name => {
-        assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2), false, name);
-        for (const image of await p.locator('.world-article img').all()) {
-          await image.evaluate(async element => { await element.decode(); if (!element.naturalWidth) throw Error('Undecoded image'); });
+        assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 2), false, name);
+        // Kachelbilder laden erst beim Hinscrollen (loading=lazy).
+        for (const image of await p.locator('.wissenskarte img').all()) {
+          await image.evaluate(async element => { element.scrollIntoView({block: 'nearest'}); await element.decode(); if (!element.naturalWidth) throw Error('Undecoded image'); });
         }
+        await p.evaluate(() => scrollTo(0, 0));
         report.views.push({width, height, name});
       };
       await inspect('dedicated-globe');
@@ -52,7 +57,7 @@ export async function core({browser, base, ready, monitor, report, shots}) {
       if (width === 1440) {
         await p.evaluate(() => { location.hash = 'world/topic/animal-polar-bear'; });
         await p.locator('.world-mini-question').waitFor();
-        await p.getByRole('button', {name: 'Das interessiert mich!', exact: true}).click();
+        await p.getByRole('button', {name: 'Merken', exact: true}).click();
         await p.waitForFunction(key => JSON.parse(localStorage.getItem(key))?.progress.favorites.includes('topic:animal-polar-bear'), SAVE_KEY);
         await p.reload();
         await ready(p);
@@ -68,6 +73,9 @@ export async function core({browser, base, ready, monitor, report, shots}) {
 
       await connectedDiscoveries(p, ready, report, width);
       await p.evaluate(() => { location.hash = 'world/topic/science-energy'; });
+      // Das Energiemodell liegt in „Ausprobieren“.
+      await p.locator('#world-topic-title[aria-label="' + ENERGIE_TITEL + '"]').waitFor();
+      await ausprobieren(p);
       await p.locator('.model-energy').waitFor();
       await p.screenshot({path: path.join(shots, 'portable-' + width + '.png')});
     } finally {

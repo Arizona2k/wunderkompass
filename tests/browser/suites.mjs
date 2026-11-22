@@ -27,6 +27,9 @@ import {researchTransferFlow} from './research-transfer.mjs';
 import {retainedAnswerWordingFlow} from './retained-answer-wording.mjs';
 import {solarFlow} from './solar-comparison.mjs';
 import {kernHuelle} from './kern-huelle.mjs';
+import {wissenskarte} from './wissenskarte.mjs';
+import {reiseKapitel} from './reise-kapitel.mjs';
+import {passSpielstaende} from './pass-spielstaende.mjs';
 
 // Ältere Abläufe erwarten (browser, base, ready, monitor, report, shots).
 const flow = fn => ({browser, base, ready, monitor, report, shots}) => fn(browser, base, ready, monitor, report, shots);
@@ -41,6 +44,8 @@ export const SUITES = [
   {name: 'no-news', set: 'ci', run: flow(newsRemovalFlow)},
   // backup prüft darin auch storage-feedback, book-notes und model-import-integrity.
   {name: 'backup', set: 'ci', run: flow(backupFlow)},
+  // Ein voller Pass mit über 256 Spielständen verliert beim Import, Neuladen und Sichern nichts (BACKLOG 18).
+  {name: 'pass-spielstaende', set: 'ci', run: passSpielstaende},
   {name: 'animal-game-saves', set: 'ci', run: flow(retainedAnimalRounds)},
   {name: 'habitat-answer-semantics', set: 'ci', run: flow(habitatAnswerSemantics)},
   {name: 'retained-answer-wording', set: 'ci', run: flow(retainedAnswerWordingFlow)},
@@ -59,10 +64,14 @@ export const SUITES = [
     });
   }},
   {name: 'kern-huelle', set: 'ci', run: kernHuelle},
+  {name: 'wissenskarte', set: 'ci', run: wissenskarte},
+  // Lernreisen: einfach zuerst (starter, fact, observe offen; langer Text unter „Für Große“).
+  {name: 'reise-kapitel', set: 'ci', run: reiseKapitel},
   {name: 'people-learning', set: 'ci', run: ({browser, base, ready, report, shots}) => peopleLegacyRound(browser, base, ready, report, shots)},
+  // Tempo (Ladegröße je Bereich, Layout-Rutschen): schon im PR, damit zu große Seiten früh auffallen. Misst nur Chromium.
+  {name: 'performance', set: 'ci', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},
 
   // FULL: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
-  {name: 'performance', set: 'full', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},
   {name: 'components', set: 'full', chromiumOnly: true, run: flow(componentFlow)},
   {name: 'offline-resilience', set: 'full', solo: true, run: async ({browser, shots, engine, report}) => {
     report.offlineResilience = await offlineResilience(browser, {port: await freePort(), shots, kind: engine});
@@ -73,9 +82,11 @@ export const SUITES = [
   {name: 'home', set: 'full', chromiumOnly: true, run: flow(homepageOverview)},
   {name: 'home-visits', set: 'full', chromiumOnly: true, run: flow(discoveryVisitCases)},
   {name: 'core', set: 'full', chromiumOnly: true, run: core},
+  // Das Modell lädt erst mit „Ausprobieren“ (exerciseSolar öffnet es). Vorher darauf zu warten, lief in Firefox
+  // und WebKit in die Zeitgrenze (CI-Lauf 249); darum gilt in jeder Engine dasselbe ready.
   {name: 'solar-labels', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
     ? solarFlow(browser, base, ready, monitor, report, shots)
-    : solarFlow(browser, base, page => page.locator('.model-solar-system').waitFor(), monitor, report, shots, {widths: ENGINE_WIDTHS})},
+    : solarFlow(browser, base, ready, monitor, report, shots, {widths: ENGINE_WIDTHS})},
   {name: 'animals', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
     ? animalFlow(browser, base, ready, monitor, report, shots)
     : animalFlow(browser, base, ready, monitor, report, shots, {matrix: ENGINE_WIDTHS})},

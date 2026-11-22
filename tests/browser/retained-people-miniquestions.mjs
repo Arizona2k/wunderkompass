@@ -4,10 +4,10 @@ const saveKey='erde-entdecken:save:v3';
 export async function retainedPeopleMiniQuestion(page,topic){
  const {id,question:q,questionFeedback:f}=topic;assert(q&&f&&f.wrongReasons.length===3);
  const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,saveKey);
- const mini=page.locator('.world-mini-question');await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+ const mini=page.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();
  const answerButton=word=>mini.locator('.quiz-answer').filter({has:page.getByText(word,{exact:true})});
  const original=await saved(),current=original.gameSessions['topic:'+id]?.topicAnswer;
- if(current!==null&&current!==undefined){if(!await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await answerButton(q.answers[q.correct]).click();await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();}
+ if(current!==null&&current!==undefined){if(!await mini.getByRole('button',{name:'Noch einmal raten',exact:true}).count())await answerButton(q.answers[q.correct]).click();await mini.getByRole('button',{name:'Noch einmal raten',exact:true}).click();}
  const hint=mini.locator('.world-game-hint');assert.equal(await hint.evaluate(el=>el.open),false);await hint.locator(':scope>summary').click();await hint.getByText(f.hint,{exact:true}).waitFor();assert(!f.hint.includes(q.answers[q.correct]),'individual hint does not recite the whole correct answer');
  const reviewKey='world-question:'+id,priorSeen=(await saved()).review[reviewKey]?.seen??0,wrong=[];
  for(const[index,word]of q.answers.entries())if(index!==q.correct){
@@ -18,10 +18,10 @@ export async function retainedPeopleMiniQuestion(page,topic){
  const correct=answerButton(q.answers[q.correct]);await correct.focus();await page.keyboard.press('Enter');await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
  await page.waitForFunction(({id,word,saveKey})=>JSON.parse(localStorage.getItem(saveKey)).progress.gameSessions['topic:'+id]?.topicAnswer===word,{id,word:q.answers[q.correct],saveKey});
  assert.equal(await mini.locator('.quiz-answer:not([disabled])').count(),0);assert.equal((await saved()).review[reviewKey].seen,priorSeen+1);
- const geometry=await mini.evaluate(root=>({width:innerWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
+ const geometry=await mini.evaluate(root=>({width:document.documentElement.clientWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
  assert(geometry.pageWidth<=geometry.width+2);assert(geometry.buttons.every(b=>b.left>=-1&&b.right<=geometry.width+1&&b.width>=43.9&&b.height>=43.9));
  const axeWasAvailable=await page.evaluate(()=>typeof window.axe?.run==='function');
- await page.reload();await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
+ await page.reload();await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
  if(axeWasAvailable)await page.addScriptTag({path:AXE_FILE});
  const after=await saved();assert.equal(after.review[reviewKey].seen,priorSeen+1);assert.equal(after.gameSessions['topic:'+id].topicAnswer,q.answers[q.correct]);
  for(const field of ['notes','favorites','favoritePlaces','settings','games','missions','labs','experiments','quizSession','quizResults','journeys','chapters','completedChapters'])assert.deepEqual(after[field],original[field],field+' whole preserved during intentional mini-question');

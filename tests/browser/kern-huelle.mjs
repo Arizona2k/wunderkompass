@@ -428,7 +428,7 @@ async function buchLeisteBleibtRuhig(page, width) {
   const vorher = await buchLeiste.getAttribute('data-strip-overflow');
   for (let runde = 0; runde < 2; runde++) {
     await page.evaluate(() => { location.hash = 'world/topic/science-tides'; });
-    await page.locator('.world-article').first().waitFor(WARTEN);
+    await page.locator('.wissenskarte').first().waitFor(WARTEN);
     await page.goBack();
     await buchLeiste.waitFor({state: 'visible', ...WARTEN});
     await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(ok, 100)))));

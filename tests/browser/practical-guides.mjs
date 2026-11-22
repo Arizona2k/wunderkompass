@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 export async function assertPracticalGuide(item,minimum=16){
  const data=await item.evaluate(root=>({
   open:root.open,steps:root.querySelectorAll('.experiment-steps>li').length,
-  overflow:document.documentElement.scrollWidth>innerWidth+1,
+  overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+1,
   issues:[...root.querySelectorAll('p,h3,a,button')].filter(e=>e.checkVisibility()).flatMap(e=>{
    const r=e.getBoundingClientRect(),font=parseFloat(getComputedStyle(e).fontSize),bad=[];
    const walk=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);

@@ -5,7 +5,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {bereich} from './harness.mjs';
 const budgets=JSON.parse(await fs.readFile(new URL('../../performance-budgets.json',import.meta.url),'utf8')).browser;
-const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title']];
+const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title'],['topic','world/topic/animal-african-savanna-elephant','#world-topic-title']];
+// JS budget per entry: home and the knowledge card have their own, every other area shares one.
+const jsBudget=name=>name==='home'?budgets.homeJsBytes:name==='topic'?budgets.topicJsBytes:budgets.areaJsBytes;
 
 export async function performanceFlow(browser,base,ready,monitor,report){
  report.performance={method:'Production preview, fresh Chromium context, 390×844, reduced motion, no throttling. Pass ready + actual area control + 1200 ms observation. Three samples per area. Synthetic lab metrics, not field Core Web Vitals or a device guarantee.',budgets,samples:[]};
@@ -23,19 +25,19 @@ export async function performanceFlow(browser,base,ready,monitor,report){
    if(['home','world','updates','journeys'].includes(name)){assert.ok(!metrics.resources.some(r=>/(book-core|book-study|book-search|journey-content)-.*\.json$/.test(r.file)),name+' does not eagerly load learning text payloads');}
    if(['home','world','updates','journeys'].includes(name))assert.ok(!metrics.resources.some(r=>/world-content-(animals|history|people|inventions|buildings|science)-.*\.json$/.test(r.file)),name+' does not eagerly load full card data');
    if(['home','world','updates'].includes(name))assert.equal(metrics.geometry,false,name+' does not need country polygons');
-   assert.ok(metrics.jsBytes<=(name==='home'?budgets.homeJsBytes:budgets.areaJsBytes),name+' initial JS budget');
+   assert.ok(Number.isFinite(jsBudget(name)),name+' has no JS budget in performance-budgets.json');assert.ok(metrics.jsBytes<=jsBudget(name),name+' initial JS budget: '+metrics.jsBytes);
    assert.ok(metrics.cls<=(name==='home'?budgets.homeCls:budgets.areaCls),name+' layout shift budget: '+metrics.cls);
    assert.ok(readyMs<=budgets.readyMs,name+' ready-time budget');assert.ok(metrics.lcp>0&&metrics.lcp<=budgets.lcpMs,name+' observed LCP budget');
    assert.equal(metrics.scrollY,0,name+' direct entry must not steal scroll');
    if(name==='home'&&sample===0){await p.getByRole('button',{name:'Direkt zur Weltkugel',exact:true}).click();await p.locator('.globe-render canvas,.fallback-globe svg').first().waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/\/globe-/.test(r.name))),'globe loads after real user demand');}
-   if(name==='world'&&sample===0){assert.ok(!metrics.resources.some(r=>/world-reader-|world-topic-/.test(r.file)),'overview does not load article catalog/model renderer');await p.getByRole('button',{name:/Die Tierwelt/}).first().click();await p.locator('.world-topic-tile').first().click();await p.locator('#world-topic-title').waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/world-reader-/.test(r.name))),'full reader loads for an actual card');await p.goBack();await p.locator('.world-topic-tile').first().waitFor();}
+   if(name==='world'&&sample===0){assert.ok(!metrics.resources.some(r=>/world-reader-|bausteine-/.test(r.file)),'overview does not load article catalog/model renderer');await p.getByRole('button',{name:/Die Tierwelt/}).first().click();await p.locator('.world-topic-tile').first().click();await p.locator('#world-topic-title').waitFor();assert.ok(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>/world-reader-/.test(r.name))),'full reader loads for an actual card');await p.goBack();await p.locator('.world-topic-tile').first().waitFor();}
   }finally{await c.close();}
  }
- report.checks.push('Performance budgets across all seven entry areas: three fresh samples, no eager 3D/geodata/reader where unnecessary, bounded JS/LCP/CLS/readiness, real delayed globe/card demand and Back');
+ report.checks.push('Performance budgets across all seven entry areas and a direct knowledge card: three fresh samples, no eager 3D/geodata/reader where unnecessary, bounded JS/LCP/CLS/readiness, real delayed globe/card demand and Back');
 }
 
 async function contracts(p){
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'responsive shell overflow');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'responsive shell overflow');
  const data=await p.locator('[data-learning-component=grid]:visible').evaluateAll(grids=>grids.map(g=>{const style=getComputedStyle(g),cards=[...g.children].filter(c=>c.getClientRects().length).map(c=>{const r=c.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,overflow:c.scrollWidth>c.clientWidth+2};});return {gap:parseFloat(style.gap),display:style.display,cards};}));
  for(const grid of data){assert.equal(grid.display,'grid');assert.ok(grid.gap>=12,'shared spacing contract');for(const card of grid.cards){assert.ok(card.w>=44&&card.h>=44);assert.equal(card.overflow,false);}for(let i=0;i<grid.cards.length;i++)for(let j=i+1;j<grid.cards.length;j++){const a=grid.cards[i],b=grid.cards[j];assert.ok(a.x+a.w<=b.x+1||b.x+b.w<=a.x+1||a.y+a.h<=b.y+1||b.y+b.h<=a.y+1,'cards must not overlap');}}
  const small=await p.locator('nav[aria-label="Bereiche"] a:visible,[data-learning-component=details] summary:visible,.learning-status button:visible').evaluateAll(nodes=>nodes.filter(n=>{const r=n.getBoundingClientRect();return r.width<44||r.height<44;}).map(n=>n.textContent));assert.deepEqual(small,[],'shared 44px touch contract');
@@ -60,7 +62,7 @@ async function continuationCardGeometry(p){
  const geometry=await card.evaluate(root=>{
   const rect=e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height};},box=rect(root),action=rect(root.querySelector('button'));
   const glyphs=[...root.querySelectorAll('strong,p')].flatMap(e=>{const range=document.createRange();range.selectNodeContents(e);return[...range.getClientRects()].map(r=>({text:e.textContent,x:r.x,y:r.y,width:r.width,height:r.height}));});
-  return{box,action,glyphs,overlaps:glyphs.filter(g=>g.x<action.x+action.width&&g.x+g.width>action.x&&g.y<action.y+action.height&&g.y+g.height>action.y),outside:glyphs.filter(g=>g.x<box.x-1||g.x+g.width>box.x+box.width+1||g.y<box.y-1||g.y+g.height>box.y+box.height+1),pageOverflow:document.documentElement.scrollWidth>innerWidth+2};
+  return{box,action,glyphs,overlaps:glyphs.filter(g=>g.x<action.x+action.width&&g.x+g.width>action.x&&g.y<action.y+action.height&&g.y+g.height>action.y),outside:glyphs.filter(g=>g.x<box.x-1||g.x+g.width>box.x+box.width+1||g.y<box.y-1||g.y+g.height>box.y+box.height+1),pageOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2};
  });
  assert.deepEqual(geometry.overlaps,[],'actual continuation text glyphs must not paint behind the Fortsetzen action');assert.deepEqual(geometry.outside,[],'complete continuation title stays inside its card');assert.equal(geometry.pageOverflow,false);assert(geometry.action.width>=44&&geometry.action.height>=44,'continuation action remains a full touch target');return geometry;
 }
@@ -120,7 +122,7 @@ export async function globeCapabilityFallback(browser,base,ready,monitor,report,
   await page.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){if(kind==='webgl2')return null;return original.call(this,kind,...args);};});
   await page.goto(base+'/#globe');await ready(page);const fallback=page.locator('.fallback-globe');await fallback.locator('svg').waitFor();assert.equal(await page.locator('.globe-render canvas').count(),0);
   const before=await fallback.locator('svg').innerHTML();await fallback.focus();await page.keyboard.press('ArrowRight');await page.waitForFunction(previous=>document.querySelector('.fallback-globe svg')?.innerHTML!==previous,before);
-  await page.getByRole('button',{name:'Länder',exact:true}).click();const picker=page.getByRole('combobox',{name:'Wohin möchtest du reisen?',exact:true});await picker.fill('Deutschland');await picker.press('ArrowDown');await picker.press('Enter');await page.locator('.info-card.has-place').getByRole('heading',{name:'Deutschland',exact:true}).waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+  await page.getByRole('button',{name:'Länder',exact:true}).click();const picker=page.getByRole('combobox',{name:'Wohin möchtest du reisen?',exact:true});await picker.fill('Deutschland');await picker.press('ArrowDown');await picker.press('Enter');await page.locator('.info-card.has-place').getByRole('heading',{name:'Deutschland',exact:true}).waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
   await fallback.scrollIntoViewIfNeeded();report.globeFallbackGeometry=await fallbackGeometry(page);if(shots)await page.screenshot({path:shots+'/foundation-globe-fallback-320.png',animations:'disabled'});report.globeCapabilityFallback={webgl2Unavailable:true,existingFallbackUsed:true,keyboardRotation:true,realCountrySelection:true};report.checks.push('Unavailable WebGL2 uses the existing interactive map directly, without starting a failing3D renderer; keyboard rotation and country choice remain usable');
  }finally{await context.close();}
 }

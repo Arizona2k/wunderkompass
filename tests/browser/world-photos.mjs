@@ -16,7 +16,7 @@ export async function pendingPhotoBackFocusFlow(browser,base,ready,monitor,repor
  for(const width of widths)for(const kind of ['category','pagination']){
   const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);
   try{
-   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
+   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
    await page.addInitScript(()=>{const request=requestAnimationFrame.bind(window),cancel=cancelAnimationFrame.bind(window),held=new Map();let holding=false,id=0;window.__photoBackFrames={begin:()=>{holding=true;},pending:()=>held.size,release:()=>{holding=false;const frames=[...held.values()];held.clear();for(const callback of frames)request(callback);}};window.requestAnimationFrame=callback=>{if(!holding)return request(callback);const next=--id;held.set(next,callback);return next;};window.cancelAnimationFrame=key=>{if(key<0)held.delete(key);else cancel(key);};});
    const original=kind==='category'?'world':'world/science';await page.goto(base+'/#'+original);await ready(page);await page.locator(kind==='category'?'.world-choice':'.world-topic-tile').first().waitFor();await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    await page.evaluate(()=>window.__photoBackFrames.begin());
@@ -42,7 +42,7 @@ export async function photoCardOpenerFlow(browser,base,ready,monitor,shots,{cont
  for(const width of widths)for(const suppress of controlled?[false,true]:[false]){
   const context=providedContext??await browser.newContext({viewport:{width,height:900},hasTouch:width===320,reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let category='initial';
   try{
-   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
+   if(native){await page.setViewportSize({width:width*2,height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),2);}
    if(suppress)await page.addInitScript(()=>document.addEventListener('mousedown',event=>{if(event.target?.closest?.('[data-route-focus^="world-category-"]'))event.preventDefault();},true));
    await page.goto(base+'/#world');await ready(page);
    for(category of ['animals','history','people','buildings']){
@@ -81,7 +81,7 @@ export async function paginatedCardBackFlow(browser,base,ready,monitor,report,sh
     await card.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(topic.title,{exact:true}).waitFor();
     await page.goBack();await card.waitFor();await page.waitForFunction(key=>document.activeElement?.dataset.routeFocus===key,focus);
     assert.equal(await page.evaluate(()=>location.hash),'#'+route);assert.equal(await card.evaluate(e=>e===document.activeElement),true,'actual original card has keyboard focus after real Back');
-    assert.deepEqual(await page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus)),expected);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+    assert.deepEqual(await page.locator('.world-topic-tile').evaluateAll(es=>es.map(e=>e.dataset.routeFocus)),expected);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
     if(shots&&id==='history-bronze')await card.screenshot({path:path.join(shots,'history-bronze-page-back-'+width+'.png'),animations:'disabled'});
     cases.push({id,category:topic.category,page:number,width,largeText:width===320,expectedCardIds:expected,realKeyboardOpenAndBackFocus:true});
    }
@@ -97,7 +97,7 @@ export async function inspectCatalogPhoto(page,id){
  const photo=photos[id];assert.ok(photo,'known verified catalogue photo '+id);
  const topic=topics.find(t=>t.image===id),nature=Object.hasOwn(naturePhotoCandidates,id)&&naturePlaces.some(place=>place.id===id);
  assert.ok(topic||nature,'known actual article or Nature Book target '+id);
- const route=topic?'world/topic/'+topic.id:'book/nature/'+encodeURIComponent(id),selector=topic?'.world-article .world-photo':'.atlas-country.nature-target .nature-real-photo .world-photo';
+ const route=topic?'world/topic/'+topic.id:'book/nature/'+encodeURIComponent(id),selector=topic?'.wissenskarte .world-photo':'.atlas-country.nature-target .nature-real-photo .world-photo';
  await page.evaluate(hash=>location.hash=hash,route);
  await page.waitForFunction(({selector,src,alt})=>{const image=document.querySelector(selector+' img');return image?.getAttribute('src')===src&&image?.alt===alt;},{selector,src:photo.src,alt:photo.alt_de});
  const figure=page.locator(selector).first();await figure.locator('img').scrollIntoViewIfNeeded();await figure.locator('img').evaluate(image=>image.decode());
@@ -111,7 +111,7 @@ export async function inspectCatalogPhoto(page,id){
   const candidate=naturePhotoCandidates[id],image=figure.locator('img');assert.equal(await image.getAttribute('srcset'),candidate.srcSet);assert.equal(await image.getAttribute('sizes'),candidate.sizes);
   const actual=await image.evaluate(e=>({currentSrc:e.currentSrc,fit:getComputedStyle(e).objectFit,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,naturalWidth:e.naturalWidth,naturalHeight:e.naturalHeight}));assert.equal(actual.fit,'contain');assert(actual.naturalWidth>0&&actual.naturalHeight>0);assert(candidate.srcSet.split(',').some(part=>actual.currentSrc.endsWith(part.trim().split(' ')[0])));assert(Math.abs(actual.width/actual.height-actual.naturalWidth/actual.naturalHeight)<.01,'Nature photograph keeps its entire actual selected responsive source ratio');
  }
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,id+' overflow');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,id+' overflow');
  return figure;
 }
 
@@ -141,7 +141,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    const card=page.locator('.world-topic-tile').filter({has:page.locator('.world-photo [role=status]')}).first();
    await card.getByText('Du kannst die Wissenskarte trotzdem öffnen.',{exact:true}).waitFor();
    assert.equal(await card.locator('button,a,[tabindex]').count(),0,'failed compact photograph never nests controls inside a card');
-   await card.screenshot({path:shots+'/animal-photo-card-error-320.png'});await card.click();await page.locator('.world-article').waitFor();
+   await card.screenshot({path:shots+'/animal-photo-card-error-320.png'});await card.click();await page.locator('.wissenskarte').waitFor();
    await page.getByRole('button',{name:'Bild erneut laden',exact:true}).waitFor();
   }finally{await context.close();}
  }
@@ -152,8 +152,8 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    await page.route('**/world-photos-*.json',async route=>{requests++;if(requests===1){if(failure==='network')await route.abort('failed');else await route.fulfill({contentType:'application/json',body:'{"untrusted":true}'});}else await route.continue();});
    await page.goto(base+'#world/topic/animal-whale-shark');await ready(page);
    const retry=page.getByRole('button',{name:'Bild erneut laden',exact:true});await retry.waitFor();
-   assert.equal(await page.locator('.world-article .world-photo img[src]').count(),0,'Never render images from an unverified catalog');
-   await prepareAxe(page);assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.world-article',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+   assert.equal(await page.locator('.wissenskarte .world-photo img[src]').count(),0,'Never render images from an unverified catalog');
+   await prepareAxe(page);assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.wissenskarte',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
    await retry.focus();await page.keyboard.press('Enter');await page.waitForFunction(()=>document.activeElement?.matches('.world-photo'));
    await inspect(page,'whale-shark');assert.equal(requests,2,'Failure clears the shared pending request for a safe retry');
   }finally{await context.close();}

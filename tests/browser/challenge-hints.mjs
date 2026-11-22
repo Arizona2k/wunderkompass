@@ -110,7 +110,7 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
      }else assert.equal(await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).count(),0);
      assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge,before,q.id+' hint changed round');
      assert.equal(await room.getByText(q.why,{exact:true}).count(),0,q.id+' premature explanation');
-     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,q.id+' overflow');
+     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,q.id+' overflow');
      if(q.id==='science-gps:mini'){
       await page.screenshot({path:shots+'/challenge-hints-360.png',fullPage:true});
       await page.addScriptTag({path:AXE_FILE});

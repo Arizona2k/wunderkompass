@@ -31,6 +31,7 @@ export {journeySourceView} from './journey-sources.mjs';
 import {nativeJourneyZoom} from './journey-zoom.mjs';
 import {auditUiView} from './audit-ui.mjs';
 import {learningCorrectionsView} from './learning-corrections.mjs';
+import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -41,10 +42,10 @@ const saveKey='erde-entdecken:save:v3';
 async function open(p,id,index){await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();}
 async function reveal(p,text){const summary=p.locator('summary').filter({hasText:text});if(!await summary.evaluate(el=>el.parentElement.open))await summary.click();}
 async function geometry(p,label){
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,label+' horizontal overflow');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,label+' horizontal overflow');
  const escaped=await p.locator('.journey-reader h1,.journey-reader h2,.journey-reader h3,.journey-reader h4,.journey-reader p,.journey-reader button,.journey-reader summary,.journey-reader textarea,.journey-reader a').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))return [];
-  const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
+  const r=el.getBoundingClientRect();return r.left< -2||r.right>document.documentElement.clientWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){
@@ -182,7 +183,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
  await open(p,'water',3);await p.reload();await ready(p);await p.locator('[data-chapter-inquiry="water:3"]').waitFor();await p.evaluate(()=>location.hash='journeys/water');await p.locator('[data-chapter-inquiry="water:3"]').waitFor();
  await p.locator('.journey-levels button').nth(2).focus();await p.keyboard.press('Enter');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');
  await p.getByRole('button',{name:'Vorheriges Kapitel',exact:true}).click();await p.locator('[data-chapter-inquiry="water:2"]').waitFor();await p.goBack();await p.locator('[data-chapter-inquiry="water:3"]').waitFor();
- await p.locator('.journey-chapter-link a').click();await p.locator('.world-article').waitFor();await p.locator('.journey-topic-links a[href="#journeys/water/2"]').click();await p.locator('[data-chapter-inquiry="water:1"]').waitFor();
+ await p.locator('.journey-chapter-link a').click();await p.locator('.wissenskarte').waitFor();await mehrErfahren(p);await p.locator('.journey-topic-links a[href="#journeys/water/2"]').click();await p.locator('[data-chapter-inquiry="water:1"]').waitFor();
  for(const j of JOURNEYS){await p.evaluate(id=>location.hash='journeys/'+id+'/6',j.id);await p.getByRole('heading',{name:'Jetzt bist du der Forscher'}).waitFor();await p.locator('.chapter-card .quiz-answer').nth((j.question.correct+1)%3).click();assert.equal(await p.getByRole('button',{name:'Reisestempel sammeln',exact:true}).isEnabled(),false);assert.equal(await p.getByText(j.question.why,{exact:true}).count(),0);await p.locator('.chapter-card .quiz-answer').nth(j.question.correct).click();await p.getByRole('button',{name:'Reisestempel sammeln',exact:true}).click();await p.getByRole('button',{name:'Nächste Reise aussuchen',exact:true}).waitFor();}
  await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.journeys.length===16,saveKey);await p.reload();await ready(p);
  const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)),saveKey);assert.equal(saved.progress.journeys.length,16);assert.equal(Object.keys(saved.progress.gameSessions).filter(id=>id.startsWith('journey:')).length,16);
@@ -191,7 +192,8 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
   const ctx=await browser.newContext({viewport:{width,height:width<768?844:1000},hasTouch:width<1024,reducedMotion:'reduce'}),page=await ctx.newPage();monitor(page);page.setDefaultTimeout(20000);await page.goto(base+'/#journeys/inside/1');await ready(page);
   for(const [id,index] of [['inside',0],['navigation',0],['water',2],['climate',4]]){await open(page,id,index);await geometry(page,id+' '+width);const buttons=page.locator('.journey-levels button,.journey-task .quiz-answer,.chapter-actions button');for(const control of await buttons.all()){const box=await control.boundingBox();assert.ok(box.height>=44,'touch height');}await page.screenshot({path:path.join(shots,'journey-'+id+'-'+index+'-'+width+'.png'),fullPage:true,animations:'disabled'});}
   if([320,390,768,1440].includes(width)){await axe(page,'.journey-reader');await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));await geometry(page,'large text '+width);await page.locator('.journey-levels button').nth(1).focus();await page.screenshot({path:path.join(shots,'journey-large-focus-'+width+'.png'),fullPage:true,animations:'disabled'});}
-  await page.evaluate(()=>location.hash='world/topic/science-water-cycle');await page.locator('.journey-topic-links').waitFor();
+  // Die Reise-Links stehen unter „Mehr erfahren“.
+  await page.evaluate(()=>location.hash='world/topic/science-water-cycle');await karteDa(page,'science-water-cycle');await mehrErfahren(page);await page.locator('.journey-topic-links').waitFor();
   const links=page.locator('.journey-topic-links'),waterLinks=links.locator('a[href^="#journeys/water/"]');assert.equal(await waterLinks.count(),4,'all four relevant water stations');
   const disclosure=links.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();
   const target=links.locator('a[href="#journeys/water/5"]');await target.focus();await page.keyboard.press('Enter');await page.locator('[data-chapter-inquiry="water:4"]').waitFor();
@@ -200,12 +202,12 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
   const hrefs=await links.locator('a').evaluateAll(a=>a.map(el=>el.getAttribute('href')));assert.equal(new Set(hrefs).size,hrefs.length,'unique chapter destinations');
   for(const control of await links.locator('summary,a').all()){if(await control.isVisible()){const box=await control.boundingBox();assert.ok(box.height>=44,'chapter link touch height');assert.ok(box.x>=-2&&box.x+box.width<=width+2,'chapter links within viewport');}}
   await links.screenshot({path:path.join(shots,'journey-links-'+width+'.png'),animations:'disabled'});
-  if([320,390].includes(width)){await axe(page,'.journey-topic-links');await page.reload();await ready(page);await links.waitFor();assert.equal(await disclosure.evaluate(el=>el.open),true,'Reload retains restored stations');}
+  if([320,390].includes(width)){await axe(page,'.journey-topic-links');await page.reload();await ready(page);await mehrErfahren(page);await links.waitFor();assert.equal(await disclosure.evaluate(el=>el.open),true,'Reload retains restored stations');}
   report.views.push({width,name:'journeys, open inquiries and large text'});await ctx.close();
  }
  report.checks.push('Seven journey viewport widths, readable diagrams and complete grouped article-to-chapter links; touch, Enter, Back focus, restored disclosures, reload, large text and WCAG axe');
  const broken=await browser.newContext({viewport:{width:390,height:844}}),retryPage=await broken.newPage();monitor(retryPage);let requests=0;const malformed=structuredClone(data);malformed.chapters[0].tasks[0].correct=99;await retryPage.route('**/journey-inquiries-*.json',async route=>{requests++;if(requests===1)await route.fulfill({json:malformed});else await route.continue();});
- await retryPage.goto(base+'/#journeys/water/3');await ready(retryPage);await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).waitFor();assert.equal(await retryPage.locator('.journey-inquiry').count(),0);assert.ok((await retryPage.locator('.chapter-text').innerText()).includes('Kondensation'));await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).click();await retryPage.locator('[data-chapter-inquiry="water:2"]').waitFor();assert.equal(requests,2);await broken.close();report.checks.push('Malformed chapter payload fails closed while the old reading text remains; explicit retry loads valid tasks once');
+ await retryPage.goto(base+'/#journeys/water/3');await ready(retryPage);await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).waitFor();assert.equal(await retryPage.locator('.journey-inquiry').count(),0);await retryPage.locator('details.chapter-gross > summary').click();assert.ok((await retryPage.locator('.chapter-text').innerText()).includes('Kondensation'));await retryPage.getByRole('button',{name:'Aufgaben erneut laden',exact:true}).click();await retryPage.locator('[data-chapter-inquiry="water:2"]').waitFor();assert.equal(requests,2);await broken.close();report.checks.push('Malformed chapter payload fails closed while the old reading text remains; explicit retry loads valid tasks once');
  await journeyContentFlow(browser,base,report);
  await journeyReadingFlow(browser,base,ready,monitor,report,shots);
  await journeyInquiryLoadFlow(browser,base,report,shots);
@@ -300,7 +302,7 @@ export async function journeyLearningHelpView(browser,base,ready,shots){
  catch(error){await fs.writeFile(path.join(shots,'journey-help-'+engine+'-failure-errors.json'),JSON.stringify({status:'failed',engine,...proof,failure:error.stack},null,2)+'\n');throw error;}
 }
 
-export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
+export async function offlineJourneys(p,report){await open(p,'water',2);await reveal(p.locator('.journey-inquiry'),'Dein Forschermerkzettel · freiwillig');assert.equal(await p.locator('.journey-inquiry textarea').inputValue(),'Offline-Sicherung: Wasser kann seinen Zustand ändern.');assert.equal(await p.locator('.journey-levels button').nth(2).getAttribute('aria-pressed'),'true');for(const j of JOURNEYS){await open(p,j.id,4);assert.equal(await p.locator('.journey-task .quiz-answer').count(),3);}await p.evaluate(()=>location.hash='world/topic/science-water-cycle');await karteDa(p,'science-water-cycle');await mehrErfahren(p);await p.locator('.journey-topic-links').waitFor();const disclosure=p.locator('details[data-history-disclosure="journey-links-science-water-cycle-water"]');await disclosure.locator('summary').click();await p.locator('.journey-topic-links a[href="#journeys/water/5"]').click();await p.locator('[data-chapter-inquiry="water:4"]').waitFor();report.checks.push('Cold restart without server: complete reciprocal chapter links and all 16 journey inquiries and private notebook/level restore from the same schema-3 pass');}
 
 export async function assertWaterWeatherDiagram(visual,id,selected){
  if(!['water:1','water:2','water:3','water:4','weather:1','weather:2','weather:3','weather:4'].includes(id))return;

@@ -1,46 +1,35 @@
-/* Existing specialist tools share the article's reading surface and type. */
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story){min-width:0;color:var(--wk-ink)}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(p,li,label,summary,button,select,figcaption,small){font-size:16px;line-height:1.7}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .small-note{font-size:16px!important}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .eyebrow{font-size:13px;line-height:1.5}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .speech-button{font-size:16px!important}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(button,summary,select){min-height:48px;white-space:normal}
-.article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) h4{font-size:20px;line-height:1.5;margin:18px 0 12px}
-.article-atlas .people-evidence-figure{padding:0;border:0;border-radius:0;background:transparent}
-.article-atlas .people-evidence :is(.people-evidence-levels button,.people-evidence-example){text-align:left}
-.article-atlas .people-evidence-example{margin:16px 0;padding:16px 0;background:transparent}
-.article-atlas .science-thinking-example{padding:16px 0;border-inline:0;border-block:1px solid var(--wk-line);background:transparent;margin:16px 0}
-.article-atlas .animal-inquiry{border:0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent}
-.article-atlas .animal-inquiry>summary{padding:16px 0;font-size:18px;line-height:1.5}
-.article-atlas .animal-inquiry-body{padding:4px 0 20px}
-.article-atlas .animal-inquiry-levels button{padding:12px;text-align:left}
-.article-atlas .structure-model{padding:0;background:transparent}
-.article-atlas .invention-blueprint{padding:0;background:transparent;gap:24px}
-.article-atlas .blueprint-center{padding:0}
-.article-atlas .invention-story .story-panel{min-height:0;margin-bottom:24px;padding:16px 0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent}
-.article-atlas .invention-story .story-stations button{display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left;line-height:1.5}
-.article-atlas .invention-story .story-stations button>.story-step-label{display:block;place-items:normal;width:auto;height:auto;border-radius:0;background:transparent;font:inherit}
-.article-atlas .invention-story .story-stations button>span:not(.story-step-label){font-size:16px}
-.article-atlas .invention-story .part-explanation>span{font-size:16px;line-height:1.7}
-.article-atlas .invention-story[data-walkthrough] .blueprint-center small{font-size:16px;line-height:1.7}
-.article-atlas .contribution-flow p{font-size:16px;line-height:1.7}
-.article-atlas .blueprint-svg .part-hotspot text{font-size:28px;dominant-baseline:central}
-.article-atlas .blueprint-svg .part-hotspot circle{r:26px}
-.large-reading .article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story,.contribution-flow) :is(p,li,label,summary,button,select,figcaption,small,h4,span,strong,dt,dd,.small-note,.speech-button){font-size:20px!important;line-height:1.7}
-.large-reading .article-atlas :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) h3{font-size:26px!important;line-height:1.35}
-@media(max-width:700px){.article-atlas .invention-blueprint{grid-template-columns:minmax(0,1fr)}.article-atlas .blueprint-svg .part-hotspot text{font-size:36px}.article-atlas .blueprint-svg .part-hotspot circle{r:28px}.article-atlas .building-diagram [data-building-marker] text{font-size:36px;dominant-baseline:central}.article-atlas .building-diagram [data-building-marker] circle{r:28px}.large-reading .article-atlas .blueprint-svg .part-hotspot text,.large-reading .article-atlas .building-diagram [data-building-marker] text{font-size:44px}.article-atlas .invention-story .story-stations{grid-template-columns:minmax(0,1fr)}.article-atlas .invention-story .story-stations button{min-height:48px}}
-
-.photosynthesis-concept-drawing{display:grid;gap:1rem;min-width:0}
-.photosynthesis-concept-drawing>svg{display:block;width:100%;max-width:26rem;height:auto;margin-inline:auto}
-.photosynthesis-concept-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0;padding-block:1rem;border-block:1px solid #b8cfd1}
-.photosynthesis-concept-roles dt{font-weight:700;color:#193e4c}
-.photosynthesis-concept-roles dd{margin:.35rem 0 0;color:#264b46;line-height:1.65;overflow-wrap:anywhere}
-.photosynthesis-concept-key{margin:0;line-height:1.65;color:#264b46;overflow-wrap:anywhere}
-@media(max-width:640px){.photosynthesis-concept-roles{grid-template-columns:minmax(0,1fr)}}
-
-.photosynthesis-concept-section{margin-block:1.75rem}
-.photosynthesis-concept-section h4{font-size:1.125rem;line-height:1.5;margin:0 0 1rem}
-.photosynthesis-concept-section figure{margin:0}
-.photosynthesis-concept-section figcaption{margin-top:1rem;font-size:1rem;line-height:1.6;color:#264b46}
-
-.world-mini-question .retained-mini-choice{overflow-wrap:anywhere}
+/* Mitmach-Bausteine und Belege: lesbare Schrift und ruhige Flächen in „Ausprobieren“ der Wissenskarte.
+   Eingebunden von app/kern/karte/bausteine.tsx, lädt also erst mit den Bausteinen. */
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story){min-width:0;color:var(--wk-ink)}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(p,li,label,summary,button,select,figcaption,small){font-size:16px;line-height:1.7}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .small-note{font-size:16px!important}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .eyebrow{font-size:13px;line-height:1.5}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .speech-button{font-size:16px!important}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(button,summary,select){min-height:48px;white-space:normal}
+.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) h4{font-size:20px;line-height:1.5;margin:18px 0 12px}
+/* Unter „Ausprobieren“ rahmt schon der Aufklapper; kein zweiter Kasten, damit Zeichnungen auf 320 px breit genug bleiben. */
+.wissenskarte-ausprobieren .people-evidence{margin:0;padding:0;border:0;border-radius:0;background:transparent}
+.wissenskarte-ausprobieren .people-evidence-figure{padding:0;border:0;border-radius:0;background:transparent}
+/* Handy: Personen-Zeichnungen, Baupläne der Erfindungen und Bauwerk-Zeichnungen reichen bis an den Rahmen von „Ausprobieren“ (dessen Rand ist 12 px), damit ihre Beschriftung und Ziffern auf 320 px mindestens 16 px (große Schrift 20 px) groß bleiben. */
+@media (max-width:560px){.wissenskarte-ausprobieren .people-evidence-figure>svg,.wissenskarte-ausprobieren .building-diagram>svg,.wissenskarte-ausprobieren .invention-story .blueprint-center>svg.blueprint-svg{width:calc(100% + 24px);max-width:none;margin-inline:-12px}}
+.wissenskarte-ausprobieren .people-evidence :is(.people-evidence-levels button,.people-evidence-example){text-align:left}
+.wissenskarte-ausprobieren .people-evidence-example{margin:16px 0;padding:16px 0;background:transparent}
+.wissenskarte-ausprobieren .science-thinking-example{padding:16px 0;border-inline:0;border-block:1px solid var(--wk-line);background:transparent;margin:16px 0}
+.wissenskarte-ausprobieren .animal-inquiry{border:0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent}
+.wissenskarte-ausprobieren .animal-inquiry>summary{padding:16px 0;font-size:18px;line-height:1.5}
+.wissenskarte-ausprobieren .animal-inquiry-body{padding:4px 0 20px}
+.wissenskarte-ausprobieren .animal-inquiry-levels button{padding:12px;text-align:left}
+.wissenskarte-ausprobieren .structure-model{padding:0;border:0;border-radius:0;background:transparent}
+.wissenskarte-ausprobieren .invention-blueprint{padding:0;background:transparent;gap:24px}
+.wissenskarte-ausprobieren .blueprint-center{padding:0}
+.wissenskarte-ausprobieren .invention-story .story-panel{min-height:0;margin-bottom:24px;padding:16px 0;border-block:1px solid var(--wk-line);border-radius:0;background:transparent}
+.wissenskarte-ausprobieren .invention-story .story-stations button{display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left;line-height:1.5}
+.wissenskarte-ausprobieren .invention-story .story-stations button>.story-step-label{display:block;place-items:normal;width:auto;height:auto;border-radius:0;background:transparent;font:inherit}
+.wissenskarte-ausprobieren .invention-story .story-stations button>span:not(.story-step-label){font-size:16px}
+.wissenskarte-ausprobieren .invention-story .part-explanation>span{font-size:16px;line-height:1.7}
+.wissenskarte-ausprobieren .invention-story[data-walkthrough] .blueprint-center small{font-size:16px;line-height:1.7}
+.wissenskarte-ausprobieren .blueprint-svg .part-hotspot text{font-size:28px;dominant-baseline:central}
+.wissenskarte-ausprobieren .blueprint-svg .part-hotspot circle{r:26px}
+.large-reading .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story,.contribution-flow) :is(p,li,label,summary,button,select,figcaption,small,h4,span,strong,dt,dd,.small-note,.speech-button){font-size:20px!important;line-height:1.7}
+.large-reading .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) h3{font-size:26px!important;line-height:1.35}
+@media(max-width:700px){.wissenskarte-ausprobieren .invention-blueprint{grid-template-columns:minmax(0,1fr)}.wissenskarte-ausprobieren .blueprint-svg .part-hotspot text{font-size:36px}.wissenskarte-ausprobieren .blueprint-svg .part-hotspot circle{r:28px}.wissenskarte-ausprobieren .building-diagram [data-building-marker] text{font-size:36px;dominant-baseline:central}.wissenskarte-ausprobieren .building-diagram [data-building-marker] circle{r:28px}.large-reading .wissenskarte-ausprobieren .blueprint-svg .part-hotspot text,.large-reading .wissenskarte-ausprobieren .building-diagram [data-building-marker] text{font-size:44px}.wissenskarte-ausprobieren .invention-story .story-stations{grid-template-columns:minmax(0,1fr)}.wissenskarte-ausprobieren .invention-story .story-stations button{min-height:48px}}

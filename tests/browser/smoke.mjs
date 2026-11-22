@@ -31,7 +31,7 @@ export async function smoke(ctx) {
       await assertNoOverflow(page, `Karte ${width}`);
       await screenshot('karte');
 
-      await page.getByRole('button', {name: 'Das interessiert mich!', exact: true}).click();
+      await page.getByRole('button', {name:'Merken', exact: true}).click();
       const saved = ([key, id]) => (JSON.parse(localStorage.getItem(key) ?? 'null')?.progress?.favorites ?? []).includes(id);
       await page.waitForFunction(saved, [SAVE_KEY, 'topic:' + TOPIC], {polling: 100});
       await page.reload();
@@ -56,8 +56,9 @@ function openHash(page, hash) {
 }
 
 async function assertNoOverflow(page, label) {
-  const {scrollWidth, innerWidth} = await page.evaluate(() => ({scrollWidth: document.documentElement.scrollWidth, innerWidth}));
-  assert.ok(scrollWidth <= innerWidth + 2, `${label}: waagerechter Überlauf (${scrollWidth} px bei ${innerWidth} px Breite)`);
+  // clientWidth statt innerWidth: Chromium im Handy-Modus vergrößert innerWidth mit dem Überlauf.
+  const {scrollWidth, clientWidth} = await page.evaluate(() => ({scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth}));
+  assert.ok(scrollWidth <= clientWidth + 2, `${label}: waagerechter Überlauf (${scrollWidth} px bei ${clientWidth} px Breite)`);
 }
 
 function favorites(page) {

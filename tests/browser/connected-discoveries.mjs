@@ -1,4 +1,5 @@
 import {AXE_FILE} from './axe-loader.mjs';
+import {ausprobierenAuf,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import assert from 'node:assert/strict';
 import {bookNormalizationView} from './book-normalization.mjs';
@@ -28,20 +29,21 @@ export async function connectedDiscoveries(page,ready,report,width){
   await page.evaluate(id=>location.hash='world/topic/'+id,t.id);
   await page.getByRole('heading',{name:t.title,exact:true}).waitFor();
   assert.ok(await page.locator('.connection-card').count());
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,t.id+' overflow');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,t.id+' overflow');
  }
- await page.evaluate(()=>location.hash='world/topic/science-water-cycle');
+ // Die Modelle stehen unter „Ausprobieren“, die erklärten Verbindungen unter „Mehr erfahren“; beides ist nach jedem Kartenwechsel zu.
+ await page.evaluate(()=>location.hash='world/topic/science-water-cycle');await ausprobierenAuf(page,'science-water-cycle');
  for(const name of ['1. Verdunsten','2. Kondensieren','3. Niederschlag','4. Abfließen & versickern'])await page.getByRole('button',{name,exact:true}).click();
  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('model:science-water-cycle'));
- await page.evaluate(()=>location.hash='world/topic/science-moon-phases');
+ await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await ausprobierenAuf(page,'science-moon-phases');
  await page.getByRole('button',{name:'3. Vollmond',exact:true}).click();
  assert.ok(await page.locator('.moon-phase-2').count());
  await page.screenshot({path:new URL('../../.qa-output/moon-'+width+'.png',import.meta.url).pathname,fullPage:true});
- await page.reload();await ready(page);
+ await page.reload();await ready(page);await ausprobierenAuf(page,'science-moon-phases');
  await page.locator('.moon-phase-2').waitFor();
  for(const name of ['1. Neumond','2. Zunehmender Halbmond','4. Abnehmender Halbmond'])await page.getByRole('button',{name,exact:true}).click();
  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('model:science-moon-phases'));
- await page.locator('.connection-card').filter({hasText:'Mond reflektiert'}).getByRole('button').click();
+ const gezeiten=await verbindungsKnopf(page,'science-moon-phases','science-tides');assert.match(await verbindungsSatz(gezeiten),/Mond reflektiert/);await gezeiten.click();
  await page.getByRole('heading',{name:'Der Mond bewegt das Meer',exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/science');
  await page.locator('.world-topic-tile').first().waitFor();
@@ -62,7 +64,7 @@ export async function connectedDiscoveries(page,ready,report,width){
  (report.sciencePagination??=[]).push({width,pageSizes:[12,12,12,10],all46Identities:scienceSeen,backForwardRetained:true,lastNextDisabled:true});
  await page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen'}).fill('Mondphasen');
  assert.equal(await page.locator('.world-topic-tile').count(),1);
- await page.locator('.world-topic-tile').click();await page.locator('.moon-phase-3').waitFor();
+ await page.locator('.world-topic-tile').click();await ausprobierenAuf(page,'science-moon-phases');await page.locator('.moon-phase-3').waitFor();
  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
  await page.getByRole('dialog').locator('input').fill('Fotosynthese');
  await page.getByRole('option').filter({hasText:'Wie Blätter Sonnenlicht nutzen'}).first().click();
@@ -91,7 +93,7 @@ export async function connectedDiscoveries(page,ready,report,width){
     await hint.getByText(hints[q.id].steps[1],{exact:true}).waitFor();
    }
    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
    const answers=room.locator('.quiz-answer');
    if(i===0){
     await answers.filter({has:page.getByText(q.answers.find((_,j)=>j!==q.correct),{exact:true})}).click();
@@ -127,7 +129,7 @@ export async function connectedDiscoveries(page,ready,report,width){
    const route=routes.find(r=>r.id===id);
    for(let i=0;i<route.topics.length;i++){
     await page.locator('.world-mini-question').waitFor();
-    const title=await page.locator('#world-topic-title').innerText(),t=topics.find(t=>t.title===title);
+    const title=await page.locator('#world-topic-title').getAttribute('aria-label'),t=topics.find(t=>t.title===title);
     assert.equal(t.id,route.topics[i],'each retained/appended route station is actually visited in order');
     const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
     if(!await answer.isDisabled())await answer.click();

@@ -10,7 +10,8 @@ import {fetchLimitedBytes,verifiedContentJSON} from './verified-content.mjs';
 // The four gateway pictures and two journey pictures keep their full immediate credits.
 export const WORLD_PHOTOS=PHOTOS as Record<string,Photo>;
 let saved:Record<string,Photo>|null=null,pending:Promise<Record<string,Photo>>|null=null;
-function load(){
+// Lädt alle Fotodaten einmal, geprüft gegen Größe und Prüfsumme; auch für den Nachweis-Block der Wissenskarte.
+export function ladeFotoDaten(){
  if(saved)return Promise.resolve(saved);
  if(!pending)pending=(async()=>{
   const bytes=await fetchLimitedBytes(dataURL,integrity.bytes,{signal:AbortSignal.timeout(12000)});
@@ -30,7 +31,7 @@ function PhotoContent({id,compact=false,credit=true,eager=false,creditDisclosure
  const immediate=immediatePhoto?.id===id?immediatePhoto:undefined;
  const p=immediate??WORLD_PHOTOS[id]??loaded,root=useRef<HTMLElement|null>(null),retryFocus=useRef(false);
  useEffect(()=>{if(p&&retryFocus.current){retryFocus.current=false;if(document.activeElement===document.body){root.current?.setAttribute("tabindex","-1");root.current?.focus({preventScroll:true});}}},[p]);
- useEffect(()=>{if(immediate||WORLD_PHOTOS[id])return;let live=true;load().then(data=>{if(live){setLoaded(data[id]);setError(false);}}).catch(()=>{if(live)setError(true);});return()=>{live=false;};},[id,attempt,immediate]);
+ useEffect(()=>{if(immediate||WORLD_PHOTOS[id])return;let live=true;ladeFotoDaten().then(data=>{if(live){setLoaded(data[id]);setError(false);}}).catch(()=>{if(live)setError(true);});return()=>{live=false;};},[id,attempt,immediate]);
  if(!p)return <figure className={'world-photo '+(compact?'compact':'')} style={{position:'relative'}} ref={root}>
   <img alt="" aria-hidden="true" style={{visibility:'hidden'}}/>
   <div style={{position:'absolute',inset:8}} role="status">{error?<><p>Die Bildnachweise konnten nicht sicher geladen werden.</p>{compact?<span>Du kannst die Wissenskarte trotzdem öffnen.</span>:<button className="secondary-button" onClick={e=>{retryFocus.current=document.activeElement===e.currentTarget;setAttempt(n=>n+1);}}>Bild erneut laden</button>}</>:'Bildnachweise werden geladen …'}</div>

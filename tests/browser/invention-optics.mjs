@@ -2,23 +2,23 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const opticsTopics=catalog.filter(t=>['invention-camera','invention-telescope','invention-microscope'].includes(t.id));
 assert.equal(opticsTopics.length,3);
 const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope > summary').click();};
 async function geometry(page,article){
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'optical article reflow');
- const bad=await article.evaluate(root=>{const bad=[];for(const el of root.querySelectorAll('h2,h3,h4,p,summary,button,figcaption,small,.part-name,.story-step-label')){if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))continue;const r=el.getBoundingClientRect();if(r.width&&(r.left< -2||r.right>innerWidth+2||el.scrollWidth>el.clientWidth+2))bad.push(el.tagName+':'+el.textContent.slice(0,80));}return bad;});assert.deepEqual(bad,[],'visible optical text and controls fit');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'optical article reflow');
+ const bad=await article.evaluate(root=>{const bad=[];for(const el of root.querySelectorAll('h2,h3,h4,p,summary,button,figcaption,small,.part-name,.story-step-label')){if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))continue;const r=el.getBoundingClientRect();if(r.width&&(r.left< -2||r.right>document.documentElement.clientWidth+2||el.scrollWidth>el.clientWidth+2))bad.push(el.tagName+':'+el.textContent.slice(0,80));}return bad;});assert.deepEqual(bad,[],'visible optical text and controls fit');
  for(const button of await article.locator('.story-stations button,.part-button,[data-invention-experiment] button').all()){const r=await button.boundingBox();if(r)assert.ok(r.width>=44&&r.height>=44,'optical control has an actual44px touch target');}
 }
 export async function opticsSourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){
  const initial=await page.evaluate(()=>location.hash),observed=[];let complete=false;
  try{for(const t of opticsTopics){
-  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator('.article-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
+  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator(KARTE+'.wissenskarte-welt-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
   const before=await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id);
-  for(const d of await article.locator('.world-short details').all())await reveal(d);await article.locator('.world-short').getByText(t.learning.starter,{exact:true}).waitFor();await article.locator('.world-short').getByText(t.learning.observe,{exact:true}).waitFor();
-  await reveal(article.locator('.world-more'));for(const text of t.more)await article.locator('.world-more').getByText(text,{exact:true}).waitFor();await reveal(article.locator('.world-sources'));for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
-  await article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/}).focus();await page.keyboard.press('Enter');assert.equal(await article.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);
+  // Lesetexte an ihren Orten der neuen Karte; die Erfindungsgeschichte steht in „Ausprobieren“.
+  await lesetexte(article,t);await ausprobieren(article);await article.locator('.article-experiment').waitFor();
   for(let i=0;i<6;i++){const button=article.locator('.story-stations button').nth(i);await button.focus();await page.keyboard.press('Enter');assert.equal(await button.getAttribute('aria-pressed'),'true');await article.locator('.story-panel p').getByText(t.invention.stages[i].text,{exact:true}).waitFor();}
   assert.equal(await article.locator('.then-now').count(),0,'principle walkthrough is not presented as a historical reconstruction');
   if(t.id==='invention-camera'){
@@ -41,7 +41,9 @@ export async function opticsSourceView(page,{width,shots,engine='chromium',nativ
   await geometry(page,article);
   if(shots&&[320,1440].includes(width)){await article.locator('.invention-blueprint').screenshot({path:path.join(shots,'optics-'+engine+'-'+t.id+'-'+width+'.png'),animations:'disabled'});if(t.invention.model)await article.locator('[data-invention-experiment]').screenshot({path:path.join(shots,'optics-experiment-'+engine+'-'+t.id+'-'+width+'.png'),animations:'disabled'});}
   if(shots&&native){await page.bringToFront();await article.locator('.invention-blueprint').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'optics-native-'+engine+'-'+t.id+'-'+width+'.png'));}
-  for(const id of t.related){const target=catalog.find(topic=>topic.id===id);assert.ok(target);const focus='world-connection-'+t.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');await link.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(target.title,{exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+id);await page.goBack();await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);}
-  observed.push({id:t.id,width,native,readingLevels:true,sixStages:true,threeKeyboardParts:true,realModelStates:states,questionsChecked:questions,sourceLinks:true,noAutomaticLearningMark:true,relatedTargetsAndBackFocus:t.related});
+  // Nur erklärte Verbindungen haben einen Knopf; weitere liegen in „Mehr erfahren“ (nach dem Zurück wieder offen).
+  const erklaert=t.related.filter(id=>ERKLAERTE_PAARE.has(t.id+'>'+id));await mehrErfahren(article);
+  for(const id of erklaert){const target=catalog.find(topic=>topic.id===id);assert.ok(target);const focus='world-connection-'+t.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');await link.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(target.title,{exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+id);await page.goBack();await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);}
+  observed.push({id:t.id,width,native,readingLevels:true,sixStages:true,threeKeyboardParts:true,realModelStates:states,questionsChecked:questions,sourceLinks:true,noAutomaticLearningMark:true,relatedTargetsAndBackFocus:erklaert});
  }assert.equal(observed.length,3);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }

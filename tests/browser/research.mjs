@@ -10,14 +10,14 @@ const labs=JSON.parse(await fs.readFile(new URL('../../exports/content/laborator
 const experiments=JSON.parse(await fs.readFile(new URL('../../exports/content/home-experiments.json',import.meta.url),'utf8'));
 const saveKey='erde-entdecken:save:v3';
 async function geometry(p,label){
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,label+' horizontal overflow');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,label+' horizontal overflow');
  const escapedThumbs=await p.locator('.research-workbench .tilt-switch [data-slot=switch]').evaluateAll(switches=>switches.flatMap(el=>{if(!el.getClientRects().length)return [];const root=el.getBoundingClientRect(),thumb=el.querySelector('[data-slot=switch-thumb]').getBoundingClientRect();return thumb.left<root.left-1||thumb.right>root.right+1||thumb.top<root.top-1||thumb.bottom>root.bottom+1?['switch thumb escapes its actual track']:[];}));assert.deepEqual(escapedThumbs,[],label+' switch thumb stays inside the control in either state');
  const modelOverflow=await p.locator('.research-measurements').evaluateAll(sections=>sections.flatMap(el=>{if(!el.getClientRects().length)return [];const card=el.closest('.research-workbench'),c=card.getBoundingClientRect(),style=getComputedStyle(card),r=el.getBoundingClientRect(),left=c.left+parseFloat(style.paddingLeft)+parseFloat(style.borderLeftWidth),right=c.right-parseFloat(style.paddingRight)-parseFloat(style.borderRightWidth),bad=[];if(r.left<left-2||r.right>right+2)bad.push('measurement outside the padded research card');for(const control of el.querySelectorAll('button,input,svg')){const b=control.getBoundingClientRect();if(b.width&& (b.left<r.left-2||b.right>r.right+2))bad.push(control.tagName+' outside measurement');}return bad;}));assert.deepEqual(modelOverflow,[],label+' model and controls stay inside their research card');
  const clipped=await p.locator('.research-workbench h2,.research-workbench h3,.research-workbench h4,.research-workbench p,.research-workbench label,.research-workbench button,.research-workbench summary,.research-links a,.lab-search label').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))return [];
   const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),bad=[];
   while(walk.nextNode()){const node=walk.currentNode;if(!node.textContent.trim()||!node.parentElement.getClientRects().length||node.parentElement.closest('svg'))continue;
-   const range=document.createRange();range.selectNodeContents(node);for(const r of range.getClientRects())if(r.width>0&&(r.left< -2||r.right>innerWidth+2))bad.push(node.textContent.trim().slice(0,70));
+   const range=document.createRange();range.selectNodeContents(node);for(const r of range.getClientRects())if(r.width>0&&(r.left< -2||r.right>document.documentElement.clientWidth+2))bad.push(node.textContent.trim().slice(0,70));
   }return bad;
  }));assert.deepEqual(clipped,[],label+' visible text stays within viewport');
 }

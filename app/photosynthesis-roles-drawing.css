@@ -1,0 +1,9 @@
+/* Eigene Erklärzeichnung zur Fotosynthese: Zeichnung, Rollen-Legende und Schlüssel.
+   Eingebunden von der Zeichnung selbst, damit sie überall gestaltet ist, wo sie steht. */
+.photosynthesis-concept-drawing{display:grid;gap:1rem;min-width:0}
+.photosynthesis-concept-drawing>svg{display:block;width:100%;max-width:26rem;height:auto;margin-inline:auto}
+.photosynthesis-concept-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0;padding-block:1rem;border-block:1px solid #b8cfd1}
+.photosynthesis-concept-roles dt{font-weight:700;color:#193e4c}
+.photosynthesis-concept-roles dd{margin:.35rem 0 0;color:#264b46;line-height:1.65;overflow-wrap:anywhere}
+.photosynthesis-concept-key{margin:0;line-height:1.65;color:#264b46;overflow-wrap:anywhere}
+@media(max-width:640px){.photosynthesis-concept-roles{grid-template-columns:minmax(0,1fr)}}

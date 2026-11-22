@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {prepareAxe} from './axe-loader.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,ausprobierenAuf,hatAusprobieren,lesetexte,mehrErfahren,verbindungsSatz} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import thinking from '../../app/science-thinking.json' with {type:'json'};
 import connections from '../../app/world-connections.json' with {type:'json'};
@@ -18,8 +19,9 @@ export async function waterPhotosynthesisView(page,{width,shots,questions=true,n
  for(const id of ['science-water-cycle','science-photosynthesis']){
   const topic=catalog.find(t=>t.id===id);assert(topic);
   await page.evaluate(id=>location.hash='world/topic/'+id,id);
-  const article=page.locator('.world-article');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();
-  for(const detail of await article.locator('.world-short details,.world-more,.world-sources').all())if(!await detail.evaluate(e=>e.open))await detail.locator(':scope>summary').click();
+  const article=page.locator(KARTE);await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();
+  // Alle Lesetexte an ihren Orten der neuen Karte aufklappen, dazu „Ausprobieren“, falls die Karte es hat.
+  await lesetexte(article,topic);if(await hatAusprobieren(article))await ausprobieren(article);
   for(const text of [...topic.paragraphs,...topic.more])assert((await article.innerText()).includes(text),id+' complete actual authored explanation');
   for(const source of topic.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   const states=[];
@@ -36,14 +38,15 @@ export async function waterPhotosynthesisView(page,{width,shots,questions=true,n
   }
   if(questions){
    const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback?.wrongReasons[i]??'Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await q.getByText(topic.question.why,{exact:true}).count(),0);}
    await right.click();await q.getByText(topic.question.why,{exact:true}).waitFor();
   }
   const inquiry=await scienceThinkingView(page,topic,{width,shots,native,capturePrefix});await geometry(page,article,id+' '+width);
   if(shots&&!native)await figure.screenshot({path:path.join(shots,capturePrefix+id+'-current-authored-model-'+width+'.png'),animations:'disabled'});
   const captures=[];
-  if(shots&&native)for(const [index,selector]of (id==='science-water-cycle'?['h3','svg','.model-buttons','[role=status]','.small-note']:['h4','svg','.photosynthesis-concept-roles','.photosynthesis-concept-key','figcaption']).entries()){
+  // Die Zwischenüberschrift ist auf der Karte h3, eingebettet in eine Lernroute h4 (app/kern/karte/wissenskarte.tsx).
+  if(shots&&native)for(const [index,selector]of (id==='science-water-cycle'?['h3','svg','.model-buttons','[role=status]','.small-note']:[':is(h3,h4)','svg','.photosynthesis-concept-roles','.photosynthesis-concept-key','figcaption']).entries()){
    await figure.locator(selector).first().evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));captures.push(await captureNativeViewport(page,path.join(shots,capturePrefix+id+'-current-authored-native200-'+width+'-'+index+'.png')));
   }
   const paths=questions&&width===320?await scienceSourcePaths(page,topic):null;
@@ -76,7 +79,7 @@ export async function assertPressureContact(model){
 }
 
 async function geometry(page,root,label){
- const actual=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h2,h3,h4,button,summary,label,figcaption,.science-diagram-labels span')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).flatMap(e=>{const b=e.getBoundingClientRect();return b.left< -2||b.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&b.height<44)?[{text:e.textContent.slice(0,80),left:b.left,right:b.right,height:b.height}]:[];})}));
+ const actual=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2,bad:[...root.querySelectorAll('p,h2,h3,h4,button,summary,label,figcaption,.science-diagram-labels span')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).flatMap(e=>{const b=e.getBoundingClientRect();return b.left< -2||b.right>document.documentElement.clientWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&b.height<44)?[{text:e.textContent.slice(0,80),left:b.left,right:b.right,height:b.height}]:[];})}));
  assert.equal(actual.overflow,false,label+' page overflow');assert.deepEqual(actual.bad,[],label+' readable actual text and controls');
 }
 
@@ -120,7 +123,8 @@ export async function scienceFractionalRestoreView(page){
  const observed=[],key='erde-entdecken:save:v3',read=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,key);
  const large=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));
  for(const {id,kind,value,steps}of [{id:'science-resonance',kind:'resonance',value:.8,steps:3},{id:'science-pendulum',kind:'pendulum',value:2.5,steps:4}]){
-  await page.bringToFront();await page.evaluate(id=>location.hash='world/topic/'+id,id);
+  // Das Modell liegt unter „Ausprobieren“; nach Hash-Wechsel und Neuladen ist es zu.
+  await page.bringToFront();await page.evaluate(id=>location.hash='world/topic/'+id,id);await ausprobierenAuf(page,id);
   const model=page.locator('[data-investigation="'+kind+'"]'),slider=model.getByRole('slider').first();await slider.waitFor();await slider.press('Home');for(let i=0;i<steps;i++)await slider.press('ArrowRight');
   await page.waitForFunction(({id,value,key})=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['topic:'+id]?.investigationValue===value,{id,value,key});
   const inspect=async()=>{assert.equal(Number(await slider.inputValue()),value,'fractional input '+id);const state=await read();assert.equal(state.gameSessions['topic:'+id].investigationValue,value,'fractional saved value '+id);const status=await model.getByRole('status').innerText();
@@ -130,26 +134,30 @@ export async function scienceFractionalRestoreView(page){
   // Read the rendered endpoint after the same two paint frames used by the
   // ordinary model-state guard; reduced-motion CSS still has a .01ms transition.
   await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));
-  const before=await inspect();await page.reload();await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);await slider.waitFor();await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));const after=await inspect();assert.equal(after.status,before.status);assert.equal(after.svg,before.svg);for(const field of Object.keys(before.state).filter(k=>k!=='lastActivity'))assert.deepEqual(after.state[field],before.state[field],'reload retains '+field+' '+id);observed.push({id,value,displayExplanationShapeAndStorage:true,allOtherProgressRetained:true});
+  const before=await inspect();await page.reload();await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.locator('.earth-app').evaluate((e,large)=>e.classList.toggle('large-reading',large),large);await ausprobierenAuf(page,id);await slider.waitFor();await page.evaluate(()=>new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok))));const after=await inspect();assert.equal(after.status,before.status);assert.equal(after.svg,before.svg);for(const field of Object.keys(before.state).filter(k=>k!=='lastActivity'))assert.deepEqual(after.state[field],before.state[field],'reload retains '+field+' '+id);observed.push({id,value,displayExplanationShapeAndStorage:true,allOtherProgressRetained:true});
  }
  return observed;
 }
 
 export async function assertScienceReciprocalLink(page,sourceId,targetId,explained){
- const reverse=(explained?'world-connection-':'world-related-')+targetId+'-'+sourceId,link=page.locator('[data-route-focus="'+reverse+'"]');
- assert.equal(await link.count(),1,'actual reciprocal science link must exist '+targetId+' -> '+sourceId);await link.waitFor();
+ // Nur erklärte Verbindungen haben einen Knopf (Entwurf 6.8); die Rückverbindung kann im zugeklappten „Mehr erfahren“ liegen.
+ assert.ok(explained,'only explained connections are links: '+sourceId+' -> '+targetId);
+ const reverse='world-connection-'+targetId+'-'+sourceId,link=page.locator('[data-route-focus="'+reverse+'"]');
+ assert.equal(await link.count(),1,'actual reciprocal science link must exist '+targetId+' -> '+sourceId);await link.waitFor({state:'attached'});
 }
 
 async function scienceSourcePaths(page,topic){
  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
  await page.getByRole('combobox').fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();
  await page.getByRole('heading',{name:topic.title,exact:true}).waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+topic.id);
+ // Weitere Verbindungen liegen in „Mehr erfahren“; nach dem Zurück öffnet die Seite es selbst wieder.
+ await mehrErfahren(page.locator(KARTE));
  const observed=[];
- for(const id of topic.related){
+ for(const id of topic.related.filter(id=>ERKLAERTE_PAARE.has(topic.id+'>'+id))){
   const target=catalog.find(t=>t.id===id);assert.ok(target.related.includes(topic.id),'reciprocal source relationship '+id);
   const connection=connections.connections.find(c=>[c.fromId,c.toId].includes(topic.id)&&[c.fromId,c.toId].includes(id));
-  const focus=(connection?'world-connection-':'world-related-')+topic.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');
-  if(connection)assert.equal(await link.locator('..').locator('p').innerText(),connection.why,'actual source-derived connection explanation');
+  const focus='world-connection-'+topic.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');
+  assert.equal(await verbindungsSatz(link),connection.why,'actual source-derived connection explanation');
   await link.focus();await page.keyboard.press('Enter');await page.getByRole('heading',{name:target.title,exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();
   await assertScienceReciprocalLink(page,topic.id,id,!!connection);
   await page.goBack();await page.getByRole('heading',{name:topic.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);
@@ -161,8 +169,9 @@ async function scienceSourcePaths(page,topic){
 export async function scienceOriginalView(page,{width,shots,questions=true,native=false,modelsOnly=false}={}){
  const observed=[];
  for(const t of topics.filter(t=>!modelsOnly||t.investigation)){
-  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator('.world-article');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();
-  for(const detail of await article.locator('.world-short details,.world-more,.world-sources').all())if(!await detail.evaluate(e=>e.open))await detail.locator(':scope>summary').click();
+  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator(KARTE);await article.getByRole('heading',{name:t.title,exact:true}).waitFor();
+  // Alle Lesetexte an ihren Orten der neuen Karte aufklappen, dazu „Ausprobieren“, falls die Karte es hat.
+  await lesetexte(article,t);if(await hatAusprobieren(article))await ausprobieren(article);
   for(const text of [t.intro,...t.paragraphs,...t.more,t.learning.starter,t.learning.observe,t.learning.benefit,...t.facts.map(f=>f.text)])assert.ok((await article.innerText()).includes(text),t.id+' actual displayed explanation');
   for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   await assertScienceDiagramLegend(article,t.id.replace('science-',''));
@@ -202,7 +211,7 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   }
   if(questions){
    const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    const hint=q.locator('.world-game-hint');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await q.getByText(t.questionFeedback.hint,{exact:true}).waitFor();
    for(let i=0;i<t.question.answers.length;i++)if(i!==t.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})}).click();await q.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await q.getByText(t.question.why,{exact:true}).count(),0,'wrong feedback does not show separate correct explanation');}
    await right.click();await q.getByText(t.question.why,{exact:true}).waitFor();
@@ -213,11 +222,12 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   if(shots&&!native){
    // Capture scientific media directly. The ten interactive topics have a
    // generic hero; static topics already show their own diagrams in the hero.
-   const selector=t.investigation?'.science-investigation':'.science-explanation-diagram',file=t.investigation?t.id+'-'+width+'-model.png':t.id+'-diagram-'+width+'.png';
+   // Das eigene Erklärbild steht im Kartenkopf; „Dazu passt“ zeigt klein die Bilder der Nachbarkarten.
+   const selector=t.investigation?'.science-investigation':'.wissenskarte-kopf .science-explanation-diagram',file=t.investigation?t.id+'-'+width+'-model.png':t.id+'-diagram-'+width+'.png';
    await article.locator(selector).screenshot({path:path.join(shots,file),animations:'disabled'});
   }
   if(shots&&native){
-   const sections=t.investigation?['.science-investigation h3','.science-investigation label','.science-investigation svg','.science-investigation [role=status]','.science-investigation .small-note']:['.world-article-heading h2','.science-explanation-diagram svg','.science-diagram-labels','.science-explanation-diagram figcaption'];
+   const sections=t.investigation?['.science-investigation h3','.science-investigation label','.science-investigation svg','.science-investigation [role=status]','.science-investigation .small-note']:['#world-topic-title','.science-explanation-diagram svg','.science-diagram-labels','.science-explanation-diagram figcaption'];
    for(const [index,selector]of sections.entries()){const part=article.locator(selector).first();await part.evaluate(async e=>{e.scrollIntoView({block:'start',behavior:'instant'});await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));});captures.push(await captureNativeViewport(page,path.join(shots,t.id+'-native200-'+width+'-'+index+'.png')));}
   }
   const paths=questions&&width===320?await scienceSourcePaths(page,t):null;

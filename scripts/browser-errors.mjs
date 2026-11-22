@@ -23,6 +23,10 @@ export function monitorBrowserErrors(page,base,proof,{engine,expectedHTTP503,exp
  // WebKit blockiert nach 200 schnellen Navigationen weitere und meldet das nur als Warnung (navigation-tempo.mjs).
  // Als Fehler zählen, damit eine Suite die Ursache nennt statt in einem Zeitlimit zu enden.
  zaehleNavigationen(page);
+ // Chromium und Firefox melden eine ResizeObserver-Schleife nur als `error`-Ereignis im Fenster, das Playwright nicht sieht;
+ // WebKit meldet sie als Seitenfehler. Als console.error weitergeben, damit sie in jeder Engine als Fehler zählt.
+ // Das Skript gilt ab dem nächsten Dokument (Aufrufer überwachen vor dem ersten goto). Schließt sich die Seite vorher, gibt es nichts zu melden.
+ page.addInitScript(()=>addEventListener('error',event=>{if(/ResizeObserver loop/.test(event.message))console.error(event.message);})).catch(()=>{});
  page.on('console',message=>{if(message.type()==='warning'&&/Excessive navigation attempts blocked/.test(message.text())){proof.consoleErrors.push(tag+message.text());return;}if(message.type()!=='error')return;const url=message.location?.().url,text=message.text();if(url&&expected(url,503)&&/(?:status of 503|503 \(Service Unavailable\))/.test(text)){recordExpected('consoleErrors',url);return;}if(url===workerURL&&text==='Failed to load resource: '+refused&&expectedWorker()&&workerFailures.length){const paired=workerFailures.shift();recordWorker('consoleErrors',{url,message:text,pair:paired});return;}proof.consoleErrors.push(tag+text);});
  page.on('requestfailed',request=>{const url=request.url(),error=request.failure()?.errorText;if(url===workerURL&&error===refused&&expectedWorker()&&request.resourceType?.()==='xhr'&&request.isNavigationRequest?.()===false){const pair=++workerSequence;workerFailures.push(pair);recordWorker('failedRequests',{url,error,pair,resourceType:'xhr',isNavigationRequest:false});return;}proof.failedRequests.push({url,error,...(engine?{engine}:{})});});
  page.on('pageerror',error=>proof.errors.push(tag+error.message));

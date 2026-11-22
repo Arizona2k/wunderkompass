@@ -9,7 +9,7 @@ import {worldGameBank as bank,restoreWorldGameOrders,validWorldGameOrder} from '
 import KnowledgeChallenge from './knowledge-challenge-game';
 import WorldPhoto from './world-media';
 import {SavedGame,useSavedGame} from './saved-games';
-import {shuffle} from './world-topic';
+import {shuffle} from '../lib/shuffle';
 import type {WorldTopic} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
 export const WORLD_GAMES=[

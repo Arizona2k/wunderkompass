@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import {ausprobierenAuf,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const allEntries=JSON.parse(await fs.readFile(new URL('../../app/people-inquiries.json',import.meta.url),'utf8')).entries;
 const entries=allEntries.slice(4,18),retainedEntries=allEntries.slice(18);
@@ -27,12 +28,14 @@ async function actualConnectedRoutes(page,base,progress,entries,links){
   const option=page.locator('[cmdk-item][data-value="topic:'+entry.id+'"]');await option.waitFor();
   for(let i=0;i<40&&await option.getAttribute('data-selected')!=='true';i++)await input.press('ArrowDown');
   assert.equal(await option.getAttribute('data-selected'),'true');await input.press('Enter');
-  await page.locator('#world-topic-title').filter({hasText:topic.title}).waitFor();assert.equal(await page.locator('#world-topic-title').innerText(),topic.title);await page.locator('[data-person-evidence="'+entry.id+'"]').waitFor();
+  await page.locator('#world-topic-title').filter({hasText:topic.title}).waitFor();assert.equal(await page.locator('#world-topic-title').innerText(),topic.title);await ausprobierenAuf(page,entry.id);await page.locator('[data-person-evidence="'+entry.id+'"]').waitFor();
   await page.goBack();await page.waitForFunction(()=>location.hash==='#home');await opener.waitFor();global.push({id:entry.id,actualGlobalKeyboardSearch:true,actualBrowserBackToHome:true});
  }
  for(const link of links){
   assert.equal(link.kind,'word');const topic=catalog.find(row=>row.id===link.topic);assert(topic);
   await page.goto(base+'/#world/topic/'+link.topic);await page.locator('#world-topic-title').filter({hasText:topic.title}).waitFor();
+  // Die Wort-Links stehen unter „Mehr erfahren“ (app/kern/karte/mehr-erfahren.tsx); nach Zurück öffnet die Karte es selbst wieder.
+  await mehrErfahren(page);
   const outKey='topic-word-'+link.topic+'-'+link.term,outbound=page.locator('[data-route-focus="'+outKey+'"]');
   assert.equal(await outbound.count(),1,'a word/person pair has exactly one visible outgoing focus identity');assert.equal(await outbound.getAttribute('href'),'#book/words/'+encodeURIComponent(link.term));await outbound.focus();await page.keyboard.press('Enter');
   await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,link.term);

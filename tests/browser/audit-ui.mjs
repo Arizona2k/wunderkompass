@@ -2,7 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
 import {hilfeOeffnen} from './harness.mjs';
 
@@ -74,7 +74,7 @@ export async function auditCountryNamesPage(page,base,{shots=null,engine='chromi
   const portrait=page.locator('.portrait-details').filter({has:page.getByText('Mehr über '+name,{exact:true})});if(!await portrait.evaluate(e=>e.open)){await portrait.locator(':scope>summary').focus();await page.keyboard.press('Enter');}await portrait.locator('dl').waitFor();const text=await portrait.innerText();for(const label of expected)assert(text.includes(label),name+' readable '+label);
   const facts=await portrait.locator('.country-facts>div').evaluateAll(es=>es.map(e=>({name:e.querySelector('dt')?.textContent,value:e.querySelector('dd')?.textContent})));
   assert(facts.some(f=>f.name==='Menschen · Schätzung 2024'));assert(facts.some(f=>f.name==='Fläche · 2023'));
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'all country names fit actual viewport');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'all country names fit actual viewport');
   if(shots&&name==='Simbabwe')await portrait.screenshot({path:path.join(shots,`journey-engine-${engine}-audit-country-names-${width}.png`),animations:'disabled'});
   rows.push({name,readableNames:expected,referenceYearsUnchanged:true,facts});
  }
@@ -127,5 +127,5 @@ export async function auditUiView(browser,base,{shots=null,engine='chromium'}={}
   }catch(error){if(shots){await page.screenshot({path:path.join(shots,`journey-engine-${engine}-audit-ui-original-failure-${width}.png`),fullPage:true}).catch(()=>{});const original=await page.evaluate(()=>({url:location.href,focus:{tag:document.activeElement?.tagName,id:document.activeElement?.id},inputs:[...document.querySelectorAll('input[role=combobox]')].map(e=>({value:e.value,attributes:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value]))})),options:[...document.querySelectorAll('[role=option]')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,id:e.id,attributes:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value]))}))})).catch(e=>({diagnosticFailure:String(e)}));await fs.writeFile(path.join(shots,`journey-engine-${engine}-audit-ui-original-failure-${width}.json`),JSON.stringify({error:error.stack,original,errors:proof},null,2)+'\n');}throw error;}
   finally{await context.close();}
  }
- assert(browserErrorsComplete(proof));return proof;
+ assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
 }

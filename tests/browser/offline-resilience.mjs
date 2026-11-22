@@ -40,7 +40,7 @@ export async function assertOfflineCaptureViewport(page,{native=false}={}){
  const panel=page.locator('.offline-learning'),bounds=await panel.boundingBox();
  assert.ok(bounds&&bounds.width>0&&bounds.width<=320,'offline panel fits the measured narrow viewport');
  const overflow=await page.evaluate(()=>{
-  const width=innerWidth,scrollWidth=document.documentElement.scrollWidth,failed=scrollWidth>width+2;
+  const width=document.documentElement.clientWidth,scrollWidth=document.documentElement.scrollWidth,failed=scrollWidth>width+2;
   if(!failed)return{failed,width,scrollWidth};
   // Preserve the first failing measurement. Later layout reads must not turn
   // a transient or persistent overflow into a successful retry.
@@ -74,7 +74,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{
   await page.setViewportSize({width:320*(native?2:1),height:900});
-  await page.goto(base+'/#world/topic/animal-polar-bear');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear'));const saved=await snapshot();
+  await page.goto(base+'/#world/topic/animal-polar-bear');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.getByRole('button',{name:'Merken',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear'));const saved=await snapshot();
   await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();report.sourceErrorView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-source-error-320.png':null,{native});assert.ok(failedRequests>0,'actual service-worker asset request failed');await noPartial();assert.deepEqual(await snapshot(),saved);
   fail=false;
   if(kind==='chromium'){
@@ -87,7 +87,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    // The original next-task read can still contain the wide header padding.
    await prepareAxe(page);
    const measured=await page.evaluate(()=>({cssWidth:innerWidth,scale:devicePixelRatio}));assert.equal(measured.cssWidth,width);if(native)assert.equal(measured.scale,2);
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'offline progress has no horizontal overflow '+width);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'offline progress has no horizontal overflow '+width);
    const aside=page.locator('.offline-learning');assert.ok(await aside.isVisible());assert.ok(await aside.getByRole('progressbar',{name:'Sicher gespeicherte Lernwelt-Dateien',exact:true}).isVisible());
    const value=await progress.evaluate(e=>({verified:e.value,total:e.max}));assert.ok(value.verified>0&&value.verified<value.total);assert.equal(value.total,assets.length);
    assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.offline-learning',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
@@ -107,7 +107,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   await assertOfflineCaptureViewport(page,{native});
   if(native){
    assert.equal(photoHeld,true,'the initial frame-owned photo response crosses the controlled preparation phases');releasePhoto();
-   const image=page.locator('.world-article .world-photo img[src]').first();await image.waitFor({state:'attached'});await image.scrollIntoViewIfNeeded();
+   const image=page.locator('.wissenskarte .world-photo img[src]').first();await image.waitFor({state:'attached'});await image.scrollIntoViewIfNeeded();
    await page.waitForFunction(el=>el.complete&&el.naturalWidth>0,await image.elementHandle());await image.evaluate(el=>el.decode());
    const credit=image.locator('..').locator('figcaption');await credit.waitFor();assert.ok((await credit.innerText()).trim());
    report.deferredPhotoTransport={heldAcrossPreparation:true,src:await image.getAttribute('src'),credit:await credit.innerText()};
@@ -115,7 +115,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   }
   await stopTestServer(server);
   await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2600)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
-  await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
+  await page.reload();await page.locator('.world-mini-question').waitFor();await page.locator('.wissenskarte-merken[aria-pressed="true"]').waitFor();report.offlineReload=true;
   assertBrowserErrors('after confirmed-origin-down reload');
   report.offlineReadyView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-320.png':null,{native});
   // The real complete cached app must retain the new source-learning activities too.
@@ -127,7 +127,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   // and at both existing native-zoom widths. Other established source matrices
   // above stay complete; no duplicate science screenshots are needed here.
   for(const width of (native?[640,320]:[320])){
-   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
+   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);
    if(native)assert.equal(await page.evaluate(()=>devicePixelRatio),2);
    await page.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));
    report.scienceOriginalDiscovery.push(...await scienceOriginalView(page,{width,native,questions:false}));
@@ -143,12 +143,12 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   report.worldGameSemantics=await worldGameOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
   report.bookLearning={checks:[]};
   for(const width of[320,1440]){
-   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>innerWidth),width);
+   await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);
    await bookNormalizationView(page,report.bookLearning,width,{measurement:true,shots,engine:kind,native});
   }
   assert.equal(report.bookLearning.bookNormalization.length,8);
   assert.equal(report.bookLearning.bookMechanics.length,14,'all seven mechanics entries at the two existing cold widths');
-  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>innerWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookHeatView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookLightView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookWaterView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookParticleView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookMechanicsView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookCellView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookGeneView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookStatisticsView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookDigitalView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookAstronomyView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookEcologyView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookRetainedView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await natureLearningView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await natureNavigationView(page,report.bookLearning,640,{shots,engine:kind,native:true,offline:true});assert.equal(report.bookLearning.bookRetained.filter(row=>row.width===640&&row.native200&&row.offline).length,17,'all seventeen new studies in actual native640 cold case');assert.equal(report.bookLearning.bookEcology.filter(row=>row.width===640&&row.native200&&row.offline).length,6,'all six ecological lessons in actual native640 cold case');assert.equal(report.bookLearning.bookAstronomy.filter(row=>row.width===640&&row.native200&&row.offline).length,8,'all eight astronomy lessons in actual native640 cold case');assert.equal(report.bookLearning.bookStatistics.length,33,'all eleven statistics lessons retain the existing three native/cold widths');assert.equal(report.bookLearning.bookStatistics.filter(row=>row.width===640&&row.native200&&row.offline).length,11,'all eleven statistics lessons are actually exercised in the dedicated native640 cold case');await page.setViewportSize(previousViewport);}
+  if(native){const previousViewport=page.viewportSize();await page.setViewportSize({width:1280,height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),640);assert.equal(await page.evaluate(()=>devicePixelRatio),2);await bookMeasurementView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookHeatView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookLightView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookWaterView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookParticleView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookMechanicsView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookCellView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookGeneView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookStatisticsView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookDigitalView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookAstronomyView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookEcologyView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await bookRetainedView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await natureLearningView(page,report.bookLearning,640,{shots,engine:kind,large:true,native:true,offline:true});await natureNavigationView(page,report.bookLearning,640,{shots,engine:kind,native:true,offline:true});assert.equal(report.bookLearning.bookRetained.filter(row=>row.width===640&&row.native200&&row.offline).length,17,'all seventeen new studies in actual native640 cold case');assert.equal(report.bookLearning.bookEcology.filter(row=>row.width===640&&row.native200&&row.offline).length,6,'all six ecological lessons in actual native640 cold case');assert.equal(report.bookLearning.bookAstronomy.filter(row=>row.width===640&&row.native200&&row.offline).length,8,'all eight astronomy lessons in actual native640 cold case');assert.equal(report.bookLearning.bookStatistics.length,33,'all eleven statistics lessons retain the existing three native/cold widths');assert.equal(report.bookLearning.bookStatistics.filter(row=>row.width===640&&row.native200&&row.offline).length,11,'all eleven statistics lessons are actually exercised in the dedicated native640 cold case');await page.setViewportSize(previousViewport);}
   assert.equal(report.bookLearning.bookMeasurements.length,native?21:14,'all seven SI words in every retained cached book layout and the additional required native640 layout');
   assert.equal(new Set(report.bookLearning.bookMeasurements.map(row=>row.term+':'+row.width)).size,native?21:14,'every cached SI term/width identity is distinct');
   assert.equal(report.bookLearning.bookMechanics.length,native?21:14,'all seven mechanics entries in every actual cold layout including native640');

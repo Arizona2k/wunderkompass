@@ -3,8 +3,21 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
+import {KARTE,ausprobieren,lesetexte} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const topics=catalog.filter(t=>['history-khipu','history-mohenjo-daro','history-bronze'].includes(t.id));assert.equal(topics.length,3,'all three required historical topics are present');
+// Firefox aus Playwright 1.65.1 stürzt ab („Page crashed“, CI-Lauf 249), wenn eine Rollen-Abfrage nach Bereich und Namen
+// erst im Werkzeug läuft (waitFor, count, Klick, evaluate) und danach in der Seite (evaluateAll, allInnerTexts,
+// allTextContents fragen dort ab). Beide Male liest Playwright ariaLabelledByElements der Bereiche mit aria-labelledby
+// (auf jeder Karte: „Rate mal!“ und „Dazu passt“); das zweite Lesen in der anderen Skript-Umgebung lässt Firefox
+// abstürzen. Die App liest diese Eigenschaft nie. Gleiche Klasse wie in pass-atlas.mjs (BACKLOG, Technik).
+// Darum: Rolle und Name prüft detektivBereich() im Werkzeug, die Bereichsprüfungen nutzen den gleichwertigen CSS-Locator.
+const DETEKTIV='section[aria-label="Geschichtsdetektiv"]';
+async function detektivBereich(p){
+ const region=p.getByRole('region',{name:'Geschichtsdetektiv',exact:true});await region.waitFor();
+ assert.equal(await region.count(),1,'genau ein Bereich Geschichtsdetektiv');assert.equal(await p.locator(DETEKTIV).count(),1,'der CSS-Locator trifft denselben einen Bereich');
+ return p.locator(DETEKTIV);
+}
 export async function assertBronzeEvidence(activity){
  assert.notEqual(await activity.getAttribute('data-bronze-evidence'),null);const bronze=activity;
  assert.match(await bronze.locator('.small-note').first().innerText(),/Erfundene Fundkarten/);
@@ -17,12 +30,12 @@ export async function assertBronzeEvidence(activity){
  return{inventedCards:true,aiAssistedDrawing:true,materialAndContextSeparate:true,contextVisible:shown,labelsReadable:true};
 }
 async function checkGeometry(p){
- await assertTextInsideControls(p,'.article-wayfinder button','article orientation');
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'history learning model has no page overflow');
- const bad=await p.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(el=>{const found=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width&&(r.left< -2||r.right>innerWidth+2))found.push(n.textContent);}return found;});assert.deepEqual(bad,[],'actual diagram labels/tasks are within the viewport');
+ await assertTextInsideControls(p,KARTE+' :is(.wissenskarte-knoepfe button,details>summary,.dazu-passt-kachel)','article controls');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'history learning model has no page overflow');
+ const bad=await p.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(el=>{const found=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width&&(r.left< -2||r.right>document.documentElement.clientWidth+2))found.push(n.textContent);}return found;});assert.deepEqual(bad,[],'actual diagram labels/tasks are within the viewport');
 }
 async function explore(p,t,{touch=false}={}){
- const activity=p.getByRole('region',{name:'Geschichtsdetektiv'});
+ const activity=await detektivBereich(p);
  await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  for(let level=0;level<3;level++){
   const tier=activity.getByRole('group',{name:'Freiwillige Denkstufe'}).getByRole('button').nth(level);if(level===2){const previousTier=activity.getByRole('group',{name:'Freiwillige Denkstufe'}).getByRole('button').nth(level-1);await previousTier.focus();await p.keyboard.press('Tab');assert.equal(await tier.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'real Tab reaches the third level with a visible keyboard focus');await p.keyboard.press('Enter');assert.equal(await tier.evaluate(el=>el===document.activeElement&&el.matches(':focus-visible')),true,'keyboard activation retains its visible focus');}else if(touch)await tier.tap();else await tier.click();assert.equal(await tier.getAttribute('aria-pressed'),'true');
@@ -43,12 +56,12 @@ export async function historySourceView(page,{width,shots,engine='chromium',nati
   if(topic.id==='history-bronze'){
    await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();const dialog=page.getByRole('dialog');await dialog.locator('input').fill('Bronzezeit');const result=page.getByRole('option').filter({hasText:topic.title});assert.equal(await result.count(),1,'the authored bronze alias finds exactly its intended topic');await result.click();
   }else await page.evaluate(id=>location.hash='world/topic/'+id,topic.id);
-  const article=page.locator('.world-article');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
+  const article=page.locator(KARTE+'.wissenskarte-welt-history');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
+  // Lesetexte an ihren Orten der neuen Karte, danach die Bronzezeit-Texte (Mehr erfahren ist dann offen).
+  await lesetexte(article,topic);
   if(topic.id==='history-bronze'){for(const text of [topic.intro,...topic.paragraphs,...topic.facts.map(f=>f.text)])await article.getByText(text,{exact:true}).waitFor();}
-  for(const summary of await article.locator('.world-short details summary').all()){if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();}await article.getByText(topic.learning.starter,{exact:true}).waitFor();await article.getByText(topic.learning.observe,{exact:true}).waitFor();
-  const more=article.locator('.world-more');if(!await more.evaluate(e=>e.open))await more.locator('summary').click();for(const text of topic.more)await more.getByText(text,{exact:true}).waitFor();const sources=article.locator('.world-sources');if(!await sources.evaluate(e=>e.open))await sources.locator('summary').click();for(const source of topic.sources)assert.equal(await sources.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
-  const learnedBefore=await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id);const jump=article.getByRole('navigation',{name:'In dieser Entdeckerkarte'}).getByRole('button',{name:/Ausprobieren$/});await jump.focus();await page.keyboard.press('Enter');assert.equal(await page.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(e=>e===document.activeElement),true,'actual article wayfinder reaches the new observation');await explore(page,topic,{touch});assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id),learnedBefore,'voluntary diagram exploration cannot award the mini-question mark');
-  const activity=page.getByRole('region',{name:'Geschichtsdetektiv'});if(shots){const prefix='history-source-'+engine+'-'+topic.id+'-'+width;if(native){await page.bringToFront();for(const [suffix,part]of [['heading',activity.locator('h3')],['diagram',activity.locator('figure')],['controls',activity.locator('.model-buttons').last()]]){await part.scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}}else if([320,1440].includes(width))await activity.screenshot({path:path.join(shots,prefix+'.png'),animations:'disabled'});}
+  const learnedBefore=await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id);await ausprobieren(article);await detektivBereich(page);await explore(page,topic,{touch});assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id),learnedBefore,'voluntary diagram exploration cannot award the mini-question mark');
+  const activity=await detektivBereich(page);if(shots){const prefix='history-source-'+engine+'-'+topic.id+'-'+width;if(native){await page.bringToFront();for(const [suffix,part]of [['heading',activity.locator('h3')],['diagram',activity.locator('figure')],['controls',activity.locator('.model-buttons').last()]]){await part.scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}}else if([320,1440].includes(width))await activity.screenshot({path:path.join(shots,prefix+'.png'),animations:'disabled'});}
   if(questions){const correct=question.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});if(!await correct.isDisabled()){const hint=question.locator('.world-game-hint');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(topic.questionFeedback.hint,{exact:true}).waitFor();for(let i=0;i<topic.question.answers.length;i++)if(i!==topic.question.correct){await question.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await question.getByText(topic.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);}await correct.click();}await question.getByText(topic.question.why,{exact:true}).waitFor();assert.equal(await correct.isDisabled(),true);}
   await checkGeometry(page);observed.push({id:topic.id,width,threeDistinctThinkingLevels:true,actualControls:true,keyboardFocus:true,readingLevelsAndSources:true,noExplorationStamp:true,questionsChecked:questions,native,...(topic.id==='history-bronze'?{actualSearch:true,bronzeEvidence:await assertBronzeEvidence(activity)}:{})});
  }assert.equal(observed.length,3);completed=true;return observed;}finally{if(completed)await page.evaluate(hash=>location.hash=hash,initial);}

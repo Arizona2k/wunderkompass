@@ -3,14 +3,15 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-heat-content.json',import.meta.url),'utf8'));
 const whyIndex=JSON.parse(await fs.readFile(new URL('../../exports/content/why-questions.json',import.meta.url),'utf8'));
 const snapshot=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
 
 export async function bookHeatView(page,report,width,{shots=null,engine='chromium',large=false,native=false,offline=false}={}){
- assert.equal(await page.evaluate(()=>innerWidth),width,'actual heat viewport matches evidence');
+ assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width,'actual heat viewport matches evidence');
  const original=await snapshot(page),initial=await page.evaluate(()=>location.hash),wasLarge=await page.locator('.earth-app').evaluate(el=>el.classList.contains('large-reading')),proof=[];
  await page.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),large);
  try{
@@ -35,7 +36,7 @@ export async function bookHeatView(page,report,width,{shots=null,engine='chromiu
    const sources=study.locator('details').filter({has:page.getByText('Quellen und Prüfstand',{exact:true})});assert.deepEqual(await sources.locator('a').evaluateAll(es=>es.map(e=>e.href)),item.sources.map(s=>s.url));await sources.getByText('Belegstellenabgleich: '+pack.sourceReadOn.split('-').reverse().join('.')+'.',{exact:false}).waitFor();
    const figure=study.locator('[data-book-heat-figure]');assert.equal(await figure.getAttribute('data-book-heat-figure'),item.figure);assert.equal(await figure.locator('svg').count(),1);assert.equal(await figure.locator('.book-model-key li').count(),3);await figure.getByText('Eigene qualitative Zeichnung mit KI-Unterstützung.',{exact:false}).waitFor();
    if(item.question){const q=item.question;for(const i of q.answers.map((_,i)=>i).filter(i=>i!==q.correct).concat(q.correct)){await study.getByRole('button',{name:q.answers[i],exact:true}).click();assert.equal(await study.locator('.book-thinking [role=status]').innerText(),'Deine Auswahl: '+q.answers[i].trimEnd()+(['.','!','?','…'].includes(q.answers[i].trimEnd().at(-1))?' ':'. ')+(i===q.correct?'Das passt. '+q.why:'Noch nicht passend. '+q.wrongReasons[i]));}}
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
    const failures=await card.evaluate((root,{large})=>{const bounds=root.getBoundingClientRect();return[...root.querySelectorAll('p,h4,summary,button,a,figcaption,svg[role=img],.book-model-key li')].filter(el=>el.getClientRects().length).flatMap(el=>{const r=el.getBoundingClientRect(),interactive=el.matches('summary,button,a'),legend=el.matches('.book-heat-figure figcaption,.book-model-key li');return r.left<bounds.left-1||r.right>bounds.right+1||el.scrollWidth>el.clientWidth+2||interactive&&(r.width<43.9||r.height<43.9)||legend&&parseFloat(getComputedStyle(el).fontSize)<(large?19.9:15.9)?[{tag:el.tagName,text:el.textContent.slice(0,100),width:r.width,height:r.height,font:getComputedStyle(el).fontSize}]:[];});},{large});assert.deepEqual(failures,[],'heat content/drawing/16-20px legends/44px controls fit actual card');
    if(width===320){await prepareAxe(page);assert.deepEqual(await card.evaluate(async el=>(await window.axe.run(el,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))),[]);}
    const nativeCaptures=[];
@@ -43,7 +44,7 @@ export async function bookHeatView(page,report,width,{shots=null,engine='chromiu
     const prefix=path.join(shots,'journey-engine-'+engine+'-book-heat-'+kind+'-'+(kind==='words'?Object.keys(pack.learning):Object.keys(pack.whyLearning)).indexOf(term)+'-native200-');
     for(const[part,target]of[['drawing',figure.locator('h4')],['legend',figure.locator('figcaption')]]){await target.evaluate(el=>el.scrollIntoView({block:'start'}));const capture=await captureNativeViewport(page,prefix+part+'-'+width+'.png');assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);nativeCaptures.push(capture);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-heat-'+(kind==='words'?Object.keys(pack.learning).indexOf(term):4+Object.keys(pack.whyLearning).indexOf(term))+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
-   const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);
+   const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
    for(const word of Object.keys(pack.learning))await page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:word,exact:true}).waitFor();
    await page.goBack();await card.waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
    proof.push({term,kind,width,large,native200:native,nativeCaptures,offline,figure:item.figure,allReadingLevelsHintsAnswersFeedbackAndSources:true,normalHTMLLegends:true,actualKeyboardArticleAndBackFocus:true});
@@ -79,7 +80,7 @@ export async function bookHeatNetworkView(page,{shots=null,engine='chromium'}={}
   const warmth=cardFor(child,'Wärme').locator('[data-book-heat-study]'),radiation=cardFor(child,'Wärmestrahlung').locator('[data-book-heat-study]');
   await warmth.locator(':scope>summary').click();await started;await warmth.locator(':scope>summary').click();await radiation.locator(':scope>summary').click();assert.equal(requests,1);release();
   await radiation.getByText(pack.learning['Wärmestrahlung'].benefit,{exact:true}).waitFor();await warmth.locator(':scope>summary').click();await warmth.getByText(pack.learning['Wärme'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
-  assert(browserErrorsComplete(proof));return proof;
+  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-heat-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

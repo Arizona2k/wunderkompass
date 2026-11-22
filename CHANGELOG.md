@@ -3,6 +3,24 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 22.11.2026 – Teilschritt 2, Teil A: Die neue Wissenskarte
+
+Jede Wissenskarte ist neu gebaut: erst raten, dann kurz lesen, dann selbst ausprobieren. Die alte Karte ist weg. Ihre Links, Antworten und Pass-Einträge bleiben.
+
+- **Oben auf der Karte:** großes Bild mit Bildnachweis, der Titel und gleich eine Frage: „Rate mal!“. Wer falsch rät, bekommt einen Hinweis und kann „Noch einmal raten“.
+- **Kurz erklärt und Steckbrief:** ein paar kurze Sätze und die wichtigsten Zahlen auf einen Blick. Was nur Eltern brauchen (Lernziel, Quellen, Datum der Prüfung), steht zugeklappt unter „Für Erwachsene: Quellen und Lernziele“.
+- **Ausprobieren:** Messen, Modelle, Zeichnungen und Belege stehen in einem Bereich, der erst beim Öffnen lädt. So ist die Karte schneller da. Bricht das Netz dabei ab, gibt es „Noch einmal versuchen“, ohne dass die Seite neu lädt.
+- **Mehr erfahren:** die längeren Texte, weitere Verbindungen und Orte auf der Karte, freiwillig zum Aufklappen.
+- **Dazu passt:** unten auf jeder Karte höchstens drei große Kacheln: eine echte Nachbarkarte mit dem Grund, warum sie passt, der Ort auf dem Globus und eine Reise, ein Labor oder das Spiel der Welt. Nach „Zurück“ steht man wieder bei der Kachel, auch in Safari.
+- **Klarer Rückweg:** statt der langen Sprungleiste ein Link „← Zurück“. Wer direkt auf eine Karte kam, bekommt einen Link zu ihrer Welt, zum Beispiel „← Die Tierwelt“.
+- **Lernreisen einfach zuerst:** Jedes Kapitel beginnt mit ein paar kurzen Sätzen, einer Tatsache und einem Beobachtungsauftrag. Der lange Text steht unter „Für Große“, der Satz für Eltern unter „Für Erwachsene“. „Kapitel vorlesen“ liest, was offen steht.
+- **Am Handy:** lange Wörter (etwa bei Grace Hopper) schieben die Seite nicht mehr zur Seite. Beschriftungen in Zeichnungen sind am kleinen Handy mindestens 16 Pixel groß. Vier Erfindungs-Zeichnungen haben noch winzige Schrift; das steht im BACKLOG.
+- **Leichter zu bedienen:** Jeder Bereich zum Aufklappen hat rechts einen Pfeil, der sich beim Öffnen dreht. „Größere Schrift“ im Entdeckerpass macht die Frage und die ersten Sätze jetzt wirklich größer. Knöpfe und Aufklapper sind mindestens 48 Pixel hoch, die Buchstaben A, B, C bei den Antworten größer und dunkler.
+- **„Was ist neu?“** hat zwei neue Einträge.
+- **Hinter den Kulissen:** Die Tempo-Prüfung läuft jetzt in jeder Prüfung mit. Tests warten vor einem Seitenwechsel kurz, bis die Bilder geladen sind. Ein neuer Helfer prüft technische Themen. Die Startdateien sind nicht größer geworden.
+- **Geprüft:** ganze Prüfkette, die große Prüfung in Chromium (alle 31 Teile grün), Karte und Lernreise auch in Firefox und WebKit. Eine Schlussprüfung des ganzen Umbaus (mit einem anderen Modell als geplant, darum eine Teilprüfung) und eine Prüfung der Gestaltung auf Bildern; was dort gefunden und nicht gleich behoben wurde, steht im BACKLOG (Punkt 20).
+- **Entdeckerpass repariert:** Wer sehr viel entdeckt hatte (mehr als 256 Karten, Spiele, Reisen und Labore), verlor beim Laden die zuletzt angefangenen Spielstände. Den Fehler gab es schon vorher. Jetzt bleiben alle erhalten, auch beim Sichern, Wiederherstellen und Neuladen.
+
 ## 21.11.2026 – Teilschritt 2, Schritt 0: Prüfungen in drei Browsern repariert
 
 Für Kinder ändert sich fast nichts. Es geht vor allem um die Prüfungen vor dem Umbau der Wissenskarte.

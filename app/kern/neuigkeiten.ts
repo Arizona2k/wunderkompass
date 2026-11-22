@@ -11,6 +11,8 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
+  {id: 'neue-wissenskarten', datum: '2026-11-22', symbol: 'lupe', titel: 'Die Wissenskarten sind neu gemacht', text: 'Erst raten, dann lesen. Unten auf jeder Karte findest du, was dazu passt.'},
+  {id: 'reisen-einfach', datum: '2026-11-22', symbol: 'globus', titel: 'Lernreisen beginnen ganz leicht', text: 'Jedes Kapitel beginnt mit ein paar kurzen Sätzen. Mehr steht unter „Für Große“.'},
   {id: 'neue-leiste', datum: '2026-11-21', symbol: 'kompass', titel: 'Neue Leiste, neue Schrift', text: 'Alle Bereiche findest du jetzt in einer Leiste. Die Schrift ist runder und leichter zu lesen.'},
   // Frühere Chronik (6. Oktober bis 7. November 2026)
   {id: 'lebenswege', datum: '2026-11-07', symbol: 'stern', titel: '18 Lebensgeschichten zum Ausprobieren', text: 'Bei 18 bekannten Menschen probierst du jetzt selbst etwas aus. Bei Ada Lovelace und Katherine Johnson vergleichst du Rechenwege.'},
