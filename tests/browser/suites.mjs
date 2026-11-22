@@ -24,7 +24,7 @@ import {playgroundFlow} from './playground.mjs';
 import {memoryRound, searchAndHistory} from './portable-flows.mjs';
 import {researchFlow} from './research.mjs';
 import {researchTransferFlow} from './research-transfer.mjs';
-import {retainedAnswerWordingFlow} from './retained-answer-wording.mjs';
+import {retainedAnswerWordingFlow, alteAntwortNachUmformulierung} from './retained-answer-wording.mjs';
 import {solarFlow} from './solar-comparison.mjs';
 import {kernHuelle} from './kern-huelle.mjs';
 import {wissenskarte} from './wissenskarte.mjs';
@@ -48,7 +48,11 @@ export const SUITES = [
   {name: 'pass-spielstaende', set: 'ci', run: passSpielstaende},
   {name: 'animal-game-saves', set: 'ci', run: flow(retainedAnimalRounds)},
   {name: 'habitat-answer-semantics', set: 'ci', run: flow(habitatAnswerSemantics)},
-  {name: 'retained-answer-wording', set: 'ci', run: flow(retainedAnswerWordingFlow)},
+  // Dazu: alte richtige Antwort nach umformulierter Rate-mal-Frage (Aufgabe 10).
+  {name: 'retained-answer-wording', set: 'ci', run: async ctx => {
+    await flow(retainedAnswerWordingFlow)(ctx);
+    await flow(alteAntwortNachUmformulierung)(ctx);
+  }},
   {name: 'journey-transfer', set: 'ci', run: flow(journeyTransferFlow)},
   {name: 'research-transfer', set: 'ci', run: flow(researchTransferFlow)},
   {name: 'offline-retention', set: 'ci', run: ({browser, shots, engine}) => offlineRetention(browser, {shots, kind: engine})},

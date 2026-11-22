@@ -55,3 +55,50 @@ export async function offlineRetainedAnswerWording(p,report){
  const original=await p.evaluate(({key,id,before,answers})=>{const s=JSON.parse(localStorage.getItem(key));s.progress.gameSessions['topic:'+id]={...s.progress.gameSessions['topic:'+id],items:answers.map(v=>v===before.after?before.before:v).reverse(),topicAnswer:before.before};localStorage.setItem(key,JSON.stringify(s));return {favorites:s.progress.favorites,games:s.progress.games};},{key:SAVE_KEY,id:alias.topic,before:alias,answers:topic.question.answers});
  await p.reload();await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);await p.evaluate(id=>location.hash='world/topic/'+id,alias.topic);const q=p.locator('.world-mini-question');await q.locator('.rate-mal-frage').getByText(question.prompt,{exact:true}).waitFor();assert.equal(await q.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);assert.deepEqual(await q.locator('.quiz-answer > span:last-of-type').allTextContents(),[...topic.question.answers].reverse());await p.reload();await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);await p.evaluate(({key,id,before,after,correct})=>{const s=JSON.parse(localStorage.getItem(key));s.progress.gameSessions['topic:'+id].items=[before,after,correct];s.progress.gameSessions['topic:'+id].topicAnswer=before;localStorage.setItem(key,JSON.stringify(s));},{key:SAVE_KEY,id:alias.topic,before:alias.before,after:alias.after,correct:topic.question.answers[topic.question.correct]});await p.reload();await p.locator('.world-mini-question .quiz-answer').first().waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);assert.deepEqual(await p.locator('.world-mini-question .quiz-answer > span:last-of-type').allTextContents(),topic.question.answers,'cold offline duplicate alias order also displays all three canonical choices');assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect').count(),1);const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(saved.favorites,original.favorites);assert.deepEqual(saved.games,original.games);report.answerWordingOffline={coldNavigatorOffline:true,duplicateOrderFallback:true,legacyOrder:true,wrongRemainsWrong:true,reload:true,otherProgressPreserved:true};
 }
+
+// Aufgabe 10 (Risiko 1): Ein Kind hat eine Frage richtig beantwortet, danach wurde die Frage umformuliert; die Antworten
+// blieben gleich. Ein ausgedachter Altpass mit der alten richtigen Antwort: Die Karte zeigt sie als gewählt und richtig,
+// die Antworten bleiben gesperrt und learned:<id> bleibt, auch nach Neuladen. Der Seeadler steht laut Plan zuerst.
+export const UMFORMULIERTE_KARTEN=[alias.topic,'animal-red-kangaroo','animal-barn-owl','invention-bicycle','invention-elevator'];
+export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,report){
+ const geprueft=[];
+ for(const id of UMFORMULIERTE_KARTEN){
+  const t=catalog.find(x=>x.id===id),richtig=t.question.answers[t.question.correct];
+  const progress=emptyProgress();progress.discoveries=['topic:'+id,'learned:'+id];progress.gameSessions={['topic:'+id]:{items:[...t.question.answers],topicAnswer:richtig}};
+  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
+  const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+  const pruefen=async()=>{
+   const mini=p.locator('section.world-mini-question');
+   await mini.locator('.rate-mal-frage').getByText(t.question.prompt,{exact:true}).waitFor();
+   await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();
+   await mini.getByText(t.question.why,{exact:true}).waitFor();
+   await p.locator('.wissenskarte-gelernt').waitFor();
+   const knoepfe=mini.locator('.quiz-answer');assert.equal(await knoepfe.count(),t.question.answers.length);
+   for(const knopf of await knoepfe.all())assert.equal(await knopf.isDisabled(),true,id+': die Antworten bleiben gesperrt');
+   assert.ok((await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).discoveries.includes('learned:'+id),id+': learned bleibt');
+  };
+  try{
+   await p.goto(base+'#world/topic/'+id);await ready(p);await pruefen();
+   await imagesSettled();await p.reload();await ready(p);await pruefen();
+   geprueft.push(id);
+  }finally{await c.close();}
+ }
+ report.checks.push('Alte richtige Antwort nach umformulierter Frage bleibt gewählt und richtig, learned bleibt (390 px, mit Neuladen): '+geprueft.join(', '));
+ // Gibt es die gespeicherte Antwort nicht mehr (Antworten wurden später neu gefasst), sagt die Karte das kurz und lässt
+ // neu wählen; die gespeicherte Antwort bleibt unverändert, bis das Kind wählt (BACKLOG 17).
+ const t=catalog.find(x=>x.id===alias.topic),alt='Eine frühere, ausgedachte Antwort';
+ const progress=emptyProgress();progress.gameSessions={['topic:'+t.id]:{items:[...t.question.answers],topicAnswer:alt}};
+ const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+ await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
+ const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+ const pruefen=async()=>{
+  const mini=p.locator('section.world-mini-question');
+  await mini.getByText('Hier gibt es neue Antworten.',{exact:true}).waitFor();
+  assert.equal(await mini.locator('.retained-mini-choice').innerText(),alt);
+  for(const knopf of await mini.locator('.quiz-answer').all())assert.equal(await knopf.isDisabled(),false,'neu wählen geht');
+  assert.equal((await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+t.id].topicAnswer,alt,'die gespeicherte Antwort bleibt');
+ };
+ try{await p.goto(base+'#world/topic/'+t.id);await ready(p);await pruefen();await imagesSettled();await p.reload();await ready(p);await pruefen();}finally{await c.close();}
+ report.checks.push('Frühere Antwort, die es nicht mehr gibt: kurzer Hinweis, neu wählen möglich, gespeicherte Antwort bleibt (390 px, mit Neuladen)');
+}

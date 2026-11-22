@@ -67,10 +67,10 @@ export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onL
       </div>
       <LearningFeedback active={antwort !== null}>
         {antwort && <>
-          <strong>{fruehereAuswahl ? 'Deine frühere Auswahl bleibt gespeichert' : richtig ? 'Passende Antwort gewählt.' : 'Überlege noch einmal.'}</strong>
+          <strong>{fruehereAuswahl ? 'Hier gibt es neue Antworten.' : richtig ? 'Passende Antwort gewählt.' : 'Überlege noch einmal.'}</strong>
           <p>
             {fruehereAuswahl
-              ? <>Du hattest <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gehört zu früheren Auswahlmöglichkeiten. Oben siehst du die aktuelle Auswahl. Du kannst sie erneut prüfen; die frühere Antwort wird dabei nicht automatisch umgedeutet.</>
+              ? <>Früher hast du <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gibt es jetzt nicht mehr. Wähle oben eine Antwort aus.</>
               : richtig
                 ? q.why
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.')}

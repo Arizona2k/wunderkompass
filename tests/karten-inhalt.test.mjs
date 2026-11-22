@@ -84,3 +84,52 @@ test('neue und durchgesehene Verbindungen (ab 22.11.2026) sind kurz und kindgere
   ]);
   assert.deepEqual(fehler, []);
 });
+
+// Aufgabe 10 (A2): Aufräumen über alle Karten.
+test('kein Steckbrief-Eintrag wiederholt wörtlich einen Abschnitt', () => {
+  const doppelt = catalog.flatMap(t => {
+    const text = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? [])].join('\n');
+    return (t.facts ?? []).filter(f => f.text && text.includes(f.text)).map(f => t.id + ': ' + f.label);
+  });
+  assert.deepEqual(doppelt, []);
+});
+
+test('kein „Schon gewusst?“-Satz steht auf mehr als einer Karte', () => {
+  const karten = new Map();
+  for (const t of catalog) if (t.surprise) karten.set(t.surprise, [...(karten.get(t.surprise) ?? []), t.id]);
+  assert.deepEqual([...karten.values()].filter(ids => ids.length > 1), []);
+});
+
+test('keine Rate-mal-Frage verweist auf Text', () => {
+  // „nach oben“ oder „oben über“ sind Richtungen, kein Verweis auf den Text.
+  const verweis = /beschrieben|\b(wie|siehe) oben\b|oben (genannt|stehend)|im Text|diese[rn]? Karte/i;
+  const fragen = t => [t.question, ...(t.moreQuestions ?? [])].filter(Boolean);
+  assert.deepEqual(catalog.filter(t => fragen(t).some(q => verweis.test(q.prompt))).map(t => t.id), []);
+});
+
+test('keine Erwachsenensätze im Kinderteil', () => {
+  // Gesucht in intro, paragraphs, more, facts, surprise und den Texten der Erfindungsschritte
+  // (die Karte zeigt sie alle); Muster und Treffer stehen im Ledger von Aufgabe 10.
+  // Solche Hinweise gehören in sourceNote („Für Erwachsene“).
+  const erwachsen = /Zeitanker|Modellgrenze|zurückdatiert|Lernziel|Lernmodell|Vorläufer und Weiterentwicklungen|Forscherblick/;
+  const funde = catalog.flatMap(t => [
+    t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).flatMap(f => [f.label, f.text]), t.surprise,
+    ...(t.invention?.stages ?? []).map(s => s.text),
+  ].filter(text => text && erwachsen.test(text)).map(text => t.id + ': ' + text.slice(0, 50)));
+  assert.deepEqual(funde, []);
+});
+
+test('„Schon gewusst?“ wiederholt keinen Satz der Karte', () => {
+  // Die Überraschung soll neu sein: kein Satz daraus steht schon in Einleitung, Abschnitten, „Mehr erfahren“ oder Steckbrief.
+  const saetze = text => text.split(/(?<=[.!?])\s+/).map(s => s.trim()).filter(s => s.length > 15);
+  const doppelt = catalog.filter(t => t.surprise).flatMap(t => {
+    const rest = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).map(f => f.text)].filter(Boolean).join(' ');
+    return saetze(t.surprise).filter(s => rest.includes(s)).map(s => t.id + ': ' + s);
+  });
+  assert.deepEqual(doppelt, []);
+});
+
+test('wrongReasons passt zu den Antworten', () => {
+  const falsch = catalog.filter(t => t.questionFeedback?.wrongReasons && t.questionFeedback.wrongReasons.length !== t.question?.answers.length);
+  assert.deepEqual(falsch.map(t => t.id), []);
+});
