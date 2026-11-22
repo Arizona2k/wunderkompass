@@ -6,14 +6,14 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-statistics-content.json',import.meta.url),'utf8'));
 const whyIndex=JSON.parse(await fs.readFile(new URL('../../exports/content/why-questions.json',import.meta.url),'utf8'));
 const snapshot=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
 
 export async function bookStatisticsView(page,report,width,{shots=null,engine='chromium',large=false,native=false,offline=false,captureSession=null}={}){
- assert.equal(await page.evaluate(()=>innerWidth),width,'actual statistics viewport matches evidence');
+ assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width,'actual statistics viewport matches evidence');
  const original=await snapshot(page),initial=await page.evaluate(()=>location.hash),wasLarge=await page.locator('.earth-app').evaluate(el=>el.classList.contains('large-reading')),proof=[];
  await page.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),large);
  try{
@@ -39,7 +39,7 @@ export async function bookStatisticsView(page,report,width,{shots=null,engine='c
    const sources=study.locator('details').filter({has:page.getByText('Quellen und Prüfstand',{exact:true})});assert.deepEqual(await sources.locator('a').evaluateAll(es=>es.map(e=>e.href)),item.sources.map(s=>s.url));await sources.getByText('Belegstellenabgleich: '+pack.sourceReadOn.split('-').reverse().join('.')+'.',{exact:false}).waitFor();
    const figure=study.locator('[data-book-statistics-figure]');assert.equal(await figure.getAttribute('data-book-statistics-figure'),item.figure);const modelStates=await assertBookStatisticsFigure(figure,item.figure,{term,onState:shots&&!native&&!offline?async selected=>{await figure.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-statistics-'+kind+'-'+(kind==='words'?Object.keys(pack.learning):Object.keys(pack.whyLearning)).indexOf(term)+'-choice-'+selected+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});}:null});await figure.getByText('Eigene Modellzeichnung mit KI-Unterstützung.',{exact:false}).waitFor();
    if(item.question){const q=item.question;for(const i of q.answers.map((_,i)=>i).filter(i=>i!==q.correct).concat(q.correct)){await study.getByRole('button',{name:q.answers[i],exact:true}).click();assert.equal(await study.locator('.book-thinking [role=status]').innerText(),'Deine Auswahl: '+q.answers[i].trimEnd()+(['.','!','?','…'].includes(q.answers[i].trimEnd().at(-1))?' ':'. ')+(i===q.correct?'Das passt. '+q.why:'Noch nicht passend. '+q.wrongReasons[i]));}}
-   const overflowing=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2);if(overflowing)report.statisticsOverflow={term,kind,width,large,...await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth,elements:[...document.querySelectorAll('body *')].filter(e=>e.getClientRects().length&&!e.closest('svg')).flatMap(e=>{const r=e.getBoundingClientRect();return r.right>innerWidth+2||r.left< -2?[{tag:e.tagName,class:e.className,text:e.textContent.slice(0,90),left:r.left,right:r.right}]:[];}).slice(-35)}))};assert.equal(overflowing,false);
+   const overflowing=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2);if(overflowing)report.statisticsOverflow={term,kind,width,large,...await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,viewport:document.documentElement.clientWidth,elements:[...document.querySelectorAll('body *')].filter(e=>e.getClientRects().length&&!e.closest('svg')).flatMap(e=>{const r=e.getBoundingClientRect();return r.right>document.documentElement.clientWidth+2||r.left< -2?[{tag:e.tagName,class:e.className,text:e.textContent.slice(0,90),left:r.left,right:r.right}]:[];}).slice(-35)}))};assert.equal(overflowing,false);
    const failures=await card.evaluate((root,{large})=>{const bounds=root.getBoundingClientRect();return[...root.querySelectorAll('p,h4,summary,button,a,figcaption,svg[role=img],.book-model-key li,[data-book-statistics-figure] li,[data-book-statistics-figure] .model-caption')].filter(el=>el.getClientRects().length).flatMap(el=>{const r=el.getBoundingClientRect(),interactive=el.matches('summary,button,a'),legend=el.matches('[data-book-statistics-figure] figcaption,.book-model-key li,[data-book-statistics-figure] li,[data-book-statistics-figure] .model-caption,[data-book-statistics-figure] p');return r.left<bounds.left-1||r.right>bounds.right+1||el.scrollWidth>el.clientWidth+2||interactive&&(r.width<43.9||r.height<43.9)||legend&&parseFloat(getComputedStyle(el).fontSize)<(large?19.9:15.9)?[{tag:el.tagName,text:el.textContent.slice(0,100),width:r.width,height:r.height,font:getComputedStyle(el).fontSize}]:[];});},{large});assert.deepEqual(failures,[],'statistics content/drawing/16-20px legends/44px controls fit actual card');
    if(width===320){await prepareAxe(page);assert.deepEqual(await card.evaluate(async el=>(await window.axe.run(el,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))),[]);}
    const nativeCaptures=[];
@@ -103,7 +103,7 @@ export async function bookStatisticsNetworkView(page,{shots=null,engine='chromiu
   const mean=meanFigure.locator('[data-mean-line]'),originalMean=await mean.getAttribute('d');assert.equal(originalMean,'M75 25V205');
   try{await mean.evaluate(n=>n.setAttribute('d','M125 25V205'));await assert.rejects(()=>assertBookStatisticsFigure(meanFigure,'mean-and-median'),/native mean position/);}finally{await mean.evaluate((n,v)=>n.setAttribute('d',v),originalMean);}
   await assertBookStatisticsFigure(meanFigure,'mean-and-median');proof.differentMeanPositionNegativeDetected=true;
-  assert(browserErrorsComplete(proof));return proof;
+  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-statistics-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-statistics-figure'),html:e.outerHTML}))).catch(()=>[])};

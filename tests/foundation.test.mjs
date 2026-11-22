@@ -39,4 +39,6 @@ test('authorised aggregate growth stays measured while initial and individual bu
  const large={totalJsBytes:100000000,totalJsGzipBytes:50000000,journeyInquiryBytes:20000000,journeyInquiryGzipBytes:10000000};
  assert.deepEqual(violations({...large,...c.build},c.build),[]);assert.equal(observedTrends(large,c.observeOnly).totalJsGzipBytes.current,50000000);assert.throws(()=>observedTrends({},c.observeOnly),/Missing observed/);
  for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','entryCssGzipBytes','largestJsBytes','worldGeometryBytes']){assert.ok(c.build[key]>0);assert.equal(violations({...c.build,[key]:c.build[key]+1},c.build)[0].metric,key);}
+ // The browser speed check needs a JS budget for every kind of entry it opens (tests/browser/foundation.mjs).
+ for(const key of ['homeJsBytes','areaJsBytes','topicJsBytes'])assert.ok(c.browser[key]>0,'browser budget '+key);
 });

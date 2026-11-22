@@ -5,7 +5,7 @@ const NEWS_REMOVAL_WIDTHS=[320,360,390,768,1024,1440,1920];
 const REMOVED_NEWS_ROUTES=['news','news/girl-day-2026','news/unknown'];
 const absent=async p=>{
  assert.equal(await p.locator('.news-preview,.news-page,[data-news-id],a[href^="#news"]').count(),0,'removed news has no active view, article or link');
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
 };
 export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
  const observed=[],requests=[];

@@ -28,7 +28,7 @@ export async function connectedDiscoveries(page,ready,report,width){
   await page.evaluate(id=>location.hash='world/topic/'+id,t.id);
   await page.getByRole('heading',{name:t.title,exact:true}).waitFor();
   assert.ok(await page.locator('.connection-card').count());
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,t.id+' overflow');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,t.id+' overflow');
  }
  await page.evaluate(()=>location.hash='world/topic/science-water-cycle');
  for(const name of ['1. Verdunsten','2. Kondensieren','3. Niederschlag','4. Abfließen & versickern'])await page.getByRole('button',{name,exact:true}).click();
@@ -91,7 +91,7 @@ export async function connectedDiscoveries(page,ready,report,width){
     await hint.getByText(hints[q.id].steps[1],{exact:true}).waitFor();
    }
    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
    const answers=room.locator('.quiz-answer');
    if(i===0){
     await answers.filter({has:page.getByText(q.answers.find((_,j)=>j!==q.correct),{exact:true})}).click();

@@ -18,7 +18,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  const correct=answerButton(q.answers[q.correct]);await correct.focus();await page.keyboard.press('Enter');await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
  await page.waitForFunction(({id,word,saveKey})=>JSON.parse(localStorage.getItem(saveKey)).progress.gameSessions['topic:'+id]?.topicAnswer===word,{id,word:q.answers[q.correct],saveKey});
  assert.equal(await mini.locator('.quiz-answer:not([disabled])').count(),0);assert.equal((await saved()).review[reviewKey].seen,priorSeen+1);
- const geometry=await mini.evaluate(root=>({width:innerWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
+ const geometry=await mini.evaluate(root=>({width:document.documentElement.clientWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
  assert(geometry.pageWidth<=geometry.width+2);assert(geometry.buttons.every(b=>b.left>=-1&&b.right<=geometry.width+1&&b.width>=43.9&&b.height>=43.9));
  const axeWasAvailable=await page.evaluate(()=>typeof window.axe?.run==='function');
  await page.reload();await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();

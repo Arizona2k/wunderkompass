@@ -32,7 +32,7 @@ export async function bookRelatedWordView(page,report,width,{large=false,native=
    await navigationsTempo(page,engine);await budget('Back from '+link.term+' to '+term,1,async()=>{await page.goBack();await card.waitFor();await page.waitForFunction(({term,target})=>document.querySelector('[data-book-related-words="'+term+'"]')?.open&&document.activeElement?.dataset.routeFocus==='book-word-related-'+term+'-'+target,{term,target:link.term});});assert(await target.evaluate(e=>e.matches(':focus-visible')),'Back restores the actual original keyboard link without test refocusing');
    rows.push({term,target:link.term,width,large,native,offline,canonicalForwardRelation:true,actualKeyboardNavigationAndBackFocus:true,oldDefinitionPreserved:true,...(link.kind==='why'?{targetKind:'why'}:{})});
   }
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
   // Also between the steps (opening the list, Tab, focus) the app writes no extra history.
   const termUsed=navigationen(page)-termStart;assert(termUsed<=1+3*links.length,`${term} used ${termUsed} navigations (budget ${1+3*links.length})`);
  }

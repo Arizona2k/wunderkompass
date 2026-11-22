@@ -60,9 +60,10 @@ export const SUITES = [
   }},
   {name: 'kern-huelle', set: 'ci', run: kernHuelle},
   {name: 'people-learning', set: 'ci', run: ({browser, base, ready, report, shots}) => peopleLegacyRound(browser, base, ready, report, shots)},
+  // Tempo (Ladegröße je Bereich, Layout-Rutschen): schon im PR, damit zu große Seiten früh auffallen. Misst nur Chromium.
+  {name: 'performance', set: 'ci', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},
 
   // FULL: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
-  {name: 'performance', set: 'full', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},
   {name: 'components', set: 'full', chromiumOnly: true, run: flow(componentFlow)},
   {name: 'offline-resilience', set: 'full', solo: true, run: async ({browser, shots, engine, report}) => {
     report.offlineResilience = await offlineResilience(browser, {port: await freePort(), shots, kind: engine});

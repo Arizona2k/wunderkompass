@@ -7,8 +7,8 @@ export const opticsTopics=catalog.filter(t=>['invention-camera','invention-teles
 assert.equal(opticsTopics.length,3);
 const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope > summary').click();};
 async function geometry(page,article){
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'optical article reflow');
- const bad=await article.evaluate(root=>{const bad=[];for(const el of root.querySelectorAll('h2,h3,h4,p,summary,button,figcaption,small,.part-name,.story-step-label')){if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))continue;const r=el.getBoundingClientRect();if(r.width&&(r.left< -2||r.right>innerWidth+2||el.scrollWidth>el.clientWidth+2))bad.push(el.tagName+':'+el.textContent.slice(0,80));}return bad;});assert.deepEqual(bad,[],'visible optical text and controls fit');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'optical article reflow');
+ const bad=await article.evaluate(root=>{const bad=[];for(const el of root.querySelectorAll('h2,h3,h4,p,summary,button,figcaption,small,.part-name,.story-step-label')){if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))continue;const r=el.getBoundingClientRect();if(r.width&&(r.left< -2||r.right>document.documentElement.clientWidth+2||el.scrollWidth>el.clientWidth+2))bad.push(el.tagName+':'+el.textContent.slice(0,80));}return bad;});assert.deepEqual(bad,[],'visible optical text and controls fit');
  for(const button of await article.locator('.story-stations button,.part-button,[data-invention-experiment] button').all()){const r=await button.boundingBox();if(r)assert.ok(r.width>=44&&r.height>=44,'optical control has an actual44px touch target');}
 }
 export async function opticsSourceView(page,{width,shots,engine='chromium',native=false,questions=false,touch=false}={}){

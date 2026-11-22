@@ -35,7 +35,7 @@ export async function engineJourneys({browser, base, ready, monitor, report, sho
       assert.equal(await inquiry.getByText(task.why, {exact: true}).count(), 0, chapter.id + ': falsche Antwort zeigt die Erklärung nicht');
       await inquiry.locator('.quiz-answer').nth(task.correct).click();
       await inquiry.getByText(task.why, {exact: true}).waitFor();
-      assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2), false, chapter.id + ': kein waagerechter Überlauf');
+      assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 2), false, chapter.id + ': kein waagerechter Überlauf');
       checked.push(chapter.id);
     }
     report.checks.push(`Lernreisen ${engine}: ${checked.length} erste Kapitel mit falscher und richtiger Antwort`);
@@ -52,7 +52,7 @@ export async function engineJourneys({browser, base, ready, monitor, report, sho
     for (const width of WIDTHS) {
       await p.setViewportSize({width, height: 900});
       await p.evaluate(() => document.querySelector('.earth-app').classList.add('large-reading'));
-      assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2), false, `große Schrift ${width}: kein waagerechter Überlauf`);
+      assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 2), false, `große Schrift ${width}: kein waagerechter Überlauf`);
       await p.locator('.journey-levels button').nth(1).focus();
       await p.screenshot({path: path.join(shots, `journey-${width}.png`), fullPage: true, animations: 'disabled'});
     }

@@ -21,7 +21,7 @@ async function exactRound(p,old,orders,{wrong=false}={}){
   assert.equal(await room.locator('.quiz-answer.is-incorrect>span:nth-of-type(2)').innerText(),old.answers[2]);
   assert.equal(await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).count(),0);
  }
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
 }
 
 export async function retainedAnimalRounds(browser,base,ready,monitor,report,shots){

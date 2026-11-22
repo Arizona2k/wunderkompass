@@ -13,7 +13,7 @@ export async function globeMissionFlow(page,{shots=null}={}){
   await room.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
   await room.getByRole('button',{name:'Zeig mir den Ort',exact:true}).click();assert.equal((await state()).missions.length,i,'revealing the place does not earn a mission');
   await room.getByRole('button',{name:'Zeig mir die Region',exact:true}).click();assert.equal((await state()).missions.length,i,'revealing the region does not earn a mission');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+1),false);
   for(const button of await room.getByRole('button').all())assert.equal(await button.evaluate(e=>e.getBoundingClientRect().height>=48),true,'mission controls retain48px touch targets');
   if(shots){await room.scrollIntoViewIfNeeded();await room.screenshot({path:shots+'/mission-'+i+'-hint-'+page.viewportSize().width+'.png',animations:'disabled'});}
   if(kind==='Linien')await page.locator('.orientation-buttons').getByRole('button',{name,exact:true}).click();

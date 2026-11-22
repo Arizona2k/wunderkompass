@@ -68,7 +68,7 @@ export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',s
 }
 
 async function geometry(root,label){
- const result=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h3,h4,button,summary')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])')?.querySelector(':scope > summary')===e)).flatMap(e=>{const r=e.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&r.height<44)?[{text:e.textContent.slice(0,65),x:r.x,width:r.width,height:r.height}]:[];})}));
+ const result=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2,bad:[...root.querySelectorAll('p,h3,h4,button,summary')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])')?.querySelector(':scope > summary')===e)).flatMap(e=>{const r=e.getBoundingClientRect();return r.left< -2||r.right>document.documentElement.clientWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&r.height<44)?[{text:e.textContent.slice(0,65),x:r.x,width:r.width,height:r.height}]:[];})}));
  assert.equal(result.overflow,false,label+' page overflow');assert.deepEqual(result.bad,[],label+' readable text and44px controls');
 }
 export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='normal'}={}){

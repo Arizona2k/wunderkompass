@@ -12,8 +12,8 @@ const legacy=JSON.parse(await fs.readFile(new URL('../fixtures/legacy-people18-b
 const saveKey='erde-entdecken:save:v3';
 const reveal=async d=>{if(!await d.evaluate(e=>e.open))await d.locator(':scope > summary').click();};
 async function geometry(page,box){
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'biography activity has no page overflow');
- const bad=await box.evaluate(root=>{const found=[],walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim()||!n.parentElement.getClientRects().length||n.parentElement.closest('details:not([open])')&&!n.parentElement.closest('summary'))continue;const r=document.createRange();r.selectNodeContents(n);for(const b of r.getClientRects())if(b.width&&(b.left< -2||b.right>innerWidth+2))found.push(n.textContent);}return found;});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'biography activity has no page overflow');
+ const bad=await box.evaluate(root=>{const found=[],walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim()||!n.parentElement.getClientRects().length||n.parentElement.closest('details:not([open])')&&!n.parentElement.closest('summary'))continue;const r=document.createRange();r.selectNodeContents(n);for(const b of r.getClientRects())if(b.width&&(b.left< -2||b.right>document.documentElement.clientWidth+2))found.push(n.textContent);}return found;});
  assert.deepEqual(bad,[],'actual biography text and model labels fit the viewport');
  for(const button of await box.getByRole('button').all()){const b=await button.boundingBox();if(b)assert(b.width>=43.9&&b.height>=43.9,'biography control has an actual44px touch target');}
 }

@@ -54,7 +54,7 @@ export async function geographyFacts(page, report) {
     }
     await details.getByRole('link').first().waitFor();
     assert.ok(await details.getByRole('link').count()>0, name+' source remains visible');
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,name+' geography overflow');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,name+' geography overflow');
   }
   for (const [name, meaning] of [
     ['Bujumbura', 'Wirtschaftszentrum'], ['Cotonou', 'Regierungssitz'],

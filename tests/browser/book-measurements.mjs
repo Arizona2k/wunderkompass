@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-measurement-content.json',import.meta.url),'utf8'));
@@ -18,13 +18,13 @@ async function open(page,term){
  return {card,study};
 }
 async function geometry(page,card){
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'Book has no viewport overflow');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'Book has no viewport overflow');
  const failures=await card.evaluate(root=>{const r=root.getBoundingClientRect();return [...root.querySelectorAll('p,h4,summary,button,input,label,figcaption,svg[role=img],a')].filter(el=>el.getClientRects().length).flatMap(el=>{const b=el.getBoundingClientRect(),interactive=el.matches('summary,button,a,input');return b.left<r.left-1||b.right>r.right+1||el.scrollWidth>el.clientWidth+2||interactive&&(b.height<43.9||b.width<43.9)?[{tag:el.tagName,text:el.textContent.slice(0,80),left:b.left,right:b.right,width:b.width,height:b.height,cardWidth:r.width}]:[];});});
  assert.deepEqual(failures,[],'readable text/drawings and reachable44px controls inside the current word');
 }
 
 export async function bookMeasurementView(page,report,width,{shots=null,engine='chromium',large=false,native=false,offline=false}={}){
- assert.equal(await page.evaluate(()=>innerWidth),width,'actual SI viewport matches its evidence label');
+ assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width,'actual SI viewport matches its evidence label');
  const original=await snapshot(page),initial=await page.evaluate(()=>location.hash),wasLarge=await page.locator('.earth-app').evaluate(el=>el.classList.contains('large-reading')),proof=[];
  await page.locator('.earth-app').evaluate((el,large)=>el.classList.toggle('large-reading',large),large);
  try{
@@ -81,7 +81,7 @@ export async function bookMeasurementNetworkView(page,{shots=null,engine='chromi
   context=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce',serviceWorkers:'block'});let arrived;const started=new Promise(resolve=>arrived=resolve),held=new Promise(resolve=>release=resolve);requests=0;
   await context.route(pattern,async route=>{requests++;arrived();await held;await route.continue();});child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);await child.locator('.book-filter-panel>summary').click();await child.getByRole('tablist',{name:'Wissenswörter nach Thema',exact:true}).getByRole('tab',{name:'Messen',exact:true}).click();
   const meter=cardFor(child,'Meter').locator('.book-study'),kelvin=cardFor(child,'Kelvin').locator('.book-study');await meter.locator(':scope>summary').click();await started;await meter.locator(':scope>summary').click();await kelvin.locator(':scope>summary').click();assert.equal(requests,1);release();await kelvin.getByText(pack.learning.Kelvin.benefit,{exact:true}).waitFor();await meter.locator(':scope>summary').click();await meter.getByText(pack.learning.Meter.benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
-  assert(browserErrorsComplete(proof));return proof;
+  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-si-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

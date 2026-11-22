@@ -31,7 +31,7 @@ export async function core({browser, base, ready, monitor, report, shots}) {
       assert.equal(await p.title(), 'WunderKompass · Die große Abenteuerwelt des Wissens');
 
       const inspect = async name => {
-        assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2), false, name);
+        assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 2), false, name);
         for (const image of await p.locator('.world-article img').all()) {
           await image.evaluate(async element => { await element.decode(); if (!element.naturalWidth) throw Error('Undecoded image'); });
         }

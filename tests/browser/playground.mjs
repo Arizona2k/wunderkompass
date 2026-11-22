@@ -16,7 +16,7 @@ const select=p=>bereich(p,'games').click();
 const open=(p,id)=>p.locator('[data-game-key="classic:'+id+'"]').click();
 const back=p=>p.getByRole('button',{name:'Alle Spiele',exact:true}).click();
 async function geometry(p,selector){
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'playground viewport overflow');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'playground viewport overflow');
  const small=await p.locator('.playground button:visible,.playground select:visible,.playground summary:visible,.classic-learning button:visible,.classic-learning summary:visible').evaluateAll(nodes=>nodes.filter(n=>{const r=n.getBoundingClientRect();return r.height<44||r.width<44;}).map(n=>n.textContent.slice(0,60)));assert.deepEqual(small,[],'44px game touch targets');
  const bad=await p.locator(selector).evaluateAll(nodes=>nodes.filter(n=>n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden').filter(n=>n.scrollWidth>n.clientWidth+2).map(n=>n.textContent.slice(0,80)));
  assert.deepEqual(bad,[],'game text must wrap');

@@ -42,7 +42,7 @@ export async function assertInsideDiagrams(visual,id,selected){
 }
 
 export async function insideDiagramViews(page,{width,large=true,native=false,offline=false,networkOffline=false,serverStopped=false,captureSession=null,shots=null,engine='chromium'}){
- assert.equal(await page.evaluate(()=>innerWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),native?2:1);assert.equal(await page.evaluate(()=>!navigator.onLine),networkOffline);
+ assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);assert.equal(await page.evaluate(()=>devicePixelRatio),native?2:1);assert.equal(await page.evaluate(()=>!navigator.onLine),networkOffline);
  if(offline)assert(serverStopped||networkOffline,'cached diagram proof requires a stopped origin or disconnected client');
  const rows=[];
  for(const id of['inside:4','volcanoes:1','volcanoes:3']){
@@ -50,7 +50,7 @@ export async function insideDiagramViews(page,{width,large=true,native=false,off
   const buttons=visual.locator('button');
   for(let selected=0;selected<await buttons.count();selected++){
    await buttons.nth(selected).focus();await page.keyboard.press('Enter');assert.equal(await buttons.nth(selected).getAttribute('aria-pressed'),'true');await assertInsideDiagrams(visual,id,selected);
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
    const metrics=await visual.locator('figcaption,.chapter-diagram-key span,button').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {font:parseFloat(getComputedStyle(e).fontSize),left:r.left,right:r.right,height:r.height,button:e.tagName==='BUTTON'};}));assert(metrics.every(m=>m.left>=-2&&m.right<=width+2&&m.font>=(large&&!m.button?20:16)&&(!m.button||m.height>=44)),'keys, limits and controls reflow at16/20px');
    if(shots){const file=path.join(shots,`journey-engine-${engine}-${id.replace(':','-')}-${selected}-${width}-${native?'native200-':''}${offline?'cold':'online'}-${large?'large':'normal'}.png`);await visual.locator('svg').scrollIntoViewIfNeeded();if(native)await captureNativeViewport(page,file,{cdp:captureSession});else await visual.screenshot({path:file,animations:'disabled'});}
    assert.equal(await page.evaluate(()=>!navigator.onLine),networkOffline);rows.push({id,selected,width,large,native,offline,networkOffline,serverStopped,actualSurfaceOrFormGeometry:true,keyboard:true});

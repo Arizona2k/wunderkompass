@@ -41,10 +41,10 @@ const saveKey='erde-entdecken:save:v3';
 async function open(p,id,index){await p.evaluate(route=>location.hash=route,'journeys/'+id+'/'+(index+1));await p.locator('[data-chapter-inquiry="'+id+':'+index+'"]').waitFor();}
 async function reveal(p,text){const summary=p.locator('summary').filter({hasText:text});if(!await summary.evaluate(el=>el.parentElement.open))await summary.click();}
 async function geometry(p,label){
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,label+' horizontal overflow');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,label+' horizontal overflow');
  const escaped=await p.locator('.journey-reader h1,.journey-reader h2,.journey-reader h3,.journey-reader h4,.journey-reader p,.journey-reader button,.journey-reader summary,.journey-reader textarea,.journey-reader a').evaluateAll(elements=>elements.flatMap(el=>{
   if(!el.getClientRects().length||el.closest('details:not([open])')&&!el.closest('summary'))return [];
-  const r=el.getBoundingClientRect();return r.left< -2||r.right>innerWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
+  const r=el.getBoundingClientRect();return r.left< -2||r.right>document.documentElement.clientWidth+2?[el.tagName+': '+el.textContent.slice(0,50)]:[];
  }));assert.deepEqual(escaped,[],label+' readable controls and text within viewport');
 }
 export async function assertJourneyDiagram(visual,id,selected){

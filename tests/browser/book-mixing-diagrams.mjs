@@ -1,7 +1,7 @@
 import {preserveOriginalDOM} from './preserve-original-dom.mjs';
 import assert from 'node:assert/strict';
 import * as model from '../../app/book-mixing-models.ts';
-async function geometry(figure){return figure.evaluate(el=>{const root=el.getBoundingClientRect(),svg=el.querySelector('svg').getBoundingClientRect(),buttons=[...el.querySelectorAll('button')].map(b=>{const r=b.getBoundingClientRect();return{text:b.textContent,width:r.width,height:r.height,left:r.left,right:r.right,disabled:b.disabled}});return{pageOverflow:document.documentElement.scrollWidth>innerWidth+2,root:{left:root.left,right:root.right},svg:{left:svg.left,right:svg.right,width:svg.width},buttons,paragraphFontSizes:[...el.querySelectorAll('p,li,code')].map(p=>parseFloat(getComputedStyle(p).fontSize))}});}
+async function geometry(figure){return figure.evaluate(el=>{const root=el.getBoundingClientRect(),svg=el.querySelector('svg').getBoundingClientRect(),buttons=[...el.querySelectorAll('button')].map(b=>{const r=b.getBoundingClientRect();return{text:b.textContent,width:r.width,height:r.height,left:r.left,right:r.right,disabled:b.disabled}});return{pageOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2,root:{left:root.left,right:root.right},svg:{left:svg.left,right:svg.right,width:svg.width},buttons,paragraphFontSizes:[...el.querySelectorAll('p,li,code')].map(p=>parseFloat(getComputedStyle(p).fontSize))}});}
 async function actualState(kind,selected,figure){
  const svg=figure.locator('svg');await svg.scrollIntoViewIfNeeded();await figure.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));const s=model.mixingState(kind,selected),text=await figure.innerText();
  if(kind==='individual-motion-and-flow'){

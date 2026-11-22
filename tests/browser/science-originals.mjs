@@ -76,7 +76,7 @@ export async function assertPressureContact(model){
 }
 
 async function geometry(page,root,label){
- const actual=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>innerWidth+2,bad:[...root.querySelectorAll('p,h2,h3,h4,button,summary,label,figcaption,.science-diagram-labels span')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).flatMap(e=>{const b=e.getBoundingClientRect();return b.left< -2||b.right>innerWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&b.height<44)?[{text:e.textContent.slice(0,80),left:b.left,right:b.right,height:b.height}]:[];})}));
+ const actual=await root.evaluate(root=>({overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2,bad:[...root.querySelectorAll('p,h2,h3,h4,button,summary,label,figcaption,.science-diagram-labels span')].filter(e=>e.getClientRects().length&&(!e.closest('details:not([open])')||e.closest('details:not([open])').querySelector(':scope>summary')===e)).flatMap(e=>{const b=e.getBoundingClientRect();return b.left< -2||b.right>document.documentElement.clientWidth+2||e.scrollWidth>e.clientWidth+2||(e.matches('button,summary')&&b.height<44)?[{text:e.textContent.slice(0,80),left:b.left,right:b.right,height:b.height}]:[];})}));
  assert.equal(actual.overflow,false,label+' page overflow');assert.deepEqual(actual.bad,[],label+' readable actual text and controls');
 }
 

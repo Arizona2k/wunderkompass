@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {worldSelectionReturnPage} from './learning-navigation.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
@@ -35,7 +35,7 @@ export async function nativeWorldSelectionReturns(chromium,options,base,report,s
   proof.fallbackSelectedFocus=[];
   for(const width of[640,320]){await page.setViewportSize({width:width*2,height:950});proof.fallbackSelectedFocus.push(await fallbackSelectedFocusAndBookReturn(page,base,{shots,engine:'chromium',width,native:true}));}
   assert.equal(proof.fallbackSelectedFocus.length,2);assert(proof.fallbackSelectedFocus.every(row=>row.actualDirectSelectedPlaceCamera&&row.actualBrowserBackSelectedCamera&&row.actualLaterResetStillWorks&&row.actualKeyboardRotationThenReset&&row.entirePriorCriticalPassFieldsPreserved&&row.actualCapture));
-  assert.equal(proof.views.length,2);assert(browserErrorsComplete(proof));proof.status='passed';report.nativeWorldSelection=proof;report.checks.push('Actual native200% touch640/320CSS x475CSS return to oversized cards preserves trusted reading position, exact focus, page/filter/reload context and synthetic personal data');
+  assert.equal(proof.views.length,2);assert(browserErrorsComplete(proof),browserErrorText(proof));proof.status='passed';report.nativeWorldSelection=proof;report.checks.push('Actual native200% touch640/320CSS x475CSS return to oversized cards preserves trusted reading position, exact focus, page/filter/reload context and synthetic personal data');
  }catch(error){proof.status='failed';proof.failure=error.stack;report.nativeWorldSelection=proof;await captureNativeViewport(page,path.join(shots,'journey-native-world-selection-original-failure.png')).catch(()=>{});throw error;}
  finally{await context.close();}
  return proof;

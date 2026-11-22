@@ -18,8 +18,8 @@ export async function assertBronzeEvidence(activity){
 }
 async function checkGeometry(p){
  await assertTextInsideControls(p,'.article-wayfinder button','article orientation');
- assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'history learning model has no page overflow');
- const bad=await p.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(el=>{const found=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width&&(r.left< -2||r.right>innerWidth+2))found.push(n.textContent);}return found;});assert.deepEqual(bad,[],'actual diagram labels/tasks are within the viewport');
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'history learning model has no page overflow');
+ const bad=await p.getByRole('region',{name:'Geschichtsdetektiv'}).evaluate(el=>{const found=[],walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while(n=walk.nextNode()){if(!n.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.width&&(r.left< -2||r.right>document.documentElement.clientWidth+2))found.push(n.textContent);}return found;});assert.deepEqual(bad,[],'actual diagram labels/tasks are within the viewport');
 }
 async function explore(p,t,{touch=false}={}){
  const activity=p.getByRole('region',{name:'Geschichtsdetektiv'});

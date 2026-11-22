@@ -32,7 +32,7 @@ export async function articleAtlas(page,ready,report,width,shots){
  const decode=async()=>{for(const image of await page.locator('.article-atlas img').all())await image.evaluate(async el=>{await el.decode();if(!el.naturalWidth)throw Error('Image not decoded')});};
  await page.addScriptTag({path:AXE_FILE});
  for(const id of examples){
-  await open(id);await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'article overflow '+id+' / '+width);
+  await open(id);await decode();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'article overflow '+id+' / '+width);
   const art=page.locator('.article-atlas'),nav=art.getByRole('navigation',{name:'In dieser Entdeckerkarte'});await assertTextInsideControls(page,'.article-wayfinder button','article orientation');
   if(drawingAlts[id]){
    await art.getByRole('img',{name:drawingAlts[id],exact:true}).waitFor();
@@ -90,11 +90,11 @@ export async function articleAtlas(page,ready,report,width,shots){
  await page.locator('.topic-illustration').screenshot({path:shots+'/moon-diagram-'+width+'.png'});
  await page.locator('.knowledge-network').filter({has:page.getByRole('heading',{name:'Warum hängt das zusammen?',exact:true})}).screenshot({path:shots+'/knowledge-network-'+width+'.png'});
  if(width===1440){
-  for(const t of topics){await page.evaluate(id=>location.hash='world/topic/'+id,t.id);await page.getByRole('heading',{name:t.title,exact:true}).waitFor();if(t.history?.sensitive)await page.getByRole('button',{name:'Die Erklärung anschauen',exact:true}).click();await page.locator('.article-atlas').waitFor();await decode();await assertWorkshopTypography(page.locator('.article-atlas'));if(t.model)await assertModelLabels(page.locator('.world-model'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'catalog overflow '+t.id)}
+  for(const t of topics){await page.evaluate(id=>location.hash='world/topic/'+id,t.id);await page.getByRole('heading',{name:t.title,exact:true}).waitFor();if(t.history?.sensitive)await page.getByRole('button',{name:'Die Erklärung anschauen',exact:true}).click();await page.locator('.article-atlas').waitFor();await decode();await assertWorkshopTypography(page.locator('.article-atlas'));if(t.model)await assertModelLabels(page.locator('.world-model'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'catalog overflow '+t.id)}
   report.checks.push('All '+topics.length+' article shells opened at 1440px including voluntary sensitive entry; images decoded and no horizontal overflow');
  }
  if(width===320){
-  await open('science-moon-phases');await page.locator('.earth-app').evaluate(el=>el.classList.add('large-reading'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'large reading 320');await page.locator('.article-wayfinder').getByRole('button',{name:/Mini-Frage$/}).click();await page.screenshot({path:shots+'/article-large-reading-320.png'});await page.locator('.earth-app').evaluate(el=>el.classList.remove('large-reading'));
+  await open('science-moon-phases');await page.locator('.earth-app').evaluate(el=>el.classList.add('large-reading'));assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'large reading 320');await page.locator('.article-wayfinder').getByRole('button',{name:/Mini-Frage$/}).click();await page.screenshot({path:shots+'/article-large-reading-320.png'});await page.locator('.earth-app').evaluate(el=>el.classList.remove('large-reading'));
   report.worldModelTypography=await worldModelTypographyView(page);
   report.blueprintTypography=await blueprintTypographyView(page);
   report.worldEntryNavigation=await worldEntryNavigation(page);
@@ -133,12 +133,12 @@ export async function articleAtlas(page,ready,report,width,shots){
 export async function offlineArticleAtlas(page,report){
  await page.evaluate(()=>location.hash='world/topic/science-tides');await page.locator('.tide-comparison').waitFor();await page.locator('.article-wayfinder').getByRole('button',{name:/Ausprobieren$/}).click();assert.equal(await page.locator('.article-experiment').evaluate(el=>el===document.activeElement),true);await page.locator('.tide-comparison').getByRole('button',{name:'Hochwasser',exact:true}).click();await page.getByText('Der hohe Wasserstand bedeckt hier mehr Küstenfläche.',{exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/topic/science-moon-phases');await page.locator('.world-mini-question .world-game-hint').waitFor();await page.locator('.world-mini-question .world-game-hint summary').click();assert.ok(await page.locator('.world-mini-question .world-game-hint p').innerText());await page.getByRole('img',{name:drawingAlts['science-moon-phases'],exact:true}).waitFor();assert.equal(await page.locator('.topic-illustration svg').count(),4);await readableLabels(page.locator('.topic-diagram-label'));
- report.peopleCold=await peopleSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.peopleCold.length,18);
- report.mechanicsCold=await mechanicsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.mechanicsCold.length,6);
- report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
- report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
- report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>innerWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,3,'all three historical activities survive the actual cold browser restart');
- report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
- report.waterPhotosynthesisCold=await waterPhotosynthesisView(page,{width:await page.evaluate(()=>innerWidth),questions:false});assert.equal(report.waterPhotosynthesisCold.length,2,'both individually revised articles and all six authored inquiries survive the same cold restart');
+ report.peopleCold=await peopleSourceView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),engine:'chromium-cold'});assert.equal(report.peopleCold.length,18);
+ report.mechanicsCold=await mechanicsSourceView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),engine:'chromium-cold'});assert.equal(report.mechanicsCold.length,6);
+ report.electricalCold=await electricalSourceView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),engine:'chromium-cold'});assert.equal(report.electricalCold.length,3);
+ report.opticsCold=await opticsSourceView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),engine:'chromium-cold'});assert.equal(report.opticsCold.length,3);
+ report.historySourceCold=await historySourceView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),engine:'chromium-cold'});assert.equal(report.historySourceCold.length,3,'all three historical activities survive the actual cold browser restart');
+ report.scienceOriginalCold=await scienceOriginalView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),questions:false});assert.equal(report.scienceOriginalCold.length,23,'all science originals, model states and voluntary inquiries survive the actual cold browser restart');
+ report.waterPhotosynthesisCold=await waterPhotosynthesisView(page,{width:await page.evaluate(()=>document.documentElement.clientWidth),questions:false});assert.equal(report.waterPhotosynthesisCold.length,2,'both individually revised articles and all six authored inquiries survive the same cold restart');
  report.checks.push('New article drawings, wayfinder, individual mini hint and coastal comparison work after actual cold offline restart');
 }

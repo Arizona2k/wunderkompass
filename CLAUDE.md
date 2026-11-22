@@ -45,7 +45,7 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm run typecheck` / `pnpm run lint` | Typen und Lint |
 | `pnpm test` | Unit-Tests (`tests/*.test.mjs`, Node-Testrunner) |
 | `pnpm run test:smoke` | Rauchtest im Browser: 360 px (Touch) und 1440 px, Bilder in `.qa-output/browser/` |
-| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links (zwei Suiten parallel) |
+| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Tempo (zwei Suiten parallel) |
 | `pnpm run test:full` | Große Prüfung, am Ende einer Phase; `-- --browser firefox` oder `webkit` oder `all` |
 | `pnpm run check` | Die ganze Prüfkette: typecheck, lint, test, build, test:browser |
 | `pnpm run export:data` | Inhaltsexporte nach `exports/content` (noch in Git, weil Browser-Tests sie lesen; Ablösung im BACKLOG) |
@@ -99,6 +99,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `code-pruefer` | Änderungen auf Fehler, besonders Pass, IDs und Links | opus / high |
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
 | `ideen-scout` | Vergleichbare Angebote ansehen, Ideen als Vorschläge liefern | sonnet / medium |
+| `technik-pruefer` | Arbeitssystem: späte Prüfungen, CI-Dauer, Unterlagen gegen Wirklichkeit, Pakete, Modellnamen, Vercel/GitHub | sonnet / high |
 
 - `fable` (stärkstes Modell) nur gezielt für große Abschlussprüfungen am Phasenende.
 - `haiku` für einfache Massenprüfungen, z. B. alle Karten auf kaputte Verweise.
