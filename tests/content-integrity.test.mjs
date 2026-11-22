@@ -135,10 +135,12 @@ function currentIds() {
   ids.why = exported('why-questions').map(w => w.question);
   // Lernrouten: Links #world/route/<id>, abgeschlossene Routen als `route:<id>` in den Entdeckungen.
   ids.routes = exported('world-routes').map(r => r.id);
+  // Zusatzfragen und „Stimmt das?“ der Wissenskarten: `world-question:<id>` im Pass, `claim:<id>` in den Spielständen.
+  ids['world-card-extras'] = topics.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? [])].map(x => x.id));
   return ids;
 }
 
-test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte, Wörter, Warum-Fragen, Routen) gibt es noch', () => {
+test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte, Wörter, Warum-Fragen, Routen, Zusatzfragen) gibt es noch', () => {
   assert.equal(exportError, undefined, 'Export-Prüflauf fehlgeschlagen');
   const current = currentIds();
   assert.deepEqual(Object.keys(STABLE).filter(family => !current[family]), [], 'Familie ohne heutige Quelle');

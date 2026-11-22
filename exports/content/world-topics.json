@@ -3,7 +3,7 @@
     "id": "animal-african-savanna-elephant",
     "category": "animals",
     "title": "Afrikanischer Savannenelefant",
-    "intro": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+    "intro": "Der Savannenelefant lebt in Afrika und ist das größte Tier an Land.",
     "paragraphs": [
       "Verwandte Weibchen leben mit ihren Jungen in Familien. Ein erfahrenes Weibchen führt sie.",
       "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen."
@@ -54,6 +54,10 @@
       {
         "label": "African savanna elephants – WWF US",
         "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+      },
+      {
+        "label": "San Diego Zoo Wildlife Alliance: Elefanten",
+        "url": "https://animals.sandiegozoo.org/animals/elephant"
       }
     ],
     "aliases": [
@@ -112,7 +116,63 @@
       ],
       "correct": 0,
       "why": "Der Rüssel ist Nase und bewegliches Greifwerkzeug zugleich."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Was steckt im Rüssel?",
+        "text": "Nase und Oberlippe bilden zusammen den Rüssel. Darin gibt es keine Knochen, nur Muskeln."
+      },
+      {
+        "question": "Wozu die großen Ohren?",
+        "text": "Seine großen, dünnen Ohren helfen ihm, sich abzukühlen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-african-savanna-elephant:stimmt-1",
+        "text": "Bei Savannenelefanten haben auch die Weibchen Stoßzähne.",
+        "isTrue": true,
+        "explanation": "Bei Afrikanischen Elefanten haben meist auch die Weibchen Stoßzähne, nur etwas kleinere."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-african-savanna-elephant:rate-1",
+        "prompt": "Wie trinkt ein Elefant?",
+        "answers": [
+          "Er spritzt sich Wasser ins Maul",
+          "Er schluckt es direkt durch den Rüssel",
+          "Er schleckt Wasser wie ein Hund"
+        ],
+        "correct": 0,
+        "why": "Er saugt Wasser ein Stück weit in den Rüssel. Dann spritzt er es sich ins Maul und schluckt.",
+        "hint": "Der Rüssel ist auch seine Nase."
+      },
+      {
+        "id": "animal-african-savanna-elephant:rate-2",
+        "prompt": "Wie schwer ist ein Elefantenbaby bei der Geburt?",
+        "answers": [
+          "Etwa 3 Kilogramm",
+          "Etwa 100 Kilogramm",
+          "Etwa 1.000 Kilogramm"
+        ],
+        "correct": 1,
+        "why": "Ein Savannenelefant wiegt bei der Geburt rund 100 Kilogramm. Nach etwa 20 Minuten kann er schon stehen.",
+        "hint": "Denk daran, wie riesig seine Eltern sind."
+      },
+      {
+        "id": "animal-african-savanna-elephant:rate-3",
+        "prompt": "Wer führt eine Elefantenherde an?",
+        "answers": [
+          "Der größte und stärkste Bulle",
+          "Ein junges Männchen",
+          "Meist das älteste Weibchen"
+        ],
+        "correct": 2,
+        "why": "Meist führt das älteste Weibchen die Herde, die Leitkuh. Erwachsene Männchen leben allein oder in kleinen Gruppen.",
+        "hint": "In der Herde leben Mütter mit ihren Jungen."
+      }
+    ]
   },
   {
     "id": "animal-lion",
@@ -916,11 +976,11 @@
       },
       {
         "label": "Was frisst es?",
-        "text": "Sie jagen vor allem Robben."
+        "text": "Vor allem Robben."
       },
       {
         "label": "Wie alt?",
-        "text": "Weibchen werden im Durchschnitt etwa 20–25 Jahre alt, Männchen etwa 15–18 Jahre."
+        "text": "Im Durchschnitt werden Weibchen etwa 20–25 Jahre alt, Männchen 15–18."
       },
       {
         "label": "Tiergruppe",
@@ -1009,7 +1069,51 @@
       ],
       "correct": 0,
       "why": "Meereis ist eine wichtige Jagdfläche. Eisbären leben in der Arktis, nicht am Südpol."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Wie jagt der Eisbär?",
+        "text": "Er wartet an einem Loch im Eis. Taucht eine Robbe zum Luftholen auf, packt er blitzschnell zu."
+      },
+      {
+        "question": "Warum friert er nicht?",
+        "text": "Er hat eine Fettschicht, bis zu zehn Zentimeter dick. Auch Luft im Fell hält ihn warm."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-polar-bear:stimmt-1",
+        "text": "Unter seinem hellen Fell hat der Eisbär schwarze Haut.",
+        "isTrue": true,
+        "explanation": "Seine Haut ist schwarz, man sieht sie nur nicht unter dem dichten Fell."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-polar-bear:rate-1",
+        "prompt": "Was machen die meisten Eisbären im Winter?",
+        "answers": [
+          "Sie halten einen langen Winterschlaf",
+          "Sie wandern zum Südpol",
+          "Sie jagen weiter Robben"
+        ],
+        "correct": 2,
+        "why": "Die meisten Eisbären jagen auch im Winter Robben. Nur Weibchen, die Junge erwarten, bleiben den ganzen Winter in einer Schneehöhle.",
+        "hint": "Denk daran, wo er seine Nahrung findet."
+      },
+      {
+        "id": "animal-polar-bear:rate-2",
+        "prompt": "Wie schwimmt ein Eisbär?",
+        "answers": [
+          "Er paddelt mit den Vorderpfoten",
+          "Er paddelt nur mit den Hinterbeinen",
+          "Er lässt sich auf Eisschollen treiben"
+        ],
+        "correct": 0,
+        "why": "Eisbären schwimmen sehr gut. Sie paddeln mit den breiten Vorderpfoten und lenken mit den Hinterbeinen.",
+        "hint": "Seine Pfoten sind sehr groß und breit."
+      }
+    ]
   },
   {
     "id": "animal-emperor-penguin",
@@ -1479,7 +1583,7 @@
     "id": "animal-common-octopus",
     "category": "animals",
     "title": "Gewöhnlicher Krake",
-    "intro": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+    "intro": "Der Krake lebt im Meer an den Küsten, zum Beispiel im Mittelmeer.",
     "paragraphs": [
       "Meist lebt er allein und versteckt sich in einer Felsspalte oder Höhle.",
       "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen."
@@ -1487,15 +1591,11 @@
     "facts": [
       {
         "label": "Wie groß?",
-        "text": "Sein Körperbeutel ist etwa 15–25 Zentimeter lang. Die langen Arme kommen noch dazu."
+        "text": "Ohne die Arme ist sein Körper etwa 15–25 Zentimeter lang."
       },
       {
         "label": "Was frisst es?",
         "text": "Er frisst zum Beispiel Krebse, Muscheln, Schnecken und Fische."
-      },
-      {
-        "label": "Wie alt?",
-        "text": "Er lebt meist nur etwa 1–2 Jahre."
       },
       {
         "label": "Tiergruppe",
@@ -1506,7 +1606,7 @@
       "Laut Aquarium La Rochelle gilt die Art als nicht gefährdet. Gesunde Küsten und Meere bleiben wichtig.",
       "Saubere Küsten und verantwortlicher Fischfang helfen. Wilde Kraken bleiben im Meer; ihre Verstecke werden nicht zerstört."
     ],
-    "surprise": "Mit seinen Armen kann er nicht nur fühlen, sondern auch chemische Spuren von Nahrung erkennen.",
+    "surprise": "Mit seinen Armen kann ein Krake auch schmecken.",
     "locations": [
       {
         "label": "Mittelmeer westlich von Korsika – Beispielregion",
@@ -1530,6 +1630,14 @@
       {
         "label": "Influx of Octopus … – Devon and Severn IFCA",
         "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+      },
+      {
+        "label": "Harvard Gazette: Kraken tasten und schmecken mit den Saugnäpfen",
+        "url": "https://news.harvard.edu/gazette/story/2020/10/octopus-suction-cups-hold-its-taste-and-touch-sensors/"
+      },
+      {
+        "label": "UC Berkeley, Museum of Paleontology: Weichtiere",
+        "url": "https://ucmp.berkeley.edu/taxa/inverts/mollusca/mollusca.php"
       }
     ],
     "aliases": [
@@ -1586,8 +1694,52 @@
         "Sechs"
       ],
       "correct": 0,
-      "why": "Ein Krake hat acht Arme mit Saugnäpfen. Arme und Körperbeutel werden unterschiedlich gemessen."
-    }
+      "why": "Ein Krake hat acht Arme. An jedem Arm sitzen viele Saugnäpfe."
+    },
+    "chapters": [
+      {
+        "question": "Wo wohnt der Krake?",
+        "text": "Meist lebt er allein in einer Felsspalte oder Höhle. Am Abend kommt er heraus und jagt."
+      },
+      {
+        "question": "Wie findet er Futter?",
+        "text": "Er tastet mit seinen Armen Felsen ab. So spürt er Beute auf."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-common-octopus:stimmt-1",
+        "text": "Ein Krake ist ein Fisch.",
+        "isTrue": false,
+        "explanation": "Ein Krake ist ein Weichtier, so wie Schnecken und Muscheln."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-common-octopus:rate-1",
+        "prompt": "Wie lange lebt ein Krake meistens?",
+        "answers": [
+          "Nur etwa 1 bis 2 Jahre",
+          "So lange wie ein Mensch",
+          "Mehr als 100 Jahre"
+        ],
+        "correct": 0,
+        "why": "Ein Krake lebt meist nur etwa 1 bis 2 Jahre. Das ist viel kürzer als ein Menschenleben.",
+        "hint": "Schon mit etwa einem Jahr kann er Junge bekommen."
+      },
+      {
+        "id": "animal-common-octopus:rate-2",
+        "prompt": "Wie bewegt sich ein Krake über den Meeresboden?",
+        "answers": [
+          "Er schwimmt immer wie ein Fisch",
+          "Er rollt sich wie ein Ball",
+          "Er läuft auf seinen Armen"
+        ],
+        "correct": 2,
+        "why": "Am Meeresboden läuft er auf seinen Armen. Schwimmen kann er auch, etwa mit einem Wasserstrahl auf der Flucht.",
+        "hint": "Überlege, womit er sich am Boden abstützen kann."
+      }
+    ]
   },
   {
     "id": "animal-green-sea-turtle",
@@ -2270,7 +2422,7 @@
     "id": "history-stone_tools",
     "category": "history",
     "title": "Werkzeuge aus Stein",
-    "intro": "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+    "intro": "In Kenia fanden Forschende die ältesten bekannten Werkzeuge aus Stein.",
     "paragraphs": [
       "Frühe Verwandte des Menschen konnten Steine so bearbeiten, dass sie nützliche Kanten bekamen."
     ],
@@ -2306,6 +2458,26 @@
       {
         "label": "Natural History Museum, London",
         "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html"
+      },
+      {
+        "label": "ScienceDaily (Stony Brook University): So entstanden die Lomekwi-Werkzeuge",
+        "url": "https://www.sciencedaily.com/releases/2015/05/150520131659.htm"
+      },
+      {
+        "label": "Harmand u. a. (Nature 2015), Kurzfassung bei PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25993961/"
+      },
+      {
+        "label": "Smithsonian Magazine: früheste Spuren von Feuer",
+        "url": "https://www.smithsonianmag.com/science-nature/the-earliest-example-of-hominid-fire-171693652/"
+      },
+      {
+        "label": "Smithsonian Magazine: Feuer vielleicht schon vor 1,8 Millionen Jahren",
+        "url": "https://www.smithsonianmag.com/smart-news/early-humans-may-have-used-fire-1-8-million-years-ago-nearly-doubling-the-age-of-the-oldest-known-evidence-for-the-feat-180989015/"
+      },
+      {
+        "label": "Natural History Museum London: Wann die Dinosaurier ausstarben",
+        "url": "https://www.nhm.ac.uk/discover/how-an-asteroid-caused-extinction-of-dinosaurs.html"
       }
     ],
     "aliases": [
@@ -2327,7 +2499,63 @@
       ],
       "correct": 0,
       "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Wie wird ein Stein zum Werkzeug?",
+        "text": "Frühe Verwandte des Menschen, die lange vor uns lebten, bearbeiteten Steine. So bekamen die Steine scharfe Kanten."
+      },
+      {
+        "question": "Wofür waren sie gut?",
+        "text": "Mit einer scharfen Kante konnten sie schneiden, was die bloße Hand nicht schafft. Mit Steinen ließ sich auch Nahrung zerschlagen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "history-stone_tools:stimmt-1",
+        "text": "Steinwerkzeuge gab es schon, bevor jemand Feuer nutzte.",
+        "isTrue": true,
+        "explanation": "Die ältesten Spuren von Feuer sind viel jünger als die ersten Steinwerkzeuge."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "history-stone_tools:rate-1",
+        "prompt": "Lebten damals noch große Dinosaurier?",
+        "answers": [
+          "Nein, sie waren längst ausgestorben",
+          "Ja, sie lebten gleich nebenan",
+          "Ja, man jagte sie mit Steinwerkzeugen"
+        ],
+        "correct": 0,
+        "why": "Die großen Dinosaurier starben vor etwa 66 Millionen Jahren aus. Die ersten Steinwerkzeuge sind viel jünger.",
+        "hint": "Die Dinosaurier lebten viele Millionen Jahre früher."
+      },
+      {
+        "id": "history-stone_tools:rate-2",
+        "prompt": "Wie bekam ein Stein früher eine scharfe Kante?",
+        "answers": [
+          "Man schmolz ihn im Feuer",
+          "Man ließ ihn lange in der Sonne liegen",
+          "Man schlug Steine gegeneinander"
+        ],
+        "correct": 2,
+        "why": "Schlägt man Steine gegeneinander, brechen Stücke ab. So entstehen scharfe Kanten.",
+        "hint": "Denk daran, was passiert, wenn ein Stein auf einen harten Stein fällt."
+      },
+      {
+        "id": "history-stone_tools:rate-3",
+        "prompt": "Woran erkennen Forschende, wofür ein Werkzeug diente?",
+        "answers": [
+          "An Spuren am Stein",
+          "An alten Anleitungen auf Papier",
+          "An der Farbe des Steins"
+        ],
+        "correct": 0,
+        "why": "Beim Benutzen entstehen Gebrauchsspuren am Stein. Daraus lernen Forschende oft, wofür das Werkzeug diente.",
+        "hint": "Ein benutztes Werkzeug sieht anders aus als ein neues."
+      }
+    ]
   },
   {
     "id": "history-fire",
@@ -3529,7 +3757,7 @@
     "id": "history-apollo11",
     "category": "history",
     "title": "Menschen landen auf dem Mond",
-    "intro": "Apollo 11 landete am 20. Juli 1969 auf dem Mond.",
+    "intro": "Im Juli 1969 betraten zum ersten Mal Menschen den Mond.",
     "paragraphs": [
       "Viele Menschen am Boden hatten die Reise gemeinsam vorbereitet."
     ],
@@ -3540,14 +3768,14 @@
       },
       {
         "label": "Wo?",
-        "text": "Mond, Meer der Ruhe; NASA-Mission aus den USA"
+        "text": "Mond, Meer der Ruhe"
       }
     ],
     "more": [
       "Zum ersten Mal konnten Menschen einen anderen Himmelskörper betreten und dort Proben sammeln.",
       "Die Mondlandung war eine Teamleistung. Neben den Astronauten arbeiteten sehr viele Menschen an Berechnungen, Raumanzügen, Raketen und Funkverbindungen. Gesteinsproben halfen, die Geschichte des Mondes zu erforschen."
     ],
-    "surprise": "Bei Apollo 11 kreiste Michael Collins im Raumschiff um den Mond, während Neil Armstrong und Buzz Aldrin auf dem Mond herumliefen.",
+    "surprise": "Als Armstrong den Mond betrat, sagte er: „Ein kleiner Schritt für einen Menschen, ein riesiger Sprung für die Menschheit“",
     "locations": [
       {
         "label": "Florida – Startregion von Apollo 11",
@@ -3569,6 +3797,10 @@
       {
         "label": "NASA, Apollo Lunar Surface Journal",
         "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html"
+      },
+      {
+        "label": "NASA: Bergung der Apollo-11-Crew durch die USS Hornet",
+        "url": "https://www.nasa.gov/history/50-years-ago-hornet-3-the-recovery-of-apollo-11/"
       }
     ],
     "aliases": [
@@ -3596,7 +3828,67 @@
       ],
       "correct": 0,
       "why": "Neil Armstrong, Buzz Aldrin und Michael Collins flogen gemeinsam mit Apollo 11 zum Mond."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Wie kamen sie zum Mond?",
+        "text": "Eine riesige Rakete brachte die drei ins All. Nach vier Tagen landete die Mondfähre Eagle auf dem Mond."
+      },
+      {
+        "question": "Wer stieg zuerst aus?",
+        "text": "Neil Armstrong betrat als Erster den Mond. Buzz Aldrin folgte etwa 20 Minuten später."
+      },
+      {
+        "question": "Was brachten sie mit?",
+        "text": "Sie sammelten Gestein vom Mond. Damit erforschen Fachleute die Geschichte des Mondes."
+      }
+    ],
+    "claims": [
+      {
+        "id": "history-apollo11:stimmt-1",
+        "text": "Armstrong und Aldrin blieben weniger als einen Tag auf dem Mond.",
+        "isTrue": true,
+        "explanation": "Sie blieben fast 22 Stunden. Davon waren sie gut zweieinhalb Stunden draußen unterwegs."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "history-apollo11:rate-1",
+        "prompt": "Wer blieb bei Apollo 11 im Raumschiff?",
+        "answers": [
+          "Neil Armstrong",
+          "Niemand, alle stiegen aus",
+          "Michael Collins"
+        ],
+        "correct": 2,
+        "why": "Michael Collins steuerte das Raumschiff und kreiste um den Mond. Armstrong und Aldrin landeten mit der Mondfähre.",
+        "hint": "Einer musste im Raumschiff auf die anderen warten."
+      },
+      {
+        "id": "history-apollo11:rate-2",
+        "prompt": "Wie kamen die Astronauten zurück auf die Erde?",
+        "answers": [
+          "Auf einer Landebahn wie ein Flugzeug",
+          "Mit Fallschirmen ins Meer",
+          "Mit der Mondfähre auf eine Wiese"
+        ],
+        "correct": 1,
+        "why": "Ihre Kapsel schwebte an Fallschirmen in den Pazifik. Ein Hubschrauber holte die drei aus dem Wasser und flog sie zu einem Schiff.",
+        "hint": "Die Kapsel brauchte etwas, das sie langsamer macht."
+      },
+      {
+        "id": "history-apollo11:rate-3",
+        "prompt": "Wie lange dauerte die ganze Reise ungefähr?",
+        "answers": [
+          "Ein paar Stunden",
+          "Etwa 8 Tage",
+          "Mehrere Jahre"
+        ],
+        "correct": 1,
+        "why": "Vom Start bis zur Landung im Meer vergingen etwa 8 Tage. Bis zur Landung auf dem Mond dauerte es schon 4 Tage.",
+        "hint": "Allein der Hinflug dauerte mehrere Tage."
+      }
+    ]
   },
   {
     "id": "history-web",
@@ -3991,7 +4283,7 @@
     "id": "person-marie_curie",
     "category": "people",
     "title": "Marie Curie",
-    "intro": "Marie Curie machte unsichtbare Strahlung messbar. Auffällige Vergleiche führten sie und ihr Forschungsteam zu neuen Fragen über Stoffe.",
+    "intro": "Marie Curie bekam für ihre Forschung zwei Nobelpreise, das sind sehr berühmte Preise.",
     "paragraphs": [
       "Marie Curie lebte von 1867 bis 1934. Nach Henri Becquerels Entdeckung der Uranstrahlung verglich sie die Wirkung unterschiedlicher Stoffe mit empfindlichen Messgeräten. Sie untersuchte unter anderem, wie Strahlung die elektrische Leitfähigkeit von Luft verändert.",
       "Einige untersuchte Mineralien waren stärker aktiv, als Curie vom enthaltenen Uran erwartet hatte. Daraus entwickelte sie eine prüfbare Vermutung: Weitere aktive Bestandteile könnten beteiligt sein. Ein auffälliger Messwert allein gab ihnen aber noch keinen Namen. Weitere Untersuchungen und Stofftrennungen gehörten zum Forschungsweg.",
@@ -4004,12 +4296,12 @@
         "text": "1867–1934"
       },
       {
-        "label": "Arbeitsgebiet",
-        "text": "Physikerin und Chemikerin"
+        "label": "Nobelpreise",
+        "text": "Physik 1903, Chemie 1911"
       },
       {
-        "label": "Verbunden mit",
-        "text": "Polen: geboren in Warschau, damals im Russischen Reich; Frankreich: Studium und Forschung"
+        "label": "Geboren",
+        "text": "In Warschau in Polen. Polen wurde damals von Russland beherrscht."
       }
     ],
     "more": [
@@ -4018,7 +4310,7 @@
       "Bei Radioaktivität geben instabile Atomkerne von selbst Strahlung ab, die für uns unsichtbar sein kann. Curie untersuchte solche Vorgänge mit Messgeräten. Die heutige Erklärung des Atomkerns entstand über weitere Forschungsschritte; 1898 verfügte sie noch nicht über dieses spätere vollständige Modell. Historische Fachtexte werden deshalb nicht einfach als heutige Fachbeschreibung übernommen.",
       "Strahlung kann schaden. Für radioaktive Stoffe braucht Forschung geeignete Fachlabore und besonders sorgfältige Schutzverfahren. Unsere Aufgabe verwendet ausschließlich erfundene Zahlen und Zeichnungen. Sie ist keine Anleitung, unbekannte Materialien zu sammeln, zu öffnen oder zu untersuchen."
     ],
-    "surprise": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
+    "surprise": "Das Polonium wurde nach Maries Heimat Polen benannt.",
     "locations": [
       {
         "label": "Paris – Forschungsort",
@@ -4055,6 +4347,26 @@
       {
         "label": "American Institute of Physics: spätere Erklärung von Atomkern und Radioaktivität",
         "url": "https://history.aip.org/exhibits/curie/unstable.htm"
+      },
+      {
+        "label": "Bundesamt für Strahlenschutz: Wie wirkt ionisierende Strahlung?",
+        "url": "https://www.bfs.de/DE/themen/ion/wirkung/einfuehrung/einfuehrung_node.html"
+      },
+      {
+        "label": "Senatsverwaltung Berlin: Grundregeln des Strahlenschutzes",
+        "url": "https://www.berlin.de/sen/uvk/umwelt/atom-und-strahlenschutz/grundlagen-und-begriffe/ionisierende-strahlung/"
+      },
+      {
+        "label": "Nobelpreis: Biografie Marie Curie",
+        "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/biographical/"
+      },
+      {
+        "label": "Computer History Museum: Ada Lovelace",
+        "url": "https://www.computerhistory.org/babbage/adalovelace/"
+      },
+      {
+        "label": "Yale News: Grace Hopper und der erste Compiler",
+        "url": "https://news.yale.edu/2017/02/10/grace-murray-hopper-1906-1992-legacy-innovation-and-service"
       }
     ],
     "aliases": [
@@ -4078,7 +4390,7 @@
         "Das Programmieren einfacher machen"
       ],
       "correct": 0,
-      "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+      "why": "Marie Curie erforschte Stoffe, die von selbst Strahlung aussenden. Das nennt man Radioaktivität."
     },
     "learning": {
       "starter": "Vergleiche zwei erfundene Messbefunde und trenne Beobachtung von Erklärung.",
@@ -4089,13 +4401,61 @@
     "checkedAt": "2026-11-04",
     "revision": 2,
     "questionFeedback": {
-      "hint": "Was könnte man durch Messungen an verschiedenen Proben untersuchen, auch wenn die Ursache unsichtbar ist?",
+      "hint": "Marie Curie arbeitete in einem Labor mit Gestein und Messgeräten.",
       "wrongReasons": [
         null,
-        "Eine Rechenanleitung für eine geplante Maschine ist von der hier behandelten Messung an strahlenden Stoffen zu unterscheiden.",
-        "Programmieren zu vereinfachen ist ein anderer Fachbeitrag als Curies Untersuchungen an radioaktiven Stoffen."
+        "Das hat Ada Lovelace gemacht. Marie Curie untersuchte Stoffe, die Strahlung aussenden.",
+        "Dabei half Grace Hopper. Marie Curie erforschte Strahlung, nicht Computer."
       ]
-    }
+    },
+    "chapters": [
+      {
+        "question": "Warum ging sie nach Paris?",
+        "text": "In Warschau durften junge Frauen damals nicht an die Universität. Darum zog sie 1891 zum Studieren nach Paris."
+      },
+      {
+        "question": "Was hat sie entdeckt?",
+        "text": "1898 entdeckte sie mit ihrem Mann Pierre zwei neue Elemente: Polonium und Radium. Elemente sind Grundstoffe, aus denen alle Dinge bestehen."
+      },
+      {
+        "question": "Ist Strahlung gefährlich?",
+        "text": "Zu viel Strahlung kann dem Körper schaden. Darum arbeiten Fachleute mit stark strahlenden Stoffen nur mit besonderem Schutz."
+      }
+    ],
+    "claims": [
+      {
+        "id": "person-marie_curie:stimmt-1",
+        "text": "Marie Curie hat das Radium erfunden.",
+        "isTrue": false,
+        "explanation": "Radium steckte schon in einem Gestein und wurde dort entdeckt, nicht erfunden."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "person-marie_curie:rate-1",
+        "prompt": "Kann man radioaktive Strahlung mit den Augen sehen?",
+        "answers": [
+          "Nein, man braucht Messgeräte",
+          "Ja, sie sieht aus wie bunter Rauch",
+          "Ja, mit einer starken Lupe"
+        ],
+        "correct": 0,
+        "why": "Unsere Augen können diese Strahlung nicht sehen. Marie Curie maß sie deshalb mit empfindlichen Geräten.",
+        "hint": "Auch Luft siehst du nicht, und trotzdem ist sie da."
+      },
+      {
+        "id": "person-marie_curie:rate-2",
+        "prompt": "Mit wem entdeckte Marie Curie Polonium und Radium?",
+        "answers": [
+          "Ganz allein, ohne jede Hilfe",
+          "Mit dem Erfinder Gutenberg",
+          "Mit ihrem Mann Pierre Curie"
+        ],
+        "correct": 2,
+        "why": "Marie und Pierre Curie entdeckten 1898 gemeinsam Polonium und Radium. Ihre Forschung war Teamarbeit.",
+        "hint": "Sie heiratete 1895 einen Physiker."
+      }
+    ]
   },
   {
     "id": "person-ada_lovelace",
@@ -4679,7 +5039,7 @@
     "id": "person-jane_goodall",
     "category": "people",
     "title": "Jane Goodall",
-    "intro": "Jane Goodall untersuchte das Leben wilder Schimpansen in Gombe. Ihre Beobachtungen machten Werkzeuggebrauch und Werkzeugvorbereitung dieser Tiere für die Forschung sichtbar.",
+    "intro": "Mit 26 Jahren begann Jane Goodall ihre Forschung in Gombe, im heutigen Tansania.",
     "paragraphs": [
       "Jane Goodall wurde 1934 in London geboren und starb 2025. Ab 1960 beobachtete sie wilde Schimpansen in der Region Gombe im heutigen Tansania. Für die Forschung war wichtig, einzelne Tiere über längere Zeit wiederzuerkennen und ihr Verhalten genau zu beschreiben.",
       "Goodall sah Schimpansen mit Pflanzenstängeln und Zweigen Termiten aus ihren Bauten holen. In ihrem späteren eigenen Bericht beschreibt sie, wie Tiere manchmal auch Blätter von einem Zweig entfernten, bevor sie ihn benutzten. Damit beobachtete sie nicht nur den Gebrauch eines Gegenstands, sondern auch dessen Vorbereitung.",
@@ -4692,12 +5052,8 @@
         "text": "1934–2025"
       },
       {
-        "label": "Arbeitsgebiet",
-        "text": "Verhaltensforscherin und Naturschützerin"
-      },
-      {
-        "label": "Verbunden mit",
-        "text": "Vereinigtes Königreich: geboren in London; Tansania: Schimpansenforschung in Gombe"
+        "label": "Geboren",
+        "text": "London, Vereinigtes Königreich"
       }
     ],
     "more": [
@@ -4707,7 +5063,7 @@
       "Naturschutz betrifft Lebensräume und die Menschen vor Ort gemeinsam. Die örtlichen Gemeinschaften sind Beteiligte, nicht bloß eine Kulisse für Forschung. Wildtiere werden mit Abstand und nach den geltenden Schutzregeln beobachtet; Füttern, Berühren oder Hervorrufen einer Handlung gehört nicht zu unserem Lernangebot.",
       "Geduldige Beobachtung kann eine erste Vermutung verändern. Goodall dokumentierte Verhalten einzelner Schimpansen über lange Zeit. Tiere in freier Natur lassen sich nicht wie Maschinen an- und ausschalten."
     ],
-    "surprise": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
+    "surprise": "Sie gab den Schimpansen Namen statt Nummern.",
     "locations": [
       {
         "label": "Gombe, Tansania – Forschungsregion",
@@ -4726,7 +5082,7 @@
         "url": "https://janegoodall.org/jane-goodalls-story/"
       },
       {
-        "label": "Jane Goodall im eigenen Rückblick2015: Zweige als Werkzeuge vorbereiten",
+        "label": "Jane Goodall im eigenen Rückblick 2015: Zweige als Werkzeuge vorbereiten",
         "url": "https://janegoodall.org/news/55-years-at-gombe-qa-with-jane-on-origins-of-life-work/"
       },
       {
@@ -4738,8 +5094,12 @@
         "url": "https://janegoodall.org/jgi-timeline/"
       },
       {
-        "label": "Jane Goodall Institute: Erinnerung1934–2025",
+        "label": "Jane Goodall Institute: Erinnerung 1934–2025",
         "url": "https://janegoodall.org/remembering-jane/"
+      },
+      {
+        "label": "Computer History Museum: Ada Lovelace",
+        "url": "https://www.computerhistory.org/babbage/adalovelace/"
       }
     ],
     "aliases": [
@@ -4760,7 +5120,7 @@
         "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
       ],
       "correct": 0,
-      "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
+      "why": "Ab 1960 beobachtete sie wilde Schimpansen in Gombe. Radioaktivität erforschte Marie Curie, die Rechenanleitung schrieb Ada Lovelace."
     },
     "image": "jane-goodall",
     "learning": {
@@ -4772,13 +5132,61 @@
     "checkedAt": "2026-11-04",
     "revision": 2,
     "questionFeedback": {
-      "hint": "Welche Art von Arbeit braucht wiederholte sorgfältige Beobachtungen in Gombe statt nur einen Blick auf ein einzelnes Verhalten?",
+      "hint": "Ihre Arbeit fand draußen in der Natur statt, nicht im Labor.",
       "wrongReasons": [
         null,
-        "Die Untersuchung radioaktiver Stoffe ist von den hier beschriebenen Beobachtungen zum Verhalten von Primaten zu unterscheiden.",
-        "Eine Rechenanleitung für eine geplante Maschine erklärt keine Beobachtung von Werkzeuggebrauch bei wilden Primaten."
+        "Radioaktivität hat Marie Curie erforscht, meist im Labor. Jane Goodall arbeitete draußen im Wald.",
+        "Eine Rechenanleitung für eine Maschine veröffentlichte Ada Lovelace. Jane Goodall forschte draußen im Wald."
       ]
-    }
+    },
+    "chapters": [
+      {
+        "question": "Was hat sie entdeckt?",
+        "text": "Schimpansen benutzten Werkzeuge, um an Termiten zu kommen. Manche machten sich ihr Werkzeug sogar selbst passend."
+      },
+      {
+        "question": "Warum brauchte sie Geduld?",
+        "text": "Anfangs liefen die Schimpansen vor ihr weg. Erst nach Monaten gewöhnten sie sich an sie."
+      },
+      {
+        "question": "Was tat sie später?",
+        "text": "Sie setzte sich für Tiere und ihre Wälder ein. Sie gründete auch eine Gruppe, in der Kinder und Jugendliche in vielen Ländern selbst helfen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "person-jane_goodall:stimmt-1",
+        "text": "Nur Menschen können Werkzeuge benutzen.",
+        "isTrue": false,
+        "explanation": "Goodall sah Schimpansen, die Werkzeuge benutzten und sogar selbst zurechtmachten."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "person-jane_goodall:rate-1",
+        "prompt": "Womit holten Schimpansen Termiten aus ihrem Bau?",
+        "answers": [
+          "Nur mit ihren bloßen Händen",
+          "Mit Grashalmen und Zweigen",
+          "Mit Werkzeugen von Menschen"
+        ],
+        "correct": 1,
+        "why": "Sie steckten Grashalme und Zweige in den Termitenbau. Manche Zweige machten sie vorher passend, indem sie Blätter abzupften.",
+        "hint": "Goodall sah sie dabei etwas aus dem Wald benutzen."
+      },
+      {
+        "id": "person-jane_goodall:rate-2",
+        "prompt": "Wie erforschte Jane Goodall die Schimpansen?",
+        "answers": [
+          "Sie beobachtete sie lange und geduldig",
+          "Sie fing sie und brachte sie in einen Zoo",
+          "Sie brachte ihnen Kunststücke bei"
+        ],
+        "correct": 0,
+        "why": "Sie beobachtete wilde Schimpansen viele Jahre lang in ihrem Wald. So lernte sie einzelne Tiere gut kennen.",
+        "hint": "Die Schimpansen blieben frei in ihrem Wald."
+      }
+    ]
   },
   {
     "id": "person-albert_einstein",
@@ -5025,7 +5433,7 @@
     ],
     "sources": [
       {
-        "label": "Nobelversammlung: offizieller Medizinpreis2015 und Tu Youyous Forschung (PDF)",
+        "label": "Nobelversammlung: offizieller Medizinpreis 2015 und Tu Youyous Forschung (PDF)",
         "url": "https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf"
       },
       {
@@ -5135,7 +5543,7 @@
         "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/27/cai-lun-121-ce/"
       },
       {
-        "label": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+        "label": "T. H. Barrett: frühere Papierfunde und der Bericht für 105",
         "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
       },
       {
@@ -5235,7 +5643,7 @@
         "url": "https://www.nasa.gov/former-astronaut-mae-c-jemison/"
       },
       {
-        "label": "NASA: ursprüngliche Biografiedaten von1993 (PDF)",
+        "label": "NASA: ursprüngliche Biografiedaten von 1993 (PDF)",
         "url": "https://www.nasa.gov/wp-content/uploads/2019/09/jemison_mae.pdf"
       },
       {
@@ -5619,7 +6027,7 @@
     ],
     "sources": [
       {
-        "label": "Alexander von Humboldt-Stiftung · Amerika-Reise1799–1804",
+        "label": "Alexander von Humboldt-Stiftung · Amerika-Reise 1799–1804",
         "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
       },
       {
@@ -5631,7 +6039,7 @@
         "url": "https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf"
       },
       {
-        "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von1807",
+        "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von 1807",
         "url": "https://www.sammlungen.hu-berlin.de/objekte/-/16678/"
       },
       {
@@ -7105,33 +7513,25 @@
     "id": "building-giza-pyramids",
     "category": "buildings",
     "title": "Pyramiden von Gizeh",
-    "intro": "Grabstätten für Könige und Teil großer religiöser Anlagen.",
+    "intro": "Die Pyramiden von Gizeh in Ägypten wurden als Gräber für Könige gebaut.",
     "paragraphs": [
       "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
     ],
     "facts": [
       {
-        "label": "Wo?",
-        "text": "Gizeh, Ägypten"
-      },
-      {
         "label": "Wann?",
-        "text": "um 2550 v. Chr."
+        "text": "Vor etwa 4.500 Jahren"
       },
       {
         "label": "Wie groß?",
-        "text": "Ursprüngliche Höhe der Cheops-Pyramide: etwa 146,5 Meter. Ihre heutige Höhe ist geringer."
-      },
-      {
-        "label": "Material & Konstruktion",
-        "text": "Kalkstein; in Teilen auch andere Gesteine."
+        "text": "Einst etwa 146,5 Meter hoch."
       }
     ],
     "more": [
       "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
       "Die Pyramiden waren königliche Grabanlagen. Die Cheops-Pyramide bestand überwiegend aus örtlichem Kalkstein und hatte einst eine helle Kalksteinverkleidung."
     ],
-    "surprise": "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+    "surprise": "Rund 3.800 Jahre lang war die Cheops-Pyramide das höchste Bauwerk der Welt.",
     "locations": [
       {
         "label": "Gizeh, Ägypten",
@@ -7146,12 +7546,20 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "label": "UNESCO-Welterbe: Memphis und die Pyramidenfelder von Gizeh bis Dahschur",
         "url": "https://whc.unesco.org/en/list/86/"
       },
       {
-        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "label": "Ägyptisches Ministerium für Tourismus und Altertümer: Die Große Pyramide",
         "url": "https://egymonuments.gov.eg/en/monuments/the-great-pyramid"
+      },
+      {
+        "label": "Smithsonian Magazine: Kalkstein aus Tura per Boot nach Gizeh",
+        "url": "https://www.smithsonianmag.com/history/ancient-egypt-shipping-mining-farming-economy-pyramids-180956619/"
+      },
+      {
+        "label": "AERA: Die Stadt der Pyramidenbauer",
+        "url": "https://www.aeraweb.org/lost-city/"
       }
     ],
     "aliases": [],
@@ -7163,15 +7571,59 @@
     },
     "model": "heights",
     "question": {
-      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "prompt": "Welcher Satz passt zu den Pyramiden?",
       "answers": [
         "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
         "Bögen können Lasten seitlich zu ihren Stützen leiten.",
         "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch."
       ],
       "correct": 0,
-      "why": "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
-    }
+      "why": "Viele Menschen planten und bauten über Jahre zusammen. Bögen und offene Gitter gehören zu anderen Bauwerken."
+    },
+    "chapters": [
+      {
+        "question": "Was ist in der großen Pyramide?",
+        "text": "Innen gibt es drei Kammern. In der Königskammer steht noch der Steinsarg von König Cheops."
+      },
+      {
+        "question": "Wie lange dauerte der Bau?",
+        "text": "Fachleute schätzen 10 bis 20 Jahre. Wie genau gebaut wurde, ist bis heute nicht sicher."
+      }
+    ],
+    "claims": [
+      {
+        "id": "building-giza-pyramids:stimmt-1",
+        "text": "Die große Pyramide sah früher genauso aus wie heute.",
+        "isTrue": false,
+        "explanation": "Früher war sie höher und außen ganz mit hellem Kalkstein verkleidet."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "building-giza-pyramids:rate-1",
+        "prompt": "Woraus ist die große Pyramide vor allem gebaut?",
+        "answers": [
+          "Aus Kalkstein",
+          "Aus festgedrücktem Sand",
+          "Aus Lehmziegeln"
+        ],
+        "correct": 0,
+        "why": "Die Cheops-Pyramide besteht vor allem aus Kalkstein aus der Umgebung.",
+        "hint": "Denk an die großen Steinblöcke."
+      },
+      {
+        "id": "building-giza-pyramids:rate-2",
+        "prompt": "Wie kamen die hellen Außensteine zur Pyramide?",
+        "answers": [
+          "Mit Schiffen auf dem Nil",
+          "Mit Schiffen aus einem fernen Land",
+          "Sie lagen schon an der Baustelle"
+        ],
+        "correct": 0,
+        "why": "Die hellen Außensteine kamen mit Schiffen aus Tura. Die meisten anderen Steine stammten aus der Umgebung.",
+        "hint": "Tura, wo die Steine herkamen, liegt am großen Fluss Nil."
+      }
+    ]
   },
   {
     "id": "building-great-wall",
@@ -7391,33 +7843,21 @@
     "id": "building-eiffel-tower",
     "category": "buildings",
     "title": "Der Eiffelturm",
-    "intro": "Ein besonderes Bauwerk für die Weltausstellung 1889.",
+    "intro": "Der Eiffelturm wurde 1889 für eine große Ausstellung in Paris gebaut.",
     "paragraphs": [
       "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
     ],
     "facts": [
       {
-        "label": "Wo?",
-        "text": "Paris, Frankreich"
-      },
-      {
-        "label": "Wann?",
-        "text": "Fertiggestellt 1889"
-      },
-      {
         "label": "Wie groß?",
-        "text": "Heute 330 Meter hoch, einschließlich Antennen."
-      },
-      {
-        "label": "Material & Konstruktion",
-        "text": "Eisen, zu einem Gitter verbunden."
+        "text": "Heute 330 Meter hoch, mit Antennen."
       }
     ],
     "more": [
       "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
       "Ein offenes Gitter braucht weniger Material als ein gleich großer massiver Block. Viele Dreiecke stabilisieren die Konstruktion; Wind und Gewicht müssen trotzdem genau berechnet werden."
     ],
-    "surprise": "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+    "surprise": "Bei Sonne dehnt sich das Eisen aus, und die Spitze neigt sich ein wenig von der Sonne weg.",
     "locations": [
       {
         "label": "Paris, Frankreich",
@@ -7434,12 +7874,28 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "label": "Offizielle Seite des Eiffelturms: Geschichte",
         "url": "https://www.toureiffel.paris/en/the-monument/history"
       },
       {
         "label": "Eiffelturm – aktuelle Maße",
         "url": "https://www.toureiffel.paris/de/monument/zahlen"
+      },
+      {
+        "label": "National Geographic: Anstrich von Hand, etwa alle sieben Jahre, gegen Rost",
+        "url": "https://www.nationalgeographic.com/travel/article/behind-the-scenes-eiffel-tower-paris"
+      },
+      {
+        "label": "France.fr (Atout France): Anstrich als Schutz",
+        "url": "https://www.france.fr/en/article/9-anecdotes-revealing-all-you-need-to-know-about-the-eiffel-tower/"
+      },
+      {
+        "label": "Offizielle Seite des Eiffelturms: Warum sich der Turm in der Sonne bewegt",
+        "url": "https://www.toureiffel.paris/en/news/history-and-culture/why-does-eiffel-tower-change-size"
+      },
+      {
+        "label": "Betreiber des Eiffelturms bei Google Arts & Culture: Wie der Turm entstand",
+        "url": "https://artsandculture.google.com/story/wwWBABMpbxIA8A"
       }
     ],
     "aliases": [],
@@ -7452,15 +7908,59 @@
     },
     "model": "heights",
     "question": {
-      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "prompt": "Welcher Satz passt zum Eiffelturm?",
       "answers": [
         "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
         "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
         "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig."
       ],
       "correct": 0,
-      "why": "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
-    }
+      "why": "Der Turm ist ein offenes Gitter. Es trägt den hohen Turm, und der Wind weht einfach hindurch."
+    },
+    "chapters": [
+      {
+        "question": "Warum hat er so viele Lücken?",
+        "text": "Ein offenes Gitter braucht viel weniger Material als ein gleich großer fester Block."
+      },
+      {
+        "question": "Wer pflegt den Turm?",
+        "text": "Etwa alle sieben Jahre streichen ihn Maler neu, von Hand."
+      }
+    ],
+    "claims": [
+      {
+        "id": "building-eiffel-tower:stimmt-1",
+        "text": "Gustave Eiffel hat den Turm ganz allein geplant.",
+        "isTrue": false,
+        "explanation": "Ein ganzes Team aus Eiffels Firma plante ihn mit."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "building-eiffel-tower:rate-1",
+        "prompt": "Woraus ist der Eiffelturm vor allem gebaut?",
+        "answers": [
+          "Aus Beton",
+          "Aus Eisen",
+          "Aus Stein"
+        ],
+        "correct": 1,
+        "why": "Der Turm besteht aus vielen Eisenteilen. Sie sind zu einem Gitter verbunden.",
+        "hint": "Schau dir die vielen dünnen Stangen an."
+      },
+      {
+        "id": "building-eiffel-tower:rate-2",
+        "prompt": "Wozu bekommt der Turm immer wieder neue Farbe?",
+        "answers": [
+          "Nur damit er für Fotos hübsch aussieht",
+          "Damit er nachts leuchtet",
+          "Damit das Eisen nicht rostet"
+        ],
+        "correct": 2,
+        "why": "Die Farbe schützt das Eisen vor Rost. Ohne Anstrich würde der Turm nicht lange halten.",
+        "hint": "Denk daran, was Regen mit Eisen machen kann."
+      }
+    ]
   },
   {
     "id": "building-golden-gate-bridge",
@@ -9267,12 +9767,8 @@
     ],
     "facts": [
       {
-        "label": "Antrieb",
-        "text": "Sonnenenergie und Schwerkraft bewegen Wasser."
-      },
-      {
-        "label": "Unsichtbar",
-        "text": "Wasserdampf ist gasförmig; die sichtbare Wolke besteht aus Tröpfchen oder Eis."
+        "label": "Was bewegt das Wasser?",
+        "text": "Die Wärme der Sonne hebt es hoch, die Schwerkraft zieht es nach unten."
       }
     ],
     "more": [
@@ -9281,7 +9777,6 @@
       "Eine Straße oder andere undurchlässige Fläche erschwert das Versickern. Wie viel Wasser abfließt, hängt zusätzlich etwa vom Regen, der Bodenfeuchte und dem Gefälle ab. Aus der Flächenart allein lässt sich keine genaue Abflussmenge berechnen.",
       "Die vier Stationen im Modell zeigen einen möglichen Weg und lassen weitere Verzweigungen aus. Die Tasten wechseln Erklärungen; sie steuern weder eine Wettersimulation noch die Menge oder Geschwindigkeit des Wassers. Vergleiche den Beispielweg mit den zusätzlichen Speichern im Text."
     ],
-    "surprise": "Eine Pflanze ist ein Teil des Wasserkreislaufs.",
     "locations": [],
     "related": [
       "science-photosynthesis",
@@ -9312,6 +9807,10 @@
       {
         "label": "NASA für junge Entdecker: unsichtbarer Dampf und sichtbare Wolken",
         "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      },
+      {
+        "label": "USGS: Sonne und Schwerkraft treiben den Wasserkreislauf an",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
       }
     ],
     "sourceNote": "Ausgewählte Fachpassagen von NASA, NOAA und British Geological Survey am 6. November 2026 einzeln gelesen und mit diesen Erklärungen abgeglichen. Die ältere NASA-Grundlagenseite dient nur den grundlegenden Wasserwegen, nicht aktuellen Mengen- oder Missionsangaben. Eigene vereinfachte Erklärungen und gedachte Aufgaben; das Schema ist keine Wetter- oder Grundwasserprognose.",
@@ -9378,7 +9877,67 @@
         "why": "Eis, Grundwasser und Atmosphäre speichern Wasser unterschiedlich lange."
       }
     ],
-    "model": "water-cycle"
+    "model": "water-cycle",
+    "chapters": [
+      {
+        "question": "Wohin verschwindet eine Pfütze?",
+        "text": "Sonne und warme Luft wärmen das Wasser. Ein Teil verdunstet und steigt als unsichtbarer Dampf in die Luft."
+      },
+      {
+        "question": "Wie entsteht eine Wolke?",
+        "text": "Kühlt feuchte Luft ab, wird ein Teil des Dampfes wieder zu Wasser. Es bilden sich winzige Tröpfchen."
+      },
+      {
+        "question": "Wohin fließt der Regen?",
+        "text": "Regen und Schnee sickern in den Boden oder fließen in Bäche und Flüsse. Manches Wasser kommt ins Meer, manches bleibt lange als Eis liegen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "science-water-cycle:stimmt-1",
+        "text": "Nebel ist eine Wolke ganz nah am Boden.",
+        "isTrue": true,
+        "explanation": "Wer durch Nebel geht, geht durch eine Wolke."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "science-water-cycle:rate-1",
+        "prompt": "Wo ist das meiste Wasser der Erde?",
+        "answers": [
+          "In Flüssen und Seen",
+          "Im Meer",
+          "In den Wolken"
+        ],
+        "correct": 1,
+        "why": "Von 100 Eimern Wasser auf der Erde wären 97 Meerwasser. Dieses Wasser ist salzig.",
+        "hint": "Schau auf einen Globus: Welche Farbe siehst du am meisten?"
+      },
+      {
+        "id": "science-water-cycle:rate-2",
+        "prompt": "Geben Pflanzen Wasser an die Luft ab?",
+        "answers": [
+          "Ja, über ihre Blätter",
+          "Nein, sie trinken nur",
+          "Ja, über die Blüten als Regen"
+        ],
+        "correct": 0,
+        "why": "Pflanzen nehmen Wasser mit den Wurzeln auf. Über ihre Blätter geben sie Wasserdampf an die Luft ab.",
+        "hint": "Pflanzen trinken mit den Wurzeln, aber wo bleibt das Wasser dann?"
+      },
+      {
+        "id": "science-water-cycle:rate-3",
+        "prompt": "Warum wird ein nasses Handtuch trocken?",
+        "answers": [
+          "Das Handtuch trinkt das Wasser auf",
+          "Das Wasser verschwindet einfach ganz",
+          "Das Wasser verdunstet in die Luft"
+        ],
+        "correct": 2,
+        "why": "Das Wasser im Handtuch wird zu unsichtbarem Wasserdampf. Der Dampf zieht in die Luft davon.",
+        "hint": "Mit einer Pfütze passiert dasselbe."
+      }
+    ]
   },
   {
     "id": "science-photosynthesis",
@@ -9861,7 +10420,7 @@
     "id": "science-moon-phases",
     "category": "science",
     "title": "Warum verändert der Mond seine Form?",
-    "intro": "Der Mond bleibt rund. Wir sehen unterschiedlich viel von seiner beleuchteten Hälfte.",
+    "intro": "Der Mond bleibt immer rund, auch wenn er wie eine Sichel aussieht.",
     "aliases": [
       "Mondphasen",
       "Vollmond",
@@ -9877,17 +10436,13 @@
       {
         "label": "Rhythmus",
         "text": "Von Neumond zu Neumond vergehen etwa 29,5 Tage."
-      },
-      {
-        "label": "Licht",
-        "text": "Mondlicht ist reflektiertes Sonnenlicht."
       }
     ],
     "more": [
       "Die Mondbahn ist gegenüber der Erdbahnebene geneigt. Bei den meisten Vollmonden passiert der Mond oberhalb oder unterhalb des Erdschattens.",
       "Auf der anderen Erdhalbkugel kann dieselbe Mondphase anders gedreht aussehen. Die Phase selbst bleibt dabei gleich."
     ],
-    "surprise": "Ein Halbmond zeigt eine halbe beleuchtete Mondscheibe, kein halbes Himmelsobjekt.",
+    "surprise": "Vom Mond sehen wir immer dieselbe Seite.",
     "locations": [],
     "related": [
       "history-apollo11",
@@ -9913,7 +10468,7 @@
         "Von brennenden Wolken"
       ],
       "correct": 0,
-      "why": "Die Mondoberfläche reflektiert Sonnenlicht."
+      "why": "Der Mond leuchtet nicht selbst. Er wirft das Licht der Sonne zurück."
     },
     "links": [],
     "revision": 1,
@@ -9968,7 +10523,67 @@
         "why": "Der Erdschatten ist nur bei einer Mondfinsternis die Ursache der Verdunkelung."
       }
     ],
-    "model": "moon-phases"
+    "model": "moon-phases",
+    "chapters": [
+      {
+        "question": "Ist der Mond halb dunkel?",
+        "text": "Die Sonne beleuchtet immer eine Hälfte des Mondes. Die andere Hälfte liegt im Dunkeln."
+      },
+      {
+        "question": "Warum sieht er jeden Abend anders aus?",
+        "text": "Der Mond kreist um die Erde. Dabei sehen wir mal mehr, mal weniger von seiner hellen Hälfte."
+      },
+      {
+        "question": "Was ist Vollmond, was Neumond?",
+        "text": "Bei Vollmond sehen wir fast die ganze helle Seite. Bei Neumond zeigt sie fast ganz von uns weg."
+      }
+    ],
+    "claims": [
+      {
+        "id": "science-moon-phases:stimmt-1",
+        "text": "Der Halbmond entsteht durch den Schatten der Erde.",
+        "isTrue": false,
+        "explanation": "Beim Halbmond sehen wir die helle Hälfte nur von der Seite."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "science-moon-phases:rate-1",
+        "prompt": "Hat der Mond eine Seite, die immer dunkel ist?",
+        "answers": [
+          "Ja, die Rückseite ist immer dunkel",
+          "Ja, die Vorderseite ist immer dunkel",
+          "Nein, jede Seite bekommt Sonnenlicht"
+        ],
+        "correct": 2,
+        "why": "Nein, eine immer dunkle Seite gibt es nicht. Die Rückseite bekommt genauso viel Sonnenlicht wie die Seite, die wir sehen.",
+        "hint": "Wie die Erde hat auch der Mond Tag und Nacht."
+      },
+      {
+        "id": "science-moon-phases:rate-2",
+        "prompt": "Kann man den Mond auch am Tag sehen?",
+        "answers": [
+          "Ja, oft auch am Tag",
+          "Nein, nur in der Nacht",
+          "Nur wenn Vollmond ist"
+        ],
+        "correct": 0,
+        "why": "Ja, der Mond steht oft auch am Tag am Himmel. Neben der hellen Sonne fällt er nur weniger auf.",
+        "hint": "Schau mal am Nachmittag in den Himmel."
+      },
+      {
+        "id": "science-moon-phases:rate-3",
+        "prompt": "Sehen alle Menschen auf der Erde dieselbe Mondphase?",
+        "answers": [
+          "Nein, jedes Land sieht eine andere",
+          "Ja, nur manchmal auf dem Kopf",
+          "Nein, im Süden ist immer Vollmond"
+        ],
+        "correct": 1,
+        "why": "Ja, alle sehen dieselbe Phase. In Australien, auf der Südhalbkugel, steht sie nur auf dem Kopf.",
+        "hint": "Es gibt nur einen Mond für die ganze Erde."
+      }
+    ]
   },
   {
     "id": "science-seasons",
@@ -14161,7 +14776,7 @@
     "id": "invention-bicycle",
     "category": "inventions",
     "title": "Das Fahrrad",
-    "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+    "intro": "Ohne Kette sähe dein Fahrrad ganz anders aus.",
     "aliases": [],
     "paragraphs": [
       "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Mit den Gängen änderst du, wie oft sich das Hinterrad bei einer Pedalumdrehung dreht."
@@ -14170,13 +14785,17 @@
       {
         "label": "Wann?",
         "text": "1885 · Rover-Sicherheitsfahrrad"
+      },
+      {
+        "label": "Entworfen von",
+        "text": "John Kemp Starley"
       }
     ],
     "more": [
       "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Seine Reifen waren aus Vollgummi, also ohne Luft darin. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte.",
       "Vergleiche die Zähne: Lass das vordere Kettenblatt gleich und wechsle nur hinten. Zahnräder schenken dir keine Energie."
     ],
-    "surprise": "Im leichten Gang trittst du leichter, aber öfter für denselben Weg.",
+    "surprise": "Das Rover-Rad hatte noch Reifen aus festem Gummi, ohne Luft darin.",
     "locations": [],
     "related": [
       "invention-car",
@@ -14191,6 +14810,10 @@
       {
         "label": "Exploratorium · 2: The Benefits of Gears und Count your teeth",
         "url": "https://annex.exploratorium.edu/cycling/gears1.html"
+      },
+      {
+        "label": "Exploratorium: Großes Vorderrad, mehr Strecke pro Tritt",
+        "url": "https://annex.exploratorium.edu/cycling/wheel1.html"
       }
     ],
     "links": [],
@@ -14272,7 +14895,67 @@
         }
       ]
     },
-    "sourceNote": "Das Museum beschreibt das Rover-Fahrrad von 1885 mit Hinterrad-Kettenantrieb und Vollgummireifen. Das Exploratorium erklärt Zahnzahlen und Übersetzung. Die Zeichnung ist ein Funktionsplan, keine genaue Rekonstruktion; die Übersetzung tauscht Kraftbedarf gegen Weg und erzeugt keine zusätzliche Energie. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Den mechanischen Weg vom Pedal zum Hinterrad verfolgen."
+    "sourceNote": "Das Museum beschreibt das Rover-Fahrrad von 1885 mit Hinterrad-Kettenantrieb und Vollgummireifen. Das Exploratorium erklärt Zahnzahlen und Übersetzung. Die Zeichnung ist ein Funktionsplan, keine genaue Rekonstruktion; die Übersetzung tauscht Kraftbedarf gegen Weg und erzeugt keine zusätzliche Energie. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Den mechanischen Weg vom Pedal zum Hinterrad verfolgen.",
+    "chapters": [
+      {
+        "question": "Wie fuhr das Hochrad?",
+        "text": "Beim Hochrad saßen die Pedale direkt am Vorderrad. Eine Pedalumdrehung drehte das Rad genau einmal."
+      },
+      {
+        "question": "Was machte das Rover-Rad besonders?",
+        "text": "Es war 1885 das erste erfolgreiche Sicherheitsfahrrad. Eine Kette trieb das Hinterrad an, darum waren beide Räder ähnlich groß."
+      },
+      {
+        "question": "Wozu gibt es Gänge?",
+        "text": "Gänge ändern, wie oft sich das Hinterrad pro Tritt dreht. Mal trittst du leichter, mal kommst du schneller voran."
+      }
+    ],
+    "claims": [
+      {
+        "id": "invention-bicycle:stimmt-1",
+        "text": "Das Sicherheitsfahrrad machte Radfahren auch bei Frauen beliebt.",
+        "isTrue": true,
+        "explanation": "Mit dem Sicherheitsfahrrad wurde Radfahren bei Männern und Frauen sehr beliebt."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "invention-bicycle:rate-1",
+        "prompt": "Warum hatte das Hochrad so ein riesiges Vorderrad?",
+        "answers": [
+          "Damit man pro Tritt weiter kommt",
+          "Damit man höher sitzt und weit sieht",
+          "Weil kleine Räder schneller kaputtgingen"
+        ],
+        "correct": 0,
+        "why": "Je größer das Rad, desto weiter kam man mit einer Pedalumdrehung. So war man schneller unterwegs.",
+        "hint": "Denk daran, wie weit ein großes Rad mit einer Umdrehung rollt."
+      },
+      {
+        "id": "invention-bicycle:rate-2",
+        "prompt": "Welcher Gang hilft dir an einem steilen Berg?",
+        "answers": [
+          "Ein schwerer Gang",
+          "Der Gang ist egal",
+          "Ein leichter Gang"
+        ],
+        "correct": 2,
+        "why": "Im leichten Gang trittst du öfter, aber mit weniger Kraft. So kommst du den Berg besser hinauf.",
+        "hint": "Am Berg ist jeder Tritt besonders anstrengend."
+      },
+      {
+        "id": "invention-bicycle:rate-3",
+        "prompt": "Woher kommt die Energie beim Radfahren?",
+        "answers": [
+          "Aus den Zahnrädern",
+          "Aus deinen Beinen",
+          "Aus der Kette"
+        ],
+        "correct": 1,
+        "why": "Die Energie kommt aus deinen Beinen. Kette und Zahnräder geben sie nur an das Hinterrad weiter.",
+        "hint": "Denk daran, was sich bewegt, wenn du in die Pedale trittst."
+      }
+    ]
   },
   {
     "id": "invention-elevator",

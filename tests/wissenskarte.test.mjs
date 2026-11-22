@@ -34,17 +34,19 @@ const mitZusatzfragen = {
 const gesehen = due => ({correct: true, seen: 1, due});
 
 test('kartenFragen ohne Zusatzfragen liefert nur die Hauptfrage mit alten Schlüsseln', () => {
-  const elefant = karte('animal-african-savanna-elephant');
-  const fragen = kartenFragen(elefant, hintBank);
+  // Der Löwe hat keine Zusatzfragen und kein questionFeedback (der Elefant ist seit Aufgabe 11 Pilot-Karte mit Zusatzfragen).
+  const loewe = karte('animal-lion');
+  assert.equal(loewe.moreQuestions, undefined);
+  const fragen = kartenFragen(loewe, hintBank);
   assert.equal(fragen.length, 1);
   const [haupt] = fragen;
-  assert.equal(haupt.id, 'animal-african-savanna-elephant');
-  assert.equal(haupt.reviewId, 'world-question:animal-african-savanna-elephant');
+  assert.equal(haupt.id, 'animal-lion');
+  assert.equal(haupt.reviewId, 'world-question:animal-lion');
   assert.equal(haupt.answerKey, 'topicAnswer');
   assert.equal(haupt.itemsKey, 'items');
-  assert.deepEqual(haupt.question, elefant.question);
+  assert.deepEqual(haupt.question, loewe.question);
   // Ohne questionFeedback kommen die Hinweise nur aus der Bank.
-  assert.deepEqual(haupt.hints, hintBank['animal-african-savanna-elephant:mini'].steps);
+  assert.deepEqual(haupt.hints, hintBank['animal-lion:mini'].steps);
   assert.equal(haupt.wrongReasons, undefined);
 });
 

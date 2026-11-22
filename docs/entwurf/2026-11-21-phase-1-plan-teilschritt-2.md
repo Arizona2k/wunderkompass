@@ -603,7 +603,7 @@ Regeln:
     - Richtig beantworten: `review['world-question:animal-african-savanna-elephant:rate-1']` und `learned:<id>`. „Noch eine Frage“ zeigt die nächste.
     - Nach Neuladen bleibt alles.
     - Export, Import in einen frischen Kontext: Der Eintrag ist da, `#book` öffnet ohne Browserfehler.
-  - `karteHoeheHandy`: Bei 390 × 844 reicht der offene Teil der Elefantenkarte (Kartenanfang bis Ende „Dazu passt“) höchstens 2.600 px weit.
+  - `karteHoeheHandy`: Bei 390 × 844 reicht der offene Teil der Elefantenkarte (Kartenanfang bis Ende „Dazu passt“) höchstens 3.100 px weit (zuerst 2.600 px; angehoben nach Entscheid des Nutzers vom 22.11.2026).
 - [ ] **Schritt 3: Entwurf der Inhalte** für die zwölf Karten, nur aus Karte und Quellen. Neue Aussagen nur mit neuer Quelle in `sources`.
 - [ ] **Schritt 4:** `fakten-pruefer` und `kinder-redaktion` prüfen alles in zwei Paketen zu sechs Karten, alle vier parallel. Befunde einarbeiten.
 - [ ] **Schritt 5:** Inhalte in `world-catalog.json` eintragen und neue IDs in `stable-ids.json`. Dann `stimmt-das.tsx`, Häppchen, „Für Große“ und „Noch eine Frage“ bauen.
