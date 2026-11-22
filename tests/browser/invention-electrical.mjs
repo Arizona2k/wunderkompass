@@ -4,6 +4,7 @@ import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {seismographLabRoundTrip} from './seismograph-lab-links.mjs';
 import {prepareAxe} from './axe-loader.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const electricalTopics=catalog.filter(t=>['invention-battery','invention-generator','invention-transistor'].includes(t.id));
 assert.equal(electricalTopics.length,3);
@@ -51,7 +52,8 @@ export async function assertLiftDiagram(article){
  assert.equal(x1,cabin.x+cabin.width/2,'rope attaches to cabin centre');assert.equal(y1,cabin.y);assert.equal(x2,weight.x+weight.width/2,'rope attaches to counterweight centre');assert.equal(end,weight.y);assert.equal(top,wheel.cy);assert.equal(y2,wheel.cy);assert.equal(x1,wheel.cx-wheel.r);assert.equal(x2,wheel.cx+wheel.r);assert.equal(r1,wheel.r);assert.equal(r2,wheel.r);assert.ok(wheel.cy-wheel.r>=4,'sheave stays inside viewBox');assert.ok(cabin.y>wheel.cy+wheel.r+10,'cabin clears the drive wheel');assert.ok(weight.y>wheel.cy+wheel.r+10,'counterweight clears the drive wheel');
 }
 export async function assertRetainedStructureCaption(page){
- const caption=page.locator('.structure-model').getByText('Lastweg: Gewicht → Tragwerk → Untergrund. Die Zeichnung zeigt Richtungen, keine gemessenen Kräfte.',{exact:true});await caption.waitFor();
+ // Das Tragwerk-Modell liegt in „Ausprobieren“ der Bauwerkskarte.
+ await ausprobieren(page);const caption=page.locator('.structure-model').getByText('Lastweg: Gewicht → Tragwerk → Untergrund. Die Zeichnung zeigt Richtungen, keine gemessenen Kräfte.',{exact:true});await caption.waitFor();
  const box=await caption.evaluate(e=>{const r=e.getBoundingClientRect();return{tag:e.tagName,left:r.left,right:r.right,viewport:document.documentElement.clientWidth,overflow:e.scrollWidth>e.clientWidth+1,font:parseFloat(getComputedStyle(e).fontSize)};});
  assert.equal(box.tag,'P','load path uses wrapping HTML outside the scaled SVG');assert.ok(box.font>=16&&box.left>=-1&&box.right<=box.viewport+1&&!box.overflow,'retained structure load path stays readable and unclipped '+JSON.stringify(box));
  assert.deepEqual(await page.locator('.structure-model svg text').evaluateAll(es=>es.filter(e=>{const b=e.getBBox(),v=e.ownerSVGElement.viewBox.baseVal;return b.x<v.x||b.y<v.y||b.x+b.width>v.x+v.width||b.y+b.height>v.y+v.height;}).map(e=>e.textContent)),[],'retained structure SVG labels stay inside their viewBox');
@@ -62,16 +64,14 @@ export async function inventionSourceView(page,{topics,width,shots,engine='chrom
  const initial=await page.evaluate(()=>location.hash),observed=[];let complete=false;
  try{for(const t of topics){
   const learned=()=>page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id),before=await learned();
-  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator('.article-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
+  await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator(KARTE+'.wissenskarte-welt-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
   await page.evaluate(()=>location.hash='world');await page.locator('.world-view .world-choice').first().waitFor();
   await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill(t.title);
   await page.locator('[role="option"][data-value="topic:'+t.id+'"]').click();await page.getByRole('dialog').waitFor({state:'hidden'});
   await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await question.waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+t.id,'actual new electrical search result opens its own canonical route');
   const deviceIllustration=t.id==='invention-3d-printing'?await assertPrinterIllustration(page,{width,shots,engine,native}):t.id==='invention-seismograph'?await assertSeismographIllustration(page,{width,shots,engine,native}):t.id==='invention-sewing-machine'?await assertSewingIllustration(page,{width,shots,engine,native}):undefined;
-  for(const d of await article.locator('.world-short details').all())await reveal(d);
-  for(const text of [t.learning.starter,t.learning.observe,t.learning.benefit])await article.locator('.world-short').getByText(text===t.learning.benefit?'Warum hilft dir das? '+text:text,{exact:true}).waitFor();
-  await reveal(article.locator('.world-more'));for(const text of t.more)await article.locator('.world-more').getByText(text,{exact:true}).waitFor();
-  await reveal(article.locator('.world-sources'));for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
+  // Lesetexte an ihren Orten der neuen Karte; die Erfindungsgeschichte steht in „Ausprobieren“.
+  await lesetexte(article,t);await ausprobieren(article);
   for(let i=0;i<6;i++){const button=article.locator('.story-stations button').nth(i);await button.focus();await page.keyboard.press('Enter');assert.equal(await button.getAttribute('aria-pressed'),'true');await article.locator('.story-panel p').getByText(t.invention.stages[i].text,{exact:true}).waitFor();}
   assert.equal(await article.locator('.then-now').count(),0,'a principle model is not a historical replica');
   for(let i=0;i<t.invention.parts.length;i++){const button=article.locator('.part-button').nth(i);await button.focus();await page.keyboard.press('Enter');await article.locator('.part-explanation p').getByText(t.invention.parts[i].description,{exact:true}).waitFor();assert.equal(await article.locator('.part-hotspot[aria-pressed=true]').getAttribute('aria-label'),'Bauteil '+(i+1)+': '+t.invention.parts[i].name);}
@@ -108,7 +108,9 @@ export async function inventionSourceView(page,{topics,width,shots,engine='chrom
    await article.locator('.part-button').last().scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'electrical-native-parts-'+engine+'-'+t.id+'-'+width+'.png'));
    if(t.invention.model){const model=article.locator('[data-invention-experiment]');await model.locator('svg').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'electrical-native-model-'+engine+'-'+t.id+'-'+width+'.png'));await model.locator('[data-invention-result]').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'electrical-native-controls-'+engine+'-'+t.id+'-'+width+'.png'));}
   }
-  for(const id of t.related){const target=catalog.find(topic=>topic.id===id);assert.ok(target);assert.ok(target.related.includes(t.id),'reciprocal target');const focus='world-connection-'+t.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');await link.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(target.title,{exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+id);if(id==='building-eiffel-tower')await assertRetainedStructureCaption(page);await page.goBack();await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);}
+  // Nur erklärte Verbindungen haben einen Knopf; weitere liegen in „Mehr erfahren“ (nach dem Zurück wieder offen).
+  const erklaert=t.related.filter(id=>ERKLAERTE_PAARE.has(t.id+'>'+id));await mehrErfahren(article);
+  for(const id of erklaert){const target=catalog.find(topic=>topic.id===id);assert.ok(target);assert.ok(target.related.includes(t.id),'reciprocal target');const focus='world-connection-'+t.id+'-'+id,link=page.locator('[data-route-focus="'+focus+'"]');await link.focus();await page.keyboard.press('Enter');await page.locator('#world-topic-title').getByText(target.title,{exact:true}).waitFor();await page.locator('.world-mini-question').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+id);if(id==='building-eiffel-tower')await assertRetainedStructureCaption(page);await page.goBack();await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await page.waitForFunction(focus=>document.activeElement?.dataset.routeFocus===focus,focus);}
   observed.push({id:t.id,width,native,readingLevels:true,sixStages:true,keyboardParts:t.invention.parts.length,realModelStates:states,...(labConnection?{labConnection}:{}),...(deviceIllustration?{deviceIllustration}:{}),questionsChecked:questions,sourceLinks:true,actualSearch:true,directRoute:true,noAutomaticLearningMark:true,relatedTargetsAndBackFocus:t.related});
  }assert.equal(observed.length,topics.length);complete=true;return observed;}finally{if(complete)await page.evaluate(hash=>location.hash=hash,initial);}
 }

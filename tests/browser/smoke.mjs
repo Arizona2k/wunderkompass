@@ -31,7 +31,7 @@ export async function smoke(ctx) {
       await assertNoOverflow(page, `Karte ${width}`);
       await screenshot('karte');
 
-      await page.getByRole('button', {name: 'Das interessiert mich!', exact: true}).click();
+      await page.getByRole('button', {name:'Merken', exact: true}).click();
       const saved = ([key, id]) => (JSON.parse(localStorage.getItem(key) ?? 'null')?.progress?.favorites ?? []).includes(id);
       await page.waitForFunction(saved, [SAVE_KEY, 'topic:' + TOPIC], {polling: 100});
       await page.reload();

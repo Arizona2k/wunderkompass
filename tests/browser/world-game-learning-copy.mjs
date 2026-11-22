@@ -28,7 +28,7 @@ export async function worldGameLearningCopy(browser,base,ready,monitor,report,sh
    }
    const bee=catalog.find(t=>t.id==='animal-honey-bee'),q=bee.question,before=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);
    assert.equal(q.answers[q.correct],'Pollen','the reported live case uses the actual canonical bee question');
-   await p.evaluate(()=>location.hash='world/topic/animal-honey-bee');const mini=p.locator('.world-mini-question');await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+   await p.evaluate(()=>location.hash='world/topic/animal-honey-bee');const mini=p.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();
    await mini.locator('.quiz-answer').filter({has:p.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();await mini.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await mini.getByText(q.why,{exact:true}).count(),0);
    await mini.locator('.quiz-answer').filter({has:p.getByText('Pollen',{exact:true})}).click();await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();assert.equal(await mini.getByText('Gut erklärt!',{exact:true}).count(),0);await mini.getByText(q.why,{exact:true}).waitFor();
    const after=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).progress,SAVE_KEY);for(const key of['notes','favorites','settings','games'])assert.deepEqual(after[key],before[key]);for(const[id,value]of Object.entries(before.gameSessions))assert.deepEqual(after.gameSessions[id],value,'unrelated saved round '+id);

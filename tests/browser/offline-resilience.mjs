@@ -74,7 +74,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{
   await page.setViewportSize({width:320*(native?2:1),height:900});
-  await page.goto(base+'/#world/topic/animal-polar-bear');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.getByRole('button',{name:'Das interessiert mich!',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear'));const saved=await snapshot();
+  await page.goto(base+'/#world/topic/animal-polar-bear');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();await page.getByRole('button',{name:'Merken',exact:true}).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.favorites.includes('topic:animal-polar-bear'));const saved=await snapshot();
   await page.getByRole('button',{name:'Für offline vorbereiten',exact:true}).click();await page.locator('.offline-message').filter({hasText:/nicht|geklappt/}).waitFor();report.sourceErrorView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-source-error-320.png':null,{native});assert.ok(failedRequests>0,'actual service-worker asset request failed');await noPartial();assert.deepEqual(await snapshot(),saved);
   fail=false;
   if(kind==='chromium'){
@@ -107,7 +107,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   await assertOfflineCaptureViewport(page,{native});
   if(native){
    assert.equal(photoHeld,true,'the initial frame-owned photo response crosses the controlled preparation phases');releasePhoto();
-   const image=page.locator('.world-article .world-photo img[src]').first();await image.waitFor({state:'attached'});await image.scrollIntoViewIfNeeded();
+   const image=page.locator('.wissenskarte .world-photo img[src]').first();await image.waitFor({state:'attached'});await image.scrollIntoViewIfNeeded();
    await page.waitForFunction(el=>el.complete&&el.naturalWidth>0,await image.elementHandle());await image.evaluate(el=>el.decode());
    const credit=image.locator('..').locator('figcaption');await credit.waitFor();assert.ok((await credit.innerText()).trim());
    report.deferredPhotoTransport={heldAcrossPreparation:true,src:await image.getAttribute('src'),credit:await credit.innerText()};
@@ -115,7 +115,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   }
   await stopTestServer(server);
   await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2600)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
-  await page.reload();await page.locator('.world-mini-question').waitFor();await page.getByRole('button',{name:'In deinem Forscherbuch',exact:true}).waitFor();report.offlineReload=true;
+  await page.reload();await page.locator('.world-mini-question').waitFor();await page.locator('.wissenskarte-merken[aria-pressed="true"]').waitFor();report.offlineReload=true;
   assertBrowserErrors('after confirmed-origin-down reload');
   report.offlineReadyView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-320.png':null,{native});
   // The real complete cached app must retain the new source-learning activities too.

@@ -6,6 +6,7 @@ import {ready, ladeanfragen} from './harness.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import photos from '../../app/world-photos.json' with {type: 'json'};
 import verbindungen from '../../app/world-connections.json' with {type: 'json'};
+import routen from '../../exports/content/world-routes.json' with {type: 'json'};
 
 const ELEFANT = catalog.find(t => t.id === 'animal-african-savanna-elephant');
 const HEIKEL = catalog.find(t => t.id === 'history-holocaust');
@@ -13,6 +14,7 @@ const FOTOSYNTHESE = catalog.find(t => t.id === 'science-photosynthesis');
 const HANDY = {width: 390, height: 844, touch: true};
 const BREIT = {width: 1440, height: 900};
 const SCHMAL = {width: 320, height: 700, touch: true};
+const ROUTE = routen[0];
 const WARTEN = {timeout: 10000};
 
 // Erklärte Verbindungen einer Karte in der Reihenfolge der Daten (wie connectionsFor in der App).
@@ -33,9 +35,13 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, dazuPasstZurueck);
     await mitKarte(ctx, view, ELEFANT.id, ausprobierenLaedtErstBeimOeffnen);
     await mitKarte(ctx, view, ELEFANT.id, bildnachweiseVollstaendig);
+    await mitKarte(ctx, view, ELEFANT.id, rueckwegZurWelt);
+    await mitKarte(ctx, view, ELEFANT.id, rueckwegNachDazuPasst);
+    await mitAdresse(ctx, view, 'world/route/' + ROUTE.id, eingebetteteKarte);
     ctx.report.checks.push(`Wissenskarte ${view.width}: Besuch im Pass, richtige Antwort schreibt „gelernt“ und Wiederholung, `
       + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage – jeweils auch nach Neuladen; '
-      + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig');
+      + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
+      + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei');
   }
   const motivKarte = await motivkachel320(ctx);
   await mitKarte(ctx, HANDY, FOTOSYNTHESE.id, fotosyntheseZeichnungGestaltet);
@@ -44,7 +50,9 @@ export async function wissenskarte(ctx) {
 
 // Frischer Kontext, Karte direkt per Link geöffnet. `fertig` wartet vor jedem Neuladen auf offene Anfragen,
 // damit ein gewollter Seitenwechsel keine Ladefehler in der Überwachung erzeugt.
-async function mitKarte(ctx, {width, height, touch = false}, topicId, fn, initScript) {
+const mitKarte = (ctx, view, topicId, fn, initScript) => mitAdresse(ctx, view, 'world/topic/' + topicId, fn, initScript);
+
+async function mitAdresse(ctx, {width, height, touch = false}, adresse, fn, initScript) {
   const context = await ctx.browser.newContext({
     viewport: {width, height},
     reducedMotion: 'reduce',
@@ -56,7 +64,7 @@ async function mitKarte(ctx, {width, height, touch = false}, topicId, fn, initSc
     const page = await context.newPage();
     ctx.monitor(page);
     const fertig = ladeanfragen(page);
-    await page.goto(new URL('#world/topic/' + topicId, ctx.base).href);
+    await page.goto(new URL('#' + adresse, ctx.base).href);
     await ready(page);
     await page.locator('#world-topic-title').waitFor(WARTEN);
     const neuLaden = async () => {
@@ -272,4 +280,55 @@ async function fotosyntheseZeichnungGestaltet(page) {
   const rollen = page.locator('.photosynthesis-concept-roles');
   await rollen.waitFor(WARTEN);
   assert.equal(await rollen.evaluate(el => getComputedStyle(el).display), 'grid', 'die Legende der Zeichnung ist gestaltet (Stil der Zeichnung geladen)');
+}
+
+// Direkt geöffnet (frischer Kontext, kein Weg durch die App): Der Rückweg führt zur Welt der Karte.
+async function rueckwegZurWelt(page, {touch}) {
+  const rueckweg = page.locator('nav.karten-rueckweg');
+  const link = rueckweg.getByRole('link', {name: 'Die Tierwelt', exact: true});
+  await link.waitFor(WARTEN);
+  assert.equal(await rueckweg.getByRole('link').count(), 1, 'genau ein Rückweg-Link');
+  assert.match(await link.innerText(), /^←\s*Die Tierwelt$/, 'der Link zeigt den Pfeil und die Welt');
+  assert.equal(await page.getByRole('button', {name: 'Alle Welten'}).count(), 0, 'die alte Kartenleiste ist weg');
+  await tippe(link, touch);
+  await page.waitForFunction(() => location.hash === '#world/animals', null, WARTEN);
+  await page.locator('.world-topic-tile').first().waitFor(WARTEN);
+}
+
+// Über „Dazu passt“ gekommen: „← Zurück“ führt zur vorigen Karte, der Fokus liegt wieder auf der Kachel.
+async function rueckwegNachDazuPasst(page, {touch}) {
+  const erste = verbindungenVon(ELEFANT.id)[0];
+  const schluessel = `world-connection-${ELEFANT.id}-${erste.topic}`;
+  const kachel = dazuPasst(page).locator(`[data-route-focus="${schluessel}"]`);
+  await kachel.scrollIntoViewIfNeeded();
+  await tippe(kachel, touch);
+  await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, titelVon(erste.topic), WARTEN);
+  const link = page.locator('nav.karten-rueckweg').getByRole('link', {name: 'Zurück', exact: true});
+  await link.waitFor(WARTEN);
+  assert.match(await link.innerText(), /^←\s*Zurück$/);
+  await tippe(link, touch);
+  await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, ELEFANT.title, WARTEN);
+  await page.waitForFunction(k => document.activeElement?.dataset?.routeFocus === k, schluessel, WARTEN);
+}
+
+// Karte als Station einer Lernroute: Titel h2, kein Rückweg; die richtige Antwort schreibt learned
+// und schaltet die nächste Station frei.
+async function eingebetteteKarte(page, {neuLaden, touch}) {
+  const erste = catalog.find(t => t.id === ROUTE.topics[0]);
+  const titel = page.locator('#world-topic-title');
+  assert.equal(await titel.getAttribute('aria-label'), erste.title);
+  assert.equal(await titel.evaluate(el => el.tagName), 'H2', 'in der Route ist der Kartentitel h2');
+  assert.equal(await page.locator('nav.karten-rueckweg').count(), 0, 'die Station zeigt keinen Rückweg');
+  const zweite = page.locator('details.world-route-stations .route-station-list button').nth(1);
+  const weiter = page.locator('.route-next .primary-button');
+  assert.equal(await zweite.isDisabled(), true, 'vor der richtigen Antwort ist die zweite Station gesperrt');
+  assert.equal(await weiter.isDisabled(), true, 'vor der richtigen Antwort geht es nicht weiter');
+  const q = erste.question;
+  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
+  await rateMal(page).getByText('Passende Antwort gewählt.', {exact: true}).waitFor(WARTEN);
+  assert.ok((await passLesen(page)).discoveries.includes('learned:' + erste.id), 'richtige Antwort schreibt learned');
+  assert.equal(await zweite.isDisabled(), false, 'die zweite Station ist frei');
+  assert.equal(await weiter.isDisabled(), false, 'es geht weiter');
+  await neuLaden();
+  assert.equal(await zweite.isDisabled(), false, 'die zweite Station bleibt nach Neuladen frei');
 }

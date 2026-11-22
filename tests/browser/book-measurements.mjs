@@ -5,6 +5,7 @@ import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-measurement-content.json',import.meta.url),'utf8'));
 const snapshot=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
 const cardFor=(page,term)=>page.locator('.word-card').filter({has:page.getByRole('heading',{name:term,exact:true})});
@@ -54,10 +55,10 @@ export async function bookMeasurementView(page,report,width,{shots=null,engine='
     await model.getByRole('status').scrollIntoViewIfNeeded();nativeCaptures.push(await captureNativeViewport(page,prefix+'result-'+width+'.png'));
     for(const capture of nativeCaptures){assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-si-'+term.toLowerCase()+'-normal-'+width+'.png'),animations:'disabled'});
-   const topicLink=study.getByRole('link',{name:/Mit „.*weiterdenken/}).first();await topicLink.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);
+   const topicLink=study.getByRole('link',{name:/Mit „.*weiterdenken/}).first();await topicLink.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
    const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:term,exact:true});await backlink.waitFor();
    await page.goBack();await cardFor(page,term).waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
-   await cardFor(page,term).locator('.book-topic-link').first().click();await backlink.waitFor();await backlink.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#book/words/'+encodeURIComponent(term));await cardFor(page,term).waitFor();
+   await cardFor(page,term).locator('.book-topic-link').first().click();await karteDa(page,item.topic);await mehrErfahren(page);await backlink.waitFor();await backlink.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#book/words/'+encodeURIComponent(term));await cardFor(page,term).waitFor();
    proof.push({term,width,large,native200:native,offline,exactFirst:true,allExplanationsHintsAnswersAndSourceLinks:true,modelBounds:!!item.model,nativeCaptures,reciprocalArticleAndRealKeyboardBackFocus:true});
   }
   const saved=await snapshot(page);for(const key of ['notes','favorites','games','journeys','review','settings','favoritePlaces'])assert.deepEqual(saved[key],original[key],'SI exploration preserves existing '+key);for(const [id,value] of Object.entries(original.gameSessions))assert.deepEqual(saved.gameSessions[id],value);

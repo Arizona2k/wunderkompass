@@ -97,7 +97,7 @@ export async function inspectCatalogPhoto(page,id){
  const photo=photos[id];assert.ok(photo,'known verified catalogue photo '+id);
  const topic=topics.find(t=>t.image===id),nature=Object.hasOwn(naturePhotoCandidates,id)&&naturePlaces.some(place=>place.id===id);
  assert.ok(topic||nature,'known actual article or Nature Book target '+id);
- const route=topic?'world/topic/'+topic.id:'book/nature/'+encodeURIComponent(id),selector=topic?'.world-article .world-photo':'.atlas-country.nature-target .nature-real-photo .world-photo';
+ const route=topic?'world/topic/'+topic.id:'book/nature/'+encodeURIComponent(id),selector=topic?'.wissenskarte .world-photo':'.atlas-country.nature-target .nature-real-photo .world-photo';
  await page.evaluate(hash=>location.hash=hash,route);
  await page.waitForFunction(({selector,src,alt})=>{const image=document.querySelector(selector+' img');return image?.getAttribute('src')===src&&image?.alt===alt;},{selector,src:photo.src,alt:photo.alt_de});
  const figure=page.locator(selector).first();await figure.locator('img').scrollIntoViewIfNeeded();await figure.locator('img').evaluate(image=>image.decode());
@@ -141,7 +141,7 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    const card=page.locator('.world-topic-tile').filter({has:page.locator('.world-photo [role=status]')}).first();
    await card.getByText('Du kannst die Wissenskarte trotzdem öffnen.',{exact:true}).waitFor();
    assert.equal(await card.locator('button,a,[tabindex]').count(),0,'failed compact photograph never nests controls inside a card');
-   await card.screenshot({path:shots+'/animal-photo-card-error-320.png'});await card.click();await page.locator('.world-article').waitFor();
+   await card.screenshot({path:shots+'/animal-photo-card-error-320.png'});await card.click();await page.locator('.wissenskarte').waitFor();
    await page.getByRole('button',{name:'Bild erneut laden',exact:true}).waitFor();
   }finally{await context.close();}
  }
@@ -152,8 +152,8 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    await page.route('**/world-photos-*.json',async route=>{requests++;if(requests===1){if(failure==='network')await route.abort('failed');else await route.fulfill({contentType:'application/json',body:'{"untrusted":true}'});}else await route.continue();});
    await page.goto(base+'#world/topic/animal-whale-shark');await ready(page);
    const retry=page.getByRole('button',{name:'Bild erneut laden',exact:true});await retry.waitFor();
-   assert.equal(await page.locator('.world-article .world-photo img[src]').count(),0,'Never render images from an unverified catalog');
-   await prepareAxe(page);assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.world-article',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
+   assert.equal(await page.locator('.wissenskarte .world-photo img[src]').count(),0,'Never render images from an unverified catalog');
+   await prepareAxe(page);assert.deepEqual(await page.evaluate(async()=>(await window.axe.run('.wissenskarte',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>v.id)),[]);
    await retry.focus();await page.keyboard.press('Enter');await page.waitForFunction(()=>document.activeElement?.matches('.world-photo'));
    await inspect(page,'whale-shark');assert.equal(requests,2,'Failure clears the shared pending request for a safe retry');
   }finally{await context.close();}

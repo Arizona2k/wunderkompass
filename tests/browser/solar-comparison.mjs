@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import {prepareAxe} from './axe-loader.mjs';
+import {ausprobierenAuf} from './karte-hilfen.mjs';
 // Existing diameter ratios are unchanged. Distance oracle: the actually reviewed NASA table, in million km, converted with the exact AU.
 const planets=[['Merkur',.383,57.9],['Venus',.949,108.2],['Erde',1,149.6],['Mars',.532,228],['Jupiter',11.21,778.5],['Saturn',9.45,1432],['Uranus',4.01,2867],['Neptun',3.88,4515]].map(([name,diameter,millionKm])=>[name,diameter,millionKm*1_000_000/149597870.7]);
 const maximumDistance=4515*1_000_000/149597870.7;
@@ -13,7 +14,7 @@ async function readable(root,state){
  for(const b of await root.locator('button').all()){const r=await b.boundingBox();assert.ok(r.height>=44&&r.width>=44,'solar control touch target');}
 }
 export async function exerciseSolar(p,{width,state='normal',shots,capture}={}){
- await p.evaluate(()=>location.hash='world/topic/science-solar-system');const root=p.locator('.model-solar-system');await root.waitFor();const observed=[];
+ await p.evaluate(()=>location.hash='world/topic/science-solar-system');await ausprobierenAuf(p,'science-solar-system');const root=p.locator('.model-solar-system');await root.waitFor();const observed=[];
  for(const mode of ['diameters','distances']){
   await root.getByRole('button',{name:mode==='diameters'?'Durchmesser vergleichen':'Sonnenabstände vergleichen',exact:true}).click();
   for(const [name,diameter,distance]of planets){

@@ -21,7 +21,7 @@ export type KartenFrage = {
 
 // Alle Fragen einer Karte: zuerst die Hauptfrage, dann die Zusatzfragen in Datenreihenfolge.
 export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps: string[]}>): KartenFrage[] {
-  // Hinweise wie bisher (world-topic.tsx): Der Hinweis aus questionFeedback ersetzt den ersten Schritt der Bank.
+  // Hinweise wie auf der alten Karte: Der Hinweis aus questionFeedback ersetzt den ersten Schritt der Bank.
   const bank = hintBank[topic.id + ':mini']?.steps ?? [];
   const feedback = topic.questionFeedback;
   const haupt: KartenFrage = {
@@ -77,7 +77,7 @@ export function weitereVerbindungen<T extends {topic: string}>(verbindungen: rea
   return verbindungen.slice(1);
 }
 
-// Gibt es einen Mitmach-Baustein für „Ausprobieren“? Genau die Bedingung der alten Karte (world-topic.tsx).
+// Gibt es einen Mitmach-Baustein für „Ausprobieren“? Genau die Bedingung der alten Karte.
 export function hatBaustein(topic: WorldTopic): boolean {
   return !!(topic.animal || topic.invention || topic.building || topic.model || topic.investigation || topic.id === 'science-tides');
 }

@@ -19,7 +19,7 @@ const karte = id => {
   assert.ok(topic, 'Karte fehlt im Katalog: ' + id);
   return topic;
 };
-// So formt die Karte die Verbindungen heute um (world-topic.tsx: connectionsFor, dann topic und why).
+// So formte schon die alte Karte die Verbindungen um (connectionsFor, dann topic und why).
 const verbindungen = id => connectionsFor(id).map(c => ({topic: c.topic, why: c.why}));
 
 // Ausgedachte Karte mit zwei Zusatzfragen; alles andere vom Elefanten.
@@ -49,7 +49,7 @@ test('kartenFragen ohne Zusatzfragen liefert nur die Hauptfrage mit alten Schlü
 });
 
 test('kartenFragen baut Hinweise wie bisher aus questionFeedback und Bank', () => {
-  // Mit questionFeedback ersetzt dessen Hinweis den ersten Schritt der Bank (world-topic.tsx, TopicQuestion).
+  // Mit questionFeedback ersetzt dessen Hinweis den ersten Schritt der Bank (wie TopicQuestion auf der alten Karte).
   const schrift = karte('history-writing');
   const [haupt] = kartenFragen(schrift, {'history-writing:mini': {steps: ['alter erster Schritt', 'zweiter Schritt']}});
   assert.deepEqual(haupt.hints, [schrift.questionFeedback.hint, 'zweiter Schritt']);
@@ -132,7 +132,7 @@ test('hatBaustein erkennt Tier, Erfindung, Bauwerk und Karten ohne Baustein', ()
   assert.equal(hatBaustein(karte('invention-light')), true);
   assert.equal(hatBaustein(karte('building-giza-pyramids')), true);
   assert.equal(hatBaustein(karte('history-fire')), false);
-  // Gleiche Bedingung wie die alte Karte (world-topic.tsx, „experiment“).
+  // Gleiche Bedingung wie die alte Karte („experiment“).
   for (const t of catalog) {
     const alt = !!(t.animal || t.invention || t.building || t.model || t.investigation || t.id === 'science-tides');
     assert.equal(hatBaustein(t), alt, t.id);

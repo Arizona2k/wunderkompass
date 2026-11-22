@@ -4,7 +4,7 @@ const saveKey='erde-entdecken:save:v3';
 export async function retainedPeopleMiniQuestion(page,topic){
  const {id,question:q,questionFeedback:f}=topic;assert(q&&f&&f.wrongReasons.length===3);
  const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,saveKey);
- const mini=page.locator('.world-mini-question');await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+ const mini=page.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();
  const answerButton=word=>mini.locator('.quiz-answer').filter({has:page.getByText(word,{exact:true})});
  const original=await saved(),current=original.gameSessions['topic:'+id]?.topicAnswer;
  if(current!==null&&current!==undefined){if(!await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await answerButton(q.answers[q.correct]).click();await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();}
@@ -21,7 +21,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  const geometry=await mini.evaluate(root=>({width:document.documentElement.clientWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
  assert(geometry.pageWidth<=geometry.width+2);assert(geometry.buttons.every(b=>b.left>=-1&&b.right<=geometry.width+1&&b.width>=43.9&&b.height>=43.9));
  const axeWasAvailable=await page.evaluate(()=>typeof window.axe?.run==='function');
- await page.reload();await mini.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
+ await page.reload();await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();await mini.getByText(q.why,{exact:true}).waitFor();
  if(axeWasAvailable)await page.addScriptTag({path:AXE_FILE});
  const after=await saved();assert.equal(after.review[reviewKey].seen,priorSeen+1);assert.equal(after.gameSessions['topic:'+id].topicAnswer,q.answers[q.correct]);
  for(const field of ['notes','favorites','favoritePlaces','settings','games','missions','labs','experiments','quizSession','quizResults','journeys','chapters','completedChapters'])assert.deepEqual(after[field],original[field],field+' whole preserved during intentional mini-question');

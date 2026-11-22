@@ -1,5 +1,14 @@
 import assert from 'node:assert/strict';
 import {bereich} from './harness.mjs';
+import {ausprobieren} from './karte-hilfen.mjs';
+
+// Das Energiemodell liegt in „Ausprobieren“ der Karte „Sonnenstrom auch am Abend?“; das ist nach jedem
+// Seitenwechsel (auch Vor/Zurück) wieder zu.
+async function energieModell(page) {
+  await page.locator('#world-topic-title[aria-label="Sonnenstrom auch am Abend?"]').waitFor();
+  await ausprobieren(page);
+  await page.locator('.model-energy').waitFor();
+}
 
 export async function searchAndHistory(page, report) {
   for (const [query, id] of [
@@ -24,12 +33,12 @@ export async function searchAndHistory(page, report) {
   await page.keyboard.press('Escape');
   await page.getByRole('dialog').waitFor({ state: 'hidden' });
   await page.evaluate(() => { location.hash = 'world/topic/science-energy'; });
-  await page.locator('.model-energy').waitFor();
+  await energieModell(page);
   await page.goBack();
   await page.waitForFunction(() => location.hash === '#world/topic/animal-giraffe');
   await page.locator('.world-mini-question').waitFor();
   await page.goForward();
-  await page.locator('.model-energy').waitFor();
+  await energieModell(page);
   report.checks.push('Search, typo, empty results, Escape, hash links, Back/Forward');
   await geographyFacts(page, report);
 }
