@@ -4,6 +4,7 @@
 import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
 import {browserErrorArrays, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import photos from '../../app/world-photos.json' with {type: 'json'};
 import verbindungen from '../../app/world-connections.json' with {type: 'json'};
@@ -12,6 +13,7 @@ import routen from '../../exports/content/world-routes.json' with {type: 'json'}
 const ELEFANT = catalog.find(t => t.id === 'animal-african-savanna-elephant');
 const HEIKEL = catalog.find(t => t.id === 'history-holocaust');
 const FOTOSYNTHESE = catalog.find(t => t.id === 'science-photosynthesis');
+const GUTENBERG = catalog.find(t => t.id === 'person-johannes_gutenberg');
 const HANDY = {width: 390, height: 844, touch: true};
 const BREIT = {width: 1440, height: 900};
 const SCHMAL = {width: 320, height: 700, touch: true};
@@ -37,20 +39,23 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, dazuPasstZurueckOhneFokus);
     await mitKarte(ctx, view, ELEFANT.id, ausprobierenLaedtErstBeimOeffnen);
     await mitKarte(ctx, view, ELEFANT.id, bildnachweiseVollstaendig);
+    await mitKarte(ctx, view, ELEFANT.id, lesbarFuerKinder);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegZurWelt);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegNachDazuPasst);
     await mitAdresse(ctx, view, 'world/route/' + ROUTE.id, eingebetteteKarte);
     ctx.report.checks.push(`Wissenskarte ${view.width}: Besuch im Pass, richtige Antwort schreibt „gelernt“ und Wiederholung, `
       + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage – jeweils auch nach Neuladen; '
       + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
+      + 'Aufklapper mit Zeichen, Tippflächen ab 48 px, Schrift ab 14 px, Buchstaben A/B/C mit Kontrast AA, „Größere Schrift“ vergrößert Frage und Einleitung; '
       + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei');
   }
   await ausprobierenNochEinmal(ctx);
   ctx.report.checks.push('Ausprobieren nach Ladefehler: Noch einmal versuchen lädt Skript und Stil, ohne die Seite neu zu laden; '
     + 'Zurück nach jeder Kachel von Dazu passt fokussiert die Kachel auch ohne Fokus beim Antippen (wie Safari)');
+  await mitKarte(ctx, SCHMAL, GUTENBERG.id, kennwortLesbar);
   const motivKarte = await motivkachel320(ctx);
   await mitKarte(ctx, HANDY, FOTOSYNTHESE.id, fotosyntheseZeichnungGestaltet);
-  ctx.report.checks.push(`Motivkachel 320 px ohne Überlauf (${motivKarte}); Legende der Fotosynthese-Zeichnung gestaltet`);
+  ctx.report.checks.push(`Kennwort auf dem Kartenbild ab 14 px; Motivkachel 320 px ohne Überlauf (${motivKarte}); Legende der Fotosynthese-Zeichnung gestaltet`);
 }
 
 // Frischer Kontext, Karte direkt per Link geöffnet. `fertig` wartet vor jedem Neuladen auf offene Anfragen,
@@ -323,6 +328,35 @@ async function bildnachweiseVollstaendig(page, {touch}) {
     assert.ok(text.includes(photos[id].author), 'Urheber fehlt im Block: ' + id);
     assert.ok(text.includes(photos[id].license), 'Lizenz fehlt im Block: ' + id);
   }
+}
+
+// Gestaltungsregeln des Entwurfs auf der ganzen Karte (vor dem Öffnen von Ausprobieren, dessen Bausteine eigene Suiten haben).
+async function lesbarFuerKinder(page) {
+  const karte = page.locator('.wissenskarte');
+  await dazuPasst(page).waitFor(WARTEN);
+  await karte.locator('details.bildnachweise').waitFor(WARTEN);
+  await aufklapperErkennbar(karte);
+  await tippflaechen48(karte);
+  await schrift14(karte);
+  const buchstaben = rateMal(page).locator('.answer-letter');
+  assert.ok(await buchstaben.count() >= 2, 'Antworten mit Buchstaben');
+  for (const buchstabe of await buchstaben.all()) {
+    const wert = await kontrast(buchstabe);
+    assert.ok(wert >= 4.5, `Buchstabe ${await buchstabe.textContent()}: Kontrast ${wert.toFixed(2)}:1 unter 4,5:1`);
+  }
+  const mehr = karte.locator('details.wissenskarte-mehr');
+  await zeichenZeigtOffen(mehr);
+  await mehr.locator('.wissenskarte-mehr-inhalt .speech-button').first().waitFor(WARTEN);
+  await tippflaechen48(mehr);
+  await grosseSchriftWaechst(page, ['.wissenskarte .rate-mal-frage', '.wissenskarte-einleitung']);
+  await bleibtGroesser(page, [['.wissenskarte .rate-mal-frage', '.wissenskarte .rate-mal .quiz-answer'], ['.wissenskarte-einleitung', '.wissenskarte .world-short > p']]);
+}
+
+// Kennwort auf dem Kartenbild (hier „Spätere Darstellung“ bei Gutenberg): mindestens 14 px wie aller Text.
+async function kennwortLesbar(page) {
+  const kopf = page.locator('.wissenskarte-kopf');
+  await kopf.locator('.kartenbild-kennwort').waitFor(WARTEN);
+  await schrift14(kopf);
 }
 
 // Längster Titel unter den Karten ohne Foto, deren Kopf die Motivkachel zeigt (Karten mit Zeichnung zählen nicht).

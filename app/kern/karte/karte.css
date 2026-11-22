@@ -42,12 +42,12 @@
   position: absolute; top: 10px; left: 10px; max-width: calc(100% - 20px);
   padding: 4px 11px; border-radius: 999px;
   background: rgb(21 48 58 / 0.9); color: #fff;
-  font-size: 13px; font-weight: 700; line-height: 1.4;
+  font-size: 14px; font-weight: 700; line-height: 1.4;
 }
 
 /* Bildnachweise auf dieser Seite */
 .bildnachweise { margin: 24px 0 0; border-top: 1px solid #dae5e8; color: var(--kern-text-leise, #4a626b); font-size: 14px; line-height: 1.55; }
-.bildnachweise summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-weight: 700; color: var(--kern-text, #15303a); }
+.bildnachweise summary { display: flex; align-items: center; min-height: 48px; cursor: pointer; font-weight: 700; color: var(--kern-text, #15303a); }
 .bildnachweise ul { display: grid; gap: 14px; margin: 4px 0 0; padding: 0; list-style: none; }
 .bildnachweise li p { margin: 0; }
 .bildnachweise .bildnachweis-motiv { color: var(--kern-text, #15303a); font-weight: 600; }
@@ -95,8 +95,17 @@
 }
 .wissenskarte .rate-mal-titel { margin: 0; font-size: 24px; line-height: 1.3; color: var(--motiv-text); }
 .wissenskarte .rate-mal-frage { margin: 6px 0 0; font-size: 21px; font-weight: 700; line-height: 1.4; }
+/* „Größere Schrift“ setzt jeden Absatz mit !important auf 1.15rem (globals.css); Frage und Einleitung bleiben darüber. */
+.large-reading .wissenskarte .rate-mal-frage { font-size: 24px !important; }
+.large-reading .wissenskarte-einleitung { font-size: 21px !important; }
 .wissenskarte .rate-mal .quiz-answers { margin-top: 16px; gap: 10px; }
 .wissenskarte .rate-mal .quiz-answer { min-height: 56px; font-size: 18px; }
+/* Denkhinweis: ganze Zeile tippbar (48 px), Schrift 16 px. */
+.wissenskarte .world-game-hint { padding: 0 18px; }
+.wissenskarte .world-game-hint[open] { padding-bottom: 14px; }
+.wissenskarte .world-game-hint summary { min-height: 48px; font-size: 16px; }
+/* Vorlese-Knöpfe und Aufklapper unter dem Foto („Foto & Quelle“, „Bildquelle & Bearbeitung“): Tippflächen mindestens 48 px. */
+.wissenskarte .speech-button, .wissenskarte figcaption summary { min-height: 48px; }
 
 /* Kurz erklärt, Steckbrief, Schon gewusst? */
 .wissenskarte-abschnitt > :is(h2, h3):first-child { margin: 0 0 10px; font-size: 24px; line-height: 1.3; }
@@ -146,6 +155,16 @@
   font-size: 20px; font-weight: 800; line-height: 1.3; color: var(--motiv-text);
 }
 .wissenskarte-aufklapper[open] > summary { border-bottom: 1px solid #e1ebee; margin-bottom: 16px; }
+
+/* Zeichen zum Aufklappen: Ein Pfeil rechts zeigt schon zugeklappt, dass sich hier etwas öffnet; offen zeigt er nach oben.
+   Die Zeilen sind flex, dabei fällt das eingebaute Dreieck weg (Safari zeigt es sonst zusätzlich). */
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary { list-style: none; }
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary::-webkit-details-marker { display: none; }
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary::after {
+  content: ""; flex-shrink: 0; width: 10px; height: 10px; margin: 0 6px 5px auto;
+  border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg);
+}
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint)[open] > summary::after { margin-bottom: -5px; transform: rotate(-135deg); }
 .wissenskarte-laedt { margin: 0 0 20px; }
 .wissenskarte-bausteine { display: grid; gap: 24px; min-width: 0; padding-bottom: 20px; }
 .wissenskarte-bausteine > * { min-width: 0; }

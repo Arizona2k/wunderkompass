@@ -4,6 +4,7 @@
 // „Für Erwachsene: Warum das wichtig ist“. Beide sind zu Beginn zu. Die Texte bleiben wörtlich.
 import assert from 'node:assert/strict';
 import {ready} from './harness.mjs';
+import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
 import inhalt from '../../app/journey-content.json' with {type: 'json'};
 import verzeichnis from '../../app/journey-index.json' with {type: 'json'};
 
@@ -14,6 +15,7 @@ const ANSICHTEN = [{width: 390, height: 844, touch: true}, {width: 1440, height:
 export async function reiseKapitel(ctx) {
   for (const view of ANSICHTEN) await mitKapitel(ctx, view, reiseEinfachZuerst);
   await mitKapitel(ctx, ANSICHTEN[0], reiseOhneKurztext, {serviceWorkers: 'block'});
+  ctx.report.checks.push('Lernreise 390 und 1440 px: Aufklapper mit Zeichen, Tippflächen ab 48 px, einfache Fassung größer als der übrige Text, „Größere Schrift“ vergrößert sie');
   ctx.report.checks.push('Lernreise: Text offen, solange die einfache Fassung lädt; „Für Große“ nach Weiter und Zurück wieder offen');
 }
 
@@ -66,7 +68,12 @@ async function reiseEinfachZuerst(page, {width}, oeffnen) {
   assert.equal(await gross.count(), 1, 'genau ein „Für Große“');
   assert.equal(await gross.getAttribute('open'), null, '„Für Große“ ist zu Beginn zu');
   assert.equal(await gross.locator('.chapter-text').isVisible(), false, 'langer Text erst nach dem Öffnen');
-  await gross.locator(':scope > summary').click();
+  // Zugeklappt erkennbar und groß genug zum Tippen; „Größere Schrift“ vergrößert die einfache Fassung.
+  await aufklapperErkennbar(kapitel);
+  await tippflaechen48(kapitel);
+  await grosseSchriftWaechst(page, ['.journey-reader .chapter-starter']);
+  await bleibtGroesser(page, [['.journey-reader .chapter-starter', '.chapter-card .fact-callout p']]);
+  await zeichenZeigtOffen(gross);
   await gross.locator('.chapter-text').waitFor();
   const text = await gross.locator('.chapter-text p').evaluateAll(absaetze => absaetze.map(p => p.textContent).join(' '));
   assert.equal(text, KAPITEL.text, 'langer Text wörtlich wie in journey-content.json');
@@ -84,7 +91,7 @@ async function reiseEinfachZuerst(page, {width}, oeffnen) {
   assert.equal(await erwachsene.count(), 1, 'genau ein „Für Erwachsene“');
   assert.equal(await erwachsene.getAttribute('open'), null, '„Für Erwachsene“ ist zu Beginn zu');
   assert.equal(await erwachsene.getByText(KAPITEL.whyItMatters, {exact: true}).isVisible(), false);
-  await erwachsene.locator(':scope > summary').click();
+  await zeichenZeigtOffen(erwachsene);
   await erwachsene.getByText(KAPITEL.whyItMatters, {exact: true}).waitFor();
 
   // Die alten Klappen gibt es nicht mehr.
