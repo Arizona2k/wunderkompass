@@ -4,7 +4,7 @@ import path from 'node:path';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import {CHALLENGE_BANK,createChallenge} from '../../app/knowledge-challenge.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {bereich} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
@@ -31,7 +31,7 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
   await page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await page.locator('input[type=file]').setInputFiles(file);await page.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await page.locator('.passport-dialog').waitFor({state:'hidden'});current.initialFixtureRoute=await page.evaluate(()=>location.hash);assert.equal(current.initialFixtureRoute,'#book/notes');current.actualSyntheticFileImported=true;
  }
  async function game(name,width){await activate(page,bereich(page,'games'),width===320);await activate(page,page.locator('[data-game-key="'+name+'"]'),width===320);return page.locator('.game-room:visible');}
- function complete(){assert(browserErrorsComplete(current));current.status='passed';}
+ function complete(){assert(browserErrorsComplete(current),browserErrorText(current));current.status='passed';}
  try{
   for(const width of widths){const touch=width===320;
    for(const [gameId,id] of [['people','person-karl_benz'],['people','person-al_khwarizmi'],['technology','invention-telescope'],['then-now','invention-compass-today']]){

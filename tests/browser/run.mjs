@@ -104,6 +104,10 @@ async function runSuite(suite, {engine, browser, browserType, launchOptions}) {
   const seconds = ((performance.now() - started) / 1000).toFixed(1);
   console.log(`${error ? 'FAIL' : 'PASS'} ${suite.name} ${seconds} s [${engine}]`);
   if (error) console.error(String(error.stack ?? error).replace(/^/gm, '    '));
+  // Scheitert ein Ablauf an einem Zeitlimit, steht die Ursache oft schon in den Browserfehlern.
+  if (error && !String(error.message).startsWith('Browserfehler') && !browserErrorsComplete(report)) {
+    console.error('    Dazu Browserfehler während der Suite:\n' + describeBrowserErrors(report));
+  }
   return !error;
 }
 

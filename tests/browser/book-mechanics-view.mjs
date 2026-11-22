@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {BROWSER_ERROR_FIELDS,browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-mechanics-content.json',import.meta.url),'utf8'));
 const whyIndex=JSON.parse(await fs.readFile(new URL('../../exports/content/why-questions.json',import.meta.url),'utf8'));
@@ -99,8 +99,11 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   await assertBookMechanicsFigure(figure,'forces-and-net');proof.missingDrawnForceNegative=true;
   await context.close();context=null;
   // The original WebKit countercase exceeded its unchanged History API quota
-  // during this real rapid sequence. A fresh context isolates the two widths;
-  // no artificial delay, rate override or error suppression makes it pass.
+  // during this real rapid sequence. A fresh context isolates the two widths.
+  // bookRelatedWordView limits the app's own history writes per step, so no
+  // rate override or error suppression makes it pass. In WebKit it only slows
+  // the test's own navigations below WebKit's separate limit of 200 per 10 s
+  // (scripts/navigation-tempo.mjs); a child never comes near that.
   const rapid={};
   for(const width of[320,1440]){
    context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce',serviceWorkers:'block'});
@@ -123,7 +126,7 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   assert.equal(continuous.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.continuousRapidReverseLinks=continuous.bookRelatedWords;
   const input=child.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await input.fill('Reflexion');await child.locator('.word-card').getByRole('heading',{name:'Reflexion',exact:true}).waitFor();proof.continuousRapidFollowupSearch=true;
   await context.close();context=null;
-  assert(browserErrorsComplete(proof));return proof;
+  assert(browserErrorsComplete(proof),'browser errors in the book network pages: '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,proof[key].slice(0,5)]))));return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

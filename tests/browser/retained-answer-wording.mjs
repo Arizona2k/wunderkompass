@@ -2,24 +2,18 @@ import assert from 'node:assert/strict';import path from 'node:path';
 import {RETAINED_ANSWER_WORDING as alias} from '../../app/retained-answer-wording.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
+import {bildanfragen} from './harness.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {CHALLENGE_BANK,restoreChallenge,emptyChallenge}=await import('../../app/knowledge-challenge.ts');
 const {createSave,emptyProgress,SAVE_KEY}=await import('../../app/progress-storage.ts');
 const question=CHALLENGE_BANK.find(q=>q.topic===alias.topic),topic=catalog.find(t=>t.id===alias.topic);
 function oldRound(finished){const other=CHALLENGE_BANK.filter(q=>q.difficulty==='easy'&&q.id!==question.id).slice(0,5),qs=finished?[...other,question]:[question,...other];return {difficulty:'easy',ids:qs.map(q=>q.id),orders:Object.fromEntries(qs.map(q=>[q.id,[...q.answers].reverse().map(value=>q.id===question.id&&value===alias.after?alias.before:value)])),index:finished?5:0,answer:finished?question.answers[question.correct]:alias.before,done:finished};}
-// A deliberate reload aborts images that are still loading (Firefox reports NS_BINDING_ABORTED).
-// Like the map request, let actual image requests finish first; every failed request stays observable.
-function imageRequests(p){
- const pending=new Set(),done=request=>pending.delete(request);
- p.on('request',request=>{if(request.resourceType()==='image')pending.add(request);});p.on('requestfinished',done);p.on('requestfailed',done);
- return async()=>{const end=Date.now()+15000;while(pending.size){if(Date.now()>end)throw Error('Images still loading before deliberate reload: '+[...pending].map(r=>r.url()).join(', '));await p.waitForTimeout(50);}};
-}
 export async function retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots){
  const observed=[];
  for(const width of [320,1440])for(const finished of [false,true]){
   const session=oldRound(finished),expected=restoreChallenge(session,emptyChallenge());assert.deepEqual(expected.ids,session.ids,'legacy fixture represents a valid six-question round');
   const progress=emptyProgress();progress.favorites=['topic:animal-lion'];progress.games=finished?['memory','world:knowledge-challenge']:['memory'];progress.gameSessions={'world:knowledge-challenge':{challenge:session},'world:animal-detective':{items:['animal-lion','animal-koala'],index:1,roundAnswer:'Koala',roundDone:false}};progress.lastActivity={type:'game',id:'world:knowledge-challenge',family:'world'};
-  const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});const p=await c.newPage();monitor(p);const imagesSettled=imageRequests(p);
+  const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
   // This game hub starts its shared map request. Let that actual request finish
   // before the test deliberately reloads; keep all request failures observable.
   const mapReady=()=>p.waitForFunction(()=>performance.getEntriesByName(new URL('/world.json',location.href).href).some(entry=>entry.responseEnd>0));
@@ -39,7 +33,7 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
   const progress=emptyProgress();progress.favorites=['topic:animal-lion'];progress.games=['memory'];progress.gameSessions={memory:{open:[0],matched:[]},['topic:'+alias.topic]:{items,topicAnswer:alias.before}};
   const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
   await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
-  const p=await c.newPage();monitor(p);const imagesSettled=imageRequests(p);
+  const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
   try{
    await p.goto(base+'#world/topic/'+alias.topic);await ready(p);
    const mini=p.locator('.world-mini-question');await mini.getByRole('heading',{name:topic.question.prompt,exact:true}).waitFor();

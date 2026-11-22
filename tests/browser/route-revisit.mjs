@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import vm from 'node:vm';
+import {ladeanfragen} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const progress=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -48,6 +49,7 @@ export async function completeFreshRoutesPage(page,base,{touch=false}={}){
 // Can run on the genuine fresh result above or on an actually imported old
 // synthetic pass. The caller must retain that pass's real import provenance.
 export async function revisitCompletedRoutesPage(page,base,{touch=false}={}){
+ const anfragenFertig=ladeanfragen(page);
  const {routes,topics}=await source();await page.goto(base+'/#world');await ready(page);
  const before=await progress(page);for(const route of routes)assert.equal(before.gameSessions['route:'+route.id]?.routeDone,true,'actual completed route required, not inferred from a stamp');
  const expected=readingInvariant(before),sessionsBefore=structuredClone(before.gameSessions),rows=[];
@@ -68,7 +70,7 @@ export async function revisitCompletedRoutesPage(page,base,{touch=false}={}){
   await activate(page,page.locator('.route-next').getByRole('button',{name:'Zur Abschlussansicht',exact:true}),touch);
   await page.getByRole('heading',{name:'Deine Wissensroute ist geschafft!',exact:true}).waitFor();await page.waitForFunction(()=>document.activeElement?.id==='learning-main');
   const afterRevisit=await progress(page);assert.deepEqual(readingInvariant(afterRevisit),expected,'looking at completed stations neither adds a review/stamp/learned flag nor rewrites personal texts');retainOriginalSessions(sessionsBefore,afterRevisit.gameSessions);
-  await page.reload();await ready(page);await page.getByRole('button',{name:'Stationen erneut ansehen',exact:true}).waitFor();
+  await anfragenFertig();await page.reload();await ready(page);await page.getByRole('button',{name:'Stationen erneut ansehen',exact:true}).waitFor();
   const reloaded=await progress(page);assert.deepEqual(readingInvariant(reloaded),expected,'reload keeps the original completed route and saved data');retainOriginalSessions(sessionsBefore,reloaded.gameSessions);
   rows.push({route:route.id,stations:ids.length,actualSelectionAndReturn:true,savedIndexItemsDoneStampAndPersonalDataPreserved:true});
  }

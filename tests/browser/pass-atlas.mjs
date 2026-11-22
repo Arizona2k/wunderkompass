@@ -49,7 +49,14 @@ export async function passDesign(page,report,width,shots){
  if(delayed)await page.route('**/progress-panel-*.js',holdBackup);
  try{
  const opener=page.getByRole('button',{name:'Entdeckerpass öffnen',exact:true});await opener.click();
- const pass=page.getByRole('dialog',{name:'Entdeckerpass',exact:true}),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
+ // Firefox 159 mit Playwright 1.65.1 stürzt ab („Page crashed“), wenn an einem Rollen-Locator, dessen Name aus
+ // aria-labelledby kommt, nach einer ersten Abfrage evaluateAll oder allTextContents hängt (auf einer leeren
+ // Testseite nachgestellt, 21.11.2026). Den Namen deshalb einmal über die Rolle prüfen und danach denselben
+ // Dialog über seine Klasse ansprechen. Nach dem Schließen der Rückfrage und nach erneutem Öffnen prüft
+ // named.waitFor() den Namen wieder (eine einzelne Abfrage, kein Absturz).
+ const named=page.getByRole('dialog',{name:'Entdeckerpass',exact:true});await named.waitFor();
+ assert.equal(await named.evaluate(el=>el.matches('.passport-atlas')),true,'the named Entdeckerpass dialog is the pass atlas');
+ const pass=page.locator('.passport-atlas[role=dialog]'),nav=pass.getByRole('navigation',{name:'Im Entdeckerpass'});
  await pass.waitFor();await pass.evaluate(el=>Promise.all(el.getAnimations({subtree:true}).map(a=>a.finished.catch(()=>{}))));const hash=new URL(page.url()).hash,activate=control=>width<=390?control.tap():control.click();
  const frame=async()=>{
   assert.equal(await pass.evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.scrollTop===0),true,'pass frame does not overflow or scroll away');
@@ -107,9 +114,9 @@ export async function passDesign(page,report,width,shots){
  await page.keyboard.press('Tab');const close=pass.getByRole('button',{name:'Entdeckerpass schließen',exact:true});await close.focus();await keyboardRing(close,'header close');await page.screenshot({path:shots+'/pass-keyboard-focus-'+width+'.png',animations:'disabled'});
  await page.emulateMedia({forcedColors:'active'});await keyboardRing(close,'system-color focus');await page.screenshot({path:shots+'/pass-system-colors-'+width+'.png',animations:'disabled'});await page.emulateMedia({forcedColors:'none'});
  await activate(nav.getByRole('button',{name:'Pass sichern',exact:true}));await pass.getByRole('switch',{name:'Größere Schrift',exact:true}).uncheck();await pass.getByRole('switch',{name:'Weniger Bewegung',exact:true}).uncheck();
- await pass.getByRole('button',{name:'Pass neu beginnen',exact:true}).click();const confirmation=page.getByRole('alertdialog');await confirmation.waitFor();assert.equal(await confirmation.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.scrollWidth<=el.clientWidth+1}),true,'reset confirmation fits '+width);await axe('.pass-confirmation');await page.screenshot({path:shots+'/pass-reset-confirmation-'+width+'.png',animations:'disabled'});await confirmation.getByRole('button',{name:'Weiter sammeln',exact:true}).click();await page.locator('.pass-confirmation').waitFor({state:'detached'});await pass.waitFor();
+ await pass.getByRole('button',{name:'Pass neu beginnen',exact:true}).click();const confirmation=page.getByRole('alertdialog');await confirmation.waitFor();assert.equal(await confirmation.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.scrollWidth<=el.clientWidth+1}),true,'reset confirmation fits '+width);await axe('.pass-confirmation');await page.screenshot({path:shots+'/pass-reset-confirmation-'+width+'.png',animations:'disabled'});await confirmation.getByRole('button',{name:'Weiter sammeln',exact:true}).click();await page.locator('.pass-confirmation').waitFor({state:'detached'});await pass.waitFor();await named.waitFor();
  await page.keyboard.press('Escape');await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'Escape returns focus to pass opener');
- await opener.click();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
+ await opener.click();await named.waitFor();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
  report.checks.push('Pass '+width+': heading focus without whole-section frames, keyboard/system-color focus and contrast, normal/hover action text contrast, touch-sized controls/label activation, all badges and extra stats, no label clipping/overlays, both backup actions immediately reachable with normal/large text, reduced dialog motion, hash and focus return preserved');
  }finally{resumeBackup();if(delayed)await page.unroute('**/progress-panel-*.js',holdBackup);}
 }

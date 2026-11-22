@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {captureNativeViewport} from './native-screenshot.mjs';
+import {navigationen,navigationsTempo} from '../../scripts/navigation-tempo.mjs';
 const incoming={};
 for(const name of ['book-light-word-link-index.json','book-water-word-link-index.json','book-particle-word-link-index.json','book-mechanics-word-link-index.json','book-cell-word-link-index.json','book-gene-word-link-index.json','book-statistics-word-link-index.json','book-digital-word-link-index.json','book-astronomy-word-link-index.json','book-ecology-word-link-index.json','book-retained-word-link-index.json'])for(const [term,links]of Object.entries(JSON.parse(await fs.readFile(new URL('../../app/'+name,import.meta.url),'utf8'))))(incoming[term]??=[]).push(...links);
 export const BOOK_RELATED_WORD_EDGE_COUNT=Object.values(incoming).reduce((count,links)=>count+links.length,0);
@@ -10,8 +11,14 @@ const why=JSON.parse(await fs.readFile(new URL('../../exports/content/why-questi
 
 export async function bookRelatedWordView(page,report,width,{large=false,native=false,offline=false,shots=null,engine='chromium',captureSession=null}={}){
  const rows=[];
+ // Navigation budget per step, independent of test speed. framenavigated also counts the app's own
+ // history.replaceState. The test's own navigation is 1; Enter may add 1 remembered reading position.
+ // Back restores the saved entry without writing it again (WebKit counts every write against its quota).
+ const budget=async(step,limit,action)=>{const before=navigationen(page);await action();const used=navigationen(page)-before;assert(used<=limit,`${step} used ${used} navigations (budget ${limit}): the app writes browser history too often`);};
  for(const [term,links]of Object.entries(incoming)){
-  await page.evaluate(term=>location.hash='book/words/'+encodeURIComponent(term),term);await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,term);
+  const termStart=navigationen(page);
+  // Drei Seitenwechsel je Verbindung: WebKit sperrt sonst nach 200 in 10 Sekunden (navigation-tempo.mjs).
+  await navigationsTempo(page,engine);await budget('hash jump to '+term,1,async()=>{await page.evaluate(term=>location.hash='book/words/'+encodeURIComponent(term),term);await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,term);});
   const card=page.locator('.word-card').filter({has:page.getByRole('heading',{name:term,exact:true})});await card.getByText(words.find(w=>w.term===term).more,{exact:true}).waitFor();
   const related=card.locator('[data-book-related-words]'),summary=related.locator(':scope>summary');await related.waitFor();if(!await related.evaluate(e=>e.open)){await summary.focus();await page.keyboard.press('Enter');}
   assert.deepEqual(await related.locator('a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))),links.map(l=>'#book/'+(l.kind==='why'?'why':'words')+'/'+encodeURIComponent(l.term)));
@@ -21,11 +28,13 @@ export async function bookRelatedWordView(page,report,width,{large=false,native=
    await related.getByText(link.reason,{exact:true}).waitFor();assert(link.kind===undefined||link.kind==='why');const target=related.locator('a[href="#book/'+(link.kind==='why'?'why':'words')+'/'+encodeURIComponent(link.term)+'"]');await target.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');assert(await target.evaluate(e=>e===document.activeElement&&e.matches(':focus-visible')),'real Tab navigation leaves the actual reverse link visibly focused');
    const bounds=await target.evaluate(e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,height:r.height,width:r.width};});assert(bounds.left>=-2&&bounds.right<=width+2&&bounds.width>=44&&bounds.height>=44,'old word reverse link reflows with a44px keyboard target');
    if(shots&&(!offline||native)){const file=path.join(shots,`journey-engine-${engine}-book-related-${Object.keys(incoming).indexOf(term)}-${native?'native200-':''}${offline?'cold':'online'}-${width}.png`);await related.scrollIntoViewIfNeeded();if(native)await captureNativeViewport(page,file,{cdp:captureSession});else await related.screenshot({path:file,animations:'disabled'});}
-   await page.keyboard.press('Enter');if(link.kind==='why'){const index=why.findIndex(row=>row.question===link.term);assert(index>=0);await page.waitForURL('**/#book/why/'+encodeURIComponent(link.term));await page.waitForFunction(index=>document.getElementById('why-entry-'+index)?.open,index);await page.locator('#why-entry-'+index+'>summary').waitFor();}else{await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,link.term);await page.locator('.word-card').getByRole('heading',{name:link.term,exact:true}).waitFor();}
-   await page.goBack();await card.waitFor();await page.waitForFunction(({term,target})=>document.querySelector('[data-book-related-words="'+term+'"]')?.open&&document.activeElement?.dataset.routeFocus==='book-word-related-'+term+'-'+target,{term,target:link.term});assert(await target.evaluate(e=>e.matches(':focus-visible')),'Back restores the actual original keyboard link without test refocusing');
+   await navigationsTempo(page,engine);await budget('Enter on '+term+' → '+link.term,2,async()=>{await page.keyboard.press('Enter');if(link.kind==='why'){const index=why.findIndex(row=>row.question===link.term);assert(index>=0);await page.waitForURL('**/#book/why/'+encodeURIComponent(link.term));await page.waitForFunction(index=>document.getElementById('why-entry-'+index)?.open,index);await page.locator('#why-entry-'+index+'>summary').waitFor();}else{await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,link.term);await page.locator('.word-card').getByRole('heading',{name:link.term,exact:true}).waitFor();}});
+   await navigationsTempo(page,engine);await budget('Back from '+link.term+' to '+term,1,async()=>{await page.goBack();await card.waitFor();await page.waitForFunction(({term,target})=>document.querySelector('[data-book-related-words="'+term+'"]')?.open&&document.activeElement?.dataset.routeFocus==='book-word-related-'+term+'-'+target,{term,target:link.term});});assert(await target.evaluate(e=>e.matches(':focus-visible')),'Back restores the actual original keyboard link without test refocusing');
    rows.push({term,target:link.term,width,large,native,offline,canonicalForwardRelation:true,actualKeyboardNavigationAndBackFocus:true,oldDefinitionPreserved:true,...(link.kind==='why'?{targetKind:'why'}:{})});
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
+  // Also between the steps (opening the list, Tab, focus) the app writes no extra history.
+  const termUsed=navigationen(page)-termStart;assert(termUsed<=1+3*links.length,`${term} used ${termUsed} navigations (budget ${1+3*links.length})`);
  }
  assert.equal(rows.length,BOOK_RELATED_WORD_EDGE_COUNT);(report.bookRelatedWords??=[]).push(...rows);return rows;
 }

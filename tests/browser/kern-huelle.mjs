@@ -2,11 +2,13 @@
 // Die Grundlage läuft schmal mit Touch (320 × 568) und breit (1440 × 900),
 // die Hülle bei 320 und 390 px mit Touch sowie bei 768 und 1440 px.
 import assert from 'node:assert/strict';
-import {withPage, ready} from './harness.mjs';
+import {withPage, ready, bildanfragen} from './harness.mjs';
 import {homeContrast} from './discovery-central.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
 import {NEUIGKEITEN, aufteilen, datumLesbar} from '../../app/kern/neuigkeiten.ts';
+import {HOME_MOTIFS} from '../../app/discovery-selection.ts';
+import {navigationsTempo} from '../../scripts/navigation-tempo.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 
 const SCHMAL = {width: 320, height: 568, touch: true};
@@ -37,6 +39,12 @@ export async function kernHuelle(ctx) {
     ctx.report.checks.push(`Hülle ${width}: sechs Bereiche lesbar und erreichbar, Kopf ohne Zähler, Fuß, Zurück stellt die Lesestelle her, Buchleiste springt nach Zurück nicht um`
       + (width < 768 ? ', auch nach einem Tipp ohne Fokus wie in Safari, Leiste verdeckt nichts' : '') + (width === 320 ? ', Dialoge liegen über der Leiste' : ''));
   }
+  await withPage(ctx, {width: 390, height: 844, touch: true}, page => buchLeisteDrehen(page));
+  if (ctx.engine === 'chromium') {
+    await buchLeisteZiehen(ctx);
+    ctx.report.checks.push('Buch am Rechner mit sichtbaren Scrollbalken (Chromium): Fenster von 900 auf 300 px und zurück gezogen, Bereichsleiste wechselt ohne ResizeObserver-Schleife');
+  }
+  ctx.report.checks.push('Buch am Handy gedreht (390 ↔ 844 px): Bereichsleiste wechselt ohne ResizeObserver-Schleife, Pfeile passen zur Leiste, gewählter Bereich (auch „Kleiner Atlas“) bleibt ganz sichtbar');
   await grosseSchrift320(ctx);
   ctx.report.checks.push('Hülle 320 mit größerer Schrift: Leiste lesbar, Beispieltexte passen, Suchfeld ganz sichtbar, Pass unverändert');
   for (const view of [SCHMAL, BREIT]) {
@@ -141,7 +149,8 @@ async function leiste(page, width, name = String(width)) {
       unten: box.bottom,
       mainOben: document.getElementById('learning-main').getBoundingClientRect().top,
       fensterHoehe: innerHeight,
-      ueberlauf: document.documentElement.scrollWidth - innerWidth,
+      // clientWidth statt innerWidth: Chromium im Handy-Modus vergrößert innerWidth mit dem Überlauf.
+      ueberlauf: document.documentElement.scrollWidth - document.documentElement.clientWidth,
       links: [...el.querySelectorAll('a')].map(a => {
         const link = a.getBoundingClientRect(), span = a.querySelector('span');
         const wort = span ? span.getBoundingClientRect() : {width: Infinity, left: -Infinity, right: Infinity};
@@ -298,11 +307,14 @@ async function grosseSchrift320(ctx) {
       if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
     }, {key: SAVE_KEY, save: pass});
     const page = await context.newPage();
+    const bilderFertig = bildanfragen(page);
     ctx.monitor(page);
     await page.goto(ctx.base);
     await ready(page);
     await page.locator('.earth-app.large-reading').waitFor();
     await leiste(page, 320, '320 große Schrift');
+    // Auf der Startseite, bevor die Platzhalter-Prüfung in andere Bereiche wechselt.
+    await alleStartfragen(page, ctx.engine, bilderFertig);
     await platzhalterPassen(page, '320 große Schrift');
     await suchfeldRahmen(page, '320 große Schrift');
     // „Was ist neu?“ mit großer Schrift: der engste Fall für ganze Wörter.
@@ -423,6 +435,87 @@ async function buchLeisteBleibtRuhig(page, width) {
   }
   assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], `buchLeisteBleibtRuhig ${width}: ResizeObserver-Schleife nach Zurück ins Buch`);
   assert.equal(await buchLeiste.getAttribute('data-strip-overflow'), vorher, `buchLeisteBleibtRuhig ${width}: Bereichsleiste im Buch hat ihre Form gewechselt`);
+}
+
+// Dreht ein Kind das Handy, wechselt die Bereichsleiste im Buch zwischen „mit Pfeilen“ (390 px) und
+// „ohne Pfeile“ (844 px). Das darf keine ResizeObserver-Schleife auslösen (WebKit wertet sie als
+// Seitenfehler). Danach passen die Pfeile zur Leiste („zurück“ ist nur ganz links aus, „weiter“ nur
+// ganz rechts), und der gewählte Bereich steht ganz in der Leiste, auch der letzte („Kleiner Atlas“).
+async function buchLeisteDrehen(page) {
+  await page.evaluate(() => {
+    window.__roSchleifen = [];
+    addEventListener('error', event => { if (/ResizeObserver loop/.test(event.message)) window.__roSchleifen.push(innerWidth); });
+  });
+  await page.evaluate(() => { location.hash = 'book/words/Meter'; });
+  const buchLeiste = page.locator('.book-navigation');
+  await buchLeiste.waitFor(WARTEN);
+  const drehen = async (width, height, pfeile) => {
+    await page.setViewportSize({width, height});
+    // Warten, bis die Leiste umgestellt hat; danach zwei Bilder Zeit für eine mögliche Schleifenmeldung.
+    // Stellt sie nicht um, meldet das die Prüfung darunter.
+    await page.waitForFunction(erwartet => document.querySelector('.book-navigation')?.dataset.stripOverflow === erwartet, pfeile, {timeout: 5000}).catch(() => {});
+    await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(ok))));
+    const stand = await buchLeiste.evaluate(nav => {
+      const liste = nav.querySelector('.book-tabs'), [zurueck, weiter] = nav.querySelectorAll(':scope > .area-scroll');
+      const aktiv = liste.querySelector('[data-state=active]'), l = liste.getBoundingClientRect(), a = aktiv.getBoundingClientRect();
+      return {
+        pfeile: nav.dataset.stripOverflow, zurueck: zurueck.disabled, weiter: weiter.disabled,
+        ganzLinks: liste.scrollLeft <= 1, ganzRechts: liste.scrollLeft + liste.clientWidth >= liste.scrollWidth - 1,
+        aktiv: aktiv.textContent.trim(), aktivLinks: Math.round(a.left - l.left), aktivRechts: Math.round(l.right - a.right),
+      };
+    });
+    const wo = `buchLeisteDrehen ${width} („${stand.aktiv}“)`;
+    assert.equal(stand.pfeile, pfeile, `${wo}: Pfeile ${pfeile === 'true' ? 'fehlen' : 'stehen da'}, obwohl die Leiste ${pfeile === 'true' ? 'nicht ' : ''}hineinpasst`);
+    if (pfeile === 'true') assert.deepEqual([stand.zurueck, stand.weiter], [stand.ganzLinks, stand.ganzRechts], `${wo}: Pfeile passen nicht zur Leiste ${JSON.stringify(stand)}`);
+    assert(stand.aktivLinks >= -1 && stand.aktivRechts >= -1, `${wo}: gewählter Bereich ragt aus der Leiste ${JSON.stringify(stand)}`);
+  };
+  for (const [width, height, pfeile] of [[844, 390, 'false'], [390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) await drehen(width, height, pfeile);
+  await drehen(844, 390, 'false');
+  await buchLeiste.getByRole('tab', {name: 'Kleiner Atlas', exact: true}).click();
+  await buchLeiste.locator('.book-tabs [data-state=active]', {hasText: 'Kleiner Atlas'}).waitFor(WARTEN);
+  for (const [width, height, pfeile] of [[390, 844, 'true'], [844, 390, 'false'], [390, 844, 'true']]) await drehen(width, height, pfeile);
+  assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], 'buchLeisteDrehen: ResizeObserver-Schleife beim Drehen');
+}
+
+// Am Rechner mit klassischen Scrollbalken ändert die Bereichsleiste beim Umschalten der Pfeile auch ihre Höhe.
+// Stellte die App die Pfeile im ResizeObserver um, meldete Chromium beim Fensterziehen eine Schleife.
+// Playwright versteckt Scrollbalken in Chromium (--hide-scrollbars); dieser Fall startet deshalb einen eigenen
+// Browser ohne den Schalter. Firefox und WebKit zeigen im Test keine klassischen Scrollbalken.
+async function buchLeisteZiehen(ctx) {
+  const browser = await ctx.browserType.launch({...ctx.launchOptions, ignoreDefaultArgs: ['--hide-scrollbars']});
+  try {
+    const page = await (await browser.newContext({viewport: {width: 900, height: 800}, reducedMotion: 'reduce'})).newPage();
+    ctx.monitor(page);
+    await page.goto(ctx.base + '/#book/words/Meter');
+    await ready(page);
+    const buchLeiste = page.locator('.book-navigation');
+    await buchLeiste.waitFor(WARTEN);
+    await page.evaluate(() => {
+      window.__roSchleifen = [];
+      addEventListener('error', event => { if (/ResizeObserver loop/.test(event.message)) window.__roSchleifen.push(innerWidth); });
+    });
+    const breiten = [];
+    for (let width = 900; width >= 300; width -= 8) breiten.push(width);
+    for (let width = 300; width <= 900; width += 8) breiten.push(width);
+    const zustaende = new Set();
+    let balken = 0;
+    for (const width of breiten) {
+      await page.setViewportSize({width, height: 800});
+      await page.evaluate(() => new Promise(ok => requestAnimationFrame(() => requestAnimationFrame(ok))));
+      const stand = await buchLeiste.evaluate(nav => {
+        const liste = nav.querySelector('.book-tabs');
+        return {pfeile: nav.dataset.stripOverflow, balken: liste.offsetHeight - liste.clientHeight};
+      });
+      zustaende.add(stand.pfeile);
+      balken = Math.max(balken, stand.balken);
+    }
+    // Ohne Pfeilwechsel prüft der Fall nichts; ohne Scrollbalken ist es der falsche Fall.
+    assert.deepEqual([...zustaende].sort(), ['false', 'true'], 'buchLeisteZiehen: Die Pfeile wechseln beim Ziehen nicht');
+    assert(balken > 0, `buchLeisteZiehen: Die Leiste zeigt nie einen Scrollbalken, der Fall prüft so nichts`);
+    assert.deepEqual(await page.evaluate(() => window.__roSchleifen), [], 'buchLeisteZiehen: ResizeObserver-Schleife beim Fensterziehen');
+  } finally {
+    await browser.close();
+  }
 }
 
 // Die Hilfe „So geht’s“ steht auf der Startseite in jeder Breite (der alte Hilfe-Knopf im Kopf ist weg).
@@ -554,6 +647,54 @@ async function kurzeWoerterGanz(page, wo) {
     return funde;
   });
   assert.deepEqual(geteilt, [], `${wo}: Wörter über zwei Zeilen getrennt`);
+}
+
+// Die Startfrage wechselt bei jedem Besuch zufällig. Mit großer Schrift bei 320 px (dem engsten Fall)
+// muss jede passen: kein Wort über zwei Zeilen getrennt, keine waagerecht verschiebbare Seite.
+// Bis November 2026 ragte eine Frage mit langem Wort samt Pfeil 7 bis 10 px über den Rand;
+// das fiel nur auf, wenn der Zufall sie traf. Jede Frage kommt über den echten Rückweg der App auf die
+// Seite: Motiv im Verlaufseintrag der Startseite (history.state.wunderHero), kurz weg, dann Zurück.
+// Neuladen taugt dafür nicht: Beim Verlassen (pagehide) schreibt die App das angezeigte Motiv zurück.
+// Vor dem Weggehen laden die Bilder fertig (Abbrüche zählen sonst als Browserfehler, siehe bildanfragen).
+// Gemessen wird gegen documentElement.clientWidth, nicht innerWidth: Chromium im Handy-Modus (isMobile)
+// vergrößert innerWidth mit dem Überlauf, die Prüfung wäre dort blind.
+async function alleStartfragen(page, engine, bilderFertig) {
+  const funde = [];
+  for (const motiv of HOME_MOTIFS) {
+    await page.evaluate(id => history.replaceState({...history.state, wunderHero: id}, '', location.href), motiv.id);
+    await bilderFertig();
+    await navigationsTempo(page, engine);
+    await page.evaluate(() => { location.hash = 'updates'; });
+    await page.locator('#updates-title').waitFor(WARTEN);
+    await navigationsTempo(page, engine);
+    await page.goBack();
+    await page.locator('[data-discovery-hero] .discovery-feature > a').waitFor(WARTEN);
+    const stand = await page.evaluate(() => {
+      const link = document.querySelector('.discovery-feature > a');
+      const geteilt = [];
+      const gang = document.createTreeWalker(link, NodeFilter.SHOW_TEXT);
+      for (let knoten = gang.nextNode(); knoten; knoten = gang.nextNode()) {
+        for (const wort of knoten.textContent.matchAll(/\p{L}+/gu)) {
+          const zeilen = new Set(), bereich = document.createRange();
+          for (let i = 0; i < wort[0].length; i++) {
+            bereich.setStart(knoten, wort.index + i);
+            bereich.setEnd(knoten, wort.index + i + 1);
+            const r = bereich.getBoundingClientRect();
+            if (r.width) zeilen.add(Math.round(r.top));
+          }
+          if (zeilen.size > 1) geteilt.push(wort[0]);
+        }
+      }
+      return {
+        motiv: document.querySelector('[data-discovery-hero]')?.dataset.discoveryHero,
+        ueberlauf: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        geteilt,
+      };
+    });
+    assert.equal(stand.motiv, motiv.id, `alleStartfragen: Rückweg zeigt ${stand.motiv} statt ${motiv.id}`);
+    if (stand.ueberlauf > 0 || stand.geteilt.length) funde.push(`${motiv.id}: ${stand.ueberlauf > 0 ? `${stand.ueberlauf} px Überlauf` : ''}${stand.geteilt.length ? ` getrennt: ${stand.geteilt.join(', ')}` : ''}`);
+  }
+  assert.deepEqual(funde, [], 'alleStartfragen 320 große Schrift: Startfragen passen nicht');
 }
 
 async function axeOhneVerstoss(page, wo) {

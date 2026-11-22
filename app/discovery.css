@@ -178,6 +178,8 @@
 .discovery-hero-art>.world-photo img{display:block;max-width:100%;width:auto;height:auto;max-height:380px;margin:auto;object-fit:contain}
 .discovery-feature{margin-bottom:18px}.discovery-feature>a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:0;color:var(--wk-ink);font-size:clamp(26px,2.8vw,36px);line-height:1.3;font-weight:700;letter-spacing:-.025em;text-decoration:none}.discovery-feature>a:hover{text-decoration:underline;text-underline-offset:5px}
 .discovery-feature>a>svg{flex-shrink:0}
+/* Sicherheitsnetz: Ein zu langes Wort bricht um, statt die Seite seitlich verschiebbar zu machen. */
+.discovery-feature>a{overflow-wrap:anywhere}
 
 
 
@@ -296,7 +298,7 @@
 .discovery-composed .discovery-hero-art>.world-photo img{max-height:430px}
 .large-reading .discovery-composed h1{font-size:28px}.large-reading .discovery-composed .discovery-feature>a{font-size:clamp(34px,4vw,55px)}
 @media(max-width:800px){.discovery-hero.discovery-composed{grid-template-areas:"copy" "search" "art" "actions";grid-template-columns:minmax(0,1fr);gap:16px;margin:4px 0 34px}.discovery-composed h1{font-size:19px;margin-bottom:10px;max-width:none}.discovery-composed .discovery-feature>a{font-size:clamp(28px,5vw,38px);line-height:1.33}.discovery-composed .discovery-hero-art>.world-photo img{height:250px;max-height:300px;width:auto;max-width:100%}.discovery-composed .discovery-hero-art>.world-photo{margin-inline:auto}.discovery-composed .discovery-hero-actions{width:100%}.large-reading .discovery-composed h1{font-size:25px}.large-reading .discovery-composed .discovery-feature>a{font-size:34px}}
-@media(max-width:360px){.discovery-composed .discovery-hero-art>.world-photo img{height:210px}.discovery-composed .discovery-feature>a{font-size:27px}}
+@media(max-width:360px){.discovery-composed .discovery-hero-art>.world-photo img{height:210px}.discovery-composed .discovery-feature>a{font-size:27px}.large-reading .discovery-composed .discovery-feature>a{font-size:31px}}
 
 .earth-app:is([data-mode=globe],[data-mode=layers],[data-mode=day]) .visual-heading{padding:18px 20px 12px}
 .visual-heading h1{font-size:clamp(26px,2.7vw,36px);line-height:1.2;letter-spacing:-.03em;color:var(--wk-ink);margin:0 0 12px}
