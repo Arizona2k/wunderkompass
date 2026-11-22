@@ -13,7 +13,7 @@ const SETS = ['smoke', 'ci', 'full'];
 const PASS_OFFLINE = [
   'offline-cold', 'no-news', 'backup', 'animal-game-saves', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
-  'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning',
+  'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];
 // Dazu die Tempo-Prüfung (Ladegröße, Layout-Rutschen), damit zu große Seiten schon im PR auffallen.
 const CI = [...PASS_OFFLINE, 'performance'];

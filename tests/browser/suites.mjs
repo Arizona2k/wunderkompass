@@ -27,6 +27,7 @@ import {researchTransferFlow} from './research-transfer.mjs';
 import {retainedAnswerWordingFlow} from './retained-answer-wording.mjs';
 import {solarFlow} from './solar-comparison.mjs';
 import {kernHuelle} from './kern-huelle.mjs';
+import {wissenskarte} from './wissenskarte.mjs';
 
 // Ältere Abläufe erwarten (browser, base, ready, monitor, report, shots).
 const flow = fn => ({browser, base, ready, monitor, report, shots}) => fn(browser, base, ready, monitor, report, shots);
@@ -59,6 +60,7 @@ export const SUITES = [
     });
   }},
   {name: 'kern-huelle', set: 'ci', run: kernHuelle},
+  {name: 'wissenskarte', set: 'ci', run: wissenskarte},
   {name: 'people-learning', set: 'ci', run: ({browser, base, ready, report, shots}) => peopleLegacyRound(browser, base, ready, report, shots)},
   // Tempo (Ladegröße je Bereich, Layout-Rutschen): schon im PR, damit zu große Seiten früh auffallen. Misst nur Chromium.
   {name: 'performance', set: 'ci', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},

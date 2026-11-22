@@ -1,18 +1,24 @@
-/* Neue Wissenskarte: Kartenbild, Motivkachel, Kennwort und Bildnachweis-Block.
+/* Neue Wissenskarte: Karte, Kartenbild, Motivkachel, Kennwort und Bildnachweis-Block.
    Wird von den Karten-Bausteinen selbst eingebunden und liegt damit im Karten-Skript, nicht im Einstieg. */
 
-/* Weltfarben der Motivkachel: Grund, kräftiger Grund, Symbol, Titel.
-   Kontrast (WCAG): Symbol auf kräftigem Grund mindestens 4,2:1, Titel auf kräftigem Grund mindestens 6:1. */
-.kartenbild { --motiv-grund: #eaf5ef; --motiv-stark: #d3ebdd; --motiv-symbol: #286950; --motiv-text: #1f5640; }
-.kartenbild-welt-history { --motiv-grund: #fbf1e2; --motiv-stark: #f3dfc0; --motiv-symbol: #8d5928; --motiv-text: #6e4520; }
-.kartenbild-welt-people { --motiv-grund: #efedf9; --motiv-stark: #dcd7f1; --motiv-symbol: #61518a; --motiv-text: #4d4070; }
-.kartenbild-welt-inventions { --motiv-grund: #fff2df; --motiv-stark: #fbdfb5; --motiv-symbol: #935d22; --motiv-text: #74481a; }
-.kartenbild-welt-buildings { --motiv-grund: #e9f2fa; --motiv-stark: #d0e2f3; --motiv-symbol: #315e87; --motiv-text: #264b6c; }
-.kartenbild-welt-science { --motiv-grund: #e6f3f5; --motiv-stark: #cce6ea; --motiv-symbol: #286872; --motiv-text: #1f545c; }
+/* Weltfarben für Motivkachel und Wissenskarte: Grund, kräftiger Grund, Symbol, Text.
+   Kontrast (WCAG): Symbol auf kräftigem Grund mindestens 4,2:1, Text auf kräftigem Grund mindestens 6:1. */
+.kartenbild, .wissenskarte { --motiv-grund: #eaf5ef; --motiv-stark: #d3ebdd; --motiv-symbol: #286950; --motiv-text: #1f5640; }
+.kartenbild-welt-history, .wissenskarte-welt-history { --motiv-grund: #fbf1e2; --motiv-stark: #f3dfc0; --motiv-symbol: #8d5928; --motiv-text: #6e4520; }
+.kartenbild-welt-people, .wissenskarte-welt-people { --motiv-grund: #efedf9; --motiv-stark: #dcd7f1; --motiv-symbol: #61518a; --motiv-text: #4d4070; }
+.kartenbild-welt-inventions, .wissenskarte-welt-inventions { --motiv-grund: #fff2df; --motiv-stark: #fbdfb5; --motiv-symbol: #935d22; --motiv-text: #74481a; }
+.kartenbild-welt-buildings, .wissenskarte-welt-buildings { --motiv-grund: #e9f2fa; --motiv-stark: #d0e2f3; --motiv-symbol: #315e87; --motiv-text: #264b6c; }
+.kartenbild-welt-science, .wissenskarte-welt-science { --motiv-grund: #e6f3f5; --motiv-stark: #cce6ea; --motiv-symbol: #286872; --motiv-text: #1f545c; }
 
 .kartenbild { position: relative; min-width: 0; border-radius: 18px; overflow: hidden; }
 .kartenbild-kachel { border-radius: 0; }
 .kartenbild > .world-photo { margin: 0; max-width: none; }
+/* Großes Kartenbild: Fotos füllen die Fläche (wie die alte Karte), Abbildungen mit fit „contain“ bleiben ganz sichtbar. */
+.kartenbild-gross > .world-photo { border-radius: 18px; background: var(--motiv-grund); }
+.kartenbild-gross > .world-photo img { height: 260px; object-fit: cover; }
+.kartenbild-gross > .world-photo.media-contain img { object-fit: contain; padding: 14px; }
+.kartenbild-gross > .world-photo figcaption { padding: 8px 16px; background: #fff; font-size: 14px; }
+.kartenbild-gross > .world-photo figcaption a { display: inline-block; padding: 6px 0; }
 
 .kartenbild-motiv {
   display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
@@ -50,4 +56,70 @@
   .kartenbild-motiv { min-height: 200px; }
   .kartenbild-symbol { width: 88px; height: 88px; }
   .kartenbild-motiv-titel { font-size: 22px; }
+}
+
+/* Die Wissenskarte. Eine Lesespalte; ab 900 px steht das Bild im Kopf neben dem Titel.
+   Fließtext 18 px, Tippflächen mindestens 48 px mit 8 px Abstand. */
+.wissenskarte {
+  display: grid; gap: 22px; max-width: 760px; margin: 0 auto; padding: 4px 0 32px;
+  color: var(--kern-text, #15303a); font-size: 18px; line-height: 1.6;
+}
+.wissenskarte > * { min-width: 0; }
+.wissenskarte-kopf { display: grid; gap: 16px; }
+.wissenskarte-kopftext { display: grid; gap: 10px; min-width: 0; }
+.wissenskarte-welt { margin: 0; font-size: 16px; font-weight: 700; color: var(--motiv-text); }
+.wissenskarte-kontext { font-weight: 600; }
+.wissenskarte-kopf :is(h1, h2) {
+  margin: 0; font-size: clamp(30px, 7vw, 44px); line-height: 1.15; letter-spacing: -0.01em;
+  overflow-wrap: anywhere; hyphens: auto;
+}
+.wissenskarte-einleitung { margin: 0; font-size: 19px; line-height: 1.55; }
+.wissenskarte-gelernt {
+  display: inline-flex; align-items: center; gap: 6px; justify-self: start; margin: 0;
+  padding: 4px 14px 4px 10px; border-radius: 999px;
+  background: #e2f2e8; color: #1f5a3a; font-size: 16px; font-weight: 700;
+}
+.wissenskarte-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
+.wissenskarte-knoepfe button { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-size: 17px; }
+.wissenskarte-merken[aria-pressed="true"] { background: var(--motiv-stark); border-color: var(--motiv-symbol); color: var(--motiv-text); }
+
+/* „Rate mal!“ */
+.wissenskarte .rate-mal {
+  padding: 20px; border: 2px solid var(--motiv-stark); border-radius: 20px;
+  background: var(--motiv-grund); scroll-margin-top: 24px;
+}
+.wissenskarte .rate-mal-titel { margin: 0; font-size: 24px; line-height: 1.3; color: var(--motiv-text); }
+.wissenskarte .rate-mal-frage { margin: 6px 0 0; font-size: 21px; font-weight: 700; line-height: 1.4; }
+.wissenskarte .rate-mal .quiz-answers { margin-top: 16px; gap: 10px; }
+.wissenskarte .rate-mal .quiz-answer { min-height: 56px; font-size: 18px; }
+
+/* Kurz erklärt, Steckbrief, Schon gewusst? */
+.wissenskarte-abschnitt > :is(h2, h3):first-child { margin: 0 0 10px; font-size: 24px; line-height: 1.3; }
+.wissenskarte .world-short { scroll-margin-top: 24px; }
+.wissenskarte .world-short > p { max-width: 65ch; margin: 0 0 12px; font-size: 18px; line-height: 1.7; }
+.wissenskarte .world-facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; margin: 0; }
+.wissenskarte .world-facts dt { font-size: 14px; letter-spacing: 0; text-transform: none; }
+.wissenskarte .world-facts dd { font-size: 17px; }
+.wissenskarte-schon-gewusst {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 20px; border-radius: 18px; background: var(--motiv-grund);
+}
+.wissenskarte-schon-gewusst > svg { flex-shrink: 0; margin-top: 3px; color: var(--motiv-symbol); }
+.wissenskarte-schon-gewusst > div { min-width: 0; }
+.wissenskarte-schon-gewusst :is(h2, h3) { margin: 0 0 4px; font-size: 20px; line-height: 1.3; }
+.wissenskarte-schon-gewusst p { margin: 0; }
+
+/* Für Erwachsene */
+.wissenskarte .wissenskarte-erwachsene { padding: 4px 20px; }
+.wissenskarte .wissenskarte-erwachsene summary { display: flex; align-items: center; min-height: 48px; font-size: 16px; }
+.wissenskarte .wissenskarte-erwachsene :is(p, li) { font-size: 15px; line-height: 1.6; }
+.wissenskarte .wissenskarte-erwachsene a { display: inline-block; padding: 6px 0; }
+.wissenskarte .wissenskarte-erwachsene > :last-child { margin-bottom: 14px; }
+
+@media (min-width: 900px) {
+  .wissenskarte { max-width: 1040px; }
+  .wissenskarte > :not(.wissenskarte-kopf) { max-width: 760px; }
+  .wissenskarte-kopf { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 36px; }
+  .wissenskarte-bild { order: 2; }
+  .kartenbild-gross > .world-photo img { height: 360px; }
 }
