@@ -544,6 +544,12 @@ async function zusatzfrageImPass(ctx) {
     assert.equal(pass.review['world-question:' + ELEFANT.id]?.due, '2099-01-01', 'die Hauptfrage bleibt unverändert');
     assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), 'richtige Zusatzfrage schreibt „gelernt“');
     assert.equal(await rateMal(page).getByText(/\d+\s*(?:von|\/)\s*\d+/).count(), 0, 'kein Zähler');
+    // Beide Knöpfe nach der Antwort in Antwortgröße (Design-Prüfung 22.11.2026). Eine alte globale Regel setzt
+    // .speech-button am Handy mit !important auf 14 px; „Noch einmal raten“ ist so ein Knopf.
+    for (const name of ['Noch eine Frage', 'Noch einmal raten']) {
+      const groesse = await rateMal(page).getByRole('button', {name, exact: true}).evaluate(e => parseFloat(getComputedStyle(e).fontSize));
+      assert.ok(groesse >= 18, `„${name}“ ist mindestens 18 px groß (ist ${groesse} px)`);
+    }
     await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).tap();
     await rateMal(page).locator('.rate-mal-frage').getByText(zweite.prompt, {exact: true}).waitFor(WARTEN);
     for (const knopf of await rateMal(page).locator('.quiz-answer').all()) assert.equal(await knopf.isDisabled(), false, 'die nächste Frage ist offen');
