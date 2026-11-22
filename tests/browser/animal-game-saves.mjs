@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
 import retained from '../fixtures/retained-animal-game-before-expansion.json' with {type:'json'};
-import {bereich} from './harness.mjs';
+import {bereich,ladeanfragen} from './harness.mjs';
+// Im Spielebereich lädt die App die Weltkarte (world.json) im Hintergrund, nach jedem Neuladen erneut;
+// vor einem gewollten Neuladen warten die Prüfungen, bis keine Anfrage mehr läuft (ladeanfragen in harness.mjs).
 
 const pool=worldGameBank('animal-detective');
 const affected=retained.animalDetective.filter(old=>!old.answers.every(a=>pool.find(q=>q.id===old.id).answers.includes(a)));
@@ -36,18 +38,18 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
   pass.progress.gameSessions['journey:seasons']={'chapter:2:note':'Synthetischer alter Merkzettel.'};
   pass.progress.gameSessions[game]={items:old.map(q=>q.id),index:0,orders,roundAnswer:old[0].answers[2],roundDone:false};
   await context.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:pass});
-  const p=await context.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const p=await context.newPage();monitor(p);const ruhe=ladeanfragen(p);p.setDefaultTimeout(20000);
   let imported;
   try{
    await p.goto(base);await ready(p);await open(p);await exactRound(p,old[0],orders,{wrong:true});
-   await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await exactRound(p,old[0],orders,{wrong:true});
+   await ruhe();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await exactRound(p,old[0],orders,{wrong:true});
    await p.screenshot({path:shots+'/animal-retained-wrong-'+round+'-'+width+'.png',fullPage:true});
    await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
    const download=p.waitForEvent('download');await p.getByRole('button',{name:'Entdeckerpass sichern',exact:true}).click();
    const file=shots+'/synthetic-retained-animal-'+round+'-'+width+'.json';await(await download).saveAs(file);
    const exported=JSON.parse(await fs.readFile(file,'utf8'));assert.equal(exported.schemaVersion,3);
    for(const [id,order]of Object.entries(orders))assert.deepEqual(exported.progress.gameSessions[game].orders[id],order);
-   imported=await browser.newContext(options);const restore=await imported.newPage();monitor(restore);restore.setDefaultTimeout(20000);
+   imported=await browser.newContext(options);const restore=await imported.newPage();monitor(restore);const ruheRestore=ladeanfragen(restore);restore.setDefaultTimeout(20000);
    await restore.goto(base);await ready(restore);await restore.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();
    await restore.locator('input[type=file]').setInputFiles(file);await restore.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await restore.locator('.passport-dialog').waitFor({state:'hidden'});
    await restore.getByRole('button',{name:'Fortsetzen',exact:true}).click();await exactRound(restore,old[0],orders,{wrong:true});
@@ -65,7 +67,7 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
    for(const [id,order]of Object.entries(orders))assert.deepEqual(after.gameSessions[game].orders[id],order);
    assert.deepEqual(after.notes,pass.progress.notes);assert.deepEqual(after.favorites,pass.progress.favorites);
    for(const id of ['memory','journey:seasons'])assert.deepEqual(after.gameSessions[id],pass.progress.gameSessions[id]);
-   await restore.reload();await ready(restore);await open(restore);await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();
+   await ruheRestore();await restore.reload();await ready(restore);await open(restore);await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();
    report.retainedAnimalRounds.push({width,large:width===320,round,ids:old.map(q=>q.id),oldChoices:true,actualReload:true,actualDownloadAndFreshImport:true,wrongAndCorrect:true,allOldOrdersAndOtherProgressPreserved:true,stampAfterFiveOnly:true});
   }finally{await imported?.close();await context.close();}
  }
