@@ -23,7 +23,11 @@ export default function Kartenbild({topic, groesse, nachweis = false}: Kartenbil
   const kachel = groesse === 'kachel';
   const kennwort = art.art === 'motiv' ? undefined : art.kennwort;
   return (
-    <div className={`kartenbild kartenbild-${groesse} kartenbild-welt-${topic.category}`} data-bildart={art.art}>
+    <div
+      className={`kartenbild kartenbild-${groesse} kartenbild-welt-${topic.category}`}
+      data-bildart={art.art}
+      data-foto={art.art === 'foto' ? art.photoId : undefined}
+    >
       {art.art === 'foto' && (kachel
         ? <WorldPhoto id={art.photoId} compact credit={false}/>
         : <WorldPhoto id={art.photoId} credit={nachweis} eager/>)}

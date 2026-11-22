@@ -1,14 +1,25 @@
-// Neue Wissenskarte (Phase 1, Teilschritt 2): Kopf, „Rate mal!“, Merken, heikle Karten, Vorlesen.
-// Jeder Fall prüft auch den Pass nach Neuladen: Dort hängt der Lernstand der Kinder.
+// Neue Wissenskarte (Phase 1, Teilschritt 2): Kopf, „Rate mal!“, Merken, heikle Karten, Vorlesen,
+// Ausprobieren, Dazu passt und Bildnachweise.
+// Jeder Fall mit Lernstand prüft auch den Pass nach Neuladen: Dort hängt der Lernstand der Kinder.
 import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
+import photos from '../../app/world-photos.json' with {type: 'json'};
+import verbindungen from '../../app/world-connections.json' with {type: 'json'};
 
 const ELEFANT = catalog.find(t => t.id === 'animal-african-savanna-elephant');
 const HEIKEL = catalog.find(t => t.id === 'history-holocaust');
+const FOTOSYNTHESE = catalog.find(t => t.id === 'science-photosynthesis');
 const HANDY = {width: 390, height: 844, touch: true};
 const BREIT = {width: 1440, height: 900};
+const SCHMAL = {width: 320, height: 700, touch: true};
 const WARTEN = {timeout: 10000};
+
+// Erklärte Verbindungen einer Karte in der Reihenfolge der Daten (wie connectionsFor in der App).
+const verbindungenVon = id => verbindungen.connections
+  .filter(c => c.fromId === id || c.toId === id)
+  .map(c => ({...c, topic: c.fromId === id ? c.toId : c.fromId}));
+const titelVon = id => catalog.find(t => t.id === id).title;
 
 export async function wissenskarte(ctx) {
   for (const view of [HANDY, BREIT]) {
@@ -18,9 +29,17 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, merkenSchaltetFavoriten);
     await mitKarte(ctx, view, HEIKEL.id, heikleKarteFragtVorher);
     await mitKarte(ctx, view, ELEFANT.id, vorlesenLiestKopfUndFrage, vorleseAttrappe);
+    await mitKarte(ctx, view, ELEFANT.id, dazuPasstHoechstensDrei);
+    await mitKarte(ctx, view, ELEFANT.id, dazuPasstZurueck);
+    await mitKarte(ctx, view, ELEFANT.id, ausprobierenLaedtErstBeimOeffnen);
+    await mitKarte(ctx, view, ELEFANT.id, bildnachweiseVollstaendig);
     ctx.report.checks.push(`Wissenskarte ${view.width}: Besuch im Pass, richtige Antwort schreibt „gelernt“ und Wiederholung, `
-      + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage – jeweils auch nach Neuladen');
+      + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage – jeweils auch nach Neuladen; '
+      + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig');
   }
+  const motivKarte = await motivkachel320(ctx);
+  await mitKarte(ctx, HANDY, FOTOSYNTHESE.id, fotosyntheseZeichnungGestaltet);
+  ctx.report.checks.push(`Motivkachel 320 px ohne Überlauf (${motivKarte}); Legende der Fotosynthese-Zeichnung gestaltet`);
 }
 
 // Frischer Kontext, Karte direkt per Link geöffnet. `fertig` wartet vor jedem Neuladen auf offene Anfragen,
@@ -140,4 +159,117 @@ async function vorlesenLiestKopfUndFrage(page, {touch}) {
   await page.waitForFunction(() => window.__vorgelesen.length > 0, null, WARTEN);
   const text = (await page.evaluate(() => window.__vorgelesen)).at(-1);
   for (const teil of [ELEFANT.title, ELEFANT.intro, q.prompt, ...q.answers]) assert.ok(text.includes(teil), 'Vorlesen enthält: ' + teil);
+}
+
+const dazuPasst = page => page.locator('section.dazu-passt');
+
+async function dazuPasstHoechstensDrei(page) {
+  const alle = verbindungenVon(ELEFANT.id);
+  const erste = alle[0];
+  const bereich = dazuPasst(page);
+  await bereich.getByRole('heading', {name: 'Dazu passt', exact: true}).waitFor(WARTEN);
+  const kacheln = bereich.locator('.dazu-passt-kachel');
+  const anzahl = await kacheln.count();
+  assert.ok(anzahl >= 1 && anzahl <= 3, 'Dazu passt zeigt 1 bis 3 Kacheln, nicht ' + anzahl);
+  const ersteKachel = kacheln.first();
+  assert.equal(await ersteKachel.getAttribute('data-route-focus'), `world-connection-${ELEFANT.id}-${erste.topic}`);
+  const text = await ersteKachel.textContent();
+  assert.ok(text.includes(titelVon(erste.topic)), 'die erste Kachel nennt die Nachbarkarte');
+  assert.ok(text.includes(erste.why), 'die erste Kachel nennt den Satz „warum“');
+  const nurRelated = ELEFANT.related.filter(id => !alle.some(c => c.topic === id));
+  assert.ok(nurRelated.length > 0, 'Testvoraussetzung: der Elefant hat einen Nachbarn nur in related');
+  for (const id of nurRelated) {
+    assert.equal(await page.locator(`[data-route-focus$="-${id}"]`).count(), 0, 'kein Knopf zu ' + id);
+    assert.equal(await page.locator('.wissenskarte').getByText(titelVon(id), {exact: true}).count(), 0, 'related-Nachbar nicht zu sehen: ' + id);
+  }
+}
+
+const kartenTitel = page => page.evaluate(() => document.getElementById('world-topic-title')?.getAttribute('aria-label'));
+
+async function dazuPasstZurueck(page, {touch}) {
+  const erste = verbindungenVon(ELEFANT.id)[0];
+  const schluessel = `world-connection-${ELEFANT.id}-${erste.topic}`;
+  const kachel = dazuPasst(page).locator(`[data-route-focus="${schluessel}"]`);
+  await kachel.scrollIntoViewIfNeeded();
+  await tippe(kachel, touch);
+  await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, titelVon(erste.topic), WARTEN);
+  await page.goBack();
+  await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, ELEFANT.title, WARTEN);
+  await page.waitForFunction(k => document.activeElement?.dataset?.routeFocus === k, schluessel, WARTEN);
+  assert.equal(await kartenTitel(page), ELEFANT.title);
+  const lage = await page.evaluate(() => {
+    const r = document.activeElement.getBoundingClientRect();
+    return {oben: r.top, unten: r.bottom, hoehe: innerHeight};
+  });
+  assert.ok(lage.oben >= 0 && lage.unten <= lage.hoehe, `die Kachel liegt im Bild (${JSON.stringify(lage)})`);
+}
+
+const bausteinGeladen = page => page.evaluate(() => performance.getEntriesByType('resource').some(e => /\/bausteine-[^/]*\.js(?:\?|$)/.test(e.name)));
+
+async function ausprobierenLaedtErstBeimOeffnen(page, {neuLaden, touch}) {
+  const ausprobieren = page.locator('details.wissenskarte-ausprobieren');
+  await ausprobieren.waitFor(WARTEN);
+  assert.equal(await ausprobieren.evaluate(el => el.open), false, 'Ausprobieren ist zu Beginn zu');
+  assert.equal(await bausteinGeladen(page), false, 'vor dem Öffnen lädt kein Baustein');
+  assert.equal(await page.locator('.animal-measure').count(), 0, 'vor dem Öffnen steht kein Baustein auf der Seite');
+  await tippe(ausprobieren.locator('summary'), touch);
+  await ausprobieren.locator('.animal-measure').waitFor({state: 'visible', ...WARTEN});
+  assert.equal(await bausteinGeladen(page), true, 'nach dem Öffnen ist der Baustein geladen');
+  // Der Baustein speichert weiter unter dem Spielstand der Karte (topic:<id>), mit seinem alten Schlüssel.
+  await tippe(ausprobieren.getByRole('button', {name: 'Einen Größenvergleich zeigen', exact: true}), touch);
+  await ausprobieren.locator('.measure-bars').waitFor(WARTEN);
+  assert.equal((await passLesen(page)).gameSessions['topic:' + ELEFANT.id]?.compareAnimal, true, 'Größenvergleich im Spielstand der Karte');
+  await neuLaden();
+  await tippe(page.locator('details.wissenskarte-ausprobieren > summary'), touch);
+  await page.locator('details.wissenskarte-ausprobieren .measure-bars').waitFor(WARTEN);
+}
+
+async function bildnachweiseVollstaendig(page, {touch}) {
+  const nachbar = catalog.find(t => t.id === verbindungenVon(ELEFANT.id)[0].topic);
+  await dazuPasst(page).waitFor(WARTEN);
+  const fotoIds = await page.locator('.wissenskarte [data-foto]').evaluateAll(els => els.map(el => el.dataset.foto));
+  assert.ok(fotoIds.includes(ELEFANT.image) && fotoIds.includes(nachbar.image), 'Kopf- und Kachelfoto sind auf der Seite: ' + fotoIds.join(', '));
+  const block = page.locator('details.bildnachweise');
+  await block.locator('summary', {hasText: 'Bildnachweise auf dieser Seite'}).scrollIntoViewIfNeeded();
+  await tippe(block.locator('summary'), touch);
+  await block.locator('li').first().waitFor(WARTEN);
+  const text = await block.textContent();
+  for (const id of new Set(fotoIds)) {
+    assert.ok(text.includes(photos[id].author), 'Urheber fehlt im Block: ' + id);
+    assert.ok(text.includes(photos[id].license), 'Lizenz fehlt im Block: ' + id);
+  }
+}
+
+// Längster Titel unter den Karten ohne Foto, deren Kopf die Motivkachel zeigt (Karten mit Zeichnung zählen nicht).
+async function motivkachel320(ctx) {
+  const kandidaten = catalog.filter(t => !t.image).sort((a, b) => b.title.length - a.title.length);
+  for (const karte of kandidaten) {
+    let gefunden = false;
+    await mitKarte(ctx, SCHMAL, karte.id, async page => {
+      const bild = page.locator('.wissenskarte-kopf .kartenbild');
+      await bild.waitFor(WARTEN);
+      if (await bild.getAttribute('data-bildart') !== 'motiv') return;
+      gefunden = true;
+      const masse = await page.evaluate(() => {
+        const motivTitel = document.querySelector('.wissenskarte-kopf .kartenbild-motiv-titel');
+        const titel = document.getElementById('world-topic-title');
+        return {
+          seite: document.documentElement.scrollWidth,
+          motiv: [motivTitel.scrollWidth, motivTitel.clientWidth],
+          titel: [titel.scrollWidth, titel.clientWidth],
+        };
+      });
+      assert.ok(masse.seite <= 320, `${karte.id}: Seite breiter als 320 px (${masse.seite})`);
+      assert.ok(masse.motiv[0] <= masse.motiv[1], `${karte.id}: Titel der Motivkachel abgeschnitten (${masse.motiv})`);
+      assert.ok(masse.titel[0] <= masse.titel[1], `${karte.id}: Kartentitel abgeschnitten (${masse.titel})`);
+    });
+    if (gefunden) return karte.id;
+  }
+  assert.fail('Keine Karte mit Motivkachel gefunden');
+}
+
+async function fotosyntheseZeichnungGestaltet(page) {
+  const rollen = page.locator('.photosynthesis-concept-roles');
+  await rollen.waitFor(WARTEN);
+  assert.equal(await rollen.evaluate(el => getComputedStyle(el).display), 'grid', 'die Legende der Zeichnung ist gestaltet (Stil der Zeichnung geladen)');
 }

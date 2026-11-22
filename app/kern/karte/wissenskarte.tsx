@@ -1,6 +1,7 @@
 'use client';
 // Die neue Wissenskarte (Phase 1, Teilschritt 2). Von oben nach unten:
-// Kopf (Bild, Titel, Einleitung, Vorlesen, Merken), „Rate mal!“, Kurz erklärt, Steckbrief, Schon gewusst?, Für Erwachsene.
+// Kopf (Bild, Titel, Einleitung, Vorlesen, Merken), „Rate mal!“, Kurz erklärt, Steckbrief, Schon gewusst?,
+// Ausprobieren, Mehr erfahren, Für Erwachsene, Dazu passt, Bildnachweise auf dieser Seite.
 // Pass-Kopplung wie bei der alten Karte: dieselbe Hülle (SavedGame 'topic:<id>'), dieselben Schlüssel,
 // dieselben Aufrufe für Merken, „gelernt“ und Wiederholung.
 import {Fragment, useCallback, useState} from 'react';
@@ -9,14 +10,19 @@ import {LearningDetails} from '../../learning-components';
 import {LearningMotion} from '../../learning-motion';
 import PhotosynthesisRolesDrawing from '../../photosynthesis-roles-drawing';
 import {SavedGame, useSavedGame} from '../../saved-games';
+import {connectionsFor} from '../../knowledge-connections';
 import {displayTopicTitle} from '../../topic-title';
 import HINTS from '../../challenge-hints.json';
 import {WORLD_CATEGORIES, WORLD_INDEX} from '../../world-index';
 import type {Activity} from '../../progress-storage';
 import type {WorldActions, WorldTopic} from '../../world-types';
+import Ausprobieren from './ausprobieren';
+import BildnachweiseAufDieserSeite from './bildnachweise';
+import DazuPasst from './dazu-passt';
 import Kartenbild from './kartenbild';
+import MehrErfahren from './mehr-erfahren';
 import RateMal, {useAntwortReihe} from './rate-mal';
-import {ersteFrage, kartenFragen} from './karten-daten';
+import {dazuPasst, ersteFrage, hatAusprobieren, kartenFragen, weitereVerbindungen} from './karten-daten';
 import './karte.css';
 
 type WissenskarteProps = {
@@ -63,12 +69,12 @@ function Karteninhalt({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
       </article>
     );
   }
-  return <Kartenkoerper topic={t} actions={a} embedded={embedded}/>;
+  return <Kartenkoerper topic={t} actions={a} onTopic={onTopic} embedded={embedded}/>;
 }
 
 const satz = (text: string) => (/[.!?…:]$/.test(text.trim()) ? text.trim() : text.trim() + '.');
 
-function Kartenkoerper({topic: t, actions: a, embedded}: Omit<InhaltProps, 'onTopic'>) {
+function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Titel = embedded ? 'h2' : 'h1';
   const Abschnitt = embedded ? 'h3' : 'h2';
   const Unterabschnitt = embedded ? 'h4' : 'h3';
@@ -81,6 +87,10 @@ function Kartenkoerper({topic: t, actions: a, embedded}: Omit<InhaltProps, 'onTo
   const gemerkt = a.progress.favorites.includes('topic:' + t.id);
   const gelernt = a.progress.discoveries.includes('learned:' + t.id);
   const heikel = !!t.history?.sensitive;
+  const verbindungen = connectionsFor(t.id);
+  const kacheln = dazuPasst(t, verbindungen);
+  const nachbarKarte = kacheln.find(k => k.art === 'karte');
+  const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
   const vorlesen = () => a.onRead([t.title, t.intro, 'Rate mal!', frage.question.prompt, ...auswahl].map(satz).join(' '));
 
   return (
@@ -177,6 +187,10 @@ function Kartenkoerper({topic: t, actions: a, embedded}: Omit<InhaltProps, 'onTo
         </section>
       )}
 
+      {hatAusprobieren(t) && <Ausprobieren topic={t} actions={a}/>}
+
+      <MehrErfahren topic={t} actions={a} onTopic={onTopic} verbindungen={weitereVerbindungen(verbindungen)} ueberschrift={Unterabschnitt}/>
+
       <details className="world-sources wissenskarte-erwachsene">
         <summary>Für Erwachsene: Quellen und Lernziele</summary>
         {t.learning?.benefit && <p><strong>Lernziel:</strong> {t.learning.benefit}</p>}
@@ -193,6 +207,11 @@ function Kartenkoerper({topic: t, actions: a, embedded}: Omit<InhaltProps, 'onTo
         </ul>
         <p>Originalquellen können zum Lesen eine Internetverbindung benötigen.</p>
       </details>
+
+      <DazuPasst topic={t} actions={a} onTopic={onTopic} kacheln={kacheln} ueberschrift={Abschnitt}/>
+
+      {/* Alle Fotos dieser Seite, auch das der Kachel; Kacheln zeigen selbst keine Nachweiszeile. */}
+      <BildnachweiseAufDieserSeite photoIds={[t.image, nachbar?.image].filter((id): id is string => !!id)}/>
     </article>
   );
 }

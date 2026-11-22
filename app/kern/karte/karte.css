@@ -123,3 +123,63 @@
   .wissenskarte-bild { order: 2; }
   .kartenbild-gross > .world-photo img { height: 360px; }
 }
+
+/* Kurz erklärt: Erklärzeichnung zur Fotosynthese und Personen-Ablauf (vorher in article-workshop.css der alten Karte) */
+.wissenskarte .photosynthesis-concept-section { margin-block: 1.75rem; }
+.wissenskarte .photosynthesis-concept-section :is(h3, h4) { margin: 0 0 1rem; font-size: 20px; line-height: 1.4; }
+.wissenskarte .photosynthesis-concept-section figure { margin: 0; }
+.wissenskarte .photosynthesis-concept-section figcaption { margin-top: 1rem; font-size: 16px; line-height: 1.6; color: #264b46; }
+.wissenskarte .contribution-flow p { font-size: 16px; line-height: 1.7; }
+.wissenskarte .world-mini-question .retained-mini-choice { overflow-wrap: anywhere; }
+
+/* Ausprobieren und Mehr erfahren: aufklappbar, zu Beginn zu. Große Tippfläche, klare Beschriftung. */
+.wissenskarte-aufklapper {
+  padding: 0 20px; border: 1px solid #d3e2e6; border-radius: 18px; background: #fff;
+}
+.wissenskarte-aufklapper > summary {
+  display: flex; align-items: center; gap: 10px; min-height: 56px; cursor: pointer;
+  font-size: 20px; font-weight: 800; line-height: 1.3; color: var(--motiv-text);
+}
+.wissenskarte-aufklapper[open] > summary { border-bottom: 1px solid #e1ebee; margin-bottom: 16px; }
+.wissenskarte-laedt { margin: 0 0 20px; }
+.wissenskarte-bausteine { display: grid; gap: 24px; min-width: 0; padding-bottom: 20px; }
+.wissenskarte-bausteine > * { min-width: 0; }
+.wissenskarte-ausprobieren .article-experiment { min-width: 0; }
+.wissenskarte-mehr-inhalt { display: grid; gap: 22px; min-width: 0; padding-bottom: 20px; }
+.wissenskarte-mehr-inhalt > section { min-width: 0; }
+.wissenskarte-mehr-inhalt :is(h3, h4) { margin: 0 0 10px; font-size: 20px; line-height: 1.35; }
+.wissenskarte-mehr-inhalt p { max-width: 65ch; margin: 0 0 12px; font-size: 17px; line-height: 1.65; }
+.wissenskarte-mehr-inhalt .knowledge-link {
+  min-height: 48px; margin: 0 0 8px; font-size: 17px; font-weight: 700;
+  background: var(--motiv-grund); color: var(--motiv-text);
+}
+.wissenskarte-mehr-inhalt .connection-card { margin: 0 0 14px; padding: 0 0 14px; }
+.wissenskarte-mehr-inhalt .connection-card:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.wissenskarte-mehr-inhalt .connection-card p { margin: 4px 0 0; font-size: 16px; }
+
+/* Dazu passt: höchstens drei große Kacheln. Auf dem Handy untereinander, breit nebeneinander. */
+.dazu-passt > :is(h2, h3) { margin: 0 0 12px; font-size: 24px; line-height: 1.3; }
+.dazu-passt-kacheln { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 14px; }
+.dazu-passt-kachel {
+  display: flex; flex-direction: column; align-items: stretch; gap: 0; min-width: 0; padding: 0; overflow: hidden;
+  border: 2px solid var(--motiv-stark); border-radius: 20px; background: #fff;
+  color: var(--kern-text, #15303a); text-align: left; font: inherit; cursor: pointer;
+}
+.dazu-passt-kachel:hover { border-color: var(--motiv-symbol); }
+.dazu-passt-kachel:focus-visible { outline: 3px solid var(--motiv-symbol); outline-offset: 3px; }
+.dazu-passt-bild { display: block; min-width: 0; }
+.dazu-passt-bild .kartenbild { border-radius: 0; }
+.dazu-passt-bild .world-photo img { width: 100%; height: 150px; object-fit: cover; }
+.dazu-passt-bild .kartenbild-motiv { min-height: 150px; }
+.dazu-passt-symbol {
+  display: flex; align-items: center; justify-content: center; height: 150px;
+  background: linear-gradient(150deg, var(--motiv-stark) 0%, var(--motiv-grund) 72%); color: var(--motiv-symbol);
+}
+.dazu-passt-symbol svg { width: 72px; height: 72px; }
+.dazu-passt-titel { display: block; padding: 14px 16px 0; font-size: 19px; font-weight: 800; line-height: 1.3; overflow-wrap: anywhere; }
+.dazu-passt-text { display: block; padding: 6px 16px 16px; font-size: 16px; line-height: 1.5; color: var(--kern-text-leise, #4a626b); }
+
+@media (max-width: 560px) {
+  .wissenskarte-aufklapper { padding: 0 16px; }
+  .dazu-passt-bild .world-photo img, .dazu-passt-bild .kartenbild-motiv, .dazu-passt-symbol { height: 120px; min-height: 120px; }
+}

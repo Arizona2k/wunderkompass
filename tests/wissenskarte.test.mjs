@@ -7,8 +7,12 @@ import hintBank from '../app/challenge-hints.json' with {type: 'json'};
 import fotos from '../app/world-photos.json' with {type: 'json'};
 import fotoIds from '../app/world-photo-ids.json' with {type: 'json'};
 import fotoKennwoerter from '../app/kern/karte/foto-kennwoerter.json' with {type: 'json'};
+import belegeIds from '../app/kern/karte/belege-ids.json' with {type: 'json'};
+import personenBelege from '../app/people-inquiries.json' with {type: 'json'};
+import forscherblick from '../app/science-thinking.json' with {type: 'json'};
+import {readFileSync} from 'node:fs';
 import {connectionsFor} from '../app/knowledge-connections.ts';
-import {kartenFragen, ersteFrage, dazuPasst, weitereVerbindungen, hatBaustein, bildArt, fotoKennwort, bildnachweisListe} from '../app/kern/karte/karten-daten.ts';
+import {kartenFragen, ersteFrage, dazuPasst, weitereVerbindungen, hatBaustein, hatAusprobieren, bildArt, fotoKennwort, bildnachweisListe} from '../app/kern/karte/karten-daten.ts';
 
 const karte = id => {
   const topic = catalog.find(t => t.id === id);
@@ -133,6 +137,29 @@ test('hatBaustein erkennt Tier, Erfindung, Bauwerk und Karten ohne Baustein', ()
     const alt = !!(t.animal || t.invention || t.building || t.model || t.investigation || t.id === 'science-tides');
     assert.equal(hatBaustein(t), alt, t.id);
   }
+});
+
+// „Ausprobieren“ zeigt auch Belege zu Personen und Geschichte und den Forscherblick (Entwurf 6.3).
+// Die Karte kennt dafür nur eine kleine ID-Liste; die großen Daten lädt erst der aufgeklappte Bereich.
+test('belege-ids.json passt zu den Daten der Bausteine', () => {
+  const sortiert = liste => [...liste].sort();
+  assert.deepEqual(belegeIds.personen, sortiert(personenBelege.entries.map(e => e.id)), 'Personen-Belege (people-inquiries.json)');
+  assert.deepEqual(belegeIds.forscherblick, sortiert(forscherblick.entries.map(e => e.id)), 'Forscherblick (science-thinking.json)');
+  // Die Geschichtsbausteine halten ihre Karten im Code: Schlüssel 'history-…' in CONTEXT und ACTIVITIES, dazu die Bronzezeit.
+  const schluessel = datei => [...readFileSync(new URL('../app/' + datei, import.meta.url), 'utf8').matchAll(/'(history-[a-z0-9_-]+)':\[?\{?/g)].map(m => m[1]);
+  const geschichte = [...schluessel('history-context.tsx'), ...schluessel('history-evidence.tsx'), 'history-bronze'];
+  assert.deepEqual(sortiert(belegeIds.geschichte), sortiert(new Set(geschichte)), 'Geschichtsbelege (history-context.tsx, history-evidence.tsx)');
+  for (const id of [...belegeIds.personen, ...belegeIds.geschichte, ...belegeIds.forscherblick]) karte(id);
+});
+
+test('hatAusprobieren: Mitmach-Baustein oder Belege', () => {
+  assert.equal(hatAusprobieren(karte('animal-african-savanna-elephant')), true);
+  assert.equal(hatAusprobieren(karte('person-marie_curie')), true);
+  assert.equal(hatAusprobieren(karte('history-khipu')), true);
+  assert.equal(hatAusprobieren(karte('science-photosynthesis')), true);
+  assert.equal(hatAusprobieren(karte('history-fire')), false);
+  const mitBelegen = new Set([...belegeIds.personen, ...belegeIds.geschichte, ...belegeIds.forscherblick]);
+  for (const t of catalog) assert.equal(hatAusprobieren(t), hatBaustein(t) || mitBelegen.has(t.id), t.id);
 });
 
 // Bildregel 6.3: zuerst ein freies Foto, sonst die eigene Zeichnung, sonst die Motivkachel.

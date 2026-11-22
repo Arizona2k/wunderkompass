@@ -1,5 +1,6 @@
 // Own qualitative article illustration: energy and matter have different roles.
 import {useId} from 'react';
+import './photosynthesis-roles-drawing.css';
 
 export default function PhotosynthesisRolesDrawing(){
  const title=useId();

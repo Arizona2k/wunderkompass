@@ -6,6 +6,7 @@ import type {LocalProgress} from '../../progress-storage';
 import type {WorldPhotoData, WorldQuestion, WorldTopic} from '../../world-types';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
+import BELEGE from './belege-ids.json';
 
 export type KartenFrage = {
   id: string;
@@ -79,6 +80,16 @@ export function weitereVerbindungen<T extends {topic: string}>(verbindungen: rea
 // Gibt es einen Mitmach-Baustein für „Ausprobieren“? Genau die Bedingung der alten Karte (world-topic.tsx).
 export function hatBaustein(topic: WorldTopic): boolean {
   return !!(topic.animal || topic.invention || topic.building || topic.model || topic.investigation || topic.id === 'science-tides');
+}
+
+// Karten mit Belegen zu Personen und Geschichte oder mit einem Forscherblick, auch ohne Mitmach-Baustein.
+// Die Liste ist ein kleiner Auszug aus people-inquiries.json, science-thinking.json und den Geschichtsbausteinen:
+// Die großen Dateien lädt erst der aufgeklappte Bereich. Ein Test hält die Liste gleich mit den Daten.
+const MIT_BELEGEN = new Set([...BELEGE.personen, ...BELEGE.geschichte, ...BELEGE.forscherblick]);
+
+// Bekommt die Karte den Bereich „Ausprobieren“? Mitmach-Baustein oder Belege (Entwurf 6.3).
+export function hatAusprobieren(topic: WorldTopic): boolean {
+  return hatBaustein(topic) || MIT_BELEGEN.has(topic.id);
 }
 
 // Prüft die neuen Felder einer Karte. Leere Liste heißt: alles in Ordnung.
