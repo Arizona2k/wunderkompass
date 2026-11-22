@@ -18,8 +18,8 @@ Jede Wissenskarte ist neu gebaut: erst raten, dann kurz lesen, dann selbst auspr
 - **Leichter zu bedienen:** Jeder Bereich zum Aufklappen hat rechts einen Pfeil, der sich beim Öffnen dreht. „Größere Schrift“ im Entdeckerpass macht die Frage und die ersten Sätze jetzt wirklich größer. Knöpfe und Aufklapper sind mindestens 48 Pixel hoch, die Buchstaben A, B, C bei den Antworten größer und dunkler.
 - **„Was ist neu?“** hat zwei neue Einträge.
 - **Hinter den Kulissen:** Die Tempo-Prüfung läuft jetzt in jeder Prüfung mit. Tests warten vor einem Seitenwechsel kurz, bis die Bilder geladen sind. Ein neuer Helfer prüft technische Themen. Die Startdateien sind nicht größer geworden.
-- **Geprüft:** ganze Prüfkette, Karte und Lernreise auch in Firefox und WebKit. Eine Schlussprüfung des ganzen Umbaus (mit einem anderen Modell als geplant, darum eine Teilprüfung) und eine Prüfung der Gestaltung auf Bildern; was dort gefunden und nicht gleich behoben wurde, steht im BACKLOG (Punkt 20).
-- **Gefunden, noch offen:** Der Entdeckerpass verliert beim Laden Spielstände, wenn es mehr als 256 sind (gab es schon vorher). Das wird vor Teil B behoben.
+- **Geprüft:** ganze Prüfkette, die große Prüfung in Chromium (alle 31 Teile grün), Karte und Lernreise auch in Firefox und WebKit. Eine Schlussprüfung des ganzen Umbaus (mit einem anderen Modell als geplant, darum eine Teilprüfung) und eine Prüfung der Gestaltung auf Bildern; was dort gefunden und nicht gleich behoben wurde, steht im BACKLOG (Punkt 20).
+- **Entdeckerpass repariert:** Wer sehr viel entdeckt hatte (mehr als 256 Karten, Spiele, Reisen und Labore), verlor beim Laden die zuletzt angefangenen Spielstände. Den Fehler gab es schon vorher. Jetzt bleiben alle erhalten, auch beim Sichern, Wiederherstellen und Neuladen.
 
 ## 21.11.2026 – Teilschritt 2, Schritt 0: Prüfungen in drei Browsern repariert
 

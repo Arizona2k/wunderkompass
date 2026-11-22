@@ -11,7 +11,7 @@ import {browserErrorArrays, monitorBrowserErrors} from '../scripts/browser-error
 const SETS = ['smoke', 'ci', 'full'];
 // Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Diese laufen in jeder Engine.
 const PASS_OFFLINE = [
-  'offline-cold', 'no-news', 'backup', 'animal-game-saves', 'habitat-answer-semantics',
+  'offline-cold', 'no-news', 'backup', 'pass-spielstaende', 'animal-game-saves', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
   'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];
