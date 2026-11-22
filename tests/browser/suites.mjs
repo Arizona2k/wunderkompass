@@ -82,9 +82,11 @@ export const SUITES = [
   {name: 'home', set: 'full', chromiumOnly: true, run: flow(homepageOverview)},
   {name: 'home-visits', set: 'full', chromiumOnly: true, run: flow(discoveryVisitCases)},
   {name: 'core', set: 'full', chromiumOnly: true, run: core},
+  // Das Modell lädt erst mit „Ausprobieren“ (exerciseSolar öffnet es). Vorher darauf zu warten, lief in Firefox
+  // und WebKit in die Zeitgrenze (CI-Lauf 249); darum gilt in jeder Engine dasselbe ready.
   {name: 'solar-labels', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
     ? solarFlow(browser, base, ready, monitor, report, shots)
-    : solarFlow(browser, base, page => page.locator('.model-solar-system').waitFor(), monitor, report, shots, {widths: ENGINE_WIDTHS})},
+    : solarFlow(browser, base, ready, monitor, report, shots, {widths: ENGINE_WIDTHS})},
   {name: 'animals', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
     ? animalFlow(browser, base, ready, monitor, report, shots)
     : animalFlow(browser, base, ready, monitor, report, shots, {matrix: ENGINE_WIDTHS})},
