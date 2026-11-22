@@ -9,7 +9,11 @@ import ScienceDiagram,{hasScienceDiagram} from './science-diagram';
 import CycleFigure,{WATER} from './cycle-figure';
 import PlanetSizeFigure,{COMPARISON_PLANETS} from './planet-size-figure';
 import type {WorldEntry} from './world-types';
-export const hasDiscoveryTopicMedia=(topic:WorldEntry)=>!!topic.image||hasDiscoveryConceptMedia(topic.id)||['science-coral-reef','science-pollination'].includes(topic.id)||hasScienceDiagram(topic.id)||['science-moon-phases','science-tides','science-currents','science-water-cycle','science-solar-system','science-seasons'].includes(topic.id);
+// Karten ohne eigenes Foto, die hier trotzdem ein Bild zeigen. scripts/home-media.mjs liest diese Listen
+// für den Export der Startseiten-Spuren; sie bleiben deshalb reine Literale.
+const DISCOVERY_PHOTO_IDS=['science-coral-reef','science-pollination'];
+const DISCOVERY_DRAWING_IDS=['science-moon-phases','science-tides','science-currents','science-water-cycle','science-solar-system','science-seasons'];
+export const hasDiscoveryTopicMedia=(topic:WorldEntry)=>!!topic.image||hasDiscoveryConceptMedia(topic.id)||DISCOVERY_PHOTO_IDS.includes(topic.id)||hasScienceDiagram(topic.id)||DISCOVERY_DRAWING_IDS.includes(topic.id);
 /** The article's existing photo or explanatory drawing, without loading its interactive model. */
 export default function DiscoveryTopicMedia({topic,historyKey}:{topic:WorldEntry;historyKey?:string}){
  const key=historyKey??'home-topic-'+topic.id;

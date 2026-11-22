@@ -1,5 +1,6 @@
 // Die neuen Felder der Wissenskarte (chapters, claims, moreQuestions) sind wohlgeformt,
 // und ihre IDs stoßen mit keiner vorhandenen ID zusammen (Pass-Einträge hängen an diesen IDs).
+import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
@@ -49,4 +50,37 @@ test('neue IDs sind eindeutig und gleichen keiner Challenge-ID', () => {
   ]);
   const doppelt = ids.filter((id, index) => ids.indexOf(id) !== index);
   assert.deepEqual(doppelt, []);
+});
+
+// Aufgabe 9 (6.8): Jede Karte hat mindestens eine erklärte Verbindung zu einer anderen Karte.
+const {connections: verbindungen} = JSON.parse(fs.readFileSync(new URL('../app/world-connections.json', import.meta.url), 'utf8'));
+const kartenIds = new Set(catalog.map(t => t.id));
+const ARTEN = ['needs', 'energy', 'partnership', 'transport', 'recycling', 'habitat', 'exploration', 'cause', 'context', 'compare', 'uses', 'evidence'];
+
+test('jede Karte hat mindestens eine erklärte Verbindung', () => {
+  const verbunden = new Set(verbindungen.flatMap(v => [v.fromId, v.toId]));
+  assert.deepEqual(catalog.filter(t => !verbunden.has(t.id)).map(t => t.id), []);
+});
+
+test('Verbindungen zeigen auf echte Karten, mit bekannter Art und ohne doppeltes Paar', () => {
+  const paare = verbindungen.map(v => [v.fromId, v.toId].sort().join('|'));
+  assert.deepEqual(verbindungen.filter(v => !kartenIds.has(v.fromId) || !kartenIds.has(v.toId) || v.fromId === v.toId).map(v => v.id), []);
+  assert.deepEqual(verbindungen.filter(v => !ARTEN.includes(v.kind)).map(v => v.id), []);
+  assert.deepEqual(paare.filter((paar, index) => paare.indexOf(paar) !== index), []);
+  assert.equal(new Set(verbindungen.map(v => v.id)).size, verbindungen.length);
+});
+
+test('neue und durchgesehene Verbindungen (ab 22.11.2026) sind kurz und kindgerecht erklärt', () => {
+  // Ältere Einträge behalten ihre IDs (animal-inquiry-…, animal-expansion-…, history-evidence-…); neue heißen a--b.
+  const alteForm = /^(animal-inquiry|animal-expansion|history-evidence)-/;
+  // Ein Datum wie „3. Oktober“ beendet keinen Satz.
+  const ohneDatum = text => text.replace(/(\d)\.(?=\s+(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b)/g, '$1');
+  const saetze = text => (ohneDatum(text).match(/[.!?](\s|$)/g) ?? []).length;
+  const fehler = verbindungen.filter(v => v.checkedAt >= '2026-11-22').flatMap(v => [
+    ...(v.id === v.fromId + '--' + v.toId || alteForm.test(v.id) ? [] : [v.id + ': ID nicht a--b']),
+    ...(v.why.length > 50 ? [] : [v.id + ': Satz zu kurz']),
+    ...(saetze(v.why) <= 2 ? [] : [v.id + ': mehr als zwei Sätze']),
+    ...(/nicht\b[^.]*\bsondern\b/i.test(v.why) ? [v.id + ': „nicht …, sondern …“'] : []),
+  ]);
+  assert.deepEqual(fehler, []);
 });

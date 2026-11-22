@@ -1,5 +1,7 @@
 /** Small explanatory views of the existing article's concepts; never interactive-model captures. */
-export const hasDiscoveryConceptMedia=(id:string)=>['science-fungi','science-foodweb','science-atmosphere','history-iss'].includes(id);
+// Reines Literal: scripts/home-media.mjs liest die Liste für den Export der Startseiten-Spuren.
+const CONCEPT_MEDIA_IDS=['science-fungi','science-foodweb','science-atmosphere','history-iss'];
+export const hasDiscoveryConceptMedia=(id:string)=>CONCEPT_MEDIA_IDS.includes(id);
 export default function DiscoveryConceptMedia({id,historyKey}:{id:string;historyKey:string}){
  if(!hasDiscoveryConceptMedia(id))return null;
  if(id==='history-iss')return <figure className="discovery-concept discovery-concept-station" data-station-context="orbital-laboratory">

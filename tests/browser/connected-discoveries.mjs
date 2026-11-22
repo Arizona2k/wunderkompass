@@ -7,6 +7,7 @@ import fs from 'node:fs/promises';
 const routes=JSON.parse(await fs.readFile(new URL('../../exports/content/world-routes.json',import.meta.url),'utf8'));
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json',import.meta.url),'utf8'));
+const worldConnections=JSON.parse(await fs.readFile(new URL('../../app/world-connections.json',import.meta.url),'utf8')).connections;
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
 export async function assertSciencePage(page,number,count){
  await page.locator('#world-results').getByText('46 passende Entdeckerkarten · Seite '+number+' von 4',{exact:true}).waitFor();
@@ -43,7 +44,7 @@ export async function connectedDiscoveries(page,ready,report,width){
  await page.locator('.moon-phase-2').waitFor();
  for(const name of ['1. Neumond','2. Zunehmender Halbmond','4. Abnehmender Halbmond'])await page.getByRole('button',{name,exact:true}).click();
  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('model:science-moon-phases'));
- const gezeiten=await verbindungsKnopf(page,'science-moon-phases','science-tides');assert.match(await verbindungsSatz(gezeiten),/Mond reflektiert/);await gezeiten.click();
+ const gezeiten=await verbindungsKnopf(page,'science-moon-phases','science-tides');assert.equal(await verbindungsSatz(gezeiten),worldConnections.find(c=>c.id==='science-moon-phases--science-tides').why);await gezeiten.click();
  await page.getByRole('heading',{name:'Der Mond bewegt das Meer',exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/science');
  await page.locator('.world-topic-tile').first().waitFor();
