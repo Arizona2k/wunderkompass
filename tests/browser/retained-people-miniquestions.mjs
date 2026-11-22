@@ -7,7 +7,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  const mini=page.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(q.prompt,{exact:true}).waitFor();
  const answerButton=word=>mini.locator('.quiz-answer').filter({has:page.getByText(word,{exact:true})});
  const original=await saved(),current=original.gameSessions['topic:'+id]?.topicAnswer;
- if(current!==null&&current!==undefined){if(!await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await answerButton(q.answers[q.correct]).click();await mini.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();}
+ if(current!==null&&current!==undefined){if(!await mini.getByRole('button',{name:'Noch einmal raten',exact:true}).count())await answerButton(q.answers[q.correct]).click();await mini.getByRole('button',{name:'Noch einmal raten',exact:true}).click();}
  const hint=mini.locator('.world-game-hint');assert.equal(await hint.evaluate(el=>el.open),false);await hint.locator(':scope>summary').click();await hint.getByText(f.hint,{exact:true}).waitFor();assert(!f.hint.includes(q.answers[q.correct]),'individual hint does not recite the whole correct answer');
  const reviewKey='world-question:'+id,priorSeen=(await saved()).review[reviewKey]?.seen??0,wrong=[];
  for(const[index,word]of q.answers.entries())if(index!==q.correct){

@@ -38,7 +38,7 @@ export async function waterPhotosynthesisView(page,{width,shots,questions=true,n
   }
   if(questions){
    const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback?.wrongReasons[i]??'Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await q.getByText(topic.question.why,{exact:true}).count(),0);}
    await right.click();await q.getByText(topic.question.why,{exact:true}).waitFor();
   }
@@ -211,7 +211,7 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   }
   if(questions){
    const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    const hint=q.locator('.world-game-hint');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await q.getByText(t.questionFeedback.hint,{exact:true}).waitFor();
    for(let i=0;i<t.question.answers.length;i++)if(i!==t.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})}).click();await q.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await q.getByText(t.question.why,{exact:true}).count(),0,'wrong feedback does not show separate correct explanation');}
    await right.click();await q.getByText(t.question.why,{exact:true}).waitFor();

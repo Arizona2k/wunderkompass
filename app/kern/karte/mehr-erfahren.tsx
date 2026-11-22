@@ -36,7 +36,7 @@ export default function MehrErfahren({topic: t, actions: a, onTopic, verbindunge
           <section>
             {t.more.map((absatz, i) => <p key={i}>{absatz}</p>)}
             <button type="button" className="speech-button" onClick={() => a.onRead(t.more.join('. '))}>
-              <Volume2 size={17} aria-hidden="true"/> Mehr-Wissen vorlesen
+              <Volume2 size={17} aria-hidden="true"/> Diesen Teil vorlesen
             </button>
           </section>
         )}
@@ -70,8 +70,8 @@ export default function MehrErfahren({topic: t, actions: a, onTopic, verbindunge
 
         {eintrag && t.locations.length > 0 && (
           <section>
-            <Ueberschrift>Auf der Karte</Ueberschrift>
-            <p>{t.category === 'animals' ? 'Besuche eine Beispielregion. Tiere leben oft in viel größeren Gebieten.' : 'Besuche einen Ort, der zu dieser Geschichte gehört.'}</p>
+            <Ueberschrift>Auf der Weltkarte</Ueberschrift>
+            <p>{t.category === 'animals' ? 'Tippe auf einen Ort, an dem dieses Tier lebt. Es lebt auch noch an vielen anderen Orten.' : 'Tippe auf einen Ort, der zu diesem Thema gehört.'}</p>
             <TopicMap entry={eintrag} onPlace={i => a.onPlace(worldPlace(eintrag, i))}/>
           </section>
         )}

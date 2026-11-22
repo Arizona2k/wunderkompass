@@ -217,7 +217,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   stage='reload';await p.reload();await ready(p);
   if(EXPANSION_IDS.has(entry.id)){
    const quiz=p.locator('.world-mini-question');await quiz.locator('.rate-mal-frage').getByText(t.question.prompt,{exact:true}).waitFor();
-   if(await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).count())await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   if(await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).count())await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
    assert.equal(await hint.getByText(t.questionFeedback.hint,{exact:true}).isVisible(),false,'hint does not open itself');
    await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(t.questionFeedback.hint,{exact:true}).waitFor();await hint.locator('summary').click();
@@ -229,7 +229,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
    await quiz.locator('.quiz-answer').filter({has:p.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
    await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).waitFor();
    assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
-   await quiz.getByRole('button',{name:'Später noch einmal prüfen',exact:true}).click();
+   await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
   }
   const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await mehrErfahren(p);await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();

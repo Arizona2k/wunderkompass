@@ -3,6 +3,7 @@
 // Jeder Fall mit Lernstand prüft auch den Pass nach Neuladen: Dort hängt der Lernstand der Kinder.
 import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
+import {browserErrorArrays, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import photos from '../../app/world-photos.json' with {type: 'json'};
 import verbindungen from '../../app/world-connections.json' with {type: 'json'};
@@ -33,6 +34,7 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, vorlesenLiestKopfUndFrage, vorleseAttrappe);
     await mitKarte(ctx, view, ELEFANT.id, dazuPasstHoechstensDrei);
     await mitKarte(ctx, view, ELEFANT.id, dazuPasstZurueck);
+    await mitKarte(ctx, view, ELEFANT.id, dazuPasstZurueckOhneFokus);
     await mitKarte(ctx, view, ELEFANT.id, ausprobierenLaedtErstBeimOeffnen);
     await mitKarte(ctx, view, ELEFANT.id, bildnachweiseVollstaendig);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegZurWelt);
@@ -43,6 +45,9 @@ export async function wissenskarte(ctx) {
       + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
       + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei');
   }
+  await ausprobierenNochEinmal(ctx);
+  ctx.report.checks.push('Ausprobieren nach Ladefehler: Noch einmal versuchen lädt Skript und Stil, ohne die Seite neu zu laden; '
+    + 'Zurück nach jeder Kachel von Dazu passt fokussiert die Kachel auch ohne Fokus beim Antippen (wie Safari)');
   const motivKarte = await motivkachel320(ctx);
   await mitKarte(ctx, HANDY, FOTOSYNTHESE.id, fotosyntheseZeichnungGestaltet);
   ctx.report.checks.push(`Motivkachel 320 px ohne Überlauf (${motivKarte}); Legende der Fotosynthese-Zeichnung gestaltet`);
@@ -210,6 +215,78 @@ async function dazuPasstZurueck(page, {touch}) {
     return {oben: r.top, unten: r.bottom, hoehe: innerHeight};
   });
   assert.ok(lage.oben >= 0 && lage.unten <= lage.hoehe, `die Kachel liegt im Bild (${JSON.stringify(lage)})`);
+}
+
+// Safari fokussiert Knöpfe beim Antippen nicht. Ein Klick per Skript tut das in keinem Browser; so prüft der Fall
+// in Chromium und Firefox, dass die Kachel sich selbst fokussiert, bevor sie wechselt (dazu-passt.tsx, `wechsel`).
+// Gilt für jede Kachel: Nachbarkarte, Globus, Link und Spiel haben je einen eigenen Fokus-Schlüssel.
+async function dazuPasstZurueckOhneFokus(page) {
+  const schluessel = await dazuPasst(page).locator('[data-route-focus]').evaluateAll(kacheln => kacheln.map(k => k.dataset.routeFocus));
+  assert.ok(schluessel.length >= 2, 'mehrere Kacheln: ' + schluessel.join(', '));
+  for (const k of schluessel) {
+    const kachel = dazuPasst(page).locator(`[data-route-focus="${k}"]`);
+    await kachel.scrollIntoViewIfNeeded();
+    const vorher = await page.evaluate(() => location.hash);
+    await kachel.evaluate(element => {
+      if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+      element.click();
+    });
+    await page.waitForFunction(h => location.hash !== h, vorher, WARTEN);
+    await page.goBack();
+    await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, ELEFANT.title, WARTEN);
+    await page.waitForFunction(f => document.activeElement?.dataset?.routeFocus === f, k, WARTEN)
+      .catch(() => assert.fail('nach Zurück hat die Kachel den Fokus: ' + k));
+  }
+}
+
+// Bricht das Netz ab, während „Ausprobieren“ sein Skript lädt, zeigt der Bereich einen Fehler. „Noch einmal versuchen“
+// lädt Skript und Stil neu, ohne die Seite neu zu laden (ohne Netz und ohne Vorrat wäre die App dann weg).
+// Ohne Service Worker, damit die Sperre greift; die Fehler der gesperrten Dateien sind erwartet, alle anderen zählen.
+async function ausprobierenNochEinmal(ctx) {
+  const context = await ctx.browser.newContext({viewport: {width: 390, height: 844}, reducedMotion: 'reduce', serviceWorkers: 'block'});
+  const gesperrt = /\/assets\/bausteine-[^/]*\.(?:js|css)(?:\?|$)/;
+  const beimSperren = browserErrorArrays(), danach = browserErrorArrays();
+  let fehler = beimSperren;
+  try {
+    const page = await context.newPage();
+    // Erst sammeln, dann je nach Phase einsortieren.
+    const proof = browserErrorArrays();
+    monitorBrowserErrors(page, ctx.base, proof, {engine: ctx.engine});
+    const umfuellen = () => { for (const [feld, liste] of Object.entries(proof)) fehler[feld].push(...liste.splice(0)); };
+    let sperren = true;
+    await page.route(gesperrt, route => (sperren ? route.abort() : route.fallback()));
+    await page.goto(new URL('#world/topic/' + ELEFANT.id, ctx.base).href);
+    await ready(page);
+    await page.locator('#world-topic-title').waitFor(WARTEN);
+    const ausprobieren = page.locator('details.wissenskarte-ausprobieren');
+    await ausprobieren.locator('summary').click();
+    const nochmal = ausprobieren.getByRole('button', {name: 'Noch einmal versuchen', exact: true});
+    await nochmal.waitFor(WARTEN);
+    assert.equal(await ausprobieren.locator('.wissenskarte-bausteine').count(), 0, 'ohne Skript kein Baustein');
+    await page.evaluate(() => new Promise(fertig => requestAnimationFrame(() => setTimeout(fertig, 100))));
+    umfuellen();
+    sperren = false;
+    fehler = danach;
+    const vorherNavigiert = await page.evaluate(() => performance.getEntriesByType('navigation').length);
+    await nochmal.click();
+    await ausprobieren.locator('.wissenskarte-bausteine').waitFor(WARTEN);
+    await ausprobieren.locator('.animal-measure').waitFor({state: 'visible', ...WARTEN});
+    assert.equal(await page.evaluate(() => performance.getEntriesByType('navigation').length), vorherNavigiert, 'ohne Neuladen');
+    await page.waitForFunction(() => [...document.styleSheets].some(s => /\/bausteine-[^/]*\.css/.test(s.href ?? '')), null, WARTEN)
+      .catch(() => assert.fail('der Stil der Bausteine ist geladen'));
+    umfuellen();
+  } finally {
+    await context.close();
+  }
+  // Beim Sperren: nur die gesperrten Dateien und die Meldung über den gescheiterten Import.
+  for (const anfrage of beimSperren.failedRequests) assert.match(anfrage.url, gesperrt, 'nur gesperrte Dateien scheitern');
+  for (const meldung of beimSperren.consoleErrors) {
+    // Firefox gibt die Meldung von React über den abgefangenen Ladefehler nur als Klassennamen weiter („Error“).
+    assert.match(meldung, /bausteine-|dynamically imported module|Importing a module script failed|Unable to preload CSS|Failed to load resource|^\[firefox\] (?:Type)?Error$/, 'erwartete Meldung: ' + meldung);
+  }
+  for (const feld of ['errors', 'ownHttpErrors', 'externalRequests']) assert.deepEqual(beimSperren[feld], [], feld + ' beim Sperren');
+  assert.ok(beimSperren.failedRequests.length >= 1, 'die Sperre hat gegriffen');
+  for (const [feld, liste] of Object.entries(danach)) assert.deepEqual(liste, [], feld + ' nach dem neuen Versuch');
 }
 
 const bausteinGeladen = page => page.evaluate(() => performance.getEntriesByType('resource').some(e => /\/bausteine-[^/]*\.js(?:\?|$)/.test(e.name)));

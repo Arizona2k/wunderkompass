@@ -73,7 +73,7 @@ export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onL
               ? <>Du hattest <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gehört zu früheren Auswahlmöglichkeiten. Oben siehst du die aktuelle Auswahl. Du kannst sie erneut prüfen; die frühere Antwort wird dabei nicht automatisch umgedeutet.</>
               : richtig
                 ? q.why
-                : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Vergleiche die Antworten mit der Erklärung oder dem Modell. Du kannst in Ruhe noch einmal wählen.')}
+                : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.')}
           </p>
           {richtig && (
             <button
@@ -85,7 +85,7 @@ export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onL
                 requestAnimationFrame(() => bereich?.querySelector<HTMLButtonElement>('.quiz-answer')?.focus());
               }}
             >
-              Später noch einmal prüfen
+              Noch einmal raten
             </button>
           )}
         </>}
