@@ -35,6 +35,11 @@ export function ladeanfragen(page, {timeout = 20000} = {}) {
   return offeneAnfragen(page, request => !request.isNavigationRequest(), 'Anfragen laufen', timeout);
 }
 
+// Fertig erst nach einer Ruhezeit ohne offene Anfrage: Bilder weiter unten (loading="lazy") starten oft erst,
+// wenn die ersten fertig sind und der Browser neu gezeichnet hat. Auf der breiten Startseite kamen sie etwa
+// 30 ms danach; mit verzögertem Netz (150 ms) brach ein Neuladen in dieser Lücke 7 bis 10 Bilder ab.
+const RUHEZEIT = 250;
+
 function offeneAnfragen(page, passt, was, timeout) {
   const offen = new Set();
   const fertig = request => offen.delete(request);
@@ -43,7 +48,11 @@ function offeneAnfragen(page, passt, was, timeout) {
   page.on('requestfailed', fertig);
   return async () => {
     const ende = Date.now() + timeout;
-    while (offen.size) {
+    let ruhigSeit = 0;
+    for (;;) {
+      if (offen.size) ruhigSeit = 0;
+      else if (!ruhigSeit) ruhigSeit = Date.now();
+      else if (Date.now() - ruhigSeit >= RUHEZEIT) return;
       if (Date.now() > ende) throw Error(was + ' noch vor dem gewollten Seitenwechsel: ' + [...offen].map(r => r.url()).join(', '));
       await page.waitForTimeout(50);
     }
