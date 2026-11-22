@@ -51,3 +51,11 @@
 .large-reading .journey-reader .chapter-card>h1{font-size:clamp(34px,4vw,50px)}
 
 .journey-reader .reader-toolbar{padding-bottom:0}.journey-reader .journey-progress{margin-bottom:10px}.journey-reader .journey-mobile-outline{margin:0 0 20px}
+/* Einfach zuerst: die einfache Fassung groß, „Für Große“ und „Für Erwachsene“ als ruhige Aufklapper darunter. */
+.journey-reader .chapter-starter{font-size:1.2rem;line-height:1.6;font-weight:700;max-width:60ch;margin:18px 0}
+.large-reading .journey-reader .chapter-starter{font-size:1.4rem}
+.journey-reader .chapter-observe{max-width:70ch;margin:18px 0;padding:14px 18px;background:#f0f6f9;border-radius:12px}
+.journey-reader .chapter-observe p{margin:6px 0}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene){margin:18px 0;max-width:70ch;border-top:1px solid #d8e5e9;padding-top:6px}
+.journey-reader :is(.chapter-gross,.chapter-erwachsene)>summary{font-weight:700;display:flex;align-items:center}
+.journey-reader .chapter-gross>p{line-height:1.75}

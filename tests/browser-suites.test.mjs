@@ -15,8 +15,10 @@ const PASS_OFFLINE = [
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
   'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];
+// Sichtbare Lernansichten, die in jeder Engine laufen.
+const ANSICHTEN = ['reise-kapitel'];
 // Dazu die Tempo-Prüfung (Ladegröße, Layout-Rutschen), damit zu große Seiten schon im PR auffallen.
-const CI = [...PASS_OFFLINE, 'performance'];
+const CI = [...PASS_OFFLINE, ...ANSICHTEN, 'performance'];
 // Die große Prüfung: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
 const FULL = [
   'components', 'offline-resilience', 'research', 'journeys', 'home', 'home-visits',
@@ -49,7 +51,7 @@ test('CI-Satz enthält die Tempo-Prüfung', () => {
 });
 
 test('Pass- und Offline-Suiten laufen in jeder Engine', () => {
-  for (const name of ['smoke', ...PASS_OFFLINE]) {
+  for (const name of ['smoke', ...PASS_OFFLINE, ...ANSICHTEN]) {
     assert.notEqual(SUITES.find(suite => suite.name === name)?.chromiumOnly, true, name + ' darf nicht nur in Chromium laufen');
   }
 });
