@@ -16,10 +16,10 @@ description: Vor einer Übergabe in WunderKompass – komplette Prüfkette laufe
    - neue Bilder → `bild-recherche` (Nachweis prüfen)
    - am Phasenende und wenn ein Fehler erst spät auffiel (z. B. erst in der CI-Vollprüfung oder in `test:full`) → `technik-pruefer`, Pflicht, bevor die Korrektur gemeldet wird
 5. **Befunde behandeln:** Blockierendes sofort beheben und Schritt 2 wiederholen. Alles andere ins `BACKLOG.md`.
-6. **Am Phasenende zusätzlich:** `pnpm run test:full` (Chromium lokal; Firefox und WebKit über den CI-Job „Vollprüfung“) und eine Schlussprüfung des ganzen Branches mit `fable`. Vorher „Vorübergehende Modell-Ausnahmen“ in `STATUS.md` lesen: Läuft eine Ausnahme noch, das dort genannte Ersatzmodell nehmen.
+6. **Am Phasenende zusätzlich:** `pnpm run test:full` (lokal mit `-- --browser all` oder gezielt `--browser webkit <suite>`; dazu der CI-Job „Vollprüfung“ in allen drei Engines) und eine Schlussprüfung des ganzen Branches mit `fable`. Vorher „Vorübergehende Modell-Ausnahmen“ in `STATUS.md` lesen: Läuft eine Ausnahme noch, das dort genannte Ersatzmodell nehmen.
 7. **Bericht** an den Nutzer, ehrlich und kurz:
    - Was wurde geprüft, mit welchem Ergebnis (grün / rot / nicht geprüft)?
    - Welche Helfer-Befunde gab es, was ist behoben, was steht im BACKLOG?
-   - Was wurde nicht geprüft (zum Beispiel echte Geräte, Bildschirmleser, Firefox/WebKit lokal)?
+   - Was wurde nicht geprüft (zum Beispiel echte Geräte, Bildschirmleser, Firefox oder WebKit, wenn sie nicht liefen)?
 
 Keine Prüfung als bestanden melden, die nicht gelaufen ist. Teilprüfungen heißen Teilprüfungen.
