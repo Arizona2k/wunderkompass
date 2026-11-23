@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {BROWSER_ERROR_FIELDS,browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-mechanics-content.json',import.meta.url),'utf8'));
@@ -50,7 +50,7 @@ export async function bookMechanicsView(page,report,width,{shots=null,engine='ch
     for(const[part,target]of[['drawing',figure.locator('h4')],['legend',figure.locator('figcaption')]]){await target.evaluate(el=>el.scrollIntoView({block:'start'}));const capture=await captureNativeViewport(page,prefix+part+'-'+width+'.png',{cdp:captureSession});assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);nativeCaptures.push(capture);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-'+(kind==='words'?Object.keys(pack.learning).indexOf(term):4+Object.keys(pack.whyLearning).indexOf(term))+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
    const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
-   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm,related]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
+   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
    await page.goBack();await card.waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
    proof.push({term,kind,width,large,native200:native,nativeCaptures,offline,figure:item.figure,modelStates,allReadingLevelsHintsAnswersFeedbackAndSources:true,normalHTMLLegends:true,actualKeyboardArticleAndBackFocus:true});
   }
@@ -127,7 +127,7 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   assert.equal(continuous.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.continuousRapidReverseLinks=continuous.bookRelatedWords;
   const input=child.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await input.fill('Reflexion');await child.locator('.word-card').getByRole('heading',{name:'Reflexion',exact:true}).waitFor();proof.continuousRapidFollowupSearch=true;
   await context.close();context=null;
-  assert(browserErrorsComplete(proof),'browser errors in the book network pages: '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,proof[key].slice(0,5)]))));return proof;
+  await browserErrorsAssert(proof,'browser errors in the book network pages');return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

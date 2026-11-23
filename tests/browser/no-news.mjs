@@ -12,9 +12,9 @@ export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
  const observed=[],requests=[];
  for(const width of NEWS_REMOVAL_WIDTHS)for(const large of [false,true]){
   const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});const pass=createSave();pass.progress.settings.largeText=large;pass.progress.notes=[{id:'old-note',text:'Synthetische erhaltene Notiz.',at:'2026-10-18T00:00:00.000Z'}];pass.progress.favorites=['topic:person-albert_einstein'];pass.progress.gameSessions.memory={cards:[1,2],flipped:[0]};await context.addInitScript(({pass,key})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(pass));},{pass,key:SAVE_KEY});const p=await context.newPage();monitor(p);
-  // Vor jedem gewollten Seitenwechsel alles fertig laden lassen, sonst meldet Firefox den Abbruch
-  // (NS_BINDING_ABORTED, CI-Läufe 249 und 257: Korallenriff-Foto der Startseite, das erst nach seinem
-  // Programmteil startet). Echte Fehlanfragen bleiben sichtbar.
+  // Vor jedem gewollten Seitenwechsel alles fertig laden lassen, sonst bricht der Browser noch ladende Anfragen ab
+  // (Chromium net::ERR_ABORTED, Firefox NS_BINDING_ABORTED). Die Firefox-Abbrüche des Riff-Fotos (CI-Läufe 249 und 257)
+  // kamen vermutlich von Firefox' gespeicherter Kopie (zweite Regel in scripts/browser-errors.mjs). Echte Fehlanfragen bleiben sichtbar.
   const anfragenFertig=ladeanfragen(p);
   p.on('request',r=>{if(/arizona2k\.github\.io\/wunderkompass-news|\/assets\/news-[^/]+\.(?:js|json|css)/.test(r.url()))requests.push(r.url());});
   try{

@@ -25,7 +25,7 @@ Daraus folgt: kurze Sätze, große Bilder, große Tippflächen, schnell etwas tu
   - Zuerst freie Originale: Fotos und historische Abbildungen (z. B. Wikimedia Commons) nach Prüfung von Lizenz und Namensnennung.
   - Nur wenn es kein passendes Original gibt: gekennzeichnete eigene Illustration oder kostenloses KI-Bild, sichtbar als solches benannt.
   - Echte Menschen nie als foto-ähnliches KI-Bild. Rekonstruktionen (z. B. Dinosaurier) heißen auch so.
-- **Git.** `main` nie direkt ändern. Kein Force-Push. Arbeit auf `claude/...`, PR nur nach `test-live`. Gemergt wird regulär nach grüner CI und erst nach „ok“ des Nutzers im Chat. Auto-Merge ist auf GitHub aktiv (seit 21.11.2026): Nach dem „ok“ darf Claude ihn für den PR einschalten; GitHub merged dann erst bei grüner CI.
+- **Git.** `main` nie direkt ändern. Kein Force-Push. Arbeit auf `claude/...`, PR nur nach `test-live`. Gemergt wird regulär nach grüner CI und erst nach „ok“ des Nutzers im Chat. Auto-Merge ist auf GitHub aktiv (seit 21.11.2026): Nach dem „ok“ darf Claude ihn für den PR einschalten; GitHub merged dann erst bei grüner CI. GitHub wartet dabei nur auf Pflicht-Checks: Auto-Merge darum erst einschalten, wenn auch die „Engine-Schnellprüfung“ grün ist.
 - **Zwei Adressen.** `wunderkompass.vercel.app` (aus `main`) bekommen Freunde; sie wird nur nach einer fertigen Phase und OK erneuert (PR `test-live` → `main`). Die Test-Adresse (aus `test-live`) ist die Arbeitsfläche.
 - **Ehrlichkeit.** Keine Prüfung behaupten, die nicht stattfand. Keine erfundenen Studien, Kindertests oder Lernwirkungen. Teilprüfungen heißen Teilprüfungen.
 - **Datenschutz.** Name und E-Mail des Nutzers gehen nie an externe Dienste, auch nicht in Anfragen oder Commits.
@@ -45,18 +45,18 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm run typecheck` / `pnpm run lint` | Typen und Lint |
 | `pnpm test` | Unit-Tests (`tests/*.test.mjs`, Node-Testrunner) |
 | `pnpm run test:smoke` | Rauchtest im Browser: 360 px (Touch) und 1440 px, Bilder in `.qa-output/browser/` |
-| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Tempo (zwei Suiten parallel) |
+| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Sonnensystem-Beschriftung, Tempo (zwei Suiten parallel); `-- --browser firefox` oder `webkit` |
 | `pnpm run test:browser:webkit` | WebKit-Kurzprüfung: `offline-cold` und `backup` in WebKit (Safari), bei jedem PR |
 | `pnpm run test:full` | Große Prüfung, am Ende einer Phase; `-- --browser firefox` oder `webkit` oder `all` |
 | `pnpm run check` | Die ganze Prüfkette: typecheck, lint, test, build, test:browser, test:browser:webkit |
 | `pnpm run export:data` | Inhaltsexporte nach `exports/content` (noch in Git, weil Browser-Tests sie lesen; Ablösung im BACKLOG) |
 
-Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [suitenamen]`.
-`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build.
+Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [--shard GRUPPE] [suitenamen]`.
+`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build. `--shard` wählt eine Gruppe der Vollprüfung aus `tests/browser/shards.mjs`. Jeder Lauf schreibt die Dauer je Suite nach `.qa-output/browser/zeiten-*.json`.
 **Playwright** (das Browser-Testwerkzeug) ist immer auf der neuesten Version, die mindestens 7 Tage alt ist (Wunsch des Nutzers, 21.11.2026). `/weiter` prüft das bei jedem Einstieg; ein Update ist ein eigener kleiner Commit mit `pnpm run check`.
-Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand).
+Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand; je Browser in Gruppen aus `tests/browser/shards.mjs`, alle gleichzeitig, Zeiten als Artefakt).
 
-CI (`.github/workflows/quality.yml`): Job **„Required quality checks“** (Name nicht ändern, die Branch-Regel verlangt ihn) läuft bei jedem PR.
+CI (`.github/workflows/quality.yml`): Job **„Required quality checks“** (Name nicht ändern, die Branch-Regel verlangt ihn) läuft bei jedem PR. Dazu läuft bei jedem PR die **„Engine-Schnellprüfung“**: der CI-Satz in Firefox und WebKit (kein Pflicht-Check, aber ein roter Lauf wird vor dem Merge geklärt).
 
 ## Arbeitsablauf
 
@@ -124,7 +124,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 |---|---|
 | `app/` | Die App (React 19, Vite 8, Tailwind 4): Ansichten, Inhalte als JSON/TS, Pass, Service Worker |
 | `app/world-catalog.json` | Alle Wissenskarten; Fotos und Nachweise in `app/world-photos.json` |
-| `components/`, `lib/`, `hooks/` | Gemeinsame UI-Bausteine und Hilfen |
+| `components/`, `lib/` | Gemeinsame UI-Bausteine und Hilfen |
 | `public/` | Bilder, Fotos (WebP in 320/640/960), Karten, statische Dateien |
 | `build/` | Vite-Plugins: Build-Kennung, Offline-Liste, Worker |
 | `scripts/` | `export-content.mjs` (Exporte und Inhaltsprüfung), Größenbudget, Test-Laufzeit |

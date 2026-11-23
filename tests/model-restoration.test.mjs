@@ -2,11 +2,11 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import React from 'react';import * as jsx from 'react/jsx-runtime';import {renderToStaticMarkup} from 'react-dom/server';import ts from 'typescript';import * as gameState from '../app/game-state.ts';
 // Exercise the real hook initializer through React, so a correct but unused
 // normalization helper cannot hide the original -34 -> 0 / 2.75 -> 2 failure.
-const source=fs.readFileSync(new URL('../app/saved-games.tsx',import.meta.url),'utf8'),code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,module={exports:{}};
-new Function('require','module','exports',code)(name=>{if(name==='react')return React;if(name==='react/jsx-runtime')return jsx;if(name==='./game-state')return gameState;throw Error('Unexpected saved-game dependency '+name);},module,module.exports);
+const source=fs.readFileSync(new URL('../app/saved-games.tsx',import.meta.url),'utf8'),code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,mod={exports:{}};
+new Function('require','module','exports',code)(name=>{if(name==='react')return React;if(name==='react/jsx-runtime')return jsx;if(name==='./game-state')return gameState;throw Error('Unexpected saved-game dependency '+name);},mod,mod.exports);
 function initial({id='topic:model-probe',key='value',value,fallback=52,limits,counter=false,items}){
- function Probe(){const [restored]=counter?module.exports.useSavedGame(key,fallback):module.exports.useSavedModel(key,fallback,limits);return React.createElement('output',null,String(restored));}
- return renderToStaticMarkup(React.createElement(module.exports.SavedGame,{id,family:'world',sessions:{[id]:{[key]:value,...(items?{items}:{})}},onSave:()=>{}},React.createElement(Probe)));
+ function Probe(){const [restored]=counter?mod.exports.useSavedGame(key,fallback):mod.exports.useSavedModel(key,fallback,limits);return React.createElement('output',null,String(restored));}
+ return renderToStaticMarkup(React.createElement(mod.exports.SavedGame,{id,family:'world',sessions:{[id]:{[key]:value,...(items?{items}:{})}},onSave:()=>{}},React.createElement(Probe)));
 }
 test('real saved-model initializer preserves declared southern latitude and fractional domains in every context',()=>{
  for(const id of ['lab:seasons','topic:model-probe','classic-model-probe']){

@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-gene-content.json',import.meta.url),'utf8'));
@@ -50,7 +50,7 @@ export async function bookGeneView(page,report,width,{shots=null,engine='chromiu
     for(const[part,target]of[['drawing',figure.locator('svg,.book-gene-strip,.book-gene-route').first()],['legend',figure.locator('.model-caption,ol li').last()]]){await target.evaluate(el=>el.scrollIntoView({block:'start'}));const capture=await captureNativeViewport(page,prefix+part+'-'+width+'.png',{cdp:captureSession});assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);nativeCaptures.push(capture);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-gene-'+(kind==='words'?Object.keys(pack.learning).indexOf(term):8+Object.keys(pack.whyLearning).indexOf(term))+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
    const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
-   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm,related]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
+   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
    await page.goBack();await card.waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
    proof.push({term,kind,width,large,native200:native,nativeCaptures,offline,figure:item.figure,modelStates,allReadingLevelsHintsAnswersFeedbackAndSources:true,normalHTMLLegends:true,actualKeyboardArticleAndBackFocus:true});
   }
@@ -102,7 +102,7 @@ export async function bookGeneNetworkView(page,{shots=null,engine='chromium'}={}
   const legend=numbered.locator('figure>ol'),originalLegendStyle=await legend.getAttribute('style');
   try{await legend.evaluate(el=>el.style.listStyleType='none');await assert.rejects(()=>assertGeneNumberedLegend(numbered.locator('figure')),/requires visible decimal markers/);}finally{await legend.evaluate((el,style)=>{if(style===null)el.removeAttribute('style');else el.setAttribute('style',style);},originalLegendStyle);}
   await assertGeneNumberedLegend(numbered.locator('figure'));proof.hiddenNumberedLegendNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-gene-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-gene-figure'),html:e.outerHTML}))).catch(()=>[])};

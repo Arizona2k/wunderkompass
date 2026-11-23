@@ -131,13 +131,47 @@ test('keine Erwachsenensätze im Kinderteil', () => {
 });
 
 test('„Schon gewusst?“ wiederholt keinen Satz der Karte', () => {
-  // Die Überraschung soll neu sein: kein Satz daraus steht schon in Einleitung, Abschnitten, „Mehr erfahren“ oder Steckbrief.
+  // Die Überraschung soll neu sein: kein Satz daraus steht schon in Einleitung, Abschnitten, „Mehr erfahren“, Steckbrief
+  // oder „Ganz einfach“ (bei 21 Karten war es wörtlich derselbe Satz; er wurde gestrichen, BACKLOG).
   const saetze = text => text.split(/(?<=[.!?])\s+/).map(s => s.trim()).filter(s => s.length > 15);
   const doppelt = catalog.filter(t => t.surprise).flatMap(t => {
-    const rest = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).map(f => f.text)].filter(Boolean).join(' ');
+    const rest = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).map(f => f.text), t.learning?.starter].filter(Boolean).join(' ');
     return saetze(t.surprise).filter(s => rest.includes(s)).map(s => t.id + ': ' + s);
   });
   assert.deepEqual(doppelt, []);
+});
+
+// „Ganz einfach“ steht genau einmal auf der Karte. Der Browser-Test (karte-hilfen.mjs, ganzEinfach) sieht nur die
+// Karten, die eine Suite öffnet, und die 21 doppelten Wissenschaftskarten fielen erst in der Vollprüfung auf
+// (23.11.2026). Dieser Datentest deckt alle Karten in Millisekunden ab.
+// Bekannte Ausnahme: Bei diesen 24 Tierkarten ist die Einleitung derselbe Satz. Sie werden mit „Ganz einfach offen“
+// umgeschrieben (Entwurf Teilschritt 3, E12, Aufgabe 6). Die Liste darf nur kürzer werden.
+const GANZ_EINFACH_IN_EINLEITUNG = new Set([
+  'animal-platypus', 'animal-short-beaked-echidna', 'animal-okapi', 'animal-meerkat', 'animal-ring-tailed-lemur',
+  'animal-north-american-beaver', 'animal-walrus', 'animal-red-fox', 'animal-raccoon', 'animal-hedgehog',
+  'animal-barn-owl', 'animal-kingfisher', 'animal-ostrich', 'animal-atlantic-puffin', 'animal-common-chameleon',
+  'animal-fire-salamander', 'animal-common-frog', 'animal-eastern-clown-anemonefish', 'animal-european-eel',
+  'animal-monarch-butterfly', 'animal-garden-snail', 'animal-european-lobster', 'animal-common-cuttlefish',
+  'animal-short-snouted-seahorse',
+]);
+
+test('„Ganz einfach“ steht nicht noch einmal wörtlich auf der Karte', () => {
+  const gleich = text => (text ?? '').replace(/\s+/g, ' ').trim();
+  // Alle Texte, die die Karte zeigen kann, außer „Ganz einfach“ selbst und der Einleitung.
+  const texteOhneEinleitung = t => [
+    ...(t.paragraphs ?? []), ...(t.more ?? []), t.surprise, t.learning?.observe, t.learning?.benefit,
+    ...(t.facts ?? []).map(f => f.text), ...(t.chapters ?? []).map(c => c.text),
+    ...(t.claims ?? []).flatMap(c => [c.text, c.explanation]),
+    ...[t.question, ...(t.moreQuestions ?? [])].filter(Boolean).flatMap(q => [q.prompt, q.why, q.hint]),
+  ];
+  const mitStarter = catalog.filter(t => t.learning?.starter);
+  const enthaelt = (texte, t) => texte.some(text => gleich(text).includes(gleich(t.learning.starter)));
+  // Die Ausnahmeliste gilt nur für die Einleitung; alle anderen Texte prüft der erste Teil auch bei diesen Karten.
+  const sonstwo = mitStarter.filter(t => enthaelt(texteOhneEinleitung(t), t)).map(t => t.id);
+  assert.deepEqual(sonstwo, [], 'doppelt außerhalb der Einleitung');
+  const inEinleitung = mitStarter.filter(t => enthaelt([t.intro], t)).map(t => t.id);
+  assert.deepEqual(inEinleitung.filter(id => !GANZ_EINFACH_IN_EINLEITUNG.has(id)), [], 'neu doppelt in der Einleitung');
+  assert.deepEqual([...GANZ_EINFACH_IN_EINLEITUNG].filter(id => !inEinleitung.includes(id)), [], 'nicht mehr doppelt: aus der Ausnahmeliste streichen');
 });
 
 test('wrongReasons passt zu den Antworten', () => {

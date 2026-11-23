@@ -67,18 +67,27 @@ jobs:
           if-no-files-found: ignore
 
   # Große Prüfung in drei Engines: nur für Veröffentlichungs-PRs nach main oder von Hand gestartet.
+  # Je Browser in Gruppen (tests/browser/shards.mjs), alle gleichzeitig. Die Liste unten muss genau den
+  # Gruppen dort entsprechen; das prüft pnpm test. Nacheinander brauchte Chromium allein rund 102 Minuten.
   full:
-    name: Vollprüfung (${{ matrix.browser }})
+    name: Vollprüfung (${{ matrix.browser }} ${{ matrix.shard }})
     if: github.base_ref == 'main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
-    # Chromium braucht für alle Suiten nacheinander rund zwei Stunden (Messung 21.11.2026, 4 Kerne).
-    timeout-minutes: 180
+    # Die längste Gruppe braucht ohne Aufbau rund 35 Minuten (Chromium reisen, CI-Lauf 262).
+    timeout-minutes: 75
     permissions:
       contents: read
     strategy:
       fail-fast: false
       matrix:
-        browser: [chromium, firefox, webkit]
+        include:
+          - {browser: chromium, shard: reisen}
+          - {browser: chromium, shard: kern}
+          - {browser: chromium, shard: rest}
+          - {browser: firefox, shard: offline-tiere}
+          - {browser: firefox, shard: rest}
+          - {browser: webkit, shard: offline-tiere}
+          - {browser: webkit, shard: rest}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
         with:
@@ -97,8 +106,8 @@ jobs:
       - name: Production build
         run: pnpm run build
       - name: Install ${{ matrix.browser }}
-        # Sonst gewöhnlich 1 bis 7 Minuten. Lauf 257 hing hier über eine Stunde (Chromium) und hätte
-        # erst nach 180 Minuten abgebrochen; so fällt ein Hänger früh auf und der Lauf kann neu starten.
+        # Sonst gewöhnlich 1 bis 7 Minuten. Lauf 257 hing hier über eine Stunde (Chromium); so fällt ein
+        # Hänger früh auf und der Lauf kann neu starten.
         timeout-minutes: 20
         run: |
           sudo sed -i \
@@ -107,12 +116,79 @@ jobs:
             /etc/apt/apt-mirrors.txt
           pnpm exec playwright install --with-deps ${{ matrix.browser }}
       - name: Full browser tests
-        run: pnpm run test:full -- --browser ${{ matrix.browser }}
+        run: pnpm run test:full -- --browser ${{ matrix.browser }} --shard ${{ matrix.shard }}
+      # Dauer je Suite, um die Gruppen neu auszugleichen (auch wenn eine Suite scheitert).
+      - name: Upload suite times
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: zeiten-${{ matrix.browser }}-${{ matrix.shard }}
+          path: .qa-output/browser/zeiten-*.json
+          retention-days: 30
+          if-no-files-found: warn
       - name: Upload browser screenshots
         if: failure()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: browser-full-${{ matrix.browser }}
+          name: browser-full-${{ matrix.browser }}-${{ matrix.shard }}
+          path: .qa-output/browser
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # Schnellprüfung bei jedem PR: der CI-Satz auch in Firefox und WebKit (Safari), ohne die Chromium-Suiten.
+  # Fehler, die nur in einem Browser auftreten, fielen sonst erst in der Vollprüfung am Phasenende auf
+  # (Technik-Prüfung vom 23.11.2026). Kein Pflicht-Check der Branch-Regel, damit ein hängender Browser-Download
+  # keinen PR sperrt; ein roter Lauf wird trotzdem vor dem Merge geklärt (CLAUDE.md).
+  engines:
+    name: Engine-Schnellprüfung (${{ matrix.browser }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1; Node 24
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0; Node 24
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0; Node 24
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install with frozen lockfile
+        run: pnpm install --frozen-lockfile
+      - name: Production build
+        run: pnpm run build
+      - name: Install ${{ matrix.browser }}
+        timeout-minutes: 20
+        run: |
+          sudo sed -i \
+            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
+            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
+            /etc/apt/apt-mirrors.txt
+          pnpm exec playwright install --with-deps ${{ matrix.browser }}
+      - name: CI-Satz in ${{ matrix.browser }}
+        run: pnpm run test:browser -- --browser ${{ matrix.browser }}
+      - name: Upload suite times
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: zeiten-schnell-${{ matrix.browser }}
+          path: .qa-output/browser/zeiten-*.json
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Upload browser screenshots
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: browser-schnell-${{ matrix.browser }}
           path: .qa-output/browser
           retention-days: 7
           if-no-files-found: ignore

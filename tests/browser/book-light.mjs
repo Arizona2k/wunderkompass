@@ -5,7 +5,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-light-content.json',import.meta.url),'utf8'));
@@ -91,7 +91,7 @@ export async function bookLightNetworkView(page,{shots=null,engine='chromium'}={
   if(shots)await waveCard.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-light-original-wrap-negative-320.png'),animations:'disabled'});
   await waveCard.evaluate((e,style)=>{if(style===null)e.removeAttribute('style');else e.setAttribute('style',style);},style);await heading.evaluate((e,text)=>e.textContent=text,headingText);await child.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));assert.equal(await child.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);proof.longCompoundReflowAndOriginalNegative=true;
 
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-light-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

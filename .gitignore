@@ -13,11 +13,6 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/.vinext/
-/out/
-
 # misc
 .DS_Store
 *.pem
@@ -34,10 +29,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-next-env.d.ts
 /dist/
-/.wrangler/
 # Checkout-local execution profile and tool state; never publish them.
 /.sites-runtime/
 /.agents/
@@ -53,6 +45,4 @@ next-env.d.ts
 # Checkout-local quality evidence
 .qa-*.log
 
-/qa/node_modules/
-/qa/.qa-output/
 /pnpm-store/

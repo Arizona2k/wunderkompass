@@ -32,7 +32,6 @@
     "app/**/*.ts",
     "app/**/*.tsx",
     "components/**/*.tsx",
-    "hooks/**/*.ts",
     "migration/**/*.tsx",
     "lib/utils.ts",
     "vite-env.d.ts",
@@ -43,7 +42,6 @@
     "node_modules",
     "dist",
     "examples",
-    "db",
-    "app/chatgpt-auth.ts"
+    "db"
   ]
 }

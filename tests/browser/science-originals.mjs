@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {prepareAxe} from './axe-loader.mjs';
-import {KARTE,ERKLAERTE_PAARE,ausprobieren,ausprobierenAuf,hatAusprobieren,lesetexte,mehrErfahren,verbindungsSatz} from './karte-hilfen.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,ausprobierenAuf,frageDurchspielen,hatAusprobieren,lesetexte,mehrErfahren,verbindungsSatz} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import thinking from '../../app/science-thinking.json' with {type:'json'};
 import connections from '../../app/world-connections.json' with {type:'json'};
@@ -36,12 +36,8 @@ export async function waterPhotosynthesisView(page,{width,shots,questions=true,n
    assert(actual.labels.every(label=>label.inside&&label.font>=(actual.large?18.3:16)),'all five actual SVG labels remain readable and inside the drawing');states.push(actual);
    assert.deepEqual(await figure.locator('dt').allTextContents(),['Energie','Ausgangsstoffe','Produkte']);
   }
-  if(questions){
-   const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
-   for(let i=0;i<3;i++)if(i!==topic.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await q.getByText(topic.questionFeedback?.wrongReasons[i]??'Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await q.getByText(topic.question.why,{exact:true}).count(),0);}
-   await right.click();await q.getByText(topic.question.why,{exact:true}).waitFor();
-  }
+  // Die angezeigte Frage ohne Hinweis durchspielen; ist sie schon richtig beantwortet, zuerst „Noch einmal raten“.
+  if(questions)await frageDurchspielen(article,topic,{beantwortet:'neu',hinweis:false});
   const inquiry=await scienceThinkingView(page,topic,{width,shots,native,capturePrefix});await geometry(page,article,id+' '+width);
   if(shots&&!native)await figure.screenshot({path:path.join(shots,capturePrefix+id+'-current-authored-model-'+width+'.png'),animations:'disabled'});
   const captures=[];
@@ -172,7 +168,8 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
   await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator(KARTE);await article.getByRole('heading',{name:t.title,exact:true}).waitFor();
   // Alle Lesetexte an ihren Orten der neuen Karte aufklappen, dazu „Ausprobieren“, falls die Karte es hat.
   await lesetexte(article,t);if(await hatAusprobieren(article))await ausprobieren(article);
-  for(const text of [t.intro,...t.paragraphs,...t.more,t.learning.starter,t.learning.observe,t.learning.benefit,...t.facts.map(f=>f.text)])assert.ok((await article.innerText()).includes(text),t.id+' actual displayed explanation');
+  // „Ganz einfach“ hat lesetexte schon an seinem Ort gefunden (ganzEinfach).
+  for(const text of [t.intro,...t.paragraphs,...t.more,t.learning.observe,t.learning.benefit,...t.facts.map(f=>f.text)])assert.ok((await article.innerText()).includes(text),t.id+' actual displayed explanation');
   for(const source of t.sources)assert.equal(await article.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   await assertScienceDiagramLegend(article,t.id.replace('science-',''));
   const states=[];let modelTypography=null;
@@ -209,13 +206,7 @@ export async function scienceOriginalView(page,{width,shots,questions=true,nativ
    }
    if(t.investigation==='probability'){await model.getByRole('button',{name:'Neue Würfelserie untersuchen',exact:true}).click();await model.getByRole('status').filter({hasText:'6 simulierte Würfe'}).waitFor();assert.equal(await model.locator('.science-dice-labels li').count(),6);const counts=await model.locator('.science-dice-labels li').allTextContents();assert.equal(counts.reduce((n,text)=>n+Number(text.split(':')[1].trim()),0),6,'all actual counts sum to the displayed sample, no exact-distribution demand');}
   }
-  if(questions){
-   const q=article.locator('.world-mini-question'),right=q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
-   if(await right.isDisabled())await q.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
-   const hint=q.locator('.world-game-hint');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await q.getByText(t.questionFeedback.hint,{exact:true}).waitFor();
-   for(let i=0;i<t.question.answers.length;i++)if(i!==t.question.correct){await q.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})}).click();await q.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await q.getByText(t.question.why,{exact:true}).count(),0,'wrong feedback does not show separate correct explanation');}
-   await right.click();await q.getByText(t.question.why,{exact:true}).waitFor();
-  }
+  if(questions)await frageDurchspielen(article,t,{beantwortet:'neu'});
   const inquiry=modelsOnly?null:await scienceThinkingView(page,t,{width,shots,native});
   await geometry(page,article,t.id+' '+width);
   const captures=[];

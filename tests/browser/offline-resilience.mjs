@@ -30,7 +30,7 @@ import {captureNativeViewport} from './native-screenshot.mjs';
 import {planetDiagramViews} from './planet-diagrams.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
-import {BROWSER_ERROR_FIELDS,browserErrorArrays,browserErrorsComplete,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,browserErrorsAssert,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 
 // The preceding progress matrix ends wide. A filename is no viewport evidence.
 export async function assertOfflineCaptureViewport(page,{native=false}={}){
@@ -69,7 +69,8 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  await new Promise(resolve=>server.listen(port,'127.0.0.1',resolve));const base='http://127.0.0.1:'+port,context=providedContext??await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce'}),page=await context.newPage();page.setDefaultTimeout(20000);let cdp;const report={kind,networkRecovery:false,quotaRecovery:null,completeAssets:false,offlineReload:false,passPreserved:false,assetCount:assets.length};
  let verifiedWorkerURL=null;const workerURL=base+'/learning-worker.js';
  report.browserErrors=browserErrorArrays();monitorBrowserErrors(page,base,report.browserErrors,{engine:kind,expectedHTTP503:{url:base+guardedAsset,active:()=>fail,reason:'Exact required asset deliberately returns503 during the isolated initial source-failure phase.'},expectedOfflineWorkerUpdate:{url:workerURL,active:()=>report.serverStopped===true&&report.completeAssets===true&&verifiedWorkerURL===workerURL,reason:'The isolated fixture verified every cached asset and the active controller, then deliberately stopped this origin. Only the exact registered worker update connection refusal is expected.'}});
- const assertBrowserErrors=stage=>assert.equal(browserErrorsComplete(report.browserErrors),true,'actual offline-app browser errors remain blocking at '+stage+': '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,{count:report.browserErrors[key].length,first:report.browserErrors[key].slice(0,3)}]))));
+ // Vorher offene Firefox-Bildabbrüche entscheiden lassen (browser-errors.mjs), damit das Ergebnis nicht vom Zeitpunkt abhängt.
+ const assertBrowserErrors=stage=>browserErrorsAssert(report.browserErrors,'actual offline-app browser errors remain blocking at '+stage);
  const snapshot=()=>page.evaluate(()=>{const p=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress;return p;});
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{
@@ -101,7 +102,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   assert.deepEqual(await snapshot(),saved);report.passPreserved=true;
   const registration=await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();return{active:r?.active?.scriptURL,state:r?.active?.state,controller:navigator.serviceWorker.controller?.scriptURL};});
   assert.deepEqual(registration,{active:workerURL,state:'activated',controller:workerURL},'the already active cached worker is verified before the origin is stopped');verifiedWorkerURL=registration.active;report.registeredWorkerBeforeShutdown=registration;
-  assertBrowserErrors('before deliberate origin shutdown');
+  await assertBrowserErrors('before deliberate origin shutdown');
   await page.setViewportSize({width:320*(native?2:1),height:900});
   await prepareAxe(page);
   await assertOfflineCaptureViewport(page,{native});
@@ -111,12 +112,12 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
    await page.waitForFunction(el=>el.complete&&el.naturalWidth>0,await image.elementHandle());await image.evaluate(el=>el.decode());
    const credit=image.locator('..').locator('figcaption');await credit.waitFor();assert.ok((await credit.innerText()).trim());
    report.deferredPhotoTransport={heldAcrossPreparation:true,src:await image.getAttribute('src'),credit:await credit.innerText()};
-   assertBrowserErrors('after delayed native photo transport completion');
+   await assertBrowserErrors('after delayed native photo transport completion');
   }
   await stopTestServer(server);
   await assert.rejects(fetch(base+'/',{signal:AbortSignal.timeout(2600)}),'fixture server is really unreachable before the offline reload');report.serverStopped=true;
   await page.reload();await page.locator('.world-mini-question').waitFor();await page.locator('.wissenskarte-merken[aria-pressed="true"]').waitFor();report.offlineReload=true;
-  assertBrowserErrors('after confirmed-origin-down reload');
+  await assertBrowserErrors('after confirmed-origin-down reload');
   report.offlineReadyView=await captureOfflinePanel(page,shots?shots+'/'+shotName+'-320.png':null,{native});
   // The real complete cached app must retain the new source-learning activities too.
   report.historySourceDiscovery=[];report.opticsDiscovery=[];report.electricalDiscovery=[];report.mechanicsDiscovery=[];report.scienceOriginalDiscovery=[];
@@ -180,7 +181,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
   report.planetDiagrams=[];for(const width of(native?[320,640]:[320,1440])){await page.setViewportSize({width:width*(native?2:1),height:950});report.planetDiagrams.push(...await planetDiagramViews(page,{width,large:true,native,offline:true,networkOffline:false,serverStopped:report.serverStopped,shots:shots??'.qa-output',engine:kind}));}assert.equal(report.planetDiagrams.length,18);
   report.insideDiagrams=[];for(const width of(native?[320,640]:[320,1440])){await page.setViewportSize({width:width*(native?2:1),height:950});report.insideDiagrams.push(...await insideDiagramViews(page,{width,large:true,native,offline:true,networkOffline:false,serverStopped:report.serverStopped,shots:shots??'.qa-output',engine:kind}));}assert.equal(report.insideDiagrams.length,16);
   report.learningTaskSemantics=await learningTaskOfflineSemantics(page,{shots:shots??'.qa-output',kind,native});
-  assertBrowserErrors('after complete cached learning matrix');
+  await assertBrowserErrors('after complete cached learning matrix');
   return report;
  }catch(error){
   if(shots){await fs.writeFile(path.join(shots,shotName+'-failure.json'),JSON.stringify({...report,status:'failed',failure:error.stack},null,2));await page.screenshot({path:path.join(shots,shotName+'-failure-320.png'),animations:'disabled',timeout:6500}).catch(()=>{});}

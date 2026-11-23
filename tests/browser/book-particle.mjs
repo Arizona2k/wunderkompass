@@ -4,7 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-particle-content.json',import.meta.url),'utf8'));
@@ -90,7 +90,7 @@ export async function bookParticleNetworkView(page,{shots=null,engine='chromium'
   await assert.rejects(()=>assertBookParticleFigure(protonFigure,'element-identity',{term:'Proton'}),/actual drawn particle counts/,'missing actual proton fails even if metadata still claims six');
   await child.evaluate(()=>{const s=window.__particleNegativeOriginal;s.parent.insertBefore(s.node,s.next);delete window.__particleNegativeOriginal;});await assertBookParticleFigure(protonFigure,'element-identity',{term:'Proton'});proof.missingDrawnProtonNegative=true;
 
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-particle-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

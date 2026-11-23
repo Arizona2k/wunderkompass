@@ -6,7 +6,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-digital-content.json',import.meta.url),'utf8'));
@@ -49,7 +49,7 @@ export async function bookDigitalView(page,report,width,{shots=null,engine='chro
     for(const[part,target]of[['drawing',figure.locator('svg,.book-digital-strip,.book-digital-route').first()],['legend',figure.locator('.measurement-limit').last()]]){await target.evaluate(el=>el.scrollIntoView({block:'start'}));const capture=await captureNativeViewport(page,prefix+part+'-'+width+'.png',{cdp:captureSession});assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);nativeCaptures.push(capture);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-digital-'+(kind==='words'?Object.keys(pack.learning).indexOf(term):9+Object.keys(pack.whyLearning).indexOf(term))+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
    const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
-   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm,related]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
+   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
    await page.goBack();await card.waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
    proof.push({term,kind,width,large,native200:native,nativeCaptures,offline,figure:item.figure,modelStates,allReadingLevelsHintsAnswersFeedbackAndSources:true,normalHTMLLegends:true,actualKeyboardArticleAndBackFocus:true});
   }
@@ -88,7 +88,7 @@ export async function bookDigitalNetworkView(page,{shots=null,engine='chromium'}
   await cellStudy.locator(':scope>summary').click();await started;await cellStudy.locator(':scope>summary').click();await membraneStudy.locator(':scope>summary').click();assert.equal(requests,1);release();
   await membraneStudy.getByText(pack.learning['Bit'].benefit,{exact:true}).waitFor();await cellStudy.locator(':scope>summary').click();await cellStudy.getByText(pack.learning['Algorithmus'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
   const bitStudy=cardFor(child,'Bit').locator('[data-book-digital-study]'),bitFigure=bitStudy.locator('[data-book-digital-figure="binary-choice"]');await bitFigure.waitFor();await bitFigure.locator('.book-digital-choices button').first().click();await assertDigitalDrawnState(bitFigure,'binary-choice',0);const bitValue=bitFigure.locator('[data-digital-bit-value]'),originalBit=await bitValue.textContent();assert.equal(originalBit,'1');try{await bitValue.evaluate(el=>el.textContent='0');await assert.rejects(()=>assertDigitalDrawnState(bitFigure,'binary-choice',0),/actual binary value/);}finally{await bitValue.evaluate((el,value)=>el.textContent=value,originalBit);}await assertDigitalDrawnState(bitFigure,'binary-choice',0);proof.differentDrawnBitNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-digital-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-digital-figure'),html:e.outerHTML}))).catch(()=>[])};

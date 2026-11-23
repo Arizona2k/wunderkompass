@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
-import {KARTE,ausprobieren,lesetexte} from './karte-hilfen.mjs';
+import {KARTE,ausprobieren,frageDurchspielen,lesetexte} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const topics=catalog.filter(t=>['history-khipu','history-mohenjo-daro','history-bronze'].includes(t.id));assert.equal(topics.length,3,'all three required historical topics are present');
 // Firefox aus Playwright 1.65.1 stürzt ab („Page crashed“, CI-Lauf 249), wenn eine Rollen-Abfrage nach Bereich und Namen
@@ -62,7 +62,7 @@ export async function historySourceView(page,{width,shots,engine='chromium',nati
   if(topic.id==='history-bronze'){for(const text of [topic.intro,...topic.paragraphs,...topic.facts.map(f=>f.text)])await article.getByText(text,{exact:true}).waitFor();}
   const learnedBefore=await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id);await ausprobieren(article);await detektivBereich(page);await explore(page,topic,{touch});assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),topic.id),learnedBefore,'voluntary diagram exploration cannot award the mini-question mark');
   const activity=await detektivBereich(page);if(shots){const prefix='history-source-'+engine+'-'+topic.id+'-'+width;if(native){await page.bringToFront();for(const [suffix,part]of [['heading',activity.locator('h3')],['diagram',activity.locator('figure')],['controls',activity.locator('.model-buttons').last()]]){await part.scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,prefix+'-'+suffix+'.png'));}}else if([320,1440].includes(width))await activity.screenshot({path:path.join(shots,prefix+'.png'),animations:'disabled'});}
-  if(questions){const correct=question.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});if(!await correct.isDisabled()){const hint=question.locator('.world-game-hint');if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(topic.questionFeedback.hint,{exact:true}).waitFor();for(let i=0;i<topic.question.answers.length;i++)if(i!==topic.question.correct){await question.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[i],{exact:true})}).click();await question.getByText(topic.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);}await correct.click();}await question.getByText(topic.question.why,{exact:true}).waitFor();assert.equal(await correct.isDisabled(),true);}
+  if(questions)await frageDurchspielen(article,topic);
   await checkGeometry(page);observed.push({id:topic.id,width,threeDistinctThinkingLevels:true,actualControls:true,keyboardFocus:true,readingLevelsAndSources:true,noExplorationStamp:true,questionsChecked:questions,native,...(topic.id==='history-bronze'?{actualSearch:true,bronzeEvidence:await assertBronzeEvidence(activity)}:{})});
  }assert.equal(observed.length,3);completed=true;return observed;}finally{if(completed)await page.evaluate(hash=>location.hash=hash,initial);}
 }

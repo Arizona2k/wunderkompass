@@ -3,7 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-heat-content.json',import.meta.url),'utf8'));
@@ -80,7 +80,7 @@ export async function bookHeatNetworkView(page,{shots=null,engine='chromium'}={}
   const warmth=cardFor(child,'Wärme').locator('[data-book-heat-study]'),radiation=cardFor(child,'Wärmestrahlung').locator('[data-book-heat-study]');
   await warmth.locator(':scope>summary').click();await started;await warmth.locator(':scope>summary').click();await radiation.locator(':scope>summary').click();assert.equal(requests,1);release();
   await radiation.getByText(pack.learning['Wärmestrahlung'].benefit,{exact:true}).waitFor();await warmth.locator(':scope>summary').click();await warmth.getByText(pack.learning['Wärme'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-heat-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

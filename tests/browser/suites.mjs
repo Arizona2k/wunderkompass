@@ -89,7 +89,9 @@ export const SUITES = [
   {name: 'core', set: 'full', chromiumOnly: true, run: core},
   // Das Modell lädt erst mit „Ausprobieren“ (exerciseSolar öffnet es). Vorher darauf zu warten, lief in Firefox
   // und WebKit in die Zeitgrenze (CI-Lauf 249); darum gilt in jeder Engine dasselbe ready.
-  {name: 'solar-labels', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
+  // Seit 23.11.2026 im CI-Satz (rund 50 s in Chromium): Ein Fehler in Firefox und WebKit fiel sonst erst in der
+  // Vollprüfung auf (CI-Lauf 249). Die Engine-Schnellprüfung in quality.yml prüft den CI-Satz in beiden.
+  {name: 'solar-labels', set: 'ci', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'
     ? solarFlow(browser, base, ready, monitor, report, shots)
     : solarFlow(browser, base, ready, monitor, report, shots, {widths: ENGINE_WIDTHS})},
   {name: 'animals', set: 'full', run: ({browser, base, ready, monitor, report, shots, engine}) => engine === 'chromium'

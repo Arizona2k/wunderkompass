@@ -6,10 +6,9 @@ Stand: 23.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 - **Schritt 0 „Großputz & Arbeitsweise“** (PR #96, `a0ec975`) und die **Einordnung des Katalogs „WunderKompass 2027“** (PR #97, `5cf70fa`, [Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md)) sind seit 21.11.2026 in `test-live`. Ebenso **Phase 1, Teilschritt 1 „Aussehen und Hülle“** (PR #99, `6f43eb5`, [Entscheidungen](docs/entwurf/2026-11-21-phase-1-teilschritt-1-entscheidungen.md)). Der alte Stand liegt vollständig in Commit `b53f75f`.
 - **Phase 1, Teilschritt 2 „Wissenskarte“** ist fertig und in `test-live` ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-2.md), [Entscheidungen und verschobene Kleinigkeiten](docs/entwurf/2026-11-23-phase-1-teilschritt-2-entscheidungen.md)):
-  - Schritt 0: CI-Fehler und alte Fehler behoben (PR #102, `176cd08`). Bildkandidaten für Zeitreise und Erfindungen: [Liste](docs/entwurf/2026-11-21-bilder-zeitreise-erfindungen.md).
-  - Teil A „Neue Karte“ (PR #103, `40a0f0b`): neue Wissenskarte, alte Karte entfernt, Lernreisen einfach zuerst; der Pass behält Spielstände über 256.
-  - Teil B „Kürzer und verbunden“ (PR #104, `4b5bdb1`): jede Karte mit erklärtem Nachbarn, Karten aufgeräumt, zwölf Pilot-Karten im neuen Stil, frühere Antworten bleiben. Dazu die Ergänzung „Stufen“ und der Helfer `stufen-pruefer`. Geprüft: `pnpm run check` und große Prüfung in Chromium grün; CI-Vollprüfung Chromium und Firefox grün, WebKit rot nur durch die zwei alten Fehler `backup` und `offline-cold`; beide danach behoben (PR #105), seither prüft jeder PR sie auch in WebKit. Schlussprüfung mit dem stärksten Modell, Befunde behoben oder mit Grund im BACKLOG (Punkt 23).
+  - Schritt 0 (PR #102), Teil A „Neue Karte“ (PR #103, `40a0f0b`), Teil B „Kürzer und verbunden“ (PR #104, `4b5bdb1`) mit der Ergänzung „Stufen“ und dem Helfer `stufen-pruefer`. Geprüft und offen gebliebene Befunde: [Entscheidungen](docs/entwurf/2026-11-23-phase-1-teilschritt-2-entscheidungen.md), BACKLOG Punkt 23.
 - **Arbeitsweise abgesichert** (23.11.2026, PR #105): Helfer müssen laufen (Helfer-Check in `/weiter`, Ersatz von Hand, technik-pruefer nach jedem späten Fehler), nichts geht beim Chatwechsel verloren (`CLAUDE.md`, „Übergabe beim Chatwechsel“), Aufräumen gilt auch fürs Arbeiten. Bericht des technik-pruefer: [Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md).
+- **Phase 1, Teilschritt 3 „Kniffliger spielen“ hat begonnen** (23.11.2026, PR #106, am 23.11.2026 freigegeben und in `test-live`): Das Arbeitssystem ist umgebaut ([Entscheidungsliste](docs/entwurf/2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md)): gemeinsame Test-Bausteine mit Wächter, Vollprüfung in sieben Gruppen (je höchstens 75 Minuten, mit den Zeiten aus CI-Lauf 262 ausgeglichen), Engine-Schnellprüfung (CI-Satz in Firefox und WebKit bei jedem PR, kein Pflicht-Check), `solar-labels` im CI-Satz, Datentest gegen doppeltes „Ganz einfach“, 61 alte Dateien und 14 ungenutzte Pakete entfernt. Dazu zwei Firefox-Funde: React lässt Firefox manche Fotos doppelt laden, und nach dem Neuladen bricht Firefox die Nachfrage zu einem gespeicherten Foto selbst ab. Die Überwachung erkennt genau diese zwei Fälle jetzt (Entscheidungsliste, Punkte 10 und 13). [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) sind freigegeben.
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
 
 ## Adressen
@@ -21,15 +20,15 @@ Stand: 23.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md), darin die Rückmeldung eines 10-jährigen Kindes: zu viel Text, zu leicht), sechs Teilschritte: 1. Aussehen und Hülle (fertig) · 2. Wissenskarte (fertig) · **3. Kniffliger spielen** · 4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
 
-**Teilschritt 3 „Kniffliger spielen“** mit der [Ergänzung „Leicht, knifflig, richtig knifflig“](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md) ([Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
+**Teilschritt 3 „Kniffliger spielen“:** [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) (Grundlage: [Ergänzung Stufen](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md), [Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
 
-1. Zuerst das Arbeitssystem, in der Reihenfolge aus der [Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md) (Abschnitt „Einordnung durch Claude und Reihenfolge“): gemeinsame Test-Bausteine mit Wächter, Vollprüfung aufteilen (Zeitgrenze danach 75 Minuten), Firefox/WebKit früher prüfen (WebKit-Kurzprüfung für Pass und Offline läuft schon bei jedem PR), CI-Satz ergänzen, Altlasten aufräumen. Vorher den `technik-pruefer` dazu befragen.
-2. Dann Entwurf und Plan für Teilschritt 3 in `docs/entwurf/`, mit den verschobenen Kleinigkeiten aus der Entscheidungsliste von Teilschritt 2 und BACKLOG Phase 1.
+1. Erledigt: Entwurf freigegeben, D1 bis D5 „wie empfohlen“ entschieden (23.11.2026, Abschnitt 3 im Entwurf), Arbeitssystem in `test-live` (PR #106).
+2. Jetzt bauen, beginnend mit Teil A, Aufgabe 1 (Stufe im Pass, `app/kern/stufe.ts`). Pass-Änderungen mit Altpass, Import/Export, Reload und Fehlerfall belegen.
+3. Nebenbei: `journeys` (rund 35 Minuten, längste Gruppe der Vollprüfung) teilen oder beschleunigen, sobald klar ist, welcher Teil die Zeit braucht (BACKLOG, „Vollprüfung dauert lange“).
 
 ## Offene Fragen an den Nutzer
 
-- Vorschlag: „Ganz einfach“ auf allen Karten offen, die schweren Absätze unter „Für Große“ (BACKLOG 17).
-- `main` schützen wie `test-live` (Regel auf GitHub, kostenlos; verhindert versehentliche Änderungen an der Seite für Freunde)? Empfehlung: ja ([Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md)).
+- **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
 
 ## Vorübergehende Modell-Ausnahmen
 

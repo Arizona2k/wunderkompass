@@ -2,13 +2,12 @@ import {revealBookWords} from './book-pagination.mjs';
 import {assertMitoContour} from './book-cell-geometry.mjs';
 // Shared cell learning checks for the existing regular and cold browser callers.
 import {assertBookCellFigure} from './book-cell-diagrams.mjs';
-import {bookRelatedWordView} from './book-related-words.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-cell-content.json',import.meta.url),'utf8'));
@@ -51,7 +50,7 @@ export async function bookCellView(page,report,width,{shots=null,engine='chromiu
     for(const[part,target]of[['drawing',figure.locator('svg')],['legend',figure.locator('.model-caption,ol li').last()]]){await target.evaluate(el=>el.scrollIntoView({block:'start'}));const capture=await captureNativeViewport(page,prefix+part+'-'+width+'.png',{cdp:captureSession});assert.equal(capture.cssWidth,width);assert.equal(capture.scale,2);assert.equal(capture.pixelWidth,width*2);nativeCaptures.push(capture);}
    }else if(shots&&!offline&&!native)await card.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-cell-'+(kind==='words'?Object.keys(pack.learning).indexOf(term):8+Object.keys(pack.whyLearning).indexOf(term))+'-'+(large?'large':'normal')+'-'+width+'.png'),animations:'disabled'});
    const topic=study.locator('.book-connection a');await topic.focus();await page.keyboard.press('Enter');await page.waitForURL('**/#world/topic/'+item.topic);await karteDa(page,item.topic);await mehrErfahren(page);
-   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm,related]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
+   for(const [relatedKind,relatedItems]of[['words',pack.learning],['why',pack.whyLearning]])for(const [relatedTerm]of Object.entries(relatedItems).filter(([,value])=>value.topic===item.topic)){const backlink=page.locator('[data-book-measurement-links="'+item.topic+'"]').getByRole('link',{name:relatedTerm,exact:true});await backlink.waitFor();assert.equal(await backlink.getAttribute('href'),'#book/'+relatedKind+'/'+encodeURIComponent(relatedTerm));}
    await page.goBack();await card.waitFor();await page.waitForFunction(term=>document.activeElement?.dataset.routeFocus==='word-topic-'+term,term);
    proof.push({term,kind,width,large,native200:native,nativeCaptures,offline,figure:item.figure,modelStates,allReadingLevelsHintsAnswersFeedbackAndSources:true,normalHTMLLegends:true,actualKeyboardArticleAndBackFocus:true});
   }
@@ -97,6 +96,6 @@ export async function bookCellNetworkView(page,{shots=null,engine='chromium'}={}
   const priorCrossing='M79 84Q90 56 111 58L113 89L127 60L137 95L152 62L161 96L176 67Q211 86 191 111L174 112L162 91L151 122L135 94L125 123L108 100L96 114Q77 105 79 84Z';
   try{await contour.evaluate((node,value)=>node.setAttribute('d',value),priorCrossing);await assert.rejects(()=>assertMitoContour(figure),/must not self-cross/,'actual old rendered crossing cannot pass otherwise valid controls and status');}finally{await contour.evaluate((node,value)=>node.setAttribute('d',value),original);}
   await assertMitoContour(figure);proof.actualEarlierCrossingContourNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }finally{release();await context?.close();}
 }

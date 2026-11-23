@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
-import {KARTE,ERKLAERTE_PAARE,ausprobieren,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,frageDurchspielen,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const opticsTopics=catalog.filter(t=>['invention-camera','invention-telescope','invention-microscope'].includes(t.id));
 assert.equal(opticsTopics.length,3);
@@ -37,7 +37,7 @@ export async function opticsSourceView(page,{width,shots,engine='chromium',nativ
   }else{let last;for(const n of [1,2,3]){await model.getByRole('button',{name:'Bildgröße '+n,exact:true}).focus();await page.keyboard.press('Enter');await page.waitForFunction(n=>document.querySelector('[data-invention-result]')?.getAttribute('data-invention-result')===String(n),n);const actual=await model.locator('svg g[filter]').getAttribute('transform');if(last)assert.notEqual(actual,last);last=actual;assert.equal(await model.locator('svg filter feGaussianBlur').count(),1);states.push(n);}}
   }
   assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id),before,'voluntary exploration does not award the mini-question mark');
-  if(questions){const correct=question.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});if(!await correct.isDisabled()){await reveal(question.locator('.world-game-hint'));await question.getByText(t.questionFeedback.hint,{exact:true}).waitFor();for(let i=0;i<3;i++)if(i!==t.question.correct){await question.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})}).click();await question.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await question.getByText(t.question.why,{exact:true}).count(),0);}await correct.click();}await question.getByText(t.question.why,{exact:true}).waitFor();}
+  if(questions)await frageDurchspielen(article,t);
   await geometry(page,article);
   if(shots&&[320,1440].includes(width)){await article.locator('.invention-blueprint').screenshot({path:path.join(shots,'optics-'+engine+'-'+t.id+'-'+width+'.png'),animations:'disabled'});if(t.invention.model)await article.locator('[data-invention-experiment]').screenshot({path:path.join(shots,'optics-experiment-'+engine+'-'+t.id+'-'+width+'.png'),animations:'disabled'});}
   if(shots&&native){await page.bringToFront();await article.locator('.invention-blueprint').scrollIntoViewIfNeeded();await captureNativeViewport(page,path.join(shots,'optics-native-'+engine+'-'+t.id+'-'+width+'.png'));}

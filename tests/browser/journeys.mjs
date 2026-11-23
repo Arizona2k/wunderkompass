@@ -21,7 +21,7 @@ import {assertInsideDiagrams} from './inside-diagrams.mjs';
 import {assertPlanetDiagram} from './planet-diagrams.mjs';
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
 import {bookTabNavigation} from './book-navigation.mjs';
-import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,browserErrorsAssert,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {journeyContentFlow} from './journey-content.mjs';
 import {journeyReadingFlow} from './journey-reading.mjs';
 import {journeyInquiryLoadFlow} from './journey-inquiry-loader.mjs';
@@ -57,7 +57,7 @@ export async function assertJourneyDiagram(visual,id,selected){
  await assertMoonNavigationDiagram(visual,id);
  await assertVolcanoesQuakesDiagram(visual,id);
  await assertWaterWeatherDiagram(visual,id,selected);
- await assertSeasonsOceanDiagram(visual,id,selected);
+ await assertSeasonsOceanDiagram(visual,id);
  await assertNatureProtectDiagram(visual,id,selected);
  await assertContinentsCountriesDiagram(visual,id);
  if(['inside:3','planet:3','planet:4'].includes(id)){
@@ -298,7 +298,7 @@ export async function journeySupportView(p,{widths,shots,engine}){
 }
 export async function journeyLearningHelpView(browser,base,ready,shots){
  const proof={checks:[],...browserErrorArrays()},engine=browser.browserType().name(),monitor=page=>monitorBrowserErrors(page,base,proof,{engine});
- try{await journeyReadingFlow(browser,base,ready,monitor,proof,shots);await journeyInquiryLoadFlow(browser,base,proof,shots);await journeyTransferFlow(browser,base,ready,monitor,proof,shots);for(const field of BROWSER_ERROR_FIELDS)assert.deepEqual(proof[field],[],field);return proof;}
+ try{await journeyReadingFlow(browser,base,ready,monitor,proof,shots);await journeyInquiryLoadFlow(browser,base,proof,shots);await journeyTransferFlow(browser,base,ready,monitor,proof,shots);await browserErrorsAssert(proof);return proof;}
  catch(error){await fs.writeFile(path.join(shots,'journey-help-'+engine+'-failure-errors.json'),JSON.stringify({status:'failed',engine,...proof,failure:error.stack},null,2)+'\n');throw error;}
 }
 
@@ -330,7 +330,7 @@ export async function assertWaterWeatherDiagram(visual,id,selected){
  if(id==='weather:4'&&selected===2)await visual.getByText('Neue Messungen können helfen, eine Vorhersage zu überarbeiten. Sie bleibt unsicher.',{exact:true}).waitFor();
 }
 
-export async function assertSeasonsOceanDiagram(visual,id,selected){
+export async function assertSeasonsOceanDiagram(visual,id){
  if(!['seasons:1','seasons:2','seasons:3','seasons:4','ocean:1','ocean:2','ocean:3','ocean:4'].includes(id))return;
  await visual.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
  const vectors=await visual.locator('svg path[marker-end]').evaluateAll(paths=>paths.map(path=>{const a=path.getPointAtLength(0),b=path.getPointAtLength(path.getTotalLength());return {x:a.x,y:a.y,dx:b.x-a.x,dy:b.y-a.y};}));

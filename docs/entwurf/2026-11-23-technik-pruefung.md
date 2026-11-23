@@ -4,6 +4,8 @@ Anlass: Zweimal fielen Fehler erst spät auf. In Teil A fand die CI-Vollprüfung
 Geprüft hat der Helfer `technik-pruefer` (sonnet/high) auf dem Stand `afbc441`. Er hat nur gelesen, kein Build und kein Browser liefen. Wo eine Zahl geschätzt ist, steht das dabei.
 Claude hat die Befunde eingeordnet (Abschnitt „Einordnung“). Dieser Bericht ist die Grundlage für den Anfang von Teilschritt 3. Der nächste Chat baut darauf auf und muss ihn nicht neu erarbeiten.
 
+**Stand 23.11.2026 abends:** Schritte 1 bis 5 der Reihenfolge unten sind umgesetzt (Bausteine und Wächter, Gruppen mit 75 Minuten, Engine-Schnellprüfung, `solar-labels` im CI-Satz, Aufräumen). Offen ist Schritt 6 (`main` schützen, stellt der Nutzer ein). Was entschieden und verschoben wurde, steht in der [Entscheidungsliste](2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md).
+
 ## Gemessene Dauern (CI-Lauf 252, Vollprüfung von Teil A)
 
 - Gesamt je Browser: Chromium 6104 s, Firefox 2263 s, WebKit 3040 s. Die drei laufen gleichzeitig, Wartezeit also rund 102 Minuten.
@@ -60,7 +62,7 @@ Die Befunde stimmen mit dem überein, was in Teil A und B passiert ist. Zwei Sch
 Empfohlene Reihenfolge am Anfang von Teilschritt 3, je als kleiner Schritt mit `pnpm run check`:
 
 1. **Gemeinsame Test-Bausteine für die Karte** (BACKLOG) und dazu der **Wächter** aus Befund 2. Das verhindert die Fehlerklasse aus Teil B.
-2. **Vollprüfung aufteilen** wie oben, mit `shards.json`, Wächter-Test und Zeiten-Datei; danach `timeout-minutes` auf 75.
+2. **Vollprüfung aufteilen** wie oben, mit `shards.json`, Wächter-Test und Zeiten-Datei; danach `timeout-minutes` auf 75. (Umgesetzt am 23.11.2026 als `tests/browser/shards.mjs`.)
 3. **Alte WebKit-Fehler `backup` und `offline-cold` beheben.** Danach eine **Engine-Schnellprüfung** (Firefox und WebKit, CI-Satz plus `solar-labels`) bei jedem PR, zunächst nicht als Pflicht. Das verhindert die Fehlerklasse aus Teil A.
 4. **CI-Satz ergänzen:** `solar-labels`, dann `animals` und `core` mit einer Breite, wenn die gemessene Dauer den Satz unter 10 Minuten lässt.
 5. **Aufräumen:** `next`, `next-themes` und die drei alten Dateien entfernen, `zod` prüfen, Lint auf alle Browser-Testdateien.
