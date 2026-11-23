@@ -194,7 +194,7 @@ Aufbau von oben nach unten:
   3. Ein passendes Spiel, Labor oder eine Reise aus `links`.
   Weitere erklärte Verbindungen stehen unter „Mehr erfahren“. Das Feld `related` wird auf der Karte nicht mehr angezeigt (es bleibt in den Daten).
 - **Pass-Kopplung wie heute** (siehe Abschnitt 2): Öffnen, Mini-Frage, Merken, `SavedGame`. Der Haken „gelernt“ bleibt sichtbar.
-- **Länge:** Bei 390 px reicht der offene Teil (bis einschließlich „Dazu passt“, ohne aufgeklappte Bereiche) bei einer typischen Tierkarte bis etwa 3 Bildschirmhöhen (≈ 2.600 px). Bei Karten mit langen `paragraphs` darf es mehr sein. Gekürzt wird aber nicht am Text, sondern über die Fragekapitel ab Phase 2.
+- **Länge:** Bei 390 px reicht der offene Teil (bis einschließlich „Dazu passt“, ohne aufgeklappte Bereiche) bei einer typischen Tierkarte bis etwa 3 Bildschirmhöhen (≈ 2.600 px; mit „Stimmt das?“ und Zusatzfrage höchstens 3.100 px, Entscheid des Nutzers vom 22.11.2026, geprüft an der Elefantenkarte). Bei Karten mit langen `paragraphs` darf es mehr sein. Gekürzt wird aber nicht am Text, sondern über die Fragekapitel ab Phase 2.
 - **Rückweg:** Der Pfeil oben führt zur Welt der Karte. Kam das Kind von der Startseite, aus der Suche oder aus „Dazu passt“, führt er dorthin zurück (heutiges `navigateHash`/Verlauf).
 
 ### 6.4 Weltenseiten

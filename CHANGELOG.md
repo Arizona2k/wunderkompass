@@ -3,6 +3,19 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 23.11.2026 – Teilschritt 2, Teil B: Karten, die zusammenpassen
+
+Jede Karte hat jetzt einen echten Nachbarn. Zwölf Karten sind schon ganz im neuen Stil, mit kleinen Häppchen und mehr zum Knobeln.
+
+- **Jede Karte hat einen Nachbarn:** 30 neue Verbindungen für die 35 Karten, die noch keine hatten. Unter „Dazu passt“ steht immer, warum zwei Karten zusammengehören. Alle 226 Sätze wurden für Kinder durchgesehen und auf Tatsachen geprüft. Fünf schwache Verbindungen stehen zum Ersetzen im BACKLOG.
+- **Karten aufgeräumt:** Was im Steckbrief steht, kommt nicht noch einmal im Text. „Schon gewusst?“ verrät nur noch Neues. Fragen sagen nicht mehr „wie im Text steht“. Viele Sätze für Erwachsene sind aus dem Kinderteil verschwunden. Bei den Karten über Krieg, Völkermord und Anschläge steht bewusst keine Überraschungs-Tatsache mehr.
+- **Zwölf Karten im neuen Stil** (Elefant, Eisbär, Krake, Steinwerkzeuge, Apollo 11, Marie Curie, Jane Goodall, Pyramiden von Gizeh, Eiffelturm, Wasserkreislauf, Mondphasen, Fahrrad): „Kurz erklärt“ besteht aus kleinen Häppchen mit je einer Frage als Überschrift. Bei „Stimmt das?“ entscheidet man, ob ein Satz stimmt. Nach einer richtigen Antwort gibt es „Noch eine Frage“. Der längere Text steht unter „Für Große“.
+- **Alte Antworten bleiben:** Wurde eine Frage neu geschrieben, bleibt die gespeicherte Antwort gewählt und richtig. Gibt es eine Antwort gar nicht mehr, sagt die Karte: „Hier gibt es neue Antworten. Früher hast du … gewählt.“ Pass-Einträge gehen nicht verloren.
+- **Weiterdenken, wo man war:** Wer auf einer Karte mit mehreren Fragen falsch geraten hat und später zurückkommt (aus dem Wissensbuch, von einer Nachbarkarte oder nach dem Neuladen), bekommt wieder dieselbe Frage und keine neue.
+- **Besser lesbar:** Getippte Antworten bleiben gut lesbar und werden nicht blass. Zeichnungen in „Dazu passt“ sind kompakt. Die Mondzeichnung oben auf der Karte ist am Handy kleiner. „Noch einmal raten“ hat jetzt die richtige Schriftgröße. Bei Marie Curie, Jane Goodall und dem Fahrrad steht „Ganz einfach“ jetzt oben in „Ausprobieren“.
+- **„Was ist neu?“** hat einen neuen Eintrag.
+- **Geprüft:** ganze Prüfkette, die große Prüfung in Chromium (alle 32 Teile grün; fünf davon nach Korrekturen noch einmal einzeln, nach der letzten Korrektur auch `core` und `offline-resilience`). Alle neuen Sätze von der Kinder-Redaktion und auf Tatsachen geprüft, die zwölf Pilot-Karten zweimal auf Bildern in fünf Breiten, dazu eine Code-Prüfung und eine Schlussprüfung durch einen frischen Prüfer auf dem stärksten Modell. Was dort gefunden und nicht gleich behoben wurde, steht mit Grund im BACKLOG (Punkt 23). Firefox und WebKit prüft die Vollprüfung in der CI.
+
 ## 22.11.2026 – Teilschritt 2, Teil A: Die neue Wissenskarte
 
 Jede Wissenskarte ist neu gebaut: erst raten, dann kurz lesen, dann selbst ausprobieren. Die alte Karte ist weg. Ihre Links, Antworten und Pass-Einträge bleiben.

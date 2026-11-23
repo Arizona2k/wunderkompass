@@ -34,17 +34,19 @@ const mitZusatzfragen = {
 const gesehen = due => ({correct: true, seen: 1, due});
 
 test('kartenFragen ohne Zusatzfragen liefert nur die Hauptfrage mit alten Schlüsseln', () => {
-  const elefant = karte('animal-african-savanna-elephant');
-  const fragen = kartenFragen(elefant, hintBank);
+  // Der Löwe hat keine Zusatzfragen und kein questionFeedback (der Elefant ist seit Aufgabe 11 Pilot-Karte mit Zusatzfragen).
+  const loewe = karte('animal-lion');
+  assert.equal(loewe.moreQuestions, undefined);
+  const fragen = kartenFragen(loewe, hintBank);
   assert.equal(fragen.length, 1);
   const [haupt] = fragen;
-  assert.equal(haupt.id, 'animal-african-savanna-elephant');
-  assert.equal(haupt.reviewId, 'world-question:animal-african-savanna-elephant');
+  assert.equal(haupt.id, 'animal-lion');
+  assert.equal(haupt.reviewId, 'world-question:animal-lion');
   assert.equal(haupt.answerKey, 'topicAnswer');
   assert.equal(haupt.itemsKey, 'items');
-  assert.deepEqual(haupt.question, elefant.question);
+  assert.deepEqual(haupt.question, loewe.question);
   // Ohne questionFeedback kommen die Hinweise nur aus der Bank.
-  assert.deepEqual(haupt.hints, hintBank['animal-african-savanna-elephant:mini'].steps);
+  assert.deepEqual(haupt.hints, hintBank['animal-lion:mini'].steps);
   assert.equal(haupt.wrongReasons, undefined);
 });
 
@@ -92,6 +94,28 @@ test('ersteFrage nimmt bei lauter gesehenen die am frühesten fällige', () => {
   assert.equal(ersteFrage(fragen, review).id, 'x');
   // Fremde Einträge im Pass zählen nicht als gesehen.
   assert.equal(ersteFrage(fragen, {'world-question:anderes': gesehen('2026-01-01')}).id, 'x');
+});
+
+test('ersteFrage nimmt zuerst eine Frage mit offener falscher Antwort', () => {
+  // Schlussprüfung Teil B (W1): Wer eine Frage falsch beantwortet hat, kommt beim Zurückkehren
+  // (Wissensbuch „Noch einmal nachdenken“, zurück von einer Nachbarkarte) wieder zu ihr, nicht zu einer neuen Zusatzfrage.
+  const fragen = kartenFragen(mitZusatzfragen, hintBank);
+  const q = mitZusatzfragen.question;
+  const falsch = q.answers.find((_, i) => i !== q.correct);
+  const falschGesehen = {correct: false, seen: 1, due: '2026-11-24'};
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: falsch}).id, 'x');
+  // Eine Antwort, die es nicht mehr gibt, ist auch offen (die Karte zeigt sie als frühere Wahl).
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: 'Gibt es nicht mehr'}).id, 'x');
+  // Eine offene Zusatzfrage genauso, auch wenn eine andere Zusatzfrage noch ungesehen ist.
+  const review = {'world-question:x': gesehen('2026-11-30'), 'world-question:x:rate-2': falschGesehen};
+  const stand = {topicAnswer: q.answers[q.correct], 'topicAnswer:x:rate-2': 'D'};
+  assert.equal(ersteFrage(fragen, review, stand).id, 'x:rate-2');
+  // Sind Haupt- und Zusatzfrage offen, kommt die frühere (die Hauptfrage).
+  assert.equal(ersteFrage(fragen, {...review, 'world-question:x': falschGesehen}, {...stand, topicAnswer: falsch}).id, 'x');
+  // Richtig beantwortet ist nicht offen: dann wie bisher die erste ungesehene.
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: q.answers[q.correct]}).id, 'x:rate-1');
+  // Ohne Kartenstand wie bisher.
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, undefined).id, 'x:rate-1');
 });
 
 test('dazuPasst zeigt höchstens drei Kacheln in fester Reihenfolge', () => {

@@ -7,6 +7,7 @@ import fs from 'node:fs/promises';
 const routes=JSON.parse(await fs.readFile(new URL('../../exports/content/world-routes.json',import.meta.url),'utf8'));
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const hints=JSON.parse(await fs.readFile(new URL('../../app/challenge-hints.json',import.meta.url),'utf8'));
+const worldConnections=JSON.parse(await fs.readFile(new URL('../../app/world-connections.json',import.meta.url),'utf8')).connections;
 const questionBank=topics.flatMap(t=>[{...t.question,id:t.id+':mini'},...(t.challenges??[])]);
 export async function assertSciencePage(page,number,count){
  await page.locator('#world-results').getByText('46 passende Entdeckerkarten · Seite '+number+' von 4',{exact:true}).waitFor();
@@ -43,7 +44,7 @@ export async function connectedDiscoveries(page,ready,report,width){
  await page.locator('.moon-phase-2').waitFor();
  for(const name of ['1. Neumond','2. Zunehmender Halbmond','4. Abnehmender Halbmond'])await page.getByRole('button',{name,exact:true}).click();
  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('model:science-moon-phases'));
- const gezeiten=await verbindungsKnopf(page,'science-moon-phases','science-tides');assert.match(await verbindungsSatz(gezeiten),/Mond reflektiert/);await gezeiten.click();
+ const gezeiten=await verbindungsKnopf(page,'science-moon-phases','science-tides');assert.equal(await verbindungsSatz(gezeiten),worldConnections.find(c=>c.id==='science-moon-phases--science-tides').why);await gezeiten.click();
  await page.getByRole('heading',{name:'Der Mond bewegt das Meer',exact:true}).waitFor();
  await page.evaluate(()=>location.hash='world/science');
  await page.locator('.world-topic-tile').first().waitFor();
@@ -131,9 +132,16 @@ export async function connectedDiscoveries(page,ready,report,width){
     await page.locator('.world-mini-question').waitFor();
     const title=await page.locator('#world-topic-title').getAttribute('aria-label'),t=topics.find(t=>t.title===title);
     assert.equal(t.id,route.topics[i],'each retained/appended route station is actually visited in order');
-    const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
-    if(!await answer.isDisabled())await answer.click();
-    await page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
+    // Wie route-revisit.mjs: Eine schon gelernte Station (hier die Mondkarte aus articleAtlas) zeigt als Pilot-Karte die nächste
+    // offene Zusatzfrage (ersteFrage) und ist frei; jede andere bleibt gesperrt, bis die echte Hauptfrage richtig beantwortet ist.
+    const next=page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true});
+    if((await pass()).discoveries.includes('learned:'+t.id))assert(await next.isEnabled(),t.id+': an already learned station permits advancing');
+    else{
+     assert(await next.isDisabled(),t.id+': an unfinished station remains gated before the actual mini answer');
+     await page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
+     await page.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id);
+    }
+    await next.click();
    }
    await page.getByRole('heading',{name:'Deine Wissensroute ist geschafft!',exact:true}).waitFor();
    assert.ok((await pass()).discoveries.includes('route:'+id));

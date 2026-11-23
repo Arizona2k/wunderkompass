@@ -17,6 +17,7 @@ const EXPANSION_IDS=new Set(['animal-platypus','animal-short-beaked-echidna','an
 const ANIMAL_EDGES=worldConnections.connections.filter(e=>/^animal-(inquiry|expansion)-/.test(e.id));
 import {prepareAxe} from './axe-loader.mjs';
 import {ausprobierenAuf,karteDa,mehrErfahren} from './karte-hilfen.mjs';
+import {ladeanfragen} from './harness.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {createSave,SAVE_KEY}=await import('../../app/progress-storage.ts');
@@ -134,7 +135,7 @@ export async function assertAnimalSelectionFeedback(task){
 export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix=widths,navigationReuse}={}){
  const observed=[],focusChecks=[],compactOrigins=[],start=performance.now(),searchFocus=await delayedSearchFocus(browser,base,monitor,shots);
  for(const width of matrix){
-  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);p.setDefaultTimeout(20000);
+  const c=await browser.newContext({viewport:{width,height:900},hasTouch:width<=390,reducedMotion:'reduce'}),p=await c.newPage();monitor(p);const anfragenFertig=ladeanfragen(p);p.setDefaultTimeout(20000);
   let current=DATA.entries[0].id,stage='normal';
   const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage,width}));
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
@@ -146,6 +147,8 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    const before=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    for(const t of topics)for(const [key,value]of Object.entries(pass.progress.gameSessions['topic:'+t.id]))assert.deepEqual(before.gameSessions['topic:'+t.id][key],value,'retained original '+key+' '+t.id);
    for(const key of ['favorites','notes'])assert.deepEqual(before[key],pass.progress[key]);assert.deepEqual(before.gameSessions['world:animal-detective'],pass.progress.gameSessions['world:animal-detective']);
+   // Vor dem gewollten Neuladen alles fertig laden (siehe ladeanfragen in harness.mjs).
+   stage='requests before reload';await anfragenFertig();
    stage='reload';await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await ausprobierenAuf(p,data.id);await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
    const after=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(after.gameSessions,before.gameSessions,'every old and new session key survives reload');
    stage='compact-origin-normal';compactOrigins.push(...await animalCompactOriginFlow(p,{width,shots,engine:browser.browserType().name(),state:'normal'}));
@@ -200,7 +203,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
  // the long search, workshop and complete regression; every later check stays.
  const photoOpeners=await photoCardOpenerFlow(browser,base,ready,monitor,shots);navigationProof.photoOpeners=photoOpeners;console.log('EARLY_PHOTO_CARD_OPENERS',JSON.stringify({engine:browser.browserType().name(),cases:photoOpeners}));
  const pendingBack=await pendingPhotoBackFocusFlow(browser,base,ready,monitor,{},shots);navigationProof.photoPendingBackFocus=pendingBack;console.log('PHOTO_PENDING_BACK',JSON.stringify({engine:browser.browserType().name(),cases:pendingBack}));
- const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);const initial=await c.storageState();assert.deepEqual(initial,{cookies:[],origins:[]},'common navigation starts in a new empty context');navigationProof.freshContext=true;navigationProof.input={base,viewport:{width:390,height:844},reducedMotion:'reduce',initialStorage:'empty new browser context',photoWidths:[320,1440],photoCategories:['animals','history','people','buildings'],pendingBackKinds:['category','pagination'],input:'actual keyboard titles, reload, explained connection and browser Back for every current animal ID'};let current='initial',stage='home';const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage}));
+ const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'}),p=await c.newPage(),engine=browser.browserType().name();monitor(p);const anfragenFertig=ladeanfragen(p);const initial=await c.storageState();assert.deepEqual(initial,{cookies:[],origins:[]},'common navigation starts in a new empty context');navigationProof.freshContext=true;navigationProof.input={base,viewport:{width:390,height:844},reducedMotion:'reduce',initialStorage:'empty new browser context',photoWidths:[320,1440],photoCategories:['animals','history','people','buildings'],pendingBackKinds:['category','pagination'],input:'actual keyboard titles, reload, explained connection and browser Back for every current animal ID'};let current='initial',stage='home';const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage}));
  await p.addInitScript(()=>{window.__animalSearchTrace=[];for(const type of ['beforeinput','input','change','focusin','focusout','hashchange','popstate'])window.addEventListener(type,event=>{const target=event.target;if(target?.getAttribute?.('role')==='combobox'||type==='hashchange'||type==='popstate'){window.__animalSearchTrace.push({type,value:target?.value??null,hash:location.hash,at:performance.now(),trusted:event.isTrusted,inputType:event.inputType??null,composing:event.isComposing??null});if(window.__animalSearchTrace.length>32)window.__animalSearchTrace.shift();}},true);});
  try{await p.goto(base);await ready(p);for(const entry of DATA.entries){
   current=entry.id;const t=topics.find(t=>t.id===entry.id);stage='open search';
@@ -214,6 +217,9 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   stage='actual subject image before reload';const expectedMedia=OWN_MEDIA.entries.find(e=>e.id===entry.id)??photoMedia[t.image];assert(expectedMedia?.src,'every actual animal has declared subject media');
   await p.waitForFunction(src=>[...document.querySelectorAll('.wissenskarte img')].some(image=>image.getAttribute('src')===src&&image.complete&&image.naturalWidth>0),expectedMedia.src);
   const decoded=await p.locator('.wissenskarte img').evaluateAll(async(images,src)=>{const image=images.find(i=>i.getAttribute('src')===src);if(!image)throw Error('Missing declared subject image');await image.decode();return{src:image.getAttribute('src'),complete:image.complete,width:image.naturalWidth,height:image.naturalHeight};},expectedMedia.src);assert.equal(decoded.src,expectedMedia.src);assert(decoded.complete&&decoded.width>0&&decoded.height>0);(navigationProof.mediaBeforeReload??=[]).push({id:entry.id,...decoded});
+  // Auch die kleinen Bilder unter „Dazu passt“ laden fertig: Das Neuladen brach sonst in der CI (Lauf 253, Chromium)
+  // das Krakenbild auf der Hummer-Karte ab (net::ERR_ABORTED). Echte Fehlanfragen bleiben in der Überwachung sichtbar.
+  stage='other requests before reload';await anfragenFertig();
   stage='reload';await p.reload();await ready(p);
   if(EXPANSION_IDS.has(entry.id)){
    const quiz=p.locator('.world-mini-question');await quiz.locator('.rate-mal-frage').getByText(t.question.prompt,{exact:true}).waitFor();
@@ -231,7 +237,9 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
    assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
    await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
   }
-  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
+  // Zuerst die eigens für die Tierkarten geschriebene Verbindung. Der Eisvogel hat seit Aufgabe 10 (Eisvogel–Schatten gestrichen)
+  // nur noch seine erklärte Verbindung aus Aufgabe 9 (zum Nahrungsnetz); auch sie muss hin und mit Fokus zurück führen.
+  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id)??worldConnections.connections.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await mehrErfahren(p);await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await karteDa(p,entry.id);await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }

@@ -66,14 +66,19 @@ export function verbindungsSatz(knopf) {
     : element.closest('.connection-card').querySelector('p').textContent);
 }
 
-// Die Lesetexte einer Karte an ihren Orten: „Ganz einfach“ in „Kurz erklärt“, „Selbst beobachten“ und
-// Mehr-Wissen in „Mehr erfahren“, Lernziel und Quellen unter „Für Erwachsene“.
+// Die Lesetexte einer Karte an ihren Orten: „Ganz einfach“ in „Kurz erklärt“ (bei Karten mit Häppchen oben in
+// „Ausprobieren“), „Selbst beobachten“ und Mehr-Wissen in „Mehr erfahren“, Lernziel und Quellen unter „Für Erwachsene“.
 // Hat eine Karte Lernhilfen (t.learning), müssen alle drei da sein.
 export async function lesetexte(karte, t) {
   const kurz = karte.locator('.world-short');
   for (const details of await kurz.locator('details').all()) await aufklappen(details);
   if (t.learning) assert.ok(t.learning.starter && t.learning.observe && t.learning.benefit, t.id + ': Lernhilfen vollständig');
-  if (t.learning) await kurz.getByText(t.learning.starter, {exact: true}).waitFor();
+  if (t.learning) {
+    // Mit Häppchen sind diese die einfache Fassung; „Ganz einfach“ steht dann oben in „Ausprobieren“ (große Prüfung, Aufgabe 13).
+    const ort = t.chapters ? await ausprobieren(karte) : kurz;
+    await ort.getByText(t.learning.starter, {exact: true}).waitFor();
+    if (t.chapters) assert.equal(await kurz.getByText(t.learning.starter, {exact: true}).count(), 0, t.id + ': „Ganz einfach“ steht nicht in „Kurz erklärt“');
+  }
   const mehr = await mehrErfahren(karte);
   if (t.learning) await mehr.getByText(t.learning.observe, {exact: true}).waitFor();
   for (const absatz of t.more) await mehr.getByText(absatz, {exact: true}).waitFor();

@@ -6,496 +6,496 @@
       "fromId": "science-water-cycle",
       "toId": "science-photosynthesis",
       "kind": "needs",
-      "why": "Pflanzen brauchen Wasser für die Fotosynthese und geben Wasser über Blätter an die Luft ab.",
-      "checkedAt": "2026-10-09"
+      "why": "Pflanzen brauchen Wasser, um mit Licht Zucker zu bauen. Über ihre Blätter geben sie Wasser auch wieder an die Luft ab.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-photosynthesis--science-foodweb",
       "fromId": "science-photosynthesis",
       "toId": "science-foodweb",
       "kind": "energy",
-      "why": "Pflanzen und Algen speichern Lichtenergie in Stoffen, die in vielen Nahrungsnetzen weitergegeben werden.",
-      "checkedAt": "2026-10-09"
+      "why": "Pflanzen und Algen speichern Sonnenenergie in energiereichen Stoffen. Tiere, die sie fressen, bekommen etwas von dieser Energie ab.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-photosynthesis--science-fungi",
       "fromId": "science-photosynthesis",
       "toId": "science-fungi",
       "kind": "partnership",
-      "why": "Bei Mykorrhiza versorgt die Pflanze ihren Pilzpartner mit energiereichen Stoffen.",
-      "checkedAt": "2026-10-09"
+      "why": "Viele Pflanzen arbeiten mit Pilzen zusammen. Die Pflanze gibt ihrem Pilzpartner Zucker ab, den sie mit Sonnenlicht hergestellt hat.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-pollination--animal-honey-bee",
       "fromId": "science-pollination",
       "toId": "animal-honey-bee",
       "kind": "transport",
-      "why": "Honigbienen können beim Blütenbesuch Pollen zu einer passenden Narbe transportieren.",
-      "checkedAt": "2026-10-09"
+      "why": "Honigbienen besuchen Blüten, um Nahrung zu sammeln. Dabei können Pollen an ihrem Körper hängen bleiben und so zur nächsten Blüte reisen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-pollination--science-photosynthesis",
       "fromId": "science-pollination",
       "toId": "science-photosynthesis",
       "kind": "needs",
-      "why": "Blütenbildung und Fortpflanzung benötigen Stoffe und Energie, die grüne Pflanzen durch Fotosynthese gewinnen.",
-      "checkedAt": "2026-10-09"
+      "why": "Für Blüten und Samen braucht eine Pflanze viel Zucker als Baustoff und Energiequelle. Den stellt sie mit Sonnenlicht in ihren grünen Blättern her.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-fungi--science-foodweb",
       "fromId": "science-fungi",
       "toId": "science-foodweb",
       "kind": "recycling",
-      "why": "Zersetzende Pilze machen Stoffe aus abgestorbenem Material wieder zugänglich.",
-      "checkedAt": "2026-10-09"
+      "why": "Manche Pilze zerlegen Reste von abgestorbenen Lebewesen. Dabei werden Stoffe frei, die andere Lebewesen wieder nutzen können.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-coral-reef--science-photosynthesis",
       "fromId": "science-coral-reef",
       "toId": "science-photosynthesis",
       "kind": "partnership",
-      "why": "Die Algenpartner vieler riffbildender Korallen betreiben Fotosynthese und liefern energiereiche Stoffe.",
-      "checkedAt": "2026-10-09"
+      "why": "Viele Riffkorallen tragen winzige Algen in ihrem Körper. Die Algen nutzen Sonnenlicht und geben der Koralle energiereiche Nahrung ab.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-coral-reef--animal-common-octopus",
       "fromId": "science-coral-reef",
       "toId": "animal-common-octopus",
       "kind": "habitat",
-      "why": "Oktopusse können in strukturreichen Meereslebensräumen wie felsigen Küsten und Riffen Unterschlupf finden; nicht jede Art lebt in Korallenriffen.",
-      "checkedAt": "2026-10-09"
+      "why": "Viele Kraken verstecken sich in Felsspalten und Höhlen an der Küste. Auch in Riffen finden manche Kraken Unterschlupf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-coral-reef--science-currents",
       "fromId": "science-coral-reef",
       "toId": "science-currents",
       "kind": "transport",
-      "why": "Strömungen transportieren Stoffe und beeinflussen die Bedingungen in Meereslebensräumen.",
-      "checkedAt": "2026-10-09"
+      "why": "Meeresströmungen tragen Stoffe weit durchs Meer. So verändern sie auch die Bedingungen in Lebensräumen wie Riffen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-moon-phases--history-apollo11",
       "fromId": "science-moon-phases",
       "toId": "history-apollo11",
       "kind": "exploration",
-      "why": "Die Apollo-11-Mission erforschte den Mond aus der Nähe; Mondphasen lassen sich von der Erde beobachten.",
-      "checkedAt": "2026-10-09"
+      "why": "Apollo 11 landete 1969, als am Landeplatz auf dem Mond gerade Morgen war: Die tiefe Sonne warf lange Schatten, die Steine und Krater gut sichtbar machten. Darum hing der Landetag davon ab, welcher Teil des Mondes gerade beleuchtet war.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-moon-phases--science-tides",
       "fromId": "science-moon-phases",
       "toId": "science-tides",
       "kind": "cause",
-      "why": "Der Mond reflektiert Sonnenlicht und beeinflusst zugleich durch seine Anziehung die Gezeiten: zwei verschiedene Wirkungen.",
-      "checkedAt": "2026-10-09"
+      "why": "Der Mond wirft Sonnenlicht zurück, so sehen wir seine Phasen. Bei Neumond und Vollmond stehen Sonne, Mond und Erde fast in einer Linie, dann fallen Ebbe und Flut besonders stark aus.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-moon-phases--science-solar-system",
       "fromId": "science-moon-phases",
       "toId": "science-solar-system",
       "kind": "context",
-      "why": "Der Mond ist ein natürlicher Begleiter der Erde im Sonnensystem.",
-      "checkedAt": "2026-10-09"
+      "why": "Der Mond kreist um die Erde, und die Erde kreist mit ihm um die Sonne. Beide gehören zum Sonnensystem.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-seasons--science-solar-system",
       "fromId": "science-seasons",
       "toId": "science-solar-system",
       "kind": "cause",
-      "why": "Die geneigte Erdachse und der Umlauf um die Sonne erklären die Jahreszeiten.",
-      "checkedAt": "2026-10-09"
+      "why": "Die Erdachse steht schräg, während die Erde um die Sonne kreist. Deshalb ist mal der Norden, mal der Süden stärker zur Sonne geneigt, und es gibt Jahreszeiten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-seasons--science-energy",
       "fromId": "science-seasons",
       "toId": "science-energy",
       "kind": "energy",
-      "why": "Tageslänge und Sonnenstand beeinflussen, wie viel Sonnenenergie an einem Ort zur Verfügung steht.",
-      "checkedAt": "2026-10-09"
+      "why": "Im Sommer steht die Sonne höher und scheint länger. Dann kommt mehr Sonnenenergie an, zum Beispiel für eine Solarzelle.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-tides--science-currents",
       "fromId": "science-tides",
       "toId": "science-currents",
       "kind": "cause",
-      "why": "Gezeiten können Strömungen antreiben; Wind und Dichteunterschiede sind weitere Ursachen für Meerwasserbewegung.",
-      "checkedAt": "2026-10-09"
+      "why": "Ebbe und Flut können Wasser in Bewegung bringen und Strömungen antreiben. Auch der Wind und sinkendes kaltes oder salziges Wasser bewegen das Meer.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-water-cycle--science-atmosphere",
       "fromId": "science-water-cycle",
       "toId": "science-atmosphere",
       "kind": "transport",
-      "why": "Wasser wechselt zwischen Erdoberfläche und Atmosphäre; dort entstehen Wolken und Niederschlag.",
-      "checkedAt": "2026-10-09"
+      "why": "Wasser verdunstet und steigt als unsichtbarer Dampf in die Lufthülle. Dort bilden sich Wolken, und es regnet oder schneit wieder.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-lion-bengal-tiger",
       "fromId": "animal-lion",
       "toId": "animal-bengal-tiger",
       "kind": "context",
-      "why": "Beide sind große Katzen. Löwen leben häufig im Rudel, erwachsene Tiger meist allein. Verwandtschaft bedeutet nicht dieselbe Lebensweise.",
-      "checkedAt": "2026-10-17"
+      "why": "Löwe und Tiger sind beide große Katzen. Löwen leben oft im Rudel, erwachsene Tiger meist allein.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-african-savanna-elephant-giant-panda",
       "fromId": "animal-african-savanna-elephant",
       "toId": "animal-giant-panda",
       "kind": "context",
-      "why": "Rüssel und besonderer Handgelenkknochen sind verschiedene Hilfen beim Greifen von Nahrung. Vergleiche Körperteil und Aufgabe, ohne beide gleichzusetzen.",
-      "checkedAt": "2026-10-17"
+      "why": "Der Elefant greift Nahrung mit seinem Rüssel. Der Panda nutzt dafür einen besonderen Knochen an seinem Handgelenk.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-giraffe-red-kangaroo",
       "fromId": "animal-giraffe",
       "toId": "animal-red-kangaroo",
       "kind": "context",
-      "why": "Bei der Giraffe wird die Höhe beschrieben, beim Riesenkänguru das Gewicht erwachsener Männchen. Erst Messgröße und Bezugsgruppe machen einen Vergleich sinnvoll.",
-      "checkedAt": "2026-10-17"
+      "why": "Bei der Giraffe wird gemessen, wie hoch sie ist, beim Riesenkänguru, wie schwer die erwachsenen Männchen sind. Eine Höhe und ein Gewicht kann man nicht direkt vergleichen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-giant-panda-koala",
       "fromId": "animal-giant-panda",
       "toId": "animal-koala",
       "kind": "context",
-      "why": "Panda und Koala brauchen unterschiedliche Pflanzennahrung: überwiegend Bambus beziehungsweise Blätter bestimmter Eukalyptusarten. Viele beliebige Pflanzen reichen nicht als Speiseplan.",
-      "checkedAt": "2026-10-17"
+      "why": "Pandas fressen vor allem Bambus, Koalas die Blätter bestimmter Eukalyptusbäume. Beliebige andere Pflanzen reichen ihnen nicht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-western-lowland-gorilla-bornean-orangutan",
       "fromId": "animal-western-lowland-gorilla",
       "toId": "animal-bornean-orangutan",
       "kind": "context",
-      "why": "Beide brauchen Waldlebensräume. Vergleiche den Knöchelgang des Gorillas mit den langen Greifarmen des Orang-Utans statt aus „Wald“ dieselbe Fortbewegung abzuleiten.",
-      "checkedAt": "2026-10-17"
+      "why": "Gorilla und Orang-Utan leben beide in Regenwäldern, bewegen sich aber verschieden. Der Gorilla stützt sich beim Gehen auf die Fingerknöchel, der Orang-Utan klettert mit langen Armen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-polar-bear-emperor-penguin",
       "fromId": "animal-polar-bear",
       "toId": "animal-emperor-penguin",
       "kind": "context",
-      "why": "Beide leben in kalten Gebieten, aber nicht als natürliche Nachbarn: Eisbären in der Arktis, Kaiserpinguine in der Antarktis. Prüfe die beiden Pole auf der Weltkugel.",
-      "checkedAt": "2026-10-17"
+      "why": "Eisbären leben in der Arktis rund um den Nordpol, Kaiserpinguine auf dem Meereis an den Küsten der Antarktis. Auf dem Globus siehst du: Sie wohnen an entgegengesetzten Enden der Erde.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-blue-whale-whale-shark",
       "fromId": "animal-blue-whale",
       "toId": "animal-whale-shark",
       "kind": "context",
-      "why": "Beide sammeln kleine Nahrung aus dem Wasser. Der Blauwal ist ein luftatmendes Säugetier, der Walhai ein Fisch mit Kiemen: Nahrung und Namen reichen zur Einordnung nicht aus.",
-      "checkedAt": "2026-10-17"
+      "why": "Blauwal und Walhai fischen winzige Nahrung aus dem Wasser. Trotzdem ist der Blauwal ein Säugetier, das Luft atmet, und der Walhai ein Fisch mit Kiemen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-common-bottlenose-dolphin-whale-shark",
       "fromId": "animal-common-bottlenose-dolphin",
       "toId": "animal-whale-shark",
       "kind": "context",
-      "why": "Der Delfin muss Luft an der Oberfläche holen, der Walhai nutzt Kiemen. Ein gemeinsamer Lebensraum bedeutet nicht dieselbe Atmung.",
-      "checkedAt": "2026-10-17"
+      "why": "Delfin und Walhai leben beide im Meer, atmen aber verschieden. Der Delfin holt Luft an der Oberfläche, der Walhai nimmt mit Kiemen Sauerstoff aus dem Wasser.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-orca-common-bottlenose-dolphin",
       "fromId": "animal-orca",
       "toId": "animal-common-bottlenose-dolphin",
       "kind": "context",
-      "why": "Der Orca gehört zur Delfinfamilie. Vergleiche Familienleben und wechselnde Gruppen, ohne den Speiseplan einer Orcapopulation auf alle Delfine zu übertragen.",
-      "checkedAt": "2026-10-17"
+      "why": "Der Orca gehört zur Familie der Delfine, genau wie der Große Tümmler. Beide leben in Gruppen: Orcas oft in Familien, Tümmler in Gruppen, die sich immer wieder neu finden.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-common-octopus-garden-cross-spider",
       "fromId": "animal-common-octopus",
       "toId": "animal-garden-cross-spider",
       "kind": "context",
-      "why": "Acht Arme und acht Beine sind unterschiedliche Merkmale. Eine gleiche Anzahl macht Krake und Spinne nicht zu derselben Tiergruppe.",
-      "checkedAt": "2026-10-17"
+      "why": "Der Krake hat acht Arme, die Spinne acht Beine. Trotz gleicher Zahl gehören sie zu ganz verschiedenen Tiergruppen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-green-sea-turtle-common-bottlenose-dolphin",
       "fromId": "animal-green-sea-turtle",
       "toId": "animal-common-bottlenose-dolphin",
       "kind": "context",
-      "why": "Meeresschildkröte und Delfin müssen trotz ihres Wasserlebens Luft holen. Vergleiche Atmung und Fortbewegung als getrennte Eigenschaften.",
-      "checkedAt": "2026-10-17"
+      "why": "Meeresschildkröte und Delfin leben im Wasser und müssen trotzdem zum Atmen an die Oberfläche kommen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-jaguar-bengal-tiger",
       "fromId": "animal-jaguar",
       "toId": "animal-bengal-tiger",
       "kind": "context",
-      "why": "Jaguar und Bengaltiger können gut schwimmen. Eine schwimmende Katze wird dadurch nicht zum Fisch und verliert ihre übrigen Fähigkeiten nicht.",
-      "checkedAt": "2026-10-17"
+      "why": "Jaguar und Bengaltiger sind große Katzen und können gut schwimmen. Beide leben als Erwachsene meist allein.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-honey-bee-garden-cross-spider",
       "fromId": "animal-honey-bee",
       "toId": "animal-garden-cross-spider",
       "kind": "context",
-      "why": "Die Biene hat sechs Beine, die Spinne acht. Prüfe Körpermerkmale und verwechsle einen Blütenbesuch nicht mit einem Beleg für dieselbe Tiergruppe.",
-      "checkedAt": "2026-10-17"
+      "why": "Die Biene hat sechs Beine, die Spinne acht. Daran erkennst du: Die Biene ist ein Insekt, die Spinne nicht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-axolotl-whale-shark",
       "fromId": "animal-axolotl",
       "toId": "animal-whale-shark",
       "kind": "context",
-      "why": "Beide nehmen mit Kiemen Sauerstoff aus dem Wasser auf. Trotzdem ist der Axolotl ein Amphibium und der Walhai ein Fisch: Ein einzelnes gemeinsames Merkmal genügt nicht für jede Einordnung.",
-      "checkedAt": "2026-10-17"
+      "why": "Axolotl und Walhai nehmen mit Kiemen Sauerstoff aus dem Wasser auf. Trotzdem ist der Axolotl ein Amphibium, also ein Lurch, und der Walhai ein Fisch.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-dromedary-science-energy",
       "fromId": "animal-dromedary",
       "toId": "science-energy",
       "kind": "context",
-      "why": "Das Fett im Höcker ist ein Energievorrat, kein Trinkwassertank. Die Energiekarte hilft, einen Vorrat von seinen unterschiedlichen Nutzungen zu unterscheiden.",
-      "checkedAt": "2026-10-17"
+      "why": "Im Höcker des Dromedars steckt Fett als Energievorrat, kein Wasser. Ein Akku ist auch ein Vorrat: Er speichert Energie für später.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-white-tailed-eagle-emperor-penguin",
       "fromId": "animal-white-tailed-eagle",
       "toId": "animal-emperor-penguin",
       "kind": "context",
-      "why": "Beides sind Vögel mit Flügeln. Der Seeadler kann gleiten, der Kaiserpinguin nutzt seine Flügel beim Schwimmen. Derselbe Körperteil kann unterschiedlich eingesetzt werden.",
-      "checkedAt": "2026-10-17"
+      "why": "Seeadler und Kaiserpinguin sind beide Vögel mit Flügeln. Der Seeadler gleitet damit durch die Luft, der Kaiserpinguin schwimmt und taucht damit im Meer.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-inquiry-cheetah-lion",
       "fromId": "animal-cheetah",
       "toId": "animal-lion",
       "kind": "context",
-      "why": "Vergleiche den kurzen Sprint eines Gepards mit dem Anschleichen und Zusammenwirken von Löwen. Schnellster Sprint und eine erfolgreiche gemeinsame Jagd sind verschiedene Vergleiche.",
-      "checkedAt": "2026-10-17"
+      "why": "Der Gepard jagt mit einem kurzen, sehr schnellen Sprint. Löwinnen jagen oft gemeinsam und überraschen ihre Beute von mehreren Seiten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-platypus-red-kangaroo",
       "fromId": "animal-platypus",
       "toId": "animal-red-kangaroo",
-      "why": "Säugetiere können ihre Jungen auf unterschiedliche Weise zur Welt bringen.",
+      "why": "Schnabeltier und Riesenkänguru sind Säugetiere aus Australien. Das Schnabeltier legt aber Eier, und die Mutter füttert die Jungen danach mit Milch.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-short-beaked-echidna-platypus",
       "fromId": "animal-short-beaked-echidna",
       "toId": "animal-platypus",
-      "why": "Zwei eierlegende Säugetiere zeigen eine gemeinsame Fortpflanzungsbesonderheit und unterschiedliche Nahrungssuche.",
+      "why": "Kurzschnabeligel und Schnabeltier sind beide Säugetiere, die Eier legen. Ihr Futter finden sie aber verschieden: Der Kurzschnabeligel schleckt Ameisen und Termiten, das Schnabeltier sucht Beute unter Wasser.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-okapi-giraffe",
       "fromId": "animal-okapi",
       "toId": "animal-giraffe",
-      "why": "Wald- und Savannenverwandte lassen sich nach Lebensraum und Nahrungserwerb vergleichen.",
+      "why": "Okapi und Giraffe sind verwandt und greifen Blätter mit ihrer langen Zunge. Das Okapi lebt im Wald, die Giraffe in Savannen und offenen Wäldern.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-meerkat-honey-bee",
       "fromId": "animal-meerkat",
       "toId": "animal-honey-bee",
-      "why": "Gruppenleben kann unterschiedliche Formen der Zusammenarbeit hervorbringen; Insektenstaat und Säugetiergruppe unterscheiden.",
+      "why": "Erdmännchen und Honigbienen leben in Gruppen und teilen sich Aufgaben. Bei Erdmännchen halten einige Wache, im Bienenvolk gibt es Königin, Arbeiterinnen und Drohnen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-ring-tailed-lemur-western-lowland-gorilla",
       "fromId": "animal-ring-tailed-lemur",
       "toId": "animal-western-lowland-gorilla",
-      "why": "Zwei Primaten zeigen unterschiedliche Kommunikationsmittel; keine menschlichen Sätze unterstellen.",
+      "why": "Katta und Gorilla gehören wie wir Menschen zu den Primaten. Der Gorilla ist ein Menschenaffe und eng mit uns verwandt, der Katta ist ein Lemur aus Madagaskar und nur entfernt verwandt.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-north-american-beaver-water-cycle",
       "fromId": "animal-north-american-beaver",
       "toId": "science-water-cycle",
-      "why": "Biberbau und Wasserwege verbinden ein Tierverhalten mit einer Landschaftsveränderung.",
+      "why": "Ein Biberdamm bremst das Wasser im Bach, dahinter kann ein Teich entstehen. So verändert ein Tier, welchen Weg das Wasser nimmt.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-walrus-polar-bear",
       "fromId": "animal-walrus",
       "toId": "animal-polar-bear",
-      "why": "Arktische Lebensräume und unterschiedliche Schutzbewertungen anhand derselben Region vergleichen.",
+      "why": "Walross und Eisbär leben beide in der Arktis. Walrosse ruhen auf Meereis und an Küsten, und dort sind auch Eisbären unterwegs.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-red-fox-hedgehog",
       "fromId": "animal-red-fox",
       "toId": "animal-hedgehog",
-      "why": "Lebensraumstrukturen in Siedlungen aus Sicht verschiedener Wildtiere vergleichen.",
+      "why": "Rotfuchs und Igel können auch nahe bei Menschen leben. Ein Garten mit Hecken und Laub bietet dem Igel gute Verstecke.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-raccoon-red-fox",
       "fromId": "animal-raccoon",
       "toId": "animal-red-fox",
-      "why": "Zwei anpassungsfähige Säugetiere nach Nahrungssuche und Lebensräumen in Siedlungen vergleichen; die empfindlichen Vorderpfoten beschreibt hier die Waschbärkarte.",
+      "why": "Waschbär und Rotfuchs kommen in Wäldern und auch in Städten und Dörfern zurecht. Der Waschbär ertastet Dinge mit seinen empfindlichen Vorderpfoten.",
       "kind": "context",
-      "checkedAt": "2026-10-18"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-barn-owl-white-tailed-eagle",
       "fromId": "animal-barn-owl",
       "toId": "animal-white-tailed-eagle",
-      "why": "Eine Eule und einen Adler als jagende Vögel aus unterschiedlichen Vogelgruppen vergleichen; Flügellänge und Spannweite unterscheiden.",
+      "why": "Schleiereule und Seeadler jagen beide, gehören aber zu verschiedenen Vogelgruppen. Die Eule jagt vor allem Mäuse, der Seeadler sucht Nahrung an Seen, Flüssen und Küsten.",
       "kind": "context",
-      "checkedAt": "2026-10-18"
+      "checkedAt": "2026-11-22"
     },
     {
-      "id": "animal-expansion-kingfisher-shadows",
+      "id": "animal-kingfisher--science-foodweb",
       "fromId": "animal-kingfisher",
-      "toId": "science-shadows",
-      "why": "Licht und Wahrnehmung verbinden Vogelmerkmale mit der Wirkung von Licht.",
-      "kind": "context",
-      "checkedAt": "2026-10-17"
+      "toId": "science-foodweb",
+      "kind": "energy",
+      "why": "Der Eisvogel frisst vor allem kleine Fische und bekommt so seine Energie. Im Nahrungsnetz zeigt der Pfeil, wohin die Energie wandert: vom Fisch zum Eisvogel.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-ostrich-emperor-penguin",
       "fromId": "animal-ostrich",
       "toId": "animal-emperor-penguin",
-      "why": "Zwei flugunfähige Vögel nutzen Körperteile in sehr unterschiedlichen Lebensräumen.",
+      "why": "Strauß und Kaiserpinguin können nicht fliegen, nutzen ihre Flügel aber trotzdem. Der Strauß hält damit beim Laufen das Gleichgewicht, der Pinguin taucht damit im Meer.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-atlantic-puffin-emperor-penguin",
       "fromId": "animal-atlantic-puffin",
       "toId": "animal-emperor-penguin",
-      "why": "Brutgebiet und Nahrungsraum zweier Meeresvögel sachlich vergleichen.",
+      "why": "Papageitaucher und Kaiserpinguin sind Meeresvögel, die unter Wasser nach Nahrung schwimmen. Der Papageitaucher brütet im Nordatlantik oft in Erdhöhlen, der Kaiserpinguin oft auf dem Meereis der Antarktis.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-common-chameleon-common-cuttlefish",
       "fromId": "animal-common-chameleon",
       "toId": "animal-common-cuttlefish",
-      "why": "Beide Tiere können ihre Färbung ändern. Vergleiche die Funktionen und Grenzen, ohne eine beliebige Musterkopie anzunehmen.",
+      "why": "Chamäleon und Sepia können ihre Farbe verändern und damit anderen ihrer Art etwas zeigen. Das Chamäleon reagiert dabei auch auf Wärme, die Sepia kann sich außerdem blitzschnell tarnen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-fire-salamander-axolotl",
       "fromId": "animal-fire-salamander",
       "toId": "animal-axolotl",
-      "why": "Äußere Kiemen und unterschiedliche Entwicklungsverläufe zweier Amphibien vergleichen.",
+      "why": "Junge Feuersalamander haben Kiemen außen am Körper, so wie der Axolotl. Der Axolotl behält diese Kiemen auch, wenn er erwachsen ist.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-common-frog-fire-salamander",
       "fromId": "animal-common-frog",
       "toId": "animal-fire-salamander",
-      "why": "Zwei Amphibien verbinden Wasser- und Landlebensräume auf unterschiedliche Weise.",
+      "why": "Grasfrosch und Feuersalamander brauchen Wasser und Land. Ihre Jungen wachsen im Wasser auf, die Erwachsenen leben viel an Land.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-eastern-clown-anemonefish-coral-reef",
       "fromId": "animal-eastern-clown-anemonefish",
       "toId": "science-coral-reef",
-      "why": "Rifflebensraum und Beziehungen zwischen unterschiedlichen Lebewesen untersuchen.",
+      "why": "Im Riff leben viele verschiedene Tiere eng zusammen. Der Clownfisch wohnt zwischen den Fangarmen bestimmter Seeanemonen, und auch die sind Tiere.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-european-eel-currents",
       "fromId": "animal-european-eel",
       "toId": "science-currents",
-      "why": "Ozeanströmungen und durchgängige Wanderwege verbinden mehrere Lebensabschnitte.",
+      "why": "Junge Aale treiben mit Meeresströmungen an die Küsten Europas. Später wandern sie in Flüsse, und Hindernisse dort können ihnen den Weg versperren.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-monarch-butterfly-honey-bee",
       "fromId": "animal-monarch-butterfly",
       "toId": "animal-honey-bee",
-      "why": "Zwei Insekten zeigen unterschiedliche Lebenszyklen und Beziehungen zu Pflanzen.",
+      "why": "Monarchfalter und Honigbiene sind Insekten, die eng mit Pflanzen verbunden sind. Monarch-Raupen fressen Seidenpflanzen, Bienen bestäuben beim Blütenbesuch.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-garden-snail-hedgehog",
       "fromId": "animal-garden-snail",
       "toId": "animal-hedgehog",
-      "why": "Feuchtigkeit, Verstecke und unterschiedliche Gartenbeobachtungen vergleichen; keine sichere konkrete Beutebeziehung behaupten.",
+      "why": "Weinbergschnecke und Igel sind oft nachts im Garten unterwegs. Die Schnecke zeigt sich besonders bei feuchtem Wetter, der Igel versteckt sich gern in Hecken und Laub.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-european-lobster-common-octopus",
       "fromId": "animal-european-lobster",
       "toId": "animal-common-octopus",
-      "why": "Zwei wirbellose Meerestiere mit sehr unterschiedlicher Körperstütze vergleichen.",
+      "why": "Hummer und Krake sind Meerestiere ohne Wirbelsäule. Der Hummer steckt in einer harten Hülle, die er zum Wachsen abstreift, der Krake hat keine solche Hülle.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-common-cuttlefish-common-octopus",
       "fromId": "animal-common-cuttlefish",
       "toId": "animal-common-octopus",
-      "why": "Verwandte Kopffüßer nach tatsächlichen Körpermerkmalen statt Sammelnamen vergleichen.",
+      "why": "Sepia und Krake sind verwandt und werden beide oft „Tintenfisch“ genannt. Die Sepia hat aber zwei zusätzliche lange Fangarme und seitliche Flossen.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "animal-expansion-short-snouted-seahorse-foodweb",
       "fromId": "animal-short-snouted-seahorse",
       "toId": "science-foodweb",
-      "why": "Kleine Beutetiere, Verstecke und Räuber als Teil eines Nahrungsnetzes erklären.",
+      "why": "Das Seepferdchen frisst kleine Beutetiere und kann selbst Beute für Räuber werden. So hängt es mitten im Nahrungsnetz.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "history-evidence-20261017-0",
       "fromId": "history-khipu",
       "toId": "history-writing",
-      "why": "Beide Themen erklären, wie Menschen Informationen aufbewahren. Material und Zeichenregeln unterscheiden sich.",
+      "why": "Wie hebt man Wissen auf, damit es nicht verloren geht? Die Inka knoteten Schnüre, und in Mesopotamien drückten Menschen Zeichen in Ton.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "history-evidence-20261017-1",
       "fromId": "history-khipu",
       "toId": "history-web",
-      "why": "Eine Nachricht braucht Regeln und einen Zusammenhang. Geknotete Schnüre und vernetzte Computer sind unterschiedliche Verfahren.",
+      "why": "Khipus hielten mit Knoten Mengen fest, und Webseiten speichern Texte und Bilder als Computercode. Beides braucht feste Regeln, damit andere es richtig lesen können.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "history-evidence-20261017-2",
       "fromId": "history-mohenjo-daro",
       "toId": "history-rome",
-      "why": "Alte Wasseranlagen zeigen verschiedene Lösungen für das Leben in Städten. Der Vergleich behauptet keine direkte Übernahme.",
+      "why": "In Mohenjo-Daro gab es Brunnen, Bäder und Abläufe für Wasser. Auch die Römer hatten eigene Wege und leiteten Wasser über Aquädukte, lange Wasserleitungen mit leichtem Gefälle, in ihre Städte.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "history-evidence-20261017-3",
       "fromId": "history-mohenjo-daro",
       "toId": "history-writing",
-      "why": "Baureste und Schrift sind unterschiedliche historische Quellen. Beide müssen im Zusammenhang gedeutet werden.",
+      "why": "Woher wissen wir, wie Menschen früher lebten? Manchmal verraten es alte Straßen und Mauern, manchmal Zeichen auf Tontafeln.",
       "kind": "context",
-      "checkedAt": "2026-10-17"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-camera--invention-smartphone",
       "fromId": "invention-camera",
       "toId": "invention-smartphone",
       "kind": "exploration",
-      "why": "Das Smartphone verbindet Kamerasensor, Verarbeitung und Speicherung.",
-      "checkedAt": "2026-10-16"
+      "why": "In einem Smartphone steckt eine kleine Kamera. Ein lichtempfindliches Bauteil fängt das Bild ein, und das Telefon speichert es.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-camera--invention-telescope",
       "fromId": "invention-camera",
       "toId": "invention-telescope",
       "kind": "exploration",
-      "why": "Beide nutzen Optik; ein Fernrohr muss das betrachtete Bild nicht selbst speichern.",
-      "checkedAt": "2026-10-16"
+      "why": "Kamera und Fernrohr lenken beide Licht, damit ein Bild entsteht. Die Kamera kann das Bild speichern, ein Fernrohr muss das nicht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-telescope--invention-satellite",
@@ -503,1071 +503,1311 @@
       "toId": "invention-satellite",
       "kind": "exploration",
       "why": "Weltraumteleskope können als künstliche Satelliten die Erde umkreisen.",
-      "checkedAt": "2026-10-16"
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-telescope--science-solar-system",
       "fromId": "invention-telescope",
       "toId": "science-solar-system",
       "kind": "exploration",
-      "why": "Fernrohre helfen, Körper im Sonnensystem zu beobachten.",
-      "checkedAt": "2026-10-16"
+      "why": "Planeten sind sehr weit weg. Mit einem Fernrohr lassen sie sich genauer beobachten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-microscope--invention-telescope",
       "fromId": "invention-microscope",
       "toId": "invention-telescope",
       "kind": "exploration",
-      "why": "Beide nutzen Optik; Mikroskope untersuchen kleine nahe Strukturen statt ferne Himmelskörper.",
-      "checkedAt": "2026-10-16"
+      "why": "Mikroskop und Fernrohr lenken beide Licht. Das Mikroskop zeigt winzige Dinge ganz nah, das Fernrohr ferne Himmelskörper.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-mary_anning--person-charles_darwin",
       "fromId": "person-mary_anning",
       "toId": "person-charles_darwin",
       "kind": "context",
-      "why": "Anning beschrieb Fossilien früherer Tiere; Darwin verglich viele Belege zur Veränderung von Arten. Ein einzelnes Fossil erklärt nicht den ganzen Ablauf der Evolution.",
-      "checkedAt": "2026-10-21"
+      "why": "Mary Anning grub Fossilien aus, also Reste von Tieren aus uralter Zeit. Darwin verglich Fossilien, Lebewesen und viele Beobachtungen, um zu verstehen, wie sich Lebewesen über lange Zeit verändern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_al_haytham--invention-camera",
       "fromId": "person-ibn_al_haytham",
       "toId": "invention-camera",
       "kind": "context",
-      "why": "Die Kamerakarte zeigt Licht durch eine Öffnung auf eine Bildfläche; die Biografie erklärt das Prüfen von Lichtideen. Das ist eine erklärte Verbindung, keine Zuschreibung der modernen Kamera an einen einzigen mittelalterlichen Erfinder.",
-      "checkedAt": "2026-10-21"
+      "why": "Eine Kamera fängt Licht ein, das durch eine kleine Öffnung fällt. Ibn al-Haytham prüfte schon vor etwa tausend Jahren mit Versuchen, wie Licht und Sehen funktionieren.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-battery--science-circuit",
       "fromId": "invention-battery",
       "toId": "science-circuit",
       "kind": "energy",
-      "why": "Die Batterie kann chemische Energie abgeben; die Lampe braucht außerdem einen geschlossenen äußeren Stromkreis.",
-      "checkedAt": "2026-10-23"
+      "why": "Eine Batterie liefert Energie aus Stoffen in ihrem Inneren. Die Lampe leuchtet aber nur, wenn der Stromkreis rundherum geschlossen ist.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-battery--science-energy",
       "fromId": "invention-battery",
       "toId": "science-energy",
       "kind": "energy",
-      "why": "Die chemische Speicherung in der Batterie ist ein Beispiel für Energieumwandlung; beim Entladen entsteht Energie nicht aus dem Nichts.",
-      "checkedAt": "2026-10-23"
+      "why": "In einer Batterie ist Energie in Stoffen gespeichert. Beim Entladen wird sie in elektrische Energie umgewandelt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-battery--invention-smartphone",
       "fromId": "invention-battery",
       "toId": "invention-smartphone",
       "kind": "needs",
-      "why": "Der Akku versorgt das Smartphone unterwegs. Speichern, Steuern und elektrische Energie liefern sind unterschiedliche Aufgaben.",
-      "checkedAt": "2026-10-23"
+      "why": "Ohne Steckdose braucht das Smartphone einen Akku. Er ist eine aufladbare Batterie und liefert unterwegs Energie.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-generator--science-motor",
       "fromId": "invention-generator",
       "toId": "science-motor",
       "kind": "energy",
-      "why": "Ein Motor nutzt elektrische Energie für Bewegung; beim Generator treibt Bewegung die Umwandlung in elektrische Energie an.",
-      "checkedAt": "2026-10-23"
+      "why": "Motor und Generator arbeiten umgekehrt. Der Motor macht aus Strom Bewegung, der Generator macht aus Bewegung Strom.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-generator--science-magnetism",
       "fromId": "invention-generator",
       "toId": "science-magnetism",
       "kind": "cause",
-      "why": "Das veränderte Magnetfeld durch die Spule erklärt den Ausschlag im Induktionsversuch; ein ruhender Magnet allein genügt hier nicht.",
-      "checkedAt": "2026-10-23"
+      "why": "Magnetfelder sind unsichtbar, aber sie wirken. Ändert sich ein Magnetfeld in einer Drahtspule, kann ein Generator Strom erzeugen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-generator--science-circuit",
       "fromId": "invention-generator",
       "toId": "science-circuit",
       "kind": "energy",
-      "why": "Eine induzierte Spannung und ein Strom durch die angeschlossene Last sind zu unterscheiden; der äußere Kreis muss passend geschlossen sein.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Generator kann Strom liefern. Fließen kann der Strom aber nur durch einen geschlossenen Stromkreis, zum Beispiel zu einer Lampe.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-transistor--invention-computer",
       "fromId": "invention-transistor",
       "toId": "invention-computer",
       "kind": "partnership",
-      "why": "Viele Transistoren arbeiten in einem Computer zusammen. Ein gesteuerter Schalter allein versteht noch keine Wörter oder Programme.",
-      "checkedAt": "2026-10-23"
+      "why": "In einem Computer arbeiten viele Transistoren zusammen. Jeder ist ein winziger Schalter für elektrische Signale.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-transistor--invention-smartphone",
       "fromId": "invention-transistor",
       "toId": "invention-smartphone",
       "kind": "partnership",
-      "why": "Smartphonechips nutzen viele Transistoren zur Signalverarbeitung; ihre Energie kommt aus der Versorgung, unterwegs meist aus einem Akku.",
-      "checkedAt": "2026-10-23"
+      "why": "Die Rechenbausteine eines Smartphones enthalten viele winzige Transistoren. Unterwegs bekommen sie ihre Energie meist aus dem Akku.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-transistor--science-circuit",
       "fromId": "invention-transistor",
       "toId": "science-circuit",
       "kind": "context",
-      "why": "Ein Transistor wirkt innerhalb einer passenden Schaltung. Das Lernmodell trennt Steuerung, Versorgung und den gesteuerten Stromweg.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Transistor kann in einem Stromkreis wie ein Schalter wirken. Ein kleines Signal steuert dann, ob auf einem anderen Weg Strom fließt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-refrigerator--science-motor",
       "fromId": "invention-refrigerator",
       "toId": "science-motor",
       "kind": "energy",
-      "why": "Bei der beschriebenen Kompressoranlage liefert ein Elektromotor den Antrieb. Der Motor setzt elektrische Energie in Bewegung um; der Kühlkreislauf transportiert damit Wärme.",
-      "checkedAt": "2026-10-23"
+      "why": "In vielen Kühlschränken treibt ein Elektromotor den Kompressor an. Der hält den Kreislauf in Gang, der Wärme von innen nach außen trägt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-bicycle--invention-car",
       "fromId": "invention-bicycle",
       "toId": "invention-car",
       "kind": "compare",
-      "why": "Beim Kettenfahrrad gelangt Bewegung von den Pedalen zum Hinterrad, beim Auto vom Motor zu den angetriebenen Rädern. Vergleiche den Übertragungsweg und die Energiequelle.",
-      "checkedAt": "2026-10-23"
+      "why": "Beim Fahrrad bringt die Kette die Kraft deiner Beine zum Hinterrad. Beim Auto treibt ein Motor die Räder an.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-elevator--science-motor",
       "fromId": "invention-elevator",
       "toId": "science-motor",
       "kind": "energy",
-      "why": "Bei vielen Seilaufzügen bewegt ein Elektromotor die Treibscheibe. Der Antrieb bewegt die Kabine im normalen Betrieb; die Fangvorrichtung hat eine eigene Sicherheitsaufgabe.",
-      "checkedAt": "2026-10-23"
+      "why": "In vielen Aufzügen dreht ein Elektromotor eine Scheibe, über die die Seile laufen. So fährt die Kabine nach oben und unten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-elevator--building-eiffel-tower",
       "fromId": "invention-elevator",
       "toId": "building-eiffel-tower",
       "kind": "uses",
-      "why": "Im Eiffelturm helfen Aufzüge beim Höhenwechsel. Seine unterschiedlichen historischen und heutigen Anlagen zeigen: Nicht jeder Aufzug entspricht dem einfachen Seilaufzugsplan.",
-      "checkedAt": "2026-10-23"
+      "why": "Im Eiffelturm bringen Aufzüge Besucherinnen und Besucher nach oben und wieder nach unten. Manche fahren schräg, weil die Pfeiler des Turms schräg stehen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-seismograph--science-sound",
       "fromId": "invention-seismograph",
       "toId": "science-sound",
       "kind": "compare",
-      "why": "Beide Beispiele untersuchen Schwingungen. Das Klangmodell erklärt Tonhöhe in Luft; das Seismogramm zeichnet Bodenbewegung auf. Eine Bodenbewegungskurve ist nicht dasselbe wie ein hörbarer Ton.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Ton und ein Erdbeben haben etwas gemeinsam: Etwas schwingt. Ein Seismograf zeichnet das Zittern des Bodens als Kurve auf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-3d-printing--invention-computer",
       "fromId": "invention-3d-printing",
       "toId": "invention-computer",
       "kind": "uses",
-      "why": "Ein Computer verarbeitet den digitalen Entwurf für den Aufbau. Die genaue Datei ersetzt weder ein geeignetes Druckverfahren noch eine Prüfung des fertigen Bauteils.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein 3D-Drucker braucht einen Entwurf aus dem Computer. Darin steht genau, wo Material aufgebaut wird, oft Schicht für Schicht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-3d-printing--invention-printing",
       "fromId": "invention-3d-printing",
       "toId": "invention-printing",
       "kind": "compare",
-      "why": "Der Buchdruck überträgt Farbe auf eine Fläche. Additives Herstellen baut dagegen Material zu einem räumlichen Gegenstand auf. Der gemeinsame Name Druck bedeutet nicht dieselbe Technik.",
-      "checkedAt": "2026-10-23"
+      "why": "Buchdruck und 3D-Druck heißen beide Druck, arbeiten aber verschieden. Der Buchdruck bringt Farbe auf Papier, der 3D-Druck baut einen Gegenstand aus Material auf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-sewing-machine--invention-computer",
       "fromId": "invention-sewing-machine",
       "toId": "invention-computer",
       "kind": "compare",
-      "why": "Eine historische Nähmaschine stimmt Bewegungen mechanisch aufeinander ab; ein Computer führt veränderbare Anweisungen aus. Wiederholung allein macht eine Maschine noch nicht zu einem Computer.",
-      "checkedAt": "2026-10-23"
+      "why": "Eine alte Nähmaschine wiederholt immer dieselben festen Bewegungen. Ein Computer folgt Anweisungen, die man ändern kann, und heute steuert ein kleiner Computer sogar manche Nähmaschinen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-sewing-machine--invention-printing",
       "fromId": "invention-sewing-machine",
       "toId": "invention-printing",
       "kind": "compare",
-      "why": "Beide Techniken stimmen wiederholte mechanische Schritte aufeinander ab. Beim Nähen verschlingen sich Fäden, beim Buchdruck wird Farbe auf eine Fläche übertragen.",
-      "checkedAt": "2026-10-23"
+      "why": "Nähmaschine und Buchdruck arbeiten mit Bewegungen, die sich immer wiederholen. Die Nähmaschine verschlingt Fäden zu einer Naht, die Druckpresse bringt Farbe aufs Papier.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-pont-du-gard--science-water-cycle",
       "fromId": "building-pont-du-gard",
       "toId": "science-water-cycle",
       "kind": "transport",
-      "why": "Die Wasserleitung führt vorhandenes Quellwasser zur Stadt. Der natürliche Wasserkreislauf beschreibt andere Wege, etwa Regen und Versickerung. Eine Brücke erzeugt kein zusätzliches Wasser.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Tropfen kann als Regen in den Boden sickern und später aus einer Quelle kommen. Solches Quellwasser leiteten die Römer über den Pont du Gard nach Nîmes.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-pont-du-gard--building-colosseum",
       "fromId": "building-pont-du-gard",
       "toId": "building-colosseum",
       "kind": "compare",
-      "why": "Beide Bauwerke nutzen tragende Bögen. Beim Aquädukt tragen sie eine Wasserrinne, im Amphitheater gehören Bögen zu Räumen und Verkehrswegen. Gleiche Grundideen erfüllen unterschiedliche Aufgaben.",
-      "checkedAt": "2026-10-23"
+      "why": "Die Römer bauten beide Bauwerke mit vielen Bögen. Beim Pont du Gard tragen sie eine Wasserrinne, im Kolosseum bilden sie Räume und Wege für die Besucher.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-great-zimbabwe--building-great-wall",
       "fromId": "building-great-zimbabwe",
       "toId": "building-great-wall",
       "kind": "compare",
-      "why": "Groß-Simbabwes Granitmauern wurden ohne Mörtel gesetzt. Die Chinesische Mauer umfasst dagegen unterschiedliche Bauweisen. Vergleiche einen belegten Mauerabschnitt, statt alle langen Mauern gleich zu erklären.",
-      "checkedAt": "2026-10-23"
+      "why": "Groß-Simbabwe und die Chinesische Mauer zeigen, wie verschieden Mauern sein können. In Groß-Simbabwe sitzen Granitsteine ohne Mörtel dazwischen, die Chinesische Mauer hat viele unterschiedlich gebaute Abschnitte.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-great-zimbabwe--history-timbuktu",
       "fromId": "building-great-zimbabwe",
       "toId": "history-timbuktu",
       "kind": "compare",
-      "why": "Steinmauern, Wohnreste und Handelsfunde erzählen von Groß-Simbabwe; Handschriften und Handelsgeschichte von Timbuktu. Verschiedene afrikanische Orte brauchen eigene Belege, keine einheitliche Bau- oder Kulturgeschichte.",
-      "checkedAt": "2026-10-23"
+      "why": "Zu Groß-Simbabwe und Timbuktu führten Handelswege von weit her. Von Groß-Simbabwe erzählen Steinmauern und Funde, von Timbuktu alte Handschriften.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-horyu-ji--building-eiffel-tower",
       "fromId": "building-horyu-ji",
       "toId": "building-eiffel-tower",
       "kind": "compare",
-      "why": "Im Holzbau führen Konsolen und Stützen Dachlasten weiter; beim Eiffelturm bilden Eisenbauteile ein Gitter. Verfolge bei beiden einen Lastweg zum Untergrund, ohne Material und Bauweise gleichzusetzen.",
-      "checkedAt": "2026-10-23"
+      "why": "Bei beiden Bauwerken wandert das Gewicht nach unten bis in den Boden. Im Hōryū-ji tragen Holzstützen die schweren Dächer, beim Eiffelturm ein Gitter aus Eisenteilen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-horyu-ji--building-djenne-mosque",
       "fromId": "building-horyu-ji",
       "toId": "building-djenne-mosque",
       "kind": "compare",
-      "why": "Historische Holzverbindungen und Lehmoberflächen benötigen unterschiedliche Pflege. Bei beiden Bauwerken gehört fachkundiges Erhalten zur langen Geschichte; hohes Alter allein beweist keine Unverwundbarkeit.",
-      "checkedAt": "2026-10-23"
+      "why": "Bauwerke aus Holz und Lehm brauchen Pflege, um lange zu halten. Das Holz im Hōryū-ji braucht dabei eine andere Pflege als die Lehmwände in Djenné.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-djenne-mosque--history-timbuktu",
       "fromId": "building-djenne-mosque",
       "toId": "history-timbuktu",
       "kind": "compare",
-      "why": "Djenné und Timbuktu sind verschiedene Städte in Mali mit eigener Geschichte. Vergleiche religiöse Nutzung, lokales Handwerk und Erhaltung, ohne die heutige Moschee von Djenné mit Timbuktus älteren Bauten gleichzusetzen.",
-      "checkedAt": "2026-10-23"
+      "why": "In Djenné und Timbuktu in Mali stehen berühmte Moscheen aus Lehm. Damit sie lange halten, pflegen und reparieren die Menschen sie immer wieder.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-lalibela--invention-3d-printing",
       "fromId": "building-lalibela",
       "toId": "invention-3d-printing",
       "kind": "compare",
-      "why": "In Lalibela entstehen Freiräume durch gezieltes Abtragen von Fels; additive Verfahren bauen Material auf. Beschreibe den Materialweg, statt jedes Herstellen als Aufeinanderstapeln zu verstehen.",
-      "checkedAt": "2026-10-23"
+      "why": "In Lalibela schlugen Menschen Kirchen aus dem Fels heraus, sie nahmen also Material weg. Ein 3D-Drucker macht es umgekehrt und baut Material auf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-lalibela--science-water-cycle",
       "fromId": "building-lalibela",
       "toId": "science-water-cycle",
       "kind": "uses",
-      "why": "Niederschlag gehört zum Wasserkreislauf. An Felskirchen muss anfallendes Wasser passend abgeleitet werden, damit es Bauteile nicht schädigt. Eine gezeichnete Entwässerung ist noch keine berechnete Wasserführung.",
-      "checkedAt": "2026-10-23"
+      "why": "Regen gehört zum Wasserkreislauf und fällt auch auf die Felsenkirchen von Lalibela. Gräben leiten das Wasser ab, damit es den Stein nicht beschädigt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-angkor-wat--science-water-cycle",
       "fromId": "building-angkor-wat",
       "toId": "science-water-cycle",
       "kind": "compare",
-      "why": "Angkors Becken, Kanäle und Gräben sind gebaute Wasseranlagen innerhalb einer Landschaft mit natürlichem Wasserhaushalt. Unterscheide den Tempelgraben vom gesamten Wasserweg und von der ganzen Region.",
-      "checkedAt": "2026-10-23"
+      "why": "Um Angkor Wat liegt ein breiter Wassergraben, in der Region gibt es weitere Becken und Kanäle. Gebaut haben sie Menschen, das Wasser darin kommt aus dem Wasserkreislauf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-angkor-wat--building-panama-canal",
       "fromId": "building-angkor-wat",
       "toId": "building-panama-canal",
       "kind": "compare",
-      "why": "Ein Tempelgraben und ein Schifffahrtskanal erfüllen verschiedene Aufgaben. Vergleiche Umrisse, Wasserwege und Nutzung; ein gleiches Wort wie Wasseranlage macht daraus noch nicht dasselbe System.",
-      "checkedAt": "2026-10-23"
+      "why": "Um Angkor Wat und beim Panamakanal haben Menschen Wasserwege gebaut. Der Graben umgibt einen Tempel, der Kanal ist eine Abkürzung für Schiffe.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-palenque--history-maya",
       "fromId": "building-palenque",
       "toId": "history-maya",
       "kind": "evidence",
-      "why": "Palenques Räume und Schriftzeugnisse liefern unterschiedliche Hinweise auf eine Stadt der Maya. Die Geschichte der Maya umfasst mehrere Orte und reicht über die erhaltenen Bauwerke der Vergangenheit hinaus.",
-      "checkedAt": "2026-10-23"
+      "why": "Palenque war eine Stadt der Maya im heutigen Mexiko. Bauten und Schriftzeichen erzählen von ihr, und Maya-Gemeinschaften gibt es bis heute.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-palenque--building-colosseum",
       "fromId": "building-palenque",
       "toId": "building-colosseum",
       "kind": "compare",
-      "why": "Ein Kraggewölbe rückt Steinlagen zur Mitte vor; ein Bogen ordnet Steine anders um die Öffnung an. Vergleiche die Bauprinzipien, ohne aus einer ähnlichen Öffnung dieselbe Konstruktion abzuleiten.",
-      "checkedAt": "2026-10-23"
+      "why": "Palenque und das Kolosseum überdachen Öffnungen mit Stein, aber verschieden. Beim Kraggewölbe rücken Steinlagen Stück für Stück zur Mitte, beim Bogen sitzen keilförmige Steine rund um die Öffnung.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-sydney-opera--science-sound",
       "fromId": "building-sydney-opera",
       "toId": "science-sound",
       "kind": "compare",
-      "why": "Das Klangmodell vergleicht Tonhöhe und Schwingungen. Die Akustik eines Aufführungsraums hängt von weiteren Eigenschaften ab; weder ein Kreisvergleich noch eine auffällige Dachform beweist eine bestimmte Hörqualität.",
-      "checkedAt": "2026-10-23"
+      "why": "Im Opernhaus von Sydney breiten sich Töne in den Sälen aus. Wie gut man sie hört, hängt stark von der Form der Säle innen ab.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-pressure--science-atmosphere",
       "fromId": "science-pressure",
       "toId": "science-atmosphere",
       "kind": "context",
-      "why": "Druck ist Kraft pro Fläche. Der Vergleich erklärt, weshalb eine Lufthülle Druck ausüben kann, ohne eine feste Decke zu bilden.",
-      "checkedAt": "2026-10-23"
+      "why": "Druck sagt, wie stark eine Kraft auf eine Fläche drückt. Auch die Lufthülle der Erde drückt so auf uns, obwohl sie keine feste Decke ist.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-friction--science-energy",
       "fromId": "science-friction",
       "toId": "science-energy",
       "kind": "context",
-      "why": "Reibung kann Bewegungsenergie in innere Energie überführen. Das verbindet den Kraftvergleich mit dem Erhalten und Umwandeln von Energie.",
-      "checkedAt": "2026-10-23"
+      "why": "Reiben zwei Flächen aneinander, bremst das die Bewegung, und es wird warm. Reib deine Hände kräftig aneinander, dann kannst du spüren, wie Bewegung zu Wärme wird.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-buoyancy--science-pressure",
       "fromId": "science-buoyancy",
       "toId": "science-pressure",
       "kind": "context",
-      "why": "Wasserdruck ist weiter unten größer. Diese Druckverteilung verbindet die Kraft-pro-Fläche-Idee mit der resultierenden Auftriebskraft.",
-      "checkedAt": "2026-10-23"
+      "why": "Je tiefer im Wasser, desto stärker drückt es. Weil das Wasser von unten stärker drückt als von oben, entsteht eine Kraft nach oben: der Auftrieb.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-surface-tension--science-capillarity",
       "fromId": "science-surface-tension",
       "toId": "science-capillarity",
       "kind": "context",
-      "why": "Die Wechselwirkung von Wasserteilchen prägt eine Grenzfläche und spielt beim Wandern in schmalen Zwischenräumen mit.",
-      "checkedAt": "2026-10-23"
+      "why": "Wasserteilchen ziehen einander an. Das lässt kleine Tropfen oft rundlich aussehen und hilft Wasser, durch schmale Zwischenräume zu wandern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-diffusion--science-cell",
       "fromId": "science-diffusion",
       "toId": "science-cell",
       "kind": "context",
-      "why": "Zellen tauschen Stoffe durch ihre Membran aus. Zufällige Teilchenbewegung ist ein möglicher Transportweg, aber nicht der einzige.",
-      "checkedAt": "2026-10-23"
+      "why": "Zellen nehmen Stoffe durch ihre dünne Hülle auf und geben sie ab. Ein Weg dafür ist Diffusion: Teilchen verteilen sich von allein, so wie Farbe im Wasser.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-chromatography--science-capillarity",
       "fromId": "science-chromatography",
       "toId": "science-capillarity",
       "kind": "context",
-      "why": "Das Wasser kann durch enge Papierzwischenräume wandern. Farbstoffe werden dabei unterschiedlich mitgenommen und festgehalten.",
-      "checkedAt": "2026-10-23"
+      "why": "Bei der Chromatografie wandert Wasser durch die winzigen Zwischenräume im Papier. Die Farbstoffe der Tinte werden dabei unterschiedlich weit mitgenommen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-heat-transfer--science-energy",
       "fromId": "science-heat-transfer",
       "toId": "science-energy",
       "kind": "context",
-      "why": "Wärmeübertragung verändert, wo Energie verfügbar ist. Eine Dämmung verlangsamt Übertragung und ist selbst keine Energiequelle.",
-      "checkedAt": "2026-10-23"
+      "why": "Wärme ist Energie, die vom Warmen zum Kalten wandert. Eine Dämmung bremst das nur, ähnlich wie eine Mütze: Sie macht selbst keine Wärme.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-lever--science-pressure",
       "fromId": "science-lever",
       "toId": "science-pressure",
       "kind": "context",
-      "why": "Beim Hebel zählt Kraft mal Abstand, beim Druck Kraft pro Fläche. Dieselbe Kraft kann deshalb in zwei verschiedenen Vergleichen unterschiedlich wirken.",
-      "checkedAt": "2026-10-23"
+      "why": "Beim Hebel zählt, wie weit vom Drehpunkt entfernt eine Kraft wirkt. Beim Druck zählt, auf wie große Fläche sich die Kraft verteilt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-elasticity--science-friction",
       "fromId": "science-elasticity",
       "toId": "science-friction",
       "kind": "context",
-      "why": "Ein Material kann sich verformen und Energie abgeben. Bei Bewegung kann Reibung einen Teil in innere Energie überführen.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein gedehntes Gummiband kann Energie abgeben, wenn es zurückschnellt. Reibung bremst dagegen und macht aus Bewegung Wärme.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-pendulum--science-resonance",
       "fromId": "science-pendulum",
       "toId": "science-resonance",
       "kind": "context",
-      "why": "Die Pendellänge beeinflusst die Eigenfrequenz. Ein äußerer Antrieb kann bei passendem Takt besonders stark auf eine solche Schwingung wirken.",
-      "checkedAt": "2026-10-23"
+      "why": "Wie schnell ein Pendel schwingt, hängt von seiner Länge ab. Stößt du es genau in seinem Takt an, schwingt es stärker, so wie eine Schaukel.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-probability--science-patterns",
       "fromId": "science-probability",
       "toId": "science-patterns",
       "kind": "context",
-      "why": "Ein Computer kann in Beispielen Muster finden. Bei zufälligen Serien beweist ein auffälliges Muster allein aber noch keine feste Ursache.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Computer sucht in vielen Beispielen nach Mustern. Auch beim Würfeln tauchen manchmal Muster auf, die reiner Zufall sind.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-symmetry--science-angle",
       "fromId": "science-symmetry",
       "toId": "science-angle",
       "kind": "context",
-      "why": "Eine Drehung wird mit einem Winkel beschrieben. Spiegeln und Drehen sind verschiedene Möglichkeiten, eine Figur auf sich abzubilden.",
-      "checkedAt": "2026-10-23"
+      "why": "Wie weit sich etwas dreht, misst man mit einem Winkel. Ein Quadrat sieht nach einer Vierteldrehung, also 90 Grad, wieder genauso aus.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-fractals--science-symmetry",
       "fromId": "science-fractals",
       "toId": "science-symmetry",
       "kind": "context",
-      "why": "Die Fraktalregel verkleinert die Teil-Dreiecke. Spiegeln und Drehen bewahren dagegen die Größe einer Figur. So kannst du ähnliche Teilformen von gleich großen symmetrischen Gegenstücken unterscheiden.",
-      "checkedAt": "2026-10-23"
+      "why": "Beim Fraktal entstehen immer kleinere Dreiecke, die dem großen ähneln. Beim Spiegeln und Drehen bleibt eine Figur dagegen gleich groß.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-angle--science-shadows",
       "fromId": "science-angle",
       "toId": "science-shadows",
       "kind": "context",
-      "why": "Bei Schattenmessungen zählen Winkel zur Oberfläche und zur Sonnenrichtung. Längere gezeichnete Linien verändern nicht automatisch diesen Winkel.",
-      "checkedAt": "2026-10-23"
+      "why": "Wie lang ein Schatten ist, hängt vom Winkel ab, in dem das Sonnenlicht auftrifft. Mit Schatten und Entfernungen schätzte Eratosthenes den Umfang der Erde.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-encryption--science-network",
       "fromId": "science-encryption",
       "toId": "science-network",
       "kind": "context",
-      "why": "Netzwerke übertragen Daten. Verschlüsselung kann den Inhalt vor Mitlesen schützen, ohne den Übertragungsweg oder die Wahrheit zu garantieren.",
-      "checkedAt": "2026-10-23"
+      "why": "Im Internet reisen Nachrichten in kleinen Paketen durchs Netz. Verschlüsselung kann sie so verpacken, dass nur lesen kann, wer den passenden Schlüssel hat.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-checksum--science-computer",
       "fromId": "science-checksum",
       "toId": "science-computer",
       "kind": "context",
-      "why": "Ein Computer stellt Daten als Folgen dar. Ein zusammengefasster Prüfwert verliert Informationen und kann deshalb Kollisionen besitzen.",
-      "checkedAt": "2026-10-23"
+      "why": "Computer speichern Daten als Nullen und Einsen, und beim Kopieren oder Senden kann sich mal eine Stelle verändern. Eine Prüfsumme ist ein kurzer Kontrollwert, mit dem der Computer viele solche Fehler bemerkt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-fusion--science-energy",
       "fromId": "science-fusion",
       "toId": "science-energy",
       "kind": "context",
-      "why": "Die Sonne liefert Energie; in ihrem Inneren wird diese durch Kernreaktionen freigesetzt. Das ist ein anderer Vorgang als Solarstrom in einer Zelle.",
-      "checkedAt": "2026-10-23"
+      "why": "Im Inneren der Sonne verschmelzen winzige Atomkerne und setzen Energie frei. Davon kommt Licht bei uns an, und eine Solarzelle macht daraus Strom.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-galaxy--science-solar-system",
       "fromId": "science-galaxy",
       "toId": "science-solar-system",
       "kind": "context",
-      "why": "Das Sonnensystem ist eine räumliche Gruppe um einen Stern. Eine Galaxie umfasst sehr viel mehr Sterne und weitere Materie.",
-      "checkedAt": "2026-10-23"
+      "why": "Unser Sonnensystem ist die Sonne mit ihren Planeten und anderen Begleitern. Eine Galaxie wie die Milchstraße hat sehr viel mehr Sterne, und unsere Sonne ist einer davon.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-comet--science-solar-system",
       "fromId": "science-comet",
       "toId": "science-solar-system",
       "kind": "context",
-      "why": "Kometen gehören zum Sonnensystem, sind aber keine der acht großen Planeten. Sonnenlicht und Sonnenwind beeinflussen ihre Schweife.",
-      "checkedAt": "2026-10-23"
+      "why": "Kometen sind Brocken aus Eis und Staub und gehören zum Sonnensystem, ohne Planeten zu sein. Kommen sie der Sonne nahe, entstehen ihre Schweife.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-exoplanet--science-galaxy",
       "fromId": "science-exoplanet",
       "toId": "science-galaxy",
       "kind": "context",
-      "why": "Die Milchstraße enthält viele Sterne. Planeten um andere Sterne erweitern die Frage über unser eigenes Sonnensystem hinaus.",
-      "checkedAt": "2026-10-23"
+      "why": "Unsere Sonne ist einer von vielen Sternen in der Milchstraße. Auch um andere Sterne kreisen Planeten, die Exoplaneten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-refrigerator--science-heat-transfer",
       "fromId": "invention-refrigerator",
       "toId": "science-heat-transfer",
       "kind": "exploration",
-      "why": "Wärmeübertragung und Dämmung erklären die zwei Seiten des Kühlschranks.",
-      "checkedAt": "2026-10-23"
+      "why": "Ein Kühlschrank bringt Wärme von innen nach außen. Dämmung in seinen Wänden bremst die Wärme, damit sie nicht gleich wieder hineinkommt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-bicycle--science-friction",
       "fromId": "invention-bicycle",
       "toId": "science-friction",
       "kind": "exploration",
-      "why": "Reifen brauchen Halt am Boden, während Reibung an anderer Stelle bremst.",
-      "checkedAt": "2026-10-23"
+      "why": "Die Reifen brauchen Halt am Boden, sonst rutschen sie weg. Beim Bremsen sorgt Reibung an der Bremse dafür, dass das Fahrrad langsamer wird.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-bicycle--science-lever",
       "fromId": "invention-bicycle",
       "toId": "science-lever",
       "kind": "exploration",
-      "why": "Eine Übersetzung tauscht Kraftbedarf gegen Drehweg: Bei einem leichteren Gang drehst du die Pedale häufiger. Die Hebelkarte hilft, mechanischen Vorteil von zusätzlichem Energiegewinn zu unterscheiden.",
-      "checkedAt": "2026-10-23"
+      "why": "Gänge am Fahrrad und ein Hebel tauschen Kraft gegen Weg. Im leichten Gang trittst du mit weniger Kraft, drehst die Pedale dafür aber häufiger.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-elevator--science-friction",
       "fromId": "invention-elevator",
       "toId": "science-friction",
       "kind": "exploration",
-      "why": "Bremsende Kräfte sind für das Sicherheitsprinzip wichtig.",
-      "checkedAt": "2026-10-23"
+      "why": "Bei einer Störung kann eine Fangvorrichtung die Aufzugskabine abbremsen. Bremsende Kräfte wie Reibung machen den Aufzug so sicherer.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-seismograph--science-pendulum",
       "fromId": "invention-seismograph",
       "toId": "science-pendulum",
       "kind": "exploration",
-      "why": "Eine träge aufgehängte Masse kann für ein vereinfachtes Messprinzip genutzt werden.",
-      "checkedAt": "2026-10-23"
+      "why": "In einem einfachen Seismografen hängt eine Masse, ähnlich wie bei einem Pendel. Wackelt der Boden, bewegt sie sich träger mit, und das Gerät zeichnet den Unterschied auf.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-seismograph--science-resonance",
       "fromId": "invention-seismograph",
       "toId": "science-resonance",
       "kind": "exploration",
-      "why": "Ein Messgerät reagiert selbst auf Bewegung; sein Verhalten muss bei der Auswertung berücksichtigt werden.",
-      "checkedAt": "2026-10-23"
+      "why": "Wie eine Schaukel kann auch ein Seismograf in einem eigenen Takt mitschwingen. Wer seine Kurve auswertet, muss das beachten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "invention-3d-printing--science-angle",
       "fromId": "invention-3d-printing",
       "toId": "science-angle",
       "kind": "exploration",
-      "why": "Ansichten und Winkel helfen, einen räumlichen Entwurf zu beschreiben.",
-      "checkedAt": "2026-10-23"
+      "why": "Wer etwas für den 3D-Drucker entwirft, muss die Form genau beschreiben. Dabei helfen Ansichten von verschiedenen Seiten und Winkel.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "building-sydney-opera--science-angle",
       "fromId": "building-sydney-opera",
       "toId": "science-angle",
       "kind": "exploration",
-      "why": "Ein Winkel kann beschreiben, welcher Ausschnitt einer Kreislinie markiert wird. Der Radius bleibt dabei eine andere Größe; so lassen sich Form und Maß getrennt untersuchen.",
-      "checkedAt": "2026-10-23"
+      "why": "Die Dachschalen des Opernhauses von Sydney sind verschieden groß, stammen aber alle aus derselben Kugel. Wie bei Tortenstücken zeigt der Winkel an der Spitze, wie groß der Anteil am Ganzen ist.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-buoyancy--science-currents",
       "fromId": "science-buoyancy",
       "toId": "science-currents",
       "kind": "compare",
-      "why": "Dichte beeinflusst das Schwimmen und Sinken. Die Strömungskarte zeigt, wie Dichteunterschiede Wasser unter anderem zum Sinken bringen.",
-      "checkedAt": "2026-10-24"
+      "why": "Ob etwas schwimmt oder sinkt, hängt davon ab, wie schwer es für seine Größe ist. Auch kaltes oder salziges Wasser kann schwerer sein und absinken, so bewegt sich das Meer.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-surface-tension--science-water-cycle",
       "fromId": "science-surface-tension",
       "toId": "science-water-cycle",
       "kind": "compare",
-      "why": "Im Wasserkreislauf entstehen und bewegen sich Tropfen. Oberflächenspannung beeinflusst ihre Form; Verdunstung und Kondensation verändern dagegen den Zustand des Wassers.",
-      "checkedAt": "2026-10-24"
+      "why": "Im Wasserkreislauf reisen Tropfen durch Wolken und Regen. Die Oberflächenspannung hält einen kleinen Tropfen zusammen und lässt ihn rundlich aussehen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-capillarity--science-photosynthesis",
       "fromId": "science-capillarity",
       "toId": "science-photosynthesis",
       "kind": "needs",
-      "why": "Fotosynthese braucht Wasser. Kapillarwirkung hilft Wasser in engen benetzbaren Räumen aufzusteigen; allein erklärt sie den Wassertransport hoher Pflanzen nicht.",
-      "checkedAt": "2026-10-24"
+      "why": "Für die Fotosynthese brauchen Pflanzen Wasser. In engen Zwischenräumen kann Wasser ein Stück aufsteigen, für hohe Bäume reicht das allein aber nicht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-diffusion--science-chromatography",
       "fromId": "science-diffusion",
       "toId": "science-chromatography",
       "kind": "compare",
-      "why": "Bei Diffusion verteilen sich Teilchen durch ihre zufällige Bewegung. Chromatografie vergleicht dagegen das unterschiedliche Mitwandern von Bestandteilen mit einem Lösungsmittel.",
-      "checkedAt": "2026-10-24"
+      "why": "Bei der Diffusion verteilen sich Teilchen von allein, wie Farbe im Wasser. Bei der Chromatografie nimmt Wasser verschiedene Farbstoffe unterschiedlich weit mit und trennt sie so.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-heat-transfer--science-seasons",
       "fromId": "science-heat-transfer",
       "toId": "science-seasons",
       "kind": "energy",
-      "why": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge. Strahlung erklärt, wie Sonnenenergie ohne Materialkontakt zur Erde gelangt.",
-      "checkedAt": "2026-10-24"
+      "why": "Wegen der schrägen Erdachse steht die Sonne im Sommer höher und scheint länger. Ihre Energie reist als Strahlung durch den Weltraum bis zu uns.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-elasticity--science-resonance",
       "fromId": "science-elasticity",
       "toId": "science-resonance",
       "kind": "cause",
-      "why": "Elastische Verformung kann eine Rückstellwirkung erzeugen. Bei Resonanz kommt es zusätzlich darauf an, wie eine Schwingung von außen angeregt und gedämpft wird.",
-      "checkedAt": "2026-10-24"
+      "why": "Eine gedehnte Feder federt zurück und kann dabei hin und her schwingen. Stößt man sie im passenden Takt an, kann die Schwingung stärker werden.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-resonance--science-sound",
       "fromId": "science-resonance",
       "toId": "science-sound",
       "kind": "compare",
-      "why": "Ein Ton beginnt mit einer Schwingung. Die Resonanzkarte untersucht, wie unterschiedlich ein schwingendes System auf verschiedene Anregungsfrequenzen reagiert.",
-      "checkedAt": "2026-10-24"
+      "why": "Jeder Ton beginnt mit einer Schwingung. Bei Resonanz schwingt etwas besonders stark mit, wenn der Takt genau passt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-symmetry--science-patterns",
       "fromId": "science-symmetry",
       "toId": "science-patterns",
       "kind": "compare",
-      "why": "Eine Spiegelachse ist ein bestimmtes Formmerkmal. Beim Sortieren von Beispielen entscheidet die gewählte Eigenschaft, welche Formen zusammenpassen.",
-      "checkedAt": "2026-10-24"
+      "why": "Ein Computer kann Formen sortieren, zum Beispiel danach, ob sie eine Spiegelachse haben. Welche Formen zusammengehören, hängt vom gewählten Merkmal ab.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-cell--science-photosynthesis",
       "fromId": "science-cell",
       "toId": "science-photosynthesis",
       "kind": "context",
-      "why": "Fotosynthese findet in bestimmten Zellen statt. Die Zellkarte erklärt den Aufbau von Zellen, die Fotosynthesekarte den lichtabhängigen Aufbau energiereicher Stoffe.",
-      "checkedAt": "2026-10-24"
+      "why": "Pflanzen bestehen aus Zellen. In grünen Pflanzenzellen findet die Fotosynthese statt, also das Bauen von Zucker mit Licht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-comet--science-magnetism",
       "fromId": "science-comet",
       "toId": "science-magnetism",
       "kind": "context",
-      "why": "Der Sonnenwind enthält geladene Teilchen und beeinflusst den Ionenschweif eines Kometen. Die Magnetfeldkarte zeigt, dass Felder geladene Teilchen ablenken können.",
-      "checkedAt": "2026-10-24"
+      "why": "Der Sonnenwind besteht aus winzigen geladenen Teilchen und bläst einen Teil des Kometenschweifs von der Sonne weg. Das Magnetfeld der Erde lenkt viele dieser Teilchen um.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-exoplanet--science-solar-system",
       "fromId": "science-exoplanet",
       "toId": "science-solar-system",
       "kind": "compare",
-      "why": "Exoplaneten gehören zu anderen Planetensystemen. Unsere acht Planeten bieten einen Vergleich, während ein Transit nur bei passender Blickrichtung messbar ist.",
-      "checkedAt": "2026-10-24"
+      "why": "Exoplaneten kreisen um andere Sterne, unsere acht Planeten um die Sonne. Manche Exoplaneten entdeckt man, wenn sie von uns aus gesehen vor ihrem Stern vorbeiziehen und ihn etwas dunkler machen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-encryption--science-checksum",
       "fromId": "science-encryption",
       "toId": "science-checksum",
       "kind": "compare",
-      "why": "Verschlüsselung soll den Inhalt vor unbefugtem Lesen schützen. Eine Prüfsumme dient dem Erkennen bestimmter Änderungen; das einfache Summenmodell kann verschiedene Folgen nicht immer unterscheiden.",
-      "checkedAt": "2026-10-24"
+      "why": "Verschlüsselung soll verhindern, dass Fremde eine Nachricht lesen. Eine Prüfsumme hilft dagegen zu merken, ob sich unterwegs etwas verändert hat.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "science-fusion--science-galaxy",
       "fromId": "science-fusion",
       "toId": "science-galaxy",
       "kind": "context",
-      "why": "In vielen Sternen liefert Kernfusion Energie. Galaxien verbinden Sterne und weitere Materie durch Gravitation zu großen Systemen.",
-      "checkedAt": "2026-10-24"
+      "why": "In vielen Sternen entsteht Energie durch Kernfusion. Eine Galaxie hält riesig viele Sterne mit ihrer Schwerkraft zusammen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "history-bronze--history-stone_tools",
       "fromId": "history-bronze",
       "toId": "history-stone_tools",
       "kind": "context",
-      "why": "Vergleiche Werkstoff und Fundbeleg: Ein neuer Werkstoff beseitigt ältere Techniken nicht überall sofort. Die Beispiele stammen aus verschiedenen Regionen und Zeiten; die Verbindung behauptet keine direkte Herkunft voneinander.",
-      "checkedAt": "2026-10-25"
+      "why": "Werkzeuge aus Stein gab es schon sehr früh. Als Bronze aufkam, verschwanden sie trotzdem nicht plötzlich überall.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-maria_sibylla_merian--animal-monarch-butterfly",
       "fromId": "person-maria_sibylla_merian",
       "toId": "animal-monarch-butterfly",
       "kind": "evidence",
-      "why": "Merians Beobachtungen helfen zu fragen, wie Entwicklungsstadien zusammengehören. Der heutige Monarchfalter bietet dafür ein anderes konkretes Beispiel; damit ist nicht behauptet, Merian habe diesen Falter in Suriname untersucht.",
-      "checkedAt": "2026-10-25"
+      "why": "Eine Raupe sieht ganz anders aus als der Falter, der aus ihr wird. Maria Sibylla Merian hat solche Verwandlungen gezeichnet, und auch beim Monarchfalter kann man sie beobachten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-inge_lehmann--invention-seismograph",
       "fromId": "person-inge_lehmann",
       "toId": "invention-seismograph",
       "kind": "evidence",
-      "why": "Ein Seismograf liefert Aufzeichnungen von Bodenbewegungen. Lehmanns Arbeit zeigt den weiteren Schritt: Solche Messungen vergleichen und daraus Hinweise auf das Erdinnere erschließen.",
-      "checkedAt": "2026-10-25"
+      "why": "Ein Seismograf zeichnet auf, wie der Boden zittert. Inge Lehmann verglich solche Aufzeichnungen von Erdbeben und fand so Hinweise auf den inneren Erdkern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-henrietta_swan_leavitt--person-cecilia_payne_gaposchkin",
       "fromId": "person-henrietta_swan_leavitt",
       "toId": "person-cecilia_payne_gaposchkin",
       "kind": "compare",
-      "why": "Leavitt verglich Helligkeitsänderungen über die Zeit; Payne-Gaposchkin deutete Sternspektren. Das sind verschiedene Messinformationen über Sterne.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide lasen aus dem Licht der Sterne etwas Neues heraus. Leavitt verglich, wie manche Sterne heller und dunkler werden, und Payne-Gaposchkin fand heraus, woraus Sterne bestehen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-henrietta_swan_leavitt--person-jocelyn_bell_burnell",
       "fromId": "person-henrietta_swan_leavitt",
       "toId": "person-jocelyn_bell_burnell",
       "kind": "compare",
-      "why": "Beide untersuchten wiederkehrende Signale. Cepheiden und Pulsare sind aber verschiedene Sternfälle; ein ähnlicher Zeitverlauf beweist keine gleiche Ursache.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide entdeckten Signale am Himmel, die sich regelmäßig wiederholen. Bei Leavitt waren es Sterne, die heller und dunkler werden, bei Bell Burnell Radiosignale von Pulsaren.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-cecilia_payne_gaposchkin--science-fusion",
       "fromId": "person-cecilia_payne_gaposchkin",
       "toId": "science-fusion",
       "kind": "context",
-      "why": "Sternspektren helfen bei der Frage nach den vorhandenen Stoffen. Kernfusion erklärt einen Energieprozess im Stern. Zusammensetzung und Energiequelle sind verschiedene Fragen.",
-      "checkedAt": "2026-11-03"
+      "why": "Payne-Gaposchkin fand heraus, dass Sterne vor allem aus Wasserstoff und Helium bestehen. Bei der Kernfusion werden in Sternen Wasserstoffkerne zu Helium verbunden, und dabei wird Energie frei.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rosalind_franklin--science-cell",
       "fromId": "person-rosalind_franklin",
       "toId": "science-cell",
       "kind": "context",
-      "why": "DNA gehört zum verknüpften Zellthema. Franklins Beugungsarbeit untersuchte Molekülstrukturen; eine Strukturaufnahme ist keine direkt lesbare DNA-Buchstabenfolge.",
-      "checkedAt": "2026-11-03"
+      "why": "Zellen enthalten DNA, in der die Erbinformation steckt. Rosalind Franklin machte mit Röntgenstrahlen Aufnahmen, die halfen zu verstehen, wie die DNA gebaut ist.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rosalind_franklin--person-inge_lehmann",
       "fromId": "person-rosalind_franklin",
       "toId": "person-inge_lehmann",
       "kind": "compare",
-      "why": "Franklin untersuchte Röntgenbeugung, Lehmann deutete Erdbebenwellen. Beide Beispiele trennen Messinformation und Strukturvorstellung, ohne die Methoden oder untersuchten Gegenstände gleichzusetzen.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide erforschten etwas, das man nicht direkt ansehen kann. Franklin nutzte Röntgenstrahlen für die DNA, Lehmann nutzte Erdbebenwellen für das Erdinnere.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-jocelyn_bell_burnell--science-exoplanet",
       "fromId": "person-jocelyn_bell_burnell",
       "toId": "science-exoplanet",
       "kind": "compare",
-      "why": "Wiederkehrende Radiopulse und die Abschwächung von Sternlicht bei einem Transit sind unterschiedliche Beobachtungen. In beiden Fällen braucht eine Erklärung mehr als bloße Regelmäßigkeit.",
-      "checkedAt": "2026-11-03"
+      "why": "Wer genau auf Aufzeichnungen schaut, kann Neues im Weltall entdecken. Bell Burnell fand auffällig regelmäßige Radiosignale, und ein Stern wird kurz dunkler, wenn ein Exoplanet vor ihm vorbeizieht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-katsushika_hokusai--invention-printing",
       "fromId": "person-katsushika_hokusai",
       "toId": "invention-printing",
       "kind": "compare",
-      "why": "Hokusais Farbholzschnitt und der hier erklärte Buchdruck bringen vorbereitete Formen auf Papier. Ein mehrfarbiges Bild aus mehreren Druckstöcken ist aber kein Satz aus beweglichen Buchstaben.",
-      "checkedAt": "2026-11-03"
+      "why": "Beim Holzschnitt und beim Buchdruck kommen vorbereitete Formen mit Farbe aufs Papier. Für Hokusais Bilder gab es Druckstöcke aus Holz, beim Buchdruck setzte man Buchstaben zu Seiten zusammen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-katsushika_hokusai--person-rabindranath_tagore",
       "fromId": "person-katsushika_hokusai",
       "toId": "person-rabindranath_tagore",
       "kind": "compare",
-      "why": "Hokusais Druckgrafik und Tagores Zeichnungen zeigen unterschiedliche Arbeitsweisen mit Linien und Formen. Der Vergleich behauptet weder dasselbe Verfahren noch einen belegten persönlichen Einfluss.",
-      "checkedAt": "2026-11-03"
+      "why": "Aus Linien und Formen können ganz verschiedene Bilder werden. Hokusai entwarf Bilder für den Holzschnitt, und bei Tagore entstanden aus frei gezogenen Linien neue Formen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-murasaki_shikibu--person-octavia_butler",
       "fromId": "person-murasaki_shikibu",
       "toId": "person-octavia_butler",
       "kind": "compare",
-      "why": "Die beiden Autorinnen schrieben in verschiedenen Zeiten und kulturellen Zusammenhängen. Bei beiden hilft die Frage, was eine Figur in einer Szene wissen kann; das macht ihre Werke weder zur gleichen Gattung noch zu Berichten tatsächlich geschehener Ereignisse.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide Autorinnen erfanden Geschichten, die zeigen, wie Menschen denken und miteinander umgehen. Murasaki schrieb vor etwa tausend Jahren in Japan, Butler viel später in den USA.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-murasaki_shikibu--history-writing",
       "fromId": "person-murasaki_shikibu",
       "toId": "history-writing",
       "kind": "context",
-      "why": "Schrift kann Texte über die Lebenszeit ihrer Verfasserin hinaus bewahren. Die frühe Geschichte von Schrift und die viel spätere Überlieferung der Genji-Erzählung sind verschiedene Themen; eine spätere Abschrift ist nicht automatisch das Original der Autorin.",
-      "checkedAt": "2026-11-03"
+      "why": "Mit Schrift kann eine Geschichte viel länger bleiben, als ihre Autorin lebt. Die Genji-Erzählung wurde über viele Generationen abgeschrieben und gelesen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-nelson_mandela--history-un",
       "fromId": "person-nelson_mandela",
       "toId": "history-un",
       "kind": "context",
-      "why": "Die Vereinten Nationen unterstützten den internationalen Kampf gegen die Apartheid. Ihre Gründung 1945 und die demokratischen Wahlen in Südafrika 1994 sind verschiedene Schritte; der Wandel war keine Alleinleistung der UN oder Mandelas.",
-      "checkedAt": "2026-11-03"
+      "why": "Die Vereinten Nationen unterstützten den Kampf vieler Menschen gegen die Apartheid, also gegen rassistische Gesetze in Südafrika. 1994 gab es dort demokratische Wahlen, und Mandela wurde Präsident.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-nelson_mandela--person-wangari_maathai",
       "fromId": "person-nelson_mandela",
       "toId": "person-wangari_maathai",
       "kind": "compare",
-      "why": "Beide Beispiele verbinden politisches Handeln mit den Beiträgen vieler Menschen. Maathai arbeitete in Kenia für Umwelt, Menschenrechte und Beteiligung; Mandela kämpfte gegen die Apartheid in Südafrika. Unterschiedliche Länder, Ziele und Wege bleiben erkennbar.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide zeigen, wie viele Menschen gemeinsam etwas verändern können. Mandela kämpfte in Südafrika gegen die rassistischen Gesetze der Apartheid, und Maathai pflanzte in Kenia mit vielen Frauen Bäume.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rachel_carson--science-foodweb",
       "fromId": "person-rachel_carson",
       "toId": "science-foodweb",
       "kind": "context",
-      "why": "Ein Nahrungsnetz hilft zu untersuchen, über welche Fressbeziehungen Stoffe weitergegeben werden können. Der eigene Marker-Vergleich bei Carson zeigt einen vereinfachten Stoffweg; die Energiemenge und die Konzentration eines Schadstoffs sind dadurch noch nicht bestimmt.",
-      "checkedAt": "2026-11-03"
+      "why": "Im Nahrungsnetz fressen Tiere Pflanzen oder andere Tiere. Rachel Carson fragte, wie Pflanzenschutzmittel auf diesen Wegen auch Lebewesen treffen können, gegen die sie gar nicht gedacht waren.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rachel_carson--person-octavia_butler",
       "fromId": "person-rachel_carson",
       "toId": "person-octavia_butler",
       "kind": "compare",
-      "why": "Carson erklärte Umweltzusammenhänge anhand von Forschung; Butler gestaltete erfundene Geschichten, unter anderem mit Umweltfragen. Ein Sachbeleg und eine mögliche Romanwelt haben unterschiedliche Aufgaben. Der Vergleich behauptet keinen nachgewiesenen persönlichen Einfluss.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide schrieben auch über unsere Umwelt, aber auf verschiedene Weise. Carson erklärte, was Forschung herausgefunden hatte, und Butler erfand Geschichten über mögliche Welten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-chien_shiung_wu--science-symmetry",
       "fromId": "person-chien_shiung_wu",
       "toId": "science-symmetry",
       "kind": "compare",
-      "why": "Die Symmetriekarte erklärt Spiegelung an geometrischen Figuren. Wus Team prüfte dagegen eine präzise physikalische Symmetrie bei einem Kernprozess. Ein ungleiches eigenes Balkenbild oder eine beliebige unsymmetrische Figur ist kein Nachweis dieser Paritätsverletzung.",
-      "checkedAt": "2026-11-03"
+      "why": "Eine Figur ist spiegelsymmetrisch, wenn sie gespiegelt genauso aussieht wie vorher. Chien-Shiung Wu prüfte mit ihrem Team, ob ein Vorgang in Atomkernen genauso abläuft wie sein Spiegelbild.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-chien_shiung_wu--person-lise_meitner",
       "fromId": "person-chien_shiung_wu",
       "toId": "person-lise_meitner",
       "kind": "compare",
-      "why": "Beide arbeiteten zu Atomkernen, aber an verschiedenen Fragen: Wus Team untersuchte Richtungen bei einem Betazerfall; Meitner und Frisch erklärten Kernspaltung. Betazerfall und Spaltung sind unterschiedliche Vorgänge.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide erforschten Atomkerne, also das winzige Innere von Atomen. Wu prüfte mit ihrem Team einen bestimmten Zerfall von Atomkernen, und Meitner erklärte mit Otto Frisch, wie sich ein Atomkern spalten kann.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-lise_meitner--science-fusion",
       "fromId": "person-lise_meitner",
       "toId": "science-fusion",
       "kind": "compare",
-      "why": "Bei einer Kernspaltung wird ein schwerer Kern geteilt; bei einer Kernfusion verbinden sich leichtere Kerne. Die beiden Begriffe und die Beiträge Meitners und Frischs zur Spaltung dürfen nicht vertauscht werden.",
-      "checkedAt": "2026-11-03"
+      "why": "Lise Meitner erklärte mit Otto Frisch die Kernspaltung: Ein schwerer Atomkern wird geteilt. Bei der Kernfusion ist es umgekehrt, da verbinden sich leichte Kerne.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-zaha_hadid--building-sydney-opera",
       "fromId": "person-zaha_hadid",
       "toId": "building-sydney-opera",
       "kind": "compare",
-      "why": "Architektur verbindet räumliche Gestaltung mit der Zusammenarbeit vieler Fachleute. Das Opernhaus von Sydney wurde von Jørn Utzon entworfen, nicht von Hadid. Ein Formvergleich zeigt noch keine gleiche Konstruktion oder Tragfähigkeit.",
-      "checkedAt": "2026-11-03"
+      "why": "Zaha Hadid entwarf Gebäude mit ungewöhnlichen Formen. Auch das Opernhaus von Sydney, entworfen von Jørn Utzon, hat auffällige Dächer, die an Segel erinnern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-zaha_hadid--science-angle",
       "fromId": "person-zaha_hadid",
       "toId": "science-angle",
       "kind": "context",
-      "why": "Bei einem gezeichneten Rundgang lassen sich Richtungswechsel beschreiben. Winkel und eine Wegreihenfolge sind verschiedene Angaben; ohne Maße und weitere Prüfungen ist unser eigener Plan keine Bau- oder Sicherheitsplanung.",
-      "checkedAt": "2026-11-03"
+      "why": "Zaha Hadids Feuerwehrhaus in Weil am Rhein hat schräge Wände und spitze Ecken. Mit Winkeln kann man beschreiben, wie spitz eine Ecke ist oder wie weit man sich beim Gehen dreht.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rabindranath_tagore--person-murasaki_shikibu",
       "fromId": "person-rabindranath_tagore",
       "toId": "person-murasaki_shikibu",
       "kind": "compare",
-      "why": "Beide schufen literarische Werke, aber in verschiedenen Zeiten und Zusammenhängen. Tagores eigene späte Bildarbeit und spätere Illustrationen zur Genji-Erzählung sind nicht dasselbe: Eine nachträgliche Illustration darf nicht Murasaki als eigene Zeichnung zugeschrieben werden.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide schrieben Erzählungen, in ganz verschiedenen Zeiten und Ländern. Tagore malte auch selbst Bilder, und zur Genji-Erzählung von Murasaki malten später andere Menschen Bilder.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--history-writing",
       "fromId": "person-ibn_sina",
       "toId": "history-writing",
       "kind": "context",
-      "why": "Schrift erlaubt, Wissen zu notieren, abzuschreiben und zu übersetzen. Ibn Sinas arabischer Text und ein viel späteres lateinisches Buchobjekt müssen jeweils datiert werden. Das Alter eines Textes allein belegt keine heutige medizinische Wirksamkeit.",
-      "checkedAt": "2026-11-03"
+      "why": "Mit Schrift lässt sich Wissen aufschreiben, abschreiben und übersetzen. So wurde Ibn Sinas Buch über Medizin über Jahrhunderte weitergegeben.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--person-tu_youyou",
       "fromId": "person-ibn_sina",
       "toId": "person-tu_youyou",
       "kind": "compare",
-      "why": "Ibn Sina sammelte und ordnete medizinisches Wissen seiner Zeit; Tu Youyou arbeitete viele Jahrhunderte später an einem Wirkstoff gegen Malaria. Ein historischer Text und der Nachweis einer wirksamen Behandlung sind verschiedene Dinge. Keine dieser Biografien ersetzt medizinischen Rat.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide beschäftigten sich mit Medizin, aber viele Jahrhunderte auseinander. Ibn Sina ordnete das Wissen seiner Zeit, und Tu Youyou suchte mit einem Team nach einem Mittel gegen die Krankheit Malaria.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--invention-printing",
       "fromId": "person-ibn_sina",
       "toId": "invention-printing",
       "kind": "compare",
-      "why": "Eine handgeschriebene Abschrift und ein gedrucktes Buch können ältere Texte bewahren. Das konkrete Winchester-Exemplar ist eine Handschrift aus dem 15. Jahrhundert, keine von Ibn Sina selbst gedruckte Ausgabe.",
-      "checkedAt": "2026-11-03"
+      "why": "Ibn Sinas Buch über Medizin wurde über Jahrhunderte von Hand abgeschrieben, und das dauerte lange. Mit dem Buchdruck ließen sich viele ähnliche Seiten schneller herstellen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-katsushika_hokusai--person-cai_lun",
       "fromId": "person-katsushika_hokusai",
       "toId": "person-cai_lun",
       "kind": "compare",
-      "why": "Papierherstellung und das Drucken eines Farbholzschnitts sind verschiedene Arbeitsschritte. Das Papier im Druck macht Hokusai nicht zum Erfinder des Papiers; die frühere chinesische Papiergeschichte wird nicht zu seiner eigenen Biografie.",
-      "checkedAt": "2026-11-03"
+      "why": "Hokusais Bilder wurden auf Papier gedruckt. Cai Lun verbesserte schon viel früher in China, wie Papier hergestellt wird.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-henrietta_swan_leavitt--science-galaxy",
       "fromId": "person-henrietta_swan_leavitt",
       "toId": "science-galaxy",
       "kind": "compare",
-      "why": "Leavitts Vergleich bestimmter veränderlicher Sterne wurde zu einer Hilfe für Entfernungsmessungen im Weltall. Eine Galaxie enthält sehr viele Sterne; die scheinbare Helligkeit eines einzelnen Sterns ist noch keine Entfernung der ganzen Galaxie.",
-      "checkedAt": "2026-11-03"
+      "why": "Galaxien sind unvorstellbar weit weg, aber wie weit genau? Leavitt fand bei bestimmten Sternen eine Regel, die hilft, Entfernungen im Weltall zu bestimmen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-katsushika_hokusai--person-cecilia_payne_gaposchkin",
       "fromId": "person-katsushika_hokusai",
       "toId": "person-cecilia_payne_gaposchkin",
       "kind": "compare",
-      "why": "Bei einem Farbholzschnitt wird Farbe mit ausgewählten Druckfarben gestaltet. Bei einem Sternspektrum werden Lichtmuster untersucht. Der Vergleich hilft, eine bewusst gestaltete Bildfarbe von einem physikalischen Messzeichen zu unterscheiden.",
-      "checkedAt": "2026-11-03"
+      "why": "Hokusai wählte für seine Drucke ganz bewusst Farben aus. Cecilia Payne-Gaposchkin las aus den Farben des Sternenlichts ab, woraus Sterne bestehen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-murasaki_shikibu--person-johannes_gutenberg",
       "fromId": "person-murasaki_shikibu",
       "toId": "person-johannes_gutenberg",
       "kind": "compare",
-      "why": "Die Genji-Erzählung wurde lange von Hand abgeschrieben; Gutenbergs Drucksystem steht für eine andere Form der Vervielfältigung. Eine spätere Kopie oder Druckfassung ist nicht automatisch das ursprüngliche Werk oder die Handschrift seiner Autorin.",
-      "checkedAt": "2026-11-03"
+      "why": "Die Genji-Erzählung wurde lange von Hand abgeschrieben. Gutenbergs Druck mit beweglichen Buchstaben aus Metall war ein anderer Weg, Texte viele Male herzustellen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rachel_carson--person-wangari_maathai",
       "fromId": "person-rachel_carson",
       "toId": "person-wangari_maathai",
       "kind": "compare",
-      "why": "Carson untersuchte und erklärte ökologische Folgen bestimmter Eingriffe; Maathai verband Baumpflanzungen mit gemeinschaftlichem Handeln. Beide Themen zeigen unterschiedliche Wege, Lebensräume zu verstehen und zu schützen, ohne eine Zusammenarbeit der beiden Frauen zu behaupten.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide Frauen wollten Lebensräume schützen, jede auf ihre Weise. Carson erklärte, wie Pflanzenschutzmittel auch andere Lebewesen treffen können, und Maathai pflanzte mit vielen Frauen Bäume.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rachel_carson--science-pollination",
       "fromId": "person-rachel_carson",
       "toId": "science-pollination",
       "kind": "compare",
-      "why": "Bestäubende Tiere können von Veränderungen ihres Lebensraums und bestimmten Pflanzenschutzmitteln betroffen sein. Carsons Frage nach unbeabsichtigten Folgen ergänzt den Blick auf Pollenboten; Wirkung und Risiko hängen vom jeweiligen Mittel und seiner Anwendung ab.",
-      "checkedAt": "2026-11-03"
+      "why": "Viele Tiere tragen Pollen von Blüte zu Blüte. Manche Pflanzenschutzmittel können auch sie treffen, und genau nach solchen ungewollten Folgen fragte Rachel Carson.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-octavia_butler--person-johannes_gutenberg",
       "fromId": "person-octavia_butler",
       "toId": "person-johannes_gutenberg",
       "kind": "compare",
-      "why": "Butlers Geschichten richten den Blick auf Figuren, Wissen und Entscheidungen. Druckverfahren erklären dagegen, wie Texte vervielfältigt werden können. Die Herstellung vieler Exemplare bestimmt nicht, was eine erzählte Figur weiß oder ob ein Text eine Tatsachenquelle ist.",
-      "checkedAt": "2026-11-03"
+      "why": "Octavia Butler erfand Geschichten über mögliche Welten, und als gedruckte Bücher erreichten sie viele Menschen. Gutenberg entwickelte in Europa den Druck mit beweglichen Buchstaben aus Metall, mit dem Bücher viel schneller entstehen konnten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-chien_shiung_wu--person-marie_curie",
       "fromId": "person-chien_shiung_wu",
       "toId": "person-marie_curie",
       "kind": "compare",
-      "why": "Curie untersuchte radioaktive Stoffe; Wu und ihr Team prüften bei einem bestimmten Betazerfall eine Symmetrievorstellung. Die gemeinsame Verbindung zur Radioaktivität macht die verschiedenen Forschungsfragen sichtbar, ohne ihre Arbeiten gleichzusetzen.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide forschten zur Radioaktivität, also zu Stoffen, die unsichtbare Strahlung abgeben. Curie machte diese Strahlung messbar, und Wu prüfte mit ihrem Team sehr genau einen bestimmten Zerfall von Atomkernen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-lise_meitner--person-marie_curie",
       "fromId": "person-lise_meitner",
       "toId": "person-marie_curie",
       "kind": "compare",
-      "why": "Die Erforschung radioaktiver Stoffe und die Erklärung der Kernspaltung gehören zur Geschichte der Kernphysik. Meitners und Frischs Deutung chemischer Befunde ist ein anderer Forschungsschritt als die Arbeiten Curies.",
-      "checkedAt": "2026-11-03"
+      "why": "Curie machte unsichtbare Strahlung von Stoffen messbar, und Meitner erklärte später mit Otto Frisch die Spaltung des Atomkerns. Beides gehört zur Geschichte der Erforschung der Atomkerne.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-lise_meitner--person-albert_einstein",
       "fromId": "person-lise_meitner",
       "toId": "person-albert_einstein",
       "kind": "compare",
-      "why": "Der Zusammenhang zwischen Masse und Energie hilft, die bei Kernprozessen frei werdende Energie zu verstehen. Meitner und Frisch nutzten physikalische Überlegungen für ihre Erklärung der Kernspaltung; daraus folgt nicht, Einstein habe diese Spaltung entdeckt.",
-      "checkedAt": "2026-11-03"
+      "why": "Einstein erkannte, dass Masse und Energie zusammenhängen. Das half Meitner und Frisch zu verstehen, wie viel Energie bei der Kernspaltung frei wird.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-rabindranath_tagore--history-printing",
       "fromId": "person-rabindranath_tagore",
       "toId": "history-printing",
       "kind": "compare",
-      "why": "Texte können durch Druck vielen Menschen zugänglich werden. Tagores Arbeit als Autor und Künstler betrifft die Gestaltung von Inhalten; die Druckwerkstatt erklärt einen Weg ihrer Vervielfältigung. Die beiden Aufgaben sind verschieden.",
-      "checkedAt": "2026-11-03"
+      "why": "Durch Druck können Texte zu vielen Menschen gelangen. Tagore schrieb Gedichte und Geschichten, und eine Druckwerkstatt kann daraus viele Bücher machen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--person-al_khwarizmi",
       "fromId": "person-ibn_sina",
       "toId": "person-al_khwarizmi",
       "kind": "compare",
-      "why": "Ibn Sina ordnete medizinisches Wissen, al-Chwarizmi erklärte unter anderem mathematische Verfahren. Beide Beispiele zeigen schriftliche Wissensvermittlung in unterschiedlichen Gebieten und Zeiten; al-Chwarizmi lebte früher und wird hier nicht als direkter Lehrer Ibn Sinas dargestellt.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide schrieben Bücher, die Wissen weitergaben: Ibn Sina über Medizin, al-Chwarizmi über das Rechnen. Al-Chwarizmi lebte früher als Ibn Sina und arbeitete in Bagdad.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--person-ibn_al_haytham",
       "fromId": "person-ibn_sina",
       "toId": "person-ibn_al_haytham",
       "kind": "compare",
-      "why": "Medizinische Wissenssammlung und die Untersuchung von Licht und Sehen sind verschiedene Arbeitsgebiete. Der Vergleich zeigt, wie überlieferte Beschreibungen, eigene Überlegungen und gezielte Versuche unterschiedliche Rollen spielen; eine persönliche Zusammenarbeit wird nicht behauptet.",
-      "checkedAt": "2026-11-03"
+      "why": "Beide waren Gelehrte vor etwa tausend Jahren. Ibn Sina ordnete das Wissen über Medizin, und Ibn al-Haytham prüfte mit Versuchen, wie Licht und Sehen funktionieren.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--person-johannes_gutenberg",
       "fromId": "person-ibn_sina",
       "toId": "person-johannes_gutenberg",
       "kind": "compare",
-      "why": "Ibn Sinas medizinisches Werk wurde über Jahrhunderte kopiert und übersetzt. Die Druckkarte erklärt eine weitere Technik der Textvervielfältigung. Das Datum einer einzelnen Abschrift oder eines Drucks ist nicht das Entstehungsdatum des Werks.",
-      "checkedAt": "2026-11-03"
+      "why": "Ibn Sinas Buch über Medizin wurde über Jahrhunderte abgeschrieben und übersetzt. Gutenbergs Druck mit beweglichen Buchstaben war ein weiterer Weg, Bücher viele Male herzustellen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-ibn_sina--person-murasaki_shikibu",
       "fromId": "person-ibn_sina",
       "toId": "person-murasaki_shikibu",
       "kind": "compare",
-      "why": "Beim Kanon der Medizin und bei der Genji-Erzählung muss zwischen dem ursprünglichen Werk und späteren erhaltenen Exemplaren unterschieden werden. Es handelt sich um verschiedene Textarten und Überlieferungswege; ein Einfluss des einen Werks auf das andere wird nicht abgeleitet.",
-      "checkedAt": "2026-11-03"
+      "why": "Der Kanon der Medizin und die Genji-Erzählung wurden immer wieder abgeschrieben. Die Bücher, die wir heute davon haben, sind darum oft viel jünger als das Werk selbst.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-albert_einstein--science-gps",
       "fromId": "person-albert_einstein",
       "toId": "science-gps",
       "kind": "uses",
-      "why": "GPS braucht sehr genaue Uhren. Bei ihren Zeitsignalen werden Effekte aus Einsteins Relativitätstheorien berücksichtigt. Das Photonenmodell auf der Einstein-Seite behandelt eine andere Frage und berechnet keine GPS-Zeitkorrektur.",
-      "checkedAt": "2026-11-05"
+      "why": "GPS braucht sehr genaue Uhren in Satelliten. Damit die Zeit stimmt, beachtet man dabei Einsteins Ideen über Raum und Zeit, die Relativitätstheorien.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-albert_einstein--science-shadows",
       "fromId": "person-albert_einstein",
       "toId": "science-shadows",
       "kind": "compare",
-      "why": "Wie prüft man eine Erklärung? Die Schattenseite vergleicht Winkel an verschiedenen Orten; bei Einstein unterscheiden wir Lichtmenge und Energie pro Photon. Die Beispiele brauchen jeweils passende Beobachtungen und Regeln. Die Erdkrümmung wurde schon lange vor Einstein untersucht.",
-      "checkedAt": "2026-11-05"
+      "why": "Forschende prüfen Ideen, indem sie nachmessen. Eratosthenes maß Schatten an zwei Orten, und Einsteins Erklärung des Lichts wurde später durch Messungen anderer Forscher bestätigt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-alexander_humboldt--animal-jaguar",
       "fromId": "person-alexander_humboldt",
       "toId": "animal-jaguar",
       "kind": "habitat",
-      "why": "Humboldt verglich Umweltbedingungen an verschiedenen Orten. Der Jaguar zeigt ein konkretes Tier mit Lebensräumen in Mittel- und Südamerika. Vergleiche die beschriebenen Lebensräume mit den Fragen nach Pflanzen und Standortbedingungen; daraus folgt keine bestimmte Jaguarbeobachtung Humboldts.",
-      "checkedAt": "2026-11-05"
+      "why": "Humboldt verglich auf seinen Reisen durch Teile Amerikas, wie Pflanzen und Natur an verschiedenen Orten aussehen. Beim Jaguar in Mittel- und Südamerika kann man ähnlich fragen: Wo lebt er, und wie sieht es dort aus?",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-alexander_humboldt--person-charles_darwin",
       "fromId": "person-alexander_humboldt",
       "toId": "person-charles_darwin",
       "kind": "compare",
-      "why": "Humboldt verglich Pflanzen und Umweltbedingungen; Darwin untersuchte unter anderem die Veränderung von Lebewesen über Generationen. Beide Beispiele verbinden Beobachtungen mit Erklärungsfragen, behandeln aber unterschiedliche Zusammenhänge.",
-      "checkedAt": "2026-11-05"
+      "why": "Beide Naturforscher reisten weit und verglichen genau, was sie sahen. Humboldt fragte, wo welche Pflanzen wachsen, und Darwin, wie sich Lebewesen über viele Generationen verändern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-charles_darwin--animal-green-sea-turtle",
       "fromId": "person-charles_darwin",
       "toId": "animal-green-sea-turtle",
       "kind": "compare",
-      "why": "Darwins Modell vergleicht vererbbare Unterschiede über Generationen. Die Meeresschildkröte führt dagegen zu Lebensraum und Wanderungen einer Art. Eine Wanderung oder das Lernen eines einzelnen Tieres ist noch keine evolutionäre Veränderung.",
-      "checkedAt": "2026-11-05"
+      "why": "Eine Meeresschildkröte wandert in ihrem Leben weit, doch dabei verändert sich ihre Art nicht. Darwin erklärte, dass sich Arten nur ganz langsam über sehr viele Generationen verändern.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-grace_hopper--science-computer",
       "fromId": "person-grace_hopper",
       "toId": "science-computer",
       "kind": "context",
-      "why": "Hoppers Beispiel übersetzt eine Anweisung und erhält ihre Bedeutung. Die Computerseite zeigt, wie Zahlen mit Bits dargestellt werden. Programmanweisung und Darstellung einer Zahl sind verschiedene Ebenen des Rechnens.",
-      "checkedAt": "2026-11-05"
+      "why": "Ein Computer rechnet mit Nullen und Einsen. Grace Hopper half, dass Menschen Programme mit Wörtern schreiben konnten, die dann in die Sprache des Computers übersetzt wurden.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-jane_goodall--animal-western-lowland-gorilla",
       "fromId": "person-jane_goodall",
       "toId": "animal-western-lowland-gorilla",
       "kind": "compare",
-      "why": "Goodall beobachtete Schimpansen in Gombe. Der westliche Flachlandgorilla ist ein anderer Menschenaffe mit einem anderen Lebensraum. Vergleiche die Beschreibungen, ohne Goodalls Schimpansenbeobachtungen einfach auf Gorillas zu übertragen.",
-      "checkedAt": "2026-11-05"
+      "why": "Schimpansen und Gorillas sind beide Menschenaffen. Jane Goodall beobachtete Schimpansen in Gombe, und Westliche Flachlandgorillas leben in Regenwäldern im Kongobecken.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-johannes_gutenberg--history-paper",
       "fromId": "person-johannes_gutenberg",
       "toId": "history-paper",
       "kind": "needs",
-      "why": "Gutenbergs Werkstatt verband Lettern, Farbe, eine Presse und einen Schriftträger wie Papier oder Pergament. Die Papierseite zeigt die viel ältere Geschichte eines solchen Materials. Papierherstellung und Buchdruck sind verschiedene Entwicklungen.",
-      "checkedAt": "2026-11-05"
+      "why": "Gutenbergs Druck brauchte Papier oder Pergament, auf das die Buchstaben gedruckt wurden. Papier gab es in China schon viel früher.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-katherine_johnson--history-apollo11",
       "fromId": "person-katherine_johnson",
       "toId": "history-apollo11",
       "kind": "context",
-      "why": "Johnsons Seite erklärt Gegenrechnungen für die Raumfahrt; Apollo 11 zeigt die Zusammenarbeit bei einer Mondmission. Ihre bekannte Prüfung für John Glenn 1962 gehört zu einer anderen Mission als Apollo 11 im Jahr 1969.",
-      "checkedAt": "2026-11-05"
+      "why": "Katherine Johnson rechnete Flugbahnen für die Raumfahrt aus, auch für Apollo. Die Mondlandung 1969 gelang nur, weil viele Menschen am Boden zusammenarbeiteten.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-mae_jemison--history-iss",
       "fromId": "person-mae_jemison",
       "toId": "history-iss",
       "kind": "compare",
-      "why": "Jemison forschte 1992 im Spacelab-J während der Shuttle-Mission STS-47. Die ISS wurde später ein dauerhaft bewohntes Labor. Beide Seiten behandeln Forschung in der Erdumlaufbahn; Jemisons hier beschriebener Flug führte nicht zur ISS.",
-      "checkedAt": "2026-11-05"
+      "why": "Mae Jemison forschte 1992 in einem Weltraumlabor an Bord der Raumfähre Endeavour. Die ISS wurde später ein Labor, in dem Menschen dauerhaft im All wohnen und forschen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-marie_curie--science-computer",
       "fromId": "person-marie_curie",
       "toId": "science-computer",
       "kind": "compare",
-      "why": "Curies Beispiel trennt einen Messwert von einer Erklärung. Die Computerseite zeigt, wie Zahlen als Bitfolgen dargestellt werden. Eine Zahl zu speichern oder umzurechnen erklärt noch nicht, weshalb ein Stoff Strahlung abgibt.",
-      "checkedAt": "2026-11-05"
+      "why": "Marie Curie maß unsichtbare Strahlung und schrieb ihre Messwerte von Hand auf. Heute speichern Computer solche Zahlen als Nullen und Einsen und rechnen blitzschnell mit ihnen.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-neil_armstrong--invention-rocket",
       "fromId": "person-neil_armstrong",
       "toId": "invention-rocket",
       "kind": "transport",
-      "why": "Die Apollo-Mission brauchte eine Rakete für den Start. Die Raketenseite erklärt das Rückstoßprinzip; Armstrongs Rollenübersicht zeigt Aufgaben der Besatzung. Antrieb, Flugbahn und Arbeitsteilung sind verschiedene Teile einer Raumfahrtmission.",
-      "checkedAt": "2026-11-05"
+      "why": "Ohne Rakete kein Flug zum Mond: Schnell ausströmendes Gas schiebt sie in die Gegenrichtung. So kamen Armstrong, Aldrin und Collins mit Apollo 11 ins All.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-tu_youyou--person-wangari_maathai",
       "fromId": "person-tu_youyou",
       "toId": "person-wangari_maathai",
       "kind": "compare",
-      "why": "Bei Tu Youyou führen Pflanzen zu Fragen der Wirkstoffforschung; bei Wangari Maathai geht es um Bäume, Pflege und gemeinsame Umweltarbeit. Ein Zusammenhang mit Pflanzen macht diese Fragen und ihre Belege nicht gleich. Naturschutz ist kein Wirksamkeitsnachweis für ein Medikament.",
-      "checkedAt": "2026-11-05"
+      "why": "Bei beiden spielen Pflanzen eine große Rolle, aber auf ganz verschiedene Weise. Tu Youyou suchte mit ihrem Team in Pflanzen nach einem Mittel gegen Malaria, und Maathai pflanzte mit vielen Frauen Bäume für eine gesunde Umwelt.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-wangari_maathai--animal-african-savanna-elephant",
       "fromId": "person-wangari_maathai",
       "toId": "animal-african-savanna-elephant",
       "kind": "habitat",
-      "why": "Maathais Beispiel fragt nach Bäumen und ihrer weiteren Pflege. Savannenelefanten leben unter anderem in Savannen und offenen Wäldern Afrikas. Daraus entsteht eine Frage nach passenden Lebensräumen; möglichst viele Bäume zu setzen ist nicht automatisch für jeden Lebensraum richtig.",
-      "checkedAt": "2026-11-05"
+      "why": "Maathai setzte sich in Kenia für Bäume ein, und dort leben auch Savannenelefanten in offenen Landschaften. Jeder Lebensraum braucht das Passende, und nicht überall sind möglichst viele Bäume richtig.",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "person-wangari_maathai--person-jane_goodall",
       "fromId": "person-wangari_maathai",
       "toId": "person-jane_goodall",
       "kind": "compare",
-      "why": "Maathais gemeinschaftliche Umweltarbeit und Goodalls Forschung und Naturschutz verbinden Menschen mit ihrer Umgebung. Vergleiche die unterschiedlichen Fragen: Wie entwickeln sich gepflanzte Bäume, und was lässt sich an Tieren beobachten? Eine einzelne Zählung erklärt nicht alle Folgen eines Naturschutzprojekts.",
-      "checkedAt": "2026-11-05"
+      "why": "Beide Frauen setzten sich in Afrika für die Natur ein, gemeinsam mit Menschen vor Ort. Maathai pflanzte in Kenia mit vielen Frauen Bäume, und Goodall erforschte in Tansania wilde Schimpansen.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-fire--history-stone_tools",
+      "fromId": "history-fire",
+      "toId": "history-stone_tools",
+      "kind": "evidence",
+      "why": "Alte Feuerstellen und Werkzeuge aus Stein sind Spuren aus der Urzeit. Aus solchen Funden lernen Forschende, wie frühe Menschen und ihre Verwandten lebten.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-pyramids--building-giza-pyramids",
+      "fromId": "history-pyramids",
+      "toId": "building-giza-pyramids",
+      "kind": "context",
+      "why": "In Gizeh steht die große Pyramide für König Cheops. Sie war einmal etwa 146 Meter hoch.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "building-taj-mahal--building-giza-pyramids",
+      "fromId": "building-taj-mahal",
+      "toId": "building-giza-pyramids",
+      "kind": "compare",
+      "why": "Das Taj Mahal und die Pyramiden von Gizeh sind beide Grabbauten. Zwischen ihrem Bau liegen über 4000 Jahre.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-zero--person-al_khwarizmi",
+      "fromId": "history-zero",
+      "toId": "person-al_khwarizmi",
+      "kind": "context",
+      "why": "Al-Chwarizmi erklärte in Bagdad das Rechnen mit den Ziffern aus Indien, auch mit der Null. Seine Bücher halfen, dieses Wissen weiterzugeben.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "invention-compass--science-magnetism",
+      "fromId": "invention-compass",
+      "toId": "science-magnetism",
+      "kind": "cause",
+      "why": "Die Nadel im Kompass ist ein kleiner Magnet. Das Magnetfeld der Erde dreht sie, bis sie ungefähr nach Norden zeigt.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-compass--invention-compass",
+      "fromId": "history-compass",
+      "toId": "invention-compass",
+      "kind": "context",
+      "why": "Seefahrer in China nutzten den Kompass vermutlich nach dem Jahr 1000. So fanden sie die Richtung auch bei bewölktem Himmel.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-polynesia--science-gps",
+      "fromId": "history-polynesia",
+      "toId": "science-gps",
+      "kind": "compare",
+      "why": "Heute zeigt GPS mit Signalen von Satelliten, wo man ist. Polynesische Seefahrerinnen und Seefahrer fanden ihren Weg über den Pazifik mit Sternen, Sonne und Wellen.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-medieval_cities--history-timbuktu",
+      "fromId": "history-medieval_cities",
+      "toId": "history-timbuktu",
+      "kind": "compare",
+      "why": "Im Mittelalter wuchsen Städte in Europa und auch Timbuktu in Westafrika durch Handel. Mit den Waren kamen Menschen und neue Ideen.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-voyages1492--history-maya",
+      "fromId": "history-voyages1492",
+      "toId": "history-maya",
+      "kind": "context",
+      "why": "Als 1492 Schiffe aus Spanien ankamen, lebten in Amerika schon viele Völker. Die Maya gehören dazu, und es gibt sie bis heute.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-steam--history-railway",
+      "fromId": "history-steam",
+      "toId": "history-railway",
+      "kind": "uses",
+      "why": "Eine Dampflok ist eine Dampfmaschine auf Rädern. Der Dampf treibt die Räder an, und die Lok zieht den Zug.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-railway--invention-railway",
+      "fromId": "history-railway",
+      "toId": "invention-railway",
+      "kind": "context",
+      "why": "1825 fuhr in England eine der ersten öffentlichen Bahnen mit einer Dampflok. Danach verbanden Schienen immer mehr Orte.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "invention-light--science-circuit",
+      "fromId": "invention-light",
+      "toId": "science-circuit",
+      "kind": "needs",
+      "why": "Eine elektrische Lampe leuchtet nur, wenn der Stromkreis geschlossen ist. Mit dem Schalter machst du den Weg für den Strom auf und zu.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-electric_light--invention-light",
+      "fromId": "history-electric_light",
+      "toId": "invention-light",
+      "kind": "context",
+      "why": "1879 baute das Team von Thomas Edison eine Glühlampe, die viele Stunden lang leuchtete. Auch Joseph Swan und andere arbeiteten am elektrischen Licht.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "science-flight--invention-airplane",
+      "fromId": "science-flight",
+      "toId": "invention-airplane",
+      "kind": "cause",
+      "why": "Fliegt das Flugzeug schnell vorwärts, strömt Luft um die Flügel und hebt es nach oben: Das ist der Auftrieb. Für das Vorwärtskommen sorgen die Motoren, ihre Kraft heißt Schub.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-flight--invention-airplane",
+      "fromId": "history-flight",
+      "toId": "invention-airplane",
+      "kind": "context",
+      "why": "1903 schafften die Brüder Wilbur und Orville Wright einen gesteuerten Flug mit einem Motorflugzeug. Vorher hatten sie lange mit Gleitern ohne Motor geübt.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-ww2--history-un",
+      "fromId": "history-ww2",
+      "toId": "history-un",
+      "kind": "cause",
+      "why": "Nach dem Zweiten Weltkrieg gründeten 1945 viele Länder die Vereinten Nationen. Dort wollen sie Streit gemeinsam besprechen und den Frieden schützen.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-ww1--history-ww2",
+      "fromId": "history-ww1",
+      "toId": "history-ww2",
+      "kind": "context",
+      "why": "Nur gut 20 Jahre nach dem Ersten Weltkrieg begann der Zweite Weltkrieg. Beide Kriege brachten Millionen Menschen großes Leid.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-holocaust--history-ww2",
+      "fromId": "history-holocaust",
+      "toId": "history-ww2",
+      "kind": "context",
+      "why": "Ab 1933 regierten die Nationalsozialisten Deutschland und verfolgten jüdische Menschen. Die meisten Morde des Holocaust geschahen während des Zweiten Weltkriegs.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-berlin_wall_fall--history-reunification",
+      "fromId": "history-berlin_wall_fall",
+      "toId": "history-reunification",
+      "kind": "cause",
+      "why": "Erst ging die Mauer auf, knapp ein Jahr später wurde Deutschland wieder ein Land. Daran erinnert jedes Jahr der Feiertag am 3. Oktober.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-berlin_wall_build--history-berlin_wall_fall",
+      "fromId": "history-berlin_wall_build",
+      "toId": "history-berlin_wall_fall",
+      "kind": "context",
+      "why": "1961 baute die DDR die Berliner Mauer. 28 Jahre lang waren viele Familien und Freunde getrennt, bis die Mauer 1989 geöffnet wurde.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-september11--history-un",
+      "fromId": "history-september11",
+      "toId": "history-un",
+      "kind": "context",
+      "why": "Gut zwei Wochen nach den Anschlägen vom 11. September 2001 beschloss der Sicherheitsrat der Vereinten Nationen Regeln gegen Terror. Alle Länder sollen zum Beispiel verhindern, dass Terroristen Geld bekommen.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-webb--invention-telescope",
+      "fromId": "history-webb",
+      "toId": "invention-telescope",
+      "kind": "exploration",
+      "why": "Das James-Webb-Weltraumteleskop ist ein riesiges Fernrohr im Weltall. Sein großer Spiegel fängt sehr schwaches Licht von weit entfernten Sternen auf.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "history-greece--science-shadows",
+      "fromId": "history-greece",
+      "toId": "science-shadows",
+      "kind": "evidence",
+      "why": "Griechische Gelehrte dachten viel über die Erde nach. Eratosthenes verglich Schatten an zwei Orten in Ägypten und schätzte so, wie groß die Erde ist.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "person-ada_lovelace--invention-computer",
+      "fromId": "person-ada_lovelace",
+      "toId": "invention-computer",
+      "kind": "context",
+      "why": "Ada Lovelace schrieb 1843 Schrittfolgen für eine Rechenmaschine auf, die nie fertig gebaut wurde. Heute heißen solche Schrittfolgen Programme, und jeder Computer braucht sie.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "person-tim_berners_lee--invention-internet",
+      "fromId": "person-tim_berners_lee",
+      "toId": "invention-internet",
+      "kind": "uses",
+      "why": "Das World Wide Web von Tim Berners-Lee läuft über das Internet. Das Internet verbindet Computer, das Web verbindet Seiten über Links zum Anklicken.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "person-karl_benz--person-bertha_benz",
+      "fromId": "person-karl_benz",
+      "toId": "person-bertha_benz",
+      "kind": "partnership",
+      "why": "Bertha Benz gab Geld für den Motorwagen ihres Mannes Karl und half bei seiner Entwicklung. 1888 fuhr sie damit mit ihren zwei Söhnen von Mannheim nach Pforzheim.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "person-karl_benz--invention-car",
+      "fromId": "person-karl_benz",
+      "toId": "invention-car",
+      "kind": "context",
+      "why": "1886 bekam Karl Benz ein Patent für seinen Motorwagen, eine Art Schutzbrief für Erfindungen. Der Wagen war eines der ersten Autos mit Benzinmotor.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "invention-phone--invention-smartphone",
+      "fromId": "invention-phone",
+      "toId": "invention-smartphone",
+      "kind": "context",
+      "why": "Mit dem Telefon können Menschen miteinander sprechen, auch wenn sie weit voneinander entfernt sind. Ein Smartphone ist Telefon und kleiner Computer zugleich.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "building-golden-gate-bridge--building-pont-du-gard",
+      "fromId": "building-golden-gate-bridge",
+      "toId": "building-pont-du-gard",
+      "kind": "compare",
+      "why": "Die Golden Gate Bridge hängt an dicken Stahlseilen und trägt eine Straße. Der Pont du Gard steht auf Bögen aus Stein und trägt eine Wasserleitung.",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "building-burj-khalifa--invention-elevator",
+      "fromId": "building-burj-khalifa",
+      "toId": "invention-elevator",
+      "kind": "needs",
+      "why": "Im 828 Meter hohen Burj Khalifa bringen Aufzüge die Menschen nach oben. Ohne Aufzüge könnte man so ein hohes Haus kaum nutzen.",
+      "checkedAt": "2026-11-22"
     }
   ]
 }

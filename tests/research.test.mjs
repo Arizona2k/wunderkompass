@@ -52,7 +52,7 @@ test('all33 laboratory questions explain each of66 wrong choices independently',
  }
 });
 test('varied homepage knowledge trails use real bidirectional edges, actual routes and concrete activities',()=>{
- assert.deepEqual(DISCOVERY_CONNECTIONS.map(pick=>DISCOVERY_CONNECTION_INDEX.find(c=>c.id===pick.id)),DISCOVERY_CONNECTIONS.map(pick=>({...KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id),...pick})),'growing projection preserves every original trail, question, route and exact explanation');
+ assert.deepEqual(DISCOVERY_CONNECTIONS.map(pick=>DISCOVERY_CONNECTION_INDEX.find(c=>c.id===pick.id)),DISCOVERY_CONNECTIONS.map(pick=>{const {kind,checkedAt,...edge}=KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id);return {...edge,...pick};}),'growing projection preserves every original trail, question, route and exact explanation');
  assert.ok(DISCOVERY_CONNECTIONS.length>3);assert.equal(DISCOVERY_ACTIVITIES.length,DISCOVERY_CONNECTIONS.length);
  for(const pick of DISCOVERY_CONNECTIONS){const edge=KNOWLEDGE_CONNECTIONS.find(c=>c.id===pick.id);assert.ok(edge);assert.ok(connectionsFor(edge.fromId).some(c=>c.topic===edge.toId));assert.ok(connectionsFor(edge.toId).some(c=>c.topic===edge.fromId));assert.ok(WORLD_ROUTES.some(r=>r.id===pick.routeId));}
  for(const a of DISCOVERY_ACTIVITIES){const [area,id,experiment]=a.hash.split('/');assert.ok(a.text.length>40&&a.title.length>10);if(area==='labs')assert.ok(id==='experiment'?EXPERIMENT_SEARCH.some(e=>e.id===experiment):LAB_SEARCH.some(l=>l.id===id));if(area==='journeys')assert.ok(JOURNEYS.some(j=>j.id===id));}

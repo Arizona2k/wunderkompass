@@ -147,3 +147,30 @@ test('Überwachung meldet ResizeObserver-Schleifen in jeder Engine', () => {
   for (const {name, fn} of fenster) if (name === 'error') fn({message: 'ResizeObserver loop completed with undelivered notifications.'});
   assert.deepEqual(proof.consoleErrors, ['[chromium] ResizeObserver loop completed with undelivered notifications.']);
 });
+
+// React meldet einen Renderfehler, den es selbst repariert hat (#520), nur als Hülle; die Ursache steht in `error.cause`.
+// Die Überwachung schickt Ursache und Adresse mit. Ohne das zeigte die CI-Vollprüfung (Lauf 253, Firefox) nur „#520“.
+test('Überwachung nennt Ursache und Adresse eines reparierten React-Renderfehlers', () => {
+  const handler = {}, skripte = [];
+  const page = {
+    on: (name, fn) => { (handler[name] ??= []).push(fn); },
+    addInitScript: fn => { skripte.push(fn); return Promise.resolve(); },
+    mainFrame: () => null,
+  };
+  const proof = browserErrorArrays();
+  monitorBrowserErrors(page, 'http://127.0.0.1:4173', proof, {engine: 'firefox'});
+  const fenster = [];
+  const melde = type => text => handler.console?.forEach(fn => fn({type: () => type, text: () => text, location: () => ({url: ''})}));
+  const konsole = {error: melde('error'), debug: melde('debug')};
+  for (const skript of skripte) new Function('addEventListener', 'console', 'location', 'return (' + skript + ')()')((name, fn) => fenster.push({name, fn}), konsole, {hash: '#world/topic/people-marie-curie'});
+  const ursache = new TypeError('frage is undefined');
+  const huelle = new Error('Minified React error #520', {cause: ursache});
+  for (const {name, fn} of fenster) if (name === 'error') { fn({message: huelle.message, error: huelle}); fn({message: 'Ohne Ursache', error: new Error('Ohne Ursache')}); }
+  assert.equal(proof.errors.length, 1, 'nur der Fehler mit Ursache bekommt einen Zusatzeintrag; der Seitenfehler selbst kommt über pageerror');
+  assert.match(proof.errors[0], /^\[firefox\] WK-URSACHE \{/);
+  const detail = JSON.parse(proof.errors[0].slice('[firefox] WK-URSACHE '.length));
+  assert.equal(detail.adresse, '#world/topic/people-marie-curie');
+  assert.equal(detail.ursache, 'frage is undefined');
+  assert.match(detail.stapel, /TypeError: frage is undefined/);
+  assert.deepEqual(proof.consoleErrors, []);
+});

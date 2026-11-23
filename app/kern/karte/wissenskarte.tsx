@@ -1,10 +1,11 @@
 'use client';
 // Die neue Wissenskarte (Phase 1, Teilschritt 2). Von oben nach unten:
-// Kopf (Bild, Titel, Einleitung, Vorlesen, Merken), „Rate mal!“, Kurz erklärt, Steckbrief, Schon gewusst?,
+// Kopf (Bild, Titel, Einleitung, Vorlesen, Merken), „Rate mal!“, Kurz erklärt (Pilot-Karten: Häppchen und „Für Große“),
+// „Stimmt das?“ (Pilot-Karten), Steckbrief, Schon gewusst?,
 // Ausprobieren, Mehr erfahren, Für Erwachsene, Dazu passt, Bildnachweise auf dieser Seite.
 // Pass-Kopplung wie bei der alten Karte: dieselbe Hülle (SavedGame 'topic:<id>'), dieselben Schlüssel,
 // dieselben Aufrufe für Merken, „gelernt“ und Wiederholung.
-import {Fragment, useCallback, useState} from 'react';
+import {Fragment, useCallback, useMemo, useState} from 'react';
 import {ArrowRight, BookOpen, Check, Compass, Heart, Lightbulb, Users, Volume2} from 'lucide-react';
 import {LearningDetails} from '../../learning-components';
 import {LearningMotion} from '../../learning-motion';
@@ -21,7 +22,8 @@ import BildnachweiseAufDieserSeite from './bildnachweise';
 import DazuPasst from './dazu-passt';
 import Kartenbild from './kartenbild';
 import MehrErfahren from './mehr-erfahren';
-import RateMal, {useAntwortReihe} from './rate-mal';
+import RateMal, {antwortReihe} from './rate-mal';
+import StimmtDas from './stimmt-das';
 import {dazuPasst, ersteFrage, hatAusprobieren, kartenFragen, weitereVerbindungen} from './karten-daten';
 import './karte.css';
 
@@ -78,9 +80,16 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Titel = embedded ? 'h2' : 'h1';
   const Abschnitt = embedded ? 'h3' : 'h2';
   const Unterabschnitt = embedded ? 'h4' : 'h3';
-  // Die Frage wird beim Öffnen einmal gewählt und wechselt nicht, während das Kind antwortet.
-  const [frage] = useState(() => ersteFrage(kartenFragen(t, HINTS as Record<string, {steps: string[]}>), a.progress.review));
-  const auswahl = useAntwortReihe(frage);
+  // Die Frage wird beim Öffnen einmal gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue, dann die fällige)
+  // und wechselt nur über „Noch eine Frage“, nie von selbst, während das Kind antwortet.
+  // Danach kommt die nächste Frage der Karte, am Ende wieder die erste.
+  const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]}>), [t]);
+  const [nummer, setNummer] = useState(() => fragen.indexOf(ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id])));
+  const [weitergeblaettert, setWeitergeblaettert] = useState(false);
+  const frage = fragen[nummer];
+  // Dieselbe Reihenfolge wie in „Rate mal!“ (dort aus demselben Spielstand gelesen).
+  const auswahl = antwortReihe(frage, a.progress.gameSessions['topic:' + t.id]?.[frage.itemsKey]);
+  const weiter = fragen.length > 1 ? () => { setNummer(n => (n + 1) % fragen.length); setWeitergeblaettert(true); } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
   const welt = WORLD_CATEGORIES.find(c => c.id === t.category);
   const kontext = t.history?.date ?? t.person?.field;
@@ -92,6 +101,41 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const nachbarKarte = kacheln.find(k => k.art === 'karte');
   const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
   const vorlesen = () => a.onRead([t.title, t.intro, 'Rate mal!', frage.question.prompt, ...auswahl].map(satz).join(' '));
+
+  // Die Absätze von „Kurz erklärt“ (mit Fotosynthese-Zeichnung und Arbeitsweg der Personen).
+  const absaetze = (
+    <>
+      {t.paragraphs.map((absatz, i) => (
+        <Fragment key={i}>
+          <p>{absatz}</p>
+          {t.id === 'science-photosynthesis' && i === 0 && (
+            <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
+              <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
+              <figure>
+                <PhotosynthesisRolesDrawing/>
+                <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
+              </figure>
+            </section>
+          )}
+        </Fragment>
+      ))}
+      {t.person && (
+        <div className="contribution-flow">
+          <div>
+            <Compass size={23} aria-hidden="true"/>
+            <strong>Das Arbeitsgebiet</strong>
+            <p>{t.person.field}</p>
+          </div>
+          <ArrowRight size={23} aria-hidden="true"/>
+          <div>
+            <Users size={23} aria-hidden="true"/>
+            <strong>So wurde geforscht</strong>
+            <p>{t.person.method}</p>
+          </div>
+        </div>
+      )}
+    </>
+  );
 
   return (
     <article className={`wissenskarte wissenskarte-welt-${t.category}${embedded ? ' wissenskarte-eingebettet' : ''}`}>
@@ -117,51 +161,45 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
       </header>
 
       <RateMal
+        key={frage.id}
         frage={frage}
-        auswahl={auswahl}
         ueberschrift={Abschnitt}
         onLearn={() => a.onLearn(t.id)}
         onReview={a.onReview}
         onRead={a.onRead}
+        onWeiter={weiter}
+        fokus={weitergeblaettert}
       />
 
       <section className="world-short wissenskarte-abschnitt" tabIndex={-1}>
         <Abschnitt>Kurz erklärt</Abschnitt>
-        {t.learning && (
-          <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre">
-            <p>{t.learning.starter}</p>
-          </LearningDetails>
-        )}
-        {t.paragraphs.map((absatz, i) => (
-          <Fragment key={i}>
-            <p>{absatz}</p>
-            {t.id === 'science-photosynthesis' && i === 0 && (
-              <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
-                <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
-                <figure>
-                  <PhotosynthesisRolesDrawing/>
-                  <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
-                </figure>
-              </section>
+        {t.chapters ? (
+          <>
+            {t.chapters.map(kapitel => (
+              <Fragment key={kapitel.question}>
+                <Unterabschnitt className="wissenskarte-haeppchen">{kapitel.question}</Unterabschnitt>
+                <p>{kapitel.text}</p>
+              </Fragment>
+            ))}
+            {/* Kein Wissen geht verloren: Die bisherigen Absätze stehen unverändert unter „Für Große“.
+                „Ganz einfach“ entfällt hier, die Häppchen sind die einfache Fassung; der Satz steht oben in „Ausprobieren“. */}
+            <LearningDetails className="wissenskarte-fuer-grosse" summary="Für Große">
+              {absaetze}
+            </LearningDetails>
+          </>
+        ) : (
+          <>
+            {t.learning && (
+              <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre">
+                <p>{t.learning.starter}</p>
+              </LearningDetails>
             )}
-          </Fragment>
-        ))}
-        {t.person && (
-          <div className="contribution-flow">
-            <div>
-              <Compass size={23} aria-hidden="true"/>
-              <strong>Das Arbeitsgebiet</strong>
-              <p>{t.person.field}</p>
-            </div>
-            <ArrowRight size={23} aria-hidden="true"/>
-            <div>
-              <Users size={23} aria-hidden="true"/>
-              <strong>So wurde geforscht</strong>
-              <p>{t.person.method}</p>
-            </div>
-          </div>
+            {absaetze}
+          </>
         )}
       </section>
+
+      {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt}/>}
 
       {t.facts.length > 0 && (
         <section className="wissenskarte-abschnitt wissenskarte-steckbrief">

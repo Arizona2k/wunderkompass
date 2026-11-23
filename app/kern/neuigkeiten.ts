@@ -11,6 +11,7 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
+  {id: 'stimmt-das', datum: '2026-11-22', symbol: 'lupe', titel: 'Neu bei zwölf Karten: Stimmt das?', text: 'Prüfe eine Behauptung und rate weitere Fragen. Auf jeder Karte steht jetzt, warum die Nachbarkarte dazu passt.'},
   {id: 'neue-wissenskarten', datum: '2026-11-22', symbol: 'lupe', titel: 'Die Wissenskarten sind neu gemacht', text: 'Erst raten, dann lesen. Unten auf jeder Karte findest du, was dazu passt.'},
   {id: 'reisen-einfach', datum: '2026-11-22', symbol: 'globus', titel: 'Lernreisen beginnen ganz leicht', text: 'Jedes Kapitel beginnt mit ein paar kurzen Sätzen. Mehr steht unter „Für Große“.'},
   {id: 'neue-leiste', datum: '2026-11-21', symbol: 'kompass', titel: 'Neue Leiste, neue Schrift', text: 'Alle Bereiche findest du jetzt in einer Leiste. Die Schrift ist runder und leichter zu lesen.'},

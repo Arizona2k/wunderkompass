@@ -6,6 +6,7 @@ import {KNOWLEDGE_CONNECTIONS,connectionsFor} from '../app/knowledge-connections
 import {dailyDiscovery,differentDiscovery,discoveryVisit,localDiscoveryDay,DISCOVERY_IDLE_MS} from '../app/discovery-visit.mjs';
 import {WORLD_ROUTES as routes} from '../app/world-index.ts';
 import {execFileSync} from 'node:child_process';
+import {homeMediaCheck} from '../scripts/home-media.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const topics=read('../app/world-catalog.json');
 
@@ -34,9 +35,20 @@ test('Home photo questions grow from the canonical article and existing rights m
 });
 
 test('Home connection selection grows from canonical edges sharing a published route',()=>{
- const projection=read('../app/discovery-connections.json'),index=read('../app/world-index.json');assert(projection.length>DISCOVERY_CONNECTIONS.length);
- for(const edge of projection){const original=KNOWLEDGE_CONNECTIONS.find(c=>c.id===edge.id),route=routes.find(r=>r.id===edge.routeId);assert(original);for(const key of ['fromId','toId','kind','why','checkedAt'])assert.equal(edge[key],original[key]);const curated=DISCOVERY_CONNECTIONS.find(t=>t.id===edge.id);if(curated){assert.equal(route.id,curated.routeId);assert(route.topics.includes(edge.fromId)||route.topics.includes(edge.toId),'preserve the existing thematic continuation');}else assert(route.topics.includes(edge.fromId)&&route.topics.includes(edge.toId));for(const id of [edge.fromId,edge.toId])assert(index.some(t=>t.id===id&&!t.sensitive));assert(edge.question&&edge.label);assert.equal(edge.question,curated?.question??topics.find(t=>t.id===edge.fromId).question.prompt,'use an actual published question, not a sentence generated from article titles');}
- const expected=KNOWLEDGE_CONNECTIONS.filter(c=>routes.some(r=>r.topics.includes(c.fromId)&&r.topics.includes(c.toId))&&[c.fromId,c.toId].every(id=>index.some(t=>t.id===id&&!t.sensitive))).map(c=>c.id).sort();assert.deepEqual(projection.map(c=>c.id).sort(),expected);
+ const projection=read('../app/discovery-connections.json'),index=read('../app/world-index.json'),bild=homeMediaCheck();assert(projection.length>DISCOVERY_CONNECTIONS.length);
+ for(const edge of projection){const original=KNOWLEDGE_CONNECTIONS.find(c=>c.id===edge.id),route=routes.find(r=>r.id===edge.routeId);assert(original);assert.deepEqual(Object.keys(edge),['id','fromId','toId','why','label','question','routeId'],'nur Felder, die die Startseite liest');for(const key of ['fromId','toId','why'])assert.equal(edge[key],original[key]);const curated=DISCOVERY_CONNECTIONS.find(t=>t.id===edge.id);if(curated){assert.equal(route.id,curated.routeId);assert(route.topics.includes(edge.fromId)||route.topics.includes(edge.toId),'preserve the existing thematic continuation');}else assert(route.topics.includes(edge.fromId)&&route.topics.includes(edge.toId));for(const id of [edge.fromId,edge.toId])assert(index.some(t=>t.id===id&&!t.sensitive));assert(edge.question&&edge.label);assert.equal(edge.question,curated?.question??topics.find(t=>t.id===edge.fromId).question.prompt,'use an actual published question, not a sentence generated from article titles');}
+ const expected=KNOWLEDGE_CONNECTIONS.filter(c=>routes.some(r=>r.topics.includes(c.fromId)&&r.topics.includes(c.toId))&&[c.fromId,c.toId].every(id=>index.some(t=>t.id===id&&!t.sensitive)&&bild(index.find(t=>t.id===id)))).map(c=>c.id).sort();assert.deepEqual(projection.map(c=>c.id).sort(),expected);
+});
+
+// „Eine Frage. Zwei Welten.“ zeigt beide Karten mit Bild (Browser-Test discoveryPairMedia). Der Export darf darum
+// keine Spur anlegen, bei der eine Seite leer bliebe, auch nicht für neue Verbindungen (Befund Aufgabe 9: Licht–Stromkreis).
+test('jede Wissensspur der Startseite zeigt auf beiden Seiten ein Bild',()=>{
+ const index=read('../app/world-index.json'),bild=homeMediaCheck(),karte=id=>index.find(t=>t.id===id);
+ // Die Regel erkennt alle Bildarten von DiscoveryTopicMedia: Foto, Zeichnungen, Orte – und eine Karte ohne all das.
+ for(const id of ['animal-african-savanna-elephant','science-coral-reef','science-water-cycle','science-photosynthesis','history-iss','invention-light'])assert.ok(bild(karte(id)),id+' zeigt ein Bild');
+ assert.equal(bild(karte('science-circuit')),false,'Stromkreis hat auf der Startseite noch kein Bild');
+ const leer=read('../app/discovery-connections.json').filter(c=>!bild(karte(c.fromId))||!bild(karte(c.toId))).map(c=>c.id);
+ assert.deepEqual(leer,[]);
 });
 
 const pools={heroes:['bee','elephant','bridge'],trails:['moon-sea','bee-flower','reef'],random:()=>0};

@@ -15,6 +15,7 @@ import {bookMeasurementContent} from './book-measurement-index.mjs';
 import {journeyContent} from './journey-content-index.mjs';
 import {worldPhotoIndex,corePhotoIds} from './world-photo-index.mjs';
 import {sourceConstant as constant} from './source-constant.mjs';
+import {homeMediaCheck} from './home-media.mjs';
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import crypto from 'node:crypto';import ts from 'typescript';
 worldPhotoIndex(process.argv.includes('--check'));
 const measurement=bookMeasurementContent(process.argv.includes('--check'));
@@ -39,11 +40,14 @@ const graph=JSON.parse(fs.readFileSync(path.join(root,'app/world-connections.jso
 const trails=constant('app/discovery-data.ts','DISCOVERY_CONNECTIONS'),trailIds=trails.map(t=>t.id);
 if(new Set(trailIds).size!==trailIds.length)throw Error('Duplicate discovery trail');
 const publishedIndex=JSON.parse(fs.readFileSync(path.join(root,'app/world-index.json'),'utf8')),publishedRoutes=constant('app/world-index.ts','WORLD_ROUTES');
+// Die Startseite zeigt beide Karten einer Spur mit Bild; ohne Bild auf einer Seite bleibt die Verbindung nur auf der Wissenskarte.
+// Mit dabei sind nur die Felder, die die Startseite liest (kind und checkedAt nicht: kleinere Startdatei).
+const hasHomeMedia=homeMediaCheck();
 const discoveryIndex=graph.flatMap(edge=>{
  const from=publishedIndex.find(t=>t.id===edge.fromId),to=publishedIndex.find(t=>t.id===edge.toId),curated=trails.find(t=>t.id===edge.id);
  const route=publishedRoutes.find(r=>r.id===curated?.routeId)??publishedRoutes.find(r=>r.topics.includes(edge.fromId)&&r.topics.includes(edge.toId));
- if(!from||!to||from.sensitive||to.sensitive||!route)return [];
- return [{...edge,label:curated?.label??from.title+' & '+to.title,question:curated?.question??canonicalTopics.find(t=>t.id===from.id).question.prompt,routeId:route.id}];
+ if(!from||!to||from.sensitive||to.sensitive||!route||!hasHomeMedia(from)||!hasHomeMedia(to))return [];
+ return [{id:edge.id,fromId:edge.fromId,toId:edge.toId,why:edge.why,label:curated?.label??from.title+' & '+to.title,question:curated?.question??canonicalTopics.find(t=>t.id===from.id).question.prompt,routeId:route.id}];
 });
 for(const id of trailIds)if(discoveryIndex.filter(c=>c.id===id).length!==1)throw Error('Missing or ambiguous discovery connection '+id);
 const discoveryIndexFile=path.join(root,'app/discovery-connections.json'),discoveryIndexText=JSON.stringify(discoveryIndex,null,2)+'\n';

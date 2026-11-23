@@ -55,6 +55,11 @@
 .bildnachweise [role="status"] { padding: 6px 0 2px; }
 
 @media (max-width: 560px) {
+  /* Mondphasen im Kartenkopf: vier Bilder im 2×2-Raster waren je 151–190 px hoch, der Kopf 527–587 px (Design-Prüfung
+     22.11.2026). Mit 88 px bleibt er unter 400 px; der Abstand oben hält das Kennwort „Zeichnung“ vom Neumond fern. */
+  .kartenbild-gross .moon-diagram { padding-top: 18px; }
+  .kartenbild-gross .moon-diagram .topic-diagram-panel svg { height: 88px; }
+  .kartenbild-gross .moon-diagram .topic-diagram-label { padding-bottom: 4px; }
   .kartenbild-motiv { min-height: 200px; }
   .kartenbild-symbol { width: 88px; height: 88px; }
   .kartenbild-motiv-titel { font-size: 22px; }
@@ -100,6 +105,13 @@
 .large-reading .wissenskarte-einleitung { font-size: 21px !important; }
 .wissenskarte .rate-mal .quiz-answers { margin-top: 16px; gap: 10px; }
 .wissenskarte .rate-mal .quiz-answer { min-height: 56px; font-size: 18px; }
+/* Antwortknöpfe mit deutlichem Rand (mindestens 3:1 zum Grund); der helle Standardrand (#dce7eb) hob sich kaum ab
+   (Design-Prüfung 22.11.2026). Markierte Knöpfe behalten ihre Farbe, nur die Randbreite bleibt gleich. */
+.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer { border-width: 2px; }
+.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:not(.is-correct):not(.is-incorrect) { border-color: #6f8d97; }
+/* Nach dem Tippen sind die Knöpfe gesperrt, bleiben aber voll lesbar: Kinder lesen die übrigen Antworten zum Vergleichen
+   noch einmal. Die alte Regel button:disabled (globals.css) blasste sie auf Deckkraft 0,65 ab, Kontrast etwa 3,2:1. */
+.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:disabled { opacity: 1; }
 /* Denkhinweis: ganze Zeile tippbar (48 px), Schrift 16 px. */
 .wissenskarte .world-game-hint { padding: 0 18px; }
 .wissenskarte .world-game-hint[open] { padding-bottom: 14px; }
@@ -111,6 +123,32 @@
 .wissenskarte-abschnitt > :is(h2, h3):first-child { margin: 0 0 10px; font-size: 24px; line-height: 1.3; }
 .wissenskarte .world-short { scroll-margin-top: 24px; }
 .wissenskarte .world-short > p { max-width: 65ch; margin: 0 0 12px; font-size: 18px; line-height: 1.7; }
+/* Häppchen (Pilot-Karten): kurze Frage als Überschrift, darunter ein bis zwei Sätze. */
+.wissenskarte .world-short .wissenskarte-haeppchen { margin: 18px 0 4px; font-size: 20px; line-height: 1.35; color: var(--motiv-text); }
+.wissenskarte .world-short > :is(h2, h3):first-child + .wissenskarte-haeppchen { margin-top: 0; }
+/* „Für Große“: die bisherigen Absätze, zu Beginn zu. */
+.wissenskarte .wissenskarte-fuer-grosse { margin-top: 14px; padding: 0 18px; border: 1px solid #d3e2e6; border-radius: 16px; background: #fff; }
+.wissenskarte .wissenskarte-fuer-grosse > summary { display: flex; align-items: center; min-height: 48px; font-size: 17px; font-weight: 700; color: var(--motiv-text); }
+.wissenskarte .wissenskarte-fuer-grosse[open] > summary { margin-bottom: 8px; }
+.wissenskarte .wissenskarte-fuer-grosse > p { max-width: 65ch; margin: 0 0 12px; font-size: 17px; line-height: 1.7; }
+.wissenskarte .wissenskarte-fuer-grosse > .contribution-flow { margin-bottom: 16px; }
+
+/* „Stimmt das?“: eine Behauptung, zwei große Knöpfe, danach die Auflösung. */
+.wissenskarte .stimmt-das { padding: 20px; border: 2px dashed var(--motiv-stark); border-radius: 20px; }
+.wissenskarte .stimmt-das-behauptung { margin: 0; font-size: 20px; font-weight: 700; line-height: 1.4; }
+.large-reading .wissenskarte .stimmt-das-behauptung { font-size: 22px !important; }
+.wissenskarte .stimmt-das-knoepfe { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.wissenskarte .stimmt-das .quiz-answer { justify-content: center; min-height: 56px; font-size: 18px; font-weight: 700; }
+/* „Noch eine Frage“ und „Noch einmal raten“ nebeneinander, auf dem Handy untereinander. */
+.wissenskarte .rate-mal-weiter { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+/* Beide in Antwortgröße (vorher 14 px); „Noch einmal raten“ mit Rand, damit es als Knopf zu erkennen ist.
+   !important, weil globals.css .speech-button (also „Noch einmal raten“) mit !important auf 14 px setzt. */
+.wissenskarte .rate-mal-weiter button { min-height: 48px; font-size: 18px !important; }
+.wissenskarte .rate-mal-weiter .speech-button {
+  margin: 0; padding: 10px 18px; border: 2px solid var(--motiv-symbol); border-radius: 14px;
+  background: #fff; color: var(--motiv-text); font-weight: 700;
+}
+
 .wissenskarte .world-facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; margin: 0; }
 .wissenskarte .world-facts dt { font-size: 14px; letter-spacing: 0; text-transform: none; }
 .wissenskarte .world-facts dd { font-size: 17px; }
@@ -158,14 +196,16 @@
 
 /* Zeichen zum Aufklappen: Ein Pfeil rechts zeigt schon zugeklappt, dass sich hier etwas öffnet; offen zeigt er nach oben.
    Die Zeilen sind flex, dabei fällt das eingebaute Dreieck weg (Safari zeigt es sonst zusätzlich). */
-.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary { list-style: none; }
-.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary::-webkit-details-marker { display: none; }
-.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint) > summary::after {
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .wissenskarte-fuer-grosse, .bildnachweise, .world-game-hint) > summary { list-style: none; }
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .wissenskarte-fuer-grosse, .bildnachweise, .world-game-hint) > summary::-webkit-details-marker { display: none; }
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .wissenskarte-fuer-grosse, .bildnachweise, .world-game-hint) > summary::after {
   content: ""; flex-shrink: 0; width: 10px; height: 10px; margin: 0 6px 5px auto;
   border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg);
 }
-.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .bildnachweise, .world-game-hint)[open] > summary::after { margin-bottom: -5px; transform: rotate(-135deg); }
+.wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .wissenskarte-fuer-grosse, .bildnachweise, .world-game-hint)[open] > summary::after { margin-bottom: -5px; transform: rotate(-135deg); }
 .wissenskarte-laedt { margin: 0 0 20px; }
+/* „Ganz einfach“ über den Bausteinen (Karten mit Häppchen): derselbe Abstand wie zwischen den Bausteinen. */
+.wissenskarte-ausprobieren-einstieg { margin: 0 0 24px; }
 .wissenskarte-bausteine { display: grid; gap: 24px; min-width: 0; padding-bottom: 20px; }
 .wissenskarte-bausteine > * { min-width: 0; }
 .wissenskarte-ausprobieren .article-experiment { min-width: 0; }
@@ -195,6 +235,10 @@
 .dazu-passt-bild .kartenbild { border-radius: 0; }
 .dazu-passt-bild .world-photo img { width: 100%; height: 150px; object-fit: cover; }
 .dazu-passt-bild .kartenbild-motiv { min-height: 150px; }
+/* Motivkachel ohne eigenen Titel: Er steht direkt darunter als Kacheltitel und würde in der kleinen Fläche abgeschnitten. */
+.dazu-passt-bild .kartenbild-motiv { justify-content: center; }
+.dazu-passt-bild .kartenbild-motiv-titel { display: none; }
+.dazu-passt-bild .kartenbild-symbol { align-self: center; }
 .dazu-passt-symbol {
   display: flex; align-items: center; justify-content: center; height: 150px;
   background: linear-gradient(150deg, var(--motiv-stark) 0%, var(--motiv-grund) 72%); color: var(--motiv-symbol);
@@ -202,10 +246,44 @@
 .dazu-passt-symbol svg { width: 72px; height: 72px; }
 .dazu-passt-titel { display: block; padding: 14px 16px 0; font-size: 19px; font-weight: 800; line-height: 1.3; overflow-wrap: anywhere; }
 .dazu-passt-text { display: block; padding: 6px 16px 16px; font-size: 16px; line-height: 1.5; color: var(--kern-text-leise, #4a626b); }
+/* Zeichnung aus mehreren Bildern (Mondphasen, Gezeiten, Strömungen): in der Kachel eine Reihe kleiner Bilder
+   ohne Beschriftung, etwa so hoch wie ein Foto. Vorher 2 × 2 Bilder mit Beschriftung: bis 900 px hoch,
+   Wörter mitten im Wort getrennt (Design-Prüfung 22.11.2026). Die ganze Zeichnung zeigt die Karte selbst. */
+.dazu-passt-bild .topic-diagram { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+.dazu-passt-bild .topic-illustration.compact .topic-diagram-panel svg { height: 96px; }
+.dazu-passt-bild .topic-diagram-label { display: none; }
+/* Auch die Legende der Zeichnung steht nur auf der Karte selbst; in der Kachel machte sie die Zeichnung 171 statt 112 px hoch
+   (Design-Prüfung 22.11.2026). Das Kennwort „Zeichnung“ bleibt sichtbar. */
+.dazu-passt-bild .topic-illustration figcaption { display: none; }
+
+/* Sehr schmal: „Stimmt nicht“ passt nicht mehr neben „Stimmt“, darum untereinander (statt zweizeilig, 84 px hoch). */
+@media (max-width: 379px) {
+  .wissenskarte .stimmt-das-knoepfe { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 560px) {
   .wissenskarte-aufklapper { padding: 0 16px; }
+  .wissenskarte .rate-mal-weiter button { flex: 1 1 100%; }
   /* Modelle und Zeichnungen brauchen auf dem Handy jede Breite. */
   .wissenskarte-ausprobieren { padding: 0 12px; }
   .dazu-passt-bild .world-photo img, .dazu-passt-bild .kartenbild-motiv, .dazu-passt-symbol { height: 120px; min-height: 120px; }
+  /* Globus, Spiel, Labor und Reise als kompakte Zeilen: Symbol links, Titel und Satz rechts.
+     Die Nachbarkarte bleibt eine große Bildkachel, damit ihr Satz „warum“ breit und gut lesbar bleibt. */
+  .dazu-passt-kachel:is(.dazu-passt-globus, .dazu-passt-link, .dazu-passt-spiel) {
+    display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: auto 1fr; min-height: 96px;
+  }
+  .dazu-passt-kachel:is(.dazu-passt-globus, .dazu-passt-link, .dazu-passt-spiel) > .dazu-passt-symbol { grid-row: 1 / span 2; height: auto; min-height: 96px; }
+  .dazu-passt-kachel:is(.dazu-passt-globus, .dazu-passt-link, .dazu-passt-spiel) .dazu-passt-symbol svg { width: 48px; height: 48px; }
+  .dazu-passt-kachel:is(.dazu-passt-globus, .dazu-passt-link, .dazu-passt-spiel) > .dazu-passt-titel { padding: 14px 14px 0; font-size: 18px; }
+  .dazu-passt-kachel:is(.dazu-passt-globus, .dazu-passt-link, .dazu-passt-spiel) > .dazu-passt-text { padding: 4px 14px 14px; }
+  /* Steckbrief als ein Kasten: Frage links, Antwort rechts. */
+  .wissenskarte .world-facts { grid-template-columns: 1fr; gap: 0; padding: 4px 16px; border-radius: 16px; background: #f0f6f8; }
+  .wissenskarte .world-facts > div {
+    display: grid; grid-template-columns: minmax(88px, 32%) minmax(0, 1fr); gap: 12px; align-items: baseline;
+    padding: 12px 0; border-radius: 0; background: none;
+  }
+  .wissenskarte .world-facts > div + div { border-top: 1px solid #d3e2e6; }
+  .wissenskarte .world-facts dt { margin: 0; }
+  /* Die drei Aufklapper stehen als Gruppe enger zusammen (Abstand 12 statt 22 px). */
+  .wissenskarte-aufklapper + :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene) { margin-top: -10px; }
 }

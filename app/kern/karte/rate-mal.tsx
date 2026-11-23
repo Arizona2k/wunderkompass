@@ -2,6 +2,8 @@
 // „Rate mal!“: die Startfrage der Karte, weit oben. Verhalten wie die alte Mini-Frage:
 // Falsch zeigt „Überlege noch einmal.“ und den Hinweis, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
+// Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
+import {useEffect, useRef} from 'react';
 import {Check} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import {LearningFeedback} from '../../learning-motion';
@@ -11,27 +13,38 @@ import {shuffle} from '../../../lib/shuffle';
 import type {KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
-// Die Karte ruft das einmal auf und gibt die Reihe an „Rate mal!“ und an „Vorlesen“ weiter,
-// damit beide dieselbe Reihenfolge nutzen. Passt die gespeicherte Reihe nicht mehr zu den Antworten
-// (Frage geändert), gilt die Reihenfolge der Daten.
-export function useAntwortReihe(frage: KartenFrage): readonly string[] {
+// Passt die gespeicherte Reihe nicht mehr zu den Antworten (Frage geändert), gilt die Reihenfolge der Daten.
+// Die Karte nutzt `antwortReihe` mit dem Spielstand aus dem Pass auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
+export function antwortReihe(frage: KartenFrage, gespeichert: unknown): readonly string[] {
   const q = frage.question;
-  const [gespeicherteReihe] = useSavedGame(frage.itemsKey, () => shuffle(q.answers));
-  const reihe = gespeicherteReihe.map(wert => restoreAnswerWording(frage.id, wert));
+  if (!Array.isArray(gespeichert)) return q.answers;
+  const reihe = gespeichert.map(wert => (typeof wert === 'string' ? restoreAnswerWording(frage.id, wert) : wert));
   return reihe.length === q.answers.length && new Set(reihe).size === q.answers.length && reihe.every(a => q.answers.includes(a)) ? reihe : q.answers;
+}
+
+function useAntwortReihe(frage: KartenFrage): readonly string[] {
+  const [gespeicherteReihe] = useSavedGame(frage.itemsKey, () => shuffle(frage.question.answers));
+  return antwortReihe(frage, gespeicherteReihe);
 }
 
 type RateMalProps = {
   frage: KartenFrage;
-  auswahl: readonly string[];
   ueberschrift: 'h2' | 'h3';
   onLearn: () => void;
   onReview: (reviewId: string, correct: boolean) => void;
   onRead: (text: string) => void;
+  // Nur bei Karten mit mehr als einer Frage: „Noch eine Frage“ nach einer richtigen Antwort.
+  onWeiter?: () => void;
+  // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
+  fokus?: boolean;
 };
 
-export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onLearn, onReview, onRead}: RateMalProps) {
+// Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, onRead, onWeiter, fokus = false}: RateMalProps) {
   const q = frage.question;
+  const auswahl = useAntwortReihe(frage);
+  const bereich = useRef<HTMLElement>(null);
+  useEffect(() => { if (fokus) bereich.current?.focus(); }, [fokus]);
   const richtigeAntwort = q.answers[q.correct];
   // Gespeichert unter dem alten Schlüssel (Hauptfrage: topicAnswer), damit frühere Antworten zählen.
   const [gespeicherteAntwort, setAntwort] = useSavedGame<string | null>(frage.answerKey, null);
@@ -47,7 +60,7 @@ export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onL
   }
 
   return (
-    <section className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id}>
+    <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id}>
       <Ueberschrift id={'rate-mal-' + frage.id} className="rate-mal-titel">Rate mal!</Ueberschrift>
       <p className="rate-mal-frage">{q.prompt}</p>
       <div className="quiz-answers">
@@ -67,26 +80,28 @@ export default function RateMal({frage, auswahl, ueberschrift: Ueberschrift, onL
       </div>
       <LearningFeedback active={antwort !== null}>
         {antwort && <>
-          <strong>{fruehereAuswahl ? 'Deine frühere Auswahl bleibt gespeichert' : richtig ? 'Passende Antwort gewählt.' : 'Überlege noch einmal.'}</strong>
+          <strong>{fruehereAuswahl ? 'Hier gibt es neue Antworten.' : richtig ? 'Passende Antwort gewählt.' : 'Überlege noch einmal.'}</strong>
           <p>
             {fruehereAuswahl
-              ? <>Du hattest <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gehört zu früheren Auswahlmöglichkeiten. Oben siehst du die aktuelle Auswahl. Du kannst sie erneut prüfen; die frühere Antwort wird dabei nicht automatisch umgedeutet.</>
+              ? <>Früher hast du <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gibt es jetzt nicht mehr. Wähle oben eine Antwort aus.</>
               : richtig
                 ? q.why
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.')}
           </p>
           {richtig && (
-            <button
-              type="button"
-              className="speech-button"
-              onClick={event => {
-                const bereich = event.currentTarget.closest('.world-mini-question');
-                setAntwort(null);
-                requestAnimationFrame(() => bereich?.querySelector<HTMLButtonElement>('.quiz-answer')?.focus());
-              }}
-            >
-              Noch einmal raten
-            </button>
+            <div className="rate-mal-weiter">
+              {onWeiter && <button type="button" className="primary-button" onClick={onWeiter}>Noch eine Frage</button>}
+              <button
+                type="button"
+                className="speech-button"
+                onClick={() => {
+                  setAntwort(null);
+                  requestAnimationFrame(() => bereich.current?.querySelector<HTMLButtonElement>('.quiz-answer')?.focus());
+                }}
+              >
+                Noch einmal raten
+              </button>
+            </div>
           )}
         </>}
       </LearningFeedback>

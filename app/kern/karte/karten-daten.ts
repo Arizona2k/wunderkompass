@@ -4,6 +4,7 @@
 import type {Mode} from '../../earth-data';
 import type {LocalProgress} from '../../progress-storage';
 import type {WorldPhotoData, WorldQuestion, WorldTopic} from '../../world-types';
+import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
@@ -44,10 +45,18 @@ export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps:
   return [haupt, ...zusatz];
 }
 
-// Welche Frage „Rate mal!“ zeigt: die erste, die das Kind noch nie beantwortet hat.
-// Sind alle schon beantwortet, die am frühesten wieder fällige; bei Gleichstand die frühere.
-export function ersteFrage(fragen: KartenFrage[], review: LocalProgress['review']): KartenFrage {
+// Welche Frage „Rate mal!“ zeigt:
+// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
+//    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
+// 2. sonst die erste, die das Kind noch nie beantwortet hat;
+// 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
+export function ersteFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
+  const offen = fragen.find(frage => {
+    const wert = kartenstand?.[frage.answerKey];
+    return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
+  });
+  if (offen) return offen;
   const ungesehen = fragen.find(frage => review[frage.reviewId] === undefined);
   if (ungesehen) return ungesehen;
   return fragen.reduce((frueheste, frage) => review[frage.reviewId].due < review[frueheste.reviewId].due ? frage : frueheste);
@@ -127,6 +136,11 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
       if (!Number.isInteger(q?.correct) || q.correct < 0 || q.correct >= antworten.length) melde(`moreQuestions[${i}]: correct passt zu keiner Antwort`);
       if (leer(q?.prompt) || leer(q?.why) || leer(q?.hint)) melde(`moreQuestions[${i}]: Frage, Erklärung oder Hinweis fehlt`);
     });
+  }
+
+  // Mit Häppchen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
+  if (topic.chapters !== undefined && topic.learning?.starter && !hatAusprobieren(topic)) {
+    melde('Häppchen und „Ganz einfach“: Der Satz braucht „Ausprobieren“, sonst geht er verloren');
   }
   return fehler;
 }

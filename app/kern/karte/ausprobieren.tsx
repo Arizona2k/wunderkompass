@@ -52,6 +52,10 @@ export default function Ausprobieren({topic, actions}: {topic: WorldTopic; actio
       onToggle={event => { if (event.currentTarget.open) setGeoeffnet(true); }}
     >
       <summary>Ausprobieren</summary>
+      {/* Karten mit Häppchen zeigen „Ganz einfach“ nicht in „Kurz erklärt“. Bei Personen ist der Satz die Anleitung
+          zum Versuch hier unten; darum steht er über den Bausteinen und ist sofort da (große Prüfung, Aufgabe 13).
+          kartenFeldFehler meldet Karten mit Häppchen und diesem Satz, die kein „Ausprobieren“ haben. */}
+      {topic.chapters && topic.learning?.starter && <p className="wissenskarte-ausprobieren-einstieg">{topic.learning.starter}</p>}
       {/* Lädt das Skript nicht, bleibt der Fehler in diesem Bereich; die Karte darüber bleibt stehen. */}
       {geoeffnet && (
         <NochEinmal key={versuch} onRetry={() => { neuerVersuch(); setVersuch(n => n + 1); }}>

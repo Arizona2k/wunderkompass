@@ -2,7 +2,7 @@
 // Die Grundlage läuft schmal mit Touch (320 × 568) und breit (1440 × 900),
 // die Hülle bei 320 und 390 px mit Touch sowie bei 768 und 1440 px.
 import assert from 'node:assert/strict';
-import {withPage, ready, bildanfragen} from './harness.mjs';
+import {withPage, ready, ladeanfragen} from './harness.mjs';
 import {homeContrast} from './discovery-central.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
@@ -307,14 +307,14 @@ async function grosseSchrift320(ctx) {
       if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save));
     }, {key: SAVE_KEY, save: pass});
     const page = await context.newPage();
-    const bilderFertig = bildanfragen(page);
+    const anfragenFertig = ladeanfragen(page);
     ctx.monitor(page);
     await page.goto(ctx.base);
     await ready(page);
     await page.locator('.earth-app.large-reading').waitFor();
     await leiste(page, 320, '320 große Schrift');
     // Auf der Startseite, bevor die Platzhalter-Prüfung in andere Bereiche wechselt.
-    await alleStartfragen(page, ctx.engine, bilderFertig);
+    await alleStartfragen(page, ctx.engine, anfragenFertig);
     await platzhalterPassen(page, '320 große Schrift');
     await suchfeldRahmen(page, '320 große Schrift');
     // „Was ist neu?“ mit großer Schrift: der engste Fall für ganze Wörter.
@@ -655,14 +655,14 @@ async function kurzeWoerterGanz(page, wo) {
 // das fiel nur auf, wenn der Zufall sie traf. Jede Frage kommt über den echten Rückweg der App auf die
 // Seite: Motiv im Verlaufseintrag der Startseite (history.state.wunderHero), kurz weg, dann Zurück.
 // Neuladen taugt dafür nicht: Beim Verlassen (pagehide) schreibt die App das angezeigte Motiv zurück.
-// Vor dem Weggehen laden die Bilder fertig (Abbrüche zählen sonst als Browserfehler, siehe bildanfragen).
+// Vor dem Weggehen lädt alles fertig (Abbrüche zählen sonst als Browserfehler, siehe ladeanfragen).
 // Gemessen wird gegen documentElement.clientWidth, nicht innerWidth: Chromium im Handy-Modus (isMobile)
 // vergrößert innerWidth mit dem Überlauf, die Prüfung wäre dort blind.
-async function alleStartfragen(page, engine, bilderFertig) {
+async function alleStartfragen(page, engine, anfragenFertig) {
   const funde = [];
   for (const motiv of HOME_MOTIFS) {
     await page.evaluate(id => history.replaceState({...history.state, wunderHero: id}, '', location.href), motiv.id);
-    await bilderFertig();
+    await anfragenFertig();
     await navigationsTempo(page, engine);
     await page.evaluate(() => { location.hash = 'updates'; });
     await page.locator('#updates-title').waitFor(WARTEN);

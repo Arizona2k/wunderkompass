@@ -3,7 +3,7 @@
     "id": "animal-african-savanna-elephant",
     "category": "animals",
     "title": "Afrikanischer Savannenelefant",
-    "intro": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+    "intro": "Der Savannenelefant lebt in Afrika und ist das größte Tier an Land.",
     "paragraphs": [
       "Verwandte Weibchen leben mit ihren Jungen in Familien. Ein erfahrenes Weibchen führt sie.",
       "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen."
@@ -24,18 +24,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Mit dem Rüssel kann er riechen, greifen und Wasser ins Maul bringen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Der Savannenelefant ist stark gefährdet. Er braucht sichere Lebensräume und Schutz vor Wilderei."
       }
     ],
     "more": [
@@ -66,6 +54,10 @@
       {
         "label": "African savanna elephants – WWF US",
         "url": "https://www.worldwildlife.org/species/elephant/african-elephant/african-savanna-elephant/"
+      },
+      {
+        "label": "San Diego Zoo Wildlife Alliance: Elefanten",
+        "url": "https://animals.sandiegozoo.org/animals/elephant"
       }
     ],
     "aliases": [
@@ -124,7 +116,63 @@
       ],
       "correct": 0,
       "why": "Der Rüssel ist Nase und bewegliches Greifwerkzeug zugleich."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Was steckt im Rüssel?",
+        "text": "Nase und Oberlippe bilden zusammen den Rüssel. Darin gibt es keine Knochen, nur Muskeln."
+      },
+      {
+        "question": "Wozu die großen Ohren?",
+        "text": "Seine großen, dünnen Ohren helfen ihm, sich abzukühlen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-african-savanna-elephant:stimmt-1",
+        "text": "Bei Savannenelefanten haben auch die Weibchen Stoßzähne.",
+        "isTrue": true,
+        "explanation": "Bei Afrikanischen Elefanten haben meist auch die Weibchen Stoßzähne, nur etwas kleinere."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-african-savanna-elephant:rate-1",
+        "prompt": "Wie trinkt ein Elefant?",
+        "answers": [
+          "Er spritzt sich Wasser ins Maul",
+          "Er schluckt es direkt durch den Rüssel",
+          "Er schleckt Wasser wie ein Hund"
+        ],
+        "correct": 0,
+        "why": "Er saugt Wasser ein Stück weit in den Rüssel. Dann spritzt er es sich ins Maul und schluckt.",
+        "hint": "Der Rüssel ist auch seine Nase."
+      },
+      {
+        "id": "animal-african-savanna-elephant:rate-2",
+        "prompt": "Wie schwer ist ein Elefantenbaby bei der Geburt?",
+        "answers": [
+          "Etwa 3 Kilogramm",
+          "Etwa 100 Kilogramm",
+          "Etwa 1.000 Kilogramm"
+        ],
+        "correct": 1,
+        "why": "Ein Savannenelefant wiegt bei der Geburt rund 100 Kilogramm. Nach etwa 20 Minuten kann er schon stehen.",
+        "hint": "Denk daran, wie riesig seine Eltern sind."
+      },
+      {
+        "id": "animal-african-savanna-elephant:rate-3",
+        "prompt": "Wer führt eine Elefantenherde an?",
+        "answers": [
+          "Der größte und stärkste Bulle",
+          "Ein junges Männchen",
+          "Meist das älteste Weibchen"
+        ],
+        "correct": 2,
+        "why": "Meist führt das älteste Weibchen die Herde, die Leitkuh. Erwachsene Männchen leben allein oder in kleinen Gruppen.",
+        "hint": "In der Herde leben Mütter mit ihren Jungen."
+      }
+    ]
   },
   {
     "id": "animal-lion",
@@ -151,18 +199,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Löwen leben vor allem in afrikanischen Savannen und offenen Wäldern. Eine kleine Population lebt in Indien."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Beim Jagen können sie ihre Beute von verschiedenen Seiten überraschen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Löwen gelten weltweit als gefährdet. Sichere Lebensräume und genug Beutetiere helfen ihnen."
       }
     ],
     "more": [
@@ -278,18 +314,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Geparden brauchen viel Platz. Sie leben zum Beispiel in Savannen und Grasländern Namibias, Botswanas, Kenias und Tansanias."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Geparden können für kurze Zeit sehr schnell sprinten."
-      },
-      {
-        "label": "Schutz",
-        "text": "Geparden sind gefährdet. Immer mehr ihres Lebensraums geht verloren."
       }
     ],
     "more": [
@@ -401,18 +425,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Bengaltiger leben in Indien, Nepal, Bhutan und Bangladesch – in Wäldern, Grasland und auch Mangroven."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Ein Tiger kann sich leise an seine Beute anschleichen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Tiger gelten als stark gefährdet. Auch Bengaltiger brauchen geschützte Lebensräume."
       }
     ],
     "more": [
@@ -521,18 +533,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Giraffen leben in afrikanischen Savannen und offenen Wäldern. Netzgiraffen leben zum Beispiel im Norden Kenias."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Mit der langen Zunge erreichen sie Blätter zwischen dornigen Zweigen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Es gibt vier Giraffenarten. Sie brauchen je nach Art und Region unterschiedlichen Schutz."
       }
     ],
     "more": [
@@ -649,18 +649,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Pandas leben in kühlen Bergwäldern Chinas, zum Beispiel in Sichuan. Dort wächst viel Bambus."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Starke Zähne und Kiefer helfen ihnen, harten Bambus zu zerbeißen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Pandas gelten als gefährdet. Verbundene Bambuswälder helfen ihnen, Nahrung und andere Pandas zu finden."
       }
     ],
     "more": [
@@ -774,18 +762,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt in Regen- und Sumpfwäldern im Kongobecken, zum Beispiel in Gabun und der Republik Kongo."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Beim Gehen auf allen vieren stützt er sich auf die Fingerknöchel."
-      },
-      {
-        "label": "Schutz",
-        "text": "Westliche Gorillas sind vom Aussterben bedroht. Waldschutz und Schutz vor Wilderei sind wichtig."
       }
     ],
     "more": [
@@ -898,18 +874,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt nur auf Borneo, besonders in Tieflandregenwäldern und Sumpfwäldern."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Ihre langen Arme und Greifhände helfen beim Klettern in den Bäumen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Borneo-Orang-Utans sind vom Aussterben bedroht. Sie brauchen große zusammenhängende Wälder."
       }
     ],
     "more": [
@@ -1012,27 +976,15 @@
       },
       {
         "label": "Was frisst es?",
-        "text": "Sie jagen vor allem Robben."
+        "text": "Vor allem Robben."
       },
       {
         "label": "Wie alt?",
-        "text": "Weibchen werden im Durchschnitt etwa 20–25 Jahre alt, Männchen etwa 15–18 Jahre."
+        "text": "Im Durchschnitt werden Weibchen etwa 20–25 Jahre alt, Männchen 15–18."
       },
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Eisbären leben in der Arktis auf Meereis und an Küsten rund um den Nordpol."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Große Tatzen helfen beim Laufen auf Eis und beim Schwimmen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Eisbären sind gefährdet. Durch die Erwärmung der Arktis verlieren sie Meereis, auf dem sie jagen."
       }
     ],
     "more": [
@@ -1117,7 +1069,51 @@
       ],
       "correct": 0,
       "why": "Meereis ist eine wichtige Jagdfläche. Eisbären leben in der Arktis, nicht am Südpol."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Wie jagt der Eisbär?",
+        "text": "Er wartet an einem Loch im Eis. Taucht eine Robbe zum Luftholen auf, packt er blitzschnell zu."
+      },
+      {
+        "question": "Warum friert er nicht?",
+        "text": "Er hat eine Fettschicht, bis zu zehn Zentimeter dick. Auch Luft im Fell hält ihn warm."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-polar-bear:stimmt-1",
+        "text": "Unter seinem hellen Fell hat der Eisbär schwarze Haut.",
+        "isTrue": true,
+        "explanation": "Seine Haut ist schwarz, man sieht sie nur nicht unter dem dichten Fell."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-polar-bear:rate-1",
+        "prompt": "Was machen die meisten Eisbären im Winter?",
+        "answers": [
+          "Sie halten einen langen Winterschlaf",
+          "Sie wandern zum Südpol",
+          "Sie jagen weiter Robben"
+        ],
+        "correct": 2,
+        "why": "Die meisten Eisbären jagen auch im Winter Robben. Nur Weibchen, die Junge erwarten, bleiben den ganzen Winter in einer Schneehöhle.",
+        "hint": "Denk daran, wo er seine Nahrung findet."
+      },
+      {
+        "id": "animal-polar-bear:rate-2",
+        "prompt": "Wie schwimmt ein Eisbär?",
+        "answers": [
+          "Er paddelt mit den Vorderpfoten",
+          "Er paddelt nur mit den Hinterbeinen",
+          "Er lässt sich auf Eisschollen treiben"
+        ],
+        "correct": 0,
+        "why": "Eisbären schwimmen sehr gut. Sie paddeln mit den breiten Vorderpfoten und lenken mit den Hinterbeinen.",
+        "hint": "Seine Pfoten sind sehr groß und breit."
+      }
+    ]
   },
   {
     "id": "animal-emperor-penguin",
@@ -1144,18 +1140,6 @@
       {
         "label": "Tiergruppe",
         "text": "Vögel"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt an den Küsten der Antarktis. Viele Kolonien brüten auf festem Meereis."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Er kann tief tauchen, um im Meer Nahrung zu finden."
-      },
-      {
-        "label": "Schutz",
-        "text": "Kaiserpinguine gelten seit April 2026 als stark gefährdet. Früher zerbrechendes Meereis bedroht ihre Jungen."
       }
     ],
     "more": [
@@ -1274,18 +1258,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Blauwale leben in allen Ozeanen außer dem Arktischen Ozean, zum Beispiel vor Kalifornien."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Barten im Maul halten Krill zurück, während das Wasser herausgedrückt wird."
-      },
-      {
-        "label": "Schutz",
-        "text": "Blauwale sind stark gefährdet. Zusammenstöße mit Schiffen und Fischereigeräte können ihnen schaden."
       }
     ],
     "more": [
@@ -1398,18 +1370,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt in tropischen und gemäßigten Meeren, an Küsten und auch weiter draußen – zum Beispiel bei Florida."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Mit Klicklauten und deren Echo können sie Nahrung im Wasser orten."
-      },
-      {
-        "label": "Schutz",
-        "text": "Weltweit gilt die Art als nicht gefährdet. Einige Gruppen und Unterarten sind trotzdem bedroht."
       }
     ],
     "more": [
@@ -1532,18 +1492,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Orcas kommen in allen Ozeanen vor, besonders häufig in kühleren Meeren."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Beim Jagen können sie als Team zusammenarbeiten."
-      },
-      {
-        "label": "Schutz",
-        "text": "Orca-Gruppen brauchen unterschiedlichen Schutz. Die Southern Residents im Nordpazifik sind besonders bedroht."
       }
     ],
     "more": [
@@ -1635,7 +1583,7 @@
     "id": "animal-common-octopus",
     "category": "animals",
     "title": "Gewöhnlicher Krake",
-    "intro": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+    "intro": "Der Krake lebt im Meer an den Küsten, zum Beispiel im Mittelmeer.",
     "paragraphs": [
       "Meist lebt er allein und versteckt sich in einer Felsspalte oder Höhle.",
       "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen."
@@ -1643,38 +1591,22 @@
     "facts": [
       {
         "label": "Wie groß?",
-        "text": "Sein Körperbeutel ist etwa 15–25 Zentimeter lang. Die langen Arme kommen noch dazu."
+        "text": "Ohne die Arme ist sein Körper etwa 15–25 Zentimeter lang."
       },
       {
         "label": "Was frisst es?",
         "text": "Er frisst zum Beispiel Krebse, Muscheln, Schnecken und Fische."
       },
       {
-        "label": "Wie alt?",
-        "text": "Er lebt meist nur etwa 1–2 Jahre."
-      },
-      {
         "label": "Tiergruppe",
         "text": "Weichtiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Er kann Wasser ausstoßen und sich dadurch schnell fortbewegen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Laut Aquarium La Rochelle gilt die Art als nicht gefährdet. Gesunde Küsten und Meere bleiben wichtig."
       }
     ],
     "more": [
       "Laut Aquarium La Rochelle gilt die Art als nicht gefährdet. Gesunde Küsten und Meere bleiben wichtig.",
       "Saubere Küsten und verantwortlicher Fischfang helfen. Wilde Kraken bleiben im Meer; ihre Verstecke werden nicht zerstört."
     ],
-    "surprise": "Mit seinen Armen kann er nicht nur fühlen, sondern auch chemische Spuren von Nahrung erkennen.",
+    "surprise": "Mit seinen Armen kann ein Krake auch schmecken.",
     "locations": [
       {
         "label": "Mittelmeer westlich von Korsika – Beispielregion",
@@ -1698,6 +1630,14 @@
       {
         "label": "Influx of Octopus … – Devon and Severn IFCA",
         "url": "https://www.devonandsevernifca.gov.uk/wp-content/uploads/2025/06/Agenda-Item-11-Influx-of-Octopus-into-Devon-and-the-South-West.pdf"
+      },
+      {
+        "label": "Harvard Gazette: Kraken tasten und schmecken mit den Saugnäpfen",
+        "url": "https://news.harvard.edu/gazette/story/2020/10/octopus-suction-cups-hold-its-taste-and-touch-sensors/"
+      },
+      {
+        "label": "UC Berkeley, Museum of Paleontology: Weichtiere",
+        "url": "https://ucmp.berkeley.edu/taxa/inverts/mollusca/mollusca.php"
       }
     ],
     "aliases": [
@@ -1754,8 +1694,52 @@
         "Sechs"
       ],
       "correct": 0,
-      "why": "Ein Krake hat acht Arme mit Saugnäpfen. Arme und Körperbeutel werden unterschiedlich gemessen."
-    }
+      "why": "Ein Krake hat acht Arme. An jedem Arm sitzen viele Saugnäpfe."
+    },
+    "chapters": [
+      {
+        "question": "Wo wohnt der Krake?",
+        "text": "Meist lebt er allein in einer Felsspalte oder Höhle. Am Abend kommt er heraus und jagt."
+      },
+      {
+        "question": "Wie findet er Futter?",
+        "text": "Er tastet mit seinen Armen Felsen ab. So spürt er Beute auf."
+      }
+    ],
+    "claims": [
+      {
+        "id": "animal-common-octopus:stimmt-1",
+        "text": "Ein Krake ist ein Fisch.",
+        "isTrue": false,
+        "explanation": "Ein Krake ist ein Weichtier, so wie Schnecken und Muscheln."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "animal-common-octopus:rate-1",
+        "prompt": "Wie lange lebt ein Krake meistens?",
+        "answers": [
+          "Nur etwa 1 bis 2 Jahre",
+          "So lange wie ein Mensch",
+          "Mehr als 100 Jahre"
+        ],
+        "correct": 0,
+        "why": "Ein Krake lebt meist nur etwa 1 bis 2 Jahre. Das ist viel kürzer als ein Menschenleben.",
+        "hint": "Schon mit etwa einem Jahr kann er Junge bekommen."
+      },
+      {
+        "id": "animal-common-octopus:rate-2",
+        "prompt": "Wie bewegt sich ein Krake über den Meeresboden?",
+        "answers": [
+          "Er schwimmt immer wie ein Fisch",
+          "Er rollt sich wie ein Ball",
+          "Er läuft auf seinen Armen"
+        ],
+        "correct": 2,
+        "why": "Am Meeresboden läuft er auf seinen Armen. Schwimmen kann er auch, etwa mit einem Wasserstrahl auf der Flucht.",
+        "hint": "Überlege, womit er sich am Boden abstützen kann."
+      }
+    ]
   },
   {
     "id": "animal-green-sea-turtle",
@@ -1782,18 +1766,6 @@
       {
         "label": "Tiergruppe",
         "text": "Reptilien"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Sie lebt in warmen Meeren, zum Beispiel bei Hawaii. Erwachsene Tiere suchen oft flache Küstengewässer mit Seegras auf."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Weibchen finden zur Eiablage wieder in die Gegend ihres eigenen Geburtsstrands."
-      },
-      {
-        "label": "Schutz",
-        "text": "Weltweit gilt sie seit Oktober 2025 als nicht gefährdet. Netze, Plastik und zerstörte Niststrände bleiben Gefahren."
       }
     ],
     "more": [
@@ -1910,18 +1882,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Es lebt im trockenen Inneren Australiens, in Grasland, Buschland und offenen Wäldern."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Mit den starken Hinterbeinen kann es schnell hüpfen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Das Rote Riesenkänguru gilt als nicht gefährdet."
       }
     ],
     "more": [
@@ -1994,14 +1954,14 @@
       }
     },
     "question": {
-      "prompt": "Was steckt in der Größenangabe dieser Karte?",
+      "prompt": "Was geben Fachleute an, um zu zeigen, wie groß ein Rotes Riesenkänguru ist?",
       "answers": [
         "Das Gewicht erwachsener Männchen",
         "Die Höhe aller Jungtiere",
         "Die Länge des Beutels"
       ],
       "correct": 0,
-      "why": "Die Karte gibt eine Gewichtsspanne für erwachsene Männchen an. Weibchen sind leichter."
+      "why": "Ein erwachsenes Männchen wiegt etwa 65 bis 92 Kilogramm. Weibchen sind leichter."
     }
   },
   {
@@ -2029,18 +1989,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Koalas leben in Eukalyptuswäldern im Osten und Südosten Australiens."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Kräftige Arme und Hände halten sie sicher an Ästen fest."
-      },
-      {
-        "label": "Schutz",
-        "text": "In Queensland, New South Wales und rund um Canberra gelten Koalas als stark bedroht. Ihre Wälder brauchen Schutz."
       }
     ],
     "more": [
@@ -2154,18 +2102,6 @@
       {
         "label": "Tiergruppe",
         "text": "Säugetiere"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Jaguare leben in Mittel- und Südamerika, zum Beispiel im Amazonasgebiet und im brasilianischen Pantanal."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Sie können gut klettern und schwimmen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Jaguare gelten als potenziell gefährdet. Zusammenhängende Wälder geben ihnen Platz zum Leben."
       }
     ],
     "more": [
@@ -2277,18 +2213,6 @@
       {
         "label": "Tiergruppe",
         "text": "Insekten"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Sie stammt aus Europa, Afrika und Vorderasien und wird heute in vielen Ländern gehalten. Wilde Völker nisten oft in Baumhöhlen."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Beim Blütenbesuch tragen sie Pollen weiter und bestäuben Pflanzen."
-      },
-      {
-        "label": "Schutz",
-        "text": "Wilde Honigbienen in der EU gelten seit 2025 als stark gefährdet. Das betrifft frei lebende Völker, nicht alle gehaltenen Bienen."
       }
     ],
     "more": [
@@ -2407,18 +2331,6 @@
       {
         "label": "Tiergruppe",
         "text": "Amphibien"
-      },
-      {
-        "label": "Lebensraum",
-        "text": "Wilde Axolotl leben in den flachen Gewässern und Kanälen von Xochimilco in Mexiko-Stadt."
-      },
-      {
-        "label": "Besondere Fähigkeit",
-        "text": "Mit ihren federartigen Außenkiemen können sie unter Wasser Sauerstoff aufnehmen."
-      },
-      {
-        "label": "Schutz",
-        "text": "In der Wildnis ist der Axolotl vom Aussterben bedroht. Sauberes Wasser und sichere Lebensräume helfen ihm."
       }
     ],
     "more": [
@@ -2510,10 +2422,9 @@
     "id": "history-stone_tools",
     "category": "history",
     "title": "Werkzeuge aus Stein",
-    "intro": "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+    "intro": "In Kenia fanden Forschende die ältesten bekannten Werkzeuge aus Stein.",
     "paragraphs": [
-      "Frühe Verwandte des Menschen konnten Steine so bearbeiten, dass sie nützliche Kanten bekamen.",
-      "Wer diese Werkzeuge machte, wissen wir noch nicht sicher."
+      "Frühe Verwandte des Menschen konnten Steine so bearbeiten, dass sie nützliche Kanten bekamen."
     ],
     "facts": [
       {
@@ -2529,7 +2440,7 @@
       "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren.",
       "Ein Werkzeug verlängert die Möglichkeiten des Körpers: Mit einer scharfen Steinkante lässt sich etwas schneiden, das die Hand allein nicht durchtrennen kann. Aus Gebrauchsspuren lernen Forschende, wofür alte Werkzeuge benutzt wurden."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Wer diese Werkzeuge gemacht hat, wissen wir noch nicht sicher.",
     "locations": [
       {
         "label": "Lomekwi in Kenia – Fundregion",
@@ -2547,6 +2458,26 @@
       {
         "label": "Natural History Museum, London",
         "url": "https://www.nhm.ac.uk/discover/news/2023/february/oldest-remains-ancient-human-relative-paranthropus-suggest-possible-tool-use.html"
+      },
+      {
+        "label": "ScienceDaily (Stony Brook University): So entstanden die Lomekwi-Werkzeuge",
+        "url": "https://www.sciencedaily.com/releases/2015/05/150520131659.htm"
+      },
+      {
+        "label": "Harmand u. a. (Nature 2015), Kurzfassung bei PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25993961/"
+      },
+      {
+        "label": "Smithsonian Magazine: früheste Spuren von Feuer",
+        "url": "https://www.smithsonianmag.com/science-nature/the-earliest-example-of-hominid-fire-171693652/"
+      },
+      {
+        "label": "Smithsonian Magazine: Feuer vielleicht schon vor 1,8 Millionen Jahren",
+        "url": "https://www.smithsonianmag.com/smart-news/early-humans-may-have-used-fire-1-8-million-years-ago-nearly-doubling-the-age-of-the-oldest-known-evidence-for-the-feat-180989015/"
+      },
+      {
+        "label": "Natural History Museum London: Wann die Dinosaurier ausstarben",
+        "url": "https://www.nhm.ac.uk/discover/how-an-asteroid-caused-extinction-of-dinosaurs.html"
       }
     ],
     "aliases": [
@@ -2568,7 +2499,63 @@
       ],
       "correct": 0,
       "why": "Werkzeuge halfen unseren Vorfahren, ihre Umgebung zu nutzen und neue Lösungen auszuprobieren."
-    }
+    },
+    "chapters": [
+      {
+        "question": "Wie wird ein Stein zum Werkzeug?",
+        "text": "Frühe Verwandte des Menschen, die lange vor uns lebten, bearbeiteten Steine. So bekamen die Steine scharfe Kanten."
+      },
+      {
+        "question": "Wofür waren sie gut?",
+        "text": "Mit einer scharfen Kante konnten sie schneiden, was die bloße Hand nicht schafft. Mit Steinen ließ sich auch Nahrung zerschlagen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "history-stone_tools:stimmt-1",
+        "text": "Steinwerkzeuge gab es schon, bevor jemand Feuer nutzte.",
+        "isTrue": true,
+        "explanation": "Die ältesten Spuren von Feuer sind viel jünger als die ersten Steinwerkzeuge."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "history-stone_tools:rate-1",
+        "prompt": "Lebten damals noch große Dinosaurier?",
+        "answers": [
+          "Nein, sie waren längst ausgestorben",
+          "Ja, sie lebten gleich nebenan",
+          "Ja, man jagte sie mit Steinwerkzeugen"
+        ],
+        "correct": 0,
+        "why": "Die großen Dinosaurier starben vor etwa 66 Millionen Jahren aus. Die ersten Steinwerkzeuge sind viel jünger.",
+        "hint": "Die Dinosaurier lebten viele Millionen Jahre früher."
+      },
+      {
+        "id": "history-stone_tools:rate-2",
+        "prompt": "Wie bekam ein Stein früher eine scharfe Kante?",
+        "answers": [
+          "Man schmolz ihn im Feuer",
+          "Man ließ ihn lange in der Sonne liegen",
+          "Man schlug Steine gegeneinander"
+        ],
+        "correct": 2,
+        "why": "Schlägt man Steine gegeneinander, brechen Stücke ab. So entstehen scharfe Kanten.",
+        "hint": "Denk daran, was passiert, wenn ein Stein auf einen harten Stein fällt."
+      },
+      {
+        "id": "history-stone_tools:rate-3",
+        "prompt": "Woran erkennen Forschende, wofür ein Werkzeug diente?",
+        "answers": [
+          "An Spuren am Stein",
+          "An alten Anleitungen auf Papier",
+          "An der Farbe des Steins"
+        ],
+        "correct": 0,
+        "why": "Beim Benutzen entstehen Gebrauchsspuren am Stein. Daraus lernen Forschende oft, wofür das Werkzeug diente.",
+        "hint": "Ein benutztes Werkzeug sieht anders aus als ein neues."
+      }
+    ]
   },
   {
     "id": "history-fire",
@@ -2591,9 +2578,9 @@
     ],
     "more": [
       "Gekochte Nahrung veränderte das Essen; Menschen konnten an Feuerstellen zusammenkommen.",
-      "Feuer machte Wärme und gekochte Nahrung möglich. Es konnte aber auch gefährlich sein. Zu lernen, ein Feuer zu erhalten, war etwas anderes als zu lernen, es selbst zu entzünden."
+      "Feuer konnte auch gefährlich sein."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Ein Feuer hüten ist etwas anderes, als es selbst anzuzünden.",
     "locations": [],
     "related": [
       "history-writing",
@@ -2712,8 +2699,8 @@
     "title": "Pyramiden im alten Ägypten",
     "intro": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
     "paragraphs": [
-      "Viele Menschen mussten planen, Steine bearbeiten und zusammen bauen.",
-      "Die Pyramiden waren Grabstätten der königlichen Familien."
+      "Die großen Pyramiden waren Gräber für Könige.",
+      "Viele Menschen mussten planen, Steine bearbeiten und zusammen bauen."
     ],
     "facts": [
       {
@@ -2729,7 +2716,6 @@
       "Sie zeigen, wie viel Menschen mit Wissen, Arbeit und guter Organisation gemeinsam schaffen konnten.",
       "Eine Pyramide brauchte viele verschiedene Arbeiten: Steine gewinnen, transportieren, bearbeiten und genau setzen. Ein solches Bauwerk erzählt deshalb auch von Organisation, Versorgung und Handwerk."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "Gizeh, Ägypten",
@@ -2765,7 +2751,7 @@
         "Als Eisenbahnstationen"
       ],
       "correct": 0,
-      "why": "Sie zeigen, wie viel Menschen mit Wissen, Arbeit und guter Organisation gemeinsam schaffen konnten."
+      "why": "Die großen Pyramiden waren Gräber für Könige."
     }
   },
   {
@@ -2791,7 +2777,6 @@
       "Papier machte das Aufschreiben und Verbreiten von Wissen praktischer.",
       "Dünne Papierblätter lassen sich zusammenlegen, beschriften und zu Büchern verbinden. Papierherstellung, Schrift und Druck ergänzen einander; jede Entwicklung hatte ihre eigene Geschichte."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "China – Ursprungsregion",
@@ -2862,9 +2847,9 @@
     ],
     "more": [
       "Mit der Null und dem Stellenwertsystem lassen sich Zahlen übersichtlich schreiben und berechnen.",
-      "Vergleiche 25 und 205: Die Null zeigt, dass an einer Stelle kein Zehner steht. Als Zahl und als Platzhalter macht sie unterschiedliche Aufgaben möglich. Zahlzeichen und Rechenweisen verbreiteten sich durch Austausch."
+      "Die Null kann eine eigene Zahl sein und ein Platzhalter. Zahlzeichen und Rechenweisen verbreiteten sich durch Austausch."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Vergleiche 25 und 205: Ohne die Null in der Mitte sähen beide Zahlen gleich aus.",
     "locations": [
       {
         "label": "Bhinmal in Indien",
@@ -2925,9 +2910,9 @@
     ],
     "more": [
       "Seefahrer konnten Richtungen auch dann bestimmen, wenn sie Sonne und Sterne schlecht sahen.",
-      "Ein Kompass zeigt eine Richtung auch dann, wenn Wolken die Sterne verdecken. Eine Karte sagt dagegen, wo Wege, Küsten und Berge liegen. Für eine Reise braucht man oft beides."
+      "Eine Karte zeigt, wo Wege, Küsten und Berge liegen. Für eine Reise braucht man oft Kompass und Karte."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Ein Kompass zeigt die Richtung auch dann, wenn Wolken die Sterne verdecken.",
     "locations": [
       {
         "label": "China – ein frühes Zentrum der Navigation",
@@ -2987,9 +2972,9 @@
     ],
     "more": [
       "Städte wurden wichtige Orte zum Tauschen, Arbeiten und Zusammenleben.",
-      "Mittelalterliche Städte waren auch Orte für Handwerk und Handel. Nicht alle Menschen lebten in Burgen. Bauern, Händlerinnen und viele andere versorgten die Gemeinschaften."
+      "Mittelalterliche Städte waren auch Orte für Handwerk und Handel. Bauern, Händlerinnen und viele andere versorgten die Gemeinschaften."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Im Mittelalter wohnten nur wenige Menschen in Burgen, die meisten lebten als Bauern auf dem Land.",
     "locations": [
       {
         "label": "Lübeck, Deutschland",
@@ -3006,6 +2991,10 @@
       {
         "label": "Deutsches Historisches Museum",
         "url": "https://www.dhm.de/bildung/ida/mittelalter/stadt/"
+      },
+      {
+        "label": "Deutsches Historisches Museum",
+        "url": "https://www.dhm.de/bildung/ida/mittelalter/stand/"
       }
     ],
     "aliases": [
@@ -3050,9 +3039,9 @@
     ],
     "more": [
       "Mehr Bücher konnten hergestellt werden, und Texte erreichten mehr Menschen.",
-      "Bewegliche Zeichen werden nach dem Drucken wieder auseinandergenommen. Für die nächste Seite können dieselben Zeichen in einer anderen Reihenfolge benutzt werden. Das spart Arbeit gegenüber einer komplett neu geschnitzten Seite."
+      "Das spart Arbeit gegenüber einer Seite, die man ganz neu schnitzen müsste."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Nach dem Drucken nimmt man die Buchstaben wieder auseinander und setzt sie für die nächste Seite neu zusammen.",
     "locations": [
       {
         "label": "Mainz, Deutschland",
@@ -3126,9 +3115,9 @@
     ],
     "more": [
       "Die Begegnungen veränderten viele Weltregionen; dazu gehören auch die Erfahrungen und Rechte der indigenen Völker.",
-      "Eine Reise ist kein Beginn der Geschichte eines Landes. In Amerika lebten bereits sehr viele Menschen mit eigenen Sprachen, Städten und Wissenssystemen. Die folgenden europäischen Eroberungen hatten für sie schwere Folgen."
+      "Eine Reise ist kein Beginn der Geschichte eines Landes. Die Menschen in Amerika hatten ihr eigenes Wissen. Die folgenden europäischen Eroberungen hatten für sie schwere Folgen."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "In Amerika lebten schon vorher sehr viele Menschen mit eigenen Sprachen und Städten.",
     "locations": [
       {
         "label": "Bahamas – Region der Begegnung",
@@ -3195,7 +3184,6 @@
       "Dampfmaschinen wurden wichtige Antriebe für Industrie und später auch Verkehr.",
       "Wasser wird erhitzt und Dampf kann Arbeit verrichten. Eine Maschine wandelt dabei einen Teil der Wärmeenergie in Bewegung um. Brennstoff, Wasser und Wartung bleiben nötig."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "England – Beispielregion der frühen Maschinen",
@@ -3260,9 +3248,9 @@
     ],
     "more": [
       "Eisenbahnen veränderten den Transport von Menschen und Gütern.",
-      "Schienen führen die Räder und verbinden Orte. Zu einem Bahnnetz gehören deshalb mehr als Lokomotiven: Bahnhöfe, Signale, Gleise und Menschen, die den Verkehr organisieren."
+      "Schienen führen die Räder und verbinden Orte."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Zu einer Eisenbahn gehören nicht nur Loks, sondern auch Bahnhöfe, Signale und viele Menschen.",
     "locations": [
       {
         "label": "Darlington, England",
@@ -3323,9 +3311,9 @@
     ],
     "more": [
       "Elektrisches Licht veränderte den Alltag zu Hause, auf Straßen und bei der Arbeit.",
-      "Eine brauchbare Lampe allein genügte nicht. Für viele beleuchtete Häuser brauchte es außerdem Kraftwerke, Leitungen, Schalter und Regeln für den sicheren Betrieb."
+      "Für den sicheren Betrieb brauchte es auch Regeln."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Eine Lampe allein reichte nicht: Für helle Häuser brauchte es auch Kraftwerke, Leitungen und Schalter.",
     "locations": [
       {
         "label": "Menlo Park, New Jersey, USA",
@@ -3379,8 +3367,7 @@
     "title": "Ein gesteuertes Flugzeug mit Motor",
     "intro": "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
     "paragraphs": [
-      "Dafür hatten sie lange mit Gleitflugzeugen und Modellen geübt.",
-      "Schon vorher waren Menschen mit Ballons und Gleitflugzeugen geflogen."
+      "Dafür hatten sie lange mit Gleitflugzeugen und Modellen geübt."
     ],
     "facts": [
       {
@@ -3396,7 +3383,7 @@
       "Die Versuche waren ein wichtiger Schritt auf dem Weg zu steuerbaren Motorflugzeugen.",
       "Bei einem Flugzeug müssen Auftrieb, Vorwärtsbewegung und Steuerung zusammenpassen. Frühere Gleitversuche halfen dabei, Flügel und Steuerflächen zu verbessern."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Schon vor den Wright-Brüdern flogen Menschen mit Ballons und Gleitflugzeugen.",
     "locations": [
       {
         "label": "Kill Devil Hills, USA",
@@ -3463,7 +3450,6 @@
       "Der Krieg veränderte das Leben vieler Menschen, und neue Staaten entstanden.",
       "Ein Krieg betrifft auch Menschen weit weg von einer Front: Familien werden getrennt, Versorgung wird schwierig und ganze Orte verändern sich. Deshalb lernen wir neben Jahreszahlen auch, was Konflikte mit Menschen machen."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "Europa – eine von vielen betroffenen Regionen",
@@ -3529,7 +3515,6 @@
       "Erinnern hilft uns, jüdisches Leben zu achten, Menschenrechte zu schützen und Hass zu widersprechen.",
       "Jüdische Menschen hatten und haben sehr verschiedene Lebensweisen. Sie wurden wegen ihrer zugeschriebenen Herkunft oder Religion verfolgt. Niemand darf wegen seiner Herkunft, Religion oder einer Behinderung weniger Rechte haben."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "Berlin – Erinnern und Lernen",
@@ -3596,7 +3581,6 @@
       "Der Krieg und die Verbrechen dieser Zeit machten den Schutz von Frieden und Menschenrechten besonders dringlich.",
       "Nach dem Krieg waren viele Städte zerstört und Millionen Menschen mussten ein neues Zuhause finden. Frieden bedeutete deshalb auch: helfen, wieder aufbauen und Regeln für Zusammenarbeit entwickeln."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "Polen – Angriff im September 1939",
@@ -3655,19 +3639,15 @@
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "24. Oktober 1945"
-      },
-      {
         "label": "Wo?",
         "text": "Gründungskonferenz in San Francisco, USA; internationale Organisation"
       }
     ],
     "more": [
       "Staaten bekamen einen gemeinsamen Ort, um Probleme zu besprechen und zusammenzuarbeiten.",
-      "Die Vereinten Nationen sind keine Regierung für die ganze Erde. Staaten beraten dort gemeinsam. Zusammenarbeit ist oft schwierig; Gespräche, Hilfsprogramme und gemeinsame Regeln bleiben trotzdem wichtig."
+      "Staaten beraten dort gemeinsam. Zusammenarbeit ist oft schwierig; Gespräche, Hilfsprogramme und gemeinsame Regeln bleiben trotzdem wichtig."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Die Vereinten Nationen sind keine Regierung für die ganze Erde.",
     "locations": [
       {
         "label": "San Francisco – Gründungskonferenz",
@@ -3726,10 +3706,6 @@
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "13. August 1961"
-      },
-      {
         "label": "Wo?",
         "text": "Berlin, Deutschland; damals geteilte Stadt"
       }
@@ -3738,7 +3714,6 @@
       "Die Mauer zeigt, wie sehr fehlende Reisefreiheit das Leben von Menschen veränderte.",
       "Die Mauer trennte Straßen und Familien. Viele Menschen konnten ihre Verwandten auf der anderen Seite nicht frei besuchen. An Resten der Mauer und in Museen kann man heute lernen, wie diese Grenze den Alltag veränderte."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "Berlin, Deutschland",
@@ -3782,9 +3757,8 @@
     "id": "history-apollo11",
     "category": "history",
     "title": "Menschen landen auf dem Mond",
-    "intro": "Apollo 11 landete am 20. Juli 1969 auf dem Mond.",
+    "intro": "Im Juli 1969 betraten zum ersten Mal Menschen den Mond.",
     "paragraphs": [
-      "Neil Armstrong und Buzz Aldrin gingen auf der Oberfläche, während Michael Collins den Mond umkreiste.",
       "Viele Menschen am Boden hatten die Reise gemeinsam vorbereitet."
     ],
     "facts": [
@@ -3794,14 +3768,14 @@
       },
       {
         "label": "Wo?",
-        "text": "Mond, Meer der Ruhe; NASA-Mission aus den USA"
+        "text": "Mond, Meer der Ruhe"
       }
     ],
     "more": [
       "Zum ersten Mal konnten Menschen einen anderen Himmelskörper betreten und dort Proben sammeln.",
       "Die Mondlandung war eine Teamleistung. Neben den Astronauten arbeiteten sehr viele Menschen an Berechnungen, Raumanzügen, Raketen und Funkverbindungen. Gesteinsproben halfen, die Geschichte des Mondes zu erforschen."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Als Armstrong den Mond betrat, sagte er: „Ein kleiner Schritt für einen Menschen, ein riesiger Sprung für die Menschheit“",
     "locations": [
       {
         "label": "Florida – Startregion von Apollo 11",
@@ -3823,6 +3797,10 @@
       {
         "label": "NASA, Apollo Lunar Surface Journal",
         "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.step.html"
+      },
+      {
+        "label": "NASA: Bergung der Apollo-11-Crew durch die USS Hornet",
+        "url": "https://www.nasa.gov/history/50-years-ago-hornet-3-the-recovery-of-apollo-11/"
       }
     ],
     "aliases": [
@@ -3849,8 +3827,68 @@
         "Marie Curie und Gutenberg"
       ],
       "correct": 0,
-      "why": "Zum ersten Mal konnten Menschen einen anderen Himmelskörper betreten und dort Proben sammeln."
-    }
+      "why": "Neil Armstrong, Buzz Aldrin und Michael Collins flogen gemeinsam mit Apollo 11 zum Mond."
+    },
+    "chapters": [
+      {
+        "question": "Wie kamen sie zum Mond?",
+        "text": "Eine riesige Rakete brachte die drei ins All. Nach vier Tagen landete die Mondfähre Eagle auf dem Mond."
+      },
+      {
+        "question": "Wer stieg zuerst aus?",
+        "text": "Neil Armstrong betrat als Erster den Mond. Buzz Aldrin folgte etwa 20 Minuten später."
+      },
+      {
+        "question": "Was brachten sie mit?",
+        "text": "Sie sammelten Gestein vom Mond. Damit erforschen Fachleute die Geschichte des Mondes."
+      }
+    ],
+    "claims": [
+      {
+        "id": "history-apollo11:stimmt-1",
+        "text": "Armstrong und Aldrin blieben weniger als einen Tag auf dem Mond.",
+        "isTrue": true,
+        "explanation": "Sie blieben fast 22 Stunden. Davon waren sie gut zweieinhalb Stunden draußen unterwegs."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "history-apollo11:rate-1",
+        "prompt": "Wer blieb bei Apollo 11 im Raumschiff?",
+        "answers": [
+          "Neil Armstrong",
+          "Niemand, alle stiegen aus",
+          "Michael Collins"
+        ],
+        "correct": 2,
+        "why": "Michael Collins steuerte das Raumschiff und kreiste um den Mond. Armstrong und Aldrin landeten mit der Mondfähre.",
+        "hint": "Einer musste im Raumschiff auf die anderen warten."
+      },
+      {
+        "id": "history-apollo11:rate-2",
+        "prompt": "Wie kamen die Astronauten zurück auf die Erde?",
+        "answers": [
+          "Auf einer Landebahn wie ein Flugzeug",
+          "Mit Fallschirmen ins Meer",
+          "Mit der Mondfähre auf eine Wiese"
+        ],
+        "correct": 1,
+        "why": "Ihre Kapsel schwebte an Fallschirmen in den Pazifik. Ein Hubschrauber holte die drei aus dem Wasser und flog sie zu einem Schiff.",
+        "hint": "Die Kapsel brauchte etwas, das sie langsamer macht."
+      },
+      {
+        "id": "history-apollo11:rate-3",
+        "prompt": "Wie lange dauerte die ganze Reise ungefähr?",
+        "answers": [
+          "Ein paar Stunden",
+          "Etwa 8 Tage",
+          "Mehrere Jahre"
+        ],
+        "correct": 1,
+        "why": "Vom Start bis zur Landung im Meer vergingen etwa 8 Tage. Bis zur Landung auf dem Mond dauerte es schon 4 Tage.",
+        "hint": "Allein der Hinflug dauerte mehrere Tage."
+      }
+    ]
   },
   {
     "id": "history-web",
@@ -3873,9 +3911,9 @@
     ],
     "more": [
       "Über Links können Menschen Informationen auf vielen Computern einfacher finden und teilen.",
-      "Internet und Web sind verschieden: Das Internet verbindet Computer-Netze. Das World Wide Web ist ein Dienst darauf, der Seiten durch Links verbindet. E-Mail ist ein anderer Internetdienst."
+      "Das World Wide Web ist ein Dienst im Internet. E-Mail ist ein anderer Internetdienst."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Internet und Web sind nicht dasselbe: Das Internet verbindet Computer, das Web verbindet Seiten durch Links.",
     "locations": [
       {
         "label": "CERN bei Genf – am Rand von Schweiz und Frankreich",
@@ -3930,19 +3968,15 @@
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "9. November 1989"
-      },
-      {
         "label": "Wo?",
         "text": "Berlin, Deutschland"
       }
     ],
     "more": [
       "Die Öffnung war ein wichtiger Schritt zur Freiheit und zur späteren deutschen Einheit.",
-      "Viele Menschen demonstrierten friedlich und verlangten Veränderungen. Der offene Grenzübergang im November 1989 war ein wichtiger Schritt; die deutsche Wiedervereinigung folgte erst 1990."
+      "Viele Menschen demonstrierten friedlich und verlangten Veränderungen."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Die Mauer ging 1989 auf, wiedervereinigt wurde Deutschland aber erst 1990.",
     "locations": [
       {
         "label": "Berlin, Deutschland",
@@ -3997,19 +4031,15 @@
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "3. Oktober 1990"
-      },
-      {
         "label": "Wo?",
         "text": "Deutschland, Beispiel Feier vor dem Berliner Reichstag"
       }
     ],
     "more": [
       "Menschen in Ost und West lebten nun gemeinsam in einer Bundesrepublik mit derselben staatlichen Ordnung.",
-      "Eine neue gemeinsame Staatsordnung entstand nicht an einem einzigen Abend. Gesetze, Verwaltungen und der Alltag mussten sich verändern. Menschen erlebten diesen Wandel sehr unterschiedlich."
+      "Menschen in Ost und West erlebten diesen Wandel sehr unterschiedlich."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Deutschland wuchs nicht an einem Abend zusammen: Gesetze, Ämter und Alltag mussten sich erst ändern.",
     "locations": [
       {
         "label": "Berlin, Deutschland",
@@ -4070,9 +4100,9 @@
     ],
     "more": [
       "Gemeinsame Forschung kann Grenzen überwinden und Wissen für die Erde liefern.",
-      "Auf der Raumstation arbeiten Teams an Versuchen, die auf der Erde anders ablaufen würden. In der Umlaufbahn fallen Station und Besatzung gemeinsam um die Erde; die Schwerkraft ist dort nicht verschwunden."
+      "Auf der Raumstation arbeiten Teams an Versuchen, die auf der Erde anders ablaufen würden."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Auf der ISS gibt es Schwerkraft: Station und Menschen fallen gemeinsam um die Erde herum, darum schweben sie.",
     "locations": [],
     "related": [
       "history-writing",
@@ -4122,10 +4152,6 @@
     ],
     "facts": [
       {
-        "label": "Wann?",
-        "text": "11. September 2001"
-      },
-      {
         "label": "Wo?",
         "text": "New York; Arlington beim Pentagon; nahe Shanksville, Pennsylvania, USA"
       }
@@ -4134,7 +4160,6 @@
       "Das Ereignis veränderte viele Leben; Erinnern und gegenseitige Hilfe bleiben wichtig.",
       "An einer Gedenkstätte wird an die Opfer erinnert. Menschen können Blumen niederlegen, Namen lesen und Fragen stellen. Erinnern bedeutet hier auch, die Würde jedes Menschen zu achten und friedlich zusammenzuleben."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
     "locations": [
       {
         "label": "New York – Gedenkstätte",
@@ -4209,9 +4234,9 @@
     ],
     "more": [
       "Die Bilder und Messdaten helfen uns zu verstehen, wie Sterne, Planeten und Galaxien entstehen.",
-      "Infrarotlicht ist für unsere Augen unsichtbar. Die Messdaten des Teleskops werden zu Bildern verarbeitet; Farben können verschiedene Wellenlängen sichtbar machen. Ein solches Bild ist eine Erklärung von Daten, kein Blick mit bloßen Augen."
+      "Infrarotlicht ist für unsere Augen unsichtbar. Auf den Webb-Bildern machen Farben verschiedene Wellenlängen sichtbar."
     ],
-    "surprise": "Geschichte entsteht aus vielen Quellen. Bei sehr frühen Ereignissen helfen Funde; später auch Texte, Bilder und Erinnerungen.",
+    "surprise": "Die Webb-Bilder sind keine normalen Fotos: Sie entstehen aus Messungen von Licht, das unsere Augen nicht sehen.",
     "locations": [],
     "related": [
       "history-writing",
@@ -4258,7 +4283,7 @@
     "id": "person-marie_curie",
     "category": "people",
     "title": "Marie Curie",
-    "intro": "Marie Curie machte unsichtbare Strahlung messbar. Auffällige Vergleiche führten sie und ihr Forschungsteam zu neuen Fragen über Stoffe.",
+    "intro": "Marie Curie bekam für ihre Forschung zwei Nobelpreise, das sind sehr berühmte Preise.",
     "paragraphs": [
       "Marie Curie lebte von 1867 bis 1934. Nach Henri Becquerels Entdeckung der Uranstrahlung verglich sie die Wirkung unterschiedlicher Stoffe mit empfindlichen Messgeräten. Sie untersuchte unter anderem, wie Strahlung die elektrische Leitfähigkeit von Luft verändert.",
       "Einige untersuchte Mineralien waren stärker aktiv, als Curie vom enthaltenen Uran erwartet hatte. Daraus entwickelte sie eine prüfbare Vermutung: Weitere aktive Bestandteile könnten beteiligt sein. Ein auffälliger Messwert allein gab ihnen aber noch keinen Namen. Weitere Untersuchungen und Stofftrennungen gehörten zum Forschungsweg.",
@@ -4271,12 +4296,12 @@
         "text": "1867–1934"
       },
       {
-        "label": "Arbeitsgebiet",
-        "text": "Physikerin und Chemikerin"
+        "label": "Nobelpreise",
+        "text": "Physik 1903, Chemie 1911"
       },
       {
-        "label": "Verbunden mit",
-        "text": "Polen: geboren in Warschau, damals im Russischen Reich; Frankreich: Studium und Forschung"
+        "label": "Geboren",
+        "text": "In Warschau in Polen. Polen wurde damals von Russland beherrscht."
       }
     ],
     "more": [
@@ -4285,7 +4310,7 @@
       "Bei Radioaktivität geben instabile Atomkerne von selbst Strahlung ab, die für uns unsichtbar sein kann. Curie untersuchte solche Vorgänge mit Messgeräten. Die heutige Erklärung des Atomkerns entstand über weitere Forschungsschritte; 1898 verfügte sie noch nicht über dieses spätere vollständige Modell. Historische Fachtexte werden deshalb nicht einfach als heutige Fachbeschreibung übernommen.",
       "Strahlung kann schaden. Für radioaktive Stoffe braucht Forschung geeignete Fachlabore und besonders sorgfältige Schutzverfahren. Unsere Aufgabe verwendet ausschließlich erfundene Zahlen und Zeichnungen. Sie ist keine Anleitung, unbekannte Materialien zu sammeln, zu öffnen oder zu untersuchen."
     ],
-    "surprise": "Radioaktivitätsforschung; Entdeckung von Polonium und Radium im Team; Nobelpreise für Physik 1903 und Chemie 1911.",
+    "surprise": "Das Polonium wurde nach Maries Heimat Polen benannt.",
     "locations": [
       {
         "label": "Paris – Forschungsort",
@@ -4322,6 +4347,26 @@
       {
         "label": "American Institute of Physics: spätere Erklärung von Atomkern und Radioaktivität",
         "url": "https://history.aip.org/exhibits/curie/unstable.htm"
+      },
+      {
+        "label": "Bundesamt für Strahlenschutz: Wie wirkt ionisierende Strahlung?",
+        "url": "https://www.bfs.de/DE/themen/ion/wirkung/einfuehrung/einfuehrung_node.html"
+      },
+      {
+        "label": "Senatsverwaltung Berlin: Grundregeln des Strahlenschutzes",
+        "url": "https://www.berlin.de/sen/uvk/umwelt/atom-und-strahlenschutz/grundlagen-und-begriffe/ionisierende-strahlung/"
+      },
+      {
+        "label": "Nobelpreis: Biografie Marie Curie",
+        "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/biographical/"
+      },
+      {
+        "label": "Computer History Museum: Ada Lovelace",
+        "url": "https://www.computerhistory.org/babbage/adalovelace/"
+      },
+      {
+        "label": "Yale News: Grace Hopper und der erste Compiler",
+        "url": "https://news.yale.edu/2017/02/10/grace-murray-hopper-1906-1992-legacy-innovation-and-service"
       }
     ],
     "aliases": [
@@ -4345,7 +4390,7 @@
         "Das Programmieren einfacher machen"
       ],
       "correct": 0,
-      "why": "Manche Stoffe senden von selbst unsichtbare Strahlung aus. Das heißt Radioaktivität. Solche Stoffe untersucht man nur in geeigneten Fachlaboren."
+      "why": "Marie Curie erforschte Stoffe, die von selbst Strahlung aussenden. Das nennt man Radioaktivität."
     },
     "learning": {
       "starter": "Vergleiche zwei erfundene Messbefunde und trenne Beobachtung von Erklärung.",
@@ -4356,13 +4401,61 @@
     "checkedAt": "2026-11-04",
     "revision": 2,
     "questionFeedback": {
-      "hint": "Was könnte man durch Messungen an verschiedenen Proben untersuchen, auch wenn die Ursache unsichtbar ist?",
+      "hint": "Marie Curie arbeitete in einem Labor mit Gestein und Messgeräten.",
       "wrongReasons": [
         null,
-        "Eine Rechenanleitung für eine geplante Maschine ist von der hier behandelten Messung an strahlenden Stoffen zu unterscheiden.",
-        "Programmieren zu vereinfachen ist ein anderer Fachbeitrag als Curies Untersuchungen an radioaktiven Stoffen."
+        "Das hat Ada Lovelace gemacht. Marie Curie untersuchte Stoffe, die Strahlung aussenden.",
+        "Dabei half Grace Hopper. Marie Curie erforschte Strahlung, nicht Computer."
       ]
-    }
+    },
+    "chapters": [
+      {
+        "question": "Warum ging sie nach Paris?",
+        "text": "In Warschau durften junge Frauen damals nicht an die Universität. Darum zog sie 1891 zum Studieren nach Paris."
+      },
+      {
+        "question": "Was hat sie entdeckt?",
+        "text": "1898 entdeckte sie mit ihrem Mann Pierre zwei neue Elemente: Polonium und Radium. Elemente sind Grundstoffe, aus denen alle Dinge bestehen."
+      },
+      {
+        "question": "Ist Strahlung gefährlich?",
+        "text": "Zu viel Strahlung kann dem Körper schaden. Darum arbeiten Fachleute mit stark strahlenden Stoffen nur mit besonderem Schutz."
+      }
+    ],
+    "claims": [
+      {
+        "id": "person-marie_curie:stimmt-1",
+        "text": "Marie Curie hat das Radium erfunden.",
+        "isTrue": false,
+        "explanation": "Radium steckte schon in einem Gestein und wurde dort entdeckt, nicht erfunden."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "person-marie_curie:rate-1",
+        "prompt": "Kann man radioaktive Strahlung mit den Augen sehen?",
+        "answers": [
+          "Nein, man braucht Messgeräte",
+          "Ja, sie sieht aus wie bunter Rauch",
+          "Ja, mit einer starken Lupe"
+        ],
+        "correct": 0,
+        "why": "Unsere Augen können diese Strahlung nicht sehen. Marie Curie maß sie deshalb mit empfindlichen Geräten.",
+        "hint": "Auch Luft siehst du nicht, und trotzdem ist sie da."
+      },
+      {
+        "id": "person-marie_curie:rate-2",
+        "prompt": "Mit wem entdeckte Marie Curie Polonium und Radium?",
+        "answers": [
+          "Ganz allein, ohne jede Hilfe",
+          "Mit dem Erfinder Gutenberg",
+          "Mit ihrem Mann Pierre Curie"
+        ],
+        "correct": 2,
+        "why": "Marie und Pierre Curie entdeckten 1898 gemeinsam Polonium und Radium. Ihre Forschung war Teamarbeit.",
+        "hint": "Sie heiratete 1895 einen Physiker."
+      }
+    ]
   },
   {
     "id": "person-ada_lovelace",
@@ -4852,8 +4945,7 @@
     "title": "Bertha Benz",
     "intro": "Bertha Benz finanzierte und unterstützte die Entwicklung des Motorwagens und erprobte ihn auf einer längeren Reise. Dabei wurden Bedingungen sichtbar, die ein Test am selben Platz nicht erfasst.",
     "paragraphs": [
-      "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte.",
-      "Zusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis."
+      "1888 fuhr sie mit ihren beiden Söhnen von Mannheim nach Pforzheim und zeigte, dass das Auto eine längere Reise schaffen konnte."
     ],
     "facts": [
       {
@@ -4931,7 +5023,7 @@
       "observe": "Wechsle die Testnotiz. Unterscheide „nicht untersucht“, „untersucht“ und ein tatsächlich festgestelltes Ergebnis.",
       "benefit": "Du kannst den Nutzen zusätzlicher Erprobung erklären und die Grenzen eines einzelnen Tests benennen."
     },
-    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 tatsächlich gelesenen Abschnitten des Deutschen Patent- und Markenamts und des Deutschen Museums. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung.",
+    "sourceNote": "Eigene Erklärung nach den am 6.11.2026 tatsächlich gelesenen Abschnitten des Deutschen Patent- und Markenamts und des Deutschen Museums. Patent 1886, Fahrt 1888 und die verschiedenen Motorwagen werden unterschieden. Genaue Hin-/Rückfahrtdauern, Gangzahlen und volkstümliche Reparaturdetails werden nicht als gesicherte technische Anleitung übernommen. Die beiden Testnotizen sind erfunden; sie bestätigen weder tatsächliche historische Messergebnisse noch eine heutige Zulassung. Zusätzliche Erprobung kann Bedingungen sichtbar machen, die ein Test am selben Platz nicht erfasst. Unser erfundenes Notizenmodell unterscheidet deshalb eine Untersuchung von einem erfolgreichen Ergebnis.",
     "checkedAt": "2026-11-06",
     "revision": 2,
     "questionFeedback": {
@@ -4947,7 +5039,7 @@
     "id": "person-jane_goodall",
     "category": "people",
     "title": "Jane Goodall",
-    "intro": "Jane Goodall untersuchte das Leben wilder Schimpansen in Gombe. Ihre Beobachtungen machten Werkzeuggebrauch und Werkzeugvorbereitung dieser Tiere für die Forschung sichtbar.",
+    "intro": "Mit 26 Jahren begann Jane Goodall ihre Forschung in Gombe, im heutigen Tansania.",
     "paragraphs": [
       "Jane Goodall wurde 1934 in London geboren und starb 2025. Ab 1960 beobachtete sie wilde Schimpansen in der Region Gombe im heutigen Tansania. Für die Forschung war wichtig, einzelne Tiere über längere Zeit wiederzuerkennen und ihr Verhalten genau zu beschreiben.",
       "Goodall sah Schimpansen mit Pflanzenstängeln und Zweigen Termiten aus ihren Bauten holen. In ihrem späteren eigenen Bericht beschreibt sie, wie Tiere manchmal auch Blätter von einem Zweig entfernten, bevor sie ihn benutzten. Damit beobachtete sie nicht nur den Gebrauch eines Gegenstands, sondern auch dessen Vorbereitung.",
@@ -4960,12 +5052,8 @@
         "text": "1934–2025"
       },
       {
-        "label": "Arbeitsgebiet",
-        "text": "Verhaltensforscherin und Naturschützerin"
-      },
-      {
-        "label": "Verbunden mit",
-        "text": "Vereinigtes Königreich: geboren in London; Tansania: Schimpansenforschung in Gombe"
+        "label": "Geboren",
+        "text": "London, Vereinigtes Königreich"
       }
     ],
     "more": [
@@ -4975,7 +5063,7 @@
       "Naturschutz betrifft Lebensräume und die Menschen vor Ort gemeinsam. Die örtlichen Gemeinschaften sind Beteiligte, nicht bloß eine Kulisse für Forschung. Wildtiere werden mit Abstand und nach den geltenden Schutzregeln beobachtet; Füttern, Berühren oder Hervorrufen einer Handlung gehört nicht zu unserem Lernangebot.",
       "Geduldige Beobachtung kann eine erste Vermutung verändern. Goodall dokumentierte Verhalten einzelner Schimpansen über lange Zeit. Tiere in freier Natur lassen sich nicht wie Maschinen an- und ausschalten."
     ],
-    "surprise": "Langjährige Gombe-Forschung, Werkzeugherstellung/-gebrauch von Schimpansen, Naturschutz mit örtlichen Gemeinschaften, Roots & Shoots.",
+    "surprise": "Sie gab den Schimpansen Namen statt Nummern.",
     "locations": [
       {
         "label": "Gombe, Tansania – Forschungsregion",
@@ -4994,7 +5082,7 @@
         "url": "https://janegoodall.org/jane-goodalls-story/"
       },
       {
-        "label": "Jane Goodall im eigenen Rückblick2015: Zweige als Werkzeuge vorbereiten",
+        "label": "Jane Goodall im eigenen Rückblick 2015: Zweige als Werkzeuge vorbereiten",
         "url": "https://janegoodall.org/news/55-years-at-gombe-qa-with-jane-on-origins-of-life-work/"
       },
       {
@@ -5006,8 +5094,12 @@
         "url": "https://janegoodall.org/jgi-timeline/"
       },
       {
-        "label": "Jane Goodall Institute: Erinnerung1934–2025",
+        "label": "Jane Goodall Institute: Erinnerung 1934–2025",
         "url": "https://janegoodall.org/remembering-jane/"
+      },
+      {
+        "label": "Computer History Museum: Ada Lovelace",
+        "url": "https://www.computerhistory.org/babbage/adalovelace/"
       }
     ],
     "aliases": [
@@ -5028,7 +5120,7 @@
         "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
       ],
       "correct": 0,
-      "why": "Schimpansen können Werkzeuge benutzen und sogar passend vorbereiten."
+      "why": "Ab 1960 beobachtete sie wilde Schimpansen in Gombe. Radioaktivität erforschte Marie Curie, die Rechenanleitung schrieb Ada Lovelace."
     },
     "image": "jane-goodall",
     "learning": {
@@ -5040,13 +5132,61 @@
     "checkedAt": "2026-11-04",
     "revision": 2,
     "questionFeedback": {
-      "hint": "Welche Art von Arbeit braucht wiederholte sorgfältige Beobachtungen in Gombe statt nur einen Blick auf ein einzelnes Verhalten?",
+      "hint": "Ihre Arbeit fand draußen in der Natur statt, nicht im Labor.",
       "wrongReasons": [
         null,
-        "Die Untersuchung radioaktiver Stoffe ist von den hier beschriebenen Beobachtungen zum Verhalten von Primaten zu unterscheiden.",
-        "Eine Rechenanleitung für eine geplante Maschine erklärt keine Beobachtung von Werkzeuggebrauch bei wilden Primaten."
+        "Radioaktivität hat Marie Curie erforscht, meist im Labor. Jane Goodall arbeitete draußen im Wald.",
+        "Eine Rechenanleitung für eine Maschine veröffentlichte Ada Lovelace. Jane Goodall forschte draußen im Wald."
       ]
-    }
+    },
+    "chapters": [
+      {
+        "question": "Was hat sie entdeckt?",
+        "text": "Schimpansen benutzten Werkzeuge, um an Termiten zu kommen. Manche machten sich ihr Werkzeug sogar selbst passend."
+      },
+      {
+        "question": "Warum brauchte sie Geduld?",
+        "text": "Anfangs liefen die Schimpansen vor ihr weg. Erst nach Monaten gewöhnten sie sich an sie."
+      },
+      {
+        "question": "Was tat sie später?",
+        "text": "Sie setzte sich für Tiere und ihre Wälder ein. Sie gründete auch eine Gruppe, in der Kinder und Jugendliche in vielen Ländern selbst helfen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "person-jane_goodall:stimmt-1",
+        "text": "Nur Menschen können Werkzeuge benutzen.",
+        "isTrue": false,
+        "explanation": "Goodall sah Schimpansen, die Werkzeuge benutzten und sogar selbst zurechtmachten."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "person-jane_goodall:rate-1",
+        "prompt": "Womit holten Schimpansen Termiten aus ihrem Bau?",
+        "answers": [
+          "Nur mit ihren bloßen Händen",
+          "Mit Grashalmen und Zweigen",
+          "Mit Werkzeugen von Menschen"
+        ],
+        "correct": 1,
+        "why": "Sie steckten Grashalme und Zweige in den Termitenbau. Manche Zweige machten sie vorher passend, indem sie Blätter abzupften.",
+        "hint": "Goodall sah sie dabei etwas aus dem Wald benutzen."
+      },
+      {
+        "id": "person-jane_goodall:rate-2",
+        "prompt": "Wie erforschte Jane Goodall die Schimpansen?",
+        "answers": [
+          "Sie beobachtete sie lange und geduldig",
+          "Sie fing sie und brachte sie in einen Zoo",
+          "Sie brachte ihnen Kunststücke bei"
+        ],
+        "correct": 0,
+        "why": "Sie beobachtete wilde Schimpansen viele Jahre lang in ihrem Wald. So lernte sie einzelne Tiere gut kennen.",
+        "hint": "Die Schimpansen blieben frei in ihrem Wald."
+      }
+    ]
   },
   {
     "id": "person-albert_einstein",
@@ -5293,7 +5433,7 @@
     ],
     "sources": [
       {
-        "label": "Nobelversammlung: offizieller Medizinpreis2015 und Tu Youyous Forschung (PDF)",
+        "label": "Nobelversammlung: offizieller Medizinpreis 2015 und Tu Youyous Forschung (PDF)",
         "url": "https://www.nobelprizemedicine.org/wp-content/uploads/2015/10/Press_ENG.pdf"
       },
       {
@@ -5403,7 +5543,7 @@
         "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/27/cai-lun-121-ce/"
       },
       {
-        "label": "T. H. Barrett: frühere Papierfunde und der Bericht für105",
+        "label": "T. H. Barrett: frühere Papierfunde und der Bericht für 105",
         "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print/F4EDF2184F186400C08920F227007F29"
       },
       {
@@ -5503,7 +5643,7 @@
         "url": "https://www.nasa.gov/former-astronaut-mae-c-jemison/"
       },
       {
-        "label": "NASA: ursprüngliche Biografiedaten von1993 (PDF)",
+        "label": "NASA: ursprüngliche Biografiedaten von 1993 (PDF)",
         "url": "https://www.nasa.gov/wp-content/uploads/2019/09/jemison_mae.pdf"
       },
       {
@@ -5676,10 +5816,6 @@
       "Warum gehörte zu dieser Umweltarbeit auch gemeinsames Entscheiden? Menschen vor Ort kennen ihre Bedürfnisse und tragen die weitere Arbeit mit. Maathais Friedenspreis würdigte einen Zusammenhang zwischen nachhaltiger Entwicklung, Demokratie und Frieden. Eine einzelne Zählung kann weder diesen ganzen Zusammenhang erklären noch die Wirkung eines wirklichen Projekts beweisen."
     ],
     "facts": [
-      {
-        "label": "Lebenszeit",
-        "text": "1940–2011"
-      },
       {
         "label": "Arbeitsgebiet",
         "text": "Natur- und Friedensarbeit"
@@ -5891,7 +6027,7 @@
     ],
     "sources": [
       {
-        "label": "Alexander von Humboldt-Stiftung · Amerika-Reise1799–1804",
+        "label": "Alexander von Humboldt-Stiftung · Amerika-Reise 1799–1804",
         "url": "https://www.humboldt-foundation.de/entdecken/alexander-von-humboldt/mit-humboldt-unterwegs"
       },
       {
@@ -5903,7 +6039,7 @@
         "url": "https://www.bbaw.de/files-bbaw/presse/pressemitteilungen/pressemitteilungen-2021/PM-02_Geographie_der_Pflanzen/BBAW_PM_Humboldt.pdf"
       },
       {
-        "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von1807",
+        "label": "Humboldt-Universität · Pflanzengeographie und Naturgemälde von 1807",
         "url": "https://www.sammlungen.hu-berlin.de/objekte/-/16678/"
       },
       {
@@ -6044,19 +6180,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Wichtiger Schritt: 1879"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung.",
-      "Heute nutzen viele Lampen LEDs. Sie erzeugen Licht anders als ein heißer Glühdraht. Vergleiche die elektrische Leistung, die Helligkeit und die Lebensdauer; eine möglichst sparsame passende Lampe vermeidet Verschwendung."
+      "Vergleiche bei Lampen, wie viel Strom sie brauchen, wie hell sie sind und wie lange sie halten. Eine sparsame Lampe vermeidet Verschwendung."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Heutige LED-Lampen leuchten ganz ohne glühend heißen Draht.",
     "locations": [
       {
         "label": "Menlo Park – Edisons Team",
@@ -6145,7 +6277,8 @@
       "correct": 0,
       "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
     },
-    "model": "circuit"
+    "model": "circuit",
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-car",
@@ -6157,19 +6290,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Benz-Patent: 1886"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
-      "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
+      "Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
       "Ein Verbrennungsmotor nutzt die Energie eines Kraftstoffs; ein Elektroauto einen Elektromotor und elektrische Energie. Beide brauchen zuverlässige Bremsen. Auch Bus, Bahn, Radfahren und Zufußgehen lösen die Aufgabe, Menschen zu bewegen."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Schon vor dem Benzinwagen von Karl Benz gab es Fahrzeuge mit Dampf und mit Strom.",
     "locations": [
       {
         "label": "Mannheim – Benz-Motorwagen",
@@ -6265,7 +6394,8 @@
       "correct": 0,
       "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-railway",
@@ -6277,19 +6407,14 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Öffentliche Dampfbahn: 1825"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge.",
       "Bei einer Eisenbahn sind nicht nur die Fahrzeuge wichtig. Ein Fahrplan und Signale helfen, viele Züge gemeinsam zu betreiben. Schienen transportieren Menschen und Güter; neue Strecken verändern auch Landschaften."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
     "locations": [
       {
         "label": "Darlington – eine frühe Bahnstrecke",
@@ -6374,7 +6499,8 @@
       "correct": 0,
       "why": "Räder auf Schienen und ein kräftiger Antrieb sollten Wagen ziehen. Schienenwege und Lokomotiven entstanden schrittweise. 1825 eröffnete die Bahn Stockton–Darlington. Viele Menschen verbesserten danach Strecken und Züge."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-airplane",
@@ -6386,19 +6512,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Gesteuerter Motorflug: 1903"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang.",
-      "Ein Flügel lenkt strömende Luft nach unten. Die Luft übt dadurch auch eine Kraft auf den Flügel aus. Druckunterschiede gehören zur Erklärung. Luftteilchen müssen oben und unten nicht gleichzeitig am Ende des Flügels ankommen."
+      "Auch Druckunterschiede gehören zur Erklärung. Luftteilchen müssen oben und unten nicht gleichzeitig am Ende des Flügels ankommen."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Ein Flügel drückt Luft nach unten, und die Luft drückt den Flügel dafür nach oben.",
     "locations": [
       {
         "label": "Kill Devil Hills – Flüge der Wright-Brüder",
@@ -6486,7 +6608,8 @@
       "correct": 0,
       "why": "Flügel sollten Auftrieb erzeugen; der Flug musste steuerbar sein. Ballons und Gleiter gab es schon. Die Wright-Brüder erprobten Steuerung und Flügel, bevor ihnen 1903 ein angetriebener, gesteuerter Flug gelang."
     },
-    "model": "flight"
+    "model": "flight",
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-phone",
@@ -6498,19 +6621,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Bells US-Patent: 1876"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik.",
-      "Das Mikrofon macht aus Schallschwingungen ein elektrisches Signal. Am anderen Ende verwandelt ein Lautsprecher Signale wieder in Schall. Heute können Verbindungen zusätzlich digital und über Funk übertragen werden."
+      "Ein Mikrofon nimmt den Schall auf, ein Lautsprecher gibt ihn wieder aus. Heute können Verbindungen zusätzlich digital und über Funk übertragen werden."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Im Telefon wird deine Stimme zu einem elektrischen Signal und am anderen Ende wieder zu Schall.",
     "locations": [
       {
         "label": "Boston – Beispielort der frühen Telefonentwicklung",
@@ -6590,7 +6709,7 @@
       "why": "Schall sollte als Signal weit übertragen werden. Viele Menschen experimentierten damit. Alexander Graham Bell erhielt 1876 ein wichtiges Patent. Auch Elisha Gray und andere arbeiteten an Telefontechnik."
     },
     "model": null,
-    "sourceNote": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Bells Patent von 1876, weiteren Beteiligten und der Umwandlung von Schall in elektrische Signale und zurück gelesen am 30. Oktober 2026 bei National Museums Scotland. Die Bauteilskizze erklärt das Grundprinzip; sie ist keine genaue Rekonstruktion eines historischen Telefons."
+    "sourceNote": "Grundtext: bisheriger Quellenstand 7. Oktober 2026. Quellen zu Bells Patent von 1876, weiteren Beteiligten und der Umwandlung von Schall in elektrische Signale und zurück gelesen am 30. Oktober 2026 bei National Museums Scotland. Die Bauteilskizze erklärt das Grundprinzip; sie ist keine genaue Rekonstruktion eines historischen Telefons. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-computer",
@@ -6602,19 +6721,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Viele Entwicklungsschritte seit dem 19. Jahrhundert"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
-      "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers.",
+      "Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern.",
       "Ein Computer führt Programme aus. Eingabe, Verarbeitung, Speicherung und Ausgabe arbeiten zusammen. Ein Ergebnis kann falsch sein, wenn das Programm oder seine Daten falsch sind; ein schneller Rechner ist nicht automatisch ein kluger Entscheider."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Den Computer hat kein Mensch allein erfunden, sondern viele.",
     "locations": [
       {
         "label": "USA – eines von vielen Entwicklungszentren",
@@ -6719,7 +6834,8 @@
       "correct": 0,
       "why": "Eine Maschine sollte genaue Anweisungen Schritt für Schritt ausführen. Rechenmaschinen, mechanische Pläne und elektronische Computer hatten viele Beteiligte in mehreren Ländern. Es gibt nicht einen einzigen Erfinder des Computers."
     },
-    "model": "computer"
+    "model": "computer",
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-internet",
@@ -6731,19 +6847,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "ARPANET: 1969; TCP/IP-Umstellung: 1983"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei.",
-      "Gemeinsame Regeln, die Protokolle heißen, helfen verschiedenartigen Geräten beim Austausch. Daten können in Paketen über mehrere Zwischenstationen reisen. Nicht jede Verbindung ist immer verfügbar; Netze brauchen Wartung und Schutz."
+      "Gemeinsame Regeln, die Protokolle heißen, helfen verschiedenartigen Geräten beim Austausch. Nicht jede Verbindung ist immer verfügbar; Netze brauchen Wartung und Schutz."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Daten können in kleinen Paketen über mehrere Zwischenstationen reisen.",
     "locations": [
       {
         "label": "Kalifornien – frühe ARPANET-Knoten",
@@ -6834,7 +6946,8 @@
       "correct": 0,
       "why": "Netze sollten miteinander verbunden werden. Viele Teams entwickelten Paketübertragung und gemeinsame Regeln. Das ARPANET verband 1969 erste Rechner. Forschende aus mehreren Ländern trugen zur Entwicklung des Internets bei."
     },
-    "model": "network"
+    "model": "network",
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-compass",
@@ -6846,19 +6959,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Navigation in China: etwa nach 1000"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter.",
-      "Die Nadel orientiert sich am Magnetfeld der Erde. Magnetischer Norden und geografischer Nordpol liegen nicht genau am selben Ort. Metall und andere Magnete in der Nähe können die Anzeige stören."
+      "Die Nadel orientiert sich am Magnetfeld der Erde. Metall und andere Magnete in der Nähe können die Anzeige stören."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Eine Kompassnadel zeigt meist nicht genau zum Nordpol, sondern ein Stück daneben.",
     "locations": [
       {
         "label": "China – frühe Navigationsgeschichte",
@@ -6958,7 +7067,7 @@
       "why": "Eine magnetische Nadel konnte bei der Richtung helfen. Menschen kannten magnetische Steine schon früher. Seefahrer in China nutzten später magnetische Richtungsanzeigen; das Wissen verbreitete sich weiter."
     },
     "model": null,
-    "sourceNote": "Das Grundprinzip der magnetischen Kompassnadel und die Unterscheidung von magnetischer Richtung und geografisch Nord wurden am 29.10.2026 mit NOAA NCEI abgeglichen. Dieser Abgleich datiert die übrigen historischen Angaben nicht neu."
+    "sourceNote": "Das Grundprinzip der magnetischen Kompassnadel und die Unterscheidung von magnetischer Richtung und geografisch Nord wurden am 29.10.2026 mit NOAA NCEI abgeglichen. Dieser Abgleich datiert die übrigen historischen Angaben nicht neu. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-printing",
@@ -6970,19 +7079,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Gutenbergs System: um 1450"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
-      "In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System.",
+      "Gutenbergs Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System.",
       "Mit derselben Druckform lassen sich viele gleiche Seiten herstellen. Eine Änderung muss vor dem Drucken in die Vorlage. Digital gespeicherte Texte sind leichter zu verändern; für verlässliche Bücher bleiben Quellen und sorgfältiges Korrigieren wichtig."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "In China und Korea gab es bewegliche Druckzeichen schon vor Gutenberg.",
     "locations": [
       {
         "label": "Mainz – Gutenbergs Werkstatt",
@@ -7083,7 +7188,8 @@
       "correct": 0,
       "why": "Buchstaben sollten zu Seiten zusammengestellt und oft abgedruckt werden. In China und Korea gab es bewegliche Druckzeichen vor Gutenberg. Seine Werkstatt verband Metalltypen, geeignete Farbe und eine Presse zu einem wirksamen europäischen System."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-rocket",
@@ -7095,19 +7201,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Erste Flüssigkeitsrakete: 1926"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme.",
-      "Eine Rakete stößt Masse schnell nach hinten aus und erhält dadurch Schub. Sie muss sich nicht an Luft abstoßen und kann auch im Weltraum arbeiten. Einige heutige Raketenstufen werden nach der Landung erneut verwendet."
+      "Eine Rakete stößt Masse schnell nach hinten aus und erhält dadurch Schub. Einige heutige Raketenstufen werden nach der Landung erneut verwendet."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Eine Rakete muss sich nicht an Luft abstoßen, darum fliegt sie auch im Weltraum.",
     "locations": [
       {
         "label": "Auburn – Goddards Versuch 1926",
@@ -7192,7 +7294,8 @@
       "correct": 0,
       "why": "Schnell ausströmendes Gas sollte die Rakete in die Gegenrichtung schieben. Raketen gab es lange vor der Raumfahrt. Robert Goddard startete 1926 eine Rakete mit flüssigen Treibstoffen. Später entwickelten große Teams leistungsfähigere Systeme."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-satellite",
@@ -7204,19 +7307,15 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Sputnik 1: 4. Oktober 1957"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten.",
-      "Ein Satellit fällt ständig in Richtung Erde, bewegt sich aber seitwärts schnell genug, um sie immer wieder zu verfehlen. Messgeräte sammeln Daten; Antennen übertragen sie. Unterschiedliche Aufgaben brauchen unterschiedliche Umlaufbahnen."
+      "Im Satelliten sammeln Messgeräte Daten; Antennen übertragen sie. Unterschiedliche Aufgaben brauchen unterschiedliche Umlaufbahnen."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
+    "surprise": "Ein Satellit fällt ständig zur Erde, ist aber seitwärts so schnell, dass er sie immer wieder verfehlt.",
     "locations": [
       {
         "label": "Baikonur – Sputnik-Start, heute Kasachstan",
@@ -7301,7 +7400,8 @@
       "correct": 0,
       "why": "Ein Gerät sollte die Erde auf einer Umlaufbahn umkreisen. Teams in der Sowjetunion brachten 1957 Sputnik 1 in eine Erdumlaufbahn. Weitere Länder und internationale Teams entwickelten viele unterschiedliche Satelliten."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "invention-smartphone",
@@ -7313,19 +7413,14 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Frühe Kombinationen: 1990er-Jahre"
-      },
-      {
-        "label": "Viele Beteiligte",
-        "text": "Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
       }
     ],
     "more": [
       "Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen.",
       "Im Smartphone stecken viele frühere Entwicklungen: Computer, Funk, Bildschirm, Kamera und Akku. Reparieren und längeres Benutzen können Material sparen. Nicht jede neue Version ist für jede Aufgabe nötig."
     ],
-    "surprise": "Eine gute Erfindung löst ein Problem. Meistens wird sie von vielen Menschen weiterentwickelt.",
     "locations": [],
     "related": [
       "invention-phone",
@@ -7411,39 +7506,32 @@
       "correct": 0,
       "why": "Telefon und kleiner Computer sollten zusammenarbeiten. Viele Entwicklungen kamen zusammen: Mobilfunk, Chips, Akkus, Bildschirme und Programme. IBM und BellSouth kombinierten beim Simon in den 1990er-Jahren mehrere Funktionen."
     },
-    "model": null
+    "model": null,
+    "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte."
   },
   {
     "id": "building-giza-pyramids",
     "category": "buildings",
     "title": "Pyramiden von Gizeh",
-    "intro": "Grabstätten für Könige und Teil großer religiöser Anlagen.",
+    "intro": "Die Pyramiden von Gizeh in Ägypten wurden als Gräber für Könige gebaut.",
     "paragraphs": [
       "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
     ],
     "facts": [
       {
-        "label": "Wo?",
-        "text": "Gizeh, Ägypten"
-      },
-      {
         "label": "Wann?",
-        "text": "um 2550 v. Chr."
+        "text": "Vor etwa 4.500 Jahren"
       },
       {
         "label": "Wie groß?",
-        "text": "Ursprüngliche Höhe der Cheops-Pyramide: etwa 146,5 Meter. Ihre heutige Höhe ist geringer."
-      },
-      {
-        "label": "Material & Konstruktion",
-        "text": "Kalkstein; in Teilen auch andere Gesteine."
+        "text": "Einst etwa 146,5 Meter hoch."
       }
     ],
     "more": [
       "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
       "Die Pyramiden waren königliche Grabanlagen. Die Cheops-Pyramide bestand überwiegend aus örtlichem Kalkstein und hatte einst eine helle Kalksteinverkleidung."
     ],
-    "surprise": "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+    "surprise": "Rund 3.800 Jahre lang war die Cheops-Pyramide das höchste Bauwerk der Welt.",
     "locations": [
       {
         "label": "Gizeh, Ägypten",
@@ -7458,12 +7546,20 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "label": "UNESCO-Welterbe: Memphis und die Pyramidenfelder von Gizeh bis Dahschur",
         "url": "https://whc.unesco.org/en/list/86/"
       },
       {
-        "label": "Bauwerksbetreiber / Fachquelle zur Konstruktion",
+        "label": "Ägyptisches Ministerium für Tourismus und Altertümer: Die Große Pyramide",
         "url": "https://egymonuments.gov.eg/en/monuments/the-great-pyramid"
+      },
+      {
+        "label": "Smithsonian Magazine: Kalkstein aus Tura per Boot nach Gizeh",
+        "url": "https://www.smithsonianmag.com/history/ancient-egypt-shipping-mining-farming-economy-pyramids-180956619/"
+      },
+      {
+        "label": "AERA: Die Stadt der Pyramidenbauer",
+        "url": "https://www.aeraweb.org/lost-city/"
       }
     ],
     "aliases": [],
@@ -7475,15 +7571,59 @@
     },
     "model": "heights",
     "question": {
-      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "prompt": "Welcher Satz passt zu den Pyramiden?",
       "answers": [
         "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
         "Bögen können Lasten seitlich zu ihren Stützen leiten.",
         "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch."
       ],
       "correct": 0,
-      "why": "Viele Arbeitsgruppen bearbeiteten und transportierten Steinblöcke. Wie alle Einzelheiten beim Bau abliefen, wird weiter erforscht."
-    }
+      "why": "Viele Menschen planten und bauten über Jahre zusammen. Bögen und offene Gitter gehören zu anderen Bauwerken."
+    },
+    "chapters": [
+      {
+        "question": "Was ist in der großen Pyramide?",
+        "text": "Innen gibt es drei Kammern. In der Königskammer steht noch der Steinsarg von König Cheops."
+      },
+      {
+        "question": "Wie lange dauerte der Bau?",
+        "text": "Fachleute schätzen 10 bis 20 Jahre. Wie genau gebaut wurde, ist bis heute nicht sicher."
+      }
+    ],
+    "claims": [
+      {
+        "id": "building-giza-pyramids:stimmt-1",
+        "text": "Die große Pyramide sah früher genauso aus wie heute.",
+        "isTrue": false,
+        "explanation": "Früher war sie höher und außen ganz mit hellem Kalkstein verkleidet."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "building-giza-pyramids:rate-1",
+        "prompt": "Woraus ist die große Pyramide vor allem gebaut?",
+        "answers": [
+          "Aus Kalkstein",
+          "Aus festgedrücktem Sand",
+          "Aus Lehmziegeln"
+        ],
+        "correct": 0,
+        "why": "Die Cheops-Pyramide besteht vor allem aus Kalkstein aus der Umgebung.",
+        "hint": "Denk an die großen Steinblöcke."
+      },
+      {
+        "id": "building-giza-pyramids:rate-2",
+        "prompt": "Wie kamen die hellen Außensteine zur Pyramide?",
+        "answers": [
+          "Mit Schiffen auf dem Nil",
+          "Mit Schiffen aus einem fernen Land",
+          "Sie lagen schon an der Baustelle"
+        ],
+        "correct": 0,
+        "why": "Die hellen Außensteine kamen mit Schiffen aus Tura. Die meisten anderen Steine stammten aus der Umgebung.",
+        "hint": "Tura, wo die Steine herkamen, liegt am großen Fluss Nil."
+      }
+    ]
   },
   {
     "id": "building-great-wall",
@@ -7703,33 +7843,21 @@
     "id": "building-eiffel-tower",
     "category": "buildings",
     "title": "Der Eiffelturm",
-    "intro": "Ein besonderes Bauwerk für die Weltausstellung 1889.",
+    "intro": "Der Eiffelturm wurde 1889 für eine große Ausstellung in Paris gebaut.",
     "paragraphs": [
       "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
     ],
     "facts": [
       {
-        "label": "Wo?",
-        "text": "Paris, Frankreich"
-      },
-      {
-        "label": "Wann?",
-        "text": "Fertiggestellt 1889"
-      },
-      {
         "label": "Wie groß?",
-        "text": "Heute 330 Meter hoch, einschließlich Antennen."
-      },
-      {
-        "label": "Material & Konstruktion",
-        "text": "Eisen, zu einem Gitter verbunden."
+        "text": "Heute 330 Meter hoch, mit Antennen."
       }
     ],
     "more": [
       "Bauwerke gehören auch zu den Menschen, die sie planten, bauten und pflegen. Ihre Geschichte kann schöne und schwierige Seiten haben.",
       "Ein offenes Gitter braucht weniger Material als ein gleich großer massiver Block. Viele Dreiecke stabilisieren die Konstruktion; Wind und Gewicht müssen trotzdem genau berechnet werden."
     ],
-    "surprise": "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+    "surprise": "Bei Sonne dehnt sich das Eisen aus, und die Spitze neigt sich ein wenig von der Sonne weg.",
     "locations": [
       {
         "label": "Paris, Frankreich",
@@ -7746,12 +7874,28 @@
     ],
     "sources": [
       {
-        "label": "Offizielle Bauwerksquelle / UNESCO",
+        "label": "Offizielle Seite des Eiffelturms: Geschichte",
         "url": "https://www.toureiffel.paris/en/the-monument/history"
       },
       {
         "label": "Eiffelturm – aktuelle Maße",
         "url": "https://www.toureiffel.paris/de/monument/zahlen"
+      },
+      {
+        "label": "National Geographic: Anstrich von Hand, etwa alle sieben Jahre, gegen Rost",
+        "url": "https://www.nationalgeographic.com/travel/article/behind-the-scenes-eiffel-tower-paris"
+      },
+      {
+        "label": "France.fr (Atout France): Anstrich als Schutz",
+        "url": "https://www.france.fr/en/article/9-anecdotes-revealing-all-you-need-to-know-about-the-eiffel-tower/"
+      },
+      {
+        "label": "Offizielle Seite des Eiffelturms: Warum sich der Turm in der Sonne bewegt",
+        "url": "https://www.toureiffel.paris/en/news/history-and-culture/why-does-eiffel-tower-change-size"
+      },
+      {
+        "label": "Betreiber des Eiffelturms bei Google Arts & Culture: Wie der Turm entstand",
+        "url": "https://artsandculture.google.com/story/wwWBABMpbxIA8A"
       }
     ],
     "aliases": [],
@@ -7764,15 +7908,59 @@
     },
     "model": "heights",
     "question": {
-      "prompt": "Welche Erklärung passt zu diesem Bauwerk?",
+      "prompt": "Welcher Satz passt zum Eiffelturm?",
       "answers": [
         "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
         "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
         "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig."
       ],
       "correct": 0,
-      "why": "Ein Team entwarf die Konstruktion aus Eisenteilen. Dazu gehörten Maurice Koechlin, Émile Nouguier, Stephen Sauvestre und Gustave Eiffels Firma."
-    }
+      "why": "Der Turm ist ein offenes Gitter. Es trägt den hohen Turm, und der Wind weht einfach hindurch."
+    },
+    "chapters": [
+      {
+        "question": "Warum hat er so viele Lücken?",
+        "text": "Ein offenes Gitter braucht viel weniger Material als ein gleich großer fester Block."
+      },
+      {
+        "question": "Wer pflegt den Turm?",
+        "text": "Etwa alle sieben Jahre streichen ihn Maler neu, von Hand."
+      }
+    ],
+    "claims": [
+      {
+        "id": "building-eiffel-tower:stimmt-1",
+        "text": "Gustave Eiffel hat den Turm ganz allein geplant.",
+        "isTrue": false,
+        "explanation": "Ein ganzes Team aus Eiffels Firma plante ihn mit."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "building-eiffel-tower:rate-1",
+        "prompt": "Woraus ist der Eiffelturm vor allem gebaut?",
+        "answers": [
+          "Aus Beton",
+          "Aus Eisen",
+          "Aus Stein"
+        ],
+        "correct": 1,
+        "why": "Der Turm besteht aus vielen Eisenteilen. Sie sind zu einem Gitter verbunden.",
+        "hint": "Schau dir die vielen dünnen Stangen an."
+      },
+      {
+        "id": "building-eiffel-tower:rate-2",
+        "prompt": "Wozu bekommt der Turm immer wieder neue Farbe?",
+        "answers": [
+          "Nur damit er für Fotos hübsch aussieht",
+          "Damit er nachts leuchtet",
+          "Damit das Eisen nicht rostet"
+        ],
+        "correct": 2,
+        "why": "Die Farbe schützt das Eisen vor Rost. Ohne Anstrich würde der Turm nicht lange halten.",
+        "hint": "Denk daran, was Regen mit Eisen machen kann."
+      }
+    ]
   },
   {
     "id": "building-golden-gate-bridge",
@@ -8006,7 +8194,6 @@
       "Strom aus der Steckdose ist gefährlich. Unser Modell bleibt vollständig auf dem Bildschirm. Für echte Versuche benutzen Erwachsene geeignete sichere Lernmaterialien.",
       "Im Alltag versorgt elektrische Energie Lampen und Geräte. Der Schalter unterbricht einen Stromweg. Unser Modell verwendet eine Batterie: Steckdosen, Netzkabel und echte elektrische Anlagen sind keine Kinderexperimente."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
     "locations": [],
     "related": [
       "invention-light",
@@ -8041,7 +8228,7 @@
     "title": "Wie funktioniert das Internet?",
     "intro": "Eine Nachricht kann als viele kleine Datenpakete durch ein Netz reisen.",
     "paragraphs": [
-      "Router leiten Pakete weiter. Gemeinsame Regeln helfen den Computern, sie richtig zu verstehen. Manche Pakete können verschiedene Wege nehmen."
+      "Router leiten Pakete weiter. Gemeinsame Regeln helfen den Computern, sie richtig zu verstehen."
     ],
     "facts": [
       {
@@ -8053,7 +8240,7 @@
       "Das Netzbild zeigt wenige Stationen und vereinfachte Wege. Im echten Internet entscheiden viele Geräte und Regeln gemeinsam.",
       "Eine Nachricht kann in kleinere Datenpakete zerlegt werden. Zwischenstationen leiten sie weiter. In echten Netzen gibt es viel mehr Wege und Regeln als in diesem Modell. Das Web ist nur einer der Dienste des Internets."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Die Pakete einer Nachricht können verschiedene Wege durchs Netz nehmen.",
     "locations": [],
     "related": [
       "invention-internet",
@@ -8098,7 +8285,6 @@
       "Unser Kräftebild vergleicht Pfeile. Es ist keine Flugsimulation. Form, Geschwindigkeit und Luftströmung wirken im echten Flug gemeinsam.",
       "Steigt das Flugzeug, sind die Kräfte für diesen Bewegungszustand nicht genauso ausgeglichen wie bei einem gleichmäßigen geraden Flug. Ein Regler erklärt nur eine vereinfachte Kraftbilanz und ist keine Flugvorhersage."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
     "locations": [],
     "related": [
       "invention-airplane",
@@ -8142,7 +8328,6 @@
       "Hier siehst du ein vereinfachtes flaches Entfernungsrätsel. Echtes GPS arbeitet im dreidimensionalen Raum mit mindestens vier Satelliten und genauen Uhren. Wir fragen deinen eigenen Standort nicht ab.",
       "Navigationsgeräte vergleichen die Laufzeiten von Satellitensignalen. Dafür müssen die Uhren sehr genau sein. In der wirklichen räumlichen Ortung werden normalerweise mindestens vier Satelliten verwendet, auch um den Uhrenfehler zu bestimmen. Diese Seite fragt deinen Standort nicht ab."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
     "locations": [],
     "related": [
       "invention-satellite",
@@ -8184,9 +8369,9 @@
     ],
     "more": [
       "Ein Computer folgt Programmen. Unser Zahlenspiel zeigt binäre Stellenwerte; es erklärt nicht alle Vorgänge in einem Prozessor.",
-      "Eine Datei kann Bilder, Texte oder Töne darstellen. Welche Bedeutung eine Folge von Bits hat, hängt von vereinbarten Regeln ab. Unser Acht-Bit-Modell zeigt Zahlen; echte Rechner verarbeiten viel längere Folgen und viele verschiedene Datenformen."
+      "Unser Acht-Bit-Modell zeigt Zahlen; echte Rechner verarbeiten viel längere Folgen und viele verschiedene Datenformen."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Dieselben Nullen und Einsen können ein Bild, ein Text oder ein Ton sein, je nachdem, nach welcher Regel man sie liest.",
     "locations": [],
     "related": [
       "invention-computer",
@@ -8233,10 +8418,10 @@
       }
     ],
     "more": [
-      "Es gab schon lange vor Kolumbus gute Gründe für eine runde Erde. Schatten sind ein Hinweis; heute haben wir zusätzlich Messungen, Raumfahrt und Bilder. Das Modell zeigt parallele Sonnenstrahlen und zwei Orte auf demselben Längengrad.",
+      "Schatten sind ein Hinweis auf die runde Erde; heute haben wir zusätzlich Messungen, Raumfahrt und Bilder. Das Modell zeigt parallele Sonnenstrahlen und zwei Orte auf demselben Längengrad.",
       "Gleichzeitige Schattenmessungen an weit entfernten Orten können helfen, die Erdkrümmung zu untersuchen. Dafür muss man die Sonnenrichtung und die Lage der Orte beachten. Dieses vereinfachte Modell zeigt die Idee; es ersetzt keine vollständige Messung."
     ],
-    "surprise": "Eine gute Forscherfrage beginnt mit: Was passiert, wenn ich etwas ändere?",
+    "surprise": "Schon lange vor Kolumbus gab es gute Gründe für eine runde Erde.",
     "locations": [
       {
         "label": "Alexandria – mit Eratosthenes verbunden",
@@ -8391,10 +8576,6 @@
       {
         "label": "Lebensraum",
         "text": "Wiesen und Gärten"
-      },
-      {
-        "label": "Nahrung",
-        "text": "Insekten"
       },
       {
         "label": "Größe",
@@ -8708,7 +8889,7 @@
     "intro": "Die Geschichte der Maya gehört zu Amerika. Maya-Sprachen und Gemeinschaften gibt es bis heute.",
     "paragraphs": [
       "In Städten wie Tikal bauten Menschen Tempel und Plätze. Sie schrieben mit eigenen Schriftzeichen und beobachteten den Himmel.",
-      "Die Maya entwickelten genaue Kalender und verwendeten die Null in ihrem Zahlensystem. Ihre Geschichte beginnt lange vor diesem Zeitanker."
+      "Die Maya entwickelten genaue Kalender und verwendeten die Null in ihrem Zahlensystem. Ihre Geschichte begann schon lange vor dem Jahr 250."
     ],
     "facts": [
       {
@@ -8716,8 +8897,8 @@
         "text": "Teile des heutigen Mexiko und Mittelamerikas."
       },
       {
-        "label": "Zeitanker",
-        "text": "250 steht hier für den Beginn der klassischen Zeit."
+        "label": "Wann?",
+        "text": "Um 250 begann die Blütezeit vieler Maya-Städte."
       },
       {
         "label": "Heute",
@@ -8791,7 +8972,7 @@
         "text": "Sternrichtungen, Wellen und genaue Beobachtung."
       },
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "1000 ist ein ungefährer Orientierungspunkt, kein einzelnes Reisedatum."
       }
     ],
@@ -8853,7 +9034,7 @@
         "text": "Mali in Westafrika."
       },
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Um 1500: eine wichtige Zeit der Gelehrsamkeit."
       },
       {
@@ -8983,7 +9164,7 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "27 v. Chr.: Beginn der Kaiserzeit unter Augustus."
       },
       {
@@ -9586,12 +9767,8 @@
     ],
     "facts": [
       {
-        "label": "Antrieb",
-        "text": "Sonnenenergie und Schwerkraft bewegen Wasser."
-      },
-      {
-        "label": "Unsichtbar",
-        "text": "Wasserdampf ist gasförmig; die sichtbare Wolke besteht aus Tröpfchen oder Eis."
+        "label": "Was bewegt das Wasser?",
+        "text": "Die Wärme der Sonne hebt es hoch, die Schwerkraft zieht es nach unten."
       }
     ],
     "more": [
@@ -9600,7 +9777,6 @@
       "Eine Straße oder andere undurchlässige Fläche erschwert das Versickern. Wie viel Wasser abfließt, hängt zusätzlich etwa vom Regen, der Bodenfeuchte und dem Gefälle ab. Aus der Flächenart allein lässt sich keine genaue Abflussmenge berechnen.",
       "Die vier Stationen im Modell zeigen einen möglichen Weg und lassen weitere Verzweigungen aus. Die Tasten wechseln Erklärungen; sie steuern weder eine Wettersimulation noch die Menge oder Geschwindigkeit des Wassers. Vergleiche den Beispielweg mit den zusätzlichen Speichern im Text."
     ],
-    "surprise": "Eine Pflanze ist ein Teil des Wasserkreislaufs.",
     "locations": [],
     "related": [
       "science-photosynthesis",
@@ -9631,6 +9807,10 @@
       {
         "label": "NASA für junge Entdecker: unsichtbarer Dampf und sichtbare Wolken",
         "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      },
+      {
+        "label": "USGS: Sonne und Schwerkraft treiben den Wasserkreislauf an",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
       }
     ],
     "sourceNote": "Ausgewählte Fachpassagen von NASA, NOAA und British Geological Survey am 6. November 2026 einzeln gelesen und mit diesen Erklärungen abgeglichen. Die ältere NASA-Grundlagenseite dient nur den grundlegenden Wasserwegen, nicht aktuellen Mengen- oder Missionsangaben. Eigene vereinfachte Erklärungen und gedachte Aufgaben; das Schema ist keine Wetter- oder Grundwasserprognose.",
@@ -9697,7 +9877,67 @@
         "why": "Eis, Grundwasser und Atmosphäre speichern Wasser unterschiedlich lange."
       }
     ],
-    "model": "water-cycle"
+    "model": "water-cycle",
+    "chapters": [
+      {
+        "question": "Wohin verschwindet eine Pfütze?",
+        "text": "Sonne und warme Luft wärmen das Wasser. Ein Teil verdunstet und steigt als unsichtbarer Dampf in die Luft."
+      },
+      {
+        "question": "Wie entsteht eine Wolke?",
+        "text": "Kühlt feuchte Luft ab, wird ein Teil des Dampfes wieder zu Wasser. Es bilden sich winzige Tröpfchen."
+      },
+      {
+        "question": "Wohin fließt der Regen?",
+        "text": "Regen und Schnee sickern in den Boden oder fließen in Bäche und Flüsse. Manches Wasser kommt ins Meer, manches bleibt lange als Eis liegen."
+      }
+    ],
+    "claims": [
+      {
+        "id": "science-water-cycle:stimmt-1",
+        "text": "Nebel ist eine Wolke ganz nah am Boden.",
+        "isTrue": true,
+        "explanation": "Wer durch Nebel geht, geht durch eine Wolke."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "science-water-cycle:rate-1",
+        "prompt": "Wo ist das meiste Wasser der Erde?",
+        "answers": [
+          "In Flüssen und Seen",
+          "Im Meer",
+          "In den Wolken"
+        ],
+        "correct": 1,
+        "why": "Von 100 Eimern Wasser auf der Erde wären 97 Meerwasser. Dieses Wasser ist salzig.",
+        "hint": "Schau auf einen Globus: Welche Farbe siehst du am meisten?"
+      },
+      {
+        "id": "science-water-cycle:rate-2",
+        "prompt": "Geben Pflanzen Wasser an die Luft ab?",
+        "answers": [
+          "Ja, über ihre Blätter",
+          "Nein, sie trinken nur",
+          "Ja, über die Blüten als Regen"
+        ],
+        "correct": 0,
+        "why": "Pflanzen nehmen Wasser mit den Wurzeln auf. Über ihre Blätter geben sie Wasserdampf an die Luft ab.",
+        "hint": "Pflanzen trinken mit den Wurzeln, aber wo bleibt das Wasser dann?"
+      },
+      {
+        "id": "science-water-cycle:rate-3",
+        "prompt": "Warum wird ein nasses Handtuch trocken?",
+        "answers": [
+          "Das Handtuch trinkt das Wasser auf",
+          "Das Wasser verschwindet einfach ganz",
+          "Das Wasser verdunstet in die Luft"
+        ],
+        "correct": 2,
+        "why": "Das Wasser im Handtuch wird zu unsichtbarem Wasserdampf. Der Dampf zieht in die Luft davon.",
+        "hint": "Mit einer Pfütze passiert dasselbe."
+      }
+    ]
   },
   {
     "id": "science-photosynthesis",
@@ -10180,7 +10420,7 @@
     "id": "science-moon-phases",
     "category": "science",
     "title": "Warum verändert der Mond seine Form?",
-    "intro": "Der Mond bleibt rund. Wir sehen unterschiedlich viel von seiner beleuchteten Hälfte.",
+    "intro": "Der Mond bleibt immer rund, auch wenn er wie eine Sichel aussieht.",
     "aliases": [
       "Mondphasen",
       "Vollmond",
@@ -10196,17 +10436,13 @@
       {
         "label": "Rhythmus",
         "text": "Von Neumond zu Neumond vergehen etwa 29,5 Tage."
-      },
-      {
-        "label": "Licht",
-        "text": "Mondlicht ist reflektiertes Sonnenlicht."
       }
     ],
     "more": [
       "Die Mondbahn ist gegenüber der Erdbahnebene geneigt. Bei den meisten Vollmonden passiert der Mond oberhalb oder unterhalb des Erdschattens.",
       "Auf der anderen Erdhalbkugel kann dieselbe Mondphase anders gedreht aussehen. Die Phase selbst bleibt dabei gleich."
     ],
-    "surprise": "Ein Halbmond zeigt eine halbe beleuchtete Mondscheibe, kein halbes Himmelsobjekt.",
+    "surprise": "Vom Mond sehen wir immer dieselbe Seite.",
     "locations": [],
     "related": [
       "history-apollo11",
@@ -10232,7 +10468,7 @@
         "Von brennenden Wolken"
       ],
       "correct": 0,
-      "why": "Die Mondoberfläche reflektiert Sonnenlicht."
+      "why": "Der Mond leuchtet nicht selbst. Er wirft das Licht der Sonne zurück."
     },
     "links": [],
     "revision": 1,
@@ -10287,7 +10523,67 @@
         "why": "Der Erdschatten ist nur bei einer Mondfinsternis die Ursache der Verdunkelung."
       }
     ],
-    "model": "moon-phases"
+    "model": "moon-phases",
+    "chapters": [
+      {
+        "question": "Ist der Mond halb dunkel?",
+        "text": "Die Sonne beleuchtet immer eine Hälfte des Mondes. Die andere Hälfte liegt im Dunkeln."
+      },
+      {
+        "question": "Warum sieht er jeden Abend anders aus?",
+        "text": "Der Mond kreist um die Erde. Dabei sehen wir mal mehr, mal weniger von seiner hellen Hälfte."
+      },
+      {
+        "question": "Was ist Vollmond, was Neumond?",
+        "text": "Bei Vollmond sehen wir fast die ganze helle Seite. Bei Neumond zeigt sie fast ganz von uns weg."
+      }
+    ],
+    "claims": [
+      {
+        "id": "science-moon-phases:stimmt-1",
+        "text": "Der Halbmond entsteht durch den Schatten der Erde.",
+        "isTrue": false,
+        "explanation": "Beim Halbmond sehen wir die helle Hälfte nur von der Seite."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "science-moon-phases:rate-1",
+        "prompt": "Hat der Mond eine Seite, die immer dunkel ist?",
+        "answers": [
+          "Ja, die Rückseite ist immer dunkel",
+          "Ja, die Vorderseite ist immer dunkel",
+          "Nein, jede Seite bekommt Sonnenlicht"
+        ],
+        "correct": 2,
+        "why": "Nein, eine immer dunkle Seite gibt es nicht. Die Rückseite bekommt genauso viel Sonnenlicht wie die Seite, die wir sehen.",
+        "hint": "Wie die Erde hat auch der Mond Tag und Nacht."
+      },
+      {
+        "id": "science-moon-phases:rate-2",
+        "prompt": "Kann man den Mond auch am Tag sehen?",
+        "answers": [
+          "Ja, oft auch am Tag",
+          "Nein, nur in der Nacht",
+          "Nur wenn Vollmond ist"
+        ],
+        "correct": 0,
+        "why": "Ja, der Mond steht oft auch am Tag am Himmel. Neben der hellen Sonne fällt er nur weniger auf.",
+        "hint": "Schau mal am Nachmittag in den Himmel."
+      },
+      {
+        "id": "science-moon-phases:rate-3",
+        "prompt": "Sehen alle Menschen auf der Erde dieselbe Mondphase?",
+        "answers": [
+          "Nein, jedes Land sieht eine andere",
+          "Ja, nur manchmal auf dem Kopf",
+          "Nein, im Süden ist immer Vollmond"
+        ],
+        "correct": 1,
+        "why": "Ja, alle sehen dieselbe Phase. In Australien, auf der Südhalbkugel, steht sie nur auf dem Kopf.",
+        "hint": "Es gibt nur einen Mond für die ganze Erde."
+      }
+    ]
   },
   {
     "id": "science-seasons",
@@ -10526,10 +10822,6 @@
       "Im weichen Schnabel sitzen Sinnesrezeptoren. Sie helfen ihm, unter Wasser Beutetiere in seiner Nähe zu finden."
     ],
     "facts": [
-      {
-        "label": "Tiergruppe",
-        "text": "Säugetiere"
-      },
       {
         "label": "Artname",
         "text": "Ornithorhynchus anatinus"
@@ -11748,14 +12040,14 @@
       }
     },
     "question": {
-      "prompt": "Welcher Name gehört zur hier beschriebenen Schleiereule?",
+      "prompt": "Wie lautet der wissenschaftliche Name der Schleiereule?",
       "answers": [
         "Alcedo atthis.",
         "Tyto alba.",
         "Amphiprion percula."
       ],
       "correct": 1,
-      "why": "Tyto alba ist der wissenschaftliche Name der hier behandelten Schleiereule. Der Name allein ersetzt keine Prüfung einer Beobachtung."
+      "why": "Tyto alba ist der wissenschaftliche Name der Schleiereule."
     },
     "links": [
       {
@@ -11772,9 +12064,9 @@
     "questionFeedback": {
       "hint": "Vergleiche die Antwortnamen mit der Angabe zum Artnamen in der Karte. Ähnlich klingende Namen können andere Tiere bezeichnen.",
       "wrongReasons": [
-        "Alcedo atthis ist der Name des Eisvogels. Ein wissenschaftlicher Name muss zur tatsächlich beschriebenen Art passen.",
+        "Alcedo atthis ist der Eisvogel. Gesucht ist die Schleiereule.",
         null,
-        "Amphiprion percula bezeichnet den Echten Clownfisch. Ein Name einer anderen Art beantwortet die Frage nicht."
+        "Amphiprion percula ist der Echte Clownfisch. Gesucht ist die Schleiereule."
       ]
     }
   },
@@ -11905,10 +12197,6 @@
       "Bei einem Richtungswechsel ist Balance wichtig. Ein Körperteil kann eine andere Aufgabe erfüllen als bei einem fliegenden Vogel."
     ],
     "facts": [
-      {
-        "label": "Tiergruppe",
-        "text": "Vögel"
-      },
       {
         "label": "Artname",
         "text": "Struthio camelus"
@@ -12480,10 +12768,6 @@
         "text": "Fische"
       },
       {
-        "label": "Artname",
-        "text": "Amphiprion percula"
-      },
-      {
         "label": "Lebensraum",
         "text": "Korallenriffe mit Seeanemonen."
       },
@@ -12834,10 +13118,6 @@
       {
         "label": "Tiergruppe",
         "text": "Weichtiere"
-      },
-      {
-        "label": "Artname",
-        "text": "Cornu aspersum"
       },
       {
         "label": "Lebensraum",
@@ -13308,7 +13588,7 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Inka-Zeit, etwa 15.–16. Jahrhundert; das verlinkte Museumsstück wird auf 1425–1532 datiert."
       },
       {
@@ -13411,7 +13691,7 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "3. Jahrtausend v. Chr. · keine genaue Gründung an einem einzelnen Tag"
       },
       {
@@ -13511,12 +13791,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1839 · öffentliche Vorstellung der Daguerreotypie, Kameravorläufer sind älter"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Bildentstehung von Bildspeicherung unterscheiden."
       }
     ],
     "more": [
@@ -13618,7 +13894,7 @@
         }
       ]
     },
-    "sourceNote": "Die Museumsquellen unterscheiden Camera obscura, fotografische Aufzeichnung und digitale Sensoren.1839 bezeichnet die öffentliche Vorstellung der Daguerreotypie. Die eigene Lochkamerazeichnung erklärt den Lichtweg ohne Linse; ein Bild auf einer Fläche ist noch kein gespeichertes Foto. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Die Museumsquellen unterscheiden Camera obscura, fotografische Aufzeichnung und digitale Sensoren.1839 bezeichnet die öffentliche Vorstellung der Daguerreotypie. Die eigene Lochkamerazeichnung erklärt den Lichtweg ohne Linse; ein Bild auf einer Fläche ist noch kein gespeichertes Foto. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Bildentstehung von Bildspeicherung unterscheiden."
   },
   {
     "id": "invention-telescope",
@@ -13633,12 +13909,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1608 · belegter Patentantrag; keine gesicherte Alleinerfindung"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Sammelfläche von bloßer Vergrößerung unterscheiden."
       }
     ],
     "more": [
@@ -13743,7 +14015,7 @@
       "model": "aperture",
       "recognitionClue": "Ein Gerät nutzt Linsen oder Spiegel, um Licht von weit entfernten Objekten zu sammeln."
     },
-    "sourceNote": "NASA erklärt Sammelfläche, Linsen, Spiegel und unterschiedliche Strahlungsbereiche.1608 bezeichnet einen überlieferten Patentantrag, keine sicher zugeordnete Alleinerfindung. Die gezeichneten Lichtpunkte dienen einem Flächenvergleich; sie berechnen keine Sternhelligkeit, Bildschärfe oder Sonnenbeobachtung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "NASA erklärt Sammelfläche, Linsen, Spiegel und unterschiedliche Strahlungsbereiche.1608 bezeichnet einen überlieferten Patentantrag, keine sicher zugeordnete Alleinerfindung. Die gezeichneten Lichtpunkte dienen einem Flächenvergleich; sie berechnen keine Sternhelligkeit, Bildschärfe oder Sonnenbeobachtung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Sammelfläche von bloßer Vergrößerung unterscheiden."
   },
   {
     "id": "invention-microscope",
@@ -13756,12 +14028,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1665 · Hookes Micrographia, nicht Erfindungsjahr aller Mikroskope"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Bildgröße und erkennbare Einzelheiten vergleichen."
       }
     ],
     "more": [
@@ -13862,7 +14130,7 @@
       ],
       "model": "resolution"
     },
-    "sourceNote": "Das Museum unterscheidet Hookes Veröffentlichung von 1665 und die spätere Nachbildung des Geräts. Die Optikquellen erklären Zwischenbild und Grenzen bloßer Vergrößerung. Das Lernmuster vergleicht Größe und erkennbare Einzelheiten, ohne die Auflösung eines echten Geräts zu berechnen. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Das Museum unterscheidet Hookes Veröffentlichung von 1665 und die spätere Nachbildung des Geräts. Die Optikquellen erklären Zwischenbild und Grenzen bloßer Vergrößerung. Das Lernmuster vergleicht Größe und erkennbare Einzelheiten, ohne die Auflösung eines echten Geräts zu berechnen. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Bildgröße und erkennbare Einzelheiten vergleichen."
   },
   {
     "id": "invention-battery",
@@ -13875,12 +14143,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1800 · Voltas Batterie; nicht die Erfindung heutiger Akkus"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Innere Ladungswege und den äußeren Stromkreis unterscheiden."
       }
     ],
     "more": [
@@ -13987,7 +14251,7 @@
         }
       ]
     },
-    "sourceNote": "DOE erklärt chemische Energiespeicherung sowie Elektronen außen und Ionen im Inneren. Die Royal Institution beschreibt Voltas Batterie und ein später erhaltenes Exemplar. Der Plan zeigt keine bestimmte Zellchemie; Laden und Entladen gelingen nicht verlustfrei oder unbegrenzt. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "sourceNote": "DOE erklärt chemische Energiespeicherung sowie Elektronen außen und Ionen im Inneren. Die Royal Institution beschreibt Voltas Batterie und ein später erhaltenes Exemplar. Der Plan zeigt keine bestimmte Zellchemie; Laden und Entladen gelingen nicht verlustfrei oder unbegrenzt. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Innere Ladungswege und den äußeren Stromkreis unterscheiden.",
     "checkedAt": "2026-10-23",
     "revision": 1
   },
@@ -14002,12 +14266,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1831 · Faradays Induktionsversuche"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Eine Veränderung von einem unveränderten Zustand unterscheiden."
       }
     ],
     "more": [
@@ -14110,7 +14370,7 @@
         }
       ]
     },
-    "sourceNote": "Die Royal Institution beschreibt Faradays Versuche von 1831; das Computer History Museum erläutert die zeitweilig induzierte Spannung. Der gezeigte geschlossene Messkreis vergleicht Bewegung und Stillstand. Der Ausschlag ist eine qualitative Momentaufnahme, kein berechneter Dauerstrom und keine Energie aus einem ruhenden Magneten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "sourceNote": "Die Royal Institution beschreibt Faradays Versuche von 1831; das Computer History Museum erläutert die zeitweilig induzierte Spannung. Der gezeigte geschlossene Messkreis vergleicht Bewegung und Stillstand. Der Ausschlag ist eine qualitative Momentaufnahme, kein berechneter Dauerstrom und keine Energie aus einem ruhenden Magneten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Eine Veränderung von einem unveränderten Zustand unterscheiden.",
     "checkedAt": "2026-10-23",
     "revision": 1
   },
@@ -14125,17 +14385,13 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1947 · funktionierender Punktkontakttransistor; viele spätere Bauformen"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Steuersignal und Energieversorgung getrennt prüfen."
       }
     ],
     "more": [
       "John Bardeen und Walter Brattain zeigten im Dezember 1947 bei Bell Labs einen funktionierenden Verstärker aus Germanium mit feinen Kontakten. William Shockley leitete die Forschungsgruppe und entwickelte die Technik weiter. Heutige Chips verwenden andere, stark verkleinerte Bauformen. Ein einzelner Transistor versteht keine Wörter und ist noch kein ganzer Computer.",
-      "Die zwei Schalter im Lernmodell stehen für unterschiedliche Aufgaben: Der eine stellt die Versorgung bereit, der andere das Steuersignal. Nur beide zusammen lassen hier die Lampe leuchten. Ein echter Transistor ist kein ganzes Zwei-Schalter-Gerät; die Darstellung grenzt Steuerung und Energiequelle bewusst voneinander ab."
+      "Die zwei Schalter im Modell stehen für unterschiedliche Aufgaben: Der eine stellt die Versorgung bereit, der andere das Steuersignal. Nur beide zusammen lassen hier die Lampe leuchten. Ein echter Transistor ist ein einzelnes, winziges Bauteil und kein Kasten mit zwei Schaltern."
     ],
     "surprise": "Der Punktkontakttransistor von 1947 arbeitete mit Germanium. Ein moderner Computerchip verwendet andere, sehr stark verkleinerte Bauformen und viele zusammenarbeitende Bauteile.",
     "locations": [],
@@ -14237,7 +14493,7 @@
         }
       ]
     },
-    "sourceNote": "Das Museum beschreibt den Punktkontakttransistor von 1947; Herstellerquellen erläutern Schalten und versorgte Verstärkerschaltungen. Das Bildschirmmodell trennt Steuersignal und Energieversorgung. Es zeigt weder den inneren Aufbau eines bestimmten Transistors noch alle möglichen Betriebsarten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung.",
+    "sourceNote": "Das Museum beschreibt den Punktkontakttransistor von 1947; Herstellerquellen erläutern Schalten und versorgte Verstärkerschaltungen. Das Bildschirmmodell trennt Steuersignal und Energieversorgung. Es zeigt weder den inneren Aufbau eines bestimmten Transistors noch alle möglichen Betriebsarten. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Steuersignal und Energieversorgung getrennt prüfen.",
     "checkedAt": "2026-10-23",
     "revision": 1
   },
@@ -14407,12 +14663,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1906 · verlinkte historische Kühlanlage, kein Erfindungsdatum"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Wärme und Betriebsenergie über eine Systemgrenze verfolgen."
       }
     ],
     "more": [
@@ -14518,32 +14770,32 @@
         }
       ]
     },
-    "sourceNote": "Das Museum beschreibt eine Kühlanlage von 1906 und Wärmetransport durch einen Kreislauf.1906 ist ein Objektdatum, kein Erfindungsjahr aller Kühlschränke. Die Pfeile unterscheiden transportierte Wärme und Betriebsenergie; sie zeigen keinen vollständigen Kältemittelzyklus und keine Wartungsanleitung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Das Museum beschreibt eine Kühlanlage von 1906 und Wärmetransport durch einen Kreislauf.1906 ist ein Objektdatum, kein Erfindungsjahr aller Kühlschränke. Die Pfeile unterscheiden transportierte Wärme und Betriebsenergie; sie zeigen keinen vollständigen Kältemittelzyklus und keine Wartungsanleitung. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Wärme und Betriebsenergie über eine Systemgrenze verfolgen."
   },
   {
     "id": "invention-bicycle",
     "category": "inventions",
     "title": "Das Fahrrad",
-    "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+    "intro": "Ohne Kette sähe dein Fahrrad ganz anders aus.",
     "aliases": [],
     "paragraphs": [
-      "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Eine Übersetzung kann verändern, wie oft sich das Rad bei einer Pedalumdrehung dreht. Das tauscht Kraftbedarf gegen Weg, ohne zusätzliche Energie zu erfinden."
+      "Die Kette verbindet das Kettenblatt vorn mit einem Zahnrad am Hinterrad. Mit den Gängen änderst du, wie oft sich das Hinterrad bei einer Pedalumdrehung dreht."
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
-        "text": "1885 · Rover-Sicherheitsfahrrad, nicht das erste Fahrrad überhaupt"
+        "label": "Wann?",
+        "text": "1885 · Rover-Sicherheitsfahrrad"
       },
       {
-        "label": "Dein Forscherblick",
-        "text": "Den mechanischen Weg vom Pedal zum Hinterrad verfolgen."
+        "label": "Entworfen von",
+        "text": "John Kemp Starley"
       }
     ],
     "more": [
-      "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Dieses Museumsobjekt hatte Vollgummireifen; heutige Luftreifen dürfen nicht in seine Zeichnung zurückdatiert werden. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte.",
-      "Beim Vergleichen der Zahnzahlen solltest du dasselbe vordere Kettenblatt beibehalten. Erst dann zeigt der Wechsel des hinteren Zahnrads verständlich, warum ein leichterer Gang und mehr Pedalumdrehungen zusammengehören. Ein Übersetzungsverhältnis beschreibt Bewegung und Kraftbedarf; es ist keine zusätzliche Energiequelle."
+      "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Seine Reifen waren aus Vollgummi, also ohne Luft darin. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte.",
+      "Vergleiche die Zähne: Lass das vordere Kettenblatt gleich und wechsle nur hinten. Zahnräder schenken dir keine Energie."
     ],
-    "surprise": "Ein leichterer Gang kann mehr Pedalumdrehungen für denselben Weg bedeuten. Zahnräder verändern die Übersetzung, sie schenken keine zusätzliche Energie.",
+    "surprise": "Das Rover-Rad hatte noch Reifen aus festem Gummi, ohne Luft darin.",
     "locations": [],
     "related": [
       "invention-car",
@@ -14558,6 +14810,10 @@
       {
         "label": "Exploratorium · 2: The Benefits of Gears und Count your teeth",
         "url": "https://annex.exploratorium.edu/cycling/gears1.html"
+      },
+      {
+        "label": "Exploratorium: Großes Vorderrad, mehr Strecke pro Tritt",
+        "url": "https://annex.exploratorium.edu/cycling/wheel1.html"
       }
     ],
     "links": [],
@@ -14568,21 +14824,21 @@
       "benefit": "Du kannst einen leichteren Gang mit mehr Pedalumdrehungen verbinden und vermeidest die Vorstellung kostenloser Energie durch Zahnräder."
     },
     "question": {
-      "prompt": "Was verbindet beim beschriebenen Kettenfahrrad die Pedale mit dem Hinterrad?",
+      "prompt": "Was verbindet beim Kettenfahrrad die Pedale mit dem Hinterrad?",
       "answers": [
         "Kettenblatt, Kette und hinteres Zahnrad",
         "Die Pedale drehen das Vorderrad direkt, ohne Kette",
         "Die Kette treibt das Vorderrad an, das das Hinterrad mitzieht"
       ],
       "correct": 0,
-      "why": "Die Kette überträgt die Bewegung zwischen dem vorderen und dem hinteren Zahnrad."
+      "why": "Die Pedale drehen das vordere Zahnrad, das Kettenblatt. Die Kette nimmt die Bewegung mit zum Zahnrad am Hinterrad."
     },
     "questionFeedback": {
-      "hint": "Verfolge den mechanischen Weg vom Pedal zum Hinterrad.",
+      "hint": "Verfolge den Weg vom Pedal bis zum Hinterrad.",
       "wrongReasons": [
         null,
-        "Ein direkter Pedalantrieb am Vorderrad gehört zu anderen Fahrradbauarten. Hier führt die Kette zum Hinterrad.",
-        "Im beschriebenen Kettenfahrrad sitzt das angetriebene Zahnrad am Hinterrad; das Vorderrad wird nicht von dieser Kette angetrieben."
+        "Pedale direkt am Vorderrad hatte zum Beispiel das Hochrad. Beim Kettenfahrrad führt die Kette nach hinten.",
+        "Die Kette läuft zum Hinterrad. Das Vorderrad rollt einfach mit."
       ]
     },
     "invention": {
@@ -14605,7 +14861,7 @@
         },
         {
           "label": "Genauer unterscheiden",
-          "text": "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Dieses Museumsobjekt hatte Vollgummireifen; heutige Luftreifen dürfen nicht in seine Zeichnung zurückdatiert werden. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte."
+          "text": "Das Rover-Sicherheitsfahrrad von 1885 hatte einen Hinterrad-Kettenantrieb und ähnlich große Räder. Gegenüber dem Hochrad saß man näher am Boden. Seine Reifen waren aus Vollgummi, also ohne Luft darin. Fahrradgeschichte begann vor 1885 und hat viele Beteiligte."
         },
         {
           "label": "Selbst beobachten",
@@ -14639,7 +14895,67 @@
         }
       ]
     },
-    "sourceNote": "Das Museum beschreibt das Rover-Fahrrad von 1885 mit Hinterrad-Kettenantrieb und Vollgummireifen. Das Exploratorium erklärt Zahnzahlen und Übersetzung. Die Zeichnung ist ein Funktionsplan, keine genaue Rekonstruktion; die Übersetzung tauscht Kraftbedarf gegen Weg und erzeugt keine zusätzliche Energie. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Das Museum beschreibt das Rover-Fahrrad von 1885 mit Hinterrad-Kettenantrieb und Vollgummireifen. Das Exploratorium erklärt Zahnzahlen und Übersetzung. Die Zeichnung ist ein Funktionsplan, keine genaue Rekonstruktion; die Übersetzung tauscht Kraftbedarf gegen Weg und erzeugt keine zusätzliche Energie. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Den mechanischen Weg vom Pedal zum Hinterrad verfolgen.",
+    "chapters": [
+      {
+        "question": "Wie fuhr das Hochrad?",
+        "text": "Beim Hochrad saßen die Pedale direkt am Vorderrad. Eine Pedalumdrehung drehte das Rad genau einmal."
+      },
+      {
+        "question": "Was machte das Rover-Rad besonders?",
+        "text": "Es war 1885 das erste erfolgreiche Sicherheitsfahrrad. Eine Kette trieb das Hinterrad an, darum waren beide Räder ähnlich groß."
+      },
+      {
+        "question": "Wozu gibt es Gänge?",
+        "text": "Gänge ändern, wie oft sich das Hinterrad pro Tritt dreht. Mal trittst du leichter, mal kommst du schneller voran."
+      }
+    ],
+    "claims": [
+      {
+        "id": "invention-bicycle:stimmt-1",
+        "text": "Das Sicherheitsfahrrad machte Radfahren auch bei Frauen beliebt.",
+        "isTrue": true,
+        "explanation": "Mit dem Sicherheitsfahrrad wurde Radfahren bei Männern und Frauen sehr beliebt."
+      }
+    ],
+    "moreQuestions": [
+      {
+        "id": "invention-bicycle:rate-1",
+        "prompt": "Warum hatte das Hochrad so ein riesiges Vorderrad?",
+        "answers": [
+          "Damit man pro Tritt weiter kommt",
+          "Damit man höher sitzt und weit sieht",
+          "Weil kleine Räder schneller kaputtgingen"
+        ],
+        "correct": 0,
+        "why": "Je größer das Rad, desto weiter kam man mit einer Pedalumdrehung. So war man schneller unterwegs.",
+        "hint": "Denk daran, wie weit ein großes Rad mit einer Umdrehung rollt."
+      },
+      {
+        "id": "invention-bicycle:rate-2",
+        "prompt": "Welcher Gang hilft dir an einem steilen Berg?",
+        "answers": [
+          "Ein schwerer Gang",
+          "Der Gang ist egal",
+          "Ein leichter Gang"
+        ],
+        "correct": 2,
+        "why": "Im leichten Gang trittst du öfter, aber mit weniger Kraft. So kommst du den Berg besser hinauf.",
+        "hint": "Am Berg ist jeder Tritt besonders anstrengend."
+      },
+      {
+        "id": "invention-bicycle:rate-3",
+        "prompt": "Woher kommt die Energie beim Radfahren?",
+        "answers": [
+          "Aus den Zahnrädern",
+          "Aus deinen Beinen",
+          "Aus der Kette"
+        ],
+        "correct": 1,
+        "why": "Die Energie kommt aus deinen Beinen. Kette und Zahnräder geben sie nur an das Hinterrad weiter.",
+        "hint": "Denk daran, was sich bewegt, wenn du in die Pedale trittst."
+      }
+    ]
   },
   {
     "id": "invention-elevator",
@@ -14652,12 +14968,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1853/1854 · Otis-Sicherheitsbremse und öffentliche Vorführung"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Normalen Antrieb und zusätzliche Sicherheit trennen."
       }
     ],
     "more": [
@@ -14693,21 +15005,21 @@
       "benefit": "Du erkennst, warum Barrierefreiheit und sichere Wartung ebenso zur Technik gehören wie schnelleres Hochfahren."
     },
     "question": {
-      "prompt": "Welche Aufgabe hat die Fangvorrichtung im beschriebenen Sicherheitsmodell?",
+      "prompt": "Wofür ist die Fangvorrichtung in einem Aufzug da?",
       "answers": [
         "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen",
         "Die Kabine bei jeder normalen Fahrt antreiben",
         "Den Gewichtsunterschied zwischen Kabine und Gegengewicht im Betrieb ausgleichen"
       ],
       "correct": 0,
-      "why": "Die Fangvorrichtung ist eine zusätzliche Sicherheitseinrichtung; sie ist nicht der gewöhnliche Antrieb."
+      "why": "Die Fangvorrichtung ist eine Notbremse: Sie bremst die Kabine, wenn sie bei einer Störung gefährlich nach unten fährt."
     },
     "questionFeedback": {
-      "hint": "Trenne den normalen Antrieb von der Einrichtung für einen Störungsfall.",
+      "hint": "Denk an die Notbremse im Zug. Wann braucht man sie?",
       "wrongReasons": [
         null,
         "Der Antrieb bewegt die Kabine im normalen Betrieb. Die Fangvorrichtung erfüllt eine zusätzliche Aufgabe im Störungsfall.",
-        "Das Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Die Fangvorrichtung ist dagegen zum Bremsen einer gefährlichen Bewegung da."
+        "Das Gegengewicht gleicht einen Teil des Kabinengewichts aus, damit der Antrieb weniger heben muss. Eine Notbremse ist es nicht."
       ]
     },
     "invention": {
@@ -14764,7 +15076,7 @@
         }
       ]
     },
-    "sourceNote": "Die Otis-Chronik ist eine Unternehmensquelle. Die verlinkte Denkmaldokumentation beschreibt ebenfalls 1853/1854/1857 und stützt sich teilweise auf Firmenunterlagen. Der Plan zeigt Aufgaben eines Seilaufzugs; weder die historische Vorführung noch die Zeichnung beweisen die Sicherheit eines heutigen Geräts. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Die Otis-Chronik ist eine Unternehmensquelle. Die verlinkte Denkmaldokumentation beschreibt ebenfalls 1853/1854/1857 und stützt sich teilweise auf Firmenunterlagen. Der Plan zeigt Aufgaben eines Seilaufzugs; weder die historische Vorführung noch die Zeichnung beweisen die Sicherheit eines heutigen Geräts. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Normalen Antrieb und zusätzliche Sicherheit trennen."
   },
   {
     "id": "invention-seismograph",
@@ -14780,16 +15092,12 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
-        "text": "1855 · Kreils Veröffentlichung zu einem frühen Seismografen; kein gesicherter Bauzeitpunkt"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Bewegungen immer mit ihrem Bezugssystem beschreiben."
+        "label": "Wann?",
+        "text": "1855 · Karl Kreils Plan für einen Seismografen"
       }
     ],
     "more": [
-      "1855 veröffentlichte Karl Kreil einen Entwurf für einen Seismografen. Ob sein Gerät vollständig gebaut wurde, ist nach der historischen Untersuchung unsicher. Eine einzelne heutige Messkurve nennt nicht von selbst den genauen Bebenort: Forschende vergleichen mehrere Stationen und Wellenankunftszeiten. Heutige Geräte speichern oft digital. Der Zeitanker bezeichnet hier eine Veröffentlichung und keinen sicheren Tag der Erfindung.",
+      "1855 veröffentlichte Karl Kreil einen Plan für einen Seismografen. Ob er das Gerät wirklich ganz gebaut hat, weiß man nicht sicher. Eine einzige Messkurve verrät noch nicht, wo das Beben war: Dafür vergleichen Fachleute die Kurven mehrerer Messstationen. Heute speichern viele Geräte ihre Messungen digital.",
       "Beschreibe eine Bewegung immer relativ zu etwas anderem: Das Gehäuse folgt dem Boden; die träge Masse folgt zunächst anders. Im Modell hältst du die Lage der Masse als vereinfachten Vergleich fest. Es ist eine Momentaufnahme, keine berechnete Schwingung und kein Verfahren zur Erdbebenvorhersage."
     ],
     "surprise": "Das Gerät misst, die Kurve dokumentiert und Forschende werten aus. Mehrere Stationen helfen dabei, die bereits eingetroffenen Erschütterungen einzuordnen.",
@@ -14867,7 +15175,7 @@
         },
         {
           "label": "Genauer unterscheiden",
-          "text": "1855 veröffentlichte Karl Kreil einen Entwurf für einen Seismografen. Ob sein Gerät vollständig gebaut wurde, ist nach der historischen Untersuchung unsicher. Eine einzelne heutige Messkurve nennt nicht von selbst den genauen Bebenort: Forschende vergleichen mehrere Stationen und Wellenankunftszeiten. Heutige Geräte speichern oft digital. Der Zeitanker bezeichnet hier eine Veröffentlichung und keinen sicheren Tag der Erfindung."
+          "text": "1855 veröffentlichte Karl Kreil einen Plan für einen Seismografen. Ob er das Gerät wirklich ganz gebaut hat, weiß man nicht sicher. Eine einzige Messkurve verrät noch nicht, wo das Beben war: Dafür vergleichen Fachleute die Kurven mehrerer Messstationen. Heute speichern viele Geräte ihre Messungen digital."
         },
         {
           "label": "Selbst beobachten",
@@ -14897,7 +15205,7 @@
       ],
       "model": "seismograph"
     },
-    "sourceNote": "1855 bezeichnet Kreils Veröffentlichung. Die historische Untersuchung lässt offen, ob sein Gerät vollständig gebaut wurde. USGS erklärt Messprinzip, Aufzeichnung und Auswertung mehrerer Stationen. Die träge Masse im Modell ist eine vereinfachte Momentaufnahme; daraus folgt keine sichere Vorhersage künftiger Erdbeben. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "1855 bezeichnet Kreils Veröffentlichung. Die historische Untersuchung lässt offen, ob sein Gerät vollständig gebaut wurde. USGS erklärt Messprinzip, Aufzeichnung und Auswertung mehrerer Stationen. Die träge Masse im Modell ist eine vereinfachte Momentaufnahme; daraus folgt keine sichere Vorhersage künftiger Erdbeben. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Bewegungen immer mit ihrem Bezugssystem beschreiben."
   },
   {
     "id": "invention-3d-printing",
@@ -14913,12 +15221,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1986 · Patent auf Hulls Stereolithografie, nicht Beginn aller additiven Verfahren"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Querschnitte und räumliche Form zusammen denken."
       }
     ],
     "more": [
@@ -15022,7 +15326,7 @@
         }
       ]
     },
-    "sourceNote": "NIST erklärt additiven Materialaufbau; die Erfinderbiografie beschreibt Hulls Stereolithografie und das Patent von 1986. Drei gezeichnete Querschnitte zeigen den Zusammenhang zwischen Schichten und Form. Sie prüfen weder Druckbarkeit noch Materialfestigkeit oder sichere Verwendung eines Bauteils. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "NIST erklärt additiven Materialaufbau; die Erfinderbiografie beschreibt Hulls Stereolithografie und das Patent von 1986. Drei gezeichnete Querschnitte zeigen den Zusammenhang zwischen Schichten und Form. Sie prüfen weder Druckbarkeit noch Materialfestigkeit oder sichere Verwendung eines Bauteils. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Querschnitte und räumliche Form zusammen denken."
   },
   {
     "id": "invention-sewing-machine",
@@ -15035,12 +15339,8 @@
     ],
     "facts": [
       {
-        "label": "Belegter Zeitanker",
+        "label": "Wann?",
         "text": "1846 · Howes belegtes Patent auf eine Doppelsteppstich-Maschine"
-      },
-      {
-        "label": "Dein Forscherblick",
-        "text": "Zwei Fadenwege und ihre gemeinsame Aufgabe erkennen."
       }
     ],
     "more": [
@@ -15141,7 +15441,7 @@
         }
       ]
     },
-    "sourceNote": "Der Smithsonian-Katalog belegt Howes Patent vom 10. September 1846 und die Zusammenarbeit zweier Fäden. Der Funktionsplan benennt Nadel, Schiffchenfaden und Stofftransport; eine gezeichnete Kreuzung bildet noch nicht die vollständige räumliche Stichbewegung ab. Andere Sticharten funktionieren anders. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung."
+    "sourceNote": "Der Smithsonian-Katalog belegt Howes Patent vom 10. September 1846 und die Zusammenarbeit zweier Fäden. Der Funktionsplan benennt Nadel, Schiffchenfaden und Stofftransport; eine gezeichnete Kreuzung bildet noch nicht die vollständige räumliche Stichbewegung ab. Andere Sticharten funktionieren anders. Eigene vereinfachte Zeichnungen und Lerntexte mit KI-Unterstützung. Lernziel der Karte: Zwei Fadenwege und ihre gemeinsame Aufgabe erkennen."
   },
   {
     "id": "building-pont-du-gard",
@@ -15625,7 +15925,7 @@
     ],
     "facts": [
       {
-        "label": "Zeitanker",
+        "label": "Wann?",
         "text": "Angkor Wat: 12. Jahrhundert. Die weitere Region Angkor hat eine längere Entwicklungsgeschichte."
       },
       {
@@ -16174,15 +16474,11 @@
     "facts": [
       {
         "label": "Enger Weg",
-        "text": "Bei gleichem benetzbaren Material kann Wasser höher steigen."
-      },
-      {
-        "label": "Begrenzung",
-        "text": "Schwerkraft wirkt dem Steigen entgegen."
+        "text": "Je enger das Röhrchen, desto höher steigt das Wasser."
       }
     ],
     "more": [
-      "In einem gut benetzbaren dünnen Röhrchen steigt Wasser höher als in einem breiteren. Die Schwerkraft wirkt dem Steigen entgegen. Das Material des Röhrchens spielt ebenfalls eine Rolle.",
+      "Auch das Material des Röhrchens spielt eine Rolle: Das Wasser muss gut daran haften. Die Schwerkraft wirkt dem Steigen entgegen.",
       "Wassertransport in hohen Bäumen ist komplizierter. Kapillarwirkung allein erklärt den gesamten Weg bis zur Baumkrone nicht; Verdunstung an Blättern ist ebenfalls wichtig."
     ],
     "surprise": "Wasser kann durch schmale Zwischenräume wandern, zum Beispiel in einem Papiertuch.",
@@ -17230,7 +17526,7 @@
     ],
     "paragraphs": [
       "Im heißen, dichten Sonneninneren können Wasserstoffkerne in mehreren Schritten zu Helium verbunden werden. Dabei wird Energie frei. Dieser Vorgang heißt Kernfusion.",
-      "Das ist keine gewöhnliche Verbrennung mit Sauerstoff. Sterne leuchten nicht, weil dort Holz oder Kohle wie in einem Lagerfeuer brennen."
+      "Das ist keine gewöhnliche Verbrennung mit Sauerstoff."
     ],
     "facts": [
       {
@@ -17246,7 +17542,7 @@
       "Für diese Reaktionen braucht es besondere Bedingungen. Die elektrische Abstoßung positiv geladener Kerne erschwert ihre Annäherung; die einfache Darstellung ist keine Anleitung, Fusion selbst zu erzeugen.",
       "Kernfusion und Kernspaltung sind verschiedene Vorgänge. Beim einen werden leichte Kerne verbunden, beim anderen wird ein schwerer Kern geteilt. Diese Karte betrachtet den Sternenprozess, keine Anlage auf der Erde."
     ],
-    "surprise": "Im Inneren eines Sterns können leichte Kerne verbunden werden. Dabei wird Energie frei.",
+    "surprise": "Sterne leuchten nicht, weil dort Holz oder Kohle wie in einem Lagerfeuer brennen.",
     "learning": {
       "starter": "Im Inneren eines Sterns können leichte Kerne verbunden werden. Dabei wird Energie frei.",
       "observe": "Ordne im Schema die Schritte „leichte Kerne“, „Verbindung“, „schwererer Kern und Energie“. Beschreibe, was gegenüber einem gewöhnlichen Feuer anders ist.",
@@ -18188,7 +18484,7 @@
       }
     ],
     "more": [
-      "Ein erfundenes Druckmodell zeigt einen Umriss und eine dazu passende Farbfläche. Wird eine Schicht seitlich versetzt, passen beide nicht mehr genau zusammen. Das Beispiel erklärt die Bedeutung der Ausrichtung. Es ist kein historischer Druckblock und berechnet weder Farbstoffmischung noch Papierverformung.",
+      "Im Druckmodell siehst du einen Umriss und eine Farbfläche. Verschiebst du eine Schicht, passen beide nicht mehr zusammen. So siehst du, warum jede Farbe genau an der richtigen Stelle sitzen muss.",
       "Von einem Holzschnitt können mehrere Abzüge existieren. Das Museumsobjekt JP1847 und das andere Objekt JP2972 zeigen denselben Entwurf, sind aber verschiedene erhaltene Drucke mit eigenen Sammlungsangaben. Bildquelle, Objekt und Untersuchung dürfen deshalb nicht miteinander verwechselt werden."
     ],
     "learning": {
@@ -18716,10 +19012,6 @@
       {
         "label": "Lebenszeit",
         "text": "1878–1968"
-      },
-      {
-        "label": "Arbeitsgebiet",
-        "text": "Kernphysik"
       },
       {
         "label": "Beitrag",

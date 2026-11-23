@@ -3,7 +3,7 @@
     "id": "animal-african-savanna-elephant",
     "category": "animals",
     "title": "Afrikanischer Savannenelefant",
-    "intro": "Er lebt in Savannen und offenen Wäldern Afrikas, zum Beispiel in Botswana, Tansania und Kenia.",
+    "intro": "Der Savannenelefant lebt in Afrika und ist das größte Tier an Land.",
     "aliases": [
       "african-savanna-elephant",
       "Loxodonta africana",
@@ -446,7 +446,7 @@
     "id": "animal-common-octopus",
     "category": "animals",
     "title": "Gewöhnlicher Krake",
-    "intro": "Er lebt an Küsten wärmerer und gemäßigter Meere, zum Beispiel im Mittelmeer und im östlichen Atlantik.",
+    "intro": "Der Krake lebt im Meer an den Küsten, zum Beispiel im Mittelmeer.",
     "aliases": [
       "common-octopus",
       "Octopus vulgaris",
@@ -533,7 +533,7 @@
     "group": "Säugetiere",
     "habitat": "Grasland",
     "continent": "Australien / Ozeanien",
-    "homeQuestion": "Was steckt in der Größenangabe dieser Karte?",
+    "homeQuestion": "Was geben Fachleute an, um zu zeigen, wie groß ein Rotes Riesenkänguru ist?",
     "homePhoto": {
       "id": "red-kangaroo",
       "author": "Namoroka",
@@ -667,7 +667,7 @@
     "id": "history-stone_tools",
     "category": "history",
     "title": "Werkzeuge aus Stein",
-    "intro": "Bei Lomekwi in Kenia wurden sehr alte Werkzeuge aus Stein gefunden.",
+    "intro": "In Kenia fanden Forschende die ältesten bekannten Werkzeuge aus Stein.",
     "aliases": [
       "stone_tools"
     ],
@@ -1058,7 +1058,7 @@
     "id": "history-apollo11",
     "category": "history",
     "title": "Menschen landen auf dem Mond",
-    "intro": "Apollo 11 landete am 20. Juli 1969 auf dem Mond.",
+    "intro": "Im Juli 1969 betraten zum ersten Mal Menschen den Mond.",
     "aliases": [
       "apollo11"
     ],
@@ -1192,7 +1192,7 @@
     "id": "person-marie_curie",
     "category": "people",
     "title": "Marie Curie",
-    "intro": "Marie Curie machte unsichtbare Strahlung messbar. Auffällige Vergleiche führten sie und ihr Forschungsteam zu neuen Fragen über Stoffe.",
+    "intro": "Marie Curie bekam für ihre Forschung zwei Nobelpreise, das sind sehr berühmte Preise.",
     "aliases": [
       "Marie Curie",
       "marie_curie",
@@ -1448,7 +1448,7 @@
     "id": "person-jane_goodall",
     "category": "people",
     "title": "Jane Goodall",
-    "intro": "Jane Goodall untersuchte das Leben wilder Schimpansen in Gombe. Ihre Beobachtungen machten Werkzeuggebrauch und Werkzeugvorbereitung dieser Tiere für die Forschung sichtbar.",
+    "intro": "Mit 26 Jahren begann Jane Goodall ihre Forschung in Gombe, im heutigen Tansania.",
     "aliases": [
       "Jane Goodall",
       "jane_goodall"
@@ -2092,7 +2092,7 @@
     "id": "building-giza-pyramids",
     "category": "buildings",
     "title": "Pyramiden von Gizeh",
-    "intro": "Grabstätten für Könige und Teil großer religiöser Anlagen.",
+    "intro": "Die Pyramiden von Gizeh in Ägypten wurden als Gräber für Könige gebaut.",
     "aliases": [],
     "locations": [
       {
@@ -2104,7 +2104,7 @@
     ],
     "image": "giza-pyramids",
     "model": "heights",
-    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?"
+    "homeQuestion": "Welcher Satz passt zu den Pyramiden?"
   },
   {
     "id": "building-great-wall",
@@ -2199,7 +2199,7 @@
     "id": "building-eiffel-tower",
     "category": "buildings",
     "title": "Der Eiffelturm",
-    "intro": "Ein besonderes Bauwerk für die Weltausstellung 1889.",
+    "intro": "Der Eiffelturm wurde 1889 für eine große Ausstellung in Paris gebaut.",
     "aliases": [],
     "locations": [
       {
@@ -2211,7 +2211,7 @@
     ],
     "image": "eiffel-tower",
     "model": "heights",
-    "homeQuestion": "Welche Erklärung passt zu diesem Bauwerk?",
+    "homeQuestion": "Welcher Satz passt zum Eiffelturm?",
     "homePhoto": {
       "id": "eiffel-tower",
       "author": "BigBartimäus",
@@ -2737,7 +2737,7 @@
     "id": "science-moon-phases",
     "category": "science",
     "title": "Warum verändert der Mond seine Form?",
-    "intro": "Der Mond bleibt rund. Wir sehen unterschiedlich viel von seiner beleuchteten Hälfte.",
+    "intro": "Der Mond bleibt immer rund, auch wenn er wie eine Sichel aussieht.",
     "aliases": [
       "Mondphasen",
       "Vollmond",
@@ -3410,7 +3410,7 @@
     "id": "invention-bicycle",
     "category": "inventions",
     "title": "Das Fahrrad",
-    "intro": "Wie erreicht die Kraft deiner Beine das Hinterrad?",
+    "intro": "Ohne Kette sähe dein Fahrrad ganz anders aus.",
     "aliases": [],
     "locations": [],
     "model": null,
