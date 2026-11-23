@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';import path from 'node:path';
 import {RETAINED_ANSWER_WORDING as alias} from '../../app/retained-answer-wording.mjs';
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
-import {bildanfragen} from './harness.mjs';
+import {ladeanfragen} from './harness.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {CHALLENGE_BANK,restoreChallenge,emptyChallenge}=await import('../../app/knowledge-challenge.ts');
 const {createSave,emptyProgress,SAVE_KEY}=await import('../../app/progress-storage.ts');
@@ -13,17 +13,17 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
  for(const width of [320,1440])for(const finished of [false,true]){
   const session=oldRound(finished),expected=restoreChallenge(session,emptyChallenge());assert.deepEqual(expected.ids,session.ids,'legacy fixture represents a valid six-question round');
   const progress=emptyProgress();progress.favorites=['topic:animal-lion'];progress.games=finished?['memory','world:knowledge-challenge']:['memory'];progress.gameSessions={'world:knowledge-challenge':{challenge:session},'world:animal-detective':{items:['animal-lion','animal-koala'],index:1,roundAnswer:'Koala',roundDone:false}};progress.lastActivity={type:'game',id:'world:knowledge-challenge',family:'world'};
-  const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+  const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});const p=await c.newPage();monitor(p);const anfragenFertig=ladeanfragen(p);
   // This game hub starts its shared map request. Let that actual request finish
   // before the test deliberately reloads; keep all request failures observable.
   const mapReady=()=>p.waitForFunction(()=>performance.getEntriesByName(new URL('/world.json',location.href).href).some(entry=>entry.responseEnd>0));
   try{
    await p.goto(base);await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();const room=p.locator('.knowledge-challenge');await room.waitFor();
    if(finished)await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();else{await room.getByRole('heading',{name:question.prompt,exact:true}).waitFor();assert.deepEqual(await room.locator('.quiz-answer > span:last-of-type').allTextContents(),[...question.answers].reverse());assert.equal(await room.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);assert.equal(await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).count(),0);}
-   await mapReady();await imagesSettled();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();if(finished)await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();else{await room.locator('.quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await room.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);}
+   await mapReady();await anfragenFertig();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();if(finished)await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();else{await room.locator('.quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await room.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);}
    const stored=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(stored.gameSessions['world:knowledge-challenge'].challenge,expected);assert.deepEqual(stored.favorites,progress.favorites);assert.deepEqual(stored.games,progress.games);assert.deepEqual(stored.gameSessions['world:animal-detective'],progress.gameSessions['world:animal-detective']);
    if(shots)await room.screenshot({path:path.join(shots,'answer-wording-challenge-'+(finished?'finished':'wrong')+'-'+width+'.png')});
-   if(!finished){await room.getByRole('button').filter({has:p.getByText(question.answers[question.correct],{exact:true})}).click();await room.getByText('Deine Auswahl passt.',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();await mapReady();await imagesSettled();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge.index===1,SAVE_KEY);const next=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge,SAVE_KEY);assert.deepEqual(next.ids,session.ids);assert.equal(next.answer,null);}
+   if(!finished){await room.getByRole('button').filter({has:p.getByText(question.answers[question.correct],{exact:true})}).click();await room.getByText('Deine Auswahl passt.',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();await mapReady();await anfragenFertig();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge.index===1,SAVE_KEY);const next=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge,SAVE_KEY);assert.deepEqual(next.ids,session.ids);assert.equal(next.answer,null);}
    await mapReady();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);observed.push({width,finished,legacyOrder:true,wrongRemainsWrong:!finished,earnedFinishPreserved:finished,reload:true,requestedMapSettledBeforeIntentionalReload:true,otherProgressPreserved:true});
   }catch(error){if(shots)await p.screenshot({path:path.join(shots,'answer-wording-failure-'+width+'.png'),fullPage:true}).catch(()=>{});throw error;}finally{await c.close();}
  }
@@ -33,13 +33,13 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
   const progress=emptyProgress();progress.favorites=['topic:animal-lion'];progress.games=['memory'];progress.gameSessions={memory:{open:[0],matched:[]},['topic:'+alias.topic]:{items,topicAnswer:alias.before}};
   const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
   await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
-  const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+  const p=await c.newPage();monitor(p);const anfragenFertig=ladeanfragen(p);
   try{
    await p.goto(base+'#world/topic/'+alias.topic);await ready(p);
    const mini=p.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();
    assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),topic.question.answers,'malformed mixed alias/unknown choices fall back to all three unique canonical choices');
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);assert.equal(await mini.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);
-   await imagesSettled();await p.reload();await ready(p);await mini.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();
+   await anfragenFertig();await p.reload();await ready(p);await mini.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();
    assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),topic.question.answers);
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);
    const stored=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
@@ -73,7 +73,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
   progress.review={['world-question:'+id]:{correct:true,seen:1,due:'2026-01-01'}};
   const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
   await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
-  const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+  const p=await c.newPage();monitor(p);const anfragenFertig=ladeanfragen(p);
   const pruefen=async()=>{
    const mini=p.locator('section.world-mini-question');
    await mini.locator('.rate-mal-frage').getByText(t.question.prompt,{exact:true}).waitFor();
@@ -97,7 +97,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
    await pruefen();
    const gespeichert=(await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+id];
    assert.equal(gespeichert.topicAnswer,richtig,id+': die alte Antwort bleibt unverändert gespeichert');
-   await imagesSettled();await p.reload();await ready(p);await pruefen();
+   await anfragenFertig();await p.reload();await ready(p);await pruefen();
    geprueft.push(id+((t.moreQuestions??[]).length?' (nach '+t.moreQuestions.length+' Zusatzfragen)':''));
   }finally{await c.close();}
  }
@@ -108,7 +108,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
  const progress=emptyProgress();progress.gameSessions={['topic:'+t.id]:{items:[...t.question.answers],topicAnswer:alt}};
  const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
  await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
- const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
+ const p=await c.newPage();monitor(p);const anfragenFertig=ladeanfragen(p);
  const pruefen=async()=>{
   const mini=p.locator('section.world-mini-question');
   await mini.getByText('Hier gibt es neue Antworten.',{exact:true}).waitFor();
@@ -116,6 +116,6 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
   for(const knopf of await mini.locator('.quiz-answer').all())assert.equal(await knopf.isDisabled(),false,'neu wählen geht');
   assert.equal((await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+t.id].topicAnswer,alt,'die gespeicherte Antwort bleibt');
  };
- try{await p.goto(base+'#world/topic/'+t.id);await ready(p);await pruefen();await imagesSettled();await p.reload();await ready(p);await pruefen();}finally{await c.close();}
+ try{await p.goto(base+'#world/topic/'+t.id);await ready(p);await pruefen();await anfragenFertig();await p.reload();await ready(p);await pruefen();}finally{await c.close();}
  report.checks.push('Frühere Antwort, die es nicht mehr gibt: kurzer Hinweis, neu wählen möglich, gespeicherte Antwort bleibt (390 px, mit Neuladen)');
 }
