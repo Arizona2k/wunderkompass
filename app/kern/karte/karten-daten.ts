@@ -91,6 +91,26 @@ export function gueltigeReihe(frage: KartenFrage, gespeichert: unknown): string[
   return reihe.length === antworten.length && new Set(reihe).size === antworten.length && reihe.every(a => antworten.includes(a)) ? reihe : null;
 }
 
+// Ersatz, wenn keine gültige Reihe gespeichert ist (z. B. eine alte Reihe vor einer vierten Antwort): eine feste Mischung
+// je Frage. Sie ist nach jedem Neuladen gleich, ohne dass die Karte etwas speichert: Die alte Reihe im Pass bleibt, wie sie
+// ist (Schutz: eine Deutung überschreibt nie, was im Pass steht). In der Reihenfolge der Daten stand die Lösung oft vorn.
+export function festGemischt(frage: KartenFrage): string[] {
+  let stand = 2166136261;
+  for (const zeichen of frage.id) stand = Math.imul(stand ^ zeichen.charCodeAt(0), 16777619);
+  const zufall = () => {
+    stand = (stand + 0x6d2b79f5) | 0;
+    let t = Math.imul(stand ^ (stand >>> 15), 1 | stand);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const reihe = [...frage.question.answers];
+  for (let i = reihe.length - 1; i > 0; i--) {
+    const j = Math.floor(zufall() * (i + 1));
+    [reihe[i], reihe[j]] = [reihe[j], reihe[i]];
+  }
+  return reihe;
+}
+
 // Welche Frage „Rate mal!“ zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
 // 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
 //    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
@@ -146,6 +166,14 @@ const MIT_BELEGEN = new Set([...BELEGE.personen, ...BELEGE.geschichte, ...BELEGE
 // Bekommt die Karte den Bereich „Ausprobieren“? Mitmach-Baustein oder Belege (Entwurf 6.3).
 export function hatAusprobieren(topic: WorldTopic): boolean {
   return hatBaustein(topic) || MIT_BELEGEN.has(topic.id);
+}
+
+// Wo steht „Ganz einfach“ (learning.starter)? Offen in „Kurz erklärt“, außer
+// - bei Karten mit Häppchen: Die Häppchen sind schon die einfache Fassung;
+// - bei Personen: Dort ist der Satz meist die Anleitung zum Versuch („Vergleiche …“), keine Erklärung (Teilschritt 3, E12).
+// Dann steht er oben in „Ausprobieren“, und die Absätze bleiben offen in „Kurz erklärt“.
+export function ganzEinfachImAusprobieren(topic: WorldTopic): boolean {
+  return Boolean(topic.learning?.starter) && (topic.chapters !== undefined || topic.category === 'people');
 }
 
 // Prüft die neuen Felder einer Karte. Leere Liste heißt: alles in Ordnung.
@@ -235,9 +263,9 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
     if (leer(o?.frage) || leer(o?.aufloesung)) melde('ordnen: Frage oder Auflösung fehlt');
   }
 
-  // Mit Häppchen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
-  if (topic.chapters !== undefined && topic.learning?.starter && !hatAusprobieren(topic)) {
-    melde('Häppchen und „Ganz einfach“: Der Satz braucht „Ausprobieren“, sonst geht er verloren');
+  // Mit Häppchen und bei Personen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
+  if (ganzEinfachImAusprobieren(topic) && !hatAusprobieren(topic)) {
+    melde('„Ganz einfach“ gehört hier in „Ausprobieren“: Der Satz braucht diesen Bereich, sonst geht er verloren');
   }
   return fehler;
 }

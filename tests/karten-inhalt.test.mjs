@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
-import {kartenFeldFehler} from '../app/kern/karte/karten-daten.ts';
+import {ganzEinfachImAusprobieren, kartenFeldFehler} from '../app/kern/karte/karten-daten.ts';
 
 const basis = catalog.find(t => t.id === 'animal-african-savanna-elephant');
 const frage = n => ({id: 'x:rate-' + n, level: 'entdecker', prompt: 'Frage ' + n + '?', answers: ['Mond', 'Sonne', 'Wolke'], correct: 0, why: 'Weil er leuchtet.', hint: 'Schau nach oben.'});
@@ -35,15 +35,25 @@ test('kartenFeldFehler meldet kaputte neue Felder', () => {
   assert.ok(fehler({claims: [{...heil.claims[0], explanation: ''}]}).length > 0, 'leere Auflösung');
 });
 
-test('kartenFeldFehler: Häppchen mit „Ganz einfach“ brauchen „Ausprobieren“', () => {
-  // Karten mit Häppchen zeigen den Satz learning.starter oben in „Ausprobieren“ (große Prüfung, Aufgabe 13).
-  // Hätte so eine Karte kein „Ausprobieren“, ginge der Satz verloren.
+test('kartenFeldFehler: Häppchen und Personen mit „Ganz einfach“ brauchen „Ausprobieren“', () => {
+  // Karten mit Häppchen und Personenkarten zeigen den Satz learning.starter oben in „Ausprobieren“ (große Prüfung,
+  // Aufgabe 13; Teilschritt 3, E12). Hätte so eine Karte kein „Ausprobieren“, ginge der Satz verloren.
   const feuer = catalog.find(t => t.id === 'history-fire');
   const lernhilfen = {starter: 'Schau genau hin.', observe: 'Was siehst du?', benefit: 'Du kannst beobachten.'};
   const ohneAusprobieren = {...feuer, chapters: [{question: 'Wie?', text: 'So.'}], learning: lernhilfen};
   assert.ok(kartenFeldFehler(ohneAusprobieren).some(f => f.includes('Ausprobieren')), 'Satz ohne Platz wird gemeldet');
   assert.deepEqual(kartenFeldFehler({...ohneAusprobieren, chapters: undefined}), [], 'ohne Häppchen steht der Satz in „Kurz erklärt“');
   assert.deepEqual(kartenFeldFehler({...basis, chapters: [{question: 'Wie?', text: 'So.'}], learning: lernhilfen}), [], 'mit Ausprobieren in Ordnung');
+  assert.ok(kartenFeldFehler({...feuer, category: 'people', learning: lernhilfen}).some(f => f.includes('Ausprobieren')), 'Person ohne Ausprobieren wird gemeldet');
+  assert.deepEqual(kartenFeldFehler({...feuer, learning: {starter: 'Schau genau hin.'}}), [], '„Selbst beobachten“ und Lernziel sind freiwillig');
+});
+
+test('ganzEinfachImAusprobieren: Häppchen und Personen oben in „Ausprobieren“, sonst offen in „Kurz erklärt“', () => {
+  const satz = {learning: {starter: 'Schau genau hin.'}};
+  assert.equal(ganzEinfachImAusprobieren({...satz, category: 'science'}), false);
+  assert.equal(ganzEinfachImAusprobieren({...satz, category: 'science', chapters: []}), true);
+  assert.equal(ganzEinfachImAusprobieren({...satz, category: 'people'}), true);
+  assert.equal(ganzEinfachImAusprobieren({category: 'people'}), false, 'ohne Satz nirgends');
 });
 
 test('alle Karten haben wohlgeformte neue Felder', () => {

@@ -1,7 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
-import {ersteFrage, fragenFuerStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, stufenHinweis} from '../app/kern/karte/karten-daten.ts';
+import HINTS from '../app/challenge-hints.json' with {type: 'json'};
+import {ersteFrage, festGemischt, fragenFuerStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, stufenHinweis} from '../app/kern/karte/karten-daten.ts';
 
 // Teilschritt 3, Aufgabe 5 (E4, E6): Die Karte zeigt je Stufe eine passende Frage.
 // Ausgedachte Karte: Hauptfrage (Entdecker), je eine Zusatzfrage Entdecker, Profi, Experte und zwei Challenge-Fragen.
@@ -104,6 +105,17 @@ test('gueltigeReihe: eine gespeicherte Reihenfolge gilt nur, wenn sie genau die 
   assert.equal(gueltigeReihe(profi, ['G', 'F', 'E', 'Z']), null, 'fremd');
   assert.equal(gueltigeReihe(profi, 'GFED'), null);
   assert.equal(gueltigeReihe(profi, undefined), null);
+});
+
+test('festGemischt: feste Mischung je Frage, alle Antworten genau einmal, nicht für alle Fragen die Reihenfolge der Daten', () => {
+  const fragen = catalog.flatMap(t => kartenFragen(t, HINTS));
+  for (const frage of fragen.slice(0, 50)) {
+    const reihe = festGemischt(frage);
+    assert.deepEqual([...reihe].sort(), [...frage.question.answers].sort(), frage.id);
+    assert.deepEqual(festGemischt(frage), reihe, frage.id + ': gleich bei jedem Aufruf');
+  }
+  const wieDaten = fragen.filter(frage => festGemischt(frage).every((a, i) => a === frage.question.answers[i])).length;
+  assert.ok(wieDaten < fragen.length / 2, 'die Mischung weicht meist von der Reihenfolge der Daten ab: ' + wieDaten + ' von ' + fragen.length);
 });
 
 test('gueltigeReihe liest ein altes Wort über seinen Alias', () => {

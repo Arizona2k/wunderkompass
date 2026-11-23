@@ -38,10 +38,11 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
   try{
    await p.goto(base+'#world/topic/'+alias.topic);await ready(p);
    const mini=rateMal(p);await zeigtFrage(p,topic,HAUPT);
-   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),HAUPT.question.answers,'malformed mixed alias/unknown choices fall back to all three unique canonical choices');
+   // Eine kaputte Reihe wird neu gemischt (Teilschritt 3: in der Reihenfolge der Daten stand die Lösung oft vorn); die gemischte Reihe bleibt nach dem Neuladen.
+   const gemischt=await mini.locator('.quiz-answer > span:last-of-type').allTextContents();assert.deepEqual([...gemischt].sort(),[...HAUPT.question.answers].sort(),'malformed mixed alias/unknown choices fall back to all three unique canonical choices');
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);assert.equal(await mini.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);
    await anfragenFertig();await p.reload();await ready(p);await zeigtFrage(p,topic,HAUPT);
-   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),HAUPT.question.answers);
+   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),gemischt,'die neu gemischte Reihe bleibt nach dem Neuladen');
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);
    const stored=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    assert.deepEqual(stored.gameSessions['topic:'+alias.topic].items,items,'interpretation never overwrites original import evidence');

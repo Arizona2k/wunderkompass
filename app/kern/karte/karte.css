@@ -130,6 +130,8 @@
 /* Häppchen (Pilot-Karten): kurze Frage als Überschrift, darunter ein bis zwei Sätze. */
 .wissenskarte .world-short .wissenskarte-haeppchen { margin: 18px 0 4px; font-size: 20px; line-height: 1.35; color: var(--motiv-text); }
 .wissenskarte .world-short > :is(h2, h3):first-child + .wissenskarte-haeppchen { margin-top: 0; }
+/* „Ganz einfach“ offen (Karten ohne Häppchen): ein bis zwei Sätze, etwas größer als die Absätze für Große. */
+.wissenskarte .world-short > .wissenskarte-ganz-einfach { font-size: 20px; line-height: 1.5; }
 /* „Für Große“: die bisherigen Absätze, zu Beginn zu. */
 .wissenskarte .wissenskarte-fuer-grosse { margin-top: 14px; padding: 0 18px; border: 1px solid #d3e2e6; border-radius: 16px; background: #fff; }
 .wissenskarte .wissenskarte-fuer-grosse > summary { display: flex; align-items: center; min-height: 48px; font-size: 17px; font-weight: 700; color: var(--motiv-text); }

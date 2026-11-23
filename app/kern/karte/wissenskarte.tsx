@@ -25,7 +25,7 @@ import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
 import OrdneRichtig from './ordne-richtig';
-import {dazuPasst, ersteFrage, fragenFuerStufe, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
+import {dazuPasst, ersteFrage, fragenFuerStufe, ganzEinfachImAusprobieren, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
 import {leseStufe, STUFEN, type Stufe} from '../stufe';
 import StufenWahl from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
@@ -214,16 +214,17 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
               {absaetze}
             </LearningDetails>
           </>
-        ) : (
+        ) : t.learning && !ganzEinfachImAusprobieren(t) ? (
           <>
-            {t.learning && (
-              <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre">
-                <p>{t.learning.starter}</p>
-              </LearningDetails>
-            )}
-            {absaetze}
+            {/* Ohne Häppchen ist „Ganz einfach“ die einfache Fassung: Der Satz steht offen, ohne Altersangabe; die
+                bisherigen Absätze stehen unverändert zugeklappt unter „Für Große“ (Teilschritt 3, E12).
+                Bei Personen steht der Satz oben in „Ausprobieren“ (ganzEinfachImAusprobieren), die Absätze bleiben offen. */}
+            <p className="wissenskarte-ganz-einfach">{t.learning.starter}</p>
+            <LearningDetails className="wissenskarte-fuer-grosse" summary="Für Große">
+              {absaetze}
+            </LearningDetails>
           </>
-        )}
+        ) : absaetze}
       </section>
 
       {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt} stufe={stufe}/>}

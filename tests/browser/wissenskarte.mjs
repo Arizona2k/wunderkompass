@@ -20,6 +20,8 @@ const ELEFANT = catalog.find(t => t.id === 'animal-african-savanna-elephant');
 const HEIKEL = catalog.find(t => t.id === 'history-holocaust');
 const FOTOSYNTHESE = catalog.find(t => t.id === 'science-photosynthesis');
 const GUTENBERG = catalog.find(t => t.id === 'person-johannes_gutenberg');
+// Karte ohne Häppchen mit „Ganz einfach“ (nicht Person): Der Satz steht offen, die Absätze unter „Für Große“ (Teilschritt 3, E12).
+const OHNE_HAEPPCHEN = catalog.find(t => t.id === 'science-buoyancy');
 // Karte ohne Zusatzfragen: Nach dem Neuladen zeigt sie wieder die Hauptfrage (Pilot-Karten zeigen dann die nächste offene Frage).
 const EINE_FRAGE = catalog.find(t => t.id === 'animal-lion');
 // Karte mit großer Zeichnung im Kopf (Mondphasen) und Karte, deren Nachbarkachel diese Zeichnung zeigt (Apollo 11).
@@ -76,6 +78,10 @@ export async function wissenskarte(ctx) {
   await mitKarte(ctx, HANDY, ELEFANT.id, falscheHauptantwortBleibtOffen);
   ctx.report.checks.push('Pilot-Karte nach falscher Hauptantwort: zurück von der Nachbarkarte und über „Noch einmal nachdenken“ im Wissensbuch '
     + 'wieder die Hauptfrage mit „Noch nicht ganz …“, ohne Lösung und ohne neue Zusatzfrage; nach richtiger Antwort und Neuladen die erste Zusatzfrage');
+  for (const view of [HANDY, BREIT]) await mitKarte(ctx, view, OHNE_HAEPPCHEN.id, ganzEinfachOffen);
+  await mitKarte(ctx, HANDY, GUTENBERG.id, personOhneHaeppchen);
+  ctx.report.checks.push(`„Ganz einfach“ ohne Häppchen (${OHNE_HAEPPCHEN.id}, 390 und 1440 px): offen, ohne Altersangabe, vor „Für Große“ (zu, mit dem ersten Absatz); `
+    + `Person (${GUTENBERG.id}): Absätze offen, kein „Für Große“, der Satz oben in „Ausprobieren“`);
   const mitEinstieg = catalog.filter(t => t.chapters && t.learning);
   assert.ok(mitEinstieg.length > 0, 'es gibt Karten mit Häppchen und „Ganz einfach“');
   for (const t of mitEinstieg) await mitKarte(ctx, HANDY, t.id, einstiegImAusprobieren(t));
@@ -635,6 +641,37 @@ const einstiegImAusprobieren = t => async (page, {touch}) => {
   assert.equal(await kurz.getByText('Ganz einfach', {exact: false}).count(), 0, t.id + ': kein „Ganz einfach“ in „Kurz erklärt“');
   await ganzEinfach(page.locator('.wissenskarte'), t, {sofort: true, touch});
 };
+
+// Teilschritt 3, E12: Ohne Häppchen steht „Ganz einfach“ offen und ohne Altersangabe vor „Für Große“; die Absätze sind zu.
+// Ort und „genau einmal“ prüft ganzEinfach.
+async function ganzEinfachOffen(page, {touch}) {
+  const t = OHNE_HAEPPCHEN;
+  assert.ok(t.learning?.starter && !t.chapters && t.category !== 'people', t.id + ': passende Testkarte');
+  await ganzEinfach(page.locator('.wissenskarte'), t);
+  const kurz = kurzErklaert(page);
+  assert.equal(await kurz.getByText('etwa 6–8 Jahre', {exact: false}).count(), 0, 'keine Altersangabe');
+  const gross = kurz.locator(':scope > details.wissenskarte-fuer-grosse');
+  assert.equal(await gross.count(), 1, '„Für Große“ gibt es genau einmal');
+  assert.equal(await gross.evaluate(d => d.open), false, '„Für Große“ ist zu Beginn zu');
+  assert.equal(await kurz.evaluate(el => {
+    const satz = el.querySelector(':scope > p.wissenskarte-ganz-einfach');
+    const fuerGrosse = el.querySelector(':scope > details.wissenskarte-fuer-grosse');
+    return Boolean(satz.compareDocumentPosition(fuerGrosse) & Node.DOCUMENT_POSITION_FOLLOWING);
+  }), true, '„Ganz einfach“ steht vor „Für Große“');
+  const absatz = gross.getByText(t.paragraphs[0], {exact: true});
+  assert.equal(await absatz.isVisible(), false, 'die Absätze sind erst nach dem Öffnen zu sehen');
+  await tippe(gross.locator(':scope > summary'), touch);
+  await absatz.waitFor({state: 'visible', ...WARTEN});
+}
+
+// Personen: Der Satz ist meist die Anleitung zum Versuch; er steht oben in „Ausprobieren“, die Absätze bleiben offen.
+async function personOhneHaeppchen(page, {touch}) {
+  const t = GUTENBERG;
+  const kurz = kurzErklaert(page);
+  await kurz.getByText(t.paragraphs[0], {exact: true}).waitFor({state: 'visible', ...WARTEN});
+  assert.equal(await kurz.locator('details.wissenskarte-fuer-grosse').count(), 0, 'Personen: kein „Für Große“, die Absätze stehen offen');
+  await ganzEinfach(page.locator('.wissenskarte'), t, {sofort: true, touch});
+}
 
 async function stimmtDas(page, {neuLaden, touch}) {
   const behauptung = ELEFANT.claims[0];

@@ -13,18 +13,18 @@ import {shuffle} from '../../../lib/shuffle';
 import type {Review} from '../../progress-storage';
 import {wiederholungFuerAntwort} from '../wiederholung';
 import {WOERTER} from '../woerter';
-import {gueltigeReihe, type KartenFrage} from './karten-daten';
+import {festGemischt, gueltigeReihe, type KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
-// Passt die gespeicherte Reihe nicht mehr zu den Antworten (z. B. eine vierte Antwort auf Profi), mischt die Karte
-// beim Öffnen neu und speichert das (gueltigeReihe). Die Karte nutzt `antwortReihe` mit dem Spielstand aus dem Pass
-// auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
+// Passt die gespeicherte Reihe nicht mehr zu den Antworten (z. B. eine vierte Antwort auf Profi), zeigt die Karte eine
+// feste Mischung (festGemischt) und lässt die alte Reihe im Pass stehen. Die Karte nutzt `antwortReihe` mit dem
+// Spielstand aus dem Pass auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
 export function antwortReihe(frage: KartenFrage, gespeichert: unknown): readonly string[] {
-  return gueltigeReihe(frage, gespeichert) ?? frage.question.answers;
+  return gueltigeReihe(frage, gespeichert) ?? festGemischt(frage);
 }
 
 function useAntwortReihe(frage: KartenFrage): readonly string[] {
-  const [gespeicherteReihe] = useSavedGame<readonly string[]>(frage.itemsKey, () => shuffle(frage.question.answers), (wert, neu) => gueltigeReihe(frage, wert) ?? neu);
+  const [gespeicherteReihe] = useSavedGame(frage.itemsKey, () => shuffle(frage.question.answers));
   return antwortReihe(frage, gespeicherteReihe);
 }
 
