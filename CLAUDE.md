@@ -95,6 +95,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 |---|---|---|
 | `kinder-redaktion` | Texte für 5- bis 10-Jährige: Satzlänge, Fachwörter, Ton, Länge, Doppeltes, Mini-Fragen | opus / high |
 | `fakten-pruefer` | Aussagen gegen Quellen, Zahlen, Einheiten, Aktualität | opus / high |
+| `stufen-pruefer` | Schwierigkeit je Stufe (Entdecker, Profi, Experte): machbar für Kleine, fordernd für 10- bis 12-Jährige, keine Ratemuster (seit 23.11.2026) | opus / high |
 | `design-pruefer` | Screenshots in 320, 390, 768, 1280, 1440 px: Lesbarkeit, Kontrast, Fokus, Tippflächen, Abgeschnittenes, Bildwirkung | sonnet / high |
 | `code-pruefer` | Änderungen auf Fehler, besonders Pass, IDs und Links | opus / high |
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
