@@ -3,6 +3,18 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 23.11.2026 – Teil A „Eine Stufe für alles“: drei Stufen, leichter Satz oben
+
+Kinder wählen jetzt eine Stufe: Entdecker, Profi oder Experte. Die Karten zeigen Fragen passend zur Stufe.
+
+- **Eine Stufe für alles:** Die Stufe steht im Entdeckerpass und gilt für Karten und Quiz (Spiele, Labore und Reisen folgen). Gewählt wird oben bei „Rate mal!“ oder im Pass. Wer drei Fragen hintereinander gleich richtig hat, bekommt eine schwerere Stufe vorgeschlagen; wer zweimal danebenliegt, eine leichtere. Nichts wechselt von selbst.
+- **Mehr Fragen auf den Karten:** 16 neue Fragen, dazu 42 Fragen der Wissens-Challenge auf ihren 13 Karten, alle mit Tipps und „warum nicht“. Vier alte Fragen ruhen (sie bleiben in den Daten, damit alte Einträge im Pass lesbar bleiben). Profi und Experte haben vier Antworten. Neu sind „Fast richtig“ (Marie Curie: Welches Wort stimmt nicht?) und „Ordne richtig“ (Steinwerkzeuge, ab Experte). Alle Inhalte sind geprüft (Entwurf, Sprache, Fakten, Endprüfung).
+- **Gleiche Wörter überall:** „Richtig!“, „Noch nicht ganz. Versuch es noch einmal!“ und „Tipp“ heißen jetzt überall gleich. „Noch einmal raten“ zählt nicht doppelt.
+- **Erst ein leichter Satz:** Auf Karten ohne Häppchen steht „Ganz einfach“ jetzt offen oben, die langen Absätze stehen unter „Für Große“. 67 Karten haben dafür neue Sätze bekommen, 24 Tierkarten eine neue Einleitung. Bei Personen bleibt der Satz oben in „Ausprobieren“, weil er dort den Versuch anleitet.
+- **Nichts geht verloren:** Alte Antworten im Pass bleiben lesbar, auch wenn eine Frage neue Antworten bekam; angefangene Runden der Wissens-Challenge laufen mit ihrer alten Frage weiter. Eine feste Liste aller gespeicherten Antworten wacht darüber.
+- **Neuer Helfer** `karten-autor`: schreibt Entwürfe für Karteninhalte; geprüft wird unabhängig.
+- **Alte PRs aufgeräumt:** PR #95 und #27 sind durchgesehen und geschlossen. Brauchbares (Aufträge, „Ganz einfach“-Vorlagen, Funde) ist übernommen ([Durchsicht](docs/entwurf/2026-11-23-pr-95-27-durchsicht.md)).
+
 ## 23.11.2026 – Teilschritt 3 beginnt: schnellere Prüfungen, aufgeräumt, Entwurf „Kniffliger spielen“
 
 Für Kinder ändert sich fast nichts Sichtbares. Fehler fallen jetzt früher auf, und die große Prüfung ist schneller.
