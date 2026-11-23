@@ -4,21 +4,24 @@
 // Ausgleichen nach den Zeiten-Dateien der CI (Artefakt „zeiten-<browser>-<gruppe>“, zeiten-*.json).
 // Die Zeiten-Datei entsteht erst am Ende eines Laufs. Bricht ein Job ab (Zeitgrenze), fehlt sie: Dann stehen
 // die Dauern je Suite im Job-Log (Zeilen „PASS name 12.3 s“).
-// Zahlen in Klammern: Sekunden nacheinander in CI-Lauf 252 (21.11.2026), ohne Aufbau des Jobs.
+// Zahlen: Sekunden nacheinander in CI-Lauf 262 (23.11.2026), ohne Aufbau des Jobs.
 export const REST = 'rest';
 
 export const SHARDS = {
   chromium: {
-    // journeys allein (2078 s). Teilen erst, wenn klar ist, welcher Teil die Zeit braucht (BACKLOG).
+    // journeys allein (2082 s). Teilen erst, wenn klar ist, welcher Teil die Zeit braucht (BACKLOG).
     reisen: ['journeys'],
-    kern: ['core', 'offline-resilience', 'animals'], // 821 + 738 + 484 s
-    // rest: Rauchtest, CI-Satz, engine-journeys (855 s) und die kleinen Voll-Suiten, zusammen rund 1980 s.
+    kern: ['core', 'offline-resilience', 'animals'], // 718 + 594 + 462 s
+    // rest: Rauchtest, CI-Satz, engine-journeys (741 s) und die kleinen Voll-Suiten, zusammen rund 1876 s.
   },
-  // Firefox ganz in „rest“ (2263 s).
-  firefox: {},
+  firefox: {
+    // Lauf 262 hatte Firefox noch ganz in „rest“: 3271 s, so nah an der Zeitgrenze wie keine andere Gruppe.
+    'offline-tiere': ['offline-resilience', 'animals'], // 1080 + 526 s
+    // rest: engine-journeys (1177 s) und alle übrigen Suiten, zusammen rund 1666 s.
+  },
   webkit: {
-    // Zusammen mit rest 3040 s; die Aufteilung zeigt erst die nächste Zeiten-Datei.
-    'offline-tiere': ['offline-resilience', 'animals'],
+    'offline-tiere': ['offline-resilience', 'animals'], // 969 + 458 s
+    // rest: engine-journeys (899 s) und alle übrigen Suiten, zusammen rund 1307 s.
   },
 };
 

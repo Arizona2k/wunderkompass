@@ -50,5 +50,5 @@ test('der Runner nimmt eine Gruppe nur mit --suite full und einem Browser an', (
   assert.match(alle.stderr, /--shard ist nur mit --suite full und einem einzelnen --browser erlaubt/);
   const unbekannt = run(['--suite', 'full', '--browser', 'firefox', '--shard', 'kern']);
   assert.equal(unbekannt.status, 2, unbekannt.stdout + unbekannt.stderr);
-  assert.match(unbekannt.stderr, /Unbekannte Gruppe kern für firefox \(bekannt: rest\)/);
+  assert.match(unbekannt.stderr, /Unbekannte Gruppe kern für firefox \(bekannt: offline-tiere, rest\)/);
 });

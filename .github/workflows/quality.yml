@@ -73,7 +73,7 @@ jobs:
     name: Vollprüfung (${{ matrix.browser }} ${{ matrix.shard }})
     if: github.base_ref == 'main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
-    # Die längste Gruppe braucht ohne Aufbau rund 38 Minuten (Firefox, CI-Lauf 252).
+    # Die längste Gruppe braucht ohne Aufbau rund 35 Minuten (Chromium reisen, CI-Lauf 262).
     timeout-minutes: 75
     permissions:
       contents: read
@@ -84,6 +84,7 @@ jobs:
           - {browser: chromium, shard: reisen}
           - {browser: chromium, shard: kern}
           - {browser: chromium, shard: rest}
+          - {browser: firefox, shard: offline-tiere}
           - {browser: firefox, shard: rest}
           - {browser: webkit, shard: offline-tiere}
           - {browser: webkit, shard: rest}
