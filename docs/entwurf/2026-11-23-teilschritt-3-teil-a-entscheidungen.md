@@ -48,6 +48,19 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - Pflicht aus BACKLOG 23 erfüllt: feste Liste aller gespeicherten Antworten (`tests/fixtures/gespeicherte-antworten.json`) und Test „gleich oder Alias vorhanden“.
 - „Ordne richtig“ (Steinwerkzeuge) wird ein eigener kleiner Abschnitt ab Experte, nicht Teil des Fragenkreislaufs.
 
+- **Alte Antwortreihe im Pass bleibt** (Nachtrag aus der großen Prüfung von Aufgabe 5): Passt eine gespeicherte Reihenfolge nicht mehr (z. B. nach einer vierten Antwort), zeigt die Karte eine feste Mischung je Frage (`festGemischt`) und schreibt nichts in den Pass. Die erste Fassung hatte neu gemischt und gespeichert; der Schutztest „interpretation never overwrites original import evidence“ war dadurch rot. Falls falsch: Alle Kinder mit so einer alten Reihe sehen dieselbe Mischung, nicht jedes eine eigene.
+- Öffnet ein Kind eine Karte mit Challenge-Fragen, nachdem es die Hauptfrage beantwortet hat, merkt sich die Karte die Antwortreihe der nächsten Frage (neuer Schlüssel im Kartenstand). Alte Einträge bleiben unverändert; der Test „existing round retained“ prüft das jetzt je Eintrag statt „nichts Neues“.
+
+## Aufgabe 6: „Ganz einfach“ offen
+
+- Karten ohne Häppchen zeigen „Ganz einfach“ offen und ohne Altersangabe, die Absätze zugeklappt unter „Für Große“ (wie geplant).
+- **Abweichung vom Plan bei Personenkarten (36):** Dort ist der Satz meist die Anleitung zum Versuch („Vergleiche zwei erfundene Messbefunde …“), keine Erklärung. Er steht darum oben in „Ausprobieren“ (wie schon bei den Pilot-Karten mit Häppchen), und die Absätze bleiben offen in „Kurz erklärt“. Echte leichte Sätze für Personen kommen mit der Personenwelt (BACKLOG 24). Falls falsch: Personenkarten bleiben vorerst lang offen.
+- **67 Karten bekommen „Ganz einfach“ neu** (Vorlage PR #27, neu geschrieben von der `kinder-redaktion`, geprüft vom `fakten-pruefer`). Die sechs Karten mit Häppchen aus der Vorlage (Steinwerkzeuge, Apollo 11, Pyramiden von Gizeh, Eiffelturm, Wasserkreislauf, Mondphasen) bekommen keinen Satz: Die Häppchen sind dort die einfache Fassung.
+- Nur „Ganz einfach“ wird übernommen. „Selbst beobachten“ und Lernziel aus PR #27 sind ungeprüft und oft Erwachsenensprache; sie bleiben im Entwurf. Beide Felder sind deshalb freiwillig (Typ und Testhilfe `lesetexte`).
+- **24 Tierkarten:** Einleitung und „Ganz einfach“ waren derselbe Satz, ein Lehrsatz für Erwachsene („Artwissen benötigt …“). Beide sind neu (Vorschlag der `kinder-redaktion`, Faktencheck). Die Inhaltsregel „Ganz einfach steht nicht in der Einleitung“ gilt jetzt ohne Ausnahmeliste.
+- Heikle Karten: Der Satz nennt das Leid ehrlich und ohne Einzelheiten (Weltkriege: die Toten; 1492: das Leid der Menschen vor Ort; Mauerbau: der Zweck; Holocaust: der Grund war Hass).
+- „Was ist neu?“: zwei Einträge („Drei Stufen: Entdecker, Profi, Experte“, „Erst ein leichter Satz“).
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
