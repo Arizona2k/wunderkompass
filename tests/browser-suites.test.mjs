@@ -9,13 +9,14 @@ import {newReport} from './browser/harness.mjs';
 import {browserErrorArrays, monitorBrowserErrors} from '../scripts/browser-errors.mjs';
 
 const SETS = ['smoke', 'ci', 'full'];
-// Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Diese laufen in jeder Engine.
+// Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Sie sind nicht auf Chromium beschränkt;
+// der PR prüft sie in Chromium (offline-cold und backup auch in WebKit), die Vollprüfung in allen drei Engines.
 const PASS_OFFLINE = [
   'offline-cold', 'no-news', 'backup', 'pass-spielstaende', 'animal-game-saves', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
   'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];
-// Sichtbare Lernansichten, die in jeder Engine laufen.
+// Sichtbare Lernansichten, die nicht auf Chromium beschränkt sind.
 const ANSICHTEN = ['reise-kapitel'];
 // Dazu die Tempo-Prüfung (Ladegröße, Layout-Rutschen), damit zu große Seiten schon im PR auffallen.
 const CI = [...PASS_OFFLINE, ...ANSICHTEN, 'performance'];
@@ -50,7 +51,7 @@ test('CI-Satz enthält die Tempo-Prüfung', () => {
   assert.deepEqual(SUITES.filter(suite => suite.set === 'ci').map(suite => suite.name).sort(), [...CI].sort());
 });
 
-test('Pass- und Offline-Suiten laufen in jeder Engine', () => {
+test('Pass- und Offline-Suiten sind nicht auf Chromium beschränkt', () => {
   for (const name of ['smoke', ...PASS_OFFLINE, ...ANSICHTEN]) {
     assert.notEqual(SUITES.find(suite => suite.name === name)?.chromiumOnly, true, name + ' darf nicht nur in Chromium laufen');
   }
@@ -173,4 +174,21 @@ test('Überwachung nennt Ursache und Adresse eines reparierten React-Renderfehle
   assert.equal(detail.ursache, 'frage is undefined');
   assert.match(detail.stapel, /TypeError: frage is undefined/);
   assert.deepEqual(proof.consoleErrors, []);
+});
+
+// Jeder PR prüft Pass und Offline zusätzlich in WebKit (Safari auf iPhone und iPad). Beide alten WebKit-Fehler
+// fielen sonst erst in der Vollprüfung auf (23.11.2026). Skript und CI-Schritt müssen dazu zusammenpassen.
+test('WebKit-Kurzprüfung läuft bei jedem PR', () => {
+  const skripte = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8')).scripts;
+  const befehl = skripte['test:browser:webkit'] ?? '';
+  assert.match(befehl, /run\.mjs --suite ci --browser webkit\b/, 'test:browser:webkit muss den CI-Satz in WebKit starten');
+  const namen = befehl.split(/\s+/).filter(wort => !wort.startsWith('-') && SUITES.some(suite => suite.name === wort));
+  assert.deepEqual(namen.sort(), ['backup', 'offline-cold'], 'WebKit-Kurzprüfung soll offline-cold und backup prüfen');
+  for (const name of namen) assert.notEqual(SUITES.find(suite => suite.name === name)?.chromiumOnly, true, name + ' läuft nicht in WebKit');
+  assert.match(skripte.check, /pnpm run test:browser:webkit\b/, 'pnpm run check soll die WebKit-Kurzprüfung enthalten');
+
+  const ci = fs.readFileSync(new URL('../.github/workflows/quality.yml', import.meta.url), 'utf8');
+  const pflicht = ci.slice(ci.indexOf('name: Required quality checks'), ci.indexOf('\n  full:'));
+  assert.match(pflicht, /playwright install --with-deps chromium webkit\b/, 'Pflichtjob muss WebKit installieren');
+  assert.match(pflicht, /run: pnpm run test:browser:webkit\b/, 'Pflichtjob muss die WebKit-Kurzprüfung starten');
 });
