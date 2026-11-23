@@ -26,6 +26,9 @@ export function ready(page) {
 // Daten, die die App erst nachlädt. Ein Bild erscheint oft erst, wenn sein Programmteil da ist
 // (CI-Lauf 257: Korallenriff-Foto der Startseite; im November 2026 auch `research`).
 // Jede echte Fehlanfrage bleibt in der Überwachung sichtbar.
+// Nachtrag 23.11.2026: Die Firefox-Abbrüche des Riff-Fotos (Läufe 249 und 257, auch unten) kamen sehr wahrscheinlich nicht vom
+// Seitenwechsel, sondern von Firefox' gespeicherter Kopie nach dem Neuladen (zweite Regel in scripts/browser-errors.mjs).
+// Nötig bleibt die Wartehilfe für Chromium und nachgeladene Programmteile (CI-Befund Chromium: research, journeys, engine-journeys).
 // Gleich nach newPage aufrufen: const anfragenFertig = ladeanfragen(page); … await anfragenFertig(); await page.reload();
 export function ladeanfragen(page, {timeout = 20000} = {}) {
   return offeneAnfragen(page, request => !request.isNavigationRequest(), 'Anfragen laufen', timeout);

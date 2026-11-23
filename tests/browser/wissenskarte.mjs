@@ -3,7 +3,7 @@
 // Jeder Fall mit Lernstand prüft auch den Pass nach Neuladen: Dort hängt der Lernstand der Kinder.
 import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
-import {browserErrorArrays, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {BROWSER_ERROR_FIELDS, browserErrorArrays, browserErrorsSettled, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
 import {angezeigteFrage, antwortKnopf, antworteRichtig, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, zeigtFrage, zusatzfragen} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
@@ -312,7 +312,8 @@ async function ausprobierenNochEinmal(ctx) {
     // Erst sammeln, dann je nach Phase einsortieren.
     const proof = browserErrorArrays();
     monitorBrowserErrors(page, ctx.base, proof, {engine: ctx.engine});
-    const umfuellen = () => { for (const [feld, liste] of Object.entries(proof)) fehler[feld].push(...liste.splice(0)); };
+    // Erst offene Firefox-Bildabbrüche entscheiden lassen (browser-errors.mjs), dann nur die Fehlerfelder umfüllen.
+    const umfuellen = async () => { await browserErrorsSettled(proof); for (const feld of BROWSER_ERROR_FIELDS) fehler[feld].push(...proof[feld].splice(0)); };
     let sperren = true;
     await page.route(gesperrt, route => (sperren ? route.abort() : route.fallback()));
     await page.goto(new URL('#world/topic/' + ELEFANT.id, ctx.base).href);
@@ -324,7 +325,7 @@ async function ausprobierenNochEinmal(ctx) {
     await nochmal.waitFor(WARTEN);
     assert.equal(await ausprobieren.locator('.wissenskarte-bausteine').count(), 0, 'ohne Skript kein Baustein');
     await page.evaluate(() => new Promise(fertig => requestAnimationFrame(() => setTimeout(fertig, 100))));
-    umfuellen();
+    await umfuellen();
     sperren = false;
     fehler = danach;
     const vorherNavigiert = await page.evaluate(() => performance.getEntriesByType('navigation').length);
@@ -334,12 +335,12 @@ async function ausprobierenNochEinmal(ctx) {
     assert.equal(await page.evaluate(() => performance.getEntriesByType('navigation').length), vorherNavigiert, 'ohne Neuladen');
     await page.waitForFunction(() => [...document.styleSheets].some(s => /\/bausteine-[^/]*\.css/.test(s.href ?? '')), null, WARTEN)
       .catch(() => assert.fail('der Stil der Bausteine ist geladen'));
-    umfuellen();
+    await umfuellen();
   } finally {
     await context.close();
   }
   // Beim Sperren: nur die gesperrten Dateien und die Meldung über den gescheiterten Import.
-  for (const anfrage of beimSperren.failedRequests) assert.match(anfrage.url, gesperrt, 'nur gesperrte Dateien scheitern');
+  for (const anfrage of beimSperren.failedRequests) assert.match(anfrage.url, gesperrt, 'nur gesperrte Dateien scheitern: ' + JSON.stringify(anfrage));
   for (const meldung of beimSperren.consoleErrors) {
     // Firefox gibt die Meldung von React über den abgefangenen Ladefehler nur als Klassennamen weiter („Error“).
     assert.match(meldung, /bausteine-|dynamically imported module|Importing a module script failed|Unable to preload CSS|Failed to load resource|^\[firefox\] (?:Type)?Error$/, 'erwartete Meldung: ' + meldung);

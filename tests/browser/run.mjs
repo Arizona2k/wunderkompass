@@ -13,7 +13,7 @@ await import('../../scripts/test-runtime.mjs');
 const {SUITES} = await import('./suites.mjs');
 const {shardsOf, suitesInShard} = await import('./shards.mjs');
 const {PROJECT, newReport, ready, startPreview} = await import('./harness.mjs');
-const {browserErrorsComplete, BROWSER_ERROR_FIELDS, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
+const {browserErrorsComplete, browserErrorsSettled, BROWSER_ERROR_FIELDS, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
 const fs = await import('node:fs/promises');
 const {existsSync} = await import('node:fs');
 const path = await import('node:path');
@@ -106,6 +106,7 @@ async function runSuite(suite, {engine, browser, browserType, launchOptions}) {
   let error = null;
   try {
     await suite.run(ctx);
+    await browserErrorsSettled(report);
     if (!browserErrorsComplete(report)) throw Error('Browserfehler während der Suite:\n' + describeBrowserErrors(report));
   } catch (caught) {
     error = caught;

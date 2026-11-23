@@ -3,10 +3,10 @@
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
-import test from 'node:test';
+import test, {mock} from 'node:test';
 import {SUITES} from './browser/suites.mjs';
 import {newReport} from './browser/harness.mjs';
-import {browserErrorArrays, monitorBrowserErrors} from '../scripts/browser-errors.mjs';
+import {FIREFOX_BILD_NEUSTART_MS, FIREFOX_SPEICHERKOPIE_MS, browserErrorArrays, browserErrorsComplete, browserErrorsSettled, monitorBrowserErrors} from '../scripts/browser-errors.mjs';
 
 const SETS = ['smoke', 'ci', 'full'];
 // Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Sie sind nicht auf Chromium beschränkt;
@@ -202,6 +202,130 @@ test('Überwachung nennt Ursache und Adresse eines reparierten React-Renderfehle
   assert.equal(detail.ursache, 'frage is undefined');
   assert.match(detail.stapel, /TypeError: frage is undefined/);
   assert.deepEqual(proof.consoleErrors, []);
+});
+
+// Firefox bricht eine Bildanfrage ab und lädt dieselbe Adresse sofort neu, wenn React `src` nach dem Einfügen erneut setzt
+// (browser-errors.mjs). Nur dieser Neustart ist erwartet; jeder andere Abbruch bleibt ein Fehler. Geprüft ohne Browser.
+test('Überwachung trennt Firefox-Bildneustart von echtem Abbruch', async t => {
+  mock.timers.enable({apis: ['setTimeout', 'Date']});
+  t.after(() => mock.timers.reset());
+  const seite = ({engine, browserName} = {}) => {
+    const handler = {}, proof = browserErrorArrays();
+    // evaluate liefert, welche eingehängten Bilder die Adresse gerade zeigen (so liest es die Überwachung aus der Seite).
+    const zustand = {bilder: [], evaluate: null};
+    const page = {
+      on: (name, fn) => { (handler[name] ??= []).push(fn); },
+      addInitScript: () => Promise.resolve(),
+      mainFrame: () => null,
+      evaluate: (fn, arg) => zustand.evaluate ? zustand.evaluate(fn, arg) : Promise.resolve(zustand.bilder),
+      ...(browserName ? {context: () => ({browser: () => ({browserType: () => ({name: () => browserName})})})} : {}),
+    };
+    monitorBrowserErrors(page, 'http://127.0.0.1:4173', proof, {engine});
+    const sende = (name, request) => handler[name]?.forEach(fn => fn(request));
+    const anfrage = (url, art = 'image', fehler = 'NS_BINDING_ABORTED') => ({url: () => url, resourceType: () => art, isNavigationRequest: () => false, failure: () => ({errorText: fehler})});
+    return {proof, sende, anfrage, zustand};
+  };
+  // Uhr in kleinen Schritten vorstellen; dazwischen laufen die Antworten der Seite (Promises) weiter.
+  const lauf = async ms => { for (let t = 0; t < ms; t += 10) { mock.timers.tick(10); await new Promise(resolve => setImmediate(resolve)); } };
+  const foto = 'http://127.0.0.1:4173/world/african-elephant.webp';
+
+  // Neustart nach der Abbruchmeldung (so gemessen): erst Fehler, dann gestrichen und vermerkt.
+  {
+    const {proof, sende, anfrage} = seite({engine: 'firefox'}), erste = anfrage(foto), zweite = anfrage(foto);
+    sende('request', erste); sende('requestfailed', erste);
+    assert.equal(proof.failedRequests.length, 1, 'bis zum Neustart zählt der Abbruch');
+    mock.timers.tick(40); sende('request', zweite);
+    await browserErrorsSettled(proof);
+    assert(browserErrorsComplete(proof), JSON.stringify(proof));
+    assert.equal(proof.expectedSyntheticErrors?.length, 1);
+    assert.equal(proof.expectedSyntheticErrors[0].phase, 'firefox-image-restart');
+    assert.match(proof.expectedSyntheticErrors[0].reason, /commitHostMount/);
+  }
+  // Neustart vor der Abbruchmeldung: sofort erledigt.
+  {
+    const {proof, sende, anfrage} = seite({engine: 'firefox'}), erste = anfrage(foto), zweite = anfrage(foto);
+    sende('request', erste); mock.timers.tick(5); sende('request', zweite); sende('requestfailed', erste);
+    assert(browserErrorsComplete(proof), JSON.stringify(proof));
+    assert.equal(proof.expectedSyntheticErrors?.length, 1);
+  }
+  // Gegenproben: Diese Abbrüche bleiben Fehler.
+  // vorher: Die neue Anfrage startet vor der Abbruchmeldung. neuladen: Dazwischen lädt die Seite neu (Navigationsanfrage).
+  const bleibtFehler = async (wie, {engine, browserName, art, fehler, spaet, ohneNeustart, vorher, neuladen}) => {
+    const {proof, sende, anfrage} = seite({engine, browserName}), erste = anfrage(foto, art, fehler), zweite = anfrage(foto, art);
+    const navigation = {...anfrage('http://127.0.0.1:4173/', 'document'), isNavigationRequest: () => true};
+    const warte = () => mock.timers.tick(spaet ? FIREFOX_BILD_NEUSTART_MS + 1 : 10);
+    sende('request', erste);
+    if (vorher) {
+      if (neuladen) sende('request', navigation);
+      sende('request', zweite); warte(); sende('requestfailed', erste);
+    } else {
+      sende('requestfailed', erste);
+      if (!ohneNeustart) { if (neuladen) sende('request', navigation); warte(); sende('request', zweite); }
+    }
+    mock.timers.tick(FIREFOX_BILD_NEUSTART_MS + 1);
+    await browserErrorsSettled(proof);
+    assert.equal(proof.failedRequests.length, 1, wie);
+    assert.equal(proof.expectedSyntheticErrors, undefined, wie);
+  };
+  await bleibtFehler('ohne neue Anfrage', {engine: 'firefox', ohneNeustart: true});
+  await bleibtFehler('neue Anfrage zu spät', {engine: 'firefox', spaet: true});
+  await bleibtFehler('neue Anfrage vor der Meldung, aber zu alt', {engine: 'firefox', vorher: true, spaet: true});
+  await bleibtFehler('Neuladen dazwischen', {engine: 'firefox', neuladen: true});
+  await bleibtFehler('Neuladen dazwischen, neue Anfrage vor der Meldung', {engine: 'firefox', vorher: true, neuladen: true});
+  await bleibtFehler('kein Bild', {engine: 'firefox', art: 'script'});
+  await bleibtFehler('anderer Netzfehler', {engine: 'firefox', fehler: 'NS_ERROR_CONNECTION_REFUSED'});
+  await bleibtFehler('anderer Browser', {engine: 'chromium'});
+  await bleibtFehler('Browser unbekannt', {});
+  // Ohne Angabe liest die Überwachung den Browsernamen von der Seite.
+  {
+    const {proof, sende, anfrage} = seite({browserName: 'firefox'}), erste = anfrage(foto), zweite = anfrage(foto);
+    sende('request', erste); sende('requestfailed', erste); sende('request', zweite);
+    await browserErrorsSettled(proof);
+    assert(browserErrorsComplete(proof), JSON.stringify(proof));
+  }
+
+  // Zweiter Fall: Firefox nimmt seine gespeicherte Kopie. Die Seite hat das Foto schon geladen, dann neu geladen; Firefox fragt
+  // nach, ob die Kopie gilt, und bricht die Nachfrage selbst ab (so gemessen im Rauchtest, Riff-Foto). Es folgt keine neue
+  // Anfrage; React hängt das Bild kurz danach ein, fertig geladen.
+  const fertig = [{complete: true, naturalWidth: 1275}];
+  // neustart: React startet die Anfrage sofort neu (erster Fall), dann gilt die erste Regel.
+  const kopie = async (wie, {erwartet, browser = 'firefox', geladen = 200, bilder = fertig, evaluate, danach, neustart}) => {
+    const {proof, sende, anfrage, zustand} = seite({engine: browser});
+    const navigation = () => ({...anfrage('http://127.0.0.1:4173/', 'document'), isNavigationRequest: () => true});
+    const erste = anfrage(foto), nachfrage = anfrage(foto);
+    sende('request', navigation()); sende('request', erste);
+    if (geladen) sende('requestfinished', {...erste, response: async () => ({status: () => geladen})});
+    await lauf(500);
+    sende('request', navigation()); sende('request', nachfrage); sende('requestfailed', nachfrage);
+    if (neustart) { await lauf(20); sende('request', anfrage(foto)); }
+    if (evaluate) zustand.evaluate = evaluate;
+    await lauf(FIREFOX_BILD_NEUSTART_MS + 10);
+    danach?.({sende, anfrage, navigation});
+    zustand.bilder = bilder;
+    await lauf(FIREFOX_SPEICHERKOPIE_MS);
+    await browserErrorsSettled(proof);
+    if (erwartet) {
+      assert(browserErrorsComplete(proof), wie + ': ' + JSON.stringify(proof));
+      assert.equal(proof.expectedSyntheticErrors?.length, 1, wie);
+      assert.equal(proof.expectedSyntheticErrors[0].phase, erwartet, wie);
+      if (erwartet === 'firefox-image-cache-copy') assert.match(proof.expectedSyntheticErrors[0].reason, /imgCacheValidator/, wie);
+    } else {
+      assert.equal(proof.failedRequests.length, 1, wie);
+      assert.equal(proof.expectedSyntheticErrors, undefined, wie);
+    }
+  };
+  await kopie('Kopie aus dem Speicher', {erwartet: 'firefox-image-cache-copy'});
+  await kopie('vorher geladen, React startet neu', {erwartet: 'firefox-image-restart', neustart: true});
+  // Gegenproben: Diese Abbrüche bleiben Fehler.
+  await kopie('vorher nie geladen', {geladen: 0});
+  await kopie('vorher nur mit Fehlerstatus geladen', {geladen: 404});
+  await kopie('Bild erscheint nicht', {bilder: []});
+  await kopie('Bild erscheint, ein zweites mit derselben Adresse ist kaputt', {bilder: [...fertig, {complete: true, naturalWidth: 0}]});
+  await kopie('Navigation nach dem Abbruch', {danach: ({sende, navigation}) => sende('request', navigation())});
+  await kopie('neue Anfrage nach dem Abbruch, zu spät für einen Neustart', {danach: ({sende, anfrage}) => sende('request', anfrage(foto))});
+  await kopie('anderer Browser', {browser: 'chromium'});
+  await kopie('Seite antwortet nicht', {evaluate: () => new Promise(() => {})});
+  await kopie('Seite geschlossen', {evaluate: () => Promise.reject(Error('Target page, context or browser has been closed'))});
 });
 
 // Jeder PR prüft Pass und Offline zusätzlich in WebKit (Safari auf iPhone und iPad). Beide alten WebKit-Fehler
