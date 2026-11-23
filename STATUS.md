@@ -28,8 +28,7 @@ Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md),
 
 ## Offene Fragen an den Nutzer
 
-- Vorschlag: „Ganz einfach“ auf allen Karten offen, die schweren Absätze unter „Für Große“ (BACKLOG 17).
-- `main` schützen wie `test-live` (Regel auf GitHub, kostenlos; verhindert versehentliche Änderungen an der Seite für Freunde)? Empfehlung: ja ([Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md)).
+- Keine. Entschieden am 23.11.2026 (Nutzer: „ja“ zu beiden Empfehlungen): „Ganz einfach“ auf allen Karten offen, die schweren Absätze unter „Für Große“ (BACKLOG 17, Umsetzung in Teilschritt 3); `main` bekommt dieselbe GitHub-Regel wie `test-live`. Die Regel stellt der Nutzer auf GitHub ein (Claude hat dafür kein Werkzeug); danach prüft Claude, ob `main` als geschützt gilt.
 
 ## Vorübergehende Modell-Ausnahmen
 
