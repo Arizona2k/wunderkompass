@@ -96,6 +96,9 @@ export async function articleAtlas(page,ready,report,width,shots){
  await mehr.locator('.article-routes').getByRole('button',{name:'Vom Mond bis zum Meer',exact:true}).click();await page.locator('.world-route-stations').waitFor();assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea');
  const embedded=page.locator('.wissenskarte-eingebettet');await ausprobieren(embedded);await embedded.locator('.article-experiment').waitFor();
  await page.goBack();await page.locator('.wissenskarte-kopf').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/science-moon-phases');
+ // Die Seite stellt offene Bereiche und den Fokus im nächsten Bild wieder her (scheduleRouteRestore); unter Last kommt dieses Bild
+ // spät. Darum wie in journeys.mjs erst auf den Fokus am Routen-Knopf warten, dann prüfen (später Fund 24.11.2026: sofort geprüft, rot).
+ await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='world-article-route-science-moon-phases-moon-to-sea');
  assert.equal(await page.locator('details.wissenskarte-mehr').evaluate(el=>el.open),true,'„Mehr erfahren“ is open again after returning from the route');
  await page.locator('.wissenskarte-kopf').screenshot({path:shots+'/article-moon-'+width+'.png'});
  await page.locator('.wissenskarte-kopf .topic-illustration').screenshot({path:shots+'/moon-diagram-'+width+'.png'});

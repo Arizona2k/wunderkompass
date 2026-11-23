@@ -86,6 +86,12 @@ Alle zehn Befunde bestätigt behoben. Neue Befunde, alle umgesetzt:
 - **N2:** Der Browser-Test schiebt bei „Ordne richtig“ einmal nach unten (dabei verschiebt React das fokussierte Teil selbst) und prüft Fokus und Ansage.
 - **N3:** Beispiel in Punkt 10 berichtigt (Frankreich ist Nachbarland).
 
+## Später Fund im Nachlauf (`full-a7`, `core` bei 320 px)
+
+- **Befund:** „„Mehr erfahren“ is open again after returning from the route“ war rot (Mondkarte, Lernroute, Zurück). Einzeln und unter vierfacher bis sechsfacher CPU-Bremse grün.
+- **Ursache:** Die Seite stellt offene Bereiche und den Fokus mit Absicht erst im nächsten Bild wieder her (`scheduleRouteRestore` in `app/hash-route.ts`). Unter echter Last (drei Suiten gleichzeitig) kommt dieses Bild spät. Der Test prüfte sofort, wenn die Karte erschien. Nachgestellt mit künstlich um 150 ms verzögertem `requestAnimationFrame`: sofort zu, 150 ms später offen, Fokus wieder auf dem Routen-Knopf (sechs von sechs Runden). Kein Fehler der Seite und keiner von Teil A.
+- **Korrektur:** Der Test wartet wie `journeys.mjs`, `people-fourteen-connected-routes.mjs` und `discovery-central.mjs` erst auf den Fokus am Routen-Knopf und prüft dann (strenger als vorher: Fokus und offener Bereich). Mit verzögertem Bild sechs von sechs grün.
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
