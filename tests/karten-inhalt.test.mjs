@@ -131,10 +131,11 @@ test('keine Erwachsenensätze im Kinderteil', () => {
 });
 
 test('„Schon gewusst?“ wiederholt keinen Satz der Karte', () => {
-  // Die Überraschung soll neu sein: kein Satz daraus steht schon in Einleitung, Abschnitten, „Mehr erfahren“ oder Steckbrief.
+  // Die Überraschung soll neu sein: kein Satz daraus steht schon in Einleitung, Abschnitten, „Mehr erfahren“, Steckbrief
+  // oder „Ganz einfach“ (bei 21 Karten war es wörtlich derselbe Satz; er wurde gestrichen, BACKLOG).
   const saetze = text => text.split(/(?<=[.!?])\s+/).map(s => s.trim()).filter(s => s.length > 15);
   const doppelt = catalog.filter(t => t.surprise).flatMap(t => {
-    const rest = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).map(f => f.text)].filter(Boolean).join(' ');
+    const rest = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.facts ?? []).map(f => f.text), t.learning?.starter].filter(Boolean).join(' ');
     return saetze(t.surprise).filter(s => rest.includes(s)).map(s => t.id + ': ' + s);
   });
   assert.deepEqual(doppelt, []);
