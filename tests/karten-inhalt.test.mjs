@@ -154,17 +154,8 @@ test('„Schon gewusst?“ wiederholt keinen Satz der Karte', () => {
 // „Ganz einfach“ steht genau einmal auf der Karte. Der Browser-Test (karte-hilfen.mjs, ganzEinfach) sieht nur die
 // Karten, die eine Suite öffnet, und die 21 doppelten Wissenschaftskarten fielen erst in der Vollprüfung auf
 // (23.11.2026). Dieser Datentest deckt alle Karten in Millisekunden ab.
-// Bekannte Ausnahme: Bei diesen 24 Tierkarten ist die Einleitung derselbe Satz. Sie werden mit „Ganz einfach offen“
-// umgeschrieben (Entwurf Teilschritt 3, E12, Aufgabe 6). Die Liste darf nur kürzer werden.
-const GANZ_EINFACH_IN_EINLEITUNG = new Set([
-  'animal-platypus', 'animal-short-beaked-echidna', 'animal-okapi', 'animal-meerkat', 'animal-ring-tailed-lemur',
-  'animal-north-american-beaver', 'animal-walrus', 'animal-red-fox', 'animal-raccoon', 'animal-hedgehog',
-  'animal-barn-owl', 'animal-kingfisher', 'animal-ostrich', 'animal-atlantic-puffin', 'animal-common-chameleon',
-  'animal-fire-salamander', 'animal-common-frog', 'animal-eastern-clown-anemonefish', 'animal-european-eel',
-  'animal-monarch-butterfly', 'animal-garden-snail', 'animal-european-lobster', 'animal-common-cuttlefish',
-  'animal-short-snouted-seahorse',
-]);
-
+// Auch nicht in der Einleitung: Seit Teilschritt 3 (E12) stehen beide offen übereinander. Bei 24 Tierkarten war es derselbe
+// Satz; sie bekamen neue Einleitungen.
 test('„Ganz einfach“ steht nicht noch einmal wörtlich auf der Karte', () => {
   const gleich = text => (text ?? '').replace(/\s+/g, ' ').trim();
   // Alle Texte, die die Karte zeigen kann, außer „Ganz einfach“ selbst und der Einleitung.
@@ -176,12 +167,10 @@ test('„Ganz einfach“ steht nicht noch einmal wörtlich auf der Karte', () =>
   ];
   const mitStarter = catalog.filter(t => t.learning?.starter);
   const enthaelt = (texte, t) => texte.some(text => gleich(text).includes(gleich(t.learning.starter)));
-  // Die Ausnahmeliste gilt nur für die Einleitung; alle anderen Texte prüft der erste Teil auch bei diesen Karten.
   const sonstwo = mitStarter.filter(t => enthaelt(texteOhneEinleitung(t), t)).map(t => t.id);
   assert.deepEqual(sonstwo, [], 'doppelt außerhalb der Einleitung');
   const inEinleitung = mitStarter.filter(t => enthaelt([t.intro], t)).map(t => t.id);
-  assert.deepEqual(inEinleitung.filter(id => !GANZ_EINFACH_IN_EINLEITUNG.has(id)), [], 'neu doppelt in der Einleitung');
-  assert.deepEqual([...GANZ_EINFACH_IN_EINLEITUNG].filter(id => !inEinleitung.includes(id)), [], 'nicht mehr doppelt: aus der Ausnahmeliste streichen');
+  assert.deepEqual(inEinleitung, [], 'doppelt in der Einleitung');
 });
 
 test('wrongReasons passt zu den Antworten', () => {
