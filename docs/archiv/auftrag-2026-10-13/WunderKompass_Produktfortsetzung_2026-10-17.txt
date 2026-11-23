@@ -1,0 +1,325 @@
+WUNDERKOMPASS – BESTEHENDE ENTWICKLUNG VOLLSTÄNDIG UND SICHER FORTSETZEN
+
+Arbeite am bestehenden Repository Arizona2k/wunderkompass weiter.
+
+Ich möchte tatsächlichen Produktfortschritt: technische Verbesserungen, hochwertigere bestehende Inhalte, neue Inhalte und sinnvoll abgeschlossene, vollständig geprüfte Teilveröffentlichungen auf der bestehenden Testwebsite.
+
+Prüfe zuerst den neuesten tatsächlichen Stand. Unterscheide genau, was offen, abgeschlossen, veröffentlicht, nur implementiert oder noch ungeprüft ist. Entwickle bereits vorhandene Arbeit weiter, statt sie erneut anzulegen.
+
+Dieser Auftrag beendet den zusätzlichen Datenschutz-Sonderauftrag und setzt die bisherige Produktentwicklung fort. Er startet das Projekt nicht neu, ersetzt keinen bestehenden Masterauftrag durch einen kleineren Umfang und eröffnet keine neue Roadmap.
+
+1. GELTENDE ENTSCHEIDUNGEN UND AKTUELLE TATSACHEN
+
+Dieser aktuelle Nutzerauftrag ersetzt widersprechende ältere Nutzeranweisungen ausschließlich hinsichtlich:
+- des beendeten Datenschutz-Sonderauftrags,
+- der hier ausdrücklich erlaubten regulären Übernahme vollständig fertiger Teilabschnitte nach test-live.
+
+Alle übrigen weiterhin geltenden Anforderungen, Qualitätsmaßstäbe, Schutzregeln und Betriebsgrenzen bleiben erhalten.
+
+Führe diese Entscheidungen in den bestehenden Regel- und Statusdateien nachvollziehbar nach. Diese ausdrücklich beauftragte Nachführung benötigt keine erneute Grundsatzfreigabe. Originalaufträge und historische Nachweise bleiben unverändert. Technische Schutzregeln, Berechtigungen oder Prüfanforderungen dürfen dadurch nicht abgeschwächt werden.
+
+Unterscheide verbindliche Nutzerentscheidungen von historischen Tatsachenberichten:
+- Für Branches, PRs, CI, Bereitstellungen und Reservierungen zählt der aktuell überprüfte Zustand.
+- Eine ältere Übergabe ist kein aktueller Statusnachweis.
+- Ein neuerer erfolgreicher Prüflauf kann einen älteren technischen Fehler erledigen.
+- Ein grüner Prüflauf ersetzt keine tatsächlich erforderliche fachliche oder menschliche Abnahme.
+
+Orientierung aus dem letzten GitHub-Abgleich am 17.10.2026:
+- PR #27 war der einzige offene PR und weiterhin Draft.
+- Sein Head war 933b8241e62ec4ff4f016a61908bc95a1a4d454f.
+- PR #36 war nach test-live gemergt.
+- test-live stand auf 68cb0bd9e2d5de329c64e6f8c18da0b3e6f8bc90.
+- Quality #114, Run 39065022049, war im zweiten Versuch vollständig erfolgreich, einschließlich Chromium, Firefox, WebKit und Pflichtcollector.
+- PR #37 war geschlossen und nicht gemergt.
+- Das Repository war öffentlich.
+
+Diese Angaben sind nur Einstiegshilfen. Prüfe sie beim Arbeitsbeginn erneut. Insbesondere die ältere Aussage im Master-PR, Quality #114 sei insgesamt nicht grün, darf nicht ungeprüft als fortbestehender Blocker übernommen werden.
+
+2. DATENSCHUTZ-SONDERAUFTRAG BEENDEN
+
+Der zusätzliche Auftrag zur Sicherheitsprüfung, Artefaktprüfung und Historienbereinigung ist beendet. Keine weiteren Arbeiten daran beginnen oder fortsetzen.
+
+PR #37 darf nicht wieder geöffnet oder gemergt werden. Den abgebrochenen Sonderauftrag nicht über einen Ersatz-PR fortsetzen.
+
+Keine Historienumschreibung, keine Löschung alter Actions-Läufe oder Artefakte und keine weiteren Netzwerkfreigaben für diesen Sonderauftrag.
+
+Der Abbruch bestätigt keine vollständige Bereinigung. Historische private Angaben dürfen als verbleibender Befund dokumentiert bleiben. Sie sind allein kein Grund, die normale Produktentwicklung anzuhalten oder die zusätzliche Bereinigung erneut zu eröffnen.
+
+Bestehende normale Sicherheitsprüfungen, Geheimnisschutz, Datenschutzanforderungen des Produkts und Medienrechte bleiben verbindlich. Keine privaten Angaben oder Zugangsdaten absichtlich wieder hinzufügen.
+
+Neu auftretende konkrete Sicherheitsprobleme im tatsächlich bearbeiteten Produkt angemessen beheben; daraus keinen erneuten allgemeinen Historien- oder Artefaktaudit machen.
+
+3. VOLLSTÄNDIGE VORHANDENE AUFTRÄGE BERÜCKSICHTIGEN
+
+Lies die maßgeblichen Originalaufträge im vorhandenen Archiv content/auftrag-2026-10-13/ vollständig. Berücksichtige insbesondere:
+- Masteraufträge,
+- Daueraufträge,
+- Fortsetzungsaufträge,
+- ihre Nachträge und späteren Nutzerentscheidungen.
+
+Nutze außerdem:
+- AGENTS.md,
+- VISION.md,
+- QUALITY.md,
+- BACKLOG.md,
+- PROJECT_STATE.md,
+- TEST-LIVE.md,
+- CHANGELOG.md,
+- Issue #28 einschließlich relevanter Ergänzungen,
+- aktuelle Übergaben und relevante Diskussionen in PR #27.
+
+Verlasse dich nicht ausschließlich auf diesen Prompt oder auf Kurzfassungen. Übernimm sämtliche weiterhin geltenden Anforderungen aus den Originalen. Spätere ausdrückliche Nutzerentscheidungen gehen widersprechenden älteren Nutzeranweisungen im jeweils betroffenen Umfang vor.
+
+Andere Codex-Chats darfst du nur als gelesen bezeichnen, wenn sie tatsächlich zugänglich sind. Nutze andernfalls die vorhandenen Originalaufträge und gesicherten Übergaben. Benenne konkret fehlende Informationen, ohne unabhängig mögliche Entwicklung anzuhalten.
+
+BACKLOG.md bleibt die einzige operative Aufgabenliste. Keine konkurrierende Roadmap, kein zweiter Backlog und keine zusätzliche Verwaltungsstruktur.
+
+4. TATSÄCHLICHEN STAND UND VORHANDENE ARBEIT SICHERN
+
+Prüfe vor Änderungen:
+- aktuelle lokale und entfernte Branches,
+- offene, geschlossene und bereits gemergte relevante PRs,
+- lokale Änderungen und ungesicherte Zwischenstände,
+- vorhandene Arbeitsverzeichnisse und Prüfkopien,
+- laufende Prozesse und Prüfläufe,
+- die gemeinsame Entwicklungsreservierung,
+- tatsächlichen test-live- und Bereitstellungsstand.
+
+test-live ist die Grundlage der bestehenden Testwebsite. PR #27 enthält den weiterlaufenden Master-Entwicklungsstand. main enthält einen anderen Stand und darf nicht verändert werden.
+
+Erwirb vor Schreibarbeiten die vorhandene gemeinsame Reservierung nach dem bestehenden Verfahren. Keine fremde Reservierung löschen oder übernehmen und keinen parallelen Entwicklungsdurchlauf beginnen. Nicht zugängliche lokale Arbeit aus anderen Umgebungen nicht als geprüft oder gesichert darstellen.
+
+Sichere vorhandene lokale Projektarbeit verlustfrei. Keine ungesicherten Resets, keine pauschalen Überschreibungen und keine Rückkehr zu einem älteren Produktstand.
+
+Keine Force-Pushes oder Historienumschreibungen bestehender Entwicklungs- und Zielbranches. Die reguläre eigentümergebundene Pflege der bestehenden Reservierungsreferenz nach dem vorhandenen Lease-Verfahren bleibt zulässig.
+
+Beim Sichern auf GitHub ausschließlich geeignete Projektdateien übernehmen. Keine persönlichen Passdateien, Zugangsdaten, privaten Rohberichte oder ungeprüften Arbeitsverzeichnisse veröffentlichen. Das gilt besonders wegen der bestehenden öffentlichen Repository-Sichtbarkeit.
+
+Unterscheide pro relevantem Abschnitt:
+- bereits veröffentlicht und nachgeprüft,
+- implementiert, aber noch nicht ausgeliefert,
+- angefangen,
+- noch nicht umgesetzt,
+- noch nicht ausreichend geprüft oder abgenommen.
+
+Vergleiche den Master tatsächlich mit test-live. Bereits übernommene Inhalte nicht erneut als fehlend zählen. Historische Statusmeldungen anhand des aktuellen Zustands berichtigen.
+
+5. VOLLSTÄNDIGEN PRODUKTUMFANG ERHALTEN
+
+Paket 3.5 bleibt die aktuelle Priorität. Danach bleibt die Reihenfolge erhalten:
+
+Paket 4 Wissensbuch
+→ Paket 5 Weltkugel
+→ Paket 6 Wissenswelten
+→ Paket 7 Lernwege
+→ Paket 8 Gesamtabnahme.
+
+Spätere Ideen einschließlich Länder-/Flaggen-Memory und der Themenideen aus Issue #28 bleiben gespeichert. Sie werden nicht ungefragt zum nächsten Paket und dürfen den aktuellen Umfang nicht endlos vergrößern.
+
+Für Paket 3.5 insbesondere WK-051 bis WK-058 vollständig berücksichtigen:
+
+- Alle sechs Wissenswelten mit bestehenden und neuen Themen.
+- Die vereinbarten einmaligen Bestandsziele:
+  Tiere 24→48,
+  Geschichte 31→62,
+  Menschen 18→36,
+  Erfindungen 12→24,
+  Bauwerke 8→16,
+  Wissenschaft 23→46.
+- Wissensbegriffe 90→180.
+- Warum-Erklärungen 30→60.
+- Natur-/Geografieerklärungen 34→68 gemäß eingefrorener Fachbaseline.
+- Alle 16 Lernreisen mit 80 Kapiteltexten, 64 bestehenden Grafiken und 240 Aufgaben.
+- Alle 31 Spiele, 11 Labore, 6 Versuche und 12 Missionen.
+- Übrige Oberfläche, Weltkugel, Länder, Orte, Modelle, Suche, Pass, Hilfe, Chronik und Offline-Funktionen.
+- Sämtliche weiteren verbindlichen Anforderungen aus den Originalaufträgen.
+
+Diese Zahlen beschreiben bestehende Anforderungen. Sie sind keine Aufforderung zur Neuanlage bereits vorhandener Inhalte.
+
+Prüfe zuerst den tatsächlichen Fertigstellungs-, Veröffentlichungs- und Abnahmestand. Technische Integration, redaktionelle Bearbeitung und unabhängige Abnahme getrennt ausweisen.
+
+Keine Doppelzählung von Manuskripten, Projektionen, Synonymen, Werkstätten oder bereits veröffentlichten Themen. Keine erneute automatische Verdopplung in späteren Entwicklungsrunden.
+
+6. TECHNIK UND INHALTE GEMEINSAM WEITERENTWICKELN
+
+Berücksichtige Produktnutzen, UX, Design, Architektur, Entwicklung, Didaktik, Quellen, Medien, Qualität und Betrieb gemeinsam.
+
+Entwickle neue Inhalte UND verbessere den vorhandenen Bestand. Bleibe nicht dauerhaft bei Prüfberichten, Dokumentation, Prozesspflege oder technischen Kleinigkeiten stehen.
+
+Erhalte die Identität aus hochwertiger Wissenschaftswelt und fantasievoller Abenteuerwelt. Nutze die vorhandenen Hauptbereiche und das bestehende Designsystem.
+
+Neue Themen benötigen:
+- eigenständigen Lernwert,
+- überprüfte fachliche Quellen,
+- verständliche Erklärungen,
+- geeignete Lernhandlungen,
+- passende Medien oder eine nachvollziehbare Medienentscheidung,
+- konkrete Hilfen und sinnvolles Fehlerfeedback, soweit einschlägig.
+
+Freiwillige Denkstufen für 6–8, 9–11 und 12–14 sollen tatsächlich unterschiedliche Anforderungen bieten.
+
+Prüfe passende fachliche Verbindungen zu älteren Artikeln, Buchbegriffen, Reisen, Spielen, Laboren und Modellen. Ergänze sinnvolle gegenseitige Links sowie Suche, Navigation und Rückwege. Keine künstlichen Verbindungen allein zur Erhöhung einer Linkzahl.
+
+Beziehe betroffene bereits veröffentlichte Inhalte in die fachliche und technische Folgenprüfung ein.
+
+Bewahre stabile IDs, URLs, Schema-3-Pässe, Favoriten, Lernfortschritte, gespeicherte Spielstände, Exporte und Backups. Keine stillen Datenverluste oder inkompatiblen Speicheränderungen.
+
+7. SINNVOLLE VERBESSERUNGEN UMSETZEN
+
+Technische und gestalterische Optimierung ist ausdrücklich erwünscht, wenn sie einen konkreten Lern-, Bedienungs-, Geschwindigkeits- oder Zuverlässigkeitsnutzen hat.
+
+Keine unnötige Architekturumschreibung und keine endlosen Mikrooptimierungen. Größere sinnvolle Verbesserungen sind zulässig, wenn Nutzen, Aufwand, Abhängigkeiten und Risiken nachvollziehbar sind.
+
+Bestehende geeignete Lösungen zuerst prüfen und weiterverwenden. Keine bereits abgeschlossenen Optimierungen erneut entwickeln.
+
+Smartphone, Tablet und Desktop berücksichtigen, einschließlich:
+- Lesbarkeit und großer Schrift,
+- echtem Zoom,
+- Tastaturbedienung und Fokusführung,
+- Touchbedienung,
+- Barrierefreiheit,
+- tatsächlichen Grafik- und Textgrenzen,
+- stabiler und flüssiger Bedienung.
+
+Neue Funktionen nicht durch bloße Farbänderungen oder zusätzliche austauschbare Text-/Quizkarten ersetzen.
+
+Messwerte mit Methode, Vergleichsstand und Grenzen dokumentieren. Aus kleineren Dateien keine ungemessene Gerätebeschleunigung ableiten. Emulation und reale Geräteprüfungen unterscheiden.
+
+8. GEEIGNETE TEILABSCHNITTE REGULÄR AUSLIEFERN
+
+Trenne aus dem weiterlaufenden Master-PR #27 unabhängig nutzbare, zusammenhängende Abschnitte mit ihren notwendigen Abhängigkeiten in eigene PRs gegen test-live heraus.
+
+Nicht jede Kleinigkeit einzeln veröffentlichen; zugleich nicht auf den vollständigen Abschluss des gesamten Masters warten.
+
+Meine aktuelle Freigabe:
+
+Normale vollständig fertiggestellte Teilabschnitte darfst du nach erfolgreichen vorgeschriebenen Prüfungen und unter Einhaltung der bestehenden Repository-Regeln regulär nach test-live mergen.
+
+Frühere pauschale Vorgaben, ausschließlich auf meinen manuellen Merge zu warten, sind für diese geeigneten Folgeabschnitte hiermit ersetzt. Für normale Schritte innerhalb dieser Freigabe keinen neuen Fortsetzungsprompt und keine erneute Einzelzustimmung verlangen.
+
+Diese Freigabe erlaubt:
+- erforderliche normale Entwicklungscommits und Pushes auf geeignete Entwicklungs-/Lieferbranches,
+- passende Teil-PRs gegen test-live,
+- deren regulären Merge nach vollständig erfüllten Voraussetzungen,
+- die dadurch ausgelöste vorhandene Vercel-Testbereitstellung.
+
+Bestehende Betriebsgrenzen, Readinessprüfungen und Fristen aus TEST-LIVE.md bleiben erhalten. Bereits vorhandene Einrichtung zunächst überprüfen, nicht pauschal erneut aufbauen. Keine eigenständige Verlängerung einer befristeten Freigabe.
+
+Unmittelbar vor jedem Merge:
+- aktuellen PR-Head und aktuelle Zielbasis prüfen,
+- sämtliche erforderlichen aktuellen Pflichtchecks kontrollieren,
+- einschlägige fachliche und menschliche Abnahmen kontrollieren,
+- bestehende Readiness- und Repository-Regeln erfüllen,
+- Merge an die erwartete Head-SHA binden.
+
+Der tatsächliche Mergebaum muss dem geprüften Integrationsbaum entsprechen. Bei verändertem Head oder veränderter Basis nach dem vorhandenen Prüfvertrag erneut bewerten und erforderliche Nachweise aktualisieren.
+
+Keine Direktpushes nach test-live oder main. Keine wartende Auto-Merge-Aktivierung, keine zweite Releasepipeline und keine Schutzregelumgehung.
+
+Änderungen an technischen Schutzregeln, Berechtigungen, weiteren verbindlichen Freigabegrundlagen oder Kosten brauchen weiterhin eine konkrete Freigabe.
+
+PR #27 nicht als unfertiges Gesamtpaket mergen. main und andere Veröffentlichungsziele bleiben unverändert.
+
+9. FRÜH PRÜFEN UND VOLLSTÄNDIG ABSCHLIESSEN
+
+Neue Funktionen und neue Browsertests früh gezielt im gebauten Produkt und in den betroffenen tatsächlichen Browsern prüfen.
+
+Vor Ready-/GO-Empfehlung und Merge sämtliche vorgeschriebenen Abschlussprüfungen am tatsächlichen finalen Liefer- und Integrationsstand durchführen. Pflichtchecks, Testmatrizen und erforderliche Browserprüfungen erhalten.
+
+Produktfehler, Testfehler, Infrastrukturprobleme und ungeklärte Befunde unterscheiden. Ursachen beheben:
+- keine abgeschwächten Assertions,
+- keine verdeckten Skips,
+- kein continue-on-error zur Erzeugung eines grünen Ergebnisses,
+- keine blinden Wiederholungen,
+- keine unbegründeten Timeout-Erhöhungen.
+
+Keine alten grünen Ergebnisse auf einen anderen Stand übertragen. Tatsächliche Browser, Umfang, Commit-/Buildbindung und Grenzen der Nachweise korrekt angeben.
+
+Keine unabhängigen Fach-, Kinder-, Geräte- oder Stimmenprüfungen erfinden. Eigene Quellenlektüre und automatisierte Prüfungen sind keine unabhängige menschliche Abnahme.
+
+Tatsächlich notwendige fehlende Abnahmen blockieren den betroffenen Lieferabschnitt. Nicht einschlägige Gesamtgates nicht pauschal jedem unabhängigen Teilabschnitt auferlegen.
+
+Fehlende oder rote vorgeschriebene GitHub-Pflichtchecks sperren den betroffenen Release. Lokale Tests ersetzen diese Pflichtchecks nicht. Andere unabhängig mögliche Entwicklungs- und Inhaltsarbeit fortsetzen.
+
+Bestehende Ressourcenbudgets erhalten. Keine künstlichen Gesamtgrößenlimits für sämtliche Inhalte oder JavaScript einführen. Verpflichtende Größenmessungen und begründete Einstiegs-, Einzelressourcen-, Sicherheits- und Performancebudgets bleiben bestehen.
+
+Das Reviewbildbudget bleibt eine Obergrenze von 150.000.000 Byte. Erforderliche Nachweise und versiegelte Originale nicht verändern oder zur Budgeteinhaltung löschen.
+
+Wichtige laufende Prüfungen nicht unnötig abbrechen. Keine parallelen Entwicklungsdurchläufe oder zusätzliche Prüfinfrastruktur ohne nachgewiesene Notwendigkeit.
+
+10. BEREITSTELLUNG, CHRONIK UND MASTER NACHFÜHREN
+
+Nach jedem Merge:
+- exakten Mergecommit bestätigen,
+- tatsächlichen Mergebaum mit dem geprüften Integrationsbaum vergleichen,
+- vorhandenes Vercel-Testdeployment zu genau diesem Commit prüfen,
+- tatsächlich ausgelieferten Build und betroffene Funktionen nachprüfen.
+
+Einen Merge oder Vercel-Erfolgsstatus allein nicht als vollständig bestätigte Veröffentlichung bezeichnen. HTTP 200 allein belegt ebenfalls nicht den richtigen Build.
+
+Testwebsite und öffentliche Hauptwebsite klar unterscheiden. Bestehende Testadresse und ihre tatsächliche Zuordnung überprüfen, keine neue Website oder zusätzliche Pipeline aufbauen.
+
+Die bereits autorisierte loginfreie bestehende Testwebsite beibehalten. Andere Zugriffsschutz- oder Veröffentlichungseinstellungen nicht ungefragt ändern.
+
+Bei fehlgeschlagener oder nicht bestätigter Bereitstellung weitere Releases anhalten, den konkreten Befund dokumentieren und unabhängig mögliche Entwicklung fortsetzen. Notwendige Rückfälle über den bestehenden geprüften PR-Weg vorbereiten; Pass-, Fortschritts- und Offlinekompatibilität erhalten. Keine ungesicherten Rücksetzungen.
+
+„Was ist neu?“ verständlich für Kinder und Eltern pflegen:
+- konkrete Änderungen,
+- tatsächlicher Nutzen,
+- korrekte Daten,
+- funktionierende Links,
+- klarer tatsächlicher Verfügbarkeitsstatus.
+
+Vorbereitete Inhalte nicht als bereits verfügbar darstellen. Technische Arbeitsprotokolle nicht zur Hauptbeschreibung der Produktchronik machen.
+
+Die verbleibende Masterarbeit nach jeder Teilübernahme kontrolliert abgleichen. Neuere Änderungen, größere bestehende Inhalte und offene Aufgaben nicht überschreiben oder verlieren. Notwendige Integrationskonflikte einzeln lösen.
+
+11. NACHRICHTEN, KOSTEN UND ZUGÄNGE
+
+Nachrichtenentwicklung und Nachrichtenbetrieb bleiben vollständig pausiert. Vorhandenen Code und Anforderungen erhalten, aber keine neue News-Einrichtung, Quellenanbindung, Automatisierung oder Aktivierung beginnen.
+
+Keine neuen kostenpflichtigen Dienste, Tarife, Runner, Konten oder Trackingangebote einführen. Keine Ausgabenlimits erhöhen oder bestehende Kosten-/Schutzgrenzen umgehen.
+
+Die bestehende öffentliche Repository-Sichtbarkeit nicht ändern.
+
+Prüfe tatsächlich benötigte aktuelle Fähigkeiten und Zugänge. Öffentliche GitHub-Actions-Nutzung bedeutet keine unbegrenzten Kontingente anderer Anbieter. Keine kostenlosen Restbudgets, Berechtigungen oder Anbieterfähigkeiten erfinden.
+
+Bei einer konkreten Zugriffssperre den vorgesehenen regulären Weg verwenden. Keine Netzwerk-, Proxy-, TLS- oder Zugriffsschutzumgehung.
+
+Keinen vorhandenen Zugang allein wegen einer veralteten Fehlermeldung als weiterhin blockiert behandeln. Den aktuellen Befund prüfen und belegte technische Grenzen benennen.
+
+Keine Nachrichten versenden.
+
+12. SELBSTSTÄNDIG WEITERARBEITEN UND FORTSCHRITT SICHERN
+
+Beginne nach dem notwendigen aktuellen Abgleich mit dem nächsten sinnvollen noch offenen Abschnitt des bestehenden Auftrags.
+
+Bevorzuge bereits weit entwickelte, unabhängig abschließbare Arbeit mit sichtbarem Produktnutzen. Veröffentliche keine unfertigen Inhalte, nur um einen Release vorweisen zu können.
+
+Nach einem erfolgreichen Teilrelease den nächsten Abschnitt fortsetzen, solange Sitzung, Zugänge und bestehende Betriebsgrenzen dies ermöglichen. Kein neuer Fortsetzungsprompt für jeden normalen Schritt.
+
+Bei einem echten Blocker:
+- konkret sagen, was fehlt,
+- erklären, welcher Abschnitt betroffen ist,
+- den gesicherten Stand erhalten,
+- unabhängig mögliche Arbeit fortsetzen.
+
+Fehlende menschliche Abnahmen nicht durch eigene Behauptungen ersetzen. Sie dürfen zugleich nicht sämtliche unabhängige Produktarbeit dauerhaft anhalten.
+
+Bei Sitzungs- oder Kontextgrenzen einen gesicherten, eindeutig fortsetzbaren Stand auf GitHub und in PROJECT_STATE.md hinterlassen. Die einzige operative Aufgabenliste BACKLOG.md aktuell halten. Eigene Reservierung nach dem bestehenden Verfahren korrekt freigeben, sobald keine geschützte Arbeit mehr läuft.
+
+Keine unbefristete Hintergrundarbeit, nicht existierende Automatik oder zukünftige Fertigstellung außerhalb der laufenden Sitzung behaupten.
+
+Berichte verständlich und knapp:
+- tatsächlich umgesetzte technische und inhaltliche Fortschritte,
+- Verbesserungen am Altbestand und Wissensnetz,
+- sichtbaren Lern- und Bedienungsnutzen,
+- bestandene Prüfungen und konkrete Grenzen,
+- offene einschlägige Abnahmen,
+- PR-, Merge- und tatsächlichen Bereitstellungsstatus,
+- aktuelle bestätigte Testadresse,
+- verbleibende Aufgaben und nächsten Abschnitt.
+
+Bei sichtbaren Produktänderungen zusätzlich den bestehenden kopierfertigen WhatsApp-Entwurf liefern. Keine Nachricht versenden.
+
+Beginne jetzt mit dem neuesten tatsächlichen Stand. Führe die bestehende Entwicklung konkret weiter und bringe den nächsten geeigneten Abschnitt innerhalb der vorhandenen Freigaben bis zur vollständig geprüften Bereitstellung auf der bestehenden Testwebsite. Falls eine notwendige Voraussetzung fehlt, sichere den betroffenen Abschnitt und setze unabhängig mögliche Produktarbeit fort.
