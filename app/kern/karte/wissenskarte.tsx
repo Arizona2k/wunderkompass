@@ -166,6 +166,8 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         ueberschrift={Abschnitt}
         onLearn={() => a.onLearn(t.id)}
         onReview={a.onReview}
+        wiederholung={a.progress.review[frage.reviewId]}
+        onNachbessern={a.onNachbessern}
         onRead={a.onRead}
         onWeiter={weiter}
         fokus={weitergeblaettert}

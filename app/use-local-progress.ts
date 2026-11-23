@@ -6,6 +6,7 @@ import type {Place} from './earth-data';
 import {createProgressStore,serverSnapshot} from './local-progress-store';
 import {type Settings,type QuizSession,type Activity} from './progress-storage';
 import {mitStufe,type Stufe} from './kern/stufe';
+import {nachgebessert} from './kern/wiederholung';
 export type {LocalProgress,Review} from './progress-storage';
 export function useLocalProgress(){
  const [store]=useState(createProgressStore);
@@ -18,6 +19,8 @@ export function useLocalProgress(){
  const favorite=useCallback((id:string,place?:Place)=>update(p=>({...p,favorites:p.favorites.includes(id)?p.favorites.filter(x=>x!==id):[...p.favorites,id],favoritePlaces:place?{...p.favoritePlaces,[id]:place}:p.favoritePlaces})),[update]);
  const chapter=useCallback((id:string,n:number,completed?:number)=>update(p=>({...p,chapters:{...p.chapters,[id]:n},completedChapters:completed==null?p.completedChapters:{...p.completedChapters,[id]:[...new Set([...(p.completedChapters[id]??[]),completed])]},lastActivity:{type:'journey',id}})),[update]);
  const review=useCallback((id:string,correct:boolean)=>update(p=>{const seen=(p.review[id]?.seen??0)+1,date=new Date();date.setDate(date.getDate()+(correct?Math.min(7,seen*2):0));return {...p,review:{...p.review,[id]:{correct,seen,due:date.toISOString().slice(0,10)}}};}),[update]);
+ // Richtig nach falsch: nimmt die Frage aus „Ein Gedanke zum Wiederholen“, ohne eine neue Wiederholung zu zählen (E16).
+ const nachbessern=useCallback((id:string)=>update(p=>{const r=p.review[id];return r&&!r.correct?{...p,review:{...p.review,[id]:nachgebessert(r)}}:p;}),[update]);
  // Die gemeinsame Stufe (Teilschritt 3, E1). Ändert lastActivity nicht, sonst zeigte „Weiter entdecken“ auf die Wahl.
  const stufe=useCallback((s:Stufe)=>update(p=>mitStufe(p,s)),[update]);
  const settings=useCallback((patch:Partial<Settings>)=>update(p=>({...p,settings:{...p.settings,...patch}})),[update]);
@@ -32,5 +35,5 @@ export function useLocalProgress(){
  const experiment=useCallback((id:string)=>update(p=>({...p,experiments:p.experiments.includes(id)?p.experiments.filter(x=>x!==id):[...p.experiments,id]})),[update]);
  const note=useCallback((text:string,id?:string)=>update(p=>!text.trim()?p:({...p,notes:id?p.notes.map(n=>n.id===id?{...n,text:text.trim().slice(0,1000)}:n):[...p.notes,{id:localId(),text:text.trim().slice(0,1000),at:new Date().toISOString()}].slice(-100)})),[update]);
  const removeNote=useCallback((id:string)=>update(p=>({...p,notes:p.notes.filter(n=>n.id!==id)})),[update]);
- return {progress:save.progress,restoreRevision,ready,available,storage,notice,reset,add,markMission,favorite,chapter,review,stufe,settings,activity,quiz,game,worldState,clearGame,lab,experiment,note,removeNote,backup,importSave,flush};
+ return {progress:save.progress,restoreRevision,ready,available,storage,notice,reset,add,markMission,favorite,chapter,review,nachbessern,stufe,settings,activity,quiz,game,worldState,clearGame,lab,experiment,note,removeNote,backup,importSave,flush};
 }

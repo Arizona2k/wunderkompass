@@ -13,12 +13,17 @@ const saved=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progr
 async function activate(page,control,touch){await control.scrollIntoViewIfNeeded();if(touch)await control.tap();else{await control.focus();await page.keyboard.press('Enter');}}
 // Antworten in der Reihenfolge, in der responses sie tippt: erst die falschen, die richtige zuletzt.
 const falschDannRichtig=q=>[...q.answers.filter((_,i)=>i!==q.correct),q.answers[q.correct]];
-async function responses(page,room,antworten,key,touch,reloadAfterFirst){
+// Teilschritt 3, E16: Auf der Karte nimmt eine richtige Antwort nach einer falschen die Frage aus
+// „Ein Gedanke zum Wiederholen“ (correct wird true, morgen fällig), ohne eine weitere Wiederholung zu zählen.
+const morgen=()=>{const d=new Date();d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10);};
+async function responses(page,room,antworten,key,touch,reloadAfterFirst,{richtig,nachbessern=false}={}){
  const before=await saved(page),prior=before.review[key],rows=[];let first;
  for(const answer of antworten){
   await activate(page,room.locator('.quiz-answer').filter({has:page.getByText(answer,{exact:true})}),touch);
   await page.waitForFunction(({key,seen})=>JSON.parse(localStorage.getItem(key)).progress.review[seen.key]?.seen===seen.count,{key:SAVE_KEY,seen:{key,count:(prior?.seen??0)+1}});
-  const now=await saved(page);if(!first)first=structuredClone(now.review[key]);else assert.deepEqual(now.review[key],first,'correction attempts must not count as additional repetitions');
+  const erwartet=()=>nachbessern&&answer===richtig&&first.correct===false?{...first,correct:true,due:morgen()}:first;
+  if(first&&nachbessern&&answer===richtig)await page.waitForFunction(({key,id})=>JSON.parse(localStorage.getItem(key)).progress.review[id]?.correct===true,{key:SAVE_KEY,id:key});
+  const now=await saved(page);if(!first)first=structuredClone(now.review[key]);else assert.deepEqual(now.review[key],erwartet(),'correction attempts must not count as additional repetitions');
   assert.deepEqual(now.notes,before.notes,'actual post-import note identities and text remain');rows.push({answer,review:now.review[key]});if(rows.length===1&&reloadAfterFirst){await reloadAfterFirst();const reloaded=await saved(page);assert.deepEqual(reloaded.review[key],first,'reload of the pending first response is the same attempt');assert.deepEqual(reloaded.notes,before.notes);}
  }
  return {prior:prior??null,stages:rows,oneReviewForTheWholeAttempt:true};
@@ -62,8 +67,16 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
     const before=await saved(page);assert.equal(before.gameSessions['world:then-now'].roundAnswer,oldAnswer);assert.deepEqual(before.gameSessions['world:then-now'].orders[other.id],other.answers);assert.equal(before.review['world-game:then-now:'+id],undefined);current.oldAnswerNotReinterpreted=oldAnswer;current.unrelatedOrderPreserved=true;
     await activate(page,room.locator('.quiz-answer').filter({has:page.getByText(q.answers[q.correct],{exact:true})}),touch);await page.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.review['world-game:then-now:invention-compass-today']?.seen===1,SAVE_KEY);assert.deepEqual((await saved(page)).notes,before.notes);await complete();
    }
-   const topic=catalogue.find(topic=>topic.id==='animal-honey-bee');await load('mini-review',width,createSave());await page.goto(base+'/#world/topic/'+topic.id);await ready(page);const mini=rateMal(page),haupt=await zeigtFrage(page,topic,hauptfrage(topic));current.responses=await responses(page,mini,[...falscheAntworten(haupt),richtigeAntwort(haupt)],haupt.reviewId,touch,async()=>{await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);});
-   await activate(page,mini.getByRole('button',{name:'Noch einmal raten',exact:true}),touch);await activate(page,antwortKnopf(page,richtigeAntwort(haupt)),touch);await page.waitForFunction(({key,id})=>JSON.parse(localStorage.getItem(key)).progress.review['world-question:'+id]?.seen===2,{key:SAVE_KEY,id:topic.id});current.deliberateNewMiniAttemptCountsOnce=true;await complete();
+   const topic=catalogue.find(topic=>topic.id==='animal-honey-bee');await load('mini-review',width,createSave());await page.goto(base+'/#world/topic/'+topic.id);await ready(page);const mini=rateMal(page),haupt=await zeigtFrage(page,topic,hauptfrage(topic));current.responses=await responses(page,mini,[...falscheAntworten(haupt),richtigeAntwort(haupt)],haupt.reviewId,touch,async()=>{await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);},{richtig:richtigeAntwort(haupt),nachbessern:true});
+   // „Noch einmal raten“ (BACKLOG 19): Die Frage ist nicht fällig, also trägt auch die neue Wahl keine Wiederholung ein.
+   const nachKorrektur=(await saved(page)).review[haupt.reviewId];assert.deepEqual(nachKorrektur,{correct:true,seen:1,due:morgen()},'richtig nach falsch: nicht mehr zum Wiederholen, morgen wieder');
+   for(const wahl of [falscheAntworten(haupt)[0],richtigeAntwort(haupt)]){
+    if(await mini.getByRole('button',{name:'Noch einmal raten',exact:true}).count())await activate(page,mini.getByRole('button',{name:'Noch einmal raten',exact:true}),touch);
+    await activate(page,antwortKnopf(page,wahl),touch);await mini.locator('.quiz-answer.is-'+(wahl===richtigeAntwort(haupt)?'correct':'incorrect')).waitFor();
+    await page.evaluate(()=>new Promise(r=>setTimeout(r,300)));
+    assert.deepEqual((await saved(page)).review[haupt.reviewId],nachKorrektur,'„Noch einmal raten“ zählt keine neue Wiederholung: '+wahl);
+   }
+   current.deliberateNewMiniAttemptDoesNotCount=true;await complete();
    const challenge=createChallenge('easy',[],()=>0.37),q=CHALLENGE_BANK.find(q=>q.id===challenge.ids[0]),pass=createSave();pass.progress.gameSessions['world:knowledge-challenge']={challenge};await load('challenge-review',width,pass);const challengeRoom=await game('world:knowledge-challenge',width);current.responses=await responses(page,challengeRoom,falschDannRichtig(q),'challenge:'+q.id,touch,async()=>{await page.reload();await ready(page);await game('world:knowledge-challenge',width);await challengeRoom.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});await complete();
    // All seven actual callers of the shared advanced hint stack retain the
    // solution after an answer; none displays the full solution as a hint.

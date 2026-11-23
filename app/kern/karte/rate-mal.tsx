@@ -10,6 +10,8 @@ import {LearningFeedback} from '../../learning-motion';
 import QuestionHints from '../../question-hints';
 import {useSavedGame} from '../../saved-games';
 import {shuffle} from '../../../lib/shuffle';
+import type {Review} from '../../progress-storage';
+import {wiederholungFuerAntwort} from '../wiederholung';
 import type {KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
@@ -32,6 +34,9 @@ type RateMalProps = {
   ueberschrift: 'h2' | 'h3';
   onLearn: () => void;
   onReview: (reviewId: string, correct: boolean) => void;
+  // Der Wiederholungseintrag dieser Frage und „richtig nach falsch“ (E16): Es zählt die erste Antwort einer Runde.
+  wiederholung?: Review[string];
+  onNachbessern?: (reviewId: string) => void;
   onRead: (text: string) => void;
   // Nur bei Karten mit mehr als einer Frage: „Noch eine Frage“ nach einer richtigen Antwort.
   onWeiter?: () => void;
@@ -40,7 +45,7 @@ type RateMalProps = {
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, onRead, onWeiter, fokus = false}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -52,10 +57,14 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   const richtig = antwort === richtigeAntwort;
   const fruehereAuswahl = antwort !== null && !q.answers.includes(antwort);
 
+  // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“) oder nach einer früheren Auswahl,
+  // die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
   function waehle(wahl: string) {
     setAntwort(wahl);
     const korrekt = wahl === richtigeAntwort;
-    if (antwort === null) onReview(frage.reviewId, korrekt);
+    const art = wiederholungFuerAntwort(wiederholung, korrekt, antwort === null || fruehereAuswahl);
+    if (art === 'zaehlen') onReview(frage.reviewId, korrekt);
+    else if (art === 'nachbessern') onNachbessern?.(frage.reviewId);
     if (korrekt) onLearn();
   }
 
