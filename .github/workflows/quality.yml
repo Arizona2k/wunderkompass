@@ -93,6 +93,9 @@ jobs:
       - name: Production build
         run: pnpm run build
       - name: Install ${{ matrix.browser }}
+        # Sonst gewöhnlich 1 bis 7 Minuten. Lauf 257 hing hier über eine Stunde (Chromium) und hätte
+        # erst nach 180 Minuten abgebrochen; so fällt ein Hänger früh auf und der Lauf kann neu starten.
+        timeout-minutes: 20
         run: |
           sudo sed -i \
             -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
