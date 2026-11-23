@@ -21,9 +21,11 @@ const TITEL = new Map(KATALOG.map(t => [t.id, t.title]));
 
 export const KARTE = '.wissenskarte';
 
-export async function aufklappen(details) {
+// Mit touch tippt der Test wie ein Finger (die Seite braucht dafür einen Kontext mit hasTouch).
+export async function aufklappen(details, {touch = false} = {}) {
   await details.waitFor();
-  if (!await details.evaluate(element => element.open)) await details.locator(':scope>summary').click();
+  const summary = details.locator(':scope>summary');
+  if (!await details.evaluate(element => element.open)) await (touch ? summary.tap() : summary.click());
   await details.locator(':scope>summary').evaluate(summary => {
     if (!summary.parentElement.open) throw Error('Bereich ist nicht aufgeklappt: ' + summary.textContent);
   });
@@ -112,13 +114,13 @@ export const ERKLAERTE_PAARE = new Set(VERBINDUNGEN.connections.flatMap(v => [v.
 // Ohne Häppchen steht er in „Kurz erklärt“ (dort ggf. in einem aufklappbaren Bereich).
 // Immer geprüft: Der Satz steht genau einmal auf der Karte; in „Ausprobieren“ ist er erst nach dem Öffnen zu sehen,
 // dann aber ohne auf die Bausteine zu warten (`sofort`: binnen 2 Sekunden).
-export async function ganzEinfach(karte, t, {sofort = false} = {}) {
+export async function ganzEinfach(karte, t, {sofort = false, touch = false} = {}) {
   assert.ok(t.learning?.starter, t.id + ': die Karte hat kein „Ganz einfach“');
   const kurz = karte.locator('.world-short');
   const imKurz = kurz.getByText(t.learning.starter, {exact: true});
   const genauEinmal = async () => assert.equal(await karte.getByText(t.learning.starter, {exact: true}).count(), 1, t.id + ': „Ganz einfach“ steht genau einmal auf der Karte');
   if (!t.chapters) {
-    for (const details of await kurz.locator('details').all()) await aufklappen(details);
+    for (const details of await kurz.locator('details').all()) await aufklappen(details, {touch});
     await imKurz.waitFor({state: 'visible'});
     await genauEinmal();
     return imKurz;
@@ -127,7 +129,7 @@ export async function ganzEinfach(karte, t, {sofort = false} = {}) {
   const satz = bereich.locator('.wissenskarte-ausprobieren-einstieg').getByText(t.learning.starter, {exact: true});
   await bereich.waitFor();
   if (!await bereich.evaluate(element => element.open)) assert.equal(await satz.isVisible(), false, t.id + ': „Ganz einfach“ ist erst nach dem Öffnen von „Ausprobieren“ zu sehen');
-  await aufklappen(bereich);
+  await aufklappen(bereich, {touch});
   await satz.waitFor({state: 'visible', ...(sofort ? {timeout: 2000} : {})});
   assert.equal(await imKurz.count(), 0, t.id + ': „Ganz einfach“ steht nicht in „Kurz erklärt“');
   await genauEinmal();

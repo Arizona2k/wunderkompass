@@ -30,7 +30,10 @@ test('jede Suite der Vollprüfung läuft je Browser in genau einer Gruppe', () =
 
 test('die CI startet genau die Gruppen aus shards.mjs', () => {
   const ci = fs.readFileSync(new URL('../.github/workflows/quality.yml', import.meta.url), 'utf8');
-  const voll = ci.slice(ci.indexOf('\n  full:'));
+  // Nur der Job `full`: bis zum nächsten Job (zwei Leerzeichen, Name, Doppelpunkt) oder zum Dateiende.
+  const ab = ci.slice(ci.indexOf('\n  full:') + 1);
+  const naechster = ab.slice(1).search(/\n  [\w-]+:/);
+  const voll = naechster < 0 ? ab : ab.slice(0, naechster + 1);
   const gestartet = [...voll.matchAll(/- \{browser: ([\w-]+), shard: ([\w-]+)\}/g)].map(([, engine, gruppe]) => engine + '/' + gruppe);
   const erwartet = ENGINES.flatMap(engine => shardsOf(engine).map(gruppe => engine + '/' + gruppe));
   assert.deepEqual(gestartet.sort(), erwartet.sort());

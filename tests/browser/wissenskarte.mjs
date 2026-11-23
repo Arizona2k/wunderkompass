@@ -621,11 +621,11 @@ async function kapitelUndFuerGrosse(page) {
 // Satz nicht in „Kurz erklärt“. Bei Personen ist er die Anleitung zum Versuch; er steht oben in „Ausprobieren“ und ist
 // sofort nach dem Öffnen da, ohne auf den Baustein zu warten (große Prüfung, Aufgabe 13: vorher fehlte er ganz).
 // Ort, „erst nach dem Öffnen“ und „genau einmal“ prüft ganzEinfach; `sofort` verlangt den Satz binnen 2 Sekunden.
-const einstiegImAusprobieren = t => async page => {
+const einstiegImAusprobieren = t => async (page, {touch}) => {
   const kurz = kurzErklaert(page);
   await kurz.getByRole('heading', {name: t.chapters[0].question, exact: true}).waitFor(WARTEN);
   assert.equal(await kurz.getByText('Ganz einfach', {exact: false}).count(), 0, t.id + ': kein „Ganz einfach“ in „Kurz erklärt“');
-  await ganzEinfach(page.locator('.wissenskarte'), t, {sofort: true});
+  await ganzEinfach(page.locator('.wissenskarte'), t, {sofort: true, touch});
 };
 
 async function stimmtDas(page, {neuLaden, touch}) {

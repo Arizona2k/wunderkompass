@@ -132,7 +132,7 @@ const KARTENFRAGE_EIGEN = [
   [new RegExp(NICHT_KARTE + String.raw`\.question\.(?:answers\[|correct\b)`), 'eigene Antwortsuche an einer Kartenfrage'],
   [/\.moreQuestions\b/, 'Zusatzfragen selbst gelesen'],
   [/\.learning\.starter\b/, '„Ganz einfach“ selbst gesucht'],
-  [new RegExp(String.raw`[=:,(]\s*` + NICHT_KARTE.replace('(?<!', '(?!').replace('))', ')\\.)') + String.raw`\w+\.question\s*[,;)}]`), 'Kartenfrage in eine Variable gereicht'],
+  [new RegExp(String.raw`[=:,(]\s*` + NICHT_KARTE.replace('(?<!', '(?!').replace('))', ')\\.)') + String.raw`\w+\.question\s*(?:[,;)}]|$)`), 'Kartenfrage in eine Variable gereicht'],
   [/\{[^}]*\bquestion\b[^}]*\}\s*=/, 'Kartenfrage aus einer Karte ausgepackt'],
 ];
 test('Kartenfragen und „Ganz einfach“ nur über karte-hilfen.mjs', () => {

@@ -157,13 +157,21 @@ const GANZ_EINFACH_IN_EINLEITUNG = new Set([
 
 test('„Ganz einfach“ steht nicht noch einmal wörtlich auf der Karte', () => {
   const gleich = text => (text ?? '').replace(/\s+/g, ' ').trim();
-  const gefunden = catalog.filter(t => t.learning?.starter).filter(t => {
-    const satz = gleich(t.learning.starter);
-    const andere = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.chapters ?? []).map(c => c.text), t.surprise];
-    return andere.some(text => gleich(text) === satz || gleich(text).includes(satz));
-  }).map(t => t.id);
-  assert.deepEqual(gefunden.filter(id => !GANZ_EINFACH_IN_EINLEITUNG.has(id)), [], 'neu doppelt');
-  assert.deepEqual([...GANZ_EINFACH_IN_EINLEITUNG].filter(id => !gefunden.includes(id)), [], 'nicht mehr doppelt: aus der Ausnahmeliste streichen');
+  // Alle Texte, die die Karte zeigen kann, außer „Ganz einfach“ selbst und der Einleitung.
+  const texteOhneEinleitung = t => [
+    ...(t.paragraphs ?? []), ...(t.more ?? []), t.surprise, t.learning?.observe, t.learning?.benefit,
+    ...(t.facts ?? []).map(f => f.text), ...(t.chapters ?? []).map(c => c.text),
+    ...(t.claims ?? []).flatMap(c => [c.text, c.explanation]),
+    ...[t.question, ...(t.moreQuestions ?? [])].filter(Boolean).flatMap(q => [q.prompt, q.why, q.hint]),
+  ];
+  const mitStarter = catalog.filter(t => t.learning?.starter);
+  const enthaelt = (texte, t) => texte.some(text => gleich(text).includes(gleich(t.learning.starter)));
+  // Die Ausnahmeliste gilt nur für die Einleitung; alle anderen Texte prüft der erste Teil auch bei diesen Karten.
+  const sonstwo = mitStarter.filter(t => enthaelt(texteOhneEinleitung(t), t)).map(t => t.id);
+  assert.deepEqual(sonstwo, [], 'doppelt außerhalb der Einleitung');
+  const inEinleitung = mitStarter.filter(t => enthaelt([t.intro], t)).map(t => t.id);
+  assert.deepEqual(inEinleitung.filter(id => !GANZ_EINFACH_IN_EINLEITUNG.has(id)), [], 'neu doppelt in der Einleitung');
+  assert.deepEqual([...GANZ_EINFACH_IN_EINLEITUNG].filter(id => !inEinleitung.includes(id)), [], 'nicht mehr doppelt: aus der Ausnahmeliste streichen');
 });
 
 test('wrongReasons passt zu den Antworten', () => {
