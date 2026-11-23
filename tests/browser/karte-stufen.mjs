@@ -37,6 +37,16 @@ async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
 }
 
 const tippe = (knopf, touch) => (touch ? knopf.tap() : knopf.click());
+// Nach einem Stufenwechsel baut die Karte „Rate mal!“ oft neu auf. Der Fokus muss trotzdem auf der Karte bleiben,
+// nicht auf <body> fallen (Code-Prüfung Teil A, Befund 2).
+const AENDERN = '.wissenskarte .stufen-wahl .stufen-aendern';
+async function fokusAuf(page, selektor, was) {
+  try {
+    await page.waitForFunction(sel => !!document.activeElement?.matches(sel), selektor, WARTEN);
+  } catch {
+    assert.fail(was + '; der Fokus liegt auf ' + await page.evaluate(() => document.activeElement?.tagName + ' ' + document.activeElement?.className));
+  }
+}
 
 // Stufenwahl über „Rate mal!“, Umstellen auf der offenen Karte, Neuladen, „Zurück zu Entdecker“.
 async function stufenAufDerKarte(page, {touch}) {
@@ -50,6 +60,7 @@ async function stufenAufDerKarte(page, {touch}) {
   await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await stufeWaehlen(page, 'profi', {touch});
   const profi = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'profi'));
+  await fokusAuf(page, AENDERN, 'nach dem Umstellen (neue Frage) steht der Fokus auf „Ändern“');
   assert.equal(profi.level, 'profi', 'auf Profi zuerst eine neue Profi-Frage');
   assert.equal(await rateMal(page).locator('.quiz-answer').count(), profi.question.answers.length, 'alle Antworten der Frage stehen da');
   assert.equal(await stufeImPass(page), 'profi');
@@ -65,6 +76,7 @@ async function stufenAufDerKarte(page, {touch}) {
   await tippe(stufenWahl(page).getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker', exact: true}), touch);
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
   await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
+  await fokusAuf(page, AENDERN, 'nach „Zurück zu Entdecker“ steht der Fokus auf „Ändern“');
   assert.equal(await stufeImPass(page), 'entdecker');
   return t.id;
 }
@@ -97,10 +109,12 @@ async function vorschlagSchwerer(page, {touch}, annehmen = false) {
   if (annehmen) {
     await tippe(vorschlag.getByRole('button', {name: 'Ja, Profi probieren', exact: true}), touch);
     await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Profi'}).waitFor(WARTEN);
+    await fokusAuf(page, AENDERN, 'nach „Ja, Profi probieren“ steht der Fokus auf „Ändern“');
     assert.equal(await stufeImPass(page), 'profi');
   } else {
     await tippe(vorschlag.getByRole('button', {name: 'Nein, ich bleibe', exact: true}), touch);
     await vorschlag.waitFor({state: 'detached'});
+    await fokusAuf(page, '.wissenskarte section.rate-mal', 'nach „Nein, ich bleibe“ steht der Fokus auf „Rate mal!“');
     assert.equal(await stufeImPass(page), null, '„Nein, ich bleibe“ stellt nichts um');
     await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor();
   }
@@ -126,6 +140,7 @@ async function vorschlagLeichter(page, {touch}) {
   await vorschlag.getByText('Ganz schön knifflig. Willst du eine Stufe leichter spielen?', {exact: true}).waitFor(WARTEN);
   await tippe(vorschlag.getByRole('button', {name: 'Ja, leichter spielen', exact: true}), touch);
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
+  await fokusAuf(page, AENDERN, 'nach „Ja, leichter spielen“ steht der Fokus auf „Ändern“');
   assert.equal(await stufeImPass(page), 'entdecker');
   return t.id;
 }

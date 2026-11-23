@@ -12,20 +12,27 @@ const STUFEN_TEXT: Record<Stufe, string> = {
   experte: 'nachdenken und kombinieren',
 };
 
+// Nach einem Wechsel kann die Karte „Rate mal!“ mit neuer Frage neu aufbauen; dann ist die alte Stufenwahl weg
+// und mit ihr der Knopf. Der Fokus gehört dann an „Ändern“ der neuen Stufenwahl am selben Ort (Code-Prüfung Teil A, Befund 2).
+export function fokusAufStufenWahl(ort: ParentNode | null | undefined) {
+  requestAnimationFrame(() => ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern')?.focus());
+}
+
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
 export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
   const [offen, setOffen] = useState(false);
   const gruppe = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
   function waehle(neu: Stufe) {
+    const knopf = aendern.current, ort = knopf?.closest('article, dialog, [role="dialog"]') ?? knopf?.ownerDocument;
     onStufe(neu);
     setOffen(false);
-    requestAnimationFrame(() => aendern.current?.focus());
+    requestAnimationFrame(() => (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus());
   }
   return <div className="stufen-wahl" data-stufe={stufe}>
     <div className="stufen-zeile">
       <p>Stufe: <strong>{STUFEN_NAME[stufe]}</strong></p>
-      <button ref={aendern} type="button" className="kern-knopf" aria-label="Stufe ändern" aria-expanded={offen} aria-controls={offen ? gruppe : undefined} onClick={() => setOffen(o => !o)}>Ändern</button>
+      <button ref={aendern} type="button" className="kern-knopf stufen-aendern" aria-label="Stufe ändern" aria-expanded={offen} aria-controls={offen ? gruppe : undefined} onClick={() => setOffen(o => !o)}>Ändern</button>
     </div>
     {offen && <div id={gruppe} className="stufen-knoepfe" role="group" aria-label="Stufe wählen">
       {STUFEN.map(s => <button key={s} ref={s === stufe ? gewaehlt : undefined} type="button" className="stufen-knopf" aria-pressed={s === stufe} onClick={() => waehle(s)}>
