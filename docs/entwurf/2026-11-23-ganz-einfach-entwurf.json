@@ -1,0 +1,516 @@
+{
+ "quelle": "PR #27, Commit d97ddda (refs/pull/27/head), app/world-catalog.json, learning.starter; ungeprüft",
+ "karten": [
+  {
+   "id": "history-stone_tools",
+   "title": "Werkzeuge aus Stein",
+   "intro": "In Kenia fanden Forschende die ältesten bekannten Werkzeuge aus Stein.",
+   "starter": "Ein Stein kann eine nützliche Kante bekommen. Sehr alte Werkzeuge zeigen, dass Verwandte des Menschen solche Kanten herstellen konnten.",
+   "heikel": false
+  },
+  {
+   "id": "history-fire",
+   "title": "Menschen nutzen Feuer",
+   "intro": "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+   "starter": "Feuer gab frühen Menschen Wärme. Sie konnten damit Nahrung kochen. Alte Feuerstellen sind Spuren dieser Nutzung.",
+   "heikel": false
+  },
+  {
+   "id": "history-pyramids",
+   "title": "Pyramiden im alten Ägypten",
+   "intro": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+   "starter": "Die große Pyramide von Gizeh wurde als Grab für König Cheops gebaut. Viele Menschen arbeiteten an diesem großen Bauwerk.",
+   "heikel": false
+  },
+  {
+   "id": "history-paper",
+   "title": "Papier aus China",
+   "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+   "starter": "Papier kann Schrift tragen und Informationen bewahren. Cai Lun stellte am Kaiserhof eine verbesserte Herstellung vor. Papier gab es schon vorher.",
+   "heikel": false
+  },
+  {
+   "id": "history-zero",
+   "title": "Rechnen mit der Null",
+   "intro": "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+   "starter": "Die Null kann bedeuten, dass nichts hinzukommt. In einer geschriebenen Zahl kann sie außerdem eine unbesetzte Stelle markieren.",
+   "heikel": false
+  },
+  {
+   "id": "history-compass",
+   "title": "Der Kompass hilft auf See",
+   "intro": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+   "starter": "Eine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld aus. Das hilft bei der Richtung, auch wenn Sterne verdeckt sind.",
+   "heikel": false
+  },
+  {
+   "id": "history-medieval_cities",
+   "title": "Märkte und Handwerk in Städten",
+   "intro": "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+   "starter": "Auf einem mittelalterlichen Markt wurden Waren angeboten und gekauft. Handwerker stellten zum Beispiel Brot, Werkzeuge oder Gefäße her.",
+   "heikel": false
+  },
+  {
+   "id": "history-printing",
+   "title": "Viele Bücher aus einer Druckwerkstatt",
+   "intro": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+   "starter": "Bewegliche Druckzeichen können nach einer Seite wieder neu zusammengesetzt werden. Schon vor Gutenberg wurden solche Zeichen in Ostasien verwendet.",
+   "heikel": false
+  },
+  {
+   "id": "history-voyages1492",
+   "title": "Europäische Schiffe erreichen die Karibik",
+   "intro": "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+   "starter": "Als europäische Schiffe 1492 die Karibik erreichten, lebten dort bereits Menschen mit eigenen Sprachen und Kulturen. Ihre Geschichte begann nicht mit dieser Ankunft.",
+   "heikel": true
+  },
+  {
+   "id": "history-steam",
+   "title": "Eine Maschine arbeitet mit Dampf",
+   "intro": "Thomas Newcomen entwickelte eine Dampfmaschine, die Wasser aus Bergwerken pumpte.",
+   "starter": "Eine frühe Dampfmaschine bewegte eine Pumpe. Damit konnte Wasser aus einem Bergwerk gefördert werden.",
+   "heikel": false
+  },
+  {
+   "id": "history-railway",
+   "title": "Ein Zug mit Dampflok fährt",
+   "intro": "In England wurde die öffentliche Bahn zwischen Stockton und Darlington eröffnet.",
+   "starter": "Ein Zug fährt auf einem Schienenweg zwischen Orten. Zur Bahn gehören Gleise, Fahrzeuge und Menschen, die den Verkehr organisieren.",
+   "heikel": false
+  },
+  {
+   "id": "history-electric_light",
+   "title": "Elektrisches Licht für den Alltag",
+   "intro": "Thomas Edison und sein Team entwickelten Lampen, die lange genug für den Alltag leuchten konnten.",
+   "starter": "Eine Lampe braucht Strom. Für elektrisches Licht in vielen Häusern mussten Menschen auch Leitungen und eine Stromversorgung entwickeln.",
+   "heikel": false
+  },
+  {
+   "id": "history-flight",
+   "title": "Ein gesteuertes Flugzeug mit Motor",
+   "intro": "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
+   "starter": "Ein Flugzeug braucht nicht nur einen Antrieb. Es muss auch getragen und gesteuert werden können.",
+   "heikel": false
+  },
+  {
+   "id": "history-ww1",
+   "title": "Der Erste Weltkrieg",
+   "intro": "1914 begann ein Krieg, in den immer mehr Länder hineingezogen wurden.",
+   "starter": "Der Erste Weltkrieg dauerte von 1914 bis 1918. Viele Menschen litten unter Gewalt, Hunger und Trennungen.",
+   "heikel": true
+  },
+  {
+   "id": "history-holocaust",
+   "title": "Der Holocaust",
+   "intro": "Die Nationalsozialisten und ihre Helfer verfolgten und ermordeten etwa sechs Millionen jüdische Menschen.",
+   "starter": "Die Nationalsozialisten verfolgten jüdische Menschen und ermordeten etwa sechs Millionen von ihnen. Ihre antisemitischen Behauptungen waren falsch.",
+   "heikel": true
+  },
+  {
+   "id": "history-ww2",
+   "title": "Der Zweite Weltkrieg",
+   "intro": "1939 griff das nationalsozialistische Deutschland Polen an; damit begann der Zweite Weltkrieg in Europa.",
+   "starter": "Der Zweite Weltkrieg begann 1939 in Europa. In verschiedenen Teilen der Welt endeten die Kämpfe zu unterschiedlichen Zeiten.",
+   "heikel": true
+  },
+  {
+   "id": "history-un",
+   "title": "Länder gründen die Vereinten Nationen",
+   "intro": "Nach dem Krieg gründeten 51 Länder die Vereinten Nationen, kurz UNO.",
+   "starter": "In der UNO sprechen Staaten miteinander und arbeiten zusammen. Ihre gemeinsamen Ziele sind unter anderem Frieden und Menschenrechte.",
+   "heikel": false
+  },
+  {
+   "id": "history-berlin_wall_build",
+   "title": "Die Berliner Mauer trennt Menschen",
+   "intro": "Am 13. August 1961 riegelte die DDR-Regierung die Grenze um West-Berlin ab.",
+   "starter": "Die DDR-Regierung sperrte 1961 die Grenze um West-Berlin. Viele Menschen konnten Familie und Freunde nicht mehr frei besuchen.",
+   "heikel": true
+  },
+  {
+   "id": "history-apollo11",
+   "title": "Menschen landen auf dem Mond",
+   "intro": "Im Juli 1969 betraten zum ersten Mal Menschen den Mond.",
+   "starter": "Drei Astronauten flogen mit Apollo 11 zum Mond. Zwei landeten dort; einer blieb im Raumschiff in der Mondumlaufbahn.",
+   "heikel": false
+  },
+  {
+   "id": "history-web",
+   "title": "Das World Wide Web entsteht",
+   "intro": "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+   "starter": "Das Internet verbindet Computernetze. Das Web nutzt diese Verbindung für Seiten mit Links.",
+   "heikel": false
+  },
+  {
+   "id": "history-berlin_wall_fall",
+   "title": "Die Berliner Mauer wird geöffnet",
+   "intro": "Viele Menschen in der DDR forderten friedlich mehr Freiheit.",
+   "starter": "Am 9. November 1989 wurden Berliner Grenzübergänge geöffnet. Die deutsche Wiedervereinigung folgte später.",
+   "heikel": false
+  },
+  {
+   "id": "history-reunification",
+   "title": "Deutschland wird wiedervereinigt",
+   "intro": "Am 3. Oktober 1990 wurden die beiden deutschen Staaten wieder zu einem Land.",
+   "starter": "Am 3. Oktober 1990 trat die DDR der Bundesrepublik Deutschland bei. Seitdem gibt es wieder einen gemeinsamen deutschen Staat.",
+   "heikel": false
+  },
+  {
+   "id": "history-iss",
+   "title": "Ein gemeinsames Labor im Weltraum",
+   "intro": "Die erste Langzeitbesatzung zog in die Internationale Raumstation ISS ein.",
+   "starter": "Die ISS ist ein Forschungslabor in der Umlaufbahn. Menschen aus verschiedenen Ländern haben dort zusammen gearbeitet.",
+   "heikel": false
+  },
+  {
+   "id": "history-september11",
+   "title": "Die Anschläge vom 11. September",
+   "intro": "Am 11. September 2001 griffen Terroristen der Gruppe al-Qaida die USA an.",
+   "starter": "Am 11. September 2001 wurden viele Menschen durch Terroranschläge getötet. Gedenkstätten erinnern an diese Menschen und ihre Lebensgeschichten.",
+   "heikel": true
+  },
+  {
+   "id": "history-webb",
+   "title": "Neue Bilder vom Universum",
+   "intro": "Teams veröffentlichten die erste große Bildauswahl des James-Webb-Weltraumteleskops.",
+   "starter": "Webb misst unter anderem Infrarotlicht, das unsere Augen nicht sehen. Teams machen aus den Messdaten untersuchbare Bilder.",
+   "heikel": false
+  },
+  {
+   "id": "invention-light",
+   "title": "Elektrisches Licht",
+   "intro": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+   "starter": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
+   "heikel": false
+  },
+  {
+   "id": "invention-car",
+   "title": "Das Auto",
+   "intro": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+   "starter": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
+   "heikel": false
+  },
+  {
+   "id": "invention-railway",
+   "title": "Die Eisenbahn",
+   "intro": "Viele Waren und Reisende mussten über Land transportiert werden.",
+   "starter": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
+   "heikel": false
+  },
+  {
+   "id": "invention-airplane",
+   "title": "Das Flugzeug",
+   "intro": "Menschen wollten durch die Luft reisen.",
+   "starter": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
+   "heikel": false
+  },
+  {
+   "id": "invention-phone",
+   "title": "Das Telefon",
+   "intro": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+   "starter": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
+   "heikel": false
+  },
+  {
+   "id": "invention-computer",
+   "title": "Der Computer",
+   "intro": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+   "starter": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
+   "heikel": false
+  },
+  {
+   "id": "invention-internet",
+   "title": "Das Internet",
+   "intro": "Computer an verschiedenen Orten sollten Informationen austauschen.",
+   "starter": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
+   "heikel": false
+  },
+  {
+   "id": "invention-compass",
+   "title": "Der Kompass",
+   "intro": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+   "starter": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
+   "heikel": false
+  },
+  {
+   "id": "invention-printing",
+   "title": "Der Buchdruck",
+   "intro": "Ein Buch von Hand abzuschreiben dauerte lange.",
+   "starter": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
+   "heikel": false
+  },
+  {
+   "id": "invention-rocket",
+   "title": "Die Rakete",
+   "intro": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+   "starter": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
+   "heikel": false
+  },
+  {
+   "id": "invention-satellite",
+   "title": "Der Satellit",
+   "intro": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+   "starter": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
+   "heikel": false
+  },
+  {
+   "id": "invention-smartphone",
+   "title": "Das Smartphone",
+   "intro": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+   "starter": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
+   "heikel": false
+  },
+  {
+   "id": "building-giza-pyramids",
+   "title": "Pyramiden von Gizeh",
+   "intro": "Die Pyramiden von Gizeh in Ägypten wurden als Gräber für Könige gebaut.",
+   "starter": "Viele Menschen planten und bauten die Pyramiden gemeinsam.",
+   "heikel": false
+  },
+  {
+   "id": "building-great-wall",
+   "title": "Die Chinesische Mauer",
+   "intro": "Grenzen überwachen, verteidigen und Wege kontrollieren.",
+   "starter": "Die Chinesische Mauer besteht aus vielen verschiedenen Anlagen.",
+   "heikel": false
+  },
+  {
+   "id": "building-colosseum",
+   "title": "Das Kolosseum",
+   "intro": "Öffentliche Veranstaltungen im Römischen Reich. Einige waren gewalttätig und wären heute nicht akzeptabel.",
+   "starter": "Viele Bögen und Wege gehören zum Kolosseum.",
+   "heikel": false
+  },
+  {
+   "id": "building-taj-mahal",
+   "title": "Das Taj Mahal",
+   "intro": "Erinnerung an Mumtaz Mahal; in Auftrag gegeben von ihrem Ehemann, dem Mogulherrscher Shah Jahan.",
+   "starter": "Das Taj Mahal ist ein kunstvoll gestaltetes Gebäude mit einer Grabstätte.",
+   "heikel": false
+  },
+  {
+   "id": "building-eiffel-tower",
+   "title": "Der Eiffelturm",
+   "intro": "Der Eiffelturm wurde 1889 für eine große Ausstellung in Paris gebaut.",
+   "starter": "Viele verbundene Eisenteile bilden den Eiffelturm.",
+   "heikel": false
+  },
+  {
+   "id": "building-golden-gate-bridge",
+   "title": "Golden Gate Bridge",
+   "intro": "Eine Straßenverbindung über die Meerenge Golden Gate.",
+   "starter": "Die Fahrbahn der Brücke hängt an Seilen.",
+   "heikel": false
+  },
+  {
+   "id": "building-panama-canal",
+   "title": "Der Panamakanal",
+   "intro": "Schiffe müssen für viele Reisen nicht mehr ganz um Südamerika fahren.",
+   "starter": "In einer Schleuse fährt das Schiff mit dem Wasserstand nach oben oder unten.",
+   "heikel": false
+  },
+  {
+   "id": "building-burj-khalifa",
+   "title": "Burj Khalifa",
+   "intro": "Ein Hochhaus mit mehreren Nutzungen, zum Beispiel Wohnungen, Büros und Aussichtsbereichen.",
+   "starter": "Ein hoher Turm braucht ein gemeinsam tragendes System.",
+   "heikel": false
+  },
+  {
+   "id": "science-circuit",
+   "title": "Wie funktioniert Strom?",
+   "intro": "Ein geschlossener Weg verbindet Energiequelle, Leitungen und Lampe.",
+   "starter": "Der Schalter kann den Weg für den Strom öffnen oder schließen.",
+   "heikel": false
+  },
+  {
+   "id": "science-network",
+   "title": "Wie funktioniert das Internet?",
+   "intro": "Eine Nachricht kann als viele kleine Datenpakete durch ein Netz reisen.",
+   "starter": "Geräte schicken kleine Datenpakete über verbundene Zwischenstationen.",
+   "heikel": false
+  },
+  {
+   "id": "science-flight",
+   "title": "Warum fliegt ein Flugzeug?",
+   "intro": "Vier Kräfte wirken beim Fliegen: Auftrieb, Gewicht, Schub und Luftwiderstand.",
+   "starter": "Bewegte Luft am Flügel kann eine Kraft nach oben erzeugen.",
+   "heikel": false
+  },
+  {
+   "id": "science-gps",
+   "title": "Wie findet GPS einen Ort?",
+   "intro": "Satelliten senden ihre Position und sehr genaue Zeitsignale.",
+   "starter": "Satellitensignale helfen einem Empfänger, Entfernungen und seinen Ort zu berechnen.",
+   "heikel": false
+  },
+  {
+   "id": "science-computer",
+   "title": "Wie rechnet ein Computer mit Nullen und Einsen?",
+   "intro": "Ein Bit kann zwei Zustände haben: 0 oder 1. Acht Bits bilden ein Byte.",
+   "starter": "Mit Nullen und Einsen kann ein Computer Zahlen und andere Daten darstellen.",
+   "heikel": false
+  },
+  {
+   "id": "science-shadows",
+   "title": "Woher wissen wir, dass die Erde rund ist?",
+   "intro": "An verschiedenen Orten können zur selben Zeit unterschiedlich lange Schatten entstehen.",
+   "starter": "Gleich lange Stäbe können an verschiedenen Orten unterschiedliche Schatten werfen.",
+   "heikel": false
+  },
+  {
+   "id": "history-maya",
+   "title": "Die Maya: Wissen gestern und heute",
+   "intro": "Die Geschichte der Maya gehört zu Amerika. Maya-Sprachen und Gemeinschaften gibt es bis heute.",
+   "starter": "Maya-Gemeinschaften und ihre Sprachen gibt es bis heute. Alte Städte, Schriftzeichen und Kalender erzählen von verschiedenen Teilen ihrer Geschichte.",
+   "heikel": false
+  },
+  {
+   "id": "history-polynesia",
+   "title": "Über den Pazifik ohne GPS",
+   "intro": "Polynesische Seefahrerinnen und Seefahrer nutzten genaue Naturbeobachtung für weite Reisen.",
+   "starter": "Erfahrene Menschen fanden über den Pazifik, indem sie Himmel und Meer genau beobachteten. Dieses Wissen wurde über viele Generationen gelernt.",
+   "heikel": false
+  },
+  {
+   "id": "history-timbuktu",
+   "title": "Timbuktu: eine Stadt des Wissens",
+   "intro": "In Westafrika trafen Handel, Bücher und gelehrte Menschen aufeinander.",
+   "starter": "In Timbuktu trafen Reisende, Handel und Lernen zusammen. Handschriften konnten Wissen bewahren und weitergeben.",
+   "heikel": false
+  },
+  {
+   "id": "history-greece",
+   "title": "Fragen stellen im alten Griechenland",
+   "intro": "Menschen beschäftigten sich mit Mathematik, Theater, Kunst und politischen Regeln.",
+   "starter": "Im antiken Athen konnten erwachsene männliche Bürger politisch mitbestimmen. Viele andere Menschen waren davon ausgeschlossen.",
+   "heikel": false
+  },
+  {
+   "id": "history-rome",
+   "title": "Römische Straßen und Wasserwege",
+   "intro": "Ein großes Reich verband Orte durch Straßen, Handel und gemeinsame Verwaltung.",
+   "starter": "Aquädukte brachten Wasser zu Siedlungen. Das Wasser konnte durch eine Leitung mit leichtem Gefälle fließen.",
+   "heikel": false
+  },
+  {
+   "id": "science-atmosphere",
+   "title": "Die Lufthülle der Erde",
+   "intro": "Unsere Atmosphäre wird nach dem Temperaturverlauf in fünf große Schichten eingeteilt.",
+   "starter": "Die Erde besitzt eine Lufthülle. Nahe dem Boden ist sie dichter.",
+   "heikel": false
+  },
+  {
+   "id": "science-magnetism",
+   "title": "Die Erde und ihr Magnetfeld",
+   "intro": "Ein unsichtbares Feld wirkt auf Kompassnadeln und viele geladene Teilchen.",
+   "starter": "Das Erdmagnetfeld beeinflusst viele geladene Teilchen aus dem Weltraum.",
+   "heikel": false
+  },
+  {
+   "id": "science-currents",
+   "title": "Warum bewegt sich Meerwasser?",
+   "intro": "Wind, Gezeiten und Dichteunterschiede treiben Meeresströmungen an.",
+   "starter": "Wind und Dichteunterschiede können Wasser bewegen.",
+   "heikel": false
+  },
+  {
+   "id": "science-motor",
+   "title": "Wie wird Strom zu Bewegung?",
+   "intro": "Ein Elektromotor nutzt magnetische Kräfte, um eine Drehung anzutreiben.",
+   "starter": "Strom in einer Spule kann im Magnetfeld eine Drehbewegung antreiben.",
+   "heikel": false
+  },
+  {
+   "id": "science-foodweb",
+   "title": "Wer gibt wem Energie?",
+   "intro": "Nahrung verbindet Lebewesen. Die Sonne liefert Energie für die meisten Nahrungsketten.",
+   "starter": "Eine Nahrungskette zeigt, wie Energie mit Nahrung weitergegeben wird.",
+   "heikel": false
+  },
+  {
+   "id": "science-sound",
+   "title": "Warum klingt ein Ton hoch oder tief?",
+   "intro": "Ein Ton beginnt mit einer Schwingung und breitet sich durch ein Material aus.",
+   "starter": "Schwingungen können einen Ton erzeugen. Ihr Takt beeinflusst seine Höhe.",
+   "heikel": false
+  },
+  {
+   "id": "science-solar-system",
+   "title": "Planeten: groß und weit entfernt",
+   "intro": "Acht Planeten bewegen sich um die Sonne. Größen und Abstände sind sehr verschieden.",
+   "starter": "Planeten unterscheiden sich in ihrer Größe und Entfernung von der Sonne.",
+   "heikel": false
+  },
+  {
+   "id": "science-energy",
+   "title": "Sonnenstrom auch am Abend?",
+   "intro": "Eine Solarzelle wandelt Licht in elektrische Energie um. Ein Akku kann Energie für später speichern.",
+   "starter": "Sonnenlicht kann Strom liefern. Ein Akku kann einen Teil für später speichern.",
+   "heikel": false
+  },
+  {
+   "id": "science-patterns",
+   "title": "Kann ein Computer Muster erkennen?",
+   "intro": "Computer können Beispiele vergleichen. Bei lernenden Systemen beeinflussen die Beispiele, was sie erkennen.",
+   "starter": "Ein Computer kann nach einer gewählten Regel ähnliche Merkmale sortieren.",
+   "heikel": false
+  },
+  {
+   "id": "science-water-cycle",
+   "title": "Wasser auf Weltreise",
+   "intro": "Ein Tropfen kann im Meer, in einer Wolke und später im Boden unterwegs sein.",
+   "starter": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
+   "heikel": false
+  },
+  {
+   "id": "science-photosynthesis",
+   "title": "Wie Blätter Sonnenlicht nutzen",
+   "intro": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+   "starter": "Grüne Pflanzen können Lichtenergie zum Aufbau energiereicher Stoffe nutzen.",
+   "heikel": false
+  },
+  {
+   "id": "science-pollination",
+   "title": "Blüten und ihre Pollenboten",
+   "intro": "Wenn Pollen die passende Stelle einer Blüte erreichen, beginnt ein Weg zu neuen Samen.",
+   "starter": "Bestäubung bringt Pollen auf eine passende Narbe einer Blüte.",
+   "heikel": false
+  },
+  {
+   "id": "science-fungi",
+   "title": "Das verborgene Reich der Pilze",
+   "intro": "Unter einem Pilzhut kann ein weit verzweigtes Geflecht liegen.",
+   "starter": "Viele Pilze bilden feine Fäden. Ein Pilzhut ist oft nur ein Teil davon.",
+   "heikel": false
+  },
+  {
+   "id": "science-coral-reef",
+   "title": "Ein Riff voller Zusammenarbeit",
+   "intro": "Viele tropische Riffe werden von kleinen Tieren und ihren Algenpartnern aufgebaut.",
+   "starter": "Korallenpolypen sind Tiere. Viele leben mit kleinen Algenpartnern zusammen.",
+   "heikel": false
+  },
+  {
+   "id": "science-moon-phases",
+   "title": "Warum verändert der Mond seine Form?",
+   "intro": "Der Mond bleibt immer rund, auch wenn er wie eine Sichel aussieht.",
+   "starter": "Die Sonne beleuchtet den Mond. Unser Blick auf seine helle Seite verändert sich.",
+   "heikel": false
+  },
+  {
+   "id": "science-seasons",
+   "title": "Ein Jahr, zwei verschiedene Sommer",
+   "intro": "Die geneigte Erdachse verändert im Jahreslauf Tageslänge und Sonnenstand.",
+   "starter": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge im Jahreslauf.",
+   "heikel": false
+  },
+  {
+   "id": "science-tides",
+   "title": "Der Mond bewegt das Meer",
+   "intro": "Mond und Sonne beeinflussen das regelmäßige Steigen und Fallen des Meeresspiegels.",
+   "starter": "Mond und Sonne beeinflussen den wechselnden Wasserstand am Meer.",
+   "heikel": false
+  }
+ ]
+}
