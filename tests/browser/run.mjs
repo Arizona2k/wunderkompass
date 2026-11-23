@@ -13,7 +13,7 @@ await import('../../scripts/test-runtime.mjs');
 const {SUITES} = await import('./suites.mjs');
 const {shardsOf, suitesInShard} = await import('./shards.mjs');
 const {PROJECT, newReport, ready, startPreview} = await import('./harness.mjs');
-const {browserErrorsComplete, browserErrorsSettled, BROWSER_ERROR_FIELDS, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
+const {browserErrorsComplete, browserErrorsSettled, BROWSER_ERROR_FIELDS, meldeBildabbrueche, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
 const fs = await import('node:fs/promises');
 const {existsSync} = await import('node:fs');
 const path = await import('node:path');
@@ -40,6 +40,13 @@ const playwright = await import(process.env.QA_PLAYWRIGHT_MODULE ?? 'playwright'
 const server = options.base ? null : await startPreview();
 const base = options.base ?? server.base;
 const times = [];
+// Jeder erwartete Firefox-Bildabbruch (Regeln in scripts/browser-errors.mjs) erscheint im Log, am Ende als Summe.
+// So fällt auf, wenn eine Regel plötzlich oft greift. Bei --jobs > 1 steht die Zeile nicht sicher bei ihrer Suite.
+const bildabbrueche = new Map();
+meldeBildabbrueche(({phase, url}) => {
+  bildabbrueche.set(phase, (bildabbrueche.get(phase) ?? 0) + 1);
+  console.log(`  erwarteter Firefox-Bildabbruch (${phase}): ${new URL(url).pathname}`);
+});
 const runStarted = performance.now();
 let failed = 0;
 try {
@@ -48,6 +55,7 @@ try {
   await server?.stop();
 }
 await writeTimes();
+if (bildabbrueche.size) console.log('Erwartete Firefox-Bildabbrüche: ' + [...bildabbrueche].map(([phase, anzahl]) => `${phase} ${anzahl}`).join(', '));
 console.log(failed ? `${failed} Suite(n) fehlgeschlagen.` : 'Alle Suiten bestanden.');
 process.exit(failed ? 1 : 0);
 

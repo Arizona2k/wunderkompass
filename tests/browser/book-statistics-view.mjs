@@ -6,7 +6,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-statistics-content.json',import.meta.url),'utf8'));
@@ -104,7 +104,7 @@ export async function bookStatisticsNetworkView(page,{shots=null,engine='chromiu
   const mean=meanFigure.locator('[data-mean-line]'),originalMean=await mean.getAttribute('d');assert.equal(originalMean,'M75 25V205');
   try{await mean.evaluate(n=>n.setAttribute('d','M125 25V205'));await assert.rejects(()=>assertBookStatisticsFigure(meanFigure,'mean-and-median'),/native mean position/);}finally{await mean.evaluate((n,v)=>n.setAttribute('d',v),originalMean);}
   await assertBookStatisticsFigure(meanFigure,'mean-and-median');proof.differentMeanPositionNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-statistics-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-statistics-figure'),html:e.outerHTML}))).catch(()=>[])};

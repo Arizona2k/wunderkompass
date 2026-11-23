@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import test, {mock} from 'node:test';
 import {SUITES} from './browser/suites.mjs';
 import {newReport} from './browser/harness.mjs';
-import {FIREFOX_BILD_NEUSTART_MS, FIREFOX_SPEICHERKOPIE_MS, browserErrorArrays, browserErrorsComplete, browserErrorsSettled, monitorBrowserErrors} from '../scripts/browser-errors.mjs';
+import {FIREFOX_BILD_NEUSTART_MS, FIREFOX_SPEICHERKOPIE_MS, browserErrorArrays, browserErrorsAssert, browserErrorsComplete, browserErrorsSettled, meldeBildabbrueche, monitorBrowserErrors} from '../scripts/browser-errors.mjs';
 
 const SETS = ['smoke', 'ci', 'full'];
 // Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Sie sind nicht auf Chromium beschränkt;
@@ -146,16 +146,29 @@ test('Kartenfragen und „Ganz einfach“ nur über karte-hilfen.mjs', () => {
   assert.deepEqual(treffer, [], 'Bausteine aus karte-hilfen.mjs nutzen (angezeigteFrage, antworteRichtig, frageDurchspielen, hauptfrage, ganzEinfach)');
 });
 
-// Schlägt die Browserüberwachung an, soll die Meldung die Fehler nennen (browserErrorText), nicht nur „false“.
-test('Browserfehler-Zusicherungen nennen die Fehler', () => {
+// Firefox-Bildabbrüche entscheidet die Überwachung erst nach bis zu einer Sekunde (scripts/browser-errors.mjs). Eine Suite, die
+// sofort prüft, wäre rot, obwohl der Abbruch gleich als erwartet gestrichen würde. Darum prüfen Suiten nur mit browserErrorsAssert
+// (wartet und nennt die Fehler). Fehlerfelder selbst lesen darf nur, wer in derselben Zeile vorher browserErrorsSettled abwartet.
+function ungewarteteFehlerpruefungen(text) {
+  return text.split('\n').flatMap((line, index) => {
+    if (/^\s*import\b/.test(line)) return [];
+    if (/\bbrowserErrorsComplete\(/.test(line)) return [index + 1 + ': browserErrorsComplete'];
+    if (/\bBROWSER_ERROR_FIELDS\b/.test(line) && !/browserErrorsSettled\(/.test(line)) return [index + 1 + ': BROWSER_ERROR_FIELDS ohne browserErrorsSettled'];
+    return [];
+  });
+}
+test('Suiten prüfen Browserfehler nur nach dem Abwarten', () => {
   const dir = new URL('./browser/', import.meta.url);
-  const stumm = [];
-  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.mjs'))) {
-    fs.readFileSync(new URL(file, dir), 'utf8').split('\n').forEach((line, index) => {
-      if (/assert(?:\.ok)?\(browserErrorsComplete\([^()]*\)\)/.test(line)) stumm.push(file + ':' + (index + 1));
-    });
+  const treffer = [];
+  // run.mjs wartet selbst (browserErrorsSettled vor der Schlussprüfung in runSuite).
+  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.mjs') && name !== 'run.mjs')) {
+    for (const stelle of ungewarteteFehlerpruefungen(fs.readFileSync(new URL(file, dir), 'utf8'))) treffer.push(file + ':' + stelle);
   }
-  assert.deepEqual(stumm, [], 'Zusicherung ohne browserErrorText');
+  assert.deepEqual(treffer, [], 'await browserErrorsAssert(proof) nehmen');
+  // Gegenprobe: Die alten Schreibweisen schlagen an, die erlaubten nicht.
+  assert.equal(ungewarteteFehlerpruefungen('assert(browserErrorsComplete(proof),browserErrorText(proof));').length, 1);
+  assert.equal(ungewarteteFehlerpruefungen('for(const field of BROWSER_ERROR_FIELDS)assert.deepEqual(proof[field],[],field);').length, 1);
+  assert.deepEqual(ungewarteteFehlerpruefungen("import {BROWSER_ERROR_FIELDS} from 'x';\nawait browserErrorsAssert(proof);\nawait browserErrorsSettled(p); for (const f of BROWSER_ERROR_FIELDS) a.push(f);"), []);
 });
 
 // Chromium und Firefox melden eine ResizeObserver-Schleife nur leise. Die Überwachung gibt sie deshalb
@@ -247,6 +260,25 @@ test('Überwachung trennt Firefox-Bildneustart von echtem Abbruch', async t => {
     sende('request', erste); mock.timers.tick(5); sende('request', zweite); sende('requestfailed', erste);
     assert(browserErrorsComplete(proof), JSON.stringify(proof));
     assert.equal(proof.expectedSyntheticErrors?.length, 1);
+  }
+  // Schlussprüfung der Suiten (browserErrorsAssert): wartet die Entscheidung ab, meldet erwartete Abbrüche dem Runner
+  // und nennt echte Fehler mit Ort.
+  {
+    const gemeldet = [];
+    meldeBildabbrueche(eintrag => gemeldet.push(eintrag.phase));
+    t.after(() => meldeBildabbrueche(null));
+    const {proof, sende, anfrage} = seite({engine: 'firefox'}), erste = anfrage(foto), zweite = anfrage(foto);
+    sende('request', erste); sende('requestfailed', erste);
+    const pruefung = browserErrorsAssert(proof, 'Startseite');
+    mock.timers.tick(40); sende('request', zweite);
+    await pruefung;
+    assert.deepEqual(gemeldet, ['firefox-image-restart']);
+    const rot = seite({engine: 'firefox'}), dritte = rot.anfrage(foto);
+    rot.sende('request', dritte); rot.sende('requestfailed', dritte);
+    const fehler = browserErrorsAssert(rot.proof, 'Startseite');
+    mock.timers.tick(FIREFOX_BILD_NEUSTART_MS + 1);
+    await assert.rejects(fehler, /^Error: Startseite: [\s\S]*african-elephant\.webp/);
+    meldeBildabbrueche(null);
   }
   // Gegenproben: Diese Abbrüche bleiben Fehler.
   // vorher: Die neue Anfrage startet vor der Abbruchmeldung. neuladen: Dazwischen lädt die Seite neu (Navigationsanfrage).

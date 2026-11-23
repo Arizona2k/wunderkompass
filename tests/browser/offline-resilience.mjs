@@ -30,7 +30,7 @@ import {captureNativeViewport} from './native-screenshot.mjs';
 import {planetDiagramViews} from './planet-diagrams.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {stopTestServer} from './stop-test-server.mjs';
-import {BROWSER_ERROR_FIELDS,browserErrorArrays,browserErrorsComplete,browserErrorsSettled,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,browserErrorsAssert,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 
 // The preceding progress matrix ends wide. A filename is no viewport evidence.
 export async function assertOfflineCaptureViewport(page,{native=false}={}){
@@ -70,7 +70,7 @@ export async function offlineResilience(browser,{port=4776,shots,kind=browser.br
  let verifiedWorkerURL=null;const workerURL=base+'/learning-worker.js';
  report.browserErrors=browserErrorArrays();monitorBrowserErrors(page,base,report.browserErrors,{engine:kind,expectedHTTP503:{url:base+guardedAsset,active:()=>fail,reason:'Exact required asset deliberately returns503 during the isolated initial source-failure phase.'},expectedOfflineWorkerUpdate:{url:workerURL,active:()=>report.serverStopped===true&&report.completeAssets===true&&verifiedWorkerURL===workerURL,reason:'The isolated fixture verified every cached asset and the active controller, then deliberately stopped this origin. Only the exact registered worker update connection refusal is expected.'}});
  // Vorher offene Firefox-Bildabbrüche entscheiden lassen (browser-errors.mjs), damit das Ergebnis nicht vom Zeitpunkt abhängt.
- const assertBrowserErrors=async stage=>{await browserErrorsSettled(report.browserErrors);assert.equal(browserErrorsComplete(report.browserErrors),true,'actual offline-app browser errors remain blocking at '+stage+': '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,{count:report.browserErrors[key].length,first:report.browserErrors[key].slice(0,3)}]))));};
+ const assertBrowserErrors=stage=>browserErrorsAssert(report.browserErrors,'actual offline-app browser errors remain blocking at '+stage);
  const snapshot=()=>page.evaluate(()=>{const p=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress;return p;});
  const noPartial=async()=>assert.deepEqual(await page.evaluate(async()=>(await caches.keys()).filter(n=>n.startsWith('earth-learning-'))),[],'no partial release survives');
  try{

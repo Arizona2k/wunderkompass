@@ -1,7 +1,7 @@
 import {preserveOriginalDOM} from './preserve-original-dom.mjs';
 import {revealBookWords} from './book-pagination.mjs';
 import {createSave} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 // Shared retained learning checks for the existing regular and cold browser callers.
 import {assertBookRetainedFigure,actualState as assertRetainedDrawnState} from './book-retained-diagrams.mjs';
 import {assertBookStatisticsFigure} from './book-statistics-diagrams.mjs';
@@ -94,7 +94,7 @@ export async function bookRetainedNetworkView(page,{shots=null,engine='chromium'
   await membraneStudy.getByText(pack.learning['Topografie'].benefit,{exact:true}).waitFor();await cellStudy.locator(':scope>summary').click();await cellStudy.getByText(pack.learning['Hypothese'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
   await child.evaluate(()=>location.hash='book/words/'+encodeURIComponent('Hypothese'));const hypothesisStudy=cardFor(child,'Hypothese').locator('[data-book-retained-study]');await hypothesisStudy.waitFor();if(!await hypothesisStudy.evaluate(e=>e.open))await hypothesisStudy.locator(':scope>summary').click();const collection=hypothesisStudy.locator('[data-book-retained-figure="testable-collection"]');await collection.locator('.book-retained-choices button').nth(2).click();await assertRetainedDrawnState('testable-collection',2,collection);const restoreCollection=await preserveOriginalDOM(collection.locator('svg'));try{await collection.locator('[data-retained-known-form]').first().evaluate(el=>el.remove());await assert.rejects(()=>assertRetainedDrawnState('testable-collection',2,collection));}finally{await restoreCollection();}await assertRetainedDrawnState('testable-collection',2,collection);proof.differentDrawnCollectionNegativeDetected=true;
   await child.evaluate(()=>location.hash='book/words/'+encodeURIComponent('Kartenprojektion'));const projectionStudy=cardFor(child,'Kartenprojektion').locator('[data-book-retained-study]');await projectionStudy.waitFor();if(!await projectionStudy.evaluate(e=>e.open))await projectionStudy.locator(':scope>summary').click();const projection=projectionStudy.locator('[data-book-retained-figure="projection-patch-area"]');await projection.locator('.book-retained-choices button').nth(2).click();await assertRetainedDrawnState('projection-patch-area',2,projection);const list=projection.locator('ol'),oldStyle=await list.getAttribute('style');try{await list.evaluate(el=>el.style.listStyleType='none');await assert.rejects(()=>assertRetainedDrawnState('projection-patch-area',2,projection));}finally{await list.evaluate((el,old)=>old===null?el.removeAttribute('style'):el.setAttribute('style',old),oldStyle);}await assertRetainedDrawnState('projection-patch-area',2,projection);proof.hiddenNumberedLegendNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-retained-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-retained-figure'),html:e.outerHTML}))).catch(()=>[])};

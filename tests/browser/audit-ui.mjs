@@ -2,7 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
 import {hilfeOeffnen} from './harness.mjs';
 
@@ -127,5 +127,5 @@ export async function auditUiView(browser,base,{shots=null,engine='chromium'}={}
   }catch(error){if(shots){await page.screenshot({path:path.join(shots,`journey-engine-${engine}-audit-ui-original-failure-${width}.png`),fullPage:true}).catch(()=>{});const original=await page.evaluate(()=>({url:location.href,focus:{tag:document.activeElement?.tagName,id:document.activeElement?.id},inputs:[...document.querySelectorAll('input[role=combobox]')].map(e=>({value:e.value,attributes:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value]))})),options:[...document.querySelectorAll('[role=option]')].filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,id:e.id,attributes:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value]))}))})).catch(e=>({diagnosticFailure:String(e)}));await fs.writeFile(path.join(shots,`journey-engine-${engine}-audit-ui-original-failure-${width}.json`),JSON.stringify({error:error.stack,original,errors:proof},null,2)+'\n');}throw error;}
   finally{await context.close();}
  }
- assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+ await browserErrorsAssert(proof);return proof;
 }

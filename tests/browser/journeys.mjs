@@ -21,7 +21,7 @@ import {assertInsideDiagrams} from './inside-diagrams.mjs';
 import {assertPlanetDiagram} from './planet-diagrams.mjs';
 import {bookMeasurementView,bookMeasurementNetworkView} from './book-measurements.mjs';
 import {bookTabNavigation} from './book-navigation.mjs';
-import {browserErrorArrays,BROWSER_ERROR_FIELDS,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,browserErrorsAssert,monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {journeyContentFlow} from './journey-content.mjs';
 import {journeyReadingFlow} from './journey-reading.mjs';
 import {journeyInquiryLoadFlow} from './journey-inquiry-loader.mjs';
@@ -298,7 +298,7 @@ export async function journeySupportView(p,{widths,shots,engine}){
 }
 export async function journeyLearningHelpView(browser,base,ready,shots){
  const proof={checks:[],...browserErrorArrays()},engine=browser.browserType().name(),monitor=page=>monitorBrowserErrors(page,base,proof,{engine});
- try{await journeyReadingFlow(browser,base,ready,monitor,proof,shots);await journeyInquiryLoadFlow(browser,base,proof,shots);await journeyTransferFlow(browser,base,ready,monitor,proof,shots);for(const field of BROWSER_ERROR_FIELDS)assert.deepEqual(proof[field],[],field);return proof;}
+ try{await journeyReadingFlow(browser,base,ready,monitor,proof,shots);await journeyInquiryLoadFlow(browser,base,proof,shots);await journeyTransferFlow(browser,base,ready,monitor,proof,shots);await browserErrorsAssert(proof);return proof;}
  catch(error){await fs.writeFile(path.join(shots,'journey-help-'+engine+'-failure-errors.json'),JSON.stringify({status:'failed',engine,...proof,failure:error.stack},null,2)+'\n');throw error;}
 }
 

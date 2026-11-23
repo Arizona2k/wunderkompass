@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {prepareAxe} from './axe-loader.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
@@ -82,7 +82,7 @@ export async function bookMeasurementNetworkView(page,{shots=null,engine='chromi
   context=await browser.newContext({viewport:{width:320,height:900},reducedMotion:'reduce',serviceWorkers:'block'});let arrived;const started=new Promise(resolve=>arrived=resolve),held=new Promise(resolve=>release=resolve);requests=0;
   await context.route(pattern,async route=>{requests++;arrived();await held;await route.continue();});child=await context.newPage();monitorBrowserErrors(child,base,proof);await child.goto(base+'/#book');await ready(child);await child.locator('.book-filter-panel>summary').click();await child.getByRole('tablist',{name:'Wissenswörter nach Thema',exact:true}).getByRole('tab',{name:'Messen',exact:true}).click();
   const meter=cardFor(child,'Meter').locator('.book-study'),kelvin=cardFor(child,'Kelvin').locator('.book-study');await meter.locator(':scope>summary').click();await started;await meter.locator(':scope>summary').click();await kelvin.locator(':scope>summary').click();assert.equal(requests,1);release();await kelvin.getByText(pack.learning.Kelvin.benefit,{exact:true}).waitFor();await meter.locator(':scope>summary').click();await meter.getByText(pack.learning.Meter.benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-si-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

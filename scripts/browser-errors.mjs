@@ -18,7 +18,7 @@ export const browserErrorText=proof=>'Browserfehler: '+JSON.stringify(Object.fro
 // ob seine Kopie noch gilt. Kommt die Antwort aus dem Speicher, bricht Firefox diese Nachfrage absichtlich ab und zeigt die Kopie
 // (image/imgLoader.cpp, imgCacheValidator::OnStartRequest: CancelWithReason(NS_BINDING_ABORTED, ...)). Gemessen am 23.11.2026
 // im Rauchtest (Riff-Foto der Startseite nach Neuladen und Umleitung von #news/... auf #home): keine neue Anfrage, das Bild
-// steht fertig auf der Seite. Regel: Die Seite hat dieselbe Adresse vorher erfolgreich geladen (Status unter 400), danach kommt
+// steht fertig auf der Seite (Zahlen: docs/entwurf/2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md, Punkt 13). Regel: Die Seite hat dieselbe Adresse vorher erfolgreich geladen (Status unter 400), danach kommt
 // keine neue Anfrage dafür, und innerhalb von FIREFOX_SPEICHERKOPIE_MS zeigt die Seite ein eingehängtes Bild mit dieser Adresse
 // fertig geladen, ohne dass ein Bild mit dieser Adresse kaputt ist. Zeigt die Seite das Bild nicht (etwa weil die Ansicht
 // gewechselt hat), antwortet sie nicht oder ist sie geschlossen, bleibt der Abbruch ein Fehler.
@@ -34,6 +34,12 @@ const FIREFOX_SPEICHERKOPIE_GRUND='Firefox hatte das Bild schon geladen; die Nac
 const offeneNeustarts=new WeakMap();
 // Wartet, bis jeder offene Firefox-Bildabbruch entschieden ist (erwartet oder Fehler). Vor dem Umsortieren und vor der Schlussprüfung aufrufen.
 export const browserErrorsSettled=proof=>Promise.all([...(offeneNeustarts.get(proof)??[])]);
+// Schlussprüfung einer Suite: erst offene Entscheidungen abwarten, dann ohne Browserfehler bestehen oder die Fehler nennen.
+// Suiten prüfen nur so (Wächter in tests/browser-suites.test.mjs); ein sofortiges browserErrorsComplete wäre rot, obwohl die Regel den Abbruch gleich streicht.
+export async function browserErrorsAssert(proof,wo){await browserErrorsSettled(proof);if(!browserErrorsComplete(proof))throw Error((wo?wo+': ':'')+browserErrorText(proof));}
+// Der Runner lässt jeden erwarteten Firefox-Bildabbruch ins Log schreiben, damit sichtbar bleibt, wie oft die Regeln greifen.
+let bildabbruchMeldung=null;
+export const meldeBildabbrueche=fn=>{bildabbruchMeldung=fn;};
 
 // Liest aus der Seite, welche eingehängten Bilder die Adresse zeigen. Die Entscheidung fällt hier, nicht in der Seite.
 const bilderMitAdresse=url=>[...document.images].filter(bild=>bild.isConnected&&(bild.currentSrc===url||bild.src===url)).map(bild=>({complete:bild.complete,naturalWidth:bild.naturalWidth}));
@@ -43,19 +49,20 @@ function firefoxBildAbbrueche(page,proof){
  const passt=(request,error)=>error==='NS_BINDING_ABORTED'&&request.resourceType?.()==='image';
  let abschnitt=0;const abschnittVon=new WeakMap();
  const letzte=new Map(),wartend=new Map(),geladen=new Set(),offen=offeneNeustarts.get(proof)??new Set();offeneNeustarts.set(proof,offen);
- const vermerke=(url,error,phase,reason)=>(proof.expectedSyntheticErrors??=[]).push({kind:'failedRequests',url,error,engine:'firefox',phase,reason});
+ const vermerke=(url,error,phase,reason)=>{(proof.expectedSyntheticErrors??=[]).push({kind:'failedRequests',url,error,engine:'firefox',phase,reason});bildabbruchMeldung?.({phase,url});};
  // Schon umsortiert (Aufrufer ohne browserErrorsSettled): Der Eintrag bleibt ein Fehler, also lieber rot als still grün.
  const streiche=(warten,phase,reason)=>{const stelle=proof.failedRequests.indexOf(warten.eintrag);if(stelle<0)return;proof.failedRequests.splice(stelle,1);vermerke(warten.url,warten.eintrag.error,phase,reason);};
  const gleicherAbschnitt=warten=>abschnitt===warten.abschnitt;
  // Fall 2: in kleinen Takten nachsehen, bis die Seite das Bild fertig zeigt oder die Wartezeit endet.
  const pruefeKopie=async warten=>{
-  while(warten.offen){
-   const zeigt=await page.evaluate(bilderMitAdresse,warten.url).then(zeigtFertigesBild,()=>false);
-   if(!warten.offen||!gleicherAbschnitt(warten))break;
-   if(zeigt){streiche(warten,'firefox-image-cache-copy',FIREFOX_SPEICHERKOPIE_GRUND);break;}
-   await new Promise(resolve=>setTimeout(resolve,SPEICHERKOPIE_TAKT_MS));
-  }
-  warten.ende();
+  try{
+   while(warten.offen){
+    const zeigt=await page.evaluate(bilderMitAdresse,warten.url).then(zeigtFertigesBild,()=>false);
+    if(!warten.offen||!gleicherAbschnitt(warten))break;
+    if(zeigt){streiche(warten,'firefox-image-cache-copy',FIREFOX_SPEICHERKOPIE_GRUND);break;}
+    await new Promise(resolve=>setTimeout(resolve,SPEICHERKOPIE_TAKT_MS));
+   }
+  }finally{warten.ende();}
  };
  return{
   // Jede Anfrage merken. Folgt sie auf einen offenen Bildabbruch derselben Adresse, endet das Warten: rechtzeitig ist das der
@@ -91,7 +98,7 @@ function firefoxBildAbbrueche(page,proof){
    warten.ende=()=>{if(!warten.offen)return;warten.offen=false;clearTimeout(uhr);if(wartend.get(url)===warten)wartend.delete(url);offen.delete(versprechen);fertig();};
    const uhr=setTimeout(warten.ende,kopie?FIREFOX_SPEICHERKOPIE_MS:FIREFOX_BILD_NEUSTART_MS);
    offen.add(versprechen);wartend.set(url,warten);
-   if(kopie)pruefeKopie(warten);
+   if(kopie)pruefeKopie(warten).catch(()=>{});
   },
  };
 }

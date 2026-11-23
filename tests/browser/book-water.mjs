@@ -4,7 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-water-content.json',import.meta.url),'utf8'));
@@ -89,7 +89,7 @@ export async function bookWaterNetworkView(page,{shots=null,engine='chromium'}={
   await assert.rejects(()=>assertBookWaterFigure(densityFigure,'mass-volume'),/actual drawn volume/,'a missing volume field is rejected rather than trusted from data attributes');
   await densityFigure.locator('[data-water-density-body="B"]').evaluate((e,html)=>e.insertAdjacentHTML('afterbegin',html),originalUnit);await assertBookWaterFigure(densityFigure,'mass-volume');proof.missingDrawnVolumeNegative=true;
 
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-water-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }

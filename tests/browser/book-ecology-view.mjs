@@ -6,7 +6,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-ecology-content.json',import.meta.url),'utf8'));
@@ -89,7 +89,7 @@ export async function bookEcologyNetworkView(page,{shots=null,engine='chromium'}
   await membraneStudy.getByText(pack.learning['Mikroorganismus'].benefit,{exact:true}).waitFor();await cellStudy.locator(':scope>summary').click();await cellStudy.getByText(pack.learning['Evolution'].benefit,{exact:true}).waitFor();assert.equal(requests,1);proof.sharedCloseWhilePending=true;
   await child.evaluate(()=>location.hash='book/words/'+encodeURIComponent('Evolution'));const evolutionStudy=cardFor(child,'Evolution').locator('[data-book-ecology-study]');await evolutionStudy.waitFor();if(!await evolutionStudy.evaluate(e=>e.open))await evolutionStudy.locator(':scope>summary').click();const frequency=evolutionStudy.locator('[data-book-ecology-figure="generation-frequency"]');await frequency.waitFor();await frequency.locator('.book-ecology-choices button').first().click();await assertEcologyDrawnState(frequency,'generation-frequency',0);const originalSvg=await frequency.locator('svg').innerHTML();try{await frequency.locator('[data-ecology-cross]').first().evaluate(el=>el.remove());await assert.rejects(()=>assertEcologyDrawnState(frequency,'generation-frequency',0));}finally{await frequency.locator('svg').evaluate((el,html)=>el.innerHTML=html,originalSvg);}await assertEcologyDrawnState(frequency,'generation-frequency',0);proof.differentDrawnFrequencyNegativeDetected=true;
   await child.evaluate(()=>location.hash='book/words/'+encodeURIComponent('Ökosystem'));const ecosystemStudy=cardFor(child,'Ökosystem').locator('[data-book-ecology-study]');await ecosystemStudy.waitFor();if(!await ecosystemStudy.evaluate(e=>e.open))await ecosystemStudy.locator(':scope>summary').click();const ecosystem=ecosystemStudy.locator('[data-book-ecology-figure="ecosystem-relationships"]');await ecosystem.locator('.book-ecology-choices button').nth(2).click();await assertEcologyDrawnState(ecosystem,'ecosystem-relationships',2);const list=ecosystem.locator('ol'),oldStyle=await list.getAttribute('style');try{await list.evaluate(el=>el.style.listStyleType='none');await assert.rejects(()=>assertEcologyDrawnState(ecosystem,'ecosystem-relationships',2));}finally{await list.evaluate((el,old)=>old===null?el.removeAttribute('style'):el.setAttribute('style',old),oldStyle);}await assertEcologyDrawnState(ecosystem,'ecosystem-relationships',2);proof.hiddenNumberedLegendNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-ecology-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-ecology-figure'),html:e.outerHTML}))).catch(()=>[])};

@@ -24,9 +24,9 @@ export function ready(page) {
 // Auf einem langsamen Rechner wie der CI ist dieses Zeitfenster groß. Deshalb vorher warten, bis alle
 // Ladeanfragen der Seite fertig sind (außer Seitenaufrufen): Bilder, aber auch Programmteile, Stile und
 // Daten, die die App erst nachlädt. Ein Bild erscheint oft erst, wenn sein Programmteil da ist
-// (CI-Lauf 257: Korallenriff-Foto der Startseite; im November 2026 auch `research`).
+// (im November 2026 `research`; zum Riff-Foto aus CI-Lauf 257 siehe Nachtrag).
 // Jede echte Fehlanfrage bleibt in der Überwachung sichtbar.
-// Nachtrag 23.11.2026: Die Firefox-Abbrüche des Riff-Fotos (Läufe 249 und 257, auch unten) kamen sehr wahrscheinlich nicht vom
+// Nachtrag 23.11.2026: Die Firefox-Abbrüche des Riff-Fotos (Läufe 249 und 257, auch unten) kamen vermutlich nicht vom
 // Seitenwechsel, sondern von Firefox' gespeicherter Kopie nach dem Neuladen (zweite Regel in scripts/browser-errors.mjs).
 // Nötig bleibt die Wartehilfe für Chromium und nachgeladene Programmteile (CI-Befund Chromium: research, journeys, engine-journeys).
 // Gleich nach newPage aufrufen: const anfragenFertig = ladeanfragen(page); … await anfragenFertig(); await page.reload();
@@ -37,8 +37,8 @@ export function ladeanfragen(page, {timeout = 20000} = {}) {
 // Fertig erst nach einer Ruhezeit ohne Anfrage. Sie beginnt nach jeder Anfrage neu (Start oder Ende).
 // React 19 hält das Einblenden nachgeladener Teile (lazy + Suspense) bis zu 300 ms nach dem Platzhalter
 // zurück; erst danach starten deren Bilder. Vom Ende des Programmteils an sind das höchstens 300 ms, dazu
-// kommt das Rendern auf einem langsamen Rechner. 500 ms lassen dafür Reserve. Mit 250 ms (nur Bilder,
-// nur ab Aufruf gezählt) brach in der CI das Schließen das Riff-Foto ab (Lauf 257).
+// kommt das Rendern auf einem langsamen Rechner. 500 ms lassen dafür Reserve. Die frühere Ruhezeit von
+// 250 ms (nur Bilder, nur ab Aufruf gezählt) war kürzer als diese Sammelzeit.
 export const RUHEZEIT = 500;
 
 function offeneAnfragen(page, passt, was, timeout) {

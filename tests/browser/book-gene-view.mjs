@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-gene-content.json',import.meta.url),'utf8'));
@@ -102,7 +102,7 @@ export async function bookGeneNetworkView(page,{shots=null,engine='chromium'}={}
   const legend=numbered.locator('figure>ol'),originalLegendStyle=await legend.getAttribute('style');
   try{await legend.evaluate(el=>el.style.listStyleType='none');await assert.rejects(()=>assertGeneNumberedLegend(numbered.locator('figure')),/requires visible decimal markers/);}finally{await legend.evaluate((el,style)=>{if(style===null)el.removeAttribute('style');else el.setAttribute('style',style);},originalLegendStyle);}
   await assertGeneNumberedLegend(numbered.locator('figure'));proof.hiddenNumberedLegendNegativeDetected=true;
-  assert(browserErrorsComplete(proof),browserErrorText(proof));return proof;
+  await browserErrorsAssert(proof);return proof;
  }catch(error){
   if(shots&&child){
    const original={failure:error.stack,url:child.url(),drawings:await child.locator('[data-book-gene-figure]').evaluateAll(es=>es.map(e=>({kind:e.getAttribute('data-book-gene-figure'),html:e.outerHTML}))).catch(()=>[])};

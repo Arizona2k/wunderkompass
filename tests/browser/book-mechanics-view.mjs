@@ -7,7 +7,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {prepareAxe} from './axe-loader.mjs';
-import {BROWSER_ERROR_FIELDS,browserErrorArrays,monitorBrowserErrors,browserErrorsComplete} from '../../scripts/browser-errors.mjs';
+import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {karteDa,mehrErfahren} from './karte-hilfen.mjs';
 const pack=JSON.parse(await fs.readFile(new URL('../../app/book-mechanics-content.json',import.meta.url),'utf8'));
@@ -127,7 +127,7 @@ export async function bookMechanicsNetworkView(page,{shots=null,engine='chromium
   assert.equal(continuous.bookRelatedWords.length,BOOK_RELATED_WORD_EDGE_COUNT*2);proof.continuousRapidReverseLinks=continuous.bookRelatedWords;
   const input=child.getByRole('textbox',{name:'Wissenswörter durchsuchen'});await input.fill('Reflexion');await child.locator('.word-card').getByRole('heading',{name:'Reflexion',exact:true}).waitFor();proof.continuousRapidFollowupSearch=true;
   await context.close();context=null;
-  assert(browserErrorsComplete(proof),'browser errors in the book network pages: '+JSON.stringify(Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,proof[key].slice(0,5)]))));return proof;
+  await browserErrorsAssert(proof,'browser errors in the book network pages');return proof;
  }catch(error){if(child&&shots)await child.screenshot({path:path.join(shots,'journey-engine-'+engine+'-book-mechanics-network-failure-320.png'),fullPage:true}).catch(()=>{});throw error;}
  finally{release();await context?.close();}
 }
