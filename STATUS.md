@@ -22,14 +22,13 @@ Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md),
 
 **Teilschritt 3 „Kniffliger spielen“:** [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) (Grundlage: [Ergänzung Stufen](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md), [Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
 
-1. Der Nutzer gibt den Entwurf frei und entscheidet D1 bis D5 (Abschnitt „Entscheidungen“ im Entwurf).
+1. Entwurf freigegeben, D1 bis D5 „wie empfohlen“ entschieden (23.11.2026, Abschnitt 3 im Entwurf). Zuerst den PR des Arbeitssystems mergen (nach „ok“).
 2. Dann bauen, beginnend mit Teil A, Aufgabe 1 (Stufe im Pass, `app/kern/stufe.ts`). Pass-Änderungen mit Altpass, Import/Export, Reload und Fehlerfall belegen.
 3. Nebenbei: `journeys` (rund 35 Minuten, längste Gruppe der Vollprüfung) teilen oder beschleunigen, sobald klar ist, welcher Teil die Zeit braucht (BACKLOG, „Vollprüfung dauert lange“).
 
 ## Offene Fragen an den Nutzer
 
-- **D1 bis D5** im [Entwurf Teilschritt 3](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md), Claude empfiehlt je eine Lösung.
-- **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`), der Nutzer stellt sie ein; am 23.11.2026 um 16:45 UTC galt `main` laut GitHub noch als ungeschützt, Claude prüft beim nächsten Einstieg. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
+- **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
 
 ## Vorübergehende Modell-Ausnahmen
 

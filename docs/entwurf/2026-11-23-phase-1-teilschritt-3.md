@@ -1,6 +1,6 @@
 # Phase 1, Teilschritt 3 „Kniffliger spielen“ – Entwurf und Bauplan
 
-Stand: 23.11.2026. **Entwurf, noch nicht freigegeben.** Die Ziele sind schon freigegeben; dieser Text legt fest, wie sie gebaut werden, und nennt fünf Entscheidungen für den Nutzer (Abschnitt 3).
+Stand: 23.11.2026. **Freigegeben am 23.11.2026**: Der Nutzer hat die fünf Entscheidungen in Abschnitt 3 „wie empfohlen“ getroffen. Die Ziele waren schon freigegeben; dieser Text legt fest, wie sie gebaut werden.
 
 > **Für ausführende Agenten:** Pflicht-Skill: superpowers:executing-plans (Claude baut selbst in dieser Sitzung) oder superpowers:subagent-driven-development. Schritte haben Kästchen (`- [ ]`) zum Abhaken. Erst nach Freigabe bauen.
 
@@ -179,9 +179,9 @@ Aus BACKLOG 13, 17 und 22, einheitlich in der ganzen App (Karte, Spiele, Labore,
 - „Zeitanker“ und „Modellgrenzen“ kindgerecht; Fragegrammatik der 11 Erfindungskarten („Welches Problem hilft das Auto zu lösen?“).
 - „Noch einmal raten“: Nach dem zweiten Versuch wird keine neue Wiederholung eingetragen (BACKLOG 19). Es zählt die erste Antwort; eine richtige zweite Antwort nimmt die Karte aber aus „Ein Gedanke zum Wiederholen“ (BACKLOG 23, K7).
 
-## 3. Was der Nutzer entscheiden muss
+## 3. Was der Nutzer entschieden hat
 
-Claude empfiehlt bei allen fünf Punkten das Erste.
+Entschieden am 23.11.2026: bei allen fünf Punkten das Erste, wie von Claude empfohlen (Nutzer: „wie empfohlen“). Die Alternative steht jeweils nur noch zum Nachlesen dabei.
 
 - **D1 Zusatzfragen auch auf Entdecker:** Ja (Empfehlung des `stufen-pruefer`), sonst bekommen Kleine auf der Karte nie eine neue Frage. Oder nur Profi und Experte, wie im freigegebenen Entwurf.
 - **D2 Vier Antworten zuerst in Spielen und auf der Karte:** Reisen und Labore behalten vorerst drei, weil dort jede Stufe schon eine eigene Frage ist. Oder gleich überall vier (über 300 neue, geprüfte Antworten in Teilschritt 3).

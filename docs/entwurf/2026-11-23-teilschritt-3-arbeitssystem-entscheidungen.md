@@ -48,7 +48,7 @@ Stand: 23.11.2026. Diese Liste hält fest, was Claude am Anfang von Teilschritt 
 
 - **`animals` und `core` mit einer Breite im CI-Satz: gestrichen.** Der `technik-pruefer` hat bestätigt, warum der doppelte Satz so spät auffiel: Nur `core` öffnete die Wissenschaftskarten. Der Datentest (Punkt 7) fängt diese Fehlerklasse billiger und vollständig ab. Eine Kurzfassung von `core` wäre eine zweite Liste von Ansichten, die gepflegt werden muss.
 - **`journeys` teilen:** Mit Lauf 262 sind die Gruppen ausgeglichen (Punkt 14). `journeys` bleibt mit rund 35 Minuten die längste Gruppe; teilen oder beschleunigen erst, wenn klar ist, welcher Teil die Zeit braucht (BACKLOG, „Vollprüfung dauert lange“).
-- **`main` schützen:** Der Nutzer stellt die Regel auf GitHub ein (Entscheidung vom 23.11.2026). Am 23.11.2026 nachmittags galt `main` laut GitHub noch als ungeschützt. Claude prüft das beim nächsten Einstieg erneut.
+- **`main` schützen:** dieselbe GitHub-Regel wie bei `test-live` (Entscheidung vom 23.11.2026). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt.
 
 ## Für den nächsten Chat
 
