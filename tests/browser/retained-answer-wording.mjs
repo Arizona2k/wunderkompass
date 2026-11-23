@@ -59,12 +59,18 @@ export async function offlineRetainedAnswerWording(p,report){
 // Aufgabe 10 (Risiko 1): Ein Kind hat eine Frage richtig beantwortet, danach wurde die Frage umformuliert; die Antworten
 // blieben gleich. Ein ausgedachter Altpass mit der alten richtigen Antwort: Die Karte zeigt sie als gewählt und richtig,
 // die Antworten bleiben gesperrt und learned:<id> bleibt, auch nach Neuladen. Der Seeadler steht laut Plan zuerst.
-export const UMFORMULIERTE_KARTEN=[alias.topic,'animal-red-kangaroo','animal-barn-owl','invention-bicycle','invention-elevator'];
+// Die Liste nennt jede Karte, deren Hauptfrage seit Phase 1 einen neuen Wortlaut hat: Aufgabe 10 (Seeadler bis Aufzug)
+// und Aufgabe 11 (Pyramiden von Gizeh, Eiffelturm). Wer eine Hauptfrage umformuliert, trägt die Karte hier ein.
+// Der Altpass ist echt gebaut: Nach einer Antwort steht die Hauptfrage auch in der Wiederholung (hier vor langer Zeit
+// beantwortet, darum schon wieder fällig). Pilot-Karten zeigen dann zuerst ihre Zusatzfragen; die Hauptfrage mit der
+// alten Antwort kommt über „Noch eine Frage“ und nach Neuladen als die am frühesten fällige Frage (Code-Prüfung 22.11.2026).
+export const UMFORMULIERTE_KARTEN=[alias.topic,'animal-red-kangaroo','animal-barn-owl','invention-bicycle','invention-elevator','building-giza-pyramids','building-eiffel-tower'];
 export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,report){
  const geprueft=[];
  for(const id of UMFORMULIERTE_KARTEN){
   const t=catalog.find(x=>x.id===id),richtig=t.question.answers[t.question.correct];
   const progress=emptyProgress();progress.discoveries=['topic:'+id,'learned:'+id];progress.gameSessions={['topic:'+id]:{items:[...t.question.answers],topicAnswer:richtig}};
+  progress.review={['world-question:'+id]:{correct:true,seen:1,due:'2026-01-01'}};
   const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
   await c.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{key:SAVE_KEY,save:createSave(progress)});
   const p=await c.newPage();monitor(p);const imagesSettled=bildanfragen(p);
@@ -79,9 +85,20 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
    assert.ok((await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).discoveries.includes('learned:'+id),id+': learned bleibt');
   };
   try{
-   await p.goto(base+'#world/topic/'+id);await ready(p);await pruefen();
+   await p.goto(base+'#world/topic/'+id);await ready(p);
+   // Pilot-Karten: erst die noch offenen Zusatzfragen richtig beantworten, dann führt „Noch eine Frage“ zur Hauptfrage.
+   for(const z of t.moreQuestions??[]){
+    const mini=p.locator('section.world-mini-question');
+    await mini.locator('.rate-mal-frage').getByText(z.prompt,{exact:true}).waitFor();
+    await mini.locator('.quiz-answer').filter({has:p.getByText(z.answers[z.correct],{exact:true})}).click();
+    await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();
+    await mini.getByRole('button',{name:'Noch eine Frage',exact:true}).click();
+   }
+   await pruefen();
+   const gespeichert=(await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+id];
+   assert.equal(gespeichert.topicAnswer,richtig,id+': die alte Antwort bleibt unverändert gespeichert');
    await imagesSettled();await p.reload();await ready(p);await pruefen();
-   geprueft.push(id);
+   geprueft.push(id+((t.moreQuestions??[]).length?' (nach '+t.moreQuestions.length+' Zusatzfragen)':''));
   }finally{await c.close();}
  }
  report.checks.push('Alte richtige Antwort nach umformulierter Frage bleibt gewählt und richtig, learned bleibt (390 px, mit Neuladen): '+geprueft.join(', '));

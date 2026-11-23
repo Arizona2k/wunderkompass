@@ -33,7 +33,7 @@ Rückmeldung eines 10-jährigen Kindes (zu viel Text, zu leicht) steckt in der E
 
 ## Vorübergehende Modell-Ausnahmen
 
-- **Bis 23.11.2026, 02:00 UTC (03:00 Uhr deutscher Zeit):** `fable` ist ausgeschöpft, große Abschlussprüfungen laufen bis dahin mit `opus`. Danach wieder `fable` nehmen und diesen Eintrag löschen. Weil die Schlussprüfung von Schritt 0 nur mit `opus` lief, prüft `fable` am Ende von Phase 1 die Strecke ab `b53f75f` mit.
+- Keine. (Die Ausnahme für `fable` lief am 23.11.2026 um 02:00 UTC ab; die offene Nachprüfung steht im BACKLOG, Phase 1, Punkt 10.)
 
 ## Archivierte Browser-Tests
 

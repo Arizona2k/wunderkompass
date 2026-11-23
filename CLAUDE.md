@@ -64,7 +64,7 @@ Jede Phase und jeder größere Schritt:
 1. **Entwurf** in `docs/entwurf/`, Freigabe durch den Nutzer.
 2. **Plan** in kleinen Schritten.
 3. **Bauen** auf dem Branch `claude/...`.
-4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer.
+4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026).
 5. **Zeigen:** Vercel-Vorschau-Link und Screenshots, in einfachen Worten.
 6. **Freigabe:** PR nach `test-live`, Vorschau- und PR-Link schicken. Merge nach grüner CI und „ok“ im Chat.
 7. **Nachführen:** `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`. Sichtbare Änderungen bekommen einen kurzen, kindgerechten Eintrag in „Was ist neu?“ auf der Seite (Wunsch des Nutzers, 21.11.2026; ab Phase 1).

@@ -181,7 +181,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
               </Fragment>
             ))}
             {/* Kein Wissen geht verloren: Die bisherigen Absätze stehen unverändert unter „Für Große“.
-                „Ganz einfach“ entfällt hier, die Häppchen sind die einfache Fassung. */}
+                „Ganz einfach“ entfällt hier, die Häppchen sind die einfache Fassung; der Satz steht oben in „Ausprobieren“. */}
             <LearningDetails className="wissenskarte-fuer-grosse" summary="Für Große">
               {absaetze}
             </LearningDetails>

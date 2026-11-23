@@ -128,6 +128,11 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
       if (leer(q?.prompt) || leer(q?.why) || leer(q?.hint)) melde(`moreQuestions[${i}]: Frage, Erklärung oder Hinweis fehlt`);
     });
   }
+
+  // Mit Häppchen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
+  if (topic.chapters !== undefined && topic.learning?.starter && !hatAusprobieren(topic)) {
+    melde('Häppchen und „Ganz einfach“: Der Satz braucht „Ausprobieren“, sonst geht er verloren');
+  }
   return fehler;
 }
 

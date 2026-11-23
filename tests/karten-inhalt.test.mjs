@@ -35,6 +35,17 @@ test('kartenFeldFehler meldet kaputte neue Felder', () => {
   assert.ok(fehler({claims: [{...heil.claims[0], explanation: ''}]}).length > 0, 'leere Auflösung');
 });
 
+test('kartenFeldFehler: Häppchen mit „Ganz einfach“ brauchen „Ausprobieren“', () => {
+  // Karten mit Häppchen zeigen den Satz learning.starter oben in „Ausprobieren“ (große Prüfung, Aufgabe 13).
+  // Hätte so eine Karte kein „Ausprobieren“, ginge der Satz verloren.
+  const feuer = catalog.find(t => t.id === 'history-fire');
+  const lernhilfen = {starter: 'Schau genau hin.', observe: 'Was siehst du?', benefit: 'Du kannst beobachten.'};
+  const ohneAusprobieren = {...feuer, chapters: [{question: 'Wie?', text: 'So.'}], learning: lernhilfen};
+  assert.ok(kartenFeldFehler(ohneAusprobieren).some(f => f.includes('Ausprobieren')), 'Satz ohne Platz wird gemeldet');
+  assert.deepEqual(kartenFeldFehler({...ohneAusprobieren, chapters: undefined}), [], 'ohne Häppchen steht der Satz in „Kurz erklärt“');
+  assert.deepEqual(kartenFeldFehler({...basis, chapters: [{question: 'Wie?', text: 'So.'}], learning: lernhilfen}), [], 'mit Ausprobieren in Ordnung');
+});
+
 test('alle Karten haben wohlgeformte neue Felder', () => {
   const kaputt = catalog.map(t => [t.id, kartenFeldFehler(t)]).filter(([, fehler]) => fehler.length);
   assert.deepEqual(kaputt, []);

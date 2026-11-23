@@ -84,9 +84,15 @@ export async function articleAtlas(page,ready,report,width,shots){
   const hint=question.locator('.world-game-hint');await hint.locator('summary').click();assert.equal(await hint.locator('p').count()>0,true);assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);
   await question.locator('.quiz-answer').filter({has:page.getByText(wrong,{exact:true})}).click();
   await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
-  await page.reload();await ready(page);await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);
-  await answer.click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(topic.question.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));
-  await page.reload();await ready(page);assert.equal(await answer.isDisabled(),true);
+  // Seit Aufgabe 11 hat die Mondkarte Zusatzfragen. Nach dem Neuladen zeigt sie darum die nächste offene Frage (ersteFrage);
+  // die falsche Antwort bleibt im Pass, eine Lösung erscheint nicht. Die Hauptfrage nach dem Neuladen prüft wissenskarte.mjs
+  // an einer Karte ohne Zusatzfragen (falscheAntwortOhneErklaerung, richtigeAntwortSchreibtGelernt).
+  assert.ok(topic.moreQuestions?.length>=2,'the moon card has additional questions');const [next,after]=topic.moreQuestions;
+  await page.reload();await ready(page);await question.getByText(next.prompt,{exact:true}).waitFor();
+  const kept=await readPass();assert.equal(kept.gameSessions['topic:'+topic.id]?.topicAnswer,wrong,'the wrong answer stays in the pass');assert.equal(kept.review['world-question:'+topic.id]?.correct,false);assert.equal(kept.discoveries.includes('learned:'+topic.id),false);
+  assert.equal(await page.getByText(topic.question.why,{exact:true}).count(),0,'no solution after reload');
+  await question.locator('.quiz-answer').filter({has:page.getByText(next.answers[next.correct],{exact:true})}).click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(next.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));
+  await page.reload();await ready(page);await question.getByText(after.prompt,{exact:true}).waitFor();
  }
  // Lernroute aus „Mehr erfahren“; in der Route steht die Karte eingebettet, ihr „Ausprobieren“ funktioniert dort auch.
  const mehr=await mehrErfahren(page);

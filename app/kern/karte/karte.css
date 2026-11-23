@@ -55,6 +55,11 @@
 .bildnachweise [role="status"] { padding: 6px 0 2px; }
 
 @media (max-width: 560px) {
+  /* Mondphasen im Kartenkopf: vier Bilder im 2×2-Raster waren je 151–190 px hoch, der Kopf 527–587 px (Design-Prüfung
+     22.11.2026). Mit 88 px bleibt er unter 400 px; der Abstand oben hält das Kennwort „Zeichnung“ vom Neumond fern. */
+  .kartenbild-gross .moon-diagram { padding-top: 18px; }
+  .kartenbild-gross .moon-diagram .topic-diagram-panel svg { height: 88px; }
+  .kartenbild-gross .moon-diagram .topic-diagram-label { padding-bottom: 4px; }
   .kartenbild-motiv { min-height: 200px; }
   .kartenbild-symbol { width: 88px; height: 88px; }
   .kartenbild-motiv-titel { font-size: 22px; }
@@ -104,6 +109,9 @@
    (Design-Prüfung 22.11.2026). Markierte Knöpfe behalten ihre Farbe, nur die Randbreite bleibt gleich. */
 .wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer { border-width: 2px; }
 .wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:not(.is-correct):not(.is-incorrect) { border-color: #6f8d97; }
+/* Nach dem Tippen sind die Knöpfe gesperrt, bleiben aber voll lesbar: Kinder lesen die übrigen Antworten zum Vergleichen
+   noch einmal. Die alte Regel button:disabled (globals.css) blasste sie auf Deckkraft 0,65 ab, Kontrast etwa 3,2:1. */
+.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:disabled { opacity: 1; }
 /* Denkhinweis: ganze Zeile tippbar (48 px), Schrift 16 px. */
 .wissenskarte .world-game-hint { padding: 0 18px; }
 .wissenskarte .world-game-hint[open] { padding-bottom: 14px; }
@@ -196,6 +204,8 @@
 }
 .wissenskarte :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene, .wissenskarte-fuer-grosse, .bildnachweise, .world-game-hint)[open] > summary::after { margin-bottom: -5px; transform: rotate(-135deg); }
 .wissenskarte-laedt { margin: 0 0 20px; }
+/* „Ganz einfach“ über den Bausteinen (Karten mit Häppchen): derselbe Abstand wie zwischen den Bausteinen. */
+.wissenskarte-ausprobieren-einstieg { margin: 0 0 24px; }
 .wissenskarte-bausteine { display: grid; gap: 24px; min-width: 0; padding-bottom: 20px; }
 .wissenskarte-bausteine > * { min-width: 0; }
 .wissenskarte-ausprobieren .article-experiment { min-width: 0; }
@@ -242,6 +252,9 @@
 .dazu-passt-bild .topic-diagram { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
 .dazu-passt-bild .topic-illustration.compact .topic-diagram-panel svg { height: 96px; }
 .dazu-passt-bild .topic-diagram-label { display: none; }
+/* Auch die Legende der Zeichnung steht nur auf der Karte selbst; in der Kachel machte sie die Zeichnung 171 statt 112 px hoch
+   (Design-Prüfung 22.11.2026). Das Kennwort „Zeichnung“ bleibt sichtbar. */
+.dazu-passt-bild .topic-illustration figcaption { display: none; }
 
 /* Sehr schmal: „Stimmt nicht“ passt nicht mehr neben „Stimmt“, darum untereinander (statt zweizeilig, 84 px hoch). */
 @media (max-width: 379px) {

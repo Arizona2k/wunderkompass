@@ -132,9 +132,16 @@ export async function connectedDiscoveries(page,ready,report,width){
     await page.locator('.world-mini-question').waitFor();
     const title=await page.locator('#world-topic-title').getAttribute('aria-label'),t=topics.find(t=>t.title===title);
     assert.equal(t.id,route.topics[i],'each retained/appended route station is actually visited in order');
-    const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})});
-    if(!await answer.isDisabled())await answer.click();
-    await page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true}).click();
+    // Wie route-revisit.mjs: Eine schon gelernte Station (hier die Mondkarte aus articleAtlas) zeigt als Pilot-Karte die nächste
+    // offene Zusatzfrage (ersteFrage) und ist frei; jede andere bleibt gesperrt, bis die echte Hauptfrage richtig beantwortet ist.
+    const next=page.getByRole('button',{name:i===route.topics.length-1?'Route abschließen':'Zur nächsten Station',exact:true});
+    if((await pass()).discoveries.includes('learned:'+t.id))assert(await next.isEnabled(),t.id+': an already learned station permits advancing');
+    else{
+     assert(await next.isDisabled(),t.id+': an unfinished station remains gated before the actual mini answer');
+     await page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
+     await page.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id);
+    }
+    await next.click();
    }
    await page.getByRole('heading',{name:'Deine Wissensroute ist geschafft!',exact:true}).waitFor();
    assert.ok((await pass()).discoveries.includes('route:'+id));

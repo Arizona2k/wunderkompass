@@ -231,7 +231,9 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
    assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
    await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
   }
-  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
+  // Zuerst die eigens für die Tierkarten geschriebene Verbindung. Der Eisvogel hat seit Aufgabe 10 (Eisvogel–Schatten gestrichen)
+  // nur noch seine erklärte Verbindung aus Aufgabe 9 (zum Nahrungsnetz); auch sie muss hin und mit Fokus zurück führen.
+  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id)??worldConnections.connections.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await mehrErfahren(p);await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await karteDa(p,entry.id);await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }
