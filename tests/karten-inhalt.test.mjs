@@ -141,6 +141,31 @@ test('„Schon gewusst?“ wiederholt keinen Satz der Karte', () => {
   assert.deepEqual(doppelt, []);
 });
 
+// „Ganz einfach“ steht genau einmal auf der Karte. Der Browser-Test (karte-hilfen.mjs, ganzEinfach) sieht nur die
+// Karten, die eine Suite öffnet, und die 21 doppelten Wissenschaftskarten fielen erst in der Vollprüfung auf
+// (23.11.2026). Dieser Datentest deckt alle Karten in Millisekunden ab.
+// Bekannte Ausnahme: Bei diesen 24 Tierkarten ist die Einleitung derselbe Satz. Sie werden mit „Ganz einfach offen“
+// umgeschrieben (Entwurf Teilschritt 3, E12, Aufgabe 6). Die Liste darf nur kürzer werden.
+const GANZ_EINFACH_IN_EINLEITUNG = new Set([
+  'animal-platypus', 'animal-short-beaked-echidna', 'animal-okapi', 'animal-meerkat', 'animal-ring-tailed-lemur',
+  'animal-north-american-beaver', 'animal-walrus', 'animal-red-fox', 'animal-raccoon', 'animal-hedgehog',
+  'animal-barn-owl', 'animal-kingfisher', 'animal-ostrich', 'animal-atlantic-puffin', 'animal-common-chameleon',
+  'animal-fire-salamander', 'animal-common-frog', 'animal-eastern-clown-anemonefish', 'animal-european-eel',
+  'animal-monarch-butterfly', 'animal-garden-snail', 'animal-european-lobster', 'animal-common-cuttlefish',
+  'animal-short-snouted-seahorse',
+]);
+
+test('„Ganz einfach“ steht nicht noch einmal wörtlich auf der Karte', () => {
+  const gleich = text => (text ?? '').replace(/\s+/g, ' ').trim();
+  const gefunden = catalog.filter(t => t.learning?.starter).filter(t => {
+    const satz = gleich(t.learning.starter);
+    const andere = [t.intro, ...(t.paragraphs ?? []), ...(t.more ?? []), ...(t.chapters ?? []).map(c => c.text), t.surprise];
+    return andere.some(text => gleich(text) === satz || gleich(text).includes(satz));
+  }).map(t => t.id);
+  assert.deepEqual(gefunden.filter(id => !GANZ_EINFACH_IN_EINLEITUNG.has(id)), [], 'neu doppelt');
+  assert.deepEqual([...GANZ_EINFACH_IN_EINLEITUNG].filter(id => !gefunden.includes(id)), [], 'nicht mehr doppelt: aus der Ausnahmeliste streichen');
+});
+
 test('wrongReasons passt zu den Antworten', () => {
   const falsch = catalog.filter(t => t.questionFeedback?.wrongReasons && t.questionFeedback.wrongReasons.length !== t.question?.answers.length);
   assert.deepEqual(falsch.map(t => t.id), []);

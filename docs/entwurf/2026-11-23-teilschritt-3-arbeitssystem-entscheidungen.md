@@ -10,11 +10,14 @@ Stand: 23.11.2026. Diese Liste hält fest, was Claude am Anfang von Teilschritt 
 4. **CI-Satz ergänzt:** `solar-labels` (rund 50 s in Chromium) läuft jetzt in jedem PR.
 5. **Doppelter Satz auf 21 Karten.** Die große Prüfung fand ihn erst in `core`. Bei 21 Wissenschaftskarten stand „Schon gewusst?“ wörtlich wie „Ganz einfach“. Den Satz hat Claude in den Daten gestrichen, statt eine App-Regel zu bauen, die Doppeltes versteckt. Der Inhaltstest prüft jetzt auch gegen „Ganz einfach“. Neue Überraschungssätze mit Quelle kommen spätestens mit der Wissenschaftswelt in Phase 3 (BACKLOG 17).
    - Kein Eintrag in „Was ist neu?“: Für Kinder kommt nichts Neues dazu, nur ein doppelter Satz fällt weg.
-6. **Aufräumen:** alte Next-, Vinext- und shadcn-Reste entfernt (61 Dateien), dazu ungenutzte Pakete. Lint prüft jetzt alle Dateien (`eslint .`) statt einer Liste.
+6. **Aufräumen:** alte Next-, Vinext- und shadcn-Reste entfernt (61 Dateien), dazu 14 ungenutzte Pakete (darunter `next` und `zod` mit den Sicherheitsmeldungen). Lint prüft jetzt alle Dateien (`eslint .`) statt einer Liste.
+   - `eslint-config-next` bleibt vorerst: Die Lint-Regeln hängen daran, es braucht `next` nicht. Ablösung steht im BACKLOG.
+7. **Datentest „Ganz einfach“ steht nicht doppelt auf der Karte** (`tests/karten-inhalt.test.mjs`). Der Browser-Test sieht nur die Karten, die eine Suite öffnet; der Datentest prüft alle Karten in Millisekunden. Er fand 24 Tierkarten, bei denen die Einleitung derselbe Satz ist. Sie stehen in einer Ausnahmeliste, die nur kürzer werden darf, und werden mit Entwurf Teilschritt 3, E12 (Aufgabe 6) umgeschrieben.
+8. **Auto-Merge erst nach grüner Engine-Schnellprüfung** (`CLAUDE.md`, Abschnitt Git): GitHub wartet beim Auto-Merge nur auf Pflicht-Checks.
 
 ## Verschoben, mit Grund
 
-- **`animals` und `core` mit einer Breite im CI-Satz:** noch nicht. Beide Suiten haben eine Breitenliste, `core` aber fest im Code (`VIEWS`). Eine Kurzfassung wäre eine zweite Liste, die gepflegt werden muss. Erst den Bericht des `technik-pruefer` abwarten: Er prüft, ob ein Unit-Test auf die Daten dieselbe Fehlerklasse billiger abfängt. Ergebnis und Entscheidung kommen in diesen Abschnitt.
+- **`animals` und `core` mit einer Breite im CI-Satz: gestrichen.** Der `technik-pruefer` hat bestätigt, warum der doppelte Satz so spät auffiel: Nur `core` öffnete die Wissenschaftskarten. Der Datentest (Punkt 7) fängt diese Fehlerklasse billiger und vollständig ab. Eine Kurzfassung von `core` wäre eine zweite Liste von Ansichten, die gepflegt werden muss.
 - **Gruppen neu ausgleichen und `journeys` teilen:** erst mit den Zeiten-Dateien des ersten CI-Laufs mit Gruppen (BACKLOG, „Vollprüfung dauert lange“).
 - **`main` schützen:** Der Nutzer stellt die Regel auf GitHub ein (Entscheidung vom 23.11.2026). Am 23.11.2026 nachmittags galt `main` laut GitHub noch als ungeschützt. Claude prüft das beim nächsten Einstieg erneut.
 

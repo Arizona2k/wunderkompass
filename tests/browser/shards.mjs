@@ -2,6 +2,8 @@
 // jede Gruppe als eigenen Job, alle gleichzeitig. Jeder Browser hat zusätzlich die Gruppe „rest“ mit allen
 // übrigen Suiten der Vollprüfung, auch neuen: So fällt keine Suite still weg.
 // Ausgleichen nach den Zeiten-Dateien der CI (Artefakt „zeiten-<browser>-<gruppe>“, zeiten-*.json).
+// Die Zeiten-Datei entsteht erst am Ende eines Laufs. Bricht ein Job ab (Zeitgrenze), fehlt sie: Dann stehen
+// die Dauern je Suite im Job-Log (Zeilen „PASS name 12.3 s“).
 // Zahlen in Klammern: Sekunden nacheinander in CI-Lauf 252 (21.11.2026), ohne Aufbau des Jobs.
 export const REST = 'rest';
 

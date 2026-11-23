@@ -4,6 +4,8 @@ Anlass: Zweimal fielen Fehler erst spät auf. In Teil A fand die CI-Vollprüfung
 Geprüft hat der Helfer `technik-pruefer` (sonnet/high) auf dem Stand `afbc441`. Er hat nur gelesen, kein Build und kein Browser liefen. Wo eine Zahl geschätzt ist, steht das dabei.
 Claude hat die Befunde eingeordnet (Abschnitt „Einordnung“). Dieser Bericht ist die Grundlage für den Anfang von Teilschritt 3. Der nächste Chat baut darauf auf und muss ihn nicht neu erarbeiten.
 
+**Stand 23.11.2026 abends:** Schritte 1 bis 5 der Reihenfolge unten sind umgesetzt (Bausteine und Wächter, Gruppen mit 75 Minuten, Engine-Schnellprüfung, `solar-labels` im CI-Satz, Aufräumen). Offen ist Schritt 6 (`main` schützen, stellt der Nutzer ein). Was entschieden und verschoben wurde, steht in der [Entscheidungsliste](2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md).
+
 ## Gemessene Dauern (CI-Lauf 252, Vollprüfung von Teil A)
 
 - Gesamt je Browser: Chromium 6104 s, Firefox 2263 s, WebKit 3040 s. Die drei laufen gleichzeitig, Wartezeit also rund 102 Minuten.

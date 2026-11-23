@@ -3,6 +3,17 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 23.11.2026 – Teilschritt 3 beginnt: schnellere Prüfungen, aufgeräumt, Entwurf „Kniffliger spielen“
+
+Für Kinder ändert sich fast nichts Sichtbares. Fehler fallen jetzt früher auf, und die große Prüfung ist schneller.
+
+- **Ein doppelter Satz weniger:** Bei 21 Karten aus Natur und Wissenschaft stand „Schon gewusst?“ wörtlich wie „Ganz einfach“. Der doppelte Satz ist weg. Neue Überraschungen mit Quelle kommen mit der Wissenschaftswelt.
+- **Firefox und Safari früher prüfen:** Jeder PR prüft die wichtigsten Abläufe jetzt auch in Firefox und WebKit (Safari), nicht erst die große Prüfung am Phasenende. Das Sonnensystem mit seinen Beschriftungen ist dazugekommen.
+- **Große Prüfung in Gruppen:** Statt drei langer Läufe (der längste rund 102 Minuten) laufen jetzt sechs kürzere gleichzeitig. Jeder Lauf schreibt auf, wie lange jeder Teil braucht, damit wir die Gruppen ausgleichen können.
+- **Gemeinsame Test-Bausteine:** Alle Browser-Tests beantworten Fragen und lesen „Ganz einfach“ über denselben Baustein. Ein Wächter verbietet eigene Wege dafür. Ein neuer Datentest prüft alle Karten in Sekunden darauf, dass „Ganz einfach“ nicht doppelt dasteht. Er fand 24 Tierkarten, die mit „Kniffliger spielen“ neu geschrieben werden.
+- **Aufgeräumt:** 61 alte Dateien und 14 Pakete, die die Seite nicht mehr braucht, sind weg, darunter zwei mit bekannten Sicherheitslücken. Die Lücken waren für Besucher nicht erreichbar.
+- **Entwurf „Kniffliger spielen“** ([Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md), [Entscheidungen zum Arbeitssystem](docs/entwurf/2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md)): drei Stufen (Entdecker, Profi, Experte), schwerere Fragen ohne Ratemuster, Labore mit echten Aufgaben. Gebaut wird nach der Freigabe.
+
 ## 23.11.2026 – Arbeitsweise: Helfer laufen, nichts geht verloren, zwei WebKit-Fehler behoben
 
 Für Kinder ändert sich nichts Sichtbares. Wir arbeiten sauberer und schneller.
