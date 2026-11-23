@@ -1,0 +1,765 @@
+{
+ "stand": "23.11.2026",
+ "grundlage": [
+  "2026-11-23-ganz-einfach-entwurf.json (PR #27)",
+  "2026-11-23-ganz-einfach-kinder-redaktion.md",
+  "2026-11-23-ganz-einfach-fakten.md"
+ ],
+ "hinweis": "Nur „Ganz einfach“ (learning.starter) wird übernommen; „Selbst beobachten“ und Lernziel aus PR #27 sind ungeprüft und bleiben im Entwurf (BACKLOG).",
+ "karten": [
+  {
+   "id": "history-fire",
+   "titel": "Menschen nutzen Feuer",
+   "einleitung": "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+   "starter": "Feuer wärmte frühe Menschen. Damit konnten sie auch Essen kochen. Alte Feuerstellen verraten uns das heute noch.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-pyramids",
+   "titel": "Pyramiden im alten Ägypten",
+   "einleitung": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+   "starter": "Die große Pyramide war ein Grab für einen König. Viele Menschen bauten gemeinsam daran, Stein auf Stein.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-paper",
+   "titel": "Papier aus China",
+   "einleitung": "Papier entstand in China schon vor über 2.000 Jahren.",
+   "starter": "Auf Papier kann man schreiben und malen. In China lernten Menschen früh, Papier zu machen. Cai Lun am Kaiserhof machte die Herstellung besser.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-zero",
+   "titel": "Rechnen mit der Null",
+   "einleitung": "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+   "starter": "Null heißt: nichts. Die Null hilft auch beim Zahlenschreiben: Ohne sie sähe 10 aus wie 1.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-compass",
+   "titel": "Der Kompass hilft auf See",
+   "einleitung": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+   "starter": "Auf dem Meer gibt es keine Wegweiser. Und bei Wolken sieht man keine Sterne. Dann half den Seeleuten die Nadel im Kompass.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-medieval_cities",
+   "titel": "Märkte und Handwerk in Städten",
+   "einleitung": "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+   "starter": "Auf dem Markt kauften und verkauften die Menschen Dinge. Handwerker machten Brot, Werkzeuge oder Töpfe. So wuchsen die Städte.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-printing",
+   "titel": "Viele Bücher aus einer Druckwerkstatt",
+   "einleitung": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+   "starter": "Vorher schrieben Menschen jedes Buch mit der Hand ab. Mit Gutenbergs Druckwerkstatt ging das viel schneller. So bekamen viel mehr Menschen Bücher.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-voyages1492",
+   "titel": "Europäische Schiffe erreichen die Karibik",
+   "einleitung": "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+   "starter": "Auf den Inseln lebten schon lange Menschen. Sie hatten eigene Sprachen und Lebensweisen. Die Europäer brachten ihnen später viel Leid.",
+   "herkunft": "kinder-redaktion",
+   "heikel": true
+  },
+  {
+   "id": "history-steam",
+   "titel": "Eine Maschine arbeitet mit Dampf",
+   "einleitung": "Thomas Newcomen entwickelte eine Dampfmaschine, die Wasser aus Bergwerken pumpte.",
+   "starter": "Kochendes Wasser macht Dampf. Mit Dampf kann eine Maschine arbeiten, ohne dass Menschen oder Pferde ziehen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-railway",
+   "titel": "Ein Zug mit Dampflok fährt",
+   "einleitung": "In England wurde die öffentliche Bahn zwischen Stockton und Darlington eröffnet.",
+   "starter": "Eine Dampflok zog viele Wagen über Schienen. So kamen Menschen und Waren schneller von Ort zu Ort.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-electric_light",
+   "titel": "Elektrisches Licht für den Alltag",
+   "einleitung": "Thomas Edison und sein Team entwickelten Lampen, die lange genug für den Alltag leuchten konnten.",
+   "starter": "Eine Glühbirne leuchtet, wenn Strom hindurchfließt. Damit es in vielen Häusern hell wurde, brauchte man Kabel bis in jedes Haus.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-flight",
+   "titel": "Ein gesteuertes Flugzeug mit Motor",
+   "einleitung": "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
+   "starter": "Die beiden Brüder übten lange mit Gleitflugzeugen ohne Motor. Dann bauten sie einen Motor ein und konnten ihr Flugzeug lenken.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-ww1",
+   "titel": "Der Erste Weltkrieg",
+   "einleitung": "1914 begann ein Krieg, in den immer mehr Länder hineingezogen wurden.",
+   "starter": "Der Krieg dauerte bis 1918. Millionen Menschen starben. Viele Familien hatten Hunger oder wurden getrennt.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": true
+  },
+  {
+   "id": "history-holocaust",
+   "titel": "Der Holocaust",
+   "einleitung": "Die Nationalsozialisten und ihre Helfer verfolgten und ermordeten etwa sechs Millionen jüdische Menschen.",
+   "starter": "Jüdische Menschen wurden damals ausgegrenzt und verfolgt. Sie hatten nichts falsch gemacht: Der Grund war Hass. Heute erinnern wir an sie und halten zusammen gegen Hass.",
+   "herkunft": "kinder-redaktion",
+   "heikel": true
+  },
+  {
+   "id": "history-ww2",
+   "titel": "Der Zweite Weltkrieg",
+   "einleitung": "1939 griff das nationalsozialistische Deutschland Polen an; damit begann der Zweite Weltkrieg in Europa.",
+   "starter": "Sechs Jahre lang war Krieg in vielen Teilen der Welt. Mehr als 50 Millionen Menschen starben, viele verloren ihr Zuhause. 1945 war der Krieg endlich vorbei.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": true
+  },
+  {
+   "id": "history-un",
+   "titel": "Länder gründen die Vereinten Nationen",
+   "einleitung": "Nach dem Krieg gründeten 51 Länder die Vereinten Nationen, kurz UNO.",
+   "starter": "In der UNO treffen sich Länder aus der ganzen Welt. Sie reden miteinander, statt zu kämpfen. Ihr Ziel: Frieden und Schutz für alle Menschen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-berlin_wall_build",
+   "titel": "Die Berliner Mauer trennt Menschen",
+   "einleitung": "Am 13. August 1961 riegelte die DDR-Regierung die Grenze um West-Berlin ab.",
+   "starter": "Menschen aus der DDR sollten nicht mehr in den Westen gehen können. Darum entstand eine Mauer, auch mitten durch Berlin. Familien und Freunde waren plötzlich getrennt.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": true
+  },
+  {
+   "id": "history-web",
+   "titel": "Das World Wide Web entsteht",
+   "einleitung": "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+   "starter": "Im Web hängen viele Seiten zusammen. Tippst du auf ein markiertes Wort, kommst du zur nächsten Seite.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-berlin_wall_fall",
+   "titel": "Die Berliner Mauer wird geöffnet",
+   "einleitung": "Viele Menschen in der DDR forderten friedlich mehr Freiheit.",
+   "starter": "Am 9. November 1989 öffneten sich die Durchgänge in der Berliner Mauer. Viele Menschen konnten endlich auf die andere Seite. Sie feierten zusammen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-reunification",
+   "titel": "Deutschland wird wiedervereinigt",
+   "einleitung": "Am 3. Oktober 1990 wurden die beiden deutschen Staaten wieder zu einem Land.",
+   "starter": "Vorher war Deutschland geteilt, in Ost und West. Jetzt gibt es nur noch ein Deutschland. Darum ist der 3. Oktober heute ein Feiertag.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-iss",
+   "titel": "Ein gemeinsames Labor im Weltraum",
+   "einleitung": "Die erste Langzeitbesatzung zog in die Internationale Raumstation ISS ein.",
+   "starter": "Die Raumstation kreist hoch über uns um die Erde. Dort wohnen und forschen Menschen aus vielen Ländern zusammen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-september11",
+   "titel": "Die Anschläge vom 11. September",
+   "einleitung": "Am 11. September 2001 griffen Terroristen der Gruppe al-Qaida die USA an.",
+   "starter": "Terroristen wollen mit Gewalt Angst verbreiten. Bei diesen Anschlägen starben fast 3.000 Menschen. Helfer retteten damals viele Menschen, und heute erinnert ein Ort an alle Opfer.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": true
+  },
+  {
+   "id": "history-webb",
+   "titel": "Neue Bilder vom Universum",
+   "einleitung": "Teams veröffentlichten die erste große Bildauswahl des James-Webb-Weltraumteleskops.",
+   "starter": "Das Webb-Teleskop ist ein großes Fernrohr im Weltall. Es sieht eine Art Licht, die unsere Augen nicht sehen. Daraus entstehen Bilder von sehr fernen Sternen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-light",
+   "titel": "Elektrisches Licht",
+   "einleitung": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+   "starter": "Eine Lampe macht aus Strom Licht. Ein Schalter, und das Zimmer wird hell, ganz ohne Feuer.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-car",
+   "titel": "Das Auto",
+   "einleitung": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+   "starter": "Ein Motor dreht die Räder. Mit dem Lenkrad bestimmt man die Richtung, mit der Bremse hält man an.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-railway",
+   "titel": "Die Eisenbahn",
+   "einleitung": "Viele Waren und Reisende mussten über Land transportiert werden.",
+   "starter": "Eine Lok zieht viele Wagen über Schienen. So können viele Menschen und Waren auf einmal fahren.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-airplane",
+   "titel": "Das Flugzeug",
+   "einleitung": "Menschen wollten durch die Luft reisen.",
+   "starter": "Die Flügel halten ein Flugzeug in der Luft. Die Motoren ziehen es nach vorn. Mit der Steuerung lenkt die Pilotin oder der Pilot.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-phone",
+   "titel": "Das Telefon",
+   "einleitung": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+   "starter": "Das Telefon verwandelt deine Stimme in elektrische Zeichen. Die reisen durch ein Kabel. Am anderen Ende wird daraus wieder eine Stimme.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-computer",
+   "titel": "Der Computer",
+   "einleitung": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+   "starter": "Ein Computer folgt Schritt für Schritt einem Programm. Er rechnet blitzschnell. Ob eine Aufgabe sinnvoll ist, weiß er aber nicht von selbst.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-internet",
+   "titel": "Das Internet",
+   "einleitung": "Computer an verschiedenen Orten sollten Informationen austauschen.",
+   "starter": "Das Internet verbindet Computer auf der ganzen Welt. Alle halten sich an dieselben Regeln. So können sie Nachrichten, Bilder und Filme austauschen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-compass",
+   "titel": "Der Kompass",
+   "einleitung": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+   "starter": "Die Kompassnadel ist ein kleiner Magnet. Sie dreht sich immer ungefähr nach Norden. Wo dein Ziel liegt, zeigt sie dir aber nicht.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-printing",
+   "titel": "Der Buchdruck",
+   "einleitung": "Ein Buch von Hand abzuschreiben dauerte lange.",
+   "starter": "Drucken ist wie Stempeln: einmal vorbereiten, dann viele Male abdrücken. Beim Buchdruck setzte man einzelne Buchstaben zu ganzen Seiten zusammen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-rocket",
+   "titel": "Die Rakete",
+   "einleitung": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+   "starter": "Eine Rakete stößt heiße Gase nach hinten aus. Dadurch fliegt sie nach vorn, wie ein Luftballon, den du loslässt. Das klappt sogar im Weltall ohne Luft.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-satellite",
+   "titel": "Der Satellit",
+   "einleitung": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+   "starter": "Ein Satellit ist eine Maschine, die im Weltall um die Erde kreist. Manche fotografieren das Wetter, andere leiten Fernsehbilder weiter.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "invention-smartphone",
+   "titel": "Das Smartphone",
+   "einleitung": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+   "starter": "Ein Smartphone ist Telefon, Kamera und kleiner Computer in einem. Es passt in die Hosentasche.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "building-great-wall",
+   "titel": "Die Chinesische Mauer",
+   "einleitung": "Grenzen überwachen, verteidigen und Wege kontrollieren.",
+   "starter": "Die Chinesische Mauer ist nicht eine einzige Mauer. Sie besteht aus vielen Mauerstücken und Türmen, gebaut über sehr lange Zeit.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "building-colosseum",
+   "titel": "Das Kolosseum",
+   "einleitung": "Öffentliche Veranstaltungen im Römischen Reich. Einige waren gewalttätig und wären heute nicht akzeptabel.",
+   "starter": "Das Kolosseum in Rom ist so etwas wie ein riesiges Stadion aus Stein. Viele Bögen und Gänge führten die Zuschauer zu ihren Plätzen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "building-taj-mahal",
+   "titel": "Das Taj Mahal",
+   "einleitung": "Erinnerung an Mumtaz Mahal; in Auftrag gegeben von ihrem Ehemann, dem Mogulherrscher Shah Jahan.",
+   "starter": "Das Taj Mahal ist ein Grabmal aus weißem Marmor. Viele Handwerker verzierten es mit eingelegten Steinen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "building-golden-gate-bridge",
+   "titel": "Golden Gate Bridge",
+   "einleitung": "Eine Straßenverbindung über die Meerenge Golden Gate.",
+   "starter": "Die Fahrbahn der Brücke hängt an Seilen.",
+   "herkunft": "Entwurf (PR #27), kinder-redaktion: passt",
+   "heikel": false
+  },
+  {
+   "id": "building-panama-canal",
+   "titel": "Der Panamakanal",
+   "einleitung": "Schiffe müssen für viele Reisen nicht mehr ganz um Südamerika fahren.",
+   "starter": "Der Panamakanal ist eine Wasserstraße quer durch das Land. In Schleusen steigt oder sinkt das Wasser. Das Schiff schwimmt obenauf und wird so gehoben oder gesenkt.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": false
+  },
+  {
+   "id": "building-burj-khalifa",
+   "titel": "Burj Khalifa",
+   "einleitung": "Ein Hochhaus mit mehreren Nutzungen, zum Beispiel Wohnungen, Büros und Aussichtsbereichen.",
+   "starter": "Der Burj Khalifa ist 828 Meter hoch, so hoch wie zweieinhalb Eiffeltürme übereinander. Ein starker Kern in der Mitte trägt ihn.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-circuit",
+   "titel": "Wie funktioniert Strom?",
+   "einleitung": "Ein geschlossener Weg verbindet Energiequelle, Leitungen und Lampe.",
+   "starter": "Der Schalter kann den Weg für den Strom öffnen oder schließen.",
+   "herkunft": "Entwurf (PR #27), kinder-redaktion: passt",
+   "heikel": false
+  },
+  {
+   "id": "science-network",
+   "titel": "Wie funktioniert das Internet?",
+   "einleitung": "Eine Nachricht kann als viele kleine Datenpakete durch ein Netz reisen.",
+   "starter": "Eine Nachricht wird in viele kleine Stücke geteilt. Die Stücke reisen getrennt und werden am Ziel wieder zusammengesetzt, wie ein Puzzle.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-flight",
+   "titel": "Warum fliegt ein Flugzeug?",
+   "einleitung": "Vier Kräfte wirken beim Fliegen: Auftrieb, Gewicht, Schub und Luftwiderstand.",
+   "starter": "Ein Flugzeug muss schnell sein. Dann strömt viel Luft an den Flügeln vorbei und hebt sie nach oben.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-gps",
+   "titel": "Wie findet GPS einen Ort?",
+   "einleitung": "Satelliten senden ihre Position und sehr genaue Zeitsignale.",
+   "starter": "Ein Handy oder Navi empfängt Signale von mehreren Satelliten. Daraus rechnet es aus, wo du gerade bist.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-computer",
+   "titel": "Wie rechnet ein Computer mit Nullen und Einsen?",
+   "einleitung": "Ein Bit kann zwei Zustände haben: 0 oder 1. Acht Bits bilden ein Byte.",
+   "starter": "Ein Computer kennt nur zwei Zeichen: 0 und 1, wie Licht aus und Licht an. Daraus baut er Zahlen, Buchstaben und Bilder.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-shadows",
+   "titel": "Woher wissen wir, dass die Erde rund ist?",
+   "einleitung": "An verschiedenen Orten können zur selben Zeit unterschiedlich lange Schatten entstehen.",
+   "starter": "Wäre die Erde flach, wären die Schatten zur selben Zeit überall gleich lang. Sie sind aber verschieden lang. Das passt zu einer runden Erde.",
+   "herkunft": "Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer",
+   "heikel": false
+  },
+  {
+   "id": "history-maya",
+   "titel": "Die Maya: Wissen gestern und heute",
+   "einleitung": "Die Geschichte der Maya gehört zu Amerika. Maya-Sprachen und Gemeinschaften gibt es bis heute.",
+   "starter": "Vor langer Zeit bauten die Maya große Städte mit Tempeln. Sie hatten eine eigene Schrift und genaue Kalender.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-polynesia",
+   "titel": "Über den Pazifik ohne GPS",
+   "einleitung": "Polynesische Seefahrerinnen und Seefahrer nutzten genaue Naturbeobachtung für weite Reisen.",
+   "starter": "Sie hatten keine Karte und keinen Kompass. Sie lasen den Weg aus Sternen, Sonne und Wellen. Ältere brachten das den Jüngeren bei.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-timbuktu",
+   "titel": "Timbuktu: eine Stadt des Wissens",
+   "einleitung": "In Westafrika trafen Handel, Bücher und gelehrte Menschen aufeinander.",
+   "starter": "In Timbuktu gab es viele Bücher, mit der Hand geschrieben. Gelehrte lasen und besprachen sie in Schulen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-greece",
+   "titel": "Fragen stellen im alten Griechenland",
+   "einleitung": "Menschen beschäftigten sich mit Mathematik, Theater, Kunst und politischen Regeln.",
+   "starter": "Im alten Griechenland stellten Menschen viele Fragen: Wie ist die Welt gebaut? Wie leben wir gut zusammen? In Athen durften aber nur manche Männer mitbestimmen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "history-rome",
+   "titel": "Römische Straßen und Wasserwege",
+   "einleitung": "Ein großes Reich verband Orte durch Straßen, Handel und gemeinsame Verwaltung.",
+   "starter": "Die Römer bauten lange Straßen und Wasserleitungen. Das Wasser floss ganz leicht bergab bis in die Städte.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-atmosphere",
+   "titel": "Die Lufthülle der Erde",
+   "einleitung": "Unsere Atmosphäre wird nach dem Temperaturverlauf in fünf große Schichten eingeteilt.",
+   "starter": "Um die Erde liegt eine dicke Schicht aus Luft. Wir atmen sie. Je höher man kommt, desto dünner wird die Luft.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-magnetism",
+   "titel": "Die Erde und ihr Magnetfeld",
+   "einleitung": "Ein unsichtbares Feld wirkt auf Kompassnadeln und viele geladene Teilchen.",
+   "starter": "Die Erde wirkt wie ein riesiger Magnet. Darum zeigt die Kompassnadel nach Norden. Das unsichtbare Feld hält auch Teilchen aus dem Weltall ab.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-currents",
+   "titel": "Warum bewegt sich Meerwasser?",
+   "einleitung": "Wind, Gezeiten und Dichteunterschiede treiben Meeresströmungen an.",
+   "starter": "Wind schiebt das Wasser an der Oberfläche an. Kaltes, salziges Wasser ist schwerer und sinkt nach unten. So kommt das Meer in Bewegung.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-motor",
+   "titel": "Wie wird Strom zu Bewegung?",
+   "einleitung": "Ein Elektromotor nutzt magnetische Kräfte, um eine Drehung anzutreiben.",
+   "starter": "Im Elektromotor ziehen sich Magnete an und stoßen sich ab. Dadurch dreht sich eine Achse, zum Beispiel im Mixer oder im Spielzeugauto.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-foodweb",
+   "titel": "Wer gibt wem Energie?",
+   "einleitung": "Nahrung verbindet Lebewesen. Die Sonne liefert Energie für die meisten Nahrungsketten.",
+   "starter": "Gras wächst mit Sonnenlicht. Der Hase frisst das Gras, der Fuchs frisst den Hasen. So wandert die Kraft der Sonne von Lebewesen zu Lebewesen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-sound",
+   "titel": "Warum klingt ein Ton hoch oder tief?",
+   "einleitung": "Ein Ton beginnt mit einer Schwingung und breitet sich durch ein Material aus.",
+   "starter": "Ein Ton entsteht, wenn etwas schnell hin und her schwingt. Schwingt es sehr schnell, klingt der Ton hoch. Schwingt es langsam, klingt er tief.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-solar-system",
+   "titel": "Planeten: groß und weit entfernt",
+   "einleitung": "Acht Planeten bewegen sich um die Sonne. Größen und Abstände sind sehr verschieden.",
+   "starter": "Die Erde ist ein kleiner Planet aus Gestein. Jupiter ist etwa elfmal so breit wie die Erde. Neptun ist 30-mal so weit von der Sonne weg wie wir.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-energy",
+   "titel": "Sonnenstrom auch am Abend?",
+   "einleitung": "Eine Solarzelle wandelt Licht in elektrische Energie um. Ein Akku kann Energie für später speichern.",
+   "starter": "Am Tag macht die Sonne Strom. Ein Akku hebt etwas davon auf, wie eine Vorratsdose. Am Abend leuchtet die Lampe damit.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-patterns",
+   "titel": "Kann ein Computer Muster erkennen?",
+   "einleitung": "Computer können Beispiele vergleichen. Bei lernenden Systemen beeinflussen die Beispiele, was sie erkennen.",
+   "starter": "Ein Computer kann Dinge sortieren, zum Beispiel Bilder von Katzen und Hunden. Dafür braucht er viele Beispiele. Sind die Beispiele schlecht, sortiert er falsch.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-photosynthesis",
+   "titel": "Wie Blätter Sonnenlicht nutzen",
+   "einleitung": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+   "starter": "Pflanzen müssen nicht essen. Sie machen ihre Nahrung selbst, mit Licht als Kraft. Dabei geben sie Sauerstoff ab, den wir zum Atmen brauchen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-pollination",
+   "titel": "Blüten und ihre Pollenboten",
+   "einleitung": "Wenn Pollen die passende Stelle einer Blüte erreichen, beginnt ein Weg zu neuen Samen.",
+   "starter": "Bienen und andere Tiere tragen Blütenstaub von Blüte zu Blüte. Erst dann können Samen und Früchte wachsen.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-fungi",
+   "titel": "Das verborgene Reich der Pilze",
+   "einleitung": "Unter einem Pilzhut kann ein weit verzweigtes Geflecht liegen.",
+   "starter": "Pilze sind keine Pflanzen, sondern eine eigene Gruppe von Lebewesen. Viele zerlegen totes Laub und Holz. So wird daraus wieder guter Boden.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-coral-reef",
+   "titel": "Ein Riff voller Zusammenarbeit",
+   "einleitung": "Viele tropische Riffe werden von kleinen Tieren und ihren Algenpartnern aufgebaut.",
+   "starter": "Korallen sehen aus wie Steine oder Pflanzen. Sie sind aber winzige Tiere. In ihnen wohnen kleine Algen, die ihnen Nahrung geben.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-seasons",
+   "titel": "Ein Jahr, zwei verschiedene Sommer",
+   "einleitung": "Die geneigte Erdachse verändert im Jahreslauf Tageslänge und Sonnenstand.",
+   "starter": "Die Erde steht ein bisschen schief. Darum bekommt mal die eine, mal die andere Hälfte mehr Sonne. Wenn bei uns Sommer ist, ist in Australien Winter.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  },
+  {
+   "id": "science-tides",
+   "titel": "Der Mond bewegt das Meer",
+   "einleitung": "Mond und Sonne beeinflussen das regelmäßige Steigen und Fallen des Meeresspiegels.",
+   "starter": "An vielen Küsten steigt das Wasser zweimal am Tag und geht wieder zurück. Das heißt Ebbe und Flut. Der Mond zieht dabei am Wasser.",
+   "herkunft": "kinder-redaktion",
+   "heikel": false
+  }
+ ],
+ "tiere": [
+  {
+   "id": "animal-platypus",
+   "titel": "Schnabeltier",
+   "einleitungAlt": "Eier und Milch passen zusammen.",
+   "einleitung": "Wie findet das Schnabeltier unter Wasser sein Futter? Sein weicher Schnabel spürt es auf.",
+   "starterAlt": "Eier und Milch passen zusammen.",
+   "starter": "Das Schnabeltier legt Eier. Trotzdem trinken seine Jungen Milch, wie bei allen Säugetieren.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-short-beaked-echidna",
+   "titel": "Kurzschnabeligel",
+   "einleitungAlt": "Ein Name verrät noch keine Verwandtschaft.",
+   "einleitung": "Stacheln, lange Schnauze, klebrige Zunge: Der Kurzschnabeligel ist ein Ameisenjäger.",
+   "starterAlt": "Ein Name verrät noch keine Verwandtschaft.",
+   "starter": "Der Kurzschnabeligel hat Stacheln, ist aber kein Igel. Er legt sogar Eier.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-okapi",
+   "titel": "Okapi",
+   "einleitungAlt": "Streifen allein erzählen keine ganze Familiengeschichte.",
+   "einleitung": "Das Okapi pflückt Blätter mit seiner langen Zunge.",
+   "starterAlt": "Streifen allein erzählen keine ganze Familiengeschichte.",
+   "starter": "Das Okapi hat Streifen an den Beinen wie ein Zebra. Verwandt ist es aber mit der Giraffe.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-meerkat",
+   "titel": "Erdmännchen",
+   "einleitungAlt": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+   "einleitung": "Ein Erdmännchen ist kein Männchen aus Erde und auch keine Katze, sondern eine Manguste.",
+   "starterAlt": "Gemeinsam leben heißt unterschiedliche Aufgaben beobachten.",
+   "starter": "Erdmännchen leben in Gruppen. Einige suchen Futter, andere halten Wache und rufen bei Gefahr.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-ring-tailed-lemur",
+   "titel": "Katta",
+   "einleitungAlt": "Nachrichten können über mehrere Sinne ankommen.",
+   "einleitung": "Kattas strecken ihre langen Schwänze in die Luft, damit die Gruppe zusammenbleibt.",
+   "starterAlt": "Nachrichten können über mehrere Sinne ankommen.",
+   "starter": "Kattas reden ohne Worte: mit dem Schwanz, mit Rufen und mit Duft.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-north-american-beaver",
+   "titel": "Nordamerikanischer Biber",
+   "einleitungAlt": "Bauen kann einen ganzen Lebensraum verändern.",
+   "einleitung": "Der Eingang zur Biberburg liegt unter Wasser, die Wohnstube darüber.",
+   "starterAlt": "Bauen kann einen ganzen Lebensraum verändern.",
+   "starter": "Der Damm des Bibers staut einen Teich auf. Dort finden auch andere Lebewesen ein Zuhause.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-walrus",
+   "titel": "Walross",
+   "einleitungAlt": "Tastborsten helfen, Nahrung zu finden.",
+   "einleitung": "Walrosse haben lange Stoßzähne, doch zum Futterfinden nehmen sie etwas anderes.",
+   "starterAlt": "Tastborsten helfen, Nahrung zu finden.",
+   "starter": "Walrosse tasten am Meeresboden mit ihren Barthaaren nach Futter.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-red-fox",
+   "titel": "Rotfuchs",
+   "einleitungAlt": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+   "einleitung": "Ein Fuchs mitten in der Stadt? Das kommt vor: Rotfüchse leben auch dort, wo Menschen wohnen.",
+   "starterAlt": "Ein Lebensraum ist mehr als ein einzelner Wald.",
+   "starter": "Der Rotfuchs ist ein Wildtier. Er lebt im Wald, auf dem Feld und in Städten.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-raccoon",
+   "titel": "Waschbär",
+   "einleitungAlt": "Mit den Pfoten Informationen sammeln.",
+   "einleitung": "Waschbären leben im Wald, manche aber auch nah an unseren Häusern.",
+   "starterAlt": "Mit den Pfoten Informationen sammeln.",
+   "starter": "Waschbären fühlen mit ihren Vorderpfoten sehr fein. So erkennen sie auch Dinge, die sie nicht sehen.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-hedgehog",
+   "titel": "Braunbrustigel",
+   "einleitungAlt": "Ein guter Garten braucht auch Verstecke.",
+   "einleitung": "Nachts, wenn wir schlafen, geht der Igel auf Käfersuche.",
+   "starterAlt": "Ein guter Garten braucht auch Verstecke.",
+   "starter": "Igel brauchen Hecken und Laubhaufen als Versteck. Darin ruhen sie sich aus.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-barn-owl",
+   "titel": "Schleiereule",
+   "einleitungAlt": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+   "einleitung": "Ihr helles Gesicht sieht aus wie ein Schleier. Daher hat die Schleiereule ihren Namen.",
+   "starterAlt": "Artwissen benötigt mehr als ein bekanntes Gesicht.",
+   "starter": "Die Schleiereule jagt vor allem Mäuse. Die leben gern auf Wiesen mit hohem Gras.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-kingfisher",
+   "titel": "Eisvogel",
+   "einleitungAlt": "Eine Farbe kann durch Struktur entstehen.",
+   "einleitung": "Der Eisvogel wartet auf einem Ast am Wasser, bis ein Fisch vorbeikommt.",
+   "starterAlt": "Eine Farbe kann durch Struktur entstehen.",
+   "starter": "Der Eisvogel leuchtet blau. Doch in seinen Federn steckt gar keine blaue Farbe, sondern eine feine Bauweise.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-ostrich",
+   "titel": "Afrikanischer Strauß",
+   "einleitungAlt": "Nicht fliegen heißt nicht nutzlos.",
+   "einleitung": "Ein Strauß kann schwerer werden als ein erwachsener Mensch und ist trotzdem ein Vogel.",
+   "starterAlt": "Nicht fliegen heißt nicht nutzlos.",
+   "starter": "Der Strauß kann nicht fliegen. Seine Flügel helfen ihm aber, beim Laufen das Gleichgewicht zu halten.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-atlantic-puffin",
+   "titel": "Papageitaucher",
+   "einleitungAlt": "Zwischen Insel und offenem Meer wechseln.",
+   "einleitung": "Papageitaucher brüten in Höhlen in der Erde, auf Inseln im Nordatlantik.",
+   "starterAlt": "Zwischen Insel und offenem Meer wechseln.",
+   "starter": "Papageitaucher tauchen nach kleinen Fischen. Außerhalb der Brutzeit leben sie weit draußen auf dem Meer.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-common-chameleon",
+   "titel": "Europäisches Chamäleon",
+   "einleitungAlt": "Farbwechsel ist keine beliebige Verkleidung.",
+   "einleitung": "Die Augen eines Chamäleons bewegen sich unabhängig voneinander.",
+   "starterAlt": "Farbwechsel ist keine beliebige Verkleidung.",
+   "starter": "Ein Chamäleon kann seine Farbe ändern. Das hängt von Wärme und Stimmung ab, nicht vom Hintergrund.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-fire-salamander",
+   "titel": "Feuersalamander",
+   "einleitungAlt": "Wald und Bach gehören zu einer Lebensgeschichte.",
+   "einleitung": "Junge Feuersalamander kommen im Wasser zur Welt und atmen mit Kiemen außen am Körper.",
+   "starterAlt": "Wald und Bach gehören zu einer Lebensgeschichte.",
+   "starter": "Feuersalamander leben in feuchten Wäldern. Ihre Larven brauchen aber Wasser.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-common-frog",
+   "titel": "Grasfrosch",
+   "einleitungAlt": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+   "einleitung": "Grasfrösche sind gar nicht immer im Wasser: Oft sitzen sie im Garten oder im Wald.",
+   "starterAlt": "Ein Tier braucht im Laufe des Lebens verschiedene Orte.",
+   "starter": "Grasfrösche legen ihren Laich ins Wasser. Daraus werden Kaulquappen und später Frösche.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-eastern-clown-anemonefish",
+   "titel": "Echter Clownfisch",
+   "einleitungAlt": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+   "einleitung": "Der Clownfisch wohnt zwischen den Fangarmen einer Seeanemone, und die ist auch ein Tier.",
+   "starterAlt": "Ein ähnliches Muster kann verschiedene Arten verdecken.",
+   "starter": "Es gibt zwei Clownfisch-Arten, die fast gleich aussehen. Am Muster allein erkennt man nicht, welche es ist.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-european-eel",
+   "titel": "Europäischer Aal",
+   "einleitungAlt": "Eine Wanderung verbindet Flüsse und Ozean.",
+   "einleitung": "Junge Aale treiben mit Meeresströmungen bis an die Küsten Europas.",
+   "starterAlt": "Eine Wanderung verbindet Flüsse und Ozean.",
+   "starter": "Aale wandern zwischen Flüssen und Meer. Hindernisse im Fluss können ihnen den Weg versperren.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-monarch-butterfly",
+   "titel": "Monarchfalter",
+   "einleitungAlt": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+   "einleitung": "Monarchfalter-Raupen fressen Seidenpflanzen. Deren Abwehrstoffe schützen dann die Raupen selbst.",
+   "starterAlt": "Eine Art kann verschiedene Wanderstrategien besitzen.",
+   "starter": "Viele Monarchfalter in Nordamerika fliegen sehr weite Strecken. Aber nicht alle machen diese Reise.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-garden-snail",
+   "titel": "Gefleckte Weinbergschnecke",
+   "einleitungAlt": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+   "einleitung": "Schnecken siehst du am ehesten nachts oder wenn es feucht ist.",
+   "starterAlt": "Ein vertrauter Gartenbewohner hat mehrere Sinne.",
+   "starter": "Schnecken finden ihren Weg durch Tasten und Riechen. Die Welt fühlt sich für sie anders an als für uns.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-european-lobster",
+   "titel": "Europäischer Hummer",
+   "einleitungAlt": "Wachsen trotz harter Außenhülle.",
+   "einleitung": "Ein Hummer hat zwei große Scheren, und jede kann etwas anderes.",
+   "starterAlt": "Wachsen trotz harter Außenhülle.",
+   "starter": "Ein Hummer steckt in einer harten Schale. Um zu wachsen, streift er sie ab und bekommt eine neue.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-common-cuttlefish",
+   "titel": "Gewöhnliche Sepia",
+   "einleitungAlt": "Tintenfisch ist kein einzelner Körperbau.",
+   "einleitung": "Eine Sepia hat acht Arme und dazu zwei lange Fangarme.",
+   "starterAlt": "Tintenfisch ist kein einzelner Körperbau.",
+   "starter": "Die Sepia kann schnell Farbe und Muster wechseln. So versteckt sie sich oder zeigt anderen etwas.",
+   "herkunft": "kinder-redaktion"
+  },
+  {
+   "id": "animal-short-snouted-seahorse",
+   "titel": "Kurzschnäuziges Seepferdchen",
+   "einleitungAlt": "Ein Greifschwanz kann im Wasser Halt geben.",
+   "einleitung": "Das Seepferdchen sieht aus wie ein kleines Pferd, ist aber ein Fisch.",
+   "starterAlt": "Ein Greifschwanz kann im Wasser Halt geben.",
+   "starter": "Mit seinem Schwanz hält sich das Seepferdchen an Pflanzen fest. So hat es im Wasser Halt.",
+   "herkunft": "kinder-redaktion"
+  }
+ ]
+}
