@@ -136,7 +136,8 @@ function currentIds() {
   // Lernrouten: Links #world/route/<id>, abgeschlossene Routen als `route:<id>` in den Entdeckungen.
   ids.routes = exported('world-routes').map(r => r.id);
   // Zusatzfragen und „Stimmt das?“ der Wissenskarten: `world-question:<id>` im Pass, `claim:<id>` in den Spielständen.
-  ids['world-card-extras'] = topics.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? [])].map(x => x.id));
+  // Dazu „Ordne richtig“ (Teilschritt 3): `ordnen:<id>` im Spielstand der Karte.
+  ids['world-card-extras'] = topics.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? []), ...(t.ordnen ? [t.ordnen] : [])].map(x => x.id));
   return ids;
 }
 

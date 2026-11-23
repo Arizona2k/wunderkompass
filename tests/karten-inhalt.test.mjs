@@ -230,12 +230,30 @@ test('Pilot-Karten halten das Längen-Budget', () => {
   assert.deepEqual(funde, []);
 });
 
-test('richtige Antwort der Zusatzfragen ist nicht als einzige die längste', () => {
-  const funde = catalog.flatMap(t => (t.moreQuestions ?? []).filter(q => {
-    const laenge = q.answers.map(a => a.length);
-    return laenge.every((l, i) => i === q.correct || l < laenge[q.correct]);
-  }).map(q => q.id));
-  assert.deepEqual(funde, []);
+// Teilschritt 3, E9: Ratemuster je Gruppe. Die richtige Antwort ist höchstens in 45 % der Fragen die einzige längste
+// und höchstens in 45 % die einzige kürzeste (Zeichen). Bei den Zusatzfragen außerdem mindestens 15 % die einzige
+// längste: Die frühere Regel „nie die längste“ war selbst ein Ratemuster (Befund 4 des stufen-pruefer).
+function muster(fragen) {
+  let lang = 0, kurz = 0;
+  for (const q of fragen) {
+    const l = q.answers.map(a => a.length), r = l[q.correct];
+    if (l.every((x, i) => i === q.correct || x < r)) lang++;
+    if (l.every((x, i) => i === q.correct || x > r)) kurz++;
+  }
+  return {lang: lang / fragen.length, kurz: kurz / fragen.length};
+}
+test('Ratemuster der Zusatzfragen: richtige Antwort nicht auffällig lang oder kurz', () => {
+  const m = muster(catalog.flatMap(t => t.moreQuestions ?? []));
+  assert.ok(m.lang <= 0.45 && m.kurz <= 0.45 && m.lang >= 0.15, JSON.stringify(m));
+});
+test('Ratemuster der Challenge-Fragen: richtige Antwort nicht auffällig lang oder kurz', () => {
+  const m = muster(catalog.flatMap(t => t.challenges ?? []));
+  assert.ok(m.lang <= 0.45 && m.kurz <= 0.45, JSON.stringify(m));
+});
+test('Mutationsprobe: muster erkennt „immer die längste“ und „nie die längste“', () => {
+  const q = (answers, correct) => ({answers, correct});
+  assert.deepEqual(muster([q(['lang lang', 'a', 'b'], 0), q(['x', 'lang lang'], 1)]), {lang: 1, kurz: 0});
+  assert.deepEqual(muster([q(['a', 'lang lang', 'b'], 0), q(['x', 'yy'], 0)]), {lang: 0, kurz: 0.5});
 });
 
 // Über der Auflösung steht schon „Das stimmt.“ oder „Das stimmt nicht.“ (stimmt-das.tsx).
