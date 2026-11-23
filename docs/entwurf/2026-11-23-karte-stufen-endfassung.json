@@ -1,0 +1,2114 @@
+{
+ "fragen": [
+  {
+   "karte": "animal-african-savanna-elephant",
+   "grp": "pilot",
+   "id": "animal-african-savanna-elephant:rate-1",
+   "level": "profi",
+   "prompt": "Wie trinkt ein großer Elefant?",
+   "answers": [
+    "Er spritzt sich Wasser ins Maul",
+    "Er schluckt es direkt durch den Rüssel",
+    "Er schleckt Wasser wie ein Hund",
+    "Er taucht den Kopf ins Wasser und schluckt"
+   ],
+   "correct": 0,
+   "why": "Er saugt Wasser ein Stück weit in den Rüssel. Dann spritzt er es sich ins Maul und schluckt.",
+   "hints": [
+    "Der Rüssel ist auch seine Nase."
+   ],
+   "wrongReasons": [
+    null,
+    "Der Rüssel ist auch seine Nase. Wasser direkt hinunterschlucken kann er damit nicht.",
+    "Elefanten schlecken nicht mit der Zunge wie ein Hund.",
+    "So trinken höchstens ganz junge Elefanten, die mit dem Rüssel noch üben. Ein großer Elefant nimmt den Rüssel."
+   ]
+  },
+  {
+   "karte": "animal-african-savanna-elephant",
+   "grp": "pilot",
+   "id": "animal-african-savanna-elephant:rate-2",
+   "level": "profi",
+   "prompt": "Wie schwer ist ein Elefantenbaby bei der Geburt?",
+   "answers": [
+    "Etwa 3 Kilogramm",
+    "Etwa 100 Kilogramm",
+    "Etwa 1.000 Kilogramm",
+    "Etwa 30 Kilogramm"
+   ],
+   "correct": 1,
+   "why": "Ein Savannenelefant wiegt bei der Geburt rund 100 Kilogramm. Nach etwa 20 Minuten kann er schon stehen.",
+   "hints": [
+    "Es wiegt schon mehr als ein erwachsener Mensch."
+   ],
+   "wrongReasons": [
+    "3 Kilogramm wiegt ungefähr ein Menschenbaby. Ein Elefantenbaby ist viel schwerer.",
+    null,
+    "So viel wiegt ein kleines Auto. Das Baby muss ja noch in den Bauch der Mutter passen.",
+    "30 Kilogramm wiegt etwa ein Schulkind. Ein Elefantenbaby ist schwerer."
+   ]
+  },
+  {
+   "karte": "animal-african-savanna-elephant",
+   "grp": "pilot",
+   "id": "animal-african-savanna-elephant:rate-3",
+   "level": "profi",
+   "prompt": "Wer führt eine Elefantenherde an?",
+   "answers": [
+    "Der größte und stärkste Bulle",
+    "Ein junges Männchen",
+    "Meist das älteste Weibchen",
+    "Meist die Mutter mit den meisten Jungen"
+   ],
+   "correct": 2,
+   "why": "Meist führt das älteste Weibchen die Herde, die Leitkuh. Erwachsene Männchen leben allein oder in kleinen Gruppen.",
+   "hints": [
+    "Junge Bullen verlassen die Familie, wenn sie erwachsen werden."
+   ],
+   "wrongReasons": [
+    "Erwachsene Bullen leben meist allein oder in kleinen Gruppen, nicht in der Familienherde.",
+    "Junge Männchen haben noch wenig Erfahrung.",
+    null,
+    "Viele Junge zu haben, macht ein Tier nicht zur Anführerin. Wichtig ist etwas anderes."
+   ]
+  },
+  {
+   "karte": "animal-african-savanna-elephant",
+   "grp": "pilot",
+   "id": "animal-african-savanna-elephant:rate-4",
+   "level": "experte",
+   "prompt": "In einem sehr trockenen Jahr sind viele Wasserlöcher leer. Die älteste Elefantenkuh führt die Herde. Warum ist das jetzt gut?",
+   "answers": [
+    "Sie ist die Stärkste und kann kämpfen",
+    "Sie erinnert sich an Wasserstellen von früher",
+    "Sie ist die Schnellste der Herde",
+    "Sie braucht selbst am wenigsten Wasser"
+   ],
+   "correct": 1,
+   "why": "Eine alte Leitkuh hat schon viele trockene Jahre erlebt. Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.",
+   "hints": [
+    "Schau im Steckbrief nach: Wie alt kann ein Elefant werden?",
+    "In 50 Jahren gibt es viele trockene Jahre. Wer sie erlebt hat, weiß mehr."
+   ],
+   "wrongReasons": [
+    "Kämpfen hilft nicht, wenn das Wasserloch leer ist.",
+    null,
+    "Schnell laufen hilft nichts, wenn man nicht weiß, wohin.",
+    "Auch die Leitkuh braucht viel Wasser. Sie hat einen anderen Vorteil."
+   ]
+  },
+  {
+   "karte": "animal-polar-bear",
+   "grp": "pilot",
+   "id": "animal-polar-bear:rate-1",
+   "level": "profi",
+   "prompt": "Was machen die meisten Eisbären im Winter?",
+   "answers": [
+    "Sie halten einen langen Winterschlaf",
+    "Sie wandern zum Südpol",
+    "Sie jagen weiter Robben",
+    "Sie fressen nichts und leben vom Fett"
+   ],
+   "correct": 2,
+   "why": "Die meisten Eisbären jagen auch im Winter Robben. Nur Weibchen, die Junge erwarten, bleiben den ganzen Winter in einer Schneehöhle.",
+   "hints": [
+    "Im Winter ist das Meereis besonders groß."
+   ],
+   "wrongReasons": [
+    "Nur Weibchen, die Junge erwarten, bleiben den Winter über in einer Schneehöhle.",
+    "Eisbären leben im Norden. Am Südpol gibt es keine Eisbären.",
+    null,
+    "Hungern müssen Eisbären eher im Sommer, wenn das Eis schmilzt."
+   ]
+  },
+  {
+   "karte": "animal-polar-bear",
+   "grp": "pilot",
+   "id": "animal-polar-bear:rate-2",
+   "level": "profi",
+   "prompt": "Wie schwimmt ein Eisbär?",
+   "answers": [
+    "Er paddelt mit den Vorderpfoten",
+    "Er paddelt nur mit den Hinterbeinen",
+    "Er lässt sich auf Eisschollen treiben",
+    "Er paddelt mit allen vier Beinen gleich stark"
+   ],
+   "correct": 0,
+   "why": "Eisbären schwimmen sehr gut. Sie paddeln mit den breiten Vorderpfoten und lenken mit den Hinterbeinen.",
+   "hints": [
+    "Seine Pfoten sind sehr groß und breit."
+   ],
+   "wrongReasons": [
+    null,
+    "Die Hinterbeine hält er flach. Damit lenkt er wie mit einem Ruder.",
+    "Er kann gut selbst schwimmen, auch weite Strecken.",
+    "Die Hinterbeine lenken nur. Die Kraft kommt von einem Beinpaar."
+   ]
+  },
+  {
+   "karte": "animal-polar-bear",
+   "grp": "pilot",
+   "id": "animal-polar-bear:rate-3",
+   "level": "experte",
+   "prompt": "Ein Eisbär schwimmt lange im eiskalten Meer. Sein Fell ist klatschnass. Was hält ihn jetzt vor allem warm?",
+   "answers": [
+    "Die Luft in seinem Fell",
+    "Seine schwarze Haut",
+    "Seine dicke Fettschicht",
+    "Seine großen, breiten Tatzen"
+   ],
+   "correct": 2,
+   "why": "Nasses Fell hält kaum noch Luft fest. Im Wasser wärmt ihn vor allem seine Fettschicht. Sie ist bis zu zehn Zentimeter dick, fast so lang wie deine Hand.",
+   "hints": [
+    "Lies noch einmal: Was hält den Eisbären warm?",
+    "Nasses Fell klebt zusammen. Ist dann noch viel Luft darin?"
+   ],
+   "wrongReasons": [
+    "Nasses Fell klebt zusammen. Dann ist kaum noch Luft darin.",
+    "Die Haut liegt unter dem Fell. Im eiskalten Wasser hält sie ihn nicht warm.",
+    null,
+    "Die Tatzen helfen beim Schwimmen, aber sie halten nicht warm."
+   ]
+  },
+  {
+   "karte": "animal-common-octopus",
+   "grp": "pilot",
+   "id": "animal-common-octopus:rate-1",
+   "level": "profi",
+   "prompt": "Wie lange lebt ein Krake meistens?",
+   "answers": [
+    "Nur etwa 1 bis 2 Jahre",
+    "So lange wie ein Mensch",
+    "Mehr als 100 Jahre",
+    "Etwa 10 bis 20 Jahre"
+   ],
+   "correct": 0,
+   "why": "Ein Krake lebt meist nur etwa 1 bis 2 Jahre. Das ist viel kürzer als ein Menschenleben.",
+   "hints": [
+    "Schon mit etwa einem Jahr kann er Junge bekommen."
+   ],
+   "wrongReasons": [
+    null,
+    "So alt wird ein Krake bei weitem nicht.",
+    "100 Jahre schaffen manche Schildkröten, aber kein Krake.",
+    "So lange lebt ein Krake nicht. Er wird überraschend schnell erwachsen."
+   ]
+  },
+  {
+   "karte": "animal-common-octopus",
+   "grp": "pilot",
+   "id": "animal-common-octopus:rate-2",
+   "level": "entdecker",
+   "prompt": "Wie bewegt sich ein Krake über den Meeresboden?",
+   "answers": [
+    "Er schwimmt immer wie ein Fisch",
+    "Er rollt sich wie ein Ball",
+    "Er läuft auf seinen Armen"
+   ],
+   "correct": 2,
+   "why": "Am Meeresboden läuft er auf seinen Armen. Schwimmen kann er auch, etwa mit einem Wasserstrahl auf der Flucht.",
+   "hints": [
+    "Überlege, womit er sich am Boden abstützen kann."
+   ],
+   "wrongReasons": [
+    "Schwimmen kann er auch, aber nicht immer. Am Boden macht er es anders.",
+    "Rollen wie ein Ball kann ein Krake nicht.",
+    null
+   ]
+  },
+  {
+   "karte": "animal-common-octopus",
+   "grp": "pilot",
+   "id": "animal-common-octopus:rate-3",
+   "level": "experte",
+   "prompt": "Ein Krake quetscht sich durch einen Spalt. Der Spalt ist viel schmaler als sein Körper. Wie geht das?",
+   "answers": [
+    "Seine Knochen sind weich und biegsam",
+    "Er drückt den Spalt mit den Armen breiter",
+    "Er hat keine Knochen und macht sich schmal",
+    "Nur seine Arme passen hinein"
+   ],
+   "correct": 2,
+   "why": "Ein Krake ist ein Weichtier und hat keine Knochen. Fast sein ganzer Körper ist weich. So quetscht er sich durch erstaunlich enge Spalten.",
+   "hints": [
+    "Im Steckbrief steht seine Tiergruppe. Was bedeutet das Wort?",
+    "Weichtiere haben keine Knochen."
+   ],
+   "wrongReasons": [
+    "Weiche Knochen hat ein Krake nicht. Denk an seine Tiergruppe.",
+    "Fels lässt sich nicht wegdrücken, auch nicht von starken Armen.",
+    null,
+    "Der ganze Krake kommt durch den Spalt, nicht nur die Arme."
+   ]
+  },
+  {
+   "karte": "history-stone_tools",
+   "grp": "pilot",
+   "id": "history-stone_tools:rate-1",
+   "level": "profi",
+   "prompt": "Lebten damals noch große Dinosaurier?",
+   "answers": [
+    "Nein, sie waren längst ausgestorben",
+    "Ja, sie lebten gleich nebenan",
+    "Ja, man jagte sie mit Steinwerkzeugen",
+    "Nein, sie entstanden erst später"
+   ],
+   "correct": 0,
+   "why": "Die großen Dinosaurier starben vor etwa 66 Millionen Jahren aus. Die ersten Steinwerkzeuge sind viel jünger.",
+   "hints": [
+    "Die Dinosaurier starben vor etwa 66 Millionen Jahren aus. Vergleiche mit dem Steckbrief."
+   ],
+   "wrongReasons": [
+    null,
+    "Schau auf die Zeit: Lebten beide wirklich zur selben Zeit?",
+    "Vergleiche die Zahlen: Wann lebten die Dinosaurier, wann gab es die Werkzeuge?",
+    "Prüfe die Reihenfolge noch einmal: Wer war zuerst da?"
+   ]
+  },
+  {
+   "karte": "history-stone_tools",
+   "grp": "pilot",
+   "id": "history-stone_tools:rate-2",
+   "level": "entdecker",
+   "prompt": "Wie bekam ein Stein früher eine scharfe Kante?",
+   "answers": [
+    "Man schmolz ihn im Feuer",
+    "Man ließ ihn lange in der Sonne liegen",
+    "Man schlug Steine gegeneinander"
+   ],
+   "correct": 2,
+   "why": "Schlägt man Steine gegeneinander, brechen Stücke ab. So entstehen scharfe Kanten.",
+   "hints": [
+    "Denk daran, was passiert, wenn ein Stein auf einen harten Stein fällt."
+   ],
+   "wrongReasons": [
+    "Stein schmilzt erst bei riesiger Hitze. Ein Lagerfeuer schafft das nicht.",
+    "Sonne macht einen Stein warm, aber nicht scharf.",
+    null
+   ]
+  },
+  {
+   "karte": "history-stone_tools",
+   "grp": "pilot",
+   "id": "history-stone_tools:rate-3",
+   "level": "entdecker",
+   "prompt": "Woran erkennen Forschende, wofür ein Werkzeug diente?",
+   "answers": [
+    "An Spuren am Stein",
+    "An alten Anleitungen auf Papier",
+    "An der Farbe des Steins"
+   ],
+   "correct": 0,
+   "why": "Beim Benutzen entstehen Gebrauchsspuren am Stein. Daraus lernen Forschende oft, wofür das Werkzeug diente.",
+   "hints": [
+    "Ein benutztes Werkzeug sieht anders aus als ein neues."
+   ],
+   "wrongReasons": [
+    null,
+    "Papier gab es damals noch lange nicht.",
+    "Die Farbe zeigt, welcher Stein es ist, aber nicht, wofür er diente."
+   ]
+  },
+  {
+   "karte": "history-stone_tools",
+   "grp": "pilot",
+   "id": "history-stone_tools:rate-4",
+   "level": "experte",
+   "prompt": "Man hat sehr alte Steinwerkzeuge gefunden. Holzwerkzeuge aus dieser Zeit fehlen. Woran kann das liegen?",
+   "answers": [
+    "Damals wuchsen dort noch keine Bäume",
+    "Holz taugt nicht für Werkzeuge",
+    "Holz verrottet, Stein bleibt erhalten",
+    "Alle Holzwerkzeuge wurden verbrannt"
+   ],
+   "correct": 2,
+   "why": "Holz verrottet mit der Zeit. Stein hält Millionen Jahre. Darum wissen wir nicht, ob die frühen Verwandten des Menschen auch Holz benutzten.",
+   "hints": [
+    "Was passiert mit einem Ast, der jahrelang im Wald liegt?",
+    "Ein Stein liegt nach Millionen Jahren noch da. Ein Ast nicht."
+   ],
+   "wrongReasons": [
+    "Bäume gab es schon viele Millionen Jahre vorher.",
+    "Aus Holz kann man gut Werkzeuge machen, zum Beispiel Speere oder Grabstöcke.",
+    null,
+    "Feuer nutzte damals noch niemand. Das steht bei „Stimmt das?“."
+   ]
+  },
+  {
+   "karte": "history-apollo11",
+   "grp": "pilot",
+   "id": "history-apollo11:rate-1",
+   "level": "profi",
+   "prompt": "Wer blieb bei Apollo 11 im Raumschiff?",
+   "answers": [
+    "Neil Armstrong",
+    "Niemand, alle stiegen aus",
+    "Michael Collins",
+    "Buzz Aldrin"
+   ],
+   "correct": 2,
+   "why": "Michael Collins steuerte das Raumschiff und kreiste um den Mond. Armstrong und Aldrin landeten mit der Mondfähre.",
+   "hints": [
+    "Einer musste im Raumschiff auf die anderen warten."
+   ],
+   "wrongReasons": [
+    "Neil Armstrong betrat als Erster den Mond. Er war also nicht im Raumschiff.",
+    "Einer musste oben bleiben und das Raumschiff steuern.",
+    null,
+    "Buzz Aldrin stieg mit Armstrong auf dem Mond aus."
+   ]
+  },
+  {
+   "karte": "history-apollo11",
+   "grp": "pilot",
+   "id": "history-apollo11:rate-2",
+   "level": "profi",
+   "prompt": "Wie kamen die Astronauten zurück auf die Erde?",
+   "answers": [
+    "Auf einer Landebahn wie ein Flugzeug",
+    "Mit Fallschirmen ins Meer",
+    "Mit der Mondfähre auf eine Wiese",
+    "Mit Fallschirmen auf festes Land"
+   ],
+   "correct": 1,
+   "why": "Ihre Kapsel schwebte an Fallschirmen in den Pazifik. Ein Hubschrauber holte die drei aus dem Wasser und flog sie zu einem Schiff.",
+   "hints": [
+    "Die Kapsel brauchte etwas, das sie langsamer macht."
+   ],
+   "wrongReasons": [
+    "Die Kapsel hatte keine Flügel und keine Räder zum Landen.",
+    null,
+    "Die Mondfähre blieb beim Mond zurück. Sie kam nicht mit zur Erde.",
+    "So landen andere Raumkapseln, zum Beispiel aus Russland. Apollo 11 machte es anders."
+   ]
+  },
+  {
+   "karte": "history-apollo11",
+   "grp": "pilot",
+   "id": "history-apollo11:rate-3",
+   "level": "entdecker",
+   "prompt": "Wie lange dauerte die ganze Reise ungefähr?",
+   "answers": [
+    "Ein paar Stunden",
+    "Etwa 8 Tage",
+    "Mehrere Jahre"
+   ],
+   "correct": 1,
+   "why": "Vom Start bis zur Landung im Meer vergingen etwa 8 Tage. Bis zur Landung auf dem Mond dauerte es schon 4 Tage.",
+   "hints": [
+    "Allein der Hinflug dauerte mehrere Tage."
+   ],
+   "wrongReasons": [
+    "Allein der Hinflug zum Mond dauerte schon Tage.",
+    null,
+    "Jahre dauerte es nicht. Der Mond ist viel näher als andere Planeten."
+   ]
+  },
+  {
+   "karte": "history-apollo11",
+   "grp": "pilot",
+   "id": "history-apollo11:rate-4",
+   "level": "experte",
+   "prompt": "Der Hinflug dauerte etwa 4 Tage. Auf dem Mond blieben sie fast einen Tag. Die ganze Reise dauerte etwa 8 Tage. Wie lange dauerte ungefähr der Rückflug?",
+   "answers": [
+    "Etwa 4 Tage",
+    "Etwa 3 Tage",
+    "Etwa 1 Tag",
+    "Etwa 8 Tage"
+   ],
+   "correct": 1,
+   "why": "8 Tage minus 4 Tage Hinflug minus fast 1 Tag auf dem Mond: Für den Rückflug bleiben etwa 3 Tage.",
+   "hints": [
+    "Die Reise hat drei Teile: hin, auf dem Mond, zurück.",
+    "Von den 8 Tagen sind 4 Tage und noch fast 1 Tag schon vorbei."
+   ],
+   "wrongReasons": [
+    "4 Tage dauerte der Hinflug. Zähle nach, was von 8 Tagen übrig bleibt.",
+    null,
+    "Fast einen Tag waren sie auf dem Mond. Gesucht ist der Rückflug.",
+    "8 Tage dauerte die ganze Reise, nicht nur der Rückflug."
+   ]
+  },
+  {
+   "karte": "person-marie_curie",
+   "grp": "pilot",
+   "id": "person-marie_curie:rate-1",
+   "level": "entdecker",
+   "prompt": "Kann man radioaktive Strahlung mit den Augen sehen?",
+   "answers": [
+    "Nein, man braucht Messgeräte",
+    "Ja, sie sieht aus wie bunter Rauch",
+    "Ja, mit einer starken Lupe"
+   ],
+   "correct": 0,
+   "why": "Unsere Augen können diese Strahlung nicht sehen. Marie Curie maß sie deshalb mit empfindlichen Geräten.",
+   "hints": [
+    "Auch Luft siehst du nicht, und trotzdem ist sie da."
+   ],
+   "wrongReasons": [
+    null,
+    "Strahlung ist kein Rauch. Rauch kann man sehen.",
+    "Eine Lupe macht nur Dinge größer, die man schon sehen kann."
+   ]
+  },
+  {
+   "karte": "person-marie_curie",
+   "grp": "pilot",
+   "id": "person-marie_curie:rate-2",
+   "level": "profi",
+   "prompt": "Mit wem entdeckte Marie Curie Polonium und Radium?",
+   "answers": [
+    "Mit dem Forscher Henri Becquerel",
+    "Mit dem Forscher Albert Einstein",
+    "Mit ihrem Mann Pierre Curie",
+    "Mit ihrer Tochter Irène"
+   ],
+   "correct": 2,
+   "why": "Marie und Pierre Curie entdeckten 1898 gemeinsam Polonium und Radium. Henri Becquerel hatte vorher die Strahlung von Uran entdeckt. Ihre Tochter Irène war damals noch ein Baby.",
+   "hints": [
+    "Es war jemand aus ihrer Familie."
+   ],
+   "wrongReasons": [
+    "Becquerel entdeckte vorher die Strahlung von Uran. Polonium und Radium fand er nicht.",
+    "Albert Einstein war 1898 noch ein junger Student.",
+    null,
+    "Irène war 1898 noch ein Baby."
+   ]
+  },
+  {
+   "karte": "person-marie_curie",
+   "grp": "pilot",
+   "id": "person-marie_curie:rate-3",
+   "level": "experte",
+   "prompt": "Marie Curie forschte in Paris. Warum nannte sie ein neues Element trotzdem „Polonium“?",
+   "answers": [
+    "Sie fand es in einem Bergwerk in Polen",
+    "Sie wollte damit ihre Heimat Polen ehren",
+    "Ihr Mann Pierre stammte auch aus Polen",
+    "Ihr Geld zum Forschen kam aus Polen"
+   ],
+   "correct": 1,
+   "why": "Polen war damals kein eigenes, freies Land. Mit dem Namen ehrte Marie Curie ihre Heimat, und alle sollten an Polen denken.",
+   "hints": [
+    "Lies im Steckbrief nach, wo sie geboren wurde.",
+    "Polen war damals aufgeteilt. Ihre Heimatstadt Warschau gehörte zu Russland. Mit einem Namen kann man an etwas erinnern."
+   ],
+   "wrongReasons": [
+    "Das Gestein für ihre Versuche kam nicht aus Polen.",
+    null,
+    "Pierre Curie war Franzose.",
+    "Woher das Geld kam, hat mit dem Namen nichts zu tun."
+   ]
+  },
+  {
+   "karte": "person-jane_goodall",
+   "grp": "pilot",
+   "id": "person-jane_goodall:rate-1",
+   "level": "profi",
+   "prompt": "Womit holten Schimpansen Termiten aus ihrem Bau?",
+   "answers": [
+    "Nur mit ihren bloßen Händen",
+    "Mit Grashalmen und Zweigen",
+    "Mit Werkzeugen von Menschen",
+    "Mit spitzen Steinen"
+   ],
+   "correct": 1,
+   "why": "Sie steckten Grashalme und Zweige in den Termitenbau. Manche Zweige machten sie vorher passend, indem sie Blätter abzupften.",
+   "hints": [
+    "Jane sah sie dabei etwas aus dem Wald benutzen."
+   ],
+   "wrongReasons": [
+    "Mit bloßen Händen kommen sie nicht tief in den Termitenbau.",
+    null,
+    "Die Schimpansen lebten frei im Wald, ohne Werkzeuge von Menschen.",
+    "Steine nehmen manche Schimpansen zum Nüsseknacken. Für Termiten passen sie nicht."
+   ]
+  },
+  {
+   "karte": "person-jane_goodall",
+   "grp": "pilot",
+   "id": "person-jane_goodall:rate-2",
+   "level": "entdecker",
+   "prompt": "Anfangs liefen die Schimpansen vor Jane weg. Was half dagegen?",
+   "answers": [
+    "Sie kam immer wieder und wartete",
+    "Sie lief ihnen schnell hinterher",
+    "Sie lockte sie mit lauten Rufen"
+   ],
+   "correct": 0,
+   "why": "Jane kam Tag für Tag wieder und blieb ruhig. Nach vielen Monaten liefen die Schimpansen nicht mehr vor ihr weg.",
+   "hints": [
+    "Stell dir vor, du willst eine ängstliche Katze nicht erschrecken."
+   ],
+   "wrongReasons": [
+    null,
+    "Wer hinterherläuft, macht Tiere noch ängstlicher.",
+    "Laute Rufe erschrecken die Schimpansen eher."
+   ]
+  },
+  {
+   "karte": "person-jane_goodall",
+   "grp": "pilot",
+   "id": "person-jane_goodall:rate-3",
+   "level": "experte",
+   "prompt": "Jane sieht: Ein Schimpanse zupft alle Blätter von einem Zweig ab. Dann verschwindet er im Gebüsch. Was hat sie wirklich gesehen?",
+   "answers": [
+    "Er hat ein Termiten-Werkzeug gebaut",
+    "Er wollte damit Termiten angeln",
+    "Er hat einen Zweig ganz kahl gemacht",
+    "So machen es alle Schimpansen"
+   ],
+   "correct": 2,
+   "why": "Gesehen hat Jane nur den kahlen Zweig. Dass er damit Termiten angeln will, ist eine Vermutung. Ob sie stimmt, zeigt erst die nächste Beobachtung.",
+   "hints": [
+    "Was konnte Jane mit eigenen Augen sehen, und was denkt sie sich nur dazu?",
+    "Den Termitenbau hat sie in dieser Szene gar nicht gesehen."
+   ],
+   "wrongReasons": [
+    "Ein Werkzeug? Das vermutet Jane. Gesehen hat sie es nicht.",
+    "Was der Schimpanse will, kann Jane nicht sehen. Das ist eine Vermutung.",
+    null,
+    "Jane hat nur einen Schimpansen gesehen, nicht alle."
+   ]
+  },
+  {
+   "karte": "building-giza-pyramids",
+   "grp": "pilot",
+   "id": "building-giza-pyramids:rate-1",
+   "level": "profi",
+   "prompt": "Woraus ist die große Pyramide vor allem gebaut?",
+   "answers": [
+    "Aus Kalkstein",
+    "Aus festgedrücktem Sand",
+    "Aus Lehmziegeln",
+    "Aus Granit"
+   ],
+   "correct": 0,
+   "why": "Die Cheops-Pyramide besteht vor allem aus Kalkstein aus der Umgebung. Granit gibt es nur innen, zum Beispiel in der Königskammer.",
+   "hints": [
+    "Denk an die großen Steinblöcke."
+   ],
+   "wrongReasons": [
+    null,
+    "Sand allein hält keine so hohen Wände zusammen.",
+    "Lehmziegel nahm man für Häuser. Für die große Pyramide brauchte man Härteres.",
+    "Granit steckt nur an wenigen Stellen innen, zum Beispiel in der Königskammer."
+   ]
+  },
+  {
+   "karte": "building-giza-pyramids",
+   "grp": "pilot",
+   "id": "building-giza-pyramids:rate-2",
+   "level": "profi",
+   "prompt": "Wie kamen die hellen Außensteine zur Pyramide?",
+   "answers": [
+    "Mit Schiffen auf dem Nil",
+    "Mit Schiffen aus einem fernen Land",
+    "Sie lagen schon an der Baustelle",
+    "Auf dem Rücken von Kamelen"
+   ],
+   "correct": 0,
+   "why": "Die hellen Außensteine kamen mit Schiffen aus Tura, einem Steinbruch am anderen Ufer des Nils. Die meisten anderen Steine stammten aus der Umgebung. Kamele gab es damals in Ägypten noch nicht als Lasttiere.",
+   "hints": [
+    "Die hellen Steine kamen aus Ägypten selbst, aber nicht aus Gizeh."
+   ],
+   "wrongReasons": [
+    null,
+    "Die hellen Steine kamen aus Ägypten selbst.",
+    "Die hellen Steine gab es nicht direkt in Gizeh. Sie kamen von etwas weiter weg.",
+    "Kamele gab es damals in Ägypten noch nicht als Lasttiere."
+   ]
+  },
+  {
+   "karte": "building-giza-pyramids",
+   "grp": "pilot",
+   "id": "building-giza-pyramids:rate-3",
+   "level": "experte",
+   "prompt": "Lange war die Cheops-Pyramide das höchste Bauwerk der Welt. Wann wurde sie überholt?",
+   "answers": [
+    "Vor etwa 3.800 Jahren",
+    "Vor etwa 140 Jahren",
+    "Vor etwa 700 Jahren",
+    "Vor etwa 8.300 Jahren"
+   ],
+   "correct": 2,
+   "why": "Gebaut wurde sie vor etwa 4.500 Jahren. Rund 3.800 Jahre lang war sie die Höchste. 4.500 minus 3.800 ergibt etwa 700 Jahre. Damals bekam wohl eine Kirche in England eine noch höhere Turmspitze. Wie hoch sie genau war, weiß man nicht sicher.",
+   "hints": [
+    "Zwei Zahlen stehen auf der Karte: wann sie gebaut wurde und wie lange sie die Höchste war.",
+    "Rechne: 4.500 Jahre minus 3.800 Jahre."
+   ],
+   "wrongReasons": [
+    "3.800 Jahre lang war sie die Höchste. Gesucht ist, wie lange das her ist.",
+    "Vor etwa 140 Jahren wurde der Eiffelturm gebaut. Da war der Rekord schon lange weg.",
+    null,
+    "Das ist mehr als ihr ganzes Alter. So alt ist die Pyramide nicht."
+   ]
+  },
+  {
+   "karte": "building-eiffel-tower",
+   "grp": "pilot",
+   "id": "building-eiffel-tower:rate-1",
+   "level": "entdecker",
+   "prompt": "Woraus ist der Eiffelturm vor allem gebaut?",
+   "answers": [
+    "Aus Beton",
+    "Aus Eisen",
+    "Aus Stein"
+   ],
+   "correct": 1,
+   "why": "Der Turm besteht aus vielen Eisenteilen. Sie sind zu einem Gitter verbunden.",
+   "hints": [
+    "Schau dir die vielen dünnen Stangen an."
+   ],
+   "wrongReasons": [
+    "Beton ist grau und fest wie Stein. Der Turm besteht aus vielen dünnen Stangen.",
+    null,
+    "Steine wären viel zu schwer für einen so hohen, dünnen Turm."
+   ]
+  },
+  {
+   "karte": "building-eiffel-tower",
+   "grp": "pilot",
+   "id": "building-eiffel-tower:rate-2",
+   "level": "profi",
+   "prompt": "Wozu bekommt der Turm immer wieder neue Farbe?",
+   "answers": [
+    "Nur damit er für Fotos hübsch aussieht",
+    "Damit sich das Eisen nicht ausdehnt",
+    "Damit das Eisen nicht rostet",
+    "Damit Blitze ihm nicht schaden"
+   ],
+   "correct": 2,
+   "why": "Die Farbe schützt das Eisen vor Rost. Ohne Anstrich würde der Turm nicht lange halten.",
+   "hints": [
+    "Der Turm steht seit über 130 Jahren draußen, bei Regen und Wind."
+   ],
+   "wrongReasons": [
+    "Hübsch sieht er damit auch aus. Aber das ist nicht der wichtigste Grund.",
+    "Farbe kann nicht verhindern, dass sich Eisen bei Wärme ausdehnt.",
+    null,
+    "Gegen Blitze hilft keine Farbe."
+   ]
+  },
+  {
+   "karte": "building-eiffel-tower",
+   "grp": "pilot",
+   "id": "building-eiffel-tower:rate-3",
+   "level": "experte",
+   "prompt": "Bei Sonne neigt sich die Spitze des Turms ein wenig von der Sonne weg. Warum?",
+   "answers": [
+    "Die Schattenseite dehnt sich mehr aus",
+    "Die Sonnenseite dehnt sich mehr aus",
+    "Alles dehnt sich gleich stark aus",
+    "Das Eisen dehnt sich aus und wird weich"
+   ],
+   "correct": 1,
+   "why": "Die Sonne wärmt eine Seite mehr. Diese Seite dehnt sich stärker aus und wird ein wenig länger. Darum biegt sich die Spitze zur kühlen Seite, weg von der Sonne.",
+   "hints": [
+    "Stell dir den Turm aus zwei Hälften vor: eine in der Sonne, eine im Schatten.",
+    "Wird eine Seite länger als die andere, biegt sich der Turm zur kürzeren Seite."
+   ],
+   "wrongReasons": [
+    "Die Schattenseite ist kühler. Kühles Eisen dehnt sich weniger aus.",
+    null,
+    "Dann würde der Turm nur ein bisschen höher. Neigen würde er sich nicht.",
+    "Eisen wird erst bei sehr großer Hitze weich. Sonne schafft das nicht."
+   ]
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "pilot",
+   "id": "science-water-cycle:rate-1",
+   "level": "entdecker",
+   "prompt": "Wo ist das meiste Wasser der Erde?",
+   "answers": [
+    "In Flüssen und Seen",
+    "Im Meer",
+    "In den Wolken"
+   ],
+   "correct": 1,
+   "why": "Von 100 Eimern Wasser auf der Erde wären 97 Meerwasser. Dieses Wasser ist salzig.",
+   "hints": [
+    "Schau auf einen Globus: Welche Farbe siehst du am meisten?"
+   ],
+   "wrongReasons": [
+    "Flüsse und Seen sind klein im Vergleich zu etwas anderem.",
+    null,
+    "In den Wolken ist nur ein winziger Teil des Wassers."
+   ]
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "pilot",
+   "id": "science-water-cycle:rate-2",
+   "level": "entdecker",
+   "prompt": "Geben Pflanzen Wasser an die Luft ab?",
+   "answers": [
+    "Ja, über ihre Blätter",
+    "Nein, sie trinken nur",
+    "Ja, über die Blüten als Regen"
+   ],
+   "correct": 0,
+   "why": "Pflanzen nehmen Wasser mit den Wurzeln auf. Über ihre Blätter geben sie Wasserdampf an die Luft ab.",
+   "hints": [
+    "Pflanzen trinken mit den Wurzeln, aber wo bleibt das Wasser dann?"
+   ],
+   "wrongReasons": [
+    null,
+    "Pflanzen trinken mit den Wurzeln, aber nicht alles Wasser bleibt in ihnen.",
+    "Aus Blüten fällt kein Regen."
+   ]
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "pilot",
+   "id": "science-water-cycle:rate-3",
+   "level": "entdecker",
+   "prompt": "Warum wird ein nasses Handtuch trocken?",
+   "answers": [
+    "Das Handtuch trinkt das Wasser auf",
+    "Das Wasser verschwindet einfach ganz",
+    "Das Wasser verdunstet in die Luft"
+   ],
+   "correct": 2,
+   "why": "Das Wasser im Handtuch wird zu unsichtbarem Wasserdampf. Der Dampf zieht in die Luft davon.",
+   "hints": [
+    "Mit einer Pfütze passiert dasselbe."
+   ],
+   "wrongReasons": [
+    "Das Handtuch saugt Wasser auf, aber dann müsste es nass bleiben.",
+    "Wasser verschwindet nie ganz. Es ist nur woanders.",
+    null
+   ]
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "challenge",
+   "id": "science-water-cycle-1",
+   "level": "profi",
+   "prompt": "An welchem Tag trocknet eine Pfütze am schnellsten?",
+   "answers": [
+    "Warm, sonnig und windig",
+    "Warm, sonnig und windstill",
+    "Kalt, sonnig und windig",
+    "Kühl, bewölkt und windstill"
+   ],
+   "correct": 0,
+   "why": "Wärme lässt Wasser schneller verdunsten. Wind bläst die feuchte Luft über der Pfütze weg. Darum trocknet sie an warmen, windigen Tagen am schnellsten.",
+   "hints": [
+    "Denk an nasse Wäsche auf der Leine. Wann wird sie schnell trocken?",
+    "Wärme hilft beim Verdunsten. Wind hilft auch: Er bläst die feuchte Luft weg."
+   ],
+   "wrongReasons": [
+    null,
+    "Ohne Wind bleibt die feuchte Luft über der Pfütze liegen. Das bremst.",
+    "Kälte bremst das Verdunsten.",
+    "Kühl, bewölkt und ohne Wind: Da trocknet es langsam."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "challenge",
+   "id": "science-water-cycle-2",
+   "level": "profi",
+   "prompt": "Was heißt Kondensation?",
+   "answers": [
+    "Gasförmiges Wasser wird flüssig",
+    "Flüssiges Wasser wird gasförmig",
+    "Eis wird flüssig",
+    "Flüssiges Wasser wird zu Eis"
+   ],
+   "correct": 0,
+   "why": "Beim Kondensieren entstehen aus Wasserdampf Tröpfchen.",
+   "hints": [
+    "Wolken entstehen durch Kondensation. Was wird da woraus?",
+    "Kondensation ist das Gegenteil von Verdunstung."
+   ],
+   "wrongReasons": [
+    null,
+    "Das ist Verdunstung. Kondensation ist etwas anderes.",
+    "Wenn Eis flüssig wird, schmilzt es. Das ist etwas anderes.",
+    "Wenn Wasser zu Eis wird, gefriert es. Das ist etwas anderes."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "challenge",
+   "id": "science-water-cycle-3",
+   "level": "profi",
+   "prompt": "In der Stadt ist viel Boden mit Asphalt bedeckt. Was kann Regenwasser dort schlechter?",
+   "answers": [
+    "Das Versickern von Regenwasser",
+    "Das oberflächliche Abfließen von Regenwasser",
+    "Die Verdunstung aus offenen Gewässern",
+    "Das Bilden von Pfützen"
+   ],
+   "correct": 0,
+   "why": "Durch Asphalt kommt kein Wasser. Der Regen kann nicht versickern und fließt ab.",
+   "hints": [
+    "Vergleiche eine Wiese und einen Parkplatz nach einem Regenschauer.",
+    "Auf der Wiese verschwindet das Wasser nach unten. Auf dem Parkplatz nicht."
+   ],
+   "wrongReasons": [
+    null,
+    "Auf Asphalt fließt Regen sogar leichter ab.",
+    "Aus Seen und Flüssen verdunstet weiter Wasser, auch in der Stadt.",
+    "Auf Asphalt bleiben Pfützen eher länger stehen."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "challenge",
+   "id": "science-water-cycle-4",
+   "level": "profi",
+   "prompt": "Ein Wassertropfen ist manchmal nur ein paar Tage unterwegs, manchmal tausende Jahre. Warum?",
+   "answers": [
+    "Wasser bleibt verschieden lange in Speichern",
+    "Jeder Tropfen durchläuft immer dieselben vier Stationen",
+    "Die Zahl der Modellstationen legt die Reisedauer fest",
+    "Manche Tropfen gehen unterwegs verloren"
+   ],
+   "correct": 0,
+   "why": "Wasser bleibt verschieden lange an einem Ort: in der Luft nur etwa eine Woche, im Gletschereis oder tief im Boden oft tausende Jahre.",
+   "hints": [
+    "Wo kann Wasser auf seiner Reise eine lange Pause machen?",
+    "In einer Wolke bleibt es nur kurz. Im Eis oder tief im Boden sehr lange."
+   ],
+   "wrongReasons": [
+    null,
+    "Wasser nimmt viele Wege, nicht immer denselben.",
+    "Die vier Stationen erklären den Kreislauf. Eine Uhr sind sie nicht.",
+    "Wasser geht nicht verloren. Es ist nur an einem anderen Ort."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-water-cycle",
+   "grp": "pilot",
+   "id": "science-water-cycle:rate-4",
+   "level": "experte",
+   "prompt": "Eine kalte Glasflasche mit Deckel kommt aus dem Kühlschrank. Bald ist sie außen nass. Woher kommt das Wasser?",
+   "answers": [
+    "Es sickert durch das Glas nach außen",
+    "Wasserdampf aus der Luft wird flüssig",
+    "Es kommt von deinen Händen",
+    "Es verdunstet aus der Flasche"
+   ],
+   "correct": 1,
+   "why": "Die Luft enthält unsichtbaren Wasserdampf. An der kalten Flasche kühlt die Luft ab, und der Dampf wird zu Tröpfchen. So entsteht auch eine Wolke.",
+   "hints": [
+    "Denk an das Häppchen „Wie entsteht eine Wolke?“.",
+    "Die Flasche ist fest zu. Was ist um die Flasche herum und kühlt an ihr ab?"
+   ],
+   "wrongReasons": [
+    "Durch Glas kann kein Wasser sickern.",
+    null,
+    "Auch wenn du die Flasche gar nicht anfasst, wird sie nass.",
+    "Die Flasche ist fest zu. Aus ihr kommt nichts heraus."
+   ]
+  },
+  {
+   "karte": "science-photosynthesis",
+   "grp": "challenge",
+   "id": "science-photosynthesis-1",
+   "level": "entdecker",
+   "prompt": "Welche zwei Stoffe braucht eine Pflanze für die Fotosynthese?",
+   "answers": [
+    "Wasser und Kohlendioxid",
+    "Wasser und Sauerstoff",
+    "Kohlendioxid und Mineralstoffe, ohne Wasser"
+   ],
+   "correct": 0,
+   "why": "Aus Wasser und Kohlendioxid baut die Pflanze Zucker. Die Kraft dafür kommt vom Licht.",
+   "hints": [
+    "Lies den ersten Satz der Karte noch einmal."
+   ],
+   "wrongReasons": [
+    null,
+    "Sauerstoff entsteht erst bei der Fotosynthese. Die Pflanze braucht etwas anderes aus der Luft.",
+    "Mineralstoffe sind wichtig. Aber „ohne Wasser“ stimmt nicht."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-photosynthesis",
+   "grp": "challenge",
+   "id": "science-photosynthesis-2",
+   "level": "profi",
+   "prompt": "Was wird bei der Fotosynthese frei?",
+   "answers": [
+    "Sauerstoff",
+    "Kohlendioxid",
+    "Nur Wasserdampf",
+    "Stickstoff"
+   ],
+   "correct": 0,
+   "why": "Bei der Fotosynthese von Pflanzen entsteht Sauerstoff.",
+   "hints": [
+    "Pflanzen nehmen Kohlendioxid auf. Gesucht ist, was sie abgeben.",
+    "Diesen Stoff brauchen wir zum Atmen."
+   ],
+   "wrongReasons": [
+    null,
+    "Kohlendioxid nimmt die Pflanze bei der Fotosynthese auf. Frei wird etwas anderes.",
+    "Wasserdampf geben Blätter auch ab. Bei der Fotosynthese entsteht aber noch ein anderes Gas.",
+    "Stickstoff ist in der Luft. Bei der Fotosynthese entsteht er aber nicht."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-photosynthesis",
+   "grp": "challenge",
+   "id": "science-photosynthesis-3",
+   "level": "profi",
+   "prompt": "Ein Löwe frisst keine Pflanzen. Warum braucht er trotzdem die Fotosynthese?",
+   "answers": [
+    "Seine Beute frisst Pflanzen mit gespeicherter Energie",
+    "Der Löwe nutzt Licht direkt zum Aufbau seiner Nahrung",
+    "Die Sonnenwärme ersetzt die Energie aus seiner Nahrung",
+    "Er schläft gern im warmen Sonnenlicht"
+   ],
+   "correct": 0,
+   "why": "Das Zebra frisst Gras. Das Gras hat seine Energie vom Sonnenlicht. Der Löwe frisst das Zebra.",
+   "hints": [
+    "Was frisst ein Löwe? Und was frisst sein Futter?",
+    "Zebras fressen Gras. Woher hat das Gras seine Energie?"
+   ],
+   "wrongReasons": [
+    null,
+    "Ein Löwe kann aus Licht keine Nahrung machen.",
+    "Sonne wärmt den Löwen. Satt macht sie ihn nicht.",
+    "Wärme ist angenehm, aber sie ist keine Nahrung."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-photosynthesis",
+   "grp": "challenge",
+   "id": "science-photosynthesis-4",
+   "level": "profi",
+   "prompt": "Welche Aussage über Pflanzen ist richtig?",
+   "answers": [
+    "Sie betreiben auch Zellatmung",
+    "Ihre Zellatmung findet nur ohne Licht statt",
+    "Fotosynthese und Zellatmung sind derselbe Vorgang",
+    "Sie atmen überhaupt nicht"
+   ],
+   "correct": 0,
+   "why": "Auch Pflanzen atmen. Bei der Zellatmung holen sie sich Energie aus ihrem Zucker.",
+   "hints": [
+    "Auch Pflanzenzellen brauchen Energie, am Tag und in der Nacht.",
+    "Fotosynthese baut Zucker auf. Wie kommt die Pflanze an die Energie darin?"
+   ],
+   "wrongReasons": [
+    null,
+    "Licht stört die Zellatmung nicht. Sie läuft auch am Tag.",
+    "Das eine baut Zucker auf, das andere nutzt ihn. Das sind zwei Vorgänge.",
+    "Pflanzenzellen brauchen auch Energie, Tag und Nacht. Wie kommen sie daran?"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-pollination",
+   "grp": "challenge",
+   "id": "science-pollination-1",
+   "level": "entdecker",
+   "prompt": "Wie kann eine Biene bei der Bestäubung helfen?",
+   "answers": [
+    "Sie transportiert anhaftenden Pollen",
+    "Sie pflanzt fertige Bäume",
+    "Sie verwandelt Nektar in Samen"
+   ],
+   "correct": 0,
+   "why": "Beim Blütenbesuch kann Pollen am Körper hängen bleiben.",
+   "hints": [
+    "Stell dir vor, die Biene krabbelt in eine Blüte. Was bleibt an ihrem Pelz kleben?"
+   ],
+   "wrongReasons": [
+    null,
+    "Bienen pflanzen keine Bäume.",
+    "Aus Nektar macht die Biene Honig, keine Samen."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-pollination",
+   "grp": "challenge",
+   "id": "science-pollination-2",
+   "level": "entdecker",
+   "prompt": "Wer kann ohne Insekten Pollen transportieren?",
+   "answers": [
+    "Der Wind",
+    "Ein Schatten",
+    "Die Erdschwere allein zu jeder Blüte"
+   ],
+   "correct": 0,
+   "why": "Bei manchen Pflanzen trägt der Wind den Pollen zur nächsten Blüte.",
+   "hints": [
+    "Lies „Schon gewusst?“ noch einmal."
+   ],
+   "wrongReasons": [
+    null,
+    "Ein Schatten kann nichts tragen.",
+    "Die Erdschwere zieht Pollen nur nach unten, nicht zu jeder Blüte."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-pollination",
+   "grp": "challenge",
+   "id": "science-pollination-3",
+   "level": "profi",
+   "prompt": "Eine Biene besucht eine Blüte. Warum gibt es trotzdem nicht immer Samen?",
+   "answers": [
+    "Pollen muss auf eine passende Narbe kommen",
+    "Die Biene hat den Nektar mitgenommen",
+    "Pollen sind fertige Samen",
+    "Nur Honigbienen können eine Blüte bestäuben"
+   ],
+   "correct": 0,
+   "why": "Der Pollen muss auf die Narbe einer passenden Blüte gelangen. Danach muss noch die Befruchtung klappen. Erst dann entstehen Samen. Auch viele andere Insekten bestäuben.",
+   "hints": [
+    "Was muss mit dem Pollen passieren, damit es eine Bestäubung ist?",
+    "Nicht jeder Pollen passt zu jeder Blüte."
+   ],
+   "wrongReasons": [
+    null,
+    "Den Nektar braucht die Pflanze nicht für Samen. Er ist Futter für die Biene.",
+    "Ein Pollenkorn ist kein Samen. Daraus wächst nicht direkt eine Pflanze.",
+    "Auch Hummeln, Fliegen und Schmetterlinge bestäuben."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-pollination",
+   "grp": "challenge",
+   "id": "science-pollination-4",
+   "level": "profi",
+   "prompt": "Pollen einer Tulpe landet auf der Narbe einer Rose. Was passiert?",
+   "answers": [
+    "Davon entstehen keine Samen",
+    "Es entstehen sicher Samen",
+    "Die Rose bildet Tulpensamen",
+    "Es wächst eine Mischung aus Tulpe und Rose"
+   ],
+   "correct": 0,
+   "why": "Tulpe und Rose sind ganz verschiedene Pflanzen. Der Tulpenpollen passt nicht zur Rose. Aus ihm entstehen keine Samen und auch keine Mischpflanze.",
+   "hints": [
+    "Pollen muss zur Blüte passen, ungefähr wie ein Schlüssel zum Schloss."
+   ],
+   "wrongReasons": [
+    null,
+    "Das klappt nicht. Tulpe und Rose sind viel zu verschieden.",
+    "Eine Rose kann keine Tulpensamen bilden.",
+    "Aus zwei so verschiedenen Pflanzen wächst keine Mischung."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-fungi",
+   "grp": "challenge",
+   "id": "science-fungi-1",
+   "level": "entdecker",
+   "prompt": "Welche Aufgabe haben viele Pilze im Wald?",
+   "answers": [
+    "Sie zersetzen abgestorbenes Material",
+    "Sie erzeugen Sonnenlicht",
+    "Sie bestehen nur aus Blüten"
+   ],
+   "correct": 0,
+   "why": "Pilze zerlegen totes Laub und Holz. So wird daraus wieder Erde.",
+   "hints": [
+    "Lies den Steckbrief: Welche Aufgabe haben viele Pilze?"
+   ],
+   "wrongReasons": [
+    null,
+    "Sonnenlicht kommt von der Sonne, nicht von Pilzen.",
+    "Pilze haben keine Blüten."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-fungi",
+   "grp": "challenge",
+   "id": "science-fungi-2",
+   "level": "profi",
+   "prompt": "Manche Pilze leben mit Baumwurzeln zusammen. Was bekommt der Pilz vom Baum?",
+   "answers": [
+    "Zucker",
+    "Pollen als einziges Futter",
+    "Mineralstoffe",
+    "Wasser"
+   ],
+   "correct": 0,
+   "why": "Der Baum macht mit Sonnenlicht Zucker und gibt dem Pilz etwas ab. Der Pilz bringt ihm dafür Wasser und Mineralstoffe.",
+   "hints": [
+    "Der Pilz kann kein Sonnenlicht nutzen, der Baum schon."
+   ],
+   "wrongReasons": [
+    null,
+    "Pollen bekommt der Pilz nicht vom Baum.",
+    "Mineralstoffe bekommt eher der Baum vom Pilz.",
+    "Wasser bringt eher der Pilz zum Baum."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-fungi",
+   "grp": "challenge",
+   "id": "science-fungi-3",
+   "level": "experte",
+   "prompt": "Stell dir einen Wald ganz ohne Pilze und andere Zersetzer vor. Was würde passieren?",
+   "answers": [
+    "Totes Laub würde sich hoch stapeln",
+    "Bäume bekämen mehr Nährstoffe",
+    "Totes Laub würde schneller zu Erde",
+    "Bäume würden schneller wachsen"
+   ],
+   "correct": 0,
+   "why": "Zersetzer machen aus totem Laub und Holz wieder Stoffe, die Pflanzen brauchen. Ohne sie bliebe das Laub liegen, und dem Boden fehlten Nährstoffe.",
+   "hints": [
+    "Was machen Pilze mit totem Laub und Holz?",
+    "Ohne Zersetzer bleibt das Laub, wie es ist. Was passiert dann Jahr für Jahr?"
+   ],
+   "wrongReasons": [
+    null,
+    "Ohne Zersetzer kommen die Nährstoffe aus dem Laub nicht zurück in den Boden.",
+    "Zu Erde wird Laub gerade durch Zersetzer.",
+    "Bäume brauchen Nährstoffe aus dem Boden. Ohne Zersetzer fehlen sie bald."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-fungi",
+   "grp": "challenge",
+   "id": "science-fungi-4",
+   "level": "profi",
+   "prompt": "Pilzfäden verbinden manche Baumwurzeln. Welcher Satz ist vorsichtig und richtig?",
+   "answers": [
+    "Übertragungen müssen untersucht werden",
+    "Bäume sprechen nachweislich wie Menschen",
+    "Alle Pilze teilen immer alles",
+    "Pilze verbinden niemals Bäume"
+   ],
+   "correct": 0,
+   "why": "Eine Verbindung allein belegt noch keinen bestimmten Austausch oder menschliche Kommunikation.",
+   "hints": [
+    "Vorsichtig heißt: nur sagen, was man auch belegen kann."
+   ],
+   "wrongReasons": [
+    null,
+    "Dass Bäume sprechen wie Menschen, hat niemand nachgewiesen.",
+    "„Alle“ und „immer“ sagt zu viel. Pilze sind sehr verschieden.",
+    "Pilzfäden verbinden manche Bäume wirklich. „Niemals“ stimmt nicht."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-coral-reef",
+   "grp": "challenge",
+   "id": "science-coral-reef-1",
+   "level": "profi",
+   "prompt": "Was liefern die Algenpartner vieler Riffkorallen?",
+   "answers": [
+    "Energiereiche Stoffe aus Fotosynthese",
+    "Schutz vor Fischen, die Korallen fressen",
+    "Kleine Krebse als Futter",
+    "Kühles Wasser bei Hitze"
+   ],
+   "correct": 0,
+   "why": "Die Algen nutzen Licht und versorgen die Koralle mit energiereichen Stoffen.",
+   "hints": [
+    "Was können Algen, was Tiere nicht können?",
+    "Algen machen es wie Pflanzen: Sie nutzen Sonnenlicht."
+   ],
+   "wrongReasons": [
+    null,
+    "Algen sind zu klein, um Fische zu verjagen.",
+    "Algen fangen keine Krebse.",
+    "Algen können das Wasser nicht kühlen."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-coral-reef",
+   "grp": "challenge",
+   "id": "science-coral-reef-2",
+   "level": "profi",
+   "prompt": "Das Meer wird sehr warm. Was kann mit Korallen passieren?",
+   "answers": [
+    "Korallen verlieren ihre Algenpartner",
+    "Korallen bekommen noch mehr Algenpartner",
+    "Korallen färben sich dunkler",
+    "Korallen wachsen schneller"
+   ],
+   "correct": 0,
+   "why": "Ohne ihre Algen wird die Koralle blass, fast weiß. Das nennt man Korallenbleiche.",
+   "hints": [
+    "Denk an die Partner, die in der Koralle wohnen."
+   ],
+   "wrongReasons": [
+    null,
+    "Hitze ist Stress. Bei Stress bekommt die Koralle keine neuen Partner dazu.",
+    "Bei Hitze wird eine Koralle eher heller, nicht dunkler.",
+    "Hitze ist Stress für die Koralle. Dann wächst sie nicht schneller."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-coral-reef",
+   "grp": "challenge",
+   "id": "science-coral-reef-3",
+   "level": "entdecker",
+   "prompt": "Warum bedeutet Bleiche nicht sofort Tod?",
+   "answers": [
+    "Die Koralle kann noch leben und sich erholen",
+    "Das Skelett ist die ganze lebende Koralle",
+    "Weiße Korallen brauchen keine Nahrung"
+   ],
+   "correct": 0,
+   "why": "Eine gebleichte Koralle lebt noch. Wird das Wasser wieder kühler, kann sie sich erholen.",
+   "hints": [
+    "Lies „Schon gewusst?“ noch einmal."
+   ],
+   "wrongReasons": [
+    null,
+    "Das Skelett ist hart und tot. Lebendig ist das Gewebe darauf.",
+    "Auch weiße Korallen brauchen Nahrung."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-coral-reef",
+   "grp": "challenge",
+   "id": "science-coral-reef-4",
+   "level": "experte",
+   "prompt": "Warum brauchen viele Riffkorallen klares Wasser?",
+   "answers": [
+    "Licht kann ihre Algenpartner erreichen",
+    "Korallen können ihre Beute besser sehen",
+    "In klarem Wasser ist es kühler",
+    "In klarem Wasser gibt es keine Feinde"
+   ],
+   "correct": 0,
+   "why": "Die Algen in der Koralle brauchen Licht, wie Pflanzen. In trübes Wasser kommt zu wenig Licht.",
+   "hints": [
+    "Halte die Hand in trübes Wasser. Was kommt dort schlecht hindurch?",
+    "Die Algen in der Koralle machen es wie Pflanzen."
+   ],
+   "wrongReasons": [
+    null,
+    "Korallen haben keine Augen. Sie fangen Futter mit ihren Fangarmen.",
+    "Klares Wasser ist nicht kühler als trübes.",
+    "Feinde gibt es auch in klarem Wasser."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "pilot",
+   "id": "science-moon-phases:rate-1",
+   "level": "experte",
+   "prompt": "Hat der Mond eine Seite, die immer dunkel ist?",
+   "answers": [
+    "Ja, die Rückseite ist immer dunkel",
+    "Ja, die Vorderseite ist immer dunkel",
+    "Nein, jede Seite bekommt Sonnenlicht",
+    "Nein, der Mond ist überall immer hell"
+   ],
+   "correct": 2,
+   "why": "Nein, eine immer dunkle Seite gibt es nicht. Die Rückseite bekommt genauso viel Sonnenlicht wie die Seite, die wir sehen.",
+   "hints": [
+    "Wir sehen immer dieselbe Seite des Mondes. Trotzdem gibt es Neumond.",
+    "Bei Neumond ist die Seite zu uns dunkel. Wohin scheint die Sonne dann?"
+   ],
+   "wrongReasons": [
+    "Denk an Neumond: Dann ist die Seite zu uns dunkel. Wo ist es dann hell?",
+    "Die Seite zu uns ist bei Vollmond ganz hell.",
+    null,
+    "Die Sonne beleuchtet immer nur eine Hälfte. Der Mond ist nicht überall zugleich hell."
+   ]
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "pilot",
+   "id": "science-moon-phases:rate-2",
+   "level": "entdecker",
+   "prompt": "Kann man den Mond auch am Tag sehen?",
+   "answers": [
+    "Ja, oft auch am Tag",
+    "Nein, nur in der Nacht",
+    "Nur wenn Vollmond ist"
+   ],
+   "correct": 0,
+   "why": "Ja, der Mond steht oft auch am Tag am Himmel. Neben der hellen Sonne fällt er nur weniger auf.",
+   "hints": [
+    "Schau mal am Nachmittag in den Himmel."
+   ],
+   "wrongReasons": [
+    null,
+    "Der Mond hält sich nicht an unsere Schlafenszeit.",
+    "Gerade bei Vollmond sieht man den Mond fast nur nachts."
+   ]
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "pilot",
+   "id": "science-moon-phases:rate-3",
+   "level": "profi",
+   "prompt": "Sehen alle Menschen auf der Erde dieselbe Mondphase?",
+   "answers": [
+    "Nein, jedes Land sieht eine andere",
+    "Ja, nur manchmal auf dem Kopf",
+    "Nein, im Süden ist immer Vollmond",
+    "Ja, überall genau gleich"
+   ],
+   "correct": 1,
+   "why": "Ja, alle sehen dieselbe Phase. In Australien, auf der Südhalbkugel, steht sie nur auf dem Kopf.",
+   "hints": [
+    "Es gibt nur einen Mond für die ganze Erde."
+   ],
+   "wrongReasons": [
+    "Es gibt nur einen Mond für die ganze Erde.",
+    null,
+    "Vollmond ist nicht immer, auch im Süden nicht.",
+    "Im Süden sieht der Mond anders herum aus als bei uns."
+   ]
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "challenge",
+   "id": "science-moon-phases-1",
+   "level": "profi",
+   "prompt": "Was verändert sich bei den Mondphasen?",
+   "answers": [
+    "Unser Blick auf die beleuchtete Hälfte",
+    "Die Kugelform des Mondes",
+    "Der Schatten der Erde auf dem Mond",
+    "Wie hell die Sonne gerade leuchtet"
+   ],
+   "correct": 0,
+   "why": "Die Sonne beleuchtet immer eine Hälfte des Mondes. Je nachdem, wo er steht, sehen wir mehr oder weniger davon.",
+   "hints": [
+    "Halte einen Ball neben eine Lampe und geh einmal um ihn herum.",
+    "Der Ball bleibt gleich. Was ändert sich, wenn du herumgehst?"
+   ],
+   "wrongReasons": [
+    null,
+    "Der Mond bleibt immer eine Kugel.",
+    "Der Erdschatten macht eine Mondfinsternis, aber keine Mondphasen.",
+    "Die Sonne leuchtet immer etwa gleich hell."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "challenge",
+   "id": "science-moon-phases-2",
+   "level": "entdecker",
+   "prompt": "Wie lange dauert es ungefähr von Neumond zu Neumond?",
+   "answers": [
+    "29,5 Tage",
+    "24 Stunden",
+    "Ein Jahr"
+   ],
+   "correct": 0,
+   "why": "Von Neumond zu Neumond dauert es etwa 29,5 Tage. Das ist ungefähr ein Monat.",
+   "hints": [
+    "Schau in den Steckbrief unter „Rhythmus“."
+   ],
+   "wrongReasons": [
+    null,
+    "24 Stunden dauert ein Tag auf der Erde.",
+    "Ein Jahr braucht die Erde für eine Runde um die Sonne."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "challenge",
+   "id": "science-moon-phases-3",
+   "level": "profi",
+   "prompt": "Warum gibt es nicht bei jedem Vollmond eine Mondfinsternis?",
+   "answers": [
+    "Die Bahn des Mondes ist etwas schräg",
+    "Der Erdschatten ist zu klein für den Mond",
+    "Die Erde steht nicht zwischen Sonne und Mond",
+    "Der Mond ist bei Vollmond zu weit weg"
+   ],
+   "correct": 0,
+   "why": "Die Bahn des Mondes ist etwas schräg. Darum zieht er bei Vollmond meist über oder unter dem Erdschatten vorbei.",
+   "hints": [
+    "Für eine Finsternis müssen Sonne, Erde und Mond genau auf einer Linie stehen.",
+    "Stell dir die Mondbahn von der Seite vor. Liegt sie ganz flach?"
+   ],
+   "wrongReasons": [
+    null,
+    "Der Erdschatten ist größer als der Mond. Er könnte ihn ganz verdecken.",
+    "Bei Vollmond steht die Erde ungefähr zwischen Sonne und Mond.",
+    "Der Abstand zum Mond ist bei Vollmond nicht besonders groß."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-moon-phases",
+   "grp": "challenge",
+   "id": "science-moon-phases-4",
+   "level": "experte",
+   "prompt": "Heute ist Vollmond. Wann geht der Mond ungefähr auf?",
+   "answers": [
+    "Wenn die Sonne untergeht",
+    "Wenn die Sonne aufgeht",
+    "Mittags, wenn die Sonne hoch steht",
+    "Um Mitternacht"
+   ],
+   "correct": 0,
+   "why": "Bei Vollmond sehen wir die ganze helle Seite. Dafür muss die Sonne hinter uns stehen und der Mond gegenüber. Geht die Sonne im Westen unter, geht der Vollmond im Osten auf.",
+   "hints": [
+    "Bei Vollmond sehen wir die ganze helle Seite. Wo steht dann die Sonne: hinter uns oder hinter dem Mond?",
+    "Sonne und Vollmond stehen sich gegenüber, wie zwei Kinder an den Enden einer Wippe."
+   ],
+   "wrongReasons": [
+    null,
+    "Sonne und Vollmond stehen sich gegenüber. Kommen sie dann zur selben Zeit hoch?",
+    "Mittags steht der Vollmond auf der anderen Seite der Erde.",
+    "Um Mitternacht steht der Vollmond schon hoch am Himmel."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-seasons",
+   "grp": "challenge",
+   "id": "science-seasons-1",
+   "level": "entdecker",
+   "prompt": "Bei uns ist Sommer. Welche Jahreszeit hat dann Australien?",
+   "answers": [
+    "Winter",
+    "Auch immer Sommer",
+    "Keine Jahreszeit"
+   ],
+   "correct": 0,
+   "why": "Die Südhalbkugel ist dann von der Sonne weggeneigt.",
+   "hints": [
+    "Australien liegt auf der Südhalbkugel. Schau in den Steckbrief."
+   ],
+   "wrongReasons": [
+    null,
+    "Sommer ist nicht überall gleichzeitig.",
+    "Jahreszeiten gibt es auch in Australien."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-seasons",
+   "grp": "challenge",
+   "id": "science-seasons-2",
+   "level": "profi",
+   "prompt": "Warum erwärmt hohe Sonne den Boden stärker?",
+   "answers": [
+    "Licht verteilt sich auf eine kleinere Fläche",
+    "Die Sonne ist dann näher an der Erde",
+    "Die Sonne leuchtet dann heller",
+    "Licht verteilt sich auf eine größere Fläche"
+   ],
+   "correct": 0,
+   "why": "Steht die Sonne hoch, trifft ihr Licht auf eine kleine Fläche und wärmt sie stark.",
+   "hints": [
+    "Halte eine Taschenlampe über ein Blatt: einmal gerade von oben, einmal schräg.",
+    "Schräg wird der Lichtfleck größer und schwächer."
+   ],
+   "wrongReasons": [
+    null,
+    "Nein. Im deutschen Sommer ist die Erde sogar ein bisschen weiter von der Sonne weg.",
+    "Die Sonne leuchtet immer etwa gleich hell.",
+    "Denk an die Taschenlampe: Wann wird der Lichtfleck groß, wann klein?"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-seasons",
+   "grp": "challenge",
+   "id": "science-seasons-3",
+   "level": "experte",
+   "prompt": "Anfang Januar ist die Erde der Sonne am nächsten. Trotzdem ist bei uns dann Winter. Was zeigt das?",
+   "answers": [
+    "Der Abstand ist nicht der Hauptgrund",
+    "Nähe zur Sonne macht die Erde kälter",
+    "Im Januar leuchtet die Sonne schwächer",
+    "Auf der Südhalbkugel ist dann auch Winter"
+   ],
+   "correct": 0,
+   "why": "Wäre der Abstand der Grund, müsste bei größter Nähe überall Sommer sein. Bei uns ist aber Winter, in Australien Sommer. Der Hauptgrund ist die schräge Erdachse.",
+   "hints": [
+    "Was müsste im Januar los sein, wenn Nähe zur Sonne Sommer macht?",
+    "Nähe müsste Sommer bringen. Bei uns ist aber Winter. Passt das zusammen?"
+   ],
+   "wrongReasons": [
+    null,
+    "Näher am Feuer wird es wärmer, nicht kälter. Das gilt auch für die Sonne.",
+    "Die Sonne leuchtet das ganze Jahr etwa gleich hell.",
+    "Auf der Südhalbkugel ist im Januar Sommer."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-seasons",
+   "grp": "challenge",
+   "id": "science-seasons-4",
+   "level": "profi",
+   "prompt": "Ein Modell zeigt Erde, Sonne und die schräge Achse. Was kann es nicht vorhersagen?",
+   "answers": [
+    "Ob es morgen an deinem Ort regnet",
+    "Welche Halbkugel zur Sonne geneigt ist",
+    "Warum Tageslängen wechseln",
+    "Wann bei uns die Tage am längsten sind"
+   ],
+   "correct": 0,
+   "why": "Ob es regnet, hängt von Wolken, Wind und Luft ab. Das zeigt das Modell nicht.",
+   "hints": [
+    "Das Modell zeigt nur Erde, Sonne und die schräge Achse. Was fehlt darin?",
+    "Was davon hängt nur von der Stellung der Erde ab?"
+   ],
+   "wrongReasons": [
+    null,
+    "Welche Halbkugel zur Sonne geneigt ist, zeigt das Modell gut.",
+    "Warum die Tage länger und kürzer werden, zeigt das Modell auch.",
+    "Wann die Tage am längsten sind, kann man am Modell ablesen."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-tides",
+   "grp": "challenge",
+   "id": "science-tides-1",
+   "level": "entdecker",
+   "prompt": "Was heißt Ebbe?",
+   "answers": [
+    "Der Wasserstand fällt",
+    "Der Wasserstand steigt",
+    "Das Meer ist immer trocken"
+   ],
+   "correct": 0,
+   "why": "Bei Ebbe sinkt das Wasser. Es zieht sich vom Strand zurück.",
+   "hints": [
+    "Bei Ebbe kann man an der Nordsee durchs Watt laufen."
+   ],
+   "wrongReasons": [
+    null,
+    "Steigendes Wasser heißt Flut.",
+    "Das Meer ist nie ganz trocken. Es kommt immer wieder."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-tides",
+   "grp": "challenge",
+   "id": "science-tides-2",
+   "level": "profi",
+   "prompt": "Ist Hochwasser überall gleichzeitig?",
+   "answers": [
+    "Nein, jede Küste hat eigene Zeiten",
+    "Ja, an allen Küsten gleichzeitig",
+    "Ja, immer um zwölf Uhr",
+    "Nein, Hochwasser gibt es nur bei Vollmond"
+   ],
+   "correct": 0,
+   "why": "Die Form der Küste und die Tiefe des Meeres sind überall anders. Darum hat jeder Ort eigene Zeiten.",
+   "hints": [
+    "Küsten sind verschieden: flach oder steil, Bucht oder offenes Meer."
+   ],
+   "wrongReasons": [
+    null,
+    "Das Wasser braucht Zeit, bis es an jede Küste kommt.",
+    "Die Zeiten verschieben sich jeden Tag. Zwölf Uhr passt nicht immer.",
+    "An der Nordsee gibt es jeden Tag Hochwasser, meist zweimal."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "science-tides",
+   "grp": "challenge",
+   "id": "science-tides-3",
+   "level": "profi",
+   "prompt": "Du willst durchs Watt wandern. Warum reicht ein Mondkalender nicht?",
+   "answers": [
+    "Er zeigt keine Gezeiten und kein Wetter für deinen Ort",
+    "Der Mond hat keinen Einfluss auf das Meer",
+    "Jeder Vollmond hält Wasser zurück",
+    "Bei Vollmond bleibt das Watt den ganzen Tag trocken"
+   ],
+   "correct": 0,
+   "why": "Ein Mondkalender zeigt nur die Mondphasen. Fürs Watt brauchst du die Gezeiten für genau diesen Ort und den Wetterbericht. Und eine Begleitung, die sich auskennt.",
+   "hints": [
+    "Was steht in einem Mondkalender, und was nicht?",
+    "Fürs Watt brauchst du die genauen Zeiten für genau diese Küste."
+   ],
+   "wrongReasons": [
+    null,
+    "Der Mond hat Einfluss auf das Meer. Das steht auf der Karte.",
+    "Vollmond hält kein Wasser fest.",
+    "Auch bei Vollmond kommt die Flut wieder."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "science-tides",
+   "grp": "challenge",
+   "id": "science-tides-4",
+   "level": "profi",
+   "prompt": "Bei Neumond und Vollmond gibt es Springtiden, besonders hohe Fluten. Warum?",
+   "answers": [
+    "Sonne, Erde und Mond stehen auf einer Linie",
+    "Nur Vollmond erzeugt Schwerkraft",
+    "Springtide gibt es nur im Frühling",
+    "Dann ist der Mond der Erde besonders nah"
+   ],
+   "correct": 0,
+   "why": "Stehen Sonne, Erde und Mond in einer Linie, wirken Sonne und Mond zusammen. Dann ist die Flut besonders hoch.",
+   "hints": [
+    "Wo stehen Sonne, Erde und Mond bei Neumond und bei Vollmond?",
+    "Bei Neumond steht der Mond auf der Seite der Sonne, bei Vollmond gegenüber."
+   ],
+   "wrongReasons": [
+    null,
+    "Schwerkraft hat der Mond immer, nicht nur bei Vollmond.",
+    "Springtide hat nichts mit dem Frühling zu tun. Es gibt sie das ganze Jahr.",
+    "Wie nah der Mond ist, hängt nicht an Neumond oder Vollmond."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "history-khipu",
+   "grp": "challenge",
+   "id": "history-khipu:compare",
+   "level": "profi",
+   "prompt": "Ein Bild zeigt drei Zeichen und fünf Zeichen. Niemand hat dir gesagt, was sie bedeuten. Was weißt du dann nicht?",
+   "answers": [
+    "Ob die Zeichen etwa Körbe oder Personen zählen",
+    "Dass fünf mehr als drei ist",
+    "Die Möglichkeit, beide gezeichneten Mengen zu vergleichen",
+    "Wie viele Zeichen es zusammen sind"
+   ],
+   "correct": 0,
+   "why": "Zählen und vergleichen kannst du selbst. Was die Zeichen bedeuten, muss dir jemand sagen.",
+   "hints": [
+    "Was kannst du am Bild selbst sehen, und was nicht?"
+   ],
+   "wrongReasons": [
+    null,
+    "Dass fünf mehr ist als drei, siehst du durch Zählen.",
+    "Vergleichen kannst du die Mengen auch ohne Erklärung.",
+    "Zusammenzählen kannst du selbst."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "history-khipu",
+   "grp": "challenge",
+   "id": "history-khipu:limits",
+   "level": "profi",
+   "prompt": "Forschende lesen aus einem Khipu Zahlen ab. Was behauptet zu viel?",
+   "answers": [
+    "Dass damit alles im Khipu verstanden ist",
+    "Dass bestimmte Mengen aufgezeichnet sein können",
+    "Dass Knoten und Anordnung untersucht werden können",
+    "Dass Khipus Zahlen festhalten konnten"
+   ],
+   "correct": 0,
+   "why": "Zahlen lesen heißt nicht, alles zu verstehen. Fäden und Knoten können noch mehr bedeuten.",
+   "hints": [
+    "Stell dir vor, du kannst in einem Brief nur die Zahlen lesen. Verstehst du dann den ganzen Brief?"
+   ],
+   "wrongReasons": [
+    null,
+    "Mengen kann man aus den Zahlen wirklich ablesen. Das ist nicht zu viel.",
+    "Knoten und Anordnung kann man wirklich untersuchen.",
+    "Dass Khipus Zahlen festhalten konnten, ist gut belegt."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "history-mohenjo-daro",
+   "grp": "challenge",
+   "id": "history-mohenjo-daro:compare",
+   "level": "profi",
+   "prompt": "In einem alten Haus finden Forschende einen Abfluss. Was zeigt das sicher?",
+   "answers": [
+    "Dass es hier einen Weg für Wasser gab",
+    "Dass alle Bewohner der Stadt dasselbe Einkommen hatten",
+    "Dass das Wasser immer keimfrei war",
+    "Dass jedes Haus der Stadt einen Abfluss hatte"
+   ],
+   "correct": 0,
+   "why": "Der Abfluss zeigt: Hier konnte Wasser abfließen. Ob die Menschen reich waren oder das Wasser sauber, verrät er nicht.",
+   "hints": [
+    "Trenne: Was liegt wirklich im Boden, und was denkt man sich nur dazu?"
+   ],
+   "wrongReasons": [
+    null,
+    "Über Geld sagt ein Abfluss nichts.",
+    "Ob das Wasser sauber war, zeigt der Abfluss nicht.",
+    "Gefunden wurde der Abfluss in einem Haus, nicht in allen."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "history-mohenjo-daro",
+   "grp": "challenge",
+   "id": "history-mohenjo-daro:limits",
+   "level": "profi",
+   "prompt": "Forschende haben nur einen Teil der Stadt ausgegraben. Warum wissen sie nicht alles über die ganze Stadt?",
+   "answers": [
+    "Weil andere Stadtteile anders sein konnten",
+    "Weil Baureste grundsätzlich nichts über Menschen verraten",
+    "Weil nur schriftliche Quellen wissenschaftlich zählen",
+    "Weil Ausgrabungen alle Funde zerstören"
+   ],
+   "correct": 0,
+   "why": "Andere Stadtteile können anders ausgesehen haben. Weitere Grabungen können mehr verraten.",
+   "hints": [
+    "Stell dir vor, du kennst nur eine einzige Straße deiner Stadt."
+   ],
+   "wrongReasons": [
+    null,
+    "Baureste verraten viel über Menschen, zum Beispiel wie sie wohnten.",
+    "Auch Funde im Boden zählen in der Wissenschaft.",
+    "Gute Ausgrabungen gehen vorsichtig mit den Funden um."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "invention-bicycle",
+   "grp": "pilot",
+   "id": "invention-bicycle:rate-1",
+   "level": "experte",
+   "prompt": "Warum hatte das Hochrad so ein riesiges Vorderrad?",
+   "answers": [
+    "Damit man pro Tritt weiter kommt",
+    "Damit man höher sitzt und weit sieht",
+    "Weil kleine Räder schneller kaputtgingen",
+    "Weil es so sicherer war"
+   ],
+   "correct": 0,
+   "why": "Je größer das Rad, desto weiter kam man mit einer Pedalumdrehung. So war man schneller unterwegs.",
+   "hints": [
+    "Lies das Häppchen zum Hochrad noch einmal.",
+    "Eine Pedalumdrehung dreht das Rad genau einmal. Wie weit rollt dabei ein großes Rad, wie weit ein kleines?"
+   ],
+   "wrongReasons": [
+    null,
+    "Hoch saß man wirklich, aber das war nicht der Grund für das große Rad.",
+    "Darum ging es nicht. Das große Rad sollte dich schneller machen.",
+    "Das Hochrad war gefährlich. Wer stürzte, fiel tief."
+   ]
+  },
+  {
+   "karte": "invention-bicycle",
+   "grp": "pilot",
+   "id": "invention-bicycle:rate-2",
+   "level": "entdecker",
+   "prompt": "Welcher Gang hilft dir an einem steilen Berg?",
+   "answers": [
+    "Ein schwerer Gang",
+    "Der Gang ist egal",
+    "Ein leichter Gang"
+   ],
+   "correct": 2,
+   "why": "Im leichten Gang trittst du öfter, aber mit weniger Kraft. So kommst du den Berg besser hinauf.",
+   "hints": [
+    "Am Berg ist jeder Tritt besonders anstrengend."
+   ],
+   "wrongReasons": [
+    "Im schweren Gang ist jeder Tritt am Berg sehr anstrengend.",
+    "Der Gang ist nicht egal. Probier es am Berg aus.",
+    null
+   ]
+  },
+  {
+   "karte": "invention-bicycle",
+   "grp": "pilot",
+   "id": "invention-bicycle:rate-3",
+   "level": "entdecker",
+   "prompt": "Woher kommt die Energie beim Radfahren?",
+   "answers": [
+    "Aus den Zahnrädern",
+    "Aus deinen Beinen",
+    "Aus der Kette"
+   ],
+   "correct": 1,
+   "why": "Die Energie kommt aus deinen Beinen. Kette und Zahnräder geben sie nur an das Hinterrad weiter.",
+   "hints": [
+    "Denk daran, was sich bewegt, wenn du in die Pedale trittst."
+   ],
+   "wrongReasons": [
+    "Zahnräder geben die Kraft nur weiter. Sie machen keine.",
+    null,
+    "Die Kette gibt die Kraft nur weiter. Sie macht keine."
+   ]
+  },
+  {
+   "karte": "invention-bicycle",
+   "grp": "pilot",
+   "id": "invention-bicycle:rate-4",
+   "level": "profi",
+   "prompt": "Warum hieß das Rover-Rad „Sicherheitsfahrrad“?",
+   "answers": [
+    "Es hatte als erstes Rad Bremsen",
+    "Es hatte schon Reifen mit Luft",
+    "Man stürzte seltener und nicht so tief",
+    "Es fuhr langsamer als andere Räder"
+   ],
+   "correct": 2,
+   "why": "Beim Hochrad saß man hoch über dem großen Vorderrad. Beim Rover-Rad saß man tiefer und weiter hinten. Man kippte nicht mehr so leicht kopfüber nach vorn. Und fiel man doch, war es nicht so tief. Luftreifen hatte es noch nicht.",
+   "hints": [
+    "Vergleiche, wo man auf dem Hochrad saß und wo auf dem Rover-Rad."
+   ],
+   "wrongReasons": [
+    "Bremsen hatten schon Räder vor dem Rover-Rad.",
+    "Das Rover-Rad hatte noch Reifen aus festem Gummi.",
+    null,
+    "Schneller oder langsamer, darum ging es beim Namen nicht."
+   ]
+  },
+  {
+   "karte": "history-bronze",
+   "grp": "challenge",
+   "id": "history-bronze:material",
+   "level": "profi",
+   "prompt": "In einem alten Metallstück stecken Kupfer und Zinn. Was verrät das nicht?",
+   "answers": [
+    "Wann und wo Menschen das Stück benutzt haben.",
+    "Dass das untersuchte Stück Kupfer enthält.",
+    "Dass das untersuchte Stück Zinn enthält.",
+    "Dass das Stück aus einem Metallgemisch besteht."
+   ],
+   "correct": 0,
+   "why": "Die Analyse beschreibt Bestandteile. Eine zeitliche Einordnung braucht zusätzliche Informationen, etwa einen verlässlich untersuchten Fundzusammenhang.",
+   "hints": [
+    "Welche Antworten wiederholen nur, was die Messung schon zeigt?"
+   ],
+   "wrongReasons": [
+    null,
+    "Kupfer ist schon genannt. Das weißt du also bereits.",
+    "Zinn ist schon genannt. Das weißt du also bereits.",
+    "Kupfer und Zinn zusammen sind schon ein Gemisch. Das weißt du also auch."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "history-bronze",
+   "grp": "challenge",
+   "id": "history-bronze:limits",
+   "level": "profi",
+   "prompt": "Bei einer Ausgrabung liegt ein Gegenstand aus Bronze. Welcher Satz behauptet zu viel?",
+   "answers": [
+    "Alle Menschen der Gegend nutzten nur Bronze.",
+    "An diesem Fund kann der Werkstoff untersucht werden.",
+    "Weitere Funde können mit diesem Stück verglichen werden.",
+    "Der Fund kann etwas über diesen Ort verraten."
+   ],
+   "correct": 0,
+   "why": "Ein einzelner Fund zeigt nicht, was alle benutzten. Es gab vielleicht auch Werkzeuge aus Stein oder Holz.",
+   "hints": [
+    "Wie viele Menschen und Dinge zeigt ein einzelner Fund wirklich?"
+   ],
+   "wrongReasons": [
+    null,
+    "Das kann man wirklich tun. Das ist nicht zu viel.",
+    "Vergleichen geht wirklich. Das ist nicht zu viel.",
+    "Ein Fund kann wirklich etwas über seinen Ort verraten. Das ist nicht zu viel."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "person-maria_sibylla_merian",
+   "grp": "challenge",
+   "id": "person-maria_sibylla_merian:evidence",
+   "level": "profi",
+   "prompt": "Ein Bild zeigt eine Raupe, ein anderes einen Falter. Wird aus dieser Raupe dieser Falter? Wie findest du es sicher heraus?",
+   "answers": [
+    "Die Farben von Raupe und Falter genau vergleichen",
+    "Die Raupe beobachten, bis der Falter schlüpft",
+    "Schauen, ob beide auf derselben Wiese leben",
+    "Nachsehen, ob beide gleich groß sind"
+   ],
+   "correct": 1,
+   "why": "Nur wer dieselbe Raupe beobachtet, bis aus der Puppe ein Falter schlüpft, weiß es sicher. Ähnliche Farben oder derselbe Ort sind kein Beleg.",
+   "hints": [
+    "Denk daran, wie Merian gearbeitet hat."
+   ],
+   "wrongReasons": [
+    "Ähnliche Farben beweisen nicht, dass das eine aus dem anderen wird.",
+    null,
+    "Viele Tiere leben auf derselben Wiese. Das ist kein Beweis.",
+    "Raupe und Falter sind ganz verschieden gebaut. Die Größe hilft nicht."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "person-maria_sibylla_merian",
+   "grp": "challenge",
+   "id": "person-maria_sibylla_merian:limits",
+   "level": "profi",
+   "prompt": "Jemand sagt: „Merians Name steht auf dem Buch. Also stammt alles darin nur von ihr.“ Welche Tatsache zeigt, dass das nicht stimmt?",
+   "answers": [
+    "Das Buch wurde im Jahr 1705 veröffentlicht.",
+    "Das Buch enthält besonders sorgfältig ausgeführte Bilder.",
+    "Merian nutzte auch Wissen und Arbeit indigener und versklavter Menschen.",
+    "Merian zeichnete sehr genau und geduldig."
+   ],
+   "correct": 2,
+   "why": "Merian hat viel selbst beobachtet und gemalt. Aber einheimische und versklavte Menschen zeigten ihr Pflanzen und Tiere. Ihre Namen fehlen oft im Buch.",
+   "hints": [
+    "Lies noch einmal, wie Merian in Suriname gearbeitet hat."
+   ],
+   "wrongReasons": [
+    "Das Jahr sagt nur, wann das Buch erschien.",
+    "Schöne Bilder verraten nicht, woher das Wissen kam.",
+    null,
+    "Genau und geduldig zu sein sagt nichts darüber, wer noch geholfen hat."
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "karte": "person-inge_lehmann",
+   "grp": "challenge",
+   "id": "person-inge_lehmann:evidence",
+   "level": "profi",
+   "prompt": "Inge Lehmann misst ein schwaches Signal von einer Erdbebenwelle. Nach dem alten Bild der Erde dürfte es gar nicht da sein. Was ist jetzt klug?",
+   "answers": [
+    "Sofort ein ganz neues Bild der Erde zeichnen.",
+    "Das Signal löschen, weil es nicht zur bisherigen Zeichnung passt.",
+    "Die Messung prüfen und eine bessere Erklärung suchen.",
+    "Warten, bis jemand Berühmtes es erklärt."
+   ],
+   "correct": 2,
+   "why": "Erst prüft man, ob die Messung stimmt. Wenn ja, braucht man eine bessere Erklärung.",
+   "hints": [
+    "Was würdest du tun, wenn deine Waage plötzlich etwas Seltsames anzeigt?"
+   ],
+   "wrongReasons": [
+    "So schnell geht das nicht. Wer weiß, ob das Signal echt ist?",
+    "Wer unbequeme Messungen löscht, lernt nichts Neues.",
+    null,
+    "Ob etwas stimmt, hängt nicht an einem berühmten Namen."
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "karte": "person-inge_lehmann",
+   "grp": "challenge",
+   "id": "person-inge_lehmann:limits",
+   "level": "profi",
+   "prompt": "Ein neues Modell erklärt Lehmanns Messungen besser als das alte. Was darf man jetzt sagen?",
+   "answers": [
+    "Das Modell passt besser, aber vieles ist noch offen.",
+    "Nun sind jede Temperatur und jeder Stoff im Erdinneren exakt bekannt.",
+    "Damit ist das gezeichnete Schnittbild ein Foto des wirklichen Erdkerns.",
+    "Das alte Modell war also in allem falsch."
+   ],
+   "correct": 0,
+   "why": "Ein Modell, das besser passt, erklärt viel, aber nicht alles.",
+   "hints": [
+    "Passt ein Modell besser, weiß man dann schon alles?"
+   ],
+   "wrongReasons": [
+    null,
+    "Wie heiß es innen genau ist, weiß man damit noch nicht.",
+    "Ein Modell ist eine Zeichnung, kein Foto.",
+    "Das alte Modell war nicht in allem falsch. Vieles daran stimmt bis heute."
+   ],
+   "difficulty": "hard"
+  }
+ ],
+ "fastRichtig": {
+  "claim": "person-marie_curie:stimmt-1",
+  "wort": "erfunden",
+  "woerter": [
+   "Marie Curie",
+   "Radium",
+   "erfunden"
+  ],
+  "ersatz": "entdeckt",
+  "aufloesung": "Radium steckte schon im Gestein. Marie Curie hat es dort entdeckt, nicht erfunden. Erfinden kann man nur etwas, das es vorher nicht gab."
+ },
+ "ordnen": {
+  "karte": "history-stone_tools",
+  "id": "history-stone_tools:ordnen-1",
+  "level": "experte",
+  "frage": "Was geschah zuerst, was zuletzt? Ordne der Reihe nach.",
+  "teile": [
+   "Die großen Dinosaurier sterben aus",
+   "Die ersten Steinwerkzeuge entstehen",
+   "Frühe Verwandte des Menschen nutzen Feuer",
+   "Die Pyramiden von Gizeh werden gebaut"
+  ],
+  "hints": [
+   "Vergleiche: Millionen Jahre sind viel länger her als tausende Jahre.",
+   "Lies bei „Stimmt das?“ nach: Was gab es zuerst, Werkzeuge oder Feuer?"
+  ],
+  "aufloesung": "Zuerst starben die Dinosaurier aus, vor etwa 66 Millionen Jahren. Viel später, vor etwa 3,3 Millionen Jahren, entstanden die ersten Steinwerkzeuge. Feuer nutzten frühe Verwandte des Menschen erst danach. Die ältesten sicheren Spuren sind etwa 1 Million Jahre alt. Die Pyramiden sind erst rund 4.500 Jahre alt."
+ },
+ "umformuliert": [],
+ "neuOderGeaendert": [
+  "animal-african-savanna-elephant:rate-1",
+  "animal-african-savanna-elephant:rate-3",
+  "animal-african-savanna-elephant:rate-4",
+  "animal-polar-bear:rate-1",
+  "animal-polar-bear:rate-2",
+  "animal-polar-bear:rate-3",
+  "animal-common-octopus:rate-3",
+  "history-stone_tools:rate-4",
+  "history-apollo11:rate-4",
+  "person-marie_curie:rate-2",
+  "person-marie_curie:rate-3",
+  "person-jane_goodall:rate-1",
+  "person-jane_goodall:rate-2",
+  "building-giza-pyramids:rate-2",
+  "building-giza-pyramids:rate-3",
+  "building-eiffel-tower:rate-2",
+  "building-eiffel-tower:rate-3",
+  "science-water-cycle-2",
+  "science-water-cycle-3",
+  "science-water-cycle-4",
+  "science-water-cycle:rate-4",
+  "science-photosynthesis-1",
+  "science-photosynthesis-2",
+  "science-photosynthesis-3",
+  "science-photosynthesis-4",
+  "science-pollination-2",
+  "science-pollination-3",
+  "science-pollination-4",
+  "science-fungi-1",
+  "science-fungi-2",
+  "science-fungi-3",
+  "science-coral-reef-2",
+  "science-coral-reef-3",
+  "science-coral-reef-4",
+  "science-moon-phases-1",
+  "science-moon-phases-2",
+  "science-moon-phases-3",
+  "science-seasons-1",
+  "science-seasons-2",
+  "science-seasons-4",
+  "science-tides-1",
+  "science-tides-2",
+  "science-tides-3",
+  "science-tides-4",
+  "history-khipu:compare",
+  "history-khipu:limits",
+  "history-mohenjo-daro:compare",
+  "history-mohenjo-daro:limits",
+  "invention-bicycle:rate-1",
+  "invention-bicycle:rate-4",
+  "history-bronze:material",
+  "history-bronze:limits",
+  "person-maria_sibylla_merian:evidence",
+  "person-maria_sibylla_merian:limits",
+  "person-inge_lehmann:evidence",
+  "person-inge_lehmann:limits"
+ ]
+}
