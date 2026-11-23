@@ -163,7 +163,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 ## Phase 4 – Globus, Spiele, Labore (grob)
 
 - Einzeln in den neuen Kern übernehmen und dabei verbessern.
-- **Globus als Herzstück** (Katalog 2027, Abschnitt 3): Themenebenen (Klimazonen, Tierwelten, Ozeane, Orte aus den Wissenskarten), von jeder Ebene zu Karten, Spielen und Laboren und zurück. Die vorhandene 2D-Ersatzansicht (`FallbackGlobe` in `app/globe.tsx`) bleibt und wird mit verbessert.
+- **Globus als Herzstück** (Katalog 2027, Abschnitt 3): Themenebenen (Klimazonen, Tierwelten, Ozeane, Orte aus den Wissenskarten), von jeder Ebene zu Karten, Spielen und Laboren und zurück. Die vorhandene 2D-Ersatzansicht (`FallbackGlobe` in `app/globe.tsx`) bleibt und wird mit verbessert. Dazu der Wunsch des Nutzers, den 3D-Globus schöner und detaillierter zu machen (Ideen-Sammlung, „Globus schöner und detaillierter“).
 - **3D-Modelle** (Katalog 2027, Abschnitt 2): zuerst den Bestand sichten (welche Modelle erklären etwas, welche sind nur Schmuck, wo hilft echtes 3D). Dann ein erstes neues 3D-Modell mit klarem Lernwert (Vorschlag: Tag und Nacht oder Jahreszeiten), mit 2D-Fassung, Tastatur, Offline und Größenbudget. React Three Fiber dabei prüfen (Lizenz, Größe, Nutzen); nur exakt gepinnt aufnehmen.
 - Frage-Spiele (Flaggen, Hauptstädte, Silhouetten, Klima, Foto-Forscher, Schatzsuche): der dritte Hinweis verrät nicht mehr die Lösung, echte Stufen, Fehlantworten erklärt (WK-021, WK-056; Stand 11.10., vor der Arbeit neu prüfen). Stufen und größere Vorräte kommen schon in Phase 1, Teilschritt 3; hier bleiben Hinweise, Fehlantworten und das neue Aussehen.
 - Rückmeldungen ehrlich formulieren: nach einer Auswahl nicht „Richtig erklärt!“ bescheinigen (WK-056; teils erledigt, vorher prüfen).
@@ -225,6 +225,11 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 ## Ideen-Sammlung
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
+
+**Globus schöner und detaillierter (Wunsch des Nutzers, 23.11.2026, für Phase 4):** Der 3D-Globus soll cooler, schöner und detaillierter werden. Wann: wenn Phase 4 („Globus als Herzstück“) geplant wird, nicht vorher. Dann zuerst `ideen-scout` (wie zeigen gute Kinder- und Lernangebote die Erde?), danach Entwurf mit Vorher-Bildern und `design-pruefer`. Erste Einschätzung von Claude, vor dem Entwurf zu prüfen:
+- Möglich wären echte Erdbilder statt flacher Farben (Wolken, Gebirge, Meerestiefen, Nachtseite mit Lichtern), sanftes Licht und Schatten, eine Atmosphäre als heller Rand, schärfere Küsten beim Heranzoomen.
+- Grenzen: nur Bilder mit freien Rechten und Bildnachweis (z. B. Erdbilder der NASA, Karten von Natural Earth; Lizenz vorher prüfen). Größenbudget, Offline-Vorbereitung und ältere Handys begrenzen die Bildgröße. Darum Bilder in Stufen laden (erst klein, beim Heranzoomen schärfer), vorher messen. Die 2D-Ersatzansicht und die Tastatur bleiben.
+- Schöner allein reicht nicht (VISION: „Kein 3D als Schmuck“): Jede neue Einzelheit soll beim Lernen helfen, z. B. Gebirge und Wüsten sehen, wenn man die Ebene „Klimazonen“ anschaut.
 
 **Themenwünsche des Nutzers (21.11.2026)** (Sorgfaltsregeln je Feld: `docs/entwurf/2026-11-21-katalog-2027-einordnung.md`):
 - Medizin und Körper, zum Beispiel Knochen (den Körper erklären, keine Gesundheitsratschläge).
