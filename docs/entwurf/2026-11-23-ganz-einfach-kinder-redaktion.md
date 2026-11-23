@@ -130,3 +130,16 @@
 - Die Einleitung der Holocaust-Karte nennt als ersten Satz offen die Ermordung von sechs Millionen Menschen. Für Kinder ab 8 mit Begleitung halte ich das für vertretbar. Ob 5-Jährige diese Karte ohne Hinweis für Eltern sehen sollen, ist eine Produktentscheidung.
 
 Geprüfte Dateien: docs/entwurf/2026-11-23-ganz-einfach-entwurf.json und app/world-catalog.json (die sechs heiklen Karten und die 24 Tierkarten ab Zeile 11430).
+
+## Nachprüfung der sechs zusammengeführten Sätze (kinder-redaktion, 23.11.2026)
+
+Geprüft: die sechs Sätze mit Herkunft „Claude: Vorschlag kinder-redaktion mit Korrektur fakten-pruefer“ in `2026-11-23-ganz-einfach-endfassung.json`, je mit ihrer Einleitung. Gesamteindruck: gut.
+
+1. history-ww1: passt.
+2. history-ww2: passt („Sechs Jahre“ und „1945“ doppeln sich leicht, stört kaum).
+3. history-berlin_wall_build: „Deutschland war damals geteilt. Die DDR im Osten wollte ihre Menschen nicht mehr in den Westen lassen. Darum ließ sie eine Mauer bauen, mitten durch Berlin. Familien und Freunde waren plötzlich getrennt.“ („DDR“ und „Westen“ unerklärt; „entstand“ verschweigt, wer baute.)
+4. history-september11: „Terroristen wollen mit Gewalt Angst verbreiten. Bei diesen Anschlägen starben fast 3.000 Menschen. Viele Helfer retteten damals Menschen. Heute erinnert ein Ort an alle Opfer.“ (letzter Satz zu lang)
+5. science-shadows: „Stell dir vor, die Erde wäre flach. Dann wären die Schatten zur selben Zeit überall gleich lang. Das ist aber nicht so. Das passt zu einer runden Erde.“ (Doppelung mit der Einleitung; „Wäre …, wären …“ schwer)
+6. building-panama-canal: „Der Kanal führt quer durch das Land Panama. Unterwegs gibt es Schleusen, das sind große Becken mit Toren. Darin steigt oder sinkt das Wasser. Das Schiff schwimmt obenauf und wird so gehoben oder gesenkt.“ (welches Land? „Schleuse“ unerklärt)
+
+Weitergegeben (nicht Auftrag): Zweiter Weltkrieg „mehr als 50 Millionen“ ist vorsichtig (DHM: „über 50 Millionen“); schwierige Wörter in Einleitungen („nationalsozialistische“, „riegelte … ab“, „DDR-Regierung“, „al-Qaida“).
