@@ -186,6 +186,13 @@ async function ordneRichtig(page, {touch}) {
   await bereich.waitFor(WARTEN);
   const reihe = () => bereich.locator('.ordne-richtig-text').allInnerTexts();
   assert.notDeepEqual(await reihe(), o.teile, 'die Teile stehen am Anfang nicht schon richtig');
+  // Einmal nach unten: Dabei verschiebt React genau das fokussierte Teil im DOM, und der Browser nimmt ihm den Fokus.
+  // Der Fokus kommt trotzdem zurück, und der neue Platz wird angesagt (Code-Nachprüfung Teil A, N2).
+  assert.ok(o.teile.length > 2, 'Testvoraussetzung: Platz 2 ist nicht der letzte');
+  const erstes = (await reihe())[0];
+  await tippe(bereich.getByRole('button', {name: '„' + erstes + '“ nach unten', exact: true}), touch);
+  await bereich.locator('[aria-live="polite"]').getByText('„' + erstes + '“ steht jetzt an Platz 2.', {exact: true}).waitFor({state: 'attached', ...WARTEN});
+  await page.waitForFunction(n => document.activeElement?.getAttribute('aria-label') === n, '„' + erstes + '“ nach unten', WARTEN);
   for (let ziel = 0; ziel < o.teile.length; ziel++) {
     for (let jetzt = (await reihe()).indexOf(o.teile[ziel]); jetzt > ziel; jetzt--) {
       await tippe(bereich.getByRole('button', {name: '„' + o.teile[ziel] + '“ nach oben', exact: true}), touch);

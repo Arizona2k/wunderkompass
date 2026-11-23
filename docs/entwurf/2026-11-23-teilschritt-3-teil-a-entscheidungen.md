@@ -73,9 +73,18 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - **7 Kommentare:** berichtigt (`ordne-richtig.tsx`, `karte-stufen.test.mjs`).
 - **8 „Ordne richtig“:** Nach dem Verschieben bleibt der Fokus beim selben Teil (ganz oben oder unten auf dem anderen Pfeil), und ein unsichtbarer Satz sagt „‚…‘ steht jetzt an Platz N.“ an. Browser-Test prüft beides.
 - **9 Spielstand-Prüfung im Wörterbuch-Test:** Neue Schlüssel nur mit den erwarteten Präfixen (`items:`, `topicAnswer:`, `claimWort:`, `ordnen:`).
-- **10 Nachbarländer-Spiel:** Der Satz nutzt jetzt `WOERTER.nochNicht` („Noch nicht ganz. Versuch es noch einmal! Frankreich hat keine …“ statt umgekehrt).
+- **10 Nachbarländer-Spiel:** Der Satz nutzt jetzt `WOERTER.nochNicht` („Noch nicht ganz. Versuch es noch einmal! Spanien hat keine gemeinsame Grenze mit Deutschland.“ statt umgekehrt).
 - **Dazu:** Regel in `kartenFeldFehler`: Lernhilfen brauchen „Ganz einfach“; „Selbst beobachten“ und Lernziel sind freiwillig, aber nicht leer.
 - **Später Fund in der großen Prüfung:** Die Gezeiten-Prüfung im Wörterbuch-Test suchte einen Absatz, der jetzt unter „Für Große“ liegt. Sie klappt „Für Große“ jetzt erst auf und prüft dann sichtbar (nicht abgeschwächt). Die Fotosynthese-Zeichnung steht offen unter dem Satz.
+
+## Code-Nachprüfung Teil A (Bericht `2026-11-23-teil-a-code-nachpruefung.md`)
+
+Alle zehn Befunde bestätigt behoben. Neue Befunde, alle umgesetzt:
+
+- **M1 Challenge-Runden:** Die Teil-A-Liste prüft jetzt auch, dass eine angefangene Runde der Wissens-Challenge mit den Antworten von Teil A weiterläuft (Hauptfragen als `<karte>:mini`, Challenge-Fragen unter ihrer ID; heikle Karten sind nicht im Challenge). Gegenprobe: Eine zusätzliche Antwort bei einer Haupt- oder Challenge-Frage macht den Test rot.
+- **N1:** Der Tipp-Test verlangt, dass eine Runde mit den heutigen Antworten lesbar ist, statt still zu überspringen.
+- **N2:** Der Browser-Test schiebt bei „Ordne richtig“ einmal nach unten (dabei verschiebt React das fokussierte Teil selbst) und prüft Fokus und Ansage.
+- **N3:** Beispiel in Punkt 10 berichtigt (Frankreich ist Nachbarland).
 
 ## Arbeitsweise
 

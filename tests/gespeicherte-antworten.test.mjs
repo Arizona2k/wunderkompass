@@ -4,7 +4,7 @@ import fixture from './fixtures/gespeicherte-antworten.json' with {type: 'json'}
 import teilA from './fixtures/gespeicherte-antworten-teil-a.json' with {type: 'json'};
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import {restoreAnswerWording} from '../app/retained-answer-wording.mjs';
-import {challengeQuestionForOrder} from '../app/knowledge-challenge.ts';
+import {CHALLENGE_BANK, challengeQuestionForOrder} from '../app/knowledge-challenge.ts';
 
 // BACKLOG 23 (Pflicht vor Teilschritt 3, Aufgabe 5): Jede Antwort, die ein Kind im Pass gespeichert haben kann,
 // bleibt lesbar – wörtlich gleich oder über einen Alias. Die feste Liste stammt aus test-live vor Aufgabe 5.
@@ -92,6 +92,25 @@ test('datierte Liste Teil A: jede Antwort, die ein Kind auf einer Karte speicher
   }
 });
 
+// Dieselben Antworten stecken auch in Runden der Wissens-Challenge (Hauptfragen als '<karte>:mini', Challenge-Fragen unter
+// ihrer ID; heikle Karten sind nicht dabei). Eine angefangene Runde verlangt genau ihre Antworten oder eine frühere Fassung
+// (retainedChallengeChoices); eine neue Antwort allein würde sie verwerfen (Code-Nachprüfung Teil A, M1).
+const imChallenge = new Map(CHALLENGE_BANK.map(q => [q.id, q]));
+test('datierte Liste Teil A: eine angefangene Runde der Wissens-Challenge lässt sich fortsetzen', () => {
+  let geprueft = 0;
+  for (const alt of teilA.fragen) {
+    const q = imChallenge.get(alt.id) ?? (karten.has(alt.id) ? imChallenge.get(alt.id + ':mini') : undefined);
+    if (!q) continue;
+    geprueft++;
+    const lies = wert => restoreAnswerWording(q.topic, wert), reihe = [...alt.answers].reverse().map(lies);
+    const runde = challengeQuestionForOrder(q.id, reihe);
+    assert.ok(runde, 'Runde mit den Antworten von Teil A nicht mehr lesbar: ' + q.id);
+    assert.deepEqual([...runde.answers].sort(), [...reihe].sort(), q.id + ': die Runde zeigt ihre Antworten');
+    assert.equal(runde.answers[runde.correct], lies(alt.answers[alt.correct]), q.id + ': dieselbe richtige Antwort');
+  }
+  assert.ok(geprueft >= 200, 'Testvoraussetzung: Haupt- und Challenge-Fragen der Liste geprüft (' + geprueft + ')');
+});
+
 test('Challenge: eine alte Runde mit der ganzen früheren Frage zeigt keine heutigen Tipps', () => {
   let alteFassungen = 0;
   for (const alt of fixture.challenges) {
@@ -102,7 +121,8 @@ test('Challenge: eine alte Runde mit der ganzen früheren Frage zeigt keine heut
       assert.deepEqual(runde.hints, [], alt.id + ': keine Tipps zur alten Fassung');
     }
     const neu = challengeQuestionForOrder(alt.id, [...heute.answers].reverse());
-    if (neu && !heute.ruht) assert.equal(neu.prompt, heute.prompt, alt.id + ': eine neue Runde zeigt die heutige Frage');
+    assert.ok(neu, alt.id + ': eine Runde mit den heutigen Antworten ist lesbar');
+    if (!heute.ruht) assert.equal(neu.prompt, heute.prompt, alt.id + ': eine neue Runde zeigt die heutige Frage');
   }
   assert.ok(alteFassungen > 0, 'Testvoraussetzung: es gibt umformulierte Fragen mit alter Fassung');
 });
