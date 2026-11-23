@@ -1,4 +1,4 @@
-import type { LocalProgress } from '../progress-storage';
+import type { Difficulty, LocalProgress } from '../progress-storage';
 
 // Eine Stufe für alles (Teilschritt 3, E1). Sie liegt im freien Spielspeicher des Passes,
 // darum braucht es keine neue Schema-Version. settings.difficulty wird nur noch gelesen.
@@ -32,3 +32,6 @@ export function mitStufe(progress: LocalProgress, stufe: Stufe, heute = new Date
   if (!istStufe(stufe) || leseStufe(progress) === stufe) return progress;
   return { ...progress, gameSessions: { ...progress.gameSessions, [STUFE_SCHLUESSEL]: { stufe, seit: heute.toISOString().slice(0, 10) } } };
 }
+
+// Das alte Quiz kannte Einfach, Normal und Knifflig. Bis es in Teil B ganz umzieht, folgt es der gemeinsamen Stufe.
+export const quizStufe = (stufe: Stufe): Difficulty => stufe === 'entdecker' ? 'normal' : 'tricky';

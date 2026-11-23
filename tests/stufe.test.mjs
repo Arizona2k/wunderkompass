@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { emptyProgress } from '../app/progress-storage.ts';
-import { STUFEN, STUFE_SCHLUESSEL, leseStufe, mitStufe, stufeAusAltwert } from '../app/kern/stufe.ts';
+import { STUFEN, STUFE_SCHLUESSEL, leseStufe, mitStufe, quizStufe, stufeAusAltwert } from '../app/kern/stufe.ts';
 
 // Eine Stufe für alles (Teilschritt 3, E1): Entdecker, Profi, Experte im freien Spielspeicher des Passes.
 const pass=(patch={})=>({...emptyProgress(),...patch});
@@ -73,4 +73,10 @@ test('ohne Eintrag ist die übernommene Stufe schon gewählt: Profi aus Knifflig
 test('eine ungültige Stufe wird nicht geschrieben',()=>{
  const vorher=emptyProgress();
  assert.equal(mitStufe(vorher,'meister',new Date()),vorher);
+});
+
+test('das alte Quiz folgt der gemeinsamen Stufe: Entdecker spielt Normal, Profi und Experte Knifflig',()=>{
+ assert.equal(quizStufe('entdecker'),'normal');
+ assert.equal(quizStufe('profi'),'tricky');
+ assert.equal(quizStufe('experte'),'tricky');
 });
