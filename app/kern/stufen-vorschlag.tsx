@@ -9,9 +9,9 @@ let folge = leereFolge();
 
 export function useStufenVorschlag(runde: string, stufe: Stufe) {
   const [vorschlag, setVorschlag] = useState<StufenVorschlag | null>(null);
-  // Jede Antwort melden; nur die erste je Frage zählt (mitErsterAntwort).
-  const merke = useCallback((frage: string, richtig: boolean) => {
-    const neu = mitErsterAntwort(folge, frage, richtig, stufe);
+  // Jede Antwort melden; nur die erste je Frage und nur Fragen der gewählten Stufe zählen (mitErsterAntwort).
+  const merke = useCallback((frage: string, richtig: boolean, frageStufe: Stufe) => {
+    const neu = mitErsterAntwort(folge, frage, richtig, stufe, frageStufe);
     if (neu === folge) return;
     const naechster = stufenVorschlag(neu, stufe, runde);
     folge = naechster ? nachVorschlag(neu, runde) : neu;

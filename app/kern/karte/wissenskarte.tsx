@@ -118,21 +118,26 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
   const vorlesen = () => a.onRead([t.title, t.intro, 'Rate mal!', frage.question.prompt, ...auswahl].map(satz).join(' '));
 
+  // „Ganz einfach“ steht offen, die Absätze zugeklappt unter „Für Große“ (Teilschritt 3, E12).
+  const ganzEinfachOffen = !t.chapters && !!t.learning && !ganzEinfachImAusprobieren(t);
+  // Die Fotosynthese-Zeichnung bleibt sichtbar: Steht „Ganz einfach“ offen, kommt sie direkt darunter, sonst nach dem ersten Absatz.
+  const fotosynthese = t.id === 'science-photosynthesis' && (
+    <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
+      <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
+      <figure>
+        <PhotosynthesisRolesDrawing/>
+        <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
+      </figure>
+    </section>
+  );
+
   // Die Absätze von „Kurz erklärt“ (mit Fotosynthese-Zeichnung und Arbeitsweg der Personen).
   const absaetze = (
     <>
       {t.paragraphs.map((absatz, i) => (
         <Fragment key={i}>
           <p>{absatz}</p>
-          {t.id === 'science-photosynthesis' && i === 0 && (
-            <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
-              <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
-              <figure>
-                <PhotosynthesisRolesDrawing/>
-                <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
-              </figure>
-            </section>
-          )}
+          {i === 0 && !ganzEinfachOffen && fotosynthese}
         </Fragment>
       ))}
       {t.person && (
@@ -214,12 +219,13 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
               {absaetze}
             </LearningDetails>
           </>
-        ) : t.learning && !ganzEinfachImAusprobieren(t) ? (
+        ) : ganzEinfachOffen && t.learning ? (
           <>
             {/* Ohne Häppchen ist „Ganz einfach“ die einfache Fassung: Der Satz steht offen, ohne Altersangabe; die
                 bisherigen Absätze stehen unverändert zugeklappt unter „Für Große“ (Teilschritt 3, E12).
                 Bei Personen steht der Satz oben in „Ausprobieren“ (ganzEinfachImAusprobieren), die Absätze bleiben offen. */}
             <p className="wissenskarte-ganz-einfach">{t.learning.starter}</p>
+            {fotosynthese}
             <LearningDetails className="wissenskarte-fuer-grosse" summary="Für Große">
               {absaetze}
             </LearningDetails>

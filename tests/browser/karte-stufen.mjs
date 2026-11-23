@@ -18,7 +18,8 @@ const hatStufe = (t, stufe) => fragenDerKarte(t).some(f => f.level === stufe);
 const MIT_PROFI = catalog.find(t => hatStufe(t, 'profi') && fragenAufStufe(t, 'entdecker').length >= 1);
 const OHNE_ZUSATZ = catalog.find(t => fragenDerKarte(t).length === 1);
 const DREI_LEICHTE = catalog.find(t => fragenAufStufe(t, 'entdecker').length >= 3);
-const ZWEI_AUF_PROFI = catalog.find(t => hatStufe(t, 'profi') && fragenAufStufe(t, 'profi').length >= 2);
+// Für die Vorschläge zählen nur Fragen genau der gewählten Stufe (Code-Prüfung Teil A, Befund 1): zwei echte Profi-Fragen.
+const ZWEI_AUF_PROFI = catalog.find(t => fragenDerKarte(t).filter(f => f.level === 'profi').length >= 2);
 
 async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
   const context = await ctx.browser.newContext({viewport: {width, height}, reducedMotion: 'reduce', ...(touch ? {hasTouch: true} : {}), ...(touch && ctx.engine === 'chromium' ? {isMobile: true} : {})});
@@ -112,6 +113,7 @@ async function vorschlagLeichter(page, {touch}) {
   await stufeWaehlen(page, 'profi', {touch});
   for (let i = 0; i < 2; i++) {
     const frage = await angezeigteFrage(page, t);
+    assert.equal(frage.level, 'profi', 'Profi zeigt zuerst seine eigenen Fragen');
     await tippe(antwortKnopf(page, falscheAntworten(frage)[0]), touch);
     await rateMal(page).getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor(WARTEN);
     if (i === 0) {

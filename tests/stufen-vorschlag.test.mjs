@@ -65,3 +65,19 @@ test('ein Vorschlag ändert nie selbst die Stufe und die Folge nicht den Pass',(
  stufenVorschlag(folge,'entdecker','topic:a');
  assert.deepEqual(folge,vorher,'stufenVorschlag ist rein');
 });
+
+test('nur Fragen der gewählten Stufe zählen; leichtere Fragen lassen die Folge, wie sie ist',()=>{
+ // Code-Prüfung Teil A, Befund 1: Auf den meisten Karten gibt es nur die Entdecker-Hauptfrage. Ein Profi-Kind, das drei
+ // solche Fragen richtig beantwortet, hat Profi nicht ausprobiert; zwei falsche dort heißen nicht „Profi ist zu schwer“.
+ const leicht=(f,frage,richtig)=>mitErsterAntwort(f,frage,richtig,'profi','entdecker');
+ const dreiLeichte=leicht(leicht(leicht(leereFolge(),'a',true),'b',true),'c',true);
+ assert.deepEqual(dreiLeichte,leereFolge(),'drei richtige Entdecker-Fragen auf Profi zählen nicht');
+ assert.equal(stufenVorschlag(dreiLeichte,'profi','topic:a'),null);
+ const zweiFalsche=leicht(leicht(leereFolge(),'a',false),'b',false);
+ assert.equal(stufenVorschlag(zweiFalsche,'profi','topic:a'),null,'zwei falsche Entdecker-Fragen auf Profi schlagen nichts vor');
+ // Dazwischen bleibt die Folge stehen: Profi richtig, Entdecker-Frage, zweimal Profi richtig ergibt drei hintereinander.
+ const gemischt=mitErsterAntwort(mitErsterAntwort(leicht(mitErsterAntwort(leereFolge(),'p:1',true,'profi','profi'),'e:1',false),'p:2',true,'profi','profi'),'p:3',true,'profi','profi');
+ assert.deepEqual(stufenVorschlag(gemischt,'profi','topic:a'),HOCH_EXPERTE);
+ // Eine schwerere Frage zählt auch nicht (kommt auf der Karte nicht vor, die Regel ist „genau die gewählte Stufe“).
+ assert.deepEqual(mitErsterAntwort(leereFolge(),'x',true,'entdecker','profi'),leereFolge());
+});

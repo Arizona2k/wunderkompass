@@ -12,6 +12,7 @@ import {useSavedGame} from '../../saved-games';
 import {shuffle} from '../../../lib/shuffle';
 import type {Review} from '../../progress-storage';
 import {wiederholungFuerAntwort} from '../wiederholung';
+import type {Stufe} from '../stufe';
 import {WOERTER} from '../woerter';
 import {festGemischt, gueltigeReihe, type KartenFrage} from './karten-daten';
 
@@ -41,8 +42,9 @@ type RateMalProps = {
   onWeiter?: () => void;
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
-  // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage) und darunter Platz für den Vorschlag.
-  onAntwort?: (frageId: string, korrekt: boolean) => void;
+  // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe)
+  // und darunter Platz für den Vorschlag.
+  onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
   unterRueckmeldung?: ReactNode;
   // Neben der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
   kopf?: ReactNode;
@@ -70,7 +72,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
     if (art === 'zaehlen') onReview(frage.reviewId, korrekt);
     else if (art === 'nachbessern') onNachbessern?.(frage.reviewId);
     if (korrekt) onLearn();
-    onAntwort?.(frage.id, korrekt);
+    onAntwort?.(frage.id, korrekt, frage.level);
   }
 
   return (

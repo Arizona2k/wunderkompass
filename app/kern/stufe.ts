@@ -40,12 +40,14 @@ export const STUFEN_NAME: Record<Stufe, string> = { entdecker: 'Entdecker', prof
 
 // Vorschläge statt Automatik (E8). Die Folge lebt nur, solange die Seite offen ist, nie im Pass.
 // Gezählt wird je Frage nur die erste Antwort; nach einem Stufenwechsel beginnt die Folge neu.
+// Es zählen nur Fragen genau der gewählten Stufe: Leichtere Fragen (z. B. die Hauptfrage auf einer Karte ohne Profi-Frage)
+// sagen nichts darüber, ob Profi zu leicht oder zu schwer ist. Sie lassen die Folge, wie sie ist.
 export type Folge = { stufe: Stufe | null; antworten: boolean[]; gezaehlt: string[]; gefragt: string[] };
 export type StufenVorschlag = { richtung: 'schwerer' | 'leichter'; ziel: Stufe; text: string };
 export const leereFolge = (): Folge => ({ stufe: null, antworten: [], gezaehlt: [], gefragt: [] });
 
-export function mitErsterAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe): Folge {
-  if (folge.gezaehlt.includes(frage)) return folge;
+export function mitErsterAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe, frageStufe: Stufe = stufe): Folge {
+  if (frageStufe !== stufe || folge.gezaehlt.includes(frage)) return folge;
   const bisher = folge.stufe === stufe ? folge.antworten : [];
   return { ...folge, stufe, antworten: [...bisher, richtig].slice(-3), gezaehlt: [...folge.gezaehlt, frage] };
 }
