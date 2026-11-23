@@ -80,3 +80,41 @@ Beim Taj Mahal waren beide Kartenquellen heute nicht abrufbar. Ich konnte sie al
 - [Britannica, Taj Mahal](https://www.Britannica.Com/topic/Taj-Mahal) (nur Suchtreffer, Seite 403)
 - [MasterClass, Taj Mahal Architecture](https://www.masterclass.com/articles/taj-mahal-architecture-and-history-guide) (nur Suchzusammenfassung)
 - [Makrana marble, Wikipedia](https://Www.Wikipedia.org/wiki/Makrana_marble) (nur Suchzusammenfassung)
+
+---
+
+# Faktencheck der letzten Fassungen nach den Vorschlägen der kinder-redaktion (fakten-pruefer, 23.11.2026)
+
+Ich habe keine Dateien geändert. Ergebnis: 8 von 9 Texten stimmen. Bei einem Text (Nr. 1, Berliner Mauer) schlage ich eine kleine Änderung vor. Nichts ist falsch.
+
+## Befund
+
+**1. history-berlin_wall_build: stimmt mit Einschränkung**
+- **Was stimmt:**
+  - „Die DDR war damals ein eigener Staat im Osten Deutschlands.“
+  - „…ließ sie eine Mauer um West-Berlin bauen. Die Mauer lief mitten durch Berlin.“
+  - „plötzlich getrennt“
+  - Beleg: Stiftung Berliner Mauer, https://www.stiftung-berliner-mauer.de/de/themen/die-berliner-mauer: Die Mauer „umschloss auf einer Länge von 155 km … West-Berlin und zog sich als Schneise durch die gesamte Innenstadt“. Am 13. August 1961 begann die SED, die Grenzen „zunächst mit Stacheldraht und wenige Tage später mit Mauern“ abzuriegeln.
+- **Problem:** „Ihre Regierung wollte niemanden mehr in den Westen lassen“ ist zu absolut.
+  - Die Stiftung nennt als Zweck: „Die Mauer sollte die Flucht von Ost-Berlin in den Westen verhindern“.
+  - Später reisten manche trotzdem: Ausreiseanträge wurden teils genehmigt, Rentner durften ab 1964 reisen. Das zweite weiß ich aus allgemeinem Wissen, die Stiftungsseite nennt es nicht.
+  - Die Karte selbst sagt vorsichtiger: „Menschen in der DDR konnten nun nicht einfach in den Westen reisen.“
+- **Vorschlag:** „Ihre Regierung wollte nicht, dass ihre Menschen in den Westen fliehen.“ Oder: „…wollte ihre Menschen nicht mehr frei in den Westen lassen.“
+
+## Ohne Befund (stimmt)
+
+- **2. building-burj-khalifa:** Die Karte sagt „Drei Flügel stützen einen kräftigen Kern“. SOM spricht vom „tragenden Kern“, der Turm hat drei Flügel um einen Kern. „Drei Gebäudeteile rundherum stützen ihn“ gibt das richtig wieder. 828 m entsprechen etwa 2,5 Eiffeltürmen (330 m), das hatte ich schon geprüft.
+- **3. animal-fire-salamander:**
+  - Einleitung: NABU Feldherpetologie, https://nabu-lfa-feldherpetologie.jimdoweb.com/tiergruppen/amphibien/feuersalamander/: Die Weibchen setzen die Larven „zumeist [in] kleinere Fließgewässer“ ab. Die Karte sagt: „Die Larven tragen äußere Kiemen.“
+  - Satz: NABU: Die Larven „entwickeln sich im Laufe eines Sommers zu jungen Salamandern“, und der Feuersalamander „lebt überwiegend in Laub- und Mischwäldern“. Die Karte sagt „Feuchte Wälder“. „Später gehen die jungen Salamander an Land“ ist damit getragen.
+- **4. building-taj-mahal:** „Platten aus weißem Marmor“ passt zur Karte („Marmorverkleidung“, „außen unter anderem Marmor“) und zu Suchtreffern über eine Verkleidung aus Makrana-Marmor. Einschränkung wie im letzten Bericht: UNESCO und tajmahal.gov.in waren nicht abrufbar.
+- **5. history-holocaust:** USHMM: „persecution and murder of six million European Jews“, „because the Nazis were radically antisemitic“. „Millionen von ihnen“ löst den Punkt mit „alle?“ aus meinem letzten Bericht. Der Text bleibt ohne Einzelheiten.
+- **6. history-september11:** Das 9/11-Memorial-FAQ sagt: „first responders rushed in trying to save those still trapped or injured“. Das trägt „Viele Helfer kamen sofort und retteten Menschen“. Der Ort mit den Namen aller Opfer ist die Gedenkstätte in New York.
+- **7. science-shadows:** Jetzt stehen alle Bedingungen drin: ferne Sonne (parallele Strahlen, wie im Modell der Karte), gleich lange, gerade stehende Stöcke, dieselbe Zeit. Der Schluss „passt zu“ ist vorsichtig und richtig.
+- **8. science-coral-reef:** NOAA, https://oceanservice.noaa.gov/facts/coral.html: „made up of hundreds to thousands of tiny coral creatures called polyps“ und „Most corals contain algae called zooxanthellae“.
+- **9. invention-airplane:** „Triebwerk, eine Art Motor“ ist vertretbar. „Triebwerk“ ist im Deutschen der Oberbegriff für Antriebe, die Strahltriebwerk, Propellerturbine und Kolbenmotor mit Propeller umfassen. Ein Düsentriebwerk ist eine Gasturbine, also eine Kraftmaschine. „Eine Art Motor“ erzeugt damit keine falsche Vorstellung. Belegt habe ich das aus allgemeinem Fachwissen, eine Quelle dafür habe ich heute nicht geöffnet.
+
+## Nicht geprüft
+
+- **Taj Mahal:** Die Kartenquellen waren nicht abrufbar (403).
+- **Nicht neu geöffnet:** USHMM, das 9/11 Memorial und SOM habe ich heute nicht erneut aufgerufen. Die Zitate stammen aus meinem Bericht `/home/user/wunderkompass/docs/entwurf/2026-11-23-ganz-einfach-endfassung-fakten.md` bzw. aus dem Kartentext.
