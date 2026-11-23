@@ -32,7 +32,14 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - Verschoben: das Wissensbuch (Teilschritt 4), Wörter in den Daten der Labore und Reisen (Aufgabe 16).
 - Der Browser-Runner setzt UTF-8, wenn der Container keine Spracheinstellung hat; sonst kam ein Testpass mit „ü“ im Dateinamen nicht an (alter Fehler der Testumgebung).
 
-## Aufgabe 5: Karte mit Stufen (in Arbeit)
+## Aufgabe 5: Karte mit Stufen
+
+- Inhalte: Entwurf (`stufen-pruefer`), Sprachprüfung (`kinder-redaktion`), Faktencheck (`fakten-pruefer`), Endfassung (`karten-autor`), Endprüfung (`stufen-pruefer`, `fakten-pruefer`); alle Berichte in `docs/entwurf/2026-11-23-karte-stufen-*.md`.
+- **IDs und gespeicherte Antworten:** Der erste Entwurf hatte bei 27 bestehenden Fragen gespeicherte Antworten verändert und drei Fragen ganz neu unter alter ID geschrieben. Entschieden: Ganz andere Fragen bekommen neue IDs (`science-water-cycle-5`, `science-moon-phases-5`, `science-seasons-5`, `person-jane_goodall:rate-4`); die alten ruhen (`ruht: true`, bleiben in den Daten, erscheinen nicht mehr). Die acht geschützten Wasser- und Fotosynthese-Fragen behalten Frage, Erklärung und alte Antworten. Umformulierte Challenge-Fragen: Die Liste früherer Fassungen kennt ihre ganze alte Frage, eine angefangene Runde endet mit der Frage von damals. Drei ersetzte falsche Antworten (Curie, Eiffelturm): Die Karte zeigt „Hier gibt es neue Antworten“.
+- **Testregeln angepasst** (jede mit Grund im Test): Tipps ab 20 statt 45 Zeichen (kindgerecht kurz); Experte-Fragen bis 30 Wörter und Erklärung bis 3 Sätze (Denkweg); Pilot-Karten 2 bis 4 sichtbare Zusatzfragen; Ratemuster-Grenzen statt „nie die längste“; der Wasser-und-Fotosynthese-Test prüft Reihenfolgen für vier Antworten.
+- **Nicht übernommen** (BACKLOG): Vorschläge, die gespeicherte Antworten ändern (Liste „Bestehend, nur mit Alias änderbar“ der `kinder-redaktion`, zwei Quatsch-Antworten auf Profi, Merian-Antwort); „Fast richtig“ bei Gizeh (neue Behauptung, mit den Bauwerken); neuer Tipp für `history-apollo11:mini`.
+- Auf Entdecker zeigen Elefant und Eisbär nur ihre Hauptfrage (alle Zusatzfragen sind Profi oder Experte). Tests mit Elefanten-Zusatzfragen stellen dafür die Stufe auf Profi.
+- Die Stufenwahl steht im Kopf von „Rate mal!“ statt in einem eigenen Kasten (Höhenbudget der Elefantenkarte am Handy).
 
 - Challenge-Fragen ohne Einstufung gelten auf der Karte als Profi (Entdecker sehen sie nicht).
 - Gibt es die gewählte Stufe auf einer Karte nicht, sagt ein Satz, welche Stufe das Kind spielt, auch für Profi („Profi gibt es hier noch nicht. Du spielst Entdecker.“). E3 nannte nur Experte; auf 192 Karten gibt es bisher nur die Hauptfrage.
