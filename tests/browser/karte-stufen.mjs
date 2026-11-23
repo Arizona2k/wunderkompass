@@ -189,6 +189,10 @@ async function ordneRichtig(page, {touch}) {
   for (let ziel = 0; ziel < o.teile.length; ziel++) {
     for (let jetzt = (await reihe()).indexOf(o.teile[ziel]); jetzt > ziel; jetzt--) {
       await tippe(bereich.getByRole('button', {name: '„' + o.teile[ziel] + '“ nach oben', exact: true}), touch);
+      // Der neue Platz wird angesagt, und der Fokus bleibt beim verschobenen Teil (Code-Prüfung Teil A, Befund 8).
+      await bereich.locator('[aria-live="polite"]').getByText('„' + o.teile[ziel] + '“ steht jetzt an Platz ' + jetzt + '.', {exact: true}).waitFor({state: 'attached', ...WARTEN});
+      const name = '„' + o.teile[ziel] + '“ nach ' + (jetzt - 1 === 0 ? 'unten' : 'oben');
+      await page.waitForFunction(n => document.activeElement?.getAttribute('aria-label') === n, name, WARTEN);
     }
   }
   assert.deepEqual(await reihe(), o.teile);

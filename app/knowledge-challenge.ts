@@ -17,7 +17,11 @@ export const CHALLENGE_BANK:ChallengeQuestion[]=(CATALOG as WorldTopic[]).filter
 // Resolve the exact saved choice variant; prompts and correct meanings stay reviewed and unchanged.
 export function challengeQuestionForOrder(id:string,order:unknown){
  const question=CHALLENGE_BANK.find(q=>q.id===id);if(!question)return null;
- const variant=retainedChallengeChoiceVariant(question,order);return variant?{...question,...variant}:null;
+ const variant=retainedChallengeChoiceVariant(question,order);if(!variant)return null;
+ // Eine alte Runde mit der ganzen früheren Frage (umformuliert in Teilschritt 3) zeigt keine Tipps: Die heutigen Tipps
+ // gehören zur neuen Fassung und passen vielleicht nicht zur alten (Code-Prüfung Teil A, Befund 5). Solche Runden sind selten
+ // und enden nach sechs Aufgaben; jede neue Runde hat ihre Tipps.
+ const runde={...question,...variant};return runde.prompt!==question.prompt?{...runde,hints:[]}:runde;
 }
 export type ChallengeSession={difficulty:Difficulty|null;ids:string[];orders:Record<string,string[]>;index:number;answer:string|null;done:boolean};
 export const emptyChallenge=():ChallengeSession=>({difficulty:null,ids:[],orders:{},index:0,answer:null,done:false});

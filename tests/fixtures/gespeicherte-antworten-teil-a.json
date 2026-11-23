@@ -1,0 +1,2651 @@
+{
+  "stand": "2026-11-23, claude/trusting-galileo-ck3o23 (Teilschritt 3, Teil A: vierte Antworten, 12 neue Zusatzfragen, Challenge-Fragen auf der Karte)",
+  "hinweis": "Antworten, die Kinder auf den Karten gespeichert haben können. Nach dem Merge nie ändern; tests/gespeicherte-antworten.test.mjs prüft, dass jede noch lesbar ist.",
+  "fragen": [
+    {
+      "id": "animal-african-savanna-elephant",
+      "answers": [
+        "Riechen und greifen",
+        "Unter Wasser atmen wie ein Fisch",
+        "Wie ein Vogel fliegen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-african-savanna-elephant:rate-1",
+      "answers": [
+        "Er spritzt sich Wasser ins Maul",
+        "Er schluckt es direkt durch den Rüssel",
+        "Er schleckt Wasser wie ein Hund",
+        "Er taucht den Kopf ins Wasser und schluckt"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-african-savanna-elephant:rate-2",
+      "answers": [
+        "Etwa 3 Kilogramm",
+        "Etwa 100 Kilogramm",
+        "Etwa 1.000 Kilogramm",
+        "Etwa 30 Kilogramm"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-african-savanna-elephant:rate-3",
+      "answers": [
+        "Der größte und stärkste Bulle",
+        "Ein junges Männchen",
+        "Meist das älteste Weibchen",
+        "Das Weibchen, das am lautesten trompetet"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-african-savanna-elephant:rate-4",
+      "answers": [
+        "Sie ist stark und kann Löwen vertreiben",
+        "Sie erinnert sich an Wasserstellen von früher",
+        "Sie läuft am schnellsten zum nächsten Wasser",
+        "Sie braucht selbst am wenigsten Wasser"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-lion",
+      "answers": [
+        "In einem Rudel",
+        "Immer allein in einer Baumhöhle",
+        "In einem Bienenstaat"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-cheetah",
+      "answers": [
+        "Sehr schnelle kurze Sprints",
+        "Ausdauerndes Fliegen",
+        "Den größten Körper aller Landtiere"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-bengal-tiger",
+      "answers": [
+        "Andere Tiere",
+        "Bambusblätter",
+        "Blütennektar"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-giraffe",
+      "answers": [
+        "Vom Boden bis zum Kopf",
+        "Nur die Länge des Schwanzes",
+        "Das Gewicht in Kilogramm"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-giant-panda",
+      "answers": [
+        "Bambus",
+        "Fische",
+        "Meereis"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-western-lowland-gorilla",
+      "answers": [
+        "Der Wald bietet Nahrung und Schutz",
+        "Gorillas leben nur im Meer",
+        "Gorillas benötigen keine Pflanzen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-bornean-orangutan",
+      "answers": [
+        "In Bäumen",
+        "Im offenen Ozean",
+        "Im antarktischen Eis"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-polar-bear",
+      "answers": [
+        "Dort kann er nach Robben jagen",
+        "Er frisst das Eis",
+        "Eis macht ihn zu einem Fisch"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-polar-bear:rate-1",
+      "answers": [
+        "Sie halten einen langen Winterschlaf",
+        "Sie wandern zum Südpol",
+        "Sie jagen weiter Robben",
+        "Sie fressen nichts und leben vom Fett"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-polar-bear:rate-2",
+      "answers": [
+        "Er paddelt mit den Vorderpfoten",
+        "Er paddelt nur mit den Hinterbeinen",
+        "Er lässt sich auf Eisschollen treiben",
+        "Er paddelt mit allen vier Beinen gleich stark"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-polar-bear:rate-3",
+      "answers": [
+        "Die Luft in seinem Fell",
+        "Seine schwarze Haut",
+        "Seine dicke Fettschicht",
+        "Seine großen, breiten Tatzen"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-emperor-penguin",
+      "answers": [
+        "In der Antarktis",
+        "Am Nordpol bei Eisbären",
+        "In europäischen Baumhöhlen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-blue-whale",
+      "answers": [
+        "Krill",
+        "Große Bäume",
+        "Elefanten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-bottlenose-dolphin",
+      "answers": [
+        "Er holt Luft an der Oberfläche",
+        "Er hat Kiemen wie ein Fisch",
+        "Er muss überhaupt nicht atmen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-orca",
+      "answers": [
+        "Zu den Delfinen",
+        "Zu den Haien",
+        "Zu den Meeresschildkröten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-octopus",
+      "answers": [
+        "Acht",
+        "Zwei",
+        "Sechs"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-octopus:rate-1",
+      "answers": [
+        "Nur etwa 1 bis 2 Jahre",
+        "So lange wie ein Mensch",
+        "Mehr als 100 Jahre",
+        "Etwa 10 bis 20 Jahre"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-octopus:rate-2",
+      "answers": [
+        "Er schwimmt immer wie ein Fisch",
+        "Er rollt sich wie ein Ball",
+        "Er läuft auf seinen Armen"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-common-octopus:rate-3",
+      "answers": [
+        "Seine Knochen sind weich und biegsam",
+        "Er drückt den Spalt mit den Armen breiter",
+        "Er hat keine Knochen und macht sich schmal",
+        "Nur seine Arme passen hinein"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-green-sea-turtle",
+      "answers": [
+        "Die Panzerlänge",
+        "Die Flughöhe",
+        "Das Gewicht ihres Nestes"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-red-kangaroo",
+      "answers": [
+        "Das Gewicht erwachsener Männchen",
+        "Die Höhe aller Jungtiere",
+        "Die Länge des Beutels"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-koala",
+      "answers": [
+        "Blätter bestimmter Eukalyptusbäume",
+        "Fische",
+        "Gräser vom Meeresboden"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-jaguar",
+      "answers": [
+        "Er kann gut schwimmen",
+        "Er baut Honigwaben",
+        "Er ist ein fliegender Vogel"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-honey-bee",
+      "answers": [
+        "Pollen",
+        "Meereis",
+        "Salz vom Meeresboden"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-axolotl",
+      "answers": [
+        "Er behält seine äußeren Kiemen",
+        "Er wird zu einem Vogel",
+        "Er lebt nur im trockenen Sand"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-stone_tools",
+      "answers": [
+        "Wie frühe Verwandte des Menschen Probleme lösten",
+        "Dass es damals schon Computer gab",
+        "Dass Menschen nie Werkzeuge brauchten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-stone_tools:rate-1",
+      "answers": [
+        "Nein, sie waren längst ausgestorben",
+        "Ja, sie lebten gleich nebenan",
+        "Ja, man jagte sie mit Steinwerkzeugen",
+        "Nein, sie entstanden erst später"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-stone_tools:rate-2",
+      "answers": [
+        "Man schmolz ihn im Feuer",
+        "Man ließ ihn lange in der Sonne liegen",
+        "Man schlug Steine gegeneinander"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "history-stone_tools:rate-3",
+      "answers": [
+        "An Spuren am Stein",
+        "An alten Anleitungen auf Papier",
+        "An der Farbe des Steins"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-stone_tools:rate-4",
+      "answers": [
+        "Damals wuchsen dort noch keine Bäume",
+        "Holz taugt nicht für Werkzeuge",
+        "Holz verrottet, Stein bleibt erhalten",
+        "Alle Holzwerkzeuge wurden verbrannt"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "history-fire",
+      "answers": [
+        "Den genauen Zeitpunkt kennen wir nicht",
+        "Er geschah sicher am 1. Januar",
+        "Das war erst nach der Mondlandung"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-writing",
+      "answers": [
+        "Um Dinge wie Getreidemengen festzuhalten",
+        "Zum Versenden von E-Mails",
+        "Zum Bauen von Satelliten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-pyramids",
+      "answers": [
+        "Als königliche Grabstätten",
+        "Als Flughäfen",
+        "Als Eisenbahnstationen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-paper",
+      "answers": [
+        "Er verbesserte ein bereits bekanntes Verfahren",
+        "Er erfand allein jede Art von Papier",
+        "Er erfand das Internet"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-zero",
+      "answers": [
+        "8",
+        "0",
+        "80"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-compass",
+      "answers": [
+        "Eine Richtung finden",
+        "Regen erzeugen",
+        "Briefe drucken"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-medieval_cities",
+      "answers": [
+        "Händler und Handwerker",
+        "Raumschiffe",
+        "WLAN-Router"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-printing",
+      "answers": [
+        "In China und Korea",
+        "Nirgends auf der Welt",
+        "Auf dem Mond"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-voyages1492",
+      "answers": [
+        "Dort lebten bereits Menschen und Kulturen",
+        "Dort lebte noch niemand",
+        "Es gab die Inseln vorher nicht"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-steam",
+      "answers": [
+        "Wasser aus Bergwerken pumpen",
+        "E-Mails versenden",
+        "Fotos vom Mond machen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-railway",
+      "answers": [
+        "Orte über Schienen",
+        "Kontinente mit WLAN",
+        "Sterne mit Seilen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-electric_light",
+      "answers": [
+        "Viele Menschen trugen dazu bei",
+        "Eine einzige Person erfand alles allein",
+        "Es entstand erst nach dem Internet"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-flight",
+      "answers": [
+        "Sie waren mit Motor und steuerbar",
+        "Sie waren die ersten Ballonfahrten",
+        "Sie führten zum Mond"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-ww1",
+      "answers": [
+        "Um Leid zu verstehen und Frieden zu fördern",
+        "Um Gewalt zu feiern",
+        "Um andere Menschen zu hassen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-holocaust",
+      "answers": [
+        "Menschen verdienen Schutz vor Hass und Ausgrenzung",
+        "Ausgrenzung ist in Ordnung",
+        "Nur manche Menschen haben Rechte"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-ww2",
+      "answers": [
+        "Gespräche, Zusammenarbeit und Menschenrechte",
+        "Hass auf ganze Gruppen",
+        "Immer neue Drohungen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-un",
+      "answers": [
+        "Um Frieden und Zusammenarbeit zu fördern",
+        "Um neue Kriege zu beginnen",
+        "Um alle Sprachen abzuschaffen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-berlin_wall_build",
+      "answers": [
+        "Familien und Freunde wurden getrennt",
+        "Alle konnten leichter reisen",
+        "Berlin zog nach Amerika"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-apollo11",
+      "answers": [
+        "Armstrong, Aldrin und Collins",
+        "Nur Armstrong",
+        "Marie Curie und Gutenberg"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-apollo11:rate-1",
+      "answers": [
+        "Neil Armstrong",
+        "Niemand, alle stiegen aus",
+        "Michael Collins",
+        "Buzz Aldrin"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "history-apollo11:rate-2",
+      "answers": [
+        "Auf einer Landebahn wie ein Flugzeug",
+        "Mit Fallschirmen ins Meer",
+        "Mit der Mondfähre auf eine Wiese",
+        "Mit Fallschirmen auf festes Land"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "history-apollo11:rate-3",
+      "answers": [
+        "Ein paar Stunden",
+        "Etwa 8 Tage",
+        "Mehrere Jahre"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "history-apollo11:rate-4",
+      "answers": [
+        "Etwa 4 Tage",
+        "Etwa 3 Tage",
+        "Etwa 1 Tag",
+        "Etwa 2 Tage"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "history-web",
+      "answers": [
+        "Das Web nutzt das ältere Internet",
+        "Beides ist genau dasselbe",
+        "Das Internet braucht Papierseiten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-berlin_wall_fall",
+      "answers": [
+        "1989",
+        "1961",
+        "1903"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-reunification",
+      "answers": [
+        "Die deutsche Wiedervereinigung",
+        "Die Erfindung des Kompasses",
+        "Die erste Mondlandung"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-iss",
+      "answers": [
+        "Ein gemeinsames Forschungslabor im Weltraum",
+        "Ein Land auf der Erde",
+        "Eine Tierart"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-september11",
+      "answers": [
+        "Um an Menschen zu erinnern und ihre Würde zu achten",
+        "Um Gewalt zu feiern",
+        "Um zu vergessen, was geschah"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-webb",
+      "answers": [
+        "Sterne und Galaxien erforschen",
+        "Eine Brücke bauen",
+        "Alle Tiergeräusche hören"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-marie_curie",
+      "answers": [
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+        "Das Programmieren einfacher machen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-marie_curie:rate-1",
+      "answers": [
+        "Nein, man braucht Messgeräte",
+        "Ja, sie sieht aus wie bunter Rauch",
+        "Ja, mit einer starken Lupe"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-marie_curie:rate-2",
+      "answers": [
+        "Mit dem Forscher Henri Becquerel",
+        "Mit dem Forscher Albert Einstein",
+        "Mit ihrem Mann Pierre Curie",
+        "Mit ihrer Tochter Irène Curie"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "person-marie_curie:rate-3",
+      "answers": [
+        "Sie fand es in einem Bergwerk in Polen",
+        "Sie wollte damit ihre Heimat Polen ehren",
+        "Ihr Mann Pierre stammte auch aus Polen",
+        "Ihr Geld zum Forschen kam aus Polen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-ada_lovelace",
+      "answers": [
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen",
+        "Radioaktivität erforschen",
+        "Das Programmieren einfacher machen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-grace_hopper",
+      "answers": [
+        "Das Programmieren einfacher machen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-katherine_johnson",
+      "answers": [
+        "Flugbahnen für die Raumfahrt berechnen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-tim_berners_lee",
+      "answers": [
+        "Verlinkte Webseiten entwickeln",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-karl_benz",
+      "answers": [
+        "Einen frühen Wagen mit Benzinmotor entwickeln",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-bertha_benz",
+      "answers": [
+        "Einen Motorwagen praktisch erproben und seine Entwicklung unterstützen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-jane_goodall",
+      "answers": [
+        "Wilde Schimpansen beobachten",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-jane_goodall:rate-1",
+      "answers": [
+        "Nur mit ihren bloßen Händen",
+        "Mit Grashalmen und Zweigen",
+        "Mit Werkzeugen von Menschen",
+        "Mit spitzen Steinen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-jane_goodall:rate-3",
+      "answers": [
+        "Er hat ein Termiten-Werkzeug gebaut",
+        "Er wollte damit Termiten angeln",
+        "Er hat einen Zweig ganz kahl gemacht",
+        "So machen es alle Schimpansen"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "person-jane_goodall:rate-4",
+      "answers": [
+        "Sie kam immer wieder und wartete",
+        "Sie lief schnell hinterher",
+        "Sie lockte sie mit lauten Rufen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-albert_einstein",
+      "answers": [
+        "Licht, Raum und Zeit erforschen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-al_khwarizmi",
+      "answers": [
+        "Bücher über Rechnen und Algebra schreiben",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-tu_youyou",
+      "answers": [
+        "Mit einem Team Artemisinin erforschen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-cai_lun",
+      "answers": [
+        "Die Papierherstellung verbessern",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-mae_jemison",
+      "answers": [
+        "Als Ärztin und Astronautin im Weltraum forschen",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-johannes_gutenberg",
+      "answers": [
+        "Ein praktisches europäisches Drucksystem entwickeln",
+        "Radioaktivität erforschen",
+        "Eine Rechenanleitung für eine geplante Maschine veröffentlichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-wangari_maathai",
+      "answers": [
+        "Bäume pflanzen und Gemeinschaften stärken",
+        "Das europäische Drucksystem verbessern",
+        "Den ersten Webbrowser entwickeln"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-charles_darwin",
+      "answers": [
+        "Die Entwicklung und Vielfalt von Lebewesen untersuchen",
+        "Das europäische Drucksystem verbessern",
+        "Den ersten Webbrowser entwickeln"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-alexander_humboldt",
+      "answers": [
+        "Natur und Klima zusammen untersuchen",
+        "Das europäische Drucksystem verbessern",
+        "Den ersten Webbrowser entwickeln"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-neil_armstrong",
+      "answers": [
+        "Als Teil von Apollo 11 auf dem Mond landen",
+        "Das europäische Drucksystem verbessern",
+        "Den ersten Webbrowser entwickeln"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-light",
+      "answers": [
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+        "Menschen wollten durch die Luft reisen.",
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-car",
+      "answers": [
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+        "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+        "Computer an verschiedenen Orten sollten Informationen austauschen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-railway",
+      "answers": [
+        "Viele Waren und Reisende mussten über Land transportiert werden.",
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-airplane",
+      "answers": [
+        "Menschen wollten durch die Luft reisen.",
+        "Computer an verschiedenen Orten sollten Informationen austauschen.",
+        "Ein Buch von Hand abzuschreiben dauerte lange."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-phone",
+      "answers": [
+        "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-computer",
+      "answers": [
+        "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+        "Ein Buch von Hand abzuschreiben dauerte lange.",
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-internet",
+      "answers": [
+        "Computer an verschiedenen Orten sollten Informationen austauschen.",
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-compass",
+      "answers": [
+        "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-printing",
+      "answers": [
+        "Ein Buch von Hand abzuschreiben dauerte lange.",
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-rocket",
+      "answers": [
+        "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+        "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+        "Viele Waren und Reisende mussten über Land transportiert werden."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-satellite",
+      "answers": [
+        "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+        "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+        "Menschen wollten durch die Luft reisen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-smartphone",
+      "answers": [
+        "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+        "Viele Waren und Reisende mussten über Land transportiert werden.",
+        "Eine Stimme war normalerweise nur in der Nähe hörbar."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-giza-pyramids",
+      "answers": [
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-giza-pyramids:rate-1",
+      "answers": [
+        "Aus Kalkstein",
+        "Aus festgedrücktem Sand",
+        "Aus Lehmziegeln",
+        "Aus Granit"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-giza-pyramids:rate-2",
+      "answers": [
+        "Mit Schiffen auf dem Nil",
+        "Mit Schiffen aus einem fernen Land",
+        "Sie lagen schon an der Baustelle",
+        "Auf dem Rücken von Kamelen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-giza-pyramids:rate-3",
+      "answers": [
+        "Vor etwa 3.800 Jahren",
+        "Vor etwa 140 Jahren",
+        "Vor etwa 700 Jahren",
+        "Vor etwa 8.300 Jahren"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "building-great-wall",
+      "answers": [
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-colosseum",
+      "answers": [
+        "Bögen können Lasten seitlich zu ihren Stützen leiten.",
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-taj-mahal",
+      "answers": [
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte.",
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-eiffel-tower",
+      "answers": [
+        "Ein offenes Gitter kann eine große Konstruktion tragen und lässt den Wind hindurch.",
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-eiffel-tower:rate-1",
+      "answers": [
+        "Aus Beton",
+        "Aus Eisen",
+        "Aus Stein"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "building-eiffel-tower:rate-2",
+      "answers": [
+        "Nur damit er für Fotos hübsch aussieht",
+        "Damit sich das Eisen nicht ausdehnt",
+        "Damit das Eisen nicht rostet",
+        "Damit Blitze ihm nicht schaden"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "building-eiffel-tower:rate-3",
+      "answers": [
+        "Die Schattenseite dehnt sich mehr aus",
+        "Die Sonnenseite dehnt sich mehr aus",
+        "Alles dehnt sich gleich stark aus",
+        "Das Eisen dehnt sich aus und wird weich"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "building-golden-gate-bridge",
+      "answers": [
+        "Eine Brücke muss ihr eigenes Gewicht, Fahrzeuge und Wind aushalten.",
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-panama-canal",
+      "answers": [
+        "Ein Schiff steigt mit dem Wasserspiegel. Es wird nicht von einem Kran hochgehoben.",
+        "Nicht ein einzelner Mensch baute eine Pyramide: Planung und Arbeit vieler Menschen waren nötig.",
+        "Bögen können Lasten seitlich zu ihren Stützen leiten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-burj-khalifa",
+      "answers": [
+        "Bei hohen Gebäuden müssen Ingenieurinnen und Ingenieure besonders auf Wind und stabile Fundamente achten.",
+        "Es ist keine einzelne Mauer, die in einem Jahr fertig wurde.",
+        "Ein Mausoleum ist ein Gebäude mit einer Grabstätte."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-circuit",
+      "answers": [
+        "Einen geschlossenen Stromkreis",
+        "Eine unterbrochene Leitung",
+        "Eine Sonne im Bildschirm"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-network",
+      "answers": [
+        "Er leitet Datenpakete weiter",
+        "Er erzeugt das ganze Internet allein",
+        "Er macht aus Papier Wasser"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-flight",
+      "answers": [
+        "Auftrieb",
+        "Luftwiderstand",
+        "Schall"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-gps",
+      "answers": [
+        "Vier",
+        "Einen",
+        "Immer genau zwei"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-computer",
+      "answers": [
+        "256 Zahlen von 0 bis 255",
+        "Nur acht Zahlen",
+        "Genau zehn Zahlen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-shadows",
+      "answers": [
+        "Die Erdoberfläche ist gekrümmt",
+        "Ein Stab vergisst das Sonnenlicht",
+        "Die Erde wird jeden Tag flach"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-whale-shark",
+      "answers": [
+        "Er atmet mit Kiemen.",
+        "Er säugt seine Jungen.",
+        "Er besitzt Federn."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-garden-cross-spider",
+      "answers": [
+        "Spinnen haben acht Beine.",
+        "Spinnen haben immer Flügel.",
+        "Spinnen haben sechs Beine."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-dromedary",
+      "answers": [
+        "Fett als Energievorrat",
+        "Einen Tank voller Trinkwasser",
+        "Sand zur Kühlung"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-white-tailed-eagle",
+      "answers": [
+        "Der Abstand zwischen den ausgebreiteten Flügelspitzen.",
+        "Die Höhe des Vogels im Stehen.",
+        "Die Länge einer einzelnen Schwanzfeder."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-maya",
+      "answers": [
+        "Maya-Gemeinschaften und Sprachen gibt es heute.",
+        "Die Maya lebten nur in Europa.",
+        "Alle Maya verschwanden im Jahr 900."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-polynesia",
+      "answers": [
+        "Sterne und Meereswellen beobachten",
+        "Nur auf Zufall vertrauen",
+        "Ein Smartphone benutzen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-timbuktu",
+      "answers": [
+        "Die Stadt war ein Zentrum des Lernens und Handels.",
+        "Hier begann die erste Mondreise.",
+        "Dort gab es nie Bücher."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-greece",
+      "answers": [
+        "Nein, viele Menschen waren ausgeschlossen.",
+        "Ja, alle Kinder und Erwachsenen.",
+        "Nur Besucher aus anderen Ländern."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-rome",
+      "answers": [
+        "Wasser zu Siedlungen leiten",
+        "Elektrische Nachrichten senden",
+        "Raketen starten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-atmosphere",
+      "answers": [
+        "Troposphäre",
+        "Exosphäre",
+        "Innerer Erdkern"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-magnetism",
+      "answers": [
+        "Im bewegten flüssigen äußeren Kern",
+        "In einem eingebauten Stabmagneten",
+        "In den Wolken"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-currents",
+      "answers": [
+        "Kälteres, salzigeres Wasser",
+        "Wärmeres, weniger salziges Wasser",
+        "Wasser ohne jede Masse"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-motor",
+      "answers": [
+        "Die Stromrichtung passend zur Drehung wechseln",
+        "Die Batterie unbegrenzt aufladen",
+        "Die Räder festhalten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-foodweb",
+      "answers": [
+        "Vom Futter zum Fresser",
+        "Immer zum größten Tier",
+        "Immer in Richtung Norden"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-sound",
+      "answers": [
+        "Mehr Schwingungen pro Sekunde",
+        "Weniger Schwingungen pro Sekunde",
+        "Eine andere Farbe des Instruments"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-solar-system",
+      "answers": [
+        "Damit beide Vergleiche einen ehrlichen Maßstab haben.",
+        "Weil alle Planeten gleich groß sind.",
+        "Weil Entfernungen keine Rolle spielen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-energy",
+      "answers": [
+        "Es fehlt Energie für das Haus.",
+        "Die Solarzelle liefert plötzlich doppelt so viel.",
+        "Die Batterie füllt sich von allein."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-patterns",
+      "answers": [
+        "Weil verschiedene Regeln verschiedene Merkmale prüfen.",
+        "Weil ein Computer nie Fehler macht.",
+        "Weil alle Bilder dieselbe Form haben."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle",
+      "answers": [
+        "Winzigen Tropfen oder Eiskristallen",
+        "Nur unsichtbarem Wasserdampf",
+        "Rauch"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle:rate-1",
+      "answers": [
+        "In Flüssen und Seen",
+        "Im Meer",
+        "In den Wolken"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "science-water-cycle:rate-2",
+      "answers": [
+        "Ja, über ihre Blätter",
+        "Nein, sie trinken nur",
+        "Ja, über die Blüten als Regen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle:rate-3",
+      "answers": [
+        "Das Handtuch trinkt das Wasser auf",
+        "Das Wasser verschwindet einfach ganz",
+        "Das Wasser verdunstet in die Luft"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "science-water-cycle:rate-4",
+      "answers": [
+        "Es sickert durch das Glas nach außen",
+        "Es ist Wasserdampf aus der Luft",
+        "Es kommt von deinen Händen",
+        "Es verdunstet aus der Flasche"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "science-water-cycle-2",
+      "answers": [
+        "Gasförmiges Wasser wird flüssig",
+        "Flüssiges Wasser wird gasförmig",
+        "Eis wird flüssig",
+        "Flüssiges Wasser wird zu Eis"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle-3",
+      "answers": [
+        "Das Versickern von Regenwasser",
+        "Das oberflächliche Abfließen von Regenwasser",
+        "Die Verdunstung aus offenen Gewässern",
+        "Das Bilden von Pfützen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle-4",
+      "answers": [
+        "Wasser bleibt verschieden lange in Speichern",
+        "Jeder Tropfen durchläuft immer dieselben vier Stationen",
+        "Die Zahl der Modellstationen legt die Reisedauer fest",
+        "Manche Tropfen gehen unterwegs verloren"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-water-cycle-5",
+      "answers": [
+        "Warm, sonnig und windig",
+        "Warm, sonnig und windstill",
+        "Kalt, sonnig und windig",
+        "Kühl, bewölkt und windstill"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-photosynthesis",
+      "answers": [
+        "Lichtenergie",
+        "Energie aus dem Abbau von Zucker",
+        "Chemische Energie aus Mineralstoffen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-photosynthesis-1",
+      "answers": [
+        "Wasser und Kohlendioxid",
+        "Wasser und Sauerstoff",
+        "Kohlendioxid und Mineralstoffe, ohne Wasser"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-photosynthesis-2",
+      "answers": [
+        "Sauerstoff",
+        "Kohlendioxid",
+        "Nur Wasserdampf",
+        "Stickstoff"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-photosynthesis-3",
+      "answers": [
+        "Seine Beute frisst Pflanzen mit gespeicherter Energie",
+        "Der Löwe nutzt Licht direkt zum Aufbau seiner Nahrung",
+        "Die Sonnenwärme ersetzt die Energie aus seiner Nahrung",
+        "Er schläft gern im warmen Sonnenlicht"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-photosynthesis-4",
+      "answers": [
+        "Sie betreiben auch Zellatmung",
+        "Ihre Zellatmung findet nur ohne Licht statt",
+        "Fotosynthese und Zellatmung sind derselbe Vorgang",
+        "Sie atmen überhaupt nicht"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pollination",
+      "answers": [
+        "Pollen",
+        "Kleine fertige Früchte",
+        "Wurzeln"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pollination-1",
+      "answers": [
+        "Sie transportiert anhaftenden Pollen",
+        "Sie pflanzt fertige Bäume",
+        "Sie verwandelt Nektar in Samen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pollination-2",
+      "answers": [
+        "Der Wind",
+        "Ein Schatten",
+        "Die Erdschwere allein zu jeder Blüte"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pollination-3",
+      "answers": [
+        "Pollen muss auf eine passende Narbe kommen",
+        "Die Biene hat den Nektar mitgenommen",
+        "Pollen sind fertige Samen",
+        "Nur Honigbienen können eine Blüte bestäuben"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pollination-4",
+      "answers": [
+        "Davon entstehen keine Samen",
+        "Es entstehen sicher Samen",
+        "Die Rose bildet Tulpensamen",
+        "Es wächst eine Mischung aus Tulpe und Rose"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fungi",
+      "answers": [
+        "Myzel",
+        "Nektar",
+        "Chlorophyll"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fungi-1",
+      "answers": [
+        "Sie zersetzen abgestorbenes Material",
+        "Sie erzeugen Sonnenlicht",
+        "Sie bestehen nur aus Blüten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fungi-2",
+      "answers": [
+        "Zucker",
+        "Pollen als einziges Futter",
+        "Mineralstoffe",
+        "Wasser"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fungi-3",
+      "answers": [
+        "Totes Laub würde sich hoch stapeln",
+        "Bäume bekämen mehr Nährstoffe",
+        "Totes Laub würde schneller zu Erde",
+        "Bäume würden schneller wachsen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fungi-4",
+      "answers": [
+        "Übertragungen müssen untersucht werden",
+        "Bäume sprechen nachweislich wie Menschen",
+        "Alle Pilze teilen immer alles",
+        "Pilze verbinden niemals Bäume"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-coral-reef",
+      "answers": [
+        "Tieren",
+        "Pilzen",
+        "Gesteinen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-coral-reef-1",
+      "answers": [
+        "Energiereiche Stoffe aus Fotosynthese",
+        "Schutz vor Fischen, die Korallen fressen",
+        "Kleine Krebse als Futter",
+        "Kühles Wasser bei Hitze"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-coral-reef-2",
+      "answers": [
+        "Korallen verlieren ihre Algenpartner",
+        "Korallen bekommen noch mehr Algenpartner",
+        "Korallen färben sich dunkler",
+        "Korallen wachsen schneller"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-coral-reef-3",
+      "answers": [
+        "Die Koralle kann noch leben und sich erholen",
+        "Das Skelett ist die ganze lebende Koralle",
+        "Weiße Korallen brauchen keine Nahrung"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-coral-reef-4",
+      "answers": [
+        "Licht kann ihre Algenpartner erreichen",
+        "Korallen können ihre Beute besser sehen",
+        "In klarem Wasser ist es kühler",
+        "In klarem Wasser gibt es keine Feinde"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases",
+      "answers": [
+        "Von der Sonne",
+        "Aus einer Lampe im Mond",
+        "Von brennenden Wolken"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases:rate-1",
+      "answers": [
+        "Ja, die Rückseite ist immer dunkel",
+        "Ja, die Vorderseite ist immer dunkel",
+        "Nein, jede Seite bekommt Sonnenlicht",
+        "Nein, der Mond ist überall immer hell"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "science-moon-phases:rate-2",
+      "answers": [
+        "Ja, oft auch am Tag",
+        "Nein, nur in der Nacht",
+        "Nur wenn Vollmond ist"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases:rate-3",
+      "answers": [
+        "Nein, jedes Land sieht eine andere",
+        "Ja, nur manchmal auf dem Kopf",
+        "Nein, im Süden ist immer Vollmond",
+        "Ja, überall genau gleich"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "science-moon-phases-1",
+      "answers": [
+        "Unser Blick auf die beleuchtete Hälfte",
+        "Die Kugelform des Mondes",
+        "Der Schatten der Erde auf dem Mond",
+        "Wie hell die Sonne gerade leuchtet"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases-2",
+      "answers": [
+        "29,5 Tage",
+        "24 Stunden",
+        "Ein Jahr"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases-3",
+      "answers": [
+        "Die Bahn des Mondes ist etwas schräg",
+        "Der Erdschatten ist zu klein für den Mond",
+        "Die Erde steht nicht zwischen Sonne und Mond",
+        "Der Mond ist bei Vollmond zu weit weg"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-moon-phases-5",
+      "answers": [
+        "Wenn die Sonne untergeht",
+        "Wenn die Sonne aufgeht",
+        "Mittags, wenn die Sonne hoch steht",
+        "Um Mitternacht"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-seasons",
+      "answers": [
+        "Die Neigung der Erdachse",
+        "Ein wechselndes Einschalten der Sonne",
+        "Die Mondphasen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-seasons-1",
+      "answers": [
+        "Winter",
+        "Auch immer Sommer",
+        "Keine Jahreszeit"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-seasons-2",
+      "answers": [
+        "Licht verteilt sich auf eine kleinere Fläche",
+        "Die Sonne ist dann näher an der Erde",
+        "Die Sonne leuchtet dann heller",
+        "Licht verteilt sich auf eine größere Fläche"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-seasons-4",
+      "answers": [
+        "Ob es morgen an deinem Ort regnet",
+        "Welche Halbkugel zur Sonne geneigt ist",
+        "Warum Tageslängen wechseln",
+        "Wann bei uns die Tage am längsten sind"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-seasons-5",
+      "answers": [
+        "Der Abstand ist nicht der Hauptgrund",
+        "Nähe zur Sonne macht die Erde kälter",
+        "Im Januar leuchtet die Sonne schwächer",
+        "Auf der Südhalbkugel ist dann auch Winter"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-tides",
+      "answers": [
+        "Mond und Sonne",
+        "Nur der Mars",
+        "Nur Sternschnuppen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-tides-1",
+      "answers": [
+        "Der Wasserstand fällt",
+        "Der Wasserstand steigt",
+        "Das Meer ist immer trocken"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-tides-2",
+      "answers": [
+        "Nein, jede Küste hat eigene Zeiten",
+        "Ja, an allen Küsten gleichzeitig",
+        "Ja, immer um zwölf Uhr",
+        "Nein, Hochwasser gibt es nur bei Vollmond"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-tides-3",
+      "answers": [
+        "Er zeigt keine Gezeiten und kein Wetter für deinen Ort",
+        "Der Mond hat keinen Einfluss auf das Meer",
+        "Jeder Vollmond hält Wasser zurück",
+        "Bei Vollmond bleibt das Watt den ganzen Tag trocken"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-tides-4",
+      "answers": [
+        "Sonne, Erde und Mond stehen auf einer Linie",
+        "Nur Vollmond erzeugt Schwerkraft",
+        "Springtide gibt es nur im Frühling",
+        "Dann ist der Mond der Erde besonders nah"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-platypus",
+      "answers": [
+        "Es legt Eier und gibt seinen Jungen Milch.",
+        "Es ist ein Vogel, weil es Eier legt.",
+        "Als Säugetier bringt es immer lebende Junge zur Welt."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-short-beaked-echidna",
+      "answers": [
+        "Er nimmt die Nahrung ausschließlich mit den Grabkrallen auf.",
+        "Er nimmt kleine Beutetiere mit seiner Zunge auf.",
+        "Die lange Schnauze ersetzt bei der Nahrungsaufnahme die Zunge vollständig."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-okapi",
+      "answers": [
+        "Mit dem Zebra, allein wegen der Streifen.",
+        "Mit dem Pferd.",
+        "Mit der Giraffe."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-meerkat",
+      "answers": [
+        "Nahrung suchen und Ausschau halten.",
+        "Alle müssen jederzeit dieselbe Tätigkeit ausüben.",
+        "Ohne jeden Gruppenkontakt ausschließlich allein leben."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-ring-tailed-lemur",
+      "answers": [
+        "Ein aufgerichteter Schwanz.",
+        "Eine Duftmarke.",
+        "Ein Ruf der Gruppe."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-north-american-beaver",
+      "answers": [
+        "Beides ist ausschließlich ein Futterlager.",
+        "Der Damm ist immer die Wohnkammer.",
+        "Der Damm bremst Wasser; die Burg dient dem Wohnen."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-walrus",
+      "answers": [
+        "Mit empfindlichen Borsten am Maul.",
+        "Nur mit den Augen; andere Sinne nutzt es dabei nicht.",
+        "Es muss mit seinen Stoßzähnen jedes Beutetier aufspießen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-red-fox",
+      "answers": [
+        "Ausschließlich in dichtem Wald.",
+        "Unter anderem in Wäldern, offenem Land und Siedlungen.",
+        "Nur dort, wo Menschen es als Haustier versorgen."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-raccoon",
+      "answers": [
+        "Vor allem der Sehsinn.",
+        "Vor allem der Geruchssinn.",
+        "Der Tastsinn."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-hedgehog",
+      "answers": [
+        "Eine Hecke oder ein Laubversteck.",
+        "Eine völlig kahle offene Fläche ohne Deckung.",
+        "Ein dauerhaft hell beleuchteter leerer Platz."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-barn-owl",
+      "answers": [
+        "Alcedo atthis.",
+        "Tyto alba.",
+        "Amphiprion percula."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-kingfisher",
+      "answers": [
+        "Nur auf trockenen Kornfeldern.",
+        "Ausschließlich in Baumwipfeln ohne Wasser.",
+        "An Gewässern mit kleinen Fischen."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-ostrich",
+      "answers": [
+        "Er ist ein Vogel, obwohl er nicht fliegt.",
+        "Er ist wegen seiner Flugunfähigkeit ein Säugetier.",
+        "Jeder Vogel muss fliegen können."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-atlantic-puffin",
+      "answers": [
+        "Ja, Papageitaucher bleiben immer am Nest.",
+        "Nein, Brutküste und Meer erfüllen unterschiedliche Aufgaben.",
+        "Papageitaucher brauchen grundsätzlich kein Meer."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-common-chameleon",
+      "answers": [
+        "Beliebige Fotomuster genau kopieren.",
+        "Seinen Schwanz nur als Gegengewicht nutzen, ohne damit greifen zu können.",
+        "Mit dem Schwanz greifen und die Färbung begrenzt verändern."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-fire-salamander",
+      "answers": [
+        "Äußere Kiemen.",
+        "Keine Kiemen; sie atmen schon genau wie die erwachsenen Landtiere.",
+        "Schon alle Merkmale der Erwachsenen, ohne spätere Verwandlung."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-frog",
+      "answers": [
+        "Laich, sofort ein fertiger erwachsener Frosch.",
+        "Laich, Kaulquappe, junger Frosch.",
+        "Laich, kleiner Frosch, danach erst Kaulquappe."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-eastern-clown-anemonefish",
+      "answers": [
+        "Ein Teil des Fischschwanzes.",
+        "Eine Pflanze mit Blüten.",
+        "Ein anderes Tier."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-european-eel",
+      "answers": [
+        "Seine Lebensgeschichte verbindet unterschiedliche Gewässer.",
+        "Er verbringt das ganze Leben unverändert an derselben Stelle.",
+        "Er kann nur an Land leben."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-monarch-butterfly",
+      "answers": [
+        "Jedes Tier fliegt immer exakt dieselbe Strecke.",
+        "Es gibt wandernde und nicht in gleicher Weise wandernde Populationen.",
+        "Die Raupe ist eine ganz andere Tierart als der Falter."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-garden-snail",
+      "answers": [
+        "Die Länge des ausgestreckten weichen Körpers.",
+        "Die Höhe des Gehäuses.",
+        "Die Breite des Gehäuses."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "animal-european-lobster",
+      "answers": [
+        "Seine feste Außenhülle muss beim Wachsen ersetzt werden.",
+        "Er verwandelt sich dadurch in eine andere Art.",
+        "Seine feste Hülle wächst ohne Häutung unbegrenzt mit."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "animal-common-cuttlefish",
+      "answers": [
+        "Beide Namen bezeichnen zwingend dieselbe Art.",
+        "Sepia besitzt acht Arme und zusätzlich zwei längere Fangtentakel.",
+        "Sepia besitzt acht Arme, aber keine zusätzlichen Fangtentakel."
+      ],
+      "correct": 1
+    },
+    {
+      "id": "animal-short-snouted-seahorse",
+      "answers": [
+        "Nur mit dem Maul; sein Schwanz kann nicht greifen.",
+        "Mit den Brustflossen wie mit Händen.",
+        "Mit seinem Greifschwanz."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "history-khipu",
+      "answers": [
+        "Zum Festhalten von Vorräten und anderen Mengen",
+        "Als elektrisches Telefonnetz",
+        "Als Beweis, dass jeder Knoten einen Buchstaben bedeutet"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-khipu:compare",
+      "answers": [
+        "Ob die Zeichen etwa Körbe oder Personen zählen",
+        "Dass fünf mehr als drei ist",
+        "Die Möglichkeit, beide gezeichneten Mengen zu vergleichen",
+        "Wie viele Zeichen es zusammen sind"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-khipu:limits",
+      "answers": [
+        "Dass damit alles im Khipu verstanden ist",
+        "Dass bestimmte Mengen aufgezeichnet sein können",
+        "Dass Knoten und Anordnung untersucht werden können",
+        "Dass Khipus Zahlen festhalten konnten"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-mohenjo-daro",
+      "answers": [
+        "Straßen und ein System von Abläufen",
+        "Ein modernes elektrisches U-Bahn-Netz",
+        "Satellitenaufnahmen aus der Bauzeit"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-mohenjo-daro:compare",
+      "answers": [
+        "Dass es hier einen Weg für Wasser gab",
+        "Dass alle Bewohner der Stadt dasselbe Einkommen hatten",
+        "Dass das Wasser immer keimfrei war",
+        "Dass jedes Haus der Stadt einen Abfluss hatte"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-mohenjo-daro:limits",
+      "answers": [
+        "Weil andere Stadtteile anders sein konnten",
+        "Weil Baureste grundsätzlich nichts über Menschen verraten",
+        "Weil nur schriftliche Quellen wissenschaftlich zählen",
+        "Weil Ausgrabungen alle Funde zerstören"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-camera",
+      "answers": [
+        "Eine lichtempfindliche Aufzeichnung",
+        "Nur eine kleinere Öffnung ohne Aufzeichnungsfläche",
+        "Nur ein dunklerer Kasten ohne Aufzeichnungsfläche"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-telescope",
+      "answers": [
+        "Er sammelt mehr Licht",
+        "Er macht die Sterne heller als sie sind",
+        "Er holt die Sterne näher zur Erde"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-microscope",
+      "answers": [
+        "Nein, Größe allein reicht nicht",
+        "Ja, mehr Vergrößerung schafft immer neue Einzelheiten",
+        "Ja, größere Bildpunkte machen selbst unsichtbare Trennlinien sichtbar"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-battery",
+      "answers": [
+        "Ein geschlossener Stromweg",
+        "Eine noch vollere Batterie bei weiterhin offener Leitung",
+        "Zwei freie Kabelenden, die sich nicht berühren"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-generator",
+      "answers": [
+        "Nein, das Magnetfeld durch die Spule muss sich ändern",
+        "Ja, ein ruhender Dauermagnet reicht für dauernden Strom",
+        "Ja, viele Windungen ersetzen jede Änderung des Magnetfelds"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-transistor",
+      "answers": [
+        "Aus der Stromversorgung der Schaltung",
+        "Allein aus dem schwachen Steuersignal",
+        "Der Transistor vermehrt Energie aus dem Nichts"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-mary_anning",
+      "answers": [
+        "Einen Beleg für ein früheres Lebewesen",
+        "Den Beweis, dass jedes alte Tier ein Dinosaurier war",
+        "Den Beweis, dass das Tier heute am Fundort lebt"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-ibn_al_haytham",
+      "answers": [
+        "Eine Vermutung mit gezielten Versuchen und Mathematik prüfen",
+        "Fossile Skelette freilegen und vergleichen",
+        "Einen heutigen digitalen Kamerasensor benutzen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-refrigerator",
+      "answers": [
+        "Nein, das Gerät gibt die transportierte Wärme und seine Betriebsenergie an den Raum ab",
+        "Ja, der ganze Raum verliert Wärme, weil das kalte Innere Wärme aufnimmt",
+        "Die Raumtemperatur bleibt genau gleich, weil sich die zwei Wärmeströme immer ausgleichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-bicycle",
+      "answers": [
+        "Kettenblatt, Kette und hinteres Zahnrad",
+        "Die Pedale drehen das Vorderrad direkt, ohne Kette",
+        "Die Kette treibt das Vorderrad an, das das Hinterrad mitzieht"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-bicycle:rate-1",
+      "answers": [
+        "Damit man pro Tritt weiter kommt",
+        "Damit man höher sitzt und weit sieht",
+        "Weil kleine Räder schneller kaputtgingen",
+        "Weil es so sicherer war"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-bicycle:rate-2",
+      "answers": [
+        "Ein schwerer Gang",
+        "Der Gang ist egal",
+        "Ein leichter Gang"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "invention-bicycle:rate-3",
+      "answers": [
+        "Aus den Zahnrädern",
+        "Aus deinen Beinen",
+        "Aus der Kette"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "invention-bicycle:rate-4",
+      "answers": [
+        "Es hatte als erstes Rad Bremsen",
+        "Es hatte schon Reifen mit Luft",
+        "Man stürzte seltener und nicht so tief",
+        "Es fuhr langsamer als andere Räder"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "invention-elevator",
+      "answers": [
+        "Eine gefährliche Abwärtsbewegung im Störungsfall bremsen",
+        "Die Kabine bei jeder normalen Fahrt antreiben",
+        "Den Gewichtsunterschied zwischen Kabine und Gegengewicht im Betrieb ausgleichen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-seismograph",
+      "answers": [
+        "Die aufgezeichnete Bodenbewegung an einer Messstation",
+        "Das Messgerät, das die Bodenbewegung registriert",
+        "Die bereits berechnete Lage und Stärke des Erdbebens"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-3d-printing",
+      "answers": [
+        "Material nach einem Entwurf aufbauen",
+        "Immer nur Material von einem vollen Block wegnehmen",
+        "Material allein durch Gießen in eine fertige Form bringen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "invention-sewing-machine",
+      "answers": [
+        "Nadel und Schiffchen verbinden zwei Fäden",
+        "Eine Nadel führt einen einzigen Faden durch eigene Schlingen",
+        "Die Nadel zieht wie beim Handnähen den ganzen Faden durch den Stoff"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-pont-du-gard",
+      "answers": [
+        "Aus einer höher gelegenen Quelle entlang der Wasserleitung.",
+        "Aus dem Gardon, dessen Wasser mit Pumpen in die obere Rinne gehoben wurde.",
+        "Aus Regenwasser, das die Bogenreihen der Brücke sammelten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-great-zimbabwe",
+      "answers": [
+        "Die Steine wurden sorgfältig ohne Mörtel zwischen ihnen gesetzt.",
+        "Zwischen den Steinen lag Mörtel, der beim Austrocknen fest wurde.",
+        "Die Wände bestanden aus Lehmziegeln, die mit Granitplatten verkleidet wurden."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-horyu-ji",
+      "answers": [
+        "Stützen und verbundene Bauteile leiten Dachlasten zum Untergrund.",
+        "Die Wände tragen das Dach allein; Holzstützen und Konsolen dienen nur der Verzierung.",
+        "Die schweren Dachziegel ersetzen die darunterliegenden tragenden Holzverbindungen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-djenne-mosque",
+      "answers": [
+        "Zusätzliche Schichten bringen auch Gewicht; Dach und Tragwerk müssen mitgeprüft werden.",
+        "Eine geschlossene Putzoberfläche reicht aus, um den Zustand von Dach und Wänden zu beurteilen.",
+        "Dickerer Putz übernimmt von allein die Tragfunktion beschädigter Wandteile."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-lalibela",
+      "answers": [
+        "Räume und Formen wurden aus dem vorhandenen Fels herausgearbeitet.",
+        "Fertige Steinblöcke wurden zuerst aufeinandergestapelt und danach ausgehöhlt.",
+        "Die Formen waren natürliche Höhlen; beim Bau wurde der Fels kaum verändert."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-angkor-wat",
+      "answers": [
+        "Die Region enthält weitere Tempel, Siedlungen und Wasseranlagen.",
+        "Angkor ist nur ein anderer Name für den einzelnen Tempel Angkor Wat.",
+        "Die regionale Flächenangabe beschreibt allein den Wassergraben um Angkor Wat."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-palenque",
+      "answers": [
+        "Welche gezeichneten Räume durch einen sichtbaren Zugang verbunden sind.",
+        "Wozu jeder verbundene Raum ursprünglich genutzt wurde.",
+        "Ob alle eingezeichneten Räume im selben Jahr gebaut wurden."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "building-sydney-opera",
+      "answers": [
+        "Ja, beide bleiben gleich weit von derselben Kreismitte entfernt.",
+        "Nein, jeder längere Ausschnitt braucht automatisch einen größeren Radius.",
+        "Ja, alle Kreisbögen haben denselben Radius, auch wenn sie zu verschieden großen Kreisen gehören."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pressure",
+      "answers": [
+        "Er wird halb so groß.",
+        "Er wird doppelt so groß.",
+        "Er bleibt in jedem Fall gleich."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-friction",
+      "answers": [
+        "Damit sie beim Abstoßen nicht wegrutschen.",
+        "Damit die Schuhe beim Abstoßen möglichst leicht nach hinten rutschen.",
+        "Damit Reibung jede Vorwärtsbewegung des Körpers grundsätzlich verhindert."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-buoyancy",
+      "answers": [
+        "Die Gewichtskraft des verdrängten Wassers.",
+        "Nur die Gewichtskraft des Körpers, unabhängig vom verdrängten Wasser.",
+        "Immer das ganze Körpervolumen, auch wenn ein Teil über Wasser liegt."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-surface-tension",
+      "answers": [
+        "Anziehung zwischen Teilchen prägt die Wassergrenze.",
+        "Auf jedem Wasser liegt eine feste Folie.",
+        "Nur die Schwerkraft zieht die Wasseroberfläche zusammen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-capillarity",
+      "answers": [
+        "Die entgegenwirkende Schwerkraft.",
+        "Allein die Höhe des Röhrchens, unabhängig vom Durchmesser.",
+        "Nur die Temperatur, unabhängig von Material und Schwerkraft."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-diffusion",
+      "answers": [
+        "Sie bewegen sich weiter in verschiedene Richtungen.",
+        "Sie hören alle dauerhaft auf, sich zu bewegen.",
+        "Sie wandern dann alle nur noch in dieselbe Richtung."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-chromatography",
+      "answers": [
+        "Weil Bestandteile unterschiedlich mitwandern und haften.",
+        "Das Wasser verwandelt einen einzigen Farbstoff in mehrere neue Stoffe.",
+        "Weil alle Bestandteile immer gleich weit wandern."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-heat-transfer",
+      "answers": [
+        "Wärmestrahlung durch den freien Raum.",
+        "Wärmeleitung durch einen Metallstab.",
+        "Wärmeströmung in bewegter Luft."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-lever",
+      "answers": [
+        "Die halbe bisherige Kraft.",
+        "Die doppelte bisherige Kraft.",
+        "Die gleiche Kraft wie vorher, weil die Last unverändert bleibt."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-elasticity",
+      "answers": [
+        "Nach kleiner Verformung wieder zur alten Form zurückkehren.",
+        "Bei jeder Kraft unzerstörbar bleiben.",
+        "Nach dem Entfernen der Kraft jede Verformung dauerhaft behalten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-pendulum",
+      "answers": [
+        "Ein längerer Faden bei gleicher Schwerkraft.",
+        "Ein kürzerer Faden bei gleicher Schwerkraft.",
+        "Allein eine größere Masse bei gleicher Länge."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-resonance",
+      "answers": [
+        "Ein Antrieb nahe einer Eigenfrequenz des Systems.",
+        "Ein Antrieb möglichst weit weg von jeder Eigenfrequenz.",
+        "Allein stärkeres Anschieben; der Takt spielt dabei keine Rolle."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-probability",
+      "answers": [
+        "Weiterhin eins von sechs.",
+        "Weniger als eins von sechs, weil die Serie ausgeglichen werden muss.",
+        "Mehr als eins von sechs, weil die Sechs jetzt häufiger geworden ist."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-symmetry",
+      "answers": [
+        "Die Spiegelung an ihr führt die Figur wieder auf sich.",
+        "Jede Linie durch eine Figur ist automatisch eine Spiegelachse.",
+        "Jede Linie durch die Mitte ist auch dann eine Spiegelachse, wenn Muster nicht passen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fractals",
+      "answers": [
+        "Weil wir nur eine endliche Anzahl Schritte zeichnen.",
+        "Die Wiederholungsregel lässt nach vier Schritten keine weitere Verkleinerung zu.",
+        "Die Teil-Dreiecke werden bei jeder Wiederholung größer, bis der Platz fehlt."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-angle",
+      "answers": [
+        "90 Grad bei unveränderter Richtung.",
+        "Mehr als90Grad, weil längere Schenkel weiter auseinander enden.",
+        "Weniger als90Grad, weil die Öffnung im Verhältnis zur Länge kleiner wirkt."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-encryption",
+      "answers": [
+        "Inhalte für Unbefugte unlesbar zu machen.",
+        "Jede Nachricht automatisch wahr zu machen.",
+        "Den Absender ohne weitere Prüfung zu beweisen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-checksum",
+      "answers": [
+        "Verschiedene Daten können denselben Prüfwert haben.",
+        "Die Daten müssen deshalb genau gleich sein.",
+        "Beide Datenfolgen sind automatisch wahre Nachrichten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-cell",
+      "answers": [
+        "Sie sind Zellen ohne membranumhüllten Zellkern.",
+        "Zellen ohne membranumhüllten Kern besitzen auch keine Erbinformation.",
+        "Sie haben wie typische Pflanzen- und Tierzellen immer einen membranumhüllten Kern."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-fusion",
+      "answers": [
+        "Leichte Atomkerne werden zu schwereren verbunden.",
+        "Schwere Atomkerne werden in leichtere Kerne gespalten.",
+        "Wasserstoff reagiert wie ein Brennstoff chemisch mit Sauerstoff."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-galaxy",
+      "answers": [
+        "Unser Sonnensystem ist ein Teil der Milchstraße.",
+        "Die Milchstraße ist ein Teil unseres Sonnensystems.",
+        "Unser Sonnensystem und die Milchstraße sind zwei Namen für dasselbe."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-comet",
+      "answers": [
+        "Sonnenlicht und Sonnenwind.",
+        "Nur die Schwerkraft der Sonne zieht alles Schweifmaterial direkt zur Sonne.",
+        "Immer allein die Bewegungsrichtung wie beim Fahrtwind."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "science-exoplanet",
+      "answers": [
+        "Die Blickrichtung kann ungeeignet sein; Planeten sind damit nicht ausgeschlossen.",
+        "Dieser Stern kann garantiert keine Planeten haben.",
+        "Dort muss garantiert Leben existieren."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-bronze",
+      "answers": [
+        "Menschen konnten Bronze und Stein nebeneinander verwenden.",
+        "Jeder bronzezeitliche Gegenstand musste aus Bronze bestehen.",
+        "Ein Steinhammer kann grundsätzlich nicht aus dieser Zeit stammen."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-bronze:material",
+      "answers": [
+        "Wann und wo Menschen das Stück benutzt haben.",
+        "Dass das untersuchte Stück Kupfer enthält.",
+        "Dass das untersuchte Stück Zinn enthält.",
+        "Dass das Stück aus einem Metallgemisch besteht."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "history-bronze:limits",
+      "answers": [
+        "Alle Menschen der Gegend nutzten nur Bronze.",
+        "An diesem Fund kann der Werkstoff untersucht werden.",
+        "Weitere Funde können mit diesem Stück verglichen werden.",
+        "Der Fund kann etwas über diesen Ort verraten."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-maria_sibylla_merian",
+      "answers": [
+        "Die Entwicklung von Insekten an ihren Pflanzen verfolgen",
+        "Aus einem Einzelbild alle Lebensstadien sicher erkennen",
+        "Alle Raupen allein an ihrer Farbe einer Art zuordnen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-maria_sibylla_merian:evidence",
+      "answers": [
+        "Die Farben von Raupe und Falter genau vergleichen",
+        "Die Raupe beobachten, bis der Falter schlüpft",
+        "Schauen, ob beide auf derselben Wiese leben",
+        "Nachsehen, ob beide gleich groß sind"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-maria_sibylla_merian:limits",
+      "answers": [
+        "Das Buch wurde im Jahr 1705 veröffentlicht.",
+        "Das Buch enthält besonders sorgfältig ausgeführte Bilder.",
+        "Merian nutzte auch Wissen und Arbeit indigener und versklavter Menschen.",
+        "Merian zeichnete sehr genau und geduldig."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "person-inge_lehmann",
+      "answers": [
+        "Mit Aufzeichnungen von Erdbebenwellen",
+        "Mit einem Foto aus der Mitte der Erde",
+        "Mit einer Bohrprobe direkt aus dem inneren Erdkern"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-inge_lehmann:evidence",
+      "answers": [
+        "Sofort ein ganz neues Bild der Erde zeichnen.",
+        "Das Signal löschen, weil es nicht zur bisherigen Zeichnung passt.",
+        "Die Messung prüfen und eine bessere Erklärung suchen.",
+        "Warten, bis jemand Berühmtes es erklärt."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "person-inge_lehmann:limits",
+      "answers": [
+        "Das Modell passt besser, aber vieles ist noch offen.",
+        "Nun sind jede Temperatur und jeder Stoff im Erdinneren exakt bekannt.",
+        "Damit ist das gezeichnete Schnittbild ein Foto des wirklichen Erdkerns.",
+        "Das alte Modell war also in allem falsch."
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-henrietta_swan_leavitt",
+      "answers": [
+        "Drei Tage zwischen aufeinanderfolgenden höchsten Stellen",
+        "Acht Tage, weil die letzte Markierung Tag 8 heißt",
+        "Drei Sterne, weil drei höchste Stellen gezeichnet sind"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-cecilia_payne_gaposchkin",
+      "answers": [
+        "Nur die Zahl der übrigen gezeichneten Linien",
+        "Die physikalischen Bedingungen wie Temperatur und Ionisation",
+        "Nur die Entfernung der gedruckten Linien voneinander"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-rosalind_franklin",
+      "answers": [
+        "Ein gewöhnliches Kamerafoto einer einzelnen DNA-Doppelhelix",
+        "Eine Aufnahme mit direkt lesbarer Reihenfolge der DNA-Bausteine",
+        "Ein Beugungsmuster mit Hinweisen auf die räumliche Struktur der untersuchten DNA"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "person-jocelyn_bell_burnell",
+      "answers": [
+        "Weitere Beobachtungen vergleichen und mögliche Störquellen prüfen",
+        "Nur die passendsten Spitzen behalten und alle anderen Werte streichen",
+        "Aus dem regelmäßigen Abstand allein schon die Quelle sicher benennen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-katsushika_hokusai",
+      "answers": [
+        "Hokusai entwarf Bilder; auch Holzschneider und Drucker leisteten wichtige Arbeit",
+        "Hokusais Name beweist, dass er jeden Abzug persönlich druckte",
+        "Die Drucker verpackten fertige Bilder, hatten aber keinen Einfluss auf deren Farben"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-murasaki_shikibu",
+      "answers": [
+        "Das Bild ist damit eine zeitgenössische Aufnahme aus dem 11. Jahrhundert",
+        "Das Bild ist eine spätere Deutung und braucht eine eigene zeitliche Einordnung",
+        "Das Bild allein beweist, dass alle gezeigten Einzelheiten um 1000 genauso aussahen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-rachel_carson",
+      "answers": [
+        "Nur der Ort des direkten Kontakts kann betroffen sein",
+        "Ein aufgenommener Stoff kann mit der Nahrung weitergegeben werden",
+        "Ohne sichtbare Sprühwolke ist jede Belastung ausgeschlossen"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-octavia_butler",
+      "answers": [
+        "Noor weiß sicher, dass ein Reifen platt ist",
+        "An der Abholstelle liegen jetzt keine Bücher bereit",
+        "Die andere Figur will die Bücher absichtlich zurückhalten"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-nelson_mandela",
+      "answers": [
+        "Die Freilassung und die Wahlen waren dieselbe Veranstaltung",
+        "Nach der Freilassung waren weitere Verhandlungen und politische Schritte nötig",
+        "Mit der Freilassung war Mandela automatisch bereits Präsident"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-chien_shiung_wu",
+      "answers": [
+        "Die gleiche Gesamtzahl ist unterschiedlich auf die beiden Seiten verteilt",
+        "Die acht Markierungen beweisen Wus ursprüngliche Messwerte",
+        "Jeder beliebige Unterschied zwischen zwei Bildern verletzt Parität"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-lise_meitner",
+      "answers": [
+        "Bei der Untersuchung wurde Barium gefunden",
+        "Ein schwerer Atomkern kann sich in kleinere Kerne teilen",
+        "Hahn und Straßmann untersuchten Reaktionsprodukte"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-zaha_hadid",
+      "answers": [
+        "Die Stationen werden in ein anderes Gebäude versetzt",
+        "Die Reihenfolge des gezeichneten Rundgangs",
+        "Die nachgewiesene Tragfähigkeit aller Wände"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "person-rabindranath_tagore",
+      "answers": [
+        "Die neuen Zeichen können eine Vogeldeutung unterstützen; andere begründete Deutungen bleiben möglich",
+        "Das Bild ist deshalb eine echte Zeichnung Tagores",
+        "Alle Menschen müssen darin denselben Vogel erkennen"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "person-ibn_sina",
+      "answers": [
+        "Die Lebenszeit Ibn Sinas",
+        "Die Herstellung dieser konkreten Abschrift",
+        "Die erste Entstehung des arabischen Kanons"
+      ],
+      "correct": 1
+    }
+  ]
+}

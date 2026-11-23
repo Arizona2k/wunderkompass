@@ -263,6 +263,15 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
     if (leer(o?.frage) || leer(o?.aufloesung)) melde('ordnen: Frage oder Auflösung fehlt');
   }
 
+  // Lernhilfen: „Ganz einfach“ (starter) ist Pflicht; „Selbst beobachten“ (observe) und Lernziel (benefit) sind freiwillig,
+  // aber wenn sie da sind, nicht leer (Teilschritt 3, E12; 67 Karten haben nur starter).
+  if (topic.learning !== undefined) {
+    const l = topic.learning;
+    if (leer(l?.starter)) melde('learning: „Ganz einfach“ (starter) fehlt');
+    if (l?.observe !== undefined && leer(l.observe)) melde('learning: observe ist leer');
+    if (l?.benefit !== undefined && leer(l.benefit)) melde('learning: benefit ist leer');
+  }
+
   // Mit Häppchen und bei Personen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
   if (ganzEinfachImAusprobieren(topic) && !hatAusprobieren(topic)) {
     melde('„Ganz einfach“ gehört hier in „Ausprobieren“: Der Satz braucht diesen Bereich, sonst geht er verloren');

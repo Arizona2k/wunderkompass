@@ -56,9 +56,10 @@ export async function bookPrecisionView(page,report,width,{full=true,shots=null}
  const saved=await state(page);for(const key of ['notes','favorites','games','journeys','review','settings','favoritePlaces'])assert.deepEqual(saved[key],original[key],'precision views preserve existing '+key);for(const [id,value]of Object.entries(original.gameSessions))assert.deepEqual(saved.gameSessions[id],value);
  await page.evaluate(hash=>location.hash=hash,initial);(report.bookPrecision??=[]).push(proof);return proof;
 }
-// Eine angefangene Runde bleibt: Jeder gespeicherte Wert ist unverändert da. Eine Karte darf neue Schlüssel ergänzen
-// (seit Teilschritt 3 zeigt sie nach der Hauptfrage weitere Fragen und merkt sich deren Antwortreihe).
-const runde=(jetzt,vorher,text)=>{if(vorher&&typeof vorher==='object'&&!Array.isArray(vorher)&&jetzt&&typeof jetzt==='object'&&!Array.isArray(jetzt)){for(const[k,v]of Object.entries(vorher))assert.deepEqual(jetzt[k],v,text+' '+k);}else assert.deepEqual(jetzt,vorher,text);};
+// Eine angefangene Runde bleibt: Jeder gespeicherte Wert ist unverändert da. Eine Karte darf nur Schlüssel ihrer Fragen
+// und Denkanstöße ergänzen (seit Teilschritt 3 zeigt sie weitere Fragen und merkt sich deren Antwortreihe), sonst nichts.
+const NEUE_SCHLUESSEL=/^(items|topicAnswer|claimWort|ordnen):/;
+const runde=(jetzt,vorher,text)=>{if(vorher&&typeof vorher==='object'&&!Array.isArray(vorher)&&jetzt&&typeof jetzt==='object'&&!Array.isArray(jetzt)){for(const[k,v]of Object.entries(vorher))assert.deepEqual(jetzt[k],v,text+' '+k);for(const k of Object.keys(jetzt))assert.ok(k in vorher||NEUE_SCHLUESSEL.test(k),text+': unerwarteter neuer Schlüssel '+k);}else assert.deepEqual(jetzt,vorher,text);};
 export async function bookNormalizationView(page,report,width,{measurement=false,shots=null,engine='chromium',native=false}={}){
  const original=await state(page),initial=await page.evaluate(()=>location.hash);report.bookNormalization??=[];
  await page.evaluate(()=>location.hash='book/words/Schwerkraft');const query=page.getByRole('textbox',{name:'Wissenswörter durchsuchen',exact:true});await page.waitForFunction(()=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value==='Schwerkraft');

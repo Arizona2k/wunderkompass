@@ -46,6 +46,9 @@ test('kartenFeldFehler: Häppchen und Personen mit „Ganz einfach“ brauchen �
   assert.deepEqual(kartenFeldFehler({...basis, chapters: [{question: 'Wie?', text: 'So.'}], learning: lernhilfen}), [], 'mit Ausprobieren in Ordnung');
   assert.ok(kartenFeldFehler({...feuer, category: 'people', learning: lernhilfen}).some(f => f.includes('Ausprobieren')), 'Person ohne Ausprobieren wird gemeldet');
   assert.deepEqual(kartenFeldFehler({...feuer, learning: {starter: 'Schau genau hin.'}}), [], '„Selbst beobachten“ und Lernziel sind freiwillig');
+  assert.ok(kartenFeldFehler({...feuer, learning: {observe: 'Was siehst du?'}}).some(f => f.includes('starter')), 'Lernhilfen ohne „Ganz einfach“ werden gemeldet');
+  assert.ok(kartenFeldFehler({...feuer, learning: {starter: 'Schau genau hin.', observe: ' '}}).some(f => f.includes('observe')), 'leeres observe wird gemeldet');
+  assert.ok(kartenFeldFehler({...feuer, learning: {starter: 'Schau genau hin.', benefit: ''}}).some(f => f.includes('benefit')), 'leeres benefit wird gemeldet');
 });
 
 test('ganzEinfachImAusprobieren: Häppchen und Personen oben in „Ausprobieren“, sonst offen in „Kurz erklärt“', () => {

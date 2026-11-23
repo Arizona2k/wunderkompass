@@ -99,7 +99,8 @@ test('hatFragenDerStufe: Experte nur, wo es eine Experten-Frage gibt (E3)', () =
 test('gueltigeReihe: eine gespeicherte Reihenfolge gilt nur, wenn sie genau die heutigen Antworten vertauscht', () => {
   const profi = fragen.find(f => f.id === 'x:rate-2');
   assert.deepEqual(gueltigeReihe(profi, ['G', 'F', 'E', 'D']), ['G', 'F', 'E', 'D']);
-  // Vor der vierten Antwort gespeichert (drei Einträge): ungültig, die Karte mischt neu und speichert das.
+  // Vor der vierten Antwort gespeichert (drei Einträge): ungültig. Die Karte zeigt dann die feste Mischung (festGemischt)
+  // und schreibt nichts in den Pass.
   assert.equal(gueltigeReihe(profi, ['F', 'E', 'D']), null);
   assert.equal(gueltigeReihe(profi, ['G', 'F', 'E', 'E']), null, 'doppelt');
   assert.equal(gueltigeReihe(profi, ['G', 'F', 'E', 'Z']), null, 'fremd');

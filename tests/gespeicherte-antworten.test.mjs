@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fixture from './fixtures/gespeicherte-antworten.json' with {type: 'json'};
+import teilA from './fixtures/gespeicherte-antworten-teil-a.json' with {type: 'json'};
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import {restoreAnswerWording} from '../app/retained-answer-wording.mjs';
 import {challengeQuestionForOrder} from '../app/knowledge-challenge.ts';
@@ -74,6 +75,36 @@ test('Challenge: eine angefangene Runde mit den alten Antworten lässt sich fort
     assert.deepEqual([...runde.answers].sort(), [...alt.answers].sort(), alt.id + ': die Runde zeigt ihre alten Antworten');
     assert.equal(runde.answers[runde.correct], alt.answers[alt.correct], alt.id + ': dieselbe richtige Antwort');
   }
+});
+
+// Die Listen wachsen nur (Code-Prüfung Teil A, Befund 4): Jeder Schritt, der neue Antworten bringt, legt vor dem Merge eine
+// datierte Liste an (scripts/antworten-stand.mjs). Seit Teil A stehen vierte Antworten, 12 neue Zusatzfragen und alle
+// Challenge-Fragen auf der Karte (gespeichert unter topicAnswer:<id>). Jede Antwort daraus bleibt lesbar, gleich oder über
+// einen Alias, und die Lösung bleibt dieselbe. Eine Frage, die später ruht, bleibt unverändert in den Daten.
+const heuteNachId = new Map(catalog.flatMap(t => [[t.id, t.question], ...(t.moreQuestions ?? []).map(q => [q.id, q]), ...(t.challenges ?? []).map(q => [q.id, q])]));
+test('datierte Liste Teil A: jede Antwort, die ein Kind auf einer Karte speichern konnte, ist noch lesbar', () => {
+  assert.ok(teilA.fragen.length >= 287, 'die Liste ist vollständig');
+  for (const alt of teilA.fragen) {
+    const heute = heuteNachId.get(alt.id);
+    assert.ok(heute, 'Frage fehlt: ' + alt.id);
+    if (heute.ruht) assert.deepEqual([heute.answers, heute.correct], [alt.answers, alt.correct], alt.id + ' ruht unverändert');
+    else assert.deepEqual(fehlt(alt, heute, alt.id), [], alt.id);
+  }
+});
+
+test('Challenge: eine alte Runde mit der ganzen früheren Frage zeigt keine heutigen Tipps', () => {
+  let alteFassungen = 0;
+  for (const alt of fixture.challenges) {
+    const runde = challengeQuestionForOrder(alt.id, [...alt.answers].reverse());
+    const heute = challenges.get(alt.id);
+    if (runde.prompt !== heute.prompt) {
+      alteFassungen++;
+      assert.deepEqual(runde.hints, [], alt.id + ': keine Tipps zur alten Fassung');
+    }
+    const neu = challengeQuestionForOrder(alt.id, [...heute.answers].reverse());
+    if (neu && !heute.ruht) assert.equal(neu.prompt, heute.prompt, alt.id + ': eine neue Runde zeigt die heutige Frage');
+  }
+  assert.ok(alteFassungen > 0, 'Testvoraussetzung: es gibt umformulierte Fragen mit alter Fassung');
 });
 
 test('Mutationsprobe: fehlende Antwort und andere richtige Antwort werden erkannt', () => {

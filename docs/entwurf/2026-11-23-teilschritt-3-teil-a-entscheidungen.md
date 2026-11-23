@@ -48,7 +48,7 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - Pflicht aus BACKLOG 23 erfüllt: feste Liste aller gespeicherten Antworten (`tests/fixtures/gespeicherte-antworten.json`) und Test „gleich oder Alias vorhanden“.
 - „Ordne richtig“ (Steinwerkzeuge) wird ein eigener kleiner Abschnitt ab Experte, nicht Teil des Fragenkreislaufs.
 
-- **Alte Antwortreihe im Pass bleibt** (Nachtrag aus der großen Prüfung von Aufgabe 5): Passt eine gespeicherte Reihenfolge nicht mehr (z. B. nach einer vierten Antwort), zeigt die Karte eine feste Mischung je Frage (`festGemischt`) und schreibt nichts in den Pass. Die erste Fassung hatte neu gemischt und gespeichert; der Schutztest „interpretation never overwrites original import evidence“ war dadurch rot. Falls falsch: Alle Kinder mit so einer alten Reihe sehen dieselbe Mischung, nicht jedes eine eigene.
+- **Alte Antwortreihe im Pass bleibt** (Nachtrag aus der großen Prüfung von Aufgabe 5): Passt eine gespeicherte Reihenfolge nicht mehr (z. B. nach einer vierten Antwort), zeigt die Karte eine feste Mischung je Frage (`festGemischt`) und schreibt nichts in den Pass. Die erste Fassung hatte neu gemischt und gespeichert; der Schutztest „interpretation never overwrites original import evidence“ war dadurch rot. Falls falsch: Alle Kinder mit so einer alten Reihe sehen dieselbe Mischung, nicht jedes eine eigene. Genau genommen (Code-Prüfung Teil A, Befund 6): Der Schutz greift, wenn die alte Reihe eine nicht leere Liste aus Texten ist, und das ist sie bei allen Reihen, die die Seite je gespeichert hat. Bei einer kaputten Reihe (leere Liste, Zahlen) legt das Speichern beim Öffnen (`app/saved-games.tsx`) wie schon vor Teil A eine neue Mischung an.
 - Öffnet ein Kind eine Karte mit Challenge-Fragen, nachdem es die Hauptfrage beantwortet hat, merkt sich die Karte die Antwortreihe der nächsten Frage (neuer Schlüssel im Kartenstand). Alte Einträge bleiben unverändert; der Test „existing round retained“ prüft das jetzt je Eintrag statt „nichts Neues“.
 
 ## Aufgabe 6: „Ganz einfach“ offen
@@ -58,9 +58,24 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - **67 Karten bekommen „Ganz einfach“ neu** (Vorlage PR #27, neu geschrieben von der `kinder-redaktion`, geprüft vom `fakten-pruefer`). Die sechs Karten mit Häppchen aus der Vorlage (Steinwerkzeuge, Apollo 11, Pyramiden von Gizeh, Eiffelturm, Wasserkreislauf, Mondphasen) bekommen keinen Satz: Die Häppchen sind dort die einfache Fassung.
 - Nur „Ganz einfach“ wird übernommen. „Selbst beobachten“ und Lernziel aus PR #27 sind ungeprüft und oft Erwachsenensprache; sie bleiben im Entwurf. Beide Felder sind deshalb freiwillig (Typ und Testhilfe `lesetexte`).
 - **24 Tierkarten:** Einleitung und „Ganz einfach“ waren derselbe Satz, ein Lehrsatz für Erwachsene („Artwissen benötigt …“). Beide sind neu (Vorschlag der `kinder-redaktion`, Faktencheck). Die Inhaltsregel „Ganz einfach steht nicht in der Einleitung“ gilt jetzt ohne Ausnahmeliste.
-- Heikle Karten: Der Satz nennt das Leid ehrlich und ohne Einzelheiten (Weltkriege: die Toten; 1492: das Leid der Menschen vor Ort; Mauerbau: der Zweck; Holocaust: der Grund war Hass).
+- Heikle Karten: Der Satz nennt das Leid ehrlich und ohne Einzelheiten (Weltkriege: die Toten; 1492: das Leid der Menschen vor Ort; Mauerbau: der Zweck; Holocaust: Ausgrenzung, Verfolgung und Mord an Millionen, der Grund war Hass; nach der Nachprüfung nennt der Satz den Mord ausdrücklich).
 - „Was ist neu?“: zwei Einträge („Drei Stufen: Entdecker, Profi, Experte“, „Erst ein leichter Satz“).
 - **Endprüfung der Sätze:** Der `fakten-pruefer` fand keine falsche Zahl, aber 20 Sätze, die zu stark verkürzten (z. B. Buchdruck: „vorher alles mit der Hand“, obwohl in China und Korea schon gedruckt wurde; Fliegen: „Luft strömt vorbei und hebt“; Bestäubung: als ob alle Pflanzen Tiere bräuchten). Alle übernommen, dazu vier Vorschläge der `kinder-redaktion`; danach Nachprüfung durch beide (`2026-11-23-ganz-einfach-nachpruefung-*.md`). Beim Holocaust nennt der Satz jetzt auch den Mord („Millionen von ihnen wurden ermordet“), weil er für sich allein stimmen soll.
+
+## Code-Prüfung Teil A (Bericht `2026-11-23-teil-a-code-pruefung.md`)
+
+- **1 Vorschläge:** Es zählen nur Antworten auf Fragen genau der gewählten Stufe. Leichtere Fragen (auf Profi oft die Entdecker-Hauptfrage) lassen die Folge, wie sie ist. Sonst bekäme ein Profi-Kind nach drei Entdecker-Fragen „Willst du Experte probieren?“. Unit-Test und Browser-Test mit zwei echten Profi-Fragen.
+- **2 Fokus nach Stufenwechsel:** Nach dem Umstellen (Wahl, „Zurück zu Entdecker“, „Ja“ im Vorschlag) steht der Fokus auf „Ändern“ der neuen Stufenwahl; nach „Nein, ich bleibe“ auf „Rate mal!“. Fokus-Prüfungen im Browser-Test `karte-stufen`.
+- **3 HEAD rot:** mit dem Katalog-Einbau erledigt.
+- **4 Antwortlisten wachsen nur:** Zweite datierte Liste `tests/fixtures/gespeicherte-antworten-teil-a.json` (287 Fragen: Hauptfragen, Zusatzfragen, Challenge-Fragen auf der Karte), erzeugt mit `scripts/antworten-stand.mjs`. **Vor dem Merge nach test-live neu erzeugen, falls sich bis dahin Antworten ändern; danach nie mehr ändern.** Jeder spätere Schritt mit neuen Antworten legt eine eigene Liste an.
+- **5 Alte Challenge-Runden:** Eine Runde mit der ganzen früheren Frage zeigt keine Tipps mehr, weil die heutigen Tipps zur neuen Fassung gehören. Solche Runden sind selten und enden nach sechs Aufgaben. Falls falsch: Einzelne Kinder sehen in einer alten Runde einmal keinen Tipp.
+- **6 Feste Mischung:** Entscheidung bei Aufgabe 5 enger gefasst (siehe dort).
+- **7 Kommentare:** berichtigt (`ordne-richtig.tsx`, `karte-stufen.test.mjs`).
+- **8 „Ordne richtig“:** Nach dem Verschieben bleibt der Fokus beim selben Teil (ganz oben oder unten auf dem anderen Pfeil), und ein unsichtbarer Satz sagt „‚…‘ steht jetzt an Platz N.“ an. Browser-Test prüft beides.
+- **9 Spielstand-Prüfung im Wörterbuch-Test:** Neue Schlüssel nur mit den erwarteten Präfixen (`items:`, `topicAnswer:`, `claimWort:`, `ordnen:`).
+- **10 Nachbarländer-Spiel:** Der Satz nutzt jetzt `WOERTER.nochNicht` („Noch nicht ganz. Versuch es noch einmal! Frankreich hat keine …“ statt umgekehrt).
+- **Dazu:** Regel in `kartenFeldFehler`: Lernhilfen brauchen „Ganz einfach“; „Selbst beobachten“ und Lernziel sind freiwillig, aber nicht leer.
+- **Später Fund in der großen Prüfung:** Die Gezeiten-Prüfung im Wörterbuch-Test suchte einen Absatz, der jetzt unter „Für Große“ liegt. Sie klappt „Für Große“ jetzt erst auf und prüft dann sichtbar (nicht abgeschwächt). Die Fotosynthese-Zeichnung steht offen unter dem Satz.
 
 ## Arbeitsweise
 
