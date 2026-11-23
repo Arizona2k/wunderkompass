@@ -193,24 +193,29 @@ const saetze = text => text.trim().split(/(?<=[.!?])(?:\s+|$)/).filter(s => s.tr
 const woerter = text => text.trim().split(/\s+/).filter(Boolean);
 const pilotKarte = id => catalog.find(t => t.id === id);
 
-test('Pilot-Karten haben Häppchen, eine Behauptung und zwei bis drei Zusatzfragen', () => {
+// Seit Teilschritt 3 hat jede Pilot-Karte auch eine Experten-Frage: zwei bis vier sichtbare Zusatzfragen (ruhende zählen nicht).
+const sichtbar = t => (t.moreQuestions ?? []).filter(q => !q.ruht);
+test('Pilot-Karten haben Häppchen, eine Behauptung und zwei bis vier Zusatzfragen', () => {
   const unvollstaendig = PILOT.filter(id => {
     const t = pilotKarte(id);
-    return !t || !(t.chapters?.length >= 1) || t.claims?.length !== 1 || !(t.moreQuestions?.length >= 2 && t.moreQuestions.length <= 3);
+    return !t || !(t.chapters?.length >= 1) || t.claims?.length !== 1 || !(sichtbar(t).length >= 2 && sichtbar(t).length <= 4);
   });
   assert.deepEqual(unvollstaendig, []);
-  const zusatz = PILOT.reduce((summe, id) => summe + pilotKarte(id).moreQuestions.length, 0);
-  assert.ok(zusatz >= 25 && zusatz <= 35, zusatz + ' Zusatzfragen statt 25 bis 35');
+  const zusatz = PILOT.reduce((summe, id) => summe + sichtbar(pilotKarte(id)).length, 0);
+  assert.ok(zusatz >= 35 && zusatz <= 48, zusatz + ' Zusatzfragen statt 35 bis 48');
 });
 
 test('Pilot-Karten halten das Längen-Budget', () => {
   const funde = PILOT.map(pilotKarte).flatMap(t => {
     const f = [];
     if (saetze(t.intro).length !== 1) f.push('Einstieg hat nicht genau 1 Satz');
-    [t.question, ...(t.moreQuestions ?? [])].forEach((q, i) => {
-      if (woerter(q.prompt).length > 10) f.push(`Frage ${i}: mehr als 10 Wörter`);
-      if (q.answers.length !== 3) f.push(`Frage ${i}: nicht 3 Antworten`);
-      if (saetze(q.why).length > 2) f.push(`Frage ${i}: Erklärung länger als 2 Sätze`);
+    // Teilschritt 3: Entdecker und Profi höchstens 10 Wörter; Experte darf eine kleine Denkaufgabe stellen (höchstens 30 Wörter).
+    // Antworten: Hauptfrage und Entdecker 3, Profi und Experte 4.
+    [{...t.question, level: 'entdecker'}, ...sichtbar(t)].forEach((q, i) => {
+      if (woerter(q.prompt).length > (q.level === 'experte' ? 30 : 10)) f.push(`Frage ${i}: zu viele Wörter für ${q.level}`);
+      if (q.answers.length !== (q.level === 'entdecker' ? 3 : 4)) f.push(`Frage ${i}: falsche Antwortzahl für ${q.level}`);
+      // Auf Experte erklärt die Auflösung einen Denkweg: bis zu 3 Sätze; sonst höchstens 2.
+      if (saetze(q.why).length > (q.level === 'experte' ? 3 : 2)) f.push(`Frage ${i}: Erklärung zu lang für ${q.level}`);
     });
     (t.claims ?? []).forEach(c => { if (saetze(c.explanation).length > 2) f.push(c.id + ': Auflösung länger als 2 Sätze'); });
     const kapitel = t.chapters ?? [];
@@ -243,11 +248,11 @@ function muster(fragen) {
   return {lang: lang / fragen.length, kurz: kurz / fragen.length};
 }
 test('Ratemuster der Zusatzfragen: richtige Antwort nicht auffällig lang oder kurz', () => {
-  const m = muster(catalog.flatMap(t => t.moreQuestions ?? []));
+  const m = muster(catalog.flatMap(t => (t.moreQuestions ?? []).filter(q => !q.ruht)));
   assert.ok(m.lang <= 0.45 && m.kurz <= 0.45 && m.lang >= 0.15, JSON.stringify(m));
 });
 test('Ratemuster der Challenge-Fragen: richtige Antwort nicht auffällig lang oder kurz', () => {
-  const m = muster(catalog.flatMap(t => t.challenges ?? []));
+  const m = muster(catalog.flatMap(t => (t.challenges ?? []).filter(q => !q.ruht)));
   assert.ok(m.lang <= 0.45 && m.kurz <= 0.45, JSON.stringify(m));
 });
 test('Mutationsprobe: muster erkennt „immer die längste“ und „nie die längste“', () => {
@@ -267,7 +272,7 @@ test('neue Fragen- und Behauptungs-IDs sind stabil eingetragen', () => {
   // Pass-Einträge hängen an diesen IDs (review, gameSessions); die Liste darf nur wachsen.
   const stabil = JSON.parse(fs.readFileSync(new URL('./fixtures/stable-ids.json', import.meta.url), 'utf8'))['world-card-extras'];
   assert.ok(Array.isArray(stabil), 'stable-ids.json braucht die Familie world-card-extras');
-  const neu = catalog.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? [])].map(x => x.id));
+  const neu = catalog.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? []), ...(t.ordnen ? [t.ordnen] : [])].map(x => x.id));
   assert.deepEqual(neu.filter(id => !stabil.includes(id)), [], 'neue ID fehlt in stable-ids.json');
   assert.deepEqual(stabil.filter(id => !neu.includes(id)), [], 'eingetragene ID gibt es nicht mehr');
 });

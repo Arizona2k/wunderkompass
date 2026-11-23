@@ -40,7 +40,8 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
     level: 'entdecker',
   };
   const schluessel = (id: string) => ({id, reviewId: 'world-question:' + id, answerKey: 'topicAnswer:' + id, itemsKey: 'items:' + id});
-  const zusatz = (topic.moreQuestions ?? []).map(({id, hint, hints, level, wrongReasons, prompt, answers, correct, why}): KartenFrage => ({
+  // Ruhende Fragen (ruht: true) bleiben mit ihrer ID in den Daten (alte Pass-Einträge, alte Runden), erscheinen aber nicht mehr.
+  const zusatz = (topic.moreQuestions ?? []).filter(q => !q.ruht).map(({id, hint, hints, level, wrongReasons, prompt, answers, correct, why}): KartenFrage => ({
     ...schluessel(id),
     question: {prompt, answers, correct, why},
     hints: hints ?? (hint ? [hint] : []),
@@ -49,7 +50,7 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
   }));
   // Die Challenge-Fragen erscheinen auch auf ihrer Karte (B7). Auf der Karte haben sie eigene Schlüssel;
   // in der Wissens-Challenge bleibt ihre Wiederholung challenge:<id>. Ohne Einstufung gelten sie als Profi.
-  const challenge = (topic.challenges ?? []).map(({id, level, prompt, answers, correct, why}): KartenFrage => {
+  const challenge = (topic.challenges ?? []).filter(q => !q.ruht).map(({id, level, prompt, answers, correct, why}): KartenFrage => {
     const eintrag = hintBank[id];
     return {
       ...schluessel(id),
@@ -214,12 +215,13 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
     fragen.forEach((q, i) => {
       if (!eigeneId(q?.id, 'rate')) melde(`moreQuestions[${i}]: ID muss ${topic.id}:rate-<Zahl> sein`);
       const tipps = Array.isArray(q?.hints) ? q.hints : typeof q?.hint === 'string' ? [q.hint] : [];
+      if (q?.ruht === true) return; // ruhende Frage: nur ihre ID zählt
       frageFehler(q as unknown as Record<string, unknown>, `moreQuestions[${i}]`, tipps);
     });
   }
 
   // Challenge-Fragen: ihre Tipps stehen in challenge-hints.json (eigener Inhaltstest).
-  if (topic.challenges !== undefined) (Array.isArray(topic.challenges) ? topic.challenges : []).forEach((q, i) => frageFehler(q as unknown as Record<string, unknown>, `challenges[${i}]`, null));
+  if (topic.challenges !== undefined) (Array.isArray(topic.challenges) ? topic.challenges : []).forEach((q, i) => q?.ruht === true || frageFehler(q as unknown as Record<string, unknown>, `challenges[${i}]`, null));
 
   // „Ordne richtig“ (E11, S5 Art 3): Teile in richtiger Reihenfolge, Tipps, Auflösung.
   if (topic.ordnen !== undefined) {

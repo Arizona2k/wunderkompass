@@ -58,7 +58,7 @@
     "Der größte und stärkste Bulle",
     "Ein junges Männchen",
     "Meist das älteste Weibchen",
-    "Meist die Mutter mit den meisten Jungen"
+    "Das Weibchen, das am lautesten trompetet"
    ],
    "correct": 2,
    "why": "Meist führt das älteste Weibchen die Herde, die Leitkuh. Erwachsene Männchen leben allein oder in kleinen Gruppen.",
@@ -69,7 +69,7 @@
     "Erwachsene Bullen leben meist allein oder in kleinen Gruppen, nicht in der Familienherde.",
     "Junge Männchen haben noch wenig Erfahrung.",
     null,
-    "Viele Junge zu haben, macht ein Tier nicht zur Anführerin. Wichtig ist etwas anderes."
+    "Laut sein macht ein Tier nicht zur Anführerin. Wichtig ist Erfahrung."
    ]
   },
   {
@@ -79,9 +79,9 @@
    "level": "experte",
    "prompt": "In einem sehr trockenen Jahr sind viele Wasserlöcher leer. Die älteste Elefantenkuh führt die Herde. Warum ist das jetzt gut?",
    "answers": [
-    "Sie ist die Stärkste und kann kämpfen",
+    "Sie ist stark und kann Löwen vertreiben",
     "Sie erinnert sich an Wasserstellen von früher",
-    "Sie ist die Schnellste der Herde",
+    "Sie läuft am schnellsten zum nächsten Wasser",
     "Sie braucht selbst am wenigsten Wasser"
    ],
    "correct": 1,
@@ -91,9 +91,9 @@
     "In 50 Jahren gibt es viele trockene Jahre. Wer sie erlebt hat, weiß mehr."
    ],
    "wrongReasons": [
-    "Kämpfen hilft nicht, wenn das Wasserloch leer ist.",
+    "Stark sein hilft gegen Löwen. Wasser findet man damit nicht.",
     null,
-    "Schnell laufen hilft nichts, wenn man nicht weiß, wohin.",
+    "Schnell sein hilft nichts, wenn man nicht weiß, wohin.",
     "Auch die Leitkuh braucht viel Wasser. Sie hat einen anderen Vorteil."
    ]
   },
@@ -232,7 +232,7 @@
    "why": "Ein Krake ist ein Weichtier und hat keine Knochen. Fast sein ganzer Körper ist weich. So quetscht er sich durch erstaunlich enge Spalten.",
    "hints": [
     "Im Steckbrief steht seine Tiergruppe. Was bedeutet das Wort?",
-    "Weichtiere haben keine Knochen."
+    "Denk an eine Schnecke. Hat sie innen etwas Hartes?"
    ],
    "wrongReasons": [
     "Weiche Knochen hat ein Krake nicht. Denk an seine Tiergruppe.",
@@ -414,7 +414,7 @@
     "Etwa 4 Tage",
     "Etwa 3 Tage",
     "Etwa 1 Tag",
-    "Etwa 8 Tage"
+    "Etwa 2 Tage"
    ],
    "correct": 1,
    "why": "8 Tage minus 4 Tage Hinflug minus fast 1 Tag auf dem Mond: Für den Rückflug bleiben etwa 3 Tage.",
@@ -426,7 +426,7 @@
     "4 Tage dauerte der Hinflug. Zähle nach, was von 8 Tagen übrig bleibt.",
     null,
     "Fast einen Tag waren sie auf dem Mond. Gesucht ist der Rückflug.",
-    "8 Tage dauerte die ganze Reise, nicht nur der Rückflug."
+    "Rechne noch einmal: 8 minus 4 minus fast 1."
    ]
   },
   {
@@ -461,10 +461,10 @@
     "Mit dem Forscher Henri Becquerel",
     "Mit dem Forscher Albert Einstein",
     "Mit ihrem Mann Pierre Curie",
-    "Mit ihrer Tochter Irène"
+    "Mit ihrer Tochter Irène Curie"
    ],
    "correct": 2,
-   "why": "Marie und Pierre Curie entdeckten 1898 gemeinsam Polonium und Radium. Henri Becquerel hatte vorher die Strahlung von Uran entdeckt. Ihre Tochter Irène war damals noch ein Baby.",
+   "why": "Marie und Pierre Curie entdeckten 1898 gemeinsam Polonium und Radium. Becquerel hatte vorher die Strahlung von Uran entdeckt.",
    "hints": [
     "Es war jemand aus ihrer Familie."
    ],
@@ -532,7 +532,7 @@
    "prompt": "Anfangs liefen die Schimpansen vor Jane weg. Was half dagegen?",
    "answers": [
     "Sie kam immer wieder und wartete",
-    "Sie lief ihnen schnell hinterher",
+    "Sie lief schnell hinterher",
     "Sie lockte sie mit lauten Rufen"
    ],
    "correct": 0,
@@ -608,7 +608,7 @@
     "Auf dem Rücken von Kamelen"
    ],
    "correct": 0,
-   "why": "Die hellen Außensteine kamen mit Schiffen aus Tura, einem Steinbruch am anderen Ufer des Nils. Die meisten anderen Steine stammten aus der Umgebung. Kamele gab es damals in Ägypten noch nicht als Lasttiere.",
+   "why": "Die hellen Außensteine kamen mit Schiffen aus Tura, einem Steinbruch am anderen Ufer des Nils. Die meisten anderen Steine stammten aus der Umgebung.",
    "hints": [
     "Die hellen Steine kamen aus Ägypten selbst, aber nicht aus Gizeh."
    ],
@@ -632,7 +632,7 @@
     "Vor etwa 8.300 Jahren"
    ],
    "correct": 2,
-   "why": "Gebaut wurde sie vor etwa 4.500 Jahren. Rund 3.800 Jahre lang war sie die Höchste. 4.500 minus 3.800 ergibt etwa 700 Jahre. Damals bekam wohl eine Kirche in England eine noch höhere Turmspitze. Wie hoch sie genau war, weiß man nicht sicher.",
+   "why": "Gebaut wurde sie vor etwa 4.500 Jahren, und rund 3.800 Jahre lang war sie die Höchste. 4.500 minus 3.800 ergibt etwa 700 Jahre. Damals bekam wohl eine Kirche in England eine noch höhere Turmspitze.",
    "hints": [
     "Zwei Zahlen stehen auf der Karte: wann sie gebaut wurde und wie lange sie die Höchste war.",
     "Rechne: 4.500 Jahre minus 3.800 Jahre."
@@ -846,7 +846,7 @@
     "Das Bilden von Pfützen"
    ],
    "correct": 0,
-   "why": "Durch Asphalt kommt kein Wasser. Der Regen kann nicht versickern und fließt ab.",
+   "why": "Durch Asphalt kommt kaum Wasser. Der Regen kann nicht versickern und fließt ab.",
    "hints": [
     "Vergleiche eine Wiese und einen Parkplatz nach einem Regenschauer.",
     "Auf der Wiese verschwindet das Wasser nach unten. Auf dem Parkplatz nicht."
@@ -893,7 +893,7 @@
    "prompt": "Eine kalte Glasflasche mit Deckel kommt aus dem Kühlschrank. Bald ist sie außen nass. Woher kommt das Wasser?",
    "answers": [
     "Es sickert durch das Glas nach außen",
-    "Wasserdampf aus der Luft wird flüssig",
+    "Es ist Wasserdampf aus der Luft",
     "Es kommt von deinen Händen",
     "Es verdunstet aus der Flasche"
    ],
@@ -922,7 +922,7 @@
     "Kohlendioxid und Mineralstoffe, ohne Wasser"
    ],
    "correct": 0,
-   "why": "Aus Wasser und Kohlendioxid baut die Pflanze Zucker. Die Kraft dafür kommt vom Licht.",
+   "why": "Aus Wasser und Kohlendioxid baut die Pflanze Zucker. Die Energie dafür kommt vom Licht.",
    "hints": [
     "Lies den ersten Satz der Karte noch einmal."
    ],
@@ -1005,7 +1005,7 @@
    ],
    "wrongReasons": [
     null,
-    "Licht stört die Zellatmung nicht. Sie läuft auch am Tag.",
+    "Die Zellatmung läuft auch am Tag, nicht nur im Dunkeln.",
     "Das eine baut Zucker auf, das andere nutzt ihn. Das sind zwei Vorgänge.",
     "Pflanzenzellen brauchen auch Energie, Tag und Nacht. Wie kommen sie daran?"
    ],
@@ -1120,7 +1120,7 @@
     "Sie bestehen nur aus Blüten"
    ],
    "correct": 0,
-   "why": "Pilze zerlegen totes Laub und Holz. So wird daraus wieder Erde.",
+   "why": "Pilze zerlegen totes Laub und Holz. Daraus wird nach und nach Erde mit Nährstoffen für neue Pflanzen.",
    "hints": [
     "Lies den Steckbrief: Welche Aufgabe haben viele Pilze?"
    ],
@@ -1272,7 +1272,7 @@
    "correct": 0,
    "why": "Eine gebleichte Koralle lebt noch. Wird das Wasser wieder kühler, kann sie sich erholen.",
    "hints": [
-    "Lies „Schon gewusst?“ noch einmal."
+    "Was steht bei „Schon gewusst?“ über weiße Korallen?"
    ],
    "wrongReasons": [
     null,
@@ -1622,7 +1622,7 @@
    ],
    "wrongReasons": [
     null,
-    "Das Wasser braucht Zeit, bis es an jede Küste kommt.",
+    "Die Flut läuft wie eine Welle an den Küsten entlang. Sie kommt nicht überall gleichzeitig an.",
     "Die Zeiten verschieben sich jeden Tag. Zwölf Uhr passt nicht immer.",
     "An der Nordsee gibt es jeden Tag Hochwasser, meist zweimal."
    ],
@@ -1862,7 +1862,7 @@
     "Es fuhr langsamer als andere Räder"
    ],
    "correct": 2,
-   "why": "Beim Hochrad saß man hoch über dem großen Vorderrad. Beim Rover-Rad saß man tiefer und weiter hinten. Man kippte nicht mehr so leicht kopfüber nach vorn. Und fiel man doch, war es nicht so tief. Luftreifen hatte es noch nicht.",
+   "why": "Beim Rover-Rad saß man tiefer und weiter hinten als beim Hochrad. Darum kippte man nicht mehr so leicht kopfüber nach vorn, und ein Sturz war nicht so tief.",
    "hints": [
     "Vergleiche, wo man auf dem Hochrad saß und wo auf dem Rover-Rad."
    ],
@@ -1961,7 +1961,7 @@
     "Merian zeichnete sehr genau und geduldig."
    ],
    "correct": 2,
-   "why": "Merian hat viel selbst beobachtet und gemalt. Aber einheimische und versklavte Menschen zeigten ihr Pflanzen und Tiere. Ihre Namen fehlen oft im Buch.",
+   "why": "Merian hat viel selbst beobachtet und gemalt. Aber einheimische und versklavte Menschen zeigten ihr Pflanzen und Tiere. Ihre Namen schrieb sie nicht ins Buch.",
    "hints": [
     "Lies noch einmal, wie Merian in Suriname gearbeitet hat."
    ],
@@ -2028,12 +2028,14 @@
   "claim": "person-marie_curie:stimmt-1",
   "wort": "erfunden",
   "woerter": [
-   "Marie Curie",
+   "1898",
+   "Pierre",
    "Radium",
    "erfunden"
   ],
   "ersatz": "entdeckt",
-  "aufloesung": "Radium steckte schon im Gestein. Marie Curie hat es dort entdeckt, nicht erfunden. Erfinden kann man nur etwas, das es vorher nicht gab."
+  "aufloesung": "Radium steckte schon im Gestein. Marie Curie hat es dort entdeckt, nicht erfunden. Erfinden kann man nur etwas, das es vorher nicht gab.",
+  "claimText": "Marie Curie hat 1898 mit Pierre das Radium erfunden."
  },
  "ordnen": {
   "karte": "history-stone_tools",
@@ -2048,7 +2050,7 @@
   ],
   "hints": [
    "Vergleiche: Millionen Jahre sind viel länger her als tausende Jahre.",
-   "Lies bei „Stimmt das?“ nach: Was gab es zuerst, Werkzeuge oder Feuer?"
+   "Eine Stelle auf der Karte vergleicht zwei dieser Teile direkt. Such sie."
   ],
   "aufloesung": "Zuerst starben die Dinosaurier aus, vor etwa 66 Millionen Jahren. Viel später, vor etwa 3,3 Millionen Jahren, entstanden die ersten Steinwerkzeuge. Feuer nutzten frühe Verwandte des Menschen erst danach. Die ältesten sicheren Spuren sind etwa 1 Million Jahre alt. Die Pyramiden sind erst rund 4.500 Jahre alt."
  },

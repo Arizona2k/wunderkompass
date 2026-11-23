@@ -34,20 +34,36 @@ test('Hauptfragen bleiben wörtlich', () => {
   }
 });
 
-test('Zusatzfragen: jede gespeicherte Antwort ist noch lesbar', () => {
+// Bewusst ersetzte falsche Antworten (Teilschritt 3, Befund 5 und 6 des stufen-pruefer: Fallen, die sich wiederholten oder zu
+// weit daneben lagen). Die Lösung bleibt; wer eine ersetzte Antwort gespeichert hat, sieht auf der Karte „Hier gibt es neue
+// Antworten. Früher hast du … gewählt“ und wählt neu (rate-mal.tsx, fruehereAuswahl). Nur falsche Antworten, nur mit Grund.
+const ERSETZT = new Set([
+  'person-marie_curie:rate-2 | Ganz allein, ohne jede Hilfe',
+  'person-marie_curie:rate-2 | Mit dem Erfinder Gutenberg',
+  'building-eiffel-tower:rate-2 | Damit er nachts leuchtet',
+]);
+test('Zusatzfragen: jede gespeicherte Antwort ist noch lesbar oder bewusst ersetzt', () => {
   for (const alt of fixture.zusatzfragen) {
     const heute = zusatz.get(alt.id);
     assert.ok(heute, 'Zusatzfrage fehlt: ' + alt.id);
-    assert.deepEqual(fehlt(alt, heute, alt.id), [], alt.id);
+    const fehler = fehlt(alt, heute, alt.id).filter(f => !ERSETZT.has(alt.id + ' | ' + f.replace('Antwort fehlt: ', '')));
+    assert.deepEqual(fehler, [], alt.id);
+  }
+  for (const eintrag of ERSETZT) {
+    const [id, antwort] = eintrag.split(' | ');
+    const alt = fixture.zusatzfragen.find(q => q.id === id);
+    assert.notEqual(alt.answers[alt.correct], antwort, 'nur falsche Antworten dürfen ersetzt werden: ' + eintrag);
   }
 });
 
-test('Challenge-Fragen: jede gespeicherte Antwort ist auf der Karte und in der Challenge noch lesbar', () => {
+// Challenge-Fragen standen vor Teilschritt 3 nie auf der Karte; gespeichert sind sie nur in Runden der Wissens-Challenge.
+// Wurde eine umformuliert, kennt die Liste früherer Fassungen ihre ganze alte Frage: Die alte Runde zeigt sie wie damals
+// (nächster Test). Ganz neue Fragen bekamen neue IDs; die alte ID ruht (bleibt in den Daten, erscheint nicht mehr).
+test('Challenge-Fragen: jede ID bleibt; eine Frage ist gleich, umformuliert mit alter Fassung oder ruht', () => {
   for (const alt of fixture.challenges) {
     const heute = challenges.get(alt.id);
     assert.ok(heute, 'Challenge-Frage fehlt: ' + alt.id);
-    assert.deepEqual(fehlt(alt, heute, alt.id), [], alt.id + ' auf der Karte');
-    assert.deepEqual(fehlt(alt, heute, alt.topic), [], alt.id + ' in der Challenge');
+    if (heute.ruht) assert.deepEqual([heute.prompt, heute.answers, heute.correct], [alt.prompt, alt.answers, alt.correct], alt.id + ' ruht unverändert');
   }
 });
 

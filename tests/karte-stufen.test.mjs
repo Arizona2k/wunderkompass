@@ -121,3 +121,10 @@ test('stufenHinweis: sagt ehrlich, wenn es die gewählte Stufe auf der Karte noc
   assert.equal(stufenHinweis(nurHaupt, 'profi'), 'Profi gibt es hier noch nicht. Du spielst Entdecker.');
   assert.equal(stufenHinweis(nurHaupt, 'experte'), 'Experte gibt es hier noch nicht. Du spielst Entdecker.');
 });
+
+test('ruhende Fragen erscheinen nicht mehr auf der Karte, ihre ID bleibt in den Daten', () => {
+  const mitRuhend = {...karte, moreQuestions: [...karte.moreQuestions, {id: 'x:rate-9', ruht: true, prompt: 'Alt?', answers: ['A', 'B', 'C'], correct: 0, why: 'Alt.', hint: 'Alt.'}], challenges: [...karte.challenges, {id: 'x-9', ruht: true, difficulty: 'medium', prompt: 'Alt?', answers: ['A', 'B', 'C'], correct: 0, why: 'Alt.'}]};
+  const ids = kartenFragen(mitRuhend, bank).map(f => f.id);
+  assert.equal(ids.includes('x:rate-9'), false);
+  assert.equal(ids.includes('x-9'), false);
+});

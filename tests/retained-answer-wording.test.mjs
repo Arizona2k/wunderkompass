@@ -109,3 +109,17 @@ test('frühere Antwortsätze: jede bekannte alte Fassung bleibt lesbar, Fremdes 
  assert.equal(retainedChallengeChoiceVariant({...frage,id:'t-2'},['C','B','A'],reihen),null,'andere ID');
  assert.equal(retainedChallengeChoiceVariant({...frage,answers:['A','B','C','E']},['C','B','A'],reihen),null,'ungeprüfte heutige Fassung');
 });
+test('frühere Fassung mit ganzer alter Frage: eine alte Runde zeigt Frage, Antworten, Lösung und Erklärung von damals',async()=>{
+ const {retainedChallengeChoiceVariant}=await import('../app/retained-answer-wording.mjs');
+ const frage={id:'t-2',topic:'t',difficulty:'medium',prompt:'Neue Frage?',correct:2,why:'Neu.',answers:['N1','N2','N3','N4']};
+ const reihen=[{id:'t-2',topic:'t',difficulty:'medium',currentAnswers:['N1','N2','N3','N4'],beforePrompt:'Alte Frage?',beforeWhy:'Alt.',beforeCorrect:0,beforeAnswers:['A1','A2','A3'],beforeWrongReasons:null}];
+ assert.deepEqual(retainedChallengeChoiceVariant(frage,['A3','A1','A2'],reihen),{answers:['A1','A2','A3'],prompt:'Alte Frage?',why:'Alt.',correct:0,retainedAnswerOrder:true,retainedWrongReasons:null});
+ assert.equal(retainedChallengeChoiceVariant({...frage,answers:['N1','N2','N3','X']},['A3','A1','A2'],reihen),null,'nur für die geprüfte heutige Fassung');
+ assert.equal(retainedChallengeChoiceVariant(frage,['A3','A1','Z'],reihen),null,'fremdes Wort');
+});
+test('neue Challenge-Runden nehmen keine ruhenden Fragen',async()=>{
+ const {createChallenge,CHALLENGE_BANK}=await import('../app/knowledge-challenge.ts');
+ const ruhend=new Set(CHALLENGE_BANK.filter(q=>q.ruht).map(q=>q.id));
+ for(const d of ['easy','medium','hard'])for(let i=0;i<20;i++)assert.equal(createChallenge(d,[],()=>((i*7919)%101)/101).ids.some(id=>ruhend.has(id)),false);
+ assert.ok(ruhend.size>0,'Testvoraussetzung: es gibt ruhende Fragen');
+});
