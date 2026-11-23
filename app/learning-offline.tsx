@@ -68,7 +68,9 @@ export default function LearningOffline({ onBeforeReload }: { onBeforeReload: ()
       if (!live || !registration || !registration.active?.scriptURL.endsWith('/learning-worker.js')) return;
       const prepared = await isPrepared(registration.active);
       if (live) setReady(prepared);
-      observe(registration); void registration.update().catch(() => {});
+      // Nach einer neuen Version nur mit Netz fragen. Ohne Netz scheitert die Anfrage ohnehin, und WebKit meldet sie
+      // dann als Ladefehler in der Konsole (Offline-Kaltstart, CI-Vollprüfung WebKit).
+      observe(registration); if (navigator.onLine) void registration.update().catch(() => {});
     }).catch(() => {});
     const activeTrackers=trackers.current;
     return () => { live = false; for(const stop of activeTrackers)stop();window.removeEventListener('beforeinstallprompt', prompt); navigator.serviceWorker.removeEventListener('controllerchange', changed); navigator.serviceWorker.removeEventListener('message', versionQuery); };
