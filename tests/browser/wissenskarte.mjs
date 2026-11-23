@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
 import {BROWSER_ERROR_FIELDS, browserErrorArrays, browserErrorsSettled, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
-import {angezeigteFrage, antwortKnopf, antworteRichtig, ersteFrageAufStufe, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, stufeWaehlen, zeigtFrage, zusatzfragen, zusatzfragenAufStufe} from './karte-hilfen.mjs';
+import {angezeigteFrage, antwortKnopf, antworteRichtig, ersteFrageAufStufe, falscheAntworten, ganzEinfach, hauptfrage, karteDa, mehrErfahren, rateMal, richtigeAntwort, richtigerKnopf, stufeWaehlen, zeigtFrage, zusatzfragen, zusatzfragenAufStufe} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import {karteStufen} from './karte-stufen.mjs';
 import photos from '../../app/world-photos.json' with {type: 'json'};
@@ -61,13 +61,14 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, lesbarFuerKinder);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegZurWelt);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegNachDazuPasst);
+    await mitKarte(ctx, view, MOND.id, mehrErfahrenNachRouteOffen);
     await mitAdresse(ctx, view, 'world/route/' + ROUTE.id, eingebetteteKarte);
     await mitAdresse(ctx, view, 'world/route/' + SAFARI.id, pilotStation, passVorgeben(passMitFalscherHauptfrage()));
     ctx.report.checks.push(`Wissenskarte ${view.width}: Besuch im Pass, richtige Antwort schreibt „gelernt“ und Wiederholung, `
       + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage (auch die Zusatzfrage nach „Noch eine Frage“) – jeweils auch nach Neuladen; '
       + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt nach beantworteter Frage zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
       + 'Aufklapper mit Zeichen, Tippflächen ab 48 px, Schrift ab 14 px, Buchstaben A/B/C mit Kontrast AA, „Größere Schrift“ vergrößert Frage und Einleitung; '
-      + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei, '
+      + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; nach der Lernroute aus „Mehr erfahren“ und Zurück ist der Bereich offen, der Fokus am Routen-Knopf; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei, '
       + 'auch an der Pilot-Station über eine Zusatzfrage; '
       + 'Häppchen mit Überschrift und „Für Große“ (zu, mit dem ersten Absatz); „Stimmt das?“ löst auf, speichert ohne „gelernt“, bleibt nach Neuladen; '
       + 'nach dem Tippen bleiben die übrigen Antworten unverblasst (Kontrast AA); Zeichnung als Nachbarkachel ohne Legende, so hoch wie eine Fotokachel');
@@ -516,6 +517,25 @@ async function fotosyntheseZeichnungGestaltet(page) {
   const rollen = page.locator('.photosynthesis-concept-roles');
   await rollen.waitFor(WARTEN);
   assert.equal(await rollen.evaluate(el => getComputedStyle(el).display), 'grid', 'die Legende der Zeichnung ist gestaltet (Stil der Zeichnung geladen)');
+}
+
+// „Mehr erfahren“ offen, über „Auf einer Lernroute“ in die Route und zurück: Der Bereich ist wieder offen, der Fokus liegt am
+// Routen-Knopf. Die Seite stellt beides erst im nächsten Bild wieder her (scheduleRouteRestore), darum zuerst auf den Fokus warten.
+// Bisher prüfte das nur `core` (Vollprüfung, nur Chromium); hier läuft es bei jedem PR, auch in Firefox und WebKit (später Fund
+// Teil A, Bericht 2026-11-23-teil-a-technik-pruefung-core-fund.md). Per Tastatur geöffnet, wie in journeys.mjs.
+async function mehrErfahrenNachRouteOffen(page) {
+  const schluessel = `world-article-route-${MOND.id}-moon-to-sea`;
+  const knopf = (await mehrErfahren(page)).locator(`[data-route-focus="${schluessel}"]`);
+  await knopf.scrollIntoViewIfNeeded();
+  await knopf.focus();
+  await page.keyboard.press('Enter');
+  await page.locator('.world-route-stations').waitFor(WARTEN);
+  assert.equal(new URL(page.url()).hash, '#world/route/moon-to-sea');
+  await page.goBack();
+  await page.waitForFunction(t => document.getElementById('world-topic-title')?.getAttribute('aria-label') === t, MOND.title, WARTEN);
+  await page.waitForFunction(k => document.activeElement?.dataset?.routeFocus === k, schluessel, WARTEN)
+    .catch(() => assert.fail('nach Zurück hat der Routen-Knopf den Fokus: ' + schluessel));
+  assert.equal(await page.locator('details.wissenskarte-mehr').evaluate(el => el.open), true, '„Mehr erfahren“ ist nach Zurück wieder offen');
 }
 
 // Direkt geöffnet (frischer Kontext, kein Weg durch die App): Der Rückweg führt zur Welt der Karte.
