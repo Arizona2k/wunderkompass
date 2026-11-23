@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
 import {browserErrorArrays, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
+import {angezeigteFrage, antwortKnopf, antworteRichtig, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, zeigtFrage, zusatzfragen} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import photos from '../../app/world-photos.json' with {type: 'json'};
 import verbindungen from '../../app/world-connections.json' with {type: 'json'};
@@ -27,6 +28,8 @@ const HANDY = {width: 390, height: 844, touch: true};
 const BREIT = {width: 1440, height: 900};
 const SCHMAL = {width: 320, height: 700, touch: true};
 const ROUTE = routen[0];
+// Route mit einer Pilot-Karte als erster Station (Elefant, mit Zusatzfragen).
+const SAFARI = routen.find(r => r.id === 'safari');
 const WARTEN = {timeout: 10000};
 
 // Erklärte Verbindungen einer Karte in der Reihenfolge der Daten (wie connectionsFor in der App).
@@ -56,11 +59,13 @@ export async function wissenskarte(ctx) {
     await mitKarte(ctx, view, ELEFANT.id, rueckwegZurWelt);
     await mitKarte(ctx, view, ELEFANT.id, rueckwegNachDazuPasst);
     await mitAdresse(ctx, view, 'world/route/' + ROUTE.id, eingebetteteKarte);
+    await mitAdresse(ctx, view, 'world/route/' + SAFARI.id, pilotStation, passVorgeben(passMitFalscherHauptfrage()));
     ctx.report.checks.push(`Wissenskarte ${view.width}: Besuch im Pass, richtige Antwort schreibt „gelernt“ und Wiederholung, `
-      + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage – jeweils auch nach Neuladen; '
-      + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
+      + 'falsche Antwort ohne Erklärung, Merken an und aus, heikle Karte fragt vorher, Vorlesen liest Kopf und Frage (auch die Zusatzfrage nach „Noch eine Frage“) – jeweils auch nach Neuladen; '
+      + 'Dazu passt mit höchstens drei Kacheln ohne related, Zurück führt nach beantworteter Frage zur Kachel, Ausprobieren lädt erst beim Öffnen, Bildnachweise vollständig; '
       + 'Aufklapper mit Zeichen, Tippflächen ab 48 px, Schrift ab 14 px, Buchstaben A/B/C mit Kontrast AA, „Größere Schrift“ vergrößert Frage und Einleitung; '
-      + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei; '
+      + 'Rückweg direkt zur Welt und „Zurück“ nach Dazu passt; Routen-Station ohne Rückweg, richtige Antwort schaltet die nächste Station frei, '
+      + 'auch an der Pilot-Station über eine Zusatzfrage; '
       + 'Häppchen mit Überschrift und „Für Große“ (zu, mit dem ersten Absatz); „Stimmt das?“ löst auf, speichert ohne „gelernt“, bleibt nach Neuladen; '
       + 'nach dem Tippen bleiben die übrigen Antworten unverblasst (Kontrast AA); Zeichnung als Nachbarkachel ohne Legende, so hoch wie eine Fotokachel');
   }
@@ -120,8 +125,6 @@ async function mitAdresse(ctx, {width, height, touch = false}, adresse, fn, init
 }
 
 const passLesen = page => page.evaluate(() => JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
-const rateMal = page => page.locator('section.world-mini-question');
-const antwortKnopf = (page, text) => rateMal(page).locator('.quiz-answer').filter({has: page.getByText(text, {exact: true})});
 const tippe = (ziel, touch) => (touch ? ziel.tap() : ziel.click());
 
 async function karteOeffnenSchreibtBesuch(page, {neuLaden}) {
@@ -132,35 +135,37 @@ async function karteOeffnenSchreibtBesuch(page, {neuLaden}) {
 }
 
 async function richtigeAntwortSchreibtGelernt(page, {neuLaden, touch}) {
-  assert.equal(EINE_FRAGE.moreQuestions, undefined, 'die Prüfkarte hat nur ihre Hauptfrage');
-  const q = EINE_FRAGE.question;
+  assert.equal(zusatzfragen(EINE_FRAGE).length, 0, 'die Prüfkarte hat nur ihre Hauptfrage');
   await rateMal(page).getByRole('heading', {name: 'Rate mal!', exact: true}).waitFor(WARTEN);
-  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
+  const {frage, knopf} = await richtigerKnopf(page, EINE_FRAGE);
+  await tippe(knopf, touch);
   await rateMal(page).getByText('Passende Antwort gewählt.', {exact: true}).waitFor(WARTEN);
-  await rateMal(page).getByText(q.why, {exact: true}).waitFor(WARTEN);
+  await rateMal(page).getByText(frage.question.why, {exact: true}).waitFor(WARTEN);
   await page.locator('.wissenskarte-gelernt').waitFor(WARTEN);
   const pass = await passLesen(page);
   assert.ok(pass.discoveries.includes('learned:' + EINE_FRAGE.id), 'richtige Antwort schreibt learned');
-  assert.equal(pass.review['world-question:' + EINE_FRAGE.id]?.correct, true, 'richtige Antwort steht in der Wiederholung');
+  assert.equal(pass.review[frage.reviewId]?.correct, true, 'richtige Antwort steht in der Wiederholung');
   await neuLaden();
+  await zeigtFrage(page, EINE_FRAGE, frage);
   const knoepfe = rateMal(page).locator('.quiz-answer');
-  assert.equal(await knoepfe.count(), q.answers.length);
+  assert.equal(await knoepfe.count(), frage.question.answers.length);
   for (const knopf of await knoepfe.all()) assert.equal(await knopf.isDisabled(), true, 'nach Neuladen bleiben die Antworten gesperrt');
   assert.ok((await passLesen(page)).discoveries.includes('learned:' + EINE_FRAGE.id), 'learned bleibt nach Neuladen');
   await page.locator('.wissenskarte-gelernt').waitFor(WARTEN);
 }
 
 async function falscheAntwortOhneErklaerung(page, {neuLaden, touch}) {
-  const q = EINE_FRAGE.question;
-  const falsch = q.answers.find((_, i) => i !== q.correct);
+  const frage = await angezeigteFrage(page, EINE_FRAGE);
+  const [falsch] = falscheAntworten(frage);
   await tippe(antwortKnopf(page, falsch), touch);
   await rateMal(page).getByText('Überlege noch einmal.', {exact: true}).waitFor(WARTEN);
-  assert.equal(await rateMal(page).getByText(q.why, {exact: true}).count(), 0, 'keine Erklärung bei falscher Antwort');
+  assert.equal(await rateMal(page).getByText(frage.question.why, {exact: true}).count(), 0, 'keine Erklärung bei falscher Antwort');
   assert.ok(await rateMal(page).locator('.world-game-hint').count() > 0, 'der Hinweis bleibt erreichbar');
   assert.equal((await passLesen(page)).discoveries.includes('learned:' + EINE_FRAGE.id), false, 'falsche Antwort schreibt kein learned');
   await neuLaden();
+  await zeigtFrage(page, EINE_FRAGE, frage);
   await rateMal(page).getByText('Überlege noch einmal.', {exact: true}).waitFor(WARTEN);
-  assert.equal(await rateMal(page).getByText(q.why, {exact: true}).count(), 0, 'auch nach Neuladen keine Erklärung');
+  assert.equal(await rateMal(page).getByText(frage.question.why, {exact: true}).count(), 0, 'auch nach Neuladen keine Erklärung');
   assert.equal((await passLesen(page)).discoveries.includes('learned:' + EINE_FRAGE.id), false, 'auch nach Neuladen kein learned');
 }
 
@@ -202,12 +207,25 @@ function vorleseAttrappe() {
   }});
 }
 
+// Vorlesen liest die Frage, die „Rate mal!“ gerade zeigt: zuerst die angezeigte, nach „Noch eine Frage“ die nächste.
 async function vorlesenLiestKopfUndFrage(page, {touch}) {
-  const q = ELEFANT.question;
-  await tippe(page.locator('.wissenskarte-kopf').getByRole('button', {name: 'Vorlesen', exact: true}), touch);
-  await page.waitForFunction(() => window.__vorgelesen.length > 0, null, WARTEN);
-  const text = (await page.evaluate(() => window.__vorgelesen)).at(-1);
-  for (const teil of [ELEFANT.title, ELEFANT.intro, q.prompt, ...q.answers]) assert.ok(text.includes(teil), 'Vorlesen enthält: ' + teil);
+  const vorlesen = async () => {
+    const vorher = await page.evaluate(() => window.__vorgelesen.length);
+    await tippe(page.locator('.wissenskarte-kopf').getByRole('button', {name: 'Vorlesen', exact: true}), touch);
+    await page.waitForFunction(n => window.__vorgelesen.length > n, vorher, WARTEN);
+    return (await page.evaluate(() => window.__vorgelesen)).at(-1);
+  };
+  const erste = await angezeigteFrage(page, ELEFANT);
+  const text = await vorlesen();
+  for (const teil of [ELEFANT.title, ELEFANT.intro, erste.question.prompt, ...erste.question.answers]) assert.ok(text.includes(teil), 'Vorlesen enthält: ' + teil);
+  await antworteRichtig(page, ELEFANT, {tippen: touch});
+  await tippe(rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}), touch);
+  await page.waitForFunction(id => document.querySelector('section.rate-mal')?.getAttribute('aria-labelledby') !== 'rate-mal-' + id, erste.id, WARTEN);
+  const naechste = await angezeigteFrage(page, ELEFANT);
+  assert.notEqual(naechste.id, erste.id, '„Noch eine Frage“ zeigt eine andere Frage');
+  const neu = await vorlesen();
+  for (const teil of [ELEFANT.title, naechste.question.prompt, ...naechste.question.answers]) assert.ok(neu.includes(teil), 'Vorlesen nach „Noch eine Frage“ enthält: ' + teil);
+  assert.equal(neu.includes(erste.question.prompt), false, 'Vorlesen liest nicht mehr die vorige Frage');
 }
 
 const dazuPasst = page => page.locator('section.dazu-passt');
@@ -235,7 +253,11 @@ async function dazuPasstHoechstensDrei(page) {
 
 const kartenTitel = page => page.evaluate(() => document.getElementById('world-topic-title')?.getAttribute('aria-label'));
 
+// Erst die Frage richtig beantworten, dann über die Kachel zur Nachbarkarte und zurück: Der Fokus liegt wieder auf
+// der Kachel (nicht bei „Rate mal!“, das beim Zurückkommen seine nächste Frage wählt), „gelernt“ bleibt. Ohne Antwort prüfen das
+// rueckwegNachDazuPasst und dazuPasstZurueckOhneFokus.
 async function dazuPasstZurueck(page, {touch}) {
+  await antworteRichtig(page, ELEFANT, {tippen: touch});
   const erste = verbindungenVon(ELEFANT.id)[0];
   const schluessel = `world-connection-${ELEFANT.id}-${erste.topic}`;
   const kachel = dazuPasst(page).locator(`[data-route-focus="${schluessel}"]`);
@@ -251,6 +273,8 @@ async function dazuPasstZurueck(page, {touch}) {
     return {oben: r.top, unten: r.bottom, hoehe: innerHeight};
   });
   assert.ok(lage.oben >= 0 && lage.unten <= lage.hoehe, `die Kachel liegt im Bild (${JSON.stringify(lage)})`);
+  assert.ok((await passLesen(page)).discoveries.includes('learned:' + ELEFANT.id), '„gelernt“ bleibt nach dem Rückweg');
+  await angezeigteFrage(page, ELEFANT);
 }
 
 // Safari fokussiert Knöpfe beim Antippen nicht. Ein Klick per Skript tut das in keinem Browser; so prüft der Fall
@@ -386,8 +410,8 @@ async function lesbarFuerKinder(page) {
 // Nach dem Tippen bleiben die übrigen Antworten gut lesbar: Kinder lesen sie zum Vergleichen noch einmal.
 // Vorher blasste die alte Regel button:disabled (Deckkraft 0,65) sie auf etwa 3,2:1 ab (Design-Prüfung 22.11.2026).
 async function nachDemTippenLesbar(page, {touch}) {
-  const q = ELEFANT.question;
-  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
+  const {frage, knopf} = await richtigerKnopf(page, ELEFANT);
+  await tippe(knopf, touch);
   await rateMal(page).getByText('Passende Antwort gewählt.', {exact: true}).waitFor(WARTEN);
   const behauptung = ELEFANT.claims[0];
   const bereich = stimmtDasBereich(page);
@@ -397,7 +421,7 @@ async function nachDemTippenLesbar(page, {touch}) {
     ...await rateMal(page).locator('.quiz-answer:not(.is-correct)').all(),
     bereich.getByRole('button', {name: behauptung.isTrue ? 'Stimmt nicht' : 'Stimmt', exact: true}),
   ];
-  assert.equal(uebrige.length, q.answers.length, 'alle nicht gewählten Antworten von „Rate mal!“ und der andere Knopf von „Stimmt das?“');
+  assert.equal(uebrige.length, frage.question.answers.length, 'alle nicht gewählten Antworten von „Rate mal!“ und der andere Knopf von „Stimmt das?“');
   for (const knopf of uebrige) {
     const name = (await knopf.innerText()).trim().replace(/\s+/g, ' ');
     assert.equal(await knopf.isDisabled(), true, `„${name}“ ist nach dem Tippen gesperrt`);
@@ -523,10 +547,46 @@ async function eingebetteteKarte(page, {neuLaden, touch}) {
   const weiter = page.locator('.route-next .primary-button');
   assert.equal(await zweite.isDisabled(), true, 'vor der richtigen Antwort ist die zweite Station gesperrt');
   assert.equal(await weiter.isDisabled(), true, 'vor der richtigen Antwort geht es nicht weiter');
-  const q = erste.question;
-  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
+  const {knopf} = await richtigerKnopf(page, erste);
+  await tippe(knopf, touch);
   await rateMal(page).getByText('Passende Antwort gewählt.', {exact: true}).waitFor(WARTEN);
   assert.ok((await passLesen(page)).discoveries.includes('learned:' + erste.id), 'richtige Antwort schreibt learned');
+  assert.equal(await zweite.isDisabled(), false, 'die zweite Station ist frei');
+  assert.equal(await weiter.isDisabled(), false, 'es geht weiter');
+  await neuLaden();
+  assert.equal(await zweite.isDisabled(), false, 'die zweite Station bleibt nach Neuladen frei');
+}
+
+// Ausgedachter Pass wie aus älteren Ständen: Die Hauptfrage der Elefantenkarte steht in der Wiederholung als falsch,
+// eine Antwort auf der Karte ist nicht gespeichert, „gelernt“ fehlt.
+function passMitFalscherHauptfrage() {
+  const progress = emptyProgress();
+  progress.review = {[hauptfrage(ELEFANT).reviewId]: {correct: false, seen: 1, due: '2000-01-01'}};
+  return createSave(progress);
+}
+
+// Startskript, das einen Pass nur beim ersten Laden ablegt (nach dem Neuladen gilt, was die App gespeichert hat).
+const passVorgeben = save => `if (!localStorage.getItem(${JSON.stringify(SAVE_KEY)})) localStorage.setItem(${JSON.stringify(SAVE_KEY)}, ${JSON.stringify(JSON.stringify(save))});`;
+
+// Pilot-Karte als Station (Route „safari“, Elefant) mit passMitFalscherHauptfrage: Die Station zeigt eine Zusatzfrage
+// (ersteFrage: eine neue vor der fälligen). Auch deren richtige Antwort schreibt „gelernt“ und schaltet die nächste Station frei;
+// die Hauptfrage bleibt in der Wiederholung falsch.
+async function pilotStation(page, {neuLaden, touch}) {
+  assert.equal(SAFARI.topics[0], ELEFANT.id, 'Testvoraussetzung: die Route safari beginnt mit der Elefantenkarte');
+  assert.equal(await page.locator('#world-topic-title').getAttribute('aria-label'), ELEFANT.title);
+  const zweite = page.locator('details.world-route-stations .route-station-list button').nth(1);
+  const weiter = page.locator('.route-next .primary-button');
+  assert.equal(await zweite.isDisabled(), true, 'vor der richtigen Antwort ist die zweite Station gesperrt');
+  assert.equal(await weiter.isDisabled(), true, 'vor der richtigen Antwort geht es nicht weiter');
+  const haupt = hauptfrage(ELEFANT);
+  const {frage, knopf} = await richtigerKnopf(page, ELEFANT);
+  assert.notEqual(frage.id, haupt.id, 'die Station zeigt eine Zusatzfrage');
+  await tippe(knopf, touch);
+  await rateMal(page).getByText(frage.question.why, {exact: true}).waitFor(WARTEN);
+  const pass = await passLesen(page);
+  assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), 'die richtige Zusatzfrage schreibt learned');
+  assert.equal(pass.review[frage.reviewId]?.correct, true, 'die Zusatzfrage steht in der Wiederholung');
+  assert.equal(pass.review[haupt.reviewId]?.correct, false, 'die Hauptfrage bleibt in der Wiederholung falsch');
   assert.equal(await zweite.isDisabled(), false, 'die zweite Station ist frei');
   assert.equal(await weiter.isDisabled(), false, 'es geht weiter');
   await neuLaden();
@@ -560,17 +620,12 @@ async function kapitelUndFuerGrosse(page) {
 // „Ganz einfach“ (learning.starter) bei Karten mit Häppchen: Die Häppchen sind die einfache Fassung, darum steht der
 // Satz nicht in „Kurz erklärt“. Bei Personen ist er die Anleitung zum Versuch; er steht oben in „Ausprobieren“ und ist
 // sofort nach dem Öffnen da, ohne auf den Baustein zu warten (große Prüfung, Aufgabe 13: vorher fehlte er ganz).
-const einstiegImAusprobieren = t => async (page, {touch}) => {
+// Ort, „erst nach dem Öffnen“ und „genau einmal“ prüft ganzEinfach; `sofort` verlangt den Satz binnen 2 Sekunden.
+const einstiegImAusprobieren = t => async page => {
   const kurz = kurzErklaert(page);
   await kurz.getByRole('heading', {name: t.chapters[0].question, exact: true}).waitFor(WARTEN);
   assert.equal(await kurz.getByText('Ganz einfach', {exact: false}).count(), 0, t.id + ': kein „Ganz einfach“ in „Kurz erklärt“');
-  const ausprobieren = page.locator('details.wissenskarte-ausprobieren');
-  await ausprobieren.waitFor(WARTEN);
-  const satz = ausprobieren.getByText(t.learning.starter, {exact: true});
-  assert.equal(await satz.isVisible(), false, t.id + ': der Satz ist erst nach dem Öffnen zu sehen');
-  await tippe(ausprobieren.locator('summary'), touch);
-  await satz.waitFor({state: 'visible', timeout: 2000});
-  assert.equal(await page.getByText(t.learning.starter, {exact: true}).count(), 1, t.id + ': der Satz steht genau einmal auf der Karte');
+  await ganzEinfach(page.locator('.wissenskarte'), t, {sofort: true});
 };
 
 async function stimmtDas(page, {neuLaden, touch}) {
@@ -608,14 +663,15 @@ async function stimmtDas(page, {neuLaden, touch}) {
 // Pilot-Karte mit falscher Hauptantwort (Schlussprüfung Teil B, W1): Wer zurückkommt, denkt an derselben Frage weiter,
 // statt eine neue Zusatzfrage zu bekommen – zurück von der Nachbarkarte und über das Wissensbuch („Noch einmal nachdenken“).
 async function falscheHauptantwortBleibtOffen(page, {neuLaden, touch}) {
-  const q = ELEFANT.question;
-  const falsch = q.answers.find((_, i) => i !== q.correct);
+  const haupt = await zeigtFrage(page, ELEFANT, hauptfrage(ELEFANT));
+  const [falsch] = falscheAntworten(haupt);
+  const richtig = richtigeAntwort(haupt);
   const titelIst = t => page.waitForFunction(x => document.getElementById('world-topic-title')?.getAttribute('aria-label') === x, t, WARTEN);
   const hauptfrageOffen = async wo => {
-    await rateMal(page).locator('.rate-mal-frage').getByText(q.prompt, {exact: true}).waitFor(WARTEN);
+    await zeigtFrage(page, ELEFANT, haupt);
     await rateMal(page).getByText('Überlege noch einmal.', {exact: true}).waitFor(WARTEN);
-    assert.equal(await rateMal(page).getByText(q.why, {exact: true}).count(), 0, wo + ': keine Lösung');
-    assert.equal(await antwortKnopf(page, q.answers[q.correct]).isDisabled(), false, wo + ': neu wählen geht');
+    assert.equal(await rateMal(page).getByText(haupt.question.why, {exact: true}).count(), 0, wo + ': keine Lösung');
+    assert.equal(await antwortKnopf(page, richtig).isDisabled(), false, wo + ': neu wählen geht');
   };
   await tippe(antwortKnopf(page, falsch), touch);
   await hauptfrageOffen('nach der falschen Antwort');
@@ -637,31 +693,32 @@ async function falscheHauptantwortBleibtOffen(page, {neuLaden, touch}) {
   await titelIst(ELEFANT.title);
   await hauptfrageOffen('über das Wissensbuch');
   let pass = await passLesen(page);
-  assert.equal(pass.gameSessions['topic:' + ELEFANT.id]?.topicAnswer, falsch, 'die falsche Antwort steht im Pass');
-  assert.equal(pass.review['world-question:' + ELEFANT.id]?.correct, false, 'die Wiederholung kennt die falsche Antwort');
-  for (const z of ELEFANT.moreQuestions) assert.equal(pass.review['world-question:' + z.id], undefined, 'keine Zusatzfrage wurde gestellt: ' + z.id);
+  assert.equal(pass.gameSessions['topic:' + ELEFANT.id]?.[haupt.answerKey], falsch, 'die falsche Antwort steht im Pass');
+  assert.equal(pass.review[haupt.reviewId]?.correct, false, 'die Wiederholung kennt die falsche Antwort');
+  for (const z of zusatzfragen(ELEFANT)) assert.equal(pass.review[z.reviewId], undefined, 'keine Zusatzfrage wurde gestellt: ' + z.id);
   // Jetzt richtig: Lösung und „gelernt“; die Wiederholung behält die erste Antwort. Nach dem Neuladen die erste Zusatzfrage.
-  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
-  await rateMal(page).getByText(q.why, {exact: true}).waitFor(WARTEN);
+  await tippe(antwortKnopf(page, richtig), touch);
+  await rateMal(page).getByText(haupt.question.why, {exact: true}).waitFor(WARTEN);
   pass = await passLesen(page);
   assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), 'richtige Antwort schreibt „gelernt“');
-  assert.equal(pass.review['world-question:' + ELEFANT.id]?.correct, false, 'die Wiederholung zählt nur die erste Antwort');
+  assert.equal(pass.review[haupt.reviewId]?.correct, false, 'die Wiederholung zählt nur die erste Antwort');
   await neuLaden();
-  await rateMal(page).locator('.rate-mal-frage').getByText(ELEFANT.moreQuestions[0].prompt, {exact: true}).waitFor(WARTEN);
+  await zeigtFrage(page, ELEFANT, zusatzfragen(ELEFANT)[0]);
 }
 
 function passMitHauptfrage() {
+  const haupt = hauptfrage(ELEFANT);
   const progress = emptyProgress();
   progress.discoveries = ['topic:' + ELEFANT.id];
-  progress.review = {['world-question:' + ELEFANT.id]: {correct: true, seen: 1, due: '2099-01-01'}};
-  progress.gameSessions = {['topic:' + ELEFANT.id]: {topicAnswer: ELEFANT.question.answers[ELEFANT.question.correct]}};
+  progress.review = {[haupt.reviewId]: {correct: true, seen: 1, due: '2099-01-01'}};
+  progress.gameSessions = {['topic:' + ELEFANT.id]: {[haupt.answerKey]: richtigeAntwort(haupt)}};
   return createSave(progress);
 }
 
 async function zusatzfrageImPass(ctx) {
-  const [erste, zweite] = ELEFANT.moreQuestions;
+  const [erste, zweite] = zusatzfragen(ELEFANT);
   const behauptung = ELEFANT.claims[0];
-  const reviewId = 'world-question:' + erste.id;
+  const reviewId = erste.reviewId;
   let spielstandVorher;
   const optionen = {viewport: {width: HANDY.width, height: HANDY.height}, reducedMotion: 'reduce', hasTouch: true, ...(ctx.engine === 'chromium' ? {isMobile: true} : {})};
   const datei = path.join(ctx.shots, 'ausgedachter-pass-zusatzfrage.json');
@@ -673,13 +730,13 @@ async function zusatzfrageImPass(ctx) {
     const fertig = ladeanfragen(page);
     await page.goto(new URL('#world/topic/' + ELEFANT.id, ctx.base).href);
     await ready(page);
-    await rateMal(page).locator('.rate-mal-frage').getByText(erste.prompt, {exact: true}).waitFor(WARTEN);
-    await antwortKnopf(page, erste.answers[erste.correct]).tap();
+    await zeigtFrage(page, ELEFANT, erste);
+    await antwortKnopf(page, richtigeAntwort(erste)).tap();
     await rateMal(page).getByText('Passende Antwort gewählt.', {exact: true}).waitFor(WARTEN);
-    await rateMal(page).getByText(erste.why, {exact: true}).waitFor(WARTEN);
+    await rateMal(page).getByText(erste.question.why, {exact: true}).waitFor(WARTEN);
     let pass = await passLesen(page);
     assert.equal(pass.review[reviewId]?.correct, true, 'die Zusatzfrage steht in der Wiederholung');
-    assert.equal(pass.review['world-question:' + ELEFANT.id]?.due, '2099-01-01', 'die Hauptfrage bleibt unverändert');
+    assert.equal(pass.review[hauptfrage(ELEFANT).reviewId]?.due, '2099-01-01', 'die Hauptfrage bleibt unverändert');
     assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), 'richtige Zusatzfrage schreibt „gelernt“');
     assert.equal(await rateMal(page).getByText(/\d+\s*(?:von|\/)\s*\d+/).count(), 0, 'kein Zähler');
     // Beide Knöpfe nach der Antwort in Antwortgröße (Design-Prüfung 22.11.2026). Eine alte globale Regel setzt
@@ -689,23 +746,23 @@ async function zusatzfrageImPass(ctx) {
       assert.ok(groesse >= 18, `„${name}“ ist mindestens 18 px groß (ist ${groesse} px)`);
     }
     await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).tap();
-    await rateMal(page).locator('.rate-mal-frage').getByText(zweite.prompt, {exact: true}).waitFor(WARTEN);
+    await zeigtFrage(page, ELEFANT, zweite);
     for (const knopf of await rateMal(page).locator('.quiz-answer').all()) assert.equal(await knopf.isDisabled(), false, 'die nächste Frage ist offen');
     await fertig();
     await page.reload();
     await ready(page);
-    await rateMal(page).locator('.rate-mal-frage').getByText(zweite.prompt, {exact: true}).waitFor(WARTEN);
+    await zeigtFrage(page, ELEFANT, zweite);
     pass = await passLesen(page);
     assert.equal(pass.review[reviewId]?.correct, true, 'die Wiederholung bleibt nach Neuladen');
     assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), '„gelernt“ bleibt nach Neuladen');
-    assert.equal(pass.gameSessions['topic:' + ELEFANT.id]['topicAnswer:' + erste.id], erste.answers[erste.correct], 'die Antwort bleibt gespeichert');
+    assert.equal(pass.gameSessions['topic:' + ELEFANT.id][erste.answerKey], richtigeAntwort(erste), 'die Antwort bleibt gespeichert');
     // Auch „Stimmt das?“ tippen: Sicherung und Einlesen müssen den ganzen Spielstand der Karte tragen
     // (Antworten, Antwort-Reihenfolgen, Wahl bei „Stimmt das?“), nicht nur Wiederholung und „gelernt“ (Code-Prüfung 22.11.2026).
     await stimmtDasBereich(page).getByRole('button', {name: 'Stimmt', exact: true}).tap();
     await stimmtDasBereich(page).getByText(behauptung.explanation, {exact: true}).waitFor(WARTEN);
     spielstandVorher = (await passLesen(page)).gameSessions['topic:' + ELEFANT.id];
     assert.equal(spielstandVorher['claim:' + behauptung.id], true, 'die Wahl bei „Stimmt das?“ steht im Spielstand');
-    assert.ok(spielstandVorher['items:' + erste.id], 'die Antwort-Reihenfolge der Zusatzfrage steht im Spielstand');
+    assert.ok(spielstandVorher[erste.itemsKey], 'die Antwort-Reihenfolge der Zusatzfrage steht im Spielstand');
     await page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
     const download = page.waitForEvent('download');
     await page.getByRole('button', {name: 'Entdeckerpass sichern', exact: true}).click();
@@ -736,7 +793,8 @@ async function zusatzfrageImPass(ctx) {
     // Die Karte nach dem Einlesen: Hauptfrage und erste Zusatzfrage gelten als beantwortet, also kommt die zweite;
     // „Stimmt das?“ zeigt die Auflösung.
     await page.evaluate(id => { location.hash = 'world/topic/' + id; }, ELEFANT.id);
-    await rateMal(page).locator('.rate-mal-frage').getByText(zweite.prompt, {exact: true}).waitFor(WARTEN);
+    await karteDa(page, ELEFANT.id);
+    await zeigtFrage(page, ELEFANT, zweite);
     await stimmtDasBereich(page).getByText(behauptung.explanation, {exact: true}).waitFor(WARTEN);
     await page.evaluate(() => { location.hash = 'book'; });
     await page.waitForFunction(() => document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value === '', null, WARTEN);

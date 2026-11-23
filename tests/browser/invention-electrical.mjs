@@ -4,7 +4,7 @@ import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {seismographLabRoundTrip} from './seismograph-lab-links.mjs';
 import {prepareAxe} from './axe-loader.mjs';
-import {KARTE,ERKLAERTE_PAARE,ausprobieren,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
+import {KARTE,ERKLAERTE_PAARE,ausprobieren,frageDurchspielen,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const electricalTopics=catalog.filter(t=>['invention-battery','invention-generator','invention-transistor'].includes(t.id));
 assert.equal(electricalTopics.length,3);
@@ -94,7 +94,7 @@ export async function inventionSourceView(page,{topics,width,shots,engine='chrom
    }else assert.fail('No actual model-state coverage for '+t.invention.model);
   }
   assert.equal(await learned(),before,'exploring does not award a learned stamp');
-  if(questions){const answer=i=>question.locator('.quiz-answer').filter({has:page.getByText(t.question.answers[i],{exact:true})});if(!await answer(t.question.correct).isDisabled()){await reveal(question.locator('.world-game-hint'));await question.getByText(t.questionFeedback.hint,{exact:true}).waitFor();for(let i=0;i<t.question.answers.length;i++)if(i!==t.question.correct){await answer(i).click();await question.getByText(t.questionFeedback.wrongReasons[i],{exact:true}).waitFor();assert.equal(await question.getByText(t.question.why,{exact:true}).count(),0);}await answer(t.question.correct).click();}await question.getByText(t.question.why,{exact:true}).waitFor();}
+  if(questions)await frageDurchspielen(article,t);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'electrical reflow');
   const bad=await article.evaluate(root=>[...root.querySelectorAll('h2,h3,h4,p,summary,button,figcaption,small,.part-name,.story-step-label')].filter(el=>el.getClientRects().length&&(!el.closest('details:not([open])')||el.closest('summary'))).filter(el=>{const r=el.getBoundingClientRect();return r.width&&(r.left< -2||r.right>document.documentElement.clientWidth+2||el.scrollWidth>el.clientWidth+2);}).map(el=>el.tagName+':'+el.textContent.slice(0,80)));assert.deepEqual(bad,[],'all visible electrical explanations and controls fit');
   for(const b of await article.locator('.story-stations button,.part-button,[data-invention-experiment] button').all()){const r=await b.boundingBox();if(r)assert.ok(r.width>=44&&r.height>=44,'electrical touch target');}

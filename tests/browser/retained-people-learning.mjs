@@ -8,7 +8,7 @@ import {assertExisting18ActualDOMStates,rejectExisting18ActualDOMCountercases} f
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
-import {KARTE,ausprobieren,fuerErwachsene,mehrErfahren,verbindungsSatz} from './karte-hilfen.mjs';
+import {KARTE,ausprobieren,fuerErwachsene,ganzEinfach,mehrErfahren,verbindungsSatz} from './karte-hilfen.mjs';
 // Erklärte Verbindungen (mit Satz „warum“); nur sie zeigt die Karte, `related` nicht mehr (Entwurf 6.8).
 const worldConnections=JSON.parse(await fs.readFile(new URL('../../app/world-connections.json',import.meta.url),'utf8')).connections;
 const explainedPairs=new Set(worldConnections.flatMap(c=>[c.fromId+'>'+c.toId,c.toId+'>'+c.fromId]));
@@ -92,11 +92,9 @@ export async function retainedPeopleSourceView(page,{width,shots,engine='chromiu
    await activity.locator('.quiz-answer').nth(task.correct).click();await activity.locator('.lab-feedback').getByText(task.why,{exact:true}).waitFor();
   }
   assert.equal(await page.evaluate(({id,key})=>JSON.parse(localStorage.getItem(key)).progress.discoveries.includes('learned:'+id),{id:entry.id,key:saveKey}),learnedBefore,'voluntary activities cannot award a canonical mini-question stamp');
-  // „Ganz einfach“ steht in Kurz erklärt (bei Karten mit Häppchen oben in „Ausprobieren“, nicht in Kurz erklärt; Aufgabe 13),
+  // „Ganz einfach“ an seinem Ort (ganzEinfach; bei Karten mit Häppchen oben in „Ausprobieren“, Aufgabe 13),
   // „Selbst beobachten“ und Mehr-Wissen in „Mehr erfahren“, Quellen unter „Für Erwachsene“.
-  for(const d of await article.locator('.world-short details').all())await reveal(d);
-  if(topic.chapters){await (await ausprobieren(article)).locator('.wissenskarte-ausprobieren-einstieg').getByText(topic.learning.starter,{exact:true}).waitFor();assert.equal(await article.locator('.world-short').getByText(topic.learning.starter,{exact:true}).count(),0,topic.id+': „Ganz einfach“ steht nicht in Kurz erklärt');}
-  else await article.getByText(topic.learning.starter,{exact:true}).waitFor();const more=await mehrErfahren(article);await more.getByText(topic.learning.observe,{exact:true}).waitFor();for(const p of topic.more)await more.getByText(p,{exact:true}).waitFor();const sources=await fuerErwachsene(article);for(const source of topic.sources)assert.equal(await sources.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
+  await ganzEinfach(article,topic);const more=await mehrErfahren(article);await more.getByText(topic.learning.observe,{exact:true}).waitFor();for(const p of topic.more)await more.getByText(p,{exact:true}).waitFor();const sources=await fuerErwachsene(article);for(const source of topic.sources)assert.equal(await sources.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   const actualCanonicalMiniQuestion=questions?await retainedPeopleMiniQuestion(page,topic):null;
   if(questions&&width===390){await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();await ausprobieren(article);await box.waitFor();}
   // Die Mini-Frage lädt die Seite neu; danach ist „Ausprobieren“ wieder zu (auch ohne den Suchweg bei 390 px).

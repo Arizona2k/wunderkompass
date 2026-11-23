@@ -11,7 +11,7 @@ import {electricalSourceView} from './invention-electrical.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
-import {KARTE,ausprobieren,hatAusprobieren,mehrErfahren} from './karte-hilfen.mjs';
+import {KARTE,antwortKnopf,ausprobieren,falscheAntworten,hatAusprobieren,hauptfrage,mehrErfahren,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
@@ -74,26 +74,23 @@ export async function articleAtlas(page,ready,report,width,shots){
   await tide.evaluate(el=>el.scrollIntoView({block:'start',behavior:'instant'}));
   await page.screenshot({path:shots+'/tide-comparison-viewport-'+width+'.png'});
  }
- await open('science-moon-phases');const topic=topics.find(t=>t.id==='science-moon-phases'),question=page.locator('.world-mini-question');
+ await open('science-moon-phases');const topic=topics.find(t=>t.id==='science-moon-phases'),question=rateMal(page);
  const readPass=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
- // Fresh contexts start without solved article answers. Verify no solution or
- // earned learning mark on a wrong attempt, including reload and recovery.
- const wrong=topic.question.answers.find((_,i)=>i!==topic.question.correct);
- const answer=question.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
- if(!await answer.isDisabled()){
-  const hint=question.locator('.world-game-hint');await hint.locator('summary').click();assert.equal(await hint.locator('p').count()>0,true);assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);
-  await question.locator('.quiz-answer').filter({has:page.getByText(wrong,{exact:true})}).click();
-  await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(topic.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
-  // Die Mondkarte hat Zusatzfragen (Aufgabe 11). Nach einer falschen Antwort zeigt sie beim Neuladen trotzdem wieder die
-  // Hauptfrage mit „Überlege noch einmal.“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
-  assert.ok(topic.moreQuestions?.length>=1,'the moon card has additional questions');const [next]=topic.moreQuestions;
-  await page.reload();await ready(page);await question.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();
-  const kept=await readPass();assert.equal(kept.gameSessions['topic:'+topic.id]?.topicAnswer,wrong,'the wrong answer stays in the pass');assert.equal(kept.review['world-question:'+topic.id]?.correct,false);assert.equal(kept.discoveries.includes('learned:'+topic.id),false);
-  assert.equal(await page.getByText(topic.question.why,{exact:true}).count(),0,'no solution after reload');
-  await answer.click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(topic.question.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));
-  // Richtig beantwortet: Nach dem Neuladen kommt die erste noch nie gestellte Zusatzfrage.
-  await page.reload();await ready(page);await question.locator('.rate-mal-frage').getByText(next.prompt,{exact:true}).waitFor();
- }
+ // Beide Aufrufer (core.mjs) starten mit frischem Pass: Die Karte zeigt die Hauptfrage. Eine falsche Antwort zeigt keine
+ // Lösung und gibt kein Lernzeichen, auch nicht nach dem Neuladen; danach die richtige.
+ const haupt=await zeigtFrage(page,topic,hauptfrage(topic)),[wrong]=falscheAntworten(haupt),answer=antwortKnopf(page,richtigeAntwort(haupt));
+ const hint=question.locator('.world-game-hint');await hint.locator('summary').click();assert.equal(await hint.locator('p').count()>0,true);assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);
+ await antwortKnopf(page,wrong).click();
+ await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
+ // Die Mondkarte hat Zusatzfragen (Aufgabe 11). Nach einer falschen Antwort zeigt sie beim Neuladen trotzdem wieder die
+ // Hauptfrage mit „Überlege noch einmal.“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
+ const [next]=zusatzfragen(topic);assert.ok(next,'the moon card has additional questions');
+ await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();
+ const kept=await readPass();assert.equal(kept.gameSessions['topic:'+topic.id]?.[haupt.answerKey],wrong,'the wrong answer stays in the pass');assert.equal(kept.review[haupt.reviewId]?.correct,false);assert.equal(kept.discoveries.includes('learned:'+topic.id),false);
+ assert.equal(await page.getByText(haupt.question.why,{exact:true}).count(),0,'no solution after reload');
+ await answer.click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(haupt.question.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));
+ // Richtig beantwortet: Nach dem Neuladen kommt die erste noch nie gestellte Zusatzfrage.
+ await page.reload();await ready(page);await zeigtFrage(page,topic,next);
  // Lernroute aus „Mehr erfahren“; in der Route steht die Karte eingebettet, ihr „Ausprobieren“ funktioniert dort auch.
  const mehr=await mehrErfahren(page);
  await mehr.locator('.article-routes').getByRole('button',{name:'Vom Mond bis zum Meer',exact:true}).click();await page.locator('.world-route-stations').waitFor();assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea');

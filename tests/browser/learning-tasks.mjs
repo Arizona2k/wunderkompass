@@ -6,13 +6,16 @@ import {worldGameBank} from '../../app/world-game-bank.ts';
 import {CHALLENGE_BANK,createChallenge} from '../../app/knowledge-challenge.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsComplete,browserErrorText} from '../../scripts/browser-errors.mjs';
 import {bereich} from './harness.mjs';
+import {antwortKnopf,falscheAntworten,hauptfrage,rateMal,richtigeAntwort,zeigtFrage} from './karte-hilfen.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const saved=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
 async function activate(page,control,touch){await control.scrollIntoViewIfNeeded();if(touch)await control.tap();else{await control.focus();await page.keyboard.press('Enter');}}
-async function responses(page,room,question,key,touch,reloadAfterFirst){
+// Antworten in der Reihenfolge, in der responses sie tippt: erst die falschen, die richtige zuletzt.
+const falschDannRichtig=q=>[...q.answers.filter((_,i)=>i!==q.correct),q.answers[q.correct]];
+async function responses(page,room,antworten,key,touch,reloadAfterFirst){
  const before=await saved(page),prior=before.review[key],rows=[];let first;
- for(const answer of [...question.answers.filter((_,i)=>i!==question.correct),question.answers[question.correct]]){
+ for(const answer of antworten){
   await activate(page,room.locator('.quiz-answer').filter({has:page.getByText(answer,{exact:true})}),touch);
   await page.waitForFunction(({key,seen})=>JSON.parse(localStorage.getItem(key)).progress.review[seen.key]?.seen===seen.count,{key:SAVE_KEY,seen:{key,count:(prior?.seen??0)+1}});
   const now=await saved(page);if(!first)first=structuredClone(now.review[key]);else assert.deepEqual(now.review[key],first,'correction attempts must not count as additional repetitions');
@@ -42,7 +45,7 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
     if(id==='invention-telescope'){assert(/Linsen oder Spiegel/.test(q.prompt)&&/Licht/.test(q.prompt));assert(!/Fernrohr|Teleskop/i.test(q.prompt));}
     if(gameId==='then-now')assert.equal(q.answers[q.correct],'Früher und heute');
     const hint=room.locator('.world-game-hint');await activate(page,hint.locator('summary'),touch);current.actualHint=await hint.locator('p').innerText();current.actualPrompt=await room.getByRole('heading',{name:q.prompt,exact:true}).innerText();current.actualChoices=await room.locator('.quiz-answer').allTextContents();
-    current.responses=await responses(page,room,q,'world-game:'+gameId+':'+id,touch,async()=>{await page.reload();await ready(page);await game('world:'+gameId,width);await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});
+    current.responses=await responses(page,room,falschDannRichtig(q),'world-game:'+gameId+':'+id,touch,async()=>{await page.reload();await ready(page);await game('world:'+gameId,width);await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});
     const beforeReload=await saved(page);await page.reload();await ready(page);const reloaded=await game('world:'+gameId,width);await reloaded.getByRole('heading',{name:q.prompt,exact:true}).waitFor();assert.deepEqual((await saved(page)).review,beforeReload.review,'reload does not add a repetition');assert.deepEqual((await saved(page)).notes,beforeReload.notes);
     if(id==='invention-compass-today'&&width===320)await reloaded.screenshot({path:path.join(shots,`journey-engine-${engine}-learning-compass-current-${width}.png`),animations:'disabled'});
     current.reloadRetainsOneAttempt=true;
@@ -59,9 +62,9 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
     const before=await saved(page);assert.equal(before.gameSessions['world:then-now'].roundAnswer,oldAnswer);assert.deepEqual(before.gameSessions['world:then-now'].orders[other.id],other.answers);assert.equal(before.review['world-game:then-now:'+id],undefined);current.oldAnswerNotReinterpreted=oldAnswer;current.unrelatedOrderPreserved=true;
     await activate(page,room.locator('.quiz-answer').filter({has:page.getByText(q.answers[q.correct],{exact:true})}),touch);await page.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.review['world-game:then-now:invention-compass-today']?.seen===1,SAVE_KEY);assert.deepEqual((await saved(page)).notes,before.notes);complete();
    }
-   const topic=catalogue.find(topic=>topic.id==='animal-honey-bee');await load('mini-review',width,createSave());await page.goto(base+'/#world/topic/'+topic.id);await ready(page);const mini=page.locator('.world-mini-question');await mini.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();current.responses=await responses(page,mini,topic.question,'world-question:'+topic.id,touch,async()=>{await page.reload();await ready(page);await mini.locator('.rate-mal-frage').getByText(topic.question.prompt,{exact:true}).waitFor();});
-   await activate(page,mini.getByRole('button',{name:'Noch einmal raten',exact:true}),touch);await activate(page,mini.locator('.quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})}),touch);await page.waitForFunction(({key,id})=>JSON.parse(localStorage.getItem(key)).progress.review['world-question:'+id]?.seen===2,{key:SAVE_KEY,id:topic.id});current.deliberateNewMiniAttemptCountsOnce=true;complete();
-   const challenge=createChallenge('easy',[],()=>0.37),q=CHALLENGE_BANK.find(q=>q.id===challenge.ids[0]),pass=createSave();pass.progress.gameSessions['world:knowledge-challenge']={challenge};await load('challenge-review',width,pass);const challengeRoom=await game('world:knowledge-challenge',width);current.responses=await responses(page,challengeRoom,q,'challenge:'+q.id,touch,async()=>{await page.reload();await ready(page);await game('world:knowledge-challenge',width);await challengeRoom.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});complete();
+   const topic=catalogue.find(topic=>topic.id==='animal-honey-bee');await load('mini-review',width,createSave());await page.goto(base+'/#world/topic/'+topic.id);await ready(page);const mini=rateMal(page),haupt=await zeigtFrage(page,topic,hauptfrage(topic));current.responses=await responses(page,mini,[...falscheAntworten(haupt),richtigeAntwort(haupt)],haupt.reviewId,touch,async()=>{await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);});
+   await activate(page,mini.getByRole('button',{name:'Noch einmal raten',exact:true}),touch);await activate(page,antwortKnopf(page,richtigeAntwort(haupt)),touch);await page.waitForFunction(({key,id})=>JSON.parse(localStorage.getItem(key)).progress.review['world-question:'+id]?.seen===2,{key:SAVE_KEY,id:topic.id});current.deliberateNewMiniAttemptCountsOnce=true;complete();
+   const challenge=createChallenge('easy',[],()=>0.37),q=CHALLENGE_BANK.find(q=>q.id===challenge.ids[0]),pass=createSave();pass.progress.gameSessions['world:knowledge-challenge']={challenge};await load('challenge-review',width,pass);const challengeRoom=await game('world:knowledge-challenge',width);current.responses=await responses(page,challengeRoom,falschDannRichtig(q),'challenge:'+q.id,touch,async()=>{await page.reload();await ready(page);await game('world:knowledge-challenge',width);await challengeRoom.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});complete();
    // All seven actual callers of the shared advanced hint stack retain the
    // solution after an answer; none displays the full solution as a hint.
    for(const id of ['flags','capitals','silhouettes','animal-detective','climate-detective','photos','treasure']){

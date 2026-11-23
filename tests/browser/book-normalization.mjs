@@ -35,7 +35,7 @@ export async function bookPrecisionView(page,report,width,{full=true,shots=null}
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,'readable source notes reflow');
  };
  for(const claim of precision.filter(row=>row.scope==='word')){
-  await page.evaluate(term=>location.hash='book/words/'+term,claim.id);const query=page.getByRole('textbox',{name:'Wissenswörter durchsuchen',exact:true});await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,claim.id);
+  await page.evaluate(term=>location.hash='book/words/'+term,claim.id);await page.waitForFunction(term=>document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value===term,claim.id);
   const card=page.locator('.word-card').filter({has:page.getByRole('heading',{name:claim.id,exact:true})});await card.getByText(claim.after[2],{exact:true}).waitFor();await checkNotes(card,claim,'Quellen zur Erklärung');
   for(const button of await card.locator('.speech-button').all()){const bounds=await button.boundingBox();assert.ok(bounds?.width>=44&&bounds.height>=44,'word actions retain readable44px targets');}
   if(shots&&['Gestein','Grundwasser'].includes(claim.id))await card.screenshot({path:shots+'/word-'+claim.id+'-'+width+'.png',animations:'disabled'});

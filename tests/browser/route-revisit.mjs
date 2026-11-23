@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import vm from 'node:vm';
 import {ladeanfragen} from './harness.mjs';
+import {richtigerKnopf} from './karte-hilfen.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const progress=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -31,7 +32,7 @@ export async function completeFreshRoutesPage(page,base,{touch=false}={}){
    const alreadyEarned=(await progress(page)).discoveries.includes('learned:'+id);
    if(!alreadyEarned){
     assert(await next.isDisabled(),'an unfinished station remains gated before the actual mini answer');
-    const answer=page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(topic.question.answers[topic.question.correct],{exact:true})});
+    const {knopf:answer}=await richtigerKnopf(page,topic);
     await activate(page,answer,touch);await page.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),id);
    }
    assert(await next.isEnabled(),'the actually earned station permits advancing');await activate(page,next,touch);

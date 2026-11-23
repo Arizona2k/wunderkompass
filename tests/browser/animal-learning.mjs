@@ -16,13 +16,15 @@ const EXPANSION_IDS=new Set(['animal-platypus','animal-short-beaked-echidna','an
 // Erklärte Verbindungen der Tierkarten (Fragen-Tiere und Erweiterung) aus den App-Daten.
 const ANIMAL_EDGES=worldConnections.connections.filter(e=>/^animal-(inquiry|expansion)-/.test(e.id));
 import {prepareAxe} from './axe-loader.mjs';
-import {ausprobierenAuf,karteDa,mehrErfahren} from './karte-hilfen.mjs';
+import {angezeigteFrage,ausprobierenAuf,frageDurchspielen,hauptfrage,karteDa,mehrErfahren,rateMal,richtigeAntwort} from './karte-hilfen.mjs';
 import {ladeanfragen} from './harness.mjs';
 import {captureNativeViewport} from './native-screenshot.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {createSave,SAVE_KEY}=await import('../../app/progress-storage.ts');
 const widths=[320,360,390,768,1024,1440,1920];
 const topics=catalog.filter(t=>DATA.entries.some(e=>e.id===t.id));
+// Tierkarten ohne eigene Tier-Verbindung (ANIMAL_EDGES). Der Eisvogel verlor in Teil B, Aufgabe 10 seine Verbindung zum Schatten.
+const OHNE_TIERVERBINDUNG=new Set(['animal-kingfisher']);
 
 async function waitForSelectedImageRequest(image){const element=await image.elementHandle();assert(element,'actual image element required');await image.page().waitForFunction(i=>i.isConnected&&i.currentSrc!==''&&i.currentSrc===i.src,element);}
 export async function assertOwnAnimalMedia(visual,id){
@@ -139,7 +141,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
   let current=DATA.entries[0].id,stage='normal';
   const lifecycle=await observeEngineLifecycle(browser,c,p,()=>({current,stage,width}));
   const pass=createSave();pass.progress.favorites=['topic:animal-polar-bear'];pass.progress.notes=[{id:'animal-test-note',text:'Synthetische alte Notiz',at:'2026-10-17T07:00:00.000Z'}];pass.progress.gameSessions['world:animal-detective']={items:['animal-lion','animal-polar-bear'],index:1,roundAnswer:'alte Antwort'};
-  for(const t of topics)pass.progress.gameSessions['topic:'+t.id]={items:[...t.question.answers].reverse(),topicAnswer:t.question.answers[t.question.correct],compareAnimal:true};
+  for(const t of topics){const h=hauptfrage(t);pass.progress.gameSessions['topic:'+t.id]={items:[...h.question.answers].reverse(),topicAnswer:richtigeAntwort(h),compareAnimal:true};}
   await c.addInitScript(({key,pass})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(pass));},{key:SAVE_KEY,pass});
   try{
    await p.goto(base+'#world/topic/'+DATA.entries[0].id);await ready(p);
@@ -222,24 +224,20 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   stage='other requests before reload';await anfragenFertig();
   stage='reload';await p.reload();await ready(p);
   if(EXPANSION_IDS.has(entry.id)){
-   const quiz=p.locator('.world-mini-question');await quiz.locator('.rate-mal-frage').getByText(t.question.prompt,{exact:true}).waitFor();
+   // Die angezeigte Frage hat einen eigenen freiwilligen Hinweis: Er öffnet sich nicht selbst und geht mit der Tastatur auf.
+   const frage=await angezeigteFrage(p,t),quiz=rateMal(p);
    if(await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).count())await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
    const hint=quiz.locator('.world-game-hint');assert.equal(await hint.count(),1,'new mini-question has its own voluntary hint');
-   assert.equal(await hint.getByText(t.questionFeedback.hint,{exact:true}).isVisible(),false,'hint does not open itself');
-   await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(t.questionFeedback.hint,{exact:true}).waitFor();await hint.locator('summary').click();
-   for(const [index,answer] of t.question.answers.entries())if(index!==t.question.correct){
-    await quiz.locator('.quiz-answer').filter({has:p.getByText(answer,{exact:true})}).click();
-    await quiz.locator('.lab-feedback').getByText(t.questionFeedback.wrongReasons[index],{exact:true}).waitFor();
-    assert.equal(await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).count(),0,'wrong choice does not display the correct explanation');
-   }
-   await quiz.locator('.quiz-answer').filter({has:p.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
-   await quiz.locator('.lab-feedback').getByText(t.question.why,{exact:true}).waitFor();
-   assert.ok(await quiz.locator('.quiz-answer').first().isDisabled(),'new quiz retains the existing earned-answer gate');
+   assert.equal(await hint.getByText(frage.hints[0],{exact:true}).isVisible(),false,'hint does not open itself');
+   await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(frage.hints[0],{exact:true}).waitFor();await hint.locator('summary').click();
+   // Jede falsche Antwort mit ihrem Satz, nie die Lösung; dann die richtige, danach bleiben die Knöpfe gesperrt.
+   await frageDurchspielen(p,t,{beantwortet:'neu',hinweis:false});
    await quiz.getByRole('button',{name:'Noch einmal raten',exact:true}).click();
   }
   // Zuerst die eigens für die Tierkarten geschriebene Verbindung. Der Eisvogel hat seit Aufgabe 10 (Eisvogel–Schatten gestrichen)
   // nur noch seine erklärte Verbindung aus Aufgabe 9 (zum Nahrungsnetz); auch sie muss hin und mit Fokus zurück führen.
-  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id)??worldConnections.connections.find(e=>e.fromId===entry.id||e.toId===entry.id);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
+  // Nur die Karten aus OHNE_TIERVERBINDUNG dürfen auf eine andere erklärte Verbindung ausweichen.
+  const edge=ANIMAL_EDGES.find(e=>e.fromId===entry.id||e.toId===entry.id)??(OHNE_TIERVERBINDUNG.has(entry.id)?worldConnections.connections.find(e=>e.fromId===entry.id||e.toId===entry.id):undefined);assert.ok(edge,'individual explained context '+entry.id);const otherId=edge.fromId===entry.id?edge.toId:edge.fromId;
   const selector='[data-route-focus="world-connection-'+entry.id+'-'+otherId+'"]';stage='explained connection';await mehrErfahren(p);await p.locator(selector).click();await p.getByRole('heading',{name:catalog.find(t=>t.id===otherId).title,exact:true}).waitFor();
   stage='back and opener focus';await p.goBack();await karteDa(p,entry.id);await p.waitForFunction(selector=>document.activeElement?.matches(selector),selector);
  }

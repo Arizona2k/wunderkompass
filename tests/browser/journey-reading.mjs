@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises';import assert from 'node:assert/strict';
+import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import data from '../../app/journey-content.json' with {type:'json'};
 import tasks from '../../app/journey-inquiries.json' with {type:'json'};

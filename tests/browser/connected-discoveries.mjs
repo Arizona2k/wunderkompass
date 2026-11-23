@@ -1,5 +1,5 @@
 import {AXE_FILE} from './axe-loader.mjs';
-import {ausprobierenAuf,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
+import {antworteRichtig,ausprobierenAuf,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import assert from 'node:assert/strict';
 import {bookNormalizationView} from './book-normalization.mjs';
@@ -138,7 +138,7 @@ export async function connectedDiscoveries(page,ready,report,width){
     if((await pass()).discoveries.includes('learned:'+t.id))assert(await next.isEnabled(),t.id+': an already learned station permits advancing');
     else{
      assert(await next.isDisabled(),t.id+': an unfinished station remains gated before the actual mini answer');
-     await page.locator('.world-mini-question .quiz-answer').filter({has:page.getByText(t.question.answers[t.question.correct],{exact:true})}).click();
+     await antworteRichtig(page,t);
      await page.waitForFunction(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id);
     }
     await next.click();

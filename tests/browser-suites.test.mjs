@@ -10,20 +10,21 @@ import {browserErrorArrays, monitorBrowserErrors} from '../scripts/browser-error
 
 const SETS = ['smoke', 'ci', 'full'];
 // Pflicht bei jedem PR: Pass, gespeicherte Antworten, Offline und alte Links. Sie sind nicht auf Chromium beschränkt;
-// der PR prüft sie in Chromium (offline-cold und backup auch in WebKit), die Vollprüfung in allen drei Engines.
+// jeder PR prüft sie in Chromium (Pflicht, offline-cold und backup auch in WebKit) und in der Engine-Schnellprüfung
+// in Firefox und WebKit.
 const PASS_OFFLINE = [
   'offline-cold', 'no-news', 'backup', 'pass-spielstaende', 'animal-game-saves', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
   'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];
 // Sichtbare Lernansichten, die nicht auf Chromium beschränkt sind.
-const ANSICHTEN = ['reise-kapitel'];
+const ANSICHTEN = ['reise-kapitel', 'solar-labels'];
 // Dazu die Tempo-Prüfung (Ladegröße, Layout-Rutschen), damit zu große Seiten schon im PR auffallen.
 const CI = [...PASS_OFFLINE, ...ANSICHTEN, 'performance'];
 // Die große Prüfung: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
 const FULL = [
   'components', 'offline-resilience', 'research', 'journeys', 'home', 'home-visits',
-  'core', 'solar-labels', 'animals', 'animal-native-zoom', 'playground', 'challenge',
+  'core', 'animals', 'animal-native-zoom', 'playground', 'challenge',
   'offline-cold-full', 'engine-journeys',
 ];
 
@@ -118,6 +119,33 @@ test('Überlauf-Prüfungen messen nicht gegen innerWidth', () => {
   assert.deepEqual(blind, [], 'Vergleich mit innerWidth statt clientWidth');
 });
 
+// Kartenfragen und „Ganz einfach“ nur über tests/browser/karte-hilfen.mjs (Technik-Prüfung 23.11.2026, Befund 2).
+// In Teil B beantworteten rund zehn Suiten die Hauptfrage mit eigenem Code, obwohl die Karte nach einer Antwort schon
+// eine Zusatzfrage zeigte, und suchten „Ganz einfach“ selbst; sie fielen nacheinander in langen Läufen auf.
+// Die Stufen ändern wieder, welche Frage kommt. Verboten außerhalb von karte-hilfen.mjs:
+// eigene Antwortsuche an einer Kartenfrage (.question.answers[…], .question.correct), .moreQuestions,
+// .learning.starter und das Weiterreichen einer Kartenfrage in eine Variable (q = t.question, {question: q} = t).
+// Keine Kartenfragen sind Reise- und Buchfragen (journey.question, j.question, item.question, learning.question)
+// und die Überschriften der Häppchen (kapitel.question, chapter.question).
+const NICHT_KARTE = String.raw`(?<!\b(?:journey|j|item|learning|kapitel|chapter))`;
+const KARTENFRAGE_EIGEN = [
+  [new RegExp(NICHT_KARTE + String.raw`\.question\.(?:answers\[|correct\b)`), 'eigene Antwortsuche an einer Kartenfrage'],
+  [/\.moreQuestions\b/, 'Zusatzfragen selbst gelesen'],
+  [/\.learning\.starter\b/, '„Ganz einfach“ selbst gesucht'],
+  [new RegExp(String.raw`[=:,(]\s*` + NICHT_KARTE.replace('(?<!', '(?!').replace('))', ')\\.)') + String.raw`\w+\.question\s*[,;)}]`), 'Kartenfrage in eine Variable gereicht'],
+  [/\{[^}]*\bquestion\b[^}]*\}\s*=/, 'Kartenfrage aus einer Karte ausgepackt'],
+];
+test('Kartenfragen und „Ganz einfach“ nur über karte-hilfen.mjs', () => {
+  const dir = new URL('./browser/', import.meta.url);
+  const treffer = [];
+  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.mjs') && name !== 'karte-hilfen.mjs')) {
+    fs.readFileSync(new URL(file, dir), 'utf8').split('\n').forEach((line, index) => {
+      for (const [muster, grund] of KARTENFRAGE_EIGEN) if (muster.test(line)) treffer.push(file + ':' + (index + 1) + ' ' + grund);
+    });
+  }
+  assert.deepEqual(treffer, [], 'Bausteine aus karte-hilfen.mjs nutzen (angezeigteFrage, antworteRichtig, frageDurchspielen, hauptfrage, ganzEinfach)');
+});
+
 // Schlägt die Browserüberwachung an, soll die Meldung die Fehler nennen (browserErrorText), nicht nur „false“.
 test('Browserfehler-Zusicherungen nennen die Fehler', () => {
   const dir = new URL('./browser/', import.meta.url);
@@ -191,4 +219,22 @@ test('WebKit-Kurzprüfung läuft bei jedem PR', () => {
   const pflicht = ci.slice(ci.indexOf('name: Required quality checks'), ci.indexOf('\n  full:'));
   assert.match(pflicht, /playwright install --with-deps chromium webkit\b/, 'Pflichtjob muss WebKit installieren');
   assert.match(pflicht, /run: pnpm run test:browser:webkit\b/, 'Pflichtjob muss die WebKit-Kurzprüfung starten');
+});
+
+// Jeder PR prüft den CI-Satz auch in Firefox und WebKit (Job „Engine-Schnellprüfung“). Läuft der Job nur bei
+// Veröffentlichungs-PRs oder fehlt ein Browser, fallen browserspezifische Fehler wieder erst am Phasenende auf.
+test('Engine-Schnellprüfung prüft den CI-Satz bei jedem PR in Firefox und WebKit', () => {
+  const ci = fs.readFileSync(new URL('../.github/workflows/quality.yml', import.meta.url), 'utf8');
+  const start = ci.indexOf('\n  engines:');
+  assert.ok(start > 0, 'Job engines fehlt in quality.yml');
+  const rest = ci.slice(start + 1);
+  const ende = rest.search(/\n {2}[a-z][\w-]*:\n/);
+  const job = ende < 0 ? rest : rest.slice(0, ende);
+  assert.doesNotMatch(job, /^ {4}if:/m, 'Engine-Schnellprüfung darf nicht auf bestimmte PRs beschränkt sein');
+  assert.match(job, /browser: \[firefox, webkit\]/, 'Engine-Schnellprüfung braucht Firefox und WebKit');
+  assert.match(job, /playwright install --with-deps \$\{\{ matrix\.browser \}\}/);
+  assert.match(job, /run: pnpm run test:browser -- --browser \$\{\{ matrix\.browser \}\}/);
+  const skripte = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8')).scripts;
+  assert.match(skripte['test:browser'], /run\.mjs --suite ci\b/, 'test:browser muss den CI-Satz starten');
+  assert.ok(SUITES.some(suite => suite.set === 'ci' && !suite.chromiumOnly), 'CI-Satz hat keine Suite für Firefox und WebKit');
 });
