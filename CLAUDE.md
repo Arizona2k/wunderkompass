@@ -88,6 +88,8 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 **Übergabe beim Chatwechsel** (Wunsch des Nutzers, 23.11.2026): Nichts geht verloren, und der neue Chat muss nichts neu ausdenken. Wünsche, Regeln und Ideen des Nutzers aus dem Chat kommen gleich ins Repository (Regeln in diese Datei, Ideen ins `BACKLOG.md` unter „Ideen-Sammlung“), nicht erst beim Wechsel. Vor der Ansage „Jetzt neuen Chat starten“: alles committet und gepusht (gemergt oder in einem offenen PR, keine nur lokalen Zweige); Entscheidungen und aufgeschobene Kleinigkeiten aus dem Arbeitsprotokoll (`.superpowers/`, nicht in Git) als Entscheidungsliste in `docs/entwurf/`; Helferberichte, Messwerte und Pläne, die der nächste Chat braucht, als Datei im Repository; `STATUS.md` nennt Stand, offene Fragen und den nächsten Schritt mit Fundstellen. Chatverlauf, Scratchpad, Nebenordner und Hintergrundprozesse gehen beim Wechsel verloren.
 
+**Laufend sichern** (Wunsch des Nutzers, 23.11.2026): Das Nutzungslimit des Nutzers kann jederzeit erreicht sein; Claude sieht es nicht. Darum nach jedem Teilschritt einer Aufgabe committen und pushen (Zwischenstände ehrlich als solche benannt), Helferberichte sofort als Datei in `docs/entwurf/` sichern und `STATUS.md` bei jedem Meilenstein nachführen. So kann im selben oder in einem neuen Chat ohne Verlust weitergearbeitet werden. Nennt der Nutzer einen Stand (z. B. „90 %“), sofort alles sichern und kurz sagen, was als Nächstes käme.
+
 **Commits:** `git -c user.name=Claude -c user.email=noreply@anthropic.com commit …`, deutsche Betreffzeile. Vor jedem Push `git diff --check` und Autor/Committer prüfen.
 
 ## Helfer (`.claude/agents/`)

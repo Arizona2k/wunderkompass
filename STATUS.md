@@ -9,7 +9,10 @@ Stand: 23.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
   - Schritt 0 (PR #102), Teil A „Neue Karte“ (PR #103, `40a0f0b`), Teil B „Kürzer und verbunden“ (PR #104, `4b5bdb1`) mit der Ergänzung „Stufen“ und dem Helfer `stufen-pruefer`. Geprüft und offen gebliebene Befunde: [Entscheidungen](docs/entwurf/2026-11-23-phase-1-teilschritt-2-entscheidungen.md), BACKLOG Punkt 23.
 - **Arbeitsweise abgesichert** (23.11.2026, PR #105): Helfer müssen laufen (Helfer-Check in `/weiter`, Ersatz von Hand, technik-pruefer nach jedem späten Fehler), nichts geht beim Chatwechsel verloren (`CLAUDE.md`, „Übergabe beim Chatwechsel“), Aufräumen gilt auch fürs Arbeiten. Bericht des technik-pruefer: [Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md).
 - **Phase 1, Teilschritt 3 „Kniffliger spielen“ hat begonnen** (23.11.2026, PR #106, am 23.11.2026 freigegeben und in `test-live`): Das Arbeitssystem ist umgebaut ([Entscheidungsliste](docs/entwurf/2026-11-23-teilschritt-3-arbeitssystem-entscheidungen.md)): gemeinsame Test-Bausteine mit Wächter, Vollprüfung in sieben Gruppen (je höchstens 75 Minuten, mit den Zeiten aus CI-Lauf 262 ausgeglichen), Engine-Schnellprüfung (CI-Satz in Firefox und WebKit bei jedem PR, kein Pflicht-Check), `solar-labels` im CI-Satz, Datentest gegen doppeltes „Ganz einfach“, 61 alte Dateien und 14 ungenutzte Pakete entfernt. Dazu zwei Firefox-Funde: React lässt Firefox manche Fotos doppelt laden, und nach dem Neuladen bricht Firefox die Nachfrage zu einem gespeicherten Foto selbst ab. Die Überwachung erkennt genau diese zwei Fälle jetzt (Entscheidungsliste, Punkte 10 und 13). [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) sind freigegeben.
-- PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
+- **Teilschritt 3, Teil A „Eine Stufe für alles“ in Arbeit** (Branch `claude/trusting-galileo-ck3o23`, noch kein PR; Entscheidungen: [Teil A](docs/entwurf/2026-11-23-teilschritt-3-teil-a-entscheidungen.md)):
+  - Fertig und gepusht: Aufgabe 1 (Stufe im Pass), 2 (Stufenwahl im Entdeckerpass), 3 (Vorschläge, Logik), 4 (gemeinsame Wörter, „Noch einmal raten“ zählt nicht doppelt). Browser-Prüfung von Aufgabe 4: 24 von 26 Suiten grün; `wissenskarte` und `journeys` waren rot, beide Ursachen behoben, Wiederholung läuft.
+  - Aufgabe 5 (Karte mit Stufen) zur Hälfte: Logik, Wahl über „Rate mal!“, Vorschlag, Schutz gespeicherter Antworten (`tests/fixtures/gespeicherte-antworten.json`). Offen: Inhalte aus dem [Entwurf des stufen-pruefer](docs/entwurf/2026-11-23-karte-stufen-entwurf.md) nach Prüfung durch `fakten-pruefer` und `kinder-redaktion` einbauen, strengere Inhaltsregeln (3/4 Antworten je Stufe, Ratemuster-Grenzen statt „nie die längste“), „Fast richtig“, „Ordne richtig“, Browser-Test `karte-stufen`.
+- **PR #95 und #27 durchgesehen** ([Bericht](docs/entwurf/2026-11-23-pr-95-27-durchsicht.md)); Auftrag des Nutzers: Brauchbares umsetzen, Rest löschen. Offen: Originalaufträge nach `docs/archiv/`, Funde ins BACKLOG, dann beide PRs schließen und Branches löschen (Commits bleiben über `refs/pull/<n>/head`).
 
 ## Adressen
 
@@ -22,9 +25,9 @@ Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md),
 
 **Teilschritt 3 „Kniffliger spielen“:** [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) (Grundlage: [Ergänzung Stufen](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md), [Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
 
-1. Erledigt: Entwurf freigegeben, D1 bis D5 „wie empfohlen“ entschieden (23.11.2026, Abschnitt 3 im Entwurf), Arbeitssystem in `test-live` (PR #106).
-2. Jetzt bauen, beginnend mit Teil A, Aufgabe 1 (Stufe im Pass, `app/kern/stufe.ts`). Pass-Änderungen mit Altpass, Import/Export, Reload und Fehlerfall belegen.
-3. Nebenbei: `journeys` (rund 35 Minuten, längste Gruppe der Vollprüfung) teilen oder beschleunigen, sobald klar ist, welcher Teil die Zeit braucht (BACKLOG, „Vollprüfung dauert lange“).
+1. Aufgabe 5 fertigstellen (siehe „Wo wir stehen“), dann Aufgabe 6: „Ganz einfach“ offen auf allen Karten (Vorlagen für 73 Karten in PR #27, siehe Durchsicht 2b), „Was ist neu?“, `pnpm run check`, Helfer, PR von Teil A nach `test-live`.
+2. PR #95 und #27 aufräumen (siehe oben).
+3. Nebenbei: `journeys` (rund 23 bis 35 Minuten) teilen; darin steckt z. B. `learning-tasks` (allein 82 s). BACKLOG, „Vollprüfung dauert lange“.
 
 ## Offene Fragen an den Nutzer
 
