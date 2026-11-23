@@ -408,6 +408,21 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 .stufen-knopf span { grid-column: 1; font-size: 15px; color: var(--kern-text-leise); }
 .stufen-knopf svg { grid-column: 2; grid-row: 1 / span 2; color: var(--kern-petrol); }
 .stufen-knopf[aria-pressed="true"] { border-color: var(--kern-petrol); background: var(--kern-petrol-zart); }
+.stufen-hinweis { margin: 0; font-size: 15px; color: var(--kern-text-leise); }
+/* Vorschlag unter der Rückmeldung (E8): klein, freundlich, nie ein Fenster. */
+.stufen-vorschlag {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--kern-linie);
+  border-radius: var(--kern-rund);
+  background: var(--kern-petrol-zart);
+}
+.stufen-vorschlag p { margin: 0; font-size: 16px; font-weight: 700; color: var(--kern-text); }
+.stufen-vorschlag-knoepfe { display: flex; flex-wrap: wrap; gap: 8px; }
+.stufen-vorschlag .kern-knopf { min-height: var(--kern-tipp); }
+.stufen-vorschlag-ja { border-color: var(--kern-petrol); color: var(--kern-petrol-dunkel); }
 .stufen-erwachsene summary { font-family: inherit; font-size: 16px; font-weight: 700; color: var(--kern-text); }
 .stufen-erwachsene p { font-size: 15px; line-height: 1.55; color: var(--kern-text-leise); }
 .stufen-zurueck {

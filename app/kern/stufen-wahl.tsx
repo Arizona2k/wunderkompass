@@ -12,7 +12,8 @@ const STUFEN_TEXT: Record<Stufe, string> = {
   experte: 'nachdenken und kombinieren',
 };
 
-export default function StufenWahl({stufe, onStufe}: {stufe: Stufe; onStufe: (stufe: Stufe) => void}) {
+// `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
+export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
   const [offen, setOffen] = useState(false);
   const gruppe = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
@@ -31,6 +32,7 @@ export default function StufenWahl({stufe, onStufe}: {stufe: Stufe; onStufe: (st
         <strong>{STUFEN_NAME[s]}</strong><span>{STUFEN_TEXT[s]}</span>{s === stufe && <Check size={22} aria-hidden="true"/>}
       </button>)}
     </div>}
+    {hinweis && <p className="stufen-hinweis">{hinweis}</p>}
     {!offen && stufe !== 'entdecker' && <button type="button" className="stufen-zurueck" onClick={() => waehle('entdecker')}>Zu schwer? Zurück zu Entdecker</button>}
   </div>;
 }

@@ -91,3 +91,20 @@ test('Schema3 backup retains unrelated progress and the original old words; only
  const progress=emptyProgress();progress.favorites=['topic:animal-lion'];progress.games=['memory'];progress.gameSessions={'world:knowledge-challenge':{challenge:legacySession()},'world:animal-detective':{items:['animal-lion','animal-koala'],index:1,roundAnswer:'Koala',roundDone:false}};
  const pass=createSave(progress),restored=restoreSave(JSON.parse(JSON.stringify(pass)),true);assert.deepEqual(restored.progress.gameSessions,pass.progress.gameSessions);assert.deepEqual(restored.progress.favorites,progress.favorites);assert.deepEqual(restored.progress.games,progress.games);assert.equal(restoreChallenge(restored.progress.gameSessions['world:knowledge-challenge'].challenge,emptyChallenge()).answer,alias.after);
 });
+// Teilschritt 3, Aufgabe 5: Eine Challenge-Frage kann mehrere frühere Antwortsätze haben (z. B. erst umformuliert,
+// dann eine vierte Antwort). Jede alte Runde zeigt ihre eigenen Antworten weiter; Frage, Lösung und Erklärung bleiben gleich.
+test('frühere Antwortsätze: jede bekannte alte Fassung bleibt lesbar, Fremdes nicht',async()=>{
+ const {retainedChallengeChoiceVariant}=await import('../app/retained-answer-wording.mjs');
+ const frage={id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',answers:['A','B','C','D']};
+ const reihen=[
+  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','X','Y'],beforeWrongReasons:null},
+  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','B','C'],beforeWrongReasons:[null,'nicht B','nicht C']},
+ ];
+ assert.deepEqual(retainedChallengeChoiceVariant(frage,['D','C','B','A'],reihen),{answers:frage.answers,retainedAnswerOrder:false,retainedWrongReasons:null});
+ assert.deepEqual(retainedChallengeChoiceVariant(frage,['C','B','A'],reihen),{answers:['A','B','C'],retainedAnswerOrder:true,retainedWrongReasons:[null,'nicht B','nicht C']});
+ assert.deepEqual(retainedChallengeChoiceVariant(frage,['Y','A','X'],reihen),{answers:['A','X','Y'],retainedAnswerOrder:true,retainedWrongReasons:null});
+ assert.equal(retainedChallengeChoiceVariant(frage,['A','B','Z'],reihen),null,'unbekanntes Wort');
+ assert.equal(retainedChallengeChoiceVariant({...frage,prompt:'Anders?'},['C','B','A'],reihen),null,'andere Frage');
+ assert.equal(retainedChallengeChoiceVariant({...frage,correct:1},['C','B','A'],reihen),null,'andere Lösung');
+ assert.equal(retainedChallengeChoiceVariant({...frage,id:'t-2'},['C','B','A'],reihen),null,'andere ID');
+});

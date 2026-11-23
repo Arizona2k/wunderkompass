@@ -7,6 +7,7 @@ import {BROWSER_ERROR_FIELDS, browserErrorArrays, browserErrorsSettled, monitorB
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
 import {angezeigteFrage, antwortKnopf, antworteRichtig, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, zeigtFrage, zusatzfragen} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
+import {karteStufen} from './karte-stufen.mjs';
 import photos from '../../app/world-photos.json' with {type: 'json'};
 import verbindungen from '../../app/world-connections.json' with {type: 'json'};
 import routen from '../../exports/content/world-routes.json' with {type: 'json'};
@@ -69,6 +70,8 @@ export async function wissenskarte(ctx) {
       + 'Häppchen mit Überschrift und „Für Große“ (zu, mit dem ersten Absatz); „Stimmt das?“ löst auf, speichert ohne „gelernt“, bleibt nach Neuladen; '
       + 'nach dem Tippen bleiben die übrigen Antworten unverblasst (Kontrast AA); Zeichnung als Nachbarkachel ohne Legende, so hoch wie eine Fotokachel');
   }
+  // Teilschritt 3: Stufen auf der Karte (Wahl, Fragen je Stufe, Vorschläge).
+  await karteStufen(ctx);
   await zusatzfrageImPass(ctx);
   await mitKarte(ctx, HANDY, ELEFANT.id, falscheHauptantwortBleibtOffen);
   ctx.report.checks.push('Pilot-Karte nach falscher Hauptantwort: zurück von der Nachbarkarte und über „Noch einmal nachdenken“ im Wissensbuch '

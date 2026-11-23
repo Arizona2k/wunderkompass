@@ -15,7 +15,7 @@ import VERBINDUNGEN from '../../app/world-connections.json' with {type: 'json'};
 import HINWEISBANK from '../../app/challenge-hints.json' with {type: 'json'};
 // karten-daten.ts lädt JSON ohne Importattribut; das ergänzen die Lade-Hooks.
 await import('../../scripts/test-runtime.mjs');
-const {kartenFragen} = await import('../../app/kern/karte/karten-daten.ts');
+const {kartenFragen, fragenFuerStufe, ersteFrage} = await import('../../app/kern/karte/karten-daten.ts');
 
 const TITEL = new Map(KATALOG.map(t => [t.id, t.title]));
 
@@ -149,6 +149,10 @@ const seite = scope => (typeof scope.page === 'function' ? scope.page() : scope)
 // und (nur die Hauptfrage, wenn vorhanden) wrongReasons.
 export const fragenDerKarte = t => kartenFragen(t, HINWEISBANK);
 export const hauptfrage = t => fragenDerKarte(t)[0];
+// Teilschritt 3 (E4): Die Fragen, die eine Stufe auf der Karte zeigt (eigene Stufe zuerst), und die Frage,
+// die die Karte beim Öffnen wählt – wie in der App (fragenFuerStufe, ersteFrage).
+export const fragenAufStufe = (t, stufe) => fragenFuerStufe(fragenDerKarte(t), stufe);
+export const ersteFrageAufStufe = (t, stufe, review = {}, kartenstand) => ersteFrage(fragenDerKarte(t), review, kartenstand, stufe);
 export const zusatzfragen = t => fragenDerKarte(t).slice(1);
 export const richtigeAntwort = frage => frage.question.answers[frage.question.correct];
 export const falscheAntworten = frage => frage.question.answers.filter((_, i) => i !== frage.question.correct);
@@ -222,4 +226,16 @@ export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinwe
   await bereich.getByText(q.why, {exact: true}).waitFor();
   assert.equal(await richtig.isDisabled(), true, frage.id + ': nach der richtigen Antwort sind die Knöpfe gesperrt');
   return frage;
+}
+
+// ---- Stufe auf der Karte (Teilschritt 3, E2) ----
+export const stufenWahl = scope => scope.locator('.wissenskarte .stufen-wahl').first();
+const STUFEN_NAME = {entdecker: 'Entdecker', profi: 'Profi', experte: 'Experte'};
+// Stellt die Stufe über „Ändern“ um (ein Tipp öffnet, ein zweiter wählt) und wartet, bis die Zeile sie nennt.
+export async function stufeWaehlen(scope, stufe, {touch = false} = {}) {
+  const wahl = stufenWahl(scope);
+  const tippe = knopf => (touch ? knopf.tap() : knopf.click());
+  await tippe(wahl.getByRole('button', {name: 'Stufe ändern', exact: true}));
+  await tippe(wahl.getByRole('group', {name: 'Stufe wählen'}).getByRole('button').filter({hasText: STUFEN_NAME[stufe]}));
+  await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: ' + STUFEN_NAME[stufe]}).waitFor();
 }

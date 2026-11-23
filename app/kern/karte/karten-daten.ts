@@ -8,6 +8,7 @@ import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
+import {STUFEN, STUFEN_NAME, type Stufe} from '../stufe';
 
 export type KartenFrage = {
   id: string;
@@ -18,10 +19,13 @@ export type KartenFrage = {
   hints: string[];
   // Je Antwort ein Satz, warum sie nicht passt; null bei der richtigen (wie questionFeedback im Katalog).
   wrongReasons?: (string | null)[];
+  // Teilschritt 3 (E4, E6): Die Hauptfrage ist Entdecker; Zusatz- und Challenge-Fragen tragen ihre Stufe.
+  level: Stufe;
 };
+type Tippbank = Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>;
 
-// Alle Fragen einer Karte: zuerst die Hauptfrage, dann die Zusatzfragen in Datenreihenfolge.
-export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps: string[]}>): KartenFrage[] {
+// Alle Fragen einer Karte: zuerst die Hauptfrage, dann die Zusatzfragen, dann die Challenge-Fragen, je in Datenreihenfolge.
+export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage[] {
   // Hinweise wie auf der alten Karte: Der Hinweis aus questionFeedback ersetzt den ersten Schritt der Bank.
   const bank = hintBank[topic.id + ':mini']?.steps ?? [];
   const feedback = topic.questionFeedback;
@@ -33,24 +37,66 @@ export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps:
     question: topic.question,
     hints: feedback ? [feedback.hint, ...bank.slice(1)] : [...bank],
     ...(feedback ? {wrongReasons: feedback.wrongReasons} : {}),
+    level: 'entdecker',
   };
-  const zusatz = (topic.moreQuestions ?? []).map(({id, hint, prompt, answers, correct, why}): KartenFrage => ({
-    id,
-    reviewId: 'world-question:' + id,
-    answerKey: 'topicAnswer:' + id,
-    itemsKey: 'items:' + id,
+  const schluessel = (id: string) => ({id, reviewId: 'world-question:' + id, answerKey: 'topicAnswer:' + id, itemsKey: 'items:' + id});
+  const zusatz = (topic.moreQuestions ?? []).map(({id, hint, hints, level, wrongReasons, prompt, answers, correct, why}): KartenFrage => ({
+    ...schluessel(id),
     question: {prompt, answers, correct, why},
-    hints: [hint],
+    hints: hints ?? (hint ? [hint] : []),
+    ...(wrongReasons ? {wrongReasons} : {}),
+    level: level ?? 'entdecker',
   }));
-  return [haupt, ...zusatz];
+  // Die Challenge-Fragen erscheinen auch auf ihrer Karte (B7). Auf der Karte haben sie eigene Schlüssel;
+  // in der Wissens-Challenge bleibt ihre Wiederholung challenge:<id>. Ohne Einstufung gelten sie als Profi.
+  const challenge = (topic.challenges ?? []).map(({id, level, prompt, answers, correct, why}): KartenFrage => {
+    const eintrag = hintBank[id];
+    return {
+      ...schluessel(id),
+      question: {prompt, answers, correct, why},
+      hints: [...(eintrag?.steps ?? [])],
+      ...(eintrag?.wrongReasons ? {wrongReasons: eintrag.wrongReasons} : {}),
+      level: level ?? 'profi',
+    };
+  });
+  return [haupt, ...zusatz, ...challenge];
 }
 
-// Welche Frage „Rate mal!“ zeigt:
+// Die Fragen, die eine Stufe zeigen darf: ihre eigene Stufe zuerst, dann die leichteren; je in Datenreihenfolge.
+// „Noch eine Frage“ blättert in genau dieser Liste (bleibt bei der gewählten Stufe und darunter).
+export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
+  const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
+  return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));
+}
+
+// Gibt es auf der Karte Fragen genau dieser Stufe? Ohne Experten-Frage spielt ein Experte dort Profi (E3).
+export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen.some(f => f.level === stufe);
+
+// Ehrlicher Satz unter der Stufenwahl, wenn die Karte die gewählte Stufe noch nicht hat (E3): Dann spielt das Kind
+// die höchste vorhandene Stufe darunter. Keine unechte Experten-Stufe aus „mehr vom Gleichen“.
+export function stufenHinweis(fragen: KartenFrage[], stufe: Stufe): string | null {
+  if (hatFragenDerStufe(fragen, stufe)) return null;
+  const darunter = STUFEN.slice(0, STUFEN.indexOf(stufe)).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
+  return `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[darunter]}.`;
+}
+
+// Eine gespeicherte Antwortreihe gilt nur, wenn sie genau die heutigen Antworten vertauscht (alte Wörter über ihren Alias).
+// Sonst null: Die Karte mischt dann neu, statt in der Reihenfolge der Daten zu zeigen (dort steht die Lösung oft vorn),
+// z. B. wenn eine Frage auf Profi eine vierte Antwort bekommen hat (Teilschritt 3, E5).
+export function gueltigeReihe(frage: KartenFrage, gespeichert: unknown): string[] | null {
+  const antworten = frage.question.answers;
+  if (!Array.isArray(gespeichert)) return null;
+  const reihe = gespeichert.map(wert => (typeof wert === 'string' ? restoreAnswerWording(frage.id, wert) : wert));
+  return reihe.length === antworten.length && new Set(reihe).size === antworten.length && reihe.every(a => antworten.includes(a)) ? reihe : null;
+}
+
+// Welche Frage „Rate mal!“ zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
 // 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
 //    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
-// 2. sonst die erste, die das Kind noch nie beantwortet hat;
+// 2. sonst die erste, die das Kind noch nie beantwortet hat (auf Profi also zuerst eine neue Profi-Frage);
 // 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
-export function ersteFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
+export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
+  const fragen = fragenFuerStufe(alle, stufe);
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
   const offen = fragen.find(frage => {
     const wert = kartenstand?.[frage.answerKey];

@@ -8,7 +8,7 @@ export function isRetainedAnswerWordingCorrection(c){
  return c.topic===a.topic&&Array.isArray(before)&&Array.isArray(after)&&before.length===3&&after.length===before.length&&c.before.correct===c.after.correct&&c.before.correct!==a.index&&before[a.index]===a.before&&after[a.index]===a.after&&before.every((value,index)=>index===a.index||value===after[index]);
 }
 
-// Four exact prior challenge choice sets; no incorrect answer is renamed into a different answer.
+// Exact prior challenge choice sets (several per question are allowed); no incorrect answer is renamed into a different answer.
 // Existing orders identify the known variant without adding a save field or learning store.
 const retainedChallengeChoices=[
   {
@@ -183,16 +183,16 @@ const retainedChallengeChoices=[
     "beforeWrongReasons": null
   }
 ];
-const same=(a,b)=>Array.isArray(a)&&a.length===b.length&&a.every((value,index)=>value===b[index]);
 const permutation=(order,answers)=>Array.isArray(order)&&order.length===answers.length&&new Set(order).size===order.length&&order.every(value=>typeof value==='string'&&answers.includes(value));
 /**
  * @param {{id:string,topic:string,difficulty:string,prompt:string,answers:string[],correct:number,why:string}} question
  * @param {unknown} order
  * @returns {{answers:string[],retainedAnswerOrder:boolean,retainedWrongReasons:(string|null)[]|null}|null}
  */
-export function retainedChallengeChoiceVariant(question,order){
+// Eine Frage kann mehrere frühere Antwortsätze haben (Teilschritt 3: erst umformuliert, dann eine vierte Antwort).
+// Eine alte Reihenfolge passt zu genau dem Satz, den sie vertauscht; Frage, Lösung, richtige Antwort und Erklärung bleiben gleich.
+export function retainedChallengeChoiceVariant(question,order,rows=retainedChallengeChoices){
  if(permutation(order,question.answers))return {answers:question.answers,retainedAnswerOrder:false,retainedWrongReasons:null};
- const old=retainedChallengeChoices.find(row=>row.id===question.id&&row.topic===question.topic&&row.difficulty===question.difficulty);
- if(!old||old.prompt!==question.prompt||old.correct!==question.correct||old.why!==question.why||!same(question.answers,old.currentAnswers)||!permutation(order,old.beforeAnswers))return null;
- return {answers:[...old.beforeAnswers],retainedAnswerOrder:true,retainedWrongReasons:old.beforeWrongReasons};
+ const old=rows.find(row=>row.id===question.id&&row.topic===question.topic&&row.difficulty===question.difficulty&&row.prompt===question.prompt&&row.correct===question.correct&&row.why===question.why&&row.beforeAnswers[row.correct]===question.answers[question.correct]&&permutation(order,row.beforeAnswers));
+ return old?{answers:[...old.beforeAnswers],retainedAnswerOrder:true,retainedWrongReasons:old.beforeWrongReasons}:null;
 }

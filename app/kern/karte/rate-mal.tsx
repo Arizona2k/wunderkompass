@@ -3,7 +3,7 @@
 // Falsch zeigt „Noch nicht ganz. Versuch es noch einmal!“ und den Tipp, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, type ReactNode} from 'react';
 import {Check} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import {LearningFeedback} from '../../learning-motion';
@@ -13,20 +13,18 @@ import {shuffle} from '../../../lib/shuffle';
 import type {Review} from '../../progress-storage';
 import {wiederholungFuerAntwort} from '../wiederholung';
 import {WOERTER} from '../woerter';
-import type {KartenFrage} from './karten-daten';
+import {gueltigeReihe, type KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
-// Passt die gespeicherte Reihe nicht mehr zu den Antworten (Frage geändert), gilt die Reihenfolge der Daten.
-// Die Karte nutzt `antwortReihe` mit dem Spielstand aus dem Pass auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
+// Passt die gespeicherte Reihe nicht mehr zu den Antworten (z. B. eine vierte Antwort auf Profi), mischt die Karte
+// beim Öffnen neu und speichert das (gueltigeReihe). Die Karte nutzt `antwortReihe` mit dem Spielstand aus dem Pass
+// auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
 export function antwortReihe(frage: KartenFrage, gespeichert: unknown): readonly string[] {
-  const q = frage.question;
-  if (!Array.isArray(gespeichert)) return q.answers;
-  const reihe = gespeichert.map(wert => (typeof wert === 'string' ? restoreAnswerWording(frage.id, wert) : wert));
-  return reihe.length === q.answers.length && new Set(reihe).size === q.answers.length && reihe.every(a => q.answers.includes(a)) ? reihe : q.answers;
+  return gueltigeReihe(frage, gespeichert) ?? frage.question.answers;
 }
 
 function useAntwortReihe(frage: KartenFrage): readonly string[] {
-  const [gespeicherteReihe] = useSavedGame(frage.itemsKey, () => shuffle(frage.question.answers));
+  const [gespeicherteReihe] = useSavedGame<readonly string[]>(frage.itemsKey, () => shuffle(frage.question.answers), (wert, neu) => gueltigeReihe(frage, wert) ?? neu);
   return antwortReihe(frage, gespeicherteReihe);
 }
 
@@ -43,10 +41,13 @@ type RateMalProps = {
   onWeiter?: () => void;
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
+  // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage) und darunter Platz für den Vorschlag.
+  onAntwort?: (frageId: string, korrekt: boolean) => void;
+  unterRueckmeldung?: ReactNode;
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, unterRueckmeldung}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -67,6 +68,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
     if (art === 'zaehlen') onReview(frage.reviewId, korrekt);
     else if (art === 'nachbessern') onNachbessern?.(frage.reviewId);
     if (korrekt) onLearn();
+    onAntwort?.(frage.id, korrekt);
   }
 
   return (
@@ -115,6 +117,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
           )}
         </>}
       </LearningFeedback>
+      {unterRueckmeldung}
       {/* Der Tipp steht unter der Rückmeldung: erst „Noch nicht ganz …“, dann die Hilfe. */}
       {!richtig && <QuestionHints key={frage.id} hints={frage.hints} onRead={onRead}/>}
     </section>

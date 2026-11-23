@@ -94,6 +94,8 @@
 .wissenskarte-merken[aria-pressed="true"] { background: var(--motiv-stark); border-color: var(--motiv-symbol); color: var(--motiv-text); }
 
 /* „Rate mal!“ */
+/* Stufenwahl über „Rate mal!“ (Teilschritt 3, E2). */
+.wissenskarte .wissenskarte-stufe { margin: 0 0 12px; padding: 10px 14px; border: 1px solid var(--kern-linie); border-radius: var(--kern-rund); background: var(--kern-flaeche); }
 .wissenskarte .rate-mal {
   padding: 20px; border: 2px solid var(--motiv-stark); border-radius: 20px;
   background: var(--motiv-grund); scroll-margin-top: 24px;

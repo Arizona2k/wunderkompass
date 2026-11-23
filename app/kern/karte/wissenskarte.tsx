@@ -24,7 +24,10 @@ import Kartenbild from './kartenbild';
 import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
-import {dazuPasst, ersteFrage, hatAusprobieren, kartenFragen, weitereVerbindungen} from './karten-daten';
+import {dazuPasst, ersteFrage, fragenFuerStufe, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
+import {leseStufe, type Stufe} from '../stufe';
+import StufenWahl from '../stufen-wahl';
+import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
 import './karte.css';
 
 type WissenskarteProps = {
@@ -80,16 +83,28 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Titel = embedded ? 'h2' : 'h1';
   const Abschnitt = embedded ? 'h3' : 'h2';
   const Unterabschnitt = embedded ? 'h4' : 'h3';
-  // Die Frage wird beim Öffnen einmal gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue, dann die fällige)
-  // und wechselt nur über „Noch eine Frage“, nie von selbst, während das Kind antwortet.
-  // Danach kommt die nächste Frage der Karte, am Ende wieder die erste.
-  const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]}>), [t]);
-  const [nummer, setNummer] = useState(() => fragen.indexOf(ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id])));
-  const [weitergeblaettert, setWeitergeblaettert] = useState(false);
-  const frage = fragen[nummer];
+  // Die Frage wird beim Öffnen für die gemeinsame Stufe gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue,
+  // dann die fällige; Teilschritt 3, E4) und wechselt nur über „Noch eine Frage“ oder eine andere Stufe, nie von selbst,
+  // während das Kind antwortet. „Noch eine Frage“ blättert in den Fragen der Stufe und darunter, am Ende wieder vorn.
+  const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>), [t]);
+  const stufe = leseStufe(a.progress);
+  const waehle = (s: Stufe) => ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id], s).id;
+  const [wahl, setWahl] = useState(() => ({stufe, id: waehle(stufe), weiter: false}));
+  const {vorschlag, merke, schliessen} = useStufenVorschlag(t.id, stufe);
+  // Andere Stufe (Wahl, Vorschlag oder ein anderer Tab): Die Karte wählt neu wie beim Öffnen.
+  if (wahl.stufe !== stufe) {
+    setWahl({stufe, id: waehle(stufe), weiter: false});
+    schliessen();
+  }
+  const frage = fragen.find(f => f.id === wahl.id) ?? fragen[0];
+  const weitergeblaettert = wahl.weiter;
   // Dieselbe Reihenfolge wie in „Rate mal!“ (dort aus demselben Spielstand gelesen).
   const auswahl = antwortReihe(frage, a.progress.gameSessions['topic:' + t.id]?.[frage.itemsKey]);
-  const weiter = fragen.length > 1 ? () => { setNummer(n => (n + 1) % fragen.length); setWeitergeblaettert(true); } : undefined;
+  const liste = fragenFuerStufe(fragen, stufe);
+  const weiter = liste.length > 1 ? () => {
+    schliessen();
+    setWahl(w => ({...w, id: liste[(liste.findIndex(f => f.id === w.id) + 1) % liste.length].id, weiter: true}));
+  } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
   const welt = WORLD_CATEGORIES.find(c => c.id === t.category);
   const kontext = t.history?.date ?? t.person?.field;
@@ -160,6 +175,12 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         </div>
       </header>
 
+      {a.onStufe && (
+        <div className="wissenskarte-stufe">
+          <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/>
+        </div>
+      )}
+
       <RateMal
         key={frage.id}
         frage={frage}
@@ -171,6 +192,14 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         onRead={a.onRead}
         onWeiter={weiter}
         fokus={weitergeblaettert}
+        onAntwort={merke}
+        unterRueckmeldung={vorschlag && a.onStufe ? (
+          <StufenVorschlagHinweis
+            vorschlag={vorschlag}
+            onJa={() => { schliessen(); a.onStufe?.(vorschlag.ziel); }}
+            onNein={schliessen}
+          />
+        ) : null}
       />
 
       <section className="world-short wissenskarte-abschnitt" tabIndex={-1}>
