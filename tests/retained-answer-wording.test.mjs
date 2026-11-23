@@ -97,8 +97,8 @@ test('frühere Antwortsätze: jede bekannte alte Fassung bleibt lesbar, Fremdes 
  const {retainedChallengeChoiceVariant}=await import('../app/retained-answer-wording.mjs');
  const frage={id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',answers:['A','B','C','D']};
  const reihen=[
-  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','X','Y'],beforeWrongReasons:null},
-  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','B','C'],beforeWrongReasons:[null,'nicht B','nicht C']},
+  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','X','Y'],currentAnswers:['A','B','C','D'],beforeWrongReasons:null},
+  {id:'t-1',topic:'t',difficulty:'medium',prompt:'P?',correct:0,why:'W.',beforeAnswers:['A','B','C'],currentAnswers:['A','B','C','D'],beforeWrongReasons:[null,'nicht B','nicht C']},
  ];
  assert.deepEqual(retainedChallengeChoiceVariant(frage,['D','C','B','A'],reihen),{answers:frage.answers,retainedAnswerOrder:false,retainedWrongReasons:null});
  assert.deepEqual(retainedChallengeChoiceVariant(frage,['C','B','A'],reihen),{answers:['A','B','C'],retainedAnswerOrder:true,retainedWrongReasons:[null,'nicht B','nicht C']});
@@ -107,4 +107,5 @@ test('frühere Antwortsätze: jede bekannte alte Fassung bleibt lesbar, Fremdes 
  assert.equal(retainedChallengeChoiceVariant({...frage,prompt:'Anders?'},['C','B','A'],reihen),null,'andere Frage');
  assert.equal(retainedChallengeChoiceVariant({...frage,correct:1},['C','B','A'],reihen),null,'andere Lösung');
  assert.equal(retainedChallengeChoiceVariant({...frage,id:'t-2'},['C','B','A'],reihen),null,'andere ID');
+ assert.equal(retainedChallengeChoiceVariant({...frage,answers:['A','B','C','E']},['C','B','A'],reihen),null,'ungeprüfte heutige Fassung');
 });

@@ -183,6 +183,7 @@ const retainedChallengeChoices=[
     "beforeWrongReasons": null
   }
 ];
+const same=(a,b)=>Array.isArray(a)&&a.length===b.length&&a.every((value,index)=>value===b[index]);
 const permutation=(order,answers)=>Array.isArray(order)&&order.length===answers.length&&new Set(order).size===order.length&&order.every(value=>typeof value==='string'&&answers.includes(value));
 /**
  * @param {{id:string,topic:string,difficulty:string,prompt:string,answers:string[],correct:number,why:string}} question
@@ -190,9 +191,10 @@ const permutation=(order,answers)=>Array.isArray(order)&&order.length===answers.
  * @returns {{answers:string[],retainedAnswerOrder:boolean,retainedWrongReasons:(string|null)[]|null}|null}
  */
 // Eine Frage kann mehrere frühere Antwortsätze haben (Teilschritt 3: erst umformuliert, dann eine vierte Antwort).
-// Eine alte Reihenfolge passt zu genau dem Satz, den sie vertauscht; Frage, Lösung, richtige Antwort und Erklärung bleiben gleich.
+// Jede Zeile gilt nur für die geprüfte heutige Fassung (currentAnswers); eine alte Reihenfolge passt zu genau dem Satz,
+// den sie vertauscht. Frage, Lösung, richtige Antwort und Erklärung bleiben gleich.
 export function retainedChallengeChoiceVariant(question,order,rows=retainedChallengeChoices){
  if(permutation(order,question.answers))return {answers:question.answers,retainedAnswerOrder:false,retainedWrongReasons:null};
- const old=rows.find(row=>row.id===question.id&&row.topic===question.topic&&row.difficulty===question.difficulty&&row.prompt===question.prompt&&row.correct===question.correct&&row.why===question.why&&row.beforeAnswers[row.correct]===question.answers[question.correct]&&permutation(order,row.beforeAnswers));
+ const old=rows.find(row=>row.id===question.id&&row.topic===question.topic&&row.difficulty===question.difficulty&&row.prompt===question.prompt&&row.correct===question.correct&&row.why===question.why&&same(question.answers,row.currentAnswers)&&row.beforeAnswers[row.correct]===question.answers[question.correct]&&permutation(order,row.beforeAnswers));
  return old?{answers:[...old.beforeAnswers],retainedAnswerOrder:true,retainedWrongReasons:old.beforeWrongReasons}:null;
 }
