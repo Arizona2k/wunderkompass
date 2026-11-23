@@ -23,6 +23,7 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 4. **Pakete:** veraltete oder unsichere Pakete (`pnpm outdated`, `pnpm audit --prod`), nur wenn Netz da ist. Beachte: neue Versionen erst ab 7 Tagen Alter (`minimumReleaseAge`), Playwright immer auf der neuesten solchen Version.
 5. **Modellnamen der Helfer:** `model:` und `effort:` in `.claude/agents/*.md` gegen die Helfer-Tabelle und den Modell-Stand in `CLAUDE.md`. Vorübergehende Ausnahmen mit Enddatum in `STATUS.md`: Ist eines vorbei?
 6. **Vercel, Branch-Regeln, Workflow-Namen:** Passen die Namen in `CLAUDE.md` (Job „Required quality checks“, Projekt- und Team-ID, Adressen) zu `.github/workflows/quality.yml` und `vercel.json`? Was du ohne Zugang nicht prüfen kannst, nennst du unter „Nicht geprüft“.
+7. **Aufräumen:** Was macht das Arbeiten langsamer, unsauberer oder umständlicher und kann weg oder einfacher werden? Zum Beispiel unbenutzte Dateien und Pakete, doppelte oder überholte Tests, lange Suiten, die sich überschneiden, Exporte in Git, Unterlagen, die niemand mehr braucht. Je Vorschlag: was wegfällt, was es spart, und dass dabei kein Pass, keine ID und kein alter Link verloren geht.
 
 ## Antwortformat
 

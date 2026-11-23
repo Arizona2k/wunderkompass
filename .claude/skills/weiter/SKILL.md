@@ -17,14 +17,15 @@ Führe diese Schritte der Reihe nach aus. Ändere dabei nichts außer dem Branch
    ```
    - Umgestellt wird nur ein Branch ohne eigene Commits, es geht also nichts verloren.
    - Bei „STOPP“ (eigene Commits ohne `test-live`-Stand oder Sitzung direkt auf `main`) nichts erzwingen, sondern den Nutzer fragen.
-2. **Lesen:** `CLAUDE.md` ganz, dann `STATUS.md` ganz. Bei Bedarf `BACKLOG.md` (nur den Abschnitt der aktuellen Phase).
+2. **Lesen:** `CLAUDE.md` ganz, dann `STATUS.md` ganz. Bei Bedarf `BACKLOG.md` (nur den Abschnitt der aktuellen Phase). Was `STATUS.md` beim nächsten Schritt nennt (Plan, Entscheidungsliste, Helferberichte), vor dem Planen lesen: darauf aufbauen, nicht neu ausdenken.
 3. **Git-Stand:** `git status --short`, `git log --oneline -5`, `git fetch origin` und Abstand zu `origin/test-live`. Gibt es offene PRs nach `test-live` (GitHub-Werkzeuge)? Gibt es unfertige eigene Arbeit (nicht committete Dateien, ungepushte Commits)? Die kommt zuerst.
 4. **Werkzeuge:** Im Cloud-Container `export PATH=/opt/node24/bin:$PATH`, dann `node -v` (24) und `pnpm -v` (11.25.0). Nur wenn `node_modules` fehlt: `pnpm install --frozen-lockfile`.
    - **Playwright-Check:** `npm view playwright time --json` zeigt alle Versionen mit Datum. Ist die neueste Version, die mindestens 7 Tage alt ist, neuer als die in `package.json`: als ersten kleinen Schritt `pnpm add -D playwright@<version> --save-exact`, dann die Browser holen (nächster Punkt), `pnpm run check`, eigener Commit. Kein Vorab-Beta, kein Alpha.
    - **Browser:** Startet ein Browser nicht, weil seine Version fehlt (z. B. Chat in der falschen Umgebung gestartet): `pnpm exec playwright install --with-deps chromium firefox webkit`. Dem Nutzer sagen, dass neue Chats in der Umgebung „wunderkompass“ starten sollen.
-5. **Modell-Check:** Vergleiche die heute verfügbaren Claude-Modelle mit dem „Modell-Stand“ in `CLAUDE.md`. Gibt es ein neueres oder stärkeres Modell, schlage dem Nutzer kurz vor, ob ein Wechsel lohnt, und trage nach seiner Antwort den neuen Stand in `CLAUDE.md` ein.
+5. **Helfer-Check:** Stehen alle Dateien aus `.claude/agents/` in der Helferliste dieses Chats (die Liste, die das Agent-Werkzeug anbietet)? Fehlt einer, ist der Chat meist auf einem alten Stand gestartet oder der Helfer ist neu. Dem Nutzer sagen und den Helfer bis zum nächsten Chat von Hand einsetzen (`CLAUDE.md`, Abschnitt Helfer). Nie still weglassen.
+6. **Modell-Check:** Vergleiche die heute verfügbaren Claude-Modelle mit dem „Modell-Stand“ in `CLAUDE.md`. Gibt es ein neueres oder stärkeres Modell, schlage dem Nutzer kurz vor, ob ein Wechsel lohnt, und trage nach seiner Antwort den neuen Stand in `CLAUDE.md` ein.
    - Lies in `STATUS.md` den Abschnitt „Vorübergehende Modell-Ausnahmen“. Ist ein Enddatum vorbei: wieder das Modell aus `CLAUDE.md` nehmen, den Eintrag löschen und es dem Nutzer im Bericht sagen. Läuft eine Ausnahme noch, die Helfer so lange mit dem Ersatzmodell beauftragen.
-6. **Bericht an den Nutzer** in der festen Form, kurz und ohne Fachjargon:
+7. **Bericht an den Nutzer** in der festen Form, kurz und ohne Fachjargon:
    - Was ist fertig?
    - Was kannst du dir ansehen?
    - Was musst du entscheiden?
