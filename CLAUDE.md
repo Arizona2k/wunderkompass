@@ -92,7 +92,9 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 ## Helfer (`.claude/agents/`)
 
-Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
+Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude entscheidet und setzt um. Wer einen Entwurf schreibt, prüft ihn nicht selbst.
+
+**Neue Helfer** (Wunsch des Nutzers, 23.11.2026): Brauchen wir einen Helfer, um schneller, ordentlicher oder effizienter voranzukommen, schlägt Claude ihn mit Grund vor (und sagt auch, wovon er abrät); entschieden wird gemeinsam mit dem Nutzer.
 
 **Helfer müssen laufen** (Wunsch des Nutzers, 23.11.2026). Ein Chat liest Helfer und Kurzbefehle aus seinem Hauptordner; ein neuer Helfer erscheint erst, wenn er dort liegt (manchmal mit Verzögerung, sicher im nächsten Chat). Darum im Hauptordner arbeiten; ein Nebenordner nur kurz, danach den Hauptordner nachziehen. Fehlt ein Helfer aus `.claude/agents/` in der Helferliste des Chats (z. B. neu angelegt): trotzdem einsetzen, von Hand als `general-purpose` mit Modell und Stufe aus seiner Datei und seiner Anleitung als Auftrag, und es dem Nutzer sagen. Nie still weglassen. Nach jedem spät gefundenen Fehler (erst in der CI-Vollprüfung oder in `test:full`) läuft der `technik-pruefer`, bevor die Korrektur gemeldet wird.
 
@@ -101,6 +103,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `kinder-redaktion` | Texte für 5- bis 10-Jährige: Satzlänge, Fachwörter, Ton, Länge, Doppeltes, Mini-Fragen | opus / high |
 | `fakten-pruefer` | Aussagen gegen Quellen, Zahlen, Einheiten, Aktualität | opus / high |
 | `stufen-pruefer` | Schwierigkeit je Stufe (Entdecker, Profi, Experte): machbar für Kleine, fordernd für 10- bis 12-Jährige, keine Ratemuster (seit 23.11.2026) | opus / high |
+| `karten-autor` | Schreibt Entwürfe für Karteninhalte (Häppchen, „Stimmt das?“, Fragen je Stufe, Tipps, „warum nicht“, Verbindungssätze) mit Quelle je Aussage; prüft nicht selbst, danach prüfen `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer` unabhängig (seit 23.11.2026) | opus / high |
 | `design-pruefer` | Screenshots in 320, 390, 768, 1280, 1440 px: Lesbarkeit, Kontrast, Fokus, Tippflächen, Abgeschnittenes, Bildwirkung | sonnet / high |
 | `code-pruefer` | Änderungen auf Fehler, besonders Pass, IDs und Links | opus / high |
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
