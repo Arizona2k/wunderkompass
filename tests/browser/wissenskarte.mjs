@@ -65,6 +65,9 @@ export async function wissenskarte(ctx) {
       + 'nach dem Tippen bleiben die übrigen Antworten unverblasst (Kontrast AA); Zeichnung als Nachbarkachel ohne Legende, so hoch wie eine Fotokachel');
   }
   await zusatzfrageImPass(ctx);
+  await mitKarte(ctx, HANDY, ELEFANT.id, falscheHauptantwortBleibtOffen);
+  ctx.report.checks.push('Pilot-Karte nach falscher Hauptantwort: zurück von der Nachbarkarte und über „Noch einmal nachdenken“ im Wissensbuch '
+    + 'wieder die Hauptfrage mit „Überlege noch einmal.“, ohne Lösung und ohne neue Zusatzfrage; nach richtiger Antwort und Neuladen die erste Zusatzfrage');
   const mitEinstieg = catalog.filter(t => t.chapters && t.learning);
   assert.ok(mitEinstieg.length > 0, 'es gibt Karten mit Häppchen und „Ganz einfach“');
   for (const t of mitEinstieg) await mitKarte(ctx, HANDY, t.id, einstiegImAusprobieren(t));
@@ -602,6 +605,51 @@ async function stimmtDas(page, {neuLaden, touch}) {
 }
 
 // Ein ausgedachter Pass: Die Hauptfrage der Elefantenkarte ist schon beantwortet.
+// Pilot-Karte mit falscher Hauptantwort (Schlussprüfung Teil B, W1): Wer zurückkommt, denkt an derselben Frage weiter,
+// statt eine neue Zusatzfrage zu bekommen – zurück von der Nachbarkarte und über das Wissensbuch („Noch einmal nachdenken“).
+async function falscheHauptantwortBleibtOffen(page, {neuLaden, touch}) {
+  const q = ELEFANT.question;
+  const falsch = q.answers.find((_, i) => i !== q.correct);
+  const titelIst = t => page.waitForFunction(x => document.getElementById('world-topic-title')?.getAttribute('aria-label') === x, t, WARTEN);
+  const hauptfrageOffen = async wo => {
+    await rateMal(page).locator('.rate-mal-frage').getByText(q.prompt, {exact: true}).waitFor(WARTEN);
+    await rateMal(page).getByText('Überlege noch einmal.', {exact: true}).waitFor(WARTEN);
+    assert.equal(await rateMal(page).getByText(q.why, {exact: true}).count(), 0, wo + ': keine Lösung');
+    assert.equal(await antwortKnopf(page, q.answers[q.correct]).isDisabled(), false, wo + ': neu wählen geht');
+  };
+  await tippe(antwortKnopf(page, falsch), touch);
+  await hauptfrageOffen('nach der falschen Antwort');
+  // Zur Nachbarkarte und zurück.
+  const erste = verbindungenVon(ELEFANT.id)[0];
+  const kachel = dazuPasst(page).locator(`[data-route-focus="world-connection-${ELEFANT.id}-${erste.topic}"]`);
+  await kachel.scrollIntoViewIfNeeded();
+  await tippe(kachel, touch);
+  await titelIst(titelVon(erste.topic));
+  await page.goBack();
+  await titelIst(ELEFANT.title);
+  await hauptfrageOffen('zurück von der Nachbarkarte');
+  // Über das Wissensbuch: Die Karte steht dort unter „Ein Gedanke zum Wiederholen“.
+  await page.evaluate(() => { location.hash = 'book/notes'; });
+  const eintrag = page.locator('.knowledge-book article', {has: page.getByRole('heading', {name: ELEFANT.title, exact: true})});
+  const nachdenken = eintrag.getByRole('button', {name: 'Noch einmal nachdenken', exact: true});
+  await nachdenken.waitFor(WARTEN);
+  await tippe(nachdenken, touch);
+  await titelIst(ELEFANT.title);
+  await hauptfrageOffen('über das Wissensbuch');
+  let pass = await passLesen(page);
+  assert.equal(pass.gameSessions['topic:' + ELEFANT.id]?.topicAnswer, falsch, 'die falsche Antwort steht im Pass');
+  assert.equal(pass.review['world-question:' + ELEFANT.id]?.correct, false, 'die Wiederholung kennt die falsche Antwort');
+  for (const z of ELEFANT.moreQuestions) assert.equal(pass.review['world-question:' + z.id], undefined, 'keine Zusatzfrage wurde gestellt: ' + z.id);
+  // Jetzt richtig: Lösung und „gelernt“; die Wiederholung behält die erste Antwort. Nach dem Neuladen die erste Zusatzfrage.
+  await tippe(antwortKnopf(page, q.answers[q.correct]), touch);
+  await rateMal(page).getByText(q.why, {exact: true}).waitFor(WARTEN);
+  pass = await passLesen(page);
+  assert.ok(pass.discoveries.includes('learned:' + ELEFANT.id), 'richtige Antwort schreibt „gelernt“');
+  assert.equal(pass.review['world-question:' + ELEFANT.id]?.correct, false, 'die Wiederholung zählt nur die erste Antwort');
+  await neuLaden();
+  await rateMal(page).locator('.rate-mal-frage').getByText(ELEFANT.moreQuestions[0].prompt, {exact: true}).waitFor(WARTEN);
+}
+
 function passMitHauptfrage() {
   const progress = emptyProgress();
   progress.discoveries = ['topic:' + ELEFANT.id];

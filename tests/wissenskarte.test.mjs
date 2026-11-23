@@ -96,6 +96,28 @@ test('ersteFrage nimmt bei lauter gesehenen die am frühesten fällige', () => {
   assert.equal(ersteFrage(fragen, {'world-question:anderes': gesehen('2026-01-01')}).id, 'x');
 });
 
+test('ersteFrage nimmt zuerst eine Frage mit offener falscher Antwort', () => {
+  // Schlussprüfung Teil B (W1): Wer eine Frage falsch beantwortet hat, kommt beim Zurückkehren
+  // (Wissensbuch „Noch einmal nachdenken“, zurück von einer Nachbarkarte) wieder zu ihr, nicht zu einer neuen Zusatzfrage.
+  const fragen = kartenFragen(mitZusatzfragen, hintBank);
+  const q = mitZusatzfragen.question;
+  const falsch = q.answers.find((_, i) => i !== q.correct);
+  const falschGesehen = {correct: false, seen: 1, due: '2026-11-24'};
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: falsch}).id, 'x');
+  // Eine Antwort, die es nicht mehr gibt, ist auch offen (die Karte zeigt sie als frühere Wahl).
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: 'Gibt es nicht mehr'}).id, 'x');
+  // Eine offene Zusatzfrage genauso, auch wenn eine andere Zusatzfrage noch ungesehen ist.
+  const review = {'world-question:x': gesehen('2026-11-30'), 'world-question:x:rate-2': falschGesehen};
+  const stand = {topicAnswer: q.answers[q.correct], 'topicAnswer:x:rate-2': 'D'};
+  assert.equal(ersteFrage(fragen, review, stand).id, 'x:rate-2');
+  // Sind Haupt- und Zusatzfrage offen, kommt die frühere (die Hauptfrage).
+  assert.equal(ersteFrage(fragen, {...review, 'world-question:x': falschGesehen}, {...stand, topicAnswer: falsch}).id, 'x');
+  // Richtig beantwortet ist nicht offen: dann wie bisher die erste ungesehene.
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, {topicAnswer: q.answers[q.correct]}).id, 'x:rate-1');
+  // Ohne Kartenstand wie bisher.
+  assert.equal(ersteFrage(fragen, {'world-question:x': falschGesehen}, undefined).id, 'x:rate-1');
+});
+
 test('dazuPasst zeigt höchstens drei Kacheln in fester Reihenfolge', () => {
   const elefant = karte('animal-african-savanna-elephant');
   const kacheln = dazuPasst(elefant, verbindungen(elefant.id));

@@ -80,10 +80,11 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Titel = embedded ? 'h2' : 'h1';
   const Abschnitt = embedded ? 'h3' : 'h2';
   const Unterabschnitt = embedded ? 'h4' : 'h3';
-  // Die Frage wird beim Öffnen einmal gewählt (ersteFrage) und wechselt nur über „Noch eine Frage“,
-  // nie von selbst, während das Kind antwortet. Danach kommt die nächste Frage der Karte, am Ende wieder die erste.
+  // Die Frage wird beim Öffnen einmal gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue, dann die fällige)
+  // und wechselt nur über „Noch eine Frage“, nie von selbst, während das Kind antwortet.
+  // Danach kommt die nächste Frage der Karte, am Ende wieder die erste.
   const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]}>), [t]);
-  const [nummer, setNummer] = useState(() => fragen.indexOf(ersteFrage(fragen, a.progress.review)));
+  const [nummer, setNummer] = useState(() => fragen.indexOf(ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id])));
   const [weitergeblaettert, setWeitergeblaettert] = useState(false);
   const frage = fragen[nummer];
   // Dieselbe Reihenfolge wie in „Rate mal!“ (dort aus demselben Spielstand gelesen).
