@@ -145,6 +145,9 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - **Einleitungen** (sieht das Kind zuerst): ohne ganzen Satz bei Chinesischer Mauer, Kolosseum, Taj Mahal, Golden Gate Bridge, Burj Khalifa; Computer beginnt mit „Bit/Byte“; schwierige Wörter bei Zweitem Weltkrieg („nationalsozialistische“), Mauerbau („riegelte … ab“, „DDR-Regierung“), 11. September („al-Qaida“). Mit den Welten neu schreiben.
     - **Doppelte Themen:** Flug (Geschichte, Erfindung, Wissenschaft), Kompass, Buchdruck, Web/Internet/Netzwerk. Vorschlag der `kinder-redaktion`: Geschichte erzählt, was geschah; Erfindung und Wissenschaft erklären, wie es funktioniert. Beim Ausrollen der Häppchen so trennen.
     - **Holocaust-Karte:** Die Einleitung nennt offen die Ermordung von sechs Millionen Menschen. Die Karte fragt vor dem Öffnen nach (heikle Karte). Ob das für Fünfjährige reicht oder ein Hinweis für Eltern dazukommt, ist eine Produktentscheidung (Frage an den Nutzer bei der Freigabe von Teil A).
+    - **Zeitgebundene Sätze nachprüfen:** `history-iss` („Dort wohnen und forschen Menschen …“, Gegenwart). Der Betrieb der ISS ist bis etwa 2030 geplant (Faktencheck 23.11.2026); spätestens dann und bei jeder Meldung zum Betriebsende Satz und Karte anpassen. Nächster Termin zur Nachprüfung: 01.01.2028.
+    - **Chamäleon:** Der Satz sagt jetzt „vor allem Wärme und Stimmung“ und „Muster vom Hintergrund kopiert es nicht“. Für genau diese Art gibt es eine Studie zur Anpassung an grünen oder braunen Hintergrund (Keren-Rotem u. a., Animal Behaviour 2016; nur über Zusammenfassungen bekannt). Mit der Tierwelt die Karte selbst (Absätze, `surprise`) daraufhin prüfen.
+    - **Taj Mahal, Kern:** Der Steckbrief nennt „Ziegelmauerwerk im Kern“; Suchtreffer nennen teils roten Sandstein. Beim Ausrollen der Bauwerke gegen eine Fachquelle prüfen (UNESCO, ASI); die Kartenquellen waren am 23.11.2026 nicht abrufbar.
 
 ## Phase 2 – Tierwelt (grob)
 

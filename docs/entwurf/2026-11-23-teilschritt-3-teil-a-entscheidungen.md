@@ -60,6 +60,7 @@ Der Nutzer kann jede davon bei der Freigabe von Teil A ändern.
 - **24 Tierkarten:** Einleitung und „Ganz einfach“ waren derselbe Satz, ein Lehrsatz für Erwachsene („Artwissen benötigt …“). Beide sind neu (Vorschlag der `kinder-redaktion`, Faktencheck). Die Inhaltsregel „Ganz einfach steht nicht in der Einleitung“ gilt jetzt ohne Ausnahmeliste.
 - Heikle Karten: Der Satz nennt das Leid ehrlich und ohne Einzelheiten (Weltkriege: die Toten; 1492: das Leid der Menschen vor Ort; Mauerbau: der Zweck; Holocaust: der Grund war Hass).
 - „Was ist neu?“: zwei Einträge („Drei Stufen: Entdecker, Profi, Experte“, „Erst ein leichter Satz“).
+- **Endprüfung der Sätze:** Der `fakten-pruefer` fand keine falsche Zahl, aber 20 Sätze, die zu stark verkürzten (z. B. Buchdruck: „vorher alles mit der Hand“, obwohl in China und Korea schon gedruckt wurde; Fliegen: „Luft strömt vorbei und hebt“; Bestäubung: als ob alle Pflanzen Tiere bräuchten). Alle übernommen, dazu vier Vorschläge der `kinder-redaktion`; danach Nachprüfung durch beide (`2026-11-23-ganz-einfach-nachpruefung-*.md`). Beim Holocaust nennt der Satz jetzt auch den Mord („Millionen von ihnen wurden ermordet“), weil er für sich allein stimmen soll.
 
 ## Arbeitsweise
 
