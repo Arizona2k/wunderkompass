@@ -256,6 +256,12 @@ Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer
 - „Was wäre, wenn …?“: Gedankenexperimente zum Mitmachen. Scout: jede Seite fest als „Gedankenspiel“ kennzeichnen und mit „Das wissen wir wirklich“ auflösen. „Keine Schwerkraft“ ist eine fachliche Falle (dann gäbe es keine Erde und keine Luft); besser „ein Tag ohne Gewicht“ oder „Wie ist es auf der Raumstation?“. Dinosaurier heute: als Rekonstruktion, ohne Menschen daneben im Bild. Menschen auf dem Mars: als „Was bräuchte man?“, ohne Zeitangabe und Firmen. Weitere Fragen: kein Mond, keine Erddrehung, ohne Bienen (andere Bestäuber nennen), so klein wie eine Ameise.
 - Scout-Favoriten: Alltagsrätsel, „Was wäre, wenn …?“ (eng gefasst), Rekorde ab Tierrekorden.
 
+**Älteres Ideen-Issue #28 auf GitHub (Nutzer, 16.10.2026, „10 neue Erlebniswelten“):** Die zehn Felder (Urzeit, Weltall, Sport, Tiere, Ozeane, Erde, Geschichte, Technik und KI, Körper und Gehirn, Rätsel) stehen schon in der [Katalog-Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md) und hier in der Ideen-Sammlung. Nur im Issue standen bisher:
+- Fußball: Taktikfeld zum Ausprobieren, Torwinkel und Flugbahn, Physik im Sport; keine Spielerfotos, Vereinslogos oder Marken.
+- Querschnittsthemen: Mathe, Muster, Logik und Codes; Kunst, Musik, Sprachen und Weltkulturen; Medienkompetenz und KI verstehen; Nachhaltigkeit ohne Angst; eine Erfinder- und Bauwerkstatt (planen, prüfen, verbessern).
+- Erlebnis-Ideen: Zeitmaschine durch die Erdschichten, Fossilienlabor, Mars-Rover-Mission, U-Boot-Fahrt in die Tiefsee, Ökosystem-Labor, Quellenwerkstatt für Geschichte, Roboter- und Schaltungswerkstatt, Körper- und Gedächtnislabor, Musik- und Klanglabor.
+Die Arbeitsregeln im Issue stammen aus der Zeit vor Claude; es gilt `CLAUDE.md`.
+
 **Aus dem alten Bestand:**
 - Welten als Themeninseln mit eigenem Motiv auf einer Übersichtskarte.
 - Fortschritt im Pass als „geschafft / als Nächstes“, ohne Sterne oder Punkte.
