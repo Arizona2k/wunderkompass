@@ -152,6 +152,8 @@ export const hauptfrage = t => fragenDerKarte(t)[0];
 // Teilschritt 3 (E4): Die Fragen, die eine Stufe auf der Karte zeigt (eigene Stufe zuerst), und die Frage,
 // die die Karte beim Öffnen wählt – wie in der App (fragenFuerStufe, ersteFrage).
 export const fragenAufStufe = (t, stufe) => fragenFuerStufe(fragenDerKarte(t), stufe);
+// Die Zusatzfragen, die eine Stufe auf der Karte zeigt (ohne Hauptfrage); auf Entdecker z. B. beim Elefanten keine.
+export const zusatzfragenAufStufe = (t, stufe = 'entdecker') => fragenAufStufe(t, stufe).filter(f => f.id !== t.id);
 export const ersteFrageAufStufe = (t, stufe, review = {}, kartenstand) => ersteFrage(fragenDerKarte(t), review, kartenstand, stufe);
 export const zusatzfragen = t => fragenDerKarte(t).slice(1);
 export const richtigeAntwort = frage => frage.question.answers[frage.question.correct];

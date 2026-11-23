@@ -1,6 +1,6 @@
 import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
-import {antwortKnopf,falscheAntworten,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
+import {antwortKnopf,falscheAntworten,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragenAufStufe} from './karte-hilfen.mjs';
 const saveKey='erde-entdecken:save:v3';
 // Die Hauptfrage einer Personenkarte (eigener Hinweis, drei eigene „warum nicht“-Sätze) mit der Tastatur durchspielen.
 export async function retainedPeopleMiniQuestion(page,topic){
@@ -27,7 +27,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  // Karten mit Zusatzfragen (Pilot, Aufgabe 11) zeigen nach dem Neuladen die nächste offene Frage (ersteFrage), ohne Lösung.
  // Die gespeicherte Antwort prüft der Pass hier unten. Die Hauptfrage mit Lösung nach dem Neuladen prüfen weiter alle
  // Personenkarten ohne Zusatzfragen und wissenskarte.mjs.
- const beforeReload=await saved(),zusatz=zusatzfragen(topic),next=zusatz.find(z=>beforeReload.review[z.reviewId]===undefined);
+ const beforeReload=await saved(),zusatz=zusatzfragenAufStufe(topic),next=zusatz.find(z=>beforeReload.review[z.reviewId]===undefined);
  assert(!zusatz.length||next,id+': after the main question one additional question is still open');
  await page.reload();
  if(next){await zeigtFrage(page,topic,next);assert.equal(await mini.getByText(why,{exact:true}).count(),0,id+': no solution of the main question after reload');}

@@ -3,7 +3,7 @@ import {RETAINED_ANSWER_WORDING as alias} from '../../app/retained-answer-wordin
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import {ladeanfragen} from './harness.mjs';
-import {antwortKnopf,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
+import {antwortKnopf,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragenAufStufe} from './karte-hilfen.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {CHALLENGE_BANK,restoreChallenge,emptyChallenge}=await import('../../app/knowledge-challenge.ts');
 const {createSave,emptyProgress,SAVE_KEY}=await import('../../app/progress-storage.ts');
@@ -88,7 +88,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
   try{
    await p.goto(base+'#world/topic/'+id);await ready(p);
    // Pilot-Karten: erst die noch offenen Zusatzfragen richtig beantworten, dann führt „Noch eine Frage“ zur Hauptfrage.
-   for(const z of zusatzfragen(t)){
+   for(const z of zusatzfragenAufStufe(t)){
     const mini=rateMal(p);
     await zeigtFrage(p,t,z);
     await antwortKnopf(p,richtigeAntwort(z)).click();
@@ -99,7 +99,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
    const gespeichert=(await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+id];
    assert.equal(gespeichert.topicAnswer,richtig,id+': die alte Antwort bleibt unverändert gespeichert');
    await anfragenFertig();await p.reload();await ready(p);await pruefen();
-   const zahl=zusatzfragen(t).length;geprueft.push(id+(zahl?' (nach '+zahl+' Zusatzfragen)':''));
+   const zahl=zusatzfragenAufStufe(t).length;geprueft.push(id+(zahl?' (nach '+zahl+' Zusatzfragen)':''));
   }finally{await c.close();}
  }
  report.checks.push('Alte richtige Antwort nach umformulierter Frage bleibt gewählt und richtig, learned bleibt (390 px, mit Neuladen): '+geprueft.join(', '));

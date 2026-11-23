@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {ready, ladeanfragen} from './harness.mjs';
 import {BROWSER_ERROR_FIELDS, browserErrorArrays, browserErrorsSettled, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
-import {angezeigteFrage, antwortKnopf, antworteRichtig, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, zeigtFrage, zusatzfragen} from './karte-hilfen.mjs';
+import {angezeigteFrage, antwortKnopf, antworteRichtig, ersteFrageAufStufe, falscheAntworten, ganzEinfach, hauptfrage, karteDa, rateMal, richtigeAntwort, richtigerKnopf, stufeWaehlen, zeigtFrage, zusatzfragen, zusatzfragenAufStufe} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import {karteStufen} from './karte-stufen.mjs';
 import photos from '../../app/world-photos.json' with {type: 'json'};
@@ -218,6 +218,8 @@ async function vorlesenLiestKopfUndFrage(page, {touch}) {
     await page.waitForFunction(n => window.__vorgelesen.length > n, vorher, WARTEN);
     return (await page.evaluate(() => window.__vorgelesen)).at(-1);
   };
+  // Teilschritt 3: Auf Entdecker hat der Elefant nur die Hauptfrage; Zusatzfragen gibt es auf Profi.
+  await stufeWaehlen(page, 'profi', {touch});
   const erste = await angezeigteFrage(page, ELEFANT);
   const text = await vorlesen();
   for (const teil of [ELEFANT.title, ELEFANT.intro, erste.question.prompt, ...erste.question.answers]) assert.ok(text.includes(teil), 'Vorlesen enthält: ' + teil);
@@ -566,6 +568,8 @@ async function eingebetteteKarte(page, {neuLaden, touch}) {
 function passMitFalscherHauptfrage() {
   const progress = emptyProgress();
   progress.review = {[hauptfrage(ELEFANT).reviewId]: {correct: false, seen: 1, due: '2000-01-01'}};
+  // Teilschritt 3: Die Zusatzfragen des Elefanten sind Profi; die Station zeigt sie auf dieser Stufe.
+  progress.gameSessions = {'kern:stufe': {stufe: 'profi', seit: '2026-11-23'}};
   return createSave(progress);
 }
 
@@ -711,7 +715,9 @@ async function falscheHauptantwortBleibtOffen(page, {neuLaden, touch}) {
   const morgen = new Date(); morgen.setUTCDate(morgen.getUTCDate() + 1);
   assert.deepEqual(pass.review[haupt.reviewId], {correct: true, seen: vorher.seen, due: morgen.toISOString().slice(0, 10)}, 'richtig nach falsch: keine neue Wiederholung, morgen wieder dran');
   await neuLaden();
-  await zeigtFrage(page, ELEFANT, zusatzfragen(ELEFANT)[0]);
+  // Dann wählt die Karte wie beim Öffnen (auf Entdecker hat der Elefant keine Zusatzfrage, also die fällige Hauptfrage).
+  const nachher = await passLesen(page);
+  await zeigtFrage(page, ELEFANT, ersteFrageAufStufe(ELEFANT, 'entdecker', nachher.review, nachher.gameSessions['topic:' + ELEFANT.id]));
 }
 
 function passMitHauptfrage() {
@@ -719,12 +725,13 @@ function passMitHauptfrage() {
   const progress = emptyProgress();
   progress.discoveries = ['topic:' + ELEFANT.id];
   progress.review = {[haupt.reviewId]: {correct: true, seen: 1, due: '2099-01-01'}};
-  progress.gameSessions = {['topic:' + ELEFANT.id]: {[haupt.answerKey]: richtigeAntwort(haupt)}};
+  progress.gameSessions = {['topic:' + ELEFANT.id]: {[haupt.answerKey]: richtigeAntwort(haupt)}, 'kern:stufe': {stufe: 'profi', seit: '2026-11-23'}};
   return createSave(progress);
 }
 
 async function zusatzfrageImPass(ctx) {
-  const [erste, zweite] = zusatzfragen(ELEFANT);
+  // Auf Profi (Pass oben): zuerst die Profi-Fragen in Datenreihenfolge.
+  const [erste, zweite] = zusatzfragenAufStufe(ELEFANT, 'profi');
   const behauptung = ELEFANT.claims[0];
   const reviewId = erste.reviewId;
   let spielstandVorher;
