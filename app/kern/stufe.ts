@@ -35,3 +35,31 @@ export function mitStufe(progress: LocalProgress, stufe: Stufe, heute = new Date
 
 // Das alte Quiz kannte Einfach, Normal und Knifflig. Bis es in Teil B ganz umzieht, folgt es der gemeinsamen Stufe.
 export const quizStufe = (stufe: Stufe): Difficulty => stufe === 'entdecker' ? 'normal' : 'tricky';
+
+export const STUFEN_NAME: Record<Stufe, string> = { entdecker: 'Entdecker', profi: 'Profi', experte: 'Experte' };
+
+// Vorschläge statt Automatik (E8). Die Folge lebt nur, solange die Seite offen ist, nie im Pass.
+// Gezählt wird je Frage nur die erste Antwort; nach einem Stufenwechsel beginnt die Folge neu.
+export type Folge = { stufe: Stufe | null; antworten: boolean[]; gezaehlt: string[]; gefragt: string[] };
+export type StufenVorschlag = { richtung: 'schwerer' | 'leichter'; ziel: Stufe; text: string };
+export const leereFolge = (): Folge => ({ stufe: null, antworten: [], gezaehlt: [], gefragt: [] });
+
+export function mitErsterAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe): Folge {
+  if (folge.gezaehlt.includes(frage)) return folge;
+  const bisher = folge.stufe === stufe ? folge.antworten : [];
+  return { ...folge, stufe, antworten: [...bisher, richtig].slice(-3), gezaehlt: [...folge.gezaehlt, frage] };
+}
+
+// Höchstens ein Vorschlag je Runde (oder Karte). Danach braucht es wieder eine neue Folge.
+export function stufenVorschlag(folge: Folge, stufe: Stufe, runde: string): StufenVorschlag | null {
+  if (folge.stufe !== stufe || folge.gefragt.includes(runde)) return null;
+  const i = STUFEN.indexOf(stufe), letzte = (n: number) => folge.antworten.length >= n ? folge.antworten.slice(-n) : null;
+  if (i < STUFEN.length - 1 && letzte(3)?.every(Boolean)) {
+    const ziel = STUFEN[i + 1];
+    return { richtung: 'schwerer', ziel, text: `Das war leicht für dich. Willst du ${STUFEN_NAME[ziel]} probieren?` };
+  }
+  if (i > 0 && letzte(2)?.every(r => !r)) return { richtung: 'leichter', ziel: STUFEN[i - 1], text: 'Ganz schön knifflig. Willst du eine Stufe leichter spielen?' };
+  return null;
+}
+
+export const nachVorschlag = (folge: Folge, runde: string): Folge => ({ ...folge, antworten: [], gefragt: [...folge.gefragt, runde] });
