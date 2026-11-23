@@ -94,8 +94,10 @@
 .wissenskarte-merken[aria-pressed="true"] { background: var(--motiv-stark); border-color: var(--motiv-symbol); color: var(--motiv-text); }
 
 /* „Rate mal!“ */
-/* Stufenwahl über „Rate mal!“ (Teilschritt 3, E2). */
-.wissenskarte .wissenskarte-stufe { margin: 0 0 12px; padding: 10px 14px; border: 1px solid var(--kern-linie); border-radius: var(--kern-rund); background: var(--kern-flaeche); }
+/* Kopf von „Rate mal!“: Überschrift und Stufenwahl (Teilschritt 3, E2); am Handy rutscht die Stufe unter die Überschrift. */
+.wissenskarte .rate-mal-kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.wissenskarte .rate-mal-kopf .stufen-wahl { flex: 1 1 auto; justify-items: end; }
+.wissenskarte .rate-mal-kopf .stufen-zeile { justify-content: flex-end; }
 .wissenskarte .rate-mal {
   padding: 20px; border: 2px solid var(--motiv-stark); border-radius: 20px;
   background: var(--motiv-grund); scroll-margin-top: 24px;
@@ -289,3 +291,19 @@
   /* Die drei Aufklapper stehen als Gruppe enger zusammen (Abstand 12 statt 22 px). */
   .wissenskarte-aufklapper + :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene) { margin-top: -10px; }
 }
+
+/* „Fast richtig“ und „Ordne richtig“ (Teilschritt 3, E11). */
+.wissenskarte .stimmt-das-wort { display: grid; gap: 10px; margin-top: 14px; }
+.wissenskarte .stimmt-das-wort p { margin: 0; font-size: 17px; }
+.wissenskarte .stimmt-das-woerter { display: flex; flex-wrap: wrap; gap: 8px; }
+.wissenskarte .stimmt-das-woerter .quiz-answer { width: auto; min-height: var(--kern-tipp); }
+.wissenskarte .ordne-richtig-frage { margin: 6px 0 12px; font-size: 19px; font-weight: 700; }
+.wissenskarte .ordne-richtig-liste { display: grid; gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+.wissenskarte .ordne-richtig-liste li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 10px; border: 2px solid var(--kern-linie); border-radius: var(--kern-rund); background: var(--kern-flaeche); }
+.wissenskarte .ordne-richtig-liste li.is-correct { border-color: var(--kern-petrol); background: var(--kern-petrol-zart); }
+.wissenskarte .ordne-richtig-nummer { font-weight: 800; color: var(--kern-petrol-dunkel); text-align: center; }
+.wissenskarte .ordne-richtig-text { font-size: 17px; overflow-wrap: anywhere; }
+.wissenskarte .ordne-richtig-knoepfe { display: flex; gap: 6px; }
+.wissenskarte .ordne-richtig-knoepfe .kern-knopf { padding: 0; }
+.wissenskarte .ordne-richtig-rueckmeldung { margin-top: 12px; }
+.wissenskarte .ordne-richtig-rueckmeldung p { margin: 6px 0 0; }

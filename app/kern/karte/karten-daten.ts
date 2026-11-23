@@ -169,19 +169,68 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
       if (!eigeneId(c?.id, 'stimmt')) melde(`claims[${i}]: ID muss ${topic.id}:stimmt-<Zahl> sein`);
       if (typeof c?.isTrue !== 'boolean') melde(`claims[${i}]: isTrue ist kein Wahrheitswert`);
       if (leer(c?.text) || leer(c?.explanation)) melde(`claims[${i}]: Text oder Auflösung fehlt`);
+      // „Fast richtig“ (E11, S5 Art 2): nur bei falschen Behauptungen; das falsche Wort steht zur Auswahl und in der Behauptung.
+      if (c?.fastRichtig !== undefined) {
+        const f = c.fastRichtig;
+        const woerter = Array.isArray(f?.woerter) ? f.woerter : [];
+        if (c.isTrue !== false) melde(`claims[${i}]: „Fast richtig“ nur bei einer falschen Behauptung`);
+        if (woerter.length < 3 || woerter.length > 4 || woerter.some(leer) || new Set(woerter).size !== woerter.length) melde(`claims[${i}]: „Fast richtig“ braucht 3 oder 4 verschiedene Wörter`);
+        if (!woerter.includes(f?.wort)) melde(`claims[${i}]: das falsche Wort steht nicht zur Auswahl`);
+        if (woerter.some(w => typeof w === 'string' && typeof c.text === 'string' && !c.text.includes(w))) melde(`claims[${i}]: ein Wort steht nicht in der Behauptung`);
+        if (leer(f?.ersatz) || leer(f?.aufloesung)) melde(`claims[${i}]: Ersatzwort oder Auflösung fehlt`);
+      }
     });
   }
+
+  // Teilschritt 3 (E5, E6): jede Zusatz- und Challenge-Frage hat eine Stufe; Entdecker 3 Antworten, Profi und Experte 4.
+  // Kein Tipp und kein Satz „warum nicht“ nennt die richtige Antwort wörtlich; Experte hat zwei Tipps (D5).
+  const nenntLoesung = (text: unknown, loesung: unknown) => typeof text === 'string' && typeof loesung === 'string' && loesung.trim() !== ''
+    && new RegExp('(^|[^\\p{L}\\p{N}])' + loesung.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}\\p{N}])', 'iu').test(text);
+  const frageFehler = (q: Record<string, unknown> | undefined, wo: string, tipps: unknown[] | null) => {
+    const antworten = Array.isArray(q?.answers) ? q.answers as unknown[] : [];
+    const stufe = q?.level;
+    if (!(STUFEN as readonly unknown[]).includes(stufe)) melde(`${wo}: braucht eine Stufe (entdecker, profi, experte)`);
+    const anzahl = stufe === 'entdecker' ? 3 : 4;
+    if (antworten.length !== anzahl || antworten.some(leer) || new Set(antworten).size !== anzahl) melde(`${wo}: braucht ${anzahl} verschiedene Antworten`);
+    const correct = q?.correct;
+    if (!Number.isInteger(correct) || (correct as number) < 0 || (correct as number) >= antworten.length) melde(`${wo}: correct passt zu keiner Antwort`);
+    if (leer(q?.prompt) || leer(q?.why)) melde(`${wo}: Frage oder Erklärung fehlt`);
+    const loesung = antworten[correct as number];
+    if (tipps) {
+      if (!tipps.length || tipps.length > 2 || tipps.some(leer)) melde(`${wo}: braucht einen oder zwei Tipps`);
+      if (stufe === 'experte' && tipps.length !== 2) melde(`${wo}: Experte braucht zwei Tipps`);
+      if (tipps.some(t => nenntLoesung(t, loesung))) melde(`${wo}: ein Tipp nennt die Lösung`);
+    }
+    if (q?.wrongReasons !== undefined) {
+      const saetze = Array.isArray(q.wrongReasons) ? q.wrongReasons as unknown[] : [];
+      if (saetze.length !== antworten.length || saetze.some((s, j) => (j === correct ? s !== null : leer(s)))) melde(`${wo}: wrongReasons passt nicht zu den Antworten`);
+      if (saetze.some(s => nenntLoesung(s, loesung))) melde(`${wo}: ein Satz „warum nicht“ nennt die Lösung`);
+    }
+  };
 
   if (topic.moreQuestions !== undefined) {
     const fragen = Array.isArray(topic.moreQuestions) ? topic.moreQuestions : [];
     if (!Array.isArray(topic.moreQuestions)) melde('moreQuestions ist keine Liste');
     fragen.forEach((q, i) => {
       if (!eigeneId(q?.id, 'rate')) melde(`moreQuestions[${i}]: ID muss ${topic.id}:rate-<Zahl> sein`);
-      const antworten = Array.isArray(q?.answers) ? q.answers : [];
-      if (antworten.length !== 3 || antworten.some(leer) || new Set(antworten).size !== 3) melde(`moreQuestions[${i}]: braucht 3 verschiedene Antworten`);
-      if (!Number.isInteger(q?.correct) || q.correct < 0 || q.correct >= antworten.length) melde(`moreQuestions[${i}]: correct passt zu keiner Antwort`);
-      if (leer(q?.prompt) || leer(q?.why) || leer(q?.hint)) melde(`moreQuestions[${i}]: Frage, Erklärung oder Hinweis fehlt`);
+      const tipps = Array.isArray(q?.hints) ? q.hints : typeof q?.hint === 'string' ? [q.hint] : [];
+      frageFehler(q as unknown as Record<string, unknown>, `moreQuestions[${i}]`, tipps);
     });
+  }
+
+  // Challenge-Fragen: ihre Tipps stehen in challenge-hints.json (eigener Inhaltstest).
+  if (topic.challenges !== undefined) (Array.isArray(topic.challenges) ? topic.challenges : []).forEach((q, i) => frageFehler(q as unknown as Record<string, unknown>, `challenges[${i}]`, null));
+
+  // „Ordne richtig“ (E11, S5 Art 3): Teile in richtiger Reihenfolge, Tipps, Auflösung.
+  if (topic.ordnen !== undefined) {
+    const o = topic.ordnen;
+    const teile = Array.isArray(o?.teile) ? o.teile : [];
+    if (!(typeof o?.id === 'string' && new RegExp('^' + topic.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ':ordnen-\\d+$').test(o.id))) melde(`ordnen: ID muss ${topic.id}:ordnen-<Zahl> sein`);
+    if (!(STUFEN as readonly unknown[]).includes(o?.level)) melde('ordnen: braucht eine Stufe');
+    if (teile.length < 3 || teile.length > 5 || teile.some(leer) || new Set(teile).size !== teile.length) melde('ordnen: braucht 3 bis 5 verschiedene Teile');
+    const tipps = Array.isArray(o?.hints) ? o.hints : [];
+    if (!tipps.length || tipps.length > 2 || tipps.some(leer)) melde('ordnen: braucht einen oder zwei Tipps');
+    if (leer(o?.frage) || leer(o?.aufloesung)) melde('ordnen: Frage oder Auflösung fehlt');
   }
 
   // Mit Häppchen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.

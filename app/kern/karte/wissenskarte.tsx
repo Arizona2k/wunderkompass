@@ -24,8 +24,9 @@ import Kartenbild from './kartenbild';
 import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
+import OrdneRichtig from './ordne-richtig';
 import {dazuPasst, ersteFrage, fragenFuerStufe, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
-import {leseStufe, type Stufe} from '../stufe';
+import {leseStufe, STUFEN, type Stufe} from '../stufe';
 import StufenWahl from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
 import './karte.css';
@@ -175,12 +176,6 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         </div>
       </header>
 
-      {a.onStufe && (
-        <div className="wissenskarte-stufe">
-          <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/>
-        </div>
-      )}
-
       <RateMal
         key={frage.id}
         frage={frage}
@@ -193,6 +188,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         onWeiter={weiter}
         fokus={weitergeblaettert}
         onAntwort={merke}
+        kopf={a.onStufe ? <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
         unterRueckmeldung={vorschlag && a.onStufe ? (
           <StufenVorschlagHinweis
             vorschlag={vorschlag}
@@ -230,7 +226,9 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         )}
       </section>
 
-      {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt}/>}
+      {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt} stufe={stufe}/>}
+      {/* „Ordne richtig“ erst ab der Stufe der Aufgabe (Teilschritt 3, E11). */}
+      {t.ordnen && STUFEN.indexOf(stufe) >= STUFEN.indexOf(t.ordnen.level) && <OrdneRichtig ordnen={t.ordnen} ueberschrift={Abschnitt} onRead={a.onRead}/>}
 
       {t.facts.length > 0 && (
         <section className="wissenskarte-abschnitt wissenskarte-steckbrief">

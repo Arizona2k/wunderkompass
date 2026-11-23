@@ -7,7 +7,7 @@ import catalog from '../app/world-catalog.json' with {type: 'json'};
 import {kartenFeldFehler} from '../app/kern/karte/karten-daten.ts';
 
 const basis = catalog.find(t => t.id === 'animal-african-savanna-elephant');
-const frage = n => ({id: 'x:rate-' + n, prompt: 'Frage ' + n + '?', answers: ['A', 'B', 'C'], correct: 0, why: 'Weil A.', hint: 'Denk an A.'});
+const frage = n => ({id: 'x:rate-' + n, level: 'entdecker', prompt: 'Frage ' + n + '?', answers: ['Mond', 'Sonne', 'Wolke'], correct: 0, why: 'Weil er leuchtet.', hint: 'Schau nach oben.'});
 
 test('kartenFeldFehler meldet kaputte neue Felder', () => {
   const heil = {
@@ -23,7 +23,7 @@ test('kartenFeldFehler meldet kaputte neue Felder', () => {
   const fehler = feld => kartenFeldFehler({...heil, ...feld});
   assert.ok(fehler({moreQuestions: [{...frage(1), id: 'x-rate-1'}]}).length > 0, 'falsche Fragen-ID');
   assert.ok(fehler({moreQuestions: [{...frage(1), id: 'y:rate-1'}]}).length > 0, 'Fragen-ID einer anderen Karte');
-  assert.ok(fehler({moreQuestions: [{...frage(1), answers: ['A', 'B']}]}).length > 0, 'nur zwei Antworten');
+  assert.ok(fehler({moreQuestions: [{...frage(1), answers: ['Mond', 'Sonne']}]}).length > 0, 'nur zwei Antworten');
   assert.ok(fehler({moreQuestions: [{...frage(1), correct: 3}]}).length > 0, 'correct außerhalb');
   assert.ok(fehler({moreQuestions: [{...frage(1), hint: ' '}]}).length > 0, 'leerer Hinweis');
   assert.ok(fehler({moreQuestions: [{...frage(1), why: ''}]}).length > 0, 'leere Erklärung');
@@ -252,4 +252,51 @@ test('neue Fragen- und Behauptungs-IDs sind stabil eingetragen', () => {
   const neu = catalog.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? [])].map(x => x.id));
   assert.deepEqual(neu.filter(id => !stabil.includes(id)), [], 'neue ID fehlt in stable-ids.json');
   assert.deepEqual(stabil.filter(id => !neu.includes(id)), [], 'eingetragene ID gibt es nicht mehr');
+});
+
+// Teilschritt 3, Aufgabe 5 (E5, E6, E11): Stufen, Antwortzahl, Tipps und „warum nicht“; „Fast richtig“ und „Ordne richtig“.
+// Eine Karte ohne die neuen Felder, damit nur der geprüfte Teil zählt.
+const ohneNeues = (({moreQuestions, claims, chapters, challenges, ordnen, ...rest}) => rest)(basis);
+test('kartenFeldFehler: Stufe, Antwortzahl, Tipps und „warum nicht“ der Zusatz- und Challenge-Fragen', () => {
+  const q = extra => ({id: 'x:rate-1', prompt: 'Was leuchtet nachts?', answers: ['Mond', 'Sonne', 'Wolke'], correct: 0, why: 'Er spiegelt Licht.', hints: ['Schau nach oben.'], level: 'entdecker', ...extra});
+  const mit = extra => kartenFeldFehler({...ohneNeues, id: 'x', moreQuestions: [q(extra)]});
+  const vier = {answers: ['Mond', 'Sonne', 'Wolke', 'Regen']};
+  assert.deepEqual(mit({}), [], 'Entdecker mit drei Antworten');
+  assert.deepEqual(mit({level: 'profi', ...vier}), [], 'Profi mit vier');
+  assert.deepEqual(mit({level: 'experte', ...vier, hints: ['Was ist nachts am Himmel?', 'Es ist rund.']}), [], 'Experte mit zwei Tipps');
+  assert.deepEqual(mit({hints: undefined, hint: 'Schau nach oben.'}), [], 'altes Feld hint');
+  assert.deepEqual(mit({wrongReasons: [null, 'Sie scheint am Tag.', 'Sie leuchtet nicht.']}), [], 'passende Sätze „warum nicht“');
+  assert.ok(mit({level: undefined}).length > 0, 'ohne Stufe');
+  assert.ok(mit({level: 'meister'}).length > 0, 'unbekannte Stufe');
+  assert.ok(mit({level: 'profi'}).length > 0, 'Profi mit drei Antworten');
+  assert.ok(mit(vier).length > 0, 'Entdecker mit vier Antworten');
+  assert.ok(mit({level: 'experte', ...vier}).length > 0, 'Experte mit nur einem Tipp');
+  assert.ok(mit({hints: ['Es ist der Mond.']}).length > 0, 'Tipp nennt die Lösung');
+  assert.ok(mit({hints: []}).length > 0, 'kein Tipp');
+  assert.ok(mit({wrongReasons: [null, 'Sie scheint am Tag.']}).length > 0, 'zu wenige Sätze');
+  assert.ok(mit({wrongReasons: ['Falsch.', 'Sie scheint am Tag.', 'Sie leuchtet nicht.']}).length > 0, 'Satz bei der richtigen Antwort');
+  assert.ok(mit({wrongReasons: [null, 'Der Mond ist es.', 'Sie leuchtet nicht.']}).length > 0, 'Satz nennt die Lösung');
+  const challenge = extra => kartenFeldFehler({...ohneNeues, id: 'x', challenges: [{id: 'x-1', difficulty: 'medium', prompt: 'Was leuchtet nachts?', answers: ['Mond', 'Sonne', 'Wolke', 'Regen'], correct: 0, why: 'Er spiegelt Licht.', level: 'profi', ...extra}]});
+  assert.deepEqual(challenge({}), [], 'Challenge-Frage auf Profi');
+  assert.ok(challenge({level: undefined}).length > 0, 'Challenge-Frage ohne Stufe');
+  assert.ok(challenge({answers: ['Mond', 'Sonne', 'Wolke']}).length > 0, 'Challenge-Frage auf Profi mit drei Antworten');
+});
+
+test('kartenFeldFehler: „Fast richtig“ und „Ordne richtig“', () => {
+  const behauptung = extra => ({id: 'x:stimmt-1', text: 'Marie Curie hat das Radium erfunden.', isTrue: false, explanation: 'Sie hat es entdeckt.', ...extra});
+  const fast = {wort: 'erfunden', woerter: ['Marie Curie', 'Radium', 'erfunden'], ersatz: 'entdeckt', aufloesung: 'Radium steckte schon im Gestein.'};
+  const mitFast = extra => kartenFeldFehler({...ohneNeues, id: 'x', claims: [behauptung({fastRichtig: {...fast, ...extra}})]});
+  assert.deepEqual(mitFast({}), []);
+  assert.ok(kartenFeldFehler({...ohneNeues, id: 'x', claims: [behauptung({isTrue: true, fastRichtig: fast})]}).length > 0, 'nur bei falschen Behauptungen');
+  assert.ok(mitFast({wort: 'Gestein'}).length > 0, 'falsches Wort steht nicht zur Auswahl');
+  assert.ok(mitFast({woerter: ['Marie Curie', 'Polonium', 'erfunden']}).length > 0, 'Wort steht nicht in der Behauptung');
+  assert.ok(mitFast({woerter: ['Radium', 'erfunden']}).length > 0, 'zu wenige Wörter');
+  assert.ok(mitFast({ersatz: ''}).length > 0, 'Ersatzwort fehlt');
+  const ordnen = extra => kartenFeldFehler({...ohneNeues, id: 'x', ordnen: {id: 'x:ordnen-1', level: 'experte', frage: 'Was war zuerst?', teile: ['Erst', 'Dann', 'Zuletzt', 'Ganz zuletzt'], hints: ['Vergleiche die Zahlen.', 'Millionen sind mehr als Tausende.'], aufloesung: 'So war es.', ...extra}});
+  assert.deepEqual(ordnen({}), []);
+  assert.ok(ordnen({id: 'x:ordne-1'}).length > 0, 'falsche ID');
+  assert.ok(ordnen({teile: ['Erst', 'Dann']}).length > 0, 'zu wenige Teile');
+  assert.ok(ordnen({teile: ['Erst', 'Erst', 'Dann']}).length > 0, 'doppelte Teile');
+  assert.ok(ordnen({level: 'meister'}).length > 0, 'unbekannte Stufe');
+  assert.ok(ordnen({aufloesung: ''}).length > 0, 'Auflösung fehlt');
 });

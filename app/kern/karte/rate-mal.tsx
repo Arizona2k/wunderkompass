@@ -44,10 +44,12 @@ type RateMalProps = {
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage) und darunter Platz für den Vorschlag.
   onAntwort?: (frageId: string, korrekt: boolean) => void;
   unterRueckmeldung?: ReactNode;
+  // Neben der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
+  kopf?: ReactNode;
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, unterRueckmeldung}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, unterRueckmeldung, kopf}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -73,7 +75,10 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
 
   return (
     <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id}>
-      <Ueberschrift id={'rate-mal-' + frage.id} className="rate-mal-titel">Rate mal!</Ueberschrift>
+      <div className="rate-mal-kopf">
+        <Ueberschrift id={'rate-mal-' + frage.id} className="rate-mal-titel">Rate mal!</Ueberschrift>
+        {kopf}
+      </div>
       <p className="rate-mal-frage">{q.prompt}</p>
       <div className="quiz-answers">
         {auswahl.map((wahl, i) => (

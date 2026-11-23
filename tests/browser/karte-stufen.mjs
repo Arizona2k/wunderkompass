@@ -43,9 +43,9 @@ async function stufenAufDerKarte(page, {touch}) {
   const wahl = stufenWahl(page);
   await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
   assert.equal(await wahl.evaluate(el => {
-    const frage = document.querySelector('section.rate-mal');
+    const frage = document.querySelector('section.rate-mal .rate-mal-frage');
     return !!frage && !!(el.compareDocumentPosition(frage) & Node.DOCUMENT_POSITION_FOLLOWING);
-  }), true, 'die Stufenwahl steht über „Rate mal!“');
+  }), true, 'die Stufenwahl steht im Kopf von „Rate mal!“, über der Frage');
   await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await stufeWaehlen(page, 'profi', {touch});
   const profi = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'profi'));
@@ -128,6 +128,62 @@ async function vorschlagLeichter(page, {touch}) {
   return t.id;
 }
 
+// „Fast richtig“ (E11): Auf Experte nach „Stimmt nicht“ zuerst das falsche Wort wählen, die Erklärung kommt danach.
+const MIT_FAST = catalog.find(t => t.claims?.[0]?.fastRichtig);
+async function fastRichtig(page, {touch}) {
+  const t = MIT_FAST, b = t.claims[0], f = b.fastRichtig;
+  const bereich = page.locator('section.stimmt-das');
+  const erklaerung = bereich.getByText(b.explanation, {exact: true});
+  await stufeWaehlen(page, 'experte', {touch});
+  await tippe(bereich.getByRole('button', {name: 'Stimmt nicht', exact: true}), touch);
+  await bereich.getByText('Welches Wort ist falsch?').waitFor(WARTEN);
+  assert.equal(await erklaerung.count(), 0, 'die Erklärung verrät das Wort nicht vorher');
+  const falsch = f.woerter.find(w => w !== f.wort);
+  await tippe(bereich.locator('.stimmt-das-woerter').getByRole('button', {name: falsch, exact: true}), touch);
+  await bereich.getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor(WARTEN);
+  await tippe(bereich.locator('.stimmt-das-woerter').getByRole('button', {name: f.wort, exact: true}), touch);
+  await bereich.getByText('Richtig wäre „' + f.ersatz + '“.', {exact: false}).waitFor(WARTEN);
+  await erklaerung.waitFor(WARTEN);
+  await page.reload();
+  await ready(page);
+  await karteDa(page, t.id);
+  await page.locator('section.stimmt-das').getByText(b.explanation, {exact: true}).waitFor(WARTEN);
+  return t.id;
+}
+// Auf Entdecker bleibt „Stimmt das?“ wie bisher: Die Erklärung kommt sofort, ohne Wortfrage.
+async function fastRichtigNurExperte(page, {touch}) {
+  const b = MIT_FAST.claims[0];
+  const bereich = page.locator('section.stimmt-das');
+  await tippe(bereich.getByRole('button', {name: 'Stimmt nicht', exact: true}), touch);
+  await bereich.getByText(b.explanation, {exact: true}).waitFor(WARTEN);
+  assert.equal(await bereich.getByText('Welches Wort ist falsch?').count(), 0);
+  return MIT_FAST.id;
+}
+// „Ordne richtig“ (E11): erst ab seiner Stufe; ordnen mit „nach oben“, „Prüfen“, übersteht Neuladen.
+const MIT_ORDNEN = catalog.find(t => t.ordnen);
+async function ordneRichtig(page, {touch}) {
+  const t = MIT_ORDNEN, o = t.ordnen;
+  const bereich = page.locator('section.ordne-richtig');
+  assert.equal(await bereich.count(), 0, '„Ordne richtig“ fehlt unter der Stufe ' + o.level);
+  await stufeWaehlen(page, o.level, {touch});
+  await bereich.waitFor(WARTEN);
+  const reihe = () => bereich.locator('.ordne-richtig-text').allInnerTexts();
+  assert.notDeepEqual(await reihe(), o.teile, 'die Teile stehen am Anfang nicht schon richtig');
+  for (let ziel = 0; ziel < o.teile.length; ziel++) {
+    for (let jetzt = (await reihe()).indexOf(o.teile[ziel]); jetzt > ziel; jetzt--) {
+      await tippe(bereich.getByRole('button', {name: '„' + o.teile[ziel] + '“ nach oben', exact: true}), touch);
+    }
+  }
+  assert.deepEqual(await reihe(), o.teile);
+  await tippe(bereich.getByRole('button', {name: 'Prüfen', exact: true}), touch);
+  await bereich.getByText(o.aufloesung, {exact: true}).waitFor(WARTEN);
+  await page.reload();
+  await ready(page);
+  await karteDa(page, t.id);
+  await page.locator('section.ordne-richtig').getByText(o.aufloesung, {exact: true}).waitFor(WARTEN);
+  return t.id;
+}
+
 export async function karteStufen(ctx) {
   for (const [name, karte] of [['MIT_PROFI', MIT_PROFI], ['OHNE_ZUSATZ', OHNE_ZUSATZ], ['DREI_LEICHTE', DREI_LEICHTE], ['ZWEI_AUF_PROFI', ZWEI_AUF_PROFI]]) assert.ok(karte, 'Testvoraussetzung: eine Karte für ' + name);
   const handy = {width: 390, height: 844, touch: true}, breit = {width: 1440, height: 900};
@@ -137,6 +193,11 @@ export async function karteStufen(ctx) {
   const c = await mitKarte(ctx, handy, DREI_LEICHTE.id, page => vorschlagSchwerer(page, {touch: true}));
   await mitKarte(ctx, breit, DREI_LEICHTE.id, page => vorschlagSchwerer(page, {touch: false}, true));
   const d = await mitKarte(ctx, handy, ZWEI_AUF_PROFI.id, vorschlagLeichter);
+  assert.ok(MIT_FAST && MIT_ORDNEN, 'Testvoraussetzung: eine Karte mit „Fast richtig“ und eine mit „Ordne richtig“');
+  const e = await mitKarte(ctx, handy, MIT_FAST.id, fastRichtig);
+  await mitKarte(ctx, breit, MIT_FAST.id, fastRichtigNurExperte);
+  const f = await mitKarte(ctx, handy, MIT_ORDNEN.id, ordneRichtig);
+  await mitKarte(ctx, breit, MIT_ORDNEN.id, ordneRichtig);
   ctx.report.checks.push(`Stufen auf der Karte: Wahl über „Rate mal!“, Umstellen wechselt die Frage, übersteht Neuladen, „Zurück zu Entdecker“ (${a}); `
-    + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“ (${b}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d})`);
+    + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“ (${b}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d}); „Fast richtig“ nur auf Experte, Erklärung erst nach dem Wort (${e}); „Ordne richtig“ ab seiner Stufe, ordnen, prüfen, Neuladen (${f})`);
 }
