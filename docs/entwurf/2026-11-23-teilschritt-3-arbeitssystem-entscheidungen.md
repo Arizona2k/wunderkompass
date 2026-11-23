@@ -1,6 +1,6 @@
 # Teilschritt 3, Arbeitssystem: Entscheidungen und offene Kleinigkeiten
 
-Stand: 23.11.2026. Diese Liste hält fest, was Claude am Anfang von Teilschritt 3 beim Arbeitssystem entschieden oder verschoben hat, damit der nächste Chat nichts neu ausdenken muss. Grundlage: [Technik-Prüfung](2026-11-23-technik-pruefung.md), Abschnitt „Einordnung durch Claude und Reihenfolge“.
+Stand: 23.11.2026 (PR #106 nach `test-live`). Diese Liste hält fest, was Claude am Anfang von Teilschritt 3 beim Arbeitssystem entschieden oder verschoben hat, damit der nächste Chat nichts neu ausdenken muss. Grundlage: [Technik-Prüfung](2026-11-23-technik-pruefung.md), Abschnitt „Einordnung durch Claude und Reihenfolge“.
 
 ## Umgesetzt
 
