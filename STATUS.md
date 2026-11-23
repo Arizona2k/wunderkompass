@@ -4,12 +4,12 @@ Stand: 23.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Wo wir stehen
 
-- **Schritt 0 „Großputz & Arbeitsweise“** ist seit 21.11.2026 in `test-live` (PR #96, `a0ec975`): schlanke Prüfkette, Browser-Runner, kurze Unterlagen, sechs Helfer, `/weiter` und `/pruefen`. Plan und Entscheidungen in `docs/entwurf/2026-11-21-schritt-0-*.md`. Der alte Stand liegt vollständig in Commit `b53f75f`.
-- **Katalog „WunderKompass 2027“** eingeordnet ([Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md)), Audit V2 nachgeprüft (18 von 19 behoben); in `test-live` (PR #97, `5cf70fa`).
-- **Phase 1, Teilschritt 1 „Aussehen und Hülle“** ist seit 21.11.2026 in `test-live` (PR #99, `6f43eb5`; siehe CHANGELOG). Entscheidungen beim Bauen: [Liste](docs/entwurf/2026-11-21-phase-1-teilschritt-1-entscheidungen.md). Firefox-Testrennen und WebKit-Fehler der Buchleiste behoben; drei WebKit-Fehler gab es schon vorher. Die CI-Vollprüfung danach fand je einen neuen Fehler in Chromium, Firefox und WebKit; behoben in Schritt 0 von Teilschritt 2 (nächster Punkt). Playwright 1.65.1, alle drei Browser laufen im Container. `pnpm run check` grün (314 Unit-Tests, 14 Browser-Suiten), Rauchtest auf der Testseite grün. Startdateien kleiner als vorher (JS 975 734 statt 985 613 Byte, CSS 344 657 statt 348 485).
-- **Teilschritt 2, Schritt 0** (21.11.2026, PR #102, seit 22.11.2026 in `test-live`, `176cd08`): Drei neue CI-Fehler lagen an Tests und Werkzeug, dazu behoben: alter WebKit-Fehler `engine-journeys`, ResizeObserver-Schleife der Buchleiste, Startfrage mit langem Wort am kleinen Handy (Test prüft alle 56). Offen bleiben die alten WebKit-Fehler `backup` und `offline-cold`. Ausgangsgrößen gemessen, Bildkandidaten für Zeitreise und Erfindungen gesammelt ([Liste](docs/entwurf/2026-11-21-bilder-zeitreise-erfindungen.md)).
-- **Teilschritt 2, Teil A „Neue Karte“** ist seit 22.11.2026 in `test-live` (PR #103, `40a0f0b`): neue Wissenskarte (Rate mal!, Kurz erklärt, Steckbrief, Ausprobieren lädt beim Öffnen, Mehr erfahren, Dazu passt, Rückweg-Link), alte Karte entfernt, Lernreisen einfach zuerst; siehe CHANGELOG. Behoben: Der Pass verlor beim Laden Spielstände über 256 (BACKLOG 18).
-- **Teilschritt 2, Teil B „Kürzer und verbunden“** (23.11.2026, eigener PR nach `test-live`, „ok“ des Nutzers am 23.11.2026, Merge nach grüner CI): jede Karte mit erklärtem Nachbarn (30 neue Verbindungen), Karten aufgeräumt, zwölf Pilot-Karten im neuen Stil (Häppchen, „Stimmt das?“, Zusatzfragen), frühere Antworten bleiben, nach falscher Antwort kommt man zur selben Frage zurück; Prüfstand im CHANGELOG. Schlussprüfung durch einen frischen Prüfer auf dem stärksten Modell: „mit Korrekturen“, behoben bzw. mit Grund verschoben (BACKLOG 23). Dazu im selben PR: Ergänzung „Stufen“ (freigegeben 23.11.2026) und Helfer `stufen-pruefer`.
+- **Schritt 0 „Großputz & Arbeitsweise“** (PR #96, `a0ec975`) und die **Einordnung des Katalogs „WunderKompass 2027“** (PR #97, `5cf70fa`, [Einordnung](docs/entwurf/2026-11-21-katalog-2027-einordnung.md)) sind seit 21.11.2026 in `test-live`. Ebenso **Phase 1, Teilschritt 1 „Aussehen und Hülle“** (PR #99, `6f43eb5`, [Entscheidungen](docs/entwurf/2026-11-21-phase-1-teilschritt-1-entscheidungen.md)). Der alte Stand liegt vollständig in Commit `b53f75f`.
+- **Phase 1, Teilschritt 2 „Wissenskarte“** ist fertig und in `test-live` ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-2.md), [Entscheidungen und verschobene Kleinigkeiten](docs/entwurf/2026-11-23-phase-1-teilschritt-2-entscheidungen.md)):
+  - Schritt 0: CI-Fehler und alte Fehler behoben (PR #102, `176cd08`). Bildkandidaten für Zeitreise und Erfindungen: [Liste](docs/entwurf/2026-11-21-bilder-zeitreise-erfindungen.md).
+  - Teil A „Neue Karte“ (PR #103, `40a0f0b`): neue Wissenskarte, alte Karte entfernt, Lernreisen einfach zuerst; der Pass behält Spielstände über 256.
+  - Teil B „Kürzer und verbunden“ (PR #104, `4b5bdb1`): jede Karte mit erklärtem Nachbarn, Karten aufgeräumt, zwölf Pilot-Karten im neuen Stil, frühere Antworten bleiben. Dazu die Ergänzung „Stufen“ und der Helfer `stufen-pruefer`. Geprüft: `pnpm run check` und große Prüfung in Chromium grün; CI-Vollprüfung Chromium und Firefox grün, WebKit rot nur durch die zwei alten Fehler `backup` und `offline-cold`; beide danach behoben (PR #105), seither prüft jeder PR sie auch in WebKit. Schlussprüfung mit dem stärksten Modell, Befunde behoben oder mit Grund im BACKLOG (Punkt 23).
+- **Arbeitsweise abgesichert** (23.11.2026, PR #105): Helfer müssen laufen (Helfer-Check in `/weiter`, Ersatz von Hand, technik-pruefer nach jedem späten Fehler), nichts geht beim Chatwechsel verloren (`CLAUDE.md`, „Übergabe beim Chatwechsel“), Aufräumen gilt auch fürs Arbeiten. Bericht des technik-pruefer: [Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md).
 - PR #95 (acht Geschichtsthemen) liegt auf Branch `codex/wunderkompass-history-evidence-2026-11-08`, Commit `7e00bd0`; Übernahme in Phase 3.
 
 ## Adressen
@@ -19,16 +19,17 @@ Stand: 23.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Nächster Schritt
 
-Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md), darin die Rückmeldung eines 10-jährigen Kindes: zu viel Text, zu leicht), sechs Teilschritte:
+Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md), darin die Rückmeldung eines 10-jährigen Kindes: zu viel Text, zu leicht), sechs Teilschritte: 1. Aussehen und Hülle (fertig) · 2. Wissenskarte (fertig) · **3. Kniffliger spielen** · 4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
 
-1. **Aussehen und Hülle** – fertig, in `test-live` ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-1.md)): Schrift Nunito, Farben, eine Leiste mit sechs Bereichen, ruhiger Kopf, neuer Fuß, „Was ist neu?“ für Kinder.
-2. **Wissenskarte** – fast fertig ([Plan](docs/entwurf/2026-11-21-phase-1-plan-teilschritt-2.md)). Schritt 0 und Teil A in `test-live`, Teil B hat das „ok“ (Merge nach grüner CI).
-3. **Kniffliger spielen** – als Nächstes, mit der [Ergänzung „Leicht, knifflig, richtig knifflig“](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md) ([Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)); zuerst die gemeinsamen Test-Bausteine für die Karte (BACKLOG).
-4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
+**Teilschritt 3 „Kniffliger spielen“** mit der [Ergänzung „Leicht, knifflig, richtig knifflig“](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md) ([Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
+
+1. Zuerst das Arbeitssystem, in der Reihenfolge aus der [Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md) (Abschnitt „Einordnung durch Claude und Reihenfolge“): gemeinsame Test-Bausteine mit Wächter, Vollprüfung aufteilen (Zeitgrenze danach 75 Minuten), Firefox/WebKit früher prüfen (WebKit-Kurzprüfung für Pass und Offline läuft schon bei jedem PR), CI-Satz ergänzen, Altlasten aufräumen. Vorher den `technik-pruefer` dazu befragen.
+2. Dann Entwurf und Plan für Teilschritt 3 in `docs/entwurf/`, mit den verschobenen Kleinigkeiten aus der Entscheidungsliste von Teilschritt 2 und BACKLOG Phase 1.
 
 ## Offene Fragen an den Nutzer
 
 - Vorschlag: „Ganz einfach“ auf allen Karten offen, die schweren Absätze unter „Für Große“ (BACKLOG 17).
+- `main` schützen wie `test-live` (Regel auf GitHub, kostenlos; verhindert versehentliche Änderungen an der Seite für Freunde)? Empfehlung: ja ([Technik-Prüfung](docs/entwurf/2026-11-23-technik-pruefung.md)).
 
 ## Vorübergehende Modell-Ausnahmen
 

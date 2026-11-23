@@ -39,7 +39,8 @@ const ENGINE_WIDTHS = [320, 390, 768, 1440];
 export const SUITES = [
   {name: 'smoke', set: 'smoke', run: smoke},
 
-  // CI: Pass, gespeicherte Antworten, Offline und alte Links (in jeder Engine).
+  // CI: Pass, gespeicherte Antworten, Offline und alte Links. Laufen in jeder Engine: bei jedem PR in Chromium,
+  // offline-cold und backup zusätzlich in WebKit (test:browser:webkit), alle drei Engines in der Vollprüfung.
   {name: 'offline-cold', set: 'ci', solo: true, run: ctx => offlineCold(ctx)},
   {name: 'no-news', set: 'ci', run: flow(newsRemovalFlow)},
   // backup prüft darin auch storage-feedback, book-notes und model-import-integrity.

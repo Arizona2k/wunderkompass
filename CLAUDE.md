@@ -1,6 +1,6 @@
 # CLAUDE.md – Arbeitshandbuch für WunderKompass
 
-Stand: 21.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
+Stand: 23.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
 
 ## Das Projekt in fünf Sätzen
 
@@ -16,7 +16,7 @@ Daraus folgt: kurze Sätze, große Bilder, große Tippflächen, schnell etwas tu
 ## Feste Regeln
 
 - **Kostenlos.** Keine bezahlten Dienste, Abos, Testzugänge oder Upgrades, auch nicht für Hosting, Builds, Bilder oder Audio. Kostenlose Konten nur nach Erklärung und OK des Nutzers.
-- **Kein Bestandsschutz** (Nutzer, 21.11.2026). Nichts bleibt, nur weil es es schon gibt. Inhalte, Spiele, Labore, Reisen, Design und Code werden geändert, ersetzt oder gestrichen, wenn es für Kinder besser ist. Geschützt ist nur, was Kindern sonst verloren ginge: ihr Fortschritt im Pass und ihre Links (nächster Punkt).
+- **Kein Bestandsschutz** (Nutzer, 21.11.2026). Nichts bleibt, nur weil es es schon gibt. Inhalte, Spiele, Labore, Reisen, Design und Code werden geändert, ersetzt oder gestrichen, wenn es für Kinder besser ist. Das gilt auch fürs Arbeiten (Nutzer, 23.11.2026): Tests, Werkzeuge, Unterlagen, Pakete und alte Dateien, die uns langsamer, unsauberer oder umständlicher machen, werden vereinfacht oder entfernt. Geschützt ist nur, was Kindern sonst verloren ginge: ihr Fortschritt im Pass und ihre Links (nächster Punkt).
 - **Wachsen lassen** (Nutzer, 21.11.2026). Claude erweitert, verbessert und verknüpft die Seite von sich aus immer weiter, in Teilabschnitten. Ein Pilot ist der Anfang, nicht das Ende: Was sich bewährt, wird Schritt für Schritt auf alle Karten, Welten, Spiele, Labore und Reisen ausgedehnt, und der nächste Schritt wird ohne Aufforderung vorgeschlagen und angegangen. Claude bleibt dabei kritisch, auch gegenüber eigenen Ideen und denen des Nutzers, nennt Schwächen offen und empfiehlt eine Lösung. Qualität geht vor Menge: Quellen, Prüfung, Entwurf und Freigabe je Phase gelten weiter.
 - **Kompatibilität.** Karten-, Fragen-, Kapitel-, Spiel-, Labor-, Missions- und Reise-IDs werden nie umbenannt und nie für etwas anderes wiederverwendet. Fällt ein Inhalt weg, führen seine alten Links an einen sinnvollen Ort, und Pass-Einträge dazu gehen nicht verloren. Hash-Links (`#world/...`, `#journeys/...`) funktionieren weiter. Alte Links (auch `#news/...`) werden aufgefangen.
 - **Ein Lernspeicher.** Der Pass ist der einzige Speicher: Schema 3, App-ID `earth-explorer`, Schlüssel `erde-entdecken:save:v3`, Altpass `erde-entdecken:forscherpass:v2`, IndexedDB `earth-explorer`. Wer daran etwas ändert, belegt mit Altpass, Import/Export, Reload und Fehlerfall, dass nichts verloren geht.
@@ -46,8 +46,9 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm test` | Unit-Tests (`tests/*.test.mjs`, Node-Testrunner) |
 | `pnpm run test:smoke` | Rauchtest im Browser: 360 px (Touch) und 1440 px, Bilder in `.qa-output/browser/` |
 | `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Tempo (zwei Suiten parallel) |
+| `pnpm run test:browser:webkit` | WebKit-Kurzprüfung: `offline-cold` und `backup` in WebKit (Safari), bei jedem PR |
 | `pnpm run test:full` | Große Prüfung, am Ende einer Phase; `-- --browser firefox` oder `webkit` oder `all` |
-| `pnpm run check` | Die ganze Prüfkette: typecheck, lint, test, build, test:browser |
+| `pnpm run check` | Die ganze Prüfkette: typecheck, lint, test, build, test:browser, test:browser:webkit |
 | `pnpm run export:data` | Inhaltsexporte nach `exports/content` (noch in Git, weil Browser-Tests sie lesen; Ablösung im BACKLOG) |
 
 Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [suitenamen]`.
@@ -85,11 +86,15 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 **Neuer Chat:** Am Ende jedes Teilschritts (nach dem Merge) und sobald ein Chat einmal automatisch zusammengefasst wurde, sagt Claude ausdrücklich, ob jetzt ein neuer Chat sinnvoll ist, und nennt die Startnachricht aus `STATUS.md`. Nie mitten in laufenden Prüfungen wechseln: Sie laufen im Container dieses Chats (Wunsch des Nutzers, 21.11.2026).
 
+**Übergabe beim Chatwechsel** (Wunsch des Nutzers, 23.11.2026): Nichts geht verloren, und der neue Chat muss nichts neu ausdenken. Wünsche, Regeln und Ideen des Nutzers aus dem Chat kommen gleich ins Repository (Regeln in diese Datei, Ideen ins `BACKLOG.md` unter „Ideen-Sammlung“), nicht erst beim Wechsel. Vor der Ansage „Jetzt neuen Chat starten“: alles committet und gepusht (gemergt oder in einem offenen PR, keine nur lokalen Zweige); Entscheidungen und aufgeschobene Kleinigkeiten aus dem Arbeitsprotokoll (`.superpowers/`, nicht in Git) als Entscheidungsliste in `docs/entwurf/`; Helferberichte, Messwerte und Pläne, die der nächste Chat braucht, als Datei im Repository; `STATUS.md` nennt Stand, offene Fragen und den nächsten Schritt mit Fundstellen. Chatverlauf, Scratchpad, Nebenordner und Hintergrundprozesse gehen beim Wechsel verloren.
+
 **Commits:** `git -c user.name=Claude -c user.email=noreply@anthropic.com commit …`, deutsche Betreffzeile. Vor jedem Push `git diff --check` und Autor/Committer prüfen.
 
 ## Helfer (`.claude/agents/`)
 
 Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
+
+**Helfer müssen laufen** (Wunsch des Nutzers, 23.11.2026). Ein Chat liest Helfer und Kurzbefehle aus seinem Hauptordner; ein neuer Helfer erscheint erst, wenn er dort liegt (manchmal mit Verzögerung, sicher im nächsten Chat). Darum im Hauptordner arbeiten; ein Nebenordner nur kurz, danach den Hauptordner nachziehen. Fehlt ein Helfer aus `.claude/agents/` in der Helferliste des Chats (z. B. neu angelegt): trotzdem einsetzen, von Hand als `general-purpose` mit Modell und Stufe aus seiner Datei und seiner Anleitung als Auftrag, und es dem Nutzer sagen. Nie still weglassen. Nach jedem spät gefundenen Fehler (erst in der CI-Vollprüfung oder in `test:full`) läuft der `technik-pruefer`, bevor die Korrektur gemeldet wird.
 
 | Helfer | Aufgabe | Modell / Stufe |
 |---|---|---|

@@ -3,6 +3,16 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 23.11.2026 – Arbeitsweise: Helfer laufen, nichts geht verloren, zwei WebKit-Fehler behoben
+
+Für Kinder ändert sich nichts Sichtbares. Wir arbeiten sauberer und schneller.
+
+- **Alle Helfer laufen:** `/weiter` prüft beim Start, ob jeder Helfer da ist. Fehlt einer, wird er von Hand eingesetzt, und der Nutzer erfährt es. Nach jedem Fehler, der erst spät auffällt, prüft der Technik-Prüfer, wie man ihn früher findet.
+- **Nichts geht verloren:** Wünsche, Regeln und Ideen kommen gleich ins Repository. Vor einem neuen Chat ist alles hochgeladen, und die Entscheidungen stehen in einer Liste ([Teilschritt 2](docs/entwurf/2026-11-23-phase-1-teilschritt-2-entscheidungen.md)).
+- **Aufräumen gilt auch fürs Arbeiten:** Tests, Werkzeuge und Unterlagen, die bremsen, werden einfacher oder fallen weg.
+- **Technik-Prüfung festgehalten** ([Bericht](docs/entwurf/2026-11-23-technik-pruefung.md)): Die große Prüfung in der CI soll von rund 102 auf rund 35 bis 38 Minuten schrumpfen. Das kommt als Erstes in Teilschritt 3.
+- **Zwei alte WebKit-Fehler behoben** (Safari auf iPhone und iPad): Ohne Netz fragt die Seite nicht mehr unnötig nach einer neuen Version, und der Sicherungs-Test findet seine Teststimme auch in WebKit. Seitdem prüft jeder PR Pass und Offline zusätzlich in WebKit (`pnpm run test:browser:webkit`, etwa zwei Minuten mehr).
+
 ## 23.11.2026 – Teilschritt 2, Teil B: Karten, die zusammenpassen
 
 Jede Karte hat jetzt einen echten Nachbarn. Zwölf Karten sind schon ganz im neuen Stil, mit kleinen Häppchen und mehr zum Knobeln.
