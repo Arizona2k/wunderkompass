@@ -6,7 +6,7 @@ import {createSave, emptyProgress, SAVE_KEY} from '../../app/progress-storage.ts
 export async function assertHonestChallengeFeedback(room){
  const feedback=await room.getByRole('status').innerText();
  assert.doesNotMatch(feedback,/Richtig erklärt!|Gut begründet/,'a selection does not certify an unobserved personal explanation');
- assert.match(feedback,/Deine Auswahl passt\./,'correct feedback identifies the demonstrated selection');
+ assert.match(feedback,/Richtig!/,'correct feedback identifies the demonstrated selection');
 }
 
 export async function offlineChallengeHints(page,report){
@@ -19,12 +19,12 @@ export async function offlineChallengeHints(page,report){
   await hint.locator('summary').click();await hint.getByText(q.hints[0],{exact:true}).waitFor();
   if(q.hints.length===2){
    assert.equal(await hint.getByText(q.hints[1],{exact:true}).count(),0);
-   await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
+   await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).click();
    await hint.getByText(q.hints[1],{exact:true}).waitFor();
-  }else{assert.equal(await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).count(),0);assert.equal(await hint.locator('.challenge-second-hint').count(),0);}
+  }else{assert.equal(await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).count(),0);assert.equal(await hint.locator('.challenge-second-hint').count(),0);}
   const answers=room.locator('.quiz-answer');
   await answers.filter({has:page.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();
-  await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+  await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
   assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
   await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
   await room.getByText(q.why,{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
@@ -98,16 +98,16 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
      await hint.locator('summary').focus();await page.keyboard.press('Enter');
      await hint.getByText(q.hints[0],{exact:true}).waitFor();
-     await hint.getByRole('button',{name:'Hinweise vorlesen',exact:true}).click();
+     await hint.getByRole('button',{name:'Tipp vorlesen',exact:true}).click();
      assert.equal(await page.evaluate(()=>window.__hintSpeech.at(-1)),q.hints[0]);
      if(q.hints.length===2){
       assert.equal(await hint.getByText(q.hints[1],{exact:true}).count(),0,q.id+' second premature');
-      await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).focus();await page.keyboard.press('Enter');
+      await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).focus();await page.keyboard.press('Enter');
       await hint.getByText(q.hints[1],{exact:true}).waitFor();secondSteps.add(q.id);
-      await hint.getByRole('button',{name:'Hinweise vorlesen',exact:true}).click();
+      await hint.getByRole('button',{name:'Tipps vorlesen',exact:true}).click();
       assert.equal(await page.evaluate(()=>window.__hintSpeech.at(-1)),q.hints.join(' '));
-      assert.equal(await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).count(),0);
-     }else assert.equal(await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).count(),0);
+      assert.equal(await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).count(),0);
+     }else assert.equal(await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).count(),0);
      assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge,before,q.id+' hint changed round');
      assert.equal(await room.getByText(q.why,{exact:true}).count(),0,q.id+' premature explanation');
      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false,q.id+' overflow');
@@ -122,12 +122,12 @@ export async function challengeHints(browser,base,ready,monitor,report,shots){
      }
      const answers=room.locator('.quiz-answer');
      await answers.filter({has:page.getByText(q.answers.find((_,i)=>i!==q.correct),{exact:true})}).click();
-     await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+     await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
      assert.equal(await room.getByText(q.why,{exact:true}).count(),0,q.id+' wrong explanation');
      if(index===0){
       const wrong=(await pass()).gameSessions['world:knowledge-challenge'].challenge;
       await page.reload();await ready(page);await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();
-      await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+      await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
       assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge,wrong);
       assert.equal(await hint.getAttribute('open'),null);
       assert.equal(await hint.locator('.challenge-second-hint').count(),0);

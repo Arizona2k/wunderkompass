@@ -19,7 +19,7 @@ async function exactRound(p,old,orders,{wrong=false}={}){
  await room.getByRole('heading',{name:current.prompt,exact:true}).waitFor();
  assert.deepEqual(await room.locator('.quiz-answer>span:nth-of-type(2)').allTextContents(),orders[old.id]);
  if(wrong){
-  await room.getByText('Noch einmal überlegen.',{exact:true}).waitFor();
+  await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
   assert.equal(await room.locator('.quiz-answer.is-incorrect>span:nth-of-type(2)').innerText(),old.answers[2]);
   assert.equal(await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).count(),0);
  }
@@ -56,9 +56,9 @@ export async function retainedAnimalRounds(browser,base,ready,monitor,report,sho
    const room=restore.locator('.world-game-room');
    for(let index=0;index<old.length;index++){
     const q=old[index];await exactRound(restore,q,orders);
-    if(index){await room.locator('.quiz-answer').filter({has:restore.getByText(q.answers[2],{exact:true})}).click();await room.getByText('Noch einmal überlegen.',{exact:true}).waitFor();}
+    if(index){await room.locator('.quiz-answer').filter({has:restore.getByText(q.answers[2],{exact:true})}).click();await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();}
     assert.equal((await state(restore)).games.includes(game),false,'no stamp before completing all five tasks');
-    await room.locator('.quiz-answer').filter({has:restore.getByText(q.answers[q.correct],{exact:true})}).click();await room.getByText('Richtig verbunden!',{exact:true}).waitFor();
+    await room.locator('.quiz-answer').filter({has:restore.getByText(q.answers[q.correct],{exact:true})}).click();await room.getByText('Richtig!',{exact:true}).waitFor();
     await room.getByRole('button',{name:index===4?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();
    }
    await room.getByRole('heading',{name:'Eine ganze Runde gelöst!',exact:true}).waitFor();

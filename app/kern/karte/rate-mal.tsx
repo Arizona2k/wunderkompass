@@ -1,6 +1,6 @@
 'use client';
 // „Rate mal!“: die Startfrage der Karte, weit oben. Verhalten wie die alte Mini-Frage:
-// Falsch zeigt „Überlege noch einmal.“ und den Hinweis, aber keine Erklärung; neu wählen geht sofort.
+// Falsch zeigt „Noch nicht ganz. Versuch es noch einmal!“ und den Tipp, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
 import {useEffect, useRef} from 'react';
@@ -12,6 +12,7 @@ import {useSavedGame} from '../../saved-games';
 import {shuffle} from '../../../lib/shuffle';
 import type {Review} from '../../progress-storage';
 import {wiederholungFuerAntwort} from '../wiederholung';
+import {WOERTER} from '../woerter';
 import type {KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
@@ -89,13 +90,13 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
       </div>
       <LearningFeedback active={antwort !== null}>
         {antwort && <>
-          <strong>{fruehereAuswahl ? 'Hier gibt es neue Antworten.' : richtig ? 'Passende Antwort gewählt.' : 'Überlege noch einmal.'}</strong>
+          <strong>{fruehereAuswahl ? 'Hier gibt es neue Antworten.' : richtig ? WOERTER.richtig : WOERTER.nochNicht}</strong>
           <p>
             {fruehereAuswahl
               ? <>Früher hast du <q className="retained-mini-choice">{antwort}</q> gewählt. Diese Antwort gibt es jetzt nicht mehr. Wähle oben eine Antwort aus.</>
               : richtig
                 ? q.why
-                : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.')}
+                : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
           {richtig && (
             <div className="rate-mal-weiter">
@@ -114,7 +115,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
           )}
         </>}
       </LearningFeedback>
-      {/* Der Hinweis steht unter der Rückmeldung: erst „Überlege noch einmal.“, dann die Hilfe. */}
+      {/* Der Tipp steht unter der Rückmeldung: erst „Noch nicht ganz …“, dann die Hilfe. */}
       {!richtig && <QuestionHints key={frage.id} hints={frage.hints} onRead={onRead}/>}
     </section>
   );

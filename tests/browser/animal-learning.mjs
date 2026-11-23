@@ -120,8 +120,8 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
    const q=level===1?data.reason:data.transfer,task=root.locator('.animal-reason-task');
    await task.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
    const hint=task.locator(':scope>details').first();if(!await hint.evaluate(e=>e.open))await hint.locator('summary').click();await hint.getByText(q.hint,{exact:true}).waitFor();
-   await task.locator('.quiz-answer').nth(1-q.correct).click();await Promise.all([task.getByText('Prüfe die Aussage noch einmal.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[1-q.correct],{exact:true}).waitFor()]);
-   await task.locator('.quiz-answer').nth(q.correct).click();await Promise.all([task.getByText('Deine Auswahl passt.',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor()]);
+   await task.locator('.quiz-answer').nth(1-q.correct).click();await Promise.all([task.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[1-q.correct],{exact:true}).waitFor()]);
+   await task.locator('.quiz-answer').nth(q.correct).click();await Promise.all([task.getByText('Richtig!',{exact:true}).waitFor(),task.locator('.lab-feedback').getByText(q.feedback[q.correct],{exact:true}).waitFor()]);
    await assertAnimalSelectionFeedback(task);
    if(level===2&&q.reflection){const reflection=task.locator('.animal-transfer-reflection');await reflection.locator(':scope>summary').click();await reflection.getByText(q.reflection.prompt,{exact:true}).waitFor();assert.equal(await reflection.getByText(q.reflection.example,{exact:true}).isVisible(),false,'comparison example stays optional');await reflection.locator('details>summary').click();for(const text of [q.reflection.example,q.reflection.compare])await reflection.getByText(text,{exact:true}).waitFor();}
 
@@ -151,7 +151,7 @@ export async function animalFlow(browser,base,ready,monitor,report,shots,{matrix
    for(const key of ['favorites','notes'])assert.deepEqual(before[key],pass.progress[key]);assert.deepEqual(before.gameSessions['world:animal-detective'],pass.progress.gameSessions['world:animal-detective']);
    // Vor dem gewollten Neuladen alles fertig laden (siehe ladeanfragen in harness.mjs).
    stage='requests before reload';await anfragenFertig();
-   stage='reload';await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await ausprobierenAuf(p,data.id);await root.locator(':scope > summary').click();await root.getByText('Deine Auswahl passt.',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
+   stage='reload';await p.reload();await ready(p);const data=DATA.entries.at(-1),root=p.locator('[data-animal-inquiry="'+data.id+'"]');await ausprobierenAuf(p,data.id);await root.locator(':scope > summary').click();await root.getByText('Richtig!',{exact:true}).waitFor();assert.equal(await root.locator('.animal-inquiry-levels button').nth(2).getAttribute('aria-pressed'),'true','selected level survives reload');
    const after=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(after.gameSessions,before.gameSessions,'every old and new session key survives reload');
    stage='compact-origin-normal';compactOrigins.push(...await animalCompactOriginFlow(p,{width,shots,engine:browser.browserType().name(),state:'normal'}));
    await p.evaluate(()=>document.querySelector('.earth-app').classList.add('large-reading'));

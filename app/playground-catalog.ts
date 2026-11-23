@@ -34,7 +34,7 @@ const META:Record<string,Meta>={
  'world:habitats':m('Tiere & Lebensräume','Sortieren & zuordnen','Tiere mit einer passenden Heimat verbinden',6),
  'world:food':m('Tiere & Lebensräume','Sortieren & zuordnen','Nahrung und Tiermerkmale verbinden',6),
  'world:records':m('Tiere & Lebensräume','Spuren kombinieren','Tierrekorde nach genauen Regeln vergleichen',9),
- 'world:chronology':m('Geschichte & Ideen','Sortieren & zuordnen','Zeitanker von früher nach später ordnen',9),
+ 'world:chronology':m('Geschichte & Ideen','Sortieren & zuordnen','Ereignisse von früher nach später ordnen',9),
  'world:people':m('Geschichte & Ideen','Spuren kombinieren','Menschen hinter Ideen kennenlernen',9),
  'world:technology':m('Geschichte & Ideen','Spuren kombinieren','Probleme mit Erfindungen verbinden',8),
  'world:then-now':m('Geschichte & Ideen','Aussagen prüfen','Frühere und heutige Technik unterscheiden',8),

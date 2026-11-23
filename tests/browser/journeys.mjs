@@ -171,7 +171,7 @@ export async function journeysFlow(browser,base,ready,monitor,report,shots,nativ
   for(let level=0;level<3;level++){
    const q=c.tasks[level];await inquiry.locator('.journey-levels button').nth(level).click();await inquiry.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
    const hint=inquiry.locator('.journey-task summary');if(await hint.evaluate(el=>el.parentElement.open))await hint.click();await hint.click();await inquiry.getByText(q.hint,{exact:true}).waitFor();
-   await inquiry.locator('.quiz-answer').nth((q.correct+1)%3).click();await inquiry.getByText('Lass uns den Gedanken prüfen',{exact:true}).waitFor();assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0);
+   await inquiry.locator('.quiz-answer').nth((q.correct+1)%3).click();await inquiry.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();assert.equal(await inquiry.getByText(q.why,{exact:true}).count(),0);
    await inquiry.locator('.quiz-answer').nth(q.correct).click();await inquiry.getByText(q.why,{exact:true}).waitFor();
   }
   if(c.index>0){const visual=p.locator('[data-chapter-visual="'+c.id+'"]');await visual.waitFor();for(const choice of await visual.locator('button').all()){await choice.click();assert.equal(await choice.getAttribute('aria-pressed'),'true');}}

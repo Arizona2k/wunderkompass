@@ -154,7 +154,7 @@ export const richtigeAntwort = frage => frage.question.answers[frage.question.co
 export const falscheAntworten = frage => frage.question.answers.filter((_, i) => i !== frage.question.correct);
 
 // Satz nach einer falschen Antwort, wenn die Frage keinen eigenen „warum nicht“-Satz hat (rate-mal.tsx).
-export const NICHT_PASSEND = 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.';
+export const NICHT_PASSEND = 'Lies unten unter „Kurz erklärt“ nach.';
 export const rateMal = scope => scope.locator('section.rate-mal');
 export const antwortKnopf = (scope, antwort) => rateMal(scope).locator('.quiz-answer').filter({has: seite(scope).getByText(antwort, {exact: true})});
 
@@ -192,7 +192,7 @@ export async function antworteRichtig(scope, t, {tippen = false} = {}) {
 }
 
 // Die angezeigte Frage so durchspielen, wie ein Kind es kann: Hinweis öffnen, jede falsche Antwort tippen
-// (je ihr Satz „warum nicht“ oder „Überlege noch einmal.“, nie die Lösung), dann die richtige mit Erklärung.
+// (je ihr Satz „warum nicht“ oder „Noch nicht ganz …“, nie die Lösung), dann die richtige mit Erklärung.
 // Ist sie schon richtig beantwortet: beantwortet 'lassen' prüft nur die Erklärung, 'neu' tippt zuerst „Noch einmal raten“.
 export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinweis = true} = {}) {
   const frage = await angezeigteFrage(scope, t);
@@ -214,7 +214,7 @@ export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinwe
   for (const [i, antwort] of q.answers.entries()) {
     if (i === q.correct) continue;
     await antwortKnopf(scope, antwort).click();
-    await bereich.getByText('Überlege noch einmal.', {exact: true}).waitFor();
+    await bereich.getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor();
     await bereich.getByText(frage.wrongReasons?.[i] ?? NICHT_PASSEND, {exact: true}).waitFor();
     assert.equal(await bereich.getByText(q.why, {exact: true}).count(), 0, frage.id + ': eine falsche Antwort zeigt keine Lösung');
   }

@@ -6268,7 +6268,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Elektrisches Licht zu lösen?",
+      "prompt": "Bei welchem Problem half das elektrische Licht?",
       "answers": [
         "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
         "Menschen wollten durch die Luft reisen.",
@@ -6385,7 +6385,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Das Auto zu lösen?",
+      "prompt": "Bei welchem Problem half das Auto?",
       "answers": [
         "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
         "Eine Stimme war normalerweise nur in der Nähe hörbar.",
@@ -6490,7 +6490,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Die Eisenbahn zu lösen?",
+      "prompt": "Bei welchem Problem half die Eisenbahn?",
       "answers": [
         "Viele Waren und Reisende mussten über Land transportiert werden.",
         "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
@@ -6599,7 +6599,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Das Flugzeug zu lösen?",
+      "prompt": "Bei welchem Problem half das Flugzeug?",
       "answers": [
         "Menschen wollten durch die Luft reisen.",
         "Computer an verschiedenen Orten sollten Informationen austauschen.",
@@ -6699,7 +6699,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Das Telefon zu lösen?",
+      "prompt": "Bei welchem Problem half das Telefon?",
       "answers": [
         "Eine Stimme war normalerweise nur in der Nähe hörbar.",
         "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
@@ -6825,7 +6825,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Der Computer zu lösen?",
+      "prompt": "Bei welchem Problem half der Computer?",
       "answers": [
         "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
         "Ein Buch von Hand abzuschreiben dauerte lange.",
@@ -6937,7 +6937,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Das Internet zu lösen?",
+      "prompt": "Bei welchem Problem half das Internet?",
       "answers": [
         "Computer an verschiedenen Orten sollten Informationen austauschen.",
         "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
@@ -7057,7 +7057,7 @@
       }
     },
     "question": {
-      "prompt": "Welches Problem hilft Der Kompass zu lösen?",
+      "prompt": "Bei welchem Problem half der Kompass?",
       "answers": [
         "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
         "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
@@ -7179,7 +7179,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Der Buchdruck zu lösen?",
+      "prompt": "Bei welchem Problem half der Buchdruck?",
       "answers": [
         "Ein Buch von Hand abzuschreiben dauerte lange.",
         "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
@@ -7285,7 +7285,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Die Rakete zu lösen?",
+      "prompt": "Bei welchem Problem half die Rakete?",
       "answers": [
         "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
         "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
@@ -7391,7 +7391,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Der Satellit zu lösen?",
+      "prompt": "Bei welchem Problem half der Satellit?",
       "answers": [
         "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
         "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
@@ -7497,7 +7497,7 @@
       ]
     },
     "question": {
-      "prompt": "Welches Problem hilft Das Smartphone zu lösen?",
+      "prompt": "Bei welchem Problem half das Smartphone?",
       "answers": [
         "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
         "Viele Waren und Reisende mussten über Land transportiert werden.",
@@ -9013,7 +9013,7 @@
     "links": [],
     "history": {
       "year": 1000,
-      "date": "Über viele Jahrhunderte · Zeitanker um 1000",
+      "date": "Über viele Jahrhunderte · etwa um das Jahr 1000",
       "era": "Forschungsreisen",
       "sensitive": false
     },
@@ -9147,7 +9147,7 @@
     "links": [],
     "history": {
       "year": -450,
-      "date": "Klassische Zeit · Zeitanker um 450 v. Chr.",
+      "date": "Klassische Zeit · etwa um 450 v. Chr.",
       "era": "Antike",
       "sensitive": false
     },
@@ -13726,7 +13726,7 @@
     "links": [],
     "history": {
       "year": -2500,
-      "date": "3. Jahrtausend v. Chr. · ungefährer Zeitanker",
+      "date": "3. Jahrtausend v. Chr. · ungefähre Angabe",
       "era": "Frühe Städte",
       "sensitive": false
     },
@@ -13872,8 +13872,8 @@
           "text": "Zeichne einen Pfeil, eine kleine Öffnung und eine gegenüberliegende Bildfläche. Verbinde Pfeilspitze und Pfeilfuß jeweils geradlinig durch die Öffnung mit der Fläche. Was passiert mit oben und unten? Niemals die Sonne durch eine Öffnung, Linse oder Kamera ansehen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein Lochkameramodell ohne Linse. Das umgekehrte Bild ist noch kein gespeichertes Foto; die Zeichnung zeigt keine Sonnenbeobachtung."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Die Zeichnung zeigt eine Lochkamera ohne Linse. Das umgekehrte Bild darin ist noch kein Foto, denn es wird nicht gespeichert. Schau nie durch das Loch, eine Linse oder eine Kamera in die Sonne."
         }
       ],
       "parts": [
@@ -13991,8 +13991,8 @@
           "text": "Vergleiche nur gezeichnete gleichmäßig verteilte Lichtpunkte hinter zwei unterschiedlich großen Kreisöffnungen. Welche Öffnung fängt mehr Punkte auf? Das ist ein Flächenvergleich, kein echtes optisches Experiment. Niemals mit Fernrohr, Fernglas oder Linse in die Sonne schauen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein qualitativer Lichtweg, kein maßstabsgetreues Fernrohr und keine Zusage beliebiger Vergrößerung. Niemals mit optischen Geräten in die Sonne schauen."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Die Zeichnung zeigt nur ungefähr, wie das Licht läuft. Ein echtes Fernrohr sieht anders aus. Es kann auch nicht alles beliebig groß machen. Schau nie mit einem Fernrohr, einem Fernglas oder einer Lupe in die Sonne."
         }
       ],
       "parts": [
@@ -14107,8 +14107,8 @@
           "text": "Vergleiche in der Zeichnung zwei gleich stark vergrößerte Muster: eines scharf, eines verschwommen. Welche Unterschiede kannst du sicher beschreiben? Zum eigenen Beobachten reicht Papier mit feinem Aufdruck. Keine unbekannten Flüssigkeiten oder Körperproben untersuchen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein klassisches Lichtmikroskop mit Zwischenbild; nicht jedes moderne Gerät hat genau diesen Aufbau. Größer zeichnen heißt nicht automatisch mehr Einzelheiten erkennen."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Die Zeichnung zeigt ein Lichtmikroskop mit zwei Linsen: dem Objektiv unten und dem Okular oben. Viele heutige Mikroskope sind innen etwas anders gebaut. Und: Größer heißt nicht immer, dass man mehr Einzelheiten sieht."
         }
       ],
       "parts": [
@@ -14224,8 +14224,8 @@
           "text": "Zeichne nur auf Papier Batterie, Lampe und zwei Leitungen. Trenne an einer Stelle den gezeichneten Weg. Erkläre, warum eine zweite volle Batterie allein diese Unterbrechung nicht beseitigt. Keine Batterien öffnen oder kurzschließen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Der Plan trennt Elektronen außen und Ionen innen. Die Ionenbewegungen hängen von der Zellchemie ab; die Zeichnung zeigt weder eine Bauanleitung noch eine bestimmte Batteriechemie."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Außen im Stromkreis fließen Elektronen. Innen in der Batterie wandern Ionen, das sind Atome mit elektrischer Ladung. Wie sie wandern, hängt von den Stoffen in der Batterie ab. Das Bild zeigt keine bestimmte Batterie und ist keine Bauanleitung."
         }
       ],
       "parts": [
@@ -14348,8 +14348,8 @@
           "text": "Vergleiche im Bildschirmmodell: Magnet steht; Magnet bewegt sich hinein; Magnet bewegt sich hinaus. Vermute vor jedem Schritt, ob das Messgerät ausschlägt. Keine Steckdosen oder echten Anlagen verwenden."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Eine qualitative Momentaufnahme: Ausschlag nur während der Änderung, keine berechnete Spannung oder Dauerenergie aus einem ruhenden Magneten."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild zeigt nur einen Augenblick. Der Zeiger schlägt nur aus, solange sich Magnet und Spule gegeneinander bewegen. Liegen beide still, fließt kein Strom. Echte Zahlen rechnet das Bild nicht aus."
         }
       ],
       "parts": [
@@ -14471,8 +14471,8 @@
           "text": "Nutze nur das Bildschirmmodell: Stelle einen Steuereingang auf aus und dann auf ein. Vergleiche den gesteuerten Weg. Erkläre anschließend den Unterschied zwischen Steuersignal und Energieversorgung."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein Symbolmodell für einen elektronischen Schalter. Es zeigt weder den inneren Aufbau noch alle Betriebsarten eines realen Transistors."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild ist ein Zeichen für einen winzigen elektronischen Schalter. Wie ein echter Transistor innen gebaut ist, zeigt es nicht. Ein Transistor kann auch mehr als nur an und aus, zum Beispiel Signale verstärken."
         }
       ],
       "parts": [
@@ -14743,8 +14743,8 @@
           "text": "Zeichne einen Kasten und zwei verschiedenfarbige Pfeile: Wärme innen nach außen, elektrische Energie zum Gerät. Was ändert sich, wenn die Tür offen bleibt? Nur zeichnen und überlegen; keine Geräteteile anfassen oder Rohre öffnen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Pfeile zeigen Energieflüsse, keinen vollständigen Kompressorzyklus. Gehäuse und Rohre bleiben geschlossen; nur am Bildschirm untersuchen."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Die Pfeile zeigen, wohin Energie fließt. Den ganzen Kreislauf im Kühlschrank zeigt das Bild nicht. Öffne nie Gehäuse oder Rohre eines echten Kühlschranks. Forsche nur hier am Bildschirm."
         }
       ],
       "parts": [
@@ -14868,8 +14868,8 @@
           "text": "Zeichne zwei gezahnte Kreise und markiere je einen Zahn. Vergleiche bei einer langsamen gedachten Kettenbewegung ein kleines und ein großes hinteres Zahnrad. Erkläre: Was ändert sich an Drehzahl und notwendiger Pedalkraft? Keinen echten Antrieb mit Fingern drehen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein Kettenantrieb als Funktionsplan, keine genaue historische Rekonstruktion. Zahnzahlen und Kräfte sind hier nicht maßstäblich berechnet."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild zeigt, wie die Kette die Kraft von den Pedalen zum Hinterrad bringt. Es ist kein genauer Nachbau eines alten Fahrrads. Wie viele Zähne die Zahnräder haben und wie groß die Kräfte sind, ist nicht nachgerechnet."
         }
       ],
       "parts": [
@@ -15049,8 +15049,8 @@
           "text": "Vergleiche im Bildschirmplan die Rollen: Was bewegt die Kabine, was hält sie im Störungsfall? Ordne die Aufgaben zunächst ohne Auflösung zu. Keine echten Türen blockieren, keinen Schacht betreten und keine Sicherheitseinrichtung ausprobieren."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein qualitatives Seilaufzugsprinzip mit getrennten Aufgaben. Keine Bau-, Wartungs- oder Manipulationsanleitung; andere Bauarten funktionieren anders."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild zeigt die Idee eines Aufzugs mit Seil. Jedes Teil hat eine eigene Aufgabe. Manche Aufzüge funktionieren anders. Das Bild ist keine Anleitung zum Bauen, Reparieren oder Verstellen."
         }
       ],
       "parts": [
@@ -15182,8 +15182,8 @@
           "text": "Vergleiche im Bildschirmmodell Boden, Gehäuse, Masse und Kurve. Sage voraus, was sich relativ wozu bewegt. Wiederhole nur mit einer anderen gedachten Bewegungsrichtung. Keine schweren Pendel oder wackligen Aufbauten bauen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Ein einfaches relatives Messprinzip, keine Echtzeitdaten und keine Erdbebenprognose. Aus einer Kurve allein folgt noch kein genauer Bebenort."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild zeigt die Idee, wie man Erschütterungen misst. Es zeigt keine echten Messungen von heute. Es sagt auch keine Erdbeben voraus. Aus einer einzigen Kurve weiß man noch nicht genau, wo die Erde gebebt hat."
         }
       ],
       "parts": [
@@ -15304,8 +15304,8 @@
           "text": "Ordne drei selbst gezeichnete Querschnitte zu einem Stapel. Sage voraus, welche Form daraus entsteht, und vergleiche mit der Seitenansicht. Ändere eine mittlere Schicht. Keine heißen Düsen, Harze, Pulver oder Laser selbst bedienen."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Drei gezeichnete Querschnitte erklären Aufbau und Ansichten. Das Modell berechnet weder Druckbarkeit noch Stützen oder Bauteilfestigkeit."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Drei Bilder zeigen den Gegenstand wie aufgeschnitten. Die Bilder rechnen nicht aus, ob er sich drucken lässt, ob er Stützen braucht oder wie fest er wird."
         }
       ],
       "parts": [
@@ -15419,8 +15419,8 @@
           "text": "Lege auf Papier zwei verschiedenfarbige gezeichnete Fadenwege übereinander. Beschreibe, an welcher Stelle sie sich verschlingen sollen. Vergleiche eine lose Kreuzung mit einer Verbindung. Nur zeichnen; keine echte Nadel oder eingeschaltete Maschine verwenden."
         },
         {
-          "label": "Modellgrenzen",
-          "text": "Die Übersicht zeigt zwei Fäden und beteiligte Teile, nicht die vollständige räumliche Stichbewegung. Sie darf nicht als Anleitung an einer echten Maschine benutzt werden."
+          "label": "Was das Bild nicht zeigt",
+          "text": "Das Bild zeigt die zwei Fäden und die wichtigen Teile. Wie sich die Fäden bei jedem Stich verschlingen, zeigt es nicht ganz. Nutze das Bild nicht als Anleitung an einer echten Nähmaschine."
         }
       ],
       "parts": [

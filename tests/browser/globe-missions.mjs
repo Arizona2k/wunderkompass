@@ -10,7 +10,7 @@ export async function globeMissionFlow(page,{shots=null}={}){
   await room.locator('.eyebrow').getByText('MINI-MISSION '+(i+1)+'/12',{exact:true}).waitFor();
   const hint=room.getByRole('button',{name:'Ich brauche einen Tipp',exact:true});assert.equal(await hint.getAttribute('aria-expanded'),'false');await hint.focus();await page.keyboard.press('Enter');
   assert.equal(await room.getByRole('button',{name:'Tipp schließen',exact:true}).getAttribute('aria-expanded'),'true');
-  await room.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
+  await room.getByRole('button',{name:'Noch ein Tipp',exact:true}).click();
   await room.getByRole('button',{name:'Zeig mir den Ort',exact:true}).click();assert.equal((await state()).missions.length,i,'revealing the place does not earn a mission');
   await room.getByRole('button',{name:'Zeig mir die Region',exact:true}).click();assert.equal((await state()).missions.length,i,'revealing the region does not earn a mission');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+1),false);

@@ -5,6 +5,7 @@ import DATA from './science-thinking.json';
 import {LearningDetails} from './learning-components';
 import {useSavedGame,useSavedModel} from './saved-games';
 import './science-thinking.css';
+import {WOERTER} from './kern/woerter';
 
 type Answer={id:string;text:string;feedback:string};
 type Stage={id:string;goal:string;example:string;prompt:string;hint:string;answers:Answer[];correct:string};
@@ -32,10 +33,10 @@ function ThinkingTask({task,onRead}:{task:Stage;onRead:(text:string)=>void}){
  const answer=task.answers.find(answer=>answer.text===choice),right=answer?.id===task.correct;
  return <div className="science-thinking-task" data-science-thinking-stage={task.id}>
   <p><strong>Dein Ziel:</strong> {task.goal}</p><p className="science-thinking-example">{task.example}</p><h4 id={questionHeading}>{task.prompt}</h4>
-  <LearningDetails summary="Ein Denkhinweis"><p>{task.hint}</p></LearningDetails>
+  <LearningDetails summary={WOERTER.tipp}><p>{task.hint}</p></LearningDetails>
   {choice!==null&&!answer&&<p className="gentle-note">Diese Frage hat neue Antwortmöglichkeiten. Du kannst sie erneut bearbeiten.</p>}
   <div className="quiz-answers" role="group" aria-labelledby={questionHeading}>{task.answers.map(answer=><button key={answer.id} className={'quiz-answer '+(choice===answer.text?(right?'is-correct':'is-incorrect'):'')} aria-pressed={choice===answer.text} onClick={()=>setChoice(answer.text)}><span>{answer.text}</span></button>)}</div>
-  {answer&&<div className="lab-feedback" role="status"><strong>{right?'Dein Gedanke passt':'Prüfe die Begründung'}</strong><p>{answer.feedback}</p>{!right&&<p>Du kannst eine andere Erklärung ausprobieren.</p>}</div>}
+  {answer&&<div className="lab-feedback" role="status"><strong>{right?WOERTER.richtig:WOERTER.nochNicht}</strong><p>{answer.feedback}</p></div>}
   <button className="speech-button" onClick={()=>onRead([task.goal,task.example,task.prompt,...task.answers.map(answer=>answer.text)].join(' '))}><Volume2 size={17}/> Beispiel und Frage vorlesen</button>
  </div>;
 }

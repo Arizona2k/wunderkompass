@@ -81,11 +81,11 @@ export async function articleAtlas(page,ready,report,width,shots){
  const haupt=await zeigtFrage(page,topic,hauptfrage(topic)),[wrong]=falscheAntworten(haupt),answer=antwortKnopf(page,richtigeAntwort(haupt));
  const hint=question.locator('.world-game-hint');await hint.locator('summary').click();assert.equal(await hint.locator('p').count()>0,true);assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);
  await antwortKnopf(page,wrong).click();
- await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
+ await question.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
  // Die Mondkarte hat Zusatzfragen (Aufgabe 11). Nach einer falschen Antwort zeigt sie beim Neuladen trotzdem wieder die
- // Hauptfrage mit „Überlege noch einmal.“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
+ // Hauptfrage mit „Noch nicht ganz …“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
  const [next]=zusatzfragen(topic);assert.ok(next,'the moon card has additional questions');
- await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();
+ await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);await question.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
  const kept=await readPass();assert.equal(kept.gameSessions['topic:'+topic.id]?.[haupt.answerKey],wrong,'the wrong answer stays in the pass');assert.equal(kept.review[haupt.reviewId]?.correct,false);assert.equal(kept.discoveries.includes('learned:'+topic.id),false);
  assert.equal(await page.getByText(haupt.question.why,{exact:true}).count(),0,'no solution after reload');
  await answer.click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(haupt.question.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));

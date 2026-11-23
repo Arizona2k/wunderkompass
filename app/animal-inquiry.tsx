@@ -4,6 +4,7 @@ import './animal-inquiry.css';
 import {Eye,GitBranch,Search,Volume2} from 'lucide-react';
 import {useSavedGame,useSavedModel} from './saved-games';
 import DATA from './animal-inquiries.json';
+import {WOERTER} from './kern/woerter';
 
 const LEVELS=['Belege sammeln','Zusammenhang erklären','Genauer nachdenken'] as const;
 type Task=(typeof DATA.entries)[number]['reason']|(typeof DATA.entries)[number]['transfer'];
@@ -41,9 +42,9 @@ function ReasonTask({task,level,onRead}:{task:Task;level:number;onRead:(text:str
  return <section className="animal-reason-task" aria-label={level===1?'Zusammenhang erklären':'Schlussfolgerung prüfen'}>
   <h4>{task.prompt}</h4>
   <button className="speech-button" onClick={()=>onRead(task.prompt+'. '+task.answers.join('. '))}><Volume2 size={17} aria-hidden="true"/> Denkfrage vorlesen</button>
-  <details className="learning-details"><summary>Ein Denkhinweis · freiwillig</summary><p>{task.hint}</p></details>
+  <details className="learning-details"><summary>{WOERTER.tipp}</summary><p>{task.hint}</p></details>
   <div className="quiz-answers">{task.answers.map((text,index)=><button key={text} className={'quiz-answer '+(chosen===index?(correct?'is-correct':'is-incorrect'):'')} aria-pressed={chosen===index} onClick={()=>setAnswer(text)}><span className="answer-letter" aria-hidden="true">{String.fromCharCode(65+index)}</span><span>{text}</span></button>)}</div>
-  {chosen>=0&&<div className="lab-feedback" role="status"><strong>{correct?'Deine Auswahl passt.':'Prüfe die Aussage noch einmal.'}</strong><p>{task.feedback[chosen]}</p><button className="speech-button" onClick={()=>setAnswer(null)}>Noch einmal überlegen</button></div>}
+  {chosen>=0&&<div className="lab-feedback" role="status"><strong>{correct?WOERTER.richtig:WOERTER.nochNicht}</strong><p>{task.feedback[chosen]}</p><button className="speech-button" onClick={()=>setAnswer(null)}>Neu wählen</button></div>}
   {level===2&&correct&&reflection&&<details className="learning-details animal-transfer-reflection">
    <summary>Eine eigene Überlegung · freiwillig</summary>
    <p>{reflection.prompt}</p>
