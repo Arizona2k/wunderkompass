@@ -155,21 +155,23 @@ Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test
 
 - Team `team_ZoDaUGD4xeLiekVnSQ4oD2aE`, Projekt `prj_ZY036iUMf0CKLgb4h9ywyGBTUHRI` (Git-Anbindung; gebaut werden nur `test-live` und `vorschau`, siehe `vercel.json`).
 - Kostenloser Plan: höchstens 100 Deployments in 24 Stunden (gleitendes Fenster, abgebrochene Builds zählen mit; [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)). Ist das Limit erreicht, geht der Merge trotzdem (Vercel ist kein Pflicht-Check). Die Test-Seite zieht dann erst mit dem nächsten Merge nach `test-live` nach.
-- **Tageslimit, ohne dass etwas verloren geht** (Wunsch des Nutzers, 24.11.2026). Gebaut werden nur Merges nach `test-live` und Vorschau-Runden, das sind weit unter 100 am Tag. Gezählt oder auf den nächsten Tag verschoben wird nichts. Jeder Build baut den ganzen Stand von `test-live`, ein gesperrter Merge ist darum im nächsten Build mit drin.
+- **Tageslimit, ohne dass etwas verloren geht** (Wunsch des Nutzers, 24.11.2026). Gebaut werden nur Merges nach `test-live` und Vorschau-Runden, das sind weit unter 100 am Tag. Gezählt oder auf den nächsten Tag verschoben wird nichts. Jeder Build von `test-live` baut den ganzen Stand von `test-live`, ein gesperrter Merge ist darum im nächsten Build mit drin.
   - Nach jedem Merge prüft Claude mit `list_deployments` (Branch `test-live`), ob der Merge-Commit `READY` ist.
   - Wenn nicht: In `STATUS.md` unter „Adressen“ steht dann „Test-Seite noch auf Stand `<sha>`“, und der Nutzer erfährt es im Bericht.
   - `/weiter` prüft bei jedem Einstieg, ob der neueste Commit auf `test-live` gebaut ist. Nachgezogen wird mit dem nächsten Merge. Keine Deployments von Hand: Will der Nutzer den Stand sofort, klickt er selbst in Vercel auf „Redeploy“.
 - **Vorschau** (Branch `vorschau`, OK des Nutzers, 24.11.2026): nur bei sichtbaren Änderungen und erst, wenn `pnpm run check` grün ist, einmal je Runde (vor dem PR-Link, nach größeren Korrekturen noch einmal). Unterlagen, Tests und Werkzeuge kommen nicht auf die Vorschau.
-  - So, ohne Force-Push und immer als neuer Commit mit genau den Dateien von `HEAD` (Nachricht deutsch, mit den üblichen Abschlusszeilen):
+  - So, ohne Force-Push und immer als neuer Commit mit genau den Dateien von `HEAD` (Nachricht deutsch, mit der kurzen SHA von `HEAD` und den üblichen Abschlusszeilen). Ein neuer Commit muss es sein: Bei der Probe am 24.11.2026 baute Vercel einen Commit, der schon auf `claude/...` lag, auf `vorschau` nicht; der neue Commit aus diesem Befehl wurde sofort gebaut. Die `&&` sind wichtig: Schlägt ein Teil fehl, wird nichts gepusht (ein leerer Wert vor `:refs/heads/vorschau` würde den Branch löschen).
     ```bash
-    git fetch origin vorschau
-    git push origin $(git -c user.name=Claude -c user.email=noreply@anthropic.com commit-tree 'HEAD^{tree}' -p FETCH_HEAD -p HEAD -m 'Vorschau: <Thema>' -m '<Abschlusszeilen>'):refs/heads/vorschau
+    git fetch origin vorschau && V=$(git -c user.name=Claude -c user.email=noreply@anthropic.com commit-tree 'HEAD^{tree}' -p origin/vorschau -m "Vorschau: <Thema>, Stand $(git rev-parse --short HEAD)" -m '<Abschlusszeilen>') && git push origin "$V":refs/heads/vorschau
     ```
+  - Fehlt `vorschau` auf GitHub (der Fetch meldet einen Fehler), einmal mit `-p HEAD` statt `-p origin/vorschau` anlegen. `vorschau` ist nur zum Anzeigen da: nie als Basis nehmen, nie mergen.
+  - Gebaut wird nur, wenn `vercel.json` im gezeigten Stand `"vorschau": true` enthält (seit `3b85f24`). Fehlt es, erst `test-live` in den Arbeitsbranch holen.
+  - Es gibt nur eine Vorschau: Die neueste Runde ersetzt die vorige, auch die eines anderen Chats.
   - Danach mit `list_deployments` (Branch `vorschau`) warten, bis der Stand `READY` ist, dann den Link schicken.
-  - Die Vorschau hat eine andere Adresse als die Test-Seite und darum einen eigenen Entdeckerpass. Was ein Kind dort sammelt, bleibt dort. Das dem Nutzer beim ersten Link sagen.
+  - Die Vorschau hat eine andere Adresse als die Test-Seite und darum einen eigenen Entdeckerpass (je Gerät). Was dort gesammelt wird, bleibt dort. Dem Nutzer beim Link sagen: nur zum Ansehen, nicht an Kinder weitergeben; Kinder benutzen die Test-Seite.
   - Ist das Tageslimit erreicht, reichen Screenshots. Die Vorschau zieht mit der nächsten Runde nach.
 - Status über das Vercel-MCP (`list_deployments`), keine Deployments von Hand.
-- Feste Adressen: Testseite (`test-live`) https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/, älterer Stand (`main`, zurzeit nicht genutzt und nicht gebaut) https://wunderkompass.vercel.app/.
+- Feste Adressen: Testseite (`test-live`) https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/, Vorschau (`vorschau`) https://wunderkompass-git-f420d3-interaktive-wissens-und-lernplattform.vercel.app/, älterer Stand (`main`, zurzeit nicht genutzt und nicht gebaut) https://wunderkompass.vercel.app/.
 
 ## Neue Sitzung
 
