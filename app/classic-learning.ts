@@ -37,6 +37,8 @@ export function neueKlassikRunde(game:ReasonGame,stufe:Stufe,review:Review={},vo
   const doppelt=ids.filter(id=>{const g=CLASSIC_QUESTIONS.find(q=>q.id===id)?.gruppe;if(!g)return false;if(gesehen.has(g))return true;gesehen.add(g);return false;});
   return doppelt.length?waehle(vorrat.filter(id=>!doppelt.includes(id)),anzahl):ids;
  };
+ // Absicht: Experten-Fragen zuerst, die Profi-Frage zuletzt. So kann eine Profi-Frage keine Experten-Frage verraten
+ // (Stufen-Nachprüfung 24.11.2026). Wer hier mischt, braucht Sperren zwischen verwandten Fragen.
  const zuerst=gespielt==='experte'?waehle(vorratDer(game,'experte'),EXPERTEN_JE_RUNDE):[];
  const ids=[...zuerst,...waehle(vorratDer(game,gespielt==='experte'?'profi':gespielt),KLASSIK_RUNDE-zuerst.length)];
  return {level:null,stufe:gespielt,ids,orders:Object.fromEntries(ids.map(id=>{const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!;return [id,q.festeReihenfolge?[...q.answers]:mischen(q.answers,zufall)];})),index:0,answer:null,done:false};

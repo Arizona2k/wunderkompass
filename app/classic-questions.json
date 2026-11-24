@@ -705,7 +705,8 @@
         "label": "NOAA: What is coral bleaching?",
         "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
       }
-    ]
+    ],
+    "gruppe": "algen"
   },
   {
     "id": "detective-hard-seasons",
@@ -817,10 +818,10 @@
     "answers": [
       "Über den Wolken gibt es keine Luft mehr",
       "Die Luft hört an der Ozonschicht auf",
-      "Auch hoch über den Flugzeugen ist noch etwas Luft",
+      "Über den Flugzeugen ist noch etwas Luft",
       "Ganz oben wird die Luft wieder dichter"
     ],
-    "correct": "Auch hoch über den Flugzeugen ist noch etwas Luft",
+    "correct": "Über den Flugzeugen ist noch etwas Luft",
     "wrongReasons": {
       "Über den Wolken gibt es keine Luft mehr": "Große Flugzeuge fliegen über den meisten Wolken. Sie brauchen dort Luft zum Fliegen.",
       "Die Luft hört an der Ozonschicht auf": "Die Ozonschicht ist ein Teil der Luft. Sie schützt uns vor starken Sonnenstrahlen. Darüber gibt es noch mehr Luft.",
@@ -883,18 +884,18 @@
     "game": "detective",
     "level": "medium",
     "stufe": "profi",
-    "prompt": "Ein Kind sagt: „Auch tief unten im Meer strömt Wasser.“ Stimmt das?",
+    "prompt": "Jemand sagt: „Auch tief unten im Meer strömt Wasser.“ Stimmt das?",
     "answers": [
       "Ja, aber nur bei Sturm",
-      "Nein, in der Tiefe ist es ganz ruhig",
+      "Nein, in der Tiefe steht das Wasser still",
       "Ja, auch ohne Wind und Sturm",
       "Nein, unten bewegen nur Fische das Wasser"
     ],
     "correct": "Ja, auch ohne Wind und Sturm",
     "wrongReasons": {
       "Ja, aber nur bei Sturm": "Ein Sturm wühlt vor allem das Wasser oben auf. Tief unten merkt man davon wenig.",
-      "Nein, in der Tiefe ist es ganz ruhig": "Unter den Wellen gibt es Strömungen. Sie sind langsam, aber sie hören nicht auf.",
-      "Nein, unten bewegen nur Fische das Wasser": "Fische bewegen nur ein bisschen Wasser um sich herum. Die Strömungen in der Tiefe sind viel größer."
+      "Nein, unten bewegen nur Fische das Wasser": "Fische bewegen nur ein bisschen Wasser um sich herum. Die Strömungen in der Tiefe sind viel größer.",
+      "Nein, in der Tiefe steht das Wasser still": "Unter den Wellen gibt es Strömungen. Sie sind langsam, aber sie hören nicht auf."
     },
     "why": "Auch tief unten fließt Wasser, ganz langsam. So wandert es durch alle Meere der Welt.",
     "hints": [
@@ -1000,7 +1001,7 @@
     "game": "detective",
     "level": "medium",
     "stufe": "profi",
-    "prompt": "Jemand sagt: „Der Wasserkreislauf fängt immer im Meer an.“ Stimmt das?",
+    "prompt": "Ein Kind sagt: „Der Wasserkreislauf fängt immer im Meer an.“ Stimmt das?",
     "answers": [
       "Ja, alles Wasser startet im Meer",
       "Nein, er fängt immer in den Wolken an",
@@ -1138,10 +1139,10 @@
     "answers": [
       "Die Sonne wärmt das Meer, und Wasser verdunstet",
       "Der Dampf steigt mit der warmen Luft auf",
-      "Oben wird die Luft wärmer, und es entstehen Tröpfchen",
+      "Oben wird es wärmer, und es entstehen Tröpfchen",
       "Die Tröpfchen werden größer, bis sie fallen"
     ],
-    "correct": "Oben wird die Luft wärmer, und es entstehen Tröpfchen",
+    "correct": "Oben wird es wärmer, und es entstehen Tröpfchen",
     "wrongReasons": {
       "Die Sonne wärmt das Meer, und Wasser verdunstet": "Dieser Satz ist richtig. Die Wärme der Sonne lässt Wasser verdunsten.",
       "Der Dampf steigt mit der warmen Luft auf": "Dieser Satz ist richtig. Warme Luft steigt auf und nimmt den Dampf mit.",
@@ -1149,8 +1150,8 @@
     },
     "why": "Oben wird die Luft kälter, nicht wärmer. Erst in der Kälte werden aus dem Dampf Tröpfchen.",
     "hints": [
-      "Denk an hohe Berge. Wie ist es dort oben?",
-      "Wasserdampf wird zu Tröpfchen, wenn er abkühlt."
+      "Lies jeden Satz einzeln: Wird es dort wärmer oder kälter?",
+      "Denk an hohe Berge. Wie ist es dort oben?"
     ],
     "topic": "science-water-cycle",
     "quelle": [
@@ -1163,7 +1164,8 @@
         "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
       }
     ],
-    "festeReihenfolge": true
+    "festeReihenfolge": true,
+    "gruppe": "dampf"
   },
   {
     "id": "detective-meer-4",
@@ -1172,16 +1174,16 @@
     "stufe": "experte",
     "prompt": "Weit im Norden gefriert das Meer zu Eis. Das Salz kommt nicht mit ins Eis. Was passiert mit dem Wasser direkt unter dem Eis?",
     "answers": [
-      "Es wird salziger und steigt nach oben",
-      "Es wird salziger und sinkt nach unten",
-      "Es wird weniger salzig und sinkt nach unten",
-      "Es wird weniger salzig und steigt nach oben"
+      "Es wird salziger und geht nach oben",
+      "Es wird salziger und geht nach unten",
+      "Es wird weniger salzig und geht nach unten",
+      "Es wird weniger salzig und geht nach oben"
     ],
-    "correct": "Es wird salziger und sinkt nach unten",
+    "correct": "Es wird salziger und geht nach unten",
     "wrongReasons": {
-      "Es wird salziger und steigt nach oben": "Kaltes, salziges Wasser ist schwerer. Schweres Wasser steigt nicht nach oben.",
-      "Es wird weniger salzig und sinkt nach unten": "Das Salz bleibt im Wasser zurück. Wird das Wasser dann salziger oder weniger salzig?",
-      "Es wird weniger salzig und steigt nach oben": "Das Salz bleibt im Wasser zurück. Dadurch wird das Wasser salziger."
+      "Es wird salziger und geht nach oben": "Kaltes, salziges Wasser ist schwerer. Schweres Wasser geht nicht nach oben.",
+      "Es wird weniger salzig und geht nach unten": "Das Salz bleibt im Wasser zurück. Wird das Wasser dann salziger oder weniger salzig?",
+      "Es wird weniger salzig und geht nach oben": "Das Salz bleibt im Wasser zurück. Dadurch wird das Wasser salziger."
     },
     "why": "Das Salz bleibt im Wasser zurück. Kaltes, salziges Wasser ist schwerer und sinkt in die Tiefe. So kommt das tiefe Wasser im Meer in Bewegung.",
     "hints": [
@@ -1237,7 +1239,8 @@
         "label": "NOAA: Are corals animals or plants?",
         "url": "https://oceanservice.noaa.gov/facts/coral.html"
       }
-    ]
+    ],
+    "gruppe": "algen"
   },
   {
     "id": "detective-pflanzen-3",
