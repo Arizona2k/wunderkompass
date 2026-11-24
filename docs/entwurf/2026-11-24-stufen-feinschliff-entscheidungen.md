@@ -38,6 +38,11 @@ Ergebnis: „mit Änderungen bereit“. Pass und Schlüssel unverändert (nur ge
 
 **Umgesetzt:** 1 (Knopf setzt vor dem Wechsel den Fokus auf „Rate mal!“, das ein festes Rücksprungziel hat; Test „Zurück nach Weiter zu“), 2 (in Routen nur der Satz, Test), 4 (wie vorgeschlagen: `zeigtSchluss`; Entdecker mit nur einer Frage bleibt wie bisher), 5, 6, 7, 8.
 
+## Spieltest-Befunde f und g: falsche Antwort sah am Handy grünlich aus
+
+Beim Nachstellen am Handy (390 px, Bild in `.qa-output/feinschliff/`, nicht in Git) zeigte sich: Nach dem Tippen auf eine falsche Antwort war der Knopf grünlich hinterlegt, nur die Schrift orange. Ursache: Die alte Regel für „Maus darüber“ in `app/globals.css` (`.quiz-answer:not(:disabled):hover`, grünlich #f0f8f4 / #9abfb0) ist stärker als `.is-incorrect`, und am Handy bleibt :hover nach dem Tippen stehen. Das erklärt Befund f („nur die Antwort wird orange“) und g (Hover-Grün ähnlich dem Richtig-Grün). **Behoben:** Die Regel gilt nur noch mit `@media(hover:hover)`, nicht für beantwortete Knöpfe, und in neutralem Blaugrau (#f2f7f9 / #799da9, wie schon in `.classic-learning`). Gilt für alle Antwortknöpfe der Seite. Test in `wechselNachFalscherAntwort` (Handy und Maus): Die falsche Antwort bleibt orange, auch mit Finger oder Maus darauf.
+Lage der Rückmeldung (f): Mit ins Bild geholter Antwort liegt „Noch nicht ganz …“ bei 390 px im Bild (522 bis 642 von 844 px). Weiteres prüft der `design-pruefer`.
+
 ## Elefanten-Fragen (e)
 
 Entwurf des `karten-autor`: [2026-11-24-elefant-fragen-entwurf.md](2026-11-24-elefant-fragen-entwurf.md). Prüfungen folgen.

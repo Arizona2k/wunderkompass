@@ -122,6 +122,12 @@ async function wechselNachFalscherAntwort(page, {touch}) {
   const haupt = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await tippe(antwortKnopf(page, falscheAntworten(haupt)[0]), touch);
   await rateMal(page).getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor(WARTEN);
+  // Die falsche Antwort bleibt orange, auch wenn der Finger oder die Maus noch darauf ist. Vorher färbte die Regel für
+  // „Maus darüber“ sie grünlich wie eine richtige (Spieltest 24.11.2026, Befunde 6 und 7; am Handy bleibt :hover nach dem Tippen).
+  const falschKnopf = antwortKnopf(page, falscheAntworten(haupt)[0]);
+  // Testvoraussetzung: Finger oder Maus noch auf der falschen Antwort (der Browser setzt :hover erst ein Bild später).
+  await page.waitForFunction(() => document.querySelector('section.rate-mal .quiz-answer.is-incorrect')?.matches(':hover'), null, {timeout: 5000});
+  assert.equal(await falschKnopf.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 243, 228)', 'die falsche Antwort ist orange hinterlegt, nicht grün');
   await page.waitForFunction(([key, id]) => JSON.parse(localStorage.getItem(key)).progress.review[id]?.correct === false, [SAVE_KEY, haupt.reviewId], WARTEN);
   const pass = await passLesen(page);
   const stand = pass.gameSessions['topic:' + t.id];
@@ -324,6 +330,7 @@ export async function karteStufen(ctx) {
   await mitKarte(ctx, breit, MIT_PROFI.id, stufenAufDerKarte);
   const b = await mitKarte(ctx, handy, OHNE_ZUSATZ.id, profiOhneProfiFragen);
   const g = await mitKarte(ctx, handy, MIT_PROFI.id, wechselNachFalscherAntwort);
+  await mitKarte(ctx, breit, MIT_PROFI.id, wechselNachFalscherAntwort);
   const h = await mitKarte(ctx, handy, SCHLUSS_AUF_PROFI.id, schlussNachDerStufe);
   await mitKarte(ctx, breit, SCHLUSS_AUF_PROFI.id, schlussNachDerStufe);
   const c = await mitKarte(ctx, handy, DREI_LEICHTE.id, page => vorschlagSchwerer(page, {touch: true}));
@@ -335,6 +342,6 @@ export async function karteStufen(ctx) {
   const f = await mitKarte(ctx, handy, MIT_ORDNEN.id, ordneRichtig);
   await mitKarte(ctx, breit, MIT_ORDNEN.id, ordneRichtig);
   ctx.report.checks.push(`Stufen auf der Karte: Wahl über „Rate mal!“, Umstellen wechselt die Frage, übersteht Neuladen, „Zurück zu Entdecker“ (${a}); `
-    + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“, ohne „Zurück zu Entdecker“ (${b}); nach falscher Entdecker-Antwort und Wechsel eine Profi-Frage (${g}); `
+    + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“, ohne „Zurück zu Entdecker“ (${b}); falsche Antwort bleibt orange (Finger und Maus darauf), nach falscher Entdecker-Antwort und Wechsel eine Profi-Frage (${g}); `
     + `auf Profi nur Profi-Fragen, jede einmal, dann „Geschafft! Mehr Profi-Fragen …“ und „Weiter zu“ führt zur Nachbarkarte (${h}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d}); „Fast richtig“ nur auf Experte, Erklärung erst nach dem Wort (${e}); „Ordne richtig“ ab seiner Stufe, ordnen, prüfen, Neuladen (${f})`);
 }

@@ -59,6 +59,31 @@ Gesamteindruck „gut, mit Kleinigkeiten“. Fachwörter (Schneide-, Eck-, Backe
 - `:rate-4` (Folgebefund): Mit dem Ruhen von `:rate-3` ist „Leitkuh“ nirgends mehr erklärt. `why`: „Eine alte Elefantenkuh hat schon viele trockene Jahre erlebt. Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.“; „warum nicht“ 4: „Auch die alte Elefantenkuh braucht viel Wasser. Sie hat einen anderen Vorteil.“
 - Für den `fakten-pruefer`: Pferd etwa 500 kg, Kindergartenkind etwa 1 m und 20 kg, 300 kg nach etwa einem Jahr, „zerkaut Gras und Zweige“.
 
+## Prüfung `stufen-pruefer` (24.11.2026, gekürzt)
+
+Gesamtempfehlung: Entwurf mit zwei Abweichungen übernehmen. `:rate-3` ruht, `:rate-4` bleibt wörtlich (auch „älteste“: genau der Denkschritt), `:rate-5` kommt mit einer anderen vierten Antwort, **`:rate-2` bleibt, wie es heute ist** (keine neue Ausnahme im Schutztest), `:rate-6` jetzt nicht.
+
+- Das Verraten zwischen `:rate-3` und `:rate-4` ist vollständig beseitigt; die Leitkuh-Tatsache bleibt als Voraussetzung in `:rate-4` und unter „Für Große“.
+- **B1** `:rate-5`: „Hörner aus Knochen“ ist fast eine Quatsch-Antwort (drei Antworten enden auf „-zähne“ wie die Frage, nur diese nicht; fachlich schief, Hörner haben einen Knochenkern). Vorschlag: „Lange Milchzähne“, „warum nicht“: „Milchzähne fallen aus. Stoßzähne bleiben und wachsen ein Leben lang weiter.“ (`fakten-pruefer` muss Milch-Stoßzähne beim Elefanten bestätigen). Tipp „ganz vorn“ passt (nur auf Wunsch, verlangt eine kleine Übertragung).
+- **B2** `:rate-2` nicht ändern: Die neue Reihe 100/300/500/1.000 lässt sich mit „Baby, also die kleinste Zahl“ lösen; die heutige Reihe bestraft genau diese Regel (3 kg = Menschenbaby) und prüft, was man lernen soll. „Richtig in der Mitte“ gibt es bei allen drei Zahlenfragen im Katalog (Elefant `:rate-2`, `history-apollo11:rate-4`, `building-giza-pyramids:rate-3`); bei neuen Zahlenfragen die Lage wechseln.
+- **B3** `:rate-4` lassen; die eigentliche Abkürzung sind Fallen, die keine Vorteile des Alters sind, und das „Elefantengedächtnis“. Neue Fallen würden gespeicherte Antworten berühren; lohnt nicht.
+- **B4** (schon vorher da, klein): `paragraphs[1]` „… und Wasser ins Maul bringen“ verrät `:rate-1` fast wörtlich. Vorschlag „… riechen, greifen und trinken.“ Nur mit dem nächsten Kartentext-Schritt bündeln (großer Testlauf).
+- Lücken: Experte mit nur einer Frage ist dünn (nach drei richtigen auf Profi führt der Vorschlag zu genau einer Frage); Regel im Pilot-Test künftig besser „höchstens drei je Stufe“ statt „höchstens vier sichtbare“. Entdecker hat nur die Hauptfrage (größere Lücke; passend wäre eine Erinnerungsfrage zu den Ohren). Für später: Experten-Arten „Fast richtig“ („Im Rüssel stecken viele kleine Knochen.“) und „Schätzen“.
+
+## Prüfung `fakten-pruefer` (24.11.2026, gekürzt)
+
+Kein grober Fehler. Belege (wörtlich geprüft): WWF Deutschland (Kartenquelle), Faktenblätter der San-Diego-Zoo-Bibliothek (https://ielc.libguides.com/sdzg/factsheets/african_elephant/characteristics, …/reproduction, …/diet), WHO-Wachstumstabellen, Foley u. a. 2008 (Biology Letters 4: 541–544, doi:10.1098/rsbl.2008.0370).
+
+- Stoßzähne = obere Schneidezähne: stimmt. „Wachsen ein Leben lang“: mit Einschränkung (bei Weibchen langsamer ab etwa 30, im Kruger-Park Stillstand bis 40) → „Sie wachsen viele Jahre lang immer weiter.“
+- Keine Eckzähne: stimmt. Backenzähne „zermahlen“ das Futter: stimmt (WWF; „zerkaut Gras und Zweige“ gedeckt). „Riesige Backenzähne“ als falsche Antwort sauber.
+- Hörner „oben auf dem Kopf, z. B. bei Kühen“: mit Einschränkung (Nashorn: auf der Nase). „Hörner aus Knochen“ fachlich unsauber (Kuhhorn: Knochenzapfen mit Hornhülle; Nashorn ohne Knochen; Geweih ist Knochen).
+- Geburtsgewicht rund 100 kg: stimmt (Savannenelefant 90–120 kg). „Etwa einen Meter hoch“: mit Einschränkung (Schulterhöhe 80–90 cm) → „knapp einen Meter“. Kleines Auto 1.000 kg: stimmt (VW up! 940 kg). 300 kg: ohne Altersangabe formulieren (nach Zuwachsrate eher nach einem halben Jahr). Menschenbaby 3,2–3,3 kg, „etwa 30-mal“: stimmt. **„Nach etwa 20 Minuten kann er schon stehen“: belegt** (WWF: „nach rund 20 Minuten stehen“; SDZ-Bibliothek: etwa 15 Minuten).
+- `:rate-4`: Leitkuh meist das älteste Weibchen: stimmt. Erinnerung an Wasserstellen: mit Einschränkung, gut begründete Vermutung aus einer kleinen Studie (drei Familiengruppen, Tarangire 1993) → `why`: „… Forscher glauben: Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.“
+- `:rate-6` (Option): 50–60 % unverdaut → „Etwa die Hälfte“; 16–17 Stunden fressen, auch nachts (WWF wörtlich); wenig Schlaf (WWF 3–4 Stunden).
+- `:rate-1` `wrongReasons[3]`: mit Einschränkung; junge Kälber tauchen nicht den Kopf ein, sie trinken mit dem Maul, bis sie den Rüssel können (etwa 8 bis 9 Monate, Lee und Moss 2011).
+- Zur `kinder-redaktion`: 500 kg ist ein durchschnittliches, kein großes Pferd; Kindergartenkind etwa 1 m und knapp 20 kg.
+- Empfehlung: SDZ-Bibliothek als Kartenquelle ergänzen; Foley u. a. 2008 mit Hinweis „Vermutung, kleine Studie“.
+
 ## Was daraus wurde
 
-Folgt nach den Prüfungen durch `stufen-pruefer` und `fakten-pruefer`.
+Folgt (Nachfrage an den `fakten-pruefer` zu Milch-Stoßzähnen läuft).
