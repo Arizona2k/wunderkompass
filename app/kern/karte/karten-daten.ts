@@ -168,6 +168,13 @@ export function frageZumNachdenken(alle: KartenFrage[], review: LocalProgress['r
   return haupt && wartetZumWiederholen(review[haupt.reviewId]) ? haupt : ersteFrage(alle, review, kartenstand, stufe);
 }
 
+// Ist die Hauptfrage richtig beantwortet und nur wieder fällig, beginnt sie beim Nachdenken leer: Die gespeicherte Antwort
+// bleibt im Pass, wird aber nicht gezeigt. Sonst stünde sofort die Lösung da (Code-Prüfung „Nachdenken“, W1).
+export function leerZumNachdenken(alle: KartenFrage[], review: LocalProgress['review']): boolean {
+  const eintrag = alle[0] && review[alle[0].reviewId];
+  return !!eintrag && eintrag.correct && wartetZumWiederholen(eintrag);
+}
+
 const falschBeantwortet = (fragen: KartenFrage[], kartenstand?: Record<string, unknown>) => fragen.find(frage => {
   const wert = kartenstand?.[frage.answerKey];
   return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];

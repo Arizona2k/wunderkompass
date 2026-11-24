@@ -5,7 +5,7 @@
 // Ausprobieren, Mehr erfahren, Für Erwachsene, Dazu passt, Bildnachweise auf dieser Seite.
 // Pass-Kopplung wie bei der alten Karte: dieselbe Hülle (SavedGame 'topic:<id>'), dieselben Schlüssel,
 // dieselben Aufrufe für Merken, „gelernt“ und Wiederholung.
-import {Fragment, useCallback, useEffect, useEffectEvent, useMemo, useRef, useState} from 'react';
+import {Fragment, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {flushSync} from 'react-dom';
 import {ArrowRight, BookOpen, Check, Compass, Heart, Lightbulb, Users, Volume2} from 'lucide-react';
 import {LearningDetails} from '../../learning-components';
@@ -26,7 +26,7 @@ import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
 import OrdneRichtig from './ordne-richtig';
-import {dazuPasst, ersteFrage, frageZumNachdenken, ganzEinfachImAusprobieren, gespielteStufe, hatAusprobieren, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, weitereVerbindungen, zeigtSchluss} from './karten-daten';
+import {dazuPasst, ersteFrage, frageZumNachdenken, ganzEinfachImAusprobieren, leerZumNachdenken, gespielteStufe, hatAusprobieren, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, weitereVerbindungen, zeigtSchluss} from './karten-daten';
 import {leseStufe, STUFEN, type Stufe} from '../stufe';
 import StufenWahl, {stufeWechseln} from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
@@ -34,7 +34,8 @@ import {WOERTER} from '../woerter';
 import './karte.css';
 
 // „Noch einmal nachdenken“ im Wissensbuch setzt diesen Merker am Verlaufseintrag (hash-route.ts, navigateHash mit nachdenken).
-// Dann zeigt die Karte die wartende Hauptfrage, auch auf Profi und Experte (frageZumNachdenken).
+// Dann zeigt die Karte beim Öffnen die wartende Hauptfrage, auch auf Profi und Experte (frageZumNachdenken), und wenn sie
+// nur wieder fällig ist, ohne die alte Lösung (leerZumNachdenken).
 const NACHDENKEN = 'wunderNachdenken';
 const willNachdenken = (id: string) => history.state?.[NACHDENKEN] === id;
 const merkerLoeschen = () => history.replaceState({...history.state, [NACHDENKEN]: undefined}, '', location.href);
@@ -99,20 +100,14 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>), [t]);
   const stufe = leseStufe(a.progress);
   const kartenstand = a.progress.gameSessions['topic:' + t.id];
-  const neueRunde = (s: Stufe, id: string) => ({stufe: s, id, weiter: false, gezeigt: [id]});
-  const [wahl, setWahl] = useState(() => neueRunde(stufe, (!embedded && willNachdenken(t.id) ? frageZumNachdenken : ersteFrage)(fragen, a.progress.review, kartenstand, stufe).id));
-  // Die Karte bleibt im versteckten Weltbereich offen, während das Kind im Wissensbuch ist. Darum liest sie den Merker auch
-  // bei jedem späteren Wechsel des Wegs, nicht nur beim Öffnen (oben), und löscht ihn danach: Neuladen und Zurück wählen
-  // wieder wie beim Öffnen.
-  const nachdenkenBeimWechsel = useEffectEvent(() => {
-    if (embedded || !willNachdenken(t.id)) return;
-    merkerLoeschen();
-    setWahl(neueRunde(stufe, frageZumNachdenken(fragen, a.progress.review, kartenstand, stufe).id));
-  });
+  const neueRunde = (s: Stufe, id: string, leer = false) => ({stufe: s, id, weiter: false, gezeigt: [id], leer});
+  const [wahl, setWahl] = useState(() => !embedded && willNachdenken(t.id)
+    ? neueRunde(stufe, frageZumNachdenken(fragen, a.progress.review, kartenstand, stufe).id, leerZumNachdenken(fragen, a.progress.review))
+    : neueRunde(stufe, ersteFrage(fragen, a.progress.review, kartenstand, stufe).id));
+  // Der Merker gilt nur für dieses Öffnen (oben gelesen). Danach löschen: Neuladen und Zurück wählen wieder wie beim Öffnen.
+  // Im Wissensbuch ist die Karte nicht geöffnet; „Noch einmal nachdenken“ öffnet sie neu (Code-Prüfung „Nachdenken“, W2).
   useEffect(() => {
     if (!embedded && willNachdenken(t.id)) merkerLoeschen();
-    window.addEventListener('wunder-route', nachdenkenBeimWechsel);
-    return () => window.removeEventListener('wunder-route', nachdenkenBeimWechsel);
   }, [embedded, t.id]);
   const {vorschlag, merke, schliessen} = useStufenVorschlag(t.id, stufe);
   const artikel = useRef<HTMLElement>(null);
@@ -131,7 +126,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
     // Im Updater neu rechnen, nicht `naechste` aus diesem Bild nehmen (Code-Prüfung Feinschliff, Befund 5).
     setWahl(w => {
       const n = naechsteFrage(fragen, w.stufe, w.id, w.gezeigt);
-      return n ? {...w, id: n.id, weiter: true, gezeigt: [...w.gezeigt, n.id]} : w;
+      return n ? {...w, id: n.id, weiter: true, gezeigt: [...w.gezeigt, n.id], leer: false} : w;
     });
   } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
@@ -242,6 +237,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         onWeiter={weiter}
         schluss={schluss}
         fokus={weitergeblaettert}
+        leer={wahl.leer}
         onAntwort={merke}
         kopf={a.onStufe ? <StufenWahl stufe={stufe} spielt={gespielteStufe(fragen, stufe)} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
         vorschlag={vorschlag && a.onStufe ? (

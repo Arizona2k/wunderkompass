@@ -12,6 +12,8 @@ import assert from 'node:assert/strict';
 import {FOKUS_NACH_KLICK, ladeanfragen, ready} from './harness.mjs';
 import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, ersteNachbarkarte, falscheAntworten, fragenAufStufe, fragenDerKarte, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
+await import('../../scripts/test-runtime.mjs');
+const {createSave, emptyProgress} = await import('../../app/progress-storage.ts');
 
 const SAVE_KEY = 'erde-entdecken:save:v3';
 const WARTEN = {timeout: 10000};
@@ -30,10 +32,12 @@ const ZWEI_AUF_PROFI = catalog.find(t => fragenDerKarte(t).filter(f => f.level =
 // Für den Schluss: mindestens zwei Profi-Fragen und eine erklärte Nachbarkarte.
 const SCHLUSS_AUF_PROFI = catalog.find(t => fragenAufStufe(t, 'profi').length >= 2 && hatStufe(t, 'profi') && ersteNachbarkarte(t.id));
 
-async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
+// pass: ein ausgedachter Pass, nur beim ersten Laden abgelegt (danach gilt, was die App speichert).
+async function mitKarte(ctx, {width, height, touch = false}, id, fn, pass) {
   const context = await ctx.browser.newContext({viewport: {width, height}, reducedMotion: 'reduce', ...(touch ? {hasTouch: true} : {}), ...(touch && ctx.engine === 'chromium' ? {isMobile: true} : {})});
   try {
     await context.addInitScript(FOKUS_NACH_KLICK);
+    if (pass) await context.addInitScript(({key, save}) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save)); }, {key: SAVE_KEY, save: pass});
     const page = await context.newPage();
     ctx.monitor(page);
     // Vor jedem gewollten Neuladen warten, bis die Ladeanfragen fertig sind (harness.mjs, ladeanfragen).
@@ -120,8 +124,8 @@ async function profiOhneProfiFragen(page, {touch}) {
 // alte Entdecker-Frage (Spieltest 24.11.2026, Befund 1). Auch wer später wiederkommt (Neuladen), bekommt auf Profi eine
 // Profi-Frage: Die falsche Entdecker-Frage wartet, bis das Kind wieder Entdecker spielt; dort kommt sie zuerst
 // (Spieltest Feinschliff 24.11.2026; entschieden vom Nutzer am 24.11.2026). Ausnahme: „Noch einmal nachdenken“ im
-// Wissensbuch zeigt genau diese Frage, auch auf Profi. Am Handy ist die Karte dabei noch offen (versteckt hinter dem
-// Wissensbuch), breit wird sie nach einem Neuladen im Wissensbuch neu geöffnet.
+// Wissensbuch zeigt genau diese Frage, auch auf Profi. Am Handy ist der Weltbereich dabei schon geladen, breit wird er
+// nach einem Neuladen im Wissensbuch zum ersten Mal geöffnet.
 async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
   const t = MIT_PROFI;
   const haupt = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
@@ -173,12 +177,48 @@ async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Profi'}).waitFor(WARTEN);
   await zeigtFrage(page, t, haupt);
   await rateMal(page).getByText(NOCH_NICHT, {exact: true}).waitFor(WARTEN);
+  // Der Merker gilt nur für dieses Öffnen; Neuladen und Zurück wählen danach wieder wie beim Öffnen (Code-Prüfung „Nachdenken“, H3).
+  assert.equal(await page.evaluate(() => history.state?.wunderNachdenken), undefined, 'nach dem Öffnen ist der Merker gelöscht');
   // Richtig beantworten: Danach bleibt „Noch eine Frage“ in der Stufe Profi.
   await tippe(antwortKnopf(page, richtigeAntwort(haupt)), touch);
   await rateMal(page).getByText(haupt.question.why, {exact: true}).waitFor(WARTEN);
   await tippe(rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}), touch);
   await page.waitForFunction(id => document.querySelector('section.rate-mal')?.getAttribute('aria-labelledby') !== 'rate-mal-' + id, haupt.id, WARTEN);
   assert.equal((await angezeigteFrage(page, t)).level, 'profi', 'nach dem Nachdenken weiter mit einer Profi-Frage');
+  return t.id;
+}
+
+// Ein ausgedachter Pass: Hauptfrage richtig beantwortet, aber wieder fällig; Stufe Profi.
+function passMitFaelligerHauptfrage(t) {
+  const haupt = hauptfrage(t);
+  const progress = emptyProgress();
+  progress.review = {[haupt.reviewId]: {correct: true, seen: 1, due: '2000-01-01'}};
+  progress.gameSessions = {'kern:stufe': {stufe: 'profi', seit: '2026-11-23'}, ['topic:' + t.id]: {[haupt.answerKey]: richtigeAntwort(haupt)}};
+  return createSave(progress);
+}
+
+// Code-Prüfung „Nachdenken“, W1: Ist die Hauptfrage nur wieder fällig, zeigt „Noch einmal nachdenken“ sie ohne die alte
+// Lösung, auch auf Profi; die gespeicherte Antwort bleibt im Pass. Wer sie wieder richtig beantwortet, ist fertig: Der
+// Eintrag im Wissensbuch verschwindet.
+async function faelligNachdenken(page, {touch}) {
+  const t = MIT_PROFI;
+  const haupt = hauptfrage(t);
+  await page.evaluate(() => { location.hash = 'book/notes'; });
+  const eintrag = page.locator('.knowledge-book article', {has: page.getByRole('heading', {name: t.title, exact: true})});
+  await tippe(eintrag.getByRole('button', {name: 'Noch einmal nachdenken', exact: true}), touch);
+  await page.waitForFunction(x => document.getElementById('world-topic-title')?.getAttribute('aria-label') === x, t.title, WARTEN);
+  await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Profi'}).waitFor(WARTEN);
+  await zeigtFrage(page, t, haupt);
+  assert.equal(await rateMal(page).getByText(haupt.question.why, {exact: true}).count(), 0, 'beim Nachdenken über eine fällige Frage steht nicht sofort die Lösung da');
+  assert.equal(await antwortKnopf(page, richtigeAntwort(haupt)).isEnabled(), true, 'die Antworten sind wählbar');
+  assert.equal((await passLesen(page)).gameSessions['topic:' + t.id]?.[haupt.answerKey], richtigeAntwort(haupt), 'die gespeicherte Antwort bleibt im Pass');
+  await tippe(antwortKnopf(page, richtigeAntwort(haupt)), touch);
+  await rateMal(page).getByText(haupt.question.why, {exact: true}).waitFor(WARTEN);
+  const heute = new Date().toISOString().slice(0, 10);
+  await page.waitForFunction(([key, id, tag]) => JSON.parse(localStorage.getItem(key)).progress.review[id]?.due > tag, [SAVE_KEY, haupt.reviewId, heute], WARTEN);
+  await page.evaluate(() => { location.hash = 'book/notes'; });
+  await page.locator('.knowledge-book').waitFor({state: 'visible', ...WARTEN});
+  await eintrag.waitFor({state: 'detached', ...WARTEN});
   return t.id;
 }
 
@@ -376,6 +416,8 @@ export async function karteStufen(ctx) {
   const b = await mitKarte(ctx, handy, OHNE_ZUSATZ.id, profiOhneProfiFragen);
   const g = await mitKarte(ctx, handy, MIT_PROFI.id, wechselNachFalscherAntwort);
   await mitKarte(ctx, breit, MIT_PROFI.id, wechselNachFalscherAntwort);
+  const i = await mitKarte(ctx, handy, MIT_PROFI.id, faelligNachdenken, passMitFaelligerHauptfrage(MIT_PROFI));
+  await mitKarte(ctx, breit, MIT_PROFI.id, faelligNachdenken, passMitFaelligerHauptfrage(MIT_PROFI));
   const h = await mitKarte(ctx, handy, SCHLUSS_AUF_PROFI.id, schlussNachDerStufe);
   await mitKarte(ctx, breit, SCHLUSS_AUF_PROFI.id, schlussNachDerStufe);
   const c = await mitKarte(ctx, handy, DREI_LEICHTE.id, page => vorschlagSchwerer(page, {touch: true}));
@@ -388,5 +430,6 @@ export async function karteStufen(ctx) {
   await mitKarte(ctx, breit, MIT_ORDNEN.id, ordneRichtig);
   ctx.report.checks.push(`Stufen auf der Karte: Wahl über „Rate mal!“, Umstellen wechselt die Frage, übersteht Neuladen, „Zurück zu Entdecker“ (${a}); `
     + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“, ohne „Zurück zu Entdecker“ (${b}); falsche Antwort bleibt orange (Finger und Maus darauf), nach falscher Entdecker-Antwort und Wechsel eine Profi-Frage (${g}); `
+    + `„Noch einmal nachdenken“ über eine nur fällige Hauptfrage zeigt sie ohne alte Lösung, danach ist der Eintrag weg (${i}); `
     + `auf Profi nur Profi-Fragen, jede einmal, dann „Geschafft! Mehr Profi-Fragen …“ und „Weiter zu“ führt zur Nachbarkarte (${h}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d}); „Fast richtig“ nur auf Experte, Erklärung erst nach dem Wort (${e}); „Ordne richtig“ ab seiner Stufe, ordnen, prüfen, Neuladen (${f})`);
 }

@@ -5,7 +5,7 @@
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
 // Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte), wenn die
 // Karte ihn zeigt (zeigtSchluss: nicht bei einer einzelnen Entdecker-Frage).
-import {useEffect, useRef, type ReactNode} from 'react';
+import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {Check, Compass} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import {LearningFeedback} from '../../learning-motion';
@@ -47,6 +47,9 @@ type RateMalProps = {
   schluss?: {text: string; weiter?: ReactNode};
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
+  // Nur bei „Noch einmal nachdenken“ über eine wieder fällige, richtig beantwortete Frage: Die Runde beginnt leer,
+  // die gespeicherte Antwort bleibt im Pass (leerZumNachdenken).
+  leer?: boolean;
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
   onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
   // Der Vorschlag steht in der Rückmeldung nach der Erklärung (und nach dem Schluss-Satz), vor den Knöpfen: Darunter
@@ -57,7 +60,7 @@ type RateMalProps = {
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, schluss, fokus = false, onAntwort, vorschlag, kopf}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, schluss, fokus = false, leer = false, onAntwort, vorschlag, kopf}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -65,13 +68,15 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   const richtigeAntwort = q.answers[q.correct];
   // Gespeichert unter dem alten Schlüssel (Hauptfrage: topicAnswer), damit frühere Antworten zählen.
   const [gespeicherteAntwort, setAntwort] = useSavedGame<string | null>(frage.answerKey, null);
-  const antwort = gespeicherteAntwort === null ? null : restoreAnswerWording(frage.id, gespeicherteAntwort);
+  const [ausgeblendet, setAusgeblendet] = useState(leer);
+  const antwort = ausgeblendet || gespeicherteAntwort === null ? null : restoreAnswerWording(frage.id, gespeicherteAntwort);
   const richtig = antwort === richtigeAntwort;
   const fruehereAuswahl = antwort !== null && !q.answers.includes(antwort);
 
   // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“) oder nach einer früheren Auswahl,
   // die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
   function waehle(wahl: string) {
+    setAusgeblendet(false);
     setAntwort(wahl);
     const korrekt = wahl === richtigeAntwort;
     const art = wiederholungFuerAntwort(wiederholung, korrekt, antwort === null || fruehereAuswahl);

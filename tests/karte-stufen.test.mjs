@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import HINTS from '../app/challenge-hints.json' with {type: 'json'};
 import {wartetZumWiederholen} from '../app/kern/wiederholen.ts';
-import {ersteFrage, festGemischt, frageZumNachdenken, fragenDerStufe, gespielteStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, zeigtSchluss} from '../app/kern/karte/karten-daten.ts';
+import {ersteFrage, festGemischt, frageZumNachdenken, fragenDerStufe, gespielteStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, leerZumNachdenken, naechsteFrage, schlussSatz, stufenHinweis, zeigtSchluss} from '../app/kern/karte/karten-daten.ts';
 
 // Teilschritt 3, Aufgabe 5 (E4, E6): Die Karte zeigt je Stufe eine passende Frage.
 // Ausgedachte Karte: Hauptfrage (Entdecker), je eine Zusatzfrage Entdecker, Profi, Experte und zwei Challenge-Fragen.
@@ -193,6 +193,13 @@ test('„Noch einmal nachdenken“ im Wissensbuch: die wartende Hauptfrage, auch
   assert.equal(frageZumNachdenken(fragen, {}, undefined, 'experte').id, 'x:rate-3');
   // „Noch eine Frage“ danach bleibt in der gespielten Stufe.
   assert.equal(naechsteFrage(fragen, 'profi', 'x', ['x'])?.id, 'x:rate-2');
+  // Nur wieder fällig (richtig beantwortet): Die Frage beginnt leer, sonst stünde sofort die Lösung da (Code-Prüfung „Nachdenken“, W1).
+  // Falsch beantwortet: Die alte Antwort bleibt sichtbar, mit „Noch nicht ganz“ und Tipp.
+  assert.equal(leerZumNachdenken(fragen, faellig), true);
+  assert.equal(leerZumNachdenken(fragen, hauptFalsch), false);
+  assert.equal(leerZumNachdenken(fragen, {...alleGesehen(), [haupt.reviewId]: gesehen('2000-01-01', false)}), false);
+  assert.equal(leerZumNachdenken(fragen, alleGesehen()), false);
+  assert.equal(leerZumNachdenken(fragen, {}), false);
 });
 
 test('wartetZumWiederholen: falsch beantwortet oder wieder fällig, wie die Liste im Wissensbuch', () => {
