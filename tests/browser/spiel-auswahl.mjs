@@ -91,6 +91,7 @@ export async function spielAuswahl({browser, base, ready, monitor, report}) {
     await context.close();
   }
   await weltSpielRunden({browser, base, ready, monitor, report});
+  await oeffnetObenTrotzWeiterKarte({browser, base, ready, monitor, report});
 }
 
 // Welt-Spiel-Runden mit der gemeinsamen Stufe (Teil B, Aufgabe 8, Schritt 8.1; Entscheidungsliste Teil B, Punkt 3).
@@ -170,6 +171,41 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
     assert.deepEqual((await sitzung()).geschafft, {profi: heute}, 'ein Stufenwechsel behält sie');
     report.checks.push('Welt-Spiel-Runden: öffnet oben, Experte spielt Profi (8 Aufgaben), Wechsel in der Runde startet eine neue Runde mit Fokus auf „Ändern“, Wechsel an anderer Stelle lässt die Runde zu Ende laufen, „Neue Runde“ nimmt die Stufe aus dem Pass, Fokus nach richtiger Antwort und am Ende, kein „Zu schwer?“ auf dem Abschlussbild');
+  } finally {
+    await context.close();
+  }
+}
+
+// Ein Spiel öffnet oben, auch mit weichem Scrollen und wenn über den Spielen noch „Weiter entdecken“ für ein anderes Spiel
+// steht (Design-Prüfung PR 2, Befund 1): Die Karte verschwindet, sobald ein Spiel offen ist, nicht erst nach dem Speichern.
+// Sonst rückte alles um ihre Höhe nach oben, während die Seite noch zum Spiel rollte, und der Titel lag über dem Bildrand.
+async function oeffnetObenTrotzWeiterKarte({browser, base, ready, monitor, report}) {
+  const context = await browser.newContext({viewport: {width: 390, height: 780}, reducedMotion: 'no-preference'});
+  const page = await context.newPage();
+  monitor(page);
+  try {
+    await page.goto(base);
+    await ready(page);
+    await ladeanfragen(page)();
+    await bereich(page, 'games').click();
+    // Erst Kreuz und quer anfangen und zurück zu allen Spielen: Dann steht „Weiter entdecken“ über den Spielen.
+    await page.locator(`[data-game-key="${SPIEL}"]`).click();
+    await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+    await page.waitForFunction(({key, spiel}) => JSON.parse(localStorage.getItem(key) ?? 'null')?.progress?.lastActivity?.id === spiel, {key: SAVE_KEY, spiel: SPIEL});
+    await page.locator('.game-room').getByRole('button', {name: 'Alle Spiele', exact: true}).click();
+    await page.locator('.continue-card').waitFor();
+    const kachel = page.locator('[data-game-key="classic:detective"]');
+    await kachel.scrollIntoViewIfNeeded();
+    await kachel.click();
+    await page.locator('.game-room .classic-learning .stufen-wahl').waitFor();
+    // Warten, bis die Seite fertig gerollt ist (zehn Bilder ohne Bewegung).
+    await page.waitForFunction(() => new Promise(fertig => { let y = scrollY, ruhig = 0; const bild = () => { if (scrollY === y) { if (++ruhig >= 10) return fertig(true); } else { y = scrollY; ruhig = 0; } requestAnimationFrame(bild); }; requestAnimationFrame(bild); }));
+    assert.equal(await page.locator('.continue-card').count(), 0, 'im offenen Spiel keine Karte „Weiter entdecken“');
+    const oben = await page.evaluate(() => Math.round(document.querySelector('.game-room h1').getBoundingClientRect().top));
+    assert.ok(oben >= 0 && oben <= 40, `der Spieltitel steht oben im Bild (${oben} px)`);
+    await page.locator('.game-room').getByRole('button', {name: 'Alle Spiele', exact: true}).click();
+    await page.locator('.continue-card').waitFor();
+    report.checks.push('Spiel öffnet oben auch mit weichem Scrollen und Karte „Weiter entdecken“ darüber; die Karte ist im offenen Spiel weg und in der Übersicht wieder da');
   } finally {
     await context.close();
   }
