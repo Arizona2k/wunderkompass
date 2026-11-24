@@ -77,7 +77,8 @@ test('ohne heute zählt das heutige Datum',()=>{
  assert.deepEqual(waehleAufgaben({vorrat:['a','b'],review:faellig,schluessel,anzahl:1,zufall:zufallAus(5)}),['a']);
 });
 
-test('vorigeRunde liest items, challenge.ids und vorige',()=>{
+test('vorigeRunde liest items, challenge.ids, learningRound.ids und vorige',()=>{
+ assert.deepEqual(vorigeRunde({learningRound:{ids:['k','l'],level:null,stufe:'profi'},vorige:['x']}),['k','l'],'Klassik-Runde („Neu mischen“, Code-Prüfung PR 2, Befund 1)');
  assert.deepEqual(vorigeRunde({items:['a','b'],vorige:['x']}),['a','b']);
  assert.deepEqual(vorigeRunde({challenge:{ids:['c','d']},vorige:['x']}),['c','d']);
  assert.deepEqual(vorigeRunde({challenge:{ids:[]},vorige:['x','y']}),['x','y'],'zweimal „Neue Runde“ ohne zu spielen');

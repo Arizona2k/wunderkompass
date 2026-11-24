@@ -76,6 +76,18 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     // Advancing a question deliberately moves focus on the next frame. Finish that real handoff before directing
     // Enter to the native disclosure. The first question has no such handoff (the round starts with the room).
     if(i>0)await p.waitForFunction(()=>document.activeElement?.id==='reason-question');
+    // „Spielen“ in der Leiste schließt das offene Spiel und zeigt die Übersicht, direkt und über einen anderen Bereich;
+    // der Stand bleibt, „Fortsetzen“ öffnet dieselbe Aufgabe (Entscheidung 25; Code-Prüfung PR 2, Hinweise 5 und 9).
+    if(game==='detective'&&stufe==='profi'&&i===1){
+     const runde=(await state(p)).gameSessions.detective.learningRound;
+     for(const umweg of [false,true]){
+      if(umweg){await bereich(p,'world').click();await p.waitForFunction(()=>location.hash.startsWith('#world'));}
+      await bereich(p,'games').click();await p.locator('[data-game-key="classic:detective"]').waitFor();
+      await p.waitForFunction(()=>document.activeElement?.dataset.gameKey==='classic:detective');
+      assert.equal(await room.count(),0,'die Spielfläche ist zu');assert.deepEqual((await state(p)).gameSessions.detective.learningRound,runde,'der Stand bleibt');
+      await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+     }
+    }
     assert.equal(await hint.getAttribute('open'),null);await hint.locator('summary').focus();await p.keyboard.press('Enter');await hint.getByText(q.hints[0],{exact:true}).waitFor();assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).click();await hint.getByText(q.hints[1],{exact:true}).waitFor();assert.deepEqual((await state(p)).gameSessions[game].learningRound,snapshot);
     const wrong=q.answers.find(a=>a!==q.correct);await room.locator('.quiz-answer').filter({has:p.getByText(wrong,{exact:true})}).tap();await room.getByText(q.wrongReasons[wrong],{exact:true}).waitFor();assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
@@ -92,6 +104,16 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    await p.waitForFunction(({key,game})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r&&!r.done&&r.index===0&&r.answer===null;},{key:SAVE_KEY,game});
    const neu=(await state(p)).gameSessions[game];assert.equal(neu.learningRound.done,false);assert.equal(neu.learningRound.stufe,gespielt);assert.deepEqual(neu.vorige,snapshot.ids,'die gespielte Runde ist gemerkt');
    if(gespielt==='profi')assert.equal(neu.learningRound.ids.some(id=>snapshot.ids.includes(id)),false,'die nächste Profi-Runde wiederholt die vorige nicht');
+   await p.waitForFunction(()=>document.activeElement?.id==='reason-question');// Fokus nach „Noch eine Runde“ (Hinweis 2)
+   // „Neu mischen“ oben beginnt frisch, merkt aber die laufende Runde und behält die geschaffte Stufe (Code-Prüfung PR 2,
+   // Befund 1). Nur auf Profi: Dort wiederholt die nächste Runde die vorige sicher nicht.
+   if(gespielt==='profi'){
+    const alt=neu.learningRound.ids;assert.ok(Object.keys(neu.geschafft??{}).length,'die geschaffte Stufe steht im Pass');
+    await p.getByRole('button',{name:'Neu mischen',exact:true}).click();
+    await p.waitForFunction(({key,game,alt})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r?.ids?.length===4&&r.ids.join()!==alt;},{key:SAVE_KEY,game,alt:alt.join()});
+    const gemischt=(await state(p)).gameSessions[game];assert.deepEqual(gemischt.vorige,alt,'„Neu mischen“ merkt die laufende Runde');assert.deepEqual(gemischt.geschafft,neu.geschafft,'„Neu mischen“ behält die geschaffte Stufe');
+    assert.equal(gemischt.learningRound.ids.some(id=>alt.includes(id)),false);
+   }
    await back(p);
   }
   await open(p,'order');for(const l of [...LAYERS].reverse())await p.locator('.order-pool button').filter({hasText:l.name}).tap();await p.getByRole('button',{name:'Reihenfolge prüfen',exact:true}).click();await p.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();const wrong=(await state(p)).gameSessions.order;await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();assert.deepEqual((await state(p)).gameSessions.order,wrong);await p.getByRole('button',{name:'Meinen Bau weiter bearbeiten',exact:true}).click();for(const l of LAYERS)await p.getByRole('button',{name:l.name+' aus der Reihenfolge entfernen',exact:true}).click();for(const l of LAYERS){await p.locator('.order-pool button').filter({hasText:l.name}).focus();await p.keyboard.press('Enter');}await p.getByRole('button',{name:'Reihenfolge prüfen',exact:true}).click();await p.getByRole('button',{name:'Erdschichten im Modell entdecken',exact:true}).waitFor();assert.ok((await state(p)).games.includes('order-layers'));await p.screenshot({path:shots+'/playground-order-success-390.png',fullPage:true});

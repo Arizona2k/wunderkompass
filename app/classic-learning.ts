@@ -43,6 +43,12 @@ export function neueKlassikRunde(game:ReasonGame,stufe:Stufe,review:Review={},vo
  const ids=[...zuerst,...waehle(vorratDer(game,gespielt==='experte'?'profi':gespielt),KLASSIK_RUNDE-zuerst.length)];
  return {level:null,stufe:gespielt,ids,orders:Object.fromEntries(ids.map(id=>{const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!;return [id,q.festeReihenfolge?[...q.answers]:mischen(q.answers,zufall)];})),index:0,answer:null,done:false};
 }
+// Umformulierte richtige Antworten (Teil B, PR 2): Eine alte, gespeicherte Runde behält ihre gelöste Frage und ihr
+// Abschlussbild (Code-Prüfung PR 2, Risiko 3). Diese Liste wächst nur. Alte falsche Antworten fallen still weg.
+const ALTE_ANTWORT:Record<string,string>={
+ 'Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit':'Nein, in Australien ist dann Sommer',
+ 'Nein, Bleiche zeigt Stress, aber nicht sicher den Tod':'Nein, sie kann sich noch erholen',
+};
 export function restoreReasonRound(game:ReasonGame,value:unknown):ReasonRound{
  if(!isRecord(value)||!Array.isArray(value.ids)||!value.ids.length||value.ids.length>20||new Set(value.ids).size!==value.ids.length||!isRecord(value.orders))return emptyReasonRound();
  const neu=value.stufe!==undefined;
@@ -54,7 +60,8 @@ export function restoreReasonRound(game:ReasonGame,value:unknown):ReasonRound{
  // Eine ungültige Reihenfolge wird neu gemischt; sonst stünde die richtige Antwort oft oben (Stufen-Prüfung, Befund 8).
  for(const id of ids){const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!,a=value.orders[id];orders[id]=Array.isArray(a)&&a.length===q.answers.length&&new Set(a).size===a.length&&a.every(c=>q.answers.includes(c))?a as string[]:q.festeReihenfolge?[...q.answers]:shuffle(q.answers);}
  const index=typeof value.index==='number'&&Number.isInteger(value.index)?Math.max(0,Math.min(ids.length-1,value.index)):0,q=CLASSIC_QUESTIONS.find(q=>q.id===ids[index])!;
- const runde={ids,orders,index,answer:typeof value.answer==='string'&&q.answers.includes(value.answer)?value.answer:null,done:value.done===true&&index===ids.length-1&&value.answer===q.correct};
+ const gespeichert=typeof value.answer==='string'?(Object.hasOwn(ALTE_ANTWORT,value.answer)?ALTE_ANTWORT[value.answer]:value.answer):null,answer=gespeichert!==null&&q.answers.includes(gespeichert)?gespeichert:null;
+ const runde={ids,orders,index,answer,done:value.done===true&&index===ids.length-1&&answer===q.correct};
  return neu?{level:null,stufe,...runde}:{level:value.level as ClassicLevel,...runde};
 }
 export function answerReasonRound(round:ReasonRound,answer:string):ReasonRound{

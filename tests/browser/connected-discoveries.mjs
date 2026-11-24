@@ -76,6 +76,8 @@ export async function connectedDiscoveries(page,ready,report,width){
  await page.getByRole('option').filter({hasText:'Kreuz und quer'}).click();
  const room=page.locator('.knowledge-challenge'),zeile=room.locator('.stufen-wahl');
  await room.locator('.quiz-answer').first().waitFor();
+ // Die neue Runde schreibt erst der Speicher-Effekt nach dem Aufbau in den Pass (Code-Prüfung PR 2, Risiko 8).
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge']?.challenge?.ids?.length===6);
  assert.equal(await page.locator('.challenge-levels').count(),0);
  for(const [stufe,name] of [['entdecker','Entdecker'],['profi','Profi'],['experte','Experte']]){
   if((await pass()).gameSessions['world:knowledge-challenge'].challenge.stufe!==stufe){

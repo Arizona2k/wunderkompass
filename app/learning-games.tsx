@@ -11,6 +11,8 @@ import ClassicReasonGame from './classic-reason-game';
 import QuestionHints from './question-hints';
 import {navigateHash} from './hash-route';
 import {useZurUebersicht} from './zur-uebersicht';
+import {vorigeRunde} from "./kern/auswahl";
+import {leseGeschafft} from "./world-game-runde";
 import type {Review} from './progress-storage';
 import type {Stufe} from './kern/stufe';
 import {WOERTER} from './kern/woerter';
@@ -31,8 +33,11 @@ function LearningGames({sessions,review,stufe,onStufe,onReview,uebersicht,onSave
  useEffect(()=>{if(resume&&["memory","order","habitats","detective"].includes(resume.id)){setGame(resume.id as GameId);onActive(true);}},[resume,onActive]);
  const schliessen=useCallback(()=>{onRead("");setGame(null);onActive(false);},[onRead,onActive]);
  useZurUebersicht(uebersicht,game!==null,schliessen);
+ // „Neu mischen“ beginnt einen frischen Spielstand, behält aber wie „Neue Runde“ der Welt-Spiele (world-games.tsx) die
+ // vorige Runde und die geschafften Stufen (Entscheidungsliste Teil B, Punkte 3 und 22; Code-Prüfung PR 2, Befund 1).
+ function neuMischen(id:GameId){const s=sessions[id],vorige=vorigeRunde(s),geschafft=leseGeschafft(s?.geschafft);onNew(id);if(id!=="habitats"&&id!=="detective")return;if(vorige.length)onSave(id,"vorige",vorige,"classic");if(Object.keys(geschafft).length)onSave(id,"geschafft",geschafft,"classic");}
  if(!game)return null;
- return <GameShell title={GAMES.find(g=>g.id===game)!.name} boardKey={`${game}-${round}`} newRoundLabel="Neu mischen" onExit={schliessen} onNewRound={()=>{onRead("");if(game)onNew(game);setRound(n=>n+1);}}><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></GameShell>;
+ return <GameShell title={GAMES.find(g=>g.id===game)!.name} boardKey={`${game}-${round}`} newRoundLabel="Neu mischen" onExit={schliessen} onNewRound={()=>{onRead("");if(game)neuMischen(game);setRound(n=>n+1);}}><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></GameShell>;
 }
 
 function ReasonGame(props:{game:'habitats'|'detective';review:Review;stufe:Stufe;onStufe:(s:Stufe)=>void;onReview:(id:string,correct:boolean)=>void;onWin:()=>void;onRead:(s:string)=>void;onTopic:(id:string)=>void}){

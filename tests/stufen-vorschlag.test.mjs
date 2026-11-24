@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { leereFolge, mitErsterAntwort, nachVorschlag, stufenVorschlag } from '../app/kern/stufe.ts';
+import { leereFolge, mitErsterAntwort, nachAntwort, nachVorschlag, stufenVorschlag } from '../app/kern/stufe.ts';
 
 // Teilschritt 3, E8 (Ergänzung Stufen, S3): Vorschläge statt Automatik. Die Folge zählt nur, solange die Seite offen ist.
 const antworten=(folge,stufe,liste)=>liste.reduce((f,[frage,richtig])=>mitErsterAntwort(f,frage,richtig,stufe),folge);
@@ -80,4 +80,19 @@ test('nur Fragen der gewählten Stufe zählen; leichtere Fragen lassen die Folge
  assert.deepEqual(stufenVorschlag(gemischt,'profi','topic:a'),HOCH_EXPERTE);
  // Eine schwerere Frage zählt auch nicht (kommt auf der Karte nicht vor, die Regel ist „genau die gewählte Stufe“).
  assert.deepEqual(mitErsterAntwort(leereFolge(),'x',true,'entdecker','profi'),leereFolge());
+});
+
+// Spiele, in denen Experte noch Profi spielt: Ein unterdrückter Vorschlag verbraucht den einen Vorschlag der Runde nicht
+// (Code-Prüfung PR 2, Hinweis 6); ohne Filter bleibt alles wie auf der Karte.
+test('nachAntwort: unterdrückter Vorschlag verbraucht die Runde nicht',()=>{
+ const ohneExperte=ziel=>ziel!=='experte';let f=leereFolge(),v;
+ for(const i of [1,2,3]){({folge:f,vorschlag:v}=nachAntwort(f,'q:'+i,true,'profi','profi','runde:x',ohneExperte));assert.equal(v,null);}
+ assert.equal(f.gefragt.includes('runde:x'),false,'„Experte?“ war nicht erlaubt und zählt nicht als gefragt');
+ ({folge:f,vorschlag:v}=nachAntwort(f,'q:4',false,'profi','profi','runde:x',ohneExperte));assert.equal(v,null);
+ ({folge:f,vorschlag:v}=nachAntwort(f,'q:5',false,'profi','profi','runde:x',ohneExperte));
+ assert.equal(v?.richtung,'leichter');assert.equal(v?.ziel,'entdecker');assert.equal(f.gefragt.includes('runde:x'),true);
+ ({vorschlag:v}=nachAntwort(f,'q:6',false,'profi','profi','runde:x',ohneExperte));assert.equal(v,null,'höchstens ein Vorschlag je Runde');
+ let g=leereFolge();for(const i of [1,2,3])({folge:g,vorschlag:v}=nachAntwort(g,'q:'+i,true,'profi','profi','runde:y'));
+ assert.equal(v?.ziel,'experte','ohne Filter wie auf der Karte');
+ assert.deepEqual(nachAntwort(g,'q:1',false,'profi','profi','runde:y'),{folge:g,vorschlag:null},'eine schon gezählte Frage ändert nichts');
 });

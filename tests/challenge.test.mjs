@@ -110,7 +110,13 @@ test('pre-hint saved rounds keep their IDs, order, answer and earned finish at a
 });
 
 // Teil B, Aufgabe 9.1: Kreuz und quer nach der gemeinsamen Stufe (Entscheidungsliste Teil B, Punkt 8).
-import {kreuzUndQuerRunde,stufeDerFrage,EXPERTEN_HINWEIS} from '../app/knowledge-challenge.ts';
+import {kreuzUndQuerRunde,stufeDerFrage,EXPERTEN_HINWEIS,gespielteStufe} from '../app/knowledge-challenge.ts';
+// Alte Runden (Leicht/Mittel/Schwer) zeigen die Stufe, die sie spielen; Schwer gilt wie bei den Klassik-Spielen als Profi
+// (Entscheidung 22; Code-Prüfung PR 2, Hinweis 4).
+test('gespielteStufe alter und neuer Kreuz-und-quer-Runden',()=>{
+ for(const [difficulty,stufe] of [['easy','entdecker'],['medium','profi'],['hard','profi']])assert.equal(gespielteStufe({...emptyChallenge(),difficulty,ids:['x']}),stufe,difficulty);
+ assert.equal(gespielteStufe({...emptyChallenge(),difficulty:null,stufe:'experte',ids:['x']}),'experte');
+});
 test('Kreuz und quer wählt je Stufe aus dem passenden Vorrat',()=>{
  const stufeVon=id=>stufeDerFrage(CHALLENGE_BANK.find(q=>q.id===id));
  for(const seed of [.1,.4,.8]){

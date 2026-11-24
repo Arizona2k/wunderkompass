@@ -165,7 +165,7 @@ export default function EarthExplorer(){
     // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore external pass state after database/import/reset; not a derived render calculation.
     const q=local.progress.quizSession;if(q){const items=q.ids.map(id=>QUESTIONS.find(q=>q.id===id)).filter((q):q is typeof QUESTIONS[number]=>!!q);if(items.length===q.ids.length){quizId.current=q.id;setQuiz(items);setQuestionIndex(Math.min(q.index,items.length-1));setAnswer(q.answer);setScore(q.score);setQuizFinished(q.finished);setQuizDifficulty(q.difficulty);setQuizCategory(QUIZ_CATEGORIES.includes(q.category)?q.category:"Alle Themen");}}
     else if(local.restoreRevision){setQuizDifficulty("normal");setQuiz(QUESTIONS.slice(0,8));setQuestionIndex(0);setAnswer(null);setScore(0);setQuizFinished(false);quizId.current=localId();}
-    setResumeGame(undefined);setGamePanel(null);const next=MISSIONS.findIndex((_,i)=>!local.progress.missions.includes(i));setMission(next<0?MISSIONS.length-1:next);setMissionDone(next<0);setHydratedRevision(local.restoreRevision);
+    setResumeGame(undefined);setGamePanel(null);gameActivation.current={classic:false,world:false,extra:false};const next=MISSIONS.findIndex((_,i)=>!local.progress.missions.includes(i));setMission(next<0?MISSIONS.length-1:next);setMissionDone(next<0);setHydratedRevision(local.restoreRevision);
   },[local.ready,local.restoreRevision,hydratedRevision,local.progress.quizSession,local.progress.missions,routePath,local.progress.lastActivity]);
   useEffect(()=>{if(local.ready&&hydrated&&mode==="quiz")saveQuiz({id:quizId.current,ids:quiz.map(q=>q.id),index:questionIndex,answer,score,finished:quizFinished,category:quizCategory,difficulty:quizDifficulty});},[local.ready,hydrated,mode,quiz,questionIndex,answer,score,quizFinished,quizCategory,quizDifficulty,saveQuiz]);
   useEffect(()=>()=>{void audio.current?.close().catch(()=>{});},[]);
@@ -180,18 +180,22 @@ export default function EarthExplorer(){
   function pickLayer(id:string){setActiveLayer(id);discover("layer:"+id);}
   const discovery=useDiscoverySelection();
   const goMode=useCallback((value:string,path=value)=>{if(!MODES.includes(value))return;setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);navigateHash(path);},[]);
-  // „Spielen“ in der Leiste bei offenem Spiel führt zur Spiele-Übersicht (BACKLOG Phase 1, Punkt 16; Teil B, Aufgabe 9).
-  // Das offene Spiel schließt sich wie mit „Zur Übersicht“ (zur-uebersicht.ts); sein Stand bleibt im Pass.
+  // Nach dem Schließen eines Spiels liegt der Fokus auf seiner Karte in der Übersicht (sonst auf der Überschrift).
+  const zurSpielkarte=useCallback(()=>{if(gameOpener.current)requestAnimationFrame(()=>{const target=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current);(target??document.getElementById('playground-title'))?.focus();});},[]);
+  // „Spielen“ in der Leiste führt immer zur Spiele-Übersicht (BACKLOG Phase 1, Punkt 16; Teil B, Aufgabe 9, Entscheidung 25),
+  // auch wenn das Kind über „Wissen vertiefen“ oder einen anderen Bereich zurückkommt. Ein offenes Spiel schließt sich wie mit
+  // „Zur Übersicht“ (zur-uebersicht.ts); sein Stand bleibt im Pass. Lädt das Spiel noch oder meldet kein Spiel „offen“, schließt
+  // die App die Spielfläche selbst (Code-Prüfung PR 2, Hinweis 5).
   const [spieleUebersicht,setSpieleUebersicht]=useState(0);
-  const spielenOderBereich=useCallback((ziel:string)=>{if(ziel==='games'&&mode==='games'&&gamePanel!==null)setSpieleUebersicht(n=>n+1);goMode(ziel);},[mode,gamePanel,goMode]);
+  const spielenOderBereich=useCallback((ziel:string)=>{if(ziel==='games'&&gamePanel!==null){const a=gameActivation.current;if(a.classic||a.world||a.extra)setSpieleUebersicht(n=>n+1);else{setGamePanel(null);setResumeGame(undefined);zurSpielkarte();}}goMode(ziel);},[gamePanel,goMode,zurSpielkarte]);
   const voiceAction=useCallback((text:string,localOnly=false)=>actions.current.readAloud(text,localOnly),[]);
   const atlasAction=useCallback((p:Place)=>{actions.current.goMode("globe");if(p.kind==="nature")setMapLayer((p as Place&{category?:MapLayer}).category??NATURE.find(n=>n.id===p.id)?.category??(p.id.startsWith("world-")?"plain":"capitals"));else setMapLayer("plain");setKind(p.kind==="country"?"countries":p.kind==="ocean"?"oceans":"continents");actions.current.pick(p,false);},[]);
   const quizAction=useCallback(()=>{actions.current.startQuiz();actions.current.goMode("quiz");},[]);
   const huntAction=useCallback(()=>{actions.current.goMode("globe");setKind("countries");setShowHint(false);requestAnimationFrame(()=>document.getElementById("globe-mission")?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"}));},[]);
   const completeJourney=useCallback((id:string)=>{addProgress("journeys",id);reviewAnswer("journey-"+id,true);celebrate();},[addProgress,reviewAnswer,celebrate]);
-  const classicGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.classic&&!active;gameActivation.current.classic=active;setGamePanel(p=>active?"classic":p==="classic"?null:p);if(returning&&gameOpener.current)requestAnimationFrame(()=>{const target=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current);(target??document.getElementById('playground-title'))?.focus();});},[]);
-  const worldGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.world&&!active;gameActivation.current.world=active;setGamePanel(p=>active?"world":p==="world"?null:p);if(returning&&gameOpener.current)requestAnimationFrame(()=>{const target=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current);(target??document.getElementById('playground-title'))?.focus();});},[]);
-  const extraGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.extra&&!active;gameActivation.current.extra=active;setGamePanel(p=>active?"extra":p==="extra"?null:p);if(returning&&gameOpener.current)requestAnimationFrame(()=>{const target=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current);(target??document.getElementById('playground-title'))?.focus();});},[]);
+  const classicGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.classic&&!active;gameActivation.current.classic=active;setGamePanel(p=>active?"classic":p==="classic"?null:p);if(returning)zurSpielkarte();},[zurSpielkarte]);
+  const worldGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.world&&!active;gameActivation.current.world=active;setGamePanel(p=>active?"world":p==="world"?null:p);if(returning)zurSpielkarte();},[zurSpielkarte]);
+  const extraGameActive=useCallback((active:boolean)=>{const returning=gameActivation.current.extra&&!active;gameActivation.current.extra=active;setGamePanel(p=>active?"extra":p==="extra"?null:p);if(returning)zurSpielkarte();},[zurSpielkarte]);
   const completeGame=useCallback((id:string)=>{addProgress("games",id);celebrate();},[addProgress,celebrate]);
   const completeLab=useCallback((id:string)=>{addProgress("labs",id);celebrate();},[addProgress,celebrate]);
   function readAloud(text:string,localOnly=false){

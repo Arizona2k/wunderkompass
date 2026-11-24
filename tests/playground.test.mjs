@@ -90,3 +90,18 @@ test('eine angefangene Klassik-Runde mit Stufe gilt in der Spiele-Übersicht als
  p.gameSessions.detective.learningRound={...p.gameSessions.detective.learningRound,index:3,answer:CLASSIC_QUESTIONS.find(q=>q.id===p.gameSessions.detective.learningRound.ids[3]).correct,done:true};
  assert.equal(gameStatus(g,p).finished,true);
 });
+
+// Umformulierte richtige Antworten (Teil B, PR 2): Eine alte, fertige Runde bleibt fertig (Code-Prüfung PR 2, Risiko 3).
+test('alte Klassik-Runde behält ihre gelöste Frage nach dem Umformulieren',()=>{
+ const alt=[['detective-hard-seasons','Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit','Nein, in Australien ist dann Sommer','Ja, ein kalter Ort beweist globale Kälte'],['detective-hard-coral','Nein, Bleiche zeigt Stress, aber nicht sicher den Tod','Nein, sie kann sich noch erholen','Ja, eine Farbänderung beweist immer den Tod']];
+ for(const [letzte,alteRichtige,neueRichtige,alteFalsche] of alt){
+  const ids=CLASSIC_QUESTIONS.filter(q=>q.game==='detective'&&q.level==='hard'&&q.id!==letzte).map(q=>q.id).slice(0,3).concat(letzte);
+  const orders=Object.fromEntries(ids.map(id=>[id,[...CLASSIC_QUESTIONS.find(q=>q.id===id).answers]]));orders[letzte]=[alteRichtige,alteFalsche,'eine dritte alte Antwort'];
+  const r=restoreReasonRound('detective',{level:'hard',ids,orders,index:3,answer:alteRichtige,done:true});
+  assert.equal(r.answer,neueRichtige,letzte);assert.equal(r.done,true,'das Abschlussbild bleibt');
+  assert.deepEqual([...r.orders[letzte]].sort(),[...CLASSIC_QUESTIONS.find(q=>q.id===letzte).answers].sort(),'die alte Reihenfolge wird durch die neuen Antworten ersetzt');
+  const f=restoreReasonRound('detective',{level:'hard',ids,orders,index:3,answer:alteFalsche,done:false});
+  assert.equal(f.answer,null,'eine alte falsche Antwort fällt still weg');assert.equal(f.done,false);
+ }
+ assert.equal(restoreReasonRound('detective',{level:'hard',ids:['detective-hard-seasons'],orders:{'detective-hard-seasons':[]},index:0,answer:'constructor',done:false}).answer,null,'kein Zugriff auf geerbte Schlüssel');
+});

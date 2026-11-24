@@ -196,6 +196,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  // Kreuz und quer öffnet gleich eine Runde auf der Stufe aus dem Pass (Teil B, Aufgabe 9).
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Kreuz und quer öffnen',exact:true}).click();
  await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge']?.challenge?.ids?.length===6);
  assert.equal(await page.locator('.challenge-levels').count(),0);
  const runde=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids);
  await page.reload();await ready(page);await home();

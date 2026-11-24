@@ -72,3 +72,12 @@ export function stufenVorschlag(folge: Folge, stufe: Stufe, runde: string): Stuf
 }
 
 export const nachVorschlag = (folge: Folge, runde: string): Folge => ({ ...folge, antworten: [], gefragt: [...folge.gefragt, runde] });
+
+// Eine Antwort verbuchen. `erlaubt` lässt nur Vorschläge zu einer Stufe zu, die das Spiel wirklich anders spielt; ein
+// unterdrückter Vorschlag verbraucht den einen Vorschlag der Runde nicht (Code-Prüfung PR 2, Hinweis 6).
+export function nachAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe, frageStufe: Stufe, runde: string, erlaubt: (ziel: Stufe) => boolean = () => true): { folge: Folge; vorschlag: StufenVorschlag | null } {
+  const neu = mitErsterAntwort(folge, frage, richtig, stufe, frageStufe);
+  if (neu === folge) return { folge, vorschlag: null };
+  const kandidat = stufenVorschlag(neu, stufe, runde), vorschlag = kandidat && erlaubt(kandidat.ziel) ? kandidat : null;
+  return { folge: vorschlag ? nachVorschlag(neu, runde) : neu, vorschlag };
+}

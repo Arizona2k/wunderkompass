@@ -44,12 +44,12 @@ export function waehleAufgaben({ vorrat, review, schluessel, anzahl, vorige = []
 
 const textliste = (v: unknown): v is string[] => Array.isArray(v) && v.length > 0 && v.every(x => typeof x === 'string');
 
-// Die zuletzt gespielte Auswahl eines Welt-Spielstands: die Runde selbst (items oder challenge.ids),
-// sonst die schon gemerkte vorige Runde (zweimal „Neue Runde“ ohne zu spielen).
+// Die zuletzt gespielte Auswahl eines Spielstands: die Runde selbst (items, challenge.ids oder learningRound.ids der
+// Klassik-Spiele), sonst die schon gemerkte vorige Runde (zweimal „Neue Runde“ ohne zu spielen).
 export function vorigeRunde(sitzung: unknown): string[] {
   if (!sitzung || typeof sitzung !== 'object' || Array.isArray(sitzung)) return [];
   const s = sitzung as Record<string, unknown>;
-  const challenge = s.challenge && typeof s.challenge === 'object' ? (s.challenge as Record<string, unknown>).ids : undefined;
-  for (const kandidat of [s.items, challenge, s.vorige]) if (textliste(kandidat)) return [...kandidat];
+  const ids = (v: unknown) => v && typeof v === 'object' ? (v as Record<string, unknown>).ids : undefined;
+  for (const kandidat of [s.items, ids(s.challenge), ids(s.learningRound), s.vorige]) if (textliste(kandidat)) return [...kandidat];
   return [];
 }
