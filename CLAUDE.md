@@ -1,6 +1,6 @@
 # CLAUDE.md – Arbeitshandbuch für WunderKompass
 
-Stand: 23.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
+Stand: 24.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
 
 ## Das Projekt in fünf Sätzen
 
@@ -65,7 +65,7 @@ Jede Phase und jeder größere Schritt:
 1. **Entwurf** in `docs/entwurf/`, Freigabe durch den Nutzer.
 2. **Plan** in kleinen Schritten.
 3. **Bauen** auf dem Branch `claude/...`.
-4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026). Wer Kartentexte oder den Kartenaufbau ändert (`app/world-catalog.json`, `app/kern/karte/`, `app/kern/kern.css`), lässt danach erst `pnpm run check` und dann `node tests/browser/run.mjs --suite full core` laufen (rund 12 Minuten): `core` prüft das Wissensbuch und die verbundenen Entdeckungen, die sonst nur die Vollprüfung sieht (Technik-Prüfung Teil A).
+4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen, nach dem Wortlaut und nach dem Auslöser (Speicherschlüssel wie `gameSessions['topic:`, Funktionen wie `antwortReihe`), und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026; Auslöser seit 24.11.2026). Wer Kartentexte oder den Kartenaufbau ändert (`app/world-catalog.json`, `app/kern/karte/`, `app/kern/kern.css`), lässt danach erst `pnpm run check` und dann `node tests/browser/run.mjs --suite full core offline-cold-full` laufen (rund 18 Minuten): `core` prüft das Wissensbuch und die verbundenen Entdeckungen, `offline-cold-full` die Karten und Reisen offline; beides sieht sonst nur die Vollprüfung (Technik-Prüfung Teil A; `offline-cold-full` dazu seit 24.11.2026).
 5. **Zeigen:** Vercel-Vorschau-Link und Screenshots, in einfachen Worten.
 6. **Freigabe:** PR nach `test-live`, Vorschau- und PR-Link schicken. Merge nach grüner CI und „ok“ im Chat.
 7. **Nachführen:** `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`. Sichtbare Änderungen bekommen einen kurzen, kindgerechten Eintrag in „Was ist neu?“ auf der Seite (Wunsch des Nutzers, 21.11.2026; ab Phase 1).
