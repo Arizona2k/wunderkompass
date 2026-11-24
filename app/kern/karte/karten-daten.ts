@@ -354,6 +354,7 @@ const KENNWOERTER: Record<string, string> = {
   'Spätere Darstellung': 'Spätere Darstellung',
   'Darstellung': 'Spätere Darstellung',
   'Historischer Druck': 'Historischer Druck',
+  'Gemälde': 'Gemälde',
 };
 
 export function fotoKennwort(label: string | undefined): string | undefined {

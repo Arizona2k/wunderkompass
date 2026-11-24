@@ -213,7 +213,7 @@ test('bildArt nennt das Kennwort des Fotos', () => {
   assert.equal(fotos['johannes-gutenberg'].label, 'Darstellung');
   assert.deepEqual(bildArt({id: 'x', image: 'johannes-gutenberg'}, true), {art: 'foto', photoId: 'johannes-gutenberg', kennwort: 'Spätere Darstellung'});
   assert.deepEqual(bildArt({id: 'x', image: 'hokusai-great-wave-jp1847'}, false), {art: 'foto', photoId: 'hokusai-great-wave-jp1847', kennwort: 'Historischer Druck'});
-  for (const label of ['KI-Bild', 'Rekonstruktion', 'Spätere Darstellung', 'Historischer Druck']) assert.equal(fotoKennwort(label), label);
+  for (const label of ['KI-Bild', 'Rekonstruktion', 'Spätere Darstellung', 'Historischer Druck', 'Gemälde']) assert.equal(fotoKennwort(label), label);
   assert.equal(fotoKennwort('Darstellung'), 'Spätere Darstellung');
   // Gewöhnliche Fotos brauchen kein Kennwort.
   assert.equal(fotoKennwort('Foto'), undefined);
