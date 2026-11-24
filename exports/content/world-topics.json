@@ -12215,11 +12215,11 @@
       "benefit": "Schwanzhaltung ist sichtbar; Duftmarken werden gerochen."
     },
     "questionFeedback": {
-      "hint": "Überlege, welche Mitteilung auch ohne Licht wahrgenommen werden könnte. Prüfe dabei die verschiedenen Sinneswege.",
+      "hint": "Zeig auf deine Augen, dann auf deine Ohren, dann auf deine Nase. Welches Zeichen passt zur Nase?",
       "wrongReasons": [
-        "Ein aufgerichteter Schwanz ist ein sichtbares Signal. Der Geruchssinn benötigt andere Informationen.",
+        "Einen aufgerichteten Schwanz sieht man mit den Augen. Beim Wandern ist er wie eine Fahne für die Gruppe. Gesucht ist ein Zeichen für die Nase.",
         null,
-        "Ein Ruf wird gehört. Die Frage unterscheidet gerade Hören, Sehen und Riechen."
+        "Einen Ruf hört man mit den Ohren. Gesucht ist ein Zeichen für die Nase."
       ]
     },
     "image": "ring-tailed-lemur"
@@ -13441,6 +13441,10 @@
       {
         "label": "NABU Euskirchen · Feuersalamander-Portrait",
         "url": "https://www.nabu-euskirchen.de/2026/06/03/feuersalamander-ein-portrait/"
+      },
+      {
+        "label": "LfU Bayern · Feuersalamander (Steckbrief, 2007)",
+        "url": "https://www.lfu.bayern.de/wasser/auen/grundlagen/auen_naturhaushalt/doc/feuersalamander.pdf"
       }
     ],
     "sourceNote": "Quellenstand 18.10.2026. Die beschriebene Fortpflanzung bezieht sich auf mitteleuropäische Populationen. Wald und Larvengewässer sind verbundene Lebensorte. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe.",
@@ -13466,14 +13470,14 @@
       }
     },
     "question": {
-      "prompt": "Was haben junge Feuer-Salamander im Bach?",
+      "prompt": "Was haben junge Salamander im Bach?",
       "answers": [
         "Äußere Kiemen.",
         "Keine Kiemen; sie atmen schon genau wie die erwachsenen Landtiere.",
         "Schon alle Merkmale der Erwachsenen, ohne spätere Verwandlung."
       ],
       "correct": 0,
-      "why": "Die Larven tragen äußere Kiemen und leben im Wasser. Erwachsene Tiere nutzen überwiegend den Wald."
+      "why": "Junge Feuersalamander atmen im Bach mit Kiemen. Die Kiemen sitzen außen, wie kleine Büschel. Später verschwinden die Kiemen. Dann verlassen die Tiere das Wasser."
     },
     "links": [
       {
@@ -13488,11 +13492,11 @@
       "benefit": "Wald und Larvengewässer sind miteinander verbundene Lebensorte."
     },
     "questionFeedback": {
-      "hint": "Achte auf das Entwicklungsstadium: Ein Merkmal der im Wasser lebenden Larve muss nicht auch beim erwachsenen Waldtier vorkommen.",
+      "hint": "Junge Salamander leben im Bach unter Wasser. Womit kann ein Tier dort atmen?",
       "wrongReasons": [
         null,
-        "Die beschriebenen Larven besitzen äußere Kiemen. Die späteren Landtiere und die Larven müssen unterschieden werden.",
-        "Bei der Entwicklung verändern sich Merkmale. Eine Larve ist nicht einfach ein vollständig fertiger Erwachsener in klein."
+        "Junge Salamander haben Kiemen. Damit atmen sie unter Wasser. Die Großen an Land haben keine Kiemen mehr.",
+        "Junge Salamander sehen noch anders aus als die Großen. Später verwandeln sie sich und verlieren ihre Kiemen."
       ]
     },
     "image": "fire-salamander"
