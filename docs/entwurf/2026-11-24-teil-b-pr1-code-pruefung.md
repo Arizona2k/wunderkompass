@@ -1,6 +1,6 @@
 # Teil B, PR 1 (Aufgaben 7 und 8): Code-Prüfung
 
-Stand: 24.11.2026. Bericht des `code-pruefer` zum Branch `claude/practical-cerf-av0jx4` gegen `origin/test-live` (bis Commit `5d0e4e6`), sinngemäß vollständig übernommen. Was Claude daraus gemacht hat, steht am Ende.
+Stand: 24.11.2026. Bericht des `code-pruefer` zum Branch `claude/practical-cerf-av0jx4` gegen `origin/test-live` (Code-Stand `4b29615`), sinngemäß vollständig übernommen. Was Claude daraus gemacht hat, steht am Ende.
 
 **Ergebnis des Helfers:** Bereit mit kleinen Änderungen. Kein Weg zu Pass-Datenverlust, Absturz oder einer Runde ohne richtige Antwort gefunden; eine Lücke in der Challenge und ein falscher Satz auf der Seite.
 
