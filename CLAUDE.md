@@ -52,7 +52,7 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm run export:data` | Inhaltsexporte nach `exports/content` (noch in Git, weil Browser-Tests sie lesen; Ablösung im BACKLOG) |
 
 Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [--shard GRUPPE] [suitenamen]`.
-`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build. `--shard` wählt eine Gruppe der Vollprüfung aus `tests/browser/shards.mjs`. Jeder Lauf schreibt die Dauer je Suite nach `.qa-output/browser/zeiten-*.json`.
+`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build. `QA_FRAME_DELAY_MS=150` lässt jedes Bild der Seite 150 ms später kommen (Stresslauf, Schritt in `/pruefen`). `--shard` wählt eine Gruppe der Vollprüfung aus `tests/browser/shards.mjs`. Jeder Lauf schreibt die Dauer je Suite nach `.qa-output/browser/zeiten-*.json`.
 **Playwright** (das Browser-Testwerkzeug) ist immer auf der neuesten Version, die mindestens 7 Tage alt ist (Wunsch des Nutzers, 21.11.2026). `/weiter` prüft das bei jedem Einstieg; ein Update ist ein eigener kleiner Commit mit `pnpm run check`.
 Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand; je Browser in Gruppen aus `tests/browser/shards.mjs`, alle gleichzeitig, Zeiten als Artefakt).
 

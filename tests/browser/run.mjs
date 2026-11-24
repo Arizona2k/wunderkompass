@@ -42,8 +42,9 @@ if (!options.base) {
 }
 
 const playwright = await import(process.env.QA_PLAYWRIGHT_MODULE ?? 'playwright');
-const bildVerzoegerungMs = process.env.QA_FRAME_DELAY_MS ? Number(process.env.QA_FRAME_DELAY_MS) : 0;
-if (bildVerzoegerungMs) {
+// Gesetzt heißt gebremst: Auch „0“, „150ms“ oder ein Tippfehler laden die Bremse, die solche Werte dann ablehnt.
+const bildVerzoegerungMs = process.env.QA_FRAME_DELAY_MS === undefined ? 0 : Number(process.env.QA_FRAME_DELAY_MS);
+if (process.env.QA_FRAME_DELAY_MS !== undefined) {
   const {bremseBilder} = await import('./stresslauf.mjs');
   bremseBilder(playwright, bildVerzoegerungMs);
   console.log(`Stresslauf: Jedes Bild der Seite kommt ${bildVerzoegerungMs} ms später.`);
