@@ -95,6 +95,8 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await page.locator(`[data-game-key="${WELT}"]`).click();
     await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
     await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
+    // Das Spiel öffnet oben, nicht mitten in der Spieleliste (Spieltest Welt-Spiele, G).
+    await page.waitForFunction(() => { const oben = document.querySelector('.world-game-room')?.getBoundingClientRect().top; return oben !== undefined && oben >= 0 && oben <= 40; });
     const profi = await sitzung();
     assert.equal(profi.stufe, 'profi', 'Experte spielt in den Welt-Spielen Profi');
     assert.equal(profi.items.length, 8);
@@ -132,9 +134,14 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
       await brett.getByText(`AUFGABE ${i + 1} VON 8`, {exact: true}).waitFor();
       assert.equal(await brett.locator('.quiz-answer').count(), 4, 'Profi zeigt vier Antworten');
       await brett.locator('.quiz-answer').filter({has: page.getByText(q.answers[q.correct], {exact: true})}).click();
-      await brett.getByRole('button', {name: i === neu.items.length - 1 ? 'Spielstempel sammeln' : 'Nächste Aufgabe', exact: true}).click();
+      // Die richtige Antwort wird gesperrt; der Fokus geht zum nächsten Schritt statt auf <body> (Design-Prüfung Welt-Spiele, Wichtig 2).
+      const weiter = i === neu.items.length - 1 ? 'Spielstempel sammeln' : 'Nächste Aufgabe';
+      await page.waitForFunction(text => document.activeElement?.textContent?.trim() === text, weiter);
+      await brett.getByRole('button', {name: weiter, exact: true}).click();
     }
     await brett.getByText('Alle 8 Aufgaben sind gelöst. Dein Spielstempel bleibt in deinem Entdeckerpass.', {exact: true}).waitFor();
+    await page.waitForFunction(() => document.activeElement?.tagName === 'H2' && document.activeElement.textContent === 'Eine ganze Runde gelöst!');
+    assert.equal(await zeile.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker', exact: true}).count(), 0, 'kein „Zu schwer?“ nach einer geschafften Runde (Design-Prüfung Welt-Spiele, Muss 1)');
     const heute = new Date().toISOString().slice(0, 10);
     assert.deepEqual((await sitzung()).geschafft, {profi: heute}, 'die geschaffte Stufe steht im Spielstand');
     await page.locator('.world-game-room').getByRole('button', {name: 'Neue Runde', exact: true}).click();
@@ -143,7 +150,7 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await zeile.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker', exact: true}).click();
     await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
     assert.deepEqual((await sitzung()).geschafft, {profi: heute}, 'ein Stufenwechsel behält sie');
-    report.checks.push('Welt-Spiel-Runden: Experte spielt Profi (8 Aufgaben), Wechsel in der Runde startet eine neue Runde mit Fokus auf „Ändern“, Wechsel an anderer Stelle lässt die Runde zu Ende laufen, „Neue Runde“ nimmt die Stufe aus dem Pass');
+    report.checks.push('Welt-Spiel-Runden: öffnet oben, Experte spielt Profi (8 Aufgaben), Wechsel in der Runde startet eine neue Runde mit Fokus auf „Ändern“, Wechsel an anderer Stelle lässt die Runde zu Ende laufen, „Neue Runde“ nimmt die Stufe aus dem Pass, Fokus nach richtiger Antwort und am Ende, kein „Zu schwer?“ auf dem Abschlussbild');
   } finally {
     await context.close();
   }
