@@ -50,13 +50,15 @@ test('Benz and al-Chwarizmi recognition prompts conceal real name variants while
   for(const name of variants)assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')));
   for(const part of names)assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
  }
- for(const t of catalog.filter(t=>t.person&&!['person-karl_benz','person-al_khwarizmi'].includes(t.id))){
-  assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+t.intro.replace(t.title,'Diese Person'));
+ // Am Satzanfang „Diese Person“, mitten im Satz „diese Person“ (Teil B, Entscheidungsliste Punkt 7).
+ const ersetzt=t=>t.intro.replace(t.title,(_,o,s)=>/^\s*$|[.!?:]\s*$/u.test(s.slice(0,o))?'Diese Person':'diese Person');
+ for(const t of catalog.filter(t=>t.person&&!['person-karl_benz','person-al_khwarizmi','person-charles_darwin','person-albert_einstein'].includes(t.id))){
+  assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+ersetzt(t));
  }
 });
 test('optional recognition name variants preserve compound words and Unicode word boundaries',()=>{
- assert.equal(personRecognitionClue({title:'Karl (Carl) Benz',intro:'Carl Benz nutzte einen Benzinmotor; Karl Benz ist eine Namensform.'}),'Diese Person nutzte einen Benzinmotor; Diese Person ist eine Namensform.');
- assert.equal(personRecognitionClue({title:'Karl (Carl) Benz',intro:'Karl Benziner ist hier ein anderes Wort; Karl Benz steht einzeln.'}),'Karl Benziner ist hier ein anderes Wort; Diese Person steht einzeln.');
+ assert.equal(personRecognitionClue({title:'Karl (Carl) Benz',intro:'Carl Benz nutzte einen Benzinmotor; Karl Benz ist eine Namensform.'}),'Diese Person nutzte einen Benzinmotor; diese Person ist eine Namensform.');
+ assert.equal(personRecognitionClue({title:'Karl (Carl) Benz',intro:'Karl Benziner ist hier ein anderes Wort; Karl Benz steht einzeln.'}),'Karl Benziner ist hier ein anderes Wort; diese Person steht einzeln.');
  assert.equal(personRecognitionClue({title:'al-Chwarizmi (al-Khwarizmi)',intro:'AL-KHWARIZMI schrieb über Algebra.'}),'Diese Person schrieb über Algebra.');
 });
 test('telescope recognition uses the supported optical description without changing its article research question',()=>{

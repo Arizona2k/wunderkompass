@@ -1,0 +1,1537 @@
+{
+  "version": 1,
+  "bedeutung": "Fallen für „Tier & Lebensraum“ und „Wer frisst was?“ (Teil B, Schritt 8.3): je Tier Texte anderer Tiere, die sicher nicht passen. Entdecker zieht je Runde zwei aus „entdecker“ (deutlich anders), Profi drei aus „profi“ (ähnlich). Geprüft vom fakten-pruefer (jedes Paar) und stufen-pruefer, Berichte in docs/entwurf/.",
+  "lebensraum": {
+    "animal-african-savanna-elephant": {
+      "entdecker": [
+        "Arktische Küsten und Meere",
+        "Antarktis",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse und Seen"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Regenwald",
+        "Blütenreiche Landschaften",
+        "Arktis",
+        "Gebirge"
+      ]
+    },
+    "animal-lion": {
+      "entdecker": [
+        "Küsten und offenes Meer",
+        "Flüsse & Seen",
+        "Felsiger Meeresboden",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Regenwald",
+        "Hecken, Gärten und Waldränder",
+        "Blütenreiche Landschaften",
+        "Gebirge",
+        "Arktis"
+      ]
+    },
+    "animal-cheetah": {
+      "entdecker": [
+        "Flüsse und Seen",
+        "Felsiger Meeresboden",
+        "Ozean",
+        "Küste",
+        "Antarktis"
+      ],
+      "profi": [
+        "Wiesen und Gärten",
+        "Blütenreiche Landschaften",
+        "Gebirge",
+        "Wald",
+        "Regenwald",
+        "Arktis"
+      ]
+    },
+    "animal-bengal-tiger": {
+      "entdecker": [
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse und Seen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Trockene offene Landschaften",
+        "Blütenreiche Landschaften",
+        "Savanne",
+        "Wüste",
+        "Arktis"
+      ]
+    },
+    "animal-giraffe": {
+      "entdecker": [
+        "Flüsse und Seen",
+        "Küstennaher Meeresboden",
+        "Ozean",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Wüste",
+        "Regenwald",
+        "Hecken, Gärten und Waldränder",
+        "Blütenreiche Landschaften",
+        "Gebirge",
+        "Arktis"
+      ]
+    },
+    "animal-giant-panda": {
+      "entdecker": [
+        "Flüsse und Feuchtgebiete",
+        "Küsten und offenes Meer",
+        "Antarktis",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Regenwald",
+        "Hecken, Gärten und Waldränder",
+        "Savanne",
+        "Trockene offene Landschaften",
+        "Blütenreiche Landschaften",
+        "Wüste"
+      ]
+    },
+    "animal-western-lowland-gorilla": {
+      "entdecker": [
+        "Ozean",
+        "Küste",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Wüste",
+        "Trockene offene Landschaften",
+        "Blütenreiche Landschaften",
+        "Offene Landschaften",
+        "Savanne"
+      ]
+    },
+    "animal-bornean-orangutan": {
+      "entdecker": [
+        "Küsten und offenes Meer",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis",
+        "Felsiger Meeresboden",
+        "Flüsse und Seen"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Savanne",
+        "Arktis",
+        "Wüste",
+        "Trockene offene Landschaften",
+        "Offene Landschaften"
+      ]
+    },
+    "animal-polar-bear": {
+      "entdecker": [
+        "Feuchte Wälder und Larvengewässer",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Büsche und Bäume",
+        "Wald",
+        "Gebirge",
+        "Trockene offene Landschaften",
+        "Wüste"
+      ]
+    },
+    "animal-emperor-penguin": {
+      "entdecker": [
+        "Trockene offene Landschaften",
+        "Gewässer, Wälder und Gärten",
+        "Gebirge",
+        "Regenwald",
+        "Arktis"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Trockene offene Landschaften"
+      ]
+    },
+    "animal-blue-whale": {
+      "entdecker": [
+        "Wald",
+        "Regenwald",
+        "Flüsse und Feuchtgebiete",
+        "Offene Landschaften",
+        "Wiesen und Gärten"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Küsten mit Haltestrukturen",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen"
+      ]
+    },
+    "animal-common-bottlenose-dolphin": {
+      "entdecker": [
+        "Wiesen & Gärten",
+        "Flüsse und Feuchtgebiete",
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Offene Landschaften"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Antarktis"
+      ]
+    },
+    "animal-orca": {
+      "entdecker": [
+        "Regenwald",
+        "Wiesen und Gärten",
+        "Büsche und Bäume",
+        "Flussufer und Stillgewässer",
+        "Grasland"
+      ],
+      "profi": [
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden",
+        "Flüsse und Seen",
+        "Regenwald"
+      ]
+    },
+    "animal-common-octopus": {
+      "entdecker": [
+        "Grasland",
+        "Flussufer und Stillgewässer",
+        "Büsche und Bäume",
+        "Wiesen & Gärten",
+        "Wälder, Offenland und Siedlungen"
+      ],
+      "profi": [
+        "Antarktis",
+        "Flüsse und Seen",
+        "Grasland",
+        "Büsche und Bäume"
+      ]
+    },
+    "animal-green-sea-turtle": {
+      "entdecker": [
+        "Grasland",
+        "Gebirge",
+        "Büsche und Bäume",
+        "Savannen und trockene offene Landschaften",
+        "Wälder, Offenland und Siedlungen"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Flüsse & Seen",
+        "Antarktis",
+        "Grasland"
+      ]
+    },
+    "animal-red-kangaroo": {
+      "entdecker": [
+        "Flüsse, Küsten und Atlantik",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden",
+        "Antarktis"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Wiesen und Gärten",
+        "Büsche und Bäume",
+        "Gebirge",
+        "Regenwald",
+        "Wälder und Siedlungsräume"
+      ]
+    },
+    "animal-koala": {
+      "entdecker": [
+        "Flüsse und Seen",
+        "Felsiger Meeresboden",
+        "Antarktis",
+        "Ozean",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Regenwald",
+        "Arktis",
+        "Wüste",
+        "Trockene offene Landschaften",
+        "Offene Landschaften"
+      ]
+    },
+    "animal-jaguar": {
+      "entdecker": [
+        "Arktische Küsten und Meere",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Blütenreiche Landschaften",
+        "Wüste",
+        "Trockene offene Landschaften",
+        "Arktis",
+        "Gebirge"
+      ]
+    },
+    "animal-honey-bee": {
+      "entdecker": [
+        "Küsten und offenes Meer",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Flussufer und Stillgewässer",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Regenwald",
+        "Trockene offene Landschaften",
+        "Savanne",
+        "Grasland",
+        "Wüste",
+        "Gebirge"
+      ]
+    },
+    "animal-axolotl": {
+      "entdecker": [
+        "Trockene offene Landschaften",
+        "Wälder und Siedlungsräume",
+        "Regenwald",
+        "Gebirge",
+        "Wiesen & Gärten"
+      ],
+      "profi": [
+        "Ozean",
+        "Küste",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis",
+        "Felsiger Meeresboden"
+      ]
+    },
+    "animal-whale-shark": {
+      "entdecker": [
+        "Savanne",
+        "Wälder und offene Landschaften",
+        "Büsche und Bäume",
+        "Flussufer und Stillgewässer",
+        "Gebirge"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Antarktis",
+        "Flüsse & Seen",
+        "Savanne"
+      ]
+    },
+    "animal-garden-cross-spider": {
+      "entdecker": [
+        "Arktische Küsten und Meere",
+        "Antarktis",
+        "Flüsse & Seen",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Regenwald",
+        "Blütenreiche Landschaften",
+        "Savannen und trockene offene Landschaften",
+        "Wüste",
+        "Grasland",
+        "Gebirge"
+      ]
+    },
+    "animal-dromedary": {
+      "entdecker": [
+        "Flussufer und Stillgewässer",
+        "Arktische Küsten und Meere",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Wiesen und Gärten",
+        "Savanne",
+        "Blütenreiche Landschaften",
+        "Grasland",
+        "Arktis",
+        "Büsche und Bäume"
+      ]
+    },
+    "animal-white-tailed-eagle": {
+      "entdecker": [
+        "Gebirge",
+        "Wüste",
+        "Gärten, Hecken und andere Verstecke",
+        "Savannen und trockene offene Landschaften",
+        "Arktis"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Regenwald",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen"
+      ]
+    },
+    "animal-platypus": {
+      "entdecker": [
+        "Gärten, Hecken und andere Verstecke",
+        "Regenwald",
+        "Arktis",
+        "Offene Wälder und trockene Landschaften",
+        "Wüste"
+      ],
+      "profi": [
+        "Ozean",
+        "Küstennaher Meeresboden",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen"
+      ]
+    },
+    "animal-short-beaked-echidna": {
+      "entdecker": [
+        "Felsiger Meeresboden",
+        "Küste",
+        "Antarktis",
+        "Ozean",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Regenwald",
+        "Hecken, Gärten und Waldränder",
+        "Blütenreiche Landschaften",
+        "Arktis"
+      ]
+    },
+    "animal-okapi": {
+      "entdecker": [
+        "Küsten und offenes Meer",
+        "Felsiger Meeresboden",
+        "Flüsse und Feuchtgebiete",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Wüste",
+        "Grasland",
+        "Trockene offene Landschaften",
+        "Offene Landschaften",
+        "Arktis"
+      ]
+    },
+    "animal-meerkat": {
+      "entdecker": [
+        "Felsiger Meeresboden",
+        "Arktische Küsten und Meere",
+        "Flussufer und Stillgewässer",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Wiesen & Gärten",
+        "Gebirge",
+        "Büsche und Bäume",
+        "Wald",
+        "Arktis"
+      ]
+    },
+    "animal-ring-tailed-lemur": {
+      "entdecker": [
+        "Ozean",
+        "Flussufer und Stillgewässer",
+        "Küsten mit Haltestrukturen",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Wüste",
+        "Regenwald",
+        "Hecken, Gärten und Waldränder",
+        "Grasland",
+        "Savanne",
+        "Blütenreiche Landschaften"
+      ]
+    },
+    "animal-north-american-beaver": {
+      "entdecker": [
+        "Antarktis",
+        "Savanne",
+        "Blütenreiche Landschaften",
+        "Arktische Küsten und Meere",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Regenwald",
+        "Antarktis",
+        "Savanne"
+      ]
+    },
+    "animal-walrus": {
+      "entdecker": [
+        "Flussufer und Stillgewässer",
+        "Savannen und trockene offene Landschaften",
+        "Grasland",
+        "Hecken, Gärten und Waldränder",
+        "Wüste"
+      ],
+      "profi": [
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Antarktis",
+        "Savannen und trockene offene Landschaften"
+      ]
+    },
+    "animal-red-fox": {
+      "entdecker": [
+        "Flüsse & Seen",
+        "Antarktis",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Savanne",
+        "Feuchte Wälder und Larvengewässer"
+      ]
+    },
+    "animal-raccoon": {
+      "entdecker": [
+        "Antarktis",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Regenwald",
+        "Blütenreiche Landschaften",
+        "Savannen und trockene offene Landschaften",
+        "Arktis",
+        "Gebirge",
+        "Wüste"
+      ]
+    },
+    "animal-hedgehog": {
+      "entdecker": [
+        "Antarktis",
+        "Arktische Küsten und Meere",
+        "Flüsse und Feuchtgebiete",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Savanne",
+        "Trockene offene Landschaften",
+        "Grasland",
+        "Wüste"
+      ]
+    },
+    "animal-barn-owl": {
+      "entdecker": [
+        "Küstennaher Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Ozean",
+        "Antarktis",
+        "Flussufer und Stillgewässer"
+      ],
+      "profi": [
+        "Wüste",
+        "Regenwald",
+        "Blütenreiche Landschaften",
+        "Gärten, Hecken und andere Verstecke",
+        "Arktis",
+        "Gebirge"
+      ]
+    },
+    "animal-kingfisher": {
+      "entdecker": [
+        "Offene Wälder und trockene Landschaften",
+        "Antarktis",
+        "Grasland",
+        "Savanne",
+        "Hecken, Gärten und Waldränder"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Offene Wälder und trockene Landschaften",
+        "Antarktis"
+      ]
+    },
+    "animal-ostrich": {
+      "entdecker": [
+        "Flüsse, Küsten und Atlantik",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Wiesen & Gärten",
+        "Blütenreiche Landschaften",
+        "Wälder und Siedlungsräume",
+        "Büsche und Bäume",
+        "Gebirge",
+        "Arktis"
+      ]
+    },
+    "animal-atlantic-puffin": {
+      "entdecker": [
+        "Gewässer, Wälder und Gärten",
+        "Savannen und trockene offene Landschaften",
+        "Gebirge",
+        "Offene Landschaften",
+        "Wüste"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Antarktis"
+      ]
+    },
+    "animal-common-chameleon": {
+      "entdecker": [
+        "Flussufer und Stillgewässer",
+        "Antarktis",
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen"
+      ],
+      "profi": [
+        "Wüste",
+        "Regenwald",
+        "Savanne",
+        "Blütenreiche Landschaften",
+        "Grasland",
+        "Arktis"
+      ]
+    },
+    "animal-fire-salamander": {
+      "entdecker": [
+        "Küsten und offenes Meer",
+        "Arktis",
+        "Blütenreiche Landschaften",
+        "Wiesen und Gärten",
+        "Antarktis"
+      ],
+      "profi": [
+        "Hecken, Gärten und Waldränder",
+        "Regenwald",
+        "Küsten und offenes Meer",
+        "Arktis"
+      ]
+    },
+    "animal-common-frog": {
+      "entdecker": [
+        "Küsten mit Haltestrukturen",
+        "Korallenriffe mit Seeanemonen",
+        "Felsiger Meeresboden",
+        "Antarktis",
+        "Ozean"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Savanne",
+        "Wüste"
+      ]
+    },
+    "animal-eastern-clown-anemonefish": {
+      "entdecker": [
+        "Gärten, Hecken und andere Verstecke",
+        "Wüste",
+        "Trockene offene Landschaften",
+        "Blütenreiche Landschaften",
+        "Flussufer und Stillgewässer"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Flüsse und Seen",
+        "Antarktis",
+        "Gärten, Hecken und andere Verstecke"
+      ]
+    },
+    "animal-european-eel": {
+      "entdecker": [
+        "Büsche und Bäume",
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Wälder und Siedlungsräume",
+        "Savanne"
+      ],
+      "profi": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis",
+        "Büsche und Bäume"
+      ]
+    },
+    "animal-monarch-butterfly": {
+      "entdecker": [
+        "Flüsse und Feuchtgebiete",
+        "Felsiger Meeresboden",
+        "Küste",
+        "Ozean",
+        "Antarktis"
+      ],
+      "profi": [
+        "Regenwald",
+        "Savannen und trockene offene Landschaften",
+        "Wüste",
+        "Arktis"
+      ]
+    },
+    "animal-garden-snail": {
+      "entdecker": [
+        "Felsiger Meeresboden",
+        "Korallenriffe mit Seeanemonen",
+        "Küsten und offenes Meer",
+        "Flüsse & Seen",
+        "Antarktis"
+      ],
+      "profi": [
+        "Blütenreiche Landschaften",
+        "Regenwald",
+        "Trockene offene Landschaften",
+        "Grasland",
+        "Savanne",
+        "Wüste"
+      ]
+    },
+    "animal-european-lobster": {
+      "entdecker": [
+        "Offene Landschaften",
+        "Arktis",
+        "Trockene offene Landschaften",
+        "Blütenreiche Landschaften",
+        "Wiesen & Gärten"
+      ],
+      "profi": [
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Antarktis",
+        "Offene Landschaften"
+      ]
+    },
+    "animal-common-cuttlefish": {
+      "entdecker": [
+        "Hecken, Gärten und Waldränder",
+        "Savanne",
+        "Blütenreiche Landschaften",
+        "Arktis",
+        "Wald"
+      ],
+      "profi": [
+        "Korallenriffe mit Seeanemonen",
+        "Antarktis",
+        "Flüsse & Seen",
+        "Hecken, Gärten und Waldränder"
+      ]
+    },
+    "animal-short-snouted-seahorse": {
+      "entdecker": [
+        "Gebirge",
+        "Trockene offene Landschaften",
+        "Büsche und Bäume",
+        "Wälder, Offenland und Siedlungen",
+        "Wüste"
+      ],
+      "profi": [
+        "Korallenriffe mit Seeanemonen",
+        "Flüsse & Seen",
+        "Antarktis",
+        "Gebirge"
+      ]
+    }
+  },
+  "nahrung": {
+    "animal-african-savanna-elephant": {
+      "entdecker": [
+        "Vor allem kleine Fische",
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Kleine Beutetiere",
+        "Vor allem Insekten"
+      ],
+      "profi": [
+        "Bambus",
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-lion": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Blätter und andere Pflanzenteile",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Vor allem kleine Säugetiere",
+        "Vor allem Insekten",
+        "Kleine wirbellose Tiere",
+        "Ameisen und Termiten",
+        "Kleine Wassertiere",
+        "Meerestiere"
+      ]
+    },
+    "animal-cheetah": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Vorwiegend Pflanzen",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Fische, Vögel und auch tote Tiere",
+        "Vor allem kleine Säugetiere",
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Meerestiere",
+        "Insekten"
+      ]
+    },
+    "animal-bengal-tiger": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Vorwiegend Pflanzen",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere",
+        "Kleine wirbellose Tiere",
+        "Insekten",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-giraffe": {
+      "entdecker": [
+        "Fisch und Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Insekten",
+        "Kleine Tiere",
+        "Fleisch"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-giant-panda": {
+      "entdecker": [
+        "Kleine Beutetiere",
+        "Vor allem wirbellose Bodentiere",
+        "Fisch und Meerestiere",
+        "Kleine Tiere im Plankton",
+        "Fleisch"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Früchte, Blätter und auch Insekten",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-western-lowland-gorilla": {
+      "entdecker": [
+        "Fleisch",
+        "Fisch und Meerestiere",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Kleine Tiere im Plankton",
+        "Kleine Wassertiere"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Eukalyptusblätter",
+        "Fleisch"
+      ]
+    },
+    "animal-bornean-orangutan": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Vor allem kleine Fische",
+        "Meerestiere",
+        "Kleine Tiere im Plankton",
+        "Kleine Wassertiere"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Eukalyptusblätter",
+        "Nektar und Pollen"
+      ]
+    },
+    "animal-polar-bear": {
+      "entdecker": [
+        "Pflanzen und Rinde",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Vor allem kleine Säugetiere",
+        "Kleine Tiere im Plankton",
+        "Vor allem wirbellose Bodentiere",
+        "Insekten",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-emperor-penguin": {
+      "entdecker": [
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Gräser und andere Pflanzen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Kleine wirbellose Tiere",
+        "Fleisch",
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Vor allem Insekten"
+      ]
+    },
+    "animal-blue-whale": {
+      "entdecker": [
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Pflanzliches Material",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Vor allem kleine Fische",
+        "Vor allem Insekten",
+        "Vor allem wirbellose Bodentiere",
+        "Fleisch",
+        "Vor allem kleine Säugetiere",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-common-bottlenose-dolphin": {
+      "entdecker": [
+        "Pflanzliches Material",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Eukalyptusblätter",
+        "Bambus",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere",
+        "Vor allem Insekten",
+        "Fleisch",
+        "Kleine wirbellose Tiere"
+      ]
+    },
+    "animal-orca": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Pflanzliches Material",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere",
+        "Insekten",
+        "Ameisen und Termiten",
+        "Kleine wirbellose Tiere"
+      ]
+    },
+    "animal-common-octopus": {
+      "entdecker": [
+        "Pflanzen und Rinde",
+        "Nektar und Pollen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Ameisen und Termiten",
+        "Insekten",
+        "Vor allem kleine Säugetiere",
+        "Fleisch"
+      ]
+    },
+    "animal-green-sea-turtle": {
+      "entdecker": [
+        "Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Vor allem wirbellose Bodentiere",
+        "Insekten",
+        "Vor allem kleine Fische"
+      ],
+      "profi": [
+        "Nektar und Pollen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ]
+    },
+    "animal-red-kangaroo": {
+      "entdecker": [
+        "Vor allem kleine Säugetiere",
+        "Kleine Tiere",
+        "Fische, Vögel und auch tote Tiere",
+        "Meerestiere",
+        "Ameisen und Termiten"
+      ],
+      "profi": [
+        "Bambus",
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-koala": {
+      "entdecker": [
+        "Kleine Beutetiere",
+        "Fisch und Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Kleine wirbellose Tiere",
+        "Kleine Tiere im Plankton"
+      ],
+      "profi": [
+        "Bambus",
+        "Nektar und Pollen",
+        "Algen und Zooplankton",
+        "Kleine Beutetiere"
+      ]
+    },
+    "animal-jaguar": {
+      "entdecker": [
+        "Pflanzliches Material",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Vor allem kleine Säugetiere",
+        "Kleine Tiere im Plankton",
+        "Vor allem wirbellose Bodentiere",
+        "Vor allem Insekten",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-honey-bee": {
+      "entdecker": [
+        "Fische, Vögel und auch tote Tiere",
+        "Verschiedene wirbellose Meerestiere",
+        "Je nach Gruppe verschiedene Beutetiere",
+        "Insekten",
+        "Krill"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Algen und Zooplankton",
+        "Früchte, Blätter und auch Insekten"
+      ]
+    },
+    "animal-axolotl": {
+      "entdecker": [
+        "Gräser und andere Pflanzen",
+        "Nektar und Pollen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Vor allem Insekten",
+        "Kleine Tiere im Plankton",
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Fleisch"
+      ]
+    },
+    "animal-whale-shark": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Als erwachsenes Tier vor allem Pflanzen",
+        "Bambus",
+        "Nektar und Pollen",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Insekten",
+        "Kleine wirbellose Tiere",
+        "Fleisch",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-garden-cross-spider": {
+      "entdecker": [
+        "Pflanzliches Material",
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Kleine Tiere im Plankton",
+        "Meerestiere",
+        "Fische, Vögel und auch tote Tiere",
+        "Vor allem kleine Säugetiere",
+        "Krill"
+      ]
+    },
+    "animal-dromedary": {
+      "entdecker": [
+        "Meerestiere",
+        "Fleisch",
+        "Vor allem kleine Säugetiere",
+        "Je nach Gruppe verschiedene Beutetiere",
+        "Krill"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-white-tailed-eagle": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Gräser und andere Pflanzen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere",
+        "Ameisen und Termiten",
+        "Kleine wirbellose Tiere",
+        "Vor allem Insekten"
+      ]
+    },
+    "animal-platypus": {
+      "entdecker": [
+        "Vorwiegend Pflanzen",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Vor allem Insekten",
+        "Ameisen und Termiten",
+        "Fisch und Meerestiere",
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-short-beaked-echidna": {
+      "entdecker": [
+        "Als erwachsenes Tier vor allem Pflanzen",
+        "Eukalyptusblätter",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Kleine Wassertiere",
+        "Vor allem kleine Säugetiere",
+        "Fisch und Meerestiere",
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Fleisch"
+      ]
+    },
+    "animal-okapi": {
+      "entdecker": [
+        "Vor allem kleine Fische",
+        "Fleisch",
+        "Vor allem kleine Tiere",
+        "Meerestiere",
+        "Krill"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Nektar und Pollen",
+        "Bambus",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-meerkat": {
+      "entdecker": [
+        "Bambus",
+        "Pflanzen",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Fische, Vögel und auch tote Tiere",
+        "Meerestiere",
+        "Krill",
+        "Kleine Wassertiere"
+      ]
+    },
+    "animal-ring-tailed-lemur": {
+      "entdecker": [
+        "Kleine Tiere im Plankton",
+        "Kleine Wassertiere",
+        "Fische, Vögel und auch tote Tiere",
+        "Vor allem kleine Säugetiere",
+        "Raupen: Seidenpflanzen; Falter: Nektar"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Eukalyptusblätter",
+        "Kleine Wassertiere"
+      ]
+    },
+    "animal-north-american-beaver": {
+      "entdecker": [
+        "Kleine Beutetiere",
+        "Krill",
+        "Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Kleine Tiere im Plankton"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-walrus": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Bambus",
+        "Blätter und andere Pflanzenteile",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Krill",
+        "Vor allem Insekten",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-red-fox": {
+      "entdecker": [
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Krill",
+        "Kleine Wassertiere",
+        "Bambus",
+        "Fisch und Meerestiere"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Krill"
+      ]
+    },
+    "animal-raccoon": {
+      "entdecker": [
+        "Bambus",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Eukalyptusblätter",
+        "Kleine Tiere im Plankton",
+        "Vor allem kleine Säugetiere"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Krill",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-hedgehog": {
+      "entdecker": [
+        "Pflanzen",
+        "Nektar und Pollen",
+        "Eukalyptusblätter",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Krill",
+        "Fleisch",
+        "Krebse, Fische und andere kleine Meerestiere",
+        "Kleine Wassertiere",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-barn-owl": {
+      "entdecker": [
+        "Gräser und andere Pflanzen",
+        "Nektar und Pollen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Krill",
+        "Kleine Wassertiere",
+        "Fisch und Meerestiere",
+        "Kleine Tiere im Plankton"
+      ]
+    },
+    "animal-kingfisher": {
+      "entdecker": [
+        "Pflanzliches Material",
+        "Bambus",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Krill",
+        "Ameisen und Termiten",
+        "Kleine Tiere im Plankton",
+        "Fleisch",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-ostrich": {
+      "entdecker": [
+        "Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Krill",
+        "Vor allem kleine Fische",
+        "Fleisch"
+      ],
+      "profi": [
+        "Algen und Zooplankton",
+        "Ameisen und Termiten",
+        "Eukalyptusblätter",
+        "Bambus"
+      ]
+    },
+    "animal-atlantic-puffin": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Pflanzliches Material",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Ameisen und Termiten",
+        "Insekten",
+        "Vor allem wirbellose Bodentiere",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-common-chameleon": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Pflanzen und Rinde",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Kleine Wassertiere",
+        "Krebse, Fische und andere kleine Meerestiere",
+        "Krill",
+        "Fleisch"
+      ]
+    },
+    "animal-fire-salamander": {
+      "entdecker": [
+        "Pflanzen und Rinde",
+        "Eukalyptusblätter",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Bambus",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Kleine Wassertiere",
+        "Vor allem kleine Säugetiere",
+        "Krill",
+        "Fleisch",
+        "Vor allem kleine Fische"
+      ]
+    },
+    "animal-common-frog": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Bambus",
+        "Eukalyptusblätter"
+      ],
+      "profi": [
+        "Ameisen und Termiten",
+        "Fisch und Meerestiere",
+        "Vor allem kleine Säugetiere",
+        "Fleisch",
+        "Kleine Wassertiere",
+        "Kleine Tiere im Plankton"
+      ]
+    },
+    "animal-eastern-clown-anemonefish": {
+      "entdecker": [
+        "Vor allem kleine Säugetiere",
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Fleisch",
+        "Bambus",
+        "Eukalyptusblätter"
+      ],
+      "profi": [
+        "Früchte, Blätter und auch Insekten",
+        "Krill",
+        "Vor allem kleine Fische",
+        "Ameisen und Termiten"
+      ]
+    },
+    "animal-european-eel": {
+      "entdecker": [
+        "Vorwiegend Pflanzen",
+        "Eukalyptusblätter",
+        "Bambus",
+        "Nektar und Pollen",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Insekten",
+        "Kleine Tiere im Plankton",
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere",
+        "Fleisch"
+      ]
+    },
+    "animal-monarch-butterfly": {
+      "entdecker": [
+        "Ameisen und Termiten",
+        "Fleisch",
+        "Kleine Wassertiere",
+        "Krill",
+        "Kleine Beutetiere"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Früchte, Blätter und auch Insekten",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-garden-snail": {
+      "entdecker": [
+        "Kleine Wassertiere",
+        "Krill",
+        "Vor allem kleine Säugetiere",
+        "Ameisen und Termiten",
+        "Kleine Tiere im Plankton"
+      ],
+      "profi": [
+        "Eukalyptusblätter",
+        "Bambus",
+        "Nektar und Pollen",
+        "Algen und Zooplankton"
+      ]
+    },
+    "animal-european-lobster": {
+      "entdecker": [
+        "Raupen: Seidenpflanzen; Falter: Nektar",
+        "Als erwachsenes Tier vor allem Pflanzen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Algen und Zooplankton"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Ameisen und Termiten",
+        "Vor allem Insekten",
+        "Fleisch",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-common-cuttlefish": {
+      "entdecker": [
+        "Eukalyptusblätter",
+        "Gräser und andere Pflanzen",
+        "Nektar und Pollen",
+        "Bambus",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Kleine Tiere im Plankton",
+        "Vor allem Insekten",
+        "Vor allem wirbellose Bodentiere",
+        "Ameisen und Termiten",
+        "Vor allem kleine Säugetiere"
+      ]
+    },
+    "animal-short-snouted-seahorse": {
+      "entdecker": [
+        "Nektar und Pollen",
+        "Vorwiegend Pflanzen",
+        "Bambus",
+        "Eukalyptusblätter",
+        "Früchte, Blätter und auch Insekten"
+      ],
+      "profi": [
+        "Krill",
+        "Vor allem kleine Fische",
+        "Vor allem kleine Säugetiere",
+        "Vor allem wirbellose Bodentiere",
+        "Vor allem Insekten",
+        "Ameisen und Termiten"
+      ]
+    }
+  }
+}

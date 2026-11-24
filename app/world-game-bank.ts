@@ -3,16 +3,23 @@ import {animalDetectiveClue,personRecognitionClue} from './world-game-support.mj
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
+import TIER_FALLEN from './world-game-tier-fallen.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
 // Recognition questions can keep older real topic names as distractors. Factual
 // choices in the other games remain tied to the current question's answer set.
+// Auf Profi haben diese drei Spiele eine Antwort mehr (Teil B, Schritt 8.2): die richtige und drei Namen aus dem Vorrat.
+// Lebensraum und Nahrung ziehen ihre Fallen je Runde aus einer geprüften Liste je Tier (Schritt 8.3): gültig sind die richtige
+// Antwort, die alten festen Sätze (alte Runden) und die Fallen aus der Liste, drei oder auf Profi vier Antworten.
 export function validWorldGameOrder(value:unknown,current:GameItem,pool:GameItem[],gameId?:string):value is string[]{
- if(!Array.isArray(value)||value.length!==current.answers.length||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
+ const recognition=!!gameId&&['animal-detective','people','technology'].includes(gameId);
+ const tierListe=gameId==='habitats'?TIER_FALLEN.lebensraum:gameId==='food'?TIER_FALLEN.nahrung:null,fallen=(tierListe as Record<string,{entdecker:string[];profi:string[]}>|null)?.[current.id];
+ if(!Array.isArray(value)||!(value.length===current.answers.length||(recognition||!!fallen)&&value.length===current.answers.length+1)||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
  if(value.every(answer=>current.answers.includes(answer)))return true;
- if(!gameId||!['animal-detective','people','technology'].includes(gameId)||!value.includes(current.answers[current.correct]))return false;
+ if(fallen)return value.includes(current.answers[current.correct])&&value.every(answer=>current.answers.includes(answer)||fallen.entdecker.includes(answer)||fallen.profi.includes(answer));
+ if(!recognition||!value.includes(current.answers[current.correct]))return false;
  const names=new Set(pool.map(question=>question.answers[question.correct]));
  return value.every(answer=>names.has(answer));
 }

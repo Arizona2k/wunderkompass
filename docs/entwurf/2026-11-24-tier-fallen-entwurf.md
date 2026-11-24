@@ -1,0 +1,297 @@
+# Tier-Fallen: Entwurf zur Prüfung
+
+Erzeugt am 24.11.2026 für Teil B, Schritt 8.3 ([Plan](2026-11-24-teil-b-plan.md), Entscheidungsliste Punkt 6). Je Tier: der richtige Text und die Texte anderer Tiere, die als falsche Antwort erscheinen dürfen. **Zu prüfen:** Passt eine „Falle“ in Wirklichkeit doch (ganz oder so weit, dass ein aufmerksames Kind sie mit gutem Grund wählen könnte)? Dann muss sie raus. Entdecker = deutlich anders, Profi = ähnlich. „aufgefüllt“: Für Profi gab es weniger als vier ähnliche, darum stehen auch deutlich andere dabei.
+
+## Tier & Lebensraum
+
+- **Afrikanischer Savannenelefant** (`animal-african-savanna-elephant`, Gruppe land), richtig: „Savanne“
+  - Entdecker (5): „Arktische Küsten und Meere“, „Antarktis“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Flüsse und Seen“
+  - Profi (5): „Hecken, Gärten und Waldränder“, „Regenwald“, „Blütenreiche Landschaften“, „Arktis“, „Gebirge“
+- **Löwe** (`animal-lion`, Gruppe land), richtig: „Savanne“
+  - Entdecker (5): „Küsten und offenes Meer“, „Flüsse & Seen“, „Felsiger Meeresboden“, „Antarktis“, „Korallenriffe mit Seeanemonen“
+  - Profi (5): „Regenwald“, „Hecken, Gärten und Waldränder“, „Blütenreiche Landschaften“, „Gebirge“, „Arktis“
+- **Gepard** (`animal-cheetah`, Gruppe land), richtig: „Savanne“
+  - Entdecker (5): „Flüsse und Seen“, „Felsiger Meeresboden“, „Ozean“, „Küste“, „Antarktis“
+  - Profi (6): „Wiesen und Gärten“, „Blütenreiche Landschaften“, „Gebirge“, „Wald“, „Regenwald“, „Arktis“
+- **Bengaltiger** (`animal-bengal-tiger`, Gruppe land), richtig: „Wald“
+  - Entdecker (4): „Antarktis“, „Korallenriffe mit Seeanemonen“, „Flüsse und Seen“, „Felsiger Meeresboden“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Trockene offene Landschaften“, „Blütenreiche Landschaften“, „Savanne“, „Wüste“, „Arktis“
+- **Giraffe** (`animal-giraffe`, Gruppe land), richtig: „Savanne“
+  - Entdecker (5): „Flüsse und Seen“, „Küstennaher Meeresboden“, „Ozean“, „Korallenriffe mit Seeanemonen“, „Antarktis“
+  - Profi (6): „Wüste“, „Regenwald“, „Hecken, Gärten und Waldränder“, „Blütenreiche Landschaften“, „Gebirge“, „Arktis“
+- **Großer Panda** (`animal-giant-panda`, Gruppe land), richtig: „Gebirge“
+  - Entdecker (5): „Flüsse und Feuchtgebiete“, „Küsten und offenes Meer“, „Antarktis“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Regenwald“, „Hecken, Gärten und Waldränder“, „Savanne“, „Trockene offene Landschaften“, „Blütenreiche Landschaften“, „Wüste“
+- **Westlicher Flachlandgorilla** (`animal-western-lowland-gorilla`, Gruppe land), richtig: „Regenwald“
+  - Entdecker (5): „Ozean“, „Küste“, „Antarktis“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Wüste“, „Trockene offene Landschaften“, „Blütenreiche Landschaften“, „Offene Landschaften“, „Savanne“
+- **Borneo-Orang-Utan** (`animal-bornean-orangutan`, Gruppe land), richtig: „Regenwald“
+  - Entdecker (5): „Küsten und offenes Meer“, „Korallenriffe mit Seeanemonen“, „Antarktis“, „Felsiger Meeresboden“, „Flüsse und Seen“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Savanne“, „Arktis“, „Wüste“, „Trockene offene Landschaften“, „Offene Landschaften“
+- **Eisbär** (`animal-polar-bear`, Gruppe land), richtig: „Arktis“
+  - Entdecker (4): „Feuchte Wälder und Larvengewässer“, „Antarktis“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Büsche und Bäume“, „Wald“, „Gebirge“, „Trockene offene Landschaften“, „Wüste“
+- **Kaiserpinguin** (`animal-emperor-penguin`, Gruppe water), richtig: „Antarktis“
+  - Entdecker (5): „Trockene offene Landschaften“, „Gewässer, Wälder und Gärten“, „Gebirge“, „Regenwald“, „Arktis“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Trockene offene Landschaften“
+- **Blauwal** (`animal-blue-whale`, Gruppe water), richtig: „Ozean“
+  - Entdecker (5): „Wald“, „Regenwald“, „Flüsse und Feuchtgebiete“, „Offene Landschaften“, „Wiesen und Gärten“
+  - Profi (4): „Felsiger Meeresboden“, „Küsten mit Haltestrukturen“, „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“
+- **Großer Tümmler** (`animal-common-bottlenose-dolphin`, Gruppe water), richtig: „Ozean“
+  - Entdecker (5): „Wiesen & Gärten“, „Flüsse und Feuchtgebiete“, „Blütenreiche Landschaften“, „Regenwald“, „Offene Landschaften“
+  - Profi (4): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Antarktis“
+- **Orca** (`animal-orca`, Gruppe water), richtig: „Ozean“
+  - Entdecker (5): „Regenwald“, „Wiesen und Gärten“, „Büsche und Bäume“, „Flussufer und Stillgewässer“, „Grasland“
+  - Profi (4, aufgefüllt): „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“, „Flüsse und Seen“, „Regenwald“
+- **Gewöhnlicher Krake** (`animal-common-octopus`, Gruppe water), richtig: „Küste“
+  - Entdecker (5): „Grasland“, „Flussufer und Stillgewässer“, „Büsche und Bäume“, „Wiesen & Gärten“, „Wälder, Offenland und Siedlungen“
+  - Profi (4, aufgefüllt): „Antarktis“, „Flüsse und Seen“, „Grasland“, „Büsche und Bäume“
+- **Grüne Meeresschildkröte** (`animal-green-sea-turtle`, Gruppe water), richtig: „Küste“
+  - Entdecker (5): „Grasland“, „Gebirge“, „Büsche und Bäume“, „Savannen und trockene offene Landschaften“, „Wälder, Offenland und Siedlungen“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Flüsse & Seen“, „Antarktis“, „Grasland“
+- **Rotes Riesenkänguru** (`animal-red-kangaroo`, Gruppe land), richtig: „Grasland“
+  - Entdecker (4): „Flüsse, Küsten und Atlantik“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“, „Antarktis“
+  - Profi (6): „Blütenreiche Landschaften“, „Wiesen und Gärten“, „Büsche und Bäume“, „Gebirge“, „Regenwald“, „Wälder und Siedlungsräume“
+- **Koala** (`animal-koala`, Gruppe land), richtig: „Wald“
+  - Entdecker (5): „Flüsse und Seen“, „Felsiger Meeresboden“, „Antarktis“, „Ozean“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Regenwald“, „Arktis“, „Wüste“, „Trockene offene Landschaften“, „Offene Landschaften“
+- **Jaguar** (`animal-jaguar`, Gruppe land), richtig: „Regenwald“
+  - Entdecker (4): „Arktische Küsten und Meere“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Antarktis“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Blütenreiche Landschaften“, „Wüste“, „Trockene offene Landschaften“, „Arktis“, „Gebirge“
+- **Westliche Honigbiene** (`animal-honey-bee`, Gruppe land), richtig: „Wiesen & Gärten“
+  - Entdecker (5): „Küsten und offenes Meer“, „Antarktis“, „Korallenriffe mit Seeanemonen“, „Flussufer und Stillgewässer“, „Felsiger Meeresboden“
+  - Profi (6): „Regenwald“, „Trockene offene Landschaften“, „Savanne“, „Grasland“, „Wüste“, „Gebirge“
+- **Axolotl** (`animal-axolotl`, Gruppe water), richtig: „Flüsse & Seen“
+  - Entdecker (5): „Trockene offene Landschaften“, „Wälder und Siedlungsräume“, „Regenwald“, „Gebirge“, „Wiesen & Gärten“
+  - Profi (5): „Ozean“, „Küste“, „Korallenriffe mit Seeanemonen“, „Antarktis“, „Felsiger Meeresboden“
+- **Walhai** (`animal-whale-shark`, Gruppe water), richtig: „Ozean“
+  - Entdecker (5): „Savanne“, „Wälder und offene Landschaften“, „Büsche und Bäume“, „Flussufer und Stillgewässer“, „Gebirge“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Antarktis“, „Flüsse & Seen“, „Savanne“
+- **Gartenkreuzspinne** (`animal-garden-cross-spider`, Gruppe land), richtig: „Wiesen und Gärten“
+  - Entdecker (5): „Arktische Küsten und Meere“, „Antarktis“, „Flüsse & Seen“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“
+  - Profi (6): „Regenwald“, „Blütenreiche Landschaften“, „Savannen und trockene offene Landschaften“, „Wüste“, „Grasland“, „Gebirge“
+- **Dromedar** (`animal-dromedary`, Gruppe land), richtig: „Wüste“
+  - Entdecker (5): „Flussufer und Stillgewässer“, „Arktische Küsten und Meere“, „Antarktis“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“
+  - Profi (6): „Wiesen und Gärten“, „Savanne“, „Blütenreiche Landschaften“, „Grasland“, „Arktis“, „Büsche und Bäume“
+- **Seeadler** (`animal-white-tailed-eagle`, Gruppe water-edge), richtig: „Küsten und Seen“
+  - Entdecker (5): „Gebirge“, „Wüste“, „Gärten, Hecken und andere Verstecke“, „Savannen und trockene offene Landschaften“, „Arktis“
+  - Profi (4, aufgefüllt): „Hecken, Gärten und Waldränder“, „Regenwald“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“
+- **Schnabeltier** (`animal-platypus`, Gruppe water), richtig: „Flüsse und Seen“
+  - Entdecker (5): „Gärten, Hecken und andere Verstecke“, „Regenwald“, „Arktis“, „Offene Wälder und trockene Landschaften“, „Wüste“
+  - Profi (4): „Ozean“, „Küstennaher Meeresboden“, „Antarktis“, „Korallenriffe mit Seeanemonen“
+- **Kurzschnabeligel** (`animal-short-beaked-echidna`, Gruppe land), richtig: „Wälder und offene Landschaften“
+  - Entdecker (5): „Felsiger Meeresboden“, „Küste“, „Antarktis“, „Ozean“, „Korallenriffe mit Seeanemonen“
+  - Profi (4): „Regenwald“, „Hecken, Gärten und Waldränder“, „Blütenreiche Landschaften“, „Arktis“
+- **Okapi** (`animal-okapi`, Gruppe land), richtig: „Regenwald“
+  - Entdecker (5): „Küsten und offenes Meer“, „Felsiger Meeresboden“, „Flüsse und Feuchtgebiete“, „Antarktis“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Hecken, Gärten und Waldränder“, „Wüste“, „Grasland“, „Trockene offene Landschaften“, „Offene Landschaften“, „Arktis“
+- **Erdmännchen** (`animal-meerkat`, Gruppe land), richtig: „Trockene offene Landschaften“
+  - Entdecker (5): „Felsiger Meeresboden“, „Arktische Küsten und Meere“, „Flussufer und Stillgewässer“, „Korallenriffe mit Seeanemonen“, „Antarktis“
+  - Profi (6): „Blütenreiche Landschaften“, „Wiesen & Gärten“, „Gebirge“, „Büsche und Bäume“, „Wald“, „Arktis“
+- **Katta** (`animal-ring-tailed-lemur`, Gruppe land), richtig: „Offene Wälder und trockene Landschaften“
+  - Entdecker (5): „Ozean“, „Flussufer und Stillgewässer“, „Küsten mit Haltestrukturen“, „Korallenriffe mit Seeanemonen“, „Antarktis“
+  - Profi (6): „Wüste“, „Regenwald“, „Hecken, Gärten und Waldränder“, „Grasland“, „Savanne“, „Blütenreiche Landschaften“
+- **Nordamerikanischer Biber** (`animal-north-american-beaver`, Gruppe water-edge), richtig: „Flüsse und Feuchtgebiete“
+  - Entdecker (5): „Antarktis“, „Savanne“, „Blütenreiche Landschaften“, „Arktische Küsten und Meere“, „Felsiger Meeresboden“
+  - Profi (4, aufgefüllt): „Hecken, Gärten und Waldränder“, „Regenwald“, „Antarktis“, „Savanne“
+- **Walross** (`animal-walrus`, Gruppe water), richtig: „Arktische Küsten und Meere“
+  - Entdecker (5): „Flussufer und Stillgewässer“, „Savannen und trockene offene Landschaften“, „Grasland“, „Hecken, Gärten und Waldränder“, „Wüste“
+  - Profi (4, aufgefüllt): „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Antarktis“, „Savannen und trockene offene Landschaften“
+- **Rotfuchs** (`animal-red-fox`, Gruppe land), richtig: „Wälder, Offenland und Siedlungen“
+  - Entdecker (4): „Flüsse & Seen“, „Antarktis“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“
+  - Profi (4, aufgefüllt): „Blütenreiche Landschaften“, „Regenwald“, „Savanne“, „Feuchte Wälder und Larvengewässer“
+- **Waschbär** (`animal-raccoon`, Gruppe land), richtig: „Wälder und Siedlungsräume“
+  - Entdecker (3): „Antarktis“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Regenwald“, „Blütenreiche Landschaften“, „Savannen und trockene offene Landschaften“, „Arktis“, „Gebirge“, „Wüste“
+- **Braunbrustigel** (`animal-hedgehog`, Gruppe land), richtig: „Hecken, Gärten und Waldränder“
+  - Entdecker (5): „Antarktis“, „Arktische Küsten und Meere“, „Flüsse und Feuchtgebiete“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Blütenreiche Landschaften“, „Regenwald“, „Savanne“, „Trockene offene Landschaften“, „Grasland“, „Wüste“
+- **Schleiereule** (`animal-barn-owl`, Gruppe land), richtig: „Offene Landschaften“
+  - Entdecker (5): „Küstennaher Meeresboden“, „Korallenriffe mit Seeanemonen“, „Ozean“, „Antarktis“, „Flussufer und Stillgewässer“
+  - Profi (6): „Wüste“, „Regenwald“, „Blütenreiche Landschaften“, „Gärten, Hecken und andere Verstecke“, „Arktis“, „Gebirge“
+- **Eisvogel** (`animal-kingfisher`, Gruppe water-edge), richtig: „Flussufer und Stillgewässer“
+  - Entdecker (5): „Offene Wälder und trockene Landschaften“, „Antarktis“, „Grasland“, „Savanne“, „Hecken, Gärten und Waldränder“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Offene Wälder und trockene Landschaften“, „Antarktis“
+- **Afrikanischer Strauß** (`animal-ostrich`, Gruppe land), richtig: „Savannen und trockene offene Landschaften“
+  - Entdecker (4): „Flüsse, Küsten und Atlantik“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Antarktis“
+  - Profi (6): „Wiesen & Gärten“, „Blütenreiche Landschaften“, „Wälder und Siedlungsräume“, „Büsche und Bäume“, „Gebirge“, „Arktis“
+- **Papageitaucher** (`animal-atlantic-puffin`, Gruppe water), richtig: „Küsten und offenes Meer“
+  - Entdecker (5): „Gewässer, Wälder und Gärten“, „Savannen und trockene offene Landschaften“, „Gebirge“, „Offene Landschaften“, „Wüste“
+  - Profi (4): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Antarktis“
+- **Europäisches Chamäleon** (`animal-common-chameleon`, Gruppe land), richtig: „Büsche und Bäume“
+  - Entdecker (4): „Flussufer und Stillgewässer“, „Antarktis“, „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“
+  - Profi (6): „Wüste“, „Regenwald“, „Savanne“, „Blütenreiche Landschaften“, „Grasland“, „Arktis“
+- **Feuersalamander** (`animal-fire-salamander`, Gruppe water-edge), richtig: „Feuchte Wälder und Larvengewässer“
+  - Entdecker (5): „Küsten und offenes Meer“, „Arktis“, „Blütenreiche Landschaften“, „Wiesen und Gärten“, „Antarktis“
+  - Profi (4, aufgefüllt): „Hecken, Gärten und Waldränder“, „Regenwald“, „Küsten und offenes Meer“, „Arktis“
+- **Grasfrosch** (`animal-common-frog`, Gruppe water-edge), richtig: „Gewässer, Wälder und Gärten“
+  - Entdecker (5): „Küsten mit Haltestrukturen“, „Korallenriffe mit Seeanemonen“, „Felsiger Meeresboden“, „Antarktis“, „Ozean“
+  - Profi (4, aufgefüllt): „Blütenreiche Landschaften“, „Regenwald“, „Savanne“, „Wüste“
+- **Echter Clownfisch** (`animal-eastern-clown-anemonefish`, Gruppe water), richtig: „Korallenriffe mit Seeanemonen“
+  - Entdecker (5): „Gärten, Hecken und andere Verstecke“, „Wüste“, „Trockene offene Landschaften“, „Blütenreiche Landschaften“, „Flussufer und Stillgewässer“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Flüsse und Seen“, „Antarktis“, „Gärten, Hecken und andere Verstecke“
+- **Europäischer Aal** (`animal-european-eel`, Gruppe water), richtig: „Flüsse, Küsten und Atlantik“
+  - Entdecker (5): „Büsche und Bäume“, „Blütenreiche Landschaften“, „Regenwald“, „Wälder und Siedlungsräume“, „Savanne“
+  - Profi (4, aufgefüllt): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Antarktis“, „Büsche und Bäume“
+- **Monarchfalter** (`animal-monarch-butterfly`, Gruppe land), richtig: „Blütenreiche Landschaften“
+  - Entdecker (5): „Flüsse und Feuchtgebiete“, „Felsiger Meeresboden“, „Küste“, „Ozean“, „Antarktis“
+  - Profi (4): „Regenwald“, „Savannen und trockene offene Landschaften“, „Wüste“, „Arktis“
+- **Gefleckte Weinbergschnecke** (`animal-garden-snail`, Gruppe land), richtig: „Gärten, Hecken und andere Verstecke“
+  - Entdecker (5): „Felsiger Meeresboden“, „Korallenriffe mit Seeanemonen“, „Küsten und offenes Meer“, „Flüsse & Seen“, „Antarktis“
+  - Profi (6): „Blütenreiche Landschaften“, „Regenwald“, „Trockene offene Landschaften“, „Grasland“, „Savanne“, „Wüste“
+- **Europäischer Hummer** (`animal-european-lobster`, Gruppe water), richtig: „Felsiger Meeresboden“
+  - Entdecker (5): „Offene Landschaften“, „Arktis“, „Trockene offene Landschaften“, „Blütenreiche Landschaften“, „Wiesen & Gärten“
+  - Profi (4, aufgefüllt): „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Antarktis“, „Offene Landschaften“
+- **Gewöhnliche Sepia** (`animal-common-cuttlefish`, Gruppe water), richtig: „Küstennaher Meeresboden“
+  - Entdecker (5): „Hecken, Gärten und Waldränder“, „Savanne“, „Blütenreiche Landschaften“, „Arktis“, „Wald“
+  - Profi (4, aufgefüllt): „Korallenriffe mit Seeanemonen“, „Antarktis“, „Flüsse & Seen“, „Hecken, Gärten und Waldränder“
+- **Kurzschnäuziges Seepferdchen** (`animal-short-snouted-seahorse`, Gruppe water), richtig: „Küsten mit Haltestrukturen“
+  - Entdecker (5): „Gebirge“, „Trockene offene Landschaften“, „Büsche und Bäume“, „Wälder, Offenland und Siedlungen“, „Wüste“
+  - Profi (4, aufgefüllt): „Korallenriffe mit Seeanemonen“, „Flüsse & Seen“, „Antarktis“, „Gebirge“
+
+## Wer frisst was?
+
+- **Afrikanischer Savannenelefant** (`animal-african-savanna-elephant`, Gruppe plant), richtig: „Pflanzen“
+  - Entdecker (5): „Vor allem kleine Fische“, „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Kleine Beutetiere“, „Vor allem Insekten“
+  - Profi (4, aufgefüllt): „Bambus“, „Eukalyptusblätter“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Löwe** (`animal-lion`, Gruppe animal), richtig: „Fleisch“
+  - Entdecker (5): „Eukalyptusblätter“, „Nektar und Pollen“, „Blätter und andere Pflanzenteile“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Vor allem kleine Säugetiere“, „Vor allem Insekten“, „Kleine wirbellose Tiere“, „Ameisen und Termiten“, „Kleine Wassertiere“, „Meerestiere“
+- **Gepard** (`animal-cheetah`, Gruppe animal), richtig: „Fleisch“
+  - Entdecker (5): „Eukalyptusblätter“, „Vorwiegend Pflanzen“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Fische, Vögel und auch tote Tiere“, „Vor allem kleine Säugetiere“, „Krill“, „Kleine Tiere im Plankton“, „Meerestiere“, „Insekten“
+- **Bengaltiger** (`animal-bengal-tiger`, Gruppe animal), richtig: „Fleisch“
+  - Entdecker (5): „Eukalyptusblätter“, „Bambus“, „Vorwiegend Pflanzen“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“, „Kleine wirbellose Tiere“, „Insekten“, „Ameisen und Termiten“
+- **Giraffe** (`animal-giraffe`, Gruppe plant), richtig: „Pflanzen“
+  - Entdecker (5): „Fisch und Meerestiere“, „Vor allem kleine Säugetiere“, „Insekten“, „Kleine Tiere“, „Fleisch“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Großer Panda** (`animal-giant-panda`, Gruppe plant), richtig: „Bambus“
+  - Entdecker (5): „Kleine Beutetiere“, „Vor allem wirbellose Bodentiere“, „Fisch und Meerestiere“, „Kleine Tiere im Plankton“, „Fleisch“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Nektar und Pollen“, „Früchte, Blätter und auch Insekten“, „Algen und Zooplankton“
+- **Westlicher Flachlandgorilla** (`animal-western-lowland-gorilla`, Gruppe mixed), richtig: „Vorwiegend Pflanzen“
+  - Entdecker (5): „Fleisch“, „Fisch und Meerestiere“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Kleine Tiere im Plankton“, „Kleine Wassertiere“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Eukalyptusblätter“, „Fleisch“
+- **Borneo-Orang-Utan** (`animal-bornean-orangutan`, Gruppe mixed), richtig: „Vorwiegend Pflanzen“
+  - Entdecker (5): „Nektar und Pollen“, „Vor allem kleine Fische“, „Meerestiere“, „Kleine Tiere im Plankton“, „Kleine Wassertiere“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Eukalyptusblätter“, „Nektar und Pollen“
+- **Eisbär** (`animal-polar-bear`, Gruppe animal), richtig: „Fleisch“
+  - Entdecker (5): „Pflanzen und Rinde“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Vor allem kleine Säugetiere“, „Kleine Tiere im Plankton“, „Vor allem wirbellose Bodentiere“, „Insekten“, „Ameisen und Termiten“
+- **Kaiserpinguin** (`animal-emperor-penguin`, Gruppe animal), richtig: „Fisch und Meerestiere“
+  - Entdecker (5): „Raupen: Seidenpflanzen; Falter: Nektar“, „Gräser und andere Pflanzen“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (5): „Kleine wirbellose Tiere“, „Fleisch“, „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Vor allem Insekten“
+- **Blauwal** (`animal-blue-whale`, Gruppe animal), richtig: „Krill“
+  - Entdecker (5): „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Pflanzliches Material“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Vor allem kleine Fische“, „Vor allem Insekten“, „Vor allem wirbellose Bodentiere“, „Fleisch“, „Vor allem kleine Säugetiere“, „Ameisen und Termiten“
+- **Großer Tümmler** (`animal-common-bottlenose-dolphin`, Gruppe animal), richtig: „Fisch und Meerestiere“
+  - Entdecker (5): „Pflanzliches Material“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Eukalyptusblätter“, „Bambus“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“, „Vor allem Insekten“, „Fleisch“, „Kleine wirbellose Tiere“
+- **Orca** (`animal-orca`, Gruppe animal), richtig: „Je nach Gruppe verschiedene Beutetiere“
+  - Entdecker (5): „Eukalyptusblätter“, „Pflanzliches Material“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“, „Insekten“, „Ameisen und Termiten“, „Kleine wirbellose Tiere“
+- **Gewöhnlicher Krake** (`animal-common-octopus`, Gruppe animal), richtig: „Meerestiere“
+  - Entdecker (5): „Pflanzen und Rinde“, „Nektar und Pollen“, „Bambus“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Ameisen und Termiten“, „Insekten“, „Vor allem kleine Säugetiere“, „Fleisch“
+- **Grüne Meeresschildkröte** (`animal-green-sea-turtle`, Gruppe plant), richtig: „Als erwachsenes Tier vor allem Pflanzen“
+  - Entdecker (5): „Meerestiere“, „Vor allem kleine Säugetiere“, „Vor allem wirbellose Bodentiere“, „Insekten“, „Vor allem kleine Fische“
+  - Profi (4, aufgefüllt): „Nektar und Pollen“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+- **Rotes Riesenkänguru** (`animal-red-kangaroo`, Gruppe plant), richtig: „Pflanzen“
+  - Entdecker (5): „Vor allem kleine Säugetiere“, „Kleine Tiere“, „Fische, Vögel und auch tote Tiere“, „Meerestiere“, „Ameisen und Termiten“
+  - Profi (4, aufgefüllt): „Bambus“, „Eukalyptusblätter“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Koala** (`animal-koala`, Gruppe plant), richtig: „Eukalyptusblätter“
+  - Entdecker (5): „Kleine Beutetiere“, „Fisch und Meerestiere“, „Vor allem kleine Säugetiere“, „Kleine wirbellose Tiere“, „Kleine Tiere im Plankton“
+  - Profi (4, aufgefüllt): „Bambus“, „Nektar und Pollen“, „Algen und Zooplankton“, „Kleine Beutetiere“
+- **Jaguar** (`animal-jaguar`, Gruppe animal), richtig: „Fleisch“
+  - Entdecker (5): „Pflanzliches Material“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Vor allem kleine Säugetiere“, „Kleine Tiere im Plankton“, „Vor allem wirbellose Bodentiere“, „Vor allem Insekten“, „Ameisen und Termiten“
+- **Westliche Honigbiene** (`animal-honey-bee`, Gruppe plant), richtig: „Nektar und Pollen“
+  - Entdecker (5): „Fische, Vögel und auch tote Tiere“, „Verschiedene wirbellose Meerestiere“, „Je nach Gruppe verschiedene Beutetiere“, „Insekten“, „Krill“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Algen und Zooplankton“, „Früchte, Blätter und auch Insekten“
+- **Axolotl** (`animal-axolotl`, Gruppe animal), richtig: „Kleine Wassertiere“
+  - Entdecker (5): „Gräser und andere Pflanzen“, „Nektar und Pollen“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Vor allem Insekten“, „Kleine Tiere im Plankton“, „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Fleisch“
+- **Walhai** (`animal-whale-shark`, Gruppe animal), richtig: „Kleine Tiere im Plankton“
+  - Entdecker (5): „Eukalyptusblätter“, „Als erwachsenes Tier vor allem Pflanzen“, „Bambus“, „Nektar und Pollen“, „Früchte, Blätter und auch Insekten“
+  - Profi (5): „Ameisen und Termiten“, „Insekten“, „Kleine wirbellose Tiere“, „Fleisch“, „Vor allem kleine Säugetiere“
+- **Gartenkreuzspinne** (`animal-garden-cross-spider`, Gruppe animal), richtig: „Insekten“
+  - Entdecker (5): „Pflanzliches Material“, „Eukalyptusblätter“, „Nektar und Pollen“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Ameisen und Termiten“, „Kleine Tiere im Plankton“, „Meerestiere“, „Fische, Vögel und auch tote Tiere“, „Vor allem kleine Säugetiere“, „Krill“
+- **Dromedar** (`animal-dromedary`, Gruppe plant), richtig: „Gräser und andere Pflanzen“
+  - Entdecker (5): „Meerestiere“, „Fleisch“, „Vor allem kleine Säugetiere“, „Je nach Gruppe verschiedene Beutetiere“, „Krill“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Seeadler** (`animal-white-tailed-eagle`, Gruppe animal), richtig: „Fische, Vögel und auch tote Tiere“
+  - Entdecker (5): „Nektar und Pollen“, „Gräser und andere Pflanzen“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“, „Ameisen und Termiten“, „Kleine wirbellose Tiere“, „Vor allem Insekten“
+- **Schnabeltier** (`animal-platypus`, Gruppe animal), richtig: „Kleine Wassertiere“
+  - Entdecker (5): „Vorwiegend Pflanzen“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (6): „Vor allem Insekten“, „Ameisen und Termiten“, „Fisch und Meerestiere“, „Krill“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“
+- **Kurzschnabeligel** (`animal-short-beaked-echidna`, Gruppe animal), richtig: „Ameisen und Termiten“
+  - Entdecker (5): „Als erwachsenes Tier vor allem Pflanzen“, „Eukalyptusblätter“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Kleine Wassertiere“, „Vor allem kleine Säugetiere“, „Fisch und Meerestiere“, „Krill“, „Kleine Tiere im Plankton“, „Fleisch“
+- **Okapi** (`animal-okapi`, Gruppe plant), richtig: „Blätter und andere Pflanzenteile“
+  - Entdecker (5): „Vor allem kleine Fische“, „Fleisch“, „Vor allem kleine Tiere“, „Meerestiere“, „Krill“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Nektar und Pollen“, „Bambus“, „Algen und Zooplankton“
+- **Erdmännchen** (`animal-meerkat`, Gruppe animal), richtig: „Vor allem kleine Tiere“
+  - Entdecker (5): „Bambus“, „Pflanzen“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (6): „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Fische, Vögel und auch tote Tiere“, „Meerestiere“, „Krill“, „Kleine Wassertiere“
+- **Katta** (`animal-ring-tailed-lemur`, Gruppe mixed), richtig: „Früchte, Blätter und auch Insekten“
+  - Entdecker (5): „Kleine Tiere im Plankton“, „Kleine Wassertiere“, „Fische, Vögel und auch tote Tiere“, „Vor allem kleine Säugetiere“, „Raupen: Seidenpflanzen; Falter: Nektar“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Eukalyptusblätter“, „Kleine Wassertiere“
+- **Nordamerikanischer Biber** (`animal-north-american-beaver`, Gruppe plant), richtig: „Pflanzen und Rinde“
+  - Entdecker (5): „Kleine Beutetiere“, „Krill“, „Meerestiere“, „Vor allem kleine Säugetiere“, „Kleine Tiere im Plankton“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Walross** (`animal-walrus`, Gruppe animal), richtig: „Vor allem wirbellose Bodentiere“
+  - Entdecker (5): „Nektar und Pollen“, „Bambus“, „Blätter und andere Pflanzenteile“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (5): „Krill“, „Vor allem Insekten“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“, „Ameisen und Termiten“
+- **Rotfuchs** (`animal-red-fox`, Gruppe mixed), richtig: „Verschiedene tierische und pflanzliche Nahrung“
+  - Entdecker (5): „Raupen: Seidenpflanzen; Falter: Nektar“, „Krill“, „Kleine Wassertiere“, „Bambus“, „Fisch und Meerestiere“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Krill“
+- **Waschbär** (`animal-raccoon`, Gruppe mixed), richtig: „Verschiedene tierische und pflanzliche Nahrung“
+  - Entdecker (5): „Bambus“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Eukalyptusblätter“, „Kleine Tiere im Plankton“, „Vor allem kleine Säugetiere“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Krill“, „Vor allem kleine Säugetiere“
+- **Braunbrustigel** (`animal-hedgehog`, Gruppe animal), richtig: „Kleine wirbellose Tiere“
+  - Entdecker (5): „Pflanzen“, „Nektar und Pollen“, „Eukalyptusblätter“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Ameisen und Termiten“, „Krill“, „Fleisch“, „Krebse, Fische und andere kleine Meerestiere“, „Kleine Wassertiere“, „Vor allem kleine Säugetiere“
+- **Schleiereule** (`animal-barn-owl`, Gruppe animal), richtig: „Vor allem kleine Säugetiere“
+  - Entdecker (5): „Gräser und andere Pflanzen“, „Nektar und Pollen“, „Bambus“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (5): „Ameisen und Termiten“, „Krill“, „Kleine Wassertiere“, „Fisch und Meerestiere“, „Kleine Tiere im Plankton“
+- **Eisvogel** (`animal-kingfisher`, Gruppe animal), richtig: „Vor allem kleine Fische“
+  - Entdecker (5): „Pflanzliches Material“, „Bambus“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (5): „Krill“, „Ameisen und Termiten“, „Kleine Tiere im Plankton“, „Fleisch“, „Vor allem kleine Säugetiere“
+- **Afrikanischer Strauß** (`animal-ostrich`, Gruppe mixed), richtig: „Vor allem Pflanzen, auch kleine Tiere“
+  - Entdecker (5): „Meerestiere“, „Vor allem kleine Säugetiere“, „Krill“, „Vor allem kleine Fische“, „Fleisch“
+  - Profi (4, aufgefüllt): „Algen und Zooplankton“, „Ameisen und Termiten“, „Eukalyptusblätter“, „Bambus“
+- **Papageitaucher** (`animal-atlantic-puffin`, Gruppe animal), richtig: „Vor allem kleine Fische“
+  - Entdecker (5): „Nektar und Pollen“, „Pflanzliches Material“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Ameisen und Termiten“, „Insekten“, „Vor allem wirbellose Bodentiere“, „Vor allem kleine Säugetiere“
+- **Europäisches Chamäleon** (`animal-common-chameleon`, Gruppe animal), richtig: „Vor allem Insekten“
+  - Entdecker (5): „Eukalyptusblätter“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Pflanzen und Rinde“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Kleine Wassertiere“, „Krebse, Fische und andere kleine Meerestiere“, „Krill“, „Fleisch“
+- **Feuersalamander** (`animal-fire-salamander`, Gruppe animal), richtig: „Kleine wirbellose Tiere“
+  - Entdecker (5): „Pflanzen und Rinde“, „Eukalyptusblätter“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Bambus“, „Algen und Zooplankton“
+  - Profi (6): „Ameisen und Termiten“, „Kleine Wassertiere“, „Vor allem kleine Säugetiere“, „Krill“, „Fleisch“, „Vor allem kleine Fische“
+- **Grasfrosch** (`animal-common-frog`, Gruppe animal), richtig: „Kleine Tiere“
+  - Entdecker (3): „Nektar und Pollen“, „Bambus“, „Eukalyptusblätter“
+  - Profi (6): „Ameisen und Termiten“, „Fisch und Meerestiere“, „Vor allem kleine Säugetiere“, „Fleisch“, „Kleine Wassertiere“, „Kleine Tiere im Plankton“
+- **Echter Clownfisch** (`animal-eastern-clown-anemonefish`, Gruppe mixed), richtig: „Algen und Zooplankton“
+  - Entdecker (5): „Vor allem kleine Säugetiere“, „Raupen: Seidenpflanzen; Falter: Nektar“, „Fleisch“, „Bambus“, „Eukalyptusblätter“
+  - Profi (4, aufgefüllt): „Früchte, Blätter und auch Insekten“, „Krill“, „Vor allem kleine Fische“, „Ameisen und Termiten“
+- **Europäischer Aal** (`animal-european-eel`, Gruppe animal), richtig: „Kleine Wassertiere“
+  - Entdecker (5): „Vorwiegend Pflanzen“, „Eukalyptusblätter“, „Bambus“, „Nektar und Pollen“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Insekten“, „Kleine Tiere im Plankton“, „Ameisen und Termiten“, „Vor allem kleine Säugetiere“, „Fleisch“
+- **Monarchfalter** (`animal-monarch-butterfly`, Gruppe stages), richtig: „Raupen: Seidenpflanzen; Falter: Nektar“
+  - Entdecker (5): „Ameisen und Termiten“, „Fleisch“, „Kleine Wassertiere“, „Krill“, „Kleine Beutetiere“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Früchte, Blätter und auch Insekten“, „Algen und Zooplankton“
+- **Gefleckte Weinbergschnecke** (`animal-garden-snail`, Gruppe plant), richtig: „Pflanzliches Material“
+  - Entdecker (5): „Kleine Wassertiere“, „Krill“, „Vor allem kleine Säugetiere“, „Ameisen und Termiten“, „Kleine Tiere im Plankton“
+  - Profi (4, aufgefüllt): „Eukalyptusblätter“, „Bambus“, „Nektar und Pollen“, „Algen und Zooplankton“
+- **Europäischer Hummer** (`animal-european-lobster`, Gruppe animal), richtig: „Verschiedene wirbellose Meerestiere“
+  - Entdecker (5): „Raupen: Seidenpflanzen; Falter: Nektar“, „Als erwachsenes Tier vor allem Pflanzen“, „Bambus“, „Eukalyptusblätter“, „Algen und Zooplankton“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Ameisen und Termiten“, „Vor allem Insekten“, „Fleisch“, „Vor allem kleine Säugetiere“
+- **Gewöhnliche Sepia** (`animal-common-cuttlefish`, Gruppe animal), richtig: „Krebse, Fische und andere kleine Meerestiere“
+  - Entdecker (5): „Eukalyptusblätter“, „Gräser und andere Pflanzen“, „Nektar und Pollen“, „Bambus“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Kleine Tiere im Plankton“, „Vor allem Insekten“, „Vor allem wirbellose Bodentiere“, „Ameisen und Termiten“, „Vor allem kleine Säugetiere“
+- **Kurzschnäuziges Seepferdchen** (`animal-short-snouted-seahorse`, Gruppe animal), richtig: „Kleine Beutetiere“
+  - Entdecker (5): „Nektar und Pollen“, „Vorwiegend Pflanzen“, „Bambus“, „Eukalyptusblätter“, „Früchte, Blätter und auch Insekten“
+  - Profi (6): „Krill“, „Vor allem kleine Fische“, „Vor allem kleine Säugetiere“, „Vor allem wirbellose Bodentiere“, „Vor allem Insekten“, „Ameisen und Termiten“
