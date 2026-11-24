@@ -2,6 +2,8 @@
 
 Erzeugt am 24.11.2026 für Teil B, Schritt 8.3 ([Plan](2026-11-24-teil-b-plan.md), Entscheidungsliste Punkt 6). Je Tier: der richtige Text und die Texte anderer Tiere, die als falsche Antwort erscheinen dürfen. **Zu prüfen:** Passt eine „Falle“ in Wirklichkeit doch (ganz oder so weit, dass ein aufmerksames Kind sie mit gutem Grund wählen könnte)? Dann muss sie raus. Entdecker = deutlich anders, Profi = ähnlich. „aufgefüllt“: Für Profi gab es weniger als vier ähnliche, darum stehen auch deutlich andere dabei.
 
+> **Überholt seit der Faktenprüfung:** Die geltenden Listen stehen in `app/world-game-tier-fallen.json`. Was gestrichen wurde und warum, steht in der [Faktenprüfung](2026-11-24-tier-fallen-faktenpruefung.md).
+
 ## Tier & Lebensraum
 
 - **Afrikanischer Savannenelefant** (`animal-african-savanna-elephant`, Gruppe land), richtig: „Savanne“
