@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import {NEUIGKEITEN} from '../../app/kern/neuigkeiten.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
-import {bereich,inSucheTippen,ladeanfragen} from './harness.mjs';
+import {bereich,inSucheTippen,klickNachRuhe,ladeanfragen} from './harness.mjs';
 import {mehrErfahren,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
@@ -353,7 +353,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('#discovery-title').evaluate(el=>parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'calm heading focus remains visible');
    // „Was ist neu?“ über den Fuß: Titel fokussiert, alle Einträge, Zurück/Vor, axe; der Pass bleibt gleich.
    const readProgress=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
-   const before=await readProgress();await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   const before=await readProgress();await klickNachRuhe(p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}));await p.locator('.kern-neuigkeiten').waitFor();
    assert.equal(await p.locator('#updates-title').evaluate(el=>el===document.activeElement),true,'lazy updates title focus');
    await p.screenshot({path:shots+'/updates-'+width+'.png',animations:'disabled'});
    (report.historyViews??=[]).push(await neuigkeitenAnsicht(p,width,shots));
@@ -371,7 +371,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await homeTextGeometry(p);await homeTouchTargets(p);await capture('large');
    await p.locator('.discovery-worlds').screenshot({path:shots+'/home-worlds-large-'+width+'.png',animations:'disabled'});
    assert.equal(await p.locator('.gateway-compact .world-choice').first().evaluate(el=>getComputedStyle(el).transitionDuration==='0s'),true,'saved reduced motion applies');
-   await p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}).click();await p.locator('.kern-neuigkeiten').waitFor();
+   await klickNachRuhe(p.getByRole('contentinfo').getByRole('link',{name:'Was ist neu?',exact:true}));await p.locator('.kern-neuigkeiten').waitFor();
    const frueher=p.locator('.kern-neuigkeiten details[data-history-disclosure="neuigkeiten-frueher"]');if(!await frueher.evaluate(el=>el.open))await frueher.locator(':scope > summary').click();
    await homeTextGeometry(p);await homeTouchTargets(p);
    await p.screenshot({path:shots+'/updates-large-'+width+'-full.png',fullPage:true,animations:'disabled'});

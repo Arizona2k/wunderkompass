@@ -45,10 +45,20 @@ export async function inSucheTippen(page, text) {
 // Ladeanfragen der Seite fertig sind (außer Seitenaufrufen): Bilder, Programmteile, Stile und Daten.
 // Neuladen, goto und Schließen warten seit dem 24.11.2026 von selbst (scripts/seitenwechsel.mjs); dafür
 // braucht es diese Hilfe nicht mehr. Aufruf: const anfragenFertig = ladeanfragen(page); … await anfragenFertig();
+// oder gleich warten: await ladeanfragen(page)();
 // Die Seite muss überwacht sein (ctx.monitor oder monitorBrowserErrors gleich nach newPage), sonst zählt sie erst ab hier.
 export function ladeanfragen(page, {timeout} = {}) {
   beobachteAnfragen(page);
   return () => warteAufRuhe(page, {timeout});
+}
+
+// Klickt erst, wenn die Seite fertig geladen hat. Für Ziele, die nachgeladene Teile darüber noch verschieben
+// können, vor allem den Fuß der Startseite. Playwright prüft nur beim Drücken, was unter dem Zeiger liegt.
+// Rutscht das Ziel bis zum Loslassen weg, trifft das Loslassen etwas anderes, der Klick verpufft, und
+// Playwright meldet trotzdem Erfolg (CI-Lauf 45397127026, Firefox, 24.11.2026).
+export async function klickNachRuhe(locator) {
+  await ladeanfragen(locator.page())();
+  await locator.click();
 }
 
 // Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.
