@@ -90,6 +90,14 @@ Rolle „11 Jahre, allein, will es schwer haben“, Handy 390 px, lokaler Build.
 
 - Hinweis: Der Schluss erscheint auf Profi und Experte immer (auch nach nur einer Frage), auf Entdecker nur nach mehr als einer Frage.
 
+## Prüfung des `code-pruefer` zu „Nachdenken“ (Commit ee67f17, 24.11.2026, gekürzt)
+
+„Mit Änderungen bereit.“ Pass und Schlüssel unverändert (der Merker lebt nur in `history.state`; alle anderen `replaceState`-Aufrufe übernehmen den Zustand per Spread), richtige Karte über die ID, eingebettete Karten unberührt, StrictMode harmlos, Zurück/Vor/Neuladen von Hand geprüft, kein Test setzt das alte Verhalten voraus, `pnpm test` 446/446, typecheck und lint grün. Nicht geprüft: Browser-Suiten über den Runner, Firefox, WebKit.
+
+- **W1 (wichtig):** Ist die Hauptfrage richtig beantwortet und nur wieder fällig, zeigt „Noch einmal nachdenken“ sofort die Lösung („Richtig!“, Knöpfe gesperrt). Das Kind hat nichts zum Nachdenken, der Eintrag bleibt stehen. Auf Entdecker bei Karten mit nur der Hauptfrage war das schon vorher so. Vorschlag: nur bei falscher Antwort die Hauptfrage, oder bei fälliger eine leere Runde (gespeicherte Antwort nur ausblenden, nicht löschen); Browser-Fall „fällig → Nachdenken“.
+- **W2 (wichtig):** Der Ereignis-Weg in der Karte wird nie erreicht, sein Kommentar stimmt nicht: Im Wissensbuch ist die Karte abgebaut (`WorldViewContent` liest den Weg selbst; `#world-topic-title` 0-mal im DOM, 1280 px und 360 px). Beide Testwege laufen über den Initialisierer. Vorschlag: `useEffectEvent` und Listener streichen (spart Bytes), Kommentare in Karte und Test berichtigen.
+- H3: Dass der Merker gelöscht wird, prüft kein Test (von Hand: richtig). H4: Heikle Karten ohne Zustimmung behalten den Merker, bis das Kind zustimmt (harmlos). H5: Wirft `pushState`, fehlt der Merker (akzeptabel). H6: `rethinkTopic` verdoppelt `searchTopic` (klein).
+
 ## Messwerte dieses PR (erste Zählung, 24.11.2026)
 
 Regel seit 24.11.2026 (`CLAUDE.md`, Arbeitsablauf Punkt 7). Gezählt sind Fehler, keine reinen Stilvorschläge.
