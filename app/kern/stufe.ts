@@ -73,6 +73,14 @@ export function stufenVorschlag(folge: Folge, stufe: Stufe, runde: string): Stuf
 
 export const nachVorschlag = (folge: Folge, runde: string): Folge => ({ ...folge, antworten: [], gefragt: [...folge.gefragt, runde] });
 
+// Spiele (Code-Nachprüfung PR 2, Befund 1): Ein Vorschlag kommt nur, wenn die Runde auf der gewählten Stufe läuft, wie auf
+// der Karte. Läuft noch eine Runde einer anderen Stufe (eine alte Runde, oder die Stufe wurde gerade woanders geändert), hat
+// das Kind schon gewählt; ein Vorschlag könnte die Stufe im Pass sonst in die falsche Richtung oder um zwei Stufen umstellen.
+// Und nur zu einer Stufe, die das Spiel wirklich anders spielt (`spielStufe`: Experte spielt Profi, solange ein Spiel keine
+// echten Experten-Aufgaben hat); das schließt die schon gewählte Stufe mit ein.
+export const spielVorschlagErlaubt = (gewaehlt: Stufe, gespielt: Stufe, spielStufe: (s: Stufe) => Stufe = s => s) =>
+  (ziel: Stufe): boolean => spielStufe(gewaehlt) === gespielt && spielStufe(ziel) !== gespielt;
+
 // Eine Antwort verbuchen. `erlaubt` lässt nur Vorschläge zu einer Stufe zu, die das Spiel wirklich anders spielt; ein
 // unterdrückter Vorschlag verbraucht den einen Vorschlag der Runde nicht (Code-Prüfung PR 2, Hinweis 6).
 export function nachAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe, frageStufe: Stufe, runde: string, erlaubt: (ziel: Stufe) => boolean = () => true): { folge: Folge; vorschlag: StufenVorschlag | null } {
