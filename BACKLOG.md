@@ -326,6 +326,9 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Acht Landschaftsgrafiken sind Rekonstruktionen und als solche zu kennzeichnen (WK-051).
 - Merian-Porträt (Original nicht abrufbar), Lehmann-Foto (Lizenz unbelegt), Pont/Sydney-Aufnahmen: nur eigene gekennzeichnete Grafiken, bis ein freies Original gefunden ist (`bild-recherche`).
 
+- **Spiel-Fokus früh prüfen** (Technik-Prüfung, [später Fund PR 2](docs/entwurf/2026-11-24-teil-b-pr2-technik-spaeter-fund.md)): kleine CI-Suite `spiel-fokus` (geschätzt 10 bis 20 s) für den Weg „Spiel offen, Spielen in der Leiste, direkt und über Welt, Neuladen und Fortsetzen“ an einem Spiel; `playground` bleibt in der Vollprüfung. Gehört in den Technik-PR.
+- **Nach falscher Antwort Rückmeldung in den Blick** (Spieltest PR 2, Befund 3, Rest): Auf dem Handy liegt die Erklärung nach einer falschen Antwort unter dem Bildrand. Erst im Design-Schritt lösen, weil dabei die Antworten nach oben rutschen und der Spielaufbau ohnehin neu wird.
+
 ## Ideen-Sammlung
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
