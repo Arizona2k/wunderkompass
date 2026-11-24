@@ -9,7 +9,7 @@ await import('../../scripts/test-runtime.mjs');
 const {PLAYGROUND_GAMES}=await import('../../app/playground-catalog.ts');
 const {CLASSIC_QUESTIONS,neueKlassikRunde,klassikStufe,klassikSpielStufe}=await import('../../app/classic-learning.ts');
 import {createSave,emptyProgress,SAVE_KEY} from '../../app/progress-storage.ts';
-import {bereich} from './harness.mjs';
+import {bereich,ladeanfragen} from './harness.mjs';
 const {LAYERS}=await import('../../app/earth-data.ts');
 const state=p=>p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
 const select=p=>bereich(p,'games').click();
@@ -81,8 +81,9 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     if(game==='detective'&&stufe==='profi'&&i===1){
      const runde=(await state(p)).gameSessions.detective.learningRound;
      for(const umweg of [false,true]){
-      if(umweg){await bereich(p,'world').click();await p.waitForFunction(()=>location.hash.startsWith('#world'));}
-      await bereich(p,'games').click();await p.locator('[data-game-key="classic:detective"]').waitFor();
+      // Vor jedem Bereichswechsel warten, bis nichts mehr lädt (Regel „Seitenwechsel im Test“; Code-Nachprüfung PR 2, Klein 3).
+      if(umweg){await ladeanfragen(p)();await bereich(p,'world').click();await p.waitForFunction(()=>location.hash.startsWith('#world'));}
+      await ladeanfragen(p)();await bereich(p,'games').click();await p.locator('[data-game-key="classic:detective"]').waitFor();
       await p.waitForFunction(()=>document.activeElement?.dataset.gameKey==='classic:detective');
       assert.equal(await room.count(),0,'die Spielfläche ist zu');assert.deepEqual((await state(p)).gameSessions.detective.learningRound,runde,'der Stand bleibt');
       await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
@@ -92,6 +93,19 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).click();await hint.getByText(q.hints[1],{exact:true}).waitFor();assert.deepEqual((await state(p)).gameSessions[game].learningRound,snapshot);
     const wrong=q.answers.find(a=>a!==q.correct);await room.locator('.quiz-answer').filter({has:p.getByText(wrong,{exact:true})}).tap();await room.getByText(q.wrongReasons[wrong],{exact:true}).waitFor();assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     assert.equal((await state(p)).review['classic:'+game+':'+q.id]?.correct,false,'die erste, falsche Antwort kommt in die Wiederholung');
+    // Stufen-Vorschlag im Spiel (S8; Code-Nachprüfung PR 2, Klein 2): Nach dem Neuladen bei Aufgabe 1 zählen die ersten
+    // Antworten von Aufgabe 2 und 3. Zwei falsche auf Profi oder Experte schlagen „leichter“ vor (nur Fragen der Stufe der
+    // Runde zählen). „Nein, ich bleibe“ schließt den Hinweis, der Fokus geht zur Frage, die Stufe im Pass bleibt.
+    if(i===2){
+     const vorschlag=room.locator('.stufen-vorschlag'),gezaehlt=[1,2].every(k=>klassikStufe(CLASSIC_QUESTIONS.find(f=>f.id===snapshot.ids[k]))===gespielt);
+     if(gespielt==='entdecker')assert.equal(await vorschlag.count(),0,'Entdecker wird nie herabgestuft');
+     else if(gezaehlt){
+      await vorschlag.getByText('Ganz schön knifflig. Willst du eine Stufe leichter spielen?',{exact:true}).waitFor();
+      await vorschlag.getByRole('button',{name:'Nein, ich bleibe',exact:true}).click();await vorschlag.waitFor({state:'detached'});
+      await p.waitForFunction(()=>document.activeElement?.id==='reason-question');
+      assert.equal((await state(p)).gameSessions['kern:stufe']?.stufe,stufe,'ein Vorschlag stellt nie selbst um');
+     }
+    }
     if(i===0){const saved=(await state(p)).gameSessions[game].learningRound;await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.getByText(q.wrongReasons[wrong],{exact:true}).waitFor();assert.deepEqual((await state(p)).gameSessions[game].learningRound,saved);await p.screenshot({path:shots+'/playground-wrong-'+game+'-'+stufe+'-390.png',fullPage:true});}
     await room.locator('.quiz-answer').filter({has:p.getByText(q.correct,{exact:true})}).click();await room.getByText(q.why,{exact:true}).waitFor();
     if(i===0){await room.getByRole('button',{name:/Wissen vertiefen:/}).focus();await p.keyboard.press('Enter');await p.locator('.wissenskarte').waitFor();await p.goBack();await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await p.waitForFunction(()=>document.activeElement?.dataset.routeFocus?.startsWith('game-knowledge-'));}

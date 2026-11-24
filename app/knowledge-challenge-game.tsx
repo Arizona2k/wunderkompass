@@ -10,7 +10,7 @@ import {challengeQuestionForOrder,EXPERTEN_HINWEIS,gespielteStufe,kreuzUndQuerRu
 import StufenWahl,{stufeWechseln} from './kern/stufen-wahl';
 import {StufenVorschlagHinweis,useStufenVorschlag} from './kern/stufen-vorschlag';
 import {flushSync} from 'react-dom';
-import {rundeNochSatz,type Stufe} from './kern/stufe';
+import {rundeNochSatz,spielVorschlagErlaubt,type Stufe} from './kern/stufe';
 import {leseGeschafft,mitGeschafft,type Geschafft} from './world-game-runde';
 import {WOERTER} from './kern/woerter';
 // Kreuz und quer (Teil B, Aufgabe 9; Entscheidungsliste Teil B, Punkte 3 und 8): Das Spiel startet gleich mit der Stufe aus
@@ -25,8 +25,8 @@ export default function KnowledgeChallenge({review,stufe,onStufe,onWin,onRead,on
  const [,setVorige]=useSavedGame<string[]>('vorige',[]),[geschafft,setGeschafft]=useSavedGame<Geschafft>('geschafft',{},value=>leseGeschafft(value));
  const gespielt=gespielteStufe(session);
  // Stufen-Vorschlag wie auf der Karte (E8, S8): erste Antwort je Frage, nur Fragen der Stufe der Runde, höchstens einer je
- // Runde, nie zur schon gewählten Stufe (eine alte Runde läuft mit ihrer Stufe zu Ende; Code-Prüfung PR 2, Hinweis 6).
- const {vorschlag,merke,schliessen}=useStufenVorschlag('challenge:'+session.ids.join(','),gespielt,ziel=>ziel!==stufe);
+ // Runde, und nur, solange die Runde auf der gewählten Stufe läuft (spielVorschlagErlaubt; Code-Nachprüfung PR 2, Befund 1).
+ const {vorschlag,merke,schliessen}=useStufenVorschlag('challenge:'+session.ids.join(','),gespielt,spielVorschlagErlaubt(stufe,gespielt));
  const zurFrage=()=>requestAnimationFrame(()=>document.getElementById('challenge-question')?.focus());
  function neueRunde(neu:Stufe){onRead('');schliessen();setVorige(session.ids);setSession(runde(neu,session.ids));}
  function wechsel(neu:Stufe){onStufe(neu);if(neu!==gespielt)neueRunde(neu);}

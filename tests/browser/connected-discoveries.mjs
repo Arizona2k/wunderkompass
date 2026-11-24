@@ -123,6 +123,8 @@ export async function connectedDiscoveries(page,ready,report,width){
   await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
   assert.ok((await pass()).games.includes('world:knowledge-challenge'));
   await room.getByRole('button',{name:'Noch eine Runde',exact:true}).click();
+  // Der Fokus geht auf die erste Frage der neuen Runde (Code-Prüfung PR 2, Hinweis 2; Nachprüfung, Klein 2).
+  await page.waitForFunction(()=>document.activeElement?.id==='challenge-question');
   await page.waitForFunction(previous=>JSON.stringify(JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids)!==JSON.stringify(previous),previous);
   const next=(await pass()).gameSessions['world:knowledge-challenge'].challenge.ids;
   // Experte hat erst vier Experten-Fragen (drei je Runde): Die neue Runde ist eine andere, teilt aber Experten-Fragen.

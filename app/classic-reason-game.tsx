@@ -10,7 +10,7 @@ import type {Review} from './progress-storage';
 import StufenWahl,{stufeWechseln} from './kern/stufen-wahl';
 import {StufenVorschlagHinweis,useStufenVorschlag} from './kern/stufen-vorschlag';
 import {flushSync} from 'react-dom';
-import {nochNichtSatz,rundeNochSatz,type Stufe} from './kern/stufe';
+import {nochNichtSatz,rundeNochSatz,spielVorschlagErlaubt,type Stufe} from './kern/stufe';
 import {leseGeschafft,mitGeschafft,type Geschafft} from './world-game-runde';
 import INDEX from './world-index.json';
 import {WORLD_ROUTES} from './world-index';
@@ -25,9 +25,9 @@ export default function ClassicReasonGame({game,review,stufe,onStufe,onReview,on
  const [round,setRound]=useSavedGame<ReasonRound>('learningRound',()=>runde(stufe,vorigeRunde(saved)),(value,fallback)=>{const r=restoreReasonRound(game,value);return r.ids.length?r:fallback;});
  const [,setVorige]=useSavedGame<string[]>('vorige',[]),[geschafft,setGeschafft]=useSavedGame<Geschafft>('geschafft',{},value=>leseGeschafft(value));
  const gespielt=rundenStufe(round);
- // Stufen-Vorschlag wie auf der Karte (E8, S8), gemessen an der Stufe der Runde; nur zu einer Stufe, die das Spiel wirklich
- // anders spielt und die nicht schon gewählt ist (Code-Prüfung PR 2, Hinweis 6).
- const {vorschlag,merke,schliessen}=useStufenVorschlag('classic:'+game+':'+round.ids.join(','),gespielt,ziel=>ziel!==stufe&&klassikSpielStufe(game,ziel)!==gespielt);
+ // Stufen-Vorschlag wie auf der Karte (E8, S8), gemessen an der Stufe der Runde; nur solange die Runde auf der gewählten
+ // Stufe läuft und nur zu einer Stufe, die das Spiel wirklich anders spielt (Code-Prüfung PR 2, Hinweis 6; Nachprüfung, Befund 1).
+ const {vorschlag,merke,schliessen}=useStufenVorschlag('classic:'+game+':'+round.ids.join(','),gespielt,spielVorschlagErlaubt(stufe,gespielt,s=>klassikSpielStufe(game,s)));
  const zurFrage=()=>requestAnimationFrame(()=>document.getElementById('reason-question')?.focus());
  function neueRunde(neu:Stufe){onRead('');schliessen();setVorige(round.ids);setRound(runde(neu,round.ids));}
  function wechsel(neu:Stufe){onStufe(neu);if(klassikSpielStufe(game,neu)!==gespielt)neueRunde(neu);}

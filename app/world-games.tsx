@@ -18,7 +18,7 @@ import type {Review} from './progress-storage';
 import StufenWahl,{stufeWechseln} from './kern/stufen-wahl';
 import {StufenVorschlagHinweis,useStufenVorschlag} from './kern/stufen-vorschlag';
 import {flushSync} from 'react-dom';
-import {istStufe,nochNichtSatz,rundeNochSatz,type Stufe} from './kern/stufe';
+import {istStufe,nochNichtSatz,rundeNochSatz,spielVorschlagErlaubt,type Stufe} from './kern/stufe';
 import {hatStufen,leseGeschafft,mitGeschafft,neueWeltRunde,rundenAntworten,rundenStufe,weltSpielStufe,type Geschafft} from './world-game-runde';
 const TOPICS=CATALOG as WorldTopic[];
 export const WORLD_GAMES=[
@@ -51,9 +51,10 @@ export default function WorldGames({sessions,review,stufe,onStufe,uebersicht,onS
 // steht die richtige Antwort sonst immer oben.
 function Rounds({id,review,stufe,onStufe,onWin,onRead,onReview,onTopic}:{id:string;review:Review;stufe:Stufe;onStufe:(s:Stufe)=>void;onWin:()=>void;onRead:(s:string)=>void;onReview:(id:string,v:boolean)=>void;onTopic:(id:string)=>void}){const pool=bank(id),saved=useGameSnapshot(),[start]=useState(()=>neueWeltRunde({spiel:id,stufe,review,vorige:vorigeRunde(saved)})),gueltig=(v:unknown):v is string[]=>Array.isArray(v)&&v.length>0&&v.every(k=>typeof k==='string'&&pool.some(q=>q.id===k)),alteItems=gueltig(saved.items)?saved.items:null,alteRunde=alteItems!==null,[ersatz]=useState(()=>alteItems?rundenAntworten(id,rundenStufe(saved),alteItems):start.orders),abschluss=useRef<HTMLHeadingElement>(null),weiter=useRef<HTMLButtonElement>(null),[items,setItems]=useSavedGame('items',start.items,(v,f)=>gueltig(v)?v:f),[gespielt,setGespielt]=useSavedGame<Stufe>('stufe',alteRunde?rundenStufe(saved):start.stufe,(value,fallback)=>alteRunde&&istStufe(value)?value:fallback),[,setVorige]=useSavedGame<string[]>('vorige',[]),[geschafft,setGeschafft]=useSavedGame<Geschafft>('geschafft',{},value=>leseGeschafft(value)),[index,setIndex]=useSavedGame('index',0),[answer,setAnswer]=useSavedGame<string|null>('roundAnswer',null),[done,setDone]=useSavedGame('roundDone',false);const ids=items.length&&items.every(k=>pool.some(q=>q.id===k))?items:pool.map(q=>q.id).slice(0,5),current=pool.find(q=>q.id===ids[Math.min(index,ids.length-1)])!,[orders,setOrders]=useSavedGame<Record<string,unknown>>('orders',()=>({...Object.fromEntries(pool.map(q=>[q.id,shuffle(q.answers)])),...ersatz}),(value,fallback)=>alteRunde?restoreWorldGameOrders(value,fallback,pool,id):{...restoreWorldGameOrders(value,fallback,pool,id),...start.orders});
  // Stufen-Vorschlag wie auf der Karte (E8, Stufen-Prüfung S8): erste Antwort je Aufgabe, höchstens einer je Runde, gemessen an
- // der Stufe der Runde, nur zu einer Stufe, die das Spiel wirklich anders spielt (Experte spielt hier Profi) und die nicht
- // schon gewählt ist; ein unterdrückter Vorschlag verbraucht den der Runde nicht (Code-Prüfung PR 2, Hinweis 6).
- const {vorschlag,merke,schliessen}=useStufenVorschlag('world:'+id+':'+ids.join(','),gespielt,ziel=>hatStufen(id)&&ziel!==stufe&&weltSpielStufe(ziel)!==gespielt),frage=useRef<HTMLHeadingElement>(null);
+ // der Stufe der Runde, nur solange die Runde auf der gewählten Stufe läuft und nur zu einer Stufe, die das Spiel wirklich
+ // anders spielt (Experte spielt hier Profi); ein unterdrückter Vorschlag verbraucht den der Runde nicht (Code-Prüfung PR 2,
+ // Hinweis 6; Nachprüfung, Befund 1).
+ const erlaubt=spielVorschlagErlaubt(stufe,gespielt,weltSpielStufe),{vorschlag,merke,schliessen}=useStufenVorschlag('world:'+id+':'+ids.join(','),gespielt,ziel=>hatStufen(id)&&erlaubt(ziel)),frage=useRef<HTMLHeadingElement>(null);
  function neueRunde(neu:Stufe){const r=neueWeltRunde({spiel:id,stufe:neu,review,vorige:ids});onRead('');schliessen();setVorige(ids);setOrders(r.orders);setItems(r.items);setGespielt(r.stufe);setIndex(0);setAnswer(null);setDone(false);}
  function wechsel(neu:Stufe){onStufe(neu);if(weltSpielStufe(neu)!==gespielt)neueRunde(neu);}
  const stufenHinweis=weltSpielStufe(stufe)!==gespielt?rundeNochSatz(gespielt,weltSpielStufe(stufe)):stufe==='experte'?nochNichtSatz('experte','profi'):null;
