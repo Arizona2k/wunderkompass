@@ -66,3 +66,18 @@ export function rundenStufe(sitzung: unknown): Stufe {
   const stufe = sitzung && typeof sitzung === 'object' && !Array.isArray(sitzung) ? (sitzung as Record<string, unknown>).stufe : undefined;
   return istStufe(stufe) ? stufe : 'entdecker';
 }
+
+// Höchste geschaffte Stufe (E13): unsichtbar bis zu den Belohnungen in Teilschritt 5. Gemerkt wird je Stufe das erste Datum,
+// nur Profi und Experte. „Neue Runde“ und ein Stufenwechsel behalten den Eintrag (world-games.tsx).
+export type Geschafft = Partial<Record<'profi' | 'experte', string>>;
+const tag = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
+export function leseGeschafft(wert: unknown): Geschafft {
+  if (!wert || typeof wert !== 'object' || Array.isArray(wert)) return {};
+  const w = wert as Record<string, unknown>, aus: Geschafft = {};
+  for (const stufe of ['profi', 'experte'] as const) if (tag(w[stufe])) aus[stufe] = w[stufe] as string;
+  return aus;
+}
+export function mitGeschafft(geschafft: unknown, stufe: Stufe, heute = new Date().toISOString().slice(0, 10)): Geschafft {
+  const bisher = leseGeschafft(geschafft);
+  return stufe === 'entdecker' || bisher[stufe] ? bisher : { ...bisher, [stufe]: heute };
+}

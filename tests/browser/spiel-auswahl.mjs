@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {CHALLENGE_BANK} from '../../app/knowledge-challenge.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
 import {STUFE_SCHLUESSEL} from '../../app/kern/stufe.ts';
+import {worldGameBank} from '../../app/world-game-bank.ts';
 import {bereich, ladeanfragen} from './harness.mjs';
 
 // Spielrunden wählen ihre Aufgaben mit dem gemeinsamen Helfer (Teil B, Aufgabe 7, app/kern/auswahl.ts):
@@ -112,9 +113,28 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await page.locator('.world-game-room').getByRole('button', {name: 'Neue Runde', exact: true}).click();
     await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
     const neu = await sitzung();
-    assert.equal(neu.stufe, 'profi', '„Neue Runde“ nimmt die Stufe aus dem Pass');
+    assert.equal(neu.stufe, 'profi', '„Neue Runde“ nimmt die Stufe aus dem Pass, eine geschaffte Profi-Runde wird gemerkt und übersteht „Neue Runde“ und Stufenwechsel');
     assert.deepEqual(neu.vorige, entdecker.items);
     assert.equal(await zeile.locator('.stufen-hinweis').count(), 0);
+
+    // Eine Profi-Runde ganz durchspielen: Die höchste geschaffte Stufe wird gemerkt (E13) und übersteht „Neue Runde“.
+    const pool = worldGameBank('habitats');
+    for (let i = 0; i < neu.items.length; i++) {
+      const q = pool.find(q => q.id === neu.items[i]);
+      await brett.getByText(`AUFGABE ${i + 1} VON 8`, {exact: true}).waitFor();
+      assert.equal(await brett.locator('.quiz-answer').count(), 4, 'Profi zeigt vier Antworten');
+      await brett.locator('.quiz-answer').filter({has: page.getByText(q.answers[q.correct], {exact: true})}).click();
+      await brett.getByRole('button', {name: i === neu.items.length - 1 ? 'Spielstempel sammeln' : 'Nächste Aufgabe', exact: true}).click();
+    }
+    await brett.getByText('Alle 8 Aufgaben sind gelöst. Dein Spielstempel bleibt in deinem Entdeckerpass.', {exact: true}).waitFor();
+    const heute = new Date().toISOString().slice(0, 10);
+    assert.deepEqual((await sitzung()).geschafft, {profi: heute}, 'die geschaffte Stufe steht im Spielstand');
+    await page.locator('.world-game-room').getByRole('button', {name: 'Neue Runde', exact: true}).click();
+    await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
+    assert.deepEqual((await sitzung()).geschafft, {profi: heute}, '„Neue Runde“ behält sie');
+    await zeile.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker', exact: true}).click();
+    await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
+    assert.deepEqual((await sitzung()).geschafft, {profi: heute}, 'ein Stufenwechsel behält sie');
     report.checks.push('Welt-Spiel-Runden: Experte spielt Profi (8 Aufgaben), Wechsel in der Runde startet eine neue Runde mit Fokus auf „Ändern“, Wechsel an anderer Stelle lässt die Runde zu Ende laufen, „Neue Runde“ nimmt die Stufe aus dem Pass');
   } finally {
     await context.close();

@@ -153,6 +153,30 @@ Gefunden am 24.11.2026 (Wortlaut und Auslöser: `worldGameBank`, `habitatDistrac
 - [ ] Je Schritt die betroffenen Tests in einem Durchgang anpassen, danach `pnpm run check` und die großen Suiten `playground`, `animals`, `core`.
 - [ ] „Was ist neu?“-Eintrag, Commit, Push.
 
-## Aufgaben 9 bis 12
+## Aufgabe 9: Kreuz und quer, Klassik und Quiz auf die gemeinsame Stufe
+
+**Was der Bestand zeigt** (24.11.2026):
+- Die Wissens-Challenge beginnt mit einer Auswahl „Leicht/Mittel/Schwer“ (`.challenge-levels`). Ihre 45 Challenge-Fragen sind seit Teil A eingestuft: 8 Entdecker, 30 Profi, 4 Experte, 3 ruhen. Leicht spielt die 198 Hauptfragen der Karten (`<karte>:mini`).
+- Neuer Name aus Teil A: „Kreuz und quer“ (kinder-redaktion; Entscheidungsliste Teil A).
+- Das Quiz folgt der gemeinsamen Stufe schon (`quizStufe`).
+- Klassik mit eigener Stufe: „Stimmt das wirklich?“ (`classic:detective`) und „Wer lebt wo?“ (`classic:habitats`). „Wer lebt wo?“ geht in Aufgabe 10 in „Tier & Lebensraum“ auf; Aufgabe 9 baut es darum nicht mehr um.
+- „Spielen“ in der Leiste führt bei offenem Spiel nicht zur Übersicht (BACKLOG Phase 1, Punkt 16).
+
+**Entscheidungen beim Planen** (Entscheidungsliste Teil B, Punkt 8):
+- Kreuz und quer startet wie die Welt-Spiele gleich mit der Stufe aus dem Pass, mit der Stufenzeile oben; die Auswahl „Leicht/Mittel/Schwer“ entfällt. Wechsel in der Runde: neue Runde im selben Brett.
+- Vorrat je Stufe: Entdecker = Hauptfragen der Karten und die 8 Entdecker-Challenge-Fragen; Profi = die 30 Profi-Fragen; Experte = erst die 4 Experten-Fragen, dann Profi-Fragen (es gibt erst vier echte, Satz: „Experten-Fragen gibt es hier erst wenige. Du bekommst sie zuerst, dann Profi-Fragen.“).
+- Alte Runden (mit `difficulty`, ohne `stufe`) laufen weiter wie bisher.
+
+### Schritt 9.1: Kreuz und quer
+- [ ] Tests zuerst (`tests/challenge.test.mjs`): `createChallenge` nach Stufe (Vorrat wie oben, 6 Aufgaben, Auswahl-Helfer); `restoreChallenge` nimmt neue Runden (`stufe`) und alte (`difficulty`); Name „Kreuz und quer“ im Katalog (`WORLD_GAMES`, `playground-catalog.ts`, Suchindex), ID `world:knowledge-challenge` bleibt.
+- [ ] Umbau `knowledge-challenge.ts` und `knowledge-challenge-game.tsx` (Stufenzeile, kein Auswahlbildschirm, „Andere Stufe auswählen“ entfällt); geschafft wie 8.4.
+- [ ] Alle Tests, die den Auswahlbildschirm benutzen, in einem Durchgang umstellen (gefunden am 24.11.2026: `tests/browser/connected-discoveries.mjs`, `challenge-hints.mjs`, `discovery-central.mjs`, `learning-tasks.mjs`, `retained-answer-wording.mjs`, `spiel-auswahl.mjs`; Unit: `challenge.test.mjs`, `retained-answer-wording.test.mjs`, `water-photosynthesis.test.mjs`, `gespeicherte-antworten.test.mjs`).
+
+### Schritt 9.2: Stimmt das wirklich? und die Zähler
+- [ ] `classic:detective` liest die gemeinsame Stufe (Entdecker = leicht, Profi = mittel, Experte = schwer nur, wenn der `stufen-pruefer` die schweren Fragen als Experte bestätigt, sonst Profi mit Satz). Alte Runden laufen weiter.
+- [ ] Zähler „… davon beim ersten Versuch“ und „{turns} Versuche“ entfernen (E13).
+- [ ] „Spielen“ in der Leiste bei offenem Spiel: führt zur Spiele-Übersicht (alle Wege prüfen: Leiste, Zurück, Neuladen, Fortsetzen).
+
+## Aufgaben 10 bis 12
 
 Werden hier je Aufgabe in kleinen Schritten ergänzt, bevor sie gebaut werden (Reihenfolge wie im Plan Teilschritt 3, Abschnitt 5).

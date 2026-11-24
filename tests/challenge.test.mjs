@@ -108,3 +108,43 @@ test('pre-hint saved rounds keep their IDs, order, answer and earned finish at a
   assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(earned)),emptyChallenge()),earned);
  }
 });
+
+// Teil B, Aufgabe 9.1: Kreuz und quer nach der gemeinsamen Stufe (Entscheidungsliste Teil B, Punkt 8).
+import {kreuzUndQuerRunde,stufeDerFrage,EXPERTEN_HINWEIS} from '../app/knowledge-challenge.ts';
+test('Kreuz und quer wählt je Stufe aus dem passenden Vorrat',()=>{
+ const stufeVon=id=>stufeDerFrage(CHALLENGE_BANK.find(q=>q.id===id));
+ for(const seed of [.1,.4,.8]){
+  const e=kreuzUndQuerRunde('entdecker',[],()=>seed,{},HEUTE),p=kreuzUndQuerRunde('profi',[],()=>seed,{},HEUTE),x=kreuzUndQuerRunde('experte',[],()=>seed,{},HEUTE);
+  for(const r of [e,p,x]){assert.equal(r.ids.length,6);assert.equal(new Set(r.ids).size,6);assert.equal(r.difficulty,null);assert.equal(r.ids.some(id=>CHALLENGE_BANK.find(q=>q.id===id).ruht),false);}
+  assert.equal(e.stufe,'entdecker');assert.ok(e.ids.every(id=>stufeVon(id)==='entdecker'));
+  assert.equal(p.stufe,'profi');assert.ok(p.ids.every(id=>stufeVon(id)==='profi'));
+  const experten=CHALLENGE_BANK.filter(q=>stufeDerFrage(q)==='experte'&&!q.ruht).map(q=>q.id);
+  assert.equal(x.stufe,'experte');assert.ok(experten.length<6,'es gibt erst wenige Experten-Fragen');
+  assert.ok(experten.every(id=>x.ids.includes(id)),'Experte bekommt alle Experten-Fragen zuerst');
+  assert.ok(x.ids.filter(id=>!experten.includes(id)).every(id=>stufeVon(id)==='profi'),'dann Profi-Fragen');
+ }
+ assert.match(EXPERTEN_HINWEIS,/Experten-Fragen gibt es hier erst wenige/);
+});
+test('Hauptfragen sind Entdecker, Challenge-Fragen ohne Einstufung Profi',()=>{
+ for(const q of CHALLENGE_BANK)assert.equal(stufeDerFrage(q),q.id.endsWith(':mini')?'entdecker':(q.level??'profi'),q.id);
+});
+test('eine neue Runde übersteht Speichern und Laden, alte Runden mit Leicht/Mittel/Schwer auch',()=>{
+ for(const stufe of ['entdecker','profi','experte']){
+  const r=kreuzUndQuerRunde(stufe,[],()=>.33,{},HEUTE);
+  assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(r)),emptyChallenge()),r,stufe);
+  const q=CHALLENGE_BANK.find(q=>q.id===r.ids[5]);
+  const fertig={...r,index:5,answer:q.answers[q.correct],done:true};
+  assert.deepEqual(restoreChallenge(fertig,emptyChallenge()),fertig,stufe+' fertig');
+  assert.deepEqual(restoreChallenge({...r,stufe:'meister'},emptyChallenge()),emptyChallenge(),'unbekannte Stufe');
+  const fremd={...r,ids:[...r.ids.slice(0,5),CHALLENGE_BANK.find(q=>stufeDerFrage(q)!==stufe&&!(stufe==='experte'&&stufeDerFrage(q)==='profi')).id]};
+  assert.deepEqual(restoreChallenge(fremd,emptyChallenge()),emptyChallenge(),stufe+': Frage aus einer anderen Stufe');
+ }
+ const alt=createChallenge('medium',[],()=>.5);
+ assert.deepEqual(restoreChallenge(JSON.parse(JSON.stringify(alt)),emptyChallenge()),alt,'alte Runde läuft weiter');
+});
+test('Kreuz und quer liest Wiederholungen und meidet die vorige Runde',()=>{
+ const pool=CHALLENGE_BANK.filter(q=>stufeDerFrage(q)==='profi'&&!q.ruht),falsch=pool.at(-1).id;
+ assert.ok(kreuzUndQuerRunde('profi',[],()=>.2,{['challenge:'+falsch]:{correct:false,seen:1,due:GESTERN}},HEUTE).ids.includes(falsch));
+ const erste=kreuzUndQuerRunde('profi',[],()=>.2,{},HEUTE),zweite=kreuzUndQuerRunde('profi',erste.ids,()=>.7,{},HEUTE);
+ assert.equal(zweite.ids.some(id=>erste.ids.includes(id)),false);
+});

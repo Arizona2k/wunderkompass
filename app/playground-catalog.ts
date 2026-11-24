@@ -55,7 +55,7 @@ export function gameStatus(g:PlaygroundGame,p:LocalProgress):{label:string;resum
  if(g.family==='classic'&&g.id==='order')finished=s?.checked===true&&Array.isArray(s.chosen)&&Array.isArray(s.pool)&&s.chosen.length===4&&s.chosen.every((id,i)=>id===(s.topic==='water'?['sun','cloud','rain','river']:LAYERS.map(l=>l.id))[i]);
  const quiz=g.family==='classic'&&g.id==='quiz',hunt=g.family==='classic'&&g.id==='hunt';
  if(quiz)finished=p.quizSession?.finished===true;if(hunt)finished=p.missions.length===12;
- const hasRound=s?.learningRound&&typeof s.learningRound==='object'?(s.learningRound as {level?:unknown}).level!=null:s?.challenge&&typeof s.challenge==='object'?(s.challenge as {difficulty?:unknown}).difficulty!=null:!!s&&Object.keys(s).length>0;
+ const hasRound=s?.learningRound&&typeof s.learningRound==='object'?(s.learningRound as {level?:unknown}).level!=null:s?.challenge&&typeof s.challenge==='object'?((s.challenge as {difficulty?:unknown}).difficulty!=null||(s.challenge as {stufe?:unknown}).stufe!=null):!!s&&Object.keys(s).length>0;
  const resume=quiz?!!p.quizSession&&!p.quizSession.finished:hunt?p.missions.length>0&&!finished:!!hasRound&&!finished;
  const earned=stamped||(quiz&&p.quizResults.length>0)||(hunt&&finished);
  return {label:finished?'Runde abgeschlossen':resume?'Runde fortsetzen':earned?'Schon gespielt':'Noch entdecken',resume,finished,stamped:earned};

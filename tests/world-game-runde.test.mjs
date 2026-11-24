@@ -199,3 +199,37 @@ test('nach einer gezogenen Falle nennt die Rückmeldung ein Tier, zu dem sie pas
     assert.ok(text.includes('Gesucht ist aber: ' + thema(q.id).title + '.'), spiel + ' ' + q.id);
   }
 });
+
+// Schritt 8.4: höchste geschaffte Stufe merken (E13), unsichtbar bis Teilschritt 5.
+import { leseGeschafft, mitGeschafft } from '../app/world-game-runde.ts';
+
+test('eine geschaffte Profi-Runde merkt sich das Datum, Entdecker und ein zweites Mal ändern nichts', () => {
+  assert.deepEqual(mitGeschafft({}, 'entdecker', HEUTE), {}, 'Entdecker wird nicht gemerkt');
+  assert.deepEqual(mitGeschafft({}, 'profi', HEUTE), { profi: HEUTE });
+  assert.deepEqual(mitGeschafft({ profi: '2026-11-01' }, 'profi', HEUTE), { profi: '2026-11-01' }, 'das erste Datum bleibt');
+  assert.deepEqual(mitGeschafft({ profi: '2026-11-01' }, 'experte', HEUTE), { profi: '2026-11-01', experte: HEUTE });
+});
+
+test('leseGeschafft nimmt nur gültige Einträge', () => {
+  assert.deepEqual(leseGeschafft({ profi: '2026-11-01', experte: '2026-11-02' }), { profi: '2026-11-01', experte: '2026-11-02' });
+  assert.deepEqual(leseGeschafft({ profi: '2026-11-01', entdecker: '2026-11-01', meister: '2026-11-01', experte: 'gestern' }), { profi: '2026-11-01' });
+  for (const kaputt of [undefined, null, 'profi', [], 7]) assert.deepEqual(leseGeschafft(kaputt), {});
+});
+
+// Ratemuster (E9): Die richtige Antwort ist höchstens in 45 % der Aufgaben die einzige längste oder die einzige kürzeste.
+// „Früher oder heute?“ ist ausgenommen: Seine Antworten sind feste Kategorien, die lange dritte ist fast nie richtig
+// (Entscheidungsliste Teil B, Punkt 9; BACKLOG).
+test('neue Runden haben kein Ratemuster „die längste“ oder „die kürzeste“', () => {
+  for (const spiel of STUFEN_SPIELE.filter(s => s !== 'then-now')) for (const stufe of ['entdecker', 'profi']) {
+    const pool = worldGameBank(spiel); let n = 0, lang = 0, kurz = 0;
+    for (let seed = 0; seed < 150; seed++) {
+      const r = runde(spiel, stufe, { zufall: zufallAus(seed) });
+      for (const id of r.items) {
+        const q = pool.find(q => q.id === id), L = r.orders[id].map(a => a.length), c = q.answers[q.correct].length, m = Math.max(...L), k = Math.min(...L);
+        n++; if (c === m && L.filter(x => x === m).length === 1) lang++; if (c === k && L.filter(x => x === k).length === 1) kurz++;
+      }
+    }
+    assert.ok(lang / n <= 0.45, spiel + ' ' + stufe + ': längste ' + (lang / n).toFixed(2));
+    assert.ok(kurz / n <= 0.45, spiel + ' ' + stufe + ': kürzeste ' + (kurz / n).toFixed(2));
+  }
+});

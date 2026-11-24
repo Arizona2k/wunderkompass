@@ -1,0 +1,10 @@
+# Vier neue Rätsel: Bericht des fakten-pruefer
+
+Stand: 24.11.2026. Geprüft: Rotfuchs, Europäischer Aal, Darwin, Einstein (Entscheidungsliste Teil B, Punkt 7; Fassungen der [kinder-redaktion](2026-11-24-spieltexte-kinderredaktion.md)). Gekürzt.
+
+- **Rotfuchs: in Ordnung.** Lauschen, hoher Sprung, Vorderpfoten: Animal Diversity Web (Vulpes vulpes, Quelle der Karte). Hören unter hoher Vegetation oder Schnee: Červený et al. 2011, Biology Letters 7:355–357. Wald, Felder, Städte: ADW. Tipp „wie ein kleiner Hund“: Familie Canidae (ADW). Freiwilliger Hinweis: „genau auf der Maus“ klingt, als klappe es immer; viele Sprünge misslingen. **Übernommen:** „… und will mit den Vorderpfoten genau auf der Maus landen.“ Keine Verwechslung (Schleiereule springt nicht, Waschbär macht keinen Mäusesprung).
+- **Europäischer Aal: ändern, umgesetzt.** Das Laichen in der Sargassosee ist nie direkt beobachtet (Wright et al. 2022, Scientific Reports 12:15362, Quelle der Karte; die Karte sagt im Quellenhinweis dasselbe). Nicht jeder Aal geht ins Süßwasser (Daverat & Tomás 2006, Marine Ecology Progress Series 307:247–257, Gironde: bis zu 50 % mit Süßwasserphase). „Winzig und durchsichtig wie Glas … mit der Strömung bis nach Europa“ stimmt (WWT). **Neue Fassung:** „Forschende glauben: Ich schlüpfe weit draußen im Atlantik, in der Sargassosee. Winzig und durchsichtig wie Glas treibe ich mit der Strömung bis nach Europa. Oft schwimme ich dann die Flüsse hinauf.“ („Forschende“ wie auf der Karte.) Keine Verwechslung.
+- **Charles Darwin: in Ordnung.** Fünfjährige Reise auf der HMS Beagle (1831–1836) und natürliche Selektion: Natural History Museum London (Quelle der Karte). Keine Verwechslung mit Humboldt (Amerika, nicht Beagle), Anning, Merian.
+- **Albert Einstein: in Ordnung.** E = mc² und Zeit, die von der Schwerkraft abhängt, vielfach mit Atomuhren bestätigt: NIST (Quelle der Karte). „Fand heraus“ vertretbar. Keine Verwechslung (E = mc² steht bei keiner anderen Person).
+
+Nicht geprüft (vom Prüfer): Seiten der Wildlife Trusts (403); Daverat & Tomás nur als Zusammenfassung; genaue Larvengröße; Humboldts Reisezeit aus eigenem Wissen; „buschig“ nicht wörtlich in ADW.
