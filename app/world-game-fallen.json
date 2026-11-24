@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "bedeutung": "Profi-Fallen der Welt-Spiele (Teil B, Schritt 8.2): Paare, bei denen der Hinweis auch auf eine falsche Antwort passt. Diese Kandidaten erscheinen für diese Aufgabe nie als Falle. Geprüft vom fakten-pruefer, Bericht in docs/entwurf/.",
+  "ausschluss": {
+    "animal-detective": {
+      "animal-lion": [
+        "animal-orca",
+        "animal-common-bottlenose-dolphin",
+        "animal-meerkat"
+      ],
+      "animal-bengal-tiger": [
+        "animal-red-fox"
+      ],
+      "animal-common-bottlenose-dolphin": [
+        "animal-orca"
+      ],
+      "animal-orca": [
+        "animal-common-bottlenose-dolphin"
+      ],
+      "animal-platypus": [
+        "animal-short-beaked-echidna"
+      ],
+      "animal-red-fox": [
+        "animal-raccoon",
+        "animal-ring-tailed-lemur",
+        "animal-hedgehog"
+      ],
+      "animal-raccoon": [
+        "animal-red-fox"
+      ],
+      "animal-hedgehog": [
+        "animal-short-beaked-echidna",
+        "animal-raccoon",
+        "animal-red-fox"
+      ],
+      "animal-axolotl": [
+        "animal-fire-salamander"
+      ],
+      "animal-common-chameleon": [
+        "animal-short-snouted-seahorse"
+      ],
+      "animal-fire-salamander": [
+        "animal-common-frog"
+      ],
+      "animal-common-frog": [
+        "animal-fire-salamander"
+      ],
+      "animal-european-eel": [
+        "animal-green-sea-turtle"
+      ],
+      "animal-common-octopus": [
+        "animal-common-cuttlefish"
+      ],
+      "animal-common-cuttlefish": [
+        "animal-common-octopus"
+      ]
+    },
+    "people": {
+      "person-karl_benz": [
+        "person-bertha_benz"
+      ],
+      "person-bertha_benz": [
+        "person-karl_benz"
+      ],
+      "person-wangari_maathai": [
+        "person-jane_goodall"
+      ],
+      "person-charles_darwin": [
+        "person-alexander_humboldt",
+        "person-mary_anning"
+      ],
+      "person-alexander_humboldt": [
+        "person-charles_darwin"
+      ],
+      "person-mary_anning": [
+        "person-charles_darwin"
+      ]
+    },
+    "technology": {
+      "invention-car": [
+        "invention-bicycle"
+      ],
+      "invention-airplane": [
+        "invention-rocket"
+      ],
+      "invention-computer": [
+        "invention-transistor"
+      ],
+      "invention-internet": [
+        "invention-satellite",
+        "invention-smartphone"
+      ],
+      "invention-compass": [
+        "invention-telescope"
+      ],
+      "invention-rocket": [
+        "invention-satellite"
+      ],
+      "invention-microscope": [
+        "invention-telescope"
+      ],
+      "invention-battery": [
+        "invention-generator"
+      ]
+    }
+  }
+}

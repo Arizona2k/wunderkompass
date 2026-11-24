@@ -418,7 +418,8 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 .stufen-knopf svg { grid-column: 2; grid-row: 1 / span 2; color: var(--kern-petrol); }
 /* Gewählt: dicker Rand und Haken; der Kasten darum ist schon zart petrol. */
 .stufen-knopf[aria-pressed="true"] { border-color: var(--kern-petrol); box-shadow: inset 0 0 0 1px var(--kern-petrol); }
-.stufen-hinweis { margin: 0; font-size: 15px; color: var(--kern-text-leise); }
+/* 16 px wie Fließtext (Design-Prüfung Welt-Spiele, Feinschliff 1 und 2). */
+.stufen-hinweis { margin: 0; font-size: 16px; color: var(--kern-text-leise); }
 /* Vorschlag in der Rückmeldung (E8): klein, freundlich, nie ein Fenster. Zwei gleich starke Knöpfe mit Abstand,
    auf dem Handy untereinander in voller Breite (Design-Prüfung Teil A, Befund 2). */
 .stufen-vorschlag {
@@ -444,6 +445,8 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
   justify-self: start;
   min-height: var(--kern-tipp);
   padding: 0 4px;
+  /* Text bündig mit „Stufe:“ (Design-Prüfung Welt-Spiele, Feinschliff 3). */
+  margin-inline-start: -4px;
   border: 0;
   background: none;
   color: var(--kern-petrol-dunkel);
@@ -453,6 +456,17 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
   text-decoration: underline;
   text-underline-offset: 3px;
   cursor: pointer;
+}
+
+/* Welt-Spiele (Teil B, Aufgabe 8): Abstand zwischen Stufenzeile und „AUFGABE 1 VON 5“; auf Handys ein niedrigeres Foto,
+   damit die Antworten näher an den sichtbaren Bereich rücken (Design-Prüfung Welt-Spiele, Muss 2 und Feinschliff 1). */
+.world-game-room .stufen-wahl { margin-bottom: 12px; }
+/* Beim Öffnen rollt die Seite zum Spiel (Spieltest Welt-Spiele, G); etwas Luft über dem Titel. */
+.world-game-room { scroll-margin-top: 12px; }
+@media (max-width: 560px) {
+  /* .game-board dazu: globals.css lädt nach dieser Datei und setzt .world-game-room .world-photo auf 20 px. */
+  .world-game-room .game-board .world-photo { margin: 12px 0; }
+  .world-game-room .world-photo.compact img { height: 150px; }
 }
 
 @media (forced-colors: active) {

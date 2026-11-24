@@ -10,6 +10,7 @@ import {retainedAnimalRounds} from './animal-game-saves.mjs';
 import {animalFlow, animalNativeZoom} from './animal-learning.mjs';
 import {backupFlow} from './backup.mjs';
 import {challengeHints} from './challenge-hints.mjs';
+import {spielAuswahl} from './spiel-auswahl.mjs';
 import {discoveryVisitCases, homepageOverview} from './discovery-central.mjs';
 import {componentFlow, performanceFlow} from './foundation.mjs';
 import {habitatAnswerSemantics} from './habitat-answer-semantics.mjs';
@@ -49,6 +50,7 @@ export const SUITES = [
   // Ein voller Pass mit über 256 Spielständen verliert beim Import, Neuladen und Sichern nichts (BACKLOG 18).
   {name: 'pass-spielstaende', set: 'ci', run: async ctx => { await passSpielstaende(ctx); await stufeImPass(ctx); }},
   {name: 'animal-game-saves', set: 'ci', run: flow(retainedAnimalRounds)},
+  {name: 'spiel-auswahl', set: 'ci', run: spielAuswahl},
   {name: 'habitat-answer-semantics', set: 'ci', run: flow(habitatAnswerSemantics)},
   // Dazu: alte richtige Antwort nach umformulierter Rate-mal-Frage (Aufgabe 10).
   {name: 'retained-answer-wording', set: 'ci', run: async ctx => {

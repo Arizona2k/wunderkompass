@@ -3,16 +3,30 @@ import {animalDetectiveClue,personRecognitionClue} from './world-game-support.mj
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
+import TIER_FALLEN from './world-game-tier-fallen.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
+// „Erst in der Zukunft“ passt zu den Stufen der Erfindungskarten (Früher, Heute, Zukunft) und ist bei jeder Aufgabe klar falsch
+// (kinder-redaktion und fakten-pruefer, 24.11.2026).
+export const DRITTE_ANTWORT='Erst in der Zukunft';
+// Bis 24.11.2026 hatte jede Aufgabe ihre eigene dritte Antwort; gespeicherte Runden dürfen sie behalten.
+const ALTE_DRITTE_ANTWORT:Record<string,string>={Früher:'Noch keine wirkliche Entwicklung',Heute:'Nur ein Zukunftswunsch'};
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
 // Recognition questions can keep older real topic names as distractors. Factual
 // choices in the other games remain tied to the current question's answer set.
+// Auf Profi haben diese drei Spiele eine Antwort mehr (Teil B, Schritt 8.2): die richtige und drei Namen aus dem Vorrat.
+// Lebensraum und Nahrung ziehen ihre Fallen je Runde aus einer geprüften Liste je Tier (Schritt 8.3): gültig sind die richtige
+// Antwort, die alten festen Sätze (alte Runden) und die Fallen aus der Liste, drei oder auf Profi vier Antworten.
 export function validWorldGameOrder(value:unknown,current:GameItem,pool:GameItem[],gameId?:string):value is string[]{
- if(!Array.isArray(value)||value.length!==current.answers.length||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
+ const recognition=!!gameId&&['animal-detective','people','technology'].includes(gameId);
+ const tierListe=gameId==='habitats'?TIER_FALLEN.lebensraum:gameId==='food'?TIER_FALLEN.nahrung:null,fallen=(tierListe as Record<string,{entdecker:string[];profi:string[]}>|null)?.[current.id];
+ if(!Array.isArray(value)||!(value.length===current.answers.length||(recognition||!!fallen)&&value.length===current.answers.length+1)||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
  if(value.every(answer=>current.answers.includes(answer)))return true;
- if(!gameId||!['animal-detective','people','technology'].includes(gameId)||!value.includes(current.answers[current.correct]))return false;
+ const alteDritte=gameId==='then-now'&&current.answers.includes(DRITTE_ANTWORT)?ALTE_DRITTE_ANTWORT[current.answers[current.correct]]:undefined;
+ if(alteDritte){const alt=current.answers.map(answer=>answer===DRITTE_ANTWORT?alteDritte:answer);return value.length===alt.length&&value.every(answer=>alt.includes(answer));}
+ if(fallen)return value.includes(current.answers[current.correct])&&value.every(answer=>current.answers.includes(answer)||fallen.entdecker.includes(answer)||fallen.profi.includes(answer));
+ if(!recognition||!value.includes(current.answers[current.correct]))return false;
  const names=new Set(pool.map(question=>question.answers[question.correct]));
  return value.every(answer=>names.has(answer));
 }
@@ -41,7 +55,9 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
   const prompt=t.invention!.recognitionClue?'Welche Erfindung passt zu dieser Beschreibung? '+t.invention!.recognitionClue:(t.invention!.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+t.invention!.stages[0].text;
   return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],t.invention!.stages[2].text));
  });
- if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute','Noch keine wirkliche Entwicklung'],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,t.invention!.comparisonQuestion??question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher','Nur ein Zukunftswunsch'],t.invention!.stages[3].text)),id:t.id+'-today'}]);
+ // Früher oder heute? Alle Aufgaben haben dieselbe dritte Antwort (Stufen-Prüfung Teil B, M1): Vorher stand bei „Früher“
+ // immer „Noch keine wirkliche Entwicklung“ und bei „Heute“ immer „Nur ein Zukunftswunsch“; die Falle verriet die Lösung.
+ if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute',DRITTE_ANTWORT],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,t.invention!.comparisonQuestion??question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher',DRITTE_ANTWORT],t.invention!.stages[3].text)),id:t.id+'-today'}]);
  if(id==='food')return animals.map(t=>q(t,question('Welche Beschreibung passt zur Nahrung? Tier: '+t.title+'.',t.animal!.diet,foodDistractors(t.id),t.facts.find(f=>f.label==='Was frisst es?'||f.label==='Nahrung')?.text??t.animal!.diet),t.image));
  if(id==='habitats')return animals.map(t=>q(t,question('Welcher Lebensraum passt in freier Natur? Tier: '+t.title+'.',t.animal!.habitat,habitatDistractors(t.id),t.title+': '+(t.facts.find(f=>f.label==='Lebensraum')?.text??t.animal!.habitat)),t.image));
  return animals.map((t,i)=>{const clue=animalDetectiveClue(t.id).clue;return q(t,question('Wer bin ich? '+clue,t.title,[animals[(i+5)%animals.length].title,animals[(i+9)%animals.length].title],'Gesucht ist '+t.title+'. So beschreibt sich das Tier: „'+clue+'“'));});

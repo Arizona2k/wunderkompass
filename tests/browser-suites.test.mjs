@@ -13,7 +13,7 @@ const SETS = ['smoke', 'ci', 'full'];
 // jeder PR prüft sie in Chromium (Pflicht, offline-cold und backup auch in WebKit) und in der Engine-Schnellprüfung
 // in Firefox und WebKit.
 const PASS_OFFLINE = [
-  'offline-cold', 'no-news', 'backup', 'pass-spielstaende', 'animal-game-saves', 'habitat-answer-semantics',
+  'offline-cold', 'no-news', 'backup', 'pass-spielstaende', 'animal-game-saves', 'spiel-auswahl', 'habitat-answer-semantics',
   'retained-answer-wording', 'journey-transfer', 'research-transfer', 'offline-retention',
   'pass-atlas', 'portable-flows', 'kern-huelle', 'people-learning', 'wissenskarte',
 ];

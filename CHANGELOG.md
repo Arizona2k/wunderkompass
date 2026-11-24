@@ -3,6 +3,30 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil B, erster Teil: Wissensspiele mit Stufen
+
+Die ersten beiden Aufgaben von Teil B „Spiele kniffliger“. Für Kinder sichtbar:
+
+- **Deine Stufe gilt jetzt auch in sechs Wissensspielen:** „Tierdetektiv – neue Spuren“, „Tier & Lebensraum“, „Wer frisst was?“, „Wer war das?“, „Technik-Detektiv“ und „Früher oder heute?“
+  - **Entdecker:** 5 Aufgaben mit 3 Antworten.
+  - **Profi:** 8 Aufgaben, meist mit 4 Antworten (bei „Früher oder heute?“ bleiben es 3 feste Antworten). Die falschen Antworten sind näher dran, zum Beispiel Tiere aus derselben Tiergruppe oder Personen und Erfindungen aus derselben Zeit.
+  - **Experte:** spielt vorerst Profi und sagt das auch.
+  - Die Stufe lässt sich oben im Spiel ändern. Dann beginnt gleich eine neue Runde in der neuen Stufe.
+- **Was du falsch hattest, kommt später wieder:** In den Wissensspielen und in der Wissens-Challenge kommen zuerst Aufgaben, die du falsch beantwortet hast, dann neue. Die Runde, die du gerade gespielt hast, kommt nicht gleich noch einmal.
+- **Mehr Abwechslung:** Bei Tier & Lebensraum und Wer frisst was? wechseln die falschen Antworten von Runde zu Runde. Nach einem Fehler steht da, zu welchem Tier deine Wahl passt.
+- **Klarere Rätsel:** Rotfuchs und Aal haben neue Rätsel mit einem Merkmal, das nur sie haben (Mäusesprung, Sargassosee). Bei „Wer war das?“ haben neun Personen eigene Rätsel, zum Beispiel Darwin, Einstein, Mandela und Mae Jemison. Darin steht nur, was auch auf ihrer Karte steht. Die Rätsel verraten weder den Namen noch, ob ein Mann oder eine Frau gesucht ist. Mitten im Satz steht jetzt „diese Person“ statt „Diese Person“.
+- **Früher oder heute?:** Die dritte Antwort heißt jetzt bei jeder Aufgabe „Erst in der Zukunft“, wie die drei Zeiten auf den Erfindungskarten. Vorher hing die dritte Antwort von der Lösung ab und verriet sie. Gespeicherte Runden mit der alten Antwort laufen weiter.
+- **Bequemer spielen:** Ein Spiel öffnet oben statt mitten in der Spieleliste. Nach einer richtigen Antwort springt der Fokus auf „Nächste Aufgabe“, am Ende auf „Eine ganze Runde gelöst!“. Auf dem Handy ist das Foto in der Runde kleiner, damit die Antworten schneller zu sehen sind. Die Stufe Profi heißt in der Auswahl jetzt „etwas kniffliger“.
+
+Hinter den Kulissen:
+
+- **Ein Auswahl-Helfer für alle Rundenspiele** (`app/kern/auswahl.ts`): Er sucht die Aufgaben einer Runde aus. Kreuz und quer, Klassik und die Länder-Spiele nutzen ihn in den nächsten Aufgaben auch.
+- **Geprüfte falsche Antworten:** Der `fakten-pruefer` hat jede mögliche falsche Antwort geprüft. Passt ein Hinweis auch auf eine falsche Antwort, kommt sie nie (29 Ausschlüsse bei Tierdetektiv, Personen und Technik). Bei Lebensraum und Nahrung sind 112 Paare gestrichen, die in Wirklichkeit doch teilweise passen, etwa „Gebirge“ beim Löwen ([Bericht](docs/entwurf/2026-11-24-tier-fallen-faktenpruefung.md)).
+- **Geschaffte Stufe gemerkt:** Jedes dieser Spiele merkt sich still die höchste geschaffte Stufe. Die goldenen Belohnungen dafür kommen in Teilschritt 5.
+- **Tests:** Je ein neuer Test für den Auswahl-Helfer, die Welt-Spiel-Runden und das Ratemuster („die richtige Antwort ist nie auffällig oft die längste“). Dazu ein neuer Browser-Test `spiel-auswahl` für Stufenwechsel, Neuladen und „Neue Runde“. Dazu Tests für die eigenen Rätsel (kein Name, kein Geschlecht) und für Runden mit der alten dritten Antwort.
+- Entscheidungen und Verschobenes: [Entscheidungsliste](docs/entwurf/2026-11-24-teil-b-entscheidungen.md), BACKLOG Phase 1, Punkt 25.
+- **Messwerte:** Funde vor dem PR: 19 (`code-pruefer`: 2 Fehler und 3 behobene Risiken; `stufen-pruefer`: 5 Muss-Befunde, darunter die verratende dritte Antwort; `design-pruefer`: 2 Muss-Befunde und der Fokus nach einer richtigen Antwort; `spieltester`: das Spiel öffnete mitten in der Seite; `kinder-redaktion`: „Benzinmotor“ verriet „Benz“; `fakten-pruefer`: das Einstein-Rätsel stand nicht auf der Karte; Claude: das Hochrollen klappte nur manchmal (eigener Browser-Test), die Neuigkeit war zu lang (Unit-Test), der Browser-Test `habitat-answer-semantics` erwartete bei alten Spielständen noch die festen falschen Antworten (`pnpm run check`; nur im Test, beim Suchen der betroffenen Tests übersehen)). Dazu kommt die Faktenprüfung der falschen Antworten mit 29 Ausschlüssen und 112 gestrichenen Paaren. · späte Funde: 0 (die großen Suiten `core`, `animals`, `playground`, `challenge` und `offline-cold-full` waren auf `29af565` grün) · Dauer: rund 3 Stunden (Beginn gegen 13:56 UTC; [PR #111](https://github.com/Arizona2k/wunderkompass/pull/111), Merge direkt nach grüner CI dieses Unterlagen-Commits, erwartet gegen 17:00 UTC).
+
 ## 24.11.2026 – Teil B, Vorarbeiten: keine toten Knöpfe, schnellerer Start, ruhigere Tests
 
 Bevor die Spiele kniffliger werden (Teil B), drei Vorarbeiten. Für Kinder sichtbar:

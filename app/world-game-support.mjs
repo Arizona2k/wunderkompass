@@ -4,20 +4,34 @@ const detective=new Map(clues.entries.map(row=>[row.id,row]));
 /** @param {string} id */
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
 /** @param {{title:string,intro:string}} topic */
+// Eigene Personen-Rätsel statt des Kartenanfangs. Darwin und Einstein: eindeutige Rätsel (Teil B, Entscheidungsliste Punkt 7).
+// Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin und Einstein: ohne „er“, „sie“, „sein“, „ihr“ und Berufswörter,
+// die verraten, ob ein Mann oder eine Frau gesucht ist (Stufen-Prüfung Teil B, M5). Nur Aussagen, die auf der Karte stehen
+// (Einstein vorher mit E = mc², das auf keiner Karte steht; Benz vorher mit „Benzinmotor“, das den Namen verrät).
+// Fassungen nach kinder-redaktion und fakten-pruefer samt Nachprüfung, 24.11.2026 (docs/entwurf/2026-11-24-welt-spiele-texte-*.md).
+/** @type {Record<string,string>} */
+export const EIGENE_RAETSEL={
+ 'person-charles_darwin':'Fast fünf Jahre lang reiste diese Person mit dem Schiff „Beagle“. Später erklärte diese Person, wie sich Lebewesen über viele Generationen verändern.',
+ 'person-albert_einstein':'Diese Person untersuchte Licht, Raum und Zeit. Dabei spielte diese Person im Kopf ganz genau durch: Was passiert dann?',
+ 'person-karl_benz':'Diese Person entwickelte einen frühen Motorwagen. Dafür mussten Motor, Lenkung und Bremsen gut zusammenpassen.',
+ 'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher übers Rechnen. Darin ging es auch um Algebra: das Rechnen mit unbekannten Zahlen.',
+ 'person-neil_armstrong':'Diese Person landete mit Buzz Aldrin auf dem Mond. Die Reise hieß Apollo 11.',
+ 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Die Apartheid teilte Menschen nach der Hautfarbe in Gruppen ein und gab ihnen ungleiche Rechte. 1994 wurde diese Person das Oberhaupt des Landes.',
+ 'person-murasaki_shikibu':'Diese Person lebte vor über 1000 Jahren am Hof des Kaisers von Japan. Dort schrieb diese Person die Erzählung vom Prinzen Genji.',
+ 'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Außerdem malte diese Person Bilder: Aus frei gezogenen Linien wurden neue Formen.',
+ 'person-mae_jemison':'Diese Person kannte sich mit Medizin und Technik aus. 1992 flog diese Person mit der Raumfähre Endeavour ins All und forschte dort.'
+};
 export function personRecognitionClue(topic){
  // These delivered riddles stay independent of a richer biography opening.
  // Reordered/parenthetical name parts must not reveal the requested person.
- const retained={
-  'person-karl_benz':'Diese Person entwickelte einen Wagen mit Benzinmotor.',
-  'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.'
- };
- if(Object.hasOwn(retained,topic.id))return retained[topic.id];
+ if(Object.hasOwn(EIGENE_RAETSEL,topic.id))return EIGENE_RAETSEL[topic.id];
  const variants=[topic.title],optional=topic.title.match(/^(.*?)\s*\(([^()]*)\)(.*)$/u);
  if(optional){const[,before,alternative,after]=optional;variants.push((before+after).trim(),after.trim()?(before.replace(/\S+\s*$/u,'')+alternative+after).trim():alternative.trim());}
  let clue=topic.intro;
  for(const name of [...new Set(variants.filter(Boolean))].sort((a,b)=>b.length-a.length)){
   const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-  clue=clue.replace(new RegExp('(?<![\\p{L}\\p{N}])'+escaped+'(?![\\p{L}\\p{N}])','giu'),'Diese Person');
+  // Am Satzanfang „Diese Person“, mitten im Satz „diese Person“ (fakten-pruefer 24.11.2026: „Mit 26 Jahren begann Diese Person …“).
+  clue=clue.replace(new RegExp('(?<![\\p{L}\\p{N}])'+escaped+'(?![\\p{L}\\p{N}])','giu'),(_,offset,text)=>/^\s*$|[.!?:]\s*$/u.test(text.slice(0,offset))?'Diese Person':'diese Person');
  }
  return clue;
 }
@@ -54,6 +68,12 @@ export function worldGameWrongFeedback(game,item,answer){
   if(answer==='Baumkronen im tropischen Regenwald')return 'Du hast die oberen Zweige von Bäumen gewählt. Vergleiche das mit der Fortbewegung und Nahrungssuche dieses Tieres.';
   if(answer==='Unter Wasser in einem warmen Korallenriff')return 'Diese Wahl liegt dauerhaft unter Wasser. Prüfe, ob das zum ganzen Leben des gesuchten Tieres passt.';
   if(answer==='Meereis der Antarktis')return 'Diese Wahl liegt in der südlichen Polarregion. Vergleiche Klima und Lage mit dem Lebensraum dieses Tieres.';
+ }
+ // Gezogene Fallen sind Texte anderer Tiere (Teil B, Schritt 8.3): Die Rückmeldung nennt ein Tier, zu dem die Wahl passt.
+ if(game==='habitats'||game==='food'){
+  const feld=game==='habitats'?'habitat':'diet',anderes=catalog.find(t=>t.animal&&t.id!==item.id&&t.animal[feld]===answer),gesucht=catalog.find(t=>t.id===item.id);
+  // Namen nur hinter einem Doppelpunkt, weil Artikel fehlen; die Wahl wird nicht wiederholt (kinder-redaktion 24.11.2026).
+  if(anderes&&gesucht)return 'Diese Wahl passt zum Beispiel zu: '+anderes.title+'. Gesucht ist aber: '+gesucht.title+'. '+(game==='habitats'?'Wo findet dieses Tier Futter und Schutz?':'Frisst dieses Tier Pflanzen, andere Tiere oder beides?');
  }
  if(game==='animal-detective'){
   const selected=catalog.find(t=>t.title===answer&&t.animal);
