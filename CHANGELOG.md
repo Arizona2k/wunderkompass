@@ -12,6 +12,8 @@ Aus dem ersten Spieltest (Rolle am Handy, kein Kindertest). Für Kinder sichtbar
 - **Falsch sieht falsch aus:** Am Handy sah eine falsch angetippte Antwort grünlich aus, fast wie eine richtige. Jetzt bleibt sie orange, auf der Karte und in den Spielen. Im Wissensbuch ist die gewählte Antwort einer Denkfrage jetzt auch am Handy markiert.
 - **Elefant:** Eine Profi-Frage verriet die Experten-Frage; sie ruht jetzt. Neu ist eine Frage zu den Stoßzähnen. Ein paar Sätze sind genauer (geprüft von Sprache, Fakten und Stufen).
 - Je Fehler ein Test; eine neue Liste schützt die gespeicherten Antworten.
+- **Arbeitsweise:** Zwei neue Regeln (Wunsch des Nutzers). Bevor Claude eine Änderung am Verhalten empfiehlt, prüft es alle Wege dorthin (Wissensbuch, Lernrouten, Zurück, Neuladen). Und jeder PR bekommt drei Messwerte, damit sich zeigt, ob wir schneller werden und weniger spät finden.
+- **Messwerte:** Funde vor dem PR: 10 (Helfer; dazu die geprüften Elefanten-Entwürfe) · späte Funde: 0 · Dauer: wird beim Merge eingetragen.
 
 ## 24.11.2026 – Teil A ist auf der Testseite; Prüfungen verlässlicher
 

@@ -89,3 +89,12 @@ Rolle „11 Jahre, allein, will es schwer haben“, Handy 390 px, lokaler Build.
 ## Hinweis
 
 - Hinweis: Der Schluss erscheint auf Profi und Experte immer (auch nach nur einer Frage), auf Entdecker nur nach mehr als einer Frage.
+
+## Messwerte dieses PR (erste Zählung, 24.11.2026)
+
+Regel seit 24.11.2026 (`CLAUDE.md`, Arbeitsablauf Punkt 7). Gezählt sind Fehler, keine reinen Stilvorschläge.
+
+- **Funde vor dem PR: 10.** `code-pruefer` (erster Commit): „Zurück“ fand den Knopf nicht wieder; der Knopf zur Nachbarkarte führte aus einer Lernroute; Schluss uneinheitlich auf Entdecker. `code-pruefer` (Nachprüfung): Farbtest in Firefox/WebKit ohne Beleg (W1); „Was ist neu?“ versprach zu viel (K1); Wahl einer Denkfrage im Wissensbuch am Handy nicht sichtbar (K5). `spieltester`: Entdecker-Hauptfrage nach „Zurück“ auf Profi. `kinder-redaktion`: „Experte-Fragen“; „Alle …“ bei nur einer Frage. `design-pruefer`: Die Hover-Regel in den Spielen (`playground.css`) hatte denselben Fehler wie die auf den Karten. Dazu kamen die geprüften Elefanten-Entwürfe (`stufen-pruefer`, `fakten-pruefer`, `kinder-redaktion`), hier nicht mitgezählt, weil Prüfen von Entwürfen der normale Weg ist.
+- **Nach dem PR, vor dem Merge:** eine Lücke in Claudes eigener Empfehlung (Weg über das Wissensbuch), von Claude beim Bauen gefunden, nicht von einem Helfer. Daraus die Regel „Alle Wege prüfen“.
+- **Späte Funde: 0** (Stand vor dem Merge; CI auf dem Endstand steht noch aus).
+- **Dauer:** Beginn der Arbeit 24.11.2026, 08:58 UTC; Merge wird nachgetragen.

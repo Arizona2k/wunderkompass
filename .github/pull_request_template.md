@@ -21,4 +21,4 @@
 
 ## Nachgeführt
 
-- [ ] `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`
+- [ ] `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md` (mit Messwerten)
