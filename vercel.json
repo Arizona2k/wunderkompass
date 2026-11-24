@@ -27,7 +27,8 @@
   "git": {
     "deploymentEnabled": {
       "**": false,
-      "test-live": true
+      "test-live": true,
+      "vorschau": true
     }
   }
 }
