@@ -49,3 +49,14 @@ Bildschirmleser; Kacheln auf Listen- und Startseiten; Firefox, WebKit; Lizenzurt
 - 1: Steht ein Kennwort auf dem Kartenbild, beginnt ein `contain`-Bild 46 px unter dem Rand (`app/kern/karte/karte.css`).
 - 2: Bildhöhe 360 px schon ab 600 px Breite.
 - 3 bis 8: ins BACKLOG (Punkt 26 und 27). 5 berührt die Browser-Tests, die den Lizenztext wörtlich suchen.
+
+## Nachprüfung der Befunde 1 und 2 (24.11.2026, `design-pruefer`)
+
+Geprüft gegen den fertigen Build (Stand `139579e`), Chromium, Gerätefaktor 1; Breiten 320, 390, 768, 1280, 1440 und die Grenzen 599, 600, 640, 899, 900, 1024 px; Gutenberg, Ibn al-Haytham, Meitner, Ibn Sina, Murasaki, Anning, Merian, Tagore, Okapi, Kompass, Fahrrad. Nirgends waagerechtes Scrollen. Der Helfer hat nichts geändert.
+
+- **Befund 1 behoben.** Kennwort-Pille 28 px hoch (Unterkante 38 px), Bild beginnt bei 46 px: 8 px Abstand bei allen Breiten und allen Kennwort-Karten. Bei 320/390 px liegen Pille und Bild waagerecht übereinander, senkrecht getrennt – stört nicht.
+- **Befund 2 behoben.** Ibn al-Haytham bei 768 px 227 × 300 px (vorher 176 × 232), Gutenberg 231 × 300, Anning 232 × 300, Meitner 443 × 332 (vorher etwa 310 × 232). Rahmen springt genau bei 600 px von 260 auf 360 px, keine Lücken zwischen 600 und 899 px. Einschränkung: Hochformate füllen bei 768 px nur etwa 31 % der Rahmenbreite (bei `contain` nicht anders möglich), wirken aber ruhig.
+- **Nichts Neues kaputt:** Querformat-Fotos bei 600–899 px gefüllt, nichts Wesentliches abgeschnitten; Karten ohne Kennwort ohne zusätzlichen Abstand; Ibn Sina weniger beschnitten (Randstreifen bleiben, Kleinigkeit 3).
+- **Neue Kleinigkeit (nicht von dieser Änderung):** `sizes` der Kartenbilder sagt bei 641–1100 px „50vw“, das Bild steht bis 899 px aber in voller Breite (bis etwa 760 px); bei Gerätefaktor 1 lädt der Browser die 640er-Datei, leicht weich. Vorschlag: `(max-width:899px) calc(100vw - 40px), (max-width:1100px) 50vw, 480px`.
+- **Nicht geprüft:** Firefox, WebKit, Retina und echte Geräte, Tablet quer, Tastatur, „Bewegung reduzieren“, Bildschirmleser, Kacheln auf Listen- und Startseiten, Kennwort auf `cover`-Bildern, Lehmann und Butler.
+- Screenshots (nur im Container dieses Chats): `scratchpad/design-nachpruefung/`.
