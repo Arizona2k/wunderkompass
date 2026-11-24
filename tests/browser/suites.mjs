@@ -21,7 +21,7 @@ import {offlineRetention} from './offline-retention.mjs';
 import {passDesign} from './pass-atlas.mjs';
 import {peopleLegacyRound} from './people-learning.mjs';
 import {playgroundFlow} from './playground.mjs';
-import {memoryRound, searchAndHistory} from './portable-flows.mjs';
+import {memoryRound, searchAndHistory, tippenWaehrendKapiteltexteKommen} from './portable-flows.mjs';
 import {researchFlow} from './research.mjs';
 import {researchTransferFlow} from './research-transfer.mjs';
 import {retainedAnswerWordingFlow, alteAntwortNachUmformulierung} from './retained-answer-wording.mjs';
@@ -67,6 +67,7 @@ export const SUITES = [
       await searchAndHistory(page, ctx.report);
       await memoryRound(page, ctx.ready, ctx.report);
     });
+    await tippenWaehrendKapiteltexteKommen(ctx, ctx.report);
   }},
   {name: 'kern-huelle', set: 'ci', run: kernHuelle},
   {name: 'wissenskarte', set: 'ci', run: wissenskarte},

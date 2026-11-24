@@ -2,7 +2,8 @@
 // Läuft einmal schmal mit Touch (360 × 800) und einmal breit (1440 × 900).
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import {ready, withPage} from './harness.mjs';
+import {browserErrorsSettled} from '../../scripts/browser-errors.mjs';
+import {ladeanfragen, ready, withPage} from './harness.mjs';
 
 const SAVE_KEY = 'erde-entdecken:save:v3';
 const TOPIC = 'animal-polar-bear';
@@ -15,6 +16,7 @@ export async function smoke(ctx) {
   for (const view of VIEWS) {
     await withPage(ctx, view, async page => {
       const width = view.width;
+      const anfragenFertig = ladeanfragen(page);
       const screenshot = name => page.screenshot({path: path.join(ctx.shots, `${name}-${width}.png`)});
 
       await page.locator('.discovery-hero').waitFor();
@@ -41,6 +43,14 @@ export async function smoke(ctx) {
       await page.goto(ctx.base + '#news/girl-day-2026');
       await ready(page);
       await page.waitForFunction(() => location.hash === '#home');
+      // Die Startseite erst fertig laden lassen, dann weiter. Hat sie vor dem Neuladen schon ein Foto gezeigt (zufälliges
+      // Entdeckungspaar, z. B. das Riff), fragt Firefox jetzt nach, ob seine Kopie noch gilt, bricht die Nachfrage selbst ab
+      // und zeigt die Kopie. Die Überwachung streicht diesen Abbruch nur, wenn sie das Foto danach auf der Seite sieht
+      // (scripts/browser-errors.mjs, Fall 2). Ging der Test 30 ms später schon zur Reise, blieb er rot (Engine-Schnellprüfung
+      // Firefox, Lauf 45348967989, 24.11.2026; lokal 2 von 6 Läufen mit fest eingestelltem Riff-Paar).
+      await page.locator('.discovery-hero').waitFor();
+      await anfragenFertig();
+      await browserErrorsSettled(ctx.report);
 
       await page.goto(ctx.base + '#journeys/water');
       await ready(page);

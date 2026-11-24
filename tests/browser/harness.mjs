@@ -23,8 +23,8 @@ export function ready(page) {
 // Zwei Wartepunkte (CI-Lauf 45344729398, WebKit, 24.11.2026):
 // 1. Erst tippen, wenn die Kapiteltexte da sind. Sie kommen meist genau dann an, wenn das Suchfeld erscheint.
 //    Fiel `fill` in diesen Moment, war das Feld danach leer (in der CI und 1-mal in rund 1000 Probeläufen;
-//    warum genau, ist offen, siehe BACKLOG). Kommen die Kapiteltexte erst nach dem Tippen, bleibt die Eingabe:
-//    Das prüft journey-content („Typed query retained while full-text search data arrives“).
+//    warum genau, ist offen, siehe BACKLOG). Diesen Moment mit echtem Tippen prüft eigens
+//    `tippenWaehrendKapiteltexteKommen` (portable-flows.mjs, CI-Satz, alle drei Browser).
 // 2. Erst danach die Treffer lesen: Vorher stehen dort die Startideen (erste: lab:moon).
 //    „Passende Entdeckungen“ erscheint nur über Treffern zu einer Eingabe.
 export async function inSucheTippen(page, text) {
