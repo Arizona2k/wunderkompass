@@ -124,7 +124,7 @@ test('Kreuz und quer wählt je Stufe aus dem passenden Vorrat',()=>{
   assert.ok(x.ids.slice(0,Math.min(3,experten.length)).every(id=>experten.includes(id)),'sie kommen zuerst');
   assert.ok(x.ids.filter(id=>!experten.includes(id)).every(id=>stufeVon(id)==='profi'),'dann Profi-Fragen');
  }
- assert.match(EXPERTEN_HINWEIS,/Experten-Fragen gibt es hier erst wenige/);
+ assert.equal(EXPERTEN_HINWEIS,'Hier gibt es erst wenige Experten-Fragen. Du bekommst bis zu drei, danach Profi-Fragen.');
 });
 test('Hauptfragen sind Entdecker, Challenge-Fragen ohne Einstufung Profi',()=>{
  for(const q of CHALLENGE_BANK)assert.equal(stufeDerFrage(q),q.id.endsWith(':mini')?'entdecker':(q.level??'profi'),q.id);

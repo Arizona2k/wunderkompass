@@ -88,7 +88,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    await p.getByRole('heading',{name:'Zusammenhänge entdeckt!',exact:true}).waitFor();assert.equal(snapshot.done,true);assert.equal('firstCorrect' in snapshot,false);assert.ok((await state(p)).games.includes(game));
    assert.equal(await room.getByText(/beim ersten Versuch/).count(),0,'kein Zähler auf dem Abschlussbild (E13)');assert.equal(await room.getByRole('button',{name:/Unsichere Aufgaben/}).count(),0);
    await p.screenshot({path:shots+'/playground-finish-'+game+'-'+stufe+'-390.png',fullPage:true});
-   await room.getByRole('button',{name:'Neue Aufgabenfolge auf dieser Stufe',exact:true}).click();
+   await room.getByRole('button',{name:'Noch eine Runde auf deiner Stufe',exact:true}).click();
    await p.waitForFunction(({key,game})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r&&!r.done&&r.index===0&&r.answer===null;},{key:SAVE_KEY,game});
    const neu=(await state(p)).gameSessions[game];assert.equal(neu.learningRound.done,false);assert.equal(neu.learningRound.stufe,gespielt);assert.deepEqual(neu.vorige,snapshot.ids,'die gespielte Runde ist gemerkt');
    if(gespielt==='profi')assert.equal(neu.learningRound.ids.some(id=>snapshot.ids.includes(id)),false,'die nächste Profi-Runde wiederholt die vorige nicht');
