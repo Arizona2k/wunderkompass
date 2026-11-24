@@ -4,7 +4,7 @@
 
 ## Was kann man sich ansehen?
 
-<!-- Screenshots (Handy und Rechner). Arbeits-Branches haben keine Vercel-Vorschau; nach dem Merge ist die Änderung auf der Test-Seite. -->
+<!-- Screenshots (Handy und Rechner). Bei sichtbaren Änderungen den Link zur Vorschau (Branch `vorschau`, CLAUDE.md, Abschnitt Vercel); nach dem Merge ist die Änderung auf der Test-Seite. -->
 
 ## Prüfung
 
