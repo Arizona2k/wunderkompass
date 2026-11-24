@@ -181,6 +181,8 @@ Ergebnis des `code-pruefer` zu `ae5810c`: bereit, kein Befund vor dem Merge nöt
 5. **`learning-task-offline.mjs` lädt offline achtmal ohne Wartehilfe neu:** umgesetzt für `offline-cold` (dieselbe WebKit-Kurzprüfung bei jedem PR). Die Wartehilfe ist ein freiwilliger Parameter; `offline-resilience` und `journey-zoom` übergeben sie noch nicht, damit sich dort nichts ändert, ohne dass ihre langen Läufe neu nötig werden. Vermerkt im BACKLOG beim zentralen Schritt.
 6. **Zahlen im BACKLOG:** nachgezählt und berichtigt (76 `.reload(`, 128 `.close()`).
 
+Prüfungen auf `7900f38` (danach nur Unterlagen): `pnpm run check` grün (437 Unit-Tests, CI-Satz in Chromium, WebKit-Kurzprüfung mit `offline-cold`), `offline-cold` in Firefox grün, `offline-cold-full` in Chromium grün (202 s).
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
