@@ -131,6 +131,7 @@ Code-Nachprüfung des Design-Commits `00feeff` ([Bericht](2026-11-24-teil-a-code
 - **Befund 3 umgesetzt:** `karte-stufen` (in der CI-Suite `wissenskarte`) prüft jetzt, dass der Vorschlag in der Rückmeldung und vor „Noch eine Frage“ steht. Gegenprobe: ein Build mit dem Vorschlag unter der Rückmeldung macht den Test rot („der Vorschlag steht in der Rückmeldung“, 0 statt 1).
 - **Befund 1 so gelassen:** Die Rückmeldung liest bei jeder Änderung alles neu vor, jetzt mit dem Vorschlag. Das betrifft nur Bildschirmleser und nur, wenn nach dem Vorschlag noch einmal geantwortet wird; nicht mit einem echten Bildschirmleser geprüft. Ansehen bei der nächsten Teilprüfung mit Bildschirmleser (BACKLOG); falls es stört, Rückmeldungstext und Vorschlag in eigene Bereiche trennen.
 - Der erste `core`-Lauf nach `00feeff` (`core-a13`) wurde von mir nach 201 s abgebrochen, weil beide Befunde ohnehin einen neuen Lauf brauchten; vorher stand kein Fehler im Log.
+- Prüfung auf dem Endstand `01bf03a` (24.11.2026): `pnpm run check` grün (`check-a14`: 437 Unit-Tests, CI-Satz in Chromium, WebKit-Kurzprüfung), danach `--suite full core` grün (`core-a15`, 927 s), dazu die zwei geänderten Suiten `wissenskarte` und `pass-spielstaende` in Firefox und WebKit grün (`engines-a16`). Die Antwortliste `gespeicherte-antworten-teil-a.json` ist unverändert aktuell (neu erzeugt und verglichen: gleich, 287 Fragen).
 
 ## Arbeitsweise
 
