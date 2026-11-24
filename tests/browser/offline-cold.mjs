@@ -71,7 +71,7 @@ export async function offlineCold(ctx, {full = false} = {}) {
     try {
       await context.setOffline(true);
       const page = await open(context);
-      // Für das gewollte Neuladen in den Antwort-Prüfungen (offlineRetainedAnswerWording): ab hier alle Ladeanfragen kennen.
+      // Für das gewollte Neuladen in den Antwort-Prüfungen (offlineRetainedAnswerWording, learningTaskOfflineSemantics): ab hier alle Ladeanfragen kennen.
       const anfragenFertig = ladeanfragen(page);
       await page.goto(server.base);
       await page.screenshot({path: path.join(shots, 'offline-start.png')});
@@ -122,7 +122,7 @@ export async function offlineCold(ctx, {full = false} = {}) {
       }
 
       report.worldGameSemantics = await worldGameOfflineSemantics(page, {shots, kind: engine});
-      report.learningTaskSemantics = await learningTaskOfflineSemantics(page, {shots, kind: engine});
+      report.learningTaskSemantics = await learningTaskOfflineSemantics(page, {shots, kind: engine, anfragenFertig});
       report.checks.push('Saved world-game rounds and old research/journey answers work in the cold cached app');
     } finally {
       await context.close();

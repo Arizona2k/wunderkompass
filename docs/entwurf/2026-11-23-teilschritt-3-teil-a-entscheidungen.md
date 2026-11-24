@@ -165,10 +165,21 @@ Code-Nachprüfung des Design-Commits `00feeff` ([Bericht](2026-11-24-teil-a-code
 ## Zeitweiser Fund in `pnpm run check`: WebKit bricht in `offline-cold` Bilder ab
 
 - **Befund:** `check-a20` (Stand `2b3376a`) war in der WebKit-Kurzprüfung rot, Suite `offline-cold`: „Load request cancelled“ für `white-tailed-eagle.webp` und `emperor-penguin.webp`. Dieselbe Suite war vorher in `check-a17`, `check-a18` und in der CI grün.
-- **Ursache:** nicht die Startseite. Seit Teil A läuft im CI-Satz offline die Prüfung alter Antworten auf der Seeadler-Karte (`offlineRetainedAnswerWording`, zweiter später Fund). Sie lädt dort dreimal neu, ohne vorher auf die Ladeanfragen zu warten. Kommt das Neuladen, bevor Seeadler- und Pinguinbild da sind, bricht WebKit sie ab. Belegt mit einem Diagnose-Lauf, der jede Anfrage mit Zeit protokolliert: Im ruhigen Lauf lagen nur 46 ms zwischen dem fertigen Bild und dem Neuladen. Unter Last (vier Läufe gleichzeitig) gab es mit dem alten Test in 4 von 12 Läufen einen Abbruch: dreimal die Bilder, einmal die Fotodaten `world-photos-….json`. Ein weiterer Lauf endete mit „Target page … has been closed“; vermutlich hielt WebKit die künstliche Last nicht aus. Nicht weiter verfolgt; mit dem neuen Test kam es nicht vor.
+- **Ursache:** nicht die Startseite. Seit Teil A läuft im CI-Satz offline die Prüfung alter Antworten auf der Seeadler-Karte (`offlineRetainedAnswerWording`, zweiter später Fund). Sie lädt dreimal neu, ohne vorher auf die Ladeanfragen zu warten: einmal auf der Seite davor (im CI-Satz `science-energy`), zweimal auf der Seeadler-Karte. Kommt eines der zwei späteren Neuladen, bevor Seeadler- und Pinguinbild da sind, bricht WebKit sie ab (berichtigt nach der Code-Prüfung, Befund 3). Belegt mit einem Diagnose-Lauf, der jede Anfrage mit Zeit protokolliert: Im ruhigen Lauf lagen nur 46 ms zwischen dem fertigen Bild und dem Neuladen. Unter Last (vier Läufe gleichzeitig) gab es mit dem alten Test in 4 von 12 Läufen einen Abbruch: dreimal die Bilder, einmal die Fotodaten `world-photos-….json`. Ein weiterer Lauf endete mit „Target page … has been closed“; vermutlich hielt WebKit die künstliche Last nicht aus. Nicht weiter verfolgt; mit dem neuen Test kam es nicht vor.
 - **Korrektur im Test:** `offlineRetainedAnswerWording` wartet vor jedem Neuladen mit `ladeanfragen` (`tests/browser/harness.mjs`), wie die Online-Prüfungen daneben schon. `offline-cold` legt die Wartehilfe gleich nach dem Öffnen der kalten Seite an und reicht sie weiter, in der Vollprüfung über `offlineAnimals`. Gleiche Last mit dem neuen Test: 0 von 12 Läufen mit Abbruch.
 - **Dieselbe Lücke in den neuen Stufen-Tests:** Die drei gewollten Neuladestellen in `karte-stufen.mjs` warten jetzt auch mit `ladeanfragen`. Dort war noch nichts aufgefallen; die Regel in `harness.mjs` gilt aber für jedes gewollte Neuladen. Der Kommentar dort nennt jetzt auch die WebKit-Meldung.
 - Kein später Fund im Sinn der Regel (er kam in `pnpm run check`, nicht erst in der CI-Vollprüfung oder `test:full`). Nachgeführt im BACKLOG beim Punkt „Seitenwechsel im Test“: Der dort geplante zentrale Schritt ist noch offen.
+
+## Code-Prüfung der Offline-Wartehilfe (Bericht `2026-11-24-teil-a-code-pruefung-offline-wartehilfe.md`)
+
+Ergebnis des `code-pruefer` zu `ae5810c`: bereit, kein Befund vor dem Merge nötig. Bewertung:
+
+1. **Meldet Firefox das Ende von Antworten aus dem Service Worker?** Geklärt: `offline-cold` lief auf `ae5810c` in Firefox grün (wie in Chromium und WebKit), die Wartehilfe brach nicht ab. `offline-cold-full` in Chromium grün (185 s).
+2. **Standardwert in `offlineRetainedAnswerWording`:** umgesetzt. Ohne Wartehilfe bricht die Funktion jetzt mit klarer Meldung ab, statt still nur halb zu schützen.
+3. **Erstes Neuladen nicht auf der Seeadler-Karte:** stimmt. Kommentar und Abschnitt oben berichtigt.
+4. **`mitKarte` schließt ohne Wartehilfe:** bleibt; gehört zur Klasse „Schließen“ im BACKLOG (dort vermerkt).
+5. **`learning-task-offline.mjs` lädt offline achtmal ohne Wartehilfe neu:** umgesetzt für `offline-cold` (dieselbe WebKit-Kurzprüfung bei jedem PR). Die Wartehilfe ist ein freiwilliger Parameter; `offline-resilience` und `journey-zoom` übergeben sie noch nicht, damit sich dort nichts ändert, ohne dass ihre langen Läufe neu nötig werden. Vermerkt im BACKLOG beim zentralen Schritt.
+6. **Zahlen im BACKLOG:** nachgezählt und berichtigt (76 `.reload(`, 128 `.close()`).
 
 ## Arbeitsweise
 
