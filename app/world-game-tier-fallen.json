@@ -126,7 +126,6 @@
     "animal-polar-bear": {
       "entdecker": [
         "Feuchte Wälder und Larvengewässer",
-        "Antarktis",
         "Korallenriffe mit Seeanemonen",
         "Felsiger Meeresboden"
       ],
@@ -136,21 +135,22 @@
         "Wald",
         "Gebirge",
         "Trockene offene Landschaften",
-        "Wüste"
+        "Wüste",
+        "Antarktis"
       ]
     },
     "animal-emperor-penguin": {
       "entdecker": [
         "Gewässer, Wälder und Gärten",
         "Gebirge",
-        "Regenwald",
-        "Arktis"
+        "Regenwald"
       ],
       "profi": [
         "Felsiger Meeresboden",
         "Korallenriffe mit Seeanemonen",
         "Flüsse & Seen",
-        "Gewässer, Wälder und Gärten"
+        "Gewässer, Wälder und Gärten",
+        "Arktis"
       ]
     },
     "animal-blue-whale": {
@@ -853,7 +853,6 @@
       ],
       "profi": [
         "Krill",
-        "Vor allem kleine Säugetiere",
         "Kleine Tiere im Plankton",
         "Vor allem wirbellose Bodentiere",
         "Insekten",
@@ -939,16 +938,15 @@
     },
     "animal-green-sea-turtle": {
       "entdecker": [
+        "Bambus",
         "Vor allem kleine Säugetiere",
-        "Vor allem wirbellose Bodentiere",
-        "Insekten",
-        "Vor allem kleine Fische"
+        "Insekten"
       ],
       "profi": [
+        "Vor allem wirbellose Bodentiere",
+        "Vor allem kleine Fische",
         "Nektar und Pollen",
-        "Bambus",
-        "Eukalyptusblätter",
-        "Vor allem kleine Säugetiere"
+        "Eukalyptusblätter"
       ]
     },
     "animal-red-kangaroo": {
@@ -1017,14 +1015,13 @@
         "Gräser und andere Pflanzen",
         "Nektar und Pollen",
         "Bambus",
-        "Eukalyptusblätter",
-        "Früchte, Blätter und auch Insekten"
+        "Eukalyptusblätter"
       ],
       "profi": [
         "Krill",
         "Ameisen und Termiten",
         "Vor allem kleine Säugetiere",
-        "Fleisch"
+        "Früchte, Blätter und auch Insekten"
       ]
     },
     "animal-whale-shark": {

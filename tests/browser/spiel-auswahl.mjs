@@ -59,7 +59,15 @@ export async function spielAuswahl({browser, base, ready, monitor, report}) {
     assert.deepEqual(nachher.gameSessions[SPIEL].challenge.ids, zweite, 'Neuladen ändert die Runde nicht');
     assert.deepEqual(nachher.gameSessions[SPIEL].vorige, erste);
     assert.deepEqual(nachher.favorites, save.progress.favorites, 'der übrige Pass bleibt');
-    report.checks.push('Spielrunden-Auswahl: Challenge liest Wiederholungen aus dem Pass, „Neue Runde“ merkt die vorige Runde, Neuladen behält beides');
+
+    // „Andere Stufe auswählen“ (in der Runde und auf dem Abschlussbild) merkt sich die Runde auch (Code-Prüfung Teil B, PR 1, Fehler 1).
+    await page.locator('.knowledge-challenge').getByRole('button', {name: 'Andere Stufe auswählen', exact: true}).click();
+    await page.locator('.challenge-levels').waitFor();
+    await page.waitForFunction(({key, spiel, ids}) => JSON.stringify(JSON.parse(localStorage.getItem(key)).progress.gameSessions[spiel]?.vorige) === JSON.stringify(ids), {key: SAVE_KEY, spiel: SPIEL, ids: zweite});
+    const dritte = await profiStarten();
+    assert.equal(dritte.some(id => zweite.includes(id)), false, 'nach „Andere Stufe auswählen“ kommt die abgebrochene Runde nicht gleich wieder');
+    assert.ok(dritte.includes(falsch.id), 'die falsche Frage aus der vorletzten Runde kommt jetzt wieder');
+    report.checks.push('Spielrunden-Auswahl: Challenge liest Wiederholungen aus dem Pass, „Neue Runde“ und „Andere Stufe auswählen“ merken die vorige Runde, Neuladen behält beides');
   } finally {
     await context.close();
   }

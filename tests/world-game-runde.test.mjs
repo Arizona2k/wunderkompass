@@ -68,7 +68,7 @@ test('rundenStufe liest die Stufe einer gespeicherten Runde, alte Runden spielen
 });
 
 // Schritt 8.2: Vier Antworten auf Profi im Tierdetektiv, bei Personen und Technik (E5), Fallen aus derselben Gruppe oder Zeit.
-import { profiKandidaten } from '../app/world-game-runde.ts';
+import { profiKandidaten, rundenAntworten } from '../app/world-game-runde.ts';
 import { validWorldGameOrder, restoreWorldGameOrders } from '../app/world-game-bank.ts';
 import CATALOG from '../app/world-catalog.json' with { type: 'json' };
 import FALLEN from '../app/world-game-fallen.json' with { type: 'json' };
@@ -87,8 +87,53 @@ test('Profi zieht im Tierdetektiv, bei Personen und Technik drei Fallen aus den 
       assert.ok(order.filter(a => a !== richtig).every(a => namen.includes(a)), spiel + ' ' + id + ': Fallen nur aus den Kandidaten');
       assert.equal(validWorldGameOrder(order, q, pool, spiel), true, spiel + ' ' + id + ': nach Neuladen gültig');
     }
-    for (const id of leicht.items) assert.deepEqual([...leicht.orders[id]].sort(), [...pool.find(q => q.id === id).answers].sort(), spiel + ': Entdecker wie bisher');
+    for (const id of leicht.items) {
+      // Entdecker behält die festen drei Antworten; nur eine ausgeschlossene Falle wird durch einen geprüften Kandidaten ersetzt (M3).
+      const q = pool.find(q => q.id === id), order = leicht.orders[id], richtig = q.answers[q.correct], nicht = (FALLEN.ausschluss[spiel][id] ?? []).map(k => thema(k).title);
+      const kandidaten = profiKandidaten(spiel, id).map(k => thema(k).title);
+      assert.equal(order.length, 3, spiel + ' ' + id);
+      assert.ok(order.includes(richtig));
+      assert.ok(order.filter(a => a !== richtig).every(a => (q.answers.includes(a) && !nicht.includes(a)) || kandidaten.includes(a)), spiel + ' ' + id + ': feste Fallen oder geprüfte Kandidaten');
+      if (!q.answers.some((a, i) => i !== q.correct && nicht.includes(a))) assert.deepEqual([...order].sort(), [...q.answers].sort(), spiel + ' ' + id + ': ohne Ausschluss wie bisher');
+      assert.equal(validWorldGameOrder(order, q, pool, spiel), true, spiel + ' ' + id + ': nach Neuladen gültig');
+    }
   }
+});
+
+// Stufen-Prüfung Teil B, M3: Auch die festen Entdecker-Fallen beachten die Ausschlussliste (z. B. Chamäleon und Seepferdchen).
+test('Entdecker zeigt keine ausgeschlossene Falle', () => {
+  let ersetzt = 0;
+  for (const spiel of ERKENNEN) {
+    const pool = worldGameBank(spiel);
+    for (const [id, nicht] of Object.entries(FALLEN.ausschluss[spiel])) {
+      const q = pool.find(q => q.id === id), titel = nicht.map(k => thema(k).title).filter(t => t !== q.answers[q.correct]);
+      if (!q.answers.some(a => titel.includes(a))) continue;
+      ersetzt++;
+      for (let seed = 0; seed < 10; seed++) {
+        const order = rundenAntworten(spiel, 'entdecker', [id], zufallAus(seed))[id];
+        assert.equal(order.length, 3, spiel + ' ' + id);
+        assert.equal(order.some(a => titel.includes(a)), false, spiel + ' ' + id + ': ausgeschlossene Falle');
+      }
+    }
+  }
+  assert.ok(ersetzt >= 2, 'mindestens Chamäleon und Internet sind betroffen');
+  const chamaeleon = rundenAntworten('animal-detective', 'entdecker', ['animal-common-chameleon'], zufallAus(1))['animal-common-chameleon'];
+  assert.equal(chamaeleon.includes('Kurzschnäuziges Seepferdchen'), false);
+  const internet = rundenAntworten('technology', 'entdecker', ['invention-internet'], zufallAus(1))['invention-internet'];
+  assert.equal(internet.includes('Das Smartphone'), false);
+});
+
+test('rundenAntworten gibt jeder Aufgabe die Antworten ihrer Stufe, unbekannte Aufgaben fallen weg', () => {
+  for (const spiel of STUFEN_SPIELE) {
+    const items = worldGameBank(spiel).slice(0, 5).map(q => q.id);
+    const leicht = rundenAntworten(spiel, 'entdecker', [...items, 'gibt-es-nicht'], zufallAus(3)), schwer = rundenAntworten(spiel, 'experte', items, zufallAus(3));
+    assert.deepEqual(Object.keys(leicht).sort(), [...items].sort());
+    for (const id of items) {
+      assert.equal(leicht[id].length, 3, spiel + ' ' + id + ': Entdecker');
+      assert.equal(schwer[id].length, spiel === 'then-now' ? 3 : 4, spiel + ' ' + id + ': Experte spielt Profi');
+    }
+  }
+  assert.equal(rundenAntworten('records', 'profi', ['animal-blue-whale'], zufallAus(3))['animal-blue-whale'].length, 3, 'Spiele ohne Stufen bleiben bei drei');
 });
 
 test('Tierdetektiv-Kandidaten stammen aus derselben Tiergruppe, Personen und Technik aus derselben Zeit', () => {
@@ -139,6 +184,7 @@ test('„Wer war das?“ schreibt „diese Person“ mitten im Satz klein', () =
 // Schritt 8.3: Lebensraum und Nahrung ziehen ihre Fallen je Runde aus einer geprüften Liste je Tier (E9; Entscheidungsliste Punkt 6).
 import TIER_FALLEN from '../app/world-game-tier-fallen.json' with { type: 'json' };
 import { worldGameWrongFeedback } from '../app/world-game-support.mjs';
+import { worldGameAnswerCorrect } from '../app/world-game-habitats.mjs';
 const TIERSPIELE = [['habitats', 'lebensraum', 'habitat'], ['food', 'nahrung', 'diet']];
 const tiere = CATALOG.filter(t => t.animal);
 
@@ -154,6 +200,16 @@ test('jedes Tier hat genug geprüfte Fallen, alle sind Texte anderer Tiere', () 
         assert.equal(new Set(liste).size, liste.length, art + ' ' + t.id + ': keine doppelten Fallen');
         assert.ok(liste.every(x => texte.has(x) && x !== t.animal[feld]), art + ' ' + t.id + ': nur Texte anderer Tiere');
       }
+    }
+  }
+});
+
+// Code-Prüfung Teil B, PR 1: Altantworten, die als richtig zählen (Walross, Orca, Blauwal), dürfen nie als Falle kommen.
+test('keine Tier-Falle wird als richtige Antwort gewertet', () => {
+  for (const [spiel, art] of TIERSPIELE) {
+    const pool = worldGameBank(spiel);
+    for (const q of pool) for (const liste of ['entdecker', 'profi']) for (const falle of TIER_FALLEN[art][q.id][liste]) {
+      assert.equal(worldGameAnswerCorrect(spiel, q, falle), false, spiel + ' ' + q.id + ': „' + falle + '“ zählt als richtig');
     }
   }
 });
@@ -217,8 +273,8 @@ test('leseGeschafft nimmt nur gültige Einträge', () => {
 });
 
 // Ratemuster (E9): Die richtige Antwort ist höchstens in 45 % der Aufgaben die einzige längste oder die einzige kürzeste.
-// „Früher oder heute?“ ist ausgenommen: Seine Antworten sind feste Kategorien, die lange dritte ist fast nie richtig
-// (Entscheidungsliste Teil B, Punkt 9; BACKLOG).
+// „Früher oder heute?“ hat statt dessen eigene Prüfungen (nächster Test): Seine Antworten sind feste Kategorien,
+// „Heute“ ist nur zufällig das kürzeste Wort (Stufen-Prüfung Teil B, M1).
 test('neue Runden haben kein Ratemuster „die längste“ oder „die kürzeste“', () => {
   for (const spiel of STUFEN_SPIELE.filter(s => s !== 'then-now')) for (const stufe of ['entdecker', 'profi']) {
     const pool = worldGameBank(spiel); let n = 0, lang = 0, kurz = 0;
@@ -232,4 +288,13 @@ test('neue Runden haben kein Ratemuster „die längste“ oder „die kürzeste
     assert.ok(lang / n <= 0.45, spiel + ' ' + stufe + ': längste ' + (lang / n).toFixed(2));
     assert.ok(kurz / n <= 0.45, spiel + ' ' + stufe + ': kürzeste ' + (kurz / n).toFixed(2));
   }
+});
+
+// Stufen-Prüfung Teil B, M1: Bei „Früher oder heute?“ verrät die dritte Antwort nichts mehr.
+test('„Früher oder heute?“: alle Aufgaben haben dieselben drei Antworten, Früher und Heute sind etwa gleich oft richtig', () => {
+  const pool = worldGameBank('then-now').filter(q => q.id !== 'invention-compass-today'), texte = [...pool[0].answers].sort();
+  for (const q of pool) assert.deepEqual([...q.answers].sort(), texte, q.id);
+  const frueher = pool.filter(q => q.answers[q.correct] === 'Früher').length, heute = pool.filter(q => q.answers[q.correct] === 'Heute').length;
+  assert.equal(frueher + heute, pool.length, 'die dritte Antwort ist nie richtig');
+  assert.ok(Math.abs(frueher - heute) <= 2, 'Früher ' + frueher + ', Heute ' + heute);
 });

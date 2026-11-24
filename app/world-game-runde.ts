@@ -47,18 +47,36 @@ function antworten(spiel: string, stufe: Stufe, frage: { id: string; answers: st
   const liste = tierFallen(spiel)?.[frage.id]?.[stufe === 'profi' ? 'profi' : 'entdecker'];
   const anzahl = stufe === 'profi' ? 3 : 2;
   if (liste && liste.length >= anzahl) return shuffle([frage.answers[frage.correct], ...shuffle(liste, zufall).slice(0, anzahl)], zufall);
-  const kandidaten = stufe === 'profi' ? profiKandidaten(spiel, frage.id) : [];
+  if (stufe !== 'profi') return entdeckerAntworten(spiel, frage, zufall);
+  const kandidaten = profiKandidaten(spiel, frage.id);
   if (kandidaten.length < 3) return shuffle(frage.answers, zufall);
-  const fallen = shuffle(kandidaten, zufall).slice(0, 3).map(k => TOPICS.find(x => x.id === k)!.title);
+  const fallen = shuffle(kandidaten, zufall).slice(0, 3).map(titel);
   return shuffle([frage.answers[frage.correct], ...fallen], zufall);
+}
+const titel = (id: string) => TOPICS.find(x => x.id === id)!.title;
+
+// Entdecker behält die festen Antworten. Steht eine feste Falle auf der Ausschlussliste (der Hinweis passt auch dort,
+// etwa Chamäleon und Seepferdchen), kommt statt ihr eine geprüfte Falle aus derselben Gruppe oder Zeit (Stufen-Prüfung Teil B, M3).
+function entdeckerAntworten(spiel: string, frage: { id: string; answers: string[]; correct: number }, zufall: () => number): string[] {
+  const nicht = new Set((AUSSCHLUSS[spiel]?.[frage.id] ?? []).map(id => TOPICS.find(x => x.id === id)?.title));
+  if (!frage.answers.some((a, i) => i !== frage.correct && nicht.has(a))) return shuffle(frage.answers, zufall);
+  const ersatz = shuffle(profiKandidaten(spiel, frage.id).map(titel).filter(t => !frage.answers.includes(t)), zufall);
+  return shuffle(frage.answers.map((a, i) => (i !== frage.correct && nicht.has(a) ? ersatz.shift() ?? a : a)), zufall);
+}
+
+// Antworten für die Aufgaben einer Runde, passend zu ihrer Stufe. Auch für gespeicherte Runden, deren Reihenfolge fehlt
+// oder nicht mehr gilt: Eine Entdecker-Runde bekommt dann drei Antworten, nicht vier (Code-Prüfung Teil B, PR 1).
+export function rundenAntworten(spiel: string, stufe: Stufe, items: readonly string[], zufall: () => number = Math.random): Record<string, string[]> {
+  const gespielt = hatStufen(spiel) ? weltSpielStufe(stufe) : 'entdecker';
+  const pool = worldGameBank(spiel);
+  return Object.fromEntries(items.flatMap(id => { const frage = pool.find(q => q.id === id); return frage ? [[id, antworten(spiel, gespielt, frage, zufall)]] : []; }));
 }
 
 export function neueWeltRunde({ spiel, stufe, review, vorige, zufall = Math.random, heute }: WeltRundeEingabe): WeltRunde {
   const gespielt = hatStufen(spiel) ? weltSpielStufe(stufe) : 'entdecker';
   const pool = worldGameBank(spiel);
   const items = waehleAufgaben({ vorrat: pool.map(q => q.id), review, schluessel: id => 'world-game:' + spiel + ':' + id, anzahl: RUNDEN_GROESSE[gespielt], vorige, zufall, heute });
-  const orders = Object.fromEntries(items.map(id => [id, antworten(spiel, gespielt, pool.find(q => q.id === id)!, zufall)]));
-  return { items, stufe: gespielt, orders };
+  return { items, stufe: gespielt, orders: rundenAntworten(spiel, gespielt, items, zufall) };
 }
 
 // Die Stufe einer gespeicherten Runde. Runden aus der Zeit vor Teil B haben keine und spielen Entdecker (E1).

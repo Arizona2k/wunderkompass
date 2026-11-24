@@ -9,7 +9,7 @@ Die ersten beiden Aufgaben von Teil B „Spiele kniffliger“. Für Kinder sicht
 
 - **Deine Stufe gilt jetzt auch in sechs Wissensspielen:** „Tierdetektiv – neue Spuren“, „Tier & Lebensraum“, „Wer frisst was?“, „Wer war das?“, „Technik-Detektiv“ und „Früher oder heute?“
   - **Entdecker:** 5 Aufgaben mit 3 Antworten.
-  - **Profi:** 8 Aufgaben mit 4 Antworten. Die falschen Antworten sind näher dran, zum Beispiel Tiere aus derselben Tiergruppe oder Personen und Erfindungen aus derselben Zeit.
+  - **Profi:** 8 Aufgaben, meist mit 4 Antworten (bei „Früher oder heute?“ bleiben es 3 feste Antworten). Die falschen Antworten sind näher dran, zum Beispiel Tiere aus derselben Tiergruppe oder Personen und Erfindungen aus derselben Zeit.
   - **Experte:** spielt vorerst Profi und sagt das auch.
   - Die Stufe lässt sich oben im Spiel ändern. Dann beginnt gleich eine neue Runde in der neuen Stufe.
 - **Was du falsch hattest, kommt später wieder:** In den Wissensspielen und in der Wissens-Challenge kommen zuerst Aufgaben, die du falsch beantwortet hast, dann neue. Die Runde, die du gerade gespielt hast, kommt nicht gleich noch einmal.

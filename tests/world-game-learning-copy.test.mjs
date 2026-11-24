@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
-import {worldGameBank,restoreWorldGameOrders} from '../app/world-game-bank.ts';
-import {animalDetectiveClue,personRecognitionClue,worldGameHint,worldGameWrongFeedback} from '../app/world-game-support.mjs';
+import {DRITTE_ANTWORT,worldGameBank,restoreWorldGameOrders,validWorldGameOrder} from '../app/world-game-bank.ts';
+import {EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGameWrongFeedback} from '../app/world-game-support.mjs';
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
@@ -52,8 +52,21 @@ test('Benz and al-Chwarizmi recognition prompts conceal real name variants while
  }
  // Am Satzanfang „Diese Person“, mitten im Satz „diese Person“ (Teil B, Entscheidungsliste Punkt 7).
  const ersetzt=t=>t.intro.replace(t.title,(_,o,s)=>/^\s*$|[.!?:]\s*$/u.test(s.slice(0,o))?'Diese Person':'diese Person');
- for(const t of catalog.filter(t=>t.person&&!['person-karl_benz','person-al_khwarizmi','person-charles_darwin','person-albert_einstein'].includes(t.id))){
+ for(const t of catalog.filter(t=>t.person&&!Object.hasOwn(EIGENE_RAETSEL,t.id))){
   assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+ersetzt(t));
+ }
+});
+// Eigene Rätsel (Stufen-Prüfung Teil B, M5): kein Teil des Namens, kein „er“, „sie“, „sein“, „ihr“, das das Geschlecht verrät.
+test('eigene Personen-Rätsel verraten weder Namen noch Geschlecht',()=>{
+ const pool=worldGameBank('people');
+ assert.ok(Object.keys(EIGENE_RAETSEL).length>=9);
+ for(const [id,satz] of Object.entries(EIGENE_RAETSEL)){
+  const t=catalog.find(t=>t.id===id);assert.ok(t?.person,id+' ist eine Personenkarte');
+  assert.equal(personRecognitionClue(t),satz);
+  const q=pool.find(q=>q.id===id);if(q)assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+satz);
+  const namensteile=normalize(t.title).split(' ').filter(w=>w.length>2&&!['al','von','van','der'].includes(w));
+  for(const teil of namensteile)assert.doesNotMatch(normalize(satz),new RegExp('(^| )'+teil+'( |$)','u'),id+' nennt '+teil);
+  assert.doesNotMatch(satz,/\b(er|sie|sein|seine|seinen|seinem|seiner|ihr|ihre|ihren|ihrem|ihrer|Er|Sie|Sein|Seine|Ihr|Ihre)\b/u,id+': Fürwort verrät das Geschlecht');
  }
 });
 test('optional recognition name variants preserve compound words and Unicode word boundaries',()=>{
@@ -84,11 +97,24 @@ test('the compass principle question separates earlier-and-today from every reti
  for(let i=0;i<q.answers.length;i++)if(i!==q.correct){const feedback=worldGameWrongFeedback('then-now',q,q.answers[i]);assert.equal(feedback,t.invention.comparisonQuestion.wrongReasons[i]);assert.notEqual(feedback,q.why);}
 });
 test('every other earlier-today question retains its old prompt, answer and explanation',()=>{
+ // Alle haben dieselbe dritte Antwort (Stufen-Prüfung Teil B, M1): Die Falle verrät die Lösung nicht mehr.
+ assert.equal(DRITTE_ANTWORT,'Nur ein Zukunftswunsch');
  for(const q of worldGameBank('then-now')){
   if(q.id==='invention-compass-today')continue;
   const today=q.id.endsWith('-today'),t=catalog.find(t=>t.id===(today?q.id.slice(0,-6):q.id));
   assert.equal(q.prompt,'Früher oder heute? '+t.invention.stages[today?4:3].text);
-  assert.deepEqual(q.answers,today?['Heute','Früher','Nur ein Zukunftswunsch']:['Früher','Heute','Noch keine wirkliche Entwicklung']);
+  assert.deepEqual(q.answers,today?['Heute','Früher',DRITTE_ANTWORT]:['Früher','Heute',DRITTE_ANTWORT]);
   assert.equal(q.why,t.invention.stages[today?3:4].text);
  }
+});
+test('eine gespeicherte Früher-Aufgabe mit der alten dritten Antwort läuft weiter',()=>{
+ const pool=worldGameBank('then-now'),frueher=pool.find(q=>!q.id.endsWith('-today')),heute=pool.find(q=>q.id.endsWith('-today')&&q.id!=='invention-compass-today'),kompass=pool.find(q=>q.id==='invention-compass-today');
+ const alt=['Noch keine wirkliche Entwicklung','Früher','Heute'];
+ assert.equal(validWorldGameOrder(alt,frueher,pool,'then-now'),true,'alte Runde bleibt, wie sie war');
+ assert.equal(worldGameAnswerCorrect('then-now',frueher,'Noch keine wirkliche Entwicklung'),false);
+ assert.equal(validWorldGameOrder(alt,heute,pool,'then-now'),false,'bei Heute-Aufgaben gab es diesen Text nie');
+ assert.equal(validWorldGameOrder(alt,kompass,pool,'then-now'),false);
+ assert.equal(validWorldGameOrder(['Noch keine wirkliche Entwicklung','Früher',DRITTE_ANTWORT],frueher,pool,'then-now'),false,'die richtige zweite Kategorie fehlt');
+ const fallback=Object.fromEntries(pool.map(q=>[q.id,[...q.answers]]));
+ assert.deepEqual(restoreWorldGameOrders({[frueher.id]:alt},fallback,pool,'then-now')[frueher.id],alt);
 });

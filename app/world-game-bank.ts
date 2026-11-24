@@ -6,6 +6,9 @@ import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
 import TIER_FALLEN from './world-game-tier-fallen.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
+export const DRITTE_ANTWORT='Nur ein Zukunftswunsch';
+// Bis 24.11.2026 hatten Früher-Aufgaben diese dritte Antwort; gespeicherte Runden dürfen sie behalten.
+const ALTE_DRITTE_ANTWORT='Noch keine wirkliche Entwicklung';
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
 // Recognition questions can keep older real topic names as distractors. Factual
@@ -18,6 +21,7 @@ export function validWorldGameOrder(value:unknown,current:GameItem,pool:GameItem
  const tierListe=gameId==='habitats'?TIER_FALLEN.lebensraum:gameId==='food'?TIER_FALLEN.nahrung:null,fallen=(tierListe as Record<string,{entdecker:string[];profi:string[]}>|null)?.[current.id];
  if(!Array.isArray(value)||!(value.length===current.answers.length||(recognition||!!fallen)&&value.length===current.answers.length+1)||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
  if(value.every(answer=>current.answers.includes(answer)))return true;
+ if(gameId==='then-now'&&current.answers[current.correct]==='Früher'&&current.answers.includes(DRITTE_ANTWORT)){const alt=current.answers.map(answer=>answer===DRITTE_ANTWORT?ALTE_DRITTE_ANTWORT:answer);return value.length===alt.length&&value.every(answer=>alt.includes(answer));}
  if(fallen)return value.includes(current.answers[current.correct])&&value.every(answer=>current.answers.includes(answer)||fallen.entdecker.includes(answer)||fallen.profi.includes(answer));
  if(!recognition||!value.includes(current.answers[current.correct]))return false;
  const names=new Set(pool.map(question=>question.answers[question.correct]));
@@ -48,7 +52,9 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
   const prompt=t.invention!.recognitionClue?'Welche Erfindung passt zu dieser Beschreibung? '+t.invention!.recognitionClue:(t.invention!.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+t.invention!.stages[0].text;
   return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],t.invention!.stages[2].text));
  });
- if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute','Noch keine wirkliche Entwicklung'],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,t.invention!.comparisonQuestion??question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher','Nur ein Zukunftswunsch'],t.invention!.stages[3].text)),id:t.id+'-today'}]);
+ // Früher oder heute? Alle Aufgaben haben dieselbe dritte Antwort (Stufen-Prüfung Teil B, M1): Vorher stand bei „Früher“
+ // immer „Noch keine wirkliche Entwicklung“ und bei „Heute“ immer „Nur ein Zukunftswunsch“; die Falle verriet die Lösung.
+ if(id==='then-now')return historicalInventions.flatMap(t=>[q(t,{...question('Früher oder heute? '+t.invention!.stages[3].text,'Früher',['Heute',DRITTE_ANTWORT],t.invention!.stages[4].text),prompt:'Früher oder heute? '+t.invention!.stages[3].text}),{...q(t,t.invention!.comparisonQuestion??question('Früher oder heute? '+t.invention!.stages[4].text,'Heute',['Früher',DRITTE_ANTWORT],t.invention!.stages[3].text)),id:t.id+'-today'}]);
  if(id==='food')return animals.map(t=>q(t,question('Welche Beschreibung passt zur Nahrung? Tier: '+t.title+'.',t.animal!.diet,foodDistractors(t.id),t.facts.find(f=>f.label==='Was frisst es?'||f.label==='Nahrung')?.text??t.animal!.diet),t.image));
  if(id==='habitats')return animals.map(t=>q(t,question('Welcher Lebensraum passt in freier Natur? Tier: '+t.title+'.',t.animal!.habitat,habitatDistractors(t.id),t.title+': '+(t.facts.find(f=>f.label==='Lebensraum')?.text??t.animal!.habitat)),t.image));
  return animals.map((t,i)=>{const clue=animalDetectiveClue(t.id).clue;return q(t,question('Wer bin ich? '+clue,t.title,[animals[(i+5)%animals.length].title,animals[(i+9)%animals.length].title],'Gesucht ist '+t.title+'. So beschreibt sich das Tier: „'+clue+'“'));});

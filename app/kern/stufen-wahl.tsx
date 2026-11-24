@@ -10,7 +10,8 @@ import {STUFEN, STUFEN_NAME, type Stufe} from './stufe';
 
 const STUFEN_TEXT: Record<Stufe, string> = {
   entdecker: 'zum Reinkommen',
-  profi: 'vier Antworten, kniffligere Fallen',
+  // Nicht „vier Antworten“: „Früher oder heute?“ hat auch als Profi drei (Code-Prüfung Teil B, PR 1, Fehler 2).
+  profi: 'kniffligere Fragen und Fallen',
   experte: 'nachdenken und kombinieren',
 };
 
@@ -28,7 +29,8 @@ export function stufeWechseln(wechsel: () => void, ort: ParentNode | null | unde
 
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
 // `spielt`: die Stufe, die die Karte wirklich spielt (gespielteStufe); ohne Karte, etwa im Pass, die gewählte.
-export default function StufenWahl({stufe, spielt = stufe, onStufe, hinweis}: {stufe: Stufe; spielt?: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
+// `ohneZurueck`: kein „Zu schwer?“, etwa auf dem Abschlussbild einer geschafften Runde (Design-Prüfung Welt-Spiele, Muss 2).
+export default function StufenWahl({stufe, spielt = stufe, onStufe, hinweis, ohneZurueck = false}: {stufe: Stufe; spielt?: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null; ohneZurueck?: boolean}) {
   const [offen, setOffen] = useState(false);
   const gruppe = useId(), titel = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
@@ -50,6 +52,6 @@ export default function StufenWahl({stufe, spielt = stufe, onStufe, hinweis}: {s
       </button>)}
     </div>}
     {hinweis && <p className="stufen-hinweis">{hinweis}</p>}
-    {!offen && stufe !== 'entdecker' && spielt !== 'entdecker' && <button type="button" className="stufen-zurueck" onClick={() => waehle('entdecker')}>Zu schwer? Zurück zu Entdecker</button>}
+    {!offen && !ohneZurueck && stufe !== 'entdecker' && spielt !== 'entdecker' && <button type="button" className="stufen-zurueck" onClick={() => waehle('entdecker')}>Zu schwer? Zurück zu Entdecker</button>}
   </div>;
 }

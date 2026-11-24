@@ -2,7 +2,7 @@ import type { Review } from '../progress-storage';
 
 // Abwechslung in Spielrunden (Teilschritt 3, E7). Rein und ohne React, damit Node-Tests ihn prüfen können.
 // Reihenfolge: falsch beantwortet und fällig, noch nie gesehen, fällig, der Rest.
-// Aufgaben der vorigen Runde kommen in jeder Gruppe zuletzt (Entscheidungsliste Teil B, Punkt 1): So kommt eine
+// Aufgaben der vorigen Runde kommen hinter allen Gruppen (Rang 4 + Gruppe; Entscheidungsliste Teil B, Punkt 1): So kommt eine
 // falsche Antwort eine Runde später wieder statt sofort, und ist der Vorrat größer als eine Runde, ist die neue
 // Runde nie dieselbe wie die vorige.
 export type AuswahlEingabe = {

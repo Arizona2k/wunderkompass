@@ -4,17 +4,26 @@ const detective=new Map(clues.entries.map(row=>[row.id,row]));
 /** @param {string} id */
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
 /** @param {{title:string,intro:string}} topic */
+// Eigene Personen-Rätsel statt des Kartenanfangs. Darwin und Einstein: eindeutige Rätsel (Teil B, Entscheidungsliste Punkt 7;
+// kinder-redaktion und fakten-pruefer 24.11.2026). Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin und Einstein:
+// ohne „er“, „sie“, „sein“, „ihr“ und Berufswörter, die verraten, ob ein Mann oder eine Frau gesucht ist (Stufen-Prüfung Teil B, M5).
+// Nur Aussagen, die schon auf der Karte stehen.
+/** @type {Record<string,string>} */
+export const EIGENE_RAETSEL={
+ 'person-charles_darwin':'Diese Person reiste fünf Jahre lang mit dem Schiff „Beagle“ um die Welt. Später erklärte diese Person, wie sich Tiere und Pflanzen über sehr lange Zeit verändern.',
+ 'person-albert_einstein':'Diese Person fand heraus, dass die Zeit nicht überall gleich schnell vergeht. Von dieser Person stammt auch eine berühmte, ganz kurze Formel: E = mc².',
+ 'person-karl_benz':'Diese Person entwickelte einen Wagen mit Benzinmotor.',
+ 'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.',
+ 'person-neil_armstrong':'Bei Apollo 11 landete diese Person zusammen mit Buzz Aldrin auf dem Mond.',
+ 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Dieses staatliche System benachteiligte Menschen durch rassistische Gesetze. 1994 kam diese Person an die Spitze des Landes.',
+ 'person-murasaki_shikibu':'Diese Person schrieb am japanischen Kaiserhof im frühen 11. Jahrhundert die Erzählung vom Prinzen Genji. Das Werk wurde über viele Generationen abgeschrieben, gelesen und in Bildern neu gedeutet.',
+ 'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Auf den Bildern dieser Person konnten aus frei gezogenen Linien neue Formen entstehen.',
+ 'person-mae_jemison':'Diese Person verband Medizin, Technik und Raumfahrt. 1992 forschte diese Person im Weltraumlabor der Endeavour.'
+};
 export function personRecognitionClue(topic){
  // These delivered riddles stay independent of a richer biography opening.
  // Reordered/parenthetical name parts must not reveal the requested person.
- // Darwin und Einstein: eigene, eindeutige Rätsel (Teil B, Entscheidungsliste Punkt 7; kinder-redaktion und fakten-pruefer 24.11.2026).
- const retained={
-  'person-charles_darwin':'Diese Person reiste fünf Jahre lang mit dem Schiff „Beagle“ um die Welt. Später erklärte sie, wie sich Tiere und Pflanzen über sehr lange Zeit verändern.',
-  'person-albert_einstein':'Diese Person fand heraus, dass die Zeit nicht überall gleich schnell vergeht. Ihre berühmteste Formel ist ganz kurz: E = mc².',
-  'person-karl_benz':'Diese Person entwickelte einen Wagen mit Benzinmotor.',
-  'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.'
- };
- if(Object.hasOwn(retained,topic.id))return retained[topic.id];
+ if(Object.hasOwn(EIGENE_RAETSEL,topic.id))return EIGENE_RAETSEL[topic.id];
  const variants=[topic.title],optional=topic.title.match(/^(.*?)\s*\(([^()]*)\)(.*)$/u);
  if(optional){const[,before,alternative,after]=optional;variants.push((before+after).trim(),after.trim()?(before.replace(/\S+\s*$/u,'')+alternative+after).trim():alternative.trim());}
  let clue=topic.intro;
