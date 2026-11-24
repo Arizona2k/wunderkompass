@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {CHALLENGE_BANK} from '../../app/knowledge-challenge.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
+import {STUFE_SCHLUESSEL} from '../../app/kern/stufe.ts';
 import {bereich, ladeanfragen} from './harness.mjs';
 
 // Spielrunden wählen ihre Aufgaben mit dem gemeinsamen Helfer (Teil B, Aufgabe 7, app/kern/auswahl.ts):
@@ -58,6 +59,63 @@ export async function spielAuswahl({browser, base, ready, monitor, report}) {
     assert.deepEqual(nachher.gameSessions[SPIEL].vorige, erste);
     assert.deepEqual(nachher.favorites, save.progress.favorites, 'der übrige Pass bleibt');
     report.checks.push('Spielrunden-Auswahl: Challenge liest Wiederholungen aus dem Pass, „Neue Runde“ merkt die vorige Runde, Neuladen behält beides');
+  } finally {
+    await context.close();
+  }
+  await weltSpielRunden({browser, base, ready, monitor, report});
+}
+
+// Welt-Spiel-Runden mit der gemeinsamen Stufe (Teil B, Aufgabe 8, Schritt 8.1; Entscheidungsliste Teil B, Punkt 3).
+const WELT = 'world:habitats';
+const stufeImPass = stufe => ({[STUFE_SCHLUESSEL]: {stufe, seit: '2026-11-24'}});
+async function weltSpielRunden({browser, base, ready, monitor, report}) {
+  const context = await browser.newContext({viewport: {width: 390, height: 900}, hasTouch: true, reducedMotion: 'reduce'});
+  const save = createSave();
+  save.progress.gameSessions = stufeImPass('experte');
+  await context.addInitScript(({key, save}) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save)); }, {key: SAVE_KEY, save});
+  const page = await context.newPage();
+  monitor(page);
+  const sitzung = async () => (await page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY)).gameSessions[WELT];
+  const brett = page.locator('.world-game-room .game-board');
+  const zeile = brett.locator('.stufen-wahl');
+  try {
+    await page.goto(base);
+    await ready(page);
+    await ladeanfragen(page)();
+    await bereich(page, 'games').click();
+    await page.locator(`[data-game-key="${WELT}"]`).click();
+    await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
+    await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
+    const profi = await sitzung();
+    assert.equal(profi.stufe, 'profi', 'Experte spielt in den Welt-Spielen Profi');
+    assert.equal(profi.items.length, 8);
+
+    await zeile.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker', exact: true}).click();
+    await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
+    const entdecker = await sitzung();
+    assert.equal(entdecker.stufe, 'entdecker', 'ein Wechsel in der Runde startet gleich eine neue Runde');
+    assert.equal(entdecker.items.length, 5);
+    assert.deepEqual(entdecker.vorige, profi.items, 'die abgebrochene Runde ist gemerkt');
+    assert.equal(entdecker.items.some(id => profi.items.includes(id)), false, 'und kommt nicht gleich wieder');
+    assert.equal(await page.evaluate(() => document.activeElement?.classList.contains('stufen-aendern')), true, 'der Fokus bleibt auf „Ändern“');
+    assert.equal(await zeile.locator('.stufen-hinweis').count(), 0);
+
+    // Stufe an anderer Stelle ändern (wie im Pass oder auf einer Karte): Die angefangene Runde läuft mit ihrer Stufe zu Ende.
+    await page.evaluate(({key, eintrag}) => { const s = JSON.parse(localStorage.getItem(key)); Object.assign(s.progress.gameSessions, eintrag); localStorage.setItem(key, JSON.stringify(s)); }, {key: SAVE_KEY, eintrag: stufeImPass('profi')});
+    await page.reload();
+    await ready(page);
+    await page.getByRole('button', {name: 'Fortsetzen', exact: true}).click();
+    await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
+    await zeile.getByText('Diese Runde spielst du noch als Entdecker. Die neue Stufe gilt ab der nächsten Runde.', {exact: true}).waitFor();
+    assert.deepEqual((await sitzung()).items, entdecker.items, 'Neuladen behält die Runde');
+
+    await page.locator('.world-game-room').getByRole('button', {name: 'Neue Runde', exact: true}).click();
+    await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
+    const neu = await sitzung();
+    assert.equal(neu.stufe, 'profi', '„Neue Runde“ nimmt die Stufe aus dem Pass');
+    assert.deepEqual(neu.vorige, entdecker.items);
+    assert.equal(await zeile.locator('.stufen-hinweis').count(), 0);
+    report.checks.push('Welt-Spiel-Runden: Experte spielt Profi (8 Aufgaben), Wechsel in der Runde startet eine neue Runde mit Fokus auf „Ändern“, Wechsel an anderer Stelle lässt die Runde zu Ende laufen, „Neue Runde“ nimmt die Stufe aus dem Pass');
   } finally {
     await context.close();
   }
