@@ -202,3 +202,6 @@
 /* The flat layer cutaway has tap and button zoom, no rotation gesture. */
 .globe-stage:has(.fallback-globe[data-model-mode=layers]) .stage-toolbar :is(.touch-globe-toggle,.gesture-hint){display:none}
 .globe-stage:has(.fallback-globe[data-model-mode=layers]) .zoom-buttons{margin-inline-start:auto}
+/* Gewählte Antwort ohne Bewertung (Denkfragen im Wissensbuch mit aria-pressed): sichtbar markiert, auch am Handy.
+   Vorher sah man die Wahl nur zufällig am hängenden Hover-Grün, auch bei einer falschen (Code-Nachprüfung Feinschliff, K5). */
+.quiz-answer[aria-pressed="true"]:not(.is-correct):not(.is-incorrect){border-color:#386858;background:#eef4f6}

@@ -64,9 +64,9 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
   return [haupt, ...zusatz, ...challenge];
 }
 
-// Die Fragen, unter denen die Karte beim Öffnen wählt (ersteFrage): die eigene Stufe zuerst, dann die leichteren;
-// je in Datenreihenfolge. So kommt eine falsch beantwortete leichtere Frage beim Öffnen wieder (E4).
-// „Noch eine Frage“ blättert dagegen nur in der gespielten Stufe (fragenDerStufe).
+// Die Fragen, unter denen die Karte beim Öffnen eine falsch beantwortete sucht (ersteFrage, Schritt 1): die eigene Stufe
+// zuerst, dann die leichteren; je in Datenreihenfolge. So kommt eine falsch beantwortete leichtere Frage beim Öffnen wieder (E4).
+// Neue und fällige Fragen beim Öffnen und „Noch eine Frage“ bleiben dagegen in der gespielten Stufe (fragenDerStufe).
 export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
   const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
   return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));

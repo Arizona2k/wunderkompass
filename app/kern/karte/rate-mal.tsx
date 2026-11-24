@@ -3,7 +3,8 @@
 // Falsch zeigt „Noch nicht ganz. Versuch es noch einmal!“ und den Tipp, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
-// Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte).
+// Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte), wenn die
+// Karte ihn zeigt (zeigtSchluss: nicht bei einer einzelnen Entdecker-Frage).
 import {useEffect, useRef, type ReactNode} from 'react';
 import {Check, Compass} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';

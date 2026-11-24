@@ -23,11 +23,11 @@ Stand: 24.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md), [Ergänzung „Weniger lesen, mehr knobeln“](docs/entwurf/2026-11-21-phase-1-ergaenzung-spannung.md), darin die Rückmeldung eines 10-jährigen Kindes: zu viel Text, zu leicht), sechs Teilschritte: 1. Aussehen und Hülle (fertig) · 2. Wissenskarte (fertig) · **3. Kniffliger spielen** · 4. Weltenseiten und Bilder · 5. Startseite und Sammlung · 6. Feinschliff und Abschluss.
 
 **Teilschritt 3 „Kniffliger spielen“:** [Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md) (Grundlage: [Ergänzung Stufen](docs/entwurf/2026-11-23-phase-1-ergaenzung-stufen.md), [Prüfbericht Pilot-Karten](docs/entwurf/2026-11-23-stufen-pruefung-pilotkarten.md)). Darauf aufbauen, nicht neu ausdenken:
-
 1. Der **Stufen-Feinschliff** ist gebaut (oben); nach Freigabe und Merge folgt **Teil B** nach dem [Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md), am besten in einem neuen Chat. In Teil B zuerst: Linkwächter-Test, der zentrale Schritt „Seitenwechsel im Test“ (dabei die Suchtests aus BACKLOG „Suche: Getipptes war einmal weg“ auf `inSucheTippen` umstellen) und ein Blick auf das Startpaket (nur noch rund 710 Byte Luft, BACKLOG „Startpaket fast an seiner festen Grenze“). Dann Teil C.
 
 ## Offene Fragen an den Nutzer
 
+- **„Falsch beantwortet zuerst“ über Stufen hinweg?** (Stufen-Feinschliff, 24.11.2026) Wer auf Entdecker falsch antwortet, dann auf Experte wechselt und später zurückkommt, sieht die alte Entdecker-Frage mit „Noch nicht ganz“. Empfehlung: „falsch zuerst“ nur in der gespielten Stufe ([Entscheidungsliste, „Offen für den Nutzer“](docs/entwurf/2026-11-24-stufen-feinschliff-entscheidungen.md)).
 - **Helfer `spieltester`:** Pilot seit 24.11.2026 (Freigabe des Nutzers), erster Probelauf an den Stufen ([Bericht](docs/entwurf/2026-11-24-spieltester-probelauf-stufen.md)). Nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt (BACKLOG, Ideen-Sammlung).
 - **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
 

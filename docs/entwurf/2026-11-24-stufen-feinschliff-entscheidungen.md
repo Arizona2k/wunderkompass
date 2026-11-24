@@ -65,6 +65,18 @@ Rolle „11 Jahre, allein, will es schwer haben“, Handy 390 px, lokaler Build.
 - Auch gesehen: Mit Stufe Experte und einer früher falsch beantworteten Entdecker-Frage zeigt die Karte beim Zurückkommen diese Entdecker-Frage mit der alten Rückmeldung („Noch nicht ganz“). Das ist die entschiedene Regel E4 („falsch beantwortet zuerst“ beim Öffnen) und bleibt bis zur Antwort des Nutzers (siehe unten).
 - Feinschliff: Experte hat nur eine Frage, die Wasserstellen-Antwort ist erratbar (BACKLOG 12 h); Zahlenreihe 3/30/100/1.000 (BACKLOG 12 j). „Das war leicht für dich“ trotz falscher Antwort: nachgestellt, der Vorschlag kommt nur nach drei richtigen ersten Antworten (mit F-R-F kein Vorschlag, mit R-R-R einer); der Spieltester sah ihn in einem anderen Durchgang.
 
+## Nachprüfung des `code-pruefer` (Commits 8571597 bis b609a8d, 24.11.2026, gekürzt)
+
+„Mit kleinen Änderungen bereit.“ Nichts gefährdet Pass, IDs oder Links. Geprüft und in Ordnung: festes Rücksprungziel „rate-mal“ (auch mehrere Karten in der Historie, Wegnavigieren über Leiste, „Dazu passt“, „Mehr erfahren“), Befunde 2, 4 bis 7, neue Wahl beim Öffnen (einziger Aufrufer; Entdecker unverändert), Texte, CSS (keine anderen Zustandsklassen betroffen), Daten (`:rate-3` nur `ruht`, neue Liste deckt die 287 sichtbaren Fragen, Pass-Einträge zu `:rate-3` bleiben), Exporte aktuell.
+
+- **W1 (wichtig):** Der Farbtest wartete nach dem Tippen auf `:hover`; in Firefox und WebKit nicht belegt (Engine-Schnellprüfung). **Behoben:** Der Test fährt ausdrücklich mit dem Zeiger über die Antwort; Lauf in Firefox und WebKit.
+- K1: „Was ist neu?“ versprach „nur Fragen deiner Stufe“, E4 zeigt aber eine falsch beantwortete leichtere. **Behoben:** Text sagt jetzt „„Noch eine Frage“ bleibt jetzt in deiner Stufe.“; CHANGELOG ebenso.
+- K2: Offene Frage fehlte in `STATUS.md`. **Behoben.**
+- K3: CHANGELOG „Lernreisen“ statt „Lernrouten“. **Behoben.**
+- K4: Kommentare (`karten-daten.ts`, `karte-hilfen.mjs`, `rate-mal.tsx`). **Behoben.**
+- K5: Denkfragen im Wissensbuch (`book-study.tsx`, `nature-study-body.tsx`) markieren die Wahl nur mit `aria-pressed`; am Handy war sie bisher nur zufällig über das hängende Hover-Grün zu sehen. **Behoben:** neutrale Markierung für `.quiz-answer[aria-pressed="true"]` in `globals.css`.
+- K6: Auf Experte mit einer einzigen, schon gelösten Frage öffnet die Karte sofort gelöst mit dem Schluss. Folgerichtig; BACKLOG 12 h (beim nächsten Spieltest ansehen).
+
 ## Offen für den Nutzer
 
 - **„Falsch beantwortet zuerst“ über Stufen hinweg?** Heute (entschieden am 24.11.2026): Beim Öffnen kommt eine falsch beantwortete Frage zuerst, auch wenn sie leichter ist als die gewählte Stufe. Der Spieltest zeigt die Folge: Wer auf Entdecker falsch antwortet, dann auf Experte wechselt und später zurückkommt, sieht wieder die Entdecker-Frage mit „Noch nicht ganz“, obwohl „Stufe: Experte“ dasteht. **Empfehlung von Claude:** „falsch zuerst“ nur in der gespielten Stufe; die falsche Entdecker-Frage wartet, bis das Kind wieder Entdecker spielt (so kommt sie heute schon nach einem Wechsel zurück). Wer auf derselben Stufe bleibt, merkt keinen Unterschied. Kleine Änderung (eine Zeile und Tests), vor dem Merge möglich.

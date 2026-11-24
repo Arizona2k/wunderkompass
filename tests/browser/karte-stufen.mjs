@@ -125,7 +125,9 @@ async function wechselNachFalscherAntwort(page, {touch}) {
   // Die falsche Antwort bleibt orange, auch wenn der Finger oder die Maus noch darauf ist. Vorher färbte die Regel für
   // „Maus darüber“ sie grünlich wie eine richtige (Spieltest 24.11.2026, Befunde 6 und 7; am Handy bleibt :hover nach dem Tippen).
   const falschKnopf = antwortKnopf(page, falscheAntworten(haupt)[0]);
-  // Testvoraussetzung: Finger oder Maus noch auf der falschen Antwort (der Browser setzt :hover erst ein Bild später).
+  // Testvoraussetzung: Zeiger auf der falschen Antwort. Ausdrücklich darüberfahren: Ob ein Browser nach einem Tippen :hover setzt,
+  // unterscheidet sich (Chromium ja, Firefox und WebKit nicht belegt; Code-Nachprüfung Feinschliff, W1).
+  await falschKnopf.hover();
   await page.waitForFunction(() => document.querySelector('section.rate-mal .quiz-answer.is-incorrect')?.matches(':hover'), null, {timeout: 5000});
   assert.equal(await falschKnopf.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 243, 228)', 'die falsche Antwort ist orange hinterlegt, nicht grün');
   await page.waitForFunction(([key, id]) => JSON.parse(localStorage.getItem(key)).progress.review[id]?.correct === false, [SAVE_KEY, haupt.reviewId], WARTEN);
