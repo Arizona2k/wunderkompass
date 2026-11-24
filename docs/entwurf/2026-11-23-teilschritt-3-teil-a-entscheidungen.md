@@ -126,6 +126,12 @@ Nicht umgesetzt, mit Grund:
 - **Befund 7** („Modellkörper“ bricht bei 320 px im Steckbrief): stammt nicht aus Teil A, betrifft den Steckbrief aller Karten. BACKLOG.
 - **Befund 8, Ort und Pfeil:** Die Stufenwahl steht im Pass mit Absicht unter „Spielen & Vorlesen“, bei den anderen Spiel-Einstellungen. Falsch waren STATUS und der PR-Entwurf („Sichern & mitnehmen“), beide berichtigt. Das Standard-Dreieck an „Für Erwachsene“ teilt sich der Pass mit seinen anderen aufklappbaren Feldern; ein einheitlicher Pfeil gehört zum Feinschliff des Passes (BACKLOG).
 
+Code-Nachprüfung des Design-Commits `00feeff` ([Bericht](2026-11-24-teil-a-code-nachpruefung-design.md)): nichts Hohes oder Mittleres.
+- **Befund 2 umgesetzt:** Der Titel „Welche Stufe willst du spielen?“ ist jetzt der Name der Gruppe (`aria-labelledby`), nicht mehr versteckt; vorgelesen wird, was dasteht. `pass-spielstaende` und `karte-hilfen` suchen die Gruppe unter dem neuen Namen.
+- **Befund 3 umgesetzt:** `karte-stufen` (in der CI-Suite `wissenskarte`) prüft jetzt, dass der Vorschlag in der Rückmeldung und vor „Noch eine Frage“ steht. Gegenprobe: ein Build mit dem Vorschlag unter der Rückmeldung macht den Test rot („der Vorschlag steht in der Rückmeldung“, 0 statt 1).
+- **Befund 1 so gelassen:** Die Rückmeldung liest bei jeder Änderung alles neu vor, jetzt mit dem Vorschlag. Das betrifft nur Bildschirmleser und nur, wenn nach dem Vorschlag noch einmal geantwortet wird; nicht mit einem echten Bildschirmleser geprüft. Ansehen bei der nächsten Teilprüfung mit Bildschirmleser (BACKLOG); falls es stört, Rückmeldungstext und Vorschlag in eigene Bereiche trennen.
+- Der erste `core`-Lauf nach `00feeff` (`core-a13`) wurde von mir nach 201 s abgebrochen, weil beide Befunde ohnehin einen neuen Lauf brauchten; vorher stand kein Fehler im Log.
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.

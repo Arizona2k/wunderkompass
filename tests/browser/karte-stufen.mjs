@@ -105,6 +105,13 @@ async function vorschlagSchwerer(page, {touch}, annehmen = false) {
   }
   const vorschlag = rateMal(page).locator('.stufen-vorschlag');
   await vorschlag.getByText('Das war leicht für dich. Willst du Profi probieren?', {exact: true}).waitFor(WARTEN);
+  // Der Vorschlag steht in der Rückmeldung vor „Noch eine Frage“; darunter übersahen ihn Kinder (Design-Prüfung Teil A, Befund 2).
+  assert.equal(await rateMal(page).getByRole('status').locator('.stufen-vorschlag').count(), 1, 'der Vorschlag steht in der Rückmeldung');
+  assert.equal(await rateMal(page).evaluate(bereich => {
+    const hinweis = bereich.querySelector('.stufen-vorschlag');
+    const weiter = [...bereich.querySelectorAll('button')].find(b => b.textContent.trim() === 'Noch eine Frage');
+    return Boolean(hinweis && weiter && hinweis.compareDocumentPosition(weiter) & Node.DOCUMENT_POSITION_FOLLOWING);
+  }), true, 'der Vorschlag steht vor „Noch eine Frage“');
   assert.equal(await stufeImPass(page), null, 'der Vorschlag stellt nichts von selbst um');
   if (annehmen) {
     await tippe(vorschlag.getByRole('button', {name: 'Ja, Profi probieren', exact: true}), touch);
@@ -138,6 +145,7 @@ async function vorschlagLeichter(page, {touch}) {
   }
   const vorschlag = rateMal(page).locator('.stufen-vorschlag');
   await vorschlag.getByText('Ganz schön knifflig. Willst du eine Stufe leichter spielen?', {exact: true}).waitFor(WARTEN);
+  assert.equal(await rateMal(page).getByRole('status').locator('.stufen-vorschlag').count(), 1, 'der Vorschlag steht in der Rückmeldung zu „Noch nicht ganz“');
   await tippe(vorschlag.getByRole('button', {name: 'Ja, leichter spielen', exact: true}), touch);
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
   await fokusAuf(page, AENDERN, 'nach „Ja, leichter spielen“ steht der Fokus auf „Ändern“');

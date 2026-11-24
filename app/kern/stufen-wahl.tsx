@@ -21,7 +21,7 @@ export function fokusAufStufenWahl(ort: ParentNode | null | undefined) {
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
 export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
   const [offen, setOffen] = useState(false);
-  const gruppe = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
+  const gruppe = useId(), titel = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
   function waehle(neu: Stufe) {
     const knopf = aendern.current, ort = knopf?.closest('article, dialog, [role="dialog"]') ?? knopf?.ownerDocument;
@@ -35,9 +35,9 @@ export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onS
       <button ref={aendern} type="button" className="kern-knopf stufen-aendern" aria-label="Stufe ändern" aria-expanded={offen} aria-controls={offen ? gruppe : undefined} onClick={() => setOffen(o => !o)}>Ändern</button>
     </div>
     {/* Offen ein eigener Kasten mit Titel, damit die drei Stufen nicht wie Antworten aussehen (Design-Prüfung Teil A,
-        Befund 1). Der Titel ist nur zum Sehen; vorgelesen wird der Name der Gruppe. */}
-    {offen && <div id={gruppe} className="stufen-knoepfe" role="group" aria-label="Stufe wählen">
-      <p className="stufen-titel" aria-hidden="true">Welche Stufe willst du spielen?</p>
+        Befund 1). Der Titel ist zugleich der Name der Gruppe: Vorgelesen wird, was dasteht (Code-Nachprüfung Design, Befund 2). */}
+    {offen && <div id={gruppe} className="stufen-knoepfe" role="group" aria-labelledby={titel}>
+      <p id={titel} className="stufen-titel">Welche Stufe willst du spielen?</p>
       {STUFEN.map(s => <button key={s} ref={s === stufe ? gewaehlt : undefined} type="button" className="stufen-knopf" aria-pressed={s === stufe} onClick={() => waehle(s)}>
         <strong>{STUFEN_NAME[s]}</strong><span>{STUFEN_TEXT[s]}</span>{s === stufe && <Check size={22} aria-hidden="true"/>}
       </button>)}

@@ -242,6 +242,6 @@ export async function stufeWaehlen(scope, stufe, {touch = false} = {}) {
   const wahl = stufenWahl(scope);
   const tippe = knopf => (touch ? knopf.tap() : knopf.click());
   await tippe(wahl.getByRole('button', {name: 'Stufe ändern', exact: true}));
-  await tippe(wahl.getByRole('group', {name: 'Stufe wählen'}).getByRole('button').filter({hasText: STUFEN_NAME[stufe]}));
+  await tippe(wahl.getByRole('group', {name: 'Welche Stufe willst du spielen?', exact: true}).getByRole('button').filter({hasText: STUFEN_NAME[stufe]}));
   await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: ' + STUFEN_NAME[stufe]}).waitFor();
 }

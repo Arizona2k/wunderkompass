@@ -123,7 +123,7 @@ export async function stufeImPass(ctx) {
     await aendern.tap();
     await wahl.scrollIntoViewIfNeeded();
     await page.screenshot({path: ctx.shots + '/stufe-offen-390.png'});
-    const knoepfe = wahl.getByRole('group', {name: 'Stufe wählen'}).getByRole('button');
+    const knoepfe = wahl.getByRole('group', {name: 'Welche Stufe willst du spielen?', exact: true}).getByRole('button');
     assert.equal(await knoepfe.count(), 3, 'drei Stufen zur Wahl');
     for (const [i, name] of ['Entdecker', 'Profi', 'Experte'].entries()) {
       await mindestens48(knoepfe.nth(i), name);
