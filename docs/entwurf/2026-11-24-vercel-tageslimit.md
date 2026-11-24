@@ -1,0 +1,146 @@
+# Vercel-Tageslimit (24.11.2026)
+
+> Stand heute: Regeln in `CLAUDE.md`, Abschnitt Vercel. Gebaut werden `test-live` und `vorschau`. Die Abschnitte unten sind der Verlauf; Empfehlungen aus den ersten Abschnitten (`vorschau/**`, `main`) sind überholt.
+
+Helfer: `technik-pruefer`. Der Helfer hat nichts geändert. Er hatte keinen Zugang zu Vercel und hat darum mit den GitHub-Deployments (`vercel[bot]`, 338 Einträge), `git diff-tree` und der Vercel-Doku gearbeitet.
+
+**Ergebnis:** Das Limit kam von zu vielen Pushes: 145 Deployments in 24 Stunden, 106 am 24.11. (UTC). Gut die Hälfte davon war reine Unterlagen-Arbeit. Ein übersprungener Build (`ignoreCommand`) zählt laut Doku trotzdem mit. Die einfachste sichere Abhilfe ist ein Branch-Filter in `vercel.json` (`git.deploymentEnabled`) mit einer festen Liste von Branches, die gebaut werden. Dafür muss „Zeigen“ auf einen eigenen Vorschau-Branch umziehen.
+
+## 1. Wie viele Deployments gab es?
+
+- **24.11. (UTC-Tag):** 106 Deployments, das erste um 00:33, das letzte um 19:03:55. Nach mitteleuropäischem Kalendertag sind es 126.
+- **Letzte 24 Stunden vor der Sperre:** 145. Zum Vergleich: 21.11. 76, 22.11. 5, 23.11. 54.
+- **Alle sind „Preview“:** Auch Merges nach `test-live` laufen als Preview. Production ist nur `main`.
+- **Was die 145 waren:**
+  - 63 nur `docs/` oder `*.md` im Hauptordner.
+  - 17 nur `tests/`, `.claude/` oder `.superpowers/` (zusammen 80, also 55 %).
+  - 48 mit Code.
+  - 2 Merges.
+  - 15 nicht mehr einordenbar (Commit nicht mehr im Klon).
+- **Nachtlauf:** Allein `claude/trusting-galileo-ck3o23` hatte 45 Pushes zwischen 23.11. 19:10 und 24.11. 08:30 UTC.
+- **Ohne die Unterlagen-Builds** wären es etwa 65 gewesen.
+- **Wie Vercel zählt, ist unklar:** Ein gleitendes Fenster hätte schon um 10:37 UTC gesperrt, ein UTC-Tag gegen 17:35. Gebaut wurde aber bis 19:03. Vielleicht zählen abgebrochene Builds nicht. Die Doku (`vercel.com/docs/limits`, Stand 16.09.2026) sagt nur: 100 Deployments je 86 400 s, danach „wait another day“. **Sichere Annahme für das Ende der Sperre: 25.11.2026, 19:10 UTC**, vielleicht früher.
+
+## 2. Kostenlose Abhilfe
+
+Gelesen: `vercel.com/docs/project-configuration/project-settings`, `…/git-configuration`, `…/vercel-json`, `vercel.com/kb/guide/how-to-reduce-build-costs`, `…/why-aren-t-commits-triggering-deployments-on-vercel`.
+
+- **`ignoreCommand` oder „Ignored Build Step“ hilft nicht (belegt):** „Canceled builds are counted as full deployments … will still count towards your deployment quotas“.
+- **`git.deploymentEnabled` verhindert das Deployment ganz (belegt):** Wert je Branch, Muster erlaubt („Specify branches that should not trigger a deployment upon commits“). Passt ein Branch auf mehrere Regeln und eine ist `true`, wird gebaut. Dass so ein Push nicht zählt, steht nicht wörtlich in der Doku; es entsteht aber gar kein Deployment. Am Tag danach am Zähler prüfen.
+- **Empfehlung:** Nur feste Branches bauen:
+  ```json
+  "git": { "deploymentEnabled": { "**": false, "main": true, "test-live": true, "vorschau/**": true } }
+  ```
+  - Die 24 einzelnen `codex/...`-Zeilen in `vercel.json` sind dann überflüssig.
+  - Pushes auf `claude/...` bauen nie. „Laufend sichern“ bleibt unbegrenzt möglich.
+  - **Zeigen (Schritt 5)** über einen zusätzlichen Push desselben Stands: `git push origin HEAD:refs/heads/vorschau/<thema>`. Das kostet einen Build, nur bei sichtbaren Änderungen. Die Adresse steht in `list_aliases`. Der Vercel-Kommentar im PR entfällt, der Link wird von Hand genannt.
+  - **Nicht geprüft:** ob die Cloud-Umgebung Pushes außerhalb von `claude/...` zulässt. Vorher mit einem Probe-Push klären. Sonst `claude/**: false` plus `claude/vorschau-*: true` (falls der Branch-Name frei wählbar ist) oder Bündeln.
+  - Die Änderung wirkt erst ab dem Commit, der `vercel.json` ändert, und nur auf Branches mit diesem Stand. Sie kommt per PR nach `test-live`.
+- **Zweite Wahl ohne Umbau:** Unterlagen-Commits sammeln und erst mit dem nächsten Code-Commit pushen. Das widerspricht „Laufend sichern“ (das Nutzungslimit kann jederzeit kommen).
+
+## 3. Folgen jetzt
+
+- **Pflicht-Check ist nur „Required quality checks“.** Beleg: Ruleset 25304083 gilt nur für `test-live` (`required_status_checks = [{"context":"Required quality checks"}]`, `strict_required_status_checks_policy: true`). Vercel ist kein Pflicht-Check; der Merge ist also auch bei gesperrtem Vercel möglich.
+- **Der Merge baut heute vermutlich keine neue Test-Adresse.** Bei einem gesperrten Push entsteht gar kein Deployment (`3a9e899` fehlt in der Liste). Die Test-Adresse bleibt auf dem Stand von PR #112 (Merge `9528037`).
+- **Nach dem Ende der Sperre** gibt es nichts zum Neu-Starten. Die Test-Adresse zieht erst mit dem nächsten Commit auf `test-live` nach, also mit dem nächsten PR (z. B. der `vercel.json`-Änderung).
+- **Lücke bei `main` (nicht Vercel):** Für `main` gilt weder Branch-Schutz noch ein Ruleset. „`main` nie direkt ändern“ ist nur Vereinbarung, die Vollprüfung bei PRs nach `main` kein Pflicht-Check. Vor der nächsten Veröffentlichung für Freunde ein Ruleset anlegen (Pflicht: „Required quality checks“ und die Vollprüfungen) oder bewusst darauf verzichten.
+
+## 4. Vorschlag für `CLAUDE.md` (erst nach Entscheidung des Nutzers)
+
+- „Laufend sichern“: „Pushes auf `claude/...` bauen keine Vercel-Vorschau (kostenloser Plan: 100 Deployments am Tag). Eine Vorschau zum Zeigen kommt nur mit Push auf `vorschau/<thema>`, höchstens ein Push je sichtbarer Änderung.“
+- Schritte 5 und 6: „Link der Vorschau (Branch `vorschau/...`) und Screenshots“. Ist das Tageslimit erreicht: Screenshots aus `pnpm run test:smoke` oder `pnpm run start`.
+- Abschnitt Vercel: „gebaut werden nur `main`, `test-live` und `vorschau/**` (siehe `vercel.json`)“; Tageslimit 100 Deployments, übersprungene Builds zählen mit; bei Sperre geht der Merge trotzdem, die Test-Adresse zieht erst später nach.
+- Abschnitt Git: Nur `test-live` hat eine Branch-Regel, `main` ist ungeschützt.
+
+## Nicht geprüft
+
+Vercel-Zähler und Projekteinstellungen (kein Zugang), echter Zeitpunkt des Zurücksetzens, ob nicht gebaute Branches wirklich nicht zählen, ob Pushes auf `vorschau/...` in der Cloud-Umgebung gehen, die 15 nicht mehr auffindbaren Commits.
+
+## Nachtrag (Claude, 24.11.2026, 19:25 UTC)
+
+Um 19:22 UTC hat Vercel wieder gebaut: Das Deployment zu `262cc05` ist fertig (`READY`, laut `list_deployments`). Gesperrt waren nur die Pushes `3a9e899` und `c0263d3` (etwa 19:04 bis 19:21 UTC). Das spricht für ein gleitendes 24-Stunden-Fenster, in dem die ältesten Deployments herausfallen. Die Annahme „sicher erst ab 25.11.2026, 19:10 UTC“ oben ist damit überholt. Der Vorschlag bleibt sinnvoll: Bei vielen Pushes kommt die Sperre jederzeit wieder.
+
+## Entscheidung (Claude)
+
+Für diesen PR ändert sich nichts: Vercel ist kein Pflicht-Check, gemergt wird nach grüner CI. Der Umbau von `vercel.json` und „Zeigen“ braucht eine Entscheidung des Nutzers (Push auf einen Branch außerhalb von `claude/...`, neue Regel in `CLAUDE.md`). Er steht als erster kleiner Schritt im nächsten Chat (BACKLOG Phase 1, Punkt 28), ebenso die Frage nach einem Schutz für `main`.
+
+## Entscheidung des Nutzers (24.11.2026, gegen 19:40 UTC)
+
+„Jeder benutzt nur die Test-Seite“, dazu: „Main wird ja auch nicht benutzt sondern jeder benutzt aktuell nur die Test Seite.“ Darum gilt einfacher als die Empfehlung oben (ohne `main` und ohne `vorschau/**`):
+
+```json
+"git": { "deploymentEnabled": { "**": false, "test-live": true } }
+```
+
+- Laut Vercel-Doku (`vercel.com/docs/project-configuration/git-configuration`) wird gebaut, wenn mindestens eine passende Regel `true` ist. `test-live` passt auf beide Regeln und wird gebaut. Alle anderen Branches, auch `main` und `claude/...`, passen nur auf `"**": false`.
+- Vercel liest `vercel.json` aus dem gepushten Commit. Die Regel wirkt also ab dem Commit, der sie einführt. Schon dieser Push auf `claude/...` sollte kein Deployment mehr erzeugen.
+- Zeigen (Schritt 5) geht über Screenshots, die Test-Seite zeigt eine Änderung nach dem Merge. Ein Probe-Push außerhalb von `claude/...` ist nicht mehr nötig.
+- Wird `main` wieder genutzt: `"main": true` ergänzen, bevor der erste PR `test-live` → `main` kommt.
+- Noch prüfen: am Zähler (`list_deployments`), ob Pushes auf `claude/...` wirklich nichts mehr bauen.
+
+## Prüfung des Branch-Filters (`technik-pruefer`, 24.11.2026)
+
+Geprüft wurde Commit `091fc3c`. Der Helfer hat nichts geändert.
+
+**Ergebnis:** `vercel.json` ist gültig. Nach minimatch baut die Regel nur `test-live`; lokal getestet mit minimatch 10.2.4: `**` passt auf `main`, `claude/x`, `claude/x/y` und `codex/a`, nur `test-live` passt auch auf `true`. Die Groß- und Kleinschreibung muss genau stimmen. Branches mit einem Punkt am Anfang eines Teils (`.x`) würden nicht abgeschaltet, das ist praktisch ohne Bedeutung. Kein Workflow und kein Test hängt an Vercel oder liest `vercel.json`. Das Ruleset verlangt nur „Required quality checks“.
+
+| Befund | Umsetzung (Claude) |
+|---|---|
+| `README.md` nennt `main` als Hauptadresse und „Vorschau für jeden Branch“ | Auf die Test-Seite und „gebaut wird nur `test-live`“ geändert |
+| PR-Vorlage verlangt einen Vercel-Vorschau-Link und `test:full` „nur bei Veröffentlichung nach `main`“ | Screenshots statt Link, `test:full` am Phasenende |
+| CI-Job „Vollprüfung“ läuft nur bei PRs nach `main` oder von Hand. Ohne `main`-PR fiele er am Phasenende still weg | `CLAUDE.md` Schritt 8 und `/pruefen` Schritt 7: von Hand starten (`workflow_dispatch`) oder lokal `-- --browser all` |
+| Alte Branches mit der alten `vercel.json` bauen weiter | Als Übergangslage in BACKLOG Punkt 28 notiert |
+
+**Nicht geprüft (kein Zugang):** Projekteinstellungen in Vercel (Production-Branch, „Ignored Build Step“). Ob Vercel minimatch genauso auswertet wie lokal. Ob der Push von `091fc3c` wirklich kein Deployment erzeugt hat. Der Zähler.
+
+## Tageslimit ohne Verlust (Wunsch des Nutzers, 24.11.2026)
+
+Der Nutzer wünscht: Kommt das Limit, soll nichts vergessen werden; „das musst du entscheiden“. Entscheidung (Claude), steht in `CLAUDE.md`, Abschnitt Vercel:
+
+- Gezählt und auf den nächsten Tag verschoben wird nichts. Nur Merges nach `test-live` bauen, weit unter 100 am Tag.
+- Jeder Build baut den ganzen Stand von `test-live`. Ist ein Merge gesperrt, steckt er im nächsten Build mit drin, es geht also nichts verloren.
+- Nach jedem Merge prüft Claude mit `list_deployments`, ob der Merge-Commit gebaut ist. Wenn nicht, kommt ein Eintrag in `STATUS.md`, und der Nutzer erfährt es im Bericht.
+- `/weiter` prüft bei jedem Einstieg, ob der neueste `test-live`-Commit gebaut ist.
+- Keine Deployments von Hand. Will der Nutzer den Stand sofort, klickt er selbst in Vercel auf „Redeploy“.
+- GitHub: Das Repository ist öffentlich, die CI-Minuten sind damit kostenlos und unbegrenzt.
+
+## Vorschau-Branch (OK des Nutzers, 24.11.2026, gegen 19:45 UTC)
+
+Frage des Nutzers: Braucht Claude die Vorschau-Seiten nicht, um sauber zu arbeiten? Wunsch: „kein Rückschritt“, effizient, schnell, gut und ordentlich. Entscheidung (Claude, mit OK des Nutzers): zur Test-Seite eine feste Vorschau aus dem Branch `vorschau`. So sieht der Nutzer eine sichtbare Änderung vor dem Merge auf seinen Geräten, und Vercel baut trotzdem nur wenige Male am Tag.
+
+- `vercel.json`: `"vorschau": true` neben `"test-live": true` (Commit `3b85f24`).
+- Regeln in `CLAUDE.md` (Git-Regel, „Test-Seite und Vorschau“, Schritte 5 und 6, Abschnitt Vercel): nur geprüfte, sichtbare Stände, einmal je Runde; Unterlagen, Tests und Werkzeuge nicht. `vorschau` wird nie gemergt.
+- Adresse: https://wunderkompass-git-f420d3-interaktive-wissens-und-lernplattform.vercel.app/ (aus `list_aliases`; der Branchname ist zu lang für die Adresse, darum steht dort eine Kennung). Öffentlich erreichbar (HTTP 200).
+- Die Vorschau hat eine andere Adresse als die Test-Seite und damit einen eigenen Entdeckerpass.
+
+**Probe (24.11.2026):**
+
+| Zeit (UTC) | Was | Ergebnis |
+|---|---|---|
+| 19:49 | `3b85f24` erst auf `claude/...` gepusht, Sekunden später als neuer Branch `vorschau` | kein Deployment, kein Vercel-Status am Commit, auch nach rund 6 Minuten nicht |
+| 19:56 | Weg aus `CLAUDE.md`: neuer Commit `4570210` mit `commit-tree` (Eltern: bisheriges `vorschau` und `HEAD`), Vorspulen ohne Force-Push | Deployment sofort gestartet, nach rund einer Minute `READY` |
+
+Ursache des ersten Fehlschlags nicht sicher geklärt: Entweder baut Vercel einen Commit nicht noch einmal, den es schon gesehen hat, oder das bloße Anlegen eines Branches löst nichts aus. Der Weg aus `CLAUDE.md` umgeht beides, weil er immer einen neuen Commit vorspult.
+
+Danach lief der Rauchtest gegen die Vorschau-Adresse (`node tests/browser/run.mjs --suite smoke --base <Vorschau>`): grün, 17 s, Chromium.
+
+### Prüfung der Vorschau-Regel (`technik-pruefer`, 24.11.2026, Stand `721861c`)
+
+**Ergebnis:** nutzbar, ohne Force-Push, der Weg über einen neuen Commit hat einmal belegt funktioniert. Keine grundsätzlich einfachere Lösung (`vorschau/<thema>` hätte dasselbe Problem mit bekannten Commits und füllt die Branch-Liste, `ignoreCommand` zählt mit). Der Helfer hat nichts geändert.
+
+| Befund | Umsetzung (Claude) |
+|---|---|
+| A1: Befehl ohne `&&`: Schlägt der Fetch fehl, zeigt `FETCH_HEAD` auf etwas Fremdes (nach `/weiter` auf `origin/main`) | Befehl in einer Zeile mit `&&`, Eltern `origin/vorschau` statt `FETCH_HEAD`. Dazu selbst gefunden: Schlägt `commit-tree` in `$(…)` fehl, wäre der Push `:refs/heads/vorschau`, also ein Löschen; jetzt erst in eine Variable, dann pushen |
+| A2: Warum immer ein neuer Commit, stand nicht da; Ursache nicht belegt | Satz in `CLAUDE.md` (ehrlich: je ein Versuch), Beobachten in BACKLOG 28 |
+| A3: Ohne `"vorschau": true` im gezeigten Stand baut Vercel still nichts | Satz in `CLAUDE.md` |
+| A4: Zwei Chats überschreiben sich die Vorschau | Halbsatz „Es gibt nur eine Vorschau“ |
+| Einfacher: ein Elternteil statt zwei | übernommen (`-p origin/vorschau`, kurze SHA von `HEAD` in der Nachricht) |
+| Fehlender Branch | eigene Zeile: einmal mit `-p HEAD` anlegen |
+| STATUS „Adresse nach dem ersten Build“, Adresse fehlt in `CLAUDE.md` | Adresse eingetragen (STATUS, `CLAUDE.md` „Feste Adressen“) |
+| `CLAUDE.md` „Jeder Build baut den ganzen Stand von `test-live`“ gilt nicht für die Vorschau | „Jeder Build von `test-live` …“ |
+| CHANGELOG liest sich widersprüchlich, BACKLOG 28 nennt die alte `vercel.json` | umformuliert |
+| Bericht empfiehlt oben noch `vorschau/**` und `main` | Hinweis „Stand heute“ am Anfang |
+| Pass der Vorschau: Link könnte an Kinder gehen, je Gerät eigener Pass | `CLAUDE.md`: „nur zum Ansehen, nicht an Kinder weitergeben“, „je Gerät“ |
+| `/pruefen` kennt die Vorschau nicht, `/weiter` sollte `vorschau` nie als Basis nehmen | `/pruefen` Schritt 4 (Vorschau setzen, Rauchtest dagegen, Link), `/weiter` Schritt 3 |
+
+Geschätzt kommen 3 bis 12 Vorschau-Builds am Tag dazu, weit unter dem Limit. Nicht geprüft vom Helfer: Vercel-Zustand und Adresse (hat Claude geprüft, siehe oben), ob Vercel Commits wiedererkennt.

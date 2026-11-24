@@ -17,6 +17,14 @@
 .kartenbild-gross > .world-photo { border-radius: 18px; background: var(--motiv-grund); }
 .kartenbild-gross > .world-photo img { height: 260px; object-fit: cover; }
 .kartenbild-gross > .world-photo.media-contain img { object-fit: contain; padding: 14px; }
+/* Steht ein Kennwort („Gemälde“, „Spätere Darstellung“) oben links, beginnt ein ganz sichtbares Bild darunter:
+   Bei schmalen Hochformaten lag das Schild sonst auf Mütze oder Kopf (Design-Prüfung Bilder-Strang, 24.11.2026). */
+.kartenbild-gross:has(> .kartenbild-kennwort) > .world-photo.media-contain img { padding-top: 46px; }
+/* Ab Tablet-Breite ist das Bild so hoch wie neben dem Text (360 px); mit 260 px wirkten Hochformate
+   im breiten Rahmen bei 768 px verloren (Design-Prüfung Bilder-Strang, 24.11.2026). */
+@media (min-width: 600px) {
+  .kartenbild-gross > .world-photo img { height: 360px; }
+}
 /* Bildunterschrift (Foto & Quelle): Lesegröße wie der übrige Text, mit größerer Schrift mitwachsend. */
 .kartenbild-gross > .world-photo figcaption { padding: 8px 16px; background: #fff; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
 .large-reading .kartenbild-gross > .world-photo figcaption { font-size: 1.15rem; }
@@ -190,7 +198,6 @@
   .wissenskarte > :not(.wissenskarte-kopf) { max-width: 760px; }
   .wissenskarte-kopf { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 36px; }
   .wissenskarte-bild { order: 2; }
-  .kartenbild-gross > .world-photo img { height: 360px; }
 }
 
 /* Kurz erklärt: Erklärzeichnung zur Fotosynthese und Personen-Ablauf (vorher in article-workshop.css der alten Karte) */

@@ -14,12 +14,18 @@ test('photo projections preserve every canonical immediate credit and the integr
  assert.deepEqual(Object.keys(core),corePhotoIds);for(const id of corePhotoIds)assert.deepEqual(core[id],photos[id]);
  assert.equal(integrity.bytes,bytes.length);assert.equal(integrity.sha256,createHash('sha256').update(bytes).digest('hex'));
 });
-test('every photo is a complete local WebP with credit and true pixel size; every variant set has the three sizes 320, 640 and 960',()=>{
+// Variantensätze: 320, 640 und 960 px; ein schmaleres Original (Bilder-Strang, mindestbreite_ok) endet bei seiner Breite.
+test('every photo is a complete local WebP with credit and true pixel size; every variant set is 320, 640 and up to 960',()=>{
  assert(Object.keys(photos).length>0);
  for(const[id,record]of Object.entries(photos)){
   assert.equal(record.id,id);assert(record.author.trim(),id);assert(record.license.trim(),id);assert(record.alt_de.trim(),id);
   assert.equal(new URL(record.license_url).protocol,'https:');assert.equal(new URL(record.source_page_url).protocol,'https:');
-  if(record.variants){assert.deepEqual(record.variants.map(v=>v.width),[320,640,960],id);assert.equal(record.src,record.variants[2].src,id);}
+  if(record.variants){
+   const widths=record.variants.map(v=>v.width);
+   assert.deepEqual(widths.slice(0,2),[320,640],id);assert(widths.length===2||(widths.length===3&&widths[2]>640&&widths[2]<=960),id+' '+widths);
+   assert.equal(record.src,record.variants.at(-1).src,id);assert.equal(record.width,record.variants.at(-1).width,id);
+  }
+  if(record.focus!==undefined)assert.match(record.focus,/^\d{1,3}% \d{1,3}%$/,id);
   for(const{src,width,height}of[record,...(record.variants??[])]){
    assert(src.endsWith('.webp'),src);
    const body=fs.readFileSync('public'+src);

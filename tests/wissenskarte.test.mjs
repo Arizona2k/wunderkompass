@@ -213,7 +213,7 @@ test('bildArt nennt das Kennwort des Fotos', () => {
   assert.equal(fotos['johannes-gutenberg'].label, 'Darstellung');
   assert.deepEqual(bildArt({id: 'x', image: 'johannes-gutenberg'}, true), {art: 'foto', photoId: 'johannes-gutenberg', kennwort: 'Spätere Darstellung'});
   assert.deepEqual(bildArt({id: 'x', image: 'hokusai-great-wave-jp1847'}, false), {art: 'foto', photoId: 'hokusai-great-wave-jp1847', kennwort: 'Historischer Druck'});
-  for (const label of ['KI-Bild', 'Rekonstruktion', 'Spätere Darstellung', 'Historischer Druck']) assert.equal(fotoKennwort(label), label);
+  for (const label of ['KI-Bild', 'Rekonstruktion', 'Spätere Darstellung', 'Historischer Druck', 'Gemälde']) assert.equal(fotoKennwort(label), label);
   assert.equal(fotoKennwort('Darstellung'), 'Spätere Darstellung');
   // Gewöhnliche Fotos brauchen kein Kennwort.
   assert.equal(fotoKennwort('Foto'), undefined);
@@ -226,7 +226,10 @@ test('Kennwörter der Karte passen genau zu den Fotodaten', () => {
 });
 
 test('bildnachweisListe liefert für jedes Foto Urheber, Lizenz, Lizenz-Link und Quelle', () => {
-  assert.equal(fotoIds.length, 60);
+  // Fotos kommen dazu, Foto-IDs fallen nie weg (Stand vor dem Bilder-Strang: 60). Jede einzelne ID schützt
+  // tests/fixtures/stable-ids.json (Familie photos) über tests/content-integrity.test.mjs.
+  assert.ok(fotoIds.length >= 60);
+  assert.deepEqual([...fotoIds].sort(), Object.keys(fotos).sort());
   const liste = bildnachweisListe(fotoIds, fotos);
   assert.deepEqual(liste.map(n => n.photoId), fotoIds);
   for (const n of liste) {

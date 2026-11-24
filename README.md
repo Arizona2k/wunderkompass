@@ -5,7 +5,7 @@ Tiere, Natur, Erde, Weltall, Menschen, Erfindungen und Geschichte, mit Wissenska
 
 - Fortschritt bleibt nur im Browser (Entdeckerpass), ohne Konto und ohne Cloud.
 - Läuft auf Handy, Tablet und Rechner, nach einmaliger Vorbereitung auch offline.
-- Hauptadresse: <https://wunderkompass.vercel.app> (wird nur nach einer fertigen Phase erneuert).
+- Adresse: die Test-Seite <https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/> (neuester freigegebener Stand, alle benutzen zurzeit nur diese). <https://wunderkompass.vercel.app> ist ein älterer Stand.
 
 Für die Mitarbeit: [CLAUDE.md](CLAUDE.md) (Arbeitshandbuch), [STATUS.md](STATUS.md) (aktueller Stand), [BACKLOG.md](BACKLOG.md) (Aufgaben), [VISION.md](VISION.md) (Produktziele), [CHANGELOG.md](CHANGELOG.md) (Verlauf).
 
@@ -61,6 +61,6 @@ Alle Werkzeuge sind kostenlos. Neue Pakete werden exakt gepinnt; pnpm nimmt nur 
 - React, Vite, Tailwind CSS, three.js: MIT. d3-geo (Globuskarten): ISC.
 - Motion for React 14.4.0 (MIT): sanfte Übergänge in Themen, Reisen und Laboraufgaben. Lizenztexte in `public/licenses/learning-motion.json`, in der App über die Hilfe für Begleitpersonen erreichbar.
 - Playwright (Apache-2.0) und axe-core (MPL-2.0): Browsertests und Barrierefreiheitsprüfung.
-- Hosting: Vercel mit Git-Anbindung und einer Vorschau für jeden Branch.
+- Hosting: Vercel mit Git-Anbindung. Gebaut werden nur `test-live` (Test-Seite) und `vorschau` (Vorschau vor dem Merge), siehe `vercel.json`.
 
 Die Fotos stammen fast alle von Wikimedia Commons (54 von 60). Jeder Bildnachweis (Urheber, Lizenz, Quelle) steht in `app/world-photos.json`.

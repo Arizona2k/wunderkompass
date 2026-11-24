@@ -109,6 +109,7 @@
   },
   "emperor-penguin": {
     "id": "emperor-penguin",
+    "src": "/world/animals/emperor-penguin-700.webp",
     "author": "Michael Van Woert / NOAA",
     "license": "Public domain — NOAA",
     "license_url": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
@@ -116,8 +117,22 @@
     "alt_de": "Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.",
     "width": 700,
     "height": 1024,
-    "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-    "src": "/world/emperor-penguin.webp"
+    "transformations_de": "Proportional auf 320, 640 und 700 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "variants": [
+      {
+        "src": "/world/animals/emperor-penguin-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/emperor-penguin-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/emperor-penguin-700.webp",
+        "width": 700
+      }
+    ]
   },
   "blue-whale": {
     "id": "blue-whale",
@@ -265,15 +280,30 @@
   },
   "eiffel-tower": {
     "id": "eiffel-tower",
+    "src": "/world/buildings/eiffel-tower-960.webp",
     "author": "BigBartimäus",
     "license": "Public domain — author release",
     "license_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
     "alt_de": "Der gesamte Eiffelturm steht am Tag vor blauem Himmel; darunter liegt eine grüne Rasenfläche.",
-    "width": 900,
-    "height": 1200,
-    "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-    "src": "/world/eiffel-tower.webp"
+    "width": 960,
+    "height": 1280,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "variants": [
+      {
+        "src": "/world/buildings/eiffel-tower-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/buildings/eiffel-tower-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/buildings/eiffel-tower-960.webp",
+        "width": 960
+      }
+    ]
   },
   "golden-gate-bridge": {
     "id": "golden-gate-bridge",
@@ -407,33 +437,61 @@
   },
   "karl-benz": {
     "id": "karl-benz",
-    "src": "/images/portraits/karl-benz.webp",
+    "src": "/world/people/karl-benz-960.webp",
     "author": "Unbekannter Fotograf",
     "license": "Public Domain (laut Commons: USA und Deutschland)",
     "license_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
     "alt_de": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug.",
-    "width": 600,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Karl Benz auf einem historischen Foto aus der Zeit um 1920.",
-    "label": "Foto"
+    "width": 960,
+    "height": 1280,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/karl-benz-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/karl-benz-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/karl-benz-960.webp",
+        "width": 960
+      }
+    ]
   },
   "bertha-benz": {
     "id": "bertha-benz",
-    "src": "/images/portraits/bertha-benz.webp",
+    "src": "/world/people/bertha-benz-960.webp",
     "author": "Bühler, Mannheim",
     "license": "Public Domain",
     "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Berthabenzportrait.jpg",
     "alt_de": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
-    "width": 601,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Bertha Benz als junge Frau, fotografiert um 1871–1872.",
-    "label": "Foto"
+    "width": 960,
+    "height": 1278,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/bertha-benz-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/bertha-benz-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/bertha-benz-960.webp",
+        "width": 960
+      }
+    ]
   },
   "jane-goodall": {
     "id": "jane-goodall",
@@ -452,18 +510,32 @@
   },
   "albert-einstein": {
     "id": "albert-einstein",
-    "src": "/images/portraits/albert-einstein.webp",
+    "src": "/world/people/albert-einstein-960.webp",
     "author": "Ferdinand Schmutzer",
     "license": "Public Domain",
     "license_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
     "alt_de": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto.",
-    "width": 609,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Albert Einstein auf einem Foto von Ferdinand Schmutzer in Wien, 1921.",
-    "label": "Foto"
+    "width": 960,
+    "height": 1261,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/albert-einstein-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/albert-einstein-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/albert-einstein-960.webp",
+        "width": 960
+      }
+    ]
   },
   "tu-youyou": {
     "id": "tu-youyou",
@@ -482,33 +554,61 @@
   },
   "johannes-gutenberg": {
     "id": "johannes-gutenberg",
-    "src": "/images/portraits/johannes-gutenberg.webp",
+    "src": "/world/people/johannes-gutenberg-650.webp",
     "author": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
     "license": "Public Domain",
     "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg_ca._1400-1468_uitvinder_van_de_boekdrukkunst,_1584_-_BBB-1437.jpg",
     "alt_de": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt.",
-    "width": 615,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Spätere Darstellung von Johannes Gutenberg: Kupferstich von 1584.",
-    "label": "Darstellung"
+    "width": 650,
+    "height": 846,
+    "transformations_de": "Proportional auf 320, 640 und 650 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Darstellung",
+    "variants": [
+      {
+        "src": "/world/people/johannes-gutenberg-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/johannes-gutenberg-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/johannes-gutenberg-650.webp",
+        "width": 650
+      }
+    ]
   },
   "wangari-maathai": {
     "id": "wangari-maathai",
-    "src": "/images/portraits/wangari-maathai.webp",
+    "src": "/world/people/wangari-maathai-742.webp",
     "author": "Demosh",
     "license": "CC BY 2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0/",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:Wangari_Maathai.jpg",
     "alt_de": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.",
-    "width": 495,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Wangari Maathai bei der Übergabe einer Auszeichnung in Kenia, 2006.",
-    "label": "Foto"
+    "width": 742,
+    "height": 1200,
+    "transformations_de": "Proportional auf 320, 640 und 742 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/wangari-maathai-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/wangari-maathai-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/wangari-maathai-742.webp",
+        "width": 742
+      }
+    ]
   },
   "charles-darwin": {
     "id": "charles-darwin",
@@ -557,18 +657,32 @@
   },
   "al-khwarizmi": {
     "id": "al-khwarizmi",
-    "src": "/images/portraits/al-khwarizmi.webp",
+    "src": "/world/people/al-khwarizmi-735.webp",
     "author": "А. Адашев (A. Adaschew), laut Commons",
     "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
     "license_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
     "source_page_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
     "alt_de": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi.",
-    "width": 597,
-    "height": 800,
-    "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-    "fit": "contain",
     "caption": "Spätere Fantasiedarstellung von al-Khwarizmi auf einer sowjetischen Briefmarke von 1983.",
-    "label": "Darstellung"
+    "width": 735,
+    "height": 985,
+    "transformations_de": "Proportional auf 320, 640 und 735 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Darstellung",
+    "variants": [
+      {
+        "src": "/world/people/al-khwarizmi-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/al-khwarizmi-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/al-khwarizmi-735.webp",
+        "width": 735
+      }
+    ]
   },
   "cai-lun": {
     "id": "cai-lun",
@@ -899,6 +1013,1000 @@
       },
       {
         "src": "/world/people/hokusai-great-wave-jp1847-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "orca-jumping-pair": {
+    "id": "orca-jumping-pair",
+    "src": "/world/animals/orca-jumping-pair-960.webp",
+    "author": "Robert Pittman (NOAA)",
+    "license": "Public domain — NOAA",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg",
+    "alt_de": "Zwei schwarz-weiße Orcas springen gleichzeitig aus dem Meer. Beim vorderen sieht man den weißen Fleck hinter dem Auge.",
+    "width": 960,
+    "height": 638,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/orca-jumping-pair-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/orca-jumping-pair-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/orca-jumping-pair-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "platypus": {
+    "id": "platypus",
+    "src": "/world/animals/platypus-960.webp",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_(Ornithorhynchus_anatinus)_Scottsdale.jpg",
+    "alt_de": "Ein Schnabeltier mit flachem Schnabel, braunem Fell und breitem Schwanz schwimmt an der Wasseroberfläche.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/platypus-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/platypus-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/platypus-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "short-beaked-echidna": {
+    "id": "short-beaked-echidna",
+    "src": "/world/animals/short-beaked-echidna-960.webp",
+    "author": "Gregory Smith",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Short-beaked_Echidna_-_Tachyglossus_aculeatus_(51749103282).jpg",
+    "alt_de": "Ein Kurzschnabeligel mit hellen Stacheln auf dem Rücken und einer langen, dünnen Schnauze läuft über Gras.",
+    "width": 960,
+    "height": 635,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/short-beaked-echidna-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/short-beaked-echidna-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/short-beaked-echidna-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "okapi": {
+    "id": "okapi",
+    "src": "/world/animals/okapi-960.webp",
+    "author": "Daniel Jolivet",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Saint-Aignan_(Loir-et-Cher)._Okapi.jpg",
+    "alt_de": "Ein dunkelbraunes Okapi mit weißen Streifen an den Beinen geht über eine Wiese.",
+    "width": 960,
+    "height": 641,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/okapi-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/okapi-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/okapi-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "meerkat": {
+    "id": "meerkat",
+    "src": "/world/animals/meerkat-960.webp",
+    "author": "Giles Laurent",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:112_Meerkat_standing_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg",
+    "alt_de": "Ein Erdmännchen steht aufrecht auf rotem Sand und schaut zur Seite.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "focus": "50% 15%",
+    "variants": [
+      {
+        "src": "/world/animals/meerkat-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/meerkat-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/meerkat-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "ring-tailed-lemur": {
+    "id": "ring-tailed-lemur",
+    "src": "/world/animals/ring-tailed-lemur-960.webp",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Ring-tailed_lemur_(Lemur_catta)_2.jpg",
+    "alt_de": "Ein Katta mit schwarz-weiß geringeltem Schwanz beugt sich zum Trinken ans Wasser.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/ring-tailed-lemur-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/ring-tailed-lemur-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/ring-tailed-lemur-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "north-american-beaver": {
+    "id": "north-american-beaver",
+    "src": "/world/animals/north-american-beaver-960.webp",
+    "author": "Glacier National Park Service (U.S. National Park Service)",
+    "license": "Public Domain · US-Regierungswerk (NPS)",
+    "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:North_American_beaver_(Castor_canadensis)_(46677957975).jpg",
+    "alt_de": "Ein Biber mit nassem, braunem Fell steht am Ufer zwischen trockenem Gras und Wasser.",
+    "width": 960,
+    "height": 638,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/north-american-beaver-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/north-american-beaver-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/north-american-beaver-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "walrus": {
+    "id": "walrus",
+    "src": "/world/animals/walrus-960.webp",
+    "author": "Joel Garlich-Miller, U.S. Fish and Wildlife Service",
+    "license": "Public domain — U.S. Fish and Wildlife Service",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg",
+    "alt_de": "Ein großes Walross mit zwei langen weißen Stoßzähnen und vielen Barthaaren liegt auf Eis und Schnee.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "focus": "50% 20%",
+    "variants": [
+      {
+        "src": "/world/animals/walrus-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/walrus-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/walrus-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "red-fox": {
+    "id": "red-fox",
+    "src": "/world/animals/red-fox-960.webp",
+    "author": "ClaudiaTen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog.jpg",
+    "alt_de": "Ein Rotfuchs mit orangem Fell, weißer Brust, schwarzen Beinen und buschigem Schwanz steht im Schnee.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/red-fox-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/red-fox-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/red-fox-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "raccoon": {
+    "id": "raccoon",
+    "src": "/world/animals/raccoon-960.webp",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Raccoon_in_Central_Park_(35264).jpg",
+    "alt_de": "Ein Waschbär mit schwarzer Maske und geringeltem Schwanz steht zwischen Felsen und schaut uns an.",
+    "width": 960,
+    "height": 752,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/raccoon-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/raccoon-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/raccoon-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "hedgehog": {
+    "id": "hedgehog",
+    "src": "/world/animals/hedgehog-960.webp",
+    "author": "Hrald",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:West_European_Hedgehog_(Erinaceus_europaeus)1.jpg",
+    "alt_de": "Ein Igel mit Stacheln auf dem Rücken steht neben einem Baumstamm auf Moos und Laub.",
+    "width": 960,
+    "height": 638,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/hedgehog-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/hedgehog-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/hedgehog-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "barn-owl": {
+    "id": "barn-owl",
+    "src": "/world/animals/barn-owl-960.webp",
+    "author": "Dannymoore1973",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Front_view_of_a_barn_owl_-_Tyto_alba_-_in_flight.jpg",
+    "alt_de": "Eine Schleiereule mit weißem, herzförmigem Gesicht fliegt mit weit ausgebreiteten Flügeln direkt auf uns zu.",
+    "width": 960,
+    "height": 481,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/barn-owl-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/barn-owl-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/barn-owl-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "kingfisher": {
+    "id": "kingfisher",
+    "src": "/world/animals/kingfisher-960.webp",
+    "author": "Frank-2.0",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Eisvogel_kingfisher.jpg",
+    "alt_de": "Ein Eisvogel mit blauem Rücken, oranger Brust und langem, spitzem Schnabel sitzt auf einem Ast.",
+    "width": 960,
+    "height": 636,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/kingfisher-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/kingfisher-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/kingfisher-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "ostrich": {
+    "id": "ostrich",
+    "src": "/world/animals/ostrich-960.webp",
+    "author": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Masai_ostrich_(Struthio_camelus_massaicus)_male_Serengeti.jpg",
+    "alt_de": "Ein Strauß mit schwarzen Federn, rosa Hals und rosa Beinen läuft über eine weite Graslandschaft.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/ostrich-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/ostrich-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/ostrich-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "atlantic-puffin": {
+    "id": "atlantic-puffin",
+    "src": "/world/animals/atlantic-puffin-960.webp",
+    "author": "Romaniviatores",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg",
+    "alt_de": "Ein Papageitaucher mit weißem Bauch und buntem Schnabel steht im Gras und breitet die Flügel aus.",
+    "width": 960,
+    "height": 641,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/atlantic-puffin-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/atlantic-puffin-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/atlantic-puffin-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "common-chameleon": {
+    "id": "common-chameleon",
+    "src": "/world/animals/common-chameleon-960.webp",
+    "author": "Benny Trapp",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:BennyTrapp_Chamaeleo_chamaeleon_Samos_Griechenland.jpg",
+    "alt_de": "Ein grünes Chamäleon mit dunklen Flecken und eingerolltem Schwanz sitzt auf einem dünnen Zweig.",
+    "width": 960,
+    "height": 643,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/common-chameleon-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/common-chameleon-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/common-chameleon-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "fire-salamander": {
+    "id": "fire-salamander",
+    "src": "/world/animals/fire-salamander-960.webp",
+    "author": "Vasyl Krasnoshtan",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:A_fire_salamander_(Salamandra_salamandra).jpg",
+    "alt_de": "Ein schwarzer Feuersalamander mit leuchtend gelben Flecken läuft über grauen Boden.",
+    "width": 960,
+    "height": 636,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/fire-salamander-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/fire-salamander-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/fire-salamander-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "common-frog": {
+    "id": "common-frog",
+    "src": "/world/animals/common-frog-960.webp",
+    "author": "Holger Krisp",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Grasfrosch-Rana-temporaria-adult.jpg",
+    "alt_de": "Ein gelbbrauner Grasfrosch mit dunklen Flecken sitzt auf einem Stein zwischen braunen Blättern.",
+    "width": 960,
+    "height": 711,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/common-frog-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/common-frog-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/common-frog-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "clownfish": {
+    "id": "clownfish",
+    "src": "/world/animals/clownfish-960.webp",
+    "author": "craigjhowe",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Amphiprion_percula_59038652.jpg",
+    "alt_de": "Ein orangefarbener Clownfisch mit drei weißen, schwarz umrandeten Streifen schwimmt zwischen den Fangarmen einer Seeanemone.",
+    "width": 960,
+    "height": 697,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/clownfish-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/clownfish-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/clownfish-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "european-eel": {
+    "id": "european-eel",
+    "src": "/world/animals/european-eel-960.webp",
+    "author": "David Perez",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Anguilla_anguilla_01_by-dpc.jpg",
+    "alt_de": "Ein grauer Aal mit langem, glattem Körper schlängelt sich durch flaches Wasser zwischen Steinen.",
+    "width": 960,
+    "height": 643,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/european-eel-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/european-eel-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/european-eel-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "monarch-butterfly": {
+    "id": "monarch-butterfly",
+    "src": "/world/animals/monarch-butterfly-960.webp",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Monarch_butterfly_male_(52341).jpg",
+    "alt_de": "Ein Monarchfalter mit orangen Flügeln, schwarzen Adern und weißen Punkten am Rand sitzt auf einer orangen Blüte.",
+    "width": 960,
+    "height": 720,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/monarch-butterfly-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/monarch-butterfly-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/monarch-butterfly-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "garden-snail": {
+    "id": "garden-snail",
+    "src": "/world/animals/garden-snail-960.webp",
+    "author": "Gzen92",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Cornu_aspersum_(Helix_aspersa).jpg",
+    "alt_de": "Eine Gefleckte Weinbergschnecke mit braun gestreiftem Haus kriecht über Asphalt und streckt die Fühler aus.",
+    "width": 960,
+    "height": 720,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/garden-snail-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/garden-snail-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/garden-snail-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "european-lobster": {
+    "id": "european-lobster",
+    "src": "/world/animals/european-lobster-960.webp",
+    "author": "Xavier Caisey (Ifremer)",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Homard_(Homarus_gammarus)_%C3%A0_l%27entr%C3%A9e_de_son_trou_(Ifremer_00669-78066).jpg",
+    "alt_de": "Ein Hummer mit dunkelblauem Panzer, zwei großen Scheren und langen roten Fühlern sitzt am Meeresboden.",
+    "width": 960,
+    "height": 636,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/european-lobster-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/european-lobster-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/european-lobster-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "common-cuttlefish": {
+    "id": "common-cuttlefish",
+    "src": "/world/animals/common-cuttlefish-960.webp",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Sepia_com%C3%BAn_(Sepia_officinalis),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_62.jpg",
+    "alt_de": "Eine Sepia mit großem Auge, Armen vorn am Kopf und schmalen Flossen an der Seite schwebt über Algen am Meeresgrund.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/animals/common-cuttlefish-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/common-cuttlefish-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/common-cuttlefish-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "short-snouted-seahorse": {
+    "id": "short-snouted-seahorse",
+    "src": "/world/animals/short-snouted-seahorse-960.webp",
+    "author": "Hans Hillewaert",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Hippocampus_hippocampus_(cropped).jpg",
+    "alt_de": "Ein Seepferdchen hält sich mit dem Schwanz an einem gelben Stängel aus Tang fest und neigt den Kopf nach unten.",
+    "width": 960,
+    "height": 866,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "variants": [
+      {
+        "src": "/world/animals/short-snouted-seahorse-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/animals/short-snouted-seahorse-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/animals/short-snouted-seahorse-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "mary-anning": {
+    "id": "mary-anning",
+    "src": "/world/people/mary-anning-960.webp",
+    "author": "Unbekannter Maler (laut Tickell 1996 „Mr. Grey“)",
+    "license": "Public Domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Mary_Anning_painting.jpg",
+    "alt_de": "Mary Anning in grünem Mantel steht mit Hammer und Korb an der Küste, neben ihr liegt ein Hund.",
+    "caption": "Mary Anning mit ihrem Hund Tray. Das Bild wurde gemalt, als sie noch lebte, vor 1842.",
+    "width": 960,
+    "height": 1241,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Gemälde",
+    "variants": [
+      {
+        "src": "/world/people/mary-anning-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/mary-anning-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/mary-anning-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "ibn-al-haytham": {
+    "id": "ibn-al-haytham",
+    "src": "/world/people/ibn-al-haytham-710.webp",
+    "author": "Adolph Boÿ (Zeichnung), Jeremias Falck (Kupferstich)",
+    "license": "Public Domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Ibn_al-Haytham_crop.jpg",
+    "alt_de": "Ein alter Druck in Schwarz-Weiß: ein Mann mit Turban, langem Bart und weitem Mantel.",
+    "caption": "Ein Bild aus einem Buch von 1647, rund 600 Jahre nach seiner Zeit. Wie Ibn al-Haytham wirklich aussah, weiß niemand.",
+    "width": 710,
+    "height": 939,
+    "transformations_de": "Proportional auf 320, 640 und 710 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Darstellung",
+    "variants": [
+      {
+        "src": "/world/people/ibn-al-haytham-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/ibn-al-haytham-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/ibn-al-haytham-710.webp",
+        "width": 710
+      }
+    ]
+  },
+  "maria-sibylla-merian": {
+    "id": "maria-sibylla-merian",
+    "src": "/world/people/maria-sibylla-merian-960.webp",
+    "author": "Jacob Marrel",
+    "license": "Public Domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Bildnis_der_Maria_Sibylla_Merian,_1679.jpg",
+    "alt_de": "Maria Sibylla Merian mit lockigem Haar, Perlenkette und hellem Spitzenkragen über dem dunklen Kleid.",
+    "caption": "Dieses Bild von 1679 soll Maria Sibylla Merian zeigen, mit etwa 30 Jahren. Gemalt hat es wohl ihr Stiefvater.",
+    "width": 960,
+    "height": 1139,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Gemälde",
+    "variants": [
+      {
+        "src": "/world/people/maria-sibylla-merian-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/maria-sibylla-merian-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/maria-sibylla-merian-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "inge-lehmann": {
+    "id": "inge-lehmann",
+    "src": "/world/people/inge-lehmann-960.webp",
+    "author": "Even Neuhaus",
+    "license": "Public Domain (PD-Denmark50)",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Inge_Lehman.jpg",
+    "alt_de": "Altes, bräunliches Foto: Inge Lehmann mit kurzen, welligen Haaren und dunkler Jacke schaut ruhig in die Kamera.",
+    "caption": "Inge Lehmann auf einem Foto von 1932. Da war sie über 40 Jahre alt.",
+    "width": 960,
+    "height": 1402,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/inge-lehmann-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/inge-lehmann-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/inge-lehmann-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "murasaki-shikibu": {
+    "id": "murasaki-shikibu",
+    "src": "/world/people/murasaki-shikibu-960.webp",
+    "author": "Tosa Mitsuoki",
+    "license": "Public Domain (PD-old-100 / PD-Art)",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Murasaki-Shikibu-composing-Genji-Monogatari.png",
+    "alt_de": "Altes japanisches Gemälde: Eine Frau mit langen schwarzen Haaren und vielen bunten Kleidern sitzt an einem niedrigen Schreibtisch.",
+    "caption": "Gemalt über 600 Jahre nach ihrer Zeit, im 17. Jahrhundert. Wie Murasaki Shikibu wirklich aussah, weiß niemand.",
+    "width": 960,
+    "height": 770,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Darstellung",
+    "variants": [
+      {
+        "src": "/world/people/murasaki-shikibu-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/murasaki-shikibu-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/murasaki-shikibu-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "octavia-butler": {
+    "id": "octavia-butler",
+    "src": "/world/people/octavia-butler-960.webp",
+    "author": "Nikolas Coukouma",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Butler_signing.jpg",
+    "alt_de": "Octavia E. Butler mit Brille und bunt gemustertem Hemd schreibt mit einem Stift in ein aufgeschlagenes Buch.",
+    "caption": "Octavia E. Butler im Jahr 2005.",
+    "width": 960,
+    "height": 734,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/octavia-butler-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/octavia-butler-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/octavia-butler-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "lise-meitner": {
+    "id": "lise-meitner",
+    "src": "/world/people/lise-meitner-960.webp",
+    "author": "IAEA Imagebank",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Lise_Meitner_arrives_in_Vienna_to_attend_the_opening_of_the_%22Atoms_at_Work%22_exhibition.jpg",
+    "alt_de": "Schwarz-Weiß-Foto: Eine alte Frau mit Mütze steht zwischen Männern in Anzügen, ein großer Mann mit Brille beugt sich zu ihr.",
+    "caption": "Lise Meitner ist die Frau mit der Mütze. 1963 kam sie mit über 80 Jahren zu einer Ausstellung über Atome nach Wien.",
+    "width": 960,
+    "height": 720,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/lise-meitner-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/lise-meitner-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/lise-meitner-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "rabindranath-tagore": {
+    "id": "rabindranath-tagore",
+    "src": "/world/people/rabindranath-tagore-960.webp",
+    "author": "Generalstabens litografiska anstalt (Stockholm)",
+    "license": "Public Domain (PD-old-100-1923)",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Rabindranath_Tagore_in_1909.jpg",
+    "alt_de": "Altes Schwarz-Weiß-Foto: Rabindranath Tagore mit langem Bart und welligem Haar schaut zur Seite.",
+    "caption": "Rabindranath Tagore auf einem Foto von 1909.",
+    "width": 960,
+    "height": 1345,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "label": "Foto",
+    "variants": [
+      {
+        "src": "/world/people/rabindranath-tagore-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/rabindranath-tagore-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/rabindranath-tagore-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "ibn-sina-manuscript": {
+    "id": "ibn-sina-manuscript",
+    "src": "/world/people/ibn-sina-manuscript-960.webp",
+    "author": "Wellcome Collection",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Ibn_Sina_(Avicenna),_Rules_about_medicines_of_the_heart._Wellcome_L0016607.jpg",
+    "alt_de": "Ein aufgeschlagenes altes Buch mit arabischer Schrift, oben auf der rechten Seite ein Muster in Gold und Blau.",
+    "caption": "Eine alte Buchseite, mit der Hand abgeschrieben. Darauf steht ein Text von Ibn Sina über Heilmittel für das Herz. Abgeschrieben wurde sie erst etwa 600 Jahre nach seinem Tod.",
+    "width": 960,
+    "height": 812,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/people/ibn-sina-manuscript-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/people/ibn-sina-manuscript-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/people/ibn-sina-manuscript-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "neolithic-fire-kit": {
+    "id": "neolithic-fire-kit",
+    "src": "/world/history/neolithic-fire-kit-960.webp",
+    "author": "Ji-Elle",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:N%C3%A9cessaire_%C3%A0_feu-N%C3%A9olithique_moyen.jpg",
+    "alt_de": "Zwei alte Steine: ein großer, rostbrauner Brocken und davor eine spitze, graue Klinge aus Feuerstein.",
+    "caption": "Werkzeug zum Feuermachen aus der Steinzeit, über 6000 Jahre alt. Damit schlugen Menschen Funken. Feuer nutzten sie aber schon viel früher.",
+    "width": 960,
+    "height": 1068,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "fit": "contain",
+    "variants": [
+      {
+        "src": "/world/history/neolithic-fire-kit-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/history/neolithic-fire-kit-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/history/neolithic-fire-kit-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "antique-pocket-compass": {
+    "id": "antique-pocket-compass",
+    "src": "/world/inventions/antique-pocket-compass-960.webp",
+    "author": "Caroline Léna Becker",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Boussole_01.JPG",
+    "alt_de": "Ein alter, runder Kompass mit Ring zum Halten, unter dem Glas eine lange Nadel und am Rand Zahlen.",
+    "caption": "Ein alter Kompass aus Frankreich. Die ersten Kompasse aus China sind viel älter.",
+    "width": 960,
+    "height": 640,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/inventions/antique-pocket-compass-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/inventions/antique-pocket-compass-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/inventions/antique-pocket-compass-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "chain-drive-bicycle": {
+    "id": "chain-drive-bicycle",
+    "src": "/world/inventions/chain-drive-bicycle-960.webp",
+    "author": "Mcdrwal",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Fixed_gear_bike_mielec_mechanizm.JPG",
+    "alt_de": "Ein gelbes Fahrrad von der Seite: Eine Kette läuft vom großen Zahnrad an den Pedalen zum kleinen Zahnrad am Hinterrad.",
+    "caption": "Ein Fahrrad von heute mit nur einem Gang. Gut zu sehen: das große Zahnrad vorn (Kettenblatt), die Kette und das kleine Zahnrad hinten.",
+    "width": 960,
+    "height": 720,
+    "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+    "variants": [
+      {
+        "src": "/world/inventions/chain-drive-bicycle-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/world/inventions/chain-drive-bicycle-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/world/inventions/chain-drive-bicycle-960.webp",
         "width": 960
       }
     ]

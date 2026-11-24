@@ -24,7 +24,22 @@ const widths=[320,360,390,768,1024,1440,1920];
 const topics=catalog.filter(t=>DATA.entries.some(e=>e.id===t.id));
 // Tierkarten ohne eigene Tier-Verbindung (ANIMAL_EDGES). Der Eisvogel verlor in Teil B, Aufgabe 10 seine Verbindung zum Schatten.
 const OHNE_TIERVERBINDUNG=new Set(['animal-kingfisher']);
+// Seit dem Bilder-Strang (24.11.2026) zeigt eine Tierkarte mit freiem Foto das Foto statt der eigenen Zeichnung (Bildregel 6.3).
+const fotoVon=id=>{const t=catalog.find(t=>t.id===id);return t?.image?photoMedia[t.image]:undefined;};
+// Das Foto im Kartenkopf: geladen, mit dem geprüften Alt-Text, ohne KI-Hinweis.
+async function assertAnimalHeadPhoto(p,id){
+ const t=catalog.find(t=>t.id===id),foto=fotoVon(id);assert.ok(foto,'declared free photo exists for '+id);
+ const head=p.locator('.kartenbild-gross[data-bildart="foto"][data-foto="'+t.image+'"]');await head.waitFor();
+ await head.locator('img').scrollIntoViewIfNeeded();await waitForPhotoImage(head.locator('img'),foto.src);
+ const actual=await head.evaluate(async el=>{const image=el.querySelector('img');await image.decode();return{src:image.getAttribute('src'),alt:image.alt,complete:image.complete,width:image.naturalWidth,text:el.innerText};});
+ assert.equal(actual.src,foto.src,'reviewed free photo, not a generic substitute');assert.equal(actual.alt,foto.alt_de);assert.ok(actual.complete&&actual.width>0,'decoded photo');
+ assert.doesNotMatch(actual.text,/KI-Illustration|KI-Unterstützung/,'a real photo carries no AI label');
+ assert.equal(await p.locator('[data-animal-illustration="'+id+'"]').count(),0,'photo replaces the own drawing, no second subject picture');
+ return actual;
+}
 
+// Fotos haben mehrere Größen (srcset): Der Browser wählt eine davon, darum nur warten, bis das Foto da und geladen ist.
+async function waitForPhotoImage(image,src){const element=await image.elementHandle();assert(element,'actual photo element required');await image.page().waitForFunction(({i,src})=>i.isConnected&&i.getAttribute('src')===src&&i.currentSrc!==''&&i.complete&&i.naturalWidth>0,{i:element,src});}
 async function waitForSelectedImageRequest(image){const element=await image.elementHandle();assert(element,'actual image element required');await image.page().waitForFunction(i=>i.isConnected&&i.currentSrc!==''&&i.currentSrc===i.src,element);}
 export async function assertOwnAnimalMedia(visual,id){
  const expected=OWN_MEDIA.entries.find(e=>e.id===id);assert.ok(expected,'declared subject image exists');
@@ -51,16 +66,26 @@ export async function assertAnimalCompactOrigin(figure,kind,{width}={}){
  return{kind,label,font:ink.font,visibleHonestOrigin:true};
 }
 
+// Eine Tierkachel mit freiem Foto: Foto sichtbar in der Kachel, kein KI-Hinweis, kein Verweis auf eine Zeichnung.
+export async function assertAnimalCompactPhoto(tile,figure,{width}={}){
+ const text=await tile.innerText();assert.doesNotMatch(text,/KI-Illustration|KI-Unterstützung/,'photo tile carries no AI label');
+ assert.equal(await tile.locator('[data-animal-illustration]').count(),0,'photo tile shows no own drawing');
+ const box=await figure.evaluate(e=>{const r=e.getBoundingClientRect();return{left:r.left,right:r.right,height:r.height};});
+ assert.ok(box.height>0&&box.left>=-2&&box.right<=width+2,'compact photo stays inside the viewport');
+ return{kind:'photo',label:null,visibleHonestOrigin:true};
+}
+
 export async function animalCompactOriginFlow(p,{width,shots,engine='chromium',state='normal',native=false}={}){
  const initial=await p.evaluate(()=>location.hash),observed=[],entries=[OWN_MEDIA.entries.find(e=>e.kind==='ai-illustration'),OWN_MEDIA.entries.find(e=>e.kind!=='ai-illustration')];assert.ok(entries.every(Boolean));
  let complete=false,current=entries[0].id;
  try{for(const entry of entries){current=entry.id;
   const ordered=catalog.filter(t=>t.category==='animals'),page=Math.floor(ordered.findIndex(t=>t.id===entry.id)/12)+1;assert.ok(page>0);
-  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();const figure=tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.scrollIntoViewIfNeeded();await waitForSelectedImageRequest(figure.locator('img'));await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
-  const origin=await assertAnimalCompactOrigin(figure,entry.kind,{width});
+  await p.evaluate(n=>location.hash='world/animals/page/'+n,page);const tile=p.locator('[data-route-focus="world-topic-'+entry.id+'"]');await tile.waitFor();
+  const foto=fotoVon(entry.id),figure=foto?tile.locator('.world-photo.compact'):tile.locator('[data-animal-illustration="'+entry.id+'"].compact');await figure.scrollIntoViewIfNeeded();if(foto)await waitForPhotoImage(figure.locator('img'),foto.src);else await waitForSelectedImageRequest(figure.locator('img'));await figure.locator('img').evaluate(i=>i.decode());await prepareAxe(p);
+  const origin=foto?await assertAnimalCompactPhoto(tile,figure,{width}):await assertAnimalCompactOrigin(figure,entry.kind,{width});
   if(shots&&[320,1440].includes(width)&&!native)await tile.screenshot({path:path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-'+width+'.png'),animations:'disabled'});
-  if(shots&&native){await figure.getByText(origin.label,{exact:true}).evaluate(e=>e.scrollIntoView({block:'center'}));await captureNativeViewport(p,path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-200-'+width+'.png'));}
-  await tile.click();await assertOwnAnimalMedia(p.locator('[data-animal-illustration="'+entry.id+'"]:not(.compact)'),entry.id);await p.goBack();await tile.waitFor();await p.waitForFunction(id=>document.activeElement?.getAttribute('data-route-focus')==='world-topic-'+id,entry.id);
+  if(shots&&native){await (origin.label?figure.getByText(origin.label,{exact:true}):figure).evaluate(e=>e.scrollIntoView({block:'center'}));await captureNativeViewport(p,path.join(shots,'animal-compact-origin-'+engine+'-'+entry.id+'-'+state+'-200-'+width+'.png'));}
+  await tile.click();if(foto)await assertAnimalHeadPhoto(p,entry.id);else await assertOwnAnimalMedia(p.locator('[data-animal-illustration="'+entry.id+'"]:not(.compact)'),entry.id);await p.goBack();await tile.waitFor();await p.waitForFunction(id=>document.activeElement?.getAttribute('data-route-focus')==='world-topic-'+id,entry.id);
   observed.push({id:entry.id,width,state,native,...origin,articleOriginRetained:true,actualBackFocus:true});
  }complete=true;}catch(error){
   // Keep the original failed route visible for the existing outer diagnostics.
@@ -85,7 +110,15 @@ export async function exerciseAnimal(p,data,{width,shots,keyboard=false,state='n
  const root=p.locator('[data-animal-inquiry="'+data.id+'"]');await root.waitFor({state:'attached'});
  if(!await root.evaluate(e=>e.open))await root.locator(':scope > summary').click();
  await root.getByRole('heading',{name:data.goal,exact:true}).waitFor();
- if(EXPANSION_IDS.has(data.id)){
+ if(fotoVon(data.id)){
+  // Karten mit freiem Foto (alle früheren Fragen-Tiere und seit dem Bilder-Strang auch die Erweiterung): Foto im Kartenkopf.
+  if(EXPANSION_IDS.has(data.id)){
+   await assertAnimalHeadPhoto(p,data.id);
+   const titleInk=await p.locator('#world-topic-title').evaluate(e=>{const range=document.createRange();range.selectNodeContents(e);return [...range.getClientRects()].map(r=>({left:r.left,right:r.right}));});
+   assert.ok(titleInk.every(r=>r.left>=-2&&r.right<=width+2),'new animal title remains fully visible');
+   if(shots&&[320,390,1440].includes(width)&&state==='normal')await p.locator('.kartenbild-gross').screenshot({path:path.join(shots,'animal-new-'+data.id.slice(7)+'-'+width+'.png'),animations:'disabled'});
+  }
+ }else if(EXPANSION_IDS.has(data.id)){
   const visual=p.locator('[data-animal-illustration="'+data.id+'"]:not(.compact)');await visual.waitFor();
   await visual.locator('img').scrollIntoViewIfNeeded();
   await assertOwnAnimalMedia(visual,data.id);
@@ -213,7 +246,7 @@ export async function animalNavigation(browser,base,ready,monitor,shots,navigati
   // An attached inquiry can precede its actual image response. Finish the
   // declared subject image before this intentional reload, preserving the
   // strict request-error monitor and its existing20-second readiness timeout.
-  stage='actual subject image before reload';const expectedMedia=OWN_MEDIA.entries.find(e=>e.id===entry.id)??photoMedia[t.image];assert(expectedMedia?.src,'every actual animal has declared subject media');
+  stage='actual subject image before reload';const expectedMedia=fotoVon(entry.id)??OWN_MEDIA.entries.find(e=>e.id===entry.id);assert(expectedMedia?.src,'every actual animal has declared subject media');
   await p.waitForFunction(src=>[...document.querySelectorAll('.wissenskarte img')].some(image=>image.getAttribute('src')===src&&image.complete&&image.naturalWidth>0),expectedMedia.src);
   const decoded=await p.locator('.wissenskarte img').evaluateAll(async(images,src)=>{const image=images.find(i=>i.getAttribute('src')===src);if(!image)throw Error('Missing declared subject image');await image.decode();return{src:image.getAttribute('src'),complete:image.complete,width:image.naturalWidth,height:image.naturalHeight};},expectedMedia.src);assert.equal(decoded.src,expectedMedia.src);assert(decoded.complete&&decoded.width>0&&decoded.height>0);(navigationProof.mediaBeforeReload??=[]).push({id:entry.id,...decoded});
   stage='reload';await p.reload();await ready(p);
