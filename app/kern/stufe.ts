@@ -41,6 +41,10 @@ export const STUFEN_NAME: Record<Stufe, string> = { entdecker: 'Entdecker', prof
 // Überall sonst steht der Name, wie er ist („Stufe: Experte“).
 export const STUFEN_BINDEFORM: Record<Stufe, string> = { entdecker: 'Entdecker', profi: 'Profi', experte: 'Experten' };
 
+// Gemeinsame Sätze der Stufenzeile für Karten und Spiele (kinder-redaktion, 24.11.2026): überall gleich, die Stufe beim Namen.
+export const nochNichtSatz = (gewaehlt: Stufe, gespielt: Stufe) => `${STUFEN_BINDEFORM[gewaehlt]}-Aufgaben gibt es hier noch nicht. Du spielst ${STUFEN_NAME[gespielt]}.`;
+export const rundeNochSatz = (gespielt: Stufe, naechste: Stufe) => `Diese Runde spielst du noch als ${STUFEN_NAME[gespielt]}. Ab der nächsten Runde spielst du ${STUFEN_NAME[naechste]}.`;
+
 // Vorschläge statt Automatik (E8). Die Folge lebt nur, solange die Seite offen ist, nie im Pass.
 // Gezählt wird je Frage nur die erste Antwort; nach einem Stufenwechsel beginnt die Folge neu.
 // Es zählen nur Fragen genau der gewählten Stufe: Leichtere Fragen (z. B. die Hauptfrage auf einer Karte ohne Profi-Frage)

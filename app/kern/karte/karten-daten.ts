@@ -8,7 +8,7 @@ import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
-import {STUFEN, STUFEN_BINDEFORM, STUFEN_NAME, type Stufe} from '../stufe';
+import {STUFEN, STUFEN_BINDEFORM, type Stufe, nochNichtSatz} from '../stufe';
 import {WOERTER} from '../woerter';
 import {wartetZumWiederholen} from '../wiederholen';
 
@@ -72,7 +72,7 @@ export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen
 // die höchste vorhandene Stufe darunter. Keine unechte Experten-Stufe aus „mehr vom Gleichen“.
 export function stufenHinweis(fragen: KartenFrage[], stufe: Stufe): string | null {
   const gespielt = gespielteStufe(fragen, stufe);
-  return gespielt === stufe ? null : `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[gespielt]}.`;
+  return gespielt === stufe ? null : nochNichtSatz(stufe, gespielt);
 }
 
 // Die Stufe, die die Karte wirklich spielt: die gewählte, wenn es Fragen dazu gibt, sonst die höchste vorhandene darunter.

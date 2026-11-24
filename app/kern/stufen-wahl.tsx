@@ -28,7 +28,7 @@ export function stufeWechseln(wechsel: () => void, ort: ParentNode | null | unde
   (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus();
 }
 
-// `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
+// `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experten-Aufgaben gibt es hier noch nicht. Du spielst Profi.“ (nochNichtSatz in stufe.ts)
 // `spielt`: die Stufe, die die Karte wirklich spielt (gespielteStufe); ohne Karte, etwa im Pass, die gewählte.
 // `ohneZurueck`: kein „Zu schwer?“, etwa auf dem Abschlussbild einer geschafften Runde (Design-Prüfung Welt-Spiele, Muss 2).
 export default function StufenWahl({stufe, spielt = stufe, onStufe, hinweis, ohneZurueck = false}: {stufe: Stufe; spielt?: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null; ohneZurueck?: boolean}) {

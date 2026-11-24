@@ -84,7 +84,7 @@ export async function spielAuswahl({browser, base, ready, monitor, report}) {
     await page.reload();
     await ready(page);
     await page.getByRole('button', {name: 'Fortsetzen', exact: true}).click();
-    await zeile.getByText('Diese Runde spielst du noch als Experte. Die neue Stufe gilt ab der nächsten Runde.', {exact: true}).waitFor();
+    await zeile.getByText('Diese Runde spielst du noch als Experte. Ab der nächsten Runde spielst du Entdecker.', {exact: true}).waitFor();
     assert.deepEqual((await runde()).ids, experte, 'Neuladen behält die Runde und ihre Stufe');
     report.checks.push('Spielrunden-Auswahl: Kreuz und quer startet mit der Stufe aus dem Pass, liest Wiederholungen, „Neue Runde“ und Stufenwechsel merken die vorige Runde, Experte mit drei Experten-Fragen, Neuladen behält Runde und Stufe');
   } finally {
@@ -113,7 +113,7 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await bereich(page, 'games').click();
     await page.locator(`[data-game-key="${WELT}"]`).click();
     await brett.getByText('AUFGABE 1 VON 8', {exact: true}).waitFor();
-    await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
+    await zeile.getByText('Experten-Aufgaben gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
     // Das Spiel öffnet oben, nicht mitten in der Spieleliste (Spieltest Welt-Spiele, G).
     await page.waitForFunction(() => { const oben = document.querySelector('.world-game-room')?.getBoundingClientRect().top; return oben !== undefined && oben >= 0 && oben <= 40; });
     const profi = await sitzung();
@@ -136,7 +136,7 @@ async function weltSpielRunden({browser, base, ready, monitor, report}) {
     await ready(page);
     await page.getByRole('button', {name: 'Fortsetzen', exact: true}).click();
     await brett.getByText('AUFGABE 1 VON 5', {exact: true}).waitFor();
-    await zeile.getByText('Diese Runde spielst du noch als Entdecker. Die neue Stufe gilt ab der nächsten Runde.', {exact: true}).waitFor();
+    await zeile.getByText('Diese Runde spielst du noch als Entdecker. Ab der nächsten Runde spielst du Profi.', {exact: true}).waitFor();
     assert.deepEqual((await sitzung()).items, entdecker.items, 'Neuladen behält die Runde');
 
     await page.locator('.world-game-room').getByRole('button', {name: 'Neue Runde', exact: true}).click();

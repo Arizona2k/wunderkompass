@@ -18,7 +18,7 @@ import type {Review} from './progress-storage';
 import StufenWahl,{stufeWechseln} from './kern/stufen-wahl';
 import {StufenVorschlagHinweis,useStufenVorschlag} from './kern/stufen-vorschlag';
 import {flushSync} from 'react-dom';
-import {STUFEN_NAME,istStufe,type Stufe} from './kern/stufe';
+import {istStufe,nochNichtSatz,rundeNochSatz,type Stufe} from './kern/stufe';
 import {hatStufen,leseGeschafft,mitGeschafft,neueWeltRunde,rundenAntworten,rundenStufe,weltSpielStufe,type Geschafft} from './world-game-runde';
 const TOPICS=CATALOG as WorldTopic[];
 export const WORLD_GAMES=[
@@ -55,7 +55,7 @@ function Rounds({id,review,stufe,onStufe,onWin,onRead,onReview,onTopic}:{id:stri
  const {vorschlag,merke,schliessen}=useStufenVorschlag('world:'+id+':'+ids.join(','),stufe),frage=useRef<HTMLHeadingElement>(null),zeigeVorschlag=vorschlag&&hatStufen(id)&&weltSpielStufe(vorschlag.ziel)!==gespielt?vorschlag:null;
  function neueRunde(neu:Stufe){const r=neueWeltRunde({spiel:id,stufe:neu,review,vorige:ids});onRead('');schliessen();setVorige(ids);setOrders(r.orders);setItems(r.items);setGespielt(r.stufe);setIndex(0);setAnswer(null);setDone(false);}
  function wechsel(neu:Stufe){onStufe(neu);if(weltSpielStufe(neu)!==gespielt)neueRunde(neu);}
- const stufenHinweis=weltSpielStufe(stufe)!==gespielt?`Diese Runde spielst du noch als ${STUFEN_NAME[gespielt]}. Die neue Stufe gilt ab der nächsten Runde.`:stufe==='experte'?'Experte gibt es hier noch nicht. Du spielst Profi.':null;
+ const stufenHinweis=weltSpielStufe(stufe)!==gespielt?rundeNochSatz(gespielt,weltSpielStufe(stufe)):stufe==='experte'?nochNichtSatz('experte','profi'):null;
  const stufenZeile=hatStufen(id)?<StufenWahl stufe={stufe} spielt={gespielt} onStufe={wechsel} hinweis={stufenHinweis} ohneZurueck={done}/>:null;
 const proposed=orders[current.id],choices=validWorldGameOrder(proposed,current,pool,id)?proposed:current.answers,right=worldGameAnswerCorrect(id,current,answer),legacyCorrect=right&&answer!==current.answers[current.correct],retiredAnswer=answer!==null&&!choices.includes(answer)&&!right,hint=worldGameHint(id,current),feedback=answer===null?'':right?current.why:worldGameWrongFeedback(id,current,answer);
  if(done)return <>{stufenZeile}<div className="world-game-finish"><Check size={44}/><h2 ref={abschluss} tabIndex={-1}>Eine ganze Runde gelöst!</h2><p>Alle {ids.length} Aufgaben sind gelöst. Dein Spielstempel bleibt in deinem Entdeckerpass.</p><button className="secondary-button" onClick={()=>onTopic(current.topic)}>Zu einer passenden Entdeckerkarte</button></div></>;

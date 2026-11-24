@@ -120,7 +120,7 @@ export async function connectedDiscoveries(page,ready,report,width){
   }
   await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
   assert.ok((await pass()).games.includes('world:knowledge-challenge'));
-  await room.getByRole('button',{name:'Noch eine Runde auf deiner Stufe',exact:true}).click();
+  await room.getByRole('button',{name:'Noch eine Runde',exact:true}).click();
   await page.waitForFunction(previous=>JSON.stringify(JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids)!==JSON.stringify(previous),previous);
   const next=(await pass()).gameSessions['world:knowledge-challenge'].challenge.ids;
   // Experte hat erst vier Experten-Fragen (drei je Runde): Die neue Runde ist eine andere, teilt aber Experten-Fragen.

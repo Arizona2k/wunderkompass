@@ -69,7 +69,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).waitFor();
    const gespielt=klassikSpielStufe(game,stufe),erlaubt=gespielt==='experte'?['experte','profi']:[gespielt];
    await p.waitForFunction(({key,game,gespielt})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r?.stufe===gespielt&&r.index===0&&r.answer===null;},{key:SAVE_KEY,game,gespielt});
-   if(stufe==='experte'&&gespielt==='profi')await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.',{exact:true}).waitFor();
+   if(stufe==='experte'&&gespielt==='profi')await zeile.getByText('Experten-Aufgaben gibt es hier noch nicht. Du spielst Profi.',{exact:true}).waitFor();
    let snapshot=(await state(p)).gameSessions[game].learningRound;assert.equal(snapshot.level,null);assert.equal(snapshot.ids.length,4);assert.ok(snapshot.ids.every(id=>erlaubt.includes(klassikStufe(CLASSIC_QUESTIONS.find(q=>q.id===id)))));
    for(let i=0;i<4;i++){
     const q=CLASSIC_QUESTIONS.find(q=>q.id===snapshot.ids[i]),hint=room.locator('.world-game-hint');await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
@@ -88,7 +88,7 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    await p.getByRole('heading',{name:'Zusammenhänge entdeckt!',exact:true}).waitFor();assert.equal(snapshot.done,true);assert.equal('firstCorrect' in snapshot,false);assert.ok((await state(p)).games.includes(game));
    assert.equal(await room.getByText(/beim ersten Versuch/).count(),0,'kein Zähler auf dem Abschlussbild (E13)');assert.equal(await room.getByRole('button',{name:/Unsichere Aufgaben/}).count(),0);
    await p.screenshot({path:shots+'/playground-finish-'+game+'-'+stufe+'-390.png',fullPage:true});
-   await room.getByRole('button',{name:'Noch eine Runde auf deiner Stufe',exact:true}).click();
+   await room.getByRole('button',{name:'Noch eine Runde',exact:true}).click();
    await p.waitForFunction(({key,game})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r&&!r.done&&r.index===0&&r.answer===null;},{key:SAVE_KEY,game});
    const neu=(await state(p)).gameSessions[game];assert.equal(neu.learningRound.done,false);assert.equal(neu.learningRound.stufe,gespielt);assert.deepEqual(neu.vorige,snapshot.ids,'die gespielte Runde ist gemerkt');
    if(gespielt==='profi')assert.equal(neu.learningRound.ids.some(id=>snapshot.ids.includes(id)),false,'die nächste Profi-Runde wiederholt die vorige nicht');

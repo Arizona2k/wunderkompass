@@ -41,7 +41,7 @@ export function createChallenge(difficulty:Difficulty,previous:readonly string[]
 // Entdecker, Challenge-Fragen ohne Einstufung Profi. Experte bekommt zuerst höchstens drei der wenigen Experten-Fragen
 // (wechselnd über den Auswahl-Helfer), dann Profi-Fragen.
 export const stufeDerFrage=(q:ChallengeQuestion):Stufe=>q.difficulty==='easy'?'entdecker':q.level??'profi';
-export const EXPERTEN_HINWEIS=`Hier gibt es erst wenige Experten-Fragen. Du bekommst bis zu ${['null','eine','zwei','drei','vier','fünf'][EXPERTEN_JE_RUNDE]}, danach Profi-Fragen.`;
+export const EXPERTEN_HINWEIS=`Hier gibt es erst wenige Experten-Fragen. Du bekommst bis zu ${['null','eine','zwei','drei','vier','fünf'][EXPERTEN_JE_RUNDE]} davon, dann Profi-Fragen.`;
 // Die Stufe, die eine Runde spielt. Alte Runden (Leicht/Mittel/Schwer, vor Teil B) zeigen die nächste Stufe, damit die
 // Stufenzeile ehrlich sagen kann, dass die neue Stufe erst ab der nächsten Runde gilt.
 const ALTE_STUFE:Record<Difficulty,Stufe>={easy:'entdecker',medium:'profi',hard:'experte'};
