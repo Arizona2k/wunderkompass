@@ -1,5 +1,5 @@
 "use client";
-// Vorschläge statt Automatik (Teilschritt 3, E8): ein kleiner Hinweis unter der Rückmeldung, kein Fenster.
+// Vorschläge statt Automatik (Teilschritt 3, E8): ein kleiner Hinweis in der Rückmeldung, kein Fenster.
 // Die Folge der ersten Antworten lebt nur, solange die Seite offen ist (Modul-Variable), nie im Pass.
 // Höchstens ein Vorschlag je Runde (Karte); die Seite stellt nie selbst um.
 import {useCallback, useState} from 'react';
@@ -22,7 +22,8 @@ export function useStufenVorschlag(runde: string, stufe: Stufe) {
 }
 
 export function StufenVorschlagHinweis({vorschlag, onJa, onNein}: {vorschlag: StufenVorschlag; onJa: () => void; onNein: () => void}) {
-  return <div className="stufen-vorschlag" role="status">
+  // Kein eigenes role="status": Der Hinweis steht in der Rückmeldung, und die meldet sich schon selbst an.
+  return <div className="stufen-vorschlag">
     <p>{vorschlag.text}</p>
     <div className="stufen-vorschlag-knoepfe">
       <button type="button" className="kern-knopf stufen-vorschlag-ja" onClick={onJa}>{vorschlag.richtung === 'schwerer' ? `Ja, ${STUFEN_NAME[vorschlag.ziel]} probieren` : 'Ja, leichter spielen'}</button>

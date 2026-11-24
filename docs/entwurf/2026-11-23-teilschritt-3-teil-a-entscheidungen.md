@@ -109,6 +109,23 @@ Alle zehn Befunde bestätigt behoben. Neue Befunde, alle umgesetzt:
 - `engines-a11`: die drei geänderten CI-Suiten `offline-cold`, `wissenskarte`, `retained-answer-wording` in Firefox und WebKit grün. Damit laufen die beiden neuen CI-Schritte auch dort.
 - Damit ist jede große Suite nach den letzten Code-Änderungen mindestens einmal in Chromium ganz grün (`full-a6` bis `full-a10`, `check-a8`). Firefox und WebKit der Vollprüfung kommen wie immer am Phasenende.
 
+## Design-Prüfung (Bericht `2026-11-24-teil-a-design-pruefung.md`)
+
+Umgesetzt (nur Aussehen und Ort, keine Texte der Karten):
+- **Befund 1, Stufenwahl offen:** Die drei Stufen stehen jetzt in einem eigenen Kasten mit gestricheltem Rand und dem Titel „Welche Stufe willst du spielen?“, volle Breite, mit Abstand zur Frage. Die gewählte Stufe hat nur noch einen kräftigen Rand und ein Häkchen, keinen farbigen Grund wie eine richtige Antwort. Der Kopf von „Rate mal!“ ist auf allen Breiten untereinander gesetzt; damit steht auf 1280/1440 nichts mehr verrutscht daneben, und „Zu schwer? Zurück zu Entdecker“ steht bündig links. Der Titel ist nur zum Sehen (`aria-hidden`), vorgelesen wird weiter der Gruppenname „Stufe wählen“.
+- **Befund 2, Vorschlag:** steht jetzt in der Rückmeldung direkt nach der Erklärung, also vor „Noch eine Frage“. Beide Knöpfe haben denselben Rand, auf dem Handy volle Breite, 12 px Abstand; Innenabstand 16 px. Das eigene `role="status"` des Vorschlags ist weg, weil die Rückmeldung sich schon selbst ansagt (sonst doppelt).
+- **Befund 3, „Prüfen“:** 48 px hoch, 18 px Schrift, auf dem Handy volle Breite.
+- **Befund 8, Pass (Abstände):** Absätze unter „Für Erwachsene“ mit 8 px Abstand, darüber und darunter mehr Luft.
+- **Befund 9:** Zweitzeilen der Stufen 16 px.
+- Nachher-Bilder (320, 390, 1280; Stufenwahl zu und offen, Profi mit Zurück-Link, Vorschlag, „Ordne richtig“, Pass) selbst angesehen: keine Tippfläche unter 44 px, kein waagrechtes Scrollen. Die Bilder liegen nicht im Repository.
+
+Nicht umgesetzt, mit Grund:
+- **Frage dimmen, solange die Stufenwahl offen ist** (Befund 1): senkt den Kontrast des Fragetexts unter das, was wir für Kinder wollen; der eigene Kasten mit Titel trennt schon deutlich.
+- **„Noch eine Frage“ zurücknehmen, solange ein Vorschlag steht** (Befund 2): Der Vorschlag steht jetzt davor; ein fehlender Knopf würde Kinder blockieren, die gar nicht wechseln wollen.
+- **Befunde 4, 5 und 6** („Ordne richtig“: Hinweis „oben = zuerst“, Fehlermeldung im Kasten, Auflösung als Reihe; „Fast richtig“: doppelte Erklärung, Leerraum, Symbol am falschen Wort; Fotosynthese: Bildlegende kürzer und an die Zeichnung): Das sind Texte und Aufbau, die über `karten-autor`, `kinder-redaktion` und `fakten-pruefer` laufen müssen. BACKLOG, Phase 1, Teilschritt 3.
+- **Befund 7** („Modellkörper“ bricht bei 320 px im Steckbrief): stammt nicht aus Teil A, betrifft den Steckbrief aller Karten. BACKLOG.
+- **Befund 8, Ort und Pfeil:** Die Stufenwahl steht im Pass mit Absicht unter „Spielen & Vorlesen“, bei den anderen Spiel-Einstellungen. Falsch waren STATUS und der PR-Entwurf („Sichern & mitnehmen“), beide berichtigt. Das Standard-Dreieck an „Für Erwachsene“ teilt sich der Pass mit seinen anderen aufklappbaren Feldern; ein einheitlicher Pfeil gehört zum Feinschliff des Passes (BACKLOG).
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.

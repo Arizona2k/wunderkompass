@@ -195,7 +195,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         fokus={weitergeblaettert}
         onAntwort={merke}
         kopf={a.onStufe ? <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
-        unterRueckmeldung={vorschlag && a.onStufe ? (
+        vorschlag={vorschlag && a.onStufe ? (
           <StufenVorschlagHinweis
             vorschlag={vorschlag}
             onJa={() => { schliessen(); a.onStufe?.(vorschlag.ziel); fokusAufStufenWahl(artikel.current); }}

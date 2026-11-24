@@ -34,7 +34,10 @@ export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onS
       <p>Stufe: <strong>{STUFEN_NAME[stufe]}</strong></p>
       <button ref={aendern} type="button" className="kern-knopf stufen-aendern" aria-label="Stufe ändern" aria-expanded={offen} aria-controls={offen ? gruppe : undefined} onClick={() => setOffen(o => !o)}>Ändern</button>
     </div>
+    {/* Offen ein eigener Kasten mit Titel, damit die drei Stufen nicht wie Antworten aussehen (Design-Prüfung Teil A,
+        Befund 1). Der Titel ist nur zum Sehen; vorgelesen wird der Name der Gruppe. */}
     {offen && <div id={gruppe} className="stufen-knoepfe" role="group" aria-label="Stufe wählen">
+      <p className="stufen-titel" aria-hidden="true">Welche Stufe willst du spielen?</p>
       {STUFEN.map(s => <button key={s} ref={s === stufe ? gewaehlt : undefined} type="button" className="stufen-knopf" aria-pressed={s === stufe} onClick={() => waehle(s)}>
         <strong>{STUFEN_NAME[s]}</strong><span>{STUFEN_TEXT[s]}</span>{s === stufe && <Check size={22} aria-hidden="true"/>}
       </button>)}

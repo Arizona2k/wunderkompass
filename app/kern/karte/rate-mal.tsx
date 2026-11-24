@@ -43,16 +43,17 @@ type RateMalProps = {
   onWeiter?: () => void;
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
-  // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe)
-  // und darunter Platz für den Vorschlag.
+  // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
   onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
-  unterRueckmeldung?: ReactNode;
-  // Neben der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
+  // Der Vorschlag steht in der Rückmeldung nach der Erklärung, vor „Noch eine Frage“: Darunter übersahen Kinder ihn
+  // neben dem großen orangen Knopf (Design-Prüfung Teil A, Befund 2).
+  vorschlag?: ReactNode;
+  // Unter der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
   kopf?: ReactNode;
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, unterRueckmeldung, kopf}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, vorschlag, kopf}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -108,6 +109,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
                 ? q.why
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
+          {vorschlag}
           {richtig && (
             <div className="rate-mal-weiter">
               {onWeiter && <button type="button" className="primary-button" onClick={onWeiter}>Noch eine Frage</button>}
@@ -125,7 +127,6 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
           )}
         </>}
       </LearningFeedback>
-      {unterRueckmeldung}
       {/* Der Tipp steht unter der Rückmeldung: erst „Noch nicht ganz …“, dann die Hilfe. */}
       {!richtig && <QuestionHints key={frage.id} hints={frage.hints} onRead={onRead}/>}
     </section>
