@@ -4,21 +4,22 @@ const detective=new Map(clues.entries.map(row=>[row.id,row]));
 /** @param {string} id */
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
 /** @param {{title:string,intro:string}} topic */
-// Eigene Personen-Rätsel statt des Kartenanfangs. Darwin und Einstein: eindeutige Rätsel (Teil B, Entscheidungsliste Punkt 7;
-// kinder-redaktion und fakten-pruefer 24.11.2026). Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin und Einstein:
-// ohne „er“, „sie“, „sein“, „ihr“ und Berufswörter, die verraten, ob ein Mann oder eine Frau gesucht ist (Stufen-Prüfung Teil B, M5).
-// Nur Aussagen, die schon auf der Karte stehen.
+// Eigene Personen-Rätsel statt des Kartenanfangs. Darwin und Einstein: eindeutige Rätsel (Teil B, Entscheidungsliste Punkt 7).
+// Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin und Einstein: ohne „er“, „sie“, „sein“, „ihr“ und Berufswörter,
+// die verraten, ob ein Mann oder eine Frau gesucht ist (Stufen-Prüfung Teil B, M5). Nur Aussagen, die auf der Karte stehen
+// (Einstein vorher mit E = mc², das auf keiner Karte steht; Benz vorher mit „Benzinmotor“, das den Namen verrät).
+// Fassungen nach kinder-redaktion und fakten-pruefer, 24.11.2026 (docs/entwurf/2026-11-24-welt-spiele-texte-*.md).
 /** @type {Record<string,string>} */
 export const EIGENE_RAETSEL={
- 'person-charles_darwin':'Diese Person reiste fünf Jahre lang mit dem Schiff „Beagle“ um die Welt. Später erklärte diese Person, wie sich Tiere und Pflanzen über sehr lange Zeit verändern.',
- 'person-albert_einstein':'Diese Person fand heraus, dass die Zeit nicht überall gleich schnell vergeht. Von dieser Person stammt auch eine berühmte, ganz kurze Formel: E = mc².',
- 'person-karl_benz':'Diese Person entwickelte einen Wagen mit Benzinmotor.',
- 'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher über das Rechnen und die Algebra.',
- 'person-neil_armstrong':'Bei Apollo 11 landete diese Person zusammen mit Buzz Aldrin auf dem Mond.',
- 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Dieses staatliche System benachteiligte Menschen durch rassistische Gesetze. 1994 kam diese Person an die Spitze des Landes.',
- 'person-murasaki_shikibu':'Diese Person schrieb am japanischen Kaiserhof im frühen 11. Jahrhundert die Erzählung vom Prinzen Genji. Das Werk wurde über viele Generationen abgeschrieben, gelesen und in Bildern neu gedeutet.',
- 'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Auf den Bildern dieser Person konnten aus frei gezogenen Linien neue Formen entstehen.',
- 'person-mae_jemison':'Diese Person verband Medizin, Technik und Raumfahrt. 1992 forschte diese Person im Weltraumlabor der Endeavour.'
+ 'person-charles_darwin':'Fast fünf Jahre lang reiste diese Person mit dem Schiff „Beagle“. Später erklärte diese Person, wie sich Lebewesen über viele Generationen verändern.',
+ 'person-albert_einstein':'Diese Person untersuchte Licht, Raum und Zeit. Dabei stellte sich diese Person Dinge ganz genau vor und überlegte, was dann passieren würde.',
+ 'person-karl_benz':'Diese Person entwickelte einen frühen Motorwagen. So ein Wagen fährt mit einem Motor.',
+ 'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher übers Rechnen. Darin ging es auch um Algebra: das Rechnen mit unbekannten Zahlen.',
+ 'person-neil_armstrong':'Diese Person landete mit Buzz Aldrin auf dem Mond. Die Reise hieß Apollo 11.',
+ 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Die Apartheid teilte Menschen in Gruppen ein und gab ihnen ungleiche Rechte. 1994 wurde diese Person das Oberhaupt des Landes.',
+ 'person-murasaki_shikibu':'Diese Person lebte vor über 1000 Jahren am Hof des Kaisers von Japan. Dort schrieb diese Person die Erzählung vom Prinzen Genji.',
+ 'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Außerdem malte diese Person Bilder: Aus frei gezogenen Linien wurden neue Formen.',
+ 'person-mae_jemison':'Diese Person kannte sich mit Medizin und Technik aus. 1992 flog diese Person mit der Raumfähre Endeavour ins All und forschte dort.'
 };
 export function personRecognitionClue(topic){
  // These delivered riddles stay independent of a richer biography opening.

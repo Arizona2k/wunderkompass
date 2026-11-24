@@ -6,9 +6,11 @@ import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
 import TIER_FALLEN from './world-game-tier-fallen.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
-export const DRITTE_ANTWORT='Nur ein Zukunftswunsch';
-// Bis 24.11.2026 hatten Früher-Aufgaben diese dritte Antwort; gespeicherte Runden dürfen sie behalten.
-const ALTE_DRITTE_ANTWORT='Noch keine wirkliche Entwicklung';
+// „Erst in der Zukunft“ passt zu den Stufen der Erfindungskarten (Früher, Heute, Zukunft) und ist bei jeder Aufgabe klar falsch
+// (kinder-redaktion und fakten-pruefer, 24.11.2026).
+export const DRITTE_ANTWORT='Erst in der Zukunft';
+// Bis 24.11.2026 hatte jede Aufgabe ihre eigene dritte Antwort; gespeicherte Runden dürfen sie behalten.
+const ALTE_DRITTE_ANTWORT:Record<string,string>={Früher:'Noch keine wirkliche Entwicklung',Heute:'Nur ein Zukunftswunsch'};
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
 // Recognition questions can keep older real topic names as distractors. Factual
@@ -21,7 +23,8 @@ export function validWorldGameOrder(value:unknown,current:GameItem,pool:GameItem
  const tierListe=gameId==='habitats'?TIER_FALLEN.lebensraum:gameId==='food'?TIER_FALLEN.nahrung:null,fallen=(tierListe as Record<string,{entdecker:string[];profi:string[]}>|null)?.[current.id];
  if(!Array.isArray(value)||!(value.length===current.answers.length||(recognition||!!fallen)&&value.length===current.answers.length+1)||new Set(value).size!==value.length||!value.every(answer=>typeof answer==='string'))return false;
  if(value.every(answer=>current.answers.includes(answer)))return true;
- if(gameId==='then-now'&&current.answers[current.correct]==='Früher'&&current.answers.includes(DRITTE_ANTWORT)){const alt=current.answers.map(answer=>answer===DRITTE_ANTWORT?ALTE_DRITTE_ANTWORT:answer);return value.length===alt.length&&value.every(answer=>alt.includes(answer));}
+ const alteDritte=gameId==='then-now'&&current.answers.includes(DRITTE_ANTWORT)?ALTE_DRITTE_ANTWORT[current.answers[current.correct]]:undefined;
+ if(alteDritte){const alt=current.answers.map(answer=>answer===DRITTE_ANTWORT?alteDritte:answer);return value.length===alt.length&&value.every(answer=>alt.includes(answer));}
  if(fallen)return value.includes(current.answers[current.correct])&&value.every(answer=>current.answers.includes(answer)||fallen.entdecker.includes(answer)||fallen.profi.includes(answer));
  if(!recognition||!value.includes(current.answers[current.correct]))return false;
  const names=new Set(pool.map(question=>question.answers[question.correct]));

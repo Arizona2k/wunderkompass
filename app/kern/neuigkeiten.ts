@@ -11,7 +11,7 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
-  {id: 'spiele-mit-stufen', datum: '2026-11-24', symbol: 'stern', titel: 'Wissensspiele mit Stufen', text: 'In sechs Wissensspielen gilt jetzt deine Stufe: Als Profi gibt es mehr Aufgaben und meist vier Antworten. Was du falsch hattest, kommt später wieder.'},
+  {id: 'spiele-mit-stufen', datum: '2026-11-24', symbol: 'stern', titel: 'Spiele mit Stufen', text: 'Sechs Wissensspiele haben jetzt Stufen, zum Beispiel „Wer war das?“. Als Profi gibt es mehr Aufgaben und meist vier Antworten. Was noch nicht geklappt hat, kommt später noch einmal.'},
   {id: 'globus-ohne-sackgasse', datum: '2026-11-24', symbol: 'globus', titel: 'Kein Knopf mehr ins Leere', text: 'Tippst du auf dem Globus eine Hauptstadt an, führt kein Knopf mehr ins Leere.'},
   {id: 'stufe-mit-ziel', datum: '2026-11-24', symbol: 'stern', titel: 'Jede Stufe hat jetzt ein Ziel', text: '„Noch eine Frage“ bleibt jetzt in deiner Stufe. Hast du alle geschafft, zeigt dir die Karte, wohin es weitergeht.'},
   {id: 'drei-stufen', datum: '2026-11-23', symbol: 'stern', titel: 'Drei Stufen: Entdecker, Profi, Experte', text: 'Auf den Karten gibt es jetzt Fragen für jede Stufe. Ist es zu leicht oder zu schwer, schlägt die Karte eine andere Stufe vor.'},

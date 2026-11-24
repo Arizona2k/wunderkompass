@@ -65,7 +65,8 @@ test('eigene Personen-Rätsel verraten weder Namen noch Geschlecht',()=>{
   assert.equal(personRecognitionClue(t),satz);
   const q=pool.find(q=>q.id===id);if(q)assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+satz);
   const namensteile=normalize(t.title).split(' ').filter(w=>w.length>2&&!['al','von','van','der'].includes(w));
-  for(const teil of namensteile)assert.doesNotMatch(normalize(satz),new RegExp('(^| )'+teil+'( |$)','u'),id+' nennt '+teil);
+  // Lange Namensteile auch mitten im Wort: „Benzinmotor“ verrät Benz (kinder-redaktion, 24.11.2026).
+  for(const teil of namensteile)assert.ok(teil.length>3?!normalize(satz).includes(teil):!new RegExp('(^| )'+teil+'( |$)','u').test(normalize(satz)),id+' nennt '+teil);
   assert.doesNotMatch(satz,/\b(er|sie|sein|seine|seinen|seinem|seiner|ihr|ihre|ihren|ihrem|ihrer|Er|Sie|Sein|Seine|Ihr|Ihre)\b/u,id+': Fürwort verrät das Geschlecht');
  }
 });
@@ -98,7 +99,7 @@ test('the compass principle question separates earlier-and-today from every reti
 });
 test('every other earlier-today question retains its old prompt, answer and explanation',()=>{
  // Alle haben dieselbe dritte Antwort (Stufen-Prüfung Teil B, M1): Die Falle verrät die Lösung nicht mehr.
- assert.equal(DRITTE_ANTWORT,'Nur ein Zukunftswunsch');
+ assert.equal(DRITTE_ANTWORT,'Erst in der Zukunft');
  for(const q of worldGameBank('then-now')){
   if(q.id==='invention-compass-today')continue;
   const today=q.id.endsWith('-today'),t=catalog.find(t=>t.id===(today?q.id.slice(0,-6):q.id));
@@ -107,14 +108,18 @@ test('every other earlier-today question retains its old prompt, answer and expl
   assert.equal(q.why,t.invention.stages[today?3:4].text);
  }
 });
-test('eine gespeicherte Früher-Aufgabe mit der alten dritten Antwort läuft weiter',()=>{
+test('gespeicherte Aufgaben mit ihrer alten dritten Antwort laufen weiter',()=>{
  const pool=worldGameBank('then-now'),frueher=pool.find(q=>!q.id.endsWith('-today')),heute=pool.find(q=>q.id.endsWith('-today')&&q.id!=='invention-compass-today'),kompass=pool.find(q=>q.id==='invention-compass-today');
- const alt=['Noch keine wirkliche Entwicklung','Früher','Heute'];
- assert.equal(validWorldGameOrder(alt,frueher,pool,'then-now'),true,'alte Runde bleibt, wie sie war');
- assert.equal(worldGameAnswerCorrect('then-now',frueher,'Noch keine wirkliche Entwicklung'),false);
- assert.equal(validWorldGameOrder(alt,heute,pool,'then-now'),false,'bei Heute-Aufgaben gab es diesen Text nie');
- assert.equal(validWorldGameOrder(alt,kompass,pool,'then-now'),false);
+ // So standen sie bis 24.11.2026 auf test-live: Früher mit „Noch keine wirkliche Entwicklung“, Heute mit „Nur ein Zukunftswunsch“.
+ const altFrueher=['Noch keine wirkliche Entwicklung','Früher','Heute'],altHeute=['Früher','Nur ein Zukunftswunsch','Heute'];
+ assert.equal(validWorldGameOrder(altFrueher,frueher,pool,'then-now'),true,'alte Früher-Runde bleibt, wie sie war');
+ assert.equal(validWorldGameOrder(altHeute,heute,pool,'then-now'),true,'alte Heute-Runde bleibt, wie sie war');
+ for(const alt of ['Noch keine wirkliche Entwicklung','Nur ein Zukunftswunsch',DRITTE_ANTWORT])for(const q of [frueher,heute])assert.equal(worldGameAnswerCorrect('then-now',q,alt),false,alt+' ist nie richtig');
+ assert.equal(validWorldGameOrder(altFrueher,heute,pool,'then-now'),false,'bei Heute-Aufgaben gab es diesen Text nie');
+ assert.equal(validWorldGameOrder(altHeute,frueher,pool,'then-now'),false,'bei Früher-Aufgaben gab es diesen Text nie');
+ assert.equal(validWorldGameOrder(altFrueher,kompass,pool,'then-now'),false);
  assert.equal(validWorldGameOrder(['Noch keine wirkliche Entwicklung','Früher',DRITTE_ANTWORT],frueher,pool,'then-now'),false,'die richtige zweite Kategorie fehlt');
  const fallback=Object.fromEntries(pool.map(q=>[q.id,[...q.answers]]));
- assert.deepEqual(restoreWorldGameOrders({[frueher.id]:alt},fallback,pool,'then-now')[frueher.id],alt);
+ const restored=restoreWorldGameOrders({[frueher.id]:altFrueher,[heute.id]:altHeute},fallback,pool,'then-now');
+ assert.deepEqual(restored[frueher.id],altFrueher);assert.deepEqual(restored[heute.id],altHeute);
 });

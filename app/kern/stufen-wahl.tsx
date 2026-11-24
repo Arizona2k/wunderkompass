@@ -11,7 +11,8 @@ import {STUFEN, STUFEN_NAME, type Stufe} from './stufe';
 const STUFEN_TEXT: Record<Stufe, string> = {
   entdecker: 'zum Reinkommen',
   // Nicht „vier Antworten“: „Früher oder heute?“ hat auch als Profi drei (Code-Prüfung Teil B, PR 1, Fehler 2).
-  profi: 'kniffligere Fragen und Fallen',
+  // Nicht „Fallen“: klingt nach Reinlegen und lässt sich als „hinfallen“ lesen (kinder-redaktion, 24.11.2026).
+  profi: 'etwas kniffliger',
   experte: 'nachdenken und kombinieren',
 };
 
