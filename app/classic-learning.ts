@@ -6,7 +6,9 @@ import {EXPERTEN_JE_RUNDE,waehleAufgaben} from './kern/auswahl';
 import {istStufe,type Stufe} from './kern/stufe';
 export type ClassicLevel='easy'|'medium'|'hard';
 export type ReasonGame='habitats'|'detective';
-export type ClassicQuestion={id:string;game:ReasonGame;level:ClassicLevel;stufe?:Stufe;ruht?:true;prompt:string;answers:string[];correct:string;wrongReasons:Record<string,string>;why:string;hints:string[];topic:string};
+// `gruppe`: höchstens eine Frage dieser Gruppe je Runde (z. B. „dampf“: die Fragen verraten sich gegenseitig).
+// `festeReihenfolge`: Die Antworten sind Sätze einer Erklärung und werden nicht gemischt.
+export type ClassicQuestion={id:string;game:ReasonGame;level:ClassicLevel;stufe?:Stufe;ruht?:true;gruppe?:string;festeReihenfolge?:true;quelle?:{label:string;url:string}[];prompt:string;answers:string[];correct:string;wrongReasons:Record<string,string>;why:string;hints:string[];topic:string};
 export const CLASSIC_QUESTIONS=QUESTIONS as unknown as ClassicQuestion[];
 export const CLASSIC_LEVELS=[{id:'easy',label:'Leicht',description:'Grundlagen erkennen und eindeutige Hinweise nutzen.'},{id:'medium',label:'Mittel',description:'Merkmale vergleichen und Zusammenhänge erklären.'},{id:'hard',label:'Schwer',description:'Wissen auf veränderte Situationen übertragen.'}] as const;
 // Runden seit Teil B, Aufgabe 9 folgen der gemeinsamen Stufe (`stufe`, `level: null`); ältere Runden mit Leicht/Mittel/Schwer
@@ -29,10 +31,15 @@ function mischen<T>(items:readonly T[],zufall:()=>number){const a=[...items];for
 // Experte zieht zuerst höchstens EXPERTEN_JE_RUNDE Experten-Fragen und füllt mit Profi auf.
 export function neueKlassikRunde(game:ReasonGame,stufe:Stufe,review:Review={},vorige:readonly string[]=[],zufall:()=>number=Math.random,heute?:string):ReasonRound{
  const gespielt=klassikSpielStufe(game,stufe),schluessel=(id:string)=>'classic:'+game+':'+id;
- const waehle=(vorrat:string[],anzahl:number)=>waehleAufgaben({vorrat,review,schluessel,anzahl,vorige,zufall,heute});
+ // Wählt mit dem Auswahl-Helfer; zieht er zwei Fragen derselben Gruppe, fällt die spätere aus dem Vorrat, und es wird neu gewählt.
+ const waehle=(vorrat:string[],anzahl:number):string[]=>{
+  const ids=waehleAufgaben({vorrat,review,schluessel,anzahl,vorige,zufall,heute}),gesehen=new Set<string>();
+  const doppelt=ids.filter(id=>{const g=CLASSIC_QUESTIONS.find(q=>q.id===id)?.gruppe;if(!g)return false;if(gesehen.has(g))return true;gesehen.add(g);return false;});
+  return doppelt.length?waehle(vorrat.filter(id=>!doppelt.includes(id)),anzahl):ids;
+ };
  const zuerst=gespielt==='experte'?waehle(vorratDer(game,'experte'),EXPERTEN_JE_RUNDE):[];
  const ids=[...zuerst,...waehle(vorratDer(game,gespielt==='experte'?'profi':gespielt),KLASSIK_RUNDE-zuerst.length)];
- return {level:null,stufe:gespielt,ids,orders:Object.fromEntries(ids.map(id=>[id,mischen(CLASSIC_QUESTIONS.find(q=>q.id===id)!.answers,zufall)])),index:0,answer:null,done:false};
+ return {level:null,stufe:gespielt,ids,orders:Object.fromEntries(ids.map(id=>{const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!;return [id,q.festeReihenfolge?[...q.answers]:mischen(q.answers,zufall)];})),index:0,answer:null,done:false};
 }
 export function restoreReasonRound(game:ReasonGame,value:unknown):ReasonRound{
  if(!isRecord(value)||!Array.isArray(value.ids)||!value.ids.length||value.ids.length>20||new Set(value.ids).size!==value.ids.length||!isRecord(value.orders))return emptyReasonRound();
@@ -43,7 +50,7 @@ export function restoreReasonRound(game:ReasonGame,value:unknown):ReasonRound{
  if(!value.ids.every(id=>CLASSIC_QUESTIONS.some(q=>q.id===id&&passt(q))))return emptyReasonRound();
  const ids=value.ids as string[],orders:Record<string,string[]>={};
  // Eine ungültige Reihenfolge wird neu gemischt; sonst stünde die richtige Antwort oft oben (Stufen-Prüfung, Befund 8).
- for(const id of ids){const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!,a=value.orders[id];orders[id]=Array.isArray(a)&&a.length===q.answers.length&&new Set(a).size===a.length&&a.every(c=>q.answers.includes(c))?a as string[]:shuffle(q.answers);}
+ for(const id of ids){const q=CLASSIC_QUESTIONS.find(q=>q.id===id)!,a=value.orders[id];orders[id]=Array.isArray(a)&&a.length===q.answers.length&&new Set(a).size===a.length&&a.every(c=>q.answers.includes(c))?a as string[]:q.festeReihenfolge?[...q.answers]:shuffle(q.answers);}
  const index=typeof value.index==='number'&&Number.isInteger(value.index)?Math.max(0,Math.min(ids.length-1,value.index)):0,q=CLASSIC_QUESTIONS.find(q=>q.id===ids[index])!;
  const runde={ids,orders,index,answer:typeof value.answer==='string'&&q.answers.includes(value.answer)?value.answer:null,done:value.done===true&&index===ids.length-1&&value.answer===q.correct};
  return neu?{level:null,stufe,...runde}:{level:value.level as ClassicLevel,...runde};

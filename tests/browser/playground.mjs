@@ -7,7 +7,7 @@ import {habitatAnswerSemantics} from './habitat-answer-semantics.mjs';
 import {worldGameLearningCopy} from './world-game-learning-copy.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {PLAYGROUND_GAMES}=await import('../../app/playground-catalog.ts');
-const {CLASSIC_QUESTIONS,neueKlassikRunde,klassikStufe}=await import('../../app/classic-learning.ts');
+const {CLASSIC_QUESTIONS,neueKlassikRunde,klassikStufe,klassikSpielStufe}=await import('../../app/classic-learning.ts');
 import {createSave,emptyProgress,SAVE_KEY} from '../../app/progress-storage.ts';
 import {bereich} from './harness.mjs';
 const {LAYERS}=await import('../../app/earth-data.ts');
@@ -67,10 +67,10 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
    assert.equal(await p.locator('.challenge-levels').count(),0,'keine Auswahl Leicht/Mittel/Schwer mehr');
    if(!(await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).count())){await zeile.getByRole('button',{name:'Stufe ändern',exact:true}).tap();await zeile.getByRole('group',{name:'Welche Stufe willst du spielen?',exact:true}).getByRole('button').filter({hasText:name}).tap();}
    await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).waitFor();
-   const gespielt=stufe==='experte'?'profi':stufe;
+   const gespielt=klassikSpielStufe(game,stufe),erlaubt=gespielt==='experte'?['experte','profi']:[gespielt];
    await p.waitForFunction(({key,game,gespielt})=>{const r=JSON.parse(localStorage.getItem(key))?.progress.gameSessions[game]?.learningRound;return r?.stufe===gespielt&&r.index===0&&r.answer===null;},{key:SAVE_KEY,game,gespielt});
-   if(stufe==='experte')await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.',{exact:true}).waitFor();
-   let snapshot=(await state(p)).gameSessions[game].learningRound;assert.equal(snapshot.level,null);assert.equal(snapshot.ids.length,4);assert.ok(snapshot.ids.every(id=>klassikStufe(CLASSIC_QUESTIONS.find(q=>q.id===id))===gespielt));
+   if(stufe==='experte'&&gespielt==='profi')await zeile.getByText('Experte gibt es hier noch nicht. Du spielst Profi.',{exact:true}).waitFor();
+   let snapshot=(await state(p)).gameSessions[game].learningRound;assert.equal(snapshot.level,null);assert.equal(snapshot.ids.length,4);assert.ok(snapshot.ids.every(id=>erlaubt.includes(klassikStufe(CLASSIC_QUESTIONS.find(q=>q.id===id)))));
    for(let i=0;i<4;i++){
     const q=CLASSIC_QUESTIONS.find(q=>q.id===snapshot.ids[i]),hint=room.locator('.world-game-hint');await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
     // Advancing a question deliberately moves focus on the next frame. Finish that real handoff before directing

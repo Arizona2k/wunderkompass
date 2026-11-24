@@ -143,6 +143,8 @@ function currentIds() {
   ids['world-card-extras'] = topics.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? []), ...(t.ordnen ? [t.ordnen] : [])].map(x => x.id));
   // Foto-IDs: stehen in Pass-Sicherungen nicht, aber eine wiederverwendete ID zeigte unter altem Nachweis ein anderes Bild.
   ids.photos = Object.keys(readJson(path.join(ROOT, 'app/world-photos.json')));
+  // Fragen der Klassik-Spiele („Stimmt das wirklich?“, „Wer lebt wo?“): IDs in gespeicherten Runden und in `classic:<spiel>:<id>` (Wiederholungen).
+  ids['classic-questions'] = readJson(path.join(ROOT, 'app/classic-questions.json')).map(q => q.id);
   return ids;
 }
 

@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {PLAYGROUND_GAMES,filterGames,gameStatus,gameSaveId} from '../app/playground-catalog.ts';
-import {CLASSIC_QUESTIONS,CLASSIC_LEVELS,neueKlassikRunde,klassikStufe,klassikSpielStufe,hatExperte,restoreReasonRound,answerReasonRound,emptyReasonRound} from '../app/classic-learning.ts';
+import {CLASSIC_QUESTIONS,KLASSIK_RUNDE,neueKlassikRunde,klassikStufe,klassikSpielStufe,hatExperte,restoreReasonRound,answerReasonRound,emptyReasonRound} from '../app/classic-learning.ts';
 import {emptyProgress,createSave,restoreSave} from '../app/progress-storage.ts';
 import {LAYERS} from '../app/earth-data.ts';
 const find=(key)=>PLAYGROUND_GAMES.find(g=>g.key===key);
@@ -21,13 +21,23 @@ test('a past order stamp does not mark a wrong current build finished, and quiz/
  p.quizSession={finished:false,index:2,ids:['a','b','c']};assert.equal(gameStatus(find('classic:quiz'),p).resume,true);
  p.missions=[0,1];assert.equal(gameStatus(find('classic:hunt'),p).resume,true);
 });
-test('24 differentiated tasks have valid knowledge links, answer-specific explanations and non-answer hints',()=>{
+const HEUTE='2026-11-24',GESTERN='2026-11-23';
+test('Klassik-Fragen: Karte, Erklärung je Antwort, Tipps ohne Lösung, Antwortzahl und Vorrat je Stufe',()=>{
  const topics=JSON.parse(fs.readFileSync(new URL('../app/world-index.json',import.meta.url))),ids=new Set();
- for(const game of ['habitats','detective'])for(const l of CLASSIC_LEVELS){const bank=CLASSIC_QUESTIONS.filter(q=>q.game===game&&q.level===l.id);assert.equal(bank.length,4);for(const q of bank){assert.ok(!ids.has(q.id));ids.add(q.id);assert.ok(topics.some(t=>t.id===q.topic));assert.equal(new Set(q.answers).size,q.answers.length);assert.ok(q.answers.includes(q.correct));assert.ok(q.why.length>40);for(const a of q.answers.filter(a=>a!==q.correct))assert.ok(q.wrongReasons[a]?.length>30);for(const h of q.hints)assert.ok(!h.toLocaleLowerCase('de').includes(q.correct.toLocaleLowerCase('de')),q.id+' must not state its complete answer');}}
- const easy=CLASSIC_QUESTIONS.filter(q=>q.game==='detective'&&q.level==='easy'),hard=CLASSIC_QUESTIONS.filter(q=>q.game==='detective'&&q.level==='hard');assert.ok(easy.every(q=>q.answers.length===2));assert.ok(hard.every(q=>q.answers.length===3));assert.ok(hard.some(q=>q.prompt.includes('Schluss')));
+ for(const q of CLASSIC_QUESTIONS){
+  assert.ok(!ids.has(q.id),q.id);ids.add(q.id);assert.ok(topics.some(t=>t.id===q.topic),q.id+' Karte');
+  assert.equal(new Set(q.answers).size,q.answers.length,q.id);assert.ok(q.answers.includes(q.correct),q.id);assert.ok(q.why.length>40,q.id+' Erklärung');
+  for(const a of q.answers.filter(a=>a!==q.correct))assert.ok(q.wrongReasons[a]?.length>20,q.id+' warum nicht: '+a);
+  for(const h of q.hints)assert.ok(!h.toLocaleLowerCase('de').includes(q.correct.toLocaleLowerCase('de')),q.id+' Tipp verrät die Lösung');
+ }
+ // Teil B, Aufgabe 9: Entdecker 2 oder 3 Antworten, Profi und Experte vier (E5); jeder Vorrat ist größer als eine Runde.
+ for(const q of CLASSIC_QUESTIONS.filter(q=>q.game==='detective'&&!q.ruht))assert.equal(q.answers.length,klassikStufe(q)==='entdecker'?2:4,q.id);
+ for(const game of ['habitats','detective'])for(const stufe of ['entdecker','profi']){const pool=CLASSIC_QUESTIONS.filter(q=>q.game===game&&!q.ruht&&klassikStufe(q)===stufe);assert.ok(pool.length>=KLASSIK_RUNDE,game+' '+stufe+': '+pool.length);}
+ assert.ok(hatExperte('detective'),'„Stimmt das wirklich?“ hat mindestens vier echte Experten-Fragen');assert.equal(hatExperte('habitats'),false);
+ // Höchstens eine Frage einer Gruppe je Runde, und eine Erklärung in fester Reihenfolge wird nicht gemischt.
+ for(let i=0;i<60;i++){const r=neueKlassikRunde('detective','experte',{},[],()=>((i*7919)%101)/101,HEUTE);const gruppen=r.ids.map(id=>CLASSIC_QUESTIONS.find(q=>q.id===id).gruppe).filter(Boolean);assert.equal(new Set(gruppen).size,gruppen.length,'zwei Fragen einer Gruppe');for(const id of r.ids){const q=CLASSIC_QUESTIONS.find(q=>q.id===id);if(q.festeReihenfolge)assert.deepEqual(r.orders[id],q.answers);}assert.ok(r.ids.filter(id=>klassikStufe(CLASSIC_QUESTIONS.find(q=>q.id===id))==='experte').length<=3);}
 });
 // Teil B, Aufgabe 9: „Stimmt das wirklich?“ und „Wer lebt wo?“ folgen der gemeinsamen Stufe.
-const HEUTE='2026-11-24',GESTERN='2026-11-23';
 const stufeVon=id=>klassikStufe(CLASSIC_QUESTIONS.find(q=>q.id===id));
 test('neue Klassik-Runden folgen der Stufe, lesen Wiederholungen und meiden die vorige Runde',()=>{
  for(const game of ['habitats','detective']){
@@ -72,4 +82,11 @@ test('schema-3 backup retains legacy shuffled tuples, collisions, notes, stamps 
  const legacy={items:[['Korallen sind Tiere.',true,'Korallen sind Tiere.']],index:0,answer:false,score:0,finished:false};
  p.gameSessions={detective:legacy,habitats:{items:[{name:'Eisbär',correct:'Arktis',prompt:'Meereis',why:'Im Norden'}],index:0,answer:null,finished:false},'world:habitats':{items:['animal-polar-bear'],roundAnswer:'Savanne',roundDone:false},'world:animal-detective':{roundAnswer:null},'animal-detective':{items:[]},order:{chosen:['sun'],pool:[{id:'sun',name:'Wasser verdunstet',text:'Flüssig wird gasförmig'}]},'test-new':{learningRound:neueKlassikRunde('detective','profi',{},[],()=>.4,HEUTE),vorige:['detective-easy-coral'],geschafft:{profi:'2026-11-24'}}};
  const restored=restoreSave(JSON.parse(JSON.stringify(createSave(p))),true).progress;assert.deepEqual(restored,p);assert.deepEqual(restored.gameSessions.detective,legacy);
+});
+test('eine angefangene Klassik-Runde mit Stufe gilt in der Spiele-Übersicht als offen',()=>{
+ const p=emptyProgress(),g=PLAYGROUND_GAMES.find(g=>g.key==='classic:detective');
+ p.gameSessions.detective={learningRound:neueKlassikRunde('detective','profi',{},[],()=>.3,HEUTE)};
+ assert.equal(gameStatus(g,p).resume,true);
+ p.gameSessions.detective.learningRound={...p.gameSessions.detective.learningRound,index:3,answer:CLASSIC_QUESTIONS.find(q=>q.id===p.gameSessions.detective.learningRound.ids[3]).correct,done:true};
+ assert.equal(gameStatus(g,p).finished,true);
 });
