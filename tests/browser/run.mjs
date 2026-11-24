@@ -6,7 +6,8 @@
 //   --shard   nur mit --suite full und einem Browser: eine Gruppe aus shards.mjs (CI-Job „Vollprüfung“)
 //   name …    nur diese Suiten
 // Am Ende steht eine Zeiten-Datei in .qa-output/browser/zeiten-<suite>-<browser>[-<gruppe>].json.
-// Umgebung: QA_DIST (anderer Build-Ordner), QA_PLAYWRIGHT_MODULE, QA_BROWSER_EXECUTABLE (nur Chromium).
+// Umgebung: QA_DIST (anderer Build-Ordner), QA_PLAYWRIGHT_MODULE, QA_BROWSER_EXECUTABLE (nur Chromium),
+//   QA_FRAME_DELAY_MS (Stresslauf: jedes Bild der Seite kommt so viel später, stresslauf.mjs).
 
 // Ohne Spracheinstellung (im Cloud-Container ist LANG leer, in der CI C.UTF-8) verschluckt Chromium Dateinamen
 // mit Umlauten beim Hochladen, z. B. den Testpass „…old-compass-Früher…“ in learning-tasks. Darum UTF-8 setzen.
@@ -41,6 +42,12 @@ if (!options.base) {
 }
 
 const playwright = await import(process.env.QA_PLAYWRIGHT_MODULE ?? 'playwright');
+const bildVerzoegerungMs = process.env.QA_FRAME_DELAY_MS ? Number(process.env.QA_FRAME_DELAY_MS) : 0;
+if (bildVerzoegerungMs) {
+  const {bremseBilder} = await import('./stresslauf.mjs');
+  bremseBilder(playwright, bildVerzoegerungMs);
+  console.log(`Stresslauf: Jedes Bild der Seite kommt ${bildVerzoegerungMs} ms später.`);
+}
 const server = options.base ? null : await startPreview();
 const base = options.base ?? server.base;
 const times = [];
@@ -139,7 +146,7 @@ async function writeTimes() {
   const name = ['zeiten', options.suite, options.browser, options.shard].filter(Boolean).join('-') + '.json';
   const file = path.join(PROJECT, '.qa-output', 'browser', name);
   const sekunden = Number(((performance.now() - runStarted) / 1000).toFixed(1));
-  const data = {stufe: options.suite, browser: options.browser, gruppe: options.shard, jobs: options.jobs, sekunden, suiten: times};
+  const data = {stufe: options.suite, browser: options.browser, gruppe: options.shard, jobs: options.jobs, ...(bildVerzoegerungMs ? {stresslaufMs: bildVerzoegerungMs} : {}), sekunden, suiten: times};
   await fs.mkdir(path.dirname(file), {recursive: true});
   await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n');
 }
