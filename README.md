@@ -61,6 +61,6 @@ Alle Werkzeuge sind kostenlos. Neue Pakete werden exakt gepinnt; pnpm nimmt nur 
 - React, Vite, Tailwind CSS, three.js: MIT. d3-geo (Globuskarten): ISC.
 - Motion for React 14.4.0 (MIT): sanfte Übergänge in Themen, Reisen und Laboraufgaben. Lizenztexte in `public/licenses/learning-motion.json`, in der App über die Hilfe für Begleitpersonen erreichbar.
 - Playwright (Apache-2.0) und axe-core (MPL-2.0): Browsertests und Barrierefreiheitsprüfung.
-- Hosting: Vercel mit Git-Anbindung. Gebaut wird nur `test-live` (`vercel.json`).
+- Hosting: Vercel mit Git-Anbindung. Gebaut werden nur `test-live` (Test-Seite) und `vorschau` (Vorschau vor dem Merge), siehe `vercel.json`.
 
 Die Fotos stammen fast alle von Wikimedia Commons (54 von 60). Jeder Bildnachweis (Urheber, Lizenz, Quelle) steht in `app/world-photos.json`.
