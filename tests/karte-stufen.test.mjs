@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import HINTS from '../app/challenge-hints.json' with {type: 'json'};
-import {ersteFrage, festGemischt, frageNachWechsel, fragenDerStufe, fragenFuerStufe, gespielteStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis} from '../app/kern/karte/karten-daten.ts';
+import {ersteFrage, festGemischt, frageNachWechsel, fragenDerStufe, fragenFuerStufe, gespielteStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, zeigtSchluss} from '../app/kern/karte/karten-daten.ts';
 
 // Teilschritt 3, Aufgabe 5 (E4, E6): Die Karte zeigt je Stufe eine passende Frage.
 // Ausgedachte Karte: Hauptfrage (Entdecker), je eine Zusatzfrage Entdecker, Profi, Experte und zwei Challenge-Fragen.
@@ -192,10 +192,24 @@ test('„Noch eine Frage“ (c, d): jede Frage der gespielten Stufe einmal je Ru
   assert.equal(naechsteFrage(nurHaupt, 'profi', 'x', ['x']), null);
 });
 
+test('zeigtSchluss: auf Profi und Experte immer, auf Entdecker nur nach mehr als einer Frage', () => {
+  assert.equal(zeigtSchluss(fragen, 'entdecker'), true, 'drei Entdecker-Fragen');
+  assert.equal(zeigtSchluss(fragen, 'profi'), true);
+  assert.equal(zeigtSchluss(fragen, 'experte'), true, 'auch mit nur einer Experten-Frage: klarer Schluss');
+  const nurHauptUndProfi = kartenFragen({...karte, moreQuestions: karte.moreQuestions.filter(q => q.level === 'profi'), challenges: []}, bank);
+  assert.equal(zeigtSchluss(nurHauptUndProfi, 'entdecker'), false, 'eine einzelne Entdecker-Frage bleibt ohne Schluss, wie auf Karten nur mit der Hauptfrage');
+  assert.equal(zeigtSchluss(nurHauptUndProfi, 'profi'), true);
+  assert.equal(zeigtSchluss(nurHauptUndProfi, 'experte'), true, 'Experte spielt dort Profi');
+  const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
+  for (const stufe of ['entdecker', 'profi', 'experte']) assert.equal(zeigtSchluss(nurHaupt, stufe), false, 'nur die Hauptfrage: ' + stufe);
+});
+
 test('schlussSatz nennt die Stufe, die die Karte spielt', () => {
-  assert.equal(schlussSatz(fragen, 'profi'), 'Alle Profi-Fragen geschafft!');
+  assert.equal(schlussSatz(fragen, 'profi'), 'Geschafft! Mehr Profi-Fragen hat diese Karte nicht.');
+  assert.equal(schlussSatz(fragen, 'experte'), 'Geschafft! Mehr Experten-Fragen hat diese Karte nicht.', 'Fugen-n nur in der Zusammensetzung');
+  assert.equal(schlussSatz(fragen, 'entdecker'), 'Geschafft! Mehr Entdecker-Fragen hat diese Karte nicht.');
   const ohneExperte = kartenFragen({...karte, moreQuestions: karte.moreQuestions.slice(0, 2)}, bank);
-  assert.equal(schlussSatz(ohneExperte, 'experte'), 'Alle Profi-Fragen geschafft!');
+  assert.equal(schlussSatz(ohneExperte, 'experte'), 'Geschafft! Mehr Profi-Fragen hat diese Karte nicht.');
 });
 
 test('ruhende Fragen erscheinen nicht mehr auf der Karte, ihre ID bleibt in den Daten', () => {

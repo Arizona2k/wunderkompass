@@ -48,8 +48,8 @@ type RateMalProps = {
   fokus?: boolean;
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
   onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
-  // Der Vorschlag steht in der Rückmeldung nach der Erklärung, vor „Noch eine Frage“: Darunter übersahen Kinder ihn
-  // neben dem großen orangen Knopf (Design-Prüfung Teil A, Befund 2).
+  // Der Vorschlag steht in der Rückmeldung nach der Erklärung (und nach dem Schluss-Satz), vor den Knöpfen: Darunter
+  // übersahen Kinder ihn neben dem großen orangen Knopf (Design-Prüfung Teil A, Befund 2).
   vorschlag?: ReactNode;
   // Unter der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
   kopf?: ReactNode;
@@ -81,7 +81,8 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   }
 
   return (
-    <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id}>
+    // data-route-focus: Rücksprungziel nach „Weiter zu“ (hash-route.ts); „Rate mal!“ steht immer da, der Knopf nicht.
+    <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id} data-route-focus="rate-mal">
       <div className="rate-mal-kopf">
         <Ueberschrift id={'rate-mal-' + frage.id} className="rate-mal-titel">Rate mal!</Ueberschrift>
         {kopf}
@@ -112,8 +113,9 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
                 ? q.why
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
-          {vorschlag}
+          {/* Erst der Schluss, dann ein Vorschlag, dann die Knöpfe (kinder-redaktion 24.11.2026, Befund f). */}
           {richtig && schluss && <p className="rate-mal-schluss"><strong>{schluss.text}</strong></p>}
+          {vorschlag}
           {richtig && (
             <div className="rate-mal-weiter">
               {onWeiter && <button type="button" className="primary-button" onClick={onWeiter}>Noch eine Frage</button>}

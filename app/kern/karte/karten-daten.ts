@@ -8,7 +8,8 @@ import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
-import {STUFEN, STUFEN_NAME, type Stufe} from '../stufe';
+import {STUFEN, STUFEN_BINDEFORM, STUFEN_NAME, type Stufe} from '../stufe';
+import {WOERTER} from '../woerter';
 
 export type KartenFrage = {
   id: string;
@@ -105,8 +106,14 @@ export function naechsteFrage(alle: KartenFrage[], stufe: Stufe, aktuell: string
   return reihe.find(f => f.id !== aktuell && !gezeigt.includes(f.id)) ?? null;
 }
 
+// Ob nach der letzten Frage der Runde ein Schluss steht: auf Profi und Experte immer (klarer Schluss statt leichterer
+// Fragen, Befund 3), auf Entdecker nur nach mehr als einer Frage (statt wortlos wieder von vorn, Befund 4). Eine einzelne
+// Entdecker-Frage bleibt ohne Schluss, wie auf allen Karten mit nur der Hauptfrage (Code-Prüfung Feinschliff, Befund 4).
+export const zeigtSchluss = (fragen: KartenFrage[], stufe: Stufe) => gespielteStufe(fragen, stufe) !== 'entdecker' || fragenDerStufe(fragen, stufe).length > 1;
+
 // Der Satz nach der letzten Frage der Runde (Spieltest 24.11.2026, Befund 4): ehrlich mit der Stufe, die die Karte spielt.
-export const schlussSatz = (fragen: KartenFrage[], stufe: Stufe) => `Alle ${STUFEN_NAME[gespielteStufe(fragen, stufe)]}-Fragen geschafft!`;
+// Er passt für eine und für viele Fragen; „geschafft“ heißt „bis zum Ziel“, nicht „fehlerfrei“ (kinder-redaktion 24.11.2026).
+export const schlussSatz = (fragen: KartenFrage[], stufe: Stufe) => `${WOERTER.geschafft} Mehr ${STUFEN_BINDEFORM[gespielteStufe(fragen, stufe)]}-Fragen hat diese Karte nicht.`;
 
 // Eine gespeicherte Antwortreihe gilt nur, wenn sie genau die heutigen Antworten vertauscht (alte Wörter über ihren Alias).
 // Sonst null: Die Karte mischt dann neu, statt in der Reihenfolge der Daten zu zeigen (dort steht die Lösung oft vorn),

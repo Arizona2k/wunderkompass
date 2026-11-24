@@ -1,0 +1,138 @@
+[
+  {
+    "id": "animal-african-savanna-elephant:rate-1",
+    "level": "profi",
+    "prompt": "Wie trinkt ein großer Elefant?",
+    "answers": [
+      "Er spritzt sich Wasser ins Maul",
+      "Er schluckt es direkt durch den Rüssel",
+      "Er schleckt Wasser wie ein Hund",
+      "Er taucht den Kopf ins Wasser und schluckt"
+    ],
+    "correct": 0,
+    "why": "Er saugt Wasser ein Stück weit in den Rüssel. Dann spritzt er es sich ins Maul und schluckt.",
+    "hints": [
+      "Der Rüssel ist auch seine Nase."
+    ],
+    "wrongReasons": [
+      null,
+      "Der Rüssel ist auch seine Nase. Wasser direkt hinunterschlucken kann er damit nicht.",
+      "Elefanten schlecken nicht mit der Zunge wie ein Hund.",
+      "So trinken höchstens ganz junge Elefanten, die mit dem Rüssel noch üben. Ein großer Elefant nimmt den Rüssel."
+    ]
+  },
+  {
+    "id": "animal-african-savanna-elephant:rate-2",
+    "level": "profi",
+    "prompt": "Wie schwer ist ein Elefantenbaby bei der Geburt?",
+    "answers": [
+      "Etwa 500 Kilogramm",
+      "Etwa 100 Kilogramm",
+      "Etwa 1.000 Kilogramm",
+      "Etwa 300 Kilogramm"
+    ],
+    "correct": 1,
+    "why": "Ein Savannenelefant wiegt bei der Geburt rund 100 Kilogramm. Nach etwa 20 Minuten kann er schon stehen.",
+    "hints": [
+      "Ein Menschenbaby wiegt etwa 3 Kilogramm. Ein Elefantenbaby ist ungefähr 30-mal so schwer."
+    ],
+    "wrongReasons": [
+      "Das ist viel zu schwer. Ein neugeborenes Elefantenbaby ist nur etwa einen Meter hoch.",
+      null,
+      "So viel wiegt ein kleines Auto. Das Baby muss ja noch in den Bauch der Mutter passen.",
+      "So schwer ist ein Elefantenkind erst, wenn es gewachsen ist."
+    ]
+  },
+  {
+    "id": "animal-african-savanna-elephant:rate-3",
+    "level": "profi",
+    "ruht": true,
+    "prompt": "Wer führt eine Elefantenherde an?",
+    "answers": [
+      "Der größte und stärkste Bulle",
+      "Ein junges Männchen",
+      "Meist das älteste Weibchen",
+      "Das Weibchen, das am lautesten trompetet"
+    ],
+    "correct": 2,
+    "why": "Meist führt das älteste Weibchen die Herde, die Leitkuh. Erwachsene Männchen leben allein oder in kleinen Gruppen.",
+    "hints": [
+      "Junge Bullen verlassen die Familie, wenn sie erwachsen werden."
+    ],
+    "wrongReasons": [
+      "Erwachsene Bullen leben meist allein oder in kleinen Gruppen, nicht in der Familienherde.",
+      "Junge Männchen haben noch wenig Erfahrung.",
+      null,
+      "Laut sein macht ein Tier nicht zur Anführerin. Wichtig ist Erfahrung."
+    ]
+  },
+  {
+    "id": "animal-african-savanna-elephant:rate-4",
+    "level": "experte",
+    "prompt": "In einem sehr trockenen Jahr sind viele Wasserlöcher leer. Die älteste Elefantenkuh führt die Herde. Warum ist das jetzt gut?",
+    "answers": [
+      "Sie ist stark und kann Löwen vertreiben",
+      "Sie erinnert sich an Wasserstellen von früher",
+      "Sie läuft am schnellsten zum nächsten Wasser",
+      "Sie braucht selbst am wenigsten Wasser"
+    ],
+    "correct": 1,
+    "why": "Eine alte Leitkuh hat schon viele trockene Jahre erlebt. Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.",
+    "hints": [
+      "Schau im Steckbrief nach: Wie alt kann ein Elefant werden?",
+      "In 50 Jahren gibt es viele trockene Jahre. Wer sie erlebt hat, weiß mehr."
+    ],
+    "wrongReasons": [
+      "Stark sein hilft gegen Löwen. Wasser findet man damit nicht.",
+      null,
+      "Schnell sein hilft nichts, wenn man nicht weiß, wohin.",
+      "Auch die Leitkuh braucht viel Wasser. Sie hat einen anderen Vorteil."
+    ]
+  },
+  {
+    "id": "animal-african-savanna-elephant:rate-5",
+    "level": "profi",
+    "prompt": "Was sind die Stoßzähne eines Elefanten?",
+    "answers": [
+      "Lange Eckzähne",
+      "Riesige Backenzähne",
+      "Hörner aus Knochen",
+      "Lange Schneidezähne"
+    ],
+    "correct": 3,
+    "why": "Stoßzähne sind sehr lange Schneidezähne. Sie wachsen ein Leben lang weiter.",
+    "hints": [
+      "Stoßzähne sitzen ganz vorn. Welche Zähne hast du dort?"
+    ],
+    "wrongReasons": [
+      "Eckzähne sind spitze Zähne wie beim Hund. Elefanten haben gar keine.",
+      "Backenzähne sitzen hinten im Maul. Damit zermahlt der Elefant sein Futter.",
+      "Hörner wachsen oben auf dem Kopf, zum Beispiel bei Kühen. Stoßzähne sind Zähne.",
+      null
+    ]
+  },
+  {
+    "id": "animal-african-savanna-elephant:rate-6",
+    "optional": true,
+    "level": "experte",
+    "prompt": "Ein Elefant frisst nur Pflanzen. Mehr als die Hälfte davon kann er nicht verdauen. Was folgt daraus für seinen Tag?",
+    "answers": [
+      "Er schläft viel, um Kraft zu sparen",
+      "Er frisst einmal am Tag sehr viel",
+      "Er frisst fast den ganzen Tag lang",
+      "Er frisst nur abends, wenn es kühl ist"
+    ],
+    "correct": 2,
+    "why": "Ein riesiger Körper braucht viel Futter. Weil der Elefant vieles nicht verdauen kann, muss er noch mehr fressen. Darum frisst er etwa 16 Stunden am Tag.",
+    "hints": [
+      "Denk daran, wie groß ein Elefant ist.",
+      "Von jedem Bissen nützt ihm nur ein Teil. Wie viele Bissen braucht dann ein Riese?"
+    ],
+    "wrongReasons": [
+      "Elefanten schlafen eher wenig. Die meiste Zeit brauchen sie zum Futtersuchen und Fressen.",
+      "Eine einzige Mahlzeit reicht ihm nicht. Er braucht über den Tag verteilt sehr viel Futter.",
+      null,
+      "Elefanten fressen am Tag und auch in der Nacht."
+    ]
+  }
+]

@@ -18,6 +18,7 @@ const WARTEN = {timeout: 10000};
 const stufeImPass = page => page.evaluate(key => JSON.parse(localStorage.getItem(key))?.progress.gameSessions['kern:stufe']?.stufe ?? null, SAVE_KEY);
 const passLesen = page => page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY);
 const ZURUECK = 'Zu schwer? Zurück zu Entdecker';
+const SCHLUSS_PROFI = 'Geschafft! Mehr Profi-Fragen hat diese Karte nicht.';
 const hatStufe = (t, stufe) => fragenDerKarte(t).some(f => f.level === stufe);
 // Karten für die Fälle, aus den Daten gewählt (die Einstufung kann sich ändern, der Test nicht).
 const MIT_PROFI = catalog.find(t => hatStufe(t, 'profi') && fragenAufStufe(t, 'entdecker').length >= 1);
@@ -133,7 +134,7 @@ async function wechselNachFalscherAntwort(page, {touch}) {
 }
 
 // (c, d): Auf Profi zeigt „Noch eine Frage“ jede Profi-Frage einmal und keine leichtere; danach steht der Schluss mit
-// „Nächste Karte“, und der Knopf führt zur ersten erklärten Nachbarkarte.
+// „Weiter zu: <Titel>“, und der Knopf führt zur ersten erklärten Nachbarkarte.
 async function schlussNachDerStufe(page, {touch}) {
   const t = SCHLUSS_AUF_PROFI;
   const runde = fragenGenauDerStufe(t, 'profi');
@@ -147,23 +148,31 @@ async function schlussNachDerStufe(page, {touch}) {
     await tippe(antwortKnopf(page, richtigeAntwort(frage)), touch);
     await rateMal(page).getByText(frage.question.why, {exact: true}).waitFor(WARTEN);
     if (i < runde.length - 1) {
-      assert.equal(await rateMal(page).getByText('Alle Profi-Fragen geschafft!', {exact: true}).count(), 0, 'noch kein Schluss nach ' + (i + 1) + ' Fragen');
+      assert.equal(await rateMal(page).getByText(SCHLUSS_PROFI, {exact: true}).count(), 0, 'noch kein Schluss nach ' + (i + 1) + ' Fragen');
       await tippe(rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}), touch);
       await page.waitForFunction(id => document.querySelector('section.rate-mal')?.getAttribute('aria-labelledby') !== 'rate-mal-' + id, frage.id, WARTEN);
     }
   }
-  await rateMal(page).getByText('Alle Profi-Fragen geschafft!', {exact: true}).waitFor(WARTEN);
+  await rateMal(page).getByText(SCHLUSS_PROFI, {exact: true}).waitFor(WARTEN);
   assert.equal(await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).count(), 0, 'nach der letzten Profi-Frage kein „Noch eine Frage“');
   await rateMal(page).getByRole('button', {name: 'Noch einmal raten', exact: true}).waitFor();
   const ziel = ersteNachbarkarte(t.id);
   const knopf = rateMal(page).locator('.rate-mal-naechste-karte');
-  assert.match(await knopf.innerText(), /^Nächste Karte: /, 'der Knopf sagt, wohin er führt');
+  const aufschrift = (await knopf.innerText()).replace(/\u00ad/g, '').replace(/\s+/g, ' ').trim();
+  assert.equal(aufschrift, 'Weiter zu: ' + catalog.find(k => k.id === ziel).title, 'der Knopf sagt, wohin er führt');
   // Am Handy ragt der Knopf nicht über den Rand (lange Titel brechen um).
   const rand = await knopf.evaluate(el => ({rechts: el.getBoundingClientRect().right, breite: document.documentElement.clientWidth}));
-  assert.ok(rand.rechts <= rand.breite + 0.5, 'der Knopf „Nächste Karte“ passt in die Breite: ' + JSON.stringify(rand));
+  assert.ok(rand.rechts <= rand.breite + 0.5, 'der Knopf „Weiter zu“ passt in die Breite: ' + JSON.stringify(rand));
   await tippe(knopf, touch);
   await page.waitForFunction(id => decodeURIComponent(location.hash) === '#world/topic/' + id, ziel, WARTEN);
   await karteDa(page, ziel);
+  // „← Zurück“: Die Karte wählt neu (der Knopf ist dann nicht mehr da); der Fokus liegt wieder auf „Rate mal!“, sichtbar
+  // im Fenster, nicht auf dem Titel oben (Code-Prüfung Feinschliff, Befund 1).
+  await tippe(page.locator('nav.karten-rueckweg').getByRole('link', {name: 'Zurück', exact: true}), touch);
+  await karteDa(page, t.id);
+  await page.waitForFunction(() => document.activeElement?.matches('section.rate-mal'), null, WARTEN);
+  const lage = await rateMal(page).evaluate(el => { const r = el.getBoundingClientRect(); return {oben: r.top, unten: r.bottom, hoehe: innerHeight}; });
+  assert.ok(lage.unten > 0 && lage.oben < lage.hoehe, 'nach „Zurück“ ist „Rate mal!“ im Fenster: ' + JSON.stringify(lage));
   return t.id;
 }
 
@@ -182,14 +191,22 @@ async function vorschlagSchwerer(page, {touch}, annehmen = false) {
   }
   const vorschlag = rateMal(page).locator('.stufen-vorschlag');
   await vorschlag.getByText('Das war leicht für dich. Willst du Profi probieren?', {exact: true}).waitFor(WARTEN);
-  // Der Vorschlag steht in der Rückmeldung vor dem nächsten Schritt („Noch eine Frage“ oder, nach der letzten Frage der
-  // Stufe, der Schluss); darunter übersahen ihn Kinder (Design-Prüfung Teil A, Befund 2).
+  // Der Vorschlag steht in der Rückmeldung vor den Knöpfen („Noch eine Frage“ oder, nach der letzten Frage der Stufe,
+  // „Weiter zu“), nach einem Schluss-Satz; darunter übersahen ihn Kinder (Design-Prüfung Teil A, Befund 2).
   assert.equal(await rateMal(page).getByRole('status').locator('.stufen-vorschlag').count(), 1, 'der Vorschlag steht in der Rückmeldung');
   assert.equal(await rateMal(page).evaluate(bereich => {
     const hinweis = bereich.querySelector('.stufen-vorschlag');
-    const weiter = bereich.querySelector('.rate-mal-schluss, .rate-mal-weiter');
-    return Boolean(hinweis && weiter && hinweis.compareDocumentPosition(weiter) & Node.DOCUMENT_POSITION_FOLLOWING);
-  }), true, 'der Vorschlag steht vor dem nächsten Schritt');
+    const weiter = bereich.querySelector('.rate-mal-weiter');
+    const schluss = bereich.querySelector('.rate-mal-schluss');
+    const davor = (a, b) => !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+    return Boolean(hinweis && weiter && davor(hinweis, weiter) && (!schluss || davor(schluss, hinweis)));
+  }), true, 'der Vorschlag steht nach einem Schluss-Satz und vor den Knöpfen');
+  // Danach je nach Zahl der Entdecker-Fragen ausdrücklich „Noch eine Frage“ oder der Schluss (Code-Prüfung Feinschliff, Befund 6).
+  if (fragenGenauDerStufe(t, 'entdecker').length > 3) await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).waitFor();
+  else {
+    await rateMal(page).getByText('Geschafft! Mehr Entdecker-Fragen hat diese Karte nicht.', {exact: true}).waitFor();
+    assert.equal(await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).count(), 0, 'nach der letzten Entdecker-Frage kein „Noch eine Frage“');
+  }
   assert.equal(await stufeImPass(page), null, 'der Vorschlag stellt nichts von selbst um');
   if (annehmen) {
     await tippe(vorschlag.getByRole('button', {name: 'Ja, Profi probieren', exact: true}), touch);
@@ -319,5 +336,5 @@ export async function karteStufen(ctx) {
   await mitKarte(ctx, breit, MIT_ORDNEN.id, ordneRichtig);
   ctx.report.checks.push(`Stufen auf der Karte: Wahl über „Rate mal!“, Umstellen wechselt die Frage, übersteht Neuladen, „Zurück zu Entdecker“ (${a}); `
     + `Profi ohne Profi-Fragen sagt „Du spielst Entdecker“, ohne „Zurück zu Entdecker“ (${b}); nach falscher Entdecker-Antwort und Wechsel eine Profi-Frage (${g}); `
-    + `auf Profi nur Profi-Fragen, jede einmal, dann „Alle Profi-Fragen geschafft!“ und „Nächste Karte“ führt zur Nachbarkarte (${h}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d}); „Fast richtig“ nur auf Experte, Erklärung erst nach dem Wort (${e}); „Ordne richtig“ ab seiner Stufe, ordnen, prüfen, Neuladen (${f})`);
+    + `auf Profi nur Profi-Fragen, jede einmal, dann „Geschafft! Mehr Profi-Fragen …“ und „Weiter zu“ führt zur Nachbarkarte (${h}); Vorschlag nach drei richtigen, „Nein, ich bleibe“ und „Ja“ (${c}); Vorschlag leichter nach zwei falschen auf Profi (${d}); „Fast richtig“ nur auf Experte, Erklärung erst nach dem Wort (${e}); „Ordne richtig“ ab seiner Stufe, ordnen, prüfen, Neuladen (${f})`);
 }

@@ -26,10 +26,11 @@ import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
 import OrdneRichtig from './ordne-richtig';
-import {dazuPasst, ersteFrage, frageNachWechsel, ganzEinfachImAusprobieren, gespielteStufe, hatAusprobieren, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, weitereVerbindungen} from './karten-daten';
+import {dazuPasst, ersteFrage, frageNachWechsel, ganzEinfachImAusprobieren, gespielteStufe, hatAusprobieren, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, weitereVerbindungen, zeigtSchluss} from './karten-daten';
 import {leseStufe, STUFEN, type Stufe} from '../stufe';
 import StufenWahl, {stufeWechseln} from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
+import {WOERTER} from '../woerter';
 import './karte.css';
 
 type WissenskarteProps = {
@@ -108,7 +109,11 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const naechste = naechsteFrage(fragen, stufe, frage.id, wahl.gezeigt);
   const weiter = naechste ? () => {
     schliessen();
-    setWahl(w => ({...w, id: naechste.id, weiter: true, gezeigt: [...w.gezeigt, naechste.id]}));
+    // Im Updater neu rechnen, nicht `naechste` aus diesem Bild nehmen (Code-Prüfung Feinschliff, Befund 5).
+    setWahl(w => {
+      const n = naechsteFrage(fragen, w.stufe, w.id, w.gezeigt);
+      return n ? {...w, id: n.id, weiter: true, gezeigt: [...w.gezeigt, n.id]} : w;
+    });
   } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
   const welt = WORLD_CATEGORIES.find(c => c.id === t.category);
@@ -120,18 +125,24 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const kacheln = dazuPasst(t, verbindungen);
   const nachbarKarte = kacheln.find(k => k.art === 'karte');
   const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
-  // Nach der letzten Frage der Runde: der Satz und, wenn es eine erklärte Nachbarkarte gibt, der Weg dorthin.
-  // Karten mit nur der Hauptfrage bleiben, wie sie sind.
-  const schluss = !naechste && fragen.length > 1 ? {
+  // Nach der letzten Frage der Runde (zeigtSchluss): der Satz und, wenn es eine erklärte Nachbarkarte gibt, der Weg dorthin.
+  // In einer Lernroute nur der Satz: Dort führt „Zur nächsten Station“ weiter, ein zweites „Weiter“ führte aus der Route
+  // heraus (Code-Prüfung Feinschliff, Befund 2). Vor dem Wechsel geht der Fokus auf „Rate mal!“: Nach „Zurück“ wählt die
+  // Karte neu, der Knopf ist dann oft nicht da, „Rate mal!“ aber immer (data-route-focus dort; Befund 1).
+  const schluss = !naechste && zeigtSchluss(fragen, stufe) ? {
     text: schlussSatz(fragen, stufe),
-    weiter: nachbar ? (
+    weiter: nachbar && !embedded ? (
       <button
         type="button"
         className="primary-button rate-mal-naechste-karte"
-        data-route-focus={`rate-mal-schluss-${t.id}-${nachbar.id}`}
-        onClick={event => { event.currentTarget.focus({preventScroll: true}); onTopic(nachbar.id); }}
+        onClick={event => {
+          event.currentTarget.closest<HTMLElement>('section.rate-mal')?.focus({preventScroll: true});
+          onTopic(nachbar.id);
+        }}
       >
-        Nächste Karte: {displayTopicTitle(nachbar.title)} <ArrowRight size={20} aria-hidden="true"/>
+        {/* Eine Aufschrift, damit sie als Text umbricht (nicht als Spalten); der Titel im eigenen <span> (kinder-redaktion 24.11.2026). */}
+        <span>{WOERTER.weiterZu} <span className="rate-mal-naechste-titel">{displayTopicTitle(nachbar.title)}</span></span>
+        <ArrowRight size={20} aria-hidden="true"/>
       </button>
     ) : null,
   } : undefined;
