@@ -24,7 +24,7 @@ const karte = {
 const bank = {'x-1': {steps: ['Tipp zu C1.', 'Noch ein Tipp zu C1.'], wrongReasons: [null, 'nicht M', 'nicht N', 'nicht O']}};
 const fragen = kartenFragen(karte, bank);
 const ids = liste => liste.map(f => f.id);
-const gesehen = (due = '2026-12-01', correct = true) => ({correct, seen: 1, due});
+const gesehen = (due = '2099-01-01', correct = true) => ({correct, seen: 1, due});
 const alleGesehen = (ausser = []) => Object.fromEntries(fragen.filter(f => !ausser.includes(f.id)).map(f => [f.reviewId, gesehen()]));
 
 test('kartenFragen: Hauptfrage, Zusatzfragen, dann Challenge-Fragen, jede mit Stufe', () => {
@@ -166,7 +166,7 @@ test('Fehler (a): nach dem Wechsel auf Profi kommt eine Profi-Frage, nicht die f
   const haupt = fragen[0];
   const falsch = haupt.question.answers.find((_, i) => i !== haupt.question.correct);
   const stand = {[haupt.answerKey]: falsch};
-  const review = {[haupt.reviewId]: gesehen('2026-12-01', false)};
+  const review = {[haupt.reviewId]: gesehen('2099-01-01', false)};
   // Nach dem Wechsel (und beim Öffnen) zählt nur die gespielte Stufe.
   assert.equal(ersteFrage(fragen, review, stand, 'profi').id, 'x:rate-2');
   assert.equal(ersteFrage(fragen, review, stand, 'experte').id, 'x:rate-3');
@@ -183,7 +183,7 @@ test('Fehler (a): nach dem Wechsel auf Profi kommt eine Profi-Frage, nicht die f
 test('„Noch einmal nachdenken“ im Wissensbuch: die wartende Hauptfrage, auch auf Profi und Experte', () => {
   const haupt = fragen[0];
   const falsch = {[haupt.answerKey]: haupt.question.answers.find((_, i) => i !== haupt.question.correct)};
-  const hauptFalsch = {...alleGesehen(), [haupt.reviewId]: gesehen('2026-12-01', false)};
+  const hauptFalsch = {...alleGesehen(), [haupt.reviewId]: gesehen('2099-01-01', false)};
   for (const stufe of ['entdecker', 'profi', 'experte']) assert.equal(frageZumNachdenken(fragen, hauptFalsch, falsch, stufe).id, 'x', stufe);
   // Wieder fällig (richtig beantwortet, Datum erreicht): auch dann die Hauptfrage; so steht die Karte im Wissensbuch.
   const faellig = {...alleGesehen(), [haupt.reviewId]: gesehen('2000-01-01')};

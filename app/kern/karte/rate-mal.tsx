@@ -48,7 +48,8 @@ type RateMalProps = {
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
   // Nur bei „Noch einmal nachdenken“ über eine wieder fällige, richtig beantwortete Frage: Die Runde beginnt leer,
-  // die gespeicherte Antwort bleibt im Pass (leerZumNachdenken).
+  // die gespeicherte Antwort bleibt im Pass (leerZumNachdenken). Leer bleibt sie, bis das Kind wählt, auch wenn ein
+  // Stufenwechsel wieder dieselbe Frage zeigt (gleicher key): Sie ist dann ja weiter fällig.
   leer?: boolean;
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
   onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
@@ -73,8 +74,8 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   const richtig = antwort === richtigeAntwort;
   const fruehereAuswahl = antwort !== null && !q.answers.includes(antwort);
 
-  // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“) oder nach einer früheren Auswahl,
-  // die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
+  // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“ und beim leeren Nachdenken) oder nach einer
+  // früheren Auswahl, die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
   function waehle(wahl: string) {
     setAusgeblendet(false);
     setAntwort(wahl);
