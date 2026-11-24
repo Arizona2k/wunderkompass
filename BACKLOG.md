@@ -175,6 +175,10 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
     - **Quelle Karl Benz (Faktenprüfung):** Die DPMA-Seite zu Bertha Benz in den Quellen der Karte `person-karl_benz` liefert 404 (24.11.2026). Ersetzen oder streichen; das Deutsche Museum trägt die Aussagen allein.
     - **Kartentexte zu den Rätseln (Faktenprüfung):** Darwin: „um die Welt“ steht nicht auf der Karte (Royal Museums Greenwich belegt es); Tagore: genauer wären „Kritzeleien und durchgestrichene Wörter“ statt „frei gezogene Linien“ (V&A). Das Spiel nutzt nur, was auf der Karte steht; mit der Personenwelt (Phase 3) ergänzen.
 
+26. **Fotos: falsche und fehlende (Hinweis des Nutzers, 24.11.2026):** „Teilweise sind die Fotos nicht richtig, teilweise fehlen Fotos.“
+    - **Falsche Fotos:** Eine Foto-Inventur (`bild-recherche`, alle Fotos ansehen: zeigt es das Richtige, ist das Motiv im Ausschnitt, Kennzeichnung, Größe, Nachweis) läuft seit 24.11.2026; Bericht folgt in `docs/entwurf/2026-11-24-foto-inventur.md`. Klar falsche Fotos sind kleine Korrekturen und kommen vor Teilschritt 4, sobald der Bericht da ist. Beispiele des Nutzers hier eintragen.
+    - **Fehlende Bilder:** 94 von 204 Karten zeigen im Kopf nur das Weltsymbol (Stand 24.11.2026): alle 34 Zeitreise-Karten, 21 von 24 Erfindungen, 30 von 46 Wissenschaft, 9 von 16 Bauwerke. Tiere und Personen haben alle ein Foto oder eine Zeichnung. Geplant: Zeitreise und Erfindungen in Teilschritt 4 „Weltenseiten und Bilder“ (Entwurf Phase 1, 6.10), Bauwerke und Wissenschaft in Phase 3; je Bild mit `bild-recherche` und vollem Nachweis.
+
 ## Phase 2 – Tierwelt (grob)
 
 - Alle Tierthemen kindgerecht neu: kurze Texte (`kinder-redaktion`), geprüfte Fakten (`fakten-pruefer`), Fotos mit Rechten (`bild-recherche`), kleine Aufgaben mit erklärender Rückmeldung.
