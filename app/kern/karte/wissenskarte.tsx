@@ -5,7 +5,8 @@
 // Ausprobieren, Mehr erfahren, Für Erwachsene, Dazu passt, Bildnachweise auf dieser Seite.
 // Pass-Kopplung wie bei der alten Karte: dieselbe Hülle (SavedGame 'topic:<id>'), dieselben Schlüssel,
 // dieselben Aufrufe für Merken, „gelernt“ und Wiederholung.
-import {Fragment, useCallback, useMemo, useState} from 'react';
+import {Fragment, useCallback, useMemo, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 import {ArrowRight, BookOpen, Check, Compass, Heart, Lightbulb, Users, Volume2} from 'lucide-react';
 import {LearningDetails} from '../../learning-components';
 import {LearningMotion} from '../../learning-motion';
@@ -24,7 +25,11 @@ import Kartenbild from './kartenbild';
 import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
-import {dazuPasst, ersteFrage, hatAusprobieren, kartenFragen, weitereVerbindungen} from './karten-daten';
+import OrdneRichtig from './ordne-richtig';
+import {dazuPasst, ersteFrage, fragenFuerStufe, ganzEinfachImAusprobieren, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
+import {leseStufe, STUFEN, type Stufe} from '../stufe';
+import StufenWahl, {stufeWechseln} from '../stufen-wahl';
+import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
 import './karte.css';
 
 type WissenskarteProps = {
@@ -80,16 +85,29 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Titel = embedded ? 'h2' : 'h1';
   const Abschnitt = embedded ? 'h3' : 'h2';
   const Unterabschnitt = embedded ? 'h4' : 'h3';
-  // Die Frage wird beim Öffnen einmal gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue, dann die fällige)
-  // und wechselt nur über „Noch eine Frage“, nie von selbst, während das Kind antwortet.
-  // Danach kommt die nächste Frage der Karte, am Ende wieder die erste.
-  const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]}>), [t]);
-  const [nummer, setNummer] = useState(() => fragen.indexOf(ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id])));
-  const [weitergeblaettert, setWeitergeblaettert] = useState(false);
-  const frage = fragen[nummer];
+  // Die Frage wird beim Öffnen für die gemeinsame Stufe gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue,
+  // dann die fällige; Teilschritt 3, E4) und wechselt nur über „Noch eine Frage“ oder eine andere Stufe, nie von selbst,
+  // während das Kind antwortet. „Noch eine Frage“ blättert in den Fragen der Stufe und darunter, am Ende wieder vorn.
+  const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>), [t]);
+  const stufe = leseStufe(a.progress);
+  const waehle = (s: Stufe) => ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id], s).id;
+  const [wahl, setWahl] = useState(() => ({stufe, id: waehle(stufe), weiter: false}));
+  const {vorschlag, merke, schliessen} = useStufenVorschlag(t.id, stufe);
+  const artikel = useRef<HTMLElement>(null);
+  // Andere Stufe (Wahl, Vorschlag oder ein anderer Tab): Die Karte wählt neu wie beim Öffnen.
+  if (wahl.stufe !== stufe) {
+    setWahl({stufe, id: waehle(stufe), weiter: false});
+    schliessen();
+  }
+  const frage = fragen.find(f => f.id === wahl.id) ?? fragen[0];
+  const weitergeblaettert = wahl.weiter;
   // Dieselbe Reihenfolge wie in „Rate mal!“ (dort aus demselben Spielstand gelesen).
   const auswahl = antwortReihe(frage, a.progress.gameSessions['topic:' + t.id]?.[frage.itemsKey]);
-  const weiter = fragen.length > 1 ? () => { setNummer(n => (n + 1) % fragen.length); setWeitergeblaettert(true); } : undefined;
+  const liste = fragenFuerStufe(fragen, stufe);
+  const weiter = liste.length > 1 ? () => {
+    schliessen();
+    setWahl(w => ({...w, id: liste[(liste.findIndex(f => f.id === w.id) + 1) % liste.length].id, weiter: true}));
+  } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
   const welt = WORLD_CATEGORIES.find(c => c.id === t.category);
   const kontext = t.history?.date ?? t.person?.field;
@@ -102,21 +120,26 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
   const vorlesen = () => a.onRead([t.title, t.intro, 'Rate mal!', frage.question.prompt, ...auswahl].map(satz).join(' '));
 
+  // „Ganz einfach“ steht offen, die Absätze zugeklappt unter „Für Große“ (Teilschritt 3, E12).
+  const ganzEinfachOffen = !t.chapters && !!t.learning && !ganzEinfachImAusprobieren(t);
+  // Die Fotosynthese-Zeichnung bleibt sichtbar: Steht „Ganz einfach“ offen, kommt sie direkt darunter, sonst nach dem ersten Absatz.
+  const fotosynthese = t.id === 'science-photosynthesis' && (
+    <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
+      <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
+      <figure>
+        <PhotosynthesisRolesDrawing/>
+        <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
+      </figure>
+    </section>
+  );
+
   // Die Absätze von „Kurz erklärt“ (mit Fotosynthese-Zeichnung und Arbeitsweg der Personen).
   const absaetze = (
     <>
       {t.paragraphs.map((absatz, i) => (
         <Fragment key={i}>
           <p>{absatz}</p>
-          {t.id === 'science-photosynthesis' && i === 0 && (
-            <section className="photosynthesis-concept-section" aria-label="Lichtenergie und Stoffwege">
-              <Unterabschnitt>Licht liefert Energie, Stoffe liefern Bausteine</Unterabschnitt>
-              <figure>
-                <PhotosynthesisRolesDrawing/>
-                <figcaption>Eigene vereinfachte Erklärzeichnung · KI-unterstützt.</figcaption>
-              </figure>
-            </section>
-          )}
+          {i === 0 && !ganzEinfachOffen && fotosynthese}
         </Fragment>
       ))}
       {t.person && (
@@ -138,7 +161,7 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   );
 
   return (
-    <article className={`wissenskarte wissenskarte-welt-${t.category}${embedded ? ' wissenskarte-eingebettet' : ''}`}>
+    <article ref={artikel} className={`wissenskarte wissenskarte-welt-${t.category}${embedded ? ' wissenskarte-eingebettet' : ''}`}>
       <header className="wissenskarte-kopf">
         {eintrag && <div className="wissenskarte-bild"><Kartenbild topic={eintrag} groesse="gross" nachweis/></div>}
         <div className="wissenskarte-kopftext">
@@ -166,9 +189,24 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         ueberschrift={Abschnitt}
         onLearn={() => a.onLearn(t.id)}
         onReview={a.onReview}
+        wiederholung={a.progress.review[frage.reviewId]}
+        onNachbessern={a.onNachbessern}
         onRead={a.onRead}
         onWeiter={weiter}
         fokus={weitergeblaettert}
+        onAntwort={merke}
+        kopf={a.onStufe ? <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
+        vorschlag={vorschlag && a.onStufe ? (
+          <StufenVorschlagHinweis
+            vorschlag={vorschlag}
+            onJa={() => stufeWechseln(() => { schliessen(); a.onStufe?.(vorschlag.ziel); }, artikel.current)}
+            onNein={() => {
+              // Noch im Klick schließen, dann gleich auf „Rate mal!“: So liegt der Fokus nie auf <body> (Technik-Prüfung WebKit-Fund, Befund 3b).
+              flushSync(schliessen);
+              artikel.current?.querySelector<HTMLElement>('.rate-mal')?.focus();
+            }}
+          />
+        ) : null}
       />
 
       <section className="world-short wissenskarte-abschnitt" tabIndex={-1}>
@@ -187,19 +225,23 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
               {absaetze}
             </LearningDetails>
           </>
-        ) : (
+        ) : ganzEinfachOffen && t.learning ? (
           <>
-            {t.learning && (
-              <LearningDetails summary="Ganz einfach · etwa 6–8 Jahre">
-                <p>{t.learning.starter}</p>
-              </LearningDetails>
-            )}
-            {absaetze}
+            {/* Ohne Häppchen ist „Ganz einfach“ die einfache Fassung: Der Satz steht offen, ohne Altersangabe; die
+                bisherigen Absätze stehen unverändert zugeklappt unter „Für Große“ (Teilschritt 3, E12).
+                Bei Personen steht der Satz oben in „Ausprobieren“ (ganzEinfachImAusprobieren), die Absätze bleiben offen. */}
+            <p className="wissenskarte-ganz-einfach">{t.learning.starter}</p>
+            {fotosynthese}
+            <LearningDetails className="wissenskarte-fuer-grosse" summary="Für Große">
+              {absaetze}
+            </LearningDetails>
           </>
-        )}
+        ) : absaetze}
       </section>
 
-      {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt}/>}
+      {t.claims?.[0] && <StimmtDas behauptung={t.claims[0]} ueberschrift={Abschnitt} stufe={stufe}/>}
+      {/* „Ordne richtig“ erst ab der Stufe der Aufgabe (Teilschritt 3, E11). */}
+      {t.ordnen && STUFEN.indexOf(stufe) >= STUFEN.indexOf(t.ordnen.level) && <OrdneRichtig ordnen={t.ordnen} ueberschrift={Abschnitt} onRead={a.onRead}/>}
 
       {t.facts.length > 0 && (
         <section className="wissenskarte-abschnitt wissenskarte-steckbrief">

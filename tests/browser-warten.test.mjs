@@ -1,6 +1,6 @@
 // Wächter für die Wartehilfe vor gewollten Seitenwechseln (ladeanfragen in tests/browser/harness.mjs).
 // Bricht ein Neuladen oder Schließen ein Bild ab, das noch lädt, schlägt die Fehlerüberwachung an
-// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED). Ein Bild aus einem nachgeladenen Programmteil startet
+// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED, WebKit: Load request cancelled). Ein Bild aus einem nachgeladenen Programmteil startet
 // erst, wenn React den Bereich einblendet; React 19 blendet nachgeladene Teile bis zu 300 ms gesammelt ein, die alte
 // Ruhezeit von 250 ms war kürzer. (Der Anlass, das Riff-Foto in Firefox-Lauf 257, kam vermutlich von Firefox'
 // gespeicherter Kopie; siehe scripts/browser-errors.mjs.)

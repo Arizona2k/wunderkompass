@@ -94,6 +94,11 @@
 .wissenskarte-merken[aria-pressed="true"] { background: var(--motiv-stark); border-color: var(--motiv-symbol); color: var(--motiv-text); }
 
 /* „Rate mal!“ */
+/* Kopf von „Rate mal!“: Überschrift, darunter linksbündig die Stufenwahl (Teilschritt 3, E2). Früher stand die Stufe
+   rechts daneben; geöffnet stand „Rate mal!“ dann allein in der Mitte, und „Zurück zu Entdecker“ rutschte ins Leere
+   (Design-Prüfung Teil A, Befund 1). So steht alles in einer Lesespur, auf jeder Breite gleich. */
+.wissenskarte .rate-mal-kopf { display: grid; gap: 6px; }
+.wissenskarte .rate-mal-kopf .stufen-zeile { justify-content: flex-start; gap: 8px 12px; }
 .wissenskarte .rate-mal {
   padding: 20px; border: 2px solid var(--motiv-stark); border-radius: 20px;
   background: var(--motiv-grund); scroll-margin-top: 24px;
@@ -126,6 +131,8 @@
 /* Häppchen (Pilot-Karten): kurze Frage als Überschrift, darunter ein bis zwei Sätze. */
 .wissenskarte .world-short .wissenskarte-haeppchen { margin: 18px 0 4px; font-size: 20px; line-height: 1.35; color: var(--motiv-text); }
 .wissenskarte .world-short > :is(h2, h3):first-child + .wissenskarte-haeppchen { margin-top: 0; }
+/* „Ganz einfach“ offen (Karten ohne Häppchen): ein bis zwei Sätze, etwas größer als die Absätze für Große. */
+.wissenskarte .world-short > .wissenskarte-ganz-einfach { font-size: 20px; line-height: 1.5; }
 /* „Für Große“: die bisherigen Absätze, zu Beginn zu. */
 .wissenskarte .wissenskarte-fuer-grosse { margin-top: 14px; padding: 0 18px; border: 1px solid #d3e2e6; border-radius: 16px; background: #fff; }
 .wissenskarte .wissenskarte-fuer-grosse > summary { display: flex; align-items: center; min-height: 48px; font-size: 17px; font-weight: 700; color: var(--motiv-text); }
@@ -264,6 +271,7 @@
 @media (max-width: 560px) {
   .wissenskarte-aufklapper { padding: 0 16px; }
   .wissenskarte .rate-mal-weiter button { flex: 1 1 100%; }
+  .wissenskarte .ordne-richtig .primary-button { width: 100%; }
   /* Modelle und Zeichnungen brauchen auf dem Handy jede Breite. */
   .wissenskarte-ausprobieren { padding: 0 12px; }
   .dazu-passt-bild .world-photo img, .dazu-passt-bild .kartenbild-motiv, .dazu-passt-symbol { height: 120px; min-height: 120px; }
@@ -287,3 +295,22 @@
   /* Die drei Aufklapper stehen als Gruppe enger zusammen (Abstand 12 statt 22 px). */
   .wissenskarte-aufklapper + :is(.wissenskarte-aufklapper, .wissenskarte-erwachsene) { margin-top: -10px; }
 }
+
+/* „Fast richtig“ und „Ordne richtig“ (Teilschritt 3, E11). */
+.wissenskarte .stimmt-das-wort { display: grid; gap: 10px; margin-top: 14px; }
+.wissenskarte .stimmt-das-wort p { margin: 0; font-size: 17px; }
+.wissenskarte .stimmt-das-woerter { display: flex; flex-wrap: wrap; gap: 8px; }
+.wissenskarte .stimmt-das-woerter .quiz-answer { width: auto; min-height: var(--kern-tipp); }
+.wissenskarte .ordne-richtig-frage { margin: 6px 0 12px; font-size: 19px; font-weight: 700; }
+.wissenskarte .ordne-richtig-liste { display: grid; gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+.wissenskarte .ordne-richtig-liste li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 10px; border: 2px solid var(--kern-linie); border-radius: var(--kern-rund); background: var(--kern-flaeche); }
+.wissenskarte .ordne-richtig-liste li.is-correct { border-color: var(--kern-petrol); background: var(--kern-petrol-zart); }
+.wissenskarte .ordne-richtig-nummer { font-weight: 800; color: var(--kern-petrol-dunkel); text-align: center; }
+.wissenskarte .ordne-richtig-text { font-size: 17px; overflow-wrap: anywhere; }
+.wissenskarte .ordne-richtig-knoepfe { display: flex; gap: 6px; }
+.wissenskarte .ordne-richtig-knoepfe .kern-knopf { padding: 0; }
+.wissenskarte .ordne-richtig-rueckmeldung { margin-top: 12px; }
+/* „Prüfen“ ist der Hauptknopf: so groß wie „Noch eine Frage“, auf dem Handy in voller Breite (Design-Prüfung Teil A, Befund 3).
+   !important, weil globals.css den Hauptknopf auf 14 px setzt. */
+.wissenskarte .ordne-richtig .primary-button { min-height: 48px; font-size: 18px !important; }
+.wissenskarte .ordne-richtig-rueckmeldung p { margin: 6px 0 0; }

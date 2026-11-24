@@ -1,0 +1,122 @@
+Ergänzender Zwischenauftrag: bestehende, aktuelle und zukünftige Inhalte zuverlässig prüfen und Fehler ursächlich beheben
+
+Diese Anweisung ergänzt den laufenden Entwicklungsauftrag und gilt dauerhaft für Paket 3.5, die folgenden Pakete und spätere GO-Runden. Alle bestehenden Produktanforderungen, Qualitätsstandards und Schutzregeln bleiben erhalten. Dieser Auftrag startet keinen zweiten Durchlauf und ersetzt keine bisherige Roadmap.
+
+1. Bestehende Arbeit und aktuelle Regeln erhalten
+
+Arbeite im bestehenden seriellen Durchlauf mit dessen Branch, Reservierung und einzigem BACKLOG weiter. Ermittle den tatsächlichen aktuellen Stand von PR #27, test-live, laufenden Prüfungen und bereits ausgelieferten Abschnitten. Historische Statusangaben nicht als aktuellen Zustand übernehmen.
+
+Laufende unveränderliche Prüfkandidaten nicht während ihrer Prüfung verändern. Berücksichtige diesen Auftrag am nächsten sicheren Checkpoint; bereits laufende Prüfungen nicht unnötig neu starten.
+
+Aktuelle ausdrückliche Nutzerentscheidungen haben Vorrang vor überholten historischen Formulierungen. Bestehende Freigaben und Grenzen nicht erweitern oder zurücknehmen. Keine neuen Dienste, Kosten, parallelen Agenten, zusätzlichen Pipelines oder Newsaktivierung.
+
+2. Den Auftrag schlank und dauerhaft verankern
+
+Prüfe zunächst, welche Anforderungen bereits verbindlich vorhanden sind. Ergänze nur die tatsächlichen Lücken und konkreten Befunde:
+
+- AGENTS.md: Verantwortung für Altbestand, neue Inhalte, Ursachenprüfung und Wiederaufnahme früher abgeschlossener Themen.
+- QUALITY.md: nachvollziehbare fachliche und pädagogische Fertigkriterien sowie die unten beschriebene Behandlung notwendiger Inhaltskorrekturen.
+- BACKLOG.md: konkrete Fehler und noch fehlende Prüfungen den bestehenden Aufgaben zuordnen; keine zweite Aufgabenliste.
+- PROJECT_STATE.md: tatsächlich geprüfter Umfang, Korrekturen, offene Befunde, geprüfter Stand und nächster Schritt.
+- Vorhandene Inhaltsdossiers und Inventare: Nachweise am jeweiligen Inhalt fortführen.
+
+VISION.md und TEST-LIVE.md nur ergänzen, soweit eine wirkliche inhaltliche Lücke besteht. Keine langen identischen Regelblöcke in sämtliche Dateien kopieren. Originalaufträge und historische Nachweise erhalten; diesen Nachtrag entsprechend der bestehenden Provenienzablage sichern.
+
+Die Dokumentationsänderung ist noch kein Abschluss: Anschließend die beauftragten Produktkorrekturen durchführen.
+
+3. Den gesamten vorhandenen Bestand abdecken
+
+Verwende das bestehende Inhalts-, Routen- und Funktionsinventar. Gleiche es gegen aktuelle Quellen, Exporte und tatsächlich erreichbare Ansichten ab.
+
+Einzubeziehen sind insbesondere:
+
+- Tiere, Geschichte, Personen, Erfindungen, Bauwerke und Wissenschaft;
+- Wissensbuch, Warum-Fragen, Naturatlas und geografische Erklärungen;
+- alle Lernreisen und jedes Kapitel einschließlich Basistexte und Grafiken;
+- Quizfragen, sämtliche Antwortmöglichkeiten, Hinweise und Rückmeldungen;
+- Spiele, Labore, Modelle, Experimente und Globusmissionen;
+- Quellen, Medienrechte, Beschriftungen und Wissensverbindungen;
+- Suche, Navigation, Fortschritt, Sicherungen, Offline und Updates.
+
+Bereits veröffentlichte, früher überarbeitete und unverändert übernommene Inhalte nicht ausnehmen. Die Prüfung einer neuen Zusatzfunktion ersetzt nicht die Prüfung des darunterliegenden alten Artikels.
+
+Pro Eintrag kenntlich machen: tatsächlich geprüft, korrekturbedürftig oder noch ungeprüft. Gute Inhalte dürfen mit konkreter Begründung unverändert bleiben. Technische Funktionsprüfung und fachlich-pädagogische Prüfung getrennt ausweisen. Historische Mengen und Bestandszahlen vor Verwendung aktualisieren.
+
+4. Diese konkret belegten Befunde zuerst erneut prüfen und beheben
+
+Die folgenden Befunde wurden am PR27-Stand 48ec0ba232123f06043b7d6a0e564dd38dead018 festgestellt. Prüfe vor Änderungen, ob sie inzwischen bereits korrekt behoben wurden:
+
+a) invention-internet:
+Bei der Antwort über unterwegs telefonieren und Informationen bearbeiten erklärt die zugeordnete Falschbegründung stattdessen elektrisches Licht. Derselbe Zuordnungsfehler steht im Erfindungsdossier. Frage, Antworten, Rückmeldungen, Dossier und tatsächlich geladene Produktdaten gemeinsam korrigieren und prüfen.
+
+b) person-albert_einstein:
+Die Frage nach seinem Forschungsgebiet erhält eine Begründung über Gedankenexperimente. Eine unmittelbar zur Frage und richtigen Antwort passende Erklärung herstellen.
+
+c) Alte Erfindungsfragen:
+Formulierungen wie „Welches Problem hilft Das Internet zu lösen?“ sprachlich prüfen und gezielt berichtigen.
+
+d) Wiederholte Standardtexte:
+Unter anderem die 26 identischen Geschichts-Zusatztexte auf ihren tatsächlichen Lernwert prüfen. Wo eine individuelle Erklärung erforderlich ist, diese fachlich passend ausarbeiten. Wiederholung allein ist kein Faktenfehler.
+
+e) Antwortqualität:
+Offensichtlich absurde falsche Antworten, beispielsweise beim Elefanten, nach Lernziel und Altersstufe beurteilen. Einfache Einstiegsfragen dürfen einfach bleiben; weiterführende Aufgaben sollen Verständnis und typische Fehlvorstellungen prüfen.
+
+Das sind Ausgangsbefunde, keine abschließende Fehlerliste. Bereits nachweislich behobene Punkte nicht erneut entwickeln.
+
+5. Die Fehlerursache und vergleichbare Stellen mitprüfen
+
+Bei einem Zuordnungsfehler auch weitere Fragen derselben Datenfamilie, gemeinsame Erzeugungswege und Darstellungslogik untersuchen.
+
+Jede Antwort mit ihrer tatsächlich angezeigten Rückmeldung lesen. Auch Hinweise, richtige Erklärung und sämtliche vorhandenen Lernstufen prüfen. Berücksichtige gemischte Antwortreihenfolgen, gespeicherte Antworten und Wiederaufnahme.
+
+Ein Dossier, das denselben Fehler wie der Artikel enthält, ist kein unabhängiger Richtigkeitsnachweis. Nach Erstellung oder Korrektur einen erkennbaren kritischen Gegenleseschritt durchführen: Stimmen Erklärung, Quellen, Lernziel und konkrete Antwort tatsächlich überein?
+
+Geeignete Regressionstests für wiederholungsgefährdete Ursachen ergänzen. Keine bloßen Wortanzahl-, Feldvorhandenseins- oder Kopiergleichheitstests als semantischen Qualitätsbeweis verwenden.
+
+6. Notwendige Inhaltskorrekturen ermöglichen, Bestandsschutz erhalten
+
+Stabile Inhalts-, Fragen-, Kapitel- und Fortschritts-IDs, Direktlinks und der zentrale Pass bleiben geschützt.
+
+Bestandsschutz darf nachgewiesene sprachliche, fachliche oder didaktische Fehler nicht dauerhaft festschreiben. Ich beauftrage ausdrücklich deren gezielte Korrektur, auch wenn der betroffene Inhalt früher bereits bearbeitet oder veröffentlicht wurde.
+
+Prüfe insbesondere Tests, die alte Fragen, Antworten und Erklärungen vollständig wortgleich verlangen. Erhalte die historische Originalbaseline. Dokumentiere notwendige Korrekturen mit betroffener ID, Vorher/Nachher und Begründung; passe die konkreten Erwartungen nachvollziehbar an.
+
+Keine pauschale Neugenerierung sämtlicher Vergleichsdaten, keine Entfernung von Schutztests und keine Abschwächung von Assertions, um Fehler zu verdecken. Bestehende richtige Fachinhalte erhalten. Bei Änderungen an Antworttexten, Lösung oder Reihenfolge die Kompatibilität gespeicherter Zustände und Auswertungen gezielt prüfen.
+
+7. Fachliche und pädagogische Prüfung konkret durchführen
+
+Prüfe am jeweiligen Inhalt:
+
+- Fakten, Begriffe, Zahlen, Einheiten, Zeitbezug und Unsicherheiten anhand tatsächlich gelesener geeigneter Quellen;
+- verständliche Sprache, erforderliches Vorwissen, passende Beispiele und freiwillige Vertiefung;
+- eindeutige Fragen, richtige Lösungen, plausible falsche Antworten und antwortbezogene Rückmeldungen;
+- Hinweise, die beim Denken helfen;
+- fachlich passende Grafiken, Beschriftungen, Interaktionen und sichtbare Modellgrenzen;
+- sinnvolle Verbindungen zu bereits vorhandenen Inhalten und funktionierende Rückwege.
+
+Die KI führt diese Gegenprüfung selbst aus. Keine neue externe Menschenabnahme als Abschlussvoraussetzung einführen. Nicht durchgeführte Menschen-, Geräte- oder Assistenzprüfungen weiterhin ehrlich kennzeichnen.
+
+Vorhandene Dossiers mit konkreten Quellenstellen, Befunden und Korrekturen fortführen. Nach inhaltlichen Änderungen betroffene bisherige Prüfungen neu bewerten; veraltete Nachweise nicht einfach auf den neuen Inhalt übertragen.
+
+8. Technische Befunde nach Ursache und Dringlichkeit behandeln
+
+Aktuelle rote Pflichtprüfungen untersuchen und Produktfehler, Testfehler, Infrastrukturprobleme und ungeklärte Befunde unterscheiden.
+
+Bei Fokusproblemen tatsächliche Tastaturbedienung prüfen. Bei auffälligen Backup-/Offline-Testlaufzeiten zwischen Testumgebung und realer Nutzerwartezeit unterscheiden. Keine Geschwindigkeitsprobleme aus Laufzeiten allein ableiten.
+
+Abhängigkeiten oder Architektur nur bei belegtem Nutzen beziehungsweise tatsächlichem Risiko ändern. Optionale Bereinigung darf die erforderliche Inhaltskorrektur nicht verdrängen.
+
+Bestehende Prüfungen für Browser, Bildschirmbreiten, Zoom, Barrierefreiheit, Sicherheit, Pass, Import/Export, Offline, Updates und Ressourcen erhalten. Früh gezielt prüfen, anschließend die vorgeschriebene vollständige Abnahme am endgültigen Lieferstand. Keine Skips, blinden Retries oder schwächeren Grenzen.
+
+9. Abschluss und zukünftige Entwicklung
+
+Ein Inhaltsabschnitt ist erst fertig, wenn seine bekannten fachlichen und funktionalen Fehler behoben, notwendige pädagogische Korrekturen umgesetzt und die einschlägigen aktuellen Prüfungen nachgewiesen sind. Ein Hinweis im Backlog ersetzt keine erforderliche Korrektur.
+
+Paket 3.5 bleibt bis zur vorgeschriebenen vollständigen Bestandsabdeckung offen. Nicht lediglich die genannten Beispiele reparieren und den übrigen Bestand pauschal freigeben. Unabhängige sinnvolle Abschnitte dürfen nach den bestehenden Regeln weiterbearbeitet werden.
+
+Bei jedem späteren neuen Thema fachlich und technisch betroffene ältere Inhalte erneut einbeziehen. Nicht bei jeder Änderung das ganze Produkt neu prüfen; den betroffenen Umfang begründen und die bestehenden vollständigen Abschlussprüfungen erhalten.
+
+Berichte nach einem wesentlichen Abschnitt knapp:
+Welche konkreten Fehler wurden korrigiert? Welche verwandten Stellen wurden geprüft? Welche Inhalte sind tatsächlich fachlich geprüft, welche noch offen? Welche Prüfungen bestanden an welchem Stand? Was ist nachweislich auf test-live verfügbar, und was folgt als Nächstes?
+
+Keine pauschale Fehlerfreiheitsgarantie, keine Fertigmeldung aus Artikelzahlen oder grünem CI und keine erneute Grundsatz-Promptschleife. Bestehende Arbeit erhalten, konkrete Befunde korrigieren und den laufenden Auftrag fortsetzen.

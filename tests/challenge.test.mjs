@@ -57,7 +57,8 @@ test('every playable question has individually authored hints and no orphan or c
   assert.ok(q.hints.length>=1&&q.hints.length<=2,q.id);
   assert.equal(first.has(q.hints[0]),false,q.id+' repeated standard hint');first.add(q.hints[0]);
   for(const hint of q.hints){
-   assert.ok(typeof hint==='string'&&hint.length>=45&&hint.length<=350,q.id);
+   // Ein echter, eigener Satz (keine Platzhalter). Seit Teilschritt 3 sind Tipps kindgerecht kurz (kinder-redaktion); früher galten 45 Zeichen.
+   assert.ok(typeof hint==='string'&&hint.length>=20&&hint.length<=350,q.id);
    assert.notEqual(hint,q.why,q.id+' answer explanation used as hint');
    const correct=q.answers[q.correct].toLocaleLowerCase('de').replace(/[.!?]$/,'');
    assert.equal(hint.toLocaleLowerCase('de').includes(correct),false,q.id+' literal answer leak');

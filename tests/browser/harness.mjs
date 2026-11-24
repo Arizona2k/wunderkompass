@@ -20,7 +20,7 @@ export function ready(page) {
 }
 
 // Ein gewolltes Neuladen, Schließen oder Weiterblättern bricht Anfragen ab, die noch laden
-// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED), und die Fehlerüberwachung schlägt an.
+// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED, WebKit: Load request cancelled), und die Fehlerüberwachung schlägt an.
 // Auf einem langsamen Rechner wie der CI ist dieses Zeitfenster groß. Deshalb vorher warten, bis alle
 // Ladeanfragen der Seite fertig sind (außer Seitenaufrufen): Bilder, aber auch Programmteile, Stile und
 // Daten, die die App erst nachlädt. Ein Bild erscheint oft erst, wenn sein Programmteil da ist
@@ -142,6 +142,16 @@ export async function startPreview({dist = process.env.QA_DIST ?? 'dist', port} 
   await stop();
   throw Error('Vorschau-Server antwortet nicht:\n' + log);
 }
+
+// Init-Skript für einen Kontext: hält am Ende jedes Klicks fest, wo der Fokus liegt (`window.__fokusNachKlick`).
+// Der Lauscher auf window läuft nach Reacts Lauscher an der Wurzel und, bei echten Eingaben, nach dessen Microtasks.
+// So prüft ein Test „Fokus noch im Klick“, egal wie schnell der Rechner das nächste Bild zeichnet (Code-Prüfung flushSync, Befund 1).
+// Zu Beginn jedes Klicks (Capture-Phase auf window, läuft zuerst) wird der Wert geleert: Hält ein Handler das Ereignis
+// unterwegs an, bleibt kein alter Wert vom vorigen Klick stehen, und der Test wird rot statt still grün (Code-Nachprüfung Fokus-Tests, Befund 1).
+export const FOKUS_NACH_KLICK = () => {
+  window.addEventListener('click', () => { window.__fokusNachKlick = null; }, true);
+  window.addEventListener('click', () => { window.__fokusNachKlick = document.activeElement; });
+};
 
 // Öffnet die Startseite in einem frischen Kontext, wartet auf Bereitschaft und ruft `fn(page)` auf.
 // `isMobile` kennt nur Chromium; andere Engines bekommen bei Touch nur `hasTouch`.

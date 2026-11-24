@@ -258,6 +258,7 @@ Geliefert in drei Teilen mit je einem PR nach `test-live`. Gründe: kleinere PRs
 
 #### Aufgabe 7: Auswahl-Helfer (E7)
 
+- [ ] Zuerst der Linkwächter (BACKLOG, „Technik und Prüfung“; Frage des Nutzers vom 23.11.2026): ein Unit-Test, der jedes Verweisziel der App auf Existenz prüft, bevor E14 alte Spiel-Links umzieht.
 - [ ] Test zuerst (`tests/auswahl.test.mjs`): Reihenfolge falsch-fällig → ungesehen → fällig → Rest; nie dieselbe Auswahl wie die vorige Runde, wenn der Vorrat größer ist; fester Zufall im Test.
 - [ ] Challenge nutzt ihn statt der eigenen Regel (`tests/challenge.test.mjs` anpassen).
 

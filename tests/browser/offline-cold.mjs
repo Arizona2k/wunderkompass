@@ -8,7 +8,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
+import {ladeanfragen} from './harness.mjs';
 import {offlineAnimals} from './animal-learning.mjs';
+import {offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
 import {offlineArticleAtlas} from './article-atlas.mjs';
 import {offlineChallengeHints} from './challenge-hints.mjs';
 import {offlineDiscoveryCentral} from './discovery-central.mjs';
@@ -69,6 +71,8 @@ export async function offlineCold(ctx, {full = false} = {}) {
     try {
       await context.setOffline(true);
       const page = await open(context);
+      // Für das gewollte Neuladen in den Antwort-Prüfungen (offlineRetainedAnswerWording, learningTaskOfflineSemantics): ab hier alle Ladeanfragen kennen.
+      const anfragenFertig = ladeanfragen(page);
       await page.goto(server.base);
       await page.screenshot({path: path.join(shots, 'offline-start.png')});
       await ready(page);
@@ -93,10 +97,13 @@ export async function offlineCold(ctx, {full = false} = {}) {
       await page.locator('.model-energy').waitFor();
       await page.getByRole('button', {name: 'Einen Zeitschritt testen', exact: true}).click();
       report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo, „Ausprobieren“ on two cards and energy model work');
+      // Alte und kaputte Antwortreihe im Pass, offline: lief bisher nur in der Vollprüfung (über offlineAnimals) und fiel dort spät auf
+      // (Teil A, zweiter später Fund). Im CI-Satz läuft es so bei jedem PR, auch in Firefox und WebKit; die Vollprüfung behält ihre Stelle.
+      if (!full) await offlineRetainedAnswerWording(page, report, anfragenFertig);
 
       if (full) {
         await offlineSolar(page, report);
-        await offlineAnimals(page, report);
+        await offlineAnimals(page, report, anfragenFertig);
         await offlineArticleAtlas(page, report);
       }
 
@@ -115,7 +122,7 @@ export async function offlineCold(ctx, {full = false} = {}) {
       }
 
       report.worldGameSemantics = await worldGameOfflineSemantics(page, {shots, kind: engine});
-      report.learningTaskSemantics = await learningTaskOfflineSemantics(page, {shots, kind: engine});
+      report.learningTaskSemantics = await learningTaskOfflineSemantics(page, {shots, kind: engine, anfragenFertig});
       report.checks.push('Saved world-game rounds and old research/journey answers work in the cold cached app');
     } finally {
       await context.close();

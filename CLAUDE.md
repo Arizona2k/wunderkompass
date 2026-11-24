@@ -65,7 +65,7 @@ Jede Phase und jeder größere Schritt:
 1. **Entwurf** in `docs/entwurf/`, Freigabe durch den Nutzer.
 2. **Plan** in kleinen Schritten.
 3. **Bauen** auf dem Branch `claude/...`.
-4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026).
+4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026). Wer Kartentexte oder den Kartenaufbau ändert (`app/world-catalog.json`, `app/kern/karte/`, `app/kern/kern.css`), lässt danach erst `pnpm run check` und dann `node tests/browser/run.mjs --suite full core` laufen (rund 12 Minuten): `core` prüft das Wissensbuch und die verbundenen Entdeckungen, die sonst nur die Vollprüfung sieht (Technik-Prüfung Teil A).
 5. **Zeigen:** Vercel-Vorschau-Link und Screenshots, in einfachen Worten.
 6. **Freigabe:** PR nach `test-live`, Vorschau- und PR-Link schicken. Merge nach grüner CI und „ok“ im Chat.
 7. **Nachführen:** `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`. Sichtbare Änderungen bekommen einen kurzen, kindgerechten Eintrag in „Was ist neu?“ auf der Seite (Wunsch des Nutzers, 21.11.2026; ab Phase 1).
@@ -88,11 +88,15 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 **Übergabe beim Chatwechsel** (Wunsch des Nutzers, 23.11.2026): Nichts geht verloren, und der neue Chat muss nichts neu ausdenken. Wünsche, Regeln und Ideen des Nutzers aus dem Chat kommen gleich ins Repository (Regeln in diese Datei, Ideen ins `BACKLOG.md` unter „Ideen-Sammlung“), nicht erst beim Wechsel. Vor der Ansage „Jetzt neuen Chat starten“: alles committet und gepusht (gemergt oder in einem offenen PR, keine nur lokalen Zweige); Entscheidungen und aufgeschobene Kleinigkeiten aus dem Arbeitsprotokoll (`.superpowers/`, nicht in Git) als Entscheidungsliste in `docs/entwurf/`; Helferberichte, Messwerte und Pläne, die der nächste Chat braucht, als Datei im Repository; `STATUS.md` nennt Stand, offene Fragen und den nächsten Schritt mit Fundstellen. Chatverlauf, Scratchpad, Nebenordner und Hintergrundprozesse gehen beim Wechsel verloren.
 
+**Laufend sichern** (Wunsch des Nutzers, 23.11.2026): Das Nutzungslimit des Nutzers kann jederzeit erreicht sein; Claude sieht es nicht. Darum nach jedem Teilschritt einer Aufgabe committen und pushen (Zwischenstände ehrlich als solche benannt), Helferberichte sofort als Datei in `docs/entwurf/` sichern und `STATUS.md` bei jedem Meilenstein nachführen. So kann im selben oder in einem neuen Chat ohne Verlust weitergearbeitet werden. Nennt der Nutzer einen Stand (z. B. „90 %“), sofort alles sichern und kurz sagen, was als Nächstes käme.
+
 **Commits:** `git -c user.name=Claude -c user.email=noreply@anthropic.com commit …`, deutsche Betreffzeile. Vor jedem Push `git diff --check` und Autor/Committer prüfen.
 
 ## Helfer (`.claude/agents/`)
 
-Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
+Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude entscheidet und setzt um. Wer einen Entwurf schreibt, prüft ihn nicht selbst.
+
+**Neue Helfer** (Wunsch des Nutzers, 23.11.2026): Brauchen wir einen Helfer, um schneller, ordentlicher oder effizienter voranzukommen, schlägt Claude ihn mit Grund vor (und sagt auch, wovon er abrät); entschieden wird gemeinsam mit dem Nutzer.
 
 **Helfer müssen laufen** (Wunsch des Nutzers, 23.11.2026). Ein Chat liest Helfer und Kurzbefehle aus seinem Hauptordner; ein neuer Helfer erscheint erst, wenn er dort liegt (manchmal mit Verzögerung, sicher im nächsten Chat). Darum im Hauptordner arbeiten; ein Nebenordner nur kurz, danach den Hauptordner nachziehen. Fehlt ein Helfer aus `.claude/agents/` in der Helferliste des Chats (z. B. neu angelegt): trotzdem einsetzen, von Hand als `general-purpose` mit Modell und Stufe aus seiner Datei und seiner Anleitung als Auftrag, und es dem Nutzer sagen. Nie still weglassen. Nach jedem spät gefundenen Fehler (erst in der CI-Vollprüfung oder in `test:full`) läuft der `technik-pruefer`, bevor die Korrektur gemeldet wird.
 
@@ -101,6 +105,7 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 | `kinder-redaktion` | Texte für 5- bis 10-Jährige: Satzlänge, Fachwörter, Ton, Länge, Doppeltes, Mini-Fragen | opus / high |
 | `fakten-pruefer` | Aussagen gegen Quellen, Zahlen, Einheiten, Aktualität | opus / high |
 | `stufen-pruefer` | Schwierigkeit je Stufe (Entdecker, Profi, Experte): machbar für Kleine, fordernd für 10- bis 12-Jährige, keine Ratemuster (seit 23.11.2026) | opus / high |
+| `karten-autor` | Schreibt Entwürfe für Karteninhalte (Häppchen, „Stimmt das?“, Fragen je Stufe, Tipps, „warum nicht“, Verbindungssätze) mit Quelle je Aussage; prüft nicht selbst, danach prüfen `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer` unabhängig (seit 23.11.2026) | opus / high |
 | `design-pruefer` | Screenshots in 320, 390, 768, 1280, 1440 px: Lesbarkeit, Kontrast, Fokus, Tippflächen, Abgeschnittenes, Bildwirkung | sonnet / high |
 | `code-pruefer` | Änderungen auf Fehler, besonders Pass, IDs und Links | opus / high |
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
@@ -122,13 +127,13 @@ Helfer melden nur Befunde und ändern nichts. Claude entscheidet und setzt um.
 
 | Ort | Inhalt |
 |---|---|
-| `app/` | Die App (React 19, Vite 8, Tailwind 4): Ansichten, Inhalte als JSON/TS, Pass, Service Worker |
+| `app/` | Die App (React 19, Vite 8, Tailwind 4): Ansichten, Inhalte als JSON/TS, Pass, Service Worker; der neue Kern in `app/kern/` (Karte in `karte/`, Stufe in `stufe.ts`) |
 | `app/world-catalog.json` | Alle Wissenskarten; Fotos und Nachweise in `app/world-photos.json` |
 | `components/`, `lib/` | Gemeinsame UI-Bausteine und Hilfen |
 | `public/` | Bilder, Fotos (WebP in 320/640/960), Karten, statische Dateien |
 | `build/` | Vite-Plugins: Build-Kennung, Offline-Liste, Worker |
-| `scripts/` | `export-content.mjs` (Exporte und Inhaltsprüfung), Größenbudget, Test-Laufzeit |
-| `tests/*.test.mjs` | Unit-Tests; `tests/fixtures/` feste Altstände für Kompatibilität (z. B. `stable-ids.json`) |
+| `scripts/` | `export-content.mjs` (Exporte und Inhaltsprüfung), Größenbudget, Test-Laufzeit, `antworten-stand.mjs` (datierte Antwortliste, vor jedem Merge, der neue Antworten bringt) |
+| `tests/*.test.mjs` | Unit-Tests; `tests/fixtures/` feste Altstände für Kompatibilität (z. B. `stable-ids.json`; `gespeicherte-antworten*.json`: Antworten, die Kinder gespeichert haben können, die Listen wachsen nur) |
 | `tests/browser/` | Browser-Runner (`run.mjs`, `suites.mjs`, `harness.mjs`) und Suiten |
 | `content/research/` | Quellen und Daten, die die App liest |
 | `docs/entwurf/` | Entwürfe und Pläne je Phase |

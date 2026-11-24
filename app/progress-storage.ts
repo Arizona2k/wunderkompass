@@ -50,7 +50,9 @@ out.favoritePlaces[id]=place;}}
  if(own(v.quizSession)&&key(v.quizSession.id)){const q=v.quizSession,ids=strings(q.ids).slice(0,76);if(ids.length)out.quizSession={id:String(q.id),ids,index:count(q.index,ids.length-1),answer:typeof q.answer==='number'&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<=2?q.answer:null,score:count(q.score,ids.length),finished:q.finished===true,category:text(q.category,100),difficulty:typeof q.difficulty==='string'&&['easy','normal','tricky'].includes(q.difficulty)?q.difficulty as Difficulty:'normal'};}
  // Ein Spielstand je Karte, Spiel, Reise und Labor (heute über 260, mit Phase 2 und 3 mehr). Die Grenze
  // schützt nur vor unsinnigen Dateien, wie bei review und den Listen (2000); Importe sind höchstens 2,6 MB groß.
- if(own(v.gameSessions))for(const [id,s] of Object.entries(v.gameSessions).slice(0,2000)){if(key(id)&&own(s)&&JSON.stringify(s).length<=400000)out.gameSessions[id]=safeJSON(s) as Record<string,unknown>;}
+ // Muss gekürzt werden, bleiben Einträge des Kerns (die gemeinsame Stufe, 'kern:stufe') immer erhalten.
+ const sessions=own(v.gameSessions)?Object.entries(v.gameSessions):[],core=([id]:[string,unknown])=>id.startsWith('kern:');
+ for(const [id,s] of (sessions.length>2000?[...sessions.filter(core),...sessions.filter(e=>!core(e))]:sessions).slice(0,2000)){if(key(id)&&own(s)&&JSON.stringify(s).length<=400000)out.gameSessions[id]=safeJSON(s) as Record<string,unknown>;}
  if(own(v.lastActivity)&&typeof v.lastActivity.type==='string'&&modes.includes(v.lastActivity.type)&&key(v.lastActivity.id))out.lastActivity={type:v.lastActivity.type as Activity['type'],id:v.lastActivity.id,...(typeof v.lastActivity.family==='string'&&['classic','extra','world'].includes(v.lastActivity.family)?{family:v.lastActivity.family as 'classic'|'extra'|'world'}: {})};
  return out;
 }

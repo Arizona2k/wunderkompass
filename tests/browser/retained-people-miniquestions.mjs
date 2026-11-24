@@ -1,6 +1,6 @@
 import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
-import {antwortKnopf,falscheAntworten,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
+import {antwortKnopf,falscheAntworten,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragenAufStufe} from './karte-hilfen.mjs';
 const saveKey='erde-entdecken:save:v3';
 // Die Hauptfrage einer Personenkarte (eigener Hinweis, drei eigene „warum nicht“-Sätze) mit der Tastatur durchspielen.
 export async function retainedPeopleMiniQuestion(page,topic){
@@ -14,11 +14,11 @@ export async function retainedPeopleMiniQuestion(page,topic){
  const reviewKey=haupt.reviewId,priorSeen=(await saved()).review[reviewKey]?.seen??0,wrong=[];
  for(const word of falscheAntworten(haupt)){
   const index=haupt.question.answers.indexOf(word),reason=haupt.wrongReasons[index];
-  const button=answerButton(word);assert.equal(await button.count(),1);await button.focus();await page.keyboard.press('Enter');await mini.getByText('Überlege noch einmal.',{exact:true}).waitFor();await mini.getByText(reason,{exact:true}).waitFor();
+  const button=answerButton(word);assert.equal(await button.count(),1);await button.focus();await page.keyboard.press('Enter');await mini.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();await mini.getByText(reason,{exact:true}).waitFor();
   await page.waitForFunction(({id,word,key,seen,saveKey})=>{const p=JSON.parse(localStorage.getItem(saveKey)).progress;return p.gameSessions['topic:'+id]?.topicAnswer===word&&p.review[key]?.seen===seen;},{id,word,key:reviewKey,seen:priorSeen+1,saveKey});
   wrong.push({index,word,exactIndividualFeedback:reason,seen:(await saved()).review[reviewKey].seen});
  }
- const correct=answerButton(richtig);await correct.focus();await page.keyboard.press('Enter');await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();await mini.getByText(why,{exact:true}).waitFor();
+ const correct=answerButton(richtig);await correct.focus();await page.keyboard.press('Enter');await mini.getByText('Richtig!',{exact:true}).waitFor();await mini.getByText(why,{exact:true}).waitFor();
  await page.waitForFunction(({id,word,saveKey})=>JSON.parse(localStorage.getItem(saveKey)).progress.gameSessions['topic:'+id]?.topicAnswer===word,{id,word:richtig,saveKey});
  assert.equal(await mini.locator('.quiz-answer:not([disabled])').count(),0);assert.equal((await saved()).review[reviewKey].seen,priorSeen+1);
  const geometry=await mini.evaluate(root=>({width:document.documentElement.clientWidth,pageWidth:document.documentElement.scrollWidth,buttons:[...root.querySelectorAll('.quiz-answer')].map(b=>{const r=b.getBoundingClientRect();return{left:r.left,right:r.right,width:r.width,height:r.height};})}));
@@ -27,7 +27,7 @@ export async function retainedPeopleMiniQuestion(page,topic){
  // Karten mit Zusatzfragen (Pilot, Aufgabe 11) zeigen nach dem Neuladen die nächste offene Frage (ersteFrage), ohne Lösung.
  // Die gespeicherte Antwort prüft der Pass hier unten. Die Hauptfrage mit Lösung nach dem Neuladen prüfen weiter alle
  // Personenkarten ohne Zusatzfragen und wissenskarte.mjs.
- const beforeReload=await saved(),zusatz=zusatzfragen(topic),next=zusatz.find(z=>beforeReload.review[z.reviewId]===undefined);
+ const beforeReload=await saved(),zusatz=zusatzfragenAufStufe(topic),next=zusatz.find(z=>beforeReload.review[z.reviewId]===undefined);
  assert(!zusatz.length||next,id+': after the main question one additional question is still open');
  await page.reload();
  if(next){await zeigtFrage(page,topic,next);assert.equal(await mini.getByText(why,{exact:true}).count(),0,id+': no solution of the main question after reload');}

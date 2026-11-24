@@ -3,7 +3,7 @@ import HINTS from './challenge-hints.json' with {type:'json'};
 import CATALOG from './world-catalog.json' with {type:'json'};
 import type {WorldTopic, WorldQuestion} from './world-types';
 export type Difficulty='easy'|'medium'|'hard';
-export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;topicTitle:string;difficulty:Difficulty;hints:readonly string[]};
+export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;topicTitle:string;difficulty:Difficulty;hints:readonly string[];ruht?:true};
 export const DIFFICULTIES: {id:Difficulty;label:string;description:string}[]=[
  {id:'easy',label:'Leicht',description:'Kurzfragen aus allen Wissenswelten. Erkennen und erinnern.'},
  {id:'medium',label:'Mittel',description:'Natur, Erde und Weltall: Beobachtungen erklären.'},
@@ -17,13 +17,17 @@ export const CHALLENGE_BANK:ChallengeQuestion[]=(CATALOG as WorldTopic[]).filter
 // Resolve the exact saved choice variant; prompts and correct meanings stay reviewed and unchanged.
 export function challengeQuestionForOrder(id:string,order:unknown){
  const question=CHALLENGE_BANK.find(q=>q.id===id);if(!question)return null;
- const variant=retainedChallengeChoiceVariant(question,order);return variant?{...question,...variant}:null;
+ const variant=retainedChallengeChoiceVariant(question,order);if(!variant)return null;
+ // Eine alte Runde mit der ganzen früheren Frage (umformuliert in Teilschritt 3) zeigt keine Tipps: Die heutigen Tipps
+ // gehören zur neuen Fassung und passen vielleicht nicht zur alten (Code-Prüfung Teil A, Befund 5). Solche Runden sind selten
+ // und enden nach sechs Aufgaben; jede neue Runde hat ihre Tipps.
+ const runde={...question,...variant};return runde.prompt!==question.prompt?{...runde,hints:[]}:runde;
 }
 export type ChallengeSession={difficulty:Difficulty|null;ids:string[];orders:Record<string,string[]>;index:number;answer:string|null;done:boolean};
 export const emptyChallenge=():ChallengeSession=>({difficulty:null,ids:[],orders:{},index:0,answer:null,done:false});
 function shuffle<T>(items:T[],random:()=>number){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 export function createChallenge(difficulty:Difficulty,previous:string[]=[],random:()=>number=Math.random):ChallengeSession{
- const pool=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty),fresh=shuffle(pool.filter(q=>!previous.includes(q.id)),random),old=shuffle(pool.filter(q=>previous.includes(q.id)),random);
+ const pool=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty&&!q.ruht),fresh=shuffle(pool.filter(q=>!previous.includes(q.id)),random),old=shuffle(pool.filter(q=>previous.includes(q.id)),random);
  const selected=[...fresh,...old].slice(0,6);
  return {difficulty,ids:selected.map(q=>q.id),orders:Object.fromEntries(selected.map(q=>[q.id,shuffle(q.answers,random)])),index:0,answer:null,done:false};
 }

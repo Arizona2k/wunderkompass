@@ -1,0 +1,662 @@
+{
+ "quelle": "PR #27, Commit d97ddda (refs/pull/27/head), app/world-catalog.json, learning.starter; ungeprüft",
+ "karten": [
+  {
+   "id": "history-stone_tools",
+   "title": "Werkzeuge aus Stein",
+   "intro": "In Kenia fanden Forschende die ältesten bekannten Werkzeuge aus Stein.",
+   "starter": "Ein Stein kann eine nützliche Kante bekommen. Sehr alte Werkzeuge zeigen, dass Verwandte des Menschen solche Kanten herstellen konnten.",
+   "heikel": false,
+   "observe": "Zeichne ein erdachtes Werkzeug mit einer Kante. Deine Zeichnung ist kein Fundstück. Woran könnte man bei einem echten Fund eine Bearbeitung erkennen? Würde diese Beobachtung allein den Namen seiner Hersteller verraten?",
+   "benefit": "Du unterscheidest einen erhaltenen Gegenstand von einer Vermutung über seine Hersteller."
+  },
+  {
+   "id": "history-fire",
+   "title": "Menschen nutzen Feuer",
+   "intro": "Sehr alte Feuerstellen zeigen, dass frühe Menschen Feuer nutzen konnten.",
+   "starter": "Feuer gab frühen Menschen Wärme. Sie konnten damit Nahrung kochen. Alte Feuerstellen sind Spuren dieser Nutzung.",
+   "heikel": false,
+   "observe": "Zeichne eine Zeitlinie und markiere eine sehr alte bekannte Feuerstelle. Könnte Feuer auch schon vor diesem erhaltenen Fund genutzt worden sein? Erkläre, was ein Fund beweist und was offenbleibt.",
+   "benefit": "Du erkennst den Unterschied zwischen dem Alter eines Belegs und dem allerersten Ereignis."
+  },
+  {
+   "id": "history-pyramids",
+   "title": "Pyramiden im alten Ägypten",
+   "intro": "Im alten Ägypten entstand die große Pyramide für König Cheops.",
+   "starter": "Die große Pyramide von Gizeh wurde als Grab für König Cheops gebaut. Viele Menschen arbeiteten an diesem großen Bauwerk.",
+   "heikel": false,
+   "observe": "Wähle zwei Arbeiten: einen Stein bearbeiten und ihn zum Bauplatz bringen. Warum müssen Menschen diese Arbeiten aufeinander abstimmen? Trenne diese Baufrage davon, wofür die fertige Pyramide bestimmt war.",
+   "benefit": "Du unterscheidest den Zweck eines Bauwerks von den Arbeitsschritten seiner Herstellung."
+  },
+  {
+   "id": "history-paper",
+   "title": "Papier aus China",
+   "intro": "Papier entstand in China schon vor über 2.000 Jahren.",
+   "starter": "Papier kann Schrift tragen und Informationen bewahren. Cai Lun stellte am Kaiserhof eine verbesserte Herstellung vor. Papier gab es schon vorher.",
+   "heikel": false,
+   "observe": "Schreibe auf zwei Zettel: 'Papier ist schon bekannt' und '105 n. Chr.: Cai Lun stellt ein verbessertes Verfahren vor'. Ordne sie auf einer Zeitlinie. Warum ist eine Verbesserung ein anderer Beitrag als eine allererste Erfindung?",
+   "benefit": "Du prüfst, welchen Beitrag eine Quelle einer Person wirklich zuschreibt."
+  },
+  {
+   "id": "history-zero",
+   "title": "Rechnen mit der Null",
+   "intro": "Der Mathematiker Brahmagupta schrieb in Indien Regeln zum Rechnen mit der Null auf.",
+   "starter": "Die Null kann bedeuten, dass nichts hinzukommt. In einer geschriebenen Zahl kann sie außerdem eine unbesetzte Stelle markieren.",
+   "heikel": false,
+   "observe": "Vergleiche im Lernbild erst 8 + 0 und dann die Zahlen 205 und 25. Was bleibt bei der Rechnung gleich? Warum verändert das Weglassen der Null in 205 die Bedeutung der 2?",
+   "benefit": "Du unterscheidest die Null als Zahl beim Rechnen von ihrer Aufgabe im Stellenwertsystem."
+  },
+  {
+   "id": "history-compass",
+   "title": "Der Kompass hilft auf See",
+   "intro": "In China nutzten Seefahrer vermutlich nach dem Jahr 1000 einen Kompass zur Orientierung.",
+   "starter": "Eine frei bewegliche magnetische Nadel richtet sich nach dem Magnetfeld aus. Das hilft bei der Richtung, auch wenn Sterne verdeckt sind.",
+   "heikel": false,
+   "observe": "Zeichne ein Schiff und ein Ziel. Markiere eine Nordrichtung. Warum sagt dir diese eine Richtung noch nicht, wie weit das Ziel entfernt ist oder welche Hindernisse auf dem Weg liegen?",
+   "benefit": "Du unterscheidest Richtung, Entfernung und Reiseweg und kannst die Grenze einer einzelnen Orientierungshilfe erklären."
+  },
+  {
+   "id": "history-medieval_cities",
+   "title": "Märkte und Handwerk in Städten",
+   "intro": "Im Mittelalter wuchsen viele Städte durch Handel und Handwerk.",
+   "starter": "Auf einem mittelalterlichen Markt wurden Waren angeboten und gekauft. Handwerker stellten zum Beispiel Brot, Werkzeuge oder Gefäße her.",
+   "heikel": false,
+   "observe": "Überlege an einem Beispiel: Wer stellt eine Ware her, wer bringt sie zum Markt und wer kauft sie? Warum bedeutet ein Stadtrecht noch nicht, dass jede Person jeden Beruf ausüben durfte?",
+   "benefit": "Du verknüpfst Herstellung und Handel und prüfst, für wen ein Recht tatsächlich galt."
+  },
+  {
+   "id": "history-printing",
+   "title": "Viele Bücher aus einer Druckwerkstatt",
+   "intro": "Johannes Gutenberg entwickelte in Mainz ein Drucksystem mit beweglichen Buchstaben aus Metall.",
+   "starter": "Bewegliche Druckzeichen können nach einer Seite wieder neu zusammengesetzt werden. Schon vor Gutenberg wurden solche Zeichen in Ostasien verwendet.",
+   "heikel": false,
+   "observe": "Schreibe die Buchstaben A, M, A und L auf vier Zettel und ordne sie zu MALA und LAMA. Welche Zeichen kannst du erneut verwenden? Warum zeigt das Beispiel weder eine historische Druckmaschine noch den allerersten Druck?",
+   "benefit": "Du erklärst das Wiederverwenden von Zeichen und unterscheidest ein heutiges Lernbeispiel vom historischen Beleg."
+  },
+  {
+   "id": "history-voyages1492",
+   "title": "Europäische Schiffe erreichen die Karibik",
+   "intro": "Kolumbus erreichte mit Schiffen aus Spanien eine Insel in der Karibik.",
+   "starter": "Als europäische Schiffe 1492 die Karibik erreichten, lebten dort bereits Menschen mit eigenen Sprachen und Kulturen. Ihre Geschichte begann nicht mit dieser Ankunft.",
+   "heikel": true,
+   "observe": "Vergleiche zwei Sätze: „Für die Besatzung war die Insel neu“ und „Auf der Insel lebten schon Menschen“. Können beide stimmen? Welche Informationen fehlen, wenn ein Bericht nur die Sicht der Besatzung erzählt?",
+   "benefit": "Du erkennst die Perspektive eines Berichts und berücksichtigst die bereits dort lebenden Menschen."
+  },
+  {
+   "id": "history-steam",
+   "title": "Eine Maschine arbeitet mit Dampf",
+   "intro": "Thomas Newcomen entwickelte eine Dampfmaschine, die Wasser aus Bergwerken pumpte.",
+   "starter": "Eine frühe Dampfmaschine bewegte eine Pumpe. Damit konnte Wasser aus einem Bergwerk gefördert werden.",
+   "heikel": false,
+   "observe": "Ein Museum zeigt ein Modell einer Maschine. Trenne zwei Fragen: Welche Arbeit soll das Modell erklären? Und war genau dieses kleine Modell selbst im Bergwerk im Einsatz? Welche zusätzliche Information brauchst du?",
+   "benefit": "Du unterscheidest eine technische Funktion vom Verwendungszweck eines Museumsmodells."
+  },
+  {
+   "id": "history-railway",
+   "title": "Ein Zug mit Dampflok fährt",
+   "intro": "In England wurde die öffentliche Bahn zwischen Stockton und Darlington eröffnet.",
+   "starter": "Ein Zug fährt auf einem Schienenweg zwischen Orten. Zur Bahn gehören Gleise, Fahrzeuge und Menschen, die den Verkehr organisieren.",
+   "heikel": false,
+   "observe": "Stell dir eine neue Bahnstrecke mit einer schon bekannten Lokomotive vor. Was ist an der Verbindung neu, und was war bereits bekannt? Warum kann die neue Strecke trotzdem wichtig für Waren und Reisende sein?",
+   "benefit": "Du unterscheidest neue technische Geräte von der neuen Nutzung und Vernetzung bekannter Technik."
+  },
+  {
+   "id": "history-electric_light",
+   "title": "Elektrisches Licht für den Alltag",
+   "intro": "Thomas Edison und sein Team entwickelten Lampen, die lange genug für den Alltag leuchten konnten.",
+   "starter": "Eine Lampe braucht Strom. Für elektrisches Licht in vielen Häusern mussten Menschen auch Leitungen und eine Stromversorgung entwickeln.",
+   "heikel": false,
+   "observe": "Vergleiche eine einzelne Lampe mit einem beleuchteten Stadtviertel. Welche weiteren Teile nennt der Artikel? Warum erklärt eine Lampenprobe noch nicht, wie alle Häuser versorgt werden? Zeichne nur einen Plan; untersuche keine Steckdosen oder Leitungen.",
+   "benefit": "Du unterscheidest ein einzelnes Gerät von dem System, das seine Nutzung ermöglicht."
+  },
+  {
+   "id": "history-flight",
+   "title": "Ein gesteuertes Flugzeug mit Motor",
+   "intro": "Wilbur und Orville Wright schafften einen gesteuerten Flug mit einem bemannten Motorflugzeug.",
+   "starter": "Ein Flugzeug braucht nicht nur einen Antrieb. Es muss auch getragen und gesteuert werden können.",
+   "heikel": false,
+   "observe": "Vergleiche zwei gedachte Versuche: Ein Motor läuft am Boden; ein Flugzeug fliegt und kann seine Richtung ändern. Was zeigt jeder Versuch? Welcher belegt noch keinen gesteuerten Flug? Erkläre es ohne eigenen Flugversuch.",
+   "benefit": "Du prüfst, ob eine Beobachtung wirklich alle Teile einer technischen Behauptung belegt."
+  },
+  {
+   "id": "history-ww1",
+   "title": "Der Erste Weltkrieg",
+   "intro": "1914 begann ein Krieg, in den immer mehr Länder hineingezogen wurden.",
+   "starter": "Der Erste Weltkrieg dauerte von 1914 bis 1918. Viele Menschen litten unter Gewalt, Hunger und Trennungen.",
+   "heikel": true,
+   "observe": "Unterscheide zwei Fragen: Wann begann und endete der Krieg? Und wie veränderte er das Leben von Menschen? Warum reichen zwei Jahreszahlen nicht aus, um die zweite Frage zu beantworten? Du brauchst keine Gewaltszenen zu beschreiben.",
+   "benefit": "Du unterscheidest Zeitangaben von den Erfahrungen und Folgen für Menschen."
+  },
+  {
+   "id": "history-holocaust",
+   "title": "Der Holocaust",
+   "intro": "Die Nationalsozialisten und ihre Helfer verfolgten und ermordeten etwa sechs Millionen jüdische Menschen.",
+   "starter": "Die Nationalsozialisten verfolgten jüdische Menschen und ermordeten etwa sechs Millionen von ihnen. Ihre antisemitischen Behauptungen waren falsch.",
+   "heikel": true,
+   "observe": "Vergleiche zwei Aussagen: „Jüdische Menschen leben auf verschiedene Weise“ und „Die Verfolger behaupteten, alle seien gleich“. Warum beschreibt eine falsche Behauptung der Täter nicht die wirklichen Menschen? Du musst keine Rolle nachspielen.",
+   "benefit": "Du unterscheidest das Leben von Menschen von Vorurteilen, die andere über sie verbreiten."
+  },
+  {
+   "id": "history-ww2",
+   "title": "Der Zweite Weltkrieg",
+   "intro": "1939 griff das nationalsozialistische Deutschland Polen an; damit begann der Zweite Weltkrieg in Europa.",
+   "starter": "Der Zweite Weltkrieg begann 1939 in Europa. In verschiedenen Teilen der Welt endeten die Kämpfe zu unterschiedlichen Zeiten.",
+   "heikel": true,
+   "observe": "Ordne zwei Aussagen zu: „Der Krieg in Europa endet im Mai 1945“ und „Die formelle Kapitulation Japans folgt im September 1945“. Warum kann eine Zeitangabe für Europa nicht allein das Ende des Krieges auf der ganzen Welt beschreiben?",
+   "benefit": "Du achtest darauf, für welchen Ort und welchen Vorgang eine historische Zeitangabe gilt."
+  },
+  {
+   "id": "history-un",
+   "title": "Länder gründen die Vereinten Nationen",
+   "intro": "Nach dem Krieg gründeten 51 Länder die Vereinten Nationen, kurz UNO.",
+   "starter": "In der UNO sprechen Staaten miteinander und arbeiten zusammen. Ihre gemeinsamen Ziele sind unter anderem Frieden und Menschenrechte.",
+   "heikel": false,
+   "observe": "Vergleiche einen gemeinsamen Besprechungsort mit einer Regierung für die ganze Erde. Warum macht die Möglichkeit, zusammen Regeln zu beraten, aus den beteiligten Ländern nicht ein einziges Land? Nutze die Erklärung im Artikel.",
+   "benefit": "Du unterscheidest Zusammenarbeit zwischen Staaten von einer gemeinsamen Weltregierung."
+  },
+  {
+   "id": "history-berlin_wall_build",
+   "title": "Die Berliner Mauer trennt Menschen",
+   "intro": "Am 13. August 1961 riegelte die DDR-Regierung die Grenze um West-Berlin ab.",
+   "starter": "Die DDR-Regierung sperrte 1961 die Grenze um West-Berlin. Viele Menschen konnten Familie und Freunde nicht mehr frei besuchen.",
+   "heikel": true,
+   "observe": "Unterscheide eine Grenze auf einer Karte von der Frage, ob Menschen sie frei überqueren dürfen. Welche Information brauchst du zusätzlich zur gezeichneten Linie, um die Folgen für Familien zu verstehen? Spiele keine Trennung von Menschen nach.",
+   "benefit": "Du verbindest eine Kartendarstellung mit den Regeln und Folgen für Menschen."
+  },
+  {
+   "id": "history-apollo11",
+   "title": "Menschen landen auf dem Mond",
+   "intro": "Im Juli 1969 betraten zum ersten Mal Menschen den Mond.",
+   "starter": "Drei Astronauten flogen mit Apollo 11 zum Mond. Zwei landeten dort; einer blieb im Raumschiff in der Mondumlaufbahn.",
+   "heikel": false,
+   "observe": "Ordne die Aufgaben zu: auf der Mondoberfläche arbeiten und das Raumschiff in der Umlaufbahn betreuen. Warum bedeutet „nicht auf der Oberfläche“, dass Collins eine andere Aufgabe hatte, und nicht, dass er nicht zur Besatzung gehörte?",
+   "benefit": "Du erkennst unterschiedliche Aufgaben innerhalb einer gemeinsamen Leistung."
+  },
+  {
+   "id": "history-web",
+   "title": "Das World Wide Web entsteht",
+   "intro": "1989 schlug Tim Berners-Lee am CERN ein System für verlinkte Seiten vor.",
+   "starter": "Das Internet verbindet Computernetze. Das Web nutzt diese Verbindung für Seiten mit Links.",
+   "heikel": false,
+   "observe": "Stell dir einen Weg und eine Nachricht vor, die auf diesem Weg transportiert wird. Was hilft dieser Vergleich über Internet und Web zu erklären? Warum beweist er trotzdem nicht, dass das Internet aus echten Straßen besteht?",
+   "benefit": "Du unterscheidest ein Netz von einer Nutzung darauf und prüfst die Grenze eines Vergleichs."
+  },
+  {
+   "id": "history-berlin_wall_fall",
+   "title": "Die Berliner Mauer wird geöffnet",
+   "intro": "Viele Menschen in der DDR forderten friedlich mehr Freiheit.",
+   "starter": "Am 9. November 1989 wurden Berliner Grenzübergänge geöffnet. Die deutsche Wiedervereinigung folgte später.",
+   "heikel": false,
+   "observe": "Lege zwei gedachte Zeitkarten nebeneinander: Grenzöffnung 1989 und Wiedervereinigung 1990. Was veränderte sich jeweils? Warum belegt ein offener Grenzübergang noch nicht, dass alle staatlichen Regeln schon gemeinsam waren?",
+   "benefit": "Du unterscheidest zwei verbundene Ereignisse und ihre unterschiedlichen Folgen."
+  },
+  {
+   "id": "history-reunification",
+   "title": "Deutschland wird wiedervereinigt",
+   "intro": "Am 3. Oktober 1990 wurden die beiden deutschen Staaten wieder zu einem Land.",
+   "starter": "Am 3. Oktober 1990 trat die DDR der Bundesrepublik Deutschland bei. Seitdem gibt es wieder einen gemeinsamen deutschen Staat.",
+   "heikel": false,
+   "observe": "Vergleiche den Beginn einer gemeinsamen staatlichen Ordnung mit dem Alltag verschiedener Menschen. Warum folgt aus einem gemeinsamen Feiertag nicht, dass alle Menschen den Wandel genau gleich erlebten?",
+   "benefit": "Du unterscheidest eine gemeinsame Rechtsänderung von unterschiedlichen persönlichen Erfahrungen."
+  },
+  {
+   "id": "history-iss",
+   "title": "Ein gemeinsames Labor im Weltraum",
+   "intro": "Die erste Langzeitbesatzung zog in die Internationale Raumstation ISS ein.",
+   "starter": "Die ISS ist ein Forschungslabor in der Umlaufbahn. Menschen aus verschiedenen Ländern haben dort zusammen gearbeitet.",
+   "heikel": false,
+   "observe": "Vergleiche zwei Erklärungen: „In der Umlaufbahn gibt es keine Schwerkraft“ und „Station und Besatzung fallen gemeinsam um die Erde“. Welche nennt der Artikel? Warum darf das Schweben allein nicht als Beweis für verschwundene Schwerkraft gelten? Bleibe beim Lesen und Vergleichen.",
+   "benefit": "Du prüfst, ob eine sichtbare Wirkung auch die vorgeschlagene Ursache beweist."
+  },
+  {
+   "id": "history-september11",
+   "title": "Die Anschläge vom 11. September",
+   "intro": "Am 11. September 2001 griffen Terroristen der Gruppe al-Qaida die USA an.",
+   "starter": "Am 11. September 2001 wurden viele Menschen durch Terroranschläge getötet. Gedenkstätten erinnern an diese Menschen und ihre Lebensgeschichten.",
+   "heikel": true,
+   "observe": "Unterscheide zwei Fragen: Was geschah an diesem Tag? Und wie können Menschen würdevoll daran erinnern? Warum kann das Lesen eines Namens an einer Gedenkstätte eine andere Aufgabe haben als eine Erklärung des Ereignisses? Du brauchst keine belastenden Bilder anzusehen.",
+   "benefit": "Du unterscheidest historische Erklärung von respektvollem Erinnern an einzelne Menschen."
+  },
+  {
+   "id": "history-webb",
+   "title": "Neue Bilder vom Universum",
+   "intro": "Teams veröffentlichten die erste große Bildauswahl des James-Webb-Weltraumteleskops.",
+   "starter": "Webb misst unter anderem Infrarotlicht, das unsere Augen nicht sehen. Teams machen aus den Messdaten untersuchbare Bilder.",
+   "heikel": false,
+   "observe": "Vergleiche ein Bild aus mehreren gemessenen Wellenlängen mit einem Blick durch deine Augen. Warum helfen zugeordnete Farben beim Unterscheiden von Daten? Warum wäre die Behauptung „genau so sieht es ein Mensch dort“ zu stark?",
+   "benefit": "Du unterscheidest gemessene Daten, ihre sichtbare Darstellung und einen direkten Seheindruck."
+  },
+  {
+   "id": "invention-light",
+   "title": "Elektrisches Licht",
+   "intro": "Nach Sonnenuntergang konnten Menschen nur mit Feuerlicht oder anderen Lampen sehen.",
+   "starter": "Eine elektrische Lampe macht aus elektrischer Energie Licht. Damit ein Raum hell wird, müssen Lampe und Stromversorgung zusammenpassen.",
+   "heikel": false,
+   "observe": "Wähle im vorhandenen Plan nacheinander Glaskolben, Glühdraht und Sockel. Beschreibe jeweils eine andere Aufgabe. Vergleiche dann Damals und Heute: Welches Ziel bleibt gleich, obwohl sich die Bauart verändert? Nur am Bildschirm untersuchen, keine echte Lampe öffnen.",
+   "benefit": "Du unterscheidest ein einzelnes Bauteil vom ganzen Versorgungssystem und kannst erklären, warum eine gute Idee oft viele zusammenpassende Verbesserungen braucht."
+  },
+  {
+   "id": "invention-car",
+   "title": "Das Auto",
+   "intro": "Menschen wollten unterwegs sein, ohne dass immer ein Pferd einen Wagen ziehen musste.",
+   "starter": "Ein Auto hat einen Antrieb, der seine Räder bewegen kann. Lenken und Bremsen sind andere Aufgaben als das Antreiben.",
+   "heikel": false,
+   "observe": "Untersuche im vorhandenen Teileplan Antrieb, Räder, Lenkung und Bremse. Denke dir einen Fehler bei genau einem Teil aus. Welches Verhalten des Autos würde sich ändern, welches andere Teil könnte den Fehler nicht einfach ersetzen? Keine echten Fahrzeuge bedienen.",
+   "benefit": "Du beschreibst Technik über zusammenwirkende Aufgaben und beurteilst ein Verkehrsmittel auch nach Sicherheit statt allein nach Motorleistung."
+  },
+  {
+   "id": "invention-railway",
+   "title": "Die Eisenbahn",
+   "intro": "Viele Waren und Reisende mussten über Land transportiert werden.",
+   "starter": "Ein Zug bewegt Wagen auf Schienen. Viele Reisende oder Waren können zusammen transportiert werden.",
+   "heikel": false,
+   "observe": "Wähle im vorhandenen Plan Gleis, Antrieb und Wagen. Ordne gedanklich zu: Was trägt und führt, was bewegt, was transportiert die Menschen oder Waren? Vergleiche das historische Fahrzeug mit der heutigen Darstellung. Nicht an echten Gleisen forschen.",
+   "benefit": "Du erkennst Verkehr als abgestimmtes System und kannst ein belegtes Ereignis von einer zu einfachen Geschichte über einen einzelnen Erfinder unterscheiden."
+  },
+  {
+   "id": "invention-airplane",
+   "title": "Das Flugzeug",
+   "intro": "Menschen wollten durch die Luft reisen.",
+   "starter": "Flügel, Antrieb und Steuerung haben beim Flugzeug verschiedene Aufgaben. Ein Flugzeug muss sich nicht nur in der Luft halten, sondern auch lenken lassen.",
+   "heikel": false,
+   "observe": "Vergleiche im Teileplan Flügel, Antrieb und Steuerflächen. Sage voraus: Welche Aufgabe würde fehlen, wenn man nur den Motor betrachtet? Prüfe danach die Beschreibung jedes Teils und ändere deine Erklärung, falls nötig.",
+   "benefit": "Du unterscheidest Kräfte und Steuerung und erkennst, warum ein erfolgreicher Versuch mehr braucht als die Erzeugung von Vorwärtsbewegung."
+  },
+  {
+   "id": "invention-phone",
+   "title": "Das Telefon",
+   "intro": "Eine Stimme war normalerweise nur in der Nähe hörbar.",
+   "starter": "Ein Telefon überträgt Signale. Im Empfänger werden sie wieder als Stimme hörbar.",
+   "heikel": false,
+   "observe": "Gehe im Plan die Reihenfolge Mikrofon, Signalweg, Lautsprecher durch. Beschreibe, an welcher Stelle Schall vorkommt und wo ein übertragenes Signal. Was wäre bei einem ausgefallenen Lautsprecher noch möglich, was nicht?",
+   "benefit": "Du trennst eine Nachricht von ihrem technischen Transport und kannst einen Fehler an einer bestimmten Stelle des Weges vermuten."
+  },
+  {
+   "id": "invention-computer",
+   "title": "Der Computer",
+   "intro": "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit.",
+   "starter": "Ein Computer führt Anweisungen aus. Er braucht passende Daten und ein Programm; schneller rechnen bedeutet nicht automatisch, richtig zu entscheiden.",
+   "heikel": false,
+   "observe": "Verfolge im vorhandenen Plan eine eingegebene Zahl bis zur Ausgabe. Vergleiche danach Arbeitsspeicher und dauerhaften Speicher. Welche Aufgabe hätten beide, wenn du einen Text bearbeitest und ihn anschließend speichern möchtest?",
+   "benefit": "Du kannst technische Abläufe erklären und prüfst Ergebnisse, statt einem schnellen Gerät automatisch Recht zu geben."
+  },
+  {
+   "id": "invention-internet",
+   "title": "Das Internet",
+   "intro": "Computer an verschiedenen Orten sollten Informationen austauschen.",
+   "starter": "Das Internet verbindet viele Computernetze. Gemeinsame Regeln helfen den Geräten, Informationen auszutauschen.",
+   "heikel": false,
+   "observe": "Vergleiche im vorhandenen Plan Endgerät, Verbindung und Vermittlungspunkt. Erkläre den Weg einer Nachricht in eigenen Worten. Welche Verbindung könnte unterbrochen sein, wenn dein Gerät funktioniert, aber das Ziel nicht erreichbar ist? Das ist eine Denkaufgabe, kein Eingriff in echte Netze.",
+   "benefit": "Du unterscheidest ein Gerät von einem Netz und kannst Verbindungsprobleme eingrenzen, ohne private Daten oder Passwörter weiterzugeben."
+  },
+  {
+   "id": "invention-compass",
+   "title": "Der Kompass",
+   "intro": "Auf See gab es nicht immer sichtbare Landmarken oder Sterne.",
+   "starter": "Eine frei bewegliche magnetische Nadel kann bei der Orientierung helfen. Sie zeigt nicht automatisch, wo dein Ziel liegt.",
+   "heikel": false,
+   "observe": "Untersuche im vorhandenen Plan Nadel und Richtungsskala. Formuliere zwei verschiedene Fragen: In welcher Richtung liegt Norden? Und in welcher Richtung liegt mein Ziel? Warum beantwortet die Nadel allein die zweite Frage nicht? Nur das Bildschirmmodell verwenden.",
+   "benefit": "Du trennst eine Richtungsinformation von einem fertigen Reiseweg und kannst die Grenzen eines einzelnen Messgeräts erklären."
+  },
+  {
+   "id": "invention-printing",
+   "title": "Der Buchdruck",
+   "intro": "Ein Buch von Hand abzuschreiben dauerte lange.",
+   "starter": "Beim Druck können vorbereitete Zeichen oder Bilder mehrfach auf ein Material übertragen werden. Beim historischen Buchdruck lassen sich einzelne Zeichen zu einer Seite zusammensetzen.",
+   "heikel": false,
+   "observe": "Stelle dir eine Zeile aus einzeln beweglichen Zeichen vor. Vertausche gedanklich zwei Zeichen. Was müsstest du vor dem nächsten Druck ändern, und warum wären bereits gedruckte Seiten davon nicht automatisch berichtigt?",
+   "benefit": "Du verstehst Wiederverwendung und erkennst, warum eine Kontrolle vor dem Vervielfältigen wichtig ist."
+  },
+  {
+   "id": "invention-rocket",
+   "title": "Die Rakete",
+   "intro": "Menschen wollten Geräte und später Menschen ins Weltall bringen.",
+   "starter": "Eine Rakete stößt Material nach hinten aus und wird dabei nach vorn beschleunigt. Sie braucht keine Luft, gegen die sie sich abstützt.",
+   "heikel": false,
+   "observe": "Zeige im vorhandenen Plan mit zwei gedanklichen Pfeilen, wohin Gas austritt und wohin der Schub wirkt. Begründe den Unterschied. Bleibe beim Bildschirmmodell; keine Feuer-, Druck- oder selbstgebauten Raketenversuche.",
+   "benefit": "Du kannst die Schubrichtung erklären und unterscheidest eine physikalische Lernskizze von einer sicheren Bauanleitung."
+  },
+  {
+   "id": "invention-satellite",
+   "title": "Der Satellit",
+   "intro": "Menschen wollten die Erde beobachten und Signale aus dem Weltraum empfangen.",
+   "starter": "Ein künstlicher Satellit bewegt sich auf einer Umlaufbahn. Seine Aufgabe kann Beobachten, Messen oder das Übertragen von Signalen sein.",
+   "heikel": false,
+   "observe": "Vergleiche im Teileplan Instrument, Energieversorgung und Antenne. Welches Teil sammelt Messdaten, welches überträgt Signale und welches versorgt das Gerät? Beschreibe die Zusammenarbeit, statt jedes Teil als unabhängigen Satelliten zu zählen.",
+   "benefit": "Du unterscheidest Start, Versorgung und Forschungsauftrag und kannst die Erdebeobachtung von einer bloßen Weltraumfahrt abgrenzen."
+  },
+  {
+   "id": "invention-smartphone",
+   "title": "Das Smartphone",
+   "intro": "Unterwegs wollten Menschen telefonieren und gleichzeitig Informationen bearbeiten.",
+   "starter": "Ein Smartphone verbindet Telefon und Computerfunktionen in einem mobilen Gerät. Mehrere Bauteile und Programme arbeiten dabei zusammen.",
+   "heikel": false,
+   "observe": "Wähle im vorhandenen Teileplan zwei Funktionen, etwa Bildschirm und Funk. Vermute, was ohne die eine noch mit der anderen möglich sein könnte. Erkläre den Unterschied zwischen einer gespeicherten Notiz und einer Nachricht, die erst übertragen werden muss. Keine Anmeldung oder privaten Daten nötig.",
+   "benefit": "Du verstehst die Grenzen einzelner Funktionen und musst bei einem Verbindungsfehler nicht automatisch deine gespeicherten Inhalte für verloren halten."
+  },
+  {
+   "id": "building-giza-pyramids",
+   "title": "Pyramiden von Gizeh",
+   "intro": "Die Pyramiden von Gizeh in Ägypten wurden als Gräber für Könige gebaut.",
+   "starter": "Viele Menschen planten und bauten die Pyramiden gemeinsam.",
+   "heikel": false,
+   "observe": "Zeichne einen breiten unteren und einen schmalen oberen Umriss. Verfolge in der Bildschirmzeichnung den Weg von den oberen Steinlagen zum Untergrund. Keine echten Steinstapel bauen.",
+   "benefit": "Du unterscheidest ein erklärtes Bauprinzip von offenen Fragen zum genauen historischen Transport."
+  },
+  {
+   "id": "building-great-wall",
+   "title": "Die Chinesische Mauer",
+   "intro": "Grenzen überwachen, verteidigen und Wege kontrollieren.",
+   "starter": "Die Chinesische Mauer besteht aus vielen verschiedenen Anlagen.",
+   "heikel": false,
+   "observe": "Vergleiche im Bildschirmmodell Untergrund, Mauer und Turm. Zeichne auf Papier zwei Abschnitte aus verschiedenen Materialien, statt überall dieselbe Mauer anzunehmen.",
+   "benefit": "Du liest eine lange Baugeschichte, ohne ein ganzes Netz mit einem einzigen Bauabschnitt zu verwechseln."
+  },
+  {
+   "id": "building-colosseum",
+   "title": "Das Kolosseum",
+   "intro": "Öffentliche Veranstaltungen im Römischen Reich. Einige waren gewalttätig und wären heute nicht akzeptabel.",
+   "starter": "Viele Bögen und Wege gehören zum Kolosseum.",
+   "heikel": false,
+   "observe": "Suche im Bildschirmmodell den freien Raum unter dem Bogen und die seitlichen Stützen. Zeichne den Weg einer gedachten Last zu beiden Seiten nach; keine echten Steinbögen bauen.",
+   "benefit": "Du erkennst, dass eine große Öffnung und ein tragender Rahmen gemeinsam erklärt werden müssen."
+  },
+  {
+   "id": "building-taj-mahal",
+   "title": "Das Taj Mahal",
+   "intro": "Erinnerung an Mumtaz Mahal; in Auftrag gegeben von ihrem Ehemann, dem Mogulherrscher Shah Jahan.",
+   "starter": "Das Taj Mahal ist ein kunstvoll gestaltetes Gebäude mit einer Grabstätte.",
+   "heikel": false,
+   "observe": "Vergleiche im Bildschirmquerschnitt die innere mit der äußeren Kuppel. Zeichne beide Umrisse mit verschiedenen Farben auf Papier.",
+   "benefit": "Du trennst die Nutzung eines Mausoleums von seiner Konstruktion und seiner Verzierung."
+  },
+  {
+   "id": "building-eiffel-tower",
+   "title": "Der Eiffelturm",
+   "intro": "Der Eiffelturm wurde 1889 für eine große Ausstellung in Paris gebaut.",
+   "starter": "Viele verbundene Eisenteile bilden den Eiffelturm.",
+   "heikel": false,
+   "observe": "Verfolge im Bildschirmmodell ein Dreieck und die vier unteren Stützen. Zeichne auf Papier eine offene Gitterform und daneben einen ausgefüllten Umriss.",
+   "benefit": "Du erkennst, dass Materialanordnung und ein durchgehender Lastweg wichtig sind, nicht nur ein hoher Umriss."
+  },
+  {
+   "id": "building-golden-gate-bridge",
+   "title": "Golden Gate Bridge",
+   "intro": "Eine Straßenverbindung über die Meerenge Golden Gate.",
+   "starter": "Die Fahrbahn der Brücke hängt an Seilen.",
+   "heikel": false,
+   "observe": "Verfolge im vorhandenen Brückenmodell Fahrbahn, Hängeseile, Hauptkabel, Türme und Verankerungen. Vergleiche den gesamten Brückenweg mit dem Abstand zwischen den Türmen.",
+   "benefit": "Du verwechselst weder die Hauptöffnung mit der Gesamtlänge noch ein Lernmodell mit einer Sicherheitsberechnung."
+  },
+  {
+   "id": "building-panama-canal",
+   "title": "Der Panamakanal",
+   "intro": "Schiffe müssen für viele Reisen nicht mehr ganz um Südamerika fahren.",
+   "starter": "In einer Schleuse fährt das Schiff mit dem Wasserstand nach oben oder unten.",
+   "heikel": false,
+   "observe": "Verändere im Bildschirmmodell zuerst den Wasserstand und dann das Tor. Beobachte, ob das Schiff dem Wasser folgt. Niemals an echten Schleusen, Kanälen oder Schleusentoren experimentieren.",
+   "benefit": "Du unterscheidest das Heben durch einen veränderten Wasserstand vom Heben durch einen Kran."
+  },
+  {
+   "id": "building-burj-khalifa",
+   "title": "Burj Khalifa",
+   "intro": "Ein Hochhaus mit mehreren Nutzungen, zum Beispiel Wohnungen, Büros und Aussichtsbereichen.",
+   "starter": "Ein hoher Turm braucht ein gemeinsam tragendes System.",
+   "heikel": false,
+   "observe": "Vergleiche im Bildschirmmodell den Kern mit den seitlichen Gebäudeteilen. Nutze den vorhandenen Höhenvergleich, ohne aus einer Höhe allein die Sicherheit abzuleiten.",
+   "benefit": "Du erkennst, dass Rekordhöhe nicht erklärt, wie Wind, Lasten und Untergrund zusammenwirken."
+  },
+  {
+   "id": "science-circuit",
+   "title": "Wie funktioniert Strom?",
+   "intro": "Ein geschlossener Weg verbindet Energiequelle, Leitungen und Lampe.",
+   "starter": "Der Schalter kann den Weg für den Strom öffnen oder schließen.",
+   "heikel": false,
+   "observe": "Vergleiche im Bildschirmmodell einen geschlossenen Schalter mit einem unterbrochenen Rückweg. Erkläre beide Bedingungen. Keine Steckdose anfassen.",
+   "benefit": "Du erkennst, dass ein einzelner geschlossener Schalter einen unterbrochenen Weg nicht repariert."
+  },
+  {
+   "id": "science-network",
+   "title": "Wie funktioniert das Internet?",
+   "intro": "Eine Nachricht kann als viele kleine Datenpakete durch ein Netz reisen.",
+   "starter": "Geräte schicken kleine Datenpakete über verbundene Zwischenstationen.",
+   "heikel": false,
+   "observe": "Schicke im Netzmodell ein Paket über einen anderen Weg. Unterscheide das Ziel vom Weg und das Internet von einer einzelnen Webseite.",
+   "benefit": "Du verstehst, warum mehrere Zwischenstationen zusammenarbeiten und nicht ein Gerät das ganze Netz bildet."
+  },
+  {
+   "id": "science-flight",
+   "title": "Warum fliegt ein Flugzeug?",
+   "intro": "Vier Kräfte wirken beim Fliegen: Auftrieb, Gewicht, Schub und Luftwiderstand.",
+   "starter": "Bewegte Luft am Flügel kann eine Kraft nach oben erzeugen.",
+   "heikel": false,
+   "observe": "Ändere im Kräftebild zuerst nur den Auftrieb, dann nur den Schub. Erkläre, welche Bewegungsrichtung die beiden Änderungen betreffen.",
+   "benefit": "Du trennst vier Kräfte und erkennst die Grenze eines einfachen Pfeilvergleichs."
+  },
+  {
+   "id": "science-gps",
+   "title": "Wie findet GPS einen Ort?",
+   "intro": "Satelliten senden ihre Position und sehr genaue Zeitsignale.",
+   "starter": "Satellitensignale helfen einem Empfänger, Entfernungen und seinen Ort zu berechnen.",
+   "heikel": false,
+   "observe": "Vergleiche im Ortsrätsel Entfernungskreise mit einem gedachten räumlichen GPS. Erkläre, weshalb genaue Uhren dazugehören. Dein Standort bleibt privat.",
+   "benefit": "Du erkennst, welche Messung hinter einer Ortsangabe steckt und warum das flache Bild begrenzt ist."
+  },
+  {
+   "id": "science-computer",
+   "title": "Wie rechnet ein Computer mit Nullen und Einsen?",
+   "intro": "Ein Bit kann zwei Zustände haben: 0 oder 1. Acht Bits bilden ein Byte.",
+   "starter": "Mit Nullen und Einsen kann ein Computer Zahlen und andere Daten darstellen.",
+   "heikel": false,
+   "observe": "Schalte im Acht-Bit-Modell erst nur die kleinste, dann die größte Stelle an. Vermute den Unterschied und prüfe den Stellenwert.",
+   "benefit": "Du verstehst, dass nicht die Anzahl eingeschalteter Bits allein den Zahlenwert bestimmt."
+  },
+  {
+   "id": "science-shadows",
+   "title": "Woher wissen wir, dass die Erde rund ist?",
+   "intro": "An verschiedenen Orten können zur selben Zeit unterschiedlich lange Schatten entstehen.",
+   "starter": "Gleich lange Stäbe können an verschiedenen Orten unterschiedliche Schatten werfen.",
+   "heikel": false,
+   "observe": "Vergleiche im Schattenmodell Sonnenrichtung und Oberflächenrichtung. Prüfe, welche Annahmen für eine Umfangsschätzung nötig sind.",
+   "benefit": "Du kannst aus einer Messidee eine begründete Schlussfolgerung ziehen und ihre Voraussetzungen nennen."
+  },
+  {
+   "id": "history-maya",
+   "title": "Die Maya: Wissen gestern und heute",
+   "intro": "Die Geschichte der Maya gehört zu Amerika. Maya-Sprachen und Gemeinschaften gibt es bis heute.",
+   "starter": "Maya-Gemeinschaften und ihre Sprachen gibt es bis heute. Alte Städte, Schriftzeichen und Kalender erzählen von verschiedenen Teilen ihrer Geschichte.",
+   "heikel": false,
+   "observe": "Vergleiche zwei Fragen: Was verrät ein altes Gebäude über die Menschen damals? Und wie erfährst du, wie Maya heute leben? Warum brauchst du dafür nicht nur dieselbe Art von Quelle?",
+   "benefit": "Du unterscheidest archäologische Spuren von den Stimmen heute lebender Menschen."
+  },
+  {
+   "id": "history-polynesia",
+   "title": "Über den Pazifik ohne GPS",
+   "intro": "Polynesische Seefahrerinnen und Seefahrer nutzten genaue Naturbeobachtung für weite Reisen.",
+   "starter": "Erfahrene Menschen fanden über den Pazifik, indem sie Himmel und Meer genau beobachteten. Dieses Wissen wurde über viele Generationen gelernt.",
+   "heikel": false,
+   "observe": "Stell dir eine Reise vor, bei der Wolken die Sterne verdecken. Welche andere Beobachtung nennt der Artikel? Warum reicht es nicht, nur einmal zufällig eine Welle anzusehen? Bleibe bei einer gedachten Reise.",
+   "benefit": "Du verbindest mehrere Hinweise und erkennst, warum geübtes Wissen etwas anderes als Raten ist."
+  },
+  {
+   "id": "history-timbuktu",
+   "title": "Timbuktu: eine Stadt des Wissens",
+   "intro": "In Westafrika trafen Handel, Bücher und gelehrte Menschen aufeinander.",
+   "starter": "In Timbuktu trafen Reisende, Handel und Lernen zusammen. Handschriften konnten Wissen bewahren und weitergeben.",
+   "heikel": false,
+   "observe": "Unterscheide drei Aufgaben: einen Text schreiben, ihn mitnehmen und ihn an einem anderen Ort lesen. Warum kann ein Handelsweg auch Wissen verbinden? Was zeigt eine Handschrift allein noch nicht über alle Menschen einer Stadt?",
+   "benefit": "Du erklärst den Zusammenhang zwischen Wissensspeicherung, Transport und Lernen."
+  },
+  {
+   "id": "history-greece",
+   "title": "Fragen stellen im alten Griechenland",
+   "intro": "Menschen beschäftigten sich mit Mathematik, Theater, Kunst und politischen Regeln.",
+   "starter": "Im antiken Athen konnten erwachsene männliche Bürger politisch mitbestimmen. Viele andere Menschen waren davon ausgeschlossen.",
+   "heikel": false,
+   "observe": "Vergleiche zwei Aussagen: „Ein Teil der Menschen darf abstimmen“ und „Alle Menschen haben die gleichen politischen Rechte“. Warum bedeuten diese Sätze nicht dasselbe? Vergleiche nur die beschriebenen Regeln, ohne jemanden aus einer heutigen Gruppe auszuschließen.",
+   "benefit": "Du prüfst, für wen eine Regel gilt, und unterscheidest Beteiligung von gleichen Rechten für alle."
+  },
+  {
+   "id": "history-rome",
+   "title": "Römische Straßen und Wasserwege",
+   "intro": "Ein großes Reich verband Orte durch Straßen, Handel und gemeinsame Verwaltung.",
+   "starter": "Aquädukte brachten Wasser zu Siedlungen. Das Wasser konnte durch eine Leitung mit leichtem Gefälle fließen.",
+   "heikel": false,
+   "observe": "Zeichne einen erdachten Weg vom höher gelegenen Wasseranfang zu einem tiefer gelegenen Ziel. Warum muss nicht die ganze Leitung auf einer hohen Brücke liegen? Was kann eine solche Zeichnung nicht über die tatsächliche Versorgung aller Menschen beweisen?",
+   "benefit": "Du erklärst eine technische Funktion und beachtest die Grenze eines vereinfachten Plans."
+  },
+  {
+   "id": "science-atmosphere",
+   "title": "Die Lufthülle der Erde",
+   "intro": "Unsere Atmosphäre wird nach dem Temperaturverlauf in fünf große Schichten eingeteilt.",
+   "starter": "Die Erde besitzt eine Lufthülle. Nahe dem Boden ist sie dichter.",
+   "heikel": false,
+   "observe": "Wähle zwei Luftschichten. Vergleiche Höhe und Dichte, ohne die gezeichneten Grenzen als feste Decken auszugeben.",
+   "benefit": "Du trennst eine hilfreiche Einteilung von echten starren Grenzen."
+  },
+  {
+   "id": "science-magnetism",
+   "title": "Die Erde und ihr Magnetfeld",
+   "intro": "Ein unsichtbares Feld wirkt auf Kompassnadeln und viele geladene Teilchen.",
+   "starter": "Das Erdmagnetfeld beeinflusst viele geladene Teilchen aus dem Weltraum.",
+   "heikel": false,
+   "observe": "Vergleiche im Modell ruhigen und stärkeren Sonnenwind. Beschreibe die Formänderung, ohne eine feste undurchdringliche Wand zu behaupten.",
+   "benefit": "Du kannst eine Schutzwirkung erklären und zugleich ihre Grenze beachten."
+  },
+  {
+   "id": "science-currents",
+   "title": "Warum bewegt sich Meerwasser?",
+   "intro": "Wind, Gezeiten und Dichteunterschiede treiben Meeresströmungen an.",
+   "starter": "Wind und Dichteunterschiede können Wasser bewegen.",
+   "heikel": false,
+   "observe": "Verändere im Wasserpaketvergleich zuerst nur Temperatur und dann nur Salzgehalt. Halte den Druckvergleich fest und begründe deine Beobachtung.",
+   "benefit": "Du lernst, eine einzelne Ursache von einem ganzen komplexen Meeresstrom zu unterscheiden."
+  },
+  {
+   "id": "science-motor",
+   "title": "Wie wird Strom zu Bewegung?",
+   "intro": "Ein Elektromotor nutzt magnetische Kräfte, um eine Drehung anzutreiben.",
+   "starter": "Strom in einer Spule kann im Magnetfeld eine Drehbewegung antreiben.",
+   "heikel": false,
+   "observe": "Schalte im Bildschirmmotor den Stromwender aus und wieder ein. Beschreibe, warum die passende Umschaltung beim Weiterdrehen hilft.",
+   "benefit": "Du verbindest Stromrichtung, Kraft und Drehbewegung statt nur eine Animation anzusehen."
+  },
+  {
+   "id": "science-foodweb",
+   "title": "Wer gibt wem Energie?",
+   "intro": "Nahrung verbindet Lebewesen. Die Sonne liefert Energie für die meisten Nahrungsketten.",
+   "starter": "Eine Nahrungskette zeigt, wie Energie mit Nahrung weitergegeben wird.",
+   "heikel": false,
+   "observe": "Baue im Modell beide Nahrungsketten und folge ihren Pfeilen. Was müsstest du für einen Lebensraum ergänzen, damit aus einer einzelnen Kette ein ganzes Nahrungsnetz wird?",
+   "benefit": "Du unterscheidest Pfeilrichtung, Stoffkreislauf und Energieübertragung."
+  },
+  {
+   "id": "science-sound",
+   "title": "Warum klingt ein Ton hoch oder tief?",
+   "intro": "Ein Ton beginnt mit einer Schwingung und breitet sich durch ein Material aus.",
+   "starter": "Schwingungen können einen Ton erzeugen. Ihr Takt beeinflusst seine Höhe.",
+   "heikel": false,
+   "observe": "Ändere im stummen Tonmodell zuerst die Frequenz, dann die Auslenkung. Erkläre Tonhöhe und Stärke als verschiedene Vergleiche.",
+   "benefit": "Du verwechselst eine Druckkurve nicht mit einem fliegenden Luftteilchen oder mit hörbar geprüftem Ton."
+  },
+  {
+   "id": "science-solar-system",
+   "title": "Planeten: groß und weit entfernt",
+   "intro": "Acht Planeten bewegen sich um die Sonne. Größen und Abstände sind sehr verschieden.",
+   "starter": "Planeten unterscheiden sich in ihrer Größe und Entfernung von der Sonne.",
+   "heikel": false,
+   "observe": "Vergleiche dieselben beiden Planeten in Größen- und Abstandssicht. Sage vor dem Wechsel, welches Verhältnis du gerade untersuchst.",
+   "benefit": "Du liest zwei Maßstäbe bewusst und erkennst, weshalb ein hübsches Bild nicht automatisch maßstäblich ist."
+  },
+  {
+   "id": "science-energy",
+   "title": "Sonnenstrom auch am Abend?",
+   "intro": "Eine Solarzelle wandelt Licht in elektrische Energie um. Ein Akku kann Energie für später speichern.",
+   "starter": "Sonnenlicht kann Strom liefern. Ein Akku kann einen Teil für später speichern.",
+   "heikel": false,
+   "observe": "Vergleiche im Sonnenstrommodell einen hellen Tag mit einer Nacht bei leerem Akku. Prüfe Produktion und Verbrauch getrennt.",
+   "benefit": "Du kannst Speicherung von Erzeugung unterscheiden und eine begrenzte Reserve erklären."
+  },
+  {
+   "id": "science-patterns",
+   "title": "Kann ein Computer Muster erkennen?",
+   "intro": "Computer können Beispiele vergleichen. Bei lernenden Systemen beeinflussen die Beispiele, was sie erkennen.",
+   "starter": "Ein Computer kann nach einer gewählten Regel ähnliche Merkmale sortieren.",
+   "heikel": false,
+   "observe": "Sortiere dieselben Figuren zuerst nach Farbe und dann nach Form. Erkläre einen Fall, der beim Regelwechsel anders eingeordnet wird.",
+   "benefit": "Du verstehst, warum eine Sortierregel und gute Beispiele wichtig sind und Fehler möglich bleiben."
+  },
+  {
+   "id": "science-water-cycle",
+   "title": "Wasser auf Weltreise",
+   "intro": "Ein Tropfen kann im Meer, in einer Wolke und später im Boden unterwegs sein.",
+   "starter": "Wasser kann als Flüssigkeit, Dampf oder Eis an verschiedenen Orten vorkommen.",
+   "heikel": false,
+   "observe": "Verfolge im Wassermodell einen möglichen Weg. Suche eine Abzweigung und erkläre, warum es keinen vorgeschriebenen Start gibt.",
+   "benefit": "Du beschreibst Speicher und Zustandswechsel ohne Wasser im Modell einfach verschwinden zu lassen."
+  },
+  {
+   "id": "science-photosynthesis",
+   "title": "Wie Blätter Sonnenlicht nutzen",
+   "intro": "Pflanzen stellen mit Licht, Wasser und Kohlendioxid Zucker her.",
+   "starter": "Grüne Pflanzen können Lichtenergie zum Aufbau energiereicher Stoffe nutzen.",
+   "heikel": false,
+   "observe": "Verbinde im Bild Licht, Wasser und Kohlendioxid mit dem Aufbau energiereicher Stoffe. Unterscheide diesen Prozess von der Zellatmung.",
+   "benefit": "Du verstehst eine Energiequelle vieler Nahrungsnetze und vermeidest die Idee, Pflanzen würden nicht atmen."
+  },
+  {
+   "id": "science-pollination",
+   "title": "Blüten und ihre Pollenboten",
+   "intro": "Wenn Pollen die passende Stelle einer Blüte erreichen, beginnt ein Weg zu neuen Samen.",
+   "starter": "Bestäubung bringt Pollen auf eine passende Narbe einer Blüte.",
+   "heikel": false,
+   "observe": "Beobachte eine Blüte mit Abstand und ohne Insekten anzufassen. Trenne den sichtbaren Besuch von dem nicht sicher bewiesenen Pollentransport.",
+   "benefit": "Du unterscheidest Beobachtung, Bestäubung und spätere Befruchtung."
+  },
+  {
+   "id": "science-fungi",
+   "title": "Das verborgene Reich der Pilze",
+   "intro": "Unter einem Pilzhut kann ein weit verzweigtes Geflecht liegen.",
+   "starter": "Viele Pilze bilden feine Fäden. Ein Pilzhut ist oft nur ein Teil davon.",
+   "heikel": false,
+   "observe": "Unterscheide in der Erklärung Myzel und Fruchtkörper. Betrachte Pilze draußen nur; keine sammeln, berühren oder essen.",
+   "benefit": "Du erkennst verschiedene Pilzrollen und behauptest nicht allein aus einem Bild, Bäume würden wie Menschen sprechen."
+  },
+  {
+   "id": "science-coral-reef",
+   "title": "Ein Riff voller Zusammenarbeit",
+   "intro": "Viele tropische Riffe werden von kleinen Tieren und ihren Algenpartnern aufgebaut.",
+   "starter": "Korallenpolypen sind Tiere. Viele leben mit kleinen Algenpartnern zusammen.",
+   "heikel": false,
+   "observe": "Vergleiche eine Koralle mit Algenpartnern und eine gebleichte Koralle. Erkläre, weshalb Bleiche nicht automatisch sofortigen Tod bedeutet.",
+   "benefit": "Du verstehst Zusammenarbeit und Stress, ohne alle Korallen auf eine Lebensweise zu reduzieren."
+  },
+  {
+   "id": "science-moon-phases",
+   "title": "Warum verändert der Mond seine Form?",
+   "intro": "Der Mond bleibt immer rund, auch wenn er wie eine Sichel aussieht.",
+   "starter": "Die Sonne beleuchtet den Mond. Unser Blick auf seine helle Seite verändert sich.",
+   "heikel": false,
+   "observe": "Wähle im Modell zwei Mondpositionen. Vergleiche beleuchtete Hälfte und von der Erde sichtbaren Teil; trenne Phase und Finsternis.",
+   "benefit": "Du erklärst Mondphasen ohne die falsche pauschale Idee eines Erdschattens."
+  },
+  {
+   "id": "science-seasons",
+   "title": "Ein Jahr, zwei verschiedene Sommer",
+   "intro": "Die geneigte Erdachse verändert im Jahreslauf Tageslänge und Sonnenstand.",
+   "starter": "Die geneigte Erdachse verändert Sonnenstand und Tageslänge im Jahreslauf.",
+   "heikel": false,
+   "observe": "Vergleiche Nord- und Südhalbkugel zur gleichen Jahreszeit. Halte den Tag fest und erkläre die unterschiedliche Neigung zur Sonne.",
+   "benefit": "Du unterscheidest Achsneigung, Sonnenstand und Entfernung statt eine einzige einfache Abstandsregel zu übernehmen."
+  },
+  {
+   "id": "science-tides",
+   "title": "Der Mond bewegt das Meer",
+   "intro": "Mond und Sonne beeinflussen das regelmäßige Steigen und Fallen des Meeresspiegels.",
+   "starter": "Mond und Sonne beeinflussen den wechselnden Wasserstand am Meer.",
+   "heikel": false,
+   "observe": "Wechsle in der Küstenskizze zwischen Hoch- und Niedrigwasser. Trenne Wasserstand und den Zeitraum steigenden oder fallenden Wassers.",
+   "benefit": "Du verwendest Ebbe, Flut, Hoch- und Niedrigwasser präzise und beachtest örtliche Vorhersagen."
+  }
+ ]
+}

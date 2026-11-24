@@ -4,6 +4,7 @@
 import {Component, lazy, Suspense, useState, type ReactNode} from 'react';
 import {LearningStatus} from '../../learning-components';
 import type {WorldActions, WorldTopic} from '../../world-types';
+import {ganzEinfachImAusprobieren} from './karten-daten';
 
 const laden = () => import('./bausteine');
 // Für alle Karten gemeinsam: Ist das Skript einmal da, erscheinen die Bausteine jeder Karte sofort.
@@ -52,10 +53,10 @@ export default function Ausprobieren({topic, actions}: {topic: WorldTopic; actio
       onToggle={event => { if (event.currentTarget.open) setGeoeffnet(true); }}
     >
       <summary>Ausprobieren</summary>
-      {/* Karten mit Häppchen zeigen „Ganz einfach“ nicht in „Kurz erklärt“. Bei Personen ist der Satz die Anleitung
-          zum Versuch hier unten; darum steht er über den Bausteinen und ist sofort da (große Prüfung, Aufgabe 13).
-          kartenFeldFehler meldet Karten mit Häppchen und diesem Satz, die kein „Ausprobieren“ haben. */}
-      {topic.chapters && topic.learning?.starter && <p className="wissenskarte-ausprobieren-einstieg">{topic.learning.starter}</p>}
+      {/* Karten mit Häppchen und Personenkarten zeigen „Ganz einfach“ nicht in „Kurz erklärt“. Bei Personen ist der Satz
+          meist die Anleitung zum Versuch hier unten; darum steht er über den Bausteinen und ist sofort da (große Prüfung,
+          Aufgabe 13; Teilschritt 3, E12). kartenFeldFehler meldet solche Karten, die kein „Ausprobieren“ haben. */}
+      {ganzEinfachImAusprobieren(topic) && <p className="wissenskarte-ausprobieren-einstieg">{topic.learning?.starter}</p>}
       {/* Lädt das Skript nicht, bleibt der Fehler in diesem Bereich; die Karte darüber bleibt stehen. */}
       {geoeffnet && (
         <NochEinmal key={versuch} onRetry={() => { neuerVersuch(); setVersuch(n => n + 1); }}>

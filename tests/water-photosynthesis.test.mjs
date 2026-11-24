@@ -8,7 +8,8 @@ import {retainedChallengeChoiceVariant} from '../app/retained-answer-wording.mjs
 // Each legacy question (before) is paired with the current challenge question of the same ID (after).
 const rows=legacy.questions.map(before=>({id:before.id,before,after:CHALLENGE_BANK.find(q=>q.id===before.id)}));
 const legacyIds=new Set(rows.map(row=>row.id));
-const permutations=([a,b,c])=>[[a,b,c],[a,c,b],[b,a,c],[b,c,a],[c,a,b],[c,b,a]];
+// Alle Reihenfolgen, für drei oder (seit Teilschritt 3 auf Profi) vier Antworten.
+const permutations=list=>list.length<=1?[list]:list.flatMap((x,i)=>permutations([...list.slice(0,i),...list.slice(i+1)]).map(rest=>[x,...rest]));
 
 function round(row,order,{done=false,answer=order[0]}={}){
  const other=CHALLENGE_BANK.filter(q=>q.difficulty===row.after.difficulty&&!legacyIds.has(q.id)).slice(0,5);

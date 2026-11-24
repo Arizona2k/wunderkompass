@@ -3,10 +3,12 @@ import {RETAINED_ANSWER_WORDING as alias} from '../../app/retained-answer-wordin
 import catalog from '../../app/world-catalog.json' with {type:'json'};
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
 import {ladeanfragen} from './harness.mjs';
-import {antwortKnopf,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
+import {antwortKnopf,hauptfrage,rateMal,richtigeAntwort,zeigtFrage,zusatzfragenAufStufe} from './karte-hilfen.mjs';
 await import('../../scripts/test-runtime.mjs');
 const {CHALLENGE_BANK,restoreChallenge,emptyChallenge}=await import('../../app/knowledge-challenge.ts');
 const {createSave,emptyProgress,SAVE_KEY}=await import('../../app/progress-storage.ts');
+// Passt eine gespeicherte Reihe nicht, zeigt die Karte die feste Mischung je Frage (Teil A, Aufgabe 6), nicht die Reihenfolge der Daten.
+const {festGemischt}=await import('../../app/kern/karte/karten-daten.ts');
 const question=CHALLENGE_BANK.find(q=>q.topic===alias.topic),topic=catalog.find(t=>t.id===alias.topic),HAUPT=hauptfrage(topic);
 function oldRound(finished){const other=CHALLENGE_BANK.filter(q=>q.difficulty==='easy'&&q.id!==question.id).slice(0,5),qs=finished?[...other,question]:[question,...other];return {difficulty:'easy',ids:qs.map(q=>q.id),orders:Object.fromEntries(qs.map(q=>[q.id,[...q.answers].reverse().map(value=>q.id===question.id&&value===alias.after?alias.before:value)])),index:finished?5:0,answer:finished?question.answers[question.correct]:alias.before,done:finished};}
 export async function retainedAnswerWordingFlow(browser,base,ready,monitor,report,shots){
@@ -24,7 +26,7 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
    await mapReady();await anfragenFertig();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();if(finished)await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();else{await room.locator('.quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await room.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);}
    const stored=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(stored.gameSessions['world:knowledge-challenge'].challenge,expected);assert.deepEqual(stored.favorites,progress.favorites);assert.deepEqual(stored.games,progress.games);assert.deepEqual(stored.gameSessions['world:animal-detective'],progress.gameSessions['world:animal-detective']);
    if(shots)await room.screenshot({path:path.join(shots,'answer-wording-challenge-'+(finished?'finished':'wrong')+'-'+width+'.png')});
-   if(!finished){await room.getByRole('button').filter({has:p.getByText(question.answers[question.correct],{exact:true})}).click();await room.getByText('Deine Auswahl passt.',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();await mapReady();await anfragenFertig();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge.index===1,SAVE_KEY);const next=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge,SAVE_KEY);assert.deepEqual(next.ids,session.ids);assert.equal(next.answer,null);}
+   if(!finished){await room.getByRole('button').filter({has:p.getByText(question.answers[question.correct],{exact:true})}).click();await room.getByText('Richtig!',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).click();await mapReady();await anfragenFertig();await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.waitFor();await p.waitForFunction(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge.index===1,SAVE_KEY);const next=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge'].challenge,SAVE_KEY);assert.deepEqual(next.ids,session.ids);assert.equal(next.answer,null);}
    await mapReady();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);observed.push({width,finished,legacyOrder:true,wrongRemainsWrong:!finished,earnedFinishPreserved:finished,reload:true,requestedMapSettledBeforeIntentionalReload:true,otherProgressPreserved:true});
   }catch(error){if(shots)await p.screenshot({path:path.join(shots,'answer-wording-failure-'+width+'.png'),fullPage:true}).catch(()=>{});throw error;}finally{await c.close();}
  }
@@ -38,10 +40,12 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
   try{
    await p.goto(base+'#world/topic/'+alias.topic);await ready(p);
    const mini=rateMal(p);await zeigtFrage(p,topic,HAUPT);
-   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),HAUPT.question.answers,'malformed mixed alias/unknown choices fall back to all three unique canonical choices');
+   // Eine kaputte Reihe zeigt die feste Mischung der Frage (Teil A: in der Reihenfolge der Daten stand die Lösung oft vorn). Gespeichert wird nichts;
+   // die alte Reihe bleibt im Pass, und nach dem Neuladen steht dieselbe Mischung da.
+   const gemischt=await mini.locator('.quiz-answer > span:last-of-type').allTextContents();assert.deepEqual([...gemischt].sort(),[...HAUPT.question.answers].sort(),'malformed mixed alias/unknown choices fall back to all three unique canonical choices');assert.deepEqual(gemischt,festGemischt(HAUPT),'die feste Mischung der Frage');
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);assert.equal(await mini.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);
    await anfragenFertig();await p.reload();await ready(p);await zeigtFrage(p,topic,HAUPT);
-   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),HAUPT.question.answers);
+   assert.deepEqual(await mini.locator('.quiz-answer > span:last-of-type').allTextContents(),gemischt,'nach dem Neuladen dieselbe feste Mischung');
    assert.equal(await mini.locator('.quiz-answer.is-incorrect').count(),1);
    const stored=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);
    assert.deepEqual(stored.gameSessions['topic:'+alias.topic].items,items,'interpretation never overwrites original import evidence');
@@ -52,9 +56,15 @@ export async function retainedAnswerWordingFlow(browser,base,ready,monitor,repor
  }
  report.answerWordingCompatibility={observed,malformedMini,scope:'Only actual consumers: topic mini-question and six-question knowledge challenge. Other world games generate different questions and remain unchanged.'};report.checks.push('Legacy wrong-answer wording: six-question IDs/shuffled orders/wrong choice/next step and earned finish survive actual resume/reload at320/1440; unrelated progress retained; malformed duplicate aliases/unknown mini orders fall back to all three unique canonical choices');
 }
-export async function offlineRetainedAnswerWording(p,report){
+// Offline, mit dreimal Neuladen: einmal auf der Seite, die der Aufrufer hinterlässt, dann zweimal auf der Seeadler-Karte.
+// Vorher jeweils warten, bis die Ladeanfragen fertig sind: WebKit brach sonst Seeadler- und Pinguinbild ab, wenn das Neuladen
+// kam, bevor sie da waren (check 24.11.2026, „Load request cancelled“; im Diagnose-Lauf lagen nur 46 ms dazwischen).
+// Pflicht: `anfragenFertig` vom Aufrufer, gleich nach newPage angelegt (harness.mjs, ladeanfragen). Eine erst hier angelegte
+// Wartehilfe sähe Anfragen nicht, die schon laufen, und schützte das erste Neuladen nur halb (Code-Prüfung Offline-Wartehilfe, Befund 2).
+export async function offlineRetainedAnswerWording(p,report,anfragenFertig){
+ if(typeof anfragenFertig!=='function')throw new Error('offlineRetainedAnswerWording braucht die Wartehilfe ladeanfragen(page), gleich nach newPage angelegt');
  const original=await p.evaluate(({key,id,before,answers})=>{const s=JSON.parse(localStorage.getItem(key));s.progress.gameSessions['topic:'+id]={...s.progress.gameSessions['topic:'+id],items:answers.map(v=>v===before.after?before.before:v).reverse(),topicAnswer:before.before};localStorage.setItem(key,JSON.stringify(s));return {favorites:s.progress.favorites,games:s.progress.games};},{key:SAVE_KEY,id:alias.topic,before:alias,answers:HAUPT.question.answers});
- await p.reload();await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);await p.evaluate(id=>location.hash='world/topic/'+id,alias.topic);const q=rateMal(p);await zeigtFrage(p,topic,HAUPT);assert.equal(await q.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);assert.deepEqual(await q.locator('.quiz-answer > span:last-of-type').allTextContents(),[...HAUPT.question.answers].reverse());await p.reload();await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);await p.evaluate(({key,id,before,after,correct})=>{const s=JSON.parse(localStorage.getItem(key));s.progress.gameSessions['topic:'+id].items=[before,after,correct];s.progress.gameSessions['topic:'+id].topicAnswer=before;localStorage.setItem(key,JSON.stringify(s));},{key:SAVE_KEY,id:alias.topic,before:alias.before,after:alias.after,correct:richtigeAntwort(HAUPT)});await p.reload();await p.locator('.world-mini-question .quiz-answer').first().waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);assert.deepEqual(await p.locator('.world-mini-question .quiz-answer > span:last-of-type').allTextContents(),HAUPT.question.answers,'cold offline duplicate alias order also displays all three canonical choices');assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect').count(),1);const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(saved.favorites,original.favorites);assert.deepEqual(saved.games,original.games);report.answerWordingOffline={coldNavigatorOffline:true,duplicateOrderFallback:true,legacyOrder:true,wrongRemainsWrong:true,reload:true,otherProgressPreserved:true};
+ await anfragenFertig();await p.reload();await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);await p.evaluate(id=>location.hash='world/topic/'+id,alias.topic);const q=rateMal(p);await zeigtFrage(p,topic,HAUPT);assert.equal(await q.locator('.quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);assert.deepEqual(await q.locator('.quiz-answer > span:last-of-type').allTextContents(),[...HAUPT.question.answers].reverse());await anfragenFertig();await p.reload();await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').waitFor();assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect > span:last-of-type').innerText(),alias.after);await p.evaluate(({key,id,before,after,correct})=>{const s=JSON.parse(localStorage.getItem(key));s.progress.gameSessions['topic:'+id].items=[before,after,correct];s.progress.gameSessions['topic:'+id].topicAnswer=before;localStorage.setItem(key,JSON.stringify(s));},{key:SAVE_KEY,id:alias.topic,before:alias.before,after:alias.after,correct:richtigeAntwort(HAUPT)});await anfragenFertig();await p.reload();await p.locator('.world-mini-question .quiz-answer').first().waitFor();assert.equal(await p.evaluate(()=>navigator.onLine),false);assert.deepEqual(await p.locator('.world-mini-question .quiz-answer > span:last-of-type').allTextContents(),festGemischt(HAUPT),'cold offline duplicate alias order also displays all three canonical choices (feste Mischung, Teil A)');assert.equal(await p.locator('.world-mini-question .quiz-answer.is-incorrect').count(),1);const saved=await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY);assert.deepEqual(saved.gameSessions['topic:'+alias.topic].items,[alias.before,alias.after,richtigeAntwort(HAUPT)],'offline: die alte Reihe bleibt im Pass');assert.deepEqual(saved.favorites,original.favorites);assert.deepEqual(saved.games,original.games);report.answerWordingOffline={coldNavigatorOffline:true,duplicateOrderFallback:true,legacyOrder:true,wrongRemainsWrong:true,reload:true,otherProgressPreserved:true};
 }
 
 // Aufgabe 10 (Risiko 1): Ein Kind hat eine Frage richtig beantwortet, danach wurde die Frage umformuliert; die Antworten
@@ -78,7 +88,7 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
   const pruefen=async()=>{
    const mini=rateMal(p);
    await zeigtFrage(p,t,haupt);
-   await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();
+   await mini.getByText('Richtig!',{exact:true}).waitFor();
    await mini.getByText(haupt.question.why,{exact:true}).waitFor();
    await p.locator('.wissenskarte-gelernt').waitFor();
    const knoepfe=mini.locator('.quiz-answer');assert.equal(await knoepfe.count(),haupt.question.answers.length);
@@ -88,18 +98,18 @@ export async function alteAntwortNachUmformulierung(browser,base,ready,monitor,r
   try{
    await p.goto(base+'#world/topic/'+id);await ready(p);
    // Pilot-Karten: erst die noch offenen Zusatzfragen richtig beantworten, dann führt „Noch eine Frage“ zur Hauptfrage.
-   for(const z of zusatzfragen(t)){
+   for(const z of zusatzfragenAufStufe(t)){
     const mini=rateMal(p);
     await zeigtFrage(p,t,z);
     await antwortKnopf(p,richtigeAntwort(z)).click();
-    await mini.getByText('Passende Antwort gewählt.',{exact:true}).waitFor();
+    await mini.getByText('Richtig!',{exact:true}).waitFor();
     await mini.getByRole('button',{name:'Noch eine Frage',exact:true}).click();
    }
    await pruefen();
    const gespeichert=(await p.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY)).gameSessions['topic:'+id];
    assert.equal(gespeichert.topicAnswer,richtig,id+': die alte Antwort bleibt unverändert gespeichert');
    await anfragenFertig();await p.reload();await ready(p);await pruefen();
-   const zahl=zusatzfragen(t).length;geprueft.push(id+(zahl?' (nach '+zahl+' Zusatzfragen)':''));
+   const zahl=zusatzfragenAufStufe(t).length;geprueft.push(id+(zahl?' (nach '+zahl+' Zusatzfragen)':''));
   }finally{await c.close();}
  }
  report.checks.push('Alte richtige Antwort nach umformulierter Frage bleibt gewählt und richtig, learned bleibt (390 px, mit Neuladen): '+geprueft.join(', '));

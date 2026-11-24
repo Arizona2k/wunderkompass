@@ -2,7 +2,7 @@
 // echten Browser Import, Neuladen und Sicherung, ohne dass ein Spielstand verloren geht. Der Pass ist ausgedacht.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {ready} from './harness.mjs';
+import {FOKUS_NACH_KLICK, ready} from './harness.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import spiele from '../../app/game-index.json' with {type: 'json'};
 import reisen from '../../app/journey-index.json' with {type: 'json'};
@@ -80,4 +80,125 @@ export async function passSpielstaende(ctx) {
     await context.close();
   }
   ctx.report.checks.push('Voller Pass mit ' + anzahl + ' Spielständen: Import, IndexedDB, Neuladen und Sicherung ohne Verlust');
+}
+
+// Teilschritt 3, Aufgaben 1 und 2: die gemeinsame Stufe im Entdeckerpass (gameSessions['kern:stufe']).
+// Ein Altpass mit der alten Quiz-Stufe „Knifflig“ startet auf Profi; Umstellen geht mit einem Tipp,
+// „Zurück zu Entdecker“ steht auf Profi und Experte dabei; die Stufe übersteht Neuladen, Sicherung und Einlesen.
+export async function stufeImPass(ctx) {
+  const context = await ctx.browser.newContext({viewport: {width: 390, height: 844}, reducedMotion: 'reduce', acceptDownloads: true, hasTouch: true, ...(ctx.engine === 'chromium' ? {isMobile: true} : {})});
+  try {
+    await context.addInitScript(FOKUS_NACH_KLICK);
+    const page = await context.newPage();
+    ctx.monitor(page);
+    page.setDefaultTimeout(20000);
+    const gespeichert = () => page.evaluate(() => {const p = JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress; return {stufe: p.gameSessions['kern:stufe']?.stufe ?? null, lastActivity: p.lastActivity, difficulty: p.settings.difficulty};});
+    const passOeffnen = async () => {
+      await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').click();
+      const wahl = page.locator('.passport-dialog .stufen-wahl');
+      await wahl.scrollIntoViewIfNeeded();
+      return wahl;
+    };
+    const mindestens48 = async (knopf, name) => {
+      const box = await knopf.boundingBox();
+      assert.ok(box && box.width >= 48 && box.height >= 48, name + ' ist mindestens 48 px groß: ' + JSON.stringify(box));
+    };
+    await page.goto(ctx.base);
+    await ready(page);
+    // Altpass (ohne Schema-Angabe) mit der alten Quiz-Stufe „Knifflig“, eingelesen über „Sicherung öffnen“.
+    const altpass = {discoveries: ['animal-elephant'], chapters: {}, journeys: [], settings: {difficulty: 'tricky', sound: false, readRate: 0.9, largeText: false, reducedMotion: false}};
+    await page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
+    await page.locator('input[type=file]').setInputFiles({name: 'altpass.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(altpass))});
+    await page.getByRole('button', {name: 'Pass wiederherstellen', exact: true}).click();
+    await page.locator('.passport-dialog').waitFor({state: 'hidden'});
+    let wahl = await passOeffnen();
+    await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Profi');
+    const aendern = wahl.getByRole('button', {name: 'Stufe ändern'});
+    const zurueck = wahl.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker'});
+    await zurueck.waitFor();
+    await mindestens48(aendern, '„Ändern“');
+    await mindestens48(zurueck, '„Zurück zu Entdecker“');
+    assert.equal((await gespeichert()).stufe, null, 'Ansehen schreibt nichts in den Pass');
+    await page.screenshot({path: ctx.shots + '/stufe-zu-390.png'});
+    // Ein Tipp öffnet die drei Stufen, ein zweiter stellt um.
+    await aendern.tap();
+    await wahl.scrollIntoViewIfNeeded();
+    await page.screenshot({path: ctx.shots + '/stufe-offen-390.png'});
+    const knoepfe = wahl.getByRole('group', {name: 'Welche Stufe willst du spielen?', exact: true}).getByRole('button');
+    assert.equal(await knoepfe.count(), 3, 'drei Stufen zur Wahl');
+    for (const [i, name] of ['Entdecker', 'Profi', 'Experte'].entries()) {
+      await mindestens48(knoepfe.nth(i), name);
+      assert.equal(await knoepfe.nth(i).getAttribute('aria-pressed'), String(name === 'Profi'), name + ' gewählt?');
+    }
+    assert.equal(await knoepfe.nth(1).evaluate(el => el === document.activeElement), true, 'der Fokus steht auf der gewählten Stufe');
+    assert.equal(await wahl.locator('.stufen-knoepfe').innerText().then(t => /\b\d+\s*(bis|–)\s*\d+\b|Jahre/.test(t)), false, 'kein Alter auf den Knöpfen');
+    await knoepfe.nth(2).tap();
+    await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Experte');
+    await zurueck.waitFor();
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['kern:stufe']?.stufe === 'experte');
+    const nachWahl = await gespeichert();
+    assert.equal(nachWahl.lastActivity, null, 'die Stufenwahl ändert „Weiter entdecken“ nicht');
+    assert.equal(nachWahl.difficulty, 'tricky', 'die alte Quiz-Stufe bleibt unverändert im Pass');
+    // „Zurück zu Entdecker“ stellt mit einem Tipp um und verschwindet dann.
+    await zurueck.tap();
+    await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Entdecker');
+    await zurueck.waitFor({state: 'detached'});
+    // Die Seite setzt den Fokus noch im Klick. Darum zählt, wo er am Ende des Tipps lag (FOKUS_NACH_KLICK), und wo er jetzt
+    // liegt, ohne Warten. Ein Warten verdeckte, wenn er ein Bild lang auf den Pass-Dialog springt (CI WebKit 24.11.2026;
+    // Technik-Prüfung WebKit-Fund, Befund 2a); ein schneller Rechner verdeckte es auch so (Code-Prüfung flushSync, Befund 1).
+    assert.equal(await aendern.evaluate(el => el === window.__fokusNachKlick), true, 'der Fokus bleibt schon am Ende des Tipps in der Stufenwahl');
+    assert.equal(await aendern.evaluate(el => el === document.activeElement), true, 'der Fokus bleibt in der Stufenwahl');
+    // Tastatur: Enter öffnet, Tab wandert, Enter wählt.
+    await aendern.focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await knoepfe.nth(0).evaluate(el => el === document.activeElement), true, 'Fokus auf Entdecker');
+    await page.keyboard.press('Tab');
+    await page.keyboard.press('Enter');
+    await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Profi');
+    // Auch hier am Ende des Klicks (Enter löst ein click aus) und sofort, aus demselben Grund.
+    assert.equal(await aendern.evaluate(el => el === window.__fokusNachKlick), true, 'der Fokus ist schon am Ende des Klicks zurück auf „Ändern“');
+    assert.equal(await aendern.evaluate(el => el === document.activeElement && el.matches(':focus-visible')), true, 'sichtbarer Fokus zurück auf „Ändern“');
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['kern:stufe']?.stufe === 'profi');
+    // Neuladen
+    await page.reload();
+    await ready(page);
+    wahl = await passOeffnen();
+    await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Profi');
+    await wahl.getByRole('button', {name: 'Zu schwer? Zurück zu Entdecker'}).waitFor();
+    // Sicherung und Einlesen in einem frischen Browser
+    const laden = page.waitForEvent('download');
+    await page.getByRole('button', {name: 'Entdeckerpass sichern', exact: true}).click();
+    const datei = ctx.shots + '/stufe-sicherung.json';
+    await (await laden).saveAs(datei);
+    const sicherung = JSON.parse(await fs.readFile(datei, 'utf8'));
+    assert.equal(sicherung.progress.gameSessions['kern:stufe']?.stufe, 'profi', 'Stufe in der Sicherung');
+    const frisch = await context.browser().newContext({viewport: {width: 1440, height: 900}, reducedMotion: 'reduce'});
+    try {
+      const neu = await frisch.newPage();
+      ctx.monitor(neu);
+      neu.setDefaultTimeout(20000);
+      await neu.goto(ctx.base);
+      await ready(neu);
+      await neu.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
+      await neu.locator('input[type=file]').setInputFiles(datei);
+      await neu.getByRole('button', {name: 'Pass wiederherstellen', exact: true}).click();
+      await neu.locator('.passport-dialog').waitFor({state: 'hidden'});
+      await neu.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').click();
+      const neueWahl = neu.locator('.passport-dialog .stufen-wahl');
+      await neueWahl.scrollIntoViewIfNeeded();
+      await expectText(neueWahl.locator('.stufen-zeile'), 'Stufe: Profi');
+      await neu.screenshot({path: ctx.shots + '/stufe-1440.png'});
+    } finally {
+      await frisch.close();
+    }
+  } finally {
+    await context.close();
+  }
+  ctx.report.checks.push('Stufe im Pass: Altpass mit Knifflig startet auf Profi, Umstellen mit einem Tipp und mit der Tastatur, „Zurück zu Entdecker“, Neuladen, Sicherung und Einlesen');
+}
+
+async function expectText(locator, text) {
+  await locator.filter({hasText: text}).waitFor({timeout: 10000}).catch(async () => {
+    assert.fail('erwartet „' + text + '“, gefunden „' + (await locator.innerText().catch(() => '?')) + '“');
+  });
 }

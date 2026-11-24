@@ -29,7 +29,7 @@ import {solarFlow} from './solar-comparison.mjs';
 import {kernHuelle} from './kern-huelle.mjs';
 import {wissenskarte} from './wissenskarte.mjs';
 import {reiseKapitel} from './reise-kapitel.mjs';
-import {passSpielstaende} from './pass-spielstaende.mjs';
+import {passSpielstaende, stufeImPass} from './pass-spielstaende.mjs';
 
 // Ältere Abläufe erwarten (browser, base, ready, monitor, report, shots).
 const flow = fn => ({browser, base, ready, monitor, report, shots}) => fn(browser, base, ready, monitor, report, shots);
@@ -46,7 +46,7 @@ export const SUITES = [
   // backup prüft darin auch storage-feedback, book-notes und model-import-integrity.
   {name: 'backup', set: 'ci', run: flow(backupFlow)},
   // Ein voller Pass mit über 256 Spielständen verliert beim Import, Neuladen und Sichern nichts (BACKLOG 18).
-  {name: 'pass-spielstaende', set: 'ci', run: passSpielstaende},
+  {name: 'pass-spielstaende', set: 'ci', run: async ctx => { await passSpielstaende(ctx); await stufeImPass(ctx); }},
   {name: 'animal-game-saves', set: 'ci', run: flow(retainedAnimalRounds)},
   {name: 'habitat-answer-semantics', set: 'ci', run: flow(habitatAnswerSemantics)},
   // Dazu: alte richtige Antwort nach umformulierter Rate-mal-Frage (Aufgabe 10).

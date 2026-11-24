@@ -8,6 +8,7 @@ import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
+import {STUFEN, STUFEN_NAME, type Stufe} from '../stufe';
 
 export type KartenFrage = {
   id: string;
@@ -18,10 +19,13 @@ export type KartenFrage = {
   hints: string[];
   // Je Antwort ein Satz, warum sie nicht passt; null bei der richtigen (wie questionFeedback im Katalog).
   wrongReasons?: (string | null)[];
+  // Teilschritt 3 (E4, E6): Die Hauptfrage ist Entdecker; Zusatz- und Challenge-Fragen tragen ihre Stufe.
+  level: Stufe;
 };
+type Tippbank = Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>;
 
-// Alle Fragen einer Karte: zuerst die Hauptfrage, dann die Zusatzfragen in Datenreihenfolge.
-export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps: string[]}>): KartenFrage[] {
+// Alle Fragen einer Karte: zuerst die Hauptfrage, dann die Zusatzfragen, dann die Challenge-Fragen, je in Datenreihenfolge.
+export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage[] {
   // Hinweise wie auf der alten Karte: Der Hinweis aus questionFeedback ersetzt den ersten Schritt der Bank.
   const bank = hintBank[topic.id + ':mini']?.steps ?? [];
   const feedback = topic.questionFeedback;
@@ -33,24 +37,88 @@ export function kartenFragen(topic: WorldTopic, hintBank: Record<string, {steps:
     question: topic.question,
     hints: feedback ? [feedback.hint, ...bank.slice(1)] : [...bank],
     ...(feedback ? {wrongReasons: feedback.wrongReasons} : {}),
+    level: 'entdecker',
   };
-  const zusatz = (topic.moreQuestions ?? []).map(({id, hint, prompt, answers, correct, why}): KartenFrage => ({
-    id,
-    reviewId: 'world-question:' + id,
-    answerKey: 'topicAnswer:' + id,
-    itemsKey: 'items:' + id,
+  const schluessel = (id: string) => ({id, reviewId: 'world-question:' + id, answerKey: 'topicAnswer:' + id, itemsKey: 'items:' + id});
+  // Ruhende Fragen (ruht: true) bleiben mit ihrer ID in den Daten (alte Pass-Einträge, alte Runden), erscheinen aber nicht mehr.
+  const zusatz = (topic.moreQuestions ?? []).filter(q => !q.ruht).map(({id, hint, hints, level, wrongReasons, prompt, answers, correct, why}): KartenFrage => ({
+    ...schluessel(id),
     question: {prompt, answers, correct, why},
-    hints: [hint],
+    hints: hints ?? (hint ? [hint] : []),
+    ...(wrongReasons ? {wrongReasons} : {}),
+    level: level ?? 'entdecker',
   }));
-  return [haupt, ...zusatz];
+  // Die Challenge-Fragen erscheinen auch auf ihrer Karte (B7). Auf der Karte haben sie eigene Schlüssel;
+  // in der Wissens-Challenge bleibt ihre Wiederholung challenge:<id>. Ohne Einstufung gelten sie als Profi.
+  const challenge = (topic.challenges ?? []).filter(q => !q.ruht).map(({id, level, prompt, answers, correct, why}): KartenFrage => {
+    const eintrag = hintBank[id];
+    return {
+      ...schluessel(id),
+      question: {prompt, answers, correct, why},
+      hints: [...(eintrag?.steps ?? [])],
+      ...(eintrag?.wrongReasons ? {wrongReasons: eintrag.wrongReasons} : {}),
+      level: level ?? 'profi',
+    };
+  });
+  return [haupt, ...zusatz, ...challenge];
 }
 
-// Welche Frage „Rate mal!“ zeigt:
+// Die Fragen, die eine Stufe zeigen darf: ihre eigene Stufe zuerst, dann die leichteren; je in Datenreihenfolge.
+// „Noch eine Frage“ blättert in genau dieser Liste (bleibt bei der gewählten Stufe und darunter).
+export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
+  const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
+  return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));
+}
+
+// Gibt es auf der Karte Fragen genau dieser Stufe? Ohne Experten-Frage spielt ein Experte dort Profi (E3).
+export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen.some(f => f.level === stufe);
+
+// Ehrlicher Satz unter der Stufenwahl, wenn die Karte die gewählte Stufe noch nicht hat (E3): Dann spielt das Kind
+// die höchste vorhandene Stufe darunter. Keine unechte Experten-Stufe aus „mehr vom Gleichen“.
+export function stufenHinweis(fragen: KartenFrage[], stufe: Stufe): string | null {
+  if (hatFragenDerStufe(fragen, stufe)) return null;
+  const darunter = STUFEN.slice(0, STUFEN.indexOf(stufe)).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
+  return `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[darunter]}.`;
+}
+
+// Eine gespeicherte Antwortreihe gilt nur, wenn sie genau die heutigen Antworten vertauscht (alte Wörter über ihren Alias).
+// Sonst null: Die Karte mischt dann neu, statt in der Reihenfolge der Daten zu zeigen (dort steht die Lösung oft vorn),
+// z. B. wenn eine Frage auf Profi eine vierte Antwort bekommen hat (Teilschritt 3, E5).
+export function gueltigeReihe(frage: KartenFrage, gespeichert: unknown): string[] | null {
+  const antworten = frage.question.answers;
+  if (!Array.isArray(gespeichert)) return null;
+  const reihe = gespeichert.map(wert => (typeof wert === 'string' ? restoreAnswerWording(frage.id, wert) : wert));
+  return reihe.length === antworten.length && new Set(reihe).size === antworten.length && reihe.every(a => antworten.includes(a)) ? reihe : null;
+}
+
+// Ersatz, wenn keine gültige Reihe gespeichert ist (z. B. eine alte Reihe vor einer vierten Antwort): eine feste Mischung
+// je Frage. Sie ist nach jedem Neuladen gleich, ohne dass die Karte etwas speichert: Die alte Reihe im Pass bleibt, wie sie
+// ist (Schutz: eine Deutung überschreibt keine gespeicherte Wortliste; was gar keine Wortliste ist, ersetzt useSavedGame wie bei
+// allen Spielständen). In der Reihenfolge der Daten stand die Lösung oft vorn.
+export function festGemischt(frage: KartenFrage): string[] {
+  let stand = 2166136261;
+  for (const zeichen of frage.id) stand = Math.imul(stand ^ zeichen.charCodeAt(0), 16777619);
+  const zufall = () => {
+    stand = (stand + 0x6d2b79f5) | 0;
+    let t = Math.imul(stand ^ (stand >>> 15), 1 | stand);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const reihe = [...frage.question.answers];
+  for (let i = reihe.length - 1; i > 0; i--) {
+    const j = Math.floor(zufall() * (i + 1));
+    [reihe[i], reihe[j]] = [reihe[j], reihe[i]];
+  }
+  return reihe;
+}
+
+// Welche Frage „Rate mal!“ zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
 // 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
 //    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
-// 2. sonst die erste, die das Kind noch nie beantwortet hat;
+// 2. sonst die erste, die das Kind noch nie beantwortet hat (auf Profi also zuerst eine neue Profi-Frage);
 // 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
-export function ersteFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
+export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
+  const fragen = fragenFuerStufe(alle, stufe);
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
   const offen = fragen.find(frage => {
     const wert = kartenstand?.[frage.answerKey];
@@ -101,6 +169,14 @@ export function hatAusprobieren(topic: WorldTopic): boolean {
   return hatBaustein(topic) || MIT_BELEGEN.has(topic.id);
 }
 
+// Wo steht „Ganz einfach“ (learning.starter)? Offen in „Kurz erklärt“, außer
+// - bei Karten mit Häppchen: Die Häppchen sind schon die einfache Fassung;
+// - bei Personen: Dort ist der Satz meist die Anleitung zum Versuch („Vergleiche …“), keine Erklärung (Teilschritt 3, E12).
+// Dann steht er oben in „Ausprobieren“, und die Absätze bleiben offen in „Kurz erklärt“.
+export function ganzEinfachImAusprobieren(topic: WorldTopic): boolean {
+  return Boolean(topic.learning?.starter) && (topic.chapters !== undefined || topic.category === 'people');
+}
+
 // Prüft die neuen Felder einer Karte. Leere Liste heißt: alles in Ordnung.
 // Die Daten kommen aus JSON; deshalb prüft die Funktion auch Typen, die TypeScript nicht sieht.
 export function kartenFeldFehler(topic: WorldTopic): string[] {
@@ -123,24 +199,83 @@ export function kartenFeldFehler(topic: WorldTopic): string[] {
       if (!eigeneId(c?.id, 'stimmt')) melde(`claims[${i}]: ID muss ${topic.id}:stimmt-<Zahl> sein`);
       if (typeof c?.isTrue !== 'boolean') melde(`claims[${i}]: isTrue ist kein Wahrheitswert`);
       if (leer(c?.text) || leer(c?.explanation)) melde(`claims[${i}]: Text oder Auflösung fehlt`);
+      // „Fast richtig“ (E11, S5 Art 2): nur bei falschen Behauptungen; das falsche Wort steht zur Auswahl und in der Behauptung.
+      if (c?.fastRichtig !== undefined) {
+        const f = c.fastRichtig;
+        const woerter = Array.isArray(f?.woerter) ? f.woerter : [];
+        if (c.isTrue !== false) melde(`claims[${i}]: „Fast richtig“ nur bei einer falschen Behauptung`);
+        if (woerter.length < 3 || woerter.length > 4 || woerter.some(leer) || new Set(woerter).size !== woerter.length) melde(`claims[${i}]: „Fast richtig“ braucht 3 oder 4 verschiedene Wörter`);
+        if (!woerter.includes(f?.wort)) melde(`claims[${i}]: das falsche Wort steht nicht zur Auswahl`);
+        if (woerter.some(w => typeof w === 'string' && typeof c.text === 'string' && !c.text.includes(w))) melde(`claims[${i}]: ein Wort steht nicht in der Behauptung`);
+        if (leer(f?.ersatz) || leer(f?.aufloesung)) melde(`claims[${i}]: Ersatzwort oder Auflösung fehlt`);
+      }
     });
   }
+
+  // Teilschritt 3 (E5, E6): jede Zusatz- und Challenge-Frage hat eine Stufe; Entdecker 3 Antworten, Profi und Experte 4.
+  // Kein Tipp und kein Satz „warum nicht“ nennt die richtige Antwort wörtlich; Experte hat zwei Tipps (D5).
+  const nenntLoesung = (text: unknown, loesung: unknown) => typeof text === 'string' && typeof loesung === 'string' && loesung.trim() !== ''
+    && new RegExp('(^|[^\\p{L}\\p{N}])' + loesung.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}\\p{N}])', 'iu').test(text);
+  const frageFehler = (q: Record<string, unknown> | undefined, wo: string, tipps: unknown[] | null) => {
+    const antworten = Array.isArray(q?.answers) ? q.answers as unknown[] : [];
+    const stufe = q?.level;
+    if (!(STUFEN as readonly unknown[]).includes(stufe)) melde(`${wo}: braucht eine Stufe (entdecker, profi, experte)`);
+    const anzahl = stufe === 'entdecker' ? 3 : 4;
+    if (antworten.length !== anzahl || antworten.some(leer) || new Set(antworten).size !== anzahl) melde(`${wo}: braucht ${anzahl} verschiedene Antworten`);
+    const correct = q?.correct;
+    if (!Number.isInteger(correct) || (correct as number) < 0 || (correct as number) >= antworten.length) melde(`${wo}: correct passt zu keiner Antwort`);
+    if (leer(q?.prompt) || leer(q?.why)) melde(`${wo}: Frage oder Erklärung fehlt`);
+    const loesung = antworten[correct as number];
+    if (tipps) {
+      if (!tipps.length || tipps.length > 2 || tipps.some(leer)) melde(`${wo}: braucht einen oder zwei Tipps`);
+      if (stufe === 'experte' && tipps.length !== 2) melde(`${wo}: Experte braucht zwei Tipps`);
+      if (tipps.some(t => nenntLoesung(t, loesung))) melde(`${wo}: ein Tipp nennt die Lösung`);
+    }
+    if (q?.wrongReasons !== undefined) {
+      const saetze = Array.isArray(q.wrongReasons) ? q.wrongReasons as unknown[] : [];
+      if (saetze.length !== antworten.length || saetze.some((s, j) => (j === correct ? s !== null : leer(s)))) melde(`${wo}: wrongReasons passt nicht zu den Antworten`);
+      if (saetze.some(s => nenntLoesung(s, loesung))) melde(`${wo}: ein Satz „warum nicht“ nennt die Lösung`);
+    }
+  };
 
   if (topic.moreQuestions !== undefined) {
     const fragen = Array.isArray(topic.moreQuestions) ? topic.moreQuestions : [];
     if (!Array.isArray(topic.moreQuestions)) melde('moreQuestions ist keine Liste');
     fragen.forEach((q, i) => {
       if (!eigeneId(q?.id, 'rate')) melde(`moreQuestions[${i}]: ID muss ${topic.id}:rate-<Zahl> sein`);
-      const antworten = Array.isArray(q?.answers) ? q.answers : [];
-      if (antworten.length !== 3 || antworten.some(leer) || new Set(antworten).size !== 3) melde(`moreQuestions[${i}]: braucht 3 verschiedene Antworten`);
-      if (!Number.isInteger(q?.correct) || q.correct < 0 || q.correct >= antworten.length) melde(`moreQuestions[${i}]: correct passt zu keiner Antwort`);
-      if (leer(q?.prompt) || leer(q?.why) || leer(q?.hint)) melde(`moreQuestions[${i}]: Frage, Erklärung oder Hinweis fehlt`);
+      const tipps = Array.isArray(q?.hints) ? q.hints : typeof q?.hint === 'string' ? [q.hint] : [];
+      if (q?.ruht === true) return; // ruhende Frage: nur ihre ID zählt
+      frageFehler(q as unknown as Record<string, unknown>, `moreQuestions[${i}]`, tipps);
     });
   }
 
-  // Mit Häppchen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
-  if (topic.chapters !== undefined && topic.learning?.starter && !hatAusprobieren(topic)) {
-    melde('Häppchen und „Ganz einfach“: Der Satz braucht „Ausprobieren“, sonst geht er verloren');
+  // Challenge-Fragen: ihre Tipps stehen in challenge-hints.json (eigener Inhaltstest).
+  if (topic.challenges !== undefined) (Array.isArray(topic.challenges) ? topic.challenges : []).forEach((q, i) => q?.ruht === true || frageFehler(q as unknown as Record<string, unknown>, `challenges[${i}]`, null));
+
+  // „Ordne richtig“ (E11, S5 Art 3): Teile in richtiger Reihenfolge, Tipps, Auflösung.
+  if (topic.ordnen !== undefined) {
+    const o = topic.ordnen;
+    const teile = Array.isArray(o?.teile) ? o.teile : [];
+    if (!(typeof o?.id === 'string' && new RegExp('^' + topic.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ':ordnen-\\d+$').test(o.id))) melde(`ordnen: ID muss ${topic.id}:ordnen-<Zahl> sein`);
+    if (!(STUFEN as readonly unknown[]).includes(o?.level)) melde('ordnen: braucht eine Stufe');
+    if (teile.length < 3 || teile.length > 5 || teile.some(leer) || new Set(teile).size !== teile.length) melde('ordnen: braucht 3 bis 5 verschiedene Teile');
+    const tipps = Array.isArray(o?.hints) ? o.hints : [];
+    if (!tipps.length || tipps.length > 2 || tipps.some(leer)) melde('ordnen: braucht einen oder zwei Tipps');
+    if (leer(o?.frage) || leer(o?.aufloesung)) melde('ordnen: Frage oder Auflösung fehlt');
+  }
+
+  // Lernhilfen: „Ganz einfach“ (starter) ist Pflicht; „Selbst beobachten“ (observe) und Lernziel (benefit) sind freiwillig,
+  // aber wenn sie da sind, nicht leer (Teilschritt 3, E12; 67 Karten haben nur starter).
+  if (topic.learning !== undefined) {
+    const l = topic.learning;
+    if (leer(l?.starter)) melde('learning: „Ganz einfach“ (starter) fehlt');
+    if (l?.observe !== undefined && leer(l.observe)) melde('learning: observe ist leer');
+    if (l?.benefit !== undefined && leer(l.benefit)) melde('learning: benefit ist leer');
+  }
+
+  // Mit Häppchen und bei Personen steht „Ganz einfach“ (learning.starter) oben in „Ausprobieren“. Ohne diesen Bereich ginge der Satz verloren.
+  if (ganzEinfachImAusprobieren(topic) && !hatAusprobieren(topic)) {
+    melde('„Ganz einfach“ gehört hier in „Ausprobieren“: Der Satz braucht diesen Bereich, sonst geht er verloren');
   }
   return fehler;
 }

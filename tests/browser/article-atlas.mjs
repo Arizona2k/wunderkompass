@@ -11,7 +11,7 @@ import {electricalSourceView} from './invention-electrical.mjs';
 import {opticsSourceView} from './invention-optics.mjs';
 import {historySourceView} from './history-learning.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
-import {KARTE,antwortKnopf,ausprobieren,falscheAntworten,hatAusprobieren,hauptfrage,mehrErfahren,rateMal,richtigeAntwort,zeigtFrage,zusatzfragen} from './karte-hilfen.mjs';
+import {KARTE,antwortKnopf,ausprobieren,falscheAntworten,hatAusprobieren,hauptfrage,mehrErfahren,rateMal,richtigeAntwort,zeigtFrage,zusatzfragenAufStufe} from './karte-hilfen.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const topics=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
@@ -81,11 +81,11 @@ export async function articleAtlas(page,ready,report,width,shots){
  const haupt=await zeigtFrage(page,topic,hauptfrage(topic)),[wrong]=falscheAntworten(haupt),answer=antwortKnopf(page,richtigeAntwort(haupt));
  const hint=question.locator('.world-game-hint');await hint.locator('summary').click();assert.equal(await hint.locator('p').count()>0,true);assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);
  await antwortKnopf(page,wrong).click();
- await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
+ await question.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();assert.equal(await question.getByText(haupt.question.why,{exact:true}).count(),0);assert.equal((await readPass()).discoveries.includes('learned:'+topic.id),false);
  // Die Mondkarte hat Zusatzfragen (Aufgabe 11). Nach einer falschen Antwort zeigt sie beim Neuladen trotzdem wieder die
- // Hauptfrage mit „Überlege noch einmal.“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
- const [next]=zusatzfragen(topic);assert.ok(next,'the moon card has additional questions');
- await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);await question.getByText('Überlege noch einmal.',{exact:true}).waitFor();
+ // Hauptfrage mit „Noch nicht ganz …“ (ersteFrage: zuerst eine falsch beantwortete Frage; Schlussprüfung Teil B, W1).
+ const [next]=zusatzfragenAufStufe(topic);assert.ok(next,'the moon card has additional questions');
+ await page.reload();await ready(page);await zeigtFrage(page,topic,haupt);await question.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
  const kept=await readPass();assert.equal(kept.gameSessions['topic:'+topic.id]?.[haupt.answerKey],wrong,'the wrong answer stays in the pass');assert.equal(kept.review[haupt.reviewId]?.correct,false);assert.equal(kept.discoveries.includes('learned:'+topic.id),false);
  assert.equal(await page.getByText(haupt.question.why,{exact:true}).count(),0,'no solution after reload');
  await answer.click();assert.equal(await question.locator('.world-game-hint').count(),0);await question.getByText(haupt.question.why,{exact:true}).waitFor();assert.ok((await readPass()).discoveries.includes('learned:'+topic.id));
@@ -96,6 +96,9 @@ export async function articleAtlas(page,ready,report,width,shots){
  await mehr.locator('.article-routes').getByRole('button',{name:'Vom Mond bis zum Meer',exact:true}).click();await page.locator('.world-route-stations').waitFor();assert.equal(new URL(page.url()).hash,'#world/route/moon-to-sea');
  const embedded=page.locator('.wissenskarte-eingebettet');await ausprobieren(embedded);await embedded.locator('.article-experiment').waitFor();
  await page.goBack();await page.locator('.wissenskarte-kopf').waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/science-moon-phases');
+ // Die Seite stellt offene Bereiche und den Fokus im nächsten Bild wieder her (scheduleRouteRestore); unter Last kommt dieses Bild
+ // spät. Darum wie in journeys.mjs erst auf den Fokus am Routen-Knopf warten, dann prüfen (später Fund 23.11.2026: sofort geprüft, rot).
+ await page.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='world-article-route-science-moon-phases-moon-to-sea');
  assert.equal(await page.locator('details.wissenskarte-mehr').evaluate(el=>el.open),true,'„Mehr erfahren“ is open again after returning from the route');
  await page.locator('.wissenskarte-kopf').screenshot({path:shots+'/article-moon-'+width+'.png'});
  await page.locator('.wissenskarte-kopf .topic-illustration').screenshot({path:shots+'/moon-diagram-'+width+'.png'});

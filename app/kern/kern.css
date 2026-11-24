@@ -382,6 +382,80 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
   text-underline-offset: 4px;
 }
 
+/* ---------- Stufenwahl (Teilschritt 3, E2): eine Zeile, drei große Knöpfe, „Zurück zu Entdecker“ ---------- */
+.stufen-wahl { display: grid; gap: 8px; }
+/* Auch dort, wo ältere Bereiche Knöpfe auf 44 px setzen (z. B. .pass-settings button): mindestens 48 px. */
+.stufen-wahl :is(.kern-knopf, .stufen-knopf, .stufen-zurueck) { min-height: var(--kern-tipp); }
+.stufen-zeile { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.stufen-zeile p { margin: 0; font-size: 17px; color: var(--kern-text); }
+.stufen-knoepfe {
+  display: grid;
+  gap: 8px;
+  margin-block: 4px 12px;
+  padding: 12px;
+  border: 2px dashed var(--kern-petrol);
+  border-radius: var(--kern-rund);
+  background: var(--kern-petrol-zart);
+}
+.stufen-titel { margin: 0 0 2px; font-size: 17px; font-weight: 700; color: var(--kern-petrol-dunkel); }
+.stufen-knopf {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 8px;
+  min-height: var(--kern-tipp);
+  padding: 10px 14px;
+  border: 2px solid var(--kern-linie);
+  border-radius: var(--kern-rund);
+  background: var(--kern-flaeche);
+  color: var(--kern-text);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+.stufen-knopf strong { font-size: 17px; }
+.stufen-knopf span { grid-column: 1; font-size: 16px; color: var(--kern-text-leise); }
+.stufen-knopf svg { grid-column: 2; grid-row: 1 / span 2; color: var(--kern-petrol); }
+/* Gewählt: dicker Rand und Haken; der Kasten darum ist schon zart petrol. */
+.stufen-knopf[aria-pressed="true"] { border-color: var(--kern-petrol); box-shadow: inset 0 0 0 1px var(--kern-petrol); }
+.stufen-hinweis { margin: 0; font-size: 15px; color: var(--kern-text-leise); }
+/* Vorschlag in der Rückmeldung (E8): klein, freundlich, nie ein Fenster. Zwei gleich starke Knöpfe mit Abstand,
+   auf dem Handy untereinander in voller Breite (Design-Prüfung Teil A, Befund 2). */
+.stufen-vorschlag {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid var(--kern-linie);
+  border-radius: var(--kern-rund);
+  background: var(--kern-flaeche);
+}
+.stufen-vorschlag p { margin: 0; font-size: 16px; font-weight: 700; color: var(--kern-text); }
+.stufen-vorschlag-knoepfe { display: flex; flex-wrap: wrap; gap: 12px; }
+.stufen-vorschlag .kern-knopf { min-height: var(--kern-tipp); padding: 0 16px; border: 2px solid #6f8d97; }
+.stufen-vorschlag .stufen-vorschlag-ja { border-color: var(--kern-petrol); color: var(--kern-petrol-dunkel); }
+@media (max-width: 560px) {
+  .stufen-vorschlag .kern-knopf { flex: 1 1 100%; }
+}
+.stufen-erwachsene { margin-block: 8px 20px; }
+.stufen-erwachsene summary { font-family: inherit; font-size: 16px; font-weight: 700; color: var(--kern-text); }
+.stufen-erwachsene p { margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: var(--kern-text-leise); }
+.stufen-zurueck {
+  justify-self: start;
+  min-height: var(--kern-tipp);
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--kern-petrol-dunkel);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
 @media (forced-colors: active) {
   .kern-leiste a[aria-current="page"] { outline: 2px solid CanvasText; outline-offset: -2px; }
+  .stufen-knopf[aria-pressed="true"] { outline: 2px solid CanvasText; outline-offset: -2px; }
 }

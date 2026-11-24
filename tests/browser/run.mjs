@@ -8,6 +8,10 @@
 // Am Ende steht eine Zeiten-Datei in .qa-output/browser/zeiten-<suite>-<browser>[-<gruppe>].json.
 // Umgebung: QA_DIST (anderer Build-Ordner), QA_PLAYWRIGHT_MODULE, QA_BROWSER_EXECUTABLE (nur Chromium).
 
+// Ohne Spracheinstellung (im Cloud-Container ist LANG leer, in der CI C.UTF-8) verschluckt Chromium Dateinamen
+// mit Umlauten beim Hochladen, z. B. den Testpass „…old-compass-Früher…“ in learning-tasks. Darum UTF-8 setzen.
+if (!process.env.LC_ALL && !process.env.LANG) process.env.LANG = 'C.UTF-8';
+
 // Zuerst die Lade-Hooks: Browser-Module importieren App-Dateien mit endungslosen .ts-Importen.
 await import('../../scripts/test-runtime.mjs');
 const {SUITES} = await import('./suites.mjs');

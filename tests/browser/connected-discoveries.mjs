@@ -90,7 +90,7 @@ export async function connectedDiscoveries(page,ready,report,width){
    await hint.getByText(hints[q.id].steps[0],{exact:true}).waitFor();
    if(hints[q.id].steps.length===2){
     assert.equal(await hint.getByText(hints[q.id].steps[1],{exact:true}).count(),0);
-    await hint.getByRole('button',{name:'Noch ein Hinweis',exact:true}).click();
+    await hint.getByRole('button',{name:'Noch ein Tipp',exact:true}).click();
     await hint.getByText(hints[q.id].steps[1],{exact:true}).waitFor();
    }
    assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
@@ -98,16 +98,16 @@ export async function connectedDiscoveries(page,ready,report,width){
    const answers=room.locator('.quiz-answer');
    if(i===0){
     await answers.filter({has:page.getByText(q.answers.find((_,j)=>j!==q.correct),{exact:true})}).click();
-    await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+    await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
     assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     assert.equal(await room.getByRole('button',{name:'Nächste Aufgabe',exact:true}).count(),0);
     await page.reload();await ready(page);await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();
-    await room.getByText('Noch einmal nachdenken.',{exact:true}).waitFor();
+    await room.getByText('Noch nicht ganz. Versuch es noch einmal!',{exact:true}).waitFor();
     assert.equal(await room.getByText(q.why,{exact:true}).count(),0);
     assert.deepEqual((await pass()).gameSessions['world:knowledge-challenge'].challenge.ids,previous);
    }
    await answers.filter({has:page.getByText(q.answers[q.correct],{exact:true})}).click();
-   await room.getByText('Deine Auswahl passt.',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
+   await room.getByText('Richtig!',{exact:true}).waitFor();await assertHonestChallengeFeedback(room);
    await room.getByText(q.why,{exact:true}).waitFor();
    assert.equal(await room.locator('.world-game-hint').count(),0);
    await room.getByRole('button',{name:i===5?'Spielstempel sammeln':'Nächste Aufgabe',exact:true}).click();

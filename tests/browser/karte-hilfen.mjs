@@ -15,7 +15,7 @@ import VERBINDUNGEN from '../../app/world-connections.json' with {type: 'json'};
 import HINWEISBANK from '../../app/challenge-hints.json' with {type: 'json'};
 // karten-daten.ts lädt JSON ohne Importattribut; das ergänzen die Lade-Hooks.
 await import('../../scripts/test-runtime.mjs');
-const {kartenFragen} = await import('../../app/kern/karte/karten-daten.ts');
+const {kartenFragen, fragenFuerStufe, ersteFrage, ganzEinfachImAusprobieren} = await import('../../app/kern/karte/karten-daten.ts');
 
 const TITEL = new Map(KATALOG.map(t => [t.id, t.title]));
 
@@ -77,19 +77,21 @@ export function verbindungsSatz(knopf) {
     : element.closest('.connection-card').querySelector('p').textContent);
 }
 
-// Die Lesetexte einer Karte an ihren Orten: „Ganz einfach“ in „Kurz erklärt“ (bei Karten mit Häppchen oben in
+// Die Lesetexte einer Karte an ihren Orten: „Ganz einfach“ in „Kurz erklärt“ (bei Karten mit Häppchen und Personen oben in
 // „Ausprobieren“), „Selbst beobachten“ und Mehr-Wissen in „Mehr erfahren“, Lernziel und Quellen unter „Für Erwachsene“.
-// Hat eine Karte Lernhilfen (t.learning), müssen alle drei da sein.
+// Hat eine Karte Lernhilfen (t.learning), ist „Ganz einfach“ immer dabei; „Selbst beobachten“ und Lernziel sind freiwillig
+// (Teilschritt 3, E12: 67 Karten bekamen nur „Ganz einfach“). Was da ist, muss an seinem Ort stehen.
+// Öffnet auch „Für Große“ in „Kurz erklärt“: Danach sind alle Absätze der Karte sichtbar.
 export async function lesetexte(karte, t) {
   const kurz = karte.locator('.world-short');
   for (const details of await kurz.locator('details').all()) await aufklappen(details);
-  if (t.learning) assert.ok(t.learning.starter && t.learning.observe && t.learning.benefit, t.id + ': Lernhilfen vollständig');
+  if (t.learning) assert.ok(t.learning.starter, t.id + ': Lernhilfen ohne „Ganz einfach“');
   if (t.learning) await (await ganzEinfach(karte, t)).waitFor();
   const mehr = await mehrErfahren(karte);
-  if (t.learning) await mehr.getByText(t.learning.observe, {exact: true}).waitFor();
+  if (t.learning?.observe) await mehr.getByText(t.learning.observe, {exact: true}).waitFor();
   for (const absatz of t.more) await mehr.getByText(absatz, {exact: true}).waitFor();
   const erwachsene = await fuerErwachsene(karte);
-  if (t.learning) await erwachsene.getByText('Lernziel: ' + t.learning.benefit, {exact: true}).waitFor();
+  if (t.learning?.benefit) await erwachsene.getByText('Lernziel: ' + t.learning.benefit, {exact: true}).waitFor();
   for (const quelle of t.sources) assert.equal(await erwachsene.getByRole('link', {name: quelle.label, exact: true}).getAttribute('href'), quelle.url);
   return {kurz, mehr, erwachsene};
 }
@@ -109,9 +111,10 @@ export async function verbindungsKnopf(scope, vonId, zuId) {
 // Erklärte Verbindungen (app/world-connections.json) als „von>zu“; nur sie haben auf der Karte einen Knopf.
 export const ERKLAERTE_PAARE = new Set(VERBINDUNGEN.connections.flatMap(v => [v.fromId + '>' + v.toId, v.toId + '>' + v.fromId]));
 
-// „Ganz einfach“ (learning.starter) an seinem Ort, aufgeklappt und sichtbar. Bei Karten mit Häppchen sind die Häppchen
-// die einfache Fassung; der Satz steht dann oben in „Ausprobieren“ und nicht in „Kurz erklärt“ (große Prüfung, Aufgabe 13).
-// Ohne Häppchen steht er in „Kurz erklärt“ (dort ggf. in einem aufklappbaren Bereich).
+// „Ganz einfach“ (learning.starter) an seinem Ort, aufgeklappt und sichtbar. Wo, entscheidet die App (ganzEinfachImAusprobieren):
+// Bei Karten mit Häppchen (die Häppchen sind die einfache Fassung) und bei Personen (der Satz ist meist die Anleitung zum
+// Versuch) steht er oben in „Ausprobieren“ und nicht in „Kurz erklärt“ (große Prüfung, Aufgabe 13; Teilschritt 3, E12).
+// Sonst steht er offen in „Kurz erklärt“, ohne Aufklappen und vor „Für Große“ (Teilschritt 3, E12).
 // Immer geprüft: Der Satz steht genau einmal auf der Karte; in „Ausprobieren“ ist er erst nach dem Öffnen zu sehen,
 // dann aber ohne auf die Bausteine zu warten (`sofort`: binnen 2 Sekunden).
 export async function ganzEinfach(karte, t, {sofort = false, touch = false} = {}) {
@@ -119,11 +122,12 @@ export async function ganzEinfach(karte, t, {sofort = false, touch = false} = {}
   const kurz = karte.locator('.world-short');
   const imKurz = kurz.getByText(t.learning.starter, {exact: true});
   const genauEinmal = async () => assert.equal(await karte.getByText(t.learning.starter, {exact: true}).count(), 1, t.id + ': „Ganz einfach“ steht genau einmal auf der Karte');
-  if (!t.chapters) {
-    for (const details of await kurz.locator('details').all()) await aufklappen(details, {touch});
-    await imKurz.waitFor({state: 'visible'});
+  if (!ganzEinfachImAusprobieren(t)) {
+    const offen = kurz.locator(':scope > p.wissenskarte-ganz-einfach');
+    await offen.waitFor({state: 'visible'});
+    assert.equal((await offen.innerText()).trim(), t.learning.starter, t.id + ': „Ganz einfach“ steht offen in „Kurz erklärt“');
     await genauEinmal();
-    return imKurz;
+    return offen;
   }
   const bereich = karte.locator('details.wissenskarte-ausprobieren').first();
   const satz = bereich.locator('.wissenskarte-ausprobieren-einstieg').getByText(t.learning.starter, {exact: true});
@@ -149,12 +153,18 @@ const seite = scope => (typeof scope.page === 'function' ? scope.page() : scope)
 // und (nur die Hauptfrage, wenn vorhanden) wrongReasons.
 export const fragenDerKarte = t => kartenFragen(t, HINWEISBANK);
 export const hauptfrage = t => fragenDerKarte(t)[0];
+// Teilschritt 3 (E4): Die Fragen, die eine Stufe auf der Karte zeigt (eigene Stufe zuerst), und die Frage,
+// die die Karte beim Öffnen wählt – wie in der App (fragenFuerStufe, ersteFrage).
+export const fragenAufStufe = (t, stufe) => fragenFuerStufe(fragenDerKarte(t), stufe);
+// Die Zusatzfragen, die eine Stufe auf der Karte zeigt (ohne Hauptfrage); auf Entdecker z. B. beim Elefanten keine.
+export const zusatzfragenAufStufe = (t, stufe = 'entdecker') => fragenAufStufe(t, stufe).filter(f => f.id !== t.id);
+export const ersteFrageAufStufe = (t, stufe, review = {}, kartenstand) => ersteFrage(fragenDerKarte(t), review, kartenstand, stufe);
 export const zusatzfragen = t => fragenDerKarte(t).slice(1);
 export const richtigeAntwort = frage => frage.question.answers[frage.question.correct];
 export const falscheAntworten = frage => frage.question.answers.filter((_, i) => i !== frage.question.correct);
 
 // Satz nach einer falschen Antwort, wenn die Frage keinen eigenen „warum nicht“-Satz hat (rate-mal.tsx).
-export const NICHT_PASSEND = 'Das passt noch nicht. Lies unten unter „Kurz erklärt“ nach. Dann wähle noch einmal.';
+export const NICHT_PASSEND = 'Lies unten unter „Kurz erklärt“ nach.';
 export const rateMal = scope => scope.locator('section.rate-mal');
 export const antwortKnopf = (scope, antwort) => rateMal(scope).locator('.quiz-answer').filter({has: seite(scope).getByText(antwort, {exact: true})});
 
@@ -192,7 +202,7 @@ export async function antworteRichtig(scope, t, {tippen = false} = {}) {
 }
 
 // Die angezeigte Frage so durchspielen, wie ein Kind es kann: Hinweis öffnen, jede falsche Antwort tippen
-// (je ihr Satz „warum nicht“ oder „Überlege noch einmal.“, nie die Lösung), dann die richtige mit Erklärung.
+// (je ihr Satz „warum nicht“ oder „Noch nicht ganz …“, nie die Lösung), dann die richtige mit Erklärung.
 // Ist sie schon richtig beantwortet: beantwortet 'lassen' prüft nur die Erklärung, 'neu' tippt zuerst „Noch einmal raten“.
 export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinweis = true} = {}) {
   const frage = await angezeigteFrage(scope, t);
@@ -214,7 +224,7 @@ export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinwe
   for (const [i, antwort] of q.answers.entries()) {
     if (i === q.correct) continue;
     await antwortKnopf(scope, antwort).click();
-    await bereich.getByText('Überlege noch einmal.', {exact: true}).waitFor();
+    await bereich.getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor();
     await bereich.getByText(frage.wrongReasons?.[i] ?? NICHT_PASSEND, {exact: true}).waitFor();
     assert.equal(await bereich.getByText(q.why, {exact: true}).count(), 0, frage.id + ': eine falsche Antwort zeigt keine Lösung');
   }
@@ -222,4 +232,16 @@ export async function frageDurchspielen(scope, t, {beantwortet = 'lassen', hinwe
   await bereich.getByText(q.why, {exact: true}).waitFor();
   assert.equal(await richtig.isDisabled(), true, frage.id + ': nach der richtigen Antwort sind die Knöpfe gesperrt');
   return frage;
+}
+
+// ---- Stufe auf der Karte (Teilschritt 3, E2) ----
+export const stufenWahl = scope => scope.locator('.wissenskarte .stufen-wahl').first();
+const STUFEN_NAME = {entdecker: 'Entdecker', profi: 'Profi', experte: 'Experte'};
+// Stellt die Stufe über „Ändern“ um (ein Tipp öffnet, ein zweiter wählt) und wartet, bis die Zeile sie nennt.
+export async function stufeWaehlen(scope, stufe, {touch = false} = {}) {
+  const wahl = stufenWahl(scope);
+  const tippe = knopf => (touch ? knopf.tap() : knopf.click());
+  await tippe(wahl.getByRole('button', {name: 'Stufe ändern', exact: true}));
+  await tippe(wahl.getByRole('group', {name: 'Welche Stufe willst du spielen?', exact: true}).getByRole('button').filter({hasText: STUFEN_NAME[stufe]}));
+  await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: ' + STUFEN_NAME[stufe]}).waitFor();
 }

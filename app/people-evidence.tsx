@@ -8,6 +8,7 @@ import {useSavedGame,useSavedModel} from './saved-games';
 import './people-evidence.css';
 import {FossilDrawing,LightDrawing} from './people-illustration';
 import {InsectObservationFigure,InnerCoreEvidenceFigure} from './people-observation-figures';
+import {WOERTER} from './kern/woerter';
 
 type Task={age:string;goal:string;example:string;prompt:string;answers:string[];correct:number;hint:string;why:string;wrongReasons:(string|null)[]};
 type Entry={id:string;figure:string;tasks:Task[]};
@@ -35,9 +36,9 @@ function EvidenceTask({task,onRead}:{task:Task;onRead:(text:string)=>void}){
  const right=choice===task.correct;
  return <div className="people-evidence-task" data-person-evidence-task={task.age}>
   <p><strong>Dein Ziel:</strong> {task.goal}</p><p className="people-evidence-example">{task.example}</p><h4>{task.prompt}</h4>
-  <LearningDetails summary="Ein Denkhinweis"><p>{task.hint}</p></LearningDetails>
+  <LearningDetails summary={WOERTER.tipp}><p>{task.hint}</p></LearningDetails>
   <div className="quiz-answers">{task.answers.map((answer,i)=><button key={answer} className={'quiz-answer '+(choice===i?(right?'is-correct':'is-incorrect'):'')} aria-pressed={choice===i} onClick={()=>setChoice(i)}><span>{answer}</span></button>)}</div>
-  {choice!==null&&<div className="lab-feedback" role="status"><strong>{right?'Deine Auswahl passt':'Prüfe deine Auswahl'}</strong><p>{right?task.why:task.wrongReasons[choice]}</p>{right?<p>Wenn du möchtest: Begründe deine Auswahl mit eigenen Worten und vergleiche deine Erklärung mit dem Beispiel. Deine eigene Erklärung wird hier nicht bewertet.</p>:<p>Du darfst eine andere Antwort ausprobieren.</p>}</div>}
+  {choice!==null&&<div className="lab-feedback" role="status"><strong>{right?WOERTER.richtig:WOERTER.nochNicht}</strong><p>{right?task.why:task.wrongReasons[choice]}</p>{right?<p>Wenn du möchtest: Begründe deine Auswahl mit eigenen Worten und vergleiche deine Erklärung mit dem Beispiel. Deine eigene Erklärung wird hier nicht bewertet.</p>:null}</div>}
   <button className="speech-button" onClick={()=>onRead([task.example,task.prompt,...task.answers].join(' '))}><Volume2 size={17}/> Beispiel und Frage vorlesen</button>
  </div>;
 }
