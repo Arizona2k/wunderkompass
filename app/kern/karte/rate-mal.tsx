@@ -3,6 +3,7 @@
 // Falsch zeigt „Noch nicht ganz. Versuch es noch einmal!“ und den Tipp, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
+// Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte).
 import {useEffect, useRef, type ReactNode} from 'react';
 import {Check} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
@@ -39,8 +40,10 @@ type RateMalProps = {
   wiederholung?: Review[string];
   onNachbessern?: (reviewId: string) => void;
   onRead: (text: string) => void;
-  // Nur bei Karten mit mehr als einer Frage: „Noch eine Frage“ nach einer richtigen Antwort.
+  // Nur wenn in dieser Runde noch eine Frage der Stufe wartet: „Noch eine Frage“ nach einer richtigen Antwort.
   onWeiter?: () => void;
+  // Nach der letzten Frage der Runde (nur Karten mit mehr als einer Frage): Satz und, wenn vorhanden, Knopf zur nächsten Karte.
+  schluss?: {text: string; weiter?: ReactNode};
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
@@ -53,7 +56,7 @@ type RateMalProps = {
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, vorschlag, kopf}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, schluss, fokus = false, onAntwort, vorschlag, kopf}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -110,9 +113,11 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
           {vorschlag}
+          {richtig && schluss && <p className="rate-mal-schluss"><strong>{schluss.text}</strong></p>}
           {richtig && (
             <div className="rate-mal-weiter">
               {onWeiter && <button type="button" className="primary-button" onClick={onWeiter}>Noch eine Frage</button>}
+              {!onWeiter && schluss?.weiter}
               <button
                 type="button"
                 className="speech-button"

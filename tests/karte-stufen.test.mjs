@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import HINTS from '../app/challenge-hints.json' with {type: 'json'};
-import {ersteFrage, festGemischt, fragenFuerStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, stufenHinweis} from '../app/kern/karte/karten-daten.ts';
+import {ersteFrage, festGemischt, frageNachWechsel, fragenDerStufe, fragenFuerStufe, gespielteStufe, gueltigeReihe, hatFragenDerStufe, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis} from '../app/kern/karte/karten-daten.ts';
 
 // Teilschritt 3, Aufgabe 5 (E4, E6): Die Karte zeigt je Stufe eine passende Frage.
 // Ausgedachte Karte: Hauptfrage (Entdecker), je eine Zusatzfrage Entdecker, Profi, Experte und zwei Challenge-Fragen.
@@ -133,6 +133,69 @@ test('stufenHinweis: sagt ehrlich, wenn es die gewählte Stufe auf der Karte noc
   const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
   assert.equal(stufenHinweis(nurHaupt, 'profi'), 'Profi gibt es hier noch nicht. Du spielst Entdecker.');
   assert.equal(stufenHinweis(nurHaupt, 'experte'), 'Experte gibt es hier noch nicht. Du spielst Entdecker.');
+});
+
+// Stufen-Feinschliff aus dem ersten Spieltest (24.11.2026, BACKLOG Phase 1, Punkt 12 a, c, d).
+test('gespielteStufe und fragenDerStufe: genau die Stufe, die die Karte spielt', () => {
+  assert.equal(gespielteStufe(fragen, 'experte'), 'experte');
+  assert.deepEqual(ids(fragenDerStufe(fragen, 'entdecker')), ['x', 'x:rate-1', 'x-2']);
+  assert.deepEqual(ids(fragenDerStufe(fragen, 'profi')), ['x:rate-2', 'x-1'], 'auf Profi keine Entdecker-Fragen');
+  assert.deepEqual(ids(fragenDerStufe(fragen, 'experte')), ['x:rate-3']);
+  const ohneExperte = kartenFragen({...karte, moreQuestions: karte.moreQuestions.slice(0, 2)}, bank);
+  assert.equal(gespielteStufe(ohneExperte, 'experte'), 'profi');
+  assert.deepEqual(ids(fragenDerStufe(ohneExperte, 'experte')), ['x:rate-2', 'x-1'], 'Experte ohne Experten-Frage spielt Profi');
+  const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
+  for (const stufe of ['entdecker', 'profi', 'experte']) {
+    assert.equal(gespielteStufe(nurHaupt, stufe), 'entdecker');
+    assert.deepEqual(ids(fragenDerStufe(nurHaupt, stufe)), ['x']);
+  }
+});
+
+test('Fehler (a): nach dem Wechsel auf Profi kommt eine Profi-Frage, nicht die falsch beantwortete Entdecker-Frage', () => {
+  const haupt = fragen[0];
+  const falsch = haupt.question.answers.find((_, i) => i !== haupt.question.correct);
+  const stand = {[haupt.answerKey]: falsch};
+  const review = {[haupt.reviewId]: gesehen('2026-12-01', false)};
+  // Beim Öffnen bleibt es bei E4: Die falsch beantwortete Frage kommt zuerst, auch auf Profi.
+  assert.equal(ersteFrage(fragen, review, stand, 'profi').id, 'x');
+  // Beim Wechsel auf der offenen Karte zählt nur die neue Stufe.
+  assert.equal(frageNachWechsel(fragen, review, stand, 'profi').id, 'x:rate-2');
+  assert.equal(frageNachWechsel(fragen, review, stand, 'experte').id, 'x:rate-3');
+  assert.equal(frageNachWechsel(fragen, review, stand, 'entdecker').id, 'x', 'zurück auf Entdecker: die falsche Antwort wartet dort');
+  // Eine falsch beantwortete Frage der neuen Stufe kommt auch nach dem Wechsel zuerst.
+  const profi = fragen.find(f => f.id === 'x-1');
+  const profiFalsch = profi.question.answers.find((_, i) => i !== profi.question.correct);
+  assert.equal(frageNachWechsel(fragen, alleGesehen(), {...stand, [profi.answerKey]: profiFalsch}, 'profi').id, 'x-1');
+  // Hat die Karte die Stufe nicht, kommt eine Frage der Stufe, die sie spielt.
+  const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
+  assert.equal(frageNachWechsel(nurHaupt, {}, undefined, 'experte').id, 'x');
+});
+
+test('„Noch eine Frage“ (c, d): jede Frage der gespielten Stufe einmal je Runde, dann null für den Schluss', () => {
+  // Runde ab der ersten Frage: in Datenreihenfolge bis zum Ende.
+  assert.equal(naechsteFrage(fragen, 'entdecker', 'x', ['x'])?.id, 'x:rate-1');
+  assert.equal(naechsteFrage(fragen, 'entdecker', 'x:rate-1', ['x', 'x:rate-1'])?.id, 'x-2');
+  assert.equal(naechsteFrage(fragen, 'entdecker', 'x-2', ['x', 'x:rate-1', 'x-2']), null, 'alle dran: Schluss statt wieder von vorn');
+  // Runde ab einer späteren Frage: am Ende geht es vorn weiter, bis jede einmal dran war.
+  assert.equal(naechsteFrage(fragen, 'entdecker', 'x-2', ['x:rate-1', 'x-2'])?.id, 'x');
+  assert.equal(naechsteFrage(fragen, 'entdecker', 'x', ['x:rate-1', 'x-2', 'x']), null);
+  // Profi blättert nie in Entdecker-Fragen.
+  assert.equal(naechsteFrage(fragen, 'profi', 'x:rate-2', ['x:rate-2'])?.id, 'x-1');
+  assert.equal(naechsteFrage(fragen, 'profi', 'x-1', ['x:rate-2', 'x-1']), null, 'nach den Profi-Fragen der Schluss');
+  // Experte mit nur einer Experten-Frage: gleich der Schluss.
+  assert.equal(naechsteFrage(fragen, 'experte', 'x:rate-3', ['x:rate-3']), null);
+  // Öffnet die Karte auf Profi mit einer falsch beantworteten Entdecker-Frage (E4), folgen danach die Profi-Fragen.
+  assert.equal(naechsteFrage(fragen, 'profi', 'x', ['x'])?.id, 'x:rate-2');
+  assert.equal(naechsteFrage(fragen, 'profi', 'x-1', ['x', 'x:rate-2', 'x-1']), null);
+  // Karte nur mit der Hauptfrage: nichts zum Blättern.
+  const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
+  assert.equal(naechsteFrage(nurHaupt, 'profi', 'x', ['x']), null);
+});
+
+test('schlussSatz nennt die Stufe, die die Karte spielt', () => {
+  assert.equal(schlussSatz(fragen, 'profi'), 'Alle Profi-Fragen geschafft!');
+  const ohneExperte = kartenFragen({...karte, moreQuestions: karte.moreQuestions.slice(0, 2)}, bank);
+  assert.equal(schlussSatz(ohneExperte, 'experte'), 'Alle Profi-Fragen geschafft!');
 });
 
 test('ruhende Fragen erscheinen nicht mehr auf der Karte, ihre ID bleibt in den Daten', () => {

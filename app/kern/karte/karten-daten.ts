@@ -63,8 +63,9 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
   return [haupt, ...zusatz, ...challenge];
 }
 
-// Die Fragen, die eine Stufe zeigen darf: ihre eigene Stufe zuerst, dann die leichteren; je in Datenreihenfolge.
-// „Noch eine Frage“ blättert in genau dieser Liste (bleibt bei der gewählten Stufe und darunter).
+// Die Fragen, unter denen die Karte beim Öffnen wählt (ersteFrage): die eigene Stufe zuerst, dann die leichteren;
+// je in Datenreihenfolge. So kommt eine falsch beantwortete leichtere Frage beim Öffnen wieder (E4).
+// „Noch eine Frage“ blättert dagegen nur in der gespielten Stufe (fragenDerStufe).
 export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
   const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
   return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));
@@ -76,10 +77,36 @@ export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen
 // Ehrlicher Satz unter der Stufenwahl, wenn die Karte die gewählte Stufe noch nicht hat (E3): Dann spielt das Kind
 // die höchste vorhandene Stufe darunter. Keine unechte Experten-Stufe aus „mehr vom Gleichen“.
 export function stufenHinweis(fragen: KartenFrage[], stufe: Stufe): string | null {
-  if (hatFragenDerStufe(fragen, stufe)) return null;
-  const darunter = STUFEN.slice(0, STUFEN.indexOf(stufe)).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
-  return `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[darunter]}.`;
+  const gespielt = gespielteStufe(fragen, stufe);
+  return gespielt === stufe ? null : `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[gespielt]}.`;
 }
+
+// Die Stufe, die die Karte wirklich spielt: die gewählte, wenn es Fragen dazu gibt, sonst die höchste vorhandene darunter.
+// Entdecker gibt es immer (die Hauptfrage).
+export function gespielteStufe(fragen: KartenFrage[], stufe: Stufe): Stufe {
+  return STUFEN.slice(0, STUFEN.indexOf(stufe) + 1).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
+}
+
+// Die Fragen genau der gespielten Stufe, in Datenreihenfolge. Nur darin blättert „Noch eine Frage“, und nach einem
+// Stufenwechsel kommt eine davon (frageNachWechsel). Wer Profi wählt, bekommt danach einen klaren Schluss statt
+// leichterer Fragen (Spieltest 24.11.2026, Befunde 1 und 3; entschieden vom Nutzer am 24.11.2026).
+export function fragenDerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
+  const gespielt = gespielteStufe(fragen, stufe);
+  return fragen.filter(f => f.level === gespielt);
+}
+
+// „Noch eine Frage“: die nächste Frage der gespielten Stufe nach der aktuellen, die in dieser Runde noch nicht dran war
+// (`gezeigt`: alle Fragen seit dem Öffnen oder dem letzten Stufenwechsel). Am Ende der Liste geht es vorn weiter, bis jede
+// Frage der Stufe einmal dran war; dann null, und die Karte zeigt den Schluss (schlussSatz).
+export function naechsteFrage(alle: KartenFrage[], stufe: Stufe, aktuell: string, gezeigt: readonly string[]): KartenFrage | null {
+  const runde = fragenDerStufe(alle, stufe);
+  const i = runde.findIndex(f => f.id === aktuell);
+  const reihe = i < 0 ? runde : [...runde.slice(i + 1), ...runde.slice(0, i + 1)];
+  return reihe.find(f => f.id !== aktuell && !gezeigt.includes(f.id)) ?? null;
+}
+
+// Der Satz nach der letzten Frage der Runde (Spieltest 24.11.2026, Befund 4): ehrlich mit der Stufe, die die Karte spielt.
+export const schlussSatz = (fragen: KartenFrage[], stufe: Stufe) => `Alle ${STUFEN_NAME[gespielteStufe(fragen, stufe)]}-Fragen geschafft!`;
 
 // Eine gespeicherte Antwortreihe gilt nur, wenn sie genau die heutigen Antworten vertauscht (alte Wörter über ihren Alias).
 // Sonst null: Die Karte mischt dann neu, statt in der Reihenfolge der Daten zu zeigen (dort steht die Lösung oft vorn),
@@ -112,13 +139,22 @@ export function festGemischt(frage: KartenFrage): string[] {
   return reihe;
 }
 
-// Welche Frage „Rate mal!“ zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
+// Welche Frage „Rate mal!“ beim Öffnen zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
 // 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
 //    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
 // 2. sonst die erste, die das Kind noch nie beantwortet hat (auf Profi also zuerst eine neue Profi-Frage);
 // 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
 export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
-  const fragen = fragenFuerStufe(alle, stufe);
+  return waehleFrage(fragenFuerStufe(alle, stufe), review, kartenstand);
+}
+
+// Nach einem Stufenwechsel auf der offenen Karte: dieselbe Wahl, aber nur unter den Fragen genau der gespielten Stufe.
+// Sonst gewann nach dem Wechsel auf Profi die eben falsch beantwortete Entdecker-Frage (Spieltest 24.11.2026, Befund 1).
+export function frageNachWechsel(alle: KartenFrage[], review: LocalProgress['review'], kartenstand: Record<string, unknown> | undefined, stufe: Stufe): KartenFrage {
+  return waehleFrage(fragenDerStufe(alle, stufe), review, kartenstand);
+}
+
+function waehleFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
   const offen = fragen.find(frage => {
     const wert = kartenstand?.[frage.answerKey];

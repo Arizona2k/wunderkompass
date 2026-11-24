@@ -26,7 +26,7 @@ import MehrErfahren from './mehr-erfahren';
 import RateMal, {antwortReihe} from './rate-mal';
 import StimmtDas from './stimmt-das';
 import OrdneRichtig from './ordne-richtig';
-import {dazuPasst, ersteFrage, fragenFuerStufe, ganzEinfachImAusprobieren, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
+import {dazuPasst, ersteFrage, frageNachWechsel, ganzEinfachImAusprobieren, gespielteStufe, hatAusprobieren, kartenFragen, naechsteFrage, schlussSatz, stufenHinweis, weitereVerbindungen} from './karten-daten';
 import {leseStufe, STUFEN, type Stufe} from '../stufe';
 import StufenWahl, {stufeWechseln} from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
@@ -87,26 +87,28 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const Unterabschnitt = embedded ? 'h4' : 'h3';
   // Die Frage wird beim Öffnen für die gemeinsame Stufe gewählt (ersteFrage: zuerst eine falsch beantwortete, dann eine neue,
   // dann die fällige; Teilschritt 3, E4) und wechselt nur über „Noch eine Frage“ oder eine andere Stufe, nie von selbst,
-  // während das Kind antwortet. „Noch eine Frage“ blättert in den Fragen der Stufe und darunter, am Ende wieder vorn.
+  // während das Kind antwortet. Eine Runde läuft vom Öffnen (oder Stufenwechsel) an: „Noch eine Frage“ zeigt jede Frage
+  // der gespielten Stufe einmal (naechsteFrage), danach steht ein klarer Schluss (Spieltest 24.11.2026, Befunde 3 und 4).
   const fragen = useMemo(() => kartenFragen(t, HINTS as Record<string, {steps: string[]; wrongReasons?: (string | null)[]}>), [t]);
   const stufe = leseStufe(a.progress);
-  const waehle = (s: Stufe) => ersteFrage(fragen, a.progress.review, a.progress.gameSessions['topic:' + t.id], s).id;
-  const [wahl, setWahl] = useState(() => ({stufe, id: waehle(stufe), weiter: false}));
+  const kartenstand = a.progress.gameSessions['topic:' + t.id];
+  const neueRunde = (s: Stufe, id: string) => ({stufe: s, id, weiter: false, gezeigt: [id]});
+  const [wahl, setWahl] = useState(() => neueRunde(stufe, ersteFrage(fragen, a.progress.review, kartenstand, stufe).id));
   const {vorschlag, merke, schliessen} = useStufenVorschlag(t.id, stufe);
   const artikel = useRef<HTMLElement>(null);
-  // Andere Stufe (Wahl, Vorschlag oder ein anderer Tab): Die Karte wählt neu wie beim Öffnen.
+  // Andere Stufe (Wahl, Vorschlag oder ein anderer Tab): eine Frage genau der neuen Stufe, und eine neue Runde.
   if (wahl.stufe !== stufe) {
-    setWahl({stufe, id: waehle(stufe), weiter: false});
+    setWahl(neueRunde(stufe, frageNachWechsel(fragen, a.progress.review, kartenstand, stufe).id));
     schliessen();
   }
   const frage = fragen.find(f => f.id === wahl.id) ?? fragen[0];
   const weitergeblaettert = wahl.weiter;
   // Dieselbe Reihenfolge wie in „Rate mal!“ (dort aus demselben Spielstand gelesen).
-  const auswahl = antwortReihe(frage, a.progress.gameSessions['topic:' + t.id]?.[frage.itemsKey]);
-  const liste = fragenFuerStufe(fragen, stufe);
-  const weiter = liste.length > 1 ? () => {
+  const auswahl = antwortReihe(frage, kartenstand?.[frage.itemsKey]);
+  const naechste = naechsteFrage(fragen, stufe, frage.id, wahl.gezeigt);
+  const weiter = naechste ? () => {
     schliessen();
-    setWahl(w => ({...w, id: liste[(liste.findIndex(f => f.id === w.id) + 1) % liste.length].id, weiter: true}));
+    setWahl(w => ({...w, id: naechste.id, weiter: true, gezeigt: [...w.gezeigt, naechste.id]}));
   } : undefined;
   const eintrag = WORLD_INDEX.find(e => e.id === t.id);
   const welt = WORLD_CATEGORIES.find(c => c.id === t.category);
@@ -118,6 +120,21 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
   const kacheln = dazuPasst(t, verbindungen);
   const nachbarKarte = kacheln.find(k => k.art === 'karte');
   const nachbar = nachbarKarte && WORLD_INDEX.find(e => e.id === nachbarKarte.topicId);
+  // Nach der letzten Frage der Runde: der Satz und, wenn es eine erklärte Nachbarkarte gibt, der Weg dorthin.
+  // Karten mit nur der Hauptfrage bleiben, wie sie sind.
+  const schluss = !naechste && fragen.length > 1 ? {
+    text: schlussSatz(fragen, stufe),
+    weiter: nachbar ? (
+      <button
+        type="button"
+        className="primary-button rate-mal-naechste-karte"
+        data-route-focus={`rate-mal-schluss-${t.id}-${nachbar.id}`}
+        onClick={event => { event.currentTarget.focus({preventScroll: true}); onTopic(nachbar.id); }}
+      >
+        Nächste Karte: {displayTopicTitle(nachbar.title)} <ArrowRight size={20} aria-hidden="true"/>
+      </button>
+    ) : null,
+  } : undefined;
   const vorlesen = () => a.onRead([t.title, t.intro, 'Rate mal!', frage.question.prompt, ...auswahl].map(satz).join(' '));
 
   // „Ganz einfach“ steht offen, die Absätze zugeklappt unter „Für Große“ (Teilschritt 3, E12).
@@ -193,9 +210,10 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         onNachbessern={a.onNachbessern}
         onRead={a.onRead}
         onWeiter={weiter}
+        schluss={schluss}
         fokus={weitergeblaettert}
         onAntwort={merke}
-        kopf={a.onStufe ? <StufenWahl stufe={stufe} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
+        kopf={a.onStufe ? <StufenWahl stufe={stufe} spielt={gespielteStufe(fragen, stufe)} onStufe={a.onStufe} hinweis={stufenHinweis(fragen, stufe)}/> : null}
         vorschlag={vorschlag && a.onStufe ? (
           <StufenVorschlagHinweis
             vorschlag={vorschlag}

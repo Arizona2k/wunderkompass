@@ -1,7 +1,8 @@
 "use client";
 // Die gemeinsame Stufenwahl (Teilschritt 3, E2): eine Zeile „Stufe: Profi“ mit „Ändern“.
-// Ein Tipp öffnet die drei Stufen, ein zweiter stellt um. Auf Profi und Experte steht immer
-// „Zu schwer? Zurück zu Entdecker“ dabei. Kein Alter auf den Knöpfen; das steht nur für Erwachsene im Pass.
+// Ein Tipp öffnet die drei Stufen, ein zweiter stellt um. Auf Profi und Experte steht
+// „Zu schwer? Zurück zu Entdecker“ dabei, außer die Karte spielt ohnehin Entdecker (Spieltest 24.11.2026, Befund 2).
+// Kein Alter auf den Knöpfen; das steht nur für Erwachsene im Pass.
 import {useEffect, useId, useRef, useState} from 'react';
 import {flushSync} from 'react-dom';
 import {Check} from 'lucide-react';
@@ -26,7 +27,8 @@ export function stufeWechseln(wechsel: () => void, ort: ParentNode | null | unde
 }
 
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
-export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
+// `spielt`: die Stufe, die die Karte wirklich spielt (gespielteStufe); ohne Karte, etwa im Pass, die gewählte.
+export default function StufenWahl({stufe, spielt = stufe, onStufe, hinweis}: {stufe: Stufe; spielt?: Stufe; onStufe: (stufe: Stufe) => void; hinweis?: string | null}) {
   const [offen, setOffen] = useState(false);
   const gruppe = useId(), titel = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
@@ -48,6 +50,6 @@ export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onS
       </button>)}
     </div>}
     {hinweis && <p className="stufen-hinweis">{hinweis}</p>}
-    {!offen && stufe !== 'entdecker' && <button type="button" className="stufen-zurueck" onClick={() => waehle('entdecker')}>Zu schwer? Zurück zu Entdecker</button>}
+    {!offen && stufe !== 'entdecker' && spielt !== 'entdecker' && <button type="button" className="stufen-zurueck" onClick={() => waehle('entdecker')}>Zu schwer? Zurück zu Entdecker</button>}
   </div>;
 }

@@ -15,7 +15,7 @@ import VERBINDUNGEN from '../../app/world-connections.json' with {type: 'json'};
 import HINWEISBANK from '../../app/challenge-hints.json' with {type: 'json'};
 // karten-daten.ts lädt JSON ohne Importattribut; das ergänzen die Lade-Hooks.
 await import('../../scripts/test-runtime.mjs');
-const {kartenFragen, fragenFuerStufe, ersteFrage, ganzEinfachImAusprobieren} = await import('../../app/kern/karte/karten-daten.ts');
+const {kartenFragen, fragenFuerStufe, fragenDerStufe, ersteFrage, frageNachWechsel, ganzEinfachImAusprobieren} = await import('../../app/kern/karte/karten-daten.ts');
 
 const TITEL = new Map(KATALOG.map(t => [t.id, t.title]));
 
@@ -159,6 +159,12 @@ export const fragenAufStufe = (t, stufe) => fragenFuerStufe(fragenDerKarte(t), s
 // Die Zusatzfragen, die eine Stufe auf der Karte zeigt (ohne Hauptfrage); auf Entdecker z. B. beim Elefanten keine.
 export const zusatzfragenAufStufe = (t, stufe = 'entdecker') => fragenAufStufe(t, stufe).filter(f => f.id !== t.id);
 export const ersteFrageAufStufe = (t, stufe, review = {}, kartenstand) => ersteFrage(fragenDerKarte(t), review, kartenstand, stufe);
+// Nach einem Stufenwechsel auf der offenen Karte: nur Fragen genau der gespielten Stufe (frageNachWechsel), und
+// „Noch eine Frage“ blättert nur darin (fragenDerStufe); danach kommt der Schluss (Spieltest 24.11.2026).
+export const frageNachWechselAufStufe = (t, stufe, review = {}, kartenstand) => frageNachWechsel(fragenDerKarte(t), review, kartenstand, stufe);
+export const fragenGenauDerStufe = (t, stufe) => fragenDerStufe(fragenDerKarte(t), stufe);
+// Die erste erklärte Nachbarkarte wie connectionsFor in der App: Ziel von „Nächste Karte“ im Schluss und der ersten Kachel unter „Dazu passt“.
+export const ersteNachbarkarte = id => VERBINDUNGEN.connections.filter(c => c.fromId === id || c.toId === id).map(c => (c.fromId === id ? c.toId : c.fromId))[0];
 export const zusatzfragen = t => fragenDerKarte(t).slice(1);
 export const richtigeAntwort = frage => frage.question.answers[frage.question.correct];
 export const falscheAntworten = frage => frage.question.answers.filter((_, i) => i !== frage.question.correct);
