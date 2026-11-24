@@ -414,7 +414,7 @@
     "why": "Die meisten Korallen bestehen aus vielen winzigen Tieren. Sie heißen Polypen.",
     "hints": [
       "Was können Tiere, was Steine nicht können?",
-      "Jedes Wesen hat einen Mund und kleine Fangarme. Damit fängt es Futter."
+      "Eine Koralle besteht aus vielen winzigen Wesen. Jedes hat einen Mund und kleine Fangarme."
     ],
     "topic": "science-coral-reef",
     "quelle": [
@@ -681,14 +681,14 @@
     "answers": [
       "Die Koralle wird dadurch zur Pflanze",
       "Zwei verschiedene Lebewesen arbeiten zusammen",
-      "Nur die Algen haben etwas davon",
+      "Nur die Koralle hat etwas davon",
       "Die Koralle muss dann nie mehr selbst fressen"
     ],
     "correct": "Zwei verschiedene Lebewesen arbeiten zusammen",
     "wrongReasons": {
       "Die Koralle wird dadurch zur Pflanze": "Die Koralle bleibt ein Tier. Die Algen wohnen nur bei ihr.",
       "Die Koralle muss dann nie mehr selbst fressen": "Korallen fangen auch selbst Futter. Dafür haben sie kleine Fangarme.",
-      "Nur die Algen haben etwas davon": "Auch die Koralle bekommt etwas: Nahrung von den Algen."
+      "Nur die Koralle hat etwas davon": "Auch die Algen bekommen etwas. Wo wohnen sie denn?"
     },
     "why": "Die Koralle gibt den Algen eine Wohnung. Die Algen geben ihr Nahrung. So ein Zusammenleben heißt Symbiose.",
     "hints": [
@@ -721,9 +721,9 @@
     ],
     "correct": "Nein, in Australien ist dann Sommer",
     "wrongReasons": {
-      "Ja, im Dezember ist es auf der ganzen Erde kalt": "Im Dezember ist es nicht überall kalt. In Australien gehen viele Kinder dann baden.",
+      "Ja, im Dezember ist es auf der ganzen Erde kalt": "Im Dezember ist es nicht überall kalt. Die Südhälfte der Erde hat dann eine andere Jahreszeit.",
       "Nein, in Australien ist dann Frühling": "Australien hat wirklich eine andere Jahreszeit. Aber nicht den Frühling.",
-      "Nein, nur in kalten Ländern ist dann Winter": "Nicht nur kalte Länder haben dann Winter. Auf der ganzen Nordhälfte der Erde ist Winter."
+      "Nein, nur in kalten Ländern ist dann Winter": "Auch in warmen Ländern im Norden, zum Beispiel in Ägypten, ist dann Winter. Und kalte Orte im Süden haben dann Sommer."
     },
     "why": "Hat die Nordhälfte der Erde Winter, hat die Südhälfte Sommer. Australien liegt auf der Südhälfte.",
     "hints": [
@@ -754,9 +754,9 @@
     "wrongReasons": {
       "Ja, weiß heißt: Sie lebt nicht mehr": "Eine weiße Koralle kann noch leben. Sie hat nur ihre Algen verloren.",
       "Nein, weiß ist ihre gesunde Farbe": "Gesunde Korallen sind bunt. Ihre Farbe kommt von den Algen.",
-      "Ja, sie ist zu Stein geworden": "Korallen werden nicht zu Stein. Man sieht nur ihr hartes, weißes Gerüst durchschimmern."
+      "Ja, sie ist zu Stein geworden": "Das Weiße ist ihr Kalkgerüst. Das hatte sie schon vorher. Man sieht es jetzt nur, weil die bunten Algen fehlen."
     },
-    "why": "Ohne ihre Algen wird die Koralle weiß. Wird das Wasser bald wieder kühler, kann sie sich erholen. Dauert es zu lange, stirbt sie.",
+    "why": "Ist das Meer zu warm, verliert die Koralle ihre Algen und wird weiß. Wird das Wasser bald wieder kühler, kann sie sich erholen. Dauert es zu lange, stirbt sie.",
     "hints": [
       "Warum war die Koralle vorher bunt? Wer hat in ihr gewohnt?",
       "Ein Mensch wird blass, wenn ihm übel ist. Bleibt er dann für immer blass?"
@@ -766,6 +766,10 @@
       {
         "label": "NOAA: What is coral bleaching?",
         "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      },
+      {
+        "label": "NOAA: Corals Tutorial – Introduction (Kalkskelett)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_corals/coral01_intro.html"
       }
     ]
   },
@@ -783,7 +787,7 @@
     ],
     "correct": "Die Sonne steht tiefer, und die Tage sind kürzer",
     "wrongReasons": {
-      "Kalte Luft lässt weniger Sonnenlicht durch": "Ob die Luft kalt oder warm ist, ändert am Licht fast nichts. Wichtig ist, wie hoch die Sonne steht.",
+      "Kalte Luft lässt weniger Sonnenlicht durch": "Kalte Luft ist genauso durchsichtig wie warme. Am Licht ändert sie fast nichts.",
       "Die Sonne selbst gibt im Winter weniger Licht ab": "Die Sonne leuchtet das ganze Jahr fast gleich hell. Bei uns kommt im Winter nur weniger davon an.",
       "Die Erde ist weiter weg, und die Tage sind kürzer": "Die Tage sind kürzer, das stimmt. Aber im Januar ist die Erde der Sonne sogar am nächsten."
     },
@@ -809,7 +813,7 @@
     "game": "detective",
     "level": "medium",
     "stufe": "profi",
-    "prompt": "„Ganz oben hört die Luft auf, wie unter einem Deckel.“ Was stimmt?",
+    "prompt": "Ein Kind sagt: „Die Luft hört oben plötzlich auf, wie unter einem Deckel.“ Was stimmt?",
     "answers": [
       "Über den Wolken gibt es keine Luft mehr",
       "Die Luft hört an der Ozonschicht auf",
@@ -822,7 +826,7 @@
       "Die Luft hört an der Ozonschicht auf": "Die Ozonschicht ist ein Teil der Luft. Sie schützt uns vor starken Sonnenstrahlen. Darüber gibt es noch mehr Luft.",
       "Ganz oben wird die Luft wieder dichter": "Je höher, desto weniger Luft. Ganz oben ist sie am dünnsten."
     },
-    "why": "Die Luft geht ganz langsam in den Weltraum über. Eine scharfe Grenze gibt es nicht.",
+    "why": "Die Luft wird nach oben immer dünner. Irgendwann beginnt der Weltraum. Eine scharfe Grenze gibt es nicht.",
     "hints": [
       "Denk an einen hohen Berg. Ist die Luft oben anders als unten?",
       "Ein Deckel hat eine harte Kante. Gibt es so eine Kante am Himmel?"
@@ -855,9 +859,9 @@
     "wrongReasons": {
       "Nein, die Sonne ist dafür zu weit weg": "Die Sonne ist sehr weit weg, aber riesig. Darum zieht sie trotzdem mit.",
       "Nein, das macht vor allem der Wind": "Wind kann das Wasser höher drücken. Ebbe und Flut gibt es aber auch ohne Wind.",
-      "Ja, sogar stärker als der Mond": "Die Sonne zieht nur etwa halb so stark wie der Mond. Der Mond ist viel näher an der Erde."
+      "Ja, sogar stärker als der Mond": "Bei Ebbe und Flut wirkt der Mond stärker. Er ist viel näher an der Erde."
     },
-    "why": "Mond und Sonne ziehen beide am Meer. Der Mond zieht stärker, die Sonne etwa halb so stark.",
+    "why": "Mond und Sonne machen beide Ebbe und Flut. Der Mond wirkt stärker, die Sonne etwa halb so stark.",
     "hints": [
       "Denk daran, wie riesig die Sonne ist.",
       "Bei Vollmond und Neumond ist die Flut besonders hoch. Was steht dann mit dem Mond in einer Linie?"
@@ -888,7 +892,7 @@
     ],
     "correct": "Ja, auch ohne Wind und Sturm",
     "wrongReasons": {
-      "Ja, aber nur bei Sturm": "Auch bei ruhigem Wetter bewegt sich das tiefe Wasser. Es fließt langsam, wie ein riesiger Fluss im Meer.",
+      "Ja, aber nur bei Sturm": "Ein Sturm wühlt vor allem das Wasser oben auf. Tief unten merkt man davon wenig.",
       "Nein, in der Tiefe ist es ganz ruhig": "Unter den Wellen gibt es Strömungen. Sie sind langsam, aber sie hören nicht auf.",
       "Nein, unten bewegen nur Fische das Wasser": "Fische bewegen nur ein bisschen Wasser um sich herum. Die Strömungen in der Tiefe sind viel größer."
     },
@@ -1041,10 +1045,10 @@
     "correct": "Wasserdampf",
     "wrongReasons": {
       "Gewitterwolke": "Mit jeder anderen Wolke wäre der Satz auch falsch. An diesem Wort liegt es nicht.",
-      "sichtbarem": "Gute Spur! Aber mit „unsichtbarem“ könntest du die Wolke nicht sehen. Der Satz bliebe falsch.",
-      "Eiskristallen": "Das stimmt wirklich: Oben in Gewitterwolken ist es so kalt, dass sich Eis bildet."
+      "sichtbarem": "Gute Spur! Doch Wolken sieht man ja wirklich. Am Wort „sichtbar“ liegt es also nicht.",
+      "Eiskristallen": "Dieses Wort passt wirklich. Oben in Gewitterwolken ist es so kalt, dass sich Eis bildet."
     },
-    "why": "Wasserdampf ist ein Gas und immer unsichtbar. Richtig wäre: Die Wolke besteht aus winzigen Tröpfchen und Eiskristallen.",
+    "why": "Wasserdampf ist ein Gas und immer unsichtbar. Richtig wäre zum Beispiel: „… aus sichtbarem Wasser und Eiskristallen.“ Das Wasser schwebt in winzigen Tröpfchen.",
     "hints": [
       "Denk an einen Topf mit kochendem Wasser. Direkt darüber ist es klar. Erst weiter oben wird es weiß.",
       "Aus Wolken fallen Regentropfen. Ist in der Wolke also schon flüssiges Wasser?"
@@ -1054,6 +1058,10 @@
       {
         "label": "NASA Science für Kinder: How do clouds form?",
         "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      },
+      {
+        "label": "NOAA NSSL: Severe Weather 101 – Lightning (Eis in Gewitterwolken)",
+        "url": "https://www.nssl.noaa.gov/education/svrwx101/lightning/"
       }
     ],
     "gruppe": "dampf"
@@ -1128,18 +1136,18 @@
     "stufe": "experte",
     "prompt": "Ein Kind erklärt, wie Regen entsteht. Ein Satz ist falsch. Welcher?",
     "answers": [
-      "Die Sonne wärmt das Meer, und Wasser verdunstet.",
-      "Der Dampf steigt mit der warmen Luft auf.",
-      "Oben wird die Luft wärmer, und es entstehen Tröpfchen.",
-      "Die Tröpfchen werden größer, bis sie fallen."
+      "Die Sonne wärmt das Meer, und Wasser verdunstet",
+      "Der Dampf steigt mit der warmen Luft auf",
+      "Oben wird die Luft wärmer, und es entstehen Tröpfchen",
+      "Die Tröpfchen werden größer, bis sie fallen"
     ],
-    "correct": "Oben wird die Luft wärmer, und es entstehen Tröpfchen.",
+    "correct": "Oben wird die Luft wärmer, und es entstehen Tröpfchen",
     "wrongReasons": {
-      "Die Sonne wärmt das Meer, und Wasser verdunstet.": "Das stimmt. Die Wärme der Sonne lässt Wasser verdunsten.",
-      "Der Dampf steigt mit der warmen Luft auf.": "Das stimmt. Warme Luft steigt auf und nimmt den Dampf mit.",
-      "Die Tröpfchen werden größer, bis sie fallen.": "Das stimmt. Erst wenn die Tröpfchen groß und schwer sind, fallen sie als Regen."
+      "Die Sonne wärmt das Meer, und Wasser verdunstet": "Dieser Satz ist richtig. Die Wärme der Sonne lässt Wasser verdunsten.",
+      "Der Dampf steigt mit der warmen Luft auf": "Dieser Satz ist richtig. Warme Luft steigt auf und nimmt den Dampf mit.",
+      "Die Tröpfchen werden größer, bis sie fallen": "Dieser Satz ist richtig. Erst wenn die Tröpfchen groß und schwer sind, fallen sie als Regen."
     },
-    "why": "Oben wird die Luft kälter, nicht wärmer. Erst in der Kälte wird aus dem Dampf ein Tröpfchen.",
+    "why": "Oben wird die Luft kälter, nicht wärmer. Erst in der Kälte werden aus dem Dampf Tröpfchen.",
     "hints": [
       "Denk an hohe Berge. Wie ist es dort oben?",
       "Wasserdampf wird zu Tröpfchen, wenn er abkühlt."
@@ -1162,23 +1170,23 @@
     "game": "detective",
     "level": "hard",
     "stufe": "experte",
-    "prompt": "Im Meer am Nordpol friert Meerwasser zu Eis. Das Salz friert nicht mit. Was passiert mit dem Wasser direkt unter dem Eis?",
+    "prompt": "Weit im Norden gefriert das Meer zu Eis. Das Salz kommt nicht mit ins Eis. Was passiert mit dem Wasser direkt unter dem Eis?",
     "answers": [
-      "Es wird salziger und steigt nach oben.",
-      "Es wird salziger und sinkt nach unten.",
-      "Es wird weniger salzig und sinkt ab.",
-      "Es wird weniger salzig und steigt auf."
+      "Es wird salziger und steigt nach oben",
+      "Es wird salziger und sinkt nach unten",
+      "Es wird weniger salzig und sinkt nach unten",
+      "Es wird weniger salzig und steigt nach oben"
     ],
-    "correct": "Es wird salziger und sinkt nach unten.",
+    "correct": "Es wird salziger und sinkt nach unten",
     "wrongReasons": {
-      "Es wird salziger und steigt nach oben.": "Kaltes, salziges Wasser ist schwerer. Schweres Wasser steigt nicht auf.",
-      "Es wird weniger salzig und sinkt ab.": "Das Salz bleibt doch im Wasser. Es wird also salziger, nicht weniger salzig.",
-      "Es wird weniger salzig und steigt auf.": "Das Salz bleibt im Wasser zurück. Dadurch wird das Wasser salziger."
+      "Es wird salziger und steigt nach oben": "Kaltes, salziges Wasser ist schwerer. Schweres Wasser steigt nicht nach oben.",
+      "Es wird weniger salzig und sinkt nach unten": "Das Salz bleibt im Wasser zurück. Wird das Wasser dann salziger oder weniger salzig?",
+      "Es wird weniger salzig und steigt nach oben": "Das Salz bleibt im Wasser zurück. Dadurch wird das Wasser salziger."
     },
-    "why": "Das Salz bleibt im Wasser zurück. Kaltes, salziges Wasser ist schwerer und sinkt in die Tiefe.",
+    "why": "Das Salz bleibt im Wasser zurück. Kaltes, salziges Wasser ist schwerer und sinkt in die Tiefe. So kommt das tiefe Wasser im Meer in Bewegung.",
     "hints": [
       "Was bleibt im Wasser, wenn das Eis kein Salz mitnimmt?",
-      "Kälte und Salz machen Wasser schwerer."
+      "Ein rohes Ei sinkt in Leitungswasser. In sehr salzigem Wasser schwimmt es oben. Was sagt dir das?"
     ],
     "topic": "science-currents",
     "quelle": [
