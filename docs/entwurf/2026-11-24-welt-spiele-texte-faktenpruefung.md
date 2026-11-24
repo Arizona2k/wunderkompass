@@ -162,6 +162,78 @@ Sources:
 - [San Diego Zoo: Axolotl](https://animals.sandiegozoo.org/animals/axolotl)
 - [WWF: Eisbär](https://www.wwf.de/themen-projekte/artenlexikon/eisbaer/)
 - [Australian Antarctic Division: Emperor penguin](https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/)
+## Nachprüfung der neu gefassten Rätsel und der dritten Antwort (fakten-pruefer, 24.11.2026)
+
+Bericht des Helfers zu den Fassungen aus Commit `7fd9fd8`, wörtlich übernommen (geprüft: `app/world-game-support.mjs` `EIGENE_RAETSEL`, `app/world-catalog.json`, `app/world-game-bank.ts`, `app/world-game-runde.ts` `profiKandidaten`, dazu `app/kern/karte/wissenskarte.tsx`: bei Personen stehen die Absätze und „So wurde geforscht“ offen, `more` zugeklappt unter „Mehr erfahren“):
+
+Kurz vorweg: Alle neun Rätsel stimmen sachlich, die Karten decken sie, und jedes passt nur zu seiner Person. Nichts muss geändert werden. Beim Mandela-Rätsel empfehle ich eine kleine Ergänzung, ein Muss ist sie nicht. „Erst in der Zukunft“ ist bei allen 23 Aufgaben klar falsch.
+
+### 1. Personen-Rätsel
+
+**Darwin:** passt
+- (a) Die Reise dauerte vom 27.12.1831 bis 2.10.1836. Wikipedia „Second voyage of HMS Beagle“: „it lasted almost five“. Das passt zum NHM-Beleg aus dem ersten Bericht.
+- (b) Gedeckt durch „1831 bis 1836“ und „über Generationen“ im Intro.
+- (c) Eindeutig. Kandidaten: Lovelace, Karl Benz, Bertha Benz, Hokusai, Tagore. Entdecker: Anning und Hopper.
+
+**Einstein:** passt
+- (a) Gedankenexperimente sind für Einstein gut belegt. Stanford Encyclopedia of Philosophy (https://plato.stanford.edu/entries/thought-experiment/): „Thought experiments are basically devices of the imagination“ und „Einstein's elevator showed that light will bend in a gravitational field“.
+- (b) Gedeckt: „untersuchte Licht, Raum und Zeit“ steht wörtlich im Intro. Die Methode steht offen unter „So wurde geforscht“: „Gedankenexperimente mit Mathematik und überprüfbaren Vorhersagen verbinden.“ Das Wort erklärt die Karte in `more[3]`: „Bei einem Gedankenexperiment stellt man sich eine Situation genau vor und fragt, welche Folgen die bekannten Regeln hätten.“ Das steht nur zugeklappt unter „Mehr erfahren“; für die Deckung reicht das.
+- (c) Eindeutig. Kandidaten: Meitner, Lehmann, Leavitt, Curie, Tagore. Entdecker: Cai Lun und Darwin. Hinweis ohne Änderungsbedarf: Leavitts Karte nennt Helligkeit, Entfernungen und die Dauer eines Helligkeitswechsels; ihre Methode ist aber Messen über längere Zeit, und „Raum und Zeit“ steht nur bei Einstein.
+
+**Benz:** passt
+- (a) Das Patent von 1886 und der Motorwagen sind belegt (Deutsches Museum, Beleg im ersten Bericht). „Fährt mit einem Motor“ ist richtig, wenn auch selbstverständlich.
+- (b) Gedeckt durch das Intro „entwickelte einen Motorwagen“ und „frühe Automobilentwicklung“ (`surprise`).
+- (c) Eindeutig. Kandidaten: Tagore, Curie, Leavitt, Lovelace, Meitner. Bertha Benz bleibt ausgeschlossen. Entdecker: Einstein und Jemison.
+
+**al-Chwarizmi:** passt
+- (a) Bagdad, Bücher übers Rechnen und Algebra sind belegt (MacTutor, im ersten Bericht).
+- (b) Gedeckt durch das Intro („in Bagdad“, „Seine Bücher“, „Algebra“) und `paragraphs[0]` („unbekannte Größen“); in `more[2]` steht „mit unbekannten Zahlen rechnen“.
+- (c) Eindeutig. Kandidaten: Ibn al-Haytham, Ibn Sina, Murasaki, Gutenberg, Cai Lun. Entdecker: Jemison und Humboldt.
+
+**Armstrong:** passt. (a) Belegt (NASA, im ersten Bericht). (b) Steht wörtlich im Intro. (c) Eindeutig; Katherine Johnson ist Kandidatin, ist aber nicht gelandet.
+
+**Mandela:** passt, mit Einschränkung
+- (a) Alles stimmt: Laut Nelson Mandela Foundation wurde er am 10.5.1994 Präsident. „Oberhaupt des Landes“ trifft zu, der Präsident Südafrikas ist Staats- und Regierungschef. SAHO (https://www.sahistory.org.za/article/history-apartheid-south-africa) bestätigt die Einteilung in Gruppen: Der Population Registration Act von 1950 verlangte, dass jede Person nach „race“ registriert wurde.
+- (b) Gedeckt: `paragraphs[0]` „teilte Menschen nach rassistischen staatlichen Kategorien ein und gab ihnen ungleiche Rechte“, Intro „wurde 1994 Präsident“.
+- (c) Eindeutig. Kandidaten: K. Johnson, Franklin, Wu, Carson, Hopper. Entdecker: Gutenberg und Armstrong.
+- **Einschränkung:** Der Satz sagt nicht, *wonach* eingeteilt wurde, genau das ist aber der Kern der Apartheid. Falsch ist der Satz nicht, ein Kind kann aber an beliebige Gruppen denken.
+- **Vorschlag (empfohlen, kein Muss):** „Die Apartheid teilte Menschen nach ihrer Hautfarbe in Gruppen ein und gab ihnen ungleiche Rechte.“ Durch „rassistische Kategorien“ auf der Karte gedeckt.
+
+**Murasaki Shikibu:** passt
+- (a) Wikipedia: 1005 oder 1006 Hofdame bei Kaiserin Shōshi, der Frau von Kaiser Ichijō; das Genji „between about 1000 and 1012“ geschrieben, also „vor über 1000 Jahren“. Wann sie mit dem Genji anfing, ist unsicher („She continued to write during her service“); „Dort schrieb“ ist leicht verkürzt, die Karte sagt dasselbe. Vertretbar.
+- (b) Gedeckt durch „Lebte um 1000“, „frühen 11. Jahrhundert“ und „am japanischen Kaiserhof“.
+- (c) Eindeutig. Kandidaten: Ibn Sina, Ibn al-Haytham, al-Chwarizmi, Gutenberg, Merian. Entdecker: Tu Youyou und Maathai.
+
+**Tagore:** passt. (a) Belegt (V&A, im ersten Bericht). (b) Steht fast wörtlich im Intro. (c) Eindeutig. Kandidaten: Curie, Leavitt, Bertha Benz, Karl Benz, Meitner. Entdecker: Armstrong und Lovelace.
+
+**Jemison:** passt
+- (a) NASA STS-47 (https://www.nasa.gov/mission/sts-47/): „Space Shuttle: Endeavour“, „Launched: September 12, 1992“, Crew „Mae C. Jemison, mission specialist“.
+- (b) Gedeckt: Intro „verband Medizin, Technik und Raumfahrt“ und „1992 forschte sie … im Weltraumlabor der Endeavour“; `more[3]` „Space Shuttle“, „Raumfähre“ ist eine zulässige Umformung.
+- (c) Eindeutig. Kandidaten: Berners-Lee, Hadid, Butler, Bell Burnell, Maathai. Entdecker: Darwin und Ibn al-Haytham.
+
+### 2. „Erst in der Zukunft“ (`DRITTE_ANTWORT`): passt
+
+Alle 23 Aufgaben mit dieser Antwort aus `worldGameBank('then-now')` ausgegeben. Jeder Satz beschreibt etwas, das es gab oder heute gibt, keiner einen Plan. Auch „Manche Teile können erneut benutzt werden“ bei `invention-rocket-today` ist heute schon Wirklichkeit. `invention-compass-today` hat eigene Antworten und ist unberührt.
+
+Zur Erinnerung (nicht Teil des Auftrags): Bei `invention-internet`, `invention-airplane-today` (Gleitflug ist kein Merkmal von „Heute“), `invention-light`, `invention-railway` und `invention-car-today` bleibt die andere Zeit („Früher“ gegen „Heute“) nicht ganz klar falsch (erster Bericht, Teil B, Punkte 1 bis 4).
+
+### Quellenlage und nicht geprüft
+
+Belege aus ursprünglichen oder fachlichen Quellen: NASA, SAHO, Stanford Encyclopedia of Philosophy und die Fundstellen aus dem ersten Bericht. Wikipedia nur als Übersicht (Murasaki, Länge der Beagle-Reise), die Zahlen decken sich mit NHM und RMG. Britannica war gesperrt (403), das Metropolitan Museum überlastet (429). Bei Benz, al-Chwarizmi, Armstrong und Tagore wurden die Quellen nicht erneut abgerufen; die Kernaussagen haben sich seit dem ersten Bericht nicht geändert.
+
+**Hinweis von Claude:** Der Helfer hat die Fassungen aus `7fd9fd8` geprüft, nicht die späteren Vorschläge der kinder-redaktion für Einstein und Benz. Wie diese umgesetzt wurden, steht unter „Umsetzung“.
+
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+Erster Bericht:
+- **Einstein:** Die Möglichkeit (b) ist umgesetzt: Das Rätsel nimmt nur Inhalte der Karte, also Licht, Raum und Zeit und das Gedankenexperiment. Die Karte bleibt unverändert. Die endgültige Fassung lautet: „Diese Person untersuchte Licht, Raum und Zeit. Dabei spielte diese Person im Kopf ganz genau durch: Was passiert dann?“
+- **Darwin:** „Fast fünf Jahre“ und „Lebewesen über viele Generationen“. „Um die Welt“ fehlt, weil es nicht auf der Karte steht. Ob die Karte die Weltreise nennen soll, steht im `BACKLOG.md`, Punkt 25 („Kartentexte zu den Rätseln“).
+- **Tagore:** Das Rätsel spricht von „frei gezogenen Linien“. Ob die Karte statt „Kritzeleien“ dieselben Worte nimmt, steht ebenfalls dort.
+- **Mehrdeutige Aufgaben bei „Früher oder heute?“** (`invention-internet`, `invention-airplane-today`, `invention-light`, `invention-railway`, `invention-car-today`): Sie sind in diesem PR noch nicht geändert, denn die Sätze kommen aus den Erfindungskarten. Sie stehen im `BACKLOG.md`, Punkt 25 („Früher oder heute? neu fassen“), zusammen mit dem Ratemuster über die Zeitform.
+- **Tote DPMA-Quelle der Benz-Karte:** steht im `BACKLOG.md`, Punkt 25 („Quelle Karl Benz“).
+- **Dritte Antwort:** Nach der kinder-redaktion heißt sie jetzt „Erst in der Zukunft“ statt „Nur ein Zukunftswunsch“. Die Nachprüfung hat bestätigt, dass sie bei allen 23 Aufgaben klar falsch ist.
+
+Nachprüfung:
+- Alle neun Rätsel wurden ohne Muss-Befund bestätigt.
+- **Mandela:** Die Empfehlung ist übernommen, der Satz heißt jetzt „Die Apartheid teilte Menschen nach der Hautfarbe in Gruppen ein und gab ihnen ungleiche Rechte.“ Wegen des Fürwort-Tests steht dort „der“ statt „ihrer“.
+- **Einstein und Benz:** Die Vorschläge der kinder-redaktion kamen nach diesem Auftrag. Übernommen sind nur Aussagen, die auf der Karte stehen: bei Einstein das Gedankenexperiment ohne „Oft“, bei Benz die Teile, die zusammenpassen mussten (`paragraphs[1]`). Der Helfer hat diese beiden Sätze nicht noch einmal geprüft.

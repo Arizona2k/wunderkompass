@@ -137,4 +137,21 @@ Alle neun Sätze halten die Regeln ein. Kein Satz enthält einen Teil des Namens
 
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+Erster Bericht (umgesetzt in `7fd9fd8`):
+- **Einstein:** ohne E = mc² und ohne die Zeit-Aussage, nur aus der Karte (Licht, Raum und Zeit, Gedankenexperiment).
+- **Benz:** „Benzinmotor“ ersetzt. Der Test prüft lange Namensteile jetzt auch mitten im Wort (`tests/world-game-learning-copy.test.mjs`).
+- **al-Chwarizmi, Armstrong, Tagore, Jemison:** Fassungen übernommen. Bei Jemison „Raumfähre“ statt „Raumschiff“ (genauer, die Karte sagt „Space Shuttle“).
+- **Murasaki:** „vor über 1000 Jahren“ statt „vor rund 1000 Jahren“ (fakten-pruefer: das Genji entstand bis etwa 1012), „Erzählung“ statt „Geschichte“.
+- **Mandela:** Die Erklärung der Apartheid folgt der Karte („teilte Menschen in Gruppen ein und gab ihnen ungleiche Rechte“) statt „Gesetze, die Menschen ungerecht behandelten“. „Oberhaupt des Landes“ übernommen.
+- **Darwin:** „Lebewesen über viele Generationen“ (fakten-pruefer), „Fast fünf Jahre“; „um die Welt“ fehlt, weil es nicht auf der Karte steht.
+- **Fürwörter:** Alle neun eigenen Rätsel kommen ohne „er“, „sie“, „sein“ und „ihr“ aus; ein Test sichert das.
+- **Automatische Rätsel mit Fürwörtern** (Curie, Goodall, Lovelace, Maathai und andere): nicht in diesem PR. Steht im `BACKLOG.md`, Punkt 25 („Personen-Hinweise verraten das Geschlecht“).
+- **„Erst in der Zukunft“:** übernommen. Gespeicherte Runden mit „Noch keine wirkliche Entwicklung“ (Früher) oder „Nur ein Zukunftswunsch“ (Heute) laufen weiter (`ALTE_DRITTE_ANTWORT` in `app/world-game-bank.ts`, eigener Test). Die Antwortlisten unter `tests/fixtures/` decken nur Kartenfragen ab, darum gibt es dort keinen Eintrag.
+- **Profi-Text:** „etwas kniffliger“.
+- **Neuigkeit:** „Was noch nicht geklappt hat, kommt später noch einmal“, denn so arbeitet die Wiederholung wirklich (falsch beantwortete Aufgaben). Danach auf 150 Zeichen und zwei Sätze gekürzt, weil der Test für „Was ist neu?“ das verlangt: „Sechs Wissensspiele wie „Wer war das?“ haben jetzt Stufen. Als Profi gibt es mehr Aufgaben, und was noch nicht geklappt hat, kommt später noch einmal.“ Gestrichen ist dabei „meist vier Antworten“.
+- **Präteritum/Präsens bei „Früher oder heute?“:** Das ist ein Ratemuster und steht im `BACKLOG.md`, Punkt 25 („Früher oder heute? neu fassen“).
+
+Nachprüfung:
+- **Einstein:** „Dabei spielte diese Person im Kopf ganz genau durch: Was passiert dann?“ Das ist die Fassung der Redaktion ohne „Oft“: Wie häufig, steht auf keiner Karte. Der fakten-pruefer hat bestätigt, dass die Methode (Gedankenexperiment) gedeckt ist.
+- **Benz:** Fassung übernommen. Sie ist durch die Karte gedeckt: „Bei einem brauchbaren Motorwagen mussten Motor, Übertragung, Fahrwerk, Lenkung und Bremsen zusammenpassen.“ Bertha Benz bleibt bei Benz als Antwort ausgeschlossen (`AUSSCHLUSS`), auch auf Entdecker. Die Frage aus „Unsicher“ ist damit erledigt.
+- **Mandela:** „setzte sich … ein“ bleibt, so steht es auch auf der Karte. Neu ist auf Rat des fakten-pruefers „nach der Hautfarbe“. Das Wort „ihrer“ fällt weg, weil der Fürwort-Test es zu Recht nicht von „ihr“ für eine Person unterscheidet.

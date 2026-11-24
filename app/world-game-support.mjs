@@ -8,15 +8,15 @@ export function animalDetectiveClue(id){const row=detective.get(id);if(!row)thro
 // Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin und Einstein: ohne „er“, „sie“, „sein“, „ihr“ und Berufswörter,
 // die verraten, ob ein Mann oder eine Frau gesucht ist (Stufen-Prüfung Teil B, M5). Nur Aussagen, die auf der Karte stehen
 // (Einstein vorher mit E = mc², das auf keiner Karte steht; Benz vorher mit „Benzinmotor“, das den Namen verrät).
-// Fassungen nach kinder-redaktion und fakten-pruefer, 24.11.2026 (docs/entwurf/2026-11-24-welt-spiele-texte-*.md).
+// Fassungen nach kinder-redaktion und fakten-pruefer samt Nachprüfung, 24.11.2026 (docs/entwurf/2026-11-24-welt-spiele-texte-*.md).
 /** @type {Record<string,string>} */
 export const EIGENE_RAETSEL={
  'person-charles_darwin':'Fast fünf Jahre lang reiste diese Person mit dem Schiff „Beagle“. Später erklärte diese Person, wie sich Lebewesen über viele Generationen verändern.',
- 'person-albert_einstein':'Diese Person untersuchte Licht, Raum und Zeit. Dabei stellte sich diese Person Dinge ganz genau vor und überlegte, was dann passieren würde.',
- 'person-karl_benz':'Diese Person entwickelte einen frühen Motorwagen. So ein Wagen fährt mit einem Motor.',
+ 'person-albert_einstein':'Diese Person untersuchte Licht, Raum und Zeit. Dabei spielte diese Person im Kopf ganz genau durch: Was passiert dann?',
+ 'person-karl_benz':'Diese Person entwickelte einen frühen Motorwagen. Dafür mussten Motor, Lenkung und Bremsen gut zusammenpassen.',
  'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher übers Rechnen. Darin ging es auch um Algebra: das Rechnen mit unbekannten Zahlen.',
  'person-neil_armstrong':'Diese Person landete mit Buzz Aldrin auf dem Mond. Die Reise hieß Apollo 11.',
- 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Die Apartheid teilte Menschen in Gruppen ein und gab ihnen ungleiche Rechte. 1994 wurde diese Person das Oberhaupt des Landes.',
+ 'person-nelson_mandela':'Diese Person setzte sich in Südafrika gegen die Apartheid ein. Die Apartheid teilte Menschen nach der Hautfarbe in Gruppen ein und gab ihnen ungleiche Rechte. 1994 wurde diese Person das Oberhaupt des Landes.',
  'person-murasaki_shikibu':'Diese Person lebte vor über 1000 Jahren am Hof des Kaisers von Japan. Dort schrieb diese Person die Erzählung vom Prinzen Genji.',
  'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Außerdem malte diese Person Bilder: Aus frei gezogenen Linien wurden neue Formen.',
  'person-mae_jemison':'Diese Person kannte sich mit Medizin und Technik aus. 1992 flog diese Person mit der Raumfähre Endeavour ins All und forschte dort.'
