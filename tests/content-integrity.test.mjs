@@ -7,6 +7,9 @@
 //    fixtures/stable-ids.json: aus dem alten Inventar (Commit d0dc9a3) die Familien, deren IDs im Pass oder in
 //    Hash-Links stehen, plus alle am 21.11.2026 vorhandenen IDs dieser Familien.
 //    Die Liste darf nur wachsen; wer eine ID bewusst aufgibt, braucht eine Umleitung und einen BACKLOG-Eintrag.
+//    Familie photos (seit 24.11.2026): Foto-IDs werden nie wiederverwendet; scripts/foto-einbau.mjs trägt neue ein.
+// 5. Jedes Foto steht auf einer Karte oder einem Naturort, oder es ist ersetzt (fixtures/ersetzte-fotos.json:
+//    Nachweis bleibt, gezeigt wird es nicht mehr). Der Browser-Test world-photos liest dieselbe Liste.
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
@@ -138,13 +141,43 @@ function currentIds() {
   // Zusatzfragen und „Stimmt das?“ der Wissenskarten: `world-question:<id>` im Pass, `claim:<id>` in den Spielständen.
   // Dazu „Ordne richtig“ (Teilschritt 3): `ordnen:<id>` im Spielstand der Karte.
   ids['world-card-extras'] = topics.flatMap(t => [...(t.moreQuestions ?? []), ...(t.claims ?? []), ...(t.ordnen ? [t.ordnen] : [])].map(x => x.id));
+  // Foto-IDs: stehen in Pass-Sicherungen nicht, aber eine wiederverwendete ID zeigte unter altem Nachweis ein anderes Bild.
+  ids.photos = Object.keys(readJson(path.join(ROOT, 'app/world-photos.json')));
   return ids;
 }
 
-test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte, Wörter, Warum-Fragen, Routen, Zusatzfragen) gibt es noch', () => {
+test('alle stabilen IDs (Themen, Reisen, Kapitel, Spiele, Labore, Aufgaben, Missionen, Quiz, Naturorte, Wörter, Warum-Fragen, Routen, Zusatzfragen, Fotos) gibt es noch', () => {
   assert.equal(exportError, undefined, 'Export-Prüflauf fehlgeschlagen');
   const current = currentIds();
   assert.deepEqual(Object.keys(STABLE).filter(family => !current[family]), [], 'Familie ohne heutige Quelle');
   const missing = Object.entries(STABLE).flatMap(([family, ids]) => ids.filter(id => !current[family].includes(id)).map(id => family + ':' + id));
   assert.deepEqual(missing, [], 'verlorene IDs: Pass-Fortschritt und Links würden brechen');
+});
+
+test('jede heutige Foto-ID steht in der festen Liste (stable-ids.json, Familie photos)', () => {
+  const fotos = Object.keys(readJson(path.join(ROOT, 'app/world-photos.json')));
+  assert.deepEqual(fotos.filter(id => !STABLE.photos.includes(id)), [], 'neue Foto-ID in tests/fixtures/stable-ids.json (photos) eintragen');
+});
+
+// Gleiche Regel wie scripts/foto-einbau.mjs (wirdGezeigt) und tests/browser/world-photos.mjs.
+function fotosOhnePlatz(fotos, topics, naturFotos, naturOrte, ersetzt) {
+  const gezeigt = id => topics.some(t => t.image === id) || (Object.hasOwn(naturFotos, id) && naturOrte.some(ort => ort.id === id));
+  return Object.keys(fotos).flatMap(id => gezeigt(id) === ersetzt.includes(id)
+    ? [ersetzt.includes(id) ? id + ': ersetzt, steht aber wieder auf einer Karte' : id + ': steht auf keiner Karte und keinem Naturort']
+    : []);
+}
+
+test('jedes Foto wird gezeigt oder ist als ersetzt vermerkt', () => {
+  const lese = name => readJson(path.join(ROOT, name));
+  const ersetzt = readJson(path.join(import.meta.dirname, 'fixtures/ersetzte-fotos.json'));
+  const fotos = lese('app/world-photos.json');
+  assert.deepEqual(ersetzt.filter(id => !Object.hasOwn(fotos, id)), [], 'ersetzte Fotos behalten ihren Nachweis');
+  assert.deepEqual(fotosOhnePlatz(fotos, lese('app/world-catalog.json'), lese('app/nature-photo-candidates.json'), lese('app/nature-new-places.json'), ersetzt), []);
+});
+
+test('Mutationsprobe: ein Foto ohne Platz und ein wieder gezeigtes ersetztes Foto fallen auf', () => {
+  const fotos = {a: {}, b: {}, c: {}};
+  const topics = [{id: 't1', image: 'a'}, {id: 't2', image: 'c'}];
+  assert.deepEqual(fotosOhnePlatz(fotos, topics, {}, [], ['c']), ['b: steht auf keiner Karte und keinem Naturort', 'c: ersetzt, steht aber wieder auf einer Karte']);
+  assert.deepEqual(fotosOhnePlatz(fotos, topics, {b: {}}, [{id: 'b'}], []), []);
 });

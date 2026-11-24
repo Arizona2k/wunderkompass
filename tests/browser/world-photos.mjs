@@ -8,10 +8,13 @@ import naturePhotoCandidates from '../../app/nature-photo-candidates.json' with 
 import naturePlaces from '../../app/nature-new-places.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 
+import ersetzteFotos from '../fixtures/ersetzte-fotos.json' with {type:'json'};
+
 // Fotos, die auf ihrer Karte durch ein neues Foto ersetzt wurden (Bilder-Strang). Ihr Nachweis bleibt im
 // Bestand, damit die Foto-ID nie wiederverwendet wird; die Seite zeigt sie aber nicht mehr. Jedes andere
-// Foto muss auf einer Karte oder einem Naturort stehen, sonst schlägt die Prüfung an.
-const ERSETZTE_FOTOS=new Set(['orca']);
+// Foto muss auf einer Karte oder einem Naturort stehen. Die Liste pflegt scripts/foto-einbau.mjs; dieselbe
+// Regel prüft schon der Unit-Test in tests/content-integrity.test.mjs.
+const ERSETZTE_FOTOS=new Set(ersetzteFotos);
 function gezeigteFotoIds(){
  const gezeigt=id=>topics.some(t=>t.image===id)||(Object.hasOwn(naturePhotoCandidates,id)&&naturePlaces.some(place=>place.id===id));
  for(const id of Object.keys(photos))assert.equal(gezeigt(id),!ERSETZTE_FOTOS.has(id),ERSETZTE_FOTOS.has(id)?'ersetztes Foto '+id+' steht wieder auf einer Karte':'Foto '+id+' steht auf keiner Karte und auf keinem Naturort');

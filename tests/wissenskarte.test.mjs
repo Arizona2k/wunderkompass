@@ -226,7 +226,8 @@ test('Kennwörter der Karte passen genau zu den Fotodaten', () => {
 });
 
 test('bildnachweisListe liefert für jedes Foto Urheber, Lizenz, Lizenz-Link und Quelle', () => {
-  // Fotos kommen dazu, Foto-IDs fallen nie weg (Stand vor dem Bilder-Strang: 60).
+  // Fotos kommen dazu, Foto-IDs fallen nie weg (Stand vor dem Bilder-Strang: 60). Jede einzelne ID schützt
+  // tests/fixtures/stable-ids.json (Familie photos) über tests/content-integrity.test.mjs.
   assert.ok(fotoIds.length >= 60);
   assert.deepEqual([...fotoIds].sort(), Object.keys(fotos).sort());
   const liste = bildnachweisListe(fotoIds, fotos);

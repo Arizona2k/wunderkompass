@@ -10,6 +10,11 @@
 // Feld zuschnitt), Eintrag in app/world-photos.json, Feld image der Karte in app/world-catalog.json, Kennwort in
 // app/kern/karte/foto-kennwoerter.json. Danach erzeugt scripts/export-content.mjs die abgeleiteten Listen
 // (Foto-Index, Bildnachweis-Liste, Startseiten-Index, Exporte).
+// Neue Foto-IDs kommen von selbst in tests/fixtures/stable-ids.json (Familie photos, wächst nur). Ein Foto, das
+// nach dem Einbau auf keiner Karte und keinem Naturort mehr steht, kommt in tests/fixtures/ersetzte-fotos.json:
+// Sein Nachweis bleibt, damit die ID nie wiederverwendet wird.
+// Sicherheit: Alle Bilddateien entstehen erst im Arbeitsordner und kommen nur nach public/, wenn jeder Schritt
+// eines Vorschlags geklappt hat. Alte Dateien werden erst nach einem erfolgreichen Export gelöscht.
 // Geladene Originale bleiben in .qa-output/foto-cache/, damit ein zweiter Lauf Commons nicht noch einmal fragt.
 
 import fs from 'node:fs';
@@ -25,6 +30,10 @@ const {fotoKennwort} = await import('../app/kern/karte/karten-daten.ts');
 const FOTOS_DATEI = 'app/world-photos.json';
 const KATALOG_DATEI = 'app/world-catalog.json';
 const KENNWORT_DATEI = 'app/kern/karte/foto-kennwoerter.json';
+const STABIL_DATEI = 'tests/fixtures/stable-ids.json';
+const ERSETZT_DATEI = 'tests/fixtures/ersetzte-fotos.json';
+const NATUR_FOTOS_DATEI = 'app/nature-photo-candidates.json';
+const NATUR_ORTE_DATEI = 'app/nature-new-places.json';
 const CACHE = '.qa-output/foto-cache';
 // Eine der festen Vorschaubreiten von Commons; reicht für 960 px.
 const LADEBREITE = 1280;
@@ -47,14 +56,21 @@ const einbauen = !nurPruefen && !vorschauOrdner;
 const fotos = leseJson(FOTOS_DATEI);
 const katalog = leseJson(KATALOG_DATEI);
 const kennwoerter = leseJson(KENNWORT_DATEI);
-const vorschlaege = JSON.parse(fs.readFileSync(eingabe, 'utf8')).filter(v => v.foto_id).map(v => ergaenzeNeuExport(v));
+const alleVorschlaege = JSON.parse(fs.readFileSync(eingabe, 'utf8'));
+// Ein Eintrag ohne foto_id (z. B. Tippfehler „fotoid“) wird gemeldet, nicht still übersprungen.
+const ohneId = alleVorschlaege.filter(v => !v.foto_id);
+const vorschlaege = alleVorschlaege.filter(v => v.foto_id).map(v => ergaenzeNeuExport(v));
 const arbeitsordner = fs.mkdtempSync(path.join(os.tmpdir(), 'foto-einbau-'));
 fs.mkdirSync(CACHE, {recursive: true});
 if (vorschauOrdner) fs.mkdirSync(vorschauOrdner, {recursive: true});
 
 const fertig = [];
-const abgelehnt = [];
+const abgelehnt = ohneId.map(v => `${v.karte ?? '(ohne karte)'}: Eintrag ohne foto_id übersprungen`);
 const alteDateien = [];
+// Fertig gebaute Bilddateien: liegen im Arbeitsordner, kommen beim Einbauen nach public/.
+const neueDateien = [];
+// Foto-IDs, die eine Karte vor dem Einbau zeigte (Kandidaten für ersetzte-fotos.json).
+const vorherGezeigt = new Set();
 
 // 1. Regeln ohne Netz; eine Foto-ID darf auch innerhalb der Liste nur einmal vorkommen.
 const geprueft = [];
@@ -90,13 +106,17 @@ for (const {vorschlag, karte} of geprueft) {
       continue;
     }
     const vorher = karte.image;
-    const altesBild = fotos[vorschlag.foto_id]?.src;
+    const alt = fotos[vorschlag.foto_id];
+    // Bei einem Neu-Export: altes src und alte Größen, soweit die neuen sie nicht überschreiben.
+    const alteSrcs = alt ? [...new Set([alt.src, ...(alt.variants ?? []).map(v => v.src)].filter(Boolean))] : [];
     fotos[vorschlag.foto_id] = eintrag(vorschlag, bild);
     karte.image = vorschlag.foto_id;
     const kennwort = fotoKennwort(fotos[vorschlag.foto_id].label);
     if (kennwort) kennwoerter[vorschlag.foto_id] = kennwort;
     else delete kennwoerter[vorschlag.foto_id];
-    if (altesBild && !bild.varianten.some(v => v.src === altesBild)) alteDateien.push(altesBild);
+    for (const src of alteSrcs) if (!bild.varianten.some(v => v.src === src)) alteDateien.push(src);
+    if (vorher && vorher !== vorschlag.foto_id) vorherGezeigt.add(vorher);
+    neueDateien.push(...bild.ziele);
     fertig.push(`${karte.id}: ${vorschlag.foto_id}${vorschlag.neu_export ? ' (neu gebaut)' : vorher ? ` (ersetzt ${vorher})` : ''}`);
   } catch (fehler) {
     abgelehnt.push(`${vorschlag.karte} / ${vorschlag.foto_id}: ${fehler.message}`);
@@ -104,12 +124,24 @@ for (const {vorschlag, karte} of geprueft) {
 }
 
 if (einbauen && fertig.length) {
+  // Erst jetzt kommen die Bilder nach public/ (kopieren statt umbenennen: der Arbeitsordner kann auf einem
+  // anderen Laufwerk liegen).
+  for (const {datei, ziel} of neueDateien) {
+    fs.mkdirSync(path.dirname(ziel), {recursive: true});
+    fs.copyFileSync(datei, ziel, fs.constants.COPYFILE_EXCL);
+  }
   schreibeJson(FOTOS_DATEI, fotos);
   schreibeJson(KATALOG_DATEI, katalog);
   schreibeJson(KENNWORT_DATEI, sortiert(kennwoerter));
-  for (const src of alteDateien) entferneWennUnbenutzt(src);
+  schreibeStabileFotoIds(Object.keys(fotos));
+  schreibeErsetzteFotos([...vorherGezeigt].filter(id => Object.hasOwn(fotos, id) && !wirdGezeigt(id)));
   const export_ = spawnSync(process.execPath, ['scripts/export-content.mjs'], {stdio: 'inherit'});
-  if (export_.status !== 0) abgelehnt.push('scripts/export-content.mjs ist fehlgeschlagen; Daten von Hand prüfen.');
+  if (export_.status === 0) {
+    for (const src of new Set(alteDateien)) entferneWennUnbenutzt(src);
+  } else {
+    abgelehnt.push('scripts/export-content.mjs ist fehlgeschlagen; alte Bilddateien sind noch da. Rückweg: '
+      + '„git checkout -- app public exports tests/fixtures“, dann neue Bilddateien mit „git status“ finden und löschen.');
+  }
 }
 if (vorschauOrdner && tafel.length) {
   execFileSync('montage', [...tafel, '-tile', '2x', '-geometry', '+6+6', '-background', '#ffffff', path.join(vorschauOrdner, 'tafel.jpg')]);
@@ -231,14 +263,18 @@ function warten(ms) {
 // ---------- Bilder ----------
 
 // Lädt das Bild (für einen Ausschnitt das Original), schneidet wenn verlangt zu und baut die WebP-Größen.
-// Beim Einbauen liegen sie unter public/world/<ordner>/, sonst im Arbeitsordner.
+// Gebaut wird immer im Arbeitsordner; `ziele` sagt, wohin jede Datei beim Einbauen kommt. So bleibt nach einem
+// Fehler nichts halb in public/ liegen.
 async function bildBauen(vorschlag, karte, commons) {
   const adresse = vorschlag.zuschnitt ? commons.original : commons.vorschau;
   const cacheDatei = path.join(CACHE, vorschlag.foto_id + '-' + Buffer.from(adresse).toString('base64url').slice(-24) + path.extname(new URL(adresse).pathname));
   if (!fs.existsSync(cacheDatei)) fs.writeFileSync(cacheDatei, await holen(adresse, 'bytes'));
-  // Erst drehen (Kameradaten) und Metadaten entfernen, dann Größe messen.
+  // Erst drehen (Kameradaten), nach sRGB umrechnen und Metadaten entfernen, dann Größe messen.
+  // Grenze: -colorspace rechnet z. B. CMYK und Graustufen um, ein eingebettetes Adobe-RGB-Profil aber nicht
+  // (dafür bräuchte es eine sRGB-Profildatei, die im Container fehlt). Commons-Vorschaubilder sind schon sRGB;
+  // bei einem Ausschnitt aus dem Original die Vorschau ansehen.
   const basis = path.join(arbeitsordner, vorschlag.foto_id + '-basis.png');
-  execFileSync('convert', [cacheDatei + '[0]', '-auto-orient', '-strip', basis]);
+  execFileSync('convert', [cacheDatei + '[0]', '-auto-orient', '-colorspace', 'sRGB', '-strip', basis]);
   let [w, h] = masse(basis);
   if (vorschlag.zuschnitt) {
     const z = vorschlag.zuschnitt;
@@ -248,22 +284,29 @@ async function bildBauen(vorschlag, karte, commons) {
   }
   const breiten = zielBreiten(Math.min(w, commons.breite), vorschlag.mindestbreite_ok).filter(b => b <= w);
   const ordner = ORDNER_JE_WELT[karte.category];
-  const zielOrdner = einbauen ? path.join('public/world', ordner) : arbeitsordner;
-  fs.mkdirSync(zielOrdner, {recursive: true});
   const varianten = [];
   let hoehe;
   for (const breite of breiten) {
     const name = `${vorschlag.foto_id}-${breite}.webp`;
-    const ziel = path.join(zielOrdner, name);
+    const ziel = path.join('public/world', ordner, name);
+    // Gleicher Name wie eine vorhandene Datei: auch bei einem zweiten Neu-Export desselben Fotos in derselben
+    // Breite. Dann erst die alte Datei (und ihren Eintrag) von Hand klären.
     if (einbauen && fs.existsSync(ziel)) throw new Error(`Datei gibt es schon: ${ziel}`);
+    const datei = path.join(arbeitsordner, name);
     // „>“ verkleinert nur, nie größer.
-    execFileSync('convert', [basis, '-resize', `${breite}x>`, '-quality', QUALITAET, ziel]);
-    const [vw, vh] = masse(ziel);
+    execFileSync('convert', [basis, '-resize', `${breite}x>`, '-quality', QUALITAET, datei]);
+    const [vw, vh] = masse(datei);
     if (vw !== breite) throw new Error(`${name} ist ${vw} statt ${breite} px breit`);
-    varianten.push({src: `/world/${ordner}/${name}`, width: vw, datei: ziel});
+    varianten.push({src: `/world/${ordner}/${name}`, width: vw, datei, ziel});
     hoehe = vh;
   }
-  return {breiten, hoehe, varianten: varianten.map(({src, width}) => ({src, width})), dateien: varianten.map(v => v.datei)};
+  return {
+    breiten,
+    hoehe,
+    varianten: varianten.map(({src, width}) => ({src, width})),
+    dateien: varianten.map(v => v.datei),
+    ziele: varianten.map(({datei, ziel}) => ({datei, ziel})),
+  };
 }
 
 // Zeigt, was der Kartenkopf (260 px hoch, object-fit: cover und focus) auf Handy und Rechner sichtbar lässt.
@@ -293,7 +336,8 @@ function masse(datei) {
 // Löscht eine ersetzte Bilddatei nur, wenn sie außer in den Fotodaten und Exporten nirgends mehr steht.
 function entferneWennUnbenutzt(src) {
   const treffer = spawnSync('git', ['grep', '-l', '-F', '--', src], {encoding: 'utf8'}).stdout.split('\n').filter(Boolean);
-  const andere = treffer.filter(datei => ![FOTOS_DATEI, 'public/world/photo-credits.json', 'app/world-index.json'].includes(datei) && !datei.startsWith('exports/'));
+  const abgeleitet = [FOTOS_DATEI, 'public/world/photo-credits.json', 'app/world-index.json', 'app/world-photo-core.json'];
+  const andere = treffer.filter(datei => !abgeleitet.includes(datei) && !datei.startsWith('exports/'));
   if (andere.length) {
     console.log(`  Alte Datei ${src} bleibt, sie steht noch in: ${andere.join(', ')}`);
     return;
@@ -303,6 +347,32 @@ function entferneWennUnbenutzt(src) {
 }
 
 // ---------- Dateien ----------
+
+// Steht ein Foto heute auf einer Karte oder einem Naturort? (Gleiche Regel wie tests/content-integrity.test.mjs.)
+function wirdGezeigt(id) {
+  const naturFotos = leseJson(NATUR_FOTOS_DATEI);
+  const naturOrte = leseJson(NATUR_ORTE_DATEI);
+  return katalog.some(k => k.image === id) || (Object.hasOwn(naturFotos, id) && naturOrte.some(ort => ort.id === id));
+}
+
+// Foto-IDs werden nie wiederverwendet: Die Familie photos in stable-ids.json wächst nur.
+function schreibeStabileFotoIds(ids) {
+  const stabil = leseJson(STABIL_DATEI);
+  const bisher = stabil.photos ?? [];
+  const neu = ids.filter(id => !bisher.includes(id));
+  if (!neu.length) return;
+  stabil.photos = [...bisher, ...neu];
+  // Gleiches Format wie die Datei: eine Familie je Zeile.
+  fs.writeFileSync(STABIL_DATEI, '{\n' + Object.entries(stabil).map(([k, v]) => '  ' + JSON.stringify(k) + ': ' + JSON.stringify(v)).join(',\n') + '\n}\n');
+}
+
+function schreibeErsetzteFotos(ids) {
+  const bisher = leseJson(ERSETZT_DATEI);
+  const neu = ids.filter(id => !bisher.includes(id));
+  if (!neu.length) return;
+  schreibeJson(ERSETZT_DATEI, [...bisher, ...neu]);
+  console.log(`  Ersetzt (Nachweis bleibt, Foto wird nicht mehr gezeigt): ${neu.join(', ')}`);
+}
 
 function leseJson(datei) {
   return JSON.parse(fs.readFileSync(datei, 'utf8'));

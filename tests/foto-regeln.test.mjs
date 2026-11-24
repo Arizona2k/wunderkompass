@@ -2,7 +2,7 @@
 // Urheber und Quelle passen zur Commons-Datei, nie hochskaliert.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {pruefeVorschlag, vergleicheCommons, lizenzArt, zielBreiten, fokusGueltig, pruefeZuschnitt, vereinfacht} from '../scripts/foto-regeln.mjs';
+import {pruefeVorschlag, vergleicheCommons, lizenzArt, zielBreiten, fokusGueltig, pruefeZuschnitt, vereinfacht, pruefeLizenzLink} from '../scripts/foto-regeln.mjs';
 
 const katalog = [
   {id: 'animal-orca', category: 'animals', image: 'orca'},
@@ -83,6 +83,24 @@ test('vergleicheCommons verlangt gleiche Lizenz, passenden Urheber und genug Bre
   assert.throws(() => vergleicheCommons(vorschlag(), {...commons, urheber: 'Jemand anderes'}), /Urheber weicht ab/);
   assert.doesNotThrow(() => vergleicheCommons(vorschlag({autor_abweichung_ok: 'Commons nennt das Museum'}), {...commons, urheber: 'Jemand anderes'}));
   assert.throws(() => vergleicheCommons(vorschlag(), {...commons, breite: 800}), /nur 800 px/);
+  // Urheber zählt nur als ganze Wörter: ein kurzer Name passt nicht in einen längeren.
+  assert.throws(() => vergleicheCommons(vorschlag({author: 'Ann'}), {...commons, urheber: 'Joanne Smith'}), /Urheber weicht ab/);
+  assert.doesNotThrow(() => vergleicheCommons(vorschlag({author: 'Joanne Smith'}), {...commons, urheber: 'Photo: Joanne Smith, 2019'}));
+});
+
+test('pruefeLizenzLink verlangt einen Lizenz-Link, der zur Lizenz passt', () => {
+  assert.doesNotThrow(() => pruefeLizenzLink('CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/deed.en'));
+  assert.doesNotThrow(() => pruefeLizenzLink('CC BY 2.0', 'https://creativecommons.org/licenses/by/2.0/'));
+  assert.doesNotThrow(() => pruefeLizenzLink('CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/deed.en'));
+  assert.doesNotThrow(() => pruefeLizenzLink('Public Domain', 'https://creativecommons.org/publicdomain/mark/1.0/'));
+  assert.throws(() => pruefeLizenzLink('CC BY-SA 4.0', 'https://creativecommons.org/licenses/by/4.0/'), /passt nicht/);
+  assert.throws(() => pruefeLizenzLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/3.0/'), /passt nicht/);
+  assert.doesNotThrow(() => pruefeLizenzLink('CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0'));
+  assert.doesNotThrow(() => pruefeLizenzLink('Public Domain · US-Regierungswerk (NPS)', 'https://www.nps.gov/aboutus/disclaimer.htm'));
+  assert.throws(() => pruefeLizenzLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.01/'), /passt nicht/);
+  assert.throws(() => pruefeLizenzLink('Public Domain', 'http://example.org/pd'), /passt nicht/);
+  // pruefeVorschlag prüft den Link gleich mit.
+  assert.throws(() => pruefeVorschlag(vorschlag({license_url: 'https://creativecommons.org/licenses/by/4.0/'}), bestand), /license_url passt nicht/);
 });
 
 test('zielBreiten skaliert nie hoch und lässt schmale Originale nur mit Begründung zu', () => {
@@ -91,6 +109,10 @@ test('zielBreiten skaliert nie hoch und lässt schmale Originale nur mit Begrün
   assert.throws(() => zielBreiten(800), /mindestbreite_ok/);
   assert.deepEqual(zielBreiten(800, 'NOAA-Bild, kein größeres freies Original'), [320, 640, 800]);
   assert.deepEqual(zielBreiten(640, 'Begründung'), [320, 640]);
+  // Eine dritte Größe kaum breiter als 640 wäre fast dieselbe Datei.
+  assert.deepEqual(zielBreiten(650, 'Begründung'), [320, 640]);
+  assert.deepEqual(zielBreiten(735, 'Begründung'), [320, 640]);
+  assert.deepEqual(zielBreiten(736, 'Begründung'), [320, 640, 736]);
   assert.throws(() => zielBreiten(600, 'Begründung'), /zu klein/);
 });
 

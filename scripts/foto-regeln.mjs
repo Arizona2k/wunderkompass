@@ -5,6 +5,8 @@
 export const BREITEN = [320, 640, 960];
 // Schmalere Originale gehen nur mit Begründung (Feld mindestbreite_ok) und nie unter dieser Breite.
 export const MINDESTBREITE = 640;
+// Eine dritte Größe lohnt erst, wenn sie deutlich breiter ist als 640 (sonst zwei fast gleiche Dateien offline).
+export const DRITTE_BREITE_AB = Math.ceil(MINDESTBREITE * 1.15);
 
 // Ordner unter public/world/ je Welt der Karte.
 export const ORDNER_JE_WELT = {
@@ -37,6 +39,7 @@ export function pruefeVorschlag(vorschlag, {fotos, katalog}) {
   if (vorschlag.label != null && !Object.hasOwn(LABEL_IM_BESTAND, vorschlag.label)) throw new Error(`unbekanntes label „${vorschlag.label}“`);
   if (vorschlag.focus != null && !fokusGueltig(vorschlag.focus)) throw new Error(`focus „${vorschlag.focus}“ ist keine Angabe wie „50% 20%“`);
   if (vorschlag.zuschnitt != null) pruefeZuschnitt(vorschlag.zuschnitt);
+  pruefeLizenzLink(vorschlag.license, vorschlag.license_url);
   const karte = katalog.find(k => k.id === vorschlag.karte);
   if (!karte) throw new Error('Karte nicht im Katalog');
   if (!Object.hasOwn(ORDNER_JE_WELT, karte.category)) throw new Error(`kein Bildordner für Welt ${karte.category}`);
@@ -62,7 +65,7 @@ export function vergleicheCommons(vorschlag, commons) {
   zielBreiten(commons.breite, vorschlag.mindestbreite_ok);
   const autor = vereinfacht(vorschlag.author);
   const commonsAutor = vereinfacht(commons.urheber);
-  const passt = autor && commonsAutor && (commonsAutor.includes(autor) || autor.includes(commonsAutor));
+  const passt = autor && commonsAutor && (enthaeltWoerter(commonsAutor, autor) || enthaeltWoerter(autor, commonsAutor));
   if (!passt && !vorschlag.autor_abweichung_ok) {
     throw new Error(`Urheber weicht ab: Vorschlag „${vorschlag.author}“, Commons „${commons.urheber}“ (sonst autor_abweichung_ok mit Begründung)`);
   }
@@ -74,7 +77,28 @@ export function zielBreiten(originalBreite, mindestbreiteOk) {
   if (originalBreite >= BREITEN.at(-1)) return [...BREITEN];
   if (!mindestbreiteOk) throw new Error(`Original nur ${originalBreite} px breit (mindestens ${BREITEN.at(-1)}, sonst mindestbreite_ok mit Begründung)`);
   if (originalBreite < MINDESTBREITE) throw new Error(`Original nur ${originalBreite} px breit, zu klein auch mit mindestbreite_ok (mindestens ${MINDESTBREITE})`);
-  return originalBreite === MINDESTBREITE ? [320, MINDESTBREITE] : [320, MINDESTBREITE, originalBreite];
+  return originalBreite < DRITTE_BREITE_AB ? [320, MINDESTBREITE] : [320, MINDESTBREITE, originalBreite];
+}
+
+// Der Lizenz-Link muss zur Lizenz passen, z. B. CC BY-SA 4.0 → creativecommons.org/licenses/by-sa/4.0/.
+// Gemeinfreie Bilder verweisen oft auf die Erklärung der Behörde (NASA, NPS), darum dort nur https.
+export function pruefeLizenzLink(license, licenseUrl) {
+  const art = lizenzArt(license);
+  if (!art) return;
+  const url = String(licenseUrl ?? '');
+  let passt;
+  if (art === 'cc0') passt = /^https:\/\/creativecommons\.org\/publicdomain\/zero\/1\.0(\/|$)/.test(url);
+  else if (art === 'gemeinfrei') passt = /^https:\/\/\S+$/.test(url);
+  else {
+    const [, typ, version] = art.match(/^cc (by(?:-sa)?) (\d(?:\.\d)?)$/);
+    passt = new RegExp(`^https://creativecommons\\.org/licenses/${typ}/${version.replace('.', '\\.')}(/|$)`).test(url);
+  }
+  if (!passt) throw new Error(`license_url passt nicht zur Lizenz „${license}“: ${url}`);
+}
+
+// Ganze Wörter: „ji elle“ steckt in „photo ji elle“, „ann“ aber nicht in „joanne“.
+function enthaeltWoerter(text, teil) {
+  return (' ' + text + ' ').includes(' ' + teil + ' ');
 }
 
 // Ordnet einen Lizenznamen einer erlaubten Art zu, z. B. „cc by-sa 4.0“ oder „gemeinfrei“; sonst null.
