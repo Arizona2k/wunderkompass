@@ -25,6 +25,9 @@ export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onS
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
   function waehle(neu: Stufe) {
     const knopf = aendern.current, ort = knopf?.closest('article, dialog, [role="dialog"]') ?? knopf?.ownerDocument;
+    // Zuerst auf „Ändern“, solange der gedrückte Knopf noch da ist: Sonst fällt der Fokus mit ihm weg und landet
+    // bis zum nächsten Bild auf dem Pass-Dialog (CI, WebKit, 24.11.2026). Baut die Karte neu auf, hilft der Schritt danach.
+    knopf?.focus();
     onStufe(neu);
     setOffen(false);
     requestAnimationFrame(() => (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus());

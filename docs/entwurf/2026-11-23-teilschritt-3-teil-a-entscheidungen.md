@@ -133,6 +133,13 @@ Code-Nachprüfung des Design-Commits `00feeff` ([Bericht](2026-11-24-teil-a-code
 - Der erste `core`-Lauf nach `00feeff` (`core-a13`) wurde von mir nach 201 s abgebrochen, weil beide Befunde ohnehin einen neuen Lauf brauchten; vorher stand kein Fehler im Log.
 - Prüfung auf dem Endstand `01bf03a` (24.11.2026): `pnpm run check` grün (`check-a14`: 437 Unit-Tests, CI-Satz in Chromium, WebKit-Kurzprüfung), danach `--suite full core` grün (`core-a15`, 927 s), dazu die zwei geänderten Suiten `wissenskarte` und `pass-spielstaende` in Firefox und WebKit grün (`engines-a16`). Die Antwortliste `gespeicherte-antworten-teil-a.json` ist unverändert aktuell (neu erzeugt und verglichen: gleich, 287 Fragen).
 
+## Dritter später Fund: CI von PR #107, Engine-Schnellprüfung WebKit (`pass-spielstaende`)
+
+- **Befund:** Im ersten CI-Lauf von PR #107 (Lauf 45311674318, Commit `5ff3cec`) war „Engine-Schnellprüfung (webkit)“ rot: „der Fokus bleibt in der Stufenwahl“ (`pass-spielstaende.mjs:145`, nach „Zu schwer? Zurück zu Entdecker“ im Pass). Pflicht-Check und Firefox waren grün. Hier in WebKit vorher einmal (`engines-a16`) und jetzt sechsmal allein grün; der Fokus stand dabei jedes Mal sofort auf „Ändern“.
+- **Ursache:** `waehle` in `app/kern/stufen-wahl.tsx` setzte den Fokus auf „Ändern“ nur im nächsten Bild (`requestAnimationFrame`). Der Speicher meldet die neue Stufe sofort, also verschwindet „Zurück zu Entdecker“ noch im Tipp. Der Fokus fiel mit dem Knopf weg, und die Fokusfalle des Pass-Dialogs (Radix) setzte ihn auf den Dialog. Erst im nächsten Bild kam er auf „Ändern“. Der Test prüft direkt danach; in der CI (zwei Suiten gleichzeitig) kam das Bild zu spät. Nachgestellt mit künstlich um 150 ms verzögertem `requestAnimationFrame`: derselbe Fehler nach rund 3 s, in WebKit und Chromium.
+- **Korrektur auf der Seite, nicht im Test:** Anders als beim ersten späten Fund (dort stellt die Seite mit Absicht erst im nächsten Bild wieder her) war der kurze Sprung auf den Dialog ein echter kleiner Mangel; ein Bildschirmleser kann dabei den Dialog vorlesen. `waehle` setzt den Fokus jetzt zuerst auf „Ändern“, solange der gedrückte Knopf noch da ist. Der Schritt im nächsten Bild bleibt als Rückfall für die Karte, die beim Wechsel neu aufbauen kann. Der Test bleibt unverändert streng. Gegenprobe mit verzögertem Bild: jetzt grün in WebKit, Chromium und Firefox.
+- **Prüfung:** `pnpm run check` läuft (`check-a17`); danach `wissenskarte` und `pass-spielstaende` in Firefox und WebKit. Nachprüfung durch den `technik-pruefer` beauftragt (Regel nach spätem Fund).
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
