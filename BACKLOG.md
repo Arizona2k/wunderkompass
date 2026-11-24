@@ -327,6 +327,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 - Merian-Porträt (Original nicht abrufbar), Lehmann-Foto (Lizenz unbelegt), Pont/Sydney-Aufnahmen: nur eigene gekennzeichnete Grafiken, bis ein freies Original gefunden ist (`bild-recherche`).
 
 - **Spiel-Fokus früh prüfen** (Technik-Prüfung, [später Fund PR 2](docs/entwurf/2026-11-24-teil-b-pr2-technik-spaeter-fund.md)): kleine CI-Suite `spiel-fokus` (geschätzt 10 bis 20 s) für den Weg „Spiel offen, Spielen in der Leiste, direkt und über Welt, Neuladen und Fortsetzen“ an einem Spiel; `playground` bleibt in der Vollprüfung. Gehört in den Technik-PR.
+- **Spieltest PR 2, Feinschliff 6 bis 9** ([Bericht](docs/entwurf/2026-11-24-teil-b-pr2-spieltest.md)): (6) zwei gleiche Fortsetzen-Knöpfe in der Spiele-Übersicht; (7) Fortschrittsbalken in „Kreuz und quer“ sieht anders aus als in den anderen Spielen, bei 0 wirkt er voll (im Design-Schritt vereinheitlichen); (8) „Zu schwer? Zurück zu Entdecker“ auch auf Experte prüfen (Profi wäre die nächste Stufe); (9) bei Entdecker verrät die Rückmeldung zur falschen Antwort manchmal die richtige. Dazu die Ratemuster-Hinweise (Vorsichts- und Verneinungs-Antworten, Zwillings-Antworten) an den `stufen-pruefer` für PR 3.
 - **Nach falscher Antwort Rückmeldung in den Blick** (Spieltest PR 2, Befund 3, Rest): Auf dem Handy liegt die Erklärung nach einer falschen Antwort unter dem Bildrand. Erst im Design-Schritt lösen, weil dabei die Antworten nach oben rutschen und der Spielaufbau ohnehin neu wird.
 
 ## Ideen-Sammlung
