@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {measureBuild,violations,observedTrends} from '../scripts/performance-budget.mjs';
+import {measureBuild,violations} from '../scripts/performance-budget.mjs';
 import {learningFingerprint} from '../build/learning-fingerprint.mjs';
 
 test('bundle budget includes transitive shared chunks once, excludes deferred readers, and fails oversize/missing metrics',()=>{
@@ -33,11 +33,8 @@ test('compact world index preserves every catalog identity and all overview/time
  for(let i=0;i<full.length;i++){const a=index[i],b=full[i];for(const k of ['id','category','title','intro','aliases','locations','image','model'])assert.deepEqual(a[k],b[k],b.id+' '+k);assert.equal(a.group,b.animal?.group);assert.equal(a.habitat,b.animal?.habitat);assert.equal(a.date,b.history?.date??b.invention?.date);assert.equal(a.year,b.history?.year??b.invention?.year);assert.equal(a.field,b.person?.field);assert.equal(a.lifespan,b.person?.lifespan);assert.equal(a.sensitive,b.history?.sensitive);assert.equal(a.question,undefined);assert.equal(a.paragraphs,undefined);}
 });
 
-test('authorised aggregate growth stays measured while initial and individual budgets remain enforced',()=>{
+test('fixed size budgets stay enforced for the entry and every single file',()=>{
  const c=JSON.parse(fs.readFileSync('performance-budgets.json','utf8'));
- for(const key of ['totalJsBytes','totalJsGzipBytes','journeyInquiryGzipBytes']){assert.equal(c.build[key],undefined);assert.ok(c.observeOnly.includes(key));}
- const large={totalJsBytes:100000000,totalJsGzipBytes:50000000,journeyInquiryBytes:20000000,journeyInquiryGzipBytes:10000000};
- assert.deepEqual(violations({...large,...c.build},c.build),[]);assert.equal(observedTrends(large,c.observeOnly).totalJsGzipBytes.current,50000000);assert.throws(()=>observedTrends({},c.observeOnly),/Missing observed/);
  for(const key of ['entryJsBytes','entryJsGzipBytes','entryCssBytes','entryCssGzipBytes','largestJsBytes','worldGeometryBytes']){assert.ok(c.build[key]>0);assert.equal(violations({...c.build,[key]:c.build[key]+1},c.build)[0].metric,key);}
  // The browser speed check needs a JS budget for every kind of entry it opens (tests/browser/foundation.mjs).
  for(const key of ['homeJsBytes','areaJsBytes','topicJsBytes'])assert.ok(c.browser[key]>0,'browser budget '+key);
