@@ -281,47 +281,8 @@
       "Unterscheide heiß von flüssig und Magma von Lava.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-magnetism"
-  },
-  {
-    "game": "detective",
-    "level": "easy",
-    "id": "detective-easy-coral",
-    "prompt": "„Korallen sind Tiere.“ Stimmt das?",
-    "answers": [
-      "Stimmt",
-      "Stimmt nicht"
-    ],
-    "correct": "Stimmt",
-    "wrongReasons": {
-      "Stimmt nicht": "Eine feste Stelle am Meeresboden macht ein Lebewesen nicht automatisch zur Pflanze."
-    },
-    "why": "Korallenpolypen sind Tiere. Viele leben mit Algen zusammen, bleiben aber selbst Tiere.",
-    "hints": [
-      "Beurteile ein Lebewesen nicht nur danach, ob es sich fortbewegt.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-coral-reef"
-  },
-  {
-    "game": "detective",
-    "level": "easy",
-    "id": "detective-easy-evaporation",
-    "prompt": "„Wasser kann verdunsten, ohne zu kochen.“ Stimmt das?",
-    "answers": [
-      "Stimmt",
-      "Stimmt nicht"
-    ],
-    "correct": "Stimmt",
-    "wrongReasons": {
-      "Stimmt nicht": "Verdunsten ist nicht dasselbe wie Kochen. Auch eine Pfütze kann ohne Kochen kleiner werden."
-    },
-    "why": "Beim Verdunsten gelangt flüssiges Wasser als Wasserdampf in die Luft. Das geschieht auch unterhalb der Siedetemperatur.",
-    "hints": [
-      "Vergleiche eine trocknende Pfütze mit einem kochenden Topf.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-water-cycle"
+    "topic": "science-magnetism",
+    "ruht": true
   },
   {
     "game": "detective",
@@ -341,7 +302,8 @@
       "Unterscheide Wasser als Gas, Flüssigkeit und Eis.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-water-cycle"
+    "topic": "science-water-cycle",
+    "ruht": true
   },
   {
     "game": "detective",
@@ -363,51 +325,8 @@
       "Ein Merkmal beweist nicht automatisch ein anderes. Suche einen Gegenvergleich.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-magnetism"
-  },
-  {
-    "game": "detective",
-    "level": "medium",
-    "id": "detective-medium-coral",
-    "prompt": "Algen liefern Nahrung an eine Koralle. Was lässt sich daraus schließen?",
-    "answers": [
-      "Zwei verschiedene Lebewesen arbeiten zusammen",
-      "Gleiche Nahrung macht beide zur selben Art",
-      "Ein Tier muss seine Nahrung immer allein herstellen"
-    ],
-    "correct": "Zwei verschiedene Lebewesen arbeiten zusammen",
-    "wrongReasons": {
-      "Gleiche Nahrung macht beide zur selben Art": "Zusammenarbeit und Nahrungslieferung ändern nicht die Artzugehörigkeit.",
-      "Ein Tier muss seine Nahrung immer allein herstellen": "Tiere stellen ihre Nahrung nicht wie Pflanzen durch Fotosynthese her. Sie können auch von Partnern profitieren."
-    },
-    "why": "Die Zusammenarbeit heißt Symbiose. Algen nutzen Licht; die Koralle bietet ihnen einen geschützten Platz.",
-    "hints": [
-      "Trenne die Aufgabe eines Partners von der Art des anderen Partners.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-coral-reef"
-  },
-  {
-    "game": "detective",
-    "level": "medium",
-    "id": "detective-medium-water",
-    "prompt": "Auf einem kalten Glas entstehen außen Tropfen. Welche Erklärung passt?",
-    "answers": [
-      "Wasserdampf aus der Luft wird flüssig",
-      "Das Glas erzeugt neues Wasser",
-      "Unsichtbares Wasser ist unmöglich"
-    ],
-    "correct": "Wasserdampf aus der Luft wird flüssig",
-    "wrongReasons": {
-      "Das Glas erzeugt neues Wasser": "Das Wasser stammt aus der feuchten Luft, nicht aus einer Neuschöpfung im Glas.",
-      "Unsichtbares Wasser ist unmöglich": "Wasser kann als unsichtbares Gas in der Luft vorhanden sein."
-    },
-    "why": "An einer kalten Oberfläche kann Wasserdampf zu flüssigen Tröpfchen kondensieren. Das Glas muss dafür nicht undicht sein.",
-    "hints": [
-      "Überlege, woher das Wasser außen kommen könnte, ohne durch das Glas zu fließen.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-water-cycle"
+    "topic": "science-magnetism",
+    "ruht": true
   },
   {
     "game": "detective",
@@ -429,7 +348,8 @@
       "Vergleiche, wie lange und in welchem Winkel Sonnenlicht den Boden erreicht.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-seasons"
+    "topic": "science-seasons",
+    "ruht": true
   },
   {
     "game": "detective",
@@ -451,51 +371,8 @@
       "Eine mögliche Erklärung ist nicht automatisch der einzige Weg.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-water-cycle"
-  },
-  {
-    "game": "detective",
-    "level": "hard",
-    "id": "detective-hard-seasons",
-    "prompt": "In Deutschland ist Winter. Folgt daraus, dass überall auf der Erde Winter ist?",
-    "answers": [
-      "Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit",
-      "Ja, ein kalter Ort beweist globale Kälte",
-      "Ja, beide Halbkugeln sind immer gleich zur Sonne geneigt"
-    ],
-    "correct": "Nein, die Südhalbkugel hat die entgegengesetzte Jahreszeit",
-    "wrongReasons": {
-      "Ja, ein kalter Ort beweist globale Kälte": "Von einer Beobachtung in Deutschland kann man nicht auf alle anderen Regionen schließen.",
-      "Ja, beide Halbkugeln sind immer gleich zur Sonne geneigt": "Durch die Erdachse ist im Jahreslauf jeweils eine Halbkugel stärker zur Sonne gewandt."
-    },
-    "why": "Während auf der Nordhalbkugel Winter ist, ist auf der Südhalbkugel Sommer. Ein lokaler Eindruck gilt nicht automatisch für die ganze Erde.",
-    "hints": [
-      "Unterscheide Beobachtung an einem Ort und Schluss über die ganze Erde.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-seasons"
-  },
-  {
-    "game": "detective",
-    "level": "hard",
-    "id": "detective-hard-coral",
-    "prompt": "Eine Koralle ist weiß geworden. „Sie ist sicher schon tot“, sagt jemand. Ist dieser Schluss zuverlässig?",
-    "answers": [
-      "Nein, Bleiche zeigt Stress, aber nicht sicher den Tod",
-      "Ja, eine Farbänderung beweist immer den Tod",
-      "Nein, Bleiche hat niemals Folgen für Korallen"
-    ],
-    "correct": "Nein, Bleiche zeigt Stress, aber nicht sicher den Tod",
-    "wrongReasons": {
-      "Ja, eine Farbänderung beweist immer den Tod": "Gebleichte Korallen können noch leben. Ein Warnsignal ist kein sicherer Nachweis des Todes.",
-      "Nein, Bleiche hat niemals Folgen für Korallen": "Bleiche bedeutet Stress und kann das Überleben gefährden; sie ist nicht harmlos."
-    },
-    "why": "Korallenbleiche entsteht beim Verlust von Partneralgen. Sie ist ein Warnsignal; ob die Koralle überlebt, hängt von weiteren Bedingungen ab.",
-    "hints": [
-      "Unterscheide ein Warnsignal von einem endgültigen Ergebnis.",
-      "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
-    ],
-    "topic": "science-coral-reef"
+    "topic": "science-water-cycle",
+    "ruht": true
   },
   {
     "game": "detective",
@@ -517,6 +394,891 @@
       "Prüfe, ob die Beobachtung nur einen Teil oder wirklich das Ganze betrifft.",
       "Vergleiche jede Möglichkeit mit den Angaben. Welche passt zur gesamten Situation?"
     ],
-    "topic": "science-magnetism"
+    "topic": "science-magnetism",
+    "ruht": true
+  },
+  {
+    "id": "detective-easy-coral",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Korallen sind Tiere.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Korallen sitzen fest und sehen aus wie Steine. Trotzdem sind sie Tiere."
+    },
+    "why": "Die meisten Korallen bestehen aus vielen winzigen Tieren. Sie heißen Polypen.",
+    "hints": [
+      "Was können Tiere, was Steine nicht können?",
+      "Eine Koralle besteht aus vielen winzigen Wesen. Jedes hat einen Mund und kleine Fangarme."
+    ],
+    "topic": "science-coral-reef",
+    "quelle": [
+      {
+        "label": "NOAA: Are corals animals or plants?",
+        "url": "https://oceanservice.noaa.gov/facts/coral.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-easy-evaporation",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Wasser kann in die Luft verschwinden, ohne zu kochen.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Eine Pfütze trocknet in der Sonne. Dabei kocht sie nicht."
+    },
+    "why": "Schon die Wärme der Sonne reicht. Das Wasser wird zu Dampf, den man nicht sehen kann.",
+    "hints": [
+      "Denk an nasse Wäsche auf der Leine.",
+      "Am Abend ist die Wäsche trocken. Hat jemand sie gekocht?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NOAA: Water cycle (Zustandswechsel, Versickern)",
+        "url": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle"
+      },
+      {
+        "label": "USGS: The Water Cycle",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
+      }
+    ]
+  },
+  {
+    "id": "detective-jahreszeiten-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Wenn bei uns Sommer ist, ist in Australien auch Sommer.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Australien liegt weit weg auf der anderen Hälfte der Erde. Dort ist dann Winter."
+    },
+    "why": "Auf der Südhälfte der Erde sind die Jahreszeiten andersherum. Dort ist im Juli Winter.",
+    "hints": [
+      "Deutschland liegt auf der Nordhälfte der Erde. Australien liegt auf der Südhälfte.",
+      "Im Dezember baden viele Kinder in Australien im Meer. Ist bei uns im Dezember Sommer?"
+    ],
+    "topic": "science-seasons",
+    "quelle": [
+      {
+        "label": "NASA Space Place: What causes the seasons?",
+        "url": "https://spaceplace.nasa.gov/seasons/en/"
+      }
+    ]
+  },
+  {
+    "id": "detective-pflanzen-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Pflanzen machen ihre Nahrung selbst. Dafür brauchen sie Licht.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Pflanzen haben keinen Mund. Sie machen ihr Futter in den grünen Blättern selbst."
+    },
+    "why": "Grüne Blätter fangen Licht ein. Damit machen sie Zucker. Dafür nehmen sie Wasser und ein Gas aus der Luft.",
+    "hints": [
+      "Hast du schon einmal eine Pflanze essen sehen?",
+      "Stell dir vor, eine Pflanze steht lange in einem dunklen Schrank. Was passiert mit ihr?"
+    ],
+    "topic": "science-photosynthesis",
+    "quelle": [
+      {
+        "label": "Kew: What is photosynthesis?",
+        "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
+      },
+      {
+        "label": "Arizona State University, Ask A Biologist: Recipe for plant growth",
+        "url": "https://askabiologist.asu.edu/recipe-plant-growth"
+      }
+    ]
+  },
+  {
+    "id": "detective-pilze-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Pilze sind Pflanzen.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Pilze wachsen im Boden wie Pflanzen. Trotzdem sind sie etwas anderes."
+    },
+    "why": "Pilze sind eine eigene Gruppe von Lebewesen. Sie machen ihre Nahrung nicht mit Licht.",
+    "hints": [
+      "Schau dir einen Pilz genau an: Hat er grüne Blätter?",
+      "Pflanzen machen ihre Nahrung mit Licht. Viele Pilze holen sie sich aus totem Laub und Holz."
+    ],
+    "topic": "science-fungi",
+    "quelle": [
+      {
+        "label": "Kew: Why fungi matter",
+        "url": "https://growwild.kew.org/championing-nature/fungi/why-fungi-matter"
+      }
+    ]
+  },
+  {
+    "id": "detective-luft-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Je höher du auf einen Berg steigst, desto dünner wird die Luft.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt",
+    "wrongReasons": {
+      "Stimmt nicht": "Oben auf hohen Bergen ist weniger Luft als unten im Tal."
+    },
+    "why": "Unten am Boden ist am meisten Luft. Hoch oben ist viel weniger. Das nennt man dünne Luft.",
+    "hints": [
+      "Denk an sehr hohe Berge. Dort oben fällt das Atmen schwerer.",
+      "Ganz oben geht die Lufthülle in den Weltraum über. Dort gibt es fast keine Luft."
+    ],
+    "topic": "science-atmosphere",
+    "quelle": [
+      {
+        "label": "UCAR Center for Science Education: Layers of Earth's Atmosphere",
+        "url": "https://scied.ucar.edu/learning-zone/atmosphere/layers-earths-atmosphere"
+      },
+      {
+        "label": "NASA: Earth's Atmosphere – A Multi-layered Cake",
+        "url": "https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/"
+      }
+    ]
+  },
+  {
+    "id": "detective-meer-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Ebbe und Flut macht der Wind.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Wind macht Wellen. Ebbe und Flut macht vor allem der Mond."
+    },
+    "why": "Der Mond zieht am Wasser im Meer. Darum steigt und sinkt das Wasser an vielen Küsten.",
+    "hints": [
+      "Ebbe und Flut kommen immer wieder, wie in einem Takt. Etwas am Himmel gibt den Takt vor.",
+      "Ebbe und Flut kommen jeden Tag fast eine Stunde später. Der Mond geht auch jeden Tag später auf."
+    ],
+    "topic": "science-tides",
+    "quelle": [
+      {
+        "label": "NOAA: What are tides?",
+        "url": "https://oceanservice.noaa.gov/facts/tides.html"
+      },
+      {
+        "label": "NOAA Tutorial: Tides and Water Levels – What causes tides? (Sonne etwa halb so stark)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html"
+      },
+      {
+        "label": "NOAA: Frequency of Tides (Mondtag 24 Std. 50 Min.)",
+        "url": "https://oceanservice.noaa.gov/facts/tidefrequency.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-wasser-1",
+    "game": "detective",
+    "level": "easy",
+    "stufe": "entdecker",
+    "prompt": "„Wenn eine Pfütze trocknet, ist ihr Wasser für immer weg.“ Stimmt das?",
+    "answers": [
+      "Stimmt",
+      "Stimmt nicht"
+    ],
+    "correct": "Stimmt nicht",
+    "wrongReasons": {
+      "Stimmt": "Das Wasser ist nicht verschwunden. Es ist nur an einem anderen Ort."
+    },
+    "why": "Das Wasser steigt als Dampf auf oder sickert in den Boden. Später kann es wieder als Regen fallen.",
+    "hints": [
+      "Wohin könnte das Wasser gegangen sein: nach oben oder nach unten?",
+      "Aus Wasserdampf werden Wolken. Was fällt aus Wolken herunter?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NOAA: Water cycle (Zustandswechsel, Versickern)",
+        "url": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle"
+      },
+      {
+        "label": "USGS: The Water Cycle",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
+      }
+    ]
+  },
+  {
+    "id": "detective-medium-water",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Auf einem kalten Glas entstehen außen Tropfen. Welche Erklärung passt?",
+    "answers": [
+      "Das Getränk sickert langsam durch das Glas",
+      "Wasserdampf aus der Luft wird flüssig",
+      "Das Glas schwitzt wie ein Mensch",
+      "Die Kälte verwandelt sich in Wasser"
+    ],
+    "correct": "Wasserdampf aus der Luft wird flüssig",
+    "wrongReasons": {
+      "Das Getränk sickert langsam durch das Glas": "Glas lässt kein Wasser durch. Sonst würde es ja auslaufen.",
+      "Das Glas schwitzt wie ein Mensch": "Man sagt das manchmal so. Aber ein Glas hat keine Haut, die schwitzen kann.",
+      "Die Kälte verwandelt sich in Wasser": "Kälte ist kein Ding wie Wasser. Aus Kälte allein wird nichts Nasses."
+    },
+    "why": "In der Luft ist unsichtbarer Wasserdampf. Am kalten Glas kühlt er ab und wird zu Tropfen.",
+    "hints": [
+      "Auch ein leeres, kaltes Glas wird außen nass.",
+      "Denk an eine Wolke: Kühlt feuchte Luft ab, entstehen Tröpfchen."
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NASA Science für Kinder: How do clouds form?",
+        "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      },
+      {
+        "label": "NOAA: Water cycle (Zustandswechsel, Versickern)",
+        "url": "https://www.noaa.gov/education/resource-collections/freshwater/water-cycle"
+      }
+    ]
+  },
+  {
+    "id": "detective-medium-coral",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Kleine Algen leben in einer Koralle und geben ihr Nahrung. Was stimmt?",
+    "answers": [
+      "Die Koralle wird dadurch zur Pflanze",
+      "Zwei verschiedene Lebewesen arbeiten zusammen",
+      "Nur die Koralle hat etwas davon",
+      "Die Koralle muss dann nie mehr selbst fressen"
+    ],
+    "correct": "Zwei verschiedene Lebewesen arbeiten zusammen",
+    "wrongReasons": {
+      "Die Koralle wird dadurch zur Pflanze": "Die Koralle bleibt ein Tier. Die Algen wohnen nur bei ihr.",
+      "Die Koralle muss dann nie mehr selbst fressen": "Korallen fangen auch selbst Futter. Dafür haben sie kleine Fangarme.",
+      "Nur die Koralle hat etwas davon": "Auch die Algen bekommen etwas. Wo wohnen sie denn?"
+    },
+    "why": "Die Koralle gibt den Algen eine Wohnung. Die Algen geben ihr Nahrung. So ein Zusammenleben heißt Symbiose.",
+    "hints": [
+      "Wer wohnt hier bei wem? Und wer gibt wem etwas?",
+      "Die Algen ziehen in die Koralle ein. Was bekommen sie dort wohl?"
+    ],
+    "topic": "science-coral-reef",
+    "quelle": [
+      {
+        "label": "NOAA: Are corals animals or plants?",
+        "url": "https://oceanservice.noaa.gov/facts/coral.html"
+      },
+      {
+        "label": "NOAA: What is coral bleaching?",
+        "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      }
+    ],
+    "gruppe": "algen"
+  },
+  {
+    "id": "detective-hard-seasons",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "profi",
+    "prompt": "In Deutschland ist Winter. Ist dann überall auf der Erde Winter?",
+    "answers": [
+      "Ja, im Dezember ist es auf der ganzen Erde kalt",
+      "Nein, in Australien ist dann Sommer",
+      "Nein, in Australien ist dann Frühling",
+      "Nein, nur in kalten Ländern ist dann Winter"
+    ],
+    "correct": "Nein, in Australien ist dann Sommer",
+    "wrongReasons": {
+      "Ja, im Dezember ist es auf der ganzen Erde kalt": "Im Dezember ist es nicht überall kalt. Die Südhälfte der Erde hat dann eine andere Jahreszeit.",
+      "Nein, in Australien ist dann Frühling": "Australien hat wirklich eine andere Jahreszeit. Aber nicht den Frühling.",
+      "Nein, nur in kalten Ländern ist dann Winter": "Auch in warmen Ländern im Norden, zum Beispiel in Ägypten, ist dann Winter. Und kalte Orte im Süden haben dann Sommer."
+    },
+    "why": "Hat die Nordhälfte der Erde Winter, hat die Südhälfte Sommer. Australien liegt auf der Südhälfte.",
+    "hints": [
+      "Die Erde hat eine Nordhälfte und eine Südhälfte. Auf welcher liegt Deutschland?",
+      "Denk an ein Kind in Australien. Was zieht es im Dezember an?"
+    ],
+    "topic": "science-seasons",
+    "quelle": [
+      {
+        "label": "NASA Space Place: What causes the seasons?",
+        "url": "https://spaceplace.nasa.gov/seasons/en/"
+      }
+    ]
+  },
+  {
+    "id": "detective-hard-coral",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "profi",
+    "prompt": "Eine Koralle ist ganz weiß geworden. Jemand sagt: „Die ist tot.“ Ist das sicher so?",
+    "answers": [
+      "Ja, weiß heißt: Sie lebt nicht mehr",
+      "Nein, sie kann sich noch erholen",
+      "Nein, weiß ist ihre gesunde Farbe",
+      "Ja, sie ist zu Stein geworden"
+    ],
+    "correct": "Nein, sie kann sich noch erholen",
+    "wrongReasons": {
+      "Ja, weiß heißt: Sie lebt nicht mehr": "Eine weiße Koralle kann noch leben. Sie hat nur ihre Algen verloren.",
+      "Nein, weiß ist ihre gesunde Farbe": "Gesunde Korallen sind bunt. Ihre Farbe kommt von den Algen.",
+      "Ja, sie ist zu Stein geworden": "Das Weiße ist ihr Kalkgerüst. Das hatte sie schon vorher. Man sieht es jetzt nur, weil die bunten Algen fehlen."
+    },
+    "why": "Ist das Meer zu warm, verliert die Koralle ihre Algen und wird weiß. Wird das Wasser bald wieder kühler, kann sie sich erholen. Dauert es zu lange, stirbt sie.",
+    "hints": [
+      "Warum war die Koralle vorher bunt? Wer hat in ihr gewohnt?",
+      "Ein Mensch wird blass, wenn ihm übel ist. Bleibt er dann für immer blass?"
+    ],
+    "topic": "science-coral-reef",
+    "quelle": [
+      {
+        "label": "NOAA: What is coral bleaching?",
+        "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      },
+      {
+        "label": "NOAA: Corals Tutorial – Introduction (Kalkskelett)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_corals/coral01_intro.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-jahreszeiten-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Warum wärmt die Sonne bei uns im Winter weniger als im Sommer?",
+    "answers": [
+      "Die Erde ist weiter weg, und die Tage sind kürzer",
+      "Die Sonne steht tiefer, und die Tage sind kürzer",
+      "Die Sonne selbst gibt im Winter weniger Licht ab",
+      "Kalte Luft lässt weniger Sonnenlicht durch"
+    ],
+    "correct": "Die Sonne steht tiefer, und die Tage sind kürzer",
+    "wrongReasons": {
+      "Kalte Luft lässt weniger Sonnenlicht durch": "Kalte Luft ist genauso durchsichtig wie warme. Am Licht ändert sie fast nichts.",
+      "Die Sonne selbst gibt im Winter weniger Licht ab": "Die Sonne leuchtet das ganze Jahr fast gleich hell. Bei uns kommt im Winter nur weniger davon an.",
+      "Die Erde ist weiter weg, und die Tage sind kürzer": "Die Tage sind kürzer, das stimmt. Aber im Januar ist die Erde der Sonne sogar am nächsten."
+    },
+    "why": "Die Sonne steht tiefer, und ihr Licht verteilt sich auf mehr Boden. Dazu sind die Tage kürzer.",
+    "hints": [
+      "Wie hoch steht die Sonne mittags im Sommer? Und wie hoch im Winter?",
+      "Leuchte mit einer Taschenlampe gerade auf den Tisch und dann schräg. Wann ist der Lichtfleck größer und blasser?"
+    ],
+    "topic": "science-seasons",
+    "quelle": [
+      {
+        "label": "NASA Space Place: What causes the seasons?",
+        "url": "https://spaceplace.nasa.gov/seasons/en/"
+      },
+      {
+        "label": "NASA Goddard: Solar Irradiance Science (Schwankung etwa 0,1 %)",
+        "url": "https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science"
+      }
+    ]
+  },
+  {
+    "id": "detective-luft-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Ein Kind sagt: „Die Luft hört oben plötzlich auf, wie unter einem Deckel.“ Was stimmt?",
+    "answers": [
+      "Über den Wolken gibt es keine Luft mehr",
+      "Die Luft hört an der Ozonschicht auf",
+      "Über den Flugzeugen ist noch etwas Luft",
+      "Ganz oben wird die Luft wieder dichter"
+    ],
+    "correct": "Über den Flugzeugen ist noch etwas Luft",
+    "wrongReasons": {
+      "Über den Wolken gibt es keine Luft mehr": "Große Flugzeuge fliegen über den meisten Wolken. Sie brauchen dort Luft zum Fliegen.",
+      "Die Luft hört an der Ozonschicht auf": "Die Ozonschicht ist ein Teil der Luft. Sie schützt uns vor starken Sonnenstrahlen. Darüber gibt es noch mehr Luft.",
+      "Ganz oben wird die Luft wieder dichter": "Je höher, desto weniger Luft. Ganz oben ist sie am dünnsten."
+    },
+    "why": "Die Luft wird nach oben immer dünner. Irgendwann beginnt der Weltraum. Eine scharfe Grenze gibt es nicht.",
+    "hints": [
+      "Denk an einen hohen Berg. Ist die Luft oben anders als unten?",
+      "Ein Deckel hat eine harte Kante. Gibt es so eine Kante am Himmel?"
+    ],
+    "topic": "science-atmosphere",
+    "quelle": [
+      {
+        "label": "UCAR Center for Science Education: Layers of Earth's Atmosphere",
+        "url": "https://scied.ucar.edu/learning-zone/atmosphere/layers-earths-atmosphere"
+      },
+      {
+        "label": "NASA: Earth's Atmosphere – A Multi-layered Cake",
+        "url": "https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/"
+      }
+    ]
+  },
+  {
+    "id": "detective-meer-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Ein Kind sagt: „Bei Ebbe und Flut zieht auch die Sonne mit.“ Stimmt das?",
+    "answers": [
+      "Nein, die Sonne ist dafür zu weit weg",
+      "Ja, aber schwächer als der Mond",
+      "Nein, das macht vor allem der Wind",
+      "Ja, sogar stärker als der Mond"
+    ],
+    "correct": "Ja, aber schwächer als der Mond",
+    "wrongReasons": {
+      "Nein, die Sonne ist dafür zu weit weg": "Die Sonne ist sehr weit weg, aber riesig. Darum zieht sie trotzdem mit.",
+      "Nein, das macht vor allem der Wind": "Wind kann das Wasser höher drücken. Ebbe und Flut gibt es aber auch ohne Wind.",
+      "Ja, sogar stärker als der Mond": "Bei Ebbe und Flut wirkt der Mond stärker. Er ist viel näher an der Erde."
+    },
+    "why": "Mond und Sonne machen beide Ebbe und Flut. Der Mond wirkt stärker, die Sonne etwa halb so stark.",
+    "hints": [
+      "Denk daran, wie riesig die Sonne ist.",
+      "Bei Vollmond und Neumond ist die Flut besonders hoch. Was steht dann mit dem Mond in einer Linie?"
+    ],
+    "topic": "science-tides",
+    "quelle": [
+      {
+        "label": "NOAA Tutorial: Tides and Water Levels – What causes tides? (Sonne etwa halb so stark)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html"
+      },
+      {
+        "label": "NOAA: What are tides?",
+        "url": "https://oceanservice.noaa.gov/facts/tides.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-meer-3",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Jemand sagt: „Auch tief unten im Meer strömt Wasser.“ Stimmt das?",
+    "answers": [
+      "Ja, aber nur bei Sturm",
+      "Nein, in der Tiefe steht das Wasser still",
+      "Ja, auch ohne Wind und Sturm",
+      "Nein, unten bewegen nur Fische das Wasser"
+    ],
+    "correct": "Ja, auch ohne Wind und Sturm",
+    "wrongReasons": {
+      "Ja, aber nur bei Sturm": "Ein Sturm wühlt vor allem das Wasser oben auf. Tief unten merkt man davon wenig.",
+      "Nein, unten bewegen nur Fische das Wasser": "Fische bewegen nur ein bisschen Wasser um sich herum. Die Strömungen in der Tiefe sind viel größer.",
+      "Nein, in der Tiefe steht das Wasser still": "Unter den Wellen gibt es Strömungen. Sie sind langsam, aber sie hören nicht auf."
+    },
+    "why": "Auch tief unten fließt Wasser, ganz langsam. So wandert es durch alle Meere der Welt.",
+    "hints": [
+      "Wellen macht der Wind. Gibt es unten im Meer auch Bewegung?",
+      "Denk an Flüsse an Land. Könnte es so etwas auch im Meer geben?"
+    ],
+    "topic": "science-currents",
+    "quelle": [
+      {
+        "label": "NOAA: What is a current?",
+        "url": "https://oceanservice.noaa.gov/facts/current.html"
+      },
+      {
+        "label": "NOAA Tutorial: The Global Conveyor Belt (Salz bleibt beim Gefrieren zurück, Wasser sinkt)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_currents/05conveyor2.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-pflanzen-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Jemand sagt: „Blütenstaub tragen immer Tiere.“ Welche Pflanze zeigt, dass das nicht stimmt?",
+    "answers": [
+      "Der Apfelbaum",
+      "Das Wiesengras",
+      "Der Kürbis",
+      "Der Kirschbaum"
+    ],
+    "correct": "Das Wiesengras",
+    "wrongReasons": {
+      "Der Apfelbaum": "Apfelblüten brauchen Bienen und andere Insekten als Boten.",
+      "Der Kirschbaum": "Kirschblüten brauchen Bienen und andere Insekten, die den Blütenstaub tragen.",
+      "Der Kürbis": "Kürbisblüten brauchen Bienen. Ihr Blütenstaub ist klebrig und fliegt nicht mit dem Wind."
+    },
+    "why": "Auch Gras blüht, nur ganz unauffällig. Seinen Blütenstaub, die Pollen, trägt der Wind. Bunte Farben braucht es darum nicht.",
+    "hints": [
+      "Nicht nur Tiere können etwas tragen. Was bewegt sich draußen noch?",
+      "Bunte, duftende Blüten locken Tiere an. Welche Pflanze hat ganz unauffällige Blüten?"
+    ],
+    "topic": "science-pollination",
+    "quelle": [
+      {
+        "label": "US Forest Service: Wind and Water Pollination",
+        "url": "https://www.fs.usda.gov/wildflowers/pollinators/wind.shtml"
+      },
+      {
+        "label": "Penn State Extension: Orchard Pollination – Pollinizers, Pollinators and Weather (Apfel, Süßkirsche)",
+        "url": "https://extension.psu.edu/orchard-pollination-pollinizers-pollinators-and-weather"
+      },
+      {
+        "label": "Michigan State University: Cherry pollination",
+        "url": "https://www.canr.msu.edu/cherries/horticulture/pollination"
+      },
+      {
+        "label": "Penn State Extension: Pumpkin pollinators",
+        "url": "https://extension.psu.edu/pumpkin-pollinators"
+      },
+      {
+        "label": "University of Minnesota Extension: Pollination requirements",
+        "url": "https://extension.umn.edu/pollination/requirements"
+      }
+    ]
+  },
+  {
+    "id": "detective-pilze-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Ein Pilz lebt an den Wurzeln eines Baums. Der Baum gibt ihm Zucker. Was hat der Baum davon?",
+    "answers": [
+      "Er bekommt Zucker vom Pilz zurück",
+      "Er bekommt Wasser und Mineralstoffe",
+      "Gar nichts, der Pilz nimmt nur",
+      "Der Pilz wärmt seine Wurzeln im Winter"
+    ],
+    "correct": "Er bekommt Wasser und Mineralstoffe",
+    "wrongReasons": {
+      "Er bekommt Zucker vom Pilz zurück": "Pilze können keinen Zucker aus Licht machen. Den Zucker bekommen sie ja gerade vom Baum.",
+      "Gar nichts, der Pilz nimmt nur": "Manche Pilze schaden Bäumen. Dieser hier gibt aber etwas zurück.",
+      "Der Pilz wärmt seine Wurzeln im Winter": "Pilzfäden sind viel zu dünn, um etwas zu wärmen. Der Pilz holt etwas aus dem Boden."
+    },
+    "why": "Die feinen Pilzfäden holen Wasser und Mineralstoffe für den Baum. Das sind Stoffe aus der Erde, die er zum Wachsen braucht.",
+    "hints": [
+      "Pilzfäden sind sehr fein und reichen weit in die Erde.",
+      "Was holt ein Baum mit seinen Wurzeln aus der Erde?"
+    ],
+    "topic": "science-fungi",
+    "quelle": [
+      {
+        "label": "US Forest Service: Mycorrhizae",
+        "url": "https://research.fs.usda.gov/treesearch/41353"
+      },
+      {
+        "label": "Kew: Why fungi matter",
+        "url": "https://growwild.kew.org/championing-nature/fungi/why-fungi-matter"
+      }
+    ]
+  },
+  {
+    "id": "detective-wasser-2",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Ein Kind sagt: „Der Wasserkreislauf fängt immer im Meer an.“ Stimmt das?",
+    "answers": [
+      "Ja, alles Wasser startet im Meer",
+      "Nein, er fängt immer in den Wolken an",
+      "Nein, er hat gar keinen festen Anfang",
+      "Nein, er fängt an der Quelle eines Flusses an"
+    ],
+    "correct": "Nein, er hat gar keinen festen Anfang",
+    "wrongReasons": {
+      "Ja, alles Wasser startet im Meer": "Wasser verdunstet auch aus Seen und Pfützen. Pflanzen geben es über ihre Blätter ab.",
+      "Nein, er fängt immer in den Wolken an": "Wolken sind nur eine Station. Ihr Wasser kam vorher von unten.",
+      "Nein, er fängt an der Quelle eines Flusses an": "Das Wasser in der Quelle war vorher Regen oder Schnee. Es war also schon unterwegs."
+    },
+    "why": "Das Wasser wandert immer weiter, ohne Pause. Darum kannst du überall einsteigen. Einen ersten Ort gibt es nicht.",
+    "hints": [
+      "Folge einem Tropfen: Meer, Wolke, Regen, Fluss, Meer. Wo war er davor?",
+      "Male einen Kreis. Kannst du zeigen, wo er anfängt?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NASA Earth Observatory: The Water Cycle",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
+      },
+      {
+        "label": "USGS: The Water Cycle",
+        "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
+      }
+    ]
+  },
+  {
+    "id": "detective-wolke-1",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "„Eine Gewitterwolke besteht aus sichtbarem Wasserdampf und Eiskristallen.“ Tausche ein Wort aus, dann stimmt der Satz. Welches?",
+    "answers": [
+      "Gewitterwolke",
+      "sichtbarem",
+      "Wasserdampf",
+      "Eiskristallen"
+    ],
+    "correct": "Wasserdampf",
+    "wrongReasons": {
+      "Gewitterwolke": "Mit jeder anderen Wolke wäre der Satz auch falsch. An diesem Wort liegt es nicht.",
+      "sichtbarem": "Gute Spur! Doch Wolken sieht man ja wirklich. Am Wort „sichtbar“ liegt es also nicht.",
+      "Eiskristallen": "Dieses Wort passt wirklich. Oben in Gewitterwolken ist es so kalt, dass sich Eis bildet."
+    },
+    "why": "Wasserdampf ist ein Gas und immer unsichtbar. Richtig wäre zum Beispiel: „… aus sichtbarem Wasser und Eiskristallen.“ Das Wasser schwebt in winzigen Tröpfchen.",
+    "hints": [
+      "Denk an einen Topf mit kochendem Wasser. Direkt darüber ist es klar. Erst weiter oben wird es weiß.",
+      "Aus Wolken fallen Regentropfen. Ist in der Wolke also schon flüssiges Wasser?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NASA Science für Kinder: How do clouds form?",
+        "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      },
+      {
+        "label": "NOAA NSSL: Severe Weather 101 – Lightning (Eis in Gewitterwolken)",
+        "url": "https://www.nssl.noaa.gov/education/svrwx101/lightning/"
+      }
+    ],
+    "gruppe": "dampf"
+  },
+  {
+    "id": "detective-jahreszeiten-3",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "Ein Kind sagt: „Im Sommer ist die Erde näher an der Sonne. Darum ist es warm.“ Stell dir vor, das stimmt. Was müsste dann so sein?",
+    "answers": [
+      "Die ganze Erde hätte gleichzeitig Sommer",
+      "Nur die Nordhälfte der Erde hätte Sommer",
+      "Im Sommer wären die Tage kürzer",
+      "Es gäbe gar keine Jahreszeiten mehr"
+    ],
+    "correct": "Die ganze Erde hätte gleichzeitig Sommer",
+    "wrongReasons": {
+      "Nur die Nordhälfte der Erde hätte Sommer": "Rückt die Erde näher an die Sonne, rücken beide Hälften mit. Keine Hälfte wäre näher dran.",
+      "Im Sommer wären die Tage kürzer": "Der Abstand zur Sonne ändert nicht, wie lang ein Tag ist.",
+      "Es gäbe gar keine Jahreszeiten mehr": "Der Abstand zur Sonne ändert sich im Lauf des Jahres. Jahreszeiten gäbe es also trotzdem."
+    },
+    "why": "Genau: Dann hätte die ganze Erde gleichzeitig Sommer. Aber Australien hat Winter, wenn wir Sommer haben. Also ist der Abstand nicht der Grund.",
+    "hints": [
+      "Nord- und Südhälfte sind fast gleich weit von der Sonne weg.",
+      "Im Januar ist die Erde der Sonne am nächsten. Wer hat dann Sommer: wir oder Australien?"
+    ],
+    "topic": "science-seasons",
+    "quelle": [
+      {
+        "label": "NASA Space Place: What causes the seasons?",
+        "url": "https://spaceplace.nasa.gov/seasons/en/"
+      }
+    ]
+  },
+  {
+    "id": "detective-wasser-3",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "Wasserdampf kann man nicht sehen. Warum siehst du im Winter trotzdem deinen Atem?",
+    "answers": [
+      "In der Kälte wird der Dampf selbst sichtbar",
+      "Das Weiße ist gar kein Dampf mehr",
+      "Im Winter ist mehr Wasser im Atem",
+      "Dein Atem ist im Winter wärmer"
+    ],
+    "correct": "Das Weiße ist gar kein Dampf mehr",
+    "wrongReasons": {
+      "Im Winter ist mehr Wasser im Atem": "Dein Atem ist immer feucht. Im Sommer siehst du ihn trotzdem nicht.",
+      "Dein Atem ist im Winter wärmer": "Nicht dein Atem ändert sich, sondern die Luft draußen.",
+      "In der Kälte wird der Dampf selbst sichtbar": "Dampf bleibt unsichtbar, auch in der Kälte. Sichtbar wird erst etwas anderes."
+    },
+    "why": "In der Kälte kühlt dein feuchter Atem schnell ab. Der Dampf wird zu winzigen Tröpfchen, wie bei einer Wolke.",
+    "hints": [
+      "Was passiert mit Dampf, wenn er abkühlt? Denk an eine Wolke.",
+      "Hauch einen kalten Spiegel an. Was siehst du dort?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "University of Illinois, Physics Van: Seeing your breath",
+        "url": "https://van.physics.illinois.edu/ask/listing/738"
+      }
+    ],
+    "gruppe": "dampf"
+  },
+  {
+    "id": "detective-wasser-4",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "Ein Kind erklärt, wie Regen entsteht. Ein Satz ist falsch. Welcher?",
+    "answers": [
+      "Die Sonne wärmt das Meer, und Wasser verdunstet",
+      "Der Dampf steigt mit der warmen Luft auf",
+      "Oben wird es wärmer, und es entstehen Tröpfchen",
+      "Die Tröpfchen werden größer, bis sie fallen"
+    ],
+    "correct": "Oben wird es wärmer, und es entstehen Tröpfchen",
+    "wrongReasons": {
+      "Die Sonne wärmt das Meer, und Wasser verdunstet": "Dieser Satz ist richtig. Die Wärme der Sonne lässt Wasser verdunsten.",
+      "Der Dampf steigt mit der warmen Luft auf": "Dieser Satz ist richtig. Warme Luft steigt auf und nimmt den Dampf mit.",
+      "Die Tröpfchen werden größer, bis sie fallen": "Dieser Satz ist richtig. Erst wenn die Tröpfchen groß und schwer sind, fallen sie als Regen."
+    },
+    "why": "Oben wird die Luft kälter, nicht wärmer. Erst in der Kälte werden aus dem Dampf Tröpfchen.",
+    "hints": [
+      "Lies jeden Satz einzeln: Wird es dort wärmer oder kälter?",
+      "Denk an hohe Berge. Wie ist es dort oben?"
+    ],
+    "topic": "science-water-cycle",
+    "quelle": [
+      {
+        "label": "NASA Earth Observatory: The Water Cycle",
+        "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
+      },
+      {
+        "label": "NASA Science für Kinder: How do clouds form?",
+        "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+      }
+    ],
+    "festeReihenfolge": true,
+    "gruppe": "dampf"
+  },
+  {
+    "id": "detective-meer-4",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "Weit im Norden gefriert das Meer zu Eis. Das Salz kommt nicht mit ins Eis. Was passiert mit dem Wasser direkt unter dem Eis?",
+    "answers": [
+      "Es wird salziger und geht nach oben",
+      "Es wird salziger und geht nach unten",
+      "Es wird weniger salzig und geht nach unten",
+      "Es wird weniger salzig und geht nach oben"
+    ],
+    "correct": "Es wird salziger und geht nach unten",
+    "wrongReasons": {
+      "Es wird salziger und geht nach oben": "Kaltes, salziges Wasser ist schwerer. Schweres Wasser geht nicht nach oben.",
+      "Es wird weniger salzig und geht nach unten": "Das Salz bleibt im Wasser zurück. Wird das Wasser dann salziger oder weniger salzig?",
+      "Es wird weniger salzig und geht nach oben": "Das Salz bleibt im Wasser zurück. Dadurch wird das Wasser salziger."
+    },
+    "why": "Das Salz bleibt im Wasser zurück. Kaltes, salziges Wasser ist schwerer und sinkt in die Tiefe. So kommt das tiefe Wasser im Meer in Bewegung.",
+    "hints": [
+      "Was bleibt im Wasser, wenn das Eis kein Salz mitnimmt?",
+      "Ein rohes Ei sinkt in Leitungswasser. In sehr salzigem Wasser schwimmt es oben. Was sagt dir das?"
+    ],
+    "topic": "science-currents",
+    "quelle": [
+      {
+        "label": "NOAA Tutorial: The Global Conveyor Belt (Salz bleibt beim Gefrieren zurück, Wasser sinkt)",
+        "url": "https://oceanservice.noaa.gov/education/tutorial_currents/05conveyor2.html"
+      },
+      {
+        "label": "NOAA: What is a current?",
+        "url": "https://oceanservice.noaa.gov/facts/current.html"
+      }
+    ]
+  },
+  {
+    "id": "detective-koralle-1",
+    "game": "detective",
+    "level": "medium",
+    "stufe": "profi",
+    "prompt": "Nach starkem Regen bringt ein Fluss viel Schlamm ins Meer. Das Wasser über einem Riff wird trüb. Warum ist das schlecht für die Korallen?",
+    "answers": [
+      "Ihre Algen bekommen nicht genug Licht",
+      "Die Korallen sehen ihr Futter nicht mehr",
+      "Das trübe Wasser wird zu heiß für sie",
+      "Schlamm ist giftig für alle Meerestiere"
+    ],
+    "correct": "Ihre Algen bekommen nicht genug Licht",
+    "wrongReasons": {
+      "Die Korallen sehen ihr Futter nicht mehr": "Korallen haben keine Augen. Sie fangen ihr Futter mit den Fangarmen.",
+      "Das trübe Wasser wird zu heiß für sie": "Schlamm macht das Wasser nicht heiß. Aber er hält etwas ab. Was könnte das sein?",
+      "Schlamm ist giftig für alle Meerestiere": "Schlamm ist nicht für alle Tiere giftig. Manche Tiere leben sogar darin."
+    },
+    "why": "Die Algen brauchen Licht, um Nahrung zu machen. Ohne genug Licht bekommt die Koralle zu wenig Futter.",
+    "hints": [
+      "Denk an die kleinen Mitbewohner in der Koralle.",
+      "Die Algen machen Nahrung wie Pflanzen. Was brauchen Pflanzen dafür?"
+    ],
+    "topic": "science-coral-reef",
+    "quelle": [
+      {
+        "label": "NOAA AOML: Threats to Coral Reefs (Trübung nimmt Licht für die Algen)",
+        "url": "https://www.aoml.noaa.gov/threats-to-coral"
+      },
+      {
+        "label": "NOAA: What is coral bleaching?",
+        "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      },
+      {
+        "label": "NOAA: Are corals animals or plants?",
+        "url": "https://oceanservice.noaa.gov/facts/coral.html"
+      }
+    ],
+    "gruppe": "algen"
+  },
+  {
+    "id": "detective-pflanzen-3",
+    "game": "detective",
+    "level": "hard",
+    "stufe": "experte",
+    "prompt": "Aus einem kleinen Samen wächst ein riesiger Baum. Woraus baut er vor allem sein Holz?",
+    "answers": [
+      "Aus der Erde, in der er steht",
+      "Aus Luft und Wasser",
+      "Aus dem Licht der Sonne",
+      "Nur aus Regenwasser"
+    ],
+    "correct": "Aus Luft und Wasser",
+    "wrongReasons": {
+      "Aus der Erde, in der er steht": "Viele denken das. Doch die Erde im Topf wird kaum weniger, wenn eine Pflanze wächst.",
+      "Aus dem Licht der Sonne": "Licht gibt dem Baum die Kraft zum Bauen. Baustoff ist es nicht.",
+      "Nur aus Regenwasser": "Wasser hilft mit, aber allein reicht es nicht. Es fehlt ein Gas aus der Luft."
+    },
+    "why": "Die Blätter holen ein Gas aus der Luft, das Kohlendioxid. Mit Wasser und der Kraft des Lichts machen sie daraus Zucker. Aus dem Zucker wächst das Holz.",
+    "hints": [
+      "Stell dir einen Topf mit Erde vor. Ein Baum wächst viele Jahre darin. Wird die Erde viel weniger?",
+      "Die Blätter haben winzige Öffnungen. Was kommt da hinein?"
+    ],
+    "topic": "science-photosynthesis",
+    "quelle": [
+      {
+        "label": "Arizona State University, Ask A Biologist: Recipe for plant growth",
+        "url": "https://askabiologist.asu.edu/recipe-plant-growth"
+      },
+      {
+        "label": "Michigan State University Extension: Where do trees get their mass from?",
+        "url": "https://www.canr.msu.edu/news/where_do_trees_get_their_mass_from"
+      },
+      {
+        "label": "Kew: What is photosynthesis?",
+        "url": "https://endeavour.kew.org/taster-resources/what-is-photosynthesis"
+      }
+    ]
   }
 ]

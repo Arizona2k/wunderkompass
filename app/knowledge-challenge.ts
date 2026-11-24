@@ -3,7 +3,7 @@ import HINTS from './challenge-hints.json' with {type:'json'};
 import CATALOG from './world-catalog.json' with {type:'json'};
 import type {WorldTopic, WorldQuestion} from './world-types';
 import type {Review} from './progress-storage';
-import {waehleAufgaben} from './kern/auswahl';
+import {EXPERTEN_JE_RUNDE,waehleAufgaben} from './kern/auswahl';
 import {istStufe,type Stufe} from './kern/stufe';
 export type Difficulty='easy'|'medium'|'hard';
 export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;topicTitle:string;difficulty:Difficulty;level?:Stufe;hints:readonly string[];ruht?:true};
@@ -38,14 +38,20 @@ export function createChallenge(difficulty:Difficulty,previous:readonly string[]
  return {difficulty,ids,orders:Object.fromEntries(selected.map(q=>[q.id,shuffle(q.answers,random)])),index:0,answer:null,done:false};
 }
 // Kreuz und quer nach der gemeinsamen Stufe (Teil B, Aufgabe 9; Entscheidungsliste Teil B, Punkt 8): Hauptfragen der Karten sind
-// Entdecker, Challenge-Fragen ohne Einstufung Profi. Experte bekommt erst die wenigen Experten-Fragen, dann Profi-Fragen.
+// Entdecker, Challenge-Fragen ohne Einstufung Profi. Experte bekommt zuerst höchstens drei der wenigen Experten-Fragen
+// (wechselnd über den Auswahl-Helfer), dann Profi-Fragen.
 export const stufeDerFrage=(q:ChallengeQuestion):Stufe=>q.difficulty==='easy'?'entdecker':q.level??'profi';
-export const EXPERTEN_HINWEIS='Experten-Fragen gibt es hier erst wenige. Du bekommst sie zuerst, dann Profi-Fragen.';
+export const EXPERTEN_HINWEIS=`Hier gibt es erst wenige Experten-Fragen. Du bekommst bis zu ${['null','eine','zwei','drei','vier','fünf'][EXPERTEN_JE_RUNDE]} davon, dann Profi-Fragen.`;
+// Die Stufe, die eine Runde spielt. Alte Runden (Leicht/Mittel/Schwer, vor Teil B) zeigen die nächste Stufe, damit die
+// Stufenzeile ehrlich sagen kann, dass die neue Stufe erst ab der nächsten Runde gilt. Schwer gilt als Profi wie bei den
+// Klassik-Spielen (Entscheidung 22): Von den alten Schwer-Fragen sind die meisten Profi-Fragen (Code-Prüfung PR 2, Hinweis 4).
+const ALTE_STUFE:Record<Difficulty,Stufe>={easy:'entdecker',medium:'profi',hard:'profi'};
+export const gespielteStufe=(s:ChallengeSession):Stufe=>s.stufe??ALTE_STUFE[s.difficulty??'easy'];
 const erlaubt=(stufe:Stufe):Stufe[]=>stufe==='experte'?['experte','profi']:[stufe];
 const vorratDer=(stufe:Stufe)=>CHALLENGE_BANK.filter(q=>!q.ruht&&stufeDerFrage(q)===stufe).map(q=>q.id);
 export function kreuzUndQuerRunde(stufe:Stufe,previous:readonly string[]=[],random:()=>number=Math.random,review:Review={},heute?:string):ChallengeSession{
  const waehle=(vorrat:string[],anzahl:number)=>waehleAufgaben({vorrat,review,schluessel:id=>'challenge:'+id,anzahl,vorige:previous,zufall:random,heute});
- const zuerst=stufe==='experte'?waehle(vorratDer('experte'),6):[],ids=[...zuerst,...waehle(vorratDer(stufe==='experte'?'profi':stufe),6-zuerst.length)];
+ const zuerst=stufe==='experte'?waehle(vorratDer('experte'),EXPERTEN_JE_RUNDE):[],ids=[...zuerst,...waehle(vorratDer(stufe==='experte'?'profi':stufe),6-zuerst.length)];
  return {difficulty:null,stufe,ids,orders:Object.fromEntries(ids.map(id=>[id,shuffle(CHALLENGE_BANK.find(q=>q.id===id)!.answers,random)])),index:0,answer:null,done:false};
 }
 export function restoreChallenge(value:unknown,fallback:ChallengeSession):ChallengeSession{

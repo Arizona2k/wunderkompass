@@ -1,5 +1,7 @@
 # Vercel-Tageslimit (24.11.2026)
 
+> Stand heute: Regeln in `CLAUDE.md`, Abschnitt Vercel. Gebaut werden `test-live` und `vorschau`. Die Abschnitte unten sind der Verlauf; Empfehlungen aus den ersten Abschnitten (`vorschau/**`, `main`) sind überholt.
+
 Helfer: `technik-pruefer`. Der Helfer hat nichts geändert. Er hatte keinen Zugang zu Vercel und hat darum mit den GitHub-Deployments (`vercel[bot]`, 338 Einträge), `git diff-tree` und der Vercel-Doku gearbeitet.
 
 **Ergebnis:** Das Limit kam von zu vielen Pushes: 145 Deployments in 24 Stunden, 106 am 24.11. (UTC). Gut die Hälfte davon war reine Unterlagen-Arbeit. Ein übersprungener Build (`ignoreCommand`) zählt laut Doku trotzdem mit. Die einfachste sichere Abhilfe ist ein Branch-Filter in `vercel.json` (`git.deploymentEnabled`) mit einer festen Liste von Branches, die gebaut werden. Dafür muss „Zeigen“ auf einen eigenen Vorschau-Branch umziehen.
@@ -101,3 +103,44 @@ Der Nutzer wünscht: Kommt das Limit, soll nichts vergessen werden; „das musst
 - `/weiter` prüft bei jedem Einstieg, ob der neueste `test-live`-Commit gebaut ist.
 - Keine Deployments von Hand. Will der Nutzer den Stand sofort, klickt er selbst in Vercel auf „Redeploy“.
 - GitHub: Das Repository ist öffentlich, die CI-Minuten sind damit kostenlos und unbegrenzt.
+
+## Vorschau-Branch (OK des Nutzers, 24.11.2026, gegen 19:45 UTC)
+
+Frage des Nutzers: Braucht Claude die Vorschau-Seiten nicht, um sauber zu arbeiten? Wunsch: „kein Rückschritt“, effizient, schnell, gut und ordentlich. Entscheidung (Claude, mit OK des Nutzers): zur Test-Seite eine feste Vorschau aus dem Branch `vorschau`. So sieht der Nutzer eine sichtbare Änderung vor dem Merge auf seinen Geräten, und Vercel baut trotzdem nur wenige Male am Tag.
+
+- `vercel.json`: `"vorschau": true` neben `"test-live": true` (Commit `3b85f24`).
+- Regeln in `CLAUDE.md` (Git-Regel, „Test-Seite und Vorschau“, Schritte 5 und 6, Abschnitt Vercel): nur geprüfte, sichtbare Stände, einmal je Runde; Unterlagen, Tests und Werkzeuge nicht. `vorschau` wird nie gemergt.
+- Adresse: https://wunderkompass-git-f420d3-interaktive-wissens-und-lernplattform.vercel.app/ (aus `list_aliases`; der Branchname ist zu lang für die Adresse, darum steht dort eine Kennung). Öffentlich erreichbar (HTTP 200).
+- Die Vorschau hat eine andere Adresse als die Test-Seite und damit einen eigenen Entdeckerpass.
+
+**Probe (24.11.2026):**
+
+| Zeit (UTC) | Was | Ergebnis |
+|---|---|---|
+| 19:49 | `3b85f24` erst auf `claude/...` gepusht, Sekunden später als neuer Branch `vorschau` | kein Deployment, kein Vercel-Status am Commit, auch nach rund 6 Minuten nicht |
+| 19:56 | Weg aus `CLAUDE.md`: neuer Commit `4570210` mit `commit-tree` (Eltern: bisheriges `vorschau` und `HEAD`), Vorspulen ohne Force-Push | Deployment sofort gestartet, nach rund einer Minute `READY` |
+
+Ursache des ersten Fehlschlags nicht sicher geklärt: Entweder baut Vercel einen Commit nicht noch einmal, den es schon gesehen hat, oder das bloße Anlegen eines Branches löst nichts aus. Der Weg aus `CLAUDE.md` umgeht beides, weil er immer einen neuen Commit vorspult.
+
+Danach lief der Rauchtest gegen die Vorschau-Adresse (`node tests/browser/run.mjs --suite smoke --base <Vorschau>`): grün, 17 s, Chromium.
+
+### Prüfung der Vorschau-Regel (`technik-pruefer`, 24.11.2026, Stand `721861c`)
+
+**Ergebnis:** nutzbar, ohne Force-Push, der Weg über einen neuen Commit hat einmal belegt funktioniert. Keine grundsätzlich einfachere Lösung (`vorschau/<thema>` hätte dasselbe Problem mit bekannten Commits und füllt die Branch-Liste, `ignoreCommand` zählt mit). Der Helfer hat nichts geändert.
+
+| Befund | Umsetzung (Claude) |
+|---|---|
+| A1: Befehl ohne `&&`: Schlägt der Fetch fehl, zeigt `FETCH_HEAD` auf etwas Fremdes (nach `/weiter` auf `origin/main`) | Befehl in einer Zeile mit `&&`, Eltern `origin/vorschau` statt `FETCH_HEAD`. Dazu selbst gefunden: Schlägt `commit-tree` in `$(…)` fehl, wäre der Push `:refs/heads/vorschau`, also ein Löschen; jetzt erst in eine Variable, dann pushen |
+| A2: Warum immer ein neuer Commit, stand nicht da; Ursache nicht belegt | Satz in `CLAUDE.md` (ehrlich: je ein Versuch), Beobachten in BACKLOG 28 |
+| A3: Ohne `"vorschau": true` im gezeigten Stand baut Vercel still nichts | Satz in `CLAUDE.md` |
+| A4: Zwei Chats überschreiben sich die Vorschau | Halbsatz „Es gibt nur eine Vorschau“ |
+| Einfacher: ein Elternteil statt zwei | übernommen (`-p origin/vorschau`, kurze SHA von `HEAD` in der Nachricht) |
+| Fehlender Branch | eigene Zeile: einmal mit `-p HEAD` anlegen |
+| STATUS „Adresse nach dem ersten Build“, Adresse fehlt in `CLAUDE.md` | Adresse eingetragen (STATUS, `CLAUDE.md` „Feste Adressen“) |
+| `CLAUDE.md` „Jeder Build baut den ganzen Stand von `test-live`“ gilt nicht für die Vorschau | „Jeder Build von `test-live` …“ |
+| CHANGELOG liest sich widersprüchlich, BACKLOG 28 nennt die alte `vercel.json` | umformuliert |
+| Bericht empfiehlt oben noch `vorschau/**` und `main` | Hinweis „Stand heute“ am Anfang |
+| Pass der Vorschau: Link könnte an Kinder gehen, je Gerät eigener Pass | `CLAUDE.md`: „nur zum Ansehen, nicht an Kinder weitergeben“, „je Gerät“ |
+| `/pruefen` kennt die Vorschau nicht, `/weiter` sollte `vorschau` nie als Basis nehmen | `/pruefen` Schritt 4 (Vorschau setzen, Rauchtest dagegen, Link), `/weiter` Schritt 3 |
+
+Geschätzt kommen 3 bis 12 Vorschau-Builds am Tag dazu, weit unter dem Limit. Nicht geprüft vom Helfer: Vercel-Zustand und Adresse (hat Claude geprüft, siehe oben), ob Vercel Commits wiedererkennt.

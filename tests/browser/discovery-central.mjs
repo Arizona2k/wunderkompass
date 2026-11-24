@@ -193,16 +193,17 @@ export async function discoveryCentral(page,ready,report,width,shots){
   const result=await window.axe.run({include:[['.discovery-hero'],['.discovery-worlds'],['.discovery-pathways']]},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});
   return result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}));
  });assert.deepEqual(axe,[],'discovery axe '+width);
- await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();
- await page.locator('.challenge-levels').waitFor();
- assert.equal(await page.locator('.challenge-levels button').count(),3);
- await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Leicht'}).click();
+ // Kreuz und quer öffnet gleich eine Runde auf der Stufe aus dem Pass (Teil B, Aufgabe 9).
+ await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Kreuz und quer öffnen',exact:true}).click();
  await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge']?.challenge?.ids?.length===6);
+ assert.equal(await page.locator('.challenge-levels').count(),0);
+ const runde=await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids);
  await page.reload();await ready(page);await home();
  await page.getByRole('button',{name:'Fortsetzen',exact:true}).click();
  await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
- await page.getByRole('button',{name:'Andere Stufe auswählen',exact:true}).click();
- await page.locator('.challenge-levels').waitFor();
+ await page.locator('.knowledge-challenge .stufen-wahl .stufen-aendern').waitFor();
+ assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids),runde,'Fortsetzen zeigt dieselbe Runde');
  report.checks.push('Discovery centre '+width+': search/focus/globe, six shared gateways, eight reciprocal trails/routes, direct challenge/resume, WCAG axe');
 }
 
@@ -229,7 +230,7 @@ export async function offlineDiscoveryCentral(page,report){
  for(const image of await page.locator('.discovery-worlds img').all())await image.evaluate(async im=>{await im.decode();assertImage(im);function assertImage(im){if(!im.naturalWidth)throw Error('Offline gateway image missing');}});
  await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Meer in Bewegung',exact:true}).click();
  await page.locator('.discovery-connection-why').getByText(KNOWLEDGE_CONNECTIONS.find(c=>c.id==='science-tides--science-currents').why,{exact:true}).waitFor();
- await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Wissens-Challenge öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ await openTrailPicker(page);await page.locator('.discovery-network').getByRole('button',{name:'Biene & Blüte',exact:true}).click();await page.getByRole('link',{name:'Kreuz und quer öffnen',exact:true}).click();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
  await page.evaluate(()=>location.hash='updates');await page.locator('.kern-neuigkeiten').waitFor();assert.equal(await page.locator('.kern-neuigkeiten li[data-neuigkeit]').count(),NEUIGKEITEN.length,'offline: alle Neuigkeiten da');await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
  await bereich(page,'world').click();await page.locator('.world-view .world-choice').first().waitFor();assert.equal(await page.locator('.world-view .world-choice').count(),6,'all six worlds remain available in a cold offline browser');assert.equal((await page.locator('nav[aria-label="Bereiche"] [aria-current=page]').innerText()).trim(),'Welten');await page.locator('.world-view').getByRole('button',{name:'Wissenschaft & Weltall',exact:true}).click();await page.locator('.world-topic-tile').first().waitFor();await bereich(page,'explore').click();await page.locator('.discovery-hero').waitFor();
  await openTrailPicker(page);const previousTrail=await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).inputValue();await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption('person-mae_jemison--history-iss');await page.locator('[data-route-focus="home-topic-history-iss"]').waitFor();for(const image of await page.locator('.discovery-pair img[src]').all())await image.evaluate(im=>im.decode());await discoveryPairMedia(page);report.checks.push('Actual cold offline Mae Jemison and ISS pair: cached portrait and real orbital-laboratory diagram remain complete');await page.getByRole('combobox',{name:'Wissensspur auswählen',exact:true}).selectOption(previousTrail);

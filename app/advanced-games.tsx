@@ -3,7 +3,8 @@ import GameShell from "./game-shell";
 import {CountryFlag,flagCode} from "./country-flag";
 import {restoreQuestions,type SavedQuestion} from "./game-state";
 import {SavedGame,useSavedGame} from "./saved-games";
-import { memo, useMemo, useEffect, useState } from "react";
+import { memo, useCallback, useMemo, useEffect, useState } from "react";
+import {useZurUebersicht} from "./zur-uebersicht";
 import { Check, Cloud, CloudRain, Compass, Flag, Globe2, Lightbulb, MapPin, Mountain, Snowflake, Sun, Trophy, Volume2, Waves, Wind } from "lucide-react";
 import { geoEqualEarth, geoMercator, geoPath } from "d3-geo";
 import { Progress } from "@/components/ui/progress";
@@ -35,13 +36,15 @@ const COUNTRIES=[['DE','Deutschland','Berlin'],['FR','Frankreich','Paris'],['IT'
 const FLAG_DESCRIPTIONS:Record<string,string>={DE:"Drei waagerechte Streifen: Schwarz, Rot, Gold",FR:"Drei senkrechte Streifen: Blau, Weiß, Rot",IT:"Drei senkrechte Streifen: Grün, Weiß, Rot",JP:"Ein roter Kreis auf weißem Grund",AU:"Blauer Grund, britische Flagge in der Ecke und weiße Sterne",CA:"Rote Seiten, weiße Mitte mit rotem Ahornblatt",BR:"Grüner Grund, gelbe Raute und blauer Kreis",EG:"Rot, Weiß, Schwarz mit goldenem Adler",IN:"Orange, Weiß, Grün mit blauem Rad",KE:"Schwarz, Rot, Grün mit weißen Streifen, Schild und Speeren",ES:"Rot, Gelb, Rot mit Wappen",IR:"Grün, Weiß, Rot mit rotem Zeichen in der Mitte"};
 type Question={q:string;choices:string[];correct:string;why:string;iso?:string;country?:Country;photo?:string};
 function Finish({text}:{text:string}){return <div className="game-win" role="status"><Trophy size={42}/><h3>Abenteuer geschafft!</h3><p>{text}</p><span><Check size={17}/> Stempel im Entdeckerpass</span></div>;}
-function AdvancedGames({sessions,onSave,onNew,resume,onActive,countries,onWin,onRead,onPlace}:{sessions:Record<string,Record<string,unknown>>;onSave:(id:string,key:string,value:unknown,family:"classic"|"extra"|"world")=>void;onNew:(id:string)=>void;resume?:{id:string;nonce:number};onActive:(active:boolean)=>void;countries:Country[];completed:Set<string>;onWin:(s:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onHunt:()=>void;onQuiz:()=>void}){
+function AdvancedGames({sessions,uebersicht,onSave,onNew,resume,onActive,countries,onWin,onRead,onPlace}:{sessions:Record<string,Record<string,unknown>>;uebersicht?:number;onSave:(id:string,key:string,value:unknown,family:"classic"|"extra"|"world")=>void;onNew:(id:string)=>void;resume?:{id:string;nonce:number};onActive:(active:boolean)=>void;countries:Country[];completed:Set<string>;onWin:(s:string)=>void;onRead:(s:string)=>void;onPlace:(p:Place)=>void;onHunt:()=>void;onQuiz:()=>void}){
  const [game,setGame]=useState<string|null>(null);const [round,setRound]=useState(0);
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
  useEffect(()=>{if(resume&&EXTRA_GAMES.some(g=>g.id===resume.id)){setGame(resume.id);onActive(true);}},[resume,onActive]);
+ const schliessen=useCallback(()=>{onRead("");setGame(null);onActive(false);},[onRead,onActive]);
+ useZurUebersicht(uebersicht,game!==null,schliessen);
  if(!game)return null;
  const config=EXTRA_GAMES.find(g=>g.id===game)!;
- return <GameShell title={config.name} boardKey={game+round} onExit={()=>{onRead("");setGame(null);onActive(false);}} onNewRound={()=>{onRead("");if(game)onNew(game);setRound(r=>r+1);}}><SavedGame id={game} family="extra" sessions={sessions} onSave={onSave}>{game==="flag-memory"?<FlagMemory onWin={()=>onWin(game)}/>:game==="continent-puzzle"?<ContinentPuzzle countries={countries} onWin={()=>onWin(game)}/>:game==="volcano-label"?<VolcanoLabels onWin={()=>onWin(game)}/>:game==="worldtour"?<WorldTour onWin={()=>onWin(game)} onPlace={onPlace}/>:game==="ocean-find"?<MapSearch countries={countries} kind="ocean" onWin={()=>onWin(game)}/>:game==="neighbors"?<NeighborGame onWin={()=>onWin(game)} countries={countries}/>:['continent-sort','habitat-sort','weather-match'].includes(game)?<SortGame game={game} onWin={()=>onWin(game)}/>:<QuestionGame game={game} countries={countries} onWin={()=>onWin(game)} onRead={onRead} onPlace={onPlace}/>}</SavedGame></GameShell>;
+ return <GameShell title={config.name} boardKey={game+round} onExit={schliessen} onNewRound={()=>{onRead("");if(game)onNew(game);setRound(r=>r+1);}}><SavedGame id={game} family="extra" sessions={sessions} onSave={onSave}>{game==="flag-memory"?<FlagMemory onWin={()=>onWin(game)}/>:game==="continent-puzzle"?<ContinentPuzzle countries={countries} onWin={()=>onWin(game)}/>:game==="volcano-label"?<VolcanoLabels onWin={()=>onWin(game)}/>:game==="worldtour"?<WorldTour onWin={()=>onWin(game)} onPlace={onPlace}/>:game==="ocean-find"?<MapSearch countries={countries} kind="ocean" onWin={()=>onWin(game)}/>:game==="neighbors"?<NeighborGame onWin={()=>onWin(game)} countries={countries}/>:['continent-sort','habitat-sort','weather-match'].includes(game)?<SortGame game={game} onWin={()=>onWin(game)}/>:<QuestionGame game={game} countries={countries} onWin={()=>onWin(game)} onRead={onRead} onPlace={onPlace}/>}</SavedGame></GameShell>;
 }
 const GAME_HINTS:Record<string,string>={
  flags:'Schau zuerst auf Farben und Formen: Sind die Streifen waagerecht oder senkrecht? Gibt es ein besonderes Zeichen?',

@@ -33,6 +33,9 @@ Stand 24.11.2026, angelegt für den nächsten Chat (Teil B, Aufgaben 10 und 12).
 
 ## C. Größere Entscheidungen (betreffen Code und Umfang)
 
+**Entschieden (Nutzer, 24.11.2026: „du kannst alles umsetzen“):** C1 bis C3 wie empfohlen, C4 ins BACKLOG. Dazu der Wunsch, bei allem die Helfer einzusetzen (Ideen, Fakten, Recherche, Texte, neue und bessere Inhalte).
+
+
 1. **Experte-Regel** (stufen-pruefer Punkt 22): Experte erst ab mindestens 4 echten Experte-Aufgaben je Spiel, bis dahin E3 („Experte gibt es hier noch nicht. Du spielst Profi.“), höchstens 3 Experte-Aufgaben je Runde über `waehleAufgaben`, aufgefüllt nur mit Profi. Empfehlung: so übernehmen, gleiche Regel wie Kreuz und quer.
 2. **Neue Experte-Aufgaben** (stufen-pruefer Abschnitt 4: Everest im Graben, Amazonas und Nil, Regenbogen am Morgen, Hagel im Sommer): vom `karten-autor` fertig schreiben lassen, dann drei Prüfer. Danach hat Rekorde 4 und Wetter 4 (mit Hagel) Experte-Aufgaben. Wetter-Profi braucht 2–3 neue Aufgaben (Punkt 20).
 3. **Sortiere die Zeit** (Punkte 23–26): 2 Rätsel je Runde (3/4/4 Teile), Jahreszahlen bis zum Prüfen verstecken, Zeitwort-Hinweis für Entdecker (neues Feld je Teil), Rückmeldung je Stufe, `Chronology` in `app/world-games.tsx` bekommt Stufen, Stufenzeile und „Zurück zu Entdecker“; Experte-Gruppen auf 5–6 Teile, vierte Gruppe „ganz früh“. Das ist der größte Brocken von Aufgabe 12 – im Plan als eigene Schritte zerlegen.
