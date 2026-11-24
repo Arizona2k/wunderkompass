@@ -393,3 +393,6 @@ Die Arbeitsregeln im Issue stammen aus der Zeit vor Claude; es gilt `CLAUDE.md`.
 - Nahrungsnetz-Labor: Wer frisst wen? Ein Tier herausnehmen und sehen, was sich ändert.
 - „Mein Tierpfad“: selbst gewählte Folge von Tierkarten im Pass, als Weg dargestellt.
 - Eine Begleitfigur (Maskottchen), die durch die Seite führt und vorliest. Bewusst nicht in Phase 1 (Entwurf Phase 1, Nicht-Ziele); erst nach dem neuen Kern prüfen, ob sie Kindern hilft oder nur ablenkt.
+- **„Daran bauen wir gerade“ auf „Was ist neu?“** (Idee des Nutzers, 24.11.2026). Bewertung Claude: sinnvoll für Eltern und als Vorfreude für Kinder, aber jeder Eintrag ist ein Versprechen. Darum höchstens drei Punkte, ohne Datum, in Kindersprache, bei jedem Merge nachgeführt (sonst veraltet er still); Wortlaut vom `karten-autor`, Prüfung `kinder-redaktion`. Passt in Teilschritt 5 („Startseite und Sammlung“) oder als kleiner Schritt vorher.
+- **Ideen aus zwei weitergeleiteten Analysen (24.11.2026)**, kritisch bewertet in `docs/entwurf/2026-11-24-analysen-bewertung.md`: Innenwelten (Körper, Vulkan, Bienenstock, Zelle), Größenvergleich vom Kleinsten zum Größten, Zeitmaschine Erdgeschichte, „Was wäre, wenn?“-Simulationen, Rätselgeschichten (Wissensdetektiv), Erfinderwerkstatt, Abenteuerrouten über Welten (Dinosaurier → Fossilien → Erdgeschichte → Globus), Suche mit Kinderfragen und Tippfehlern testen.
+
