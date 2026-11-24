@@ -93,6 +93,13 @@ Alle zehn Befunde bestätigt behoben. Neue Befunde, alle umgesetzt:
 - **Korrektur:** Der Test wartet wie `journeys.mjs`, `people-fourteen-connected-routes.mjs` und `discovery-central.mjs` erst auf den Fokus am Routen-Knopf und prüft dann (strenger als vorher: Fokus und offener Bereich). Mit verzögertem Bild sechs von sechs grün.
 - **Nachprüfung** durch den `technik-pruefer` ([Bericht](2026-11-23-teil-a-technik-pruefung-core-fund.md)): Analyse bestätigt, keine weiteren Stellen mit diesem Muster. `core` läuft nur in Chromium und nur in der Vollprüfung. Umgesetzt: Der Weg „Mehr erfahren offen, Lernroute, Zurück“ steht jetzt zusätzlich als kurzer Schritt im CI-Satz (`wissenskarte.mjs`, `mehrErfahrenNachRouteOffen`, 390 und 1440 px, per Tastatur geöffnet). Er läuft damit bei jedem PR, in der Engine-Schnellprüfung auch in Firefox und WebKit. `core` behält seine Prüfung. Keine neue Regel (der Fund kam von Last, nicht von einer Kartenänderung).
 
+## Zweiter später Fund im Nachlauf (`full-a7`, `offline-cold-full`)
+
+- **Befund:** „cold offline duplicate alias order also displays all three canonical choices“ war rot. Erwartet: die Antworten des Seeadlers in der Reihenfolge der Daten. Angezeigt: `Höhe, Länge, Abstand`.
+- **Ursache:** Mit Aufgabe 6 (Commit `e95756f`) zeigt die Karte bei einer kaputten gespeicherten Reihe die feste Mischung je Frage (`festGemischt` in `app/kern/karte/karten-daten.ts`), nicht mehr die Reihenfolge der Daten (dort stand die Lösung oft vorn). Den Online-Fall in `tests/browser/retained-answer-wording.mjs` hatte ich angepasst, die Offline-Fassung in derselben Datei (eine lange Zeile, nur in `offline-cold-full`, nur Vollprüfung) nicht. `festGemischt` für diese Frage ergibt genau die angezeigte Reihenfolge. Kein Fehler der Seite; der Test erwartete das alte Verhalten.
+- **Korrektur:** Beide Fälle erwarten jetzt genau `festGemischt(HAUPT)` (strenger als vorher: Der Online-Fall prüfte nur, dass alle drei Antworten da sind). Der Online-Fall steht im CI-Satz (`retained-answer-wording`) und läuft damit bei jedem PR, auch in Firefox und WebKit.
+- **Lehre:** Bei einer Verhaltensänderung nicht nur nach Testtexten suchen, sondern nach allen Tests, die die betroffene Funktion auslösen (hier: jede gespeicherte, ungültige `items`-Reihe). `technik-pruefer` beauftragt.
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
