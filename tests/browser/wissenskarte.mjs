@@ -2,7 +2,7 @@
 // Ausprobieren, Dazu passt und Bildnachweise.
 // Jeder Fall mit Lernstand prüft auch den Pass nach Neuladen: Dort hängt der Lernstand der Kinder.
 import assert from 'node:assert/strict';
-import {ready, ladeanfragen} from './harness.mjs';
+import {ready} from './harness.mjs';
 import {BROWSER_ERROR_FIELDS, browserErrorArrays, browserErrorsSettled, monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {aufklapperErkennbar, bleibtGroesser, grosseSchriftWaechst, kontrast, schrift14, tippflaechen48, zeichenZeigtOffen} from './lesbarkeit.mjs';
 import {angezeigteFrage, antwortKnopf, antworteRichtig, ersteFrageAufStufe, falscheAntworten, ganzEinfach, hauptfrage, karteDa, mehrErfahren, rateMal, richtigeAntwort, richtigerKnopf, stufeWaehlen, zeigtFrage, zusatzfragen, zusatzfragenAufStufe} from './karte-hilfen.mjs';
@@ -118,12 +118,10 @@ async function mitAdresse(ctx, {width, height, touch = false}, adresse, fn, init
     if (initScript) await context.addInitScript(initScript);
     const page = await context.newPage();
     ctx.monitor(page);
-    const fertig = ladeanfragen(page);
     await page.goto(new URL('#' + adresse, ctx.base).href);
     await ready(page);
     await page.locator('#world-topic-title').waitFor(WARTEN);
     const neuLaden = async () => {
-      await fertig();
       await page.reload();
       await ready(page);
       await page.locator('#world-topic-title').waitFor(WARTEN);
@@ -814,7 +812,6 @@ async function zusatzfrageImPass(ctx) {
     await context.addInitScript(({key, save}) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save)); }, {key: SAVE_KEY, save: passMitHauptfrage()});
     const page = await context.newPage();
     ctx.monitor(page);
-    const fertig = ladeanfragen(page);
     await page.goto(new URL('#world/topic/' + ELEFANT.id, ctx.base).href);
     await ready(page);
     await zeigtFrage(page, ELEFANT, erste);
@@ -835,7 +832,6 @@ async function zusatzfrageImPass(ctx) {
     await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).tap();
     await zeigtFrage(page, ELEFANT, zweite);
     for (const knopf of await rateMal(page).locator('.quiz-answer').all()) assert.equal(await knopf.isDisabled(), false, 'die nächste Frage ist offen');
-    await fertig();
     await page.reload();
     await ready(page);
     await zeigtFrage(page, ELEFANT, zweite);
@@ -854,7 +850,6 @@ async function zusatzfrageImPass(ctx) {
     const download = page.waitForEvent('download');
     await page.getByRole('button', {name: 'Entdeckerpass sichern', exact: true}).click();
     await (await download).saveAs(datei);
-    await fertig();
   } finally {
     await context.close();
   }
@@ -866,7 +861,6 @@ async function zusatzfrageImPass(ctx) {
   try {
     const page = await frisch.newPage();
     ctx.monitor(page);
-    const fertig = ladeanfragen(page);
     await page.goto(ctx.base);
     await ready(page);
     await page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
@@ -885,7 +879,6 @@ async function zusatzfrageImPass(ctx) {
     await stimmtDasBereich(page).getByText(behauptung.explanation, {exact: true}).waitFor(WARTEN);
     await page.evaluate(() => { location.hash = 'book'; });
     await page.waitForFunction(() => document.querySelector('input[aria-label="Wissenswörter durchsuchen"]')?.value === '', null, WARTEN);
-    await fertig();
   } finally {
     await frisch.close();
   }

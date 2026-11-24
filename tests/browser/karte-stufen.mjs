@@ -9,7 +9,7 @@
 //   Stufe steht ein klarer Schluss mit dem Weg zur nächsten Karte (c, d).
 // Welche Frage erscheint, rechnen die Tests mit den Bausteinen aus karte-hilfen.mjs aus (wie die App).
 import assert from 'node:assert/strict';
-import {FOKUS_NACH_KLICK, ladeanfragen, ready} from './harness.mjs';
+import {FOKUS_NACH_KLICK, ready} from './harness.mjs';
 import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, ersteNachbarkarte, falscheAntworten, fragenAufStufe, fragenDerKarte, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 await import('../../scripts/test-runtime.mjs');
@@ -40,13 +40,11 @@ async function mitKarte(ctx, {width, height, touch = false}, id, fn, pass) {
     if (pass) await context.addInitScript(({key, save}) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(save)); }, {key: SAVE_KEY, save: pass});
     const page = await context.newPage();
     ctx.monitor(page);
-    // Vor jedem gewollten Neuladen warten, bis die Ladeanfragen fertig sind (harness.mjs, ladeanfragen).
-    const anfragenFertig = ladeanfragen(page);
     page.setDefaultTimeout(20000);
     await page.goto(new URL('#world/topic/' + id, ctx.base).href);
     await ready(page);
     await karteDa(page, id);
-    return await fn(page, {touch, anfragenFertig});
+    return await fn(page, {touch});
   } finally {
     await context.close();
   }
@@ -70,7 +68,7 @@ async function fokusAuf(page, selektor, was) {
 }
 
 // Stufenwahl über „Rate mal!“, Umstellen auf der offenen Karte, Neuladen, „Zurück zu Entdecker“.
-async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
+async function stufenAufDerKarte(page, {touch}) {
   const t = MIT_PROFI;
   const wahl = stufenWahl(page);
   await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
@@ -91,7 +89,6 @@ async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
   if (hatStufe(t, 'experte')) await zeigtFrage(page, t, ersteFrageAufStufe(t, 'experte'));
   else await wahl.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
   await fokusAuf(page, AENDERN, 'nach dem Umstellen auf Experte steht der Fokus auf „Ändern“');
-  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -126,7 +123,7 @@ async function profiOhneProfiFragen(page, {touch}) {
 // (Spieltest Feinschliff 24.11.2026; entschieden vom Nutzer am 24.11.2026). Ausnahme: „Noch einmal nachdenken“ im
 // Wissensbuch zeigt genau diese Frage, auch auf Profi. Am Handy ist der Weltbereich dabei schon geladen, breit wird er
 // nach einem Neuladen im Wissensbuch zum ersten Mal geöffnet.
-async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
+async function wechselNachFalscherAntwort(page, {touch}) {
   const t = MIT_PROFI;
   const haupt = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await tippe(antwortKnopf(page, falscheAntworten(haupt)[0]), touch);
@@ -148,7 +145,6 @@ async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
   assert.equal(frage.level, 'profi', 'nach dem Wechsel auf Profi eine Profi-Frage');
   await fokusAuf(page, AENDERN, 'nach dem Wechsel (neue Frage) steht der Fokus auf „Ändern“');
   // Später wiederkommen: Neuladen auf Profi. Weiter eine Profi-Frage, ohne „Noch nicht ganz“ der alten Entdecker-Frage.
-  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -167,7 +163,6 @@ async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
   assert.equal((await angezeigteFrage(page, t)).level, 'profi', 'wieder auf Profi eine Profi-Frage');
   await page.evaluate(() => { location.hash = 'book/notes'; });
   if (!touch) {
-    await anfragenFertig();
     await page.reload();
     await ready(page);
   }
@@ -341,7 +336,7 @@ async function vorschlagLeichter(page, {touch}) {
 
 // „Fast richtig“ (E11): Auf Experte nach „Stimmt nicht“ zuerst das falsche Wort wählen, die Erklärung kommt danach.
 const MIT_FAST = catalog.find(t => t.claims?.[0]?.fastRichtig);
-async function fastRichtig(page, {touch, anfragenFertig}) {
+async function fastRichtig(page, {touch}) {
   const t = MIT_FAST, b = t.claims[0], f = b.fastRichtig;
   const bereich = page.locator('section.stimmt-das');
   const erklaerung = bereich.getByText(b.explanation, {exact: true});
@@ -355,7 +350,6 @@ async function fastRichtig(page, {touch, anfragenFertig}) {
   await tippe(bereich.locator('.stimmt-das-woerter').getByRole('button', {name: f.wort, exact: true}), touch);
   await bereich.getByText('Richtig wäre „' + f.ersatz + '“.', {exact: false}).waitFor(WARTEN);
   await erklaerung.waitFor(WARTEN);
-  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -373,7 +367,7 @@ async function fastRichtigNurExperte(page, {touch}) {
 }
 // „Ordne richtig“ (E11): erst ab seiner Stufe; ordnen mit „nach oben“, „Prüfen“, übersteht Neuladen.
 const MIT_ORDNEN = catalog.find(t => t.ordnen);
-async function ordneRichtig(page, {touch, anfragenFertig}) {
+async function ordneRichtig(page, {touch}) {
   const t = MIT_ORDNEN, o = t.ordnen;
   const bereich = page.locator('section.ordne-richtig');
   assert.equal(await bereich.count(), 0, '„Ordne richtig“ fehlt unter der Stufe ' + o.level);
@@ -400,7 +394,6 @@ async function ordneRichtig(page, {touch, anfragenFertig}) {
   assert.deepEqual(await reihe(), o.teile);
   await tippe(bereich.getByRole('button', {name: 'Prüfen', exact: true}), touch);
   await bereich.getByText(o.aufloesung, {exact: true}).waitFor(WARTEN);
-  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);

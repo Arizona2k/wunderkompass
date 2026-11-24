@@ -19,6 +19,7 @@ const {SUITES} = await import('./suites.mjs');
 const {shardsOf, suitesInShard} = await import('./shards.mjs');
 const {PROJECT, newReport, ready, startPreview} = await import('./harness.mjs');
 const {browserErrorsComplete, browserErrorsSettled, BROWSER_ERROR_FIELDS, meldeBildabbrueche, monitorBrowserErrors} = await import('../../scripts/browser-errors.mjs');
+const {installiereSeitenwechsel, WARTEZEITEN} = await import('../../scripts/seitenwechsel.mjs');
 const fs = await import('node:fs/promises');
 const {existsSync} = await import('node:fs');
 const path = await import('node:path');
@@ -67,6 +68,7 @@ try {
   await server?.stop();
 }
 await writeTimes();
+console.log('Wartehilfe vor Seitenwechseln: ' + (Object.entries(WARTEZEITEN).map(([wie, {anzahl, ms}]) => `${wie} ${anzahl}×, ${(ms / 1000).toFixed(1)} s`).join(' · ') || 'nicht gebraucht'));
 if (bildabbrueche.size) console.log('Erwartete Firefox-Bildabbrüche: ' + [...bildabbrueche].map(([phase, anzahl]) => `${phase} ${anzahl}`).join(', '));
 console.log(failed ? `${failed} Suite(n) fehlgeschlagen.` : 'Alle Suiten bestanden.');
 process.exit(failed ? 1 : 0);
@@ -103,6 +105,8 @@ async function runEngine(engine) {
   }
   if (engine === 'firefox') dropIsMobile(browser);
   try {
+    // Neuladen, goto und Schließen warten ab jetzt, bis die Seite ruhig ist (scripts/seitenwechsel.mjs).
+    await installiereSeitenwechsel(browser);
     const run = suite => runSuite(suite, {engine, browser, browserType, launchOptions});
     const parallel = await inLanes(runnable.filter(suite => !suite.solo), options.jobs, run);
     const solo = await inLanes(runnable.filter(suite => suite.solo), 1, run);

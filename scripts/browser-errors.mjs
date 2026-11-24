@@ -1,4 +1,5 @@
 import {zaehleNavigationen} from './navigation-tempo.mjs';
+import {beobachteAnfragen} from './seitenwechsel.mjs';
 export const BROWSER_ERROR_FIELDS=['errors','consoleErrors','failedRequests','ownHttpErrors','externalRequests'];
 export const browserErrorArrays=()=>Object.fromEntries(BROWSER_ERROR_FIELDS.map(key=>[key,[]]));
 export const browserErrorsComplete=proof=>BROWSER_ERROR_FIELDS.every(key=>Array.isArray(proof?.[key])&&proof[key].length===0);
@@ -121,6 +122,8 @@ export function monitorBrowserErrors(page,base,proof,{engine,expectedHTTP503,exp
  // WebKit blockiert nach 200 schnellen Navigationen weitere und meldet das nur als Warnung (navigation-tempo.mjs).
  // Als Fehler zählen, damit eine Suite die Ursache nennt statt in einem Zeitlimit zu enden.
  zaehleNavigationen(page);
+ // Offene Anfragen merken: reload, goto und close warten vorher, bis die Seite ruhig ist (seitenwechsel.mjs).
+ beobachteAnfragen(page,{proof,tag});
  // Chromium und Firefox melden eine ResizeObserver-Schleife nur als `error`-Ereignis im Fenster, das Playwright nicht sieht;
  // WebKit meldet sie als Seitenfehler. Als console.error weitergeben, damit sie in jeder Engine als Fehler zählt.
  // Das Skript gilt ab dem nächsten Dokument (Aufrufer überwachen vor dem ersten goto). Schließt sich die Seite vorher, gibt es nichts zu melden.

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {bereich, inSucheTippen, ladeanfragen, ready} from './harness.mjs';
+import {bereich, inSucheTippen, ready} from './harness.mjs';
 import {ausprobieren} from './karte-hilfen.mjs';
 
 // Kinder tippen Buchstabe für Buchstabe. Beim ersten Öffnen der Suche kommen die Kapiteltexte oft genau dann an
@@ -17,7 +17,6 @@ export async function tippenWaehrendKapiteltexteKommen(ctx, report) {
       await context.route('**/assets/journey-content-*.json', async route => { anfragen++; await gehalten; await route.continue(); });
       const page = await context.newPage();
       ctx.monitor(page);
-      const anfragenFertig = ladeanfragen(page);
       await page.goto(ctx.base);
       await ready(page);
       await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
@@ -30,7 +29,6 @@ export async function tippenWaehrendKapiteltexteKommen(ctx, report) {
       await dialog.getByText('Passende Entdeckungen', {exact: true}).waitFor();
       assert.equal(await dialog.getByRole('option').first().getAttribute('data-value'), 'topic:animal-african-savanna-elephant');
       assert.equal(anfragen, 1, 'die Suche lädt die Kapiteltexte genau einmal');
-      await anfragenFertig();
     } finally {
       clearTimeout(zeitgeber);
       freigeben();

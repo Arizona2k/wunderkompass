@@ -8,10 +8,9 @@ import journeyData from'../../app/journey-inquiries.json'with{type:'json'};
 import{captureNativeViewport}from'./native-screenshot.mjs';
 const snapshot=p=>p.evaluate(k=>JSON.parse(localStorage.getItem(k)),SAVE_KEY);
 async function importFile(p,file){await p.getByRole('button',{name:'Entdeckerpass öffnen',exact:true}).click();await p.locator('input[type=file]').setInputFiles(file);await p.getByRole('button',{name:'Pass wiederherstellen',exact:true}).click();await p.locator('.passport-dialog').waitFor({state:'hidden'});}
-// `anfragenFertig` (harness.mjs, ladeanfragen): wenn übergeben, wartet jedes gewollte Neuladen, bis die Ladeanfragen fertig sind
-// (Code-Prüfung Offline-Wartehilfe, Befund 5; im Diagnose-Lauf lud ein Bild der Reise rund 385 ms vor dem Neuladen).
-// offline-cold übergibt sie; offline-resilience und journey-zoom (noch) nicht: BACKLOG, „Seitenwechsel im Test“.
-export async function learningTaskOfflineSemantics(page,{shots,kind,native=false,captureSession=null,anfragenFertig=null}){
+// Jedes Neuladen wartet von selbst, bis die Ladeanfragen fertig sind (scripts/seitenwechsel.mjs; Code-Prüfung
+// Offline-Wartehilfe, Befund 5: im Diagnose-Lauf lud ein Bild der Reise rund 385 ms vor dem Neuladen).
+export async function learningTaskOfflineSemantics(page,{shots,kind,native=false,captureSession=null}){
  const original=await snapshot(page),fixture=structuredClone(original),cases=[],prefix='cached-transfer-'+kind+(native?'-native':'');
  const journeyIds=['seasons:2','countries:4','landscapes:1','climate:2'];
  for(const id of['moon','seasons']){const old=labLegacy.entries[id];fixture.progress.gameSessions['lab:'+id]={...fixture.progress.gameSessions['lab:'+id],researchLevel:'hard','researchAnswer-hard':(old.correct+1)%3,researchHardTaskRevision:0};}
@@ -32,20 +31,20 @@ export async function learningTaskOfflineSemantics(page,{shots,kind,native=false
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2),false);
   if(!native)await page.screenshot({path:path.join(shots,prefix+'-'+width+'.png'),fullPage:true});
  }
- const insideCases=await insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession,anfragenFertig});
+ const insideCases=await insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession});
  await page.evaluate(()=>location.hash='home');await page.locator('.discovery-hero').waitFor();await importFile(page,originalFile);const restored=(await snapshot(page)).progress;for(const key of['gameSessions','notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(restored[key],original.progress[key],'original cached synthetic pass restored through actual UI: '+key);assert.equal(cases.length,12);return{cases,insideCases,originalPassRestoredThroughActualUI:true,heardSpeechOrPhysicalDeviceClaim:false};
 }
 
-async function insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession,anfragenFertig}){
+async function insideLegacyCachedSelections(page,{original,shots,prefix,native,captureSession}){
  const old=journeyLegacy.entries['inside:4:1'],q=journeyData.chapters.find(c=>c.id==='inside:4').tasks[1],cases=[];
  for(const width of[320,1440])for(const chosen of[0,2]){
   const fixture=structuredClone(original),key='journey:inside';fixture.progress.gameSessions[key]={...fixture.progress.gameSessions[key],'chapter:4:level':1,'chapter:4:answer:1':chosen};delete fixture.progress.gameSessions[key]['chapter:4:taskRevision:1'];
   const file=path.join(shots,`${prefix}-inside-${chosen}-${width}-synthetic.json`);await fs.writeFile(file,JSON.stringify(fixture,null,2)+'\n');await page.setViewportSize({width:width*(native?2:1),height:950});assert.equal(await page.evaluate(()=>document.documentElement.clientWidth),width);
   await importFile(page,file);await page.evaluate(()=>location.hash='journeys/inside/5');const box=page.locator('[data-chapter-inquiry="inside:4"]');await box.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
   const prior=()=>box.getByText('Deine frühere Auswahl „'+old.answers[chosen]+'“ bleibt gespeichert.',{exact:false});await prior().waitFor();await box.locator('.lab-feedback').getByText(old.wrong[chosen],{exact:true}).waitFor();assert.equal(await box.locator('.quiz-answer.is-incorrect').count(),0);
-  await anfragenFertig?.();await page.reload();await prior().waitFor();let saved=(await snapshot(page)).progress;assert.equal(saved.gameSessions[key]['chapter:4:answer:1'],chosen);assert.equal(saved.gameSessions[key]['chapter:4:taskRevision:1'],undefined);
+  await page.reload();await prior().waitFor();let saved=(await snapshot(page)).progress;assert.equal(saved.gameSessions[key]['chapter:4:answer:1'],chosen);assert.equal(saved.gameSessions[key]['chapter:4:taskRevision:1'],undefined);
   await box.getByRole('button',{name:q.answers[chosen],exact:true}).click();await box.locator('.lab-feedback').getByText(q.wrong[chosen],{exact:true}).waitFor();assert.equal((await snapshot(page)).progress.gameSessions[key]['chapter:4:taskRevision:1'],1);
-  await box.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();await anfragenFertig?.();await page.reload();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();assert.equal(await prior().count(),0);
+  await box.getByRole('button',{name:q.answers[q.correct],exact:true}).click();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();await page.reload();await box.locator('.lab-feedback').getByText(q.why,{exact:true}).waitFor();assert.equal(await prior().count(),0);
   saved=(await snapshot(page)).progress;assert.equal(saved.gameSessions[key]['chapter:4:answer:1'],q.correct);assert.equal(saved.gameSessions[key]['chapter:4:taskRevision:1'],1);
   for(const name of['notes','favorites','games','labs','journeys','review','settings'])assert.deepEqual(saved[name],original.progress[name],name+' retained in cached inside compatibility');
   for(const[id,value]of Object.entries(original.progress.gameSessions))if(id!==key)assert.deepEqual(saved.gameSessions[id],value,id+' untouched');

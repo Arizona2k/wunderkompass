@@ -2,7 +2,6 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {ladeanfragen} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const save=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);
@@ -68,8 +67,6 @@ async function returned(page,hash,opener,scroll){
  return {expectedScroll:scroll,firstMeasuredScroll:first,finalMeasuredScroll:actual.scroll,completionWaitMs:performance.now()-started,openerVisibility,returnedFocus};
 }
 export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=null,engine='chromium'}={}){
- // Vor jedem gewollten Neuladen fertig laden lassen (sonst Abbrüche als Browserfehler, siehe ladeanfragen).
- const anfragenFertig=ladeanfragen(page);
  const rows=[];
  for(const item of [
   {chapter:'journeys/water/1',path:'labs/water',label:'Im Forscherlabor ausprobieren · Wasserkreislauf',focus:'water-lab'},
@@ -94,7 +91,7 @@ export async function chapterLaboratoryReturnPage(page,base,{touch=false,shots=n
   }else await page.locator('.research-grid').waitFor();
   await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);
   const firstReturn=await returned(page,'#'+item.chapter,opener,scroll);assert.deepEqual(preserved(await save(page)),before,'chapter stamps, saved resume and personal data stay unchanged');
-  await page.goForward();await page.waitForFunction(hash=>location.hash==='#'+hash,item.path);await anfragenFertig();await page.reload();await ready(page);
+  await page.goForward();await page.waitForFunction(hash=>location.hash==='#'+hash,item.path);await page.reload();await ready(page);
   await activate(page,page.getByRole('button',{name:'Zurück zu deinem Ausgangskapitel',exact:true}),touch);
   const reloadedReturn=await returned(page,'#'+item.chapter,opener,scroll);assert.deepEqual(preserved(await save(page)),before);
   if(shots)await page.screenshot({path:path.join(shots,`journey-engine-${engine}-chapter-lab-return-${item.focus}-${page.viewportSize().width}.png`),animations:'disabled'});
@@ -109,7 +106,6 @@ async function selectionFields(page){return page.locator('.world-filter').evalua
 // und trägt den Fokus-Schlüssel der Auswahl; direkt geöffnet heißt er wie die Welt.
 const zurAuswahl=page=>page.getByRole('navigation',{name:'Rückweg',exact:true}).getByRole('link',{name:'Zurück',exact:true}).and(page.locator('[data-route-focus="world-return-selection"]'));
 export async function worldSelectionReturnPage(page,base,{touch=false,shots=null,engine='chromium',capture=null}={}){
- const anfragenFertig=ladeanfragen(page);
  const catalogue=JSON.parse(await fs.readFile(new URL('../../app/world-index.json',import.meta.url),'utf8')),animalCount=catalogue.filter(topic=>topic.category==='animals').length;
  await page.goto(base+'/#world/animals/page/2');await ready(page);await page.getByText(`${animalCount} passende Entdeckerkarten · Seite 2 von ${Math.ceil(animalCount/12)}`,{exact:true}).waitFor();
  const orca=page.locator('[data-route-focus="world-topic-animal-orca"]');await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));
@@ -139,7 +135,7 @@ export async function worldSelectionReturnPage(page,base,{touch=false,shots=null
  await page.getByRole('combobox',{name:'Lebensraum',exact:true}).selectOption(habitat);await orca.waitFor();
  const fields=await selectionFields(page);assert.deepEqual(fields,{query:'Orca',group:'Säugetiere',habitat});
  await orca.evaluate(element=>element.scrollIntoView({block:'center',behavior:'instant'}));const filteredPreparatoryScroll=await page.evaluate(()=>scrollY);
- const filteredDeparture=await activateWithReadingPosition(page,orca,touch),filteredScroll=filteredDeparture.scroll;await page.locator('#world-topic-title').waitFor();await anfragenFertig();await page.reload();await ready(page);
+ const filteredDeparture=await activateWithReadingPosition(page,orca,touch),filteredScroll=filteredDeparture.scroll;await page.locator('#world-topic-title').waitFor();await page.reload();await ready(page);
  await activate(page,zurAuswahl(page),touch);
  const filteredReturn=await returned(page,'#world/animals/page/1',orca,filteredScroll);assert.deepEqual(await selectionFields(page),fields);assert.deepEqual(preserved(await save(page)),before);
  const actualCapture=capture?await capture():null;

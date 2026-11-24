@@ -205,3 +205,5 @@
 /* Gewählte Antwort ohne Bewertung (Denkfragen im Wissensbuch mit aria-pressed): sichtbar markiert, auch am Handy.
    Vorher sah man die Wahl nur zufällig am hängenden Hover-Grün, auch bei einer falschen (Code-Nachprüfung Feinschliff, K5). */
 .quiz-answer[aria-pressed="true"]:not(.is-correct):not(.is-incorrect){border-color:#386858;background:#eef4f6}
+/* Platzhalter, bis Ortssuche, Auswahlliste und Tag-Regler nachgeladen sind (globus-bedienung.tsx). */
+.bedienung-laedt{display:block;min-height:48px;border-radius:12px;background:#eef5f8}.bedienung-laedt-regler{min-height:24px}
