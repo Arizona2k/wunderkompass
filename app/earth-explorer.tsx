@@ -181,7 +181,10 @@ export default function EarthExplorer(){
   const discovery=useDiscoverySelection();
   const goMode=useCallback((value:string,path=value)=>{if(!MODES.includes(value))return;setMode(value as Mode);setVisited(p=>new Set([...p,value]));setSpin(false);setTouchActive(false);navigateHash(path);},[]);
   // Nach dem Schließen eines Spiels liegt der Fokus auf seiner Karte in der Übersicht (sonst auf der Überschrift).
-  const zurSpielkarte=useCallback(()=>{if(gameOpener.current)requestAnimationFrame(()=>{const target=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current);(target??document.getElementById('playground-title'))?.focus();});},[]);
+  // Schließt „Spielen“ in der Leiste das Spiel, ist die Übersicht im nächsten Bild oft noch versteckt; darum Bild für Bild
+  // neu versuchen, bis die Karte zu sehen ist (höchstens 20 Bilder). Ein Fokus vor der Bereichs-Wiederherstellung hält diese
+  // auf (scheduleRouteRestore in hash-route.ts), ein späterer ersetzt sie (später Fund im Spielplatz-Test, PR 2).
+  const zurSpielkarte=useCallback(()=>{if(!gameOpener.current)return;let bilder=0;const fokus=()=>{const karte=Array.from(document.querySelectorAll<HTMLElement>('[data-game-key]')).find(el=>el.dataset.gameKey===gameOpener.current&&el.getClientRects().length);if(karte){karte.focus();return;}if(++bilder<20)requestAnimationFrame(fokus);else document.getElementById('playground-title')?.focus();};requestAnimationFrame(fokus);},[]);
   // „Spielen“ in der Leiste führt immer zur Spiele-Übersicht (BACKLOG Phase 1, Punkt 16; Teil B, Aufgabe 9, Entscheidung 25),
   // auch wenn das Kind über „Wissen vertiefen“ oder einen anderen Bereich zurückkommt. Ein offenes Spiel schließt sich wie mit
   // „Zur Übersicht“ (zur-uebersicht.ts); sein Stand bleibt im Pass. Lädt das Spiel noch oder meldet kein Spiel „offen“, schließt
