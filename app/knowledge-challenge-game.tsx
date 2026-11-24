@@ -1,13 +1,16 @@
 'use client';
 import {Check,Volume2} from 'lucide-react';
-import {useSavedGame} from './saved-games';
+import {useGameSnapshot,useSavedGame} from './saved-games';
+import {vorigeRunde} from './kern/auswahl';
+import type {Review} from './progress-storage';
 import QuestionHints from './question-hints';
 import HINTS from './challenge-hints.json';
 import {CHALLENGE_BANK,challengeQuestionForOrder,DIFFICULTIES,createChallenge,emptyChallenge,restoreChallenge,type Difficulty} from './knowledge-challenge';
 import {WOERTER} from './kern/woerter';
-export default function KnowledgeChallenge({onWin,onRead,onReview,onTopic}:{onWin:()=>void;onRead:(s:string)=>void;onReview:(id:string,correct:boolean)=>void;onTopic:(id:string)=>void}){
- const [session,setSession]=useSavedGame('challenge',emptyChallenge,restoreChallenge);
- function start(d:Difficulty){onRead('');setSession(createChallenge(d,session.ids));}
+export default function KnowledgeChallenge({review,onWin,onRead,onReview,onTopic}:{review:Review;onWin:()=>void;onRead:(s:string)=>void;onReview:(id:string,correct:boolean)=>void;onTopic:(id:string)=>void}){
+ const [session,setSession]=useSavedGame('challenge',emptyChallenge,restoreChallenge),gemerkt=useGameSnapshot().vorige;
+ // Die vorige Runde ist die laufende oder, nach „Neue Runde“ oben, die gemerkte (Teil B, Aufgabe 7).
+ function start(d:Difficulty){onRead('');setSession(createChallenge(d,vorigeRunde({challenge:session,vorige:gemerkt}),Math.random,review));}
  const level=DIFFICULTIES.find(d=>d.id===session.difficulty);
  if(!level)return <section className="knowledge-challenge"><p className="eyebrow">DEINE NEUGIER, DEINE STUFE</p><h2>Welche Herausforderung passt heute?</h2><p>Sechs Aufgaben, ohne Uhr und ohne Punktabzug. Du kannst jede Stufe ausprobieren.</p><div className="challenge-levels">{DIFFICULTIES.map(d=><button className="secondary-button" key={d.id} onClick={()=>start(d.id)}><strong>{d.label}</strong><span>{d.description}</span><small>{CHALLENGE_BANK.filter(q=>q.difficulty===d.id).length} Aufgaben im Pool</small></button>)}</div></section>;
  const q=challengeQuestionForOrder(session.ids[session.index],session.orders[session.ids[session.index]])!,right=session.answer===q.answers[q.correct];

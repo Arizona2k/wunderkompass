@@ -2,6 +2,8 @@ import {restoreAnswerWording,retainedChallengeChoiceVariant} from './retained-an
 import HINTS from './challenge-hints.json' with {type:'json'};
 import CATALOG from './world-catalog.json' with {type:'json'};
 import type {WorldTopic, WorldQuestion} from './world-types';
+import type {Review} from './progress-storage';
+import {waehleAufgaben} from './kern/auswahl';
 export type Difficulty='easy'|'medium'|'hard';
 export type ChallengeQuestion=WorldQuestion & {id:string;topic:string;topicTitle:string;difficulty:Difficulty;hints:readonly string[];ruht?:true};
 export const DIFFICULTIES: {id:Difficulty;label:string;description:string}[]=[
@@ -26,10 +28,12 @@ export function challengeQuestionForOrder(id:string,order:unknown){
 export type ChallengeSession={difficulty:Difficulty|null;ids:string[];orders:Record<string,string[]>;index:number;answer:string|null;done:boolean};
 export const emptyChallenge=():ChallengeSession=>({difficulty:null,ids:[],orders:{},index:0,answer:null,done:false});
 function shuffle<T>(items:T[],random:()=>number){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-export function createChallenge(difficulty:Difficulty,previous:string[]=[],random:()=>number=Math.random):ChallengeSession{
- const pool=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty&&!q.ruht),fresh=shuffle(pool.filter(q=>!previous.includes(q.id)),random),old=shuffle(pool.filter(q=>previous.includes(q.id)),random);
- const selected=[...fresh,...old].slice(0,6);
- return {difficulty,ids:selected.map(q=>q.id),orders:Object.fromEntries(selected.map(q=>[q.id,shuffle(q.answers,random)])),index:0,answer:null,done:false};
+// Auswahl mit dem gemeinsamen Helfer (Teil B, Aufgabe 7): falsch und fällig, ungesehen, fällig, Rest; die vorige Runde zuletzt.
+export function createChallenge(difficulty:Difficulty,previous:readonly string[]=[],random:()=>number=Math.random,review:Review={},heute?:string):ChallengeSession{
+ const pool=CHALLENGE_BANK.filter(q=>q.difficulty===difficulty&&!q.ruht);
+ const ids=waehleAufgaben({vorrat:pool.map(q=>q.id),review,schluessel:id=>'challenge:'+id,anzahl:6,vorige:previous,zufall:random,heute});
+ const selected=ids.map(id=>pool.find(q=>q.id===id)!);
+ return {difficulty,ids,orders:Object.fromEntries(selected.map(q=>[q.id,shuffle(q.answers,random)])),index:0,answer:null,done:false};
 }
 export function restoreChallenge(value:unknown,fallback:ChallengeSession):ChallengeSession{
  if(!value||typeof value!=='object')return fallback;
