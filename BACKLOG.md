@@ -315,9 +315,9 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
 
-**Helfer überall: Lücken schließen (Wunsch des Nutzers, 24.11.2026, „Helfer überall am Start“ in `CLAUDE.md`):** Zwei Lücken, Vorschlag von Claude, Entscheidung mit dem Nutzer offen.
-- **Texte außerhalb der Karten:** `karten-autor` schreibt nur Karteninhalte. Für Spiele, Labore, Lernreisen, Rätsel und „Was ist neu?“ schreibt bisher Claude selbst. Vorschlag: `karten-autor` auf alle Kindertexte erweitern (gleiche Regeln, Quelle je Aussage), statt einen zweiten Schreib-Helfer anzulegen. Ein zweiter würde den Ton uneinheitlicher machen; mehr Tempo kommt aus Paketen.
-- **Neues Design:** `design-pruefer` prüft nur. Wenn das neue Design geplant wird, prüfen, ob ein Entwurfs-Helfer (Varianten als Bild, nach dem Vorbild von `karten-autor`) lohnt.
+**Helfer überall: Lücken schließen (Wunsch des Nutzers, 24.11.2026, „Helfer überall am Start“ in `CLAUDE.md`):** Zwei Lücken.
+- **Texte außerhalb der Karten: erledigt** (Nutzer, 24.11.2026: „ja“). `karten-autor` schreibt jetzt alle Kindertexte (Spiele, Rätsel, Labore, Lernreisen, Missionen, „Was ist neu?“), statt einen zweiten Schreib-Helfer anzulegen. Ein zweiter hätte den Ton uneinheitlicher gemacht; mehr Tempo kommt aus Paketen.
+- **Neues Design (offen):** `design-pruefer` prüft nur. Wenn das neue Design geplant wird, prüfen, ob ein Entwurfs-Helfer (Varianten als Bild, nach dem Vorbild von `karten-autor`) lohnt.
 
 **Globus schöner und detaillierter (Wunsch des Nutzers, 23.11.2026, für Phase 4):** Der 3D-Globus soll cooler, schöner und detaillierter werden. Wann: wenn Phase 4 („Globus als Herzstück“) geplant wird, nicht vorher. Dann zuerst `ideen-scout` (wie zeigen gute Kinder- und Lernangebote die Erde?), danach Entwurf mit Vorher-Bildern und `design-pruefer`. Erste Einschätzung von Claude, vor dem Entwurf zu prüfen:
 - Möglich wären echte Erdbilder statt flacher Farben (Wolken, Gebirge, Meerestiefen, Nachtseite mit Lichtern), sanftes Licht und Schatten, eine Atmosphäre als heller Rand, schärfere Küsten beim Heranzoomen.
