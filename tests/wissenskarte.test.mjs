@@ -226,7 +226,9 @@ test('Kennwörter der Karte passen genau zu den Fotodaten', () => {
 });
 
 test('bildnachweisListe liefert für jedes Foto Urheber, Lizenz, Lizenz-Link und Quelle', () => {
-  assert.equal(fotoIds.length, 60);
+  // Fotos kommen dazu, Foto-IDs fallen nie weg (Stand vor dem Bilder-Strang: 60).
+  assert.ok(fotoIds.length >= 60);
+  assert.deepEqual([...fotoIds].sort(), Object.keys(fotos).sort());
   const liste = bildnachweisListe(fotoIds, fotos);
   assert.deepEqual(liste.map(n => n.photoId), fotoIds);
   for (const n of liste) {

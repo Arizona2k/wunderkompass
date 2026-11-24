@@ -75,7 +75,7 @@
     },
     {
       "id": "western-lowland-gorilla",
-      "author": "Mira Meijer, Burgers’ Zoo",
+      "author": "Mira Meijer, Burgers’ Zoo · https://www.burgerszoo.nl/gorilla",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Western_lowland_gorilla_(Gorilla_gorilla_gorilla).jpg",
@@ -111,6 +111,7 @@
     },
     {
       "id": "emperor-penguin",
+      "src": "/world/animals/emperor-penguin-700.webp",
       "author": "Michael Van Woert / NOAA",
       "license": "Public domain — NOAA",
       "license_url": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
@@ -118,8 +119,22 @@
       "alt_de": "Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.",
       "width": 700,
       "height": 1024,
-      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-      "src": "/world/emperor-penguin.webp"
+      "transformations_de": "Proportional auf 320, 640 und 700 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "variants": [
+        {
+          "src": "/world/animals/emperor-penguin-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/animals/emperor-penguin-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/animals/emperor-penguin-700.webp",
+          "width": 700
+        }
+      ]
     },
     {
       "id": "blue-whale",
@@ -195,11 +210,11 @@
     },
     {
       "id": "jaguar",
-      "author": "Giles Laurent",
+      "author": "© Giles Laurent · gileslaurent.com",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:009_Female_jaguar_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg",
-      "alt_de": "Ein Jaguar mit schwarzem Rosettenmuster steht vor grünen Pflanzen auf einem Felsen.",
+      "alt_de": "Ein Jaguar mit schwarzem Rosettenmuster blickt zwischen grünen Pflanzen hervor.",
       "width": 1016,
       "height": 677,
       "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
@@ -267,15 +282,30 @@
     },
     {
       "id": "eiffel-tower",
+      "src": "/world/buildings/eiffel-tower-960.webp",
       "author": "BigBartimäus",
       "license": "Public domain — author release",
       "license_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
       "alt_de": "Der gesamte Eiffelturm steht am Tag vor blauem Himmel; darunter liegt eine grüne Rasenfläche.",
-      "width": 900,
-      "height": 1200,
-      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-      "src": "/world/eiffel-tower.webp"
+      "width": 960,
+      "height": 1280,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "variants": [
+        {
+          "src": "/world/buildings/eiffel-tower-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/buildings/eiffel-tower-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/buildings/eiffel-tower-960.webp",
+          "width": 960
+        }
+      ]
     },
     {
       "id": "golden-gate-bridge",
@@ -409,33 +439,61 @@
     },
     {
       "id": "karl-benz",
-      "src": "/images/portraits/karl-benz.webp",
+      "src": "/world/people/karl-benz-960.webp",
       "author": "Unbekannter Fotograf",
       "license": "Public Domain (laut Commons: USA und Deutschland)",
       "license_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
       "alt_de": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug.",
-      "width": 600,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Karl Benz auf einem historischen Foto aus der Zeit um 1920.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1280,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/karl-benz-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/karl-benz-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/karl-benz-960.webp",
+          "width": 960
+        }
+      ]
     },
     {
       "id": "bertha-benz",
-      "src": "/images/portraits/bertha-benz.webp",
+      "src": "/world/people/bertha-benz-960.webp",
       "author": "Bühler, Mannheim",
       "license": "Public Domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Berthabenzportrait.jpg",
       "alt_de": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
-      "width": 601,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Bertha Benz als junge Frau, fotografiert um 1871–1872.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1278,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/bertha-benz-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/bertha-benz-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/bertha-benz-960.webp",
+          "width": 960
+        }
+      ]
     },
     {
       "id": "jane-goodall",
@@ -454,18 +512,32 @@
     },
     {
       "id": "albert-einstein",
-      "src": "/images/portraits/albert-einstein.webp",
+      "src": "/world/people/albert-einstein-960.webp",
       "author": "Ferdinand Schmutzer",
       "license": "Public Domain",
       "license_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
       "alt_de": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto.",
-      "width": 609,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Albert Einstein auf einem Foto von Ferdinand Schmutzer in Wien, 1921.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1261,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/albert-einstein-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/albert-einstein-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/albert-einstein-960.webp",
+          "width": 960
+        }
+      ]
     },
     {
       "id": "tu-youyou",
@@ -484,33 +556,61 @@
     },
     {
       "id": "johannes-gutenberg",
-      "src": "/images/portraits/johannes-gutenberg.webp",
+      "src": "/world/people/johannes-gutenberg-650.webp",
       "author": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
       "license": "Public Domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg_ca._1400-1468_uitvinder_van_de_boekdrukkunst,_1584_-_BBB-1437.jpg",
       "alt_de": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt.",
-      "width": 615,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Spätere Darstellung von Johannes Gutenberg: Kupferstich von 1584.",
-      "label": "Darstellung"
+      "width": 650,
+      "height": 846,
+      "transformations_de": "Proportional auf 320, 640 und 650 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Darstellung",
+      "variants": [
+        {
+          "src": "/world/people/johannes-gutenberg-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/johannes-gutenberg-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/johannes-gutenberg-650.webp",
+          "width": 650
+        }
+      ]
     },
     {
       "id": "wangari-maathai",
-      "src": "/images/portraits/wangari-maathai.webp",
+      "src": "/world/people/wangari-maathai-742.webp",
       "author": "Demosh",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Wangari_Maathai.jpg",
       "alt_de": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.",
-      "width": 495,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Wangari Maathai bei der Übergabe einer Auszeichnung in Kenia, 2006.",
-      "label": "Foto"
+      "width": 742,
+      "height": 1200,
+      "transformations_de": "Proportional auf 320, 640 und 742 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/wangari-maathai-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/wangari-maathai-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/wangari-maathai-742.webp",
+          "width": 742
+        }
+      ]
     },
     {
       "id": "charles-darwin",
@@ -559,18 +659,32 @@
     },
     {
       "id": "al-khwarizmi",
-      "src": "/images/portraits/al-khwarizmi.webp",
+      "src": "/world/people/al-khwarizmi-735.webp",
       "author": "А. Адашев (A. Adaschew), laut Commons",
       "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
       "license_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
       "alt_de": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi.",
-      "width": 597,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Spätere Fantasiedarstellung von al-Khwarizmi auf einer sowjetischen Briefmarke von 1983.",
-      "label": "Darstellung"
+      "width": 735,
+      "height": 985,
+      "transformations_de": "Proportional auf 320, 640 und 735 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Darstellung",
+      "variants": [
+        {
+          "src": "/world/people/al-khwarizmi-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/al-khwarizmi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/al-khwarizmi-735.webp",
+          "width": 735
+        }
+      ]
     },
     {
       "id": "cai-lun",
@@ -590,7 +704,7 @@
     {
       "id": "whale-shark",
       "src": "/images/animals/whale-shark.webp",
-      "author": "Diego Delso",
+      "author": "Diego Delso · delso.photo",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Tibur%C3%B3n_ballena_(Rhincodon_typus),_La_Paz,_Baja_California,_M%C3%A9xico,_2024-12-20,_DD_01.jpg",
@@ -614,7 +728,8 @@
       "height": 666,
       "transformations_de": "Proportional verkleinert und als WebP gespeichert. Kein Beschnitt und keine Veränderung der Tiermerkmale.",
       "fit": "contain",
-      "sha256": "2f124bf25d601d7bcbcba265541f96602602ca655af364f2db36902d444b521f"
+      "sha256": "2f124bf25d601d7bcbcba265541f96602602ca655af364f2db36902d444b521f",
+      "caption": "Das Originalfoto wurde aus zwölf unterschiedlich fokussierten Aufnahmen zusammengesetzt. Es zeigt keine einzelne unveränderte Momentaufnahme."
     },
     {
       "id": "dromedary",
@@ -646,6 +761,62 @@
       "sha256": "0c666eac9af9ee9bab570bbb0652471d5140362b8b959308a80ddc75644decde"
     },
     {
+      "id": "bryce-hoodoos",
+      "author": "NPS / Peter Densmore",
+      "license": "Public Domain · US-Regierungswerk (NPS)",
+      "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "source_page_url": "https://www.nps.gov/brca/index.htm",
+      "alt_de": "Orangefarbene Felstürme und bewaldete Hänge im Bryce Canyon im Morgenlicht.",
+      "caption": "Felstürme im Bryce Canyon. Ihre heutige Form ist das Ergebnis einer längeren Landschaftsgeschichte.",
+      "width": 1199,
+      "height": 800,
+      "src": "/world/bryce-hoodoos-1200.webp",
+      "fit": "contain",
+      "transformations_de": "Ganzes Bild proportional verkleinert und als WebP komprimiert; kein Beschnitt, keine KI-Bildänderung. Kein eigener Urheberrechtsanspruch am ursprünglichen US-Regierungswerk."
+    },
+    {
+      "id": "arches-sandstone",
+      "author": "National Park Service",
+      "license": "Public Domain · US-Regierungswerk (NPS)",
+      "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "source_page_url": "https://www.nps.gov/arch/index.htm",
+      "alt_de": "Double O Arch: Eine deutlich sichtbare große Öffnung und eine kleinere darunter durchbrechen orangefarbenen Sandstein.",
+      "caption": "Double O Arch im Arches-Nationalpark. Durch die Öffnungen siehst du die Landschaft dahinter. Das Foto zeigt die heutige Form, keinen berechneten Zeitpunkt ihres Einsturzes.",
+      "width": 1200,
+      "height": 799,
+      "src": "/world/arches-sandstone-1200.webp",
+      "fit": "contain",
+      "transformations_de": "Ganzes Bild proportional verkleinert und als WebP komprimiert; kein Beschnitt, keine KI-Bildänderung. Kein eigener Urheberrechtsanspruch am ursprünglichen US-Regierungswerk."
+    },
+    {
+      "id": "crater-lake",
+      "author": "NPS / Kim Chamales",
+      "license": "Public Domain · US-Regierungswerk (NPS)",
+      "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "source_page_url": "https://www.nps.gov/crla/learn/nature/crater-lake.htm",
+      "alt_de": "Der blaue Crater Lake liegt innerhalb hoher bewaldeter Beckenränder; im Wasser steht Wizard Island.",
+      "caption": "Crater Lake mit Wizard Island. Die Form des Beckens und die Herkunft seines Wassers sind verschiedene Erklärungsfragen.",
+      "width": 1200,
+      "height": 564,
+      "src": "/world/crater-lake-1200.webp",
+      "fit": "contain",
+      "transformations_de": "Ganzes Bild proportional verkleinert und als WebP komprimiert; kein Beschnitt, keine KI-Bildänderung. Kein eigener Urheberrechtsanspruch am ursprünglichen US-Regierungswerk."
+    },
+    {
+      "id": "white-sands",
+      "author": "National Park Service",
+      "license": "Public Domain · US-Regierungswerk (NPS)",
+      "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "source_page_url": "https://www.nps.gov/whsa/index.htm",
+      "alt_de": "Helle, gerippte Dünen in White Sands mit Bergen am Horizont und Wolken am Abendhimmel.",
+      "caption": "Gipsdünen in White Sands. Die helle Farbe allein wäre bei einem unbekannten Korn noch kein Mineralnachweis.",
+      "width": 1067,
+      "height": 800,
+      "src": "/world/white-sands-1200.webp",
+      "fit": "contain",
+      "transformations_de": "Ganzes Bild proportional verkleinert und als WebP komprimiert; kein Beschnitt, keine KI-Bildänderung. Kein eigener Urheberrechtsanspruch am ursprünglichen US-Regierungswerk."
+    },
+    {
       "id": "henrietta-swan-leavitt",
       "src": "/world/people/henrietta-swan-leavitt-960.webp",
       "author": "Unbekannter Fotograf; historische US-Veröffentlichung Popular Astronomy30/4, April1922; WikimediaCommons-Dateifassung2024",
@@ -672,8 +843,7 @@
           "src": "/world/people/henrietta-swan-leavitt-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "ab0a7979bcda764ec23f3284890ce25c711d508d43b732179a219a725ec103a3"
+      ]
     },
     {
       "id": "cecilia-payne-gaposchkin",
@@ -702,8 +872,7 @@
           "src": "/world/people/cecilia-payne-gaposchkin-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "e640e03dd234362875559697f5a2b1656a4a418bc285964ae838532ad5bcb746"
+      ]
     },
     {
       "id": "jocelyn-bell-burnell",
@@ -732,8 +901,7 @@
           "src": "/world/people/jocelyn-bell-burnell-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "e241dd7dc949c31b5fe2c06e30c03bbc9228e4a2a555d1715147765b1fcdfbea"
+      ]
     },
     {
       "id": "rachel-carson",
@@ -762,8 +930,7 @@
           "src": "/world/people/rachel-carson-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "c9f609e0fd707b691db87924484f07ae27d3325db94a3a6c0ffd000084a62d64"
+      ]
     },
     {
       "id": "chien-shiung-wu",
@@ -792,8 +959,7 @@
           "src": "/world/people/chien-shiung-wu-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "1d1a13fe865d5a6b8763c21de477ef242ba21482a4f6903bcfd937613e6b4714"
+      ]
     },
     {
       "id": "zaha-hadid",
@@ -822,8 +988,7 @@
           "src": "/world/people/zaha-hadid-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "c5814cf24f7e447dd94f57408b2025d6712f8ad1cdea56b99603c0a6961357af"
+      ]
     },
     {
       "id": "hokusai-great-wave-jp1847",
@@ -852,8 +1017,33 @@
           "src": "/world/people/hokusai-great-wave-jp1847-960.webp",
           "width": 960
         }
-      ],
-      "sha256": "44c3399429f328dee546d9c844a8a04b69d6289746dced7165cf3eb1c8debf80"
+      ]
+    },
+    {
+      "id": "orca-jumping-pair",
+      "src": "/world/animals/orca-jumping-pair-960.webp",
+      "author": "Robert Pittman (NOAA)",
+      "license": "Public domain — NOAA",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg",
+      "alt_de": "Zwei schwarz-weiße Orcas springen gleichzeitig aus dem Meer. Beim vorderen sieht man den weißen Fleck hinter dem Auge.",
+      "width": 960,
+      "height": 638,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "variants": [
+        {
+          "src": "/world/animals/orca-jumping-pair-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/animals/orca-jumping-pair-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/animals/orca-jumping-pair-960.webp",
+          "width": 960
+        }
+      ]
     }
   ]
 }

@@ -15,6 +15,7 @@ export const ORDNER_JE_WELT = {
 // Feld label im Vorschlag → so steht es in app/world-photos.json. Das Kennwort auf der Karte
 // leitet app/kern/karte/karten-daten.ts (fotoKennwort) daraus ab. Im Bestand heißt ein späteres Bildnis „Darstellung“.
 export const LABEL_IM_BESTAND = {
+  'Foto': 'Foto',
   'Spätere Darstellung': 'Darstellung',
   'Darstellung': 'Darstellung',
   'Historischer Druck': 'Historischer Druck',

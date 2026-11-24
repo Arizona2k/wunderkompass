@@ -42,6 +42,8 @@ test('lizenzArt lehnt unfreie und unbekannte Lizenzen ab', () => {
 test('pruefeVorschlag nimmt einen vollständigen Vorschlag an und gibt die Karte zurück', () => {
   assert.equal(pruefeVorschlag(vorschlag(), bestand).id, 'animal-okapi');
   assert.equal(pruefeVorschlag(vorschlag({label: 'Gemälde', focus: '50% 20%'}), bestand).id, 'animal-okapi');
+  // Neu-Exporte übernehmen das Label „Foto“ aus dem Bestand.
+  assert.equal(pruefeVorschlag(vorschlag({label: 'Foto'}), bestand).id, 'animal-okapi');
 });
 
 test('pruefeVorschlag lehnt fehlende Felder, unbekannte Karten und Welten ohne Bildordner ab', () => {

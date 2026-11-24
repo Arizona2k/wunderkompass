@@ -326,6 +326,7 @@
     "homeQuestion": "Wo leben Kaiserpinguine in freier Natur?",
     "homePhoto": {
       "id": "emperor-penguin",
+      "src": "/world/animals/emperor-penguin-700.webp",
       "author": "Michael Van Woert / NOAA",
       "license": "Public domain — NOAA",
       "license_url": "https://commons.wikimedia.org/wiki/File:Emperor_penguin.jpg",
@@ -333,8 +334,22 @@
       "alt_de": "Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.",
       "width": 700,
       "height": 1024,
-      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-      "src": "/world/emperor-penguin.webp"
+      "transformations_de": "Proportional auf 320, 640 und 700 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "variants": [
+        {
+          "src": "/world/animals/emperor-penguin-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/animals/emperor-penguin-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/animals/emperor-penguin-700.webp",
+          "width": 700
+        }
+      ]
     }
   },
   {
@@ -424,22 +439,36 @@
         "lon": -123.2
       }
     ],
-    "image": "orca",
+    "image": "orca-jumping-pair",
     "group": "Säugetiere",
     "habitat": "Ozean",
     "continent": "Ozean",
     "homeQuestion": "Zu welcher Gruppe gehört der Orca?",
     "homePhoto": {
-      "id": "orca",
-      "author": "The Modern Polymath",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-      "source_page_url": "https://commons.wikimedia.org/wiki/File:Orca_breaching.jpg",
-      "alt_de": "Ein schwarz-weißer Orca springt vor einer bergigen Küste aus dem Meer.",
-      "width": 1200,
-      "height": 675,
-      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-      "src": "/world/orca.webp"
+      "id": "orca-jumping-pair",
+      "src": "/world/animals/orca-jumping-pair-960.webp",
+      "author": "Robert Pittman (NOAA)",
+      "license": "Public domain — NOAA",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg",
+      "alt_de": "Zwei schwarz-weiße Orcas springen gleichzeitig aus dem Meer. Beim vorderen sieht man den weißen Fleck hinter dem Auge.",
+      "width": 960,
+      "height": 638,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "variants": [
+        {
+          "src": "/world/animals/orca-jumping-pair-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/animals/orca-jumping-pair-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/animals/orca-jumping-pair-960.webp",
+          "width": 960
+        }
+      ]
     }
   },
   {
@@ -1387,18 +1416,32 @@
     "homeQuestion": "Wofür ist Karl (Carl) Benz besonders bekannt?",
     "homePhoto": {
       "id": "karl-benz",
-      "src": "/images/portraits/karl-benz.webp",
+      "src": "/world/people/karl-benz-960.webp",
       "author": "Unbekannter Fotograf",
       "license": "Public Domain (laut Commons: USA und Deutschland)",
       "license_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg",
       "alt_de": "Historisches Porträtfoto von Karl Benz mit Schnurrbart und dunklem Anzug.",
-      "width": 600,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Karl Benz auf einem historischen Foto aus der Zeit um 1920.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1280,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/karl-benz-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/karl-benz-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/karl-benz-960.webp",
+          "width": 960
+        }
+      ]
     }
   },
   {
@@ -1430,18 +1473,32 @@
     "homeQuestion": "Wofür ist Bertha Benz besonders bekannt?",
     "homePhoto": {
       "id": "bertha-benz",
-      "src": "/images/portraits/bertha-benz.webp",
+      "src": "/world/people/bertha-benz-960.webp",
       "author": "Bühler, Mannheim",
       "license": "Public Domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Berthabenzportrait.jpg",
       "alt_de": "Historisches Porträtfoto der jungen Bertha Benz in einem dunklen Kleid.",
-      "width": 601,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Bertha Benz als junge Frau, fotografiert um 1871–1872.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1278,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/bertha-benz-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/bertha-benz-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/bertha-benz-960.webp",
+          "width": 960
+        }
+      ]
     }
   },
   {
@@ -1510,18 +1567,32 @@
     "homeQuestion": "Wofür ist Albert Einstein besonders bekannt?",
     "homePhoto": {
       "id": "albert-einstein",
-      "src": "/images/portraits/albert-einstein.webp",
+      "src": "/world/people/albert-einstein-960.webp",
       "author": "Ferdinand Schmutzer",
       "license": "Public Domain",
       "license_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer.jpg",
       "alt_de": "Albert Einstein mit Schnurrbart und dunklem Anzug auf einem Schwarzweißfoto.",
-      "width": 609,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Albert Einstein auf einem Foto von Ferdinand Schmutzer in Wien, 1921.",
-      "label": "Foto"
+      "width": 960,
+      "height": 1261,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/albert-einstein-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/albert-einstein-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/albert-einstein-960.webp",
+          "width": 960
+        }
+      ]
     }
   },
   {
@@ -1547,18 +1618,32 @@
     "homeQuestion": "Wofür ist al-Chwarizmi (al-Khwarizmi) besonders bekannt?",
     "homePhoto": {
       "id": "al-khwarizmi",
-      "src": "/images/portraits/al-khwarizmi.webp",
+      "src": "/world/people/al-khwarizmi-735.webp",
       "author": "А. Адашев (A. Adaschew), laut Commons",
       "license": "Public Domain (PD-RU-exempt; vollständige Briefmarke)",
       "license_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:1983_CPA_5426.jpg",
       "alt_de": "Sowjetische Briefmarke von 1983 mit einer späteren Fantasiedarstellung von al-Khwarizmi.",
-      "width": 597,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Spätere Fantasiedarstellung von al-Khwarizmi auf einer sowjetischen Briefmarke von 1983.",
-      "label": "Darstellung"
+      "width": 735,
+      "height": 985,
+      "transformations_de": "Proportional auf 320, 640 und 735 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Darstellung",
+      "variants": [
+        {
+          "src": "/world/people/al-khwarizmi-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/al-khwarizmi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/al-khwarizmi-735.webp",
+          "width": 735
+        }
+      ]
     }
   },
   {
@@ -1693,18 +1778,32 @@
     "homeQuestion": "Wofür ist Johannes Gutenberg besonders bekannt?",
     "homePhoto": {
       "id": "johannes-gutenberg",
-      "src": "/images/portraits/johannes-gutenberg.webp",
+      "src": "/world/people/johannes-gutenberg-650.webp",
       "author": "André Thevet (Zeichnung); De Larmessin (Kupferstich), laut Sammlungskatalog der Koninklijke Bibliotheek",
       "license": "Public Domain",
       "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg_ca._1400-1468_uitvinder_van_de_boekdrukkunst,_1584_-_BBB-1437.jpg",
       "alt_de": "Späterer Kupferstich von 1584, der Johannes Gutenberg mit Bart und Mütze zeigt.",
-      "width": 615,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Spätere Darstellung von Johannes Gutenberg: Kupferstich von 1584.",
-      "label": "Darstellung"
+      "width": 650,
+      "height": 846,
+      "transformations_de": "Proportional auf 320, 640 und 650 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Darstellung",
+      "variants": [
+        {
+          "src": "/world/people/johannes-gutenberg-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/johannes-gutenberg-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/johannes-gutenberg-650.webp",
+          "width": 650
+        }
+      ]
     }
   },
   {
@@ -1727,18 +1826,32 @@
     "homeQuestion": "Welcher Beitrag gehört zu Wangari Maathai?",
     "homePhoto": {
       "id": "wangari-maathai",
-      "src": "/images/portraits/wangari-maathai.webp",
+      "src": "/world/people/wangari-maathai-742.webp",
       "author": "Demosh",
       "license": "CC BY 2.0",
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Wangari_Maathai.jpg",
       "alt_de": "Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.",
-      "width": 495,
-      "height": 800,
-      "transformations_de": "Proportional auf höchstens 800 Pixel an der längsten Seite verkleinert und als WebP komprimiert. Kein Bildbeschnitt, keine Kolorierung und keine Veränderung von Gesichtern; kleinere Vorlagen nicht hochskaliert.",
-      "fit": "contain",
       "caption": "Wangari Maathai bei der Übergabe einer Auszeichnung in Kenia, 2006.",
-      "label": "Foto"
+      "width": 742,
+      "height": 1200,
+      "transformations_de": "Proportional auf 320, 640 und 742 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "label": "Foto",
+      "variants": [
+        {
+          "src": "/world/people/wangari-maathai-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/people/wangari-maathai-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/people/wangari-maathai-742.webp",
+          "width": 742
+        }
+      ]
     }
   },
   {
@@ -2214,15 +2327,30 @@
     "homeQuestion": "Welcher Satz passt zum Eiffelturm?",
     "homePhoto": {
       "id": "eiffel-tower",
+      "src": "/world/buildings/eiffel-tower-960.webp",
       "author": "BigBartimäus",
       "license": "Public domain — author release",
       "license_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
       "source_page_url": "https://commons.wikimedia.org/wiki/File:Eiffelturm.JPG",
       "alt_de": "Der gesamte Eiffelturm steht am Tag vor blauem Himmel; darunter liegt eine grüne Rasenfläche.",
-      "width": 900,
-      "height": 1200,
-      "transformations_de": "Proportional verkleinert und als WebP komprimiert; Bildinhalt nicht beschnitten.",
-      "src": "/world/eiffel-tower.webp"
+      "width": 960,
+      "height": 1280,
+      "transformations_de": "Proportional auf 320, 640 und 960 Pixel Breite verkleinert und als WebP gespeichert; Bildinhalt nicht beschnitten, keine KI-Bildänderung.",
+      "fit": "contain",
+      "variants": [
+        {
+          "src": "/world/buildings/eiffel-tower-320.webp",
+          "width": 320
+        },
+        {
+          "src": "/world/buildings/eiffel-tower-640.webp",
+          "width": 640
+        },
+        {
+          "src": "/world/buildings/eiffel-tower-960.webp",
+          "width": 960
+        }
+      ]
     }
   },
   {
