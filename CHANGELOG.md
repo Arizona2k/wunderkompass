@@ -7,7 +7,7 @@ Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG
 
 Aus dem ersten Spieltest (Rolle am Handy, kein Kindertest). Für Kinder sichtbar:
 
-- **„Noch eine Frage“ bleibt in deiner Stufe:** Wer Profi spielt, bekommt keine Entdecker-Fragen mehr dazwischen, auch nicht beim Öffnen der Karte (außer einer früher falsch beantworteten). Nach der letzten Frage steht „Geschafft! Mehr Profi-Fragen hat diese Karte nicht.“ und ein Knopf „Weiter zu: …“ zur passenden Nachbarkarte (in Lernrouten nur der Satz, dort geht es mit der nächsten Station weiter). „Zurück“ führt wieder zu „Rate mal!“.
+- **„Noch eine Frage“ bleibt in deiner Stufe:** Wer Profi spielt, bekommt keine Entdecker-Fragen mehr dazwischen, auch nicht beim Öffnen der Karte. Eine falsch beantwortete Frage wartet in ihrer Stufe; „Noch einmal nachdenken“ im Wissensbuch bringt dich trotzdem genau zu ihr. Nach der letzten Frage steht „Geschafft! Mehr Profi-Fragen hat diese Karte nicht.“ und ein Knopf „Weiter zu: …“ zur passenden Nachbarkarte (in Lernrouten nur der Satz, dort geht es mit der nächsten Station weiter). „Zurück“ führt wieder zu „Rate mal!“.
 - **Zwei Fehler behoben:** Nach einem Stufenwechsel kommt sofort eine Frage der neuen Stufe, nicht die alte. „Zu schwer? Zurück zu Entdecker“ steht nur noch dort, wo es etwas ändert.
 - **Falsch sieht falsch aus:** Am Handy sah eine falsch angetippte Antwort grünlich aus, fast wie eine richtige. Jetzt bleibt sie orange, auf der Karte und in den Spielen. Im Wissensbuch ist die gewählte Antwort einer Denkfrage jetzt auch am Handy markiert.
 - **Elefant:** Eine Profi-Frage verriet die Experten-Frage; sie ruht jetzt. Neu ist eine Frage zu den Stoßzähnen. Ein paar Sätze sind genauer (geprüft von Sprache, Fakten und Stufen).
