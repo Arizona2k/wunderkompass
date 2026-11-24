@@ -18,7 +18,7 @@ Stand: 24.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 ## Adressen
 
 - **Testseite** (neuester freigegebener Stand, Branch `test-live`; alle benutzen zurzeit nur diese Seite): https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/ · Älterer Stand (Branch `main`, zurzeit nicht genutzt und nicht gebaut): https://wunderkompass.vercel.app/
-- **Vercel baut nur noch `test-live`** (Entscheidung des Nutzers, 24.11.2026; `vercel.json`, [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): Arbeits-Branches und `main` bekommen keinen Build. Grund: Der kostenlose Plan erlaubt 100 Deployments in 24 Stunden, am 24.11.2026 war das Limit erreicht. Zeigen geht über Screenshots; die Test-Seite zeigt eine Änderung nach dem Merge. Vercel ist kein Pflicht-Check, Merges gehen auch bei Sperre; die Test-Seite zieht dann mit dem nächsten Merge nach.
+- **Vercel baut nur noch `test-live`** (Entscheidung des Nutzers, 24.11.2026; `vercel.json`, [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): Arbeits-Branches und `main` bekommen keinen Build. Grund: Der kostenlose Plan erlaubt 100 Deployments in 24 Stunden, am 24.11.2026 war das Limit erreicht. Zeigen geht über Screenshots; die Test-Seite zeigt eine Änderung nach dem Merge. Vercel ist kein Pflicht-Check, Merges gehen auch bei Sperre; die Test-Seite zieht dann mit dem nächsten Merge nach. **Angebot an den Nutzer, offen:** ein eigener Branch `vorschau/<thema>`, nur bei sichtbaren Änderungen einmal gepusht (ein Build je Änderung), damit er vor dem Merge auf seinen Geräten schauen kann. Braucht sein ausdrückliches OK, weil Claude dann auf einen zweiten Branch pusht, und einen Probe-Push; dann `"vorschau/**": true` in `vercel.json`.
 
 ## Nächster Schritt
 
