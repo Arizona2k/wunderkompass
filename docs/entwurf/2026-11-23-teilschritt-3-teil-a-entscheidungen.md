@@ -102,6 +102,13 @@ Alle zehn Befunde bestätigt behoben. Neue Befunde, alle umgesetzt:
 - **Nachprüfung** durch den `technik-pruefer` ([Bericht](2026-11-24-teil-a-technik-pruefung-offline-fund.md)): Analyse bestätigt, keine weiteren Tests mit altem Verhalten. Umgesetzt: (1) Der Offline-Fall prüft auch, dass die alte Reihe im Pass bleibt. (2) Kommentar und Meldung im Online-Fall sagen „feste Mischung“. (3) `offlineRetainedAnswerWording` läuft zusätzlich im CI-Teil von `offline-cold.mjs` (bei jedem PR, auch in Firefox und WebKit); die Vollprüfung behält ihre Stelle in `offlineAnimals`, damit sich dort nichts verschiebt. Gegenprobe: ein absichtlicher Fehler im Schritt macht `offline-cold` rot. (4) Kommentare in `rate-mal.tsx` und `karten-daten.ts` genauer (eine gespeicherte Wortliste bleibt; was keine Wortliste ist, ersetzt `useSavedGame` wie bei allen Spielständen). Nicht umgesetzt: Vorschlag 2 (eigene Hilfe über `antwortReihe`, bringt hier nichts zusätzlich). Vorschlag 3 (Regel in `CLAUDE.md`: betroffene Tests nach dem Auslöser suchen, `offline-cold-full` nach Kartenänderungen mitlaufen lassen) geht als Frage an den Nutzer.
 - Vor der Meldung „Teil A fertig“ laufen `core`, `offline-cold-full`, `home-visits`, `animal-native-zoom` und `research` noch einmal ganz (Empfehlung des Berichts).
 
+## Schlusslauf (24.11.2026, nach Commit `b04aa69`)
+
+- `full-a9` (Chromium): `home-visits`, `research`, `animal-native-zoom` grün. `core` brach nach 718 s ab: Der Container wurde mitten im Lauf neu gestartet und hat Chromium dabei beendet (Fehler beim Schließen des kleinen Fensters, `core.mjs:95`). Ursache die Umgebung, kein Testbefund; darum ein neuer Lauf, kein blindes Wiederholen.
+- `full-a10` (Chromium): `core` grün (923 s), `offline-cold-full` grün (180 s).
+- `engines-a11`: die drei geänderten CI-Suiten `offline-cold`, `wissenskarte`, `retained-answer-wording` in Firefox und WebKit grün. Damit laufen die beiden neuen CI-Schritte auch dort.
+- Damit ist jede große Suite nach den letzten Code-Änderungen mindestens einmal in Chromium ganz grün (`full-a6` bis `full-a10`, `check-a8`). Firefox und WebKit der Vollprüfung kommen wie immer am Phasenende.
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
