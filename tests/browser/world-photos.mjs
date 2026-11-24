@@ -8,6 +8,16 @@ import naturePhotoCandidates from '../../app/nature-photo-candidates.json' with 
 import naturePlaces from '../../app/nature-new-places.json' with {type:'json'};
 import {prepareAxe} from './axe-loader.mjs';
 
+// Fotos, die auf ihrer Karte durch ein neues Foto ersetzt wurden (Bilder-Strang). Ihr Nachweis bleibt im
+// Bestand, damit die Foto-ID nie wiederverwendet wird; die Seite zeigt sie aber nicht mehr. Jedes andere
+// Foto muss auf einer Karte oder einem Naturort stehen, sonst schlägt die Prüfung an.
+const ERSETZTE_FOTOS=new Set(['orca']);
+function gezeigteFotoIds(){
+ const gezeigt=id=>topics.some(t=>t.image===id)||(Object.hasOwn(naturePhotoCandidates,id)&&naturePlaces.some(place=>place.id===id));
+ for(const id of Object.keys(photos))assert.equal(gezeigt(id),!ERSETZTE_FOTOS.has(id),ERSETZTE_FOTOS.has(id)?'ersetztes Foto '+id+' steht wieder auf einer Karte':'Foto '+id+' steht auf keiner Karte und auf keinem Naturort');
+ return Object.keys(photos).filter(id=>!ERSETZTE_FOTOS.has(id));
+}
+
 // Corresponding real Back boundary: a previously requested category/page focus
 // frame is released only after browser history has returned to its source.
 export async function pendingPhotoBackFocusFlow(browser,base,ready,monitor,report,shots,{widths=[320,1440],context:providedContext=null,native=false}={}){
@@ -116,15 +126,15 @@ export async function inspectCatalogPhoto(page,id){
 }
 
 export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
- const started=performance.now(),observed=[];
+ const started=performance.now(),observed=[],ids=gezeigteFotoIds();
  const inspect=inspectCatalogPhoto;
  for(const width of [320,1440]){
   const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();monitor(page);page.setDefaultTimeout(20000);let requests=0;
   page.on('request',request=>{if(/world-photos-.*\.json/.test(request.url()))requests++;});
   try{
    await page.goto(base);await ready(page);assert.equal(requests,0,'Home has immediate complete credits without the deferred catalog');
-   for(const id of Object.keys(photos)){const figure=await inspect(page,id);observed.push({id,width});if(['jaguar','western-lowland-gorilla'].includes(id))await figure.screenshot({path:shots+'/animal-photo-retained-'+id+'-'+width+'.png'});if(id==='whale-shark')await figure.screenshot({path:shots+'/animal-photo-rights-'+width+'.png'});}
-   assert.equal(requests,1,'One verified metadata request shared by all'+Object.keys(photos).length+' pictures');
+   for(const id of ids){const figure=await inspect(page,id);observed.push({id,width});if(['jaguar','western-lowland-gorilla'].includes(id))await figure.screenshot({path:shots+'/animal-photo-retained-'+id+'-'+width+'.png'});if(id==='whale-shark')await figure.screenshot({path:shots+'/animal-photo-rights-'+width+'.png'});}
+   assert.equal(requests,1,'One verified metadata request shared by all'+ids.length+' pictures');
   }finally{await context.close();}
  }
  // Clicking the photograph must keep the enclosing card as the history opener.
@@ -158,15 +168,15 @@ export async function worldPhotoFlow(browser,base,ready,monitor,report,shots){
    await inspect(page,'whale-shark');assert.equal(requests,2,'Failure clears the shared pending request for a safe retry');
   }finally{await context.close();}
  }
- assert.equal(observed.length,Object.keys(photos).length*2);assert.deepEqual([...new Set(observed.map(row=>row.id))],Object.keys(photos));
- report.photoMetadata={images:Object.keys(photos),cases:observed,immediateHomeCredits:true,oneRequestPerSession:true,tamperAndNetworkRetry:true,retryFocus:true,photoCardBackFocus:true,seconds:(performance.now()-started)/1000};
- report.checks.push('All'+Object.keys(photos).length+' photos and complete rights at320/1440, including real Nature Book disclosures; bounded verified demand catalog, no home catalog request, tamper/network retry with focus');
+ assert.equal(observed.length,ids.length*2);assert.deepEqual([...new Set(observed.map(row=>row.id))],ids);
+ report.photoMetadata={images:ids,cases:observed,immediateHomeCredits:true,oneRequestPerSession:true,tamperAndNetworkRetry:true,retryFocus:true,photoCardBackFocus:true,seconds:(performance.now()-started)/1000};
+ report.checks.push('All'+ids.length+' shown photos and complete rights at320/1440, including real Nature Book disclosures; bounded verified demand catalog, no home catalog request, tamper/network retry with focus');
 }
 
 export async function offlineWorldPhotos(page,report){
- const observed=[];
- for(const id of Object.keys(photos)){await inspectCatalogPhoto(page,id);observed.push(id);}
- assert.deepEqual(observed,Object.keys(photos),'every actual catalogue photo is inspected in the stopped-server cold client');
+ const observed=[],ids=gezeigteFotoIds();
+ for(const id of ids){await inspectCatalogPhoto(page,id);observed.push(id);}
+ assert.deepEqual(observed,ids,'every shown catalogue photo is inspected in the stopped-server cold client');
  report.photoOffline={images:observed,coldRestart:true,verifiedCatalog:true};
- report.checks.push('All'+Object.keys(photos).length+' exact pictures, alt texts, responsive Nature sources and complete rights survive stopped-server cold offline restart');
+ report.checks.push('All'+ids.length+' exact shown pictures, alt texts, responsive Nature sources and complete rights survive stopped-server cold offline restart');
 }
