@@ -2,7 +2,7 @@
 import GameShell from "./game-shell";
 
 import {SavedGame,useSavedGame,useGameSnapshot} from "./saved-games";
-import { memo, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { Check, Compass, Globe2, Layers3, Leaf, Lightbulb, Sparkles, Trophy, Volume2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { LAYERS, shuffle } from "./earth-data";
@@ -10,6 +10,11 @@ import {MEMORY_PAIRS} from './memory-pairs';
 import ClassicReasonGame from './classic-reason-game';
 import QuestionHints from './question-hints';
 import {navigateHash} from './hash-route';
+import {useZurUebersicht} from './zur-uebersicht';
+import {vorigeRunde} from "./kern/auswahl";
+import {leseGeschafft} from "./world-game-runde";
+import type {Review} from './progress-storage';
+import type {Stufe} from './kern/stufe';
 import {WOERTER} from './kern/woerter';
 
 type GameId="memory"|"order"|"habitats"|"detective";
@@ -17,20 +22,25 @@ const GAMES=[
  {id:"hunt",name:"Weltreise-Suche",text:"Löse zwölf Missionen auf der drehbaren Weltkugel.",icon:Globe2,color:"blue",meta:"12 Suchaufträge"},
  {id:"memory",name:"Länder-Memory",text:"Welche Hauptstadt gehört zu welchem Land? Finde die Paare.",icon:Compass,color:"purple",meta:"6 Paare pro Runde"},
  {id:"order",name:"Bring’s in die Reihenfolge",text:"Baue die Erde von außen nach innen oder ordne den Wasserweg.",icon:Layers3,color:"orange",meta:"2 Rätselsorten"},
- {id:"habitats",name:"Wer lebt wo?",text:"Finde den passenden Lebensraum für Tiere und Pflanzen.",icon:Leaf,color:"green",meta:"8 Entdeckungen"},
- {id:"detective",name:"Stimmt das wirklich?",text:"Entlarve erstaunliche Erd-Irrtümer als Wissensdetektiv.",icon:Lightbulb,color:"yellow",meta:"10 knifflige Aussagen"},
+ {id:"habitats",name:"Wer lebt wo?",text:"Finde den passenden Lebensraum für Tiere und Pflanzen.",icon:Leaf,color:"green",meta:"12 Aufgaben auf zwei Stufen"},
+ {id:"detective",name:"Stimmt das wirklich?",text:"Was stimmt, was nicht? Prüfe es wie ein Detektiv.",icon:Lightbulb,color:"yellow",meta:"26 Fragen auf drei Stufen"},
  {id:"quiz",name:"Das große Welt-Quiz",text:"Stell dir eine Runde aus sieben Themen zusammen.",icon:Sparkles,color:"blue",meta:"76 Fragen zum Lernen"},
 ] as const;
 
-function LearningGames({sessions,onSave,onNew,resume,onActive,onWin,onRead,onTopic}:{sessions:Record<string,Record<string,unknown>>;onSave:(id:string,key:string,value:unknown,family:"classic"|"extra"|"world")=>void;onNew:(id:string)=>void;resume?:{id:string;nonce:number};onActive:(active:boolean)=>void;completed:Set<string>;onWin:(id:string)=>void;onQuiz:()=>void;onHunt:()=>void;onRead:(text:string)=>void;onTopic:(id:string)=>void}){
+function LearningGames({sessions,review,stufe,onStufe,onReview,uebersicht,onSave,onNew,resume,onActive,onWin,onRead,onTopic}:{sessions:Record<string,Record<string,unknown>>;review:Review;stufe:Stufe;onStufe:(s:Stufe)=>void;onReview:(id:string,correct:boolean)=>void;uebersicht?:number;onSave:(id:string,key:string,value:unknown,family:"classic"|"extra"|"world")=>void;onNew:(id:string)=>void;resume?:{id:string;nonce:number};onActive:(active:boolean)=>void;completed:Set<string>;onWin:(id:string)=>void;onQuiz:()=>void;onHunt:()=>void;onRead:(text:string)=>void;onTopic:(id:string)=>void}){
  const [game,setGame]=useState<GameId|null>(null);const [round,setRound]=useState(0);
 // eslint-disable-next-line react-hooks/set-state-in-effect -- Synchronize an explicit external navigation, saved pass, or browser-engine event; not derived render state.
  useEffect(()=>{if(resume&&["memory","order","habitats","detective"].includes(resume.id)){setGame(resume.id as GameId);onActive(true);}},[resume,onActive]);
+ const schliessen=useCallback(()=>{onRead("");setGame(null);onActive(false);},[onRead,onActive]);
+ useZurUebersicht(uebersicht,game!==null,schliessen);
+ // „Neu mischen“ beginnt einen frischen Spielstand, behält aber wie „Neue Runde“ der Welt-Spiele (world-games.tsx) die
+ // vorige Runde und die geschafften Stufen (Entscheidungsliste Teil B, Punkte 3 und 22; Code-Prüfung PR 2, Befund 1).
+ function neuMischen(id:GameId){const s=sessions[id],vorige=vorigeRunde(s),geschafft=leseGeschafft(s?.geschafft);onNew(id);if(id!=="habitats"&&id!=="detective")return;if(vorige.length)onSave(id,"vorige",vorige,"classic");if(Object.keys(geschafft).length)onSave(id,"geschafft",geschafft,"classic");}
  if(!game)return null;
- return <GameShell title={GAMES.find(g=>g.id===game)!.name} boardKey={`${game}-${round}`} newRoundLabel="Neu mischen" onExit={()=>{onRead("");setGame(null);onActive(false);}} onNewRound={()=>{onRead("");if(game)onNew(game);setRound(n=>n+1);}}><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></GameShell>;
+ return <GameShell title={GAMES.find(g=>g.id===game)!.name} boardKey={`${game}-${round}`} newRoundLabel="Neu mischen" onExit={schliessen} onNewRound={()=>{onRead("");if(game)neuMischen(game);setRound(n=>n+1);}}><SavedGame id={game} family="classic" sessions={sessions} onSave={onSave}>{game==="memory"?<Memory onWin={()=>onWin("memory")}/>:game==="order"?<OrderGame onWin={onWin} onRead={onRead} onTopic={onTopic}/>:game==="habitats"?<ReasonGame game="habitats" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("habitats")} onRead={onRead} onTopic={onTopic}/>:<ReasonGame game="detective" review={review} stufe={stufe} onStufe={onStufe} onReview={onReview} onWin={()=>onWin("detective")} onRead={onRead} onTopic={onTopic}/>}</SavedGame></GameShell>;
 }
 
-function ReasonGame(props:{game:'habitats'|'detective';onWin:()=>void;onRead:(s:string)=>void;onTopic:(id:string)=>void}){
+function ReasonGame(props:{game:'habitats'|'detective';review:Review;stufe:Stufe;onStufe:(s:Stufe)=>void;onReview:(id:string,correct:boolean)=>void;onWin:()=>void;onRead:(s:string)=>void;onTopic:(id:string)=>void}){
  const snapshot=useGameSnapshot(),legacy=Array.isArray(snapshot.items)&&!snapshot.learningRound;
  if(legacy)return <div className="classic-learning legacy-round"><p className="small-note">Deine gespeicherte Runde: Aufgabenfolge und Antworten bleiben erhalten. Neue Stufen findest du nach „Neu mischen“.</p>{props.game==='habitats'?<HabitatGame onWin={props.onWin} onRead={props.onRead}/>:<DetectiveGame onWin={props.onWin} onRead={props.onRead}/>}</div>;
  return <ClassicReasonGame {...props}/>;
@@ -40,10 +50,10 @@ function ReasonGame(props:{game:'habitats'|'detective';onWin:()=>void;onRead:(s:
 type Card={id:number;pair:number;label:string;type:string};
 function Memory({onWin}:{onWin:()=>void}){
  const [cards]=useSavedGame<Card[]>("cards",()=>shuffle(shuffle(MEMORY_PAIRS).slice(0,6).flatMap(([a,b],i)=>[{id:i*2,pair:i,label:a,type:"Land"},{id:i*2+1,pair:i,label:b,type:"Hauptstadt"}])));
- const [open,setOpen]=useSavedGame<number[]>("open",[]);const [matched,setMatched]=useSavedGame<number[]>("matched",[]);const [turns,setTurns]=useSavedGame("turns",0);
+ const [open,setOpen]=useSavedGame<number[]>("open",[]);const [matched,setMatched]=useSavedGame<number[]>("matched",[]);
  const mismatch=open.length===2;const won=matched.length===6;
- function flip(card:Card){if(won||mismatch||matched.includes(card.pair)||open.includes(card.id))return;if(open.length===0){setOpen([card.id]);return;}const first=cards.find(c=>c.id===open[0]);if(!first){setOpen([card.id]);return;}setTurns(t=>t+1);if(first.pair===card.pair){const next=[...matched,card.pair];setMatched(next);setOpen([]);if(next.length===6)onWin();}else setOpen([first.id,card.id]);}
- return <><div className="game-intro"><p className="eyebrow">MERKEN & VERBINDEN</p><h2>Länder und Hauptstädte</h2><p>Decke zwei Karten auf. Ein Land und seine Hauptstadt sind ein Paar.</p></div><div className="game-status"><span>{matched.length} von 6 Paaren</span><span>{turns} Versuche · ohne Zeitdruck</span></div><Progress value={matched.length/6*100} aria-label="Gefundene Memory-Paare" className="journey-progress"/><div className="memory-grid">{cards.map((c,i)=>{const found=matched.includes(c.pair),visible=found||open.includes(c.id);return <button key={c.id} className={`memory-card ${visible?"flipped":""} ${found?"matched":""}`} onClick={()=>flip(c)} disabled={found||mismatch||open.includes(c.id)} aria-label={visible?`${c.type}: ${c.label}${found?", Paar gefunden":""}`:`Karte ${i+1} aufdecken`}><span className="memory-card-front"><Compass size={30}/><small>{i+1}</small></span><span className="memory-card-back">{visible&&<><small>{c.type}</small><strong>{c.label}</strong>{found&&<Check size={18}/>}</>}</span></button>;})}</div><div className="game-feedback" aria-live="polite">{won?<GameWin text={`Alle sechs Paare gefunden – in ${turns} Versuchen. Die passenden Länder und Hauptstädte sind verbunden.`}/>:mismatch?<><strong>Diese zwei gehören noch nicht zusammen.</strong><p>Merk dir die Karten, dann probier weiter.</p><button className="primary-button" onClick={()=>setOpen([])}>Karten wieder zudecken</button></>:<p>{matched.length?"Ein Paar mehr im Kopf! Such dir die nächste Karte aus.":"Wo versteckt sich die passende Hauptstadt?"}</p>}</div></>;
+ function flip(card:Card){if(won||mismatch||matched.includes(card.pair)||open.includes(card.id))return;if(open.length===0){setOpen([card.id]);return;}const first=cards.find(c=>c.id===open[0]);if(!first){setOpen([card.id]);return;}if(first.pair===card.pair){const next=[...matched,card.pair];setMatched(next);setOpen([]);if(next.length===6)onWin();}else setOpen([first.id,card.id]);}
+ return <><div className="game-intro"><p className="eyebrow">MERKEN & VERBINDEN</p><h2>Länder und Hauptstädte</h2><p>Decke zwei Karten auf. Ein Land und seine Hauptstadt sind ein Paar.</p></div><div className="game-status"><span>{matched.length} von 6 Paaren</span><span>Ohne Zeitdruck</span></div><Progress value={matched.length/6*100} aria-label="Gefundene Memory-Paare" className="journey-progress"/><div className="memory-grid">{cards.map((c,i)=>{const found=matched.includes(c.pair),visible=found||open.includes(c.id);return <button key={c.id} className={`memory-card ${visible?"flipped":""} ${found?"matched":""}`} onClick={()=>flip(c)} disabled={found||mismatch||open.includes(c.id)} aria-label={visible?`${c.type}: ${c.label}${found?", Paar gefunden":""}`:`Karte ${i+1} aufdecken`}><span className="memory-card-front"><Compass size={30}/><small>{i+1}</small></span><span className="memory-card-back">{visible&&<><small>{c.type}</small><strong>{c.label}</strong>{found&&<Check size={18}/>}</>}</span></button>;})}</div><div className="game-feedback" aria-live="polite">{won?<GameWin text="Alle sechs Paare gefunden! Jedes Land hat jetzt seine Hauptstadt."/>:mismatch?<><strong>Diese zwei gehören noch nicht zusammen.</strong><p>Merk dir die Karten, dann probier weiter.</p><button className="primary-button" onClick={()=>setOpen([])}>Karten wieder zudecken</button></>:<p>{matched.length?"Ein Paar mehr im Kopf! Such dir die nächste Karte aus.":"Wo versteckt sich die passende Hauptstadt?"}</p>}</div></>;
 }
 
 const WATER_ORDER=[{id:"sun",name:"Wasser verdunstet",text:"Wir starten im Meer: Flüssiges Wasser gelangt als Wasserdampf in die Luft."},{id:"cloud",name:"Tröpfchen bilden eine Wolke",text:"Feuchte Luft kühlt ab. Wasserdampf kann zu Tröpfchen kondensieren."},{id:"rain",name:"Regen fällt zur Erde",text:"Große Tröpfchen fallen als Niederschlag zurück."},{id:"river",name:"Wasser fließt zurück",text:"Bäche und Flüsse bringen Wasser zum Meer. Andere Wege führen durch Boden oder Eis."}];

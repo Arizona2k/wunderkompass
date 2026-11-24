@@ -3,20 +3,20 @@
 // Die Folge der ersten Antworten lebt nur, solange die Seite offen ist (Modul-Variable), nie im Pass.
 // Höchstens ein Vorschlag je Runde (Karte); die Seite stellt nie selbst um.
 import {useCallback, useState} from 'react';
-import {leereFolge, mitErsterAntwort, nachVorschlag, stufenVorschlag, STUFEN_NAME, type Stufe, type StufenVorschlag} from './stufe';
+import {leereFolge, nachAntwort, STUFEN_NAME, type Stufe, type StufenVorschlag} from './stufe';
 
 let folge = leereFolge();
 
-export function useStufenVorschlag(runde: string, stufe: Stufe) {
+// `stufe`: die Stufe, an der gemessen wird (Karte: die gewählte; Spiele: die, die die Runde wirklich spielt).
+// `erlaubt`: nur Vorschläge zu diesen Zielen zeigen (Spiele, in denen Experte noch Profi spielt).
+export function useStufenVorschlag(runde: string, stufe: Stufe, erlaubt?: (ziel: Stufe) => boolean) {
   const [vorschlag, setVorschlag] = useState<StufenVorschlag | null>(null);
-  // Jede Antwort melden; nur die erste je Frage und nur Fragen der gewählten Stufe zählen (mitErsterAntwort).
+  // Jede Antwort melden; nur die erste je Frage und nur Fragen der gemessenen Stufe zählen (mitErsterAntwort).
   const merke = useCallback((frage: string, richtig: boolean, frageStufe: Stufe) => {
-    const neu = mitErsterAntwort(folge, frage, richtig, stufe, frageStufe);
-    if (neu === folge) return;
-    const naechster = stufenVorschlag(neu, stufe, runde);
-    folge = naechster ? nachVorschlag(neu, runde) : neu;
-    if (naechster) setVorschlag(naechster);
-  }, [runde, stufe]);
+    const neu = nachAntwort(folge, frage, richtig, stufe, frageStufe, runde, erlaubt);
+    folge = neu.folge;
+    if (neu.vorschlag) setVorschlag(neu.vorschlag);
+  }, [runde, stufe, erlaubt]);
   const schliessen = useCallback(() => setVorschlag(null), []);
   return {vorschlag, merke, schliessen};
 }

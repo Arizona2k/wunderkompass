@@ -41,6 +41,10 @@ export const STUFEN_NAME: Record<Stufe, string> = { entdecker: 'Entdecker', prof
 // Überall sonst steht der Name, wie er ist („Stufe: Experte“).
 export const STUFEN_BINDEFORM: Record<Stufe, string> = { entdecker: 'Entdecker', profi: 'Profi', experte: 'Experten' };
 
+// Gemeinsame Sätze der Stufenzeile für Karten und Spiele (kinder-redaktion, 24.11.2026): überall gleich, die Stufe beim Namen.
+export const nochNichtSatz = (gewaehlt: Stufe, gespielt: Stufe) => `${STUFEN_BINDEFORM[gewaehlt]}-Aufgaben gibt es hier noch nicht. Du spielst ${STUFEN_NAME[gespielt]}.`;
+export const rundeNochSatz = (gespielt: Stufe, naechste: Stufe) => `Diese Runde spielst du noch als ${STUFEN_NAME[gespielt]}. Ab der nächsten Runde spielst du ${STUFEN_NAME[naechste]}.`;
+
 // Vorschläge statt Automatik (E8). Die Folge lebt nur, solange die Seite offen ist, nie im Pass.
 // Gezählt wird je Frage nur die erste Antwort; nach einem Stufenwechsel beginnt die Folge neu.
 // Es zählen nur Fragen genau der gewählten Stufe: Leichtere Fragen (z. B. die Hauptfrage auf einer Karte ohne Profi-Frage)
@@ -68,3 +72,20 @@ export function stufenVorschlag(folge: Folge, stufe: Stufe, runde: string): Stuf
 }
 
 export const nachVorschlag = (folge: Folge, runde: string): Folge => ({ ...folge, antworten: [], gefragt: [...folge.gefragt, runde] });
+
+// Spiele (Code-Nachprüfung PR 2, Befund 1): Ein Vorschlag kommt nur, wenn die Runde auf der gewählten Stufe läuft, wie auf
+// der Karte. Läuft noch eine Runde einer anderen Stufe (eine alte Runde, oder die Stufe wurde gerade woanders geändert), hat
+// das Kind schon gewählt; ein Vorschlag könnte die Stufe im Pass sonst in die falsche Richtung oder um zwei Stufen umstellen.
+// Und nur zu einer Stufe, die das Spiel wirklich anders spielt (`spielStufe`: Experte spielt Profi, solange ein Spiel keine
+// echten Experten-Aufgaben hat); das schließt die schon gewählte Stufe mit ein.
+export const spielVorschlagErlaubt = (gewaehlt: Stufe, gespielt: Stufe, spielStufe: (s: Stufe) => Stufe = s => s) =>
+  (ziel: Stufe): boolean => spielStufe(gewaehlt) === gespielt && spielStufe(ziel) !== gespielt;
+
+// Eine Antwort verbuchen. `erlaubt` lässt nur Vorschläge zu einer Stufe zu, die das Spiel wirklich anders spielt; ein
+// unterdrückter Vorschlag verbraucht den einen Vorschlag der Runde nicht (Code-Prüfung PR 2, Hinweis 6).
+export function nachAntwort(folge: Folge, frage: string, richtig: boolean, stufe: Stufe, frageStufe: Stufe, runde: string, erlaubt: (ziel: Stufe) => boolean = () => true): { folge: Folge; vorschlag: StufenVorschlag | null } {
+  const neu = mitErsterAntwort(folge, frage, richtig, stufe, frageStufe);
+  if (neu === folge) return { folge, vorschlag: null };
+  const kandidat = stufenVorschlag(neu, stufe, runde), vorschlag = kandidat && erlaubt(kandidat.ziel) ? kandidat : null;
+  return { folge: vorschlag ? nachVorschlag(neu, runde) : neu, vorschlag };
+}

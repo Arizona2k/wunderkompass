@@ -70,13 +70,22 @@ export async function connectedDiscoveries(page,ready,report,width){
  await inSucheTippen(page,'Fotosynthese');
  await page.getByRole('option').filter({hasText:'Wie Blätter Sonnenlicht nutzen'}).first().click();
  await page.getByRole('heading',{name:'Wie Blätter Sonnenlicht nutzen',exact:true}).waitFor();
- await inSucheTippen(page,'Wissens-Challenge');
- await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();
- await page.locator('.challenge-levels').waitFor();
- for(const label of ['Leicht','Mittel','Schwer']){
-  const choice=page.locator('.challenge-levels').getByRole('button').filter({hasText:label});
-  if(label==='Leicht'&&width===1440){await choice.focus();await page.keyboard.press('Enter');}else await choice.click();
-  const room=page.locator('.knowledge-challenge');
+ // Kreuz und quer startet gleich auf der Stufe aus dem Pass; jede Stufe wird über die Stufenzeile gewählt und ganz
+ // durchgespielt (Teil B, Aufgabe 9). Bei 1440 px einmal nur mit der Tastatur.
+ await inSucheTippen(page,'Kreuz und quer');
+ await page.getByRole('option').filter({hasText:'Kreuz und quer'}).click();
+ const room=page.locator('.knowledge-challenge'),zeile=room.locator('.stufen-wahl');
+ await room.locator('.quiz-answer').first().waitFor();
+ // Die neue Runde schreibt erst der Speicher-Effekt nach dem Aufbau in den Pass (Code-Prüfung PR 2, Risiko 8).
+ await page.waitForFunction(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge']?.challenge?.ids?.length===6);
+ assert.equal(await page.locator('.challenge-levels').count(),0);
+ for(const [stufe,name] of [['entdecker','Entdecker'],['profi','Profi'],['experte','Experte']]){
+  if((await pass()).gameSessions['world:knowledge-challenge'].challenge.stufe!==stufe){
+   const aendern=zeile.getByRole('button',{name:'Stufe ändern',exact:true}),knopf=zeile.getByRole('group',{name:'Welche Stufe willst du spielen?',exact:true}).getByRole('button').filter({hasText:name});
+   if(stufe==='profi'&&width===1440){await aendern.focus();await page.keyboard.press('Enter');await knopf.focus();await page.keyboard.press('Enter');}else{await aendern.click();await knopf.click();}
+   await page.waitForFunction(stufe=>{const r=JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge']?.challenge;return r?.stufe===stufe&&r.index===0&&r.answer===null;},stufe);
+  }
+  await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).waitFor();
   const previous=(await pass()).gameSessions['world:knowledge-challenge'].challenge.ids;
   assert.equal(previous.length,6);
   for(let i=0;i<6;i++){
@@ -113,10 +122,13 @@ export async function connectedDiscoveries(page,ready,report,width){
   }
   await room.getByRole('heading',{name:'Sechs Aufgaben gelöst!',exact:true}).waitFor();
   assert.ok((await pass()).games.includes('world:knowledge-challenge'));
-  await room.getByRole('button',{name:'Andere Aufgaben auf dieser Stufe',exact:true}).click();
+  await room.getByRole('button',{name:'Noch eine Runde',exact:true}).click();
+  // Der Fokus geht auf die erste Frage der neuen Runde (Code-Prüfung PR 2, Hinweis 2; Nachprüfung, Klein 2).
+  await page.waitForFunction(()=>document.activeElement?.id==='challenge-question');
+  await page.waitForFunction(previous=>JSON.stringify(JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['world:knowledge-challenge'].challenge.ids)!==JSON.stringify(previous),previous);
   const next=(await pass()).gameSessions['world:knowledge-challenge'].challenge.ids;
-  assert.equal(next.some(id=>previous.includes(id)),false);
-  await room.getByRole('button',{name:'Andere Stufe auswählen',exact:true}).click();
+  // Experte hat erst vier Experten-Fragen (drei je Runde): Die neue Runde ist eine andere, teilt aber Experten-Fragen.
+  if(stufe==='experte')assert.notDeepEqual([...next].sort(),[...previous].sort());else assert.equal(next.some(id=>previous.includes(id)),false);
  }
  await page.screenshot({path:new URL('../../.qa-output/challenge-'+width+'.png',import.meta.url).pathname});
  if(width===1440){

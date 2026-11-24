@@ -1,0 +1,124 @@
+{
+ "neu": [
+  {
+   "id": "detective-luft-3",
+   "game": "detective",
+   "level": "hard",
+   "stufe": "experte",
+   "prompt": "Eine Chipstüte ist fest verschlossen. Im Tal ist sie weich. Oben auf einem hohen Berg ist sie prall wie ein Kissen. Warum?",
+   "answers": [
+    "Von außen drückt weniger Luft auf die Tüte",
+    "Oben ist es wärmer, und die Luft dehnt sich aus",
+    "Durch winzige Löcher kam Luft in die Tüte",
+    "Oben zieht die Erde viel schwächer an der Luft"
+   ],
+   "correct": "Von außen drückt weniger Luft auf die Tüte",
+   "wrongReasons": {
+    "Oben ist es wärmer, und die Luft dehnt sich aus": "Oben auf einem Berg ist es meist kälter als im Tal. Wärme ist also nicht der Grund.",
+    "Durch winzige Löcher kam Luft in die Tüte": "Die Tüte ist dicht verschlossen. Außerdem wird ein Ballon mit Loch schlaff, nicht prall.",
+    "Oben zieht die Erde viel schwächer an der Luft": "Auf einem Berg zieht die Erde fast genauso stark wie im Tal. Daran liegt es nicht."
+   },
+   "why": "Oben auf dem Berg ist die Luft dünner. Sie drückt von außen schwächer auf die Tüte. Das Gas in der Tüte drückt nach außen und dehnt sich aus. Darum wird die Tüte prall.",
+   "hints": [
+    "Hoch oben fällt das Atmen schwerer. Wie ist die Luft dort?",
+    "In der Tüte ist oben genauso viel Gas wie im Tal. Was ist also oben anders: drinnen oder draußen?"
+   ],
+   "topic": "science-atmosphere",
+   "quelle": [
+    {
+     "label": "UCAR Center for Science Education: The Troposphere (Luftdruck sinkt, Luft wird kälter mit der Höhe)",
+     "url": "https://scied.ucar.edu/learning-zone/atmosphere/troposphere"
+    },
+    {
+     "label": "Museum of Science Boston: Why do chip bags puff up on planes?",
+     "url": "https://mos.org/video/why-do-chip-bags-puff-planes"
+    },
+    {
+     "label": "NASA Glenn: Air Pressure (Gasdruck wirkt in alle Richtungen)",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/air-pressure/"
+    },
+    {
+     "label": "NASA: What Is Microgravity? (Schwerkraft in 400 km Höhe noch etwa 90 %)",
+     "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-microgravity-grades-5-8/"
+    }
+   ]
+  },
+  {
+   "id": "detective-pilze-3",
+   "game": "detective",
+   "level": "hard",
+   "stufe": "experte",
+   "prompt": "Champignons sind Pilze. Man züchtet sie oft in dunklen Räumen. Trotzdem werden sie groß. Woher bekommen sie ihre Nahrung?",
+   "answers": [
+    "Aus dem bisschen Licht, das im Raum ist",
+    "Aus dem Kompost, auf dem sie wachsen",
+    "Aus dem Wasser, mit dem man sie gießt",
+    "Aus der Luft, so wie grüne Blätter"
+   ],
+   "correct": "Aus dem Kompost, auf dem sie wachsen",
+   "wrongReasons": {
+    "Aus dem bisschen Licht, das im Raum ist": "Pilze können aus Licht keine Nahrung machen. Ihnen fehlt das Grün, das Pflanzen dafür haben.",
+    "Aus dem Wasser, mit dem man sie gießt": "Wasser brauchen Pilze wirklich. Aber Wasser allein ist keine Nahrung.",
+    "Aus der Luft, so wie grüne Blätter": "Grüne Blätter brauchen dafür Licht. Und Pilze haben gar keine grünen Blätter."
+   },
+   "why": "Champignons wachsen auf Kompost aus Stroh und Mist. Ihre feinen Fäden zerlegen ihn und holen sich daraus Nahrung. Licht brauchen sie dafür nicht.",
+   "hints": [
+    "Denk an den Wald. Worauf wachsen dort viele Pilze?",
+    "Pilze fangen kein Licht ein. Viele leben von toten Pflanzenresten. Was liegt in dem Raum unter den Pilzen?"
+   ],
+   "topic": "science-fungi",
+   "quelle": [
+    {
+     "label": "Penn State Extension: Basic Procedures for Agaricus Mushroom Growing (meist ohne Licht gezogen, Kompost aus Stroh und Mist, Gießen)",
+     "url": "https://extension.psu.edu/basic-procedures-for-agaricus-mushroom-growing"
+    },
+    {
+     "label": "Kew: Why fungi matter (Pilze zersetzen, keine Fotosynthese)",
+     "url": "https://growwild.kew.org/championing-nature/fungi/why-fungi-matter"
+    }
+   ],
+   "gruppe": "nahrung"
+  }
+ ],
+ "geaendert": [
+  {
+   "id": "detective-wasser-2",
+   "game": "detective",
+   "level": "medium",
+   "stufe": "profi",
+   "prompt": "Ein Kind sagt: „Der Wasserkreislauf fängt immer im Meer an.“ Stimmt das?",
+   "answers": [
+    "Ja, alles Wasser startet im Meer",
+    "Ja, denn Wolken entstehen nur über dem Meer",
+    "Nein, er hat gar keinen festen Anfang",
+    "Nein, er fängt an der Quelle eines Flusses an"
+   ],
+   "correct": "Nein, er hat gar keinen festen Anfang",
+   "wrongReasons": {
+    "Ja, alles Wasser startet im Meer": "Wasser verdunstet auch aus Seen und Pfützen. Pflanzen geben es über ihre Blätter ab.",
+    "Nein, er fängt an der Quelle eines Flusses an": "Das Wasser in der Quelle war vorher Regen oder Schnee. Es war also schon unterwegs.",
+    "Ja, denn Wolken entstehen nur über dem Meer": "Auch über Land entstehen Wolken. An heißen Sommertagen türmen sie sich oft über Feldern und Bergen auf."
+   },
+   "why": "Das Wasser wandert immer weiter, ohne Pause. Darum kannst du überall einsteigen. Einen ersten Ort gibt es nicht.",
+   "hints": [
+    "Folge einem Tropfen: Meer, Wolke, Regen, Fluss, Meer. Wo war er davor?",
+    "Male einen Kreis. Kannst du zeigen, wo er anfängt?"
+   ],
+   "topic": "science-water-cycle",
+   "quelle": [
+    {
+     "label": "NASA Earth Observatory: The Water Cycle",
+     "url": "https://science.nasa.gov/earth/earth-observatory/the-water-cycle/"
+    },
+    {
+     "label": "USGS: The Water Cycle",
+     "url": "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
+    },
+    {
+     "label": "UCAR Center for Science Education: Clouds Form Due to Surface Heating",
+     "url": "https://scied.ucar.edu/learning-zone/clouds/clouds-form-surface-heating"
+    }
+   ]
+  }
+ ]
+}

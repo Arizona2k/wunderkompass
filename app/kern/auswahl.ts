@@ -24,6 +24,10 @@ function gemischt<T>(liste: readonly T[], zufall: () => number): T[] {
   return a;
 }
 
+// Höchstens so viele Experten-Aufgaben je Runde, der Rest kommt aus Profi (Entscheidung des Nutzers, 24.11.2026,
+// Entscheidungsliste „drei Spiele“, C1): Bei wenigen Experten-Aufgaben wechseln die Runden sonst nie.
+export const EXPERTEN_JE_RUNDE = 3;
+
 export function waehleAufgaben({ vorrat, review, schluessel, anzahl, vorige = [], zufall = Math.random, heute = new Date().toISOString().slice(0, 10) }: AuswahlEingabe): string[] {
   const zuletzt = new Set(vorige);
   const gruppe = (id: string) => {
@@ -40,12 +44,12 @@ export function waehleAufgaben({ vorrat, review, schluessel, anzahl, vorige = []
 
 const textliste = (v: unknown): v is string[] => Array.isArray(v) && v.length > 0 && v.every(x => typeof x === 'string');
 
-// Die zuletzt gespielte Auswahl eines Welt-Spielstands: die Runde selbst (items oder challenge.ids),
-// sonst die schon gemerkte vorige Runde (zweimal „Neue Runde“ ohne zu spielen).
+// Die zuletzt gespielte Auswahl eines Spielstands: die Runde selbst (items, challenge.ids oder learningRound.ids der
+// Klassik-Spiele), sonst die schon gemerkte vorige Runde (zweimal „Neue Runde“ ohne zu spielen).
 export function vorigeRunde(sitzung: unknown): string[] {
   if (!sitzung || typeof sitzung !== 'object' || Array.isArray(sitzung)) return [];
   const s = sitzung as Record<string, unknown>;
-  const challenge = s.challenge && typeof s.challenge === 'object' ? (s.challenge as Record<string, unknown>).ids : undefined;
-  for (const kandidat of [s.items, challenge, s.vorige]) if (textliste(kandidat)) return [...kandidat];
+  const ids = (v: unknown) => v && typeof v === 'object' ? (v as Record<string, unknown>).ids : undefined;
+  for (const kandidat of [s.items, ids(s.challenge), ids(s.learningRound), s.vorige]) if (textliste(kandidat)) return [...kandidat];
   return [];
 }

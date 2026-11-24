@@ -87,7 +87,7 @@ async function stufenAufDerKarte(page, {touch}) {
   // Experte: eigene Frage oder der ehrliche Satz (E3).
   await stufeWaehlen(page, 'experte', {touch});
   if (hatStufe(t, 'experte')) await zeigtFrage(page, t, ersteFrageAufStufe(t, 'experte'));
-  else await wahl.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
+  else await wahl.getByText('Experten-Aufgaben gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
   await fokusAuf(page, AENDERN, 'nach dem Umstellen auf Experte steht der Fokus auf „Ändern“');
   await page.reload();
   await ready(page);
@@ -101,18 +101,18 @@ async function stufenAufDerKarte(page, {touch}) {
   return t.id;
 }
 
-// Karte nur mit der Hauptfrage, auf Profi: Hauptfrage und der Satz „Profi gibt es hier noch nicht …“.
+// Karte nur mit der Hauptfrage, auf Profi: Hauptfrage und der Satz „Profi-Aufgaben gibt es hier noch nicht …“.
 async function profiOhneProfiFragen(page, {touch}) {
   const t = OHNE_ZUSATZ;
   await stufeWaehlen(page, 'profi', {touch});
-  await stufenWahl(page).getByText('Profi gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
+  await stufenWahl(page).getByText('Profi-Aufgaben gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
   await zeigtFrage(page, t, hauptfrage(t));
   // Die Frage bleibt, „Rate mal!“ baut nicht neu auf; der Fokus bleibt auf „Ändern“ (Code-Prüfung flushSync, Befund 3).
   await fokusAuf(page, AENDERN, 'auf Profi ohne Profi-Fragen bleibt der Fokus auf „Ändern“');
   // Fehler (b): Die Karte spielt ohnehin Entdecker, also kein „Zurück zu Entdecker“ (Spieltest 24.11.2026, Befund 2).
   assert.equal(await stufenWahl(page).getByRole('button', {name: ZURUECK, exact: true}).count(), 0, 'auf Profi ohne Profi-Fragen kein „Zurück zu Entdecker“');
   await stufeWaehlen(page, 'experte', {touch});
-  await stufenWahl(page).getByText('Experte gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
+  await stufenWahl(page).getByText('Experten-Aufgaben gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
   assert.equal(await stufenWahl(page).getByRole('button', {name: ZURUECK, exact: true}).count(), 0, 'auf Experte ohne Profi- und Experten-Fragen kein „Zurück zu Entdecker“');
   return t.id;
 }

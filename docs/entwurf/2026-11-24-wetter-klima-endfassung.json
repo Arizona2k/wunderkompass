@@ -1,0 +1,808 @@
+[
+ {
+  "id": "wetter-regen",
+  "stufe": "entdecker",
+  "frage": "Wassertropfen fallen aus den Wolken. Wie heißt das?",
+  "antworten": [
+   "Regen",
+   "Wind",
+   "Nebel"
+  ],
+  "richtig": "Regen",
+  "warum": "Viele winzige Tröpfchen aus der Wolke werden zu einem großen Tropfen. Der ist schwer und fällt herunter. Oft fällt er erst als Schnee los und taut unterwegs.",
+  "tipps": [
+   "Danach gibt es oft Pfützen."
+  ],
+  "warumNicht": [
+   null,
+   "Wind ist Luft, die sich bewegt. Er fällt nicht als Tropfen herunter.",
+   "Nebel schwebt in der Luft. Er fällt nicht herunter."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "USGS Water Science School · Precipitation and the Water Cycle",
+    "url": "https://www.usgs.gov/special-topics/water-science-school/science/precipitation-and-water-cycle"
+   },
+   {
+    "titel": "NOAA JetStream · Origin of Wind",
+    "url": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Nebel",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/N/Nebel.html"
+   }
+  ],
+  "alt_id": "extra:weather-match/Regen"
+ },
+ {
+  "id": "wetter-schnee",
+  "stufe": "entdecker",
+  "frage": "Weiche Flocken aus Eiskristallen fallen vom Himmel. Was ist das?",
+  "antworten": [
+   "Schnee",
+   "Nebel",
+   "Regen"
+  ],
+  "richtig": "Schnee",
+  "warum": "Eine Schneeflocke besteht aus vielen kleinen Eiskristallen. Sie wachsen in kalten Wolken und hängen aneinander.",
+  "tipps": [
+   "Denk an einen kalten Wintertag draußen."
+  ],
+  "warumNicht": [
+   null,
+   "Nebel ist eine Wolke am Boden. Er fällt nicht in Flocken herunter.",
+   "Regen sind Wassertropfen. Flocken aus Eis sind Schnee."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "NSIDC · Snow",
+    "url": "https://nsidc.org/learn/parts-cryosphere/snow"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Nebel",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/N/Nebel.html"
+   }
+  ],
+  "alt_id": "extra:weather-match/Schnee"
+ },
+ {
+  "id": "wetter-wind",
+  "stufe": "entdecker",
+  "frage": "Die Luft bewegt sich, und Blätter rascheln. Was ist das?",
+  "antworten": [
+   "Wind",
+   "Nebel",
+   "Regen"
+  ],
+  "richtig": "Wind",
+  "warum": "Wind ist Luft, die sich bewegt. Du siehst ihn nicht. Du siehst nur, was er bewegt.",
+  "tipps": [
+   "Was lässt einen Drachen am Himmel fliegen?"
+  ],
+  "warumNicht": [
+   null,
+   "Nebel ist eine Wolke am Boden. Blätter bewegt er nicht.",
+   "Regen sind Tropfen aus Wasser. Gesucht ist die Luft, die sich bewegt."
+  ],
+  "topic": "science-atmosphere",
+  "quelle": [
+   {
+    "titel": "NOAA JetStream · Origin of Wind",
+    "url": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind"
+   }
+  ],
+  "alt_id": "extra:weather-match/Wind"
+ },
+ {
+  "id": "wetter-sonnig",
+  "stufe": "entdecker",
+  "frage": "Am Himmel ist fast keine Wolke. Wie ist das Wetter?",
+  "antworten": [
+   "Sonnig",
+   "Regnerisch",
+   "Neblig"
+  ],
+  "richtig": "Sonnig",
+  "warum": "Ohne Wolken kommt die Sonne ganz durch. Sonnig heißt nicht immer warm: Auch im Winter gibt es sonnige Tage.",
+  "tipps": [
+   "Was siehst du, wenn keine Wolke im Weg ist?"
+  ],
+  "warumNicht": [
+   null,
+   "Regen fällt aus Wolken. Ohne Wolken regnet es nicht.",
+   "Nebel ist eine Wolke am Boden. Dann siehst du nicht weit."
+  ],
+  "topic": "science-seasons",
+  "quelle": [
+   {
+    "titel": "National Weather Service · Forecast Terms (Sky Condition)",
+    "url": "https://www.weather.gov/bgm/forecast_terms"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Reiferscheinungen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/R/Reiferscheinungen.html"
+   }
+  ],
+  "alt_id": "extra:weather-match/Sonne"
+ },
+ {
+  "id": "wetter-nebel",
+  "stufe": "entdecker",
+  "frage": "Eine Wolke liegt direkt am Boden. Wie heißt das?",
+  "antworten": [
+   "Nebel",
+   "Hagel",
+   "Regen"
+  ],
+  "richtig": "Nebel",
+  "warum": "Nebel ist eine Wolke, die ganz unten am Boden liegt. Er besteht aus winzigen Wassertröpfchen.",
+  "tipps": [
+   "Bei diesem Wetter siehst du nicht weit. Manchmal nur ein paar Meter."
+  ],
+  "warumNicht": [
+   null,
+   "Hagel besteht aus Eiskörnern, die herunterfallen. Er liegt nicht als Wolke am Boden.",
+   "Regen fällt in Tropfen herunter. Er liegt nicht wie eine Wolke am Boden."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "DWD-Wetterlexikon · Nebel",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/N/Nebel.html"
+   },
+   {
+    "titel": "NWS Glossary · Fog",
+    "url": "https://forecast.weather.gov/glossary.php?word=FOG"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Hagel",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/H/Hagel.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-satz-heute",
+  "stufe": "entdecker",
+  "frage": "Welcher Satz passt zu einem Blick aus dem Fenster?",
+  "antworten": [
+   "Heute ist der Himmel ganz grau.",
+   "In der Arktis sind die Winter lang.",
+   "Im Regenwald regnet es oft."
+  ],
+  "richtig": "Heute ist der Himmel ganz grau.",
+  "warum": "Was du aus dem Fenster siehst, ist das Wetter von heute. Die anderen Sätze gelten über viele Jahre. Das nennt man Klima.",
+  "tipps": [
+   "Welcher Satz gilt nur für einen Tag?"
+  ],
+  "warumNicht": [
+   null,
+   "Das ist in der Arktis jedes Jahr so. Es beschreibt das Klima dort.",
+   "Das ist im Regenwald fast das ganze Jahr so. Es beschreibt das Klima dort."
+  ],
+  "topic": "science-atmosphere",
+  "quelle": [
+   {
+    "titel": "NOAA · What's the difference between climate and weather?",
+    "url": "https://www.noaa.gov/explainers/what-s-difference-between-climate-and-weather"
+   },
+   {
+    "titel": "NSIDC · Arctic Weather and Climate",
+    "url": "https://nsidc.org/learn/parts-cryosphere/arctic-weather-and-climate"
+   },
+   {
+    "titel": "Ohio University, The Physical Environment · Tropical Rainforest",
+    "url": "https://people.ohio.edu/dyer/TPE/tpe_3e/climate_systems/tropical_rainforest_1.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-zone-gemaessigt",
+  "stufe": "entdecker",
+  "auchProfi": true,
+  "frage": "In Deutschland gibt es warme Sommer und kühle Winter. Welche Klimazone passt?",
+  "antworten": [
+   "Gemäßigte Zone",
+   "Tropen",
+   "Polarzone"
+  ],
+  "profiZusatz": {
+   "antwort": "Subtropen",
+   "warumNicht": "Die Subtropen liegen weiter weg von uns, näher am Äquator. Dort ist es meist wärmer."
+  },
+  "richtig": "Gemäßigte Zone",
+  "warum": "Deutschland liegt in der gemäßigten Zone. Es gibt Frühling, Sommer, Herbst und Winter.",
+  "tipps": [
+   "Dort ist es nicht sehr heiß und nicht sehr kalt."
+  ],
+  "warumNicht": [
+   null,
+   "In den Tropen ist es das ganze Jahr warm. Einen Winter wie bei uns gibt es dort nicht.",
+   "In der Polarzone ist es meist kalt. Auch die Sommer sind dort kühl."
+  ],
+  "topic": "science-seasons",
+  "quelle": [
+   {
+    "titel": "Tatsachen über Deutschland · Geografie und Klima",
+    "url": "https://www.tatsachen-ueber-deutschland.de/de/deutschland-auf-einen-blick/geografie-und-klima"
+   },
+   {
+    "titel": "NOAA JetStream · Climate Zones",
+    "url": "https://www.noaa.gov/jetstream/global/climate-zones"
+   }
+  ],
+  "alt_id": "extra:climate-detective/1"
+ },
+ {
+  "id": "wetter-zone-tropen",
+  "stufe": "entdecker",
+  "auchProfi": true,
+  "frage": "Der Äquator ist eine gedachte Linie um die Mitte der Erde. Rund um diese Linie steht die Sonne das ganze Jahr hoch. Welche Klimazone ist das?",
+  "antworten": [
+   "Tropen",
+   "Polarzone",
+   "Gemäßigte Zone"
+  ],
+  "profiZusatz": {
+   "antwort": "Subtropen",
+   "warumNicht": "Die Subtropen liegen neben den Tropen. Sie sind ein Stück weiter weg vom Äquator."
+  },
+  "richtig": "Tropen",
+  "warum": "Dort ist es das ganze Jahr warm. Es gibt Regenwald, aber auch weites Grasland, die Savanne.",
+  "tipps": [
+   "Denk an Regenwald, Papageien und warme Luft."
+  ],
+  "warumNicht": [
+   null,
+   "Die Polarzone liegt ganz im Norden und ganz im Süden. Dort steht die Sonne tief.",
+   "Bei uns in der gemäßigten Zone steht die Sonne im Winter tief."
+  ],
+  "topic": "animal-bornean-orangutan",
+  "quelle": [
+   {
+    "titel": "DWD-Wetterlexikon · Tropen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/T/Tropen.html"
+   },
+   {
+    "titel": "NOAA JetStream · Climate Zones",
+    "url": "https://www.noaa.gov/jetstream/global/climate-zones"
+   },
+   {
+    "titel": "Ohio University, The Physical Environment · Tropical Rainforest",
+    "url": "https://people.ohio.edu/dyer/TPE/tpe_3e/climate_systems/tropical_rainforest_1.html"
+   },
+   {
+    "titel": "NASA Science for Kids · Mission: Biomes, Grassland",
+    "url": "https://science.nasa.gov/kids/earth/mission-biomes/biograssland"
+   }
+  ],
+  "alt_id": "extra:climate-detective/2"
+ },
+ {
+  "id": "wetter-zone-polar",
+  "stufe": "entdecker",
+  "auchProfi": true,
+  "frage": "Ganz im Norden und Süden der Erde ist es meist kalt. Die Winter sind lang. Welche Klimazone ist das?",
+  "antworten": [
+   "Polarzone",
+   "Tropen",
+   "Gemäßigte Zone"
+  ],
+  "profiZusatz": {
+   "antwort": "Subtropen",
+   "warumNicht": "In den Subtropen ist es im Sommer heiß. Lange, dunkle Winter gibt es dort nicht."
+  },
+  "richtig": "Polarzone",
+  "warum": "Die Polarzone liegt rund um Nordpol und Südpol. Ganz nah am Pol geht im Winter die Sonne monatelang nicht auf. Es bleibt lange kalt und dunkel.",
+  "tipps": [
+   "Hier leben Eisbären und Kaiserpinguine, aber an verschiedenen Enden der Erde."
+  ],
+  "warumNicht": [
+   null,
+   "In den Tropen ist es das ganze Jahr warm.",
+   "Bei uns in der gemäßigten Zone sind die Winter kürzer und milder."
+  ],
+  "topic": "animal-polar-bear",
+  "quelle": [
+   {
+    "titel": "NSIDC · Arctic Weather and Climate",
+    "url": "https://nsidc.org/learn/parts-cryosphere/arctic-weather-and-climate"
+   },
+   {
+    "titel": "NOAA JetStream · Climate Zones",
+    "url": "https://www.noaa.gov/jetstream/global/climate-zones"
+   }
+  ],
+  "alt_id": "extra:climate-detective/3"
+ },
+ {
+  "id": "wetter-wolke",
+  "stufe": "profi",
+  "frage": "Woraus besteht eine Wolke, die du am Himmel siehst?",
+  "antworten": [
+   "Aus kleinen Tropfen oder Eis",
+   "Aus Rauch, der nach oben gestiegen ist",
+   "Aus dichter, kalter Luft",
+   "Aus unsichtbarem Wasserdampf"
+  ],
+  "richtig": "Aus kleinen Tropfen oder Eis",
+  "warum": "Wasserdampf ist unsichtbar. Kühlt er ab, entstehen winzige Tröpfchen oder Eiskristalle. Winzige Staubkörnchen helfen dabei. Die Wolke selbst ist aber Wasser oder Eis.",
+  "tipps": [
+   "Denk an den Badspiegel nach dem Duschen. Was siehst du darauf?"
+  ],
+  "warumNicht": [
+   null,
+   "Rauch kann helfen, dass Tröpfchen entstehen. Die Wolke selbst ist aber aus Wasser oder Eis.",
+   "Luft siehst du nicht, auch kalte nicht. Sichtbar sind die Tröpfchen darin.",
+   "Wasserdampf ist unsichtbar. Erst wenn er zu Tröpfchen wird, siehst du eine Wolke."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "NASA Science for Kids · How Do Clouds Form?",
+    "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+   },
+   {
+    "titel": "USGS Water Science School · Condensation and the Water Cycle",
+    "url": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Wolke",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/W/Wolke.html"
+   }
+  ],
+  "alt_id": "extra:weather-match/Wolke"
+ },
+ {
+  "id": "wetter-klima-wort",
+  "stufe": "profi",
+  "frage": "Wie nennt man das übliche Wetter an einem Ort über viele Jahre?",
+  "antworten": [
+   "Das Klima",
+   "Das Wetter",
+   "Die Jahreszeit",
+   "Der Wetterbericht"
+  ],
+  "richtig": "Das Klima",
+  "warum": "Wetter ist heute, Klima ist über viele Jahre. Forschende schauen dafür meist auf 30 Jahre. So alt sind manche Eltern.",
+  "tipps": [
+   "Das Wetter ändert sich fast jeden Tag. Gesucht ist etwas, das lange gleich bleibt."
+  ],
+  "warumNicht": [
+   null,
+   "Wetter ist, wie es heute oder morgen draußen ist. Für viele Jahre sagt man anders.",
+   "Eine Jahreszeit dauert nur ein paar Monate. Gefragt ist etwas über viele Jahre.",
+   "Der Wetterbericht sagt das Wetter für die nächsten Tage voraus."
+  ],
+  "topic": "science-seasons",
+  "quelle": [
+   {
+    "titel": "NOAA · What's the difference between climate and weather?",
+    "url": "https://www.noaa.gov/explainers/what-s-difference-between-climate-and-weather"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Klima",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/K/Klima.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-satz-klima",
+  "stufe": "profi",
+  "frage": "Welcher Satz beschreibt das Klima?",
+  "antworten": [
+   "Im Sommer ist es in der Sahara meist heiß.",
+   "Morgen wird es in Kiel stürmisch und kalt.",
+   "Heute Mittag gibt es bei uns ein Gewitter.",
+   "Diesen Winter lag hier kaum Schnee."
+  ],
+  "richtig": "Im Sommer ist es in der Sahara meist heiß.",
+  "warum": "In der Sahara ist es fast jeden Sommer heiß. Das ist Klima. Ein Tag oder ein einziger Winter ist zu kurz dafür.",
+  "tipps": [
+   "Welcher Satz gilt nicht nur kurz, sondern fast jedes Jahr?"
+  ],
+  "warumNicht": [
+   null,
+   "„Morgen“ zeigt: Das ist eine Vorhersage für einen einzigen Tag.",
+   "Ein Gewitter heute Mittag ist Wetter. Es dauert nur kurz.",
+   "Ein einziger Winter ist zu kurz. Für das Klima schaut man auf viele Jahre."
+  ],
+  "topic": "science-seasons",
+  "quelle": [
+   {
+    "titel": "NOAA · What's the difference between climate and weather?",
+    "url": "https://www.noaa.gov/explainers/what-s-difference-between-climate-and-weather"
+   },
+   {
+    "titel": "Ohio University, The Physical Environment · Tropical Desert",
+    "url": "https://people.ohio.edu/dyer/TPE/tpe_3e/climate_systems/tropical_desert.html"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Witterung",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/W/Witterung.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-zone-subtropen",
+  "stufe": "profi",
+  "frage": "Viele große, heiße Wüsten liegen in derselben Klimazone. Welche ist es?",
+  "antworten": [
+   "Subtropen",
+   "Tropen",
+   "Gemäßigte Zone",
+   "Polarzone"
+  ],
+  "richtig": "Subtropen",
+  "warum": "Subtropen heißt etwa „nahe bei den Tropen“. Im Sommer ist es dort heiß und oft trocken. Es gibt Wüsten, aber auch feuchte Gegenden.",
+  "tipps": [
+   "Diese Wüsten liegen nicht am Äquator. Sie liegen ein Stück weiter nördlich oder südlich."
+  ],
+  "warumNicht": [
+   null,
+   "Die Tropen liegen direkt um den Äquator. Viele Gegenden dort sind feucht, mit Regenwald.",
+   "In der gemäßigten Zone ist es für heiße Wüsten meist zu kühl.",
+   "In der Polarzone ist es kalt. Dort gibt es Eis statt heißem Sand."
+  ],
+  "topic": "animal-dromedary",
+  "quelle": [
+   {
+    "titel": "NOAA JetStream · Climate Zones",
+    "url": "https://www.noaa.gov/jetstream/global/climate-zones"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Tropen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/T/Tropen.html"
+   },
+   {
+    "titel": "Ohio University, The Physical Environment · Tropical Desert",
+    "url": "https://people.ohio.edu/dyer/TPE/tpe_3e/climate_systems/tropical_desert.html"
+   }
+  ],
+  "alt_id": "extra:climate-detective/4"
+ },
+ {
+  "id": "wetter-ein-tag",
+  "stufe": "profi",
+  "frage": "Ein Julitag in Deutschland ist kalt und nass. Was folgt daraus?",
+  "antworten": [
+   "Ein Tag sagt wenig über das Klima.",
+   "Das Klima hat sich heute geändert.",
+   "Im Juli ist es hier meistens kalt.",
+   "Morgen wird es bestimmt auch kalt."
+  ],
+  "richtig": "Ein Tag sagt wenig über das Klima.",
+  "warum": "Ein kalter Tag gehört zum Wetter. Klima zeigt sich erst über viele Jahre. Ein Tag ändert es nicht.",
+  "tipps": [
+   "Denk an einen verregneten Tag in den Sommerferien."
+  ],
+  "warumNicht": [
+   null,
+   "Das Klima ändert sich nicht an einem Tag. Dafür schaut man auf viele Jahre.",
+   "Im Juli ist es bei uns meist warm. Ein kalter Tag ändert das nicht.",
+   "Wie das Wetter morgen wird, folgt nicht aus einem einzigen Tag."
+  ],
+  "topic": "science-seasons",
+  "quelle": [
+   {
+    "titel": "NOAA · What's the difference between climate and weather?",
+    "url": "https://www.noaa.gov/explainers/what-s-difference-between-climate-and-weather"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Klima",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/K/Klima.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-tau",
+  "stufe": "profi",
+  "frage": "Morgens ist das Auto draußen nass. Es hat nicht geregnet. Woher kommt das Wasser?",
+  "antworten": [
+   "Aus unsichtbarem Dampf in der Luft",
+   "Vom Himmel, ganz fein in der Nacht",
+   "Von innen, durch das Blech gesickert",
+   "Aus der Kälte, die zu Wasser wird"
+  ],
+  "richtig": "Aus unsichtbarem Dampf in der Luft",
+  "warum": "In der Luft ist fast immer Wasserdampf. Den siehst du nicht. Nachts kühlt das Auto stark ab. An der kalten Fläche wird der Dampf zu Tropfen. Diese Tropfen heißen Tau.",
+  "tipps": [
+   "Denk an ein kaltes Glas aus dem Kühlschrank. Was passiert außen?"
+  ],
+  "warumNicht": [
+   null,
+   "Tau fällt nicht vom Himmel. Er bildet sich direkt am kalten Auto.",
+   "Durch Blech kommt kein Wasser. Die Tropfen sitzen außen, wo die Luft ist.",
+   "Kälte ist kein Stoff. Sie kann nicht zu Wasser werden."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "NWS Glossary · Dew",
+    "url": "https://forecast.weather.gov/glossary.php?word=DEW"
+   },
+   {
+    "titel": "USGS Water Science School · Condensation and the Water Cycle",
+    "url": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle"
+   },
+   {
+    "titel": "NASA Science for Kids · How Do Clouds Form?",
+    "url": "https://science.nasa.gov/kids/earth/how-do-clouds-form/"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-regenbogen-wann",
+  "stufe": "profi",
+  "frage": "Es regnet, und die Sonne scheint. Wie musst du stehen, um einen Regenbogen zu sehen?",
+  "antworten": [
+   "Mit der Sonne im Rücken, Regen vor dir",
+   "Mit Blick zur Sonne, Regen vor dir",
+   "Egal wie, er ist überall zu sehen",
+   "Mit Blick nach oben, genau über deinen Kopf"
+  ],
+  "richtig": "Mit der Sonne im Rücken, Regen vor dir",
+  "warum": "Das Sonnenlicht fällt in die Regentropfen. Darin wird es umgelenkt und in Farben zerlegt. Dann kommt es zu dir zurück. Darum muss die Sonne hinter dir sein.",
+  "tipps": [
+   "Denk an einen Gartenschlauch an einem sonnigen Tag. Wo ist die Sonne, wenn du Farben siehst?"
+  ],
+  "warumNicht": [
+   null,
+   "Zur Sonne hin siehst du keinen Regenbogen. Er liegt ihr gegenüber.",
+   "Ein Regenbogen zeigt sich nur an einer Stelle: gegenüber der Sonne.",
+   "Direkt über dir steht er nicht. Er liegt der Sonne gegenüber, oft tief am Himmel."
+  ],
+  "topic": null,
+  "quelle": [
+   {
+    "titel": "National Weather Service Flagstaff · Rainbows",
+    "url": "https://www.weather.gov/fgz/Rainbow"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Regenbogen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/R/Regenbogen.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-gewitterwolke",
+  "stufe": "profi",
+  "frage": "Welche Wolken bringen Blitz und Donner?",
+  "antworten": [
+   "Riesige Wolken, hoch wie Türme",
+   "Dünne, helle Schleier ganz oben",
+   "Kleine, weiße Wolken wie Watte",
+   "Eine flache, graue Wolkendecke"
+  ],
+  "richtig": "Riesige Wolken, hoch wie Türme",
+  "warum": "Gewitterwolken wachsen wie riesige Türme weit nach oben. Blitz und Donner kommen aus solchen Wolken.",
+  "tipps": [
+   "Denk an einen heißen Sommertag. Wie sieht der Himmel aus, kurz bevor es donnert?"
+  ],
+  "warumNicht": [
+   null,
+   "Diese Schleier sind ganz aus Eis und hoch oben. Gewitter bringen sie nicht.",
+   "Kleine Wattewolken gibt es an schönen Tagen. Erst wenn eine riesig hoch wächst, kann ein Gewitter entstehen.",
+   "Aus so einer flachen Decke fällt höchstens leichter Nieselregen."
+  ],
+  "topic": "science-atmosphere",
+  "quelle": [
+   {
+    "titel": "NOAA JetStream · Ten Basic Clouds",
+    "url": "https://www.noaa.gov/jetstream/clouds/ten-basic-clouds"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Gewitter",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/G/Gewitter.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-berg-eis",
+  "stufe": "experte",
+  "frage": "Der Kilimandscharo liegt nahe am Äquator. Auf seinem Gipfel gibt es trotzdem noch Eis. Warum?",
+  "antworten": [
+   "Mit der Höhe wird die Luft meist kälter.",
+   "Dort ist gerade Winter wie bei uns.",
+   "Auf dem Gipfel scheint die Sonne schwächer.",
+   "Der Wind oben macht die Luft kälter."
+  ],
+  "richtig": "Mit der Höhe wird die Luft meist kälter.",
+  "warum": "Je höher man kommt, desto kälter wird die Luft meist. Darum liegt auf sehr hohen Bergen Eis, sogar nahe am Äquator. Doch das Eis dort wird seit über 100 Jahren immer weniger.",
+  "tipps": [
+   "Am Äquator gibt es keinen Winter wie bei uns.",
+   "Denk an die Alpen: Wo liegt im Frühling noch Schnee?"
+  ],
+  "warumNicht": [
+   null,
+   "Nahe am Äquator ist es das ganze Jahr ähnlich warm. Kalte Winter wie bei uns fehlen dort.",
+   "Oben ist die Sonne sogar stärker. Ihre Strahlen, die Sonnenbrand machen, nehmen mit der Höhe zu.",
+   "Wind macht die Luft nicht kälter. Er fühlt sich auf der Haut nur kälter an."
+  ],
+  "topic": "person-alexander_humboldt",
+  "quelle": [
+   {
+    "titel": "NOAA JetStream · Layers of the Atmosphere",
+    "url": "https://www.noaa.gov/jetstream/atmosphere/layers-of-atmosphere"
+   },
+   {
+    "titel": "EarthDate (Bureau of Economic Geology, University of Texas at Austin) · The Roof of Africa",
+    "url": "https://www.earthdate.org/episodes/the-roof-of-africa"
+   },
+   {
+    "titel": "UNESCO Courier (06.01.2025) · Douglas Hardy: Kilimanjaro",
+    "url": "https://courier.unesco.org/en/articles/douglas-hardy-kilimanjaro-compelling-place-both-aesthetic-and-scientific-perspectives"
+   },
+   {
+    "titel": "Environmental Research: Climate (2024) · Kilimanjaro-Gletscherfläche 2021",
+    "url": "https://iopscience.iop.org/article/10.1088/2752-5295/ad1fd7"
+   },
+   {
+    "titel": "Deutscher Wetterdienst (2015) · UV-Wirkung auf den Organismus und UV-Strahlung in der Atmosphäre",
+    "url": "https://kunden.dwd.de/uvi_de/data/UV_forecast.pdf"
+   },
+   {
+    "titel": "National Weather Service · Wind Chill Chart",
+    "url": "https://www.weather.gov/safety/cold-wind-chill-chart"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-regenbogen-morgen",
+  "stufe": "experte",
+  "frage": "Am Morgen siehst du einen Regenbogen. In welcher Himmelsrichtung steht er?",
+  "antworten": [
+   "Im Westen, denn die Sonne steht im Osten.",
+   "Im Osten, denn dort geht die Sonne auf.",
+   "Im Süden, denn dort steht die Sonne mittags.",
+   "In jeder Richtung, in der es gerade regnet."
+  ],
+  "richtig": "Im Westen, denn die Sonne steht im Osten.",
+  "warum": "Ein Regenbogen steht immer der Sonne gegenüber. Am Morgen steht die Sonne im Osten. Dann siehst du den Bogen im Westen, mit der Sonne im Rücken.",
+  "tipps": [
+   "Wo steht die Sonne am Morgen?",
+   "Ein Regenbogen steht der Sonne gegenüber. Die Sonne ist hinter dir."
+  ],
+  "warumNicht": [
+   null,
+   "Im Osten steht morgens die Sonne. Der Regenbogen liegt ihr gegenüber.",
+   "Morgens steht die Sonne nicht im Süden. Und der Bogen liegt ihr gegenüber.",
+   "Regen allein reicht nicht. Den Bogen siehst du nur gegenüber der Sonne."
+  ],
+  "topic": null,
+  "quelle": [
+   {
+    "titel": "DWD-Wetterlexikon · Regenbogen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/R/Regenbogen.html"
+   },
+   {
+    "titel": "National Weather Service Flagstaff · Rainbows",
+    "url": "https://www.weather.gov/fgz/Rainbow"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-hagel-sommer",
+  "stufe": "experte",
+  "frage": "Hagel ist Eis. Trotzdem fällt er bei uns meist im Sommer. Warum?",
+  "antworten": [
+   "Er wächst in Gewittern, die meist im Sommer sind.",
+   "Im Winter ist es für Hagel einfach zu kalt.",
+   "Im Sommer fällt mehr Regen, der unterwegs gefriert.",
+   "Im Sommer steigt kalte Luft vom Boden nach oben."
+  ],
+  "richtig": "Er wächst in Gewittern, die meist im Sommer sind.",
+  "warum": "Gewitter gibt es vor allem an warmen Tagen. Dann steigt warme, feuchte Luft schnell nach oben. Sie trägt Tropfen hoch hinauf, wo es eiskalt ist. Dort frieren sie zu Eis und wachsen. Sind die Körner zu schwer, fallen sie als Hagel.",
+  "tipps": [
+   "Aus welchen Wolken fällt Hagel meistens?",
+   "An heißen Tagen steigt warme Luft schnell nach oben. So wachsen hohe Wolkentürme."
+  ],
+  "warumNicht": [
+   null,
+   "Kälte verhindert kein Eis. Im Winter fehlen aber meist die kräftigen Gewitter.",
+   "Im Sommer ist es unten warm. Da gefriert kein Regen. Hagel wächst oben in der Gewitterwolke.",
+   "Kalte Luft sinkt nach unten. Nach oben steigt warme Luft."
+  ],
+  "topic": "science-water-cycle",
+  "quelle": [
+   {
+    "titel": "NOAA NSSL · Severe Weather 101: Hail",
+    "url": "https://www.nssl.noaa.gov/education/svrwx101/hail/"
+   },
+   {
+    "titel": "NOAA NSSL · Severe Weather 101: Thunderstorm Basics",
+    "url": "https://www.nssl.noaa.gov/education/svrwx101/thunderstorms/"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Gewitter",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/G/Gewitter.html"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Hagel",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/H/Hagel.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-reif-nacht",
+  "stufe": "experte",
+  "frage": "Nach einer klaren Nacht liegt Reif auf dem Gras. Nach einer wolkigen Nacht nicht. Warum?",
+  "antworten": [
+   "Die Wolken halten die Wärme fest wie eine Decke.",
+   "Ohne Wolken strömt kalte Luft aus dem All herein.",
+   "Der Mond kühlt das Gras in klaren Nächten ab.",
+   "Wolken fangen den Reif auf, bevor er unten ist."
+  ],
+  "richtig": "Die Wolken halten die Wärme fest wie eine Decke.",
+  "warum": "Der Boden gibt nachts Wärme ab. Ohne Wolken geht sie nach oben weg, bis ins All. Gras und Boden kühlen dann unter null Grad ab, und Reif entsteht. Wolken schicken einen Teil der Wärme zurück.",
+  "tipps": [
+   "Wohin geht die Wärme des Bodens in der Nacht?",
+   "Was macht eine Bettdecke nachts mit deiner Wärme?"
+  ],
+  "warumNicht": [
+   null,
+   "Im All gibt es keine Luft, die herunterströmt. Es ist die Wärme, die nach oben verschwindet.",
+   "Der Mond kühlt nichts. In klaren Nächten siehst du ihn nur besser.",
+   "Reif fällt nicht vom Himmel. Er bildet sich direkt am kalten Gras."
+  ],
+  "topic": "science-heat-transfer",
+  "quelle": [
+   {
+    "titel": "DWD-Wetterlexikon · Reiferscheinungen",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/R/Reiferscheinungen.html"
+   },
+   {
+    "titel": "DWD-Wetterlexikon · Ausstrahlung",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/A/Ausstrahlung.html"
+   }
+  ],
+  "alt_id": null
+ },
+ {
+  "id": "wetter-donner-zaehlen",
+  "stufe": "experte",
+  "frage": "Der Donner braucht etwa 3 Sekunden für einen Kilometer. Vom Blitz bis zum Donner zählst du 9 Sekunden. Wie weit ist das Gewitter weg?",
+  "antworten": [
+   "Etwa 3 Kilometer",
+   "Etwa 9 Kilometer",
+   "Etwa 6 Kilometer",
+   "Etwa 27 Kilometer"
+  ],
+  "richtig": "Etwa 3 Kilometer",
+  "warum": "Das Licht vom Blitz ist fast sofort bei dir. Der Donner ist viel langsamer. In 3 Sekunden schafft er etwa einen Kilometer. 9 Sekunden sind dreimal 3 Sekunden, also etwa 3 Kilometer. Hörst du Donner, geh lieber ins Haus.",
+  "tipps": [
+   "Den Blitz siehst du sofort. Nur der Donner ist so lange unterwegs.",
+   "Wie oft passen 3 Sekunden in 9 Sekunden?"
+  ],
+  "warumNicht": [
+   null,
+   "Für 9 Kilometer bräuchte der Donner etwa 27 Sekunden.",
+   "Für 6 Kilometer bräuchte der Donner etwa 18 Sekunden.",
+   "Für 27 Kilometer bräuchte der Donner etwa 81 Sekunden."
+  ],
+  "topic": "science-sound",
+  "quelle": [
+   {
+    "titel": "DWD-Wetterlexikon · Donner",
+    "url": "https://www.dwd.de/DE/service/lexikon/begriffe/D/Donner.html"
+   },
+   {
+    "titel": "National Weather Service · Thunder",
+    "url": "https://www.weather.gov/safety/lightning-science-thunder"
+   }
+  ],
+  "alt_id": null
+ }
+]

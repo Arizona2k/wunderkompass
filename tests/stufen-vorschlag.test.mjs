@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { leereFolge, mitErsterAntwort, nachVorschlag, stufenVorschlag } from '../app/kern/stufe.ts';
+import { leereFolge, mitErsterAntwort, nachAntwort, nachVorschlag, spielVorschlagErlaubt, stufenVorschlag } from '../app/kern/stufe.ts';
 
 // Teilschritt 3, E8 (Ergänzung Stufen, S3): Vorschläge statt Automatik. Die Folge zählt nur, solange die Seite offen ist.
 const antworten=(folge,stufe,liste)=>liste.reduce((f,[frage,richtig])=>mitErsterAntwort(f,frage,richtig,stufe),folge);
@@ -80,4 +80,38 @@ test('nur Fragen der gewählten Stufe zählen; leichtere Fragen lassen die Folge
  assert.deepEqual(stufenVorschlag(gemischt,'profi','topic:a'),HOCH_EXPERTE);
  // Eine schwerere Frage zählt auch nicht (kommt auf der Karte nicht vor, die Regel ist „genau die gewählte Stufe“).
  assert.deepEqual(mitErsterAntwort(leereFolge(),'x',true,'entdecker','profi'),leereFolge());
+});
+
+// Spiele, in denen Experte noch Profi spielt: Ein unterdrückter Vorschlag verbraucht den einen Vorschlag der Runde nicht
+// (Code-Prüfung PR 2, Hinweis 6); ohne Filter bleibt alles wie auf der Karte.
+test('nachAntwort: unterdrückter Vorschlag verbraucht die Runde nicht',()=>{
+ const ohneExperte=ziel=>ziel!=='experte';let f=leereFolge(),v;
+ for(const i of [1,2,3]){({folge:f,vorschlag:v}=nachAntwort(f,'q:'+i,true,'profi','profi','runde:x',ohneExperte));assert.equal(v,null);}
+ assert.equal(f.gefragt.includes('runde:x'),false,'„Experte?“ war nicht erlaubt und zählt nicht als gefragt');
+ ({folge:f,vorschlag:v}=nachAntwort(f,'q:4',false,'profi','profi','runde:x',ohneExperte));assert.equal(v,null);
+ ({folge:f,vorschlag:v}=nachAntwort(f,'q:5',false,'profi','profi','runde:x',ohneExperte));
+ assert.equal(v?.richtung,'leichter');assert.equal(v?.ziel,'entdecker');assert.equal(f.gefragt.includes('runde:x'),true);
+ ({vorschlag:v}=nachAntwort(f,'q:6',false,'profi','profi','runde:x',ohneExperte));assert.equal(v,null,'höchstens ein Vorschlag je Runde');
+ let g=leereFolge();for(const i of [1,2,3])({folge:g,vorschlag:v}=nachAntwort(g,'q:'+i,true,'profi','profi','runde:y'));
+ assert.equal(v?.ziel,'experte','ohne Filter wie auf der Karte');
+ assert.deepEqual(nachAntwort(g,'q:1',false,'profi','profi','runde:y'),{folge:g,vorschlag:null},'eine schon gezählte Frage ändert nichts');
+});
+
+// Code-Nachprüfung PR 2, Befund 1: Ein Spiel misst an der Stufe der Runde. Läuft noch eine Runde einer anderen Stufe als der
+// gewählten (alte Runde, oder die Stufe wurde auf einer Karte geändert), darf kein Vorschlag die Stufe im Pass umstellen,
+// weder in die falsche Richtung noch um zwei Stufen.
+test('spielVorschlagErlaubt: nur, solange die Runde auf der gewählten Stufe läuft',()=>{
+ const reihe=(gewaehlt,gespielt,richtig,erlaubt)=>{let f=leereFolge(),v=null,erster=null;for(const i of [1,2,3]){({folge:f,vorschlag:v}=nachAntwort(f,'q:'+i,richtig,gespielt,gespielt,'runde:'+gewaehlt+gespielt,erlaubt??spielVorschlagErlaubt(gewaehlt,gespielt)));erster??=v;}return erster;};
+ assert.equal(reihe('experte','entdecker',true),null,'Pass Experte, Runde Entdecker: „Profi?“ würde die Stufe senken');
+ assert.equal(reihe('entdecker','experte',false),null,'Pass Entdecker, Runde Experte: „leichter“ würde die Stufe heben');
+ assert.equal(reihe('entdecker','profi',true),null,'Pass Entdecker, alte Mittel-Runde: kein Sprung um zwei Stufen');
+ assert.equal(reihe('profi','entdecker',true),null,'Pass Profi, alte Leicht-Runde: Profi ist schon gewählt');
+ assert.equal(reihe('entdecker','entdecker',true)?.ziel,'profi','Runde auf der gewählten Stufe: wie auf der Karte');
+ assert.equal(reihe('experte','experte',false)?.ziel,'profi');
+ // Spiele, in denen Experte noch Profi spielt: Pass Experte und eine Profi-Runde passen zusammen.
+ const welt=s=>s==='experte'?'profi':s;
+ assert.equal(reihe('experte','profi',true,spielVorschlagErlaubt('experte','profi',welt)),null,'„Experte?“ ist schon gewählt');
+ assert.equal(reihe('experte','profi',false,spielVorschlagErlaubt('experte','profi',welt))?.ziel,'entdecker');
+ assert.equal(reihe('profi','profi',true,spielVorschlagErlaubt('profi','profi',welt)),null,'„Experte?“ spielt hier nicht anders');
+ assert.equal(reihe('profi','profi',true,spielVorschlagErlaubt('profi','profi'))?.ziel,'experte','mit echten Experten-Aufgaben schon');
 });

@@ -140,10 +140,10 @@ test('stufenHinweis: sagt ehrlich, wenn es die gewählte Stufe auf der Karte noc
   assert.equal(stufenHinweis(fragen, 'experte'), null, 'die Karte hat eine Experten-Frage');
   assert.equal(stufenHinweis(fragen, 'entdecker'), null);
   const ohneExperte = kartenFragen({...karte, moreQuestions: karte.moreQuestions.slice(0, 2)}, bank);
-  assert.equal(stufenHinweis(ohneExperte, 'experte'), 'Experte gibt es hier noch nicht. Du spielst Profi.');
+  assert.equal(stufenHinweis(ohneExperte, 'experte'), 'Experten-Aufgaben gibt es hier noch nicht. Du spielst Profi.');
   const nurHaupt = kartenFragen({...karte, moreQuestions: [], challenges: []}, {});
-  assert.equal(stufenHinweis(nurHaupt, 'profi'), 'Profi gibt es hier noch nicht. Du spielst Entdecker.');
-  assert.equal(stufenHinweis(nurHaupt, 'experte'), 'Experte gibt es hier noch nicht. Du spielst Entdecker.');
+  assert.equal(stufenHinweis(nurHaupt, 'profi'), 'Profi-Aufgaben gibt es hier noch nicht. Du spielst Entdecker.');
+  assert.equal(stufenHinweis(nurHaupt, 'experte'), 'Experten-Aufgaben gibt es hier noch nicht. Du spielst Entdecker.');
 });
 
 // Stufen-Feinschliff aus dem ersten Spieltest (24.11.2026, BACKLOG Phase 1, Punkt 12 a, c, d).
