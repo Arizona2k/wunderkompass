@@ -256,7 +256,8 @@
 .discovery-activities article>button>span{display:grid;gap:8px}.discovery-activities article>button>svg{flex-shrink:0}.discovery-activities article>button>svg:last-child{margin-left:auto}
 .discovery-activities .playground-preview{min-height:220px}
 .discovery-preview-note,.discovery-game-preview figcaption{font-size:14px;line-height:1.6;color:var(--wk-muted);margin:8px 0 16px}
-.discovery-game-preview{margin:0 0 18px}.discovery-game-preview img{display:block;width:100%;height:auto;border-radius:8px}
+/* Bildschirmfoto eines Spiels: als Bild erkennbar (Rahmen, Schatten), nie größer als aufgenommen (Design-Prüfung PR 2, Befund 3). */
+.discovery-game-preview{margin:0 0 18px;max-width:420px}.discovery-game-preview img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--wk-line);box-shadow:0 6px 18px rgb(21 48 58 / .12)}
 .discovery-sequence-preview{padding:16px 0;min-width:0}.discovery-sequence-preview>p{font-size:14px;line-height:1.6;color:var(--wk-muted);margin:0 0 12px}
 .discovery-sequence-preview ol{list-style:none;padding:0;margin:0 0 12px;display:grid;gap:12px}
 .discovery-sequence-preview li{display:flex;gap:12px;align-items:center;font-size:16px;line-height:1.5;color:var(--wk-ink)}
