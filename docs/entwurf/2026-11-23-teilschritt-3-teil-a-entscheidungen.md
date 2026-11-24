@@ -188,3 +188,16 @@ Prüfungen auf `7900f38` (danach nur Unterlagen): `pnpm run check` grün (437 Un
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
 - PR #95 und #27: Durchsicht durch einen Helfer, Brauchbares übernehmen, Rest löschen (Nutzer: „das entscheidest du“). Ergebnis folgt in `2026-11-23-pr-95-27-durchsicht.md`.
 - Linkwächter als Test statt als Helfer, zu Beginn von Teil B.
+
+## Antworten des Nutzers und Merge (24.11.2026, morgens)
+
+Nutzer, 24.11.2026: „Du kannst alles ändern und auch mergen“. Damit sind die offenen Fragen (1) bis (6) aus STATUS und PR #107 so entschieden, wie Claude es empfohlen hat. PR #107 ist am 24.11.2026 gemergt (`36c8fdd`). Die CI auf dem Endstand `9741ee7` war ganz grün (Lauf 45330432651: Pflicht-Check, Engine-Schnellprüfung in Firefox und WebKit).
+
+Umsetzung im Folge-PR (Branch `claude/trusting-galileo-ck3o23`):
+
+1. **Personenkarten:** bleibt so, „Ganz einfach“ steht dort in „Ausprobieren“. Echte leichte Sätze kommen mit der Personenwelt (BACKLOG, Teil A, Punkt „Personenkarten (36)“).
+2. **„Selbst beobachten“ und Lernziel aus PR #27:** nicht übernommen. Die Entwürfe bleiben in `docs/entwurf/2026-11-23-ganz-einfach-entwurf.json` und werden erst mit den Welten geprüft (BACKLOG).
+3. **`CLAUDE.md`, Arbeitsablauf Punkt 4:** übernommen (Commit `474a825`). Betroffene Tests auch nach dem Auslöser suchen; nach Kartenänderungen `--suite full core offline-cold-full`.
+4. **Größenvergleich im Build:** gestrichen (Commit `c84f513`). Beim Nachmessen fiel auf: Das Startpaket hat komprimiert nur noch rund 750 Byte Luft bis zur festen Grenze (292.253 von 293.000 Byte). Neuer BACKLOG-Punkt „Startpaket fast an seiner festen Grenze“, Vorschlag: zu Beginn von Teil B.
+5. **Stresslauf:** gebaut (`tests/browser/stresslauf.mjs`, Schalter `QA_FRAME_DELAY_MS` in `tests/browser/run.mjs`). Er bremst jedes Bild in jedem Kontext, den die Suiten öffnen (`newContext`, darüber auch `newPage`, und `launchPersistentContext`). Von Hand gemessen: Ein Bild kommt in Chromium, Firefox und WebKit rund 150 ms später, Abbrechen wirkt. Messung des CI-Satzes in WebKit und Aufnahme in `/pruefen`: folgt unten.
+6. **Browser-Installation in der CI:** `scripts/ci-paketspiegel.sh` in allen drei Installationsschritten (Commit `e159182`). Ursache im Protokoll belegt: Die Spiegelliste (152 Byte) hatte den AWS-Spiegel mit Priorität 1. Der alte `sed` hob den offiziellen Spiegel ebenfalls auf 1, und apt verteilte die Pakete auf beide (102 und 100 Pakete, 126 MB in 12:24 min). Jetzt hat nur der offizielle Spiegel Priorität 1. Ob es wirkt, zeigt die CI des Folge-PR (das Skript gibt die Liste aus).
