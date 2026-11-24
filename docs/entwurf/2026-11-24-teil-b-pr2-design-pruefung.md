@@ -85,3 +85,10 @@ Keine.
 - Die Welt-Spiele (z. B. „Wer frisst was?“, Welt-Quiz, Foto-Forscher) habe ich nur per Messwerte verglichen (Fortschrittsbalken, Schriftgrößen), nicht komplett durchgespielt.
 - Vorschaubild auf der Startseite: nur sichtbar, wenn die Wissensspur „Biene & Blüte“ gewählt ist. Zufällig angezeigt wird sie nur an manchen Tagen oder Besuchen.
 - Der Glanz auf Kacheln beim Zeigen (Gestaltungslinie) wurde nicht gesondert angesehen.
+
+## Nachtrag Claude (Bewertung und Umsetzung)
+
+- **Befund 1 echt, behoben.** Nachgestellt: Ohne „Bewegung reduzieren“ und mit der Karte „Weiter entdecken“ für ein anderes Spiel über den Spielen landete der Titel bei −134 px. Ursache: Die Karte verschwand erst, nachdem das neue Spiel gespeichert hatte, also während die Seite weich zum Spiel rollte; alles rückte um ihre Höhe nach oben. „Kreuz und quer“ war im Bericht nur richtig, weil es als erstes Spiel ohne diese Karte geöffnet wurde; betroffen waren alle Spiele. Die Karte ist jetzt weg, solange im Spielbereich ein Spiel offen ist (`app/earth-explorer.tsx`, wie „Quiz fortsetzen“); in der Übersicht und in anderen Bereichen bleibt sie. Neuer Test in `spiel-auswahl` (CI-Satz) ohne „Bewegung reduzieren“, am alten Stand rot (−134 px), jetzt grün. Der Spieltest `playground` lief mit „Bewegung reduzieren“ und konnte das nicht sehen.
+- **Befund 2 teils umgesetzt:** Kreuz und quer hat jetzt denselben Fortschrittsbalken wie die Klassik-Spiele. Der Rest (Tipp-Stil, Fragengröße, Brettbreite, Knopfname, „Passt“, Fokusrahmen, kleine Schrift) ist ein Unterschied zwischen Welt-Spielen und Klassik-Spielen, nicht nur bei Kreuz und quer, und kommt in den Design-Schritt (BACKLOG „Ein Spielbrett für alle Spiele“).
+- **Befund 3 teils umgesetzt:** Rahmen, Schatten und Höchstbreite 420 px für das Bildschirmfoto. Neu aufnehmen erst nach dem neuen Spielbrett (BACKLOG).
+- **Feinschliff:** Rückmeldung und Stufen-Vorschlag unter dem Bildrand stehen schon im BACKLOG; Abstand von „Nächste Aufgabe“, Fokus nach dem Öffnen und Fokusrahmen sind im BACKLOG-Punkt zum Spielbrett ergänzt.
