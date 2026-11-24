@@ -3,6 +3,15 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil A ist auf der Testseite; Prüfungen verlässlicher
+
+Teil A „Eine Stufe für alles“ ist seit 24.11.2026 auf der Testseite (PR #107). Für Kinder ändert sich danach nichts Sichtbares. Die Prüfungen fallen seltener grundlos aus und finden Zeitfehler früher.
+
+- **Browser schneller geladen:** Die Prüfung auf GitHub holt die Pakete für die Test-Browser zuerst von der offiziellen Ubuntu-Quelle. Ein langsamer Spiegel hatte sie bis knapp an ihre Zeitgrenze von 20 Minuten gebracht.
+- **Stresslauf:** Ein Schalter bremst im Test jedes Bild der Seite. So zeigen sich Fehler, bei denen etwas erst einen Augenblick später erscheint, schon vor dem PR. Er gehört jetzt zu `/pruefen`.
+- **Aufgeräumt:** Der veraltete Größenvergleich im Build ist weg; die festen Größengrenzen gelten weiter.
+- **Arbeitsregel genauer:** Wer Karten ändert, prüft danach auch alle Karten offline, und betroffene Tests werden auch über ihren Auslöser gesucht.
+
 ## 23.11.2026 – Teil A „Eine Stufe für alles“: drei Stufen, leichter Satz oben
 
 Kinder wählen jetzt eine Stufe: Entdecker, Profi oder Experte. Die Karten zeigen Fragen passend zur Stufe.
