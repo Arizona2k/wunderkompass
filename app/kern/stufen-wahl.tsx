@@ -14,8 +14,12 @@ const STUFEN_TEXT: Record<Stufe, string> = {
 
 // Nach einem Wechsel kann die Karte „Rate mal!“ mit neuer Frage neu aufbauen; dann ist die alte Stufenwahl weg
 // und mit ihr der Knopf. Der Fokus gehört dann an „Ändern“ der neuen Stufenwahl am selben Ort (Code-Prüfung Teil A, Befund 2).
+// Sofort auf das „Ändern“, das jetzt da ist, damit der Fokus nicht mit dem gedrückten Knopf auf <body> fällt; im nächsten Bild
+// noch einmal, falls die Stufenwahl inzwischen neu aufgebaut wurde (Technik-Prüfung WebKit-Fund, Befund 3a).
 export function fokusAufStufenWahl(ort: ParentNode | null | undefined) {
-  requestAnimationFrame(() => ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern')?.focus());
+  const aendern = () => ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern');
+  aendern()?.focus();
+  requestAnimationFrame(() => aendern()?.focus());
 }
 
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“

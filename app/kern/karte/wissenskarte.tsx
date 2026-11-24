@@ -199,7 +199,13 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
           <StufenVorschlagHinweis
             vorschlag={vorschlag}
             onJa={() => { schliessen(); a.onStufe?.(vorschlag.ziel); fokusAufStufenWahl(artikel.current); }}
-            onNein={() => { schliessen(); requestAnimationFrame(() => artikel.current?.querySelector<HTMLElement>('.rate-mal')?.focus()); }}
+            onNein={() => {
+              // Erst auf „Rate mal!“, dann schließen: So fällt der Fokus nicht mit dem Knopf weg (Technik-Prüfung WebKit-Fund, Befund 3b).
+              const rateMal = () => artikel.current?.querySelector<HTMLElement>('.rate-mal');
+              rateMal()?.focus();
+              schliessen();
+              requestAnimationFrame(() => rateMal()?.focus());
+            }}
           />
         ) : null}
       />
