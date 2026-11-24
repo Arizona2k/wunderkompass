@@ -102,6 +102,8 @@ Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude ents
 
 **Neue Helfer** (Wunsch des Nutzers, 23.11.2026): Brauchen wir einen Helfer, um schneller, ordentlicher oder effizienter voranzukommen, schlägt Claude ihn mit Grund vor (und sagt auch, wovon er abrät); entschieden wird gemeinsam mit dem Nutzer.
 
+**Helfer parallel nutzen** (Wunsch des Nutzers, 24.11.2026): gut, schnell und effizient arbeiten, weil neue Inhalte und ein neues Design kommen. Unabhängige Arbeiten gehen gleichzeitig an Hintergrund-Helfer (z. B. Bildsuche, Prüfungen, Entwürfe), Wartezeiten (Prüfkette, große Suiten, CI) werden damit gefüllt. Vor jedem Auftrag in `docs/entwurf/` nachsehen, ob es schon einen Bericht gibt (z. B. Bildkandidaten), und darauf aufbauen. Ergebnisse sofort als Datei sichern.
+
 **Helfer müssen laufen** (Wunsch des Nutzers, 23.11.2026). Ein Chat liest Helfer und Kurzbefehle aus seinem Hauptordner; ein neuer Helfer erscheint erst, wenn er dort liegt (manchmal mit Verzögerung, sicher im nächsten Chat). Darum im Hauptordner arbeiten; ein Nebenordner nur kurz, danach den Hauptordner nachziehen. Fehlt ein Helfer aus `.claude/agents/` in der Helferliste des Chats (z. B. neu angelegt): trotzdem einsetzen, von Hand als `general-purpose` mit Modell und Stufe aus seiner Datei und seiner Anleitung als Auftrag, und es dem Nutzer sagen. Nie still weglassen. Nach jedem spät gefundenen Fehler (erst in der CI-Vollprüfung oder in `test:full`) läuft der `technik-pruefer`, bevor die Korrektur gemeldet wird.
 
 | Helfer | Aufgabe | Modell / Stufe |
