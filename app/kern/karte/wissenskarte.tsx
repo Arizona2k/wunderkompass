@@ -6,6 +6,7 @@
 // Pass-Kopplung wie bei der alten Karte: dieselbe Hülle (SavedGame 'topic:<id>'), dieselben Schlüssel,
 // dieselben Aufrufe für Merken, „gelernt“ und Wiederholung.
 import {Fragment, useCallback, useMemo, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 import {ArrowRight, BookOpen, Check, Compass, Heart, Lightbulb, Users, Volume2} from 'lucide-react';
 import {LearningDetails} from '../../learning-components';
 import {LearningMotion} from '../../learning-motion';
@@ -27,7 +28,7 @@ import StimmtDas from './stimmt-das';
 import OrdneRichtig from './ordne-richtig';
 import {dazuPasst, ersteFrage, fragenFuerStufe, ganzEinfachImAusprobieren, hatAusprobieren, kartenFragen, stufenHinweis, weitereVerbindungen} from './karten-daten';
 import {leseStufe, STUFEN, type Stufe} from '../stufe';
-import StufenWahl, {fokusAufStufenWahl} from '../stufen-wahl';
+import StufenWahl, {stufeWechseln} from '../stufen-wahl';
 import {StufenVorschlagHinweis, useStufenVorschlag} from '../stufen-vorschlag';
 import './karte.css';
 
@@ -198,13 +199,11 @@ function Kartenkoerper({topic: t, actions: a, onTopic, embedded}: InhaltProps) {
         vorschlag={vorschlag && a.onStufe ? (
           <StufenVorschlagHinweis
             vorschlag={vorschlag}
-            onJa={() => { schliessen(); a.onStufe?.(vorschlag.ziel); fokusAufStufenWahl(artikel.current); }}
+            onJa={() => stufeWechseln(() => { schliessen(); a.onStufe?.(vorschlag.ziel); }, artikel.current)}
             onNein={() => {
-              // Erst auf „Rate mal!“, dann schließen: So fällt der Fokus nicht mit dem Knopf weg (Technik-Prüfung WebKit-Fund, Befund 3b).
-              const rateMal = () => artikel.current?.querySelector<HTMLElement>('.rate-mal');
-              rateMal()?.focus();
-              schliessen();
-              requestAnimationFrame(() => rateMal()?.focus());
+              // Noch im Klick schließen, dann gleich auf „Rate mal!“: So liegt der Fokus nie auf <body> (Technik-Prüfung WebKit-Fund, Befund 3b).
+              flushSync(schliessen);
+              artikel.current?.querySelector<HTMLElement>('.rate-mal')?.focus();
             }}
           />
         ) : null}

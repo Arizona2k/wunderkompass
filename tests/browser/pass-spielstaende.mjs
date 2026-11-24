@@ -142,6 +142,8 @@ export async function stufeImPass(ctx) {
     await zurueck.tap();
     await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Entdecker');
     await zurueck.waitFor({state: 'detached'});
+    // Absichtlich sofort, ohne Warten: Die Seite setzt den Fokus noch im Klick. Ein Warten verdeckte, wenn er ein Bild lang
+    // auf den Pass-Dialog springt (CI WebKit 24.11.2026; Technik-Prüfung WebKit-Fund, Befund 2a).
     assert.equal(await aendern.evaluate(el => el === document.activeElement), true, 'der Fokus bleibt in der Stufenwahl');
     // Tastatur: Enter öffnet, Umschalt+Tab wandert, Enter wählt.
     await aendern.focus();
@@ -150,6 +152,7 @@ export async function stufeImPass(ctx) {
     await page.keyboard.press('Tab');
     await page.keyboard.press('Enter');
     await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Profi');
+    // Auch hier sofort, aus demselben Grund.
     assert.equal(await aendern.evaluate(el => el === document.activeElement && el.matches(':focus-visible')), true, 'sichtbarer Fokus zurück auf „Ändern“');
     await page.waitForFunction(() => JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['kern:stufe']?.stufe === 'profi');
     // Neuladen

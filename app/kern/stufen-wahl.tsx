@@ -3,6 +3,7 @@
 // Ein Tipp öffnet die drei Stufen, ein zweiter stellt um. Auf Profi und Experte steht immer
 // „Zu schwer? Zurück zu Entdecker“ dabei. Kein Alter auf den Knöpfen; das steht nur für Erwachsene im Pass.
 import {useEffect, useId, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 import {Check} from 'lucide-react';
 import {STUFEN, STUFEN_NAME, type Stufe} from './stufe';
 
@@ -12,14 +13,14 @@ const STUFEN_TEXT: Record<Stufe, string> = {
   experte: 'nachdenken und kombinieren',
 };
 
-// Nach einem Wechsel kann die Karte „Rate mal!“ mit neuer Frage neu aufbauen; dann ist die alte Stufenwahl weg
-// und mit ihr der Knopf. Der Fokus gehört dann an „Ändern“ der neuen Stufenwahl am selben Ort (Code-Prüfung Teil A, Befund 2).
-// Sofort auf das „Ändern“, das jetzt da ist, damit der Fokus nicht mit dem gedrückten Knopf auf <body> fällt; im nächsten Bild
-// noch einmal, falls die Stufenwahl inzwischen neu aufgebaut wurde (Technik-Prüfung WebKit-Fund, Befund 3a).
-export function fokusAufStufenWahl(ort: ParentNode | null | undefined) {
-  const aendern = () => ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern');
-  aendern()?.focus();
-  requestAnimationFrame(() => aendern()?.focus());
+// Stellt die Stufe um und setzt den Fokus gleich danach auf „Ändern“. Nach einem Wechsel baut die Karte „Rate mal!“
+// mit neuer Frage neu auf (key={frage.id}); dann ist die alte Stufenwahl weg und mit ihr der Knopf (Code-Prüfung Teil A, Befund 2).
+// flushSync baut alles noch im Klick auf, darum liegt der Fokus sofort auf „Ändern“ und nie ein Bild lang auf <body>
+// oder dem Pass-Dialog (CI WebKit 24.11.2026; Technik-Prüfung WebKit-Fund, Befund 3a). Ist der alte Knopf noch da,
+// bleibt der Fokus dort, sonst geht er an das neue „Ändern“ am selben Ort.
+export function stufeWechseln(wechsel: () => void, ort: ParentNode | null | undefined, knopf?: HTMLButtonElement | null) {
+  flushSync(wechsel);
+  (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus();
 }
 
 // `hinweis`: ehrlicher Satz, wenn es die gewählte Stufe hier noch nicht gibt (E3), z. B. „Experte gibt es hier noch nicht. Du spielst Profi.“
@@ -28,13 +29,8 @@ export default function StufenWahl({stufe, onStufe, hinweis}: {stufe: Stufe; onS
   const gruppe = useId(), titel = useId(), aendern = useRef<HTMLButtonElement>(null), gewaehlt = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (offen) gewaehlt.current?.focus(); }, [offen]);
   function waehle(neu: Stufe) {
-    const knopf = aendern.current, ort = knopf?.closest('article, dialog, [role="dialog"]') ?? knopf?.ownerDocument;
-    // Zuerst auf „Ändern“, solange der gedrückte Knopf noch da ist: Sonst fällt der Fokus mit ihm weg und landet
-    // bis zum nächsten Bild auf dem Pass-Dialog (CI, WebKit, 24.11.2026). Baut die Karte neu auf, hilft der Schritt danach.
-    knopf?.focus();
-    onStufe(neu);
-    setOffen(false);
-    requestAnimationFrame(() => (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus());
+    const knopf = aendern.current;
+    stufeWechseln(() => { onStufe(neu); setOffen(false); }, knopf?.closest('article, dialog, [role="dialog"]') ?? knopf?.ownerDocument, knopf);
   }
   return <div className="stufen-wahl" data-stufe={stufe}>
     <div className="stufen-zeile">

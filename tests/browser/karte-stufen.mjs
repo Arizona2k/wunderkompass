@@ -38,14 +38,12 @@ async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
 
 const tippe = (knopf, touch) => (touch ? knopf.tap() : knopf.click());
 // Nach einem Stufenwechsel baut die Karte „Rate mal!“ oft neu auf. Der Fokus muss trotzdem auf der Karte bleiben,
-// nicht auf <body> fallen (Code-Prüfung Teil A, Befund 2).
+// nicht auf <body> fallen (Code-Prüfung Teil A, Befund 2). Geprüft wird sofort, ohne Warten: Die Seite setzt den Fokus
+// noch im Klick. Ein Warten verdeckte, wenn er erst im nächsten Bild kommt und so lange auf <body> liegt (CI WebKit 24.11.2026).
 const AENDERN = '.wissenskarte .stufen-wahl .stufen-aendern';
 async function fokusAuf(page, selektor, was) {
-  try {
-    await page.waitForFunction(sel => !!document.activeElement?.matches(sel), selektor, WARTEN);
-  } catch {
-    assert.fail(was + '; der Fokus liegt auf ' + await page.evaluate(() => document.activeElement?.tagName + ' ' + document.activeElement?.className));
-  }
+  const fokus = await page.evaluate(sel => ({da: !!document.activeElement?.matches(sel), wo: document.activeElement?.tagName + ' ' + document.activeElement?.className}), selektor);
+  assert.ok(fokus.da, was + '; der Fokus liegt auf ' + fokus.wo);
 }
 
 // Stufenwahl über „Rate mal!“, Umstellen auf der offenen Karte, Neuladen, „Zurück zu Entdecker“.
