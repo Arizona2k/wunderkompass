@@ -64,6 +64,8 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
   // Stufenzeile gewählt. Experte spielt Profi, solange es keine vier echten Experten-Fragen gibt (E3).
   for(const game of ['habitats','detective'])for(const [stufe,name] of [['entdecker','Entdecker'],['profi','Profi'],['experte','Experte']]){
    await open(p,game);const room=p.locator('.classic-learning'),zeile=room.locator('.stufen-wahl');await zeile.waitFor();
+   // Das Spiel öffnet oben, nicht mitten in der Spieleliste (Spieltest PR 2, Befund 1; gemeinsamer Spielrahmen).
+   await p.waitForFunction(()=>{const oben=document.querySelector('.game-room')?.getBoundingClientRect().top;return oben!==undefined&&oben>=0&&oben<=40;});
    assert.equal(await p.locator('.challenge-levels').count(),0,'keine Auswahl Leicht/Mittel/Schwer mehr');
    if(!(await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).count())){await zeile.getByRole('button',{name:'Stufe ändern',exact:true}).tap();await zeile.getByRole('group',{name:'Welche Stufe willst du spielen?',exact:true}).getByRole('button').filter({hasText:name}).tap();}
    await zeile.locator('.stufen-zeile').filter({hasText:'Stufe: '+name}).waitFor();
@@ -75,7 +77,9 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     const q=CLASSIC_QUESTIONS.find(q=>q.id===snapshot.ids[i]),hint=room.locator('.world-game-hint');await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
     // Advancing a question deliberately moves focus on the next frame. Finish that real handoff before directing
     // Enter to the native disclosure. The first question has no such handoff (the round starts with the room).
-    if(i>0)await p.waitForFunction(()=>document.activeElement?.id==='reason-question');
+    if(i>0){await p.waitForFunction(()=>document.activeElement?.id==='reason-question');
+     // Nach „Nächste Aufgabe“ sind Brettanfang (Stufenzeile) und ganze Frage zu sehen (Spieltest PR 2, Befund 4).
+     assert.ok(await p.evaluate(()=>{const b=document.querySelector('.game-room .game-board').getBoundingClientRect(),h=document.getElementById('reason-question').getBoundingClientRect();return b.top>=0&&h.bottom<=innerHeight;}),'Stufenzeile und Frage sind nach „Nächste Aufgabe“ zu sehen');}
     // „Spielen“ in der Leiste schließt das offene Spiel und zeigt die Übersicht, direkt und über einen anderen Bereich;
     // der Stand bleibt, „Fortsetzen“ öffnet dieselbe Aufgabe (Entscheidung 25; Code-Prüfung PR 2, Hinweise 5 und 9).
     if(game==='detective'&&stufe==='profi'&&i===1){
@@ -108,6 +112,8 @@ export async function playgroundFlow(browser,base,ready,monitor,report,shots){
     }
     if(i===0){const saved=(await state(p)).gameSessions[game].learningRound;await p.reload();await ready(p);await p.getByRole('button',{name:'Fortsetzen',exact:true}).click();await room.getByText(q.wrongReasons[wrong],{exact:true}).waitFor();assert.deepEqual((await state(p)).gameSessions[game].learningRound,saved);await p.screenshot({path:shots+'/playground-wrong-'+game+'-'+stufe+'-390.png',fullPage:true});}
     await room.locator('.quiz-answer').filter({has:p.getByText(q.correct,{exact:true})}).click();await room.getByText(q.why,{exact:true}).waitFor();
+    // Nach der richtigen Antwort liegt der Fokus auf dem Weiter-Knopf, nicht auf der Seite (Spieltest PR 2, Befunde 2 und 3).
+    await p.waitForFunction(name=>document.activeElement?.tagName==='BUTTON'&&document.activeElement.textContent===name,i===3?'Runde abschließen':'Nächste Aufgabe');
     if(i===0){await room.getByRole('button',{name:/Wissen vertiefen:/}).focus();await p.keyboard.press('Enter');await p.locator('.wissenskarte').waitFor();await p.goBack();await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();await p.waitForFunction(()=>document.activeElement?.dataset.routeFocus?.startsWith('game-knowledge-'));}
     await room.getByRole('button',{name:i===3?'Runde abschließen':'Nächste Aufgabe',exact:true}).click();snapshot=(await state(p)).gameSessions[game].learningRound;
    }
