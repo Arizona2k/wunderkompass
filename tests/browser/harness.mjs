@@ -19,6 +19,26 @@ export function ready(page) {
   return page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor({timeout: 26000});
 }
 
+// Öffnet die Suche, tippt `text` und wartet, bis die Trefferliste zu dieser Eingabe gehört. Gibt den Dialog zurück.
+// Zwei Wartepunkte (CI-Lauf 45344729398, WebKit, 24.11.2026):
+// 1. Erst tippen, wenn die Kapiteltexte da sind. Sie kommen meist genau dann an, wenn das Suchfeld erscheint.
+//    Fiel `fill` in diesen Moment, war das Feld danach leer (in der CI und 1-mal in rund 1000 Probeläufen;
+//    warum genau, ist offen, siehe BACKLOG). Kommen die Kapiteltexte erst nach dem Tippen, bleibt die Eingabe:
+//    Das prüft journey-content („Typed query retained while full-text search data arrives“).
+// 2. Erst danach die Treffer lesen: Vorher stehen dort die Startideen (erste: lab:moon).
+//    „Passende Entdeckungen“ erscheint nur über Treffern zu einer Eingabe.
+export async function inSucheTippen(page, text) {
+  await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
+  const dialog = page.getByRole('dialog');
+  const input = dialog.locator('input');
+  await input.waitFor();
+  await dialog.getByText('Kapiteltexte werden noch ergänzt …', {exact: true}).waitFor({state: 'detached'});
+  await input.fill(text);
+  await dialog.getByText('Passende Entdeckungen', {exact: true}).waitFor();
+  if (await input.inputValue() !== text) throw new Error(`Suche: Eingabe ${JSON.stringify(text)} ist nicht im Suchfeld angekommen`);
+  return dialog;
+}
+
 // Ein gewolltes Neuladen, Schließen oder Weiterblättern bricht Anfragen ab, die noch laden
 // (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED, WebKit: Load request cancelled), und die Fehlerüberwachung schlägt an.
 // Auf einem langsamen Rechner wie der CI ist dieses Zeitfenster groß. Deshalb vorher warten, bis alle

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {bereich} from './harness.mjs';
+import {bereich, inSucheTippen} from './harness.mjs';
 import {ausprobieren} from './karte-hilfen.mjs';
 
 // Das Energiemodell liegt in „Ausprobieren“ der Karte „Sonnenstrom auch am Abend?“; das ist nach jedem
@@ -17,10 +17,8 @@ export async function searchAndHistory(page, report) {
     ['Einstein', 'topic:person-albert_einstein'],
     ['Giraffe', 'topic:animal-giraffe'],
   ]) {
-    await page.getByRole('button', { name: 'Lernwelt durchsuchen', exact: true }).click();
-    await page.getByRole('dialog').locator('input').fill(query);
-    const result = page.getByRole('option').first();
-    await result.waitFor();
+    const dialog = await inSucheTippen(page, query);
+    const result = dialog.getByRole('option').first();
     assert.equal(await result.getAttribute('data-value'), id);
     await result.click();
     await page.locator('.world-mini-question').waitFor();
