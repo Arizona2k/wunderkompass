@@ -7,7 +7,7 @@ const read=()=>window.location.hash.slice(1)||'home';
 export function replaceHash(path:string){if(read()===path)return;history.replaceState(history.state,'','#'+path);window.dispatchEvent(new Event(EVENT));}
 function subscribe(fn:()=>void){window.addEventListener('hashchange',fn);window.addEventListener('popstate',fn);window.addEventListener(EVENT,fn);return()=>{window.removeEventListener('hashchange',fn);window.removeEventListener('popstate',fn);window.removeEventListener(EVENT,fn);};}
 // Browser-entry UI state only; learning progress stays in the central pass.
-export function navigateHash(path:string,options:{preserveControl?:boolean;replace?:boolean;returnChapter?:string}={}){if(path==='home')window.dispatchEvent(new Event('wunder-home'));if(read()===path){window.dispatchEvent(new Event(EVENT));return;}try{
+export function navigateHash(path:string,options:{preserveControl?:boolean;replace?:boolean;returnChapter?:string;nachdenken?:string}={}){if(path==='home')window.dispatchEvent(new Event('wunder-home'));if(read()===path){window.dispatchEvent(new Event(EVENT));return;}try{
  const active=document.activeElement as HTMLElement|null;
  const open=Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-history-disclosure][open]')).map(el=>el.dataset.historyDisclosure);
  const hero=document.querySelector<HTMLElement>('[data-discovery-hero]')?.dataset.discoveryHero;
@@ -17,7 +17,8 @@ export function navigateHash(path:string,options:{preserveControl?:boolean;repla
  // untouched book lookup is fully described by that URL; only the departing
  // entry needs its reading position and actual opener saved above.
  if(bookLookup(path)&&!options.replace&&!options.preserveControl&&!options.returnChapter){location.hash=path;window.dispatchEvent(new CustomEvent(EVENT,{detail:{bookLookup:true}}));return;}
- const next={wunderRoute:true,...(options.returnChapter?{wunderReturnChapter:options.returnChapter}:{}),...(options.preserveControl?{wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open}:{})};
+ // nachdenken: „Noch einmal nachdenken“ im Wissensbuch; die Karte liest den Merker einmal (wissenskarte.tsx, NACHDENKEN).
+ const next={wunderRoute:true,...(options.nachdenken?{wunderNachdenken:options.nachdenken}:{}),...(options.returnChapter?{wunderReturnChapter:options.returnChapter}:{}),...(options.preserveControl?{wunderScroll:scrollY,wunderFocus:active?.dataset.routeFocus,wunderOpen:open}:{})};
  if(options.replace)history.replaceState(next,'','#'+path);else history.pushState(next,'','#'+path);window.dispatchEvent(new Event(EVENT));
 }catch{location.hash=path;}}
 export function focusLearningMain(){

@@ -15,7 +15,7 @@ import VERBINDUNGEN from '../../app/world-connections.json' with {type: 'json'};
 import HINWEISBANK from '../../app/challenge-hints.json' with {type: 'json'};
 // karten-daten.ts lädt JSON ohne Importattribut; das ergänzen die Lade-Hooks.
 await import('../../scripts/test-runtime.mjs');
-const {kartenFragen, fragenFuerStufe, fragenDerStufe, ersteFrage, frageNachWechsel, ganzEinfachImAusprobieren} = await import('../../app/kern/karte/karten-daten.ts');
+const {kartenFragen, fragenDerStufe, ersteFrage, ganzEinfachImAusprobieren} = await import('../../app/kern/karte/karten-daten.ts');
 
 const TITEL = new Map(KATALOG.map(t => [t.id, t.title]));
 
@@ -153,17 +153,13 @@ const seite = scope => (typeof scope.page === 'function' ? scope.page() : scope)
 // und (nur die Hauptfrage, wenn vorhanden) wrongReasons.
 export const fragenDerKarte = t => kartenFragen(t, HINWEISBANK);
 export const hauptfrage = t => fragenDerKarte(t)[0];
-// Teilschritt 3 (E4): Die Fragen der Stufe und der leichteren (eigene Stufe zuerst; darunter sucht die Karte beim Öffnen
-// eine falsch beantwortete) und die Frage, die die Karte beim Öffnen wählt – wie in der App (fragenFuerStufe, ersteFrage).
-// Achtung: Auf Profi enthält die Liste auch Entdecker-Fragen; was „Noch eine Frage“ zeigt, liefert fragenGenauDerStufe.
-export const fragenAufStufe = (t, stufe) => fragenFuerStufe(fragenDerKarte(t), stufe);
+// Die Fragen genau der gespielten Stufe, in Datenreihenfolge, wie in der App (fragenDerStufe): Nur daraus wählt die Karte
+// beim Öffnen und nach einem Stufenwechsel (ersteFrage), und nur darin blättert „Noch eine Frage“; danach kommt der Schluss.
+export const fragenAufStufe = (t, stufe) => fragenDerStufe(fragenDerKarte(t), stufe);
 // Dieselbe Liste ohne Hauptfrage; auf Entdecker z. B. beim Elefanten leer.
 export const zusatzfragenAufStufe = (t, stufe = 'entdecker') => fragenAufStufe(t, stufe).filter(f => f.id !== t.id);
+// Die Frage, die die Karte beim Öffnen und nach einem Stufenwechsel wählt (ersteFrage).
 export const ersteFrageAufStufe = (t, stufe, review = {}, kartenstand) => ersteFrage(fragenDerKarte(t), review, kartenstand, stufe);
-// Nach einem Stufenwechsel auf der offenen Karte: nur Fragen genau der gespielten Stufe (frageNachWechsel), und
-// „Noch eine Frage“ blättert nur darin (fragenDerStufe); danach kommt der Schluss (Spieltest 24.11.2026).
-export const frageNachWechselAufStufe = (t, stufe, review = {}, kartenstand) => frageNachWechsel(fragenDerKarte(t), review, kartenstand, stufe);
-export const fragenGenauDerStufe = (t, stufe) => fragenDerStufe(fragenDerKarte(t), stufe);
 // Die erste erklärte Nachbarkarte wie connectionsFor in der App: Ziel von „Weiter zu“ im Schluss und der ersten Kachel unter „Dazu passt“.
 export const ersteNachbarkarte = id => VERBINDUNGEN.connections.filter(c => c.fromId === id || c.toId === id).map(c => (c.fromId === id ? c.toId : c.fromId))[0];
 export const zusatzfragen = t => fragenDerKarte(t).slice(1);

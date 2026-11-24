@@ -10,6 +10,7 @@ import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
 import {STUFEN, STUFEN_BINDEFORM, STUFEN_NAME, type Stufe} from '../stufe';
 import {WOERTER} from '../woerter';
+import {wartetZumWiederholen} from '../wiederholen';
 
 export type KartenFrage = {
   id: string;
@@ -64,14 +65,6 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
   return [haupt, ...zusatz, ...challenge];
 }
 
-// Die Fragen, unter denen die Karte beim Öffnen eine falsch beantwortete sucht (ersteFrage, Schritt 1): die eigene Stufe
-// zuerst, dann die leichteren; je in Datenreihenfolge. So kommt eine falsch beantwortete leichtere Frage beim Öffnen wieder (E4).
-// Neue und fällige Fragen beim Öffnen und „Noch eine Frage“ bleiben dagegen in der gespielten Stufe (fragenDerStufe).
-export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
-  const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
-  return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));
-}
-
 // Gibt es auf der Karte Fragen genau dieser Stufe? Ohne Experten-Frage spielt ein Experte dort Profi (E3).
 export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen.some(f => f.level === stufe);
 
@@ -88,9 +81,9 @@ export function gespielteStufe(fragen: KartenFrage[], stufe: Stufe): Stufe {
   return STUFEN.slice(0, STUFEN.indexOf(stufe) + 1).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
 }
 
-// Die Fragen genau der gespielten Stufe, in Datenreihenfolge. Nur darin blättert „Noch eine Frage“, und nach einem
-// Stufenwechsel kommt eine davon (frageNachWechsel). Wer Profi wählt, bekommt danach einen klaren Schluss statt
-// leichterer Fragen (Spieltest 24.11.2026, Befunde 1 und 3; entschieden vom Nutzer am 24.11.2026).
+// Die Fragen genau der gespielten Stufe, in Datenreihenfolge. Nur daraus wählt die Karte beim Öffnen und nach einem
+// Stufenwechsel (ersteFrage), und nur darin blättert „Noch eine Frage“. Wer Profi wählt, bekommt danach einen klaren
+// Schluss statt leichterer Fragen (Spieltest 24.11.2026, Befunde 1 und 3; entschieden vom Nutzer am 24.11.2026).
 export function fragenDerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
   const gespielt = gespielteStufe(fragen, stufe);
   return fragen.filter(f => f.level === gespielt);
@@ -146,30 +139,18 @@ export function festGemischt(frage: KartenFrage): string[] {
   return reihe;
 }
 
-// Welche Frage „Rate mal!“ beim Öffnen zeigt:
-// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist, unter den
-//    Fragen der Stufe und den leichteren (fragenFuerStufe, eigene Stufe zuerst). Wer falsch geantwortet hat und zurückkommt
-//    (Wissensbuch, Nachbarkarte), soll dort weiterdenken (E4).
-// 2. sonst die erste Frage der gespielten Stufe, die das Kind noch nie beantwortet hat;
-// 3. sind alle schon beantwortet, die am frühesten wieder fällige der gespielten Stufe. Bei Gleichstand jeweils die frühere.
-// 2 und 3 bleiben in der gespielten Stufe: Sonst kam auf Profi nach allen Profi-Fragen die ungesehene Entdecker-Frage,
-// etwa nach „Weiter zu“ und „Zurück“ (Spieltest Feinschliff 24.11.2026; wie Befund 3: schwer gewählt, trotzdem leicht).
+// Welche Frage „Rate mal!“ beim Öffnen und nach einem Stufenwechsel zeigt, immer nur aus der gespielten Stufe (fragenDerStufe):
+// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist. Wer falsch
+//    geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken (E4);
+// 2. sonst die erste Frage, die das Kind noch nie beantwortet hat;
+// 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
+// Eine falsch beantwortete Frage einer anderen Stufe wartet, bis das Kind diese Stufe wieder spielt. Vorher kam sie auch
+// auf Profi und Experte zuerst: „Stufe: Experte“, darunter die leichte Entdecker-Frage mit „Noch nicht ganz“ (Spieltest
+// Feinschliff 24.11.2026; entschieden vom Nutzer am 24.11.2026). Ebenso kam auf Profi nach allen Profi-Fragen die
+// ungesehene Entdecker-Frage, etwa nach „Weiter zu“ und „Zurück“. Nach einem Stufenwechsel gewann so die eben falsch
+// beantwortete Entdecker-Frage (Spieltest 24.11.2026, Befund 1).
 export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
-  return falschBeantwortet(fragenFuerStufe(alle, stufe), kartenstand) ?? waehleFrage(fragenDerStufe(alle, stufe), review, kartenstand);
-}
-
-// Nach einem Stufenwechsel auf der offenen Karte: dieselbe Wahl, aber nur unter den Fragen genau der gespielten Stufe.
-// Sonst gewann nach dem Wechsel auf Profi die eben falsch beantwortete Entdecker-Frage (Spieltest 24.11.2026, Befund 1).
-export function frageNachWechsel(alle: KartenFrage[], review: LocalProgress['review'], kartenstand: Record<string, unknown> | undefined, stufe: Stufe): KartenFrage {
-  return waehleFrage(fragenDerStufe(alle, stufe), review, kartenstand);
-}
-
-const falschBeantwortet = (fragen: KartenFrage[], kartenstand?: Record<string, unknown>) => fragen.find(frage => {
-  const wert = kartenstand?.[frage.answerKey];
-  return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
-});
-
-function waehleFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
+  const fragen = fragenDerStufe(alle, stufe);
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
   const offen = falschBeantwortet(fragen, kartenstand);
   if (offen) return offen;
@@ -177,6 +158,20 @@ function waehleFrage(fragen: KartenFrage[], review: LocalProgress['review'], kar
   if (ungesehen) return ungesehen;
   return fragen.reduce((frueheste, frage) => review[frage.reviewId].due < review[frueheste.reviewId].due ? frage : frueheste);
 }
+
+// „Noch einmal nachdenken“ im Wissensbuch: Die Karte steht dort wegen ihrer Hauptfrage (falsch beantwortet oder wieder fällig).
+// Dann zeigt sie genau diese, auch auf Profi und Experte; das Kind hat sie ausdrücklich gewählt. Sonst kam dort eine Frage
+// der gespielten Stufe, und der Eintrag im Wissensbuch blieb stehen (Umsetzung der Entscheidung vom 24.11.2026).
+// Wartet die Hauptfrage nicht (mehr), wählt die Karte wie beim Öffnen (ersteFrage). „Noch eine Frage“ bleibt in der Stufe.
+export function frageZumNachdenken(alle: KartenFrage[], review: LocalProgress['review'], kartenstand: Record<string, unknown> | undefined, stufe: Stufe): KartenFrage {
+  const haupt = alle[0];
+  return haupt && wartetZumWiederholen(review[haupt.reviewId]) ? haupt : ersteFrage(alle, review, kartenstand, stufe);
+}
+
+const falschBeantwortet = (fragen: KartenFrage[], kartenstand?: Record<string, unknown>) => fragen.find(frage => {
+  const wert = kartenstand?.[frage.answerKey];
+  return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
+});
 
 export type DazuPasstKachel =
   | {art: 'karte'; topicId: string; why: string}

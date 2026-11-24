@@ -10,7 +10,7 @@
 // Welche Frage erscheint, rechnen die Tests mit den Bausteinen aus karte-hilfen.mjs aus (wie die App).
 import assert from 'node:assert/strict';
 import {FOKUS_NACH_KLICK, ladeanfragen, ready} from './harness.mjs';
-import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, ersteNachbarkarte, falscheAntworten, frageNachWechselAufStufe, fragenAufStufe, fragenDerKarte, fragenGenauDerStufe, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
+import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, ersteNachbarkarte, falscheAntworten, fragenAufStufe, fragenDerKarte, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 
 const SAVE_KEY = 'erde-entdecken:save:v3';
@@ -19,6 +19,7 @@ const stufeImPass = page => page.evaluate(key => JSON.parse(localStorage.getItem
 const passLesen = page => page.evaluate(key => JSON.parse(localStorage.getItem(key)).progress, SAVE_KEY);
 const ZURUECK = 'Zu schwer? Zurück zu Entdecker';
 const SCHLUSS_PROFI = 'Geschafft! Mehr Profi-Fragen hat diese Karte nicht.';
+const NOCH_NICHT = 'Noch nicht ganz. Versuch es noch einmal!';
 const hatStufe = (t, stufe) => fragenDerKarte(t).some(f => f.level === stufe);
 // Karten für die Fälle, aus den Daten gewählt (die Einstufung kann sich ändern, der Test nicht).
 const MIT_PROFI = catalog.find(t => hatStufe(t, 'profi') && fragenAufStufe(t, 'entdecker').length >= 1);
@@ -27,7 +28,7 @@ const DREI_LEICHTE = catalog.find(t => fragenAufStufe(t, 'entdecker').length >= 
 // Für die Vorschläge zählen nur Fragen genau der gewählten Stufe (Code-Prüfung Teil A, Befund 1): zwei echte Profi-Fragen.
 const ZWEI_AUF_PROFI = catalog.find(t => fragenDerKarte(t).filter(f => f.level === 'profi').length >= 2);
 // Für den Schluss: mindestens zwei Profi-Fragen und eine erklärte Nachbarkarte.
-const SCHLUSS_AUF_PROFI = catalog.find(t => fragenGenauDerStufe(t, 'profi').length >= 2 && hatStufe(t, 'profi') && ersteNachbarkarte(t.id));
+const SCHLUSS_AUF_PROFI = catalog.find(t => fragenAufStufe(t, 'profi').length >= 2 && hatStufe(t, 'profi') && ersteNachbarkarte(t.id));
 
 async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
   const context = await ctx.browser.newContext({viewport: {width, height}, reducedMotion: 'reduce', ...(touch ? {hasTouch: true} : {}), ...(touch && ctx.engine === 'chromium' ? {isMobile: true} : {})});
@@ -75,7 +76,7 @@ async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
   }), true, 'die Stufenwahl steht im Kopf von „Rate mal!“, über der Frage');
   await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await stufeWaehlen(page, 'profi', {touch});
-  const profi = await zeigtFrage(page, t, frageNachWechselAufStufe(t, 'profi'));
+  const profi = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'profi'));
   await fokusAuf(page, AENDERN, 'nach dem Umstellen (neue Frage) steht der Fokus auf „Ändern“');
   assert.equal(profi.level, 'profi', 'auf Profi zuerst eine neue Profi-Frage');
   assert.equal(await rateMal(page).locator('.quiz-answer').count(), profi.question.answers.length, 'alle Antworten der Frage stehen da');
@@ -83,7 +84,7 @@ async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
   await wahl.getByRole('button', {name: ZURUECK, exact: true}).waitFor();
   // Experte: eigene Frage oder der ehrliche Satz (E3).
   await stufeWaehlen(page, 'experte', {touch});
-  if (hatStufe(t, 'experte')) await zeigtFrage(page, t, frageNachWechselAufStufe(t, 'experte'));
+  if (hatStufe(t, 'experte')) await zeigtFrage(page, t, ersteFrageAufStufe(t, 'experte'));
   else await wahl.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
   await fokusAuf(page, AENDERN, 'nach dem Umstellen auf Experte steht der Fokus auf „Ändern“');
   await anfragenFertig();
@@ -93,7 +94,7 @@ async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Experte'}).waitFor(WARTEN);
   await tippe(stufenWahl(page).getByRole('button', {name: ZURUECK, exact: true}), touch);
   await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
-  await zeigtFrage(page, t, frageNachWechselAufStufe(t, 'entdecker'));
+  await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await fokusAuf(page, AENDERN, 'nach „Zurück zu Entdecker“ steht der Fokus auf „Ändern“');
   assert.equal(await stufeImPass(page), 'entdecker');
   return t.id;
@@ -116,12 +117,16 @@ async function profiOhneProfiFragen(page, {touch}) {
 }
 
 // Fehler (a): Entdecker-Frage falsch beantworten, dann auf Profi wechseln. Die Karte zeigt eine Profi-Frage, nicht die
-// alte Entdecker-Frage (Spieltest 24.11.2026, Befund 1). Beim Öffnen bliebe es bei der falschen Frage (E4).
-async function wechselNachFalscherAntwort(page, {touch}) {
+// alte Entdecker-Frage (Spieltest 24.11.2026, Befund 1). Auch wer später wiederkommt (Neuladen), bekommt auf Profi eine
+// Profi-Frage: Die falsche Entdecker-Frage wartet, bis das Kind wieder Entdecker spielt; dort kommt sie zuerst
+// (Spieltest Feinschliff 24.11.2026; entschieden vom Nutzer am 24.11.2026). Ausnahme: „Noch einmal nachdenken“ im
+// Wissensbuch zeigt genau diese Frage, auch auf Profi. Am Handy ist die Karte dabei noch offen (versteckt hinter dem
+// Wissensbuch), breit wird sie nach einem Neuladen im Wissensbuch neu geöffnet.
+async function wechselNachFalscherAntwort(page, {touch, anfragenFertig}) {
   const t = MIT_PROFI;
   const haupt = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'entdecker'));
   await tippe(antwortKnopf(page, falscheAntworten(haupt)[0]), touch);
-  await rateMal(page).getByText('Noch nicht ganz. Versuch es noch einmal!', {exact: true}).waitFor(WARTEN);
+  await rateMal(page).getByText(NOCH_NICHT, {exact: true}).waitFor(WARTEN);
   // Die falsche Antwort bleibt orange, auch wenn der Finger oder die Maus noch darauf ist. Vorher färbte die Regel für
   // „Maus darüber“ sie grünlich wie eine richtige (Spieltest 24.11.2026, Befunde 6 und 7; am Handy bleibt :hover nach dem Tippen).
   const falschKnopf = antwortKnopf(page, falscheAntworten(haupt)[0]);
@@ -133,11 +138,47 @@ async function wechselNachFalscherAntwort(page, {touch}) {
   await page.waitForFunction(([key, id]) => JSON.parse(localStorage.getItem(key)).progress.review[id]?.correct === false, [SAVE_KEY, haupt.reviewId], WARTEN);
   const pass = await passLesen(page);
   const stand = pass.gameSessions['topic:' + t.id];
-  assert.equal(ersteFrageAufStufe(t, 'profi', pass.review, stand).id, haupt.id, 'Testvoraussetzung: beim Öffnen auf Profi käme die falsche Entdecker-Frage');
+  assert.equal(stand?.[haupt.answerKey], falscheAntworten(haupt)[0], 'Testvoraussetzung: die falsche Antwort steht im Pass');
   await stufeWaehlen(page, 'profi', {touch});
-  const frage = await zeigtFrage(page, t, frageNachWechselAufStufe(t, 'profi', pass.review, stand));
+  const frage = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'profi', pass.review, stand));
   assert.equal(frage.level, 'profi', 'nach dem Wechsel auf Profi eine Profi-Frage');
   await fokusAuf(page, AENDERN, 'nach dem Wechsel (neue Frage) steht der Fokus auf „Ändern“');
+  // Später wiederkommen: Neuladen auf Profi. Weiter eine Profi-Frage, ohne „Noch nicht ganz“ der alten Entdecker-Frage.
+  await anfragenFertig();
+  await page.reload();
+  await ready(page);
+  await karteDa(page, t.id);
+  await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Profi'}).waitFor(WARTEN);
+  const nachher = await passLesen(page);
+  const wieder = await zeigtFrage(page, t, ersteFrageAufStufe(t, 'profi', nachher.review, nachher.gameSessions['topic:' + t.id]));
+  assert.equal(wieder.level, 'profi', 'nach dem Neuladen auf Profi eine Profi-Frage, nicht die falsch beantwortete Entdecker-Frage');
+  assert.equal(await rateMal(page).getByText(NOCH_NICHT, {exact: true}).count(), 0, 'nach dem Neuladen auf Profi kein „Noch nicht ganz“');
+  // Zurück auf Entdecker: Dort wartet die falsch beantwortete Frage, mit „Noch nicht ganz“.
+  await tippe(stufenWahl(page).getByRole('button', {name: ZURUECK, exact: true}), touch);
+  await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
+  await zeigtFrage(page, t, haupt);
+  await rateMal(page).getByText(NOCH_NICHT, {exact: true}).waitFor(WARTEN);
+  // Wieder Profi, dann über das Wissensbuch: „Noch einmal nachdenken“ zeigt die wartende Entdecker-Frage.
+  await stufeWaehlen(page, 'profi', {touch});
+  assert.equal((await angezeigteFrage(page, t)).level, 'profi', 'wieder auf Profi eine Profi-Frage');
+  await page.evaluate(() => { location.hash = 'book/notes'; });
+  if (!touch) {
+    await anfragenFertig();
+    await page.reload();
+    await ready(page);
+  }
+  const eintrag = page.locator('.knowledge-book article', {has: page.getByRole('heading', {name: t.title, exact: true})});
+  await tippe(eintrag.getByRole('button', {name: 'Noch einmal nachdenken', exact: true}), touch);
+  await page.waitForFunction(x => document.getElementById('world-topic-title')?.getAttribute('aria-label') === x, t.title, WARTEN);
+  await stufenWahl(page).locator('.stufen-zeile').filter({hasText: 'Stufe: Profi'}).waitFor(WARTEN);
+  await zeigtFrage(page, t, haupt);
+  await rateMal(page).getByText(NOCH_NICHT, {exact: true}).waitFor(WARTEN);
+  // Richtig beantworten: Danach bleibt „Noch eine Frage“ in der Stufe Profi.
+  await tippe(antwortKnopf(page, richtigeAntwort(haupt)), touch);
+  await rateMal(page).getByText(haupt.question.why, {exact: true}).waitFor(WARTEN);
+  await tippe(rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}), touch);
+  await page.waitForFunction(id => document.querySelector('section.rate-mal')?.getAttribute('aria-labelledby') !== 'rate-mal-' + id, haupt.id, WARTEN);
+  assert.equal((await angezeigteFrage(page, t)).level, 'profi', 'nach dem Nachdenken weiter mit einer Profi-Frage');
   return t.id;
 }
 
@@ -145,7 +186,7 @@ async function wechselNachFalscherAntwort(page, {touch}) {
 // „Weiter zu: <Titel>“, und der Knopf führt zur ersten erklärten Nachbarkarte.
 async function schlussNachDerStufe(page, {touch}) {
   const t = SCHLUSS_AUF_PROFI;
-  const runde = fragenGenauDerStufe(t, 'profi');
+  const runde = fragenAufStufe(t, 'profi');
   await stufeWaehlen(page, 'profi', {touch});
   const gezeigt = [];
   for (let i = 0; i < runde.length; i++) {
@@ -212,7 +253,7 @@ async function vorschlagSchwerer(page, {touch}, annehmen = false) {
     return Boolean(hinweis && weiter && davor(hinweis, weiter) && (!schluss || davor(schluss, hinweis)));
   }), true, 'der Vorschlag steht nach einem Schluss-Satz und vor den Knöpfen');
   // Danach je nach Zahl der Entdecker-Fragen ausdrücklich „Noch eine Frage“ oder der Schluss (Code-Prüfung Feinschliff, Befund 6).
-  if (fragenGenauDerStufe(t, 'entdecker').length > 3) await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).waitFor();
+  if (fragenAufStufe(t, 'entdecker').length > 3) await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).waitFor();
   else {
     await rateMal(page).getByText('Geschafft! Mehr Entdecker-Fragen hat diese Karte nicht.', {exact: true}).waitFor();
     assert.equal(await rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true}).count(), 0, 'nach der letzten Entdecker-Frage kein „Noch eine Frage“');
