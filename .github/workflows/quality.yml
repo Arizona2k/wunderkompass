@@ -45,11 +45,8 @@ jobs:
         run: pnpm run build
       - name: Install Chromium and WebKit
         run: |
-          # Gleiche signierte Ubuntu-Quellen; der offizielle Spiegel war deutlich schneller als Azure.
-          sudo sed -i \
-            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
-            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
-            /etc/apt/apt-mirrors.txt
+          # Ubuntu-Pakete zuerst vom offiziellen Spiegel; der Spiegel des Rechenzentrums hing mehrmals (siehe Skript).
+          bash scripts/ci-paketspiegel.sh
           pnpm exec playwright install --with-deps chromium webkit
       - name: Browser tests
         run: pnpm run test:browser
@@ -110,10 +107,7 @@ jobs:
         # Hänger früh auf und der Lauf kann neu starten.
         timeout-minutes: 20
         run: |
-          sudo sed -i \
-            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
-            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
-            /etc/apt/apt-mirrors.txt
+          bash scripts/ci-paketspiegel.sh
           pnpm exec playwright install --with-deps ${{ matrix.browser }}
       - name: Full browser tests
         run: pnpm run test:full -- --browser ${{ matrix.browser }} --shard ${{ matrix.shard }}
@@ -169,10 +163,7 @@ jobs:
       - name: Install ${{ matrix.browser }}
         timeout-minutes: 20
         run: |
-          sudo sed -i \
-            -e '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|s/priority:1/priority:2/' \
-            -e '\|^https://archive\.ubuntu\.com/ubuntu/|s/priority:2/priority:1/' \
-            /etc/apt/apt-mirrors.txt
+          bash scripts/ci-paketspiegel.sh
           pnpm exec playwright install --with-deps ${{ matrix.browser }}
       - name: CI-Satz in ${{ matrix.browser }}
         run: pnpm run test:browser -- --browser ${{ matrix.browser }}
