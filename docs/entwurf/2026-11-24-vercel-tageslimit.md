@@ -75,3 +75,29 @@ Für diesen PR ändert sich nichts: Vercel ist kein Pflicht-Check, gemergt wird 
 - Zeigen (Schritt 5) geht über Screenshots, die Test-Seite zeigt eine Änderung nach dem Merge. Ein Probe-Push außerhalb von `claude/...` ist nicht mehr nötig.
 - Wird `main` wieder genutzt: `"main": true` ergänzen, bevor der erste PR `test-live` → `main` kommt.
 - Noch prüfen: am Zähler (`list_deployments`), ob Pushes auf `claude/...` wirklich nichts mehr bauen.
+
+## Prüfung des Branch-Filters (`technik-pruefer`, 24.11.2026)
+
+Geprüft wurde Commit `091fc3c`. Der Helfer hat nichts geändert.
+
+**Ergebnis:** `vercel.json` ist gültig. Nach minimatch baut die Regel nur `test-live`; lokal getestet mit minimatch 10.2.4: `**` passt auf `main`, `claude/x`, `claude/x/y` und `codex/a`, nur `test-live` passt auch auf `true`. Die Groß- und Kleinschreibung muss genau stimmen. Branches mit einem Punkt am Anfang eines Teils (`.x`) würden nicht abgeschaltet, das ist praktisch ohne Bedeutung. Kein Workflow und kein Test hängt an Vercel oder liest `vercel.json`. Das Ruleset verlangt nur „Required quality checks“.
+
+| Befund | Umsetzung (Claude) |
+|---|---|
+| `README.md` nennt `main` als Hauptadresse und „Vorschau für jeden Branch“ | Auf die Test-Seite und „gebaut wird nur `test-live`“ geändert |
+| PR-Vorlage verlangt einen Vercel-Vorschau-Link und `test:full` „nur bei Veröffentlichung nach `main`“ | Screenshots statt Link, `test:full` am Phasenende |
+| CI-Job „Vollprüfung“ läuft nur bei PRs nach `main` oder von Hand. Ohne `main`-PR fiele er am Phasenende still weg | `CLAUDE.md` Schritt 8 und `/pruefen` Schritt 7: von Hand starten (`workflow_dispatch`) oder lokal `-- --browser all` |
+| Alte Branches mit der alten `vercel.json` bauen weiter | Als Übergangslage in BACKLOG Punkt 28 notiert |
+
+**Nicht geprüft (kein Zugang):** Projekteinstellungen in Vercel (Production-Branch, „Ignored Build Step“). Ob Vercel minimatch genauso auswertet wie lokal. Ob der Push von `091fc3c` wirklich kein Deployment erzeugt hat. Der Zähler.
+
+## Tageslimit ohne Verlust (Wunsch des Nutzers, 24.11.2026)
+
+Der Nutzer wünscht: Kommt das Limit, soll nichts vergessen werden; „das musst du entscheiden“. Entscheidung (Claude), steht in `CLAUDE.md`, Abschnitt Vercel:
+
+- Gezählt und auf den nächsten Tag verschoben wird nichts. Nur Merges nach `test-live` bauen, weit unter 100 am Tag.
+- Jeder Build baut den ganzen Stand von `test-live`. Ist ein Merge gesperrt, steckt er im nächsten Build mit drin, es geht also nichts verloren.
+- Nach jedem Merge prüft Claude mit `list_deployments`, ob der Merge-Commit gebaut ist. Wenn nicht, kommt ein Eintrag in `STATUS.md`, und der Nutzer erfährt es im Bericht.
+- `/weiter` prüft bei jedem Einstieg, ob der neueste `test-live`-Commit gebaut ist.
+- Keine Deployments von Hand. Will der Nutzer den Stand sofort, klickt er selbst in Vercel auf „Redeploy“.
+- GitHub: Das Repository ist öffentlich, die CI-Minuten sind damit kostenlos und unbegrenzt.

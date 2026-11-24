@@ -4,7 +4,7 @@
 
 ## Was kann man sich ansehen?
 
-<!-- Vercel-Vorschau-Link, Screenshots (Handy und Rechner) -->
+<!-- Screenshots (Handy und Rechner). Arbeits-Branches haben keine Vercel-Vorschau; nach dem Merge ist die Änderung auf der Test-Seite. -->
 
 ## Prüfung
 
@@ -13,7 +13,7 @@
 - [ ] Entdeckerpass, IDs und alte Links unverändert oder Kompatibilität belegt
 - [ ] Neue Bilder mit vollständigem Nachweis (Urheber, Lizenz, Quelle)
 - [ ] Keine echten Pässe, persönlichen Daten oder Zugangsdaten
-- [ ] Nur bei Veröffentlichung nach `main`: `test:full` in Chromium, Firefox und WebKit
+- [ ] Nur am Phasenende: `test:full` in Chromium, Firefox und WebKit (lokal oder CI-Job „Vollprüfung“ von Hand)
 
 ## Was ist zu entscheiden?
 

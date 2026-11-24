@@ -18,7 +18,7 @@ description: Vor einer Übergabe in WunderKompass – komplette Prüfkette laufe
    - neue Bilder → `bild-recherche` (Nachweis prüfen)
    - am Phasenende und wenn ein Fehler erst spät auffiel (z. B. erst in der CI-Vollprüfung oder in `test:full`) → `technik-pruefer`, Pflicht, bevor die Korrektur gemeldet wird
 6. **Befunde behandeln:** Blockierendes sofort beheben und Schritt 2 und 3 wiederholen. Alles andere ins `BACKLOG.md`.
-7. **Am Phasenende zusätzlich:** `pnpm run test:full` (lokal mit `-- --browser all` oder gezielt `--browser webkit <suite>`; dazu der CI-Job „Vollprüfung“ in allen drei Engines) und eine Schlussprüfung des ganzen Branches mit `fable`. Vorher „Vorübergehende Modell-Ausnahmen“ in `STATUS.md` lesen: Läuft eine Ausnahme noch, das dort genannte Ersatzmodell nehmen.
+7. **Am Phasenende zusätzlich:** `pnpm run test:full` (lokal mit `-- --browser all` oder gezielt `--browser webkit <suite>`; dazu der CI-Job „Vollprüfung“ in allen drei Engines; ohne PR nach `main` von Hand starten, `workflow_dispatch` auf dem Branch) und eine Schlussprüfung des ganzen Branches mit `fable`. Vorher „Vorübergehende Modell-Ausnahmen“ in `STATUS.md` lesen: Läuft eine Ausnahme noch, das dort genannte Ersatzmodell nehmen.
 8. **Bericht** an den Nutzer, ehrlich und kurz:
    - Was wurde geprüft, mit welchem Ergebnis (grün / rot / nicht geprüft)?
    - Welche Helfer-Befunde gab es, was ist behoben, was steht im BACKLOG?

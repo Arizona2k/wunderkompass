@@ -71,7 +71,7 @@ Jede Phase und jeder größere Schritt:
 5. **Zeigen:** Screenshots (aus `pnpm run test:smoke` oder einer lokalen Vorschau), in einfachen Worten. Arbeits-Branches haben keine Vercel-Vorschau; auf der Test-Seite ist eine Änderung nach dem Merge zu sehen.
 6. **Freigabe:** PR nach `test-live`, PR-Link und Screenshots schicken. Merge nach grüner CI und „ok“ im Chat. Danach mit `list_deployments` prüfen, ob die Test-Seite neu gebaut ist, und den Link schicken.
 7. **Nachführen:** `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`. Sichtbare Änderungen bekommen einen kurzen, kindgerechten Eintrag in „Was ist neu?“ auf der Seite (Wunsch des Nutzers, 21.11.2026; ab Phase 1). Der CHANGELOG-Eintrag eines PR endet mit einer Zeile **Messwerte** (Wunsch des Nutzers, 24.11.2026): *Funde vor dem PR* (Fehler, die Helfer oder Prüfungen vor dem PR fanden, ohne reine Stilvorschläge), *späte Funde* (erst in der CI auf GitHub, der Vollprüfung, `test:full` oder nach dem Merge) und *Dauer* (Stunden vom Beginn der Arbeit bis zum Merge). So lässt sich mit Zahlen sagen, ob wir schneller werden und weniger spät finden.
-8. **Phasenende:** `test:full` in Chromium, Firefox und WebKit, weil alle die Test-Seite benutzen. Den PR `test-live` → `main` gibt es nur, wenn `main` wieder genutzt wird (nach Frage und OK).
+8. **Phasenende:** `test:full` in Chromium, Firefox und WebKit, weil alle die Test-Seite benutzen. Lokal geht das mit `pnpm run test:full -- --browser all`. In der CI startet Claude den Job „Vollprüfung“ von Hand auf dem Branch (`workflow_dispatch`), denn ohne PR nach `main` läuft er nicht von selbst. Den PR `test-live` → `main` gibt es nur, wenn `main` wieder genutzt wird (nach Frage und OK).
 
 Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen und Freigabe.
 
@@ -155,6 +155,10 @@ Der alte Stand mit allen Berichten liegt in Commit `b53f75f` (Historie von `test
 
 - Team `team_ZoDaUGD4xeLiekVnSQ4oD2aE`, Projekt `prj_ZY036iUMf0CKLgb4h9ywyGBTUHRI` (Git-Anbindung; gebaut wird nur `test-live`, siehe `vercel.json`).
 - Kostenloser Plan: höchstens 100 Deployments in 24 Stunden (gleitendes Fenster, abgebrochene Builds zählen mit; [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)). Ist das Limit erreicht, geht der Merge trotzdem (Vercel ist kein Pflicht-Check). Die Test-Seite zieht dann erst mit dem nächsten Merge nach `test-live` nach.
+- **Tageslimit, ohne dass etwas verloren geht** (Wunsch des Nutzers, 24.11.2026). Nur Merges nach `test-live` bauen, das sind weit unter 100 am Tag. Gezählt oder auf den nächsten Tag verschoben wird nichts. Jeder Build baut den ganzen Stand von `test-live`, ein gesperrter Merge ist darum im nächsten Build mit drin.
+  - Nach jedem Merge prüft Claude mit `list_deployments` (Branch `test-live`), ob der Merge-Commit `READY` ist.
+  - Wenn nicht: In `STATUS.md` unter „Adressen“ steht dann „Test-Seite noch auf Stand `<sha>`“, und der Nutzer erfährt es im Bericht.
+  - `/weiter` prüft bei jedem Einstieg, ob der neueste Commit auf `test-live` gebaut ist. Nachgezogen wird mit dem nächsten Merge. Keine Deployments von Hand: Will der Nutzer den Stand sofort, klickt er selbst in Vercel auf „Redeploy“.
 - Status über das Vercel-MCP (`list_deployments`), keine Deployments von Hand.
 - Feste Adressen: Testseite (`test-live`) https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/, älterer Stand (`main`, zurzeit nicht genutzt und nicht gebaut) https://wunderkompass.vercel.app/.
 
