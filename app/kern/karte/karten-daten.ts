@@ -146,13 +146,16 @@ export function festGemischt(frage: KartenFrage): string[] {
   return reihe;
 }
 
-// Welche Frage „Rate mal!“ beim Öffnen zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
-// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
-//    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
-// 2. sonst die erste, die das Kind noch nie beantwortet hat (auf Profi also zuerst eine neue Profi-Frage);
-// 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
+// Welche Frage „Rate mal!“ beim Öffnen zeigt:
+// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist, unter den
+//    Fragen der Stufe und den leichteren (fragenFuerStufe, eigene Stufe zuerst). Wer falsch geantwortet hat und zurückkommt
+//    (Wissensbuch, Nachbarkarte), soll dort weiterdenken (E4).
+// 2. sonst die erste Frage der gespielten Stufe, die das Kind noch nie beantwortet hat;
+// 3. sind alle schon beantwortet, die am frühesten wieder fällige der gespielten Stufe. Bei Gleichstand jeweils die frühere.
+// 2 und 3 bleiben in der gespielten Stufe: Sonst kam auf Profi nach allen Profi-Fragen die ungesehene Entdecker-Frage,
+// etwa nach „Weiter zu“ und „Zurück“ (Spieltest Feinschliff 24.11.2026; wie Befund 3: schwer gewählt, trotzdem leicht).
 export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
-  return waehleFrage(fragenFuerStufe(alle, stufe), review, kartenstand);
+  return falschBeantwortet(fragenFuerStufe(alle, stufe), kartenstand) ?? waehleFrage(fragenDerStufe(alle, stufe), review, kartenstand);
 }
 
 // Nach einem Stufenwechsel auf der offenen Karte: dieselbe Wahl, aber nur unter den Fragen genau der gespielten Stufe.
@@ -161,12 +164,14 @@ export function frageNachWechsel(alle: KartenFrage[], review: LocalProgress['rev
   return waehleFrage(fragenDerStufe(alle, stufe), review, kartenstand);
 }
 
+const falschBeantwortet = (fragen: KartenFrage[], kartenstand?: Record<string, unknown>) => fragen.find(frage => {
+  const wert = kartenstand?.[frage.answerKey];
+  return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
+});
+
 function waehleFrage(fragen: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>): KartenFrage {
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
-  const offen = fragen.find(frage => {
-    const wert = kartenstand?.[frage.answerKey];
-    return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
-  });
+  const offen = falschBeantwortet(fragen, kartenstand);
   if (offen) return offen;
   const ungesehen = fragen.find(frage => review[frage.reviewId] === undefined);
   if (ungesehen) return ungesehen;

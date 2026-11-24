@@ -60,16 +60,19 @@ test('ohne Stufe verhält sich ersteFrage wie Entdecker', () => {
   assert.equal(ersteFrage(fragen, alleGesehen(['x:rate-2'])).level, 'entdecker');
 });
 
-test('Profi: zuerst eine ungesehene Profi-Frage, sonst Hauptfrage und Entdecker-Fragen', () => {
+test('Profi: zuerst eine ungesehene Profi-Frage, sonst die am frühesten fällige Profi-Frage, nie eine ungesehene leichtere', () => {
   assert.equal(ersteFrage(fragen, {}, undefined, 'profi').id, 'x:rate-2');
   assert.equal(ersteFrage(fragen, {'world-question:x:rate-2': gesehen()}, undefined, 'profi').id, 'x-1');
-  assert.equal(ersteFrage(fragen, alleGesehen(['x', 'x:rate-3']), undefined, 'profi').id, 'x', 'alle Profi-Fragen gesehen: Hauptfrage');
+  // Spieltest Feinschliff 24.11.2026: Nach allen Profi-Fragen kam beim Öffnen (z. B. nach „Zurück“) die ungesehene Hauptfrage.
+  assert.equal(ersteFrage(fragen, alleGesehen(['x', 'x:rate-3']), undefined, 'profi').level, 'profi', 'alle Profi-Fragen gesehen: weiter eine Profi-Frage');
+  const faellig = {...alleGesehen(['x', 'x:rate-3']), 'world-question:x-1': gesehen('2026-11-01')};
+  assert.equal(ersteFrage(fragen, faellig, undefined, 'profi').id, 'x-1', 'die am frühesten fällige Profi-Frage');
   assert.deepEqual(ids(fragenFuerStufe(fragen, 'profi')), ['x:rate-2', 'x-1', 'x', 'x:rate-1', 'x-2']);
 });
 
-test('Experte: zuerst die Experten-Frage, sonst wie Profi', () => {
+test('Experte: die Experten-Frage, auch wenn sie schon gesehen ist (die Karte hat nur eine)', () => {
   assert.equal(ersteFrage(fragen, {}, undefined, 'experte').id, 'x:rate-3');
-  assert.equal(ersteFrage(fragen, {'world-question:x:rate-3': gesehen()}, undefined, 'experte').id, 'x:rate-2');
+  assert.equal(ersteFrage(fragen, {'world-question:x:rate-3': gesehen()}, undefined, 'experte').id, 'x:rate-3');
   assert.deepEqual(ids(fragenFuerStufe(fragen, 'experte')), ['x:rate-3', 'x:rate-2', 'x-1', 'x', 'x:rate-1', 'x-2']);
 });
 
@@ -82,7 +85,7 @@ test('eine falsch beantwortete Frage kommt zuerst, aber nur bis zur gewählten S
   assert.equal(ersteFrage(fragen, alleGesehen(), stand, 'entdecker').level, 'entdecker', 'zurück auf Entdecker: die Profi-Frage wartet');
 });
 
-test('sind alle Fragen der Stufe gesehen, kommt die am frühesten fällige darunter', () => {
+test('sind alle Fragen der Stufe gesehen, kommt die am frühesten fällige der Stufe', () => {
   const review = {...alleGesehen(), 'world-question:x:rate-1': gesehen('2026-11-01'), 'world-question:x:rate-3': gesehen('2026-10-01')};
   assert.equal(ersteFrage(fragen, review, undefined, 'entdecker').id, 'x:rate-1', 'Experten-Frage zählt auf Entdecker nicht');
   assert.equal(ersteFrage(fragen, review, undefined, 'experte').id, 'x:rate-3');

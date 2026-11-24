@@ -177,6 +177,8 @@ async function schlussNachDerStufe(page, {touch}) {
   await tippe(page.locator('nav.karten-rueckweg').getByRole('link', {name: 'Zurück', exact: true}), touch);
   await karteDa(page, t.id);
   await page.waitForFunction(() => document.activeElement?.matches('section.rate-mal'), null, WARTEN);
+  // Die Karte wählt neu, aber in der Stufe: Nach allen Profi-Fragen kam vorher die leichte Entdecker-Frage (Spieltest Feinschliff).
+  assert.equal((await angezeigteFrage(page, t)).level, 'profi', 'nach „Zurück“ eine Profi-Frage');
   const lage = await rateMal(page).evaluate(el => { const r = el.getBoundingClientRect(); return {oben: r.top, unten: r.bottom, hoehe: innerHeight}; });
   assert.ok(lage.unten > 0 && lage.oben < lage.hoehe, 'nach „Zurück“ ist „Rate mal!“ im Fenster: ' + JSON.stringify(lage));
   return t.id;

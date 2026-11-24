@@ -57,6 +57,15 @@ Bilder in 320 (auch große Schrift), 390, 768, 1280, 1440 px. Blockierend: keine
 
 Entwurf, alle Prüfungen und das Ergebnis: [2026-11-24-elefant-fragen-entwurf.md](2026-11-24-elefant-fragen-entwurf.md). Kurz: `:rate-3` ruht, `:rate-4` bleibt, neue Profi-Frage `:rate-5` (Stoßzähne), `:rate-2` unverändert (keine Ausnahme im Schutztest), einige Sätze genauer. Neue datierte Antwortliste.
 
+## Spieltest vor dem PR (`spieltester`, 24.11.2026, gekürzt)
+
+Rolle „11 Jahre, allein, will es schwer haben“, Handy 390 px, lokaler Build. Ziel erreicht (Profi drei Fragen, Experte eine, „Weiter zu: Großer Panda“, „Zurück“), etwa 21 Handlungen, keine Browserfehler. Bestätigt: nur Fragen der gewählten Stufe; Schluss mit „Weiter zu“ auf Profi und Experte; nach falscher Entdecker-Antwort und Wechsel sofort eine Profi-Frage; falsche Antwort orange; „Zu schwer?“ nur, wo es etwas ändert; neue Stoßzahn-Frage „sinnvoll, mit guten Erklärungen“.
+
+- **Fehler (wichtig):** Nach „Zurück“ stand „Stufe: Profi“, darunter die Entdecker-Hauptfrage (drei Antworten). Ursache: Beim Öffnen suchte `ersteFrage` eine ungesehene Frage auch unter den leichteren; nach allen Profi-Fragen gewann die nie gestellte Hauptfrage. **Behoben:** Neue und fällige Fragen kommen beim Öffnen nur aus der gespielten Stufe; nur „falsch beantwortet zuerst“ reicht weiter in die leichteren (E4, wie entschieden). Unit-Test angepasst (Profi, Experte), Browser-Test: nach „Zurück“ eine Profi-Frage.
+- Auch gesehen: Mit Stufe Experte und einer früher falsch beantworteten Entdecker-Frage zeigt die Karte beim Zurückkommen diese Entdecker-Frage mit der alten Rückmeldung („Noch nicht ganz“). Das ist die entschiedene Regel E4 („falsch beantwortet zuerst“ beim Öffnen) und bleibt bis zur Antwort des Nutzers (siehe unten).
+- Feinschliff: Experte hat nur eine Frage, die Wasserstellen-Antwort ist erratbar (BACKLOG 12 h); Zahlenreihe 3/30/100/1.000 (BACKLOG 12 j). „Das war leicht für dich“ trotz falscher Antwort: nachgestellt, der Vorschlag kommt nur nach drei richtigen ersten Antworten (mit F-R-F kein Vorschlag, mit R-R-R einer); der Spieltester sah ihn in einem anderen Durchgang.
+
 ## Offen für den Nutzer
 
-Nichts zu entscheiden. Hinweis: Der Schluss erscheint auf Profi und Experte immer (auch nach nur einer Frage), auf Entdecker nur nach mehr als einer Frage.
+- **„Falsch beantwortet zuerst“ über Stufen hinweg?** Heute (entschieden am 24.11.2026): Beim Öffnen kommt eine falsch beantwortete Frage zuerst, auch wenn sie leichter ist als die gewählte Stufe. Der Spieltest zeigt die Folge: Wer auf Entdecker falsch antwortet, dann auf Experte wechselt und später zurückkommt, sieht wieder die Entdecker-Frage mit „Noch nicht ganz“, obwohl „Stufe: Experte“ dasteht. **Empfehlung von Claude:** „falsch zuerst“ nur in der gespielten Stufe; die falsche Entdecker-Frage wartet, bis das Kind wieder Entdecker spielt (so kommt sie heute schon nach einem Wechsel zurück). Wer auf derselben Stufe bleibt, merkt keinen Unterschied. Kleine Änderung (eine Zeile und Tests), vor dem Merge möglich.
+- Hinweis: Der Schluss erscheint auf Profi und Experte immer (auch nach nur einer Frage), auf Entdecker nur nach mehr als einer Frage.
