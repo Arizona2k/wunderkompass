@@ -43,11 +43,12 @@ export async function smoke(ctx) {
       await page.goto(ctx.base + '#news/girl-day-2026');
       await ready(page);
       await page.waitForFunction(() => location.hash === '#home');
-      // Die Startseite erst fertig laden lassen, dann weiter. Hat sie vor dem Neuladen schon ein Foto gezeigt (zufälliges
-      // Entdeckungspaar, z. B. das Riff), fragt Firefox jetzt nach, ob seine Kopie noch gilt, bricht die Nachfrage selbst ab
-      // und zeigt die Kopie. Die Überwachung streicht diesen Abbruch nur, wenn sie das Foto danach auf der Seite sieht
+      // Die Startseite erst fertig laden lassen, dann weiter. Nach dem Neuladen (oben, auf der Karte) hängt die Umleitung
+      // die Startseite im selben Dokument wieder ein. Zeigte sie vor dem Neuladen schon ein Foto (zufälliger Entdeckungspfad,
+      // z. B. das Riff), fragt Firefox jetzt nach, ob seine Kopie noch gilt, bricht die Nachfrage selbst ab und zeigt die
+      // Kopie. Die Überwachung streicht diesen Abbruch nur, wenn sie das Foto danach auf der Seite sieht
       // (scripts/browser-errors.mjs, Fall 2). Ging der Test 30 ms später schon zur Reise, blieb er rot (Engine-Schnellprüfung
-      // Firefox, Lauf 45348967989, 24.11.2026; lokal 2 von 6 Läufen mit fest eingestelltem Riff-Paar).
+      // Firefox, Lauf 45348967989, 24.11.2026; lokal 2 von 6 Läufen mit fest eingestelltem Riff-Pfad).
       await page.locator('.discovery-hero').waitFor();
       await anfragenFertig();
       await browserErrorsSettled(ctx.report);
