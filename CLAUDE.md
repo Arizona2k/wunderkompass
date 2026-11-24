@@ -111,6 +111,7 @@ Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude ents
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
 | `ideen-scout` | Vergleichbare Angebote ansehen, Ideen als Vorschläge liefern | sonnet / medium |
 | `technik-pruefer` | Arbeitssystem: späte Prüfungen, CI-Dauer, Unterlagen gegen Wirklichkeit, Pakete, Modellnamen, Vercel/GitHub | sonnet / high |
+| `spieltester` | Benutzt die Seite im echten Browser in einer Rolle (Alter, Gerät) mit einem klaren Ziel, spielt bis zum Ende, meldet Sackgassen, Verwirrendes, Kaputtes, zu leicht oder zu schwer, mit Bildern. Kein Kindertest; echte Kinder bleiben die wichtigste Rückmeldung. Einsatz bei sichtbaren Änderungen vor dem PR und am Phasenende, nicht bei jeder Kleinigkeit (seit 24.11.2026, Pilot) | sonnet / high |
 
 - `fable` (stärkstes Modell) nur gezielt für große Abschlussprüfungen am Phasenende.
 - `haiku` für einfache Massenprüfungen, z. B. alle Karten auf kaputte Verweise.

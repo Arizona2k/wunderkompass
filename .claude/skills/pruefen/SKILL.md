@@ -13,6 +13,7 @@ description: Vor einer Übergabe in WunderKompass – komplette Prüfkette laufe
    - Texte für Kinder → `kinder-redaktion`
    - neue oder geänderte Aussagen, Zahlen, Verbindungen → `fakten-pruefer`
    - sichtbare Änderungen → `design-pruefer` (Breiten 320, 390, 768, 1280, 1440 px)
+   - sichtbare Änderungen an Abläufen (Spiel, Karte, Labor, Reise, Bedienung) → `spieltester` mit Rolle, Ziel und Gerät je Auftrag (z. B. „6 Jahre mit Elternteil am Handy: Finde etwas über Elefanten“), nicht „alles prüfen“
    - Code, besonders Pass, IDs, Links, Offline → `code-pruefer`
    - neue Bilder → `bild-recherche` (Nachweis prüfen)
    - am Phasenende und wenn ein Fehler erst spät auffiel (z. B. erst in der CI-Vollprüfung oder in `test:full`) → `technik-pruefer`, Pflicht, bevor die Korrektur gemeldet wird

@@ -28,7 +28,7 @@ Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md),
 
 ## Offene Fragen an den Nutzer
 
-- **Helfer „Spieltester“ als Probelauf zu Beginn von Teil B?** Idee des Nutzers vom 24.11.2026, Einschätzung von Claude im BACKLOG (Ideen-Sammlung, „Helfer „Spieltester““). Antwort steht aus.
+- **Helfer `spieltester`:** am 24.11.2026 als Pilot angelegt (Freigabe des Nutzers). Nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt (BACKLOG, Ideen-Sammlung). Erster Probelauf an den Stufen aus Teil A läuft.
 - **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
 
 ## Vorübergehende Modell-Ausnahmen
