@@ -6,7 +6,7 @@
 //   „Willst du eine Stufe leichter spielen?“; „Nein, ich bleibe“ stellt nichts um, „Ja“ stellt um.
 // Welche Frage erscheint, rechnen die Tests mit den Bausteinen aus karte-hilfen.mjs aus (wie die App).
 import assert from 'node:assert/strict';
-import {FOKUS_NACH_KLICK, ready} from './harness.mjs';
+import {FOKUS_NACH_KLICK, ladeanfragen, ready} from './harness.mjs';
 import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, falscheAntworten, fragenAufStufe, fragenDerKarte, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 
@@ -27,11 +27,13 @@ async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
     await context.addInitScript(FOKUS_NACH_KLICK);
     const page = await context.newPage();
     ctx.monitor(page);
+    // Vor jedem gewollten Neuladen warten, bis die Ladeanfragen fertig sind (harness.mjs, ladeanfragen).
+    const anfragenFertig = ladeanfragen(page);
     page.setDefaultTimeout(20000);
     await page.goto(new URL('#world/topic/' + id, ctx.base).href);
     await ready(page);
     await karteDa(page, id);
-    return await fn(page, {touch});
+    return await fn(page, {touch, anfragenFertig});
   } finally {
     await context.close();
   }
@@ -55,7 +57,7 @@ async function fokusAuf(page, selektor, was) {
 }
 
 // Stufenwahl über „Rate mal!“, Umstellen auf der offenen Karte, Neuladen, „Zurück zu Entdecker“.
-async function stufenAufDerKarte(page, {touch}) {
+async function stufenAufDerKarte(page, {touch, anfragenFertig}) {
   const t = MIT_PROFI;
   const wahl = stufenWahl(page);
   await wahl.locator('.stufen-zeile').filter({hasText: 'Stufe: Entdecker'}).waitFor(WARTEN);
@@ -76,6 +78,7 @@ async function stufenAufDerKarte(page, {touch}) {
   if (hatStufe(t, 'experte')) await zeigtFrage(page, t, ersteFrageAufStufe(t, 'experte'));
   else await wahl.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
   await fokusAuf(page, AENDERN, 'nach dem Umstellen auf Experte steht der Fokus auf „Ändern“');
+  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -94,7 +97,7 @@ async function profiOhneProfiFragen(page, {touch}) {
   await stufeWaehlen(page, 'profi', {touch});
   await stufenWahl(page).getByText('Profi gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
   await zeigtFrage(page, t, hauptfrage(t));
-  // Die Frage bleibt, „Rate mal!“ baut nicht neu auf: Der Fokus geht zurück auf den alten Knopf (Code-Prüfung flushSync, Befund 3).
+  // Die Frage bleibt, „Rate mal!“ baut nicht neu auf; der Fokus bleibt auf „Ändern“ (Code-Prüfung flushSync, Befund 3).
   await fokusAuf(page, AENDERN, 'auf Profi ohne Profi-Fragen bleibt der Fokus auf „Ändern“');
   return t.id;
 }
@@ -164,7 +167,7 @@ async function vorschlagLeichter(page, {touch}) {
 
 // „Fast richtig“ (E11): Auf Experte nach „Stimmt nicht“ zuerst das falsche Wort wählen, die Erklärung kommt danach.
 const MIT_FAST = catalog.find(t => t.claims?.[0]?.fastRichtig);
-async function fastRichtig(page, {touch}) {
+async function fastRichtig(page, {touch, anfragenFertig}) {
   const t = MIT_FAST, b = t.claims[0], f = b.fastRichtig;
   const bereich = page.locator('section.stimmt-das');
   const erklaerung = bereich.getByText(b.explanation, {exact: true});
@@ -178,6 +181,7 @@ async function fastRichtig(page, {touch}) {
   await tippe(bereich.locator('.stimmt-das-woerter').getByRole('button', {name: f.wort, exact: true}), touch);
   await bereich.getByText('Richtig wäre „' + f.ersatz + '“.', {exact: false}).waitFor(WARTEN);
   await erklaerung.waitFor(WARTEN);
+  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -195,7 +199,7 @@ async function fastRichtigNurExperte(page, {touch}) {
 }
 // „Ordne richtig“ (E11): erst ab seiner Stufe; ordnen mit „nach oben“, „Prüfen“, übersteht Neuladen.
 const MIT_ORDNEN = catalog.find(t => t.ordnen);
-async function ordneRichtig(page, {touch}) {
+async function ordneRichtig(page, {touch, anfragenFertig}) {
   const t = MIT_ORDNEN, o = t.ordnen;
   const bereich = page.locator('section.ordne-richtig');
   assert.equal(await bereich.count(), 0, '„Ordne richtig“ fehlt unter der Stufe ' + o.level);
@@ -222,6 +226,7 @@ async function ordneRichtig(page, {touch}) {
   assert.deepEqual(await reihe(), o.teile);
   await tippe(bereich.getByRole('button', {name: 'Prüfen', exact: true}), touch);
   await bereich.getByText(o.aufloesung, {exact: true}).waitFor(WARTEN);
+  await anfragenFertig();
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);

@@ -148,7 +148,7 @@ export async function stufeImPass(ctx) {
     // Technik-Prüfung WebKit-Fund, Befund 2a); ein schneller Rechner verdeckte es auch so (Code-Prüfung flushSync, Befund 1).
     assert.equal(await aendern.evaluate(el => el === window.__fokusNachKlick), true, 'der Fokus bleibt schon am Ende des Tipps in der Stufenwahl');
     assert.equal(await aendern.evaluate(el => el === document.activeElement), true, 'der Fokus bleibt in der Stufenwahl');
-    // Tastatur: Enter öffnet, Umschalt+Tab wandert, Enter wählt.
+    // Tastatur: Enter öffnet, Tab wandert, Enter wählt.
     await aendern.focus();
     await page.keyboard.press('Enter');
     assert.equal(await knoepfe.nth(0).evaluate(el => el === document.activeElement), true, 'Fokus auf Entdecker');

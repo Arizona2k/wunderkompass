@@ -155,6 +155,21 @@ Code-Nachprüfung des Design-Commits `00feeff` ([Bericht](2026-11-24-teil-a-code
   - Befund 3 (Zweig „alter Knopf bleibt“ auf der Karte ungeprüft): übernommen, aber an der richtigen Stelle. Die Testkarte des Experten-Schritts hat eine eigene Experte-Frage, trifft also den Zweig mit Neuaufbau; die Prüfung dort bleibt trotzdem. Den Zweig „alter Knopf bleibt“ trifft die Karte ohne Zusatzfragen auf Profi (`profiOhneProfiFragen`, die Frage bleibt); dort steht jetzt eine Fokus-Prüfung.
 - **Prüfung und Gegenprobe ohne Verzögerung** (Commit `1b87dd8`): typecheck, lint, 437 Unit-Tests; `wissenskarte` und `pass-spielstaende` in Chromium, Firefox und WebKit grün. Gegenprobe ohne künstliche Verzögerung: Mit dem Kartencode von `614d027` fällt `wissenskarte` in Chromium und WebKit durch („nach dem Umstellen (neue Frage) steht der Fokus auf „Ändern“ (am Ende des Klicks); der Fokus lag auf BODY“). Mit dem Pass-Code von `5ff3cec` (der Stand des CI-Funds) fällt `pass-spielstaende` in Chromium und WebKit durch („der Fokus bleibt schon am Ende des Tipps in der Stufenwahl“). Die Tests finden diese Fehlerklasse jetzt also auch auf einem schnellen Rechner, nicht erst in der CI.
 
+## Code-Nachprüfung der Fokus-Tests (Bericht `2026-11-24-teil-a-code-nachpruefung-fokus-tests.md`)
+
+- **Ergebnis:** bereit. Kein falscher roter oder grüner Lauf, der heute eintreten kann.
+- Befund 1 (ein unterwegs angehaltener Klick ließe den alten Wert stehen): übernommen. `FOKUS_NACH_KLICK` leert den Wert zu Beginn jedes Klicks (Capture-Phase auf `window`); dann wird der Test rot statt still grün.
+- Befund 2 (der Kommentar sagt „alter Knopf“, der Test prüft nur „ein ‚Ändern‘“): Kommentar weicher gefasst. Kein Vergleich auf dasselbe Element: Für Kinder ist es gleich, auf welchem „Ändern“ der Fokus liegt.
+- Befund 3 (alter Kommentar „Umschalt+Tab“, der Test drückt Tab): berichtigt.
+
+## Zeitweiser Fund in `pnpm run check`: WebKit bricht in `offline-cold` Bilder ab
+
+- **Befund:** `check-a20` (Stand `2b3376a`) war in der WebKit-Kurzprüfung rot, Suite `offline-cold`: „Load request cancelled“ für `white-tailed-eagle.webp` und `emperor-penguin.webp`. Dieselbe Suite war vorher in `check-a17`, `check-a18` und in der CI grün.
+- **Ursache:** nicht die Startseite. Seit Teil A läuft im CI-Satz offline die Prüfung alter Antworten auf der Seeadler-Karte (`offlineRetainedAnswerWording`, zweiter später Fund). Sie lädt dort dreimal neu, ohne vorher auf die Ladeanfragen zu warten. Kommt das Neuladen, bevor Seeadler- und Pinguinbild da sind, bricht WebKit sie ab. Belegt mit einem Diagnose-Lauf, der jede Anfrage mit Zeit protokolliert: Im ruhigen Lauf lagen nur 46 ms zwischen dem fertigen Bild und dem Neuladen. Unter Last (vier Läufe gleichzeitig) gab es mit dem alten Test in 4 von 12 Läufen einen Abbruch: dreimal die Bilder, einmal die Fotodaten `world-photos-….json`. Ein weiterer Lauf endete mit „Target page … has been closed“; vermutlich hielt WebKit die künstliche Last nicht aus. Nicht weiter verfolgt; mit dem neuen Test kam es nicht vor.
+- **Korrektur im Test:** `offlineRetainedAnswerWording` wartet vor jedem Neuladen mit `ladeanfragen` (`tests/browser/harness.mjs`), wie die Online-Prüfungen daneben schon. `offline-cold` legt die Wartehilfe gleich nach dem Öffnen der kalten Seite an und reicht sie weiter, in der Vollprüfung über `offlineAnimals`. Gleiche Last mit dem neuen Test: 0 von 12 Läufen mit Abbruch.
+- **Dieselbe Lücke in den neuen Stufen-Tests:** Die drei gewollten Neuladestellen in `karte-stufen.mjs` warten jetzt auch mit `ladeanfragen`. Dort war noch nichts aufgefallen; die Regel in `harness.mjs` gilt aber für jedes gewollte Neuladen. Der Kommentar dort nennt jetzt auch die WebKit-Meldung.
+- Kein später Fund im Sinn der Regel (er kam in `pnpm run check`, nicht erst in der CI-Vollprüfung oder `test:full`). Nachgeführt im BACKLOG beim Punkt „Seitenwechsel im Test“: Der dort geplante zentrale Schritt ist noch offen.
+
 ## Arbeitsweise
 
 - Neuer Helfer `karten-autor` (Nutzer, 23.11.2026: „ja“). Wer einen Entwurf schreibt, prüft ihn nicht selbst.
