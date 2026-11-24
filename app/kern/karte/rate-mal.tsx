@@ -18,7 +18,8 @@ import {festGemischt, gueltigeReihe, type KartenFrage} from './karten-daten';
 
 // Die Reihenfolge der Antworten, gespeichert unter dem alten Schlüssel (Hauptfrage: items).
 // Passt die gespeicherte Reihe nicht mehr zu den Antworten (z. B. eine vierte Antwort auf Profi), zeigt die Karte eine
-// feste Mischung (festGemischt) und lässt die alte Reihe im Pass stehen. Die Karte nutzt `antwortReihe` mit dem
+// feste Mischung (festGemischt) und lässt die alte Reihe im Pass stehen. Das gilt für eine Liste aus Wörtern; was gar keine
+// Wortliste ist, ersetzt useSavedGame wie bei allen Spielständen durch eine neue Mischung (saved-games.tsx). Die Karte nutzt `antwortReihe` mit dem
 // Spielstand aus dem Pass auch fürs Vorlesen, damit beide dieselbe Reihenfolge haben.
 export function antwortReihe(frage: KartenFrage, gespeichert: unknown): readonly string[] {
   return gueltigeReihe(frage, gespeichert) ?? festGemischt(frage);

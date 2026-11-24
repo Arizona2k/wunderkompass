@@ -93,7 +93,8 @@ export function gueltigeReihe(frage: KartenFrage, gespeichert: unknown): string[
 
 // Ersatz, wenn keine gültige Reihe gespeichert ist (z. B. eine alte Reihe vor einer vierten Antwort): eine feste Mischung
 // je Frage. Sie ist nach jedem Neuladen gleich, ohne dass die Karte etwas speichert: Die alte Reihe im Pass bleibt, wie sie
-// ist (Schutz: eine Deutung überschreibt nie, was im Pass steht). In der Reihenfolge der Daten stand die Lösung oft vorn.
+// ist (Schutz: eine Deutung überschreibt keine gespeicherte Wortliste; was gar keine Wortliste ist, ersetzt useSavedGame wie bei
+// allen Spielständen). In der Reihenfolge der Daten stand die Lösung oft vorn.
 export function festGemischt(frage: KartenFrage): string[] {
   let stand = 2166136261;
   for (const zeichen of frage.id) stand = Math.imul(stand ^ zeichen.charCodeAt(0), 16777619);

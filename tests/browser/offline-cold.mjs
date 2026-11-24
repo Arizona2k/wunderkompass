@@ -9,6 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {monitorBrowserErrors} from '../../scripts/browser-errors.mjs';
 import {offlineAnimals} from './animal-learning.mjs';
+import {offlineRetainedAnswerWording} from './retained-answer-wording.mjs';
 import {offlineArticleAtlas} from './article-atlas.mjs';
 import {offlineChallengeHints} from './challenge-hints.mjs';
 import {offlineDiscoveryCentral} from './discovery-central.mjs';
@@ -93,6 +94,9 @@ export async function offlineCold(ctx, {full = false} = {}) {
       await page.locator('.model-energy').waitFor();
       await page.getByRole('button', {name: 'Einen Zeitschritt testen', exact: true}).click();
       report.checks.push('Closed browser and cold offline restart with preview server stopped; unopened animal photo, „Ausprobieren“ on two cards and energy model work');
+      // Alte und kaputte Antwortreihe im Pass, offline: lief bisher nur in der Vollprüfung (über offlineAnimals) und fiel dort spät auf
+      // (Teil A, zweiter später Fund). Im CI-Satz läuft es so bei jedem PR, auch in Firefox und WebKit; die Vollprüfung behält ihre Stelle.
+      if (!full) await offlineRetainedAnswerWording(page, report);
 
       if (full) {
         await offlineSolar(page, report);
