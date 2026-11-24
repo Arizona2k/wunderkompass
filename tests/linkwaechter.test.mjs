@@ -41,7 +41,9 @@ const SPIELE = {
   world: new Set(sourceConstant('app/world-games.tsx', 'WORLD_GAMES').map(spiel => spiel.id)),
 };
 const BEREICHE_DER_APP = new Set(sourceConstant('app/earth-explorer.tsx', 'MODES'));
-const BUCH_REITER = new Set(['words', 'why', 'notes', 'nature', 'atlas']);
+// Reiter mit eigener Adresse. book/why und book/atlas zeigen den Reiter Wörter (bookLookup in app/book-location.ts),
+// sind also kein Ziel (Code-Prüfung 24.11.2026).
+const BUCH_REITER = new Set(['words', 'notes', 'nature']);
 
 // null, wenn die App die Adresse (ohne #) anzeigen kann, sonst der Grund.
 function adressFehler(adresse) {
@@ -61,7 +63,8 @@ function adressFehler(adresse) {
     const [id, seite, ...rest] = teile, kapitel = KAPITEL_JE_REISE.get(id);
     if (!kapitel) return 'Reise fehlt';
     // Seite 1 bis Kapitelzahl, dazu die Abschlussseite.
-    return seite === undefined || (!rest.length && /^\d+$/.test(seite) && seite >= 1 && seite <= kapitel + 1) ? null : 'Kapitel fehlt';
+    // Dieselbe Zahlregel wie die App (app/journey-routing.mjs): keine führende Null.
+    return seite === undefined || (!rest.length && /^[1-9]\d*$/.test(seite) && seite <= kapitel + 1) ? null : 'Kapitel fehlt';
   }
   if (bereich === 'labs') {
     if (teile[0] === 'experiment') return teile.length === 2 && VERSUCHE.has(teile[1]) ? null : 'Versuch fehlt';
@@ -109,7 +112,7 @@ test('Linkwächter erkennt kaputte Adressen (Gegenprobe)', () => {
   for (const gut of ['home', 'updates', 'news/alt', 'world/animals', 'world/animals/page/2', 'world/topic/animal-honey-bee', 'journeys/planet', 'journeys/planet/6', 'labs/moon', 'labs/experiment/lamp-ball', 'book/notes', 'book/nature', 'book/words/Vulkan', 'book/nature/daintree']) {
     assert.equal(adressFehler(gut), null, gut);
   }
-  for (const schlecht of ['welt', 'world/topic/gibt-es-nicht', 'world/route/x', 'journeys/planet/7', 'journeys/mars', 'labs/x', 'book/words/Wolke', 'book/nature/capital-harare', 'globe/x', 'updates/x']) {
+  for (const schlecht of ['welt', 'jorneys/planet', 'world/topic/gibt-es-nicht', 'world/route/x', 'journeys/planet/7', 'journeys/planet/01', 'journeys/mars', 'labs/x', 'book/words/Wolke', 'book/nature/capital-harare', 'book/why', 'book/atlas', 'globe/x', 'updates/x']) {
     assert.notEqual(adressFehler(schlecht), null, schlecht);
   }
 });
@@ -122,10 +125,12 @@ test('Adressen aus Reisen, Startseite, Bereichsleiste und Programmtext führen z
   }
   for (const aktivitaet of DISCOVERY_ACTIVITIES) liste.adresse('Startseite, Mitmachen', aktivitaet.hash);
   for (const bereich of BEREICHE) liste.adresse('Bereichsleiste', bereich.ziel);
-  const BEREICH = '(?:' + [...BEREICHE_DER_APP, 'updates'].join('|') + ')';
   for (const [datei, adresse] of [
     // Nur ganze Adressen: Ein Anfang wie 'labs/'+id ist kein Ziel (das Ziel prüfen die Daten-Tests unten).
-    ...imQuelltext(new RegExp(`["'\`]#(${BEREICH}(?:/[^"'\`$]*[^"'\`$/])?)["'\`](?!\\s*\\+)`, 'g')),
+    // Jedes Wort nach # zählt, damit auch ein vertippter Bereich auffällt ('#jorneys'). Ausgenommen sind Farben
+    // ('#fff') und die Sprungmarke zum Inhalt (href="#learning-main", kein Ziel der App).
+    ...imQuelltext(/["'`]#([a-z][a-z-]*(?:\/[^"'`$]*[^"'`$/])?)["'`](?!\s*\+)/g)
+      .filter(([, adresse]) => !/^(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/.test(adresse) && adresse !== 'learning-main'),
     ...imQuelltext(/(?:navigateHash|replaceHash)\(\s*["']([^"']+)["']\s*[),]/g),
     ...imQuelltext(/goMode\(\s*["'][a-z]+["']\s*,\s*["']([^"']+)["']\s*\)/g),
   ]) liste.adresse(datei, adresse);
@@ -220,6 +225,10 @@ test('Labore verweisen auf vorhandene Karten, Wörter, Reisen, Versuche und Labo
   const missionen = sourceConstant('app/earth-explorer.tsx', 'MISSIONS');
   assert.equal(MISSION_RESEARCH.length, missionen.length, 'jede Mini-Mission braucht genau ein Labor (gleiche Reihenfolge)');
   for (const [nummer, mission] of MISSION_RESEARCH.entries()) liste.ziel('Mini-Mission ' + (nummer + 1), mission.lab, LABORE, 'Labor');
+  // Feste Listen von Labor-IDs im Programmtext, z. B. navigateHash('labs/'+['seasons','water',…][i]).
+  for (const [datei, ids] of imQuelltext(/navigateHash\(\s*["']labs\/["']\s*\+\s*\[([^\]]*)\]/g)) {
+    for (const [, id] of ids.matchAll(/["']([^"']+)["']/g)) liste.ziel(datei, id, LABORE, 'Labor');
+  }
   liste.fertig();
 });
 

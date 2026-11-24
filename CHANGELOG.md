@@ -9,12 +9,14 @@ Bevor die Spiele kniffliger werden (Teil B), drei Vorarbeiten. Für Kinder sicht
 
 - **Kein Knopf mehr ins Leere:** Auf dem Globus zeigten rund 390 Orte, zum Beispiel alle Hauptstädte, den Knopf „Im Naturatlas weiterdenken“. Das Wissensbuch kannte sie aber nicht und sagte nur „Diesen Naturort gibt es hier nicht.“ Jetzt steht der Knopf nur bei Orten, die der Naturatlas wirklich erklärt.
 - **Schnellerer Start:** Beim ersten Öffnen lädt die Seite 58 KB weniger. Ortssuche, Auswahllisten und der Tag-Regler kommen erst, wenn man den Globus oder das Quiz öffnet; offline sind sie trotzdem da.
+- **Keine weiße Seite mehr:** Lädt ein Teil der Seite einmal nicht (zum Beispiel weil das WLAN gerade weg ist), steht an der Stelle „… braucht noch einen Versuch“ mit einem Knopf zum Neuladen. Der Rest bleibt bedienbar. Vorher konnte in so einem Fall die ganze Seite weiß werden.
 
 Hinter den Kulissen:
 
 - **Linkwächter:** Ein neuer Test prüft bei jedem PR, dass jeder feste Verweis der Seite zu etwas Vorhandenem führt. Er fand den Globus-Knopf oben und einen toten Wortverweis im Wissensbuch („Wolke“). [Landkarte aller Verweise](docs/entwurf/2026-11-24-linkwaechter-landkarte.md).
 - **Tests warten von selbst:** Lädt ein Test die Seite neu, ruft eine neue Adresse auf oder schließt sie, wartet er jetzt an einer zentralen Stelle, bis nichts mehr lädt. Bisher musste jeder Test selbst daran denken; das war fünfmal schiefgegangen und erst spät aufgefallen.
 - **Suche im Test:** Alle Tests, die in die Suche tippen und einen Treffer wählen, nutzen jetzt denselben sicheren Baustein.
+- **Geprüft von zwei Helfern:** Technik ([Bericht](docs/entwurf/2026-11-24-teil-b-vorarbeiten-technik-pruefung.md)) und Code ([Bericht](docs/entwurf/2026-11-24-teil-b-vorarbeiten-code-pruefung.md)). Der Code-Helfer fand die weiße Seite oben; ein neuer Test lässt das Nachladen absichtlich scheitern.
 - **Messwerte:** Funde vor dem PR: (wird nachgetragen) · späte Funde: (wird nachgetragen) · Dauer: (wird nachgetragen; Beginn 24.11.2026 gegen 11:40 UTC).
 
 ## 24.11.2026 – Stufen-Feinschliff: jede Stufe mit Ziel

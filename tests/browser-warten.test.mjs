@@ -213,25 +213,65 @@ test('context.close wartet auf jede überwachte Seite des Kontexts', async () =>
   assert.deepEqual(protokoll, ['kontext geschlossen']);
 });
 
-test('Schließen wartet auf laufende Anfragen, aber ohne feste Ruhezeit', async () => {
+test('Schließen zählt die Ruhezeit nur ab der letzten Anfrage: eine lange ruhige Seite schließt sofort', async () => {
   const {Seite} = nachgebauteKlassen();
   const ruhig = new Seite();
-  beobachteAnfragen(ruhig, {proof: {errors: []}});
+  beobachteAnfragen(ruhig, {proof: {errors: []}, ruhezeit: KURZ});
   const fertigeAnfrage = bild('http://127.0.0.1/world/elefant.webp');
   ruhig.sende('request', fertigeAnfrage);
   ruhig.sende('requestfinished', fertigeAnfrage);
-  let start = Date.now();
+  await warte(KURZ + 50);
+  const start = Date.now();
   await ruhig.close();
-  assert.ok(Date.now() - start < RUHEZEIT, 'ohne laufende Anfrage schließt die Seite nach zwei Bildwechseln');
+  assert.ok(Date.now() - start < KURZ, 'war die Seite länger ruhig, schließt sie nach zwei Bildwechseln');
+});
+
+test('Schließen kurz nach einem Programmteil wartet auch auf Bilder, die React erst danach einblendet', async () => {
+  const {Seite} = nachgebauteKlassen();
+  const seite = new Seite();
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof});
+  const programmteil = {resourceType: () => 'script', isNavigationRequest: () => false, url: () => 'http://127.0.0.1/assets/knowledge-book.js'};
+  seite.sende('request', programmteil);
+  seite.sende('requestfinished', programmteil);
+  // React blendet bis zu 300 ms später ein; erst dann startet das Bild.
+  const bildAnfrage = bild('http://127.0.0.1/photos/buch.webp');
+  let fertig = 0;
+  setTimeout(() => seite.sende('request', bildAnfrage), REACT_SAMMELZEIT);
+  setTimeout(() => { seite.sende('requestfinished', bildAnfrage); fertig = Date.now(); }, REACT_SAMMELZEIT + 100);
+  await seite.close();
+  assert.ok(fertig && fertig <= Date.now(), 'das Schließen kam, bevor das spät eingeblendete Bild fertig war');
+  assert.deepEqual(proof.errors, []);
+});
+
+test('Schließen wartet auf eine laufende Anfrage', async () => {
+  const {Seite} = nachgebauteKlassen();
   const ladend = new Seite();
-  beobachteAnfragen(ladend, {proof: {errors: []}});
+  beobachteAnfragen(ladend, {proof: {errors: []}, ruhezeit: KURZ});
   const anfrage = bild('http://127.0.0.1/world/eisbaer.webp');
   ladend.sende('request', anfrage);
   let fertig = 0;
   setTimeout(() => { ladend.sende('requestfinished', anfrage); fertig = Date.now(); }, 200);
-  start = Date.now();
   await ladend.close();
   assert.ok(fertig && fertig <= Date.now(), 'eine laufende Anfrage wird vor dem Schließen fertig');
+});
+
+test('ohne Bericht wirft der Wartepunkt nicht: Meldung in console.error, und der Kontext schließt trotzdem', async () => {
+  const {Kontext, protokoll} = nachgebauteKlassen();
+  const kontext = new Kontext();
+  const seite = await kontext.newPage();
+  beobachteAnfragen(seite, {timeout: 300, ruhezeit: KURZ});
+  seite.sende('request', bild('http://127.0.0.1/photos/haengt.jpg'));
+  const meldungen = [], alt = console.error;
+  console.error = meldung => meldungen.push(meldung);
+  try {
+    await kontext.close();
+  } finally {
+    console.error = alt;
+  }
+  assert.deepEqual(protokoll, ['kontext geschlossen']);
+  assert.equal(meldungen.length, 1);
+  assert.match(meldungen[0], /^Vor dem gewollten Seitenwechsel \(Schließen\): Anfragen laufen noch .*haengt\.jpg/);
 });
 
 test('nach dem ersten Zeitlimit wartet dieselbe Seite nicht noch einmal (ein Fehler im Bericht reicht)', async () => {

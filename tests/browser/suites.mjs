@@ -27,6 +27,7 @@ import {researchTransferFlow} from './research-transfer.mjs';
 import {retainedAnswerWordingFlow, alteAntwortNachUmformulierung} from './retained-answer-wording.mjs';
 import {solarFlow} from './solar-comparison.mjs';
 import {kernHuelle} from './kern-huelle.mjs';
+import {globusBedienungFehlt} from './globus-bedienung.mjs';
 import {wissenskarte} from './wissenskarte.mjs';
 import {reiseKapitel} from './reise-kapitel.mjs';
 import {passSpielstaende, stufeImPass} from './pass-spielstaende.mjs';
@@ -70,6 +71,7 @@ export const SUITES = [
     await tippenWaehrendKapiteltexteKommen(ctx, ctx.report);
   }},
   {name: 'kern-huelle', set: 'ci', run: kernHuelle},
+  {name: 'globus-bedienung', set: 'ci', run: globusBedienungFehlt},
   {name: 'wissenskarte', set: 'ci', run: wissenskarte},
   // Lernreisen: einfach zuerst (starter, fact, observe offen; langer Text unter „Für Große“).
   {name: 'reise-kapitel', set: 'ci', run: reiseKapitel},

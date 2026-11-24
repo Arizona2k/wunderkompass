@@ -53,9 +53,10 @@ export function beobachteAnfragen(page, {proof, tag = '', timeout, ruhezeit} = {
   return stand;
 }
 
-// Wartet, bis keine Anfrage der Seite mehr läuft, `ruhezeit` (ab Aufruf und ab der letzten Anfrage) vergangen ist
-// und die Seite zweimal gezeichnet hat. Wirft nach `timeout` und nennt die offenen Anfragen.
-export async function warteAufRuhe(page, {timeout = WARTEZEIT_MS, ruhezeit = RUHEZEIT} = {}) {
+// Wartet, bis keine Anfrage der Seite mehr läuft, `ruhezeit` vergangen ist und die Seite zweimal gezeichnet hat.
+// Die Ruhezeit zählt ab der letzten Anfrage und, mit `abAufruf` (Standard), auch ab dem Aufruf.
+// Wirft nach `timeout` und nennt die offenen Anfragen.
+export async function warteAufRuhe(page, {timeout = WARTEZEIT_MS, ruhezeit = RUHEZEIT, abAufruf = true} = {}) {
   const stand = beobachteAnfragen(page);
   const offen = () => [...stand.offen].filter(request => !gehalten.get(request));
   const aufruf = Date.now(), ende = aufruf + timeout;
@@ -66,7 +67,7 @@ export async function warteAufRuhe(page, {timeout = WARTEZEIT_MS, ruhezeit = RUH
         ? 'Anfragen laufen noch vor dem gewollten Seitenwechsel: ' + rest.map(request => request.url()).join(', ')
         : 'Seite vor dem gewollten Seitenwechsel nicht zur Ruhe gekommen: immer neue Anfragen, oder sie zeichnet nicht mehr');
     }
-    if (offen().length || Date.now() - Math.max(aufruf, stand.zuletzt) < ruhezeit) { await page.waitForTimeout(50); continue; }
+    if (offen().length || Date.now() - Math.max(abAufruf ? aufruf : 0, stand.zuletzt) < ruhezeit) { await page.waitForTimeout(50); continue; }
     // Zum Schluss zwei Bildwechsel der Seite abwarten: Erst beim Zeichnen entscheidet der Browser, ob ein
     // Bild mit loading="lazy" jetzt lädt. Ist die Seite gerade beschäftigt, wartet dieser Schritt auf sie.
     const vorher = stand.zuletzt;
@@ -96,13 +97,18 @@ async function zweiBildwechsel(page, rest) {
 }
 
 // Automatischer Wartepunkt vor reload, goto und close. Nur für beobachtete Seiten.
-// Kommt die Seite nicht zur Ruhe, steht das als Browserfehler im Bericht, und der Wechsel geschieht trotzdem:
-// So verdeckt ein Wartepunkt im finally nie den eigentlichen Fehler eines Tests. Danach wartet diese Seite nicht
-// mehr: Die Suite ist ohnehin rot, und jeder weitere Wartepunkt kostete sonst wieder das volle Zeitlimit.
-// Vor reload und goto zählt die Ruhezeit ab dem Aufruf: Dort war oft gerade ein Klick, dessen Anfragen noch nicht
-// gestartet sind. Beim Schließen (`ruhezeit` 0) reichen laufende Anfragen und zwei Bildwechsel: Am Ende eines Tests hat
-// der letzte Schritt meist auf seinen Inhalt gewartet. Gemessen am 24.11.2026 (Suite wissenskarte): 74 Schließen
-// warteten mit Ruhezeit zusammen 36 s, fast nur wegen der Ruhezeit.
+// Kommt die Seite nicht zur Ruhe, steht das als Browserfehler im Bericht (ohne Bericht in console.error), und der
+// Wechsel geschieht trotzdem: So verdeckt ein Wartepunkt im finally nie den eigentlichen Fehler eines Tests. Danach
+// wartet diese Seite nicht mehr: Die Suite ist ohnehin rot, und jeder weitere Wartepunkt kostete sonst wieder das
+// volle Zeitlimit.
+// Vor reload und goto zählt die Ruhezeit auch ab dem Aufruf: Dort war oft gerade ein Klick, dessen Anfragen noch
+// nicht gestartet sind. Beim Schließen zählt sie nur ab der letzten Anfrage: Hat gerade ein Programmteil geladen
+// (etwa nach einem Hash-Wechsel), können seine Bilder noch bis zu 300 ms später starten; war die Seite länger ruhig,
+// kostet das nichts. Gemessen am 24.11.2026 (Suite wissenskarte): 74 Schließen warteten mit der Ruhezeit ab dem
+// Aufruf zusammen 36 s, fast nur wegen dieser Ruhezeit (Code-Prüfung 24.11.2026, Befund 2).
+// Folge für Pass-Tests: page.reload() wartet immer mindestens die Ruhezeit ab, verzögertes Speichern (IndexedDB,
+// 200 ms) ist dann fertig. Wer „sofort nach dem Tippen neu laden“ prüfen will, nimmt
+// page.evaluate(() => location.reload()).
 async function vorWechsel(page, wie, {schliessen = false} = {}) {
   const stand = staende.get(page);
   if (!stand || stand.gescheitert || page.isClosed()) return;
@@ -111,13 +117,14 @@ async function vorWechsel(page, wie, {schliessen = false} = {}) {
   const beginn = Date.now();
   try {
     await warteAufRuhe(page, schliessen
-      ? {timeout: Math.min(stand.timeout, SCHLIESSEN_MS), ruhezeit: 0}
+      ? {timeout: Math.min(stand.timeout, SCHLIESSEN_MS), ruhezeit: stand.ruhezeit, abAufruf: false}
       : {timeout: stand.timeout, ruhezeit: stand.ruhezeit});
   } catch (error) {
     if (page.isClosed()) return;
     stand.gescheitert = true;
-    if (!stand.proof) throw error;
-    stand.proof.errors.push(`${stand.tag}Vor dem gewollten Seitenwechsel (${wie}): ${error.message}`);
+    const meldung = `${stand.tag}Vor dem gewollten Seitenwechsel (${wie}): ${error.message}`;
+    if (stand.proof) stand.proof.errors.push(meldung);
+    else console.error(meldung);
   } finally {
     zaehler.ms += Date.now() - beginn;
   }
