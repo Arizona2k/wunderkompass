@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -66,7 +67,7 @@ export async function inventionSourceView(page,{topics,width,shots,engine='chrom
   const learned=()=>page.evaluate(id=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.discoveries.includes('learned:'+id),t.id),before=await learned();
   await page.evaluate(id=>location.hash='world/topic/'+id,t.id);const article=page.locator(KARTE+'.wissenskarte-welt-inventions');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
   await page.evaluate(()=>location.hash='world');await page.locator('.world-view .world-choice').first().waitFor();
-  await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill(t.title);
+  await inSucheTippen(page,t.title);
   await page.locator('[role="option"][data-value="topic:'+t.id+'"]').click();await page.getByRole('dialog').waitFor({state:'hidden'});
   await article.getByRole('heading',{name:t.title,exact:true}).waitFor();await question.waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+t.id,'actual new electrical search result opens its own canonical route');
   const deviceIllustration=t.id==='invention-3d-printing'?await assertPrinterIllustration(page,{width,shots,engine,native}):t.id==='invention-seismograph'?await assertSeismographIllustration(page,{width,shots,engine,native}):t.id==='invention-sewing-machine'?await assertSewingIllustration(page,{width,shots,engine,native}):undefined;

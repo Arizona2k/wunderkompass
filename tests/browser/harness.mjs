@@ -5,6 +5,8 @@ import net from 'node:net';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {browserErrorArrays} from '../../scripts/browser-errors.mjs';
+import {beobachteAnfragen, warteAufRuhe} from '../../scripts/seitenwechsel.mjs';
+export {RUHEZEIT} from '../../scripts/seitenwechsel.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 
 export const PROJECT = fileURLToPath(new URL('../..', import.meta.url));
@@ -39,71 +41,24 @@ export async function inSucheTippen(page, text) {
   return dialog;
 }
 
-// Ein gewolltes Neuladen, Schließen oder Weiterblättern bricht Anfragen ab, die noch laden
-// (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED, WebKit: Load request cancelled), und die Fehlerüberwachung schlägt an.
-// Auf einem langsamen Rechner wie der CI ist dieses Zeitfenster groß. Deshalb vorher warten, bis alle
-// Ladeanfragen der Seite fertig sind (außer Seitenaufrufen): Bilder, aber auch Programmteile, Stile und
-// Daten, die die App erst nachlädt. Ein Bild erscheint oft erst, wenn sein Programmteil da ist
-// (im November 2026 `research`; zum Riff-Foto aus CI-Lauf 257 siehe Nachtrag).
-// Jede echte Fehlanfrage bleibt in der Überwachung sichtbar.
-// Nachtrag 23.11.2026: Die Firefox-Abbrüche des Riff-Fotos (Läufe 249 und 257, auch unten) kamen vermutlich nicht vom
-// Seitenwechsel, sondern von Firefox' gespeicherter Kopie nach dem Neuladen (zweite Regel in scripts/browser-errors.mjs).
-// Nötig bleibt die Wartehilfe für Chromium und nachgeladene Programmteile (CI-Befund Chromium: research, journeys, engine-journeys).
-// Gleich nach newPage aufrufen: const anfragenFertig = ladeanfragen(page); … await anfragenFertig(); await page.reload();
-export function ladeanfragen(page, {timeout = 20000} = {}) {
-  return offeneAnfragen(page, request => !request.isNavigationRequest(), 'Anfragen laufen', timeout);
+// Wartet vor einem Wechsel innerhalb der App (Klick auf einen Bereich, goBack, Wechsel der Ansicht), bis alle
+// Ladeanfragen der Seite fertig sind (außer Seitenaufrufen): Bilder, Programmteile, Stile und Daten.
+// Neuladen, goto und Schließen warten seit dem 24.11.2026 von selbst (scripts/seitenwechsel.mjs); dafür
+// braucht es diese Hilfe nicht mehr. Aufruf: const anfragenFertig = ladeanfragen(page); … await anfragenFertig();
+// oder gleich warten: await ladeanfragen(page)();
+// Die Seite muss überwacht sein (ctx.monitor oder monitorBrowserErrors gleich nach newPage), sonst zählt sie erst ab hier.
+export function ladeanfragen(page, {timeout} = {}) {
+  beobachteAnfragen(page);
+  return () => warteAufRuhe(page, {timeout});
 }
 
-// Fertig erst nach einer Ruhezeit ohne Anfrage. Sie beginnt nach jeder Anfrage neu (Start oder Ende).
-// React 19 hält das Einblenden nachgeladener Teile (lazy + Suspense) bis zu 300 ms nach dem Platzhalter
-// zurück; erst danach starten deren Bilder. Vom Ende des Programmteils an sind das höchstens 300 ms, dazu
-// kommt das Rendern auf einem langsamen Rechner. 500 ms lassen dafür Reserve. Die frühere Ruhezeit von
-// 250 ms (nur Bilder, nur ab Aufruf gezählt) war kürzer als diese Sammelzeit.
-export const RUHEZEIT = 500;
-
-function offeneAnfragen(page, passt, was, timeout) {
-  const offen = new Set();
-  let zuletzt = 0;
-  page.on('request', request => { if (passt(request)) { offen.add(request); zuletzt = Date.now(); } });
-  const fertig = request => { if (offen.delete(request)) zuletzt = Date.now(); };
-  page.on('requestfinished', fertig);
-  page.on('requestfailed', fertig);
-  return async () => {
-    const aufruf = Date.now(), ende = aufruf + timeout;
-    for (;;) {
-      if (Date.now() > ende) {
-        throw Error(offen.size
-          ? was + ' noch vor dem gewollten Seitenwechsel: ' + [...offen].map(r => r.url()).join(', ')
-          : 'Seite vor dem gewollten Seitenwechsel nicht zur Ruhe gekommen: immer neue Anfragen, oder sie zeichnet nicht mehr');
-      }
-      if (offen.size || Date.now() - Math.max(aufruf, zuletzt) < RUHEZEIT) { await page.waitForTimeout(50); continue; }
-      // Zum Schluss zwei Bildwechsel der Seite abwarten: Erst beim Zeichnen entscheidet der Browser, ob ein
-      // Bild mit loading="lazy" jetzt lädt. Ist die Seite gerade beschäftigt, wartet dieser Schritt auf sie.
-      const vorher = zuletzt;
-      const gezeichnet = await zweiBildwechsel(page, ende - Date.now());
-      if (gezeichnet && !offen.size && zuletzt === vorher) return;
-      if (!gezeichnet) await page.waitForTimeout(50);
-    }
-  };
-}
-
-// true, wenn die Seite zweimal gezeichnet hat. false, wenn sie gerade das Dokument wechselt oder bis zum
-// Zeitlimit nicht zeichnet (z. B. offener Dialog): Dann versucht es die nächste Runde noch einmal.
-async function zweiBildwechsel(page, rest) {
-  let uhr;
-  const zuSpaet = new Promise(fertig => { uhr = setTimeout(fertig, Math.max(0, Math.min(3000, rest)) + 50, false); });
-  try {
-    const gezeichnet = page.evaluate(() => new Promise(fertig => {
-      const notfalls = setTimeout(fertig, 1000);
-      requestAnimationFrame(() => requestAnimationFrame(() => { clearTimeout(notfalls); fertig(); }));
-    })).then(() => true);
-    return await Promise.race([gezeichnet, zuSpaet]);
-  } catch (error) {
-    if (page.isClosed()) throw error;
-    return false;
-  } finally {
-    clearTimeout(uhr);
-  }
+// Klickt erst, wenn die Seite fertig geladen hat. Für Ziele, die nachgeladene Teile darüber noch verschieben
+// können, vor allem den Fuß der Startseite. Playwright prüft nur beim Drücken, was unter dem Zeiger liegt.
+// Rutscht das Ziel bis zum Loslassen weg, trifft das Loslassen etwas anderes, der Klick verpufft, und
+// Playwright meldet trotzdem Erfolg (CI-Lauf 45397127026, Firefox, 24.11.2026).
+export async function klickNachRuhe(locator) {
+  await ladeanfragen(locator.page())();
+  await locator.click();
 }
 
 // Öffnet einen der sechs Bereiche. id: 'explore'|'world'|'games'|'labs'|'journeys'|'book'.

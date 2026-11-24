@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import {retainedPeopleSourceView} from './retained-people-learning.mjs';
 import assert from 'node:assert/strict';
 import {capturePeopleFigureTree,assertPeopleFigureSemanticPair,rejectFourActualDOMCountercases} from './fourteen-actual-dom-semantic-laws.mjs';
@@ -66,7 +67,7 @@ export async function peopleSourceView(page,{width,shots,engine='chromium',nativ
   // „Ganz einfach“ an seinem Ort (ganzEinfach), „Selbst beobachten“ und Mehr-Wissen in „Mehr erfahren“, Quellen unter „Für Erwachsene“.
   await ganzEinfach(article,topic);const more=await mehrErfahren(article);await more.getByText(topic.learning.observe,{exact:true}).waitFor();for(const p of topic.more)await more.getByText(p,{exact:true}).waitFor();const sources=await fuerErwachsene(article);for(const source of topic.sources)assert.equal(await sources.getByRole('link',{name:source.label,exact:true}).getAttribute('href'),source.url);
   if(questions)await frageDurchspielen(article,topic);
-  if(questions&&width===390){await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();await ausprobieren(article);await box.waitFor();}
+  if(questions&&width===390){await inSucheTippen(page,topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();await ausprobieren(article);await box.waitFor();}
   if(await page.evaluate(()=>typeof window.axe?.run==='function')){const violations=await page.evaluate(async()=>{const r=await window.axe.run('.people-evidence',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}));});assert.deepEqual(violations,[],'biography activity WCAG A/AA');}
   const large=await page.locator('.earth-app').evaluate(e=>e.classList.contains('large-reading'));const actualCaptionFont=await article.locator(topic.image?'.world-photo figcaption':'.people-illustration figcaption').first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));assert(actualCaptionFont>=(large?18.3:16),'biography media caption respects normal and larger text');
   const actualSVGFonts=await figure.locator('svg text').evaluateAll(es=>es.map(e=>({text:e.textContent,font:parseFloat(getComputedStyle(e).fontSize)*e.ownerSVGElement.getBoundingClientRect().width/e.ownerSVGElement.viewBox.baseVal.width})));assert(actualSVGFonts.every(row=>row.font>=(large?20:16)),'actual drawn label reading size');

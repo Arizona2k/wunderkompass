@@ -1,13 +1,13 @@
-// Wächter für die Wartehilfe vor gewollten Seitenwechseln (ladeanfragen in tests/browser/harness.mjs).
+// Wächter für die Wartehilfe vor gewollten Seitenwechseln (scripts/seitenwechsel.mjs, ladeanfragen in tests/browser/harness.mjs).
 // Bricht ein Neuladen oder Schließen ein Bild ab, das noch lädt, schlägt die Fehlerüberwachung an
 // (Chromium: net::ERR_ABORTED, Firefox: NS_BINDING_ABORTED, WebKit: Load request cancelled). Ein Bild aus einem nachgeladenen Programmteil startet
 // erst, wenn React den Bereich einblendet; React 19 blendet nachgeladene Teile bis zu 300 ms gesammelt ein, die alte
-// Ruhezeit von 250 ms war kürzer. (Der Anlass, das Riff-Foto in Firefox-Lauf 257, kam vermutlich von Firefox'
-// gespeicherter Kopie; siehe scripts/browser-errors.mjs.)
+// Ruhezeit von 250 ms war kürzer. Seit dem 24.11.2026 warten reload, goto und close von selbst (Tests unten).
 // Geprüft mit einer nachgebauten Seite, ohne Browser.
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {ladeanfragen, RUHEZEIT} from './browser/harness.mjs';
+import {beobachteAnfragen, installiere} from '../scripts/seitenwechsel.mjs';
 
 // So lange hält React 19 das Einblenden nachgeladener Teile höchstens zurück (FALLBACK_THROTTLE_MS).
 const REACT_SAMMELZEIT = 300;
@@ -106,4 +106,202 @@ test('zeichnet nach einem Dokumentwechsel noch einmal, bevor sie freigibt', asyn
 test('bricht mit klarer Meldung ab, wenn die Seite nicht mehr zeichnet', {timeout: 5000}, async () => {
   const {seite} = nachgebauteSeite({zeichnen: () => new Promise(() => {})});
   await assert.rejects(ladeanfragen(seite, {timeout: RUHEZEIT + 400})(), /nicht zur Ruhe gekommen/);
+});
+
+// Automatische Wartepunkte: nachgebaute Playwright-Klassen, je Test frisch, damit installiere() sie neu einhängen kann.
+// Die Ruhezeit ist hier kürzer (KURZ), damit der Wächter schnell bleibt; die echte prüfen die Tests oben.
+const KURZ = 100;
+function nachgebauteKlassen() {
+  const protokoll = [];
+  class Kontext {
+    constructor() { this.seiten = []; this.routen = []; }
+    pages() { return this.seiten; }
+    async close() { protokoll.push('kontext geschlossen'); for (const seite of this.seiten) seite.geschlossen = true; }
+    async route(url, handler) { this.routen.push(handler); }
+    async unroute(url, handler) { this.routen = this.routen.filter(h => h !== handler); }
+    async newPage() { const seite = new Seite(); this.seiten.push(seite); return seite; }
+  }
+  class Seite {
+    constructor(adresse = 'http://127.0.0.1/') { this.adresse = adresse; this.handler = {}; this.geschlossen = false; }
+    on(name, fn) { (this.handler[name] ??= []).push(fn); }
+    sende(name, anfrage) { this.handler[name]?.forEach(fn => fn(anfrage)); }
+    waitForTimeout(ms) { return new Promise(r => setTimeout(r, ms)); }
+    async evaluate() { await new Promise(r => setTimeout(r, 10)); }
+    isClosed() { return this.geschlossen; }
+    url() { return this.adresse; }
+    async reload() { protokoll.push('neu geladen'); }
+    async goto(url) { protokoll.push('goto ' + url); this.adresse = url; }
+    async close() { protokoll.push('geschlossen'); this.geschlossen = true; }
+    async route(url, handler) { (this.routen ??= []).push(handler); }
+    async unroute(url, handler) { this.routen = this.routen.filter(h => h !== handler); }
+  }
+  installiere(Kontext.prototype, Seite.prototype);
+  return {Kontext, Seite, protokoll};
+}
+const bild = url => ({resourceType: () => 'image', isNavigationRequest: () => false, url: () => url});
+
+test('reload wartet von selbst, bis eine laufende Anfrage fertig ist', async () => {
+  const {Seite, protokoll} = nachgebauteKlassen();
+  const seite = new Seite();
+  beobachteAnfragen(seite, {proof: {errors: []}, ruhezeit: KURZ});
+  const anfrage = bild('http://127.0.0.1/world/elefant.webp');
+  seite.sende('request', anfrage);
+  let fertig = 0;
+  setTimeout(() => { seite.sende('requestfinished', anfrage); fertig = Date.now(); }, 200);
+  await seite.reload();
+  assert.ok(fertig && fertig <= Date.now(), 'reload kam, bevor das Bild fertig war');
+  assert.deepEqual(protokoll, ['neu geladen']);
+});
+
+test('eine Anfrage, die ein route-Handler des Tests festhält, hält das Neuladen nicht auf', async () => {
+  const {Kontext, Seite, protokoll} = nachgebauteKlassen();
+  const kontext = new Kontext(), seite = new Seite();
+  kontext.seiten.push(seite);
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof, timeout: 1500, ruhezeit: KURZ});
+  let freigeben;
+  const halten = async eingriff => { await new Promise(r => { freigeben = r; }); return eingriff; };
+  await kontext.route('**/held', halten);
+  const anfrage = bild('http://127.0.0.1/held');
+  seite.sende('request', anfrage);
+  const behandelt = kontext.routen[0]({request: () => anfrage});
+  await seite.reload();
+  assert.deepEqual(proof.errors, [], 'auf eine festgehaltene Anfrage darf niemand warten');
+  assert.deepEqual(protokoll, ['neu geladen']);
+  freigeben();
+  await behandelt;
+  await kontext.unroute('**/held', halten);
+  assert.equal(kontext.routen.length, 0, 'unroute muss den gehüllten Handler finden');
+});
+
+test('kommt die Seite vor dem Schließen nicht zur Ruhe, steht das im Bericht, und sie schließt trotzdem', async () => {
+  const {Seite, protokoll} = nachgebauteKlassen();
+  const seite = new Seite();
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof, tag: '[chromium] ', timeout: 300});
+  seite.sende('request', bild('http://127.0.0.1/photos/haengt.jpg'));
+  await seite.close();
+  assert.deepEqual(protokoll, ['geschlossen']);
+  assert.equal(proof.errors.length, 1);
+  assert.match(proof.errors[0], /^\[chromium\] Vor dem gewollten Seitenwechsel \(Schließen\): Anfragen laufen noch .*haengt\.jpg/);
+});
+
+test('der erste goto einer frischen Seite wartet nicht, ein späterer schon', async () => {
+  const {Seite} = nachgebauteKlassen();
+  const seite = new Seite('about:blank');
+  beobachteAnfragen(seite, {proof: {errors: []}, ruhezeit: KURZ});
+  let start = Date.now();
+  await seite.goto('http://127.0.0.1/');
+  assert.ok(Date.now() - start < KURZ, 'eine leere Seite hat nichts abzubrechen');
+  start = Date.now();
+  await seite.goto('http://127.0.0.1/#updates');
+  assert.ok(Date.now() - start >= KURZ, 'eine geladene Seite wartet die Ruhezeit ab');
+});
+
+test('context.close wartet auf jede überwachte Seite des Kontexts', async () => {
+  const {Kontext, Seite, protokoll} = nachgebauteKlassen();
+  const kontext = new Kontext(), a = new Seite(), b = new Seite();
+  kontext.seiten.push(a, b);
+  beobachteAnfragen(a, {proof: {errors: []}, ruhezeit: KURZ});
+  beobachteAnfragen(b, {proof: {errors: []}, ruhezeit: KURZ});
+  const anfrage = bild('http://127.0.0.1/world/eisbaer.webp');
+  b.sende('request', anfrage);
+  let fertig = 0;
+  setTimeout(() => { b.sende('requestfinished', anfrage); fertig = Date.now(); }, 200);
+  await kontext.close();
+  assert.ok(fertig, 'der Kontext schloss, während auf der zweiten Seite noch ein Bild lud');
+  assert.deepEqual(protokoll, ['kontext geschlossen']);
+});
+
+test('Schließen zählt die Ruhezeit nur ab der letzten Anfrage: eine lange ruhige Seite schließt sofort', async () => {
+  const {Seite} = nachgebauteKlassen();
+  const ruhig = new Seite();
+  beobachteAnfragen(ruhig, {proof: {errors: []}, ruhezeit: KURZ});
+  const fertigeAnfrage = bild('http://127.0.0.1/world/elefant.webp');
+  ruhig.sende('request', fertigeAnfrage);
+  ruhig.sende('requestfinished', fertigeAnfrage);
+  await warte(KURZ + 50);
+  const start = Date.now();
+  await ruhig.close();
+  assert.ok(Date.now() - start < KURZ, 'war die Seite länger ruhig, schließt sie nach zwei Bildwechseln');
+});
+
+test('Schließen kurz nach einem Programmteil wartet auch auf Bilder, die React erst danach einblendet', async () => {
+  const {Seite} = nachgebauteKlassen();
+  const seite = new Seite();
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof});
+  const programmteil = {resourceType: () => 'script', isNavigationRequest: () => false, url: () => 'http://127.0.0.1/assets/knowledge-book.js'};
+  seite.sende('request', programmteil);
+  seite.sende('requestfinished', programmteil);
+  // React blendet bis zu 300 ms später ein; erst dann startet das Bild.
+  const bildAnfrage = bild('http://127.0.0.1/photos/buch.webp');
+  let fertig = 0;
+  setTimeout(() => seite.sende('request', bildAnfrage), REACT_SAMMELZEIT);
+  setTimeout(() => { seite.sende('requestfinished', bildAnfrage); fertig = Date.now(); }, REACT_SAMMELZEIT + 100);
+  await seite.close();
+  assert.ok(fertig && fertig <= Date.now(), 'das Schließen kam, bevor das spät eingeblendete Bild fertig war');
+  assert.deepEqual(proof.errors, []);
+});
+
+test('Schließen wartet auf eine laufende Anfrage', async () => {
+  const {Seite} = nachgebauteKlassen();
+  const ladend = new Seite();
+  beobachteAnfragen(ladend, {proof: {errors: []}, ruhezeit: KURZ});
+  const anfrage = bild('http://127.0.0.1/world/eisbaer.webp');
+  ladend.sende('request', anfrage);
+  let fertig = 0;
+  setTimeout(() => { ladend.sende('requestfinished', anfrage); fertig = Date.now(); }, 200);
+  await ladend.close();
+  assert.ok(fertig && fertig <= Date.now(), 'eine laufende Anfrage wird vor dem Schließen fertig');
+});
+
+test('ohne Bericht wirft der Wartepunkt nicht: Meldung in console.error, und der Kontext schließt trotzdem', async () => {
+  const {Kontext, protokoll} = nachgebauteKlassen();
+  const kontext = new Kontext();
+  const seite = await kontext.newPage();
+  beobachteAnfragen(seite, {timeout: 300, ruhezeit: KURZ});
+  seite.sende('request', bild('http://127.0.0.1/photos/haengt.jpg'));
+  const meldungen = [], alt = console.error;
+  console.error = meldung => meldungen.push(meldung);
+  try {
+    await kontext.close();
+  } finally {
+    console.error = alt;
+  }
+  assert.deepEqual(protokoll, ['kontext geschlossen']);
+  assert.equal(meldungen.length, 1);
+  assert.match(meldungen[0], /^Vor dem gewollten Seitenwechsel \(Schließen\): Anfragen laufen noch .*haengt\.jpg/);
+});
+
+test('nach dem ersten Zeitlimit wartet dieselbe Seite nicht noch einmal (ein Fehler im Bericht reicht)', async () => {
+  const {Seite, protokoll} = nachgebauteKlassen();
+  const seite = new Seite();
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof, timeout: 300, ruhezeit: KURZ});
+  seite.sende('request', bild('http://127.0.0.1/photos/haengt.jpg'));
+  await seite.reload();
+  const start = Date.now();
+  await seite.reload();
+  await seite.close();
+  assert.ok(Date.now() - start < 200, 'nach dem ersten Scheitern darf kein Wartepunkt mehr das Zeitlimit abwarten');
+  assert.equal(proof.errors.length, 1);
+  assert.deepEqual(protokoll, ['neu geladen', 'neu geladen', 'geschlossen']);
+});
+
+test('jede neue Seite wird gleich beobachtet; der Bericht kommt mit der Überwachung nach, samt Browser-Name', async () => {
+  const {Kontext} = nachgebauteKlassen();
+  const seite = await new Kontext().newPage();
+  const anfrage = bild('http://127.0.0.1/world/elefant.webp');
+  seite.sende('request', anfrage);
+  let fertig = 0;
+  setTimeout(() => { seite.sende('requestfinished', anfrage); fertig = Date.now(); }, 150);
+  beobachteAnfragen(seite, {ruhezeit: KURZ});
+  await seite.reload();
+  assert.ok(fertig && fertig <= Date.now(), 'auch ohne Überwachung wartet reload auf eine Anfrage, die vor der Überwachung startete');
+  const proof = {errors: []};
+  beobachteAnfragen(seite, {proof, tag: '[webkit] ', timeout: 300});
+  seite.sende('request', bild('http://127.0.0.1/photos/haengt.jpg'));
+  await seite.close();
+  assert.match(proof.errors[0] ?? '', /^\[webkit\] Vor dem gewollten Seitenwechsel \(Schließen\)/);
 });

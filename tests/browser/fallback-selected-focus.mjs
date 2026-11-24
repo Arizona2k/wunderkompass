@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
 import {geoArea,geoOrthographic,geoPath} from 'd3-geo';
 import {SAVE_KEY} from '../../app/progress-storage.ts';
@@ -17,7 +18,7 @@ async function actualCamera(page,center){
 export async function fallbackSelectedFocusAndBookReturn(page,base,{shots=null,engine='chromium',width=page.viewportSize().width,native=false,captureCDP=null}={}){
  await page.goto(base+'/#book');await page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
  const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).progress,SAVE_KEY),before=await saved();
- async function select(){await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true}).fill(place.name);await page.locator('[cmdk-item][data-value="place:daintree"]').click();await page.locator('.info-card').getByRole('heading',{name:place.name,exact:true}).waitFor();}
+ async function select(){await inSucheTippen(page,place.name);await page.locator('[cmdk-item][data-value="place:daintree"]').click();await page.locator('.info-card').getByRole('heading',{name:place.name,exact:true}).waitFor();}
  await select();const direct=await actualCamera(page,{lat:place.lat,lon:place.lon});assert(direct.actualAustralianBounds.width>0);
  const opener=page.locator('[data-route-focus="globe-nature-book-daintree"]');await opener.focus();await page.keyboard.press('Enter');await page.locator('[data-nature-study-body="daintree"]').waitFor();await page.goBack();await opener.waitFor();
  await page.waitForFunction(()=>document.activeElement?.getAttribute('data-route-focus')==='globe-nature-book-daintree');assert.equal(await page.locator('.info-card h2').innerText(),place.name);const returned=await actualCamera(page,{lat:place.lat,lon:place.lon});assert.equal(returned.actualAustralianPath,direct.actualAustralianPath);

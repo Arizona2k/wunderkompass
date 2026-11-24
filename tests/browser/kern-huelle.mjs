@@ -2,7 +2,7 @@
 // Die Grundlage läuft schmal mit Touch (320 × 568) und breit (1440 × 900),
 // die Hülle bei 320 und 390 px mit Touch sowie bei 768 und 1440 px.
 import assert from 'node:assert/strict';
-import {withPage, ready, ladeanfragen} from './harness.mjs';
+import {withPage, ready, ladeanfragen, klickNachRuhe} from './harness.mjs';
 import {homeContrast} from './discovery-central.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
@@ -225,7 +225,8 @@ async function fuss(page, width) {
   assert.equal(await neu.getAttribute('aria-current'), null, `fuss ${width}: „Was ist neu?“ ist außerhalb der Seite als aktuell markiert`);
   const eltern = fussZeile.getByRole('button', {name: 'Für Eltern', exact: true});
   assert.equal(await eltern.count(), 1, `fuss ${width}: Knopf „Für Eltern“ fehlt`);
-  await eltern.click();
+  // Erst klicken, wenn die Startseite fertig geladen hat (warum: siehe neuigkeiten).
+  await klickNachRuhe(eltern);
   const dialog = page.locator('.parent-guide');
   await dialog.waitFor();
   await page.keyboard.press('Escape');
@@ -585,7 +586,11 @@ async function platzhalterPassen(page, wo) {
 
 // „Was ist neu?“: Titel ruhig fokussiert, neueste Einträge oben, ältere unter „Früher“ eingeklappt.
 async function neuigkeiten(page, width) {
-  await page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true}).click();
+  // Erst klicken, wenn die Startseite fertig geladen hat. Kommen ihre nachgeladenen Teile, rutscht der Fuß um über
+  // 1000 px nach unten. Fiel das zwischen Drücken und Loslassen, traf das Loslassen ein Bild, und der Klick verpuffte;
+  // Playwright prüft nur, was beim Drücken unter dem Zeiger liegt (CI-Lauf 45397127026, Firefox, 24.11.2026;
+  // nachgestellt mit verzögertem Nachladen: ohne dieses Warten 8 von 8 Klicks verpufft, mit Warten keiner).
+  await klickNachRuhe(page.getByRole('contentinfo').getByRole('link', {name: 'Was ist neu?', exact: true}));
   const titel = page.locator('#updates-title');
   await titel.waitFor();
   await page.waitForFunction(() => document.activeElement?.id === 'updates-title', null, {polling: 100});

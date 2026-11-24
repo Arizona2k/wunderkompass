@@ -3,6 +3,23 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil B, Vorarbeiten: keine toten Knöpfe, schnellerer Start, ruhigere Tests
+
+Bevor die Spiele kniffliger werden (Teil B), drei Vorarbeiten. Für Kinder sichtbar:
+
+- **Kein Knopf mehr ins Leere:** Auf dem Globus zeigten rund 390 Orte, zum Beispiel alle Hauptstädte, den Knopf „Im Naturatlas weiterdenken“. Das Wissensbuch kannte sie aber nicht und sagte nur „Diesen Naturort gibt es hier nicht.“ Jetzt steht der Knopf nur bei Orten, die der Naturatlas wirklich erklärt.
+- **Schnellerer Start:** Beim ersten Öffnen lädt die Seite 58 KB weniger. Ortssuche, Auswahllisten und der Tag-Regler kommen erst, wenn man den Globus oder das Quiz öffnet; offline sind sie trotzdem da.
+- **Keine weiße Seite mehr:** Lädt ein Teil der Seite einmal nicht (zum Beispiel weil das WLAN gerade weg ist), steht an der Stelle „… braucht noch einen Versuch“ mit einem Knopf zum Neuladen. Der Rest bleibt bedienbar. Vorher konnte in so einem Fall die ganze Seite weiß werden.
+
+Hinter den Kulissen:
+
+- **Linkwächter:** Ein neuer Test prüft bei jedem PR, dass jeder feste Verweis der Seite zu etwas Vorhandenem führt. Er fand den Globus-Knopf oben und einen toten Wortverweis im Wissensbuch („Wolke“). [Landkarte aller Verweise](docs/entwurf/2026-11-24-linkwaechter-landkarte.md).
+- **Tests warten von selbst:** Lädt ein Test die Seite neu, ruft eine neue Adresse auf oder schließt sie, wartet er jetzt an einer zentralen Stelle, bis nichts mehr lädt. Bisher musste jeder Test selbst daran denken; das war fünfmal schiefgegangen und erst spät aufgefallen.
+- **Suche im Test:** Alle Tests, die in die Suche tippen und einen Treffer wählen, nutzen jetzt denselben sicheren Baustein.
+- **Geprüft von zwei Helfern:** Technik ([Bericht](docs/entwurf/2026-11-24-teil-b-vorarbeiten-technik-pruefung.md)) und Code ([Bericht](docs/entwurf/2026-11-24-teil-b-vorarbeiten-code-pruefung.md)). Der Code-Helfer fand die weiße Seite oben; ein neuer Test lässt das Nachladen absichtlich scheitern.
+- **Ein Klick, der still verpuffte:** In der Firefox-Prüfung auf GitHub klickte ein Test auf „Was ist neu?“ im Fuß, kurz bevor nachgeladene Teile der Startseite den Fuß weit nach unten schoben. Das Loslassen traf dann ein Bild, und nichts passierte. Jetzt warten alle Klicks in den Fuß, bis die Seite fertig geladen hat (`klickNachRuhe`). Dass der Fuß überhaupt so springt, steht im BACKLOG ([Bericht](docs/entwurf/2026-11-24-teil-b-vorarbeiten-technik-pruefung-spaeter-fund.md)).
+- **Messwerte:** Funde vor dem PR: 13 (Linkwächter: 2 tote Ziele auf der Seite; `technik-pruefer`: 4 von 7 Befunden waren Fehler; `code-pruefer`: 7 von 9, darunter die weiße Seite) · späte Funde: 1 (Engine-Schnellprüfung Firefox, CI-Lauf 45397127026, nur im Test; die Vollprüfung auf `c84d1e2` fand keinen) · Dauer: rund 2¼ Stunden (Beginn gegen 11:40 UTC; Merge direkt nach grüner CI dieses Unterlagen-Commits, gegen 14:00 UTC).
+
 ## 24.11.2026 – Stufen-Feinschliff: jede Stufe mit Ziel
 
 Aus dem ersten Spieltest (Rolle am Handy, kein Kindertest). Für Kinder sichtbar:

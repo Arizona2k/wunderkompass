@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';import {captureNativeViewport} from './native-screenshot.mjs';import {KARTE,ERKLAERTE_PAARE,ausprobieren,ausprobierenAuf,frageDurchspielen,lesetexte,mehrErfahren} from './karte-hilfen.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 export const buildingOriginalTopics=catalog.filter(t=>t.building?.exploration);assert.equal(buildingOriginalTopics.length,8);
@@ -62,7 +63,7 @@ export async function buildingSourceView(page,{topics,width,shots,engine='chromi
  assert.ok(Array.isArray(topics)&&topics.length>0&&topics.every(t=>buildingOriginalTopics.some(original=>original.id===t.id)));assert.equal(new Set(topics.map(t=>t.id)).size,topics.length);
  const initial=await page.evaluate(()=>location.hash),views=[];let complete=false;
  try{for(const t of topics){
-  await page.evaluate(()=>location.hash='world');await page.locator('.world-view .world-choice').first().waitFor();await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill(t.title);await page.locator('[role="option"][data-value="topic:'+t.id+'"]').click();await page.getByRole('dialog').waitFor({state:'hidden'});
+  await page.evaluate(()=>location.hash='world');await page.locator('.world-view .world-choice').first().waitFor();await inSucheTippen(page,t.title);await page.locator('[role="option"][data-value="topic:'+t.id+'"]').click();await page.getByRole('dialog').waitFor({state:'hidden'});
   const article=page.locator(KARTE+'.wissenskarte-welt-buildings');await article.getByRole('heading',{name:t.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+t.id);
   // Lesetexte an ihren Orten der neuen Karte; die Ortskarte steht in „Mehr erfahren“ und wird offen geprüft.
   await lesetexte(article,t);await assertBuildingLocationMap(article,t);

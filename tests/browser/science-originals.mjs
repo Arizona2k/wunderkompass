@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
@@ -143,8 +144,7 @@ export async function assertScienceReciprocalLink(page,sourceId,targetId,explain
 }
 
 async function scienceSourcePaths(page,topic){
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
- await page.getByRole('combobox').fill(topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();
+ await inSucheTippen(page,topic.title);await page.getByRole('option').filter({hasText:topic.title}).first().click();
  await page.getByRole('heading',{name:topic.title,exact:true}).waitFor();assert.equal(new URL(page.url()).hash,'#world/topic/'+topic.id);
  // Weitere Verbindungen liegen in „Mehr erfahren“; nach dem Zurück öffnet die Seite es selbst wieder.
  await mehrErfahren(page.locator(KARTE));
