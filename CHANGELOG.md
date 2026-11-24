@@ -3,6 +3,27 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil B, zweiter Teil: Kreuz und quer und die Klassik-Spiele mit Stufen
+
+Aufgabe 9 von Teil B „Spiele kniffliger“ (PR 2 von 4). Für Kinder sichtbar:
+
+- **Aus der Wissens-Challenge wird „Kreuz und quer“.** Das Spiel startet sofort auf deiner Stufe aus dem Pass, ohne die Auswahl „Leicht, Mittel, Schwer“. Als Experte kommen zuerst die wenigen echten Experten-Fragen (höchstens drei je Runde), dann Profi-Fragen. Das sagt das Spiel auch.
+- **„Stimmt das wirklich?“ hat 26 neue Fragen** zu Wetter, Wasser, Meer, Pflanzen, Pilzen und Luft: 8 für Entdecker, 12 für Profis, 6 für Experten. Experte ist jetzt echt. Sechs alte Fragen ruhen (doppelt oder ohne passende Karte).
+- **„Wer lebt wo?“ und „Stimmt das wirklich?“ starten auch gleich auf deiner Stufe.** Die Stufe lässt sich oben ändern, dann beginnt sofort eine neue Runde. Eine angefangene Runde, auch eine aus der Zeit von „Leicht, Mittel, Schwer“, läuft mit ihrer Stufe zu Ende.
+- **Keine Zähler mehr:** „… davon beim ersten Versuch“, „Unsichere Aufgaben wiederholen“ und die Versuche beim Memory sind weg. Was beim ersten Mal nicht geklappt hat, kommt in einer späteren Runde wieder.
+- **„Spielen“ in der Leiste führt immer zur Spiele-Übersicht**, auch mitten im Spiel oder nach einem Abstecher zu einer Karte. Dein Spielstand bleibt, „Fortsetzen“ bringt dich zurück.
+- **Stufen-Vorschlag in allen Spielen:** Wie auf den Karten schlägt ein Spiel nach mehreren richtigen oder falschen Antworten eine andere Stufe vor, höchstens einmal je Runde.
+- **„Neu mischen“** behält deinen Spielstempel und gibt dir nicht gleich dieselbe Runde noch einmal.
+- Neues Vorschaubild von „Kreuz und quer“ auf der Startseite und ein Eintrag in „Was ist neu?“.
+
+Hinter den Kulissen:
+
+- **Ratemuster-Test für verräterische Wörter** (`tests/ratemuster.test.mjs`): findet Wörter, die nur in der richtigen Antwort stehen. Zwei bekannte Funde (Nahrung als Profi, Technik als Entdecker) stehen als Ausnahmen mit BACKLOG-Verweis und dürfen nur schrumpfen.
+- **Alte Spielstände bleiben:** Leicht = Entdecker, Mittel und Schwer = Profi (auch bei Kreuz und quer). Zwei richtige Antworten wurden umformuliert; eine gelöste alte Runde bleibt gelöst (`ALTE_ANTWORT`). Ein Stufen-Vorschlag, den ein Spiel nicht zeigen darf, verbraucht den Vorschlag der Runde nicht (`nachAntwort` in `app/kern/stufe.ts`).
+- **Tests:** neue Unit-Tests für alte Runden, „Neu mischen“, Stufen-Vorschlag und alte Stufen; im Browser-Test `playground` die Leiste mitten im Spiel (direkt und über einen anderen Bereich), der Fokus nach „Noch eine Runde“ und „Neu mischen“ mit `vorige` und `geschafft`.
+- Entscheidungen: [Teil B, Punkte 19 bis 33](docs/entwurf/2026-11-24-teil-b-entscheidungen.md). Berichte: [Code-Prüfung](docs/entwurf/2026-11-24-teil-b-pr2-code-pruefung.md), [Oberflächentexte](docs/entwurf/2026-11-24-teil-b-pr2-oberflaechentexte.md) und ihre [Kinder-Redaktion](docs/entwurf/2026-11-24-teil-b-pr2-oberflaechentexte-kinderredaktion.md), Entwurf „Stimmt das wirklich?“ mit [Fakten-](docs/entwurf/2026-11-24-stimmt-das-wirklich-entwurf-faktenpruefung.md), [Sprach-](docs/entwurf/2026-11-24-stimmt-das-wirklich-entwurf-kinderredaktion.md) und [Stufen-Prüfung](docs/entwurf/2026-11-24-stimmt-das-wirklich-entwurf-stufenpruefung.md) und [Nachprüfung](docs/entwurf/2026-11-24-stimmt-das-wirklich-nachpruefung.md). Nebenbei geprüft für PR 3: Rekorde der Natur, Wetter und Klima, Sortiere die Zeit (Fassung 2) und ein Experten-Nachtrag für „Stimmt das wirklich?“.
+- **Messwerte:** VORLÄUFIG
+
 ## 24.11.2026 – Bilder-Strang: echte Fotos statt KI-Zeichnungen
 
 Hinweis des Nutzers: „Teilweise sind die Fotos nicht richtig, teilweise fehlen Fotos.“ Regel seitdem: immer zuerst freie Originalfotos, KI nur, wenn es nachweislich keines gibt. Für Kinder sichtbar:
