@@ -1,0 +1,766 @@
+{
+ "spiel": {
+  "name": "Rekorde der Natur",
+  "untertitel": "Am größten, am schnellsten, am tiefsten: Rate die Rekorde!",
+  "tipp_spiel": "Achte genau darauf: Geht es um Größe, Tempo, Tiefe, Kälte oder Wasser?",
+  "experte_hinweis": "In dieser Runde kommen Knobelfragen und Profi-Fragen gemischt.",
+  "ersetzt": [
+   "world:records",
+   "extra:treasure"
+  ]
+ },
+ "regeln": {
+  "runde": {
+   "entdecker": 5,
+   "profi": 8,
+   "experte": 8
+  },
+  "antworten": {
+   "entdecker": "richtig + falsch[0] + falsch[1]",
+   "profi": "richtig + alle drei falsch",
+   "experte": "richtig + alle drei falsch"
+  },
+  "experte": "höchstens 3 Aufgaben mit stufe experte je Runde, aufgefüllt nur aus dem Profi-Vorrat, Ausschlussliste beachten (Entscheidungsliste C1)",
+  "vorrat_feld": "vorrat nennt, in welchen Stufen eine Aufgabe gezogen werden darf"
+ },
+ "nie_zusammen": [
+  [
+   "rekord-fairer-vergleich",
+   "rekord-sturzflug"
+  ],
+  [
+   "rekord-messregel-berg",
+   "rekord-hoechster-berg"
+  ],
+  [
+   "rekord-everest-im-graben",
+   "rekord-tiefste-stelle"
+  ],
+  [
+   "rekord-everest-im-graben",
+   "rekord-hoechster-berg"
+  ],
+  [
+   "rekord-amazonas-und-nil",
+   "rekord-wasserreichster-fluss"
+  ],
+  [
+   "rekord-eis-wueste",
+   "rekord-groesste-wueste"
+  ],
+  [
+   "rekord-langes-rennen",
+   "animal-cheetah"
+  ],
+  [
+   "rekord-langes-rennen",
+   "rekord-groesster-vogel"
+  ],
+  [
+   "animal-blue-whale",
+   "rekord-groesster-fisch"
+  ]
+ ],
+ "aufgaben": [
+  {
+   "id": "animal-blue-whale",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker",
+    "profi"
+   ],
+   "frage": "Welches ist das größte heute lebende Tier?",
+   "richtig": "Blauwal",
+   "falsch": [
+    "Savannenelefant",
+    "Giraffe",
+    "Walhai"
+   ],
+   "tipp": "Stell dir jedes Tier neben einem Bus vor. Welches ist am längsten?",
+   "warum": "Blauwale sind die größten Tiere, die heute leben. Die größten werden etwa 30 Meter lang. Das ist länger als ein 25-Meter-Becken im Schwimmbad. Auch der größte Fisch, der Walhai, ist viel kleiner.",
+   "karte": "animal-blue-whale",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "NOAA Fisheries: Blue Whale",
+     "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+    },
+    {
+     "titel": "Georgia Aquarium: Whale Shark",
+     "url": "https://www.georgiaaquarium.org/animal/whale-shark/"
+    }
+   ],
+   "alt_id": "animal-blue-whale"
+  },
+  {
+   "id": "animal-african-savanna-elephant",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker",
+    "profi"
+   ],
+   "frage": "Welches ist das größte heute lebende Landtier?",
+   "richtig": "Savannenelefant",
+   "falsch": [
+    "Breitmaulnashorn",
+    "Flusspferd",
+    "Waldelefant"
+   ],
+   "tipp": "Denk an das Tier mit den riesigen Ohren.",
+   "warum": "Der Savannenelefant ist das größte und schwerste Tier an Land. Ein Männchen wiegt im Schnitt etwa 6.000 Kilogramm. So viel wiegen etwa 80 Erwachsene zusammen. Auch sein Verwandter, der Waldelefant, ist kleiner.",
+   "karte": "animal-african-savanna-elephant",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "WWF Deutschland: Artenlexikon Afrikanischer Savannenelefant",
+     "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant"
+    }
+   ],
+   "alt_id": "animal-african-savanna-elephant"
+  },
+  {
+   "id": "animal-cheetah",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker",
+    "profi"
+   ],
+   "frage": "Welches Tier kann am schnellsten rennen?",
+   "richtig": "Gepard",
+   "falsch": [
+    "Giraffe",
+    "Löwe",
+    "Strauß"
+   ],
+   "tipp": "Gesucht ist ein schlanker Jäger aus der Savanne.",
+   "warum": "Ein Gepard rennt kurz etwa 100 Kilometer pro Stunde. So schnell darf ein Auto auf der Landstraße fahren. Lange hält er das nicht durch. Auch ein Strauß ist langsamer: Er schafft etwa 70 Kilometer pro Stunde.",
+   "karte": "animal-cheetah",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "Smithsonian's National Zoo: Cheetah",
+     "url": "https://nationalzoo.si.edu/animals/cheetah"
+    },
+    {
+     "titel": "San Diego Zoo Wildlife Alliance: Ostrich",
+     "url": "https://animals.sandiegozoo.org/animals/ostrich"
+    },
+    {
+     "titel": "Straßenverkehrs-Ordnung § 3 Geschwindigkeit (Bundesamt für Justiz)",
+     "url": "https://www.gesetze-im-internet.de/stvo_2013/__3.html"
+    }
+   ],
+   "alt_id": "animal-cheetah"
+  },
+  {
+   "id": "animal-giraffe",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker"
+   ],
+   "frage": "Welches heute lebende Landtier ist am höchsten?",
+   "richtig": "Giraffe",
+   "falsch": [
+    "Elefant",
+    "Dromedar",
+    "Strauß"
+   ],
+   "tipp": "Dieses Tier frisst Blätter ganz oben aus den Bäumen.",
+   "warum": "Große Giraffen-Männchen sind vom Boden bis zum Kopf über 5 Meter hoch. Drei Erwachsene übereinander wären etwa so hoch. Ein Elefant ist schwerer, aber nicht so hoch.",
+   "karte": "animal-giraffe",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "San Diego Zoo Wildlife Alliance: Giraffe",
+     "url": "https://animals.sandiegozoo.org/animals/giraffe"
+    },
+    {
+     "titel": "WWF Deutschland: Artenlexikon Afrikanischer Savannenelefant",
+     "url": "https://www.wwf.de/themen-projekte/artenlexikon/afrikanischer-savannenelefant"
+    }
+   ],
+   "alt_id": "animal-giraffe"
+  },
+  {
+   "id": "rekord-hoechster-berg",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker"
+   ],
+   "frage": "Welcher Berg ist der höchste der Welt?",
+   "richtig": "Mount Everest",
+   "falsch": [
+    "Zugspitze",
+    "Kilimandscharo",
+    "K2"
+   ],
+   "tipp": "Er liegt weit weg in Asien, nicht in Europa oder Afrika.",
+   "warum": "Der Mount Everest ist etwa 8.849 Meter hoch, gemessen ab dem Meer. Das ist so hoch wie etwa 27 Eiffeltürme übereinander. Der zweithöchste Berg heißt K2.",
+   "karte": null,
+   "ort": "everest",
+   "quellen": [
+    {
+     "titel": "NPR (8.12.2020): Everest Gets A Growth Spurt As China, Nepal Revise Official Elevation Upward (Textfassung)",
+     "url": "https://text.npr.org/944152693"
+    },
+    {
+     "titel": "NASA Earth Observatory: K2 (8000-Meter Peaks)",
+     "url": "https://earthobservatory.nasa.gov/features/8000MeterPeaks/page14.php"
+    },
+    {
+     "titel": "Tour Eiffel: From 300 to 330 meters, the story of the Tower's height",
+     "url": "https://www.toureiffel.paris/en/news/history-and-culture/300-330-meters-story-towers-height"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-groesster-vogel",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker",
+    "profi"
+   ],
+   "frage": "Welcher heute lebende Vogel ist der größte und schwerste?",
+   "richtig": "Strauß",
+   "falsch": [
+    "Schwan",
+    "Kaiserpinguin",
+    "Emu"
+   ],
+   "tipp": "Dieser Vogel kann nicht fliegen, aber sehr schnell rennen.",
+   "warum": "Der Strauß ist der größte und schwerste Vogel, der heute lebt. Ein Männchen wiegt etwa 100 bis 130 Kilogramm. Das ist mehr, als ein Erwachsener wiegt.",
+   "karte": "animal-ostrich",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "San Diego Zoo Wildlife Alliance: Ostrich",
+     "url": "https://animals.sandiegozoo.org/animals/ostrich"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-kaeltester-ort",
+   "stufe": "entdecker",
+   "vorrat": [
+    "entdecker"
+   ],
+   "frage": "Wo wurde die kälteste Luft auf der Erde gemessen?",
+   "richtig": "Antarktis",
+   "falsch": [
+    "Sahara",
+    "Deutschland",
+    "Nordpol"
+   ],
+   "tipp": "Dort leben Kaiserpinguine. Es liegt ganz im Süden der Erde.",
+   "warum": "In der Antarktis zeigte ein Thermometer einmal minus 89 Grad. Das war vor über 40 Jahren. Ein Gefrierfach ist mit minus 18 Grad viel wärmer.",
+   "karte": "animal-emperor-penguin",
+   "ort": "vostok",
+   "quellen": [
+    {
+     "titel": "WMO: Tabelle der Temperaturrekorde (in der App als „WMO-Tabelle vom 31. Juli 2025“ geführt, app/precision-source-notes.ts)",
+     "url": "https://wmo.int/sites/default/files/2025-07/Table_Records_25Jul2025.pdf"
+    },
+    {
+     "titel": "Verbraucherzentrale: Gefrierschrank und Gefriertruhe (−18 °C)",
+     "url": "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/gefrierschrank-und-gefriertruhe-worauf-muss-ich-beim-kauf-achten-38681"
+    },
+    {
+     "titel": "NASA Science Kids: Which pole is colder?",
+     "url": "https://science.nasa.gov/kids/earth/which-pole-is-colder/"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-groesster-ozean",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Welcher Ozean ist der größte?",
+   "richtig": "Pazifischer Ozean",
+   "falsch": [
+    "Atlantischer Ozean",
+    "Arktischer Ozean",
+    "Indischer Ozean"
+   ],
+   "tipp": "Er liegt zwischen Amerika und Asien.",
+   "warum": "Der Pazifik ist mit Abstand der größte Ozean. Er ist sogar größer als alles Land der Erde zusammen.",
+   "karte": null,
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "NOAA Ocean Exploration: How big is the Pacific Ocean?",
+     "url": "https://oceanexplorer.noaa.gov/facts/pacific-size.html"
+    },
+    {
+     "titel": "NOAA Ocean Service: How big is the Pacific Ocean?",
+     "url": "https://oceanservice.noaa.gov/facts/pacific.html"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-tiefste-stelle",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Wo liegt die tiefste bekannte Stelle im Meer?",
+   "richtig": "Marianengraben",
+   "falsch": [
+    "Mittelmeer",
+    "Schwarzes Meer",
+    "Puerto-Rico-Graben"
+   ],
+   "tipp": "Die tiefsten Stellen sind lange, schmale Rinnen im Meeresboden.",
+   "warum": "Im Marianengraben ist das Meer an einer Stelle etwa 11 Kilometer tief. Der Mount Everest hätte darin Platz.",
+   "karte": null,
+   "ort": "mariana",
+   "quellen": [
+    {
+     "titel": "NOAA Ocean Exploration: How deep is the ocean?",
+     "url": "https://oceanexplorer.noaa.gov/facts/ocean-depth.html"
+    },
+    {
+     "titel": "Woods Hole Oceanographic Institution: Ocean Trenches",
+     "url": "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/seafloor-below/ocean-trenches"
+    },
+    {
+     "titel": "National Geographic Education: Ocean Trench",
+     "url": "https://education.nationalgeographic.org/resource/ocean-trench/"
+    },
+    {
+     "titel": "NPR (8.12.2020): Everest-Höhe (Textfassung)",
+     "url": "https://text.npr.org/944152693"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-wasserreichster-fluss",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Welcher Fluss bringt das meiste Wasser ins Meer?",
+   "richtig": "Amazonas",
+   "falsch": [
+    "Mississippi",
+    "Rhein",
+    "Nil"
+   ],
+   "tipp": "Viel Wasser hat ein Fluss dort, wo es sehr viel regnet.",
+   "warum": "Der Amazonas bringt mehr Wasser ins Meer als jeder andere Fluss. Es ist etwa 80-mal so viel wie beim Nil. Dabei ist der Nil auch sehr lang.",
+   "karte": null,
+   "ort": "amazon",
+   "quellen": [
+    {
+     "titel": "NASA Earth Observatory: A Global Accounting of Earth's Rivers",
+     "url": "https://earthobservatory.nasa.gov/images/152742/global-accounting-of-earths-rivers"
+    },
+    {
+     "titel": "FAO: Nile Basin, mittlerer Jahresabfluss 84 km³ bei Dongola/Assuan (PDF)",
+     "url": "https://www.fao.org/4/an530e/an530e.pdf"
+    },
+    {
+     "titel": "USGS (1967): Amazon – measuring a mighty river",
+     "url": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-groesste-wueste",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "In einer Wüste fällt kaum Regen oder Schnee. Welche Wüste ist die größte?",
+   "richtig": "Antarktis",
+   "falsch": [
+    "Sahara",
+    "Arabische Wüste",
+    "Gobi"
+   ],
+   "tipp": "Eine Wüste muss nicht heiß sein.",
+   "warum": "Im Inneren der Antarktis fällt sehr wenig Schnee. Darum ist sie eine Wüste, die größte der Erde. Sie ist etwa anderthalbmal so groß wie die Sahara. Die Sahara ist die größte heiße Wüste.",
+   "karte": null,
+   "ort": "antarctic-desert",
+   "quellen": [
+    {
+     "titel": "National Geographic Education: Deserts",
+     "url": "https://education.nationalgeographic.org/resource/deserts/"
+    },
+    {
+     "titel": "Australian Antarctic Program: Weather",
+     "url": "https://www.antarctica.gov.au/about-antarctica/weather-and-climate/weather/"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-tiefster-see",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Welcher See ist der tiefste der Erde?",
+   "richtig": "Baikalsee",
+   "falsch": [
+    "Victoriasee",
+    "Titicacasee",
+    "Tanganjikasee"
+   ],
+   "tipp": "Er liegt in Russland, im Norden von Asien.",
+   "warum": "Der Baikalsee ist an der tiefsten Stelle über 1.600 Meter tief. Fast fünf Eiffeltürme übereinander hätten darin Platz. Kein anderer See ist so tief.",
+   "karte": null,
+   "ort": "baikal",
+   "quellen": [
+    {
+     "titel": "USGS: Lake Baikal from space – largest, oldest and deepest lake",
+     "url": "https://www.usgs.gov/media/images/lake-baikal-space-largest-oldest-and-deepest-lake"
+    },
+    {
+     "titel": "Tour Eiffel: From 300 to 330 meters, the story of the Tower's height",
+     "url": "https://www.toureiffel.paris/en/news/history-and-culture/300-330-meters-story-towers-height"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-sturzflug",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Welcher Vogel ist im Sturzflug am schnellsten?",
+   "richtig": "Wanderfalke",
+   "falsch": [
+    "Turmfalke",
+    "Seeadler",
+    "Mauersegler"
+   ],
+   "tipp": "Ein Sturzflug geht steil nach unten. Dabei legt der Vogel die Flügel eng an.",
+   "warum": "Im Sturzflug wird ein Wanderfalke über 300 Kilometer pro Stunde schnell. Das schätzen Forschende. Auf der Landstraße darf ein Auto höchstens 100 Kilometer pro Stunde fahren. Der Falke ist also mehr als dreimal so schnell. Nach heutigem Wissen ist kein Tier schneller.",
+   "karte": null,
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "National Park Service: Peregrine Falcon",
+     "url": "https://www.nps.gov/articles/peregrine-falcon.htm"
+    },
+    {
+     "titel": "National Park Service, Zion: Peregrine Falcon",
+     "url": "https://home.nps.gov/zion/learn/nature/peregrinefalcon.htm"
+    },
+    {
+     "titel": "The Peregrine Fund: Peregrine Falcon",
+     "url": "https://peregrinefund.org/explore-raptors-species/falcons/peregrine-falcon"
+    },
+    {
+     "titel": "Straßenverkehrs-Ordnung § 3 Geschwindigkeit (Bundesamt für Justiz)",
+     "url": "https://www.gesetze-im-internet.de/stvo_2013/__3.html"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-groesster-fisch",
+   "stufe": "profi",
+   "vorrat": [
+    "profi"
+   ],
+   "frage": "Welcher heute lebende Fisch ist der größte?",
+   "richtig": "Walhai",
+   "falsch": [
+    "Thunfisch",
+    "Blauwal",
+    "Riesenhai"
+   ],
+   "tipp": "Nicht jedes große Tier im Meer ist ein Fisch.",
+   "warum": "Der Walhai ist ein Hai, also ein Fisch. Oft wird er 5 bis 10 Meter lang. Das sind ein bis zwei Autos hintereinander. Der Blauwal ist größer. Aber er ist ein Säugetier wie wir. Er atmet Luft, und seine Babys trinken Milch.",
+   "karte": "animal-whale-shark",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "Georgia Aquarium: Whale Shark",
+     "url": "https://www.georgiaaquarium.org/animal/whale-shark/"
+    },
+    {
+     "titel": "Fisheries and Oceans Canada: Basking Shark",
+     "url": "https://www.dfo-mpo.gc.ca/species-especes/profiles-profils/baskingshark-requinpelerin-atl-eng.html"
+    },
+    {
+     "titel": "NOAA Fisheries: Blue Whale",
+     "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-fairer-vergleich",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "Ein Wanderfalke ist schneller als ein Gepard. Warum ist dieser Vergleich nicht ganz fair?",
+   "richtig": "Der Falke stürzt nach unten, der Gepard rennt.",
+   "falsch": [
+    "Der Falke ist viel leichter als der Gepard.",
+    "Der Falke jagt kleinere Tiere als der Gepard.",
+    "Der Falke schlägt im Sturzflug ganz schnell mit den Flügeln."
+   ],
+   "tipp": "Überlege, wie sich jedes Tier dabei bewegt.",
+   "tipp_2": "Beim Fallen hilft die Erde mit: Sie zieht nach unten. Der Gepard muss alles selbst schaffen.",
+   "warum": "Die Erde zieht alles nach unten. Diese Kraft heißt Schwerkraft. Beim Sturzflug hilft sie dem Falken. Fliegt der Falke geradeaus, ist er viel langsamer als im Sturzflug. Ein fairer Vergleich braucht dieselbe Art, sich zu bewegen.",
+   "warum_nicht": {
+    "Der Falke ist viel leichter als der Gepard.": "Das stimmt zwar. Aber ein Vogel stürzt nicht schneller, weil er leicht ist.",
+    "Der Falke jagt kleinere Tiere als der Gepard.": "Das stimmt auch. Mit dem Tempo hat es aber nichts zu tun.",
+    "Der Falke schlägt im Sturzflug ganz schnell mit den Flügeln.": "Im Sturzflug legt der Falke die Flügel eng an den Körper. Er schlägt nicht mit ihnen."
+   },
+   "karte": "animal-cheetah",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "National Park Service, Zion: Peregrine Falcon",
+     "url": "https://home.nps.gov/zion/learn/nature/peregrinefalcon.htm"
+    },
+    {
+     "titel": "The Peregrine Fund: Peregrine Falcon",
+     "url": "https://peregrinefund.org/explore-raptors-species/falcons/peregrine-falcon"
+    },
+    {
+     "titel": "Smithsonian's National Zoo: Cheetah",
+     "url": "https://nationalzoo.si.edu/animals/cheetah"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-messregel-berg",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "Der Mauna Kea auf Hawaii beginnt tief unten am Meeresboden. Von dort bis zur Spitze ist er über 10.000 Meter hoch. Warum gilt trotzdem der Mount Everest als höchster Berg?",
+   "richtig": "Man misst Höhen ab dem Meeresspiegel.",
+   "falsch": [
+    "Der Mauna Kea ist ein Vulkan, kein Berg.",
+    "Der Everest ist der ältere Berg.",
+    "Unter Wasser kann man Berge nicht messen."
+   ],
+   "tipp": "Wie viel vom Mauna Kea siehst du, wenn du am Strand stehst?",
+   "tipp_2": "Auf Landkarten beginnt jede Höhe an der Oberfläche des Meeres.",
+   "warum": "Auf Landkarten zählt die Höhe ab dem Meeresspiegel. Das ist die Oberfläche des Meeres. Von dort ist der Everest etwa 8.849 Meter hoch. Der Mauna Kea ist über dem Meer nur etwa 4.200 Meter hoch. Das ist ungefähr halb so hoch. Auch Vulkane sind Berge. Ein Rekord braucht also eine klare Messregel.",
+   "warum_nicht": {
+    "Der Mauna Kea ist ein Vulkan, kein Berg.": "Auch ein Vulkan ist ein Berg. Der Mauna Kea zählt also mit.",
+    "Der Everest ist der ältere Berg.": "Wie alt ein Berg ist, sagt nichts über seine Höhe. Hier geht es darum, wo man zu messen beginnt.",
+    "Unter Wasser kann man Berge nicht messen.": "Doch, das geht. Man kennt ja die Höhe des Mauna Kea vom Meeresboden aus."
+   },
+   "karte": null,
+   "ort": "everest",
+   "quellen": [
+    {
+     "titel": "NOAA Ocean Service: What is the highest point on Earth as measured from Earth's center?",
+     "url": "https://oceanservice.noaa.gov/facts/highestpoint.html"
+    },
+    {
+     "titel": "USGS Hawaiian Volcano Observatory: Mauna Kea",
+     "url": "https://www.usgs.gov/volcanoes/mauna-kea"
+    },
+    {
+     "titel": "NPR (8.12.2020): Everest-Höhe (Textfassung)",
+     "url": "https://text.npr.org/944152693"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-everest-im-graben",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "Der Marianengraben ist etwa 11 Kilometer tief. Der Mount Everest ist etwa 9 Kilometer hoch. Stell dir vor, der Everest steht ganz unten im Graben. Wo ist dann seine Spitze?",
+   "richtig": "Sie bleibt etwa 2 Kilometer unter Wasser.",
+   "falsch": [
+    "Sie ragt etwa 2 Kilometer aus dem Wasser.",
+    "Sie ist genau an der Wasseroberfläche.",
+    "Sie bleibt etwa 20 Kilometer unter Wasser."
+   ],
+   "tipp": "Ist der Berg höher, als das Wasser tief ist?",
+   "tipp_2": "Rechne: 11 Kilometer minus 9 Kilometer.",
+   "warum": "Der Graben ist tiefer, als der Berg hoch ist. 11 minus 9 ergibt 2. Über der Spitze wären also noch etwa 2 Kilometer Wasser. Das ist so viel wie etwa sechs Eiffeltürme übereinander.",
+   "warum_nicht": {
+    "Sie ragt etwa 2 Kilometer aus dem Wasser.": "Dafür müsste der Berg höher sein, als der Graben tief ist. 9 ist aber weniger als 11.",
+    "Sie ist genau an der Wasseroberfläche.": "Das ginge nur, wenn Berg und Graben gleich groß wären. 9 und 11 sind aber verschieden.",
+    "Sie bleibt etwa 20 Kilometer unter Wasser.": "Hier wurden 11 und 9 zusammengezählt. Der Berg füllt aber einen Teil des Grabens aus."
+   },
+   "karte": null,
+   "ort": "mariana",
+   "quellen": [
+    {
+     "titel": "NOAA Ocean Exploration: How deep is the ocean? (10.935 m)",
+     "url": "https://oceanexplorer.noaa.gov/facts/ocean-depth.html"
+    },
+    {
+     "titel": "NPR (8.12.2020): Everest-Höhe 8.848,86 m (Textfassung)",
+     "url": "https://text.npr.org/944152693"
+    },
+    {
+     "titel": "Tour Eiffel: From 300 to 330 meters, the story of the Tower's height",
+     "url": "https://www.toureiffel.paris/en/news/history-and-culture/300-330-meters-story-towers-height"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-amazonas-und-nil",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "Der Nil und der Amazonas sind etwa gleich lang. Trotzdem bringt der Amazonas viel mehr Wasser ins Meer. Warum?",
+   "richtig": "Wo er fließt, regnet es sehr viel.",
+   "falsch": [
+    "Er fließt in ein größeres Meer.",
+    "Er fließt durch mehr Länder als der Nil.",
+    "Der Nil fließt bergauf, der Amazonas bergab."
+   ],
+   "tipp": "Woher bekommt ein Fluss sein Wasser?",
+   "tipp_2": "Der Amazonas fließt durch den Regenwald. Der Nil fließt lange durch die Wüste.",
+   "warum": "Ein Fluss bekommt sein Wasser vor allem vom Regen in seiner Gegend. Am Amazonas fallen in einem Jahr etwa 2 bis 3 Meter Regen. Das ist höher, als ein Erwachsener groß ist. Der Nil fließt dagegen lange durch die Wüste. Dort kommt fast kein Wasser dazu.",
+   "warum_nicht": {
+    "Er fließt in ein größeres Meer.": "Das Meer kommt erst ganz am Ende. Es gibt dem Fluss kein Wasser.",
+    "Er fließt durch mehr Länder als der Nil.": "Das Gebiet des Nils reicht sogar über mehr Länder. Und Grenzen bringen kein Wasser.",
+    "Der Nil fließt bergauf, der Amazonas bergab.": "Jeder Fluss fließt bergab. Der Nil fließt nach Norden, aber auch er fließt bergab."
+   },
+   "karte": null,
+   "ort": "amazon",
+   "quellen": [
+    {
+     "titel": "NASA Earth Observatory: Source of the Amazon River (Längen von Amazonas und Nil)",
+     "url": "https://science.nasa.gov/earth/earth-observatory/source-of-the-amazon-river-7823/"
+    },
+    {
+     "titel": "USGS Water Science School: Rivers of the World, World's Longest Rivers",
+     "url": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-world-worlds-longest-rivers"
+    },
+    {
+     "titel": "USGS Water Science School: Rivers, Streams, and Creeks",
+     "url": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks"
+    },
+    {
+     "titel": "NASA/JPL MISR: Dry and Wet Seasons in the Amazon Basin",
+     "url": "https://misr.jpl.nasa.gov/gallery/dry-and-wet-seasons-amazon-basin"
+    },
+    {
+     "titel": "National Geographic Education: Nile River",
+     "url": "https://education.nationalgeographic.org/resource/nile-river/"
+    },
+    {
+     "titel": "FAO AQUASTAT: Amazon River Basin",
+     "url": "https://www.fao.org/aquastat/en/countries-and-basins/transboundary-river-basins/amazon/"
+    },
+    {
+     "titel": "NASA Earth Observatory: A Global Accounting of Earth's Rivers",
+     "url": "https://earthobservatory.nasa.gov/images/152742/global-accounting-of-earths-rivers"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-eis-wueste",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "In der Mitte der Antarktis schneit es kaum. Trotzdem ist das Eis dort an manchen Stellen fast 5 Kilometer dick. Wie kann das sein?",
+   "richtig": "Der Schnee taut kaum weg und häuft sich an.",
+   "falsch": [
+    "Das Meer friert und schiebt sein Eis an Land.",
+    "Im Sommer regnet es viel, und der Regen gefriert.",
+    "Das Eis liegt dort, seit es die Erde gibt."
+   ],
+   "tipp": "Überlege: Was passiert dort im Sommer mit dem Schnee?",
+   "tipp_2": "Selbst im Sommer ist es in der Mitte der Antarktis eiskalt. Jedes Jahr kommt eine dünne Schicht dazu.",
+   "warum": "Jedes Jahr fällt nur eine dünne Schicht Schnee. Weil es so kalt ist, taut sie nicht weg. Über viele tausend Jahre kommt Schicht auf Schicht. So wurde das Eis fast 5 Kilometer dick. Das ist mehr als halb so hoch wie der Mount Everest.",
+   "warum_nicht": {
+    "Das Meer friert und schiebt sein Eis an Land.": "Meereis schwimmt auf dem Wasser. Das dicke Eis an Land entsteht aus Schnee.",
+    "Im Sommer regnet es viel, und der Regen gefriert.": "In der Mitte der Antarktis ist es für Regen zu kalt. Dort fällt nur wenig Schnee.",
+    "Das Eis liegt dort, seit es die Erde gibt.": "Vor sehr langer Zeit wuchsen in der Antarktis sogar Wälder. Erst danach kam das dicke Eis."
+   },
+   "karte": null,
+   "ort": "antarctic-desert",
+   "quellen": [
+    {
+     "titel": "NSIDC: Ice Sheets Quick Facts",
+     "url": "https://nsidc.org/learn/parts-cryosphere/ice-sheets/ice-sheet-quick-facts"
+    },
+    {
+     "titel": "Australian Antarctic Program: Weather",
+     "url": "https://www.antarctica.gov.au/about-antarctica/weather-and-climate/weather/"
+    },
+    {
+     "titel": "Universität Hamburg (5.7.2024): The dawn of the Antarctic ice sheets",
+     "url": "https://www.esrah.uni-hamburg.de/about/news/06-pm/2024-07-05-schmiedl-eisschild.html"
+    },
+    {
+     "titel": "NPR (8.12.2020): Everest-Höhe (Textfassung)",
+     "url": "https://text.npr.org/944152693"
+    }
+   ],
+   "alt_id": null
+  },
+  {
+   "id": "rekord-langes-rennen",
+   "stufe": "experte",
+   "vorrat": [
+    "experte"
+   ],
+   "frage": "Ein Gepard und ein Strauß laufen um die Wette. Die Strecke ist 10 Kilometer lang. Wer ist wohl zuerst im Ziel?",
+   "richtig": "Der Strauß, weil er lange schnell laufen kann.",
+   "falsch": [
+    "Der Gepard, weil er das schnellste Landtier ist.",
+    "Beide gleichzeitig, weil sie gleich schnell sind.",
+    "Der Gepard, weil er vier Beine hat statt zwei."
+   ],
+   "tipp": "Ein Sprint ist ein kurzer, ganz schneller Lauf. Ist dieses Rennen kurz?",
+   "tipp_2": "Ein Gepard hält sein Höchsttempo nur ein paar hundert Meter durch. Ein Strauß läuft eine halbe Stunde lang schnell.",
+   "warum": "Im Sprint ist der Gepard schneller. Sein Höchsttempo hält er aber nur knapp 300 Meter durch. Das ist weniger als eine Runde auf dem Sportplatz. Ein Strauß schafft etwa eine halbe Stunde lang 50 Kilometer pro Stunde. So schnell darf ein Auto in der Stadt fahren. Bei einem langen Rennen zählt die Ausdauer.",
+   "warum_nicht": {
+    "Der Gepard, weil er das schnellste Landtier ist.": "Das stimmt für einen kurzen Sprint. Nach knapp 300 Metern muss er aber langsamer werden.",
+    "Beide gleichzeitig, weil sie gleich schnell sind.": "Die beiden sind nicht gleich schnell. Im Sprint ist der Gepard viel schneller als der Strauß.",
+    "Der Gepard, weil er vier Beine hat statt zwei.": "Wie viele Beine ein Tier hat, entscheidet hier nicht. Es kommt darauf an, wie lange es schnell bleibt."
+   },
+   "karte": "animal-ostrich",
+   "ort": null,
+   "quellen": [
+    {
+     "titel": "Smithsonian's National Zoo: Cheetah (Höchsttempo nur etwa 274 m)",
+     "url": "https://nationalzoo.si.edu/animals/cheetah"
+    },
+    {
+     "titel": "Tierpark Hellabrunn: Südafrikanischer Strauß (50 km/h etwa eine halbe Stunde)",
+     "url": "https://www.hellabrunn.de/en/animals/world-of-birds/south-african-ostrich"
+    },
+    {
+     "titel": "Smithsonian's National Zoo: How Fast Is an Ostrich? And More Fun Facts",
+     "url": "https://nationalzoo.si.edu/animals/news/how-fast-ostrich-and-more-fun-facts"
+    },
+    {
+     "titel": "San Diego Zoo Wildlife Alliance: Ostrich",
+     "url": "https://animals.sandiegozoo.org/animals/ostrich"
+    },
+    {
+     "titel": "Straßenverkehrs-Ordnung § 3 Geschwindigkeit (Bundesamt für Justiz)",
+     "url": "https://www.gesetze-im-internet.de/stvo_2013/__3.html"
+    }
+   ],
+   "alt_id": null
+  }
+ ]
+}
