@@ -143,6 +143,11 @@ export async function startPreview({dist = process.env.QA_DIST ?? 'dist', port} 
   throw Error('Vorschau-Server antwortet nicht:\n' + log);
 }
 
+// Init-Skript für einen Kontext: hält am Ende jedes Klicks fest, wo der Fokus liegt (`window.__fokusNachKlick`).
+// Der Lauscher auf window läuft nach Reacts Lauscher an der Wurzel und, bei echten Eingaben, nach dessen Microtasks.
+// So prüft ein Test „Fokus noch im Klick“, egal wie schnell der Rechner das nächste Bild zeichnet (Code-Prüfung flushSync, Befund 1).
+export const FOKUS_NACH_KLICK = () => window.addEventListener('click', () => { window.__fokusNachKlick = document.activeElement; });
+
 // Öffnet die Startseite in einem frischen Kontext, wartet auf Bereitschaft und ruft `fn(page)` auf.
 // `isMobile` kennt nur Chromium; andere Engines bekommen bei Touch nur `hasTouch`.
 export async function withPage(ctx, {width, height, touch = false}, fn) {

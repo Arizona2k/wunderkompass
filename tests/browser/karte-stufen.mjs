@@ -6,7 +6,7 @@
 //   „Willst du eine Stufe leichter spielen?“; „Nein, ich bleibe“ stellt nichts um, „Ja“ stellt um.
 // Welche Frage erscheint, rechnen die Tests mit den Bausteinen aus karte-hilfen.mjs aus (wie die App).
 import assert from 'node:assert/strict';
-import {ready} from './harness.mjs';
+import {FOKUS_NACH_KLICK, ready} from './harness.mjs';
 import {angezeigteFrage, antwortKnopf, ersteFrageAufStufe, falscheAntworten, fragenAufStufe, fragenDerKarte, hauptfrage, karteDa, rateMal, richtigeAntwort, stufenWahl, stufeWaehlen, zeigtFrage} from './karte-hilfen.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 
@@ -24,6 +24,7 @@ const ZWEI_AUF_PROFI = catalog.find(t => fragenDerKarte(t).filter(f => f.level =
 async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
   const context = await ctx.browser.newContext({viewport: {width, height}, reducedMotion: 'reduce', ...(touch ? {hasTouch: true} : {}), ...(touch && ctx.engine === 'chromium' ? {isMobile: true} : {})});
   try {
+    await context.addInitScript(FOKUS_NACH_KLICK);
     const page = await context.newPage();
     ctx.monitor(page);
     page.setDefaultTimeout(20000);
@@ -38,12 +39,19 @@ async function mitKarte(ctx, {width, height, touch = false}, id, fn) {
 
 const tippe = (knopf, touch) => (touch ? knopf.tap() : knopf.click());
 // Nach einem Stufenwechsel baut die Karte „Rate mal!“ oft neu auf. Der Fokus muss trotzdem auf der Karte bleiben,
-// nicht auf <body> fallen (Code-Prüfung Teil A, Befund 2). Geprüft wird sofort, ohne Warten: Die Seite setzt den Fokus
-// noch im Klick. Ein Warten verdeckte, wenn er erst im nächsten Bild kommt und so lange auf <body> liegt (CI WebKit 24.11.2026).
+// nicht auf <body> fallen (Code-Prüfung Teil A, Befund 2). Die Seite setzt ihn noch im Klick. Darum zählt, wo er am Ende
+// des letzten Klicks lag (FOKUS_NACH_KLICK), und wo er jetzt liegt. Ein Warten verdeckte, wenn er erst im nächsten Bild
+// kommt und so lange auf <body> liegt (CI WebKit 24.11.2026); ein schneller Rechner verdeckte es auch ohne Warten
+// (Code-Prüfung flushSync, Befund 1).
 const AENDERN = '.wissenskarte .stufen-wahl .stufen-aendern';
 async function fokusAuf(page, selektor, was) {
-  const fokus = await page.evaluate(sel => ({da: !!document.activeElement?.matches(sel), wo: document.activeElement?.tagName + ' ' + document.activeElement?.className}), selektor);
-  assert.ok(fokus.da, was + '; der Fokus liegt auf ' + fokus.wo);
+  const fokus = await page.evaluate(sel => {
+    const wo = el => el ? el.tagName + ' ' + el.className + (el.isConnected ? '' : ' (nicht mehr auf der Seite)') : 'nichts';
+    const klick = window.__fokusNachKlick;
+    return {klick: !!klick?.isConnected && klick.matches(sel), woKlick: wo(klick), jetzt: !!document.activeElement?.matches(sel), woJetzt: wo(document.activeElement)};
+  }, selektor);
+  assert.ok(fokus.klick, was + ' (am Ende des Klicks); der Fokus lag auf ' + fokus.woKlick);
+  assert.ok(fokus.jetzt, was + '; der Fokus liegt auf ' + fokus.woJetzt);
 }
 
 // Stufenwahl über „Rate mal!“, Umstellen auf der offenen Karte, Neuladen, „Zurück zu Entdecker“.
@@ -67,6 +75,7 @@ async function stufenAufDerKarte(page, {touch}) {
   await stufeWaehlen(page, 'experte', {touch});
   if (hatStufe(t, 'experte')) await zeigtFrage(page, t, ersteFrageAufStufe(t, 'experte'));
   else await wahl.getByText('Experte gibt es hier noch nicht. Du spielst Profi.', {exact: true}).waitFor();
+  await fokusAuf(page, AENDERN, 'nach dem Umstellen auf Experte steht der Fokus auf „Ändern“');
   await page.reload();
   await ready(page);
   await karteDa(page, t.id);
@@ -85,6 +94,8 @@ async function profiOhneProfiFragen(page, {touch}) {
   await stufeWaehlen(page, 'profi', {touch});
   await stufenWahl(page).getByText('Profi gibt es hier noch nicht. Du spielst Entdecker.', {exact: true}).waitFor(WARTEN);
   await zeigtFrage(page, t, hauptfrage(t));
+  // Die Frage bleibt, „Rate mal!“ baut nicht neu auf: Der Fokus geht zurück auf den alten Knopf (Code-Prüfung flushSync, Befund 3).
+  await fokusAuf(page, AENDERN, 'auf Profi ohne Profi-Fragen bleibt der Fokus auf „Ändern“');
   return t.id;
 }
 

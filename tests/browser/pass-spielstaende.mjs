@@ -2,7 +2,7 @@
 // echten Browser Import, Neuladen und Sicherung, ohne dass ein Spielstand verloren geht. Der Pass ist ausgedacht.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {ready} from './harness.mjs';
+import {FOKUS_NACH_KLICK, ready} from './harness.mjs';
 import catalog from '../../app/world-catalog.json' with {type: 'json'};
 import spiele from '../../app/game-index.json' with {type: 'json'};
 import reisen from '../../app/journey-index.json' with {type: 'json'};
@@ -88,6 +88,7 @@ export async function passSpielstaende(ctx) {
 export async function stufeImPass(ctx) {
   const context = await ctx.browser.newContext({viewport: {width: 390, height: 844}, reducedMotion: 'reduce', acceptDownloads: true, hasTouch: true, ...(ctx.engine === 'chromium' ? {isMobile: true} : {})});
   try {
+    await context.addInitScript(FOKUS_NACH_KLICK);
     const page = await context.newPage();
     ctx.monitor(page);
     page.setDefaultTimeout(20000);
@@ -142,8 +143,10 @@ export async function stufeImPass(ctx) {
     await zurueck.tap();
     await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Entdecker');
     await zurueck.waitFor({state: 'detached'});
-    // Absichtlich sofort, ohne Warten: Die Seite setzt den Fokus noch im Klick. Ein Warten verdeckte, wenn er ein Bild lang
-    // auf den Pass-Dialog springt (CI WebKit 24.11.2026; Technik-Prüfung WebKit-Fund, Befund 2a).
+    // Die Seite setzt den Fokus noch im Klick. Darum zählt, wo er am Ende des Tipps lag (FOKUS_NACH_KLICK), und wo er jetzt
+    // liegt, ohne Warten. Ein Warten verdeckte, wenn er ein Bild lang auf den Pass-Dialog springt (CI WebKit 24.11.2026;
+    // Technik-Prüfung WebKit-Fund, Befund 2a); ein schneller Rechner verdeckte es auch so (Code-Prüfung flushSync, Befund 1).
+    assert.equal(await aendern.evaluate(el => el === window.__fokusNachKlick), true, 'der Fokus bleibt schon am Ende des Tipps in der Stufenwahl');
     assert.equal(await aendern.evaluate(el => el === document.activeElement), true, 'der Fokus bleibt in der Stufenwahl');
     // Tastatur: Enter öffnet, Umschalt+Tab wandert, Enter wählt.
     await aendern.focus();
@@ -152,7 +155,8 @@ export async function stufeImPass(ctx) {
     await page.keyboard.press('Tab');
     await page.keyboard.press('Enter');
     await expectText(wahl.locator('.stufen-zeile'), 'Stufe: Profi');
-    // Auch hier sofort, aus demselben Grund.
+    // Auch hier am Ende des Klicks (Enter löst ein click aus) und sofort, aus demselben Grund.
+    assert.equal(await aendern.evaluate(el => el === window.__fokusNachKlick), true, 'der Fokus ist schon am Ende des Klicks zurück auf „Ändern“');
     assert.equal(await aendern.evaluate(el => el === document.activeElement && el.matches(':focus-visible')), true, 'sichtbarer Fokus zurück auf „Ändern“');
     await page.waitForFunction(() => JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress.gameSessions['kern:stufe']?.stufe === 'profi');
     // Neuladen

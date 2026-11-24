@@ -17,7 +17,9 @@ const STUFEN_TEXT: Record<Stufe, string> = {
 // mit neuer Frage neu auf (key={frage.id}); dann ist die alte Stufenwahl weg und mit ihr der Knopf (Code-Prüfung Teil A, Befund 2).
 // flushSync baut alles noch im Klick auf, darum liegt der Fokus sofort auf „Ändern“ und nie ein Bild lang auf <body>
 // oder dem Pass-Dialog (CI WebKit 24.11.2026; Technik-Prüfung WebKit-Fund, Befund 3a). Ist der alte Knopf noch da,
-// bleibt der Fokus dort, sonst geht er an das neue „Ändern“ am selben Ort.
+// bleibt der Fokus dort, sonst geht er an das neue „Ändern“ am selben Ort. `ort` steht schon vor dem Wechsel fest:
+// Die Karte selbst darf beim Stufenwechsel nicht neu eingehängt werden (etwa mit der Stufe im key), sonst sucht
+// querySelector im alten, abgehängten Element, und der Fokus fiele still auf <body> (Code-Prüfung flushSync, Befund 2).
 export function stufeWechseln(wechsel: () => void, ort: ParentNode | null | undefined, knopf?: HTMLButtonElement | null) {
   flushSync(wechsel);
   (knopf?.isConnected ? knopf : ort?.querySelector<HTMLButtonElement>('.stufen-wahl .stufen-aendern'))?.focus();
