@@ -8,7 +8,9 @@ import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import FOTO_IDS from '../../world-photo-ids.json';
 import FOTO_KENNWOERTER from './foto-kennwoerter.json';
 import BELEGE from './belege-ids.json';
-import {STUFEN, STUFEN_NAME, type Stufe} from '../stufe';
+import {STUFEN, STUFEN_BINDEFORM, STUFEN_NAME, type Stufe} from '../stufe';
+import {WOERTER} from '../woerter';
+import {wartetZumWiederholen} from '../wiederholen';
 
 export type KartenFrage = {
   id: string;
@@ -63,23 +65,48 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
   return [haupt, ...zusatz, ...challenge];
 }
 
-// Die Fragen, die eine Stufe zeigen darf: ihre eigene Stufe zuerst, dann die leichteren; je in Datenreihenfolge.
-// „Noch eine Frage“ blättert in genau dieser Liste (bleibt bei der gewählten Stufe und darunter).
-export function fragenFuerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
-  const rang = (f: KartenFrage) => STUFEN.indexOf(f.level);
-  return fragen.filter(f => rang(f) <= STUFEN.indexOf(stufe)).sort((a, b) => rang(b) - rang(a));
-}
-
 // Gibt es auf der Karte Fragen genau dieser Stufe? Ohne Experten-Frage spielt ein Experte dort Profi (E3).
 export const hatFragenDerStufe = (fragen: KartenFrage[], stufe: Stufe) => fragen.some(f => f.level === stufe);
 
 // Ehrlicher Satz unter der Stufenwahl, wenn die Karte die gewählte Stufe noch nicht hat (E3): Dann spielt das Kind
 // die höchste vorhandene Stufe darunter. Keine unechte Experten-Stufe aus „mehr vom Gleichen“.
 export function stufenHinweis(fragen: KartenFrage[], stufe: Stufe): string | null {
-  if (hatFragenDerStufe(fragen, stufe)) return null;
-  const darunter = STUFEN.slice(0, STUFEN.indexOf(stufe)).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
-  return `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[darunter]}.`;
+  const gespielt = gespielteStufe(fragen, stufe);
+  return gespielt === stufe ? null : `${STUFEN_NAME[stufe]} gibt es hier noch nicht. Du spielst ${STUFEN_NAME[gespielt]}.`;
 }
+
+// Die Stufe, die die Karte wirklich spielt: die gewählte, wenn es Fragen dazu gibt, sonst die höchste vorhandene darunter.
+// Entdecker gibt es immer (die Hauptfrage).
+export function gespielteStufe(fragen: KartenFrage[], stufe: Stufe): Stufe {
+  return STUFEN.slice(0, STUFEN.indexOf(stufe) + 1).reverse().find(s => hatFragenDerStufe(fragen, s)) ?? 'entdecker';
+}
+
+// Die Fragen genau der gespielten Stufe, in Datenreihenfolge. Nur daraus wählt die Karte beim Öffnen und nach einem
+// Stufenwechsel (ersteFrage), und nur darin blättert „Noch eine Frage“. Wer Profi wählt, bekommt danach einen klaren
+// Schluss statt leichterer Fragen (Spieltest 24.11.2026, Befunde 1 und 3; entschieden vom Nutzer am 24.11.2026).
+export function fragenDerStufe(fragen: KartenFrage[], stufe: Stufe): KartenFrage[] {
+  const gespielt = gespielteStufe(fragen, stufe);
+  return fragen.filter(f => f.level === gespielt);
+}
+
+// „Noch eine Frage“: die nächste Frage der gespielten Stufe nach der aktuellen, die in dieser Runde noch nicht dran war
+// (`gezeigt`: alle Fragen seit dem Öffnen oder dem letzten Stufenwechsel). Am Ende der Liste geht es vorn weiter, bis jede
+// Frage der Stufe einmal dran war; dann null, und die Karte zeigt den Schluss (schlussSatz).
+export function naechsteFrage(alle: KartenFrage[], stufe: Stufe, aktuell: string, gezeigt: readonly string[]): KartenFrage | null {
+  const runde = fragenDerStufe(alle, stufe);
+  const i = runde.findIndex(f => f.id === aktuell);
+  const reihe = i < 0 ? runde : [...runde.slice(i + 1), ...runde.slice(0, i + 1)];
+  return reihe.find(f => f.id !== aktuell && !gezeigt.includes(f.id)) ?? null;
+}
+
+// Ob nach der letzten Frage der Runde ein Schluss steht: auf Profi und Experte immer (klarer Schluss statt leichterer
+// Fragen, Befund 3), auf Entdecker nur nach mehr als einer Frage (statt wortlos wieder von vorn, Befund 4). Eine einzelne
+// Entdecker-Frage bleibt ohne Schluss, wie auf allen Karten mit nur der Hauptfrage (Code-Prüfung Feinschliff, Befund 4).
+export const zeigtSchluss = (fragen: KartenFrage[], stufe: Stufe) => gespielteStufe(fragen, stufe) !== 'entdecker' || fragenDerStufe(fragen, stufe).length > 1;
+
+// Der Satz nach der letzten Frage der Runde (Spieltest 24.11.2026, Befund 4): ehrlich mit der Stufe, die die Karte spielt.
+// Er passt für eine und für viele Fragen; „geschafft“ heißt „bis zum Ziel“, nicht „fehlerfrei“ (kinder-redaktion 24.11.2026).
+export const schlussSatz = (fragen: KartenFrage[], stufe: Stufe) => `${WOERTER.geschafft} Mehr ${STUFEN_BINDEFORM[gespielteStufe(fragen, stufe)]}-Fragen hat diese Karte nicht.`;
 
 // Eine gespeicherte Antwortreihe gilt nur, wenn sie genau die heutigen Antworten vertauscht (alte Wörter über ihren Alias).
 // Sonst null: Die Karte mischt dann neu, statt in der Reihenfolge der Daten zu zeigen (dort steht die Lösung oft vorn),
@@ -112,23 +139,46 @@ export function festGemischt(frage: KartenFrage): string[] {
   return reihe;
 }
 
-// Welche Frage „Rate mal!“ zeigt, unter den Fragen der Stufe (fragenFuerStufe, eigene Stufe zuerst):
-// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist.
-//    Wer falsch geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken.
-// 2. sonst die erste, die das Kind noch nie beantwortet hat (auf Profi also zuerst eine neue Profi-Frage);
+// Welche Frage „Rate mal!“ beim Öffnen und nach einem Stufenwechsel zeigt, immer nur aus der gespielten Stufe (fragenDerStufe):
+// 1. eine Frage, deren gespeicherte Antwort (Kartenstand, gameSessions['topic:<id>']) nicht die richtige ist. Wer falsch
+//    geantwortet hat und zurückkommt (Wissensbuch, Nachbarkarte), soll dort weiterdenken (E4);
+// 2. sonst die erste Frage, die das Kind noch nie beantwortet hat;
 // 3. sind alle schon beantwortet, die am frühesten wieder fällige. Bei Gleichstand jeweils die frühere.
+// Eine falsch beantwortete Frage einer anderen Stufe wartet, bis das Kind diese Stufe wieder spielt. Vorher kam sie auch
+// auf Profi und Experte zuerst: „Stufe: Experte“, darunter die leichte Entdecker-Frage mit „Noch nicht ganz“ (Spieltest
+// Feinschliff 24.11.2026; entschieden vom Nutzer am 24.11.2026). Ebenso kam auf Profi nach allen Profi-Fragen die
+// ungesehene Entdecker-Frage, etwa nach „Weiter zu“ und „Zurück“. Nach einem Stufenwechsel gewann so die eben falsch
+// beantwortete Entdecker-Frage (Spieltest 24.11.2026, Befund 1).
 export function ersteFrage(alle: KartenFrage[], review: LocalProgress['review'], kartenstand?: Record<string, unknown>, stufe: Stufe = 'entdecker'): KartenFrage {
-  const fragen = fragenFuerStufe(alle, stufe);
+  const fragen = fragenDerStufe(alle, stufe);
   if (!fragen.length) throw Error('Eine Karte hat immer mindestens ihre Hauptfrage.');
-  const offen = fragen.find(frage => {
-    const wert = kartenstand?.[frage.answerKey];
-    return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
-  });
+  const offen = falschBeantwortet(fragen, kartenstand);
   if (offen) return offen;
   const ungesehen = fragen.find(frage => review[frage.reviewId] === undefined);
   if (ungesehen) return ungesehen;
   return fragen.reduce((frueheste, frage) => review[frage.reviewId].due < review[frueheste.reviewId].due ? frage : frueheste);
 }
+
+// „Noch einmal nachdenken“ im Wissensbuch: Die Karte steht dort wegen ihrer Hauptfrage (falsch beantwortet oder wieder fällig).
+// Dann zeigt sie genau diese, auch auf Profi und Experte; das Kind hat sie ausdrücklich gewählt. Sonst kam dort eine Frage
+// der gespielten Stufe, und der Eintrag im Wissensbuch blieb stehen (Umsetzung der Entscheidung vom 24.11.2026).
+// Wartet die Hauptfrage nicht (mehr), wählt die Karte wie beim Öffnen (ersteFrage). „Noch eine Frage“ bleibt in der Stufe.
+export function frageZumNachdenken(alle: KartenFrage[], review: LocalProgress['review'], kartenstand: Record<string, unknown> | undefined, stufe: Stufe): KartenFrage {
+  const haupt = alle[0];
+  return haupt && wartetZumWiederholen(review[haupt.reviewId]) ? haupt : ersteFrage(alle, review, kartenstand, stufe);
+}
+
+// Ist die Hauptfrage richtig beantwortet und nur wieder fällig, beginnt sie beim Nachdenken leer: Die gespeicherte Antwort
+// bleibt im Pass, wird aber nicht gezeigt. Sonst stünde sofort die Lösung da (Code-Prüfung „Nachdenken“, W1).
+export function leerZumNachdenken(alle: KartenFrage[], review: LocalProgress['review']): boolean {
+  const eintrag = alle[0] && review[alle[0].reviewId];
+  return !!eintrag && eintrag.correct && wartetZumWiederholen(eintrag);
+}
+
+const falschBeantwortet = (fragen: KartenFrage[], kartenstand?: Record<string, unknown>) => fragen.find(frage => {
+  const wert = kartenstand?.[frage.answerKey];
+  return typeof wert === 'string' && restoreAnswerWording(frage.id, wert) !== frage.question.answers[frage.question.correct];
+});
 
 export type DazuPasstKachel =
   | {art: 'karte'; topicId: string; why: string}

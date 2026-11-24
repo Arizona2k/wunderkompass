@@ -625,6 +625,21 @@ async function pilotStation(page, {neuLaden, touch}) {
   assert.equal(await weiter.isDisabled(), false, 'es geht weiter');
   await neuLaden();
   assert.equal(await zweite.isDisabled(), false, 'die zweite Station bleibt nach Neuladen frei');
+  // Alle Fragen der Stufe in der Route: Am Ende steht nur der Schluss-Satz, kein „Weiter zu“ aus der Route heraus;
+  // weiter geht es mit „Zur nächsten Station“ (Code-Prüfung Feinschliff, Befund 2).
+  for (let i = 0; i < 10 && !await rateMal(page).locator('.rate-mal-schluss').count(); i++) {
+    const {frage: naechste, knopf: richtig} = await richtigerKnopf(page, ELEFANT);
+    await tippe(richtig, touch);
+    await rateMal(page).getByText(naechste.question.why, {exact: true}).waitFor(WARTEN);
+    const mehr = rateMal(page).getByRole('button', {name: 'Noch eine Frage', exact: true});
+    if (await mehr.count()) {
+      await tippe(mehr, touch);
+      await page.waitForFunction(id => document.querySelector('section.rate-mal')?.getAttribute('aria-labelledby') !== 'rate-mal-' + id, naechste.id, WARTEN);
+    }
+  }
+  await rateMal(page).getByText('Geschafft! Mehr Profi-Fragen hat diese Karte nicht.', {exact: true}).waitFor(WARTEN);
+  assert.equal(await rateMal(page).locator('.rate-mal-naechste-karte').count(), 0, 'in der Route kein „Weiter zu“ zur Nachbarkarte');
+  assert.equal(await weiter.isDisabled(), false, 'die Route führt weiter');
 }
 
 // Aufgabe 11: Häppchen, „Für Große“, „Stimmt das?“ und Zusatzfragen der Pilot-Karten.

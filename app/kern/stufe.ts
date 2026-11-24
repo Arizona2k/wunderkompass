@@ -37,6 +37,9 @@ export function mitStufe(progress: LocalProgress, stufe: Stufe, heute = new Date
 export const quizStufe = (stufe: Stufe): Difficulty => stufe === 'entdecker' ? 'normal' : 'tricky';
 
 export const STUFEN_NAME: Record<Stufe, string> = { entdecker: 'Entdecker', profi: 'Profi', experte: 'Experte' };
+// Nur für Zusammensetzungen mit Bindestrich, z. B. „Experten-Fragen“ (Fugen-n; kinder-redaktion 24.11.2026).
+// Überall sonst steht der Name, wie er ist („Stufe: Experte“).
+export const STUFEN_BINDEFORM: Record<Stufe, string> = { entdecker: 'Entdecker', profi: 'Profi', experte: 'Experten' };
 
 // Vorschläge statt Automatik (E8). Die Folge lebt nur, solange die Seite offen ist, nie im Pass.
 // Gezählt wird je Frage nur die erste Antwort; nach einem Stufenwechsel beginnt die Folge neu.

@@ -24,7 +24,7 @@
 
 .classic-learning :is(button,summary){min-height:48px}
 
-.classic-learning .quiz-answer:not(.is-correct):not(.is-incorrect):hover{background:#f2f7f9;border-color:#799da9}
+@media(hover:hover){.classic-learning .quiz-answer:not(.is-correct):not(.is-incorrect):not(:disabled):hover{background:#f2f7f9;border-color:#799da9}}
 
 .classic-learning .world-game-hint :is(.secondary-button,.speech-button){margin-right:12px;margin-bottom:12px;vertical-align:middle}
 .large-reading .playground-preview{font-size:18px}.large-reading .playground :is(.playground-heading p,.playground-filter-panel>summary,.playground-active-filters){font-size:18px}.large-reading .playground-preview{min-height:242px}

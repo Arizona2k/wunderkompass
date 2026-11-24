@@ -3,8 +3,10 @@
 // Falsch zeigt „Noch nicht ganz. Versuch es noch einmal!“ und den Tipp, aber keine Erklärung; neu wählen geht sofort.
 // Richtig zeigt Häkchen und Erklärung und schreibt „gelernt“. Die Wiederholung bekommt nur die erste Antwort.
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
-import {useEffect, useRef, type ReactNode} from 'react';
-import {Check} from 'lucide-react';
+// Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte), wenn die
+// Karte ihn zeigt (zeigtSchluss: nicht bei einer einzelnen Entdecker-Frage).
+import {useEffect, useRef, useState, type ReactNode} from 'react';
+import {Check, Compass} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import {LearningFeedback} from '../../learning-motion';
 import QuestionHints from '../../question-hints';
@@ -39,21 +41,27 @@ type RateMalProps = {
   wiederholung?: Review[string];
   onNachbessern?: (reviewId: string) => void;
   onRead: (text: string) => void;
-  // Nur bei Karten mit mehr als einer Frage: „Noch eine Frage“ nach einer richtigen Antwort.
+  // Nur wenn in dieser Runde noch eine Frage der Stufe wartet: „Noch eine Frage“ nach einer richtigen Antwort.
   onWeiter?: () => void;
+  // Nach der letzten Frage der Runde (nur Karten mit mehr als einer Frage): Satz und, wenn vorhanden, Knopf zur nächsten Karte.
+  schluss?: {text: string; weiter?: ReactNode};
   // Nach „Noch eine Frage“ bekommt die neue Frage den Fokus.
   fokus?: boolean;
+  // Nur bei „Noch einmal nachdenken“ über eine wieder fällige, richtig beantwortete Frage: Die Runde beginnt leer,
+  // die gespeicherte Antwort bleibt im Pass (leerZumNachdenken). Leer bleibt sie, bis das Kind wählt, auch wenn ein
+  // Stufenwechsel wieder dieselbe Frage zeigt (gleicher key): Sie ist dann ja weiter fällig.
+  leer?: boolean;
   // Jede Wahl melden (für die Stufen-Vorschläge zählt dort nur die erste je Frage, und nur auf der gewählten Stufe).
   onAntwort?: (frageId: string, korrekt: boolean, stufe: Stufe) => void;
-  // Der Vorschlag steht in der Rückmeldung nach der Erklärung, vor „Noch eine Frage“: Darunter übersahen Kinder ihn
-  // neben dem großen orangen Knopf (Design-Prüfung Teil A, Befund 2).
+  // Der Vorschlag steht in der Rückmeldung nach der Erklärung (und nach dem Schluss-Satz), vor den Knöpfen: Darunter
+  // übersahen Kinder ihn neben dem großen orangen Knopf (Design-Prüfung Teil A, Befund 2).
   vorschlag?: ReactNode;
   // Unter der Überschrift, z. B. die Stufenwahl (Teilschritt 3, E2: „über Rate mal!“, ohne eigenen Kasten).
   kopf?: ReactNode;
 };
 
 // Die Karte gibt `key={frage.id}`: Jede Frage hat ihren eigenen Zustand und ihre eigenen Schlüssel.
-export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, fokus = false, onAntwort, vorschlag, kopf}: RateMalProps) {
+export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onReview, wiederholung, onNachbessern, onRead, onWeiter, schluss, fokus = false, leer = false, onAntwort, vorschlag, kopf}: RateMalProps) {
   const q = frage.question;
   const auswahl = useAntwortReihe(frage);
   const bereich = useRef<HTMLElement>(null);
@@ -61,13 +69,15 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   const richtigeAntwort = q.answers[q.correct];
   // Gespeichert unter dem alten Schlüssel (Hauptfrage: topicAnswer), damit frühere Antworten zählen.
   const [gespeicherteAntwort, setAntwort] = useSavedGame<string | null>(frage.answerKey, null);
-  const antwort = gespeicherteAntwort === null ? null : restoreAnswerWording(frage.id, gespeicherteAntwort);
+  const [ausgeblendet, setAusgeblendet] = useState(leer);
+  const antwort = ausgeblendet || gespeicherteAntwort === null ? null : restoreAnswerWording(frage.id, gespeicherteAntwort);
   const richtig = antwort === richtigeAntwort;
   const fruehereAuswahl = antwort !== null && !q.answers.includes(antwort);
 
-  // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“) oder nach einer früheren Auswahl,
-  // die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
+  // Eine neue Runde beginnt ohne Antwort (auch nach „Noch einmal raten“ und beim leeren Nachdenken) oder nach einer
+  // früheren Auswahl, die es nicht mehr gibt. Ob sie als Wiederholung zählt, entscheidet wiederholungFuerAntwort.
   function waehle(wahl: string) {
+    setAusgeblendet(false);
     setAntwort(wahl);
     const korrekt = wahl === richtigeAntwort;
     const art = wiederholungFuerAntwort(wiederholung, korrekt, antwort === null || fruehereAuswahl);
@@ -78,7 +88,8 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
   }
 
   return (
-    <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id}>
+    // data-route-focus: Rücksprungziel nach „Weiter zu“ (hash-route.ts); „Rate mal!“ steht immer da, der Knopf nicht.
+    <section ref={bereich} className="world-mini-question rate-mal" tabIndex={-1} aria-labelledby={'rate-mal-' + frage.id} data-route-focus="rate-mal">
       <div className="rate-mal-kopf">
         <Ueberschrift id={'rate-mal-' + frage.id} className="rate-mal-titel">Rate mal!</Ueberschrift>
         {kopf}
@@ -109,10 +120,13 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
                 ? q.why
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
+          {/* Erst der Schluss, dann ein Vorschlag, dann die Knöpfe (kinder-redaktion 24.11.2026, Befund f). */}
+          {richtig && schluss && <p className="rate-mal-schluss"><Compass size={22} aria-hidden="true"/><strong>{schluss.text}</strong></p>}
           {vorschlag}
           {richtig && (
             <div className="rate-mal-weiter">
               {onWeiter && <button type="button" className="primary-button" onClick={onWeiter}>Noch eine Frage</button>}
+              {!onWeiter && schluss?.weiter}
               <button
                 type="button"
                 className="speech-button"

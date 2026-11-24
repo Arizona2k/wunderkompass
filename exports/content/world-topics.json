@@ -155,7 +155,7 @@
           null,
           "Der Rüssel ist auch seine Nase. Wasser direkt hinunterschlucken kann er damit nicht.",
           "Elefanten schlecken nicht mit der Zunge wie ein Hund.",
-          "So trinken höchstens ganz junge Elefanten, die mit dem Rüssel noch üben. Ein großer Elefant nimmt den Rüssel."
+          "Ganz junge Elefanten trinken manchmal mit dem Maul, bis sie den Rüssel gut können. Ein großer Elefant nimmt den Rüssel."
         ]
       },
       {
@@ -169,7 +169,7 @@
           "Etwa 30 Kilogramm"
         ],
         "correct": 1,
-        "why": "Ein Savannenelefant wiegt bei der Geburt rund 100 Kilogramm. Nach etwa 20 Minuten kann er schon stehen.",
+        "why": "Ein Elefantenbaby wiegt bei der Geburt rund 100 Kilogramm. Das ist so viel wie etwa 30 Menschenbabys.",
         "hints": [
           "Es wiegt schon mehr als ein erwachsener Mensch."
         ],
@@ -183,6 +183,7 @@
       {
         "id": "animal-african-savanna-elephant:rate-3",
         "level": "profi",
+        "ruht": true,
         "prompt": "Wer führt eine Elefantenherde an?",
         "answers": [
           "Der größte und stärkste Bulle",
@@ -213,7 +214,7 @@
           "Sie braucht selbst am wenigsten Wasser"
         ],
         "correct": 1,
-        "why": "Eine alte Leitkuh hat schon viele trockene Jahre erlebt. Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.",
+        "why": "Eine alte Elefantenkuh hat schon viele trockene Jahre erlebt. Forscher glauben: Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.",
         "hints": [
           "Schau im Steckbrief nach: Wie alt kann ein Elefant werden?",
           "In 50 Jahren gibt es viele trockene Jahre. Wer sie erlebt hat, weiß mehr."
@@ -222,7 +223,30 @@
           "Stark sein hilft gegen Löwen. Wasser findet man damit nicht.",
           null,
           "Schnell sein hilft nichts, wenn man nicht weiß, wohin.",
-          "Auch die Leitkuh braucht viel Wasser. Sie hat einen anderen Vorteil."
+          "Auch die alte Elefantenkuh braucht viel Wasser. Sie hat einen anderen Vorteil."
+        ]
+      },
+      {
+        "id": "animal-african-savanna-elephant:rate-5",
+        "level": "profi",
+        "prompt": "Was sind die Stoßzähne eines Elefanten?",
+        "answers": [
+          "Lange Eckzähne",
+          "Riesige Backenzähne",
+          "Scharfe Reißzähne",
+          "Lange Schneidezähne"
+        ],
+        "correct": 3,
+        "why": "Stoßzähne sind sehr lange Schneidezähne, wie deine Zähne ganz vorn. Sie wachsen viele Jahre lang immer weiter.",
+        "hints": [
+          "Stoßzähne sitzen ganz vorn im Maul.",
+          "Fühl mal mit der Zunge: Welche Zähne hast du ganz vorn?"
+        ],
+        "wrongReasons": [
+          "Eckzähne sind spitze Zähne, wie Hunde sie haben. Elefanten haben gar keine.",
+          "Backenzähne sitzen hinten im Maul. Damit zerkaut der Elefant Gras und Zweige. Stoßzähne sitzen vorn.",
+          "Reißzähne haben Raubtiere wie Löwen. Damit zerteilen sie Fleisch. Elefanten fressen Pflanzen.",
+          null
         ]
       }
     ]

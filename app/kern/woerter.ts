@@ -9,4 +9,7 @@ export const WOERTER = {
   zweiterTipp: 'Zweiter Tipp',
   tippVorlesen: 'Tipp vorlesen',
   tippsVorlesen: 'Tipps vorlesen',
+  // Schluss nach der letzten Frage einer Stufe (Spieltest 24.11.2026; kinder-redaktion 24.11.2026).
+  geschafft: 'Geschafft!',
+  weiterZu: 'Weiter zu:',
 } as const;
