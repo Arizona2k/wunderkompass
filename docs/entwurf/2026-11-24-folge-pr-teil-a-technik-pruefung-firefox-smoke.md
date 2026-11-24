@@ -87,4 +87,8 @@ Die Entscheidungsliste, der Nachtrag im BACKLOG und `smoke.mjs` stimmen mit dem 
 
 ## Was daraus wurde (Claude, 24.11.2026)
 
-Wird nach der Probe zu Befund 1 ergänzt.
+1. **Ursache und „keine Abschwächung“:** bestätigt, nichts vor dem Merge zu ändern.
+2. **Befund 1 (`backup`) nachgemessen, keine Änderung:** Probe in Firefox mit fest eingestelltem Riff-Pfad (Skript im Arbeitsordner, `Math.random` wie beim Rauchtest), Suite `backup` 6-mal ohne Korrektur: 6 von 6 grün, kein Bildabbruch, **keine einzige Anfrage nach `reef.jpg`**. Grund: `backup` läuft nur in Handybreite (390 × 844). Dort steht das Riff-Bild zwar im Dokument, aber rund 2050 px tief; es ist `loading="lazy"`, und Firefox lädt es ohne Scrollen nicht (Gegenprobe: bei 1440 × 900 steht es bei rund 1430 px und wird geladen). Ohne Anfrage gibt es keinen Abbruch. Der Wettlauf aus dem Rauchtest kann in `backup` heute also nicht entstehen. Eine Wartezeile „auf Vorrat“ habe ich darum nicht eingebaut; ändert sich die Startseite (Riff weiter oben) oder bekommt `backup` eine breite Ansicht, greift der Wächter aus Idee (a) unten.
+3. **Befund 5 (Wörter):** umgesetzt. „Entdeckungspfad“ statt „-paar“ in `smoke.mjs`, Entscheidungsliste und BACKLOG; die Umleitung hängt die Startseite im selben Dokument ein; die Erklärung „Riff kam zufällig nicht vor“ ersetzt durch die Rechnung zum Wettlauf (rund 5 % je Besuch, 15 Wiederholungen mit rund 20 % noch ganz grün) und den Hinweis, dass es der vierte Treffer ist.
+4. **Befunde 2, 3, 4 und „alle 19 Pfade“:** als Ideen (a) bis (d) im BACKLOG beim Punkt „Firefox lädt manche Fotos doppelt“, passend zu Teil B („Seitenwechsel im Test“). Entscheidung dort.
+5. **CI-Beweis:** Die CI-Läufe auf `47b1c1f` und `90b80ab` wurden durch neuere Pushes abgebrochen (`cancel-in-progress`); maßgeblich ist der Lauf auf dem Endstand des PR.
