@@ -18,7 +18,7 @@ Stand: 24.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 ## Adressen
 
 - **Testseite** (neuester freigegebener Stand, Branch `test-live`): https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/ · **Für Freunde** (Branch `main`, nur nach Phasen-Freigabe): https://wunderkompass.vercel.app/
-- **Vercel-Tageslimit** (seit 24.11.2026 gegen 19:10 UTC, [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): keine neuen Vorschauen; die Testseite zeigt noch den Stand von PR #112 und zieht erst mit dem nächsten Commit auf `test-live` nach dem Ende der Sperre nach (sicher ab 25.11.2026, 19:10 UTC). Vercel ist kein Pflicht-Check, Merges gehen trotzdem.
+- **Vercel-Tageslimit** ([Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): Am 24.11.2026 sperrte Vercel von etwa 19:04 bis 19:21 UTC neue Vorschauen (kostenloser Plan, 100 Deployments am Tag), danach baute es wieder. Viele Pushes hintereinander können die Sperre jederzeit wieder auslösen. Vercel ist kein Pflicht-Check, Merges gehen trotzdem; ein gesperrter Merge erneuert die Testseite erst mit dem nächsten Commit auf `test-live`.
 
 ## Nächster Schritt
 

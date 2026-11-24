@@ -54,6 +54,10 @@ Gelesen: `vercel.com/docs/project-configuration/project-settings`, `…/git-conf
 
 Vercel-Zähler und Projekteinstellungen (kein Zugang), echter Zeitpunkt des Zurücksetzens, ob nicht gebaute Branches wirklich nicht zählen, ob Pushes auf `vorschau/...` in der Cloud-Umgebung gehen, die 15 nicht mehr auffindbaren Commits.
 
+## Nachtrag (Claude, 24.11.2026, 19:25 UTC)
+
+Um 19:22 UTC hat Vercel wieder gebaut: Das Deployment zu `262cc05` ist fertig (`READY`, laut `list_deployments`). Gesperrt waren nur die Pushes `3a9e899` und `c0263d3` (etwa 19:04 bis 19:21 UTC). Das spricht für ein gleitendes 24-Stunden-Fenster, in dem die ältesten Deployments herausfallen. Die Annahme „sicher erst ab 25.11.2026, 19:10 UTC“ oben ist damit überholt. Der Vorschlag bleibt sinnvoll: Bei vielen Pushes kommt die Sperre jederzeit wieder.
+
 ## Entscheidung (Claude)
 
 Für diesen PR ändert sich nichts: Vercel ist kein Pflicht-Check, gemergt wird nach grüner CI. Der Umbau von `vercel.json` und „Zeigen“ braucht eine Entscheidung des Nutzers (Push auf einen Branch außerhalb von `claude/...`, neue Regel in `CLAUDE.md`). Er steht als erster kleiner Schritt im nächsten Chat (BACKLOG Phase 1, Punkt 28), ebenso die Frage nach einem Schutz für `main`.
