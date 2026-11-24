@@ -3,6 +3,17 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil A ist auf der Testseite; Prüfungen verlässlicher
+
+Teil A „Eine Stufe für alles“ ist seit 24.11.2026 auf der Testseite (PR #107). Für Kinder ändert sich danach nichts Sichtbares. Die Prüfungen fallen seltener grundlos aus und finden Zeitfehler früher.
+
+- **Browser schneller geladen:** Die Prüfung auf GitHub holt die Pakete für die Test-Browser zuerst von der offiziellen Ubuntu-Quelle. Ein langsamer Spiegel hatte sie bis knapp an ihre Zeitgrenze von 20 Minuten gebracht.
+- **Stresslauf:** Ein Schalter bremst im Test jedes Bild der Seite. So zeigen sich Fehler, bei denen etwas erst einen Augenblick später erscheint, schon vor dem PR. Er gehört jetzt zu `/pruefen`.
+- **Aufgeräumt:** Der veraltete Größenvergleich im Build ist weg; die festen Größengrenzen gelten weiter.
+- **Arbeitsregel genauer:** Wer Karten ändert, prüft danach auch alle Karten offline, und betroffene Tests werden auch über ihren Auslöser gesucht.
+- **Zwei Testfehler, die nur manchmal kamen, behoben:** In Safari (WebKit) war im Test einmal das Suchfeld leer, als beim Tippen die Kapiteltexte kamen; ein eigener Test prüft jetzt genau diesen Moment mit echtem Tippen. In Firefox war der Rauchtest rot, wenn die Startseite zufällig das Riff-Foto zeigte; jetzt wartet er, bis die Startseite fertig ist. Auf der Seite selbst war beides kein Fehler.
+- **Neuer Helfer „Spieltester“ (Pilot):** Er benutzt die Seite im echten Browser in einer Rolle, z. B. „6 Jahre, mit einem Elternteil, am Handy“, und meldet, wo man hängen bleibt. Kein Kindertest. Sein erster Lauf an den Stufen fand zwei Fehler (nach einem Stufenwechsel bleibt manchmal die alte Frage stehen; „Zu schwer?“ steht auch dort, wo man schon Entdecker spielt). Sie stehen im BACKLOG und sind noch nicht behoben.
+
 ## 23.11.2026 – Teil A „Eine Stufe für alles“: drei Stufen, leichter Satz oben
 
 Kinder wählen jetzt eine Stufe: Entdecker, Profi oder Experte. Die Karten zeigen Fragen passend zur Stufe.

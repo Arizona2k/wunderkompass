@@ -16,11 +16,5 @@
     "areaCls": 0.1,
     "readyMs": 6000,
     "lcpMs": 6000
-  },
-  "observeOnly": [
-    "totalJsBytes",
-    "totalJsGzipBytes",
-    "journeyInquiryBytes",
-    "journeyInquiryGzipBytes"
-  ]
+  }
 }

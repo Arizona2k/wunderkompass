@@ -1,6 +1,44 @@
 import assert from 'node:assert/strict';
-import {bereich} from './harness.mjs';
+import {bereich, inSucheTippen, ladeanfragen, ready} from './harness.mjs';
 import {ausprobieren} from './karte-hilfen.mjs';
+
+// Kinder tippen Buchstabe für Buchstabe. Beim ersten Öffnen der Suche kommen die Kapiteltexte oft genau dann an
+// (Fund in CI-Lauf 45344729398, WebKit, 24.11.2026: danach war das Suchfeld leer). Dieser Test macht den Moment gezielt:
+// Er hält die Kapiteltexte zurück und gibt sie 0 bis 150 ms nach dem ersten Tastendruck frei. Jede Verzögerung auf einer
+// frischen Seite, denn danach hat die Suche die Kapiteltexte schon. Service Worker aus, damit `route` die Anfrage sicher sieht.
+export async function tippenWaehrendKapiteltexteKommen(ctx, report) {
+  const wort = 'Elefant';
+  for (const verzoegerung of [0, 20, 50, 100, 150]) {
+    const context = await ctx.browser.newContext({viewport: {width: 390, height: 844}, reducedMotion: 'reduce', serviceWorkers: 'block'});
+    let freigeben = () => {}, zeitgeber;
+    try {
+      let anfragen = 0;
+      const gehalten = new Promise(ok => { freigeben = ok; });
+      await context.route('**/assets/journey-content-*.json', async route => { anfragen++; await gehalten; await route.continue(); });
+      const page = await context.newPage();
+      ctx.monitor(page);
+      const anfragenFertig = ladeanfragen(page);
+      await page.goto(ctx.base);
+      await ready(page);
+      await page.getByRole('button', {name: 'Lernwelt durchsuchen', exact: true}).click();
+      const dialog = page.getByRole('dialog'), input = dialog.locator('input'), laden = dialog.getByText('Kapiteltexte werden noch ergänzt …', {exact: true});
+      await laden.waitFor();
+      zeitgeber = setTimeout(freigeben, verzoegerung);
+      await input.pressSequentially(wort, {delay: 30});
+      await laden.waitFor({state: 'detached'});
+      assert.equal(await input.inputValue(), wort, `Getipptes bleibt, wenn die Kapiteltexte ${verzoegerung} ms nach dem ersten Tastendruck freigegeben werden`);
+      await dialog.getByText('Passende Entdeckungen', {exact: true}).waitFor();
+      assert.equal(await dialog.getByRole('option').first().getAttribute('data-value'), 'topic:animal-african-savanna-elephant');
+      assert.equal(anfragen, 1, 'die Suche lädt die Kapiteltexte genau einmal');
+      await anfragenFertig();
+    } finally {
+      clearTimeout(zeitgeber);
+      freigeben();
+      await context.close();
+    }
+  }
+  report.checks.push('Search keeps real keystrokes while chapter texts arrive 0 to 150 ms after typing starts');
+}
 
 // Das Energiemodell liegt in „Ausprobieren“ der Karte „Sonnenstrom auch am Abend?“; das ist nach jedem
 // Seitenwechsel (auch Vor/Zurück) wieder zu.
@@ -17,10 +55,8 @@ export async function searchAndHistory(page, report) {
     ['Einstein', 'topic:person-albert_einstein'],
     ['Giraffe', 'topic:animal-giraffe'],
   ]) {
-    await page.getByRole('button', { name: 'Lernwelt durchsuchen', exact: true }).click();
-    await page.getByRole('dialog').locator('input').fill(query);
-    const result = page.getByRole('option').first();
-    await result.waitFor();
+    const dialog = await inSucheTippen(page, query);
+    const result = dialog.getByRole('option').first();
     assert.equal(await result.getAttribute('data-value'), id);
     await result.click();
     await page.locator('.world-mini-question').waitFor();

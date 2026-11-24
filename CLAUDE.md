@@ -1,6 +1,6 @@
 # CLAUDE.md – Arbeitshandbuch für WunderKompass
 
-Stand: 23.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
+Stand: 24.11.2026. Kurz, verbindlich, auf Deutsch. Bei Widerspruch gilt eine spätere ausdrückliche Weisung des Nutzers im Chat.
 
 ## Das Projekt in fünf Sätzen
 
@@ -52,7 +52,7 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm run export:data` | Inhaltsexporte nach `exports/content` (noch in Git, weil Browser-Tests sie lesen; Ablösung im BACKLOG) |
 
 Browser-Runner direkt: `node tests/browser/run.mjs --suite smoke|ci|full [--browser chromium|firefox|webkit|all] [--jobs N] [--base URL] [--shard GRUPPE] [suitenamen]`.
-`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build. `--shard` wählt eine Gruppe der Vollprüfung aus `tests/browser/shards.mjs`. Jeder Lauf schreibt die Dauer je Suite nach `.qa-output/browser/zeiten-*.json`.
+`--base` prüft eine laufende Adresse (z. B. eine Vercel-Vorschau). `QA_DIST=<ordner>` prüft einen anderen Build. `QA_FRAME_DELAY_MS=150` lässt jedes Bild der Seite 150 ms später kommen (Stresslauf, Schritt in `/pruefen`). `--shard` wählt eine Gruppe der Vollprüfung aus `tests/browser/shards.mjs`. Jeder Lauf schreibt die Dauer je Suite nach `.qa-output/browser/zeiten-*.json`.
 **Playwright** (das Browser-Testwerkzeug) ist immer auf der neuesten Version, die mindestens 7 Tage alt ist (Wunsch des Nutzers, 21.11.2026). `/weiter` prüft das bei jedem Einstieg; ein Update ist ein eigener kleiner Commit mit `pnpm run check`.
 Die passenden Browser holt `pnpm exec playwright install --with-deps chromium firefox webkit`: im Start-Skript der Cloud-Umgebung „wunderkompass“, direkt nach einem Playwright-Update oder wenn sie im Container fehlen, sonst nicht. Dann laufen Chromium, Firefox und WebKit auch im Container. Die CI prüft zusätzlich alle drei (Job „Vollprüfung“, bei PRs nach `main` oder von Hand; je Browser in Gruppen aus `tests/browser/shards.mjs`, alle gleichzeitig, Zeiten als Artefakt).
 
@@ -65,7 +65,7 @@ Jede Phase und jeder größere Schritt:
 1. **Entwurf** in `docs/entwurf/`, Freigabe durch den Nutzer.
 2. **Plan** in kleinen Schritten.
 3. **Bauen** auf dem Branch `claude/...`.
-4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026). Wer Kartentexte oder den Kartenaufbau ändert (`app/world-catalog.json`, `app/kern/karte/`, `app/kern/kern.css`), lässt danach erst `pnpm run check` und dann `node tests/browser/run.mjs --suite full core` laufen (rund 12 Minuten): `core` prüft das Wissensbuch und die verbundenen Entdeckungen, die sonst nur die Vollprüfung sieht (Technik-Prüfung Teil A).
+4. **Prüfen:** `pnpm run check` grün, dazu passende Helfer. Ändert sich etwas, das Tests voraussetzen (welche Frage eine Karte zeigt, wo ein Text steht, welche Verbindung es gibt), zuerst alle betroffenen Tests suchen, nach dem Wortlaut und nach dem Auslöser (Speicherschlüssel wie `gameSessions['topic:`, Funktionen wie `antwortReihe`), und in einem Durchgang anpassen, dann die betroffenen großen Suiten gleich laufen lassen, nicht erst am Phasenende (Wunsch des Nutzers, 23.11.2026; Auslöser seit 24.11.2026). Wer Kartentexte oder den Kartenaufbau ändert (`app/world-catalog.json`, `app/kern/karte/`, `app/kern/kern.css`), lässt danach erst `pnpm run check` und dann `node tests/browser/run.mjs --suite full core offline-cold-full` laufen (rund 18 Minuten): `core` prüft das Wissensbuch und die verbundenen Entdeckungen, `offline-cold-full` die Karten und Reisen offline; beides sieht sonst nur die Vollprüfung (Technik-Prüfung Teil A; `offline-cold-full` dazu seit 24.11.2026).
 5. **Zeigen:** Vercel-Vorschau-Link und Screenshots, in einfachen Worten.
 6. **Freigabe:** PR nach `test-live`, Vorschau- und PR-Link schicken. Merge nach grüner CI und „ok“ im Chat.
 7. **Nachführen:** `STATUS.md`, `BACKLOG.md`, `CHANGELOG.md`. Sichtbare Änderungen bekommen einen kurzen, kindgerechten Eintrag in „Was ist neu?“ auf der Seite (Wunsch des Nutzers, 21.11.2026; ab Phase 1).
@@ -111,6 +111,7 @@ Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude ents
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
 | `ideen-scout` | Vergleichbare Angebote ansehen, Ideen als Vorschläge liefern | sonnet / medium |
 | `technik-pruefer` | Arbeitssystem: späte Prüfungen, CI-Dauer, Unterlagen gegen Wirklichkeit, Pakete, Modellnamen, Vercel/GitHub | sonnet / high |
+| `spieltester` | Benutzt die Seite im echten Browser in einer Rolle (Alter, Gerät) mit einem klaren Ziel, spielt bis zum Ende, meldet Sackgassen, Verwirrendes, Kaputtes, zu leicht oder zu schwer, mit Bildern. Kein Kindertest; echte Kinder bleiben die wichtigste Rückmeldung. Einsatz bei sichtbaren Änderungen vor dem PR und am Phasenende, nicht bei jeder Kleinigkeit (seit 24.11.2026, Pilot) | sonnet / high |
 
 - `fable` (stärkstes Modell) nur gezielt für große Abschlussprüfungen am Phasenende.
 - `haiku` für einfache Massenprüfungen, z. B. alle Karten auf kaputte Verweise.

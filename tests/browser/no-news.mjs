@@ -1,7 +1,7 @@
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import {ladeanfragen} from './harness.mjs';
+import {inSucheTippen,ladeanfragen} from './harness.mjs';
 const NEWS_REMOVAL_WIDTHS=[320,360,390,768,1024,1440,1920];
 const REMOVED_NEWS_ROUTES=['news','news/girl-day-2026','news/unknown'];
 const absent=async p=>{
@@ -22,9 +22,9 @@ export async function newsRemovalFlow(browser,base,ready,monitor,report,shots){
    if(large)await p.locator('.earth-app').evaluate(e=>e.classList.add('large-reading'));
    await absent(p);
    // Exercise a real retained learning action before checking old news links.
-   await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
-   const input=p.getByRole('combobox',{name:'Lernwelt durchsuchen',exact:true});await input.fill('Vulkan-Werkstatt');
-   await p.getByRole('option').filter({hasText:'Vulkan-Werkstatt'}).first().waitFor();
+   // inSucheTippen wartet die Kapiteltexte ab: Kommen sie während `fill`, kann das Suchfeld leer bleiben (BACKLOG).
+   const dialog=await inSucheTippen(p,'Vulkan-Werkstatt'),input=dialog.locator('input');
+   await dialog.getByRole('option').filter({hasText:'Vulkan-Werkstatt'}).first().waitFor();
    await input.fill('Ein Wort für absichtliches Wütendmachen');await p.waitForFunction(()=>document.querySelectorAll('[role=option]').length===0);assert.equal(await p.getByRole('option').count(),0,'former news article cannot be found');
    await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});
    const passBefore=await p.evaluate(()=>JSON.parse(localStorage.getItem('erde-entdecken:save:v3')).progress);assert.deepEqual(passBefore.notes,pass.progress.notes);assert.deepEqual(passBefore.favorites,pass.progress.favorites);assert.deepEqual(passBefore.gameSessions.memory,pass.progress.gameSessions.memory);

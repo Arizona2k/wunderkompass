@@ -4,6 +4,7 @@ import path from 'node:path';
 import {captureNativeViewport} from './native-screenshot.mjs';
 import {assertTextInsideControls} from './text-geometry.mjs';
 import {KARTE,ausprobieren,frageDurchspielen,lesetexte} from './karte-hilfen.mjs';
+import {inSucheTippen} from './harness.mjs';
 const catalog=JSON.parse(await fs.readFile(new URL('../../app/world-catalog.json',import.meta.url),'utf8'));
 const topics=catalog.filter(t=>['history-khipu','history-mohenjo-daro','history-bronze'].includes(t.id));assert.equal(topics.length,3,'all three required historical topics are present');
 // Firefox aus Playwright 1.65.1 stürzt ab („Page crashed“, CI-Lauf 249), wenn eine Rollen-Abfrage nach Bereich und Namen
@@ -54,7 +55,7 @@ export async function historySourceView(page,{width,shots,engine='chromium',nati
  if(native)await page.bringToFront();const initial=await page.evaluate(()=>location.hash),observed=[];let completed=false;
  try{for(const topic of topics){
   if(topic.id==='history-bronze'){
-   await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();const dialog=page.getByRole('dialog');await dialog.locator('input').fill('Bronzezeit');const result=page.getByRole('option').filter({hasText:topic.title});assert.equal(await result.count(),1,'the authored bronze alias finds exactly its intended topic');await result.click();
+   const dialog=await inSucheTippen(page,'Bronzezeit');const result=dialog.getByRole('option').filter({hasText:topic.title});assert.equal(await result.count(),1,'the authored bronze alias finds exactly its intended topic');await result.click();
   }else await page.evaluate(id=>location.hash='world/topic/'+id,topic.id);
   const article=page.locator(KARTE+'.wissenskarte-welt-history');await article.getByRole('heading',{name:topic.title,exact:true}).waitFor();const question=article.locator('.world-mini-question');await question.waitFor();
   // Lesetexte an ihren Orten der neuen Karte, danach die Bronzezeit-Texte (Mehr erfahren ist dann offen).
