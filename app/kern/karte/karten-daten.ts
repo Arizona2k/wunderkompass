@@ -51,7 +51,7 @@ export function kartenFragen(topic: WorldTopic, hintBank: Tippbank): KartenFrage
     level: level ?? 'entdecker',
   }));
   // Die Challenge-Fragen erscheinen auch auf ihrer Karte (B7). Auf der Karte haben sie eigene Schlüssel;
-  // in der Wissens-Challenge bleibt ihre Wiederholung challenge:<id>. Ohne Einstufung gelten sie als Profi.
+  // in „Kreuz und quer“ bleibt ihre Wiederholung challenge:<id>. Ohne Einstufung gelten sie als Profi.
   const challenge = (topic.challenges ?? []).filter(q => !q.ruht).map(({id, level, prompt, answers, correct, why}): KartenFrage => {
     const eintrag = hintBank[id];
     return {

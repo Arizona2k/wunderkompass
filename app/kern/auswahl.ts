@@ -24,6 +24,10 @@ function gemischt<T>(liste: readonly T[], zufall: () => number): T[] {
   return a;
 }
 
+// Höchstens so viele Experten-Aufgaben je Runde, der Rest kommt aus Profi (Entscheidung des Nutzers, 24.11.2026,
+// Entscheidungsliste „drei Spiele“, C1): Bei wenigen Experten-Aufgaben wechseln die Runden sonst nie.
+export const EXPERTEN_JE_RUNDE = 3;
+
 export function waehleAufgaben({ vorrat, review, schluessel, anzahl, vorige = [], zufall = Math.random, heute = new Date().toISOString().slice(0, 10) }: AuswahlEingabe): string[] {
   const zuletzt = new Set(vorige);
   const gruppe = (id: string) => {

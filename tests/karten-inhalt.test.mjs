@@ -67,7 +67,7 @@ test('alle Karten haben wohlgeformte neue Felder', () => {
 test('neue IDs sind eindeutig und gleichen keiner Challenge-ID', () => {
   const ids = catalog.flatMap(t => [
     t.id,
-    t.id + ':mini', // Die Startfrage zählt in der Wissens-Challenge unter dieser ID (knowledge-challenge.ts).
+    t.id + ':mini', // Die Startfrage zählt in „Kreuz und quer“ unter dieser ID (knowledge-challenge.ts).
     ...(t.challenges ?? []).map(q => q.id),
     ...(t.moreQuestions ?? []).map(q => q.id),
     ...(t.claims ?? []).map(c => c.id),

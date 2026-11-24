@@ -13,7 +13,7 @@ export const DISCOVERY_ACTIVITIES=[
  {title:'Mondstellung und Wasserstand vergleichen',text:'Wähle Vollmond und Halbmond. Was ändert sich am Unterschied zwischen Hoch- und Niedrigwasser?',hash:'labs/tides',label:'Gezeiten erforschen'},
  {title:'Wasser verdunstet auch ohne Kochen',text:'Vergleiche zwei gleiche Wasserschalen. Was verändert sich am sonnigeren und schattigeren Standort? Gemeinsam mit einem Erwachsenen.',hash:'labs/experiment/evaporation',label:'Wasserversuch öffnen'},
  {title:'Zwei Gezeitenkurven, ein Modelltag',text:'Bewege die Modellzeit. Vergleiche die durchgezogene und die gestrichelte Kurve.',hash:'labs/tides',label:'Modelltag untersuchen'},
- {title:'Blüten und Bestäuber verbinden',text:'Prüfe in der Wissens-Challenge, wie Pflanzen und Tiere zusammenwirken. Hinweise und Stufen wählst du selbst.',hash:'games',label:'Wissens-Challenge öffnen'},
+ {title:'Blüten und Bestäuber verbinden',text:'Bei „Kreuz und quer“ prüfst du, wie Pflanzen und Tiere zusammenarbeiten. Du spielst auf deiner Stufe, Tipps gibt es auf Wunsch.',hash:'games',label:'Kreuz und quer öffnen'},
  {title:'Ein Mondmonat in deiner Hand',text:'Gehe vom Neumond zum Vollmond. Vergleiche die vergangenen Tage mit dem hellen Anteil der Scheibe.',hash:'labs/moon',label:'Mondmonat ausprobieren'},
  {title:'Woher kommen Tröpfchen am Glas?',text:'Beobachte ein kaltes Glas gemeinsam mit einem Erwachsenen. Kommt das Wasser von innen oder aus der Luft?',hash:'labs/experiment/condensation',label:'Tröpfchen untersuchen'},
  {title:'Ein Ort, zwei Jahreszeiten',text:'Wähle denselben Breitengrad im Juni und Dezember. Vergleiche Tageslänge und Sonnenstand.',hash:'labs/seasons',label:'Jahreszeiten vergleichen'},

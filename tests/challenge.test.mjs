@@ -120,7 +120,8 @@ test('Kreuz und quer wählt je Stufe aus dem passenden Vorrat',()=>{
   assert.equal(p.stufe,'profi');assert.ok(p.ids.every(id=>stufeVon(id)==='profi'));
   const experten=CHALLENGE_BANK.filter(q=>stufeDerFrage(q)==='experte'&&!q.ruht).map(q=>q.id);
   assert.equal(x.stufe,'experte');assert.ok(experten.length<6,'es gibt erst wenige Experten-Fragen');
-  assert.ok(experten.every(id=>x.ids.includes(id)),'Experte bekommt alle Experten-Fragen zuerst');
+  assert.equal(x.ids.filter(id=>experten.includes(id)).length,Math.min(3,experten.length),'Experte bekommt höchstens drei Experten-Fragen');
+  assert.ok(x.ids.slice(0,Math.min(3,experten.length)).every(id=>experten.includes(id)),'sie kommen zuerst');
   assert.ok(x.ids.filter(id=>!experten.includes(id)).every(id=>stufeVon(id)==='profi'),'dann Profi-Fragen');
  }
  assert.match(EXPERTEN_HINWEIS,/Experten-Fragen gibt es hier erst wenige/);
@@ -147,4 +148,11 @@ test('Kreuz und quer liest Wiederholungen und meidet die vorige Runde',()=>{
  assert.ok(kreuzUndQuerRunde('profi',[],()=>.2,{['challenge:'+falsch]:{correct:false,seen:1,due:GESTERN}},HEUTE).ids.includes(falsch));
  const erste=kreuzUndQuerRunde('profi',[],()=>.2,{},HEUTE),zweite=kreuzUndQuerRunde('profi',erste.ids,()=>.7,{},HEUTE);
  assert.equal(zweite.ids.some(id=>erste.ids.includes(id)),false);
+});
+test('Experten-Runden wechseln: nach einer Runde kommt die übrige Experten-Frage zuerst',()=>{
+ const experten=CHALLENGE_BANK.filter(q=>stufeDerFrage(q)==='experte'&&!q.ruht).map(q=>q.id);
+ assert.ok(experten.length>3,'mehr Experten-Fragen als je Runde gezogen werden');
+ const erste=kreuzUndQuerRunde('experte',[],()=>.3,{},HEUTE),zweite=kreuzUndQuerRunde('experte',erste.ids,()=>.3,{},HEUTE);
+ const neu=experten.filter(id=>!erste.ids.includes(id));
+ assert.ok(neu.every(id=>zweite.ids.includes(id)),'die Experten-Frage aus der vorigen Runde fehlt nicht noch einmal');
 });

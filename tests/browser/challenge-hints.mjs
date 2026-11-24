@@ -12,7 +12,7 @@ export async function assertHonestChallengeFeedback(room){
 
 export async function offlineChallengeHints(page,report){
  const room=page.locator('.knowledge-challenge'),hint=room.locator('.world-game-hint');
- const open=async()=>{await inSucheTippen(page,'Wissens-Challenge');await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();};
+ const open=async()=>{await inSucheTippen(page,'Kreuz und quer');await page.getByRole('option').filter({hasText:'Kreuz und quer'}).click();};
  const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SAVE_KEY);
  async function exercise(q,next){
   assert.ok(q&&[1,2].includes(q.hints.length),'actual authored one- or two-step hint question');
@@ -34,8 +34,12 @@ export async function offlineChallengeHints(page,report){
   assert.equal(await hint.getAttribute('open'),null);
   return {id:q.id,steps:q.hints.length,wrongRightExplanationAndNextReset:true};
  }
- await open();await page.locator('.challenge-levels').getByRole('button').filter({hasText:'Mittel'}).click();
- await page.waitForFunction(key=>{const s=JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge']?.challenge;return s?.difficulty==='medium'&&s.index===0&&s.ids.length===6;},SAVE_KEY);
+ // Kreuz und quer startet gleich auf der Stufe aus dem Pass (Teil B, Aufgabe 9); „Neue Runde“ gibt eine frische Runde,
+ // auch wenn ein früherer Schritt der Suite schon eine angefangen hat. Jede Stufe hat Fragen mit einem und zwei Tipps.
+ await open();await page.locator('.knowledge-challenge .quiz-answer').first().waitFor();
+ const vorher=(await saved()).progress.gameSessions['world:knowledge-challenge']?.challenge?.ids??[];
+ await page.locator('.world-game-room').getByRole('button',{name:'Neue Runde',exact:true}).click();
+ await page.waitForFunction(({key,vorher})=>{const s=JSON.parse(localStorage.getItem(key)).progress.gameSessions['world:knowledge-challenge']?.challenge;return !!s?.stufe&&s.index===0&&s.ids.length===6&&JSON.stringify(s.ids)!==JSON.stringify(vorher);},{key:SAVE_KEY,vorher});
  const state=(await saved()).progress.gameSessions['world:knowledge-challenge'].challenge;
  const random=await exercise(CHALLENGE_BANK.find(q=>q.id===state.ids[0]),CHALLENGE_BANK.find(q=>q.id===state.ids[1]));
  // Retain the real random round above. A valid saved mixed round additionally
@@ -55,7 +59,7 @@ export async function offlineChallengeHints(page,report){
  const deterministic=[];for(let i=0;i<2;i++)deterministic.push(await exercise(questions[i],questions[i+1]));
  assert.deepEqual(deterministic.map(q=>q.steps),[1,2],'both single and second-step offline behavior remain mandatory');
  report.offlineHintShapes={random,deterministic,actualSyntheticPassImport:true,allOtherProgressRetained:true};
- report.checks.push('Cold offline challenge with server stopped: actual random medium question plus mandatory saved single/two-step cases, wrong/right, explanation, next-question reset and all other pass progress retained');
+ report.checks.push('Cold offline challenge with server stopped: actual random question on the pass level plus mandatory saved single/two-step cases, wrong/right, explanation, next-question reset and all other pass progress retained');
 }
 
 // Synthetic Schema-3 rounds use the same fields as the version before hints.

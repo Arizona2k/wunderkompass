@@ -19,7 +19,7 @@ import {STUFEN_NAME,istStufe,type Stufe} from './kern/stufe';
 import {hatStufen,leseGeschafft,mitGeschafft,neueWeltRunde,rundenAntworten,rundenStufe,weltSpielStufe,type Geschafft} from './world-game-runde';
 const TOPICS=CATALOG as WorldTopic[];
 export const WORLD_GAMES=[
- {id:'knowledge-challenge',name:'Wissens-Challenge',text:'Verbinde Natur, Erde und Weltall. Wähle leicht, mittel oder schwer.',icon:Lightbulb},
+ {id:'knowledge-challenge',name:'Kreuz und quer',text:'Fragen aus allen Welten, bunt gemischt. Du spielst auf deiner Stufe.',icon:Lightbulb},
  {id:'animal-detective',name:'Tierdetektiv – neue Spuren',text:'Folge Hinweisen und entdecke, welches Tier dahintersteckt.',icon:PawPrint},
  {id:'habitats',name:'Tier & Lebensraum',text:'Verbinde Tiere mit einer passenden Heimat.',icon:GlobeIcon},
  {id:'food',name:'Wer frisst was?',text:'Pollen, Blätter oder Beutetiere? Finde passende Nahrung.',icon:Utensils},
@@ -37,7 +37,7 @@ export default function WorldGames({sessions,review,stufe,onStufe,onSave,onNew,o
  // Aufbau: Kommt das Spiel über `resume`, gibt es den Raum ein Bild nach start() oft noch nicht.
  useLayoutEffect(()=>{if(game)document.querySelector('.world-game-room')?.scrollIntoView({block:'start'});},[game]);
  if(!config||!game)return null;
- const full='world:'+game;return <GameShell className="world-game-room" title={config.name} boardKey={full+round} onExit={()=>{onRead('');setGame(null);onActive(false);}} onNewRound={()=>{const vorige=vorigeRunde(sessions[full]),geschafft=leseGeschafft(sessions[full]?.geschafft);onNew(full);if(vorige.length)onSave(full,'vorige',vorige,'world');if(Object.keys(geschafft).length)onSave(full,'geschafft',geschafft,'world');setRound(n=>n+1);}}><SavedGame id={full} family="world" sessions={sessions} onSave={onSave}>{game==='knowledge-challenge'?<KnowledgeChallenge review={review} onWin={()=>onWin(full)} onRead={onRead} onReview={onReview} onTopic={onTopic}/>:game==='chronology'?<Chronology onWin={()=>onWin(full)} onRead={onRead}/>:<Rounds id={game} review={review} stufe={stufe} onStufe={onStufe} onWin={()=>onWin(full)} onRead={onRead} onReview={onReview} onTopic={onTopic}/>}</SavedGame></GameShell>;}
+ const full='world:'+game;return <GameShell className="world-game-room" title={config.name} boardKey={full+round} onExit={()=>{onRead('');setGame(null);onActive(false);}} onNewRound={()=>{const vorige=vorigeRunde(sessions[full]),geschafft=leseGeschafft(sessions[full]?.geschafft);onNew(full);if(vorige.length)onSave(full,'vorige',vorige,'world');if(Object.keys(geschafft).length)onSave(full,'geschafft',geschafft,'world');setRound(n=>n+1);}}><SavedGame id={full} family="world" sessions={sessions} onSave={onSave}>{game==='knowledge-challenge'?<KnowledgeChallenge review={review} stufe={stufe} onStufe={onStufe} onWin={()=>onWin(full)} onRead={onRead} onReview={onReview} onTopic={onTopic}/>:game==='chronology'?<Chronology onWin={()=>onWin(full)} onRead={onRead}/>:<Rounds id={game} review={review} stufe={stufe} onStufe={onStufe} onWin={()=>onWin(full)} onRead={onRead} onReview={onReview} onTopic={onTopic}/>}</SavedGame></GameShell>;}
 // Eine neue Runde wählt mit dem Auswahl-Helfer und der gemeinsamen Stufe (Teil B, Aufgabe 8). Eine gespeicherte Runde läuft
 // mit ihrer Stufe zu Ende (E1); Runden aus der Zeit vor Teil B haben keine Stufe und spielen Entdecker.
 // Ein Stufenwechsel in der Runde startet die neue Runde im selben Brett: Würde das Brett neu eingehängt (key), fände

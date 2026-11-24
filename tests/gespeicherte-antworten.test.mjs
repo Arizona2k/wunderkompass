@@ -58,7 +58,7 @@ test('Zusatzfragen: jede gespeicherte Antwort ist noch lesbar oder bewusst erset
   }
 });
 
-// Challenge-Fragen standen vor Teilschritt 3 nie auf der Karte; gespeichert sind sie nur in Runden der Wissens-Challenge.
+// Challenge-Fragen standen vor Teilschritt 3 nie auf der Karte; gespeichert sind sie nur in Runden von „Kreuz und quer“ (früher Wissens-Challenge).
 // Wurde eine umformuliert, kennt die Liste früherer Fassungen ihre ganze alte Frage: Die alte Runde zeigt sie wie damals
 // (nächster Test). Ganz neue Fragen bekamen neue IDs; die alte ID ruht (bleibt in den Daten, erscheint nicht mehr).
 test('Challenge-Fragen: jede ID bleibt; eine Frage ist gleich, umformuliert mit alter Fassung oder ruht', () => {
@@ -96,11 +96,11 @@ for (const [name, liste, mindestens] of DATIERT) test(`datierte Liste ${name}: j
   }
 });
 
-// Dieselben Antworten stecken auch in Runden der Wissens-Challenge (Hauptfragen als '<karte>:mini', Challenge-Fragen unter
+// Dieselben Antworten stecken auch in Runden von „Kreuz und quer“ (Hauptfragen als '<karte>:mini', Challenge-Fragen unter
 // ihrer ID; heikle Karten sind nicht dabei). Eine angefangene Runde verlangt genau ihre Antworten oder eine frühere Fassung
 // (retainedChallengeChoices); eine neue Antwort allein würde sie verwerfen (Code-Nachprüfung Teil A, M1).
 const imChallenge = new Map(CHALLENGE_BANK.map(q => [q.id, q]));
-for (const [name, liste] of DATIERT) test(`datierte Liste ${name}: eine angefangene Runde der Wissens-Challenge lässt sich fortsetzen`, () => {
+for (const [name, liste] of DATIERT) test(`datierte Liste ${name}: eine angefangene Runde von Kreuz und quer lässt sich fortsetzen`, () => {
   let geprueft = 0;
   for (const alt of liste.fragen) {
     const q = imChallenge.get(alt.id) ?? (karten.has(alt.id) ? imChallenge.get(alt.id + ':mini') : undefined);
