@@ -111,4 +111,8 @@ Dateien: Skripte und Bilder unter `/home/user/wunderkompass/.qa-output/spieltest
 
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+- **A, Experte nur Etikett:** bleibt vorerst so (E3, ehrlich gesagt); echte Experten-Aufgaben im BACKLOG (Punkt 25). Dem Nutzer im Bericht genannt.
+- **B, Fürwörter:** Für die neun auffälligsten Personen eigene, neutrale Rätsel nur aus der Karte (`EIGENE_RAETSEL`, mit Test); der Rest im BACKLOG. **Lösungsstellung:** Die Reihenfolge wird je Runde gemischt, die richtige Antwort steht nie fest oben (Code-Prüfung ohne Befund); eine Runde mit 8 Aufgaben ist zu klein für ein Muster.
+- **C, Rückmeldung immer gleich; D, Entdecker-Hinweis zu schwer; E, stiller Neustart beim Stufenwechsel; F, schwere Wörter und Füller:** ins BACKLOG (Punkt 25). E ist so entschieden (Entscheidung 3); eine kurze Zeile dazu steht als Vorschlag im BACKLOG.
+- **G, Spiel öffnet mitten in der Seite:** behoben. Das Spiel rollt nach dem Aufbau an den Anfang (`useLayoutEffect` in `app/world-games.tsx`); vorher klappte ein Versuch nur manchmal. Browser-Suite `spiel-auswahl` prüft es.
+- **Feinschliff Fokus am Ende:** behoben (Fokus auf „Eine ganze Runde gelöst!“). Übrige Feinschliffe im BACKLOG.

@@ -82,4 +82,8 @@ Keine.
 
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+- **Muss 1, „Zu schwer?“ auf dem Abschluss:** behoben. `StufenWahl` hat `ohneZurueck`; die Welt-Spiele setzen es auf dem Abschlussbild (Browser-Suite `spiel-auswahl` prüft, dass der Knopf dort fehlt).
+- **Muss 2, Antworten unter der Falz:** gemildert. Auf Handys (bis 560 px) ist das Foto in der Runde 150 px hoch und hat 12 px statt 20 px Abstand; die Stufenzeile hat unten 12 px. Außerdem öffnet ein Spiel jetzt oben (Spieltest G). Den Link „Zu schwer?“ in die Stufenzeile zu ziehen (Feinschliff 3) ist nicht umgesetzt.
+- **Wichtig 2, Fokus nach richtiger Antwort:** behoben. Der Fokus geht auf „Nächste Aufgabe“ bzw. „Spielstempel sammeln“, nach der letzten Aufgabe auf die Überschrift „Eine ganze Runde gelöst!“ (Browser-Suite `spiel-auswahl`).
+- **Feinschliff 1 bis 3:** Hinweise in 16 px mit mehr Abstand, „Zu schwer?“ bündig (`margin-inline-start: -4px`).
+- **Wichtig 1 (Abschluss), Wichtig 3 (Koala), Feinschliff 4 bis 7:** ins BACKLOG (Punkt 25).

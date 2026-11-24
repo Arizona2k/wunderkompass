@@ -151,4 +151,9 @@ Fundstellen: `/home/user/wunderkompass/app/world-game-bank.ts`, `/home/user/wund
 
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+- **M1:** Alle Aufgaben haben dieselbe dritte Antwort, nach der `kinder-redaktion` „Erst in der Zukunft“ (passt zu Früher, Heute, Zukunft auf den Erfindungskarten; der `fakten-pruefer` bestätigt, dass sie überall klar falsch ist). Alte Runden behalten ihre alte dritte Antwort, bei Früher- und bei Heute-Aufgaben (Test „gespeicherte Aufgaben mit ihrer alten dritten Antwort laufen weiter“). Statt des Längen-Tests prüft ein eigener Test gleiche Antworttexte und etwa gleich viele Früher- und Heute-Lösungen. Die bessere Lösung „Früher und heute“ steht im BACKLOG.
+- **M2:** „Antarktis“ (Eisbär) und „Arktis“ (Kaiserpinguin) stehen unter Profi; bei der Grünen Meeresschildkröte stehen die Meeresfallen unter Profi, die Landpflanzen unter Entdecker (3 Entdecker-, 4 Profi-Fallen). Der `fakten-pruefer` hat die neuen Paare geprüft.
+- **M3:** Entdecker ersetzt ausgeschlossene feste Fallen durch geprüfte Kandidaten (`entdeckerAntworten` in `app/world-game-runde.ts`; Test „Entdecker zeigt keine ausgeschlossene Falle“ mit Chamäleon/Seepferdchen und Internet/Smartphone).
+- **M4:** „Vor allem kleine Säugetiere“ beim Eisbär und „Fleisch“ beim Axolotl gestrichen, Axolotl aufgefüllt.
+- **M5:** Neun eigene, neutrale Rätsel (Armstrong, Mandela, Murasaki Shikibu, Tagore, Jemison, Darwin, Einstein, dazu Benz und al-Chwarizmi), nur mit Aussagen von der Karte; von `kinder-redaktion` und `fakten-pruefer` geprüft. Die vorgeschlagenen Sätze mit „E = mc²“ und „Michael Collins“ sind nicht übernommen: Das erste steht auf keiner Karte, das zweite hilft nicht beim Erkennen.
+- **S1 bis S10 und Kleinkram:** ins BACKLOG (Punkt 25), S6 zusammen mit den übrigen Personen-Rätseln.

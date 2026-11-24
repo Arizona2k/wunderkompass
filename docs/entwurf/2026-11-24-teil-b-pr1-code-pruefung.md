@@ -29,4 +29,12 @@ Keine Browser-Suiten, kein Build. Fallenlisten nur technisch geprüft. Zwei Tabs
 
 ## Umsetzung (Claude, 24.11.2026)
 
-Folgt.
+- **Fehler 1, Challenge „Eine andere Stufe wählen“:** behoben. `andereStufe` in `app/knowledge-challenge-game.tsx` merkt die laufende Runde als `vorige`, bevor der Spielstand geleert wird (Test in `tests/world-game-runde.test.mjs`).
+- **Fehler 2, „vier Antworten“:** behoben. Stufentext Profi „etwas kniffliger“ (nach der `kinder-redaktion`), Neuigkeit „meist vier Antworten“, CHANGELOG nennt die Ausnahme „Früher oder heute?“.
+- **Risiko 1, Stufe ohne Runde (R1):** behoben. Die gespeicherte Stufe gilt nur, wenn auch gültige Aufgaben gespeichert sind (`alteRunde` in `app/world-games.tsx`).
+- **Risiko 2, gemischte Antwortzahl (R2):** behoben. Fehlt einer alten Runde eine Reihenfolge, kommt der Ersatz aus `rundenAntworten(spiel, rundenStufe, items)`, also passend zur Stufe der Runde (Test „rundenAntworten gibt jeder Aufgabe die Antworten ihrer Stufe …“).
+- **Risiko 3, spätere Kürzungen (R3):** bewusst nicht geändert. Gestrichene Fallen sind meist unfaire (z. B. „Fleisch“ beim Axolotl); eine Reihenfolge damit soll neu gemischt werden. Nichts geht verloren. Im BACKLOG (Punkt 25) festgehalten.
+- **Risiko 4, Altantworten als Falle:** Test „keine Tier-Falle wird als richtige Antwort gewertet“ in `tests/world-game-runde.test.mjs`. Die Walross-Liste enthält „Antarktis“, als Altantwort zählt dort nur „Arktis“; kein Konflikt.
+- **Risiko 5, Darwin und Einstein im Rätsel-Test:** behoben. Alle eigenen Rätsel (jetzt neun) prüft der Test „eigene Personen-Rätsel verraten weder Namen noch Geschlecht“, lange Namensteile auch mitten im Wort.
+- **Risiko 6, Kommentar zur Auswahl:** Wortlaut in `app/kern/auswahl.ts` und Entscheidung 1 an den Code angeglichen.
+- **Risiko 7, Kreuz und quer ohne Oberfläche:** kommt mit Aufgabe 9 (PR 2); heute erzeugt nichts einen solchen Spielstand.

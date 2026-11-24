@@ -111,6 +111,30 @@ Das betrifft nur die Karten, die Spiele haben kein „Mehr erfahren“:
 - Tagore, wenn auch steif.
 - Profi-Stufentext; besser wäre „etwas kniffliger“.
 
+## Nachprüfung der überarbeiteten Fassungen (kinder-redaktion, 24.11.2026)
+
+Bericht des Helfers zu den Fassungen aus Commit `7fd9fd8`, wörtlich übernommen:
+
+Kurz gesagt: Die Texte sind gut. Zwei Rätsel würde ich noch leicht ändern, alles andere passt. Ich habe nichts geändert.
+
+**1. `EIGENE_RAETSEL`**
+
+Alle neun Sätze halten die Regeln ein. Kein Satz enthält einen Teil des Namens, auch nicht mitten im Wort. Kein Wort verrät, ob ein Mann oder eine Frau gesucht ist. „Prinz“ und „Kaiser“ meinen andere Menschen, nicht die gesuchte Person. „Oberhaupt“ und „Raumfähre“ sind gut gewählt. Ein Grenzfall ist „Algebra“, weil das Wort mit „Al“ anfängt. Das ist aber nur ein Artikel und verrät beim Vorlesen nichts.
+
+- **Darwin: passt.** „Generationen“ ist das einzige schwere Wort. Es steht so auf der Karte, und beim Vorlesen kann ein Elternteil es erklären.
+- **Einstein: ändern, nur leicht.** Im zweiten Satz liegen zwischen „stellte“ und „vor“ fünf Wörter: „stellte sich diese Person Dinge ganz genau vor“. Wer vorliest, gerät da ins Stolpern, und der Satz hat 15 Wörter. Der Inhalt steht auf der Karte (Gedankenexperiment). Fassung: „Diese Person untersuchte Licht, Raum und Zeit. Oft spielte diese Person im Kopf ganz genau durch: Was passiert dann?“
+- **Benz: ändern.** „So ein Wagen fährt mit einem Motor.“ sagt nur noch einmal, was in „Motorwagen“ schon steckt. Das Kind lernt nichts dazu und erkennt die Person dadurch nicht besser. Fassung nach der Karte (intro und paragraphs[1]): „Diese Person entwickelte einen frühen Motorwagen. Dafür mussten Motor, Lenkung und Bremsen gut zusammenpassen.“
+- **al-Chwarizmi, Armstrong, Murasaki Shikibu, Tagore, Jemison: passt.** („Raumfähre“ erklärt das englische „Endeavour“ genug; durch „des Kaisers“ ist klar, dass „Hof“ keinen Bauernhof meint.)
+- **Mandela: passt.** Wer mag, macht den ersten Satz glatter: „Diese Person kämpfte in Südafrika gegen die Apartheid.“ Nötig ist das nicht.
+
+**2. „Erst in der Zukunft“: passt.** Die Antworten ergeben eine klare Zeitreihe, die das Kind schon von der Erfindungskarte kennt. Kurz, ehrlich, nicht abwertend.
+
+**3. Profi-Text „etwas kniffliger“: passt.** Die drei Stufen steigern sich gut.
+
+**4. Neuigkeit `spiele-mit-stufen`: passt.** „Wer war das?“ heißt im Spiel wirklich so; der Schlusssatz stellt keine Fehler in den Vordergrund.
+
+**Unsicher:** Bei Benz steht Bertha Benz vielleicht als Antwort zur Wahl, und die Karte nennt sie auch beim Motorwagen. „Entwickelte“ trennt die beiden zwar, aber ob das jüngeren Kindern reicht, sollte der `stufen-pruefer` ansehen.
+
 ## Umsetzung (Claude, 24.11.2026)
 
 Folgt.
