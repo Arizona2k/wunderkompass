@@ -461,8 +461,9 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 /* Welt-Spiele (Teil B, Aufgabe 8): Abstand zwischen Stufenzeile und „AUFGABE 1 VON 5“; auf Handys ein niedrigeres Foto,
    damit die Antworten näher an den sichtbaren Bereich rücken (Design-Prüfung Welt-Spiele, Muss 2 und Feinschliff 1). */
 .world-game-room .stufen-wahl { margin-bottom: 12px; }
-/* Beim Öffnen rollt die Seite zum Spiel (Spieltest Welt-Spiele, G); etwas Luft über dem Titel. */
-.world-game-room { scroll-margin-top: 12px; }
+/* Beim Öffnen rollt die Seite zum Spiel, beim Weiterblättern zum Brett (Spieltest Welt-Spiele, G; Spieltest PR 2,
+   Befunde 1 und 4; game-shell.tsx, kern/spiel-fokus.ts); etwas Luft darüber, für alle Spiele gleich. */
+.game-room, .game-room .game-board { scroll-margin-top: 12px; }
 @media (max-width: 560px) {
   /* .game-board dazu: globals.css lädt nach dieser Datei und setzt .world-game-room .world-photo auf 20 px. */
   .world-game-room .game-board .world-photo { margin: 12px 0; }
