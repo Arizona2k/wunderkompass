@@ -3,6 +3,24 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Bilder-Strang: echte Fotos statt KI-Zeichnungen
+
+Hinweis des Nutzers: „Teilweise sind die Fotos nicht richtig, teilweise fehlen Fotos.“ Regel seitdem: immer zuerst freie Originalfotos, KI nur, wenn es nachweislich keines gibt. Für Kinder sichtbar:
+
+- **24 Tierkarten zeigen jetzt echte Fotos** statt KI-gestützter Zeichnungen, zum Beispiel Schnabeltier, Okapi, Erdmännchen, Katta, Igel, Eisvogel, Chamäleon, Clownfisch und Seepferdchen.
+- **Neue Bilder bei Menschen und Erfindungen:** 8 Personen bekommen ein Gemälde, einen alten Druck oder ein Foto (zum Beispiel Maria Sibylla Merian, Lise Meitner, Inge Lehmann, Tagore). Ibn Sina zeigt eine alte Handschrift, weil niemand weiß, wie er aussah. Dazu Bilder für Feuer, Kompass und Fahrrad.
+- **Bessere Fotos:** ein neues Orca-Foto, größere Porträts von Karl und Bertha Benz, Einstein, Wangari Maathai, al-Chwarizmi und Gutenberg. Pinguin und Eiffelturm sind ganz zu sehen.
+- **Ehrlich beschriftet:** Ein Schild oben links sagt, wenn ein Bild kein Foto ist („Gemälde“, „Spätere Darstellung“). Es liegt nicht mehr über Kopf oder Mütze. Auf dem Tablet sind die Bilder größer.
+- **Zwei Startfragen kürzer:** „Welches Zeichen eines Kattas kann man riechen?“ und „Was haben junge Feuer-Salamander im Bach?“ Die alten Fragen hatten Wörter, die auf schmalen Handys über zwei Zeilen liefen.
+
+Hinter den Kulissen:
+
+- **Einbau-Werkzeug** `scripts/foto-einbau.mjs` mit Prüfregeln `scripts/foto-regeln.mjs`: prüft Lizenz und Urheber noch einmal über die Commons-API, verlangt einen passenden Lizenz-Link, macht WebP in 320, 640 und (ab 736 px) einer dritten Größe, trägt Bildnachweis und Kennwort ein. Es baut erst alles fertig, bevor es etwas schreibt, und skaliert nie hoch. Anleitung im Kopf der Datei.
+- **Foto-IDs geschützt:** Alle Foto-IDs stehen in `tests/fixtures/stable-ids.json` (Familie `photos`) und werden nie wiederverwendet. Ersetzte Fotos (heute `orca`) behalten ihren Nachweis und stehen in `tests/fixtures/ersetzte-fotos.json`; ein Unit-Test und der Browser-Test `world-photos` prüfen, dass jedes Foto gezeigt wird oder dort steht.
+- Vorschläge und Bildtexte in `docs/bilder/`, Berichte: [Foto-Inventur](docs/entwurf/2026-11-24-foto-inventur.md), [Paket 1](docs/entwurf/2026-11-24-bilder-paket-1-tiere.md), [Paket 2](docs/entwurf/2026-11-24-bilder-paket-2-personen.md), [Code-Prüfung](docs/entwurf/2026-11-24-bilder-strang-code-pruefung.md), [Design-Prüfung](docs/entwurf/2026-11-24-bilder-strang-design-pruefung.md), [Startfragen](docs/entwurf/2026-11-24-startfragen-karten-autor.md), Bildtexte `docs/entwurf/2026-11-24-bilder-texte-*.md`. Offen: BACKLOG Phase 1, Punkt 26 und 27.
+- Nebenbei gesichert für den nächsten Schritt: [Entscheidungsliste](docs/entwurf/2026-11-24-drei-spiele-entscheidungen.md) und Prüfberichte zu den drei Spiel-Entwürfen (Rekorde, Wetter und Klima, Sortiere die Zeit).
+- **Messwerte:** Funde vor dem PR: 43 (Claude: feste Fotozahl im Test, Kennwort „Foto“, 4 Bildausschnitte (Eiffelturm, Erdmännchen, Seepferdchen, Walross), falscher Kachel-Wähler im Tiertest, Orca im Fototest, Feuerbild abgeschnitten, 2 Startfragen mit zu langen Wörtern (`kern-huelle`); `kinder-redaktion`: 19 Bildtexte und „Larven“ in der neuen Startfrage; `fakten-pruefer`: falsche Bildunterschrift bei Ibn Sina und 3 Präzisierungen; `code-pruefer`: halbe Schreibvorgänge im Werkzeug und 5 Risiken; `design-pruefer`: Kennwort über Porträts, Bilder am Tablet zu klein) · späte Funde: SPAETE · Dauer: DAUER.
+
 ## 24.11.2026 – Teil B, erster Teil: Wissensspiele mit Stufen
 
 Die ersten beiden Aufgaben von Teil B „Spiele kniffliger“. Für Kinder sichtbar:
