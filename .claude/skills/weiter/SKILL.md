@@ -7,7 +7,7 @@ description: Wiedereinstieg in WunderKompass in einer neuen Sitzung – Branch u
 
 Führe diese Schritte der Reihe nach aus. Ändere dabei nichts außer dem Branch-Wechsel in Schritt 1.
 
-1. **Branch prüfen.** Standardbranch auf GitHub ist `test-live` (seit 21.11.2026), `main` ist der ältere Stand für Freunde; gearbeitet wird auf dem Arbeitsbranch der Sitzung (`claude/...`) mit dem Stand von `test-live`. Diese Zeilen (wie in der Startnachricht in `STATUS.md`) stellen das sicher:
+1. **Branch prüfen.** Standardbranch auf GitHub ist `test-live` (seit 21.11.2026), `main` ist ein älterer Stand und wird zurzeit nicht genutzt; gearbeitet wird auf dem Arbeitsbranch der Sitzung (`claude/...`) mit dem Stand von `test-live`. Diese Zeilen (wie in der Startnachricht in `STATUS.md`) stellen das sicher:
    ```bash
    git fetch origin main test-live
    B=$(git branch --show-current)

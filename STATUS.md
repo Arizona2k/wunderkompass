@@ -17,8 +17,8 @@ Stand: 24.11.2026. Kurz und aktuell halten (unter 60 Zeilen). Verlauf steht in [
 
 ## Adressen
 
-- **Testseite** (neuester freigegebener Stand, Branch `test-live`): https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/ · **Für Freunde** (Branch `main`, nur nach Phasen-Freigabe): https://wunderkompass.vercel.app/
-- **Vercel-Tageslimit** ([Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): Am 24.11.2026 sperrte Vercel von etwa 19:04 bis 19:21 UTC neue Vorschauen (kostenloser Plan, 100 Deployments am Tag), danach baute es wieder. Viele Pushes hintereinander können die Sperre jederzeit wieder auslösen. Vercel ist kein Pflicht-Check, Merges gehen trotzdem; ein gesperrter Merge erneuert die Testseite erst mit dem nächsten Commit auf `test-live`.
+- **Testseite** (neuester freigegebener Stand, Branch `test-live`; alle benutzen zurzeit nur diese Seite): https://wunderkompass-git-c76589-interaktive-wissens-und-lernplattform.vercel.app/ · Älterer Stand (Branch `main`, zurzeit nicht genutzt und nicht gebaut): https://wunderkompass.vercel.app/
+- **Vercel baut nur noch `test-live`** (Entscheidung des Nutzers, 24.11.2026; `vercel.json`, [Bericht](docs/entwurf/2026-11-24-vercel-tageslimit.md)): Arbeits-Branches und `main` bekommen keinen Build. Grund: Der kostenlose Plan erlaubt 100 Deployments in 24 Stunden, am 24.11.2026 war das Limit erreicht. Zeigen geht über Screenshots; die Test-Seite zeigt eine Änderung nach dem Merge. Vercel ist kein Pflicht-Check, Merges gehen auch bei Sperre; die Test-Seite zieht dann mit dem nächsten Merge nach.
 
 ## Nächster Schritt
 
@@ -30,7 +30,6 @@ Phase 1 „Neuer Kern“ ([Entwurf](docs/entwurf/2026-11-21-phase-1-entwurf.md),
 
 ## Offene Fragen an den Nutzer
 
-- **Vercel-Vorschauen sparen** (BACKLOG Punkt 28): Vorschlag des `technik-pruefer`, nur `main`, `test-live` und `vorschau/**` bauen zu lassen; Arbeits-Pushes bauen dann nie, zum Zeigen kommt derselbe Stand auf `vorschau/<thema>`. Braucht das OK des Nutzers (Push auf einen Branch außerhalb von `claude/...`, neue Regel in `CLAUDE.md`). Bei OK als erster kleiner PR im nächsten Chat; er erneuert zugleich die Testseite.
 - **Helfer `spieltester`:** Pilot seit 24.11.2026 (Freigabe des Nutzers), erster Probelauf an den Stufen ([Bericht](docs/entwurf/2026-11-24-spieltester-probelauf-stufen.md)). Nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt (BACKLOG, Ideen-Sammlung).
 - **`main` schützen:** entschieden am 23.11.2026 (dieselbe GitHub-Regel wie `test-live`). Der Nutzer stellt die Regel irgendwann selbst ein (23.11.2026: „das mit main mach ich irgendwann anders“). Claude fragt nicht bei jedem Einstieg nach, sondern prüft es nur vor einer Veröffentlichung nach `main` und nennt es dann im Bericht. Stand 23.11.2026 abends: laut GitHub noch ungeschützt. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen Wochen ohne hängende Browser-Downloads (BACKLOG).
 
@@ -48,7 +47,7 @@ Neue Chats in der Cloud-Umgebung **„wunderkompass“** starten (beim Start des
 
 ```text
 Wir arbeiten weiter an WunderKompass (Repository Arizona2k/wunderkompass).
-Der aktuelle Stand liegt auf test-live (Standardbranch), main ist der ältere Stand für Freunde.
+Der aktuelle Stand liegt auf test-live (Standardbranch), main ist ein älterer Stand und wird zurzeit nicht genutzt.
 Prüfe zuerst, ob dein Arbeitsbranch (claude/...) den test-live-Stand hat, mit genau diesen Zeilen:
 
 git fetch origin main test-live

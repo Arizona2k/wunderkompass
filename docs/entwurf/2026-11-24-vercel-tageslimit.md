@@ -61,3 +61,17 @@ Um 19:22 UTC hat Vercel wieder gebaut: Das Deployment zu `262cc05` ist fertig (`
 ## Entscheidung (Claude)
 
 Für diesen PR ändert sich nichts: Vercel ist kein Pflicht-Check, gemergt wird nach grüner CI. Der Umbau von `vercel.json` und „Zeigen“ braucht eine Entscheidung des Nutzers (Push auf einen Branch außerhalb von `claude/...`, neue Regel in `CLAUDE.md`). Er steht als erster kleiner Schritt im nächsten Chat (BACKLOG Phase 1, Punkt 28), ebenso die Frage nach einem Schutz für `main`.
+
+## Entscheidung des Nutzers (24.11.2026, gegen 19:40 UTC)
+
+„Jeder benutzt nur die Test-Seite“, dazu: „Main wird ja auch nicht benutzt sondern jeder benutzt aktuell nur die Test Seite.“ Darum gilt einfacher als die Empfehlung oben (ohne `main` und ohne `vorschau/**`):
+
+```json
+"git": { "deploymentEnabled": { "**": false, "test-live": true } }
+```
+
+- Laut Vercel-Doku (`vercel.com/docs/project-configuration/git-configuration`) wird gebaut, wenn mindestens eine passende Regel `true` ist. `test-live` passt auf beide Regeln und wird gebaut. Alle anderen Branches, auch `main` und `claude/...`, passen nur auf `"**": false`.
+- Vercel liest `vercel.json` aus dem gepushten Commit. Die Regel wirkt also ab dem Commit, der sie einführt. Schon dieser Push auf `claude/...` sollte kein Deployment mehr erzeugen.
+- Zeigen (Schritt 5) geht über Screenshots, die Test-Seite zeigt eine Änderung nach dem Merge. Ein Probe-Push außerhalb von `claude/...` ist nicht mehr nötig.
+- Wird `main` wieder genutzt: `"main": true` ergänzen, bevor der erste PR `test-live` → `main` kommt.
+- Noch prüfen: am Zähler (`list_deployments`), ob Pushes auf `claude/...` wirklich nichts mehr bauen.

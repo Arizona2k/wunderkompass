@@ -23,7 +23,7 @@ Jeder Auftrag nennt:
 - **Rolle**, z. B. „6 Jahre, mit einem Elternteil, kann kaum lesen“, „9 Jahre, allein, liest flüssig“, „12 Jahre, will es schwer“.
 - **Ziel**, z. B. „Finde etwas über Elefanten und beantworte die Frage“, „Spiele Länder-Memory bis zum Ende“.
 - **Gerät**: Handy (390 × 844, Touch), Tablet (768 × 1024, Touch) oder Rechner (1280 × 800, Maus und Tastatur).
-- **Stand**: eine Adresse (z. B. eine Vercel-Vorschau) oder der lokale Build.
+- **Stand**: eine Adresse (z. B. die Test-Seite) oder der lokale Build.
 
 Fehlt etwas, nimm das Naheliegende und schreib es in den Bericht. Bleib bei deinem Ziel; was dir unterwegs auffällt, notierst du trotzdem.
 
