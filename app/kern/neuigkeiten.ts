@@ -11,6 +11,7 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
+  {id: 'stufe-mit-ziel', datum: '2026-11-24', symbol: 'stern', titel: 'Jede Stufe hat jetzt ein Ziel', text: 'Du bekommst nur Fragen deiner Stufe. Hast du alle geschafft, zeigt dir die Karte, wohin es weitergeht.'},
   {id: 'drei-stufen', datum: '2026-11-23', symbol: 'stern', titel: 'Drei Stufen: Entdecker, Profi, Experte', text: 'Auf den Karten gibt es jetzt Fragen für jede Stufe. Ist es zu leicht oder zu schwer, schlägt die Karte eine andere Stufe vor.'},
   {id: 'erst-ein-leichter-satz', datum: '2026-11-23', symbol: 'lupe', titel: 'Erst ein leichter Satz', text: 'Auf vielen Karten steht oben ein kurzer, leichter Satz. Mehr erfährst du unter „Für Große“.'},
   {id: 'stimmt-das', datum: '2026-11-22', symbol: 'lupe', titel: 'Neu bei zwölf Karten: Stimmt das?', text: 'Prüfe eine Behauptung und rate weitere Fragen. Auf jeder Karte steht jetzt, warum die Nachbarkarte dazu passt.'},

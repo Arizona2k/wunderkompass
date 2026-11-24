@@ -84,6 +84,19 @@ Kein grober Fehler. Belege (wörtlich geprüft): WWF Deutschland (Kartenquelle),
 - Zur `kinder-redaktion`: 500 kg ist ein durchschnittliches, kein großes Pferd; Kindergartenkind etwa 1 m und knapp 20 kg.
 - Empfehlung: SDZ-Bibliothek als Kartenquelle ergänzen; Foley u. a. 2008 mit Hinweis „Vermutung, kleine Studie“.
 
-## Was daraus wurde
+## Nachfrage `fakten-pruefer`: Milchzähne als falsche Antwort?
 
-Folgt (Nachfrage an den `fakten-pruefer` zu Milch-Stoßzähnen läuft).
+Nein. Savannenelefanten haben Milch-Stoßzähne („tushes“): bei der Geburt da, etwa 5 cm, fallen nach etwa einem Jahr aus; die bleibenden brechen ab etwa 18 Monaten durch (San Diego Zoo; SDZ-Bibliothek, reproduction). „Milchzähne“ wäre damit halb richtig. Vorschlag stattdessen: **„Scharfe Reißzähne“** (Duden/DWDS: Backenzahn der Raubtiere; WWF: Elefanten haben nur Stoß- und Backenzähne), „warum nicht“: Raubtiere wie Löwen zerteilen damit Fleisch. Abgeraten: Nagezähne (halb richtig), Vorderzähne (richtig), Weisheitszähne, Fangzähne, Giftzähne.
+
+## Nachprüfung `stufen-pruefer` der Endfassung
+
+rate-1, rate-2, rate-3 (ruht), rate-4: passt. rate-5: „Spitze Eckzähne“ und „Scharfe Reißzähne“ bilden ein Ratepaar (beide Raubtierzähne, über „Pflanzenfresser“ gemeinsam auszuschließen). Vorschlag: wieder **„Lange Eckzähne“**; dann bleibt die echte Falle „Eckzahn oder Schneidezahn“ (beim Walross sind die Stoßzähne Eckzähne). Der erste Tipp darf bleiben.
+
+## Was daraus wurde (eingebaut am 24.11.2026)
+
+- `:rate-1`: nur „warum nicht“ 4 genauer („Ganz junge Elefanten trinken manchmal mit dem Maul, bis sie den Rüssel gut können. Ein großer Elefant nimmt den Rüssel.“).
+- `:rate-2`: Antworten, Tipp und „warum nicht“ **unverändert** (stufen-pruefer B2; keine Ausnahme im Schutztest); `why`: „Ein Elefantenbaby wiegt bei der Geburt rund 100 Kilogramm. Das ist so viel wie etwa 30 Menschenbabys.“ (Profi höchstens zwei Sätze, darum ohne den Satz zum Stehen).
+- `:rate-3`: `ruht: true`, sonst unverändert.
+- `:rate-4`: Antworten und Tipps unverändert; `why` „Eine alte Elefantenkuh hat schon viele trockene Jahre erlebt. Forscher glauben: Sie erinnert sich, wo es damals noch Wasser gab, und führt die Herde dorthin.“; „warum nicht“ 4 „Auch die alte Elefantenkuh braucht viel Wasser. Sie hat einen anderen Vorteil.“
+- `:rate-5` neu (Profi): „Was sind die Stoßzähne eines Elefanten?“ – Lange Eckzähne / Riesige Backenzähne / Scharfe Reißzähne / **Lange Schneidezähne**; Tipps „Stoßzähne sitzen ganz vorn im Maul.“ / „Fühl mal mit der Zunge: Welche Zähne hast du ganz vorn?“; `why` „Stoßzähne sind sehr lange Schneidezähne, wie deine Zähne ganz vorn. Sie wachsen viele Jahre lang immer weiter.“; „warum nicht“ zu Eck-, Backen- und Reißzähnen wie oben. In `tests/fixtures/stable-ids.json`; neue datierte Antwortliste `tests/fixtures/gespeicherte-antworten-feinschliff.json`.
+- `:rate-6`: nicht jetzt (BACKLOG Phase 1, Punkt 12 h). Kartentext B4, Entdecker-Frage, Quellen: BACKLOG Punkt 12 i bis k.

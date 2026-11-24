@@ -3,6 +3,16 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Stufen-Feinschliff: jede Stufe mit Ziel
+
+Aus dem ersten Spieltest (Rolle am Handy, kein Kindertest). Für Kinder sichtbar:
+
+- **Nur Fragen deiner Stufe:** „Noch eine Frage“ bleibt in der gewählten Stufe. Wer Profi spielt, bekommt keine Entdecker-Fragen mehr dazwischen. Nach der letzten Frage steht „Geschafft! Mehr Profi-Fragen hat diese Karte nicht.“ und ein Knopf „Weiter zu: …“ zur passenden Nachbarkarte (in Lernreisen nur der Satz, dort geht es mit der nächsten Station weiter). „Zurück“ führt wieder zu „Rate mal!“.
+- **Zwei Fehler behoben:** Nach einem Stufenwechsel kommt sofort eine Frage der neuen Stufe, nicht die alte. „Zu schwer? Zurück zu Entdecker“ steht nur noch dort, wo es etwas ändert.
+- **Falsch sieht falsch aus:** Am Handy sah eine falsch angetippte Antwort grünlich aus, fast wie eine richtige. Jetzt bleibt sie orange, auf der Karte und in den Spielen.
+- **Elefant:** Eine Profi-Frage verriet die Experten-Frage; sie ruht jetzt. Neu ist eine Frage zu den Stoßzähnen. Ein paar Sätze sind genauer (geprüft von Sprache, Fakten und Stufen).
+- Je Fehler ein Test; eine neue Liste schützt die gespeicherten Antworten.
+
 ## 24.11.2026 – Teil A ist auf der Testseite; Prüfungen verlässlicher
 
 Teil A „Eine Stufe für alles“ ist seit 24.11.2026 auf der Testseite (PR #107). Für Kinder ändert sich danach nichts Sichtbares. Die Prüfungen fallen seltener grundlos aus und finden Zeitfehler früher.

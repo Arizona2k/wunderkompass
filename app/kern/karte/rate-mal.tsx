@@ -5,7 +5,7 @@
 // Zusatzfragen (Pilot-Karten) verhalten sich genauso, mit eigenen Schlüsseln; „Noch eine Frage“ blättert ohne Zähler weiter.
 // Nach der letzten Frage einer Runde steht statt „Noch eine Frage“ ein Schluss (Satz und Weg zur nächsten Karte).
 import {useEffect, useRef, type ReactNode} from 'react';
-import {Check} from 'lucide-react';
+import {Check, Compass} from 'lucide-react';
 import {restoreAnswerWording} from '../../retained-answer-wording.mjs';
 import {LearningFeedback} from '../../learning-motion';
 import QuestionHints from '../../question-hints';
@@ -114,7 +114,7 @@ export default function RateMal({frage, ueberschrift: Ueberschrift, onLearn, onR
                 : (frage.wrongReasons?.[q.answers.indexOf(antwort)] ?? 'Lies unten unter „Kurz erklärt“ nach.')}
           </p>
           {/* Erst der Schluss, dann ein Vorschlag, dann die Knöpfe (kinder-redaktion 24.11.2026, Befund f). */}
-          {richtig && schluss && <p className="rate-mal-schluss"><strong>{schluss.text}</strong></p>}
+          {richtig && schluss && <p className="rate-mal-schluss"><Compass size={22} aria-hidden="true"/><strong>{schluss.text}</strong></p>}
           {vorschlag}
           {richtig && (
             <div className="rate-mal-weiter">

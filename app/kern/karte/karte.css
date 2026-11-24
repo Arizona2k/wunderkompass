@@ -157,7 +157,9 @@
 }
 /* Schluss nach der letzten Frage der Runde (Spieltest 24.11.2026, Befunde 3 und 4). Der Knopf zur nächsten Karte
    darf umbrechen: Manche Titel sind lang, und am kleinen Handy mit großer Schrift ragte sonst ein Wort über den Rand. */
-.wissenskarte .rate-mal-schluss { margin: 14px 0 0; font-size: 19px; line-height: 1.4; }
+/* In Titelfarbe mit Kompass, damit er sich zwischen Erklärung und Vorschlag abhebt (Design-Prüfung Feinschliff, Befund 3). */
+.wissenskarte .rate-mal-schluss { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 0; font-size: 19px; line-height: 1.4; color: var(--motiv-text); }
+.wissenskarte .rate-mal-schluss svg { flex-shrink: 0; margin-top: 2px; color: var(--motiv-symbol); }
 .wissenskarte .rate-mal-naechste-karte {
   display: inline-flex; align-items: center; gap: 8px; max-width: 100%; height: auto;
   white-space: normal; overflow-wrap: break-word; hyphens: auto; text-align: left; line-height: 1.35;

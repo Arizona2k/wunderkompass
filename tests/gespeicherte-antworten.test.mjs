@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fixture from './fixtures/gespeicherte-antworten.json' with {type: 'json'};
 import teilA from './fixtures/gespeicherte-antworten-teil-a.json' with {type: 'json'};
+import feinschliff from './fixtures/gespeicherte-antworten-feinschliff.json' with {type: 'json'};
 import catalog from '../app/world-catalog.json' with {type: 'json'};
 import {restoreAnswerWording} from '../app/retained-answer-wording.mjs';
 import {CHALLENGE_BANK, challengeQuestionForOrder} from '../app/knowledge-challenge.ts';
@@ -82,9 +83,12 @@ test('Challenge: eine angefangene Runde mit den alten Antworten lässt sich fort
 // Challenge-Fragen auf der Karte (gespeichert unter topicAnswer:<id>). Jede Antwort daraus bleibt lesbar, gleich oder über
 // einen Alias, und die Lösung bleibt dieselbe. Eine Frage, die später ruht, bleibt unverändert in den Daten.
 const heuteNachId = new Map(catalog.flatMap(t => [[t.id, t.question], ...(t.moreQuestions ?? []).map(q => [q.id, q]), ...(t.challenges ?? []).map(q => [q.id, q])]));
-test('datierte Liste Teil A: jede Antwort, die ein Kind auf einer Karte speichern konnte, ist noch lesbar', () => {
-  assert.ok(teilA.fragen.length >= 287, 'die Liste ist vollständig');
-  for (const alt of teilA.fragen) {
+// Alle datierten Listen mit ihrer Mindestzahl; eine neue Liste kommt hier dazu (Stufen-Feinschliff: neue Elefanten-Frage :rate-5,
+// dafür ruht :rate-3, darum wieder 287; die ruhende Frage prüft weiter die Liste Teil A).
+const DATIERT = [['Teil A', teilA, 287], ['Stufen-Feinschliff', feinschliff, 287]];
+for (const [name, liste, mindestens] of DATIERT) test(`datierte Liste ${name}: jede Antwort, die ein Kind auf einer Karte speichern konnte, ist noch lesbar`, () => {
+  assert.ok(liste.fragen.length >= mindestens, 'die Liste ist vollständig');
+  for (const alt of liste.fragen) {
     const heute = heuteNachId.get(alt.id);
     assert.ok(heute, 'Frage fehlt: ' + alt.id);
     if (heute.ruht) assert.deepEqual([heute.answers, heute.correct], [alt.answers, alt.correct], alt.id + ' ruht unverändert');
@@ -96,15 +100,15 @@ test('datierte Liste Teil A: jede Antwort, die ein Kind auf einer Karte speicher
 // ihrer ID; heikle Karten sind nicht dabei). Eine angefangene Runde verlangt genau ihre Antworten oder eine frühere Fassung
 // (retainedChallengeChoices); eine neue Antwort allein würde sie verwerfen (Code-Nachprüfung Teil A, M1).
 const imChallenge = new Map(CHALLENGE_BANK.map(q => [q.id, q]));
-test('datierte Liste Teil A: eine angefangene Runde der Wissens-Challenge lässt sich fortsetzen', () => {
+for (const [name, liste] of DATIERT) test(`datierte Liste ${name}: eine angefangene Runde der Wissens-Challenge lässt sich fortsetzen`, () => {
   let geprueft = 0;
-  for (const alt of teilA.fragen) {
+  for (const alt of liste.fragen) {
     const q = imChallenge.get(alt.id) ?? (karten.has(alt.id) ? imChallenge.get(alt.id + ':mini') : undefined);
     if (!q) continue;
     geprueft++;
     const lies = wert => restoreAnswerWording(q.topic, wert), reihe = [...alt.answers].reverse().map(lies);
     const runde = challengeQuestionForOrder(q.id, reihe);
-    assert.ok(runde, 'Runde mit den Antworten von Teil A nicht mehr lesbar: ' + q.id);
+    assert.ok(runde, `Runde mit den Antworten aus ${name} nicht mehr lesbar: ` + q.id);
     assert.deepEqual([...runde.answers].sort(), [...reihe].sort(), q.id + ': die Runde zeigt ihre Antworten');
     assert.equal(runde.answers[runde.correct], lies(alt.answers[alt.correct]), q.id + ': dieselbe richtige Antwort');
   }

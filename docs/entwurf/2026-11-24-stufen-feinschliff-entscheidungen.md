@@ -43,6 +43,20 @@ Ergebnis: „mit Änderungen bereit“. Pass und Schlüssel unverändert (nur ge
 Beim Nachstellen am Handy (390 px, Bild in `.qa-output/feinschliff/`, nicht in Git) zeigte sich: Nach dem Tippen auf eine falsche Antwort war der Knopf grünlich hinterlegt, nur die Schrift orange. Ursache: Die alte Regel für „Maus darüber“ in `app/globals.css` (`.quiz-answer:not(:disabled):hover`, grünlich #f0f8f4 / #9abfb0) ist stärker als `.is-incorrect`, und am Handy bleibt :hover nach dem Tippen stehen. Das erklärt Befund f („nur die Antwort wird orange“) und g (Hover-Grün ähnlich dem Richtig-Grün). **Behoben:** Die Regel gilt nur noch mit `@media(hover:hover)`, nicht für beantwortete Knöpfe, und in neutralem Blaugrau (#f2f7f9 / #799da9, wie schon in `.classic-learning`). Gilt für alle Antwortknöpfe der Seite. Test in `wechselNachFalscherAntwort` (Handy und Maus): Die falsche Antwort bleibt orange, auch mit Finger oder Maus darauf.
 Lage der Rückmeldung (f): Mit ins Bild geholter Antwort liegt „Noch nicht ganz …“ bei 390 px im Bild (522 bis 642 von 844 px). Weiteres prüft der `design-pruefer`.
 
+## Bericht des `design-pruefer` (24.11.2026, gekürzt)
+
+Bilder in 320 (auch große Schrift), 390, 768, 1280, 1440 px. Blockierend: keine. Tippflächen alle mindestens 44 px, Kontraste in Ordnung (Weiß auf Orange 4,9:1). Rückmeldung nach falscher Antwort liegt bei 390 px im Bild. Hover gegen Richtig jetzt klar verschieden; das alte Grün war nirgends sonst gewollt.
+
+- Wichtig 1: Bei 320 px Schachtelung grüne Karte → Rückmeldung → weiße Vorschlagskarte; Text nur etwa 185 px breit. Vorschlag: Vorschlagskarte unter 560 px ohne eigenen Kasten.
+- Wichtig 2: Vier Knöpfe untereinander am Handy; „Ja“ und der orange Knopf konkurrieren. Vorschläge: Ja/Nein nebeneinander, „Nein, ich bleibe“ als Textknopf, „Noch einmal raten“ zarter.
+- Feinschliff 3: Schluss-Satz hebt sich nur halb ab → Titelfarbe und ein Zeichen. Feinschliff 4: Falsch nur an der Farbe erkennbar → neutrales Zeichen. 5: Umbruch des orangen Knopfs in Ordnung. 6: Hover-Regel in `playground.css` ohne `@media(hover:hover)`.
+
+**Umgesetzt:** 3 (Titelfarbe, Kompass-Zeichen; das Zeichen ist schon im Startpaket, kostet keine Bytes), 6 (gleiche Regel wie in `globals.css`). **Ins BACKLOG** (Phase 1, Punkt 12 l): 1, 2 und 4; sie betreffen den Vorschlags-Baustein aus Teil A und die Antwortknöpfe überall, gehören mit einem `spieltester`-Lauf am Handy zusammen geprüft.
+
 ## Elefanten-Fragen (e)
 
-Entwurf des `karten-autor`: [2026-11-24-elefant-fragen-entwurf.md](2026-11-24-elefant-fragen-entwurf.md). Prüfungen folgen.
+Entwurf, alle Prüfungen und das Ergebnis: [2026-11-24-elefant-fragen-entwurf.md](2026-11-24-elefant-fragen-entwurf.md). Kurz: `:rate-3` ruht, `:rate-4` bleibt, neue Profi-Frage `:rate-5` (Stoßzähne), `:rate-2` unverändert (keine Ausnahme im Schutztest), einige Sätze genauer. Neue datierte Antwortliste.
+
+## Offen für den Nutzer
+
+Nichts zu entscheiden. Hinweis: Der Schluss erscheint auf Profi und Experte immer (auch nach nur einer Frage), auf Entdecker nur nach mehr als einer Frage.
