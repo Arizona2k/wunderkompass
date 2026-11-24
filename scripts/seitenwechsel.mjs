@@ -8,7 +8,10 @@
 // Jede Anfrage, die dabei fertig wird, bleibt voll überwacht (auch ein 404).
 // Ausgenommen sind Anfragen, die ein Test selbst in einem route-Handler festhält, etwa um einen Ladezustand zu
 // prüfen: Auf die wartet niemand, sonst hinge der Test.
-// Für Wechsel innerhalb der App (Klick auf einen Bereich, goBack) gibt es weiter ladeanfragen(page) in harness.mjs.
+// Beobachtet wird jede Seite ab newPage; den Fehlerbericht bekommt sie mit der Überwachung (monitorBrowserErrors).
+// Nicht abgedeckt (Technik-Prüfung 24.11.2026): Wechsel innerhalb der App (Klick auf einen Bereich, goBack,
+// location.hash; dafür gibt es weiter ladeanfragen(page) in harness.mjs), location.reload() per evaluate,
+// Frame.goto, setContent, Popups aus window.open und Anfragen des Service Workers.
 
 // Fertig erst nach einer Ruhezeit ohne Anfrage. Sie beginnt nach jeder Anfrage neu (Start oder Ende).
 // React 19 hält das Einblenden nachgeladener Teile (lazy + Suspense) bis zu 300 ms nach dem Platzhalter
@@ -17,21 +20,27 @@
 // Ein Klick kurz davor kann noch Anfragen auslösen, die erst nach Reacts Sammelzeit starten.
 export const RUHEZEIT = 500;
 export const WARTEZEIT_MS = 20000;
+// Vor dem Schließen kürzer: Dort steht der Wartepunkt oft im finally eines Tests, der schon gescheitert ist.
+export const SCHLIESSEN_MS = 5000;
 
 const staende = new WeakMap();
 // Anfrage → wie viele route-Handler sie gerade festhalten (ein Handler kann mit route.fallback() weiterreichen).
 const gehalten = new WeakMap();
 
-// Merkt sich ab jetzt die offenen Anfragen der Seite (außer Seitenaufrufen). Mehrfach aufrufbar.
+// Merkt sich ab jetzt die offenen Anfragen der Seite (außer Seitenaufrufen). Mehrfach aufrufbar; spätere Aufrufe
+// ergänzen den Bericht und ändern nur die Werte, die sie nennen.
 // `proof`: Bericht der Suite; dorthin schreiben die automatischen Wartepunkte, wenn die Seite nicht zur Ruhe kommt.
-// `timeout`: Zeitlimit der automatischen Wartepunkte (nur für den Unit-Test kürzer).
-export function beobachteAnfragen(page, {proof, tag = '', timeout = WARTEZEIT_MS} = {}) {
+// `tag`: Vorsatz der Fehlermeldung (Browser). `timeout`, `ruhezeit`: für die automatischen Wartepunkte (nur der
+// Unit-Test setzt sie kürzer).
+export function beobachteAnfragen(page, {proof, tag = '', timeout, ruhezeit} = {}) {
   let stand = staende.get(page);
   if (stand) {
-    stand.proof ??= proof;
+    if (proof && !stand.proof) Object.assign(stand, {proof, tag});
+    if (timeout !== undefined) stand.timeout = timeout;
+    if (ruhezeit !== undefined) stand.ruhezeit = ruhezeit;
     return stand;
   }
-  stand = {offen: new Set(), zuletzt: 0, proof, tag, timeout};
+  stand = {offen: new Set(), zuletzt: 0, proof, tag, timeout: timeout ?? WARTEZEIT_MS, ruhezeit: ruhezeit ?? RUHEZEIT, gescheitert: false};
   staende.set(page, stand);
   page.on('request', request => {
     if (request.isNavigationRequest()) return;
@@ -86,23 +95,27 @@ async function zweiBildwechsel(page, rest) {
   }
 }
 
-// Automatischer Wartepunkt vor reload, goto und close. Nur für überwachte Seiten.
+// Automatischer Wartepunkt vor reload, goto und close. Nur für beobachtete Seiten.
 // Kommt die Seite nicht zur Ruhe, steht das als Browserfehler im Bericht, und der Wechsel geschieht trotzdem:
-// So verdeckt ein Wartepunkt im finally nie den eigentlichen Fehler eines Tests.
+// So verdeckt ein Wartepunkt im finally nie den eigentlichen Fehler eines Tests. Danach wartet diese Seite nicht
+// mehr: Die Suite ist ohnehin rot, und jeder weitere Wartepunkt kostete sonst wieder das volle Zeitlimit.
 // Vor reload und goto zählt die Ruhezeit ab dem Aufruf: Dort war oft gerade ein Klick, dessen Anfragen noch nicht
 // gestartet sind. Beim Schließen (`ruhezeit` 0) reichen laufende Anfragen und zwei Bildwechsel: Am Ende eines Tests hat
 // der letzte Schritt meist auf seinen Inhalt gewartet. Gemessen am 24.11.2026 (Suite wissenskarte): 74 Schließen
 // warteten mit Ruhezeit zusammen 36 s, fast nur wegen der Ruhezeit.
-async function vorWechsel(page, wie, {ruhezeit} = {}) {
+async function vorWechsel(page, wie, {schliessen = false} = {}) {
   const stand = staende.get(page);
-  if (!stand || page.isClosed()) return;
+  if (!stand || stand.gescheitert || page.isClosed()) return;
   const zaehler = WARTEZEITEN[wie] ??= {anzahl: 0, ms: 0};
   zaehler.anzahl++;
   const beginn = Date.now();
   try {
-    await warteAufRuhe(page, {timeout: stand.timeout, ruhezeit});
+    await warteAufRuhe(page, schliessen
+      ? {timeout: Math.min(stand.timeout, SCHLIESSEN_MS), ruhezeit: 0}
+      : {timeout: stand.timeout, ruhezeit: stand.ruhezeit});
   } catch (error) {
     if (page.isClosed()) return;
+    stand.gescheitert = true;
     if (!stand.proof) throw error;
     stand.proof.errors.push(`${stand.tag}Vor dem gewollten Seitenwechsel (${wie}): ${error.message}`);
   } finally {
@@ -134,12 +147,15 @@ export function installiere(kontextKlasse, seitenKlasse) {
   seitenKlasse.reload = async function (...args) { await vorWechsel(this, 'Neuladen'); return reload.apply(this, args); };
   // Der erste Aufruf auf einer frischen Seite verlässt kein Dokument.
   seitenKlasse.goto = async function (...args) { if (this.url() !== 'about:blank') await vorWechsel(this, 'neue Adresse'); return goto.apply(this, args); };
-  seitenKlasse.close = async function (...args) { await vorWechsel(this, 'Schließen', {ruhezeit: 0}); return close.apply(this, args); };
-  const kontextClose = kontextKlasse.close;
+  seitenKlasse.close = async function (...args) { await vorWechsel(this, 'Schließen', {schliessen: true}); return close.apply(this, args); };
+  const {close: kontextClose, newPage} = kontextKlasse;
   kontextKlasse.close = async function (...args) {
-    await Promise.all(this.pages().map(page => vorWechsel(page, 'Schließen', {ruhezeit: 0})));
+    await Promise.all(this.pages().map(page => vorWechsel(page, 'Schließen', {schliessen: true})));
     return kontextClose.apply(this, args);
   };
+  // Jede neue Seite gleich beobachten, auch ohne Überwachung (z. B. eine leere Hilfsseite): Sonst hinge die Wartehilfe
+  // davon ab, dass jede Suite daran denkt. Browser.newPage geht ebenfalls hier durch.
+  if (newPage) kontextKlasse.newPage = async function (...args) { const seite = await newPage.apply(this, args); beobachteAnfragen(seite); return seite; };
   festhaltenErkennen(kontextKlasse);
   festhaltenErkennen(seitenKlasse);
 }

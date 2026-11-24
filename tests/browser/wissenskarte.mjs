@@ -103,8 +103,8 @@ export async function wissenskarte(ctx) {
     + `Mondzeichnung im Kartenkopf ${mondKopf.join(' / ')} px hoch (320 / 390 px, höchstens ${ZEICHNUNG_KOPF_HANDY})`);
 }
 
-// Frischer Kontext, Karte direkt per Link geöffnet. `fertig` wartet vor jedem Neuladen auf offene Anfragen,
-// damit ein gewollter Seitenwechsel keine Ladefehler in der Überwachung erzeugt.
+// Frischer Kontext, Karte direkt per Link geöffnet. Vor Neuladen und Schließen wartet Playwright von selbst auf
+// offene Anfragen (scripts/seitenwechsel.mjs), damit ein gewollter Seitenwechsel keine Ladefehler erzeugt.
 const mitKarte = (ctx, view, topicId, fn, initScript) => mitAdresse(ctx, view, 'world/topic/' + topicId, fn, initScript);
 
 async function mitAdresse(ctx, {width, height, touch = false}, adresse, fn, initScript) {

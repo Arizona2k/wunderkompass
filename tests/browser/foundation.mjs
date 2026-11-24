@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {pendingRouteFocusFlow} from './route-focus.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {bereich} from './harness.mjs';
+import {bereich,inSucheTippen} from './harness.mjs';
 const budgets=JSON.parse(await fs.readFile(new URL('../../performance-budgets.json',import.meta.url),'utf8')).browser;
 const routes=[['home','','#discovery-title'],['world','world','.world-choice'],['games','games','.game-tile'],['labs','labs','.research-tile'],['journeys','journeys','.journey-tile'],['book','book','.word-card'],['updates','updates','#updates-title'],['topic','world/topic/animal-african-savanna-elephant','#world-topic-title']];
 // JS budget per entry: home and the knowledge card have their own, every other area shares one.
@@ -51,8 +51,7 @@ async function accessibility(p,selector){
 // Use an actual saved topic title: a narrow text box can overflow into its action
 // even when the card and the page themselves report no horizontal overflow.
 async function chooseLongContinuation(p){
- await p.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
- await p.getByRole('dialog').getByRole('combobox').fill('Wahrscheinlichkeit');
+ await inSucheTippen(p,'Wahrscheinlichkeit');
  await p.getByRole('option').filter({hasText:'Wahrscheinlichkeit: möglich ist nicht garantiert'}).click();
  await p.locator('#world-topic-title').waitFor();
  await bereich(p,'games').click();await p.locator('.game-tile').first().waitFor();

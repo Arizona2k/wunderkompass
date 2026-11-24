@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
 import {CHALLENGE_BANK, emptyChallenge, restoreChallenge} from '../../app/knowledge-challenge.ts';
@@ -11,7 +12,7 @@ export async function assertHonestChallengeFeedback(room){
 
 export async function offlineChallengeHints(page,report){
  const room=page.locator('.knowledge-challenge'),hint=room.locator('.world-game-hint');
- const open=async()=>{await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();await page.getByRole('dialog').locator('input').fill('Wissens-Challenge');await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();};
+ const open=async()=>{await inSucheTippen(page,'Wissens-Challenge');await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();};
  const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SAVE_KEY);
  async function exercise(q,next){
   assert.ok(q&&[1,2].includes(q.hints.length),'actual authored one- or two-step hint question');

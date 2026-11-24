@@ -3,6 +3,20 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 24.11.2026 – Teil B, Vorarbeiten: keine toten Knöpfe, schnellerer Start, ruhigere Tests
+
+Bevor die Spiele kniffliger werden (Teil B), drei Vorarbeiten. Für Kinder sichtbar:
+
+- **Kein Knopf mehr ins Leere:** Auf dem Globus zeigten rund 390 Orte, zum Beispiel alle Hauptstädte, den Knopf „Im Naturatlas weiterdenken“. Das Wissensbuch kannte sie aber nicht und sagte nur „Diesen Naturort gibt es hier nicht.“ Jetzt steht der Knopf nur bei Orten, die der Naturatlas wirklich erklärt.
+- **Schnellerer Start:** Beim ersten Öffnen lädt die Seite 58 KB weniger. Ortssuche, Auswahllisten und der Tag-Regler kommen erst, wenn man den Globus oder das Quiz öffnet; offline sind sie trotzdem da.
+
+Hinter den Kulissen:
+
+- **Linkwächter:** Ein neuer Test prüft bei jedem PR, dass jeder feste Verweis der Seite zu etwas Vorhandenem führt. Er fand den Globus-Knopf oben und einen toten Wortverweis im Wissensbuch („Wolke“). [Landkarte aller Verweise](docs/entwurf/2026-11-24-linkwaechter-landkarte.md).
+- **Tests warten von selbst:** Lädt ein Test die Seite neu, ruft eine neue Adresse auf oder schließt sie, wartet er jetzt an einer zentralen Stelle, bis nichts mehr lädt. Bisher musste jeder Test selbst daran denken; das war fünfmal schiefgegangen und erst spät aufgefallen.
+- **Suche im Test:** Alle Tests, die in die Suche tippen und einen Treffer wählen, nutzen jetzt denselben sicheren Baustein.
+- **Messwerte:** Funde vor dem PR: (wird nachgetragen) · späte Funde: (wird nachgetragen) · Dauer: (wird nachgetragen; Beginn 24.11.2026 gegen 11:40 UTC).
+
 ## 24.11.2026 – Stufen-Feinschliff: jede Stufe mit Ziel
 
 Aus dem ersten Spieltest (Rolle am Handy, kein Kindertest). Für Kinder sichtbar:

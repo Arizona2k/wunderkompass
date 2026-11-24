@@ -93,9 +93,15 @@ const QUELLTEXT = fs.readdirSync('app', {recursive: true})
   .filter(name => /\.(ts|tsx|mjs)$/.test(name))
   .map(name => ['app/' + name, fs.readFileSync('app/' + name, 'utf8')]);
 const KARTEN_ID = '(?:' + [...new Set([...KARTEN].map(id => id.split('-')[0]))].join('|') + ')-[a-z0-9_]+(?:-[a-z0-9_]+)*';
-function imQuelltext(muster) {
+// Jede Suche muss etwas finden: Findet ein Muster nach einem Umbau nichts mehr, wäre der Test sonst still grün.
+// Gibt es die Stelle wirklich nicht mehr, gehört auch die Suche weg.
+function imQuelltext(muster, nurDatei) {
   const funde = [];
-  for (const [datei, text] of QUELLTEXT) for (const treffer of text.matchAll(muster)) funde.push([datei, treffer[1]]);
+  for (const [datei, text] of QUELLTEXT) {
+    if (nurDatei && datei !== nurDatei) continue;
+    for (const treffer of text.matchAll(muster)) funde.push([datei, treffer[1]]);
+  }
+  assert.ok(funde.length, `Linkwächter: Suche ${muster}${nurDatei ? ' in ' + nurDatei : ''} findet nichts mehr`);
   return funde;
 }
 
@@ -174,7 +180,7 @@ test('Spiele: Suchindex, „Dazu passt“, Weltmissionen und Spielaufrufe im Pro
     liste.ziel('Dazu passt, Welt ' + welt, spiel, SPIELE.world, 'Weltspiel');
   }
   for (const [datei, id] of imQuelltext(/openWorldGame\(\s*["']([^"']+)["']/g)) liste.ziel(datei, id, SPIELE.world, 'Weltspiel');
-  for (const [, id] of imQuelltext(/\bgame\s*:\s*["']([^"']+)["']/g).filter(([datei]) => datei === 'app/world-progress.tsx')) {
+  for (const [, id] of imQuelltext(/\bgame\s*:\s*["']([^"']+)["']/g, 'app/world-progress.tsx')) {
     liste.ziel('Weltmission', id, SPIELE.world, 'Weltspiel');
   }
   liste.fertig();

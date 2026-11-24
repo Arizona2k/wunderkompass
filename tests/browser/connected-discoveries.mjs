@@ -1,3 +1,4 @@
+import {inSucheTippen} from './harness.mjs';
 import {AXE_FILE} from './axe-loader.mjs';
 import {antworteRichtig,ausprobierenAuf,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
 import {assertHonestChallengeFeedback} from './challenge-hints.mjs';
@@ -66,12 +67,10 @@ export async function connectedDiscoveries(page,ready,report,width){
  await page.getByRole('textbox',{name:'Entdeckerkarten durchsuchen'}).fill('Mondphasen');
  assert.equal(await page.locator('.world-topic-tile').count(),1);
  await page.locator('.world-topic-tile').click();await ausprobierenAuf(page,'science-moon-phases');await page.locator('.moon-phase-3').waitFor();
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
- await page.getByRole('dialog').locator('input').fill('Fotosynthese');
+ await inSucheTippen(page,'Fotosynthese');
  await page.getByRole('option').filter({hasText:'Wie Blätter Sonnenlicht nutzen'}).first().click();
  await page.getByRole('heading',{name:'Wie Blätter Sonnenlicht nutzen',exact:true}).waitFor();
- await page.getByRole('button',{name:'Lernwelt durchsuchen',exact:true}).click();
- await page.getByRole('dialog').locator('input').fill('Wissens-Challenge');
+ await inSucheTippen(page,'Wissens-Challenge');
  await page.getByRole('option').filter({hasText:'Wissens-Challenge'}).click();
  await page.locator('.challenge-levels').waitFor();
  for(const label of ['Leicht','Mittel','Schwer']){
