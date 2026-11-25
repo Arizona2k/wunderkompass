@@ -11,7 +11,8 @@ Gesichert, weil das Nutzungslimit bei 93 % stand. Weiter erst nach dem „Go“ 
   - B3: PR-Text korrigieren: `journeys` nur mit fertigem grünem Lauf, WebKit-Satz streichen (deckt die Engine-Schnellprüfung ab), Quiz-Rückmeldekasten ist noch nicht weiß (angleichen oder BACKLOG Punkt 29 nennen), 13 statt 14 Ansichten (auch CHANGELOG), Kopf-Commit, `kinder-redaktion` in der Helferliste.
   - B4 bis B6: `app/pass-atlas.css:84` Hover `var(--kern-petrol-dunkel)`; CHANGELOG „320 und 1280 px“; `STATUS.md` Zeile „offen“ nachführen.
   - Kontrast-Lücken (alt, nicht aus diesem PR): Verläufe, gesperrte Knöpfe, Platzhalter, fehlende Ansichten, `learning.webmanifest` → BACKLOG.
-- Beim Sichern lief noch: `journeys` (lokal, rund 44 Minuten; Log nur im Container) (Start 19:02 deutscher Zeit, Ende gegen 19:46). Ist der Container weg oder fehlt das Ergebnis: `journeys` neu starten (`node tests/browser/run.mjs --suite full journeys`, Hintergrund mit `timeout: 7200000`).
+- **`journeys` grün** auf cb01af3: `PASS journeys 2330.0 s [chromium]`, „Alle Suiten bestanden“, fertig um 19:41 deutscher Zeit. **CI auf GitHub grün** für den Kopf 3875dff (nur `STATUS.md` neu gegenüber cb01af3), gemeldet um 19:26 deutscher Zeit.
+- Die Korrekturen B1, B2 und B4 ändern wieder Code (`kern.css`, eine Suite, `pass-atlas.css`). Danach: `pnpm run check`, dann `node tests/browser/run.mjs --suite full core offline-cold-full` (Kartenaufbau in `kern.css`, Regel in `CLAUDE.md`, Hintergrund mit `timeout: 7200000`), Fable nur auf die Korrektur, CI grün auf dem neuen Kopf.
 - Danach: PR-Text unten (nach B3 korrigiert) in den PR übernehmen, Auto-Merge einschalten (OK des Nutzers liegt vor: „Ok fürs mergen“), Test-Seite mit `list_deployments` prüfen, Trigger `trig_012nJstrdgn8KftyoDf4spVE` löschen, PR-Abo beenden.
 - Dauer für den CHANGELOG: Beginn 15:36 UTC (Commit 3f26937).
 
