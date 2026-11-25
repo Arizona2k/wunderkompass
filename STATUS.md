@@ -1,6 +1,6 @@
 # STATUS
 
-Stand: 24.11.2026, 23:30 UTC (nach dem Merge von PR #114). Kurz halten: ein Satz je fertigem Schritt, Verlauf in [CHANGELOG.md](CHANGELOG.md), Aufgaben in [BACKLOG.md](BACKLOG.md).
+Stand: 25.11.2026. Kurz halten: ein Satz je fertigem Schritt, Verlauf in [CHANGELOG.md](CHANGELOG.md), Aufgaben in [BACKLOG.md](BACKLOG.md).
 
 ## Wo wir stehen
 
@@ -10,6 +10,7 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 - Teilschritt 3 „Kniffliger spielen“ ([Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md)): Arbeitssystem (PR #106), Teil A „Eine Stufe für alles“ (PR #107, [Entscheidungen](docs/entwurf/2026-11-23-teilschritt-3-teil-a-entscheidungen.md)), Folge-PR (PR #108), Stufen-Feinschliff (PR #109, [Entscheidungen](docs/entwurf/2026-11-24-stufen-feinschliff-entscheidungen.md)), Teil B Vorarbeiten (PR #110), Teil B PR 1 = Welt-Spiele mit Stufen (PR #111, [Entscheidungen 1 bis 18](docs/entwurf/2026-11-24-teil-b-entscheidungen.md)).
 - Teil B PR 2 = Kreuz und quer und die Klassik-Spiele mit Stufen (PR #114, [Entscheidungen 19 bis 35](docs/entwurf/2026-11-24-teil-b-entscheidungen.md), [Design-Prüfung](docs/entwurf/2026-11-24-teil-b-pr2-design-pruefung.md)).
 - Bilder-Strang, erster Teil (PR #113): alle 24 KI-Tierbilder durch Fotos ersetzt, 8 Personen, Einbau-Werkzeug `scripts/foto-einbau.mjs`.
+- **Entschieden am 25.11.2026:** Der Nutzer nimmt beide Empfehlungen an: die Regel „neue oder geänderte Vollprüfungs-Suite vor dem Commit selbst laufen lassen“ (jetzt in `CLAUDE.md`, Arbeitsablauf Punkt 4) und zwei Stilproben fürs Design, mit dem Auftrag „beim Design sei kreativ“.
 - **Merge-Freigabe des Nutzers** für alle Teil-B-PRs nach grüner CI samt Engine-Schnellprüfung; Abweichungen vom Plan vorher melden (Entscheidungen 11 und 19).
 
 ## Adressen
@@ -22,9 +23,10 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 
 Phase 1 hat sechs Teilschritte: 1 Hülle (fertig) · 2 Wissenskarte (fertig) · **3 Kniffliger spielen** · 4 Weltenseiten und Bilder · 5 Startseite und Sammlung · 6 Feinschliff.
 
-1. **Jetzt: Technik-PR** (BACKLOG, „Technik-PR nach den Analysen“; [Bewertung](docs/entwurf/2026-11-24-analysen-bewertung.md)): Speicher-Wiederholung mit wachsender Pause, eine Importgrenze, neun `^`-Versionen exakt pinnen plus Wächter-Test.
-2. **Dann PR 3 = Aufgaben 10 und 12** („Rekorde der Natur“, „Wetter und Klima“, „Sortiere die Zeit“, kleine Spiele zusammenlegen). Geprüfte Endfassungen in `docs/entwurf/2026-11-24-rekorde-*`, `…-wetter-klima-*`; „Sortiere die Zeit“ [Fassung 2](docs/entwurf/2026-11-24-sortiere-die-zeit-fassung-2.md) wird gerade geprüft. Dazu der [Experten-Nachtrag „Stimmt das wirklich?“](docs/entwurf/2026-11-24-stimmt-das-experte-nachtrag.md) (in Prüfung). Dann PR 4 = Länder ([Ideen](docs/entwurf/2026-11-24-laender-spiele-ideen.md)).
-3. **Bilder im Hintergrund** (BACKLOG Punkt 26): Blauwal, Wright Flyer, Meitner ([offene Bildfragen](docs/entwurf/2026-11-24-bilder-offene-fragen.md)), 3 Erfindungen, Darwin, Goodall ([Vorschläge](docs/entwurf/2026-11-24-bilder-erfindungen-darwin-goodall.md)), Mandela nach Klärung der Herkunft.
+1. **Jetzt: zwei Stilproben fürs Design** (kreativ, Nutzer 25.11.2026): Start, Karte und Spiel, je Handy und Rechner, als Entwurf in `docs/entwurf/` mit Bildern zur Auswahl. Grundlage: [Design-Ideen](docs/entwurf/2026-11-24-design-ideen.md), [Bestandsaufnahme Einheitlichkeit](docs/entwurf/2026-11-24-design-einheitlichkeit-bestand.md) und die Design-Reste im BACKLOG („Ein Spielbrett für alle Spiele“, Rückmeldung in den Blick, Vorschaubild). Danach prüfen `design-pruefer` und `spieltester`; der Nutzer wählt.
+2. **Dann, während der Nutzer wählt: Technik-PR** (BACKLOG, „Technik-PR nach den Analysen“; [Bewertung](docs/entwurf/2026-11-24-analysen-bewertung.md)): Speicher-Wiederholung mit wachsender Pause, eine Importgrenze, neun `^`-Versionen exakt pinnen plus Wächter-Test.
+3. **Dann PR 3 = Aufgaben 10 und 12** („Rekorde der Natur“, „Wetter und Klima“, „Sortiere die Zeit“, kleine Spiele zusammenlegen). Geprüfte Endfassungen in `docs/entwurf/2026-11-24-rekorde-*`, `…-wetter-klima-*`; „Sortiere die Zeit“ [Fassung 2](docs/entwurf/2026-11-24-sortiere-die-zeit-fassung-2.md) wird gerade geprüft. Dazu der [Experten-Nachtrag „Stimmt das wirklich?“](docs/entwurf/2026-11-24-stimmt-das-experte-nachtrag.md) (in Prüfung). Dann PR 4 = Länder ([Ideen](docs/entwurf/2026-11-24-laender-spiele-ideen.md)).
+4. **Bilder im Hintergrund** (BACKLOG Punkt 26): Blauwal, Wright Flyer, Meitner ([offene Bildfragen](docs/entwurf/2026-11-24-bilder-offene-fragen.md)), 3 Erfindungen, Darwin, Goodall ([Vorschläge](docs/entwurf/2026-11-24-bilder-erfindungen-darwin-goodall.md)), Mandela nach Klärung der Herkunft.
 
 ## Helfer beim Einstieg
 
@@ -39,8 +41,7 @@ Gleich nach `/weiter` starten diese Helfer im Hintergrund (Regel „Helfer start
 
 ## Offene Fragen an den Nutzer
 
-- **Regel „Prüfschritte der Vollprüfung vor dem Commit selbst laufen lassen“** in `CLAUDE.md` aufnehmen? ([Technik-Prüfung](docs/entwurf/2026-11-24-teil-b-pr2-technik-spaeter-fund.md)). Antwort steht aus.
-- **Design vorziehen?** Empfehlung: jetzt (PR 2 ist gemergt) zwei Stilproben (Start, Karte, Spiel; Handy und Rechner) zur Auswahl, auf Grundlage von [Design-Ideen](docs/entwurf/2026-11-24-design-ideen.md) und [Bestandsaufnahme Einheitlichkeit](docs/entwurf/2026-11-24-design-einheitlichkeit-bestand.md). Antwort steht aus.
+- **Welche Stilprobe?** Folgt, sobald die zwei Stilproben stehen.
 - **`spieltester`** ist Pilot (seit 24.11.2026); nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt.
 - **`main` schützen** macht der Nutzer selbst; Claude prüft es nur vor einer Veröffentlichung nach `main`. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen ruhigen Wochen (BACKLOG).
 
