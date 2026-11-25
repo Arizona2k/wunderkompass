@@ -1,0 +1,193 @@
+/* Stilprobe B „Sammelheft“ – Entwurf, nicht in der App. Schriften: Grandstander (Überschriften), Andika (Text), beide OFL. */
+@font-face{font-family:"Grandstander";src:url(schriften/grandstander.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Andika";src:url(schriften/andika-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Andika";src:url(schriften/andika-700.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --heft:#F7FAFF;        /* Heftseite, kariert */
+  --karo:rgba(47,111,224,.10);
+  --weiss:#FFFFFF;
+  --tinte:#1B2550;       /* Filzstift-Blau, Umrisse */
+  --tinte-2:#4B5578;
+  --orange:#FF7A1A;      /* Hauptknopf, wie heute die Marke */
+  --richtig:#1F9D55; --richtig-hell:#DDF5E7;
+  --w-tiere:#1F9D55; --w-zeit:#F2B400; --w-koepfe:#EF5D7A; --w-erfind:#7A4DE0; --w-bau:#E4572E; --w-wiss:#2F6FE0;
+  --kopf:"Grandstander",system-ui,sans-serif;
+  --text:"Andika",system-ui,sans-serif;
+  --rand:2px solid var(--tinte);
+  --kante:0 4px 0 var(--tinte);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--tinte);font:400 18px/1.55 var(--text);hyphens:manual;overflow-wrap:break-word;
+  background-color:var(--heft);
+  background-image:linear-gradient(var(--karo) 1px,transparent 1px),linear-gradient(90deg,var(--karo) 1px,transparent 1px);
+  background-size:24px 24px}
+img{display:block;max-width:100%}
+a{color:var(--tinte)}
+h1,h2,h3{font-family:var(--kopf);margin:0;line-height:1.08;font-weight:800;hyphens:manual}
+h2{font-size:clamp(25px,3.4vw,32px);margin-bottom:14px}
+p{margin:0}
+:focus-visible{outline:3px solid var(--w-wiss);outline-offset:3px;border-radius:8px}
+.ico{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Kopfzeile */
+.kopf{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--weiss);border-bottom:var(--rand)}
+.marke{display:flex;align-items:center;gap:10px;font:800 22px/1 var(--kopf);color:var(--tinte);text-decoration:none}
+.marke .kreis{width:40px;height:40px;border-radius:50%;background:var(--orange);border:var(--rand);display:grid;place-items:center;transform:rotate(-8deg)}
+.marke .kreis .ico{width:22px;height:22px}
+.kopf nav{display:none}
+.kopf .rechts{margin-left:auto;display:flex;gap:8px}
+.rund{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;height:48px;padding:0 12px;border-radius:14px;border:var(--rand);background:var(--weiss);color:var(--tinte);font:700 16px var(--kopf);text-decoration:none;box-shadow:0 3px 0 var(--tinte)}
+.rund .wort{display:none}
+
+/* Fußnavigation (Handy) */
+.fuss{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:repeat(6,1fr);background:var(--weiss);border-top:var(--rand);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+.fuss a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:14px;font:700 13px var(--kopf);color:var(--tinte-2);text-decoration:none}
+.fuss a[aria-current]{background:var(--tinte);color:#fff}
+main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
+
+/* Knöpfe: dicker Rand, feste Kante */
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:16px;border:var(--rand);background:var(--orange);color:var(--tinte);font:800 19px var(--kopf);text-decoration:none;box-shadow:var(--kante);cursor:pointer;transition:transform .08s,box-shadow .08s}
+.knopf:active{transform:translateY(3px);box-shadow:0 1px 0 var(--tinte)}
+.knopf.zweit{background:var(--weiss)}
+@media (prefers-reduced-motion:reduce){.knopf{transition:none}}
+
+/* Sticker: das eine kühne Element */
+.sticker{position:relative;margin:0;background:var(--weiss);padding:9px;border-radius:20px;box-shadow:0 2px 0 rgba(27,37,80,.18),0 10px 22px rgba(27,37,80,.16);transform:rotate(var(--dreh,-2.5deg))}
+.sticker img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:13px}
+.sticker figcaption{display:flex;align-items:center;gap:6px;padding:8px 4px 1px;font:700 15px var(--kopf)}
+.sticker figcaption .ico{width:18px;height:18px;color:var(--w-koepfe)}
+.nachweis{margin-top:10px;font-size:13px;line-height:1.4;color:var(--tinte-2)}
+.punkt{width:46px;height:46px;border-radius:50%;background:var(--weiss);border:3px solid var(--weiss);box-shadow:0 2px 6px rgba(27,37,80,.25);overflow:hidden;display:grid;place-items:center;flex:none}
+.punkt img{width:100%;height:100%;object-fit:cover}
+
+/* Start */
+.buehne{padding:26px 0 0}
+.gruss{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--w-zeit);border:var(--rand);font:800 16px var(--kopf);transform:rotate(-2deg);margin-bottom:14px}
+.frage{font-size:clamp(32px,9.4vw,64px);line-height:1.02;margin:0 0 20px;max-width:13ch}
+.aktionen{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.buehne .sticker{max-width:520px}
+.weiterheft{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:var(--weiss);border:var(--rand);border-radius:22px;padding:14px;box-shadow:var(--kante);text-decoration:none;color:var(--tinte)}
+.weiterheft .sticker{padding:5px;border-radius:14px;--dreh:3deg}
+.weiterheft .sticker img{border-radius:10px;aspect-ratio:1}
+.weiterheft small{display:block;font:700 15px var(--kopf);color:var(--tinte-2)}
+.weiterheft b{display:block;font:800 21px/1.15 var(--kopf);margin:2px 0 4px}
+.weiterheft .unter{font-size:16px;color:var(--tinte-2)}
+.weiterheft + .weiterheft{margin-top:16px}
+.spiel-sticker{display:grid;place-items:center;aspect-ratio:1;background:var(--w-erfind)!important;color:#fff;border-radius:14px}
+.spiel-sticker .ico{width:40px;height:40px}
+.abschnitt{margin-top:40px}
+.welten{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.welt{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:160px;padding:12px;border-radius:20px;border:var(--rand);box-shadow:var(--kante);color:var(--tinte);text-decoration:none;background:var(--wf)}
+.welt .punkt{width:64px;height:64px;transform:rotate(var(--dreh,-4deg))}
+.welt .punkt .ico{width:30px;height:30px;color:var(--w-wiss)}
+.etikett{display:block;background:var(--weiss);border:var(--rand);border-radius:12px;padding:7px 10px}
+.etikett b{display:block;font:800 18px/1.12 var(--kopf)}
+.etikett .zahl{display:block;font-size:15px;color:var(--tinte-2)}
+.nachweise{margin-top:40px;font-size:13px;line-height:1.5;color:var(--tinte-2)}
+.nachweise h3{font:800 16px var(--kopf);margin-bottom:4px;color:var(--tinte)}
+
+/* Karte */
+.reiter,.welt-mark{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;background:color-mix(in srgb,var(--wf) 22%,white);border:var(--rand);color:var(--tinte);font:800 16px var(--kopf);text-decoration:none}
+.reiter{margin:18px 0 18px}
+.rk{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--wf);color:#fff;border:var(--rand)}
+.rk .ico{width:16px;height:16px}
+.karte h1{font-size:clamp(32px,6.6vw,54px);line-height:1.02;margin:24px 0 12px;overflow-wrap:break-word}
+.einstieg{font-size:20px;line-height:1.5;max-width:34ch}
+.leiste{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+.leiste .knopf{min-height:48px;padding:0 16px;font-size:16px}
+.kurz{display:grid;gap:12px}
+.kurz details{background:var(--weiss);border:var(--rand);border-radius:18px;padding:0 16px}
+.kurz summary{list-style:none;display:flex;align-items:center;gap:12px;min-height:58px;font:800 18px var(--kopf);cursor:pointer}
+.kurz summary::-webkit-details-marker{display:none}
+.kurz summary::before{content:"?";display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--w-zeit);border:var(--rand);font:800 16px var(--kopf);flex:none}
+.kurz details p{padding:0 0 16px 42px}
+.raten{background:var(--weiss);border:var(--rand);border-radius:24px;padding:18px;box-shadow:var(--kante)}
+.raten h2{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.raten .fragezeile{font:700 21px/1.3 var(--kopf);margin-bottom:14px}
+.antworten{display:grid;gap:12px}
+.antwort{display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 16px;border-radius:16px;border:var(--rand);background:var(--weiss);color:var(--tinte);font:400 18px/1.35 var(--text);text-align:left;width:100%;box-shadow:0 3px 0 var(--tinte)}
+.antwort.richtig{background:var(--richtig-hell);border-color:var(--richtig);box-shadow:0 3px 0 var(--richtig);font-weight:700}
+.antwort.richtig .marke-r{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--richtig);color:#fff;flex:none}
+.antwort.richtig .marke-r .ico{width:18px;height:18px;stroke-width:3}
+.antwort.blass{opacity:.5;box-shadow:none}
+.stimmt{display:flex;gap:10px;margin-top:14px}
+.stimmt .knopf{flex:1;padding:0 12px;background:var(--weiss)}
+.steckbrief{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.steckbrief div{background:var(--weiss);border:var(--rand);border-radius:18px;padding:12px 14px}
+.steckbrief div:nth-child(odd){transform:rotate(-1deg)}
+.steckbrief div:nth-child(even){transform:rotate(1deg)}
+.steckbrief dt{font:800 16px var(--kopf);color:var(--tinte-2);margin-bottom:2px}
+.steckbrief dd{margin:0;font-size:17px;line-height:1.4}
+.verbunden{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+.verbunden li{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start;background:var(--weiss);border:var(--rand);border-radius:20px;padding:12px}
+.verbunden .punkt{width:76px;height:76px;border-radius:16px;transform:rotate(-4deg)}
+.verbunden b{display:block;font:800 19px/1.2 var(--kopf);margin:2px 0 4px}
+.verbunden p{font-size:16px;line-height:1.5;color:var(--tinte-2)}
+.verbunden a{display:inline-block;margin-top:6px;font:700 16px var(--kopf)}
+
+/* Spiel */
+.spielkopf{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 16px}
+.spielkopf h1{font-size:clamp(30px,5vw,44px)}
+.stufe{display:inline-flex;align-items:center;gap:6px;padding:8px 12px 7px;line-height:1.1;border-radius:12px;background:var(--w-erfind);color:#fff;border:var(--rand);font:800 15px var(--kopf);white-space:nowrap;transform:rotate(2deg)}
+.fortschritt{display:flex;gap:10px;align-items:center;margin:0 0 6px}
+.fortschritt i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2.5px dashed var(--tinte-2);background:var(--weiss)}
+.fortschritt i.da{background:var(--richtig);border:var(--rand);color:#fff}
+.fortschritt i.da .ico{width:18px;height:18px;stroke-width:3}
+.fortschritt i.jetzt{border:4px solid var(--tinte);width:40px;height:40px}
+.zaehler{font:700 15px var(--kopf);color:var(--tinte-2);margin:0 0 20px}
+.aufgabe{position:relative;background:var(--weiss);border:var(--rand);border-radius:26px;padding:22px 18px;box-shadow:0 6px 0 var(--tinte)}
+.welt-mark{font-size:15px;margin-bottom:12px}
+.aufgabe h2{font-size:clamp(28px,4.6vw,40px);margin-bottom:18px}
+.antwort.richtig{position:relative;padding-right:100px}
+.stempel{position:absolute;right:8px;top:calc(50% - 41px);width:82px;height:82px;border-radius:50%;border:4px double var(--richtig);color:var(--richtig);display:grid;place-items:center;font:900 17px/1 var(--kopf);transform:rotate(-14deg);background:rgba(255,255,255,.9);animation:stempeln .35s cubic-bezier(.2,1.8,.5,1) both}
+@keyframes stempeln{from{transform:rotate(-14deg) scale(1.8);opacity:0}to{transform:rotate(-14deg) scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.stempel{animation:none}}
+.rueck{margin-top:18px;padding:14px 16px;border-radius:18px;background:var(--richtig-hell);border:2px solid var(--richtig)}
+.rueck b{display:block;font:800 21px var(--kopf);color:#146B3A;margin-bottom:4px}
+.unsichtbar{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.weiter{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:22px}
+.weiter a.link{font:700 17px var(--kopf)}
+.ohnefoto{position:relative;border-radius:22px;border:var(--rand);background:var(--w-wiss);color:#fff;padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--kante);margin-top:22px;overflow:hidden}
+.ohnefoto .gross{position:absolute;top:18px;left:18px;width:88px;height:88px;border-radius:50%;background:var(--weiss);border:var(--rand);display:grid;place-items:center;color:var(--w-wiss);transform:rotate(-8deg)}
+.ohnefoto .gross .ico{width:46px;height:46px;stroke-width:1.8}
+.ohnefoto small{font:700 15px var(--kopf)}
+.ohnefoto b{display:block;font:800 23px/1.15 var(--kopf);margin:4px 0 10px}
+.ohnefoto a{color:#fff;font:700 16px var(--kopf)}
+
+/* Rechner */
+@media (min-width:900px){
+  body{font-size:19px}
+  .kopf{padding:12px 32px;gap:24px}
+  .kopf nav{display:flex;gap:6px;margin-left:20px}
+  .kopf nav a{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:14px;font:700 16px var(--kopf);color:var(--tinte-2);text-decoration:none}
+  .kopf nav a[aria-current]{background:var(--tinte);color:#fff}
+  .rund .wort{display:inline}
+  .fuss{display:none}
+  main{padding:0 32px 80px}
+  .buehne{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:56px 0 8px}
+  .buehne .sticker{--dreh:3deg}
+  .start-unten{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+  .welten{grid-template-columns:repeat(3,1fr)}
+  .karte{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start;margin-top:28px}
+  .karte .links{position:sticky;top:100px}
+  .karte .reiter{margin-top:0}
+  .spiel{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px;align-items:start}
+  .spiel .seite{margin-top:126px}
+  .ohnefoto{margin-top:0;min-height:300px}
+}
+
+/* Sehr schmale Handys (320 px) */
+@media (max-width:359px){
+  .kopf{padding:10px 12px;gap:8px}
+  .marke{font-size:18px;gap:8px}
+  .marke .kreis{width:34px;height:34px}
+  .kopf .rechts{gap:6px}
+  main{padding-left:12px;padding-right:12px}
+  .welten{gap:10px}
+  .weiterheft{grid-template-columns:72px 1fr}
+}
+.wegtext,.etikett,.verbunden li > span{min-width:0}
+.welt{min-width:0}
+@media (min-width:600px) and (max-width:899px){.sticker img{aspect-ratio:16/9}.buehne .sticker{max-width:none}}
