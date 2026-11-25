@@ -17,6 +17,7 @@ So benutzen wir die Liste:
 ## Chat
 
 - **Falsche Uhrzeiten** (25.11.2026): Claude nannte Uhrzeiten aus dem Container (UTC), der Nutzer liest deutsche Zeit (eine Stunde später, im Sommer zwei). Gegenmittel: Uhrzeiten im Chat immer mit `TZ=Europe/Berlin date` bestimmen (Regel in `CLAUDE.md`).
+- **Spieltester traf das falsche Spiel** (25.11.2026): Der Auftrag sagte „Tierdetektiv“; es gibt aber zwei Spiele mit fast gleichem Namen. Gegenmittel: Spieltester-Aufträge nennen das Spiel mit genauem Namen, Datei und Weg dorthin.
 
 ## Design
 
