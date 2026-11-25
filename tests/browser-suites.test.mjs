@@ -19,7 +19,7 @@ const PASS_OFFLINE = [
 ];
 // Sichtbare Lernansichten, die nicht auf Chromium beschränkt sind. globus-bedienung: Fehlergrenze, wenn ein
 // nachgeladener Programmteil fehlt (sonst weiße Seite).
-const ANSICHTEN = ['reise-kapitel', 'solar-labels', 'globus-bedienung'];
+const ANSICHTEN = ['reise-kapitel', 'solar-labels', 'globus-bedienung', 'spiel-fokus'];
 // Dazu die Tempo-Prüfung (Ladegröße, Layout-Rutschen), damit zu große Seiten schon im PR auffallen.
 const CI = [...PASS_OFFLINE, ...ANSICHTEN, 'performance'];
 // Die große Prüfung: alles, was die alten Läufe portable-smoke und journey-engines erreichten.

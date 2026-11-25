@@ -48,6 +48,48 @@ export const EIGENE_RAETSEL={
  'person-neil_armstrong':'Diese Person landete mit Buzz Aldrin auf dem Mond. Die Reise hieß Apollo 11.',
  'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Außerdem malte diese Person Bilder: Aus frei gezogenen Linien wurden neue Formen.'
 };
+// Kurze Auflösung nach „Richtig!“ statt der ganzen Karte (Design-Prüfung und Spieltest zum Personen-Rätsel, 25.11.2026;
+// Endfassung docs/entwurf/2026-11-25-spiel-aufloesung-endfassung.md). Sie bringt etwas Neues und wiederholt keinen Rätselsatz.
+// Höchstens 180 Zeichen, eine Zahl, 13 Wörter je Satz; geprüft von fakten-pruefer, kinder-redaktion und stufen-pruefer.
+/** @type {Record<string,string>} */
+export const AUFLOESUNG={
+ 'person-jane_goodall':'Jane Goodall forschte im Wald von Tansania, in Afrika. Am Anfang liefen die Schimpansen vor ihr weg. Erst nach Monaten gewöhnten sich die Tiere an sie.',
+ 'person-wangari_maathai':'Wangari Maathai wollte, dass die Bäumchen auch groß werden. Darum wurden sie nach dem Pflanzen gepflegt. Später zählte man, wie viele noch wuchsen.',
+ 'person-ada_lovelace':'Ada Lovelace war Mathematikerin in England. Ihre Rechenschritte gelten als eines der ersten Computerprogramme. Die Maschine dazu wurde aber nie fertig gebaut.',
+ 'person-bertha_benz':'Bertha Benz zeigte mit ihrer Fahrt: Das neue Auto schafft auch weite Strecken. Ihr Mann hatte es gebaut. Sie gab Geld für seine Arbeit.',
+ 'person-cai_lun':'Cai Lun arbeitete für den Kaiser von China. Einfaches Papier gab es schon vor ihm. Es besteht aus winzigen Pflanzenfasern, die sich zu einem Blatt verbinden.',
+ 'person-marie_curie':'Marie Curie stammte aus Polen und forschte in Paris. Mit ihrem Mann fand sie einen neuen Grundstoff. Sie nannten ihn nach Polen: Polonium.',
+ 'person-rachel_carson':'Rachel Carson erforschte das Leben im Meer. Ihr Buch über Gift heißt „Der stumme Frühling“. Gemeint ist ein Frühling, in dem keine Vögel mehr singen.',
+ 'person-inge_lehmann':'Inge Lehmann erforschte Erdbebenwellen und das Innere der Erde. Heute wissen wir: Der äußere Erdkern ist flüssig, der innere ist fest.',
+ 'person-tu_youyou':'Tu Youyou suchte in China nach neuen Medikamenten. Ein Hinweis in alten Büchern über Heilkunde half dem Team weiter. 2015 bekam sie dafür einen Teil des Nobelpreises.',
+ 'person-maria_sibylla_merian':'Maria Sibylla Merian war Künstlerin und Naturforscherin. Auf ihren Bildern sieht man auch die Pflanzen, an denen die Raupen leben.',
+ 'person-johannes_gutenberg':'Johannes Gutenberg war Handwerker und Erfinder. Seine Werkstatt druckte die Bibel, das heilige Buch der Christen. In Korea druckte man schon früher mit Schriftzeichen aus Metall.',
+ 'person-katsushika_hokusai':'Katsushika Hokusai war ein Künstler aus Japan. Er zeichnete die Bilder vor. Andere Menschen schnitten sie in Holz und druckten sie.',
+ 'person-alexander_humboldt':'Alexander von Humboldt nahm Messgeräte mit auf seine Reisen. Ein Pflanzenforscher aus Frankreich reiste mit ihm. Auch Menschen, die dort lebten, halfen mit.',
+ 'person-grace_hopper':'Grace Hopper war Mathematikerin in den USA. Früher bestanden Computer-Befehle oft nur aus Zahlen. Wörter sind für Menschen viel leichter zu lesen.',
+ 'person-katherine_johnson':'Katherine Johnson war Mathematikerin bei der Raumfahrt in den USA. Ergebnisse vom Computer rechnete sie mit einer Tisch-Rechenmaschine nach. So konnten Fehler auffallen.',
+ 'person-tim_berners_lee':'Tim Berners-Lee ist ein Computer-Fachmann aus England. Er arbeitete an einem Forschungszentrum in der Schweiz. Später durfte jeder seine Erfindung kostenlos nutzen.',
+ 'person-mary_anning':'Mary Anning legte Fossilien vorsichtig aus dem Stein frei. Zuerst fand ihr Bruder Joseph einen Schädel. Später fand Mary weitere Teile dieses Tieres.',
+ 'person-ibn_al_haytham':'Ibn al-Haytham lebte und arbeitete lange in Kairo, in Ägypten. Früher dachten viele: Augen schicken Strahlen aus wie eine Taschenlampe. Er zeigte: Es ist umgekehrt.',
+ 'person-henrietta_swan_leavitt':'Henrietta Swan Leavitt erforschte Sterne an einer Sternwarte in den USA. Sie fand: Von zwei solchen Sternen leuchtet der mit dem langsameren Takt stärker.',
+ 'person-cecilia_payne_gaposchkin':'Cecilia Payne-Gaposchkin zerlegte Sternenlicht in seine Farben, wie beim Regenbogen. Ihr Fund: Sterne bestehen fast nur aus leichtem Gas, anders als die Erde.',
+ 'person-rosalind_franklin':'Rosalind Franklin war Forscherin in London. Ihr Röntgenbild gab einen Hinweis: Der Bauplan DNA ist gedreht wie eine Wendeltreppe.',
+ 'person-jocelyn_bell_burnell':'Jocelyn Bell Burnell war eine junge Forscherin in England. Die Signale kamen von Resten großer Sterne. Diese Reste drehen sich und blitzen wie ein Leuchtturm.',
+ 'person-octavia_butler':'Octavia Butler war Schriftstellerin in den USA. Ihre Notizen und Entwürfe liegen heute in einer Bibliothek. Darin sieht man: Sie schrieb ihre Texte oft um.',
+ 'person-chien_shiung_wu':'Chien-Shiung Wu wurde in China geboren und forschte später in den USA. Ihr Versuch zeigte: Auch eine bekannte Naturregel gilt nicht immer.',
+ 'person-lise_meitner':'Lise Meitner forschte viele Jahre in Berlin über Atome. Ihr Neffe Otto Frisch arbeitete mit ihr. Zusammen erkannten sie: Wenn ein schwerer Atomkern zerbricht, wird Energie frei.',
+ 'person-zaha_hadid':'Zaha Hadid war Architektin: Sie entwarf Häuser und andere Bauten. Als erste Frau bekam sie einen der wichtigsten Preise für Baukunst. Ihre Ideen malte sie auch als Bilder.',
+ 'person-ibn_sina':'Ibn Sina wusste viel über Medizin und noch viele andere Dinge. In Europa nannte man ihn Avicenna. Dort übersetzte man sein Buch und schrieb es lange ab.',
+ 'person-charles_darwin':'Charles Darwin war Naturforscher. Arten können sich über viele Generationen verändern, von Eltern zu Jungen und Enkeln. Ein einzelnes Tier wird dabei nicht zu einer neuen Art.',
+ 'person-murasaki_shikibu':'Murasaki Shikibus eigene Handschrift gibt es nicht mehr. Wir kennen ihre Geschichte nur, weil andere sie von Hand abschrieben.',
+ 'person-nelson_mandela':'Nelson Mandela war Anwalt: Er half Menschen vor Gericht. Für seinen Kampf saß er 27 Jahre im Gefängnis. Trotzdem gab er nicht auf.',
+ 'person-mae_jemison':'Mae Jemison war Ärztin und Astronautin in den USA. Sie war die erste Schwarze Frau im Weltall. Dort half sie bei Versuchen mit Knochenzellen.',
+ 'person-karl_benz':'Karl Benz war Ingenieur, also ein Fachmann für Technik. 1886 bekam er ein Patent: Andere durften seinen Motorwagen nicht einfach nachbauen. Seine Frau Bertha half ihm.',
+ 'person-albert_einstein':'Albert Einstein war Physiker, also ein Forscher für Kraft, Bewegung und Licht. Geboren wurde er in Ulm. Er erklärte: Licht bringt seine Energie in kleinen Portionen mit.',
+ 'person-al_khwarizmi':'Al-Chwarizmi forschte über Zahlen und über die Sterne. Von seinem Namen kommt das Wort „Algorithmus“. Das ist eine Anleitung in festen Schritten, wie ein Rezept.',
+ 'person-neil_armstrong':'Neil Armstrong testete vorher neue Flugzeuge. 1969 betrat er als erster Mensch den Mond. Ein dritter Mann, Michael Collins, kreiste im Raumschiff um den Mond.',
+ 'person-rabindranath_tagore':'Rabindranath Tagore war ein Dichter aus Indien. 1913 bekam er den Nobelpreis, als erster Dichter, der kein Europäer war. Manchmal malte er aus durchgestrichenen Wörtern Bilder.'
+};
 /** @param {{title:string,intro:string}} topic */
 export function personRecognitionClue(topic){
  // These delivered riddles stay independent of a richer biography opening.
@@ -64,12 +106,13 @@ export function personRecognitionClue(topic){
  return clue;
 }
 /** @type {Record<string,string>} */
+// Tipps in Kinderton (Endfassung 25.11.2026, Paket B). Sie verraten keine Zeitform und keine Lösung (stufen-pruefer).
 const hints={
- habitats:'Denke an Nahrung, Ruheplätze und Fortbewegung. Prüfe, ob der Lebensraum zum Leben an Land, am Wasser oder im Wasser passt.',
- food:'Vergleiche die ganze Beschreibung der Nahrung. Achte auch darauf, ob vom erwachsenen Tier oder einem anderen Entwicklungsstadium die Rede ist.',
- people:'Vergleiche die genannte Tätigkeit oder Entdeckung mit dem, was du über die angebotenen Personen weißt.',
- technology:'Welches Problem wird beschrieben? Vergleiche, was die angebotenen Erfindungen jeweils ermöglichen.',
- 'then-now':'Vergleiche, welche Möglichkeiten es früher gab und welche erst später hinzukamen. Eine ähnliche Aufgabe kann unterschiedlich gelöst werden.'
+ habitats:'Schau dir das Tier genau an: Hat es Flossen, Beine oder Flügel? Ist sein Zuhause eher warm oder kalt, nass oder trocken?',
+ food:'Überlege: Wo und wie sucht dieses Tier sein Futter? Lies jede Antwort bis zum Ende. Manchmal frisst ein junges Tier etwas anderes als ein großes.',
+ people:'Manche Menschen hier machten ähnliche Dinge. Achte auf Einzelheiten im Hinweis: einen Ort, ein Jahr oder ein Ding. Welchen Namen kannst du sicher streichen?',
+ technology:'Worum geht es im Text? Überlege bei jeder Erfindung: Wobei hilft sie den Menschen?',
+ 'then-now':'Denk an Dinge, die du von zu Hause oder von unterwegs kennst. Klingt die Beschreibung nach heute oder nach früher?'
 };
 /** @type {Record<string,string>} */
 const recordHints={
@@ -106,6 +149,15 @@ export function worldGamePrompt(game,item,stufe,antworten){
 // (kinder-redaktion beim Einbau, 25.11.2026). „Mensch“ statt „Person“, damit die Wahl nicht wie die gesuchte Person klingt.
 const PERSONEN_TIPP_ENTDECKER='Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?';
 const PERSONEN_FALSCH_ENTDECKER='Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.';
+// Auf Profi und Experte trennen die Sätze 2 und 3 die Fallen aus demselben Gebiet (Endfassung 25.11.2026, Paket B).
+const PERSONEN_FALSCH_PROFI='Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.';
+// Früher oder heute? Die dritte Antwort ist bei jeder Aufgabe falsch (world-game-bank.ts). Hier statt dort, weil Browser-Tests
+// diese Datei in reinem Node laden. Gespeicherte Runden von vor dem 24.11.2026 zeigen noch die alten dritten Antworten.
+export const DRITTE_ANTWORT='Erst in der Zukunft';
+/** @type {Record<string,string>} */
+export const ALTE_DRITTE_ANTWORT={Früher:'Noch keine wirkliche Entwicklung',Heute:'Nur ein Zukunftswunsch'};
+const ZUKUNFT_ANTWORTEN=[DRITTE_ANTWORT,...Object.values(ALTE_DRITTE_ANTWORT)];
+const ZUKUNFT_FALSCH='Das hier gibt es schon, oder es gab es früher. War es früher so oder ist es heute so?';
 /** @param {string} game @param {{id:string}} item @param {string} [stufe] gespielte Stufe der Runde */
 export function worldGameHint(game,item,stufe){
  if(game==='people'&&stufe==='entdecker')return PERSONEN_TIPP_ENTDECKER;
@@ -120,6 +172,8 @@ export function worldGameWrongFeedback(game,item,answer,stufe){
  if(game==='people'&&stufe==='entdecker')return 'Du hast „'+answer+'“ gewählt. '+PERSONEN_FALSCH_ENTDECKER;
  const comparison=game==='then-now'?catalog.find(t=>t.id+'-today'===item.id)?.invention?.comparisonQuestion:undefined;
  if(comparison){const index=comparison.answers.indexOf(answer),reason=comparison.wrongReasons[index];if(reason)return reason;}
+ if(game==='people')return 'Du hast „'+answer+'“ gewählt. '+PERSONEN_FALSCH_PROFI;
+ if(game==='then-now'&&ZUKUNFT_ANTWORTEN.includes(answer))return 'Du hast „'+answer+'“ gewählt. '+ZUKUNFT_FALSCH;
  if(game==='habitats'){
   if(answer==='Trockene Sandwüste fern von Gewässern')return 'Du hast eine Gegend ohne Gewässer gewählt. Überlege, welche Rolle Wasser im Leben dieses Tieres spielt.';
   if(answer==='Baumkronen im tropischen Regenwald')return 'Du hast die oberen Zweige von Bäumen gewählt. Vergleiche das mit der Fortbewegung und Nahrungssuche dieses Tieres.';

@@ -1,5 +1,5 @@
 import {habitatDistractors} from './world-game-habitats.mjs';
-import {animalDetectiveClue,personRecognitionClue} from './world-game-support.mjs';
+import {ALTE_DRITTE_ANTWORT,AUFLOESUNG,DRITTE_ANTWORT,animalDetectiveClue,personRecognitionClue} from './world-game-support.mjs';
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
@@ -7,10 +7,9 @@ import TIER_FALLEN from './world-game-tier-fallen.json' with {type:'json'};
 import type {WorldTopic,WorldQuestion} from './world-types';
 const TOPICS=CATALOG as WorldTopic[];
 // „Erst in der Zukunft“ passt zu den Stufen der Erfindungskarten (Früher, Heute, Zukunft) und ist bei jeder Aufgabe klar falsch
-// (kinder-redaktion und fakten-pruefer, 24.11.2026).
-export const DRITTE_ANTWORT='Erst in der Zukunft';
-// Bis 24.11.2026 hatte jede Aufgabe ihre eigene dritte Antwort; gespeicherte Runden dürfen sie behalten.
-const ALTE_DRITTE_ANTWORT:Record<string,string>={Früher:'Noch keine wirkliche Entwicklung',Heute:'Nur ein Zukunftswunsch'};
+// (kinder-redaktion und fakten-pruefer, 24.11.2026). Bis 24.11.2026 hatte jede Aufgabe ihre eigene dritte Antwort; gespeicherte
+// Runden dürfen sie behalten (ALTE_DRITTE_ANTWORT). Beide stehen in world-game-support.mjs, weil die Rückmeldung sie braucht.
+export {DRITTE_ANTWORT};
 type GameItem=WorldQuestion & {id:string;topic:string;image?:string};
 const question=(prompt:string,correct:string,wrong:string[],why:string):WorldQuestion=>({prompt,answers:[correct,...wrong],correct:0,why});
 // Recognition questions can keep older real topic names as distractors. Factual
@@ -47,7 +46,7 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
  if(id==='people'){
   // Keep the actually delivered20-person clue/choice bank stable as new people join.
   const retained=PEOPLE_BASELINE.map(id=>people.find(t=>t.id===id)!);
-  return people.map((t,i)=>{const old=PEOPLE_BASELINE.indexOf(t.id),index=old<0?i:old;return q(t,question('Wer passt zu diesem Hinweis? '+personRecognitionClue(t),t.title,[retained[(index+3)%retained.length].title,retained[(index+7)%retained.length].title],t.paragraphs.join(' ')));});
+  return people.map((t,i)=>{const old=PEOPLE_BASELINE.indexOf(t.id),index=old<0?i:old;return q(t,question('Wer passt zu diesem Hinweis? '+personRecognitionClue(t),t.title,[retained[(index+3)%retained.length].title,retained[(index+7)%retained.length].title],AUFLOESUNG[t.id]??t.paragraphs.join(' ')));});
  }
  if(id==='technology')return invent.map((t,i)=>{
   // Preserve old answer banks when principle-only optical cards are added.
