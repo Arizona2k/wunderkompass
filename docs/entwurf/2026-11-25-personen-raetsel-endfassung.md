@@ -91,3 +91,22 @@ Nur was neu zusammengeführt oder noch nicht gegengelesen ist:
 - **fakten-pruefer:** Curie „erforschte unsichtbare Strahlen“; Franklin „untersuchte mit Röntgenstrahlen den Bauplan von Lebewesen“, „Dieser Bauplan heißt DNA“; Darwin „fast fünf Jahre … um die Welt“, „Tier- und Pflanzenarten“; Murasaki „sehr lange“, „etwa 1000 Jahre alt und spielt am Hof“; Mandela „führte das Land“; Tu Youyou „fand im Team ein Mittel“, „stammt aus einer Pflanze“; Carson „Insekten“, „Vögel“; Anning „In England grub … aus“; Einstein beide Sätze; Cai Lun „dieses Papier“; die Gebietstabelle und die neuen Paare in Liste A (stufen bittet darum).
 - **kinder-redaktion:** Mandela Satz 3 mit „zum ersten Mal“ (15 Wörter), Berners-Lee „Seiten im Internet“, Murasaki Satz 2, Einstein beide Sätze, Cai Lun „dieses Papier“.
 - **stufen-pruefer:** Einstein neu gegen Leavitt, Payne-Gaposchkin, Ibn al-Haytham, Bell Burnell; Curie „unsichtbare Strahlen“ gegen Bell Burnell und Franklin; Leavitt ohne Werkzeug in Satz 1 gegen Bell Burnell; Murasaki neu gegen Ibn Sina und Cai Lun; dazu, ob die Regel aus Punkt 2 so umsetzbar ist.
+
+## 7. Ergebnis der letzten Prüfung (25.11.2026) und was eingebaut wird
+
+Berichte: [Fakten](2026-11-25-personen-raetsel-letzte-pruefung-fakten.md), [Kinder-Redaktion](2026-11-25-personen-raetsel-letzte-pruefung-kinderredaktion.md), [Stufen](2026-11-25-personen-raetsel-letzte-pruefung-stufen.md). Alles andere aus Abschnitt 6 passt.
+
+**Texte, die sich noch ändern** (gelten statt der Tabelle in Abschnitt 1):
+- **Einstein, Satz 1** (kinder, Muss: 14 Wörter, trennbares Verb): „Diese Person stellte sich genau vor, was mit Licht, Raum und Zeit passiert.“ (13 Wörter; meint dasselbe Gedankenexperiment, das der fakten-pruefer belegt hat). Satz 2 bleibt ohne „vor allem“ (fakten: vertretbar; kürzer).
+- **Franklin, Satz 1** (fakten, Soll: Sie untersuchte die Form, nicht den Inhalt): „Diese Person untersuchte mit Röntgenstrahlen, welche Form der Bauplan von Lebewesen hat.“ Satz 3 (fakten, Kann): „1952 entstand im Team ein berühmtes Röntgenbild davon.“
+- **Mandela, Satz 3** (kinder, Kann) in zwei Sätze: „1994 durften zum ersten Mal alle Erwachsenen wählen. Danach führte diese Person das Land.“ Beim Einbau prüfen, ob eine Testregel die Zahl der Sätze festlegt.
+- **Ibn Sina, Satz 2** (stufen, Kann; Beleg: Karten-`intro` „ordnete medizinisches Wissen seiner Zeit“): „Darin ordnete diese Person, was man damals über Krankheiten und Heilung wusste.“ Vorher passte Satz 2 auch auf Murasaki.
+- Diese vier neuen Sätze liest vor dem Merge noch einmal je ein Prüfer, der sie nicht vorgeschlagen hat (kinder-redaktion: Franklin, Ibn Sina; fakten-pruefer: Einstein Satz 1, Mandela; stufen-pruefer: alle vier gegen ihre Fallen), zusammen mit der Prüfung des Einbaus.
+
+**Regel, die sich noch ändert** (gilt statt Abschnitt 2, wo er abweicht):
+- **Profi** (stufen, Soll S-A): zwei Fallen aus Erst- oder Zweitgebiet, wo es mindestens zwei Kandidaten gibt, die dritte die zeitlich nächste. Gemessen sinkt „richtig nur mit dem Gebiet“ von 43 % auf 32 % (Raten: 25 %).
+- **Paarliste B** (stufen, Soll S-B) dazu: Einstein ↔ Neil Armstrong, Einstein ↔ Katherine Johnson. Liste B gilt in beide Richtungen, Liste A wie heute in eine.
+- **Franklin bekommt das Zweitgebiet „Natur und Erde“** (fakten-Randbemerkung, weil Satz 1 jetzt „Lebewesen“ sagt): Darwin, Goodall und andere kommen auf Entdecker nicht neben Franklin.
+- Gebiete und Liste B als Daten in `app/world-game-fallen.json`; Test „jede Person hat ein Gebiet“.
+
+**Beobachten, nicht ändern:** Mandela hat auf Profi immer Maathai als Falle (einzige weitere Person mit Gebiet „Gesellschaft“; „Südafrika“ und „1994“ trennen). Laufende alte Runden behalten ihre Antworten, bis eine neue Runde beginnt (harmlos; der `code-pruefer` sieht es sich beim Einbau an).
