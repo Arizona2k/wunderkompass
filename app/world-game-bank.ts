@@ -1,5 +1,5 @@
 import {habitatDistractors} from './world-game-habitats.mjs';
-import {ALTE_DRITTE_ANTWORT,AUFLOESUNG,DRITTE_ANTWORT,animalDetectiveClue,personRecognitionClue} from './world-game-support.mjs';
+import {ALTE_DRITTE_ANTWORT,AUFLOESUNG,DRITTE_ANTWORT,TECHNIK_AUFLOESUNG,animalDetectiveClue,personRecognitionClue} from './world-game-support.mjs';
 import {foodDistractors} from './world-game-food.mjs';
 import CATALOG from './world-catalog.json' with {type:'json'};
 import PEOPLE_BASELINE from './people-game-baseline.json' with {type:'json'};
@@ -52,7 +52,7 @@ export function worldGameBank(id:string):GameItem[]{const animals=TOPICS.filter(
   // Preserve old answer banks when principle-only optical cards are added.
   const oldIndex=historicalInventions.findIndex(old=>old.id===t.id),index=oldIndex<0?i:oldIndex;
   const prompt=t.invention!.recognitionClue?'Welche Erfindung passt zu dieser Beschreibung? '+t.invention!.recognitionClue:(t.invention!.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+t.invention!.stages[0].text;
-  return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],t.invention!.stages[2].text));
+  return q(t,question(prompt,t.title,[historicalInventions[(index+3)%historicalInventions.length].title,historicalInventions[(index+5)%historicalInventions.length].title],TECHNIK_AUFLOESUNG[t.id]??t.invention!.stages[2].text));
  });
  // Früher oder heute? Alle Aufgaben haben dieselbe dritte Antwort (Stufen-Prüfung Teil B, M1): Vorher stand bei „Früher“
  // immer „Noch keine wirkliche Entwicklung“ und bei „Heute“ immer „Nur ein Zukunftswunsch“; die Falle verriet die Lösung.

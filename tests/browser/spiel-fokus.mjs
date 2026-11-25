@@ -29,13 +29,15 @@ const SPIELE = {
   }},
   technik: {key: 'world:technology', kasten: '.world-game-room .lab-feedback', richtig: welt('technology')},
 };
-// Für den hohen Kasten beginnt die Technik-Runde mit der längsten Erklärung (Kühlschrank, über 500 Zeichen).
-const LANGE_RUNDE = {'world:technology': {items: ['invention-refrigerator', 'invention-elevator', 'invention-battery', 'invention-airplane', 'invention-light']}};
+// Für den hohen Kasten beginnt die Technik-Runde mit der längsten Erklärung (Kamera, 180 Zeichen). Seit den kurzen
+// Auflösungen (25.11.2026) passt jeder Kasten auf ein 320 × 568 px großes Handy. Darum ist das Fenster hier nur 400 px hoch
+// (wie ein kleines Handy quer oder mit eingeblendeter Tastatur), sonst prüfte der Fall „Kasten höher als der Platz“ nichts mehr.
+const LANGE_RUNDE = {'world:technology': {items: ['invention-camera', 'invention-elevator', 'invention-battery', 'invention-airplane', 'invention-light']}};
 const GERAETE = [
   {name: '360 px', viewport: {width: 360, height: 640}, hasTouch: true, spiele: ['personen', 'kreuz', 'detektiv']},
   // Am Rechner mit weichem Rollen (html { scroll-behavior: smooth }): Der Test wartet, bis das Rollen fertig ist.
   {name: '1280 px', viewport: {width: 1280, height: 600}, bewegung: 'no-preference', spiele: ['personen', 'kreuz', 'detektiv']},
-  {name: '320 px, große Schrift', viewport: {width: 320, height: 568}, hasTouch: true, grosseSchrift: true, sitzungen: LANGE_RUNDE, spiele: ['technik'], hoch: true},
+  {name: '320 × 400 px, große Schrift', viewport: {width: 320, height: 400}, hasTouch: true, grosseSchrift: true, sitzungen: LANGE_RUNDE, spiele: ['technik'], hoch: true},
 ];
 
 // Lage des Kastens im freien Teil des Fensters (ohne feste Leisten oben und unten); im Browser ausgewertet. Der Rand des
