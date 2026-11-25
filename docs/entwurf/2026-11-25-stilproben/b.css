@@ -150,9 +150,9 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 .weiter{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:22px}
 .weiter a.link{font:700 17px var(--kopf)}
 .ohnefoto{position:relative;border-radius:22px;border:var(--rand);background:var(--w-wiss);color:#fff;padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--kante);margin-top:22px;overflow:hidden}
-.ohnefoto .gross{position:absolute;top:18px;left:18px;width:88px;height:88px;border-radius:50%;background:var(--weiss);border:var(--rand);display:grid;place-items:center;color:var(--w-wiss);transform:rotate(-8deg)}
+.ohnefoto .gross{flex:none;margin-bottom:auto;width:88px;height:88px;border-radius:50%;background:var(--weiss);border:var(--rand);display:grid;place-items:center;color:var(--w-wiss);transform:rotate(-8deg)}
 .ohnefoto .gross .ico{width:46px;height:46px;stroke-width:1.8}
-.ohnefoto small{font:700 15px var(--kopf)}
+.ohnefoto small{margin-top:16px;font:700 15px var(--kopf)}
 .ohnefoto b{display:block;font:800 23px/1.15 var(--kopf);margin:4px 0 10px}
 .ohnefoto a{color:#fff;font:700 16px var(--kopf)}
 
