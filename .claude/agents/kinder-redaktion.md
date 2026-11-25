@@ -38,10 +38,11 @@ Du meldest Befunde und machst Vorschläge. Du änderst nichts; Claude entscheide
 
 Achte nicht auf Fakten-Richtigkeit im Detail; das macht der `fakten-pruefer`. Melde aber auffällige Zweifel.
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - Verbindungssätze haben höchstens zwei Sätze je Begründung (Unit-Test `karten-inhalt`); deine Umschreibungen halten das ein. Wörter, die Kinder anders kennen (z. B. „Nesseln“ wie bei der Brennnessel), sprichst du an (Funde vom 25.11.2026).
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Wörter oder Satzmuster, die auf vielen Seiten zu schwer sind; Stellen, wo ein Bild oder Ausprobieren besser wäre als Text. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

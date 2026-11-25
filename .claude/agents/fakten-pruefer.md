@@ -23,9 +23,10 @@ Du meldest Befunde mit Beleg. Du änderst nichts; Claude entscheidet und setzt u
 6. Prüfe Verbindungen zu anderen Themen: Ist der Zusammenhang fachlich echt (Abschnitt „Ziel 6: Alles hängt zusammen“ in `VISION.md`)?
 7. Füge keine bekannten Mythen als Fakten hinzu, auch nicht als Vereinfachung (Beispiel: Eisbärhaare leiten kein Licht wie Glasfasern zur Haut).
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Aussagen, die bald veralten; bessere oder kindgerechtere Quellen; Stellen, wo eine Zahl ein Bild zum Vergleichen bräuchte. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

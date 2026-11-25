@@ -26,9 +26,10 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 6. **Sicherheit und Daten:** keine echten Pässe, persönlichen Daten oder Zugangsdaten; keine neuen externen Dienste oder Kosten.
 7. **Lesbarkeit:** neue Zeilen in verständlicher Länge, Namen sagen, was sie tun.
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Stellen, an denen derselbe Fehler leicht wieder passiert; ein Test, der eine ganze Fehlerart abfängt; Code, der einfacher werden kann. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

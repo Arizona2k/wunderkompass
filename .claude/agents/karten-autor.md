@@ -44,10 +44,11 @@ Für diese Texte gelten dieselben Regeln wie für Karten (unten). Spiel-, Labor-
 8. **Bilder** suchst du nicht; das macht die `bild-recherche`. Schlage höchstens vor, welches Motiv fehlt.
 9. **Doppeltes vermeiden:** Kein Satz wiederholt wörtlich einen anderen Teil der Karte („Ganz einfach“, Einleitung, Häppchen, „Schon gewusst?“).
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - Verbindungssätze haben höchstens zwei Sätze je Begründung (Unit-Test `karten-inhalt`). Eine neue Quelle bei einer Tierkarte gehört auch in `app/animal-inquiries.json`. Ein Hinweis darf nicht auf etwas zeigen, das auch zur falschen Antwort passt; lies ihn gegen die ganze Karte (Funde vom 25.11.2026).
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Themen, Fragen oder Verbindungen zwischen Karten, die fehlen; Textmuster, die Kinder besser verstehen würden. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

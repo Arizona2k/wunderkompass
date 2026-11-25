@@ -28,9 +28,10 @@ Du meldest Befunde. Du änderst keine Dateien; Claude entscheidet und setzt um.
 8. **Fokus:** Mit Tastatur (Tab) ist der Fokus an jedem Bedienelement klar sichtbar. Nach Maus- oder Fingerbedienung, zum Beispiel nach einem Seitenwechsel, erscheint kein großer Rahmen um Überschriften oder Inhaltsblöcke.
 9. **Bewegung:** Bei „Bewegung reduzieren“ bleibt alles ruhig und bedienbar.
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Muster, das auf mehreren Seiten stört; ein Baustein, der fehlt; was Kindern die Bedienung leichter machen würde. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

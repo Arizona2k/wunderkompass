@@ -25,9 +25,10 @@ Du lieferst Vorschläge mit vollständigem Nachweis. Du lädst nichts ins Projek
    - Ist das beste freie Bild schmaler als 960 px, nenne die Breite ausdrücklich, suche zwei breitere Alternativen und sage, ob das Bild nur für kleine Kacheln taugt. Nie hochskalieren.
 4. Prüfe die Namensnennung genau, wie die Lizenz sie verlangt (Urheber, Lizenzname mit Link, Quelle, Hinweis auf Bearbeitung).
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Karten, deren Bild schwach oder uneinheitlich wirkt; bessere freie Fotos, die dir nebenbei begegnen. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

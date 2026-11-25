@@ -28,7 +28,7 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 8. **Fehler nicht wiederholen:** Steht jeder späte Fund in `docs/fehler-nicht-wiederholen.md`, mit einem Gegenmittel, das wirklich greift (Test oder Prüfung, die von selbst läuft)? Welche Zeile ist nur ein Vorsatz und könnte ein Test werden?
 9. **Vorausdenken:** Lies in `CLAUDE.md` alle Regeln mit „Wunsch des Nutzers“ oder „Nutzer, Datum“, dazu `docs/fehler-nicht-wiederholen.md`, die letzten Messwerte im `CHANGELOG.md` und die Abschnitte „Für meine Anleitung“ der neuesten Helferberichte in `docs/entwurf/`. Welche Muster siehst du (wo musste der Nutzer nachhelfen, was kam spät, was kostete viel Zeit oder Nutzungslimit, welcher Helfer lag daneben)? Schlage die nächsten höchstens drei Verbesserungen vor, die der Nutzer sonst selbst hätte vorschlagen müssen: neue Regel, neuer oder erweiterter Helfer, Test, der von selbst läuft, Schritt in `/weiter` oder `/pruefen`. Je Vorschlag: Anlass mit Beleg, was sich ändert, was es kostet (Zeit, Token), und wovon du abrätst.
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.

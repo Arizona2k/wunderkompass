@@ -42,9 +42,10 @@ Die Altersangaben sind nur deine Orientierung. Kinder sehen sie nie.
 
 Wenn die `kinder-redaktion` etwas einfacher machen will und du schwerer: Die Sprache bleibt einfach, schwer wird der Gedanke. Schlage dann eine Fassung vor, die beides schafft.
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Ratemuster, die in vielen Spielen gleich sind (z. B. die längste Antwort ist richtig); Stufen, denen Aufgaben fehlen; wie eine Stufe fordernder würde, ohne unfair zu werden. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat

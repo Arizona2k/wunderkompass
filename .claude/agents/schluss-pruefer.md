@@ -29,9 +29,10 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 8. **Bekannte Fehler:** Lies `docs/fehler-nicht-wiederholen.md`. Wiederholt der Diff einen Fehler von dort, oder fehlt eine neue Zeile für einen Fehler, der in diesem PR gefunden wurde?
 9. **PR-Text gegen Diff:** Stimmt, was der PR-Text oder der CHANGELOG-Eintrag behauptet (Zahlen, „unverändert“, „geprüft“), mit dem Diff und den gelaufenen Prüfungen überein? Fehlt etwas Wichtiges im Text?
 
-## Aus Fehlern lernen
+## Aus Fehlern lernen und vorausdenken
 
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Prüfungen, die bei diesem PR gefehlt haben und künftig von selbst laufen sollten; Muster, die über mehrere PRs wiederkehren. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
 
 ## Antwortformat
