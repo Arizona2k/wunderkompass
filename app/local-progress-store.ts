@@ -14,9 +14,18 @@ export function createProgressStore() {
   let base = serverSave, dirty = false, readOnly = false, generation = 0;
   let timer: ReturnType<typeof setTimeout>|undefined, channel: BroadcastChannel|undefined;
   let flushing: Promise<void>|undefined, started = false;
+  // Fehlgeschlagene Datenbank-Schreibversuche: Danach wird mit wachsender Pause wiederholt (1 s, 2 s, 4 s … höchstens 30 s),
+  // nie aufgegeben. Der Pass steht dabei weiter bei jeder Änderung sofort im Journal (localStorage).
+  let failures = 0, pending = false;
+  const delay = () => failures ? Math.min(30_000, 1000*2**(failures-1)) : 200;
   const listeners = new Set<() => void>();
-  const emit = (patch: Partial<Snapshot>) => { state={...state,...patch}; listeners.forEach(fn=>fn()); };
-  const protect = () => { if(!readOnly) generation++; readOnly=true; dirty=false; clearTimeout(timer); emit({available:false,notice:newerNotice,storage:'session'}); };
+  // Meldet nur echte Änderungen. Sonst sähe React bei jedem gleichen Fehler einen neuen Zustand und zeichnete neu.
+  const emit = (patch: Partial<Snapshot>) => {
+    if((Object.keys(patch) as (keyof Snapshot)[]).every(k=>Object.is(state[k],patch[k])))return;
+    state={...state,...patch}; listeners.forEach(fn=>fn());
+  };
+  const stop = () => { clearTimeout(timer); pending=false; };
+  const protect = () => { if(!readOnly) generation++; readOnly=true; dirty=false; failures=0; stop(); emit({available:false,notice:newerNotice,storage:'session'}); };
   const journal = (): Save|null => {
     try { const raw=localStorage.getItem(SAVE_KEY); if(!raw)return null; const value:unknown=JSON.parse(raw); if(future(value)){protect();return null;} return restoreSave(value); }
     catch { return null; }
@@ -41,7 +50,9 @@ export function createProgressStore() {
     const incoming=journal(); if(readOnly)return false; if(incoming)receive(incoming);
     try { localStorage.setItem(SAVE_KEY,JSON.stringify(state.save)); channel?.postMessage(state.save); return true; } catch { return false; }
   };
-  const schedule = () => { clearTimeout(timer); timer=setTimeout(()=>void flush(),200); };
+  // Nach einem Fehler verschiebt eine neue Änderung die geplante Wiederholung nicht, sonst liefe sie bei
+  // laufendem Spiel nie. Ohne Fehler bleibt es beim kurzen Sammeln von Änderungen (200 ms).
+  const schedule = () => { if(failures>0&&pending)return; clearTimeout(timer); pending=true; timer=setTimeout(()=>{pending=false;void flush();},delay()); };
   const flush = async (): Promise<void> => {
     if(flushing)return flushing;
     if(!dirty||readOnly||!state.ready)return;
@@ -61,10 +72,11 @@ export function createProgressStore() {
           tx.oncomplete=()=>resolve(result);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error??new Error('Saving interrupted'));
         });
         if(tick!==generation||readOnly)return;
+        failures=0;
         const next=mergeSaves(sent,state.save,persisted);base=persisted;dirty=!same(next.progress,persisted.progress);
         emit({save:next,storage:'database',available:true});writeJournal();
       } catch {
-        if(tick===generation&&!readOnly)emit({storage:localOK?'browser':'session',available:localOK});
+        if(tick===generation&&!readOnly){failures++;emit({storage:localOK?'browser':'session',available:localOK});}
       }
     })().finally(()=>{flushing=undefined;if(dirty&&!readOnly)schedule();});
     return flushing;
@@ -79,7 +91,7 @@ export function createProgressStore() {
   const replace = async (save:Save,notice:string,requireDurable:boolean) => {
     journal(); if(readOnly)throw new Error('Ein neuerer Pass ist geschützt. Öffne zuerst die neuere Version.');
     const next={...save,epoch:localId(),epochAt:Math.max(Date.now(),(state.save.epochAt??0)+1),revision:0,updatedAt:new Date().toISOString()};
-    generation++;clearTimeout(timer);dirty=false;let stored=false;
+    generation++;stop();failures=0;dirty=false;let stored=false;
     // Replacement is explicit, so publish its epoch before any delayed old write.
     try { localStorage.setItem(SAVE_KEY,JSON.stringify(next));stored=true; } catch { /* database fallback */ }
     try {
@@ -103,7 +115,7 @@ export function createProgressStore() {
     const storage=(e:StorageEvent)=>{if(e.key!==SAVE_KEY||!e.newValue)return;try {const raw=JSON.parse(e.newValue);if(future(raw)){protect();return;}if(!readOnly){receive(restoreSave(raw));if(dirty)schedule();}}catch{}};
     window.addEventListener('storage',storage);
     window.addEventListener('pagehide',()=>void flush());
-    document.addEventListener('visibilitychange',()=>{if(document.hidden)void flush();});
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)void flush();else if(dirty&&!readOnly){failures=0;stop();schedule();}});
   };
   return { getSnapshot:()=>state, subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>{listeners.delete(fn);};}, start, update, flush,
     reset:()=>replace(createSave(),'Dein Entdeckerpass beginnt neu.',false).then(()=>{try{localStorage.removeItem(LEGACY_KEY);}catch{}}),
