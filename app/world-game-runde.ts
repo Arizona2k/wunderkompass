@@ -2,6 +2,7 @@ import type { Review } from './progress-storage';
 import { istStufe, type Stufe } from './kern/stufe';
 import { waehleAufgaben } from './kern/auswahl';
 import { worldGameBank } from './world-game-bank';
+import { personenEntdeckerFallen } from './world-game-support.mjs';
 import { shuffle } from '../lib/shuffle';
 import CATALOG from './world-catalog.json' with { type: 'json' };
 import FALLEN from './world-game-fallen.json' with { type: 'json' };
@@ -20,9 +21,9 @@ export const weltSpielStufe = (gewaehlt: Stufe): Stufe => (gewaehlt === 'experte
 export type WeltRunde = { items: string[]; stufe: Stufe; orders: Record<string, string[]> };
 export type WeltRundeEingabe = { spiel: string; stufe: Stufe; review: Review; vorige: readonly string[]; zufall?: () => number; heute?: string };
 
-// Profi-Fallen (Schritt 8.2, E5): Tierdetektiv aus derselben Tiergruppe (kleine Gruppen zusammengelegt), Personen und
-// Technik aus derselben Zeit (die fünf nächsten Jahre). Paare, bei denen der Hinweis auch passt, stehen in
-// world-game-fallen.json und kommen nie als Falle (geprüft vom fakten-pruefer).
+// Profi-Fallen (Schritt 8.2, E5): Tierdetektiv aus derselben Tiergruppe (kleine Gruppen zusammengelegt), Technik aus
+// derselben Zeit (die fünf nächsten Jahre), Personen aus demselben Gebiet und derselben Zeit (personenFallen). Paare, bei
+// denen der Hinweis auch passt, stehen in world-game-fallen.json und kommen nie als Falle (geprüft vom fakten-pruefer).
 const TOPICS = CATALOG as WorldTopic[];
 const TIERGRUPPE: Record<string, string> = { Säugetiere: 'saeugetiere', Vögel: 'voegel', Fische: 'fische-amphibien-reptilien', Amphibien: 'fische-amphibien-reptilien', Reptilien: 'fische-amphibien-reptilien', Weichtiere: 'wirbellose', Insekten: 'wirbellose', Spinnentiere: 'wirbellose', Krebstiere: 'wirbellose' };
 const AUSSCHLUSS = FALLEN.ausschluss as Record<string, Record<string, string[]>>;
@@ -33,10 +34,43 @@ export function profiKandidaten(spiel: string, id: string): string[] {
   if (!t) return [];
   const frei = (x: WorldTopic) => x.id !== id && !nicht.includes(x.id);
   if (spiel === 'animal-detective' && t.animal) return TOPICS.filter(x => x.animal && frei(x) && TIERGRUPPE[x.animal.group] === TIERGRUPPE[t.animal!.group]).map(x => x.id);
-  const art = spiel === 'people' ? 'person' : spiel === 'technology' ? 'invention' : null;
-  if (!art || !t[art]) return [];
-  return TOPICS.filter(x => x[art] && frei(x)).sort((a, b) => Math.abs(jahr(a) - jahr(t)) - Math.abs(jahr(b) - jahr(t)) || a.title.localeCompare(b.title, 'de')).slice(0, 5).map(x => x.id);
+  if (spiel === 'people' && GEBIETE[id]) { const { gebiet, zeit } = personenFallen(id); return [...new Set([...gebiet, ...zeit])]; }
+  return zeitlichNaechste(spiel, id);
 }
+function zeitlichNaechste(spiel: string, id: string): string[] {
+  const t = TOPICS.find(x => x.id === id), nicht = AUSSCHLUSS[spiel]?.[id] ?? [];
+  const art = spiel === 'people' ? 'person' : spiel === 'technology' ? 'invention' : null;
+  if (!t || !art || !t[art]) return [];
+  return TOPICS.filter(x => x[art] && x.id !== id && !nicht.includes(x.id)).sort((a, b) => Math.abs(jahr(a) - jahr(t)) - Math.abs(jahr(b) - jahr(t)) || a.title.localeCompare(b.title, 'de')).slice(0, 5).map(x => x.id);
+}
+
+// Personen-Rätsel (Endfassung 25.11.2026, Abschnitte 2 und 7): Jede Person hat ein Gebiet, höchstens zwei.
+// Entdecker: Fallen aus anderen Gebieten, nie aus Liste A (ausschluss.people) oder Liste B (nichtAufEntdecker, beide Richtungen).
+// Profi: Fallen aus demselben Gebiet, dazu die fünf zeitlich nächsten; nie aus Liste A. `erst` sind die Personen aus dem
+// Erstgebiet der gesuchten Person (stufen-pruefer beim Einbau, 25.11.2026: sonst kam bei Franklin jede fünfte Runde ohne
+// Physik-Falle, und „Röntgenstrahlen“ schloss alle Fallen sofort aus).
+const GEBIETE = FALLEN.personen.gebiete as Record<string, string[]>;
+const gleichesGebiet = (a: string, b: string) => (GEBIETE[a] ?? []).some(g => (GEBIETE[b] ?? []).includes(g));
+export function personenFallen(id: string): { entdecker: string[]; erst: string[]; gebiet: string[]; zeit: string[] } {
+  const nicht = AUSSCHLUSS.people?.[id] ?? [], andere = TOPICS.filter(x => x.person && x.id !== id && !nicht.includes(x.id)).map(x => x.id);
+  const erstes = GEBIETE[id]?.[0];
+  return {
+    entdecker: personenEntdeckerFallen(id),
+    erst: andere.filter(x => erstes !== undefined && (GEBIETE[x] ?? []).includes(erstes)),
+    gebiet: andere.filter(x => gleichesGebiet(id, x)),
+    zeit: zeitlichNaechste('people', id),
+  };
+}
+// Profi: zwei Fallen aus dem Gebiet, die erste davon immer aus dem Erstgebiet (gibt es dort nur eine Person, eine), die
+// übrigen aus der Zeit. Entdecker: zwei aus anderen Gebieten.
+// Zwei Fallen, die ein Paar aus Liste A sind (beide Benz), kommen nie zusammen in eine Aufgabe.
+function personenAntworten(stufe: Stufe, frage: { id: string; answers: string[]; correct: number }, zufall: () => number): string[] | null {
+  const { entdecker, erst, gebiet, zeit } = personenFallen(frage.id), anzahl = stufe === 'profi' ? 3 : 2;
+  const dazu = (fallen: string[], kandidaten: string[], bis: number) => { for (const x of shuffle(kandidaten, zufall)) if (fallen.length < bis && !fallen.some(f => f === x || paarA(f, x))) fallen.push(x); return fallen; };
+  const fallen = stufe === 'profi' ? dazu(dazu(dazu([], erst, 1), gebiet, 2), zeit, 3) : dazu([], entdecker, 2);
+  return fallen.length === anzahl ? shuffle([frage.answers[frage.correct], ...fallen.map(titel)], zufall) : null;
+}
+const paarA = (a: string, b: string) => (AUSSCHLUSS.people?.[a] ?? []).includes(b) || (AUSSCHLUSS.people?.[b] ?? []).includes(a);
 
 // Lebensraum und Nahrung (Schritt 8.3, E9): Fallen je Runde aus einer geprüften Liste je Tier, Entdecker zwei deutlich andere,
 // Profi drei ähnliche (world-game-tier-fallen.json; Entscheidungsliste Teil B, Punkt 6).
@@ -47,6 +81,8 @@ function antworten(spiel: string, stufe: Stufe, frage: { id: string; answers: st
   const liste = tierFallen(spiel)?.[frage.id]?.[stufe === 'profi' ? 'profi' : 'entdecker'];
   const anzahl = stufe === 'profi' ? 3 : 2;
   if (liste && liste.length >= anzahl) return shuffle([frage.answers[frage.correct], ...shuffle(liste, zufall).slice(0, anzahl)], zufall);
+  const personen = spiel === 'people' && GEBIETE[frage.id] ? personenAntworten(stufe, frage, zufall) : null;
+  if (personen) return personen;
   if (stufe !== 'profi') return entdeckerAntworten(spiel, frage, zufall);
   const kandidaten = profiKandidaten(spiel, frage.id);
   if (kandidaten.length < 3) return shuffle(frage.answers, zufall);

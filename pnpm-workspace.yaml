@@ -1,4 +1,6 @@
-# Copied Sites are standalone projects and cannot inherit the monorepo policy.
+# Paketregeln von WunderKompass: nur Versionen, die mindestens 7 Tage alt sind (10080 Minuten),
+# Build-Skripte nur für die Pakete unter allowBuilds. storeDir und cacheDir bleiben, wie sie sind
+# (Entscheidung in docs/entwurf/2026-11-21-schritt-0-entscheidungen.md).
 minimumReleaseAge: 10080
 minimumReleaseAgeIgnoreMissingTime: false
 trustLockfile: false
