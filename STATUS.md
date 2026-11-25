@@ -29,6 +29,8 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 
 ## Nächster Schritt
 
+**Gesichert bei 93 % Nutzungslimit (25.11.2026, abends), weiter erst nach dem „Go“ des Nutzers.** Übergabe mit beiden PR-Texten und allen nächsten Schritten: `docs/entwurf/2026-11-25-uebergabe-pr120-tier.md` auf dem Branch `claude/tier-aufloesung-vorbereitung` (`git fetch origin claude/tier-aufloesung-vorbereitung`). Dort liegen auch der fertige Tier-PR, der neue Helfer `schluss-pruefer` (Fable prüft jeden PR zuletzt) und die Regel „Fehler nur einmal“.
+
 Phase 1 hat sechs Teilschritte: 1 Hülle (fertig) · 2 Wissenskarte (fertig) · **3 Kniffliger spielen** · 4 Weltenseiten und Bilder · 5 Startseite und Sammlung · 6 Feinschliff.
 
 1. **Design-Umbau Schritt 1 „Farben, Fokus, Knöpfe“** (fertig gebaut auf `claude/gracious-hypatia-a2jweq`; [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md)). Gebaut: Kompass-Farben und Fokusrahmen, gleiche Knöpfe (48 px, 16 bis 18 px Schrift), Auswahl Blaugrün, Rückmeldekästen neutral und weiß, Kreuz bei falschen Antworten, „Richtig!“ überall 20 px. Helfer fertig: [Spieltest](docs/entwurf/2026-11-25-umbau-schritt-1-spieltest.md), [Code-Prüfung](docs/entwurf/2026-11-25-umbau-schritt-1-codepruefung.md), [Design-Prüfung](docs/entwurf/2026-11-25-umbau-schritt-1-design-pruefung.md); Muss-Befunde eingebaut, der Rest je Schritt in BACKLOG Punkt 29. Noch offen: `pnpm run check` grün, `kern-huelle`, `karte-stufen`, `spiel-fokus`, `pass-atlas` einzeln in Firefox und WebKit, `node tests/browser/run.mjs --suite full core offline-cold-full home home-visits components journeys`, Vorschau, PR nach `test-live`, Merge nach grüner CI (OK des Nutzers liegt vor: „Ok fürs mergen“, 25.11.2026), danach CHANGELOG-Messwerte.
