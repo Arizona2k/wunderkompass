@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import {DRITTE_ANTWORT,worldGameBank,restoreWorldGameOrders,validWorldGameOrder} from '../app/world-game-bank.ts';
-import {EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
+import {AUFLOESUNG,EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
@@ -46,7 +46,7 @@ test('Benz and al-Chwarizmi recognition prompts conceal real name variants while
   assert(names.some(name=>new RegExp('\\b'+name+'\\b','iu').test(naiveClue)),'the current intro with only the full title replaced is a real counterexample');
   const clue=personRecognitionClue(t);assert.notEqual(clue,naiveClue);
   assert.equal(q.prompt,'Wer passt zu diesem Hinweis? '+clue);
-  assert.equal(q.answers[q.correct],t.title);assert.equal(q.why,t.paragraphs.join(' '));
+  assert.equal(q.answers[q.correct],t.title);assert.equal(q.why,AUFLOESUNG[id]);
   for(const name of variants)assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')));
   for(const part of names)assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
  }
@@ -85,7 +85,8 @@ test('Personen-Rätsel: Entdecker liest nur Satz 1 und bekommt einen eigenen Tip
  const q=pool[0],wrong=q.answers[1],tipp='Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?';
  assert.equal(worldGameHint('people',q,'entdecker'),tipp);
  assert.equal(worldGameWrongFeedback('people',q,wrong,'entdecker'),'Du hast „'+wrong+'“ gewählt. Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.');
- for(const stufe of ['profi',undefined]){assert.notEqual(worldGameHint('people',q,stufe),tipp);assert.equal(worldGameWrongFeedback('people',q,wrong,stufe),'Du hast „'+wrong+'“ gewählt. '+worldGameHint('people',q,stufe));}
+ // Auf Profi und Experte lenkt die Rückmeldung auf die Sätze 2 und 3 (Endfassung Auflösungen, Paket B).
+ for(const stufe of ['profi','experte',undefined]){assert.notEqual(worldGameHint('people',q,stufe),tipp);assert.equal(worldGameWrongFeedback('people',q,wrong,stufe),'Du hast „'+wrong+'“ gewählt. Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.');assert.notEqual(worldGameWrongFeedback('people',q,wrong,stufe),worldGameWrongFeedback('people',q,wrong,'entdecker'));}
  // Andere Spiele bleiben auf jeder Stufe gleich.
  for(const game of ['animal-detective','technology'])for(const item of worldGameBank(game).slice(0,3)){assert.equal(worldGamePrompt(game,item,'entdecker'),item.prompt);assert.equal(worldGameHint(game,item,'entdecker'),worldGameHint(game,item));}
 });
@@ -141,4 +142,48 @@ test('gespeicherte Aufgaben mit ihrer alten dritten Antwort laufen weiter',()=>{
  const fallback=Object.fromEntries(pool.map(q=>[q.id,[...q.answers]]));
  const restored=restoreWorldGameOrders({[frueher.id]:altFrueher,[heute.id]:altHeute},fallback,pool,'then-now');
  assert.deepEqual(restored[frueher.id],altFrueher);assert.deepEqual(restored[heute.id],altHeute);
+});
+// Kurze Auflösung nach „Richtig!“ (Endfassung 25.11.2026, docs/entwurf/2026-11-25-spiel-aufloesung-endfassung.md).
+test('jede Person hat eine kurze Auflösung, die etwas Neues sagt',()=>{
+ const pool=worldGameBank('people'),personen=catalog.filter(t=>t.person);
+ assert.deepEqual(Object.keys(AUFLOESUNG).sort(),personen.map(t=>t.id).sort());
+ assert.deepEqual(Object.keys(AUFLOESUNG).sort(),Object.keys(EIGENE_RAETSEL).sort());
+ const saetze=text=>text.split(/(?<=[.!?])\s+/u);
+ for(const t of personen){
+  const text=AUFLOESUNG[t.id],q=pool.find(q=>q.id===t.id);
+  assert.equal(q.why,text,t.id);
+  assert.ok(text.length<=180,t.id+': höchstens 180 Zeichen');
+  // Beginnt mit dem ersten Namensteil, damit klar ist, wer gemeint war (Murasaki steht im Genitiv).
+  assert.ok(normalize(text).startsWith(normalize(t.title).split(' ')[0]),t.id+': beginnt mit dem Namen');
+  assert.doesNotMatch(text,/^Richtig/u,t.id);
+  for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,t.id+': Satz zu lang: '+satz);
+  assert.ok((text.match(/\d+/gu)??[]).length<=1,t.id+': höchstens eine Zahl');
+  for(const satz of saetze(EIGENE_RAETSEL[t.id]))assert.ok(!text.includes(satz),t.id+': wiederholt einen Rätselsatz');
+ }
+});
+// Eine Auflösung nennt keine andere Person aus dem Spiel, sonst verrät sie eine Falle oder ein späteres Ziel; der Profi-Tipp
+// ist für alle gleich und nennt niemanden (Stufen-Prüfung Auflösungen, Tests 2 und 4). Nur Bertha und Karl Benz dürfen sich nennen.
+test('Auflösungen und Profi-Tipp verraten keine andere Person',()=>{
+ const personen=catalog.filter(t=>t.person),paar=new Set(['person-bertha_benz','person-karl_benz']);
+ const nachname=t=>normalize(t.title.replace(/\(.*?\)/gu,'').trim().split(' ').at(-1));
+ const nennt=(text,t)=>(' '+normalize(text)+' ').includes(' '+nachname(t)+' ');
+ const tipp=worldGameHint('people',worldGameBank('people')[0],'profi');
+ for(const t of personen){
+  assert.equal(worldGameHint('people',worldGameBank('people').find(q=>q.id===t.id),'profi'),tipp,t.id);
+  assert.ok(!nennt(tipp,t),'der Profi-Tipp nennt '+t.title);
+  for(const o of personen)if(o!==t&&!(paar.has(t.id)&&paar.has(o.id)))assert.ok(!nennt(AUFLOESUNG[t.id],o),t.id+' nennt '+o.title);
+ }
+});
+// Früher oder heute? „Erst in der Zukunft“ und die alten dritten Antworten sind immer falsch; die Rückmeldung verrät keine Zeit.
+test('die Zukunfts-Antwort bekommt bei Früher und Heute dieselbe Rückmeldung',()=>{
+ const pool=worldGameBank('then-now').filter(q=>q.id!=='invention-compass-today');
+ const frueher=pool.find(q=>!q.id.endsWith('-today')),heute=pool.find(q=>q.id.endsWith('-today'));
+ for(const alt of [DRITTE_ANTWORT,'Noch keine wirkliche Entwicklung','Nur ein Zukunftswunsch']){
+  const a=worldGameWrongFeedback('then-now',frueher,alt),b=worldGameWrongFeedback('then-now',heute,alt);
+  assert.equal(a,b,alt);assert.ok(a.startsWith('Du hast „'+alt+'“ gewählt. '),alt);assert.notEqual(a,'Du hast „'+alt+'“ gewählt. '+worldGameHint('then-now',frueher));
+ }
+ for(const q of pool)assert.equal(worldGameAnswerCorrect('then-now',q,DRITTE_ANTWORT),false,q.id);
+ // Vertauschte Antworten (Früher statt Heute) bekommen weiter den allgemeinen Tipp, der für alle Aufgaben gleich ist.
+ assert.equal(worldGameWrongFeedback('then-now',frueher,'Heute'),'Du hast „Heute“ gewählt. '+worldGameHint('then-now',frueher));
+ assert.equal(worldGameHint('then-now',frueher),worldGameHint('then-now',heute));
 });

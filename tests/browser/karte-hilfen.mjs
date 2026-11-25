@@ -172,10 +172,13 @@ export const rateMal = scope => scope.locator('section.rate-mal');
 export const antwortKnopf = (scope, antwort) => rateMal(scope).locator('.quiz-answer').filter({has: seite(scope).getByText(antwort, {exact: true})});
 
 // Die Frage, die „Rate mal!“ gerade zeigt (aria-labelledby="rate-mal-<Fragen-ID>"), als Eintrag aus fragenDerKarte.
-// Vorher die Karte abwarten (karteDa), sonst steht womöglich noch die vorige da.
+// Gleich nach einem Kartenwechsel kann kurz noch die Frage der vorigen Karte stehen. Darum wartet die Hilfe erst bis zu 5 s auf
+// eine Frage dieser Karte und liest dann ([Zeitfehler](../../docs/entwurf/2026-11-25-zeitfehler-browsertests.md), Soll 2).
 export async function angezeigteFrage(scope, t) {
   const bereich = rateMal(scope);
   await bereich.waitFor();
+  const dieseKarte = fragenDerKarte(t).map(f => 'section.rate-mal[aria-labelledby=' + JSON.stringify('rate-mal-' + f.id) + ']').join(', ');
+  await scope.locator(dieseKarte).first().waitFor({timeout: 5000}).catch(() => {});
   const id = (await bereich.getAttribute('aria-labelledby'))?.replace(/^rate-mal-/, '');
   const frage = fragenDerKarte(t).find(f => f.id === id);
   assert.ok(frage, t.id + ': „Rate mal!“ zeigt keine Frage dieser Karte (' + id + ')');

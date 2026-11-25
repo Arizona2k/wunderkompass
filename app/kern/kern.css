@@ -464,6 +464,16 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 /* Beim Öffnen rollt die Seite zum Spiel, beim Weiterblättern zum Brett (Spieltest Welt-Spiele, G; Spieltest PR 2,
    Befunde 1 und 4; game-shell.tsx, kern/spiel-fokus.ts); etwas Luft darüber, für alle Spiele gleich. */
 .game-room, .game-room .game-board { scroll-margin-top: 12px; }
+/* Nach einer Antwort rollt die Rückmeldung ins Bild (kern/spiel-fokus.ts, zurRueckmeldung); etwas Luft über und unter dem Kasten. */
+.game-room .lab-feedback, .game-room .game-feedback { scroll-margin: 12px 0; }
+/* „Richtig!“ und „Noch nicht ganz“ sind größer als der Text darunter, auch bei großer Schrift; stehen „Erklärung vorlesen“
+   und „Nächste Aufgabe“ nebeneinander, ist Luft dazwischen, stehen sie untereinander (schmales Handy), auch (Design-Prüfung
+   „Rückmeldung im Blick“, Soll 1 und 2; Nachprüfung, Kann 1). */
+.game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 1.125rem; }
+.large-reading .game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 1.3rem; }
+.game-room .lab-feedback > .speech-button { margin-inline-end: 16px; margin-block-end: 8px; }
+/* Holt die Seite einen Knopf im Kasten mit Tab über die Leiste (imKastenSichtbar), bleibt Platz für den Fokusrahmen. */
+.game-room :is(.lab-feedback, .game-feedback) :is(button, a) { scroll-margin-block: 12px; }
 @media (max-width: 560px) {
   /* .game-board dazu: globals.css lädt nach dieser Datei und setzt .world-game-room .world-photo auf 20 px. */
   .world-game-room .game-board .world-photo { margin: 12px 0; }

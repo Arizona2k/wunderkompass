@@ -7,7 +7,7 @@ Stand 25.11.2026. Grundlage: [Entwurf](2026-11-25-spiel-aufloesung-entwurf.md) d
 - **„Wer war das?“:** Nach „Richtig!“ steht nicht mehr der ganze Kartentext, sondern eine kurze Auflösung mit etwas Neuem über die Person (Abschnitt Paket A). Sie gilt auf allen Stufen.
 - **Tipps in Kinderton** für Personen (Profi, Experte), Tierzuhause, Futter, Erfindungen und Früher oder heute (Paket B).
 - **Eigene Rückmeldungen** nach falscher Antwort: Personen auf Profi und Experte, „Erst in der Zukunft“ bei Früher oder heute.
-- **Rückmeldung im Blick:** Nach jeder Antwort rollt die Seite so, dass der Kasten mit „Richtig!“ oder „Noch nicht ganz“ ganz über der unteren Leiste steht (Spieltest Personen-Rätsel, Muss 1). Nach „Richtig!“ hat „Weiter“ den Fokus. Gilt für alle Welt-Spiele, Kreuz und quer, „Stimmt das wirklich?“ und „Wer lebt wo?“ (`app/kern/spiel-fokus.ts`, `zurRueckmeldung`).
+- **Rückmeldung im Blick:** Nach jeder Antwort rollt die Seite so, dass der Kasten mit „Richtig!“ oder „Noch nicht ganz“ ganz über der unteren Leiste steht (Spieltest Personen-Rätsel, Muss 1). Nach „Richtig!“ hat „Nächste Aufgabe“ den Fokus. Ist der Kasten höher als der freie Platz (kleines Handy, große Schrift, lange Erklärung), steht sein Anfang oben, und der Fokus liegt auf „Richtig!“; mit Tab holt die Seite „Erklärung vorlesen“ und „Nächste Aufgabe“ über die Leiste (in Firefox nötig, `imKastenSichtbar`). Gilt für alle Welt-Spiele, Kreuz und quer, „Stimmt das wirklich?“ und „Wer lebt wo?“ (`app/kern/spiel-fokus.ts`, `zurRueckmeldung`).
 
 ## Paket B: Tipps und Rückmeldungen
 
@@ -41,6 +41,47 @@ Rückmeldungen nach falscher Antwort:
 - **„Mehr lesen“-Link in der Rückmeldung:** kommt mit Umbau-Schritt 6 (Spielbrett).
 - **Eigene Rückmeldungskästen** in den Länder-Spielen (`app/learning-games.tsx`, `app/advanced-games.tsx`): folgen mit Umbau-Schritt 6.
 - **BACKLOG aus der Stufen-Prüfung:** Experten-Aufgaben aus den Auflösungen; Abstand bei Früher oder heute für Profi und Experte (Prinzip-Fragen wie beim Kompass); Ratemuster-Test auf Wörter im Hinweis ausdehnen; Tierdetektiv und `recordHints` in Kinderton; 5 von 12 Früher-Texten enthalten „früh-“.
+
+## Prüfung des Einbaus
+
+**`code-pruefer`** ([Bericht](2026-11-25-spiel-aufloesung-codepruefung.md); 2 Muss, 2 Soll, 4 Kann): alle umgesetzt.
+- Muss 1: `pnpm test` war rot, weil die feste Liste der CI-Suiten `spiel-fokus` nicht kannte. Jetzt in `ANSICHTEN` (`tests/browser-suites.test.mjs`).
+- Muss 2: Die Suite klickte die Antworten von oben nach unten und kippte zufällig (rund 12 % je Browser, hochgerechnet). Jetzt liest sie die gespeicherte Runde, bestimmt die richtige Antwort aus den Fragebänken und spielt in Aufgabe 1 erst eine falsche, dann die richtige.
+- Soll 3: Ein hoher Kasten wurde nie geprüft, und „Weiter“ lag dann außer Sicht. Jetzt geht der Fokus in diesem Fall auf „Richtig!“ (Überschrift mit `tabIndex -1`), mit Tab weiter zu „Erklärung vorlesen“ und „Nächste Aufgabe“. Die Suite prüft es bei 320 × 568 mit großer Schrift und der längsten Erklärung (Kühlschrank, 534 Zeichen).
+- Soll 4: Der Abstand des Kastens zum Rand (`scroll-margin`) zählt jetzt beim Platz mit, in der App und im Test.
+- Kann 5 bis 8: Rechner mit 1280 × 600, ein Gerät mit weichem Rollen, `lageImBrowser` per `addInitScript`, Selektoren mit Spielraum.
+
+**`spieltester`** ([Bericht](2026-11-25-spiel-aufloesung-spieltest.md)):
+- Muss 2 (hoher Kasten bei großer Schrift, „Weiter“ hinter der Leiste) ist derselbe Befund wie code-pruefer Soll 3 und damit umgesetzt.
+- Muss 1 (Kreuz und quer auf Entdecker: Fachsprache und Ratemuster) betrifft die Fragen von Kreuz und quer, nicht diesen PR. Eigener Schritt; BACKLOG.
+- Kann 10 (kein Abstand zwischen „Erklärung vorlesen“ und „Nächste Aufgabe“) ist derselbe Befund wie Design Soll 1 und umgesetzt.
+- Soll 3 bis 8, Kann 9, 11, 13: BACKLOG (Abschnitt „Aufgeschoben“ unten).
+
+**`design-pruefer`** ([Bericht](2026-11-25-spiel-aufloesung-designpruefung.md); kein Muss):
+- Soll 1 (Knöpfe berühren sich ab 768 px): 16 px Abstand nach „Erklärung vorlesen“.
+- Soll 2 („Richtig!“ so groß wie der Text, bei großer Schrift kleiner): 1,125 rem, bei großer Schrift 1,3 rem (`app/kern/kern.css`).
+- Soll 3 (Fokusring nur bei Tastatur) ist so gewollt; Soll 4 (Kontrast des Orangeknopfs) und die Kann-Punkte: BACKLOG bzw. Design-Umbau.
+
+**`technik-pruefer`** ([Bericht](2026-11-25-zeitfehler-browsertests.md)): Nach dem Offline-Fund (`offline-cold-full` zählte ein kurz noch sichtbares Spielbrett, Korrektur im Rätsel-PR) suchte er Verwandte. Kein Muss. Soll 1 und 2 sind hier mit umgesetzt: `hilfeOeffnen` wartet auf „So geht’s“ (der Umweg über den Fuß war toter Code), `angezeigteFrage` wartet bis zu 5 s auf eine Frage dieser Karte. Kann 3 bis 8: BACKLOG.
+
+**Nachprüfung nach dem Einbau** (`spieltester` [Bericht](2026-11-25-spiel-aufloesung-spieltest-2.md), `design-pruefer` [Bericht](2026-11-25-spiel-aufloesung-designpruefung-2.md)):
+- Spieltest Muss 1 (bei hohem Kasten bleibt „Nächste Aufgabe“ mit Tab hinter der Leiste): umgesetzt. Gemessen war es ein Firefox-Fehler: Liegt der Knopf schon im Fenster, aber hinter der Leiste, rollt Firefox beim Tab gar nicht; Chromium und WebKit beachten die Leiste. Jetzt holt die Seite den Knopf selbst darüber (`imKastenSichtbar` in `app/kern/spiel-fokus.ts`, Luft für den Fokusrahmen in `kern.css`). Die Suite `spiel-fokus` stellt genau diesen Fall her und ist ohne die Korrektur in Firefox rot, mit ihr in allen drei Browsern grün. Sie läuft im CI-Satz, also auch in der Engine-Schnellprüfung (Firefox, WebKit).
+- Spieltest Soll 2 (sehr hoher Kasten: auf dem Handy kein Hinweis, dass unten noch ein Knopf kommt) und Soll 3 (Auflösungen bei Technik zu lang, mit Fachwörtern und Zwischenüberschriften): Die richtige Lösung sind kürzere Erklärungen, nicht ein weiterer Knopf. BACKLOG: „Kurze Auflösungen für Technik und die anderen Welt-Spiele“ (wie bei den Menschen in diesem PR).
+- Design: kein Muss, kein neues Soll; Soll 1 und 2 der ersten Prüfung sind bestätigt. Kann 1 (auf schmalen Handys berühren sich „Erklärung vorlesen“ und „Nächste Aufgabe“ untereinander): 8 px Abstand unter „Erklärung vorlesen“. Kann 2 bis 4: Design-Umbau.
+
+## Aufgeschoben nach dem Einbau (mit Grund)
+
+- **Kreuz und quer auf Entdecker** (Spieltest Muss 1): Fachsprache („physikalische Erklärung … chemischer Befund“, „additives Herstellen“, „Transit“) und Ratemuster (längste Antwort richtig, „garantiert“, „nur“, „immer“ in falschen Antworten). Braucht neue Entdecker-Fassungen mit `karten-autor` und den drei Prüfern; eigener Schritt.
+- **„Leichter spielen?“ nach „Richtig!“** (Spieltest Soll 4): Der Stufen-Vorschlag erscheint auch nach einer richtigen Antwort. Betrifft „Rate mal!“ auf der Karte und drei Spiele, also die Logik des Vorschlags; eigener kleiner Schritt mit „Alle Wege prüfen“.
+- **„Früher oder heute?“ verrät Antworten** (Spieltest Soll 5): zum Eintrag „„Früher oder heute?“ neu fassen“.
+- **Stempel am Spielende** (Spieltest Soll 6): Design-Umbau „Kompass“ (der Stempel kommt am Spielende).
+- **Allgemeiner Entdecker-Tipp bei „Wer war das?“** (Spieltest Soll 7): zu „Rückmeldung und Tipps“.
+- **Gleiche Rückmeldung bei Kreuz und quer, Knopf je Spiel an anderer Stelle** (Spieltest Soll 8): zu „Ein Spielbrett für alle Spiele“.
+- **Schnelles Tippen** (Spieltest Soll 3): Der Kasten steht dann bis zu 19 px zu tief, „Nächste Aufgabe“ bleibt sichtbar. Beobachten.
+- **Design-Kann:** blasse nicht gewählte Antworten (Deckkraft 0,65), Tipp-Feld je Spiel verschieden, Kontrast der markierten falschen Antwort (4,67:1): Design-Umbau.
+- **Sehr hohe Kästen und lange Technik-Erklärungen** (Nachprüfung, Soll 2 und 3): kurze Auflösungen für Technik und die anderen Welt-Spiele, eigener Inhaltsschritt mit `karten-autor` und den drei Prüfern.
+- **Kleinere Testhilfen** (Technik-Prüfung, Kann 3 bis 8): BACKLOG.
+- **Aufblitzen des alten Spielbretts** beim Tipp auf „Spiele“ (Technik-Prüfung, Ursache `useZurUebersicht` per Effekt): klein, beim Spielbrett-Schritt.
 
 ## „Was ist neu?“
 
