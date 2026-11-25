@@ -3,6 +3,19 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 25.11.2026 – Kurze Auflösungen, Tipps in Kinderton, „Richtig!“ gleich ganz im Bild
+
+Nach der [Endfassung](docs/entwurf/2026-11-25-spiel-aufloesung-endfassung.md) (Entwurf `karten-autor`, geprüft von `fakten-pruefer` in zwei Runden, `kinder-redaktion`, `stufen-pruefer`).
+
+- **„Wer war das?“:** Nach „Richtig!“ steht nicht mehr der ganze Kartentext (im Schnitt 877 Zeichen Erwachsenentext), sondern eine kurze Auflösung mit etwas Neuem über die Person, auf allen Stufen (`AUFLOESUNG` in `app/world-game-support.mjs`).
+- **Tipps in Kinderton** für Personen (Profi, Experte), Tierzuhause, Futter, Erfindungen und Früher oder heute. **Eigene Rückmeldungen** nach falscher Antwort bei Personen (Profi, Experte) und bei „Erst in der Zukunft“ (Früher oder heute; der Satz verrät keine Zeit).
+- **Rückmeldung im Blick:** Nach jeder Antwort rollt die Seite so, dass „Richtig!“ oder „Noch nicht ganz“ ganz über der unteren Leiste steht; nach „Richtig!“ hat „Nächste Aufgabe“ den Fokus. Ist der Kasten höher als der freie Platz (kleines Handy, große Schrift, lange Erklärung), steht sein Anfang oben und der Fokus liegt auf „Richtig!“; mit Tab holt die Seite „Erklärung vorlesen“ und „Nächste Aufgabe“ über die Leiste (in Firefox nötig). Gilt für alle Welt-Spiele, Kreuz und quer, „Stimmt das wirklich?“ und „Wer lebt wo?“ (`app/kern/spiel-fokus.ts`).
+- **Aussehen:** „Richtig!“ und „Noch nicht ganz“ größer als der Text darunter, auch bei großer Schrift; Luft zwischen „Erklärung vorlesen“ und „Nächste Aufgabe“, nebeneinander und untereinander.
+- „Was ist neu?“: „„Richtig!“ siehst du jetzt gleich ganz“.
+- **Tests:** neue Suite `spiel-fokus` im CI-Satz (360 px mit Touch, 1280 px mit weichem Rollen, 320 px mit großer Schrift und der längsten Erklärung; ohne die Tab-Korrektur in Firefox rot); neue Unit-Tests für Auflösungen und Tipps (`tests/world-game-learning-copy.test.mjs`). Zwei Testhilfen warten jetzt, statt im Augenblick zu fragen (`hilfeOeffnen`, `angezeigteFrage`; [Technik-Prüfung](docs/entwurf/2026-11-25-zeitfehler-browsertests.md), Soll 1 und 2).
+- Rest im BACKLOG (Punkt 25, „Auflösung und Rückmeldung, Rest“), als Nächstes: kurze Auflösungen für Technik und die anderen Welt-Spiele.
+- **Messwerte:** *Funde vor dem PR:* 28 (Texte 19: fakten-pruefer 5 und 4, kinder-redaktion 6 und 1 beim „Was ist neu?“-Text, stufen-pruefer 3; Einbau 9: code-pruefer 4 (CI-Liste ohne die neue Suite, zufällig kippende Suite, hoher Kasten nie geprüft, Rand des Kastens nicht mitgezählt; der Spieltest fand den hohen Kasten auch), design-pruefer 2 (Knöpfe berühren sich, Überschrift zu klein), spieltester 1 in der Nachprüfung (Firefox: Knopf mit Fokus hinter der Leiste), technik-pruefer 2 (Testhilfen fragen im Augenblick statt zu warten)); *späte Funde:* –; *Dauer:* –.
+
 ## 25.11.2026 – „Wer war das?“: eigene Rätsel für alle 36 Menschen
 
 Die Personen-Rätsel nach der [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md) (Abschnitte 7 und 8 gelten vor 1 und 2; [Entscheidungen](docs/entwurf/2026-11-25-personen-raetsel-entscheidungen.md)).
@@ -14,7 +27,7 @@ Die Personen-Rätsel nach der [Endfassung](docs/entwurf/2026-11-25-personen-raet
 - **Karten:** Einleitungen von Payne-Gaposchkin und Murasaki genauer; tote Links gestrichen (DPMA bei beiden Benz, NBI bei Lehmann, fremde Links bei Goodall und Curie); neue Quellen bei Bell Burnell, Mandela und Leavitt.
 - „Was ist neu?“: „Neue Rätsel bei „Wer war das?““.
 - Berichte zum Einbau: [Code](docs/entwurf/2026-11-25-personen-raetsel-einbau-code.md), [Fakten](docs/entwurf/2026-11-25-personen-raetsel-einbau-fakten.md), [Kinder-Redaktion](docs/entwurf/2026-11-25-personen-raetsel-einbau-kinderredaktion.md), [Stufen](docs/entwurf/2026-11-25-personen-raetsel-einbau-stufen.md). Rest im BACKLOG (Punkt 25, „Personen-Rätsel, Rest“).
-- **Messwerte:** *Funde vor dem PR:* 19 beim Einbau (code-pruefer 4: Test-Variable außerhalb ihres Blocks, alte Runden, toter Rückfallweg, alter Kommentar; fakten-pruefer 5: Einstein-Satz unscharf, tote Links bei Lehmann und Benz, fehlende Belege bei Mandela und Leavitt; kinder-redaktion 4 und 2 beim „Was ist neu?“-Text; stufen-pruefer 2: Franklin neben Hadid, Profi-Fallen bei Franklin zu leicht; Claude 2 über `pnpm test`: Import ohne Dateiendung im Browser-Test, veraltete Exporte). Die Fassungen davor lasen die Helfer in drei Runden (Berichte in der Endfassung). *Späte Funde:* –. *Dauer:* –.
+- **Messwerte:** *Funde vor dem PR:* 19 beim Einbau (code-pruefer 4: Test-Variable außerhalb ihres Blocks, alte Runden, toter Rückfallweg, alter Kommentar; fakten-pruefer 5: Einstein-Satz unscharf, tote Links bei Lehmann und Benz, fehlende Belege bei Mandela und Leavitt; kinder-redaktion 4 und 2 beim „Was ist neu?“-Text; stufen-pruefer 2: Franklin neben Hadid, Profi-Fallen bei Franklin zu leicht; Claude 2 über `pnpm test`: Import ohne Dateiendung im Browser-Test, veraltete Exporte; dazu 1 in `offline-cold-full` vor dem PR: Die Offline-Prüfung zählte ein kurz noch sichtbares Spielbrett und lief dann ins Leere, Korrektur im Test, Verwandte sucht der [technik-pruefer](docs/entwurf/2026-11-25-zeitfehler-browsertests.md)). Die Fassungen davor lasen die Helfer in drei Runden (Berichte in der Endfassung). *Späte Funde:* 0 (CI und Engine-Schnellprüfung grün beim ersten Lauf). *Dauer:* rund 2¼ Stunden für den Einbau (ab etwa 09:15 UTC; [PR #117](https://github.com/Arizona2k/wunderkompass/pull/117) gemergt um 11:33 UTC); Entwurf und drei Prüfrunden liefen davor.
 
 ## 25.11.2026 – Technik: Speichern bei Fehlern, eine Grenze für Sicherungen, feste Paketversionen
 

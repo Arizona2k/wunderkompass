@@ -69,21 +69,17 @@ export function bereich(page, id) {
   return page.getByRole('navigation', {name: 'Bereiche', exact: true}).getByRole('link', {name: eintrag.wort, exact: true});
 }
 
-// Öffnet die Hilfe so, wie ein Kind sie findet. Der Kopf hat keinen Hilfe-Knopf mehr (Entwurf Phase 1):
-// Am Handy steht „So geht’s“ auf der Startseite, sonst führt der Fuß hin („Für Eltern“, dann
-// „So funktioniert die Lernwelt“). Gibt den Knopf zurück, der nach dem Schließen den Fokus bekommt.
+// Öffnet die Hilfe so, wie ein Kind sie findet: „So geht’s“ auf der Startseite, in jeder Breite (kern.css). Gibt den Knopf
+// zurück, der nach dem Schließen den Fokus bekommt. Der Test wartet auf den Knopf, statt im Augenblick zu fragen, ob er schon
+// da ist; der frühere Umweg über den Fuß war seit dem neuen Kopf toter Code ([Zeitfehler](../../docs/entwurf/2026-11-25-zeitfehler-browsertests.md), Soll 1).
+// Allgemein gilt: Schließt ein Klick auf einen Bereich ein offenes Spiel, Labor oder eine Reise (useZurUebersicht, per Effekt),
+// ist das alte Bild noch kurz da. Ein Test wartet dann auf etwas, das nur die Übersicht hat, und zählt nicht das alte Bild.
 export async function hilfeOeffnen(page) {
   const kurz = page.getByRole('button', {name: 'So geht’s', exact: true});
-  if (await kurz.isVisible()) {
-    await kurz.focus();
-    await page.keyboard.press('Enter');
-    return kurz;
-  }
-  const eltern = page.getByRole('contentinfo').getByRole('button', {name: 'Für Eltern', exact: true});
-  await eltern.focus();
+  await kurz.waitFor();
+  await kurz.focus();
   await page.keyboard.press('Enter');
-  await page.locator('.parent-guide').getByRole('button', {name: 'So funktioniert die Lernwelt', exact: true}).click();
-  return eltern;
+  return kurz;
 }
 
 // Startet `vite preview` für einen gebauten Stand auf einem freien Port.

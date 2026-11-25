@@ -25,7 +25,7 @@ export async function auditGuideReturnPage(page,base,{shots=null,engine='chromiu
  await parents.getByRole('button',{name:'So funktioniert die Lernwelt',exact:true}).click();await help.waitFor();
  await closeAndFocus(page,help,footer);
  if(shots)await footer.screenshot({path:path.join(shots,`journey-engine-${engine}-audit-guide-return-${width}.png`),animations:'disabled'});
- // Am Handy „So geht’s“, sonst der Weg über den Fuß; der Fokus kehrt zu diesem Knopf zurück.
+ // „So geht’s“ auf der Startseite; der Fokus kehrt zu diesem Knopf zurück.
  const helpOpener=await hilfeOeffnen(page);await help.waitFor();
  await help.getByRole('button',{name:'Für Eltern & Lehrkräfte',exact:true}).click();await parents.waitFor();
  await parents.getByRole('button',{name:'So funktioniert die Lernwelt',exact:true}).click();await help.waitFor();
