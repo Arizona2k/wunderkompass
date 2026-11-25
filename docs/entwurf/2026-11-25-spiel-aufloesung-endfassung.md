@@ -42,6 +42,15 @@ Rückmeldungen nach falscher Antwort:
 - **Eigene Rückmeldungskästen** in den Länder-Spielen (`app/learning-games.tsx`, `app/advanced-games.tsx`): folgen mit Umbau-Schritt 6.
 - **BACKLOG aus der Stufen-Prüfung:** Experten-Aufgaben aus den Auflösungen; Abstand bei Früher oder heute für Profi und Experte (Prinzip-Fragen wie beim Kompass); Ratemuster-Test auf Wörter im Hinweis ausdehnen; Tierdetektiv und `recordHints` in Kinderton; 5 von 12 Früher-Texten enthalten „früh-“.
 
+## „Was ist neu?“
+
+Entwurf `karten-autor` (zwei Fassungen, Empfehlung A: „Du siehst gleich, ob es stimmt“), geprüft von `kinder-redaktion`: **ändern (Muss)**, weil A so klingt, als hätten Kinder vorher nicht gesehen, ob eine Antwort stimmt; neu ist nur, dass der Kasten ganz zu sehen ist und die Seite von selbst dorthin rollt. Außerdem „über diesen Menschen“ statt „über den Menschen“. Eingebaut wird der Vorschlag der Redaktion:
+
+- titel: „„Richtig!“ siehst du jetzt gleich ganz“
+- text: „Nach jeder Antwort rollt die Seite von selbst zu „Richtig!“ oder „Noch nicht ganz“. Bei „Wer war das?“ erfährst du dann etwas Neues über diesen Menschen.“
+
+Die Tipps stehen nicht im Eintrag: Für drei Neuigkeiten in zwei Sätzen ist kein Platz, und die Redaktion lässt lieber etwas weg als ungenau zu werden.
+
 ## Paket A: 36 Auflösungen nach „Richtig!“
 
 | Karte | Auflösung | Zeichen |
