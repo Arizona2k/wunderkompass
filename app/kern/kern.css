@@ -73,8 +73,9 @@
   outline: 3px solid var(--kern-petrol);
   outline-offset: 2px;
 }
+/* Bei erzwungenen Farben die Textfarbe, nicht „Highlight“: Firefox zeigt Highlight auf Weiß nur mit 2,9:1 (pass-atlas in Firefox, Schritt 1). */
 @media (forced-colors: active) {
-  :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline-color: Highlight; }
+  :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline-color: CanvasText; }
 }
 
 /* Ziele, die nur das Programm fokussiert (Überschriften, Hauptbereich), bleiben ruhig. */
