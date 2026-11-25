@@ -33,6 +33,7 @@ import {globusBedienungFehlt} from './globus-bedienung.mjs';
 import {wissenskarte} from './wissenskarte.mjs';
 import {reiseKapitel} from './reise-kapitel.mjs';
 import {passSpielstaende, stufeImPass} from './pass-spielstaende.mjs';
+import {kontrast} from './kontrast.mjs';
 
 // Ältere Abläufe erwarten (browser, base, ready, monitor, report, shots).
 const flow = fn => ({browser, base, ready, monitor, report, shots}) => fn(browser, base, ready, monitor, report, shots);
@@ -82,6 +83,8 @@ export const SUITES = [
   {name: 'people-learning', set: 'ci', run: ({browser, base, ready, report, shots}) => peopleLegacyRound(browser, base, ready, report, shots)},
   // Tempo (Ladegröße je Bereich, Layout-Rutschen): schon im PR, damit zu große Seiten früh auffallen. Misst nur Chromium.
   {name: 'performance', set: 'ci', solo: true, chromiumOnly: true, run: ({browser, base, ready, monitor, report}) => performanceFlow(browser, base, ready, monitor, report)},
+  // Schriftkontrast auf ganzen Seiten in den Hauptansichten, damit eine Farbänderung schon im PR auffällt (seit 25.11.2026).
+  {name: 'kontrast', set: 'ci', chromiumOnly: true, run: kontrast},
 
   // FULL: alles, was die alten Läufe portable-smoke und journey-engines erreichten.
   {name: 'components', set: 'full', chromiumOnly: true, run: flow(componentFlow)},

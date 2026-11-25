@@ -49,7 +49,7 @@ Im Cloud-Container zuerst: `export PATH=/opt/node24/bin:$PATH` (dort ist sonst N
 | `pnpm run typecheck` / `pnpm run lint` | Typen und Lint |
 | `pnpm test` | Unit-Tests (`tests/*.test.mjs`, Node-Testrunner) |
 | `pnpm run test:smoke` | Rauchtest im Browser: 360 px (Touch) und 1440 px, Bilder in `.qa-output/browser/` |
-| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Sonnensystem-Beschriftung, Tempo (zwei Suiten parallel); `-- --browser firefox` oder `webkit` |
+| `pnpm run test:browser` | CI-Satz: Pass, Sicherung, Offline, alte Links, Sonnensystem-Beschriftung, Tempo, Schriftkontrast der Hauptansichten (zwei Suiten parallel); `-- --browser firefox` oder `webkit` |
 | `pnpm run test:browser:webkit` | WebKit-Kurzprüfung: `offline-cold` und `backup` in WebKit (Safari), bei jedem PR |
 | `pnpm run test:full` | Große Prüfung, am Ende einer Phase; `-- --browser firefox` oder `webkit` oder `all` |
 | `pnpm run check` | Die ganze Prüfkette: typecheck, lint, test, build, test:browser, test:browser:webkit |
