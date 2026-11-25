@@ -1,5 +1,5 @@
 import { localId } from './local-id';
-import { SAVE_KEY, LEGACY_KEY, createSave, restoreSave, readDatabase, database, type Save, type LocalProgress } from './progress-storage';
+import { SAVE_KEY, LEGACY_KEY, MAX_IMPORT_BYTES, byteLaenge, createSave, restoreSave, readDatabase, database, type Save, type LocalProgress } from './progress-storage';
 import { mergeSaves, mergeDatabaseSave } from './progress-sync';
 
 type Snapshot = { save: Save; ready: boolean; available: boolean; storage: 'database'|'browser'|'session'; notice: string; restoreRevision: number };
@@ -119,6 +119,8 @@ export function createProgressStore() {
   };
   return { getSnapshot:()=>state, subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>{listeners.delete(fn);};}, start, update, flush,
     reset:()=>replace(createSave(),'Dein Entdeckerpass beginnt neu.',false).then(()=>{try{localStorage.removeItem(LEGACY_KEY);}catch{}}),
-    importSave:async(raw:string)=>{if(raw.length>2_000_000)throw new Error('Die Datei ist zu groß.');return replace(restoreSave(JSON.parse(raw),true),'Dein Entdeckerpass wurde wiederhergestellt.',true);},
-    backup:()=>JSON.stringify(state.save,null,2) };
+    // Zeichen sind nie mehr als Bytes: Was die Dateiauswahl annimmt, nimmt auch der Store an.
+    importSave:async(raw:string)=>{if(raw.length>MAX_IMPORT_BYTES)throw new Error('Die Datei ist zu groß.');return replace(restoreSave(JSON.parse(raw),true),'Dein Entdeckerpass wurde wiederhergestellt.',true);},
+    // Lesbar eingerückt; passt das nicht unter die Grenze, kompakt in einer Zeile (deutlich kleiner), damit sich die Datei wieder öffnen lässt.
+    backup:()=>{const lesbar=JSON.stringify(state.save,null,2);return byteLaenge(lesbar)<=MAX_IMPORT_BYTES?lesbar:JSON.stringify(state.save);} };
 }

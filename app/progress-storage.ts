@@ -49,7 +49,7 @@ out.favoritePlaces[id]=place;}}
  if(Array.isArray(v.quizResults))out.quizResults=v.quizResults.filter(r=>own(r)&&key(r.id)&&typeof r.score==='number'&&typeof r.total==='number'&&r.total>0&&r.total<=76).slice(-50).map(r=>({id:r.id,at:date(r.at),category:text(r.category,100),total:count(r.total,76),score:count(r.score,r.total)}));
  if(own(v.quizSession)&&key(v.quizSession.id)){const q=v.quizSession,ids=strings(q.ids).slice(0,76);if(ids.length)out.quizSession={id:String(q.id),ids,index:count(q.index,ids.length-1),answer:typeof q.answer==='number'&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<=2?q.answer:null,score:count(q.score,ids.length),finished:q.finished===true,category:text(q.category,100),difficulty:typeof q.difficulty==='string'&&['easy','normal','tricky'].includes(q.difficulty)?q.difficulty as Difficulty:'normal'};}
  // Ein Spielstand je Karte, Spiel, Reise und Labor (heute über 260, mit Phase 2 und 3 mehr). Die Grenze
- // schützt nur vor unsinnigen Dateien, wie bei review und den Listen (2000); Importe sind höchstens 2,6 MB groß.
+ // schützt nur vor unsinnigen Dateien, wie bei review und den Listen (2000); Importe sind höchstens MAX_IMPORT_BYTES (2,6 MB) groß.
  // Muss gekürzt werden, bleiben Einträge des Kerns (die gemeinsame Stufe, 'kern:stufe') immer erhalten.
  const sessions=own(v.gameSessions)?Object.entries(v.gameSessions):[],core=([id]:[string,unknown])=>id.startsWith('kern:');
  for(const [id,s] of (sessions.length>2000?[...sessions.filter(core),...sessions.filter(e=>!core(e))]:sessions).slice(0,2000)){if(key(id)&&own(s)&&JSON.stringify(s).length<=400000)out.gameSessions[id]=safeJSON(s) as Record<string,unknown>;}
@@ -121,6 +121,9 @@ export function restoreSave(value:unknown,strict=false):Save{
  const now=new Date().toISOString();return {app:'earth-explorer',schemaVersion:3,createdAt:date(value.createdAt,now),updatedAt:date(value.updatedAt,now),progress:restoreProgress(progress),epoch:key(value.epoch)?value.epoch:'legacy-v3',epochAt:count(value.epochAt,Number.MAX_SAFE_INTEGER),revision:count(value.revision,Number.MAX_SAFE_INTEGER)};
 }
 export function createSave(progress=emptyProgress()):Save{const at=new Date().toISOString();return {app:'earth-explorer',schemaVersion:3,createdAt:at,updatedAt:at,progress};}
+// Die eine Grenze für Pass-Sicherungen in Bytes: gilt bei der Dateiauswahl, beim Wiederherstellen und beim Export.
+export const MAX_IMPORT_BYTES=2_600_000;
+export const byteLaenge=(s:string)=>new TextEncoder().encode(s).length;
 let connection:Promise<IDBDatabase>|null=null;
 export function database():Promise<IDBDatabase>{
  if(connection)return connection;
