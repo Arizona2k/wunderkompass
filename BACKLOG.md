@@ -235,6 +235,7 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 
 29. **Design-Umbau „Kompass“, aus Schritt 1 bewusst verschoben (25.11.2026,** [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md)**):**
     - **Schritt 2 (Schriften):** große Lesegröße für Fließtext (`p`, `li`, `dd`, `dt` in `app/globals.css`, Regel `.large-reading`) auf Kern-Werte; Schriftgrößen der Erdschichten-Knöpfe (`.layer-button`, 13 bis 14 px) und anderer Globus-Teile (`.map-options`, `.picker-label`, `.day-slider label`, `.875rem!important`).
+    - **Schritt 4 (Start und Welten):** leise Links und Pfad-Knöpfe auf dem Start (`app/discovery.css`, `.discovery-quiet-links`, `.discovery-trail-options`: 14 px, 44 px hoch) auf Kern-Werte.
     - **Schritt 5 (Karte):** `app/article-workshop.css` Zeilen 32 und 33 (eigene Farben und Größen der Werkstatt).
     - **Schritt 7 (Rest):** `app/science-thinking.css` Zeilen 11 und 13; orangener Fokus der Bauplan-Punkte (Hotspots); Fokus der Routen in `app/book.css`; Sprunglink und Hover der Pass-Kopf-Symbole.
     - **Bewusst behalten:** eigene Weltfarben für Auswahl bei Zeitleiste, Geschichten-Stationen, Bit-Schaltern und Erdschichten (sie zeigen die Welt, nicht „richtig“). Kein Haken vor „Richtig!“ (Text und Farbe reichen, im Spieltest wieder ansehen).

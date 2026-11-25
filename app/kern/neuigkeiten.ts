@@ -11,7 +11,7 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
-  {id: 'neue-farben', datum: '2026-11-25', symbol: 'kompass', titel: 'Ruhige Farben, gleiche Knöpfe', text: 'Die Seite hat ruhigere Farben, und alle Knöpfe sehen gleich aus. Grün wird eine Antwort jetzt nur noch, wenn sie richtig ist.'},
+  {id: 'neue-farben', datum: '2026-11-25', symbol: 'kompass', titel: 'Ruhige Farben, gleiche Knöpfe', text: 'Die Seite hat ruhigere Farben und fast überall gleiche Knöpfe. Eine richtige Antwort wird grün, eine falsche bekommt ein Kreuz.'},
   {id: 'technik-kurz', datum: '2026-11-25', symbol: 'lupe', titel: 'Technik-Detektiv: So geht das', text: 'Liegst du richtig, erfährst du jetzt, wie die Erfindung funktioniert. Bei der Rakete zeigt ein Luftballon, wie sie davonsaust.'},
   {id: 'rueckmeldung-ganz', datum: '2026-11-25', symbol: 'kompass', titel: '„Richtig!“ siehst du jetzt gleich ganz', text: 'Nach jeder Antwort rollt die Seite von selbst zu „Richtig!“ oder „Noch nicht ganz“. Bei „Wer war das?“ erfährst du dann etwas Neues über diesen Menschen.'},
   {id: 'wer-war-das-raetsel', datum: '2026-11-25', symbol: 'lupe', titel: 'Neue Rätsel bei „Wer war das?“', text: 'Jeder der 36 Menschen im Spiel hat jetzt ein eigenes Rätsel. Als Entdecker liest du einen leichten Satz, als Profi wird es kniffliger.'},

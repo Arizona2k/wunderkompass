@@ -154,12 +154,13 @@
 .wissenskarte .stimmt-das .quiz-answer { justify-content: center; min-height: 56px; font-weight: 700; }
 /* „Noch eine Frage“ und „Noch einmal raten“ nebeneinander, auf dem Handy untereinander. */
 .wissenskarte .rate-mal-weiter { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-/* Beide in Antwortgröße (vorher 14 px); „Noch einmal raten“ mit Rand, damit es als Knopf zu erkennen ist.
+/* Beide in Antwortgröße (vorher 14 px); „Noch einmal raten“ mit Rand, damit es als Knopf zu erkennen ist. Er sieht aus wie ein
+   Nebenknopf (Petrol), nicht in Weltfarbe: Grün heißt im Design „Kompass“ nur noch „richtig“ (Design-Prüfung Schritt 1, Soll 8).
    !important, weil globals.css .speech-button (also „Noch einmal raten“) mit !important auf 14 px setzt. */
 .wissenskarte .rate-mal-weiter button { min-height: 48px; font-size: 18px !important; }
 .wissenskarte .rate-mal-weiter .speech-button {
-  margin: 0; padding: 10px 18px; border: 2px solid var(--motiv-symbol); border-radius: 14px;
-  background: #fff; color: var(--motiv-text); font-weight: 700;
+  margin: 0; padding: 10px 18px; border: 2px solid var(--kern-petrol); border-radius: var(--kern-rund);
+  background: var(--kern-flaeche); color: var(--kern-petrol-dunkel); font-weight: 700;
 }
 /* Schluss nach der letzten Frage der Runde (Spieltest 24.11.2026, Befunde 3 und 4). Der Knopf zur nächsten Karte
    darf umbrechen: Manche Titel sind lang, und am kleinen Handy mit großer Schrift ragte sonst ein Wort über den Rand. */

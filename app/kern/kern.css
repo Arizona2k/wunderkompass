@@ -68,7 +68,7 @@
 }
 
 /* Tastaturfokus: ein Rahmen für die ganze Seite, 3 px Petrol mit 2 px Luft. Als outline, damit eigene Schatten
-   (z. B. am gewählten Stufenknopf) bleiben. Bereiche auf dunkler Fläche setzen nur die Farbe um (Pass-Kopf). */
+   (z. B. am gewählten Stufenknopf) bleiben. */
 :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
   outline: 3px solid var(--kern-petrol);
   outline-offset: 2px;
@@ -81,8 +81,6 @@
 :is(h1, h2, h3, h4, main, header, section, article, aside, div, p)[tabindex="-1"]:is(:focus, :focus-visible) {
   outline: none;
 }
-/* Der Pass-Kopf ist dunkel: Dort ist der Rahmen weiß. */
-.passport-atlas .pass-header :focus-visible { outline-color: #fff; }
 
 /* ---------- Bausteine: Knöpfe, Vorlesen, Antworten, Wahlknöpfe ---------- */
 /* Je einmal festgelegt, mindestens 48 px hoch, Schrift mindestens 16 px. Ältere Dateien setzen nur noch Lage und Breite
@@ -155,6 +153,9 @@
 .quiz-answer.is-correct .answer-letter { background: var(--kern-richtig); color: #fff; }
 .quiz-answer.is-incorrect { background: var(--kern-falsch-zart); border-color: var(--kern-falsch); color: var(--kern-text); opacity: 1; }
 .quiz-answer.is-incorrect .answer-letter { background: var(--kern-falsch); color: #fff; }
+/* Falsch nicht nur über Farbe: ein Kreuz am Zeilenende, wie der Haken bei „richtig“ (Rot und Grün verwechseln manche
+   Kinder; Design-Prüfung Schritt 1, Muss 2). Vorleseprogramme lassen es aus. Spiele mit eigenem Wort („Noch prüfen“) brauchen es nicht. */
+.quiz-answer.is-incorrect:not(:has(.answer-state))::after { content: "\2715"; content: "\2715" / ""; flex: none; margin-left: auto; font-weight: 700; color: var(--kern-falsch); }
 .quiz-answer:disabled:not(.is-correct):not(.is-incorrect) { opacity: 1; border-style: dashed; background: transparent; color: var(--kern-text-leise); }
 @media (max-width: 560px) {
   .quiz-answer { gap: 10px; padding: 12px; }
@@ -170,8 +171,13 @@
   background: var(--kern-flaeche);
   color: var(--kern-text);
   font-size: var(--kern-schrift-klein);
+  font-weight: 400;
   line-height: 1.4;
   text-align: left;
+}
+/* Zeigen ist nicht Wählen: Beim Darüberfahren bleibt ein nicht gewählter Wahlknopf weiß, nur der Rand wird Petrol (Code-Prüfung Schritt 1, S4). */
+@media (hover: hover) {
+  .visual-choice button:not([aria-pressed="true"]):not(:disabled):hover { background: var(--kern-flaeche); border-color: var(--kern-petrol); }
 }
 .model-choice { min-height: var(--kern-tipp); font-size: var(--kern-schrift-klein); color: var(--kern-text); }
 .visual-choice button[aria-pressed="true"] { background: var(--kern-petrol-zart); border-color: var(--kern-petrol); font-weight: 700; }
@@ -602,9 +608,10 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 /* „Richtig!“ und „Noch nicht ganz“ sind größer als der Text darunter, auch bei großer Schrift; stehen „Erklärung vorlesen“
    und „Nächste Aufgabe“ nebeneinander, ist Luft dazwischen, stehen sie untereinander (schmales Handy), auch (Design-Prüfung
    „Rückmeldung im Blick“, Soll 1 und 2; Nachprüfung, Kann 1). */
-/* „Richtig!“ deutlich abgesetzt (Design-Prüfung Technik-Auflösungen, Kann 3); Knöpfe im Kasten stehen auf einer Linie (Kann 4). */
-.game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 20px; }
-.large-reading .game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 24px; }
+/* „Richtig!“ deutlich abgesetzt (Design-Prüfung Technik-Auflösungen, Kann 3); Knöpfe im Kasten stehen auf einer Linie (Kann 4).
+   Seit Schritt 1 in jedem Rückmeldekasten gleich groß: Karte, Spiel, Reise, Labor (Design-Prüfung Schritt 1, Soll 7). */
+:is(.lab-feedback, .game-feedback) > strong { font-size: 20px; line-height: 1.4; }
+.large-reading :is(.lab-feedback, .game-feedback) > strong { font-size: 24px; }
 .game-room .lab-feedback > .speech-button { margin-inline-end: 16px; margin-block-end: 8px; }
 .game-room :is(.lab-feedback, .game-feedback) > :is(button, a) { vertical-align: middle; }
 /* Holt die Seite einen Knopf im Kasten mit Tab über die Leiste (imKastenSichtbar), bleibt Platz für den Fokusrahmen. */

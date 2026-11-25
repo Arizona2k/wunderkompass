@@ -85,15 +85,17 @@ const BAUSTEINE = {
   '.quiz-answer:not(:disabled)': {hintergrund: KOMPASS.weiss, schrift: KOMPASS.tinte, rand: KOMPASS.rand, groesse: [18, 21]},
   '.visual-choice button[aria-pressed="true"]': {hintergrund: KOMPASS.petrolZart, schrift: KOMPASS.tinte, rand: KOMPASS.petrol, groesse: [16, 19]},
 };
-async function bausteine(page, wo, auswahlen) {
+// Gemessen wird nur im genannten Bereich: Hinter dem Pass-Dialog bleibt der Spielraum sichtbar, sonst fände die Suche dort
+// zuerst „Alle Spiele“ statt eines Knopfs im Pass (Code-Prüfung Schritt 1, S1).
+async function bausteine(page, wo, bereich, auswahlen) {
   // Nach einem Klick steht die Maus oft über einem Baustein, der dann seine Hover-Farbe zeigt (Spiel bei 1280 px).
   await page.mouse.move(0, 0);
-  const messen = () => page.evaluate(liste => liste.map(auswahl => {
-    const el = [...document.querySelectorAll(auswahl)].find(e => e.checkVisibility());
+  const messen = () => page.evaluate(([bereich, liste]) => liste.map(auswahl => {
+    const el = [...document.querySelectorAll(bereich + ' ' + auswahl)].find(e => e.checkVisibility());
     if (!el) return null;
     const c = getComputedStyle(el);
     return {hintergrund: c.backgroundColor, schrift: c.color, rand: c.borderTopColor, groesse: parseFloat(c.fontSize), hoehe: el.getBoundingClientRect().height};
-  }), auswahlen);
+  }), [bereich, auswahlen]);
   // Wie die Pass-Einstellung: .large-reading an der App und an offenen Dialogen.
   const schalten = an => page.evaluate(an => document.querySelectorAll('.earth-app, [role="dialog"]').forEach(e => e.classList.toggle('large-reading', an)), an);
   const vorher = await page.evaluate(() => document.querySelector('.earth-app').classList.contains('large-reading'));
@@ -104,7 +106,7 @@ async function bausteine(page, wo, auswahlen) {
     const gross = await messen();
     auswahlen.forEach((auswahl, i) => {
       const soll = BAUSTEINE[auswahl], n = normal[i], g = gross[i];
-      assert.ok(n && g, `bausteine ${wo}: ${auswahl} nicht sichtbar`);
+      assert.ok(n && g, `bausteine ${wo}: ${bereich} ${auswahl} nicht sichtbar`);
       for (const art of ['hintergrund', 'schrift', 'rand']) if (soll[art]) assert.equal(n[art], soll[art], `bausteine ${wo}: ${auswahl}, Farbe ${art}`);
       assert.ok(n.hoehe >= 47.5, `bausteine ${wo}: ${auswahl} ist ${n.hoehe} px hoch`);
       assert.deepEqual([n.groesse, g.groesse], soll.groesse, `bausteine ${wo}: ${auswahl}, Schrift normal und groß`);
@@ -126,19 +128,19 @@ async function fokusRahmen(page, wo, auswahl) {
 }
 async function bausteineUeberall(page, width) {
   // Start (sofort geladen)
-  await bausteine(page, `Start ${width}`, ['.primary-button', '.secondary-button:not(.visual-choice *)']);
+  await bausteine(page, `Start ${width}`, '.earth-app', ['.primary-button', '.secondary-button:not(.visual-choice *)']);
   await fokusRahmen(page, `Start ${width}`, '.primary-button');
   // Karte (nachgeladen)
   await page.evaluate(() => { location.hash = 'world/topic/animal-koala'; });
   await page.locator('.wissenskarte .rate-mal .quiz-answer').first().waitFor();
-  await bausteine(page, `Karte ${width}`, ['.secondary-button:not(.visual-choice *)', '.quiz-answer:not(:disabled)']);
+  await bausteine(page, `Karte ${width}`, '.wissenskarte', ['.secondary-button:not(.visual-choice *)', '.quiz-answer:not(:disabled)']);
   await fokusRahmen(page, `Karte ${width}`, '.wissenskarte .rate-mal .quiz-answer');
   // Reise (nachgeladen): Kapitel mit Wahlknöpfen, Vorlesen und Antworten
   await page.evaluate(() => { location.hash = 'journeys/water/1'; });
   await page.locator('.journey-reader .visual-choice button').first().waitFor();
   // Die Antworten der Kapitelfrage kommen einen Takt nach den Wahlknöpfen (fehlte bei 1280 px).
   await page.locator('.quiz-answer:not(:disabled)').first().waitFor();
-  await bausteine(page, `Reise ${width}`, ['.primary-button', '.speech-button', '.quiz-answer:not(:disabled)', '.visual-choice button[aria-pressed="true"]']);
+  await bausteine(page, `Reise ${width}`, '.journey-reader', ['.primary-button', '.speech-button', '.quiz-answer:not(:disabled)', '.visual-choice button[aria-pressed="true"]']);
   await fokusRahmen(page, `Reise ${width}`, '.journey-reader .speech-button');
   // Spiel (nachgeladen): „Wer war das?“
   const fertig = ladeanfragen(page);
@@ -146,12 +148,12 @@ async function bausteineUeberall(page, width) {
   await bereich(page, 'games').click();
   await page.locator('[data-game-key="world:people"]').click();
   await page.locator('.world-game-room .quiz-answers .quiz-answer').first().waitFor();
-  await bausteine(page, `Spiel ${width}`, ['.speech-button', '.quiz-answer:not(:disabled)']);
+  await bausteine(page, `Spiel ${width}`, '.world-game-room', ['.speech-button', '.quiz-answer:not(:disabled)']);
   await fokusRahmen(page, `Spiel ${width}`, '.world-game-room .quiz-answer');
   // Pass (Dialog)
   await page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
   await page.locator('.passport-atlas .primary-button').first().waitFor();
-  await bausteine(page, `Pass ${width}`, ['.primary-button', '.secondary-button:not(.visual-choice *)']);
+  await bausteine(page, `Pass ${width}`, '.passport-atlas', ['.primary-button', '.secondary-button:not(.visual-choice *)']);
   await fokusRahmen(page, `Pass ${width}`, '.passport-atlas .primary-button');
 }
 

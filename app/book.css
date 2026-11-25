@@ -39,7 +39,7 @@
 .knowledge-book :is(.book-study,.book-related-words) .book-topic-link{display:flex;align-items:center;min-height:48px;min-width:44px;padding-block:8px;line-height:1.6;overflow-wrap:anywhere;color:var(--wk-teal);text-decoration:underline;text-underline-offset:3px}
 
 .book-heat-figure .book-figure-limit{line-height:1.65;color:var(--wk-muted);margin-top:15px}
-.book-light-figure .visual-choice{display:flex;flex-wrap:wrap;gap:10px;margin-block:16px}.book-light-figure button{min-height:44px;white-space:normal;line-height:1.5}.book-light-figure [aria-pressed=true]{border-color:var(--kern-petrol);background:var(--kern-petrol-zart)}.light-palette{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.light-palette li{display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}.light-palette li>span:first-child{height:64px;border:1px solid #526773;border-radius:6px}.book-light-figure .light-palette li+li{margin-top:0}
+.book-light-figure .visual-choice{display:flex;flex-wrap:wrap;gap:10px;margin-block:16px}.book-light-figure button{min-height:var(--kern-tipp);white-space:normal;line-height:1.5}.book-light-figure [aria-pressed=true]{border-color:var(--kern-petrol);background:var(--kern-petrol-zart)}.light-palette{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.light-palette li{display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}.light-palette li>span:first-child{height:64px;border:1px solid #526773;border-radius:6px}.book-light-figure .light-palette li+li{margin-top:0}
 
 /* Own mechanics controls: visible quantity labels, same readable font sizes. */
 .book-mechanics-figure .mechanics-choice-label{margin:14px 0 6px;font-weight:700;color:var(--wk-ink)}

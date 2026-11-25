@@ -70,6 +70,9 @@
 .pass-footer>span {display:none;font-size:14px;color:var(--wk-muted)}
 .pass-footer .primary-button {width:100%;white-space:normal}
 .passport-atlas :is(button,a,summary,[role=switch],[role=slider],select,h3):focus-visible,.pass-confirmation button:focus-visible {box-shadow:none}
+/* Sprung im Pass per Tastatur: Die Abschnittsüberschrift zeigt den Kern-Fokusrahmen (der Kern hält Überschriften sonst ruhig). */
+.passport-atlas h3[tabindex]:focus-visible {outline:3px solid var(--kern-petrol);outline-offset:2px}
+@media(forced-colors:active) {.passport-atlas h3[tabindex]:focus-visible {outline-color:Highlight}}
 .pass-body .pass-section-title {width:fit-content;max-width:100%;border-radius:4px}
 .passport-atlas.large-reading .pass-header .eyebrow {font-size:12px!important}
 .passport-atlas.large-reading .pass-header [data-slot=dialog-title] {font-size:28px}
