@@ -185,7 +185,8 @@ const PERSONEN_FALSCH_ENTDECKER='Hat dieser Mensch so etwas gemacht? Schau dir a
 const PERSONEN_FALSCH_PROFI='Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.';
 // Technik-Detektiv nach einer falschen Antwort, alle Stufen: prüft, ob die gewählte Erfindung zu allen Teilen der Aufgabe
 // passt, statt den Tipp zu wiederholen (Nachtrag Technik-Auflösungen, stufen-pruefer und kinder-redaktion, 25.11.2026).
-const TECHNIK_FALSCH='Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?';
+// Kürzer seit den Tier-Auflösungen (kinder-redaktion A und stufen-pruefer 3-S1, 25.11.2026).
+const TECHNIK_FALSCH='Was macht diese Erfindung? Passt das zu allem in der Aufgabe?';
 // Früher oder heute? Die dritte Antwort ist bei jeder Aufgabe falsch (world-game-bank.ts). Hier statt dort, weil Browser-Tests
 // diese Datei in reinem Node laden. Gespeicherte Runden von vor dem 24.11.2026 zeigen noch die alten dritten Antworten.
 export const DRITTE_ANTWORT='Erst in der Zukunft';
@@ -210,20 +211,25 @@ export function worldGameWrongFeedback(game,item,answer,stufe){
  if(game==='people')return 'Du hast „'+answer+'“ gewählt. '+PERSONEN_FALSCH_PROFI;
  if(game==='then-now'&&ZUKUNFT_ANTWORTEN.includes(answer))return 'Du hast „'+answer+'“ gewählt. '+ZUKUNFT_FALSCH;
  if(game==='habitats'){
-  if(answer==='Trockene Sandwüste fern von Gewässern')return 'Du hast eine Gegend ohne Gewässer gewählt. Überlege, welche Rolle Wasser im Leben dieses Tieres spielt.';
-  if(answer==='Baumkronen im tropischen Regenwald')return 'Du hast die oberen Zweige von Bäumen gewählt. Vergleiche das mit der Fortbewegung und Nahrungssuche dieses Tieres.';
-  if(answer==='Unter Wasser in einem warmen Korallenriff')return 'Diese Wahl liegt dauerhaft unter Wasser. Prüfe, ob das zum ganzen Leben des gesuchten Tieres passt.';
-  if(answer==='Meereis der Antarktis')return 'Diese Wahl liegt in der südlichen Polarregion. Vergleiche Klima und Lage mit dem Lebensraum dieses Tieres.';
+  // Feste Sätze in Kindersprache, „Du hast … gewählt“ wie überall im Spiel (Tier-Auflösungen Teil D und Nachprüfung, 25.11.2026).
+  if(answer==='Trockene Sandwüste fern von Gewässern')return 'Du hast eine trockene Wüste gewählt. Dort gibt es kaum Wasser. Wie wichtig ist Wasser für dieses Tier?';
+  if(answer==='Baumkronen im tropischen Regenwald')return 'Du hast einen Platz hoch oben in den Bäumen gewählt. Kommt dieses Tier dort hinauf?';
+  if(answer==='Unter Wasser in einem warmen Korallenriff')return 'Du hast ein warmes Korallenriff gewählt. Das liegt ganz unter Wasser. Lebt dieses Tier dort?';
+  if(answer==='Meereis der Antarktis')return 'Du hast Meereis ganz im Süden der Erde gewählt. Lebt dieses Tier dort?';
  }
  // Gezogene Fallen sind Texte anderer Tiere (Teil B, Schritt 8.3): Die Rückmeldung nennt ein Tier, zu dem die Wahl passt.
  if(game==='habitats'||game==='food'){
   const feld=game==='habitats'?'habitat':'diet',anderes=catalog.find(t=>t.animal&&t.id!==item.id&&t.animal[feld]===answer),gesucht=catalog.find(t=>t.id===item.id);
   // Namen nur hinter einem Doppelpunkt, weil Artikel fehlen; die Wahl wird nicht wiederholt (kinder-redaktion 24.11.2026).
-  if(anderes&&gesucht)return 'Diese Wahl passt zum Beispiel zu: '+anderes.title+'. Gesucht ist aber: '+gesucht.title+'. '+(game==='habitats'?'Wo findet dieses Tier Futter und Schutz?':'Frisst dieses Tier Pflanzen, andere Tiere oder beides?');
+  // Beim Futter fragt Profi nach Größe und Ort, weil seine Fallen ähnlich sind (stufen-pruefer 3-M1, 25.11.2026).
+  const schluss=game==='habitats'?'Wo findet dieses Tier Futter und Schutz?':stufe==='profi'||stufe==='experte'?'Wie groß ist dieses Tier, und wo lebt es?':'Frisst dieses Tier Pflanzen, andere Tiere oder beides?';
+  if(anderes&&gesucht)return 'Deine Antwort passt zu einem anderen Tier: '+anderes.title+'. Gesucht ist aber: '+gesucht.title+'. '+schluss;
  }
  if(game==='animal-detective'){
   const selected=catalog.find(t=>t.title===answer&&t.animal);
-  if(selected?.animal)return 'Du hast „'+answer+'“ gewählt. Lebensraum: '+selected.animal.habitat+'. Nahrung: '+selected.animal.diet+'. Vergleiche das mit allen Rätselspuren. Eine einzelne Gemeinsamkeit reicht nicht.';
+  // „Zuhause“ und „Futter“ in Kindersprache; „Rätsel“, weil das Spiel seine Frage so nennt (Tier-Auflösungen, 25.11.2026).
+  // Beim Monarchfalter sagt das Feld `diet` nicht, wer was frisst; es bleibt wegen gespeicherter Antworten.
+  if(selected?.animal)return 'Du hast „'+answer+'“ gewählt. Zuhause: '+selected.animal.habitat+'. Futter: '+(selected.id==='animal-monarch-butterfly'?'Raupen fressen Seidenpflanzen, Falter Nektar':selected.animal.diet)+'. Passt dein Tier zu jedem Satz im Rätsel?';
  }
  if(game==='technology')return 'Du hast „'+answer+'“ gewählt. '+TECHNIK_FALSCH;
  return 'Du hast „'+answer+'“ gewählt. '+worldGameHint(game,item,stufe);

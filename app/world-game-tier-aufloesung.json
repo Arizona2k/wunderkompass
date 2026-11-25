@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "bedeutung": "Kurze Auflösung nach „Richtig!“ in den drei Tierspielen statt des Kartentexts: „detektiv“ für „Tierdetektiv“, „zuhause“ für „Tier & Lebensraum“, „futter“ für „Wer frisst was?“. Höchstens 180 Zeichen, 13 Wörter je Satz, eine Zahl; sie nennt kein anderes Spieltier und wiederholt keinen Rätselsatz. Endfassung mit Quellen je Text in docs/entwurf/2026-11-25-tier-aufloesung-endfassung*.md und …-nachtrag.md; geprüft von fakten-pruefer, kinder-redaktion und stufen-pruefer.",
+  "tiere": {
+    "animal-african-savanna-elephant": {
+      "detektiv": "Der Afrikanische Savannenelefant wälzt sich gern im Schlamm oder Staub. Das schützt seine Haut vor Sonne und stechenden Insekten. Beim Kühlen helfen ihm seine riesigen Ohren.",
+      "zuhause": "Der Afrikanische Savannenelefant lebt oft in weitem Grasland mit einzelnen Bäumen. Dort ist es meist heiß und trocken. Mit den Stoßzähnen gräbt er manchmal nach Wasser.",
+      "futter": "Der Afrikanische Savannenelefant rupft mit dem Rüssel Gras und reißt Zweige ab. Er frisst etwa 16 Stunden am Tag. Das ist länger, als du wach bist."
+    },
+    "animal-lion": {
+      "detektiv": "Der Löwe ist gut zu erkennen: Meist haben nur Männchen eine Mähne. Mit Brüllen sagen Löwen anderen Löwen: Das ist unser Gebiet. Am Brüllen erkennen sie sich auch.",
+      "zuhause": "Der Löwe findet im offenen Grasland viele große Tiere zum Jagen. Danach ruht er fast den ganzen Tag, bis zu 21 Stunden.",
+      "futter": "Der Löwe frisst Fleisch. Meist jagen die Weibchen, oft nachts oder in der Dämmerung. Manchmal nehmen Löwen anderen Jägern auch ihre Beute weg."
+    },
+    "animal-cheetah": {
+      "detektiv": "Der Gepard lenkt beim Rennen mit seinem langen Schwanz. Seine Krallen greifen in den Boden wie Stollen am Fußballschuh. Mit Zirpen finden sich Mutter und Junge wieder.",
+      "zuhause": "Der Gepard braucht offenes Land, damit er frei rennen kann. Gern schaut er von einem Hügel aus über das Gras. Er jagt am Tag, meist morgens und am späten Nachmittag.",
+      "futter": "Der Gepard schleicht sich zuerst nah an seine Beute heran. Dann rennt er los und packt sie. Er frisst schnell, bevor andere Tiere ihm die Beute stehlen."
+    },
+    "animal-bengal-tiger": {
+      "detektiv": "Der Bengaltiger ist mit seinen Streifen im hohen Gras schwer zu sehen. Jeder Tiger hat ein eigenes Muster, wie ein Fingerabdruck. Zum Abkühlen geht er oft ins Wasser.",
+      "zuhause": "Der Bengaltiger findet im Wald Verstecke, Wasser und Beutetiere. Manche Tiger leben sogar in Wäldern am Meer. Dort stehen die Bäume im salzigen Wasser.",
+      "futter": "Der Bengaltiger jagt oft in der Dämmerung oder nachts. Ein großes Beutetier zieht er danach in ein Versteck. Davon frisst er dann mehrere Tage lang."
+    },
+    "animal-giraffe": {
+      "detektiv": "Die Giraffe hat riesige Halsknochen: Jeder ist fast so lang wie ein Lineal. Forscher vermuten: Ihre dunkle Zunge schützt vor Sonnenbrand.",
+      "zuhause": "Die Giraffe kommt mit der trockenen Savanne gut zurecht. Viel Wasser bekommt sie aus saftigen Blättern. Darum muss sie nur selten trinken.",
+      "futter": "Die Giraffe zupft Blätter mit Zunge und beweglichen Lippen ab. Ihre dicke, klebrige Spucke umhüllt verschluckte Dornen. Wie eine Kuh kaut sie ihr Futter später noch einmal."
+    },
+    "animal-giant-panda": {
+      "detektiv": "Der Große Panda ist ein Bär. Sein Junges ist bei der Geburt so leicht wie eine Tafel Schokolade. Es ist rosa, nackt und blind.",
+      "zuhause": "Der Große Panda lebt in Bergwäldern, wo es kühl und feucht ist. Sein dichtes, wolliges Fell hält ihn warm. Er schläft im Winter nicht durch, denn Bambus gibt es das ganze Jahr.",
+      "futter": "Der Große Panda verbringt etwa einen halben Tag mit Fressen. Sein Darm ist gebaut wie bei einem Fleischfresser und verdaut Bambus schlecht. Darum braucht er riesige Mengen davon."
+    },
+    "animal-western-lowland-gorilla": {
+      "detektiv": "Der Westliche Flachlandgorilla hat längere Arme als Beine. Das erwachsene Männchen heißt Silberrücken: Auf seinem Rücken wachsen silbergraue Haare. Er beschützt die Gruppe.",
+      "zuhause": "Der Westliche Flachlandgorilla findet im warmen, feuchten Regenwald viele Pflanzen. Gern besucht er sumpfige Lichtungen, also freie Stellen im Wald. Dort frisst er Wasserpflanzen.",
+      "futter": "Der Westliche Flachlandgorilla frisst vor allem Pflanzen. Wenn viele Früchte reif sind, läuft er dafür weiter als sonst. Kleine Tiere auf Blättern und Früchten frisst er mit."
+    },
+    "animal-bornean-orangutan": {
+      "detektiv": "Der Borneo-Orang-Utan kann auch mit den Füßen greifen wie mit Händen. So hält er sich gleichzeitig an mehreren Ästen fest. Sein Name bedeutet „Mensch des Waldes“.",
+      "zuhause": "Der Borneo-Orang-Utan wird im Regenwald oft nass. Dann deckt er sich manchmal mit großen Blättern zu, wie mit einem Regenmantel.",
+      "futter": "Der Borneo-Orang-Utan frisst am liebsten reife Früchte, zum Beispiel wilde Feigen. Wo Fruchtbäume stehen, weiß er genau. Er merkt sich die Plätze wie auf einer Karte im Kopf."
+    },
+    "animal-polar-bear": {
+      "detektiv": "Der Eisbär hat an den Sohlen kleine Noppen, wie bei Stoppersocken. Dazu wächst dort steifes Fell. Beides hilft ihm, auf dem glatten Eis nicht auszurutschen.",
+      "zuhause": "Der Eisbär lebt im hohen Norden, oft draußen auf dem Meereis. Wenn das Eis im Sommer ganz schmilzt, muss er an Land. Dort findet er oft wochenlang kaum Futter.",
+      "futter": "Der Eisbär frisst meistens Robben. Seine feine Nase riecht eine Robbe sogar unter dem Schnee. Robben haben viel Fett, das gibt ihm viel Kraft."
+    },
+    "animal-emperor-penguin": {
+      "detektiv": "Der Kaiserpinguin-Vater deckt das Ei mit einer Hautfalte am Bauch zu. Wochenlang frisst er dabei nichts. In der dichten Gruppe darf jeder mal in die warme Mitte.",
+      "zuhause": "Der Kaiserpinguin hat viele Schichten dichter Federn, fast wie eine dicke Winterjacke. Damit hält er die eisige Kälte aus. Futter findet er im eiskalten Meer.",
+      "futter": "Der Kaiserpinguin jagt im Meer nach Fischen und kleinen Krebstieren. Dafür taucht er sehr tief. Einer kam tiefer hinab, als fünf Fußballfelder lang sind."
+    },
+    "animal-blue-whale": {
+      "detektiv": "Der Blauwal hat statt Zähnen Barten: Sie hängen im Maul wie ein Kamm. Barten sind aus demselben Stoff wie deine Fingernägel. Beim Fressen dehnt sich seine Kehle wie ein Ballon.",
+      "zuhause": "Der Blauwal wandert oft weit, zu Futterplätzen und zu Orten für seine Jungen. Er gehört zu den lautesten Tieren der Welt. Im Wasser tragen seine Rufe sehr weit.",
+      "futter": "Der Blauwal schwimmt mit offenem Maul in einen Schwarm Krill. Dann drückt er das Wasser mit der Zunge hinaus. An einem Tag kann er so viel fressen, wie mehrere Autos wiegen."
+    },
+    "animal-common-bottlenose-dolphin": {
+      "detektiv": "Der Große Tümmler ist ein Delfin. Jedes Tier hat einen eigenen Pfiff, fast wie einen Namen. So finden sich Tiere wieder, wenn die Gruppe getrennt war.",
+      "zuhause": "Der Große Tümmler schläft im Meer meist nur mit einer Hälfte seines Gehirns. Die andere Hälfte bleibt wach und passt auf.",
+      "futter": "Der Große Tümmler jagt oft zusammen mit anderen aus seiner Gruppe. Gemeinsam treiben sie Fische zu einem dichten Schwarm. Dann schwimmen sie nacheinander hindurch und schnappen zu."
+    },
+    "animal-orca": {
+      "detektiv": "Der Orca kennt einen besonderen Jagdtrick. Manche Orcas schwimmen zusammen auf eine Eisscholle zu und machen eine Welle. Die spült Robben ins Wasser.",
+      "zuhause": "Der Orca kommt in warmen und in eisigen Meeren zurecht. Unter seiner Haut liegt eine dicke Fettschicht. Sie hält ihn warm wie eine Decke.",
+      "futter": "Der Orca lernt schon als Junges von seiner Familie, was sie jagt. Manche Familien fangen vor allem Lachse, andere Robben. Lachsjäger finden ihre Beute mit Klicklauten und Echo."
+    },
+    "animal-common-octopus": {
+      "detektiv": "Der Krake hat drei Herzen. Sein Blut ist blau und nicht rot. Bei Gefahr spritzt er Tinte, die verwirrt seine Feinde.",
+      "zuhause": "Der Krake findet an felsigen Küsten viele Verstecke. Er ändert seine Farbe und sieht dann aus wie der Stein daneben. Mit seinen Saugnäpfen hält er sich gut fest.",
+      "futter": "Der Krake frisst gern Krebse und Muscheln. Krebse beißt er mit seinem harten Schnabel auf. Muscheln zieht er mit den Armen auseinander."
+    },
+    "animal-green-sea-turtle": {
+      "detektiv": "Die Grüne Meeresschildkröte hat statt Füßen flache Flossen. Damit schwimmt sie weite Strecken durchs Meer. Ihren Namen hat sie übrigens von ihrem grünlichen Fett, nicht vom Panzer.",
+      "zuhause": "Die Grüne Meeresschildkröte braucht zwei Orte an der Küste. Im flachen Wasser weidet sie auf Wiesen aus Seegras. Ihre Eier vergräbt sie am Strand im warmen Sand.",
+      "futter": "Die Grüne Meeresschildkröte hat keine Zähne. Ihr Schnabel hat aber eine gezackte Kante wie ein Brotmesser. Damit schneidet sie Seegras und Algen ab."
+    },
+    "animal-red-kangaroo": {
+      "detektiv": "Das Rote Riesenkänguru spart beim Hüpfen Kraft. Seine Beine federn bei jedem Sprung wie Gummibänder. Der lange, kräftige Schwanz hilft beim Gleichgewicht.",
+      "zuhause": "Das Rote Riesenkänguru lebt in trockenem Grasland, wo es oft sehr heiß ist. In der Hitze ruht es im Schatten. Es leckt seine Unterarme nass, und das kühlt beim Trocknen.",
+      "futter": "Das Rote Riesenkänguru frisst gern abends und nachts, wenn es kühler ist. Wenn es lange nicht regnet, holt es sich Wasser aus Gräsern und Blättern."
+    },
+    "animal-koala": {
+      "detektiv": "Der Koala bekommt aus Eukalyptusblättern nur wenig Kraft. Darum schläft und döst er fast den ganzen Tag.",
+      "zuhause": "Der Koala sucht sich an heißen Tagen die kühlsten Bäume aus. An kühlen Tagen sitzt er weiter außen in der Sonne. Mit scharfen Krallen hält er sich an der Rinde fest.",
+      "futter": "Der Koala frisst Blätter, die für die meisten Pflanzenfresser giftig sind. Sein Körper ist an dieses Gift angepasst. Ab und zu frisst er etwas Erde, das hilft beim Verdauen."
+    },
+    "animal-jaguar": {
+      "detektiv": "Der Jaguar ist mit seinen Flecken gut getarnt. Zwischen Blättern und Schatten sieht ihn seine Beute kaum. Viele Flecken sind Ringe mit einem Punkt darin.",
+      "zuhause": "Der Jaguar lebt meist nah am Wasser, zum Beispiel an Flüssen im Regenwald. Viele seiner Beutetiere leben auch am Wasser.",
+      "futter": "Der Jaguar lauert oft nachts im Versteck und springt seine Beute plötzlich an. Seine Kiefer sind so kräftig, dass er sogar Tiere mit harter Schale frisst."
+    },
+    "animal-honey-bee": {
+      "detektiv": "Die Westliche Honigbiene kühlt ihr Nest im Sommer selbst. Arbeiterinnen verteilen Wassertropfen und fächeln mit den Flügeln. Das wirkt wie eine Klimaanlage.",
+      "zuhause": "Die Westliche Honigbiene braucht viele Blüten in der Nähe ihres Nests. Auf Wiesen und in Gärten blüht vom Frühling bis zum Herbst etwas.",
+      "futter": "Die Westliche Honigbiene saugt Nektar, den süßen Saft der Blüten. Pollen, also Blütenstaub, trägt sie in Körbchen an den Hinterbeinen heim. Aus Nektar machen die Bienen Honig."
+    },
+    "animal-axolotl": {
+      "detektiv": "Der Axolotl ist in freier Natur grau oder dunkel, wie der schlammige Seegrund. Rosa Tiere wurden für Aquarien gezüchtet. Ab und zu schnappt er an der Oberfläche Luft.",
+      "zuhause": "Der Axolotl lebt in stillen Seen und Kanälen. Er versteckt sich gern zwischen Wasserpflanzen und im Schlamm am Grund. So wird er nicht so leicht gefressen.",
+      "futter": "Der Axolotl saugt seine Beute schnell ein, wie ein Staubsauger. Er frisst Würmer, Kaulquappen und kleine Fische."
+    },
+    "animal-whale-shark": {
+      "detektiv": "Der Walhai ist ein Hai, kein Wal. Seine Schwanzflosse schlägt hin und her, bei Walen geht sie auf und ab. So kannst du die beiden unterscheiden.",
+      "zuhause": "Der Walhai zieht durch warme Meere rund um die Erde. Oft kommt er in flaches Wasser, wenn es dort viel winziges Futter gibt. Dann schwimmt er langsam nah an der Oberfläche.",
+      "futter": "Der Walhai nimmt mit seinem riesigen Maul viel Wasser auf. Das Wasser fließt an den Seiten wieder hinaus. Winzige Tiere und Fischeier bleiben im Maul zurück wie in einem Sieb."
+    },
+    "animal-garden-cross-spider": {
+      "detektiv": "Die Gartenkreuzspinne sitzt oft in der Mitte ihres Netzes. Die Fäden laufen von dort nach außen wie die Speichen eines Rades. So ist sie schnell dort, wo etwas zappelt.",
+      "zuhause": "Die Gartenkreuzspinne spannt ihr Netz zwischen Pflanzen auf, zum Beispiel in Büschen. Dort fliegen viele Insekten vorbei. Netze siehst du vor allem vom Sommer bis in den Herbst.",
+      "futter": "Die Gartenkreuzspinne fängt fliegende Insekten mit klebrigen Fäden. Dann eilt sie hin und wickelt ihre Beute ein wie ein Päckchen. So kann das Insekt nicht mehr weg."
+    },
+    "animal-dromedary": {
+      "detektiv": "Das Dromedar verändert seinen Höcker. Wenn es lange wenig Futter findet, wird er kleiner und kippt zur Seite. Mit genug Futter wächst er wieder.",
+      "zuhause": "Das Dromedar kommt eine Woche oder länger ohne Trinken aus. Am Wasser trinkt es dann in wenigen Minuten sehr viel. Bei Sandsturm verschließt es seine Nasenlöcher.",
+      "futter": "Das Dromedar frisst auch dornige, trockene und salzige Pflanzen. Seine Lippen sind zäh und beweglich. Mit der gespaltenen Oberlippe greift es Gras dicht am Boden."
+    },
+    "animal-white-tailed-eagle": {
+      "detektiv": "Der Seeadler gehört zu den größten Adlern Europas. Junge Seeadler haben einen dunklen Schnabel. Bei erwachsenen Tieren ist er kräftig gelb.",
+      "zuhause": "Der Seeadler braucht fischreiches Wasser in der Nähe. Sein Nest baut er auf alten, stabilen Bäumen. Im nächsten Frühjahr nutzt er das riesige Nest oft wieder.",
+      "futter": "Der Seeadler packt Fische dicht unter der Wasseroberfläche mit den Krallen. Oft frisst er auch tote Tiere. Das ist einfacher, als selbst zu jagen."
+    },
+    "animal-platypus": {
+      "detektiv": "Das Schnabeltier taucht mit geschlossenen Augen und Ohren. Trotzdem findet es seine Beute. Sein Schnabel spürt den winzigen Strom, den seine Beute macht.",
+      "zuhause": "Das Schnabeltier hat Schwimmhäute an den Füßen, ähnlich wie eine Ente. Sein Fell ist wasserdicht und hält eine warme Luftschicht fest. Zum Ausruhen gräbt es Höhlen ins Ufer.",
+      "futter": "Das Schnabeltier wühlt am Grund nach Würmern und jungen Insekten. Wie ein Hamster sammelt es alles in den Backen. Statt Zähnen hat es harte Platten zum Zerreiben."
+    },
+    "animal-short-beaked-echidna": {
+      "detektiv": "Der Kurzschnabeligel schützt sich mit seinen Stacheln. Bei Gefahr gräbt er sich schnell in weiche Erde ein. Oder er rollt sich zu einer Stachelkugel zusammen.",
+      "zuhause": "Der Kurzschnabeligel lebt in Wäldern, im Grasland und sogar in trockenen Gebieten. Hauptsache, es gibt Ameisen und Termiten. Zum Ruhen kriecht er in hohle Baumstämme.",
+      "futter": "Der Kurzschnabeligel findet seine Beute mit der Nase, denn er riecht sehr gut. Zähne hat er keine. Er zerdrückt die Ameisen und Termiten im Mund mit der Zunge."
+    },
+    "animal-okapi": {
+      "detektiv": "Das Okapi verschwindet mit seinen Streifen fast im Wald. Im Wechsel von Licht und Schatten fällt es kaum auf. Vielleicht helfen die Streifen auch Jungtieren, der Mutter zu folgen.",
+      "zuhause": "Das Okapi lebt versteckt im dunklen Regenwald. Seine großen Ohren hören sogar sehr leise Geräusche. So merkt es früh, wenn sich ein Leopard anschleicht.",
+      "futter": "Das Okapi streift Knospen und junge Blätter von Büschen. Es frisst auch Zweige und Früchte. Seine Zunge ist so lang, dass es damit bis an die Ohren kommt."
+    },
+    "animal-meerkat": {
+      "detektiv": "Erdmännchen haben verschiedene Warnrufe. Ein Ruf warnt vor Feinden aus der Luft. Ein anderer warnt vor Feinden am Boden. So wissen alle sofort, woher die Gefahr kommt.",
+      "zuhause": "Erdmännchen wohnen in Bauen mit vielen Gängen. Oft hat sie ein anderes Tier gegraben. Dunkle Augenflecken wirken wie eine Sonnenbrille.",
+      "futter": "Erdmännchen graben mit langen Krallen nach Käfern. Sogar Skorpione fressen sie. Für die Jungen entfernen die Großen oft vorher den Stachel. So können sie gefahrlos üben."
+    },
+    "animal-ring-tailed-lemur": {
+      "detektiv": "Der Katta trägt einen langen Schwanz mit schwarzen und weißen Ringen. Männchen reiben Duft darauf und wedeln ihn zum Gegner. Das nennt man einen Stinkkampf.",
+      "zuhause": "Der Katta lebt in trockenen, offenen Gegenden und in Wäldern. Anders als viele Verwandte ist er oft am Boden unterwegs. Vor der Futtersuche wärmt er in der Sonne seinen Bauch.",
+      "futter": "Der Katta frisst Früchte, Blätter, Blüten und sogar Rinde und Baumsaft. In der trockenen Jahreszeit wächst wenig. Dann fängt er öfter Insekten und andere kleine Tiere."
+    },
+    "animal-north-american-beaver": {
+      "detektiv": "Der Nordamerikanische Biber fällt Bäume mit seinen Nagezähnen. Die Zähne wachsen immer nach, so nutzen sie sich nie ganz ab. Sie sind orange, weil Eisen darin steckt.",
+      "zuhause": "Der Nordamerikanische Biber schwimmt mit Schwimmhäuten an den Hinterfüßen. Mit dem flachen Schwanz steuert er wie mit einem Ruder. Unter Wasser verschließt er seine Ohren.",
+      "futter": "Der Nordamerikanische Biber frisst Rinde, Blätter und Wasserpflanzen. Für den Winter legt er Äste am Grund seines Teichs ab. So hat er Futter, auch wenn Eis den Teich bedeckt."
+    },
+    "animal-walrus": {
+      "detektiv": "Das Walross zieht sich mit den Stoßzähnen aus dem Wasser aufs Eis. Sie wirken wie zwei große Haken. Bei Streit gibt meist das Tier mit kleineren Stoßzähnen nach.",
+      "zuhause": "Das Walross verliert im eiskalten Wasser wenig Wärme. Seine Haut wird dort blass, weil weniger Blut hindurchfließt. An Land in der Wärme wird sie wieder rosa.",
+      "futter": "Das Walross frisst vor allem Muscheln und Würmer vom Meeresboden. Solche Tiere ohne Wirbelsäule nennt man wirbellos. Das Weiche saugt es aus der Muschel heraus."
+    },
+    "animal-red-fox": {
+      "detektiv": "Der Rotfuchs steuert seinen Sprung mit dem buschigen Schwanz. In tiefen Schnee taucht er kopfüber ein, fast wie beim Kopfsprung. Nachts wärmt ihn der Schwanz wie eine Decke.",
+      "zuhause": "Der Rotfuchs frisst vieles, darum findet er fast überall Futter. Mit Duft von seinen Pfoten markiert er seine Wege. Er lebt sogar mitten in Städten.",
+      "futter": "Der Rotfuchs jagt vor allem Mäuse und andere kleine Tiere. Er frisst aber auch Würmer, Käfer, Beeren und Obst. Was übrig bleibt, vergräbt er und findet es später wieder."
+    },
+    "animal-raccoon": {
+      "detektiv": "Der Waschbär hat eine schwarze Maske um die Augen. Oft sieht es aus, als würde er sein Futter waschen. Daher hat er seinen Namen.",
+      "zuhause": "Der Waschbär klettert gut und schläft gern in hohlen Bäumen. In Dörfern und Städten nutzt er auch Scheunen. Er stammt aus Nordamerika, Menschen brachten ihn nach Europa.",
+      "futter": "Der Waschbär frisst Früchte, Nüsse und Eicheln, aber auch Krebse, Fische und Insekten. Er sucht sein Futter meist nachts. In Städten wühlt er auch im Müll."
+    },
+    "animal-hedgehog": {
+      "detektiv": "Der Braunbrustigel frisst sich im Herbst ein dickes Fettpolster an. Im Winter schläft er in einem Nest aus Laub. Bis zum Frühling lebt er von seinem Fett.",
+      "zuhause": "Der Braunbrustigel wandert nachts weit durch Gärten, um genug Futter zu finden. Ein kleines Loch im Zaun hilft ihm dabei. So kommt er von einem Garten in den nächsten.",
+      "futter": "Der Braunbrustigel frisst gern Raupen und Käfer. Solche Tiere ohne Wirbelsäule nennt man wirbellos. Milch macht ihm Bauchweh, eine Schale Wasser hilft ihm."
+    },
+    "animal-barn-owl": {
+      "detektiv": "Die Schleiereule findet Mäuse sogar im Dunkeln, nur mit den Ohren. Ihr Gesicht fängt Geräusche ein. Halte mal die Hände hinter die Ohren: So hörst du auch mehr.",
+      "zuhause": "Die Schleiereule fliegt dicht über Wiesen und Feldränder. Weiche Federn machen ihren Flug fast lautlos. Sie brütet in Scheunen, hohlen Bäumen oder Nistkästen.",
+      "futter": "Die Schleiereule frisst vor allem Wühlmäuse, Mäuse und Spitzmäuse. Ihre Beute schluckt sie meist ganz. Fell und Knochen würgt sie später als Bällchen wieder aus: das Gewölle."
+    },
+    "animal-kingfisher": {
+      "detektiv": "Der Eisvogel stürzt sich kopfüber ins Wasser und packt den Fisch. Ein durchsichtiges drittes Augenlid schützt dabei seine Augen. Es wirkt wie eine eingebaute Schwimmbrille.",
+      "zuhause": "Der Eisvogel mag klares oder ruhiges Wasser, dort sieht er Fische gut. Sein Nest gräbt er als Tunnel in ein steiles Ufer.",
+      "futter": "Der Eisvogel fliegt mit dem Fisch zurück auf seinen Ast. Dort schlägt er ihn gegen das Holz. Dann schluckt er ihn, Fischkopf zuerst. So bleibt keine Flosse im Hals stecken."
+    },
+    "animal-ostrich": {
+      "detektiv": "Der Afrikanische Strauß hat an jedem Fuß nur zwei Zehen. Alle anderen Vögel haben mehr. Mit seinen kräftigen Beinen rennt er schneller als ein Auto in der Stadt.",
+      "zuhause": "Der Strauß sieht mit langem Hals und großen Augen sehr weit. Im offenen Land entdeckt er Gefahr darum früh. Er lebt in Gruppen, das macht ihn sicherer.",
+      "futter": "Der Strauß frisst vor allem Wurzeln, Blätter und Samen. Ab und zu schnappt er Insekten oder Eidechsen. Er schluckt kleine Steine: Im Magen helfen sie, das Futter zu zermahlen."
+    },
+    "animal-atlantic-puffin": {
+      "detektiv": "Der Papageitaucher fliegt unter Wasser fast wie in der Luft: Er rudert mit den Flügeln. Mit den Füßen lenkt er dabei. So fängt er seine Fische.",
+      "zuhause": "Der Papageitaucher kehrt zum Brüten oft in dieselbe Erdhöhle zurück. Nur zur Brutzeit ist sein Schnabel so bunt. Im Winter sieht er viel grauer aus.",
+      "futter": "Der Papageitaucher taucht nach kleinen, schlanken Fischen. Viele davon kann er auf einmal im Schnabel tragen, schön nebeneinander. So bringt er seinem Küken eine ganze Mahlzeit."
+    },
+    "animal-common-chameleon": {
+      "detektiv": "Das Europäische Chamäleon hat eine sehr lange Zunge. Sie ist ungefähr so lang wie sein ganzer Körper. So fängt es auch Beute, die ein Stück entfernt sitzt.",
+      "zuhause": "Das Chamäleon sitzt meist in Büschen und Bäumen. Zum Schlafen kehrt es oft in denselben Baum zurück. Zum Eierlegen gräbt das Weibchen tiefe Gänge in die Erde.",
+      "futter": "Das Chamäleon frisst vor allem Insekten. Es bewegt sich dabei kaum vom Fleck. Wenn ein Insekt nah genug ist, schießt seine Zunge heraus."
+    },
+    "animal-fire-salamander": {
+      "detektiv": "Der Feuersalamander braucht für seine Jungen, die Larven, kühle Bäche ohne große Fische. Sonst werden die Larven gefressen. Sie haben gelbe Flecken oben an den Beinen.",
+      "zuhause": "Der Feuersalamander braucht feuchten Wald, weil seine Haut nicht austrocknen darf. Tagsüber versteckt er sich unter Holz und Steinen. Nachts und bei Regen kommt er heraus.",
+      "futter": "Der Feuersalamander frisst Würmer, Asseln und Insekten. Solche Tiere ohne Wirbelsäule nennt man wirbellos. Er folgt seiner Beute langsam und schnappt dann zu."
+    },
+    "animal-common-frog": {
+      "detektiv": "Der Grasfrosch kann seine Hautfarbe ein wenig an die Umgebung anpassen. So ist er im Gras gut versteckt. Durch seine feuchte Haut kann er sogar atmen.",
+      "zuhause": "Der Grasfrosch versteckt sich gern im feuchten Gras, dort findet er auch Futter. Den Winter verbringt er oft im Schlamm am Teichgrund.",
+      "futter": "Der Grasfrosch fängt Fliegen und Würmer mit seiner langen, klebrigen Zunge. Seine Kaulquappen fressen dagegen Algen im Wasser."
+    },
+    "animal-eastern-clown-anemonefish": {
+      "detektiv": "Der Echte Clownfisch hat eine Schleimschicht auf der Haut. Sie schützt ihn vor den Fangarmen seiner Seeanemone. Die brennen sonst wie Brennnesseln.",
+      "zuhause": "Der Clownfisch entfernt sich kaum von seiner Seeanemone. Dort trauen sich Feinde nicht heran. Nachts ruht er oft mitten auf ihr.",
+      "futter": "Der Clownfisch frisst beides: Algen und winzige Tiere. Algen wachsen im Wasser, ähnlich wie Pflanzen. Zooplankton nennt man winzige Tiere, die im Meer treiben."
+    },
+    "animal-european-eel": {
+      "detektiv": "Der Europäische Aal wechselt mehrmals seine Farbe. Im Fluss wird sein Bauch gelb, dann heißt er Gelbaal. Für die Reise zurück ins Meer wird er silbern.",
+      "zuhause": "Der Aal kommt mit salzigem Meerwasser und mit Flusswasser zurecht. Darum schafft er die weite Reise zwischen Meer und Fluss. Im Fluss versteckt er sich oft im dunklen Wasser.",
+      "futter": "Der Aal frisst kleine Krebse, Muscheln und Fische. Junge Aale fressen auch Insektenlarven und Würmer. Er räumt sogar auf: Tote Fische frisst er ebenfalls."
+    },
+    "animal-monarch-butterfly": {
+      "detektiv": "Der Monarchfalter verändert sich ganz, wenn aus der Raupe ein Falter wird. Die Raupe kaut Blätter. Der Falter hat stattdessen einen langen Rüssel und kann nur noch trinken.",
+      "zuhause": "Der Monarchfalter lebt auf Feldern, an Wegrändern und in Gärten. Dort blüht viel, und dort wachsen Seidenpflanzen. Viele Falter wandern weit und tanken unterwegs an Blüten Kraft.",
+      "futter": "Der Monarchfalter legt seine Eier nur auf Seidenpflanzen. Denn andere Blätter kann seine Raupe nicht fressen. Der Falter trinkt Nektar aus vielen verschiedenen Blüten."
+    },
+    "animal-garden-snail": {
+      "detektiv": "Die Gefleckte Weinbergschnecke braucht es feucht, sonst trocknet sie aus. Ihr Schleim schützt sie davor. Auf dem Schleim gleitet sie langsam voran wie auf einer Rutsche.",
+      "zuhause": "Die Schnecke ruht tagsüber gern unter Steinen oder im Kompost. Wenn ein Schatten auf sie fällt, zieht sie sich ins Haus zurück. Im Winter verschließt sie es mit Schleim.",
+      "futter": "Die Schnecke frisst Pflanzen, oft auch welke oder faulende Blätter. Ihre Zunge ist rau wie Schleifpapier. Damit raspelt sie winzige Stückchen ab."
+    },
+    "animal-european-lobster": {
+      "detektiv": "Der Europäische Hummer ist im Meer tiefblau. Rot wird er erst beim Kochen: Die Hitze macht einen roten Farbstoff sichtbar.",
+      "zuhause": "Der Hummer wohnt in Felsspalten und selbst gegrabenen Löchern zwischen Steinen. Tagsüber bleibt er dort versteckt. Erst nachts geht er auf Futtersuche.",
+      "futter": "Der Hummer frisst Muscheln, stachelige Seeigel und kleinere Krebse. Solche Tiere ohne Wirbelsäule nennt man wirbellos. Mit der dicken Schere knackt er ihre Schalen."
+    },
+    "animal-common-cuttlefish": {
+      "detektiv": "Die Gewöhnliche Sepia ändert nicht nur Farbe und Muster. Auch ihre Haut kann rau oder glatt aussehen. So ist sie am Meeresboden kaum zu sehen.",
+      "zuhause": "Die Sepia lebt über Sand und Schlamm am Meeresgrund. Wenn es gefährlich wird, gräbt sie sich manchmal in den Sand ein. Dann schauen nur noch die Augen heraus.",
+      "futter": "Die Sepia jagt Krabben und andere Krebse, auch kleine Fische. Ihre langen Fangarme schnellen nach vorn und packen zu."
+    },
+    "animal-short-snouted-seahorse": {
+      "detektiv": "Das Kurzschnäuzige Seepferdchen hat eine Besonderheit: Der Vater bekommt die Jungen. Die Mutter legt ihm die Eier in eine Tasche am Bauch. Dort wachsen sie heran.",
+      "zuhause": "Das Seepferdchen lebt im flachen Meer zwischen Seegras und Algen. Es schwimmt schlecht. Bei starker Strömung hält es sich darum gut fest.",
+      "futter": "Das Seepferdchen hat keine Zähne. Es wartet still, bis ein winziges Krebstier vorbeischwimmt. Dann saugt es die Beute blitzschnell ein, wie mit einem Strohhalm."
+    }
+  }
+}

@@ -256,9 +256,18 @@ test('nach einer gezogenen Falle nennt die Rückmeldung ein Tier, zu dem sie pas
     const text = worldGameWrongFeedback(spiel, q, falle);
     assert.ok(besitzer.some(name => text.includes(name)), spiel + ' ' + q.id + ': ' + text);
     // Die feste Schlussfrage („Pflanzen, andere Tiere oder beides?“) und die Tiernamen zählen nicht als verratene Lösung.
-    const ohneFeste = text.replace(/Gesucht ist aber: .*$/u, '').replace(/zu: [^.]*\./u, 'zu: .');
+    const ohneFeste = text.replace(/Gesucht ist aber: .*$/u, '').replace(/Tier: [^.]*\./u, 'Tier: .');
     assert.equal(ohneFeste.includes(q.answers[q.correct]), false, spiel + ' ' + q.id + ': verrät die Lösung nicht');
+    assert.ok(text.startsWith('Deine Antwort passt zu einem anderen Tier: '), spiel + ' ' + q.id + ': ' + text);
     assert.ok(text.includes('Gesucht ist aber: ' + thema(q.id).title + '.'), spiel + ' ' + q.id);
+    // Beim Futter fragt Profi und Experte nach Größe und Ort, Entdecker und alte Runden ohne Stufe nach der Futterart
+    // (stufen-pruefer 3-M1, 25.11.2026); beim Lebensraum gilt auf allen Stufen dieselbe Frage.
+    const futter = 'Frisst dieses Tier Pflanzen, andere Tiere oder beides?', groesse = 'Wie groß ist dieses Tier, und wo lebt es?';
+    const schluss = stufe => worldGameWrongFeedback(spiel, q, falle, stufe).split('. ').at(-1);
+    if (spiel === 'food') {
+      for (const stufe of ['entdecker', undefined]) assert.equal(schluss(stufe), futter, q.id + ' ' + stufe);
+      for (const stufe of ['profi', 'experte']) assert.equal(schluss(stufe), groesse, q.id + ' ' + stufe);
+    } else for (const stufe of ['entdecker', 'profi', 'experte', undefined]) assert.equal(schluss(stufe), 'Wo findet dieses Tier Futter und Schutz?', q.id + ' ' + stufe);
   }
 });
 

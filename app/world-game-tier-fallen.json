@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "bedeutung": "Fallen für „Tier & Lebensraum“ und „Wer frisst was?“ (Teil B, Schritt 8.3): je Tier Texte anderer Tiere, die sicher nicht passen. Entdecker zieht je Runde zwei aus „entdecker“ (deutlich anders), Profi drei aus „profi“ (ähnlich). Geprüft vom fakten-pruefer (jedes Paar) und stufen-pruefer, Berichte in docs/entwurf/.",
+  "bedeutung": "Fallen für „Tier & Lebensraum“ und „Wer frisst was?“ (Teil B, Schritt 8.3): je Tier Texte anderer Tiere, die sicher nicht passen. Entdecker zieht je Runde zwei aus „entdecker“ (deutlich anders), Profi drei aus „profi“ (ähnlich). Geprüft vom fakten-pruefer (jedes Paar) und stufen-pruefer, Berichte in docs/entwurf/. Seit 25.11.2026 ohne Fallen, die ganz in der richtigen Antwort stecken oder zum Teil zutreffen (Tier-Auflösungen, Teil B und Nachprüfung: docs/entwurf/2026-11-25-tier-aufloesung-endfassung.md und …-nachpruefung-entscheidungen.md).",
   "lebensraum": {
     "animal-african-savanna-elephant": {
       "entdecker": [
@@ -125,7 +125,7 @@
     },
     "animal-polar-bear": {
       "entdecker": [
-        "Feuchte Wälder und Larvengewässer",
+        "Wüste",
         "Korallenriffe mit Seeanemonen",
         "Felsiger Meeresboden"
       ],
@@ -267,9 +267,9 @@
       ],
       "profi": [
         "Blütenreiche Landschaften",
-        "Wüste",
         "Arktis",
-        "Arktische Küsten und Meere"
+        "Arktische Küsten und Meere",
+        "Korallenriffe mit Seeanemonen"
       ]
     },
     "animal-honey-bee": {
@@ -426,7 +426,6 @@
     "animal-ring-tailed-lemur": {
       "entdecker": [
         "Ozean",
-        "Flussufer und Stillgewässer",
         "Küsten mit Haltestrukturen",
         "Korallenriffe mit Seeanemonen",
         "Antarktis"
@@ -516,8 +515,7 @@
         "Küstennaher Meeresboden",
         "Korallenriffe mit Seeanemonen",
         "Ozean",
-        "Antarktis",
-        "Flussufer und Stillgewässer"
+        "Antarktis"
       ],
       "profi": [
         "Regenwald",
@@ -573,17 +571,15 @@
     },
     "animal-common-chameleon": {
       "entdecker": [
-        "Flussufer und Stillgewässer",
         "Antarktis",
         "Felsiger Meeresboden",
         "Korallenriffe mit Seeanemonen"
       ],
       "profi": [
         "Regenwald",
-        "Savanne",
         "Blütenreiche Landschaften",
-        "Grasland",
-        "Arktis"
+        "Arktis",
+        "Felsiger Meeresboden"
       ]
     },
     "animal-fire-salamander": {
@@ -648,17 +644,15 @@
     },
     "animal-monarch-butterfly": {
       "entdecker": [
-        "Flüsse und Feuchtgebiete",
         "Felsiger Meeresboden",
-        "Küste",
         "Ozean",
         "Antarktis"
       ],
       "profi": [
         "Regenwald",
-        "Wüste",
         "Arktis",
-        "Flüsse und Feuchtgebiete"
+        "Ozean",
+        "Antarktis"
       ]
     },
     "animal-garden-snail": {
@@ -798,7 +792,8 @@
         "Eukalyptusblätter",
         "Bambus",
         "Nektar und Pollen",
-        "Algen und Zooplankton"
+        "Algen und Zooplankton",
+        "Fleisch"
       ]
     },
     "animal-giant-panda": {
@@ -886,7 +881,6 @@
         "Vor allem kleine Fische",
         "Vor allem Insekten",
         "Vor allem wirbellose Bodentiere",
-        "Fleisch",
         "Vor allem kleine Säugetiere",
         "Ameisen und Termiten"
       ]
@@ -900,10 +894,10 @@
         "Früchte, Blätter und auch Insekten"
       ],
       "profi": [
-        "Krill",
-        "Kleine Tiere im Plankton",
         "Vor allem kleine Säugetiere",
-        "Vor allem Insekten"
+        "Vor allem Insekten",
+        "Pflanzliches Material",
+        "Als erwachsenes Tier vor allem Pflanzen"
       ]
     },
     "animal-orca": {
@@ -918,8 +912,7 @@
         "Krill",
         "Kleine Tiere im Plankton",
         "Insekten",
-        "Ameisen und Termiten",
-        "Kleine wirbellose Tiere"
+        "Ameisen und Termiten"
       ]
     },
     "animal-common-octopus": {
@@ -930,10 +923,10 @@
         "Eukalyptusblätter"
       ],
       "profi": [
-        "Krill",
         "Ameisen und Termiten",
         "Insekten",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Als erwachsenes Tier vor allem Pflanzen"
       ]
     },
     "animal-green-sea-turtle": {
@@ -1018,16 +1011,15 @@
         "Eukalyptusblätter"
       ],
       "profi": [
-        "Krill",
         "Ameisen und Termiten",
         "Vor allem kleine Säugetiere",
-        "Früchte, Blätter und auch Insekten"
+        "Gräser und andere Pflanzen",
+        "Pflanzen und Rinde"
       ]
     },
     "animal-whale-shark": {
       "entdecker": [
         "Eukalyptusblätter",
-        "Als erwachsenes Tier vor allem Pflanzen",
         "Bambus",
         "Nektar und Pollen",
         "Früchte, Blätter und auch Insekten"
@@ -1035,8 +1027,8 @@
       "profi": [
         "Ameisen und Termiten",
         "Insekten",
-        "Fleisch",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Nektar und Pollen"
       ]
     },
     "animal-garden-cross-spider": {
@@ -1065,7 +1057,8 @@
         "Eukalyptusblätter",
         "Bambus",
         "Nektar und Pollen",
-        "Algen und Zooplankton"
+        "Algen und Zooplankton",
+        "Fleisch"
       ]
     },
     "animal-white-tailed-eagle": {
@@ -1090,15 +1083,13 @@
         "Vorwiegend Pflanzen",
         "Raupen: Seidenpflanzen; Falter: Nektar",
         "Bambus",
-        "Eukalyptusblätter",
-        "Algen und Zooplankton"
+        "Eukalyptusblätter"
       ],
       "profi": [
         "Ameisen und Termiten",
         "Fisch und Meerestiere",
-        "Krill",
-        "Kleine Tiere im Plankton",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Bambus"
       ]
     },
     "animal-short-beaked-echidna": {
@@ -1114,8 +1105,7 @@
         "Vor allem kleine Säugetiere",
         "Fisch und Meerestiere",
         "Krill",
-        "Kleine Tiere im Plankton",
-        "Fleisch"
+        "Kleine Tiere im Plankton"
       ]
     },
     "animal-okapi": {
@@ -1130,31 +1120,28 @@
         "Eukalyptusblätter",
         "Nektar und Pollen",
         "Bambus",
-        "Algen und Zooplankton"
+        "Algen und Zooplankton",
+        "Fleisch"
       ]
     },
     "animal-meerkat": {
       "entdecker": [
         "Bambus",
-        "Pflanzen",
         "Raupen: Seidenpflanzen; Falter: Nektar",
         "Eukalyptusblätter",
         "Algen und Zooplankton"
       ],
       "profi": [
-        "Vor allem kleine Säugetiere",
-        "Fische, Vögel und auch tote Tiere",
         "Meerestiere",
         "Krill",
-        "Kleine Wassertiere"
+        "Kleine Wassertiere",
+        "Eukalyptusblätter"
       ]
     },
     "animal-ring-tailed-lemur": {
       "entdecker": [
         "Kleine Tiere im Plankton",
         "Kleine Wassertiere",
-        "Fische, Vögel und auch tote Tiere",
-        "Vor allem kleine Säugetiere",
         "Raupen: Seidenpflanzen; Falter: Nektar"
       ],
       "profi": [
@@ -1215,14 +1202,13 @@
         "Bambus",
         "Raupen: Seidenpflanzen; Falter: Nektar",
         "Eukalyptusblätter",
-        "Kleine Tiere im Plankton",
-        "Vor allem kleine Säugetiere"
+        "Kleine Tiere im Plankton"
       ],
       "profi": [
         "Algen und Zooplankton",
         "Ameisen und Termiten",
         "Krill",
-        "Vor allem kleine Säugetiere"
+        "Bambus"
       ]
     },
     "animal-hedgehog": {
@@ -1234,11 +1220,10 @@
         "Algen und Zooplankton"
       ],
       "profi": [
-        "Krill",
-        "Fleisch",
         "Krebse, Fische und andere kleine Meerestiere",
         "Kleine Wassertiere",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Nektar und Pollen"
       ]
     },
     "animal-barn-owl": {
@@ -1275,10 +1260,8 @@
     "animal-ostrich": {
       "entdecker": [
         "Meerestiere",
-        "Vor allem kleine Säugetiere",
         "Krill",
-        "Vor allem kleine Fische",
-        "Fleisch"
+        "Vor allem kleine Fische"
       ],
       "profi": [
         "Algen und Zooplankton",
@@ -1296,8 +1279,6 @@
         "Früchte, Blätter und auch Insekten"
       ],
       "profi": [
-        "Krill",
-        "Kleine Tiere im Plankton",
         "Ameisen und Termiten",
         "Insekten",
         "Vor allem wirbellose Bodentiere",
@@ -1316,8 +1297,7 @@
         "Vor allem kleine Säugetiere",
         "Kleine Wassertiere",
         "Krebse, Fische und andere kleine Meerestiere",
-        "Krill",
-        "Fleisch"
+        "Krill"
       ]
     },
     "animal-fire-salamander": {
@@ -1329,9 +1309,9 @@
       ],
       "profi": [
         "Vor allem kleine Säugetiere",
-        "Krill",
-        "Fleisch",
-        "Vor allem kleine Fische"
+        "Vor allem kleine Fische",
+        "Pflanzen und Rinde",
+        "Fisch und Meerestiere"
       ]
     },
     "animal-common-frog": {
@@ -1343,15 +1323,14 @@
       "profi": [
         "Fisch und Meerestiere",
         "Vor allem kleine Säugetiere",
-        "Fleisch",
-        "Nektar und Pollen"
+        "Nektar und Pollen",
+        "Bambus"
       ]
     },
     "animal-eastern-clown-anemonefish": {
       "entdecker": [
         "Vor allem kleine Säugetiere",
         "Raupen: Seidenpflanzen; Falter: Nektar",
-        "Fleisch",
         "Bambus",
         "Eukalyptusblätter"
       ],
@@ -1367,14 +1346,13 @@
         "Vorwiegend Pflanzen",
         "Eukalyptusblätter",
         "Bambus",
-        "Nektar und Pollen",
-        "Früchte, Blätter und auch Insekten"
+        "Nektar und Pollen"
       ],
       "profi": [
-        "Krill",
         "Ameisen und Termiten",
         "Vor allem kleine Säugetiere",
-        "Vorwiegend Pflanzen"
+        "Vorwiegend Pflanzen",
+        "Pflanzen und Rinde"
       ]
     },
     "animal-monarch-butterfly": {
@@ -1415,11 +1393,10 @@
         "Eukalyptusblätter"
       ],
       "profi": [
-        "Krill",
         "Ameisen und Termiten",
         "Vor allem Insekten",
-        "Fleisch",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Als erwachsenes Tier vor allem Pflanzen"
       ]
     },
     "animal-common-cuttlefish": {
@@ -1431,10 +1408,10 @@
         "Früchte, Blätter und auch Insekten"
       ],
       "profi": [
-        "Krill",
         "Vor allem Insekten",
         "Ameisen und Termiten",
-        "Vor allem kleine Säugetiere"
+        "Vor allem kleine Säugetiere",
+        "Als erwachsenes Tier vor allem Pflanzen"
       ]
     },
     "animal-short-snouted-seahorse": {
@@ -1446,7 +1423,6 @@
         "Früchte, Blätter und auch Insekten"
       ],
       "profi": [
-        "Krill",
         "Vor allem kleine Fische",
         "Vor allem kleine Säugetiere",
         "Vor allem Insekten",

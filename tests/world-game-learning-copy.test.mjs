@@ -3,6 +3,7 @@ import catalog from '../app/world-catalog.json' with {type:'json'};
 import {DRITTE_ANTWORT,worldGameBank,restoreWorldGameOrders,validWorldGameOrder} from '../app/world-game-bank.ts';
 import {AUFLOESUNG,EIGENE_RAETSEL,TECHNIK_AUFLOESUNG,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
 import {foodDistractors} from '../app/world-game-food.mjs';
+import TIER_AUFLOESUNG from '../app/world-game-tier-aufloesung.json' with {type:'json'};
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
 const animals=catalog.filter(t=>t.animal),normalize=s=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('de').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
@@ -31,7 +32,7 @@ test('thinking hint and wrong feedback are separate from the final explanation i
  for(const game of ['animal-detective','habitats','food','records','people','technology','then-now'])for(const q of worldGameBank(game)){
   const hint=worldGameHint(game,q),wrong=q.answers.find((_,i)=>i!==q.correct),feedback=worldGameWrongFeedback(game,q,wrong);assert(hint.length>20);assert(feedback.length>20);assert.notEqual(hint,q.why);assert.notEqual(feedback,q.why);
  }
- const walrus=worldGameBank('habitats').find(q=>q.id==='animal-walrus');assert.match(walrus.why,/Arktische Küsten und Meere/);assert.match(worldGameWrongFeedback('habitats',walrus,walrus.answers[1]),/ohne Gewässer/);
+ const walrus=worldGameBank('habitats').find(q=>q.id==='animal-walrus');assert.equal(walrus.why,TIER_AUFLOESUNG.tiere['animal-walrus'].zuhause);assert.match(worldGameWrongFeedback('habitats',walrus,walrus.answers[1]),/trockene Wüste/);
 });
 
 
@@ -186,7 +187,7 @@ test('jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiede
 test('Technik-Detektiv: nach falscher Antwort ein eigener Prüfsatz statt des Tipps',()=>{
  for(const q of worldGameBank('technology'))for(const stufe of ['entdecker','profi','experte',undefined]){
   const wrong=q.answers.find((_,i)=>i!==q.correct),feedback=worldGameWrongFeedback('technology',q,wrong,stufe);
-  assert.equal(feedback,'Du hast „'+wrong+'“ gewählt. Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?',q.id);
+  assert.equal(feedback,'Du hast „'+wrong+'“ gewählt. Was macht diese Erfindung? Passt das zu allem in der Aufgabe?',q.id);
   assert.ok(!feedback.includes(worldGameHint('technology',q,stufe)),q.id+': wiederholt den Tipp');
  }
 });
@@ -215,4 +216,24 @@ test('die Zukunfts-Antwort bekommt bei Früher und Heute dieselbe Rückmeldung',
  // Vertauschte Antworten (Früher statt Heute) bekommen weiter den allgemeinen Tipp, der für alle Aufgaben gleich ist.
  assert.equal(worldGameWrongFeedback('then-now',frueher,'Heute'),'Du hast „Heute“ gewählt. '+worldGameHint('then-now',frueher));
  assert.equal(worldGameHint('then-now',frueher),worldGameHint('then-now',heute));
+});
+// Kurze Auflösung nach „Richtig!“ in den drei Tierspielen (Tier-Auflösungen, Endfassung und Nachtrag 25.11.2026). Gleiche
+// Grenzen wie bei Menschen und Erfindungen. Kein anderes Spieltier, sonst verrät die Auflösung eine Falle oder ein späteres Ziel
+// (Kurznamen aus dem Prüfskript der Endfassung; ein Name zählt am Wortanfang, damit auch „Haie“ oder „Füchse“ auffallen;
+// „Orang-Utan“ ganz, weil „orange“ sonst mitzählt).
+test('jedes Tier hat in allen drei Tierspielen eine kurze Auflösung',()=>{
+ const tiere=TIER_AUFLOESUNG.tiere,spiele={'animal-detective':'detektiv',habitats:'zuhause',food:'futter'};
+ assert.deepEqual(Object.keys(tiere).sort(),animals.map(t=>t.id).sort());
+ const KURZ={'animal-african-savanna-elephant':['elefant'],'animal-lion':['löwe','löwin'],'animal-cheetah':['gepard'],'animal-bengal-tiger':['tiger'],'animal-giraffe':['giraffe'],'animal-giant-panda':['panda'],'animal-western-lowland-gorilla':['gorilla'],'animal-bornean-orangutan':['orang utan','orangutan'],'animal-polar-bear':['eisbär'],'animal-emperor-penguin':['pinguin'],'animal-blue-whale':['blauwal'],'animal-common-bottlenose-dolphin':['tümmler','delfin'],'animal-orca':['orca','schwertwal'],'animal-common-octopus':['krake','oktopus'],'animal-green-sea-turtle':['schildkröte'],'animal-red-kangaroo':['känguru'],'animal-koala':['koala'],'animal-jaguar':['jaguar'],'animal-honey-bee':['biene'],'animal-axolotl':['axolotl'],'animal-whale-shark':['walhai','hai'],'animal-garden-cross-spider':['spinne'],'animal-dromedary':['dromedar','kamel'],'animal-white-tailed-eagle':['adler'],'animal-platypus':['schnabeltier'],'animal-short-beaked-echidna':['ameisenigel','schnabeligel'],'animal-okapi':['okapi'],'animal-meerkat':['erdmännchen'],'animal-ring-tailed-lemur':['katta','lemur'],'animal-north-american-beaver':['biber'],'animal-walrus':['walross'],'animal-red-fox':['fuchs','füchs'],'animal-raccoon':['waschbär'],'animal-hedgehog':['igel'],'animal-barn-owl':['eule'],'animal-kingfisher':['eisvogel'],'animal-ostrich':['strauß'],'animal-atlantic-puffin':['papageitaucher'],'animal-common-chameleon':['chamäleon'],'animal-fire-salamander':['salamander'],'animal-common-frog':['frosch','frösch'],'animal-eastern-clown-anemonefish':['clownfisch'],'animal-european-eel':['aal'],'animal-monarch-butterfly':['monarch','falter'],'animal-garden-snail':['schnecke'],'animal-european-lobster':['hummer'],'animal-common-cuttlefish':['sepia','tintenfisch'],'animal-short-snouted-seahorse':['seepferdchen']};
+ assert.deepEqual(Object.keys(KURZ).sort(),animals.map(t=>t.id).sort(),'jedes Spieltier hat Kurznamen');
+ const saetze=text=>text.split(/(?<=[.!?:])\s+/u);
+ for(const [spiel,feld] of Object.entries(spiele)){const pool=worldGameBank(spiel);for(const t of animals){
+  const text=tiere[t.id][feld],q=pool.find(q=>q.id===t.id),wo=t.id+' '+feld;
+  assert.equal(q.why,text,wo);
+  assert.ok(text.length<=180,wo+': höchstens 180 Zeichen');
+  for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,wo+': Satz zu lang: '+satz);
+  assert.ok((text.match(/(?<![\p{L}\d])\d+(?![\p{L}\d])/gu)??[]).length<=1,wo+': höchstens eine Zahl');
+  for(const satz of saetze(animalDetectiveClue(t.id).clue))assert.ok(!text.includes(satz),wo+': wiederholt einen Rätselsatz');
+  for(const [id,namen] of Object.entries(KURZ))if(id!==t.id)for(const name of namen)assert.ok(!(' '+normalize(text)).includes(' '+normalize(name)),wo+' nennt '+name);
+ }}
 });

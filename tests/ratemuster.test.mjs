@@ -50,9 +50,9 @@ export const GRUPPEN = () => [
 
 // Bekannte Funde mit Grund. Wird ein Fund behoben, schlägt der Test fehl, bis der Eintrag hier gestrichen ist.
 const AUSNAHMEN = {
-  // BACKLOG Phase 1, Punkt 25 „Fallen-Listen schärfen“ (Stufen-Prüfung S1): Steht genau eine Antwort mit „Pflanzen“ da, ist sie fast
-  // immer richtig; „Verschiedene … Nahrung“ ist nie Falle. Verschwindet mit neuen, geprüften Nahrungs-Fallen.
-  'welt:food:profi': ['pflanzen', 'verschiedene'],
+  // BACKLOG Phase 1, Punkt 25 „Fallen-Listen schärfen“ (Stufen-Prüfung S1): „Verschiedene … Nahrung“ ist nie Falle. Verschwindet
+  // mit genaueren richtigen Antworten. „Pflanzen“ ist seit den neuen Profi-Fallen vom 25.11.2026 kein Fund mehr (Tier-Auflösungen).
+  'welt:food:profi': ['verschiedene'],
   // BACKLOG Phase 1, Punkt 25 „Tierdetektiv und Technik“ (S5): Entdecker zieht die Fallen nur aus 12 der 24 Erfindungen;
   // die übrigen sind, wenn sie dastehen, immer richtig. Verschwindet mit Fallen aus allen Erfindungen.
   'welt:technology:entdecker': ['druck', 'fahrrad', 'kühlschrank', 'nähmaschine', 'transistor'],
