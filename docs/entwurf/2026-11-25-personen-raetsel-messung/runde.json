@@ -1,0 +1,542 @@
+{
+ "person-marie_curie": {
+  "ent": [
+   "person-katherine_johnson",
+   "person-jane_goodall"
+  ],
+  "repl": false,
+  "profi": [
+   "person-henrietta_swan_leavitt",
+   "person-rabindranath_tagore",
+   "person-lise_meitner",
+   "person-albert_einstein",
+   "person-bertha_benz"
+  ],
+  "jahr": 1867
+ },
+ "person-ada_lovelace": {
+  "ent": [
+   "person-tim_berners_lee",
+   "person-albert_einstein"
+  ],
+  "repl": false,
+  "profi": [
+   "person-charles_darwin",
+   "person-mary_anning",
+   "person-karl_benz",
+   "person-bertha_benz",
+   "person-alexander_humboldt"
+  ],
+  "jahr": 1815
+ },
+ "person-grace_hopper": {
+  "ent": [
+   "person-karl_benz",
+   "person-al_khwarizmi"
+  ],
+  "repl": false,
+  "profi": [
+   "person-rachel_carson",
+   "person-cecilia_payne_gaposchkin",
+   "person-chien_shiung_wu",
+   "person-katherine_johnson",
+   "person-nelson_mandela"
+  ],
+  "jahr": 1906
+ },
+ "person-katherine_johnson": {
+  "ent": [
+   "person-bertha_benz",
+   "person-tu_youyou"
+  ],
+  "repl": false,
+  "profi": [
+   "person-nelson_mandela",
+   "person-rosalind_franklin",
+   "person-chien_shiung_wu",
+   "person-rachel_carson",
+   "person-grace_hopper"
+  ],
+  "jahr": 1918
+ },
+ "person-tim_berners_lee": {
+  "ent": [
+   "person-jane_goodall",
+   "person-cai_lun"
+  ],
+  "repl": false,
+  "profi": [
+   "person-mae_jemison",
+   "person-zaha_hadid",
+   "person-octavia_butler",
+   "person-jocelyn_bell_burnell",
+   "person-wangari_maathai"
+  ],
+  "jahr": 1955
+ },
+ "person-karl_benz": {
+  "ent": [
+   "person-albert_einstein",
+   "person-mae_jemison"
+  ],
+  "repl": false,
+  "profi": [
+   "person-rabindranath_tagore",
+   "person-marie_curie",
+   "person-henrietta_swan_leavitt",
+   "person-ada_lovelace",
+   "person-lise_meitner"
+  ],
+  "jahr": 1844
+ },
+ "person-bertha_benz": {
+  "ent": [
+   "person-al_khwarizmi",
+   "person-johannes_gutenberg"
+  ],
+  "repl": false,
+  "profi": [
+   "person-rabindranath_tagore",
+   "person-marie_curie",
+   "person-henrietta_swan_leavitt",
+   "person-lise_meitner",
+   "person-albert_einstein"
+  ],
+  "jahr": 1849
+ },
+ "person-jane_goodall": {
+  "ent": [
+   "person-tu_youyou",
+   "person-wangari_maathai"
+  ],
+  "repl": false,
+  "profi": [
+   "person-neil_armstrong",
+   "person-tu_youyou",
+   "person-wangari_maathai",
+   "person-jocelyn_bell_burnell",
+   "person-octavia_butler"
+  ],
+  "jahr": 1934
+ },
+ "person-albert_einstein": {
+  "ent": [
+   "person-cai_lun",
+   "person-charles_darwin"
+  ],
+  "repl": false,
+  "profi": [
+   "person-lise_meitner",
+   "person-inge_lehmann",
+   "person-henrietta_swan_leavitt",
+   "person-marie_curie",
+   "person-rabindranath_tagore"
+  ],
+  "jahr": 1879
+ },
+ "person-al_khwarizmi": {
+  "ent": [
+   "person-mae_jemison",
+   "person-alexander_humboldt"
+  ],
+  "repl": false,
+  "profi": [
+   "person-ibn_al_haytham",
+   "person-ibn_sina",
+   "person-murasaki_shikibu",
+   "person-johannes_gutenberg",
+   "person-cai_lun"
+  ],
+  "jahr": 780
+ },
+ "person-tu_youyou": {
+  "ent": [
+   "person-johannes_gutenberg",
+   "person-neil_armstrong"
+  ],
+  "repl": false,
+  "profi": [
+   "person-neil_armstrong",
+   "person-jane_goodall",
+   "person-rosalind_franklin",
+   "person-wangari_maathai",
+   "person-katherine_johnson"
+  ],
+  "jahr": 1930
+ },
+ "person-cai_lun": {
+  "ent": [
+   "person-wangari_maathai",
+   "person-mary_anning"
+  ],
+  "repl": false,
+  "profi": [
+   "person-al_khwarizmi",
+   "person-ibn_al_haytham",
+   "person-ibn_sina",
+   "person-murasaki_shikibu",
+   "person-johannes_gutenberg"
+  ],
+  "jahr": 121
+ },
+ "person-mae_jemison": {
+  "ent": [
+   "person-charles_darwin",
+   "person-ibn_al_haytham"
+  ],
+  "repl": false,
+  "profi": [
+   "person-tim_berners_lee",
+   "person-zaha_hadid",
+   "person-octavia_butler",
+   "person-jocelyn_bell_burnell",
+   "person-wangari_maathai"
+  ],
+  "jahr": 1956
+ },
+ "person-johannes_gutenberg": {
+  "ent": [
+   "person-alexander_humboldt",
+   "person-marie_curie"
+  ],
+  "repl": false,
+  "profi": [
+   "person-maria_sibylla_merian",
+   "person-katsushika_hokusai",
+   "person-alexander_humboldt",
+   "person-mary_anning",
+   "person-murasaki_shikibu"
+  ],
+  "jahr": 1400
+ },
+ "person-wangari_maathai": {
+  "ent": [
+   "person-neil_armstrong",
+   "person-ada_lovelace"
+  ],
+  "repl": false,
+  "profi": [
+   "person-jocelyn_bell_burnell",
+   "person-octavia_butler",
+   "person-neil_armstrong",
+   "person-tu_youyou",
+   "person-zaha_hadid"
+  ],
+  "jahr": 1940
+ },
+ "person-charles_darwin": {
+  "ent": [
+   "person-mary_anning",
+   "person-grace_hopper"
+  ],
+  "repl": true,
+  "profi": [
+   "person-ada_lovelace",
+   "person-karl_benz",
+   "person-bertha_benz",
+   "person-katsushika_hokusai",
+   "person-rabindranath_tagore"
+  ],
+  "jahr": 1809
+ },
+ "person-alexander_humboldt": {
+  "ent": [
+   "person-ibn_al_haytham",
+   "person-katherine_johnson"
+  ],
+  "repl": false,
+  "profi": [
+   "person-katsushika_hokusai",
+   "person-mary_anning",
+   "person-ada_lovelace",
+   "person-karl_benz",
+   "person-bertha_benz"
+  ],
+  "jahr": 1769
+ },
+ "person-neil_armstrong": {
+  "ent": [
+   "person-marie_curie",
+   "person-tim_berners_lee"
+  ],
+  "repl": false,
+  "profi": [
+   "person-tu_youyou",
+   "person-jane_goodall",
+   "person-rosalind_franklin",
+   "person-wangari_maathai",
+   "person-katherine_johnson"
+  ],
+  "jahr": 1930
+ },
+ "person-mary_anning": {
+  "ent": [
+   "person-ada_lovelace",
+   "person-karl_benz"
+  ],
+  "repl": false,
+  "profi": [
+   "person-ada_lovelace",
+   "person-alexander_humboldt",
+   "person-katsushika_hokusai",
+   "person-karl_benz",
+   "person-bertha_benz"
+  ],
+  "jahr": 1799
+ },
+ "person-ibn_al_haytham": {
+  "ent": [
+   "person-grace_hopper",
+   "person-bertha_benz"
+  ],
+  "repl": false,
+  "profi": [
+   "person-ibn_sina",
+   "person-murasaki_shikibu",
+   "person-al_khwarizmi",
+   "person-johannes_gutenberg",
+   "person-maria_sibylla_merian"
+  ],
+  "jahr": 965
+ },
+ "person-maria_sibylla_merian": {
+  "ent": [
+   "person-katherine_johnson",
+   "person-jane_goodall"
+  ],
+  "repl": false,
+  "profi": [
+   "person-katsushika_hokusai",
+   "person-alexander_humboldt",
+   "person-mary_anning",
+   "person-charles_darwin",
+   "person-ada_lovelace"
+  ],
+  "jahr": 1647
+ },
+ "person-inge_lehmann": {
+  "ent": [
+   "person-tim_berners_lee",
+   "person-albert_einstein"
+  ],
+  "repl": false,
+  "profi": [
+   "person-albert_einstein",
+   "person-lise_meitner",
+   "person-cecilia_payne_gaposchkin",
+   "person-grace_hopper",
+   "person-rachel_carson"
+  ],
+  "jahr": 1888
+ },
+ "person-henrietta_swan_leavitt": {
+  "ent": [
+   "person-karl_benz",
+   "person-al_khwarizmi"
+  ],
+  "repl": false,
+  "profi": [
+   "person-marie_curie",
+   "person-rabindranath_tagore",
+   "person-lise_meitner",
+   "person-albert_einstein",
+   "person-bertha_benz"
+  ],
+  "jahr": 1868
+ },
+ "person-cecilia_payne_gaposchkin": {
+  "ent": [
+   "person-bertha_benz",
+   "person-tu_youyou"
+  ],
+  "repl": false,
+  "profi": [
+   "person-grace_hopper",
+   "person-rachel_carson",
+   "person-chien_shiung_wu",
+   "person-inge_lehmann",
+   "person-katherine_johnson"
+  ],
+  "jahr": 1900
+ },
+ "person-rosalind_franklin": {
+  "ent": [
+   "person-jane_goodall",
+   "person-cai_lun"
+  ],
+  "repl": false,
+  "profi": [
+   "person-katherine_johnson",
+   "person-nelson_mandela",
+   "person-chien_shiung_wu",
+   "person-neil_armstrong",
+   "person-tu_youyou"
+  ],
+  "jahr": 1920
+ },
+ "person-jocelyn_bell_burnell": {
+  "ent": [
+   "person-albert_einstein",
+   "person-mae_jemison"
+  ],
+  "repl": false,
+  "profi": [
+   "person-wangari_maathai",
+   "person-octavia_butler",
+   "person-zaha_hadid",
+   "person-jane_goodall",
+   "person-tim_berners_lee"
+  ],
+  "jahr": 1943
+ },
+ "person-katsushika_hokusai": {
+  "ent": [
+   "person-al_khwarizmi",
+   "person-johannes_gutenberg"
+  ],
+  "repl": false,
+  "profi": [
+   "person-alexander_humboldt",
+   "person-mary_anning",
+   "person-charles_darwin",
+   "person-ada_lovelace",
+   "person-karl_benz"
+  ],
+  "jahr": 1760
+ },
+ "person-murasaki_shikibu": {
+  "ent": [
+   "person-tu_youyou",
+   "person-wangari_maathai"
+  ],
+  "repl": false,
+  "profi": [
+   "person-ibn_sina",
+   "person-ibn_al_haytham",
+   "person-al_khwarizmi",
+   "person-johannes_gutenberg",
+   "person-maria_sibylla_merian"
+  ],
+  "jahr": 1000
+ },
+ "person-rachel_carson": {
+  "ent": [
+   "person-cai_lun",
+   "person-charles_darwin"
+  ],
+  "repl": false,
+  "profi": [
+   "person-grace_hopper",
+   "person-chien_shiung_wu",
+   "person-cecilia_payne_gaposchkin",
+   "person-katherine_johnson",
+   "person-nelson_mandela"
+  ],
+  "jahr": 1907
+ },
+ "person-octavia_butler": {
+  "ent": [
+   "person-mae_jemison",
+   "person-alexander_humboldt"
+  ],
+  "repl": false,
+  "profi": [
+   "person-zaha_hadid",
+   "person-jocelyn_bell_burnell",
+   "person-wangari_maathai",
+   "person-tim_berners_lee",
+   "person-mae_jemison"
+  ],
+  "jahr": 1947
+ },
+ "person-nelson_mandela": {
+  "ent": [
+   "person-johannes_gutenberg",
+   "person-neil_armstrong"
+  ],
+  "repl": false,
+  "profi": [
+   "person-katherine_johnson",
+   "person-rosalind_franklin",
+   "person-chien_shiung_wu",
+   "person-rachel_carson",
+   "person-grace_hopper"
+  ],
+  "jahr": 1918
+ },
+ "person-chien_shiung_wu": {
+  "ent": [
+   "person-wangari_maathai",
+   "person-mary_anning"
+  ],
+  "repl": false,
+  "profi": [
+   "person-rachel_carson",
+   "person-grace_hopper",
+   "person-katherine_johnson",
+   "person-nelson_mandela",
+   "person-rosalind_franklin"
+  ],
+  "jahr": 1912
+ },
+ "person-lise_meitner": {
+  "ent": [
+   "person-charles_darwin",
+   "person-ibn_al_haytham"
+  ],
+  "repl": false,
+  "profi": [
+   "person-albert_einstein",
+   "person-henrietta_swan_leavitt",
+   "person-inge_lehmann",
+   "person-marie_curie",
+   "person-rabindranath_tagore"
+  ],
+  "jahr": 1878
+ },
+ "person-zaha_hadid": {
+  "ent": [
+   "person-alexander_humboldt",
+   "person-marie_curie"
+  ],
+  "repl": false,
+  "profi": [
+   "person-octavia_butler",
+   "person-tim_berners_lee",
+   "person-mae_jemison",
+   "person-jocelyn_bell_burnell",
+   "person-wangari_maathai"
+  ],
+  "jahr": 1950
+ },
+ "person-rabindranath_tagore": {
+  "ent": [
+   "person-neil_armstrong",
+   "person-ada_lovelace"
+  ],
+  "repl": false,
+  "profi": [
+   "person-marie_curie",
+   "person-henrietta_swan_leavitt",
+   "person-bertha_benz",
+   "person-karl_benz",
+   "person-lise_meitner"
+  ],
+  "jahr": 1861
+ },
+ "person-ibn_sina": {
+  "ent": [
+   "person-mary_anning",
+   "person-grace_hopper"
+  ],
+  "repl": false,
+  "profi": [
+   "person-ibn_al_haytham",
+   "person-murasaki_shikibu",
+   "person-al_khwarizmi",
+   "person-johannes_gutenberg",
+   "person-maria_sibylla_merian"
+  ],
+  "jahr": 980
+ }
+}
