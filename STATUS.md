@@ -13,6 +13,7 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 - Bilder-Strang, erster Teil (PR #113): alle 24 KI-Tierbilder durch Fotos ersetzt, 8 Personen, Einbau-Werkzeug `scripts/foto-einbau.mjs`.
 - **Entschieden am 25.11.2026:** Der Nutzer nimmt beide Empfehlungen an: die Regel „neue oder geänderte Vollprüfungs-Suite vor dem Commit selbst laufen lassen“ (jetzt in `CLAUDE.md`, Arbeitsablauf Punkt 4) und zwei Stilproben fürs Design, mit dem Auftrag „beim Design sei kreativ“.
 - **Entschieden am 25.11.2026 (Design):** Der Nutzer folgt der Empfehlung: Stilprobe C „Kompass“ wird das neue Design, der Stempel kommt am Spielende. Dazu freie Hand bei Anordnung, Reihenfolge, Überschriften, Leisten und Darstellung, auch für künftige Erweiterungen (Regel „Gestaltung frei“ in `CLAUDE.md`).
+- **Entschieden am 25.11.2026 (Nachtmodus):** Den Zeitpunkt entscheidet Claude; geplant als Umbau-Schritt 8 „Nachtkarte“ nach Schritt 7 ([Entwurf](docs/entwurf/2026-11-25-design-umbau.md), Abschnitt „Später: Schritt 8“).
 - **Merge-Freigabe des Nutzers** für alle Teil-B-PRs nach grüner CI samt Engine-Schnellprüfung; Abweichungen vom Plan vorher melden (Entscheidungen 11 und 19).
 
 ## Adressen

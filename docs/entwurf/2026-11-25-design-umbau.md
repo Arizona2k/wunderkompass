@@ -116,7 +116,7 @@ Jeder Schritt ist ein eigener PR nach `test-live` mit Vorschau, Helferprüfung u
 
 ## Später: Schritt 8 „Nachtkarte“ (dunkler Modus)
 
-Frage des Nutzers am 25.11.2026: „dunkler modus sinnvoll?“ Empfehlung von Claude: ja, aber erst nach Schritt 7.
+Frage des Nutzers am 25.11.2026: „dunkler modus sinnvoll?“ Empfehlung von Claude: ja, aber erst nach Schritt 7. **Entschieden:** Der Nutzer überlässt Claude den Zeitpunkt („entscheide selber wann ein nachtmodus kommt“). Claude plant ihn als Schritt 8 direkt nach Schritt 7, mit eigenem Entwurf und Vorschau.
 - **Wofür:** abends am Tablet oder Handy blendet eine helle Seite, und manche Familien stellen ihre Geräte ganz auf dunkel. Für Menschen, die Licht schlecht vertragen, ist es eine echte Hilfe.
 - **Warum nicht gleich:** Bei normalem Licht lesen die meisten dunkle Schrift auf hellem Grund leichter; hell bleibt darum der Standard. Und heute stecken Farben an vielen Orten fest im Code: allein 292 feste `fill`- und `stroke`-Farben in Zeichnungen (`app/**/*.tsx`), dazu `globals.css`, Karten, Globus und Schaubilder. Ein dunkler Modus jetzt hieße, alles doppelt zu bauen und doppelt zu prüfen. Nach Schritt 7 laufen die Farben über die Kern-Werte; dann ist es vor allem eine zweite Farbtabelle plus die Zeichnungen.
 - **Idee:** keine bloße Umkehrung, sondern eine „Nachtkarte“: tiefes Blau (die Tinte `#15314A` als Grund), helle Schrift, die orange Nadel leuchtet, dazu leise Sterne am Rand. Das passt zum Kompass und zur Welt „Weltall“.
