@@ -11,10 +11,14 @@ Nach dem [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md) zum freig
 - **Ein Fokusrahmen** für alle Bedienelemente: 3 px Blaugrün mit 2 px Luft (vorher zehn Farben, 2 oder 3 px, Orange bis Blau).
 - **Gleiche Knöpfe überall:** Haupt-, Neben-, Vorlese-, Antwort- und Wahlknöpfe sind auf Start, Welten, Karten, in allen Spielen, Laboren, Reisen, am Globus und im Pass gleich: mindestens 48 px hoch, Schrift 16 bis 18 px, mit „Größerer Schrift“ eine feste Stufe größer. Auch in nachgeladenen Bereichen, deren alte Regeln die Kern-Werte früher überschrieben (Codeprüfung M1).
 - **Grün nur bei richtig:** Gewählte Wahlknöpfe, Filter, Stufen und Globus-Beschriftungen sind blaugrün statt grün oder orange; Grün zeigt nur noch eine richtige Antwort. Bei erzwungenen Farben zeigt ein doppelter Rand die Auswahl.
+- **Rückmeldung neutral:** Der Kasten nach einer Antwort ist weiß mit grauem Rand, nicht mehr grün, auch bei „Noch nicht ganz“ (Spieltest Soll 1, Design-Prüfung Muss 1). „Richtig!“ und „Noch nicht ganz“ sind in jedem Kasten 20 px groß (mit „Größerer Schrift“ 24 px), wie schon im Spiel.
+- **Kreuz bei falsch:** Eine falsche Antwort zeigt am Zeilenende ein Kreuz, so wie die richtige einen Haken. So ist sie nicht nur an der Farbe zu erkennen (Rot und Grün verwechseln manche Kinder; Design-Prüfung Muss 2).
+- **Fokus bleibt sichtbar,** wo alte Regeln fehlten: Abschnittsüberschriften im Pass nach einem Sprung, die Themenkachel nach „zur Auswahl“ (auch nach Tippen), der Schließen-Knopf im Pass-Kopf (vorher weiß auf Hellgrün; Code-Prüfung M1 bis M3).
+- Wortgruppen-Reiter im Wissensbuch, Globus-Schalter und Drehknopf, Himmelsrichtungen und „Noch einmal raten“ auf der Karte in Blaugrün statt Grün oder Orange; Kartenlegende und Lichtschalter im Wissensbuch 48 px hoch; „Quiz fortsetzen“ 17 px statt 14 px.
 - Seitenbeschreibung nennt die Zielgruppe „Kinder von 5 bis 10 Jahren“ (`index.html`).
 - „Was ist neu?“: „Ruhige Farben, gleiche Knöpfe“.
-- **Tests:** `kern-huelle` misst die Bausteine auf Start, Karte, Reise, Spiel und im Pass bei 360 und 1280 px (Farben, Höhe, Schrift normal und groß) und den Fokusrahmen; `karte-stufen` auf die neuen Farben angepasst.
-- **Bewusst später** (BACKLOG Punkt 29): große Lesegröße für Fließtext (Schritt 2), Werkstatt-Farben (Schritt 5), `science-thinking.css` und orangener Fokus der Bauplan-Punkte (Schritt 7); eigene Weltfarben bei Zeitleiste, Geschichten, Bits und Erdschichten bleiben.
+- **Tests:** `kern-huelle` misst die Bausteine auf Start, Karte, Reise, Spiel und im Pass bei 360 und 1280 px (Farben, Höhe, Schrift normal und groß) und den Fokusrahmen, je im genannten Bereich; `karte-stufen` auf die neuen Farben angepasst. Die Kontrastmessung (`lesbarkeit.mjs`) legt durchsichtige Hintergründe auf die Fläche darunter, statt sie als Schwarz zu zählen.
+- **Bewusst später** (BACKLOG Punkt 29, je Schritt sortiert): große Lesegröße für Fließtext (Schritt 2), Werkstatt-Farben (Schritt 5), Tipp-Kästen und Memory (Schritt 6), Wasser-Labor, Globus-Knöpfe und `science-thinking.css` (Schritt 7) und weitere Funde der Prüfer; eigene Weltfarben bei Zeitleiste, Geschichten, Bits und Erdschichten bleiben.
 - Nachgetragen: Dauer von PR #119 (rund 4 Stunden).
 - **Messwerte:** *Funde vor dem PR:* (folgt nach den Helferberichten). *Späte Funde:* (folgt). *Dauer:* (folgt).
 
