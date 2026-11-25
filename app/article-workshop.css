@@ -4,7 +4,6 @@
 .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(p,li,label,summary,button,select,figcaption,small){font-size:16px;line-height:1.7}
 .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .small-note{font-size:16px!important}
 .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .eyebrow{font-size:13px;line-height:1.5}
-.wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) .speech-button{font-size:16px!important}
 .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) :is(button,summary,select){min-height:48px;white-space:normal}
 .wissenskarte-ausprobieren :is(.people-evidence,.science-thinking,.history-context,.animal-inquiry,.structure-model,.invention-story) h4{font-size:20px;line-height:1.5;margin:18px 0 12px}
 /* Unter „Ausprobieren“ rahmt schon der Aufklapper; kein zweiter Kasten, damit Zeichnungen auf 320 px breit genug bleiben. */

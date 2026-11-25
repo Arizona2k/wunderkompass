@@ -20,33 +20,166 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Design „Kompass“ (Umbau-Schritt 1, docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md). Kontraste gemessen (WCAG):
+   Weiß auf Petrol 6,2:1, Petrol auf Papier 5,5:1, Tinte auf Papier 11,7:1, leise Tinte auf Papier 5,8:1,
+   Weiß auf Petrol-dunkel 8,4:1, Orange-Text auf Papier 4,9:1, Rand auf Weiß 3,6:1 (Ränder brauchen 3:1).
+   Orange (#D9650A, 3,2:1) nur als Grafik, nie als Schrift. Richtig- und Falsch-Farben nur als Rand und Fläche,
+   die Schrift darauf bleibt Tinte (11:1). */
 :root {
-  --kern-grund: #FAF8F3;
+  --kern-grund: #EDF1EA;
   --kern-flaeche: #FFFFFF;
-  --kern-text: #15303A;
-  --kern-text-leise: #4A626B;
-  --kern-petrol: #0E6E72;
-  --kern-petrol-dunkel: #0B5A5D;
-  --kern-petrol-zart: #E3F1F1;
-  --kern-orange: #E8742A;
-  --kern-orange-text: #B5531A;
-  --kern-linie: #DDE5E3;
-  --kern-rund: 16px;
-  --kern-rund-gross: 24px;
+  --kern-text: #15314A;
+  --kern-text-leise: #4A5F70;
+  --kern-petrol: #0B6B73;
+  --kern-petrol-dunkel: #08565C;
+  --kern-petrol-zart: #DCEFEF;
+  --kern-orange: #D9650A;
+  --kern-orange-text: #A84E08;
+  --kern-linie: #C6D1C8;
+  --kern-rand: #788A80;
+  --kern-richtig: #2E7A55;
+  --kern-richtig-zart: #E2F0E7;
+  --kern-falsch: #B5462F;
+  --kern-falsch-zart: #F8E7E1;
+  /* Weltfarben nur als helle Tönung mit dunkler Schrift oder hinter weißen Symbolen (Weiß auf Tiere 4,3:1: nur Symbole). */
+  --kern-w-tiere: #2E8A5C;
+  --kern-w-zeit: #A8641F;
+  --kern-w-koepfe: #7D4FA6;
+  --kern-w-erfind: #9C6A0E;
+  --kern-w-bau: #4F6478;
+  --kern-w-wiss: #3A55A8;
+  --kern-rund-klein: 8px;
+  --kern-rund: 14px;
+  --kern-rund-gross: 22px;
   --kern-tipp: 48px;
   --kern-leiste-hoehe: 64px;
-  --kern-schatten: 0 2px 10px rgb(21 48 58 / 8%);
+  --kern-schatten: 0 2px 10px rgb(21 49 74 / 8%);
+  /* Schrift der Bausteine. „Größere Schrift“ im Pass hebt sie um rund 20 % (unten bei .large-reading). */
+  --kern-schrift-klein: 16px;
+  --kern-schrift-knopf: 17px;
+  --kern-schrift-antwort: 18px;
+}
+/* .large-reading steht an .earth-app und an den Dialogen (earth-explorer.tsx). Die Werte stehen hier und nicht als
+   Faktor, weil eine Variable den Wert erbt, der dort ausgerechnet wurde, wo sie steht. */
+.large-reading {
+  --kern-schrift-klein: 19px;
+  --kern-schrift-knopf: 20px;
+  --kern-schrift-antwort: 21px;
 }
 
-/* Tastaturfokus: deutlich und überall gleich. */
+/* Tastaturfokus: ein Rahmen für die ganze Seite, 3 px Petrol mit 2 px Luft. Als outline, damit eigene Schatten
+   (z. B. am gewählten Stufenknopf) bleiben. Bereiche auf dunkler Fläche setzen nur die Farbe um (Pass-Kopf). */
 :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
   outline: 3px solid var(--kern-petrol);
-  outline-offset: 3px;
+  outline-offset: 2px;
+}
+@media (forced-colors: active) {
+  :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline-color: Highlight; }
 }
 
 /* Ziele, die nur das Programm fokussiert (Überschriften, Hauptbereich), bleiben ruhig. */
 :is(h1, h2, h3, h4, main, header, section, article, aside, div, p)[tabindex="-1"]:is(:focus, :focus-visible) {
   outline: none;
+}
+/* Der Pass-Kopf ist dunkel: Dort ist der Rahmen weiß. */
+.passport-atlas .pass-header :focus-visible { outline-color: #fff; }
+
+/* ---------- Bausteine: Knöpfe, Vorlesen, Antworten, Wahlknöpfe ---------- */
+/* Je einmal festgelegt, mindestens 48 px hoch, Schrift mindestens 16 px. Ältere Dateien setzen nur noch Lage und Breite
+   (alte Fassungen in globals.css und den Bereichsdateien sind gelöscht, Umbau-Schritt 1). */
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--kern-tipp);
+  padding: 10px 20px;
+  border: 2px solid var(--kern-petrol);
+  border-radius: var(--kern-rund);
+  font-size: var(--kern-schrift-knopf);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: normal;
+}
+.primary-button { background: var(--kern-petrol); color: #fff; }
+.secondary-button { background: var(--kern-flaeche); color: var(--kern-petrol-dunkel); }
+@media (hover: hover) {
+  .primary-button:not(:disabled):hover { background: var(--kern-petrol-dunkel); border-color: var(--kern-petrol-dunkel); }
+  .secondary-button:not(:disabled):hover { background: var(--kern-petrol-zart); }
+}
+
+/* Vorlesen: ein leiser Knopf ohne Fläche, Petrol wie alles, was man antippt. */
+.speech-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--kern-tipp);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--kern-petrol-dunkel);
+  font-size: var(--kern-schrift-klein);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: start;
+}
+@media (hover: hover) {
+  .speech-button:not(:disabled):hover { color: var(--kern-text); text-decoration: underline; text-underline-offset: 3px; }
+}
+
+/* Antworten: weiß mit Rand; gewählt Petrol-zart (nicht grün, damit „gewählt“ nicht wie „richtig“ aussieht),
+   richtig grün, falsch rot, die Schrift bleibt Tinte. Nach dem Lösen sind die übrigen Antworten „erledigt“:
+   gestrichelt und leise, aber gut lesbar (5,8:1 statt der früheren Deckkraft 0,65 mit etwa 2,9:1). */
+.quiz-answer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border: 2px solid var(--kern-rand);
+  border-radius: var(--kern-rund);
+  background: var(--kern-flaeche);
+  color: var(--kern-text);
+  font-size: var(--kern-schrift-antwort);
+  line-height: 1.45;
+  text-align: left;
+}
+.quiz-answer > svg { margin-left: auto; }
+@media (hover: hover) {
+  .quiz-answer:not(:disabled):not(.is-correct):not(.is-incorrect):hover { background: var(--kern-petrol-zart); border-color: var(--kern-petrol); }
+}
+.quiz-answer[aria-pressed="true"]:not(.is-correct):not(.is-incorrect) { background: var(--kern-petrol-zart); border-color: var(--kern-petrol); }
+.quiz-answer.is-correct { background: var(--kern-richtig-zart); border-color: var(--kern-richtig); color: var(--kern-text); font-weight: 700; opacity: 1; }
+.quiz-answer.is-correct .answer-letter { background: var(--kern-richtig); color: #fff; }
+.quiz-answer.is-incorrect { background: var(--kern-falsch-zart); border-color: var(--kern-falsch); color: var(--kern-text); opacity: 1; }
+.quiz-answer.is-incorrect .answer-letter { background: var(--kern-falsch); color: #fff; }
+.quiz-answer:disabled:not(.is-correct):not(.is-incorrect) { opacity: 1; border-style: dashed; background: transparent; color: var(--kern-text-leise); }
+@media (max-width: 560px) {
+  .quiz-answer { gap: 10px; padding: 12px; }
+}
+
+/* Wahlknöpfe (zwei bis drei Möglichkeiten nebeneinander) und Umschalter in Modellen. */
+.visual-choice button {
+  min-height: var(--kern-tipp);
+  max-width: 100%;
+  padding: 8px 14px;
+  border: 2px solid var(--kern-rand);
+  border-radius: var(--kern-rund);
+  background: var(--kern-flaeche);
+  color: var(--kern-text);
+  font-size: var(--kern-schrift-klein);
+  line-height: 1.4;
+  text-align: left;
+}
+.model-choice { min-height: var(--kern-tipp); font-size: var(--kern-schrift-klein); color: var(--kern-text); }
+.visual-choice button[aria-pressed="true"] { background: var(--kern-petrol-zart); border-color: var(--kern-petrol); font-weight: 700; }
+.model-choice[aria-pressed="true"] { background: var(--kern-petrol-zart); color: var(--kern-text); box-shadow: inset 0 0 0 2px var(--kern-petrol); }
+
+@media (forced-colors: active) {
+  .quiz-answer.is-correct, .quiz-answer.is-incorrect { border-width: 3px; }
+  :is(.quiz-answer, .visual-choice button, .model-choice)[aria-pressed="true"] { border: 4px double; }
 }
 
 /* ---------- Hülle: Kopf, Bereichsleiste, Fuß ---------- */
@@ -469,9 +602,11 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 /* „Richtig!“ und „Noch nicht ganz“ sind größer als der Text darunter, auch bei großer Schrift; stehen „Erklärung vorlesen“
    und „Nächste Aufgabe“ nebeneinander, ist Luft dazwischen, stehen sie untereinander (schmales Handy), auch (Design-Prüfung
    „Rückmeldung im Blick“, Soll 1 und 2; Nachprüfung, Kann 1). */
-.game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 1.125rem; }
-.large-reading .game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 1.3rem; }
+/* „Richtig!“ deutlich abgesetzt (Design-Prüfung Technik-Auflösungen, Kann 3); Knöpfe im Kasten stehen auf einer Linie (Kann 4). */
+.game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 20px; }
+.large-reading .game-room :is(.lab-feedback, .game-feedback) > strong { font-size: 24px; }
 .game-room .lab-feedback > .speech-button { margin-inline-end: 16px; margin-block-end: 8px; }
+.game-room :is(.lab-feedback, .game-feedback) > :is(button, a) { vertical-align: middle; }
 /* Holt die Seite einen Knopf im Kasten mit Tab über die Leiste (imKastenSichtbar), bleibt Platz für den Fokusrahmen. */
 .game-room :is(.lab-feedback, .game-feedback) :is(button, a) { scroll-margin-block: 12px; }
 /* Auf breiten Bildschirmen höchstens etwa 65 Zeichen je Zeile, sonst verlieren Kinder beim Lesen die Zeile (Design-Prüfung

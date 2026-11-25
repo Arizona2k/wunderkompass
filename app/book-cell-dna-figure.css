@@ -4,7 +4,6 @@
 .book-dna-order-figure__choices{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
 .book-dna-order-figure__choices button{min-height:48px;padding:10px 14px;border:1px solid var(--wk-line,#ccd8d6);border-radius:10px;background:var(--wk-surface,#fff);color:inherit;font:inherit;cursor:pointer}
 .book-dna-order-figure__choices button[aria-pressed=true]{background:#e9f3ee;border-color:#22664d;color:#194b3c;box-shadow:inset 0 0 0 1px #22664d}
-.book-dna-order-figure__choices button:focus-visible{outline:3px solid var(--wk-focus,#256384);outline-offset:4px}
 .book-dna-order-figure svg{display:block;width:100%;max-width:360px;height:auto;margin:12px auto;overflow:visible}
 .book-dna-order-figure svg text{fill:currentColor;font-size:24px;font-weight:650}
 .book-dna-order-figure__base{fill:#e9f3ee;stroke:#22664d;stroke-width:1.5}

@@ -2,7 +2,7 @@
 // Die Grundlage läuft schmal mit Touch (320 × 568) und breit (1440 × 900),
 // die Hülle bei 320 und 390 px mit Touch sowie bei 768 und 1440 px.
 import assert from 'node:assert/strict';
-import {withPage, ready, ladeanfragen, klickNachRuhe} from './harness.mjs';
+import {withPage, ready, ladeanfragen, klickNachRuhe, bereich} from './harness.mjs';
 import {homeContrast} from './discovery-central.mjs';
 import {BEREICHE} from '../../app/kern/bereiche.ts';
 import {createSave, SAVE_KEY} from '../../app/progress-storage.ts';
@@ -66,9 +66,92 @@ export async function kernHuelle(ctx) {
     await tastaturFokus(page);
     ctx.report.checks.push('Kern 1440: sichtbarer Tastaturfokus in Petrol');
   });
+  for (const view of [SCHMAL, {width: 1280, height: 900}]) {
+    await withPage(ctx, view, page => bausteineUeberall(page, view.width));
+    ctx.report.checks.push(`Bausteine ${view.width}: Knöpfe, Vorlesen, Antworten und Wahlknöpfe auf Start, Karte, Reise, Spiel und im Pass in den Kompass-Farben, `
+      + 'mindestens 48 px hoch, Schrift fest und mit „Größerer Schrift“ eine Stufe größer, Fokusrahmen 3 px Petrol mit 2 px Luft');
+  }
 }
 
-// Die Seite nutzt Nunito, 18 px und den warmen Grundton.
+// Bausteine des Designs „Kompass“ (Umbau-Schritt 1): Haupt- und Nebenknopf, Vorlesen, Antworten und Wahlknöpfe sehen überall
+// gleich aus. Gemessen wird auch in nachgeladenen Bereichen (Karte, Reise, Spiel): Deren CSS kommt nach dem Kern und setzte früher
+// eigene Farben und Größen, teils mit !important (Codeprüfung M1). „Größere Schrift“ hebt die Schrift um eine feste Stufe (S7).
+const KOMPASS = {petrol: 'rgb(11, 107, 115)', petrolDunkel: 'rgb(8, 86, 92)', petrolZart: 'rgb(220, 239, 239)', weiss: 'rgb(255, 255, 255)',
+  tinte: 'rgb(21, 49, 74)', rand: 'rgb(120, 138, 128)', durchsichtig: 'rgba(0, 0, 0, 0)'};
+const BAUSTEINE = {
+  '.primary-button': {hintergrund: KOMPASS.petrol, schrift: KOMPASS.weiss, rand: KOMPASS.petrol, groesse: [17, 20]},
+  '.secondary-button:not(.visual-choice *)': {hintergrund: KOMPASS.weiss, schrift: KOMPASS.petrolDunkel, rand: KOMPASS.petrol, groesse: [17, 20]},
+  '.speech-button': {hintergrund: KOMPASS.durchsichtig, schrift: KOMPASS.petrolDunkel, groesse: [16, 19]},
+  '.quiz-answer:not(:disabled)': {hintergrund: KOMPASS.weiss, schrift: KOMPASS.tinte, rand: KOMPASS.rand, groesse: [18, 21]},
+  '.visual-choice button[aria-pressed="true"]': {hintergrund: KOMPASS.petrolZart, schrift: KOMPASS.tinte, rand: KOMPASS.petrol, groesse: [16, 19]},
+};
+async function bausteine(page, wo, auswahlen) {
+  const messen = () => page.evaluate(liste => liste.map(auswahl => {
+    const el = [...document.querySelectorAll(auswahl)].find(e => e.checkVisibility());
+    if (!el) return null;
+    const c = getComputedStyle(el);
+    return {hintergrund: c.backgroundColor, schrift: c.color, rand: c.borderTopColor, groesse: parseFloat(c.fontSize), hoehe: el.getBoundingClientRect().height};
+  }), auswahlen);
+  // Wie die Pass-Einstellung: .large-reading an der App und an offenen Dialogen.
+  const schalten = an => page.evaluate(an => document.querySelectorAll('.earth-app, [role="dialog"]').forEach(e => e.classList.toggle('large-reading', an)), an);
+  const vorher = await page.evaluate(() => document.querySelector('.earth-app').classList.contains('large-reading'));
+  try {
+    await schalten(false);
+    const normal = await messen();
+    await schalten(true);
+    const gross = await messen();
+    auswahlen.forEach((auswahl, i) => {
+      const soll = BAUSTEINE[auswahl], n = normal[i], g = gross[i];
+      assert.ok(n && g, `bausteine ${wo}: ${auswahl} nicht sichtbar`);
+      for (const art of ['hintergrund', 'schrift', 'rand']) if (soll[art]) assert.equal(n[art], soll[art], `bausteine ${wo}: ${auswahl}, Farbe ${art}`);
+      assert.ok(n.hoehe >= 47.5, `bausteine ${wo}: ${auswahl} ist ${n.hoehe} px hoch`);
+      assert.deepEqual([n.groesse, g.groesse], soll.groesse, `bausteine ${wo}: ${auswahl}, Schrift normal und groß`);
+    });
+  } finally {
+    await schalten(vorher);
+  }
+}
+// Fokus per Tastatur: Ein Tab setzt die Tastaturbedienung, danach bekommt der Baustein den Fokus.
+async function fokusRahmen(page, wo, auswahl) {
+  await page.keyboard.press('Tab');
+  const rahmen = await page.evaluate(auswahl => {
+    const el = [...document.querySelectorAll(auswahl)].find(e => e.checkVisibility());
+    el.focus();
+    const c = getComputedStyle(el);
+    return {sichtbar: el.matches(':focus-visible'), art: c.outlineStyle, breite: c.outlineWidth, farbe: c.outlineColor, luft: c.outlineOffset};
+  }, auswahl);
+  assert.deepEqual(rahmen, {sichtbar: true, art: 'solid', breite: '3px', farbe: KOMPASS.petrol, luft: '2px'}, `fokusRahmen ${wo}: ${auswahl}`);
+}
+async function bausteineUeberall(page, width) {
+  // Start (sofort geladen)
+  await bausteine(page, `Start ${width}`, ['.primary-button', '.secondary-button:not(.visual-choice *)']);
+  await fokusRahmen(page, `Start ${width}`, '.primary-button');
+  // Karte (nachgeladen)
+  await page.evaluate(() => { location.hash = 'world/topic/animal-koala'; });
+  await page.locator('.wissenskarte .rate-mal .quiz-answer').first().waitFor();
+  await bausteine(page, `Karte ${width}`, ['.secondary-button:not(.visual-choice *)', '.quiz-answer:not(:disabled)']);
+  await fokusRahmen(page, `Karte ${width}`, '.wissenskarte .rate-mal .quiz-answer');
+  // Reise (nachgeladen): Kapitel mit Wahlknöpfen, Vorlesen und Antworten
+  await page.evaluate(() => { location.hash = 'journeys/water/1'; });
+  await page.locator('.journey-reader .visual-choice button').first().waitFor();
+  await bausteine(page, `Reise ${width}`, ['.primary-button', '.speech-button', '.quiz-answer:not(:disabled)', '.visual-choice button[aria-pressed="true"]']);
+  await fokusRahmen(page, `Reise ${width}`, '.journey-reader .speech-button');
+  // Spiel (nachgeladen): „Wer war das?“
+  const fertig = ladeanfragen(page);
+  await fertig();
+  await bereich(page, 'games').click();
+  await page.locator('[data-game-key="world:people"]').click();
+  await page.locator('.world-game-room .quiz-answers .quiz-answer').first().waitFor();
+  await bausteine(page, `Spiel ${width}`, ['.speech-button', '.quiz-answer:not(:disabled)']);
+  await fokusRahmen(page, `Spiel ${width}`, '.world-game-room .quiz-answer');
+  // Pass (Dialog)
+  await page.getByRole('button', {name: 'Entdeckerpass öffnen', exact: true}).click();
+  await page.locator('.passport-atlas .primary-button').first().waitFor();
+  await bausteine(page, `Pass ${width}`, ['.primary-button', '.secondary-button:not(.visual-choice *)']);
+  await fokusRahmen(page, `Pass ${width}`, '.passport-atlas .primary-button');
+}
+
+// Die Seite nutzt Nunito, 18 px und das Kartenpapier des Designs „Kompass“ (#EDF1EA).
 async function grundlage(page, width) {
   const info = await page.evaluate(async () => {
     await document.fonts.ready;
@@ -82,7 +165,7 @@ async function grundlage(page, width) {
   });
   assert.ok(info.nunito, `grundlage ${width}: Schrift „Nunito Variable“ ist nicht geladen`);
   assert.equal(info.fontSize, '18px', `grundlage ${width}: Fließtext`);
-  assert.equal(info.background, 'rgb(250, 248, 243)', `grundlage ${width}: Seitenhintergrund`);
+  assert.equal(info.background, 'rgb(237, 241, 234)', `grundlage ${width}: Seitenhintergrund`);
   assert.match(info.fontFamily, /^"?Nunito Variable"?/, `grundlage ${width}: Schriftliste`);
   // Namen wie „Białowieża“ oder „Chișinău“ bleiben in einer Schrift: Nunito bringt den erweiterten lateinischen Satz mit.
   // („ō“ in „Hōryū-ji“ setzt schon der Grundsatz aus „o“ und Strich zusammen; „ł“, „ż“, „ș“ gehen nicht so.)
@@ -135,7 +218,7 @@ async function tastaturFokus(page) {
   });
   assert.equal(ring.style, 'solid', 'tastaturFokus: Rahmenart');
   assert.ok(ring.width >= 2, `tastaturFokus: Rahmen zu dünn (${ring.width} px)`);
-  assert.equal(ring.color, 'rgb(14, 110, 114)', 'tastaturFokus: Rahmenfarbe');
+  assert.equal(ring.color, 'rgb(11, 107, 115)', 'tastaturFokus: Rahmenfarbe (Petrol)');
 }
 
 // Eine Leiste mit sechs Wörtern: groß genug, nicht abgeschnitten, gut lesbar, am richtigen Platz.

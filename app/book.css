@@ -1,7 +1,6 @@
 /* Reference pages share the learning palette, with quiet lists and readable measures. */
 .knowledge-book .book-navigation{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:5px;align-items:center;margin-bottom:24px;min-width:0}
 .book-navigation .area-scroll{display:grid;place-items:center;min-width:44px;min-height:48px;padding:0;border:1px solid var(--wk-line);border-radius:8px;background:var(--wk-paper);color:var(--wk-ink)}
-.book-navigation .area-scroll:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px}
 .knowledge-book :is(h3,summary)[data-route-focus]:focus{outline:2px solid var(--wk-focus);outline-offset:4px}
 .knowledge-book .book-navigation[data-strip-overflow=false]{grid-template-columns:minmax(0,1fr)}
 .book-navigation[data-strip-overflow=false]>.area-scroll{display:none}
@@ -28,11 +27,10 @@
 .large-reading .knowledge-book .word-card :is(h3,h4){font-size:30px}
 .large-reading .knowledge-book .why-card>summary{font-size:22px}
 @media(max-width:650px){.knowledge-book .word-grid,.knowledge-book .atlas-grid{grid-template-columns:1fr}.knowledge-book .book-navigation{margin-bottom:20px}}
-@media(forced-colors:active){.book-navigation .area-scroll:focus-visible{outline-color:CanvasText}.knowledge-book :is(.word-card,.atlas-country,.why-card){border-color:CanvasText}}
+@media(forced-colors:active){.knowledge-book :is(.word-card,.atlas-country,.why-card){border-color:CanvasText}}
 .knowledge-book .speech-button{min-height:48px;margin-inline-end:16px;margin-block-start:8px}
 .knowledge-book .why-card>summary>svg{color:var(--wk-teal)}
-.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline:2px solid var(--wk-focus);outline-offset:2px;box-shadow:none!important;border-color:transparent!important}
-@media(forced-colors:active){.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{outline-color:CanvasText}}
+.knowledge-book .book-tabs [data-slot=tabs-trigger]:focus-visible{box-shadow:none!important;border-color:transparent!important}
 
 .book-heat-figure{margin:20px 0}.book-heat-figure .book-model-key{padding-inline-start:24px;line-height:1.75}.book-heat-figure li+li{margin-top:8px}
 

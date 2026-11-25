@@ -12,7 +12,6 @@
 .research-workbench textarea{display:block;width:100%;font:inherit;color:inherit;background:#fff;border:1px solid #a8bec8;border-radius:10px;padding:12px;margin-top:10px;resize:vertical;min-height:84px}
 .research-workbench label,.research-measurements label{display:block;line-height:1.6;font-weight:600}
 .research-workbench input[type=range]{display:block;width:100%;min-height:44px;accent-color:#276c88}
-.research-workbench input:focus-visible,.research-workbench textarea:focus-visible{outline:3px solid #276c88;outline-offset:3px}
 .research-workbench .model-buttons,.research-workbench .model-chip-row{display:flex;flex-wrap:wrap;gap:10px}
 .research-workbench button{white-space:normal;line-height:1.5;min-height:46px}
 .research-workbench .tilt-switch{display:flex;gap:12px;align-items:center}.research-workbench .tilt-switch [data-slot=switch]{width:64px;height:44px;min-height:44px;padding:5px;border:1px solid #527c8e}.research-workbench .tilt-switch [data-slot=switch-thumb]{width:28px;height:28px;flex-shrink:0;background:#fff!important;border:1px solid #b2c9d3;--tw-translate-x:0px;--tw-translate-y:0px;transform:none}.research-workbench .tilt-switch [data-slot=switch-thumb][data-state=checked]{--tw-translate-x:24px;transform:none}
@@ -52,7 +51,7 @@
 .experiment-method .fact-callout p{margin:0}
 .experiment-card .experiment-limit{font-size:16px;color:var(--wk-muted)}
 .experiment-method>.discovery-text-link{display:flex;width:fit-content;align-items:center;min-height:48px;margin:0 0 16px;font-size:16px}
-.experiment-method>.secondary-button{font-size:16px;min-height:48px;white-space:normal;text-align:left;line-height:1.5}
+.experiment-method>.secondary-button{min-height:48px;white-space:normal;text-align:left;line-height:1.5}
 .large-reading .experiment-card :is(p,h3,li,summary,a,button){font-size:20px!important;line-height:1.7}
 @media(max-width:700px){.experiment-body{grid-template-columns:minmax(0,1fr);gap:8px}}
 .research-mission-checks{display:grid;gap:12px;margin-block:16px}.research-mission-checks label{display:flex;align-items:center;gap:12px;min-height:44px;font-weight:400}.research-mission-checks input{width:22px;height:22px;flex-shrink:0;accent-color:#276c88}.mission-research{display:grid;gap:12px;margin-block:14px;padding-block:14px;border-block:1px solid #d8e6eb}
