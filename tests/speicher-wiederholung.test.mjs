@@ -6,7 +6,7 @@ import { createProgressStore } from '../app/local-progress-store.ts';
 // Eigene Datei: progress-storage merkt sich die erste gelungene Datenbank-Verbindung je Prozess.
 // Hier ist IndexedDB absichtlich kaputt (Öffnen und Schreiben schlagen fehl) und lässt sich auf „geht“ schalten.
 // Die Zeit ist simuliert (mock.timers), damit sich Sekunden ohne Warten prüfen lassen.
-const idb = { modus: 'kaputt', versuche: 0, persisted: undefined };
+const idb = { modus: 'kaputt', versuche: 0, persisted: undefined, journalVoll: false };
 const fehler = () => new Error('IndexedDB kaputt (Test)');
 const db = {
   objectStoreNames: { contains: () => true },
@@ -34,10 +34,15 @@ function umgebung() {
   const keys = ['localStorage', 'window', 'document', 'BroadcastChannel', 'indexedDB'];
   const original = new Map(keys.map(k => [k, Object.getOwnPropertyDescriptor(globalThis, k)]));
   const data = new Map();
+  const doc = { hidden: false, listeners: {}, addEventListener(type, fn) { doc.listeners[type] = fn; } };
   const fake = {
-    localStorage: { getItem: k => data.get(k) ?? null, setItem: (k, v) => data.set(k, v), removeItem: k => data.delete(k) },
+    localStorage: {
+      getItem: k => data.get(k) ?? null,
+      setItem: (k, v) => { if (idb.journalVoll) throw new Error('Browser-Speicher voll (Test)'); data.set(k, v); },
+      removeItem: k => data.delete(k),
+    },
     window: { addEventListener() {} },
-    document: { addEventListener() {} },
+    document: doc,
     BroadcastChannel: undefined,
     indexedDB: {
       open() {
@@ -50,7 +55,7 @@ function umgebung() {
   };
   for (const [key, value] of Object.entries(fake)) Object.defineProperty(globalThis, key, { configurable: true, writable: true, value });
   idb.modus = 'kaputt'; idb.versuche = 0;
-  return { data, weg() { for (const [key, d] of original) if (d) Object.defineProperty(globalThis, key, d); else delete globalThis[key]; } };
+  return { data, doc, weg() { for (const [key, d] of original) if (d) Object.defineProperty(globalThis, key, d); else delete globalThis[key]; } };
 }
 const ruhe = async () => { await new Promise(r => setImmediate(r)); await new Promise(r => setImmediate(r)); };
 async function warte(t, ms) { for (let i = 0; i < ms; i += 100) { t.mock.timers.tick(100); await ruhe(); } }
@@ -130,6 +135,43 @@ test('Neuerer Pass bleibt geschützt: keine Wiederholung, Hinweis bleibt sichtba
     assert.equal(u.data.get(SAVE_KEY), neuer, 'der neuere Pass ist unverändert');
     assert.match(store.getSnapshot().notice, /neuerer Pass/);
   } finally { u.weg(); }
+});
+
+test('Zurück im Tab: gleich ein neuer Versuch statt nach der langen Pause; beim Verlassen sofort', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const u = umgebung();
+  try {
+    const store = createProgressStore(); await store.start(); await warte(t, 8000);
+    // Versuche bei 0,2 / 1,2 / 3,2 / 7,2 s, jetzt läuft eine Pause von 8 s.
+    store.update(p => ({ ...p, favorites: ['space-moon'] }));
+    const vorher = idb.versuche;
+    await warte(t, 500);
+    assert.equal(idb.versuche, vorher, 'in der Pause kein Versuch');
+    u.doc.hidden = false; u.doc.listeners.visibilitychange();
+    await warte(t, 300);
+    const zurueck = idb.versuche;
+    assert.ok(zurueck > vorher, 'nach der Rückkehr gleich ein Versuch');
+    u.doc.hidden = true; u.doc.listeners.visibilitychange(); await ruhe();
+    assert.ok(idb.versuche > zurueck, 'beim Verlassen sofort ein Versuch, ohne Pause');
+    assert.deepEqual(imJournal(u.data).favorites, ['space-moon']);
+  } finally { u.weg(); }
+});
+
+test('Ist auch der Browser-Speicher voll, bleibt die Pause kurz (höchstens 2 s)', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const u = umgebung();
+  idb.journalVoll = true;
+  try {
+    const store = createProgressStore(); await store.start();
+    store.update(p => ({ ...p, favorites: ['space-moon'] }));
+    const vorher = idb.versuche;
+    await warte(t, 30_000);
+    // Der Pass liegt nur im Arbeitsspeicher. Mit der langen Pause wären es in 30 s nur 5 Versuche, so etwa 16.
+    const versuche = idb.versuche - vorher;
+    assert.ok(versuche >= 12, `Versuche in 30 s: ${versuche}`);
+    assert.equal(store.getSnapshot().storage, 'session');
+    assert.deepEqual(store.getSnapshot().save.progress.favorites, ['space-moon'], 'im Arbeitsspeicher noch da');
+  } finally { idb.journalVoll = false; u.weg(); }
 });
 
 // Zuletzt: Danach ist die Datenbank-Verbindung für diesen Prozess gemerkt.

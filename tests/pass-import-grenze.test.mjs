@@ -34,7 +34,7 @@ async function gestartet(u, favorites = ['topic:animal-elephant']) {
   return store;
 }
 
-test('2,3 MB große, gültige Sicherung lässt sich wiederherstellen (früher lehnte der Store sie ab)', async t => {
+test('Gültige Sicherung über der alten Grenze (2,3 MB) lässt sich wiederherstellen (früher lehnte der Store sie ab)', async t => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   const u = umgebung();
   try {

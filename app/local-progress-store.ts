@@ -16,8 +16,9 @@ export function createProgressStore() {
   let flushing: Promise<void>|undefined, started = false;
   // Fehlgeschlagene Datenbank-Schreibversuche: Danach wird mit wachsender Pause wiederholt (1 s, 2 s, 4 s … höchstens 30 s),
   // nie aufgegeben. Der Pass steht dabei weiter bei jeder Änderung sofort im Journal (localStorage).
-  let failures = 0, pending = false;
-  const delay = () => failures ? Math.min(30_000, 1000*2**(failures-1)) : 200;
+  // Schlägt auch das Journal fehl (Speicher voll oder gesperrt), liegt der Pass nur im Arbeitsspeicher: dann höchstens 2 s Pause.
+  let failures = 0, pending = false, journalSafe = true;
+  const delay = () => failures ? Math.min(journalSafe ? 30_000 : 2_000, 1000*2**(failures-1)) : 200;
   const listeners = new Set<() => void>();
   // Meldet nur echte Änderungen. Sonst sähe React bei jedem gleichen Fehler einen neuen Zustand und zeichnete neu.
   const emit = (patch: Partial<Snapshot>) => {
@@ -42,7 +43,7 @@ export function createProgressStore() {
     const merged=dirty?mergeSaves(base,state.save,remote):mergeSaves(base,base,remote);
     if((merged.epochAt??0)<(state.save.epochAt??0))return;
     base=remote;
-    if(replaced){generation++;dirty=false;}
+    if(replaced){generation++;dirty=false;failures=0;stop();}
     emit({save:merged,...(replaced?{restoreRevision:state.restoreRevision+1}: {})});
   };
   const writeJournal = () => {
@@ -76,7 +77,7 @@ export function createProgressStore() {
         const next=mergeSaves(sent,state.save,persisted);base=persisted;dirty=!same(next.progress,persisted.progress);
         emit({save:next,storage:'database',available:true});writeJournal();
       } catch {
-        if(tick===generation&&!readOnly){failures++;emit({storage:localOK?'browser':'session',available:localOK});}
+        if(tick===generation&&!readOnly){failures++;journalSafe=localOK;emit({storage:localOK?'browser':'session',available:localOK});}
       }
     })().finally(()=>{flushing=undefined;if(dirty&&!readOnly)schedule();});
     return flushing;
@@ -120,7 +121,7 @@ export function createProgressStore() {
   return { getSnapshot:()=>state, subscribe:(fn:()=>void)=>{listeners.add(fn);return()=>{listeners.delete(fn);};}, start, update, flush,
     reset:()=>replace(createSave(),'Dein Entdeckerpass beginnt neu.',false).then(()=>{try{localStorage.removeItem(LEGACY_KEY);}catch{}}),
     // Zeichen sind nie mehr als Bytes: Was die Dateiauswahl annimmt, nimmt auch der Store an.
-    importSave:async(raw:string)=>{if(raw.length>MAX_IMPORT_BYTES)throw new Error('Die Datei ist zu groß.');return replace(restoreSave(JSON.parse(raw),true),'Dein Entdeckerpass wurde wiederhergestellt.',true);},
+    importSave:async(raw:string)=>{if(raw.length>MAX_IMPORT_BYTES)throw new Error('Diese Sicherung ist zu groß zum Öffnen. Dein Pass auf diesem Gerät bleibt, wie er ist.');return replace(restoreSave(JSON.parse(raw),true),'Dein Entdeckerpass wurde wiederhergestellt.',true);},
     // Lesbar eingerückt; passt das nicht unter die Grenze, kompakt in einer Zeile (deutlich kleiner), damit sich die Datei wieder öffnen lässt.
     backup:()=>{const lesbar=JSON.stringify(state.save,null,2);return byteLaenge(lesbar)<=MAX_IMPORT_BYTES?lesbar:JSON.stringify(state.save);} };
 }
