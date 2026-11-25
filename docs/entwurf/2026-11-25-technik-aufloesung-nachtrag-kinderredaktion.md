@@ -1,8 +1,8 @@
 # Kinder-Redaktion: Nachtrag Technik-Auflösungen (25.11.2026)
 
-Helfer: `kinder-redaktion` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen folgen nach allen drei Prüfungen.
+Helfer: `kinder-redaktion` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen: [Nachtrag-Entwurf, Abschnitt 7](2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
 
-Geprüft habe ich `/home/user/wunderkompass/docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md`. Zum Vergleich habe ich die Endfassung, meine frühere Prüfung und den Spieltest gelesen, dazu die drei Karten in `app/world-catalog.json` und die Tipps in `app/world-game-support.mjs` (Zeilen 110–193). Die Zeichen habe ich **von Hand gezählt**. Bei camera-A komme ich auf 173, der Autor auf 174. Bitte meine Fassungen vor dem Einbau durch das Zählskript laufen lassen.
+Geprüft habe ich `docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md`. Zum Vergleich habe ich die Endfassung, meine frühere Prüfung und den Spieltest gelesen, dazu die drei Karten in `app/world-catalog.json` und die Tipps in `app/world-game-support.mjs` (Zeilen 110–193). Die Zeichen habe ich **von Hand gezählt**. Bei camera-A komme ich auf 173, der Autor auf 174. Bitte meine Fassungen vor dem Einbau durch das Zählskript laufen lassen.
 
 ### 1. Gesamteindruck
 

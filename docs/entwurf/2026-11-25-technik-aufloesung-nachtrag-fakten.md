@@ -1,8 +1,8 @@
 # Faktenprüfung: Nachtrag Technik-Auflösungen (25.11.2026)
 
-Helfer: `fakten-pruefer` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen folgen nach allen drei Prüfungen.
+Helfer: `fakten-pruefer` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen: [Nachtrag-Entwurf, Abschnitt 7](2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
 
-Geprüft habe ich `/home/user/wunderkompass/docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md`, und zwar gegen die Karten `invention-car`, `invention-smartphone` und `invention-camera` in `/home/user/wunderkompass/app/world-catalog.json`. Alle unten genannten Quellen habe ich selbst geöffnet, außer wo ich etwas anderes schreibe. Dateien habe ich nicht geändert.
+Geprüft habe ich `docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md`, und zwar gegen die Karten `invention-car`, `invention-smartphone` und `invention-camera` in `app/world-catalog.json`. Alle unten genannten Quellen habe ich selbst geöffnet, außer wo ich etwas anderes schreibe. Dateien habe ich nicht geändert.
 
 **Ergebnis:** Keine Fassung ist falsch. Bei camera-B erzeugt der Plakat-Vergleich eine Fehlvorstellung und sollte heraus. Bei smartphone-B und smartphone-A schlage ich kleine Änderungen vor. Keine Fassung widerspricht ihrer Karte.
 
@@ -96,4 +96,4 @@ Geprüft habe ich `/home/user/wunderkompass/docs/entwurf/2026-11-25-technik-aufl
 - Eine Quelle zur typischen Leerlaufdrehzahl von Autos habe ich nicht gesucht. Das Urteil zu car-B hält auch bei einem einzigen Zylinder.
 - Stil, Wortwahl für Kinder („Stempel“, „Linse“, „Mast“) und Ratemuster sind Sache von `kinder-redaktion` und `stufen-pruefer`.
 
-Heruntergeladene Quelltexte liegen in `/tmp/claude-0/-home-user-wunderkompass/cbdee1fe-c6aa-57c6-9ce7-3cd85e45a5e9/scratchpad/fp2/` (unter anderem `unt1.txt`, `sn_hand.txt`, `prophys_raw.txt`, `bamberg_otto.txt`, `nobel.html`, `aip.html`, `kba.html`).
+Heruntergeladene Quelltexte liegen in `Arbeitsordner (nicht im Repository) fp2/` (unter anderem `unt1.txt`, `sn_hand.txt`, `prophys_raw.txt`, `bamberg_otto.txt`, `nobel.html`, `aip.html`, `kba.html`).

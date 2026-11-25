@@ -181,6 +181,15 @@ test('jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiede
    assert.ok(!(' '+normalize(text)).includes(' '+name),t.id+' nennt '+o.title+' („'+name+'“)');
  }
 });
+// Technik-Detektiv: Nach einer falschen Antwort prüft das Kind die gewählte Erfindung, auf allen Stufen, statt den Tipp ein
+// zweites Mal zu lesen (Nachtrag Technik-Auflösungen, Abschnitt 7).
+test('Technik-Detektiv: nach falscher Antwort ein eigener Prüfsatz statt des Tipps',()=>{
+ for(const q of worldGameBank('technology'))for(const stufe of ['entdecker','profi','experte',undefined]){
+  const wrong=q.answers.find((_,i)=>i!==q.correct),feedback=worldGameWrongFeedback('technology',q,wrong,stufe);
+  assert.equal(feedback,'Du hast „'+wrong+'“ gewählt. Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?',q.id);
+  assert.ok(!feedback.includes(worldGameHint('technology',q,stufe)),q.id+': wiederholt den Tipp');
+ }
+});
 // Eine Auflösung nennt keine andere Person aus dem Spiel, sonst verrät sie eine Falle oder ein späteres Ziel; der Profi-Tipp
 // ist für alle gleich und nennt niemanden (Stufen-Prüfung Auflösungen, Tests 2 und 4). Nur Bertha und Karl Benz dürfen sich nennen.
 test('Auflösungen und Profi-Tipp verraten keine andere Person',()=>{

@@ -1,8 +1,8 @@
 # Stufen-Prüfung: Nachtrag Technik-Auflösungen (25.11.2026)
 
-Helfer: `stufen-pruefer` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen folgen nach allen drei Prüfungen.
+Helfer: `stufen-pruefer` (opus / high), geprüft: [Nachtrag-Entwurf](2026-11-25-technik-aufloesung-nachtrag-entwurf.md). Entscheidungen: [Nachtrag-Entwurf, Abschnitt 7](2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
 
-Geprüft habe ich `/home/user/wunderkompass/docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md` am Code im Arbeitsordner `/tmp/claude-0/-home-user-wunderkompass/cbdee1fe-c6aa-57c6-9ce7-3cd85e45a5e9/scratchpad/wt-tech/`. Dazu gehören `app/world-game-bank.ts` (Zeile 51 bis 59), `app/world-game-runde.ts`, `app/world-game-support.mjs`, `app/world-game-fallen.json` und `app/world-catalog.json`. Ich habe keine Datei geändert. Meine Vorschläge habe ich mit dem Zählskript des `karten-autor` nachgezählt (`.../scratchpad/karten-autor/pruef.cjs`). Die Eingaben liegen in `/tmp/claude-0/-home-user-wunderkompass/cbdee1fe-c6aa-57c6-9ce7-3cd85e45a5e9/scratchpad/stufen/v.json`.
+Geprüft habe ich `docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md` am Code im Arbeitsordner ``. Dazu gehören `app/world-game-bank.ts` (Zeile 51 bis 59), `app/world-game-runde.ts`, `app/world-game-support.mjs`, `app/world-game-fallen.json` und `app/world-catalog.json`. Ich habe keine Datei geändert. Meine Vorschläge habe ich mit dem Zählskript des `karten-autor` nachgezählt (`.../scratchpad/karten-autor/pruef.cjs`). Die Eingaben liegen in `Arbeitsordner (nicht im Repository) stufen/v.json`.
 
 ## 1. Gesamteindruck
 

@@ -11,6 +11,7 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 - Teil B PR 2 = Kreuz und quer und die Klassik-Spiele mit Stufen (PR #114, [Entscheidungen 19 bis 35](docs/entwurf/2026-11-24-teil-b-entscheidungen.md), [Design-Prüfung](docs/entwurf/2026-11-24-teil-b-pr2-design-pruefung.md)).
 - Technik-PR nach den Analysen (PR #116): Speichern nach Fehlern mit wachsender Pause, eine Größengrenze für Sicherungen, feste Paketversionen.
 - Personen-Rätsel „Wer war das?“ (PR #117, [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md)): eigenes Rätsel für alle 36 Menschen, Entdecker liest Satz 1, Fallen nach Gebiet.
+- „Auflösung und Rückmeldung im Blick“ (PR #118, [Endfassung](docs/entwurf/2026-11-25-spiel-aufloesung-endfassung.md)): kurze Auflösung je Person nach „Richtig!“, Tipps in Kinderton, Rückmeldung nach jeder Antwort ganz über der Leiste.
 - Bilder-Strang, erster Teil (PR #113): alle 24 KI-Tierbilder durch Fotos ersetzt, 8 Personen, Einbau-Werkzeug `scripts/foto-einbau.mjs`.
 - **Entschieden am 25.11.2026:** Der Nutzer nimmt beide Empfehlungen an: die Regel „neue oder geänderte Vollprüfungs-Suite vor dem Commit selbst laufen lassen“ (jetzt in `CLAUDE.md`, Arbeitsablauf Punkt 4) und zwei Stilproben fürs Design, mit dem Auftrag „beim Design sei kreativ“.
 - **Entschieden am 25.11.2026 (Design):** Der Nutzer folgt der Empfehlung: Stilprobe C „Kompass“ wird das neue Design, der Stempel kommt am Spielende. Dazu freie Hand bei Anordnung, Reihenfolge, Überschriften, Leisten und Darstellung, auch für künftige Erweiterungen (Regel „Gestaltung frei“ in `CLAUDE.md`).
@@ -28,8 +29,8 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 
 Phase 1 hat sechs Teilschritte: 1 Hülle (fertig) · 2 Wissenskarte (fertig) · **3 Kniffliger spielen** · 4 Weltenseiten und Bilder · 5 Startseite und Sammlung · 6 Feinschliff.
 
-1. **PR „Auflösung und Rückmeldung im Blick“** (gebaut und geprüft, im Arbeitsbranch; Prüfkette, Vorschau und PR folgen): kurze Auflösung je Person nach „Richtig!“, Tipps in Kinderton für fünf Welt-Spiele, Rückmeldung nach jeder Antwort im Bild samt Tab-Weg bei hohem Kasten (`app/kern/spiel-fokus.ts`). [Endfassung](docs/entwurf/2026-11-25-spiel-aufloesung-endfassung.md) mit allen Prüfberichten und dem Aufgeschobenen; neue Suite `spiel-fokus` im CI-Satz.
-2. **Kurze Auflösungen im Technik-Detektiv** (BACKLOG Punkt 25, „Auflösung und Rückmeldung, Rest“; „Wachsen lassen“): 12 Erklärungen mit Zwischenüberschriften und Fachwörtern werden 2 bis 3 Sätze wie bei den Menschen. `karten-autor` schreibt den Entwurf (läuft seit 25.11.2026 oder `docs/entwurf/2026-11-25-technik-aufloesung-entwurf.md`), danach `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`. Danach Tierdetektiv, Tierzuhause, Futter.
+1. **Technik-PR „Technik-Detektiv: So funktioniert die Erfindung“** (gebaut, im Arbeitsbranch `claude/wunderkompass-weiter-tz194g`; Prüfkette, große Suiten, Vorschau und PR laufen in diesem Chat): 24 kurze Auflösungen, neuer Tipp, eigener Satz nach falscher Antwort, neuer Text der Spielkarte, neue Frage nicht hinter der Leiste (S2 aus der [Technik-Prüfung](docs/entwurf/2026-11-25-spaeter-fund-fokusrahmen.md)), Rückmeldung höchstens 65 Zeichen breit. [Endfassung](docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md), [Nachtrag mit Entscheidungen](docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
+2. **Design-Umbau Schritt 1 „Farben, Fokus, Knöpfe“** (nach dem Merge des Technik-PR, am besten im neuen Chat): [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md) mit Bestand und Prüfplan; „Was ist neu?“ dazu als Eintrag B aus dem [Entwurf](docs/entwurf/2026-11-25-neuigkeiten-technik-farben-entwurf.md) mit [Kinder-Redaktion](docs/entwurf/2026-11-25-neuigkeiten-technik-farben-kinderredaktion.md). Kleine Schritte nebenher: Kartenkorrekturen (BACKLOG, „Kartenkorrekturen dazu“), danach kurze Auflösungen für Tierdetektiv, Tierzuhause und Futter.
 3. **Design-Umbau „Kompass“:** [Entwurf in sieben Schritten](docs/entwurf/2026-11-25-design-umbau.md) (freigegeben am 25.11.2026; Gegenlesen durch `code-pruefer`, Bericht `…-design-umbau-codepruefung.md`). Schritt 1 Farben, Fokus, Knöpfe; 2 Schriften; 3 Hülle; 4 Start und Welten; 5 Karte; 6 Spielbrett mit Stempel am Spielende; 7 Rest und Aufräumen. [Bestand im Code](docs/entwurf/2026-11-25-design-umbau-bestand.md).
 4. **PR 3 = Aufgaben 10 und 12** („Rekorde der Natur“, „Wetter und Klima“, „Sortiere die Zeit“, kleine Spiele zusammenlegen) mit dem [Experten-Nachtrag](docs/entwurf/2026-11-24-stimmt-das-experte-nachtrag-endfassung.md), nach Umbau-Schritt 2 und vor Schritt 6. Dann PR 4 = Länder ([Ideen](docs/entwurf/2026-11-24-laender-spiele-ideen.md)).
 5. **Bilder im Hintergrund** (BACKLOG Punkt 26): Mandela einbauen (`File:Nelson Mandela 1994.jpg`, [Bericht](docs/entwurf/2026-11-24-bilder-mandela.md)), dann Zeitreise und Erfindungen ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)), vor Umbau-Schritt 4 ein freies Foto für „Wissenschaft & Weltall“.
@@ -37,16 +38,17 @@ Phase 1 hat sechs Teilschritte: 1 Hülle (fertig) · 2 Wissenskarte (fertig) · 
 ## Helfer beim Einstieg
 
 Gleich nach `/weiter` starten diese Helfer im Hintergrund (Regel „Helfer starten mit jedem Chat“ in `CLAUDE.md`). Hier bei jedem Meilenstein nachführen.
-- `code-pruefer`: nichts Offenes (Design-Umbau-Entwurf gelesen, [Bericht](docs/entwurf/2026-11-25-design-umbau-codepruefung.md); „Auflösung“ geprüft). Wieder bei Umbau-Schritt 1.
-- `karten-autor`: kurze Auflösungen im Technik-Detektiv (läuft oder Entwurf `docs/entwurf/2026-11-25-technik-aufloesung-entwurf.md`).
-- `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`: den Technik-Entwurf unabhängig gegenlesen, sobald er vorliegt.
+- `code-pruefer`: Umbau-Schritt 1 nach dem Bau (Löschungen in `globals.css`, nachgeladene Teile; [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md), Punkt 8).
+- `karten-autor`: kurze Auflösungen für Tierdetektiv, Tierzuhause und Futter (2 bis 3 Sätze je Aufgabe wie bei Menschen und Technik; Muster in `TECHNIK_AUFLOESUNG` und [Endfassung Technik](docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md)); dazu die Kartenkorrekturen (BACKLOG, „Kartenkorrekturen dazu“) als Textvorschlag mit Quelle.
+- `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`: diese Entwürfe unabhängig gegenlesen, sobald sie vorliegen.
 - `bild-recherche`: Zeitreise und Erfindungen ohne Bild weiter ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)); dazu ein freies Foto für „Wissenschaft & Weltall“ (Design-Umbau Schritt 4).
-- `design-pruefer` und `spieltester`: bei jedem Umbau-Schritt; die „Auflösung“ haben beide zweimal geprüft.
+- `design-pruefer` und `spieltester`: Umbau-Schritt 1 an Bildern und im Browser, sobald er gebaut ist.
 - `technik-pruefer`: gerade nichts (nur nach einem späten Fund).
 - `ideen-scout`: gerade nichts (Design- und Länder-Ideen liegen vor).
 
 ## Offene Fragen an den Nutzer
 
+- **Regel „Engine-Sonderverhalten“?** Vorschlag aus der [Technik-Prüfung](docs/entwurf/2026-11-25-spaeter-fund-fokusrahmen.md) (S1), eine Zeile in `CLAUDE.md`, Arbeitsablauf 4: Wer Code oder eine Suite ändert, deren Kommentar ein Sonderverhalten von Firefox oder WebKit nennt, lässt genau diese Suite vor dem Commit einzeln in dieser Engine laufen (meist unter 30 s). Claude empfiehlt Ja; `CLAUDE.md` ändert sich erst nach dem OK. Bis dahin hält Claude es schon so.
 - **`spieltester`** ist Pilot (seit 24.11.2026); nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt.
 - **`main` schützen** macht der Nutzer selbst; Claude prüft es nur vor einer Veröffentlichung nach `main`. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen ruhigen Wochen (BACKLOG).
 

@@ -2,7 +2,7 @@
 
 Helfer: `karten-autor` (opus/high), nach dem [Spieltest](2026-11-25-spieltest-technik-aufloesung.md) (Soll 1 bis 3) und der [Design-Prüfung](2026-11-25-technik-aufloesung-design.md) (Soll 2). Ungeprüfter Entwurf; geprüft wird unabhängig.
 
-Ich habe keine Dateien geändert und meine Texte nicht selbst als geprüft eingestuft. Gelesen habe ich die Endfassung mit den Regeln unter „Nachgezählt“, den Spieltest, die Stufenprüfung und die Kinder-Redaktion dazu. Dazu kamen die drei Karten in `app/world-catalog.json` und der Aufgabenbau in `app/world-game-bank.ts` (Zeile 51). Die Grenzen der Endfassung habe ich mit einem eigenen Zählskript nachgezählt: `/tmp/claude-0/-home-user-wunderkompass/cbdee1fe-c6aa-57c6-9ce7-3cd85e45a5e9/scratchpad/karten-autor/pruef.cjs`, Fassungen in `.../karten-autor/d4.json`.
+Ich habe keine Dateien geändert und meine Texte nicht selbst als geprüft eingestuft. Gelesen habe ich die Endfassung mit den Regeln unter „Nachgezählt“, den Spieltest, die Stufenprüfung und die Kinder-Redaktion dazu. Dazu kamen die drei Karten in `app/world-catalog.json` und der Aufgabenbau in `app/world-game-bank.ts` (Zeile 51). Die Grenzen der Endfassung habe ich mit einem eigenen Zählskript nachgezählt: `Arbeitsordner (nicht im Repository) karten-autor/pruef.cjs`, Fassungen in `.../karten-autor/d4.json`.
 
 ## 1. Auflösungen (je A und B, Empfehlung zuerst)
 
@@ -114,7 +114,44 @@ Keine gespeicherten Antworten betroffen: Auflösung und Tipp sind keine Antworto
    - Die Spielkarte in `app/world-games.tsx` (Zeile 33) verspricht „Welche Teile gehören dazu?“, aber keine Aufgabe fragt nach Teilen.
    - Die Forscherfrage beim Mikroskop („Wie werden kleine Strukturen unterscheidbar?“) ist für 7-Jährige schwer (Spieltest, „Kann“). Ein Vorschlag dafür könnte als eigenes Paket kommen.
 
-Dateien:
-- `/tmp/claude-0/-home-user-wunderkompass/cbdee1fe-c6aa-57c6-9ce7-3cd85e45a5e9/scratchpad/wt-tech/app/world-game-support.mjs` (Objekt `TECHNIK_AUFLOESUNG`, ab Zeile 100; Tipp in Zeile 145, falsche Antwort in Zeile 224)
-- `/home/user/wunderkompass/docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md`
-- `/home/user/wunderkompass/docs/entwurf/2026-11-25-spieltest-technik-aufloesung.md`
+Dateien beim Schreiben: `app/world-game-support.mjs` (`TECHNIK_AUFLOESUNG`, Tipp, falsche Antwort), [Endfassung](2026-11-25-technik-aufloesung-endfassung.md), [Spieltest](2026-11-25-spieltest-technik-aufloesung.md).
+
+## 7. Entscheidungen
+
+Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-aufloesung-nachtrag-fakten.md), [Kinder-Redaktion](2026-11-25-technik-aufloesung-nachtrag-kinderredaktion.md) und [Stufen-Prüfung](2026-11-25-technik-aufloesung-nachtrag-stufen.md), dazu je eine Schlussrunde ([Kinder-Redaktion](2026-11-25-technik-aufloesung-nachtrag-kinderredaktion-schluss.md), [Stufen-Prüfung](2026-11-25-technik-aufloesung-nachtrag-stufen-schluss.md)). Eingebaut in `app/world-game-support.mjs`.
+
+**Eingebaut:**
+
+| Was | Text | Zeichen |
+|---|---|---|
+| Auto | „Das Auto fährt oft mit Benzin, das im Motor verbrennt. Heißes Gas braucht viel Platz und drückt ein Metallteil weg. Das Drücken dreht die Räder, wie deine Beine beim Radfahren.“ | ≤ 180 (Unit-Test) |
+| Smartphone | „Das Smartphone verwandelt deine Stimme in unsichtbare Funkwellen, wie beim Radio. Ein Funkmast in der Nähe fängt sie auf. Wenn du weit weggehst, übernimmt der nächste Mast.“ | 172 |
+| Kamera | „Die Kamera lenkt Licht mit einer Linse auf Millionen winziger Felder. Jedes Feld macht aus Licht etwas Strom: viel Licht, viel Strom. Die Kamera speichert alle Felder als ein Foto.“ | 180 |
+| Tipp (alle Stufen) | „Stell dir jede Erfindung bei der Arbeit vor. Welche passt zu allem, was in der Aufgabe steht?“ | |
+| Nach falscher Antwort | „Du hast „X“ gewählt. Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?“ (eigene Konstante `TECHNIK_FALSCH`, nicht mehr der Tipp) | |
+
+**Abwägungen:**
+
+- **Auto:** Grundlage B (Gas braucht Platz), aber mit dem Kurbelbild aus A, weil B nicht erklärt, wie aus dem Drücken eine Drehung wird (Faktenprüfung, Lücke). Das Bild ist durch AIP belegt.
+  - Kein „Stempel“ (Kinder-Redaktion: unbekannt in dieser Bedeutung), sondern „Metallteil“.
+  - Keine „Pedale“ (Stufen-Prüfung: erinnert an das Gaspedal), sondern „deine Beine beim Radfahren“.
+  - „nach unten“ fällt weg (Boxermotoren liegen flach). „viele Male pro Sekunde“ fällt weg (Platz; die Quellen haben dazu Zahlenfehler).
+  - Satz 3 mit Tunwort statt „eine Drehung der Räder“ (Kinder-Redaktion, Schlussrunde).
+- **Smartphone:** Fassung A mit „weit“ (Faktenprüfung: eine Funkzelle misst Kilometer, nicht einen Schritt) und geradem Satzbeginn „Wenn du …“ statt „Gehst du …“ (Kinder-Redaktion). „Ein Funkmast in der Nähe“ statt „ein naher Mast“.
+  - **Abgelehnt:** „Das Smartphone ist Telefon und kleiner Computer in einem“ (Stufen-Prüfung, Schlussrunde). „Telefon“ und „Computer“ sind Titel anderer Erfindungen im selben Spiel und oft Antworten daneben. Eine Auflösung nennt keine andere Erfindung (Unit-Test „jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiederholt“, Teil „keine andere Erfindung“, und Regel der Endfassung). Der Einwand bleibt richtig: Die Auflösung erklärt nur das Telefonieren. Das „Rechnen“ zeigt die Karte selbst.
+  - Fassung B (Touchscreen, Handschuh) kam nicht: Sie passt nicht zum Problem der Karte (unterwegs telefonieren). Der Handschuh ist eine Idee für „Mehr erfahren“ auf der Karte.
+- **Kamera:** Fassung A, sie gilt für heutige Geräte. Fassung B fiel wegen des Plakat-Vergleichs (Faktenprüfung: Ausbleichen sieht man sofort und macht hell, beim Negativ wird es dunkel).
+  - „Linse“ bleibt (Kinder-Redaktion: im Satz klar, gleiches Wort wie beim Mikroskop).
+  - Letzter Satz mit Subjekt vorn statt „Gespeichert ergeben alle Werte das Foto“ (Kinder-Redaktion). 180 Zeichen, also kein Zeichen mehr.
+- **Tipp:** Weder „das wichtigste Wort“ (Kinder-Redaktion: führt in die Wortfallen Telefon/Smartphone) noch „schafft genau das“ (Stufen-Prüfung: passt nicht zu Problem-Sätzen), sondern „zu allem, was in der Aufgabe steht“ (Stufen-Prüfung). Gilt für Problem, Beschreibung und Forscherfrage.
+- **Nach falscher Antwort:** Früher stand dort der Tipp ein zweites Mal. Jetzt prüft das Kind die gewählte Erfindung, mit denselben Worten wie im Tipp (Kinder-Redaktion, Schlussrunde), auf allen Stufen.
+
+**Quellen** (ersetzt nach der Faktenprüfung):
+
+- Kamera: Nobelprize.org, Physik 2009, Popular information, statt Canon.
+- Auto: US DOE (Kolben, Kurbelwelle), AIP SPS Observer 2014 (Kurbelbild) statt Haynes und Art of Manliness; KBA, Pressemitteilung 09/2026, für „oft Benzin“. Die Bamberger Sachanalyse nicht für Zahlen zitieren (Zylinderfehler).
+- Smartphone: BfS-Unterrichtsmaterial Mobilfunk (Archiv) für Stimme, Funk und Mast; Sächsisches Umweltministerium, „Mobilfunk – Kommunikation mit Risiko?“ (2005), S. 5, für den Wechsel zum nächsten Mast.
+
+**Auch geändert:** Die Spielkarte versprach „Welche Teile gehören dazu?“, keine Aufgabe fragt danach (gesehen vom `karten-autor`, Abschnitt 6). Neuer Kartentext im selben PR.
+
+**Ins BACKLOG:** Forscherfrage beim Mikroskop für 7-Jährige schwer (Spieltest, Kann). Ideen für „Mehr erfahren“: Handschuh-Probe (Smartphone), Film und Entwickeln (Kamera), Herkunft des Worts „Linse“ (erst belegen).
