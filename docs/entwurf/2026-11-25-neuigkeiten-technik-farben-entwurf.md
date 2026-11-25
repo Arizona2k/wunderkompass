@@ -97,3 +97,9 @@ Diese Entwürfe sind noch nicht geprüft. Danach sind `kinder-redaktion` (Ton, L
 - **A:** A1, aber ohne „in drei Sätzen“, weil Rakete und Smartphone vier Sätze haben: „Nach „Richtig!“ erfährst du jetzt kurz, wie die Erfindung funktioniert. Zur Rakete probierst du mit einem Luftballon etwas aus.“ Datum: Tag des Einbaus.
 - **B:** B1. „überall“ bleibt nur, wenn der `design-pruefer` nach Schritt 1 keine alten Knöpfe mehr findet. Datum: Tag des Merges.
 - Vor dem Einbau liest die `kinder-redaktion` beide Einträge.
+
+## Nach der Kinder-Redaktion (25.11.2026, [Bericht](2026-11-25-neuigkeiten-technik-farben-kinderredaktion.md))
+
+- **A, eingebaut:** Titel „Technik-Detektiv: So geht das“, Text „Liegst du richtig, erfährst du jetzt, wie die Erfindung funktioniert. Bei der Rakete zeigt ein Luftballon, wie sie davonsaust.“ (kein zweites „Nach „Richtig!““ direkt unter dem vorigen Eintrag, kein „Rakete ausprobieren“).
+- **B, für Umbau-Schritt 1:** „Die Seite hat ruhigere Farben, und alle Knöpfe sehen gleich aus. Grün wird eine Antwort jetzt nur noch, wenn sie richtig ist.“ Nur wenn der Bau das wirklich überall so zeigt (Spiele, Kreuz und quer, Labore, Karten); sonst „Eine angetippte Antwort ist nicht mehr grün.“
+- **Luftballon:** Der Versuch nutzt einen aufgeblasenen Ballon und ist ein üblicher Kinderversuch; die Gefahr beim Verschlucken betrifft schlaffe Ballons und Reste. Keine Änderung am Rakete-Text; die Seite richtet sich an Kinder mit Eltern.
