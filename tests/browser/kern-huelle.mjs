@@ -86,6 +86,8 @@ const BAUSTEINE = {
   '.visual-choice button[aria-pressed="true"]': {hintergrund: KOMPASS.petrolZart, schrift: KOMPASS.tinte, rand: KOMPASS.petrol, groesse: [16, 19]},
 };
 async function bausteine(page, wo, auswahlen) {
+  // Nach einem Klick steht die Maus oft über einem Baustein, der dann seine Hover-Farbe zeigt (Spiel bei 1280 px).
+  await page.mouse.move(0, 0);
   const messen = () => page.evaluate(liste => liste.map(auswahl => {
     const el = [...document.querySelectorAll(auswahl)].find(e => e.checkVisibility());
     if (!el) return null;
@@ -134,6 +136,8 @@ async function bausteineUeberall(page, width) {
   // Reise (nachgeladen): Kapitel mit Wahlknöpfen, Vorlesen und Antworten
   await page.evaluate(() => { location.hash = 'journeys/water/1'; });
   await page.locator('.journey-reader .visual-choice button').first().waitFor();
+  // Die Antworten der Kapitelfrage kommen einen Takt nach den Wahlknöpfen (fehlte bei 1280 px).
+  await page.locator('.quiz-answer:not(:disabled)').first().waitFor();
   await bausteine(page, `Reise ${width}`, ['.primary-button', '.speech-button', '.quiz-answer:not(:disabled)', '.visual-choice button[aria-pressed="true"]']);
   await fokusRahmen(page, `Reise ${width}`, '.journey-reader .speech-button');
   // Spiel (nachgeladen): „Wer war das?“
