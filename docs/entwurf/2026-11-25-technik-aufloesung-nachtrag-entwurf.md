@@ -154,4 +154,13 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
 
 **Auch geändert:** Der Spieltext versprach „Welche Teile gehören dazu?“, keine Aufgabe fragt danach (gesehen vom `karten-autor`, Abschnitt 6). Neu: „Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.“ (Vorschlag `karten-autor`, Verb „hilft“ von der `kinder-redaktion`). Sichtbar ist er in der Suche. Die Kachel der Spieleliste zeigt ihr eigenes Ziel „Probleme mit Erfindungen verbinden“ (`app/playground-catalog.ts`); das passt und bleibt (Design-Nachprüfung, Soll 1).
 
+**Nach den Nachprüfungen am Einbau** ([Code-Prüfung](2026-11-25-technik-aufloesung-nachtrag-code.md), [Design](2026-11-25-technik-aufloesung-nachtrag-design.md), [Spieltest](2026-11-25-technik-aufloesung-nachtrag-spieltest.md)):
+
+- **Code, Muss 1** (Testblock „neue Frage“ in 2 von 5 Läufen rot): behoben. Runde 2 und 3 warten jetzt, bis `zurRueckmeldung` fertig ist. Danach 5 von 5 Läufen grün in Chromium, dazu grün in Firefox, WebKit und im Stresslauf (150 ms je Bild).
+- **Code, Kann:** Kommentar wieder bei seiner Konstante (Kann 3). Die Warteschleife auf den Pass bleibt (Kann 2), sie hat dieselbe Form wie die am Anfang des Tests. Dass Tipp und Satz nach falscher Antwort gleich enden, ist gewollt (Kann 4): Dieselbe Prüffrage hat dieselben Worte (Kinder-Redaktion, Schlussrunde). Kann 1 kommt ins BACKLOG.
+- **Design, Kann 2** (einzelnes Wort allein in der letzten Zeile): `text-wrap: pretty` in der Rückmeldung. Soll 1: siehe „Auch geändert“, dazu der BACKLOG-Eintrag „Spieltext an drei Stellen“.
+- **Spieltest, Soll 3** („Metallteil“ unklar): bleibt. „Kolben“ wäre für 5- bis 10-Jährige ein neues Fachwort, und die Kinder-Redaktion hat „Metallteil“ in zwei Runden bestätigt. Der Radfahr-Vergleich verrät die Fahrrad-Aufgabe kaum: Dort stehen „Beine“ und „Hinterrad“ schon in der Frage.
+- **Spieltest, Kann:** Der Satz nach falscher Antwort ist für 7-Jährige ohne Elternteil abstrakt. Das kommt ins BACKLOG, zusammen mit den Auflösungen der Tierspiele, damit alle Spiele denselben Satzbau bekommen. „Leichter spielen?“ nach „Richtig!“, leichte Profi-Fallen und die Mikroskop-Frage stehen schon im BACKLOG.
+- **Smartphone** (Spieltest Soll 2, wie die Stufen-Prüfung): SMARTPHONE_ENTSCHEIDUNG
+
 **Ins BACKLOG:** Forscherfrage beim Mikroskop für 7-Jährige schwer (Spieltest, Kann). Ideen für „Mehr erfahren“: Handschuh-Probe (Smartphone), Film und Entwickeln (Kamera), Herkunft des Worts „Linse“ (erst belegen).
