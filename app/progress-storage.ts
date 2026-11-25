@@ -130,8 +130,10 @@ export function database():Promise<IDBDatabase>{
  connection=new Promise<IDBDatabase>((resolve,reject)=>{if(typeof indexedDB==='undefined'){reject(new Error('IndexedDB unavailable'));return;}const request=indexedDB.open('earth-explorer',1);let settled=false;const timer=setTimeout(()=>{settled=true;reject(new Error('Database blocked'));},2500);
  request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains('saves'))request.result.createObjectStore('saves');};
  request.onerror=()=>{clearTimeout(timer);settled=true;reject(request.error);};
- request.onsuccess=()=>{clearTimeout(timer);if(settled){request.result.close();return;}const db=request.result;db.onversionchange=()=>{db.close();connection=null;};resolve(db);};
+ request.onsuccess=()=>{clearTimeout(timer);if(settled){request.result.close();return;}const db=request.result;db.onversionchange=()=>{db.close();connection=null;};db.onclose=()=>{connection=null;};resolve(db);};
  }).catch(e=>{connection=null;throw e;});return connection!;
 }
-export async function readDatabase():Promise<unknown>{const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('saves','readonly');const request=tx.objectStore('saves').get('main');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);tx.onabort=()=>reject(tx.error);});}
-export async function writeDatabase(save:Save):Promise<void>{const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('saves','readwrite');tx.objectStore('saves').put(save,'main');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}
+// Schließt der Browser die Verbindung (z. B. WebKit nach langer Zeit im Hintergrund), wirft schon db.transaction: Dann beim nächsten Versuch neu öffnen.
+export function transaktion(db:IDBDatabase,mode:IDBTransactionMode):IDBTransaction{try{return db.transaction('saves',mode);}catch(e){connection=null;throw e;}}
+export async function readDatabase():Promise<unknown>{const db=await database();return new Promise((resolve,reject)=>{const tx=transaktion(db,'readonly');const request=tx.objectStore('saves').get('main');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);tx.onabort=()=>reject(tx.error);});}
+export async function writeDatabase(save:Save):Promise<void>{const db=await database();return new Promise((resolve,reject)=>{const tx=transaktion(db,'readwrite');tx.objectStore('saves').put(save,'main');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}

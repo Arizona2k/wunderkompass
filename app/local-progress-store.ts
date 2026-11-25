@@ -1,5 +1,5 @@
 import { localId } from './local-id';
-import { SAVE_KEY, LEGACY_KEY, MAX_IMPORT_BYTES, byteLaenge, createSave, restoreSave, readDatabase, database, type Save, type LocalProgress } from './progress-storage';
+import { SAVE_KEY, LEGACY_KEY, MAX_IMPORT_BYTES, byteLaenge, createSave, restoreSave, readDatabase, database, transaktion, type Save, type LocalProgress } from './progress-storage';
 import { mergeSaves, mergeDatabaseSave } from './progress-sync';
 
 type Snapshot = { save: Save; ready: boolean; available: boolean; storage: 'database'|'browser'|'session'; notice: string; restoreRevision: number };
@@ -63,7 +63,7 @@ export function createProgressStore() {
       try {
         const db=await database(); if(tick!==generation||readOnly)return;
         const persisted=await new Promise<Save>((resolve,reject)=>{
-          const tx=db.transaction('saves','readwrite'); const store=tx.objectStore('saves'); const request=store.get('main'); let result:Save;
+          const tx=transaktion(db,'readwrite'); const store=tx.objectStore('saves'); const request=store.get('main'); let result:Save;
           request.onsuccess=()=>{
             if(future(request.result)){protect();tx.abort();return;}
             let previous=baseline; try { if(request.result)previous=restoreSave(request.result); } catch { /* repair only unreadable snapshot */ }
@@ -96,7 +96,7 @@ export function createProgressStore() {
     // Replacement is explicit, so publish its epoch before any delayed old write.
     try { localStorage.setItem(SAVE_KEY,JSON.stringify(next));stored=true; } catch { /* database fallback */ }
     try {
-      const db=await database(); await new Promise<void>((resolve,reject)=>{const tx=db.transaction('saves','readwrite');const os=tx.objectStore('saves');const r=os.get('main');r.onsuccess=()=>{if(future(r.result)){protect();tx.abort();return;}os.put(next,'main');};tx.oncomplete=()=>resolve();tx.onerror=tx.onabort=()=>reject(tx.error);}); stored=true;
+      const db=await database(); await new Promise<void>((resolve,reject)=>{const tx=transaktion(db,'readwrite');const os=tx.objectStore('saves');const r=os.get('main');r.onsuccess=()=>{if(future(r.result)){protect();tx.abort();return;}os.put(next,'main');};tx.oncomplete=()=>resolve();tx.onerror=tx.onabort=()=>reject(tx.error);}); stored=true;
     } catch { /* journal remains valid */ }
     if(readOnly)return;
     if(requireDurable&&!stored)throw new Error('Der Browser kann den Pass gerade nicht dauerhaft speichern. Bitte bewahre deine Sicherung auf.');

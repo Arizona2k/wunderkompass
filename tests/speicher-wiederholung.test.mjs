@@ -6,13 +6,15 @@ import { createProgressStore } from '../app/local-progress-store.ts';
 // Eigene Datei: progress-storage merkt sich die erste gelungene Datenbank-Verbindung je Prozess.
 // Hier ist IndexedDB absichtlich kaputt (Öffnen und Schreiben schlagen fehl) und lässt sich auf „geht“ schalten.
 // Die Zeit ist simuliert (mock.timers), damit sich Sekunden ohne Warten prüfen lassen.
-const idb = { modus: 'kaputt', versuche: 0, persisted: undefined, journalVoll: false };
+const idb = { modus: 'kaputt', versuche: 0, persisted: undefined, journalVoll: false, geschlossen: false, oeffnungen: 0 };
 const fehler = () => new Error('IndexedDB kaputt (Test)');
 const db = {
   objectStoreNames: { contains: () => true },
   close() {},
   transaction() {
     idb.versuche++;
+    // Wie ein Browser, der die Verbindung geschlossen hat: Schon das Anlegen der Transaktion wirft.
+    if (idb.geschlossen) { const e = new Error('The database connection is closing. (Test)'); e.name = 'InvalidStateError'; throw e; }
     const tx = {
       objectStore: () => ({
         get() {
@@ -48,7 +50,7 @@ function umgebung() {
       open() {
         idb.versuche++;
         const r = {};
-        queueMicrotask(() => { if (idb.modus === 'ok') { r.result = db; r.onsuccess?.(); } else { r.error = fehler(); r.onerror?.(); } });
+        queueMicrotask(() => { if (idb.modus === 'ok') { idb.geschlossen = false; idb.oeffnungen++; r.result = db; r.onsuccess?.(); } else { r.error = fehler(); r.onerror?.(); } });
         return r;
       },
     },
@@ -174,7 +176,7 @@ test('Ist auch der Browser-Speicher voll, bleibt die Pause kurz (höchstens 2 s)
   } finally { idb.journalVoll = false; u.weg(); }
 });
 
-// Zuletzt: Danach ist die Datenbank-Verbindung für diesen Prozess gemerkt.
+// Ab hier: Danach ist die Datenbank-Verbindung für diesen Prozess gemerkt.
 test('Erholung: Sobald die Datenbank wieder geht, wird gespeichert und wieder kurz gesammelt', async t => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   const u = umgebung();
@@ -189,4 +191,21 @@ test('Erholung: Sobald die Datenbank wieder geht, wird gespeichert und wieder ku
     await warte(t, 300);
     assert.deepEqual(idb.persisted.progress.favorites, ['space-moon', 'animal-elephant'], 'danach wieder nach 200 ms');
   } finally { idb.modus = 'kaputt'; u.weg(); }
+});
+
+test('Schließt der Browser die Verbindung, öffnet der nächste Versuch sie neu (statt bis zum Neuladen zu scheitern)', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const u = umgebung();
+  idb.modus = 'ok';
+  try {
+    const store = createProgressStore(); await store.start(); await warte(t, 300);
+    const vorher = idb.oeffnungen;
+    idb.geschlossen = true;
+    store.update(p => ({ ...p, favorites: ['history-maya'] }));
+    await warte(t, 5000);
+    assert.ok(idb.oeffnungen > vorher, 'Verbindung neu geöffnet');
+    assert.deepEqual(idb.persisted?.progress.favorites, ['history-maya'], 'danach in der Datenbank');
+    assert.equal(store.getSnapshot().storage, 'database');
+    assert.deepEqual(imJournal(u.data).favorites, ['history-maya'], 'die ganze Zeit im Journal');
+  } finally { idb.modus = 'kaputt'; idb.geschlossen = false; u.weg(); }
 });
