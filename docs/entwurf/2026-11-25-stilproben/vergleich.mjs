@@ -18,5 +18,12 @@ const jobs=[
  ['3-rechner-start','Rechner: Start',[['a-start-1280.png','b-start-1280.png']],1800],
  ['4-rechner-karte-und-spiel','Rechner: Wissenskarte und Spiel',[['a-karte-1280.png','b-karte-1280.png'],['a-spiel-1280.png','b-spiel-1280.png']],1800],
 ];
+// Probe C „Kompass“ (Mischung): Seiten nebeneinander
+const reihe=(titel,bilder,breite)=>`<html><head><style>${css}</style></head><body style="width:${breite}px"><h1 style="margin:0 0 20px;font-size:34px">${titel}</h1><div class="reihe">${bilder.map(([u,b])=>`<div class="spalte"><h2>${u}</h2><img src="file://${D}${b}"></div>`).join('')}</div><p>Stilprobe C „Kompass“, nicht die echte Seite. Echte Inhalte und Fotos aus WunderKompass.</p></body></html>`;
+const cJobs=[
+ ['5-mischung-handy','Mischung „Kompass“ auf dem Handy',[['Start','c-start-390-ganz.png'],['Spiel: richtig','c-spiel-390.png'],['Spiel: noch nicht richtig','c-spiel-falsch-390.png']],1500],
+ ['6-mischung-rechner','Mischung „Kompass“ auf dem Rechner',[['Start','c-start-1280.png'],['Spiel: richtig','c-spiel-1280.png']],1800],
+];
 for(const [n,t,paare,w] of jobs){const f=OUT+n+'.html';fs.writeFileSync(f,blatt(t,paare,w));await p.setViewportSize({width:w+48,height:800});await p.goto('file://'+f);await p.waitForLoadState('networkidle');await p.screenshot({path:OUT+n+'.png',fullPage:true});fs.unlinkSync(f);}
+for(const [n,t,bilder,w] of cJobs){const f=OUT+n+'.html';fs.writeFileSync(f,reihe(t,bilder,w));await p.setViewportSize({width:w+48,height:800});await p.goto('file://'+f);await p.waitForLoadState('networkidle');await p.screenshot({path:OUT+n+'.png',fullPage:true});fs.unlinkSync(f);}
 await b.close();console.log(fs.readdirSync(OUT));

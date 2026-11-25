@@ -1,5 +1,6 @@
 // Screenshots der Stilproben nach .qa-output/stilproben/ (nicht in Git).
 // Aufruf: node docs/entwurf/2026-11-25-stilproben/aufnahmen.mjs [scale] [breiten]   z. B. "2" oder "1 320,390,768,1280,1440"
+// Nur einzelne Seiten: NUR=c-start,c-spiel node …
 import {createRequire} from 'node:module';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -17,7 +18,7 @@ const browser = await chromium.launch();
 for (const b of breiten) {
   const ctx = await browser.newContext({viewport: {width: b, height: b < 900 ? 844 : 800}, deviceScaleFactor: scale, reducedMotion: 'reduce', hasTouch: b < 900});
   const page = await ctx.newPage();
-  for (const n of ['a-start', 'a-karte', 'a-spiel', 'b-start', 'b-karte', 'b-spiel']) {
+  for (const n of (process.env.NUR ? process.env.NUR.split(',') : ['a-start', 'a-karte', 'a-spiel', 'b-start', 'b-karte', 'b-spiel', 'c-start', 'c-karte', 'c-spiel', 'c-spiel-falsch'])) {
     await page.goto(pathToFileURL(path.join(DIR, n + '.html')).href);
     await page.evaluate(() => document.fonts.ready);
     await page.waitForLoadState('networkidle');

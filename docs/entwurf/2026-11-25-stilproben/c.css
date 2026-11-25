@@ -1,0 +1,277 @@
+/* Stilprobe C „Kompass“ (Mischung) – Entwurf, nicht in der App. Grundlage A „Kartenwerk“, dazu Welt-Kacheln und Stempel aus B,
+   Korrekturen aus Design-Prüfung und Spieltest (25.11.2026), Akzente Petrol und Orange wie in VISION.md. Schriften: Bricolage Grotesque, Andika (OFL). */
+@font-face{font-family:"Bricolage Grotesque";src:url(schriften/bricolage-grotesque.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Andika";src:url(schriften/andika-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Andika";src:url(schriften/andika-700.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --papier:#EDF1EA;      /* kühles Kartenpapier, kein Creme */
+  --flaeche:#FFFFFF;
+  --tinte:#15314A;       /* Kartenschrift */
+  --tinte-2:#4A5F70;
+  --linie:#C6D1C8;       /* nur Höhenlinien und Trennlinien */
+  --rand:#788A80;        /* Ränder von Bedienelementen, 3,6:1 auf Weiß */
+  --wasser:#0B6B73;      /* Petrol: Hauptknopf, Wege, Links, Fokus (6,2:1 auf Weiß) */
+  --petrol-hell:#DCEFEF;
+  --nadel:#D9650A;       /* Orange: Nadel, aktueller Schritt, nur Grafik (3,6:1) */
+  --wald:#2E7A55;        /* richtig */
+  --wald-hell:#E2F0E7;
+  --wald-tief:#1F6B45;   /* Stempelschrift */
+  --falsch:#B5462F; --falsch-hell:#F8E7E1;
+  --w-tiere:#2E8A5C; --w-zeit:#A8641F; --w-koepfe:#7D4FA6; --w-erfind:#9C6A0E; --w-bau:#4F6478; --w-wiss:#3A55A8;
+  --kopf:"Bricolage Grotesque",system-ui,sans-serif;
+  --text:"Andika",system-ui,sans-serif;
+  --r-gross:22px; --r-mittel:14px; --r-klein:8px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papier);color:var(--tinte);font:400 18px/1.55 var(--text);hyphens:manual;overflow-wrap:break-word}
+img{display:block;max-width:100%}
+a{color:var(--wasser)}
+h1,h2,h3{font-family:var(--kopf);font-optical-sizing:auto;margin:0;line-height:1.08;letter-spacing:-.01em;hyphens:manual}
+h2{font-size:clamp(24px,3.2vw,32px);font-weight:720;margin-bottom:14px}
+p{margin:0}
+:focus-visible{outline:3px solid var(--wasser);outline-offset:2px;box-shadow:0 0 0 2px #fff}
+.ico{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Kopfzeile */
+.kopf{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:10px 16px;background:color-mix(in srgb,var(--papier) 92%,white);border-bottom:1px solid var(--linie)}
+.marke{display:flex;align-items:center;gap:10px;min-height:48px;font:760 21px/1 var(--kopf);color:var(--tinte);text-decoration:none;letter-spacing:-.02em}
+.marke svg{width:36px;height:36px}
+.kopf nav{display:none}
+.kopf .rechts{margin-left:auto;display:flex;gap:8px}
+.rund{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;height:48px;padding:0 12px;border-radius:999px;border:1.5px solid var(--rand);background:var(--flaeche);color:var(--tinte);font:650 16px var(--kopf);text-decoration:none}
+.rund .wort{display:none}
+
+/* Fußnavigation (Handy) */
+.fuss{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:repeat(6,1fr);background:var(--flaeche);border-top:1px solid var(--linie);padding-bottom:env(safe-area-inset-bottom)}
+.fuss a{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 0 9px;font:600 13px var(--kopf);color:var(--tinte-2);text-decoration:none}
+.fuss a[aria-current]{color:var(--tinte);font-weight:750}
+.fuss a[aria-current] .ico{background:var(--petrol-hell);color:var(--wasser);border-radius:999px;width:52px;height:30px;padding:4px 15px;box-sizing:border-box}
+main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
+
+/* Knöpfe */
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:var(--r-mittel);border:0;background:var(--wasser);color:#fff;font:680 18px var(--kopf);text-decoration:none;cursor:pointer}
+.knopf.zweit{background:var(--flaeche);color:var(--tinte);border:1.5px solid var(--rand)}
+.weg{display:inline-flex;align-items:center;min-height:48px;font:650 17px var(--kopf);color:var(--wasser);text-decoration:underline;text-decoration-style:dashed;text-underline-offset:5px;text-decoration-thickness:1.5px}
+
+/* Kompassrose (das eine kühne Element) */
+.rose .nadel{transform-origin:0 0;transform:rotate(var(--peilung,225deg));animation:einpendeln 1.6s cubic-bezier(.3,1.6,.4,1) both}
+@keyframes einpendeln{0%{transform:rotate(calc(var(--peilung,225deg) - 160deg))}60%{transform:rotate(calc(var(--peilung,225deg) + 14deg))}100%{transform:rotate(var(--peilung,225deg))}}
+@media (prefers-reduced-motion:reduce){.rose .nadel{animation:none}}
+
+/* Start: Bühne */
+.buehne{position:relative;padding:28px 0 8px;overflow:hidden;margin:0 -16px;padding-left:16px;padding-right:16px}
+.buehne .hoehen{position:absolute;right:-180px;top:-120px;width:560px;height:560px;pointer-events:none}
+.buehne .text{position:relative}
+.foto .rose{position:absolute;right:-6px;top:-58px;width:100px;height:100px;filter:drop-shadow(0 3px 0 rgba(21,49,74,.18))}
+.frage{max-width:12ch;font-size:clamp(32px,9.6vw,68px);font-weight:780;line-height:1;letter-spacing:-.01em;margin:8px 0 22px}
+.aktionen{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-bottom:26px}
+.foto{position:relative;margin:0}
+.buehne .foto{margin-top:52px}
+.foto img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-gross)}
+.pin{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:6px;padding:7px 12px 7px 9px;border-radius:999px;background:var(--flaeche);font:650 15px var(--kopf);color:var(--tinte);box-shadow:0 1px 0 var(--linie)}
+.pin .ico{width:18px;height:18px;color:var(--nadel)}
+.nachweis{margin-top:8px;font-size:13px;line-height:1.4;color:var(--tinte-2)}
+
+/* Route (Wegspur) */
+.route{list-style:none;margin:0;padding:0;position:relative}
+.route::before{content:"";position:absolute;left:27px;top:28px;bottom:28px;border-left:2.5px dashed var(--wasser)}
+.route li{position:relative}
+.route a{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;padding:8px 0;color:inherit;text-decoration:none;border-radius:var(--r-mittel)}
+.halt{position:relative;width:56px;height:56px;border-radius:50%;background:var(--flaeche);border:2.5px solid var(--tinte);display:grid;place-items:center;overflow:hidden}
+.halt img{width:100%;height:100%;object-fit:cover}
+.halt.jetzt{border-color:var(--nadel);background:var(--flaeche)}
+.halt.offen{border-style:dashed;border-color:var(--wasser);color:var(--wasser)}
+.halt.jetzt{border-width:3px}
+.route small{display:block;font:600 14px var(--kopf);color:var(--tinte-2)}
+.route b{display:block;font:700 19px/1.2 var(--kopf)}
+.route .unter{display:block;font-size:16px;color:var(--tinte-2)}
+.abschnitt{margin-top:40px}
+
+/* Legende der Welten */
+.legende{background:var(--flaeche);border:1.5px solid var(--tinte);border-radius:var(--r-gross);padding:6px 18px}
+.legende a{display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;min-height:62px;color:var(--tinte);text-decoration:none;border-bottom:1px solid var(--linie)}
+.legende a:last-child{border-bottom:0}
+.feld{width:36px;height:36px;border-radius:var(--r-klein);display:grid;place-items:center;color:#fff}
+.feld .ico{width:20px;height:20px}
+.legende b{font:700 19px var(--kopf)}
+.legende .zahl{font-size:15px;color:var(--tinte-2)}
+.nachweise{margin-top:40px;font-size:13px;line-height:1.5;color:var(--tinte-2)}
+.nachweise h3{font:700 15px var(--kopf);margin-bottom:4px}
+
+/* Karte */
+.pfad{display:flex;align-items:center;gap:8px;min-height:48px;margin:10px 0 6px;font:650 16px var(--kopf);color:var(--tinte);text-decoration:none}
+.pfad .feld{width:24px;height:24px;border-radius:6px}
+.pfad .feld .ico{width:15px;height:15px}
+.karte h1{font-size:clamp(32px,6.4vw,54px);font-weight:780;letter-spacing:-.01em;line-height:1.02;margin:22px 0 12px;overflow-wrap:break-word}
+.einstieg{font-size:20px;line-height:1.5;max-width:34ch}
+.leiste{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+.leiste .knopf{min-height:48px;padding:0 16px;font-size:16px}
+.kurz{display:grid;gap:10px}
+.kurz details{background:var(--flaeche);border-radius:var(--r-mittel);border:1.5px solid var(--rand);padding:0 16px}
+.kurz summary{list-style:none;display:flex;align-items:center;gap:12px;min-height:58px;font:680 18px var(--kopf);cursor:pointer}
+.kurz summary::-webkit-details-marker{display:none}
+.kurz summary::before{content:"";width:12px;height:12px;border-radius:50%;border:2.5px solid var(--wasser);flex:none}
+.kurz details[open] summary::before{background:var(--wasser)}
+.kurz details p{padding:0 0 16px 24px}
+.ausschnitt{position:relative;border:2.5px dashed var(--wasser);border-radius:var(--r-gross);padding:20px 18px 18px;background:color-mix(in srgb,var(--flaeche) 70%,var(--papier))}
+.ausschnitt h2{margin-bottom:6px}
+.ausschnitt .fragezeile{font:680 21px/1.3 var(--kopf);margin-bottom:14px}
+.antworten{display:grid;gap:10px}
+.antwort{display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 16px;border-radius:var(--r-mittel);border:1.5px solid var(--rand);background:var(--flaeche);color:var(--tinte);font:400 18px/1.35 var(--text);text-align:left;width:100%;box-shadow:0 2px 0 var(--linie);cursor:pointer}
+.antwort .ico{width:24px;height:24px}
+.antwort.richtig{border:2.5px solid var(--wald);background:var(--wald-hell);font-weight:700}
+.antwort.richtig .marke-r{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--wald);color:#fff;flex:none}
+.antwort.richtig .marke-r .ico{width:18px;height:18px;stroke-width:3}
+.antwort.erledigt{color:var(--tinte-2);border:1.5px dashed var(--rand);background:transparent;box-shadow:none}
+.antwort.falsch{border:2.5px solid var(--falsch);background:var(--falsch-hell);box-shadow:none}
+.antwort.falsch .marke-f{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--falsch);color:#fff;flex:none}
+.antwort.falsch .marke-f .ico{width:18px;height:18px;stroke-width:3}
+.antwort.richtig{box-shadow:none}
+.stimmt{display:flex;gap:10px;margin-top:14px}
+.stimmt .knopf{flex:1}
+.steckbrief{background:var(--flaeche);border:1.5px solid var(--tinte);border-radius:var(--r-gross);padding:4px 18px;margin:0}
+.steckbrief div{display:grid;grid-template-columns:minmax(110px,38%) 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--linie)}
+.steckbrief div:last-child{border-bottom:0}
+.steckbrief dt{font:650 16px var(--kopf);color:var(--tinte-2)}
+.steckbrief dd{margin:0}
+.verbunden{list-style:none;margin:0;padding:0;position:relative}
+.verbunden::before{content:"";position:absolute;left:31px;top:20px;bottom:40px;border-left:2.5px dashed var(--wasser)}
+.verbunden li{position:relative;display:grid;grid-template-columns:64px 1fr;gap:14px;padding:10px 0}
+.verbunden .halt{width:64px;height:64px}
+.verbunden b{display:block;font:700 19px/1.2 var(--kopf);margin:6px 0 4px}
+.verbunden p{font-size:16px;line-height:1.5;color:var(--tinte-2)}
+.verbunden .weg{display:inline-block;margin-top:6px;font-size:16px}
+
+/* Spiel */
+.spielkopf{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin:24px 0 18px}
+.spielkopf h1{flex:none}
+.spielkopf h1{font-size:clamp(30px,5vw,44px);font-weight:780}
+.stufe{display:inline-flex;align-items:center;gap:6px;font:650 15px var(--kopf);color:var(--tinte-2);white-space:nowrap}
+.fortschritt{position:relative;display:flex;justify-content:space-between;align-items:center;margin:0 4px 6px}
+.fortschritt::before{content:"";position:absolute;left:10px;right:10px;top:50%;border-top:2.5px dashed var(--wasser)}
+.fortschritt i{position:relative;width:20px;height:20px;border-radius:50%;background:var(--papier);border:2.5px dashed var(--wasser)}
+.fortschritt i{display:grid;place-items:center}
+.fortschritt i.da{width:26px;height:26px;background:var(--wasser);border:2.5px solid var(--wasser);color:#fff}
+.fortschritt i.da .ico{width:15px;height:15px;stroke-width:3.2}
+.fortschritt i.jetzt{width:34px;height:34px;background:var(--flaeche);border:2.5px solid var(--nadel)}
+.fortschritt i.jetzt::after{content:"";width:11px;height:11px;background:var(--nadel);transform:rotate(45deg);border-radius:2px}
+.zaehler{font:650 15px var(--kopf);color:var(--tinte-2);margin:0 0 22px}
+.aufgabe{background:var(--flaeche);border-radius:var(--r-gross);padding:22px 18px;border:1.5px solid var(--rand)}
+.welt-mark{display:inline-flex;align-items:center;gap:8px;font:650 15px var(--kopf);color:var(--tinte-2);margin-bottom:10px}
+.welt-mark .feld{width:22px;height:22px;border-radius:6px}
+.welt-mark .feld .ico{width:14px;height:14px}
+.aufgabe h2{font-size:clamp(28px,4.4vw,40px);font-weight:760;margin-bottom:18px}
+.rueck{position:relative;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;margin-top:18px;padding:16px;border-radius:var(--r-mittel);background:var(--wald-hell)}
+.rueck.lernen{background:var(--petrol-hell);grid-template-columns:1fr}
+.rueck.lernen b{color:var(--tinte)}
+.rueck b{display:flex;align-items:center;gap:8px;font:760 22px var(--kopf);color:var(--wald-tief);grid-column:1}
+.rueck p{grid-column:1}
+.rueck .ico{width:24px;height:24px;stroke-width:3}
+.weiter{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px}
+.ohnefoto{position:relative;overflow:hidden;border-radius:var(--r-gross);background:var(--w-wiss);color:#fff;padding:22px 20px;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;margin-top:22px}
+.ohnefoto svg.hoehen{position:absolute;inset:-40% -30% auto auto;width:150%;height:auto;opacity:.35}
+.ohnefoto .ico.gross{flex:none;margin-bottom:auto;width:44px;height:44px;stroke-width:1.6}
+.ohnefoto small{margin-top:14px;font:600 15px var(--kopf)}
+.ohnefoto b{display:block;font:740 23px/1.15 var(--kopf);margin:4px 0 10px}
+.ohnefoto a{color:#fff}
+
+/* Rechner */
+@media (min-width:900px){
+  body{font-size:19px}
+  .kopf{padding:12px 32px;gap:24px}
+  .kopf nav{display:flex;gap:4px;margin-left:24px}
+  .kopf nav a{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border-radius:999px;font:650 16px var(--kopf);color:var(--tinte-2);text-decoration:none;position:relative}
+  .kopf nav a[aria-current]{color:var(--tinte)}
+  .kopf nav a[aria-current]::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;border-bottom:2.5px solid var(--nadel)}
+  .rund .wort{display:inline}
+  .fuss{display:none}
+  main{padding:0 32px 80px}
+  .buehne{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:56px 32px 24px;margin:0 -32px}
+  .buehne .hoehen{right:auto;left:30%;top:-200px;width:900px;height:900px}
+  .buehne .foto{margin-top:0}
+  .foto .rose{right:auto;left:-78px;top:-44px;width:200px;height:200px}
+  .frage{margin:0 0 28px;max-width:13ch;hyphens:none}
+  .start-unten{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start}
+  .legende{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+  .legende a:nth-last-child(2){border-bottom:0}
+  .karte{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start;margin-top:28px}
+  .karte .links{position:sticky;top:96px}
+  .karte .pfad{margin-top:0}
+  .karte h1{margin-top:4px}
+  .spiel{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px;align-items:start}
+  .spiel .seite{margin-top:118px}
+  .ohnefoto{margin-top:0;min-height:300px}
+}
+
+/* Sehr schmale Handys (320 px) */
+@media (max-width:359px){
+  .kopf{padding:10px 12px;gap:8px}
+  .marke{font-size:17px;gap:8px}
+  .marke svg{width:30px;height:30px}
+  .kopf .rechts{gap:6px}
+  main{padding-left:12px;padding-right:12px}
+  .buehne{margin:0 -12px;padding-left:12px;padding-right:12px}
+}
+.wegtext,.verbunden li > span{min-width:0}
+
+/* ---------- Neu in C ---------- */
+/* Stand der Entdeckungen (Antwort auf „Wie weit bin ich?“) */
+.stand{margin:0 0 16px;padding:14px 16px;border-radius:var(--r-mittel);background:var(--flaeche);border:1.5px solid var(--rand)}
+.stand p{font:650 16px var(--kopf);color:var(--tinte-2)}
+.stand p b{font:780 26px var(--kopf);color:var(--tinte)}
+.balken{height:12px;margin-top:8px;border-radius:999px;background:var(--papier);overflow:hidden}
+.balken i{display:block;height:100%;border-radius:999px;background:var(--wasser)}
+
+/* Welt-Kacheln: Idee aus B, in der Sprache von A (feine Ränder, gedämpfte Kartenfarben, keine harten Schatten) */
+.welten{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.welt{position:relative;display:flex;flex-direction:column;border-radius:var(--r-gross);overflow:hidden;background:color-mix(in srgb,var(--wf) 11%,white);border:1.5px solid color-mix(in srgb,var(--wf) 55%,white);color:var(--tinte);text-decoration:none}
+.welt .bild{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--wf)}
+.welt .bild img{width:100%;height:100%;object-fit:cover}
+.welt .etikett{position:relative;display:block;padding:26px 12px 12px}
+.welt .feld{position:absolute;left:10px;top:-20px;width:40px;height:40px;border-radius:12px;border:2.5px solid #fff}
+.welt b{display:block;font:720 18px/1.15 var(--kopf)}
+.welt .zahl{font-size:15px;color:var(--tinte-2)}
+/* Lichtschimmer beim Zeigen und Antippen (VISION.md „Glanz“), ruhig bei „Bewegung reduzieren“ */
+.welt .bild::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.15) 56%,transparent 70%);transform:translateX(-130%);transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.welt:hover .bild::after,.welt:focus-visible .bild::after,.welt:active .bild::after,.welt.schimmer .bild::after{transform:translateX(130%)}
+.welt.schimmer .bild::after{transform:translateX(0)}
+@media (prefers-reduced-motion:reduce){.welt .bild::after{display:none}}
+/* Welt ohne Foto: gezeichnetes Mondphasen-Bild, bis ein freies Foto da ist */
+.welt .bild svg{width:100%;height:100%}
+
+/* Stempel: Idee aus B, fester Platz neben der Rückmeldung, nie über Antworttext */
+.stempel{grid-column:2;grid-row:1/span 2;display:grid;place-items:center;align-content:center;gap:0;width:92px;height:92px;border-radius:50%;background:#fff;border:3px solid var(--wald-tief);box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 5.5px var(--wald-tief);color:var(--wald-tief);font:800 16px/1 var(--kopf);transform:rotate(-10deg);animation:aufdruecken .45s cubic-bezier(.3,1.5,.5,1) both}
+.stempel .ico{width:28px;height:28px;stroke-width:3.2;margin-bottom:2px}
+@keyframes aufdruecken{0%{transform:scale(1.7) rotate(-26deg);opacity:0}100%{transform:scale(1) rotate(-10deg);opacity:1}}
+@media (prefers-reduced-motion:reduce){.stempel{animation:none}}
+
+/* Spiel: Vorlesen an der Frage */
+.frage-kopf{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.frage-kopf .knopf{min-height:48px;padding:0 14px;font-size:16px;flex:none}
+.frage-kopf .knopf .wort{display:none}
+
+/* Tablet: Bühne zweispaltig */
+@media (min-width:700px) and (max-width:899px){
+  .buehne{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding-top:56px}
+  .buehne .foto{margin-top:0}
+  .frage{font-size:46px}
+  .foto .rose{top:-40px;right:-8px;width:96px;height:96px}
+  .welten{grid-template-columns:repeat(3,1fr)}
+  .frage-kopf .knopf .wort{display:inline}
+}
+@media (min-width:900px){
+  .welten{grid-template-columns:repeat(3,1fr);gap:16px}
+  /* Spiel passt mit Rückmeldung und „Nächste Aufgabe“ auf einen Bildschirm (Spieltest: in A gelobt) */
+  .spielkopf{margin:16px 0 12px}
+  .zaehler{margin-bottom:12px}
+  .aufgabe{padding:18px 20px}
+  .welt-mark{margin-bottom:6px}
+  .aufgabe h2{margin-bottom:14px}
+  .antworten{gap:8px}
+  .antwort{min-height:52px;padding-top:8px;padding-bottom:8px}
+  .rueck{margin-top:12px;padding:12px 16px}
+  .weiter{margin-top:16px}
+  .frage-kopf .knopf .wort{display:inline}
+}

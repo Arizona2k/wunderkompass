@@ -1,5 +1,5 @@
-// Baut die sechs Seiten der Stilproben A „Kartenwerk“ und B „Sammelheft“ aus echten Inhalten der App.
-// Aufruf: node docs/entwurf/2026-11-25-stilproben/bauen.mjs  → a-start.html … b-spiel.html, index.html
+// Baut die Seiten der Stilproben A „Kartenwerk“, B „Sammelheft“ und C „Kompass“ (Mischung) aus echten Inhalten der App.
+// Aufruf: node docs/entwurf/2026-11-25-stilproben/bauen.mjs  → a-start.html … c-spiel-falsch.html, index.html
 // Symbole: lucide (ISC), Pfade in icons.json. Fotos: aus public/world, Nachweise wie in app/world-photos.json.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -55,13 +55,15 @@ const K = {
 };
 const S = {
   frage: 'Woher kommt das Licht des Mondes?',
+  // Wortlaut wie in der App: app/kern/woerter.ts und knowledge-challenge-game.tsx (Ersatztext ohne eigenen Falsch-Grund)
+  nochNicht: 'Noch nicht ganz. Versuch es noch einmal!', ruhig: 'Vergleiche die Antworten in Ruhe. Ein Tipp hilft dir.',
   antworten: ['Von der Sonne', 'Aus einer Lampe im Mond', 'Von brennenden Wolken'],
   warum: 'Der Mond leuchtet nicht selbst. Er wirft das Licht der Sonne zurück.',
   karte: 'Warum verändert der Mond seine Form?',
 };
 
 function seite({stil, titel, aktiv, inhalt, marke}) {
-  const kopfschrift = stil === 'a' ? 'Bricolage Grotesque' : 'Grandstander';
+  const kopfschrift = stil === 'b' ? 'Grandstander' : 'Bricolage Grotesque';
   return `<!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${titel}</title><link rel="stylesheet" href="${stil}.css"></head>
@@ -222,13 +224,97 @@ const bSpiel = seite({stil: 'b', titel: 'Sammelheft: Spiel', aktiv: 'Spielen', m
 <aside class="seite"><div class="ohnefoto"><span class="gross">${i('telescope')}</span><small>Dazu gibt es eine Wissenskarte</small><b>${S.karte}</b><a href="#">Karte öffnen</a></div></aside>
 </main>`});
 
+// ---------- Stil C: Kompass (Mischung) ----------
+// Grundlage A, dazu Welt-Kacheln und Stempel aus B, Korrekturen aus Design-Prüfung und Spieltest.
+function mondphasen() {
+  const x = [-124, -62, 0, 62, 124], r = 22, h = 'fill:#fff';
+  const sterne = [[-140, -40], [-30, -44], [90, -42], [150, 40], [-90, 44], [40, 46]].map(([a, b]) => `<circle cx="${a}" cy="${b}" r="2" style="${h};opacity:.7"/>`).join('');
+  return `<svg viewBox="-160 -64 320 128" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${sterne}
+<circle cx="${x[0]}" r="${r}" style="fill:none;stroke:#fff" stroke-width="2.5"/>
+<path d="M${x[1]},-${r} A${r},${r} 0 0 1 ${x[1]},${r} A${r * .55},${r} 0 0 0 ${x[1]},-${r}Z" style="${h}"/><circle cx="${x[1]}" r="${r}" style="fill:none;stroke:#fff" stroke-width="1.5" opacity=".6"/>
+<path d="M${x[2]},-${r} A${r},${r} 0 0 1 ${x[2]},${r}Z" style="${h}"/><circle cx="${x[2]}" r="${r}" style="fill:none;stroke:#fff" stroke-width="1.5" opacity=".6"/>
+<path d="M${x[3]},-${r} A${r},${r} 0 0 1 ${x[3]},${r} A${r * .55},${r} 0 0 1 ${x[3]},-${r}Z" style="${h}"/><circle cx="${x[3]}" r="${r}" style="fill:none;stroke:#fff" stroke-width="1.5" opacity=".6"/>
+<circle cx="${x[4]}" r="${r}" style="${h}"/></svg>`;
+}
+const welt = (w, n) => `<a class="welt${n === 0 ? ' erste' : ''}" href="#" style="--wf:${w.a}"><span class="bild">${w.foto ? deko(w.foto) : mondphasen()}</span><span class="etikett">${feld(w)}<b>${w.name}</b><span class="zahl">${w.n} Karten</span></span></a>`;
+
+const cStart = seite({stil: 'c', titel: 'Kompass: Start', aktiv: 'Start', marke: markeA, inhalt: `
+<main>
+<section class="buehne">${hoehen()}
+  <div class="text"><h1 class="frage">Wo leben Kaiser&shy;pinguine in freier Natur?</h1>
+  <div class="aktionen"><a class="knopf" href="c-karte.html">${i('compass')}Antwort suchen</a><a class="knopf zweit" href="#">${i('rotate-ccw')}Andere Frage</a></div></div>
+  <figure class="foto">${img('pinguin')}<span class="pin">${i('map-pin')}Ostantarktis</span>${rose({peilung: 222})}</figure>
+</section>
+<div class="start-unten">
+<section class="abschnitt"><h2>Deine Route</h2>
+  <div class="stand"><p><b>14</b> von 204 Karten entdeckt</p><div class="balken" role="img" aria-label="14 von 204 Karten entdeckt"><i style="width:7%"></i></div></div>
+  <ol class="route">
+  <li><a href="c-karte.html"><span class="halt">${deko('elefant')}</span><span class="wegtext"><small>Zuletzt angesehen</small><b>Afrikanischer Savannenelefant</b><span class="unter">Die Tierwelt</span></span></a></li>
+  <li><a href="c-spiel.html"><span class="halt jetzt">${i('gamepad-2')}</span><span class="wegtext"><small>Als Nächstes</small><b>Kreuz und quer</b><span class="unter">6 Aufgaben aus allen Welten</span></span></a></li>
+  <li><a href="#"><span class="halt offen">${i('map')}</span><span class="wegtext"><small>Danach</small><b>Lebensräume voller Leben</b><span class="unter">Lernreise</span></span></a></li>
+</ol></section>
+<section class="abschnitt"><h2>Sechs Welten</h2><nav class="welten" aria-label="Welten">${WELTEN.map(welt).join('')}</nav></section>
+</div>
+${nachweise('pinguin', 'elefant', 'panda', 'gizeh', 'curie', 'kompass', 'bruecke')}
+</main>`});
+
+const cKarte = seite({stil: 'c', titel: 'Kompass: Wissenskarte', aktiv: 'Welten', marke: markeA, inhalt: `
+<main class="karte">
+<div class="links">
+  <a class="pfad" href="#">${feld(WELTEN[0])}Die Tierwelt</a>
+  <figure class="foto">${img('elefant')}<span class="pin">${i('map-pin')}Nordbotswana</span></figure>
+  <p class="nachweis">Foto: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons</p>
+</div>
+<div class="rechts">
+  <h1>${K.titel}</h1><p class="einstieg">${K.einstieg}</p>
+  <div class="leiste"><button class="knopf zweit">${i('volume-2')}Vorlesen</button><button class="knopf zweit">${i('star')}Merken</button></div>
+  <section class="abschnitt"><h2>Kurz erklärt</h2><div class="kurz">${K.kurz.map(([f, a], n) => `<details${n ? '' : ' open'}><summary>${f}</summary><p>${a}</p></details>`).join('')}</div></section>
+  <section class="abschnitt ausschnitt"><h2>Rate mal!</h2><p class="fragezeile">${K.frage}</p><div class="antworten">${K.antworten.map(a => `<button class="antwort">${a}</button>`).join('')}</div></section>
+  <section class="abschnitt"><h2>Stimmt das?</h2><p class="einstieg">${K.stimmt}</p><div class="stimmt"><button class="knopf zweit">Stimmt</button><button class="knopf zweit">Stimmt nicht</button></div></section>
+  <section class="abschnitt"><h2>Steckbrief</h2><dl class="steckbrief">${K.steckbrief.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join('')}</dl></section>
+  <section class="abschnitt"><h2>Dazu passt</h2><ul class="verbunden">${K.passt.map(p => `<li><span class="halt">${deko(p.foto)}</span><span><b>${p.name}</b><p>${p.satz}</p><a class="weg" href="#">Karte öffnen</a></span></li>`).join('')}</ul></section>
+  ${nachweise('elefant', 'panda', 'maathai')}
+</div>
+</main>`});
+
+function cSpielSeite({falsch}) {
+  const antworten = falsch
+    ? `<button class="antwort">${S.antworten[0]}</button><button class="antwort falsch"><span class="marke-f">${i('x')}</span>${S.antworten[1]}</button><button class="antwort">${S.antworten[2]}</button>`
+    : `<button class="antwort richtig"><span class="marke-r">${i('check')}</span>${S.antworten[0]}</button>${S.antworten.slice(1).map(a => `<button class="antwort erledigt">${a}</button>`).join('')}`;
+  const rueck = falsch
+    ? `<div class="rueck lernen" role="status"><b>${S.nochNicht}</b><p>${S.ruhig}</p></div>`
+    : `<div class="rueck" role="status"><b>${i('check')}Richtig!</b><p>${S.warum}</p><span class="stempel" aria-hidden="true">${i('check')}Gelöst!</span></div>`;
+  const weiter = falsch
+    ? `<div class="weiter"><button class="knopf zweit">${i('lightbulb')}Tipp ansehen</button><a class="weg" href="#">Spiel beenden</a></div>`
+    : `<div class="weiter"><a class="knopf" href="#">Nächste Aufgabe</a><a class="weg" href="#">Spiel beenden</a></div>`;
+  return seite({stil: 'c', titel: falsch ? 'Kompass: Spiel, noch nicht richtig' : 'Kompass: Spiel', aktiv: 'Spielen', marke: markeA, inhalt: `
+<main class="spiel">
+<div class="haupt">
+  <div class="spielkopf"><h1>Kreuz und quer</h1><span class="stufe">${i('compass')}Stufe Entdecker</span></div>
+  <div class="fortschritt" role="img" aria-label="Aufgabe 3 von 6"><i class="da">${i('check')}</i><i class="da">${i('check')}</i><i class="jetzt"></i><i></i><i></i><i></i></div>
+  <p class="zaehler">Aufgabe 3 von 6</p>
+  <section class="aufgabe">
+    <span class="welt-mark">${feld(WELTEN[5])}Wissenschaft &amp; Weltall</span>
+    <div class="frage-kopf"><h2>${S.frage}</h2><button class="knopf zweit" aria-label="Frage vorlesen">${i('volume-2')}<span class="wort">Vorlesen</span></button></div>
+    <div class="antworten">${antworten}</div>
+    ${rueck}
+  </section>
+  ${weiter}
+</div>
+<aside class="seite"><div class="ohnefoto">${hoehen(7, 2.1)}${i('telescope', 'gross')}<small>Dazu gibt es eine Wissenskarte</small><b>${S.karte}</b><a class="weg" href="#">Karte öffnen</a></div></aside>
+</main>`});
+}
+const cSpiel = cSpielSeite({falsch: false});
+const cSpielFalsch = cSpielSeite({falsch: true});
+
 const index = `<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stilproben</title>
 <style>body{font:18px/1.5 system-ui;margin:24px;max-width:640px}a{display:block;padding:8px 0}</style></head><body>
 <h1>Stilproben vom 25.11.2026</h1><p>Entwurf, nicht die echte Seite. Beschreibung: <a href="../2026-11-25-stilproben.md">2026-11-25-stilproben.md</a></p>
 <h2>A „Kartenwerk“</h2><a href="a-start.html">Start</a><a href="a-karte.html">Wissenskarte</a><a href="a-spiel.html">Spiel</a>
-<h2>B „Sammelheft“</h2><a href="b-start.html">Start</a><a href="b-karte.html">Wissenskarte</a><a href="b-spiel.html">Spiel</a></body></html>
+<h2>B „Sammelheft“</h2><a href="b-start.html">Start</a><a href="b-karte.html">Wissenskarte</a><a href="b-spiel.html">Spiel</a>
+<h2>C „Kompass“ (Mischung)</h2><a href="c-start.html">Start</a><a href="c-karte.html">Wissenskarte</a><a href="c-spiel.html">Spiel: richtig</a><a href="c-spiel-falsch.html">Spiel: noch nicht richtig</a></body></html>
 `;
 
-const out = {'a-start': aStart, 'a-karte': aKarte, 'a-spiel': aSpiel, 'b-start': bStart, 'b-karte': bKarte, 'b-spiel': bSpiel, index};
+const out = {'a-start': aStart, 'a-karte': aKarte, 'a-spiel': aSpiel, 'b-start': bStart, 'b-karte': bKarte, 'b-spiel': bSpiel, 'c-start': cStart, 'c-karte': cKarte, 'c-spiel': cSpiel, 'c-spiel-falsch': cSpielFalsch, index};
 for (const [n, html] of Object.entries(out)) fs.writeFileSync(path.join(DIR, n + '.html'), html);
 console.log('gebaut:', Object.keys(out).join(', '));

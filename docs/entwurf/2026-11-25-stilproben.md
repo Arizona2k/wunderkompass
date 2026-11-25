@@ -1,14 +1,14 @@
 # Stilproben für das neue Design (25.11.2026)
 
 Entwurf, noch nicht freigegeben. Wunsch des Nutzers: „schön modern stylish“, „beim Design sei kreativ“.
-Zwei Richtungen, gezeigt an drei Seiten (Start, Wissenskarte, Spiel), je auf Handy und Rechner.
+Zwei Richtungen (A, B), gezeigt an drei Seiten (Start, Wissenskarte, Spiel), je auf Handy und Rechner; nach den Prüfungen dazu die Mischung C.
 Es sind **statische Muster** mit echten Inhalten und Fotos der Seite, keine fertige App: Nichts ist anklickbar, es gibt keinen Pass und keine Logik.
 
 ## Ansehen und neu bauen
 
-- Seiten: `docs/entwurf/2026-11-25-stilproben/index.html` (lokal im Browser öffnen), dazu `a-start.html`, `a-karte.html`, `a-spiel.html` und dieselben mit `b-`.
-- Neu bauen: `node docs/entwurf/2026-11-25-stilproben/bauen.mjs` (schreibt die HTML-Seiten aus `a.css`, `b.css`, `icons.json` und den echten Daten aus `app/world-photos.json`).
-- Aufnahmen: `node docs/entwurf/2026-11-25-stilproben/aufnahmen.mjs 1 320,390,768,1280,1440` und `… aufnahmen.mjs 2` (2-fach für Vergleichsbilder), dann `node docs/entwurf/2026-11-25-stilproben/vergleich.mjs`. Alles landet in `.qa-output/stilproben/` (nicht in Git). Das Aufnahme-Skript meldet, wenn eine Seite breiter als der Bildschirm ist (Stand jetzt: keine).
+- Seiten: `docs/entwurf/2026-11-25-stilproben/index.html` (lokal im Browser öffnen), dazu `a-start.html`, `a-karte.html`, `a-spiel.html`, dieselben mit `b-` und `c-`, dazu `c-spiel-falsch.html`.
+- Neu bauen: `node docs/entwurf/2026-11-25-stilproben/bauen.mjs` (schreibt die HTML-Seiten aus `a.css`, `b.css`, `c.css`, `icons.json` und den echten Daten aus `app/world-photos.json`).
+- Aufnahmen: `node docs/entwurf/2026-11-25-stilproben/aufnahmen.mjs 1 320,390,768,1280,1440` und `… aufnahmen.mjs 2` (2-fach für Vergleichsbilder), dann `node docs/entwurf/2026-11-25-stilproben/vergleich.mjs` (Vergleich A neben B und Übersichten von C). Einzelne Seiten: `NUR=c-start,c-spiel node … aufnahmen.mjs …`. Alles landet in `.qa-output/stilproben/` (nicht in Git). Das Aufnahme-Skript meldet, wenn eine Seite breiter als der Bildschirm ist (Stand jetzt: keine).
 - Schriften liegen mit Lizenz in `schriften/` (alle SIL Open Font License), Symbole aus Lucide (ISC-Lizenz) in `icons.json`. Kein neues Paket, nichts Bezahltes.
 
 ## Gemeinsame Grundlage beider Proben
@@ -53,18 +53,35 @@ Es sind **statische Muster** mit echten Inhalten und Fotos der Seite, keine fert
 - Ausgegraute Antworten nach dem Antworten haben wenig Kontrast; das ist für „schon beantwortet“ üblich, wird aber vom `design-pruefer` noch bewertet.
 - Offen: Wie wirken beide in Bewegung (Kartenwechsel, Antwort tippen)? Das zeigen statische Muster nicht.
 
+## Ergebnis der Prüfungen (25.11.2026)
+
+- Berichte: [Design-Prüfung](2026-11-25-stilproben-designpruefung.md) (`design-pruefer`), [Spieltest](2026-11-25-stilproben-spieltest.md) (`spieltester`, kein Kindertest).
+- Beide stützen A als Grundlage mit Welt-Kacheln und Stempel aus B. Der Spieltest sieht B für eine Sechsjährige vorn (Foto-Kacheln, dicke Knöpfe), A für einen Zehnjährigen (Route, ruhig, nicht kindisch).
+- Sofort behoben in A und B: Kompassrose auf dem Rechner beschnitten (A), Symbol über dem Text der Wissenskarten-Kachel (B).
+- Richtige Korrektur an meiner Empfehlung: `VISION.md` verlangt Akzente in **Orange und Petrol**; A hatte keines von beiden, mein Vorschlag „Hauptknopf Tinte“ widersprach dem.
+- Grandstander fällt weg (u wie v, im Bild bestätigt).
+
+## C „Kompass“ (Mischung, gebaut nach den Prüfungen)
+
+Seiten `c-start.html`, `c-karte.html`, `c-spiel.html` (richtig) und `c-spiel-falsch.html` (noch nicht richtig, Verhalten wie in der App: weiterprobieren, „Nächste Aufgabe“ erst nach der richtigen Antwort, Wortlaut aus `app/kern/woerter.ts`).
+
+- Grundlage A: Kartenpapier, Höhenlinien, Route, Kompassrose, Bricolage für Überschriften (Zeichenabstand jetzt −0,01 em statt −0,03 em, damit I und l nicht verschwimmen), Andika für Text.
+- Farben nach `VISION.md`: **Petrol** `#0B6B73` für Hauptknopf, Wege, Links und Fokus (6,2:1 auf Weiß); **Orange** `#D9650A` nur als Grafik: Kompassnadel, aktueller Schritt, aktiver Menüpunkt (3,6:1). Rot `#B5462F` nur für „noch nicht richtig“, mit hellem Grund und Kreuz, nicht beschämend.
+- Welt-Kacheln aus B, in der Sprache von A: Foto oben, Weltfarbe als helle Tönung, Symbol an der Bildkante, feine Ränder ohne harte Schatten. Weltfarben etwas kräftiger als in A. „Wissenschaft & Weltall“ hat noch kein freies Foto (auch in der App nicht): bis dahin ein gezeichnetes Mondphasen-Bild.
+- Lichtschimmer beim Zeigen oder Antippen einer Welt-Kachel (`VISION.md`, „Glanz“); bei „Bewegung reduzieren“ aus.
+- Stempel aus B, neu gedacht: fester Platz neben der grünen Rückmeldung, nie über Antworttext, deckend, Häkchen und „Gelöst!“ (die Zeile „Richtig!“ bleibt als Text daneben). Drückt sich einmal auf, bei „Bewegung reduzieren“ nicht.
+- Korrekturen der Prüfer: Ränder von Bedienelementen 3,6:1 (`--rand`), schon beantwortete Antworten in fester Farbe mit gestricheltem Rand statt halb durchsichtig, alle Tippflächen mindestens 48 px (auch Textlinks, Logo, Pfad, Menü), „Andere Frage“ als Knopf, Fokus mit weißem Innenring, „Stufe Entdecker“ als schlichte Anzeige statt knopfartig, Fortschritt mit Häkchen und einer orangen Raute statt rotem Warndreieck, aktiver Menüpunkt unten mit Petrol-Hinterlegung, „Vorlesen“ auch an der Spielfrage, Stand „14 von 204 Karten entdeckt“ über der Route (Zahl im Muster ausgedacht), Bühne auf dem Tablet zweispaltig.
+- Spiel auf dem Rechner wieder auf einem Bildschirm (gemessen bei 1280 × 800).
+
 ## Zu entscheiden
 
-1. A, B oder eine Mischung?
-2. Überschriftenschrift: Bricolage (A), Grandstander (B, mit „u“-Risiko) oder Andika fett überall?
-3. Hauptknopf: dunkle Tinte (A) oder Orange als Markenfarbe (B)?
+1. C „Kompass“ als Richtung für das neue Design? (Alternativen: A oder B pur.)
+2. Ist der Stempel mit „Gelöst!“ der richtige Belohnungsmoment, oder soll er erst am Spielende kommen (in der App heißt der Abschluss schon „Spielstempel sammeln“)?
 
-## Empfehlung (vorläufig, bis `design-pruefer` und `spieltester` berichtet haben)
+## Empfehlung
 
-**A „Kartenwerk“ als Grundlage**, weil es aus dem Namen WunderKompass und dem Globus kommt und für alle Altersstufen trägt.
-Aus B dazunehmen: die **bunten Welt-Kacheln mit Foto** (mehr Farbe und Freude auf der Startseite) und den **Stempel-Moment** bei richtigen Antworten.
-Überschriften in Bricolage, Hauptknopf in Tinte, Orange nicht als zweite Markenfarbe.
+**C „Kompass“.** Sie nimmt die Stärke von A (eigenständig, ruhig, trägt bis 14), holt die Freude aus B (Foto-Kacheln, Stempel) und behebt alle Muss-Punkte der Design-Prüfung. Offen bleiben Dinge, die statische Muster nicht zeigen: Bewegung, Ton, echtes Antippen, echte Kinder.
 
 ## Danach
 
-Nach der Wahl: Design-Entwurf für den Umbau in Schritten (zuerst Bausteine und Farben im Kern `app/kern/`, dann Start, Karte, Spiele), jeder Schritt mit Vorschau und Freigabe.
+Nach der Wahl: Design-Entwurf für den Umbau in Schritten (zuerst Farben, Schriften und Bausteine im Kern `app/kern/`, dann Start, Karte, Spiele), jeder Schritt mit Vorschau und Freigabe. Vorher `design-pruefer` und `spieltester` noch einmal über C.
