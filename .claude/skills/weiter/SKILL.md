@@ -26,6 +26,7 @@ Führe diese Schritte der Reihe nach aus. Ändere dabei nichts außer dem Branch
 6. **Helfer starten** (Wunsch des Nutzers, 24.11.2026): Lies in `STATUS.md` „Helfer beim Einstieg“ und prüfe BACKLOG und offene Prüfpunkte. Jeder Helfer mit einer offenen Aufgabe bekommt jetzt gleich seinen Auftrag, alle gleichzeitig im Hintergrund (vorher in `docs/entwurf/` nach vorhandenen Berichten sehen und darauf aufbauen). Helfer ohne echte Aufgabe bekommen keine Scheinarbeit. Ergebnisse sofort als Datei sichern.
 7. **Modell-Check:** Vergleiche die heute verfügbaren Claude-Modelle mit dem „Modell-Stand“ in `CLAUDE.md`. Gibt es ein neueres oder stärkeres Modell, schlage dem Nutzer kurz vor, ob ein Wechsel lohnt, und trage nach seiner Antwort den neuen Stand in `CLAUDE.md` ein.
    - Lies in `STATUS.md` den Abschnitt „Vorübergehende Modell-Ausnahmen“. Ist ein Enddatum vorbei: wieder das Modell aus `CLAUDE.md` nehmen, den Eintrag löschen und es dem Nutzer im Bericht sagen. Läuft eine Ausnahme noch, die Helfer so lange mit dem Ersatzmodell beauftragen.
+   - **Fable:** Der `schluss-pruefer` läuft mit `fable` (`CLAUDE.md`, „Schlussprüfung mit Fable“). Gibt es keine laufende Fable-Ausnahme, wird Fable genommen. Schlägt ein Fable-Start fehl: Ersatzmodell nach `CLAUDE.md`, Ausnahme mit Enddatum eintragen, im Bericht sagen.
 8. **Bericht an den Nutzer** in der festen Form, kurz und ohne Fachjargon:
    - Was ist fertig? (dazu: welche Helfer jetzt woran arbeiten)
    - Was kannst du dir ansehen?
