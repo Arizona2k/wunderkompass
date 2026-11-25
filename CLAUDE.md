@@ -83,7 +83,7 @@ Kleine Korrekturen brauchen keinen Entwurf, laufen aber durch Prüfen, Zeigen un
 
 **Tests.** Ein Test bleibt, wenn er schützt: (a) Pass und Speicher, (b) IDs, Hash-Links und alte Links, (c) Inhaltsintegrität, die Kinder merken (IDs, Verweise, Bilder, Bildnachweise), (d) genutzte App-Logik. Tests auf Nachweise, Berichte, alte Bytes oder wörtliche Alttexte gibt es nicht mehr. Keine Prüfung abschwächen, überspringen oder blind wiederholen.
 
-**Im Chat immer Deutsch**, auch kurze Zwischenmeldungen und Beschreibungen von Befehlen (Wunsch des Nutzers, 21.11.2026).
+**Im Chat immer Deutsch**, auch kurze Zwischenmeldungen und Beschreibungen von Befehlen (Wunsch des Nutzers, 21.11.2026). **Uhrzeiten im Chat immer in deutscher Zeit** (Nutzer, 25.11.2026: „du gibst immer die falschen Uhrzeiten an“): Der Container läuft auf UTC, eine Stunde hinter der deutschen Winterzeit, zwei hinter der Sommerzeit. Vor jeder Uhrzeit `TZ=Europe/Berlin date` nehmen. In Dateien darf UTC stehen, dann mit „UTC“ dahinter.
 
 **Berichte an den Nutzer** immer in dieser Form, kurz und ohne Fachjargon:
 

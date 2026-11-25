@@ -14,6 +14,10 @@ So benutzen wir die Liste:
 - **Hintergrund-Läufe enden nach 30 Minuten** (25.11.2026): `journeys` braucht lokal rund 44 Minuten und brach nach 29 Minuten ab, ohne Fehler der Seite. Gegenmittel: große Suiten immer mit `timeout: 7200000` starten.
 - **Vercel-Tageslimit** (100 Builds in 24 Stunden): gebaut werden nur `test-live` und `vorschau` (`vercel.json`), die Vorschau nur einmal je Runde.
 
+## Chat
+
+- **Falsche Uhrzeiten** (25.11.2026): Claude nannte Uhrzeiten aus dem Container (UTC), der Nutzer liest deutsche Zeit (eine Stunde später, im Sommer zwei). Gegenmittel: Uhrzeiten im Chat immer mit `TZ=Europe/Berlin date` bestimmen (Regel in `CLAUDE.md`).
+
 ## Design
 
 - **Neue Grundfarbe macht alte Farben zu blass** (später Fund, 25.11.2026): Das dunklere Papier schob zehn alte Grautöne unter 4,5:1. Gegenmittel: Suite `kontrast` im CI-Satz. Bei jeder Farbänderung zuerst `node tests/browser/run.mjs --suite ci kontrast` laufen lassen.
