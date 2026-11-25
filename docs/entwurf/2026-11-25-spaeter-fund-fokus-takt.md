@@ -51,4 +51,9 @@ Nicht geprüft (vom technik-pruefer offen benannt): keine eigenen Läufe; die An
 
 ## Läufe nach der Korrektur
 
-Werden nach dem Abschlusslauf eingetragen.
+Alle mit der fertigen Hilfe (Stand `c65c071`), 25.11.2026:
+
+- Beleg und Gegenprobe mit der überarbeiteten Hilfe wiederholt: Bei 400 ms Verzögerung ist die alte Prüfung in WebKit und Firefox rot und die neue grün. In der Gegenprobe ohne Fokus ist die neue Prüfung rot.
+- `pass-atlas` (CI-Satz): grün in WebKit (13 s), Firefox (11 s) und Chromium (8 s).
+- Vollprüfung in Chromium, alle vier geänderten Suiten: `research` (121 s), `home` (173 s), `core` (992 s) und `journeys` (2224 s) grün.
+- CI auf GitHub für `c65c071`: „Required quality checks“, „Engine-Schnellprüfung (webkit)“ und „Engine-Schnellprüfung (firefox)“ grün.
