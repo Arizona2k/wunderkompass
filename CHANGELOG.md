@@ -3,6 +3,21 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 25.11.2026 – Design „Kompass“, Schritt 1: ruhige Farben, ein Fokusrahmen, gleiche Knöpfe
+
+Nach dem [Bauplan](docs/entwurf/2026-11-25-umbau-schritt-1-bauplan.md) zum freigegebenen [Design-Umbau](docs/entwurf/2026-11-25-design-umbau.md) (Stilprobe C „Kompass“).
+
+- **Kompass-Farben:** Kartenpapier `#EDF1EA`, Tinte `#15314A`, Blaugrün `#0B6B73` als Hauptfarbe; alle Werte stehen einmal in `app/kern/kern.css` (`:root`), die doppelten Farbsätze zeigen darauf.
+- **Ein Fokusrahmen** für alle Bedienelemente: 3 px Blaugrün mit 2 px Luft (vorher zehn Farben, 2 oder 3 px, Orange bis Blau).
+- **Gleiche Knöpfe überall:** Haupt-, Neben-, Vorlese-, Antwort- und Wahlknöpfe sind auf Start, Welten, Karten, in allen Spielen, Laboren, Reisen, am Globus und im Pass gleich: mindestens 48 px hoch, Schrift 16 bis 18 px, mit „Größerer Schrift“ eine feste Stufe größer. Auch in nachgeladenen Bereichen, deren alte Regeln die Kern-Werte früher überschrieben (Codeprüfung M1).
+- **Grün nur bei richtig:** Gewählte Wahlknöpfe, Filter, Stufen und Globus-Beschriftungen sind blaugrün statt grün oder orange; Grün zeigt nur noch eine richtige Antwort. Bei erzwungenen Farben zeigt ein doppelter Rand die Auswahl.
+- Seitenbeschreibung nennt die Zielgruppe „Kinder von 5 bis 10 Jahren“ (`index.html`).
+- „Was ist neu?“: „Ruhige Farben, gleiche Knöpfe“.
+- **Tests:** `kern-huelle` misst die Bausteine auf Start, Karte, Reise, Spiel und im Pass bei 360 und 1280 px (Farben, Höhe, Schrift normal und groß) und den Fokusrahmen; `karte-stufen` auf die neuen Farben angepasst.
+- **Bewusst später** (BACKLOG Punkt 29): große Lesegröße für Fließtext (Schritt 2), Werkstatt-Farben (Schritt 5), `science-thinking.css` und orangener Fokus der Bauplan-Punkte (Schritt 7); eigene Weltfarben bei Zeitleiste, Geschichten, Bits und Erdschichten bleiben.
+- Nachgetragen: Dauer von PR #119 (rund 4 Stunden).
+- **Messwerte:** *Funde vor dem PR:* (folgt nach den Helferberichten). *Späte Funde:* (folgt). *Dauer:* (folgt).
+
 ## 25.11.2026 – Technik-Detektiv: So funktioniert die Erfindung
 
 Nach der [Endfassung](docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md) und dem [Nachtrag](docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-entwurf.md) (Entwurf `karten-autor`, geprüft von `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`; Entscheidungen im Nachtrag, Abschnitt 7).
