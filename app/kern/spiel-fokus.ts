@@ -43,14 +43,16 @@ export function imKastenSichtbar(e: { target: EventTarget; currentTarget: HTMLEl
 }
 
 // Nach „Nächste Aufgabe“ oder „Noch eine Runde“ geht der Fokus auf die neue Frage. Liegt der Anfang des Spielbretts über dem
-// Bildrand (oder die Frage darunter), rollt die Seite zum Brett, bis Stufenzeile, „Aufgabe … von …“ und die ganze Frage zu
-// sehen sind. Sonst bleibt die Seite stehen.
+// Bildrand oder die Frage hinter der unteren Leiste (auf dem Handy, scroll-padding-bottom in kern.css; technik-pruefer, S2),
+// rollt die Seite zum Brett, bis Stufenzeile, „Aufgabe … von …“ und die ganze Frage zu sehen sind. Sonst bleibt die Seite
+// stehen.
 export function zurFrage(frage: () => HTMLElement | null) {
   requestAnimationFrame(() => {
     const h = frage();
     if (!h) return;
     h.focus({ preventScroll: true });
     const brett = h.closest<HTMLElement>('.game-board') ?? h;
-    if (brett.getBoundingClientRect().top < 0 || h.getBoundingClientRect().bottom > innerHeight) brett.scrollIntoView({ block: 'start' });
+    const leiste = parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0;
+    if (brett.getBoundingClientRect().top < 0 || h.getBoundingClientRect().bottom > innerHeight - leiste) brett.scrollIntoView({ block: 'start' });
   });
 }

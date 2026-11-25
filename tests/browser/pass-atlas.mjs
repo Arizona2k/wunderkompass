@@ -1,5 +1,6 @@
 import {AXE_FILE} from './axe-loader.mjs';
 import assert from 'node:assert/strict';
+import {fokusZurueck} from './harness.mjs';
 
 // Check the usable scroll area, not just the outer dialog rectangle: fixed
 // headers/footers can cover a control while the dialog itself still fits.
@@ -115,8 +116,8 @@ export async function passDesign(page,report,width,shots){
  await page.emulateMedia({forcedColors:'active'});await keyboardRing(close,'system-color focus');await page.screenshot({path:shots+'/pass-system-colors-'+width+'.png',animations:'disabled'});await page.emulateMedia({forcedColors:'none'});
  await activate(nav.getByRole('button',{name:'Pass sichern',exact:true}));await pass.getByRole('switch',{name:'Größere Schrift',exact:true}).uncheck();await pass.getByRole('switch',{name:'Weniger Bewegung',exact:true}).uncheck();
  await pass.getByRole('button',{name:'Pass neu beginnen',exact:true}).click();const confirmation=page.getByRole('alertdialog');await confirmation.waitFor();assert.equal(await confirmation.evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&el.scrollWidth<=el.clientWidth+1}),true,'reset confirmation fits '+width);await axe('.pass-confirmation');await page.screenshot({path:shots+'/pass-reset-confirmation-'+width+'.png',animations:'disabled'});await confirmation.getByRole('button',{name:'Weiter sammeln',exact:true}).click();await page.locator('.pass-confirmation').waitFor({state:'detached'});await pass.waitFor();await named.waitFor();
- await page.keyboard.press('Escape');await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'Escape returns focus to pass opener');
- await opener.click();await named.waitFor();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true,'footer returns focus to pass opener');
+ await page.keyboard.press('Escape');await page.locator('.passport-atlas').waitFor({state:'detached'});await fokusZurueck(opener,'Escape returns focus to pass opener');
+ await opener.click();await named.waitFor();const footer=pass.getByRole('button',{name:'Weiter entdecken',exact:true});await textContrast(footer,'footer normal');await footer.hover();await textContrast(footer,'footer hover');await footer.click();await page.locator('.passport-atlas').waitFor({state:'detached'});await fokusZurueck(opener,'footer returns focus to pass opener');
  report.checks.push('Pass '+width+': heading focus without whole-section frames, keyboard/system-color focus and contrast, normal/hover action text contrast, touch-sized controls/label activation, all badges and extra stats, no label clipping/overlays, both backup actions immediately reachable with normal/large text, reduced dialog motion, hash and focus return preserved');
  }finally{resumeBackup();if(delayed)await page.unroute('**/progress-panel-*.js',holdBackup);}
 }

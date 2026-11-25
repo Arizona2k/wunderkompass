@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import {NEUIGKEITEN} from '../../app/kern/neuigkeiten.ts';
 import {DISCOVERY_CONNECTIONS} from '../../app/discovery-data.ts';
 import {KNOWLEDGE_CONNECTIONS} from '../../app/knowledge-connections.ts';
-import {bereich,inSucheTippen,klickNachRuhe,ladeanfragen} from './harness.mjs';
+import {bereich,fokusZurueck,inSucheTippen,klickNachRuhe,ladeanfragen} from './harness.mjs';
 import {mehrErfahren,verbindungsKnopf,verbindungsSatz} from './karte-hilfen.mjs';
 const read=async p=>JSON.parse(await fs.readFile(new URL(p,import.meta.url),'utf8'));
 const topics=await read('../../app/world-catalog.json'),categories=await read('../../exports/content/world-categories.json');
@@ -145,7 +145,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  await page.getByRole('dialog').locator('input').fill('Mondphasen');
  await page.getByRole('option').filter({hasText:'Warum verändert der Mond seine Form?'}).waitFor();
  await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});
- assert.equal(await search.evaluate(el=>el===document.activeElement),true,'search focus returns');
+ await fokusZurueck(search,'search focus returns');
  assert.equal(await page.locator('#globe-observatory').count(),0,'home does not mount the full globe controls');
  await page.getByRole('button',{name:'Direkt zur Weltkugel',exact:true}).focus();await page.keyboard.press('Enter');
  await page.locator('#globe-observatory').waitFor();assert.equal(new URL(page.url()).hash,'#globe');assert.equal(await page.locator('.discovery-hero').count(),0,'legacy globe address has its own full view');
@@ -333,7 +333,7 @@ export async function homepageOverview(browser,base,ready,monitor,report,shots){
    await p.evaluate(()=>scrollTo(0,0));
    await p.keyboard.press('Tab');await start.focus();assert.equal(await start.evaluate(el=>el.matches(':focus-visible')&&parseFloat(getComputedStyle(el).outlineWidth)>=2),true,'first step keyboard focus');
    await p.screenshot({path:shots+'/home-keyboard-'+width+'.png',animations:'disabled'});await p.keyboard.press('Enter');
-   await p.getByRole('dialog').locator('input').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});assert.equal(await start.evaluate(el=>el===document.activeElement),true,'shared search returns to the actual prominent opener');
+   await p.getByRole('dialog').locator('input').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});await fokusZurueck(start,'shared search returns to the actual prominent opener');
    const globe=p.getByRole('button',{name:'Direkt zur Weltkugel',exact:true});await globe.focus();await p.keyboard.press('Enter');await p.locator('#globe-observatory').waitFor();await p.waitForFunction(()=>document.activeElement?.id==='learning-main');assert.equal(new URL(p.url()).hash,'#globe');assert.equal(await p.locator('.discovery-hero').count(),0,'full globe has its own view');await p.locator('#globe-observatory').scrollIntoViewIfNeeded();await p.screenshot({path:shots+'/home-keyboard-globe-'+width+'.png',animations:'disabled'});
    await p.locator('.home-earth-facts>summary').click();await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));assert.equal(await p.locator('.home-earth-facts').evaluate(el=>el.open),true,'a freshly opened facts section stays open after route restoration');assert.equal(await p.locator('.planet-facts button').count(),3);await p.locator('.planet-facts button').first().click();await p.locator('.home-earth-facts>summary').click();
    await p.goBack();await p.locator('.discovery-hero').waitFor();await p.waitForFunction(()=>document.activeElement?.dataset.routeFocus==='home-globe');

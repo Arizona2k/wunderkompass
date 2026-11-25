@@ -30,7 +30,7 @@ export const WORLD_GAMES=[
  {id:'records',name:'Tierrekorde',text:'Groß, schnell oder geschickt: Vergleiche genaue Rekord-Regeln.',icon:Medal},
  {id:'chronology',name:'Sortiere die Zeit',text:'Was kam zuerst? Ordne fünf Erfindungen und Ereignisse.',icon:History},
  {id:'people',name:'Wer war das?',text:'Finde den Menschen hinter einer Idee oder Forschungsfrage.',icon:Users},
- {id:'technology',name:'Technik-Detektiv',text:'Welches Problem löst eine Erfindung? Welche Teile gehören dazu?',icon:Settings},
+ {id:'technology',name:'Technik-Detektiv',text:'Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.',icon:Settings},
  {id:'then-now',name:'Früher oder heute?',text:'Erkenne, wie sich Dinge verändert haben.',icon:Clock}
 ];
 function GlobeIcon(p:{size?:number}){return <Search {...p}/>;}

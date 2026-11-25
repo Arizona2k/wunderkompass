@@ -27,15 +27,17 @@ const SPIELE = {
     const s = sitzungen.detective?.learningRound;
     return CLASSIC_QUESTIONS.find(q => q.id === s?.ids?.[s.index])?.correct;
   }},
-  technik: {key: 'world:technology', kasten: '.world-game-room .lab-feedback', richtig: welt('technology')},
+  technik: {key: 'world:technology', kasten: '.world-game-room .lab-feedback', frage: '.world-game-room h2[tabindex="-1"]', richtig: welt('technology')},
 };
-// Für den hohen Kasten beginnt die Technik-Runde mit der längsten Erklärung (Kühlschrank, über 500 Zeichen).
-const LANGE_RUNDE = {'world:technology': {items: ['invention-refrigerator', 'invention-elevator', 'invention-battery', 'invention-airplane', 'invention-light']}};
+// Für den hohen Kasten beginnt die Technik-Runde mit der längsten Erklärung (Kamera, 180 Zeichen). Seit den kurzen
+// Auflösungen (25.11.2026) passt jeder Kasten auf ein 320 × 568 px großes Handy. Darum ist das Fenster hier nur 400 px hoch
+// (wie ein kleines Handy quer oder mit eingeblendeter Tastatur), sonst prüfte der Fall „Kasten höher als der Platz“ nichts mehr.
+const LANGE_RUNDE = {'world:technology': {items: ['invention-camera', 'invention-elevator', 'invention-battery', 'invention-airplane', 'invention-light']}};
 const GERAETE = [
   {name: '360 px', viewport: {width: 360, height: 640}, hasTouch: true, spiele: ['personen', 'kreuz', 'detektiv']},
   // Am Rechner mit weichem Rollen (html { scroll-behavior: smooth }): Der Test wartet, bis das Rollen fertig ist.
   {name: '1280 px', viewport: {width: 1280, height: 600}, bewegung: 'no-preference', spiele: ['personen', 'kreuz', 'detektiv']},
-  {name: '320 px, große Schrift', viewport: {width: 320, height: 568}, hasTouch: true, grosseSchrift: true, sitzungen: LANGE_RUNDE, spiele: ['technik'], hoch: true},
+  {name: '320 × 400 px, große Schrift', viewport: {width: 320, height: 400}, hasTouch: true, grosseSchrift: true, sitzungen: LANGE_RUNDE, spiele: ['technik'], hoch: true},
 ];
 
 // Lage des Kastens im freien Teil des Fensters (ohne feste Leisten oben und unten); im Browser ausgewertet. Der Rand des
@@ -135,6 +137,57 @@ async function spiele(page, spiel, geraet) {
         }))})`);
       }
     }
+    // Nach „Nächste Aufgabe“ steht die neue Frage ganz über der Leiste (zurFrage; technik-pruefer, S2). Kaputt war der Fall,
+    // dass sie im Fenster endet, aber hinter der Leiste. Wie lang die neue Frage ist, weiß der Test vorher nicht. Darum rollt
+    // er die Seite in dem Bild, in dem sie erscheint, und noch vor zurFrage so, dass sie `abstand` px über dem Fensterrand
+    // endet, also hinter der 64 px hohen Leiste (beides mit requestAnimationFrame; der Klick-Lauscher am Fenster kommt vor
+    // dem der App). Der Anfang des Spielbretts bleibt dabei im Bild, sonst rollte zurFrage schon deshalb. Gegenprobe ohne
+    // die Leiste in zurFrage: rot (25.11.2026).
+    for (const [n, abstand] of [[1, 62], [2, 32], [3, 2]]) {
+      const wo = `${spiel.key}, ${geraet.name}: neue Frage endet ${abstand} px über dem Fensterrand`;
+      if (n > 1) {
+        // Die vorige Runde hat weitergeschaltet; erst wenn der Pass die neue Aufgabe kennt, steht dort die richtige Antwort.
+        let stand;
+        for (let i = 0; i < 50 && stand?.index !== n - 1; i++) {
+          stand = (await sitzungen())[spiel.key];
+          if (stand?.index !== n - 1) await page.waitForTimeout(100);
+        }
+        assert.equal(stand?.index, n - 1, `${wo}: neue Aufgabe nicht im Pass`);
+        await antworte(page, antworten, spiel.richtig(await sitzungen()), wo);
+        // Warten, bis zurRueckmeldung fertig ist (ein Bild nach React): Sonst setzt es den Fokus erst nach dem Test auf
+        // „Richtig!“, und das Enter unten trifft die Überschrift statt „Nächste Aufgabe“ (code-pruefer, Muss 1: 2 von 5 rot).
+        const ruhig = await page.waitForFunction(sel => {
+          const l = window.__lage(sel);
+          return l?.imBild && (l.passt ? l.weiterHatFokus : l.titelHatFokus);
+        }, spiel.kasten, {timeout: 4000}).then(() => true, () => false);
+        if (!ruhig) assert.fail(`${wo}: Rückmeldung nicht im Bild oder Fokus falsch: ${JSON.stringify(await page.evaluate(sel => window.__lage(sel), spiel.kasten))}`);
+      }
+      await page.locator(`${spiel.kasten} > .primary-button`).waitFor();
+      const aufbau = await page.evaluate(({kasten, frage, abstand}) => {
+        const knopf = document.querySelector(`${kasten} > .primary-button`), alt = document.querySelector(frage).textContent;
+        knopf.focus({preventScroll: true});
+        window.__neueFrage = null;
+        addEventListener('click', () => requestAnimationFrame(() => {
+          const h = document.querySelector(frage), brett = h.closest('.game-board') ?? h;
+          scrollTo({top: scrollY + h.getBoundingClientRect().bottom - (innerHeight - abstand), behavior: 'instant'});
+          window.__neueFrage = {neu: h.textContent !== alt, fehler: Math.round(h.getBoundingClientRect().bottom - (innerHeight - abstand)), brett: Math.round(brett.getBoundingClientRect().top)};
+        }), {capture: true, once: true});
+        return {fokus: document.activeElement === knopf, knopf: knopf.textContent};
+      }, {kasten: spiel.kasten, frage: spiel.frage, abstand});
+      assert.ok(aufbau.fokus && /Nächste Aufgabe/u.test(aufbau.knopf), `${wo}: Testaufbau stimmt nicht (${JSON.stringify(aufbau)})`);
+      await page.keyboard.press('Enter');
+      const gerollt = await page.waitForFunction(() => window.__neueFrage, null, {timeout: 2000}).then(h => h.jsonValue(), () => null);
+      assert.ok(gerollt?.neu && Math.abs(gerollt.fehler) <= 1 && gerollt.brett >= 0, `${wo}: Testaufbau stimmt nicht (${JSON.stringify(gerollt)})`);
+      const sichtbar = await page.waitForFunction(frage => {
+        const unten = innerHeight - (parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0);
+        const h = document.querySelector(frage), r = h.getBoundingClientRect();
+        return document.activeElement === h && r.top >= 0 && r.bottom <= unten;
+      }, spiel.frage, {timeout: 2000}).then(() => true, () => false);
+      if (!sichtbar) assert.fail(`${wo}: neue Frage nicht ganz über der Leiste oder ohne Fokus (${JSON.stringify(await page.evaluate(frage => {
+        const h = document.querySelector(frage), r = h.getBoundingClientRect();
+        return {oben: r.top, unten: r.bottom, fenster: innerHeight, fokus: document.activeElement === h};
+      }, spiel.frage))})`);
+    }
   }
   return lage;
 }
@@ -158,7 +211,7 @@ export async function spielFokus({browser, base, ready, monitor}) {
         // Gemessene Lage ins Log, damit auch ein grüner Lauf zeigt, wie viel Abstand bleibt (code-pruefer, Kann 1).
         const mass = `Kasten ${lage.kasten[1] - lage.kasten[0]} px, frei ${lage.frei[1] - lage.frei[0]} px`;
         console.log(geraet.hoch
-          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“, Rahmen an jeder Grenze über der Leiste (${mass})`
+          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“, Rahmen an jeder Grenze über der Leiste, neue Frage über der Leiste (${mass})`
           : `${spiel.key} (${geraet.name}): Rückmeldung nach falscher und richtiger Antwort im Bild, „Nächste Aufgabe“ mit Fokus (${mass})`);
       }
     } finally {

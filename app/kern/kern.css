@@ -474,6 +474,10 @@ svg { font-family: "Trebuchet MS", Arial, sans-serif; }
 .game-room .lab-feedback > .speech-button { margin-inline-end: 16px; margin-block-end: 8px; }
 /* Holt die Seite einen Knopf im Kasten mit Tab über die Leiste (imKastenSichtbar), bleibt Platz für den Fokusrahmen. */
 .game-room :is(.lab-feedback, .game-feedback) :is(button, a) { scroll-margin-block: 12px; }
+/* Auf breiten Bildschirmen höchstens etwa 65 Zeichen je Zeile, sonst verlieren Kinder beim Lesen die Zeile (Design-Prüfung
+   Technik-Auflösungen, Soll 1). Wächst mit der großen Schrift mit. „pretty“ lässt kein einzelnes Wort allein in der letzten
+   Zeile (Nachprüfung, Kann 2). */
+.game-room :is(.lab-feedback, .game-feedback) > p { max-width: 65ch; text-wrap: pretty; }
 @media (max-width: 560px) {
   /* .game-board dazu: globals.css lädt nach dieser Datei und setzt .world-game-room .world-photo auf 20 px. */
   .world-game-room .game-board .world-photo { margin: 12px 0; }

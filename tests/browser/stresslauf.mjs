@@ -6,6 +6,8 @@
 // und über launchPersistentContext. Darum greift die Bremse an den Browser-Typen selbst, nicht nur am Hauptbrowser.
 // Grenze: Jedes Bild wartet für sich. Zwei Rückrufe, die die Seite im selben Bild anmeldet, landen darum nicht sicher
 // wieder im selben Bild. Rot im Stresslauf heißt also erst: Ursache klären (Seite, Test oder Bremse), dann beheben.
+// Zweite Grenze: Takte (`setTimeout`, z. B. die Fokusrückgabe von Radix nach dem Schließen eines Dialogs) bleiben
+// ungebremst. Solche Fehler findet der Stresslauf nicht (später Fund PR #119, BACKLOG „Stresslauf auch für Takte“).
 
 export function bremseBilder(playwright, ms) {
   if (!Number.isFinite(ms) || ms <= 0) throw new Error('QA_FRAME_DELAY_MS muss eine Zahl über 0 sein (Millisekunden, ohne Einheit), nicht ' + JSON.stringify(process.env.QA_FRAME_DELAY_MS ?? ms));
