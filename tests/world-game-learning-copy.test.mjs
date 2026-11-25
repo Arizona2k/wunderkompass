@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import {DRITTE_ANTWORT,worldGameBank,restoreWorldGameOrders,validWorldGameOrder} from '../app/world-game-bank.ts';
-import {AUFLOESUNG,EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
+import {AUFLOESUNG,EIGENE_RAETSEL,TECHNIK_AUFLOESUNG,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
@@ -100,7 +100,7 @@ test('telescope recognition uses the supported optical description without chang
  assert(t.invention.recognitionClue.trim().length>20);
  assert.equal(q.prompt,'Welche Erfindung passt zu dieser Beschreibung? '+t.invention.recognitionClue);
  for(const name of ['fernrohr',...t.aliases])assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')),'prompt names '+name);assert.equal(q.answers[q.correct],t.title);
- assert.notEqual(q.prompt,t.invention.stages[0].text);assert.equal(q.why,t.invention.stages[2].text);
+ assert.notEqual(q.prompt,t.invention.stages[0].text);assert.equal(q.why,TECHNIK_AUFLOESUNG[t.id]);
  for(const other of catalog.filter(x=>x.invention&&x.id!==t.id)){
   const otherQ=worldGameBank('technology').find(q=>q.id===other.id);
   assert.equal(otherQ.prompt,(other.invention.walkthrough?'Welche Erfindung passt zu dieser Forscherfrage? ':'Welche Erfindung hilft bei diesem Problem? ')+other.invention.stages[0].text);
@@ -159,6 +159,35 @@ test('jede Person hat eine kurze Auflösung, die etwas Neues sagt',()=>{
   for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,t.id+': Satz zu lang: '+satz);
   assert.ok((text.match(/\d+/gu)??[]).length<=1,t.id+': höchstens eine Zahl');
   for(const satz of saetze(EIGENE_RAETSEL[t.id]))assert.ok(!text.includes(satz),t.id+': wiederholt einen Rätselsatz');
+ }
+});
+// Kurze Auflösung im Technik-Detektiv (Endfassung 25.11.2026, docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md).
+test('jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiederholt',()=>{
+ const pool=worldGameBank('technology'),erfindungen=catalog.filter(t=>t.invention);
+ assert.deepEqual(Object.keys(TECHNIK_AUFLOESUNG).sort(),erfindungen.map(t=>t.id).sort());
+ const saetze=text=>text.split(/(?<=[.!?:])\s+/u),ohneArtikel=t=>normalize(t.title).replace(/^(der|die|das) /u,'');
+ for(const t of erfindungen){
+  const text=TECHNIK_AUFLOESUNG[t.id],q=pool.find(q=>q.id===t.id),hinweis=t.invention.recognitionClue||t.invention.stages[0].text;
+  assert.equal(q.why,text,t.id);
+  assert.ok(text.length<=180,t.id+': höchstens 180 Zeichen');
+  assert.ok(text.startsWith(t.title),t.id+': beginnt mit dem Namen der Erfindung');
+  for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,t.id+': Satz zu lang: '+satz);
+  // Nur ganze Zahlen zählen: „3D“ ist ein Wort, keine Zahl (code-pruefer, Kann 3).
+  assert.ok((text.match(/(?<![\p{L}\d])\d+(?![\p{L}\d])/gu)??[]).length<=1,t.id+': höchstens eine Zahl');
+  for(const satz of saetze(hinweis))assert.ok(!normalize(text).includes(normalize(satz)),t.id+': wiederholt den Hinweis');
+  // Keine andere Erfindung aus dem Spiel, sonst verrät die Auflösung eine Falle oder ein späteres Ziel. Geprüft wird nur der
+  // Wortanfang, damit auch „Satelliten“ oder „Raketentriebwerk“ auffallen, und mit den anderen Namen der Karte (code-pruefer, Kann 2).
+  for(const o of erfindungen)if(o!==t)for(const name of [ohneArtikel(o),...(o.aliases??[]).map(a=>ohneArtikel({title:a}))])
+   assert.ok(!(' '+normalize(text)).includes(' '+name),t.id+' nennt '+o.title+' („'+name+'“)');
+ }
+});
+// Technik-Detektiv: Nach einer falschen Antwort prüft das Kind die gewählte Erfindung, auf allen Stufen, statt den Tipp ein
+// zweites Mal zu lesen (Nachtrag Technik-Auflösungen, Abschnitt 7).
+test('Technik-Detektiv: nach falscher Antwort ein eigener Prüfsatz statt des Tipps',()=>{
+ for(const q of worldGameBank('technology'))for(const stufe of ['entdecker','profi','experte',undefined]){
+  const wrong=q.answers.find((_,i)=>i!==q.correct),feedback=worldGameWrongFeedback('technology',q,wrong,stufe);
+  assert.equal(feedback,'Du hast „'+wrong+'“ gewählt. Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?',q.id);
+  assert.ok(!feedback.includes(worldGameHint('technology',q,stufe)),q.id+': wiederholt den Tipp');
  }
 });
 // Eine Auflösung nennt keine andere Person aus dem Spiel, sonst verrät sie eine Falle oder ein späteres Ziel; der Profi-Tipp

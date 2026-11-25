@@ -31,24 +31,28 @@ export function zurRueckmeldung(kasten: Ref, weiter?: Ref) {
 // Fenster, aber hinter der unteren Leiste, rollt Firefox gar nicht (Chromium und WebKit beachten die Leiste): Der Knopf
 // bliebe samt Fokusrahmen dahinter (Spieltest-Nachprüfung, Muss 1; gemessen mit der Suite spiel-fokus). Darum rollt die
 // Seite ihn dann selbst darüber (scrollIntoView beachtet scroll-padding-bottom und den scroll-margin
-// der Knöpfe in kern.css). Nur bei Wechseln innerhalb des Kastens: Den ersten Fokus nach der Antwort setzt
-// zurRueckmeldung, mitten im Rollen zum Kasten.
+// der Knöpfe in kern.css). Der scroll-margin zählt auch beim Prüfen mit: Endet ein Knopf nur knapp über der Leiste,
+// läge sonst sein Fokusrahmen dahinter (Engine-Schnellprüfung in Firefox, PR #118, 25.11.2026). Nur bei Wechseln
+// innerhalb des Kastens: Den ersten Fokus nach der Antwort setzt zurRueckmeldung, mitten im Rollen zum Kasten.
 export function imKastenSichtbar(e: { target: EventTarget; currentTarget: HTMLElement; relatedTarget: EventTarget | null }) {
   const ziel = e.target as HTMLElement, vorher = e.relatedTarget as Node | null;
   if (!vorher || ziel === e.currentTarget || !e.currentTarget.contains(vorher)) return;
   const leiste = parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0;
-  if (ziel.getBoundingClientRect().bottom > innerHeight - leiste) ziel.scrollIntoView({ block: 'nearest' });
+  const rand = parseFloat(getComputedStyle(ziel).scrollMarginBottom) || 0;
+  if (ziel.getBoundingClientRect().bottom + rand > innerHeight - leiste) ziel.scrollIntoView({ block: 'nearest' });
 }
 
 // Nach „Nächste Aufgabe“ oder „Noch eine Runde“ geht der Fokus auf die neue Frage. Liegt der Anfang des Spielbretts über dem
-// Bildrand (oder die Frage darunter), rollt die Seite zum Brett, bis Stufenzeile, „Aufgabe … von …“ und die ganze Frage zu
-// sehen sind. Sonst bleibt die Seite stehen.
+// Bildrand oder die Frage hinter der unteren Leiste (auf dem Handy, scroll-padding-bottom in kern.css; technik-pruefer, S2),
+// rollt die Seite zum Brett, bis Stufenzeile, „Aufgabe … von …“ und die ganze Frage zu sehen sind. Sonst bleibt die Seite
+// stehen.
 export function zurFrage(frage: () => HTMLElement | null) {
   requestAnimationFrame(() => {
     const h = frage();
     if (!h) return;
     h.focus({ preventScroll: true });
     const brett = h.closest<HTMLElement>('.game-board') ?? h;
-    if (brett.getBoundingClientRect().top < 0 || h.getBoundingClientRect().bottom > innerHeight) brett.scrollIntoView({ block: 'start' });
+    const leiste = parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0;
+    if (brett.getBoundingClientRect().top < 0 || h.getBoundingClientRect().bottom > innerHeight - leiste) brett.scrollIntoView({ block: 'start' });
   });
 }
