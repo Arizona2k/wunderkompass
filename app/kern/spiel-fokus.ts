@@ -31,13 +31,15 @@ export function zurRueckmeldung(kasten: Ref, weiter?: Ref) {
 // Fenster, aber hinter der unteren Leiste, rollt Firefox gar nicht (Chromium und WebKit beachten die Leiste): Der Knopf
 // bliebe samt Fokusrahmen dahinter (Spieltest-Nachprüfung, Muss 1; gemessen mit der Suite spiel-fokus). Darum rollt die
 // Seite ihn dann selbst darüber (scrollIntoView beachtet scroll-padding-bottom und den scroll-margin
-// der Knöpfe in kern.css). Nur bei Wechseln innerhalb des Kastens: Den ersten Fokus nach der Antwort setzt
-// zurRueckmeldung, mitten im Rollen zum Kasten.
+// der Knöpfe in kern.css). Der scroll-margin zählt auch beim Prüfen mit: Endet ein Knopf nur knapp über der Leiste,
+// läge sonst sein Fokusrahmen dahinter (Fokus-Test mit 320 × 400 px in Firefox, 25.11.2026). Nur bei Wechseln innerhalb
+// des Kastens: Den ersten Fokus nach der Antwort setzt zurRueckmeldung, mitten im Rollen zum Kasten.
 export function imKastenSichtbar(e: { target: EventTarget; currentTarget: HTMLElement; relatedTarget: EventTarget | null }) {
   const ziel = e.target as HTMLElement, vorher = e.relatedTarget as Node | null;
   if (!vorher || ziel === e.currentTarget || !e.currentTarget.contains(vorher)) return;
   const leiste = parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0;
-  if (ziel.getBoundingClientRect().bottom > innerHeight - leiste) ziel.scrollIntoView({ block: 'nearest' });
+  const rand = parseFloat(getComputedStyle(ziel).scrollMarginBottom) || 0;
+  if (ziel.getBoundingClientRect().bottom + rand > innerHeight - leiste) ziel.scrollIntoView({ block: 'nearest' });
 }
 
 // Nach „Nächste Aufgabe“ oder „Noch eine Runde“ geht der Fokus auf die neue Frage. Liegt der Anfang des Spielbretts über dem

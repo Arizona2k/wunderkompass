@@ -86,6 +86,7 @@ async function spiele(page, spiel, geraet) {
   assert.ok(richtig, `${spiel.key}, ${geraet.name}: gespeicherte Runde nicht gefunden`);
   const texte = await antworten.evaluateAll(knoepfe => knoepfe.map(b => b.querySelector('span:not([class])')?.textContent));
   const falsch = texte.find(t => t && t !== richtig);
+  let lage;
   for (const [text, istRichtig] of [[falsch, false], [richtig, true]]) {
     const wo = `${spiel.key}, ${geraet.name}, ${istRichtig ? 'richtige' : 'falsche'} Antwort`;
     await antworte(page, antworten, text, wo);
@@ -98,6 +99,7 @@ async function spiele(page, spiel, geraet) {
     }, {sel: spiel.kasten, erwartet}, {timeout: 4000}).then(h => h.jsonValue(), () => null);
     if (!fertig) assert.fail(`${wo}: Rückmeldung nicht im Bild oder Fokus falsch: ${JSON.stringify(await page.evaluate(sel => window.__lage(sel), spiel.kasten))}`);
     assert.equal(fertig.titel, istRichtig ? 'Richtig!' : 'Noch nicht ganz. Versuch es noch einmal!', wo);
+    lage = fertig;
   }
   if (geraet.hoch) {
     // Mit Tab geht es von „Richtig!“ weiter zu „Vorlesen“ und dann zu „Nächste Aufgabe“. Jeder Knopf steht dabei über der
@@ -127,9 +129,10 @@ async function spiele(page, spiel, geraet) {
       if (!sichtbar) assert.fail(`${wo}: Knopf mit Fokus liegt hinter der unteren Leiste (${JSON.stringify(await page.evaluate(() => [document.activeElement.getBoundingClientRect().bottom, innerHeight, getComputedStyle(document.documentElement).scrollPaddingBottom]))})`);
     }
   }
+  return lage;
 }
 
-export async function spielFokus({browser, base, ready, monitor, report}) {
+export async function spielFokus({browser, base, ready, monitor}) {
   for (const geraet of GERAETE) {
     const save = createSave();
     if (geraet.grosseSchrift) save.progress.settings.largeText = true;
@@ -144,10 +147,12 @@ export async function spielFokus({browser, base, ready, monitor, report}) {
         const spiel = SPIELE[name];
         await page.goto(base);
         await ready(page);
-        await spiele(page, spiel, geraet);
-        report.checks.push(geraet.hoch
-          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“`
-          : `${spiel.key} (${geraet.name}): Rückmeldung nach falscher und richtiger Antwort im Bild, „Nächste Aufgabe“ mit Fokus`);
+        const lage = await spiele(page, spiel, geraet);
+        // Gemessene Lage ins Log, damit auch ein grüner Lauf zeigt, wie viel Abstand bleibt (code-pruefer, Kann 1).
+        const mass = `Kasten ${lage.kasten[1] - lage.kasten[0]} px, frei ${lage.frei[1] - lage.frei[0]} px`;
+        console.log(geraet.hoch
+          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“ (${mass})`
+          : `${spiel.key} (${geraet.name}): Rückmeldung nach falscher und richtiger Antwort im Bild, „Nächste Aufgabe“ mit Fokus (${mass})`);
       }
     } finally {
       await context.close();

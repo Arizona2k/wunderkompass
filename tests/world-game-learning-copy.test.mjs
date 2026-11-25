@@ -172,10 +172,13 @@ test('jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiede
   assert.ok(text.length<=180,t.id+': höchstens 180 Zeichen');
   assert.ok(text.startsWith(t.title),t.id+': beginnt mit dem Namen der Erfindung');
   for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,t.id+': Satz zu lang: '+satz);
-  assert.ok((text.match(/\d+/gu)??[]).length<=1,t.id+': höchstens eine Zahl');
+  // Nur ganze Zahlen zählen: „3D“ ist ein Wort, keine Zahl (code-pruefer, Kann 3).
+  assert.ok((text.match(/(?<![\p{L}\d])\d+(?![\p{L}\d])/gu)??[]).length<=1,t.id+': höchstens eine Zahl');
   for(const satz of saetze(hinweis))assert.ok(!normalize(text).includes(normalize(satz)),t.id+': wiederholt den Hinweis');
-  // Keine andere Erfindung aus dem Spiel, sonst verrät die Auflösung eine Falle oder ein späteres Ziel.
-  for(const o of erfindungen)if(o!==t)assert.ok(!(' '+normalize(text)+' ').includes(' '+ohneArtikel(o)+' '),t.id+' nennt '+o.title);
+  // Keine andere Erfindung aus dem Spiel, sonst verrät die Auflösung eine Falle oder ein späteres Ziel. Geprüft wird nur der
+  // Wortanfang, damit auch „Satelliten“ oder „Raketentriebwerk“ auffallen, und mit den anderen Namen der Karte (code-pruefer, Kann 2).
+  for(const o of erfindungen)if(o!==t)for(const name of [ohneArtikel(o),...(o.aliases??[]).map(a=>ohneArtikel({title:a}))])
+   assert.ok(!(' '+normalize(text)).includes(' '+name),t.id+' nennt '+o.title+' („'+name+'“)');
  }
 });
 // Eine Auflösung nennt keine andere Person aus dem Spiel, sonst verrät sie eine Falle oder ein späteres Ziel; der Profi-Tipp
