@@ -98,7 +98,7 @@
   background: #e2f2e8; color: #1f5a3a; font-size: 16px; font-weight: 700;
 }
 .wissenskarte-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
-.wissenskarte-knoepfe button { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-size: 17px; }
+.wissenskarte-knoepfe button { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-size: var(--kern-schrift-knopf); }
 .wissenskarte-merken[aria-pressed="true"] { background: var(--motiv-stark); border-color: var(--motiv-symbol); color: var(--motiv-text); }
 
 /* „Rate mal!“ */
@@ -117,11 +117,9 @@
 .large-reading .wissenskarte .rate-mal-frage { font-size: 24px !important; }
 .large-reading .wissenskarte-einleitung { font-size: 21px !important; }
 .wissenskarte .rate-mal .quiz-answers { margin-top: 16px; gap: 10px; }
-.wissenskarte .rate-mal .quiz-answer { min-height: 56px; font-size: 18px; }
+.wissenskarte .rate-mal .quiz-answer { min-height: 56px; }
 /* Antwortknöpfe mit deutlichem Rand (mindestens 3:1 zum Grund); der helle Standardrand (#dce7eb) hob sich kaum ab
    (Design-Prüfung 22.11.2026). Markierte Knöpfe behalten ihre Farbe, nur die Randbreite bleibt gleich. */
-.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer { border-width: 2px; }
-.wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:not(.is-correct):not(.is-incorrect) { border-color: #6f8d97; }
 /* Nach dem Tippen sind die Knöpfe gesperrt, bleiben aber voll lesbar: Kinder lesen die übrigen Antworten zum Vergleichen
    noch einmal. Die alte Regel button:disabled (globals.css) blasste sie auf Deckkraft 0,65 ab, Kontrast etwa 3,2:1. */
 .wissenskarte :is(.rate-mal, .stimmt-das) .quiz-answer:disabled { opacity: 1; }
@@ -153,15 +151,16 @@
 .wissenskarte .stimmt-das-behauptung { margin: 0; font-size: 20px; font-weight: 700; line-height: 1.4; }
 .large-reading .wissenskarte .stimmt-das-behauptung { font-size: 22px !important; }
 .wissenskarte .stimmt-das-knoepfe { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
-.wissenskarte .stimmt-das .quiz-answer { justify-content: center; min-height: 56px; font-size: 18px; font-weight: 700; }
+.wissenskarte .stimmt-das .quiz-answer { justify-content: center; min-height: 56px; font-weight: 700; }
 /* „Noch eine Frage“ und „Noch einmal raten“ nebeneinander, auf dem Handy untereinander. */
 .wissenskarte .rate-mal-weiter { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-/* Beide in Antwortgröße (vorher 14 px); „Noch einmal raten“ mit Rand, damit es als Knopf zu erkennen ist.
+/* Beide in Antwortgröße (vorher 14 px); „Noch einmal raten“ mit Rand, damit es als Knopf zu erkennen ist. Er sieht aus wie ein
+   Nebenknopf (Petrol), nicht in Weltfarbe: Grün heißt im Design „Kompass“ nur noch „richtig“ (Design-Prüfung Schritt 1, Soll 8).
    !important, weil globals.css .speech-button (also „Noch einmal raten“) mit !important auf 14 px setzt. */
 .wissenskarte .rate-mal-weiter button { min-height: 48px; font-size: 18px !important; }
 .wissenskarte .rate-mal-weiter .speech-button {
-  margin: 0; padding: 10px 18px; border: 2px solid var(--motiv-symbol); border-radius: 14px;
-  background: #fff; color: var(--motiv-text); font-weight: 700;
+  margin: 0; padding: 10px 18px; border: 2px solid var(--kern-petrol); border-radius: var(--kern-rund);
+  background: var(--kern-flaeche); color: var(--kern-petrol-dunkel); font-weight: 700;
 }
 /* Schluss nach der letzten Frage der Runde (Spieltest 24.11.2026, Befunde 3 und 4). Der Knopf zur nächsten Karte
    darf umbrechen: Manche Titel sind lang, und am kleinen Handy mit großer Schrift ragte sonst ein Wort über den Rand. */
@@ -254,7 +253,6 @@
   color: var(--kern-text, #15303a); text-align: left; font: inherit; cursor: pointer;
 }
 .dazu-passt-kachel:hover { border-color: var(--motiv-symbol); }
-.dazu-passt-kachel:focus-visible { outline: 3px solid var(--motiv-symbol); outline-offset: 3px; }
 .dazu-passt-bild { display: block; min-width: 0; }
 .dazu-passt-bild .kartenbild { border-radius: 0; }
 .dazu-passt-bild .world-photo img { width: 100%; height: 150px; object-fit: cover; }
@@ -329,5 +327,4 @@
 .wissenskarte .ordne-richtig-rueckmeldung { margin-top: 12px; }
 /* „Prüfen“ ist der Hauptknopf: so groß wie „Noch eine Frage“, auf dem Handy in voller Breite (Design-Prüfung Teil A, Befund 3).
    !important, weil globals.css den Hauptknopf auf 14 px setzt. */
-.wissenskarte .ordne-richtig .primary-button { min-height: 48px; font-size: 18px !important; }
 .wissenskarte .ordne-richtig-rueckmeldung p { margin: 6px 0 0; }

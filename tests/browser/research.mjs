@@ -5,7 +5,7 @@ import FEEDBACK from '../../app/research-feedback.json' with {type:'json'};
 import {RESEARCH_QUESTIONS} from '../../app/research-catalog.ts';
 import {researchTransferFlow} from './research-transfer.mjs';
 import {seasonalRestoreRegression} from './model-import-integrity.mjs';
-import {bereich,inSucheTippen,klickNachRuhe} from './harness.mjs';
+import {bereich,fokusZurueck,inSucheTippen,klickNachRuhe} from './harness.mjs';
 const labs=JSON.parse(await fs.readFile(new URL('../../exports/content/laboratories.json',import.meta.url),'utf8'));
 const experiments=JSON.parse(await fs.readFile(new URL('../../exports/content/home-experiments.json',import.meta.url),'utf8'));
 const saveKey='erde-entdecken:save:v3';
@@ -80,7 +80,7 @@ export async function researchFlow(browser,base,ready,monitor,report,shots){
  // Real module latency: dialog and meaningful feedback appear before download.
  const context=await browser.newContext({viewport:{width:320,height:844},hasTouch:true,isMobile:true}),p=await context.newPage();monitor(p);await p.goto(base);await ready(p);
  let release;const hold=new Promise(resolve=>{release=resolve;});await p.route('**/global-search-*.js',async route=>{await hold;await route.continue();});
- const opener=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});await opener.tap();await p.getByRole('dialog').waitFor();await p.getByRole('dialog').getByText(/Die Suche kommt gleich/).waitFor();await p.screenshot({path:path.join(shots,'search-immediate-loading-320.png')});release();await p.getByRole('dialog').locator('input').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});assert.equal(await opener.evaluate(el=>el===document.activeElement),true);
+ const opener=p.getByRole('button',{name:'WunderKompass durchsuchen',exact:true});await opener.tap();await p.getByRole('dialog').waitFor();await p.getByRole('dialog').getByText(/Die Suche kommt gleich/).waitFor();await p.screenshot({path:path.join(shots,'search-immediate-loading-320.png')});release();await p.getByRole('dialog').locator('input').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});await fokusZurueck(opener,'search returns focus to opener');
  for(const [term,type] of [['Vulkan-Werkstatt','lab:volcano'],['Tröpfchen am kalten Glas','experiment:condensation']]){await inSucheTippen(p,term);await p.getByRole('option').filter({hasText:term}).first().click();await p.waitForFunction(([type])=>location.hash.startsWith('#'+({lab:'labs/',experiment:'labs/experiment/'}[type.split(':')[0]])+type.split(':')[1]),[type]);await p.reload();await ready(p);}
  await inSucheTippen(p,'Die Reise eines Tropfens');await p.getByRole('option').filter({hasText:'Die Reise eines Tropfens'}).first().click();await p.locator('.journey-reader').waitFor();assert.equal(new URL(p.url()).hash,'#journeys/water/1');await p.getByRole('button',{name:'Weiter entdecken',exact:true}).click();await p.getByText('Kapitel 2 von 5',{exact:true}).waitFor();await p.reload();await ready(p);await p.getByText('Kapitel 2 von 5',{exact:true}).waitFor();await p.getByRole('button',{name:'Alle Lernreisen',exact:true}).click();await p.locator('.journey-hub').waitFor();await p.goBack();await p.getByText('Kapitel 2 von 5',{exact:true}).waitFor();
  // Vor dem Klick in den Fuß fertig laden lassen: Nachgeladene Teile der Startseite schieben ihn sonst unter dem Zeiger weg (harness.mjs, klickNachRuhe).

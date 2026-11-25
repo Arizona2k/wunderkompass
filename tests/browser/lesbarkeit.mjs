@@ -67,17 +67,27 @@ export async function schrift14(bereich) {
   assert.deepEqual(zuKlein, [], 'Text unter 14 px');
 }
 
-// Kontrast von Schrift und eigenem Hintergrund des Elements (WCAG 2.1).
+// Kontrast von Schrift und sichtbarem Hintergrund (WCAG 2.1). Ist der Hintergrund des Elements ganz oder teilweise
+// durchsichtig (gesperrte Antworten im Design „Kompass“), zählt, was darunter liegt: Die Hintergründe der Vorfahren
+// werden bis zum ersten deckenden übereinandergelegt. Vorher galt „durchsichtig“ als Schwarz (3,2:1 statt rund 6:1).
 export const kontrast = element => element.evaluate(knoten => {
-  const stil = getComputedStyle(knoten);
-  const leuchtdichte = farbe => {
-    const [r, g, b] = farbe.match(/[\d.]+/g).slice(0, 3).map(Number).map(wert => {
+  const teile = farbe => { const [r, g, b, a = 1] = farbe.match(/[\d.]+/g).map(Number); return {r, g, b, a}; };
+  const schichten = [];
+  for (let k = knoten; k; k = k.parentElement) {
+    const farbe = teile(getComputedStyle(k).backgroundColor);
+    if (farbe.a > 0) schichten.push(farbe);
+    if (farbe.a >= 1) break;
+  }
+  let grund = {r: 255, g: 255, b: 255};
+  for (const s of schichten.reverse()) grund = {r: s.r * s.a + grund.r * (1 - s.a), g: s.g * s.a + grund.g * (1 - s.a), b: s.b * s.a + grund.b * (1 - s.a)};
+  const leuchtdichte = ({r, g, b}) => {
+    const [lr, lg, lb] = [r, g, b].map(wert => {
       const anteil = wert / 255;
       return anteil <= 0.03928 ? anteil / 12.92 : ((anteil + 0.055) / 1.055) ** 2.4;
     });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    return 0.2126 * lr + 0.7152 * lg + 0.0722 * lb;
   };
-  const [hell, dunkel] = [leuchtdichte(stil.color), leuchtdichte(stil.backgroundColor)].sort((a, b) => b - a);
+  const [hell, dunkel] = [leuchtdichte(teile(getComputedStyle(knoten).color)), leuchtdichte(grund)].sort((a, b) => b - a);
   return (hell + 0.05) / (dunkel + 0.05);
 });
 

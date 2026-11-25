@@ -1,5 +1,5 @@
 /* Shared science/adventure tokens; reuse across revised surfaces. */
-:root{--wk-ink:#193743;--wk-muted:#466570;--wk-night:#122943;--wk-teal:#246374;--wk-paper:#fff;--wk-amber:#edb176;--wk-line:#d6dedb;--wk-radius:24px;--wk-space:clamp(20px,3vw,32px);--wk-focus:#157599}
+:root{--wk-ink:var(--kern-text);--wk-muted:#466570;--wk-night:#122943;--wk-teal:var(--kern-petrol);--wk-paper:#fff;--wk-amber:#edb176;--wk-line:#d6dedb;--wk-radius:24px;--wk-space:clamp(20px,3vw,32px);--wk-focus:var(--kern-petrol)}
 .discovery-hero h1 span{color:var(--wk-teal)}
 .discovery-start{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap}
 .discovery-search{display:flex;align-items:center;justify-content:center;gap:9px;min-height:48px;border-radius:12px;padding:12px 15px;font-size:15px;font-weight:650;line-height:1.45;text-align:left}
@@ -57,19 +57,15 @@
 .discovery-connection-why{font-size:15px;line-height:1.65;margin:12px 0 4px;color:var(--wk-muted)}
 .discovery-source-note{font-size:13px;line-height:1.6;color:var(--wk-muted);margin-top:6px}
 .discovery-play>p:not(.eyebrow){font-size:15px;line-height:1.65;color:var(--wk-muted);margin:12px 0 16px}
-.discovery-play .primary-button{background:var(--wk-teal);color:#fff;min-height:48px;white-space:normal;height:auto;padding:12px 14px;line-height:1.5;text-align:left;gap:8px}
-.discovery-play .primary-button:hover{background:#1d5143}
+.discovery-play .primary-button{min-height:48px;white-space:normal;height:auto;padding:12px 14px;line-height:1.5;text-align:left;gap:8px}
 .discovery-play .discovery-text-link{display:flex;padding:12px 0;border-bottom:1px solid var(--wk-line);margin-top:4px}
 .discovery-play-note{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;color:var(--wk-muted);line-height:1.6}
 .discovery-play-note svg{flex-shrink:0}
-.discovery-hero :is(button,a):focus-visible,.discovery-worlds :is(button,a,summary):focus-visible,.discovery-pathways :is(button,a):focus-visible{outline:2px solid var(--wk-focus);outline-offset:3px}
 
 #globe-observatory{scroll-margin-top:20px}
 
 .earth-app[data-mode=globe] .continue-card{background:var(--wk-paper);border:1px solid var(--wk-line);border-radius:14px;padding:14px 18px;gap:14px;margin-bottom:18px}
 .earth-app[data-mode=globe] .continue-card p{font-size:14px;line-height:1.5;margin:4px 0 0}
-.earth-app[data-mode=globe] .continue-card .primary-button{background:var(--wk-teal);color:#fff;min-height:44px}
-.earth-app[data-mode=globe] .continue-card .primary-button:hover{background:#1d5143}
 
 
 
@@ -138,7 +134,7 @@
 @media(prefers-reduced-motion:reduce){.gateway-compact .world-choice{transition:none}.gateway-compact .world-choice:hover{transform:none}}
 [data-reduced-motion=true] .gateway-compact .world-choice{transition:none}
 [data-reduced-motion=true] .gateway-compact .world-choice:hover{transform:none}
-@media(forced-colors:active){.discovery-hero :is(button,a):focus-visible,.discovery-worlds :is(button,a,summary):focus-visible,.discovery-pathways :is(button,a):focus-visible{outline-color:CanvasText}.discovery-search{border:1px solid ButtonText}}
+@media(forced-colors:active){.discovery-search{border:1px solid ButtonText}}
 .home-earth-facts{margin:12px 0 20px;color:var(--wk-muted);font-size:14px;line-height:1.6}
 .home-earth-facts>summary{cursor:pointer;min-height:44px;align-content:center;width:fit-content}
 .home-earth-facts .planet-facts{margin:10px 0}

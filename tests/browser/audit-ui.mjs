@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {fallbackSelectedFocusAndBookReturn} from './fallback-selected-focus.mjs';
-import {hilfeOeffnen} from './harness.mjs';
+import {fokusZurueck,hilfeOeffnen} from './harness.mjs';
 
 const ready=page=>page.locator('[aria-label="Entdeckerpass öffnen"]:not([disabled])').waitFor();
 const settle=page=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))));
@@ -13,7 +13,7 @@ async function closeAndFocus(page,dialog,opener,close=null){
  await dialog.evaluate(e=>Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{}))));await page.waitForFunction(e=>e.contains(document.activeElement),await dialog.elementHandle());await settle(page);
  if(close)await dialog.getByRole('button',{name:close,exact:true}).click();else await page.keyboard.press('Escape');
  await dialog.waitFor({state:'detached'});await settle(page);
- assert(await opener.evaluate(e=>e===document.activeElement),'final close restores the actual external opener');
+ await fokusZurueck(opener,'final close restores the actual external opener');
  assert(await opener.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;}),'restored opener is visible without losing its page context');
 }
 
@@ -106,7 +106,7 @@ export async function auditPassNavigationPage(page,{width=page.viewportSize().wi
  await home();await open();await missions();await activate(pass.locator('.world-missions article').nth(1).getByRole('button',{name:'Mission beginnen',exact:true}));await page.getByRole('heading',{name:'Sortiere die Zeit',exact:true}).waitFor();await result('world-mission-game','#games');
  await open();await missions();await activate(pass.locator('.world-missions article').nth(1).getByRole('button',{name:'Mission beginnen',exact:true}));await page.getByRole('heading',{name:'Sortiere die Zeit',exact:true}).waitFor();await result('world-mission-game-same-address','#games');
  await home();await open();const routes=pass.locator('.world-progress>details').last();if(!await routes.evaluate(e=>e.open))await activate(routes.locator(':scope>summary'));const route=routes.locator('.world-route-links button').first(),title=(await route.innerText()).trim();await activate(route);await page.getByRole('heading',{name:title,exact:true}).waitFor();await result('world-route',/^#world\/route\//);
- await open();await activate(pass.getByRole('button',{name:'Entdeckerpass schließen',exact:true}));await pass.waitFor({state:'detached'});await settle(page);assert(await opener.evaluate(e=>e===document.activeElement));assert(await opener.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;}));
+ await open();await activate(pass.getByRole('button',{name:'Entdeckerpass schließen',exact:true}));await pass.waitFor({state:'detached'});await settle(page);await fokusZurueck(opener,'closing the pass restores its opener');assert(await opener.evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;}));
  return {width,inputMethod:coarse?'actual-browser-touch':'actual-keyboard',cases,allSevenPassNavigationCallbacks:true,sameAddressCountryNotesAndGame:true,subsequentCloseReturnsToFreshOpener:true};
 }
 
