@@ -2,6 +2,7 @@ import type { Review } from './progress-storage';
 import { istStufe, type Stufe } from './kern/stufe';
 import { waehleAufgaben } from './kern/auswahl';
 import { worldGameBank } from './world-game-bank';
+import { personenEntdeckerFallen } from './world-game-support.mjs';
 import { shuffle } from '../lib/shuffle';
 import CATALOG from './world-catalog.json' with { type: 'json' };
 import FALLEN from './world-game-fallen.json' with { type: 'json' };
@@ -45,21 +46,28 @@ function zeitlichNaechste(spiel: string, id: string): string[] {
 
 // Personen-Rätsel (Endfassung 25.11.2026, Abschnitte 2 und 7): Jede Person hat ein Gebiet, höchstens zwei.
 // Entdecker: Fallen aus anderen Gebieten, nie aus Liste A (ausschluss.people) oder Liste B (nichtAufEntdecker, beide Richtungen).
-// Profi: Fallen aus demselben Gebiet, dazu die fünf zeitlich nächsten; nie aus Liste A.
+// Profi: Fallen aus demselben Gebiet, dazu die fünf zeitlich nächsten; nie aus Liste A. `erst` sind die Personen aus dem
+// Erstgebiet der gesuchten Person (stufen-pruefer beim Einbau, 25.11.2026: sonst kam bei Franklin jede fünfte Runde ohne
+// Physik-Falle, und „Röntgenstrahlen“ schloss alle Fallen sofort aus).
 const GEBIETE = FALLEN.personen.gebiete as Record<string, string[]>;
-const NICHT_AUF_ENTDECKER = FALLEN.personen.nichtAufEntdecker as string[][];
 const gleichesGebiet = (a: string, b: string) => (GEBIETE[a] ?? []).some(g => (GEBIETE[b] ?? []).includes(g));
-const zuAehnlich = (a: string, b: string) => NICHT_AUF_ENTDECKER.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
-export function personenFallen(id: string): { entdecker: string[]; gebiet: string[]; zeit: string[] } {
+export function personenFallen(id: string): { entdecker: string[]; erst: string[]; gebiet: string[]; zeit: string[] } {
   const nicht = AUSSCHLUSS.people?.[id] ?? [], andere = TOPICS.filter(x => x.person && x.id !== id && !nicht.includes(x.id)).map(x => x.id);
-  return { entdecker: andere.filter(x => !gleichesGebiet(id, x) && !zuAehnlich(id, x)), gebiet: andere.filter(x => gleichesGebiet(id, x)), zeit: zeitlichNaechste('people', id) };
+  const erstes = GEBIETE[id]?.[0];
+  return {
+    entdecker: personenEntdeckerFallen(id),
+    erst: andere.filter(x => erstes !== undefined && (GEBIETE[x] ?? []).includes(erstes)),
+    gebiet: andere.filter(x => gleichesGebiet(id, x)),
+    zeit: zeitlichNaechste('people', id),
+  };
 }
-// Profi: zwei Fallen aus dem Gebiet (gibt es dort nur eine Person, eine), die übrigen aus der Zeit. Entdecker: zwei aus anderen Gebieten.
+// Profi: zwei Fallen aus dem Gebiet, die erste davon immer aus dem Erstgebiet (gibt es dort nur eine Person, eine), die
+// übrigen aus der Zeit. Entdecker: zwei aus anderen Gebieten.
 // Zwei Fallen, die ein Paar aus Liste A sind (beide Benz), kommen nie zusammen in eine Aufgabe.
 function personenAntworten(stufe: Stufe, frage: { id: string; answers: string[]; correct: number }, zufall: () => number): string[] | null {
-  const { entdecker, gebiet, zeit } = personenFallen(frage.id), anzahl = stufe === 'profi' ? 3 : 2;
+  const { entdecker, erst, gebiet, zeit } = personenFallen(frage.id), anzahl = stufe === 'profi' ? 3 : 2;
   const dazu = (fallen: string[], kandidaten: string[], bis: number) => { for (const x of shuffle(kandidaten, zufall)) if (fallen.length < bis && !fallen.some(f => f === x || paarA(f, x))) fallen.push(x); return fallen; };
-  const fallen = stufe === 'profi' ? dazu(dazu([], gebiet, 2), zeit, 3) : dazu([], entdecker, 2);
+  const fallen = stufe === 'profi' ? dazu(dazu(dazu([], erst, 1), gebiet, 2), zeit, 3) : dazu([], entdecker, 2);
   return fallen.length === anzahl ? shuffle([frage.answers[frage.correct], ...fallen.map(titel)], zufall) : null;
 }
 const paarA = (a: string, b: string) => (AUSSCHLUSS.people?.[a] ?? []).includes(b) || (AUSSCHLUSS.people?.[b] ?? []).includes(a);

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { RUNDEN_GROESSE, STUFEN_SPIELE, neueWeltRunde, rundenStufe, weltSpielStufe } from '../app/world-game-runde.ts';
 import { worldGameBank } from '../app/world-game-bank.ts';
-import { personRecognitionClue } from '../app/world-game-support.mjs';
+import { personRecognitionClue, worldGamePrompt } from '../app/world-game-support.mjs';
 
 // Welt-Spiel-Runden mit der gemeinsamen Stufe (Teil B, Aufgabe 8, Schritt 8.1).
 const HEUTE = '2026-11-24';
@@ -68,7 +68,8 @@ test('rundenStufe liest die Stufe einer gespeicherten Runde, alte Runden spielen
   for (const kaputt of [undefined, null, 'profi', [], { stufe: 'meister' }, { stufe: 2 }]) assert.equal(rundenStufe(kaputt), 'entdecker');
 });
 
-// Schritt 8.2: Vier Antworten auf Profi im Tierdetektiv, bei Personen und Technik (E5), Fallen aus derselben Gruppe oder Zeit.
+// Schritt 8.2: Vier Antworten auf Profi im Tierdetektiv, bei Personen und Technik (E5). Fallen: Tiere aus derselben Gruppe,
+// Technik aus derselben Zeit, Personen aus demselben Gebiet und derselben Zeit (Personen-Rätsel, 25.11.2026).
 import { personenFallen, profiKandidaten, rundenAntworten } from '../app/world-game-runde.ts';
 import { validWorldGameOrder, restoreWorldGameOrders } from '../app/world-game-bank.ts';
 import CATALOG from '../app/world-catalog.json' with { type: 'json' };
@@ -181,7 +182,8 @@ test('„Wer war das?“ schreibt „diese Person“ mitten im Satz klein', () =
   const prompts = worldGameBank('people').map(q => q.prompt.replace('Wer passt zu diesem Hinweis? ', ''));
   for (const p of prompts) assert.doesNotMatch(p, /[^.!?:\s]\s+Diese Person/u, p);
   assert.ok(prompts.filter(p => p.startsWith('Diese Person')).length > 20, 'am Satzanfang bleibt es groß');
-  // Alle Personen haben eigene Rätsel; die Ersetzung aus der Karten-Einleitung bleibt für neue Personen (fakten-pruefer 24.11.2026).
+  // Alle Personen haben eigene Rätsel (ein Test verlangt das). Die Ersetzung aus der Karten-Einleitung greift darum heute nie;
+  // sie bleibt als Rückfall, falls eine Karte ohne Rätsel dazukommt, und wird hier mit einem erfundenen Text geprüft.
   assert.equal(personRecognitionClue({ title: 'Jane Goodall', intro: 'Mit 26 Jahren begann Jane Goodall, Schimpansen zu beobachten.' }), 'Mit 26 Jahren begann diese Person, Schimpansen zu beobachten.');
 });
 
@@ -336,7 +338,24 @@ test('Personen: genug Fallen je Stufe, und jede Person kommt auf Entdecker als F
   assert.deepEqual([...alsFalle].sort(), [...PERSONEN].sort());
 });
 
-test('Personen-Runden: nie ein Paar aus Liste A, Liste B nie auf Entdecker, nie beide Benz; Profi mit Fallen aus dem Gebiet', () => {
+test('Personen-Frage auf Entdecker: Satz 1 nur bei Entdecker-Fallen, alte gespeicherte Fallen behalten den ganzen Hinweis', () => {
+  const pool = worldGameBank('people'), neu = rundenAntworten('people', 'entdecker', PERSONEN, zufallAus(3));
+  let lang = 0;
+  for (const q of pool) {
+    assert.equal(worldGamePrompt('people', q, 'entdecker', neu[q.id]), worldGamePrompt('people', q, 'entdecker'), q.id + ': neue Runde zeigt Satz 1');
+    assert.notEqual(worldGamePrompt('people', q, 'entdecker'), q.prompt, q.id + ': Satz 1 ist kürzer');
+    for (const stufe of ['profi', 'experte']) assert.equal(worldGamePrompt('people', q, stufe, neu[q.id]), q.prompt);
+    const alt = worldGamePrompt('people', q, 'entdecker', q.answers), falsch = q.answers.filter((_, i) => i !== q.correct).map(personVon);
+    const nurEntdecker = falsch.every(x => personenFallen(q.id).entdecker.includes(x));
+    assert.equal(alt, nurEntdecker ? worldGamePrompt('people', q, 'entdecker') : q.prompt, q.id + ': alte Fallen');
+    if (!nurEntdecker) lang++;
+    assert.equal(worldGamePrompt('people', q, 'entdecker', [q.answers[q.correct], 'Unbekannter Name']), q.prompt, q.id + ': fremder Name');
+  }
+  assert.ok(lang > 0, 'mindestens eine alte Aufgabe zeigt den ganzen Hinweis');
+  for (const spiel of ['technology', 'animal-detective']) { const q = worldGameBank(spiel)[0]; assert.equal(worldGamePrompt(spiel, q, 'entdecker', q.answers), q.prompt); }
+});
+
+test('Personen-Runden: nie ein Paar aus Liste A, Liste B nie auf Entdecker, nie beide Benz; Profi mit Fallen aus dem (Erst-)Gebiet', () => {
   const pool = worldGameBank('people');
   for (let seed = 0; seed < 40; seed++) for (const stufe of ['entdecker', 'profi']) {
     const orders = rundenAntworten('people', stufe, PERSONEN, zufallAus(seed));
@@ -348,8 +367,11 @@ test('Personen-Runden: nie ein Paar aus Liste A, Liste B nie auf Entdecker, nie 
       assert.equal(fallen.filter(x => x.endsWith('_benz')).length + (id.endsWith('_benz') ? 1 : 0) > 1, false, id + ': beide Benz');
       assert.equal(validWorldGameOrder(order, q, pool, 'people'), true, id + ' ' + stufe + ': nach Neuladen gültig');
       if (stufe === 'entdecker') { assert.ok(fallen.every(x => !gleichesGebiet(id, x) && !inListeB(id, x)), id + ': Entdecker'); continue; }
-      const { gebiet, zeit } = personenFallen(id), ausGebiet = fallen.filter(x => gebiet.includes(x));
+      const { erst, gebiet, zeit } = personenFallen(id), ausGebiet = fallen.filter(x => gebiet.includes(x));
+      assert.ok(erst.every(x => gebiet.includes(x)), id + ': Erstgebiet gehört zum Gebiet');
       assert.ok(ausGebiet.length >= Math.min(2, gebiet.length), id + ': Profi hat ' + ausGebiet.length + ' Fallen aus dem Gebiet');
+      // Die erste Gebietsfalle kommt immer aus dem Erstgebiet (sonst gab es bei Franklin Runden ohne Physik-Falle).
+      if (erst.length) assert.ok(fallen.some(x => erst.includes(x)), id + ': Profi hat eine Falle aus dem Erstgebiet');
       assert.ok(fallen.every(x => gebiet.includes(x) || zeit.includes(x)), id + ': Profi-Fallen aus Gebiet oder Zeit');
     }
   }

@@ -1,5 +1,6 @@
 import clues from './animal-detective-clues.json' with {type:'json'};
 import catalog from './world-catalog.json' with {type:'json'};
+import fallen from './world-game-fallen.json' with {type:'json'};
 const detective=new Map(clues.entries.map(row=>[row.id,row]));
 /** @param {string} id */
 export function animalDetectiveClue(id){const row=detective.get(id);if(!row)throw Error('Animal clue not reviewed: '+id);return row;}
@@ -78,11 +79,25 @@ const recordHints={
  'animal-giraffe':'Vergleiche die Höhe vom Boden bis zum Kopf, nicht das Gewicht oder die Länge.',
  'animal-common-octopus':'Achte auf den Körperbau: Arme, Flossen und Beine sind unterschiedliche Körperteile.'
 };
-// Personen-Rätsel: Entdecker sieht und hört nur Satz 1, Profi alles (Endfassung 25.11.2026, Abschnitt 1).
+// Personen-Rätsel (Endfassung 25.11.2026, Abschnitte 2 und 7): Entdecker-Fallen kommen aus anderen Gebieten, nie aus
+// Liste A (ausschluss.people, eine Richtung) oder Liste B (nichtAufEntdecker, beide Richtungen). Hier statt in
+// world-game-runde.ts, weil Browser-Tests diese Datei in reinem Node laden.
+/** @type {Record<string,string[]>} */
+const GEBIETE=fallen.personen.gebiete,/** @type {Record<string,string[]>} */LISTE_A=fallen.ausschluss.people,/** @type {string[][]} */LISTE_B=fallen.personen.nichtAufEntdecker;
+const PERSONEN=catalog.filter(t=>t.person),PERSON_NACH_TITEL=new Map(PERSONEN.map(t=>[t.title,t.id]));
+/** @param {string} id @returns {string[]} */
+export function personenEntdeckerFallen(id){
+ const gebiet=GEBIETE[id]??[],nicht=LISTE_A[id]??[];
+ return PERSONEN.map(t=>t.id).filter(x=>x!==id&&!nicht.includes(x)&&!(GEBIETE[x]??[]).some(g=>gebiet.includes(g))&&!LISTE_B.some(([a,b])=>(a===id&&b===x)||(a===x&&b===id)));
+}
+// Entdecker sieht und hört nur Satz 1, Profi alles (Abschnitt 1). Mit `antworten` (so ruft das Spiel): Satz 1 nur, wenn alle
+// Fallen Entdecker-Fallen sind. Gespeicherte Runden von vor dem 25.11.2026 behalten ihre alten Fallen (manche aus demselben
+// Gebiet) und zeigen darum den ganzen Hinweis, bis eine neue Runde beginnt (code-pruefer beim Einbau).
 const PERSONEN_FRAGE='Wer passt zu diesem Hinweis? ';
-/** @param {string} game @param {{prompt:string}} item @param {string} [stufe] gespielte Stufe der Runde */
-export function worldGamePrompt(game,item,stufe){
+/** @param {string} game @param {{id:string,prompt:string,answers:string[],correct:number}} item @param {string} [stufe] gespielte Stufe der Runde @param {readonly string[]} [antworten] gezeigte Antworten */
+export function worldGamePrompt(game,item,stufe,antworten){
  if(game!=='people'||stufe!=='entdecker'||!item.prompt.startsWith(PERSONEN_FRAGE))return item.prompt;
+ if(antworten){const erlaubt=personenEntdeckerFallen(item.id),richtig=item.answers[item.correct];if(!antworten.every(a=>a===richtig||erlaubt.includes(PERSON_NACH_TITEL.get(a)??'')))return item.prompt;}
  const hinweis=item.prompt.slice(PERSONEN_FRAGE.length);
  return PERSONEN_FRAGE+(hinweis.match(/^.*?[.!?](?=\s|$)/u)?.[0]??hinweis);
 }
