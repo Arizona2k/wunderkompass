@@ -26,6 +26,11 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 6. **Sicherheit und Daten:** keine echten Pässe, persönlichen Daten oder Zugangsdaten; keine neuen externen Dienste oder Kosten.
 7. **Lesbarkeit:** neue Zeilen in verständlicher Länge, Namen sagen, was sie tun.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch:

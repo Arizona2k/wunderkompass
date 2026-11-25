@@ -28,6 +28,11 @@ Du meldest Befunde. Du änderst keine Dateien; Claude entscheidet und setzt um.
 8. **Fokus:** Mit Tastatur (Tab) ist der Fokus an jedem Bedienelement klar sichtbar. Nach Maus- oder Fingerbedienung, zum Beispiel nach einem Seitenwechsel, erscheint kein großer Rahmen um Überschriften oder Inhaltsblöcke.
 9. **Bewegung:** Bei „Bewegung reduzieren“ bleibt alles ruhig und bedienbar.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch:

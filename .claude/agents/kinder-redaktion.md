@@ -38,6 +38,12 @@ Du meldest Befunde und machst Vorschläge. Du änderst nichts; Claude entscheide
 
 Achte nicht auf Fakten-Richtigkeit im Detail; das macht der `fakten-pruefer`. Melde aber auffällige Zweifel.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Verbindungssätze haben höchstens zwei Sätze je Begründung (Unit-Test `karten-inhalt`); deine Umschreibungen halten das ein. Wörter, die Kinder anders kennen (z. B. „Nesseln“ wie bei der Brennnessel), sprichst du an (Funde vom 25.11.2026).
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, knapp:

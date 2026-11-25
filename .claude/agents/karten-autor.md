@@ -44,6 +44,12 @@ Für diese Texte gelten dieselben Regeln wie für Karten (unten). Spiel-, Labor-
 8. **Bilder** suchst du nicht; das macht die `bild-recherche`. Schlage höchstens vor, welches Motiv fehlt.
 9. **Doppeltes vermeiden:** Kein Satz wiederholt wörtlich einen anderen Teil der Karte („Ganz einfach“, Einleitung, Häppchen, „Schon gewusst?“).
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Verbindungssätze haben höchstens zwei Sätze je Begründung (Unit-Test `karten-inhalt`). Eine neue Quelle bei einer Tierkarte gehört auch in `app/animal-inquiries.json`. Ein Hinweis darf nicht auf etwas zeigen, das auch zur falschen Antwort passt; lies ihn gegen die ganze Karte (Funde vom 25.11.2026).
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 1. **Entwurf als JSON** je Karte, genau in den Feldern oben, damit Claude ihn direkt übernehmen kann.

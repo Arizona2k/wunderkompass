@@ -42,6 +42,11 @@ Die Altersangaben sind nur deine Orientierung. Kinder sehen sie nie.
 
 Wenn die `kinder-redaktion` etwas einfacher machen will und du schwerer: Die Sprache bleibt einfach, schwer wird der Gedanke. Schlage dann eine Fassung vor, die beides schafft.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, knapp:

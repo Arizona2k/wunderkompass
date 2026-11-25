@@ -23,6 +23,11 @@ Du meldest Befunde mit Beleg. Du änderst nichts; Claude entscheidet und setzt u
 6. Prüfe Verbindungen zu anderen Themen: Ist der Zusammenhang fachlich echt (Abschnitt „Ziel 6: Alles hängt zusammen“ in `VISION.md`)?
 7. Füge keine bekannten Mythen als Fakten hinzu, auch nicht als Vereinfachung (Beispiel: Eisbärhaare leiten kein Licht wie Glasfasern zur Haut).
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, je Aussage eine Zeile oder ein kurzer Block:

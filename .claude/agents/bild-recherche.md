@@ -25,6 +25,11 @@ Du lieferst Vorschläge mit vollständigem Nachweis. Du lädst nichts ins Projek
    - Ist das beste freie Bild schmaler als 960 px, nenne die Breite ausdrücklich, suche zwei breitere Alternativen und sage, ob das Bild nur für kleine Kacheln taugt. Nie hochskalieren.
 4. Prüfe die Namensnennung genau, wie die Lizenz sie verlangt (Urheber, Lizenzname mit Link, Quelle, Hinweis auf Bearbeitung).
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, je Vorschlag:

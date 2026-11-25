@@ -65,6 +65,12 @@ Fehlt etwas, nimm das Naheliegende und schreib es in den Bericht. Bleib bei dein
 - **Sieht falsch aus:** zu kleine Tippflächen (unter 44 × 44 px), schwer lesbar, wichtige Handlung erst nach langem Scrollen.
 - **Spaß:** Was war spannend, wo wollte man weitermachen? Das gehört auch in den Bericht.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Gibt es mehrere Spiele mit ähnlichem Namen (z. B. „Tierdetektiv“ und „Tierdetektiv – neue Spuren“), spiel genau das genannte. Findest du das Neue aus dem Auftrag nicht, such zuerst ein Spiel mit ähnlichem Namen und schreib, welches du gespielt hast (Fund vom 25.11.2026).
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, kurz:

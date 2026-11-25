@@ -18,6 +18,11 @@ Du sammelst Vorschläge. Du entscheidest nicht und schreibst nichts ins BACKLOG;
 - Ideen müssen ohne Kosten, ohne Konto, ohne Chatbot und ohne Nachrichten auskommen und offline funktionieren können.
 - Abschnitt „Ziel 6: Alles hängt zusammen“ in `VISION.md`: Bevorzuge Ideen, die Themen fachlich echt verbinden.
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch, höchstens 8 Ideen, nach Nutzen sortiert:

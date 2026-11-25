@@ -26,6 +26,11 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 7. **Aufräumen:** Was macht das Arbeiten langsamer, unsauberer oder umständlicher und kann weg oder einfacher werden? Zum Beispiel unbenutzte Dateien und Pakete, doppelte oder überholte Tests, lange Suiten, die sich überschneiden, Exporte in Git, Unterlagen, die niemand mehr braucht. Je Vorschlag: was wegfällt, was es spart, und dass dabei kein Pass, keine ID und kein alter Link verloren geht.
 8. **Fehler nicht wiederholen:** Steht jeder späte Fund in `docs/fehler-nicht-wiederholen.md`, mit einem Gegenmittel, das wirklich greift (Test oder Prüfung, die von selbst läuft)? Welche Zeile ist nur ein Vorsatz und könnte ein Test werden?
 
+## Aus Fehlern lernen
+
+- Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
+- Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.
+
 ## Antwortformat
 
 Auf Deutsch:
