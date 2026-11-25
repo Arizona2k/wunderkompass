@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import catalog from '../app/world-catalog.json' with {type:'json'};
 import {DRITTE_ANTWORT,worldGameBank,restoreWorldGameOrders,validWorldGameOrder} from '../app/world-game-bank.ts';
-import {EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGameWrongFeedback} from '../app/world-game-support.mjs';
+import {EIGENE_RAETSEL,animalDetectiveClue,personRecognitionClue,worldGameHint,worldGamePrompt,worldGameWrongFeedback} from '../app/world-game-support.mjs';
 import {foodDistractors} from '../app/world-game-food.mjs';
 import {worldGameAnswerCorrect} from '../app/world-game-habitats.mjs';
 import {execFileSync} from 'node:child_process';
@@ -50,16 +50,12 @@ test('Benz and al-Chwarizmi recognition prompts conceal real name variants while
   for(const name of variants)assert(!q.prompt.toLocaleLowerCase('de').includes(name.toLocaleLowerCase('de')));
   for(const part of names)assert(!new RegExp('\\b'+part+'\\b','iu').test(q.prompt),'richer opening cannot leak a separated real name part');
  }
- // Am Satzanfang „Diese Person“, mitten im Satz „diese Person“ (Teil B, Entscheidungsliste Punkt 7).
- const ersetzt=t=>t.intro.replace(t.title,(_,o,s)=>/^\s*$|[.!?:]\s*$/u.test(s.slice(0,o))?'Diese Person':'diese Person');
- for(const t of catalog.filter(t=>t.person&&!Object.hasOwn(EIGENE_RAETSEL,t.id))){
-  assert.equal(pool.find(q=>q.id===t.id).prompt,'Wer passt zu diesem Hinweis? '+ersetzt(t));
- }
 });
 // Eigene Rätsel (Stufen-Prüfung Teil B, M5): kein Teil des Namens, kein „er“, „sie“, „sein“, „ihr“, das das Geschlecht verrät.
 test('eigene Personen-Rätsel verraten weder Namen noch Geschlecht',()=>{
  const pool=worldGameBank('people');
- assert.ok(Object.keys(EIGENE_RAETSEL).length>=9);
+ // Seit dem 25.11.2026 hat jede Person ein eigenes Rätsel (Endfassung Personen-Rätsel); neue Personen bekommen auch eines.
+ assert.deepEqual(Object.keys(EIGENE_RAETSEL).sort(),catalog.filter(t=>t.person).map(t=>t.id).sort());
  for(const [id,satz] of Object.entries(EIGENE_RAETSEL)){
   const t=catalog.find(t=>t.id===id);assert.ok(t?.person,id+' ist eine Personenkarte');
   assert.equal(personRecognitionClue(t),satz);
@@ -69,6 +65,29 @@ test('eigene Personen-Rätsel verraten weder Namen noch Geschlecht',()=>{
   for(const teil of namensteile)assert.ok(teil.length>3?!normalize(satz).includes(teil):!new RegExp('(^| )'+teil+'( |$)','u').test(normalize(satz)),id+' nennt '+teil);
   assert.doesNotMatch(satz,/\b(er|sie|sein|seine|seinen|seinem|seiner|ihr|ihre|ihren|ihrem|ihrer|Er|Sie|Sein|Seine|Ihr|Ihre)\b/u,id+': Fürwort verrät das Geschlecht');
  }
+});
+// Entdecker sieht und hört nur Satz 1, Profi alles (Endfassung Personen-Rätsel, Abschnitte 1 und 3). Satz 1 sagt, wofür die
+// Person bekannt ist: höchstens 13 Wörter, beginnt mit „Diese Person“ (Hokusai: „Von dieser Person“), keine Frage, keine Abkürzung
+// mit Punkt (sonst schnitte die Trennung mitten im Satz). Satz 2 beginnt nie mit „Diese Person“.
+test('Personen-Rätsel: Entdecker liest nur Satz 1 und bekommt einen eigenen Tipp, Profi liest alles',()=>{
+ const pool=worldGameBank('people'),ersterSatz=t=>t.match(/^.*?[.!?](?=\s|$)/u)[0];
+ for(const [id,satz] of Object.entries(EIGENE_RAETSEL)){
+  const eins=ersterSatz(satz),rest=satz.slice(eins.length).trim(),q=pool.find(q=>q.id===id);
+  assert.ok(rest.length>0,id+': hat mehr als einen Satz');
+  assert.ok(eins.split(/\s+/u).length<=13,id+': Satz 1 hat '+eins.split(/\s+/u).length+' Wörter');
+  assert.ok(eins.startsWith(id==='person-katsushika_hokusai'?'Von dieser Person':'Diese Person'),id);
+  assert.doesNotMatch(eins,/\?/u,id);
+  assert.doesNotMatch(satz,/(^|\s)(z|d|u|s|bzw|ca|etc|Nr|Dr|St|v|n|Chr)\.(\s|$)/u,id+': Abkürzung mit Punkt');
+  assert.doesNotMatch(rest,/^Diese Person/u,id+': Satz 2');
+  assert.equal(worldGamePrompt('people',q,'entdecker'),'Wer passt zu diesem Hinweis? '+eins);
+  for(const stufe of ['profi','experte',undefined])assert.equal(worldGamePrompt('people',q,stufe),q.prompt,id+' '+stufe);
+ }
+ const q=pool[0],wrong=q.answers[1],tipp='Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?';
+ assert.equal(worldGameHint('people',q,'entdecker'),tipp);
+ assert.equal(worldGameWrongFeedback('people',q,wrong,'entdecker'),'Du hast „'+wrong+'“ gewählt. Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.');
+ for(const stufe of ['profi',undefined]){assert.notEqual(worldGameHint('people',q,stufe),tipp);assert.equal(worldGameWrongFeedback('people',q,wrong,stufe),'Du hast „'+wrong+'“ gewählt. '+worldGameHint('people',q,stufe));}
+ // Andere Spiele bleiben auf jeder Stufe gleich.
+ for(const game of ['animal-detective','technology'])for(const item of worldGameBank(game).slice(0,3)){assert.equal(worldGamePrompt(game,item,'entdecker'),item.prompt);assert.equal(worldGameHint(game,item,'entdecker'),worldGameHint(game,item));}
 });
 test('optional recognition name variants preserve compound words and Unicode word boundaries',()=>{
  assert.equal(personRecognitionClue({title:'Karl (Carl) Benz',intro:'Carl Benz nutzte einen Benzinmotor; Karl Benz ist eine Namensform.'}),'Diese Person nutzte einen Benzinmotor; diese Person ist eine Namensform.');

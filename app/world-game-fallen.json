@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "bedeutung": "Profi-Fallen der Welt-Spiele (Teil B, Schritt 8.2): Paare, bei denen der Hinweis auch auf eine falsche Antwort passt. Diese Kandidaten erscheinen für diese Aufgabe nie als Falle. Geprüft vom fakten-pruefer, Bericht in docs/entwurf/.",
   "ausschluss": {
     "animal-detective": {
@@ -67,13 +67,19 @@
       ],
       "person-charles_darwin": [
         "person-alexander_humboldt",
-        "person-mary_anning"
+        "person-mary_anning",
+        "person-maria_sibylla_merian"
       ],
       "person-alexander_humboldt": [
         "person-charles_darwin"
       ],
       "person-mary_anning": [
         "person-charles_darwin"
+      ],
+      "person-albert_einstein": [
+        "person-henrietta_swan_leavitt",
+        "person-cecilia_payne_gaposchkin",
+        "person-ibn_al_haytham"
       ]
     },
     "technology": {
@@ -103,5 +109,235 @@
         "invention-generator"
       ]
     }
+  },
+  "personen": {
+    "bedeutung": "Personen-Rätsel „Wer war das?“ (Endfassung 25.11.2026, Abschnitte 2 und 7): Jede Person hat ein Gebiet, höchstens zwei. Entdecker bekommt zwei Fallen aus anderen Gebieten, Profi zwei aus demselben Gebiet und eine aus derselben Zeit. Nie als Falle: die Paare aus ausschluss.people (Liste A, für die Person links). Paare aus nichtAufEntdecker (Liste B, beide Richtungen) passen zu ähnlich und kommen nur auf Profi zusammen. Geprüft von stufen-pruefer und fakten-pruefer, Berichte in docs/entwurf/.",
+    "gebiete": {
+      "person-charles_darwin": [
+        "natur"
+      ],
+      "person-alexander_humboldt": [
+        "natur"
+      ],
+      "person-maria_sibylla_merian": [
+        "natur",
+        "schrift"
+      ],
+      "person-mary_anning": [
+        "natur"
+      ],
+      "person-jane_goodall": [
+        "natur"
+      ],
+      "person-rachel_carson": [
+        "natur",
+        "schrift"
+      ],
+      "person-wangari_maathai": [
+        "natur",
+        "gesellschaft"
+      ],
+      "person-neil_armstrong": [
+        "weltall",
+        "technik"
+      ],
+      "person-mae_jemison": [
+        "weltall",
+        "medizin"
+      ],
+      "person-katherine_johnson": [
+        "weltall",
+        "rechnen"
+      ],
+      "person-henrietta_swan_leavitt": [
+        "weltall"
+      ],
+      "person-cecilia_payne_gaposchkin": [
+        "weltall",
+        "physik"
+      ],
+      "person-jocelyn_bell_burnell": [
+        "weltall"
+      ],
+      "person-marie_curie": [
+        "physik"
+      ],
+      "person-albert_einstein": [
+        "physik"
+      ],
+      "person-lise_meitner": [
+        "physik"
+      ],
+      "person-chien_shiung_wu": [
+        "physik"
+      ],
+      "person-rosalind_franklin": [
+        "physik",
+        "natur"
+      ],
+      "person-inge_lehmann": [
+        "natur",
+        "physik"
+      ],
+      "person-ibn_al_haytham": [
+        "physik",
+        "rechnen"
+      ],
+      "person-al_khwarizmi": [
+        "rechnen"
+      ],
+      "person-ada_lovelace": [
+        "rechnen"
+      ],
+      "person-grace_hopper": [
+        "rechnen"
+      ],
+      "person-tim_berners_lee": [
+        "rechnen"
+      ],
+      "person-karl_benz": [
+        "technik"
+      ],
+      "person-bertha_benz": [
+        "technik"
+      ],
+      "person-johannes_gutenberg": [
+        "technik",
+        "schrift"
+      ],
+      "person-cai_lun": [
+        "technik",
+        "schrift"
+      ],
+      "person-murasaki_shikibu": [
+        "schrift"
+      ],
+      "person-rabindranath_tagore": [
+        "schrift"
+      ],
+      "person-octavia_butler": [
+        "schrift"
+      ],
+      "person-katsushika_hokusai": [
+        "schrift",
+        "technik"
+      ],
+      "person-zaha_hadid": [
+        "schrift",
+        "technik"
+      ],
+      "person-tu_youyou": [
+        "medizin"
+      ],
+      "person-ibn_sina": [
+        "medizin",
+        "schrift"
+      ],
+      "person-nelson_mandela": [
+        "gesellschaft"
+      ]
+    },
+    "nichtAufEntdecker": [
+      [
+        "person-marie_curie",
+        "person-albert_einstein"
+      ],
+      [
+        "person-marie_curie",
+        "person-rabindranath_tagore"
+      ],
+      [
+        "person-marie_curie",
+        "person-wangari_maathai"
+      ],
+      [
+        "person-marie_curie",
+        "person-tu_youyou"
+      ],
+      [
+        "person-ibn_sina",
+        "person-murasaki_shikibu"
+      ],
+      [
+        "person-ibn_sina",
+        "person-al_khwarizmi"
+      ],
+      [
+        "person-ibn_sina",
+        "person-ibn_al_haytham"
+      ],
+      [
+        "person-murasaki_shikibu",
+        "person-ibn_al_haytham"
+      ],
+      [
+        "person-murasaki_shikibu",
+        "person-al_khwarizmi"
+      ],
+      [
+        "person-al_khwarizmi",
+        "person-ibn_al_haytham"
+      ],
+      [
+        "person-ibn_sina",
+        "person-johannes_gutenberg"
+      ],
+      [
+        "person-murasaki_shikibu",
+        "person-johannes_gutenberg"
+      ],
+      [
+        "person-albert_einstein",
+        "person-ibn_al_haytham"
+      ],
+      [
+        "person-albert_einstein",
+        "person-cecilia_payne_gaposchkin"
+      ],
+      [
+        "person-albert_einstein",
+        "person-henrietta_swan_leavitt"
+      ],
+      [
+        "person-albert_einstein",
+        "person-jocelyn_bell_burnell"
+      ],
+      [
+        "person-albert_einstein",
+        "person-mae_jemison"
+      ],
+      [
+        "person-ibn_al_haytham",
+        "person-cecilia_payne_gaposchkin"
+      ],
+      [
+        "person-nelson_mandela",
+        "person-wangari_maathai"
+      ],
+      [
+        "person-nelson_mandela",
+        "person-katherine_johnson"
+      ],
+      [
+        "person-nelson_mandela",
+        "person-mae_jemison"
+      ],
+      [
+        "person-cai_lun",
+        "person-tu_youyou"
+      ],
+      [
+        "person-cai_lun",
+        "person-chien_shiung_wu"
+      ],
+      [
+        "person-albert_einstein",
+        "person-neil_armstrong"
+      ],
+      [
+        "person-albert_einstein",
+        "person-katherine_johnson"
+      ]
+    ]
   }
 }

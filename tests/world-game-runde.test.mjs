@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { RUNDEN_GROESSE, STUFEN_SPIELE, neueWeltRunde, rundenStufe, weltSpielStufe } from '../app/world-game-runde.ts';
 import { worldGameBank } from '../app/world-game-bank.ts';
+import { personRecognitionClue } from '../app/world-game-support.mjs';
 
 // Welt-Spiel-Runden mit der gemeinsamen Stufe (Teil B, Aufgabe 8, Schritt 8.1).
 const HEUTE = '2026-11-24';
@@ -68,7 +69,7 @@ test('rundenStufe liest die Stufe einer gespeicherten Runde, alte Runden spielen
 });
 
 // Schritt 8.2: Vier Antworten auf Profi im Tierdetektiv, bei Personen und Technik (E5), Fallen aus derselben Gruppe oder Zeit.
-import { profiKandidaten, rundenAntworten } from '../app/world-game-runde.ts';
+import { personenFallen, profiKandidaten, rundenAntworten } from '../app/world-game-runde.ts';
 import { validWorldGameOrder, restoreWorldGameOrders } from '../app/world-game-bank.ts';
 import CATALOG from '../app/world-catalog.json' with { type: 'json' };
 import FALLEN from '../app/world-game-fallen.json' with { type: 'json' };
@@ -89,13 +90,15 @@ test('Profi zieht im Tierdetektiv, bei Personen und Technik drei Fallen aus den 
     }
     for (const id of leicht.items) {
       // Entdecker behält die festen drei Antworten; nur eine ausgeschlossene Falle wird durch einen geprüften Kandidaten ersetzt (M3).
+      // Personen ziehen ihre Entdecker-Fallen aus anderen Gebieten (eigener Test unten).
       const q = pool.find(q => q.id === id), order = leicht.orders[id], richtig = q.answers[q.correct], nicht = (FALLEN.ausschluss[spiel][id] ?? []).map(k => thema(k).title);
       const kandidaten = profiKandidaten(spiel, id).map(k => thema(k).title);
       assert.equal(order.length, 3, spiel + ' ' + id);
       assert.ok(order.includes(richtig));
+      assert.equal(validWorldGameOrder(order, q, pool, spiel), true, spiel + ' ' + id + ': nach Neuladen gültig');
+      if (spiel === 'people') continue;
       assert.ok(order.filter(a => a !== richtig).every(a => (q.answers.includes(a) && !nicht.includes(a)) || kandidaten.includes(a)), spiel + ' ' + id + ': feste Fallen oder geprüfte Kandidaten');
       if (!q.answers.some((a, i) => i !== q.correct && nicht.includes(a))) assert.deepEqual([...order].sort(), [...q.answers].sort(), spiel + ' ' + id + ': ohne Ausschluss wie bisher');
-      assert.equal(validWorldGameOrder(order, q, pool, spiel), true, spiel + ' ' + id + ': nach Neuladen gültig');
     }
   }
 });
@@ -136,7 +139,7 @@ test('rundenAntworten gibt jeder Aufgabe die Antworten ihrer Stufe, unbekannte A
   assert.equal(rundenAntworten('records', 'profi', ['animal-blue-whale'], zufallAus(3))['animal-blue-whale'].length, 3, 'Spiele ohne Stufen bleiben bei drei');
 });
 
-test('Tierdetektiv-Kandidaten stammen aus derselben Tiergruppe, Personen und Technik aus derselben Zeit', () => {
+test('Tierdetektiv-Kandidaten stammen aus derselben Tiergruppe, Technik und die Zeit-Fallen der Personen aus derselben Zeit', () => {
   for (const t of CATALOG.filter(t => t.animal)) {
     const k = profiKandidaten('animal-detective', t.id);
     assert.ok(k.length >= 3, t.id);
@@ -144,7 +147,7 @@ test('Tierdetektiv-Kandidaten stammen aus derselben Tiergruppe, Personen und Tec
   }
   const jahr = t => t.person ? Number(t.person.lifespan.match(/\d{3,4}/)[0]) : Number(t.invention.year);
   for (const [spiel, art] of [['people', 'person'], ['technology', 'invention']]) for (const t of CATALOG.filter(t => t[art])) {
-    const k = profiKandidaten(spiel, t.id), alle = CATALOG.filter(x => x[art] && x.id !== t.id && !(FALLEN.ausschluss[spiel][t.id] ?? []).includes(x.id));
+    const k = spiel === 'people' ? personenFallen(t.id).zeit : profiKandidaten(spiel, t.id), alle = CATALOG.filter(x => x[art] && x.id !== t.id && !(FALLEN.ausschluss[spiel][t.id] ?? []).includes(x.id));
     assert.equal(k.length, 5, t.id);
     const weitester = Math.max(...k.map(id => Math.abs(jahr(thema(id)) - jahr(t))));
     assert.ok(alle.filter(x => !k.includes(x.id)).every(x => Math.abs(jahr(x) - jahr(t)) >= weitester), t.id + ': die fünf zeitlich nächsten');
@@ -177,8 +180,9 @@ test('eine gespeicherte Profi-Runde lädt mit denselben vier Antworten, zwei Ant
 test('„Wer war das?“ schreibt „diese Person“ mitten im Satz klein', () => {
   const prompts = worldGameBank('people').map(q => q.prompt.replace('Wer passt zu diesem Hinweis? ', ''));
   for (const p of prompts) assert.doesNotMatch(p, /[^.!?:\s]\s+Diese Person/u, p);
-  assert.ok(prompts.some(p => p.includes('Mit 26 Jahren begann diese Person')), 'Jane Goodall');
   assert.ok(prompts.filter(p => p.startsWith('Diese Person')).length > 20, 'am Satzanfang bleibt es groß');
+  // Alle Personen haben eigene Rätsel; die Ersetzung aus der Karten-Einleitung bleibt für neue Personen (fakten-pruefer 24.11.2026).
+  assert.equal(personRecognitionClue({ title: 'Jane Goodall', intro: 'Mit 26 Jahren begann Jane Goodall, Schimpansen zu beobachten.' }), 'Mit 26 Jahren begann diese Person, Schimpansen zu beobachten.');
 });
 
 // Schritt 8.3: Lebensraum und Nahrung ziehen ihre Fallen je Runde aus einer geprüften Liste je Tier (E9; Entscheidungsliste Punkt 6).
@@ -297,4 +301,56 @@ test('„Früher oder heute?“: alle Aufgaben haben dieselben drei Antworten, F
   const frueher = pool.filter(q => q.answers[q.correct] === 'Früher').length, heute = pool.filter(q => q.answers[q.correct] === 'Heute').length;
   assert.equal(frueher + heute, pool.length, 'die dritte Antwort ist nie richtig');
   assert.ok(Math.abs(frueher - heute) <= 2, 'Früher ' + frueher + ', Heute ' + heute);
+});
+
+// Personen-Rätsel (Endfassung 25.11.2026, Abschnitte 2 und 7): Gebiete und zwei Paarlisten statt fester Fallen.
+const PERSONEN = CATALOG.filter(t => t.person).map(t => t.id);
+const { gebiete: GEBIETE, nichtAufEntdecker: LISTE_B } = FALLEN.personen;
+const gleichesGebiet = (a, b) => GEBIETE[a].some(g => GEBIETE[b].includes(g));
+const inListeA = (a, b) => (FALLEN.ausschluss.people[a] ?? []).includes(b);
+const inListeB = (a, b) => LISTE_B.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+const personVon = titel => CATALOG.find(t => t.person && t.title === titel).id;
+
+test('jede Person hat ein Gebiet, höchstens zwei; die Paarlisten nennen nur vorhandene Personen', () => {
+  assert.deepEqual(Object.keys(GEBIETE).sort(), [...PERSONEN].sort(), 'jede Person genau ein Eintrag');
+  const bekannt = ['natur', 'weltall', 'physik', 'rechnen', 'technik', 'schrift', 'medizin', 'gesellschaft'];
+  for (const [id, g] of Object.entries(GEBIETE)) {
+    assert.ok(g.length >= 1 && g.length <= 2 && new Set(g).size === g.length, id);
+    assert.ok(g.every(x => bekannt.includes(x)), id + ': unbekanntes Gebiet');
+  }
+  for (const paar of LISTE_B) assert.ok(paar.length === 2 && paar[0] !== paar[1] && paar.every(id => PERSONEN.includes(id)), paar.join(' ↔ '));
+  for (const [id, nicht] of Object.entries(FALLEN.ausschluss.people)) assert.ok(PERSONEN.includes(id) && nicht.every(x => PERSONEN.includes(x)), id);
+});
+
+test('Personen: genug Fallen je Stufe, und jede Person kommt auf Entdecker als Falle vor', () => {
+  const alsFalle = new Set();
+  for (const id of PERSONEN) {
+    const { entdecker, gebiet, zeit } = personenFallen(id);
+    assert.ok(entdecker.length >= 10, id + ': Entdecker-Fallen ' + entdecker.length);
+    assert.ok(gebiet.length >= 1, id + ': mindestens eine Falle aus dem Gebiet');
+    assert.ok(zeit.filter(x => !gebiet.includes(x)).length >= 1 || gebiet.length >= 3, id + ': Profi bekommt drei Fallen');
+    assert.ok(entdecker.every(x => !gleichesGebiet(id, x) && !inListeA(id, x) && !inListeB(id, x)), id + ': Entdecker-Fallen aus anderen Gebieten');
+    assert.ok(gebiet.every(x => gleichesGebiet(id, x) && !inListeA(id, x)), id + ': Gebiet-Fallen');
+    for (const x of entdecker) alsFalle.add(x);
+  }
+  assert.deepEqual([...alsFalle].sort(), [...PERSONEN].sort());
+});
+
+test('Personen-Runden: nie ein Paar aus Liste A, Liste B nie auf Entdecker, nie beide Benz; Profi mit Fallen aus dem Gebiet', () => {
+  const pool = worldGameBank('people');
+  for (let seed = 0; seed < 40; seed++) for (const stufe of ['entdecker', 'profi']) {
+    const orders = rundenAntworten('people', stufe, PERSONEN, zufallAus(seed));
+    for (const id of PERSONEN) {
+      const order = orders[id], q = pool.find(q => q.id === id), fallen = order.filter(a => a !== q.answers[q.correct]).map(personVon);
+      assert.equal(order.length, stufe === 'profi' ? 4 : 3, id + ' ' + stufe);
+      assert.equal(new Set(order).size, order.length);
+      assert.ok(fallen.every(x => !inListeA(id, x)), id + ' ' + stufe + ': Paar aus Liste A');
+      assert.equal(fallen.filter(x => x.endsWith('_benz')).length + (id.endsWith('_benz') ? 1 : 0) > 1, false, id + ': beide Benz');
+      assert.equal(validWorldGameOrder(order, q, pool, 'people'), true, id + ' ' + stufe + ': nach Neuladen gültig');
+      if (stufe === 'entdecker') { assert.ok(fallen.every(x => !gleichesGebiet(id, x) && !inListeB(id, x)), id + ': Entdecker'); continue; }
+      const { gebiet, zeit } = personenFallen(id), ausGebiet = fallen.filter(x => gebiet.includes(x));
+      assert.ok(ausGebiet.length >= Math.min(2, gebiet.length), id + ': Profi hat ' + ausGebiet.length + ' Fallen aus dem Gebiet');
+      assert.ok(fallen.every(x => gebiet.includes(x) || zeit.includes(x)), id + ': Profi-Fallen aus Gebiet oder Zeit');
+    }
+  }
 });

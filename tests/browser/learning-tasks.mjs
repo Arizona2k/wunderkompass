@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createSave,SAVE_KEY} from '../../app/progress-storage.ts';
 import {worldGameBank} from '../../app/world-game-bank.ts';
+import {worldGamePrompt} from '../../app/world-game-support.mjs';
 import {CHALLENGE_BANK,createChallenge} from '../../app/knowledge-challenge.ts';
 import {browserErrorArrays,monitorBrowserErrors,browserErrorsAssert} from '../../scripts/browser-errors.mjs';
 import {bereich} from './harness.mjs';
@@ -43,19 +44,19 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
  try{
   for(const width of widths){const touch=width===320;
    for(const [gameId,id] of [['people','person-karl_benz'],['people','person-al_khwarizmi'],['technology','invention-telescope'],['then-now','invention-compass-today']]){
-    const pool=worldGameBank(gameId),q=pool.find(item=>item.id===id);assert(q);const pass=createSave();pass.progress.gameSessions['world:'+gameId]={items:[id],index:0,roundAnswer:null,roundDone:false,orders:{[id]:q.answers}};
-    await load(id,width,pass);const room=await game('world:'+gameId,width);await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();
+    const pool=worldGameBank(gameId),q=pool.find(item=>item.id===id),frage=worldGamePrompt(gameId,q,'entdecker');assert(q);const pass=createSave();pass.progress.gameSessions['world:'+gameId]={items:[id],index:0,roundAnswer:null,roundDone:false,orders:{[id]:q.answers}};
+    await load(id,width,pass);const room=await game('world:'+gameId,width);await room.getByRole('heading',{name:frage,exact:true}).waitFor();
     if(id==='person-karl_benz')assert(!/\b(?:Karl\s+)?Benz\b/iu.test(q.prompt),'recognition clue does not name Benz');
     if(id==='person-al_khwarizmi')assert(!/al[-\s]?(?:Chwarizmi|Khwarizmi)/iu.test(q.prompt),'recognition clue does not name either alias');
     if(id==='invention-telescope'){assert(/Linsen oder Spiegel/.test(q.prompt)&&/Licht/.test(q.prompt));assert(!/Fernrohr|Teleskop/i.test(q.prompt));}
     if(gameId==='then-now')assert.equal(q.answers[q.correct],'Früher und heute');
-    const hint=room.locator('.world-game-hint');await activate(page,hint.locator('summary'),touch);current.actualHint=await hint.locator('p').innerText();current.actualPrompt=await room.getByRole('heading',{name:q.prompt,exact:true}).innerText();current.actualChoices=await room.locator('.quiz-answer').allTextContents();
-    current.responses=await responses(page,room,falschDannRichtig(q),'world-game:'+gameId+':'+id,touch,async()=>{await page.reload();await ready(page);await game('world:'+gameId,width);await room.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});
-    const beforeReload=await saved(page);await page.reload();await ready(page);const reloaded=await game('world:'+gameId,width);await reloaded.getByRole('heading',{name:q.prompt,exact:true}).waitFor();assert.deepEqual((await saved(page)).review,beforeReload.review,'reload does not add a repetition');assert.deepEqual((await saved(page)).notes,beforeReload.notes);
+    const hint=room.locator('.world-game-hint');await activate(page,hint.locator('summary'),touch);current.actualHint=await hint.locator('p').innerText();current.actualPrompt=await room.getByRole('heading',{name:frage,exact:true}).innerText();current.actualChoices=await room.locator('.quiz-answer').allTextContents();
+    current.responses=await responses(page,room,falschDannRichtig(q),'world-game:'+gameId+':'+id,touch,async()=>{await page.reload();await ready(page);await game('world:'+gameId,width);await room.getByRole('heading',{name:frage,exact:true}).waitFor();});
+    const beforeReload=await saved(page);await page.reload();await ready(page);const reloaded=await game('world:'+gameId,width);await reloaded.getByRole('heading',{name:frage,exact:true}).waitFor();assert.deepEqual((await saved(page)).review,beforeReload.review,'reload does not add a repetition');assert.deepEqual((await saved(page)).notes,beforeReload.notes);
     if(id==='invention-compass-today'&&width===320)await reloaded.screenshot({path:path.join(shots,`journey-engine-${engine}-learning-compass-current-${width}.png`),animations:'disabled'});
     current.reloadRetainsOneAttempt=true;
     if(id==='person-karl_benz'){
-     const beforeNew=await saved(page);await activate(page,reloaded.getByRole('button',{name:'Neue Runde',exact:true}),touch);await reloaded.locator('.game-board h2').waitFor();const prompt=await reloaded.locator('.game-board h2').innerText(),next=pool.find(q=>q.prompt===prompt);assert(next,'new actual round uses a canonical question');const key='world-game:'+gameId+':'+next.id;
+     const beforeNew=await saved(page);await activate(page,reloaded.getByRole('button',{name:'Neue Runde',exact:true}),touch);await reloaded.locator('.game-board h2').waitFor();const prompt=await reloaded.locator('.game-board h2').innerText(),next=pool.find(q=>worldGamePrompt(gameId,q,'entdecker')===prompt);assert(next,'new actual round uses a canonical question');const key='world-game:'+gameId+':'+next.id;
      await activate(page,reloaded.locator('.quiz-answer').filter({has:page.getByText(next.answers[next.correct],{exact:true})}),touch);await page.waitForFunction(({storage,key,seen})=>JSON.parse(localStorage.getItem(storage)).progress.review[key]?.seen===seen,{storage:SAVE_KEY,key,seen:(beforeNew.review[key]?.seen??0)+1});const afterNew=await saved(page);for(const[oldKey,value]of Object.entries(beforeNew.review))if(oldKey!==key)assert.deepEqual(afterNew.review[oldKey],value,'a new round preserves prior independent reviews');assert.deepEqual(afterNew.notes,beforeNew.notes);current.deliberateNewWorldRoundCountsOnce=true;
     }
     await complete();
@@ -77,7 +78,7 @@ export async function learningTaskCorrectionsView(browser,base,{shots,engine='ch
     assert.deepEqual((await saved(page)).review[haupt.reviewId],nachKorrektur,'„Noch einmal raten“ zählt keine neue Wiederholung: '+wahl);
    }
    current.deliberateNewMiniAttemptDoesNotCount=true;await complete();
-   const challenge=createChallenge('easy',[],()=>0.37),q=CHALLENGE_BANK.find(q=>q.id===challenge.ids[0]),pass=createSave();pass.progress.gameSessions['world:knowledge-challenge']={challenge};await load('challenge-review',width,pass);const challengeRoom=await game('world:knowledge-challenge',width);current.responses=await responses(page,challengeRoom,falschDannRichtig(q),'challenge:'+q.id,touch,async()=>{await page.reload();await ready(page);await game('world:knowledge-challenge',width);await challengeRoom.getByRole('heading',{name:q.prompt,exact:true}).waitFor();});await complete();
+   const challenge=createChallenge('easy',[],()=>0.37),q=CHALLENGE_BANK.find(q=>q.id===challenge.ids[0]),pass=createSave();pass.progress.gameSessions['world:knowledge-challenge']={challenge};await load('challenge-review',width,pass);const challengeRoom=await game('world:knowledge-challenge',width);current.responses=await responses(page,challengeRoom,falschDannRichtig(q),'challenge:'+q.id,touch,async()=>{await page.reload();await ready(page);await game('world:knowledge-challenge',width);await challengeRoom.getByRole('heading',{name:frage,exact:true}).waitFor();});await complete();
    // All seven actual callers of the shared advanced hint stack retain the
    // solution after an answer; none displays the full solution as a hint.
    for(const id of ['flags','capitals','silhouettes','animal-detective','climate-detective','photos','treasure']){
