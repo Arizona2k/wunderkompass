@@ -46,6 +46,7 @@ Für diese Texte gelten dieselben Regeln wie für Karten (unten). Spiel-, Labor-
 
 ## Aus Fehlern lernen und vorausdenken
 
+- **Gründlich, egal wie alt:** Was du anpackst, prüfst du richtig, und was dir am alten Stand in der Nähe auffällt, meldest du auch. Alte, neue und bald kommende Themen werden gleich gründlich behandelt (Regel „Kein Bestandsschutz“).
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - Verbindungssätze haben höchstens zwei Sätze je Begründung (Unit-Test `karten-inhalt`). Eine neue Quelle bei einer Tierkarte gehört auch in `app/animal-inquiries.json`. Ein Hinweis darf nicht auf etwas zeigen, das auch zur falschen Antwort passt; lies ihn gegen die ganze Karte (Funde vom 25.11.2026).
 - **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Themen, Fragen oder Verbindungen zwischen Karten, die fehlen; Textmuster, die Kinder besser verstehen würden. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.

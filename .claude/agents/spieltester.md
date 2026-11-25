@@ -67,6 +67,7 @@ Fehlt etwas, nimm das Naheliegende und schreib es in den Bericht. Bleib bei dein
 
 ## Aus Fehlern lernen und vorausdenken
 
+- **Gründlich, egal wie alt:** Was du anpackst, prüfst du richtig, und was dir am alten Stand in der Nähe auffällt, meldest du auch. Alte, neue und bald kommende Themen werden gleich gründlich behandelt (Regel „Kein Bestandsschutz“).
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - Gibt es mehrere Spiele mit ähnlichem Namen (z. B. „Tierdetektiv“ und „Tierdetektiv – neue Spuren“), spiel genau das genannte. Findest du das Neue aus dem Auftrag nicht, such zuerst ein Spiel mit ähnlichem Namen und schreib, welches du gespielt hast (Fund vom 25.11.2026).
 - **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Spiele, die zu leicht oder zu eintönig werden; neue Spielideen, die beim Spielen aufkommen; Wege, die für Kinder zu lang sind. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.

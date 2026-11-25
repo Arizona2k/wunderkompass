@@ -31,6 +31,7 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 
 ## Aus Fehlern lernen und vorausdenken
 
+- **Gründlich, egal wie alt:** Was du anpackst, prüfst du richtig, und was dir am alten Stand in der Nähe auffällt, meldest du auch. Alte, neue und bald kommende Themen werden gleich gründlich behandelt (Regel „Kein Bestandsschutz“).
 - Lies vor der Arbeit `docs/fehler-nicht-wiederholen.md` und achte auf die Zeilen zu deinem Fach.
 - **Vorausdenken in deinem Fach:** Melde unter **„Ideen“** höchstens zwei Verbesserungen, die über deinen Auftrag hinausgehen und Kindern oder der Arbeit helfen würden, mit Anlass und Beleg. Zum Beispiel: Prüfungen, die bei diesem PR gefehlt haben und künftig von selbst laufen sollten; Muster, die über mehrere PRs wiederkehren. Claude prüft sie und setzt sie um oder legt sie ins BACKLOG (Ideen-Sammlung). Keine Ideen ist eine ehrliche Antwort.
 - Schreib am Ende deines Berichts unter **„Für meine Anleitung“** höchstens zwei Vorschläge, was in dieser Anleitung fehlte, veraltet war oder dich in die Irre führte (oder „keine“). Claude übernimmt passende Vorschläge in diese Datei.

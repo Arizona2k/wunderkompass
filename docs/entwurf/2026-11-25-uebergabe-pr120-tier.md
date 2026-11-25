@@ -19,7 +19,7 @@ Gesichert, weil das Nutzungslimit bei 93 % stand. Weiter erst nach dem „Go“ 
 
 ## Gleich nach „Go“ zusätzlich
 
-- `technik-pruefer` (jetzt opus / high) im Hintergrund mit dem neuen Auftrag „Vorausdenken“ (Punkt 9 seiner Anleitung). Er steht schon in der Helferliste, liest aber seine neue Anleitung erst im nächsten Chat aus dem Hauptordner: darum die Datei aus diesem Branch als Auftrag mitgeben.
+- `technik-pruefer` (jetzt opus / high) im Hintergrund mit den neuen Aufträgen „Vorausdenken“, „Vorausplanen“ und „Helfer-Einsatzplan“ (Punkte 9 bis 11 seiner Anleitung). Modelle und Einsätze aller Helfer: `docs/helfer-einsatzplan.md` (`design-pruefer` und `ideen-scout` jetzt opus / high). Er steht schon in der Helferliste, liest aber seine neue Anleitung erst im nächsten Chat aus dem Hauptordner: darum die Datei aus diesem Branch als Auftrag mitgeben.
 
 ## PR-Text für #120 (zum Übernehmen)
 

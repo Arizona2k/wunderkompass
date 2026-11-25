@@ -128,14 +128,15 @@ Helfer melden nur Befunde oder liefern Entwürfe und ändern nichts. Claude ents
 | `fakten-pruefer` | Aussagen gegen Quellen, Zahlen, Einheiten, Aktualität | opus / high |
 | `stufen-pruefer` | Schwierigkeit je Stufe (Entdecker, Profi, Experte): machbar für Kleine, fordernd für 10- bis 12-Jährige, keine Ratemuster (seit 23.11.2026) | opus / high |
 | `karten-autor` | Schreibt Entwürfe für alle Kindertexte: Karteninhalte (Häppchen, „Stimmt das?“, Fragen je Stufe, Tipps, „warum nicht“, Verbindungssätze) und seit 24.11.2026 auch Spiele, Rätsel, Labore, Lernreisen, Missionen und „Was ist neu?“ (ein Schreib-Helfer für alles, damit der Ton einheitlich bleibt; mehr Tempo durch Pakete) mit Quelle je Aussage; prüft nicht selbst, danach prüfen `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer` unabhängig (seit 23.11.2026) | opus / high |
-| `design-pruefer` | Screenshots in 320, 390, 768, 1280, 1440 px: Lesbarkeit, Kontrast, Fokus, Tippflächen, Abgeschnittenes, Bildwirkung | sonnet / high |
+| `design-pruefer` | Screenshots in 320, 390, 768, 1280, 1440 px: Lesbarkeit, Kontrast, Fokus, Tippflächen, Abgeschnittenes, Bildwirkung | opus / high |
 | `code-pruefer` | Änderungen auf Fehler, besonders Pass, IDs und Links | opus / high |
 | `bild-recherche` | Freie Fotos suchen, Lizenz und Namensnennung prüfen, Nachweis vorbereiten | sonnet / medium |
-| `ideen-scout` | Vergleichbare Angebote ansehen, Ideen als Vorschläge liefern | sonnet / medium |
+| `ideen-scout` | Vergleichbare Angebote ansehen, Ideen als Vorschläge liefern | opus / high |
 | `technik-pruefer` | Arbeitssystem: späte Prüfungen, CI-Dauer, Unterlagen gegen Wirklichkeit, Pakete, Modellnamen, Vercel/GitHub; seit 25.11.2026 auch „Vorausdenken“: nach jedem Merge Verbesserungen der Arbeitsweise vorschlagen, bevor der Nutzer sie fordern muss | opus / high |
 | `schluss-pruefer` | Letzte Prüfung jedes PR mit App-, Inhalts-, Test- oder Werkzeugänderung auf dem fertigen Diff: Pass, IDs, Links, alle Wege, Stimmigkeit über Seiten, welche Suiten die Stelle decken (späte Funde), PR-Text gegen Diff; Fakten nur als Stichprobe (seit 25.11.2026, Pilot) | fable / high, Phasenende xhigh |
 | `spieltester` | Benutzt die Seite im echten Browser in einer Rolle (Alter, Gerät) mit einem klaren Ziel, spielt bis zum Ende, meldet Sackgassen, Verwirrendes, Kaputtes, zu leicht oder zu schwer, mit Bildern. Kein Kindertest; echte Kinder bleiben die wichtigste Rückmeldung. Einsatz bei sichtbaren Änderungen vor dem PR und am Phasenende, nicht bei jeder Kleinigkeit (seit 24.11.2026, Pilot) | sonnet / high |
 
+- **Modelle und Einsätze entscheidet Claude** (Nutzer, 25.11.2026: „wer welches Modell nimmt, musst du entscheiden“), nach dem [Helfer-Einsatzplan](docs/helfer-einsatzplan.md): Modell und Grund je Helfer, wann er anfängt, wann er wieder läuft. Rutscht bei einem Helfer etwas durch, schärft Claude erst seine Anleitung und stuft ihn beim zweiten Mal höher; liefert er über mehrere Einsätze nichts, prüft Claude, ob weniger reicht. Änderungen nennt Claude im nächsten Bericht.
 - `fable` (stärkstes Modell) für den `schluss-pruefer` und große Abschlussprüfungen am Phasenende, nicht für Massenarbeit (Nutzungslimit).
 - `haiku` für einfache Massenprüfungen, z. B. alle Karten auf kaputte Verweise.
 - **Vorübergehende Modell-Ausnahmen** (z. B. Kontingent eines Modells erschöpft) stehen mit Enddatum in `STATUS.md`. Ist das Datum vorbei: wieder das Modell aus dieser Liste nehmen, den Eintrag löschen, dem Nutzer kurz Bescheid sagen. `/weiter` prüft das bei jedem Einstieg.
