@@ -349,6 +349,8 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
 
 Erst nach Durchsicht durch `ideen-scout`, `kinder-redaktion` und `fakten-pruefer` einplanen.
 
+**Dunkler Modus „Nachtkarte“ (Frage des Nutzers, 25.11.2026):** Empfehlung: ja, als Schritt 8 nach dem Design-Umbau, wenn alle Farben über die Kern-Werte laufen; folgt der Geräte-Einstellung, ohne neues Pass-Feld. Einzelheiten im [Umbau-Entwurf](docs/entwurf/2026-11-25-design-umbau.md), Abschnitt „Später: Schritt 8“.
+
 **Gebietszeichen als Bildhilfe bei „Wer war das?“ (Spieltest Personen-Rätsel, Soll 3, 25.11.2026):** Kennt ein Kind auf Entdecker keinen der Namen, bleibt nur Raten. Ein kleines Zeichen je Antwort für das Gebiet (Weltall, Tiere, Bücher, Bauen …) könnte helfen, ohne die Lösung zu verraten. Vorher mit `stufen-pruefer` klären, ob das zum Ratemuster wird.
 
 **„Fast richtig“ als Aufgabenart (Vorschlag des `stufen-pruefer`, 24.11.2026):** Eine Antwort, die fast stimmt, bekommt eine eigene Rückmeldung („Fast! Was fehlt noch?“) statt nur „falsch“. Vor dem Einplanen: `ideen-scout` (wie machen es gute Lernspiele?), Entwurf, `stufen-pruefer`.

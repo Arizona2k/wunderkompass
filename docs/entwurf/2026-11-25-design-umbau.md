@@ -25,7 +25,7 @@ Die ganze Seite sieht aus wie die Stilprobe C: Kartenpapier, Petrol für alles, 
 4. **Keine Änderung am Speicher.** Kein Schritt berührt den Pass, die IDs oder die Hash-Links. Texte, die Tests und Bildschirmleser finden (zum Beispiel „Entdeckerpass öffnen“, „Spielstempel sammeln“, die Leistenwörter), bleiben gleich, außer ein Schritt sagt ausdrücklich etwas anderes.
 5. **Bewegung sparsam.** Nur der Stempel am Spielende und der leise Schimmer an Welt-Kacheln bewegen sich. Bei „Bewegung reduzieren“ steht alles still.
 6. **Weltfarben nur als helle Tönung** mit dunkler Schrift oder hinter weißen Symbolen (Kontrast mindestens 4,5:1 für Text, 3:1 für Grafik).
-7. **Kein dunkler Modus** (wie heute). Große Schrift („große Schrift“ im Pass) und erzwungene Farben (`forced-colors`) bleiben bedienbar.
+7. **Dunkler Modus erst nach dem Umbau** (Frage des Nutzers, 25.11.2026; Abschnitt „Später: Schritt 8“). Bis dahin gilt: Neue und umgebaute Teile nehmen Farben nur aus den Kern-Werten, auch Zeichnungen (`currentColor` oder `var(--kern-…)` statt fester Hex-Werte), damit der dunkle Modus später billig wird. Große Schrift („große Schrift“ im Pass) und erzwungene Farben (`forced-colors`) bleiben bedienbar.
 
 ## Die Schritte
 
@@ -114,8 +114,16 @@ Jeder Schritt ist ein eigener PR nach `test-live` mit Vorschau, Helferprüfung u
 - **Größe:** Beim CSS gibt es rund 100 KB Luft im Budget; für Schriften gibt es noch kein Budget (kommt in Schritt 2).
 - **Bricolage „Il“:** wird mit echten Titeln geprüft (Schritt 2); notfalls Eigennamen mit I in Andika fett.
 
+## Später: Schritt 8 „Nachtkarte“ (dunkler Modus)
+
+Frage des Nutzers am 25.11.2026: „dunkler modus sinnvoll?“ Empfehlung von Claude: ja, aber erst nach Schritt 7.
+- **Wofür:** abends am Tablet oder Handy blendet eine helle Seite, und manche Familien stellen ihre Geräte ganz auf dunkel. Für Menschen, die Licht schlecht vertragen, ist es eine echte Hilfe.
+- **Warum nicht gleich:** Bei normalem Licht lesen die meisten dunkle Schrift auf hellem Grund leichter; hell bleibt darum der Standard. Und heute stecken Farben an vielen Orten fest im Code: allein 292 feste `fill`- und `stroke`-Farben in Zeichnungen (`app/**/*.tsx`), dazu `globals.css`, Karten, Globus und Schaubilder. Ein dunkler Modus jetzt hieße, alles doppelt zu bauen und doppelt zu prüfen. Nach Schritt 7 laufen die Farben über die Kern-Werte; dann ist es vor allem eine zweite Farbtabelle plus die Zeichnungen.
+- **Idee:** keine bloße Umkehrung, sondern eine „Nachtkarte“: tiefes Blau (die Tinte `#15314A` als Grund), helle Schrift, die orange Nadel leuchtet, dazu leise Sterne am Rand. Das passt zum Kompass und zur Welt „Weltall“.
+- **So gebaut:** folgt der Einstellung des Geräts (`prefers-color-scheme`), ohne neues Feld im Pass. Ein eigener Schalter käme erst, wenn Familien ihn vermissen; er bräuchte den Beleg aus `CLAUDE.md` („Ein Lernspeicher“).
+- **Prüfen:** Kontrast in beiden Modi, Fotos und Zeichnungen auf dunklem Grund, `forced-colors`, `design-pruefer` in beiden Modi.
+
 ## Nicht in diesem Umbau
 
 - Neue Inhalte, Spiele oder Labore (eigene PRs).
 - Der 3D-Globus (Phase 4).
-- Ein dunkler Modus.
