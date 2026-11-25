@@ -1,6 +1,6 @@
 # Stilproben für das neue Design (25.11.2026)
 
-Entwurf, noch nicht freigegeben. Wunsch des Nutzers: „schön modern stylish“, „beim Design sei kreativ“.
+**Entschieden am 25.11.2026:** C „Kompass“, Stempel am Spielende (Nutzer: „ich verfolge deine Empfehlung“). Anordnung und Gestaltung darf Claude frei anpassen (Regel „Gestaltung frei“ in `CLAUDE.md`). Wunsch des Nutzers: „schön modern stylish“, „beim Design sei kreativ“.
 Zwei Richtungen (A, B), gezeigt an drei Seiten (Start, Wissenskarte, Spiel), je auf Handy und Rechner; nach den Prüfungen dazu die Mischung C.
 Es sind **statische Muster** mit echten Inhalten und Fotos der Seite, keine fertige App: Nichts ist anklickbar, es gibt keinen Pass und keine Logik.
 
@@ -101,6 +101,11 @@ Seiten `c-start.html`, `c-karte.html`, `c-spiel.html` (richtig) und `c-spiel-fal
 ## Empfehlung
 
 **C „Kompass“.** Sie nimmt die Stärke von A (eigenständig, ruhig, trägt bis 14), holt die Freude aus B (Foto-Kacheln, Stempel) und behebt alle Muss-Punkte der Design-Prüfung. Offen bleiben Dinge, die statische Muster nicht zeigen: Bewegung, Ton, echtes Antippen, echte Kinder.
+
+## Entschieden (25.11.2026)
+
+1. C „Kompass“ ist die Richtung.
+2. Der Stempel kommt am Spielende, wo der Abschluss schon „Spielstempel sammeln“ heißt. Nach jeder richtigen Antwort steht nur die grüne Rückmeldung „Richtig!“. So bleibt der Stempel etwas Besonderes und verdeckt mitten im Spiel nichts.
 
 ## Danach
 
