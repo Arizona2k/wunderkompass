@@ -79,6 +79,10 @@ Die Listen liegen nicht im Repository. Das Skript zählt alle Regeln in `app/**/
    - `lesbarkeit.mjs` prüft die Stufe der großen Schrift statt nur „größer“.
 
    **Neu:** Eine Prüfung mit `getComputedStyle` je Baustein (Farbe, Größe, Fokus) auf dem Start, in einer Karte (nachgeladen), in einer Reise (nachgeladen), im Pass-Dialog und in einem Spiel, bei normaler und großer Schrift. Die Prüfung kommt in die CI-Suite `kern-huelle`, damit Firefox und WebKit sie in der Engine-Schnellprüfung mitprüfen.
+   **Aus der Design-Prüfung der Technik-Auflösungen** ([Bericht](2026-11-25-technik-aufloesung-design.md), Kann 3 bis 5), beim Bau der Bausteine mitnehmen:
+   - „Richtig!“ im Rückmeldekasten deutlicher absetzen: etwa 20 px oder ein kleines Häkchen davor; „Noch nicht ganz“ passend dazu.
+   - Knopfzeile im Kasten mittig ausrichten (`align-items: center`); „Erklärung vorlesen“ hat heute 14 px Schrift, mit dem neuen `speech-button` mindestens 16 px.
+   - Nicht gewählte Antworten nach „Richtig!“ sind mit Deckkraft 0,65 blass (etwa 2,9:1); mit den neuen Antwortfarben auf etwa 0,8 oder eine eigene ruhige Farbe.
 7. **Nebenbei:** `index.html`, Beschreibung „Kinder ab 8 Jahren“ → 5 bis 10. Dazu ein Eintrag in „Was ist neu?“ (`karten-autor` schreibt ihn).
 8. **Prüfen:**
    - `pnpm run check`;

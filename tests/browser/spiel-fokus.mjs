@@ -84,6 +84,7 @@ async function spiele(page, spiel, geraet) {
   assert.ok(richtig, `${spiel.key}, ${geraet.name}: gespeicherte Runde nicht gefunden`);
   const texte = await antworten.evaluateAll(knoepfe => knoepfe.map(b => b.querySelector('span:not([class])')?.textContent));
   const falsch = texte.find(t => t && t !== richtig);
+  let lage;
   for (const [text, istRichtig] of [[falsch, false], [richtig, true]]) {
     const wo = `${spiel.key}, ${geraet.name}, ${istRichtig ? 'richtige' : 'falsche'} Antwort`;
     await antworte(page, antworten, text, wo);
@@ -96,38 +97,49 @@ async function spiele(page, spiel, geraet) {
     }, {sel: spiel.kasten, erwartet}, {timeout: 4000}).then(h => h.jsonValue(), () => null);
     if (!fertig) assert.fail(`${wo}: Rückmeldung nicht im Bild oder Fokus falsch: ${JSON.stringify(await page.evaluate(sel => window.__lage(sel), spiel.kasten))}`);
     assert.equal(fertig.titel, istRichtig ? 'Richtig!' : 'Noch nicht ganz. Versuch es noch einmal!', wo);
+    lage = fertig;
   }
   if (geraet.hoch) {
-    // Mit Tab geht es von „Richtig!“ weiter zu „Vorlesen“ und dann zu „Nächste Aufgabe“. Jeder Knopf steht dabei über der
-    // unteren Leiste, samt Fokusrahmen (imKastenSichtbar; Spieltest-Nachprüfung, Muss 1).
-    // Liegt ein Knopf weit unter dem Fensterrand, holt der Browser ihn beim Tab selbst in die Mitte. Kaputt war der Fall
-    // dazwischen: Knopf im Fenster, aber hinter der Leiste (ohne imKastenSichtbar rot in Firefox; Chromium und WebKit
-    // beachten die Leiste selbst). Darum macht der Test das Fenster so hoch, dass „Nächste Aufgabe“ knapp über dem unteren
-    // Rand liegt, also hinter der Leiste (die Seite rollt dabei nicht, der Fokus bleibt auf „Richtig!“).
-    const {width} = page.viewportSize();
-    const weiterLage = () => page.evaluate(sel => {
-      const r = document.querySelector(sel + ' .primary-button').getBoundingClientRect();
-      return {oben: r.top, unten: r.bottom, rand: innerHeight, leiste: parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0};
-    }, spiel.kasten);
-    for (let i = 0; i < 3; i++) await page.setViewportSize({width, height: Math.round((await weiterLage()).unten) + 4});
-    const vorher = await weiterLage();
-    assert.ok(vorher.unten <= vorher.rand && vorher.oben >= vorher.rand - vorher.leiste,
-      `${spiel.key}, ${geraet.name}: Testaufbau, „Nächste Aufgabe“ liegt nicht im Fenster hinter der Leiste (${JSON.stringify(vorher)})`);
-    for (const name of [/Erklärung vorlesen/u, /Nächste Aufgabe/u]) {
-      await page.keyboard.press('Tab');
-      const wo = `${spiel.key}, ${geraet.name}: Tab zu ${name.source}`;
-      assert.match(await page.evaluate(() => document.activeElement?.textContent ?? ''), name, wo);
-      const sichtbar = await page.waitForFunction(() => {
-        const unten = innerHeight - (parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0);
-        const r = document.activeElement.getBoundingClientRect();
-        return r.top >= 0 && r.bottom + 3 <= unten;
-      }, null, {timeout: 2000}).then(() => true, () => false);
-      if (!sichtbar) assert.fail(`${wo}: Knopf mit Fokus liegt hinter der unteren Leiste (${JSON.stringify(await page.evaluate(() => [document.activeElement.getBoundingClientRect().bottom, innerHeight, getComputedStyle(document.documentElement).scrollPaddingBottom]))})`);
+    // Mit Tab geht es von „Richtig!“ weiter zu „Erklärung vorlesen“ und dann zu „Nächste Aufgabe“. Jeder Knopf steht danach
+    // samt Fokusrahmen über der unteren Leiste (imKastenSichtbar; Spieltest-Nachprüfung, Muss 1). Liegt ein Knopf weit unter
+    // dem Fensterrand, holt ihn der Browser selbst ins Bild. Kaputt war der Fall dazwischen: Knopf im Fenster, aber hinter der
+    // Leiste oder so knapp darüber, dass sein Rahmen dahinter liegt (Firefox, PR #118). Darum rollt der Test die Seite vor jedem
+    // Tab genau so, dass der Knopf `abstand` px über der Leiste endet: an der Grenze des scroll-margin (13 und 12 px), knapp
+    // darüber (6 und 0 px) und halb dahinter (−30 px). So trifft er die Grenzfälle in jedem Browser und bei jeder Schrift
+    // (technik-pruefer, M1). Gegenprobe ohne den scroll-margin in imKastenSichtbar: Firefox ist beim Fall 0 px rot, Chromium
+    // und WebKit rollen dort selbst (25.11.2026).
+    for (const [nr, name] of [[1, /Erklärung vorlesen/u], [2, /Nächste Aufgabe/u]]) {
+      for (const abstand of [13, 12, 6, 0, -30]) {
+        const wo = `${spiel.key}, ${geraet.name}: Tab zu ${name.source}, ${abstand} px über der Leiste`;
+        // Fokus auf den Vorgänger im Kasten (Überschrift oder Vorlesen-Knopf), dann rollen; beides ohne weiches Rollen.
+        const aufbau = await page.evaluate(({sel, nr, abstand}) => {
+          const k = document.querySelector(sel), reihe = [k.querySelector('strong'), ...k.querySelectorAll(':scope > button')];
+          reihe[nr - 1].focus({preventScroll: true});
+          const unten = innerHeight - (parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0);
+          scrollTo({top: scrollY + reihe[nr].getBoundingClientRect().bottom - (unten - abstand), behavior: 'instant'});
+          return {fehler: Math.round(reihe[nr].getBoundingClientRect().bottom - (unten - abstand)), vorgaenger: document.activeElement === reihe[nr - 1], ziel: reihe[nr].textContent};
+        }, {sel: spiel.kasten, nr, abstand});
+        assert.ok(aufbau.vorgaenger && Math.abs(aufbau.fehler) <= 1 && name.test(aufbau.ziel), `${wo}: Testaufbau stimmt nicht (${JSON.stringify(aufbau)})`);
+        await page.keyboard.press('Tab');
+        assert.match(await page.evaluate(() => document.activeElement?.textContent ?? ''), name, wo);
+        // Der Rahmen reicht so weit über den Knopf hinaus, wie outline und outline-offset zusammen breit sind (kern.css).
+        const sichtbar = await page.waitForFunction(() => {
+          const unten = innerHeight - (parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom) || 0);
+          const f = document.activeElement, s = getComputedStyle(f), r = f.getBoundingClientRect();
+          const rahmen = (parseFloat(s.outlineWidth) || 0) + (parseFloat(s.outlineOffset) || 0);
+          return rahmen > 0 && r.top - rahmen >= 0 && r.bottom + rahmen <= unten;
+        }, null, {timeout: 2000}).then(() => true, () => false);
+        if (!sichtbar) assert.fail(`${wo}: Fokusrahmen liegt hinter der unteren Leiste (${JSON.stringify(await page.evaluate(() => {
+          const s = getComputedStyle(document.activeElement), r = document.activeElement.getBoundingClientRect();
+          return {oben: r.top, unten: r.bottom, fenster: innerHeight, leiste: getComputedStyle(document.documentElement).scrollPaddingBottom, rahmen: [s.outlineWidth, s.outlineOffset]};
+        }))})`);
+      }
     }
   }
+  return lage;
 }
 
-export async function spielFokus({browser, base, ready, monitor, report}) {
+export async function spielFokus({browser, base, ready, monitor}) {
   for (const geraet of GERAETE) {
     const save = createSave();
     if (geraet.grosseSchrift) save.progress.settings.largeText = true;
@@ -142,10 +154,12 @@ export async function spielFokus({browser, base, ready, monitor, report}) {
         const spiel = SPIELE[name];
         await page.goto(base);
         await ready(page);
-        await spiele(page, spiel, geraet);
-        report.checks.push(geraet.hoch
-          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“`
-          : `${spiel.key} (${geraet.name}): Rückmeldung nach falscher und richtiger Antwort im Bild, „Nächste Aufgabe“ mit Fokus`);
+        const lage = await spiele(page, spiel, geraet);
+        // Gemessene Lage ins Log, damit auch ein grüner Lauf zeigt, wie viel Abstand bleibt (code-pruefer, Kann 1).
+        const mass = `Kasten ${lage.kasten[1] - lage.kasten[0]} px, frei ${lage.frei[1] - lage.frei[0]} px`;
+        console.log(geraet.hoch
+          ? `${spiel.key} (${geraet.name}): hoher Kasten beginnt oben, Fokus auf „Richtig!“, mit Tab zu „Nächste Aufgabe“, Rahmen an jeder Grenze über der Leiste (${mass})`
+          : `${spiel.key} (${geraet.name}): Rückmeldung nach falscher und richtiger Antwort im Bild, „Nächste Aufgabe“ mit Fokus (${mass})`);
       }
     } finally {
       await context.close();
