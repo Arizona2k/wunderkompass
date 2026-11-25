@@ -9,8 +9,12 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 - Phase 1, Teilschritt 1 „Aussehen und Hülle“ (PR #99) und Teilschritt 2 „Wissenskarte“ (PR #102 bis #104), dazu die abgesicherte Arbeitsweise (PR #105).
 - Teilschritt 3 „Kniffliger spielen“ ([Entwurf und Plan](docs/entwurf/2026-11-23-phase-1-teilschritt-3.md)): Arbeitssystem (PR #106), Teil A „Eine Stufe für alles“ (PR #107, [Entscheidungen](docs/entwurf/2026-11-23-teilschritt-3-teil-a-entscheidungen.md)), Folge-PR (PR #108), Stufen-Feinschliff (PR #109, [Entscheidungen](docs/entwurf/2026-11-24-stufen-feinschliff-entscheidungen.md)), Teil B Vorarbeiten (PR #110), Teil B PR 1 = Welt-Spiele mit Stufen (PR #111, [Entscheidungen 1 bis 18](docs/entwurf/2026-11-24-teil-b-entscheidungen.md)).
 - Teil B PR 2 = Kreuz und quer und die Klassik-Spiele mit Stufen (PR #114, [Entscheidungen 19 bis 35](docs/entwurf/2026-11-24-teil-b-entscheidungen.md), [Design-Prüfung](docs/entwurf/2026-11-24-teil-b-pr2-design-pruefung.md)).
+- Technik-PR nach den Analysen (PR #116): Speichern nach Fehlern mit wachsender Pause, eine Größengrenze für Sicherungen, feste Paketversionen.
 - Bilder-Strang, erster Teil (PR #113): alle 24 KI-Tierbilder durch Fotos ersetzt, 8 Personen, Einbau-Werkzeug `scripts/foto-einbau.mjs`.
 - **Entschieden am 25.11.2026:** Der Nutzer nimmt beide Empfehlungen an: die Regel „neue oder geänderte Vollprüfungs-Suite vor dem Commit selbst laufen lassen“ (jetzt in `CLAUDE.md`, Arbeitsablauf Punkt 4) und zwei Stilproben fürs Design, mit dem Auftrag „beim Design sei kreativ“.
+- **Entschieden am 25.11.2026 (Design):** Der Nutzer folgt der Empfehlung: Stilprobe C „Kompass“ wird das neue Design, der Stempel kommt am Spielende. Dazu freie Hand bei Anordnung, Reihenfolge, Überschriften, Leisten und Darstellung, auch für künftige Erweiterungen (Regel „Gestaltung frei“ in `CLAUDE.md`).
+- **Entschieden am 25.11.2026 (Nachtmodus):** Den Zeitpunkt entscheidet Claude; geplant als Umbau-Schritt 8 „Nachtkarte“ nach Schritt 7 ([Entwurf](docs/entwurf/2026-11-25-design-umbau.md), Abschnitt „Später: Schritt 8“).
+- **Freigabe am 25.11.2026:** Der Nutzer gibt den [Design-Umbau-Entwurf](docs/entwurf/2026-11-25-design-umbau.md) frei und sein OK zum Merge für die kommenden PRs (Personen-Rätsel, „Auflösung und Rückmeldung im Blick“, Umbau-Schritte 1 bis 8, PR 3 und 4), jeweils nach grüner CI samt Engine-Schnellprüfung („du hast meine freigaben und auch mein ok“). Vorschau und Screenshots bekommt er weiterhin vor jedem Merge einer sichtbaren Änderung; Befunde des `code-pruefer` zum Entwurf fließen noch ein.
 - **Merge-Freigabe des Nutzers** für alle Teil-B-PRs nach grüner CI samt Engine-Schnellprüfung; Abweichungen vom Plan vorher melden (Entscheidungen 11 und 19).
 
 ## Adressen
@@ -23,26 +27,25 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 
 Phase 1 hat sechs Teilschritte: 1 Hülle (fertig) · 2 Wissenskarte (fertig) · **3 Kniffliger spielen** · 4 Weltenseiten und Bilder · 5 Startseite und Sammlung · 6 Feinschliff.
 
-1. **Technik-PR** (BACKLOG, „Technik-PR nach den Analysen“, jetzt abgehakt; [Bauplan](docs/entwurf/2026-11-24-technik-pr-bauplan.md), [Code-Prüfung](docs/entwurf/2026-11-25-technik-pr-codepruefung.md)): gebaut und geprüft auf `claude/wunderkompass-weiter-tz194g`; PR nach `test-live`, Merge unter der stehenden Freigabe nach grüner CI und Engine-Schnellprüfung. Keine Vorschau nötig (nur zwei seltene Meldungen sichtbar).
-2. **Dann: Personen-Rätsel einbauen** (BACKLOG Punkt 25): [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md), Abschnitt 7 gilt vor 1 und 2. Bauen: eigene Rätsel, Satz 1 für Entdecker, Gebiete und Paarlisten als Daten in `app/world-game-fallen.json`, Profi mit zwei Gebietsfallen, Entdecker-Tipp mit Stufe in `worldGameHint` und `worldGameWrongFeedback`, Kartenkorrekturen (Abschnitt 4), Tests (Goodall in `tests/world-game-runde.test.mjs`). Danach `pnpm run check` und `node tests/browser/run.mjs --suite full core offline-cold-full`. Messskript: `docs/entwurf/2026-11-25-personen-raetsel-messung/regel.mjs`.
-3. **Design:** Stilprobe C „Kompass“ ist empfohlen ([Stilproben](docs/entwurf/2026-11-25-stilproben.md), [Design-Prüfung C](docs/entwurf/2026-11-25-stilprobe-c-designpruefung.md), [Spieltest C](docs/entwurf/2026-11-25-stilprobe-c-spieltest.md)); wartet auf die Wahl des Nutzers.
-4. **Dann PR 3 = Aufgaben 10 und 12** („Rekorde der Natur“, „Wetter und Klima“, „Sortiere die Zeit“, kleine Spiele zusammenlegen) mit dem [Experten-Nachtrag](docs/entwurf/2026-11-24-stimmt-das-experte-nachtrag-endfassung.md) und der kleinen CI-Suite `spiel-fokus` (BACKLOG). Dann PR 4 = Länder ([Ideen](docs/entwurf/2026-11-24-laender-spiele-ideen.md)).
-5. **Bilder im Hintergrund** (BACKLOG Punkt 26): Mandela einbauen (`File:Nelson Mandela 1994.jpg`, [Bericht](docs/entwurf/2026-11-24-bilder-mandela.md)), dann Zeitreise und Erfindungen ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)).
+1. **Personen-Rätsel „Wer war das?“** (BACKLOG Punkt 25; gebaut und geprüft, Vorschau und PR folgen): [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md), Einbau-Berichte `docs/entwurf/2026-11-25-personen-raetsel-*.md`, [Design-Prüfung](docs/entwurf/2026-11-25-personen-raetsel-designpruefung.md) und [Spieltest](docs/entwurf/2026-11-25-personen-raetsel-spieltest.md) mit „Was Claude daraus macht“ (kein Muss für diesen PR).
+2. **Kleiner PR „Auflösung und Rückmeldung im Blick“** (aus Design-Prüfung und Spieltest): kurze Auflösung je Person statt der ganzen Karte nach „Richtig!“ (im Schnitt 877 Zeichen Erwachsenentext, `app/world-game-bank.ts`), kindgerechte Tipps für fünf Welt-Spiele (`hints` in `app/world-game-support.mjs`), Rückmeldung nach einer Antwort immer im Bild (`app/kern/spiel-fokus.ts`, alle Spiele), dazu die CI-Suite `spiel-fokus`. Texte: Entwurf `docs/entwurf/2026-11-25-spiel-aufloesung-entwurf.md` (vom `karten-autor`), danach `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`.
+3. **Design-Umbau „Kompass“:** [Entwurf in sieben Schritten](docs/entwurf/2026-11-25-design-umbau.md) (freigegeben am 25.11.2026; Gegenlesen durch `code-pruefer`, Bericht `…-design-umbau-codepruefung.md`). Schritt 1 Farben, Fokus, Knöpfe; 2 Schriften; 3 Hülle; 4 Start und Welten; 5 Karte; 6 Spielbrett mit Stempel am Spielende; 7 Rest und Aufräumen. [Bestand im Code](docs/entwurf/2026-11-25-design-umbau-bestand.md).
+4. **PR 3 = Aufgaben 10 und 12** („Rekorde der Natur“, „Wetter und Klima“, „Sortiere die Zeit“, kleine Spiele zusammenlegen) mit dem [Experten-Nachtrag](docs/entwurf/2026-11-24-stimmt-das-experte-nachtrag-endfassung.md), nach Umbau-Schritt 2 und vor Schritt 6. Dann PR 4 = Länder ([Ideen](docs/entwurf/2026-11-24-laender-spiele-ideen.md)).
+5. **Bilder im Hintergrund** (BACKLOG Punkt 26): Mandela einbauen (`File:Nelson Mandela 1994.jpg`, [Bericht](docs/entwurf/2026-11-24-bilder-mandela.md)), dann Zeitreise und Erfindungen ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)), vor Umbau-Schritt 4 ein freies Foto für „Wissenschaft & Weltall“.
 
 ## Helfer beim Einstieg
 
 Gleich nach `/weiter` starten diese Helfer im Hintergrund (Regel „Helfer starten mit jedem Chat“ in `CLAUDE.md`). Hier bei jedem Meilenstein nachführen.
-- `code-pruefer`: den Einbau der Personen-Rätsel prüfen, sobald er steht (vorher nichts).
-- `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`: die vier neuen Sätze aus Abschnitt 7 der [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md) gegenlesen (wer sie nicht vorgeschlagen hat), dazu den Einbau.
-- `karten-autor`: gerade nichts (Rätsel fertig; PR-3-Texte liegen geprüft vor).
-- `bild-recherche`: Zeitreise und Erfindungen ohne Bild weiter ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)).
-- `design-pruefer` und `spieltester`: beim nächsten sichtbaren PR (Personen-Rätsel) und wenn der Nutzer das Design gewählt hat.
+- `code-pruefer`: Entwurf Design-Umbau gegen den Code lesen (läuft oder Bericht `docs/entwurf/2026-11-25-design-umbau-codepruefung.md`); danach den PR „Auflösung und Rückmeldung im Blick“.
+- `karten-autor`: kurze Auflösungen und Tipps (läuft oder Entwurf `docs/entwurf/2026-11-25-spiel-aufloesung-entwurf.md`).
+- `fakten-pruefer`, `kinder-redaktion`, `stufen-pruefer`: den Auflösungs-Entwurf unabhängig gegenlesen, sobald er vorliegt.
+- `bild-recherche`: Zeitreise und Erfindungen ohne Bild weiter ([Nachsuche](docs/entwurf/2026-11-25-bilder-zeitreise-erfindungen-nachsuche.md)); dazu ein freies Foto für „Wissenschaft & Weltall“ (Design-Umbau Schritt 4).
+- `design-pruefer` und `spieltester`: beim PR „Auflösung und Rückmeldung im Blick“ und bei jedem Umbau-Schritt.
 - `technik-pruefer`: gerade nichts (nur nach einem späten Fund).
 - `ideen-scout`: gerade nichts (Design- und Länder-Ideen liegen vor).
 
 ## Offene Fragen an den Nutzer
 
-- **Welche Stilprobe?** Empfehlung: C „Kompass“. Dazu: Stempel „Gelöst!“ nach jeder richtigen Antwort oder nur am Spielende? Empfehlung: am Spielende.
 - **`spieltester`** ist Pilot (seit 24.11.2026); nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt.
 - **`main` schützen** macht der Nutzer selbst; Claude prüft es nur vor einer Veröffentlichung nach `main`. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen ruhigen Wochen (BACKLOG).
 

@@ -110,3 +110,26 @@ Berichte: [Fakten](2026-11-25-personen-raetsel-letzte-pruefung-fakten.md), [Kind
 - Gebiete und Liste B als Daten in `app/world-game-fallen.json`; Test „jede Person hat ein Gebiet“.
 
 **Beobachten, nicht ändern:** Mandela hat auf Profi immer Maathai als Falle (einzige weitere Person mit Gebiet „Gesellschaft“; „Südafrika“ und „1994“ trennen). Laufende alte Runden behalten ihre Antworten, bis eine neue Runde beginnt (harmlos; der `code-pruefer` sieht es sich beim Einbau an).
+
+## 8. Was beim Einbau anders wurde (25.11.2026)
+
+Berichte zum Einbau: [Code](2026-11-25-personen-raetsel-einbau-code.md), [Fakten](2026-11-25-personen-raetsel-einbau-fakten.md), [Kinder-Redaktion](2026-11-25-personen-raetsel-einbau-kinderredaktion.md), [Stufen](2026-11-25-personen-raetsel-einbau-stufen.md). Diese Texte und Regeln gelten statt Abschnitt 7, wo sie abweichen.
+
+**Texte**
+- **Einstein, Satz 1:** „Diese Person machte Versuche im Kopf, um Licht, Raum und Zeit zu verstehen.“ Grund: Der fakten-pruefer fand „stellte sich genau vor“ zu schwach für das Gedankenexperiment (AIP: einer Lichtwelle hinterherjagen). Sein Vorschlag war eine Frage, und Satz 1 darf keine Frage sein. Die Neufassung haben kinder-redaktion („passt“, 13 Wörter, kein trennbares Verb) und fakten-pruefer (AIP trägt beide Teile) bestätigt. Ibn al-Haytham, Leavitt und Payne-Gaposchkin stehen für Einstein in Liste A und kommen nie als Falle.
+- **Franklin, Satz 1:** „Diese Person untersuchte mit Röntgenstrahlen, wie der Bauplan von Lebewesen geformt ist.“ Grund: kinder-redaktion (beim Vorlesen las man „welche Form der Bauplan“ als Genitiv). Die Aussage „Form“ bleibt.
+- **Ibn Sina, Satz 2:** „Darin sammelte und ordnete diese Person, was man damals über Krankheiten und Heilung wusste.“ (kinder-redaktion, Kann: „ordnete“ allein war abstrakt.)
+- **Einleitungen auf den Karten:** Payne-Gaposchkin („In ihrer Doktorarbeit von 1925 berechnete sie, dass Sterne überwiegend aus Wasserstoff und Helium bestehen“) und Murasaki („schrieb vor über 1000 Jahren die Erzählung vom Prinzen Genji“).
+- **Rückmeldung nach falscher Antwort auf Entdecker:** „Du hast „X“ gewählt. Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.“ Sie passt zum Tipp aus Abschnitt 3. Profi behält die bisherige Rückmeldung.
+
+**Regeln**
+- **Profi:** Die erste Falle kommt aus dem Erstgebiet der Person, wenn es dort einen Kandidaten gibt. Danach kommt eine zweite aus Erst- oder Zweitgebiet, und die dritte ist die zeitlich nächste Person. Grund (stufen-pruefer): Ohne diese Reihenfolge bekam Franklin auf Profi oft nur Fallen aus „Natur und Erde“, also leichte.
+- **Liste B:** dazu Franklin ↔ Hadid. Grund (stufen-pruefer): „Form“ und „Bauplan“ in Franklins Satz 1 locken zu Hadid („ungewöhnliche Formen“).
+- **Alte gespeicherte Runden** (vor dem 25.11.2026) zeigen auf Entdecker den ganzen Hinweis, solange eine ihrer Fallen keine Entdecker-Falle ist. Das trifft 13 von 36 Bank-Aufgaben. Mit der nächsten neuen Runde gilt Satz 1. Grund (code-pruefer): Sonst stünde neben Satz 1 eine Falle, die nur der zweite Satz ausschließt. Code: `worldGamePrompt` mit den Antworten der Runde und `personenEntdeckerFallen` in `app/world-game-support.mjs`.
+
+**Quellen**
+- Gestrichen: tote oder unpassende Links (Lovelace und Hopper bei Goodall und Curie, DPMA bei beiden Benz, NBI bei Lehmann).
+- Dazu: Bell Burnell (University of Cambridge), Mandela (Apartheid Museum, bpb, SAHO), Leavitt (National Women's History Museum). APS und AMNH weisen Bots mit 403 ab und bleiben darum draußen (BACKLOG).
+- Die Quellenhinweise der Karten sagen, warum.
+
+**Was ins BACKLOG ging:** Abschnitt 5 und Entscheidungsliste Punkt 8, dazu der nicht mehr benutzte Rückfallweg `personRecognitionClue`, Mandela ↔ Maathai auf Profi und die Bot-Sperren (BACKLOG Punkt 25, „Personen-Rätsel, Rest“).

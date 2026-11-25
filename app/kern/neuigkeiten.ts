@@ -11,6 +11,7 @@ export const NEUSTART = '2026-11-21';
 const OBEN_HOECHSTENS = 6;
 
 export const NEUIGKEITEN: readonly Neuigkeit[] = [
+  {id: 'wer-war-das-raetsel', datum: '2026-11-25', symbol: 'lupe', titel: 'Neue Rätsel bei „Wer war das?“', text: 'Jeder der 36 Menschen im Spiel hat jetzt ein eigenes Rätsel. Als Entdecker liest du einen leichten Satz, als Profi wird es kniffliger.'},
   {id: 'kreuz-und-quer', datum: '2026-11-24', symbol: 'kompass', titel: 'Neuer Name, neue Fragen', text: 'Aus der Wissens-Challenge wird „Kreuz und quer“, und du spielst sofort auf deiner Stufe. „Stimmt das wirklich?“ hat neue Fragen zu Wetter, Meer und Pilzen.'},
   {id: 'echte-fotos', datum: '2026-11-24', symbol: 'lupe', titel: 'Neue Fotos und alte Bilder', text: 'Schnabeltier, Okapi, Seepferdchen und viele andere Tiere zeigen wir jetzt auf echten Fotos. Manche Bilder von Menschen wurden erst viel später gemalt.'},
   {id: 'spiele-mit-stufen', datum: '2026-11-24', symbol: 'stern', titel: 'Spiele mit Stufen', text: 'Sechs Wissensspiele wie „Wer war das?“ haben jetzt Stufen. Als Profi gibt es mehr Aufgaben, und was noch nicht geklappt hat, kommt später noch einmal.'},
