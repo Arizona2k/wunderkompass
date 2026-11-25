@@ -93,10 +93,11 @@ export const AUFLOESUNG={
 // Kurze Auflösung im Technik-Detektiv statt der langen Erklärung aus der Karte (stages[2]); Nachprüfung Spieltest Soll 2
 // und 3, Endfassung docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md. Sie sagt in drei bis vier Sätzen, wie die
 // Erfindung funktioniert, und verrät keine Aufgabe aus „Früher oder heute?“. Gleiche Grenzen wie bei den Menschen;
-// geprüft von fakten-pruefer (zwei Runden), kinder-redaktion und stufen-pruefer.
+// geprüft von fakten-pruefer (zwei Runden), kinder-redaktion und stufen-pruefer. Auto, Smartphone und Kamera erklären seit dem
+// Nachtrag das „Wie“ (Spieltest Soll 1 bis 3; docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-*.md).
 /** @type {Record<string,string>} */
 export const TECHNIK_AUFLOESUNG={
- 'invention-camera':'Die Kamera ist ein dunkler Kasten mit einem kleinen Loch. Hinten entsteht ein Bild, das auf dem Kopf steht. Früher hielten es Platten oder Filme fest, heute elektronische Bauteile.',
+ 'invention-camera':'Die Kamera lenkt Licht mit einer Linse auf Millionen winziger Felder. Jedes Feld macht aus Licht etwas Strom: viel Licht, viel Strom. Die Kamera speichert alle Felder als ein Foto.',
  'invention-telescope':'Das Fernrohr hat vorn eine viel größere Öffnung als dein Auge. Wie ein großer Eimer im Regen fängt es mehr Licht auf. So siehst du auch ganz schwache Sterne.',
  'invention-microscope':'Das Mikroskop vergrößert meist in zwei Schritten. Die untere Linse macht ein größeres Bild. Die obere vergrößert es noch einmal wie eine Lupe.',
  'invention-battery':'Die Batterie ist kein Behälter voller Strom. In ihr verändern sich Stoffe, und das liefert elektrische Energie. Die Lampe leuchtet nur, solange der Stromweg keine Lücke hat.',
@@ -117,8 +118,8 @@ export const TECHNIK_AUFLOESUNG={
  'invention-printing':'Der Buchdruck arbeitete mit einzelnen Buchstaben aus Metall. Sie wurden zu einer Seite gelegt, eingefärbt und auf Papier gepresst. Danach konnte man sie für neue Seiten nutzen.',
  'invention-rocket':'Die Rakete stößt hinten sehr schnell Gas aus. Das schiebt sie nach vorn. Lass mal einen aufgeblasenen Luftballon los: Er saust genauso davon. Das klappt sogar im Weltall.',
  'invention-satellite':'Der Satellit fällt ständig zur Erde, trifft sie aber nicht. Er fliegt so schnell zur Seite, dass er an ihr vorbeifällt. Der erste flog 1957 ins All.',
- 'invention-smartphone':'Das Smartphone steckt voller Erfindungen. Ein Akku liefert den Strom, winzige Bauteile rechnen. Funk verbindet es ohne Kabel. Programme bestimmen, was es gerade tut.',
- 'invention-car':'Das Auto hatte Vorläufer, die mit Dampf fuhren. Karl Benz baute einen Wagen mit Benzinmotor. Bertha Benz half ihm und probierte den Wagen aus.',
+ 'invention-smartphone':'Das Smartphone verwandelt deine Stimme in unsichtbare Funkwellen, wie beim Radio. Ein Funkmast in der Nähe fängt sie auf. Wenn du weit weggehst, übernimmt der nächste Mast.',
+ 'invention-car':'Das Auto fährt oft mit Benzin, das im Motor verbrennt. Heißes Gas braucht viel Platz und drückt ein Metallteil weg. Das Drücken dreht die Räder, wie deine Beine beim Radfahren.',
  'invention-railway':'Die Eisenbahn rollt auf harten, glatten Schienen. Darum kann eine Lok viele schwere Wagen ziehen. Schon 1825 fuhr in England eine Bahn mit Gütern und Menschen.'
 };
 /** @param {{title:string,intro:string}} topic */
@@ -142,7 +143,7 @@ const hints={
  habitats:'Schau dir das Tier genau an: Hat es Flossen, Beine oder Flügel? Ist sein Zuhause eher warm oder kalt, nass oder trocken?',
  food:'Überlege: Wo und wie sucht dieses Tier sein Futter? Lies jede Antwort bis zum Ende. Manchmal frisst ein junges Tier etwas anderes als ein großes.',
  people:'Manche Menschen hier machten ähnliche Dinge. Achte auf Einzelheiten im Hinweis: einen Ort, ein Jahr oder ein Ding. Welchen Namen kannst du sicher streichen?',
- technology:'Worum geht es im Text? Überlege bei jeder Erfindung: Wobei hilft sie den Menschen?',
+ technology:'Stell dir jede Erfindung bei der Arbeit vor. Welche passt zu allem, was in der Aufgabe steht?',
  'then-now':'Denk an Dinge, die du von zu Hause oder von unterwegs kennst. Klingt die Beschreibung nach heute oder nach früher?'
 };
 /** @type {Record<string,string>} */
@@ -181,6 +182,9 @@ export function worldGamePrompt(game,item,stufe,antworten){
 const PERSONEN_TIPP_ENTDECKER='Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?';
 const PERSONEN_FALSCH_ENTDECKER='Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.';
 // Auf Profi und Experte trennen die Sätze 2 und 3 die Fallen aus demselben Gebiet (Endfassung 25.11.2026, Paket B).
+// Technik-Detektiv nach einer falschen Antwort, alle Stufen: prüft, ob die gewählte Erfindung zu allen Teilen der Aufgabe
+// passt, statt den Tipp zu wiederholen (Nachtrag Technik-Auflösungen, stufen-pruefer und kinder-redaktion, 25.11.2026).
+const TECHNIK_FALSCH='Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?';
 const PERSONEN_FALSCH_PROFI='Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.';
 // Früher oder heute? Die dritte Antwort ist bei jeder Aufgabe falsch (world-game-bank.ts). Hier statt dort, weil Browser-Tests
 // diese Datei in reinem Node laden. Gespeicherte Runden von vor dem 24.11.2026 zeigen noch die alten dritten Antworten.
@@ -221,5 +225,6 @@ export function worldGameWrongFeedback(game,item,answer,stufe){
   const selected=catalog.find(t=>t.title===answer&&t.animal);
   if(selected?.animal)return 'Du hast „'+answer+'“ gewählt. Lebensraum: '+selected.animal.habitat+'. Nahrung: '+selected.animal.diet+'. Vergleiche das mit allen Rätselspuren. Eine einzelne Gemeinsamkeit reicht nicht.';
  }
+ if(game==='technology')return 'Du hast „'+answer+'“ gewählt. '+TECHNIK_FALSCH;
  return 'Du hast „'+answer+'“ gewählt. '+worldGameHint(game,item,stufe);
 }
