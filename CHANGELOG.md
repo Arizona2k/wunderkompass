@@ -10,9 +10,9 @@ Nach der [Endfassung](docs/entwurf/2026-11-25-technik-aufloesung-endfassung.md) 
 - **Kurze Auflösung für alle 24 Erfindungen:** Nach „Richtig!“ steht nicht mehr ein langer Kartentext, sondern zwei bis drei Sätze, wie die Erfindung funktioniert (`TECHNIK_AUFLOESUNG` in `app/world-game-support.mjs`). Bei der Rakete zum Beispiel: „Lass mal einen aufgeblasenen Luftballon los: Er saust genauso davon.“
 - **Auto, Smartphone und Kamera** erklären seit dem Nachtrag das „Wie“ statt nur das „Was“ (Spieltest Soll 1 bis 3).
 - **Neuer Tipp:** „Stell dir jede Erfindung bei der Arbeit vor. Welche passt zu allem, was in der Aufgabe steht?“ **Nach einer falschen Antwort** steht nicht mehr derselbe Tipp noch einmal, sondern: „Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?“
-- **Spielkarte:** „Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.“ Vorher versprach sie „Welche Teile gehören dazu?“, danach fragt keine Aufgabe.
+- **Text in der Suche:** „Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.“ Vorher versprach er „Welche Teile gehören dazu?“, danach fragt keine Aufgabe. Die Kachel in der Spieleliste behält ihr kurzes Ziel „Probleme mit Erfindungen verbinden“ wie die Nachbarn (`app/playground-catalog.ts`).
 - **Neue Frage nicht hinter der Leiste:** Nach „Nächste Aufgabe“ rollt die Seite auf dem Handy auch dann zum Spielbrett, wenn die neue Frage hinter der unteren Leiste läge (`zurFrage` in `app/kern/spiel-fokus.ts`, technik-pruefer S2).
-- **Rückmeldung lesbar auf breiten Bildschirmen:** höchstens etwa 65 Zeichen je Zeile (Design-Prüfung Soll 1).
+- **Rückmeldung lesbar auf breiten Bildschirmen:** höchstens etwa 65 Zeichen je Zeile (Design-Prüfung Soll 1), kein einzelnes Wort allein in der letzten Zeile.
 - „Was ist neu?“: „Technik-Detektiv: So geht das“.
 - **Tests:** Unit-Tests für alle 24 Auflösungen (Länge, Satzlänge, beginnt mit dem Namen, wiederholt den Hinweis nicht, nennt keine andere Erfindung) und für den Satz nach falscher Antwort; `spiel-fokus` stellt die neue Frage 62, 32 und 2 px hinter der Leiste gezielt her (Gegenprobe ohne die Korrektur: rot).
 - Ins BACKLOG: Forscherfrage beim Mikroskop für Kleine schwer; Ideen für „Mehr erfahren“; Kartenkorrekturen (Glühbirne, Kompass, Kühlschrank, Aufzug, Benz).

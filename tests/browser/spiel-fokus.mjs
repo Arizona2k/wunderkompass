@@ -154,6 +154,13 @@ async function spiele(page, spiel, geraet) {
         }
         assert.equal(stand?.index, n - 1, `${wo}: neue Aufgabe nicht im Pass`);
         await antworte(page, antworten, spiel.richtig(await sitzungen()), wo);
+        // Warten, bis zurRueckmeldung fertig ist (ein Bild nach React): Sonst setzt es den Fokus erst nach dem Test auf
+        // „Richtig!“, und das Enter unten trifft die Überschrift statt „Nächste Aufgabe“ (code-pruefer, Muss 1: 2 von 5 rot).
+        const ruhig = await page.waitForFunction(sel => {
+          const l = window.__lage(sel);
+          return l?.imBild && (l.passt ? l.weiterHatFokus : l.titelHatFokus);
+        }, spiel.kasten, {timeout: 4000}).then(() => true, () => false);
+        if (!ruhig) assert.fail(`${wo}: Rückmeldung nicht im Bild oder Fokus falsch: ${JSON.stringify(await page.evaluate(sel => window.__lage(sel), spiel.kasten))}`);
       }
       await page.locator(`${spiel.kasten} > .primary-button`).waitFor();
       const aufbau = await page.evaluate(({kasten, frage, abstand}) => {

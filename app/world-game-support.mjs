@@ -182,10 +182,10 @@ export function worldGamePrompt(game,item,stufe,antworten){
 const PERSONEN_TIPP_ENTDECKER='Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?';
 const PERSONEN_FALSCH_ENTDECKER='Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.';
 // Auf Profi und Experte trennen die Sätze 2 und 3 die Fallen aus demselben Gebiet (Endfassung 25.11.2026, Paket B).
+const PERSONEN_FALSCH_PROFI='Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.';
 // Technik-Detektiv nach einer falschen Antwort, alle Stufen: prüft, ob die gewählte Erfindung zu allen Teilen der Aufgabe
 // passt, statt den Tipp zu wiederholen (Nachtrag Technik-Auflösungen, stufen-pruefer und kinder-redaktion, 25.11.2026).
 const TECHNIK_FALSCH='Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?';
-const PERSONEN_FALSCH_PROFI='Passt jeder Satz im Hinweis zu diesem Menschen? Schau dir auch die anderen Namen an.';
 // Früher oder heute? Die dritte Antwort ist bei jeder Aufgabe falsch (world-game-bank.ts). Hier statt dort, weil Browser-Tests
 // diese Datei in reinem Node laden. Gespeicherte Runden von vor dem 24.11.2026 zeigen noch die alten dritten Antworten.
 export const DRITTE_ANTWORT='Erst in der Zukunft';

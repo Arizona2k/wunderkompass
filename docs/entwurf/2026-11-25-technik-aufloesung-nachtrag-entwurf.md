@@ -152,6 +152,6 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
 - Auto: US DOE (Kolben, Kurbelwelle), AIP SPS Observer 2014 (Kurbelbild) statt Haynes und Art of Manliness; KBA, Pressemitteilung 09/2026, für „oft Benzin“. Die Bamberger Sachanalyse nicht für Zahlen zitieren (Zylinderfehler).
 - Smartphone: BfS-Unterrichtsmaterial Mobilfunk (Archiv) für Stimme, Funk und Mast; Sächsisches Umweltministerium, „Mobilfunk – Kommunikation mit Risiko?“ (2005), S. 5, für den Wechsel zum nächsten Mast.
 
-**Auch geändert:** Die Spielkarte versprach „Welche Teile gehören dazu?“, keine Aufgabe fragt danach (gesehen vom `karten-autor`, Abschnitt 6). Neuer Kartentext im selben PR.
+**Auch geändert:** Der Spieltext versprach „Welche Teile gehören dazu?“, keine Aufgabe fragt danach (gesehen vom `karten-autor`, Abschnitt 6). Neu: „Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.“ (Vorschlag `karten-autor`, Verb „hilft“ von der `kinder-redaktion`). Sichtbar ist er in der Suche. Die Kachel der Spieleliste zeigt ihr eigenes Ziel „Probleme mit Erfindungen verbinden“ (`app/playground-catalog.ts`); das passt und bleibt (Design-Nachprüfung, Soll 1).
 
 **Ins BACKLOG:** Forscherfrage beim Mikroskop für 7-Jährige schwer (Spieltest, Kann). Ideen für „Mehr erfahren“: Handschuh-Probe (Smartphone), Film und Entwickeln (Kamera), Herkunft des Worts „Linse“ (erst belegen).
