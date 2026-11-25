@@ -54,3 +54,30 @@ Das ist ein Vorschlag fürs BACKLOG, nicht Teil dieser Änderung.
   - Darf „Rechner“ für Prozessor und Speicher zusammen stehen?
 - Für die `stufen-pruefer`: Ob „Rechner“ als Wort zu nah an der falschen Antwort „Der Computer“ liegt, kann ich nicht sicher beurteilen. Die Auflösung erscheint erst nach „Richtig!“, verrät also nichts. Ein Kind könnte aber denken: „Dann war es doch der Computer?“ Ich halte das für unkritisch, weil die Karte selbst „kleiner Computer“ sagt.
 - Wie der Text bei 320 px und großer Schrift im Kasten aussieht, habe ich nicht gemessen.
+
+## Nachprüfung Fassung E (nach dem Einwand der Stufen-Prüfung gegen „Rechner“)
+
+Ich habe nur gelesen und nichts geändert. Die Zeichen habe ich von Hand gezählt; bitte mit `pruef.cjs` nachzählen.
+
+**Ergebnis: E geht, aber mit einer kleinen Verbesserung wird sie klarer.** Der Einwand gegen „Rechner“ überzeugt mich, weil die Seite das Wort selbst für Computer benutzt.
+
+**Befunde zu E:**
+- **„rechnet innen blitzschnell“:** „Das Smartphone rechnet“ verstehen 6- bis 8-Jährige. „innen“ steht aber steif beim Verb und bringt kein Bild.
+- **Reihenfolge:** Erst steht „rechnet“, dann kommen die Zahlen. Das Kind erfährt also erst danach, womit gerechnet wird. Die Kette ist umgekehrt herum leichter: erst Zahlen machen, dann damit rechnen.
+- **„sind darin lauter Zahlen“:** „darin“ meint das Smartphone. Dazwischen steht aber ein ganzer Satz, deshalb ist der Bezug schwach. Außerdem ist „sind“ ein Zustand ohne Tun. Wie in meinen früheren Berichten rate ich zu einem Tunwort.
+
+**Vorschlag F (173 Zeichen, Sätze 11/4/11 Wörter, keine Ziffer):**
+
+> Das Smartphone macht aus Fotos, Spielen und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen die Zahlen zu einem Funkmast in der Nähe.
+
+Zeichen je Satz: 72 + 1 + 30 + 1 + 69 = 173.
+
+Warum F besser ist:
+- „macht aus … lauter Zahlen“ ist ein Tunwort, und das Smartphone ist klar das Subjekt.
+- „Damit“ zeigt auf die Zahlen direkt davor.
+- Die Kette Zahlen → rechnen → Funk bringt die Zahlen fort ist für Kleine gut nachzuvollziehen.
+- „Chip“, „Rechner“ und „innen“ fallen weg. Kein Wort beginnt mit dem Namen einer anderen Erfindung; geprüft habe ich das gegen die 24 Titel im Katalog.
+
+**Für den `fakten-pruefer`:** Bei „macht aus … Spielen … Zahlen“ ist „Spiele“ eine Vereinfachung, denn Spiele liegen schon als Zahlen vor. Ich halte das für zulässig. Lehnt er es ab, wäre „Bildern“ statt „Spielen“ möglich, das ergibt 172 Zeichen.
+
+Wie der Text bei 320 px und großer Schrift im Kasten aussieht, habe ich nicht gemessen.
