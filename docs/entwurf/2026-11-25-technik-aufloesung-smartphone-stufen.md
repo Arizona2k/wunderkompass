@@ -1,64 +1,68 @@
 # Stufen-Prüfung: Smartphone-Auflösung (25.11.2026)
 
-Helfer: `stufen-pruefer` (opus / high), prüft den [Entwurf](2026-11-25-technik-aufloesung-smartphone-entwurf.md). Sein Gegenvorschlag heißt im Bericht „D“; in der Entscheidung heißt er „E“, weil die [Kinder-Redaktion](2026-11-25-technik-aufloesung-smartphone-kinderredaktion.md) gleichzeitig eine andere Fassung „D“ vorschlug. Entscheidung: [Nachtrag, Abschnitt 7](2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
+Helfer: `stufen-pruefer` (opus / high), prüft den [Entwurf](2026-11-25-technik-aufloesung-smartphone-entwurf.md) und die Fassung D der [Kinder-Redaktion](2026-11-25-technik-aufloesung-smartphone-kinderredaktion.md). Entscheidung: [Nachtrag, Abschnitt 7](2026-11-25-technik-aufloesung-nachtrag-entwurf.md#7-entscheidungen).
 
-Ich habe nur gelesen und nichts geändert. Grundlage: `docs/entwurf/2026-11-25-technik-aufloesung-smartphone-entwurf.md`, mein früherer Befund `docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-stufen-schluss.md`, `app/world-game-bank.ts`, `app/world-game-runde.ts`, `app/world-game-support.mjs` (`TECHNIK_AUFLOESUNG`), `app/world-game-fallen.json` und `app/world-catalog.json` (Karte `invention-smartphone`).
+Ich habe nur gelesen und nichts geändert. Dieser Bericht ersetzt meinen ersten Bericht von heute. Mein dort vorgeschlagenes „D“ heißt hier **D1**. Damit es nicht mit der Fassung der Kinder-Redaktion verwechselt wird, heißt diese **D**.
 
-## Gesamteindruck
+Grundlage: `docs/entwurf/2026-11-25-technik-aufloesung-smartphone-entwurf.md`, `docs/entwurf/2026-11-25-technik-aufloesung-nachtrag-stufen-schluss.md`, `app/world-game-bank.ts`, `app/world-game-runde.ts`, `app/world-game-support.mjs` (`TECHNIK_AUFLOESUNG`, `TECHNIK_FALSCH`), `app/world-game-fallen.json`, `app/world-catalog.json`.
 
-**Empfehlung: Fassung A, mit einer kleinen Änderung (Fassung D unten).** Nur A verbindet beide Teile der Aufgabe in einer Kette, und Große lernen dabei etwas Neues: Das Smartphone telefoniert, indem es rechnet. B wiederholt fast wörtlich die Auflösung beim Computer. C stützt sich auf eine Zahl ohne Beleg und erklärt den Funk nur vage. Die heutige Fassung erklärt weiterhin nur das Telefonieren.
+## Gesamtempfehlung
 
-## Wichtig für die Bewertung: Welche Fallen stehen wirklich neben dem Smartphone?
+**Ich empfehle Fassung E.** Sie verbindet die Fassung der Kinder-Redaktion mit A:
 
-Ich habe das aus dem Code abgeleitet.
-- **Entdecker:** Die festen Fallen sind „Die Eisenbahn“ und „Das Telefon“. Hier muss die Auflösung also zeigen, warum nicht das Telefon.
-- **Profi und Experte** (Experte spielt in den Welt-Spielen Profi): Die drei Fallen kommen aus den fünf Erfindungen, die zeitlich am nächsten liegen: 3D-Druck, Internet, Satellit, Transistor, Computer. **Das Telefon kommt auf Profi nie vor.** Hier muss die Auflösung zeigen, warum nicht der Computer.
-- Andersherum taucht das Smartphone nie als Falle bei Computer, Transistor, Telefon oder Internet auf. Beim Internet ist es durch `ausschluss` auch auf Entdecker ersetzt. Die Smartphone-Auflösung kann darum in derselben Runde keine Lösung **verraten**. Sie kann sie höchstens **doppeln oder verwischen**.
+„Das Smartphone rechnet innen blitzschnell. Fotos, Spiele und deine Stimme sind darin lauter Zahlen. Unterwegs tragen Funkwellen die Zahlen zu einem Funkmast in der Nähe.“
 
-## Frage 1: Warum das Smartphone und nicht Telefon oder Computer?
+- 169 Zeichen, Sätze mit 5, 9 und 11 Wörtern, keine Ziffer.
+- Ich habe den Wortanfang gegen alle Erfindungsnamen geprüft, dazu „telefon“, „automat“, „licht“, „kamera“ und „druck“: kein Treffer.
+- Ohne „Chip“, wie die Kinder-Redaktion wünscht. Ohne „Rechner“, wie es aus Sicht der Stufen nötig ist (Begründung unten).
 
-| Fassung | Warum nicht Telefon? (Entdecker) | Warum nicht Computer? (Profi) | Urteil |
+Rangfolge der drei Fassungen, nach denen gefragt wurde: **D mit einer Änderung (= E) > A > heute.**
+- **D** in der vorgelegten Form ist besser als A: anschaulicher, mit „unterwegs“ und klarem Bezug „die Zahlen“. Es kostet aber das Wort „Rechner“.
+- **A** taugt als Rückfall, wenn E nicht gewünscht ist. Dann besser als D1: „Das Smartphone hat einen winzigen Chip, der blitzschnell rechnet. Er macht aus deiner Stimme und deinen Fotos Zahlen. Unterwegs tragen Funkwellen sie zu einem Mast in der Nähe.“ (176 Zeichen).
+- **Die heutige Fassung** ist die schwächste. Sie erklärt nur das Telefonieren.
+
+## Wichtig: Welche Fallen stehen wirklich neben dem Smartphone? (aus dem Code)
+
+- **Entdecker:** Die festen Fallen sind „Die Eisenbahn“ und „Das Telefon“. Die Auflösung muss also zeigen, warum nicht das Telefon.
+- **Profi und Experte** (Experte spielt in den Welt-Spielen Profi): Drei Fallen kommen aus den fünf zeitlich nächsten Erfindungen: 3D-Druck, Internet, Satellit, Transistor, Computer. **„Der Computer“ steht damit in 3 von 5 Profi-Runden mit dem Smartphone daneben. Das Telefon kommt auf Profi nie vor.**
+- Andersherum taucht das Smartphone nie als Falle bei Computer, Transistor, Telefon oder Internet auf. Beim Internet ist es durch `ausschluss` ersetzt. Die Auflösung kann in derselben Runde also keine Lösung **verraten**. Sie kann sie höchstens doppeln oder verwischen.
+
+## Antwort auf die Frage der Kinder-Redaktion: Ist „Rechner“ zu nah an „Der Computer“?
+
+**Ja, auf Profi.**
+1. **Die Seite benutzt „Rechner“ selbst als Wort für Computer.** Auf der Computer-Karte steht „Frühe elektronische Rechner füllten große Räume“, auf der Internet-Karte „Das ARPANET verband 1969 erste Rechner“. „Das Smartphone hat innen einen winzigen Rechner“ heißt also auf derselben Seite: „Im Smartphone steckt ein Computer.“
+2. **Auf Profi steht „Der Computer“ oft als Falle daneben.** Kinder ab 8 kennen „Rechner“ als Computer. Hat ein Kind erst „Der Computer“ getippt und dann beim zweiten Versuch das Smartphone gefunden, liest es nach „Richtig!“: winziger Rechner. Die Frage „War der Computer also doch richtig?“ liegt nahe. Der dritte Satz („Unterwegs … Funkwellen“) gibt den Unterschied zwar her, sagt aber nicht ausdrücklich, dass der Rechner allein nicht reicht.
+3. **Es widerspricht dem Sinn der harten Grenze.** Sie soll verhindern, dass die Auflösung andere Erfindungen nennt. Ein Synonym umgeht nur das Prüfskript.
+4. **Auf Entdecker ist es unschädlich.** Dort steht der Computer nie zur Wahl, und Kleine denken bei „Rechner“ eher an rechnen oder einen Taschenrechner.
+
+**Lösung:** Das Verb „rechnet“ statt des Geräts „Rechner“ (Fassung E). Damit gibt es keinen Kartoffelchip und keine Computer-Falle. Der Gedanke bleibt gleich.
+
+## Prüfung der drei Fragen je Fassung
+
+| Fassung | (1) Warum nicht Telefon (Entdecker) / Computer (Profi)? | (2) Verraten oder verwischen | (3) Kleine / Große |
 |---|---|---|---|
-| Heute | Nein. Sie erklärt nur Stimme über Funk, das kann ein Handy auch. | Nein. Die Hälfte „Informationen bearbeiten“ fehlt. | deckt nur die halbe Aufgabe |
-| A | Ja. Der Chip rechnet, und auch Fotos werden zu Zahlen, das ist mehr als Sprechen. | Halb. Funk zum Mast zeigt „unterwegs“, aber das Wort „unterwegs“ aus der Aufgabe fehlt. | gut |
-| B | Ja, aber die Teile stehen unverbunden nebeneinander. | Schwach. Der Chip-Satz ist fast die Computer-Auflösung, der Unterschied geht unter. | schwach |
-| C | Ja (tippen, wischen). | Ja, sie sagt als einzige „unterwegs“. Der Funk wird aber nur zu „bleibt verbunden“ und erklärt kein Wie. | mittel |
+| Heute | Nein / nein. Nur Stimme über Funk, das kann ein Handy auch. | Verwischt das Telefon, denn sie erklärt das Smartphone wie ein Telefon. | Kleine: gut. Große: nichts Neues zur Aufgabe. |
+| A | Ja (Fotos werden auch zu Zahlen) / halb (Funk ja, „unterwegs“ fehlt). | Gewollter Gegensatz zur Telefon-Auflösung (elektrisches Signal gegen Zahlen). | Kleine: „Chip“ und „Zahlenreihen“ sind schwer. Große: echter Gedanke. |
+| B | Ja, aber unverbunden / schwach. | **Doppelt die Computer-Auflösung** („Schritte … nacheinander“). | Große: Aufzählung. Ich rate ab. |
+| C | Ja / ja („unterwegs“), der Funk bleibt aber ohne Wie. | „Schalter“ ist eine echte Verbindung zum Transistor, verrät nichts. | „Milliarden“ ist nicht belegt. Ich rate ab. |
+| D (Redaktion) | Ja (Fotos, Spiele) / Funk und „unterwegs“ ja, aber „Rechner“ zieht zum Computer. | **Verwischt auf Profi den Computer** (siehe oben). | Kleine: sehr gut („lauter Zahlen“, Spiele). Große: echter Gedanke. |
+| E | Ja / ja („unterwegs“ und Funkmast; rechnen ist eine Tätigkeit, kein zweites Gerät). | Gegensatz zum Telefon bleibt. Keine Doppelung mit Computer oder Transistor. | Kleine: kurz und vorlesbar. Große: Telefonieren ist für das Smartphone Rechnen mit Zahlen. |
 
-## Frage 2: Verraten oder verwischen andere Auflösungen
-
-- **B** sagt „folgt den Schritten …, blitzschnell nacheinander“, beim Computer steht „Liste genauer Schritte … sehr schnell nacheinander ab“. Das verrät nichts, weil keine der beiden Erfindungen bei der anderen als Falle steht. Kommen beide in einer Runde (Profi spielt 8 von 24 Aufgaben), liest das Kind aber zweimal fast dasselbe. Das bringt keine neue Erkenntnis und verwischt, was das Smartphone besonders macht. **Befund.**
-- **C** sagt „Milliarden winziger Schalter“, beim Transistor steht „ist ein Schalter“. Auch das verrät nichts, die Verbindung ist fachlich echt. Ohne gute Quelle für „Milliarden“ (siehe Entwurf) darf C aber nicht kommen.
-- **A** sagt „Stimme → Zahlenreihen“, beim Telefon steht „Stimme → elektrisches Signal“. Das ist ein **gewollter, echter Gegensatz** (früher ein elektrisches Signal, heute Zahlen) und für Große der eigentliche Gewinn, wenn beide in einer Runde kommen. „Rechnet“ klingt nach „Große Rechnungen“ in der Computer-Aufgabe. Das ist unschädlich: Dort steht das Smartphone nie zur Wahl, und die Verbindung stimmt.
-- **Heute:** Die Fassung verwischt das Telefon, denn sie erklärt das Smartphone genau so, wie man das Telefon erklären würde.
-
-## Frage 3: Tragfähig für Kleine, Gewinn für Große?
-
-- **Entdecker:** A lässt sich vorlesen. Chip, der rechnet, aus Stimme werden Zahlen, Funkwellen zum Mast: Das sind drei klare Bilder. „Zahlenreihen“ ist für 6-Jährige unnötig schwer und erinnert an den Zahlenstrahl aus der Schule. „Zahlen“ reicht. Ob „Chip“ an Kartoffelchips denken lässt, entscheidet die Kinder-Redaktion.
-- **Große (10 bis 12):** A und D bieten einen echten Gedanken: Telefonieren ist beim Smartphone Rechnen, Stimme und Fotos sind dort nur Zahlen. Das steht so nirgends auf der Karte, man findet es also nicht einfach wieder. Mit der Telefon-Auflösung ergibt sich dazu der Vergleich früher und heute. B und C bleiben bei Aufzählungen.
-
-## Gegenvorschlag D (Fassung A, angepasst)
-
-„Das Smartphone hat einen winzigen Chip, der blitzschnell rechnet. Er macht aus deiner Stimme und deinen Fotos Zahlen. Unterwegs tragen Funkwellen sie zu einem Mast in der Nähe.“
-
-- 176 Zeichen, Sätze mit 9, 9 und 10 Wörtern, keine Ziffer. Ich habe den Wortanfang gegen alle 24 Namen der Erfindungskarten geprüft, dazu „telefon“, „automat“, „licht“, „kamera“ und „druck“: Es gibt keinen Treffer außer „Smartphone“ selbst.
-- Das sind die Unterschiede zu A:
-  - „lange Zahlenreihen“ wird zu „Zahlen“, das ist leichter für Entdecker.
-  - „Unterwegs“ greift das Schlüsselwort der Aufgabe auf und zeigt auf Profi, warum es nicht der Computer ist.
-- „Ein Mast in der Nähe“ bleibt, so wie früher entschieden.
+Erkenntnisgewinn für Große (A, D, E): Der Satz „Für das Gerät ist deine Stimme nur Zahlen“ steht nirgends auf der Karte. Man findet ihn also nicht einfach wieder. Mit der Telefon-Auflösung („Stimme → elektrisches Signal“) entsteht ein Vergleich von früher und heute.
 
 ## Befunde
 
-1. `app/world-game-support.mjs`, `TECHNIK_AUFLOESUNG['invention-smartphone']`: Die heutige Fassung deckt nur das Telefonieren ab und erklärt auf Entdecker nicht, warum es nicht das Telefon ist. Vorschlag: Fassung D.
-2. Fassung B: Sie doppelt die Computer-Auflösung. Ich rate ab.
-3. Fassung C: „Milliarden“ ist nicht belegt, und der Funk bleibt ohne Wie. Ich rate ab.
-4. Fassung A und D, für den `fakten-pruefer`: „sie“ bezieht sich auch auf die Fotos. Das klingt, als würden Fotos immer gesendet, dabei geht das nur beim Verschicken. Ich halte das für eine zulässige Vereinfachung. Wird sie abgelehnt, dann ohne Fotos: „… Er macht aus deiner Stimme Zahlen. …“. Damit ginge aber das Zeichen für „mehr als Telefonieren“ verloren. Ich würde die Fotos behalten.
+1. `app/world-game-support.mjs`, `TECHNIK_AUFLOESUNG['invention-smartphone']`: Die heutige Fassung deckt nur die halbe Aufgabe ab. Vorschlag: Fassung E.
+2. Fassung D, Wort „Rechner“: Es ist auf Profi zu nah an der Falle „Der Computer“, und die Seite selbst benutzt es als Synonym. Vorschlag: „Das Smartphone rechnet innen blitzschnell.“
+3. Fassungen D und E, für den `fakten-pruefer`: „tragen Funkwellen die Zahlen“ klingt so, als würden Fotos und Spiele immer gesendet. Hält er das für zu ungenau, gibt es diese Fassung (170 Zeichen, Sätze mit 5, 9 und 10 Wörtern): „… Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“ Dabei fällt „in der Nähe“ weg.
+4. Fassung B: Sie doppelt die Computer-Auflösung. Fassung C: Die Zahl ist nicht belegt. Beide lieber nicht nehmen.
 
 ## Lücken
 
-Der Technik-Detektiv hat keine Experten-Aufgaben, Experte spielt Profi (E3 in `app/world-game-runde.ts`). Gut passen würde hier eine Aufgabe aus S5, bei der man zwei Tatsachen verbindet, etwa: „Was können Smartphone und Telefon beide, aber nur eins davon rechnet dabei mit Zahlen?“, oder ein Vergleich, der „Stimme → elektrisches Signal“ dem Satz „Stimme → Zahlen“ gegenüberstellt. Das gehört nicht in diese Auflösung, sondern ins BACKLOG.
+Im Technik-Detektiv gibt es keine Experten-Aufgaben (E3 in `app/world-game-runde.ts`). Passen würde ein Vergleich nach S5, der zwei Tatsachen verbindet: Telefon („Stimme → elektrisches Signal“) gegen Smartphone („Stimme → Zahlen“). Das ist ein Punkt fürs BACKLOG, nicht für diese Auflösung.
 
 ## Unsicher
 
-- Ob 5- bis 7-Jährige „aus deiner Stimme werden Zahlen“ als spannendes Wunder erleben oder als unverständlich empfinden, kann nur die Rückmeldung echter Kinder klären.
-- „Chip“ und „Funkwellen“ sind Sache der Kinder-Redaktion.
-- Fachliche Richtigkeit, etwa das Zuschreiben der Umwandlung an einen einzigen Chip, prüft der Fakten-Prüfer.
+- Ob ein Kind auf Profi nach „Rechner“ wirklich denkt „dann war es doch der Computer“, ist meine Einschätzung aus der Fallenliste. Belegen kann das nur die Rückmeldung echter Kinder.
+- Ob 5- bis 7-Jährige „deine Stimme ist lauter Zahlen“ als Wunder erleben oder als unverständlich empfinden, ebenso.
+- Ton und Wortwahl entscheidet die Kinder-Redaktion, die fachliche Vereinfachung prüft der Fakten-Prüfer.
