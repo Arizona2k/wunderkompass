@@ -43,7 +43,7 @@ export const EIGENE_RAETSEL={
  'person-nelson_mandela':'Diese Person kämpfte in Südafrika für gleiche Rechte, egal welche Hautfarbe. Dort galten ungerechte Gesetze: die Apartheid. 1994 durften zum ersten Mal alle Erwachsenen wählen. Danach führte diese Person das Land.',
  'person-mae_jemison':'Diese Person flog 1992 mit einer Raumfähre ins All und forschte dort. Vorher studierte diese Person Technik und Medizin und behandelte dann kranke Menschen.',
  'person-karl_benz':'Diese Person entwickelte einen Motorwagen, also ein sehr frühes Auto. Dafür mussten Motor, Lenkung und Bremsen gut zusammenpassen.',
- 'person-albert_einstein':'Diese Person stellte sich genau vor, was mit Licht, Raum und Zeit passiert. Für eine Arbeit über Licht bekam diese Person den Nobelpreis des Jahres 1921.',
+ 'person-albert_einstein':'Diese Person machte Versuche im Kopf, um Licht, Raum und Zeit zu verstehen. Für eine Arbeit über Licht bekam diese Person den Nobelpreis des Jahres 1921.',
  'person-al_khwarizmi':'Diese Person schrieb in Bagdad wichtige Bücher übers Rechnen. Darin ging es auch um Algebra: das Rechnen mit unbekannten Zahlen.',
  'person-neil_armstrong':'Diese Person landete mit Buzz Aldrin auf dem Mond. Die Reise hieß Apollo 11.',
  'person-rabindranath_tagore':'Diese Person schrieb Gedichte, Geschichten und Lieder. Außerdem malte diese Person Bilder: Aus frei gezogenen Linien wurden neue Formen.'
