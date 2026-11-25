@@ -139,7 +139,7 @@
   - Quelle: NOAA Fisheries, Killer whale, https://www.fisheries.noaa.gov/species/killer-whale (alle Ozeane; Fettschicht „blubber“, Beleg Fakten A S6)
 - **Futter (176):** Der Orca lernt schon als Junges von seiner Familie, was sie jagt. Manche Familien fangen vor allem Lachse, andere Robben. Lachsjäger finden ihre Beute mit Klicklauten und Echo.
   - Änderung: Satz 1 KR A Soll; Satz 3 Fakten A Kann (Klicks nur bei Lachsjägern)
-  - Quelle: NOAA Fisheries, Killer whale (Residents „mainly salmon“, Transients Meeressäuger; Lernen und Kultur, Beleg Fakten A S6; Echoortung bei fischfressenden Gruppen)
+  - Quelle: NOAA Fisheries, Killer whale (Residents „mainly salmon“, Transients Meeressäuger; Lernen und Kultur, Beleg Fakten A S6; Echoortung bei fischfressenden Gruppen); NOAA Fisheries, Sound Strategy: Hunting with the Southern Residents, Part 1, https://www.fisheries.noaa.gov/feature-story/sound-strategy-hunting-southern-residents-part-1 („echolocation, a form of sonar they use to find the Chinook salmon they favor as prey“; nachgetragen nach Nachprüfung Fakten 1, S4)
 
 ### A14. Gewöhnlicher Krake (`animal-common-octopus`)
 - **Tierdetektiv (116):** Der Krake hat drei Herzen. Sein Blut ist blau und nicht rot. Bei Gefahr spritzt er Tinte, die verwirrt seine Feinde.
@@ -150,7 +150,7 @@
   - Quelle: Animal Diversity Web, Octopus vulgaris, https://animaldiversity.org/accounts/Octopus_vulgaris/ („rocky shores … crevice“; versteckt sich „by varying colour, skin, texture“; Saugnäpfe)
 - **Futter (135):** Der Krake frisst gern Krebse und Muscheln. Krebse beißt er mit seinem harten Schnabel auf. Muscheln zieht er mit den Armen auseinander.
   - Änderung: Satz 2 und 3 Fakten A S1
-  - Quelle: Fiorito & Gherardi 1999, https://pubmed.ncbi.nlm.nih.gov/24925500/ (Krebse mit dem Schnabel, Muscheln durch Auseinanderziehen, Beleg Fakten A S1)
+  - Quelle: Fiorito & Gherardi 1999, https://pubmed.ncbi.nlm.nih.gov/24925500/ (Krebse mit dem Schnabel, Muscheln durch Auseinanderziehen, Beleg Fakten A S1); Monterey Bay Aquarium, Giant Pacific octopus, https://www.montereybayaquarium.org/animals/animals-a-to-z/giant-pacific-octopus (andere Art, gleiches Verhalten: „It may pull the hard-shelled prey apart, bite it open with its beak“; nachgetragen nach Nachprüfung Fakten 1, S5)
 
 ### A15. Grüne Meeresschildkröte (`animal-green-sea-turtle`)
 - **Tierdetektiv (180):** Die Grüne Meeresschildkröte hat statt Füßen flache Flossen. Damit schwimmt sie weite Strecken durchs Meer. Ihren Namen hat sie übrigens von ihrem grünlichen Fett, nicht vom Panzer.
@@ -408,7 +408,7 @@
 ### A38. Papageitaucher (`animal-atlantic-puffin`)
 - **Tierdetektiv (143):** Der Papageitaucher fliegt unter Wasser fast wie in der Luft: Er rudert mit den Flügeln. Mit den Füßen lenkt er dabei. So fängt er seine Fische.
   - Änderung: wie Paket
-  - Quelle: National Geographic Kids, Atlantic puffin, https://kids.nationalgeographic.com/animals/birds/facts/atlantic-puffin („‚fly‘ through the water, using their wings as paddles“; Ersatz für die umgeleitete Audubon-Seite, Fakten B S6). ⚠ Füße zum Lenken stand nur bei Audubon
+  - Quelle: National Geographic Kids, Atlantic puffin, https://kids.nationalgeographic.com/animals/birds/facts/atlantic-puffin („‚fly‘ through the water, using their wings as paddles“; „they use their webbed feet to steer, much as a boat uses a rudder“; Ersatz für die umgeleitete Audubon-Seite, Fakten B S6; Lenken mit den Füßen belegt nach Nachprüfung Fakten 2)
 - **Zuhause (148):** Der Papageitaucher kehrt zum Brüten oft in dieselbe Erdhöhle zurück. Nur zur Brutzeit ist sein Schnabel so bunt. Im Winter sieht er viel grauer aus.
   - Änderung: neu (Stufen 1-S1: Land und Meer waren Hinweis und Hauptfrage; KR B K8)
   - Quelle: National Geographic Kids, Atlantic puffin („often uses the same burrow they used the year before“); RSPB, Puffin, https://www.rspb.org.uk/birds-and-wildlife/puffin („Outside of the breeding season, Puffins have a greyscale getup“; „shed their colourful beaks“)

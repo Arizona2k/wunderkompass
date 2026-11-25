@@ -110,3 +110,19 @@ Nicht im Nachtrag: Tiger-Ohren (St-Kann 1, nur mit sicherer Quelle, sonst späte
 - Der Titel „Karl (Carl) Benz“ klingt vorgelesen wie „Karl Karl Benz“. Das gehört zu Design-Umbau Schritt 2 (Kartennamen).
 - Für den `stufen-pruefer` beim nächsten Durchgang durch „Früher oder heute?“: Die Zeitform verrät dort oft die Lösung (KR, Unsicher). Kommt ins BACKLOG.
 - Ideen für Experten-Aufgaben aus St („Lücken“) kommen in die Ideen-Sammlung im BACKLOG.
+
+## 5. Nach den Prüfungen des Nachtrags (25.11.2026, abends)
+
+Berichte: [Fakten](2026-11-25-tier-aufloesung-nachtrag-fakten.md), [Fakten 2](2026-11-25-tier-aufloesung-nachtrag-fakten-2.md), [Kinder-Redaktion](2026-11-25-tier-aufloesung-nachtrag-kinderredaktion.md), [Stufen](2026-11-25-tier-aufloesung-nachtrag-stufen.md).
+
+- **N15 nach Vorschlag A der Stufen-Prüfung:** „Fleisch“ als Profi-Falle nur noch beim Okapi; neu bei Honigbiene und Koala. Giraffe und Dromedar bekommen kein „Fleisch“ mehr, weil das schon ein 6-jähriges Kind ausschließt.
+- **Giraffe Profi:** dafür „Krill“ (Faktenprüfung 2: sicher falsch, die Giraffe frisst Blätter und junge Triebe).
+- **Biber Profi:** „Vor allem kleine Fische“ (Stufen d; Faktenprüfung: Fisch beim Biber ist ein verbreiteter Irrtum).
+- **„Nektar und Pollen“ (Profi):** beim Koala und beim Dromedar gestrichen (Koalas fressen auch Blüten; beim Dromedar im Zweifel). Beim Okapi und beim Biber bleibt es, dort fand die Faktenprüfung keinen Beleg für Blüten.
+- **Dromedar:** Entdecker ohne „Meerestiere“, weil die eigene Kartenquelle sagt, dass Kamele sogar Fisch fressen. Profi braucht vier Fallen, darum neu „Vor allem kleine Tiere“ (richtige Antwort des Erdmännchens, auch ein Wüstentier). Der Stufen-Prüfer sieht sich die Wahl in der letzten Runde an.
+- **K3 Licht:** „Darin glühte ein dünnes Stück Kohle.“ Die Kinder-Redaktion wollte „Faden“, damit neben „Glühfaden“ kein zweites Wort steht. Swans Lampe von 1879 hatte aber einen Kohle-Stab (Science Museum Group). „Stück“ ist richtig und nennt kein zweites Bauteil. Letzter Satz nach der Faktenprüfung: „Ihr Kraftwerk in New York lieferte Strom für viele Lampen.“
+- **K5 Licht:** Mischfassung „Früher brannten abends meist Kerzen, Öl- und Gaslampen. Ihr Licht kam aus Flammen. Dann bauten Erfinder wie Joseph Swan und Thomas Edison elektrische Glühlampen.“ (Faktenprüfung 2: stimmt).
+- **K2 Aufzug:** `wrongReasons[2]` in der Fassung der Kinder-Redaktion („Beim Ausgleichen hilft das Gegengewicht. …“), weil sie die gewählte Antwort aufgreift.
+- **Benz:** In den Verbindungen bleibt „Geld für den Motorwagen ihres Mannes Carl“. Der Satz war schon richtig (Akkusativ); „des Motorwagens“ aus der Endfassung wäre falsch gewesen.
+- **Tests:** Die Satzlänge zählt nur noch bis . ! ?, nicht bis zum Doppelpunkt (Kinder-Redaktion: Wer vorliest, liest darüber hinweg). Eine Personen-Auflösung darf auch mit dem Namen in Klammern beginnen („Karl (Carl) Benz“ → „Carl Benz …“).
+- **Clownfisch-Hinweise** (Stufen f und g): Der alte Hinweis schickt Kinder zur Zeile „Tiergruppe: Fische“, die zum Clownfisch gehört. Das führt in die Irre, darum kommt die Korrektur in diesen PR, nach Faktenprüfung und Kinder-Redaktion.
