@@ -24,6 +24,8 @@ So benutzen wir die Liste:
 - **Neue Grundfarbe macht alte Farben zu blass** (später Fund, 25.11.2026): Das dunklere Papier schob zehn alte Grautöne unter 4,5:1. Gegenmittel: Suite `kontrast` im CI-Satz. Bei jeder Farbänderung zuerst `node tests/browser/run.mjs --suite ci kontrast` laufen lassen.
 - **Gleiche Dinge verschieden gebaut** (Knöpfe, Fokus, Rückmeldekästen): nur die Kern-Bausteine aus `app/kern/kern.css` benutzen. Bei jeder sichtbaren Änderung die verwandten Seiten mitprüfen (Regel „Einheitlich und stimmig“). Die Suite `kern-huelle` misst die Bausteine in mehreren Bereichen.
 
+- **Zwei Zeichen für denselben Zustand** (Schlussprüfung PR #120, 25.11.2026): `kern.css` setzte bei falscher Antwort ein ✕, der Baustein „Stimmt das?“ zeichnete schon eins. Gegenmittel: Bei neuen Zeichen per `::before`/`::after` im Kern alle Bausteine suchen, die schon ein Symbol zeigen, und den falschen Zustand im Test mitprüfen (Test kommt mit der Korrektur).
+
 ## Texte
 
 - **Verbindungssätze mit mehr als zwei Sätzen** (25.11.2026): Umschreibungen der `kinder-redaktion` brachen die Regel, gefunden erst vom Unit-Test `karten-inhalt`. Gegenmittel: Die Regel „höchstens zwei Sätze je Begründung“ steht in jedem Auftrag an `karten-autor` und `kinder-redaktion`.
@@ -34,6 +36,8 @@ So benutzen wir die Liste:
 
 ## Tests und Abläufe
 
+- **Test misst eine andere Ansicht als gedacht** (Schlussprüfung PR #120, 25.11.2026): Die Kontrast-Suite klickte die erste Spielkachel; die führte zum Globus, ein Spielraum wurde nie geprüft, die Mindestzahl merkte es nicht. Gegenmittel: Jede Ansicht in einer Suite prüft vor dem Messen einen erwarteten Selektor.
+- **„Grün“ geschrieben, bevor der Lauf fertig war** (PR-Text #120, 25.11.2026): Gegenmittel: In PR-Text und Bericht heißt eine Prüfung nur „grün“, wenn sie fertig ist (`.qa-output/browser/zeiten-*.json` mit `bestanden: true` oder grüner CI-Lauf für genau diesen Commit); sonst „läuft“.
 - **Text oder Aufbau geändert, Tests vergessen:** alle betroffenen Tests in einem Durchgang suchen, nach dem Wortlaut und nach dem Auslöser (`CLAUDE.md`, Arbeitsablauf Punkt 4).
 - **Fokus nach dem Schließen eines Dialogs** kommt bei Radix erst einen Takt später: im Test `fokusZurueck` benutzen, nicht sofort `document.activeElement` (PR #119).
 - **Klick auf etwas, das noch rutscht** (Fuß der Startseite): im Test `klickNachRuhe` benutzen.

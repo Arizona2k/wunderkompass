@@ -5,8 +5,14 @@ Gesichert, weil das Nutzungslimit bei 93 % stand. Weiter erst nach dem „Go“ 
 ## PR #120 (Design-Umbau Schritt 1, Branch `claude/gracious-hypatia-a2jweq`)
 
 - Code-Stand cb01af3. Grün: `pnpm run check` lokal, CI auf GitHub (Required quality checks, Engine-Schnellprüfung Firefox und WebKit), große Suiten in Chromium `core`, `offline-cold-full`, `home`, `home-visits`, `components`.
-- Beim Sichern liefen noch: `journeys` (lokal, rund 44 Minuten; Log nur im Container) und die erste Schlussprüfung mit Fable (`schluss-pruefer`, von Hand als `general-purpose` mit Modell `fable`). Ist der Container weg: `journeys` neu starten (`node tests/browser/run.mjs --suite full journeys`, Hintergrund mit `timeout: 7200000`) und die Fable-Prüfung neu beauftragen.
-- Danach: PR-Text unten in den PR übernehmen, Auto-Merge einschalten (OK des Nutzers liegt vor: „Ok fürs mergen“), Test-Seite mit `list_deployments` prüfen, Trigger `trig_012nJstrdgn8KftyoDf4spVE` löschen, PR-Abo beenden.
+- **Fable-Schlussprüfung fertig** (19:27 deutscher Zeit, [Bericht](2026-11-25-design-schritt1-schlusspruefung-fable.md)): „bereit mit kleinen Punkten“. Nach dem „Go“ zuerst nachprüfen und beheben, dann nur die Korrektur noch einmal von Fable prüfen lassen:
+  - B1: doppeltes Kreuz bei „Stimmt das?“ nach falscher Antwort (`app/kern/kern.css:159` setzt ✕, `app/kern/karte/stimmt-das.tsx:44` zeichnet schon `<X>`); dazu den falschen Knopf in der Suite `wissenskarte` mitprüfen.
+  - B2: Kontrast-Suite „Spiel“ landet auf dem Globus (`tests/browser/kontrast.mjs:19`): `[data-game-key="world:people"]` nehmen und je Ansicht einen erwarteten Selektor prüfen; Bildzeile im Foto-Spiel (`.chapter-photo figcaption`, 4,03:1) auf `--kern-text-leise`.
+  - B3: PR-Text korrigieren: `journeys` nur mit fertigem grünem Lauf, WebKit-Satz streichen (deckt die Engine-Schnellprüfung ab), Quiz-Rückmeldekasten ist noch nicht weiß (angleichen oder BACKLOG Punkt 29 nennen), 13 statt 14 Ansichten (auch CHANGELOG), Kopf-Commit, `kinder-redaktion` in der Helferliste.
+  - B4 bis B6: `app/pass-atlas.css:84` Hover `var(--kern-petrol-dunkel)`; CHANGELOG „320 und 1280 px“; `STATUS.md` Zeile „offen“ nachführen.
+  - Kontrast-Lücken (alt, nicht aus diesem PR): Verläufe, gesperrte Knöpfe, Platzhalter, fehlende Ansichten, `learning.webmanifest` → BACKLOG.
+- Beim Sichern lief noch: `journeys` (lokal, rund 44 Minuten; Log nur im Container) (Start 19:02 deutscher Zeit, Ende gegen 19:46). Ist der Container weg oder fehlt das Ergebnis: `journeys` neu starten (`node tests/browser/run.mjs --suite full journeys`, Hintergrund mit `timeout: 7200000`).
+- Danach: PR-Text unten (nach B3 korrigiert) in den PR übernehmen, Auto-Merge einschalten (OK des Nutzers liegt vor: „Ok fürs mergen“), Test-Seite mit `list_deployments` prüfen, Trigger `trig_012nJstrdgn8KftyoDf4spVE` löschen, PR-Abo beenden.
 - Dauer für den CHANGELOG: Beginn 15:36 UTC (Commit 3f26937).
 
 ## Tier-PR (Branch `claude/tier-aufloesung-vorbereitung`, Basis 4f9f4fe)

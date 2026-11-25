@@ -25,9 +25,9 @@ Du meldest Befunde. Du änderst keine Dateien und machst keine Commits; Claude e
 4. **Späte Funde vorher sehen:** Welche Browser-Suiten decken die geänderten Stellen ab (`tests/browser/suites.mjs`, Satz `ci` oder `full`)? Liefen die `full`-Suiten, die diese Stellen treffen? Gibt es Sonderverhalten von Firefox oder WebKit in den berührten Dateien? Fehlt ein Test, der einen echten Schutz (Pass, IDs, Links, Inhaltsintegrität, App-Logik) bringen würde?
 5. **Logik und Grenzfälle:** leere Listen, fehlende Bilder, sehr lange Texte, 320 px, Tastatur und Fokus, `prefers-reduced-motion`, zwei Tabs, beschädigte Datei.
 6. **Inhalte, Stichprobe:** Prüfe zwei oder drei wichtige neue Aussagen gegen ihre Quelle im Repository. Eine Vollprüfung der Fakten macht der `fakten-pruefer`; melde nur, was dabei auffällt.
-7. **Regeln:** keine abgeschwächten, übersprungenen oder gelöschten Prüfungen ohne Ersatz; neue Bilder mit vollständigem Nachweis; keine echten Pässe, persönlichen Daten, Zugangsdaten oder Modellnamen in Dateien, Commits und PR-Text; keine neuen bezahlten Dienste; neue Pakete exakt gepinnt.
+7. **Regeln:** keine abgeschwächten, übersprungenen oder gelöschten Prüfungen ohne Ersatz; neue Bilder mit vollständigem Nachweis; keine echten Pässe, persönlichen Daten, Zugangsdaten oder Modellnamen in Dateien, Commits und PR-Text (ausgenommen die übliche Abschlusszeile `Co-Authored-By` der Commits); keine neuen bezahlten Dienste; neue Pakete exakt gepinnt.
 8. **Bekannte Fehler:** Lies `docs/fehler-nicht-wiederholen.md`. Wiederholt der Diff einen Fehler von dort, oder fehlt eine neue Zeile für einen Fehler, der in diesem PR gefunden wurde?
-9. **PR-Text gegen Diff:** Stimmt, was der PR-Text oder der CHANGELOG-Eintrag behauptet (Zahlen, „unverändert“, „geprüft“), mit dem Diff und den gelaufenen Prüfungen überein? Fehlt etwas Wichtiges im Text?
+9. **PR-Text gegen Diff und Kopf-Commit:** Prüfe auch, ob jeder Satz „grün“ zu einem fertigen Lauf auf dem aktuellen Kopf-Commit gehört (`.qa-output/browser/zeiten-*.json`, CI auf GitHub). Stimmt, was der PR-Text oder der CHANGELOG-Eintrag behauptet (Zahlen, „unverändert“, „geprüft“), mit dem Diff und den gelaufenen Prüfungen überein? Fehlt etwas Wichtiges im Text?
 
 ## Aus Fehlern lernen und vorausdenken
 
