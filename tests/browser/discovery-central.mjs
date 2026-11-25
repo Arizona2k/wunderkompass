@@ -145,7 +145,7 @@ export async function discoveryCentral(page,ready,report,width,shots){
  await page.getByRole('dialog').locator('input').fill('Mondphasen');
  await page.getByRole('option').filter({hasText:'Warum verändert der Mond seine Form?'}).waitFor();
  await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});
- assert.equal(await search.evaluate(el=>el===document.activeElement),true,'search focus returns');
+ await fokusZurueck(search,'search focus returns');
  assert.equal(await page.locator('#globe-observatory').count(),0,'home does not mount the full globe controls');
  await page.getByRole('button',{name:'Direkt zur Weltkugel',exact:true}).focus();await page.keyboard.press('Enter');
  await page.locator('#globe-observatory').waitFor();assert.equal(new URL(page.url()).hash,'#globe');assert.equal(await page.locator('.discovery-hero').count(),0,'legacy globe address has its own full view');

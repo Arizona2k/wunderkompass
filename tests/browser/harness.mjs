@@ -129,9 +129,13 @@ export const FOKUS_NACH_KLICK = () => {
 // Radix-Dialoge geben den Fokus erst einen Takt nach dem Entfernen zurück (`setTimeout(…, 0)` in FocusScope).
 // Eine Prüfung gleich nach dem Verschwinden kann darum vor diesem Takt kommen, unter Last vor allem in WebKit
 // (Engine-Schnellprüfung PR #119). Deshalb kurz warten; kommt der Fokus nicht an, bleibt der Test rot.
-export async function fokusZurueck(ziel, nachricht, timeout = 3000) {
-  await ziel.page().waitForFunction(el => el === document.activeElement, await ziel.elementHandle(), {timeout}).catch(() => {});
-  assert.equal(await ziel.evaluate(el => el === document.activeElement), true, nachricht);
+// Gefragt wird jedes Mal über den Locator, nicht über einen festgehaltenen Knoten: Zeichnet React den Knopf neu,
+// zählt der neue (Technik-Prüfung zum Fund, Befund 1).
+export async function fokusZurueck(ziel, nachricht, timeout = 5000) {
+  const hatFokus = () => ziel.evaluate(el => el === document.activeElement);
+  const ende = Date.now() + timeout;
+  while (!(await hatFokus()) && Date.now() < ende) await new Promise(fertig => setTimeout(fertig, 50));
+  assert.equal(await hatFokus(), true, nachricht);
 }
 
 // Öffnet die Startseite in einem frischen Kontext, wartet auf Bereitschaft und ruft `fn(page)` auf.
