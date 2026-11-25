@@ -17,6 +17,10 @@ Gesichert, weil das Nutzungslimit bei 93 % stand. Weiter erst nach dem „Go“ 
 - Nach dem Merge von #120: `git checkout --no-track -B claude/gracious-hypatia-a2jweq origin/test-live`, dann alle Commits von `claude/tier-aufloesung-vorbereitung` ab 4f9f4fe der Reihe nach cherry-picken (Konflikte höchstens in `CLAUDE.md`, `STATUS.md`, `CHANGELOG.md`, `app/kern/neuigkeiten.ts`).
 - Dann: `pnpm run check`, `node tests/browser/run.mjs --suite full core offline-cold-full playground animals` (Hintergrund, `timeout: 7200000`), `schluss-pruefer` auf dem fertigen Diff, CHANGELOG mit Messwerten, STATUS, BACKLOG, Vorschau, PR nach `test-live` mit dem Text unten, Merge nach grüner CI (OK liegt vor).
 
+## Gleich nach „Go“ zusätzlich
+
+- `technik-pruefer` (jetzt opus / high) im Hintergrund mit dem neuen Auftrag „Vorausdenken“ (Punkt 9 seiner Anleitung). Er steht schon in der Helferliste, liest aber seine neue Anleitung erst im nächsten Chat aus dem Hauptordner: darum die Datei aus diesem Branch als Auftrag mitgeben.
+
 ## PR-Text für #120 (zum Übernehmen)
 
 ## Was ist fertig?
