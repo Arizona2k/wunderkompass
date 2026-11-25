@@ -47,7 +47,9 @@ p{margin:0}
 .fuss{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:repeat(6,1fr);background:var(--flaeche);border-top:1px solid var(--linie);padding-bottom:env(safe-area-inset-bottom)}
 .fuss a{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 0 9px;font:600 13px var(--kopf);color:var(--tinte-2);text-decoration:none}
 .fuss a[aria-current]{color:var(--tinte);font-weight:750}
-.fuss a[aria-current] .ico{background:var(--petrol-hell);color:var(--wasser);border-radius:999px;width:52px;height:30px;padding:4px 15px;box-sizing:border-box}
+.fuss .ico{width:52px;height:30px;padding:4px 15px;box-sizing:border-box;border-radius:999px}
+.fuss a[aria-current] .ico{background:var(--petrol-hell);color:var(--wasser)}
+.fuss a:focus-visible{outline-offset:-4px}
 main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 
 /* Knöpfe */
@@ -145,9 +147,6 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 .verbunden .weg{display:inline-block;margin-top:6px;font-size:16px}
 
 /* Spiel */
-.spielkopf{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin:24px 0 18px}
-.spielkopf h1{flex:none}
-.spielkopf h1{font-size:clamp(30px,5vw,44px);font-weight:780}
 .stufe{display:inline-flex;align-items:center;gap:6px;font:650 15px var(--kopf);color:var(--tinte-2);white-space:nowrap}
 .fortschritt{position:relative;display:flex;justify-content:space-between;align-items:center;margin:0 4px 6px}
 .fortschritt::before{content:"";position:absolute;left:10px;right:10px;top:50%;border-top:2.5px dashed var(--wasser)}
@@ -157,16 +156,19 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 .fortschritt i.da .ico{width:15px;height:15px;stroke-width:3.2}
 .fortschritt i.jetzt{width:34px;height:34px;background:var(--flaeche);border:2.5px solid var(--nadel)}
 .fortschritt i.jetzt::after{content:"";width:11px;height:11px;background:var(--nadel);transform:rotate(45deg);border-radius:2px}
-.zaehler{font:650 15px var(--kopf);color:var(--tinte-2);margin:0 0 22px}
+.spieltitel{font-size:clamp(30px,5vw,44px);font-weight:780;margin:22px 0 14px}
+.zaehler{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font:650 15px var(--kopf);color:var(--tinte-2);margin:0 0 16px}
 .aufgabe{background:var(--flaeche);border-radius:var(--r-gross);padding:22px 18px;border:1.5px solid var(--rand)}
 .welt-mark{display:inline-flex;align-items:center;gap:8px;font:650 15px var(--kopf);color:var(--tinte-2);margin-bottom:10px}
 .welt-mark .feld{width:22px;height:22px;border-radius:6px}
 .welt-mark .feld .ico{width:14px;height:14px}
 .aufgabe h2{font-size:clamp(28px,4.4vw,40px);font-weight:760;margin-bottom:18px}
-.rueck{position:relative;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;margin-top:18px;padding:16px;border-radius:var(--r-mittel);background:var(--wald-hell)}
-.rueck.lernen{background:var(--petrol-hell);grid-template-columns:1fr}
+.rueck{position:relative;display:grid;grid-template-columns:1fr;gap:4px;align-items:start;margin-top:18px;padding:14px 16px 16px;border-radius:var(--r-mittel);background:var(--wald-hell)}
+.rueck.lernen{background:var(--petrol-hell)}
+.rueck.lernen b{padding-right:0}
+.rueck .knopf{justify-self:start;margin-top:10px}
 .rueck.lernen b{color:var(--tinte)}
-.rueck b{display:flex;align-items:center;gap:8px;font:760 22px var(--kopf);color:var(--wald-tief);grid-column:1}
+.rueck b{display:flex;align-items:center;gap:8px;font:760 22px var(--kopf);color:var(--wald-tief);padding-right:76px}
 .rueck p{grid-column:1}
 .rueck .ico{width:24px;height:24px;stroke-width:3}
 .weiter{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px}
@@ -234,17 +236,17 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 .welt b{display:block;font:720 18px/1.15 var(--kopf)}
 .welt .zahl{font-size:15px;color:var(--tinte-2)}
 /* Lichtschimmer beim Zeigen und Antippen (VISION.md „Glanz“), ruhig bei „Bewegung reduzieren“ */
-.welt .bild::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.15) 56%,transparent 70%);transform:translateX(-130%);transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.welt .bild::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.22) 48%,rgba(255,255,255,.06) 54%,transparent 62%);transform:translateX(-130%);transition:transform .8s cubic-bezier(.2,.7,.3,1)}
 .welt:hover .bild::after,.welt:focus-visible .bild::after,.welt:active .bild::after,.welt.schimmer .bild::after{transform:translateX(130%)}
 .welt.schimmer .bild::after{transform:translateX(0)}
-@media (prefers-reduced-motion:reduce){.welt .bild::after{display:none}}
+@media (prefers-reduced-motion:reduce){.welt .bild::after{display:none}.welt:hover,.welt:focus-visible,.welt:active{border-color:var(--wf);box-shadow:0 0 0 1.5px var(--wf)}}
 /* Welt ohne Foto: gezeichnetes Mondphasen-Bild, bis ein freies Foto da ist */
 .welt .bild svg{width:100%;height:100%}
 
 /* Stempel: Idee aus B, fester Platz neben der Rückmeldung, nie über Antworttext */
-.stempel{grid-column:2;grid-row:1/span 2;display:grid;place-items:center;align-content:center;gap:0;width:92px;height:92px;border-radius:50%;background:#fff;border:3px solid var(--wald-tief);box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 5.5px var(--wald-tief);color:var(--wald-tief);font:800 16px/1 var(--kopf);transform:rotate(-10deg);animation:aufdruecken .45s cubic-bezier(.3,1.5,.5,1) both}
-.stempel .ico{width:28px;height:28px;stroke-width:3.2;margin-bottom:2px}
-@keyframes aufdruecken{0%{transform:scale(1.7) rotate(-26deg);opacity:0}100%{transform:scale(1) rotate(-10deg);opacity:1}}
+.stempel{position:absolute;right:-6px;top:-30px;display:grid;place-items:center;align-content:center;gap:0;width:84px;height:84px;border-radius:50%;background:#fff;border:3px solid var(--wald-tief);box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 5.5px var(--wald-tief);color:var(--wald-tief);font:800 15px/1 var(--kopf);transform:rotate(-8deg);animation:aufdruecken .45s cubic-bezier(.3,1.5,.5,1) both}
+.stempel .ico{width:26px;height:26px;stroke-width:3.2;margin-bottom:2px}
+@keyframes aufdruecken{0%{transform:scale(1.7) rotate(-26deg);opacity:0}100%{transform:scale(1) rotate(-8deg);opacity:1}}
 @media (prefers-reduced-motion:reduce){.stempel{animation:none}}
 
 /* Spiel: Vorlesen an der Frage */
@@ -264,7 +266,6 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
 @media (min-width:900px){
   .welten{grid-template-columns:repeat(3,1fr);gap:16px}
   /* Spiel passt mit Rückmeldung und „Nächste Aufgabe“ auf einen Bildschirm (Spieltest: in A gelobt) */
-  .spielkopf{margin:16px 0 12px}
   .zaehler{margin-bottom:12px}
   .aufgabe{padding:18px 20px}
   .welt-mark{margin-bottom:6px}
@@ -275,3 +276,22 @@ main{padding:0 16px 120px;max-width:1200px;margin:0 auto}
   .weiter{margin-top:16px}
   .frage-kopf .knopf .wort{display:inline}
 }
+
+/* Runde 2 nach Design-Prüfung und Spieltest von C (25.11.2026) */
+/* Handy und Tablet: „Nächste Aufgabe“ bleibt über der Fußleiste sichtbar */
+@media (max-width:899px){
+  .weiter{position:sticky;bottom:calc(66px + env(safe-area-inset-bottom));z-index:4;margin:6px -16px 0;padding:16px 16px 10px;background:linear-gradient(to bottom,transparent,var(--papier) 26%)}
+  .weiter.nur-weg{position:static;background:none;margin:16px 0 0;padding:0}
+}
+@media (max-width:359px){.weiter{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;column-gap:14px}.weiter .knopf{padding:0 16px;font-size:16px}.weiter .weg{font-size:15px}.stempel{width:72px;height:72px;top:-26px;font-size:13px}.stempel .ico{width:22px;height:22px}.rueck b{padding-right:62px}}
+/* Rechner zwischen 900 und 1139 px: Rose kleiner, berührt den Titel nicht */
+@media (min-width:900px) and (max-width:1139px){.foto .rose{left:-48px;top:-36px;width:150px;height:150px}.rund .wort{display:none}.kopf{gap:12px;padding:12px 20px}.kopf nav{margin-left:0;gap:0}.kopf nav a{padding:0 10px}.kopf nav a[aria-current]::after{left:10px;right:10px}}
+/* Tablet: Wissenskarte zweispaltig wie auf dem Rechner */
+@media (min-width:700px) and (max-width:899px){
+  .karte{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:20px}
+  .karte .links{position:sticky;top:88px}
+  .karte .pfad{margin-top:0}
+  .karte h1{margin-top:4px;font-size:40px}
+}
+@media (min-width:700px){.rueck:not(.lernen) p{padding-right:76px}}
+@media (min-width:900px){.spieltitel{margin:24px 0 12px}.rueck b{padding-right:84px}}

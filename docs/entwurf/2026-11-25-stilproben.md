@@ -73,6 +73,26 @@ Seiten `c-start.html`, `c-karte.html`, `c-spiel.html` (richtig) und `c-spiel-fal
 - Korrekturen der Prüfer: Ränder von Bedienelementen 3,6:1 (`--rand`), schon beantwortete Antworten in fester Farbe mit gestricheltem Rand statt halb durchsichtig, alle Tippflächen mindestens 48 px (auch Textlinks, Logo, Pfad, Menü), „Andere Frage“ als Knopf, Fokus mit weißem Innenring, „Stufe Entdecker“ als schlichte Anzeige statt knopfartig, Fortschritt mit Häkchen und einer orangen Raute statt rotem Warndreieck, aktiver Menüpunkt unten mit Petrol-Hinterlegung, „Vorlesen“ auch an der Spielfrage, Stand „14 von 204 Karten entdeckt“ über der Route (Zahl im Muster ausgedacht), Bühne auf dem Tablet zweispaltig.
 - Spiel auf dem Rechner wieder auf einem Bildschirm (gemessen bei 1280 × 800).
 
+## Zweite Prüfrunde über C (25.11.2026)
+
+- Berichte: [Design-Prüfung C](2026-11-25-stilprobe-c-designpruefung.md) (`design-pruefer`: „C trägt“, alle fünf Muss-Punkte der ersten Runde behoben), [Spieltest C](2026-11-25-stilprobe-c-spieltest.md) (`spieltester`, kein Kindertest).
+- Danach geändert:
+  - Spiel auf Handy und Tablet: „Nächste Aufgabe“ bleibt über der Fußleiste stehen und ist ohne Scrollen sichtbar, auch bei 320 px auf einer Zeile.
+  - „Noch nicht richtig“: „Tipp ansehen“ steht jetzt im blauen Hinweiskasten und ist ohne Scrollen sichtbar. Darunter steht nur noch „Spiel beenden“.
+  - Weniger doppelte Bestätigung: „Richtig!“ ohne zweites Häkchen. Der Stempel sitzt an der Ecke der Rückmeldung und überdeckt keinen Text (gemessen in 320, 390 und 1280 px). Nach dem Lösen zeigt der Fortschritt auch beim dritten Punkt ein Häkchen statt der orangen Raute.
+  - „Stufe Entdecker“ steht klein in der Zeile „Aufgabe 3 von 6“ und nicht mehr neben dem Titel.
+  - Lichtschimmer viel leiser (höchstens 22 % Weiß, schmaler Streifen), damit er das Foto nicht überdeckt (`VISION.md`). Bei „Bewegung reduzieren“ gibt es dafür einen ruhigen farbigen Rand.
+  - Kompassrose bei 900 bis 1139 px kleiner, sie berührt den Titel nicht mehr. Menü und Knöpfe oben sind dort enger, ohne „Suchen“ und „Mein Pass“ als Wort. Bei 1024 px war die Seite vorher 164 px zu breit.
+  - Wissenskarte auf dem Tablet (700 bis 899 px) zweispaltig wie auf dem Rechner, statt eines riesigen Fotos.
+  - Fußleiste: Alle Symbole stehen in gleich großen Feldern, der aktive Punkt springt nicht mehr. Der Fokusrahmen liegt innen und wird nicht abgeschnitten.
+  - Start-Foto in 700 statt 640 px, dadurch schärfer.
+- Bewusst offen:
+  - Ob „Il“ in Bricolage zu ähnlich aussieht, zeigt sich erst mit echten Titeln. Wenn ja, bekommt die Überschrift eine schmalere Stärke.
+  - „Vorlesen“ ist an der Spielfrage auf dem Handy nur ein Symbol, mit Namen für Bildschirmleser, weil der Platz fehlt.
+  - Die Mond-Frage hat ein Ratemuster: Die kürzeste Antwort ist richtig, die anderen sind albern. Das ist echter Inhalt und gehört in die Fragen-Runde über alle Karten (BACKLOG, Punkt 27), nicht ins Design.
+  - Die Zeichnung zu „Wissenschaft & Weltall“ bleibt, bis es ein freies Foto gibt.
+- Alle Seiten in 320, 390, 768, 1024, 1280 und 1440 px aufgenommen: keine Seite ist breiter als der Bildschirm.
+
 ## Zu entscheiden
 
 1. C „Kompass“ als Richtung für das neue Design? (Alternativen: A oder B pur.)

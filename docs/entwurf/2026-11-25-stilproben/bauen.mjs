@@ -15,7 +15,7 @@ const i = (n, cls = '') => `<svg class="ico${cls ? ' ' + cls : ''}" aria-hidden=
 
 // Fotos mit Nachweis (Wortlaut aus app/world-photos.json)
 const FOTO = {
-  pinguin: {src: 'animals/emperor-penguin-640.webp', alt: 'Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.', wer: 'Michael Van Woert / NOAA', lizenz: 'gemeinfrei'},
+  pinguin: {src: 'animals/emperor-penguin-700.webp', alt: 'Zwei Kaiserpinguine stehen auf einer Eisfläche in der Antarktis.', wer: 'Michael Van Woert / NOAA', lizenz: 'gemeinfrei'},
   elefant: {src: 'african-elephant.webp', alt: 'Ein Afrikanischer Savannenelefant mit Stoßzähnen steht im hohen Gras.', wer: 'Charles J. Sharp', lizenz: 'CC BY-SA 4.0'},
   panda: {src: 'giant-panda.webp', alt: 'Ein schwarz-weißer Großer Panda sitzt zwischen Felsen und hält Bambus.', wer: 'Clément Bardot', lizenz: 'CC BY-SA 4.0'},
   maathai: {src: 'people/wangari-maathai-320.webp', alt: 'Wangari Maathai mit gemusterter Kopfbedeckung hält eine Auszeichnung.', wer: 'Demosh', lizenz: 'CC BY 2.0'},
@@ -282,17 +282,17 @@ function cSpielSeite({falsch}) {
     ? `<button class="antwort">${S.antworten[0]}</button><button class="antwort falsch"><span class="marke-f">${i('x')}</span>${S.antworten[1]}</button><button class="antwort">${S.antworten[2]}</button>`
     : `<button class="antwort richtig"><span class="marke-r">${i('check')}</span>${S.antworten[0]}</button>${S.antworten.slice(1).map(a => `<button class="antwort erledigt">${a}</button>`).join('')}`;
   const rueck = falsch
-    ? `<div class="rueck lernen" role="status"><b>${S.nochNicht}</b><p>${S.ruhig}</p></div>`
-    : `<div class="rueck" role="status"><b>${i('check')}Richtig!</b><p>${S.warum}</p><span class="stempel" aria-hidden="true">${i('check')}Gelöst!</span></div>`;
+    ? `<div class="rueck lernen" role="status"><b>${S.nochNicht}</b><p>${S.ruhig}</p><button class="knopf zweit">${i('lightbulb')}Tipp ansehen</button></div>`
+    : `<div class="rueck" role="status"><b>Richtig!</b><p>${S.warum}</p><span class="stempel" aria-hidden="true">${i('check')}Gelöst!</span></div>`;
   const weiter = falsch
-    ? `<div class="weiter"><button class="knopf zweit">${i('lightbulb')}Tipp ansehen</button><a class="weg" href="#">Spiel beenden</a></div>`
+    ? `<div class="weiter nur-weg"><a class="weg" href="#">Spiel beenden</a></div>`
     : `<div class="weiter"><a class="knopf" href="#">Nächste Aufgabe</a><a class="weg" href="#">Spiel beenden</a></div>`;
   return seite({stil: 'c', titel: falsch ? 'Kompass: Spiel, noch nicht richtig' : 'Kompass: Spiel', aktiv: 'Spielen', marke: markeA, inhalt: `
 <main class="spiel">
 <div class="haupt">
-  <div class="spielkopf"><h1>Kreuz und quer</h1><span class="stufe">${i('compass')}Stufe Entdecker</span></div>
-  <div class="fortschritt" role="img" aria-label="Aufgabe 3 von 6"><i class="da">${i('check')}</i><i class="da">${i('check')}</i><i class="jetzt"></i><i></i><i></i><i></i></div>
-  <p class="zaehler">Aufgabe 3 von 6</p>
+  <h1 class="spieltitel">Kreuz und quer</h1>
+  <div class="fortschritt" role="img" aria-label="${falsch ? 'Aufgabe 3 von 6' : 'Aufgabe 3 von 6 gelöst'}"><i class="da">${i('check')}</i><i class="da">${i('check')}</i>${falsch ? '<i class="jetzt"></i>' : `<i class="da">${i('check')}</i>`}<i></i><i></i><i></i></div>
+  <p class="zaehler"><span>Aufgabe 3 von 6</span><span class="stufe">${i('compass')}Stufe Entdecker</span></p>
   <section class="aufgabe">
     <span class="welt-mark">${feld(WELTEN[5])}Wissenschaft &amp; Weltall</span>
     <div class="frage-kopf"><h2>${S.frage}</h2><button class="knopf zweit" aria-label="Frage vorlesen">${i('volume-2')}<span class="wort">Vorlesen</span></button></div>
