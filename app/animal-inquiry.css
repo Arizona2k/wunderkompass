@@ -10,7 +10,7 @@
 .animal-inquiry-levels button svg{flex-shrink:0;margin-top:.2rem}
 .animal-inquiry-levels button span{min-width:0}
 .animal-inquiry-levels small{display:block;font-size:1rem;font-weight:400;margin-top:.2rem}
-.animal-inquiry-levels [aria-pressed=true]{background:#eaf1f6;color:#16394b;border-color:#688697}
+.animal-inquiry-levels [aria-pressed=true]{background:var(--kern-petrol-zart);color:var(--kern-text);border-color:var(--kern-petrol)}
 .animal-evidence-row{padding-block:.5rem;border-block-start:1px solid #dce5e1}
 .animal-evidence-row:last-of-type{border-block-end:1px solid #dce5e1}
 .animal-evidence-row p{padding-inline:.5rem;line-height:1.65}

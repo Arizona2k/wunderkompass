@@ -4,7 +4,7 @@
 .book-gene-model svg text{font:22px system-ui;fill:var(--wk-ink,#173d4e)}
 .book-gene-choices{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
 .book-gene-choices button{font:inherit;color:inherit;background:var(--wk-surface,#fff);line-height:1.5;min-width:44px;min-height:48px;padding:10px 14px;border:1px solid #8a9e9e;border-radius:8px;white-space:normal;text-align:left}
-.book-gene-choices button[aria-pressed=true]{background:#e3efec;border-color:#245d70;box-shadow:inset 0 0 0 1px #245d70}
+.book-gene-choices button[aria-pressed=true]{background:var(--kern-petrol-zart);border-color:var(--kern-petrol);box-shadow:inset 0 0 0 1px var(--kern-petrol)}
 .book-gene-model .gene-form{fill:#d9eaf1;stroke:#245d70;stroke-width:2}
 .book-gene-model .gene-accent{fill:#f3dfcd;stroke:#9b4d1d;stroke-width:2}
 .book-gene-model .gene-line{fill:none;stroke:#245d70;stroke-width:3}
