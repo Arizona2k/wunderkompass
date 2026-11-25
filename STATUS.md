@@ -18,6 +18,7 @@ Fertig und in `test-live` (Einzelheiten im CHANGELOG; alter Stand mit allen Beri
 - **Entschieden am 25.11.2026 (Design):** Der Nutzer folgt der Empfehlung: Stilprobe C „Kompass“ wird das neue Design, der Stempel kommt am Spielende. Dazu freie Hand bei Anordnung, Reihenfolge, Überschriften, Leisten und Darstellung, auch für künftige Erweiterungen (Regel „Gestaltung frei“ in `CLAUDE.md`).
 - **Entschieden am 25.11.2026 (Nachtmodus):** Den Zeitpunkt entscheidet Claude; geplant als Umbau-Schritt 8 „Nachtkarte“ nach Schritt 7 ([Entwurf](docs/entwurf/2026-11-25-design-umbau.md), Abschnitt „Später: Schritt 8“).
 - **Freigabe am 25.11.2026:** Der Nutzer gibt den [Design-Umbau-Entwurf](docs/entwurf/2026-11-25-design-umbau.md) frei und sein OK zum Merge für die kommenden PRs (Personen-Rätsel, „Auflösung und Rückmeldung im Blick“, Umbau-Schritte 1 bis 8, PR 3 und 4), jeweils nach grüner CI samt Engine-Schnellprüfung („du hast meine freigaben und auch mein ok“). Vorschau und Screenshots bekommt er weiterhin vor jedem Merge einer sichtbaren Änderung; Befunde des `code-pruefer` zum Entwurf fließen noch ein.
+- **Entschieden am 25.11.2026 (Regel):** Der Nutzer nimmt die Empfehlung „Engine-Sonderverhalten“ an (jetzt in `CLAUDE.md`, Arbeitsablauf Punkt 4).
 - **Merge-Freigabe des Nutzers** für alle Teil-B-PRs nach grüner CI samt Engine-Schnellprüfung; Abweichungen vom Plan vorher melden (Entscheidungen 11 und 19).
 
 ## Adressen
@@ -49,7 +50,6 @@ Gleich nach `/weiter` starten diese Helfer im Hintergrund (Regel „Helfer start
 
 ## Offene Fragen an den Nutzer
 
-- **Regel „Engine-Sonderverhalten“?** Vorschlag aus der [Technik-Prüfung](docs/entwurf/2026-11-25-spaeter-fund-fokusrahmen.md) (S1), eine Zeile in `CLAUDE.md`, Arbeitsablauf 4: Wer Code oder eine Suite ändert, deren Kommentar ein Sonderverhalten von Firefox oder WebKit nennt, lässt genau diese Suite vor dem Commit einzeln in dieser Engine laufen (meist unter 30 s). Claude empfiehlt Ja; `CLAUDE.md` ändert sich erst nach dem OK. Bis dahin hält Claude es schon so.
 - **`spieltester`** ist Pilot (seit 24.11.2026); nach einigen Einsätzen gemeinsam entscheiden, ob er bleibt.
 - **`main` schützen** macht der Nutzer selbst; Claude prüft es nur vor einer Veröffentlichung nach `main`. **Engine-Schnellprüfung als Pflicht-Check?** Erst nach einigen ruhigen Wochen (BACKLOG).
 
