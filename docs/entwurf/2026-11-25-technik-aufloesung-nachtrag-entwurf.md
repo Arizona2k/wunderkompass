@@ -125,7 +125,7 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
 | Was | Text | Zeichen |
 |---|---|---|
 | Auto | „Das Auto fährt oft mit Benzin, das im Motor verbrennt. Heißes Gas braucht viel Platz und drückt ein Metallteil weg. Das Drücken dreht die Räder, wie deine Beine beim Radfahren.“ | ≤ 180 (Unit-Test) |
-| Smartphone | „Das Smartphone verwandelt deine Stimme in unsichtbare Funkwellen, wie beim Radio. Ein Funkmast in der Nähe fängt sie auf. Wenn du weit weggehst, übernimmt der nächste Mast.“ | 172 |
+| Smartphone | „Das Smartphone macht aus Fotos, Nachrichten und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“ (Fassung G, nach den Nachprüfungen, siehe unten) | 178 |
 | Kamera | „Die Kamera lenkt Licht mit einer Linse auf Millionen winziger Felder. Jedes Feld macht aus Licht etwas Strom: viel Licht, viel Strom. Die Kamera speichert alle Felder als ein Foto.“ | 180 |
 | Tipp (alle Stufen) | „Stell dir jede Erfindung bei der Arbeit vor. Welche passt zu allem, was in der Aufgabe steht?“ | |
 | Nach falscher Antwort | „Du hast „X“ gewählt. Was macht diese Erfindung genau? Passt das zu allem, was in der Aufgabe steht?“ (eigene Konstante `TECHNIK_FALSCH`, nicht mehr der Tipp) | |
@@ -137,8 +137,8 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
   - Keine „Pedale“ (Stufen-Prüfung: erinnert an das Gaspedal), sondern „deine Beine beim Radfahren“.
   - „nach unten“ fällt weg (Boxermotoren liegen flach). „viele Male pro Sekunde“ fällt weg (Platz; die Quellen haben dazu Zahlenfehler).
   - Satz 3 mit Tunwort statt „eine Drehung der Räder“ (Kinder-Redaktion, Schlussrunde).
-- **Smartphone:** Fassung A mit „weit“ (Faktenprüfung: eine Funkzelle misst Kilometer, nicht einen Schritt) und geradem Satzbeginn „Wenn du …“ statt „Gehst du …“ (Kinder-Redaktion). „Ein Funkmast in der Nähe“ statt „ein naher Mast“.
-  - **Abgelehnt:** „Das Smartphone ist Telefon und kleiner Computer in einem“ (Stufen-Prüfung, Schlussrunde). „Telefon“ und „Computer“ sind Titel anderer Erfindungen im selben Spiel und oft Antworten daneben. Eine Auflösung nennt keine andere Erfindung (Unit-Test „jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiederholt“, Teil „keine andere Erfindung“, und Regel der Endfassung). Der Einwand bleibt richtig: Die Auflösung erklärt nur das Telefonieren. Das „Rechnen“ zeigt die Karte selbst.
+- **Smartphone:** Zuerst eingebaut war Fassung A mit „weit“ (Faktenprüfung: eine Funkzelle misst Kilometer) und geradem Satzbeginn „Wenn du …“ (Kinder-Redaktion). Sie erklärte nur das Telefonieren. Ersetzt durch Fassung G (siehe „Nach den Nachprüfungen am Einbau“).
+  - **Abgelehnt:** „Das Smartphone ist Telefon und kleiner Computer in einem“ (Stufen-Prüfung, Schlussrunde). „Telefon“ und „Computer“ sind Titel anderer Erfindungen im selben Spiel und oft Antworten daneben. Eine Auflösung nennt keine andere Erfindung (Unit-Test „jede Erfindung hat eine kurze Auflösung, die nichts aus der Aufgabe wiederholt“, Teil „keine andere Erfindung“, und Regel der Endfassung).
   - Fassung B (Touchscreen, Handschuh) kam nicht: Sie passt nicht zum Problem der Karte (unterwegs telefonieren). Der Handschuh ist eine Idee für „Mehr erfahren“ auf der Karte.
 - **Kamera:** Fassung A, sie gilt für heutige Geräte. Fassung B fiel wegen des Plakat-Vergleichs (Faktenprüfung: Ausbleichen sieht man sofort und macht hell, beim Negativ wird es dunkel).
   - „Linse“ bleibt (Kinder-Redaktion: im Satz klar, gleiches Wort wie beim Mikroskop).
@@ -150,7 +150,7 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
 
 - Kamera: Nobelprize.org, Physik 2009, Popular information, statt Canon.
 - Auto: US DOE (Kolben, Kurbelwelle), AIP SPS Observer 2014 (Kurbelbild) statt Haynes und Art of Manliness; KBA, Pressemitteilung 09/2026, für „oft Benzin“. Die Bamberger Sachanalyse nicht für Zahlen zitieren (Zylinderfehler).
-- Smartphone: BfS-Unterrichtsmaterial Mobilfunk (Archiv) für Stimme, Funk und Mast; Sächsisches Umweltministerium, „Mobilfunk – Kommunikation mit Risiko?“ (2005), S. 5, für den Wechsel zum nächsten Mast.
+- Smartphone (Fassung G): BfS-Unterrichtsmaterial Mobilfunk (Archiv) für die digitalisierte Sprache, die gefunkt wird, für SMS-Nachrichten und den Mast; Nobelprize.org, Physik 2009, Popular information, für Fotos als Zahlen („digital ones and zeros“); Micromachines 2018 (MEMS-Mikrofone mit digitalem Ausgang) für die Stimme als Zahlen; bild der wissenschaft für Prozessoren in Smartphones. Der Wechsel zum nächsten Mast (Sächsisches Umweltministerium, 2005, S. 5) steht nicht mehr im Text und ist eine Idee für „Mehr erfahren“. Belege im [Faktenbericht zur Smartphone-Auflösung](2026-11-25-technik-aufloesung-smartphone-fakten.md).
 
 **Auch geändert:** Der Spieltext versprach „Welche Teile gehören dazu?“, keine Aufgabe fragt danach (gesehen vom `karten-autor`, Abschnitt 6). Neu: „Welche Erfindung hilft? Finde sie und erfahre, wie sie funktioniert.“ (Vorschlag `karten-autor`, Verb „hilft“ von der `kinder-redaktion`). Sichtbar ist er in der Suche. Die Kachel der Spieleliste zeigt ihr eigenes Ziel „Probleme mit Erfindungen verbinden“ (`app/playground-catalog.ts`); das passt und bleibt (Design-Nachprüfung, Soll 1).
 
@@ -161,6 +161,11 @@ Entschieden von Claude am 25.11.2026 nach [Faktenprüfung](2026-11-25-technik-au
 - **Design, Kann 2** (einzelnes Wort allein in der letzten Zeile): `text-wrap: pretty` in der Rückmeldung. Soll 1: siehe „Auch geändert“, dazu der BACKLOG-Eintrag „Spieltext an drei Stellen“.
 - **Spieltest, Soll 3** („Metallteil“ unklar): bleibt. „Kolben“ wäre für 5- bis 10-Jährige ein neues Fachwort, und die Kinder-Redaktion hat „Metallteil“ in zwei Runden bestätigt. Der Radfahr-Vergleich verrät die Fahrrad-Aufgabe kaum: Dort stehen „Beine“ und „Hinterrad“ schon in der Frage.
 - **Spieltest, Kann:** Der Satz nach falscher Antwort ist für 7-Jährige ohne Elternteil abstrakt. Das kommt ins BACKLOG, zusammen mit den Auflösungen der Tierspiele, damit alle Spiele denselben Satzbau bekommen. „Leichter spielen?“ nach „Richtig!“, leichte Profi-Fallen und die Mikroskop-Frage stehen schon im BACKLOG.
-- **Smartphone** (Spieltest Soll 2, wie die Stufen-Prüfung): SMARTPHONE_ENTSCHEIDUNG
+- **Smartphone** (Spieltest Soll 2, wie die Stufen-Prüfung: erklärt nur die halbe Aufgabe, das „Informationen bearbeiten“ fehlt): neu geschrieben. Der `karten-autor` schrieb drei Fassungen ([Entwurf](2026-11-25-technik-aufloesung-smartphone-entwurf.md)), dann gab es zwei Prüfrunden ([Faktenprüfung](2026-11-25-technik-aufloesung-smartphone-fakten.md), [Kinder-Redaktion](2026-11-25-technik-aufloesung-smartphone-kinderredaktion.md), [Stufen-Prüfung](2026-11-25-technik-aufloesung-smartphone-stufen.md)). Eingebaut ist Fassung G, alle drei Prüfer sagen „passt“:
+  - Satzbau von der Kinder-Redaktion (Tunwort „macht aus“, „Damit“; kein „Chip“, das Kinder als Kartoffelchip kennen).
+  - Kein „Rechner“ (Stufen-Prüfung): Auf der Seite heißt der Computer auch Rechner, und der Computer ist auf Profi oft eine Antwort daneben. „rechnet“ steht als Tätigkeit da.
+  - Satz 3 von der Faktenprüfung: Gefunkt wird nur die Stimme. Frühere Fassungen klangen, als würden auch Fotos immer gefunkt.
+  - „Nachrichten“ statt „Spielen“: belegt (BfS), und aus Spielen muss man keine Zahlen machen, sie sind schon welche. Der Anklang an die Internet-Auflösung verrät nichts, weil die Auflösung erst nach „Richtig!“ kommt.
+  - Abgelehnt: Fassung B (wiederholte die Computer-Auflösung), C („Milliarden“ ohne Beleg), D („Rechner“), A und E (Fotos klangen wie immer gefunkt).
 
-**Ins BACKLOG:** Forscherfrage beim Mikroskop für 7-Jährige schwer (Spieltest, Kann). Ideen für „Mehr erfahren“: Handschuh-Probe (Smartphone), Film und Entwickeln (Kamera), Herkunft des Worts „Linse“ (erst belegen).
+**Ins BACKLOG:** Forscherfrage beim Mikroskop für 7-Jährige schwer (Spieltest, Kann). Ideen für „Mehr erfahren“: Handschuh-Probe und Wechsel zum nächsten Mast (Smartphone), „Null und Eins“ für Große, Film und Entwickeln (Kamera), Herkunft des Worts „Linse“ (erst belegen). Experten-Aufgabe „Telefon gegen Smartphone“ (Stufen-Prüfung: Stimme wird zum elektrischen Signal oder zu Zahlen).

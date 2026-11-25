@@ -66,3 +66,22 @@ Im Technik-Detektiv gibt es keine Experten-Aufgaben (E3 in `app/world-game-runde
 - Ob ein Kind auf Profi nach „Rechner“ wirklich denkt „dann war es doch der Computer“, ist meine Einschätzung aus der Fallenliste. Belegen kann das nur die Rückmeldung echter Kinder.
 - Ob 5- bis 7-Jährige „deine Stimme ist lauter Zahlen“ als Wunder erleben oder als unverständlich empfinden, ebenso.
 - Ton und Wortwahl entscheidet die Kinder-Redaktion, die fachliche Vereinfachung prüft der Fakten-Prüfer.
+
+## Schlussfassung G (eingebaut)
+
+Fassung G: „Das Smartphone macht aus Fotos, Nachrichten und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“ (178 Zeichen, Sätze mit 11, 4 und 10 Wörtern)
+
+**Urteil der Stufen-Prüfung: passt**, kein blockierender Einwand.
+- **Warum nicht das Telefon** (Falle auf Entdecker): trägt. Fotos und Nachrichten werden auch zu Zahlen, das kann ein Telefon nicht. Gegenüber der Telefon-Auflösung („Stimme → elektrisches Signal“) entsteht ein echter Vergleich von früher und heute.
+- **Warum nicht der Computer** (auf Profi in 3 von 5 Runden eine Falle): trägt. „Rechnet“ steht als Tätigkeit da, nicht als zweites Gerät; „Unterwegs“ und der Funkmast zeigen den Unterschied. „Rechner“ fehlt.
+- **Doppelung:** keine bedenkliche. „blitzschnell rechnen“ klingt nur leicht an die Computer-Auflösung an („sehr schnell nacheinander“); das Smartphone kommt bei der Computer-Aufgabe nie als Antwort vor.
+- **Gewinn für Große:** ja. „Für das Smartphone sind Stimme, Fotos und Nachrichten nur Zahlen, und damit rechnet es“ steht nicht auf der Karte. Satz 3 verbindet Telefonieren und Rechnen, also beide Teile der Aufgabe.
+- **Entdecker:** vorlesbar, Satz 2 mit 4 Wörtern ist eine gute Atempause.
+
+Zwei kleine Hinweise, kein Grund zum Blockieren:
+1. „Nachrichten“ steht auch in der Internet-Auflösung („Eine Nachricht reist darin …“), und „Das Internet“ kann auf Profi eine Falle beim Smartphone sein. Das verrät nichts, weil die Auflösung erst nach „Richtig!“ kommt. Ausweichen ginge mit „Fotos, Spiele und deine Stimme“.
+2. Dass „in der Nähe“ fehlt, ist fachlich in Ordnung; für die Stufen ohne Bedeutung.
+
+Unsicher bleibt, wie Kleine „lauter Zahlen“ aufnehmen; das klärt nur die Rückmeldung echter Kinder.
+
+**Entscheidung:** „Nachrichten“ bleibt. Die Kinder-Redaktion hält es für klar, die Faktenprüfung belegt es (BfS), „Spiele“ wäre fachlich schwächer („aus Spielen Zahlen machen“ passt nicht, Spiele sind schon Zahlen), und ein Anklang nach „Richtig!“ verrät nichts.

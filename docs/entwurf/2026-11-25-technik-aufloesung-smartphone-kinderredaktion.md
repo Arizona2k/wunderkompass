@@ -81,3 +81,14 @@ Warum F besser ist:
 **Für den `fakten-pruefer`:** Bei „macht aus … Spielen … Zahlen“ ist „Spiele“ eine Vereinfachung, denn Spiele liegen schon als Zahlen vor. Ich halte das für zulässig. Lehnt er es ab, wäre „Bildern“ statt „Spielen“ möglich, das ergibt 172 Zeichen.
 
 Wie der Text bei 320 px und großer Schrift im Kasten aussieht, habe ich nicht gemessen.
+
+## Schlussfassung G (eingebaut)
+
+Fassung G: „Das Smartphone macht aus Fotos, Nachrichten und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“ (178 Zeichen, Sätze mit 11, 4 und 10 Wörtern)
+
+**Urteil der Kinder-Redaktion: passt.** Nur gelesen, nichts geändert.
+- „Zahlen … Zahlen“ hält die Kette: Das Kind sieht, dass genau die Zahlen aus Satz 1 per Funk weiterreisen. Ein Ersatzwort würde die Verbindung schwächen.
+- „deine Stimme“ steht zweimal, gewollt: Satz 3 meint so eindeutig nur das Gespräch.
+- Ohne „in der Nähe“ geht kaum etwas verloren, „Unterwegs“ trägt den Bezug zur Aufgabe.
+- Zählung von Hand bestätigt (178 Zeichen, 11/4/10 Wörter).
+- „Nachrichten“ könnten Kinder auch als Fernseh-Nachrichten lesen; neben „Fotos“ und „deiner Stimme“ ist aber klar, dass Nachrichten auf dem Handy gemeint sind. Kein Änderungsgrund.

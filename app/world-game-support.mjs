@@ -118,7 +118,7 @@ export const TECHNIK_AUFLOESUNG={
  'invention-printing':'Der Buchdruck arbeitete mit einzelnen Buchstaben aus Metall. Sie wurden zu einer Seite gelegt, eingefärbt und auf Papier gepresst. Danach konnte man sie für neue Seiten nutzen.',
  'invention-rocket':'Die Rakete stößt hinten sehr schnell Gas aus. Das schiebt sie nach vorn. Lass mal einen aufgeblasenen Luftballon los: Er saust genauso davon. Das klappt sogar im Weltall.',
  'invention-satellite':'Der Satellit fällt ständig zur Erde, trifft sie aber nicht. Er fliegt so schnell zur Seite, dass er an ihr vorbeifällt. Der erste flog 1957 ins All.',
- 'invention-smartphone':'Das Smartphone verwandelt deine Stimme in unsichtbare Funkwellen, wie beim Radio. Ein Funkmast in der Nähe fängt sie auf. Wenn du weit weggehst, übernimmt der nächste Mast.',
+ 'invention-smartphone':'Das Smartphone macht aus Fotos, Nachrichten und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.',
  'invention-car':'Das Auto fährt oft mit Benzin, das im Motor verbrennt. Heißes Gas braucht viel Platz und drückt ein Metallteil weg. Das Drücken dreht die Räder, wie deine Beine beim Radfahren.',
  'invention-railway':'Die Eisenbahn rollt auf harten, glatten Schienen. Darum kann eine Lok viele schwere Wagen ziehen. Schon 1825 fuhr in England eine Bahn mit Gütern und Menschen.'
 };

@@ -117,3 +117,16 @@ Dieser Nachtrag ergänzt meinen Bericht zu den Fassungen A bis D; die Belege dor
 
 ### Nicht geprüft
 Für E habe ich keine neue Quelle geöffnet. Das Urteil stützt sich auf die im Hauptbericht geöffneten Quellen (BfS-Archiv, Nobelprize.org, bild der wissenschaft).
+
+## Nachtrag 2: Schlussfassung G (eingebaut)
+
+Fassung G: „Das Smartphone macht aus Fotos, Nachrichten und deiner Stimme lauter Zahlen. Damit rechnet es blitzschnell. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“ (178 Zeichen, Sätze mit 11, 4 und 10 Wörtern) — ohne Ziffer. Keine neue Recherche, Belege aus Hauptbericht und Nachtrag 1.
+
+**Urteil der Faktenprüfung: passt.**
+- „Das Smartphone macht aus … Zahlen“: in Ordnung und genauer als Fassung A. Das ganze Gerät wandelt um: der Wandler im Mikrofon (Micromachines 2018: „Digital output is, indeed, a must for MEMS microphones“), bei Fotos der Bildsensor (Nobelprize.org 2009: „translated into digital ones and zeros“). Der rechnende Chip wird nicht fälschlich als Wandler genannt.
+- Feinheit, kein Einwand: Ein Handyfoto entsteht gleich als Zahlen, getippte Nachrichten ebenso. „macht aus Fotos … Zahlen“ ist eine zulässige Verkürzung ohne schädliche Fehlvorstellung.
+- „Damit rechnet es blitzschnell“: richtig (bild der wissenschaft: Prozessoren „stecken in … Smartphones“).
+- Satz 3: richtig vereinfacht, gefunkt wird nur die Stimme (BfS-Archiv: die Welle wird nach der „digitalisierte[n] Sprachinformation verändert (moduliert)“).
+- „Nachrichten“: passend und belegt (BfS: das Funksignal „überträgt die Nachrichten einer SMS, eines Handytelefonates“).
+
+**Empfehlung:** G so nehmen, kein fachlicher Einwand mehr.
