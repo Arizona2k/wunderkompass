@@ -3,6 +3,19 @@
 Was sich geändert hat, in einfachen Worten. Neueste Einträge oben.
 Der Verlauf vor dem 21.11.2026 steht im alten Stand: `git show b53f75f:CHANGELOG.md`.
 
+## 25.11.2026 – „Wer war das?“: eigene Rätsel für alle 36 Menschen
+
+Die Personen-Rätsel nach der [Endfassung](docs/entwurf/2026-11-25-personen-raetsel-endfassung.md) (Abschnitte 7 und 8 gelten vor 1 und 2; [Entscheidungen](docs/entwurf/2026-11-25-personen-raetsel-entscheidungen.md)).
+
+- **Jeder Mensch hat ein eigenes Rätsel** aus zwei oder drei Sätzen, ohne Namensteile und ohne „er“ oder „sie“. Vorher bauten 27 Rätsel sich aus der Karten-Einleitung und verrieten oft das Geschlecht.
+- **Entdecker liest nur Satz 1**, und die falschen Namen kommen aus ganz anderen Gebieten (Gebiete und Paarlisten als Daten in `app/world-game-fallen.json`). Neuer Tipp: „Kennst du einen der Namen? Überlege: Hat dieser Mensch so etwas gemacht?“ Nach einer falschen Antwort: „Hat dieser Mensch so etwas gemacht? Schau dir auch die anderen Namen an.“
+- **Profi** sieht das ganze Rätsel; eine Falle kommt aus dem Erstgebiet der Person, eine aus Erst- oder Zweitgebiet, eine ist zeitlich nah. Gerechnet sinkt „richtig nur mit dem Gebiet“ von 43 % auf 32 % (Raten: 25 %; nachgerechnet, nicht im Spiel gemessen).
+- **Alte gespeicherte Runden** gehen nicht verloren. Passt eine ihrer Fallen nicht zur neuen Entdecker-Regel, zeigt die Runde den ganzen Hinweis, bis eine neue beginnt.
+- **Karten:** Einleitungen von Payne-Gaposchkin und Murasaki genauer; tote Links gestrichen (DPMA bei beiden Benz, NBI bei Lehmann, fremde Links bei Goodall und Curie); neue Quellen bei Bell Burnell, Mandela und Leavitt.
+- „Was ist neu?“: „Neue Rätsel bei „Wer war das?““.
+- Berichte zum Einbau: [Code](docs/entwurf/2026-11-25-personen-raetsel-einbau-code.md), [Fakten](docs/entwurf/2026-11-25-personen-raetsel-einbau-fakten.md), [Kinder-Redaktion](docs/entwurf/2026-11-25-personen-raetsel-einbau-kinderredaktion.md), [Stufen](docs/entwurf/2026-11-25-personen-raetsel-einbau-stufen.md). Rest im BACKLOG (Punkt 25, „Personen-Rätsel, Rest“).
+- **Messwerte:** *Funde vor dem PR:* 19 beim Einbau (code-pruefer 4: Test-Variable außerhalb ihres Blocks, alte Runden, toter Rückfallweg, alter Kommentar; fakten-pruefer 5: Einstein-Satz unscharf, tote Links bei Lehmann und Benz, fehlende Belege bei Mandela und Leavitt; kinder-redaktion 4 und 2 beim „Was ist neu?“-Text; stufen-pruefer 2: Franklin neben Hadid, Profi-Fallen bei Franklin zu leicht; Claude 2 über `pnpm test`: Import ohne Dateiendung im Browser-Test, veraltete Exporte). Die Fassungen davor lasen die Helfer in drei Runden (Berichte in der Endfassung). *Späte Funde:* –. *Dauer:* –.
+
 ## 25.11.2026 – Technik: Speichern bei Fehlern, eine Grenze für Sicherungen, feste Paketversionen
 
 Der Technik-PR nach den beiden Analysen ([Bewertung](docs/entwurf/2026-11-24-analysen-bewertung.md), [Bauplan](docs/entwurf/2026-11-24-technik-pr-bauplan.md)). Für Kinder sichtbar ist fast nichts:
