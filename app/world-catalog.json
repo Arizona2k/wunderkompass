@@ -6701,7 +6701,7 @@
         {
           "id": "1",
           "name": "Glühfaden",
-          "description": "Wird bei der klassischen Glühlampe heiß und leuchtet."
+          "description": "Wird in der alten Glühlampe heiß und leuchtet."
         },
         {
           "id": "2",
@@ -13663,6 +13663,10 @@
       {
         "label": "Monterey Bay Aquarium · Seeanemonen als Nesseltiere",
         "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/carpet-anemone"
+      },
+      {
+        "label": "Monterey Bay Aquarium · Seeanemone: Fangarme bringen das Futter zum Mund",
+        "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/giant-green-anemone"
       }
     ],
     "sourceNote": "Quellenstand 18.10.2026. Die Karte beschreibt Amphiprion percula. Der ähnlich gefärbte Amphiprion ocellaris ist eine andere Art; ein Gruppenname ersetzt keinen Artbeleg. Die Ortsmarke zeigt eine Beispielregion. Der Schutztext erklärt Rücksicht und Quellenbefunde: keine eigene weltweite Gefährdungseinstufung. Die eigene schematische Grafik ist keine sichere Bestimmungshilfe.",
@@ -13710,7 +13714,7 @@
       "benefit": "Fisch und Seeanemone sind zwei unterschiedliche Tiere."
     },
     "questionFeedback": {
-      "hint": "Der Name und die Form einer Seeanemone erinnern an eine Blüte. Suche in der Karte nach ihrer Tiergruppe, statt nur nach dem Aussehen zu urteilen.",
+      "hint": "Eine Seeanemone sieht aus wie eine Blüte. Doch sie hat einen Mund. Hat eine Blume einen Mund?",
       "wrongReasons": [
         "Fisch und Seeanemone sind zwei Lebewesen. Die Anemone ist kein Körperteil des Fisches.",
         "Das pflanzenähnliche Aussehen täuscht: Eine Seeanemone ist ein Tier und keine Blütenpflanze.",
@@ -15942,7 +15946,7 @@
       "wrongReasons": [
         null,
         "Der Antrieb bewegt die Kabine im normalen Betrieb. Die Fangvorrichtung erfüllt eine zusätzliche Aufgabe im Störungsfall.",
-        "Beim Ausgleichen hilft das Gegengewicht. Es ist etwa so schwer wie die halb volle Kabine. Die Fangvorrichtung hat eine andere Aufgabe."
+        "Das Gegengewicht hängt am anderen Ende der Seile. So muss der Antrieb weniger heben. Die Fangvorrichtung hat eine andere Aufgabe."
       ]
     },
     "invention": {

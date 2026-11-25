@@ -256,6 +256,12 @@ Ziel: Kinder finden in Sekunden etwas Spannendes und können sofort etwas tun. Z
       - Elefant, Zuhause: Seit dem gestrichenen Satz fehlt der Grund fürs Graben nach Wasser. Vorschlag „Wenn es lange nicht regnet, gräbt er mit den Stoßzähnen nach Wasser.“ braucht erst eine Quelle.
       - Futter-Fallen: Wo „Pflanzen“ die einzige allgemeine Antwort ist (Giraffe, Rotes Riesenkänguru, Elefant), rät man nach „das Allgemeinste ist richtig“ ([Stufen-Prüfer](docs/entwurf/2026-11-25-tier-aufloesung-nachtrag-stufen.md), e; zu Punkt 25).
       - Clownfisch-Karte: nur eine Entdecker-Frage, Profi und Experte fehlen (Stufen-Prüfer, „Lücken“, mit Beispiel für Experte).
+      - Aus der letzten Runde ([Entscheidungen](docs/entwurf/2026-11-25-tier-aufloesung-nachpruefung-entscheidungen.md), Abschnitt 6):
+        - Benz-Einstieg mit einer Frage, zum Beispiel „Wie fährt ein Wagen ohne Pferd? Carl Benz baute eines der ersten Autos mit Benzinmotor.“ „Übertragung des Antriebs“ steht dort unerklärt und kommt gleich danach noch einmal.
+        - Erfindungskarten: `more[0]` und `stages[2]` sind oft wortgleich. Prüfen, ob ein Kind den Text zweimal liest.
+        - Licht: Der Problemsatz „nur mit Feuerlicht oder anderen Lampen“ klingt, als gäbe es Lampen ohne Flamme. Vorschlag: „Nach Sonnenuntergang gab es nur Licht von Flammen.“ Dazu vielleicht der Grund: wenig Licht und Ruß (NPS, erst von der Fakten-Prüfung bestätigen lassen). Der Antworttest muss mit angepasst werden.
+        - Dromedar, Entdecker: Die Falle „Je nach Gruppe verschiedene Beutetiere“ ist für Kleine zu abstrakt. Später lieber „Kleine Tiere“.
+        - Für die Fakten-Prüfung: Stört „Bambus“ als Falle beim Dromedar (Bambus ist ein Gras)? Stimmt „Früchte, Blätter und auch Insekten“ bei der Honigbiene (Bienen saugen manchmal an Obst)? Kann „Fleisch“ beim Dromedar Entdecker-Falle bleiben, obwohl die Quelle Fisch nennt?
       - „Früher oder heute?“: Die Zeitform verrät oft die Lösung (Kinder-Redaktion). Beim nächsten Durchgang durch das Spiel den `stufen-pruefer` fragen.
       - Offen aus der [Faktenprüfung 2](docs/entwurf/2026-11-25-tier-aufloesung-nachtrag-fakten-2.md): Ob Biber Blüten fressen (Seerosen), ist nicht belegt; die Profi-Falle „Nektar und Pollen“ bleibt beim Biber und beim Okapi. Die Studie aus Mali zu Dromedar und Blüten ist nicht im Original gelesen (die Falle ist trotzdem gestrichen).
 

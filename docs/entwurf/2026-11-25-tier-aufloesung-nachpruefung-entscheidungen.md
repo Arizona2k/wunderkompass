@@ -126,3 +126,29 @@ Berichte: [Fakten](2026-11-25-tier-aufloesung-nachtrag-fakten.md), [Fakten 2](20
 - **Benz:** In den Verbindungen bleibt „Geld für den Motorwagen ihres Mannes Carl“. Der Satz war schon richtig (Akkusativ); „des Motorwagens“ aus der Endfassung wäre falsch gewesen.
 - **Tests:** Die Satzlänge zählt nur noch bis . ! ?, nicht bis zum Doppelpunkt (Kinder-Redaktion: Wer vorliest, liest darüber hinweg). Eine Personen-Auflösung darf auch mit dem Namen in Klammern beginnen („Karl (Carl) Benz“ → „Carl Benz …“).
 - **Clownfisch-Hinweise** (Stufen f und g): Der alte Hinweis schickt Kinder zur Zeile „Tiergruppe: Fische“, die zum Clownfisch gehört. Das führt in die Irre, darum kommt die Korrektur in diesen PR, nach Faktenprüfung und Kinder-Redaktion.
+
+## 6. Letzte Runde (25.11.2026, abends)
+
+Berichte: [Fakten, Clownfisch](2026-11-25-tier-aufloesung-letzte-runde-fakten-clownfisch.md), [Kinder-Redaktion](2026-11-25-tier-aufloesung-letzte-runde-kinderredaktion.md), [Stufen](2026-11-25-tier-aufloesung-letzte-runde-stufen.md). Die Tier-Auflösungen selbst haben keinen Befund mehr.
+
+- **Clownfisch-Hinweise:** „Eine Blume kann nichts fangen“ stimmt nicht. Fakten-Prüfung und Kinder-Redaktion nennen dafür Kesselfallenblüten und die Venusfliegenfalle. Gefragt wird darum nach dem Mund, den keine Pflanze hat (beide Prüfer).
+  - Hinweis auf der Karte (`questionFeedback.hint`): „Eine Seeanemone sieht aus wie eine Blüte. Doch sie hat einen Mund. Hat eine Blume einen Mund?“
+  - Schritt in der Challenge (`challenge-hints.json`): „Mit ihren Fangarmen kann die Seeanemone kleine Tiere fangen. Dann bringt sie das Futter zu ihrem Mund.“ Das „kann“ ist von der Fakten-Prüfung, denn Wirtsanemonen leben vor allem von Algen in ihrem Körper.
+  - Ohne „in ihrer Mitte“ (Vorschlag der Kinder-Redaktion), weil die Quelle die Lage des Munds nicht nennt. Auch nicht „Fangarme, die nesseln“ (Vorschlag der Fakten-Prüfung), denn eine Brennnessel nesselt auch.
+  - Neue Quelle: Monterey Bay Aquarium, Seeanemone („uses its tentacles to bring the food to its mouth“). Sie steht auf der Karte und in der Forscherfrage (`animal-inquiries.json`, gleiche Quellen wie die Karte).
+- **Giraffe, Profi:** „Ameisen und Termiten“ statt „Krill“ (Stufen, Sollte). Mit „Krill“ und „Algen und Zooplankton“ hätte ein Kind zwei Meeres-Fallen auf einmal wegstreichen können. Für die Giraffe als Pflanzenfresser ist die Falle sicher falsch.
+- **Koala, Profi:** „Ameisen und Termiten“ statt „Kleine Beutetiere“ (Stufen, Sollte). „Kleine Beutetiere“ stand wortgleich schon in der Entdecker-Liste. Der Koala frisst nur Eukalyptusblätter.
+- **Aufzug `wrongReasons[2]`:** „Das Gegengewicht hängt am anderen Ende der Seile. So muss der Antrieb weniger heben. Die Fangvorrichtung hat eine andere Aufgabe.“ (Stufen, Sollte). Die Fassung „Beim Ausgleichen hilft das Gegengewicht“ hieß, das Gegengewicht gleiche den Unterschied zu sich selbst aus. Die neuen Sätze stehen geprüft schon auf derselben Karte.
+- **Licht `parts[1]`:** „Wird in der alten Glühlampe heiß und leuchtet.“ statt „klassischen“ (Kinder-Redaktion, Kann). Einheitlich dazu „Früher oder heute?“ (`app/technology-comparison.tsx`): „Glühlampe mit heißem Glühfaden“ statt „Draht“ (Stufen, Kann).
+- **Verbindung Bertha Benz:** „Bertha Benz half ihrem Mann Carl mit Geld und Arbeit am Motorwagen.“ (12 Wörter statt 15, Kinder-Redaktion). Die Fassung der Kinder-Redaktion mit drei Sätzen verstößt gegen die Regel „höchstens zwei Sätze“ je Verbindung (Test in `tests/karten-inhalt.test.mjs`).
+- **Bleibt:**
+  - **Verbindung Benz → Auto:** bleibt mit 14 Wörtern. Die Fassung mit drei Sätzen verstößt gegen dieselbe Regel.
+  - **„USA“:** bleibt, denn „Amerika“ ist ein Doppelkontinent und darum ungenauer.
+  - **„Nesseln wie eine Qualle“ (T21):** bleibt, nach dem Urteil der Kinder-Redaktion tragbar.
+  - **Dromedar:** „Vor allem kleine Tiere“ und „Bambus“ bleiben. Die Stufen-Prüfung hält „Vor allem kleine Tiere“ für die beste vorhandene Falle.
+- **Ins BACKLOG (Punkt 30):**
+  - Benz-Einstieg mit Frage (Kinder-Redaktion: „Wie fährt ein Wagen ohne Pferd? …“).
+  - Doppelter Text bei Erfindungen: `more[0]` gleich `stages[2]` (gab es schon vorher).
+  - Licht-Problemsatz „Feuerlicht oder andere Lampen“ und Ruß als Grund.
+  - Dromedar-Entdecker „Je nach Gruppe verschiedene Beutetiere“ ist für Kleine abstrakt.
+  - Fragen an die Fakten-Prüfung: „Bambus“ beim Dromedar (Bambus ist ein Gras), „Früchte“ bei der Honigbiene, „Fleisch“ als Entdecker-Falle beim Dromedar.
