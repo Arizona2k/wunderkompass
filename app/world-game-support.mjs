@@ -84,7 +84,7 @@ export const AUFLOESUNG={
  'person-murasaki_shikibu':'Murasaki Shikibus eigene Handschrift gibt es nicht mehr. Wir kennen ihre Geschichte nur, weil andere sie von Hand abschrieben.',
  'person-nelson_mandela':'Nelson Mandela war Anwalt: Er half Menschen vor Gericht. Für seinen Kampf saß er 27 Jahre im Gefängnis. Trotzdem gab er nicht auf.',
  'person-mae_jemison':'Mae Jemison war Ärztin und Astronautin in den USA. Sie war die erste Schwarze Frau im Weltall. Dort half sie bei Versuchen mit Knochenzellen.',
- 'person-karl_benz':'Karl Benz war Ingenieur, also ein Fachmann für Technik. 1886 bekam er ein Patent: Andere durften seinen Motorwagen nicht einfach nachbauen. Seine Frau Bertha half ihm.',
+ 'person-karl_benz':'Carl Benz war Ingenieur, also ein Fachmann für Technik. 1886 bekam er ein Patent: Andere durften seinen Motorwagen nicht einfach nachbauen. Seine Frau Bertha half ihm.',
  'person-albert_einstein':'Albert Einstein war Physiker, also ein Forscher für Kraft, Bewegung und Licht. Geboren wurde er in Ulm. Er erklärte: Licht bringt seine Energie in kleinen Portionen mit.',
  'person-al_khwarizmi':'Al-Chwarizmi forschte über Zahlen und über die Sterne. Von seinem Namen kommt das Wort „Algorithmus“. Das ist eine Anleitung in festen Schritten, wie ein Rezept.',
  'person-neil_armstrong':'Neil Armstrong testete vorher neue Flugzeuge. 1969 betrat er als erster Mensch den Mond. Ein dritter Mann, Michael Collins, kreiste im Raumschiff um den Mond.',

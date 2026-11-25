@@ -155,7 +155,9 @@ test('jede Person hat eine kurze Auflösung, die etwas Neues sagt',()=>{
   assert.equal(q.why,text,t.id);
   assert.ok(text.length<=180,t.id+': höchstens 180 Zeichen');
   // Beginnt mit dem ersten Namensteil, damit klar ist, wer gemeint war (Murasaki steht im Genitiv).
-  assert.ok(normalize(text).startsWith(normalize(t.title).split(' ')[0]),t.id+': beginnt mit dem Namen');
+  // Ein Name in Klammern gilt auch: „Karl (Carl) Benz“ heißt im Text Carl Benz (Faktenprüfung, 25.11.2026).
+  const namen=[normalize(t.title).split(' ')[0],...[...t.title.matchAll(/\(([^)]+)\)/gu)].map(m=>normalize(m[1]))];
+  assert.ok(namen.some(name=>normalize(text).startsWith(name)),t.id+': beginnt mit dem Namen');
   assert.doesNotMatch(text,/^Richtig/u,t.id);
   for(const satz of saetze(text))assert.ok(satz.split(/\s+/u).length<=13,t.id+': Satz zu lang: '+satz);
   assert.ok((text.match(/\d+/gu)??[]).length<=1,t.id+': höchstens eine Zahl');

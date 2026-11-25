@@ -5238,7 +5238,7 @@
     "id": "person-karl_benz",
     "category": "people",
     "title": "Karl (Carl) Benz",
-    "intro": "Karl, auch Carl geschrieben, Benz entwickelte einen Motorwagen. Dafür mussten Motor, Fahrzeug und die Übertragung des Antriebs zusammenpassen.",
+    "intro": "Carl Benz entwickelte einen Motorwagen. Dafür mussten Motor, Fahrzeug und die Übertragung des Antriebs zusammenpassen.",
     "paragraphs": [
       "1886 erhielt er ein Patent für seinen Motorwagen; Bertha Benz half bei der Arbeit und mit Geld.",
       "Bei einem brauchbaren Motorwagen mussten Motor, Übertragung, Fahrwerk, Lenkung und Bremsen zusammenpassen. Unser eigenes Schema verändert nur eine Verbindung. Es berechnet nicht, wie sich ein wirklicher Wagen bewegt."
@@ -5258,7 +5258,7 @@
       }
     ],
     "more": [
-      "Karl Benz lebte von 1844 bis 1929. Er arbeitete in Mannheim an Motoren und an einem dafür ausgelegten Fahrzeug. Die Patentanmeldung von 1886 trug die Nummer 37435. Ein solches historisches Dokument ist etwas anderes als eine heutige Leistungs- oder Sicherheitsprüfung.",
+      "Carl Benz lebte von 1844 bis 1929. Sein Vorname wird manchmal auch Karl geschrieben. Er arbeitete in Mannheim an Motoren und an einem dafür ausgelegten Fahrzeug. Sein Patent von 1886 hat die Nummer 37435. Ein solches historisches Dokument ist etwas anderes als eine heutige Leistungs- oder Sicherheitsprüfung.",
       "Ein brauchbarer Motorwagen brauchte mehr als einen Motor. Ein Antriebsweg musste die Bewegung zu den Rädern übertragen; auch Lenkung, Fahrwerk und Bremsen gehörten zum Fahrzeug. Das Deutsche Museum beschreibt, wie Benz bei der Konstruktion auch auf Bauteile aus dem Fahrradbau zurückgriff. Finanzierung und praktische Arbeit, unter anderem von Bertha Benz, gehörten zur Entwicklung dazu.",
       "Auch andere Menschen entwickelten Fahrzeuge, darunter Dampf- und Elektrofahrzeuge. Automobilgeschichte hat viele Beteiligte; Benz’ Patent von 1886 ist ein wichtiger Schritt in dieser gemeinsamen Geschichte.",
       "Unser eigenes Schema zeigt nur eine Verbindung zwischen Motor, Übertragung und Rad. Beim Umschalten wird diese Verbindung geöffnet oder geschlossen. Daraus lässt sich nicht die ganze Bewegung eines wirklichen Wagens ablesen: Ein schon rollendes Fahrzeug kann auch ohne Motorantrieb weiterrollen.",
@@ -5286,11 +5286,17 @@
       {
         "label": "OpenStax Physics · Trägheit und Reibung",
         "url": "https://openstax.org/books/physics/pages/4-2-newtons-first-law-of-motion-inertia"
+      },
+      {
+        "label": "Deutsche Biographie · Benz, Carl Friedrich",
+        "url": "https://www.deutsche-biographie.de/gnd118509225.html"
       }
     ],
     "aliases": [
       "Karl (Carl) Benz",
-      "karl_benz"
+      "karl_benz",
+      "Carl Benz",
+      "Karl Benz"
     ],
     "links": [],
     "person": {
@@ -6618,10 +6624,10 @@
       }
     ],
     "more": [
-      "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung.",
+      "Viele Menschen arbeiteten am elektrischen Licht. Um 1879 baute Joseph Swan in England frühe Glühlampen. Darin glühte ein dünnes Stück Kohle. In den USA bauten Thomas Edison und sein Team Lampen, die lange leuchteten. Ihr Kraftwerk in New York lieferte Strom für viele Lampen.",
       "Vergleiche bei Lampen, wie viel Strom sie brauchen, wie hell sie sind und wie lange sie halten. Eine sparsame Lampe vermeidet Verschwendung."
     ],
-    "surprise": "Heutige LED-Lampen leuchten ganz ohne glühend heißen Draht.",
+    "surprise": "Heutige LED-Lampen leuchten ganz ohne glühend heißen Faden.",
     "locations": [
       {
         "label": "Menlo Park – Edisons Team",
@@ -6646,8 +6652,12 @@
         "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
       },
       {
-        "label": "U.S. National Park Service, Thomas Edison National Historical Park",
-        "url": "https://home.nps.gov/edis/learn/kidsyouth/the-electric-light-system-phonograph-motion-pictures.htm"
+        "label": "National Park Service · Thomas Edison: Lampe, Lichtsystem und Kraftwerk Pearl Street 1882",
+        "url": "https://www.nps.gov/edis/learn/historyculture/edison-biography.htm"
+      },
+      {
+        "label": "Science Museum Group · Glühlampe von Joseph Swan, 1878–1879",
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co42487/swan-electric-lamp"
       }
     ],
     "aliases": [],
@@ -6667,11 +6677,11 @@
         },
         {
           "label": "Entwicklung",
-          "text": "Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+          "text": "Viele Menschen arbeiteten am elektrischen Licht. Um 1879 baute Joseph Swan in England frühe Glühlampen. Darin glühte ein dünnes Stück Kohle. In den USA bauten Thomas Edison und sein Team Lampen, die lange leuchteten. Ihr Kraftwerk in New York lieferte Strom für viele Lampen."
         },
         {
           "label": "Früher",
-          "text": "In einer Glühlampe wurde ein dünner Draht so heiß, dass er leuchtete."
+          "text": "In einer Glühlampe wurde ein dünner Glühfaden so heiß, dass er leuchtete."
         },
         {
           "label": "Heute",
@@ -6690,7 +6700,7 @@
         },
         {
           "id": "1",
-          "name": "Glühdraht",
+          "name": "Glühfaden",
           "description": "Wird bei der klassischen Glühlampe heiß und leuchtet."
         },
         {
@@ -6708,7 +6718,7 @@
         "Große Rechnungen und wiederholte Aufgaben kosteten viel Zeit."
       ],
       "correct": 0,
-      "why": "Elektrische Energie sollte einen Raum zuverlässig beleuchten. Viele Menschen arbeiteten daran, darunter Joseph Swan sowie Thomas Edison und sein Team. Sie verbesserten Lampen und Stromversorgung."
+      "why": "Früher brannten abends meist Kerzen, Öl- und Gaslampen. Ihr Licht kam aus Flammen. Dann bauten Erfinder wie Joseph Swan und Thomas Edison elektrische Glühlampen."
     },
     "model": "circuit",
     "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte.",
@@ -6731,10 +6741,10 @@
       }
     ],
     "more": [
-      "Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
+      "Carl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos.",
       "Ein Verbrennungsmotor nutzt die Energie eines Kraftstoffs; ein Elektroauto einen Elektromotor und elektrische Energie. Beide brauchen zuverlässige Bremsen. Auch Bus, Bahn, Radfahren und Zufußgehen lösen die Aufgabe, Menschen zu bewegen."
     ],
-    "surprise": "Schon vor dem Benzinwagen von Karl Benz gab es Fahrzeuge mit Dampf und mit Strom.",
+    "surprise": "Schon vor dem Benzinwagen von Carl Benz gab es Fahrzeuge mit Dampf und mit Strom.",
     "locations": [
       {
         "label": "Mannheim – Benz-Motorwagen",
@@ -6772,7 +6782,7 @@
         },
         {
           "label": "Entwicklung",
-          "text": "Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+          "text": "Es gab schon Dampf- und Elektrofahrzeuge. Carl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
         },
         {
           "label": "Früher",
@@ -6828,7 +6838,7 @@
         "Computer an verschiedenen Orten sollten Informationen austauschen."
       ],
       "correct": 0,
-      "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Karl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
+      "why": "Ein Motor sollte die Räder antreiben. Es gab schon Dampf- und Elektrofahrzeuge. Carl Benz entwickelte einen frühen Benzinwagen. Bertha Benz unterstützte und erprobte ihn. Viele andere Teams verbesserten Autos."
     },
     "model": null,
     "sourceNote": "Inhalte fachlich geprüft am 7. Oktober 2026. Ein Zeitanker ist nicht immer ein genauer Erfindungstag. Die kleinen Modelle sind ausdrücklich vereinfachte Lernhilfen. Die Zeitangabe nennt einen wichtigen Schritt. Vorläufer und Weiterentwicklungen gehören zur Geschichte.",
@@ -15542,8 +15552,8 @@
         "url": "https://collection.sciencemuseumgroup.org.uk/objects/co64200/co2-refrigeration-plant-by-j-and-e-hall"
       },
       {
-        "label": "Danfoss · 2: What a refrigerator does",
-        "url": "https://www.danfoss.com/en/about-danfoss/our-businesses/cooling/the-fridge-how-it-works/"
+        "label": "Penn State · 2: EGEE 102, 6.4 Refrigerators (Kühlschrank als Wärmetransporter)",
+        "url": "https://courses.ems.psu.edu/egee102/node/2402"
       },
       {
         "label": "OpenStax · Wärmeabgabe als aufgenommene Wärme plus Antriebsarbeit",
@@ -15873,7 +15883,7 @@
     "intro": "Was hilft einer Kabine sicher von Stockwerk zu Stockwerk?",
     "aliases": [],
     "paragraphs": [
-      "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Ein Gegengewicht gleicht einen Teil der Gewichtskraft der Kabine aus. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch."
+      "Bei einem typischen Seilaufzug bewegt ein Antrieb die Kabine über Seile und eine Treibscheibe. Am anderen Ende der Seile hängt ein Gegengewicht. Es ist so schwer wie die Kabine, wenn sie etwa halb voll ist. Das Gegengewicht erleichtert dem Antrieb die Arbeit. Sicherheit entsteht durch mehrere zusammenarbeitende Einrichtungen, nicht allein durch einen starken Motor. Andere Aufzüge arbeiten beispielsweise hydraulisch."
     ],
     "facts": [
       {
@@ -15904,6 +15914,10 @@
       {
         "label": "National Register: Otis-Gebäude und historische Entwicklung, PDF, Abschnitt 8",
         "url": "https://npgallery.nps.gov/GetAsset/07a0f86d-5e38-4a69-96f7-45050d94f808"
+      },
+      {
+        "label": "TK Elevator · Counterweights: Kabine plus 40 bis 50 % der Nutzlast",
+        "url": "https://tkelevator.com/us-en/tools/classroom-on-demand/counterweights.html"
       }
     ],
     "links": [],
@@ -15928,7 +15942,7 @@
       "wrongReasons": [
         null,
         "Der Antrieb bewegt die Kabine im normalen Betrieb. Die Fangvorrichtung erfüllt eine zusätzliche Aufgabe im Störungsfall.",
-        "Das Gegengewicht gleicht einen Teil des Kabinengewichts aus, damit der Antrieb weniger heben muss. Eine Notbremse ist es nicht."
+        "Beim Ausgleichen hilft das Gegengewicht. Es ist etwa so schwer wie die halb volle Kabine. Die Fangvorrichtung hat eine andere Aufgabe."
       ]
     },
     "invention": {
@@ -15947,7 +15961,7 @@
         },
         {
           "label": "Teile verstehen",
-          "text": "Kabine: Die Kabine trägt Menschen oder Lasten. Die Zeichnung zeigt nur das Prinzip eines Seilaufzugs. Gegengewicht: Es gleicht einen Teil der Gewichtskraft der Kabine aus. Nicht alle Aufzüge verwenden diese Bauart. Antrieb und Treibscheibe: Die Treibscheibe bewegt die Seile an Kabine und Gegengewicht. Das ist die Aufgabe im normalen Betrieb. Fangvorrichtung: Eine zusätzliche Sicherheitseinrichtung bremst eine gefährliche Abwärtsbewegung im Störungsfall. Sie ersetzt nicht den gewöhnlichen Antrieb."
+          "text": "Kabine: Die Kabine trägt Menschen oder Lasten. Die Zeichnung zeigt nur das Prinzip eines Seilaufzugs. Gegengewicht: Es zieht auf der anderen Seite am Seil. So muss der Antrieb weniger heben. Nicht alle Aufzüge verwenden diese Bauart. Antrieb und Treibscheibe: Die Treibscheibe bewegt die Seile an Kabine und Gegengewicht. Das ist die Aufgabe im normalen Betrieb. Fangvorrichtung: Eine zusätzliche Sicherheitseinrichtung bremst eine gefährliche Abwärtsbewegung im Störungsfall. Sie ersetzt nicht den gewöhnlichen Antrieb."
         },
         {
           "label": "Genauer unterscheiden",
@@ -15971,7 +15985,7 @@
         {
           "id": "counterweight",
           "name": "Gegengewicht",
-          "description": "Es gleicht einen Teil der Gewichtskraft der Kabine aus. Nicht alle Aufzüge verwenden diese Bauart."
+          "description": "Es zieht auf der anderen Seite am Seil. So muss der Antrieb weniger heben. Nicht alle Aufzüge verwenden diese Bauart."
         },
         {
           "id": "drive",
