@@ -176,6 +176,21 @@ test('Ist auch der Browser-Speicher voll, bleibt die Pause kurz (höchstens 2 s)
   } finally { idb.journalVoll = false; u.weg(); }
 });
 
+test('Wird der Browser-Speicher erst während der langen Pause voll, kommt der nächste Versuch nach höchstens 2 s', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const u = umgebung();
+  try {
+    const store = createProgressStore(); await store.start(); await warte(t, 32_000);
+    // Versuche bei 0,2 / 1,2 / 3,2 / 7,2 / 15,2 / 31,2 s, jetzt läuft eine Pause von 30 s.
+    idb.journalVoll = true;
+    store.update(p => ({ ...p, favorites: ['space-moon'] }));
+    const vorher = idb.versuche;
+    await warte(t, 2100);
+    assert.ok(idb.versuche > vorher, 'neuer Versuch nach höchstens 2 s statt nach bis zu 30 s');
+    assert.deepEqual(store.getSnapshot().save.progress.favorites, ['space-moon'], 'im Arbeitsspeicher noch da');
+  } finally { idb.journalVoll = false; u.weg(); }
+});
+
 // Ab hier: Danach ist die Datenbank-Verbindung für diesen Prozess gemerkt.
 test('Erholung: Sobald die Datenbank wieder geht, wird gespeichert und wieder kurz gesammelt', async t => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
@@ -208,4 +223,19 @@ test('Schließt der Browser die Verbindung, öffnet der nächste Versuch sie neu
     assert.equal(store.getSnapshot().storage, 'database');
     assert.deepEqual(imJournal(u.data).favorites, ['history-maya'], 'die ganze Zeit im Journal');
   } finally { idb.modus = 'kaputt'; idb.geschlossen = false; u.weg(); }
+});
+
+test('Meldet der Browser das Schließen (onclose), öffnet der nächste Versuch die Verbindung neu', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const u = umgebung();
+  idb.modus = 'ok';
+  try {
+    const store = createProgressStore(); await store.start(); await warte(t, 300);
+    const vorher = idb.oeffnungen;
+    db.onclose?.();
+    store.update(p => ({ ...p, favorites: ['animal-elephant'] }));
+    await warte(t, 500);
+    assert.ok(idb.oeffnungen > vorher, 'Verbindung neu geöffnet');
+    assert.deepEqual(idb.persisted?.progress.favorites, ['animal-elephant']);
+  } finally { idb.modus = 'kaputt'; u.weg(); }
 });

@@ -87,7 +87,8 @@ export function createProgressStore() {
     const progress=fn(state.save.progress); if(progress===state.save.progress||same(progress,state.save.progress))return;
     emit({save:{...state.save,progress,updatedAt:new Date().toISOString(),revision:(state.save.revision??0)+1}});
     if(readOnly)return;dirty=true;
-    const ok=writeJournal(); if(!ok)emit({available:state.storage==='database'});schedule();
+    // Fällt das Journal erst während einer langen Pause aus, gleich neu planen (höchstens 2 s), aber nur beim Wechsel.
+    const ok=writeJournal(); if(!ok){emit({available:state.storage==='database'});if(journalSafe&&failures>0){journalSafe=false;stop();}} schedule();
   };
   const replace = async (save:Save,notice:string,requireDurable:boolean) => {
     journal(); if(readOnly)throw new Error('Ein neuerer Pass ist geschützt. Öffne zuerst die neuere Version.');
