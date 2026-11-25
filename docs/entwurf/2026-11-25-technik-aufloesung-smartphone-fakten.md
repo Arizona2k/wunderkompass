@@ -88,3 +88,32 @@ Geprüft habe ich `docs/entwurf/2026-11-25-technik-aufloesung-smartphone-entwurf
 - Ob Spiele, Fotos und Nachrichten unterwegs über Mobilfunk oder WLAN gehen, hängt vom Einzelfall ab; das habe ich nicht weiter vertieft.
 - Wortwahl („Zahlenreihen“, „Rechner“, doppelte „Stimme“) und Ratemuster sind Sache von `kinder-redaktion` und `stufen-pruefer`.
 
+## Nachtrag: Fassung E
+
+Dieser Nachtrag ergänzt meinen Bericht zu den Fassungen A bis D; die Belege dort gelten weiter. Für E brauchte es keine neue Quelle; geändert habe ich nichts.
+
+**Fassung E** „Das Smartphone rechnet innen blitzschnell. Fotos, Spiele und deine Stimme sind darin lauter Zahlen. Unterwegs tragen Funkwellen die Zahlen zu einem Funkmast in der Nähe.“
+
+- **Satz 1, „rechnet innen blitzschnell“: richtig.** Im Smartphone arbeiten Prozessoren. bild der wissenschaft, https://www.wissenschaft.de/technik-digitales/totgesagte-leben-laenger/: „Solche Prozessoren … stecken in PCs, Notebooks, Smartphones“. Dass „Rechner“ wegfällt, ändert fachlich nichts.
+- **Satz 2, „sind darin lauter Zahlen“: richtig.** Er ist so genau wie D und sagt nicht, welcher Teil umwandelt.
+  - Stimme: BfS-Archiv, „digitalisierte Sprachinformation“.
+  - Fotos: Nobelprize.org 2009, „digital ones and zeros“.
+  - Spiele sind Programme und Daten, also ebenfalls Zahlen.
+  - Die Stimme wird nicht gespeichert, ist aber während des Gesprächs im Gerät tatsächlich Zahlen. Das passt.
+- **Satz 3: Ja, er klingt so, als würden Fotos und Spiele immer gefunkt.** „die Zahlen“ greift alle drei Dinge aus Satz 2 auf. Es ist derselbe Mangel wie bei D. Fotos gehen nur beim Verschicken weg, und Spiele laufen meist auf dem Gerät selbst.
+- **Ausweichsatz** „Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“: **vereinfacht, aber zulässig.**
+  - BfS, Glossar „Funksignal“: Die Welle wird „in Abhängigkeit von der vom Handymikrofon aufgenommenen digitalisierten Sprachinformation verändert (moduliert)“.
+  - Streng genommen tragen die Wellen keine Zahlen, sondern werden nach den Zahlen verändert. „tragen … als Zahlen“ ist für dieses Alter eine gute Verkürzung.
+  - Dass „in der Nähe“ fehlt, ist fachlich kein Fehler.
+- **E mit Ausweichsatz** „Das Smartphone rechnet innen blitzschnell. Fotos, Spiele und deine Stimme sind darin lauter Zahlen. Unterwegs tragen Funkwellen deine Stimme als Zahlen zu einem Funkmast.“
+  - Nachgezählt: 170 Zeichen, 5/9/10 Wörter, keine Ziffer. Einen Wortanfang mit dem Namen einer anderen Erfindung finde ich nicht.
+  - Gleichwertig, falls „Zahlen … Zahlen“ stört (171 Zeichen, 5/9/11 Wörter): „… Unterwegs tragen Funkwellen deine Stimme zu einem Funkmast in der Nähe.“ Die Wahl soll die `kinder-redaktion` treffen.
+
+### Aktualisierte Gesamtempfehlung (heutige Fassung, A, D, E)
+1. **E mit Ausweichsatz** oder **D mit geändertem Satz 3**. Beide sind fachlich gleich gut: richtig, beide Teile der Aufgabe abgedeckt, gefunkt wird nur die Stimme. E vermeidet zusätzlich den Konflikt mit „Rechner“ als Wort für Computer, deshalb lege ich mich leicht auf **E mit Ausweichsatz** fest.
+2. **A mit „deine Stimme und deine Nachrichten“** (siehe Hauptbericht) ist vertretbar.
+3. **Heutige Fassung:** richtig, beantwortet aber nur die Hälfte der Aufgabe.
+- **Nicht nehmen:** A, D und E jeweils unverändert, denn alle drei erwecken den Eindruck, Fotos (und Spiele) würden immer gefunkt. C bleibt mangels Beleg für „Milliarden“ draußen.
+
+### Nicht geprüft
+Für E habe ich keine neue Quelle geöffnet. Das Urteil stützt sich auf die im Hauptbericht geöffneten Quellen (BfS-Archiv, Nobelprize.org, bild der wissenschaft).
